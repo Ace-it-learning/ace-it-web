@@ -1,0 +1,15 @@
+# Dependencies
+node_modules/
+
+# Environment Variables (Secrets)
+.env
+backend/.env
+
+# Build Output
+dist/
+build/
+*.log
+
+# System
+.DS_Store
+Thumbs.db

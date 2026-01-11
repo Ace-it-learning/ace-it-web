@@ -35,9 +35,9 @@ const ChatInterface = () => {
         window.speechSynthesis.cancel();
 
         const utterance = new SpeechSynthesisUtterance(text);
-        // Attempt to find a natural English voice
+        // Attempt to find a British English voice
         const voices = window.speechSynthesis.getVoices();
-        const preferredVoice = voices.find(v => v.name.includes("Google US English")) || voices[0];
+        const preferredVoice = voices.find(v => v.name.includes("Google UK English Female") || v.lang === "en-GB") || voices[0];
         if (preferredVoice) utterance.voice = preferredVoice;
 
         utterance.rate = 1.0;

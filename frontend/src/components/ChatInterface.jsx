@@ -75,7 +75,7 @@ const ChatInterface = () => {
     };
 
     return (
-        <section className="lg:col-span-9 flex flex-col h-[65vh] min-h-[500px] rounded-3xl glass-container shadow-2xl relative overflow-hidden">
+        <section className="lg:col-span-9 flex flex-col h-[80vh] min-h-[600px] rounded-3xl glass-container shadow-2xl relative overflow-hidden">
             {/* Header */}
             <div className="px-8 py-4 border-b border-black/5 dark:border-white/10 flex items-center gap-4">
                 <div className={cn("size-3 rounded-full transition-colors",

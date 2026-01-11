@@ -52,8 +52,11 @@ require('dotenv').config({ path: path.join(__dirname, '.env') });
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || "YOUR_API_KEY");
 
-// List of models to try in order of preference (Prioritize Stable 1.5 Flash)
-const MODELS = ["gemini-1.5-flash", "gemini-1.5-flash-8b", "gemini-2.0-flash", "gemini-1.5-pro"];
+// List of models to try in order of preference (Updated to canonical names)
+const MODELS = ["gemini-1.5-flash", "gemini-1.5-flash-8b", "gemini-2.0-flash-exp", "gemini-1.5-pro-latest"];
+
+// Startup Log to verify model order
+console.log("Server initialized. Model priority list:", MODELS);
 
 const AGENT_PROMPTS = {
     english: "You are the English Tutor for DSE students. Focus on Paper 1 (Reading) and Paper 2 (Writing). Be professional, articulate, and encouraging. Use British English spelling. Explain effective reading strategies like previewing structure, topic sentences, and keywords.",

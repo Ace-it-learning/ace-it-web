@@ -21,10 +21,56 @@ const ChatInterface = () => {
         setAvatarState('IDLE');
     }, [activeAgentId, setAvatarState]); // Added setAvatarState to dependencies
 
+    const [isListening, setIsListening] = useState(false);
+
     // Auto-scroll to bottom
     useEffect(() => {
         messagesEndRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }, [messages, avatarState]);
+
+    // Text-to-Speech Function
+    const speakText = (text) => {
+        if (!window.speechSynthesis) return;
+        // Stop any current speaking
+        window.speechSynthesis.cancel();
+
+        const utterance = new SpeechSynthesisUtterance(text);
+        // Attempt to find a natural English voice
+        const voices = window.speechSynthesis.getVoices();
+        const preferredVoice = voices.find(v => v.name.includes("Google US English")) || voices[0];
+        if (preferredVoice) utterance.voice = preferredVoice;
+
+        utterance.rate = 1.0;
+        utterance.pitch = 1.0;
+        window.speechSynthesis.speak(utterance);
+    };
+
+    const handleMicClick = () => {
+        if (!('webkitSpeechRecognition' in window)) {
+            alert("Speech recognition is not supported in this browser. Please use Chrome.");
+            return;
+        }
+
+        const recognition = new window.webkitSpeechRecognition();
+        recognition.lang = 'en-US'; // Default to English for practice
+        recognition.interimResults = false;
+        recognition.maxAlternatives = 1;
+
+        recognition.onstart = () => setIsListening(true);
+
+        recognition.onresult = (event) => {
+            const transcript = event.results[0][0].transcript;
+            setInputValue(transcript);
+        };
+
+        recognition.onend = () => setIsListening(false);
+        recognition.onerror = (event) => {
+            console.error("Speech error", event.error);
+            setIsListening(false);
+        };
+
+        recognition.start();
+    };
 
     const handleSendMessage = async () => {
         if (!inputValue.trim()) return;
@@ -54,6 +100,9 @@ const ChatInterface = () => {
             setMessages(prev => [...prev, aiMsg]);
             setAvatarState('HAPPY'); // Success state
 
+            // Speak the response
+            speakText(data.reply);
+
             // Reset to IDLE after a few seconds
             setTimeout(() => setAvatarState('IDLE'), 3000);
 
@@ -66,6 +115,11 @@ const ChatInterface = () => {
             }]);
         }
     };
+
+    // Ensure voices are loaded (Chrome quirk)
+    useEffect(() => {
+        window.speechSynthesis.getVoices();
+    }, []);
 
     const handleKeyDown = (e) => {
         if (e.key === 'Enter' && !e.shiftKey) {
@@ -148,7 +202,14 @@ const ChatInterface = () => {
                     <button className="p-2 text-[#a16b45] hover:text-primary transition-colors">
                         <Paperclip className="w-5 h-5" />
                     </button>
-                    <button className="p-2 text-[#a16b45] hover:text-primary transition-colors">
+                    <button
+                        onClick={handleMicClick}
+                        className={cn(
+                            "p-2 transition-colors rounded-full",
+                            isListening ? "bg-red-500 text-white animate-pulse" : "text-[#a16b45] hover:text-primary"
+                        )}
+                        title="Click to Speak"
+                    >
                         <Mic className="w-5 h-5" />
                     </button>
                     <input

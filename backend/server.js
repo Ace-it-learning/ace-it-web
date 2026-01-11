@@ -61,32 +61,29 @@ console.log("Server initialized. Model priority list:", MODELS);
 
 const AGENT_PROMPTS = {
     english: `**Role:** You are the "Ace it!" English Tutor, a professional, empathetic, and slightly humorous mentor specialized in the HKDSE English curriculum.
-**Core Instruction (Socratic Method):**
-* **Never** give the final answer directly. Instead, ask probing questions to guide the student toward the answer.
-* **Conciseness:** Your responses must be strictly limited to **2–3 sentences** to maintain high engagement.
-* **Adaptive Language:** Adjust complexity based on the student's Level (Student Level: {{LEVEL}}).
+**Current Date:** {{DATE}} (School Year: Sep-Jun).
 
-**Assessment Phase (Crucial):**
-* If the student is new (Level 1, 0 XP), start with a **3-question Diagnostic Test** (Grammar, Vocab, Reading).
-* Ask one question at a time.
-* After the 3rd question, **provide a detailed report**:
-    1.  **Results**: Which questions were correct/incorrect.
-    2.  **Corrections & Explanations**: Explain WHY the answer was wrong (or right).
-    3.  **Level Assignment**: Assign a DSE Level (1-5).
-* **IMPORTANT:** To update their level in the system, you MUST append this tag to the very end of your final assessment message: \`[SET_LEVEL: X]\` (where X is 1-5).
-* **Grading Guide:**
-    * **Level 1-2:** Basic/Broken English.
-    * **Level 3:** Functional but simple.
-    * **Level 4:** Good grammar, limited vocab.
-    * **Level 5:** Sophisticated, idiomatic, complex structures.
+**Core Instructions:**
+* **Language Mode:** Explain concepts in **{{PREFERRED_LANG}}** (default to English if unset), but keep all questions/assessments in **English**.
+* **Target Grade:** Form {{GRADE}}. (If date is July/Aug, treat them as rising to next Form).
+* **Socratic Method:** Never give answers directly. Ask probing questions.
+* **Conciseness:** Strict 2-3 sentence limit per turn.
+
+**ONBOARDING PHASE (Trigger if Level=1 & XP=0):**
+1.  **Step 1:** Ask for their **Preferred Explanatory Language** (English or Chinese/Cantonese).
+    *   *Save choice tag:* \`[SET_LANG: ENGLISH]\` or \`[SET_LANG: CHINESE]\`.
+2.  **Step 2:** Ask for their **Current Grade** (Form 4, 5, or 6).
+    *   *Save grade tag:* \`[SET_GRADE: 4]\`, \`[SET_GRADE: 5]\`, or \`[SET_GRADE: 6]\`.
+3.  **Step 3:** Only THEN start the **3-Question Diagnostic Test**.
+
+**Assessment Phase (After Diagnostics):**
+* Provide detailed feedback (Correct/Incorrect + Explanations in {{PREFERRED_LANG}}).
+* Assign DSE Level (1-5).
+* *Save level tag:* \`[SET_LEVEL: X]\`.
 
 **Behavioral Guidelines:**
-* **Breaks & Bonding:** If the user seems tired, interrupt with a "Care Check".
-* **XP Logic:** You can mention "+50 XP" if they get an answer right.
-* **Ethical Guardrails:** Deflect foul language or off-topic nonsense with humor.
-
-**Empathy Engine:**
-* End sessions with warmth. Use phrases like "I'm proud of your progress".`,
+* **Ethical Guardrails:** Deflect foul language.
+* **XP Logic:** Mention +50 XP for correct answers.`,
     math: "You are the Math Tutor for DSE students. I specialize in Geometry and Algebra. Be logical, precise, and step-by-step. emphasizing showing steps for method marks. Help with geometric proofs and algebraic manipulation.",
     chinese: "You are the Chinese Tutor. Focus on the 12 specified classical texts (範文), writing flow, and rhetoric devices. Be cultured, deep, and poetic but accessible. Challenge students with recitation and explain deeper meanings.",
     ace: "You are Ace Sir, a general study strategist. Focus on motivation, time management, exam tactics, and stress management. Be energetic, confident, and coach-like. Say things like 'Trust the process!' and 'You got this!'."
@@ -98,7 +95,7 @@ const MOCK_DATABASES = {
         { keywords: ['grammar', 'verb', 'tense'], text: "For Grammar, remember that subject-verb agreement is the most common error in DSE. \n\nLet's practice: 'The group of students ___ (is/are) waiting.' What do you think?" },
         { keywords: ['vocab', 'word'], text: "To improve Vocabulary, don't just memorize definitions. Use the word in a sentence. \n\nTry creating a sentence with 'meticulous'." },
         { keywords: ['writing', 'paper 2'], text: "In Paper 2, structure is everything. Ensure you have a clear topic sentence for every paragraph. \n\nWhat genre are you practicing today?" },
-        { keywords: ['hello', 'hi', 'hey'], text: "Hello! I'm here to help you Ace the DSE English. \n\nShall we start with a quick grammar check? What is the past tense of 'seek'?" }
+        { keywords: ['hello', 'hi', 'hey'], text: "Hello! I'm here to help you Ace the DSE English. \n\nBefore we start, do you prefer explanations in English or Chinese?" }
     ],
     math: [
         { keywords: ['geometry', 'circle', 'angle'], text: "For Geometry, always look for the 'butterfly' (angles in the same segment) or cyclic quadrilaterals. Do you see any 4 points on a circle?" },
@@ -123,7 +120,7 @@ const getMockResponse = (agentId, message) => {
 
     // Default Fallbacks
     const defaults = {
-        english: "That's a great question. But I want YOU to tell me: What do you think is the key keyword in that sentence?",
+        english: "That's a great question. But first, are you Form 4, 5, or 6?",
         math: "I see. To solve this, breaks it down into known variables and unknown variables. What are we trying to find?",
         chinese: "這個觀點很有趣。在DSE中文科中，表達能力和文化內涵同樣重要。",
         ace: "I hear you. The path to Level 5** is a marathon, not a sprint. What is your Main Goal for today?"
@@ -135,14 +132,19 @@ app.post('/api/chat', async (req, res) => {
     console.log("Received chat request:", req.body);
     const { message, agentId } = req.body;
 
-    // Get User Level from DB to inject into Prompt
+    // Get User Data
     const db = readDb();
-    const userLevel = db.user.level || 1;
+    const user = db.user;
 
     let systemPrompt = AGENT_PROMPTS[agentId] || AGENT_PROMPTS.ace;
-    // Inject Level if it's the English Tutor
+
+    // Inject Dynamic Context into Prompt
     if (agentId === 'english') {
-        systemPrompt = systemPrompt.replace('{{LEVEL}}', userLevel);
+        systemPrompt = systemPrompt
+            .replace('{{LEVEL}}', user.level || 1)
+            .replace('{{DATE}}', new Date().toDateString())
+            .replace('{{PREFERRED_LANG}}', user.preferredLanguage || "English")
+            .replace('{{GRADE}}', user.grade || "Unknown");
     }
 
     // Try models in sequence
@@ -150,29 +152,46 @@ app.post('/api/chat', async (req, res) => {
         try {
             console.log(`Attempting model: ${modelName}`);
             const model = genAI.getGenerativeModel({ model: modelName });
-            const result = await model.generateContent(`${systemPrompt}\n\nStudent: ${message}\nTutor (Remember: Max 3 sentences, Socratic method):`);
+            const result = await model.generateContent(`${systemPrompt}\n\nStudent: ${message}\nTutor (Max 3 sentences):`);
             const response = result.response;
             let text = response.text();
 
-            // Check for Level Update Tag [SET_LEVEL: X]
+            // --- TAG PARSING LOGIC ---
+            let dbUpdated = false;
+
+            // 1. Check [SET_LEVEL: X]
             const levelMatch = text.match(/\[SET_LEVEL:\s*(\d+)\]/);
             if (levelMatch) {
-                const newLevel = parseInt(levelMatch[1]);
-                console.log(`Ai Assessment received. Updating Level to ${newLevel}`);
+                user.level = parseInt(levelMatch[1]);
+                user.xp += 100; // Bonus
+                dbUpdated = true;
+                text = text.replace(levelMatch[0], "");
+            }
 
-                // Update DB
-                const currentDb = readDb();
-                currentDb.user.level = newLevel;
-                // Add XP Bonus for completing assessment
-                currentDb.user.xp += 100;
-                writeDb(currentDb);
+            // 2. Check [SET_LANG: X]
+            const langMatch = text.match(/\[SET_LANG:\s*(\w+)\]/);
+            if (langMatch) {
+                user.preferredLanguage = langMatch[1]; // English or Chinese
+                dbUpdated = true;
+                text = text.replace(langMatch[0], "");
+            }
 
-                // Remove the tag from the visible response
-                text = text.replace(levelMatch[0], "").trim();
+            // 3. Check [SET_GRADE: X]
+            const gradeMatch = text.match(/\[SET_GRADE:\s*(\d+)\]/);
+            if (gradeMatch) {
+                user.grade = parseInt(gradeMatch[1]);
+                dbUpdated = true;
+                text = text.replace(gradeMatch[0], "");
+            }
+
+            // Save DB if changed
+            if (dbUpdated) {
+                writeDb(db);
+                console.log("Updated User Stats:", user);
             }
 
             // If successful, send response and exit loop
-            res.json({ reply: text });
+            res.json({ reply: text.trim() });
             return;
         } catch (error) {
             console.warn(`Model ${modelName} failed:`, error.message);

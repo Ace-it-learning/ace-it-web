@@ -60,7 +60,24 @@ const MODELS = ["gemini-2.0-flash-exp"];
 console.log("Server initialized. Model priority list:", MODELS);
 
 const AGENT_PROMPTS = {
-    english: "You are the English Tutor for DSE students. Focus on Paper 1 (Reading) and Paper 2 (Writing). Be professional, articulate, and encouraging. Use British English spelling. Explain effective reading strategies like previewing structure, topic sentences, and keywords.",
+    english: `**Role:** You are the "Ace it!" English Tutor, a professional, empathetic, and slightly humorous mentor specialized in the HKDSE English curriculum.
+**Core Instruction (Socratic Method):**
+* **Never** give the final answer directly. Instead, ask probing questions to guide the student toward the answer.
+* **Conciseness:** Your responses must be strictly limited to **2–3 sentences** to maintain high engagement.
+* **Adaptive Language:** Adjust complexity based on the student's Level (Student Level: {{LEVEL}}). For Level 4-5, use advanced vocabulary; for Level 1-2, use simpler scaffolding.
+
+**DSE Domain Knowledge:**
+* Reference Paper 1 (Reading) and Paper 2 (Writing) marking schemes.
+* Grading criteria: Content (6), Language (7), Organization (7).
+
+**Behavioral Guidelines:**
+* **Initial Assessment:** If the user implies this is a new session, start with a short (1-question) diagnostic test on Grammar or Vocab.
+* **Breaks & Bonding:** If the user seems tired, interrupt with a "Care Check".
+* **XP Logic:** You can mention "+50 XP" if they get an answer right, but keep it brief.
+* **Ethical Guardrails:** Deflect foul language or off-topic nonsense with humor.
+
+**Empathy Engine:**
+* End sessions with warmth. Use phrases like "I'm proud of your progress".`,
     math: "You are the Math Tutor for DSE students. I specialize in Geometry and Algebra. Be logical, precise, and step-by-step. emphasizing showing steps for method marks. Help with geometric proofs and algebraic manipulation.",
     chinese: "You are the Chinese Tutor. Focus on the 12 specified classical texts (範文), writing flow, and rhetoric devices. Be cultured, deep, and poetic but accessible. Challenge students with recitation and explain deeper meanings.",
     ace: "You are Ace Sir, a general study strategist. Focus on motivation, time management, exam tactics, and stress management. Be energetic, confident, and coach-like. Say things like 'Trust the process!' and 'You got this!'."
@@ -69,10 +86,10 @@ const AGENT_PROMPTS = {
 // ... MOCK_DATABASES and getMockResponse remain same ...
 const MOCK_DATABASES = {
     english: [
-        { keywords: ['grammar', 'verb', 'tense'], text: "For Grammar, remember that subject-verb agreement is the most common error in DSE. Let's practice: 'The group of students ___ (is/are) waiting.' What do you think?" },
-        { keywords: ['vocab', 'word'], text: "To improve Vocabulary, don't just memorize definitions. Use the word in a sentence. Try creating a sentence with 'meticulous'." },
-        { keywords: ['writing', 'paper 2'], text: "In Paper 2, structure is everything. Ensure you have a clear topic sentence for every paragraph. What genre are you practicing today?" },
-        { keywords: ['hello', 'hi', 'hey'], text: "Hello! usage of English is my passion. How can I help you ace your exam today?" }
+        { keywords: ['grammar', 'verb', 'tense'], text: "For Grammar, remember that subject-verb agreement is the most common error in DSE. \n\nLet's practice: 'The group of students ___ (is/are) waiting.' What do you think?" },
+        { keywords: ['vocab', 'word'], text: "To improve Vocabulary, don't just memorize definitions. Use the word in a sentence. \n\nTry creating a sentence with 'meticulous'." },
+        { keywords: ['writing', 'paper 2'], text: "In Paper 2, structure is everything. Ensure you have a clear topic sentence for every paragraph. \n\nWhat genre are you practicing today?" },
+        { keywords: ['hello', 'hi', 'hey'], text: "Hello! I'm here to help you Ace the DSE English. \n\nShall we start with a quick grammar check? What is the past tense of 'seek'?" }
     ],
     math: [
         { keywords: ['geometry', 'circle', 'angle'], text: "For Geometry, always look for the 'butterfly' (angles in the same segment) or cyclic quadrilaterals. Do you see any 4 points on a circle?" },
@@ -97,7 +114,7 @@ const getMockResponse = (agentId, message) => {
 
     // Default Fallbacks
     const defaults = {
-        english: "That's a great question. In the context of DSE English, we should focus on clarity. Can you rephrase that using specific exam terminology?",
+        english: "That's a great question. But I want YOU to tell me: What do you think is the key keyword in that sentence?",
         math: "I see. To solve this, breaks it down into known variables and unknown variables. What are we trying to find?",
         chinese: "這個觀點很有趣。在DSE中文科中，表達能力和文化內涵同樣重要。",
         ace: "I hear you. The path to Level 5** is a marathon, not a sprint. What is your Main Goal for today?"
@@ -108,14 +125,23 @@ const getMockResponse = (agentId, message) => {
 app.post('/api/chat', async (req, res) => {
     console.log("Received chat request:", req.body);
     const { message, agentId } = req.body;
-    const systemPrompt = AGENT_PROMPTS[agentId] || AGENT_PROMPTS.ace;
+
+    // Get User Level from DB to inject into Prompt
+    const db = readDb();
+    const userLevel = db.user.level || 1;
+
+    let systemPrompt = AGENT_PROMPTS[agentId] || AGENT_PROMPTS.ace;
+    // Inject Level if it's the English Tutor
+    if (agentId === 'english') {
+        systemPrompt = systemPrompt.replace('{{LEVEL}}', userLevel);
+    }
 
     // Try models in sequence
     for (const modelName of MODELS) {
         try {
             console.log(`Attempting model: ${modelName}`);
             const model = genAI.getGenerativeModel({ model: modelName });
-            const result = await model.generateContent(`${systemPrompt}\n\nStudent: ${message}\nTutor:`);
+            const result = await model.generateContent(`${systemPrompt}\n\nStudent: ${message}\nTutor (Remember: Max 3 sentences, Socratic method):`);
             const response = result.response;
             const text = response.text();
 

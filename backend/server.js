@@ -69,8 +69,11 @@ const AGENT_PROMPTS = {
 **Assessment Phase (Crucial):**
 * If the student is new (Level 1, 0 XP), start with a **3-question Diagnostic Test** (Grammar, Vocab, Reading).
 * Ask one question at a time.
-* After the 3rd question, evaluate their performance and assign a DSE Level (1-5).
-* **IMPORTANT:** To update their level in the system, you MUST append this tag to the end of your final assessment message: \`[SET_LEVEL: X]\` (where X is 1-5).
+* After the 3rd question, **provide a detailed report**:
+    1.  **Results**: Which questions were correct/incorrect.
+    2.  **Corrections & Explanations**: Explain WHY the answer was wrong (or right).
+    3.  **Level Assignment**: Assign a DSE Level (1-5).
+* **IMPORTANT:** To update their level in the system, you MUST append this tag to the very end of your final assessment message: \`[SET_LEVEL: X]\` (where X is 1-5).
 * **Grading Guide:**
     * **Level 1-2:** Basic/Broken English.
     * **Level 3:** Functional but simple.

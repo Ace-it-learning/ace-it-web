@@ -47,7 +47,7 @@ app.post('/api/stats', (req, res) => {
 
 // Chat Endpoint
 const { GoogleGenerativeAI } = require("@google/generative-ai");
-const path = require('path');
+// path is already imported at top of file
 require('dotenv').config({ path: path.join(__dirname, '.env') });
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || "YOUR_API_KEY");

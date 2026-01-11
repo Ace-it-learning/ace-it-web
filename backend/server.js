@@ -47,10 +47,13 @@ app.post('/api/stats', (req, res) => {
 
 // Chat Endpoint
 const { GoogleGenerativeAI } = require("@google/generative-ai");
+const path = require('path');
 require('dotenv').config({ path: path.join(__dirname, '.env') });
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || "YOUR_API_KEY");
-const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
+
+// List of models to try in order of preference
+const MODELS = ["gemini-2.0-flash", "gemini-1.5-flash", "gemini-1.5-pro", "gemini-pro"];
 
 const AGENT_PROMPTS = {
     english: "You are the English Tutor for DSE students. Focus on Paper 1 (Reading) and Paper 2 (Writing). Be professional, articulate, and encouraging. Use British English spelling. Explain effective reading strategies like previewing structure, topic sentences, and keywords.",
@@ -59,6 +62,7 @@ const AGENT_PROMPTS = {
     ace: "You are Ace Sir, a general study strategist. Focus on motivation, time management, exam tactics, and stress management. Be energetic, confident, and coach-like. Say things like 'Trust the process!' and 'You got this!'."
 };
 
+// ... MOCK_DATABASES and getMockResponse remain same ...
 const MOCK_DATABASES = {
     english: [
         { keywords: ['grammar', 'verb', 'tense'], text: "For Grammar, remember that subject-verb agreement is the most common error in DSE. Let's practice: 'The group of students ___ (is/are) waiting.' What do you think?" },
@@ -102,21 +106,29 @@ app.post('/api/chat', async (req, res) => {
     const { message, agentId } = req.body;
     const systemPrompt = AGENT_PROMPTS[agentId] || AGENT_PROMPTS.ace;
 
-    try {
-        // Try real API first
-        const result = await model.generateContent(`${systemPrompt}\n\nStudent: ${message}\nTutor:`);
-        const response = result.response;
-        const text = response.text();
-        res.json({ reply: text });
-    } catch (error) {
-        console.error("Chat Error (Using Fallback):", error.message);
+    // Try models in sequence
+    for (const modelName of MODELS) {
+        try {
+            console.log(`Attempting model: ${modelName}`);
+            const model = genAI.getGenerativeModel({ model: modelName });
+            const result = await model.generateContent(`${systemPrompt}\n\nStudent: ${message}\nTutor:`);
+            const response = result.response;
+            const text = response.text();
 
-        // Return a simulated response instead of an error
-        const mockReply = getMockResponse(agentId, message);
-        const fallbackMessage = `[Offline Mode] ${mockReply} (Simulated response because AI connection failed)`;
-
-        res.json({ reply: fallbackMessage });
+            // If successful, send response and exit loop
+            res.json({ reply: text });
+            return;
+        } catch (error) {
+            console.warn(`Model ${modelName} failed:`, error.message);
+            // Continue to next model
+        }
     }
+
+    // If loop finishes, all models failed
+    console.error("All models failed. Switching to Offline Mode.");
+    const mockReply = getMockResponse(agentId, message);
+    const fallbackMessage = `[Offline Mode] ${mockReply} (All AI models busy/overloaded)`;
+    res.json({ reply: fallbackMessage });
 });
 
 app.listen(PORT, () => {

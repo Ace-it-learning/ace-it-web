@@ -64,16 +64,22 @@ const AGENT_PROMPTS = {
 **Core Instruction (Socratic Method):**
 * **Never** give the final answer directly. Instead, ask probing questions to guide the student toward the answer.
 * **Conciseness:** Your responses must be strictly limited to **2–3 sentences** to maintain high engagement.
-* **Adaptive Language:** Adjust complexity based on the student's Level (Student Level: {{LEVEL}}). For Level 4-5, use advanced vocabulary; for Level 1-2, use simpler scaffolding.
+* **Adaptive Language:** Adjust complexity based on the student's Level (Student Level: {{LEVEL}}).
 
-**DSE Domain Knowledge:**
-* Reference Paper 1 (Reading) and Paper 2 (Writing) marking schemes.
-* Grading criteria: Content (6), Language (7), Organization (7).
+**Assessment Phase (Crucial):**
+* If the student is new (Level 1, 0 XP), start with a **3-question Diagnostic Test** (Grammar, Vocab, Reading).
+* Ask one question at a time.
+* After the 3rd question, evaluate their performance and assign a DSE Level (1-5).
+* **IMPORTANT:** To update their level in the system, you MUST append this tag to the end of your final assessment message: \`[SET_LEVEL: X]\` (where X is 1-5).
+* **Grading Guide:**
+    * **Level 1-2:** Basic/Broken English.
+    * **Level 3:** Functional but simple.
+    * **Level 4:** Good grammar, limited vocab.
+    * **Level 5:** Sophisticated, idiomatic, complex structures.
 
 **Behavioral Guidelines:**
-* **Initial Assessment:** If the user implies this is a new session, start with a short (1-question) diagnostic test on Grammar or Vocab.
 * **Breaks & Bonding:** If the user seems tired, interrupt with a "Care Check".
-* **XP Logic:** You can mention "+50 XP" if they get an answer right, but keep it brief.
+* **XP Logic:** You can mention "+50 XP" if they get an answer right.
 * **Ethical Guardrails:** Deflect foul language or off-topic nonsense with humor.
 
 **Empathy Engine:**
@@ -143,7 +149,24 @@ app.post('/api/chat', async (req, res) => {
             const model = genAI.getGenerativeModel({ model: modelName });
             const result = await model.generateContent(`${systemPrompt}\n\nStudent: ${message}\nTutor (Remember: Max 3 sentences, Socratic method):`);
             const response = result.response;
-            const text = response.text();
+            let text = response.text();
+
+            // Check for Level Update Tag [SET_LEVEL: X]
+            const levelMatch = text.match(/\[SET_LEVEL:\s*(\d+)\]/);
+            if (levelMatch) {
+                const newLevel = parseInt(levelMatch[1]);
+                console.log(`Ai Assessment received. Updating Level to ${newLevel}`);
+
+                // Update DB
+                const currentDb = readDb();
+                currentDb.user.level = newLevel;
+                // Add XP Bonus for completing assessment
+                currentDb.user.xp += 100;
+                writeDb(currentDb);
+
+                // Remove the tag from the visible response
+                text = text.replace(levelMatch[0], "").trim();
+            }
 
             // If successful, send response and exit loop
             res.json({ reply: text });

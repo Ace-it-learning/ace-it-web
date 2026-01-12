@@ -26,11 +26,7 @@ const Login = () => {
 
                 <div className="relative group p-4 border rounded-2xl bg-white/50">
                     <button
-                        onClick={(e) => {
-                            console.log("Button onClick event fired!");
-                            window.alert("Login button triggered!");
-                            handleLogin();
-                        }}
+                        onClick={handleLogin}
                         className="w-full flex items-center justify-center gap-3 bg-primary text-white px-8 py-5 rounded-full font-bold shadow-xl hover:scale-105 transition-transform"
                     >
                         <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" className="w-6 h-6" alt="Google" />

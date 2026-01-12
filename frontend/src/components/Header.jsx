@@ -18,7 +18,6 @@ const Header = () => {
     return (
         <header
             className="sticky top-0 z-50 w-full bg-black px-6 md:px-20 py-4 flex items-center justify-between shadow-lg"
-            style={{ boxShadow: '0 0 20px rgba(255, 0, 0, 0.5)' }} // SYNC TEST: RED GLOW
         >
             <div className="flex items-center gap-3 cursor-pointer" onClick={() => navigate('/')}>
                 <div className="size-10 bg-primary rounded-lg flex items-center justify-center text-white">

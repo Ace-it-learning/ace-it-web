@@ -9,17 +9,34 @@ const ChatInterface = () => {
     const [inputValue, setInputValue] = useState('');
     const messagesEndRef = useRef(null);
 
-    // Initial greeting when agent changes
+    // Initial greeting or History restore
     useEffect(() => {
-        setMessages([
-            {
-                role: 'assistant',
-                content: `Here is your ${activeAgent.name}. How can I help you with your studies today?`,
-                agentId: activeAgentId
+        const fetchHistory = async () => {
+            try {
+                const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+                const res = await fetch(`${API_URL}/api/history/${activeAgentId}`);
+                const history = await res.json();
+
+                if (history && history.length > 0) {
+                    setMessages(history);
+                } else {
+                    // Default greeting
+                    setMessages([
+                        {
+                            role: 'assistant',
+                            content: `Here is your ${activeAgent.name}. How can I help you with your studies today?`,
+                            agentId: activeAgentId
+                        }
+                    ]);
+                }
+            } catch (err) {
+                console.error("History fetch failed", err);
             }
-        ]);
+        };
+
+        fetchHistory();
         setAvatarState('IDLE');
-    }, [activeAgentId, setAvatarState]); // Added setAvatarState to dependencies
+    }, [activeAgentId, setAvatarState, activeAgent.name]);
 
     const [isListening, setIsListening] = useState(false);
     const [isMuted, setIsMuted] = useState(false); // Default: Sound On

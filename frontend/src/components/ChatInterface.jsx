@@ -90,7 +90,8 @@ const ChatInterface = () => {
             // But state update is async. `messages` here is still the OLD value.
             // So `messages` is perfect as "history".
 
-            const history = messages.map(m => ({
+            // Prepare history (start from index 1 to skip local greeting)
+            const history = messages.slice(1).map(m => ({
                 role: m.role === 'user' ? 'user' : 'model', // Gemini uses 'model'
                 parts: [{ text: m.content }]
             }));

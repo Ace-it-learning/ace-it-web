@@ -417,5 +417,57 @@
                 "summary": "Extract predictable info from short spoken texts; identify factual info via headings; make one or two relevant points in writing."
             }
         ]
-    }
+    },
+    "skill_mapping_table": [
+        {
+            "cluster_id": "INF-001",
+            "cluster_name": "Inference & Critical Thinking",
+            "mapping": {
+                "reading": "specific_comprehension.inferences",
+                "writing": "content.creativity_imagination",
+                "listening": "listening.specific.inferences",
+                "speaking": "ideas_organization.expansion_detail"
+            }
+        },
+        {
+            "cluster_id": "ORG-002",
+            "cluster_name": "Structural Cohesion",
+            "mapping": {
+                "reading": "general_comprehension.follow_argument",
+                "writing": "organization.cohesion",
+                "listening": "integrated_skills.organization",
+                "speaking": "ideas_organization.sustained_exchanges"
+            }
+        },
+        {
+            "cluster_id": "TON-003",
+            "cluster_name": "Register, Tone & Attitude",
+            "mapping": {
+                "reading": "awareness_of_style.tone_mood",
+                "writing": "language_and_style.register_tone",
+                "listening": "listening.sound_patterns.attitude_intention",
+                "speaking": "pronunciation_delivery.stress_intonation"
+            }
+        },
+        {
+            "cluster_id": "VOC-004",
+            "cluster_name": "Linguistic Range & Accuracy",
+            "mapping": {
+                "reading": "specific_comprehension.vocabulary_context",
+                "writing": "language_and_style.vocabulary_range",
+                "listening": "integrated_skills.language_accuracy",
+                "speaking": "vocabulary_language_patterns.varied_vocabulary"
+            }
+        },
+        {
+            "cluster_id": "STR-005",
+            "cluster_name": "Strategic Communication",
+            "mapping": {
+                "reading": "specific_comprehension.text_purpose",
+                "writing": "content.engages_reader",
+                "listening": "integrated_skills.data_file_instructions",
+                "speaking": "communication_strategies.initiation_maintenance"
+            }
+        }
+    ]
 }

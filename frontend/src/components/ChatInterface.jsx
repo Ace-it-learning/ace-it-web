@@ -24,6 +24,13 @@ const ChatInterface = () => {
     const [isListening, setIsListening] = useState(false);
     const [isMuted, setIsMuted] = useState(false); // Default: Sound On
 
+    // Stop speaking immediately when muted
+    useEffect(() => {
+        if (isMuted) {
+            window.speechSynthesis.cancel();
+        }
+    }, [isMuted]);
+
     // Auto-scroll to bottom
     useEffect(() => {
         messagesEndRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });

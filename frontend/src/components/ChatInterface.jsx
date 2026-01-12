@@ -1,10 +1,12 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useAvatar } from '../context/AvatarContext';
+import { useAuth } from '../context/AuthContext';
 import { ArrowRight, Mic, Paperclip, Send, Volume2, VolumeX } from 'lucide-react';
 import { cn } from './Sidebar'; // Reusing cn utility
 
 const ChatInterface = () => {
     const { activeAgent, activeAgentId, avatarState, setAvatarState } = useAvatar();
+    const { user } = useAuth();
     const [messages, setMessages] = useState([]);
     const [inputValue, setInputValue] = useState('');
     const messagesEndRef = useRef(null);
@@ -14,7 +16,7 @@ const ChatInterface = () => {
         const fetchHistory = async () => {
             try {
                 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
-                const res = await fetch(`${API_URL}/api/history/${activeAgentId}`);
+                const res = await fetch(`${API_URL}/api/history/${activeAgentId}?uid=${user.uid}`);
                 const history = await res.json();
 
                 if (history && history.length > 0) {
@@ -130,6 +132,7 @@ const ChatInterface = () => {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
+                    uid: user.uid,
                     message: inputValue,
                     history: history,
                     agentId: activeAgentId
@@ -223,7 +226,7 @@ const ChatInterface = () => {
                         {msg.role === 'user' && (
                             <div className="size-10 shrink-0 rounded-full bg-gray-200 overflow-hidden">
                                 <img
-                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQZzao9lF3biaiHXLV7UnY79OpyxIJ5fbvV_jTDf0J5wAIqFuM4JoE_HbznpvB7AQIWKlVzlZF7mNYCdTzPcIejjVzV0rVphkD_0VglO_XxHg43W93WzYdq4G42X9_d7WN1A20-rwG8MOoeF78Wu3pWVk4oA32Ebn1Dvp-6NzFXjFyB7X7Y6eHPiUgRv15W_uVa6hvjKmS9DzgF4Kg7xgekIkPG1YFYEITkJuAvnFt_copRTFfxP5T4g_glC32vLzYj67CHOOLamg5"
+                                    src={user?.photoURL || "https://lh3.googleusercontent.com/aida-public/AB6AXuAQZzao9lF3biaiHXLV7UnY79OpyxIJ5fbvV_jTDf0J5wAIqFuM4JoE_HbznpvB7AQIWKlVzlZF7mNYCdTzPcIejjVzV0rVphkD_0VglO_XxHg43W93WzYdq4G42X9_d7WN1A20-rwG8MOoeF78Wu3pWVk4oA32Ebn1Dvp-6NzFXjFyB7X7Y6eHPiUgRv15W_uVa6hvjKmS9DzgF4Kg7xgekIkPG1YFYEITkJuAvnFt_copRTFfxP5T4g_glC32vLzYj67CHOOLamg5"}
                                     alt="User"
                                     className="w-full h-full object-cover"
                                 />

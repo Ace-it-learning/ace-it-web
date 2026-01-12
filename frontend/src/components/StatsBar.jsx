@@ -1,16 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import { Trophy, Clock } from 'lucide-react';
+import { useAuth } from '../context/AuthContext';
 
 const StatsBar = () => {
     const [stats, setStats] = useState({ xp: 0, level: 1, learningTime: 0 });
+    const { user } = useAuth();
 
     useEffect(() => {
+        if (!user) return;
         const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
-        fetch(`${API_URL}/api/stats`)
+        fetch(`${API_URL}/api/stats?uid=${user.uid}`)
             .then(res => res.json())
             .then(data => setStats(data))
             .catch(err => console.error('Failed to fetch stats:', err));
-    }, []);
+    }, [user]);
 
     // Calculate XP percentage safely
     const xpPercentage = (stats.xp / 2000) * 100;

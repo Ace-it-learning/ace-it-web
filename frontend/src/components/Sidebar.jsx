@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useAvatar, AGENTS } from '../context/AvatarContext';
+import { useAuth } from '../context/AuthContext';
 import { clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 
@@ -9,6 +10,18 @@ export function cn(...inputs) {
 
 const Sidebar = () => {
     const { activeAgentId, setActiveAgentId } = useAvatar();
+    const { user } = useAuth();
+    const [nickname, setNickname] = useState('Student');
+
+    useEffect(() => {
+        if (user) {
+            const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+            fetch(`${API_URL}/api/stats?uid=${user.uid}`)
+                .then(res => res.json())
+                .then(data => setNickname(data.nickname || 'Student'))
+                .catch(() => setNickname(user.displayName?.split(' ')[0] || 'Student'));
+        }
+    }, [user]);
 
     return (
         <aside className="lg:col-span-3 flex flex-col gap-4">
@@ -38,10 +51,10 @@ const Sidebar = () => {
             ))}
 
             <div className="mt-6 p-6 bg-white dark:bg-[#2d1f16] rounded-xl shadow-lg border border-primary/20 flex flex-col items-center gap-4">
-                <h3 className="font-bold text-[#1d130c] dark:text-white text-lg">Natalie's Corner</h3>
+                <h3 className="font-bold text-[#1d130c] dark:text-white text-lg">{nickname}'s Corner</h3>
                 <div className="w-full h-64 overflow-hidden rounded-lg bg-[#FFFFFF] dark:bg-[#FFFFFF] flex items-end justify-center">
                     <img
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzZhhdaHLSWZQwm3KKKGqFDCN7QjeP__UQR9J8teQ8WZCgjIwvi-RcuR36r-uQJX_XSXTFB1KTWgp-h5cfPZ8qjaOw0_Be_smd9n9wXqv6G9BCJA33rwxWOGYJtzQA4amsF2Eh31iQCcvCiSMdAeYP3YOdOn_qnjjK35eZys7v3M7OeEwl3RBfBT6RF8YBPRUXOfEX3nWlO0_IgmRIG91ggWDklFp0pj4U3iVPtv9pIWiSZQOhuf5HNfHRyO7obxjjPKvHXKC13BEs"
+                        src={user?.photoURL || "https://lh3.googleusercontent.com/aida-public/AB6AXuDzZhhdaHLSWZQwm3KKKGqFDCN7QjeP__UQR9J8teQ8WZCgjIwvi-RcuR36r-uQJX_XSXTFB1KTWgp-h5cfPZ8qjaOw0_Be_smd9n9wXqv6G9BCJA33rwxWOGYJtzQA4amsF2Eh31iQCcvCiSMdAeYP3YOdOn_qnjjK35eZys7v3M7OeEwl3RBfBT6RF8YBPRUXOfEX3nWlO0_IgmRIG91ggWDklFp0pj4U3iVPtv9pIWiSZQOhuf5HNfHRyO7obxjjPKvHXKC13BEs"}
                         alt="Student Avatar"
                         className="h-full w-auto object-cover object-bottom"
                     />

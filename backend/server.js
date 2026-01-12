@@ -16,31 +16,90 @@ const readDb = () => {
     try {
         const data = fs.readFileSync(DB_FILE, 'utf8');
         const db = JSON.parse(data);
-        // Ensure structure
-        if (!db.user) db.user = { xp: 0, level: 1, learningTime: 0 };
-        if (!db.user.chatHistory) db.user.chatHistory = {};
-        if (db.user.diagnostic_complete === undefined) db.user.diagnostic_complete = false;
+        if (!db.users) db.users = {};
         return db;
     } catch (err) {
-        return {
-            user: {
-                xp: 0,
-                level: 1,
-                learningTime: 0,
-                chatHistory: {},
-                diagnostic_complete: false
-            }
-        };
+        return { users: {} };
     }
 };
 
-// ... (Stats endpoints stay same) ...
+// Helper to get specific user data
+const getUserData = (uid) => {
+    const db = readDb();
+    if (!db.users[uid]) return null;
+
+    const user = db.users[uid];
+    // Ensure structure
+    if (!user.chatHistory) user.chatHistory = {};
+    if (user.diagnostic_complete === undefined) user.diagnostic_complete = false;
+    return user;
+};
+
+// Helper to write DB
+const writeDb = (data) => {
+    fs.writeFileSync(DB_FILE, JSON.stringify(data, null, 2));
+};
+
+// GET User Stats
+app.get('/api/stats', (req, res) => {
+    const { uid } = req.query;
+    if (!uid) return res.status(400).json({ error: "Missing uid" });
+
+    const user = getUserData(uid);
+    if (!user) return res.status(404).json({ error: "User not found" });
+
+    res.json(user);
+});
+
+// POST Onboarding (Initialize Profile)
+app.post('/api/onboarding', (req, res) => {
+    const { uid, nickname, grade, school } = req.body;
+    if (!uid) return res.status(400).json({ error: "Missing uid" });
+
+    const db = readDb();
+    db.users[uid] = {
+        nickname,
+        grade,
+        school,
+        xp: 0,
+        level: 1,
+        learningTime: 0,
+        chatHistory: {},
+        diagnostic_complete: false,
+        preferredLanguage: "English" // Default
+    };
+
+    writeDb(db);
+    res.json(db.users[uid]);
+});
+
+// POST Update Stats
+app.post('/api/stats', (req, res) => {
+    const { uid, xp, level, learningTime } = req.body;
+    if (!uid) return res.status(400).json({ error: "Missing uid" });
+
+    const db = readDb();
+    if (!db.users[uid]) return res.status(404).json({ error: "User not found" });
+
+    const user = db.users[uid];
+    if (xp !== undefined) user.xp = xp;
+    if (level !== undefined) user.level = level;
+    if (learningTime !== undefined) user.learningTime = learningTime;
+
+    writeDb(db);
+    res.json(user);
+});
 
 // GET History for an agent
 app.get('/api/history/:agentId', (req, res) => {
     const { agentId } = req.params;
-    const db = readDb();
-    const history = db.user.chatHistory[agentId] || [];
+    const { uid } = req.query;
+    if (!uid) return res.status(400).json({ error: "Missing uid" });
+
+    const user = getUserData(uid);
+    if (!user) return res.json([]); // Return empty if new user
+
+    const history = user.chatHistory[agentId] || [];
     res.json(history);
 });
 
@@ -48,11 +107,13 @@ app.get('/api/history/:agentId', (req, res) => {
 // ...
 app.post('/api/chat', async (req, res) => {
     console.log("Received chat request");
-    const { message, history: clientHistory, agentId } = req.body;
+    const { uid, message, history: clientHistory, agentId } = req.body;
+    if (!uid) return res.status(400).json({ error: "Missing uid" });
 
     // Get User Data
     const db = readDb();
-    const user = db.user;
+    const user = db.users[uid];
+    if (!user) return res.status(404).json({ error: "User not found" });
 
     let systemPrompt = AGENT_PROMPTS[agentId] || AGENT_PROMPTS.ace;
 

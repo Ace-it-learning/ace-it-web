@@ -36,10 +36,15 @@ const ProtectedRoute = ({ children }) => {
         }
     }, [user]);
 
-    if (loading) return null; // Or a spinner
+    if (loading) return null;
 
     if (!user) {
-        return <Navigate to="/login" />;
+        // If not logged in, we don't force them anywhere unless it's a specific action.
+        // For /onboarding, we should probably still require a user.
+        if (location.pathname === '/onboarding') {
+            return <Navigate to="/" />;
+        }
+        return children;
     }
 
     // Special case for onboarding page

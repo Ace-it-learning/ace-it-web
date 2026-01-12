@@ -5,7 +5,6 @@ import { AuthProvider } from './context/AuthContext';
 import ProtectedRoute from './components/ProtectedRoute';
 import MainLayout from './layouts/MainLayout';
 import Dashboard from './pages/Dashboard';
-import Login from './pages/Login';
 import Onboarding from './pages/Onboarding';
 
 function App() {
@@ -14,7 +13,6 @@ function App() {
       <AvatarProvider>
         <BrowserRouter>
           <Routes>
-            <Route path="/login" element={<Login />} />
             <Route
               path="/onboarding"
               element={
@@ -26,11 +24,9 @@ function App() {
             <Route
               path="/"
               element={
-                <ProtectedRoute>
-                  <MainLayout>
-                    <Dashboard />
-                  </MainLayout>
-                </ProtectedRoute>
+                <MainLayout>
+                  <Dashboard />
+                </MainLayout>
               }
             />
           </Routes>

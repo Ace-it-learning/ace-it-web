@@ -225,6 +225,9 @@ app.post('/api/chat', async (req, res) => {
             return;
         } catch (error) {
             console.warn(`Model ${modelName} failed:`, error.message);
+            if (error.response) {
+                console.error("Error Response:", JSON.stringify(error.response, null, 2));
+            }
             // Continue to next model
         }
     }

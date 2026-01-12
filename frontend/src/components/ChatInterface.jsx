@@ -212,6 +212,15 @@ const ChatInterface = () => {
             {/* Input Area */}
             <div className="p-6 bg-white/40 dark:bg-black/20 flex flex-col gap-4">
                 <div className="flex items-center gap-3 bg-white dark:bg-[#1a110a] rounded-2xl p-2 shadow-inner border border-black/5">
+                    {/* Mute Toggle */}
+                    <button
+                        onClick={() => setIsMuted(prev => !prev)}
+                        className={cn("p-2 transition-colors rounded-full", isMuted ? "text-gray-400" : "text-green-500 hover:text-green-600")}
+                        title={isMuted ? "Unmute AI Voice" : "Mute AI Voice"}
+                    >
+                        {isMuted ? <VolumeX className="w-5 h-5" /> : <Volume2 className="w-5 h-5" />}
+                    </button>
+
                     <button className="p-2 text-[#a16b45] hover:text-primary transition-colors">
                         <Paperclip className="w-5 h-5" />
                     </button>

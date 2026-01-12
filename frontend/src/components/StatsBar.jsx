@@ -7,12 +7,18 @@ const StatsBar = () => {
     const { user } = useAuth();
 
     useEffect(() => {
-        if (!user) return;
+        if (!user || !user.uid) return;
+
         const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+        console.log(`StatsBar: Fetching stats for user UID: ${user.uid}`);
+
         fetch(`${API_URL}/api/stats?uid=${user.uid}`)
-            .then(res => res.json())
+            .then(res => {
+                if (!res.ok) throw new Error(`Server returned ${res.status}`);
+                return res.json();
+            })
             .then(data => setStats(data))
-            .catch(err => console.error('Failed to fetch stats:', err));
+            .catch(err => console.error('StatsBar: Error fetching user stats:', err));
     }, [user]);
 
     // Calculate XP percentage safely

@@ -6,10 +6,12 @@ const Login = () => {
     const { loginWithGoogle } = useAuth();
 
     const handleLogin = async () => {
+        console.log("Login button clicked!");
         try {
+            console.log("Calling loginWithGoogle from AuthContext...");
             await loginWithGoogle();
         } catch (error) {
-            console.error("Login failed", error);
+            console.error("Login failed in Login component:", error);
             alert("Login failed: " + error.message);
         }
     };
@@ -22,14 +24,17 @@ const Login = () => {
                     <p className="text-[#a16b45] dark:text-[#d2b48c] text-lg font-medium">Your Ultimate DSE AI Tutor</p>
                 </div>
 
-                <div className="relative group">
-                    <div className="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+                <div className="relative group p-4 border rounded-2xl bg-white/50">
                     <button
-                        onClick={handleLogin}
-                        className="relative w-full flex items-center justify-center gap-3 bg-white dark:bg-[#1a110a] text-[#1d130c] dark:text-white px-8 py-4 rounded-full font-bold shadow-xl hover:scale-105 transition-transform border border-black/5"
+                        onClick={(e) => {
+                            console.log("Button onClick event fired!");
+                            window.alert("Login button triggered!");
+                            handleLogin();
+                        }}
+                        className="w-full flex items-center justify-center gap-3 bg-primary text-white px-8 py-5 rounded-full font-bold shadow-xl hover:scale-105 transition-transform"
                     >
                         <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" className="w-6 h-6" alt="Google" />
-                        Sign in with Google
+                        使用 Google 登入
                     </button>
                 </div>
 

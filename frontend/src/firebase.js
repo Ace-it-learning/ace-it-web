@@ -1,14 +1,15 @@
 import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider } from "firebase/auth";
 
-// These keys will be provided by the user from their Firebase Console
+// These keys are now configured with the user's project: ace-it-ac129
 const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_AUTH_DOMAIN",
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_STORAGE_BUCKET",
-    messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-    appId: "YOUR_APP_ID"
+    apiKey: "AIzaSyCGtOY8L6jsWGFbPZGvCKGU4OOT9qWus-w",
+    authDomain: "ace-it-ac129.firebaseapp.com",
+    projectId: "ace-it-ac129",
+    storageBucket: "ace-it-ac129.firebasestorage.app",
+    messagingSenderId: "242153793328",
+    appId: "1:242153793328:web:a958c7279e2aa87a344af5",
+    measurementId: "G-H9GE29QBMD"
 };
 
 const app = initializeApp(firebaseConfig);

@@ -17,6 +17,7 @@ export const AuthProvider = ({ children }) => {
     }, []);
 
     const loginWithGoogle = () => {
+        console.log("Initiating Google Sign-In Popup inside AuthContext...");
         return signInWithPopup(auth, googleProvider);
     };
 

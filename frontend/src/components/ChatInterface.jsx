@@ -13,6 +13,8 @@ const ChatInterface = () => {
 
     // Initial greeting or History restore
     useEffect(() => {
+        if (!user) return;
+
         const fetchHistory = async () => {
             try {
                 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';

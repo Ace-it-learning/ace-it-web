@@ -13,9 +13,19 @@ const ChatInterface = () => {
 
     // Initial greeting or History restore
     useEffect(() => {
-        if (!user) return;
-
         const fetchHistory = async () => {
+            if (!user) {
+                // Default greeting for guests
+                setMessages([
+                    {
+                        role: 'assistant',
+                        content: `Hello! I'm your ${activeAgent.name}. Log in to save your learning progress, or start chatting with me now!`,
+                        agentId: activeAgentId
+                    }
+                ]);
+                return;
+            }
+
             try {
                 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
                 const res = await fetch(`${API_URL}/api/history/${activeAgentId}?uid=${user.uid}`);
@@ -24,11 +34,11 @@ const ChatInterface = () => {
                 if (history && history.length > 0) {
                     setMessages(history);
                 } else {
-                    // Default greeting
+                    // Default greeting for logged in users
                     setMessages([
                         {
                             role: 'assistant',
-                            content: `Here is your ${activeAgent.name}. How can I help you with your studies today?`,
+                            content: `Welcome back! I'm your ${activeAgent.name}. How can I help you with your studies today?`,
                             agentId: activeAgentId
                         }
                     ]);
@@ -40,7 +50,7 @@ const ChatInterface = () => {
 
         fetchHistory();
         setAvatarState('IDLE');
-    }, [activeAgentId, setAvatarState, activeAgent.name]);
+    }, [activeAgentId, setAvatarState, activeAgent.name, user]);
 
     const [isListening, setIsListening] = useState(false);
     const [isMuted, setIsMuted] = useState(false); // Default: Sound On
@@ -134,7 +144,7 @@ const ChatInterface = () => {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
-                    uid: user.uid,
+                    uid: user?.uid || 'guest',
                     message: inputValue,
                     history: history,
                     agentId: activeAgentId

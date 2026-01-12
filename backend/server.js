@@ -45,6 +45,16 @@ app.get('/api/stats', (req, res) => {
     const { uid } = req.query;
     if (!uid) return res.status(400).json({ error: "Missing uid" });
 
+    if (uid === 'guest') {
+        return res.json({
+            nickname: "Visitor",
+            xp: 0,
+            level: 1,
+            learningTime: 0,
+            diagnostic_complete: false
+        });
+    }
+
     const user = getUserData(uid);
     if (!user) return res.status(404).json({ error: "User not found" });
 
@@ -96,6 +106,8 @@ app.get('/api/history/:agentId', (req, res) => {
     const { uid } = req.query;
     if (!uid) return res.status(400).json({ error: "Missing uid" });
 
+    if (uid === 'guest') return res.json([]);
+
     const user = getUserData(uid);
     if (!user) return res.json([]); // Return empty if new user
 
@@ -112,7 +124,21 @@ app.post('/api/chat', async (req, res) => {
 
     // Get User Data
     const db = readDb();
-    const user = db.users[uid];
+    let user = db.users[uid];
+
+    if (uid === 'guest' && !user) {
+        // Initialize landing page visitor profile
+        user = {
+            nickname: "Visitor",
+            grade: "Unknown",
+            xp: 0,
+            level: 1,
+            chatHistory: {},
+            diagnostic_complete: false
+        };
+        db.users['guest'] = user;
+    }
+
     if (!user) return res.status(404).json({ error: "User not found" });
 
     let systemPrompt = AGENT_PROMPTS[agentId] || AGENT_PROMPTS.ace;

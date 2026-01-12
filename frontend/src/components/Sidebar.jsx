@@ -20,6 +20,8 @@ const Sidebar = () => {
                 .then(res => res.json())
                 .then(data => setNickname(data.nickname || 'Student'))
                 .catch(() => setNickname(user.displayName?.split(' ')[0] || 'Student'));
+        } else {
+            setNickname('Visitor');
         }
     }, [user]);
 

@@ -25,12 +25,23 @@ const Onboarding = () => {
         "Other"
     ];
 
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitError, setSubmitError] = useState('');
+
     const handleSubmit = async (e) => {
         e.preventDefault();
+        if (!user?.uid) {
+            setSubmitError("User not logged in. Please try logging in again.");
+            return;
+        }
+
+        setIsSubmitting(true);
+        setSubmitError('');
+
         try {
             // Save to backend
             const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
-            await fetch(`${API_URL}/api/onboarding`, {
+            const res = await fetch(`${API_URL}/api/onboarding`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
@@ -38,9 +49,20 @@ const Onboarding = () => {
                     ...formData
                 })
             });
+
+            if (!res.ok) {
+                const errorData = await res.json().catch(() => ({ error: 'Submission failed' }));
+                throw new Error(errorData.error || 'Backend submission error');
+            }
+
+            // Optional: small delay for better UX
+            await new Promise(r => setTimeout(r, 500));
             navigate('/');
         } catch (error) {
             console.error("Onboarding failed", error);
+            setSubmitError(error.message || "Failed to save profile. Please check your connection.");
+        } finally {
+            setIsSubmitting(false);
         }
     };
 
@@ -80,8 +102,8 @@ const Onboarding = () => {
                                     type="button"
                                     onClick={() => setFormData({ ...formData, grade })}
                                     className={`py-3 rounded-xl border font-bold transition-all ${formData.grade === grade
-                                            ? "bg-primary text-white border-primary shadow-lg scale-105"
-                                            : "bg-white dark:bg-[#1a110a] border-black/5 dark:border-white/10 text-[#a16b45] hover:border-primary/50"
+                                        ? "bg-primary text-white border-primary shadow-lg scale-105"
+                                        : "bg-white dark:bg-[#1a110a] border-black/5 dark:border-white/10 text-[#a16b45] hover:border-primary/50"
                                         }`}
                                 >
                                     {grade}
@@ -108,11 +130,22 @@ const Onboarding = () => {
                         </select>
                     </div>
 
+                    {submitError && (
+                        <div className="p-4 bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400 rounded-xl text-sm font-medium border border-red-100 dark:border-red-900/50">
+                            {submitError}
+                        </div>
+                    )}
+
                     <button
                         type="submit"
-                        className="w-full bg-primary text-white font-bold py-5 rounded-2xl shadow-xl hover:shadow-primary/20 hover:scale-[1.02] transition-all flex items-center justify-center gap-2 mt-4"
+                        disabled={isSubmitting}
+                        className={`w-full bg-primary text-white font-bold py-5 rounded-2xl shadow-xl hover:shadow-primary/20 hover:scale-[1.02] transition-all flex items-center justify-center gap-2 mt-4 ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
                     >
-                        Create My Profile <ArrowRight className="w-5 h-5" />
+                        {isSubmitting ? (
+                            <>Setting up your world...</>
+                        ) : (
+                            <>Create My Profile <ArrowRight className="w-5 h-5" /></>
+                        )}
                     </button>
                 </form>
             </div>

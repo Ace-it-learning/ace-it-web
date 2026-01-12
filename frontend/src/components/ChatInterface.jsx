@@ -106,16 +106,25 @@ const ChatInterface = () => {
             });
             const data = await response.json();
 
+            // Handling [FORCE_TTS] tag for Listening Mode
+            let replyText = data.reply;
+            const forceTTS = replyText.includes('[FORCE_TTS]');
+
+            // Clean the tag from display
+            replyText = replyText.replace('[FORCE_TTS]', '').trim();
+
             const aiMsg = {
                 role: 'assistant',
-                content: data.reply,
+                content: replyText,
                 agentId: activeAgentId
             };
             setMessages(prev => [...prev, aiMsg]);
             setAvatarState('HAPPY'); // Success state
 
-            // Speak the response
-            speakText(data.reply);
+            // Speak logic: Speak if NOT muted OR if FORCE_TTS is present
+            if (!isMuted || forceTTS) {
+                speakText(replyText);
+            }
 
             // Reset to IDLE after a few seconds
             setTimeout(() => setAvatarState('IDLE'), 3000);

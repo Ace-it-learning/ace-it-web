@@ -54,7 +54,7 @@ const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || "YOUR_API_KEY
 
 // List of models to try in order of preference (User requested Latest only)
 // Note: "Gemini 3" is not released yet; gemini-2.0-flash-exp is the latest available.
-const MODELS = ["gemini-2.0-flash-exp"];
+const MODELS = ["gemini-2.0-flash-exp", "gemini-1.5-flash", "gemini-1.5-pro"];
 
 // Startup Log to verify model order
 console.log("Server initialized. Model priority list:", MODELS);

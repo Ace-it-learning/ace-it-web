@@ -23,6 +23,12 @@ const ChatInterface = () => {
 
     const [isListening, setIsListening] = useState(false);
     const [isMuted, setIsMuted] = useState(false); // Default: Sound On
+    const isMutedRef = useRef(isMuted);
+
+    // Sync ref with state
+    useEffect(() => {
+        isMutedRef.current = isMuted;
+    }, [isMuted]);
 
     // Stop speaking immediately when muted
     useEffect(() => {
@@ -130,7 +136,7 @@ const ChatInterface = () => {
             setAvatarState('HAPPY'); // Success state
 
             // Speak logic: Speak if NOT muted OR if FORCE_TTS is present
-            if (!isMuted || forceTTS) {
+            if (!isMutedRef.current || forceTTS) {
                 speakText(replyText);
             }
 
@@ -232,7 +238,12 @@ const ChatInterface = () => {
                 <div className="flex items-center gap-3 bg-white dark:bg-[#1a110a] rounded-2xl p-2 shadow-inner border border-black/5">
                     {/* Mute Toggle */}
                     <button
-                        onClick={() => setIsMuted(prev => !prev)}
+                        onClick={() => {
+                            const newMute = !isMuted;
+                            setIsMuted(newMute);
+                            isMutedRef.current = newMute;
+                            if (newMute) window.speechSynthesis.cancel();
+                        }}
                         className={cn("p-2 transition-colors rounded-full", isMuted ? "text-gray-400" : "text-green-500 hover:text-green-600")}
                         title={isMuted ? "Unmute AI Voice" : "Mute AI Voice"}
                     >

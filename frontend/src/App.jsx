@@ -24,9 +24,11 @@ function App() {
             <Route
               path="/"
               element={
-                <MainLayout>
-                  <Dashboard />
-                </MainLayout>
+                <ProtectedRoute>
+                  <MainLayout>
+                    <Dashboard />
+                  </MainLayout>
+                </ProtectedRoute>
               }
             />
           </Routes>

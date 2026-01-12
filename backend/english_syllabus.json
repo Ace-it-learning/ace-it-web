@@ -1,0 +1,421 @@
+{
+    "metadata": {
+        "examination": "Hong Kong Diploma of Secondary Education (HKDSE)",
+        "subject": "English Language",
+        "document_type": "Unified Level Descriptors",
+        "levels": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+        ],
+        "components": [
+            "Reading",
+            "Writing",
+            "Listening and Integrated Skills",
+            "Speaking",
+            "Subject Overall"
+        ]
+    },
+    "modules": {
+        "reading": [
+            {
+                "level": 5,
+                "general_comprehension": [
+                    "Identifies main theme and subthemes of complex texts with less familiar topics",
+                    "Evaluates views and attitudes; compares alternative views",
+                    "Follows development of argument and fully understands reasons"
+                ],
+                "specific_comprehension": [
+                    "Inferences in wide range of complex texts (wider meaning)",
+                    "Understands purposes of texts",
+                    "Identifies word meanings in complex contexts",
+                    "Understands literal and figurative language"
+                ],
+                "awareness_of_style": [
+                    "Interprets tone and mood in all texts"
+                ]
+            },
+            {
+                "level": 4,
+                "general_comprehension": [
+                    "Identifies main theme/ideas of fairly complex texts",
+                    "Identifies views/attitudes and follows argument development"
+                ],
+                "specific_comprehension": [
+                    "Obvious inferences in fairly complex texts",
+                    "Sophisticated inferences in simple/familiar texts",
+                    "Identifies word meanings in context of sentences/paragraphs"
+                ],
+                "awareness_of_style": [
+                    "Interprets tone and mood in fairly complex texts"
+                ]
+            },
+            {
+                "level": 3,
+                "general_comprehension": [
+                    "Identifies main theme of a paragraph in straightforward texts",
+                    "Identifies explicitly expressed views"
+                ],
+                "specific_comprehension": [
+                    "Understands explicit info in fairly complex texts on familiar themes",
+                    "Straightforward inferences",
+                    "Identifies word meanings in familiar contexts"
+                ],
+                "awareness_of_style": [
+                    "Interprets tone and mood in simple texts"
+                ]
+            },
+            {
+                "level": 2,
+                "general_comprehension": [
+                    "Understands main idea of simple paragraph when clearly signalled",
+                    "Distinguishes fact from opinion when clearly signalled"
+                ],
+                "specific_comprehension": [
+                    "Understands explicit info in simple texts",
+                    "Identifies word meanings in simple/familiar contexts"
+                ],
+                "awareness_of_style": [
+                    "Recognizes basic stylistic features"
+                ]
+            },
+            {
+                "level": 1,
+                "general_comprehension": [
+                    "Identifies sequence of events in simple structures"
+                ],
+                "specific_comprehension": [
+                    "Understands explicit factual info in simple texts with familiar vocabulary",
+                    "Uses features like headings to locate info"
+                ],
+                "awareness_of_style": [
+                    "Recognizes basic stylistic features in short, simple texts"
+                ]
+            }
+        ],
+        "writing": [
+            {
+                "level": 5,
+                "content": [
+                    "Relevant and extensive",
+                    "Engages reader interest",
+                    "Creativity/imagination shown where appropriate"
+                ],
+                "language_and_style": [
+                    "Wide range of accurate sentence structures",
+                    "Accurate punctuation and grammar",
+                    "Wide, sophisticated vocabulary",
+                    "Appropriate register, tone, and style"
+                ],
+                "organization": [
+                    "Wholly coherent structure",
+                    "Effective paragraphing",
+                    "Sophisticated cohesion"
+                ]
+            },
+            {
+                "level": 4,
+                "content": [
+                    "Relevant and detailed in parts",
+                    "Engages reader interest",
+                    "Creativity in most parts"
+                ],
+                "language_and_style": [
+                    "Range of accurate sentence structures",
+                    "Sufficiently accurate punctuation/grammar",
+                    "Moderately wide vocabulary",
+                    "Mostly appropriate register/tone"
+                ],
+                "organization": [
+                    "Coherent in most parts",
+                    "Effective paragraphing",
+                    "Successful cohesion between most sentences"
+                ]
+            },
+            {
+                "level": 3,
+                "content": [
+                    "Most content is relevant",
+                    "Several examples of creativity/imagination"
+                ],
+                "language_and_style": [
+                    "Well-formed simple and some complex sentences",
+                    "Basic punctuation/grammar accuracy",
+                    "Appropriate use of common vocabulary",
+                    "Evidence of appropriate register/tone"
+                ],
+                "organization": [
+                    "Coherent in some sections",
+                    "Paragraphing effective in parts",
+                    "Successful cohesion between some sentences"
+                ]
+            },
+            {
+                "level": 2,
+                "content": [
+                    "Some examples of relevant content",
+                    "Uses features of familiar genres"
+                ],
+                "language_and_style": [
+                    "Well-formed simple sentences",
+                    "Correct basic punctuation",
+                    "Grammatical accuracy sufficient for some comprehension",
+                    "Appropriate simple vocabulary"
+                ],
+                "organization": [
+                    "Structure discernible for simple genres",
+                    "Evidence of paragraphing",
+                    "Simple links between sentences"
+                ]
+            },
+            {
+                "level": 1,
+                "content": [
+                    "A few relevant content points"
+                ],
+                "language": [
+                    "A few simple, comprehensible sentences",
+                    "A few examples of appropriate simple vocabulary"
+                ],
+                "organization": [
+                    "A few links between sentences"
+                ]
+            }
+        ],
+        "listening_and_integrated_skills": [
+            {
+                "level": 5,
+                "listening": {
+                    "general": [
+                        "Identify themes of complex texts",
+                        "Evaluate views",
+                        "Understand argument and background detail"
+                    ],
+                    "specific": [
+                        "Inferences from complex texts at near-natural speed",
+                        "Extract implied info",
+                        "Understand figurative language"
+                    ],
+                    "sound_patterns": [
+                        "Identify attitude/intention via stress and intonation"
+                    ]
+                },
+                "integrated_skills": [
+                    "Follow all Data File instructions",
+                    "Transfer info from complex texts",
+                    "Evaluate contrasting views",
+                    "Highly accurate language/spelling",
+                    "Wholly coherent organization"
+                ]
+            },
+            {
+                "level": 4,
+                "listening": {
+                    "general": [
+                        "Identify theme/ideas",
+                        "Evaluate views on familiar topics",
+                        "Follow argument and background details"
+                    ],
+                    "specific": [
+                        "Obvious inferences at moderate speed",
+                        "Identify simple figurative language"
+                    ],
+                    "sound_patterns": [
+                        "Identify attitude/intention via obvious stress/intonation"
+                    ]
+                },
+                "integrated_skills": [
+                    "Follow most Data File instructions",
+                    "Transfer info from fairly complex texts",
+                    "Range of sentence structures",
+                    "Coherent organization"
+                ]
+            },
+            {
+                "level": 3,
+                "listening": {
+                    "general": [
+                        "Identify straightforward themes",
+                        "Identify explicit views"
+                    ],
+                    "specific": [
+                        "Understand explicit info at moderate speed",
+                        "Straightforward inferences from literal language"
+                    ],
+                    "sound_patterns": [
+                        "Identify straightforward attitudes via stress/intonation"
+                    ]
+                },
+                "integrated_skills": [
+                    "Follow some Data File instructions",
+                    "Transfer info from straightforward texts",
+                    "Some complex sentences accurate",
+                    "Coherent organization in parts"
+                ]
+            },
+            {
+                "level": 2,
+                "listening": {
+                    "general": [
+                        "Identify clearly signalled main ideas",
+                        "Distinguish fact from opinion"
+                    ],
+                    "specific": [
+                        "Understand explicit info at moderate speed",
+                        "Understand literal language in clear context"
+                    ],
+                    "sound_patterns": [
+                        "Recognize simple emotions from delivery"
+                    ]
+                },
+                "integrated_skills": [
+                    "Follow Data File instructions in part",
+                    "Transfer info from simple texts",
+                    "Accurate short/simple sentences",
+                    "Evidence of paragraphing"
+                ]
+            },
+            {
+                "level": 1,
+                "listening": {
+                    "general": [
+                        "Understand predictable factual info",
+                        "Identify sequence of events"
+                    ],
+                    "specific": [
+                        "Understand straightforward explicit info at moderate speed"
+                    ],
+                    "sound_patterns": [
+                        "Recognize very simple emotions"
+                    ]
+                },
+                "integrated_skills": [
+                    "Follow a few Data File instructions",
+                    "Transfer info from short simple texts",
+                    "Basic structures accurate in parts"
+                ]
+            }
+        ],
+        "speaking": [
+            {
+                "level": 5,
+                "pronunciation_delivery": [
+                    "Clear and accurate",
+                    "Stress/intonation enhances communication",
+                    "Sustained fluency"
+                ],
+                "communication_strategies": [
+                    "Wide range of initiation/maintenance strategies",
+                    "Body language enhances communication"
+                ],
+                "vocabulary_language_patterns": [
+                    "Varied and appropriate vocabulary",
+                    "Accurate and appropriate patterns"
+                ],
+                "ideas_organization": [
+                    "Information clearly developed",
+                    "Cogent expansion",
+                    "Well-sustained exchanges"
+                ]
+            },
+            {
+                "level": 4,
+                "pronunciation_delivery": [
+                    "Clear pronunciation of familiar words",
+                    "Appropriate stress/intonation",
+                    "Sustained fluency with some hesitation"
+                ],
+                "communication_strategies": [
+                    "Range of strategies to maintain interaction",
+                    "Body language supports communication"
+                ],
+                "vocabulary_language_patterns": [
+                    "Appropriate vocabulary",
+                    "Mostly accurate patterns; errors do not impede communication"
+                ],
+                "ideas_organization": [
+                    "Most ideas relevant/developed",
+                    "Often expanded with detail",
+                    "Sustained exchanges"
+                ]
+            },
+            {
+                "level": 3,
+                "pronunciation_delivery": [
+                    "Most words understood",
+                    "Stress/intonation helps convey meaning"
+                ],
+                "communication_strategies": [
+                    "Some strategies used to respond purposefully"
+                ],
+                "vocabulary_language_patterns": [
+                    "Appropriate range of simple vocabulary",
+                    "Accurate simple patterns"
+                ],
+                "ideas_organization": [
+                    "Some relevant ideas expressed clearly",
+                    "Exchanges sustained when prompted"
+                ]
+            },
+            {
+                "level": 2,
+                "pronunciation_delivery": [
+                    "Familiar words understood in context",
+                    "Appropriate stress in simple utterances"
+                ],
+                "communication_strategies": [
+                    "Basic expressions used to respond"
+                ],
+                "vocabulary_language_patterns": [
+                    "Small range of simple vocabulary",
+                    "Basic patterns accurate in brief exchanges"
+                ],
+                "ideas_organization": [
+                    "Some relevant simple ideas",
+                    "Brief participation when prompted"
+                ]
+            },
+            {
+                "level": 1,
+                "pronunciation_delivery": [
+                    "Some simple familiar words understood"
+                ],
+                "communication_strategies": [
+                    "Some very basic comprehensible responses"
+                ],
+                "vocabulary_language_patterns": [
+                    "Simple vocabulary used appropriately",
+                    "Formulaic patterns used appropriately"
+                ],
+                "ideas_organization": [
+                    "Basic relevant info on familiar topics",
+                    "Brief responses when repeatedly prompted"
+                ]
+            }
+        ],
+        "subject_overall": [
+            {
+                "level": 5,
+                "summary": "Understand spoken English at near-natural speed; evaluate complex texts; write creatively with wide sentence range; express ideas fluently."
+            },
+            {
+                "level": 4,
+                "summary": "Understand spoken English at moderate speed; follow arguments in fairly complex texts; write in an organized way; express ideas with some hesitation."
+            },
+            {
+                "level": 3,
+                "summary": "Understand literal spoken English in familiar situations; follow explicit arguments; write relevantly using common vocabulary."
+            },
+            {
+                "level": 2,
+                "summary": "Distinguish fact from opinion when signalled; follow parts of explicit arguments; write using simple sentence structures."
+            },
+            {
+                "level": 1,
+                "summary": "Extract predictable info from short spoken texts; identify factual info via headings; make one or two relevant points in writing."
+            }
+        ]
+    }
+}

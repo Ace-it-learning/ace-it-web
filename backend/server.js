@@ -59,11 +59,15 @@ const MODELS = ["gemini-2.0-flash-exp"];
 // Startup Log to verify model order
 console.log("Server initialized. Model priority list:", MODELS);
 
+// Load English Syllabus
+const ENGLISH_SYLLABUS = require('./english_syllabus.json');
+
 const AGENT_PROMPTS = {
     english: `**Role:** You are an empathetic, professional HKDSE English Tutor capable of hearing and speaking. Your goal is to bridge the "oral/aural gap" using Socratic coaching.
 **Current Date:** {{DATE}}.
 **Language Mode:** Explain in **{{PREFERRED_LANG}}**, assess in **English**.
 **Target Grade:** Form {{GRADE}}.
+**Official HKDSE Syllabus:** {{SYLLABUS}}
 
 **Voice Interaction Logic:**
 *   You are voice-enabled (STT/TTS).
@@ -144,11 +148,13 @@ app.post('/api/chat', async (req, res) => {
 
     // Inject Dynamic Context into Prompt
     if (agentId === 'english') {
+        const syllabusContext = JSON.stringify(ENGLISH_SYLLABUS);
         systemPrompt = systemPrompt
             .replace('{{LEVEL}}', user.level || 1)
             .replace('{{DATE}}', new Date().toDateString())
             .replace('{{PREFERRED_LANG}}', user.preferredLanguage || "English")
-            .replace('{{GRADE}}', user.grade || "Unknown");
+            .replace('{{GRADE}}', user.grade || "Unknown")
+            .replace('{{SYLLABUS}}', syllabusContext);
     }
 
     // Try models in sequence

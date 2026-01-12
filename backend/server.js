@@ -90,7 +90,7 @@ const AGENT_PROMPTS = {
 **Voice Interaction Logic:**
 *   You are voice-enabled (STT/TTS).
 *   **TTS Output:** Speak naturally (British-English Tutor).
-*   **Listening Logic:** Generate scripts for Paper 3 tasks; read them aloud.
+*   **Listening Logic:** Generate scripts for Paper 3 tasks; read them aloud. PREPEND the tag [FORCE_TTS] to the script.
 
 **Assessment Flow:**
 *   **Diagnostic:** 5-Part Test (Reading, Writing, Usage, Listening Paper 3, Speaking Paper 4).
@@ -139,105 +139,103 @@ const getMockResponse = (agentId, message) => {
     return defaults[agentId] || defaults.ace;
 };
 
+// ... (Validation of prior prompt update: I will just replace the chat endpoint first to fix the crash)
+
 app.post('/api/chat', async (req, res) => {
-    console.log("Received chat request:", req.body);
-    const { message, agentId } = req.body;
+    console.log("Received chat request");
+    const { message, history, agentId } = req.body;
 
-    app.post('/api/chat', async (req, res) => {
-        console.log("Received chat request");
-        const { message, history, agentId } = req.body;
+    // Get User Data
+    const db = readDb();
+    const user = db.user;
 
-        // Get User Data
-        const db = readDb();
-        const user = db.user;
+    let systemPrompt = AGENT_PROMPTS[agentId] || AGENT_PROMPTS.ace;
 
-        let systemPrompt = AGENT_PROMPTS[agentId] || AGENT_PROMPTS.ace;
+    // Inject Dynamic Context into Prompt
+    if (agentId === 'english') {
+        const syllabusContext = JSON.stringify(ENGLISH_SYLLABUS);
+        systemPrompt = systemPrompt
+            .replace('{{LEVEL}}', user.level || 1)
+            .replace('{{DATE}}', new Date().toDateString())
+            .replace('{{PREFERRED_LANG}}', user.preferredLanguage || "English")
+            .replace('{{GRADE}}', user.grade || "Unknown")
+            .replace('{{SYLLABUS}}', syllabusContext);
+    }
 
-        // Inject Dynamic Context into Prompt
-        if (agentId === 'english') {
-            const syllabusContext = JSON.stringify(ENGLISH_SYLLABUS);
-            systemPrompt = systemPrompt
-                .replace('{{LEVEL}}', user.level || 1)
-                .replace('{{DATE}}', new Date().toDateString())
-                .replace('{{PREFERRED_LANG}}', user.preferredLanguage || "English")
-                .replace('{{GRADE}}', user.grade || "Unknown")
-                .replace('{{SYLLABUS}}', syllabusContext);
-        }
+    // Try models in sequence
+    for (const modelName of MODELS) {
+        try {
+            console.log(`Attempting model: ${modelName}`);
 
-        // Try models in sequence
-        for (const modelName of MODELS) {
-            try {
-                console.log(`Attempting model: ${modelName}`);
+            // Initialize Model with System Instruction
+            const model = genAI.getGenerativeModel({
+                model: modelName,
+                systemInstruction: systemPrompt
+            });
 
-                // Initialize Model with System Instruction
-                const model = genAI.getGenerativeModel({
-                    model: modelName,
-                    systemInstruction: systemPrompt
-                });
+            // Start Chat Session with History
+            const chat = model.startChat({
+                history: history || [], // [{ role: 'user'|'model', parts: [{ text: ... }] }]
+                generationConfig: {
+                    maxOutputTokens: 500, // Limit verbosity
+                },
+            });
 
-                // Start Chat Session with History
-                const chat = model.startChat({
-                    history: history || [], // [{ role: 'user'|'model', parts: [{ text: ... }] }]
-                    generationConfig: {
-                        maxOutputTokens: 500, // Limit verbosity
-                    },
-                });
+            // Send Message
+            const result = await chat.sendMessage(message);
+            const response = result.response;
+            let text = response.text();
 
-                // Send Message
-                const result = await chat.sendMessage(message);
-                const response = result.response;
-                let text = response.text();
+            // --- TAG PARSING LOGIC ---
+            let dbUpdated = false;
 
-                // --- TAG PARSING LOGIC ---
-                let dbUpdated = false;
-
-                // 1. Check [SET_LEVEL: X]
-                const levelMatch = text.match(/\[SET_LEVEL:\s*(\d+)\]/);
-                if (levelMatch) {
-                    user.level = parseInt(levelMatch[1]);
-                    user.xp += 100; // Bonus
-                    dbUpdated = true;
-                    text = text.replace(levelMatch[0], "");
-                }
-
-                // 2. Check [SET_LANG: X]
-                const langMatch = text.match(/\[SET_LANG:\s*(\w+)\]/);
-                if (langMatch) {
-                    user.preferredLanguage = langMatch[1]; // English or Chinese
-                    dbUpdated = true;
-                    text = text.replace(langMatch[0], "");
-                }
-
-                // 3. Check [SET_GRADE: X]
-                const gradeMatch = text.match(/\[SET_GRADE:\s*(\d+)\]/);
-                if (gradeMatch) {
-                    user.grade = parseInt(gradeMatch[1]);
-                    dbUpdated = true;
-                    text = text.replace(gradeMatch[0], "");
-                }
-
-                // Save DB if changed
-                if (dbUpdated) {
-                    writeDb(db);
-                    console.log("Updated User Stats:", user);
-                }
-
-                // If successful, send response and exit loop
-                res.json({ reply: text.trim() });
-                return;
-            } catch (error) {
-                console.warn(`Model ${modelName} failed:`, error.message);
-                // Continue to next model
+            // 1. Check [SET_LEVEL: X]
+            const levelMatch = text.match(/\[SET_LEVEL:\s*(\d+)\]/);
+            if (levelMatch) {
+                user.level = parseInt(levelMatch[1]);
+                user.xp += 100; // Bonus
+                dbUpdated = true;
+                text = text.replace(levelMatch[0], "");
             }
+
+            // 2. Check [SET_LANG: X]
+            const langMatch = text.match(/\[SET_LANG:\s*(\w+)\]/);
+            if (langMatch) {
+                user.preferredLanguage = langMatch[1]; // English or Chinese
+                dbUpdated = true;
+                text = text.replace(langMatch[0], "");
+            }
+
+            // 3. Check [SET_GRADE: X]
+            const gradeMatch = text.match(/\[SET_GRADE:\s*(\d+)\]/);
+            if (gradeMatch) {
+                user.grade = parseInt(gradeMatch[1]);
+                dbUpdated = true;
+                text = text.replace(gradeMatch[0], "");
+            }
+
+            // Save DB if changed
+            if (dbUpdated) {
+                writeDb(db);
+                console.log("Updated User Stats:", user);
+            }
+
+            // If successful, send response and exit loop
+            res.json({ reply: text.trim() });
+            return;
+        } catch (error) {
+            console.warn(`Model ${modelName} failed:`, error.message);
+            // Continue to next model
         }
+    }
 
-        // If loop finishes, all models failed
-        console.error("All models failed. Switching to Offline Mode.");
-        const mockReply = getMockResponse(agentId, message);
-        const fallbackMessage = `[Offline Mode] ${mockReply} (All AI models busy/overloaded)`;
-        res.json({ reply: fallbackMessage });
-    });
+    // If loop finishes, all models failed
+    console.error("All models failed. Switching to Offline Mode.");
+    const mockReply = getMockResponse(agentId, message);
+    const fallbackMessage = `[Offline Mode] ${mockReply} (All AI models busy/overloaded)`;
+    res.json({ reply: fallbackMessage });
+});
 
-    app.listen(PORT, () => {
-        console.log(`Server running on http://localhost:${PORT}`);
-    });
+app.listen(PORT, () => {
+    console.log(`Server running on http://localhost:${PORT}`);
+});

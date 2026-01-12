@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useAvatar } from '../context/AvatarContext';
-import { ArrowRight, Mic, Paperclip, Send } from 'lucide-react';
+import { ArrowRight, Mic, Paperclip, Send, Volume2, VolumeX } from 'lucide-react';
 import { cn } from './Sidebar'; // Reusing cn utility
 
 const ChatInterface = () => {
@@ -22,6 +22,7 @@ const ChatInterface = () => {
     }, [activeAgentId, setAvatarState]); // Added setAvatarState to dependencies
 
     const [isListening, setIsListening] = useState(false);
+    const [isMuted, setIsMuted] = useState(false); // Default: Sound On
 
     // Auto-scroll to bottom
     useEffect(() => {

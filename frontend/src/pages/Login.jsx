@@ -1,9 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useAuth } from '../context/AuthContext';
+import { useNavigate } from 'react-router-dom';
 import { LogIn } from 'lucide-react';
 
 const Login = () => {
-    const { loginWithGoogle } = useAuth();
+    const { user, loginWithGoogle } = useAuth();
+    const navigate = useNavigate();
+
+    // Redirect if already logged in
+    useEffect(() => {
+        if (user) {
+            navigate('/');
+        }
+    }, [user, navigate]);
 
     const handleLogin = async () => {
         console.log("Login button clicked!");

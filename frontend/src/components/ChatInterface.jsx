@@ -82,11 +82,24 @@ const ChatInterface = () => {
 
         try {
             const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+
+            // Prepare history (exclude the very last user message which is being sent now, if it was already added to state? 
+            // construct from 'messages' which doesn't have the new user msg yet? 
+            // Wait, line 78 adds it to state: `setMessages(prev => [...prev, userMsg]);`
+            // But state update is async. `messages` here is still the OLD value.
+            // So `messages` is perfect as "history".
+
+            const history = messages.map(m => ({
+                role: m.role === 'user' ? 'user' : 'model', // Gemini uses 'model'
+                parts: [{ text: m.content }]
+            }));
+
             const response = await fetch(`${API_URL}/api/chat`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     message: inputValue,
+                    history: history,
                     agentId: activeAgentId
                 })
             });

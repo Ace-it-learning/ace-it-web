@@ -143,82 +143,101 @@ app.post('/api/chat', async (req, res) => {
     console.log("Received chat request:", req.body);
     const { message, agentId } = req.body;
 
-    // Get User Data
-    const db = readDb();
-    const user = db.user;
+    app.post('/api/chat', async (req, res) => {
+        console.log("Received chat request");
+        const { message, history, agentId } = req.body;
 
-    let systemPrompt = AGENT_PROMPTS[agentId] || AGENT_PROMPTS.ace;
+        // Get User Data
+        const db = readDb();
+        const user = db.user;
 
-    // Inject Dynamic Context into Prompt
-    if (agentId === 'english') {
-        const syllabusContext = JSON.stringify(ENGLISH_SYLLABUS);
-        systemPrompt = systemPrompt
-            .replace('{{LEVEL}}', user.level || 1)
-            .replace('{{DATE}}', new Date().toDateString())
-            .replace('{{PREFERRED_LANG}}', user.preferredLanguage || "English")
-            .replace('{{GRADE}}', user.grade || "Unknown")
-            .replace('{{SYLLABUS}}', syllabusContext);
-    }
+        let systemPrompt = AGENT_PROMPTS[agentId] || AGENT_PROMPTS.ace;
 
-    // Try models in sequence
-    for (const modelName of MODELS) {
-        try {
-            console.log(`Attempting model: ${modelName}`);
-            const model = genAI.getGenerativeModel({ model: modelName });
-            const result = await model.generateContent(`${systemPrompt}\n\nStudent: ${message}\nTutor (Max 3 sentences):`);
-            const response = result.response;
-            let text = response.text();
-
-            // --- TAG PARSING LOGIC ---
-            let dbUpdated = false;
-
-            // 1. Check [SET_LEVEL: X]
-            const levelMatch = text.match(/\[SET_LEVEL:\s*(\d+)\]/);
-            if (levelMatch) {
-                user.level = parseInt(levelMatch[1]);
-                user.xp += 100; // Bonus
-                dbUpdated = true;
-                text = text.replace(levelMatch[0], "");
-            }
-
-            // 2. Check [SET_LANG: X]
-            const langMatch = text.match(/\[SET_LANG:\s*(\w+)\]/);
-            if (langMatch) {
-                user.preferredLanguage = langMatch[1]; // English or Chinese
-                dbUpdated = true;
-                text = text.replace(langMatch[0], "");
-            }
-
-            // 3. Check [SET_GRADE: X]
-            const gradeMatch = text.match(/\[SET_GRADE:\s*(\d+)\]/);
-            if (gradeMatch) {
-                user.grade = parseInt(gradeMatch[1]);
-                dbUpdated = true;
-                text = text.replace(gradeMatch[0], "");
-            }
-
-            // Save DB if changed
-            if (dbUpdated) {
-                writeDb(db);
-                console.log("Updated User Stats:", user);
-            }
-
-            // If successful, send response and exit loop
-            res.json({ reply: text.trim() });
-            return;
-        } catch (error) {
-            console.warn(`Model ${modelName} failed:`, error.message);
-            // Continue to next model
+        // Inject Dynamic Context into Prompt
+        if (agentId === 'english') {
+            const syllabusContext = JSON.stringify(ENGLISH_SYLLABUS);
+            systemPrompt = systemPrompt
+                .replace('{{LEVEL}}', user.level || 1)
+                .replace('{{DATE}}', new Date().toDateString())
+                .replace('{{PREFERRED_LANG}}', user.preferredLanguage || "English")
+                .replace('{{GRADE}}', user.grade || "Unknown")
+                .replace('{{SYLLABUS}}', syllabusContext);
         }
-    }
 
-    // If loop finishes, all models failed
-    console.error("All models failed. Switching to Offline Mode.");
-    const mockReply = getMockResponse(agentId, message);
-    const fallbackMessage = `[Offline Mode] ${mockReply} (All AI models busy/overloaded)`;
-    res.json({ reply: fallbackMessage });
-});
+        // Try models in sequence
+        for (const modelName of MODELS) {
+            try {
+                console.log(`Attempting model: ${modelName}`);
 
-app.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT}`);
-});
+                // Initialize Model with System Instruction
+                const model = genAI.getGenerativeModel({
+                    model: modelName,
+                    systemInstruction: systemPrompt
+                });
+
+                // Start Chat Session with History
+                const chat = model.startChat({
+                    history: history || [], // [{ role: 'user'|'model', parts: [{ text: ... }] }]
+                    generationConfig: {
+                        maxOutputTokens: 500, // Limit verbosity
+                    },
+                });
+
+                // Send Message
+                const result = await chat.sendMessage(message);
+                const response = result.response;
+                let text = response.text();
+
+                // --- TAG PARSING LOGIC ---
+                let dbUpdated = false;
+
+                // 1. Check [SET_LEVEL: X]
+                const levelMatch = text.match(/\[SET_LEVEL:\s*(\d+)\]/);
+                if (levelMatch) {
+                    user.level = parseInt(levelMatch[1]);
+                    user.xp += 100; // Bonus
+                    dbUpdated = true;
+                    text = text.replace(levelMatch[0], "");
+                }
+
+                // 2. Check [SET_LANG: X]
+                const langMatch = text.match(/\[SET_LANG:\s*(\w+)\]/);
+                if (langMatch) {
+                    user.preferredLanguage = langMatch[1]; // English or Chinese
+                    dbUpdated = true;
+                    text = text.replace(langMatch[0], "");
+                }
+
+                // 3. Check [SET_GRADE: X]
+                const gradeMatch = text.match(/\[SET_GRADE:\s*(\d+)\]/);
+                if (gradeMatch) {
+                    user.grade = parseInt(gradeMatch[1]);
+                    dbUpdated = true;
+                    text = text.replace(gradeMatch[0], "");
+                }
+
+                // Save DB if changed
+                if (dbUpdated) {
+                    writeDb(db);
+                    console.log("Updated User Stats:", user);
+                }
+
+                // If successful, send response and exit loop
+                res.json({ reply: text.trim() });
+                return;
+            } catch (error) {
+                console.warn(`Model ${modelName} failed:`, error.message);
+                // Continue to next model
+            }
+        }
+
+        // If loop finishes, all models failed
+        console.error("All models failed. Switching to Offline Mode.");
+        const mockReply = getMockResponse(agentId, message);
+        const fallbackMessage = `[Offline Mode] ${mockReply} (All AI models busy/overloaded)`;
+        res.json({ reply: fallbackMessage });
+    });
+
+    app.listen(PORT, () => {
+        console.log(`Server running on http://localhost:${PORT}`);
+    });

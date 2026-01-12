@@ -115,8 +115,56 @@ app.get('/api/history/:agentId', (req, res) => {
     res.json(history);
 });
 
+require('dotenv').config();
+const { GoogleGenerativeAI } = require("@google/generative-ai");
+
+const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+
+const MODELS = [
+    "gemini-2.0-flash-exp",
+    "gemini-2.0-flash",
+    "gemini-1.5-flash",
+    "gemini-1.5-pro"
+];
+
+const AGENT_PROMPTS = {
+    ace: "You are Ace, the lead AI Tutor for Ace It!. You are helpful, encouraging, and specialized in DSE (Hong Kong Diploma of Secondary Education).",
+    english: `You are the Expert English Tutor. 
+Focus on DSE English (Reading, Writing, Listening, Speaking).
+- Language: English (primary), but can explain in Cantonese if student is confused.
+- Current Date: {{DATE}}
+- Student Profile: Level {{LEVEL}}, Grade {{GRADE}}, Preferred Lang: {{PREFERRED_LANG}}
+- Syllabus: {{SYLLABUS}}
+
+MISSION: Carry out a 5-step diagnostic if it's the first time.
+1. Welcome & Icebreaker.
+2. Grammar check.
+3. Vocabulary range check.
+4. Reading comprehension mini-test.
+5. Goal setting.
+
+TAGS to use:
+- [SET_LEVEL: X] (X is 1 to 5)
+- [DIAGNOSTIC_COMPLETE] 
+- [SET_LANG: English/Chinese]
+- [SET_GRADE: 1-6]
+- [FORCE_TTS] for listening scripts.
+`,
+    math: "You are the Expert Math Tutor for DSE.",
+    science: "You are the Expert Science Tutor for DSE."
+};
+
+const ENGLISH_SYLLABUS = {
+    topics: ["Grammar", "Vocabulary", "Reading", "Listening", "Speaking", "Writing"],
+    levels: ["F1", "F2", "F3", "F4", "F5", "F6"]
+};
+
+const getMockResponse = (agentId, message) => {
+    if (message.toLowerCase().includes("hello")) return "Hello! I am your AI Tutor. How can I help you today?";
+    return "I'm currently in offline mode, but I'm here to support your study!";
+};
+
 // Chat Endpoint
-// ...
 app.post('/api/chat', async (req, res) => {
     console.log("Received chat request");
     const { uid, message, history: clientHistory, agentId } = req.body;

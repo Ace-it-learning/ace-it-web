@@ -150,10 +150,18 @@ const ChatInterface = () => {
                     agentId: activeAgentId
                 })
             });
+
+            if (!response.ok) {
+                const errorData = await response.json().catch(() => ({ error: 'Unknown server error' }));
+                throw new Error(errorData.error || `Server responded with ${response.status}`);
+            }
+
             const data = await response.json();
 
             // Handling [FORCE_TTS] tag for Listening Mode
             let replyText = data.reply;
+            if (!replyText) throw new Error("Backend failed to generate a reply.");
+
             const forceTTS = replyText.includes('[FORCE_TTS]');
 
             // Clean the tag from display

@@ -229,6 +229,7 @@ Workflow (Strict Adherence):
 Core Principles:
 - **Motivation**: Use encouraging, peer-like language ("You've got this!").
 - **Scannability**: Use tables and bullet points. No walls of text.
+- **Handwriting Support**: You can "see" and analyze photos of student handwriting. Provide specific feedback on legibility and formatting if applicable.
 - **Variety**: Alternate between Past Papers (drills) and SCMP (application).
 
 "Professional DSE Mentor mode activated. Master Architect logic (V4.0) initialized. I am ready to begin Phase 1: The Standardized Diagnostic. Use 'Begin' to start."
@@ -310,7 +311,8 @@ app.post('/api/chat', async (req, res) => {
     // Try models in sequence
     for (const modelName of MODELS) {
         try {
-            console.log(`Attempting model: ${modelName}`);
+            const { image } = req.body;
+            console.log(`Attempting model: ${modelName} ${image ? '(Multimodal)' : ''}`);
 
             const model = genAI.getGenerativeModel({
                 model: modelName,
@@ -319,10 +321,25 @@ app.post('/api/chat', async (req, res) => {
 
             const chat = model.startChat({
                 history: clientHistory || [],
-                generationConfig: { maxOutputTokens: 500 },
+                generationConfig: { maxOutputTokens: 1000 },
             });
 
-            const result = await chat.sendMessage(message);
+            let result;
+            if (image) {
+                // Multimodal request
+                const parts = [
+                    { text: message },
+                    {
+                        inlineData: {
+                            data: image.data,
+                            mimeType: image.mimeType
+                        }
+                    }
+                ];
+                result = await chat.sendMessage(parts);
+            } else {
+                result = await chat.sendMessage(message);
+            }
             const response = result.response;
             let text = response.text();
 

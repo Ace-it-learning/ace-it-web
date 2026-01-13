@@ -9,6 +9,8 @@ const ChatInterface = () => {
     const { user } = useAuth();
     const [messages, setMessages] = useState([]);
     const [inputValue, setInputValue] = useState('');
+    const [selectedImage, setSelectedImage] = useState(null); // { data: base64, type: mimeType, preview: url }
+    const fileInputRef = useRef(null);
     const messagesEndRef = useRef(null);
 
     // Initial greeting or History restore
@@ -117,12 +119,35 @@ const ChatInterface = () => {
         recognition.start();
     };
 
-    const handleSendMessage = async () => {
-        if (!inputValue.trim()) return;
+    const handleFileSelect = (e) => {
+        const file = e.target.files[0];
+        if (!file || !file.type.startsWith('image/')) return;
 
-        const userMsg = { role: 'user', content: inputValue };
+        const reader = new FileReader();
+        reader.onloadend = () => {
+            setSelectedImage({
+                data: reader.result.split(',')[1],
+                type: file.type,
+                preview: reader.result
+            });
+        };
+        reader.readAsDataURL(file);
+    };
+
+    const handleSendMessage = async () => {
+        if (!inputValue.trim() && !selectedImage) return;
+
+        const userMsg = {
+            role: 'user',
+            content: inputValue,
+            image: selectedImage ? { preview: selectedImage.preview } : null
+        };
         setMessages(prev => [...prev, userMsg]);
+        const currentInput = inputValue;
+        const currentImage = selectedImage;
+
         setInputValue('');
+        setSelectedImage(null);
         setAvatarState('THINKING');
 
         try {
@@ -145,7 +170,8 @@ const ChatInterface = () => {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     uid: user?.uid || 'guest',
-                    message: inputValue,
+                    message: currentInput,
+                    image: currentImage ? { data: currentImage.data, mimeType: currentImage.type } : null,
                     history: history,
                     agentId: activeAgentId
                 })
@@ -232,11 +258,14 @@ const ChatInterface = () => {
 
                         {/* Message Bubble */}
                         <div className={cn(
-                            "p-5 rounded-2xl shadow-sm border border-black/5",
+                            "p-5 rounded-2xl shadow-sm border border-black/5 flex flex-col gap-3",
                             msg.role === 'user'
                                 ? "bg-primary/10 dark:bg-primary/20 rounded-tr-none"
                                 : "bg-white dark:bg-[#3d2c20] rounded-tl-none"
                         )}>
+                            {msg.image && (
+                                <img src={msg.image.preview} alt="Uploaded handwriting" className="max-w-xs rounded-lg border border-black/10 shadow-sm" />
+                            )}
                             <p className="text-[#1d130c] dark:text-white leading-relaxed whitespace-pre-wrap">
                                 {msg.content}
                             </p>
@@ -290,8 +319,22 @@ const ChatInterface = () => {
                         {isMuted ? <VolumeX className="w-5 h-5" /> : <Volume2 className="w-5 h-5" />}
                     </button>
 
-                    <button className="p-2 text-[#a16b45] hover:text-primary transition-colors">
+                    <input
+                        type="file"
+                        ref={fileInputRef}
+                        onChange={handleFileSelect}
+                        accept="image/*"
+                        className="hidden"
+                    />
+                    <button
+                        onClick={() => fileInputRef.current?.click()}
+                        className={cn("p-2 transition-colors rounded-full relative", selectedImage ? "text-primary" : "text-[#a16b45] hover:text-primary")}
+                        title="Upload Handwriting / Photo"
+                    >
                         <Paperclip className="w-5 h-5" />
+                        {selectedImage && (
+                            <span className="absolute top-0 right-0 w-2 h-2 bg-primary rounded-full border-2 border-white"></span>
+                        )}
                     </button>
                     <button
                         onClick={handleMicClick}
@@ -303,15 +346,28 @@ const ChatInterface = () => {
                     >
                         <Mic className="w-5 h-5" />
                     </button>
-                    <input
-                        className="flex-1 bg-transparent border-none focus:ring-0 focus:outline-none text-[#1d130c] dark:text-white placeholder-[#a16b45]/50 px-2"
-                        placeholder="輸入您的答案... (Type your message)"
-                        type="text"
-                        value={inputValue}
-                        onChange={(e) => setInputValue(e.target.value)}
-                        onKeyDown={handleKeyDown}
-                        disabled={avatarState === 'THINKING'}
-                    />
+                    <div className="flex-1 flex flex-col relative">
+                        {selectedImage && (
+                            <div className="absolute bottom-full left-0 mb-2 p-2 bg-white dark:bg-[#1a110a] rounded-xl shadow-lg border border-primary/20 flex items-center gap-2 animate-in slide-in-from-bottom-2">
+                                <img src={selectedImage.preview} className="size-12 rounded-lg object-cover" alt="Preview" />
+                                <button
+                                    onClick={() => setSelectedImage(null)}
+                                    className="p-1 hover:bg-black/5 rounded-full text-red-500"
+                                >
+                                    <VolumeX className="size-4 rotate-45" /> {/* Using VolumeX rotated as a close button hack or just Lucide X if I had it, but keeping it simple */}
+                                </button>
+                            </div>
+                        )}
+                        <input
+                            className="w-full bg-transparent border-none focus:ring-0 focus:outline-none text-[#1d130c] dark:text-white placeholder-[#a16b45]/50 px-2 h-10"
+                            placeholder={selectedImage ? "Add a description (optional)..." : "輸入您的答案... (Type your message)"}
+                            type="text"
+                            value={inputValue}
+                            onChange={(e) => setInputValue(e.target.value)}
+                            onKeyDown={handleKeyDown}
+                            disabled={avatarState === 'THINKING'}
+                        />
+                    </div>
                     <button
                         onClick={handleSendMessage}
                         disabled={avatarState === 'THINKING'}

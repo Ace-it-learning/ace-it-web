@@ -123,6 +123,15 @@ const ChatInterface = () => {
         const file = e.target.files[0];
         if (!file || !file.type.startsWith('image/')) return;
 
+        // Restriction: Guest 1-upload limit
+        if (!user) {
+            const uploadedImages = messages.filter(m => m.role === 'user' && m.image).length;
+            if (uploadedImages >= 1) {
+                alert("Guest preview: You can only upload 1 handwriting sample per session. Sign up to upload more!");
+                return;
+            }
+        }
+
         const reader = new FileReader();
         reader.onloadend = () => {
             setSelectedImage({
@@ -377,6 +386,18 @@ const ChatInterface = () => {
                         <Send className="w-5 h-5" />
                     </button>
                 </div>
+
+                {/* Guest Nudge */}
+                {!user && (
+                    <div className="flex justify-center">
+                        <a
+                            href="/login"
+                            className="text-xs text-primary hover:underline font-medium bg-primary/5 px-4 py-1.5 rounded-full border border-primary/10 transition-all hover:bg-primary/10"
+                        >
+                            Sign up to save our progress & unlock full DSE tools ✨
+                        </a>
+                    </div>
+                )}
             </div>
         </section>
     );

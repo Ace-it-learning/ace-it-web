@@ -279,8 +279,20 @@ app.post('/api/chat', async (req, res) => {
 
     let systemPrompt = AGENT_PROMPTS[agentId] || AGENT_PROMPTS.ace;
 
+    // --- GUEST FLOW LOGIC ---
+    const isGuest = uid === 'guest';
+    const turnCount = clientHistory ? clientHistory.length / 2 : 0; // Number of AI responses so far
+
+    if (isGuest) {
+        // Bypass diagnostic instructions
+        systemPrompt += "\n\n**GUEST MODE ACTIVE:** This user is a visitor. Do NOT start the Phase 1 Diagnostic or ask assessment questions. Instead, use 'Freestyle Help' mode. Be welcoming, helpful, and respond directly to their query. Refrain from long-term planning.";
+
+        // Gate advanced tools instructions
+        systemPrompt += "\n**GATEKEEPING:** If the user asks for a 'Study Schedule' or 'Mock Exam', politely explain that these are Premium features available after signing up for a free account.";
+    }
+
     // Inject Dynamic Context into Prompt
-    if (agentId === 'english') {
+    if (agentId === 'english' && !isGuest) {
         const syllabusContext = JSON.stringify(FULL_ENGLISH_SYLLABUS);
         const schemesContext = JSON.stringify(DSE_MARKING_SCHEMES);
         const papersContext = JSON.stringify(PAST_PAPER_METADATA);
@@ -378,10 +390,20 @@ app.post('/api/chat', async (req, res) => {
             }
 
             // Save AI reply to history
-            const cleanText = text.trim();
+            let cleanText = text.trim();
+
+            // --- SOFT WALL: Turn 4+ Reminder ---
+            if (isGuest && turnCount >= 3) {
+                cleanText += "\n\n---\n*I'm really enjoying this deep dive! To ensure I can save our progress and build your personalized study plan, please [log in or create an account](https://ace-it-web.vercel.app/login).*";
+            }
+
             user.chatHistory[agentId].push({ role: 'assistant', content: cleanText, timestamp: new Date().toISOString() });
 
-            writeDb(db);
+            // Do not persist Guest history to file system to save space/privacy
+            if (!isGuest) {
+                writeDb(db);
+            }
+
             res.json({ reply: cleanText });
             return;
         } catch (error) {

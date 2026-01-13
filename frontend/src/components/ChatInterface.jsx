@@ -327,6 +327,7 @@ const ChatInterface = () => {
                         className="hidden"
                     />
                     <button
+                        type="button"
                         onClick={() => fileInputRef.current?.click()}
                         className={cn("p-2 transition-colors rounded-full relative", selectedImage ? "text-primary" : "text-[#a16b45] hover:text-primary")}
                         title="Upload Handwriting / Photo"

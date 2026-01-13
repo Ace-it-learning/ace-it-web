@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Trophy, Clock } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
+import { cn } from './Sidebar';
 
 const StatsBar = () => {
     const [stats, setStats] = useState({ xp: 0, level: 1, learningTime: 0 });

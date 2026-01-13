@@ -62,6 +62,14 @@ const Sidebar = () => {
                     />
                 </div>
                 <p className="text-sm text-[#a16b45] text-center">保持活力，與您的 AI 導師一起學習！</p>
+                {!user && (
+                    <button
+                        onClick={() => window.location.href = '/login'}
+                        className="w-full bg-primary text-white py-2 rounded-lg font-bold hover:scale-[1.02] transition-transform shadow-lg shadow-primary/20"
+                    >
+                        立即註冊解鎖完整功能
+                    </button>
+                )}
             </div>
         </aside>
     );

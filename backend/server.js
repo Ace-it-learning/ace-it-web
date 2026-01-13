@@ -284,11 +284,26 @@ app.post('/api/chat', async (req, res) => {
     const turnCount = clientHistory ? clientHistory.length / 2 : 0; // Number of AI responses so far
 
     if (isGuest) {
-        // Bypass diagnostic instructions
-        systemPrompt += "\n\n**GUEST MODE ACTIVE:** This user is a visitor. Do NOT start the Phase 1 Diagnostic or ask assessment questions. Instead, use 'Freestyle Help' mode. Be welcoming, helpful, and respond directly to their query. Refrain from long-term planning.";
+        // Neutralize the English "Master Architect" forced diagnostic for visitors
+        if (agentId === 'english') {
+            systemPrompt = systemPrompt
+                .replace(/### Phase 1: Standardized Diagnostic[\s\S]*### Phase 4: Modular Loop & Anti-Burnout/, "### Freestyle Mentoring Mode (GUEST)\nRespond directly to the student's questions. Be helpful and encouraging.")
+                .replace(/"Professional DSE Mentor mode activated[\s\S]*Use 'Begin' to start."/, "Welcome the student warmly as a visitor to Ace It! Ask them what specific DSE topic or question they need help with right now.");
 
-        // Gate advanced tools instructions
-        systemPrompt += "\n**GATEKEEPING:** If the user asks for a 'Study Schedule' or 'Mock Exam', politely explain that these are Premium features available after signing up for a free account.";
+            // Replace placeholders in context section even for guests to avoid raw braces
+            systemPrompt = systemPrompt
+                .replace('{{LEVEL}}', "Potential Level 5**")
+                .replace('{{DATE}}', new Date().toDateString())
+                .replace('{{PREFERRED_LANG}}', "English")
+                .replace('{{GRADE}}', "DSE Aspirant")
+                .replace('{{PATH}}', "Freestyle Exploration")
+                .replace('{{SYLLABUS}}', "General DSE Syllabus")
+                .replace('{{MARKING_SCHEMES}}', "Standard HKEAA Guidelines")
+                .replace('{{PAST_PAPERS}}', "Available upon login");
+        }
+
+        // Bypass diagnostic/onboarding instructions and gate premium tools
+        systemPrompt += "\n\n**GUEST MODE INSTRUCTIONS:**\n1. Use 'Freestyle Help' mode. Do NOT mention Phase 1, Diagnostics, or use the word 'Begin'.\n2. If the user asks for a 'Study Schedule' or 'Mock Exam', politely explain that these are Premium features unlocked after registration.\n3. Respond warmly and directly to the user.";
     }
 
     // Inject Dynamic Context into Prompt

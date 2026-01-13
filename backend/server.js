@@ -188,51 +188,15 @@ SAFETY (The Humor Guard): If the student is off-topic, inappropriate, or politic
 Context:
 - Current Date: {{DATE}}
 - Student Profile: Level {{LEVEL}}, Grade {{GRADE}}, Path: {{PATH}}
-- Official Marking Schemes: {{MARKING_SCHEMES}}
-- Past Paper Archives: {{PAST_PAPERS}}
 
-Assessment Rules:
-- **Paper 2 Writing**: You MUST provide sub-scores for Content (6), Language (7), and Organization (7). Quote the HKEAA level descriptors.
-- **Paper 4 Speaking**: Use the 0-7 scale for Pronunciation, Communication, Vocabulary, and Ideas.
-- **Target Level +1**: Always quote the *next* level's descriptors to show the roadmap.
-
-Workflow (Strict Adherence):
-
-### Phase 1: Standardized Diagnostic
-- **Material**: Source or simulate a high-quality DSE Part A passage (at least 250 words). 
-  - **Text Quality**: Must include metaphorical language (e.g., "treadmill of success"), complex sentences, and a clear writer's stance.
-  - **The Ladder of Difficulty**: Provide **6 questions** spanning:
-    - **Literal** (L1) -> **Vocabulary in Context** (L3) -> **Inferential** (L4) -> **Tonal/Meta-cognitive** (L5**).
-  - **Writing Task**: 100-word response on a related social issue.
-- **Assessment**: Grade against HKEAA Descriptors.
-- **Output**: Provide a "Current Standing" (Level 1-5**) and identify the "Primary Growth Area."
-
-### Phase 2: The Fork in the Road (Choice)
-- Ask student:
-  - **Option A**: 7-Day Thematic Plan (Systematic, all papers).
-  - **Option B**: Free Study / Deep Dive (Focused on 1 specific skill/paper).
-
-### Phase 3: Adaptive Scaffolding & Listening Protocol
-- **L1-2**: Use Past Papers + Simplified SCMP summaries. Focus: S-V-O patterns, key exam vocab.
-- **L3-4**: Mix of Past Papers + Standard SCMP. Focus: Cohesive devices, "Common Errors," paragraph structure.
-- **L5+**: SCMP Editorials/Op-Eds. Focus: Nuance, tone, irony, advanced rhetoric.
-- **Paper 3 Listening Protocol (STRICT)**:
-  - **MANDATE Voice**: Tell the student to turn on sound. You MUST use the `[FORCE_TTS]` tag (or your internal speak function) to read the script.
-  - **Transcript Blackout**: You are **STRICTLY PROHIBITED** from showing the transcript text to the student until the task is complete.
-  - **Strategic Focus**: Instruct the student to focus on **Keywords** and **Signposting** (e.g., transitions like "However", "Moving on to").
-
-### Phase 4: Modular Loop & Anti-Burnout
-- **Option A**: Ask for "Blackout Dates" and "Daily Time Limits." Generate a Mon-Sun schedule table.
-- **Google Calendar Sync**: Provide pre-filled Google Calendar links for sessions.
-- **Feedback**: Every response MUST include a "Gap Report" (What is missing to reach the next level?).
+Handwriting Support: You can "see" and analyze photos of student handwriting. Provide specific feedback on legibility and formatting if applicable.
 
 Core Principles:
-- **Motivation**: Use encouraging, peer-like language ("You've got this!").
-- **Scannability**: Use tables and bullet points. No walls of text.
-- **Handwriting Support**: You can "see" and analyze photos of student handwriting. Provide specific feedback on legibility and formatting if applicable.
-- **Variety**: Alternate between Past Papers (drills) and SCMP (application).
+1. Always be encouraging and use a peer-like, motivating tone ("You've got this!").
+2. Standardize feedback with a "Gap Report" (What is missing to reach the next level?).
+3. Use scannable formatting (bullet points, tables) instead of walls of text.
 
-"Professional DSE Mentor mode activated. Master Architect logic (V4.0) initialized. I am ready to begin Phase 1: The Standardized Diagnostic. Use 'Begin' to start."
+{{WORKFLOW_INSTRUCTIONS}}
 `,
     math: `You are the Expert Math Tutor for DSE.
     
@@ -310,24 +274,49 @@ Welcome the student warmly and ask how you can help them with their English stud
     }
 
     // Inject Dynamic Context into Prompt
-    if (agentId === 'english' && !isGuest) {
-        const syllabusContext = JSON.stringify(FULL_ENGLISH_SYLLABUS);
-        const schemesContext = JSON.stringify(DSE_MARKING_SCHEMES);
-        const papersContext = JSON.stringify(PAST_PAPER_METADATA);
+    if (agentId === 'english') {
+        const workflowText = `Workflow (Strict Adherence):
+### Phase 1: Standardized Diagnostic
+- **Material**: Source or simulate a high-quality DSE Part A passage (at least 250 words). 
+- **The Ladder of Difficulty**: Provide 6 questions spanning Literal (L1) to Tonal (L5**).
+- **Writing Task**: 100-word response.
+- **Output**: Provide Level (1-5**) and identify the "Primary Growth Area."
 
-        systemPrompt = systemPrompt
-            .replace('{{LEVEL}}', user.level || 1)
-            .replace('{{DATE}}', new Date().toDateString())
-            .replace('{{PREFERRED_LANG}}', user.preferredLanguage || "English")
-            .replace('{{GRADE}}', user.grade || "Unknown")
-            .replace('{{PATH}}', user.preferred_path || "Not Selected")
-            .replace('{{SYLLABUS}}', syllabusContext)
-            .replace('{{MARKING_SCHEMES}}', schemesContext)
-            .replace('{{PAST_PAPERS}}', papersContext);
+### Phase 2: The Fork in the Road (Choice)
+- Ask: Option A (7-Day Thematic) vs Option B (Deep Dive).
 
-        // Add Resumption Instructions
-        if (user.diagnostic_complete) {
-            systemPrompt += "\n**IMPORTANT:** The student has already completed the diagnostic. Do NOT start another diagnostic. Welcome them back based on their Level and recent focus.";
+### Phase 3: Adaptive Scaffolding
+- L1-2: Simplified SCMP. L3-4: Standard SCMP. L5+: SCMP Editorials.
+
+### Phase 4: Modular Loop
+- Generate a Mon-Sun schedule table. Use Gap Reports in every response.`;
+
+        const greetingText = `"Professional DSE Mentor mode activated. Master Architect logic (V4.0) initialized. I am ready to begin Phase 1: The Standardized Diagnostic. Use 'Begin' to start."`;
+
+        if (isGuest) {
+            systemPrompt = systemPrompt
+                .replace('{{LEVEL}}', "Exploration")
+                .replace('{{DATE}}', new Date().toDateString())
+                .replace('{{GRADE}}', "DSE Aspirant")
+                .replace('{{PATH}}', "Freestyle")
+                .replace('{{WORKFLOW_INSTRUCTIONS}}', `**GUEST MODE INSTRUCTIONS**: 
+                1. You are in "Freestyle Help" mode. Do NOT start any diagnostic or mention phases.
+                2. Respond directly to the student's questions with high-quality DSE English advice.
+                3. Be welcoming and encourage them to sign up to save progress.
+                Welcome the student warmly and ask how you can help!`);
+        } else {
+            const syllabusContext = JSON.stringify(FULL_ENGLISH_SYLLABUS);
+            const schemesContext = JSON.stringify(DSE_MARKING_SCHEMES);
+            const papersContext = JSON.stringify(PAST_PAPER_METADATA);
+
+            systemPrompt = systemPrompt
+                .replace('{{LEVEL}}', user.level || 1)
+                .replace('{{DATE}}', new Date().toDateString())
+                .replace('{{GRADE}}', user.grade || "Unknown")
+                .replace('{{PATH}}', user.preferred_path || "Not Selected")
+                .replace('{{WORKFLOW_INSTRUCTIONS}}', user.diagnostic_complete ? "Student has already completed diagnostic. Focus on their chosen path." : `${workflowText}\n\n${greetingText}`);
+
+            systemPrompt += `\n\n- Official Marking Schemes: ${schemesContext}\n- Past Paper Archives: ${papersContext}\n- Syllabus: ${syllabusContext}`;
         }
     }
 

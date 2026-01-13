@@ -244,7 +244,7 @@ app.post('/api/chat', async (req, res) => {
     let systemPrompt = AGENT_PROMPTS[agentId] || AGENT_PROMPTS.ace;
 
     // --- GUEST FLOW LOGIC ---
-    const isGuest = uid === 'guest';
+    const isGuest = !uid || uid === 'guest' || uid === 'null' || uid === 'undefined' || uid === '';
     const turnCount = clientHistory ? clientHistory.length / 2 : 0; // Number of AI responses so far
 
     if (isGuest) {
@@ -274,7 +274,7 @@ Welcome the student warmly and ask how you can help them with their English stud
     }
 
     // Inject Dynamic Context into Prompt
-    if (agentId === 'english') {
+    if (agentId === 'english' && !isGuest) {
         const workflowText = `Workflow (Strict Adherence):
 ### Phase 1: Standardized Diagnostic
 - **Material**: Source or simulate a high-quality DSE Part A passage (at least 250 words). 

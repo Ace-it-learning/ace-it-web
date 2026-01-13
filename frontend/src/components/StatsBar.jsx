@@ -59,8 +59,16 @@ const StatsBar = () => {
                 </div>
 
                 <div className="hidden xl:block">
-                    <button className="px-8 py-2 rounded-full border border-primary text-primary text-sm font-bold hover:bg-primary hover:text-white transition-all">
-                        查看完整成就
+                    <button
+                        onClick={() => !user && (window.location.href = '/login')}
+                        className={cn(
+                            "px-8 py-2 rounded-full border text-sm font-bold transition-all",
+                            user
+                                ? "border-primary text-primary hover:bg-primary hover:text-white"
+                                : "border-white/20 text-white/40 hover:border-primary hover:text-primary"
+                        )}
+                    >
+                        {user ? "查看完整成就" : "登入以查看成就"}
                     </button>
                 </div>
             </div>

@@ -401,7 +401,7 @@ Welcome the student warmly and ask how you can help them with their English stud
 
             // --- SOFT WALL: Turn 4+ Reminder ---
             if (isGuest && turnCount >= 3) {
-                cleanText += "\n\n---\n*I'm really enjoying this deep dive! To ensure I can save our progress and build your personalized study plan, please [log in or create an account](https://ace-it-web.vercel.app/login).*";
+                cleanText += "\n\n---\n*I'm really enjoying this deep dive! To ensure I can save our progress and build your personalized study plan, please [login with your Google account](https://ace-it-web.vercel.app/login). No worry, you can try it out for free!*";
             }
 
             user.chatHistory[agentId].push({ role: 'assistant', content: cleanText, timestamp: new Date().toISOString() });

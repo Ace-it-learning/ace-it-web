@@ -55,7 +55,7 @@ const ChatInterface = () => {
     }, [activeAgentId, setAvatarState, activeAgent.name, user]);
 
     const [isListening, setIsListening] = useState(false);
-    const [isMuted, setIsMuted] = useState(false); // Default: Sound On
+    const [isMuted, setIsMuted] = useState(true); // Default: Sound Off
     const isMutedRef = useRef(isMuted);
 
     // Sync ref with state

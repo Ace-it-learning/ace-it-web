@@ -1,0 +1,82 @@
+{
+    "paper1_reading": {
+        "structure": "Part A (Compulsory), Part B1 (Easier) or Part B2 (Difficult)",
+        "marking_domains": [
+            "Content",
+            "Language",
+            "Organization"
+        ],
+        "max_sub_score": 7,
+        "total_marks": 21,
+        "descriptors": {
+            "language": {
+                "7": "Extremely accurate grammar, vocabulary well-chosen, punctuation entirely correct.",
+                "4": "Mostly accurate grammar with occasional errors, sufficient sentence structures.",
+                "1": "Fragmented language, difficult to understand."
+            }
+        }
+    },
+    "paper2_writing": {
+        "marking_domains": [
+            "Content",
+            "Language",
+            "Organization"
+        ],
+        "scoring": "6/7/7",
+        "descriptors": {
+            "Content": {
+                "max": 6,
+                "key_traits": [
+                    "Extensive",
+                    "Relevant",
+                    "Creativity"
+                ]
+            },
+            "Language": {
+                "max": 7,
+                "key_traits": [
+                    "Sentence Range",
+                    "Accuracy",
+                    "Vocabulary"
+                ]
+            },
+            "Organization": {
+                "max": 7,
+                "key_traits": [
+                    "Logically developed",
+                    "Cohesive ties",
+                    "Coherent"
+                ]
+            }
+        }
+    },
+    "paper3_listening_integrated": {
+        "marking_domains": [
+            "Content",
+            "Language",
+            "Coherent & Organization",
+            "Appropriacy"
+        ],
+        "max_sub_score": 7,
+        "key_focus": [
+            "Data File manipulation",
+            "Phrase adaptation",
+            "Context suitability"
+        ]
+    },
+    "paper4_speaking": {
+        "marking_domains": [
+            "Pronunciation & Delivery",
+            "Communication Strategies",
+            "Vocabulary & Language Patterns",
+            "Ideas & Organization"
+        ],
+        "max_sub_score": 7,
+        "key_focus": [
+            "Audibility",
+            "Initiation/Maintenance",
+            "Range of vocabulary",
+            "Logical linking"
+        ]
+    }
+}

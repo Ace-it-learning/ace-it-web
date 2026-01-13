@@ -1,0 +1,103 @@
+{
+    "writing_marking_scheme": {
+        "Content": {
+            "max_mark": 6,
+            "descriptors": {
+                "6": [
+                    "Content is extensive and entirely fulfills the requirements of the question.",
+                    "It is totally relevant.",
+                    "Most points are supported by relevant details, and most ideas are well-developed.",
+                    "Creativity and imagination are shown when appropriate.",
+                    "The writing consistently engages the reader's interest and shows a high awareness of the audience."
+                ],
+                "5": [
+                    "Content is relevant and well-developed.",
+                    "Most points are supported by relevant details.",
+                    "Good awareness of the audience and genre."
+                ],
+                "4": [
+                    "Content is relevant and shows local development.",
+                    "Some points are supported by relevant details."
+                ],
+                "3": [
+                    "Content is mostly relevant but lacks development in parts."
+                ],
+                "2": [
+                    "Limited content with some relevance."
+                ],
+                "1": [
+                    "Very limited or irrelevant content."
+                ]
+            }
+        },
+        "Language": {
+            "max_mark": 7,
+            "descriptors": {
+                "7": [
+                    "Unlimited range of accurate sentence structures, excellent grasp of complex structures.",
+                    "Grammar is extremely accurate.",
+                    "Vocabulary is well-chosen and used appropriately to express subtleties of meaning.",
+                    "Spelling and punctuation are entirely correct.",
+                    "Register, tone, and style are used to deliberate effect."
+                ],
+                "6": [
+                    "Wide range of accurate sentence structures.",
+                    "Grammar is highly accurate.",
+                    "Vocabulary is varied and effective."
+                ],
+                "5": [
+                    "Range of accurate sentence structures.",
+                    "Grammar is generally accurate.",
+                    "Vocabulary is appropriate."
+                ],
+                "4": [
+                    "Sufficient range of sentence structures.",
+                    "Grammar is mostly accurate with occasional errors."
+                ],
+                "3": [
+                    "Basic sentence structures are accurate.",
+                    "Frequent grammatical errors."
+                ],
+                "2": [
+                    "Limited sentence structures.",
+                    "Severe grammatical errors."
+                ],
+                "1": [
+                    "Fragmented language, difficult to understand."
+                ]
+            }
+        },
+        "Organization": {
+            "max_mark": 7,
+            "descriptors": {
+                "7": [
+                    "Text is organized extremely effectively, with logical development of ideas.",
+                    "Sophisticated cohesive ties are used throughout.",
+                    "Overall structure is coherent, extremely sophisticated, and entirely appropriate."
+                ],
+                "6": [
+                    "Organized effectively with logical development.",
+                    "Cohesive ties are frequent and effective."
+                ],
+                "5": [
+                    "Organized and coherent in most parts.",
+                    "Cohesive ties are mostly effective."
+                ],
+                "4": [
+                    "Sufficient organization with a discernible structure.",
+                    "Basic cohesive ties are used."
+                ],
+                "3": [
+                    "Organization is occasionally logical.",
+                    "Limited use of cohesive ties."
+                ],
+                "2": [
+                    "Poor organization, lacks clear structure."
+                ],
+                "1": [
+                    "No logical development or organization."
+                ]
+            }
+        }
+    }
+}

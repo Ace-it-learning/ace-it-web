@@ -133,36 +133,77 @@ try {
     const syllabusPath = path.join(__dirname, 'english_syllabus.json');
     FULL_ENGLISH_SYLLABUS = JSON.parse(fs.readFileSync(syllabusPath, 'utf8'));
 } catch (err) {
-    console.warn("Failed to load english_syllabus.json, using fallback", err);
+    console.warn("Failed to load english_syllabus.json", err);
 }
+
+// Load DSE Marking Schemes (Papers 1-4)
+let DSE_MARKING_SCHEMES = {};
+try {
+    const schemesPath = path.join(__dirname, 'dse_marking_schemes.json');
+    DSE_MARKING_SCHEMES = JSON.parse(fs.readFileSync(schemesPath, 'utf8'));
+} catch (err) {
+    console.warn("Failed to load dse_marking_schemes.json", err);
+}
+
+// RAG: Past Papers Tagging Engine
+const PAST_PAPERS_DIR = path.join(__dirname, 'past_papers');
+let PAST_PAPER_METADATA = [];
+
+const scanPastPapers = () => {
+    try {
+        if (!fs.existsSync(PAST_PAPERS_DIR)) {
+            fs.mkdirSync(PAST_PAPERS_DIR);
+        }
+        const files = fs.readdirSync(PAST_PAPERS_DIR);
+        PAST_PAPER_METADATA = files.filter(f => f.endsWith('.txt') || f.endsWith('.md')).map(file => {
+            const content = fs.readFileSync(path.join(PAST_PAPERS_DIR, file), 'utf8');
+            // Simple tagging logic: extract difficulty and type from content or filename
+            const difficultyMatch = content.match(/\[DIFFICULTY:\s*(\w+)\]/i);
+            const typeMatch = content.match(/\[TYPE:\s*([\w\s]+)\]/i);
+
+            return {
+                filename: file,
+                difficulty: difficultyMatch ? difficultyMatch[1] : (file.toLowerCase().includes('hard') ? 'High' : 'Mid'),
+                type: typeMatch ? typeMatch[1] : (file.toLowerCase().includes('essay') ? 'Essay' : 'General'),
+                summary: content.substring(0, 100) + "..."
+            };
+        });
+        console.log(`Scan complete: ${PAST_PAPER_METADATA.length} papers tagged.`);
+    } catch (err) {
+        console.error("Error scanning past papers:", err);
+    }
+};
+
+// Initial scan
+scanPastPapers();
 
 const AGENT_PROMPTS = {
     ace: "You are Ace, the lead AI Tutor for Ace It!. You are helpful, encouraging, and specialized in DSE (Hong Kong Diploma of Secondary Education).",
-    english: `Role: You are the HKDSE English Mastery Orchestrator. Your goal is to act as a precision tutor for the HKDSE English Language curriculum.
+    english: `Role: You are the HKDSE English Mastery Orchestrator & Senior Examiner. Your goal is to act as a precision tutor and official grader for all 4 HKDSE English Papers.
 
 Context:
 - Student Profile: Level {{LEVEL}}, Grade {{GRADE}}, Preferred Lang: {{PREFERRED_LANG}}
-- Current Date: {{DATE}}
-- Source Database: {{SYLLABUS}}
+- Source Syllabus: {{SYLLABUS}}
+- Official Marking Schemes (Papers 1-4): {{MARKING_SCHEMES}}
+- Available Past Paper Questions (RAG): {{PAST_PAPERS}}
 
 Operational Instructions:
-1. **Initial Task (if Grade is "Unknown")**: If the student's Grade is "Unknown", your first priority is to politely ask for their Grade (e.g., Form 6) so you can map their level according to the syllabus.
+1. **Official Grading (Papers 1-4)**: When a student asks for grading or provides a specific component answer (e.g., Paper 2 Writing), you MUST use the Official Marking Schemes.
+    - For Paper 2 Writing: Provide sub-scores for Content (6), Language (7), and Organization (7). Quote the specific level descriptors from the database.
+    - For Paper 4 Speaking: Use the 0-7 scale for Pronunciation, Communication, Vocabulary, and Ideas.
 
-2. **Diagnostic Alignment**: Whenever a student provides an answer or submission, cross-reference their performance against the 'modules' key in the JSON.
-    - Identify the performance level (1–5) based on specific categories (e.g., "General Comprehension" or "Language and Style").
-    - Explicitly state which descriptor the student met (e.g., "You successfully identified the main theme of a complex text, which is a Level 5 Reading competency").
+2. **Granular RAG Extraction**: You can access specific past paper questions. If a student asks for practice, you can either:
+    - Offer the "Full Paper" context.
+    - Extract a "Specific Question" matching their requested difficulty (High/Mid/Low) or Type (Essay, Short Answer).
+    - Quote: "Based on the 2022 Part B1 question..." or similar.
 
-3. **Cross-Functional Tracking (Skill Mapping)**: Use the 'skill_mapping_table' to track underlying cognitive abilities.
-    - If a student struggles with Tone in Reading, check their ability in Stress and Intonation (Cluster TON-003).
-    - Advise how a weakness in one module (e.g., Listening) affects potential in another (e.g., Speaking).
+3. **Diagnostic & Skill Mapping**: (Maintain previous instructions regarding english_syllabus.json alignment and cross-functional tracking).
 
-4. **Feedback Loop & Scaffolding**:
-    - **Target Level +1**: Always show what the next level looks like. If they are Level 3, quote Level 4 descriptors as their roadmap.
-    - **Granular Remediation**: Use technical language from the JSON (e.g., "cohesion," "figurative language," "cogent expansion") for precise improvements.
+4. **Target Level +1 Feedback**: Quote the *next* level's descriptors from the marking scheme to show the roadmap.
 
-Constraint: Never hallucinate grading criteria. Use ONLY the descriptors provided in the metadata and modules keys of the source JSON.
+Constraint: Never hallucinate marking criteria. Use ONLY the descriptors provided in the injected JSON contexts.
 
-"I am ready. Please analyze my first submission or ask me a diagnostic question based on Reading, Writing, Listening, or Speaking to determine my current HKDSE level."
+"Professional DSE Consultant mode activated. I have access to marking schemes for Papers 1-4 and the past paper database. How can I help you master your DSE today?"
 `,
     math: "You are the Expert Math Tutor for DSE.",
     science: "You are the Expert Science Tutor for DSE."
@@ -208,12 +249,17 @@ app.post('/api/chat', async (req, res) => {
     // Inject Dynamic Context into Prompt
     if (agentId === 'english') {
         const syllabusContext = JSON.stringify(FULL_ENGLISH_SYLLABUS);
+        const schemesContext = JSON.stringify(DSE_MARKING_SCHEMES);
+        const papersContext = JSON.stringify(PAST_PAPER_METADATA);
+
         systemPrompt = systemPrompt
             .replace('{{LEVEL}}', user.level || 1)
             .replace('{{DATE}}', new Date().toDateString())
             .replace('{{PREFERRED_LANG}}', user.preferredLanguage || "English")
             .replace('{{GRADE}}', user.grade || "Unknown")
-            .replace('{{SYLLABUS}}', syllabusContext);
+            .replace('{{SYLLABUS}}', syllabusContext)
+            .replace('{{MARKING_SCHEMES}}', schemesContext)
+            .replace('{{PAST_PAPERS}}', papersContext);
 
         // Add Resumption Instructions
         if (user.diagnostic_complete) {

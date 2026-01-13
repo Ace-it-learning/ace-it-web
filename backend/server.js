@@ -284,26 +284,29 @@ app.post('/api/chat', async (req, res) => {
     const turnCount = clientHistory ? clientHistory.length / 2 : 0; // Number of AI responses so far
 
     if (isGuest) {
-        // Neutralize the English "Master Architect" forced diagnostic for visitors
+        // Dedicated Guest Prompt for English to ensure ZERO diagnostics or Phase 1 talk
         if (agentId === 'english') {
-            systemPrompt = systemPrompt
-                .replace(/### Phase 1: Standardized Diagnostic[\s\S]*### Phase 4: Modular Loop & Anti-Burnout/, "### Freestyle Mentoring Mode (GUEST)\nRespond directly to the student's questions. Be helpful and encouraging.")
-                .replace(/"Professional DSE Mentor mode activated[\s\S]*Use 'Begin' to start."/, "Welcome the student warmly as a visitor to Ace It! Ask them what specific DSE topic or question they need help with right now.");
+            systemPrompt = `Role: You are the Ace It! English Mentor. You are here to provide FAST, high-quality DSE English help to visitors.
+            
+SAFETY (The Humor Guard): If the student is off-topic, inappropriate, or political, deflect with a joke and redirect them. 
 
-            // Replace placeholders in context section even for guests to avoid raw braces
-            systemPrompt = systemPrompt
-                .replace('{{LEVEL}}', "Potential Level 5**")
-                .replace('{{DATE}}', new Date().toDateString())
-                .replace('{{PREFERRED_LANG}}', "English")
-                .replace('{{GRADE}}', "DSE Aspirant")
-                .replace('{{PATH}}', "Freestyle Exploration")
-                .replace('{{SYLLABUS}}', "General DSE Syllabus")
-                .replace('{{MARKING_SCHEMES}}', "Standard HKEAA Guidelines")
-                .replace('{{PAST_PAPERS}}', "Available upon login");
+Context:
+- Current Date: ${new Date().toDateString()}
+- Student Profile: visitor (GUEST)
+- Focus: Freestyle DSE Help
+
+GUEST MODE INSTRUCTIONS:
+1. Provide immediate, high-quality answers to the student's queries.
+2. Do NOT start any diagnostic tests, phases, or workflows.
+3. Do NOT mention "Phase 1" or "Standardized Diagnostic".
+4. If the user asks for advanced tools (Study Schedule, Mock Exams, personalized tracking), politely suggest they sign up for a free account to unlock those premium Ace It! features.
+5. Be warm, professional, and encouraging.
+
+Welcome the student warmly and ask how you can help them with their English studies right now!`;
+        } else {
+            // General guest instructions for other agents
+            systemPrompt += "\n\n**GUEST MODE:** This is a visitor. Respond directly to their query. No onboarding or assessment needed.";
         }
-
-        // Bypass diagnostic/onboarding instructions and gate premium tools
-        systemPrompt += "\n\n**GUEST MODE INSTRUCTIONS:**\n1. Use 'Freestyle Help' mode. Do NOT mention Phase 1, Diagnostics, or use the word 'Begin'.\n2. If the user asks for a 'Study Schedule' or 'Mock Exam', politely explain that these are Premium features unlocked after registration.\n3. Respond warmly and directly to the user.";
     }
 
     // Inject Dynamic Context into Prompt

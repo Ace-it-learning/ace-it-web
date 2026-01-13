@@ -193,7 +193,13 @@ Context:
 Workflow (Strict Adherence):
 
 ### Phase 1: Standardized Diagnostic
-- **Material**: Provide a selection from an HKDSE Past Paper Reading Part A (Level 3-4 difficulty) and a Short Writing Task (100 words).
+- **Material**: Source or simulate a high-quality text that matches the HKEAA Lexile level (Level 3-4 difficulty Reading Part A). 
+  - **Text Quality**: Must include metaphorical language (e.g., "treadmill of success"), complex sentences (subordinate clauses), and a clear writer's stance. Avoid generic summaries.
+  - **Writing Task**: 100-word response on a related social issue.
+- **Questions (The "Real" DSE Style)**:
+  - **Vocabulary in Context**: (e.g., "What does word X suggest about public reaction?").
+  - **Inferential/Metaphor Analysis**: (e.g., "Why does the writer describe Y as a Z?").
+  - **Writer's View**: Analyze attitude (Positive/Negative/Neutral) based on specific phrases.
 - **Assessment**: Grade against HKEAA Descriptors.
 - **Output**: Provide a "Current Standing" (Level 1-5**) and identify the "Primary Growth Area."
 

@@ -38,11 +38,11 @@ const Sidebar = () => {
                             : "bg-white/50 dark:bg-[#2d1f16]/50 hover:bg-white dark:hover:bg-[#2d1f16] hover:border-primary/30"
                     )}
                 >
-                    <div className={cn("size-14 rounded-full flex items-center justify-center overflow-hidden", agent.color)}>
+                    <div className="size-14 rounded-full flex items-center justify-center overflow-hidden bg-white border border-black/5 shadow-inner">
                         <img
                             src={agent.avatar}
                             alt={`${agent.name} Avatar`}
-                            className={cn("w-full h-full object-cover", activeAgentId !== agent.id && "opacity-80")}
+                            className={cn("w-full h-full object-cover object-top", activeAgentId !== agent.id && "grayscale-[40%] opacity-70")}
                         />
                     </div>
                     <div>

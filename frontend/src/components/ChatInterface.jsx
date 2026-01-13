@@ -225,8 +225,8 @@ const ChatInterface = () => {
 
                         {/* AI Avatar (Left) */}
                         {msg.role === 'assistant' && (
-                            <div className={`size-10 shrink-0 rounded-full overflow-hidden ${activeAgent.color}`}>
-                                <img src={activeAgent.avatar} alt="AI" className="w-full h-full object-cover opacity-80" />
+                            <div className="size-10 shrink-0 rounded-full overflow-hidden border border-black/5 bg-white shadow-sm">
+                                <img src={activeAgent.avatar} alt="AI" className="w-full h-full object-cover object-top" />
                             </div>
                         )}
 
@@ -258,8 +258,8 @@ const ChatInterface = () => {
                 {/* Thinking Indicator */}
                 {avatarState === 'THINKING' && (
                     <div className="flex items-start gap-4 max-w-[80%]">
-                        <div className={`size-10 shrink-0 rounded-full overflow-hidden ${activeAgent.color}`}>
-                            <img src={activeAgent.avatar} alt="AI" className="w-full h-full object-cover opacity-80" />
+                        <div className="size-10 shrink-0 rounded-full overflow-hidden border border-black/5 bg-white shadow-sm">
+                            <img src={activeAgent.avatar} alt="AI" className="w-full h-full object-cover object-top" />
                         </div>
                         <div className="bg-white dark:bg-[#3d2c20] p-4 rounded-2xl rounded-tl-none shadow-sm border border-black/5">
                             <div className="flex gap-1">

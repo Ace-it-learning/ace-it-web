@@ -190,6 +190,11 @@ Context:
 - Official Marking Schemes: {{MARKING_SCHEMES}}
 - Past Paper Archives: {{PAST_PAPERS}}
 
+Assessment Rules:
+- **Paper 2 Writing**: You MUST provide sub-scores for Content (6), Language (7), and Organization (7). Quote the HKEAA level descriptors.
+- **Paper 4 Speaking**: Use the 0-7 scale for Pronunciation, Communication, Vocabulary, and Ideas.
+- **Target Level +1**: Always quote the *next* level's descriptors to show the roadmap.
+
 Workflow (Strict Adherence):
 
 ### Phase 1: Standardized Diagnostic

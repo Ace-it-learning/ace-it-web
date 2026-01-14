@@ -4,6 +4,7 @@ node_modules/
 # Environment Variables (Secrets)
 .env
 backend/.env
+backend/serviceAccountKey.json
 
 # Build Output
 dist/

@@ -3,6 +3,8 @@ const cors = require('cors');
 const fs = require('fs');
 const path = require('path');
 const bodyParser = require('body-parser');
+const admin = require('firebase-admin');
+require('dotenv').config();
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -10,6 +12,24 @@ const DB_FILE = path.join(__dirname, 'db.json');
 
 app.use(cors()); // Allow all origins for simplicity in this stage
 app.use(bodyParser.json());
+
+// Initialize Firebase Admin
+const serviceAccountPath = path.join(__dirname, 'serviceAccountKey.json');
+let db_firestore = null;
+
+if (fs.existsSync(serviceAccountPath)) {
+    try {
+        admin.initializeApp({
+            credential: admin.credential.cert(require(serviceAccountPath))
+        });
+        db_firestore = admin.firestore();
+        console.log("Firebase Admin initialized successfully.");
+    } catch (error) {
+        console.error("Firebase Admin initialization failed:", error);
+    }
+} else {
+    console.warn("serviceAccountKey.json not found. Firestore features will be disabled. Run in local JSON mode.");
+}
 
 // Helper to read DB
 const readDb = () => {
@@ -154,20 +174,57 @@ const scanPastPapers = () => {
         if (!fs.existsSync(PAST_PAPERS_DIR)) {
             fs.mkdirSync(PAST_PAPERS_DIR);
         }
-        const files = fs.readdirSync(PAST_PAPERS_DIR);
-        PAST_PAPER_METADATA = files.filter(f => f.endsWith('.txt') || f.endsWith('.md')).map(file => {
-            const content = fs.readFileSync(path.join(PAST_PAPERS_DIR, file), 'utf8');
-            // Simple tagging logic: extract difficulty and type from content or filename
+
+        const getFilesRecursively = (dir) => {
+            let results = [];
+            const list = fs.readdirSync(dir);
+            list.forEach(file => {
+                file = path.join(dir, file);
+                const stat = fs.statSync(file);
+                if (stat && stat.isDirectory()) {
+                    results = results.concat(getFilesRecursively(file));
+                } else {
+                    results.push(file);
+                }
+            });
+            return results;
+        };
+
+        const allFiles = getFilesRecursively(PAST_PAPERS_DIR);
+
+        PAST_PAPER_METADATA = allFiles.filter(f => f.endsWith('.txt') || f.endsWith('.md') || f.endsWith('.json')).map(filePath => {
+            const fileName = path.basename(filePath);
+            const content = fs.readFileSync(filePath, 'utf8');
+
+            if (filePath.endsWith('.json')) {
+                try {
+                    const jsonData = JSON.parse(content);
+                    const meta = jsonData.paper_metadata || {};
+                    return {
+                        filename: fileName,
+                        year: meta.year || "Unknown",
+                        paper: meta.paper_id || fileName,
+                        difficulty: "Official",
+                        type: "DSE Paper",
+                        summary: meta.description || `Official DSE Paper from ${meta.year}`
+                    };
+                } catch (e) {
+                    console.warn(`Failed to parse JSON for ${fileName}`);
+                }
+            }
+
+            // Fallback for txt/md
             const difficultyMatch = content.match(/\[DIFFICULTY:\s*(\w+)\]/i);
             const typeMatch = content.match(/\[TYPE:\s*([\w\s]+)\]/i);
 
             return {
-                filename: file,
-                difficulty: difficultyMatch ? difficultyMatch[1] : (file.toLowerCase().includes('hard') ? 'High' : 'Mid'),
-                type: typeMatch ? typeMatch[1] : (file.toLowerCase().includes('essay') ? 'Essay' : 'General'),
+                filename: fileName,
+                difficulty: difficultyMatch ? difficultyMatch[1] : (fileName.toLowerCase().includes('hard') ? 'High' : 'Mid'),
+                type: typeMatch ? typeMatch[1] : (fileName.toLowerCase().includes('essay') ? 'Essay' : 'General'),
                 summary: content.substring(0, 100) + "..."
             };
-        });
+        }).filter(item => item !== undefined);
+
         console.log(`Scan complete: ${PAST_PAPER_METADATA.length} papers tagged.`);
     } catch (err) {
         console.error("Error scanning past papers:", err);

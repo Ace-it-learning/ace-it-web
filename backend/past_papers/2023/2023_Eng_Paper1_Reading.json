@@ -1,0 +1,1290 @@
+{
+  "paper_metadata": {
+    "year": "2023",
+    "paper_id": "P1_Reading",
+    "parts": [
+      "A",
+      "B1",
+      "B2"
+    ],
+    "total_questions": 69,
+    "description": "Full dataset including Part A (Compulsory), Part B1 (Easy Section), and Part B2 (Difficult Section)."
+  },
+  "resource_files": [
+    {
+      "resource_id": "TEXT_1_PASSAGE",
+      "part": "A",
+      "title": "Text 1: Flash Fiction: Writing a Story in 1,000 Words or Less",
+      "verbatim_content": {
+        "p1": "People have been enjoying stories for as long as humanity has been around. Some people love to read 400-page novels, while others struggle to read the first four paragraphs. More and more, technology has unfortunately resulted in many people having shorter attention spans. Therefore, writers have to find new ways to tell stories in a way that appeals to people who are used to reading snippets of information on the small screen of their smart phones. Flash fiction is a medium that works perfectly in a low-attention-span world.",
+        "p2": "Flash fiction is a category of short story that limits the author to a word count of 1,000 words or less. Some magazines limit flash fiction stories to as little as 300 words.",
+        "p3": "Following the tips below will guide you in writing a solid flash fiction story.",
+        "p4_instruction": "Focus on One Character: With a limit of 1,000 words, there isn't a lot of room for character development, so you'll want to pick one character to focus on. There will likely be two characters in the story because you'll often use a human antagonist as opposition to your main character. You might be able to use three characters, but any more than that will probably be overkill in the realm of flash fiction.",
+        "p5_instruction": "Focus on One Scene: Longer story forms have a beginning, middle, and end, but with flash fiction, you're really telling only the end of a story. Of course, you won't be able to flesh out a complex story world. Instead, your flash fiction story should focus on one scene, one moment in the life of your character. It needs to be a significant, life-altering moment for your character. Focusing on one scene also means focusing on one location. So for flash fiction your limited word count focuses on the essentials to the story.",
+        "p6_instruction": "Focus on One Conflict: All stories are about conflict. A story can be easily defined as a character who wants or needs something and has to overcome some obstacle in order to attain it. The obstacle is the conflict. You have to answer two very important questions to write a really good flash fiction story: 1. What does your main character want? 2. Who or what is trying to stop your main character from getting it?",
+        "p7_instruction": "Focus on One Theme: Your theme is the moral argument of your story. It's about how you want your readers to be impacted by the story. What do you want them to be encouraged to do, be, or believe as a result of reading your story?",
+        "p8_instruction": "Focus on Word Choice: You only have up to 1,000 words to tell your story, so you have to choose those words wisely. When you know what actions and ideas you want to communicate, choose the least amount of words to communicate them.",
+        "p9": "Flash fiction forces you to be economical with your words. It helps you to focus your ideas and strip away anything that isn't essential to your story. Often, when you're writing flash fiction, you'll write more than you need. When you go back through, you'll see what needs to be there, what can be taken out, and what needs to be reworked, which helps you to develop your editing and revising skills.",
+        "p10_story": "BOOOOOOOOMMMM!!!! Timothy's eyes nearly popped out of his head. His face was blackened with soot and his hair stood on end. He looked down at what remained of the school laboratory bench and saw smouldering wood and shattered glass. Shocked faces gazed up at him.",
+        "p11_story": "A month ago, it had all started fairly well. It was nearly the end of Chemistry and Timothy was drifting in a pleasant doze with his head rested upon Super Science Experiments for Eager Youngsters, whilst Professor Snookhorn droned on. 'So, if anyone is interested, raise your hand now... how about you Timothy?' 'Eh? Ermmm - sure,' mumbled Timothy with not the faintest idea of what he had been asked. 'Marvellous!' replied an enthused Professor Snookhorn, fixing him with a steely gaze through his thick glasses. 'Meet me in Lab 922 after school today and we'll get started.' The bell clanged and the students crashed out of the classroom like a herd of elephants. Billy Brenton, class thug, barged past Timothy muttering 'Swotty boy volunteering for Young Scientist of the Year - urghh!' 'Arggghhhh!' thought Timothy, but it was too late.",
+        "p12_story": "Four weeks and 25 excruciating extra Chemistry lessons later, Timothy was blinking out nervously at a gaggle of eager science teachers and pushy parents, crammed into the National School of Science Laboratory for what Professor Snookhorn enthusiastically described as 'The pinnacle of my teaching career' (no pressure).",
+        "p13_story": "Professor Snookhorn was a superlative scientist but little did he know that Timothy was a bigger hazard than sulphuric acid when it came to Chemistry. He had mistaken Timothy's glazed expression for wide-eyed enthusiasm in class. Timothy looked down at the glistening bench, taking in the jewel-coloured containers of liquids and crystals, without a clue of what they were or how to use them.",
+        "p14_story": "A klaxon blared. Timothy's competitors scurried around like a pack of lab rats. Timothy had not bothered reading the competition rules, but jerked into action, picking random coloured bottles up and mixing the contents in a large glass container which appeared to have been placed on the bench in front of him for that purpose.",
+        "p15_story": "A smell like Billy Brenton's worst ever fart began to fill the air and Timothy looked down in alarm at his bench. Thick grey smoke filled Timothy's nostrils. The glass container into which he had poured his random mix shuddered and shook. The pushy parents started to point. The science teachers went pale. Timothy gulped. BOOOOOOOOMMMM!!!!",
+        "p16_story": "As the smoke cleared, the science teachers began to clap and a tear of pride trickled down Professor Snookhorn's cheek. A voice boomed: 'Ladies and gentlemen I give you the winner of this year's Young Scientist of the Year - The Biggest Bang: TIMOTHY TRENTON!'"
+      }
+    },
+    {
+      "resource_id": "TEXT_2_PASSAGE",
+      "part": "B1",
+      "title": "Text 2: International Guide Dog Day",
+      "verbatim_content": {
+        "p1": "Most people have heard about guide dogs. These service animals are carefully trained to lead their owners (either blind or with limited vision) around, avoiding other people and obstacles, so their owners can travel safely and independently.",
+        "p2": "In honour of the guide dogs that have changed the lives of those with disabilities, April 29th is International Guide Dog Day. Without them, many could not do simple daily activities that most people take for granted. Here are three inspirational stories of how guide dogs have changed people's lives for the better:",
+        "p3_story1": "Story 1: At five years old Nathan became ill with arthritis, which soon affected his eyesight. Fourteen years later, he lost his sight completely. At this point, he felt hopeless, but that was when his family decided to get a guide dog, and it changed his life. When Nathan met Hudson, it was the most amazing day, and he even cried because of how emotional the experience was. Hudson has turned Nathan's life around. Now Nathan has the confidence to go out even with the loss of his sight. Hudson is more than just a guide dog; he is Nathan's best friend.",
+        "p4_story2": "Story 2: Sami is just like any typical everyday sixteen-year-old, except she is blind. However, that hasn't stopped Sami from long distance running. Before going blind, she loved to run, and she didn't want to stop because of her disability. Because of her guide dog, Chloe, she is able to continue doing what she loves. Chloe runs with Sami for miles and trains with Sami on a daily basis. Because of Chloe, Sami is able to continue doing long distance running with her school, and now the team has an extra four-legged member.",
+        "p5_story3": "Story 3: Mark and Claire are both blind and met while they were getting their guide dogs. The dogs they were training with kept pulling towards each other, so they started talking. Because of their guide dogs, the two started going on dates, and it was a perfect match. They loved hanging out, and so did their pups. It was great because they felt like they could understand each other since they both had the same disability. Eventually Mark asked Claire to marry him, and it's all thanks to their guide dogs."
+      }
+    },
+    {
+      "resource_id": "TEXT_3_PASSAGE",
+      "part": "B1",
+      "title": "Text 3: Hong Kong needs 1,700 guide dogs...",
+      "verbatim_content": {
+        "p1": "Trainers say outdated laws and insufficient public awareness prevent them from giving guide dogs under training full exposure to the city.",
+        "p2": "When Meicy Choi took her four-month-old labrador retriever named Don Don out on a sunny Saturday in December, she did not expect to get into a row over going to the park with her canine buddy.",
+        "p3": "Don Don is not an ordinary dog. He is training to become one of fewer than 50 guide dogs in Hong Kong, and Choi herself is not blind but is registered as a host to train and care for him. But a staff member at Lai Chi Kok Park stopped her from entering the park and asked to check her documents. 'Even if you are blind, you can't take the dog in!' the worker said. A handful of onlookers, mostly middle-aged women, gathered and confronted Choi.",
+        "p4": "The commotion frightened Don Don, causing the dog to become uneasy. 'You can't be serious,' Choi recalled thinking to herself. She eventually backed down, not wanting to escalate the matter.",
+        "p5": "Such incidents reflect the daily challenges faced by guide dog trainers in the city. The issues are grey areas under current laws, which allow visually impaired people to use public facilities with their guide dogs, but not those who train the animals.",
+        "p6": "Hong Kong only started breeding guide dogs in 2011 because of a previous lack of professional trainers. The city's guide dog community lags in scale compared with neighbouring Japan and South Korea, not to mention the United States or Germany, which were the first countries to train such dogs in the 1920s.",
+        "p7": "Raymond Cheung Wai-man, chairman of Hong Kong Seeing Eye Dog Services and the first person to start a guide dog training institution locally seven years ago, estimated the city would need 1,700 guide dogs, given its 170,000 visually impaired people. 'On top of taking visually impaired people around and preventing them from walking into obstacles, guide dogs also help them lead freer, more confident and dignified lives,' Cheung said.",
+        "p8": "But outdated laws and insufficient public awareness remain the biggest obstacles to a bigger role for guide dogs in Hong Kong, according to Cheung. 'The government needs to change the current laws, which do not protect dogs under training,' Cheung said. 'If a trainer takes a bus with a trainee dog, there is a chance the driver may deny them entry. But if the dogs never get on buses during training, how can they learn to do this and help the visually impaired?' To familiarise guide dogs with the urban environment and prepare them to assist the blind, trainers need to take them around the city and 'go everywhere', Cheung said.",
+        "p9": "'Public awareness has improved a lot from six years ago, when I had to fight just to allow guide dogs under training onto the MTR. But misunderstandings still exist,' Cheung said, as evident in another row at a cha chaan teng in Yau Ma Tei in December, which stirred up a heated online debate. The restaurant had refused to let in a trainer with a trainee guide dog. It eventually apologised on its Facebook page after coming under fire from netizens, and said it welcomed visually impaired customers with guide dogs.",
+        "p10": "'I think many people are supportive of guide dogs,' Choi said. Referring to Choi's encounter, a spokeswoman for the Leisure and Cultural Services Department (LCSD) said guide dogs and dogs under training were allowed to enter all venues managed by it, including public parks. 'But it's possible some staff like security guards were unclear about the guidelines,' she said.",
+        "p11": "'The government will continue to work with rehabilitation organisations and stakeholders to facilitate the development of the guide dog service in Hong Kong,' the LCSD spokeswoman said."
+      }
+    },
+    {
+      "resource_id": "TEXT_4_PASSAGE",
+      "part": "B2",
+      "title": "Text 4: Michelle Obama",
+      "verbatim_content": {
+        "p1": "In a special personal essay, excerpted here, in honor of Mother's Day, Michelle Obama shares memories of her mom, Marian Robinson, and women who shaped the extraordinary life of an ordinary girl from Chicago who would grow up to be the wife of the President of the United States.",
+        "p2": "My mother is a woman who chooses her words carefully. She'll sometimes speak in clipped sentences, her wisdom packed into short bursts and punctuated with an infectious smile or a wry laugh. It's a style that makes her a favorite of everyone she meets a sweet, witty companion who doesn't need the limelight.",
+        "p3": "As I've grown older, I've seen how her manner in conversation also reflects her approach to parenting. Because when it came to raising her kids, my mom knew that her voice was less important than allowing me to use my own.",
+        "p4": "That meant she listened a lot more than she lectured. Growing up, she was willing to endure endless questioning from me Why did we have to eat eggs for breakfast? Why do people need jobs? Why are the houses bigger in other neighborhoods? She didn't chide me if I scrapped with some of the neighbor kids or challenged my ornery grandfather when I thought he was being a little too ornery. She listened intently to the lunchtime conversations I had with my schoolmates over bologna sandwiches, and nodded patiently along to tales of my contentious piano lessons with my great-aunt Robbie.",
+        "p5": "In today's world, it's easy to hear all that and think that Marian Robinson was bordering on negligent, that she was letting the kids rule the roost. But the reality was far from that. She and my father, Fraser, were wholly invested in their children, pouring a deep and durable foundation of goodness and honesty, of right and wrong, into my brother and me. After that, they simply let us be ourselves.",
+        "p6": "I see now how important that kind of freedom is for all children, particularly for girls with flames of their own flames the world might try to dim. It's up to us, as mothers and mother-figures, to give the girls in our lives the kind of support that keeps their flame lit and lifts up their voices not necessarily with our own words, but by letting them find the words themselves.",
+        "p7": "Below is an excerpt from Michelle Obama's bestselling memoir, Becoming, in which she recalls how her great-aunt Robbie's tough love and piano lessons helped shape the woman she is today:",
+        "p8": "At home, I continued to work on my own progress as a musician. Sitting at Robbie's upright piano, I was quick to pick up the scales and I threw myself into filling out the sight-reading worksheets she gave me. Because we didn't have a piano of our own, I had to do my practicing downstairs on hers. I learned one song in the piano book and then another. I was probably no better than her other students, no less fumbling, but I was driven. To me, there was magic in the learning. I got a buzzy sort of satisfaction from it. For one thing, I'd picked up on the simple, encouraging correlation between how long I practiced and how much I achieved. And I sensed something in Robbie as well too deeply buried to be an outright pleasure, but still, a pulse of something lighter and happier coming from her when I made it through a song without messing up. I'd notice it out of the corner of my eye: Robbie's lips would unpurse themselves just slightly.",
+        "p9": "This, it turns out, was our honeymoon phase. It's possible that we might have continued this way, Robbie and I, had I been less curious and more reverent when it came to her piano method. But the lesson book was thick enough and my progress on the opening few songs slow enough that I got impatient and started peeking ahead and not just a few pages ahead but deep into the book, checking out the titles of the more advanced songs and beginning, during my practice sessions, to fiddle around with playing them. When I proudly debuted one of my late-in-the-book songs for Robbie, she exploded, slapping down my achievement with a vicious 'Good night!' I got chewed out the way I'd heard her chewing out plenty of students before me. All I'd done was try to learn more and faster, but for Robbie it was a crime approaching treason. She wasn't impressed, not even a little bit.",
+        "p10": "Nor was I chastened. I was the kind of kid who liked concrete answers to my questions, who liked to reason things out to some logical if exhausting end. I was lawyerly and also veered toward dictatorial, as my brother Craig, who often got ordered out of our shared play area, would attest. When I thought I had a good idea about something, I didn't like being told no. Which is how my great-aunt and I ended up in each other's faces, both of us hot and unyielding.",
+        "p11": "'How could you be mad at me for wanting to learn a new song?' 'You're not ready for it. That's not how you learn piano.' 'But I am ready. I just played it.' 'That's not how it's done.' 'But why?'",
+        "p12": "Piano lessons became epic and trying, largely due to my refusal to follow the prescribed method and Robbie's refusal to see anything good in my freewheeling approach to her songbook. We went back and forth, week after week. I was stubborn and so was she. I had a point of view and she did, too. In between disputes, I continued to play the piano and she continued to listen, offering a stream of corrections. I gave her little credit for my improvement as a player. She gave me little credit for improving. But still, the lessons went on.",
+        "p13": "Upstairs, my parents and Craig found it all so very funny. They cracked up at the dinner table as I recounted my battles with Robbie, still seething as I ate my spaghetti and meatballs. My parents expressed no sympathy for my woes and none for Robbie's, either. In general, they weren't ones to intervene in matters outside schooling, expecting early on that my brother and I should handle our own business. They seemed to view their job as mostly to listen and bolster us as needed inside the four walls of our home. And where another parent might have scolded a kid for being sassy with an elder as I had been, they also let that be. My mother had lived with Robbie on-and-off since she was about sixteen, following every arcane rule the woman laid down, and it's possible she was secretly happy to see Robbie's authority challenged. Looking back on it now, I think my parents appreciated my feistiness and I'm glad for it. It was a flame inside me they wanted to keep lit."
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "part": "A",
+      "type": "multiple_choice_cloze",
+      "marks": 3,
+      "segment_ref": "TEXT_1_PASSAGE:p1",
+      "question_text": "Complete the summary of paragraph 1 by selecting the best option from the choices below. Stories are (i) ___ the human race...",
+      "sub_questions": [
+        {
+          "id": "i",
+          "options": [
+            "as big as",
+            "as long as",
+            "as old as",
+            "as difficult as"
+          ],
+          "correct": "B"
+        },
+        {
+          "id": "ii",
+          "options": [
+            "boring",
+            "difficult",
+            "essential",
+            "meaningless"
+          ],
+          "correct": "B"
+        },
+        {
+          "id": "iii",
+          "options": [
+            "a big challenge",
+            "a confusing idea",
+            "an ideal solution",
+            "an excellent puzzle"
+          ],
+          "correct": "C"
+        }
+      ],
+      [cite_start
+      ]"logic": "The text states stories are as long as humanity has been around [cite: 764][cite_start], and people struggle to read [cite: 765][cite_start], making flash fiction a perfect medium/solution[cite: 768]."
+    },
+    {
+      "id": 2,
+      "part": "A",
+      "type": "word_extraction",
+      "marks": 1,
+      "segment_ref": "TEXT_1_PASSAGE:p1",
+      "question_text": "What word in paragraph 1 is used to indicate that the writer feels disappointed or unhappy with people's reading habits?",
+      "model_answer": "unfortunately",
+      [cite_start
+      ]"logic": "The writer uses 'unfortunately' to describe the result of technology on attention spans[cite: 766]."
+    },
+    {
+      "id": 3,
+      "part": "A",
+      "type": "short_answer",
+      "marks": 1,
+      "segment_ref": "TEXT_1_PASSAGE:p1",
+      "question_text": "According to paragraph 1, what has changed so that writers have to look for different ways to tell stories?",
+      "model_answer": "Many people (now) have shorter attention spans / Technology has resulted in many people having shorter attention spans.",
+      [cite_start
+      ]"logic": "Paragraph 1 explicitly links technology to shorter attention spans as the reason writers need new ways to tell stories [cite: 766-767]."
+    },
+    {
+      "id": 4,
+      "part": "A",
+      "type": "word_extraction",
+      "marks": 1,
+      "segment_ref": "TEXT_1_PASSAGE:p1",
+      "question_text": "Find a word in paragraph 1 which means things that are brief and concise.",
+      "model_answer": "snippets",
+      [cite_start
+      ]"logic": "The text refers to people being used to reading 'snippets' of information[cite: 767]."
+    },
+    {
+      "id": 5,
+      "part": "A",
+      "type": "synonym_extraction",
+      "marks": 3,
+      "segment_ref": [
+        "TEXT_1_PASSAGE:p2",
+        "TEXT_1_PASSAGE:p3",
+        "TEXT_1_PASSAGE:p4_instruction"
+      ],
+      "sub_questions": [
+        {
+          "id": "i",
+          "target": "restrict",
+          "answer": "limits"
+        },
+        {
+          "id": "ii",
+          "target": "strong",
+          "answer": "solid"
+        },
+        {
+          "id": "iii",
+          "target": "too much of something",
+          "answer": "overkill"
+        }
+      ],
+      [cite_start
+      ]"logic": "Verbatim extraction: Para 2 uses 'limits' [cite: 770][cite_start], Para 3 uses 'solid' [cite: 773][cite_start], Para 4 uses 'overkill'[cite: 777]."
+    },
+    {
+      "id": 6,
+      "part": "A",
+      "type": "error_correction",
+      "marks": 5,
+      "segment_ref": "TEXT_1_PASSAGE:p4_instruction",
+      "summary_table": [
+        {
+          "line": "i",
+          "text": "character who supports",
+          "mistake": "supports",
+          "correction": "opposes"
+        },
+        {
+          "line": "ii",
+          "text": "So the story will probably have two characters.",
+          "mistake": "(none)",
+          "correction": "tick"
+        },
+        {
+          "line": "iii",
+          "text": "There is no chance that you will be able to incorporate three",
+          "mistake": "no chance",
+          "correction": "a chance / you might be able to"
+        },
+        {
+          "line": "iv",
+          "text": "characters into your story. However, unless you feel the need to have any",
+          "mistake": "(none)",
+          "correction": "tick"
+        },
+        {
+          "line": "v",
+          "text": "more than this, your theme will be too long, i.e. more than 1000 words.",
+          "mistake": "theme",
+          "correction": "word count / story"
+        }
+      ],
+      [cite_start
+      ]"logic": "Para 4 states the antagonist 'opposes' [cite: 776][cite_start], mentions you 'might be able to use three characters' [cite: 777][cite_start], and discusses the 'limited word count'[cite: 784]."
+    },
+    {
+      "id": 7,
+      "part": "A",
+      "type": "summary_gap_fill",
+      "marks": 4,
+      "segment_ref": "TEXT_1_PASSAGE:p5_instruction",
+      "sub_questions": [
+        {
+          "id": "i",
+          "answer": "limited"
+        },
+        {
+          "id": "ii",
+          "answer": "complex"
+        },
+        {
+          "id": "iii",
+          "answer": "end"
+        },
+        {
+          "id": "iv",
+          "answer": "scene / moment / location"
+        }
+      ],
+      [cite_start
+      ]"logic": "Extraction from Para 5: 'limited word count' [cite: 784][cite_start], 'complex story world' [cite: 780][cite_start], 'telling only the end' [cite: 779][cite_start], 'focus on one scene/moment/location'[cite: 781, 783]."
+    },
+    {
+      "id": 8,
+      "part": "A",
+      "type": "reference",
+      "marks": 1,
+      "segment_ref": "TEXT_1_PASSAGE:p6_instruction",
+      "question_text": "What does 'it' (line 27) refer to?",
+      "model_answer": "something (that a character wants or needs)",
+      [cite_start
+      ]"logic": "Refers back to 'something' in the phrase 'character who wants or needs something... and has to... attain it'[cite: 786]."
+    },
+    {
+      "id": 9,
+      "part": "A",
+      "type": "multiple_choice",
+      "marks": 1,
+      "segment_ref": "TEXT_1_PASSAGE:p7_instruction",
+      "question_text": "Having a 'moral argument' (line 29) helps...",
+      "options": [
+        "end the story quickly",
+        "encourage reader to read longer stories",
+        "prevent the characters from doing anything",
+        "influence the reader's response to the story"
+      ],
+      "correct": "D",
+      [cite_start
+      ]"logic": "The text defines theme as the moral argument and relates it to how you want readers to be 'impacted'[cite: 791, 792]."
+    },
+    {
+      "id": 10,
+      "part": "A",
+      "type": "phrase_meaning",
+      "marks": 1,
+      "segment_ref": "TEXT_1_PASSAGE:p9",
+      "question_text": "What does 'you go back through' (line 37) mean?",
+      "model_answer": "to review / to edit / to read again / to check",
+      [cite_start
+      ]"logic": "Contextual meaning in Para 9 refers to the process of editing and revising[cite: 810]."
+    },
+    {
+      "id": 11,
+      "part": "A",
+      "type": "multiple_choice_negative",
+      "marks": 1,
+      "segment_ref": "TEXT_1_PASSAGE:p9",
+      "question_text": "Which of the following is NOT mentioned as a benefit of writing flash fiction in paragraph 9?",
+      "options": [
+        "ability to write more",
+        "more efficient use of words",
+        "clearer focus on the key elements of the story",
+        "better ability to remove unimportant material"
+      ],
+      "correct": "A",
+      [cite_start
+      ]"logic": "Para 9 says you 'write more than you need' but the *benefit* is focus and stripping away the non-essential, not the ability to write more[cite: 808, 809]."
+    },
+    {
+      "id": 12,
+      "part": "A",
+      "type": "phrase_extraction",
+      "marks": 1,
+      "segment_ref": "TEXT_1_PASSAGE:p10_story",
+      "question_text": "Find a phrase in paragraph 10 that indicates that Timothy was very surprised.",
+      "model_answer": "eyes nearly popped out of his head",
+      [cite_start
+      ]"logic": "Direct extraction from Paragraph 10[cite: 813]."
+    },
+    {
+      "id": 13,
+      "part": "A",
+      "type": "inference",
+      "marks": 1,
+      "segment_ref": "TEXT_1_PASSAGE:p10_story",
+      "question_text": "Whose faces are referred to in line 43 when the author says 'Shocked faces gazed'?",
+      "model_answer": "The (eager) science teachers and (pushy) parents / The audience",
+      [cite_start
+      ]"logic": "Paragraph 12 identifies the group 'crammed into' the lab as teachers and parents[cite: 826]."
+    },
+    {
+      "id": 14,
+      "part": "A",
+      "type": "summary_gap_fill",
+      "marks": 4,
+      "segment_ref": "TEXT_1_PASSAGE:p11_story",
+      "sub_questions": [
+        {
+          "id": "i",
+          "answer": "Chemistry"
+        },
+        {
+          "id": "ii",
+          "answer": "mumbled"
+        },
+        {
+          "id": "iii",
+          "answer": "enthused"
+        },
+        {
+          "id": "iv",
+          "answer": "class thug"
+        }
+      ],
+      [cite_start
+      ]"logic": "Extraction from Para 11: 'Chemistry lesson' [cite: 818][cite_start], 'mumbled Timothy' [cite: 820][cite_start], 'enthused Professor' [cite: 821][cite_start], 'Billy Brenton, class thug'[cite: 824]."
+    },
+    {
+      "id": 15,
+      "part": "A",
+      "type": "inference",
+      "marks": 1,
+      "segment_ref": "TEXT_1_PASSAGE:p11_story",
+      "question_text": "In line 51, what did Timothy think it was 'too late' to do?",
+      "model_answer": "withdraw from the competition / tell the Professor he didn't want to volunteer",
+      [cite_start
+      ]"logic": "Timothy realized his mistake only after the Professor said 'Marvellous!' and the bell rang[cite: 820, 825]."
+    },
+    {
+      "id": 16,
+      "part": "A",
+      "type": "true_false_not_given",
+      "marks": 4,
+      "segment_ref": [
+        "TEXT_1_PASSAGE:p12_story",
+        "TEXT_1_PASSAGE:p13_story"
+      ],
+      "sub_questions": [
+        {
+          "id": "i",
+          "statement": "Timothy enjoyed preparing for the competition.",
+          "answer": "F"
+        },
+        {
+          "id": "ii",
+          "statement": "Professor Snookhorn informed Timothy about the hazards in a chemistry laboratory.",
+          "answer": "NG"
+        },
+        {
+          "id": "iii",
+          "statement": "There was hardly any space left for any more parents and teachers to watch the competition.",
+          "answer": "T"
+        },
+        {
+          "id": "iv",
+          "statement": "Timothy did not know what to do with the materials he had been given.",
+          "answer": "T"
+        }
+      ],
+      [cite_start
+      ]"logic": "Lessons were 'excruciating' (F)[cite: 826]; [cite_start]Snookhorn 'little did he know' (NG) [cite: 827][cite_start]; parents were 'crammed' (T)[cite: 826]; [cite_start]'without a clue' (T)[cite: 829]."
+    },
+    {
+      "id": 17,
+      "part": "A",
+      "type": "short_answer",
+      "marks": 1,
+      "segment_ref": "TEXT_1_PASSAGE:p15_story",
+      "question_text": "Timothy looked down in alarm. What surprised Timothy?",
+      "model_answer": "The smell / The thick grey smoke / The glass container shuddering",
+      [cite_start
+      ]"logic": "Para 15 lists the smell, smoke, and shuddering container as the reasons for alarm[cite: 832, 833]."
+    },
+    {
+      "id": 18,
+      "part": "A",
+      "type": "sentence_completion",
+      "marks": 1,
+      "segment_ref": [
+        "TEXT_1_PASSAGE:p14_story",
+        "TEXT_1_PASSAGE:p15_story"
+      ],
+      "question_text": "What caused the 'BOOOOOOOOMMMM!!!!'? The explosion was caused when Timothy...",
+      "model_answer": "mixed random coloured bottles (in a large glass container)",
+      [cite_start
+      ]"logic": "Para 14 and 15 confirm he picked random bottles and mixed the contents[cite: 831, 833]."
+    },
+    {
+      "id": 19,
+      "part": "A",
+      "type": "inference",
+      "marks": 1,
+      "segment_ref": "TEXT_1_PASSAGE:p16_story",
+      "question_text": "Professor Snookhorn had 'a tear of pride'. What was he proud of?",
+      "model_answer": "Timothy's success / The biggest bang / Timothy winning the competition",
+      [cite_start
+      ]"logic": "Snookhorn viewed the win as the 'pinnacle' of his career, mistakenly thinking Timothy was a genius[cite: 835, 836]."
+    },
+    {
+      "id": 20,
+      "part": "A",
+      "type": "sequencing",
+      "marks": 1,
+      "segment_ref": [
+        "TEXT_1_PASSAGE:p10_story",
+        "TEXT_1_PASSAGE:p11_story",
+        "TEXT_1_PASSAGE:p12_story",
+        "TEXT_1_PASSAGE:p16_story"
+      ],
+      "correct_sequence": [
+        "B",
+        "D",
+        "E",
+        "A"
+      ],
+      "timeline": [
+        "One month ago: Timothy slept",
+        "Billy teased: Timothy volunteered",
+        "Lessons: extra Chemistry",
+        "Win: Timothy won"
+      ],
+      [cite_start
+      ]"logic": "Chronology: Para 11 (One month ago: Sleep/Volunteer) -> Para 12 (4 weeks later: Lessons) -> Para 15/16 (Win/Explosion)[cite: 817, 826, 834, 836]."
+    },
+    {
+      "id": 21,
+      "part": "A",
+      "type": "evidence_support",
+      "marks": 2,
+      "segment_ref": [
+        "TEXT_1_PASSAGE:p4_instruction",
+        "TEXT_1_PASSAGE:p16_story"
+      ],
+      "question_text": "Is the story The Big Bang a good example of flash fiction?",
+      "options": [
+        "Good example",
+        "Not a good example"
+      ],
+      "correct": "Good example",
+      "evidence_choices": [
+        "It focuses on one character (Timothy)",
+        "It focuses on one scene (the science laboratory)",
+        "It has a limited word count (under 1,000 words)",
+        "It focuses on one specific conflict (the competition)"
+      ],
+      [cite_start
+      ]"logic": "Must link Para 4-8 instructions to the specific story elements[cite: 775, 781, 786]."
+    },
+    {
+      "id": 22,
+      "part": "A",
+      "type": "matching",
+      "marks": 3,
+      "matching_pairs": [
+        {
+          "comment": "He is such a teacher's pet.",
+          "person": "Billy Brenton"
+        },
+        {
+          "comment": "He did it... I'm thrilled for us both.",
+          "person": "Professor Snookhorn"
+        },
+        {
+          "comment": "He is amazing what an explosion!",
+          "person": "Teachers (example)"
+        },
+        {
+          "comment": "He has no idea that I'm clueless about this.",
+          "person": "Timothy"
+        }
+      ],
+      [cite_start
+      ]"logic": "Billy mutters 'swotty boy'[cite: 824]; [cite_start]Snookhorn has a 'tear of pride'[cite: 835]; [cite_start]Timothy is 'without a clue'[cite: 829]."
+    },
+    {
+      "id": 23,
+      "part": "B1",
+      "type": "sentence_completion",
+      "marks": 1,
+      "segment_ref": "TEXT_2_PASSAGE:p1",
+      "question_text": "With reference to the title, complete the following sentence with a phrase: International Guide Dog Day is set up in honour of the close relationship between...",
+      "model_answer": "Owner and Dog",
+      [cite_start
+      ]"logic": "The title is 'Celebrates the Partnership between Owner and Dog' [cite: 1056-1057]."
+    },
+    {
+      "id": 24,
+      "part": "B1",
+      "type": "true_false_not_given",
+      "marks": 3,
+      "segment_ref": "TEXT_2_PASSAGE:p1",
+      "sub_questions": [
+        {
+          "id": "i",
+          "statement": "Guide dogs are a type of service animal.",
+          "answer": "T"
+        },
+        {
+          "id": "ii",
+          "statement": "Only completely blind people have guide dogs.",
+          "answer": "F"
+        },
+        {
+          "id": "iii",
+          "statement": "Many dogs fail the training to become guide dogs.",
+          "answer": "NG"
+        }
+      ],
+      [cite_start
+      ]"logic": "Para 1 says 'These service animals' (T)[cite: 1058]; [cite_start]'either blind or with limited vision' (F)[cite: 1058]; failure rate is not mentioned (NG)."
+    },
+    {
+      "id": 25,
+      "part": "B1",
+      "type": "multiple_select",
+      "marks": 3,
+      "segment_ref": "TEXT_2_PASSAGE:p1",
+      "question_text": "What benefits do guide dogs provide? Tick THREE boxes.",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "model_answer": [
+        "a",
+        "b",
+        "e"
+      ],
+      [cite_start
+      ]"logic": "Benefits listed: 'avoiding other people' (a), 'travel safely' (e), 'and independently' (b)[cite: 1058]."
+    },
+    {
+      "id": 26,
+      "part": "B1",
+      "type": "short_answer",
+      "marks": 1,
+      "segment_ref": "TEXT_2_PASSAGE:p3_story1",
+      "question_text": "What is 'the experience' (line 11) that the writer refers to?",
+      "model_answer": "Meeting Hudson (his guide dog)",
+      [cite_start
+      ]"logic": "Text says 'When Nathan met Hudson... emotional the experience was'[cite: 1065]."
+    },
+    {
+      "id": 27,
+      "part": "B1",
+      "type": "summary_gap_fill",
+      "marks": 3,
+      "segment_ref": "TEXT_2_PASSAGE:p3_story1",
+      "sub_questions": [
+        {
+          "id": "i",
+          "answer": "eyesight"
+        },
+        {
+          "id": "ii",
+          "answer": "completely"
+        },
+        {
+          "id": "iii",
+          "answer": "changed"
+        }
+      ],
+      [cite_start
+      ]"logic": "Extracts from text: 'affected his eyesight' [cite: 1063][cite_start], 'lost his sight completely' [cite: 1064][cite_start], 'it changed his life'[cite: 1064]."
+    },
+    {
+      "id": 28,
+      "part": "B1",
+      "type": "multiple_choice",
+      "marks": 1,
+      "segment_ref": "TEXT_2_PASSAGE:p4_story2",
+      "question_text": "Despite being blind, Sami still loves...",
+      "options": [
+        "going to school",
+        "joining new teams",
+        "training her guide dog",
+        "running for her school"
+      ],
+      "correct": "D",
+      [cite_start
+      ]"logic": "Text says 'hasn't stopped Sami from long distance running' and 'running with her school'[cite: 1070, 1073]."
+    },
+    {
+      "id": 29,
+      "part": "B1",
+      "type": "short_answer",
+      "marks": 1,
+      "segment_ref": "TEXT_2_PASSAGE:p4_story2",
+      "question_text": "How often do Sami and her dog exercise together?",
+      "model_answer": "On a daily basis / Daily",
+      [cite_start
+      ]"logic": "Text says 'trains with Sami on a daily basis'[cite: 1072]."
+    },
+    {
+      "id": 30,
+      "part": "B1",
+      "type": "summary_gap_fill",
+      "marks": 2,
+      "segment_ref": "TEXT_2_PASSAGE:p5_story3",
+      "sub_questions": [
+        {
+          "id": "i",
+          "answer": "pups"
+        },
+        {
+          "id": "ii",
+          "answer": "understand"
+        }
+      ],
+      [cite_start
+      ]"logic": "Text says 'so did their pups' [cite: 1078][cite_start], and 'felt like they could understand each other'[cite: 1078]."
+    },
+    {
+      "id": 31,
+      "part": "B1",
+      "type": "short_answer",
+      "marks": 2,
+      "segment_ref": [
+        "TEXT_2_PASSAGE:p3_story1",
+        "TEXT_2_PASSAGE:p4_story2"
+      ],
+      "question_text": "What other phrases are used to refer to the guide dogs in Story 1 and Story 2?",
+      "model_answer": [
+        "best friend",
+        "extra four-legged member"
+      ],
+      [cite_start
+      ]"logic": "Story 1: 'he is Nathan's best friend'[cite: 1067]. [cite_start]Story 2: 'team has an extra four-legged member'[cite: 1073]."
+    },
+    {
+      "id": 32,
+      "part": "B1",
+      "type": "multiple_choice",
+      "marks": 1,
+      "segment_ref": "TEXT_2_PASSAGE:p1",
+      "question_text": "Which ONE of the following activities (A-D) is NOT mentioned in paragraphs 1-5?",
+      "options": [
+        "Shopping",
+        "Running",
+        "Dating",
+        "School"
+      ],
+      "correct": "A",
+      "logic": "Running (Story 2), Dating (Story 3), School (Story 2). [cite_start]Shopping is not explicitly mentioned[cite: 1070, 1073, 1077]."
+    },
+    {
+      "id": 33,
+      "part": "B1",
+      "type": "matching",
+      "marks": 3,
+      "segment_ref": [
+        "TEXT_2_PASSAGE:p3_story1",
+        "TEXT_2_PASSAGE:p4_story2",
+        "TEXT_2_PASSAGE:p5_story3"
+      ],
+      "question_text": "Choose the most appropriate title for each story.",
+      "options": [
+        "A (Creating New Hope)",
+        "B (Avoiding Problems)",
+        "C (Finding Romance)",
+        "D (Challenging Others)",
+        "E (Chasing a Dream)"
+      ],
+      "model_answer": {
+        "i": "A",
+        "ii": "E",
+        "iii": "C"
+      },
+      [cite_start
+      ]"logic": "Story 1 (Hopeless to happy) = A. Story 2 (Running) = E. Story 3 (Dates/Marriage) = C[cite: 1064, 1070, 1077]."
+    },
+    {
+      "id": 34,
+      "part": "B1",
+      "type": "short_answer",
+      "marks": 1,
+      "segment_ref": "TEXT_3_PASSAGE:p2",
+      "question_text": "Who or what does 'her canine buddy' (line 4) refer to?",
+      "model_answer": "Don Don",
+      [cite_start
+      ]"logic": "Refers to 'her four-month-old labrador retriever named Don Don'[cite: 1093]."
+    },
+    {
+      "id": 35,
+      "part": "B1",
+      "type": "multiple_choice",
+      "marks": 1,
+      "segment_ref": "TEXT_3_PASSAGE:p3",
+      "question_text": "What did the worker mean by 'Even if you are blind, you can't take the dog in!'?",
+      "options": [
+        "Blind people cannot enter the park.",
+        "All dogs must be with a blind person in the park.",
+        "Blind people can enter the park only with their guide dogs.",
+        "Despite being blind, people cannot enter the park with their guide dogs."
+      ],
+      "correct": "D",
+      [cite_start
+      ]"logic": "The worker was prohibiting the dog regardless of the owner's status[cite: 1096]."
+    },
+    {
+      "id": 36,
+      "part": "B1",
+      "type": "summary_gap_fill",
+      "marks": 4,
+      "segment_ref": [
+        "TEXT_3_PASSAGE:p5",
+        "TEXT_3_PASSAGE:p6"
+      ],
+      "sub_questions": [
+        {
+          "id": "i",
+          "answer": "scale"
+        },
+        {
+          "id": "ii",
+          "answer": "neighbouring"
+        },
+        {
+          "id": "iii",
+          "answer": "lack"
+        },
+        {
+          "id": "iv",
+          "answer": "visually impaired people"
+        }
+      ],
+      [cite_start
+      ]"logic": "Extraction: 'lags in scale' [cite: 1103][cite_start], 'neighbouring Japan' [cite: 1103][cite_start], 'lack of professional trainers' [cite: 1102][cite_start], 'visually impaired people' allowed but not trainers[cite: 1101]."
+    },
+    {
+      "id": 37,
+      "part": "B1",
+      "type": "word_extraction",
+      "marks": 1,
+      "segment_ref": "TEXT_3_PASSAGE:p7",
+      "question_text": "Find a word or phrase in paragraph 7 that can be replaced with 'in addition to'.",
+      "model_answer": "On top of",
+      [cite_start
+      ]"logic": "Phrase 'On top of taking visually impaired people...'[cite: 1105]."
+    },
+    {
+      "id": 38,
+      "part": "B1",
+      "type": "reference",
+      "marks": 1,
+      "segment_ref": "TEXT_3_PASSAGE:p8",
+      "question_text": "Who or what does 'this' (line 24) refer to?",
+      "model_answer": "getting on buses / taking a bus",
+      [cite_start
+      ]"logic": "Refers to the previous sentence 'if the dogs never get on buses'[cite: 1108]."
+    },
+    {
+      "id": 39,
+      "part": "B1",
+      "type": "short_answer",
+      "marks": 1,
+      "segment_ref": "TEXT_3_PASSAGE:p8",
+      "question_text": "Explain why trainers and their dogs need to 'go everywhere' (line 26).",
+      "model_answer": "To familiarise guide dogs with the urban environment and prepare them to assist the blind",
+      [cite_start
+      ]"logic": "Verbatim reason given in the text[cite: 1109]."
+    },
+    {
+      "id": 40,
+      "part": "B1",
+      "type": "multiple_choice",
+      "marks": 1,
+      "segment_ref": "TEXT_3_PASSAGE:p9",
+      "question_text": "What does 'But misunderstandings still exist' (line 28) imply?",
+      "options": [
+        "Some problems remain.",
+        "Things have not improved.",
+        "The problems are complex.",
+        "The problems are getting worse."
+      ],
+      "correct": "A",
+      [cite_start
+      ]"logic": "'still exist' implies continuity of some problems, despite improvements[cite: 1110]."
+    },
+    {
+      "id": 41,
+      "part": "B1",
+      "type": "true_false_not_given",
+      "marks": 3,
+      "segment_ref": [
+        "TEXT_3_PASSAGE:p8",
+        "TEXT_3_PASSAGE:p9"
+      ],
+      "sub_questions": [
+        {
+          "id": "i",
+          "statement": "Trainee dogs are sometimes stopped when getting on buses.",
+          "answer": "T"
+        },
+        {
+          "id": "ii",
+          "statement": "The MTR has always allowed trainee dogs to ride on the MTR.",
+          "answer": "F"
+        },
+        {
+          "id": "iii",
+          "statement": "The restaurant in Yau Ma Tei still refuses to allow in guide dogs.",
+          "answer": "F"
+        }
+      ],
+      [cite_start
+      ]"logic": "(i) 'chance the driver may deny them' (T)[cite: 1108]. (ii) [cite_start]'had to fight... to allow' implies it wasn't always allowed (F)[cite: 1110]. (iii) [cite_start]'eventually apologised... welcomed' (F)[cite: 1112]."
+    },
+    {
+      "id": 42,
+      "part": "B1",
+      "type": "evidence_support",
+      "marks": 1,
+      "segment_ref": "TEXT_3_PASSAGE:p9",
+      "question_text": "Find ONE piece of evidence in paragraph 9 which suggests that 'many people are supportive of guide dogs'.",
+      "model_answer": "The restaurant came under fire from netizens / netizens criticised the restaurant",
+      [cite_start
+      ]"logic": "The support comes from the public ('netizens') reaction to the refusal[cite: 1112]."
+    },
+    {
+      "id": 43,
+      "part": "B1",
+      "type": "short_answer",
+      "marks": 1,
+      "segment_ref": "TEXT_3_PASSAGE:p3",
+      "question_text": "Where did 'Choi's encounter' (line 32) take place?",
+      "model_answer": "Lai Chi Kok Park",
+      [cite_start
+      ]"logic": "Paragraph 3 mentions 'staff member at Lai Chi Kok Park'[cite: 1095]."
+    },
+    {
+      "id": 44,
+      "part": "B1",
+      "type": "matching",
+      "marks": 5,
+      "segment_ref": [
+        "TEXT_3_PASSAGE:p7",
+        "TEXT_3_PASSAGE:p8",
+        "TEXT_3_PASSAGE:p9",
+        "TEXT_3_PASSAGE:p11"
+      ],
+      "question_text": "Match paragraphs 7-11 to the statements.",
+      "model_answer": {
+        "i": "7",
+        "ii": "9",
+        "iii": "X",
+        "iv": "8",
+        "v": "11"
+      },
+      [cite_start
+      ]"logic": "(i) Role: Para 7[cite: 1105]. (ii) [cite_start]Public difference: Para 9 (Netizens)[cite: 1112]. (iii) [cite_start]Law changed: X (says needs to change)[cite: 1107]. (iv) [cite_start]Limitations: Para 8[cite: 1106]. (v) [cite_start]Gov support: Para 11[cite: 1116]."
+    },
+    {
+      "id": 45,
+      "part": "B1",
+      "type": "matching",
+      "marks": 3,
+      "segment_ref": [
+        "TEXT_3_PASSAGE:p4",
+        "TEXT_3_PASSAGE:p7",
+        "TEXT_3_PASSAGE:p3"
+      ],
+      "question_text": "Match each person with ONE comment.",
+      "model_answer": {
+        "i": "D (Meicy Choi)",
+        "ii": "B (Raymond Cheung)",
+        "iii": "A (The worker)"
+      },
+      [cite_start
+      ]"logic": "Choi: 'You can't be serious' (Surprise) -> D[cite: 1099]. [cite_start]Cheung: 'seven years ago' (Long time) -> B[cite: 1104]. [cite_start]Worker: 'can't take the dog in' (Did right thing in their view) -> A[cite: 1096]."
+    },
+    {
+      "id": 46,
+      "part": "B2",
+      "type": "short_answer",
+      "marks": 1,
+      "segment_ref": "TEXT_4_PASSAGE:p1",
+      "question_text": "What is the connection between Michelle Obama's personal essay and Mother's Day?",
+      "model_answer": "It was excerpted in honor of Mother's Day",
+      [cite_start
+      ]"logic": "Text states 'excerpted here, in honor of Mother's Day'[cite: 1398]."
+    },
+    {
+      "id": 47,
+      "part": "B2",
+      "type": "word_extraction",
+      "marks": 1,
+      "segment_ref": "TEXT_4_PASSAGE:p1",
+      "question_text": "Shaped by the women in her life, Michelle rose from ____ beginnings.",
+      "model_answer": "ordinary",
+      [cite_start
+      ]"logic": "Text describes her as an 'ordinary girl from Chicago'[cite: 1398]."
+    },
+    {
+      "id": 48,
+      "part": "B2",
+      "type": "multiple_choice_negative",
+      "marks": 1,
+      "segment_ref": "TEXT_4_PASSAGE:p2",
+      "question_text": "Which ONE of the following does NOT indicate the way Michelle's mother speaks?",
+      "options": [
+        "in short sentences",
+        "chatty and talkative",
+        "with good judgement",
+        "deliberate in word choice"
+      ],
+      "correct": "B",
+      "logic": "Text says 'clipped sentences' (A), 'chooses words carefully' (D), 'wisdom packed' (C). [cite_start]Does not describe her as chatty [cite: 1399-1400]."
+    },
+    {
+      "id": 49,
+      "part": "B2",
+      "type": "short_answer",
+      "marks": 2,
+      "segment_ref": [
+        "TEXT_4_PASSAGE:p2",
+        "TEXT_4_PASSAGE:p4"
+      ],
+      "question_text": "Suggest how Michelle's mother would react in the following situations: (i) Meeting someone new at a party, (ii) Hearing children complain.",
+      "model_answer": {
+        "i": "infectious smile / wry laugh",
+        "ii": "listen intently / not chide"
+      },
+      [cite_start
+      ]"logic": "(i) 'infectious smile or a wry laugh'[cite: 1400]. (ii) [cite_start]'listened a lot more than she lectured', 'endure endless questioning' [cite: 1404-1405]."
+    },
+    {
+      "id": 50,
+      "part": "B2",
+      "type": "multiple_choice",
+      "marks": 1,
+      "segment_ref": "TEXT_4_PASSAGE:p4",
+      "question_text": "What is the purpose of the list of questions Michelle includes in lines 10-11?",
+      "options": [
+        "to highlight her questioning skills",
+        "to suggest her questions were trivial",
+        "to emphasise her constant questions",
+        "to explain why she asked the questions"
+      ],
+      "correct": "C",
+      [cite_start
+      ]"logic": "Context is 'endure endless questioning'[cite: 1405]."
+    },
+    {
+      "id": 51,
+      "part": "B2",
+      "type": "reference",
+      "marks": 1,
+      "segment_ref": "TEXT_4_PASSAGE:p5",
+      "question_text": "What does 'all that' (line 15) refer to?",
+      "model_answer": "Marian's parenting style / Her mother listening and not lecturing",
+      [cite_start
+      ]"logic": "Refers back to the description in Para 4 of how she parented [cite: 1404-1408]."
+    },
+    {
+      "id": 52,
+      "part": "B2",
+      "type": "true_false_not_given",
+      "marks": 3,
+      "segment_ref": "TEXT_4_PASSAGE:p5",
+      "sub_questions": [
+        {
+          "id": "i",
+          "statement": "Michelle's parents spent a lot of money raising their children.",
+          "answer": "NG"
+        },
+        {
+          "id": "ii",
+          "statement": "Michelle's parents tried to directly control their children's actions.",
+          "answer": "F"
+        },
+        {
+          "id": "iii",
+          "statement": "Michelle's parents were committed to developing the moral values of their children.",
+          "answer": "T"
+        }
+      ],
+      [cite_start
+      ]"logic": "(ii) 'let us be ourselves' (F)[cite: 1411]. (iii) [cite_start]'foundation of goodness and honesty' (T)[cite: 1410]."
+    },
+    {
+      "id": 53,
+      "part": "B2",
+      "type": "evidence_extraction",
+      "marks": 4,
+      "segment_ref": [
+        "TEXT_4_PASSAGE:p4",
+        "TEXT_4_PASSAGE:p5",
+        "TEXT_4_PASSAGE:p6"
+      ],
+      "question_text": "Find an example for: (i) A fight, (ii) A parenting lesson, (iii) A misunderstanding, (iv) An appeal.",
+      "model_answer": {
+        "i": "scrapped with some of the neighbor kids",
+        "ii": "wholly invested in their children",
+        "iii": "mistaken... for negligent",
+        "iv": "give the girls in our lives the kind of support"
+      },
+      [cite_start
+      ]"logic": "(i)[cite: 1407]. (iii) [cite_start][cite: 1409]. (iv) [cite_start][cite: 1413]."
+    },
+    {
+      "id": 54,
+      "part": "B2",
+      "type": "short_answer",
+      "marks": 1,
+      "segment_ref": "TEXT_4_PASSAGE:p8",
+      "question_text": "Explain what made the correlation 'encouraging' (line 30) for Michelle.",
+      "model_answer": "The more she practiced, the more she achieved.",
+      [cite_start
+      ]"logic": "Text: 'correlation between how long I practiced and how much I achieved'[cite: 1421]."
+    },
+    {
+      "id": 55,
+      "part": "B2",
+      "type": "short_answer",
+      "marks": 2,
+      "segment_ref": "TEXT_4_PASSAGE:p8",
+      "question_text": "(i) What was 'deeply buried'? (ii) How was this expressed?",
+      "model_answer": {
+        "i": "A pleasure / lighter and happier feeling",
+        "ii": "Lips would unpurse themselves just slightly"
+      },
+      [cite_start
+      ]"logic": "(i) 'pulse of something lighter and happier'[cite: 1422]. (ii) [cite_start][cite: 1423]."
+    },
+    {
+      "id": 56,
+      "part": "B2",
+      "type": "short_answer",
+      "marks": 1,
+      "segment_ref": "TEXT_4_PASSAGE:p8",
+      "question_text": "How did Michelle contribute to the 'honeymoon phase' (line 34)?",
+      "model_answer": "She was driven / She threw herself into filling out worksheets.",
+      [cite_start
+      ]"logic": "Para 8 describes her effort before the conflict in Para 9[cite: 1416]."
+    },
+    {
+      "id": 57,
+      "part": "B2",
+      "type": "multiple_choice_negative",
+      "marks": 1,
+      "segment_ref": "TEXT_4_PASSAGE:p9",
+      "question_text": "Which is NOT a reason for the end of the 'honeymoon phase'?",
+      "options": [
+        "Michelle was inquisitive.",
+        "Michelle seemed to make limited progress.",
+        "Robbie believed Michelle had a great talent.",
+        "Robbie's teaching style didn't suit Michelle."
+      ],
+      "correct": "C",
+      [cite_start
+      ]"logic": "Robbie was not impressed (Para 9), ruling out talent as the reason[cite: 1429]. [cite_start]Slow progress mentioned[cite: 1425]."
+    },
+    {
+      "id": 58,
+      "part": "B2",
+      "type": "short_answer",
+      "marks": 1,
+      "segment_ref": "TEXT_4_PASSAGE:p9",
+      "question_text": "Was Michelle's debut of the song a success or failure? Reason?",
+      "model_answer": "Failure. Robbie exploded / slapped down the achievement.",
+      [cite_start
+      ]"logic": "Text says 'she exploded, slapping down my achievement'[cite: 1426]."
+    },
+    {
+      "id": 59,
+      "part": "B2",
+      "type": "word_extraction",
+      "marks": 1,
+      "segment_ref": "TEXT_4_PASSAGE:p9",
+      "question_text": "Find a metaphor for 'disobedience' Michelle uses in paragraph 9.",
+      "model_answer": "treason / crime",
+      [cite_start
+      ]"logic": "Text: 'crime approaching treason'[cite: 1428]."
+    },
+    {
+      "id": 60,
+      "part": "B2",
+      "type": "short_answer",
+      "marks": 1,
+      "segment_ref": "TEXT_4_PASSAGE:p10",
+      "question_text": "Explain Michelle's frustration when she says 'Nor was I chastened' (line 42).",
+      "model_answer": "She liked concrete answers/reasons but wasn't getting them.",
+      [cite_start
+      ]"logic": "She 'liked concrete answers... reason things out'[cite: 1437]."
+    },
+    {
+      "id": 61,
+      "part": "B2",
+      "type": "multiple_choice",
+      "marks": 1,
+      "segment_ref": "TEXT_4_PASSAGE:p10",
+      "question_text": "What does 'hot and unyielding' suggest?",
+      "options": [
+        "rejecting someone's ideas",
+        "understanding her own failures",
+        "forcing someone to change their mind",
+        "behaving aggressively in confrontation"
+      ],
+      "correct": "D",
+      [cite_start
+      ]"logic": "'hot' suggests anger, 'unyielding' suggests stubbornness/aggression[cite: 1440]."
+    },
+    {
+      "id": 62,
+      "part": "B2",
+      "type": "multiple_choice_negative",
+      "marks": 1,
+      "segment_ref": "TEXT_4_PASSAGE:p10",
+      "question_text": "Which of the following is NOT exhibited by Michelle in paragraph 10?",
+      "options": [
+        "She liked logical explanations.",
+        "She was bossy towards her brother.",
+        "She enjoyed being told what to do.",
+        "She was stubborn."
+      ],
+      "correct": "C",
+      [cite_start
+      ]"logic": "Text explicitly says 'I didn't like being told no'[cite: 1439]."
+    },
+    {
+      "id": 63,
+      "part": "B2",
+      "type": "short_answer",
+      "marks": 2,
+      "segment_ref": "TEXT_4_PASSAGE:p11",
+      "question_text": "Identify a characteristic of Michelle and how Para 11 illustrates it.",
+      "model_answer": {
+        "i": "Stubborn / Inquisitive / Argumentative",
+        "ii": "She keeps asking 'why' and arguing she is ready."
+      },
+      [cite_start
+      ]"logic": "The dialogue shows her arguing back: 'But I am ready', 'But why?'[cite: 1443, 1445]."
+    },
+    {
+      "id": 64,
+      "part": "B2",
+      "type": "short_answer",
+      "marks": 1,
+      "segment_ref": "TEXT_4_PASSAGE:p13",
+      "question_text": "How did Michelle feel 'at the dinner table' and why?",
+      "model_answer": "Seething / Angry because her parents were laughing at her situation.",
+      [cite_start
+      ]"logic": "Text says 'still seething' and parents 'cracked up'[cite: 1453]."
+    },
+    {
+      "id": 65,
+      "part": "B2",
+      "type": "summary_gap_fill",
+      "marks": 5,
+      "segment_ref": "TEXT_4_PASSAGE:p12",
+      "sub_questions": [
+        {
+          "id": "i",
+          "answer": "refused"
+        },
+        {
+          "id": "ii",
+          "answer": "corrections"
+        },
+        {
+          "id": "iii",
+          "answer": "determined"
+        },
+        {
+          "id": "iv",
+          "answer": "follow"
+        },
+        {
+          "id": "v",
+          "answer": "appreciating"
+        }
+      ],
+      [cite_start
+      ]"logic": "Derived from Para 12 content: 'refusal', 'stream of corrections', 'stubborn', 'little credit' [cite: 1446-1450]."
+    },
+    {
+      "id": 66,
+      "part": "B2",
+      "type": "short_answer",
+      "marks": 2,
+      "segment_ref": "TEXT_4_PASSAGE:p13",
+      "question_text": "Give TWO reasons why Michelle's parents took the same approach for both Michelle and Robbie.",
+      "model_answer": [
+        "They believed children should handle their own business",
+        "Mother was secretly happy to see Robbie's authority challenged"
+      ],
+      [cite_start
+      ]"logic": "Reason 1: 'handle our own business'[cite: 1455]. [cite_start]Reason 2: 'secretly happy to see Robbie's authority challenged'[cite: 1458]."
+    },
+    {
+      "id": 67,
+      "part": "B2",
+      "type": "evidence_extraction",
+      "marks": 2,
+      "segment_ref": "TEXT_4_PASSAGE:p4",
+      "question_text": "Identify two examples of Michelle 'being sassy with an elder'.",
+      "model_answer": [
+        "Challenging her grandfather",
+        "Battles/Arguments with Great-aunt Robbie"
+      ],
+      [cite_start
+      ]"logic": "Text mentions 'challenged my ornery grandfather' and 'contentious piano lessons'[cite: 1407, 1408]."
+    },
+    {
+      "id": 68,
+      "part": "B2",
+      "type": "matching",
+      "marks": 5,
+      "segment_ref": [
+        "TEXT_4_PASSAGE:p8",
+        "TEXT_4_PASSAGE:p9",
+        "TEXT_4_PASSAGE:p10",
+        "TEXT_4_PASSAGE:p11",
+        "TEXT_4_PASSAGE:p12"
+      ],
+      "question_text": "Match summary headings to paragraphs.",
+      "model_answer": {
+        "i": "C (Joy of learning)",
+        "ii": "E (Mood shifts)",
+        "iii": "D (Character/Conflict)",
+        "iv": "G (Wanting to understand)",
+        "v": "F (Enduring the other)"
+      },
+      "logic": "P8: 'magic in the learning' (C). P9: 'exploded' (E). P10: 'dictatorial' (D). P11: 'But why?' (G). P12: 'lessons went on' (F)."
+    },
+    {
+      "id": 69,
+      "part": "B2",
+      "type": "short_answer",
+      "marks": 1,
+      "segment_ref": "TEXT_4_PASSAGE:p6",
+      "question_text": "How can parents keep girls' flames lit?",
+      "model_answer": "By giving them support and letting them find their own words.",
+      [cite_start
+      ]"logic": "Text says 'give the girls... support... letting them find the words themselves'[cite: 1413]."
+    }
+  ]
+}

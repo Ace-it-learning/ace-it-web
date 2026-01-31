@@ -22,10 +22,10 @@
             "Language",
             "Organization"
         ],
-        "scoring": "6/7/7",
+        "scoring": "7/7/7",
         "descriptors": {
             "Content": {
-                "max": 6,
+                "max": 7,
                 "key_traits": [
                     "Extensive",
                     "Relevant",
@@ -50,20 +50,6 @@
             }
         }
     },
-    "paper3_listening_integrated": {
-        "marking_domains": [
-            "Content",
-            "Language",
-            "Coherent & Organization",
-            "Appropriacy"
-        ],
-        "max_sub_score": 7,
-        "key_focus": [
-            "Data File manipulation",
-            "Phrase adaptation",
-            "Context suitability"
-        ]
-    },
     "paper4_speaking": {
         "marking_domains": [
             "Pronunciation & Delivery",
@@ -71,12 +57,25 @@
             "Vocabulary & Language Patterns",
             "Ideas & Organization"
         ],
+        "scoring": "0-7 Scale per Domain",
         "max_sub_score": 7,
         "key_focus": [
             "Audibility",
             "Initiation/Maintenance",
             "Range of vocabulary",
             "Logical linking"
-        ]
+        ],
+        "descriptors": {
+            "Pronunciation & Delivery": {
+                "7": "Native-like intonation, clear articulation, effective stress.",
+                "4": "Generally clear, some errors in stress/intonation but understood.",
+                "1": "Frequent errors making comprehension difficult."
+            },
+            "Communication Strategies": {
+                "7": "Sustains interaction effectively, excellent turn-taking skills.",
+                "4": "Maintains interaction, responds appropriately most times.",
+                "1": "Limited interaction, passive."
+            }
+        }
     }
 }

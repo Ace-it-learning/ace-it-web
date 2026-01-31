@@ -1,0 +1,859 @@
+{
+  "meta": {
+    "topic": "Vertical Farming",
+    "generated_at": "2026-01-27T14:58:13.836Z",
+    "module": "Module 3 (Reading Pipeline)",
+    "blueprint_version": "2026_V1",
+    "paper_type": "Reading"
+  },
+  "Part_A": {
+    "resources": {
+      "Text_1": {
+        "title": "Vertical Farming: A Budding Solution for Hong Kong's Food Security?",
+        "subheading": "Innovative agricultural techniques offer a potential pathway to greater self-sufficiency in the face of global uncertainties.",
+        "content": {
+          "p1": "Hong Kong, a bustling metropolis renowned for its towering skyscrapers, is increasingly turning its gaze towards a different kind of vertical structure: vertical farms. These indoor agricultural facilities, stacked high with layers of crops, represent a potentially game-changing solution to the city's precarious reliance on imported food. With a limited amount of arable land and a population that continues to grow, Hong Kong faces a unique challenge in ensuring a stable and sustainable food supply. Vertical farming, proponents argue, offers a way to cultivate fresh produce locally, reduce transportation costs and environmental impact, and enhance food security.",
+          "p2": "The concept is simple yet sophisticated. Crops are grown indoors under controlled conditions, utilising artificial lighting, hydroponics (growing plants without soil), or aeroponics (growing plants in an air or mist environment). This allows for year-round production, unaffected by weather patterns or seasonal constraints. Moreover, vertical farms often use significantly less water and pesticides than traditional agriculture, making them a more environmentally friendly alternative. While the initial investment in setting up a vertical farm can be substantial, the long-term benefits in terms of reduced operating costs and increased yields could prove to be significant. The Hong Kong government has expressed increasing interest in supporting vertical farming initiatives, recognising its potential to bolster the city's resilience in the face of global food supply chain disruptions.",
+          "p3": "However, challenges remain. The high energy consumption associated with artificial lighting is a major concern, and research is ongoing to find more energy-efficient solutions. Furthermore, the range of crops that can be successfully grown in vertical farms is still limited, although advancements are continually being made. Despite these hurdles, vertical farming is gaining traction in Hong Kong, with several pilot projects already underway. From rooftop farms to repurposed industrial buildings, innovative entrepreneurs are exploring the possibilities of this technology to cultivate a more sustainable and secure food future for the city."
+        },
+        "metadata": {
+          "word_count": 305,
+          "genre": "News Article"
+        }
+      },
+      "Text_2": {
+        "title": "Deconstructing the Vertical Farm: An Examination of its Potential and Pitfalls",
+        "subheading": "A comprehensive analysis of the burgeoning field of vertical farming, exploring its technological advancements, economic viability, and environmental impact.",
+        "content": {
+          "p1": "The 21st century is witnessing an unprecedented confluence of challenges: a rapidly growing global population, increasing urbanisation, and the escalating effects of climate change. These factors have placed immense strain on traditional agricultural systems, prompting researchers and entrepreneurs alike to explore innovative solutions for food production. Vertical farming, the practice of cultivating crops in vertically stacked layers within enclosed structures, has emerged as a particularly promising, albeit complex, approach. This feature will delve into the multifaceted aspects of vertical farming, examining its technological underpinnings, economic feasibility, environmental footprint, and potential to revolutionise food systems worldwide.",
+          "p2": "At its core, vertical farming relies on a suite of advanced technologies to optimise growing conditions. Controlled-environment agriculture (CEA) is paramount, allowing farmers to precisely regulate temperature, humidity, light, and nutrient levels. This level of control enables year-round crop production, regardless of external weather patterns. Hydroponics, aeroponics, and aquaponics are common soilless growing techniques employed in vertical farms, each offering distinct advantages in terms of water usage and nutrient delivery. Furthermore, LED lighting plays a crucial role in providing the necessary energy for photosynthesis, although its energy consumption remains a significant concern. Automation and robotics are also increasingly being integrated into vertical farming operations, streamlining tasks such as planting, harvesting, and monitoring crop health.",
+          "p3": "From an economic perspective, the viability of vertical farming is a subject of ongoing debate. The initial investment in establishing a vertical farm can be substantial, encompassing infrastructure, technology, and energy systems. Operating costs, particularly those associated with electricity and labour, can also be significant. However, proponents argue that the increased yields, reduced transportation costs, and premium prices commanded by locally grown produce can offset these expenses. Moreover, the potential for creating new jobs in urban areas and reducing reliance on imported food contributes to the overall economic benefits. Government subsidies and incentives are often crucial in supporting the development of vertical farming initiatives, particularly in regions with limited arable land or challenging climatic conditions.",
+          "p4": "The environmental impact of vertical farming is a complex issue with both positive and negative aspects. On the one hand, vertical farms can significantly reduce water consumption compared to traditional agriculture, as water can be recycled and reused within the enclosed system. The elimination of pesticides and herbicides also minimises environmental pollution. Furthermore, vertical farms can be located in urban areas, reducing the need for long-distance transportation of food and lowering carbon emissions. However, the energy consumption associated with artificial lighting is a major environmental concern. The use of renewable energy sources, such as solar or wind power, is crucial in mitigating this impact. Life cycle assessments are essential to comprehensively evaluate the environmental footprint of vertical farming and identify areas for improvement.",
+          "p5": "Despite the numerous advantages, vertical farming is not without its limitations. The range of crops that can be successfully grown in vertical farms is still relatively narrow, with leafy greens, herbs, and some fruits being the most common. Research is ongoing to expand the variety of crops that can be cultivated using this technology. Furthermore, the scalability of vertical farming remains a challenge. While small-scale vertical farms have proven successful, scaling up to meet the food demands of entire cities requires significant investment and technological advancements. Social acceptance is also a factor, as consumers may be hesitant to embrace food grown in artificial environments. Education and awareness campaigns are needed to promote the benefits of vertical farming and address any misconceptions.",
+          "p6": "The future of vertical farming is inextricably linked to technological innovation. Advancements in LED lighting, automation, and data analytics will play a crucial role in improving efficiency and reducing costs. Research into plant genetics and breeding is also essential to develop crops that are better suited to vertical farming environments. Furthermore, the integration of vertical farms into urban planning and infrastructure will be critical to their long-term success. Vertical farming has the potential to transform food systems, creating more resilient, sustainable, and equitable access to fresh produce. However, careful consideration of its economic, environmental, and social implications is essential to ensure that it fulfils its promise.",
+          "p7": "In conclusion, vertical farming represents a significant step towards a more sustainable and secure food future. While challenges remain, the potential benefits are undeniable. As technology continues to advance and our understanding of plant physiology deepens, vertical farming is poised to play an increasingly important role in feeding the world's growing population. The key lies in embracing a holistic approach, considering not only the technological aspects but also the economic, environmental, and social dimensions of this burgeoning field. The behemoth of traditional agriculture faces a significant, technologically advanced, challenger."
+        },
+        "metadata": {
+          "word_count": 708,
+          "genre": "Feature Article"
+        }
+      }
+    },
+    "questions": [
+      {
+        "id": "q1",
+        "part": "Compulsory",
+        "type": "mc_main_idea",
+        "question": "What is the main idea of Text 1?",
+        "options": [
+          "A. Vertical farming offers a solution to Hong Kong's food security challenges.",
+          "B. Hong Kong's skyscrapers are being replaced by vertical farms.",
+          "C. Imported food is cheaper than locally grown produce in Hong Kong.",
+          "D. The Hong Kong government is investing heavily in traditional agriculture."
+        ],
+        "answer": "A",
+        "marks": 2,
+        "logic": "Text 1 primarily discusses vertical farming as a potential solution to food security issues in Hong Kong.",
+        "segment_ref": "Text_1:p1"
+      },
+      {
+        "id": "q2",
+        "part": "Compulsory",
+        "type": "short_answer",
+        "question": "According to Text 1, what are two benefits of vertical farming compared to traditional agriculture?",
+        "answer": "Vertical farming uses less water and fewer pesticides.",
+        "marks": 2,
+        "logic": "Text 1 states that vertical farms use significantly less water and pesticides than traditional agriculture.",
+        "segment_ref": "Text_1:p2"
+      },
+      {
+        "id": "q3",
+        "part": "Compulsory",
+        "type": "true_false_not_given",
+        "question": "According to Text 1, is the following statement true, false, or not given: The Hong Kong government opposes vertical farming.",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "False",
+        "marks": 3,
+        "logic": "Text 1 indicates that the Hong Kong government has shown increasing interest in supporting vertical farming initiatives.",
+        "segment_ref": "Text_1:p2"
+      },
+      {
+        "id": "q4",
+        "part": "Compulsory",
+        "type": "short_answer",
+        "question": "According to Text 1, what is a major concern regarding vertical farming?",
+        "answer": "High energy consumption associated with artificial lighting.",
+        "marks": 2,
+        "logic": "Text 1 identifies high energy consumption associated with artificial lighting as a major concern.",
+        "segment_ref": "Text_1:p3"
+      },
+      {
+        "id": "q5",
+        "part": "Compulsory",
+        "type": "reference",
+        "question": "In Text 1, paragraph 1, what does 'these indoor agricultural facilities' refer to?",
+        "answer": "Vertical farms",
+        "marks": 2,
+        "logic": "The phrase 'these indoor agricultural facilities' refers to vertical farms.",
+        "segment_ref": "Text_1:p1"
+      },
+      {
+        "id": "q6",
+        "part": "Compulsory",
+        "type": "short_answer",
+        "question": "According to Text 2, what are three technologies upon which vertical farming relies?",
+        "answer": "Controlled-environment agriculture (CEA), hydroponics/aeroponics/aquaponics, and LED lighting.",
+        "marks": 3,
+        "logic": "Text 2 explicitly mentions controlled-environment agriculture, hydroponics/aeroponics/aquaponics and LED lighting as key technologies.",
+        "segment_ref": "Text_2:p2"
+      },
+      {
+        "id": "q7",
+        "part": "Compulsory",
+        "type": "mc_main_idea",
+        "question": "What is the main focus of Text 2?",
+        "options": [
+          "A. The history of traditional agricultural systems.",
+          "B. A detailed examination of vertical farming's potential and drawbacks.",
+          "C. The impact of climate change on global politics.",
+          "D. The benefits of eating locally grown produce."
+        ],
+        "answer": "B",
+        "marks": 2,
+        "logic": "Text 2 analyzes vertical farming's technological, economic, and environmental aspects, covering both its potential and limitations.",
+        "segment_ref": "Text_2:p1"
+      },
+      {
+        "id": "q8",
+        "part": "Compulsory",
+        "type": "short_answer",
+        "question": "According to Text 2, what is one economic benefit of vertical farming?",
+        "answer": "Increased yields, reduced transportation costs, and premium prices commanded by locally grown produce.",
+        "marks": 2,
+        "logic": "Text 2 states that increased yields, reduced transportation costs, and premium prices commanded by locally grown produce can offset expenses.",
+        "segment_ref": "Text_2:p3"
+      },
+      {
+        "id": "q9",
+        "part": "Compulsory",
+        "type": "true_false_not_given",
+        "question": "According to Text 2, is the following statement true, false, or not given: Vertical farming eliminates the need for water.",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "False",
+        "marks": 3,
+        "logic": "Text 2 mentions that water can be recycled and reused in vertical farms, implying it's still required, but in lesser quantities. Thus, it is false that it eliminates the need for water.",
+        "segment_ref": "Text_2:p4"
+      },
+      {
+        "id": "q10",
+        "part": "Compulsory",
+        "type": "reference",
+        "question": "In Text 2, paragraph 5, what does 'this technology' refer to?",
+        "answer": "Vertical farming",
+        "marks": 2,
+        "logic": "The phrase 'this technology' refers to vertical farming.",
+        "segment_ref": "Text_2:p5"
+      },
+      {
+        "id": "q11",
+        "part": "Compulsory",
+        "type": "short_answer",
+        "question": "According to Text 2, what are two factors that can affect the scalability of vertical farming?",
+        "answer": "Significant investment and technological advancements.",
+        "marks": 2,
+        "logic": "Text 2 states that scaling up requires significant investment and technological advancements.",
+        "segment_ref": "Text_2:p5"
+      },
+      {
+        "id": "q12",
+        "part": "Compulsory",
+        "type": "true_false_not_given",
+        "question": "According to Text 2, is the following statement true, false, or not given: Consumers are always eager to eat food grown in vertical farms.",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "False",
+        "marks": 3,
+        "logic": "Text 2 mentions that social acceptance is a factor, as consumers may be hesitant, indicating they are not always eager.",
+        "segment_ref": "Text_2:p5"
+      },
+      {
+        "id": "q13",
+        "part": "Compulsory",
+        "type": "short_answer",
+        "question": "According to Text 2, what is essential to consider in order to ensure the success of vertical farming?",
+        "answer": "Economic, environmental, and social implications.",
+        "marks": 2,
+        "logic": "Text 2 states careful consideration of the economic, environmental, and social implications is essential.",
+        "segment_ref": "Text_2:p6"
+      },
+      {
+        "id": "q14",
+        "part": "Compulsory",
+        "type": "summary_cloze",
+        "question": "Complete the summary about vertical farming. Vertical farming is a promising solution for food production, especially in areas with limited (1) ______ land. It involves growing crops in (2) ______ layers under controlled conditions using technologies like (3) ______ and LED lighting. While it offers benefits like reduced (4) ______ consumption, challenges such as high energy consumption remain.",
+        "answer": "arable / vertical / hydroponics / water",
+        "marks": 4,
+        "logic": "This question tests the overall understanding of the concept and benefits/challenges of vertical farming as described in both texts.",
+        "segment_ref": "Text_1:p1, Text_2:p2, Text_2:p4"
+      },
+      {
+        "id": "q15",
+        "part": "Compulsory",
+        "type": "short_answer",
+        "question": "Name one limitation of vertical farming mentioned in Text 2.",
+        "answer": "Limited range of crops, scalability challenges, social acceptance.",
+        "marks": 1,
+        "logic": "Text 2 discusses limitations such as a narrow range of crops, challenges in scalability, and social acceptance issues.",
+        "segment_ref": "Text_2:p5"
+      },
+      {
+        "id": "q16",
+        "part": "Compulsory",
+        "type": "short_answer",
+        "question": "Apart from economic benefits, mention two other types of benefits from vertical farming, as described in Text 2.",
+        "answer": "Environmental and social.",
+        "marks": 2,
+        "logic": "According to the text, 'economic, environmental and social implications is essential'.",
+        "segment_ref": "Text_2:p6"
+      },
+      {
+        "id": "q17",
+        "part": "Compulsory",
+        "type": "short_answer",
+        "question": "According to Text 2, what must be done to properly assess the environmental impact of vertical farming?",
+        "answer": "Life cycle assessments.",
+        "marks": 2,
+        "logic": "According to the text, 'Life cycle assessments are essential to comprehensively evaluate the environmental footprint of vertical farming and identify areas for improvement'.",
+        "segment_ref": "Text_2:p4"
+      },
+      {
+        "id": "q18",
+        "part": "Compulsory",
+        "type": "short_answer",
+        "question": "What can farmers precisely regulate using Controlled-environment agriculture (CEA)?",
+        "answer": "Temperature, humidity, light, and nutrient levels.",
+        "marks": 2,
+        "logic": "The text states that 'Controlled-environment agriculture (CEA) is paramount, allowing farmers to precisely regulate temperature, humidity, light, and nutrient levels.'",
+        "segment_ref": "Text_2:p2"
+      },
+      {
+        "id": "q19",
+        "part": "Compulsory",
+        "type": "short_answer",
+        "question": "According to Text 2, what are governments offering to support the development of vertical farming initiatives?",
+        "answer": "Subsidies and incentives.",
+        "marks": 1,
+        "logic": "According to the text, 'Government subsidies and incentives are often crucial in supporting the development of vertical farming initiatives, particularly in regions with limited arable land or challenging climatic conditions.'",
+        "segment_ref": "Text_2:p3"
+      },
+      {
+        "id": "q20",
+        "part": "Compulsory",
+        "type": "short_answer",
+        "question": "According to Text 2, what is considered paramount to vertical farming?",
+        "answer": "Controlled-environment agriculture (CEA).",
+        "marks": 1,
+        "logic": "The text indicates, 'Controlled-environment agriculture (CEA) is paramount...'",
+        "segment_ref": "Text_2:p2"
+      },
+      {
+        "id": "q21",
+        "part": "Compulsory",
+        "type": "short_answer",
+        "question": "List one way that advancements can improve the costs of vertical farming.",
+        "answer": "Advancements in LED lighting, automation, and data analytics.",
+        "marks": 1,
+        "logic": "The text indicates, 'Advancements in LED lighting, automation, and data analytics will play a crucial role in improving efficiency and reducing costs.'",
+        "segment_ref": "Text_2:p6"
+      },
+      {
+        "id": "q22",
+        "part": "Compulsory",
+        "type": "short_answer",
+        "question": "Give one word used in Text 2 to describe the current state of traditional agriculture.",
+        "answer": "Behemoth.",
+        "marks": 1,
+        "logic": "The text states, 'The behemoth of traditional agriculture faces a significant, technologically advanced, challenger.'",
+        "segment_ref": "Text_2:p7"
+      }
+    ],
+    "meta": {
+      "topics": [
+        "Text_1",
+        "Text_2"
+      ]
+    }
+  },
+  "Part_B1": {
+    "resources": {
+      "Text_1": {
+        "title": "Vertical Farming: A Green Revolution Takes Root in Urban Spaces",
+        "subheading": "Innovative technology offers a sustainable solution to food security challenges.",
+        "content": {
+          "p1": "The world's population is rapidly expanding, placing immense pressure on our existing agricultural systems. Traditional farming methods, often reliant on vast swathes of land and copious amounts of water, are increasingly unsustainable. Enter vertical farming, an innovative approach that cultivates crops in vertically stacked layers, often within controlled indoor environments. This nascent industry is gaining traction as a potential solution to mitigate food shortages and reduce the environmental impact of agriculture.",
+          "p2": "Vertical farms offer a multitude of benefits. They require significantly less water than conventional farms, as water can be recycled and reused within the closed-loop system. Furthermore, they eliminate the need for pesticides and herbicides, creating a healthier and more sustainable food supply. Located in urban areas, vertical farms can reduce transportation costs and carbon emissions associated with long-distance food distribution. While the initial investment in infrastructure can be substantial, the long-term benefits of vertical farming make it an increasingly attractive option for cities looking to bolster their food security and create a more resilient food system. The technology continues to evolve, with advancements in lighting, automation, and nutrient delivery systems promising even greater efficiency and productivity."
+        },
+        "metadata": {
+          "word_count": 168,
+          "genre": "News Article"
+        }
+      },
+      "Text_2": {
+        "title": "The Vertical Frontier: Examining the Potential and Pitfalls of Urban Agriculture",
+        "subheading": "A detailed look at the challenges and opportunities presented by vertical farming as a sustainable food production method.",
+        "content": {
+          "p1": "Vertical farming, once relegated to the realm of science fiction, is rapidly becoming a tangible reality. Proponents tout its potential to revolutionise food production, particularly in densely populated urban centres where arable land is scarce. However, the widespread adoption of vertical farming faces several significant hurdles, ranging from high energy consumption to economic viability. This article delves into the complexities of vertical farming, examining its strengths, weaknesses, and long-term prospects.",
+          "p2": "One of the most compelling arguments for vertical farming is its potential to drastically reduce water consumption. Traditional agriculture is notoriously water-intensive, often depleting precious groundwater resources and contributing to environmental degradation. Vertical farms, on the other hand, employ closed-loop irrigation systems that recycle water, minimising waste and conserving this vital resource. Furthermore, the controlled environment of vertical farms eliminates the need for pesticides and herbicides, which can have detrimental effects on human health and ecosystems. Crops are grown in nutrient-rich solutions, carefully monitored and adjusted to optimise growth and yield.",
+          "p3": "However, the high energy demands of vertical farming pose a considerable challenge. Artificial lighting is essential for plant growth in indoor environments, and the energy required to power these lighting systems can be substantial. The economic viability of vertical farms hinges on the availability of affordable and sustainable energy sources. Renewable energy sources, such as solar and wind power, offer a potential solution, but their intermittent nature and reliance on weather conditions can present logistical challenges. Research and development efforts are focused on improving the energy efficiency of lighting systems and exploring alternative lighting technologies, such as LED lights that emit specific wavelengths of light that are most beneficial for plant growth.",
+          "p4": "Another significant challenge is the high initial investment required to establish a vertical farm. The cost of constructing and equipping a vertical farm can be considerable, particularly for large-scale operations. This can be a barrier to entry for smaller farmers and entrepreneurs. Government subsidies and private investment are crucial for supporting the development of the vertical farming industry. Furthermore, the economic viability of vertical farms depends on the ability to produce crops at a competitive price. This requires careful planning, efficient management, and the adoption of advanced technologies to optimise productivity and minimise costs.",
+          "p5": "Despite these challenges, the potential benefits of vertical farming are undeniable. As urban populations continue to grow and climate change threatens traditional agriculture, innovative solutions like vertical farming are essential for ensuring food security. Vertical farms can provide a reliable source of fresh, locally grown produce, reducing reliance on long-distance transportation and promoting healthier diets. Furthermore, vertical farms can create new jobs and economic opportunities in urban areas, contributing to community development and resilience.",
+          "p6": "The future of vertical farming is uncertain, but the industry is rapidly evolving. Advances in technology, coupled with increasing awareness of the environmental and social costs of traditional agriculture, are driving innovation and investment in vertical farming. As the technology matures and costs decline, vertical farming is poised to play an increasingly important role in the global food system. However, careful consideration must be given to the environmental and economic sustainability of vertical farming operations to ensure that they truly contribute to a more resilient and equitable food future. Addressing concerns about energy consumption, initial costs, and scalability will be crucial for unlocking the full potential of this promising technology."
+        },
+        "metadata": {
+          "word_count": 498,
+          "genre": "Feature Article"
+        }
+      }
+    },
+    "questions": [
+      {
+        "id": "q1",
+        "part": "Text_1",
+        "type": "mc_main_idea",
+        "question": "What is the main idea of Text_1?",
+        "options": [
+          "Vertical farming as a solution to food security challenges.",
+          "The dangers of traditional farming.",
+          "The history of agriculture.",
+          "The impact of population growth on cities."
+        ],
+        "answer": "A",
+        "marks": 3,
+        "logic": "Text_1 discusses vertical farming as an innovative solution to address food security challenges arising from population growth and the unsustainable nature of traditional farming methods.",
+        "segment_ref": "Text_1:p1"
+      },
+      {
+        "id": "q2",
+        "part": "Text_1",
+        "type": "short_answer",
+        "question": "According to Text_1, what are two reasons that traditional farming methods are becoming unsustainable?",
+        "answer": "They rely on vast swathes of land and copious amounts of water.",
+        "marks": 2,
+        "logic": "The text explicitly states that traditional farming methods are reliant on vast swathes of land and copious amounts of water.",
+        "segment_ref": "Text_1:p1"
+      },
+      {
+        "id": "q3",
+        "part": "Text_1",
+        "type": "true_false_not_given",
+        "question": "According to Text_1, vertical farms always require more water than conventional farms.",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "False",
+        "marks": 2,
+        "logic": "The text states that vertical farms require significantly less water than conventional farms.",
+        "segment_ref": "Text_1:p2"
+      },
+      {
+        "id": "q4",
+        "part": "Text_1",
+        "type": "true_false_not_given",
+        "question": "According to Text_1, vertical farms are always located in rural areas.",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "False",
+        "marks": 2,
+        "logic": "The text states that vertical farms can be located in urban areas.",
+        "segment_ref": "Text_1:p2"
+      },
+      {
+        "id": "q5",
+        "part": "Text_1",
+        "type": "short_answer",
+        "question": "According to Text_1, what is one benefit of vertical farms, besides water conservation?",
+        "answer": "Eliminates the need for pesticides and herbicides / Reduces transportation costs and carbon emissions.",
+        "marks": 2,
+        "logic": "The text mentions multiple benefits, including the elimination of pesticides/herbicides and reduced transportation costs.",
+        "segment_ref": "Text_1:p2"
+      },
+      {
+        "id": "q6",
+        "part": "Text_2",
+        "type": "mc_main_idea",
+        "question": "What is the primary focus of Text_2?",
+        "options": [
+          "A detailed look at the advantages and disadvantages of vertical farming.",
+          "A comparison between different types of crops.",
+          "The history of urban development.",
+          "The benefits of traditional farming."
+        ],
+        "answer": "A",
+        "marks": 3,
+        "logic": "Text_2 examines both the potential benefits and challenges of vertical farming as a sustainable food production method.",
+        "segment_ref": "Text_2:p1"
+      },
+      {
+        "id": "q7",
+        "part": "Text_2",
+        "type": "true_false_not_given",
+        "question": "According to Text_2, vertical farming is a new technology.",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "True",
+        "marks": 2,
+        "logic": "Text_2 indicates that vertical farming was once relegated to science fiction but is rapidly becoming a reality. This implies its recent development.",
+        "segment_ref": "Text_2:p1"
+      },
+      {
+        "id": "q8",
+        "part": "Text_2",
+        "type": "short_answer",
+        "question": "According to Text_2, what is one major challenge associated with vertical farming?",
+        "answer": "High energy consumption / High initial investment.",
+        "marks": 2,
+        "logic": "The text highlights high energy consumption and high initial investment as significant challenges.",
+        "segment_ref": "Text_2:p3, Text_2:p4"
+      },
+      {
+        "id": "q9",
+        "part": "Text_2",
+        "type": "gap_fill",
+        "question": "Vertical farms use ____________ systems to recycle water, minimising waste.",
+        "answer": "closed-loop",
+        "marks": 2,
+        "logic": "The text explicitly mentions closed-loop irrigation systems.",
+        "segment_ref": "Text_2:p2"
+      },
+      {
+        "id": "q10",
+        "part": "Text_2",
+        "type": "reference",
+        "question": "In the phrase 'This requires careful planning...', (Text_2, p4), what does 'This' refer to?",
+        "answer": "Producing crops at a competitive price.",
+        "marks": 3,
+        "logic": "'This' refers back to the preceding clause about economic viability depending on the ability to produce crops at a competitive price.",
+        "segment_ref": "Text_2:p4"
+      },
+      {
+        "id": "q11",
+        "part": "Text_2",
+        "type": "true_false_not_given",
+        "question": "According to Text_2, vertical farming cannot create new jobs.",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "False",
+        "marks": 2,
+        "logic": "The text states that vertical farms can create new jobs and economic opportunities.",
+        "segment_ref": "Text_2:p5"
+      },
+      {
+        "id": "q12",
+        "part": "Text_2",
+        "type": "short_answer",
+        "question": "According to Text_2, what is one factor driving innovation and investment in vertical farming?",
+        "answer": "Advances in technology / Increasing awareness of the environmental and social costs of traditional agriculture.",
+        "marks": 2,
+        "logic": "The text mentions both advances in technology and increasing awareness of the environmental costs of traditional agriculture as drivers.",
+        "segment_ref": "Text_2:p6"
+      },
+      {
+        "id": "q13",
+        "part": "Text_1 & Text_2",
+        "type": "matching",
+        "question": "Match the statements to the corresponding text(s) that support them.",
+        "options": [
+          "A. Vertical farms eliminate the need for pesticides.",
+          "B. Renewable energy sources can present logistical challenges.",
+          "C. Vertical farms can reduce transportation costs."
+        ],
+        "answers": {
+          "A": "Text_1 & Text_2",
+          "B": "Text_2",
+          "C": "Text_1"
+        },
+        "marks": 6,
+        "logic": "Statement A is mentioned in both texts, Statement B is only supported by Text 2, and Statement C is only supported by Text 1.",
+        "segment_ref": "Text_1:p2; Text_2:p2; Text_2:p3; Text_1:p2"
+      },
+      {
+        "id": "q14",
+        "part": "Text_1",
+        "type": "gap_fill",
+        "question": "Vertical farming cultivates crops in vertically _______ layers within controlled indoor environments.",
+        "answer": "stacked",
+        "marks": 1,
+        "logic": "Directly taken from the text.",
+        "segment_ref": "Text_1:p1"
+      },
+      {
+        "id": "q15",
+        "part": "Text_2",
+        "type": "true_false_not_given",
+        "question": "According to Text_2, vertical farming guarantees a sustainable food future.",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "Not Given",
+        "marks": 2,
+        "logic": "The text indicates the *potential* but not the guarantee of a sustainable food future with vertical farming.",
+        "segment_ref": "Text_2:p6"
+      },
+      {
+        "id": "q16",
+        "part": "Text_1",
+        "type": "reference",
+        "question": "In Text_1, p2, what does 'it' refer to in the phrase '...make it an increasingly attractive option...'?",
+        "answer": "The long-term benefits of vertical farming",
+        "marks": 3,
+        "logic": "'It' refers to 'the long-term benefits of vertical farming'.",
+        "segment_ref": "Text_1:p2"
+      },
+      {
+        "id": "q17",
+        "part": "Text_2",
+        "type": "gap_fill",
+        "question": "Crops in vertical farms are grown in nutrient-_______ solutions.",
+        "answer": "rich",
+        "marks": 1,
+        "logic": "The exact phrase is found in paragraph 2.",
+        "segment_ref": "Text_2:p2"
+      },
+      {
+        "id": "q18",
+        "part": "Text_2",
+        "type": "short_answer",
+        "question": "According to Text_2, what type of lighting is being researched for use in vertical farms?",
+        "answer": "LED lights",
+        "marks": 1,
+        "logic": "The text specifically mentions LED lights.",
+        "segment_ref": "Text_2:p3"
+      }
+    ],
+    "meta": {
+      "topics": [
+        "Text_1",
+        "Text_2"
+      ]
+    }
+  },
+  "Part_B2": {
+    "resources": {
+      "Text_1": {
+        "title": "Vertical Farming Faces Headwinds: Industry Grapples with Economic Realities",
+        "subheading": "Once hailed as the future of food production, vertical farms are now navigating a turbulent landscape of high costs and market challenges.",
+        "content": {
+          "p1": "The promise of locally sourced, pesticide-free produce grown year-round in controlled environments captured the imagination of investors and consumers alike. Vertical farming, with its stacked layers of crops in climate-controlled buildings, seemed poised to revolutionise agriculture. However, recent closures and financial difficulties within the industry paint a more nuanced picture. Companies are struggling to overcome the significant capital expenditure required to establish and maintain these high-tech facilities.",
+          "p2": "Energy costs represent a major hurdle. Providing the necessary lighting, temperature control, and ventilation for indoor plant growth consumes substantial amounts of electricity, impacting profitability, particularly amidst fluctuating energy prices. Furthermore, the relatively limited range of crops suitable for vertical farming – primarily leafy greens and herbs – restricts market opportunities. The need for automation and skilled technicians also adds to operational expenses. While technological advancements continue to improve efficiency, the path to widespread adoption remains fraught with challenges. As the industry matures, a focus on economic viability and strategic partnerships will be crucial for long-term sustainability."
+        },
+        "metadata": {
+          "word_count": 175,
+          "genre": "News Article"
+        }
+      },
+      "Text_2": {
+        "title": "The Vertical Farming Paradox: Sustainability vs. Profitability in Urban Agriculture",
+        "subheading": "An in-depth analysis of the economic and environmental complexities inherent in the burgeoning vertical farming sector.",
+        "content": {
+          "p1": "Vertical farming emerged as a compelling solution to address the growing global demand for food, coupled with increasing concerns about the environmental impact of traditional agriculture. Proponents lauded its potential to reduce water consumption, minimise land use, and eliminate the need for harmful pesticides. The vision of urban farms supplying fresh produce to local communities resonated with a desire for more sustainable and resilient food systems. Yet, the reality of vertical farming presents a complex paradox: can this innovative approach truly deliver on its promises while remaining economically viable?",
+          "p2": "One of the primary challenges lies in the energy intensity of these operations. While vertical farms can drastically reduce water usage compared to conventional agriculture, the reliance on artificial lighting to mimic sunlight necessitates significant electricity consumption. The carbon footprint of vertical farming can therefore be substantial, particularly if the energy source is not renewable. Furthermore, the cost of installing and maintaining sophisticated climate control systems, hydroponic or aeroponic systems, and automated harvesting equipment represents a significant barrier to entry for many potential entrepreneurs.",
+          "p3": "Another critical consideration is the limited crop diversity currently feasible in vertical farms. Leafy greens, herbs, and certain berries thrive under controlled conditions, but staple crops such as grains, legumes, and root vegetables present significant technical and economic hurdles. This constraint restricts the potential of vertical farms to provide a comprehensive and balanced diet. Moreover, the high production costs of vertical farming often translate to premium prices for consumers, limiting accessibility for lower-income populations.",
+          "p4": "Despite these challenges, the vertical farming industry continues to evolve and innovate. Technological advancements in LED lighting, energy efficiency, and automation are gradually reducing operational costs. Research into optimising plant growth and expanding the range of viable crops is also underway. Furthermore, the potential benefits of vertical farming in terms of reduced transportation costs, improved food safety, and enhanced resilience to climate change remain compelling.",
+          "p5": "The long-term success of vertical farming hinges on a multifaceted approach. This includes government policies that incentivise sustainable agriculture, investments in research and development, and collaborations between industry, academia, and the public sector. A shift towards renewable energy sources and the development of more energy-efficient technologies are crucial for reducing the environmental footprint of vertical farms. Furthermore, exploring innovative financing models and business strategies can help to improve profitability and expand market access.",
+          "p6": "Ultimately, the vertical farming paradox requires a nuanced assessment. While the industry faces significant challenges in terms of energy consumption, limited crop diversity, and high production costs, its potential to contribute to a more sustainable and resilient food system cannot be dismissed. By addressing the existing limitations through technological innovation, policy support, and strategic partnerships, vertical farming can play a vital role in shaping the future of agriculture. The key lies in striking a balance between environmental aspirations and economic realities, ensuring that vertical farms can thrive as both environmentally responsible and financially sustainable enterprises."
+        },
+        "metadata": {
+          "word_count": 550,
+          "genre": "Feature Article"
+        }
+      }
+    },
+    "questions": [
+      {
+        "id": "q1",
+        "part": "Text_1",
+        "type": "mc_main_idea",
+        "question": "Which of the following best describes the main idea of Text_1?",
+        "options": [
+          "A. Vertical farming is a guaranteed success.",
+          "B. Vertical farming faces economic challenges despite its initial promise.",
+          "C. Vertical farming has already revolutionized agriculture.",
+          "D. Vertical farming is only suitable for leafy greens and herbs."
+        ],
+        "answer": "B",
+        "marks": 2,
+        "logic": "Text_1 discusses the initial optimism surrounding vertical farming but then highlights the economic difficulties and closures the industry is currently facing.",
+        "segment_ref": "Text_1:p1"
+      },
+      {
+        "id": "q2",
+        "part": "Text_1",
+        "type": "short_answer",
+        "question": "According to Text_1, what is one of the main financial burdens for vertical farms?",
+        "options": [],
+        "answer": "High energy costs for lighting, temperature control, and ventilation.",
+        "marks": 2,
+        "logic": "Paragraph 2 of Text_1 explicitly states that energy costs are a major hurdle.",
+        "segment_ref": "Text_1:p2"
+      },
+      {
+        "id": "q3",
+        "part": "Text_1",
+        "type": "true_false_not_given",
+        "question": "Does Text_1 suggest that vertical farms are currently generally profitable?",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "False",
+        "marks": 2,
+        "logic": "The text implies the opposite, highlighting financial difficulties and challenges to profitability.",
+        "segment_ref": "Text_1:p1, p2"
+      },
+      {
+        "id": "q4",
+        "part": "Text_1",
+        "type": "gap_fill",
+        "question": "Complete the following sentence, using no more than TWO words per blank: Vertical farming's future depends on economic _________ and strategic _________.",
+        "options": [],
+        "answer": "viability, partnerships",
+        "marks": 2,
+        "logic": "This is a direct quote from the last sentence of Text_1, paragraph 2.",
+        "segment_ref": "Text_1:p2"
+      },
+      {
+        "id": "q5",
+        "part": "Text_1",
+        "type": "reference",
+        "question": "In Text_1, paragraph 1, what does 'these high-tech facilities' refer to?",
+        "options": [],
+        "answer": "Vertical farms",
+        "marks": 2,
+        "logic": "The phrase refers to the facilities where vertical farming takes place.",
+        "segment_ref": "Text_1:p1"
+      },
+      {
+        "id": "q6",
+        "part": "Text_2",
+        "type": "mc_main_idea",
+        "question": "Which statement best summarizes the central paradox discussed in Text_2?",
+        "options": [
+          "A. Vertical farming is environmentally friendly but requires advanced technology.",
+          "B. Vertical farming solves food shortages but is too expensive for consumers.",
+          "C. Vertical farming aims to be sustainable but faces profitability challenges.",
+          "D. Vertical farming produces high-quality food but lacks crop diversity."
+        ],
+        "answer": "C",
+        "marks": 2,
+        "logic": "Text_2 explores the contradiction between the sustainability goals of vertical farming and its economic viability.",
+        "segment_ref": "Text_2:p1"
+      },
+      {
+        "id": "q7",
+        "part": "Text_2",
+        "type": "short_answer",
+        "question": "According to Text_2, what is a significant environmental concern related to vertical farming?",
+        "options": [],
+        "answer": "The reliance on artificial lighting leading to high electricity consumption and potentially a large carbon footprint.",
+        "marks": 2,
+        "logic": "Paragraph 2 explicitly states this concern.",
+        "segment_ref": "Text_2:p2"
+      },
+      {
+        "id": "q8",
+        "part": "Text_2",
+        "type": "true_false_not_given",
+        "question": "Does Text_2 claim that vertical farms currently offer a wide variety of crops?",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "False",
+        "marks": 2,
+        "logic": "Paragraph 3 states that there is a limited crop diversity currently feasible in vertical farms.",
+        "segment_ref": "Text_2:p3"
+      },
+      {
+        "id": "q9",
+        "part": "Text_2",
+        "type": "gap_fill",
+        "question": "Complete the following sentence, using no more than THREE words per blank: The long-term success of vertical farming depends on government _________, investments in _________, and collaborations between industry, academia and the public sector.",
+        "options": [],
+        "answer": "policies, research and development",
+        "marks": 2,
+        "logic": "Paragraph 5 provides this information.",
+        "segment_ref": "Text_2:p5"
+      },
+      {
+        "id": "q10",
+        "part": "Text_2",
+        "type": "reference",
+        "question": "In Text_2, paragraph 1, what does 'its potential' refer to?",
+        "options": [],
+        "answer": "Vertical farming's potential",
+        "marks": 2,
+        "logic": "The pronoun 'its' refers back to the subject of the sentence, which is Vertical farming.",
+        "segment_ref": "Text_2:p1"
+      },
+      {
+        "id": "q11",
+        "part": "Combined Texts",
+        "type": "matching",
+        "question": "Match the following challenges with the corresponding text(s) that primarily discusses it.",
+        "options": [],
+        "answer": "Energy Costs - Text_1 & Text_2, Limited Crop Diversity - Text_2, Financial Difficulties - Text_1, Carbon Footprint - Text_2",
+        "marks": 4,
+        "logic": "Matching of text relevance to the challenge",
+        "segment_ref": "Text_1:p2, Text_2:p2, Text_2:p3"
+      },
+      {
+        "id": "q12",
+        "part": "Combined Texts",
+        "type": "short_answer",
+        "question": "Based on both texts, what role do technological advancements play in the future prospects of vertical farming?",
+        "options": [],
+        "answer": "Technological advancements are crucial for reducing operational costs, improving energy efficiency, and expanding the range of viable crops, contributing to long-term sustainability.",
+        "marks": 2,
+        "logic": "Both texts emphasize the role of technology in overcoming challenges.",
+        "segment_ref": "Text_1:p2, Text_2:p4, p5"
+      },
+      {
+        "id": "q13",
+        "part": "Text_2",
+        "type": "short_answer",
+        "question": "What are the two main obstacles mentioned in Text_2 that currently hinder the growth of vertical farming?",
+        "options": [],
+        "answer": "Energy Consumption and Limited Crop Diversity",
+        "marks": 2,
+        "logic": "The two most significant challenges",
+        "segment_ref": "Text_2:p2, p3"
+      },
+      {
+        "id": "q14",
+        "part": "Text_2",
+        "type": "true_false_not_given",
+        "question": "Does Text 2 suggest that vertical farms are *always* located within urban areas?",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "Not Given",
+        "marks": 1,
+        "logic": "The text does not explicitly say they are always urban, but infers that as they supply local communities",
+        "segment_ref": "Text_2:p1"
+      },
+      {
+        "id": "q15",
+        "part": "Text_1",
+        "type": "true_false_not_given",
+        "question": "Does Text_1 mention that vertical farming eliminates the need for *all* types of fertilizers?",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "Not Given",
+        "marks": 1,
+        "logic": "Text states it uses pesticide free produce. Does not mention fertilizers",
+        "segment_ref": "Text_1:p1"
+      },
+      {
+        "id": "q16",
+        "part": "Text_2",
+        "type": "mc_tone",
+        "question": "What is the author's tone toward Vertical Farming in Text 2?",
+        "options": [
+          "A. Bitter",
+          "B. Optimistic",
+          "C. Balanced",
+          "D. Pessimistic"
+        ],
+        "answer": "C",
+        "marks": 2,
+        "logic": "A balanced tone highlighting both challenges and opportunities of vertical farming.",
+        "segment_ref": "Text_2:all"
+      },
+      {
+        "id": "q17",
+        "part": "Text_2",
+        "type": "reference",
+        "question": "In Text_2, paragraph 6, what does 'its potential' refer to?",
+        "options": [],
+        "answer": "Vertical farming's potential",
+        "marks": 1,
+        "logic": "The pronoun 'its' refers back to the subject of the sentence, which is Vertical farming.",
+        "segment_ref": "Text_2:p6"
+      },
+      {
+        "id": "q18",
+        "part": "Text_1",
+        "type": "short_answer",
+        "question": "What two factors will lead to long term sustainability, as mentioned in Text 1?",
+        "options": [],
+        "answer": "Economic viability and strategic partnerships",
+        "marks": 2,
+        "logic": "From Text",
+        "segment_ref": "Text_1:p2"
+      },
+      {
+        "id": "q19",
+        "part": "Combined Texts",
+        "type": "true_false_not_given",
+        "question": "Do both texts agree that Vertical Farming is currently a very profitable industry?",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "False",
+        "marks": 1,
+        "logic": "Both texts mention it is not currently profitable",
+        "segment_ref": "Text_1:p2, Text_2:p6"
+      },
+      {
+        "id": "q20",
+        "part": "Combined Texts",
+        "type": "short_answer",
+        "question": "Name one advantage and one disadvantage of Vertical Farming, based on information from the texts.",
+        "options": [],
+        "answer": "Advantage: Reduced water consumption, Disadvantage: High energy consumption",
+        "marks": 2,
+        "logic": "Advantages and disadvantages of Vertical Farming",
+        "segment_ref": "Text_2:p2"
+      }
+    ],
+    "meta": {
+      "topics": [
+        "Text_1",
+        "Text_2"
+      ]
+    }
+  }
+}

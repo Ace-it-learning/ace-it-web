@@ -1,0 +1,859 @@
+{
+  "meta": {
+    "topic": "Student Wellbeing",
+    "generated_at": "2026-01-27T15:21:46.649Z",
+    "module": "Module 3 (Reading Pipeline)",
+    "blueprint_version": "2026_V1",
+    "paper_type": "Reading"
+  },
+  "Part_A": {
+    "resources": {
+      "Text_1": {
+        "title": "University Students Face Mounting Pressure: Is Wellbeing at Risk?",
+        "subheading": "A new report highlights the growing challenges faced by students in higher education, sparking concerns about their overall wellbeing.",
+        "content": {
+          "p1": "Hong Kong’s universities are renowned for their academic rigour, but a recent study suggests this comes at a cost. The report, published by the Student Support Network (SSN), indicates a significant increase in student-reported stress and anxiety levels over the past five years. Factors contributing to this trend include intense competition for grades, financial pressures, and uncertainty about future career prospects. The SSN warns that these pressures can have a detrimental impact on students’ mental and physical health.",
+          "p2": "The study surveyed over 2,000 students across eight universities, revealing that nearly 60% reported experiencing high levels of stress related to academic performance. Furthermore, a growing number of students are struggling with financial difficulties, with many relying on part-time jobs to cover tuition fees and living expenses. This added burden often leads to sleep deprivation, poor diet, and reduced participation in extracurricular activities, further exacerbating the problem. The SSN is urging universities to prioritise student wellbeing and provide adequate support services, including counselling, financial aid, and academic mentoring. They emphasise that investing in student wellbeing is crucial for fostering a healthy and productive learning environment."
+        },
+        "metadata": {
+          "word_count": 200,
+          "genre": "News Article"
+        }
+      },
+      "Text_2": {
+        "title": "The Wellbeing Crisis in Higher Education: Exploring the Systemic Challenges and Potential Solutions",
+        "subheading": "An in-depth analysis of the factors contributing to declining student wellbeing and a discussion of strategies for creating a more supportive and nurturing university environment.",
+        "content": {
+          "p1": "The escalating concerns surrounding student wellbeing in Hong Kong's universities demand a comprehensive examination of the underlying causes and potential remedies. While academic pressure has always been a feature of higher education, the current climate presents a unique set of challenges. The combination of increasingly competitive entry requirements, a demanding curriculum, and the ever-present pressure to secure a good job after graduation has created a perfect storm for student stress and anxiety. Furthermore, the rising cost of living in Hong Kong adds another layer of complexity, forcing many students to juggle their studies with part-time work, often at the expense of their physical and mental health.",
+          "p2": "One of the key issues is the perception that academic success is the sole determinant of future prospects. This narrow focus can lead to a neglect of other important aspects of personal development, such as social skills, emotional intelligence, and resilience. Universities need to broaden their definition of success and create opportunities for students to develop a wider range of skills and competencies. This could involve incorporating more experiential learning opportunities, promoting extracurricular activities, and providing mentoring programmes that focus on personal and professional development.",
+          "p3": "Another critical factor is the availability and accessibility of support services. While most universities offer counselling and mental health services, these are often understaffed and overburdened. Waiting lists can be long, and students may be reluctant to seek help due to stigma or fear of judgment. Universities need to invest in expanding their support services and making them more visible and accessible to students. This could involve increasing the number of counsellors, providing online resources, and organising outreach programmes to raise awareness about mental health issues.",
+          "p4": "Furthermore, universities need to address the systemic factors that contribute to student stress. This includes reviewing assessment practices to reduce the emphasis on high-stakes exams, promoting a more collaborative and supportive learning environment, and providing more flexible study options. It also requires a shift in the overall culture of the university, from one that prioritises academic achievement above all else to one that values student wellbeing and personal growth.",
+          "p5": "However, the responsibility for addressing the student wellbeing crisis does not rest solely with universities. Parents, educators, and policymakers also have a role to play. Parents need to foster a more balanced approach to education, encouraging their children to pursue their passions and develop a wide range of skills and interests. Educators need to create a more supportive and nurturing classroom environment, promoting collaboration and critical thinking over rote memorisation. Policymakers need to invest in education and youth services, ensuring that all young people have access to the resources they need to thrive.",
+          "p6": "In conclusion, the student wellbeing crisis in Hong Kong's universities is a complex issue with no easy solutions. Addressing it requires a multi-faceted approach that involves universities, parents, educators, and policymakers working together to create a more supportive and nurturing environment for young people. By prioritising student wellbeing and investing in the resources they need to thrive, we can ensure that future generations are equipped to meet the challenges of the 21st century."
+        },
+        "metadata": {
+          "word_count": 500,
+          "genre": "Feature Article"
+        }
+      }
+    },
+    "questions": [
+      {
+        "id": "q1",
+        "part": "Text_1",
+        "type": "mc_main_idea",
+        "question": "Which of the following best describes the main idea of Text 1?",
+        "options": [
+          "A. Hong Kong universities are facing increasing pressure regarding student wellbeing.",
+          "B. The Student Support Network (SSN) is underfunded.",
+          "C. Extracurricular activities are detrimental to student health.",
+          "D. Financial aid is readily available for all students."
+        ],
+        "answer": "A",
+        "marks": 2,
+        "logic": "Text 1 discusses the increasing pressure and declining wellbeing of students in Hong Kong universities.",
+        "segment_ref": "Text_1:p1"
+      },
+      {
+        "id": "q2",
+        "part": "Text_1",
+        "type": "short_answer",
+        "question": "According to Text 1, what are two factors contributing to increased stress and anxiety among university students in Hong Kong?",
+        "answer": "Intense competition for grades and financial pressures.",
+        "marks": 2,
+        "logic": "Text 1, paragraph 1 explicitly mentions these two factors.",
+        "segment_ref": "Text_1:p1"
+      },
+      {
+        "id": "q3",
+        "part": "Text_1",
+        "type": "reference",
+        "question": "In Text 1, paragraph 2, what does 'this' refer to?",
+        "answer": "The added burden of working part-time to cover tuition fees and living expenses.",
+        "marks": 2,
+        "logic": "The sentence before mentions the financial difficulties and part-time work burden.",
+        "segment_ref": "Text_1:p2"
+      },
+      {
+        "id": "q4",
+        "part": "Text_1",
+        "type": "short_answer",
+        "question": "According to Text 1, what are universities urged to prioritize to foster a healthy learning environment?",
+        "answer": "Student wellbeing.",
+        "marks": 1,
+        "logic": "Text 1 paragraph 2 mentions prioritizing student wellbeing.",
+        "segment_ref": "Text_1:p2"
+      },
+      {
+        "id": "q5",
+        "part": "Text_2",
+        "type": "mc_main_idea",
+        "question": "What is the primary focus of Text 2?",
+        "options": [
+          "A. The benefits of extracurricular activities in universities.",
+          "B. The systemic challenges to student wellbeing and potential solutions.",
+          "C. The role of parents in funding university education.",
+          "D. The history of higher education in Hong Kong."
+        ],
+        "answer": "B",
+        "marks": 2,
+        "logic": "Text 2 analyzes the causes of declining wellbeing and proposes solutions.",
+        "segment_ref": "Text_2:p1"
+      },
+      {
+        "id": "q6",
+        "part": "Text_2",
+        "type": "short_answer",
+        "question": "According to Text 2, what is one perception that contributes to the neglect of personal development among students?",
+        "answer": "Academic success is the sole determinant of future prospects.",
+        "marks": 2,
+        "logic": "Text 2, paragraph 2 directly states this perception.",
+        "segment_ref": "Text_2:p2"
+      },
+      {
+        "id": "q7",
+        "part": "Text_2",
+        "type": "true_false_not_given",
+        "question": "Text 2 suggests that universities have an abundance of readily available mental health support staff.",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "False",
+        "marks": 3,
+        "logic": "Text 2 states that mental health services are often understaffed and overburdened.",
+        "segment_ref": "Text_2:p3"
+      },
+      {
+        "id": "q8",
+        "part": "Text_2",
+        "type": "short_answer",
+        "question": "According to Text 2, what is one way universities can address systemic factors contributing to student stress?",
+        "answer": "Reviewing assessment practices to reduce the emphasis on high-stakes exams.",
+        "marks": 1,
+        "logic": "Text 2 suggests this as a way to reduce student stress.",
+        "segment_ref": "Text_2:p4"
+      },
+      {
+        "id": "q9",
+        "part": "Text_2",
+        "type": "reference",
+        "question": "In Text 2, paragraph 6, what does 'it' refer to?",
+        "answer": "The student wellbeing crisis in Hong Kong's universities.",
+        "marks": 2,
+        "logic": "The beginning of paragraph 6 directly mentions 'the student wellbeing crisis'.",
+        "segment_ref": "Text_2:p6"
+      },
+      {
+        "id": "q10",
+        "part": "Text_2",
+        "type": "short_answer",
+        "question": "Besides universities, name one other party mentioned in Text 2 that has a role to play in addressing the student wellbeing crisis.",
+        "answer": "Parents, educators, or policymakers.",
+        "marks": 1,
+        "logic": "Text 2, paragraph 5 explicitly mentions these parties.",
+        "segment_ref": "Text_2:p5"
+      },
+      {
+        "id": "q11",
+        "part": "Text_1",
+        "type": "true_false_not_given",
+        "question": "The report mentioned in Text 1 was commissioned by the government.",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "Not Given",
+        "marks": 3,
+        "logic": "The text doesn't mention who commissioned the report.",
+        "segment_ref": "Text_1:p1"
+      },
+      {
+        "id": "q12",
+        "part": "Text_1",
+        "type": "short_answer",
+        "question": "According to the report, what percentage of students reported experiencing high levels of stress related to academic performance?",
+        "answer": "Nearly 60%.",
+        "marks": 1,
+        "logic": "Text 1, paragraph 2 states this percentage.",
+        "segment_ref": "Text_1:p2"
+      },
+      {
+        "id": "q13",
+        "part": "Text_2",
+        "type": "true_false_not_given",
+        "question": "Text 2 suggests rote memorization is the best method for fostering critical thinking.",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "False",
+        "marks": 3,
+        "logic": "Text 2 implies the opposite by promoting collaboration and critical thinking *over* rote memorization.",
+        "segment_ref": "Text_2:p5"
+      },
+      {
+        "id": "q14",
+        "part": "Text_2",
+        "type": "short_answer",
+        "question": "Name one specific action educators can take to improve the classroom environment, according to Text 2.",
+        "answer": "Promoting collaboration or Promoting critical thinking",
+        "marks": 1,
+        "logic": "Text 2, paragraph 5 mentions creating a more supportive and nurturing classroom environment, promoting collaboration and critical thinking.",
+        "segment_ref": "Text_2:p5"
+      },
+      {
+        "id": "q15",
+        "part": "Text_1",
+        "type": "short_answer",
+        "question": "According to Text 1, what kind of activities' participation decreases due to financial burden?",
+        "answer": "Extracurricular activities.",
+        "marks": 1,
+        "logic": "Text 1:p2 states participation in extracurricular activities reduce.",
+        "segment_ref": "Text_1:p2"
+      },
+      {
+        "id": "q16",
+        "part": "Text_2",
+        "type": "short_answer",
+        "question": "What does university need to broaden to develop a wider range of skills?",
+        "answer": "Definition of success",
+        "marks": 1,
+        "logic": "Text 2:p2 states need to broaden the definition of success.",
+        "segment_ref": "Text_2:p2"
+      },
+      {
+        "id": "q17",
+        "part": "Text_1",
+        "type": "summary_cloze",
+        "question": "The Student Support Network (SSN) report indicates that students in Hong Kong face increasing levels of (1) _______ and (2) _______ due to factors like academic (3) _______ and (4) _______ concerns.",
+        "answer": "Stress, Anxiety, Competition, Financial",
+        "marks": 4,
+        "logic": "Using information from Text_1:p1",
+        "segment_ref": "Text_1:p1"
+      },
+      {
+        "id": "q18",
+        "part": "Text_2",
+        "type": "short_answer",
+        "question": "According to Text 2, what is one thing policymakers need to invest in?",
+        "answer": "Education or youth services",
+        "marks": 1,
+        "logic": "Text 2:p5, Policymakers need to invest in education and youth services.",
+        "segment_ref": "Text_2:p5"
+      },
+      {
+        "id": "q19",
+        "part": "Text_1",
+        "type": "short_answer",
+        "question": "Name one type of support service the SSN recommends universities to provide.",
+        "answer": "Counselling, financial aid, or academic mentoring",
+        "marks": 1,
+        "logic": "Text 1:p2, including counselling, financial aid, and academic mentoring.",
+        "segment_ref": "Text_1:p2"
+      },
+      {
+        "id": "q20",
+        "part": "Text_2",
+        "type": "short_answer",
+        "question": "According to Text 2, what is one thing parents need to foster?",
+        "answer": "A more balanced approach to education.",
+        "marks": 1,
+        "logic": "Text 2:p5, Parents need to foster a more balanced approach to education.",
+        "segment_ref": "Text_2:p5"
+      },
+      {
+        "id": "q21",
+        "part": "Text_1",
+        "type": "true_false_not_given",
+        "question": "Text 1 states that all students experiencing financial difficulties are eligible for full financial aid.",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "Not Given",
+        "marks": 3,
+        "logic": "Text 1 does not provide the information for this question, it is not possible to know for sure.",
+        "segment_ref": "Text_1:p2"
+      },
+      {
+        "id": "q22",
+        "part": "Text_2",
+        "type": "short_answer",
+        "question": "According to Text 2, what is one way universities can make support services more accessible to students?",
+        "answer": "Increasing the number of counselors, providing online resources, or organizing outreach programs.",
+        "marks": 1,
+        "logic": "Text 2 paragraph 3 describes how to make support services more accesible.",
+        "segment_ref": "Text_2:p3"
+      }
+    ],
+    "meta": {
+      "topics": [
+        "Text_1",
+        "Text_2"
+      ]
+    }
+  },
+  "Part_B1": {
+    "resources": {
+      "Text_1": {
+        "title": "Hong Kong Students Face Mounting Pressure: Is Enough Being Done?",
+        "subheading": "Academics and parents voice concerns over rising stress levels and lack of mental health support in schools.",
+        "content": {
+          "p1": "The academic pressures faced by Hong Kong students are a perennial concern, but recent reports suggest the situation is reaching a critical point. A survey conducted by the Hong Kong Federation of Youth Groups revealed that a significant proportion of secondary school students experience high levels of stress related to academic performance, extracurricular activities, and future career prospects. Experts attribute this to the highly competitive education system, the relentless pursuit of academic excellence, and a perceived lack of alternative pathways to success.",
+          "p2": "Adding to the problem is the perceived inadequacy of mental health support within schools. While most institutions offer counselling services, many students are reluctant to seek help due to stigma or a fear of being perceived as weak. Furthermore, some argue that the existing resources are insufficient to meet the growing demand, leaving many students to cope with their anxieties and pressures in silence. The Education Bureau has acknowledged the issue and pledged to increase funding for mental health initiatives in schools. However, critics argue that more needs to be done to address the root causes of student stress and create a more supportive and inclusive learning environment. A holistic approach, encompassing curriculum reform, teacher training, and parental education, is deemed essential to safeguarding the wellbeing of Hong Kong's future generation. The debate continues as stakeholders grapple with finding effective solutions to this complex and multifaceted problem."
+        },
+        "metadata": {
+          "word_count": 215,
+          "genre": "News Article"
+        }
+      },
+      "Text_2": {
+        "title": "The Silent Struggle: Exploring Student Wellbeing in Hong Kong's Education System",
+        "subheading": "A comprehensive analysis of the factors impacting student mental health and the efficacy of current support mechanisms.",
+        "content": {
+          "p1": "Hong Kong's education system, renowned for its rigour and academic achievements, has also come under increasing scrutiny for its potential impact on student wellbeing. The pressure to excel, driven by high parental expectations and a fiercely competitive job market, often leaves students feeling overwhelmed and stressed. This pressure manifests in various forms, from anxiety and depression to sleep deprivation and burnout. While academic achievement remains a priority, there is a growing recognition of the need to address the holistic development of students, including their mental and emotional wellbeing.",
+          "p2": "One of the key contributing factors to student stress is the sheer volume of academic work. Long school hours, coupled with extensive homework assignments and extracurricular activities, leave students with little time for rest and relaxation. The emphasis on rote learning and standardised testing further exacerbates the problem, stifling creativity and independent thinking. Moreover, the lack of flexibility in the curriculum often fails to cater to the diverse learning needs and interests of students, leading to disengagement and frustration.",
+          "p3": "The role of parents also plays a crucial part. While parental support is undoubtedly essential, excessive pressure and unrealistic expectations can be detrimental to a child's wellbeing. Some parents, driven by a desire to secure their child's future success, may push them to excel academically at all costs, neglecting their emotional and social needs. This can create a sense of constant pressure and anxiety, leading to feelings of inadequacy and worthlessness.",
+          "p4": "Furthermore, the stigma surrounding mental health issues in Hong Kong society often prevents students from seeking help. Many students fear being judged or labelled as weak if they admit to struggling with their mental health. This silence can exacerbate their problems, leading to isolation and a reluctance to seek professional support. Schools also face challenges in providing adequate mental health services, with limited resources and a lack of trained professionals.",
+          "p5": "However, there are signs of progress. The Education Bureau has introduced several initiatives aimed at promoting student wellbeing, including the provision of mental health training for teachers and the implementation of school-based counselling services. Some schools have also begun to adopt more innovative approaches, such as mindfulness programmes and peer support groups, to foster a more supportive and inclusive learning environment. Non-governmental organisations (NGOs) also play a vital role in providing mental health support to students and raising awareness about the importance of wellbeing.",
+          "p6": "Despite these efforts, significant challenges remain. There is a need for a more comprehensive and coordinated approach to student wellbeing, involving schools, parents, the government, and the community. This includes curriculum reform, teacher training, increased funding for mental health services, and a concerted effort to reduce the stigma surrounding mental health issues. Ultimately, creating a culture of care and support within schools and the wider community is essential to safeguarding the wellbeing of Hong Kong's students and ensuring their future success. A multi-faceted approach that tackles both the systemic pressures and individual vulnerabilities is paramount to fostering a more resilient and thriving student population. Further longitudinal studies are needed to assess the long-term efficacy of the current interventions and identify areas for improvement. The future prosperity of Hong Kong hinges on the wellbeing of its youth, making this an issue of utmost importance."
+        },
+        "metadata": {
+          "word_count": 495,
+          "genre": "Feature Article"
+        }
+      }
+    },
+    "questions": [
+      {
+        "id": "q1",
+        "part": "Text_1",
+        "type": "mc_main_idea",
+        "question": "What is the main idea of Text_1?",
+        "options": [
+          "Hong Kong students face increasing academic pressure and insufficient mental health support.",
+          "The Hong Kong Federation of Youth Groups is ineffective in addressing student stress.",
+          "The Education Bureau is solely responsible for student stress.",
+          "Extracurricular activities are the primary cause of student stress."
+        ],
+        "answer": "A",
+        "marks": 3,
+        "logic": "The passage primarily discusses the academic pressures faced by students in Hong Kong and the corresponding need for more comprehensive mental health support systems.",
+        "segment_ref": "Text_1:p1"
+      },
+      {
+        "id": "q2",
+        "part": "Text_1",
+        "type": "true_false_not_given",
+        "question": "The Education Bureau denies the existence of student stress, according to Text_1.",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "False",
+        "marks": 2,
+        "logic": "The passage indicates that the Education Bureau has acknowledged the presence of student stress.",
+        "segment_ref": "Text_1:p2"
+      },
+      {
+        "id": "q3",
+        "part": "Text_1",
+        "type": "short_answer",
+        "question": "According to Text_1, what are some reasons why students may be reluctant to seek counselling services?",
+        "answer": "Students may be reluctant to seek counselling services due to the social stigma associated with mental health issues or the fear of being perceived as weak.",
+        "marks": 3,
+        "logic": "Paragraph 2 directly mentions stigma and fear as reasons for reluctance.",
+        "segment_ref": "Text_1:p2"
+      },
+      {
+        "id": "q4",
+        "part": "Text_1",
+        "type": "reference",
+        "question": "In Text_1, what does 'this' refer to in the phrase, 'Experts attribute this to the highly competitive education system...'?",
+        "answer": "The high levels of stress experienced by students, stemming from academic performance, extracurricular activities, and concerns about future career prospects.",
+        "marks": 2,
+        "logic": "'This' refers to the overall stress levels discussed in the preceding sentence within paragraph 1.",
+        "segment_ref": "Text_1:p1"
+      },
+      {
+        "id": "q5",
+        "part": "Text_2",
+        "type": "mc_main_idea",
+        "question": "What is the primary focus of Text_2?",
+        "options": [
+          "The successes of Hong Kong's education system in preparing students for university.",
+          "The mental health challenges faced by students in Hong Kong and the support systems available to them.",
+          "A detailed comparison of Hong Kong's education system with those of other developed countries.",
+          "The specific role of extracurricular activities in the holistic development of Hong Kong students."
+        ],
+        "answer": "B",
+        "marks": 3,
+        "logic": "The text examines the mental wellbeing of students, the factors impacting it, and the effectiveness of the support mechanisms available.",
+        "segment_ref": "Text_2:p1"
+      },
+      {
+        "id": "q6",
+        "part": "Text_2",
+        "type": "true_false_not_given",
+        "question": "Text_2 claims that the Education Bureau has completely resolved the issue of student wellbeing.",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "False",
+        "marks": 2,
+        "logic": "The text suggests that while the Education Bureau has made efforts, significant challenges remain in ensuring student wellbeing.",
+        "segment_ref": "Text_2:p6"
+      },
+      {
+        "id": "q7",
+        "part": "Text_2",
+        "type": "short_answer",
+        "question": "According to Text_2, identify two factors that contribute to student stress in Hong Kong.",
+        "answer": "High parental expectations and a highly competitive job market.",
+        "marks": 2,
+        "logic": "Paragraph 1 explicitly identifies these as contributing factors.",
+        "segment_ref": "Text_2:p1"
+      },
+      {
+        "id": "q8",
+        "part": "Text_2",
+        "type": "reference",
+        "question": "In paragraph 3 of Text 2, what does 'This' refer to in the sentence 'This can create a sense of constant pressure and anxiety...'?",
+        "answer": "Excessive pressure and unrealistic academic expectations from parents.",
+        "marks": 2,
+        "logic": "'This' refers to the cumulative effect of parental pressure and the pursuit of unrealistic expectations that were previously discussed in the paragraph.",
+        "segment_ref": "Text_2:p3"
+      },
+      {
+        "id": "q9",
+        "part": "Text_2",
+        "type": "gap_fill",
+        "question": "Fill in the blanks: The stigma surrounding ______ issues often prevents students from seeking ______. This ______ can exacerbate their problems.",
+        "answer": "mental health, help, silence",
+        "marks": 3,
+        "logic": "The passage explicitly states this information regarding the impact of stigma on seeking help.",
+        "segment_ref": "Text_2:p4"
+      },
+      {
+        "id": "q10",
+        "part": "Text_2",
+        "type": "matching",
+        "question": "Match the following actions with the relevant groups:\n1. Provide mental health support to students\n2. Introduced initiatives to promote student wellbeing\n3. May unintentionally pressure students to excel academically at all costs.\nA. Education Bureau\nB. NGOs\nC. Parents",
+        "answer": "1-B, 2-A, 3-C",
+        "marks": 3,
+        "logic": "The text directly attributes these actions to the corresponding groups.",
+        "segment_ref": "Text_2:p5, Text_2:p3"
+      },
+      {
+        "id": "q11",
+        "part": "Text_2",
+        "type": "true_false_not_given",
+        "question": "The article claims that mindfulness programmes have completely eliminated student stress.",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "False",
+        "marks": 2,
+        "logic": "The article mentions mindfulness programmes as a helpful initiative but does not suggest that they have entirely removed student stress.",
+        "segment_ref": "Text_2:p5"
+      },
+      {
+        "id": "q12",
+        "part": "Text_2",
+        "type": "short_answer",
+        "question": "According to paragraph 2 of Text 2, what are the negative consequences of long school hours and excessive homework for students?",
+        "answer": "Students have limited time for rest and relaxation, leading to burnout.",
+        "marks": 2,
+        "logic": "Paragraph 2 explicitly states the lack of rest and relaxation due to long hours.",
+        "segment_ref": "Text_2:p2"
+      },
+      {
+        "id": "q13",
+        "part": "Text_1",
+        "type": "short_answer",
+        "question": "According to Text 1, what type of reform is considered essential for the future wellbeing of Hong Kong's students?",
+        "answer": "Curriculum reform.",
+        "marks": 1,
+        "logic": "The passage specifically mentions the importance of curriculum reform.",
+        "segment_ref": "Text_1:p2"
+      },
+      {
+        "id": "q14",
+        "part": "Text_2",
+        "type": "short_answer",
+        "question": "Based on Text 2, name one innovative approach some schools have implemented to cultivate a more supportive learning environment.",
+        "answer": "Mindfulness programmes or peer support groups",
+        "marks": 2,
+        "logic": "The passage mentions these approaches as examples of supportive initiatives.",
+        "segment_ref": "Text_2:p5"
+      },
+      {
+        "id": "q15",
+        "part": "Text_1",
+        "type": "true_false_not_given",
+        "question": "Text 1 suggests that alternative pathways to success are readily available for students in Hong Kong.",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "False",
+        "marks": 2,
+        "logic": "The passage implies a perceived lack of readily available alternative pathways for students.",
+        "segment_ref": "Text_1:p1"
+      },
+      {
+        "id": "q16",
+        "part": "Text_2",
+        "type": "mc_main_idea",
+        "question": "Which of the following statements best summarizes the conclusion of Text 2?",
+        "options": [
+          "Hong Kong students are generally thriving due to recent improvements in the education system.",
+          "A comprehensive and coordinated approach involving various stakeholders is necessary to effectively improve student wellbeing.",
+          "Parental pressure is identified as the primary and sole cause of student stress in Hong Kong.",
+          "The Education Bureau has successfully resolved the mental health crisis affecting students in schools."
+        ],
+        "answer": "B",
+        "marks": 3,
+        "logic": "The concluding paragraphs highlight the need for a joined effort to solve this complex issue.",
+        "segment_ref": "Text_2:p6"
+      },
+      {
+        "id": "q17",
+        "part": "Text_2",
+        "type": "short_answer",
+        "question": "According to Text 2, what specific type of research studies are required to properly evaluate the long-term effectiveness of the current interventions aimed at improving student wellbeing?",
+        "answer": "Longitudinal studies",
+        "marks": 1,
+        "logic": "The passage explicitly calls for longitudinal studies to assess long-term impact.",
+        "segment_ref": "Text_2:p6"
+      },
+      {
+        "id": "q18",
+        "part": "Text_1",
+        "type": "true_false_not_given",
+        "question": "According to Text 1, there is no ongoing debate regarding the appropriate solutions to address student stress.",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "False",
+        "marks": 1,
+        "logic": "The passage explicitly states that the debate about solutions is still active.",
+        "segment_ref": "Text_1:p2"
+      }
+    ],
+    "meta": {
+      "topics": [
+        "Text_1",
+        "Text_2"
+      ]
+    }
+  },
+  "Part_B2": {
+    "resources": {
+      "Text_1": {
+        "title": "Hong Kong Schools Grapple with Rise in Student Anxiety",
+        "subheading": "Educational institutions implement new strategies to combat increasing pressure on young learners.",
+        "content": {
+          "p1": "Hong Kong's education system, renowned for its academic rigour, is facing a growing challenge: escalating levels of student anxiety. Recent surveys indicate a significant surge in reported cases of stress and mental health concerns among primary and secondary school students. This has prompted schools and educational authorities to implement a range of initiatives aimed at fostering a more supportive and nurturing learning environment. Experts attribute the rise in anxiety to a confluence of factors, including intense competition, parental expectations, and the pressures associated with high-stakes examinations such as the HKDSE.",
+          "p2": "The Education Bureau has outlined new guidelines encouraging schools to prioritise student wellbeing alongside academic achievement. These guidelines emphasise the importance of promoting positive mental health, providing counselling services, and training teachers to identify and respond to signs of distress in students. Many schools are now incorporating mindfulness exercises, stress management workshops, and peer support programmes into their curricula. Furthermore, there's a growing movement advocating for a more holistic approach to education that values creativity, critical thinking, and personal development, rather than solely focusing on exam results. However, the effectiveness of these measures remains to be seen, as deeply ingrained cultural attitudes towards academic success continue to exert significant pressure on students."
+        },
+        "metadata": {
+          "word_count": 185,
+          "genre": "News Article"
+        }
+      },
+      "Text_2": {
+        "title": "The Pressure Cooker: Examining the Roots of Student Stress in Hong Kong's Education System",
+        "subheading": "A comprehensive analysis of the multifaceted factors contributing to student anxiety and potential pathways towards a more balanced educational landscape.",
+        "content": {
+          "p1": "Hong Kong's relentless pursuit of academic excellence has inadvertently created a 'pressure cooker' environment for its students. The unwavering emphasis on standardised testing, coupled with intense competition for limited university places, has resulted in unprecedented levels of stress and anxiety among young learners. While academic achievement is undoubtedly important, the current system often neglects the holistic development of students, prioritising rote learning and exam performance over creativity, critical thinking, and emotional wellbeing. This skewed focus can have detrimental consequences for students' mental health and overall quality of life.",
+          "p2": "One of the primary drivers of student anxiety is the pervasive culture of 'kiasuism,' or the fear of falling behind. Parents, driven by a desire for their children to succeed, often enrol them in a multitude of extracurricular activities and tutoring sessions, leaving them with little time for relaxation or personal pursuits. This relentless schedule can lead to burnout, exhaustion, and a sense of being overwhelmed. Furthermore, the constant pressure to achieve top marks can foster a fear of failure, which can be particularly debilitating for students who struggle academically.",
+          "p3": "The HKDSE, the final examination determining university entrance, looms large in the lives of secondary school students. The intense pressure to perform well on this high-stakes examination can lead to significant anxiety, sleep deprivation, and even depression. The examination-oriented curriculum often restricts students' opportunities to explore their interests or pursue alternative learning pathways. Moreover, the limited availability of university places further exacerbates the competition, creating a highly stressful environment for students.",
+          "p4": "Beyond academic pressures, social media and cyberbullying also contribute to student anxiety. The constant exposure to curated images of success and achievement on social media platforms can lead to feelings of inadequacy and low self-esteem. Cyberbullying, in particular, can have a devastating impact on students' mental health, as it can be difficult to escape the relentless harassment and negativity online. Schools and parents need to work together to educate students about responsible social media use and to provide support for victims of cyberbullying.",
+          "p5": "Addressing the issue of student anxiety requires a multi-pronged approach. Firstly, there needs to be a shift in cultural attitudes towards academic success. Parents, schools, and society as a whole need to recognise that academic achievement is not the sole determinant of a fulfilling life. It is essential to foster a more balanced and holistic approach to education that values creativity, critical thinking, and emotional wellbeing. Secondly, schools need to invest in comprehensive mental health support services, including counselling, therapy, and peer support programmes. These services should be readily accessible to all students, regardless of their academic performance.",
+          "p6": "Furthermore, the curriculum needs to be reformed to reduce the emphasis on rote learning and examination performance. Schools should provide students with more opportunities to explore their interests, pursue alternative learning pathways, and develop their creative and critical thinking skills. The HKDSE should be reformed to reduce its reliance on standardised testing and to incorporate alternative assessment methods. Finally, schools and parents need to work together to promote responsible social media use and to provide support for victims of cyberbullying. By addressing these multifaceted factors, Hong Kong can create a more supportive and nurturing educational environment that promotes student wellbeing and allows young learners to thrive."
+        },
+        "metadata": {
+          "word_count": 514,
+          "genre": "Feature Article"
+        }
+      }
+    },
+    "questions": [
+      {
+        "id": "q1",
+        "part": "Text_1",
+        "type": "mc_main_idea",
+        "question": "What is the main idea of Text 1?",
+        "options": [
+          "A. Hong Kong's education system is facing rising student anxiety, prompting new support initiatives.",
+          "B. The HKDSE is the primary cause of stress in Hong Kong students.",
+          "C. Mindfulness exercises are the most effective way to combat student anxiety.",
+          "D. The Education Bureau is solely responsible for student wellbeing."
+        ],
+        "answer": "A",
+        "marks": 2,
+        "logic": "Text 1 primarily discusses the increasing levels of student anxiety within Hong Kong's education system and the corresponding measures being taken to address this issue.",
+        "segment_ref": "Text_1:p1"
+      },
+      {
+        "id": "q2",
+        "part": "Text_1",
+        "type": "true_false_not_given",
+        "question": "Text 1 states that the effectiveness of the new measures to reduce student anxiety has been definitively proven.",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "False",
+        "marks": 1,
+        "logic": "Text 1 suggests the effectiveness of these measures is still uncertain ('remains to be seen').",
+        "segment_ref": "Text_1:p2"
+      },
+      {
+        "id": "q3",
+        "part": "Text_1",
+        "type": "short_answer",
+        "question": "According to Text 1, identify two specific initiatives that schools are incorporating into their curricula to address student anxiety.",
+        "answer": "Mindfulness exercises and stress management workshops.",
+        "marks": 2,
+        "logic": "The passage explicitly mentions mindfulness exercises and stress management workshops as initiatives integrated into school curricula.",
+        "segment_ref": "Text_1:p2"
+      },
+      {
+        "id": "q4",
+        "part": "Text_2",
+        "type": "mc_main_idea",
+        "question": "What is the central argument presented in Text 2?",
+        "options": [
+          "A. Social media is the primary cause of student anxiety in Hong Kong.",
+          "B. Hong Kong's education system fosters a 'pressure cooker' environment, demanding a multi-faceted approach for reform.",
+          "C. Extracurricular activities are detrimental to student wellbeing.",
+          "D. The HKDSE is a flawless system for university entrance."
+        ],
+        "answer": "B",
+        "marks": 2,
+        "logic": "Text 2 analyzes various factors contributing to student anxiety within Hong Kong's education system and advocates for a comprehensive, multi-faceted solution.",
+        "segment_ref": "Text_2:p1"
+      },
+      {
+        "id": "q5",
+        "part": "Text_2",
+        "type": "reference",
+        "question": "In paragraph 2, what is the meaning of the term 'kiasuism'?",
+        "answer": "The fear of falling behind.",
+        "marks": 1,
+        "logic": "Paragraph 2 defines 'kiasuism' as the fear of falling behind.",
+        "segment_ref": "Text_2:p2"
+      },
+      {
+        "id": "q6",
+        "part": "Text_2",
+        "type": "true_false_not_given",
+        "question": "Text 2 suggests that cyberbullying does not contribute to student anxiety.",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "False",
+        "marks": 1,
+        "logic": "Text 2 explicitly states that cyberbullying is a contributing factor to student anxiety.",
+        "segment_ref": "Text_2:p4"
+      },
+      {
+        "id": "q7",
+        "part": "Text_2",
+        "type": "gap_fill",
+        "question": "Fill in the blanks: Text 2 argues for a shift in educational values towards prioritizing _____, _____, and emotional wellbeing.",
+        "answer": "creativity, critical thinking",
+        "marks": 2,
+        "logic": "Paragraph 5 advocates for valuing creativity, critical thinking, and emotional wellbeing in education.",
+        "segment_ref": "Text_2:p5"
+      },
+      {
+        "id": "q8",
+        "part": "Text_2",
+        "type": "short_answer",
+        "question": "According to Text 2, what is one potential consequence of the intense pressure students face to achieve top marks?",
+        "answer": "A fear of failure.",
+        "marks": 1,
+        "logic": "Text 2 indicates that constant pressure to achieve can foster a fear of failure.",
+        "segment_ref": "Text_2:p2"
+      },
+      {
+        "id": "q9",
+        "part": "Text_2",
+        "type": "mc_main_idea",
+        "question": "What is the primary focus of paragraph 3 in Text 2?",
+        "options": [
+          "A. The benefits of extracurricular activities.",
+          "B. The social lives of secondary school students.",
+          "C. The impact of the HKDSE on student anxiety.",
+          "D. The importance of rote learning."
+        ],
+        "answer": "C",
+        "marks": 1,
+        "logic": "Paragraph 3 primarily discusses the intense pressure associated with the HKDSE and its effect on student anxiety.",
+        "segment_ref": "Text_2:p3"
+      },
+      {
+        "id": "q10",
+        "part": "Text_1",
+        "type": "short_answer",
+        "question": "According to Text 1, what does the Education Bureau encourage schools to prioritize alongside academic achievement?",
+        "answer": "Student wellbeing.",
+        "marks": 1,
+        "logic": "The text indicates that the Education Bureau encourages schools to give priority to student wellbeing.",
+        "segment_ref": "Text_1:p2"
+      },
+      {
+        "id": "q11",
+        "part": "Text_2",
+        "type": "true_false_not_given",
+        "question": "Text 2 asserts that reforming the HKDSE is unnecessary.",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "False",
+        "marks": 1,
+        "logic": "Text 2 explicitly advocates for reform of the HKDSE system.",
+        "segment_ref": "Text_2:p6"
+      },
+      {
+        "id": "q12",
+        "part": "Text_2",
+        "type": "reference",
+        "question": "In paragraph 5, what does 'It' refer to in the sentence: 'It is essential to foster a more balanced...'?",
+        "answer": "The overemphasis on academic achievement.",
+        "marks": 2,
+        "logic": "'It' refers back to the concept of academic achievement being the sole determinant of a fulfilling life, which the author argues against.",
+        "segment_ref": "Text_2:p5"
+      },
+      {
+        "id": "q13",
+        "part": "Text_2",
+        "type": "short_answer",
+        "question": "Based on Text 2, name two specific strategies that could address student anxiety related to social media use.",
+        "answer": "Educating students about responsible social media use and providing support for victims of cyberbullying.",
+        "marks": 2,
+        "logic": "These suggestions are explicitly mentioned in paragraph 4.",
+        "segment_ref": "Text_2:p4"
+      },
+      {
+        "id": "q14",
+        "part": "Text_1",
+        "type": "gap_fill",
+        "question": "According to Text 1, experts attribute the rise in student anxiety to intense _____, parental _____, and pressures from high-stakes _____.",
+        "answer": "competition, expectations, examinations",
+        "marks": 3,
+        "logic": "This information is directly stated in paragraph 1 of Text 1.",
+        "segment_ref": "Text_1:p1"
+      },
+      {
+        "id": "q15",
+        "part": "Text_2",
+        "type": "mc_main_idea",
+        "question": "Which of the following best describes the author's tone in Text 2?",
+        "options": [
+          "A. Indifferent and detached",
+          "B. Critical and concerned",
+          "C. Optimistic and celebratory",
+          "D. Humorous and sarcastic"
+        ],
+        "answer": "B",
+        "marks": 2,
+        "logic": "The author expresses concern about the pressures within the education system and critiques its negative impact on students.",
+        "segment_ref": "Text_2:p1-p6"
+      },
+      {
+        "id": "q16",
+        "part": "Text_1",
+        "type": "true_false_not_given",
+        "question": "Text 1 implies that parental expectations have no influence on student anxiety levels.",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "False",
+        "marks": 1,
+        "logic": "Text 1 identifies parental expectations as a contributing factor to student anxiety.",
+        "segment_ref": "Text_1:p1"
+      },
+      {
+        "id": "q17",
+        "part": "Text_2",
+        "type": "short_answer",
+        "question": "According to Text 2, besides counselling services, what is one other type of mental health support service that schools should invest in?",
+        "answer": "Therapy or peer support programmes.",
+        "marks": 1,
+        "logic": "The text mentions therapy and peer support programmes as crucial mental health support services.",
+        "segment_ref": "Text_2:p5"
+      },
+      {
+        "id": "q18",
+        "part": "Text_2",
+        "type": "gap_fill",
+        "question": "According to Text 2, one of the major factors contributing to student anxiety is the widespread culture of _____.",
+        "answer": "kiasuism",
+        "marks": 2,
+        "logic": "This is explicitly mentioned in paragraph 2.",
+        "segment_ref": "Text_2:p2"
+      },
+      {
+        "id": "q19",
+        "part": "Text_1",
+        "type": "mc_main_idea",
+        "question": "According to Text 1, which of the following is NOT identified as a factor contributing to student anxiety?",
+        "options": [
+          "A. Intense competition",
+          "B. Parental expectations",
+          "C. High-stakes examinations",
+          "D. Lack of extracurricular activities"
+        ],
+        "answer": "D",
+        "marks": 2,
+        "logic": "The text mentions intense competition, parental expectations, and high-stakes examinations as contributing factors.",
+        "segment_ref": "Text_1:p1"
+      },
+      {
+        "id": "q20",
+        "part": "Text_2",
+        "type": "true_false_not_given",
+        "question": "Text 2 suggests that the curriculum should place less emphasis on student performance in examinations.",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "True",
+        "marks": 2,
+        "logic": "This suggestion is put forward in Text 2 to reform the existing curriculum.",
+        "segment_ref": "Text_2:p6"
+      }
+    ],
+    "meta": {
+      "topics": [
+        "Text_1",
+        "Text_2"
+      ]
+    }
+  }
+}

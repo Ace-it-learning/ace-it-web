@@ -14,7 +14,9 @@ export default {
                 "background-dark": "#23170f",
             },
             fontFamily: {
-                "display": ["Space Grotesk", "Noto Sans TC", "sans-serif"]
+                "display": ["Arial", "Noto Sans TC", "sans-serif"],
+                "signature": ["Caveat", "cursive"],
+                "brand": ["Roboto", "sans-serif"]
             },
             borderRadius: {
                 "DEFAULT": "1rem",
@@ -22,6 +24,9 @@ export default {
                 "xl": "3rem",
                 "full": "9999px"
             },
+            animation: {
+                'spin-slow': 'spin 3s linear infinite',
+            }
         },
     },
     plugins: [],

@@ -5,12 +5,12 @@ const AvatarContext = createContext();
 export const AGENTS = {
     english: {
         id: 'english',
-        name: 'English Tutor',
+        name: 'Miss Janie',
         role: '英文導師',
-        description: 'Master Architect V4.0',
-        avatar: '/avatars/english.png',
+        description: 'HKDSE English Master',
+        avatar: '/avatars/english_v2.jpg',
         color: 'bg-blue-100',
-        headerInfo: 'English Mentor • Master Architect V4.0'
+        headerInfo: 'Miss Janie • Senior English Mentor'
     },
     math: {
         id: 'math',
@@ -30,21 +30,12 @@ export const AGENTS = {
         color: 'bg-purple-100',
         headerInfo: '中文導師 • 在線協助中'
     },
-    science: {
-        id: 'science',
-        name: 'Science Tutor',
-        role: '科學導師',
-        description: '物理化學重點',
-        avatar: '/avatars/science.png',
-        color: 'bg-cyan-100',
-        headerInfo: '科學導師 • 在線協助中'
-    },
     ace: {
         id: 'ace',
         name: 'Ace Sir',
         role: 'Ace Sir',
         description: '全方位應試策略',
-        avatar: '/avatars/ace.png',
+        avatar: '/avatars/ace_sir_new.jpg',
         color: 'bg-primary/20',
         headerInfo: 'Ace Sir • 在線協助中'
     }
@@ -53,11 +44,23 @@ export const AGENTS = {
 export const AvatarProvider = ({ children }) => {
     const [activeAgentId, setActiveAgentId] = useState('english');
     const [avatarState, setAvatarState] = useState('IDLE'); // IDLE, HAPPY, UPSET, THINKING
+    const [studentState, setStudentState] = useState('IDLE'); // IDLE, TALKING, LISTENING, STUDYING
+    const [isFocusMode, setIsFocusMode] = useState(false);
 
     const activeAgent = AGENTS[activeAgentId];
 
     return (
-        <AvatarContext.Provider value={{ activeAgent, activeAgentId, setActiveAgentId, avatarState, setAvatarState }}>
+        <AvatarContext.Provider value={{
+            activeAgent,
+            activeAgentId,
+            setActiveAgentId,
+            avatarState,
+            setAvatarState,
+            studentState,
+            setStudentState,
+            isFocusMode,
+            setIsFocusMode
+        }}>
             {children}
         </AvatarContext.Provider>
     );

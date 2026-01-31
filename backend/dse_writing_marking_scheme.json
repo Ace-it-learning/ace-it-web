@@ -1,8 +1,15 @@
 {
     "writing_marking_scheme": {
         "Content": {
-            "max_mark": 6,
+            "max_mark": 7,
             "descriptors": {
+                "7": [
+                    "Content is extremely extensive and entirely fulfills the requirements of the question.",
+                    "It is totally relevant.",
+                    "All points are supported by relevant details, and ideas are exceptionally well-developed.",
+                    "Exceptional creativity and imagination are shown.",
+                    "The writing consistently engages the reader's interest with absolute mastery and high awareness of audience."
+                ],
                 "6": [
                     "Content is extensive and entirely fulfills the requirements of the question.",
                     "It is totally relevant.",

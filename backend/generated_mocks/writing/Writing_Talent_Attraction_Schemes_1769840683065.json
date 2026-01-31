@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "title": "Writing Mock: Talent Attraction Schemes",
+    "topic": "Talent Attraction Schemes",
+    "generated_at": "2026-01-31T06:24:43.062Z",
+    "blueprint_version": "2026_V1"
+  },
+  "Part_A": {
+    "part": "Part A",
+    "genre": "Proposal",
+    "title": "Proposal for Enhancing International Student Integration",
+    "instructions": "Write a proposal of approximately 200 words to the Principal, outlining your suggestions for improving the integration of international students into the school community. Pay close attention to the required format and maintain a formal tone.",
+    "situation": "Our school has recently welcomed a larger cohort of international students. While they are academically strong, many are struggling to integrate socially and culturally. As a member of the Student Council, you have been asked to propose initiatives to address this issue.",
+    "requirements": [
+      "Suggest at least two specific activities or programs to promote interaction between local and international students.",
+      "Explain how these activities would benefit both international and local students.",
+      "Outline the resources (e.g., funding, staff support) needed to implement your proposals."
+    ],
+    "format_guides": [
+      "Must include a clear title and subheadings.",
+      "Address the proposal to the Principal.",
+      "Maintain a formal and professional tone throughout."
+    ]
+  },
+  "Part_B": [
+    {
+      "elective": "Sports Communication",
+      "question": "Your school is hosting an international schools track and field competition. As the student journalist for the school newspaper, write a report previewing the event. Include details about key athletes, the competition schedule, and potential challenges. Emphasize the importance of sportsmanship and cultural exchange during the event. Your report should aim to generate excitement and encourage student participation, as well as highlight the school's international outlook.",
+      "type": "Report"
+    },
+    {
+      "elective": "Drama",
+      "question": "Your drama club is staging a play addressing the issue of cyberbullying. Write a director's concept statement (approximately 400 words) outlining your artistic vision for the production. Explain your chosen staging, costume, and lighting design, and how these elements will contribute to conveying the play's message. Furthermore, discuss how you intend to engage the audience emotionally and promote awareness of the detrimental effects of cyberbullying, ensuring your concept is suitable for a secondary school audience.",
+      "type": "Director's Concept Statement"
+    },
+    {
+      "elective": "Poems/Songs",
+      "question": "Write a song (with at least three verses and a chorus) or a free-verse poem (around 400 words) exploring the theme of 'Resilience in the Face of Adversity.' Your piece should evoke strong emotions and use vivid imagery to portray the struggles and triumphs of individuals or communities overcoming challenges. Include a brief explanation (approx. 50 words) on the meaning and inspiration behind your composition.",
+      "type": "Song/Poem"
+    },
+    {
+      "elective": "Debating",
+      "question": "Your school's debating society is organizing a public debate on the motion: 'This house believes that social media companies should be held legally responsible for the content posted by their users.' Write a persuasive speech (approximately 400 words) either FOR or AGAINST the motion. Present well-reasoned arguments, supporting evidence, and address potential counter-arguments. Employ effective rhetorical devices to convince your audience to accept your viewpoint. Your speech should also include a compelling conclusion summarizing your main points.",
+      "type": "Speech"
+    },
+    {
+      "elective": "Social Issues",
+      "question": "Write an opinion article for a youth magazine discussing the impact of fast fashion on the environment and society. Your article should highlight the ethical concerns related to labor practices, resource depletion, and waste generation. Offer practical solutions that young people can adopt to promote sustainable fashion choices and encourage responsible consumption habits. Aim to raise awareness and inspire positive change within your community, presenting balanced viewpoints and credible supporting evidence.",
+      "type": "Opinion Article"
+    },
+    {
+      "elective": "Workplace Comms",
+      "question": "You are the marketing intern at a local environmental NGO. Your supervisor has asked you to draft an email to potential corporate sponsors requesting financial support for an upcoming tree-planting initiative. Write a persuasive email (approximately 400 words) outlining the project's goals, highlighting the environmental benefits, and emphasizing the potential positive publicity for the sponsoring companies. Include specific details about sponsorship levels and associated benefits. Your email should be professional, engaging, and tailored to appeal to corporate social responsibility values.",
+      "type": "Email"
+    },
+    {
+      "elective": "Pop Culture",
+      "question": "Write a review (approximately 400 words) of a popular TV series that has gained significant attention among teenagers. Analyze the show's themes, characters, and narrative structure. Discuss its impact on youth culture and whether it positively or negatively influences its audience. Provide specific examples from the show to support your arguments, and offer a balanced assessment of its strengths and weaknesses. Consider its social and cultural relevance within the context of contemporary teenage life.",
+      "type": "Review"
+    },
+    {
+      "elective": "Short Stories",
+      "question": "Write a short story (approximately 400 words) that explores the theme of 'Lost and Found.' Your story should focus on a character who experiences a significant loss, whether it be a physical object, a relationship, or a sense of identity. Depict their journey of searching, reflection, and eventual discovery or acceptance. Use vivid language and compelling characters to create a narrative that resonates with readers on an emotional level. The resolution should provide a sense of closure and demonstrate the character’s growth or transformation.",
+      "type": "Short Story"
+    }
+  ]
+}

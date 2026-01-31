@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "title": "Writing Mock: Northern Metropolis Housing",
+    "topic": "Northern Metropolis Housing",
+    "generated_at": "2026-01-31T06:24:32.588Z",
+    "blueprint_version": "2026_V1"
+  },
+  "Part_A": [
+    {
+      "part": "Part A",
+      "genre": "Letter of Complaint",
+      "title": "Complaint Regarding Overcrowding in Northern Metropolis Housing",
+      "instructions": "Write a letter of complaint of approximately 200 words to the Northern Metropolis Housing Authority (NMHA). Pay attention to the appropriate format and tone for a formal letter of complaint.",
+      "situation": "You are a resident of a newly constructed public housing estate in the Northern Metropolis. Over the past few months, you have noticed a significant increase in overcrowding, leading to various issues that negatively impact the quality of life for residents. These issues include insufficient public transport, limited recreational space, and strain on local resources.",
+      "requirements": [
+        "Clearly state the purpose of your letter and your dissatisfaction with the current living conditions.",
+        "Describe at least three specific examples of the negative consequences of overcrowding in your housing estate.",
+        "Suggest at least two practical solutions the NMHA could implement to alleviate the overcrowding and improve living conditions for residents."
+      ],
+      "format_guides": [
+        "Use formal language and a professional tone.",
+        "Include your address, the date, and the recipient's address (Northern Metropolis Housing Authority).",
+        "Properly address the recipient (e.g., Dear Sir/Madam).",
+        "Conclude with an appropriate closing (e.g., Yours faithfully)."
+      ]
+    }
+  ],
+  "Part_B": [
+    {
+      "elective": "Sports Communication",
+      "question": "A renowned sports magazine is launching a new segment focusing on the psychological aspects of athletic performance. As a freelance sports journalist, you have been commissioned to write an article exploring the mental strategies elite athletes use to overcome pressure and maintain peak performance during major competitions. Include specific examples of athletes and sporting events to illustrate your points. Furthermore, analyze how coaches and sports psychologists contribute to cultivating a positive mental environment for athletes. Write your article for the sports magazine.",
+      "type": "Article"
+    },
+    {
+      "elective": "Drama",
+      "question": "Your school is planning to stage a student-led production of a play that addresses a significant social issue relevant to Hong Kong youth (e.g., mental health, academic pressure, family relationships). As the student director, you need to write a director's concept note for the production. In your note, explain your interpretation of the play's central themes, your vision for the staging and design (e.g., set, costumes, lighting), and how you intend to engage the audience emotionally and intellectually. Discuss your choices in relation to specific scenes or characters within the play. Write your director's concept note.",
+      "type": "Concept Note"
+    },
+    {
+      "elective": "Poems/Songs",
+      "question": "A popular online platform is hosting a contest for original song lyrics that explore the theme of 'Finding Hope in Unexpected Places'. Write a song that examines how individuals can discover resilience and optimism amidst challenging circumstances. Your lyrics should convey a clear message of hope and use vivid imagery and figurative language to create an emotional connection with the listener. Briefly explain your creative choices and the intended impact of your song in a short accompanying statement. Write your song lyrics and accompanying statement.",
+      "type": "Song Lyrics & Statement"
+    },
+    {
+      "elective": "Debating",
+      "question": "Your school's debating society is organizing a public debate on the motion: 'This house believes that social media has a net negative impact on youth development.' You have been selected to be the lead speaker for the proposition (affirmative) side. Prepare a speech outlining your arguments against social media, providing evidence and examples to support your claims. Address potential counter-arguments from the opposition and offer rebuttals. Write your speech.",
+      "type": "Speech"
+    },
+    {
+      "elective": "Social Issues",
+      "question": "A local NGO is conducting a campaign to raise awareness about the growing problem of food waste in Hong Kong. You have been asked to write a proposal outlining a community-based initiative to reduce food waste and promote sustainable consumption habits. Your proposal should include specific strategies for engaging different stakeholders (e.g., schools, restaurants, households) and measuring the impact of your initiative. Address the environmental, economic, and social implications of food waste. Write your proposal.",
+      "type": "Proposal"
+    },
+    {
+      "elective": "Workplace Comms",
+      "question": "You are the project manager for a team working on a critical project with a tight deadline. Unexpectedly, a key team member has resigned, leaving a significant gap in expertise and workload. Write an email to your supervisor explaining the situation, outlining the potential impact on the project timeline and deliverables, and proposing a solution to mitigate the risks. Your email should demonstrate your ability to communicate effectively under pressure and propose a constructive course of action. Write your email.",
+      "type": "Email"
+    },
+    {
+      "elective": "Pop Culture",
+      "question": "A cultural magazine is publishing a special edition on the global impact of K-pop. You have been invited to write a feature article analyzing the key factors that have contributed to the widespread popularity of K-pop, including its music, visuals, fan culture, and marketing strategies. Evaluate the positive and negative aspects of K-pop's influence on global culture and its implications for the music industry. Cite specific examples of K-pop artists and trends to support your analysis. Write your article.",
+      "type": "Article"
+    },
+    {
+      "elective": "Short Stories",
+      "question": "Write a short story set in a futuristic Hong Kong where artificial intelligence (AI) has become deeply integrated into everyday life. Your story should explore the ethical dilemmas and social consequences of relying heavily on AI, focusing on the impact on human relationships, employment, and personal identity. Consider the potential benefits and drawbacks of this technology and create compelling characters who grapple with these challenges. Write your short story.",
+      "type": "Short Story"
+    }
+  ]
+}

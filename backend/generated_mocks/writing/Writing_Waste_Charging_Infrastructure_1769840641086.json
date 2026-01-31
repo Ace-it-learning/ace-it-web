@@ -1,0 +1,68 @@
+{
+  "meta": {
+    "title": "Writing Mock: Waste Charging Infrastructure",
+    "topic": "Waste Charging Infrastructure",
+    "generated_at": "2026-01-31T06:24:01.085Z",
+    "blueprint_version": "2026_V1"
+  },
+  "Part_A": [
+    {
+      "part": "Part A",
+      "genre": "Letter of Advice",
+      "title": "Short Writing Task",
+      "instructions": "Write about 200 words. Pay attention to format and tone.",
+      "situation": "Your school is planning to implement a new waste charging scheme. The Student Union has received numerous complaints from students concerned about the financial burden and practicality of the scheme. They have asked you, as an environmental advocate, to write a letter advising students on how to manage waste effectively under the new scheme and to offer suggestions for reducing waste generation.",
+      "requirements": [
+        "Explain the key aspects of the new waste charging scheme.",
+        "Provide at least three practical tips for students to reduce their waste.",
+        "Suggest at least two strategies for students to minimise the financial impact of the scheme."
+      ],
+      "format_guides": [
+        "Use a formal letter format.",
+        "Maintain a supportive and informative tone."
+      ]
+    }
+  ],
+  "Part_B": [
+    {
+      "elective": "Sports Communication",
+      "question": "Your school newspaper has decided to launch a new weekly column focusing on local sports achievements and promoting sports participation among students. As the newly appointed sports editor, you are tasked with writing the inaugural article. In your article, highlight a recent sporting success by a school team or individual, analyse the factors contributing to their success, and suggest practical ways for students to get more involved in sports at school. Aim to inspire and motivate your fellow students to embrace a more active lifestyle.",
+      "type": "Article"
+    },
+    {
+      "elective": "Drama",
+      "question": "Your school's drama club is planning to stage a production based on a famous fairy tale but with a modern twist to make it relevant to today's teenage audience. You are the playwright assigned to adapt the original story. Write a scene (approximately 400 words) showcasing this modern adaptation. The scene should feature two or three characters and demonstrate how the fairy tale themes resonate with contemporary issues faced by young people. Include stage directions to help visualise the scene.",
+      "type": "Play Script (Scene)"
+    },
+    {
+      "elective": "Poems/Songs",
+      "question": "Write a song or poem (approximately 400 words) that explores the theme of 'Identity in a Digital Age.' Consider how social media, online interactions, and the constant pursuit of self-representation affect our sense of self. Your work should convey a clear message or evoke a specific emotion related to this theme, and use figurative language effectively to enhance its impact.",
+      "type": "Song/Poem"
+    },
+    {
+      "elective": "Debating",
+      "question": "Your school is holding a debate on the motion: 'This house believes that social media influencers have a net negative impact on society.' You have been assigned to the affirmative side (arguing in favour of the motion). Prepare a speech (approximately 400 words) outlining your key arguments, providing evidence to support your claims, and addressing potential counterarguments. Your speech should be persuasive and logically structured.",
+      "type": "Debate Speech"
+    },
+    {
+      "elective": "Social Issues",
+      "question": "Write a proposal (approximately 400 words) to your school principal suggesting a new initiative to promote mental health awareness and support among students. Your proposal should identify a specific mental health issue prevalent among teenagers, explain why it is a concern, outline specific actions the school can take to address it, and justify the resources needed to implement your plan. Include a timeline for implementation and measurable outcomes.",
+      "type": "Proposal"
+    },
+    {
+      "elective": "Workplace Comms",
+      "question": "You are an intern at a marketing firm. Your supervisor has asked you to draft an email (approximately 400 words) to a potential client, a local bookstore, pitching a new social media marketing strategy to help them attract younger customers. In your email, introduce your firm, highlight the bookstore's current challenges, propose a specific marketing plan (including target audience, platforms, and content examples), and explain the potential benefits for the bookstore. Ensure your email is professional, persuasive, and tailored to the client's needs.",
+      "type": "Email"
+    },
+    {
+      "elective": "Pop Culture",
+      "question": "Write a review (approximately 400 words) of a recent popular film or TV series that you feel has had a significant impact on youth culture. Analyze its themes, characters, and narrative techniques, and discuss how it reflects or influences the values, attitudes, and behaviours of young people today. Provide specific examples from the film or series to support your arguments. Offer your overall assessment of its artistic merit and cultural significance.",
+      "type": "Review"
+    },
+    {
+      "elective": "Short Stories",
+      "question": "Write a short story (approximately 400 words) that begins with the sentence: 'The old photograph held a secret she wasn't sure she wanted to uncover.' Your story should focus on the themes of memory, family, and the impact of the past on the present. Develop compelling characters, create a vivid setting, and build suspense as the protagonist grapples with the decision of whether or not to delve into the mystery revealed by the photograph.",
+      "type": "Short Story"
+    }
+  ]
+}

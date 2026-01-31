@@ -1,0 +1,21 @@
+{
+  "id": "Speaking_Artificial_Intelligence_Ethics_1768751778119",
+  "title": "AI: Code of Conduct?",
+  "topic_description": "Artificial Intelligence (AI) is rapidly transforming our world, impacting everything from healthcare and transportation to education and entertainment. While AI offers immense potential benefits, its increasing sophistication raises serious ethical concerns. Recently, a controversial AI system was deployed in a major city to predict crime hotspots, leading to accusations of bias and discrimination against specific communities. This incident has sparked a global debate about the need for ethical guidelines and regulations to govern the development and deployment of AI. The Hong Kong government is considering implementing new policies to address these concerns and ensure AI is used responsibly and ethically. A public consultation is being held to gather opinions on the best way forward.",
+  "discussion_points": [
+    "The potential benefits of AI for Hong Kong society.",
+    "The ethical risks and challenges associated with the use of AI.",
+    "Specific guidelines or regulations that should be implemented to ensure responsible AI development and use."
+  ],
+  "individual_response_questions": [
+    "Do you believe that AI should be given the same legal rights as human beings?",
+    "What is the biggest ethical dilemma posed by the development of AI in your opinion?"
+  ],
+  "candidates": {
+    "A": "Believes strongly in the potential of AI to improve society and supports its rapid development, with minimal regulatory oversight. Prioritizes innovation and progress.",
+    "B": "Is deeply concerned about the potential dangers of AI, particularly its impact on jobs and privacy. Advocates for strict regulations and cautious implementation.",
+    "C": "Takes a pragmatic approach, focusing on the practical challenges of implementing AI ethically and effectively. Emphasizes the need for education and public awareness."
+  },
+  "created_at": "2026-01-18T15:56:18.119Z",
+  "type": "speaking"
+}

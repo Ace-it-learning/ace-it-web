@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 const MainLayout = ({ children }) => {
     return (
@@ -9,11 +10,7 @@ const MainLayout = ({ children }) => {
                 {children}
             </main>
 
-            {/* Footer from code.html could go here or be a separate component */}
-            <footer className="w-full bg-electric-orange text-white py-8 px-6 md:px-20 mt-10">
-                {/* Footer content omitted for brevity, keeping focus on core UI */}
-                <div className="text-center text-sm font-medium">© 2026 Ace It! Education.</div>
-            </footer>
+            <Footer />
         </div>
     );
 };

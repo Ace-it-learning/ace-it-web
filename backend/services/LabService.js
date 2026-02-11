@@ -40,10 +40,15 @@ const LAB_GENERATION_PROMPT = `Expert HKDSE English Tutor. Generate a high-stake
 ### TOPIC DISCIPLINE:
 - If topic is 'Literal Comprehension': Focus EXCLUSIVELY on information explicitly stated in the text. Find specific facts, names, dates, or clearly stated stances. The challenge at high DSE levels (5*-5**) comes from the COMPLEXITY of the reading passage and the PRECISION needed to extract the correct detail, NOT from making abstract inferences or logical leaps.
 
+### MICRO-SKILLS TAGGING:
+- You MUST tag each interactive task with 1 appropriate micro-skill ID from the following list:
+{{AVAILABLE_SKILLS}}
+- If the lab topic matches a specific skill (e.g., 'reading_inference'), use that tag mostly. If 'General', mix the tags.
+
 JSON SCHEMA:
 {
   "type": "READING"|"GRAMMAR"|"VOCAB",
-  "reading_passage": string, // REQUIRED for 'READING' type. Provide a contextually grounded 150-300 word text.
+  "reading_passage": string, // REQUIRED for 'READING' type. MUST be 400-600 words with 3-5 paragraphs. CRITICAL: Separate each paragraph with double newline (\\n\\n). Example format: "Paragraph 1 text here.\\n\\nParagraph 2 text here.\\n\\nParagraph 3 text here." Follow DSE argumentative structure: (1) Main claim/introduction, (2) Supporting evidence with examples, (3) Counterpoint or alternative view, (4) Rebuttal or further evidence, (5) Conclusion. Topics: HK-relevant social issues, technology, education, environment, culture.
   "conceptual_explanation": string,
   "key_points": string[], // Standard sentence case.
   "examples": [
@@ -52,6 +57,7 @@ JSON SCHEMA:
   "interactive_tasks": [{ 
     "id": string, 
     "type": "SHORT_ANSWER" | "MCQ",
+    "skills": string[], // e.g. ["reading_inference"]
     "instruction": string, 
     "question": string, 
     "options": string[], // Required for MCQ. (e.g. ["A. ...", "B. ..."])
@@ -63,7 +69,7 @@ JSON SCHEMA:
   "suggested_next_steps": string[]
 }
 - CRITICAL: Generate exactly 10 tasks.
-- CRITICAL: For 'READING' labs, the 'reading_passage' MUST be provided and all tasks MUST refer to it.
+- CRITICAL: For 'READING' labs, the 'reading_passage' MUST be 400-600 words with 3-5 paragraphs. YOU MUST separate paragraphs with \\n\\n (double newline). DO NOT write as one continuous block. Each paragraph should have a distinct purpose (claim, evidence, counterpoint, conclusion).
 - CRITICAL: If the topic is 'Literal Comprehension', tasks MUST be verifiable directly from the text without outside knowledge or abstract inference. At Level 5+, the difficulty must come from tracking complex conditional statements or subtle lexical precision (e.g. 'partially agreed' vs 'unconditionally supported') within the text.
 - CRITICAL: For Level 5 and above, tasks MUST be significantly more challenging, focuses on synthesis and subtle nuances rather than purely obscure vocabulary.`;
 
@@ -76,6 +82,10 @@ const LISTENING_LAB_PROMPT = `Listening Specialist. Generate HKDSE Listening Lab
    - Level 3: Simple info at moderate speed.
    - Level 5+: Abstract themes, implied meanings, figurative language, near-natural speed, and subtle intonation analysis. Focus on speaker attitude and logical flow rather than obscure linguistic trivia.
 
+### MICRO-SKILLS TAGGING:
+- You MUST tag each interactive task with 1 appropriate micro-skill ID from the following list:
+{{AVAILABLE_SKILLS}}
+
 JSON SCHEMA:
 {
   "type": "LISTENING",
@@ -84,6 +94,7 @@ JSON SCHEMA:
   "interactive_tasks": [{ 
     "id": string, 
     "type": "LISTENING_COMPREHENSION" | "MCQ", 
+    "skills": string[], // e.g. ["listening_mainIdea"]
     "audio_script": "text for TTS", 
     "instruction": string, 
     "question": string, 
@@ -106,6 +117,10 @@ const SPEAKING_LAB_PROMPT = `Speaking Coach. Generate HKDSE Speaking Lab JSON fo
    - Level 3: Simple structures, basic fluency.
    - Level 5+: Sophisticated patterns, effortless fluency, complex gambits, and strategic initiation/maintenance of abstract discussions. Focus on rhetorical effectiveness and nuanced expression, NOT just high-tier vocabulary.
 
+### MICRO-SKILLS TAGGING:
+- You MUST tag each interactive task with 1 appropriate micro-skill ID from the following list:
+{{AVAILABLE_SKILLS}}
+
 JSON SCHEMA:
 {
   "type": "SPEAKING",
@@ -114,6 +129,7 @@ JSON SCHEMA:
   "interactive_tasks": [{ 
     "id": string, 
     "type": "SHADOWING" | "GAMBIT" | "DRILL" | "MCQ", 
+    "skills": string[], // e.g. ["speaking_pronunciationClarity"]
     "target_sentence": string, 
     "instruction": string, 
     "question": string, 
@@ -280,11 +296,7 @@ class LabService {
 
       // Build Contextual Prompt
       let prompt = LAB_GENERATION_PROMPT;
-      const paperType = skill ? skill.paper : null;
-      // ... logic continues ...
-
-      // We need to recreate the prompt logic here because I cut it off.
-      // Re-inserting the prompt logic block:
+      const paperType = skill ? skill.paper : (topic?.toLowerCase().includes('speaking') ? 'speaking' : topic?.toLowerCase().includes('listening') ? 'listening' : 'reading');
 
       if (paperType === 'speaking' || topic?.toLowerCase().includes('speaking')) prompt = SPEAKING_LAB_PROMPT;
       else if (paperType === 'listening' || topic?.toLowerCase().includes('listening')) prompt = LISTENING_LAB_PROMPT;
@@ -296,10 +308,24 @@ class LabService {
       const isHighStakes = ['4', '5', '6', '7'].includes(String(level));
       const generationTarget = TARGET_COUNT; // Always generate full set if we generate
 
+      // Prepare Available Skills List for Injection
+      const { getSkillsByPaper } = require('../constants/microSkills');
+      const paperKeyMap = { "Reading": "reading", "Listening": "listening", "Speaking": "speaking", "Writing": "writing" };
+      // Map paperType (which might be "Paper 1/2" or "reading") to key
+      let skillsKey = paperType.toLowerCase();
+      if (skillsKey.includes('reading')) skillsKey = 'reading';
+      else if (skillsKey.includes('listening')) skillsKey = 'listening';
+      else if (skillsKey.includes('speaking')) skillsKey = 'speaking';
+
+      const availableSkills = getSkillsByPaper(skillsKey)
+        .map(s => `- ${s.id} (${s.name})`)
+        .join('\n');
+
       prompt = prompt
         .replace('{{TOPIC}}', resolvedTopic)
         .replace('{{FOCUS}}', JSON.stringify(focus) || 'Fundamentals')
         .replace('{{LEVEL}}', levelName)
+        .replace('{{AVAILABLE_SKILLS}}', availableSkills);
       // .replace(/8-12/g, `${generationTarget}`); // Not in prompt but good practice
 
       // Inject explicitly for Reading
@@ -367,6 +393,9 @@ class LabService {
       lessonContent.type = skill.paper.toUpperCase();
     }
 
+    // Ensure we return the technical topic ID for progress tracking
+    lessonContent.topic = topic;
+
     return this.normalizeLessonContent(lessonContent);
   }
 
@@ -421,6 +450,26 @@ class LabService {
     }
   }
 
+  static async generateWritingCheat(promptText, mode, level) {
+    const prompt = `You are an expert HKDSE English Exam candidate. 
+    Task: Write a response for the following writing prompt.
+    Mode: ${mode}
+    Target Level: HKDSE Level ${level}
+    
+    Prompt: "${promptText}"
+    
+    Write ONLY the response text. 
+    - If Level 3: Simple, adequate, some grammatical slips, basic vocabulary.
+    - If Level 5**: Sophisticated, flawless, complex structures, impressive vocabulary, perfect tone.
+    - Keep length appropriate for the mode (Sentence: 1 sentence, Paragraph: 100-150 words, Essay: 400 words).`;
+
+    const result = await GenerativeAIService.generateContent(prompt, {
+      model: "gemini-2.0-flash"
+    });
+
+    return { text: result.response.text().trim() };
+  }
+
   // New method to mark questions as complete
   static async markQuestionsSeen(uid, questionIds) {
     const db = admin.firestore();
@@ -453,7 +502,23 @@ class LabService {
       data.examples = [];
     }
 
-    // 2. Tasks
+    // 2. Key Points
+    if (data.key_points) {
+      if (!Array.isArray(data.key_points)) data.key_points = [data.key_points];
+      data.key_points = data.key_points.filter(p => typeof p === 'string' && p.trim().length > 0);
+    } else {
+      data.key_points = [];
+    }
+
+    // 3. Suggested Next Steps
+    if (data.suggested_next_steps) {
+      if (!Array.isArray(data.suggested_next_steps)) data.suggested_next_steps = [data.suggested_next_steps];
+      data.suggested_next_steps = data.suggested_next_steps.filter(s => typeof s === 'string' && s.trim().length > 0);
+    } else {
+      data.suggested_next_steps = [];
+    }
+
+    // 4. Tasks
     if (data.interactive_tasks) {
       if (!Array.isArray(data.interactive_tasks)) data.interactive_tasks = [data.interactive_tasks];
       data.interactive_tasks.forEach((t, i) => {

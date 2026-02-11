@@ -4,7 +4,7 @@ import { useAuth } from '../context/AuthContext';
 import { useAvatar } from '../context/AvatarContext';
 import { useLanguage } from '../context/LanguageContext';
 import { useNavigate } from 'react-router-dom';
-import { cn } from './Sidebar';
+import { cn } from '../utils/cn';
 
 import ConfirmationModal from './ConfirmationModal';
 import Logo from './Logo';

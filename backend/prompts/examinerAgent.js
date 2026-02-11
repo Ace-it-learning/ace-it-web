@@ -7,6 +7,10 @@ Constraints:
 
 Ensure the total marks sum exactly to {{TARGET_MARKS}}.
 
+Micro-Skills Tagging:
+You must tag each question with 1-2 relevant micro-skills from the following list:
+{{AVAILABLE_SKILLS}}
+
 Question Type Guidelines (HKDSE Style):
 - mc_main_idea (Multiple Choice): 4 options (A, B, C, D)
 - short_answer: Open-ended, requires paraphrasing or finding specific details.
@@ -31,7 +35,8 @@ Output a JSON Array of question objects:
     "answer": "A",
     "marks": 1,
     "logic": "...",
-    "segment_ref": "Text_1:p1"
+    "segment_ref": "Text_1:p1",
+    "skills": ["reading_mainIdea"]
   },
   ...
 ]

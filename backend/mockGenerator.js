@@ -74,6 +74,19 @@ const generateSection = async (topic, sectionName, sectionConfig, previousContex
         ).join('\n');
     }
 
+    // Prepare Available Skills for Tagging
+    const { getSkillsByPaper } = require('./constants/microSkills');
+    const paperKeyMap = {
+        "Reading": "reading",
+        "Writing": "writing",
+        "Listening": "listening",
+        "Speaking": "speaking"
+    };
+    const paperKey = paperKeyMap[paperType] || "reading";
+    const availableSkills = getSkillsByPaper(paperKey)
+        .map(s => `- ${s.id} (${s.name}): ${s.description}`)
+        .join('\n');
+
     // Writing Paper Special Case: "Questions" are "Prompts"
     let qCount = sectionConfig.constraints.total_questions || sectionConfig.constraints.choice_count || 1;
     let tMarks = sectionConfig.constraints.total_marks;
@@ -91,7 +104,8 @@ const generateSection = async (topic, sectionName, sectionConfig, previousContex
         .replace('{{TASK_DESCRIPTION}}', taskDesc)
         .replace('{{CONSTRAINTS}}', examinerConstraints)
         .replace('{{TARGET_MARKS}}', tMarks)
-        .replace('{{TEXTS_JSON}}', JSON.stringify(texts, null, 2));
+        .replace('{{TEXTS_JSON}}', JSON.stringify(texts, null, 2))
+        .replace('{{AVAILABLE_SKILLS}}', availableSkills);
 
     console.log(`[Examiner] Creating questions for ${sectionName}...`);
     const eModel = genAI.getGenerativeModel({ model: MODEL_NAME, generationConfig: { responseMimeType: "application/json" } });

@@ -4,7 +4,7 @@ import { auth } from '../firebase';
 import { useAuth } from '../context/AuthContext';
 import { updateProfile } from 'firebase/auth'; // Import updateProfile
 import { useLanguage } from '../context/LanguageContext';
-import { User, School, GraduationCap, ArrowRight, Check, ChevronsUpDown, Search } from 'lucide-react';
+import { User, School, GraduationCap, ArrowRight, Check, ChevronsUpDown, Search, Target, Plus, PlusCircle, Trash2 } from 'lucide-react';
 
 const SchoolAutocomplete = ({ schools, value, onChange, isLoading }) => {
     const [isOpen, setIsOpen] = React.useState(false);
@@ -153,7 +153,9 @@ const Onboarding = () => {
         gender: 'Male', // Default to Male as requested
         targetGradeEng: '',
         targetGradeChi: '',
-        targetGradeMath: ''
+        targetGradeMath: '',
+        dreamSubject: '',
+        electives: [] // Multi-elective support
     });
 
     const [schools, setSchools] = useState({ HK: [], KLN: [], NT: [], Other: [] });
@@ -223,6 +225,7 @@ const Onboarding = () => {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     uid: user.uid,
+                    email: user.email,
                     ...formData,
                     is_new_student: false, // Ensure flag is cleared
                     photoURL: formData.gender === 'Male' ? '/avatars/male.png' : (user.photoURL || '/avatars/female_default.png')
@@ -349,7 +352,7 @@ const Onboarding = () => {
                             <GraduationCap className="w-4 h-4 text-primary" /> {t('onboarding.grade')}
                         </label>
                         <div className="grid grid-cols-3 gap-3">
-                            {['F1', 'F2', 'F3', 'F4', 'F5', 'F6', 'Self study', 'Primary school', 'Not specify'].map(grade => (
+                            {['F4', 'F5', 'F6', 'Self study', 'Not specify'].map(grade => (
                                 <button
                                     key={grade}
                                     type="button"
@@ -404,6 +407,103 @@ const Onboarding = () => {
                                 </div>
                             ))}
                         </div>
+                    </div>
+
+                    {/* Elective Subjects (Optional) */}
+                    <div className="space-y-4 pt-4 border-t border-black/5 dark:border-white/5">
+                        <div className="flex items-center justify-between">
+                            <label className="text-sm font-bold text-[#1d130c] dark:text-white flex items-center gap-2">
+                                <PlusCircle className="w-4 h-4 text-primary" /> Elective Subjects (Optional)
+                            </label>
+                            <button
+                                type="button"
+                                onClick={() => setFormData({
+                                    ...formData,
+                                    electives: [...formData.electives, { subject: '', targetGrade: '' }]
+                                })}
+                                className="text-xs font-bold text-primary hover:opacity-80 flex items-center gap-1 bg-primary/5 px-2 py-1 rounded-lg"
+                            >
+                                <Plus className="w-3 h-3" /> Add
+                            </button>
+                        </div>
+
+                        <div className="space-y-3">
+                            {formData.electives.map((elective, index) => (
+                                <div key={index} className="flex gap-2 items-end animate-in fade-in slide-in-from-left-2 duration-300">
+                                    <div className="flex-1 space-y-1">
+                                        <span className="text-[10px] font-medium text-gray-500 pl-1">Subject</span>
+                                        <select
+                                            value={elective.subject}
+                                            onChange={(e) => {
+                                                const newElectives = [...formData.electives];
+                                                newElectives[index].subject = e.target.value;
+                                                setFormData({ ...formData, electives: newElectives });
+                                            }}
+                                            className="w-full bg-white dark:bg-[#1a110a] border border-black/5 dark:border-white/10 rounded-xl px-3 py-3 text-sm font-bold focus:ring-2 focus:ring-primary outline-none appearance-none cursor-pointer"
+                                        >
+                                            <option value="">Select Subject</option>
+                                            {['Biology', 'Business, Accounting and Financial Studies (BAFS)', 'Chemistry', 'Chinese History', 'Chinese Literature', 'Combined Science', 'Design and Applied Technology', 'Economics', 'Ethics and Religious Studies', 'Geography', 'Health Management and Social Care', 'History', 'Information and Communication Technology (ICT)', 'Integrated Science', 'Literature in English', 'Mathematics Extended Part (Module 1)', 'Mathematics Extended Part (Module 2)', 'Music', 'Physical Education', 'Physics', 'Technology and Living', 'Tourism and Hospitality Studies', 'Visual Arts'].map(s => (
+                                                <option key={s} value={s}>{s}</option>
+                                            ))}
+                                        </select>
+                                    </div>
+                                    <div className="w-24 space-y-1">
+                                        <span className="text-[10px] font-medium text-gray-500 pl-1">Target</span>
+                                        <select
+                                            value={elective.targetGrade}
+                                            onChange={(e) => {
+                                                const newElectives = [...formData.electives];
+                                                newElectives[index].targetGrade = e.target.value;
+                                                setFormData({ ...formData, electives: newElectives });
+                                            }}
+                                            className="w-full bg-white dark:bg-[#1a110a] border border-black/5 dark:border-white/10 rounded-xl px-3 py-3 text-sm font-bold text-center focus:ring-2 focus:ring-primary outline-none appearance-none cursor-pointer"
+                                        >
+                                            <option value="">-</option>
+                                            {['5**', '5*', '5', '4', '3'].map(g => (
+                                                <option key={g} value={g}>{g}</option>
+                                            ))}
+                                        </select>
+                                    </div>
+                                    <button
+                                        type="button"
+                                        onClick={() => {
+                                            const newElectives = formData.electives.filter((_, i) => i !== index);
+                                            setFormData({ ...formData, electives: newElectives });
+                                        }}
+                                        className="p-3 text-gray-400 hover:text-red-500 transition-colors"
+                                    >
+                                        <Trash2 className="w-4 h-4" />
+                                    </button>
+                                </div>
+                            ))}
+                            {formData.electives.length === 0 && (
+                                <p className="text-xs text-gray-400 italic text-center py-2 border-2 border-dashed border-black/5 dark:border-white/5 rounded-xl">
+                                    No electives added yet.
+                                </p>
+                            )}
+                        </div>
+                    </div>
+
+                    {/* Target University Subject (Ace Sir Persona Data) */}
+                    <div className="space-y-4 pt-4 border-t border-black/5 dark:border-white/5">
+                        <label className="text-sm font-bold text-[#1d130c] dark:text-white flex items-center gap-2">
+                            <Target className="w-4 h-4 text-primary" /> Target University Subject (Optional)
+                        </label>
+                        <div className="relative">
+                            <input
+                                type="text"
+                                value={formData.dreamSubject || ''}
+                                onChange={(e) => setFormData({ ...formData, dreamSubject: e.target.value })}
+                                className="w-full bg-white dark:bg-[#1a110a] border border-black/5 dark:border-white/10 rounded-2xl px-5 py-4 focus:ring-2 focus:ring-primary outline-none transition-shadow pl-12"
+                                placeholder="e.g. Medicine, Law, Computer Science, BBA..."
+                            />
+                            <div className="absolute left-4 top-1/2 -translate-y-1/2 text-2xl grayscale opacity-50">
+                                🎓
+                            </div>
+                        </div>
+                        <p className="text-xs text-gray-500 ml-1">
+                            *This helps Ace Sir analyze your DSE strategy and gap analysis.
+                        </p>
                     </div>
 
 

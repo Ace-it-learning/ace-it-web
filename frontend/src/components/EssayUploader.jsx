@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Upload, Check, Edit3, X, Loader2 } from 'lucide-react';
-import { cn } from './Sidebar';
+import { cn } from '../utils/cn';
 
 const EssayUploader = ({ onConfirm, onCancel }) => {
     const [file, setFile] = useState(null);

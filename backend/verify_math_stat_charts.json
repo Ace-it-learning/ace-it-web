@@ -1,0 +1,187 @@
+{
+  "type": "MATHS",
+  "topic": "math_stat_charts",
+  "level": 5,
+  "interactive_tasks": [
+    {
+      "id": "67632388b6425d440bab689fe8bde106",
+      "type": "mc",
+      "topic": "math_stat_charts",
+      "skills": [
+        "math_stat_charts"
+      ],
+      "text": "[散點圖 REQUIRED: 顯示兩個變量之間關係的散點圖]以下散點圖顯示咗一組數據嘅兩個變量 X 同 Y 嘅關係。如果計算出咗 Y 對 X 嘅迴歸線嘅方程係 $Y = a + bX$，咁以下邊個選項最有可能係 $b$ 嘅值？\n\n圖描述：散點圖中，X 軸由 0 到 10，Y 軸由 0 到 10。數據點大致呈現正相關趨勢。",
+      "options": [
+        "-2",
+        "0",
+        "1",
+        "3"
+      ],
+      "answer": "3",
+      "solution_steps": [
+        "觀察散點圖嘅趨勢，可以睇到當 X 增加時，Y 都增加。所以迴歸線嘅斜率 b 應該係正數。",
+        "由於數據點嘅分佈相對集中，Y 嘅增加幅度比 X 大，所以 b 應該大於 1。所以答案係 3。"
+      ],
+      "imageURL": null,
+      "diagram_svg": "<svg viewBox=\"0 0 400 300\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"300\" fill=\"white\" /><line x1=\"50\" y1=\"250\" x2=\"50\" y2=\"50\" stroke=\"#000000\" /><line x1=\"50\" y1=\"250\" x2=\"350\" y2=\"250\" stroke=\"#000000\" /><text x=\"40\" y=\"40\" font-size=\"12\">Y</text><text x=\"360\" y=\"260\" font-size=\"12\">X</text><circle cx=\"70\" cy=\"230\" r=\"3\" fill=\"#000000\" /><circle cx=\"100\" cy=\"200\" r=\"3\" fill=\"#000000\" /><circle cx=\"130\" cy=\"180\" r=\"3\" fill=\"#000000\" /><circle cx=\"160\" cy=\"150\" r=\"3\" fill=\"#000000\" /><circle cx=\"190\" cy=\"130\" r=\"3\" fill=\"#000000\" /><circle cx=\"220\" cy=\"100\" r=\"3\" fill=\"#000000\" /><circle cx=\"250\" cy=\"80\" r=\"3\" fill=\"#000000\" /><circle cx=\"280\" cy=\"60\" r=\"3\" fill=\"#000000\" /><circle cx=\"310\" cy=\"40\" r=\"3\" fill=\"#000000\" /></svg>",
+      "marks": 1
+    },
+    {
+      "id": "e4306af2fe52cff16fd8a88629fbfd3b",
+      "type": "short_answer",
+      "topic": "math_stat_charts",
+      "skills": [
+        "math_stat_charts"
+      ],
+      "text": "一個班級有 20 個學生。以下嘅頻數分佈表顯示咗佢哋喺一次數學測驗中嘅分數。\n\n| 分數 | 頻數 |\n|---|---| \n| 60-69 | 3 |\n| 70-79 | 5 |\n| 80-89 | 7 |\n| 90-99 | 5 |\n\n估計呢個班級嘅平均分數。",
+      "options": [],
+      "answer": "81",
+      "solution_steps": [
+        "首先，找出每個分數範圍嘅中點：64.5, 74.5, 84.5, 94.5。",
+        "然後，將每個中點乘以對應嘅頻數：3*64.5 = 193.5, 5*74.5 = 372.5, 7*84.5 = 591.5, 5*94.5 = 472.5。",
+        "將以上結果加總，然後除以總頻數 (20)：(193.5 + 372.5 + 591.5 + 472.5) / 20 = 1620 / 20 = 81。所以估計嘅平均分數係 81。"
+      ],
+      "imageURL": null,
+      "diagram_svg": null,
+      "marks": 3
+    },
+    {
+      "id": "242e676d668e709e784fc68d2eb498ed",
+      "type": "mc",
+      "topic": "math_stat_charts",
+      "skills": [
+        "math_stat_charts"
+      ],
+      "text": "以下邊個圖表最適合用嚟顯示唔同類別嘅數據所佔嘅百分比？",
+      "options": [
+        "散點圖",
+        "直方圖",
+        "餅圖",
+        "莖葉圖"
+      ],
+      "answer": "餅圖",
+      "solution_steps": [
+        "散點圖顯示兩個變量之間嘅關係。",
+        "直方圖顯示連續數據嘅分佈。",
+        "餅圖顯示唔同類別嘅數據所佔嘅百分比。",
+        "莖葉圖顯示數據嘅分佈同埋具體數值。"
+      ],
+      "imageURL": null,
+      "diagram_svg": null,
+      "marks": 1
+    },
+    {
+      "id": "76f7ce694509a790f44e637483e74bc2",
+      "type": "short_answer",
+      "topic": "math_stat_charts",
+      "skills": [
+        "math_stat_charts"
+      ],
+      "text": "[累積頻數曲線 REQUIRED: 一組數據的累積頻數曲線]以下嘅累積頻數曲線顯示咗 100 個學生嘅身高分佈。求身高嘅四分位數間距 (IQR)。\n\n圖描述：累積頻數曲線，X 軸表示身高（厘米），Y 軸表示累積頻數。Q1 對應嘅累積頻數係 25，身高係 160 厘米。Q3 對應嘅累積頻數係 75，身高係 175 厘米。",
+      "options": [],
+      "answer": "15",
+      "solution_steps": [
+        "根據累積頻數曲線，第一四分位數 (Q1) 係 160 cm，第三四分位數 (Q3) 係 175 cm。",
+        "四分位數間距 (IQR) = Q3 - Q1。",
+        "IQR = 175 - 160 = 15 cm。"
+      ],
+      "imageURL": null,
+      "diagram_svg": "<svg viewBox=\"0 0 400 300\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"300\" fill=\"white\" /><line x1=\"50\" y1=\"250\" x2=\"50\" y2=\"50\" stroke=\"#000000\" /><line x1=\"50\" y1=\"250\" x2=\"350\" y2=\"250\" stroke=\"#000000\" /><text x=\"40\" y=\"40\" font-size=\"12\">累積頻數</text><text x=\"330\" y=\"260\" font-size=\"12\">身高 (cm)</text><path d=\"M50,250 C100,200 150,100 200,70 C250,50 300,50 350,50\" stroke=\"#000000\" fill=\"transparent\" /><line x1=\"50\" y1=\"75\" x2=\"200\" y2=\"75\" stroke=\"#000000\" stroke-dasharray=\"5,5\" /><line x1=\"200\" y1=\"250\" x2=\"200\" y2=\"75\" stroke=\"#000000\" stroke-dasharray=\"5,5\" /><line x1=\"50\" y1=\"175\" x2=\"120\" y2=\"175\" stroke=\"#000000\" stroke-dasharray=\"5,5\" /><line x1=\"120\" y1=\"250\" x2=\"120\" y2=\"175\" stroke=\"#000000\" stroke-dasharray=\"5,5\" /><text x=\"190\" y=\"265\" font-size=\"10\">Q3 (175cm)</text><text x=\"110\" y=\"265\" font-size=\"10\">Q1 (160cm)</text></svg>",
+      "marks": 3
+    },
+    {
+      "id": "406b194e852ec11fa86401a3e346d864",
+      "type": "mc",
+      "topic": "math_stat_charts",
+      "skills": [
+        "math_stat_charts"
+      ],
+      "text": "以下邊個統計量對極端值最敏感？",
+      "options": [
+        "平均數",
+        "中位數",
+        "眾數",
+        "四分位數"
+      ],
+      "answer": "平均數",
+      "solution_steps": [
+        "平均數嘅計算包括所有數據點，所以會受到極端值嘅影響。",
+        "中位數係數據排序後嘅中間值，所以對極端值唔敏感。",
+        "眾數係數據中出現次數最多嘅值，所以對極端值唔敏感。",
+        "四分位數係將數據分成四等份嘅值，所以對極端值唔敏感。"
+      ],
+      "imageURL": null,
+      "diagram_svg": null,
+      "marks": 1
+    },
+    {
+      "id": "7ac5076a067795c344b6d2cc85b57e7e",
+      "type": "mc",
+      "topic": "math_stat_charts",
+      "skills": [
+        "math_stat_charts"
+      ],
+      "text": "以下邊個圖表最適合用嚟比較唔同組別喺唔同類別嘅數據？",
+      "options": [
+        "折線圖",
+        "堆疊條形圖",
+        "散點圖",
+        "餅圖"
+      ],
+      "answer": "堆疊條形圖",
+      "solution_steps": [
+        "折線圖通常用嚟顯示數據隨時間嘅變化。",
+        "堆疊條形圖可以用嚟比較唔同組別喺唔同類別嘅數據，並顯示每個類別嘅總和。",
+        "散點圖顯示兩個變量之間嘅關係。",
+        "餅圖顯示唔同類別嘅數據所佔嘅百分比。"
+      ],
+      "imageURL": null,
+      "diagram_svg": null,
+      "marks": 1
+    },
+    {
+      "id": "48d8dd1f45a1dcea6a5d478494734484",
+      "type": "mc",
+      "topic": "math_stat_charts",
+      "skills": [
+        "math_stat_charts"
+      ],
+      "text": "[直方圖 REQUIRED: 一組數據的直方圖]以下嘅直方圖顯示咗一組數據嘅分佈。以下邊個敘述係正確嘅？\n\n圖描述：直方圖，X 軸表示數據範圍，Y 軸表示頻數。直方圖呈現右偏分佈。",
+      "options": [
+        "數據係對稱分佈",
+        "數據係左偏分佈",
+        "數據係右偏分佈",
+        "無法判斷數據嘅分佈"
+      ],
+      "answer": "數據係右偏分佈",
+      "solution_steps": [
+        "觀察直方圖嘅形狀。",
+        "如果直方圖嘅尾部向右延伸，咁數據就係右偏分佈。",
+        "如果直方圖嘅尾部向左延伸，咁數據就係左偏分佈。",
+        "如果直方圖左右對稱，咁數據就係對稱分佈。"
+      ],
+      "imageURL": null,
+      "diagram_svg": "<svg viewBox=\"0 0 400 300\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"300\" fill=\"white\" /><line x1=\"50\" y1=\"250\" x2=\"50\" y2=\"50\" stroke=\"#000000\" /><line x1=\"50\" y1=\"250\" x2=\"350\" y2=\"250\" stroke=\"#000000\" /><text x=\"40\" y=\"40\" font-size=\"12\">頻數</text><text x=\"330\" y=\"260\" font-size=\"12\">數據範圍</text><rect x=\"60\" y=\"150\" width=\"40\" height=\"100\" stroke=\"#000000\" fill=\"#EEEEEE\" /><rect x=\"110\" y=\"100\" width=\"40\" height=\"150\" stroke=\"#000000\" fill=\"#EEEEEE\" /><rect x=\"160\" y=\"70\" width=\"40\" height=\"180\" stroke=\"#000000\" fill=\"#EEEEEE\" /><rect x=\"210\" y=\"50\" width=\"40\" height=\"200\" stroke=\"#000000\" fill=\"#EEEEEE\" /><rect x=\"260\" y=\"100\" width=\"40\" height=\"150\" stroke=\"#000000\" fill=\"#EEEEEE\" /><rect x=\"310\" y=\"180\" width=\"40\" height=\"70\" stroke=\"#000000\" fill=\"#EEEEEE\" /></svg>",
+      "marks": 1
+    },
+    {
+      "id": "f9e63fabbd57291806ccb08aaa76eb47",
+      "type": "short_answer",
+      "topic": "math_stat_charts",
+      "skills": [
+        "math_stat_charts"
+      ],
+      "text": "一間公司調查咗 100 個員工嘅工作滿意度。佢哋嘅滿意度評分由 1 到 10。調查結果顯示平均滿意度評分係 7.5，標準差係 1.2。如果公司想將滿意度評分轉化為百分制，使用以下公式：百分制評分 = (原始評分 / 10) * 100。咁轉化後嘅平均數同標準差係幾多？",
+      "options": [],
+      "answer": "平均數: 75, 標準差: 12",
+      "solution_steps": [
+        "如果每個數據點都乘以一個常數，平均數同標準差都會乘以同一個常數。",
+        "平均數轉化後 = 7.5 * (100/10) = 7.5 * 10 = 75。",
+        "標準差轉化後 = 1.2 * (100/10) = 1.2 * 10 = 12。"
+      ],
+      "imageURL": null,
+      "diagram_svg": null,
+      "marks": 3
+    }
+  ]
+}

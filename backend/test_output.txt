@@ -1,0 +1,18 @@
+[SUCCESS] gemini-2.0-flash: Yes, I'm here! How can I help you today?
+
+[FAILED] models/gemini-1.5-flash: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent: [404 Not Found] models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+[FAILED] gemini-1.5-flash: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent: [404 Not Found] models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+[SUCCESS] gemini-2.0-flash: Yes, I am here. How can I help you today?
+
+[FAILED] models/gemini-1.5-flash: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent: [404 Not Found] models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+[FAILED] gemini-1.5-flash: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent: [404 Not Found] models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+[FAILED] gemini-1.5-pro: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent: [404 Not Found] models/gemini-1.5-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+[FAILED] gemini-pro: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent: [404 Not Found] models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+[SUCCESS] gemini-2.5-flash: Hello! Yes, I am here. How can I help you today?
+[SUCCESS] models/gemini-2.5-flash: Hello! Yes, I'm here. How can I help you today?
+[SUCCESS] gemini-2.0-flash: Yes, I am here. How can I help you today?
+
+[SUCCESS] gemini-2.5-flash: Yes, I am here and ready to help! How can I assist you today?
+[SUCCESS] models/gemini-2.5-flash: Hello! Yes, I am here. How can I help you today?
+[SUCCESS] gemini-2.0-flash: Yes, I am here. How can I help you today?
+

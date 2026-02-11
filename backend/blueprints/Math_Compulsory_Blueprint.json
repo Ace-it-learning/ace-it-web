@@ -1,0 +1,102 @@
+{
+    "meta": {
+        "subject": "Mathematics (Compulsory Part)",
+        "paper_id": "Paper 1 & 2",
+        "version": "2026_V1",
+        "description": "Master Instruction Set for Antigravity Mock Engine (Maths)"
+    },
+    "sections": {
+        "Section_A1": {
+            "name": "Conventional Section A(1)",
+            "target_level": "Foundation (Level 3 Benchmark)",
+            "constraints": {
+                "question_count": [
+                    7,
+                    9
+                ],
+                "total_marks": 35,
+                "output_type": "Short Answer (Method + Answer Marks)"
+            },
+            "topic_archetypes": [
+                "Formulas and Substitution",
+                "Simplification of Algebraic Fractions",
+                "Laws of Integral Indices",
+                "Percentage (Simple/Compound Interest, Growth/Decay)",
+                "Estimation and Errors",
+                "Factorization (Cross Method, Grouping)",
+                "Linear Equations in One Unknown",
+                "Linear Inequalities in One Unknown",
+                "Polar Coordinates / Rectangular Coordinates Conversion"
+            ]
+        },
+        "Section_A2": {
+            "name": "Conventional Section A(2)",
+            "target_level": "Intermediate (Level 4 Benchmark)",
+            "constraints": {
+                "question_count": [
+                    7,
+                    9
+                ],
+                "total_marks": 35,
+                "output_type": "Structured Question (Multi-part)"
+            },
+            "topic_archetypes": [
+                "Properties of Circles (deductive geometry)",
+                "Polynomials (Remainder/Factor Theorem)",
+                "Variations (Direct, Inverse, Joint, Partial)",
+                "Mensuration (Volume/Surface Area of cones, spheres, prisms)",
+                "Statistics (Mean, Median, Mode, SD, Box-and-whisker)",
+                "Probability (Simple Law of Addition/Multiplication)",
+                "Linear Programming (Basic)"
+            ]
+        },
+        "Section_B": {
+            "name": "Conventional Section B",
+            "target_level": "Advanced (Level 5+ Benchmark)",
+            "constraints": {
+                "question_count": [
+                    4,
+                    5
+                ],
+                "total_marks": 35,
+                "output_type": "Complex Problem Solving"
+            },
+            "topic_archetypes": [
+                "3D Trigonometry",
+                "Coordinate Geometry (Circles and Tangents)",
+                "Arithmetic and Geometric Sequences (AP/GP)",
+                "Linear Programming (Optimization Application)",
+                "Probability (Conditional, Permutation & Combination)",
+                "Logarithmic and Exponential Functions (Graphs)"
+            ]
+        },
+        "MC": {
+            "name": "Multiple Choice Paper 2",
+            "target_level": "Mixed",
+            "constraints": {
+                "question_count": 45,
+                "sections": {
+                    "A": 30,
+                    "B": 15
+                }
+            },
+            "topic_archetypes": [
+                "All Section A1/A2/B topics",
+                "Quadratic Equations (Roots, Discriminant)",
+                "Functions and Graphs",
+                "Trigonometric Ratios and Graphs"
+            ]
+        }
+    },
+    "rubrics": {
+        "M_mark": {
+            "description": "Method Mark - awarded for correct application of formula or logic"
+        },
+        "A_mark": {
+            "description": "Answer Mark - awarded for correct final numerical or algebraic answer"
+        },
+        "pp_mark": {
+            "description": "Presentation Penalty - deducted for poor notation or missing units"
+        }
+    }
+}

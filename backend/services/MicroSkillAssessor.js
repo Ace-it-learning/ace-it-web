@@ -20,14 +20,13 @@ class MicroSkillAssessor {
     async assessAllSkills(diagnosticData) {
         const { reading, writing, listening, speaking } = diagnosticData;
 
-        const results = await Promise.allSettled([
-            this.assessReadingSkills(reading).catch(e => { console.error("Reading Assessor:", e); return {}; }),
-            this.assessWritingSkills(writing).catch(e => { console.error("Writing Assessor:", e); return {}; }),
-            this.assessListeningSkills(listening).catch(e => { console.error("Listening Assessor:", e); return {}; }),
-            this.assessSpeakingSkills(speaking).catch(e => { console.error("Speaking Assessor:", e); return {}; })
-        ]);
+        console.log(`[MicroSkillAssessor] Assessing skills with keys: ${Object.keys(diagnosticData)}`);
 
-        const [readingSkills, writingSkills, listeningSkills, speakingSkills] = results.map(r => r.status === 'fulfilled' ? r.value : {});
+        // Run assessments sequentially to avoid 429 Rate Limits from multiple parallel AI calls
+        const readingSkills = await this.assessReadingSkills(reading).catch(e => { console.error("Reading Assessor Error:", e); return {}; });
+        const writingSkills = await this.assessWritingSkills(writing).catch(e => { console.error("Writing Assessor Error:", e); return {}; });
+        const listeningSkills = await this.assessListeningSkills(listening).catch(e => { console.error("Listening Assessor Error:", e); return {}; });
+        const speakingSkills = await this.assessSpeakingSkills(speaking).catch(e => { console.error("Speaking Assessor Error:", e); return {}; });
 
         return {
             ...readingSkills,
@@ -46,7 +45,18 @@ class MicroSkillAssessor {
             return {};
         }
 
+        let empiricalEvidence = "";
+        if (readingData.question_breakdown && Array.isArray(readingData.question_breakdown)) {
+            empiricalEvidence = "\nEMPIRICAL QUESTION ANALYSIS (Use this to anchor your assessment):\n";
+            readingData.question_breakdown.forEach(q => {
+                const skills = q.skills ? q.skills.join(', ') : "General Comprehension";
+                empiricalEvidence += `- Question ${q.id} (${skills}): ${q.status.toUpperCase()} (Student: "${q.student_answer}")\n`;
+            });
+            empiricalEvidence += "\nINSTRUCTION: If a student fails a question tagged with a specific skill, you MUST reflect this in the lower score for that skill.\n";
+        }
+
         const prompt = `Analyze the following reading comprehension responses and assess the student's proficiency in these 12 micro-skills based STRICTLY on the HKDSE English Language Paper 1 (Reading) Assessment Framework.
+${empiricalEvidence}
 
 HKDSE READING CRITERIA:
 - Level 5**: Comprehends almost all complex texts, identifies subtle nuances/tone, synthesizes info effortlessly.
@@ -84,7 +94,7 @@ Return ONLY a JSON object with this structure:
 `;
 
         const result = await GenerativeAIService.generateContent(prompt, {
-            model: "gemini-2.0-flash"
+            model: "gemini-flash-latest"
         });
         const response = result.response.text();
 
@@ -101,7 +111,11 @@ Return ONLY a JSON object with this structure:
      * Assess Writing micro-skills (15 skills)
      */
     async assessWritingSkills(writingData) {
-        if (!writingData) return {};
+        if (!writingData) {
+            console.warn("[MicroSkillAssessor] No writing data provided");
+            return {};
+        }
+        console.log(`[MicroSkillAssessor] Assessing writing skills for data: ${Object.keys(writingData)}`);
         const prompt = `Analyze the following writing sample and assess the student's proficiency in these 15 micro-skills based STRICTLY on the HKDSE English Language Paper 2 (Writing) Assessment Framework (Content, Language, Organization).
 
 HKDSE WRITING CRITERIA:
@@ -150,7 +164,7 @@ Return ONLY a JSON object with this structure:
 `;
 
         const result = await GenerativeAIService.generateContent(prompt, {
-            model: "gemini-2.0-flash"
+            model: "gemini-flash-latest"
         });
         const response = result.response.text();
 
@@ -166,8 +180,23 @@ Return ONLY a JSON object with this structure:
      * Assess Listening micro-skills (10 skills)
      */
     async assessListeningSkills(listeningData) {
-        if (!listeningData) return {};
+        if (!listeningData) {
+            console.warn("[MicroSkillAssessor] No listening data provided");
+            return {};
+        }
+        console.log(`[MicroSkillAssessor] Assessing listening skills for data: ${Object.keys(listeningData)} `);
+        let empiricalEvidence = "";
+        if (listeningData.question_breakdown && Array.isArray(listeningData.question_breakdown)) {
+            empiricalEvidence = "\nEMPIRICAL QUESTION ANALYSIS (Use this to anchor your assessment):\n";
+            listeningData.question_breakdown.forEach(q => {
+                const skills = q.skills ? q.skills.join(', ') : "General Listening";
+                empiricalEvidence += `- Question ${q.id} (${skills}): ${q.status.toUpperCase()} (Student: "${q.student_answer}")\n`;
+            });
+            empiricalEvidence += "\nINSTRUCTION: If a student fails a question tagged with a specific skill, you MUST reflect this in the lower score for that skill.\n";
+        }
+
         const prompt = `Analyze the following listening comprehension responses and assess the student's proficiency in these 10 micro-skills based STRICTLY on the HKDSE English Language Paper 3 (Listening & Integrated Skills) Assessment Framework.
+${empiricalEvidence}
 
 HKDSE LISTENING CRITERIA:
 - Level 5**: Comprehends all details/tone, captures speaker attitude precisely.
@@ -206,7 +235,7 @@ Return ONLY a JSON object with this structure:
 `;
 
         const result = await GenerativeAIService.generateContent(prompt, {
-            model: "gemini-2.0-flash"
+            model: "gemini-flash-latest"
         });
         const response = result.response.text();
 

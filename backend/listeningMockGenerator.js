@@ -1,17 +1,12 @@
 const fs = require('fs');
 const path = require('path');
-const { GoogleGenerativeAI } = require("@google/generative-ai");
+const GenerativeAIService = require('./services/GenerativeAIService');
 require('dotenv').config();
-
-const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
 async function generateListeningMock(topic = "Cultural Festival") {
     console.log(`🎧 Generating Listening Mock for topic: ${topic}...`);
 
     try {
-        const GenerativeAIService = require('./services/GenerativeAIService');
-        const model = GenerativeAIService.getModel({ model: 'gemini-2.0-flash', generationConfig: { responseMimeType: "application/json" } });
-
         const blueprintPath = path.join(__dirname, 'blueprints', 'Eng_Listening_Blueprint.json');
         const blueprint = fs.readFileSync(blueprintPath, 'utf8');
 
@@ -58,7 +53,26 @@ async function generateListeningMock(topic = "Cultural Festival") {
                 ]
             },
             "Part_B": {
-                "data_file": "<h1>Welcome Packet</h1><p>Dear details...</p>", // HTML content for the Data File
+                "data_file": [
+                    {
+                        "id": "doc1",
+                        "title": "Email from Chris Wong",
+                        "type": "email",
+                        "content": "<div class='email'><p><strong>From:</strong> Chris Wong</p><p><strong>To:</strong> Sarah Lee</p><p><strong>Subject:</strong> Venue Booking Confirmation</p><p>Dear Sarah,</p><p>I am writing to confirm...</p></div>"
+                    },
+                    {
+                        "id": "doc2",
+                        "title": "Meeting Minutes",
+                        "type": "minutes",
+                        "content": "<div class='minutes'><h3>Planning Committee Meeting</h3><p><strong>Date:</strong> 15 Jan 2026</p><ul><li>Venue confirmed: City Hall</li><li>Budget approved: $5000</li></ul></div>"
+                    },
+                    {
+                        "id": "doc3",
+                        "title": "Event Poster",
+                        "type": "poster",
+                        "content": "<div class='poster' style='border: 2px solid #333; padding: 20px; text-align: center;'><h2>Annual Cultural Festival</h2><p>Date: 20 March 2026</p><p>Venue: City Hall</p></div>"
+                    }
+                ],
                 "tasks": [
                     {
                         "id": "Task_5",
@@ -75,18 +89,18 @@ async function generateListeningMock(topic = "Cultural Festival") {
                 ]
             }
         }
+
+        **CRITICAL REQUIREMENTS FOR DATA FILE:**
+        - Generate 3-5 distinct documents in the data_file array
+        - Document types MUST vary: email, minutes, poster, webpage, note, memo
+        - Each document must have realistic, detailed HTML content (150-300 words each)
+        - Documents should be interconnected (e.g., email references the meeting, poster shows event details)
+        - Use proper HTML formatting with semantic tags
         `;
 
-        const result = await model.generateContent(prompt);
-        const response = result.response;
-
-        // Log Usage
-        if (response.usageMetadata) {
-            const TokenService = require('./services/TokenService');
-            TokenService.logUsage('system', 'listening_mock_gen', response.usageMetadata);
-        }
-
-        const mockData = JSON.parse(response.text());
+        const mockData = await GenerativeAIService.generateJson(prompt, {
+            model: 'gemini-flash-latest'
+        });
 
         // Save file
         const filename = `Listening_${topic.replace(/\s+/g, '_')}_${Date.now()}.json`;
@@ -125,7 +139,7 @@ async function generateListeningMock(topic = "Cultural Festival") {
 // Allow direct execution
 if (require.main === module) {
     const topic = process.argv[2] || "School Open Day";
-    generateListeningMock(topic);
+    generateListeningMock(topic).catch(console.error);
 }
 
 module.exports = { generateListeningMock };

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
-import { Lock, CheckCircle, Play, Map, Star, Clock, X, Trophy, Search, Sparkles, Zap, BookOpen, PenTool, Mic, MessageSquare, Layers } from 'lucide-react';
+import { Lock, CheckCircle, Play, Map, Star, Clock, X, Trophy, Search, Sparkles, Zap, BookOpen, PenTool, Mic, MessageSquare, Layers, RefreshCcw } from 'lucide-react';
 import { MICRO_SKILLS, getSkillName, getSkillDesc } from '../../constants/microSkills';
 
 const RoadmapModal = ({ isOpen, onClose }) => {
@@ -9,18 +9,12 @@ const RoadmapModal = ({ isOpen, onClose }) => {
     const navigate = useNavigate();
     const [plan, setPlan] = useState(null);
     const [loading, setLoading] = useState(true);
+    const [regenerating, setRegenerating] = useState(false);
     const [activeTab, setActiveTab] = useState('WEEKLY'); // 'WEEKLY' | 'GENERAL' | 'CHALLENGE'
     const [searchQuery, setSearchQuery] = useState('');
     const [userSkills, setUserSkills] = useState({});
     const [practicedSkills, setPracticedSkills] = useState([]);
     const [paperFilter, setPaperFilter] = useState('ALL'); // 'ALL' | 'READING' | 'WRITING' | 'LISTENING' | 'SPEAKING'
-
-    useEffect(() => {
-        if (user?.uid && isOpen) {
-            fetchRoadmap();
-            fetchUserSkills();
-        }
-    }, [user, isOpen]);
 
     const fetchUserSkills = async () => {
         try {
@@ -52,23 +46,62 @@ const RoadmapModal = ({ isOpen, onClose }) => {
         }
     };
 
+    useEffect(() => {
+        if (user?.uid && isOpen) {
+            fetchRoadmap();
+            fetchUserSkills();
+        }
+    }, [user, isOpen]);
+
     const formatDSELevel = (numericLevel) => {
-        if (!numericLevel) return '1';
-        if (numericLevel >= 7) return '5**';
-        if (numericLevel >= 6) return '5*';
-        if (numericLevel >= 5) return '5';
-        if (numericLevel >= 4) return '4';
-        if (numericLevel >= 3) return '3';
-        if (numericLevel >= 2) return '2';
+        if (numericLevel === null || numericLevel === undefined) return '1';
+        const lvl = Number(numericLevel);
+        if (lvl >= 7) return '5**';
+        if (lvl >= 6) return '5*';
+        if (lvl >= 5) return '5';
+        if (lvl >= 4) return '4';
+        if (lvl >= 3) return '3';
+        if (lvl >= 2) return '2';
         return '1';
     };
 
+    const handleRegenerate = async () => {
+        if (!user || regenerating) return;
+        setRegenerating(true);
+        try {
+            const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+            const res = await fetch(`${API_URL}/api/roadmap/regenerate`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ uid: user.uid, subject: 'english' }) // Default to english for now
+            });
+            if (res.ok) {
+                const newPlan = await res.json();
+                setPlan(newPlan);
+            }
+        } catch (e) {
+            console.error("Regenerate failed", e);
+        } finally {
+            setRegenerating(false);
+        }
+    };
+
+
+
     const handleTaskClick = (task) => {
         console.log("RoadmapModal: Clicked Task", task);
-        if (task.status === 'COMPLETED' || task.locked) return;
+        if (task.locked) return;
 
         // Smart Navigation based on Task Type
-        onClose(); // Close modal on navigation
+        // 0. Specialized Challenge Check (Force redirect to dedicated pages)
+        if (task.title?.includes('Eraser Challenge')) {
+            navigate('/eraser-challenge', {
+                state: { topic: task.topic?.replace('Eraser Challenge: ', '') || 'General' }
+            });
+            return;
+        }
 
         if (task.type === 'LEARN' || task.type === 'PRACTICE') {
             const targetLevel = task.level || (plan ? Number(plan.level_at_start) + 1 : 1);
@@ -87,6 +120,17 @@ const RoadmapModal = ({ isOpen, onClose }) => {
                     taskTitle: task.title,
                     taskXp: task.xp,
                     taskDescription: task.description || "Master this skill to level up."
+                }
+            });
+        } else if (task.type === 'CHALLENGE') {
+            navigate('/eraser-challenge', {
+                state: { topic: task.topic || 'General' }
+            });
+        } else if (task.type === 'SPEAKING_CHALLENGE') {
+            navigate('/speaking-interaction', {
+                state: {
+                    topic: task.topic || 'General Discussion',
+                    taskId: task.id
                 }
             });
         } else if (task.type === 'MOCK' || task.type === 'BOSS') { // Support both labels
@@ -122,6 +166,13 @@ const RoadmapModal = ({ isOpen, onClose }) => {
             return userLevel >= 5;
         }
 
+        // Hide specific speaking skills from GENERAL tab (Use Special Quest instead)
+        if (activeTab === 'GENERAL') {
+            if (id === 'speaking_groupDiscussion' || id === 'speaking_individualResponse') {
+                return false;
+            }
+        }
+
         return true;
     });
 
@@ -132,6 +183,17 @@ const RoadmapModal = ({ isOpen, onClose }) => {
                 <div className={`p-4 relative overflow-hidden ${activeTab === 'CHALLENGE' ? 'bg-indigo-900' : 'bg-amber-500'}`}>
                     <div className="absolute top-0 right-0 p-2 opacity-10">
                         <Trophy className="w-24 h-24 text-white transform rotate-12" />
+                    </div>
+
+                    <div className="absolute top-3 right-14 z-[60]">
+                        <button
+                            onClick={handleRegenerate}
+                            disabled={regenerating}
+                            className={`p-2 text-white/80 hover:text-white transition-colors rounded-full hover:bg-white/10 ${regenerating ? 'animate-spin' : ''}`}
+                            title="Regenerate Plan"
+                        >
+                            <RefreshCcw className="w-5 h-5" />
+                        </button>
                     </div>
 
                     <button
@@ -212,53 +274,78 @@ const RoadmapModal = ({ isOpen, onClose }) => {
 
                                 {/* Task Grid */}
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pb-4">
-                                    {plan?.tasks.filter(t => t.type !== 'MOCK').map((task, idx) => (
-                                        <div
-                                            key={task.id}
-                                            onClick={() => handleTaskClick(task)}
-                                            className={`
-                                                group relative p-4 rounded-xl border-2 text-left transition-all duration-200
-                                                ${task.status === 'COMPLETED'
-                                                    ? 'bg-green-100 border-green-300 opacity-90'
-                                                    : 'bg-white border-slate-100 hover:border-amber-300 hover:shadow-lg cursor-pointer'
-                                                }
-                                            `}
-                                        >
-                                            <div className="flex justify-between items-start mb-2">
-                                                <span className={`
-                                                    px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wide bg-purple-100 text-purple-700
-                                                `}>
-                                                    PRACTICE
-                                                </span>
-                                                {task.status === 'COMPLETED' && <CheckCircle className="w-5 h-5 text-green-500" />}
-                                            </div>
-
-                                            <h3 className={`font-bold text-slate-800 mb-1 group-hover:text-amber-600 transition-colors ${task.status === 'COMPLETED' && 'line-through decoration-slate-400'}`}>
-                                                {task.title}
-                                            </h3>
-                                            <p className="text-xs text-slate-500 line-clamp-2 leading-relaxed">
-                                                {task.description || "Master this skill to level up your English."}
-                                            </p>
-
-                                            <div className="mt-3 flex items-center justify-between">
-                                                {task.status === 'COMPLETED' ? (
-                                                    <span className="text-xs font-bold text-green-600 flex items-center gap-1">
-                                                        Earned {task.xp} XP
+                                    {plan?.tasks.filter(t => t.type !== 'MOCK').map((task, idx) => {
+                                        const isCompleted = task.status === 'COMPLETED';
+                                        return (
+                                            <div
+                                                key={task.id}
+                                                onClick={() => handleTaskClick(task)}
+                                                className={`
+                                                    group relative p-4 rounded-xl border-2 text-left transition-all duration-200
+                                                    ${isCompleted
+                                                        ? 'bg-amber-100 border-amber-500 shadow-[0_4px_12px_rgba(245,158,11,0.2)] ring-1 ring-amber-200'
+                                                        : task.category === 'SPECIAL' && task.type === 'CHALLENGE'
+                                                            ? 'bg-purple-50 border-purple-300 hover:border-purple-500 hover:shadow-lg cursor-pointer shadow-purple-100 transform hover:scale-[1.01]'
+                                                            : task.category === 'SPECIAL' && task.type === 'SPEAKING_CHALLENGE'
+                                                                ? 'bg-indigo-50 border-indigo-300 hover:border-indigo-500 hover:shadow-lg cursor-pointer shadow-indigo-100 transform hover:scale-[1.01]'
+                                                                : 'bg-white border-slate-100 hover:border-amber-300 hover:shadow-lg cursor-pointer'
+                                                    }
+                                                `}
+                                            >
+                                                <div className="flex justify-between items-start mb-2">
+                                                    <span className={`
+                                                        px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wide
+                                                        ${isCompleted
+                                                            ? 'bg-amber-100 text-amber-700'
+                                                            : task.category === 'SPECIAL' && task.type === 'CHALLENGE'
+                                                                ? 'bg-purple-600 text-white'
+                                                                : task.category === 'SPECIAL' && task.type === 'SPEAKING_CHALLENGE'
+                                                                    ? 'bg-indigo-600 text-white'
+                                                                    : 'bg-slate-100 text-slate-600'}
+                                                    `}>
+                                                        {isCompleted
+                                                            ? 'COLLECTED'
+                                                            : task.category === 'SPECIAL' && task.type === 'CHALLENGE'
+                                                                ? '⚡ SPECIAL CHALLENGE'
+                                                                : task.category === 'SPECIAL' && task.type === 'SPEAKING_CHALLENGE'
+                                                                    ? '🎙️ SPECIAL CHALLENGE'
+                                                                    : 'AI PERSONALIZED'}
                                                     </span>
-                                                ) : (
-                                                    <span className="text-xs font-bold text-amber-500 flex items-center gap-1">
-                                                        <Star className="w-3 h-3 fill-current" /> +{task.xp} XP
-                                                    </span>
-                                                )}
+                                                    {isCompleted && <Trophy className="w-5 h-5 text-amber-500 fill-amber-100" />}
+                                                </div>
 
-                                                {task.status !== 'COMPLETED' && (
-                                                    <div className="opacity-0 group-hover:opacity-100 transition-opacity bg-amber-100 text-amber-700 p-1.5 rounded-full">
-                                                        <Play className="w-4 h-4 ml-0.5" />
-                                                    </div>
-                                                )}
+                                                <h3 className={`font-bold text-slate-800 mb-1 group-hover:text-amber-600 transition-colors`}>
+                                                    {task.title}
+                                                </h3>
+                                                <p className="text-xs text-slate-500 line-clamp-2 leading-relaxed">
+                                                    {task.description || "Master this skill to level up your English."}
+                                                </p>
+
+                                                <div className="mt-3 flex items-center justify-between">
+                                                    {isCompleted ? (
+                                                        <span className="text-[10px] font-bold text-amber-600 flex items-center gap-1 bg-amber-50 px-2 py-1 rounded-full border border-amber-200">
+                                                            <RefreshCcw className="w-3 h-3" />
+                                                            Completed! (Repeat: +50 XP)
+                                                        </span>
+                                                    ) : (
+                                                        <span className="text-xs font-bold text-amber-500 flex items-center gap-1">
+                                                            <Star className="w-3 h-3 fill-current" /> +{task.xp} XP
+                                                        </span>
+                                                    )}
+
+                                                    {task.status !== 'COMPLETED' ? (
+                                                        <div className="opacity-0 group-hover:opacity-100 transition-opacity bg-amber-100 text-amber-700 p-1.5 rounded-full">
+                                                            <Play className="w-4 h-4 ml-0.5" />
+                                                        </div>
+                                                    ) : (
+                                                        <div className="opacity-0 group-hover:opacity-100 transition-opacity bg-amber-50 text-amber-600 p-1.5 rounded-full border border-amber-100">
+                                                            <Play className="w-3.5 h-3.5 ml-0.5" />
+                                                        </div>
+                                                    )}
+                                                </div>
                                             </div>
-                                        </div>
-                                    ))}
+                                        );
+                                    })}
 
                                     {/* Master Quest (Boss) Card */}
                                     {bossTask && (
@@ -383,6 +470,8 @@ const RoadmapModal = ({ isOpen, onClose }) => {
                                                         paper === 'listening' ? 'Capture details & nuances' :
                                                             'Master fluency & expression';
 
+                                                const isPracticed = practicedSkills.includes(id) || practicedSkills.includes(name);
+
                                                 return (
                                                     <div
                                                         key={id}
@@ -394,14 +483,15 @@ const RoadmapModal = ({ isOpen, onClose }) => {
                                                             xp: xpReward,
                                                             level: targetLevel
                                                         })}
-                                                        className={`group p-4 rounded-xl border transition-all flex flex-col 
-                                                            ${practicedSkills.includes(id)
-                                                                ? 'bg-green-100 border-green-300 opacity-90'
+                                                        className={`group relative p-4 rounded-xl border-2 transition-all flex flex-col cursor-pointer
+                                                            ${isPracticed
+                                                                ? 'bg-amber-100 border-amber-500 shadow-[0_4px_12px_rgba(245,158,11,0.2)] ring-1 ring-amber-200'
                                                                 : activeTab === 'CHALLENGE'
                                                                     ? 'bg-white border-indigo-100 shadow-sm hover:border-indigo-400'
-                                                                    : 'bg-white border-slate-100 hover:border-amber-300'
+                                                                    : 'bg-white border-slate-100 hover:border-amber-300 hover:shadow-md'
                                                             }`}
                                                     >
+                                                        {/* Completion/Mastery Status Overlay */}
                                                         <div className="flex justify-between items-start mb-2">
                                                             <span className={`px-2 py-0.5 rounded text-[9px] font-black uppercase tracking-wider ${paper === 'reading' ? 'bg-blue-50 text-blue-600' :
                                                                 paper === 'writing' ? 'bg-purple-50 text-purple-600' :
@@ -410,10 +500,17 @@ const RoadmapModal = ({ isOpen, onClose }) => {
                                                                 }`}>
                                                                 {paper}
                                                             </span>
-                                                            {mastered && <Trophy className="w-4 h-4 text-amber-500" />}
+                                                            <div className="flex items-center gap-1.5">
+                                                                {isPracticed && (
+                                                                    <div className="bg-amber-100 text-amber-600 p-1 rounded-full border border-amber-200" title="Completed!">
+                                                                        <CheckCircle className="w-3.5 h-3.5 fill-white" />
+                                                                    </div>
+                                                                )}
+                                                                {mastered && <Trophy className="w-4 h-4 text-amber-500 drop-shadow-sm" />}
+                                                            </div>
                                                         </div>
 
-                                                        <h4 className="text-sm font-bold text-slate-800 mb-1 group-hover:text-amber-600 transition-colors">
+                                                        <h4 className={`text-sm font-bold mb-1 group-hover:text-amber-600 transition-colors ${isPracticed ? 'text-slate-800' : 'text-slate-800'}`}>
                                                             {name}
                                                         </h4>
                                                         <p className="text-[11px] text-slate-500 mb-3 line-clamp-2 leading-tight min-h-[2.4em]">
@@ -423,10 +520,10 @@ const RoadmapModal = ({ isOpen, onClose }) => {
                                                         <div className="pt-3 border-t border-slate-50 mt-auto">
                                                             <div className="flex items-center justify-between mb-2">
                                                                 <div className="flex items-center gap-2">
-                                                                    {practicedSkills.includes(id) ? (
-                                                                        <div className="px-2 py-0.5 bg-green-200 rounded text-[10px] font-bold text-green-700 uppercase tracking-wide flex items-center gap-1">
-                                                                            <CheckCircle className="w-3 h-3" />
-                                                                            Completed
+                                                                    {isPracticed ? (
+                                                                        <div className="px-2 py-0.5 bg-amber-100 rounded text-[10px] font-bold text-amber-700 uppercase tracking-wide flex items-center gap-1.5 border border-amber-200">
+                                                                            <RefreshCcw className="w-3 h-3" />
+                                                                            Repeat Quest
                                                                         </div>
                                                                     ) : activeTab === 'CHALLENGE' ? (
                                                                         <div className="px-2 py-0.5 bg-indigo-100 rounded text-[10px] font-bold text-indigo-600 uppercase tracking-wide flex items-center gap-1">
@@ -439,14 +536,21 @@ const RoadmapModal = ({ isOpen, onClose }) => {
                                                                         </div>
                                                                     )}
                                                                 </div>
-                                                                <div className={`text-[10px] font-bold ${practicedSkills.includes(id) ? 'text-green-700' : activeTab === 'CHALLENGE' ? 'text-indigo-600' : 'text-amber-500'}`}>
-                                                                    {practicedSkills.includes(id) ? `Earned ${xpReward} XP` : `+${xpReward} XP`}
+                                                                <div className={`text-[10px] font-bold ${isPracticed ? 'text-amber-600' : activeTab === 'CHALLENGE' ? 'text-indigo-600' : 'text-amber-500'}`}>
+                                                                    {isPracticed ? `Completed (+${xpReward} XP)` : `+${xpReward} XP`}
                                                                 </div>
                                                             </div>
 
-                                                            <div className="flex items-center gap-1.5 text-[10px] text-slate-400 italic">
-                                                                <Sparkles className={`w-3 h-3 ${activeTab === 'CHALLENGE' ? 'text-indigo-400' : 'text-amber-400'}`} />
-                                                                <span>Outcome: {outcome}</span>
+                                                            <div className="flex items-center justify-between">
+                                                                <div className="flex items-center gap-1.5 text-[10px] text-slate-400 italic">
+                                                                    <Sparkles className={`w-3 h-3 ${activeTab === 'CHALLENGE' ? 'text-indigo-400' : 'text-amber-400'}`} />
+                                                                    <span>Outcome: {outcome}</span>
+                                                                </div>
+                                                                {isPracticed && (
+                                                                    <div className="opacity-0 group-hover:opacity-100 transition-opacity">
+                                                                        <Play className="w-3.5 h-3.5 text-amber-500" />
+                                                                    </div>
+                                                                )}
                                                             </div>
                                                         </div>
                                                     </div>

@@ -48,7 +48,7 @@ const DiagnosticWriting = ({ assets, onSubmit }) => {
     if (!assets) return <div>Loading Writing...</div>;
 
     return (
-        <div className="max-w-3xl mx-auto relative">
+        <div className="max-w-5xl mx-auto relative">
             <div className="flex justify-between items-center mb-6">
                 <h2 className="text-2xl font-bold text-gray-900">Part 2: Writing</h2>
                 <div className="flex items-center gap-2 text-blue-700 bg-blue-100 px-3 py-1 rounded-full">

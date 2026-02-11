@@ -11,10 +11,11 @@ class RoadmapService {
     /**
      * MAIN ENTRY: Get or Generate Current Plan
      */
-    async getCurrentPlan(uid) {
+    async getCurrentPlan(uid, subject = 'english') {
         if (!uid) return null;
 
-        const roadmapRef = this.db.collection('users').doc(uid).collection('roadmap').doc('current');
+        const docId = subject === 'maths' ? 'current_maths' : 'current';
+        const roadmapRef = this.db.collection('users').doc(uid).collection('roadmap').doc(docId);
         const doc = await roadmapRef.get();
 
         if (doc.exists) {
@@ -31,11 +32,11 @@ class RoadmapService {
                 return plan;
             } else {
                 console.log(`[Roadmap] Plan for ${uid} expired or invalid. Generating new one.`);
-                return this.generatePlan(uid);
+                return this.generatePlan(uid, subject);
             }
         }
 
-        return this.generatePlan(uid);
+        return this.generatePlan(uid, subject);
     }
 
     /**
@@ -60,11 +61,11 @@ class RoadmapService {
      * 2. Uses AI to curate 4 Practice Targets + 1 Master Quest
      * 3. Saves to DB
      */
-    async generatePlan(uid) {
-        console.log(`[Roadmap] Generating new Weekly Quest for ${uid}...`);
+    async generatePlan(uid, subject = 'english') {
+        console.log(`[Roadmap] Generating new Weekly Quest for ${uid} [${subject}]...`);
 
         // 1. Fetch Context (Diagnostic Result determines the Plan)
-        const diag = await UserProfileService.getDiagnosticResult(uid, 'english');
+        const diag = await UserProfileService.getDiagnosticResult(uid, subject);
         const userProfile = await UserProfileService.getProfile(uid);
 
         let generatedTasks = [];
@@ -76,12 +77,26 @@ class RoadmapService {
             console.log(`[Roadmap] Found personalized plan for ${uid}. Mapping top items...`);
 
             // Generate 5 Tailored Tasks from the plan
-            generatedTasks = planItems.slice(0, 5).map((planItem, idx) => {
+            // Filter out speaking tasks if we are injecting the Special Quest to avoid duplicates
+            const filteredItems = subject === 'english'
+                ? planItems.filter(item => {
+                    const title = (typeof item === 'object' && item !== null) ? item.title : item;
+                    // Filter out speaking/discussion/individual response tasks
+                    return !/speaking|discussion|individual response/i.test(title);
+                })
+                : planItems;
+
+            generatedTasks = filteredItems.slice(0, 5).map((planItem, idx) => {
+                const isObject = typeof planItem === 'object' && planItem !== null;
+                const title = isObject ? planItem.title : planItem;
+                const topic = isObject ? planItem.topic : planItem;
+
                 return {
                     id: `week_${moment().format('WW')}_task_${idx}`,
-                    title: planItem, // e.g., "Master Indefinite Articles"
-                    topic: planItem, // Used to seed the Chat/Lab context
+                    title: title, // e.g., "Master Indefinite Articles"
+                    topic: topic, // Used to seed the Chat/Lab context
                     type: 'PRACTICE', // Force all to PRACTICE
+                    category: 'PERSONALIZED', // AI-generated personalized quest
                     xp: 100, // Tailored tasks earn 100 XP
                     status: 'PENDING'
                 };
@@ -94,6 +109,32 @@ class RoadmapService {
                 title: 'Complete Study Calibration',
                 topic: 'Diagnostic Test',
                 type: 'DIAGNOSTIC', // Frontend should route this to /diagnostic
+                xp: 200,
+                status: 'PENDING'
+            });
+        }
+
+        // --- INJECT ERASER CHALLENGE ---
+        if (subject === 'english') {
+            generatedTasks.unshift({
+                id: `eraser_challenge_${moment().format('YYYY_MM_DD')}`,
+                title: 'Eraser Challenge: Remove the Weakness',
+                topic: 'Eraser Challenge: General Academic',
+                type: 'CHALLENGE',
+                category: 'SPECIAL', // Special weekly challenge
+                xp: 150,
+                status: 'PENDING'
+            });
+        }
+
+        // --- INJECT SPEAKING INTERACTION ---
+        if (subject === 'english') {
+            generatedTasks.unshift({
+                id: `speaking_interaction_${moment().format('YYYY_MM_DD')}`,
+                title: 'Speaking Interaction: Group Discussion',
+                topic: 'Speaking: Academic Discussion',
+                type: 'SPEAKING_CHALLENGE',
+                category: 'SPECIAL', // Special weekly challenge
                 xp: 200,
                 status: 'PENDING'
             });
@@ -119,17 +160,19 @@ class RoadmapService {
         };
 
         // 4. Save to DB
-        await this.db.collection('users').doc(uid).collection('roadmap').doc('current').set(newPlan);
+        const docId = subject === 'maths' ? 'current_maths' : 'current';
+        await this.db.collection('users').doc(uid).collection('roadmap').doc(docId).set(newPlan);
         return newPlan;
     }
 
     /**
      * UPDATE: Mark Task Complete & Check Boss Unlock
      */
-    async completeTask(uid, taskId) {
-        const roadmapRef = this.db.collection('users').doc(uid).collection('roadmap').doc('current');
-        const doc = await roadmapRef.get();
-        if (!doc.exists) return null;
+    async completeTask(uid, taskId, subject = 'english') {
+        const docId = subject === 'maths' ? 'current_maths' : 'current';
+        const docRef = this.db.collection('users').doc(uid).collection('roadmap').doc(docId);
+        const doc = await docRef.get();
+        if (!doc.exists) return { success: false };
 
         const plan = doc.data();
         let updated = false;
@@ -159,10 +202,15 @@ class RoadmapService {
         }
 
         if (updated) {
-            await roadmapRef.update({ tasks: newTasks });
+            await docRef.update({ tasks: newTasks });
         }
 
-        return { success: true, tasks: newTasks, bossUnlocked: tasksCompletedCount >= 4 };
+        return {
+            success: true,
+            tasks: newTasks,
+            bossUnlocked: tasksCompletedCount >= 4,
+            xpAwarded: updated ? (plan.tasks.find(t => t.id === taskId)?.xp || 0) : 0
+        };
     }
 
     /**
@@ -172,10 +220,11 @@ class RoadmapService {
      * @param {string} contextQuery The topic or exam name (e.g. "Past Tense", "Reading Mock")
      * @param {boolean} isMockEvent Whether this is a Mock Exam (triggers Boss completion)
      */
-    async completeQuestByContext(uid, contextQuery, isMockEvent = false) {
+    async completeQuestByContext(uid, contextQuery, isMockEvent = false, subject = 'english') {
         if (!uid) return { success: false };
 
-        const docRef = this.db.collection('users').doc(uid).collection('roadmap').doc('current');
+        const docId = subject === 'maths' ? 'current_maths' : 'current';
+        const docRef = this.db.collection('users').doc(uid).collection('roadmap').doc(docId);
         const doc = await docRef.get();
         if (!doc.exists) return { success: false };
 
@@ -233,7 +282,7 @@ class RoadmapService {
             await docRef.update({ tasks: newTasks });
         }
 
-        return { success: updated, completedQuests: completedTitles };
+        return { success: updated, completedQuests: completedTitles, xpAwarded: newTasks.filter(t => completedTitles.includes(t.title)).reduce((sum, t) => sum + (t.xp || 0), 0) };
     }
 }
 

@@ -8,11 +8,11 @@ const PAPERS = {
             // ~350-400 words
             passage: `(Social Issues) 'The Digital Activist Generation'\n\nWhile many critics dismiss modern youth activism as merely "clicktivism"—sharing posts without taking real action—the reality is far more nuanced. A recent study by the Hong Kong Youth Association revealed that 65% of students who engage with social causes online eventually participate in offline volunteering. \n\nTake the example of "FoodRescue," a student-led initiative that started as an Instagram hashtag. What began as sharing photos of wasted cafeteria food transformed into a city-wide network of volunteers collecting surplus meals for elderly homes. This demonstrates that digital platforms serve as a gateway, not a barrier, to civic engagement.\n\nHowever, the challenge lies in depth. The algorithm favors sensational visuals over complex policy discussions. Students might share a viral video about ocean plastic but lack the patience to read a ten-page report on waste management legislation. This "headline culture" can lead to superficial understanding, where passion outpaces knowledge.\n\nEducators argue that schools must bridge this gap. Instead of banning phones, teachers should encourage students to critically analyze the campaigns they follow. "We need to teach them to ask: Who funded this ad? what is the proposed solution?" says Dr. Lee, a sociologist at HKU. Ultimately, the phone is just a tool; whether it becomes a megaphone for change or a distraction depends on the hand that holds it.`,
             questions: [
-                { id: 'r1', type: 'mc', text: "What did the 'FoodRescue' initiative originally start as?", options: ["A school club", "An Instagram hashtag", "A city-wide protest", "A government program"], answer: "An Instagram hashtag" },
-                { id: 'r2', type: 'text', text: "According to the text, what is the main 'challenge' of digital activism?", answer: "Depth / Headline culture / Superficial understanding" },
-                { id: 'r3', type: 'mc', text: "What does Dr. Lee suggest teachers should do?", options: ["Ban phones in class", "Create their own campaigns", "Encourage critical analysis", "Ignore social media"], answer: "Encourage critical analysis" },
-                { id: 'r4', type: 'text', text: "Find a word in paragraph 2 that means 'extra' or 'excess'.", answer: "Surplus" },
-                { id: 'r5', type: 'text', text: "Does the author believe social media prevents offline action? Explain.", answer: "No, the text says it serves as a gateway (65% eventually volunteer)." }
+                { id: 'r1', type: 'mc', text: "What did the 'FoodRescue' initiative originally start as?", options: ["A school club", "An Instagram hashtag", "A city-wide protest", "A government program"], answer: "An Instagram hashtag", skills: ['reading_detailRecognition', 'reading_literalComprehension'] },
+                { id: 'r2', type: 'text', text: "According to the text, what is the main 'challenge' of digital activism?", answer: "Depth / Headline culture / Superficial understanding", skills: ['reading_mainIdea', 'reading_inference'] },
+                { id: 'r3', type: 'mc', text: "What does Dr. Lee suggest teachers should do?", options: ["Ban phones in class", "Create their own campaigns", "Encourage critical analysis", "Ignore social media"], answer: "Encourage critical analysis", skills: ['reading_detailRecognition'] },
+                { id: 'r4', type: 'text', text: "Find a word in paragraph 2 that means 'extra' or 'excess'.", answer: "Surplus", skills: ['reading_inference'] },
+                { id: 'r5', type: 'text', text: "Does the author believe social media prevents offline action? Explain.", answer: "No, the text says it serves as a gateway (65% eventually volunteer).", skills: ['reading_factVsOpinion', 'reading_synthesis'] }
             ]
         },
         writing: {
@@ -23,11 +23,25 @@ const PAPERS = {
         },
         listening: {
             // Script for TTS
-            script: `(Podcast Intro: 'Future Skills')\n\nHost: "Welcome back. Today we're discussing 'Resilience'. My guest, Coach Wong, believes we are protecting kids too much. Coach?"\n\nCoach: "Exactly. I see parents rushing to fix every small problem for their child. If a student forgets their homework, the parent brings it to school. If they fail a test, the parent blames the teacher. But failure is data! When we remove the struggle, we remove the learning. We call this 'Snowplough Parenting'—clearing the road so the child never bumps into anything. But real life... real life is full of bumps."`,
+            script: `(Podcast Intro: 'Future Skills')\n\nHost: "Welcome back. Today we're discussing 'Resilience'. Please look at the worksheet provided. My guest, Coach Wong, believes we are protecting kids too much."\n\nCoach: "Exactly. I see parents rushing to fix every small problem. The worksheet defines different styles, but I see 'Snowplough Parenting' everywhere—clearing the road so the child never bumps into anything. But failure is data! When we remove the struggle, we remove the learning."`,
+            dataFile: `
+                <div class="p-4 border border-gray-300 rounded bg-white">
+                    <h2 class="text-xl font-bold mb-2 text-center text-blue-800">Parenting Styles Workshop</h2>
+                    <table class="w-full text-sm border-collapse border border-gray-300">
+                        <tr class="bg-gray-100"><th class="p-2 border">Style</th><th class="p-2 border">Definition</th></tr>
+                        <tr><td class="p-2 border font-bold">Helicopter</td><td class="p-2 border">Hovering over child, monitoring every move.</td></tr>
+                        <tr><td class="p-2 border font-bold">Snowplough</td><td class="p-2 border">Removing all obstacles (failure) from child's path.</td></tr>
+                        <tr><td class="p-2 border font-bold">Free-Range</td><td class="p-2 border">Allowing child to explore with minimal supervision.</td></tr>
+                    </table>
+                    <div class="mt-4 p-2 bg-yellow-50 rounded">
+                        <strong>Key Takeaway:</strong> Failure = <span class="italic">Data</span> (Learning Opportunity)
+                    </div>
+                </div>
+            `,
             questions: [
-                { id: 'l1', text: "What is the specific term Coach Wong uses for over-protective parents?", answer: "Snowplough Parenting" },
-                { id: 'l2', text: "According to Coach Wong, what does he consider 'failure' to be?", answer: "Data" },
-                { id: 'l3', text: "What happens when parents 'remove the struggle'?", answer: "They remove the learning / They miss the learning process" }
+                { id: 'l1', text: "What is the specific term Coach Wong uses for over-protective parents?", answer: "Snowplough Parenting", skills: ['listening_detailListening'] },
+                { id: 'l2', text: "According to the worksheet, which style involves 'minimal supervision'?", answer: "Free-Range", skills: ['listening_detailListening', 'listening_gist'] },
+                { id: 'l3', text: "According to Coach Wong, what does he consider 'failure' to be?", answer: "Data", skills: ['listening_mainIdea'] }
             ]
         },
         speaking: {
@@ -58,10 +72,35 @@ const PAPERS = {
             topic: "App Review for School Newsletter"
         },
         listening: {
-            script: `(News Report: 'Urban Farming')\n\nReporter: "I'm standing on the roof of a factory in Kwun Tong. But instead of concrete, I'm surrounded by tomatoes and lettuce. This is 'SkyFarm'. Founder Jenny Ho joins me."\n\nJenny: "Hi. We use hydroponics—that means growing plants in water, not soil. It's perfect for Hong Kong because it's light. Soil is heavy; water is lighter. We recycle 90% of the water, and because we're on a roof, we get free sunlight. We sell these vegetables to local restaurants within 5 km. Zero carbon footprint from transport!"`,
+            script: `(News Report: 'Urban Farming')\n\nReporter: "I'm standing on the roof of a factory in Kwun Tong at 'SkyFarm'. Founder Jenny Ho joins me."\n\nJenny: "Hi. As you can see in our brochure, we use hydroponics. It's perfect for Hong Kong because it's light. Soil is heavy; water is lighter. We recycle 90% of the water, and we get free sunlight. We sell these vegetables to local restaurants listed in the application form usually within 5 km."`,
+            dataFile: `
+                <div class="p-4 border-l-4 border-green-500 bg-green-50">
+                    <h1 class="text-2xl font-bold text-green-800">SkyFarm</h1>
+                    <p class="text-sm text-green-700 italic">"The Future of Urban Agriculture"</p>
+                    
+                    <div class="mt-4 grid grid-cols-2 gap-4">
+                        <div class="bg-white p-3 rounded shadow-sm">
+                            <h3 class="font-bold text-gray-700">Location</h3>
+                            <p class="text-sm">Kwun Tong Industrial Centre</p>
+                        </div>
+                        <div class="bg-white p-3 rounded shadow-sm">
+                            <h3 class="font-bold text-gray-700">Method</h3>
+                            <p class="text-sm">Hydroponics (Water-based)</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-4">
+                        <h3 class="font-bold text-gray-800">Visit Us!</h3>
+                        <ul class="list-disc list-inside text-sm">
+                            <li>Open: Weekends 10am - 4pm</li>
+                            <li>Admission: <span class="font-bold text-red-600">$50</span> (Free for students)</li>
+                        </ul>
+                    </div>
+                </div>
+            `,
             questions: [
-                { id: 'l1', text: "Where is the farm located specifically?", answer: "Kwun Tong (factory roof)" },
-                { id: 'l2', text: "Why is 'hydroponics' suitable for Hong Kong buildings according to Jenny?", answer: "It is light / Soil is too heavy for most roofs" },
+                { id: 'l1', text: "Why is 'hydroponics' suitable for Hong Kong buildings according to Jenny?", answer: "It is light / Soil is too heavy" },
+                { id: 'l2', text: "According to the brochure, how much is the admission fee for adults?", answer: "$50" },
                 { id: 'l3', text: "Who buys the vegetables?", answer: "Local restaurants (within 5 km)" }
             ]
         },
@@ -92,11 +131,38 @@ const PAPERS = {
             topic: "Proposal for No Plastic Week"
         },
         listening: {
-            script: `(Career Talk)\n\nSpeaker: "Many of you want to be doctors or lawyers. That's safe. But let me tell you about a job that didn't exist ten years ago: 'Drone Pilot'. I fly drones to inspect bridges and skyscrapers. It's safer than sending a human climber, and faster. Yesterday, I used a thermal camera on my drone to find a water leak in a building wall. You need steady hands, yes, but also a certification in aviation law. It's basically playing a video game, but with real-world consequences."`,
+            script: `(Career Talk)\n\nSpeaker: "Many of you want to be doctors or lawyers. Look at the data file for today's jobs. I am a 'Drone Pilot'. I inspect bridges and skyscrapers. It's safer than sending a human climber. Yesterday, I used a thermal camera to find a water leak. You need steady hands, yes, but also the certification listed on the card."`,
+            dataFile: `
+                <div class="bg-gray-800 text-white p-5 rounded-lg shadow-lg">
+                    <div class="flex justify-between items-center border-b border-gray-600 pb-2 mb-4">
+                        <h2 class="text-xl font-bold text-cyan-400">High-Flying Careers</h2>
+                        <span class="bg-cyan-900 text-cyan-200 text-xs px-2 py-1 rounded">Job ID: 882</span>
+                    </div>
+                    
+                    <div class="space-y-3">
+                        <div>
+                            <span class="text-gray-400 text-xs uppercase block">Position</span>
+                            <span class="text-lg font-bold">Professional Drone Pilot</span>
+                        </div>
+                        <div>
+                            <span class="text-gray-400 text-xs uppercase block">Salary</span>
+                            <span class="text-lg font-bold text-yellow-400">$25,000 / month</span>
+                        </div>
+                        <div>
+                            <span class="text-gray-400 text-xs uppercase block">Requirements</span>
+                            <ul class="text-sm list-disc list-inside text-gray-300">
+                                <li>Civil Aviation Dept (CAD) Certification</li>
+                                <li>20/20 Vision</li>
+                                <li>Problem-solving skills</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            `,
             questions: [
                 { id: 'l1', text: "What job does the speaker have?", answer: "Drone Pilot" },
-                { id: 'l2', text: "Why is using a drone better than a human for inspection?", answer: "Safer and faster / Safer for bridges and skyscrapers" },
-                { id: 'l3', text: "What certification does the speaker say you need?", answer: "Certification in aviation law" }
+                { id: 'l2', text: "According to the job card, what is the starting monthly salary?", answer: "$25,000" },
+                { id: 'l3', text: "Why is using a drone better than a human for inspection?", answer: "Safer and faster" }
             ]
         },
         speaking: {
@@ -126,11 +192,36 @@ const PAPERS = {
             topic: "Complaint Letter to Store Manager"
         },
         listening: {
-            script: `(School Radio)\n\nHost: "And finally, a reminder about the 'Talent Quest'. Sign-ups close this Friday. We are looking for everything—singing, magic, comedy, whatever! Remember, group acts are limited to 5 people this year due to stage size. Also, if you need special equipment like amplifiers, you must list it on the form. Don't show up on the day asking for a drum kit! The winner gets a $500 book voucher and performs at the graduation dinner."`,
+            script: `(School Radio)\n\nHost: "And finally, looking at the poster here... the 'Talent Quest' sign-ups are closing! We are looking for everything—singing, magic, comedy. Remember, group acts are limited as stated on the poster. Also, check the bottom rule about equipment. The winner repeats their performance at the dinner!"`,
+            dataFile: `
+                <div class="text-center p-6 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl text-white shadow-xl">
+                    <h1 class="text-3xl font-extrabold mb-2 drop-shadow-md">★ ANNUAL TALENT QUEST ★</h1>
+                    <div class="bg-white/20 backdrop-blur-sm p-3 rounded-lg mb-4 inline-block">
+                        <p class="font-bold text-lg">DEADLINE: THIS FRIDAY 5:00 PM</p>
+                    </div>
+                    
+                    <div class="text-left space-y-4 bg-white/10 p-4 rounded-lg">
+                        <div>
+                            <h3 class="font-bold border-b border-white/30 pb-1 mb-1">Rules</h3>
+                            <ul class="list-disc list-inside text-sm">
+                                <li>Solo or Group Acts</li>
+                                <li>Max Group Size: <strong>5 People</strong> (Stage limit)</li>
+                                <li>Performance Time: 3 mins max</li>
+                            </ul>
+                        </div>
+                        <div class="text-xs bg-black/30 p-2 rounded">
+                            <strong>Note:</strong> Special equipment (e.g. amplifiers) MUST be listed on the form.
+                        </div>
+                        <div class="text-center font-bold text-yellow-200 mt-2">
+                            WIN: $500 Voucher + Grading Dinner Performance
+                        </div>
+                    </div>
+                </div>
+            `,
             questions: [
-                { id: 'l1', text: "When do sign-ups close?", answer: "This Friday" },
-                { id: 'l2', text: "What is the limit for group acts?", answer: "5 people" },
-                { id: 'l3', text: "What happens if you don't list your equipment on the form?", answer: "You won't have it / Can't ask for a drum kit on the day" }
+                { id: 'l1', text: "According to the poster, what is the exact deadline time?", answer: "Friday 5:00 PM" },
+                { id: 'l2', text: "What is the maximum number of people allowed in a group?", answer: "5 people" },
+                { id: 'l3', text: "What happens if you don't list your equipment on the form?", answer: "You won't have it / Not provided" }
             ]
         },
         speaking: {
@@ -160,11 +251,44 @@ const PAPERS = {
             topic: "Letter to the Editor: Homework"
         },
         listening: {
-            script: `(Shopping Mall Announcement)\n\n"Attention shoppers. We have found a lost child near the Food Court on Level 3. He is a boy, about 5 years old, wearing a red Spiderman t-shirt and blue shorts. He says his name is 'Timmy'. If you are looking for him, please come to the Customer Service Desk on the Ground Floor, next to the cinema. For security reasons, please bring photo ID to verify your identity. Thank you."`,
+            script: `(Shopping Mall Announcement)\n\n"Attention shoppers. Please refer to the digital directory map. We have found a lost child near the Food Court on Level 3. He describes himself as 'Timmy', wearing a Spiderman t-shirt. If you are looking for him, please verify your location on the map and come to the Customer Service Desk. Thank you."`,
+            dataFile: `
+                <div class="bg-gray-900 text-white p-4 rounded-xl border border-gray-700">
+                    <div class="flex justify-between items-center mb-4">
+                        <h2 class="text-lg font-bold text-gray-200">K-Mall Directory</h2>
+                        <span class="text-xs bg-blue-600 px-2 py-1 rounded">Interactive Map</span>
+                    </div>
+                    
+                    <div class="space-y-2">
+                        <div class="flex items-center gap-3 p-3 bg-gray-800 rounded border border-gray-700">
+                            <div class="w-8 h-8 flex items-center justify-center bg-orange-500 rounded font-bold">L3</div>
+                            <div class="flex-1">
+                                <div class="font-bold text-orange-400">Food Court</div>
+                                <div class="text-xs text-gray-400">Asian, Western, Fast Food</div>
+                            </div>
+                        </div>
+
+                        <div class="flex justify-center text-gray-500">
+                            <span>⬇️ Escalators to Ground Floor ⬇️</span>
+                        </div>
+
+                        <div class="flex items-center gap-3 p-3 bg-gray-800 rounded border border-gray-700">
+                            <div class="w-8 h-8 flex items-center justify-center bg-blue-500 rounded font-bold">G</div>
+                            <div class="flex-1">
+                                <div class="font-bold text-blue-400">Customer Service</div>
+                                <div class="text-xs text-gray-400">Lost & Found, Parking Redemption</div>
+                            </div>
+                            <div class="w-auto text-xs text-yellow-500 font-bold border border-yellow-500 px-2 rounded">
+                                NEXT TO CINEMA
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `,
             questions: [
                 { id: 'l1', text: "Where was the child found?", answer: "Food Court (Level 3)" },
-                { id: 'l2', text: "Describe the child's clothing.", answer: "Red Spiderman t-shirt and blue shorts" },
-                { id: 'l3', text: "Where should the parents go to pick him up?", answer: "Customer Service Desk (Ground Floor, next to cinema)" }
+                { id: 'l2', text: "According to the directory, what facility is located next to Customer Service?", answer: "Cinema" },
+                { id: 'l3', text: "What is the child wearing?", answer: "Spiderman t-shirt" }
             ]
         },
         speaking: {

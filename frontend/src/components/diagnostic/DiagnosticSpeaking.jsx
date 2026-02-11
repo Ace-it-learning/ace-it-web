@@ -15,18 +15,10 @@ const DiagnosticSpeaking = ({ assets, onSubmit }) => {
     const recognitionRef = useRef(null);
     const streamRef = useRef(null);
 
-    // Timer Logic
-    useEffect(() => {
-        let interval;
-        if (phase === 'prep' && timeLeft > 0) {
-            interval = setInterval(() => setTimeLeft(t => t - 1), 1000);
-        } else if (phase === 'prep' && timeLeft === 0) {
-            startRecording();
-        } else if (phase === 'recording') {
-            interval = setInterval(() => setRecordingTime(t => t + 1), 1000);
-        }
-        return () => clearInterval(interval);
-    }, [phase, timeLeft, recordingTime]);
+    const handleTopicSelect = (topic) => {
+        setSelectedTopic(topic);
+        setPhase('prep');
+    };
 
     // Cleanup on unmount
     useEffect(() => {
@@ -39,11 +31,6 @@ const DiagnosticSpeaking = ({ assets, onSubmit }) => {
             }
         };
     }, []);
-
-    const handleTopicSelect = (topic) => {
-        setSelectedTopic(topic);
-        setPhase('prep');
-    };
 
     const startRecording = async () => {
         try {
@@ -114,6 +101,19 @@ const DiagnosticSpeaking = ({ assets, onSubmit }) => {
         }
     };
 
+    // Timer Logic
+    useEffect(() => {
+        let interval;
+        if (phase === 'prep' && timeLeft > 0) {
+            interval = setInterval(() => setTimeLeft(t => t - 1), 1000);
+        } else if (phase === 'prep' && timeLeft === 0) {
+            startRecording();
+        } else if (phase === 'recording') {
+            interval = setInterval(() => setRecordingTime(t => t + 1), 1000);
+        }
+        return () => clearInterval(interval);
+    }, [phase, timeLeft, recordingTime]);
+
     const stopRecording = () => {
         if (mediaRecorderRef.current && mediaRecorderRef.current.state !== 'inactive') {
             mediaRecorderRef.current.stop();
@@ -163,7 +163,7 @@ const DiagnosticSpeaking = ({ assets, onSubmit }) => {
     // Topic Selection Phase
     if (phase === 'select') {
         return (
-            <div className="max-w-2xl mx-auto">
+            <div className="max-w-4xl mx-auto">
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">Part 4: Speaking</h2>
                 <div className="bg-white p-8 rounded-2xl border-2 border-gray-200 shadow-sm">
                     <h3 className="text-gray-700 text-lg font-bold mb-4">Choose Your Topic</h3>
@@ -191,7 +191,7 @@ const DiagnosticSpeaking = ({ assets, onSubmit }) => {
 
     // Prep, Recording, Done phases
     return (
-        <div className="max-w-xl mx-auto text-center">
+        <div className="max-w-4xl mx-auto text-center">
             <div className="flex justify-between items-center mb-8">
                 <h2 className="text-2xl font-bold text-gray-900">Part 4: Speaking</h2>
                 <div className={`px-4 py-1 rounded-full font-mono font-bold ${phase === 'prep' ? 'bg-yellow-100 text-yellow-700' : 'bg-red-100 text-red-700'}`}>

@@ -4,30 +4,60 @@ import { useAuth } from '../context/AuthContext';
 import { useLanguage } from '../context/LanguageContext';
 import { clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
+import { BookOpen, Sparkles, Mic, Activity, Lightbulb } from 'lucide-react';
+import ExamTipsModal from './ace/ExamTipsModal';
+import CardPreviewModal from './CardPreviewModal';
+import { cn } from '../utils/cn';
+export { cn };
 
-export function cn(...inputs) {
-    return twMerge(clsx(inputs));
-}
+// Rarity ring styles for the avatar circles
+const rarityRingStyles = {
+    default: 'ring-4 ring-primary/10',
+    common: 'ring-4 ring-gray-300/40',
+    rare: 'ring-4 ring-blue-400/50 shadow-[0_0_15px_rgba(59,130,246,0.25)]',
+    epic: 'ring-4 ring-purple-400/60 shadow-[0_0_20px_rgba(147,51,234,0.3)] ring-shimmer',
+    legendary: 'ring-4 ring-amber-400/70 shadow-[0_0_25px_rgba(251,191,36,0.4)] ring-sparkle',
+};
 
 const Sidebar = () => {
-    const { activeAgentId, setActiveAgentId, activeAgent, studentState } = useAvatar(); // studentState added
+    const { activeAgentId, setActiveAgentId, activeAgent, avatarState, studentState } = useAvatar();
     const { user, loginWithGoogle } = useAuth();
     const { t } = useLanguage();
     const [nickname, setNickname] = useState('Student');
     const [gender, setGender] = useState(null);
-    const [stats, setStats] = useState(null); // Added stats state
+    const [stats, setStats] = useState(null);
+    const [isExamTipsOpen, setIsExamTipsOpen] = useState(false);
+
+    // Card preview state
+    const [previewCard, setPreviewCard] = useState(null);
+    const [previewType, setPreviewType] = useState('tutor');
+    const [equippedTutorCard, setEquippedTutorCard] = useState(null);
+    const [equippedTutorRarity, setEquippedTutorRarity] = useState('default');
+
+    const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
 
     useEffect(() => {
         if (user) {
-            const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
             fetch(`${API_URL}/api/stats?uid=${user.uid}`)
                 .then(res => res.json())
                 .then(data => {
                     setNickname(data.nickname || 'Student');
                     setGender(data.gender);
-                    setStats(data); // Store full stats
+                    setStats(data);
                 })
                 .catch(() => setNickname(user.displayName?.split(' ')[0] || 'Student'));
+
+            // Fetch equipped tutor card info for rarity ring
+            fetch(`${API_URL}/api/redemption/collection?uid=${user.uid}`)
+                .then(res => res.json())
+                .then(data => {
+                    const equipped = data.tutorCards?.find(c => c.equipped);
+                    if (equipped) {
+                        setEquippedTutorCard(equipped);
+                        setEquippedTutorRarity(equipped.rarity || 'rare');
+                    }
+                })
+                .catch(() => { });
         } else {
             setNickname(t('sidebar.visitor'));
             setGender(null);
@@ -36,12 +66,35 @@ const Sidebar = () => {
 
     // Helper to get avatar
     const getStudentAvatar = () => {
-        // if (user?.photoURL) return user.photoURL; // Disable photoURL to fix broken google link issue
         const g = gender?.toLowerCase();
         if (g === 'female') return '/avatars/student_female_1.jpg';
-        // Default to male 3D avatar if gender is male or unknown
         return '/avatars/student_male_1.jpg';
     };
+
+    const handleTutorAvatarClick = () => {
+        const cardData = equippedTutorCard || {
+            id: activeAgent.id,
+            name: activeAgent.name,
+            image: activeAgent.avatar,
+            description: activeAgent.headerInfo,
+            rarity: 'default',
+        };
+        setPreviewCard(cardData);
+        setPreviewType('tutor');
+    };
+
+    const handleStudentAvatarClick = () => {
+        setPreviewCard({
+            id: 'student',
+            name: nickname,
+            image: getStudentAvatar(),
+            description: t('card_preview.default_student'),
+            rarity: 'default',
+        });
+        setPreviewType('student');
+    };
+
+    const tutorRingClass = rarityRingStyles[equippedTutorRarity] || rarityRingStyles.default;
 
     return (
         <aside className="lg:col-span-3 flex flex-col gap-6">
@@ -54,9 +107,16 @@ const Sidebar = () => {
                 <h3 className="font-bold text-[#1d130c] dark:text-white text-lg z-10">{t(`agents.${activeAgentId}.description`)}</h3>
 
                 <div className="flex items-center justify-center gap-2 relative z-10 w-full">
-                    {/* Active AI */}
+                    {/* Active AI — clickable with rarity ring */}
                     <div className="relative group text-center">
-                        <div className="w-[88px] h-[88px] rounded-full overflow-hidden border-4 border-white shadow-lg bg-white ring-4 ring-primary/10 mx-auto">
+                        <div
+                            onClick={handleTutorAvatarClick}
+                            className={cn(
+                                "w-[88px] h-[88px] rounded-full overflow-hidden border-4 border-white shadow-lg bg-white mx-auto transition-all cursor-pointer hover:scale-105",
+                                tutorRingClass,
+                                (avatarState === 'TALKING' || avatarState === 'THINKING') && "animate-talking-glow ring-green-400"
+                            )}
+                        >
                             <img src={activeAgent.avatar} alt="AI" className="w-full h-full object-cover object-top" />
                         </div>
                         <div className="absolute top-1 right-2 bg-green-500 size-4 rounded-full border-2 border-white shadow-sm"></div>
@@ -68,14 +128,17 @@ const Sidebar = () => {
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M7 7l10 10M17 7L7 17" /></svg>
                     </div>
 
-                    {/* Student */}
+                    {/* Student — clickable */}
                     <div className="relative text-center group/student">
-                        <div className={cn(
-                            "w-[88px] h-[88px] rounded-full overflow-hidden border-4 border-white shadow-lg bg-white ring-4 ring-orange-400/10 transition-all duration-500 mx-auto relative",
-                            studentState === 'TALKING' && "scale-110 ring-orange-400/30 animate-bounce",
-                            studentState === 'LISTENING' && "ring-primary/40 animate-pulse",
-                            studentState === 'STUDYING' && "ring-indigo-500/40 scale-95 opacity-90"
-                        )}>
+                        <div
+                            onClick={handleStudentAvatarClick}
+                            className={cn(
+                                "w-[88px] h-[88px] rounded-full overflow-hidden border-4 border-white shadow-lg bg-white ring-4 ring-orange-400/10 transition-all duration-500 mx-auto relative cursor-pointer hover:scale-105",
+                                studentState === 'TALKING' && "scale-110 ring-green-400 animate-talking-glow",
+                                studentState === 'LISTENING' && "ring-primary/40 animate-pulse",
+                                studentState === 'STUDYING' && "ring-indigo-500/40 scale-95 opacity-90"
+                            )}
+                        >
                             <img
                                 src={getStudentAvatar()}
                                 alt="Student"
@@ -94,13 +157,38 @@ const Sidebar = () => {
                     </div>
                 </div>
 
-                <div className="w-full py-2 px-4 bg-primary/5 rounded-full border border-primary/10 text-center shadow-inner">
-                    <span className="text-xs font-medium text-primary">
-                        {studentState === 'IDLE' ? t('sidebar.ready_to_learn') :
-                            studentState === 'TALKING' ? t('sidebar.asking_ace_it') :
-                                studentState === 'STUDYING' ? t('sidebar.focused_on_work') :
-                                    t('sidebar.listening_to_mentor')}
-                    </span>
+                <div className="w-full flex gap-2 z-10 mt-2">
+                    {/* Smart Notebook / Exam Tips Button */}
+                    <button
+                        onClick={() => {
+                            if (activeAgentId === 'ace') {
+                                setIsExamTipsOpen(true);
+                            } else {
+                                window.location.href = '/notebook';
+                            }
+                        }}
+                        className="flex-1 flex items-center gap-2 px-3 py-2 bg-white hover:bg-indigo-50/50 border border-indigo-100 hover:border-indigo-200 rounded-xl shadow-sm transition-all group"
+                    >
+                        <div className="size-7 rounded-lg bg-indigo-50 text-indigo-500 flex items-center justify-center group-hover:scale-110 transition-transform shadow-sm">
+                            {activeAgentId === 'ace' ? <Lightbulb className="w-3.5 h-3.5" /> : <BookOpen className="w-3.5 h-3.5" />}
+                        </div>
+                        <p className="text-[10px] font-bold text-indigo-950 uppercase tracking-tight">
+                            {activeAgentId === 'ace' ? t('sidebar.exam_tips') : t('sidebar.notebook')}
+                        </p>
+                    </button>
+
+                    {/* Vocab Button (Emerald Green) - Only for English Tutor */}
+                    {activeAgentId === 'english' && (
+                        <button
+                            onClick={() => window.location.href = '/vocabulary'}
+                            className="flex-1 flex items-center gap-2 px-3 py-2 bg-white hover:bg-emerald-50/50 border border-emerald-100 hover:border-emerald-200 rounded-xl shadow-sm transition-all group"
+                        >
+                            <div className="size-7 rounded-lg bg-emerald-50 text-emerald-500 flex items-center justify-center group-hover:scale-110 transition-transform shadow-sm">
+                                <Sparkles className="w-3.5 h-3.5" />
+                            </div>
+                            <p className="text-[10px] font-bold text-emerald-950 uppercase tracking-tight">{t('sidebar.vocab')}</p>
+                        </button>
+                    )}
                 </div>
             </div>
 
@@ -136,23 +224,6 @@ const Sidebar = () => {
                 ))}
             </div>
 
-            {/* --- KNOWLEDGE BASE --- */}
-            <div className="space-y-3">
-                <p className="text-xs font-bold text-[#a16b45] uppercase tracking-wider ml-2 opacity-60">My Knowledge</p>
-                <div
-                    onClick={() => window.location.href = '/notebook'}
-                    className="flex items-center gap-3 p-3 rounded-2xl bg-white/40 dark:bg-white/5 border border-transparent hover:bg-white transition-all cursor-pointer group"
-                >
-                    <div className="size-10 rounded-full flex items-center justify-center bg-indigo-50 text-indigo-500 group-hover:scale-110 transition-transform">
-                        📖
-                    </div>
-                    <div className="flex-1">
-                        <p className="font-bold text-sm text-gray-800 dark:text-gray-100">Smart Notebook</p>
-                        <p className="text-[10px] text-gray-400">Vocab, Mistakes & Tips</p>
-                    </div>
-                </div>
-            </div>
-
             {/* --- UTILS --- */}
             <div className="space-y-3">
                 <p className="text-xs font-bold text-[#a16b45] uppercase tracking-wider ml-2 opacity-60">System</p>
@@ -181,6 +252,17 @@ const Sidebar = () => {
                     </button>
                 </div>
             )}
+
+            {/* Exam Tips Modal */}
+            <ExamTipsModal isOpen={isExamTipsOpen} onClose={() => setIsExamTipsOpen(false)} />
+
+            {/* Card Preview Modal */}
+            <CardPreviewModal
+                isOpen={!!previewCard}
+                onClose={() => setPreviewCard(null)}
+                card={previewCard}
+                type={previewType}
+            />
         </aside>
     );
 };

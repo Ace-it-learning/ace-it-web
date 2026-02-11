@@ -42,14 +42,14 @@ const MasteryRadar = ({ data, historicalData = null, isOverview = false }) => {
                     <div className="flex justify-between items-center gap-4">
                         <span className="text-slate-400 text-xs">{t('mastery.current')}:</span>
                         <span className="text-cyan-400 font-mono text-sm font-bold">
-                            {isOverview ? `Level ${levelLabels[Math.round(valA)] || valA}` : `${Math.round(valA)}%`}
+                            {isOverview ? `Level ${levelLabels[Math.round(valA)] || '1'}` : `${Math.round(valA)}%`}
                         </span>
                     </div>
                     {historicalData && valB !== null && (
                         <div className="flex justify-between items-center gap-4 mt-1 border-t border-slate-800 pt-1">
                             <span className="text-slate-500 text-xs">{t('mastery.baseline')}:</span>
                             <span className="text-slate-400 font-mono text-sm">
-                                {isOverview ? `Level ${levelLabels[Math.round(valB)] || valB}` : `${Math.round(valB)}%`}
+                                {isOverview ? `Level ${levelLabels[Math.round(valB)] || '1'}` : `${Math.round(valB)}%`}
                             </span>
                         </div>
                     )}

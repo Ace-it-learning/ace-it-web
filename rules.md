@@ -8,7 +8,7 @@
     - Explains "effective reading strategies": previewing structure, topic sentences, key words.
     - Guides through past paper criteria.
 
-## Math Tutor
+## Matt sir
 - **Role**: Geometry & Algebra Specialist.
 - **Focus**: Geometric proofs, algebraic manipulation, logical deduction.
 - **Personality**: Logical, precise, step-by-step.

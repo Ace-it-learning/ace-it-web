@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Trophy, Clock } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
-import { cn } from './Sidebar';
+import { cn } from '../utils/cn';
 
 const StatsBar = () => {
     const [stats, setStats] = useState({ xp: 0, level: 1, learningTime: 0 });
@@ -37,7 +37,7 @@ const StatsBar = () => {
     }, [user]);
 
     // Calculate XP percentage safely
-    const xpPercentage = stats.progressPercent || 0;
+    const xpPercentage = stats?.progressPercent || 0;
 
     return (
         <div className="w-full mt-auto">
@@ -46,7 +46,7 @@ const StatsBar = () => {
                 <div className="flex items-center gap-4 flex-1 w-full max-w-xl">
                     <div className="flex flex-col items-start gap-1">
                         <span className="text-xs font-black text-gray-400 uppercase tracking-widest">XP Progress</span>
-                        <span className="text-lg font-bold text-gray-800">{stats.currentStepXP || 0} <span className="text-xs text-gray-400 font-medium">/ {stats.nextLevelXP || 100}</span></span>
+                        <span className="text-lg font-bold text-gray-800">{stats?.currentStepXP || 0} <span className="text-xs text-gray-400 font-medium">/ {stats?.nextLevelXP || 100}</span></span>
                     </div>
 
                     <div className="h-4 bg-gray-300/50 rounded-full flex-1 overflow-hidden border border-white shadow-inner relative">
@@ -66,7 +66,7 @@ const StatsBar = () => {
                     </div>
                     <div className="flex flex-col">
                         <span className="text-[10px] text-gray-400 uppercase tracking-widest font-bold">Current Tier</span>
-                        <span className="text-lg font-extrabold text-gray-800">LVL {stats.level}</span>
+                        <span className="text-lg font-extrabold text-gray-800">LVL {stats?.level || 1}</span>
                     </div>
                 </div>
 

@@ -1,28 +1,81 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
+import { useAuth } from '../context/AuthContext';
+import { db } from '../firebase';
+import { collection, query, where, getDocs, orderBy, limit } from 'firebase/firestore';
+import VocabularySidekick from '../components/tutor/VocabularySidekick';
+import MathStepExplainer from '../components/maths/MathStepExplainer';
 
 function ResultPage() {
     const { state } = useLocation();
     const navigate = useNavigate();
     const { examId } = useParams();
     const { t } = useLanguage();
+    const { user } = useAuth();
 
-    if (!state || !state.result) {
+    const [fetchedResult, setFetchedResult] = useState(null);
+    const [loading, setLoading] = useState(!state || !state.result);
+
+    useEffect(() => {
+        const fetchResult = async () => {
+            if (state?.result || !examId || !user) {
+                if (state?.result) setLoading(false);
+                return;
+            }
+
+            try {
+                setLoading(true);
+                const q = query(
+                    collection(db, 'exam_submissions'),
+                    where('examId', '==', examId),
+                    where('uid', '==', user.uid),
+                    orderBy('timestamp', 'desc'),
+                    limit(1)
+                );
+                const snap = await getDocs(q);
+                if (!snap.empty) {
+                    setFetchedResult(snap.docs[0].data());
+                }
+            } catch (err) {
+                console.error("Error fetching exam result:", err);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchResult();
+    }, [examId, user, state]);
+
+    if (loading) {
         return (
             <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-                <div className="text-gray-500">{t('result.no_result')}</div>
+                <div className="flex flex-col items-center gap-4">
+                    <div className="w-12 h-12 border-4 border-orange-500 border-t-transparent rounded-full animate-spin"></div>
+                    <p className="text-gray-500 animate-pulse font-medium">{t('lab.designing_lesson')}</p>
+                </div>
+            </div>
+        );
+    }
+
+    const result = state?.result || fetchedResult;
+    const answers = state?.answers || fetchedResult?.answers || {};
+
+    if (!result) {
+        return (
+            <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center gap-6">
+                <div className="text-gray-400 text-6xl">🔍</div>
+                <div className="text-xl font-medium text-gray-600">{t('result.no_result')}</div>
                 <button
-                    onClick={() => navigate('/dashboard')}
-                    className="ml-4 text-blue-600 hover:underline"
+                    onClick={() => navigate('/mock-exam')}
+                    className="px-6 py-3 bg-orange-500 text-white rounded-xl font-bold shadow-lg hover:bg-orange-600 transition-colors"
                 >
-                    {t('result.dashboard')}
+                    {t('nav.mock_exam')}
                 </button>
             </div>
         );
     }
 
-    const { result, answers } = state;
     const { totalScore, totalMaxScore, percentage, partScores = {}, feedback = {} } = result;
 
     // --- 1. DSE Grading Logic ---
@@ -54,16 +107,16 @@ function ResultPage() {
         .map(qId => ({ id: qId, ...feedback[qId] }));
 
     const getRecommendation = () => {
-        if (dseGrade === "5**" || dseGrade === "5*") return "Excellent work! Focus on maintaining your consistency and speed.";
-        if (dseGrade === "5" || dseGrade === "4") return "Good job. To reach the top tiers, pay closer attention to nuance and vocabulary precision.";
-        if (dseGrade === "3") return "Solid foundation. Work on reading comprehension strategies and identifying key themes faster.";
-        return "Keep practicing. Focus on basic vocabulary and understanding the main ideas of the text before diving into details.";
+        if (dseGrade === "5**" || dseGrade === "5*") return t('result.recommendations.level5');
+        if (dseGrade === "5" || dseGrade === "4") return t('result.recommendations.level4');
+        if (dseGrade === "3") return t('result.recommendations.level3');
+        return t('result.recommendations.level2');
     };
 
     return (
         <div className="min-h-screen bg-gray-50 py-8 px-4 sm:px-6 lg:px-8 font-sans">
             <div className="max-w-7xl mx-auto mb-6 flex justify-between items-center">
-                <h1 className="text-2xl font-bold text-gray-900">Exam Analysis Report</h1>
+                <h1 className="text-2xl font-bold text-gray-900">{t('result.title')}</h1>
                 <button
                     onClick={() => navigate('/', { state: { examCompleted: true, examId } })}
                     className="text-gray-600 hover:text-gray-900 font-medium flex items-center gap-2 px-4 py-2 bg-white rounded-lg shadow-sm border border-gray-200"
@@ -77,7 +130,7 @@ function ResultPage() {
                 {/* --- COLUMN 1: OVERALL SCORE & GRADE (3/12) --- */}
                 <div className="col-span-1 lg:col-span-3 space-y-6">
                     <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 text-center h-full">
-                        <h2 className="text-lg font-semibold text-gray-500 mb-6 uppercase tracking-wider">Overall Performance</h2>
+                        <h2 className="text-lg font-semibold text-gray-500 mb-6 uppercase tracking-wider">{t('result.overall_performance')}</h2>
 
                         {/* Circular Progress */}
                         <div className="relative inline-block mb-4">
@@ -95,19 +148,18 @@ function ResultPage() {
                             </svg>
                             <div className="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center">
                                 <span className="text-4xl font-extrabold text-gray-900">{totalScore}</span>
-                                <span className="text-gray-400 text-sm">out of {totalMaxScore}</span>
+                                <span className="text-gray-400 text-sm">{t('result.out_of').replace('{{max}}', totalMaxScore)}</span>
                             </div>
                         </div>
 
                         {/* DSE Grade Badge */}
                         <div className="mt-4">
-                            <p className="text-sm text-gray-400 mb-1">Estimated DSE Grade</p>
+                            <p className="text-sm text-gray-400 mb-1">{t('result.estimated_grade')}</p>
                             <div className={`inline-block px-6 py-2 rounded-full text-2xl font-bold text-white ${overallStyles.bg} bg-opacity-90`}>
                                 Level {dseGrade}
                             </div>
                         </div>
 
-                        {/* Review Button */}
                         {/* Review Button */}
                         <button
                             onClick={() => {
@@ -120,7 +172,7 @@ function ResultPage() {
                             }}
                             className="mt-8 w-full bg-orange-500 text-white py-3 rounded-xl font-bold shadow-lg hover:scale-105 transition-transform flex items-center justify-center gap-2 hover:bg-orange-600 ring-2 ring-orange-200"
                         >
-                            <span>📖</span> Review Full Exam
+                            <span>📖</span> {t('result.review_full_exam')}
                         </button>
                     </div>
                 </div>
@@ -160,7 +212,7 @@ function ResultPage() {
                                         </div>
 
                                         <div className="mt-1 text-xs text-gray-500 text-right">
-                                            {part.score} / {part.max} marks
+                                            {part.score} / {part.max} {t('result.marks')}
                                         </div>
                                     </div>
                                 );
@@ -168,7 +220,7 @@ function ResultPage() {
                         </div>
 
                         <div className="mt-8 bg-blue-50 p-4 rounded-xl border border-blue-100">
-                            <h4 className="text-blue-800 font-semibold mb-2 text-sm">💡 Suggestion</h4>
+                            <h4 className="text-blue-800 font-semibold mb-2 text-sm">💡 {t('result.suggestion')}</h4>
                             <p className="text-blue-700 text-sm leading-relaxed">
                                 {getRecommendation()}
                             </p>
@@ -180,34 +232,34 @@ function ResultPage() {
                 <div className="col-span-1 lg:col-span-5">
                     <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 h-full flex flex-col max-h-[calc(100vh-100px)]">
                         <h2 className="text-lg font-semibold text-gray-700 mb-4 flex justify-between items-center">
-                            <span>🧐 Deep Dive Analysis</span>
-                            <span className="text-xs bg-red-100 text-red-600 px-2 py-1 rounded-full">{incorrectQuestions.length} Mistakes</span>
+                            <span>🧐 {t('result.deep_dive')}</span>
+                            <span className="text-xs bg-red-100 text-red-600 px-2 py-1 rounded-full">{t('result.mistakes').replace('{{count}}', incorrectQuestions.length)}</span>
                         </h2>
 
                         <div className="flex-1 overflow-y-auto pr-2 space-y-4 custom-scrollbar">
                             {incorrectQuestions.length === 0 ? (
                                 <div className="text-center py-10 opacity-50">
                                     <div className="text-4xl mb-2">🎉</div>
-                                    <p>Perfect Score! No mistakes to review.</p>
+                                    <p>{t('result.perfect_score')}</p>
                                 </div>
                             ) : (
                                 incorrectQuestions.map((item, idx) => (
                                     <div key={idx} className="bg-gray-50 rounded-xl p-4 border border-gray-200">
                                         <div className="flex justify-between items-start mb-2">
                                             <span className="text-xs font-bold text-gray-500 uppercase">Question {idx + 1} ({item.id})</span>
-                                            <span className="text-xs font-mono text-red-500">-{item.max - item.score} marks</span>
+                                            <span className="text-xs font-mono text-red-500">-{item.max - item.score} {t('result.marks')}</span>
                                         </div>
 
                                         {/* Answers */}
                                         <div className="grid grid-cols-2 gap-4 mb-3 text-sm">
                                             <div>
-                                                <p className="text-xs text-gray-400 mb-1">Your Answer</p>
+                                                <p className="text-xs text-gray-400 mb-1">{t('result.your_answer')}</p>
                                                 <div className="font-medium text-red-600 bg-red-50 px-2 py-1 rounded border border-red-100 break-words">
-                                                    {String(item.userAnswer || "No Answer")}
+                                                    {String(item.userAnswer || t('lab.no_answer'))}
                                                 </div>
                                             </div>
                                             <div>
-                                                <p className="text-xs text-gray-400 mb-1">Correct Answer</p>
+                                                <p className="text-xs text-gray-400 mb-1">{t('result.correct_answer')}</p>
                                                 <div className="font-medium text-green-600 bg-green-50 px-2 py-1 rounded border border-green-100 break-words">
                                                     {String(item.correctAnswer)}
                                                 </div>
@@ -215,9 +267,18 @@ function ResultPage() {
                                         </div>
 
                                         {/* Logic / Explanation */}
-                                        <div className="text-xs text-gray-600 bg-white p-3 rounded border border-gray-100 italic relative">
-                                            <span className="absolute -top-2 left-2 bg-white px-1 text-gray-400 text-[10px]">Explanation</span>
-                                            {item.logic}
+                                        <div className="text-xs text-gray-600 bg-white p-3 rounded border border-gray-100 italic relative flex justify-between items-start gap-4">
+                                            <span className="absolute -top-2 left-2 bg-white px-1 text-gray-400 text-[10px]">{t('result.explanation')}</span>
+                                            <div className="flex-1">
+                                                {item.logic}
+                                            </div>
+                                            {(state?.examData?.subject === 'maths' || state?.examData?.topic_category?.toLowerCase().includes('math') || examId?.toLowerCase().includes('math')) && (
+                                                <MathStepExplainer
+                                                    question={item.text || "Math Question"}
+                                                    fullSolution={item.logic}
+                                                    targetStep={item.logic}
+                                                />
+                                            )}
                                         </div>
                                     </div>
                                 ))
@@ -227,6 +288,9 @@ function ResultPage() {
                 </div>
 
             </div>
+
+            {/* Vocab Sidekick: Available in Analysis Mode */}
+            <VocabularySidekick topic={state?.examData?.topic_category || "General English"} />
         </div>
     );
 }

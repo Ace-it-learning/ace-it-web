@@ -85,7 +85,7 @@ const LoadingState = () => {
     );
 };
 
-const DiagnosticResult = ({ results }) => {
+const DiagnosticResult = ({ results, onRetry }) => {
     const navigate = useNavigate();
     const profile = results.profile;
     const [isLeaving, setIsLeaving] = useState(false);
@@ -99,17 +99,14 @@ const DiagnosticResult = ({ results }) => {
 
     if (profile?.error) {
         return (
-            <div className="max-w-4xl mx-auto p-12 text-center bg-white rounded-3xl border-2 border-red-100 shadow-xl">
+            <div className="max-w-6xl mx-auto p-12 text-center bg-white rounded-3xl border-2 border-red-100 shadow-xl">
                 <div className="w-20 h-20 bg-red-50 rounded-full flex items-center justify-center mx-auto mb-6">
                     <AlertTriangle className="w-10 h-10 text-red-500" />
                 </div>
                 <h2 className="text-2xl font-bold text-gray-900 mb-2">Analysis Failed</h2>
                 <p className="text-gray-600 mb-8">{profile.error || "Something went wrong while synthesizing your results."}</p>
                 <button
-                    onClick={() => {
-                        sessionStorage.removeItem('diag_results');
-                        window.location.reload();
-                    }}
+                    onClick={onRetry || (() => window.location.reload())}
                     className="px-8 py-3 bg-red-600 text-white rounded-xl font-bold hover:bg-red-700 transition-colors"
                 >
                     Retry Analysis
@@ -121,7 +118,7 @@ const DiagnosticResult = ({ results }) => {
     if (!profile || Object.keys(profile).length === 0) return <LoadingState />;
 
     return (
-        <div className={`max-w-4xl mx-auto animate-fade-in pb-12 transition-opacity duration-700 ${isLeaving ? 'opacity-0 translate-y-10' : 'opacity-100'}`}>
+        <div className={`max-w-6xl mx-auto animate-fade-in pb-12 transition-opacity duration-700 ${isLeaving ? 'opacity-0 translate-y-10' : 'opacity-100'}`}>
 
             {/* Celebration & XP Section - NEW */}
             <div className="text-center mb-12 relative">
@@ -219,7 +216,9 @@ const DiagnosticResult = ({ results }) => {
                             <div className="w-8 h-8 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center font-bold text-sm shrink-0 group-hover:bg-indigo-600 group-hover:text-white transition-all shadow-sm">
                                 {i + 1}
                             </div>
-                            <p className="text-slate-700 group-hover:text-slate-900 transition-colors pt-1 font-semibold">{step}</p>
+                            <p className="text-slate-700 group-hover:text-slate-900 transition-colors pt-1 font-semibold">
+                                {typeof step === 'object' ? step.title : step}
+                            </p>
                         </div>
                     ))}
                 </div>

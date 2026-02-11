@@ -4,6 +4,7 @@ const admin = require('firebase-admin');
 
 // Service responsible for handling the "Study Calibration" diagnostic logic
 const PAPERS = require('./DiagnosticPapers');
+const mathsService = require('./maths/MathsDiagnosticService');
 
 // Service responsible for handling the "Study Calibration" diagnostic logic
 class DiagnosticService {
@@ -81,7 +82,10 @@ class DiagnosticService {
                 "score": number (0-100), 
                 "grade_label": "string (1, 2, 3, 4, 5, 5*, 5**)",
                 "feedback": "Specific strengths/weaknesses with examples", 
-                "level_estimate": number (1-5, use 5 for 5/5*/5**) 
+                "level_estimate": number (1-5, use 5 for 5/5*/5**),
+                "question_breakdown": [
+                    { "id": "r1", "status": "correct|incorrect", "student_answer": "...", "correct_answer": "...", "feedback": "..." }
+                ]
             }
             `;
         }
@@ -135,6 +139,9 @@ class DiagnosticService {
                 "improvement_tips": ["Tip 1", "Tip 2", "Tip 3"]
             }
             `;
+        }
+        else if (step === 'maths') {
+            prompt = await mathsService.gradeMaths(submission);
         }
         else if (step === 'listening') {
             prompt = `
@@ -309,7 +316,7 @@ class DiagnosticService {
 
         try {
             const result = await GenerativeAIService.generateContent(prompt, {
-                model: "gemini-2.0-flash",
+                model: "gemini-flash-latest",
                 generationConfig: { responseMimeType: "application/json" }
             });
             const response = result.response;
@@ -321,11 +328,34 @@ class DiagnosticService {
             }
 
             const text = response.text();
-            const json = JSON.parse(text);
+            const jsonMatch = text.match(/\{[\s\S]*\}/);
+            let json = {};
+
+            try {
+                if (jsonMatch) {
+                    json = JSON.parse(jsonMatch[0]);
+                } else {
+                    json = JSON.parse(text);
+                }
+            } catch (parseErr) {
+                console.error(`[Diagnostic] Failed to parse JSON for step ${step}. Text:`, text);
+                throw new Error("Invalid response format from AI");
+            }
 
             // Inject the transcript back into the response if it was transcribed, so frontend can display it
             if (step === 'speaking' && submission.audio) {
                 json.transcript = submission.transcript;
+            }
+
+            // POST-PROCESSING: Inject Micro-Skills Tags from Assets into the Result
+            if ((step === 'reading' || step === 'listening') && json.question_breakdown && Array.isArray(json.question_breakdown)) {
+                json.question_breakdown = json.question_breakdown.map(qResult => {
+                    const originalQ = ASSETS[step].questions.find(q => q.id === qResult.id);
+                    return {
+                        ...qResult,
+                        skills: originalQ ? originalQ.skills : [] // Attach the hardcoded skills
+                    };
+                });
             }
 
             return json;
@@ -341,11 +371,15 @@ class DiagnosticService {
     async finalizeDiagnostic(uid, fullResults) {
         const MicroSkillAssessor = require('./MicroSkillAssessor');
 
-        // Calculate average level only representing the main papers
+        // Calculate average level representing ALL papers (skipped = Level 1)
         const paperResults = ['reading', 'writing', 'listening', 'speaking']
             .map(key => fullResults[key]?.level_estimate || 1);
-        const avgRawLevel = paperResults.reduce((a, b) => a + b, 0) / paperResults.length;
+
+        const avgRawLevel = paperResults.reduce((a, b) => a + b, 0) / 4;
         const overallDseLevel = MicroSkillAssessor.convertToDSELevel(avgRawLevel);
+
+        const skippedPapers = ['reading', 'writing', 'listening', 'speaking']
+            .filter(key => !fullResults[key] || fullResults[key].level_estimate === undefined);
 
         let microSkills = {};
         let weaknessPriority = [];
@@ -355,10 +389,12 @@ class DiagnosticService {
         Task: Generate a Diagnostic Profile & Weekly Quest Plan for a HKDSE English Student.
         
         Results:
-        - Reading: Level ${fullResults.reading?.level_estimate} (Feedback: ${fullResults.reading?.feedback})
-        - Writing: Level ${fullResults.writing?.level_estimate} (Feedback: ${fullResults.writing?.feedback})
-        - Listening: Level ${fullResults.listening?.level_estimate} (Feedback: ${fullResults.listening?.feedback})
-        - Speaking: Level ${fullResults.speaking?.level_estimate} (Feedback: ${fullResults.speaking?.feedback})
+        - Reading: ${fullResults.reading ? `Level ${fullResults.reading.level_estimate} (Feedback: ${fullResults.reading.feedback})` : 'SKIPPED'}
+        - Writing: ${fullResults.writing ? `Level ${fullResults.writing.level_estimate} (Feedback: ${fullResults.writing.feedback})` : 'SKIPPED'}
+        - Listening: ${fullResults.listening ? `Level ${fullResults.listening.level_estimate} (Feedback: ${fullResults.listening.feedback})` : 'SKIPPED'}
+        - Speaking: ${fullResults.speaking ? `Level ${fullResults.speaking.level_estimate} (Feedback: ${fullResults.speaking.feedback})` : 'SKIPPED'}
+        
+        System Note: ${skippedPapers.length > 0 ? `The student has SKIPPED sections: ${skippedPapers.join(', ')}. Their overall level MUST reflect this lack of completion (skipped = Level 1). Acknowledge their current performance but be clear that their overall grade is based on total test completion and correctness.` : 'All sections completed.'}
         
         Instructions:
         1. Determine an "Archetype" name (e.g. "Theory Master", "Fearless Speaker", "Grammar Safe Player", "Rising Star").
@@ -396,11 +432,11 @@ class DiagnosticService {
                         speaking: fullResults.speaking
                     }),
                     GenerativeAIService.generateContent(prompt, {
-                        model: "gemini-2.0-flash", // Reverting to working model
+                        model: "gemini-flash-latest", // Reverting to working model
                         generationConfig: { responseMimeType: "application/json" }
                     })
                 ]),
-                timeout(45000) // 45s Timeout
+                timeout(90000) // 90s Timeout (Increased for reliability)
             ]);
 
             microSkills = assessedSkills;
@@ -420,10 +456,27 @@ class DiagnosticService {
             let profile = {};
 
             if (jsonMatch) {
-                profile = JSON.parse(jsonMatch[0]);
-            } else {
-                console.warn("[Diagnostic] AI returned text without valid JSON block. Attempting fallback parse.");
-                profile = JSON.parse(text);
+                try {
+                    profile = JSON.parse(jsonMatch[0]);
+                } catch (jsonErr) {
+                    console.error("[Diagnostic] JSON Parse Failed (Match):", jsonErr);
+                }
+            }
+
+            if (Object.keys(profile).length === 0) {
+                try {
+                    profile = JSON.parse(text);
+                } catch (fallbackErr) {
+                    console.error("[Diagnostic] JSON Parse Failed (Fallback):", fallbackErr);
+                    // Critical Fallback: Don't crash, return minimal valid profile
+                    profile = {
+                        archetype: "Resilient Learner",
+                        overall_level: overallDseLevel,
+                        strengths: ["Persistence"],
+                        weaknesses: ["Structure"],
+                        one_month_plan: ["Practice: Reading", "Practice: Vocabulary"]
+                    };
+                }
             }
 
             // Ensure critical fields exist with safe defaults if AI missed them

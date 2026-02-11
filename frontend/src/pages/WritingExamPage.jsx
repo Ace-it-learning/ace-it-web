@@ -7,7 +7,7 @@ import ExamHeader from '../components/exam/ExamHeader';
 const WritingExamPage = () => {
     const { examId } = useParams();
     const navigate = useNavigate();
-    const { currentUser } = useAuth();
+    const { user } = useAuth();
 
     const [examData, setExamData] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -100,26 +100,6 @@ const WritingExamPage = () => {
         fetchExam();
     }, [examId]);
 
-    // Timer Logic
-    useEffect(() => {
-        if (loading || error) return;
-        const timer = setInterval(() => {
-            setTimeLeft(prev => {
-                if (prev <= 1) {
-                    clearInterval(timer);
-                    handleSubmit(true); // Auto-submit
-                    return 0;
-                }
-                return prev - 1;
-            });
-        }, 1000);
-        return () => clearInterval(timer);
-    }, [loading, error]);
-
-    const handleAnswerChange = (text) => {
-        setAnswers(prev => ({ ...prev, [activePart]: text }));
-    };
-
     const handleSubmit = (force = false) => {
         if (!force) {
             const countA = (answers.Part_A || "").split(/\s+/).filter(w => w.length > 0).length;
@@ -141,6 +121,22 @@ const WritingExamPage = () => {
             }
         });
     };
+
+    // Timer Logic
+    useEffect(() => {
+        if (loading || error) return;
+        const timer = setInterval(() => {
+            setTimeLeft(prev => {
+                if (prev <= 1) {
+                    clearInterval(timer);
+                    handleSubmit(true); // Auto-submit
+                    return 0;
+                }
+                return prev - 1;
+            });
+        }, 1000);
+        return () => clearInterval(timer);
+    }, [loading, error]);
 
     if (loading) return <div className="h-screen flex items-center justify-center">Loading Writing Exam...</div>;
     if (error) return <div className="h-screen flex items-center justify-center text-red-500">{error}</div>;

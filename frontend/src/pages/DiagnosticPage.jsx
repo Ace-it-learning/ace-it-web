@@ -69,6 +69,10 @@ const DiagnosticPage = () => {
             });
             const grade = await res.json();
 
+            if (!res.ok || grade.error) {
+                throw new Error(grade.error || "Grading failed");
+            }
+
             // Update with grade (Functional update)
             setResults(prev => ({
                 ...prev,
@@ -93,14 +97,14 @@ const DiagnosticPage = () => {
     const [finalizing, setFinalizing] = useState(false);
 
     const handleFinalize = async () => {
-        // Ensure all required steps are graded
-        const requiredSteps = ['reading', 'writing', 'listening', 'speaking'];
-        const missingSteps = requiredSteps.filter(s => !results[s] || results[s].score === undefined);
+        // Minimum requirement: Reading and Writing
+        const minimumSteps = ['reading', 'writing'];
+        const missingMinSteps = minimumSteps.filter(s => !results[s] || results[s].score === undefined);
 
-        if (missingSteps.length > 0) {
-            console.warn("Retrying finalize: Missing results for", missingSteps);
-            // We can wait a bit and retry if it's just a backend delay
-            setTimeout(handleFinalize, 1000);
+        if (missingMinSteps.length > 0) {
+            console.warn("Retrying finalize: Missing minimum required results for", missingMinSteps);
+            // If they haven't even done reading/writing, we can't finalize.
+            if (step === 'result') setStep(missingMinSteps[0]);
             return;
         }
 
@@ -144,18 +148,15 @@ const DiagnosticPage = () => {
     // Auto-trigger finalize when entering result step
     useEffect(() => {
         if (step === 'result') {
-            const requiredSteps = ['reading', 'writing', 'listening', 'speaking'];
-            const missingSteps = requiredSteps.filter(s => !results[s] || results[s].score === undefined);
+            // Minimum requirement is Reading and Writing
+            const minimumSteps = ['reading', 'writing'];
+            const missingMin = minimumSteps.filter(s => !results[s] || results[s].score === undefined);
 
-            // Wait for results to sync if we just submitted
-            if (missingSteps.length > 0) {
-                console.log("Waiting for results to sync...", missingSteps);
-                // TIMING FIX: Do not redirect immediately. The handleStepSubmit might still be processing the backend response.
-                // Only redirect if it persists for > 5 seconds
+            if (missingMin.length > 0) {
+                console.log("Waiting for minimum results to sync...", missingMin);
                 const timer = setTimeout(() => {
-                    const currentMissing = requiredSteps.filter(s => !results[s] || results[s].score === undefined);
+                    const currentMissing = minimumSteps.filter(s => !results[s] || results[s].score === undefined);
                     if (currentMissing.length > 0) {
-                        console.warn("Still missing results after timeout, redirecting to:", currentMissing[0]);
                         setStep(currentMissing[0]);
                     }
                 }, 5000);
@@ -177,7 +178,7 @@ const DiagnosticPage = () => {
             case 'writing': return <DiagnosticWriting assets={assets.writing} onSubmit={(data) => handleStepSubmit('writing', data)} />;
             case 'listening': return <DiagnosticListening assets={assets.listening} onSubmit={(data) => handleStepSubmit('listening', data)} />;
             case 'speaking': return <DiagnosticSpeaking assets={assets.speaking} onSubmit={(data) => handleStepSubmit('speaking', data)} />;
-            case 'result': return <DiagnosticResult results={results} />;
+            case 'result': return <DiagnosticResult results={results} onRetry={() => setResults(prev => { const { profile, ...rest } = prev; return rest; })} />;
             default: return <div>Unknown Step</div>;
         }
     };
@@ -197,19 +198,32 @@ const DiagnosticPage = () => {
                         Study Calibration
                     </h1>
                 </div>
-                {/* Progress Bar */}
-                <div className="flex gap-2">
-                    {['reading', 'writing', 'listening', 'speaking'].map((s, i) => (
-                        <div key={s} className={`h-2 w-16 rounded-full ${step === s ? 'bg-blue-500 animate-pulse' :
-                            ['landing', ...['reading', 'writing', 'listening', 'speaking'].slice(0, ['reading', 'writing', 'listening', 'speaking'].indexOf(step))].includes(s)
-                                ? 'bg-blue-200' // Future
-                                : 'bg-green-500' // Past? Context is tricky here, let's simplify
-                            } ${results[s] ? 'bg-green-500' : (step === s ? 'bg-blue-500' : 'bg-gray-200')}`} />
-                    ))}
+                {/* Progress Bar & Actions */}
+                <div className="flex items-center gap-4">
+                    {/* Allow finishing early if Reading & Writing are done */}
+                    {['listening', 'speaking'].includes(step) && results.reading && results.writing && (
+                        <button
+                            onClick={() => setStep('result')}
+                            className="bg-indigo-50 text-indigo-700 px-4 py-1.5 rounded-full text-sm font-bold border border-indigo-100 hover:bg-indigo-100 transition-all flex items-center gap-2"
+                        >
+                            <CheckCircle className="w-4 h-4" />
+                            Finish Early & View Results
+                        </button>
+                    )}
+
+                    <div className="flex gap-2">
+                        {['reading', 'writing', 'listening', 'speaking'].map((s, i) => (
+                            <div key={s} className={`h-2 w-16 rounded-full ${step === s ? 'bg-blue-500 animate-pulse' :
+                                ['landing', ...['reading', 'writing', 'listening', 'speaking'].slice(0, ['reading', 'writing', 'listening', 'speaking'].indexOf(step))].includes(s)
+                                    ? 'bg-blue-200'
+                                    : 'bg-gray-200'
+                                } ${results[s] ? 'bg-green-500' : (step === s ? 'bg-blue-500' : 'bg-gray-200')}`} />
+                        ))}
+                    </div>
                 </div>
             </header>
 
-            <main className="max-w-4xl mx-auto p-6 mt-8">
+            <main className="max-w-[1440px] mx-auto p-6 mt-8">
                 {renderStep()}
             </main>
         </div>

@@ -89,109 +89,11 @@ const SpeakingExamPage = () => {
             .trim();
     };
 
-    const playSpeech = (role, text, onEnd) => {
-        const cleaned = cleanText(text);
-        addLog(`🗣️ [${role}]: ${cleaned.substring(0, 30)}...`);
-        setTranscript(prev => [...prev, { role, text }]);
-
-        if (!cleaned || cleaned.length === 0) {
-            addLog("⚠️ Empty text, skipping...");
-            setTimeout(onEnd, 1000);
-            return;
-        }
-
-        window.speechSynthesis.cancel();
-
-        const u = new SpeechSynthesisUtterance(cleaned);
-        activeUtterance.current = u;
-        // CRITICAL FIX: Prevent Chrome GC by holding global reference
-        window[`tts_${role}`] = u;
-
-        const voice = getVoice(role);
-        if (voice) {
-            u.voice = voice;
-            addLog(`🎙️ Voice: ${voice.name}`);
-        } else {
-            addLog("⚠️ No voice found, using default");
-        }
-
-        u.pitch = 1.0;
-        u.rate = 1.0;
-
-        let hasFinished = false;
-        isTransitioning.current = false; // Reset lock for NEW utterance
-
-        const safeOnEnd = (isError = false, errorDetail = null) => {
-            if (hasFinished) return;
-
-            // If we are transitioning already, ignore further calls (prevents double triggers)
-            if (isTransitioning.current) return;
-
-            // CRITICAL: If audio was interrupted by a new playSpeech call, 
-            // do NOT advance the turn. The new call will handle it.
-            if (isError && errorDetail === 'interrupted') {
-                addLog(`🚫 Interrupted: ${role} (Stopping cascade)`);
-                hasFinished = true; // Still mark as done so watchdog clears
-                return;
-            }
-
-            isTransitioning.current = true; // LOCK
-            hasFinished = true;
-            if (activeUtterance.current === u) {
-                activeUtterance.current = null;
-            }
-            window.lastSpeakingActivity = Date.now(); // Reset Silence Timer
-            addLog(`✅ Turn finished: ${role}`);
-
-            // REDUCED COOLDOWN: 1000ms Delay before Next Turn (Strict 1s Gap)
-            // This provides a strictly observed 1s gap between turns.
-            addLog(`⏳ Cooldown (1.0s)...`);
-            setTimeout(() => {
-                isTransitioning.current = false; // UNLOCK
-                if (onEnd) onEnd();
-            }, 1000);
-        };
-
-        u.onend = () => safeOnEnd(false);
-        u.onerror = (e) => {
-            addLog(`❌ TTS [${role}]: ${e.error}`);
-            if (e.error !== 'interrupted') {
-                console.error(`SpeechSynthesis Error [${role}]:`, e);
-            }
-            safeOnEnd(true, e.error);
-        };
-        u.onboundary = () => {
-            window.lastSpeakingActivity = Date.now(); // Keep-alive on every word
-        };
-
-        // NEW: Activity Watchdog (Replaces Estimated Timeout)
-        // Checks if audio is truly stuck (no boundary events for 5s) instead of guessing duration.
-        const audioWatchdog = setInterval(() => {
-            if (hasFinished) {
-                clearInterval(audioWatchdog);
-                return;
-            }
-
-            const timeSinceActivity = Date.now() - (window.lastSpeakingActivity || 0);
-
-            // If audio hasn't fired an event for 10 seconds (Relaxed from 5s), assume it died
-            if (timeSinceActivity > 10000) {
-                addLog(`⏰ Audio Stuck Watchdog: Force-Next (${timeSinceActivity}ms silent)`);
-                clearInterval(audioWatchdog);
-                safeOnEnd();
-            }
-        }, 1000);
-
-        // Update activity timestamp
-        window.lastSpeakingActivity = Date.now();
-        window.speechSynthesis.resume();
-        // Force cancel any previous speech to prevent overlap "fighting"
-        window.speechSynthesis.cancel();
-        window.speechSynthesis.speak(u);
-    };
+    // Moving functions here will cause more issues if they use variables not yet defined.
+    // I will use a single chunk to move them to the top of the component.
 
 
-    // 1. Load Exam
+    // --- 1. Load Data ---
     useEffect(() => {
         const url = `${import.meta.env.VITE_API_URL || 'http://localhost:3001'}/api/speaking/exam/${examId}`;
         console.log("Fetching Speaking Exam:", url);
@@ -210,6 +112,34 @@ const SpeakingExamPage = () => {
                 setError(err.message);
             });
     }, [examId]);
+
+    // 0. Load Voices (Robust)
+    useEffect(() => {
+        const loadVoices = () => {
+            const vs = window.speechSynthesis.getVoices();
+            console.log(`[Speaking] Voices Loaded: ${vs.length}`);
+            vs.forEach(v => console.log(`- ${v.name} (${v.lang}) [${v.localService ? 'Local' : 'Remote'}]`));
+            setVoices(vs);
+        };
+
+        if (window.speechSynthesis.onvoiceschanged !== undefined) {
+            window.speechSynthesis.onvoiceschanged = loadVoices;
+        }
+
+        loadVoices();
+
+        // CHROME FIX: speechSynthesis "falls asleep" after 15s. 
+        // We keep it alive by calling resume() periodically.
+        const resumeInterval = setInterval(() => {
+            window.speechSynthesis.pause();
+            window.speechSynthesis.resume();
+        }, 10000);
+
+        return () => {
+            clearInterval(resumeInterval);
+            window.speechSynthesis.cancel();
+        };
+    }, []);
 
     // 4. WATCHER: Silence Guard (Deadlock Prevention)
     useEffect(() => {
@@ -330,78 +260,211 @@ const SpeakingExamPage = () => {
         }
     }, [examData]);
 
-    const startDiscussion = () => {
-        setStatus('DISCUSSION');
-        setTimeLeft(8 * 60); // 8 mins
+    // Helper to find best voice (Simulating HK students and different levels)
+    const getVoice = (role) => {
+        if (!voices || voices.length === 0) return null;
 
-        // LATENCY FIX: Pre-fetch Candidate A's turn IMMEDIATELY in background
-        // This runs in parallel while Examiner speaks, eliminating the wait time.
-        fetchBatchInBackground();
+        // CRITICAL: Filter for English voices only to avoid Cantonese/Mandarin engines
+        const englishVoices = voices.filter(v => v.lang.toLowerCase().startsWith('en'));
+        const pool = englishVoices.length > 0 ? englishVoices : voices;
 
-        playSpeech("Examiner", "Good afternoon. We are here to discuss " + examData.title + ". Candidate A, please begin.", () => {
-            if (isQueued.current) {
-                isQueued.current = false;
-                setIsQueuedState(false);
-                startUserTurn();
-            } else {
-                triggerAITurn("Candidate_A");
-            }
-        });
+        const find = (lang, namePart) => pool.find(v =>
+            v.lang.toLowerCase().includes(lang.toLowerCase()) &&
+            (!namePart || v.name.toLowerCase().includes(namePart.toLowerCase()))
+        );
+
+        // STABILITY FIX: Prioritize Google US English for everyone first to prove audio works
+        const safeVoice = find('Google US English') || find('en-US');
+
+        if (role === 'Examiner') {
+            return find('en-GB') || safeVoice || pool[0];
+        }
+
+        // Candidates: Try HK > GB > US > Any English
+        const hkVoice = find('en-HK') || find('Hong Kong') || find('yue');
+        const gbVoice = find('en-GB');
+
+        // If specific regional voice missing, FALLBACK TO SAFE VOICE immediately
+        const fallback = safeVoice || pool.find(v => v.lang.startsWith('en')) || pool[0];
+
+        if (role === 'Candidate_A') return find('en-GB', 'Female') || hkVoice || gbVoice || fallback;
+        if (role === 'Candidate_B') return find('en-GB', 'Male') || hkVoice || gbVoice || fallback;
+        if (role === 'Candidate_C') return find('en-US', 'Female') || hkVoice || gbVoice || fallback;
+
+        return fallback;
     };
 
-    const endDiscussion = () => {
-        // Instead of finishing, move to Part B
-        setStatus('INDIVIDUAL');
-        setTimeLeft(60); // 1 minute for Part B response
+    const playSpeech = (role, text, onEnd) => {
+        const cleaned = cleanText(text);
+        addLog(`🗣️ [${role}]: ${cleaned.substring(0, 30)}...`);
+        setTranscript(prev => [...prev, { role, text }]);
 
-        playSpeech("Examiner", "Thank you. That is the end of the group discussion. Candidate D, I have a question for you.", () => {
-            startIndividualResponse();
-        });
-    };
-
-    const startIndividualResponse = () => {
-        // Pick a question from the mock data
-        const questions = examData.individual_response_questions || ["How do you think this issue affects students in Hong Kong?"];
-        const question = questions[Math.floor(Math.random() * questions.length)];
-
-        playSpeech("Examiner", question, () => {
-            setCurrentSpeaker("You");
-            setIsUserTurn(true);
-            isUserTurnRef.current = true; // Set ref for user turn
-            if (recognition.current) {
-                recognition.current.start();
-            }
-        });
-    };
-
-    // --- AI Turn Logic ---
-    const triggerAITurn = async (forceSpeaker) => {
-        if (isUserTurnRef.current || status !== 'DISCUSSION') return;
-        // FIX: Check activeUtterance to prevent interrupting current speaker
-        if (isFetchingAI.current || isTransitioning.current || activeUtterance.current) return;
-
-        // 1. Process local queue if it has items
-        if (localTurnQueue.current.length > 0) {
-            const nextTurn = localTurnQueue.current.shift();
-
-            // Prefetch Logic: If queue is getting low (1 left), fetch more in background
-            if (localTurnQueue.current.length <= 1) {
-                fetchBatchInBackground();
-            }
-
-            playQueuedTurn(nextTurn);
+        if (!cleaned || cleaned.length === 0) {
+            addLog("⚠️ Empty text, skipping...");
+            setTimeout(onEnd, 1000);
             return;
         }
 
-        // 2. Queue is empty, need to fetch fresh batch (Blocker)
-        addLog("⏳ Fetching new batch...");
-        await fetchBatch(forceSpeaker);
+        window.speechSynthesis.cancel();
 
-        // After fetching, if we have turns, play the first one
-        if (localTurnQueue.current.length > 0) {
-            const first = localTurnQueue.current.shift();
-            playQueuedTurn(first);
+        const u = new SpeechSynthesisUtterance(cleaned);
+        activeUtterance.current = u;
+        // CRITICAL FIX: Prevent Chrome GC by holding global reference
+        window[`tts_${role}`] = u;
+
+        const voice = getVoice(role);
+        if (voice) {
+            u.voice = voice;
+            addLog(`🎙️ Voice: ${voice.name}`);
+        } else {
+            addLog("⚠️ No voice found, using default");
         }
+
+        u.pitch = 1.0;
+        u.rate = 1.0;
+
+        let hasFinished = false;
+        isTransitioning.current = false; // Reset lock for NEW utterance
+
+        const safeOnEnd = (isError = false, errorDetail = null) => {
+            if (hasFinished) return;
+
+            // If we are transitioning already, ignore further calls (prevents double triggers)
+            if (isTransitioning.current) return;
+
+            // CRITICAL: If audio was interrupted by a new playSpeech call, 
+            // do NOT advance the turn. The new call will handle it.
+            if (isError && errorDetail === 'interrupted') {
+                addLog(`🚫 Interrupted: ${role} (Stopping cascade)`);
+                hasFinished = true; // Still mark as done so watchdog clears
+                return;
+            }
+
+            isTransitioning.current = true; // LOCK
+            hasFinished = true;
+            if (activeUtterance.current === u) {
+                activeUtterance.current = null;
+            }
+            window.lastSpeakingActivity = Date.now(); // Reset Silence Timer
+            addLog(`✅ Turn finished: ${role}`);
+
+            // REDUCED COOLDOWN: 1000ms Delay before Next Turn (Strict 1s Gap)
+            // This provides a strictly observed 1s gap between turns.
+            addLog(`⏳ Cooldown (1.0s)...`);
+            setTimeout(() => {
+                isTransitioning.current = false; // UNLOCK
+                if (onEnd) onEnd();
+            }, 1000);
+        };
+
+        u.onend = () => safeOnEnd(false);
+        u.onerror = (e) => {
+            addLog(`❌ TTS [${role}]: ${e.error}`);
+            if (e.error !== 'interrupted') {
+                console.error(`SpeechSynthesis Error [${role}]:`, e);
+            }
+            safeOnEnd(true, e.error);
+        };
+        u.onboundary = () => {
+            window.lastSpeakingActivity = Date.now(); // Keep-alive on every word
+        };
+
+        // NEW: Activity Watchdog (Replaces Estimated Timeout)
+        // Checks if audio is truly stuck (no boundary events for 5s) instead of guessing duration.
+        const audioWatchdog = setInterval(() => {
+            if (hasFinished) {
+                clearInterval(audioWatchdog);
+                return;
+            }
+
+            const timeSinceActivity = Date.now() - (window.lastSpeakingActivity || 0);
+
+            // If audio hasn't fired an event for 10 seconds (Relaxed from 5s), assume it died
+            if (timeSinceActivity > 10000) {
+                addLog(`⏰ Audio Stuck Watchdog: Force-Next (${timeSinceActivity}ms silent)`);
+                clearInterval(audioWatchdog);
+                safeOnEnd();
+            }
+        }, 1000);
+
+        // Update activity timestamp
+        window.lastSpeakingActivity = Date.now();
+        window.speechSynthesis.resume();
+        // Force cancel any previous speech to prevent overlap "fighting"
+        window.speechSynthesis.cancel();
+        window.speechSynthesis.speak(u);
+    };
+
+    const handleUserSpeech = (text) => {
+        if (userSilenceTimer.current) clearTimeout(userSilenceTimer.current);
+        userSilenceTimer.current = null;
+
+        addLog(`🎙️ User said: "${text.substring(0, 20)}..."`);
+        setTranscript(prev => [...prev, { role: "You", text }]);
+        const speechObj = { role: "user", text };
+        chatHistory.current.push(speechObj);
+        localTurnQueue.current = []; // NEW: Clear pre-generated turns so AI reacts to what user just said
+
+        setCurrentSpeaker(null); // IMPORTANT: Reset emerald ring so Silence Guard can wake up
+        setIsUserTurn(false);
+        isUserTurnRef.current = false;
+
+        if (status === 'INDIVIDUAL') {
+            playSpeech("Examiner", "Thank you. That is the end of the speaking test. You may now check your results.", () => {
+                setStatus('FINISHED');
+            });
+            return;
+        }
+
+        // Hand back to AI
+        addLog("⏳ Handing back to AI in 0.5s...");
+        setTimeout(() => {
+            if (!isUserTurnRef.current && !isQueued.current) {
+                const nexts = ["Candidate_A", "Candidate_B", "Candidate_C"];
+                const pick = nexts[Math.floor(Math.random() * nexts.length)];
+                triggerAITurn(pick);
+            }
+        }, 500);
+    };
+
+    const startUserTurn = () => {
+        localTurnQueue.current = []; // IMPORTANT: Clear future AI turns when user speaks
+        isTransitioning.current = false; // Force unlock in case user interrupted during a transition
+        setIsUserTurn(true);
+        isUserTurnRef.current = true;
+        setCurrentSpeaker("You");
+        if (recognition.current) {
+            try {
+                recognition.current.start();
+            } catch (e) {
+                console.warn("Recognition already started");
+            }
+        }
+    };
+
+    const playQueuedTurn = (turn) => {
+        const { speaker, content } = turn;
+        setCurrentSpeaker(speaker);
+
+        playSpeech(speaker, content, () => {
+            setCurrentSpeaker(null);
+            chatHistory.current.push({ role: speaker, text: content });
+
+            if (isQueued.current) {
+                addLog("🎯 Starting queued user turn");
+                isQueued.current = false;
+                setIsQueuedState(false);
+                startUserTurn();
+                return;
+            }
+
+            // Loop back to next AI turn
+            setTimeout(() => {
+                if (!isUserTurnRef.current && status === 'DISCUSSION') {
+                    triggerAITurn();
+                }
+            }, 1000); // 1.0s gap between AI turns for natural feel
+        });
     };
 
     const fetchBatch = async (hintSpeaker = "Candidate_A") => {
@@ -451,133 +514,78 @@ const SpeakingExamPage = () => {
         fetchBatch();
     };
 
-    const playQueuedTurn = (turn) => {
-        const { speaker, content } = turn;
-        setCurrentSpeaker(speaker);
+    const triggerAITurn = async (forceSpeaker) => {
+        if (isUserTurnRef.current || status !== 'DISCUSSION') return;
+        // FIX: Check activeUtterance to prevent interrupting current speaker
+        if (isFetchingAI.current || isTransitioning.current || activeUtterance.current) return;
 
-        playSpeech(speaker, content, () => {
-            setCurrentSpeaker(null);
-            chatHistory.current.push({ role: speaker, text: content });
+        // 1. Process local queue if it has items
+        if (localTurnQueue.current.length > 0) {
+            const nextTurn = localTurnQueue.current.shift();
 
-            if (isQueued.current) {
-                addLog("🎯 Starting queued user turn");
-                isQueued.current = false;
-                setIsQueuedState(false);
-                startUserTurn();
-                return;
+            // Prefetch Logic: If queue is getting low (1 left), fetch more in background
+            if (localTurnQueue.current.length <= 1) {
+                fetchBatchInBackground();
             }
 
-            // Loop back to next AI turn
-            setTimeout(() => {
-                if (!isUserTurnRef.current && status === 'DISCUSSION') {
-                    triggerAITurn();
-                }
-            }, 1000); // 1.0s gap between AI turns for natural feel
-        });
-    };
-
-    const startUserTurn = () => {
-        localTurnQueue.current = []; // IMPORTANT: Clear future AI turns when user speaks
-        isTransitioning.current = false; // Force unlock in case user interrupted during a transition
-        setIsUserTurn(true);
-        isUserTurnRef.current = true;
-        setCurrentSpeaker("You");
-        if (recognition.current) {
-            try {
-                recognition.current.start();
-            } catch (e) {
-                console.warn("Recognition already started");
-            }
-        }
-    };
-
-    const handleUserSpeech = (text) => {
-        if (userSilenceTimer.current) clearTimeout(userSilenceTimer.current);
-        userSilenceTimer.current = null;
-
-        addLog(`🎙️ User said: "${text.substring(0, 20)}..."`);
-        setTranscript(prev => [...prev, { role: "You", text }]);
-        const speechObj = { role: "user", text };
-        chatHistory.current.push(speechObj);
-        localTurnQueue.current = []; // NEW: Clear pre-generated turns so AI reacts to what user just said
-
-        setCurrentSpeaker(null); // IMPORTANT: Reset emerald ring so Silence Guard can wake up
-        setIsUserTurn(false);
-        isUserTurnRef.current = false;
-
-        if (status === 'INDIVIDUAL') {
-            playSpeech("Examiner", "Thank you. That is the end of the speaking test. You may now check your results.", () => {
-                setStatus('FINISHED');
-            });
+            playQueuedTurn(nextTurn);
             return;
         }
 
-        // Hand back to AI
-        addLog("⏳ Handing back to AI in 0.5s...");
-        setTimeout(() => {
-            if (!isUserTurnRef.current && !isQueued.current) {
-                const nexts = ["Candidate_A", "Candidate_B", "Candidate_C"];
-                const pick = nexts[Math.floor(Math.random() * nexts.length)];
-                triggerAITurn(pick);
+        // 2. Queue is empty, need to fetch fresh batch (Blocker)
+        addLog("⏳ Fetching new batch...");
+        await fetchBatch(forceSpeaker);
+
+        // After fetching, if we have turns, play the first one
+        if (localTurnQueue.current.length > 0) {
+            const first = localTurnQueue.current.shift();
+            playQueuedTurn(first);
+        }
+    };
+
+
+    const startIndividualResponse = () => {
+        // Pick a question from the mock data
+        const questions = examData.individual_response_questions || ["How do you think this issue affects students in Hong Kong?"];
+        const question = questions[Math.floor(Math.random() * questions.length)];
+
+        playSpeech("Examiner", question, () => {
+            setCurrentSpeaker("You");
+            setIsUserTurn(true);
+            isUserTurnRef.current = true; // Set ref for user turn
+            if (recognition.current) {
+                recognition.current.start();
             }
-        }, 500);
+        });
     };
 
-    const handleManualFinish = () => {
-        if (recognition.current) {
-            recognition.current.stop(); // This will trigger onend but we handle speech manually here
-        }
-        if (collectedTranscript.current.trim()) {
-            handleUserSpeech(collectedTranscript.current.trim());
-        } else {
-            // Just hand back if nothing said
-            setIsUserTurn(false);
-            isUserTurnRef.current = false;
-            setCurrentSpeaker(null);
-        }
+    const startDiscussion = () => {
+        setStatus('DISCUSSION');
+        setTimeLeft(8 * 60); // 8 mins
+
+        // LATENCY FIX: Pre-fetch Candidate A's turn IMMEDIATELY in background
+        // This runs in parallel while Examiner speaks, eliminating the wait time.
+        fetchBatchInBackground();
+
+        playSpeech("Examiner", "Good afternoon. We are here to discuss " + examData.title + ". Candidate A, please begin.", () => {
+            if (isQueued.current) {
+                isQueued.current = false;
+                setIsQueuedState(false);
+                startUserTurn();
+            } else {
+                triggerAITurn("Candidate_A");
+            }
+        });
     };
 
-    const handleChipIn = () => {
-        if (!currentSpeaker) {
-            startUserTurn();
-        } else {
-            isQueued.current = true;
-            setIsQueuedState(true);
-        }
-    };
+    const endDiscussion = () => {
+        // Instead of finishing, move to Part B
+        setStatus('INDIVIDUAL');
+        setTimeLeft(60); // 1 minute for Part B response
 
-    // Helper to find best voice (Simulating HK students and different levels)
-    const getVoice = (role) => {
-        if (!voices || voices.length === 0) return null;
-
-        // CRITICAL: Filter for English voices only to avoid Cantonese/Mandarin engines
-        const englishVoices = voices.filter(v => v.lang.toLowerCase().startsWith('en'));
-        const pool = englishVoices.length > 0 ? englishVoices : voices;
-
-        const find = (lang, namePart) => pool.find(v =>
-            v.lang.toLowerCase().includes(lang.toLowerCase()) &&
-            (!namePart || v.name.toLowerCase().includes(namePart.toLowerCase()))
-        );
-
-        // STABILITY FIX: Prioritize Google US English for everyone first to prove audio works
-        const safeVoice = find('Google US English') || find('en-US');
-
-        if (role === 'Examiner') {
-            return find('en-GB') || safeVoice || pool[0];
-        }
-
-        // Candidates: Try HK > GB > US > Any English
-        const hkVoice = find('en-HK') || find('Hong Kong') || find('yue');
-        const gbVoice = find('en-GB');
-
-        // If specific regional voice missing, FALLBACK TO SAFE VOICE immediately
-        const fallback = safeVoice || pool.find(v => v.lang.startsWith('en')) || pool[0];
-
-        if (role === 'Candidate_A') return find('en-GB', 'Female') || hkVoice || gbVoice || fallback;
-        if (role === 'Candidate_B') return find('en-GB', 'Male') || hkVoice || gbVoice || fallback;
-        if (role === 'Candidate_C') return find('en-US', 'Female') || hkVoice || gbVoice || fallback;
-
-        return fallback;
+        playSpeech("Examiner", "Thank you. That is the end of the group discussion. Candidate D, I have a question for you.", () => {
+            startIndividualResponse();
+        });
     };
 
     const finishExam = async () => {

@@ -65,11 +65,25 @@ class GamificationService {
             const statsDoc = await t.get(statsRef);
             let stats = statsDoc.exists ? statsDoc.data() : { xp: 0, level: 1, daily_xp: 0, last_xp_date: null };
 
-            // 1. Check Daily Cap
+            // 1. Check Daily Cap & Streak
             const today = new Date().toDateString();
+            const yesterday = new Date(Date.now() - 86400000).toDateString();
+
             if (stats.last_xp_date !== today) {
+                // Streak Logic
+                if (stats.last_xp_date === yesterday) {
+                    stats.streakDays = (stats.streakDays || 0) + 1;
+                    console.log(`[Gamification] Streak Increment: ${uid} now at ${stats.streakDays} days.`);
+                } else {
+                    stats.streakDays = 1; // Missing day or first ever
+                    console.log(`[Gamification] Streak Reset/Start: ${uid} reset to 1 day.`);
+                }
+
                 stats.daily_xp = 0; // Reset for new day
                 stats.last_xp_date = today;
+            } else if (!stats.streakDays) {
+                // Ensure at least 1 if they have activity today
+                stats.streakDays = 1;
             }
 
             if (stats.daily_xp >= this.config.anti_cheating.daily_xp_cap) {
@@ -108,7 +122,7 @@ class GamificationService {
 
             let isSkillLevelUp = false;
 
-            if (['reading', 'writing', 'listening', 'speaking'].includes(source)) {
+            if (['reading', 'writing', 'listening', 'speaking', 'maths'].includes(source) || source.startsWith('maths_')) {
                 // Determine new skill level
                 const newSkillXP = currentSkillXP + finalAmount;
                 const skillLevelData = this.calculateLevelFromXP(newSkillXP);
@@ -123,42 +137,26 @@ class GamificationService {
                 stats[skillLevelKey] = skillLevelData.level;
             }
 
-            // 3. Update Total XP & Level
-            stats.xp = (stats.xp || 0) + finalAmount;
+            // 3. Update XP & Level
+            stats.xp = (stats.xp || 0) + finalAmount; // Spendable Balance
+            stats.total_xp = (stats.total_xp || stats.xp || 0) + finalAmount; // Lifetime XP
             stats.daily_xp += finalAmount;
 
             const oldLevel = stats.level || 1;
-            const mainLevelData = this.calculateLevelFromXP(stats.xp);
+            const mainLevelData = this.calculateLevelFromXP(stats.total_xp);
             stats.level = mainLevelData.level;
 
             // 4. Global Level Milestone Check
+            // Calculate Average Level across Reading, Writing, Listening, Speaking + Maths (if applicable)
+            // For now, sticking to English 4 pillars for "Global Level" as per original design, 
+            // or we could add Maths. Let's keep it safe.
             if (['reading', 'writing', 'listening', 'speaking'].includes(source)) {
                 const levels = ['reading', 'writing', 'listening', 'speaking'].map(s => stats[`level_${s}`] || 1);
                 const avgLevel = levels.reduce((a, b) => a + b, 0) / 4;
                 const oldGlobal = stats.global_level || 1;
 
-                // Truncate to 1 decimal for comparison/display? 
-                // Or check if integer floor increased? Requirement: "every time this global level increases"
-                // Assuming significant increase (e.g. 1.0 -> 1.25 is an increase).
-                // "Trigger a 2,000 XP grant every time this global level increases."
-                // Usually this means crossing a threshold. Let's assume crossing an integer or 0.5 threshold?
-                // Or literally every increment. Since sub-skills only go up, global only goes up.
-                // Let's grant it if it exceeds the stored global_level.
-
                 if (avgLevel > oldGlobal) {
-                    // But wait, if it goes 1.0 -> 1.25, do we grant 2000? 
-                    // That implies a LOT of XP. 
-                    // Let's check "Global Level ... as average". 
-                    // Maybe it means "When the Average Level crosses a new Integer"?
-                    // User said: "Trigger a 2,000 XP grant every time this global level increases."
-                    // If I have 4 skills. L1, L1, L1, L1. Global = 1.
-                    // Reading becomes L2. Global = 1.25. (Increase!) -> Grant 2000.
-                    // Writing becomes L2. Global = 1.50. (Increase!) -> Grant 2000.
-                    // This seems generous but matches the instruction literal.
-                    // Let's stick to "Any increase in the calculated average".
-
                     stats.xp += this.config.multipliers.overall_milestone_grant;
-                    // Recalculate main level again after bonus
                     const bonusLevelData = this.calculateLevelFromXP(stats.xp);
                     stats.level = bonusLevelData.level;
                     stats.global_level = avgLevel;
@@ -167,16 +165,9 @@ class GamificationService {
 
             t.set(statsRef, stats, { merge: true });
 
-            // 5. Dynamic History Recording
-            // We use the UserProfileService directly or just write to collection
-            // Calling UserProfileService.recordTimelineEvent after transaction (or inside if we pass db)
-            // Inside transaction is safer for ordering, but recordTimelineEvent uses 'add' (auto-id) which is fine.
-            // Let's derive title from source/actionMetadata
             const title = actionMetadata.title || this.deriveTitleFromSource(source);
 
-            // Note: We don't await recordTimelineEvent inside runTransaction if it's not part of the transaction
-            // But UserProfileService uses simple 'add'. Let's just do it after.
-
+            // Timeline Entry
             const result = {
                 success: true,
                 earned: finalAmount,
@@ -185,10 +176,12 @@ class GamificationService {
                 skillLevelUp: isSkillLevelUp,
                 newSkillLevel: stats[`level_${source}`],
                 timelineEntry: {
-                    type: source === 'practice_lab' ? 'milestone' : 'exam',
+                    type: source.includes('practice') || source === 'maths' ? 'milestone' : 'practice',
                     title: title,
                     xp: finalAmount,
-                    score: actionMetadata.score || `${Math.floor((finalAmount / (actionMetadata.maxXP || 50)) * 100)}%`
+                    score: actionMetadata.score || `${Math.floor((finalAmount / (actionMetadata.maxXP || 50)) * 100)}%`,
+                    subject: actionMetadata.subject || source,
+                    topic: actionMetadata.topic || null
                 }
             };
 
@@ -200,6 +193,37 @@ class GamificationService {
         });
     }
 
+    /**
+     * Award Quest Completion Bonus (First Time Only)
+     * Wraps RoadmapService.completeTask to ensure idempotency.
+     */
+    async awardQuestCompletion(uid, taskId, subject = 'english') {
+        if (!uid || !taskId) return { success: false };
+
+        try {
+            const RoadmapService = require('./RoadmapService'); // Lazy load to avoid circular dep
+            const result = await RoadmapService.completeTask(uid, taskId, subject);
+
+            if (result.success && result.xpAwarded > 0) {
+                // It was a fresh completion! Award the Quest Bonus.
+                const displayName = UserProfileService.getSkillName(taskId, subject);
+
+                await this.awardXP(uid, result.xpAwarded, 'quest_bonus', {
+                    title: `Quest Completed: ${displayName}`,
+                    subject: subject,
+                    topic: displayName
+                });
+
+                return { success: true, earned: result.xpAwarded, fresh: true };
+            }
+
+            return { success: true, earned: 0, fresh: false }; // Already completed
+        } catch (e) {
+            console.error("[Gamification] Quest Completion Error:", e);
+            return { success: false, error: e.message };
+        }
+    }
+
     deriveTitleFromSource(source) {
         switch (source) {
             case 'practice_lab': return 'Completed Lab Mission';
@@ -207,6 +231,7 @@ class GamificationService {
             case 'writing': return 'Writing Mastery Increase';
             case 'listening': return 'Listening Skill Improvement';
             case 'speaking': return 'Speaking Fluency Boost';
+            case 'maths': return 'Math Milestone';
             default: return 'Earned Activity XP';
         }
     }
@@ -220,7 +245,8 @@ class GamificationService {
         if (!doc.exists) return null;
 
         const data = doc.data();
-        const levelData = this.calculateLevelFromXP(data.xp || 0);
+        const totalXP = data.total_xp || data.xp || 0;
+        const levelData = this.calculateLevelFromXP(totalXP);
 
         // Fetch Inventory (Limited to last 50 for now)
         const inventorySnap = await this.db.collection('users').doc(uid).collection('inventory').orderBy('acquiredAt', 'desc').get();

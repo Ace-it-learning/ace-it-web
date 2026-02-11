@@ -14,7 +14,7 @@ export const AGENTS = {
     },
     math: {
         id: 'math',
-        name: 'Math Tutor',
+        name: 'Matt sir',
         role: '數學導師',
         description: '幾何專題複習',
         avatar: '/avatars/math.png',
@@ -23,12 +23,12 @@ export const AGENTS = {
     },
     chinese: {
         id: 'chinese',
-        name: 'Chinese Tutor',
+        name: 'Miss Lam',
         role: '中文導師',
         description: '範文背誦挑戰',
         avatar: '/avatars/chinese.png',
         color: 'bg-purple-100',
-        headerInfo: '中文導師 • 在線協助中'
+        headerInfo: 'Miss Lam (林老師)'
     },
     ace: {
         id: 'ace',
@@ -43,7 +43,7 @@ export const AGENTS = {
 
 export const AvatarProvider = ({ children }) => {
     const [activeAgentId, setActiveAgentId] = useState('english');
-    const [avatarState, setAvatarState] = useState('IDLE'); // IDLE, HAPPY, UPSET, THINKING
+    const [avatarState, setAvatarState] = useState('IDLE'); // IDLE, HAPPY, UPSET, THINKING, TALKING
     const [studentState, setStudentState] = useState('IDLE'); // IDLE, TALKING, LISTENING, STUDYING
     const [isFocusMode, setIsFocusMode] = useState(false);
 

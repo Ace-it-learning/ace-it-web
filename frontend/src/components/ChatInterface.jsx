@@ -3,9 +3,9 @@ import { Link, useLocation } from 'react-router-dom';
 import { useAvatar } from '../context/AvatarContext';
 import { useAuth } from '../context/AuthContext';
 import { useLanguage } from '../context/LanguageContext';
-import { ArrowRight, Radio, Paperclip, Send, Volume2, VolumeX, Edit3, Type, Maximize2, Minimize2, X, MessageSquare, CircleX, Trophy, Lock, Zap, Target } from 'lucide-react';
+import { ArrowRight, Radio, Paperclip, Send, Volume2, VolumeX, Edit3, Type, Maximize2, Minimize2, X, MessageSquare, CircleX, Trophy, Lock, Zap, Target, BookOpen } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-import { cn } from './Sidebar'; // Reusing cn utility
+import { cn } from '../utils/cn'; // Reusing cn utility
 import EssayUploader from './EssayUploader';
 import FingerprintJS from '@fingerprintjs/fingerprintjs';
 import { doc, getDoc, setDoc, updateDoc, arrayUnion, increment } from 'firebase/firestore';
@@ -14,18 +14,22 @@ import { db } from '../firebase';
 import LaunchCard from './LaunchCard';
 import AuthForm from './AuthForm';
 import MasteryModal from './dashboard/MasteryModal';
+import MathAbilityModal from './dashboard/MathAbilityModal'; // Integrated
+import DreamProgramsModal from './dashboard/DreamProgramsModal'; // Ace Sir - Dream University List
 import { getUserMastery, getMasteryHistory } from '../services/masteryService';
 import { Compass } from 'lucide-react';
+import { MathsLab, MathsDiagnostic } from './maths';
+import PolisherCard from './tutor/PolisherCard';
+import DecoderCard from './tutor/DecoderCard';
+import VocabCard from './tutor/VocabCard';
 // RoadmapModal import removed - hoisted to Dashboard
 
 const getSuggestionChips = (t) => ({
     guest: [
-        { label: t('chat.start_mock'), value: "Start Mock Exam", emoji: "🚀" },
         { label: t('chat.what_is_ace_it'), value: "What is Ace It?", emoji: "🤔" },
         { label: t('chat.start_diagnostic'), value: "I want to start the diagnostic test", emoji: "📋" },
     ],
     member: [
-        { label: t('chat.start_mock'), value: "Start Mock Exam", emoji: "🚀" },
         { label: t('chat.review_mistake'), value: "Review my last mistake", emoji: "🔄" },
         { label: t('chat.practice_vocab'), value: "Practice Vocabulary", emoji: "📖" },
     ]
@@ -50,7 +54,7 @@ const formatMessageContent = (content) => {
 const ChatInterface = ({ onOpenQuest }) => {
     const navigate = useNavigate();
     const location = useLocation();
-    const { activeAgent, activeAgentId, avatarState, setAvatarState, studentState, setStudentState, isFocusMode, setIsFocusMode } = useAvatar();
+    const { activeAgent, activeAgentId, setActiveAgentId, avatarState, setAvatarState, studentState, setStudentState, isFocusMode, setIsFocusMode } = useAvatar();
     const { user, loginWithGoogle, logout, verifyEmail } = useAuth(); // Destructure all needed methods
     const { t, toggleLanguage, language } = useLanguage();
 
@@ -60,6 +64,14 @@ const ChatInterface = ({ onOpenQuest }) => {
 
     // Dynamic Chips Logic based on User State
     const suggestionChips = (() => {
+        if (activeAgentId === 'ace') {
+            const subject = user?.dreamSubject || "夢想學科";
+            return [
+                { label: "幫我分析 Best 5", value: "我想要分析我嘅 Best 5 成績估計", emoji: "📊" },
+                { label: `分析 ${subject} 收生要求`, value: `我想知 ${subject} 嘅收生要求同 Career Path`, emoji: "🎓" },
+                { label: "有咩奪星策略？", value: "話俾我聽點樣可以攞到 5* 甚至 5**？", emoji: "💡" }
+            ];
+        }
         if (!hasDiagnostic) {
             return [
                 { label: t('chat.start_calibration'), value: "I want to start the diagnostic test", emoji: "⚡" },
@@ -67,7 +79,6 @@ const ChatInterface = ({ onOpenQuest }) => {
             ];
         } else {
             return [
-                { label: t('chat.start_mock'), value: "Start Mock Exam", emoji: "🚀" },
                 { label: "What should I focus on?", value: "Analyze my recent performance and tell me what to focus on today.", emoji: "🧠" }
             ];
         }
@@ -83,6 +94,9 @@ const ChatInterface = ({ onOpenQuest }) => {
     // isQuestOpen removed - controlled by parent
     const fileInputRef = useRef(null);
     const messagesEndRef = useRef(null);
+    const chatContainerRef = useRef(null);
+    const lastUserMessageRef = useRef(null);
+    const isHistoryScrolledRef = useRef(false);
     const [showChips, setShowChips] = useState(false);
     const [isUploaderOpen, setIsUploaderOpen] = useState(false);
     const [mockExams, setMockExams] = useState([]);
@@ -105,11 +119,20 @@ const ChatInterface = ({ onOpenQuest }) => {
 
     // Mastery Compass State
     const [isMasteryOpen, setIsMasteryOpen] = useState(false);
+    const [isMathAbilityOpen, setIsMathAbilityOpen] = useState(false); // New State
+    const [isDreamProgramsOpen, setIsDreamProgramsOpen] = useState(false); // Ace Sir - Dream University List
     const [masteryData, setMasteryData] = useState(null);
     const [masteryHistory, setMasteryHistory] = useState([]);
 
     const handleOpenMastery = async () => {
         if (!user) return;
+
+        // Math Agent Specific Handling
+        if (activeAgentId === 'math') {
+            setIsMathAbilityOpen(true);
+            return;
+        }
+
         setIsMasteryOpen(true);
         try {
             const [data, history] = await Promise.all([
@@ -132,42 +155,6 @@ const ChatInterface = ({ onOpenQuest }) => {
     };
 
     const isProcessedRef = useRef(false);
-
-    // Check for Post-Diagnostic, Post-Lab, or Post-Exam State
-    useEffect(() => {
-        if (!user || isProcessedRef.current) return;
-
-        if (location.state?.diagnosticCompleted) {
-            isProcessedRef.current = true;
-            setHasDiagnostic(true);
-            const criticalAreas = location.state.criticalAreas || [];
-            const archetype = location.state.archetype || "Student";
-            setDynamicChips(criticalAreas);
-            handleSendMessage(`[SYSTEM: DIAGNOSTIC_JUST_COMPLETED: ${archetype}]`, true);
-            window.history.replaceState({}, document.title);
-        } else if (location.state?.labCompleted) {
-            isProcessedRef.current = true;
-            const { topic } = location.state;
-            handleSendMessage(`[SYSTEM: LAB_COMPLETED: ${topic}]`, true);
-            window.history.replaceState({}, document.title);
-        } else if (location.state?.mockCompleted) {
-            isProcessedRef.current = true;
-            const { type, level, score, improvements } = location.state;
-            let msg = `[SYSTEM: MOCK_COMPLETED: ${type.toUpperCase()} | Level: ${level} | Score: ${score}]`;
-            if (improvements) msg += `\nImprovement Advice: ${improvements}`;
-            handleSendMessage(msg, true);
-            window.history.replaceState({}, document.title);
-        } else if (location.state?.examCompleted) {
-            isProcessedRef.current = true;
-            const { examId } = location.state;
-            handleSendMessage(`[SYSTEM: EXAM_JUST_COMPLETED: ${examId}]`, true);
-            window.history.replaceState({}, document.title);
-        } else if (location.state?.startPrompt) {
-            isProcessedRef.current = true;
-            handleSendMessage(location.state.startPrompt);
-            window.history.replaceState({}, document.title);
-        }
-    }, [location.state, user]);
 
     // Listen for events from MasteryModal
     useEffect(() => {
@@ -209,56 +196,146 @@ const ChatInterface = ({ onOpenQuest }) => {
 
     // Initial greeting or History restore
     useEffect(() => {
+        setDynamicChips([]); // Reset dynamic chips on agent switch
         const fetchHistory = async () => {
             // Fetch History and Profile together
             if (user) {
                 try {
                     const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
 
-                    // 1. Fetch Stats/Profile
-                    const statsRes = await fetch(`${API_URL}/api/stats?uid=${user.uid}`);
-                    const statsData = await statsRes.json();
+                    // 1. Fetch Stats / Profile
+                    let currentHasDiagnostic = false;
+                    try {
+                        const statsRes = await fetch(`${API_URL}/api/stats?uid=${user.uid}`);
+                        if (statsRes.ok) {
+                            const statsData = await statsRes.json();
+                            if (statsData.gender) setGender(statsData.gender);
+                            if (statsData.is_new_student !== undefined) setIsNewStudent(statsData.is_new_student);
 
-                    if (statsData.gender) setGender(statsData.gender);
-                    if (statsData.is_new_student !== undefined) setIsNewStudent(statsData.is_new_student);
-
-                    // Use a local variable to avoid race conditions with state update
-                    const currentHasDiagnostic = statsData.hasDiagnostic === true;
+                            currentHasDiagnostic = typeof statsData?.hasDiagnostic === 'object' && statsData?.hasDiagnostic !== null
+                                ? (activeAgentId === 'math' ? statsData.hasDiagnostic.maths : statsData.hasDiagnostic.english)
+                                : statsData?.hasDiagnostic === true;
+                        }
+                    } catch (sErr) {
+                        console.warn("Stats fetch failed for greeting logic", sErr);
+                    }
                     setHasDiagnostic(currentHasDiagnostic);
 
                     // 2. Fetch History
-                    const historyRes = await fetch(`${API_URL}/api/history/${activeAgentId}?uid=${user.uid}`);
-                    const history = await historyRes.json();
-
-                    const visibleHistory = history.filter(m =>
-                        !m.content.includes('[SYSTEM:') &&
-                        !m.content.includes('[ACTIVATING_EXAM_MODE]')
-                    );
+                    let visibleHistory = [];
+                    try {
+                        const historyRes = await fetch(`${API_URL}/api/history/${activeAgentId}?uid=${user.uid}`);
+                        if (historyRes.ok) {
+                            const history = await historyRes.json();
+                            visibleHistory = history.filter(m =>
+                                !m.content.includes('[SYSTEM:') &&
+                                !m.content.includes('[ACTIVATING_EXAM_MODE]')
+                            );
+                        }
+                    } catch (hErr) {
+                        console.warn("History fetch failed, defaulting to empty", hErr);
+                    }
 
                     if (visibleHistory.length > 0) {
                         setMessages(visibleHistory);
                         setShowChips(true);
                     } else {
-                        // NO visible messages (new user or cleared history) -> Show Greeting
+                        let initialContent;
+                        // Use safe defaults for greetings if profile missing
+                        const agentName = activeAgent?.name || "Ace Sir";
+                        const userName = user?.displayName || user?.email?.split('@')[0] || "小戰士";
+
+                        if (activeAgentId === 'ace') {
+                            const subject = user?.dreamSubject;
+                            initialContent = subject
+                                ? `你好 ${userName}！我係 Ace Sir。聽講你目標係入 **${subject}**？同我講你嘅計劃，我幫你制定 DSE 奪星策略，確保你穩入大學！`
+                                : `你好 ${userName}！我係 Ace Sir。想入邊間大學？同我講你嘅目標，我幫你制定全方位奪星藍圖，助你進軍大學、稱霸 DSE！`;
+                        } else if (['english', 'math'].includes(activeAgentId) && !currentHasDiagnostic) {
+                            initialContent = t('chat.greeting_new')
+                                .replace(/{{agentName}}/g, agentName)
+                                .replace(/{{userName}}/g, userName);
+                        } else {
+                            initialContent = t('chat.greeting_return')
+                                .replace(/{{agentName}}/g, agentName)
+                                .replace(/{{userName}}/g, userName);
+                        }
+
                         setMessages([{
                             role: 'assistant',
-                            content: (activeAgentId === 'english' && !currentHasDiagnostic)
-                                ? t('chat.greeting_new')
-                                : t('chat.greeting_return').replace('{{agentName}}', activeAgent.name),
+                            content: initialContent,
                             agentId: activeAgentId
                         }]);
                         setShowChips(true);
+                    }
+
+                    // 3. Process Post-Activity State SEQUENTIALLY after history is loaded
+                    if (!isProcessedRef.current) {
+                        // Check Search Params first (for redirects from LabPage)
+                        const searchParams = new URLSearchParams(location.search);
+                        const questCompleted = searchParams.get('quest_completed');
+                        const questTopic = searchParams.get('topic');
+
+                        if (questCompleted === 'true') {
+                            isProcessedRef.current = true;
+                            handleSendMessage(`[SYSTEM: QUEST_COMPLETED: ${questTopic || 'Activity'}]`, true);
+                            // Clear params from URL
+                            navigate('/dashboard', { replace: true });
+                        } else if (location.state?.diagnosticCompleted) {
+                            isProcessedRef.current = true;
+                            setHasDiagnostic(true);
+                            const criticalAreas = location.state.criticalAreas || [];
+                            const archetype = location.state.archetype || "Student";
+
+                            // OPTIONAL: Switch agent if requested
+                            if (location.state.activeAgentId) {
+                                setActiveAgentId(location.state.activeAgentId);
+                            }
+
+                            setDynamicChips(criticalAreas);
+                            handleSendMessage(`[SYSTEM: DIAGNOSTIC_JUST_COMPLETED: ${archetype}]`, true);
+                            window.history.replaceState({}, document.title);
+                        } else if (location.state?.labCompleted) {
+                            isProcessedRef.current = true;
+                            const { topic, earnedXp, masteryScore } = location.state;
+                            handleSendMessage(`[SYSTEM: LAB_COMPLETED: ${topic} | XP: ${earnedXp || 0} | Mastery: ${masteryScore || 0}%]`, true);
+                            window.history.replaceState({}, document.title);
+                        } else if (location.state?.mockCompleted) {
+                            isProcessedRef.current = true;
+                            const { type, level, score, improvements } = location.state;
+                            let msg = `[SYSTEM: MOCK_COMPLETED: ${type.toUpperCase()} | Level: ${level} | Score: ${score}]`;
+                            if (improvements) msg += `\nImprovement Advice: ${improvements}`;
+                            handleSendMessage(msg, true);
+                            window.history.replaceState({}, document.title);
+                        } else if (location.state?.examCompleted) {
+                            isProcessedRef.current = true;
+                            const { examId } = location.state;
+                            handleSendMessage(`[SYSTEM: EXAM_JUST_COMPLETED: ${examId}]`, true);
+                            window.history.replaceState({}, document.title);
+                        } else if (location.state?.startPrompt) {
+                            isProcessedRef.current = true;
+                            handleSendMessage(location.state.startPrompt);
+                            window.history.replaceState({}, document.title);
+                        }
                     }
                 } catch (err) {
                     console.error("fetchHistory failed", err);
                 }
             } else {
                 // GUEST MODE
+                const agentName = activeAgent?.name || "Ace Sir";
+                const userName = "小戰士"; // Generic term for guest
+
+                let content = ['english', 'math'].includes(activeAgentId)
+                    ? t('chat.greeting_new')
+                    : t('chat.greeting_generic');
+
+                content = content
+                    .replace(/{{agentName}}/g, agentName)
+                    .replace(/{{userName}}/g, userName);
+
                 setMessages([{
                     role: 'assistant',
-                    content: activeAgentId === 'english'
-                        ? t('chat.greeting_new')
-                        : t('chat.greeting_generic').replace('{{agentName}}', activeAgent.name),
+                    content: content,
                     agentId: activeAgentId
                 }]);
                 setShowChips(true);
@@ -357,13 +434,41 @@ const ChatInterface = ({ onOpenQuest }) => {
         }
     }, [isMuted]);
 
-    // Auto-scroll to bottom
+    // Turn-Based Anchoring (Smart Scroll)
     useEffect(() => {
         const lastMsg = messages[messages.length - 1];
-        // Check for active_mock_list is removed to allow scrolling to see options as requested.
-        // messagesEndRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        const container = chatContainerRef.current;
+        if (!container) return;
 
-        messagesEndRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        // 1. Initial History Restoration (On Refresh/Return to Dashboard)
+        // If we have history messages and haven't scrolled yet, snap to bottom immediately
+        if (!isHistoryScrolledRef.current && messages.length > 1) {
+            container.scrollTo({ top: container.scrollHeight, behavior: 'auto' });
+            isHistoryScrolledRef.current = true;
+            return;
+        }
+
+        // 2. Active Turn: Anchor to top of user message when it's sent
+        if (lastMsg?.role === 'user' && lastUserMessageRef.current) {
+            // Use container-local scrollTo for precision and to prevent whole-page jumps
+            container.scrollTo({
+                top: lastUserMessageRef.current.offsetTop - 16, // Align top with small padding
+                behavior: 'smooth'
+            });
+            return;
+        }
+
+        // 3. Initial greeting or cleared chat: Scroll to bottom
+        if (messages.length <= 1) {
+            container.scrollTo({
+                top: container.scrollHeight,
+                behavior: 'smooth'
+            });
+            isHistoryScrolledRef.current = false; // Reset for next history load or clear
+        }
+
+        // 4. AI Thinking or AI response arrival: Do NOT scroll.
+        // This keeps the viewport anchored to the top of the user's message.
     }, [messages, avatarState, isFocusMode]);
 
     // Focus Mode Keyboard Listener (Escape to exit)
@@ -404,7 +509,7 @@ const ChatInterface = ({ onOpenQuest }) => {
             math: { gender: 'male', lang: 'en-GB', rate: 1.05, pitch: 1.0 },
             chinese: { gender: 'female', lang: 'zh-HK', rate: 1.4, pitch: 1.0 }, // Faster Cantonese
             science: { gender: 'male', lang: 'en-GB', rate: 1.05, pitch: 1.0 },
-            ace: { gender: 'male', lang: 'en-GB', rate: 1.0, pitch: 0.95 } // Ace Sir: Slightly deeper
+            ace: { gender: 'male', lang: 'zh-HK', rate: 1.4, pitch: 0.95 } // Ace Sir: Cantonese, Traditional Chinese (Faster rate for smoothness)
         };
 
         const profile = PROFILES[agentId] || PROFILES.english;
@@ -421,12 +526,16 @@ const ChatInterface = ({ onOpenQuest }) => {
         let preferredVoice;
 
         if (targetLang === 'zh-HK') {
-            // Cantonese Priority: Google -> Windows (Tracy) -> Mac (Sin-ji) -> Generic zh-HK -> Any zh (warn)
-            preferredVoice = voices.find(v => v.name.includes("Google Cantonese")) ||
-                voices.find(v => v.name.includes("Tracy")) ||
-                voices.find(v => v.name.includes("Sin-ji")) ||
-                voices.find(v => v.lang === "zh-HK") ||
-                voices.find(v => v.lang === "zh-TW");
+            // Priority for Ace Sir: Try Cloud TTS first if configured, else browser fallback
+            if (activeAgentId === 'ace' || profile.gender === 'male') {
+                // We'll prioritize male voices in browser as fallback
+                preferredVoice = voices.find(v => v.lang === "zh-HK" && (v.name.includes("Danny") || v.name.includes("Male"))) ||
+                    voices.find(v => v.name.includes("Google Cantonese"));
+            } else {
+                preferredVoice = voices.find(v => v.name.includes("Google Cantonese")) ||
+                    voices.find(v => v.name.includes("Tracy"));
+            }
+            if (!preferredVoice) preferredVoice = voices.find(v => v.lang === "zh-HK");
         } else {
             // English Gender Selection
             if (profile.gender === 'female') {
@@ -457,6 +566,45 @@ const ChatInterface = ({ onOpenQuest }) => {
         utterance.rate = profile.rate;
         utterance.pitch = profile.pitch;
 
+        // SYNC AVATAR STATE
+        utterance.onstart = () => setAvatarState('TALKING');
+        utterance.onend = () => setAvatarState('IDLE');
+
+        // CLOUD TTS (Priority for Ace Sir)
+        if (agentId === 'ace') {
+            console.log("[TTS] Attempting Cloud TTS for Ace Sir...");
+            fetch(`${import.meta.env.VITE_API_URL || 'http://localhost:3001'}/api/tts`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    text: text,
+                    languageCode: 'zh-HK',
+                    gender: 'MALE'
+                })
+            })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.audioContent) {
+                        const audio = new Audio(`data:audio/mp3;base64,${data.audioContent}`);
+                        audio.onplay = () => setAvatarState('TALKING');
+                        audio.onended = () => setAvatarState('IDLE');
+                        audio.play().catch(e => {
+                            console.error("Cloud Audio Playback Failed:", e);
+                            // Fallback to browser
+                            window.speechSynthesis.speak(utterance);
+                        });
+                    } else {
+                        throw new Error("No audio content");
+                    }
+                })
+                .catch(err => {
+                    console.warn("[TTS] Cloud TTS Failed (Quota/Network?), falling back to Browser:", err);
+                    window.speechSynthesis.speak(utterance);
+                });
+            return;
+        }
+
+        // BROWSER TTS (Default for others)
         window.speechSynthesis.speak(utterance);
     };
 
@@ -746,6 +894,24 @@ const ChatInterface = ({ onOpenQuest }) => {
         if (!textToSend.trim() && !selectedImage) return;
 
         if (!isHidden) {
+            // --- MATHS DIAGNOSTIC INTERCEPT ---
+            if (textToSend === "I want to start the diagnostic test" && activeAgentId === 'math') {
+                const userMsg = { role: 'user', content: textToSend };
+                setMessages(prev => [...prev, userMsg]);
+                saveMessageToBackend(userMsg); // Save for history
+
+                setMessages(prev => [...prev, {
+                    role: 'assistant',
+                    content: "Let's calibrate your Maths skills! Opening the assessment now... 📐",
+                    agentId: 'math'
+                }]);
+
+                setTimeout(() => {
+                    navigate('/maths-diagnostic', { state: { forceRestart: true } });
+                }, 1500);
+                return;
+            }
+
             if (textToSend.includes("[ACTIVATING_EXAM_MODE]")) {
                 const paperId = textToSend.split("I want to study ")[1];
 
@@ -858,7 +1024,8 @@ const ChatInterface = ({ onOpenQuest }) => {
                 replyText = replyText.replace('[REDIRECT_DIAGNOSTIC]', '').trim();
                 setTimeout(() => {
                     console.log("[Redirect] Heading to Diagnostic...");
-                    navigate('/diagnostic', { state: { forceRestart: true } });
+                    const targetPath = activeAgentId === 'math' ? '/maths-diagnostic' : '/diagnostic';
+                    navigate(targetPath, { state: { forceRestart: true } });
                 }, 1000); // reduced delay
             }
 
@@ -929,6 +1096,7 @@ const ChatInterface = ({ onOpenQuest }) => {
                 isSystemResponse: data.isSystemResponse || isHidden // Mark as system if backend says so or if it was a hidden trigger
             };
 
+            setAvatarState('HAPPY'); // Success state - moved up to prevent auto-scroll jump when msg arrives
             if (shouldClear) {
                 // Keep the refusal message but clear history for next turn
                 setMessages([aiMsg]);
@@ -972,7 +1140,6 @@ const ChatInterface = ({ onOpenQuest }) => {
             // AUTO-LAUNCH LAB: Removed to respect "No Auto-Redirect" rule. 
             // Students must click the Launch Card or confirm via chat.
 
-            setAvatarState('HAPPY'); // Success state
             setStudentState(aiSetStudentState);
 
             // Speak logic: Speak if NOT muted OR if FORCE_TTS is present
@@ -1089,6 +1256,11 @@ const ChatInterface = ({ onOpenQuest }) => {
             }
         }
 
+        // --- CUSTOM PER-AGENT PLACEHOLDERS ---
+        if (activeAgentId === 'ace') return t('chat.placeholder_ace');
+        if (activeAgentId === 'math') return t('chat.placeholder_math');
+        if (activeAgentId === 'english') return t('chat.placeholder_english');
+
         return t('chat.type_message');
     };
 
@@ -1158,48 +1330,67 @@ const ChatInterface = ({ onOpenQuest }) => {
             {/* Header */}
             <div className="px-8 py-4 border-b border-black/5 dark:border-white/10 flex items-center justify-between bg-white/30 dark:bg-white/5 backdrop-blur-sm">
                 <div className="flex items-center gap-4">
-                    <div className={cn("size-3 rounded-full transition-colors",
-                        avatarState === 'THINKING' ? "bg-yellow-400 animate-pulse" :
-                            avatarState === 'UPSET' ? "bg-red-500" : "bg-green-500"
-                    )}></div>
                     <div className="flex -space-x-2">
-                        <div className="w-[36px] h-[36px] rounded-full border-2 border-white overflow-hidden shadow-sm">
-                            <img src={activeAgent.avatar} alt="AI" className="w-full h-full object-cover" />
+                        <div className="relative">
+                            <div className={cn(
+                                "w-[36px] h-[36px] rounded-full border-2 border-white overflow-hidden shadow-sm transition-all",
+                                (avatarState === 'TALKING' || avatarState === 'THINKING') && "animate-talking-glow ring-2 ring-green-400"
+                            )}>
+                                <img src={activeAgent.avatar} alt="AI" className="w-full h-full object-cover" />
+                            </div>
+                            {/* Status Dot */}
+                            <div className={cn(
+                                "absolute -top-0.5 -right-0.5 size-3 rounded-full border-[1.5px] border-white z-10 transition-colors",
+                                avatarState === 'THINKING' ? "bg-yellow-400 animate-pulse" :
+                                    avatarState === 'UPSET' ? "bg-red-500" : "bg-green-500"
+                            )}></div>
                         </div>
                         <div className={cn(
                             "w-[36px] h-[36px] rounded-full border-2 border-white overflow-hidden shadow-sm transition-transform",
-                            studentState === 'TALKING' && "scale-110",
+                            studentState === 'TALKING' && "ring-2 ring-green-400 animate-talking-glow",
                             studentState === 'LISTENING' && "animate-pulse",
                             studentState === 'STUDYING' && "ring-2 ring-indigo-400 opacity-80"
                         )}>
                             <img src={getStudentAvatar()} alt="Student" className="w-full h-full object-cover" />
                         </div>
                     </div>
-                    <div className="flex items-center gap-2">
-                        <span className="font-medium text-[#1d130c] dark:text-white text-sm">
-                            {t('chat.agent_and_you').replace('{{agentName}}', activeAgent.name)}
-                        </span>
-                    </div>
+
                 </div>
 
                 {/* CENTERED ACTION BUTTONS */}
                 <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 flex items-center gap-3">
-                    <button
-                        onClick={onOpenQuest}
-                        disabled={!hasDiagnostic}
-                        className={cn(
-                            "px-6 py-2.5 rounded-full transition-all flex items-center gap-2 shadow-sm border hover:shadow-md active:scale-95 min-w-[120px] justify-center",
-                            hasDiagnostic
-                                ? "bg-amber-100/80 hover:bg-amber-100 text-amber-700 border-amber-200/50"
-                                : "bg-gray-100 text-gray-400 cursor-not-allowed opacity-60 border-gray-200"
-                        )}
-                        title={hasDiagnostic ? t('nav.view_daily_quest') : t('nav.complete_diagnostic_first')}
-                    >
-                        {hasDiagnostic ? <Target className="w-5 h-5 stroke-[2.5]" /> : <Lock className="w-4 h-4" />}
-                        <span className="text-sm font-black tracking-wide uppercase">{t('nav.quest')}</span>
-                    </button>
+                    {activeAgentId !== 'ace' && (
+                        <button
+                            onClick={() => onOpenQuest(activeAgentId)}
+                            disabled={!hasDiagnostic}
+                            className={cn(
+                                "px-6 py-2.5 rounded-full transition-all flex items-center gap-2 shadow-sm border hover:shadow-md active:scale-95 min-w-[120px] justify-center",
+                                hasDiagnostic
+                                    ? "bg-amber-100/80 hover:bg-amber-100 text-amber-700 border-amber-200/50"
+                                    : "bg-gray-100 text-gray-400 cursor-not-allowed opacity-60 border-gray-200"
+                            )}
+                            title={hasDiagnostic ? t('nav.view_daily_quest') : t('nav.complete_diagnostic_first')}
+                        >
+                            {hasDiagnostic ? <Target className="w-5 h-5 stroke-[2.5]" /> : <Lock className="w-4 h-4" />}
+                            <span className="text-sm font-black tracking-wide uppercase whitespace-nowrap">{t('nav.quest')}</span>
+                        </button>
+                    )}
 
-                    {user && (
+                    {/* NEW: MOCK EXAM BUTTON */}
+                    {user && activeAgentId !== 'ace' && hasDiagnostic && (
+                        <button
+                            onClick={() => navigate('/mock-exam')}
+                            className={cn(
+                                "px-6 py-2.5 rounded-full transition-all flex items-center gap-2 shadow-sm border hover:shadow-md active:scale-95 bg-indigo-50 text-indigo-700 border-indigo-200/50 min-w-[120px] justify-center"
+                            )}
+                            title="Enter Mock Exam Hall"
+                        >
+                            <BookOpen className="w-5 h-5 stroke-[2.5]" />
+                            <span className="text-sm font-black tracking-wide uppercase whitespace-nowrap">{t('nav.mock_exam') || "Mock Exam"}</span>
+                        </button>
+                    )}
+
+                    {user && activeAgentId !== 'ace' && (
                         <button
                             onClick={handleOpenMastery}
                             className={cn(
@@ -1208,7 +1399,23 @@ const ChatInterface = ({ onOpenQuest }) => {
                             title={t('nav.mastery_compass')}
                         >
                             <Compass className="w-5 h-5 stroke-[2.5]" />
-                            <span className="text-sm font-black tracking-wide uppercase">{t('nav.mastery_compass')}</span>
+                            <span className="text-sm font-black tracking-wide uppercase whitespace-nowrap">
+                                {activeAgentId === 'math' ? t('math_ability.title') : t('nav.mastery_compass')}
+                            </span>
+                        </button>
+                    )}
+
+                    {/* Dream Programs Button - Ace Sir Only */}
+                    {user && activeAgentId === 'ace' && (
+                        <button
+                            onClick={() => setIsDreamProgramsOpen(true)}
+                            className={cn(
+                                "px-6 py-2.5 rounded-full transition-all flex items-center gap-2 shadow-sm border hover:shadow-md active:scale-95 bg-orange-50 text-orange-700 border-orange-200/50 min-w-[120px] justify-center"
+                            )}
+                            title="夢想學科清單"
+                        >
+                            <Target className="w-5 h-5 stroke-[2.5]" />
+                            <span className="text-sm font-black tracking-wide uppercase">夢想學科</span>
                         </button>
                     )}
                 </div>
@@ -1252,24 +1459,7 @@ const ChatInterface = ({ onOpenQuest }) => {
                         <span>{isEnlarged ? t('chat.small') : t('chat.enlarge')}</span>
                     </button>
 
-                    {/* Language Toggle Button */}
-                    <button
-                        onClick={() => {
-                            const newLang = chatLanguage === 'en' ? 'zh-HK' : 'en';
-                            setChatLanguage(newLang);
-                            toggleLanguage(); // Sync UI language
-                        }}
-                        className={cn(
-                            "p-1.5 border border-transparent hover:border-primary/20 transition-all rounded-md flex items-center gap-1.5 font-bold text-[10px] uppercase tracking-wide",
-                            chatLanguage === 'en'
-                                ? "bg-indigo-100 text-indigo-700 border-indigo-200"
-                                : "bg-red-100 text-red-700 border-red-200" // Canto/Trad Chi color
-                        )}
-                        title="Switch AI Response Language"
-                    >
-                        <span className="opacity-60">→</span>
-                        {chatLanguage === 'en' ? '繁體' : 'ENG'}
-                    </button>
+
                     <button
                         onClick={() => setIsFocusMode(!isFocusMode)}
                         className="p-2 text-primary/60 hover:text-primary transition-colors rounded-lg hover:bg-primary/10"
@@ -1281,131 +1471,148 @@ const ChatInterface = ({ onOpenQuest }) => {
             </div>
 
             {/* Chat Area - Scrollable */}
-            <div className="flex-1 overflow-y-auto p-8 flex flex-col gap-6">
-                {messages.map((msg, idx) => (
-                    <div key={idx} className={cn("flex items-start gap-4 max-w-[80%]", msg.role === 'user' ? "ml-auto justify-end" : "")}>
+            <div ref={chatContainerRef} className="flex-1 overflow-y-auto p-8 flex flex-col gap-6">
+                {messages.map((msg, idx) => {
+                    const isLastUserMsg = msg.role === 'user' && idx === messages.findLastIndex(m => m.role === 'user');
 
-                        {/* AI Avatar (Left) */}
-                        {msg.role === 'assistant' && (
-                            <div className="w-[44px] h-[44px] shrink-0 rounded-full overflow-hidden border border-black/5 bg-white shadow-sm">
-                                <img src={activeAgent.avatar} alt="AI" className="w-full h-full object-cover object-top" />
-                            </div>
-                        )}
-
-                        {/* Message Bubble */}
-                        <div className={cn(
-                            "rounded-2xl shadow-sm border border-black/5 flex flex-col gap-3 transition-all",
-                            isEnlarged ? "p-5" : "p-4",
-                            msg.role === 'user'
-                                ? "bg-primary/10 dark:bg-primary/20 rounded-tr-none"
-                                : "bg-white dark:bg-[#3d2c20] rounded-tl-none"
-                        )}>
-                            {msg.image && (
-                                <img src={msg.image.preview} alt="Uploaded handwriting" className="max-w-xs rounded-lg border border-black/10 shadow-sm" />
+                    return (
+                        <div
+                            key={idx}
+                            ref={isLastUserMsg ? lastUserMessageRef : null}
+                            className={cn(
+                                "flex items-start gap-4 transition-all duration-300",
+                                msg.role === 'user' ? "ml-auto justify-end max-w-[80%]" : "max-w-[95%]"
                             )}
-                            <p className={cn(
-                                "text-[#1d130c] dark:text-white whitespace-pre-wrap transition-all",
-                                isEnlarged ? "text-[16px] leading-relaxed" : "text-[14px] leading-snug"
+                        >
+
+                            {/* AI Avatar (Left) */}
+                            {msg.role === 'assistant' && (
+                                <div className={cn(
+                                    "w-[44px] h-[44px] shrink-0 rounded-full overflow-hidden border border-black/5 bg-white shadow-sm transition-all",
+                                    (avatarState === 'TALKING' || avatarState === 'THINKING') && "animate-talking-glow ring-2 ring-green-400"
+                                )}>
+                                    <img src={activeAgent.avatar} alt="AI" className="w-full h-full object-cover object-top" />
+                                </div>
+                            )}
+
+                            {/* Message Bubble */}
+                            <div className={cn(
+                                "rounded-2xl shadow-sm border border-black/5 flex flex-col gap-3 transition-all",
+                                isEnlarged ? "p-5" : "p-4",
+                                msg.role === 'user'
+                                    ? "bg-primary/10 dark:bg-primary/20 rounded-tr-none"
+                                    : "bg-white dark:bg-[#3d2c20] rounded-tl-none"
                             )}>
-                                {formatMessageContent(msg.content)}
-                            </p>
-                            {/* Custom Component: Active Mock List (Just Generated) */}
-                            {msg.customComponent === 'active_mock_list' && (
-                                <div className="mt-4 grid gap-2">
-                                    {msg.mocks.map((mock, mIdx) => (
-                                        <button
-                                            key={mIdx}
-                                            onClick={() => handleSendMessage(`[ACTIVATING_EXAM_MODE] I want to study ${mock.id}`)}
-                                            className="text-left w-full p-3 bg-white hover:bg-white/80 dark:bg-black/20 dark:hover:bg-black/30 border border-black/5 rounded-xl transition-all group flex items-center justify-between shadow-sm"
-                                        >
-                                            <div>
-                                                <div className="font-bold text-primary text-sm">📝 {mock.title}</div>
-                                                {/* Description removed per user request */}
-                                            </div>
-                                            <ArrowRight className="w-4 h-4 text-gray-300 group-hover:text-primary transition-colors" />
-                                        </button>
-                                    ))}
-                                </div>
-                            )}
-
-                            {msg.customComponent === 'exam_link' && (
-                                <div className="mt-4 space-y-3">
-                                    {(msg.examType === 'writing' ? writingExams : (msg.examType === 'listening' ? listeningExams : (msg.examType === 'speaking' ? speakingExams : mockExams))).length === 0 ? (
-                                        <div className="p-3 bg-gray-50 border rounded-lg text-sm text-gray-500 italic">
-                                            {t('chat.no_mock_exams')}
-                                        </div>
-                                    ) : (
-                                        (msg.examType === 'writing' ? writingExams : (msg.examType === 'listening' ? listeningExams : (msg.examType === 'speaking' ? speakingExams : mockExams))).map(exam => (
-                                            <Link
-                                                key={exam.id}
-                                                to={
-                                                    msg.examType === 'writing' ? `/writing/exam/${exam.id}` :
-                                                        msg.examType === 'listening' ? `/listening/exam/${exam.id}` :
-                                                            msg.examType === 'speaking' ? `/speaking-exam/${exam.id}` :
-                                                                `/exam/${exam.id}`
-                                                }
-                                                className="block p-4 bg-primary/5 hover:bg-primary/10 border border-primary/20 rounded-xl transition-all group"
+                                {msg.image && (
+                                    <img src={msg.image.preview} alt="Uploaded handwriting" className="max-w-xs rounded-lg border border-black/10 shadow-sm" />
+                                )}
+                                <p className={cn(
+                                    "text-[#1d130c] dark:text-white whitespace-pre-wrap transition-all",
+                                    isEnlarged ? "text-[16px] leading-relaxed" : "text-[14px] leading-snug"
+                                )}>
+                                    {formatMessageContent(msg.content)}
+                                </p>
+                                {/* Custom Component: Active Mock List */}
+                                {msg.customComponent === 'active_mock_list' && (
+                                    <div className="mt-4 grid gap-2">
+                                        {msg.mocks.map((mock, mIdx) => (
+                                            <button
+                                                key={mIdx}
+                                                onClick={() => handleSendMessage(`[ACTIVATING_EXAM_MODE] I want to study ${mock.id}`)}
+                                                className="text-left w-full p-3 bg-white hover:bg-white/80 dark:bg-black/20 dark:hover:bg-black/30 border border-black/5 rounded-xl transition-all group flex items-center justify-between shadow-sm"
                                             >
-                                                <div className="flex justify-between items-center">
-                                                    <div>
-                                                        <h4 className="font-bold text-primary">{exam.title}</h4>
-                                                        <p className="text-xs text-[#a16b45] mt-1">
-                                                            {msg.examType === 'speaking' ? '' : (exam.topic || exam.topic_category) + ' • '}
-                                                            {
-                                                                msg.examType === 'writing' ? '120 min' :
-                                                                    msg.examType === 'listening' ? '60 min' :
-                                                                        msg.examType === 'speaking' ? '20 min' :
-                                                                            `${exam.reading_time_minutes} min`
-                                                            }
-                                                        </p>
-                                                    </div>
-                                                    <ArrowRight className="w-5 h-5 text-primary opacity-0 group-hover:opacity-100 transition-opacity" />
+                                                <div>
+                                                    <div className="font-bold text-primary text-sm">📝 {mock.title}</div>
                                                 </div>
-                                            </Link>
-                                        ))
-                                    )}
-                                </div>
-                            )}
-                            {msg.customComponent === 'launch_card' && (
-                                <LaunchCard
-                                    payload={msg.payload}
-                                    onLaunch={(payload) => {
-                                        // If it's EXAM_ROUTER, use existing exam logic, otherwise open Lab
-                                        if (payload.module === 'EXAM_ROUTER') {
-                                            handleSendMessage(`[ACTIVATING_EXAM_MODE] I want to study ${payload.params.type}`);
-                                        } else {
-                                            const params = payload.params || {};
-                                            const searchParams = new URLSearchParams();
-                                            if (params.topic) searchParams.set('topic', params.topic);
-                                            if (params.level) searchParams.set('level', params.level);
-                                            if (params.focus && Array.isArray(params.focus)) {
-                                                params.focus.forEach(f => searchParams.append('focus', f));
-                                            }
-                                            navigate(`/lab?${searchParams.toString()}`);
-                                        }
-                                    }}
-                                />
-                            )}
-                        </div>
+                                                <ArrowRight className="w-4 h-4 text-gray-300 group-hover:text-primary transition-colors" />
+                                            </button>
+                                        ))}
+                                    </div>
+                                )}
 
-                        {/* User Avatar (Right) */}
-                        {/* User Avatar (Right) */}
-                        {msg.role === 'user' && (
-                            <div className="w-[44px] h-[44px] shrink-0 rounded-full bg-gray-200 overflow-hidden">
-                                <img
-                                    src={getStudentAvatar()}
-                                    alt="User"
-                                    className="w-full h-full object-cover"
-                                />
+                                {/* TUTOR CARDS */}
+                                {msg.customComponent === 'polisher_card' && (
+                                    <PolisherCard data={msg.payload} />
+                                )}
+                                {msg.customComponent === 'decoder_card' && (
+                                    <DecoderCard data={msg.payload} />
+                                )}
+                                {msg.customComponent === 'vocab_card' && (
+                                    <VocabCard data={msg.payload} />
+                                )}
+
+                                {/* Launch Card */}
+                                {msg.customComponent === 'launch_card' && (
+                                    <LaunchCard
+                                        payload={msg.payload}
+                                        onConfirm={() => {
+                                            const payload = msg.payload;
+                                            if (payload.module === 'EXAM_ROUTER') {
+                                                handleSendMessage(`[ACTIVATING_EXAM_MODE] I want to study ${payload.params.type}`);
+                                            } else if (payload.module === 'MATHS_LAB') {
+                                                const params = payload.params || {};
+                                                const searchParams = new URLSearchParams();
+                                                if (params.topic) searchParams.set('topic', params.topic);
+                                                if (params.level) searchParams.set('level', params.level);
+                                                navigate(`/maths-lab?${searchParams.toString()}`);
+                                            } else {
+                                                const params = payload.params || {};
+                                                const searchParams = new URLSearchParams();
+                                                if (params.topic) searchParams.set('topic', params.topic);
+                                                if (params.level) searchParams.set('level', params.level);
+                                                if (params.focus && Array.isArray(params.focus)) {
+                                                    params.focus.forEach(f => searchParams.append('focus', f));
+                                                }
+                                                navigate(`/lab?${searchParams.toString()}`);
+                                            }
+                                        }}
+                                    />
+                                )}
+
+                                {/* Exam Link */}
+                                {msg.customComponent === 'exam_link' && (
+                                    <div className="mt-3 flex flex-wrap gap-2">
+                                        {(msg.examType === 'writing' ? writingExams : (msg.examType === 'listening' ? listeningExams : (msg.examType === 'speaking' ? speakingExams : mockExams)))
+                                            .filter(e => e.type === msg.examType || !msg.examType)
+                                            .map(exam => (
+                                                <button
+                                                    key={exam.id}
+                                                    onClick={() => {
+                                                        const event = new CustomEvent('open-exam-modal', { detail: { examId: exam.id, type: exam.type } });
+                                                        window.dispatchEvent(event);
+                                                    }}
+                                                    className="bg-indigo-50 text-indigo-700 px-3 py-1.5 rounded-lg text-sm font-medium hover:bg-indigo-100 transition-colors border border-indigo-200 flex items-center gap-1"
+                                                >
+                                                    📝 {exam.title}
+                                                </button>
+                                            ))}
+                                    </div>
+                                )}
                             </div>
-                        )}
-                    </div>
-                ))}
+
+                            {/* User Avatar (Right) */}
+                            {/* User Avatar (Right) */}
+                            {
+                                msg.role === 'user' && (
+                                    <div className="w-[44px] h-[44px] shrink-0 rounded-full bg-gray-200 overflow-hidden">
+                                        <img
+                                            src={getStudentAvatar()}
+                                            alt="User"
+                                            className="w-full h-full object-cover"
+                                        />
+                                    </div>
+                                )
+                            }
+                        </div>
+                    );
+                })}
 
                 {/* Thinking Indicator */}
                 {avatarState === 'THINKING' && (
                     <div className="flex items-start gap-4 max-w-[80%]">
-                        <div className="size-10 shrink-0 rounded-full overflow-hidden border border-black/5 bg-white shadow-sm">
+                        <div className={cn(
+                            "size-10 shrink-0 rounded-full overflow-hidden border border-black/5 bg-white shadow-sm animate-talking-glow ring-2 ring-green-400"
+                        )}>
                             <img src={activeAgent.avatar} alt="AI" className="w-full h-full object-cover object-top" />
                         </div>
                         <div className="bg-white dark:bg-[#3d2c20] p-4 rounded-2xl rounded-tl-none shadow-sm border border-black/5">
@@ -1425,16 +1632,7 @@ const ChatInterface = ({ onOpenQuest }) => {
                 {/* Suggestion Chips */}
                 {showChips && (
                     <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide no-scrollbar -mx-2 px-2">
-                        {/* Mock Exam Button - Shown if diagnostic is done */}
-                        {hasDiagnostic && (
-                            <button
-                                onClick={() => handleSendMessage("Start Mock Exam")}
-                                className="whitespace-nowrap px-4 py-2 rounded-full border border-primary/40 bg-primary/5 text-sm font-bold text-primary hover:bg-primary hover:text-white hover:scale-105 transition-all shadow-sm flex items-center gap-2"
-                            >
-                                <span>🚀</span>
-                                {t('chat.start_mock')}
-                            </button>
-                        )}
+
 
                         {/* Dynamic AI Chips */}
                         {/* Dynamic AI Chips */}
@@ -1443,7 +1641,7 @@ const ChatInterface = ({ onOpenQuest }) => {
                                 const val = typeof c === 'string' ? c : c.value;
                                 const lbl = typeof c === 'string' ? c : c.label;
                                 // 1. Filter out Mock Exam duplicates
-                                if (["Start Mock Exam", "Start mock exam", "模擬考試", "開始模擬考試"].includes(val)) return false;
+                                if (["模擬考試", "開始模擬考試"].includes(val)) return false;
 
                                 // 2. Semantic Deduplication (The Fix)
                                 // If we have "Yes, please", remove "Yes".
@@ -1458,9 +1656,22 @@ const ChatInterface = ({ onOpenQuest }) => {
                                     });
                                     if (hasBetter) return false;
                                 }
+
+                                // 3. Filter out calibration chips from dynamic chips (we'll use suggestionChips for that)
+                                if (val === "I want to start the diagnostic test") return false;
+
                                 return true;
                             })
-                            : suggestionChips.filter(c => c.value !== "Start Mock Exam")
+                                // Prepend calibration chip to dynamic chips if user hasn't completed diagnostic
+                                .reduce((acc, current, idx) => {
+                                    if (!hasDiagnostic && acc.length === 0) {
+                                        acc.push({ label: t('chat.start_calibration'), value: "I want to start the diagnostic test", emoji: "⚡" });
+                                    }
+                                    acc.push(current);
+                                    return acc;
+                                }, [])
+                            // Fallback to suggestionChips (already contains calibration when !hasDiagnostic)
+                            : suggestionChips
                         )
                             .map((item, idx) => {
                                 // Handle dynamic vs static chips
@@ -1512,47 +1723,53 @@ const ChatInterface = ({ onOpenQuest }) => {
                         accept="image/*"
                         className="hidden"
                     />
-                    <button
-                        type="button"
-                        onClick={() => fileInputRef.current?.click()}
-                        className={cn("p-2 transition-colors rounded-full relative", selectedImage ? "text-primary" : "text-[#a16b45] hover:text-primary")}
-                        title="Upload Handwriting / Photo"
-                    >
-                        <Paperclip className="w-5 h-5" />
-                        {selectedImage && (
-                            <span className="absolute top-0 right-0 w-2 h-2 bg-primary rounded-full border-2 border-white"></span>
-                        )}
-                    </button>
-                    <button
-                        onClick={() => setIsUploaderOpen(true)}
-                        className="p-2 text-[#a16b45] hover:text-primary transition-colors rounded-full"
-                        title="Analyze Handwriting (Grade Essay)"
-                    >
-                        <Edit3 className="w-5 h-5" />
-                    </button>
-                    <button
-                        onClick={handleVoiceRecording}
-                        className={cn(
-                            "p-2 transition-all rounded-full relative",
-                            isRecording ? "bg-red-500 text-white animate-pulse" : "text-[#a16b45] hover:text-primary"
-                        )}
-                        title={isRecording ? `Recording... ${recordingTime}s / 30s` : "Record your voice for pronunciation feedback"}
-                    >
-                        <Radio className="w-5 h-5" />
-                        {isRecording && (
-                            <>
-                                {/* Pulsing red dot indicator */}
-                                <span className="absolute -top-1 -right-1 flex h-3 w-3">
-                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                                    <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
-                                </span>
-                                {/* Recording timer */}
-                                <div className="absolute -top-10 left-1/2 -translate-x-1/2 bg-red-500 text-white px-3 py-1 rounded-full text-xs font-bold whitespace-nowrap shadow-lg">
-                                    🔴 {recordingTime}s / 30s
-                                </div>
-                            </>
-                        )}
-                    </button>
+                    {activeAgentId !== 'ace' && (
+                        <button
+                            type="button"
+                            onClick={() => fileInputRef.current?.click()}
+                            className={cn("p-2 transition-colors rounded-full relative", selectedImage ? "text-primary" : "text-[#a16b45] hover:text-primary")}
+                            title={activeAgentId === 'math' ? t('chat.upload_tooltip_math') : "Upload Handwriting / Photo"}
+                        >
+                            <Paperclip className="w-5 h-5" />
+                            {selectedImage && (
+                                <span className="absolute top-0 right-0 w-2 h-2 bg-primary rounded-full border-2 border-white"></span>
+                            )}
+                        </button>
+                    )}
+                    {activeAgentId !== 'math' && activeAgentId !== 'ace' && (
+                        <button
+                            onClick={() => setIsUploaderOpen(true)}
+                            className="p-2 text-[#a16b45] hover:text-primary transition-colors rounded-full"
+                            title="Analyze Handwriting (Grade Essay)"
+                        >
+                            <Edit3 className="w-5 h-5" />
+                        </button>
+                    )}
+                    {activeAgentId !== 'math' && activeAgentId !== 'ace' && (
+                        <button
+                            onClick={handleVoiceRecording}
+                            className={cn(
+                                "p-2 transition-all rounded-full relative",
+                                isRecording ? "bg-red-500 text-white animate-pulse" : "text-[#a16b45] hover:text-primary"
+                            )}
+                            title={isRecording ? `Recording... ${recordingTime}s / 30s` : "Record your voice for pronunciation feedback"}
+                        >
+                            <Radio className="w-5 h-5" />
+                            {isRecording && (
+                                <>
+                                    {/* Pulsing red dot indicator */}
+                                    <span className="absolute -top-1 -right-1 flex h-3 w-3">
+                                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                                        <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
+                                    </span>
+                                    {/* Recording timer */}
+                                    <div className="absolute -top-10 left-1/2 -translate-x-1/2 bg-red-500 text-white px-3 py-1 rounded-full text-xs font-bold whitespace-nowrap shadow-lg">
+                                        🔴 {recordingTime}s / 30s
+                                    </div>
+                                </>
+                            )}
+                        </button>
+                    )}
                     <div className="flex-1 flex flex-col relative">
                         {selectedImage && (
                             <div className="absolute bottom-full left-0 mb-2 p-2 bg-white dark:bg-[#1a110a] rounded-xl shadow-lg border border-primary/20 flex items-center gap-2 animate-in slide-in-from-bottom-2">
@@ -1620,6 +1837,18 @@ const ChatInterface = ({ onOpenQuest }) => {
                 onClose={() => setIsMasteryOpen(false)}
                 skillData={masteryData}
                 history={masteryHistory}
+            />
+
+            {/* Math Ability Modal */}
+            <MathAbilityModal
+                isOpen={isMathAbilityOpen}
+                onClose={() => setIsMathAbilityOpen(false)}
+            />
+
+            {/* Dream University List Modal (Ace Sir) */}
+            <DreamProgramsModal
+                isOpen={isDreamProgramsOpen}
+                onClose={() => setIsDreamProgramsOpen(false)}
             />
         </section>
     );

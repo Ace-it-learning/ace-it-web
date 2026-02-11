@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { useLanguage } from '../context/LanguageContext';
-import { Trophy, Calendar, Star, ArrowLeft, Award } from 'lucide-react';
+import { Trophy, Calendar, Star, ArrowLeft, Award, ShoppingBag } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const AchievementTimeline = () => {
@@ -46,9 +46,11 @@ const AchievementTimeline = () => {
         return translated === key ? event.title : translated;
     };
 
-    const getEventIcon = (type) => {
-        if (type === 'exam') return '📝';
-        if (type === 'milestone') return '🎉';
+    const getEventIcon = (event) => {
+        if (event.subject === 'maths') return '🧮';
+        if (event.subject === 'english') return '📚';
+        if (event.type === 'exam') return '📝';
+        if (event.type === 'milestone') return '🎉';
         return '🏆';
     };
 
@@ -59,21 +61,19 @@ const AchievementTimeline = () => {
         const diffHours = Math.floor(diffMs / (1000 * 60 * 60));
         const diffDays = Math.floor(diffHours / 24);
 
-        if (diffHours < 1) return 'Just now';
-        if (diffHours < 24) return `${diffHours} hour${diffHours > 1 ? 's' : ''} ago`;
-        if (diffDays === 1) return 'Yesterday';
-        if (diffDays < 7) return `${diffDays} days ago`;
+        if (diffHours < 1) return t('timeline.just_now');
+        if (diffHours < 24) return t('timeline.hours_ago').replace('{{count}}', diffHours).replace('{{s}}', diffHours > 1 ? 's' : '');
+        if (diffDays === 1) return t('timeline.yesterday');
+        if (diffDays < 7) return t('timeline.days_ago').replace('{{count}}', diffDays);
         return eventDate.toLocaleDateString();
     };
 
-    // Calculate XP progress to next level (100 XP per level)
-    const currentXP = stats?.xp || 0;
+    // Use level stats from backend
+    const currentXP = stats?.total_xp || stats?.xp || 0;
     const currentLevel = stats?.level || 1;
-    const xpForCurrentLevel = (currentLevel - 1) * 100;
-    const xpForNextLevel = currentLevel * 100;
-    const xpProgress = currentXP - xpForCurrentLevel;
-    const xpNeeded = xpForNextLevel - xpForCurrentLevel;
-    const progressPercent = (xpProgress / xpNeeded) * 100;
+    const progressPercent = stats?.progressPercent || 0;
+    const xpProgress = stats?.currentStepXP || 0;
+    const xpNeeded = stats?.nextLevelXP || 100;
 
     return (
         <div className="min-h-screen bg-gray-50 py-8 px-4">
@@ -97,9 +97,19 @@ const AchievementTimeline = () => {
                     {/* Left Sidebar - Stats (Sticky) */}
                     <aside className="w-80 shrink-0">
                         <div className="sticky top-6 space-y-3">
+
                             {/* Total XP Card */}
-                            <div className="bg-gradient-to-br from-yellow-400 to-orange-500 p-4 rounded-2xl text-white shadow-lg">
-                                <Trophy className="w-8 h-8 mb-2 opacity-80" />
+                            <div className="bg-gradient-to-br from-yellow-400 to-orange-500 p-4 rounded-2xl text-white shadow-lg relative group overflow-hidden">
+                                <div className="flex justify-between items-start mb-2">
+                                    <Trophy className="w-8 h-8 opacity-80" />
+                                    <button
+                                        onClick={() => navigate('/redemption')}
+                                        className="bg-white hover:bg-orange-50 text-orange-600 shadow-sm px-3 py-1.5 rounded-full text-[10px] font-bold flex items-center gap-1.5 transition-all outline-none"
+                                    >
+                                        <ShoppingBag className="w-3.5 h-3.5" />
+                                        {t('timeline.redeem')}
+                                    </button>
+                                </div>
                                 <p className="text-[10px] font-bold opacity-90 uppercase tracking-widest mb-1">
                                     {t('timeline.total_xp')}
                                 </p>
@@ -113,7 +123,7 @@ const AchievementTimeline = () => {
                                     />
                                 </div>
                                 <p className="text-[10px] mt-1.5 opacity-75">
-                                    {xpProgress}/{xpNeeded} XP to Level {currentLevel + 1}
+                                    {xpProgress}/{xpNeeded} XP {t('mastery.to_level')} {currentLevel + 1}
                                 </p>
                             </div>
 
@@ -138,11 +148,13 @@ const AchievementTimeline = () => {
                                 </p>
                             </div>
 
-                            {/* Future: Achievements Button */}
-                            <button className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white p-3 rounded-xl font-bold text-sm flex items-center justify-center gap-2 hover:scale-105 transition-transform shadow-lg opacity-50 cursor-not-allowed">
+                            {/* My Collection Button */}
+                            <button
+                                onClick={() => navigate('/collection')}
+                                className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white p-3 rounded-xl font-bold text-sm flex items-center justify-center gap-2 hover:scale-105 transition-transform shadow-lg"
+                            >
                                 <Award className="w-4 h-4" />
-                                View Achievements
-                                <span className="text-[10px] bg-white/20 px-2 py-0.5 rounded-full">Soon</span>
+                                {t('collection.my_collection')}
                             </button>
                         </div>
                     </aside>
@@ -152,7 +164,7 @@ const AchievementTimeline = () => {
                         <div className="bg-white rounded-3xl p-8 shadow-sm border border-gray-100">
                             <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
                                 {t('timeline.history')}
-                                <span className="text-sm font-normal text-gray-400">(Newest First)</span>
+                                <span className="text-sm font-normal text-gray-400">{t('timeline.newest_first')}</span>
                             </h2>
 
                             {loading ? (
@@ -172,15 +184,31 @@ const AchievementTimeline = () => {
                                             className="flex gap-4 p-5 rounded-2xl border-2 border-gray-100 hover:border-primary/30 hover:shadow-md transition-all group bg-gradient-to-r from-gray-50 to-white"
                                         >
                                             {/* Icon */}
-                                            <div className="size-14 rounded-2xl bg-gradient-to-br from-primary/10 to-primary/5 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
-                                                <span className="text-3xl">{getEventIcon(event.type)}</span>
+                                            <div className={`size-14 rounded-2xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform ${event.subject === 'maths' ? 'bg-blue-50' :
+                                                event.subject === 'english' ? 'bg-purple-50' :
+                                                    'bg-primary/10'
+                                                }`}>
+                                                <span className="text-3xl">{getEventIcon(event)}</span>
                                             </div>
 
                                             {/* Content */}
                                             <div className="flex-1 min-w-0">
-                                                <h3 className="font-bold text-gray-900 text-lg mb-1">
-                                                    {getEventTitle(event)}
-                                                </h3>
+                                                <div className="flex items-center gap-2 mb-1">
+                                                    <h3 className="font-bold text-gray-900 text-lg">
+                                                        {getEventTitle(event)}
+                                                    </h3>
+                                                    {event.subject && (
+                                                        <span className={`px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider ${event.subject === 'maths' ? 'bg-blue-100 text-blue-700' : 'bg-purple-100 text-purple-700'
+                                                            }`}>
+                                                            {event.subject}
+                                                        </span>
+                                                    )}
+                                                </div>
+                                                {event.topic && (
+                                                    <p className="text-xs font-medium text-slate-500 mb-1">
+                                                        {t('timeline.topic')}: <span className="text-slate-700 italic">{event.topic.replace(/_/g, ' ')}</span>
+                                                    </p>
+                                                )}
                                                 <p className="text-sm text-gray-500 flex items-center gap-2">
                                                     <Calendar className="w-3.5 h-3.5" />
                                                     {getRelativeTime(event.date)}

@@ -51,52 +51,17 @@ const ListeningExamPage = () => {
         return () => synth.current.cancel();
     }, [examId]);
 
-    // --- 2. Prep Timer ---
-    useEffect(() => {
-        if (status === 'PREP' && prepTime > 0) {
-            const timer = setInterval(() => setPrepTime(p => p - 1), 1000);
-            return () => clearInterval(timer);
-        } else if (status === 'PREP' && prepTime === 0) {
-            // Timer expired naturally
-            startAudio();
-        }
-    }, [status, prepTime]);
-
     // --- 3. Audio Engine ---
-    const startAudio = () => {
-        if (status === 'PLAYING') return; // Prevent double start
-        setStatus('PLAYING');
-
-        // Ensure user gesture activation for speech
-        if (window.speechSynthesis.paused) window.speechSynthesis.resume();
-
-        if (!examData) return;
-
-        const fullScript = [
-            ...(examData.Part_A?.script || []),
-            ...(examData.Part_B?.script || [])
-        ];
-
-        scriptQueue.current = fullScript;
-
-        let startIndex = 0;
-        if (activeTab === 'Part_B') {
-            const partBIndex = fullScript.findIndex(line =>
-                line.text.includes("Part B") || line.text.includes("Integrated Learning Portfolio")
-            );
-            if (partBIndex !== -1) startIndex = partBIndex;
-        }
-
-        playNextLine(startIndex);
-    };
-
     const playNextLine = (index) => {
         if (index >= scriptQueue.current.length) {
-            setStatus('FINISHED');
+            console.log("Audio complete. Transitioning to Writing Period.");
+            setStatus('WRITING_PERIOD');
+            setPrepTime(75 * 60);
             return;
         }
 
         const line = scriptQueue.current[index];
+        console.log(`Playing line ${index}: [${line.speaker}] ${line.text.substring(0, 30)}...`);
 
         // Update Task Display
         if (line.text.includes("Task") || line.text.includes("Part")) {
@@ -110,20 +75,25 @@ const ListeningExamPage = () => {
             setActiveTab('Part_B');
         }
 
-        // Handle Pauses (e.g., "(10-second pause)")
+        // Handle Pauses
         const pauseMatch = line.text.match(/\((\d+)[-\s]second pause\)/i);
         if (pauseMatch) {
             const seconds = parseInt(pauseMatch[1]);
-            // Force longer pauses for realism if the AI generated short ones?
-            // Optional: Math.max(seconds, 30) // Enforce min 30s?
-            // Let's stick to script for now, but user can regenerate.
+            console.log(`Pausing for ${seconds}s`);
             setTimeout(() => playNextLine(index + 1), seconds * 1000);
             return;
         }
 
         const utterance = new SpeechSynthesisUtterance(line.text);
-        const voices = synth.current.getVoices();
-        const ukVoice = voices.find(v => v.name.includes("United Kingdom") || v.name.includes("UK") || v.lang === "en-GB");
+
+        // Voice selection fix: ensures voices are loaded
+        const getVoice = () => {
+            const voices = synth.current.getVoices();
+            return voices.find(v => v.name.includes("United Kingdom") || v.name.includes("UK") || v.lang === "en-GB")
+                || voices.find(v => v.lang.startsWith("en"));
+        };
+
+        const ukVoice = getVoice();
         if (ukVoice) utterance.voice = ukVoice;
 
         if (line.speaker === "Announcer") {
@@ -135,8 +105,66 @@ const ListeningExamPage = () => {
         }
 
         utterance.onend = () => playNextLine(index + 1);
+        utterance.onerror = (e) => {
+            console.error("Speech Error:", e);
+            playNextLine(index + 1); // Skip failed line
+        };
+
         synth.current.speak(utterance);
     };
+
+    const startAudio = () => {
+        if (status === 'PLAYING') return;
+        console.log("Audio Engine starting...");
+        setStatus('PLAYING');
+
+        if (window.speechSynthesis.paused) window.speechSynthesis.resume();
+
+        if (!examData) {
+            console.error("No exam data for audio!");
+            return;
+        }
+
+        const fullScript = [
+            ...(examData.Part_A?.script || []),
+            ...(examData.Part_B?.script || [])
+        ];
+
+        console.log(`Script Queue: ${fullScript.length} lines.`);
+        scriptQueue.current = fullScript;
+
+        if (fullScript.length === 0) {
+            console.warn("Script is empty! Jumping to Writing Period.");
+            setStatus('WRITING_PERIOD');
+            setPrepTime(75 * 60);
+            return;
+        }
+
+        let startIndex = 0;
+        if (activeTab === 'Part_B') {
+            const partBIndex = fullScript.findIndex(line =>
+                line.text.includes("Part B") || line.text.includes("Integrated Learning Portfolio")
+            );
+            if (partBIndex !== -1) startIndex = partBIndex;
+        }
+
+        playNextLine(startIndex);
+    };
+
+    // --- 2. Prep Timer & Writing Timer ---
+    useEffect(() => {
+        let timer;
+        if (status === 'PREP' && prepTime > 0) {
+            timer = setInterval(() => setPrepTime(p => p - 1), 1000);
+        } else if (status === 'PREP' && prepTime === 0) {
+            startAudio();
+        } else if (status === 'WRITING_PERIOD' && prepTime > 0) {
+            timer = setInterval(() => setPrepTime(p => p - 1), 1000);
+        } else if (status === 'WRITING_PERIOD' && prepTime === 0) {
+            setStatus('FINISHED');
+        }
+        return () => clearInterval(timer);
+    }, [status, prepTime]);
 
     // --- 4. Inputs & Cheat ---
     const handleInputChange = (taskId, qId, val) => {
@@ -374,16 +402,63 @@ const ListeningExamPage = () => {
                 {/* --- PART B VIEW (Split Screen) --- */}
                 {activeTab === 'Part_B' && (
                     <div className="h-full flex pb-24">
-                        {/* LEFT: Data File */}
-                        <div className="w-1/2 h-full overflow-y-auto bg-white border-r border-gray-200 p-8">
-                            <div className="mb-6 sticky top-0 bg-white/95 backdrop-blur py-2 border-b z-10">
+                        {/* LEFT: Data File with Document Tabs */}
+                        <div className="w-1/2 h-full overflow-y-auto bg-white border-r border-gray-200 flex flex-col">
+                            <div className="mb-6 sticky top-0 bg-white/95 backdrop-blur py-2 border-b z-10 px-8">
                                 <h2 className="text-xl font-bold text-gray-800">📂 Data File</h2>
                                 <p className="text-xs text-gray-500">Read this carefully to complete the tasks.</p>
                             </div>
-                            <div
-                                className="prose prose-sm max-w-none text-gray-700 leading-relaxed font-serif"
-                                dangerouslySetInnerHTML={{ __html: examData.Part_B.data_file }}
-                            />
+
+                            {(() => {
+                                // Normalize to array format (backward compatibility)
+                                const documents = Array.isArray(examData.Part_B.data_file)
+                                    ? examData.Part_B.data_file
+                                    : [{ id: 'legacy', title: 'Data File', type: 'document', content: examData.Part_B.data_file }];
+
+                                const [activeDocIdx, setActiveDocIdx] = React.useState(0);
+
+                                const getDocIcon = (type) => {
+                                    switch (type) {
+                                        case 'email': return '📧';
+                                        case 'minutes': return '📋';
+                                        case 'poster': return '🖼️';
+                                        case 'webpage': return '🌐';
+                                        case 'memo': return '📝';
+                                        default: return '📄';
+                                    }
+                                };
+
+                                return (
+                                    <>
+                                        {/* Document Tabs */}
+                                        {documents.length > 1 && (
+                                            <div className="flex gap-2 px-8 pb-4 overflow-x-auto border-b bg-gray-50">
+                                                {documents.map((doc, idx) => (
+                                                    <button
+                                                        key={doc.id}
+                                                        onClick={() => setActiveDocIdx(idx)}
+                                                        className={`flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-bold transition-all whitespace-nowrap ${activeDocIdx === idx
+                                                            ? 'bg-indigo-600 text-white shadow-md'
+                                                            : 'bg-white text-gray-600 hover:bg-gray-100 border border-gray-200'
+                                                            }`}
+                                                    >
+                                                        <span>{getDocIcon(doc.type)}</span>
+                                                        {doc.title}
+                                                    </button>
+                                                ))}
+                                            </div>
+                                        )}
+
+                                        {/* Document Content */}
+                                        <div className="flex-1 overflow-y-auto px-8 py-6">
+                                            <div
+                                                className="prose prose-sm max-w-none text-gray-700 leading-relaxed font-serif"
+                                                dangerouslySetInnerHTML={{ __html: documents[activeDocIdx]?.content || '' }}
+                                            />
+                                        </div>
+                                    </>
+                                );
+                            })()}
                         </div>
 
                         {/* RIGHT: Answer Sheet */}

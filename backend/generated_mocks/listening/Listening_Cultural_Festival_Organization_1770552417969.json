@@ -1,0 +1,332 @@
+{
+  "meta": {
+    "subject": "English Language",
+    "paper_id": "Paper 3 (Listening & Integrated Skills)",
+    "version": "2026_V1",
+    "description": "Mock Exam: Cultural Festival Organization"
+  },
+  "sections": {
+    "Part_A": {
+      "name": "Compulsory Section (Listening Tasks)",
+      "tasks": [
+        {
+          "id": "Task_1",
+          "type": "Form/Note-taking",
+          "context": "Booking a venue for a cultural festival workshop",
+          "audio_script": {
+            "speakers": [
+              "Female_1 (Festival Organizer)",
+              "Male_1 (Venue Manager)"
+            ],
+            "dialogue": [
+              {
+                "speaker": "Female_1",
+                "line": "Hello, this is Sarah Chen from the Cultural Festival Committee. I'm calling to inquire about booking a space at your community center for a workshop during the festival."
+              },
+              {
+                "speaker": "Male_1",
+                "line": "Good morning, Ms. Chen. I'm Mark Lee, the venue manager. We have several spaces available. When is the festival scheduled?"
+              },
+              {
+                "speaker": "Female_1",
+                "line": "It's from November 10th to 12th. We're looking for a space on November 11th, from 2 PM to 5 PM."
+              },
+              {
+                "speaker": "Male_1",
+                "line": "Let me check our availability. ... Yes, the Community Hall is free on that date and time. It can accommodate up to 100 people. Does that suit your needs?"
+              },
+              {
+                "speaker": "Female_1",
+                "line": "That sounds perfect. We're expecting around 70 participants. What's the rental fee for that time slot?"
+              },
+              {
+                "speaker": "Male_1",
+                "line": "The Community Hall rents for $800 per hour, so that would be $2400 for the three hours."
+              },
+              {
+                "speaker": "Female_1",
+                "line": "Okay. Does that include the use of audiovisual equipment?"
+              },
+              {
+                "speaker": "Male_1",
+                "line": "Yes, it includes a projector, screen, and microphone system. We also have tables and chairs available for setup."
+              },
+              {
+                "speaker": "Female_1",
+                "line": "Excellent. We'd like to book the hall then. Could you please send me a booking confirmation with the details and payment instructions?"
+              },
+              {
+                "speaker": "Male_1",
+                "line": "Certainly. I'll email that to you right away. What's your email address?"
+              },
+              {
+                "speaker": "Female_1",
+                "line": "It's sarah.chen@culturalfest.org."
+              },
+              {
+                "speaker": "Male_1",
+                "line": "Got it. You should receive the confirmation within the hour. Thank you for choosing our community center, Ms. Chen."
+              },
+              {
+                "speaker": "Female_1",
+                "line": "Thank you, Mr. Lee. We look forward to hosting our workshop there."
+              }
+            ]
+          },
+          "questions": [
+            {
+              "type": "Fill_in_Blanks",
+              "text": "Name of Festival Organizer: _________"
+            },
+            {
+              "type": "Fill_in_Blanks",
+              "text": "Name of Venue Manager: _________"
+            },
+            {
+              "type": "Fill_in_Blanks",
+              "text": "Date of Workshop: November _________"
+            },
+            {
+              "type": "Fill_in_Blanks",
+              "text": "Time of Workshop: _________ PM to 5 PM"
+            },
+            {
+              "type": "Fill_in_Blanks",
+              "text": "Venue Name: _________ Hall"
+            },
+            {
+              "type": "Fill_in_Blanks",
+              "text": "Rental Fee per Hour: $_________"
+            },
+            {
+              "type": "Multiple_Choice",
+              "text": "The rental fee includes:",
+              "options": [
+                "Catering",
+                "Audiovisual equipment",
+                "Security",
+                "Cleaning service"
+              ],
+              "answer": "Audiovisual equipment"
+            }
+          ]
+        },
+        {
+          "id": "Task_2",
+          "type": "Table Completion",
+          "context": "Comparing different cultural performance groups",
+          "audio_script": {
+            "speakers": [
+              "Female_1 (Festival Organizer)",
+              "Male_2 (Festival Organizer)",
+              "Female_2 (Committee Member)"
+            ],
+            "dialogue": [
+              {
+                "speaker": "Female_1",
+                "line": "Okay, team, let's finalize the performance schedule. We need to decide which cultural groups to invite. Let's review our notes."
+              },
+              {
+                "speaker": "Male_2",
+                "line": "Right. We have three groups: the 'Lion Dance Troupe', 'Traditional Chinese Orchestra', and the 'Bollywood Dance Group'."
+              },
+              {
+                "speaker": "Female_2",
+                "line": "The Lion Dance Troupe is definitely energetic and visually appealing. However, they require a large open space, which could be a problem."
+              },
+              {
+                "speaker": "Female_1",
+                "line": "True. And they are also the most expensive, quoting us $5000 for a 45-minute performance."
+              },
+              {
+                "speaker": "Male_2",
+                "line": "The Traditional Chinese Orchestra is a more budget-friendly option, at $3000 for a one-hour performance. They provide a serene and elegant atmosphere."
+              },
+              {
+                "speaker": "Female_2",
+                "line": "But they might not appeal to a younger audience. What about the Bollywood Dance Group?"
+              },
+              {
+                "speaker": "Female_1",
+                "line": "They're asking for $4000 for a 50-minute set. They're very vibrant and engaging, and their performance requires a medium-sized stage."
+              },
+              {
+                "speaker": "Male_2",
+                "line": "Considering our budget and space limitations, the Traditional Chinese Orchestra seems like the most practical choice."
+              },
+              {
+                "speaker": "Female_2",
+                "line": "I agree. Although the Lion Dance is exciting, the cost and space are prohibitive. Bollywood is good but still quite expensive."
+              },
+              {
+                "speaker": "Female_1",
+                "line": "Alright, let's book the Traditional Chinese Orchestra. We can promote them as a classic and timeless cultural experience."
+              }
+            ]
+          },
+          "questions": [
+            {
+              "type": "Table_Completion",
+              "header": [
+                "Performance Group",
+                "Cost",
+                "Duration",
+                "Space Requirements",
+                "Pros",
+                "Cons"
+              ],
+              "rows": [
+                {
+                  "Performance Group": "Lion Dance Troupe",
+                  "Cost": "$_________",
+                  "Duration": "45 minutes",
+                  "Space Requirements": "Large open space",
+                  "Pros": "Energetic, Visually appealing",
+                  "Cons": "_________, Requires large space"
+                },
+                {
+                  "Performance Group": "Traditional Chinese Orchestra",
+                  "Cost": "$3000",
+                  "Duration": "_________",
+                  "Space Requirements": "_________",
+                  "Pros": "Budget-friendly, Serene and elegant atmosphere",
+                  "Cons": "May not appeal to _________"
+                },
+                {
+                  "Performance Group": "Bollywood Dance Group",
+                  "Cost": "$_________",
+                  "Duration": "50 minutes",
+                  "Space Requirements": "Medium-sized stage",
+                  "Pros": "Vibrant and engaging",
+                  "Cons": "_________"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "Task_3",
+          "type": "Flow Chart / Diagram",
+          "context": "Steps to create a traditional paper cutting for the festival",
+          "audio_script": {
+            "speakers": [
+              "Male_1 (Instructor)"
+            ],
+            "dialogue": [
+              {
+                "speaker": "Male_1",
+                "line": "Hello everyone! Today, I'll guide you through the process of creating a traditional paper cutting for the Cultural Festival. First, take a square piece of red paper. Next, fold it diagonally in half to form a triangle. Then, fold the triangle in half again, creating a smaller triangle. Now, on the open edges of the triangle – not the folded edge – carefully draw your design with a pencil. Simple patterns like flowers or geometric shapes work best for beginners. Once you're happy with your design, use a pair of small, sharp scissors to cut along the lines you've drawn. Be patient and precise! After you've finished cutting, carefully unfold the paper to reveal your intricate paper cutting design. Finally, gently press the folds to flatten the design and display it proudly at the festival!"
+              }
+            ]
+          },
+          "questions": [
+            {
+              "type": "Fill_in_Blanks",
+              "text": "1. Take a _________ piece of red paper."
+            },
+            {
+              "type": "Fill_in_Blanks",
+              "text": "2. Fold it _________ in half to form a triangle."
+            },
+            {
+              "type": "Fill_in_Blanks",
+              "text": "3. Fold the _________ in half again, creating a smaller triangle."
+            },
+            {
+              "type": "Fill_in_Blanks",
+              "text": "4. Draw your _________ with a pencil on the open edges."
+            },
+            {
+              "type": "Fill_in_Blanks",
+              "text": "5. Use _________ to cut along the lines."
+            },
+            {
+              "type": "Fill_in_Blanks",
+              "text": "6. _________ the paper to reveal the design."
+            },
+            {
+              "type": "Fill_in_Blanks",
+              "text": "7. _________ the folds to flatten the design."
+            }
+          ]
+        },
+        {
+          "id": "Task_4",
+          "type": "Extended Response",
+          "context": "Lecture on the Significance of Cultural Festivals",
+          "audio_script": {
+            "speakers": [
+              "Female_2 (Professor)"
+            ],
+            "dialogue": [
+              {
+                "speaker": "Female_2",
+                "line": "Good morning, everyone. Today's lecture focuses on the significance of cultural festivals in contemporary society. Cultural festivals, at their core, are celebrations of shared heritage, traditions, and artistic expressions. They serve as vibrant platforms for communities to come together, reinforcing social bonds and fostering a sense of belonging. These festivals are not merely opportunities for entertainment; they play a crucial role in preserving and promoting cultural identity. Through music, dance, food, and storytelling, cultural festivals transmit invaluable knowledge and practices from one generation to the next. Furthermore, they contribute significantly to the economy by attracting tourists, generating revenue for local businesses, and creating employment opportunities. However, it's important to acknowledge the challenges associated with organizing these festivals. Maintaining authenticity in the face of commercialization, ensuring inclusivity and representation of diverse voices, and addressing environmental concerns are all critical considerations. Ultimately, the success of a cultural festival lies in its ability to balance tradition and innovation, engaging both local communities and global audiences in a meaningful and sustainable way. Therefore, it is paramount to support and promote cultural festivals as essential components of a thriving and interconnected world."
+              }
+            ]
+          },
+          "questions": [
+            {
+              "type": "Extended_Response",
+              "text": "According to the lecture, what are the key benefits and challenges of organizing cultural festivals? Elaborate on the role of cultural festivals in preserving cultural identity and contributing to the economy. Also, discuss the critical considerations for ensuring the success of a cultural festival."
+            }
+          ]
+        }
+      ]
+    },
+    "Part_B": {
+      "name": "Integrated Skills (Data File + Audio)",
+      "tasks": [
+        {
+          "id": "Task_5",
+          "type": "Email / Short Report",
+          "tone": "Formal",
+          "word_count": "180",
+          "context": "Write an email to the school principal summarizing the preliminary budget proposal for the Cultural Festival, highlighting key expenditure items and anticipated revenue sources. Suggest cost-effective measures without compromising the quality of the festival.",
+          "data_file_reference": "minutes"
+        },
+        {
+          "id": "Task_6",
+          "type": "Article / Speech",
+          "tone": "Persuasive",
+          "word_count": "230",
+          "context": "Write an article for the school newspaper arguing for the importance of student involvement in organizing the Cultural Festival. Emphasize the benefits of participation in terms of developing leadership skills, fostering teamwork, and enhancing cultural awareness.",
+          "data_file_reference": "webpage"
+        },
+        {
+          "id": "Task_7",
+          "type": "Proposal",
+          "tone": "Formal",
+          "word_count": "280",
+          "context": "Write a proposal to the Student Affairs Committee suggesting innovative ideas for promoting environmental sustainability during the Cultural Festival. Include specific measures for waste reduction, energy conservation, and promoting eco-friendly practices among participants.",
+          "data_file_reference": "memo"
+        }
+      ],
+      "data_file": [
+        {
+          "type": "minutes",
+          "content": "Meeting Minutes: Cultural Festival Committee\nDate: October 20, 2024\nAttendees: Sarah Chen (Chair), David Lee (Treasurer), Emily Wong (Secretary)\n\nBudget Discussion:\n- Total budget allocated: $20,000\n- Key expenditure items: Venue rental ($5,000), Performance fees ($7,000), Promotion and advertising ($3,000), Materials and supplies ($2,000), Contingency ($3,000)\n- Anticipated revenue sources: Ticket sales ($8,000), Sponsorships ($7,000), School grant ($5,000)\n- Proposed cost-effective measures: Negotiate lower venue rental fees, Utilize student volunteers for event management, Partner with local businesses for in-kind donations."
+        },
+        {
+          "type": "webpage",
+          "content": "Student Activities - Cultural Festival\nGet Involved!\nThe Cultural Festival is a fantastic opportunity for students to showcase their talents and contribute to the vibrant atmosphere of our school. We encourage all students to participate in the organization and execution of this exciting event. By joining the Cultural Festival Committee, you'll gain valuable experience in event planning, marketing, and community engagement. You'll also have the chance to develop essential skills such as leadership, teamwork, communication, and problem-solving. Furthermore, you'll enhance your cultural awareness and appreciation by interacting with diverse groups and learning about different traditions. Don't miss this chance to make a difference and create lasting memories! Sign up for the Cultural Festival Committee today!"
+        },
+        {
+          "type": "memo",
+          "content": "MEMORANDUM\nTo: Student Affairs Committee\nFrom: Environmental Sustainability Group\nDate: October 27, 2024\nSubject: Proposal for Sustainable Cultural Festival\n\nThe Environmental Sustainability Group is committed to promoting eco-friendly practices throughout our school. We propose implementing the following measures during the Cultural Festival:\n\n- Waste Reduction: Utilize reusable tableware and cutlery, set up recycling stations throughout the venue, encourage participants to bring their own water bottles.\n- Energy Conservation: Use energy-efficient lighting and equipment, promote walking and cycling to the festival, minimize the use of generators.\n- Eco-Friendly Practices: Partner with local environmental organizations, promote sustainable products and services, educate participants about environmental issues."
+        }
+      ]
+    }
+  },
+  "audio_strategy": {
+    "format": "JSON_Script",
+    "playback": "Browser_TTS",
+    "voices": [
+      "Male_1",
+      "Female_1",
+      "Male_2",
+      "Female_2"
+    ],
+    "instructions": "Tracks are played once only. 5 minutes prep time at start."
+  }
+}

@@ -4,6 +4,7 @@ import { db } from '../firebase';
 import { doc, getDoc, collection, getDocs } from 'firebase/firestore';
 import ReadingPanel from '../components/exam/ReadingPanel';
 import QuestionList from '../components/exam/QuestionList';
+import VocabularySidekick from '../components/tutor/VocabularySidekick';
 
 const ExamPage = () => {
     const { examId } = useParams();
@@ -91,20 +92,8 @@ const ExamPage = () => {
     }, [examId]);
 
 
-    useEffect(() => {
-        if (!examStarted) return;
-        if (timeLeft <= 0) {
-            alert("Time's up! Submitting exam automatically.");
-            handleSubmit(true); // Force submit
-            return;
-        }
-
-        const timer = setInterval(() => {
-            setTimeLeft(prev => prev - 1);
-        }, 1000);
-
-        return () => clearInterval(timer);
-    }, [examStarted, timeLeft]);
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const navigate = useNavigate();
 
     const formatTime = (seconds) => {
         const m = Math.floor(seconds / 60);
@@ -128,9 +117,6 @@ const ExamPage = () => {
             return { ...prev, [qId]: value };
         });
     };
-
-    const [isSubmitting, setIsSubmitting] = useState(false);
-    const navigate = useNavigate();
 
     const handleSubmit = async (forceSubmit = false) => {
         // 1. Mark current part as complete
@@ -188,6 +174,21 @@ const ExamPage = () => {
             setIsSubmitting(false);
         }
     };
+
+    useEffect(() => {
+        if (!examStarted) return;
+        if (timeLeft <= 0) {
+            alert("Time's up! Submitting exam automatically.");
+            handleSubmit(true); // Force submit
+            return;
+        }
+
+        const timer = setInterval(() => {
+            setTimeLeft(prev => prev - 1);
+        }, 1000);
+
+        return () => clearInterval(timer);
+    }, [examStarted, timeLeft]);
 
     if (loading) return <div className="p-10 text-center text-gray-600 animate-pulse">Loading Exam Content...</div>;
     if (error) return <div className="p-10 text-center text-red-500 font-bold bg-red-50 rounded-xl m-10">{error}</div>;

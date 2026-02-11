@@ -141,10 +141,12 @@ const MasteryModal = ({ isOpen, onClose }) => {
         });
 
         if (!peakSkill) return null;
-        const level = (strengths[peakSkill].level || strengths[peakSkill]);
+        const levelData = strengths[peakSkill];
+        const level = typeof levelData === 'object' ? (levelData.level || 0) : (levelData || 0);
+
         return {
             name: getSkillName(peakSkill, language),
-            value: `${t('mastery.level_prefix')}${t(`mastery.level_labels.${Math.floor(level)}`)}`
+            value: `${t('mastery.level_prefix')}${t(`mastery.level_labels.${Math.floor(Number(level))}`)}`
         };
     };
 
@@ -221,7 +223,7 @@ const MasteryModal = ({ isOpen, onClose }) => {
                                             <span className="text-xs font-bold text-cyan-100/80 uppercase tracking-widest">{t('mastery.overall_level')}</span>
                                         </div>
                                         <p className="text-4xl font-black text-white drop-shadow-[0_0_15px_rgba(34,211,238,0.5)]">
-                                            {t(`mastery.level_labels.${Math.floor(masteryData?.level || 0)}`)}
+                                            {t(`mastery.level_labels.${Math.floor(Number(masteryData?.level || 0))}`)}
                                         </p>
                                         <p className="text-[10px] text-cyan-400/80 mt-1 font-medium italic">HKDSE Equivalent Grade</p>
                                     </div>

@@ -29,15 +29,38 @@ RULES:
 
 SCHEMA:
 - CHAT: {"intent":"CHAT","bridge_text":null,"ui_command":null}
-- LAB: {"intent":"LAB","bridge_text":"(REQUIRED) A warm, encouraging sentence acknowledging the specific topic. E.g., 'Great idea! Let's sharpen your grammar skills in the Practice Lab.'", "ui_command":{"action":"LAUNCH_MODULE","module":"LEARNING_LAB","params":{...}}}
+- LAB: {"intent":"LAB","bridge_text":"(REQUIRED) Warm bridge text...", "ui_command":{"action":"LAUNCH_MODULE","module":"LEARNING_LAB","params":{...}}}
 - ONBOARDING: {"intent":"ONBOARDING","bridge_text":null,"ui_command":null}
+- TUTOR_ACTION: {"intent":"TUTOR_ACTION", "action_type": "POLISH" | "DECODE" | "VOCAB", "params": { "text": string, "has_image": boolean }}
 
 Student: "{{MESSAGE}}"
 History: "{{HISTORY}}"
+Image Attached: {{HAS_IMAGE}}
+
+[STRICT RULES]:
+1. **WRITING POLISHER (TUTOR_ACTION: POLISH)**:
+   - Trigger: Student sends a paragraph/essay OR asks to "polish", "improve", "upgrade", "refine" a sentence.
+   - Example: "Can you polish this?", "Make this sound better: [Sentence]", "Here is my essay...".
+   - Params: { "text": "Extracted text to polish" }
+
+2. **READING DECODER (TUTOR_ACTION: DECODE)**:
+   - Trigger: Student uploads an image of a text (Image Attached: true) OR asks to "explain structure", "decode this", "break down".
+   - Params: { "has_image": true/false }
+
+3. **VOCABULARY (TUTOR_ACTION: VOCAB)**:
+   - Trigger: Student asks for "vocab for [Topic]", "words for [Topic]", "golden sentences".
+   - Params: { "topic": "Topic Name" }
+
 [STRICT]: If context shows diagnostic_completed is false, any request for LAB or EXAM MUST include a bridge_text that politely explains: "I'd love to help with that! However, I first need to assess your current level with a quick 15-minute Study Calibration to unlock your roadmap. How about we start there first?"
-[STRICT]: If the student message contains "diagnostic" or "calibration", it is ALWAYS ONBOARDING, regardless of history.
+[STRICT]: If the student message contains "diagnostic" or "calibration", it is ALWAYS ONBOARDING.
 [STRICT]: If the student asks for a specific SUBJECT (Speaking, Reading, Writing, Listening, Maths, Chinese) or "practice", route to LAB or EXAM_ROUTER. 
-[STRICT]: If history shows a LAB proposal but student says "diagnostic" or "calibration", route to ONBOARDING.`;
+[STRICT]: If history shows a LAB proposal but student says "diagnostic" or "calibration", route to ONBOARDING.
+[STRICT]: LAB requests take precedence over CHAT.
+
+[CONTEXT]:
+- Diagnostic Completed: {{DIAG_COMPLETED}}
+- Is New Student: {{IS_NEW}}
+- Active Exam: {{ACTIVE_EXAM}}`;
 
 class IntentRouter {
   static async classify(message, history = [], uid = null, context = {}) {
@@ -51,6 +74,7 @@ class IntentRouter {
       const prompt = ROUTER_PROMPT
         .replace('{{MESSAGE}}', message)
         .replace('{{HISTORY}}', subHistory)
+        .replace('{{HAS_IMAGE}}', context.has_image || false)
         .replace('{{DIAG_COMPLETED}}', context.diagnostic_completed || false)
         .replace('{{IS_NEW}}', context.is_new_student || false)
         .replace('{{ACTIVE_EXAM}}', context.has_active_exam || false);

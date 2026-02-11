@@ -1,0 +1,195 @@
+{
+  "type": "MATHS",
+  "topic": "math_geo_circles",
+  "level": 5,
+  "interactive_tasks": [
+    {
+      "id": "87d0c733cb9a6c32961e615f70939222",
+      "type": "mc",
+      "topic": "math_geo_circles",
+      "skills": [
+        "math_geo_circles",
+        "circle_equation"
+      ],
+      "text": "已知圓的方程是 $x^2 + y^2 - 4x + 6y + k = 0$。若圓的半徑是 4，求 $k$ 的值。",
+      "options": [
+        "-3",
+        "3",
+        "9",
+        "-9"
+      ],
+      "answer": "-3",
+      "solution_steps": [
+        "將圓的方程寫成標準形式：$(x - 2)^2 + (y + 3)^2 = 4^2$。",
+        "展開得 $x^2 - 4x + 4 + y^2 + 6y + 9 = 16$。",
+        "整理得 $x^2 + y^2 - 4x + 6y - 3 = 0$。因此，$k = -3$。"
+      ],
+      "imageURL": null,
+      "diagram_svg": null,
+      "marks": 1
+    },
+    {
+      "id": "8dddc0b49761df3d87ea72d20c4a01eb",
+      "type": "short_answer",
+      "topic": "math_geo_circles",
+      "skills": [
+        "math_geo_circles",
+        "tangent"
+      ],
+      "text": "若直線 $L: y = mx + c$ 與圓 $x^2 + y^2 = r^2$ 相切，證明 $c^2 = r^2(1 + m^2)$。",
+      "options": [],
+      "answer": "$c^2 = r^2(1 + m^2)$",
+      "solution_steps": [
+        "將 $y = mx + c$ 代入圓的方程 $x^2 + y^2 = r^2$，得 $x^2 + (mx + c)^2 = r^2$。",
+        "展開得 $x^2 + m^2x^2 + 2mcx + c^2 = r^2$，即 $(1 + m^2)x^2 + 2mcx + (c^2 - r^2) = 0$。",
+        "因為直線與圓相切，所以上述二次方程有唯一解，即判別式 $\\Delta = 0$。$\\Delta = (2mc)^2 - 4(1 + m^2)(c^2 - r^2) = 0$。",
+        "化簡得 $4m^2c^2 - 4(c^2 - r^2 + m^2c^2 - m^2r^2) = 0$，即 $-4c^2 + 4r^2 + 4m^2r^2 = 0$。因此，$c^2 = r^2(1 + m^2)$。"
+      ],
+      "imageURL": null,
+      "diagram_svg": null,
+      "marks": 3
+    },
+    {
+      "id": "e3880f326b48e71be4f536fd1051067b",
+      "type": "mc",
+      "topic": "math_geo_circles",
+      "skills": [
+        "math_geo_circles",
+        "circle_properties"
+      ],
+      "text": "[DIAGRAM REQUIRED: Circle with center O, points A, B, C on circumference. Angle ABC = 50 degrees.]\n在圓 $O$ 中，$A$, $B$, $C$ 是圓周上的點。已知 $\\angle ABC = 50^\\circ$，求 $\\angle AOC$。",
+      "options": [
+        "$50^\\circ$",
+        "$100^\\circ$",
+        "$130^\\circ$",
+        "$260^\\circ$"
+      ],
+      "answer": "$100^\\circ$",
+      "solution_steps": [
+        "圓心角 $\\angle AOC$ 等於圓周角 $\\angle ABC$ 的兩倍。",
+        "$\\angle AOC = 2 \\times \\angle ABC = 2 \\times 50^\\circ = 100^\\circ$。"
+      ],
+      "imageURL": null,
+      "diagram_svg": "<svg viewBox=\"0 0 400 300\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"200\" cy=\"150\" r=\"100\" fill=\"white\" stroke=\"#000000\" stroke-width=\"2\" /><circle cx=\"200\" cy=\"150\" r=\"3\" fill=\"black\" /><text x=\"195\" y=\"145\" font-size=\"16\">O</text><path d=\"M 100 150 A 100 100 0 0 1 300 150\" stroke=\"#000000\" stroke-width=\"2\" fill=\"none\" /><path d=\"M 100 150 A 100 100 0 0 1 150 236.6\" stroke=\"#000000\" stroke-width=\"2\" fill=\"none\" /><path d=\"M 300 150 A 100 100 0 0 1 150 236.6\" stroke=\"#000000\" stroke-width=\"2\" fill=\"none\" /><text x=\"90\" y=\"150\" font-size=\"16\">A</text><text x=\"305\" y=\"150\" font-size=\"16\">C</text><text x=\"140\" y=\"245\" font-size=\"16\">B</text></svg>",
+      "marks": 1
+    },
+    {
+      "id": "9f56ff1ee8853b297bd84e322622454a",
+      "type": "mc",
+      "topic": "math_geo_circles",
+      "skills": [
+        "math_geo_circles",
+        "equation_of_circle"
+      ],
+      "text": "下列哪一個方程代表一個圓，圓心在 $(2, -3)$？",
+      "options": [
+        "$(x + 2)^2 + (y - 3)^2 = 4$",
+        "$(x - 2)^2 + (y + 3)^2 = -4$",
+        "$(x - 2)^2 + (y + 3)^2 = 4$",
+        "$(x + 2)^2 + (y - 3)^2 = -4$"
+      ],
+      "answer": "$(x - 2)^2 + (y + 3)^2 = 4$",
+      "solution_steps": [
+        "圓心為 $(h, k)$ 的圓的方程為 $(x - h)^2 + (y - k)^2 = r^2$，其中 $r$ 是半徑。",
+        "因為圓心是 $(2, -3)$，所以方程是 $(x - 2)^2 + (y + 3)^2 = r^2$。",
+        "由於半徑的平方必須是正數，因此只有 $(x - 2)^2 + (y + 3)^2 = 4$ 是正確的。"
+      ],
+      "imageURL": null,
+      "diagram_svg": null,
+      "marks": 1
+    },
+    {
+      "id": "e2748c1dab70e24fe4a5b82c5bef9c27",
+      "type": "short_answer",
+      "topic": "math_geo_circles",
+      "skills": [
+        "math_geo_circles",
+        "intersecting_chords"
+      ],
+      "text": "[DIAGRAM REQUIRED: Circle with intersecting chords AB and CD intersecting at E. AE = 6, EB = 4, CE = 3. Find ED.]\n圓內兩弦 $AB$ 和 $CD$ 相交於點 $E$。 已知 $AE = 6$，$EB = 4$，$CE = 3$，求 $ED$ 的長度。",
+      "options": [],
+      "answer": "$ED = 8$",
+      "solution_steps": [
+        "根據相交弦定理，$AE \\cdot EB = CE \\cdot ED$。",
+        "代入已知數值，$6 \\cdot 4 = 3 \\cdot ED$。",
+        "解得 $ED = \\frac{6 \\cdot 4}{3} = 8$。"
+      ],
+      "imageURL": null,
+      "diagram_svg": "<svg viewBox=\"0 0 400 300\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"200\" cy=\"150\" r=\"100\" fill=\"white\" stroke=\"#000000\" stroke-width=\"2\" /><line x1=\"100\" y1=\"100\" x2=\"300\" y2=\"200\" stroke=\"#000000\" stroke-width=\"2\" /><line x1=\"120\" y1=\"200\" x2=\"280\" y2=\"100\" stroke=\"#000000\" stroke-width=\"2\" /><circle cx=\"160\" cy=\"120\" r=\"2\" fill=\"black\" /><text x=\"150\" y=\"115\" font-size=\"16\">A</text><circle cx=\"240\" cy=\"160\" r=\"2\" fill=\"black\" /><text x=\"230\" y=\"155\" font-size=\"16\">B</text><circle cx=\"180\" cy=\"180\" r=\"2\" fill=\"black\" /><text x=\"170\" y=\"175\" font-size=\"16\">C</text><circle cx=\"260\" cy=\"120\" r=\"2\" fill=\"black\" /><text x=\"250\" y=\"115\" font-size=\"16\">D</text><circle cx=\"200\" cy=\"140\" r=\"2\" fill=\"black\" /><text x=\"190\" y=\"135\" font-size=\"16\">E</text></svg>",
+      "marks": 3
+    },
+    {
+      "id": "bac1cedb43b54bd04ebce779b68c5bd6",
+      "type": "mc",
+      "topic": "math_geo_circles",
+      "skills": [
+        "math_geo_circles",
+        "tangent_properties"
+      ],
+      "text": "[DIAGRAM REQUIRED: Circle with center O, tangent PA at A, angle POA = 68 degrees. Find angle OAP.]\n$PA$ 是圓 $O$ 在 $A$ 點的切線。若 $\\angle POA = 68^\\circ$，求 $\\angle OAP$。",
+      "options": [
+        "$22^\\circ$",
+        "$34^\\circ$",
+        "$68^\\circ$",
+        "$90^\\circ$"
+      ],
+      "answer": "$90^\\circ$",
+      "solution_steps": [
+        "由於 $PA$ 是切線，所以 $OA \\perp PA$。",
+        "因此，$\\angle OAP = 90^\\circ$。"
+      ],
+      "imageURL": null,
+      "diagram_svg": "<svg viewBox=\"0 0 400 300\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"200\" cy=\"150\" r=\"100\" fill=\"white\" stroke=\"#000000\" stroke-width=\"2\" /><circle cx=\"200\" cy=\"150\" r=\"3\" fill=\"black\" /><text x=\"195\" y=\"145\" font-size=\"16\">O</text><line x1=\"200\" y1=\"150\" x2=\"100\" y2=\"150\" stroke=\"#000000\" stroke-width=\"2\" /><line x1=\"100\" y1=\"150\" x2=\"50\" y2=\"50\" stroke=\"#000000\" stroke-width=\"2\" /><circle cx=\"100\" cy=\"150\" r=\"3\" fill=\"black\" /><text x=\"90\" y=\"145\" font-size=\"16\">A</text><circle cx=\"50\" cy=\"50\" r=\"3\" fill=\"black\" /><text x=\"40\" y=\"45\" font-size=\"16\">P</text></svg>",
+      "marks": 1
+    },
+    {
+      "id": "e94aec23cab3a61d1a437912b76d5d07",
+      "type": "mc",
+      "topic": "math_geo_circles",
+      "skills": [
+        "math_geo_circles",
+        "circle_theorem"
+      ],
+      "text": "在圓 $O$ 中，$A, B, C, D$ 是圓周上的點。若 $\\angle ABC = 110^\\circ$，求 $\\angle ADC$。",
+      "options": [
+        "$70^\\circ$",
+        "$80^\\circ$",
+        "$110^\\circ$",
+        "$220^\\circ$"
+      ],
+      "answer": "$70^\\circ$",
+      "solution_steps": [
+        "$\\angle ABC$ 和 $\\angle ADC$ 是圓內接四邊形的對角。",
+        "圓內接四邊形的對角互補，即 $\\angle ABC + \\angle ADC = 180^\\circ$。",
+        "因此，$\\angle ADC = 180^\\circ - \\angle ABC = 180^\\circ - 110^\\circ = 70^\\circ$。"
+      ],
+      "imageURL": null,
+      "diagram_svg": null,
+      "marks": 1
+    },
+    {
+      "id": "705503aa70e803f5669deda822adada6",
+      "type": "mc",
+      "topic": "math_geo_circles",
+      "skills": [
+        "math_geo_circles",
+        "equation_of_tangent"
+      ],
+      "text": "求圓 $x^2 + y^2 = 25$ 在點 $(3, -4)$ 的切線方程。",
+      "options": [
+        "$3x - 4y = 25$",
+        "$3x + 4y = 25$",
+        "$4x - 3y = 25$",
+        "$4x + 3y = 25$"
+      ],
+      "answer": "$3x - 4y = 25$",
+      "solution_steps": [
+        "圓心為 $(0, 0)$ 的圓在點 $(x_1, y_1)$ 的切線方程為 $x_1x + y_1y = r^2$。",
+        "因此，切線方程為 $3x - 4y = 25$。"
+      ],
+      "imageURL": null,
+      "diagram_svg": null,
+      "marks": 1
+    }
+  ]
+}

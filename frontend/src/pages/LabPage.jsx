@@ -1,18 +1,45 @@
 import React, { useState, useEffect } from 'react';
 import { useSearchParams, useNavigate, useLocation } from 'react-router-dom';
-import { X, BookOpen, Layers, CheckCircle2, ChevronRight, MessageSquare, Award, Sparkles, Loader2, Volume2, Mic, Play, MousePointerClick, Square } from 'lucide-react';
+import { ArrowRight, Award, Book, BookOpen, CheckCircle2, ChevronRight, GraduationCap, Layout, Layers, Loader2, MessageSquare, Mic, MousePointerClick, Play, RefreshCcw, Save, Sparkles, Square, Star, Trophy, Volume2, X } from 'lucide-react';
+import NextPathRecommendations from '../components/lab/NextPathRecommendations';
 import { useAuth } from '../context/AuthContext';
 import { getSkillName } from '../constants/microSkills';
 import { addToNotebook } from '../services/notebookService';
+import WritingWorkspace from '../components/lab/WritingWorkspace';
+import WritingReview from '../components/lab/WritingReview';
+import AlertModal from '../components/shared/AlertModal';
+import ScaffoldToolbar from '../components/reading/ScaffoldToolbar';
+import VocabSpotlight from '../components/reading/VocabSpotlight';
+import ParagraphInsight from '../components/reading/ParagraphInsight';
+import ArgumentMap from '../components/reading/ArgumentMap';
+import { useLanguage } from '../context/LanguageContext';
 
 // --- Dictionary Popover Component ---
 const DictionaryPopover = ({ data, position, onClose, onAddToNotebook, loading }) => {
     if (!position) return null;
 
+    // Calculate intelligent position to avoid overflow
+    const width = 288; // w-72
+    const height = 400; // conservative estimate for height
+
+    let left = position.left;
+    let top = position.top + 10;
+
+    // Boundary check for right edge
+    if (left + width > window.innerWidth) {
+        left = window.innerWidth - width - 20;
+    }
+
+    // Boundary check for bottom edge
+    if (top + height > window.innerHeight) {
+        top = position.top - height - 10;
+        if (top < 0) top = 20; // Fallback to top if it would overflow both ways
+    }
+
     return (
         <div
             className="dictionary-popover fixed z-[70] bg-white dark:bg-gray-800 rounded-xl shadow-2xl border border-gray-200 dark:border-gray-700 p-4 w-72 animate-in fade-in zoom-in duration-200 text-left"
-            style={{ top: position.top + 10, left: position.left }}
+            style={{ top, left: Math.max(20, left) }}
             onClick={(e) => e.stopPropagation()}
         >
             <div className="flex justify-between items-start mb-2">
@@ -61,6 +88,14 @@ const LabPage = () => {
     const [searchParams] = useSearchParams();
     const navigate = useNavigate();
     const { user } = useAuth();
+    const { t, language } = useLanguage();
+
+    // Alert State
+    const [alertState, setAlertState] = useState({ isOpen: false, type: 'info', message: '' });
+
+    const showAlert = (type, message) => {
+        setAlertState({ isOpen: true, type, message });
+    };
 
     const topic = searchParams.get('topic');
     const focus = searchParams.getAll('focus');
@@ -93,9 +128,32 @@ const LabPage = () => {
     // Dictionary State
     const [popover, setPopover] = useState(null);
 
+    // Scaffold State
+    const [scaffoldSettings, setScaffoldSettings] = useState(() => {
+        const saved = localStorage.getItem('readingScaffoldSettings');
+        return saved ? JSON.parse(saved) : { vocab: false, structure: false, logic: false };
+    });
+    const [scaffoldData, setScaffoldData] = useState(null);
+    const [isLoadingScaffold, setIsLoadingScaffold] = useState(false);
+
     const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
 
-    // Audio Helpers
+    // Formatting the topic for display
+    // Formatting the topic for display
+    const isWritingTopic = topic && topic.startsWith('writing_');
+    const displayTopic = topic
+        ? (isWritingTopic ? `Writing Skill: ${getSkillName(topic)}` : getSkillName(topic))
+        : "Learning Lab";
+
+    // Reset scaffold data when passage changes
+    useEffect(() => {
+        if (lessonData?.reading_passage) {
+            console.log('[LabPage] Reading passage changed, resetting scaffold data and settings');
+            setScaffoldData(null);
+            setScaffoldSettings({ vocab: false, structure: false, logic: false });
+        }
+    }, [lessonData?.reading_passage]);
+
     const playAudio = (text, id) => {
         if (isPlaying === id) {
             window.speechSynthesis.cancel();
@@ -114,7 +172,7 @@ const LabPage = () => {
 
     const startVoiceCapture = (id) => {
         if (!('webkitSpeechRecognition' in window)) {
-            alert("Speech recognition not supported in this browser.");
+            showAlert('error', "Speech recognition not supported in this browser.");
             return;
         }
 
@@ -159,42 +217,130 @@ const LabPage = () => {
             setGenError(null);
             setLoading(true);
 
+            // Determine if this is a Writing 2.0 request
+            // We use 'writing' topic OR detect writing modes passed via state/URL OR check for writing_* skill IDs
+            const isWritingLab = topic === 'writing' || topic.startsWith('writing_') || ['SENTENCE_BUILDER', 'PARAGRAPH_PLANNER', 'MINI_ESSAY'].includes(focus?.[0]);
+
             // Retry Logic for Frontend
             let attempts = 0;
             const maxAttempts = 3;
+            const endpoint = isWritingLab ? `${API_URL}/api/lab/writing/generate` : `${API_URL}/api/lab/generate`;
 
             while (attempts < maxAttempts) {
                 try {
                     attempts++;
-                    const response = await fetch(`${API_URL}/api/lab/generate`, {
+                    // Construct payload based on lab type
+                    const payload = {
+                        level: currentLevel,
+                        uid: user?.uid || 'placeholder'
+                    };
+
+                    if (isWritingLab) {
+                        payload.topic = topic; // Pass the specific skill ID (e.g. 'writing_relevance') or 'writing'
+
+                        // Map Skill ID to Mode (Heuristics)
+                        // If logic isn't specific, default to PARAGRAPH_PLANNER
+                        let derivedMode = 'PARAGRAPH_PLANNER';
+                        if (focus && focus.length > 0 && ['SENTENCE_BUILDER', 'PARAGRAPH_PLANNER', 'MINI_ESSAY'].includes(focus[0])) {
+                            derivedMode = focus[0];
+                        } else if (topic.includes('sentence')) {
+                            derivedMode = 'SENTENCE_BUILDER';
+                        } else if (topic.includes('development') || topic.includes('organization') || topic.includes('coherence')) {
+                            derivedMode = 'MINI_ESSAY';
+                        }
+
+                        payload.mode = derivedMode;
+                        console.log(`[LabPage] Writing Lab Detected. Topic: ${topic}, Mode: ${derivedMode}`);
+                    } else {
+                        payload.topic = topic;
+                        payload.focus = focus;
+                    }
+
+                    const response = await fetch(endpoint, {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({
-                            topic,
-                            focus,
-                            level: `HKDSE Level ${currentLevel}`,
-                            uid: user?.uid || 'placeholder'
-                        })
+                        body: JSON.stringify(payload)
                     });
 
                     if (!response.ok) {
-                        // If 504 or 429, we might want to retry explicitly, or just throw to catch block
                         const errorData = await response.json();
                         throw new Error(errorData.error || `Server error: ${response.status}`);
                     }
 
+                    // Writing Competencies Map (Fallback if AI doesn't generate them)
+                    const WRITING_COMPETENCIES = {
+                        'writing_development': [
+                            "Elaboration of Arguments: Expanding ideas with depth",
+                            "Use of Evidence: Supporting claims with concrete examples",
+                            "Relevance: Maintaining strict focus on the prompt",
+                            "Clarity of Thought: Expressing complex ideas simply"
+                        ],
+                        'writing_organization': [
+                            "Paragraph Structure: Topic sentences and supporting details",
+                            "Logical Flow: Smooth transitions between ideas",
+                            "Coherence: Linking sentences effectively",
+                            "Structural Unity: Beginning, middle, and end alignment"
+                        ],
+                        'writing_coherence': [
+                            "Transition Signals: Using 'However', 'Therefore', etc.",
+                            "Reference Words: Using pronouns to link ideas",
+                            "Logical Sequencing: Ordering points for maximum impact",
+                            "Idea Connection: Bridging concepts smoothly"
+                        ],
+                        'writing_sentenceVariety': [
+                            "Sentence Length: Mixing short and long sentences",
+                            "Structure Types: Using compound and complex sentences",
+                            "Openers: Varying how sentences begin",
+                            "Rhythm: Creating a natural flow of text"
+                        ],
+                        'PARAGRAPH_PLANNER': [
+                            "Topic Sentence: Clearly stating the main idea",
+                            "Supporting Details: Providing evidence and analysis",
+                            "Concluding Sentence: Wrapping up the argument",
+                            "Unity: Ensuring all sentences relate to the topic"
+                        ],
+                        'SENTENCE_BUILDER': [
+                            "Grammar Accuracy: Avoiding common pitfalls",
+                            "Vocabulary Selection: Choosing precise words",
+                            "Sentence Structure: Mastering syntax",
+                            "Punctuation Control: Using commas and periods correctly"
+                        ],
+                        'MINI_ESSAY': [
+                            "Thesis Statement: clear and arguable position",
+                            "Argument structuring: Logic and persuasion",
+                            "Counter-arguments: Addressing opposing views",
+                            "Conclusion: Synthesizing main points"
+                        ]
+                    };
+
                     const data = await response.json();
-                    setLessonData(data);
+
+                    // Inject Fallback Competencies for Writing
+                    if (isWritingLab && (!data.key_points || data.key_points.length === 0)) {
+                        // Try specific topic match first, then mode match
+                        data.key_points = WRITING_COMPETENCIES[topic] || WRITING_COMPETENCIES[payload.mode] || [
+                            "Clear Expression: Communicating ideas effectively",
+                            "Task Fulfilment: Meeting all prompt requirements",
+                            "Language Accuracy: minimizing grammatical errors",
+                            "Organization: Structuring text logically"
+                        ];
+                    }
+
+                    setLessonData(data); // Writing API returns { mode, theme, ... }
 
                     // Initialize answers
                     const initialAnswers = {};
-                    if (data.interactive_tasks && data.interactive_tasks.length > 0) {
-                        data.interactive_tasks.forEach(t => initialAnswers[t.id] = '');
-                    } else if (data.interactive_task) {
-                        const taskId = 'q1';
-                        initialAnswers[taskId] = '';
-                        data.interactive_tasks = [{ ...data.interactive_task, id: taskId }];
+                    if (!isWritingLab) {
+                        // Standard Lab Initialization
+                        if (data.interactive_tasks && data.interactive_tasks.length > 0) {
+                            data.interactive_tasks.forEach(t => initialAnswers[t.id] = '');
+                        } else if (data.interactive_task) {
+                            const taskId = 'q1';
+                            initialAnswers[taskId] = '';
+                            data.interactive_tasks = [{ ...data.interactive_task, id: taskId }];
+                        }
                     }
+
                     setUserAnswers(initialAnswers);
                     setLoading(false);
                     return; // Success!
@@ -206,7 +352,6 @@ const LabPage = () => {
                         setGenError(err.message);
                         setLoading(false);
                     } else {
-                        // Wait before retry (2s, 4s...)
                         await new Promise(r => setTimeout(r, 2000 * attempts));
                     }
                 }
@@ -215,6 +360,119 @@ const LabPage = () => {
 
         fetchLesson();
     }, [topic, currentLevel]); // Re-fetch when level changes
+
+    const handleTextClick = async (e) => {
+        // Prevent event from bubbling to window (prevents immediate close)
+        e.stopPropagation();
+
+        let text = "";
+        const selection = window.getSelection();
+        const selectedText = selection.toString().trim();
+
+        if (selectedText.length > 0) {
+            // Case 1: Drag Highlight
+            text = selectedText;
+        } else {
+            // Case 2: Single Click (Word Expansion)
+            if (document.caretRangeFromPoint) {
+                const range = document.caretRangeFromPoint(e.clientX, e.clientY);
+                if (range && range.startContainer.nodeType === Node.TEXT_NODE) {
+                    range.expand('word');
+                    text = range.toString().trim();
+                    const sel = window.getSelection();
+                    sel.removeAllRanges();
+                    sel.addRange(range);
+                }
+            }
+        }
+
+        // Validation
+        if (!text || text.split(' ').length > 4) return;
+
+        // Calculate Position
+        const range = window.getSelection().getRangeAt(0);
+        const rect = range.getBoundingClientRect();
+
+        setPopover({
+            position: {
+                top: rect.bottom,
+                left: rect.left
+            },
+            term: text,
+            loading: true,
+            data: null
+        });
+
+        try {
+            const res = await fetch(`${API_URL}/api/dictionary`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    text,
+                    context: selection.anchorNode?.textContent?.substring(0, 100)
+                })
+            });
+            const data = await res.json();
+
+            setPopover(prev => ({
+                ...prev,
+                loading: false,
+                data: { ...data, term: text }
+            }));
+        } catch (error) {
+            console.error("Dictionary Fetch Error:", error);
+            setPopover(prev => ({
+                ...prev,
+                loading: false,
+                data: { term: text, error: "Could not retrieve definition." }
+            }));
+        }
+    };
+
+    const handleAddToNotebook = async (dictData) => {
+        if (!user) {
+            showAlert('info', "Please log in to save words to your notebook.");
+            return;
+        }
+
+        if (dictData) {
+            try {
+                await addToNotebook(user.uid, {
+                    term: dictData.term,
+                    note: `${dictData.definition} (${dictData.translation})`,
+                    context: `Lab: ${displayTopic}`,
+                    type: 'vocabulary',
+                    source: `Learning Lab (${currentLevel})`
+                });
+                showAlert('success', "Saved to Notebook!");
+                setPopover(null);
+            } catch (err) {
+                console.error(err);
+                const isNetworkError = err.message === 'Failed to fetch' || err.message.includes('NetworkError');
+                if (isNetworkError) {
+                    showAlert('network', "Could not save to notebook. Please check your internet connection.");
+                } else {
+                    showAlert('error', "Failed to save to notebook.");
+                }
+            }
+        }
+    };
+
+    const handleClose = () => {
+        if (step === 'SUCCESS') {
+            const params = new URLSearchParams();
+            params.set('quest_completed', 'true');
+            if (topic) params.set('topic', topic);
+            navigate(`/dashboard?${params.toString()}`);
+            return;
+        }
+
+        if (window.history.length > 2) {
+            navigate(-1);
+        } else {
+            navigate('/dashboard');
+        }
+    };
 
     const handleCheat = async (targetLevel) => {
         setIsSubmitting(true);
@@ -235,12 +493,17 @@ const LabPage = () => {
             }
             const cheatedAnswers = await res.json();
             if (Object.keys(cheatedAnswers).length === 0) {
-                alert("Cheat generated no answers. This can happen if the AI times out. Try again?");
+                showAlert('info', "Cheat generated no answers. This can happen if the AI times out. Please try again.");
             }
             setUserAnswers(prev => ({ ...prev, ...cheatedAnswers }));
         } catch (e) {
             console.error("Cheat Error:", e);
-            alert(`Cheat failed: ${e.message}`);
+            const isNetworkError = e.message === 'Failed to fetch' || e.message.includes('NetworkError');
+            if (isNetworkError) {
+                showAlert('network', "Failed to connect to the server. Please check your internet connection.");
+            } else {
+                showAlert('error', `Cheat failed: ${e.message}`);
+            }
         } finally {
             setIsSubmitting(false);
         }
@@ -353,152 +616,187 @@ const LabPage = () => {
         }
     };
 
-    // Dictionary Logic
-    const handleTextClick = async (e) => {
-        // Only trigger in Practice mode
-        if (step !== 'PRACTICE' && step !== 'SUCCESS') return;
-
-        e.preventDefault();
-        e.stopPropagation();
-
-        let text = "";
-        const selection = window.getSelection();
-        const selectedText = selection.toString().trim();
-
-        if (selectedText.length > 0) {
-            text = selectedText;
-        } else if (document.caretRangeFromPoint) {
-            const range = document.caretRangeFromPoint(e.clientX, e.clientY);
-            if (range && range.startContainer.nodeType === Node.TEXT_NODE) {
-                range.expand('word');
-                text = range.toString().trim();
-            }
-        }
-
-        // Validate: Must contain at least one letter and not be too long
-        if (!text || text.split(' ').length > 4 || !/[a-zA-Z]/.test(text)) return;
-
-        // Position Logic (Fixed for fixed positioning context or scrolling)
-        // usage of e.clientX/Y is safer for fixed, but we want relative to word? 
-        // Actually for fixed popover, clientX/Y is good.
-
-        setPopover({
-            position: { top: e.clientY, left: e.clientX }, // Simple mouse position based
-            term: text,
-            loading: true,
-            data: null
-        });
-
+    const handleWritingSubmit = async (text) => {
+        setIsSubmitting(true);
+        setEvalError(null);
         try {
-            const res = await fetch(`${API_URL}/api/dictionary`, {
+            const res = await fetch(`${API_URL}/api/lab/writing/evaluate`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
-                    text,
-                    context: selection.anchorNode?.textContent?.substring(0, 100) || ""
+                    studentText: text,
+                    context: {
+                        mode: lessonData.mode,
+                        theme: lessonData.theme,
+                        instruction: lessonData.instruction || lessonData.question_text || lessonData.prompt_text,
+                        target_level: `HKDSE Level ${currentLevel}`
+                    }
                 })
             });
-            const data = await res.json();
 
-            setPopover(prev => ({
-                ...prev,
-                loading: false,
-                data: { ...data, term: text }
-            }));
-        } catch (error) {
-            setPopover(prev => ({
-                ...prev,
-                loading: false,
-                data: { term: text, error: "Could not retrieve definition." }
-            }));
-        }
-    };
+            if (!res.ok) throw new Error("Evaluation failed");
 
-    const handleAddToNotebook = async (dictData) => {
-        if (!user) {
-            alert("🔒 Please log in to save words to your notebook.");
-            return;
-        }
-        if (dictData) {
-            try {
-                await addToNotebook(user.uid, {
-                    term: dictData.term,
-                    note: `${dictData.definition} (${dictData.translation})`,
-                    context: `Lab: ${getSkillName(topic)}`,
-                    type: 'vocabulary',
-                    source: 'Learning Lab',
-                    examId: 'lab-session'
-                });
-                alert("✅ Saved to Notebook!");
-                setPopover(null);
-            } catch (err) {
-                alert("Failed to save.");
+            const feedback = await res.json();
+            setFeedbacks({ writing: feedback }); // Store as special 'writing' feedback key
+            setUserAnswers({ writing: text }); // Store submission
+
+            // 1. Calculate Mastery Score (0-100) based on Level
+            const estimatedLevel = feedback.score_estimated || "3";
+            let numericScore = 60; // Default Level 3
+            if (estimatedLevel.includes('5**')) numericScore = 100;
+            else if (estimatedLevel.includes('5*')) numericScore = 90;
+            else if (estimatedLevel.includes('5')) numericScore = 80;
+            else if (estimatedLevel.includes('4')) numericScore = 70;
+            else if (estimatedLevel.includes('3')) numericScore = 60;
+            else if (estimatedLevel.includes('2')) numericScore = 40;
+            else if (estimatedLevel.includes('1')) numericScore = 20;
+
+            // 2. Map Mode to Micro-Skill ID (for Mastery Radar)
+            let skillId = 'writing_relevance'; // Default fallback
+
+            // Priority: If the user came via a specific skill URL (e.g. topic=writing_development), use that.
+            if (topic && topic.startsWith('writing_')) {
+                skillId = topic;
+            } else {
+                // Heuristic mapping based on mode
+                if (lessonData.mode === 'SENTENCE_BUILDER') skillId = 'writing_sentenceVariety';
+                else if (lessonData.mode === 'PARAGRAPH_PLANNER') skillId = 'writing_paragraphStructure';
+                else if (lessonData.mode === 'MINI_ESSAY') skillId = 'writing_development';
             }
+
+            const baseXp = 50;
+            const levelMultiplier = numericScore >= 80 ? 1.5 : 1;
+            const finalXp = Math.floor(baseXp * levelMultiplier);
+            setEarnedXp(finalXp);
+            setMasteryScore(numericScore);
+
+            // 3. Persist to Backend (Update Profile & Timeline)
+            const submitPayload = {
+                uid: user?.uid || 'placeholder',
+                results: { writing_task: true },
+                xp: finalXp,
+                masteryScore: numericScore,
+                topic: skillId,
+                mistakes: []
+            };
+
+            await fetch(`${API_URL}/api/lab/submit`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(submitPayload)
+            });
+
+            setStep('SUCCESS');
+        } catch (e) {
+            console.error("Writing Eval Error:", e);
+            setEvalError(e.message);
+        } finally {
+            setIsSubmitting(false);
         }
     };
 
-    const handleClose = () => {
-        // If success step reached, pass completion flag
-        if (step === 'SUCCESS') {
-            navigate('/', { state: { labCompleted: true, topic, level: currentLevel } });
-        } else {
-            navigate('/');
-        }
-    };
+    const isWritingMode = lessonData?.mode && ['SENTENCE_BUILDER', 'PARAGRAPH_PLANNER', 'MINI_ESSAY'].includes(lessonData.mode);
 
+    // --- WRITING WORKSPACE RENDER ---
+    if (step === 'PRACTICE' && isWritingMode) {
+        return (
+            <div className="min-h-screen bg-gray-50 flex flex-col">
+                <header className="px-6 py-4 bg-white border-b border-gray-100 flex justify-between items-center">
+                    <button onClick={handleClose} className="p-2 hover:bg-gray-100 rounded-full">
+                        <X size={24} className="text-gray-400" />
+                    </button>
+                    <span className="font-black text-indigo-600 uppercase tracking-widest text-sm">
+                        Writing Lab
+                    </span>
+                    <div className="w-10" />
+                </header>
+                <div className="flex-1 overflow-y-auto">
+                    <WritingWorkspace
+                        lessonData={lessonData}
+                        onSubmit={handleWritingSubmit}
+                        isSubmitting={isSubmitting}
+                    />
+                </div>
+            </div>
+        );
+    }
+
+    // --- WRITING REVIEW RENDER ---
+    if (step === 'SUCCESS' && isWritingMode) {
+        return (
+            <div className="min-h-screen bg-white">
+                <header className="px-6 py-4 border-b border-gray-100 flex justify-between items-center sticky top-0 bg-white/90 backdrop-blur z-20">
+                    <button onClick={handleClose} className="p-2 hover:bg-gray-100 rounded-full">
+                        <X size={24} className="text-gray-400" />
+                    </button>
+                    <span className="font-black text-green-600 uppercase tracking-widest text-sm">
+                        {t('lab.mission_accomplished')}
+                    </span>
+                    <div className="flex items-center gap-2 px-3 py-1 bg-amber-100/50 text-amber-700 rounded-full text-xs font-bold">
+                        <Award size={14} />
+                        +{earnedXp} {t('lab.xp_points')}
+                    </div>
+                </header>
+                <div className="flex-1 overflow-y-auto pt-8 px-4">
+                    <WritingReview
+                        submission={userAnswers.writing}
+                        feedback={feedbacks.writing}
+                        topic={topic}
+                        level={currentLevel}
+                        lessonMode={lessonData?.mode}
+                        onTryAgain={() => {
+                            setStep('EXPLORE');
+                            setLessonData(null);
+                            // Could trigger re-fetch if useEffect depends on lessonData being null? 
+                            // Actually fetchLesson depends on topic/level. 
+                            // To force refetch, we might need a key or toggle.
+                            navigate(0); // Simple reload for now to get fresh prompt
+                        }}
+                        onNext={handleClose}
+                    />
+                </div>
+            </div>
+        );
+    }
+
+    // --- LOADING STATE ---
     if (loading) {
         return (
-            <div className="fixed inset-0 z-[100] flex items-center justify-center bg-white dark:bg-gray-950">
-                <div className="flex flex-col items-center max-w-sm text-center px-6">
-                    <div className="relative size-24 mb-8">
-                        <div className="absolute inset-0 bg-indigo-500 rounded-full animate-ping opacity-20"></div>
-                        <div className="relative size-24 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-full flex items-center justify-center shadow-xl">
-                            <Loader2 size={40} className="text-white animate-spin" />
-                        </div>
-                    </div>
-                    <h3 className="text-2xl font-black dark:text-white mb-2">Generating Learning Lab</h3>
-                    <p className="text-gray-500 dark:text-gray-400">Curating a personalized mission... (This might take around 1 minute for fresh content generation)</p>
+            <div className="min-h-screen bg-white dark:bg-gray-950 flex items-center justify-center">
+                <div className="flex flex-col items-center gap-4">
+                    <Loader2 className="animate-spin text-indigo-600" size={48} />
+                    <p className="text-gray-500 font-medium animate-pulse">{t('lab.designing_lesson')}</p>
                 </div>
             </div>
         );
     }
 
-    if (!lessonData && !loading) {
+    // --- ERROR STATE ---
+    if (genError) {
         return (
-            <div className="min-h-screen bg-white dark:bg-gray-950 flex flex-col items-center justify-center p-6 text-center">
-                <div className="size-20 bg-red-50 dark:bg-red-900/20 text-red-600 rounded-full flex items-center justify-center mb-6">
-                    <X size={40} />
-                </div>
-                <h2 className="text-3xl font-black dark:text-white mb-2">Generation Failed</h2>
-                <p className="text-gray-500 dark:text-gray-400 max-w-md mb-4">
-                    Miss Janie encountered an issue creating this mission. The AI might be busy or the topic is too complex.
-                </p>
-                {genError && (
-                    <div className="mb-8 p-3 bg-red-50 dark:bg-red-900/10 border border-red-200 dark:border-red-800 rounded-xl text-xs font-mono text-red-600 dark:text-red-400 max-w-md break-words">
-                        Error Details: {genError}
+            <div className="min-h-screen bg-white dark:bg-gray-950 flex items-center justify-center">
+                <div className="text-center space-y-4 p-8">
+                    <div className="inline-flex p-4 bg-red-100 dark:bg-red-900/30 text-red-600 rounded-full mb-4">
+                        <X size={32} />
                     </div>
-                )}
-                <button
-                    onClick={() => window.location.reload()}
-                    className="px-8 py-3 bg-indigo-600 text-white rounded-full font-bold hover:bg-indigo-700 transition-colors shadow-lg"
-                >
-                    Try Again
-                </button>
-                <button
-                    onClick={() => navigate('/')}
-                    className="mt-4 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 font-bold"
-                >
-                    Back to Dashboard
-                </button>
+                    <h2 className="text-2xl font-bold text-gray-900 dark:text-white">{t('lab.connection_interrupted')}</h2>
+                    <p className="text-gray-500 max-w-md mx-auto">{genError}</p>
+                    <button
+                        onClick={() => navigate('/dashboard')}
+                        className="px-6 py-3 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-xl font-bold hover:scale-105 transition-transform"
+                    >
+                        {t('lab.return_dashboard')}
+                    </button>
+                </div>
             </div>
         );
     }
 
-    const displayTopic = getSkillName(topic);
-
+    // Standard Lab Render...
     return (
         <div className="min-h-screen bg-white dark:bg-gray-950 flex flex-col animate-in fade-in duration-300">
-
+            {/* ... Existing standard header ... */}
+            {/* Same header code as before, we just need to ensure we don't duplicate or lose it */}
 
             {/* Dictionary Popover Overlay */}
             {popover && (
@@ -514,8 +812,17 @@ const LabPage = () => {
                 </>
             )}
 
+            {/* Custom Alert Modal */}
+            <AlertModal
+                isOpen={alertState.isOpen}
+                type={alertState.type}
+                message={alertState.message}
+                onClose={() => setAlertState({ ...alertState, isOpen: false })}
+                onRetry={null} // Retry logic can be passed if needed
+            />
+
             {/* Immersive Standalone Header */}
-            <header className="sticky top-0 flex-none flex justify-between items-center px-6 py-4 border-b border-gray-100 dark:border-gray-800 bg-white/80 dark:bg-gray-950/80 backdrop-blur-md z-20">
+            <header className="sticky top-0 w-full flex justify-between items-center px-8 md:px-12 py-4 border-b border-gray-100 dark:border-gray-800 bg-white/80 dark:bg-gray-950/80 backdrop-blur-md z-20">
                 <div className="flex items-center gap-4">
                     <div className="p-2 bg-indigo-600 rounded-lg text-white">
                         <Layers size={18} />
@@ -525,9 +832,9 @@ const LabPage = () => {
                             {lessonData?.type ? `${lessonData.type.charAt(0) + lessonData.type.slice(1).toLowerCase()} - ` : ''}{displayTopic}
                         </h2>
                         <div className="flex items-center gap-2">
-                            <span className="text-[10px] font-bold text-gray-400">Mission Type: </span>
+                            <span className="text-[10px] font-bold text-gray-400">{t('lab.mission_type')}</span>
                             <span className="text-[10px] font-black text-indigo-600 dark:text-indigo-400 uppercase tracking-widest">
-                                Comprehensive Practice
+                                {t('lab.comprehensive_practice')}
                             </span>
                         </div>
                     </div>
@@ -549,12 +856,12 @@ const LabPage = () => {
                             ))}
                         </div>
                     )}
-                    Live Training Session
+                    {t('lab.live_training')}
                 </div>
 
                 {/* Difficulty Selector */}
                 <div className="flex items-center gap-2 bg-gray-50 dark:bg-gray-900 rounded-lg p-1 border border-gray-100 dark:border-gray-800">
-                    <span className="text-[10px] font-bold text-gray-400 pl-2 uppercase tracking-wide">Level</span>
+                    <span className="text-[10px] font-bold text-gray-400 pl-2 uppercase tracking-wide">{t('lab.level')}</span>
                     <select
                         value={currentLevel}
                         onChange={(e) => {
@@ -566,16 +873,16 @@ const LabPage = () => {
                         }}
                         className="bg-white dark:bg-gray-800 text-sm font-bold text-gray-700 dark:text-gray-200 py-1 px-2 rounded-md outline-none border border-gray-200 dark:border-gray-700 cursor-pointer hover:border-indigo-500 transition-colors"
                     >
-                        <option value="3">Foundation Building</option>
-                        <option value="5">DSE Standard</option>
-                        <option value="7">Elite Challenge</option>
+                        <option value="3">{t('lab.foundation_building')}</option>
+                        <option value="5">{t('lab.dse_standard')}</option>
+                        <option value="7">{t('lab.elite_challenge')}</option>
                     </select>
                 </div>
 
                 <button
                     onClick={handleClose}
                     className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-all group"
-                    title="Exit Lab"
+                    title={t('lab.exit_lab')}
                 >
                     <X size={20} className="text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" />
                 </button>
@@ -583,29 +890,29 @@ const LabPage = () => {
 
             {/* Immersive Scroll Content */}
             <main className="flex-1 bg-gray-50/50 dark:bg-transparent select-none">
-                <div className="max-w-6xl mx-auto px-6 py-10 md:py-20 font-sans">
+                <div className="w-full px-8 md:px-12 py-10 md:py-20 font-sans">
 
                     {step === 'EXPLORE' && (
                         <div className="space-y-16 animate-in slide-in-from-bottom-8 duration-700">
                             {/* Hero Intro */}
                             <div className="space-y-6">
                                 <span className="inline-block px-4 py-1.5 bg-indigo-100 dark:bg-indigo-900/40 text-indigo-700 dark:text-indigo-300 text-xs font-black uppercase tracking-[0.2em] rounded-full">
-                                    Conceptual Briefing
+                                    {t('lab.briefing')}
                                 </span>
                                 <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
                                     <h1 className="text-5xl md:text-7xl font-black tracking-tight text-gray-900 dark:text-white max-w-4xl leading-[1.1]">
-                                        Mastering {displayTopic}
+                                        {t('lab.mastering').replace('{{topic}}', displayTopic)}
                                     </h1>
                                     <div className="flex flex-col items-center justify-center p-6 bg-amber-50 dark:bg-amber-900/20 border-2 border-amber-200 dark:border-amber-800 rounded-[2.5rem] shadow-sm transform hover:rotate-3 transition-transform">
                                         <div className="flex items-center gap-2 text-amber-600 dark:text-amber-400">
                                             <Award size={32} className="fill-current" />
                                             <span className="text-4xl font-black">+{location.state?.taskXp || 100}</span>
                                         </div>
-                                        <span className="text-[10px] font-black uppercase tracking-widest text-amber-500 mt-1">XP Points</span>
+                                        <span className="text-[10px] font-black uppercase tracking-widest text-amber-500 mt-1">{t('lab.xp_points')}</span>
                                     </div>
                                 </div>
                                 <p className="text-xl md:text-2xl text-gray-500 dark:text-gray-400 max-w-2xl font-medium">
-                                    We've broken down the mechanics. Level up your HKDSE proficiency with this personalized deep dive.
+                                    {t('lab.lab_intro')}
                                 </p>
                             </div>
 
@@ -617,19 +924,21 @@ const LabPage = () => {
                                             {lessonData.conceptual_explanation}
                                         </div>
 
-                                        <div className="mt-12 space-y-4">
-                                            <h4 className="text-sm font-black text-gray-400 uppercase tracking-widest px-2">Key Competencies</h4>
-                                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                                {lessonData.key_points.map((pt, idx) => (
-                                                    <div key={idx} className="flex items-center gap-4 p-5 bg-gray-50 dark:bg-gray-800/40 border border-gray-100 dark:border-gray-700 rounded-2xl">
-                                                        <div className="size-8 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center shrink-0">
-                                                            <CheckCircle2 size={18} className="text-green-600 dark:text-green-500" />
+                                        {(lessonData.key_points || []).length > 0 && (
+                                            <div className="mt-12 space-y-4">
+                                                <h4 className="text-sm font-black text-gray-400 uppercase tracking-widest px-2">{t('lab.key_competencies')}</h4>
+                                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                                    {(lessonData.key_points || []).map((pt, idx) => (
+                                                        <div key={idx} className="flex items-center gap-4 p-5 bg-gray-50 dark:bg-gray-800/40 border border-gray-100 dark:border-gray-700 rounded-2xl">
+                                                            <div className="size-8 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center shrink-0">
+                                                                <CheckCircle2 size={18} className="text-green-600 dark:text-green-500" />
+                                                            </div>
+                                                            <span className="text-base font-bold dark:text-white">{pt}</span>
                                                         </div>
-                                                        <span className="text-base font-bold dark:text-white">{pt}</span>
-                                                    </div>
-                                                ))}
+                                                    ))}
+                                                </div>
                                             </div>
-                                        </div>
+                                        )}
                                     </section>
                                 </div>
 
@@ -654,20 +963,25 @@ const LabPage = () => {
                                         </div>
                                     )}
 
-                                    <h3 className="text-xl font-black text-gray-900 dark:text-white flex items-center gap-3">
-                                        <Sparkles className="text-indigo-500" size={24} />
-                                        Case Studies
-                                    </h3>
-                                    {lessonData.examples.map((ex, idx) => (
-                                        <div key={idx} className="p-8 bg-white dark:bg-gray-900 rounded-[2.5rem] border border-gray-100 dark:border-gray-800 shadow-sm group hover:border-indigo-300 transition-all duration-300">
-                                            <p className="text-lg font-bold text-gray-800 dark:text-gray-200 mb-4 italic leading-relaxed">
-                                                "{ex.text}"
-                                            </p>
-                                            <div className="text-sm text-gray-500 dark:text-gray-400 bg-gray-50 dark:bg-gray-800/50 p-4 rounded-2xl border border-gray-100 dark:border-gray-700">
-                                                {ex.explanation}
-                                            </div>
-                                        </div>
-                                    ))}
+                                    {/* Case Studies Section - Safe Render */}
+                                    {(lessonData.examples || []).length > 0 && (
+                                        <>
+                                            <h3 className="text-xl font-black text-gray-900 dark:text-white flex items-center gap-3">
+                                                <Sparkles className="text-indigo-500" size={24} />
+                                                {t('lab.case_studies')}
+                                            </h3>
+                                            {lessonData.examples.map((ex, idx) => (
+                                                <div key={idx} className="p-8 bg-white dark:bg-gray-900 rounded-[2.5rem] border border-gray-100 dark:border-gray-800 shadow-sm group hover:border-indigo-300 transition-all duration-300">
+                                                    <p className="text-lg font-bold text-gray-800 dark:text-gray-200 mb-4 italic leading-relaxed">
+                                                        "{ex.text}"
+                                                    </p>
+                                                    <div className="text-sm text-gray-500 dark:text-gray-400 bg-gray-50 dark:bg-gray-800/50 p-4 rounded-2xl border border-gray-100 dark:border-gray-700">
+                                                        {ex.explanation}
+                                                    </div>
+                                                </div>
+                                            ))}
+                                        </>
+                                    )}
                                 </div>
                             </div>
 
@@ -676,7 +990,7 @@ const LabPage = () => {
                                     onClick={() => setStep('PRACTICE')}
                                     className="group flex items-center gap-4 px-12 py-6 bg-gray-900 dark:bg-white text-white dark:text-black rounded-full font-black text-2xl shadow-[0_20px_50px_rgba(0,0,0,0.2)] dark:shadow-[0_20px_50px_rgba(255,255,255,0.05)] hover:scale-105 transition-all active:scale-95"
                                 >
-                                    Proceed to Quest
+                                    {t('lab.proceed_to_quest')}
                                     <div className="p-1.5 bg-white/10 dark:bg-black/5 rounded-full group-hover:translate-x-1 transition-transform">
                                         <ChevronRight size={28} />
                                     </div>
@@ -686,37 +1000,136 @@ const LabPage = () => {
                     )}
 
                     {step === 'PRACTICE' && (
-                        <div className={`max-w-[1400px] mx-auto animate-in slide-in-from-right-16 duration-700 ${lessonData.reading_passage ? 'w-full' : 'max-w-4xl'}`}>
+                        <div className={`w-full mx-auto px-0 animate-in slide-in-from-right-16 duration-700`}>
                             {/* Minimal Section Spacer instead of bulky header */}
                             <div className="mb-10"></div>
 
                             <div className={`flex flex-col ${lessonData.reading_passage ? 'lg:flex-row' : ''} gap-8 items-start`}>
                                 {/* Reading Passage Context - Left Panel */}
                                 {lessonData.reading_passage && (
-                                    <div className="w-full lg:w-1/2 sticky top-24 max-h-[calc(100vh-140px)] overflow-y-auto bg-white dark:bg-gray-900 p-8 md:p-12 rounded-[2rem] border-2 border-indigo-100 dark:border-indigo-900/40 shadow-sm custom-scrollbar">
-                                        <div className="flex items-center justify-between mb-6">
-                                            <div className="flex items-center gap-3">
-                                                <div className="p-2 bg-indigo-50 dark:bg-indigo-900/30 rounded-lg text-indigo-600">
-                                                    <Sparkles size={18} />
+                                    <div className="w-full lg:w-[58%] sticky top-24 max-h-[calc(100vh-140px)] overflow-y-auto bg-white dark:bg-gray-900 rounded-[2rem] border-2 border-indigo-100 dark:border-indigo-900/40 shadow-sm custom-scrollbar">
+                                        <div className="p-6 md:p-10">
+                                            {/* Scaffold Toolbar */}
+                                            <ScaffoldToolbar settings={scaffoldSettings} onChange={(s) => {
+                                                console.log('[LabPage] Scaffold settings changed:', s);
+                                                setScaffoldSettings(s);
+                                                localStorage.setItem('readingScaffoldSettings', JSON.stringify(s));
+                                                // Fetch scaffold data if any toggle enabled and not already loaded
+                                                if ((s.vocab || s.structure || s.logic) && !scaffoldData && !isLoadingScaffold) {
+                                                    console.log('[LabPage] Fetching scaffold data...');
+                                                    setIsLoadingScaffold(true);
+                                                    fetch(`${API_URL}/api/reading/scaffold`, {
+                                                        method: 'POST',
+                                                        headers: { 'Content-Type': 'application/json' },
+                                                        body: JSON.stringify({ passage: lessonData.reading_passage, level: 3 })
+                                                    }).then(r => {
+                                                        if (!r.ok) return r.json().then(e => { throw new Error(e.error || `Server error: ${r.status}`) });
+                                                        return r.json();
+                                                    }).then(data => {
+                                                        console.log('[LabPage] Scaffold data received:', data);
+                                                        if (!data || (!data.vocab && !data.tags && !data.connectors)) {
+                                                            console.warn('[LabPage] Scaffold data empty or malformed');
+                                                        }
+                                                        setScaffoldData(data);
+                                                        setIsLoadingScaffold(false);
+                                                    }).catch(e => {
+                                                        console.error('[LabPage] Scaffold fetch error:', e);
+                                                        setIsLoadingScaffold(false);
+                                                        showAlert('error', `Could not load learning scaffolds: ${e.message}`);
+                                                        // Reset settings so user can try again
+                                                        setScaffoldSettings({ vocab: false, structure: false, logic: false });
+                                                    });
+                                                }
+                                            }} />
+
+                                            <div className="flex items-center justify-between mb-6 mt-6">
+                                                <div className="flex items-center gap-3">
+                                                    <div className="p-2 bg-indigo-50 dark:bg-indigo-900/30 rounded-lg text-indigo-600">
+                                                        <Sparkles size={18} />
+                                                    </div>
+                                                    <h4 className="text-sm font-black text-gray-400 uppercase tracking-widest">Source Material</h4>
                                                 </div>
-                                                <h4 className="text-sm font-black text-gray-400 uppercase tracking-widest">Source Material</h4>
+                                                <div className="flex items-center gap-2 px-3 py-1.5 bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-300 rounded-full text-[10px] font-bold uppercase tracking-wide animate-pulse">
+                                                    <MousePointerClick size={14} />
+                                                    <span>Click words to define</span>
+                                                </div>
                                             </div>
-                                            <div className="flex items-center gap-2 px-3 py-1.5 bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-300 rounded-full text-[10px] font-bold uppercase tracking-wide animate-pulse">
-                                                <MousePointerClick size={14} />
-                                                <span>Click words to define</span>
+
+                                            {/* Loading indicator */}
+                                            {isLoadingScaffold && (
+                                                <div className="flex items-center justify-center gap-2 p-3 mb-4 bg-indigo-50 dark:bg-indigo-900/20 rounded-xl">
+                                                    <Loader2 className="w-4 h-4 animate-spin text-indigo-600" />
+                                                    <span className="text-xs text-indigo-600 font-medium">Loading scaffolds...</span>
+                                                </div>
+                                            )}
+
+                                            <div
+                                                className="prose prose-xl prose-indigo dark:prose-invert max-w-none text-gray-700 dark:text-gray-300 leading-relaxed font-serif cursor-text select-text"
+                                                onClick={handleTextClick}
+                                            >
+                                                {(() => {
+                                                    // Determine paragraphs to render
+                                                    const paras = scaffoldData?.paragraphs || lessonData.reading_passage.split(/\n\n+/).filter(p => p.trim());
+
+                                                    return paras.map((paraText, idx) => {
+                                                        const pTag = scaffoldData?.tags?.find(t => t.index === idx);
+                                                        const pConnector = scaffoldData?.connectors?.find(c => c.to === idx);
+
+                                                        return (
+                                                            <div key={idx} className="relative mb-8 last:mb-0">
+                                                                {/* Logic Connector (Level 3) */}
+                                                                {scaffoldSettings.logic && pConnector && (
+                                                                    <ArgumentMap
+                                                                        type={pConnector.type}
+                                                                        from={pConnector.from}
+                                                                        to={pConnector.to}
+                                                                        bridgeSentence={pConnector.bridge_sentence}
+                                                                        signalWords={pConnector.signal_words}
+                                                                        examInsight={pConnector.exam_insight}
+                                                                        language={language}
+                                                                    />
+                                                                )}
+
+                                                                <div className="flex gap-4 items-start">
+                                                                    {/* Paragraph Tag (Level 2) */}
+                                                                    {scaffoldSettings.structure && pTag && (
+                                                                        <div className="flex-shrink-0 mt-1.5 w-56">
+                                                                            <ParagraphInsight
+                                                                                tag={pTag.tag}
+                                                                                summary={pTag.summary}
+                                                                                keyPhrases={pTag.key_phrases}
+                                                                                dseTip={pTag.dse_tip}
+                                                                                index={idx}
+                                                                                language={language}
+                                                                            />
+                                                                        </div>
+                                                                    )}
+
+                                                                    <div className={`flex-grow ${scaffoldSettings.structure ? 'pl-2' : ''}`}>
+                                                                        {scaffoldSettings.vocab && scaffoldData?.vocab ? (
+                                                                            <VocabSpotlight
+                                                                                text={paraText}
+                                                                                vocabData={scaffoldData.vocab}
+                                                                                onWordClick={(word) => console.log('Word clicked:', word)}
+                                                                            />
+                                                                        ) : (
+                                                                            <p className="m-0 italic hover:text-gray-900 dark:hover:text-gray-100 transition-colors">
+                                                                                {paraText}
+                                                                            </p>
+                                                                        )}
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        );
+                                                    });
+                                                })()}
                                             </div>
-                                        </div>
-                                        <div
-                                            className="prose prose-xl prose-indigo dark:prose-invert max-w-none text-gray-700 dark:text-gray-300 leading-relaxed font-serif italic cursor-text hover:text-gray-900 dark:hover:text-gray-100 transition-colors select-text"
-                                            onClick={handleTextClick}
-                                        >
-                                            {lessonData.reading_passage}
                                         </div>
                                     </div>
                                 )}
 
                                 {/* Questions - Right Panel or Main Center */}
-                                <div className={`w-full ${lessonData.reading_passage ? 'lg:w-1/2' : 'max-w-4xl mx-auto'} space-y-10 pb-20`}>
+                                <div className={`w-full ${lessonData.reading_passage ? 'lg:w-[42%]' : 'max-w-4xl mx-auto'} space-y-10 pb-20`}>
                                     {lessonData.interactive_tasks.map((task, idx) => (
                                         <div
                                             key={task.id}
@@ -814,7 +1227,7 @@ const LabPage = () => {
                                                     </div>
                                                     <div className="space-y-1">
                                                         <p className="font-black uppercase tracking-widest text-[10px]">
-                                                            {feedbacks[task.id].correct ? 'Excellent Work' : 'Hint'}
+                                                            {feedbacks[task.id].correct ? t('lab.excellent_work') : t('lab.hint')}
                                                         </p>
                                                         <p className="text-lg font-bold leading-relaxed">{feedbacks[task.id].logic}</p>
                                                     </div>
@@ -830,7 +1243,7 @@ const LabPage = () => {
                                 {evalError && (
                                     <div className="w-full max-w-2xl p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-2xl text-red-600 dark:text-red-400 text-sm font-bold flex items-center gap-3 animate-in fade-in slide-in-from-bottom-2">
                                         <X size={20} className="shrink-0" />
-                                        <span>Evaluation Failed: {evalError}. Please try submitting again.</span>
+                                        <span>{t('lab.evaluation_failed').replace('{{error}}', evalError)}</span>
                                     </div>
                                 )}
                                 <div className="flex flex-col md:flex-row gap-4 w-full">
@@ -838,7 +1251,7 @@ const LabPage = () => {
                                         onClick={() => setStep('EXPLORE')}
                                         className="flex-1 px-10 py-6 border-2 border-gray-200 dark:border-gray-800 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md rounded-full font-black text-xl dark:text-white hover:bg-white dark:hover:bg-gray-800 transition-all shadow-xl active:scale-95"
                                     >
-                                        Review Briefing
+                                        {t('lab.review_briefing')}
                                     </button>
                                     <button
                                         onClick={handleSubmitMission}
@@ -849,7 +1262,7 @@ const LabPage = () => {
                                             <Loader2 className="animate-spin" size={32} />
                                         ) : (
                                             <>
-                                                Submit Practice Book
+                                                {t('lab.submit_practice')}
                                                 <ChevronRight size={32} />
                                             </>
                                         )}
@@ -873,7 +1286,7 @@ const LabPage = () => {
                                     </div>
                                 </div>
 
-                                <h1 className="text-6xl md:text-7xl font-black dark:text-white mb-8 tracking-tighter">Mission Accomplished</h1>
+                                <h1 className="text-6xl md:text-7xl font-black dark:text-white mb-8 tracking-tighter">{t('lab.mission_accomplished')}</h1>
                                 <p className="text-2xl md:text-3xl text-gray-500 dark:text-gray-400 mb-16 leading-relaxed font-bold max-w-xl mx-auto">
                                     {lessonData.success_feedback}
                                 </p>
@@ -887,7 +1300,7 @@ const LabPage = () => {
                                             <div className="p-2 bg-indigo-50 dark:bg-indigo-900/30 rounded-lg text-indigo-600">
                                                 <BookOpen size={18} />
                                             </div>
-                                            <h4 className="text-sm font-black text-gray-400 uppercase tracking-widest">Reference Passage</h4>
+                                            <h4 className="text-sm font-black text-gray-400 uppercase tracking-widest">{t('lab.reference_passage')}</h4>
                                         </div>
                                         <div className="prose prose-xl prose-indigo dark:prose-invert max-w-none text-gray-700 dark:text-gray-300 leading-relaxed font-serif italic">
                                             {lessonData.reading_passage}
@@ -903,7 +1316,7 @@ const LabPage = () => {
                                                 <Sparkles className="text-green-600" size={32} />
                                                 <span className="text-4xl font-black text-green-700 dark:text-green-400">+{earnedXp} XP</span>
                                             </div>
-                                            <p className="text-green-600 dark:text-green-500 font-bold uppercase tracking-widest text-[10px]">Performance Points</p>
+                                            <p className="text-green-600 dark:text-green-500 font-bold uppercase tracking-widest text-[10px]">{t('lab.performance_points')}</p>
                                         </div>
 
                                         <div className="bg-orange-50 dark:bg-orange-900/10 p-10 rounded-[3.5rem] border-2 border-orange-100 dark:border-orange-900/50 transform hover:scale-105 transition-all">
@@ -911,7 +1324,7 @@ const LabPage = () => {
                                                 <Award className="text-orange-600" size={32} />
                                                 <span className="text-4xl font-black text-orange-700 dark:text-orange-400">{masteryScore}%</span>
                                             </div>
-                                            <p className="text-orange-600 dark:text-orange-500 font-bold uppercase tracking-widest text-[10px]">Overall Mission Grade</p>
+                                            <p className="text-orange-600 dark:text-orange-500 font-bold uppercase tracking-widest text-[10px]">{t('lab.overall_grade')}</p>
                                         </div>
                                     </div>
 
@@ -921,7 +1334,7 @@ const LabPage = () => {
                                             <div className="size-12 bg-indigo-600 rounded-2xl flex items-center justify-center text-white">
                                                 <BookOpen size={24} />
                                             </div>
-                                            Mission Review
+                                            {t('lab.mission_review')}
                                         </h3>
 
                                         {lessonData.interactive_tasks.map((task, idx) => (
@@ -937,18 +1350,18 @@ const LabPage = () => {
                                                         <h4 className="font-bold dark:text-white leading-snug text-lg">{task.question}</h4>
                                                     </div>
                                                     {feedbacks[task.id]?.correct ? (
-                                                        <span className="px-4 py-1 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 text-xs font-black rounded-full uppercase">Mastered</span>
+                                                        <span className="px-4 py-1 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 text-xs font-black rounded-full uppercase">{t('lab.mastered')}</span>
                                                     ) : (
-                                                        <span className="px-4 py-1 bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 text-xs font-black rounded-full uppercase">Review Mistake</span>
+                                                        <span className="px-4 py-1 bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 text-xs font-black rounded-full uppercase">{t('lab.review_mistake')}</span>
                                                     )}
                                                 </div>
 
                                                 <div className="space-y-6">
                                                     <div>
-                                                        <p className="text-xs font-black text-gray-400 uppercase tracking-widest mb-2">My Answer</p>
+                                                        <p className="text-xs font-black text-gray-400 uppercase tracking-widest mb-2">{t('lab.my_answer')}</p>
                                                         {task.type === 'MCQ' ? (
                                                             <div className="space-y-2">
-                                                                <p className="text-lg font-black text-indigo-600 dark:text-indigo-400">Selected: {userAnswers[task.id]}</p>
+                                                                <p className="text-lg font-black text-indigo-600 dark:text-indigo-400">{t('lab.selected').replace('{{option}}', userAnswers[task.id])}</p>
                                                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 opacity-60">
                                                                     {task.options?.map((opt, oIdx) => (
                                                                         <div
@@ -962,41 +1375,32 @@ const LabPage = () => {
                                                             </div>
                                                         ) : (
                                                             <p className="text-lg font-medium text-gray-800 dark:text-gray-200 bg-gray-50 dark:bg-gray-800/50 p-4 rounded-xl border border-gray-100 dark:border-gray-700 italic">
-                                                                "{userAnswers[task.id] || '(No Answer)'}"
+                                                                "{userAnswers[task.id] || t('lab.no_answer')}"
                                                             </p>
                                                         )}
                                                     </div>
 
                                                     <div>
-                                                        <p className="text-xs font-black text-indigo-600 dark:text-indigo-400 uppercase tracking-widest mb-2">Miss Janie's Feedback & Explanation</p>
+                                                        <p className="text-xs font-black text-indigo-600 dark:text-indigo-400 uppercase tracking-widest mb-2">{t('lab.ai_feedback_explanation')}</p>
                                                         <div className={`p-6 rounded-2xl border leading-relaxed font-medium ${feedbacks[task.id]?.correct
-                                                                ? 'bg-indigo-50 dark:bg-indigo-900/20 border-indigo-100 dark:border-indigo-800 text-gray-700 dark:text-gray-300'
-                                                                : 'bg-red-50 dark:bg-red-900/10 border-red-100 dark:border-red-900/30 text-red-800 dark:text-red-200'
+                                                            ? 'bg-indigo-50 dark:bg-indigo-900/20 border-indigo-100 dark:border-indigo-800 text-gray-700 dark:text-gray-300'
+                                                            : 'bg-red-50 dark:bg-red-900/10 border-red-100 dark:border-red-900/30 text-red-800 dark:text-red-200'
                                                             }`}>
-                                                            {feedbacks[task.id]?.feedback || task.answer_logic || "Review the core concept to see how you can refine this."}
+                                                            {feedbacks[task.id]?.feedback || task.answer_logic || t('lab.review_core_concept')}
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         ))}
 
-                                        <button
-                                            onClick={handleClose}
-                                            className="w-full py-8 bg-gray-900 dark:bg-white dark:text-black text-white rounded-[2rem] font-black text-3xl shadow-2xl hover:scale-[1.02] transition-all active:scale-95 mt-10"
-                                        >
-                                            Confirm & Return
-                                        </button>
-
-                                        <div className="mt-16 space-y-4 text-center">
-                                            <p className="text-sm font-black text-gray-400 uppercase tracking-[0.3em]">Continuity Path</p>
-                                            <div className="flex flex-wrap justify-center gap-3">
-                                                {lessonData.suggested_next_steps.map((s, i) => (
-                                                    <button key={i} className="px-6 py-3 bg-gray-100 dark:bg-gray-800 rounded-2xl text-lg font-bold text-gray-600 dark:text-gray-300 hover:bg-indigo-600 hover:text-white transition-all">
-                                                        {s}
-                                                    </button>
-                                                ))}
-                                            </div>
-                                        </div>
+                                        {/* Next Path Recommendations (Shared) */}
+                                        <NextPathRecommendations
+                                            level={currentLevel}
+                                            topic={displayTopic} // or location.state.topicId if available for cleaner logic
+                                            lessonMode={lessonData.type} // passing type as mode for R/L/S logic
+                                            onRetry={() => setStep('EXPLORE')}
+                                            onExit={handleClose}
+                                        />
                                     </div>
                                 </div>
                             </div>

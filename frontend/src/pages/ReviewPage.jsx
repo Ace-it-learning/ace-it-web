@@ -7,6 +7,7 @@ import { db } from '../firebase';
 
 import { useAuth } from '../context/AuthContext';
 import { addToNotebook } from '../services/notebookService';
+import AlertModal from '../components/shared/AlertModal';
 
 // --- Dictionary Popover Component ---
 const DictionaryPopover = ({ data, position, onClose, onAddToNotebook, loading }) => {
@@ -63,7 +64,7 @@ const ReviewPage = () => {
     const { examId } = useParams();
     const navigate = useNavigate();
     const location = useLocation();
-    const { currentUser } = useAuth();
+    const { user } = useAuth();
 
     // State
     const [examData, setExamData] = useState(null);
@@ -74,6 +75,13 @@ const ReviewPage = () => {
     // Dictionary State
     const [popover, setPopover] = useState(null);
 
+    // Alert State
+    const [alertState, setAlertState] = useState({ isOpen: false, type: 'info', message: '' });
+
+    const showAlert = (type, message) => {
+        setAlertState({ isOpen: true, type, message });
+    };
+
     // Data from Navigation State
     const { answers, feedback, scoreInfo } = location.state || {}; // scoreInfo contains xpEarned and cheatingDetected
 
@@ -83,7 +91,7 @@ const ReviewPage = () => {
             const message = "Whoa there, Einstein! ⚡ Either you're a genius or you've got help. This round earns 10% XP.";
             // We can use a simple alert for now or a custom toast state
             // Let's rely on a delayed alert to ensure UI loads first
-            setTimeout(() => alert(message), 500);
+            setTimeout(() => showAlert('info', message), 500);
         }
     }, [scoreInfo]);
 
@@ -244,14 +252,14 @@ const ReviewPage = () => {
     };
 
     const handleAddToNotebook = async (dictData) => {
-        if (!currentUser) {
-            alert("🔒 Please log in to save words to your notebook.");
+        if (!user) {
+            showAlert('info', "Please log in to save words to your notebook.");
             return;
         }
 
         if (dictData) {
             try {
-                await addToNotebook(currentUser.uid, {
+                await addToNotebook(user.uid, {
                     term: dictData.term,
                     note: `${dictData.definition} (${dictData.translation})`,
                     context: `Exam: ${examData.title}`,
@@ -259,11 +267,15 @@ const ReviewPage = () => {
                     source: examData.title,
                     examId: examId
                 });
-                alert("✅ Saved to Notebook!");
+                showAlert('success', "Saved to Notebook!");
                 setPopover(null);
             } catch (err) {
                 console.error(err);
-                alert("Failed to save.");
+                if (err.message === 'Failed to fetch' || err.message.includes('NetworkError')) {
+                    showAlert('network', "Could not save to notebook. Please check your internet connection.");
+                } else {
+                    showAlert('error', "Failed to save to notebook.");
+                }
             }
         }
     };
@@ -312,6 +324,15 @@ const ReviewPage = () => {
                     />
                 </>
             )}
+
+            {/* Custom Alert Modal */}
+            <AlertModal
+                isOpen={alertState.isOpen}
+                type={alertState.type}
+                message={alertState.message}
+                onClose={() => setAlertState({ ...alertState, isOpen: false })}
+                onRetry={null}
+            />
 
             <div className="bg-white shadow-sm border-b px-6 py-3 flex justify-between items-center z-10 sticky top-0">
                 <div className="flex items-center gap-4">

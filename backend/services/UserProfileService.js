@@ -1,4 +1,6 @@
 const admin = require('firebase-admin');
+const { MICRO_SKILLS } = require('../constants/microSkills');
+const { MATHS_MICRO_SKILLS } = require('../constants/mathsMicroSkills');
 
 /**
  * Service to manage User Profiles in Firestore
@@ -11,6 +13,20 @@ class UserProfileService {
 
     get usersCollection() {
         return this.db.collection('users');
+    }
+
+    /**
+     * Resolves a human-readable skill name from a technical ID.
+     */
+    getSkillName(id, subject = 'english') {
+        if (!id) return null;
+        const pool = subject === 'math' || subject === 'maths' ? MATHS_MICRO_SKILLS : MICRO_SKILLS;
+        const skill = pool[id];
+        if (skill) return skill.name;
+
+        // Fallback: Clean up snake_case
+        return id.replace(/_/g, ' ')
+            .replace(/\b\w/g, l => l.toUpperCase());
     }
 
     /**
@@ -62,6 +78,13 @@ class UserProfileService {
         if (data.targetGradeEng) profileUpdate.targetGradeEng = data.targetGradeEng;
         if (data.targetGradeChi) profileUpdate.targetGradeChi = data.targetGradeChi;
         if (data.targetGradeMath) profileUpdate.targetGradeMath = data.targetGradeMath;
+        if (data.dreamSubject) profileUpdate.dreamSubject = data.dreamSubject;
+        if (data.electives) profileUpdate.electives = data.electives;
+
+        // Handle student status flags
+        if (data.is_new_student !== undefined) profileUpdate.is_new_student = data.is_new_student;
+        if (data.status) profileUpdate.status = data.status;
+        else if (data.is_new_student === false) profileUpdate.status = 'active';
 
         // If creating new, add createdAt
         // We'll use set with merge, so we check existence first or just simple valid check?
@@ -162,13 +185,14 @@ class UserProfileService {
         if (!uid || uid === 'guest') return;
         try {
             const entry = {
-                term: mistakeData.question,
-                context: mistakeData.userAnswer,
-                note: mistakeData.feedback,
+                term: mistakeData.question || 'Unknown Question',
+                context: mistakeData.userAnswer || 'No Answer Provided',
+                note: mistakeData.feedback || 'No Feedback Provided',
                 // Keep original fields just in case
                 ...mistakeData,
                 type: 'mistake',
                 reviewStatus: 'new',
+                subject: mistakeData.subject || 'english', // Default to english
                 source: mistakeData.source || 'Learning Lab',
                 timestamp: admin.firestore.FieldValue.serverTimestamp()
             };
@@ -178,6 +202,27 @@ class UserProfileService {
         } catch (error) {
             console.error(`[UserProfileService] Error saving Mistake for ${uid}:`, error);
             throw error;
+        }
+    }
+
+    /**
+     * Fetch recent mistakes for a subject.
+     */
+    async getMistakes(uid, subject, limit = 5) {
+        if (!uid || uid === 'guest') return [];
+        try {
+            const snapshot = await this.usersCollection.doc(uid)
+                .collection('notebook')
+                .where('type', '==', 'mistake')
+                .where('subject', '==', subject)
+                .orderBy('timestamp', 'desc')
+                .limit(limit)
+                .get();
+
+            return snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+        } catch (err) {
+            console.warn(`[UserProfileService] Failed to fetch mistakes for ${uid} (${subject}):`, err);
+            return [];
         }
     }
 
@@ -216,6 +261,212 @@ class UserProfileService {
         } catch (err) {
             console.warn(`[UserProfileService] Failed to fetch Skill Map for ${uid}:`, err);
             return null;
+        }
+    }
+
+    /**
+     * Get Math Skill Map (dedicated method for Math subject).
+     */
+    async getMathSkillMap(uid) {
+        if (!uid || uid === 'guest') return null;
+        try {
+            const doc = await this.usersCollection.doc(uid).collection('progress').doc('maths').get();
+            if (!doc.exists) {
+                // Return empty structure if no data yet
+                return {
+                    subject: 'Mathematics',
+                    level: 0,
+                    xp: 0,
+                    microSkills: {},
+                    weaknessPriority: [],
+                    last_paper_done: null,
+                    last_updated: null
+                };
+            }
+            return doc.data();
+        } catch (err) {
+            console.warn(`[UserProfileService] Failed to fetch Math Skill Map for ${uid}:`, err);
+            return null;
+        }
+    }
+
+    /**
+     * Get a condensed context for personalized greetings.
+     */
+    async getPersonalizedContext(uid, subject) {
+        if (!uid || uid === 'guest') return null;
+        try {
+            const profile = await this.getProfile(uid);
+            const skillMap = await this.getSkillMap(uid, subject === 'math' ? 'maths' : subject);
+            const mistakes = await this.getMistakes(uid, subject, 2);
+
+            const formatLevel = (lvl) => {
+                const numericLvl = Math.round(lvl || 1);
+                if (numericLvl === 6) return '5*';
+                if (numericLvl === 7) return '5**';
+                return numericLvl;
+            };
+
+            let topWeaknesses = [];
+            if (skillMap && skillMap.microSkills) {
+                topWeaknesses = Object.entries(skillMap.microSkills)
+                    .map(([id, data]) => ({ id, ...data }))
+                    .sort((a, b) => (a.level || 0) - (b.level || 0))
+                    .slice(0, 3)
+                    .map(s => {
+                        const skillInfo = MICRO_SKILLS[s.id];
+                        const name = skillInfo ? skillInfo.name : s.id.replace(/_/g, ' ');
+                        return `${name} (Level ${formatLevel(s.level)})`;
+                    });
+            }
+
+            const skippedPapers = profile?.diagnostic_results?.english ?
+                ['reading', 'writing', 'listening', 'speaking'].filter(p => !profile.diagnostic_results.english.raw_results?.[p])
+                : [];
+
+            return {
+                nickname: profile?.nickname || profile?.displayName || "Student",
+                grade: profile?.grade || "F4",
+                level: formatLevel(skillMap?.level),
+                topWeaknesses,
+                recentMistakes: mistakes.map(m => m.term).filter(Boolean),
+                skippedPapers
+            };
+        } catch (err) {
+            console.error(`[UserProfileService] Error creating personalized context for ${uid}:`, err);
+            return null;
+        }
+    }
+
+    /**
+     * Update Math micro-skills after diagnostic, lab, or mock exam.
+     * @param {string} uid - User ID
+     * @param {Object} skillUpdates - { skillId: { level: 4.2, practiceCount: 1 }, ... }
+     * @param {string} source - 'diagnostic' | 'lab' | 'mock'
+     * @param {Object} metadata - { archetype, strengths, weaknesses }
+     */
+    async updateMathSkills(uid, skillUpdates, source = 'diagnostic', metadata = {}) {
+        if (!uid || uid === 'guest') return;
+        try {
+            const progressRef = this.usersCollection.doc(uid).collection('progress').doc('maths');
+            const doc = await progressRef.get();
+
+            const currentData = doc.exists ? doc.data() : {
+                subject: 'Mathematics',
+                level: 0,
+                xp: 0,
+                microSkills: {},
+                weaknessPriority: [],
+                last_paper_done: null
+            };
+
+            // Save metadata (archetype, strengths, weaknesses) if provided
+            if (metadata.archetype) currentData.archetype = metadata.archetype;
+            if (metadata.strengths) currentData.strengths = metadata.strengths;
+            if (metadata.weaknesses) currentData.weaknesses = metadata.weaknesses;
+            if (metadata.weekly_quest_plan) currentData.weekly_quest_plan = metadata.weekly_quest_plan;
+            if (metadata.one_month_plan) currentData.one_month_plan = metadata.one_month_plan;
+
+            // Merge new skill levels with existing (weighted average)
+            Object.entries(skillUpdates).forEach(([skillId, update]) => {
+                const existing = currentData.microSkills[skillId];
+                if (existing) {
+                    // Weighted average: 70% existing, 30% new (for incremental learning)
+                    const newLevel = (existing.level * 0.7) + (update.level * 0.3);
+                    currentData.microSkills[skillId] = {
+                        level: Math.round(newLevel * 100) / 100, // Round to 2 decimals
+                        lastUpdated: admin.firestore.FieldValue.serverTimestamp(),
+                        practiceCount: (existing.practiceCount || 0) + (update.practiceCount || 1)
+                    };
+                } else {
+                    // First time seeing this skill
+                    currentData.microSkills[skillId] = {
+                        level: update.level,
+                        lastUpdated: admin.firestore.FieldValue.serverTimestamp(),
+                        practiceCount: update.practiceCount || 1
+                    };
+                }
+            });
+
+            // Recalculate overall level
+            if (source.startsWith('diagnostic') && metadata.overall_level) {
+                // If it's a diagnostic, the overall grade is the source of truth
+                const levelStr = String(metadata.overall_level);
+                // Convert DSE string (5**, 5*, 5, 4...) to numeric 0-7 for the progress bar if needed
+                const levelMap = { '5**': 7, '5*': 6, '5': 5, '4': 4, '3': 3, '2': 2, '1': 1 };
+                currentData.level = levelMap[levelStr] || parseFloat(levelStr) || 1;
+            } else {
+                // For non-diagnostic (labs/practice), use a weighted average across ALL DSE topics
+                // to prevent single-skill success from inflating the overall grade.
+                const allLevels = Object.values(currentData.microSkills).map(s => s.level || 0);
+
+                // Assume there are at least 15-20 core topics in DSE Math
+                // If we've only practiced a few, the "overall" grade should still be cautious
+                const MIN_TOPICS = 15;
+                const effectiveCount = Math.max(allLevels.length, MIN_TOPICS);
+                const sum = allLevels.reduce((a, b) => a + b, 0);
+
+                currentData.level = Math.round((sum / effectiveCount) * 100) / 100;
+            }
+
+            // Identify top 3 weaknesses
+            const weakSkills = Object.entries(currentData.microSkills)
+                .filter(([_, data]) => data.level < 3.5) // Below Level 4
+                .sort((a, b) => a[1].level - b[1].level)
+                .slice(0, 3)
+                .map(([skillId, data]) => ({
+                    skillId,
+                    level: data.level,
+                    recommendedAction: `Practice ${skillId.replace('math_', '').replace(/_/g, ' ')} with targeted exercises.`
+                }));
+
+            currentData.weaknessPriority = weakSkills;
+            currentData.last_updated = admin.firestore.FieldValue.serverTimestamp();
+            currentData.last_paper_done = source;
+
+            // Maintain practicedSkills (consistent with English)
+            const practicedSkills = currentData.practicedSkills || [];
+            Object.keys(skillUpdates).forEach(skillId => {
+                if (!practicedSkills.includes(skillId)) {
+                    practicedSkills.push(skillId);
+                }
+            });
+            currentData.practicedSkills = Array.from(new Set(practicedSkills));
+
+            await progressRef.set(currentData, { merge: true });
+
+            // Save snapshot to history
+            await this.usersCollection.doc(uid).collection('progress').doc('maths_history').collection('snapshots').add({
+                ...currentData,
+                source,
+                timestamp: admin.firestore.FieldValue.serverTimestamp()
+            });
+
+            console.log(`[UserProfileService] Updated Math skills for ${uid} from ${source}`);
+            return currentData;
+        } catch (error) {
+            console.error(`[UserProfileService] Error updating Math skills for ${uid}:`, error);
+            throw error;
+        }
+    }
+
+    /**
+     * Get Math skill history (last N snapshots).
+     */
+    async getMathSkillHistory(uid, limit = 5) {
+        if (!uid || uid === 'guest') return [];
+        try {
+            const snapshot = await this.usersCollection.doc(uid)
+                .collection('progress').doc('maths_history')
+                .collection('snapshots')
+                .orderBy('timestamp', 'desc')
+                .limit(limit)
+                .get();
+
+            return snapshot.docs.map(doc => doc.data());
+        } catch (err) {
+            console.warn(`[UserProfileService] Failed to fetch Math history for ${uid}:`, err);
+            return [];
         }
     }
 
@@ -351,6 +602,7 @@ class UserProfileService {
             await this.usersCollection.doc(uid).update({
                 is_new_student: false,
                 diagnostic_completed: true,
+                status: 'active',
                 updatedAt: admin.firestore.FieldValue.serverTimestamp()
             });
 
@@ -578,6 +830,35 @@ class UserProfileService {
         } catch (error) {
             console.error(`[UserProfileService] Error generating timeline for ${uid}:`, error);
             return [];
+        }
+    }
+
+    /**
+     * Delete Math-specific progress and history.
+     */
+    async resetMathProgress(uid) {
+        if (!uid || uid === 'guest') return;
+        try {
+            console.log(`[UserProfileService] Resetting Math Progress for ${uid}`);
+            const mathProgressRef = this.usersCollection.doc(uid).collection('progress').doc('maths');
+            const mathHistoryRef = this.usersCollection.doc(uid).collection('progress').doc('maths_history');
+
+            // Delete math progress doc
+            await mathProgressRef.delete();
+
+            // Delete history snapshots
+            const snapshots = await mathHistoryRef.collection('snapshots').get();
+            if (!snapshots.empty) {
+                const batch = this.db.batch();
+                snapshots.docs.forEach(doc => batch.delete(doc.ref));
+                await batch.commit();
+            }
+
+            console.log(`[UserProfileService] Math data for ${uid} wiped.`);
+            return { success: true };
+        } catch (error) {
+            console.error(`[UserProfileService] Error resetting Math for ${uid}:`, error);
+            throw error;
         }
     }
 }

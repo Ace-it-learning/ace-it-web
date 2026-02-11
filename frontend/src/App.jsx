@@ -5,8 +5,11 @@ import { AuthProvider } from './context/AuthContext';
 import { LanguageProvider } from './context/LanguageContext';
 import ProtectedRoute from './components/ProtectedRoute';
 import MainLayout from './layouts/MainLayout';
-import Dashboard from './pages/Dashboard';
 import LandingPage from './pages/LandingPage';
+import Dashboard from './pages/Dashboard';
+import LabPage from './pages/LabPage';
+import MathsLabPage from './pages/MathsLabPage';
+import MathsLabReview from './pages/MathsLabReview';
 import Onboarding from './pages/Onboarding';
 import AdminDashboard from './pages/AdminDashboard';
 import LoginPage from './pages/LoginPage';
@@ -23,13 +26,23 @@ import SpeakingResultPage from './pages/SpeakingResultPage';
 import ResultPage from './pages/ResultPage';
 import ReviewPage from './pages/ReviewPage';
 import DiagnosticPage from './pages/DiagnosticPage';
+import MathsDiagnosticPage from './pages/MathsDiagnosticPage';
 import DiagnosticAnalysis from './components/diagnostic/DiagnosticAnalysis';
-import LabPage from './pages/LabPage';
+import MathsDiagnosticAnalysis from './components/diagnostic/MathsDiagnosticAnalysis';
 import AchievementTimeline from './pages/AchievementTimeline';
 import RedemptionStore from './pages/RedemptionStore';
+import CardCollection from './pages/CardCollection';
 import UsagePage from './pages/UsagePage';
 import PromptTipsPage from './pages/PromptTipsPage';
 import NotebookPage from './pages/NotebookPage';
+import VocabularyPage from './pages/VocabularyPage';
+import EraserChallengePage from './pages/EraserChallengePage';
+import SpeakingInteractionPage from './pages/SpeakingInteractionPage';
+import MathsResultPage from './pages/MathsResultPage';
+import MathsDeepDivePage from './pages/MathsDeepDivePage';
+import MathsLearningPage from './pages/MathsLearningPage'; // NEW
+import MockExamPage from './pages/MockExamPage';
+import MathsExamPage from './pages/MathsExamPage';
 
 import ErrorBoundary from './components/ErrorBoundary';
 
@@ -79,6 +92,26 @@ function App() {
                     <ProtectedRoute>
                       <MainLayout>
                         <Dashboard />
+                      </MainLayout>
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/redemption"
+                  element={
+                    <ProtectedRoute>
+                      <MainLayout>
+                        <RedemptionStore />
+                      </MainLayout>
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/collection"
+                  element={
+                    <ProtectedRoute>
+                      <MainLayout>
+                        <CardCollection />
                       </MainLayout>
                     </ProtectedRoute>
                   }
@@ -192,6 +225,14 @@ function App() {
                   }
                 />
                 <Route
+                  path="/maths-diagnostic"
+                  element={
+                    <ProtectedRoute>
+                      <MathsDiagnosticPage />
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
                   path="/diagnostic/analysis"
                   element={
                     <ProtectedRoute>
@@ -200,12 +241,96 @@ function App() {
                   }
                 />
                 <Route
+                  path="/maths/diagnostic/analysis"
+                  element={
+                    <ProtectedRoute>
+                      <MathsDiagnosticAnalysis />
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
                   path="/lab"
                   element={
                     <ProtectedRoute>
-                      <MainLayout>
+                      <MainLayout fullWidth={true}>
                         <LabPage />
                       </MainLayout>
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/maths/lab"
+                  element={
+                    <ProtectedRoute>
+                      <MathsLabPage />
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/maths-lab"
+                  element={
+                    <ProtectedRoute>
+                      <MainLayout fullWidth={true}>
+                        <MathsLabPage />
+                      </MainLayout>
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/mock-exam"
+                  element={
+                    <ProtectedRoute>
+                      <MainLayout fullWidth={true}>
+                        <MockExamPage />
+                      </MainLayout>
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/maths/learn/:topicId"
+                  element={
+                    <ProtectedRoute>
+                      <MainLayout fullWidth={true}>
+                        <MathsLearningPage />
+                      </MainLayout>
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/maths/exam/:examId"
+                  element={
+                    <ProtectedRoute>
+                      <MainLayout fullWidth={true}>
+                        <MathsExamPage />
+                      </MainLayout>
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/maths/exam/result/:examId"
+                  element={
+                    <ProtectedRoute>
+                      <MainLayout fullWidth={true}>
+                        <MathsResultPage />
+                      </MainLayout>
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/maths/exam/review/:examId"
+                  element={
+                    <ProtectedRoute>
+                      <MainLayout fullWidth={true}>
+                        <MathsDeepDivePage />
+                      </MainLayout>
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/maths-lab-review"
+                  element={
+                    <ProtectedRoute>
+                      <MathsLabReview />
                     </ProtectedRoute>
                   }
                 />
@@ -256,6 +381,32 @@ function App() {
                       <MainLayout>
                         <NotebookPage />
                       </MainLayout>
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/vocabulary"
+                  element={
+                    <ProtectedRoute>
+                      <MainLayout>
+                        <VocabularyPage />
+                      </MainLayout>
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/eraser-challenge"
+                  element={
+                    <ProtectedRoute>
+                      <EraserChallengePage />
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/speaking-interaction"
+                  element={
+                    <ProtectedRoute>
+                      <SpeakingInteractionPage />
                     </ProtectedRoute>
                   }
                 />

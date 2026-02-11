@@ -1,0 +1,313 @@
+{
+  "meta": {
+    "subject": "English Language",
+    "paper_id": "Paper 3 (Listening & Integrated Skills)",
+    "version": "2026_V1",
+    "description": "Student Council Election Mock Exam"
+  },
+  "sections": {
+    "Part_A": {
+      "name": "Compulsory Section (Listening Tasks)",
+      "audio_script": {
+        "Task_1": {
+          "title": "Booking a Meeting Room",
+          "speakers": [
+            "Female_1",
+            "Male_1"
+          ],
+          "dialogue": [
+            {
+              "speaker": "Female_1",
+              "text": "Good morning, Student Affairs Office. How can I help you?"
+            },
+            {
+              "speaker": "Male_1",
+              "text": "Good morning. I'm calling from the Student Council. We need to book a meeting room for our upcoming election planning session."
+            },
+            {
+              "speaker": "Female_1",
+              "text": "Okay, let me check availability. What date and time were you thinking of?"
+            },
+            {
+              "speaker": "Male_1",
+              "text": "We were hoping for next Tuesday, the 15th of October, from 3 PM to 5 PM."
+            },
+            {
+              "speaker": "Female_1",
+              "text": "Let me see… Unfortunately, the main meeting room is booked. However, the smaller room, Room 203, is available. Would that work?"
+            },
+            {
+              "speaker": "Male_1",
+              "text": "How many people can it accommodate? We’re expecting around 10 members."
+            },
+            {
+              "speaker": "Female_1",
+              "text": "Room 203 can comfortably fit 12 people. It also has a projector and a whiteboard."
+            },
+            {
+              "speaker": "Male_1",
+              "text": "That sounds perfect. Can we book it then?"
+            },
+            {
+              "speaker": "Female_1",
+              "text": "Certainly. I'll need a contact person and a phone number for confirmation."
+            },
+            {
+              "speaker": "Male_1",
+              "text": "My name is David Lee, and my phone number is 9123 4567."
+            },
+            {
+              "speaker": "Female_1",
+              "text": "Great. So, that’s Room 203, Tuesday, October 15th, from 3 PM to 5 PM, under the name David Lee, phone number 9123 4567. Is that correct?"
+            },
+            {
+              "speaker": "Male_1",
+              "text": "Yes, that's perfect. Thank you so much!"
+            },
+            {
+              "speaker": "Female_1",
+              "text": "You're welcome. I'll send you a confirmation email shortly. Have a good day."
+            },
+            {
+              "speaker": "Male_1",
+              "text": "Thank you, you too."
+            }
+          ],
+          "questions": [
+            "What room number was booked?",
+            "What is the date of the booking?",
+            "What time does the booking start?",
+            "What is the contact person's name?",
+            "What is the contact person's phone number?"
+          ]
+        },
+        "Task_2": {
+          "title": "Student Council Election Survey Results",
+          "speakers": [
+            "Female_1",
+            "Male_1",
+            "Male_2"
+          ],
+          "dialogue": [
+            {
+              "speaker": "Female_1",
+              "text": "Okay, team, let's go over the survey results for the upcoming Student Council election. I've compiled the data, and there are some interesting trends."
+            },
+            {
+              "speaker": "Male_1",
+              "text": "Great, let’s hear it. I’m particularly interested in student priorities."
+            },
+            {
+              "speaker": "Female_1",
+              "text": "So, the top priority, with 60% of respondents, is improved canteen food. Students want healthier options and more variety."
+            },
+            {
+              "speaker": "Male_2",
+              "text": "That's not surprising. The canteen has been a common complaint. What's next?"
+            },
+            {
+              "speaker": "Female_1",
+              "text": "Following that, 45% want more extracurricular activities. Specifically, more sports clubs and arts programs."
+            },
+            {
+              "speaker": "Male_1",
+              "text": "Extracurriculars are always a good selling point. It helps build a sense of community."
+            },
+            {
+              "speaker": "Female_1",
+              "text": "Exactly. The third most popular request, at 30%, is better Wi-Fi coverage throughout the school. Students are having trouble accessing online resources in some areas."
+            },
+            {
+              "speaker": "Male_2",
+              "text": "Reliable Wi-Fi is essential these days. Okay, what about student engagement?"
+            },
+            {
+              "speaker": "Female_1",
+              "text": "Well, the survey also asked about preferred communication channels. 70% said they prefer updates via the school's website and email, while 20% still prefer physical posters and announcements."
+            },
+            {
+              "speaker": "Male_1",
+              "text": "So, a digital focus with some traditional methods mixed in. Makes sense."
+            },
+            {
+              "speaker": "Female_1",
+              "text": "One last thing. We asked about preferred qualities in a Student Council president. 55% said they value leadership and communication skills, while 40% emphasized approachability and willingness to listen."
+            },
+            {
+              "speaker": "Male_2",
+              "text": "Good to know. So, basically, someone who can get things done and is also a good listener."
+            },
+            {
+              "speaker": "Female_1",
+              "text": "Precisely. These results should help us tailor our campaign messages effectively."
+            }
+          ],
+          "questions": [
+            "What percentage of students want improved canteen food?",
+            "What percentage of students want more extracurricular activities?",
+            "What percentage of students want better Wi-Fi coverage?",
+            "What percentage of students prefer updates via the school's website and email?",
+            "What quality do 55% of students value most in a student council president?"
+          ],
+          "table_header": [
+            "Priority",
+            "Percentage"
+          ],
+          "table_data": [
+            [
+              "Improved canteen food",
+              "60%"
+            ],
+            [
+              "More extracurricular activities",
+              "45%"
+            ],
+            [
+              "Better Wi-Fi coverage",
+              "30%"
+            ],
+            [
+              "Website/Email Updates",
+              "70%"
+            ],
+            [
+              "Leadership/Communication",
+              "55%"
+            ]
+          ]
+        },
+        "Task_3": {
+          "title": "Election Process Description",
+          "speakers": [
+            "Male_1"
+          ],
+          "dialogue": [
+            {
+              "speaker": "Male_1",
+              "text": "Alright, candidates, let me outline the election process for you. First, you need to submit your application form by the deadline, which is next Friday. Once the applications are reviewed, we’ll announce the list of eligible candidates. Next, there will be a candidate briefing session where we’ll go over the rules and regulations in detail. After the briefing, you'll have one week to campaign. During this week, you can put up posters, give speeches, and engage with students. Following the campaign week, there will be a debate where you’ll have the opportunity to present your ideas and answer questions from the student body. Finally, on election day, students will cast their votes online. After the voting period closes, we'll count the votes and announce the results at a school assembly."
+            }
+          ],
+          "questions": [
+            "What is the first step in the election process?",
+            "What happens after the applications are reviewed?",
+            "What takes place after the briefing?",
+            "What activity occurs after the campaign week?",
+            "When are the results announced?"
+          ],
+          "flowchart_steps": [
+            "Submit Application",
+            "Announce Candidates",
+            "Candidate Briefing",
+            "Campaign Week",
+            "Debate",
+            "Online Voting",
+            "Announce Results"
+          ]
+        },
+        "Task_4": {
+          "title": "Importance of Student Council",
+          "speakers": [
+            "Female_1"
+          ],
+          "dialogue": [
+            {
+              "speaker": "Female_1",
+              "text": "Good morning, everyone. Today, I want to talk about the importance of the Student Council. The Student Council serves as a crucial bridge between the student body and the school administration. It provides a platform for students to voice their concerns, share their ideas, and participate in decision-making processes that affect their school lives. A strong Student Council can lead to positive changes in various aspects of school life, from academic policies to extracurricular activities. It empowers students to take ownership of their education and become active participants in shaping their school environment. Furthermore, involvement in the Student Council provides valuable leadership experience and develops crucial skills such as communication, teamwork, and problem-solving. These skills are essential for success not only in school but also in future careers and personal lives. Therefore, I encourage all students to consider participating in the Student Council election, either as candidates or as voters. Your voice matters, and the Student Council is a powerful tool for making that voice heard. Thank you."
+            }
+          ],
+          "questions": [
+            "According to the speaker, what is the Student Council's primary role?",
+            "What kind of changes can a strong Student Council bring about?",
+            "What skills does involvement in the Student Council help develop?",
+            "Why does the speaker encourage students to participate in the election?",
+            "What does the speaker say about the importance of student voice?"
+          ]
+        }
+      }
+    },
+    "Part_B": {
+      "name": "Integrated Skills (Data File + Audio)",
+      "audio_script": {
+        "Task_5": {
+          "title": "Requesting Additional Funding",
+          "speakers": [
+            "Male_1"
+          ],
+          "dialogue": [
+            {
+              "speaker": "Male_1",
+              "text": "Hello, this is David Lee, the current Student Council President. I'm recording this message for all council members. As you know, we're planning some ambitious initiatives for the upcoming year, including a school-wide recycling program and a series of workshops on mental health awareness. However, based on our current budget projections, we’re facing a funding shortfall of approximately $5,000. Therefore, I’m tasking Sarah with drafting an email to Mr. Chan, the Principal, requesting additional funding. The email should clearly outline our proposed initiatives, the benefits they will bring to the student body, and a detailed breakdown of the required budget. It's crucial that the email is professional, persuasive, and highlights the positive impact our projects will have on the school community. Please send Sarah any relevant information or suggestions you may have to help her in drafting the email. Thank you."
+            }
+          ],
+          "task_prompt": "Write an email to Mr. Chan, the Principal, requesting additional funding for the Student Council's proposed initiatives. Base your email on the information provided in the audio recording and the documents in the data file.",
+          "word_count": "150-200"
+        },
+        "Task_6": {
+          "title": "Speech for Student Council Candidacy",
+          "speakers": [
+            "Female_1"
+          ],
+          "dialogue": [
+            {
+              "speaker": "Female_1",
+              "text": "Hi everyone, my name is Emily Wong, and I'm running for Student Council President. I believe our school has the potential to be even better, and I’m confident that with your support, we can achieve great things. I've been actively involved in student activities for the past two years, and I understand the challenges we face. One of my top priorities is to improve communication between the student body and the administration. I plan to hold regular town hall meetings to gather feedback and ensure that your voices are heard. Furthermore, I want to advocate for more resources for mental health support and create a more inclusive and supportive school environment for all students. I also believe in fostering a stronger sense of community through more extracurricular activities and events. If elected, I promise to work tirelessly to represent your interests and make our school a better place for everyone. I urge you to vote for me in the upcoming election. Thank you."
+            }
+          ],
+          "task_prompt": "Write a speech to be delivered to the student body, persuading them to vote for Emily Wong for Student Council President. Base your speech on the information provided in the audio recording and the documents in the data file.",
+          "word_count": "200-250"
+        },
+        "Task_7": {
+          "title": "Proposal for Recycling Program",
+          "speakers": [
+            "Male_2"
+          ],
+          "dialogue": [
+            {
+              "speaker": "Male_2",
+              "text": "Good morning, Student Council members. As David mentioned earlier, one of our key initiatives for this year is the implementation of a school-wide recycling program. To ensure its success, we need to develop a comprehensive proposal outlining the program's goals, implementation strategies, and expected outcomes. This proposal should be presented to the school administration for approval. I'm assigning John to lead the drafting of this proposal. John, please include details on the types of materials we will recycle, the locations of recycling bins, the educational campaigns we'll launch to promote the program, and a plan for monitoring and evaluating its effectiveness. The proposal should also address potential challenges and propose solutions. Remember to present this as a formal document with clear headings, subheadings, and supporting data. The deadline for submitting the draft proposal is two weeks from today. Good luck."
+            }
+          ],
+          "task_prompt": "Write a formal proposal for a school-wide recycling program to be submitted to the school administration. Base your proposal on the information provided in the audio recording and the documents in the data file.",
+          "word_count": "250-300"
+        }
+      },
+      "data_file": [
+        {
+          "type": "email",
+          "title": "Previous Funding Request Outcome",
+          "content": "Subject: Re: Student Council Funding Request\n\nDear Student Council,\n\nThank you for your recent funding request. After careful consideration, the school administration has approved $3,000 of the requested amount. Please allocate these funds according to your priorities. \n\nSincerely,\nMr. Chan\nPrincipal"
+        },
+        {
+          "type": "minutes",
+          "title": "Student Council Meeting Minutes (Excerpt)",
+          "content": "Date: October 1st, 2024\n\nItem: Discussion of Upcoming Election\n\nThe council discussed the upcoming student council elections. Key points:\n- Need to increase student engagement.\n- Campaigning rules to be strictly enforced.\n- Survey results will be used to shape campaign messages.\n- Budget allocated for election publicity: $500."
+        },
+        {
+          "type": "poster",
+          "title": "Student Council Election Poster",
+          "content": "Vote for a Better School!\n[Image of students working together]\nYour Voice, Your Future, Your Student Council.\nElections: Oct 29th\nGet Involved!"
+        },
+        {
+          "type": "webpage",
+          "title": "Student Council Webpage Excerpt",
+          "content": "Welcome to the Student Council Page!\nStay updated on upcoming events, initiatives, and important announcements. Have a suggestion? Use the Contact Us form!\nLatest News: Election Dates Announced! Check back for candidate profiles."
+        },
+        {
+          "type": "note",
+          "title": "Student Note on Mental Health Support",
+          "content": "Need to address mental health issues more directly. School counselor overwhelmed. Need more resources - workshops, peer support groups. Important for creating a healthy learning environment."
+        }
+      ]
+    }
+  },
+  "audio_strategy": {
+    "format": "JSON_Script",
+    "playback": "Browser_TTS",
+    "voices": [
+      "Male_1",
+      "Female_1",
+      "Male_2"
+    ],
+    "instructions": "Tracks are played once only. 5 minutes prep time at start."
+  }
+}

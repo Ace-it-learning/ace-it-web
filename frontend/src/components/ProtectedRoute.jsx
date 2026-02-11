@@ -5,11 +5,18 @@ import { useAuth } from '../context/AuthContext';
 const ProtectedRoute = ({ children }) => {
     const { user, loading } = useAuth();
     const [isOnboarded, setIsOnboarded] = useState(null);
+    const [checkedUid, setCheckedUid] = useState(null); // Track WHICH user we verified
     const [showFallback, setShowFallback] = useState(false);
     const location = useLocation();
 
+    // Reset state when user or UID changes to force a re-check
     useEffect(() => {
-        console.log("ProtectedRoute useEffect: user =", user);
+        setIsOnboarded(null);
+        setShowFallback(false);
+    }, [user?.uid]);
+
+    useEffect(() => {
+        console.log("ProtectedRoute useEffect: user =", user?.uid);
         if (user) {
             console.log(`ProtectedRoute: User is AUTHENTICATED (${user.uid})`);
             if (!user.uid) {
@@ -17,75 +24,72 @@ const ProtectedRoute = ({ children }) => {
                 setIsOnboarded(true); // Don't block if something is weird
                 return;
             }
-            // Optimization: If user just finished onboarding (passed via navigation state OR localStorage), trust it immediately
-            const justOnboardedLocal = localStorage.getItem('justOnboarded');
-            if (location.state?.justOnboarded || justOnboardedLocal === 'true') {
-                console.log("ProtectedRoute: User just onboarded (state/local flag), assuming onboarded.");
-                setIsOnboarded(true);
-                // Clear the flag after a short delay so next session checks properly
-                if (justOnboardedLocal) setTimeout(() => localStorage.removeItem('justOnboarded'), 5000);
-                return;
-            }
-
             // Fallback: Check if user has a profile/onboarding complete via API
             // We implement a retry mechanism here to handle Firestore eventual consistency
-            // (e.g., when a user just finished onboarding and redirects immediately)
             const checkOnboarding = async (retries = 3) => {
                 try {
                     const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
                     console.log(`ProtectedRoute: Fetching onboarding status for ${user.uid} (Retries left: ${retries})`);
 
-                    const controller = new AbortController();
-                    const timeoutId = setTimeout(() => controller.abort(), 5000); // 5s timeout
-
-                    const res = await fetch(`${API_URL}/api/stats?uid=${user.uid}`, {
-                        signal: controller.signal
-                    });
-                    clearTimeout(timeoutId);
-
-                    if (res.status === 404) {
-                        if (retries > 0) {
-                            console.log("ProtectedRoute: User not found yet, retrying in 500ms...");
-                            setTimeout(() => checkOnboarding(retries - 1), 500);
-                            return;
-                        }
-                        console.log(`ProtectedRoute: User ${user.uid} not found after retries, setting isOnboarded to false`);
-                        setIsOnboarded(false);
-                    } else if (res.ok) {
+                    const res = await fetch(`${API_URL}/api/stats?uid=${user.uid}`);
+                    if (res.ok) {
                         const data = await res.json();
-                        console.log(`ProtectedRoute: User ${user.uid} data:`, data);
+                        console.log(`ProtectedRoute: User ${user.uid} stats data:`, data);
 
                         // If user is explicitly flagged as NEW, they are NOT onboarded.
                         if (data.is_new_student === true) {
                             console.log("ProtectedRoute: User is flagged as NEW, setting isOnboarded to false");
+                            localStorage.removeItem('justOnboarded'); // Clear stale flag
                             setIsOnboarded(false);
-                        } else {
-                            console.log(`ProtectedRoute: User ${user.uid} found and onboarded, setting isOnboarded to true`);
+                            setCheckedUid(user.uid);
+                            return;
+                        }
+
+                        // Also check if they just onboarded (state flag)
+                        if (location.state?.justOnboarded || localStorage.getItem('justOnboarded') === 'true') {
+                            console.log("ProtectedRoute: User just onboarded (flag detected), setting isOnboarded to true");
                             setIsOnboarded(true);
+                            setCheckedUid(user.uid);
+                            // Clear localStorage after verify
+                            setTimeout(() => localStorage.removeItem('justOnboarded'), 5000);
+                            return;
+                        }
+
+                        // Default behavior: if profile exists but not flagged as new, they are onboarded
+                        console.log(`ProtectedRoute: User ${user.uid} verified onboarded.`);
+                        setIsOnboarded(true);
+                        setCheckedUid(user.uid);
+                    } else if (res.status === 404) {
+                        if (retries > 0) {
+                            console.log("ProtectedRoute: User profile 404, retrying...");
+                            setTimeout(() => checkOnboarding(retries - 1), 500);
+                        } else {
+                            console.log("ProtectedRoute: User profile not found after retries. Assuming NEW.");
+                            setIsOnboarded(false);
+                            setCheckedUid(user.uid);
                         }
                     } else {
-                        console.error(`ProtectedRoute: API returned error status ${res.status}`);
-                        setIsOnboarded(true); // Don't block user if API fails unexpectedly
+                        console.error(`ProtectedRoute: API error ${res.status}`);
+                        setShowFallback(true);
                     }
                 } catch (err) {
-                    console.error("ProtectedRoute onboarding check failed", err);
-                    if (err.name === 'AbortError') {
-                        console.log("ProtectedRoute: Fetch TIMEOUT. Assuming onboarded for fallback.");
-                        setIsOnboarded(true);
-                        return;
-                    }
-                    if (retries > 0) {
-                        setTimeout(() => checkOnboarding(retries - 1), 500);
-                    } else {
-                        console.log("ProtectedRoute: Onboarding check failed after retries, assuming onboarded for safety.");
-                        setIsOnboarded(true);
-                    }
+                    console.error("ProtectedRoute check failed", err);
+                    if (retries > 0) setTimeout(() => checkOnboarding(retries - 1), 500);
+                    else setShowFallback(true);
                 }
             };
-            checkOnboarding();
+
+            // Force a re-check if UID changed
+            if (checkedUid !== user.uid) {
+                console.log(`ProtectedRoute: UID mismatch (${checkedUid} vs ${user.uid}), triggering check...`);
+                setIsOnboarded(null); // Reset to loading
+                checkOnboarding();
+            }
+            return;
         } else {
             console.log("ProtectedRoute: User is GUEST (null)");
-            setIsOnboarded(true); // Guests are "onboarded" by definition of being able to see public area
+            setIsOnboarded(true);
+            setCheckedUid('guest');
         }
 
         // Emergency timeout if onboarding check hangs
@@ -97,7 +101,7 @@ const ProtectedRoute = ({ children }) => {
         }, 8000);
 
         return () => clearTimeout(timeout);
-    }, [user, location.pathname, isOnboarded]); // Added location.pathname to re-check when moving pages
+    }, [user?.uid, location.pathname]); // Removed isOnboarded from deps to prevent loop, used user?.uid for stability
 
     // --- PRIVACY MODE GUARDIAN ---
     // PRIVATE on Production (aceit-learning.com), OPEN on Localhost
@@ -166,13 +170,14 @@ const ProtectedRoute = ({ children }) => {
     }
 
     // Redirect to onboarding if profile not found
-    if (isOnboarded === false) {
+    // IMPORTANT: Only check this if we have actually verified the CURRENT user
+    if (user && checkedUid === user.uid && isOnboarded === false) {
         console.log("ProtectedRoute: User not onboarded, REDIRECTING to /onboarding");
         return <Navigate to="/onboarding" />;
     }
 
-    if (isOnboarded === null) {
-        console.log("ProtectedRoute: Waiting for onboarding check");
+    if (isOnboarded === null || (user && checkedUid !== user.uid)) {
+        console.log("ProtectedRoute: Waiting for onboarding check (or UID sync)");
         return (
             <div className="fixed inset-0 flex flex-col items-center justify-center bg-white z-[9999]">
                 <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mb-4"></div>

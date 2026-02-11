@@ -1,19 +1,13 @@
 const fs = require('fs');
 const path = require('path');
-const { GoogleGenerativeAI } = require("@google/generative-ai");
+const GenerativeAIService = require('./services/GenerativeAIService');
 require('dotenv').config();
-
-// Initialize Gemini
-const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
 const MOCK_DIR = path.join(__dirname, 'generated_mocks', 'speaking');
 if (!fs.existsSync(MOCK_DIR)) fs.mkdirSync(MOCK_DIR, { recursive: true });
 
 async function generateSpeakingMock(theme = "Social Issues") {
     try {
-        const GenerativeAIService = require('./services/GenerativeAIService');
-        const model = GenerativeAIService.getModel({ model: 'gemini-2.0-flash' });
-
         const prompt = `
             You are an expert Cambridge/HKDSE English Exam writer.
             Create a "Group Discussion" (Paper 4) task for HKDSE English Language.
@@ -41,22 +35,9 @@ async function generateSpeakingMock(theme = "Social Issues") {
             }
         `;
 
-        const result = await model.generateContent(prompt);
-        const response = result.response;
-
-        // Log Token Usage
-        if (response.usageMetadata) {
-            const TokenService = require('./services/TokenService');
-            // Mock generator might be called by system, but we try to pass uid if it becomes available
-            TokenService.logUsage('system', 'speaking_mock_gen', response.usageMetadata);
-        }
-
-        const text = response.text();
-        const jsonMatch = text.match(/\{[\s\S]*\}/);
-
-        if (!jsonMatch) throw new Error("No JSON found");
-
-        const mockData = JSON.parse(jsonMatch[0]);
+        const mockData = await GenerativeAIService.generateJson(prompt, {
+            model: 'gemini-flash-latest'
+        });
 
         // Add Metadata
         const mockinfo = {

@@ -1,17 +1,28 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import ExamHeader from '../components/exam/ExamHeader';
+import { Sparkles, X, Loader2 } from 'lucide-react';
+import PolisherCard from '../components/tutor/PolisherCard';
+import VocabularySidekick from '../components/tutor/VocabularySidekick';
 
 const WritingResultPage = () => {
     const { state } = useLocation();
     const navigate = useNavigate();
     const { examId } = useParams();
-    const { currentUser } = useAuth();
+    const { user } = useAuth();
 
     const [results, setResults] = useState(null);
     const [loading, setLoading] = useState(true);
     const [activeTab, setActiveTab] = useState('Part_A');
+
+    // Polisher State
+    const [selectedText, setSelectedText] = useState('');
+    const [selectionPos, setSelectionPos] = useState({ x: 0, y: 0 });
+    const [showPolishBtn, setShowPolishBtn] = useState(false);
+    const [isPolishing, setIsPolishing] = useState(false);
+    const [polishResult, setPolishResult] = useState(null);
+    const answerRef = useRef(null);
 
     useEffect(() => {
         if (!state?.answers) {
@@ -29,7 +40,7 @@ const WritingResultPage = () => {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
-                        uid: currentUser?.uid,
+                        uid: user?.uid,
                         question: "Part A (Short Task)",
                         requirements: partA?.requirements || [],
                         answer: state.answers.Part_A
@@ -44,7 +55,7 @@ const WritingResultPage = () => {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify({
-                            uid: currentUser?.uid,
+                            uid: user?.uid,
                             question: state.selectedElective.question || state.selectedElective.text || "N/A",
                             requirements: ["Write approx 400 words", "Adhere to text type"],
                             answer: state.answers.Part_B
@@ -90,6 +101,56 @@ const WritingResultPage = () => {
     };
 
     const level = getLevel(totalScore);
+
+    // --- POLISHER HANDLERS ---
+    const handleTextSelection = () => {
+        const selection = window.getSelection();
+        const text = selection.toString().trim();
+
+        if (text.length > 5 && answerRef.current && answerRef.current.contains(selection.anchorNode)) {
+            const range = selection.getRangeAt(0);
+            const rect = range.getBoundingClientRect();
+            // Calculate position relative to viewport, adjusted for scroll if needed, 
+            // but fixed position button works best with client rects
+            setSelectionPos({
+                x: rect.left + (rect.width / 2),
+                y: rect.top - 10
+            });
+            setSelectedText(text);
+            setShowPolishBtn(true);
+        } else {
+            setShowPolishBtn(false);
+        }
+    };
+
+    const handlePolish = async () => {
+        if (!selectedText) return;
+        setIsPolishing(true);
+        setShowPolishBtn(false);
+
+        try {
+            const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+            const token = await user.getIdToken();
+            const res = await fetch(`${API_URL}/api/tutor/writing/polish`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${token}` // Ensure auth
+                },
+                body: JSON.stringify({
+                    uid: user.uid,
+                    text: selectedText
+                })
+            });
+            const data = await res.json();
+            setPolishResult(data);
+        } catch (err) {
+            console.error("Polishing failed:", err);
+            alert("Failed to polish text. Please try again.");
+        } finally {
+            setIsPolishing(false);
+        }
+    };
 
     return (
         <div className="min-h-screen bg-gray-50 font-sans">
@@ -208,7 +269,11 @@ const WritingResultPage = () => {
 
                                 <div className="flex-1 flex overflow-hidden">
                                     {/* USER ANSWER */}
-                                    <div className="flex-1 p-6 overflow-y-auto border-r leading-relaxed whitespace-pre-wrap font-serif text-lg text-gray-800">
+                                    <div
+                                        ref={answerRef}
+                                        onMouseUp={handleTextSelection}
+                                        className="flex-1 p-6 overflow-y-auto border-r leading-relaxed whitespace-pre-wrap font-serif text-lg text-gray-800 relative selection:bg-purple-200 selection:text-purple-900"
+                                    >
                                         {state.answers[activeTab]}
                                     </div>
 
@@ -222,6 +287,64 @@ const WritingResultPage = () => {
                     </div>
                 )}
             </div>
+
+            {/* FLOATING POLISH BUTTON */}
+            {showPolishBtn && (
+                <button
+                    onClick={handlePolish}
+                    style={{
+                        position: 'fixed',
+                        left: selectionPos.x,
+                        top: selectionPos.y,
+                        transform: 'translate(-50%, -100%)',
+                    }}
+                    className="z-50 bg-black text-white px-4 py-2 rounded-full shadow-xl flex items-center gap-2 text-sm font-bold animate-in zoom-in slide-in-from-bottom-2 hover:scale-105 transition-transform"
+                >
+                    <Sparkles className="w-4 h-4 text-purple-400" />
+                    Polish with AI
+                </button>
+            )}
+
+            {/* POLISHER MODAL */}
+            {(isPolishing || polishResult) && (
+                <div className="fixed inset-0 z-[100] bg-black/50 backdrop-blur-sm flex items-center justify-center p-4">
+                    <div className="bg-white rounded-2xl shadow-2xl w-full max-w-2xl overflow-hidden animate-in fade-in zoom-in-95">
+
+                        {/* Header */}
+                        <div className="bg-gradient-to-r from-indigo-600 to-purple-600 p-4 flex justify-between items-center text-white">
+                            <div className="flex items-center gap-2">
+                                <Sparkles className="w-5 h-5 text-yellow-300" />
+                                <h3 className="font-bold text-lg">Magic Polisher</h3>
+                            </div>
+                            <button
+                                onClick={() => {
+                                    setPolishResult(null);
+                                    setIsPolishing(false);
+                                }}
+                                className="p-1 hover:bg-white/20 rounded-full transition-colors"
+                            >
+                                <X className="w-5 h-5" />
+                            </button>
+                        </div>
+
+                        {/* Content */}
+                        <div className="p-6 bg-gray-50 max-h-[70vh] overflow-y-auto">
+                            {isPolishing ? (
+                                <div className="flex flex-col items-center justify-center py-12 space-y-4">
+                                    <Loader2 className="w-12 h-12 text-purple-600 animate-spin" />
+                                    <p className="text-gray-500 font-medium animate-pulse">Refining your words...</p>
+                                </div>
+                            ) : (
+                                <PolisherCard data={polishResult} />
+                            )}
+                        </div>
+
+                    </div>
+                </div>
+            )}
+
+            {/* Vocab Sidekick: Available in Analysis Mode */}
+            <VocabularySidekick topic={state.examData?.topic_category || "General Writing"} />
         </div>
     );
 };

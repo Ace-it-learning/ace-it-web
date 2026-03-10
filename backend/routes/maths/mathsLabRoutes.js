@@ -4,11 +4,11 @@ const MathsLabService = require('../../services/maths/MathsLabService');
 
 // POST /api/maths/lab/generate
 router.post('/generate', async (req, res) => {
-    const { topic, level, uid } = req.body;
-    console.log(`[MathsLab] Generating session for topic: ${topic}, user: ${uid}, level: ${level}`);
+    const { topic, level, uid, language, isFactory } = req.body;
+    console.log(`[MathsLab] Generating session for topic: ${topic}, user: ${uid}, level: ${level}, language: ${language}`);
 
     try {
-        const lesson = await MathsLabService.generateLesson({ topic, level, uid });
+        const lesson = await MathsLabService.generateLesson({ topic, level, uid, language, isFactory: isFactory || false });
         res.json(lesson);
     } catch (e) {
         console.error("Maths Lab Gen Error:", e);
@@ -63,11 +63,22 @@ router.post('/submit', async (req, res) => {
         let questXP = 0;
         let practiceXP = 0;
 
-        // 1. Quest Completion
-        if (req.body.taskId) {
+        // 3. Factory Model Quest Completion (Phase 5)
+        if (req.body.isFactoryQuest) {
+            const MATHS_XP_MAPPING = { 1: 50, 2: 75, 3: 100, 4: 150 };
+            const baseXP = MATHS_XP_MAPPING[req.body.level] || 50;
+
+            const factoryResult = await GamificationService.awardFactoryQuestCompletion(uid, req.body.taskId || topic, 'maths', baseXP);
+            if (factoryResult.success) {
+                questXP = factoryResult.totalEarned || factoryResult.earned;
+                console.log(`[MathsLab] Factory Quest Awarded: ${questXP} XP (Bonus: ${factoryResult.bonusAwarded})`);
+            }
+        } else if (req.body.taskId) {
+            // 1. Legacy Quest Completion
             const questResult = await GamificationService.awardQuestCompletion(uid, req.body.taskId, 'maths');
             if (questResult.success && questResult.fresh) {
                 questXP = questResult.earned;
+                console.log(`[MathsLab] Quest Bonus Awarded: ${questXP} XP`);
             }
         }
 
@@ -113,6 +124,51 @@ router.post('/explain-step', async (req, res) => {
     } catch (e) {
         console.error("Maths Step Explain Error:", e);
         res.status(500).json({ error: "Failed to explain math step" });
+    }
+});
+
+// GET /api/maths/lab/learning-content/:microSkillId
+router.get('/learning-content/:microSkillId', async (req, res) => {
+    const { microSkillId } = req.params;
+    const { lang } = req.query;
+    console.log(`[MathsLabRoutes] GET learning-content for: ${microSkillId}, lang: ${lang}`);
+
+    try {
+        const content = await MathsLabService.getLearningContent(microSkillId, lang);
+        console.log(`[MathsLabRoutes] Sending content for: ${microSkillId}`);
+        res.json(content);
+    } catch (e) {
+        console.error("Maths Learning Content Error:", e);
+        res.status(500).json({ error: "Failed to fetch math learning content" });
+    }
+});
+
+// POST /api/maths/lab/grade
+router.post('/grade', async (req, res) => {
+    const { questions, answers, imageAnswers, language } = req.body;
+
+    if (!questions || !answers) {
+        return res.status(400).json({ error: "Missing questions or answers payload" });
+    }
+
+    try {
+        const gradedResults = await MathsLabService.gradeShortAnswers(questions, answers, language, imageAnswers || {});
+        res.json(gradedResults);
+    } catch (e) {
+        console.error("Maths Lab Grading Error:", e);
+        res.status(500).json({ error: "Failed to grade math short answers" });
+    }
+});
+
+// POST /api/maths/lab/hint
+router.post('/hint', async (req, res) => {
+    const { question, question_zh, topic, level } = req.body;
+    try {
+        const hint = await MathsLabService.getHint({ question, question_zh, topic, level });
+        res.json(hint);
+    } catch (e) {
+        console.error("Maths Hint Error:", e);
+        res.status(500).json({ error: "Failed to fetch math hint" });
     }
 });
 

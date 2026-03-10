@@ -12,20 +12,24 @@ console.log(`[TTSService] Init - Key Check: ${fs.existsSync(keyPath) ? 'Found lo
 const client = new textToSpeech.TextToSpeechClient(clientOptions);
 
 /**
- * Helper to wrap English fragments in <lang xml:lang="en-US"> for better pronunciation
+ * Escapes characters for XML/SSML
  */
-function convertToSSML(text) {
-    // 1. Escape special XML characters
-    let escaped = text
+function escapeSSML(text) {
+    return text
         .replace(/&/g, '&amp;')
         .replace(/</g, '&lt;')
         .replace(/>/g, '&gt;')
         .replace(/"/g, '&quot;')
         .replace(/'/g, '&apos;');
+}
+
+/**
+ * Helper to wrap English fragments in <lang xml:lang="en-US"> for better pronunciation
+ */
+function convertToSSML(text) {
+    const escaped = escapeSSML(text);
 
     // 2. Identify English words/phrases and wrap them
-    // This regex looks for sequences of English letters, potentially including numbers/spaces/punctuation
-    // but starting and ending with English characters or being a single English character.
     const mixed = escaped.replace(/([a-zA-Z][a-zA-Z0-9\s\-_'.]*[a-zA-Z0-9])|([a-zA-Z])/g, (match) => {
         return `<lang xml:lang="en-US">${match.trim()}</lang> `;
     });
@@ -43,10 +47,21 @@ function convertToSSML(text) {
 async function generateSpeech(text, languageCode = 'en-US', gender = 'FEMALE') {
     try {
         const isMixedCantonese = languageCode === 'zh-HK';
-        const ssml = isMixedCantonese ? convertToSSML(text) : `<speak>${text}</speak>`;
+        const isSSML = text.trim().startsWith('<speak>');
+
+        // Build request input: use SSML only when explicitly needed
+        let input;
+        if (isSSML) {
+            input = { ssml: text };
+        } else if (isMixedCantonese) {
+            input = { ssml: convertToSSML(text) };
+        } else {
+            // Plain text — let Neural2 handle natural pacing and prosody
+            input = { text: text };
+        }
 
         const request = {
-            input: { ssml: ssml },
+            input: input,
             voice: {
                 languageCode: languageCode,
                 ssmlGender: gender
@@ -57,7 +72,7 @@ async function generateSpeech(text, languageCode = 'en-US', gender = 'FEMALE') {
         // 2. Advanced Voice Selection (WaveNet / Standard-B Strategy)
         if (isMixedCantonese) {
             console.log(`[TTSService] Applying zh-HK customizations: Speed 1.4, Voice Standard-D`);
-            console.log(`[TTSService] SSML Length: ${ssml.length}`);
+            console.log(`[TTSService] SSML Length: ${input.ssml?.length || text.length}`);
             request.audioConfig.speakingRate = 1.4;
 
             // Priority for Ace Sir (Male Cantonese)
@@ -67,12 +82,21 @@ async function generateSpeech(text, languageCode = 'en-US', gender = 'FEMALE') {
                 request.voice.name = 'yue-HK-Standard-A'; // Female
             }
         }
+
         else if (languageCode === 'en-GB') {
             // British English
             if (gender === 'MALE') {
                 request.voice.name = 'en-GB-Neural2-B'; // High quality Male
             } else {
                 request.voice.name = 'en-GB-Neural2-A'; // High quality Female
+            }
+        }
+        else if (languageCode === 'en-US') {
+            // US English (Default)
+            if (gender === 'MALE') {
+                request.voice.name = 'en-US-Neural2-D'; // High quality Male
+            } else {
+                request.voice.name = 'en-US-Neural2-F'; // High quality Female
             }
         }
 

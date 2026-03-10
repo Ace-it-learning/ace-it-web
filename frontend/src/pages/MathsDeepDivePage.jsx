@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import { ChevronLeft, CheckCircle, XCircle, Home, BookOpen, AlertCircle } from 'lucide-react';
-import { BlockMath, InlineMath } from 'react-katex';
+import { SafeInlineMath, SafeBlockMath } from '../components/maths/SafeMath';
 import 'katex/dist/katex.min.css';
 import MathStepExplainer from '../components/maths/MathStepExplainer';
+import { formatNumbers, sanitizeMath, prepareMathText, splitContentByDelimiters, looksLikeMath } from '../utils/mathFormattingUtils';
+import GeometryRenderer from '../components/maths/GeometryRenderer';
 
 const MathsDeepDivePage = () => {
     const { examId } = useParams();
@@ -34,23 +36,96 @@ const MathsDeepDivePage = () => {
     const renderMath = (text) => {
         if (!text) return <span className="text-slate-400 italic">No text content</span>;
 
+        // Safety: Ensure text is a string
+        if (typeof text !== 'string') {
+            if (typeof text === 'number') text = String(text);
+            else if (Array.isArray(text)) text = text.join('\n');
+            else text = String(text);
+        }
+
         const displaySubtext = text
             .replace(/\[DIAGRAM REQUIRED:[\s\S]*?\]/g, '')
             .replace(/\[TABLE REQUIRED:[\s\S]*?\]/g, '')
+            .replace(/(Step\s*\d*\s*:?)\s*\n\s*/gi, '$1 ')
             .trim();
 
-        const parts = displaySubtext.split(/(\\\[[\s\S]*?\\\]|\\\([\s\S]*?\\\)|(?:\$\$[\s\S]*?\$\$)|(?:\$[^$]+?\$))/g);
+        const cleanText = prepareMathText(displaySubtext);
+        const parts = splitContentByDelimiters(cleanText);
 
         return (
-            <div className="text-gray-800 leading-relaxed space-y-4">
+            <div className="text-gray-800 leading-relaxed font-sans">
                 {parts.map((part, i) => {
                     if (!part) return null;
-                    if ((part.startsWith('\\[') && part.endsWith('\\]')) || (part.startsWith('$$') && part.endsWith('$$'))) {
-                        return <div key={i} className="my-2 overflow-x-auto"><BlockMath math={part.slice(2, -2)} /></div>;
-                    } else if ((part.startsWith('\\(') && part.endsWith('\\)')) || (part.startsWith('$') && part.endsWith('$'))) {
-                        return <InlineMath key={i} math={part.startsWith('\\(') ? part.slice(2, -2) : part.slice(1, -1)} />;
+
+                    const isBlock = (part.startsWith('\\[') && part.endsWith('\\]')) || (part.startsWith('$$') && part.endsWith('$$'));
+                    const isInline = (part.startsWith('\\(') && part.endsWith('\\)')) || (part.startsWith('$') && part.endsWith('$'));
+
+                    if (isBlock || isInline) {
+                        let math = '';
+                        if (part.startsWith('\\[') || part.startsWith('\\(')) math = part.slice(2, -2);
+                        else if (part.startsWith('$$')) math = part.slice(2, -2);
+                        else math = part.slice(1, -1);
+
+                        math = math
+                            .replace(/\n/g, ' ')
+                            .replace(/%/g, '\\%')
+                            .replace(/___HKD___/g, '\\text{HK}\\$')
+                            .replace(/___USD___/g, '\\$');
+
+                        const labeledMath = sanitizeMath(math);
+                        const finalMath = formatNumbers(labeledMath, true);
+
+                        if (isBlock) {
+                            return (
+                                <SafeBlockMath key={i} math={finalMath} className="my-2" />
+                            );
+                        } else {
+                            return (
+                                <SafeInlineMath key={i} math={finalMath} className="mx-0.5" />
+                            );
+                        }
                     }
-                    return <span key={i}>{part}</span>;
+
+                    return (
+                        <span key={i}>
+                            {part.split(/\r?\n/).map((line, lineIdx, arr) => {
+                                if (!line.trim() && arr.length > 1) {
+                                    return <br key={lineIdx} />;
+                                }
+                                const trimmedLine = line.trim();
+                                if (!trimmedLine) return null;
+
+                                const isMathLine = looksLikeMath(trimmedLine);
+
+                                if (isMathLine) {
+                                    const mathReadyLine = trimmedLine
+                                        .replace(/%/g, '\\%')
+                                        .replace(/___HKD___/g, '\\text{HK}\\$')
+                                        .replace(/___USD___/g, '\\$');
+
+                                    const labeledMath = sanitizeMath(mathReadyLine);
+                                    const finalMath = formatNumbers(labeledMath, true);
+
+                                    return (
+                                        <SafeInlineMath key={lineIdx} math={finalMath} className="mx-1" />
+                                    );
+                                } else {
+                                    const formattedLine = formatNumbers(trimmedLine);
+                                    const content = formattedLine
+                                        .replace(/___HKD___/g, 'HK$')
+                                        .replace(/___USD___/g, '$')
+                                        .replace(/\\,/g, ' ');
+
+                                    return (
+                                        <React.Fragment key={lineIdx}>
+                                            <span className="whitespace-pre-wrap">{content}</span>
+                                            {lineIdx < arr.length - 1 && <span className="mx-0.5" />}
+                                        </React.Fragment>
+                                    );
+                                }
+                            })}
+                        </span>
+                    );
                 })}
             </div>
         );
@@ -98,11 +173,17 @@ const MathsDeepDivePage = () => {
                     visibleQuestions.map((item, idx) => (
                         <div key={idx} className={`bg-white rounded-2xl shadow-sm border-2 overflow-hidden ${item.isCorrect ? 'border-emerald-100' : 'border-red-100'}`}>
                             {/* Question Status Header */}
-                            <div className={`px-6 py-3 flex items-center justify-between ${item.isCorrect ? 'bg-emerald-50' : 'bg-red-50'}`}>
+                            <div className={`px-6 py-3 flex items-center justify-between ${item.score === item.maxScore ? 'bg-emerald-50' : item.score > 0 ? 'bg-amber-50' : 'bg-red-50'}`}>
                                 <div className="flex items-center gap-3">
-                                    {item.isCorrect ? <CheckCircle className="w-5 h-5 text-emerald-600" /> : <XCircle className="w-5 h-5 text-red-600" />}
-                                    <span className={`font-bold text-sm ${item.isCorrect ? 'text-emerald-700' : 'text-red-700'}`}>
-                                        {item.isCorrect ? 'Correct' : 'Incorrect'}
+                                    {item.score === item.maxScore ? (
+                                        <CheckCircle className="w-5 h-5 text-emerald-600" />
+                                    ) : item.score > 0 ? (
+                                        <CheckCircle className="w-5 h-5 text-amber-600" />
+                                    ) : (
+                                        <XCircle className="w-5 h-5 text-red-600" />
+                                    )}
+                                    <span className={`font-bold text-sm ${item.score === item.maxScore ? 'text-emerald-700' : item.score > 0 ? 'text-amber-700' : 'text-red-700'}`}>
+                                        {item.score === item.maxScore ? 'Correct' : item.score > 0 ? 'Partial' : 'Incorrect'}
                                     </span>
                                 </div>
                                 <span className="text-xs font-bold text-slate-500 bg-white/50 px-2 py-1 rounded">
@@ -117,6 +198,11 @@ const MathsDeepDivePage = () => {
                                     <div className="text-lg">
                                         {renderMath(item.question?.text || "Question text unavailable")}
                                     </div>
+                                    {item.question?.diagram_json && (
+                                        <div className="mt-4 p-4 bg-white border-2 border-slate-100 rounded-xl flex items-center justify-center">
+                                            <GeometryRenderer data={item.question.diagram_json} />
+                                        </div>
+                                    )}
                                     {item.question?.imageURL && (
                                         <div className="mt-4">
                                             <img src={item.question.imageURL} alt="Diagram" className="max-h-60 rounded-lg border border-slate-200" />

@@ -179,7 +179,15 @@ const AdminDashboard = () => {
                     {/* Info / Usage Panel */}
                     <div className="space-y-6">
                         <div className="bg-gray-900 text-white p-8 rounded-3xl shadow-lg">
-                            <h3 className="text-lg font-bold mb-4 opacity-90">System Status</h3>
+                            <h3 className="text-lg font-bold mb-4 opacity-90">Quest Factory</h3>
+                            <button
+                                onClick={() => navigate('/admin/factory')}
+                                className="w-full py-3 bg-primary text-black font-black rounded-xl hover:bg-primary/90 transition-all flex items-center justify-center gap-2 mb-6"
+                            >
+                                <Zap className="w-4 h-4" />
+                                Enter Manufacturing Plant
+                            </button>
+                            <h3 className="text-lg font-bold mb-4 opacity-90 text-[10px] uppercase tracking-widest text-gray-500">System Status</h3>
                             <div className="space-y-4">
                                 <div className="flex justify-between items-center border-b border-gray-700 pb-3">
                                     <span className="text-gray-400 text-sm">Backend Node</span>

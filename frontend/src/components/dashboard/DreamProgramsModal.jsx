@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import * as Dialog from '@radix-ui/react-dialog';
-import { GraduationCap, Search, X, Plus, GripVertical, Trash2, Target, TrendingUp, Info, Sparkles } from 'lucide-react';
+import { GraduationCap, Search, X, Plus, GripVertical, Trash2, Target, TrendingUp, Info, Sparkles, ChevronUp, ChevronDown } from 'lucide-react';
+import { Reorder } from 'framer-motion';
 import { useAuth } from '../../context/AuthContext';
 import { JUPAS_PROGRAMS, PROGRAM_CATEGORIES, UNIVERSITY_SHORT_NAMES } from '../../constants/jupasPrograms';
-import { JUPAS_PROGRAM_DETAILS } from '../../constants/jupasProgramDetails';
+import { JUPAS_PROGRAM_DETAILS, CATEGORY_TEMPLATES } from '../../constants/jupasProgramDetails';
 import { useLanguage } from '../../context/LanguageContext';
 
 const DreamProgramsModal = ({ isOpen, onClose }) => {
@@ -18,13 +19,95 @@ const DreamProgramsModal = ({ isOpen, onClose }) => {
     const [loading, setLoading] = useState(false);
     const [saving, setSaving] = useState(false);
 
+    const translations = {
+        en: {
+            title: 'My Dream Subjects',
+            searchPlaceholder: 'Search Programs (Code or Name)...',
+            allCategories: 'All Areas',
+            selectedCount: (count) => `Selected (${count}/20)`,
+            noPrograms: 'Choose up to 20 dream subjects. Drag to reorder your preference.',
+            save: 'Save Selection',
+            saving: 'Saving...',
+            loading: 'Loading...',
+            add: 'Add',
+            limitReached: 'You can select up to 20 dream subjects!',
+            best5Label: 'Estimated Best 5',
+            scoringScale: 'Scoring Scale',
+            standardScale: 'Standard (DSE)',
+            bonusScale: 'Institutional (Bonus)',
+            reachable: 'Reachable',
+            stretch: 'Stretch',
+            ambitious: 'Ambitious',
+            programDetail: 'Program Detail',
+            back: 'Back to List',
+            collecting: 'Official database is being updated...',
+            tips: "Ace Sir's Strategy Tips",
+            structure: 'Program Structure/Features',
+            admission: 'Admission Criteria',
+            career: 'Career Prospects',
+            emptySearch: 'No matching programs found',
+            clearFilters: 'Clear Filters',
+            dreamListHeader: 'My Dream Programs',
+            dragHint: 'Drag to reorder preference',
+            targetScore: 'Target',
+            gapStatus: (gap) => gap <= 0 ? '✓ Reachable' : `${gap} pts gap`,
+            sourceHint: 'Source: Official JUPAS pages (2024/25 Academic Year)',
+            cancel: 'Cancel',
+            description: 'Set your Top 20 dream programs, Ace Sir will track the gap to your target',
+            standardHint: "Using standard scoring (1-7)",
+            bonusHint: "Using university bonus scale (5**=8.5, 5*=7, 5=5.5)",
+            baselineHint: "Based on your Eng + Math data and self-reported electives"
+        },
+        zh: {
+            title: '我的夢想學科',
+            searchPlaceholder: '搜尋課程 (編號或名稱)...',
+            allCategories: '全部範疇',
+            selectedCount: (count) => `已選擇 (${count}/20)`,
+            noPrograms: '可選擇最多 20 個夢想學科。拖動以排列優先次序。',
+            save: '儲存選擇',
+            saving: '儲存中...',
+            loading: '載入中...',
+            add: '加入',
+            limitReached: '最多可以選擇 20 個夢想學科！',
+            best5Label: '預計 Best 5',
+            scoringScale: '計分方式',
+            standardScale: '標準 (DSE)',
+            bonusScale: '院校加權 (Bonus)',
+            reachable: '穩陣',
+            stretch: '搏一搏',
+            ambitious: '進取',
+            programDetail: '學科詳情',
+            back: '返回列表',
+            collecting: '官方資料更新中...',
+            tips: 'Ace Sir 戰略攻略',
+            structure: '課程結構及特色',
+            admission: '收生要求',
+            career: '職業前景',
+            emptySearch: '搵唔到相關課程',
+            clearFilters: '清除篩選',
+            dreamListHeader: '我嘅心儀課程',
+            dragHint: '拖動調整優先次序',
+            targetScore: '目標',
+            gapStatus: (gap) => gap <= 0 ? '✓ 穩陣' : `差 ${gap} 分`,
+            sourceHint: '數據來源：各大學官方 JUPAS 頁面（2024/25 學年）',
+            cancel: '取消',
+            description: '設定你嘅 Top 20 心儀課程，Ace Sir 會幫你追蹤同目標嘅距離',
+            standardHint: "正在使用標準計分機制 (1-7)",
+            bonusHint: "正在使用大學加分機制 (5**=8.5, 5*=7, 5=5.5)",
+            baselineHint: "基於英文 + 數學數據，加埋你自報嘅其他科目"
+        }
+    };
+
+    const t = translations[language === 'zh' ? 'zh' : 'en'];
+
     // Fetch user's dream programs on open
     useEffect(() => {
         if (isOpen && user?.uid) {
             const fetchDreamPrograms = async () => {
                 setLoading(true);
                 try {
-                    const response = await fetch(`/api/user/dream-programs?uid=${user.uid}`);
+                    const API_URL = import.meta.env.VITE_API_URL || '';
+                    const response = await fetch(`${API_URL}/api/user/dream-programs?uid=${user.uid}`);
                     if (response.ok) {
                         const data = await response.json();
                         setDreamPrograms(data.programs || []);
@@ -59,11 +142,9 @@ const DreamProgramsModal = ({ isOpen, onClose }) => {
         );
     });
 
-
-
     const handleAddProgram = (program) => {
-        if (dreamPrograms.length >= 10) {
-            alert('最多可以選擇 10 個夢想學科！');
+        if (dreamPrograms.length >= 20) {
+            alert(t.limitReached);
             return;
         }
         setDreamPrograms(prev => [...prev, program]);
@@ -74,19 +155,12 @@ const DreamProgramsModal = ({ isOpen, onClose }) => {
         setDreamPrograms(prev => prev.filter(p => p.id !== programId));
     };
 
-    const handleMoveProgram = (fromIndex, toIndex) => {
-        if (toIndex < 0 || toIndex >= dreamPrograms.length) return;
-        const updated = [...dreamPrograms];
-        const [moved] = updated.splice(fromIndex, 1);
-        updated.splice(toIndex, 0, moved);
-        setDreamPrograms(updated);
-    };
-
     const handleSave = async () => {
         if (!user?.uid) return;
         setSaving(true);
         try {
-            const response = await fetch('/api/user/dream-programs', {
+            const API_URL = import.meta.env.VITE_API_URL || '';
+            const response = await fetch(`${API_URL}/api/user/dream-programs`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ uid: user.uid, programs: dreamPrograms })
@@ -100,7 +174,7 @@ const DreamProgramsModal = ({ isOpen, onClose }) => {
             onClose();
         } catch (err) {
             console.error('[DreamPrograms] Save failed:', err);
-            alert(`儲存失敗: ${err.message || '請再試一次'}`);
+            alert(`${language === 'zh' ? '儲存失敗' : 'Save failed'}: ${err.message || (language === 'zh' ? '請再試一次' : 'Please try again')}`);
         }
         setSaving(false);
     };
@@ -137,22 +211,21 @@ const DreamProgramsModal = ({ isOpen, onClose }) => {
     return (
         <Dialog.Root open={isOpen} onOpenChange={onClose}>
             <Dialog.Portal>
-                {/* ... overlay & content wrapper ... */}
+                <Dialog.Overlay className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm animate-in fade-in duration-300" />
                 <Dialog.Content className="fixed left-[50%] top-[50%] z-50 w-[95vw] max-w-4xl translate-x-[-50%] translate-y-[-50%] outline-none animate-in fade-in zoom-in-95 duration-200 overflow-hidden">
-                    <div className="bg-slate-900 border border-slate-800 text-slate-100 shadow-2xl p-6 rounded-3xl relative max-h-[85vh] overflow-y-auto">
+                    <div className="bg-slate-900 border border-slate-800 text-slate-100 shadow-2xl p-6 rounded-3xl relative max-h-[85vh] overflow-y-auto custom-scrollbar">
                         {/* Header */}
                         <div className="flex items-center justify-between mb-6">
-                            {/* ... existing header ... */}
                             <div className="flex items-center gap-3">
                                 <div className="p-2 bg-gradient-to-br from-orange-500/20 to-amber-500/20 rounded-lg">
                                     <GraduationCap className="w-5 h-5 text-orange-400" />
                                 </div>
                                 <div>
                                     <Dialog.Title className="text-xl font-bold bg-gradient-to-r from-orange-400 to-amber-500 bg-clip-text text-transparent">
-                                        夢想學科清單
+                                        {t.title}
                                     </Dialog.Title>
                                     <Dialog.Description className="text-slate-400 italic text-xs">
-                                        設定你嘅 Top 5-10 心儀課程，Ace Sir 會幫你追蹤同目標嘅距離
+                                        {t.description}
                                     </Dialog.Description>
                                 </div>
                             </div>
@@ -168,7 +241,7 @@ const DreamProgramsModal = ({ isOpen, onClose }) => {
                                             type="text"
                                             value={searchQuery}
                                             onChange={(e) => setSearchQuery(e.target.value)}
-                                            placeholder="搜尋課程 (e.g. JS6070, 醫科, HKU)..."
+                                            placeholder={t.searchPlaceholder}
                                             className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-slate-700 rounded-xl text-sm text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-orange-500/50 focus:border-orange-500/50"
                                         />
                                     </div>
@@ -182,7 +255,7 @@ const DreamProgramsModal = ({ isOpen, onClose }) => {
                                                 : 'bg-slate-800 text-slate-400 hover:bg-slate-700'
                                                 }`}
                                         >
-                                            全部
+                                            {t.allCategories}
                                         </button>
                                         {Object.entries(PROGRAM_CATEGORIES).map(([key, label]) => (
                                             <button
@@ -193,7 +266,7 @@ const DreamProgramsModal = ({ isOpen, onClose }) => {
                                                     : 'bg-slate-800 text-slate-400 hover:bg-slate-700'
                                                     }`}
                                             >
-                                                {label}
+                                                {language === 'zh' ? label : key.charAt(0).toUpperCase() + key.slice(1).replace('_', ' ')}
                                             </button>
                                         ))}
                                     </div>
@@ -202,12 +275,12 @@ const DreamProgramsModal = ({ isOpen, onClose }) => {
                                 <div className="space-y-2 max-h-[400px] overflow-y-auto pr-2 custom-scrollbar">
                                     {filteredPrograms.length === 0 && (
                                         <div className="p-8 text-center border border-dashed border-slate-800 rounded-xl">
-                                            <p className="text-sm text-slate-500">搵唔到相關課程</p>
+                                            <p className="text-sm text-slate-500">{t.emptySearch}</p>
                                             <button
                                                 onClick={() => { setSearchQuery(''); setSelectedCategory('all'); }}
                                                 className="text-xs text-orange-400 hover:underline mt-2"
                                             >
-                                                清除篩選
+                                                {t.clearFilters}
                                             </button>
                                         </div>
                                     )}
@@ -229,22 +302,19 @@ const DreamProgramsModal = ({ isOpen, onClose }) => {
                                                             {program.code}
                                                         </span>
                                                     </div>
-                                                    <p className="text-[10px] text-slate-600 mt-1">
-                                                        Best 5 Median: <span className="text-slate-400">{program.median}</span>
-                                                    </p>
                                                 </div>
                                                 <div className="flex items-center gap-1 mt-1">
                                                     <button
                                                         onClick={(e) => { e.stopPropagation(); setViewingDetail(program); }}
                                                         className="p-1.5 text-slate-500 hover:text-orange-400 hover:bg-orange-500/10 rounded-lg transition-colors"
-                                                        title="View Details"
+                                                        title={t.programDetail}
                                                     >
                                                         <Info className="w-4 h-4" />
                                                     </button>
                                                     <button
                                                         onClick={(e) => { e.stopPropagation(); handleAddProgram(program); }}
                                                         className="p-1.5 text-slate-500 hover:text-orange-400 hover:bg-orange-500/10 rounded-lg transition-colors"
-                                                        title="Add to Dream List"
+                                                        title={t.add}
                                                     >
                                                         <Plus className="w-4 h-4" />
                                                     </button>
@@ -254,7 +324,7 @@ const DreamProgramsModal = ({ isOpen, onClose }) => {
                                     ))}
                                     {filteredPrograms.length > 20 && (
                                         <p className="text-[10px] text-center text-slate-600 italic py-2">
-                                            顯示首 20 個結果...
+                                            {language === 'zh' ? '顯示首 20 個結果...' : 'Showing first 20 results...'}
                                         </p>
                                     )}
                                 </div>
@@ -265,10 +335,10 @@ const DreamProgramsModal = ({ isOpen, onClose }) => {
                                 <div className="flex items-center justify-between">
                                     <h3 className="text-sm font-semibold text-slate-300 flex items-center gap-2">
                                         <Sparkles className="w-4 h-4 text-orange-400" />
-                                        我嘅心儀課程 ({dreamPrograms.length}/10)
+                                        {t.dreamListHeader} ({dreamPrograms.length}/20)
                                     </h3>
                                     <div className="text-xs text-slate-500">
-                                        拖動調整優先次序
+                                        {t.dragHint}
                                     </div>
                                 </div>
 
@@ -276,14 +346,19 @@ const DreamProgramsModal = ({ isOpen, onClose }) => {
                                     <div className="p-8 text-center border border-dashed border-slate-700 rounded-xl">
                                         <GraduationCap className="w-8 h-8 text-slate-600 mx-auto mb-2" />
                                         <p className="text-sm text-slate-500">
-                                            仲未有心儀課程
+                                            {language === 'zh' ? '仲未有心儀課程' : 'No programs selected yet'}
                                         </p>
                                         <p className="text-xs text-slate-600 mt-1">
-                                            喺左邊搜尋並加入課程
+                                            {language === 'zh' ? '喺左邊搜尋並加入課程' : 'Search and add programs on the left'}
                                         </p>
                                     </div>
                                 ) : (
-                                    <div className="space-y-2 max-h-[300px] overflow-y-auto pr-2 custom-scrollbar">
+                                    <Reorder.Group
+                                        axis="y"
+                                        values={dreamPrograms}
+                                        onReorder={setDreamPrograms}
+                                        className="space-y-2 max-h-[350px] overflow-y-auto pr-2 custom-scrollbar"
+                                    >
                                         {dreamPrograms.map((program, index) => {
                                             const gap = program.median - estimatedBest5;
                                             const isReachable = gap <= 0;
@@ -291,110 +366,98 @@ const DreamProgramsModal = ({ isOpen, onClose }) => {
                                             const isAmbitious = gap > 4;
 
                                             return (
-                                                <div
+                                                <Reorder.Item
                                                     key={program.id}
-                                                    className="p-3 bg-slate-800/30 border border-slate-700/50 rounded-xl group hover:border-orange-500/30 transition-all"
+                                                    value={program}
+                                                    className="p-3 bg-slate-800/30 border border-slate-700/50 rounded-xl group hover:border-orange-500/30 transition-all cursor-grab active:cursor-grabbing"
                                                 >
                                                     <div className="flex items-start gap-2">
-                                                        <div className="flex flex-col items-center gap-1 pt-1">
-                                                            <button
-                                                                onClick={() => handleMoveProgram(index, index - 1)}
-                                                                className="p-0.5 text-slate-600 hover:text-white transition-colors disabled:opacity-30"
-                                                                disabled={index === 0}
-                                                            >
-                                                                <GripVertical className="w-3 h-3 rotate-90" />
-                                                            </button>
+                                                        <div className="flex flex-col items-center gap-1 pt-1 opacity-50 group-hover:opacity-100 transition-opacity">
+                                                            <GripVertical className="w-4 h-4 text-slate-500" />
                                                             <span className="text-[10px] font-bold text-orange-400">#{index + 1}</span>
-                                                            <button
-                                                                onClick={() => handleMoveProgram(index, index + 1)}
-                                                                className="p-0.5 text-slate-600 hover:text-white transition-colors disabled:opacity-30"
-                                                                disabled={index === dreamPrograms.length - 1}
-                                                            >
-                                                                <GripVertical className="w-3 h-3 rotate-90" />
-                                                            </button>
                                                         </div>
                                                         <div className="flex-1 min-w-0">
                                                             <div className="flex items-start justify-between">
-                                                                <div>
+                                                                <div className="min-w-0 flex-1">
                                                                     <p className="text-sm font-medium text-white truncate">
                                                                         {program.name}
                                                                     </p>
                                                                     <p className="text-xs text-slate-500 truncate">
-                                                                        {program.university}
+                                                                        {UNIVERSITY_SHORT_NAMES[program.university] || program.university}
                                                                     </p>
                                                                 </div>
-                                                                <button
-                                                                    onClick={() => setViewingDetail(program)}
-                                                                    className="p-2 text-orange-400 hover:text-orange-300 bg-orange-500/10 hover:bg-orange-500/20 rounded-lg transition-all flex-shrink-0"
-                                                                    title="View Details"
-                                                                >
-                                                                    <Info className="w-4 h-4" />
-                                                                </button>
-                                                                <button
-                                                                    onClick={() => handleRemoveProgram(program.id)}
-                                                                    className="p-1 text-slate-600 hover:text-rose-400 transition-colors flex-shrink-0"
-                                                                >
-                                                                    <Trash2 className="w-3.5 h-3.5" />
-                                                                </button>
+                                                                <div className="flex items-center gap-1 flex-shrink-0 ml-2">
+                                                                    <button
+                                                                        onClick={() => setViewingDetail(program)}
+                                                                        className="p-1.5 text-orange-400 hover:text-orange-300 bg-orange-500/10 hover:bg-orange-500/20 rounded-lg transition-all"
+                                                                        title={t.programDetail}
+                                                                    >
+                                                                        <Info className="w-3.5 h-3.5" />
+                                                                    </button>
+                                                                    <button
+                                                                        onClick={() => handleRemoveProgram(program.id)}
+                                                                        className="p-1 text-slate-600 hover:text-rose-400 transition-colors"
+                                                                    >
+                                                                        <Trash2 className="w-3.5 h-3.5" />
+                                                                    </button>
+                                                                </div>
                                                             </div>
                                                             {/* Gap Analysis Bar */}
                                                             <div className="mt-2">
                                                                 <div className="flex items-center justify-between text-[10px] mb-1">
-                                                                    <span className="text-slate-500">目標: {program.median}分</span>
+                                                                    <span className="text-slate-500">{t.targetScore}: {program.median}</span>
                                                                     <span className={`font-medium ${isReachable ? 'text-emerald-400' : isStretch ? 'text-amber-400' : 'text-rose-400'}`}>
-                                                                        {isReachable ? '✓ 穩陣' : `差 ${gap} 分`}
+                                                                        {t.gapStatus(gap)}
                                                                     </span>
                                                                 </div>
                                                                 <div className="h-1.5 bg-slate-700 rounded-full overflow-hidden">
                                                                     <div
                                                                         className={`h-full rounded-full transition-all ${isReachable ? 'bg-emerald-400' : isStretch ? 'bg-amber-400' : 'bg-rose-400'}`}
-                                                                        style={{ width: `${Math.min(100, (estimatedBest5 / program.median) * 100)}%` }}
+                                                                        style={{ width: `${Math.min(100, (estimatedBest5 / (program.median || 1)) * 100)}%` }}
                                                                     />
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
+                                                </Reorder.Item>
                                             );
                                         })}
-                                    </div>
+                                    </Reorder.Group>
                                 )}
 
                                 {dreamPrograms.length > 0 && (
                                     <div className="p-4 bg-gradient-to-br from-orange-500/10 to-amber-500/10 rounded-xl border border-orange-500/20">
                                         <div className="flex items-center gap-2 mb-2">
                                             <Target className="w-4 h-4 text-orange-400" />
-                                            <span className="text-xs font-bold text-orange-100/80 uppercase tracking-widest">預計 Best 5</span>
+                                            <span className="text-xs font-bold text-orange-100/80 uppercase tracking-widest">{t.best5Label}</span>
                                         </div>
                                         <div className="flex items-center justify-between mb-4">
                                             <div className="flex items-baseline gap-2">
                                                 <span className="text-4xl font-black text-white">{estimatedBest5}</span>
-                                                <span className="text-sm text-slate-400">分</span>
+                                                <span className="text-sm text-slate-400">{language === 'zh' ? '分' : 'pts'}</span>
                                             </div>
                                             <div className="flex bg-slate-800 p-0.5 rounded-lg border border-slate-700">
                                                 <button
                                                     onClick={() => setScoringScale('standard')}
                                                     className={`px-3 py-1 text-[10px] font-bold rounded-md transition-all ${scoringScale === 'standard' ? 'bg-orange-500 text-white shadow-lg' : 'text-slate-500 hover:text-slate-300'}`}
                                                 >
-                                                    標準 (1-7)
+                                                    {language === 'zh' ? '標準 (1-7)' : 'Standard (1-7)'}
                                                 </button>
                                                 <button
                                                     onClick={() => setScoringScale('bonus')}
                                                     className={`px-3 py-1 text-[10px] font-bold rounded-md transition-all ${scoringScale === 'bonus' ? 'bg-orange-500 text-white shadow-lg' : 'text-slate-500 hover:text-slate-300'}`}
                                                 >
-                                                    加分 (8.5)
+                                                    {language === 'zh' ? '加分 (8.5)' : 'Bonus (8.5)'}
                                                 </button>
                                             </div>
                                         </div>
                                         <p className="text-[10px] text-orange-400/80 mt-1 flex items-center gap-1">
                                             <Info className="w-3 h-3" />
-                                            {scoringScale === 'bonus'
-                                                ? "正在使用大學加分機制 (5**=8.5, 5*=7, 5=5.5)"
-                                                : "正在使用標準計分機制 (1-7)"}
+                                            {scoringScale === 'bonus' ? t.bonusHint : t.standardHint}
                                         </p>
                                         <p className="text-[10px] text-orange-400/60 mt-1 flex items-center gap-1">
                                             <TrendingUp className="w-3 h-3" />
-                                            基於英文 + 數學數據，加埋你自報嘅其他科目
+                                            {t.baselineHint}
                                         </p>
                                     </div>
                                 )}
@@ -405,21 +468,21 @@ const DreamProgramsModal = ({ isOpen, onClose }) => {
                         <div className="mt-6 flex justify-between items-center pt-4 border-t border-slate-800/50">
                             <div className="flex items-center gap-2 text-[10px] text-slate-500">
                                 <Info className="w-3 h-3" />
-                                <span>數據來源：各大學官方 JUPAS 頁面（2024/25 學年）</span>
+                                <span>{t.sourceHint}</span>
                             </div>
                             <div className="flex gap-3">
                                 <button
                                     onClick={onClose}
                                     className="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-lg text-sm font-medium transition-all"
                                 >
-                                    取消
+                                    {t.cancel}
                                 </button>
                                 <button
                                     onClick={handleSave}
                                     disabled={saving}
                                     className="px-6 py-2 bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white rounded-lg text-sm font-bold transition-all disabled:opacity-50"
                                 >
-                                    {saving ? '儲存中...' : '儲存'}
+                                    {saving ? t.saving : t.save}
                                 </button>
                             </div>
                         </div>
@@ -446,13 +509,13 @@ const DreamProgramsModal = ({ isOpen, onClose }) => {
                                 <div className="p-3 bg-orange-500/20 rounded-2xl">
                                     <Sparkles className="w-6 h-6 text-orange-400" />
                                 </div>
-                                <div>
+                                <div className="min-w-0 flex-1">
                                     <div className="flex items-center gap-2 text-xs text-orange-400 font-bold uppercase tracking-widest mb-1">
                                         <span>Dream Subject Insight</span>
                                         <span className="px-1.5 py-0.5 bg-orange-500/10 rounded text-[10px]">{viewingDetail?.code}</span>
                                     </div>
-                                    <Dialog.Title className="text-2xl font-bold text-white">
-                                        {viewingDetail?.university} {viewingDetail?.name}
+                                    <Dialog.Title className="text-xl font-bold text-white truncate">
+                                        {UNIVERSITY_SHORT_NAMES[viewingDetail?.university] || viewingDetail?.university} {viewingDetail?.name}
                                     </Dialog.Title>
                                 </div>
                             </div>
@@ -460,7 +523,12 @@ const DreamProgramsModal = ({ isOpen, onClose }) => {
                             {(() => {
                                 const programDetails = viewingDetail ? JUPAS_PROGRAM_DETAILS[viewingDetail.code] : null;
                                 const currentLang = language === 'en' ? 'en' : 'zh';
-                                const details = programDetails?.content?.[currentLang];
+                                let details = programDetails?.content?.[currentLang];
+
+                                // Phase 2 Fallback: Use category templates if specific details are missing
+                                if (!details && viewingDetail?.category) {
+                                    details = CATEGORY_TEMPLATES[viewingDetail.category]?.[currentLang];
+                                }
 
                                 if (!details || !details.sections) {
                                     return (
@@ -470,7 +538,7 @@ const DreamProgramsModal = ({ isOpen, onClose }) => {
                                             </div>
                                             <div>
                                                 <h4 className="text-lg font-bold text-slate-300">
-                                                    {currentLang === 'en' ? 'Data Collecting...' : '數據收集中...'}
+                                                    {t.collecting}
                                                 </h4>
                                                 <p className="text-sm text-slate-500 max-w-xs mx-auto">
                                                     {currentLang === 'en'
@@ -484,29 +552,38 @@ const DreamProgramsModal = ({ isOpen, onClose }) => {
 
                                 return (
                                     <div className="space-y-8 pb-4">
-                                        {Object.entries(details.sections || {}).map(([key, section]) => (
-                                            <div key={key} className={`p-6 rounded-2xl border transition-all ${key === 'tips' ? 'bg-orange-500/5 border-orange-500/20 shadow-lg shadow-orange-500/5' : 'bg-slate-800/30 border-slate-700/50'}`}>
-                                                <h4 className={`text-sm font-black uppercase tracking-wider mb-4 flex items-center gap-2 ${key === 'tips' ? 'text-orange-400' : 'text-slate-300'}`}>
-                                                    {key === 'admission' && <Target className="w-4 h-4" />}
-                                                    {key === 'structure' && <GraduationCap className="w-4 h-4" />}
-                                                    {key === 'career' && <TrendingUp className="w-4 h-4" />}
-                                                    {key === 'tips' && <Sparkles className="w-4 h-4" />}
-                                                    {section.title}
-                                                </h4>
-                                                <div className="space-y-3">
-                                                    {section.content.map((line, i) => (
-                                                        <p key={i} className={`text-sm leading-relaxed ${key === 'tips' ? 'text-orange-100/90' : 'text-slate-400'}`}>
-                                                            {line.startsWith('- ') ? (
-                                                                <span className="flex gap-2">
-                                                                    <span className="text-orange-500 mt-1.5 flex-shrink-0 bg-orange-500 rounded-full w-1 h-1" />
-                                                                    {line.substring(2)}
-                                                                </span>
-                                                            ) : line}
-                                                        </p>
-                                                    ))}
+                                        {Object.entries(details.sections || {}).map(([key, section]) => {
+                                            const sectionTitles = {
+                                                admission: t.admission,
+                                                structure: t.structure,
+                                                career: t.career,
+                                                tips: t.tips
+                                            };
+
+                                            return (
+                                                <div key={key} className={`p-6 rounded-2xl border transition-all ${key === 'tips' ? 'bg-orange-500/5 border-orange-500/20 shadow-lg shadow-orange-500/5' : 'bg-slate-800/30 border-slate-700/50'}`}>
+                                                    <h4 className={`text-sm font-black uppercase tracking-wider mb-4 flex items-center gap-2 ${key === 'tips' ? 'text-orange-400' : 'text-slate-300'}`}>
+                                                        {key === 'admission' && <Target className="w-4 h-4" />}
+                                                        {key === 'structure' && <GraduationCap className="w-4 h-4" />}
+                                                        {key === 'career' && <TrendingUp className="w-4 h-4" />}
+                                                        {key === 'tips' && <Sparkles className="w-4 h-4" />}
+                                                        {sectionTitles[key] || section.title}
+                                                    </h4>
+                                                    <div className="space-y-3">
+                                                        {section.content.map((line, i) => (
+                                                            <p key={i} className={`text-sm leading-relaxed ${key === 'tips' ? 'text-orange-100/90' : 'text-slate-400'}`}>
+                                                                {line.startsWith('- ') ? (
+                                                                    <span className="flex gap-2">
+                                                                        <span className="text-orange-500 mt-1.5 flex-shrink-0 bg-orange-500 rounded-full w-1 h-1" />
+                                                                        {line.substring(2)}
+                                                                    </span>
+                                                                ) : line}
+                                                            </p>
+                                                        ))}
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        ))}
+                                            );
+                                        })}
                                     </div>
                                 );
                             })()}

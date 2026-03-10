@@ -1,0 +1,856 @@
+{
+  "meta": {
+    "topic": "West Kowloon Art Boom",
+    "generated_at": "2026-01-27T15:19:21.682Z",
+    "module": "Module 3 (Reading Pipeline)",
+    "blueprint_version": "2026_V1",
+    "paper_type": "Reading"
+  },
+  "Part_A": {
+    "resources": {
+      "Text_1": {
+        "title": "West Kowloon Cultural District: A New Chapter Unfolds",
+        "subheading": "The ambitious project enters a phase of revitalisation and innovation.",
+        "content": {
+          "p1": "Hong Kong's West Kowloon Cultural District (WKCD), a long-gestating project aimed at establishing the city as a prominent arts and culture hub in Asia, is embarking on a new phase. After years of construction and initial openings, the district is now focusing on programming and strategic partnerships to solidify its position on the global stage. The project, a sprawling waterfront area, houses a number of key institutions, including M+, a museum of visual culture, and the Xiqu Centre, dedicated to Chinese opera.",
+          "p2": "Recent developments include increased collaboration with international arts organisations, aimed at bringing world-class exhibitions and performances to Hong Kong. Moreover, there's a renewed emphasis on supporting local artists and fostering creative talent. The WKCD Authority has announced new initiatives providing grants and residency programmes. However, challenges remain. Ensuring financial sustainability and attracting a diverse audience are ongoing priorities. The district must also navigate the complex political landscape to maintain its artistic freedom and relevance. Despite these hurdles, the WKCD represents a significant investment in Hong Kong's cultural future, promising to enrich the lives of residents and attract visitors from around the world."
+        },
+        "metadata": {
+          "word_count": 150,
+          "genre": "News Article"
+        }
+      },
+      "Text_2": {
+        "title": "The West Kowloon Cultural District: An Evaluation of Progress and Future Prospects",
+        "subheading": "A comprehensive analysis of the WKCD's impact on Hong Kong's cultural landscape, its challenges, and potential for growth.",
+        "content": {
+          "p1": "The West Kowloon Cultural District (WKCD) represents a monumental undertaking, embodying Hong Kong's aspiration to become a pre-eminent centre for arts and culture in Asia. Conceived as a multi-billion dollar investment, the WKCD encompasses a diverse array of venues, including the M+ museum, the Xiqu Centre, and the Freespace performance venue. Its inception was met with both enthusiasm and scepticism, with proponents hailing it as a catalyst for cultural enrichment and economic diversification, while critics voiced concerns about its cost, governance, and potential for political interference. Now, several years after the opening of its flagship institutions, it is pertinent to evaluate the WKCD's progress, its impact on the local arts scene, and its prospects for the future.",
+          "p2": "One of the primary objectives of the WKCD was to enhance Hong Kong's appeal as a tourist destination, attracting visitors from around the globe with its world-class cultural offerings. M+, in particular, has played a significant role in this regard, showcasing a diverse collection of visual art from Hong Kong, China, Asia, and beyond. The museum's exhibitions have garnered international attention, attracting large crowds and generating considerable media coverage. The Xiqu Centre, dedicated to the preservation and promotion of Chinese opera, has also contributed to the WKCD's appeal, offering traditional performances and educational programmes that celebrate this unique art form. However, the WKCD's success in attracting tourists has been uneven, particularly in the wake of the COVID-19 pandemic and ongoing political uncertainties. The district faces the challenge of adapting to changing travel patterns and maintaining its appeal in a competitive global market.",
+          "p3": "Beyond its tourism potential, the WKCD was also intended to foster a vibrant local arts scene, providing opportunities for Hong Kong artists and cultural organisations to thrive. The district has implemented various initiatives to support local talent, including artist residency programmes, grants, and commissioning projects. Freespace, in particular, has emerged as a hub for independent music, theatre, and dance performances, providing a platform for emerging artists to showcase their work. However, some critics argue that the WKCD has not done enough to prioritise local artists, with a disproportionate focus on international exhibitions and performances. There are concerns that the district's high operating costs and bureaucratic structures may create barriers for smaller arts organisations and individual artists. To truly fulfil its mission of fostering a vibrant local arts scene, the WKCD must ensure that it provides equitable access and opportunities for all members of the artistic community.",
+          "p4": "Financial sustainability remains a significant challenge for the WKCD. The district relies heavily on government funding, which is subject to political pressures and budgetary constraints. Generating sufficient revenue through ticket sales, sponsorships, and other commercial activities is crucial for the WKCD's long-term viability. The district must also manage its operating costs effectively, ensuring that it delivers value for money to taxpayers. Diversifying its revenue streams and attracting private investment are essential steps towards achieving financial independence. Collaboration with other cultural institutions and businesses can also help to enhance the WKCD's financial resilience.",
+          "p5": "The WKCD's governance structure has also been a subject of debate. The WKCD Authority, responsible for overseeing the district's development and operations, is appointed by the Hong Kong government. Some critics argue that this arrangement makes the WKCD vulnerable to political interference and undermines its artistic independence. Ensuring transparency and accountability in decision-making is crucial for maintaining public trust and confidence in the WKCD. Strengthening the representation of artists and cultural professionals on the WKCD Authority could also help to ensure that the district's policies and programmes are aligned with the needs of the artistic community.",
+          "p6": "Looking ahead, the WKCD has the potential to become a truly world-class cultural district, enriching the lives of Hong Kong residents and attracting visitors from around the globe. To achieve this vision, the district must address its existing challenges, including financial sustainability, governance issues, and the need to better support local artists. Embracing innovation, fostering collaboration, and engaging with the community are essential steps towards realising the WKCD's full potential. The district must also be prepared to adapt to changing circumstances, responding to new trends in the arts and culture sector and navigating the complex political landscape. With careful planning and effective execution, the WKCD can solidify its position as a beacon of creativity and cultural exchange in Asia."
+        },
+        "metadata": {
+          "word_count": 598,
+          "genre": "Feature Article"
+        }
+      }
+    },
+    "questions": [
+      {
+        "id": "q1",
+        "part": "A",
+        "type": "mc_main_idea",
+        "question": "Which of the following best describes the main idea of Text 1?",
+        "options": [
+          "A. The West Kowloon Cultural District is entering a new phase focused on programming and partnerships.",
+          "B. The West Kowloon Cultural District is primarily focused on constructing new buildings.",
+          "C. Hong Kong's political landscape is hindering the development of the WKCD.",
+          "D. International arts organisations are solely responsible for the WKCD's success."
+        ],
+        "answer": "A",
+        "marks": 2,
+        "logic": "Text 1 primarily discusses the West Kowloon Cultural District's transition to a new phase emphasizing programming and strategic partnerships.",
+        "segment_ref": "Text_1:p1"
+      },
+      {
+        "id": "q2",
+        "part": "A",
+        "type": "short_answer",
+        "question": "According to Text 1, what are two key challenges that the WKCD is currently facing?",
+        "answer": "Financial sustainability and attracting a diverse audience.",
+        "marks": 2,
+        "logic": "Text 1 explicitly identifies financial sustainability and attracting a diverse audience as ongoing priorities and challenges.",
+        "segment_ref": "Text_1:p2"
+      },
+      {
+        "id": "q3",
+        "part": "A",
+        "type": "reference",
+        "question": "In Text 1, what does the phrase 'Despite these hurdles' refer to?",
+        "answer": "The challenges of ensuring financial sustainability and attracting a diverse audience.",
+        "marks": 2,
+        "logic": "'These hurdles' refers to the challenges of financial sustainability and audience diversification mentioned in the preceding sentence.",
+        "segment_ref": "Text_1:p2"
+      },
+      {
+        "id": "q4",
+        "part": "A",
+        "type": "true_false_not_given",
+        "question": "Text 1 states that the WKCD is fully funded by the government.",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "Not Given",
+        "marks": 3,
+        "logic": "The text does not provide explicit information regarding the funding sources of the WKCD.",
+        "segment_ref": "Text_1:p2"
+      },
+      {
+        "id": "q5",
+        "part": "A",
+        "type": "mc_main_idea",
+        "question": "Which of the following best summarizes the main idea of Text 2?",
+        "options": [
+          "A. The WKCD has completely failed to achieve its objectives.",
+          "B. The WKCD is a perfect example of successful government investment.",
+          "C. The WKCD's progress, challenges, and future prospects are comprehensively analysed.",
+          "D. The WKCD only focuses on international exhibitions and performances."
+        ],
+        "answer": "C",
+        "marks": 2,
+        "logic": "Text 2 presents an analysis of the WKCD, covering its achievements, the obstacles it faces, and its future possibilities.",
+        "segment_ref": "Text_2:p1"
+      },
+      {
+        "id": "q6",
+        "part": "A",
+        "type": "short_answer",
+        "question": "According to Text 2, what is one of the primary objectives of the WKCD?",
+        "answer": "To enhance Hong Kong's appeal as a tourist destination.",
+        "marks": 2,
+        "logic": "Paragraph 2 of Text 2 explicitly states that enhancing Hong Kong's appeal as a tourist destination is a key objective of the WKCD.",
+        "segment_ref": "Text_2:p2"
+      },
+      {
+        "id": "q7",
+        "part": "A",
+        "type": "true_false_not_given",
+        "question": "Text 2 claims the Xiqu Centre only offers performances for tourists.",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "False",
+        "marks": 3,
+        "logic": "Text 2 mentions that the Xiqu Centre also provides educational programs, indicating it is not exclusively for tourists.",
+        "segment_ref": "Text_2:p2"
+      },
+      {
+        "id": "q8",
+        "part": "A",
+        "type": "short_answer",
+        "question": "According to Text 2, what is a concern expressed regarding the WKCD's support for local artists?",
+        "answer": "A potential disproportionate focus on international exhibitions and performances over local talent.",
+        "marks": 2,
+        "logic": "Text 2, in paragraph 3, indicates a concern that the WKCD might be prioritizing international events, potentially overshadowing support for local artists.",
+        "segment_ref": "Text_2:p3"
+      },
+      {
+        "id": "q9",
+        "part": "A",
+        "type": "true_false_not_given",
+        "question": "Text 2 indicates that the WKCD is entirely financially independent.",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "False",
+        "marks": 3,
+        "logic": "Text 2 suggests that the WKCD relies significantly on government funding, thus contradicting the idea of complete financial independence.",
+        "segment_ref": "Text_2:p4"
+      },
+      {
+        "id": "q10",
+        "part": "A",
+        "type": "reference",
+        "question": "In Text 2, what does 'this arrangement' refer to in the sentence 'Some critics argue that this arrangement makes the WKCD vulnerable to political interference...'?",
+        "answer": "The appointment of the WKCD Authority by the Hong Kong government.",
+        "marks": 2,
+        "logic": "'This arrangement' refers to the mechanism by which the Hong Kong government appoints the members of the WKCD Authority.",
+        "segment_ref": "Text_2:p5"
+      },
+      {
+        "id": "q11",
+        "part": "A",
+        "type": "short_answer",
+        "question": "According to Text 2, what are two key elements necessary for the WKCD to achieve its vision?",
+        "answer": "Addressing existing challenges and embracing innovation.",
+        "marks": 2,
+        "logic": "Paragraph 6 of Text 2 directly mentions the need to address current challenges and embrace innovation as crucial steps towards realizing the WKCD's vision.",
+        "segment_ref": "Text_2:p6"
+      },
+      {
+        "id": "q12",
+        "part": "A",
+        "type": "summary_cloze",
+        "question": "Fill in the blanks in the following summary of Text 2. The WKCD aims to establish Hong Kong as a centre for arts and culture in Asia. It seeks to attract (1) __________ through its world-class cultural offerings and foster a (2) __________ arts scene by providing opportunities for local artists. However, the WKCD faces challenges such as financial (3) __________, potential political interference, and the need to better support local artists. Embracing innovation and fostering (4) __________ are crucial for realizing the WKCD's full potential.",
+        "answer": "[\"tourists\", \"vibrant\", \"sustainability\", \"collaboration\"]",
+        "marks": 4,
+        "logic": "The summary encapsulates the core aspects of Text 2, focusing on objectives, challenges, and future directions.",
+        "segment_ref": "Text_2:p1,Text_2:p2,Text_2:p3,Text_2:p4,Text_2:p5,Text_2:p6",
+        "options": [
+          "tourists",
+          "residents",
+          "financial",
+          "political",
+          "sustainability",
+          "independence",
+          "vibrant",
+          "struggling",
+          "competition",
+          "collaboration"
+        ]
+      },
+      {
+        "id": "q13",
+        "part": "A",
+        "type": "short_answer",
+        "question": "According to Text 1, name two prominent institutions located within the West Kowloon Cultural District.",
+        "answer": "M+ and Xiqu Centre",
+        "marks": 2,
+        "logic": "Text 1 specifically identifies M+ and the Xiqu Centre as key institutions within the West Kowloon Cultural District.",
+        "segment_ref": "Text_1:p1"
+      },
+      {
+        "id": "q14",
+        "part": "A",
+        "type": "short_answer",
+        "question": "As described in Text 2, what type of venue is Freespace?",
+        "answer": "A hub for independent music, theatre, and dance performances.",
+        "marks": 2,
+        "logic": "Text 2 defines Freespace as a venue for independent music, theatre, and dance.",
+        "segment_ref": "Text_2:p3"
+      },
+      {
+        "id": "q15",
+        "part": "A",
+        "type": "true_false_not_given",
+        "question": "Text 1 states that the WKCD is a recently completed project.",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "False",
+        "marks": 3,
+        "logic": "Text 1 describes the WKCD as a 'long-gestating' project, implying it is not recently completed.",
+        "segment_ref": "Text_1:p1"
+      },
+      {
+        "id": "q16",
+        "part": "A",
+        "type": "true_false_not_given",
+        "question": "Text 2 suggests the WKCD has definitively resolved all governance issues.",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "False",
+        "marks": 3,
+        "logic": "Text 2 indicates that governance issues remain an ongoing concern for the WKCD.",
+        "segment_ref": "Text_2:p5"
+      },
+      {
+        "id": "q17",
+        "part": "A",
+        "type": "short_answer",
+        "question": "According to Text 2, what kind of art does M+ showcase?",
+        "answer": "A diverse collection of visual art from Hong Kong, China, Asia, and beyond.",
+        "marks": 2,
+        "logic": "The text explicitly mentions that M+ features a diverse collection of visual art from Hong Kong, China, Asia, and other regions.",
+        "segment_ref": "Text_2:p2"
+      },
+      {
+        "id": "q18",
+        "part": "A",
+        "type": "short_answer",
+        "question": "According to Text 2, what is one type of performance offered at the Xiqu Centre?",
+        "answer": "Traditional Performances.",
+        "marks": 1,
+        "logic": "The text mentions that the Xiqu Centre offers traditional performances.",
+        "segment_ref": "Text_2:p2"
+      },
+      {
+        "id": "q19",
+        "part": "A",
+        "type": "short_answer",
+        "question": "According to text 2, name one initiative that the WKCD provides for local artists?",
+        "answer": "Artist residency programs.",
+        "marks": 1,
+        "logic": "The text explicitly states that the WKCD offers artist residency programs.",
+        "segment_ref": "Text_2:p3"
+      },
+      {
+        "id": "q20",
+        "part": "A",
+        "type": "short_answer",
+        "question": "According to Text 2, what is one essential step toward achieving financial independence for the WKCD?",
+        "answer": "Diversifying its revenue streams.",
+        "marks": 1,
+        "logic": "The text mentions diversifying revenue streams as an essential step towards financial independence.",
+        "segment_ref": "Text_2:p4"
+      },
+      {
+        "id": "q21",
+        "part": "A",
+        "type": "short_answer",
+        "question": "According to text 2, what is one benefit of ensuring transparency and accountability in decision-making for WKCD?",
+        "answer": "Maintaining public trust and confidence in the WKCD.",
+        "marks": 1,
+        "logic": "The text states that ensuring transparency and accountability maintains public trust.",
+        "segment_ref": "Text_2:p5"
+      },
+      {
+        "id": "q22",
+        "part": "A",
+        "type": "short_answer",
+        "question": "According to Text 2, what are two key areas that the WKCD needs to respond to?",
+        "answer": "New trends in the arts and culture sector, and navigating the complex political landscape.",
+        "marks": 2,
+        "logic": "The text states the WKCD needs to respond to new trends and the political landscape.",
+        "segment_ref": "Text_2:p6"
+      }
+    ],
+    "meta": {
+      "topics": [
+        "Text_1",
+        "Text_2"
+      ]
+    }
+  },
+  "Part_B1": {
+    "resources": {
+      "Text_1": {
+        "title": "West Kowloon Cultural District: A New Chapter Unfolds",
+        "subheading": "M+ Museum's Success Sparks Further Development and International Recognition",
+        "content": {
+          "p1": "The West Kowloon Cultural District (WKCD) is experiencing a surge in activity following the resounding success of the M+ museum. Since its opening, M+ has welcomed millions of visitors, solidifying its position as a leading institution for visual culture in Asia. This influx of cultural tourism has acted as a catalyst, sparking a wave of new developments and initiatives within the WKCD aimed at broadening its appeal and attracting a diverse audience.",
+          "p2": "Beyond M+, plans are underway to enhance the district's infrastructure and expand its offerings. This includes the development of new performance venues, public art installations, and recreational spaces designed to foster a vibrant and engaging atmosphere. The Hong Kong Palace Museum continues to draw crowds, and the Xiqu Centre hosts numerous Cantonese opera performances, contributing to the district's multifaceted cultural landscape. Authorities are also focusing on improving accessibility, with enhancements to transport links and pedestrian walkways to ensure a seamless visitor experience. The WKCD is poised to become a world-class destination, showcasing Hong Kong's commitment to arts and culture on a global scale.",
+          "p3": "The burgeoning art scene within the WKCD is also attracting international attention. Art fairs and festivals are increasingly choosing Hong Kong as a prime location, leveraging the city's strategic position and its burgeoning art market. Local artists are also benefiting from the increased exposure and opportunities, with galleries and studios flourishing within the district. While challenges remain, such as ensuring sustainable funding and fostering greater community engagement, the WKCD's trajectory points towards a bright future as a cultural hub of international significance."
+        },
+        "metadata": {
+          "word_count": 275,
+          "genre": "News Article"
+        }
+      },
+      "Text_2": {
+        "title": "Navigating the Complexities of West Kowloon: A Critical Examination of its Trajectory",
+        "subheading": "Assessing the Impact, Challenges, and Future Prospects of Hong Kong's Ambitious Cultural Project",
+        "content": {
+          "p1": "The West Kowloon Cultural District (WKCD), a project of unparalleled scale and ambition, represents Hong Kong's bold endeavour to establish itself as a pre-eminent cultural hub in Asia and beyond. While the district has witnessed undeniable progress, particularly with the successful launch of M+ and the Hong Kong Palace Museum, a comprehensive assessment requires a more nuanced perspective. This feature article delves into the multifaceted aspects of the WKCD, examining its impact, challenges, and future prospects within the broader context of Hong Kong's socio-economic landscape.",
+          "p2": "One of the primary objectives of the WKCD was to diversify Hong Kong's economy and attract a new generation of culturally inclined tourists. The initial figures from M+ and the Hong Kong Palace Museum suggest that this objective is being realised, with a significant influx of visitors contributing to the local economy. However, questions remain about the long-term sustainability of this model. Can the WKCD maintain its appeal amidst increasing competition from other cultural destinations in the region? Furthermore, concerns have been raised about the affordability of cultural experiences within the district, potentially limiting access to a broader segment of the population. Efforts to address these issues through targeted programmes and outreach initiatives are crucial.",
+          "p3": "Another critical aspect to consider is the WKCD's role in fostering local artistic talent. While the district provides a platform for showcasing established international artists, it is equally important to nurture and support emerging Hong Kong artists. Initiatives such as artist residencies, funding opportunities, and collaborative projects are essential for cultivating a vibrant and sustainable local art scene. Critics have argued that more needs to be done to ensure that local artists are not overshadowed by their international counterparts.",
+          "p4": "The governance and funding model of the WKCD have also been subject to scrutiny. The project's reliance on public funding has raised questions about accountability and transparency. Ensuring efficient resource allocation and effective management is paramount to maintaining public trust and maximising the return on investment. The need for a diversified funding strategy, incorporating private sector partnerships and philanthropic contributions, is becoming increasingly apparent. This would not only alleviate the burden on public funds but also foster a greater sense of ownership and engagement from the wider community.",
+          "p5": "Looking ahead, the WKCD faces a number of key challenges. Navigating the complex political landscape, maintaining artistic independence, and fostering greater community engagement are all crucial for its long-term success. The district must also adapt to evolving cultural trends and technological advancements. Embracing digital platforms, incorporating interactive experiences, and catering to the preferences of younger audiences are essential for staying relevant and competitive. Furthermore, fostering stronger collaborations with other cultural institutions in Hong Kong and abroad will enhance the WKCD's reputation and broaden its reach.",
+          "p6": "In conclusion, the West Kowloon Cultural District represents a significant investment in Hong Kong's cultural future. While it has achieved notable milestones, its journey is far from complete. Addressing the challenges outlined above, fostering greater inclusivity, and ensuring long-term sustainability are crucial for realising its full potential as a world-class cultural destination. The WKCD's success will ultimately depend on its ability to balance artistic excellence with economic viability, community engagement, and effective governance. Its trajectory serves as a valuable case study for other cities seeking to develop their own cultural infrastructure and promote artistic innovation."
+        },
+        "metadata": {
+          "word_count": 590,
+          "genre": "Feature Article"
+        }
+      }
+    },
+    "questions": [
+      {
+        "id": "q1",
+        "part": "Text_1",
+        "type": "mc_main_idea",
+        "question": "What is the main idea of Text 1?",
+        "options": [
+          "The West Kowloon Cultural District is experiencing growth due to the success of M+.",
+          "The Hong Kong Palace Museum is the most popular attraction in Hong Kong.",
+          "Local artists are struggling to find opportunities in the WKCD.",
+          "The WKCD is facing challenges in securing funding."
+        ],
+        "answer": "A",
+        "marks": 2,
+        "logic": "The first paragraph focuses on the growth of the WKCD due to M+'s success, and the following paragraphs elaborate on this development.",
+        "segment_ref": "Text_1:p1"
+      },
+      {
+        "id": "q2",
+        "part": "Text_1",
+        "type": "true_false_not_given",
+        "question": "M+ has attracted millions of visitors since it opened.",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "True",
+        "marks": 2,
+        "logic": "The first paragraph states that M+ has welcomed millions of visitors.",
+        "segment_ref": "Text_1:p1"
+      },
+      {
+        "id": "q3",
+        "part": "Text_1",
+        "type": "short_answer",
+        "question": "According to Text 1, name one improvement being made to the WKCD's accessibility.",
+        "answer": "Enhancements to transport links and pedestrian walkways.",
+        "marks": 3,
+        "logic": "The text explicitly mentions improvements to transport links and pedestrian walkways as ways to improve accessibility.",
+        "segment_ref": "Text_1:p2"
+      },
+      {
+        "id": "q4",
+        "part": "Text_1",
+        "type": "reference",
+        "question": "In paragraph 1, what does the word 'This' refer to?",
+        "answer": "The success of the M+ museum.",
+        "marks": 2,
+        "logic": "'This' refers back to the previous statement about the success of the M+ museum.",
+        "segment_ref": "Text_1:p1"
+      },
+      {
+        "id": "q5",
+        "part": "Text_1",
+        "type": "gap_fill",
+        "question": "Fill in the blank: The WKCD is poised to become a _______ destination, showcasing Hong Kong's commitment to arts and culture on a global scale.",
+        "answer": "world-class",
+        "marks": 2,
+        "logic": "The second paragraph states that the WKCD is poised to become a world-class destination.",
+        "segment_ref": "Text_1:p2"
+      },
+      {
+        "id": "q6",
+        "part": "Text_1",
+        "type": "true_false_not_given",
+        "question": "The Xiqu Centre features international opera performances.",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "False",
+        "marks": 2,
+        "logic": "The text states that the Xiqu Centre hosts Cantonese opera performances, not international opera performances.",
+        "segment_ref": "Text_1:p2"
+      },
+      {
+        "id": "q7",
+        "part": "Text_1",
+        "type": "short_answer",
+        "question": "According to Text 1, name one challenge that the WKCD faces.",
+        "answer": "Ensuring sustainable funding.",
+        "marks": 2,
+        "logic": "The text mentions ensuring sustainable funding as a challenge.",
+        "segment_ref": "Text_1:p3"
+      },
+      {
+        "id": "q9",
+        "part": "Text_2",
+        "type": "true_false_not_given",
+        "question": "Text 2 claims the WKCD has definitely achieved its long-term sustainability.",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "False",
+        "marks": 2,
+        "logic": "Text 2 raises questions about the long-term sustainability of the WKCD's model.",
+        "segment_ref": "Text_2:p2"
+      },
+      {
+        "id": "q10",
+        "part": "Text_2",
+        "type": "short_answer",
+        "question": "According to Text 2, what is one way to foster local artistic talent within the WKCD?",
+        "answer": "Artist residencies.",
+        "marks": 3,
+        "logic": "The text mentions artist residencies as an initiative to nurture local artistic talent.",
+        "segment_ref": "Text_2:p3"
+      },
+      {
+        "id": "q11",
+        "part": "Text_2",
+        "type": "reference",
+        "question": "In paragraph 4, what does 'This' refer to?",
+        "answer": "A diversified funding strategy.",
+        "marks": 2,
+        "logic": "'This' refers to the need for a diversified funding strategy mentioned in the previous sentence.",
+        "segment_ref": "Text_2:p4"
+      },
+      {
+        "id": "q12",
+        "part": "Text_2",
+        "type": "gap_fill",
+        "question": "Fill in the blank: Ensuring efficient _______ allocation and effective management is paramount to maintaining public trust.",
+        "answer": "resource",
+        "marks": 2,
+        "logic": "The text states that ensuring efficient resource allocation and effective management is paramount.",
+        "segment_ref": "Text_2:p4"
+      },
+      {
+        "id": "q13",
+        "part": "Text_2",
+        "type": "true_false_not_given",
+        "question": "The WKCD should ignore evolving cultural trends to maintain its artistic integrity.",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "False",
+        "marks": 2,
+        "logic": "The text explicitly states the district must adapt to evolving cultural trends.",
+        "segment_ref": "Text_2:p5"
+      },
+      {
+        "id": "q14",
+        "part": "Text_2",
+        "type": "short_answer",
+        "question": "Name one challenge the WKCD faces in the future according to Text 2.",
+        "answer": "Maintaining artistic independence.",
+        "marks": 3,
+        "logic": "Paragraph 5 mentions 'maintaining artistic independence' as a key challenge.",
+        "segment_ref": "Text_2:p5"
+      },
+      {
+        "id": "q15",
+        "part": "Text_1",
+        "type": "true_false_not_given",
+        "question": "The WKCD primarily targets an elderly audience.",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "Not Given",
+        "marks": 2,
+        "logic": "The text doesn't provide information on the specific age demographics targeted by the WKCD.",
+        "segment_ref": "Text_1:p2"
+      },
+      {
+        "id": "q16",
+        "part": "Text_2",
+        "type": "true_false_not_given",
+        "question": "The WKCD has completely resolved its funding issues.",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "False",
+        "marks": 2,
+        "logic": "Text 2 discusses the ongoing need for diversified funding and efficient resource allocation.",
+        "segment_ref": "Text_2:p4"
+      },
+      {
+        "id": "q17",
+        "part": "Text_1",
+        "type": "gap_fill",
+        "question": "Fill in the blank: Art _______ and festivals are increasingly choosing Hong Kong as a prime location.",
+        "answer": "fairs",
+        "marks": 2,
+        "logic": "Paragraph 3 states that Art fairs and festivals are increasingly choosing Hong Kong",
+        "segment_ref": "Text_1:p3"
+      },
+      {
+        "id": "q18",
+        "part": "Text_2",
+        "type": "true_false_not_given",
+        "question": "Private sector partnerships have had a negative effect on the sustainability of WKCD.",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "Not Given",
+        "marks": 1,
+        "logic": "Text 2 discusses the need for private sector partnerships to help with the sustainability of WKCD. However, the text doesn't specify whether private sector partnerships have had a negative effect on the sustainability of WKCD.",
+        "segment_ref": "Text_2:p4"
+      }
+    ],
+    "meta": {
+      "topics": [
+        "Text_1",
+        "Text_2"
+      ]
+    }
+  },
+  "Part_B2": {
+    "resources": {
+      "Text_1": {
+        "title": "West Kowloon Cultural District: Navigating New Artistic Horizons",
+        "subheading": "Hong Kong's flagship arts hub continues its expansion, balancing international ambition with local artistic identity.",
+        "content": {
+          "p1": "The West Kowloon Cultural District (WKCD), envisioned as a beacon of arts and culture in Asia, is undergoing a period of significant evolution. Following the recent opening of several key venues, including the Xiqu Centre and M+, the district aims to solidify its position as a global arts destination. However, challenges remain in harmonising the district’s international aspirations with the needs and desires of the local artistic community.",
+          "p2": "Recent initiatives include the introduction of new residency programmes for emerging Hong Kong artists, designed to foster local talent and provide opportunities for international collaboration. These programmes aim to address concerns about the district’s accessibility and relevance to the local arts scene. Concurrently, the WKCD is actively seeking partnerships with international institutions to curate world-class exhibitions and performances, attracting a diverse audience from across the globe.",
+          "p3": "Financially, the WKCD faces the ongoing task of ensuring its long-term sustainability. Balancing revenue generation through ticket sales and sponsorships with the need to provide affordable access to the arts for all segments of the community remains a crucial objective. The district's management is exploring innovative funding models and philanthropic partnerships to secure its financial future and further develop its artistic offerings."
+        },
+        "metadata": {
+          "word_count": 235,
+          "genre": "News Article"
+        }
+      },
+      "Text_2": {
+        "title": "The West Kowloon Cultural District: A Critical Assessment of Progress and Potential",
+        "subheading": "An in-depth analysis of the WKCD's impact on Hong Kong's cultural landscape, examining its successes, challenges, and future trajectory.",
+        "content": {
+          "p1": "The West Kowloon Cultural District (WKCD) represents a monumental investment in Hong Kong's cultural infrastructure. Conceived as a world-class arts hub, its ambition is undeniable. However, a critical assessment requires a nuanced understanding of its successes, its ongoing challenges, and its overall impact on the local arts ecosystem. The district’s development has been marked by both triumphs and tribulations, raising pertinent questions about its role in shaping Hong Kong’s cultural identity.",
+          "p2": "One of the key achievements of the WKCD is the establishment of state-of-the-art venues such as M+ and the Xiqu Centre. These institutions have provided platforms for both international and local artists, attracting a diverse audience and contributing to Hong Kong's burgeoning arts scene. M+, in particular, has garnered international acclaim for its impressive collection of visual culture and its innovative curatorial approach. The Xiqu Centre, dedicated to Chinese opera, serves as a vital repository for this traditional art form, ensuring its preservation and promotion.",
+          "p3": "Despite these successes, the WKCD faces several significant challenges. Concerns have been raised about the district’s accessibility to local artists and the broader community. Critics argue that the focus on attracting international audiences and blockbuster exhibitions has overshadowed the needs of local talent. The high cost of tickets and venue rentals has also been cited as a barrier to entry for many local artists and arts organisations.",
+          "p4": "Furthermore, the WKCD's governance structure has been subject to scrutiny. Questions have been raised about the transparency and accountability of the district's management, as well as the representation of local arts stakeholders in decision-making processes. A more inclusive and participatory approach is needed to ensure that the WKCD truly serves the interests of the entire arts community.",
+          "p5": "The financial sustainability of the WKCD is another area of concern. The district relies heavily on government funding, and its long-term financial viability is dependent on its ability to generate revenue through ticket sales, sponsorships, and philanthropic contributions. Diversifying funding sources and implementing sound financial management practices are essential for ensuring the district’s long-term success.",
+          "p6": "Looking ahead, the WKCD has the potential to become a truly transformative force in Hong Kong's cultural landscape. To realise this potential, it must address the challenges outlined above and adopt a more holistic and inclusive approach. This includes prioritising the needs of local artists, fostering greater community engagement, and ensuring transparency and accountability in its governance.",
+          "p7": "The WKCD must also actively promote cross-cultural dialogue and exchange, serving as a bridge between Hong Kong and the rest of the world. By showcasing both international and local talent, the district can contribute to a richer and more vibrant cultural environment. Ultimately, the success of the WKCD will depend on its ability to strike a delicate balance between its global ambitions and its local responsibilities, thereby becoming a truly sustainable and impactful arts hub."
+        },
+        "metadata": {
+          "word_count": 478,
+          "genre": "Feature Article"
+        }
+      }
+    },
+    "questions": [
+      {
+        "id": "q1",
+        "part": "Text_1",
+        "type": "mc_main_idea",
+        "question": "What is the primary focus of Text_1?",
+        "options": [
+          "The financial challenges facing the Xiqu Centre.",
+          "The WKCD's efforts to balance international aspirations with local artistic identity.",
+          "The impact of international exhibitions on Hong Kong's art scene.",
+          "The development of residency programmes for international artists."
+        ],
+        "answer": "B",
+        "marks": 2,
+        "logic": "The text centers around the WKCD's dual mission: establishing itself as a global arts hub while simultaneously nurturing the local arts scene. Option B encapsulates this central theme.",
+        "segment_ref": "Text_1:p1"
+      },
+      {
+        "id": "q2",
+        "part": "Text_1",
+        "type": "short_answer",
+        "question": "According to Text_1, identify two financial strategies the WKCD is implementing to ensure its long-term sustainability.",
+        "answer": "Exploring innovative funding models and philanthropic partnerships.",
+        "marks": 2,
+        "logic": "Paragraph 3 explicitly mentions the exploration of innovative funding models and philanthropic partnerships as key strategies for financial sustainability.",
+        "segment_ref": "Text_1:p3"
+      },
+      {
+        "id": "q3",
+        "part": "Text_1",
+        "type": "true_false_not_given",
+        "question": "According to Text_1, the WKCD currently operates without any external financial support.",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "False",
+        "marks": 1,
+        "logic": "Text_1 indicates that the WKCD is actively seeking long-term financial sustainability, implying that it is not yet completely financially independent.",
+        "segment_ref": "Text_1:p3"
+      },
+      {
+        "id": "q4",
+        "part": "Text_1",
+        "type": "gap_fill",
+        "question": "The WKCD aims to balance revenue generation with affordable access to the arts. The district is exploring innovative _______ models and philanthropic _______ to secure its financial future.",
+        "answer": "funding, partnerships",
+        "marks": 2,
+        "logic": "These words directly fill the blanks, summarizing the WKCD's approach to securing its financial future as stated in the text.",
+        "segment_ref": "Text_1:p3"
+      },
+      {
+        "id": "q5",
+        "part": "Text_1",
+        "type": "reference",
+        "question": "In Text_1, paragraph 2, what does the phrase 'These programmes' refer to?",
+        "answer": "New residency programmes designed for emerging Hong Kong artists.",
+        "marks": 1,
+        "logic": "The phrase 'These programmes' refers back to the residency programs specifically mentioned at the beginning of paragraph 2, which are tailored for emerging Hong Kong artists.",
+        "segment_ref": "Text_1:p2"
+      },
+      {
+        "id": "q6",
+        "part": "Text_2",
+        "type": "mc_main_idea",
+        "question": "What is the primary focus of Text_2?",
+        "options": [
+          "A celebration of the WKCD's achievements in attracting international artists.",
+          "A critical assessment of the WKCD's impact, challenges, and potential.",
+          "A detailed analysis of the financial management of the WKCD.",
+          "A discussion of the architectural design of M+ and the Xiqu Centre."
+        ],
+        "answer": "B",
+        "marks": 2,
+        "logic": "Text_2 offers a balanced view, examining the WKCD's successes alongside its shortcomings and future prospects. Option B best reflects this comprehensive approach.",
+        "segment_ref": "Text_2:p1"
+      },
+      {
+        "id": "q7",
+        "part": "Text_2",
+        "type": "short_answer",
+        "question": "According to Text_2, what are two specific concerns raised regarding the WKCD's governance?",
+        "answer": "Lack of transparency and accountability, and insufficient representation of local arts stakeholders.",
+        "marks": 2,
+        "logic": "Paragraph 4 explicitly mentions a lack of transparency and accountability, coupled with inadequate representation of local arts stakeholders, as key concerns related to the WKCD's governance structure.",
+        "segment_ref": "Text_2:p4"
+      },
+      {
+        "id": "q8",
+        "part": "Text_2",
+        "type": "true_false_not_given",
+        "question": "Text_2 indicates the WKCD has successfully resolved all its financial challenges.",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "False",
+        "marks": 1,
+        "logic": "Text_2 explicitly identifies financial sustainability as an ongoing area of concern and a key challenge for the WKCD.",
+        "segment_ref": "Text_2:p5"
+      },
+      {
+        "id": "q9",
+        "part": "Text_2",
+        "type": "gap_fill",
+        "question": "The WKCD must actively promote cross-cultural _______ and exchange, serving as a bridge between Hong Kong and the rest of the world. By showcasing both international and local _______, the district can contribute to a richer and more vibrant cultural environment.",
+        "answer": "dialogue, talent",
+        "marks": 2,
+        "logic": "These words directly fill the blanks, summarizing the WKCD's role in promoting cultural exchange and showcasing both local and international artistic contributions, as stated in the text.",
+        "segment_ref": "Text_2:p7"
+      },
+      {
+        "id": "q10",
+        "part": "Text_2",
+        "type": "reference",
+        "question": "In Text_2, paragraph 1, what does the phrase 'its ambition' refer to?",
+        "answer": "The West Kowloon Cultural District's ambition to establish itself as a world-class cultural hub.",
+        "marks": 1,
+        "logic": "The phrase 'its ambition' refers to the overall aim of the West Kowloon Cultural District, which is to become a prominent and internationally recognized cultural center.",
+        "segment_ref": "Text_2:p1"
+      },
+      {
+        "id": "q11",
+        "part": "Comparison",
+        "type": "short_answer",
+        "question": "Based on information presented in both texts, what is one persistent challenge confronting the WKCD?",
+        "answer": "Ensuring long-term financial sustainability.",
+        "marks": 2,
+        "logic": "Both texts consistently highlight the ongoing financial challenges and the need for the WKCD to secure its long-term financial future.",
+        "segment_ref": "Text_1:p3, Text_2:p5"
+      },
+      {
+        "id": "q12",
+        "part": "Comparison",
+        "type": "true_false_not_given",
+        "question": "Based on both texts, it is evident that the WKCD has completely and successfully integrated the local artistic community into its operations.",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "False",
+        "marks": 1,
+        "logic": "While Text_1 suggests efforts to support local artists, Text_2 raises concerns about insufficient representation and engagement of the local artistic community, indicating that complete success has not yet been achieved.",
+        "segment_ref": "Text_1:p2, Text_2:p3"
+      },
+      {
+        "id": "q13",
+        "part": "Text_2",
+        "type": "mc_main_idea",
+        "question": "According to Text_2, what is the primary function of the Xiqu Centre?",
+        "options": [
+          "To host international opera performances.",
+          "To serve as a vital repository for Chinese opera and ensure its preservation.",
+          "To provide a venue for contemporary art exhibitions.",
+          "To generate revenue through ticket sales and sponsorships."
+        ],
+        "answer": "B",
+        "marks": 2,
+        "logic": "Text_2 explicitly states that the Xiqu Centre is primarily dedicated to the preservation and promotion of Chinese opera.",
+        "segment_ref": "Text_2:p2"
+      },
+      {
+        "id": "q14",
+        "part": "Text_2",
+        "type": "short_answer",
+        "question": "According to Text_2, what is one significant accomplishment of the WKCD?",
+        "answer": "The establishment of state-of-the-art venues such as M+ and the Xiqu Centre.",
+        "marks": 2,
+        "logic": "Text_2 directly mentions the creation of world-class facilities like M+ and the Xiqu Centre as a key achievement of the WKCD.",
+        "segment_ref": "Text_2:p2"
+      },
+      {
+        "id": "q15",
+        "part": "Text_2",
+        "type": "true_false_not_given",
+        "question": "Text_2 implies that the WKCD operates entirely without financial assistance from the government.",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "False",
+        "marks": 1,
+        "logic": "Text_2 suggests that the WKCD relies significantly on government funding for its operations and development.",
+        "segment_ref": "Text_2:p5"
+      },
+      {
+        "id": "q16",
+        "part": "Text_2",
+        "type": "gap_fill",
+        "question": "To fully realize its potential, the WKCD must adopt a more _______ and inclusive approach. This includes prioritizing the needs of _______ artists, fostering greater community engagement, and ensuring transparency and accountability in its governance.",
+        "answer": "holistic, local",
+        "marks": 2,
+        "logic": "These words directly fill the blanks, summarizing the elements needed for the WKCD to achieve its full potential: a holistic approach that prioritizes local artists and fosters community engagement.",
+        "segment_ref": "Text_2:p6"
+      },
+      {
+        "id": "q17",
+        "part": "Text_2",
+        "type": "reference",
+        "question": "In Text_2, paragraph 6, what does the phrase 'this potential' refer to?",
+        "answer": "The potential of the WKCD to become a truly transformative force in Hong Kong's cultural landscape.",
+        "marks": 2,
+        "logic": "The phrase 'this potential' refers to the preceding discussion in paragraph 6 about the WKCD's capacity to significantly impact and enrich Hong Kong's cultural environment.",
+        "segment_ref": "Text_2:p6"
+      },
+      {
+        "id": "q18",
+        "part": "Text_1",
+        "type": "short_answer",
+        "question": "According to Text 1, identify one objective pursued by the WKCD's management.",
+        "answer": "To secure its financial future and further develop its artistic offerings.",
+        "marks": 2,
+        "logic": "Paragraph 3 of Text 1 mentions the WKCD's objective to ensure financial sustainability while simultaneously enhancing its artistic programs.",
+        "segment_ref": "Text_1:p3"
+      },
+      {
+        "id": "q19",
+        "part": "Comparison",
+        "type": "mc_main_idea",
+        "question": "What is a key distinction in the perspectives presented in Text 1 and Text 2?",
+        "options": [
+          "Text 1 primarily highlights the successes of the WKCD, whereas Text 2 offers a more balanced and critical evaluation.",
+          "Text 2 concentrates on financial matters, while Text 1 emphasizes community involvement.",
+          "Text 1 praises local artist support whereas Text 2 focuses on global artist relationships.",
+          "Text 2 does not take into account any of the views of local artists."
+        ],
+        "answer": "A",
+        "marks": 3,
+        "logic": "Text 1 tends to present a more positive and promotional view of the WKCD, while Text 2 provides a more nuanced analysis that includes both achievements and areas for improvement. This difference is best reflected in option A.",
+        "segment_ref": "Text_1, Text_2"
+      },
+      {
+        "id": "q20",
+        "part": "Comparison",
+        "type": "short_answer",
+        "question": "Name one specific venue mentioned in both Text 1 and Text 2.",
+        "answer": "Xiqu Centre",
+        "marks": 2,
+        "logic": "Both texts explicitly mention the Xiqu Centre as one of the key venues within the West Kowloon Cultural District.",
+        "segment_ref": "Text_1:p1, Text_2:p2"
+      }
+    ],
+    "meta": {
+      "topics": [
+        "Text_1",
+        "Text_2"
+      ]
+    }
+  }
+}

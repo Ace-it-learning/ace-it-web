@@ -304,7 +304,7 @@ const Onboarding = () => {
                         Sign Out / Exit
                     </button>
 
-                    <h2 className="text-3xl font-bold text-[#1d130c] dark:text-white">{t('onboarding.welcome').replace('{{name}}', user?.displayName?.split(' ')[0])}</h2>
+                    <h2 className="text-3xl font-bold text-[#1d130c] dark:text-white">{t('onboarding.welcome', { name: user?.displayName?.split(' ')[0] || 'Warrior' })}</h2>
                     <p className="text-[#a16b45] dark:text-[#d2b48c]">{t('onboarding.setup_profile')}</p>
                 </div>
 

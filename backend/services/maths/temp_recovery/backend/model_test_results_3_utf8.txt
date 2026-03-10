@@ -1,0 +1,12 @@
+﻿[dotenv@17.2.3] injecting env (1) from .env -- tip: 📡 add observability to secrets: https://dotenvx.com/ops
+--- Exhaustive Pro Test ---
+❌ gemini-1.5-pro: FAILED ([GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/mod)
+❌ gemini-1.5-pro-001: FAILED ([GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/mod)
+❌ gemini-1.5-pro-002: FAILED ([GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/mod)
+❌ gemini-pro-1.5: FAILED ([GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/mod)
+❌ gemini-2.0-pro-exp-02-05: FAILED ([GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/mod)
+❌ gemini-2.0-pro-exp: FAILED ([GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/mod)
+❌ gemini-1.5-flash-8b: FAILED ([GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/mod)
+❌ gemini-1.5-flash-8b-latest: FAILED ([GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/mod)
+❌ gemini-2.0-flash-exp: FAILED ([GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/mod)
+❌ gemini-1.5-flash: FAILED ([GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/mod)

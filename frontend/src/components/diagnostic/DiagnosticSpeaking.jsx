@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Mic, Square, Clock, ArrowRight, Check } from 'lucide-react';
 
-const DiagnosticSpeaking = ({ assets, onSubmit }) => {
+const DiagnosticSpeaking = ({ assets, onSubmit, isSubmitting }) => {
     const [selectedTopic, setSelectedTopic] = useState(null);
     const [phase, setPhase] = useState('select'); // select, prep, recording, done
     const [timeLeft, setTimeLeft] = useState(120); // 2 minutes prep
@@ -253,10 +253,10 @@ const DiagnosticSpeaking = ({ assets, onSubmit }) => {
 
                         <button
                             onClick={handleSubmit}
-                            disabled={isProcessing}
-                            className={`w-full py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-bold shadow-lg transition-all ${isProcessing ? 'opacity-50 cursor-not-allowed' : 'hover:scale-[1.02]'}`}
+                            disabled={isProcessing || isSubmitting}
+                            className={`w-full py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-bold shadow-lg transition-all ${isProcessing || isSubmitting ? 'opacity-50 cursor-not-allowed' : 'hover:scale-[1.02]'}`}
                         >
-                            {isProcessing ? 'Processing Analysis...' : 'Submit & See My Grade'}
+                            {isProcessing || isSubmitting ? 'Processing Analysis...' : 'Submit & See My Grade'}
                         </button>
                     </div>
                 )}

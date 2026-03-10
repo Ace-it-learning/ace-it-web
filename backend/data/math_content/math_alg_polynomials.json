@@ -1,0 +1,66 @@
+{
+    "is_modular": true,
+    "name": "Polynomials",
+    "name_zh": "多項式",
+    "roadmap": "Master the division algorithm and the relationship between Dividend, Divisor, Quotient, and Remainder. Progress to the Remainder and Factor Theorems to solve for unknown coefficients. Finally, explore Section B topics like solving simultaneous equations for unknowns and visualizing factors as graph intercepts.",
+    "roadmap_zh": "掌握除法算式以及被除式、除式、商式與餘式之間的關係。進階到運用餘式定理與因式定理求解未知係數。最後，探討 DSE 乙部課題，如求解聯立方程以及將因式視為圖像的 x 軸截距。",
+    "learning_modules": [
+        {
+            "module_id": "MOD_01",
+            "title": "The Division Architecture",
+            "title_zh": "除法結構",
+            "concepts": [
+                {
+                    "concept_id": "C01_DIV_ALGO",
+                    "name": "The Division Identity",
+                    "name_zh": "除法恆等式",
+                    "formula": "f(x) \\equiv d(x)Q(x) + R",
+                    "key_takeaway": "Every division can be written as an identity. Remember: the degree of the remainder (R) is always strictly less than the degree of the divisor d(x).",
+                    "key_takeaway_zh": "每個除法都可以寫成恆等式。記住：餘式 (R) 的次數必定嚴格小於除式 d(x) 的次數。",
+                    "visual_aid": "/images/math/poly_div_algorithm.png"
+                }
+            ]
+        },
+        {
+            "module_id": "MOD_02",
+            "title": "Theorems & Intercepts",
+            "title_zh": "定理與截距",
+            "concepts": [
+                {
+                    "concept_id": "C02_REMAINDER_VISUAL",
+                    "name": "Remainder Theorem Visualization",
+                    "name_zh": "餘式定理視覺化",
+                    "formula": "R = f(a) \\text{ when divided by } (x-a)",
+                    "key_takeaway": "The remainder of $f(x) \\div (x-a)$ is simply the y-coordinate of the point on the curve where $x=a$.",
+                    "key_takeaway_zh": "$f(x) \\div (x-a)$ 的餘式，純粹就是曲線上 $x=a$ 點的 y 坐標。",
+                    "visual_aid": "/images/math/poly_remainder_point.png"
+                },
+                {
+                    "concept_id": "C03_FACTOR_GEOM",
+                    "name": "Factors & X-Intercepts",
+                    "name_zh": "因式與 X 軸截距",
+                    "formula": "f(a)=0 \\iff (x-a) \\text{ is a factor}",
+                    "key_takeaway": "A linear factor $(x-a)$ corresponds to an x-intercept at $(a, 0)$ on the graph of $y=f(x)$. Complete factorization reveals all real roots.",
+                    "key_takeaway_zh": "線性因式 $(x-a)$ 對應於 $y=f(x)$ 圖像上 $(a, 0)$ 的 x 軸截距。完全因式分解可揭示所有實根。",
+                    "visual_aid": "/images/math/poly_cubic_roots.png"
+                }
+            ]
+        },
+        {
+            "module_id": "MOD_03",
+            "title": "Section B: Systems of Unknowns",
+            "title_zh": "乙部課題：未知數方程組",
+            "concepts": [
+                {
+                    "concept_id": "C04_SIMULTANEOUS",
+                    "name": "Finding Multiple Unknowns",
+                    "name_zh": "求多個未知數",
+                    "formula": "\\text{Given two remainders: } f(a)=R_1, \\, f(b)=R_2",
+                    "key_takeaway": "Section B often gives two conditions (e.g., divisible by one factor and leaves a remainder with another). Use these to form and solve simultaneous equations for $p$ and $q$.",
+                    "key_takeaway_zh": "乙部題目經常給出兩個條件（如：可被一個因式整除，而除以另一個式時有餘數）。利用這些條件建立聯立方程來求 $p$ 和 $q$。",
+                    "visual_aid": null
+                }
+            ]
+        }
+    ]
+}

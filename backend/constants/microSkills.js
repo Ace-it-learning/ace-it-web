@@ -132,13 +132,43 @@ const MICRO_SKILLS = {
     },
     reading_textOrganization: {
         id: 'reading_textOrganization',
-        name: 'Text Organization',
+        name: 'Text Organisation',
         name_zh: '文本結構',
         paper: PAPERS.READING,
         category: 'Critical Reading Skills',
         group: SKILL_GROUPS.INTERMEDIATE,
         description: 'Recognizing structure (compare/contrast, problem/solution)',
         description_zh: '辨識文章架構（比較/對比、問題/解決）'
+    },
+    reading_skimmingScanning: {
+        id: 'reading_skimmingScanning',
+        name: 'Skimming & Scanning',
+        name_zh: '略讀與掃描',
+        paper: PAPERS.READING,
+        category: 'Search Strategies',
+        group: SKILL_GROUPS.CORE,
+        description: 'Quickly locating keywords and gisting paragraphs',
+        description_zh: '快速定位關鍵字及掌握段落大意'
+    },
+    reading_paraphrasing: {
+        id: 'reading_paraphrasing',
+        name: 'Paraphrasing',
+        name_zh: '改寫能力',
+        paper: PAPERS.READING,
+        category: 'Comprehension Skills',
+        group: SKILL_GROUPS.INTERMEDIATE,
+        description: 'Restating information using different words/structures',
+        description_zh: '使用不同的詞彙/結構重述資訊'
+    },
+    reading_cohesionReference: {
+        id: 'reading_cohesionReference',
+        name: 'Cohesion & Reference',
+        name_zh: '銜接與指代',
+        paper: PAPERS.READING,
+        category: 'Comprehension Skills',
+        group: SKILL_GROUPS.INTERMEDIATE,
+        description: 'Understanding grammatical links (it/this/them)',
+        description_zh: '理解文中的語法連結及指代表達'
     },
 
     // WRITING (15 skills)
@@ -292,6 +322,138 @@ const MICRO_SKILLS = {
         description: 'Logical flow from introduction to conclusion',
         description_zh: '從引言到結論的邏輯流動'
     },
+    writing_general: {
+        id: 'writing_general',
+        name: 'Generic Writing Task',
+        name_zh: '綜合寫作練習',
+        paper: PAPERS.WRITING,
+        category: 'General Writing',
+        group: SKILL_GROUPS.CORE,
+        description: 'All-purpose writing practice covering various DSE-style prompts.',
+        description_zh: '涵蓋各種 DSE 風格題目的綜合寫作練習。'
+    },
+
+    // WRITING GENRES (The Genre Factory)
+    writing_genre_debate: {
+        id: 'writing_genre_debate',
+        name: 'Debate Speech',
+        name_zh: '辯論演講',
+        paper: PAPERS.WRITING,
+        category: 'Argumentative',
+        group: SKILL_GROUPS.CORE,
+        description: 'Master the art of logical persuasion and counter-arguments.',
+        description_zh: '掌握邏輯說服與反駁技巧。'
+    },
+    writing_genre_lte: {
+        id: 'writing_genre_lte',
+        name: 'Letter to the Editor',
+        name_zh: '給編輯的信',
+        paper: PAPERS.WRITING,
+        category: 'Argumentative',
+        group: SKILL_GROUPS.CORE,
+        description: 'Express your views on social issues with clarity and impact.',
+        description_zh: '針對社會議題清晰且有力地表達見解。'
+    },
+    writing_genre_exp: {
+        id: 'writing_genre_exp',
+        name: 'Expository Essay',
+        name_zh: '說明文',
+        paper: PAPERS.WRITING,
+        category: 'Argumentative',
+        group: SKILL_GROUPS.CORE,
+        description: 'Explain complex concepts with systematic logic and evidence.',
+        description_zh: '以系統性邏輯與證據解釋複雜概念。'
+    },
+    writing_genre_fic: {
+        id: 'writing_genre_fic',
+        name: 'Short Story',
+        name_zh: '短篇故事',
+        paper: PAPERS.WRITING,
+        category: 'Narrative',
+        group: SKILL_GROUPS.CORE,
+        description: 'Build engaging narratives with character and tension.',
+        description_zh: '構建富有角色深度與張力的敘事。'
+    },
+    writing_genre_per: {
+        id: 'writing_genre_per',
+        name: 'Personal Experience',
+        name_zh: '個人經驗',
+        paper: PAPERS.WRITING,
+        category: 'Narrative',
+        group: SKILL_GROUPS.CORE,
+        description: 'Reflect on life events with descriptive and engaging language.',
+        description_zh: '以生動且具感染力的語言反思生活事件。'
+    },
+    writing_genre_bio: {
+        id: 'writing_genre_bio',
+        name: 'Biographical Profile',
+        name_zh: '人物簡介',
+        paper: PAPERS.WRITING,
+        category: 'Narrative',
+        group: SKILL_GROUPS.CORE,
+        description: 'Document the lives of inspiring individuals with precision.',
+        description_zh: '精確記錄具啟發性的人物生活。'
+    },
+    writing_genre_fml: {
+        id: 'writing_genre_fml',
+        name: 'Formal Letter',
+        name_zh: '正式書信',
+        paper: PAPERS.WRITING,
+        category: 'Transactional',
+        group: SKILL_GROUPS.CORE,
+        description: 'Communicate with authority and professional register.',
+        description_zh: '以專業語體與權威感進行溝通。'
+    },
+    writing_genre_rpt: {
+        id: 'writing_genre_rpt',
+        name: 'Report',
+        name_zh: '報告',
+        paper: PAPERS.WRITING,
+        category: 'Transactional',
+        group: SKILL_GROUPS.CORE,
+        description: 'Synthesize data and findings into a structured format.',
+        description_zh: '將數據與發現綜合為結構化的格式。'
+    },
+    writing_genre_prp: {
+        id: 'writing_genre_prp',
+        name: 'Proposal',
+        name_zh: '建議書',
+        paper: PAPERS.WRITING,
+        category: 'Transactional',
+        group: SKILL_GROUPS.CORE,
+        description: 'Persuade stakeholders with well-planned initiatives.',
+        description_zh: '以周全的計劃倡議說服利益相關者。'
+    },
+    writing_genre_rev: {
+        id: 'writing_genre_rev',
+        name: 'Review',
+        name_zh: '評論',
+        paper: PAPERS.WRITING,
+        category: 'Discursive',
+        group: SKILL_GROUPS.CORE,
+        description: 'Analyze and evaluate products or events with subjective flair.',
+        description_zh: '以主觀風格分析與評估產品或活動。'
+    },
+    writing_genre_art: {
+        id: 'writing_genre_art',
+        name: 'Feature Article',
+        name_zh: '特寫文章',
+        paper: PAPERS.WRITING,
+        category: 'Discursive',
+        group: SKILL_GROUPS.CORE,
+        description: 'Capture attention with catchy headlines and direct address.',
+        description_zh: '以吸睛標題與直接受眾對話捕捉注意力。'
+    },
+    writing_genre_let: {
+        id: 'writing_genre_let',
+        name: 'Personal Letter/Email',
+        name_zh: '個人書信/電郵',
+        paper: PAPERS.WRITING,
+        category: 'Discursive',
+        group: SKILL_GROUPS.CORE,
+        description: 'Connect with readers using a personal and friendly tone.',
+        description_zh: '以個人且友好的語體與讀者連結。'
+    },
 
     // LISTENING (10 skills)
     listening_mainIdea: {
@@ -396,105 +558,111 @@ const MICRO_SKILLS = {
     },
 
     // SPEAKING (10 skills)
+    // SPEAKING (10 skills)
+    // Cluster 1: Delivery & Musicality (Mechanical Excellence)
     speaking_pronunciationClarity: {
         id: 'speaking_pronunciationClarity',
         name: 'Pronunciation Clarity',
         name_zh: '發音清晰度',
         paper: PAPERS.SPEAKING,
-        category: 'Fluency & Delivery',
+        category: 'Mechanical Excellence',
         group: SKILL_GROUPS.CORE,
-        description: 'Clear articulation of sounds',
-        description_zh: '清楚的語音表達'
+        description: 'Clear articulation of sounds (Phonetic Precision)',
+        description_zh: '清楚的語音表達（語音精確度）'
     },
     speaking_intonation: {
         id: 'speaking_intonation',
         name: 'Intonation',
         name_zh: '語調變化',
         paper: PAPERS.SPEAKING,
-        category: 'Fluency & Delivery',
+        category: 'Mechanical Excellence',
         group: SKILL_GROUPS.INTERMEDIATE,
-        description: 'Natural rise and fall of voice',
-        description_zh: '聲線自然的起伏'
+        description: 'Natural rise and fall of voice (Vocal Melody)',
+        description_zh: '聲線自然的起伏（語音旋律）'
     },
     speaking_paceRhythm: {
         id: 'speaking_paceRhythm',
         name: 'Pace & Rhythm',
         name_zh: '節奏與速度',
         paper: PAPERS.SPEAKING,
-        category: 'Fluency & Delivery',
+        category: 'Mechanical Excellence',
         group: SKILL_GROUPS.INTERMEDIATE,
-        description: 'Speaking at appropriate speed with natural pauses',
-        description_zh: '以適當的速度說話並自然停頓'
+        description: 'Stress-timed rhythm and appropriate speed',
+        description_zh: '重音節奏與適當的速度'
+    },
+    speaking_grammaticalAccuracy: {
+        id: 'speaking_grammaticalAccuracy',
+        name: 'Grammatical Accuracy',
+        name_zh: '語法準確度',
+        paper: PAPERS.SPEAKING,
+        category: 'Mechanical Excellence',
+        group: SKILL_GROUPS.CORE,
+        description: 'Correct structures while speaking',
+        description_zh: '說話時使用正確的句式結構'
+    },
+
+    // Cluster 2: Flow & Spontaneity (Fluency)
+    speaking_spontaneity: {
+        id: 'speaking_spontaneity',
+        name: 'Spontaneity',
+        name_zh: '即興反應',
+        paper: PAPERS.SPEAKING,
+        category: 'Fluency',
+        group: SKILL_GROUPS.EXPERT,
+        description: 'Thinking on feet, avoiding mental translation',
+        description_zh: '即席思考，避免在腦中翻譯'
     },
     speaking_confidence: {
         id: 'speaking_confidence',
         name: 'Confidence & Naturalness',
         name_zh: '自信心與自然度',
         paper: PAPERS.SPEAKING,
-        category: 'Fluency & Delivery',
+        category: 'Fluency',
         group: SKILL_GROUPS.INTERMEDIATE,
-        description: 'Speaking without excessive hesitation',
-        description_zh: '說話流暢，無過度猶豫'
-    },
-    speaking_turnTaking: {
-        id: 'speaking_turnTaking',
-        name: 'Turn-Taking',
-        name_zh: '輪流發言技巧',
-        paper: PAPERS.SPEAKING,
-        category: 'Interactive Skills',
-        group: SKILL_GROUPS.INTERMEDIATE,
-        description: 'Knowing when to speak and listen',
-        description_zh: '知道何時發言與聆聽'
-    },
-    speaking_activeListening: {
-        id: 'speaking_activeListening',
-        name: 'Active Listening',
-        name_zh: '積極聆聽',
-        paper: PAPERS.SPEAKING,
-        category: 'Interactive Skills',
-        group: SKILL_GROUPS.INTERMEDIATE,
-        description: 'Responding relevantly to others',
-        description_zh: '對他人的發言作出相關回應'
-    },
-    speaking_facilitation: {
-        id: 'speaking_facilitation',
-        name: 'Facilitation',
-        name_zh: '帶動討論',
-        paper: PAPERS.SPEAKING,
-        category: 'Interactive Skills',
-        group: SKILL_GROUPS.ADVANCED,
-        description: 'Encouraging others to contribute',
-        description_zh: '鼓勵他人參與對話'
-    },
-    speaking_spontaneity: {
-        id: 'speaking_spontaneity',
-        name: 'Spontaneity',
-        name_zh: '即興反應',
-        paper: PAPERS.SPEAKING,
-        category: 'Language Use',
-        group: SKILL_GROUPS.EXPERT,
-        description: 'Thinking on feet, improvising responses',
-        description_zh: '能夠即席思考並作出回應'
+        description: 'Speaking without excessive hesitation or "flat" tone',
+        description_zh: '說話流暢，無過度猶豫或語氣平淡'
     },
     speaking_vocabularyInSpeech: {
         id: 'speaking_vocabularyInSpeech',
         name: 'Vocabulary in Speech',
         name_zh: '口語詞彙',
         paper: PAPERS.SPEAKING,
-        category: 'Language Use',
+        category: 'Fluency',
         group: SKILL_GROUPS.INTERMEDIATE,
-        description: 'Using varied words naturally',
-        description_zh: '自然地使用多樣化詞彙'
+        description: 'Using varied words and collocations',
+        description_zh: '自然地使用多樣化詞彙與搭配詞'
     },
-    speaking_grammaticalAccuracyInSpeech: {
-        id: 'speaking_grammaticalAccuracyInSpeech',
-        name: 'Grammatical Accuracy in Speech',
-        name_zh: '口語語法準確度',
+
+    // Cluster 3: Dynamic Interaction (Social Collaboration)
+    speaking_turnTaking: {
+        id: 'speaking_turnTaking',
+        name: 'Turn-Taking',
+        name_zh: '輪流發言技巧',
         paper: PAPERS.SPEAKING,
-        category: 'Language Use',
+        category: 'Social Collaboration',
         group: SKILL_GROUPS.INTERMEDIATE,
-        description: 'Correct structures while speaking',
-        description_zh: '說話時使用正確的句式結構'
+        description: 'Polite interruption and entry into conversation',
+        description_zh: '禮貌地打斷並進入對話'
+    },
+    speaking_activeListening: {
+        id: 'speaking_activeListening',
+        name: 'Active Listening',
+        name_zh: '積極聆聽',
+        paper: PAPERS.SPEAKING,
+        category: 'Social Collaboration',
+        group: SKILL_GROUPS.INTERMEDIATE,
+        description: 'Acknowledging others\' points (Recasting/Paraphrasing)',
+        description_zh: '確認他人的論點（重述/改寫）'
+    },
+    speaking_facilitation: {
+        id: 'speaking_facilitation',
+        name: 'Facilitation',
+        name_zh: '帶動討論',
+        paper: PAPERS.SPEAKING,
+        category: 'Social Collaboration',
+        group: SKILL_GROUPS.ADVANCED,
+        description: 'Inviting others to contribute (Diplomacy)',
+        description_zh: '邀請他人參與對話（外交手腕）'
     },
 };
 

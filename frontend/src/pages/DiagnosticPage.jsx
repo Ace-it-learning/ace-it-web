@@ -21,6 +21,7 @@ const DiagnosticPage = () => {
         return saved ? JSON.parse(saved) : {};
     });
     const [loading, setLoading] = useState(true);
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
     // Sync state to session storage
     useEffect(() => {
@@ -48,10 +49,12 @@ const DiagnosticPage = () => {
     }, []);
 
     const handleStepSubmit = async (paperName, submission) => {
+        if (isSubmitting) return;
+        setIsSubmitting(true);
+
         // 1. Initial submission save (Functional update for safety)
         setResults(prev => ({ ...prev, [paperName]: submission }));
 
-        // 2. Submit to backend for grading
         // 2. Submit to backend for grading
         try {
             const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
@@ -88,9 +91,9 @@ const DiagnosticPage = () => {
 
         } catch (e) {
             console.error("Grading error", e);
-            // Optionally show error to user, but for now we might still want to proceed or retry?
-            // Safer to NOT advance if it failed, so they can retry.
             alert("Failed to submit step. Please try again.");
+        } finally {
+            setIsSubmitting(false);
         }
     };
 
@@ -174,10 +177,10 @@ const DiagnosticPage = () => {
     const renderStep = () => {
         switch (step) {
             case 'landing': return <DiagnosticLanding onStart={() => setStep('reading')} />;
-            case 'reading': return <DiagnosticReading assets={assets.reading} onSubmit={(data) => handleStepSubmit('reading', data)} />;
-            case 'writing': return <DiagnosticWriting assets={assets.writing} onSubmit={(data) => handleStepSubmit('writing', data)} />;
-            case 'listening': return <DiagnosticListening assets={assets.listening} onSubmit={(data) => handleStepSubmit('listening', data)} />;
-            case 'speaking': return <DiagnosticSpeaking assets={assets.speaking} onSubmit={(data) => handleStepSubmit('speaking', data)} />;
+            case 'reading': return <DiagnosticReading assets={assets.reading} onSubmit={(data) => handleStepSubmit('reading', data)} isSubmitting={isSubmitting} />;
+            case 'writing': return <DiagnosticWriting assets={assets.writing} onSubmit={(data) => handleStepSubmit('writing', data)} isSubmitting={isSubmitting} />;
+            case 'listening': return <DiagnosticListening assets={assets.listening} onSubmit={(data) => handleStepSubmit('listening', data)} isSubmitting={isSubmitting} />;
+            case 'speaking': return <DiagnosticSpeaking assets={assets.speaking} onSubmit={(data) => handleStepSubmit('speaking', data)} isSubmitting={isSubmitting} />;
             case 'result': return <DiagnosticResult results={results} onRetry={() => setResults(prev => { const { profile, ...rest } = prev; return rest; })} />;
             default: return <div>Unknown Step</div>;
         }

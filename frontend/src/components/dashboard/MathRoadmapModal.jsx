@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import { useLanguage } from '../../context/LanguageContext';
-import { Lock, CheckCircle, Play, Map, Star, Clock, X, Trophy, Search, Sparkles, Zap, Calculator, PieChart, Shapes, Ruler, RefreshCcw } from 'lucide-react';
+import { Lock, CheckCircle, Play, Map, Star, Clock, X, Trophy, Search, Sparkles, Zap, Calculator, PieChart, Shapes, Ruler, RefreshCcw, ChevronDown } from 'lucide-react';
 import { MATH_MICRO_SKILLS, getMathSkillName, getMathSkillDesc, getMathSkillMinForm } from '../../constants/mathMicroSkills';
+import { calculateTier, getTierMetadata, getMasteryStats, getDifficultyTierDetails } from '../../utils/masteryUtils';
 
 const calculateCurrentForm = (baseGrade, joinedDateTimestamp) => {
     if (!baseGrade) return 6; // Default to F6 if unknown
@@ -51,6 +52,7 @@ const MathRoadmapModal = ({ isOpen, onClose }) => {
     const [filterCategory, setFilterCategory] = useState('ALL'); // 'ALL' | 'ALGEBRA' | 'GEOMETRY' | 'DATA'
     const [currentForm, setCurrentForm] = useState(6);
     const [practicedSkills, setPracticedSkills] = useState([]);
+    const [selectedLevels, setSelectedLevels] = useState({});
 
     useEffect(() => {
         if (user) {
@@ -72,7 +74,7 @@ const MathRoadmapModal = ({ isOpen, onClose }) => {
             subtitleWeekly: "Complete 5 targets to unlock the Master Challenge!",
             subtitleGeneral: "Select a topic to generate practice questions.",
             tabPersonalised: "Personalised",
-            tabLibrary: "Library",
+            tabLibrary: "General",
             tabElite: "Elite",
             loading: "Calculating path...",
             targets: "Targets",
@@ -100,7 +102,7 @@ const MathRoadmapModal = ({ isOpen, onClose }) => {
             subtitleWeekly: "完成 5 個目標以解鎖大師挑戰！",
             subtitleGeneral: "選擇一個主題以生成練習題。",
             tabPersonalised: "個人化任務",
-            tabLibrary: "題庫",
+            tabLibrary: "綜合",
             tabElite: "精英挑戰",
             loading: "正在計算路徑...",
             targets: "個目標",
@@ -145,11 +147,11 @@ const MathRoadmapModal = ({ isOpen, onClose }) => {
         try {
             setLoading(true);
             const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
-            // Pass subject=maths
-            const res = await fetch(`${API_URL}/api/roadmap?uid=${user.uid}&subject=maths`);
+            // NEW: Use unified Factory Model personalized endpoint
+            const res = await fetch(`${API_URL}/api/quests/personalized?uid=${user.uid}`);
             if (res.ok) {
                 const data = await res.json();
-                setPlan(data);
+                setPlan({ tasks: data });
             }
         } catch (error) {
             console.error("Failed to load math roadmap", error);
@@ -166,27 +168,28 @@ const MathRoadmapModal = ({ isOpen, onClose }) => {
     }, [user, isOpen]);
 
     const handleTaskClick = (task) => {
-        if (task.status === 'COMPLETED' || task.locked) return;
+        if (task.locked) return;
 
         onClose(); // Close modal
 
-        // For Math, we now go to the Learning Page first
-        // Navigate to /maths/learn/:topicId
-        navigate(`/maths/learn/${task.topic}`, {
+        // For Math Factory Model quests, navigate to the specialized learn page
+        navigate(`/maths/learn/${task.meta?.topic || task.topic}`, {
             state: {
-                topic: task.topic,
+                topic: task.meta?.topic || task.topic,
                 taskId: task.id,
-                title: task.title,
-                xp: task.xp
+                title: task.meta?.topic || task.topic,
+                xp: task.xp || 200, // Factory Quest standard fallback
+                isFactoryQuest: true,
+                level: task.meta?.difficulty || task.level
             }
         });
     };
 
     if (!isOpen) return null;
 
-    const completedCount = plan ? plan.tasks.filter(t => t.status === 'COMPLETED' && t.type !== 'MOCK').length : 0;
+    const completedCount = plan?.tasks ? plan.tasks.filter(t => t.status === 'COMPLETED' && t.type !== 'MOCK').length : 0;
     const totalKeys = 5;
-    const bossTask = plan ? plan.tasks.find(t => t.type === 'MOCK') : null;
+    const bossTask = plan?.tasks ? plan.tasks.find(t => t.type === 'MOCK') : null;
     const canUnlockBoss = completedCount >= 4;
 
     // Filter Logic
@@ -294,112 +297,63 @@ const MathRoadmapModal = ({ isOpen, onClose }) => {
                     <div className="flex-1 flex flex-col min-h-0 bg-slate-50/50">
                         {activeTab === 'WEEKLY' ? (
                             <div className="p-6 flex-1 overflow-y-auto custom-scrollbar">
-                                {/* Progress Bar */}
-                                <div className="mb-8">
-                                    <div className="flex justify-between items-end mb-2">
-                                        <div>
-                                            <span className="text-3xl font-bold text-slate-800">{completedCount}</span>
-                                            <span className="text-slate-400 text-sm ml-1">/{totalKeys} {t.targets}</span>
+                                {/* Batch Info */}
+                                <div className="mb-6 flex items-center justify-between p-4 bg-violet-50 border border-violet-100 rounded-xl">
+                                    <div className="flex items-center gap-3">
+                                        <div className="p-2 bg-violet-600 text-white rounded-lg">
+                                            <Shapes className="w-5 h-5" />
                                         </div>
-                                        <div className={`text-xs font-bold px-3 py-1 rounded-full border ${canUnlockBoss ? 'bg-violet-100 text-violet-700 border-violet-200' : 'bg-slate-100 text-slate-500 border-slate-200'}`}>
-                                            {canUnlockBoss ? t.bossUnlocked : t.bossToUnlock(4 - completedCount)}
+                                        <div>
+                                            <h4 className="font-bold text-slate-900">Your Adaptive Set</h4>
+                                            <p className="text-xs text-slate-500">4 English • 2 Math Questions</p>
                                         </div>
                                     </div>
-                                    <div className="h-3 bg-slate-200 rounded-full overflow-hidden">
-                                        <div
-                                            className="h-full bg-gradient-to-r from-violet-400 to-fuchsia-500 transition-all duration-700 ease-out shadow-[0_0_15px_rgba(139,92,246,0.5)]"
-                                            style={{ width: `${(completedCount / totalKeys) * 100}%` }}
-                                        />
+                                    <div className="text-right">
+                                        <div className="text-xs font-bold text-violet-600 uppercase tracking-wider">Set Bonus</div>
+                                        <div className="text-lg font-black text-slate-900">+200 XP</div>
                                     </div>
                                 </div>
 
                                 {/* Tasks Grid */}
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pb-12">
-                                    {plan?.tasks.filter(t => t.type !== 'MOCK').map((task) => {
-                                        const isCompleted = task.status === 'COMPLETED';
-                                        return (
-                                            <div
-                                                key={task.id}
-                                                onClick={() => handleTaskClick(task)}
-                                                className={`
-                                                    group relative p-5 rounded-xl border-2 text-left transition-all duration-200
-                                                    ${isCompleted
-                                                        ? 'bg-violet-100 border-violet-500 shadow-[0_4px_12px_rgba(139,92,246,0.2)] ring-1 ring-violet-200'
-                                                        : 'bg-white border-slate-100 hover:border-violet-300 hover:shadow-lg cursor-pointer'
-                                                    }
-                                                `}
-                                            >
-                                                <div className="flex justify-between items-start mb-2">
-                                                    <span className={`
-                                                        px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wide
-                                                        ${isCompleted ? 'bg-violet-100 text-violet-700' : 'bg-violet-50 text-violet-700'}
-                                                    `}>
-                                                        {isCompleted ? t.statusCollected : t.statusPractice}
-                                                    </span>
-                                                    {isCompleted && <Trophy className="w-5 h-5 text-violet-500 fill-violet-100" />}
-                                                </div>
-
-                                                <h3 className={`font-bold text-slate-800 mb-1 group-hover:text-violet-700 transition-colors`}>
-                                                    {task.title}
-                                                </h3>
-
-                                                <div className="mt-4 flex items-center justify-between">
-                                                    {isCompleted ? (
-                                                        <span className="text-[10px] font-bold text-violet-600 flex items-center gap-1 bg-violet-50 px-2 py-1 rounded-full border border-violet-200">
-                                                            <Sparkles className="w-3 h-3" />
-                                                            {language === 'zh' ? '已完成！(重複練習：+50 XP)' : 'Completed! (Repeat: +50 XP)'}
-                                                        </span>
-                                                    ) : (
-                                                        <span className="text-xs font-bold text-violet-600 flex items-center gap-1">
-                                                            <Star className="w-3 h-3 fill-current" /> +{task.xp} XP
-                                                        </span>
-                                                    )}
-
-                                                    {isCompleted ? (
-                                                        <div className="opacity-0 group-hover:opacity-100 transition-opacity bg-violet-50 text-violet-600 p-1 rounded-full border border-violet-100">
-                                                            <Play className="w-3.5 h-3.5 ml-0.5" />
-                                                        </div>
-                                                    ) : (
-                                                        <div className="bg-violet-100 text-violet-700 p-1.5 rounded-full group-hover:scale-110 transition-transform">
-                                                            <Play className="w-4 h-4 ml-0.5" />
-                                                        </div>
-                                                    )}
-                                                </div>
-                                            </div>
-                                        );
-                                    })}
-
-                                    {/* Boss Card */}
-                                    {bossTask && (
+                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pb-12">
+                                    {(plan?.tasks || []).map((task) => (
                                         <div
-                                            onClick={() => (!bossTask.locked || canUnlockBoss) && handleTaskClick(bossTask)}
+                                            key={task.id}
+                                            onClick={() => handleTaskClick(task)}
                                             className={`
-                                                md:col-span-2 relative p-5 rounded-xl border-2 flex flex-col items-center text-center transition-all duration-300
-                                                ${bossTask.locked && !canUnlockBoss
-                                                    ? 'bg-slate-50 border-slate-200 text-slate-400 grayscale'
-                                                    : 'bg-gradient-to-br from-violet-50 via-white to-fuchsia-50 border-violet-300 shadow-xl cursor-pointer hover:scale-[1.01]'
-                                                }
+                                                group relative p-5 rounded-xl border-2 text-left transition-all duration-200 cursor-pointer
+                                                bg-white border-slate-100 hover:border-violet-300 hover:shadow-lg
                                             `}
                                         >
-                                            <div className={`
-                                                mb-3 p-3 rounded-full shadow-inner
-                                                ${bossTask.locked && !canUnlockBoss ? 'bg-slate-200 text-white' : 'bg-violet-500 text-white animate-pulse'}
-                                            `}>
-                                                {bossTask.locked && !canUnlockBoss ? <Lock className="w-6 h-6" /> : <Trophy className="w-6 h-6" />}
-                                            </div>
-                                            <h3 className="font-bold text-xl text-slate-800">{t.masterChallenge}</h3>
-                                            <p className="text-sm text-slate-500 mb-4">{t.masterDesc}</p>
-
-                                            {bossTask.locked && !canUnlockBoss && (
-                                                <div className="absolute inset-0 bg-white/40 backdrop-blur-[2px] flex items-center justify-center rounded-xl">
-                                                    <div className="bg-slate-800 text-white text-xs font-bold px-4 py-2 rounded-full shadow-lg flex items-center gap-2">
-                                                        <Lock className="w-3 h-3" />
-                                                        {t.moreTargets(4 - completedCount)}
-                                                    </div>
+                                            <div className="flex justify-between items-start mb-3">
+                                                <span className={`
+                                                    px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wide
+                                                    ${task.subject === 'Maths' ? 'bg-violet-100 text-violet-700' : 'bg-indigo-100 text-indigo-700'}
+                                                `}>
+                                                    {task.subject}
+                                                </span>
+                                                <div className="bg-slate-100 text-slate-600 p-1.5 rounded-full group-hover:bg-violet-600 group-hover:text-white transition-all">
+                                                    <Play className="w-3.5 h-3.5 ml-0.5" />
                                                 </div>
-                                            )}
+                                            </div>
+
+                                            <h3 className="font-bold text-slate-800 mb-1 leading-tight group-hover:text-violet-600 transition-colors">
+                                                {task.meta?.topic || task.topic}
+                                            </h3>
+                                            <p className="text-[10px] text-slate-500 line-clamp-2">
+                                                {task.subject === 'Maths' ? `DSE F${task.meta?.syllabus_layer || task.level} level challenge.` : `DSE English mastery target.`}
+                                            </p>
+
+                                            <div className="mt-4 flex items-center justify-between">
+                                                <span className="text-xs font-bold text-violet-600 flex items-center gap-1">
+                                                    <Star className="w-3 h-3 fill-current" /> +200 XP
+                                                </span>
+                                                <span className="text-[9px] font-black text-slate-300 uppercase">
+                                                    Factory v1.0
+                                                </span>
+                                            </div>
                                         </div>
-                                    )}
+                                    ))}
                                 </div>
                             </div>
                         ) : (
@@ -469,14 +423,22 @@ const MathRoadmapModal = ({ isOpen, onClose }) => {
                                             return (
                                                 <div
                                                     key={id}
-                                                    onClick={() => handleTaskClick({
-                                                        id: `general_${id}`,
-                                                        title: `Practice: ${name}`,
-                                                        topic: id,
-                                                        type: 'PRACTICE',
-                                                        xp: 50,
-                                                        level: level < 3 ? 3 : 5
-                                                    })}
+                                                    onClick={() => {
+                                                        const masteryLevel = userSkills[id]?.level || 0;
+                                                        const capAtDSE = activeTab !== 'CHALLENGE';
+                                                        const hasOverride = selectedLevels[id] !== undefined;
+                                                        const activeTier = hasOverride ? selectedLevels[id] : calculateTier(masteryLevel, capAtDSE);
+                                                        const xpReward = getDifficultyTierDetails(activeTier, language === 'zh').xp;
+
+                                                        handleTaskClick({
+                                                            id: `general_${id}`,
+                                                            title: `${activeTab === 'CHALLENGE' ? (language === 'zh' ? '精英' : 'Elite') : (language === 'zh' ? '練習' : 'Practice')}: ${name}`,
+                                                            topic: id,
+                                                            type: 'PRACTICE',
+                                                            xp: xpReward,
+                                                            level: activeTier
+                                                        });
+                                                    }}
                                                     className={`
                                                                 group p-4 rounded-xl border transition-all flex flex-col justify-between cursor-pointer
                                                                 ${isPracticed
@@ -497,6 +459,22 @@ const MathRoadmapModal = ({ isOpen, onClose }) => {
                                                                     <span className="px-2 py-0.5 rounded text-[9px] font-bold bg-slate-200 text-slate-500 uppercase tracking-wider">
                                                                         F{minForm}
                                                                     </span>
+                                                                )}
+                                                                {!isPracticed && (
+                                                                    <div className="relative flex items-center" onClick={(e) => e.stopPropagation()}>
+                                                                        <select
+                                                                            value={selectedLevels[id] !== undefined ? selectedLevels[id] : calculateTier(userSkills[id]?.level || 0, activeTab !== 'CHALLENGE')}
+                                                                            onChange={(e) => setSelectedLevels(prev => ({ ...prev, [id]: parseInt(e.target.value) }))}
+                                                                            className={`pl-2 pr-5 py-0.5 rounded text-[9px] font-black uppercase tracking-wider border ${getDifficultyTierDetails(selectedLevels[id] !== undefined ? selectedLevels[id] : calculateTier(userSkills[id]?.level || 0, activeTab !== 'CHALLENGE'), language === 'zh').color} appearance-none cursor-pointer focus:outline-none focus:ring-1 focus:ring-violet-500`}
+                                                                        >
+                                                                            {[1, 2, 3, 4].map(lvl => (
+                                                                                <option key={lvl} value={lvl} className="text-slate-800 bg-white">
+                                                                                    {getDifficultyTierDetails(lvl, language === 'zh').displayName}
+                                                                                </option>
+                                                                            ))}
+                                                                        </select>
+                                                                        <ChevronDown className="absolute right-1 w-3 h-3 pointer-events-none opacity-60" />
+                                                                    </div>
                                                                 )}
                                                             </div>
                                                             <div className="flex items-center gap-1.5">
@@ -524,7 +502,7 @@ const MathRoadmapModal = ({ isOpen, onClose }) => {
                                                             </div>
                                                         ) : (
                                                             <span className="text-[10px] font-bold text-violet-500 flex items-center gap-1">
-                                                                <Star className="w-3 h-3 fill-current" /> +50 XP
+                                                                <Star className="w-3 h-3 fill-current" /> +{getDifficultyTierDetails(selectedLevels[id] !== undefined ? selectedLevels[id] : calculateTier(userSkills[id]?.level || 0, activeTab !== 'CHALLENGE'), language === 'zh').xp} XP
                                                             </span>
                                                         )}
                                                         <div className={`opacity-0 group-hover:opacity-100 transition-opacity bg-violet-100 text-violet-700 p-1 rounded-full ${isPracticed ? 'border border-violet-200' : ''}`}>

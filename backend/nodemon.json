@@ -1,0 +1,14 @@
+{
+    "ignore": [
+        "*.log",
+        "server_debug*.log",
+        "server_crash.log",
+        "lab_debug.log",
+        "chat_error.log",
+        "error.log",
+        "error_log.txt",
+        "generated_mocks/*",
+        "output/*"
+    ],
+    "delay": "2500"
+}

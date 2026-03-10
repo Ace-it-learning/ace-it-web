@@ -11,11 +11,6 @@ export const MATH_MICRO_SKILLS = {
         zh: { name: '百分法與利息', desc: '複利息、增長/衰退、稅收' },
         minForm: 3 // Foundation
     },
-    math_num_estimation: {
-        en: { name: 'Estimation & Errors', desc: 'Absolute/relative errors, significant figures' },
-        zh: { name: '估算與誤差', desc: '絕對/相對誤差、有效數字' },
-        minForm: 1 // Foundation
-    },
     math_alg_formulas: {
         en: { name: 'Formulas & Substitution', desc: 'Change of subject, algebraic substitution' },
         zh: { name: '公式與代入', desc: '主項變換、代數代入' },
@@ -140,7 +135,7 @@ export const getMathSkillMinForm = (id) => {
 export const getSkillsByCategory = (category) => {
     const categories = {
         algebra: [
-            'math_num_percentages', 'math_num_estimation', 'math_num_ratio', 'math_num_inequalities',
+            'math_num_percentages', 'math_num_ratio', 'math_num_inequalities',
             'math_alg_formulas', 'math_alg_polynomials', 'math_alg_quadratics', 'math_alg_functions',
             'math_alg_variations', 'math_alg_apgp', 'math_alg_log_exp', 'math_alg_complex_numbers'
         ],

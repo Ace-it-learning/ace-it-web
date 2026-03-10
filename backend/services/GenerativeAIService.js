@@ -24,12 +24,19 @@ class GenerativeAIService {
         if (process.env.CLOUD_RUN_SERVICE || process.env.VERTEX_ENABLED === 'true') {
             try {
                 const { VertexAI } = require('@google-cloud/vertexai');
-                this.vertex = new VertexAI({
+
+                // Allow local developers to use Vertex AI by providing a service account path
+                const vertexOptions = {
                     project: process.env.GOOGLE_CLOUD_PROJECT,
                     location: process.env.GOOGLE_CLOUD_LOCATION || 'asia-east2'
-                });
+                };
+
+                // If running locally and a key file is provided, Google Cloud SDK will pick it up 
+                // from GOOGLE_APPLICATION_CREDENTIALS automatically if it's set in the env.
+
+                this.vertex = new VertexAI(vertexOptions);
                 this.isVertex = true;
-                console.log(`[AIService] Initialized Vertex AI (Region: ${process.env.GOOGLE_CLOUD_LOCATION || 'asia-east2'})`);
+                console.log(`[AIService] Initialized Vertex AI (Region: ${vertexOptions.location})`);
             } catch (e) {
                 console.error("[AIService] Failed to load Vertex SDK, falling back to AI Studio:", e);
                 this.initAIStudio();
@@ -53,7 +60,6 @@ class GenerativeAIService {
 
     /**
      * Get a generative model instance
-     * @param {Object} config - { model, generationConfig, systemInstruction }
      */
     getModel(config = {}) {
         const modelName = config.model || "gemini-2.0-flash";
@@ -77,11 +83,14 @@ class GenerativeAIService {
         }
 
         if (this.isVertex) {
-            console.log(`[AIService] Routing to Vertex AI: ${modelName}`);
+            console.log(`[AIService] [VERTEX] Routing: ${modelName}`);
             return this.vertex.getGenerativeModel(modelOptions);
         } else {
-            console.log(`[AIService] Routing to AI Studio: ${modelName}`);
-            const requestOptions = { timeout: 300000 }; // 5 minutes for Deep Dive
+            console.log(`[AIService] [STUDIO] Routing: ${modelName} (API: v1beta)`);
+            const requestOptions = {
+                timeout: 300000,
+                apiVersion: 'v1beta' // Crucial for gemini-2.0-flash and latest features
+            };
             return this.genAI.getGenerativeModel(modelOptions, requestOptions);
         }
     }
@@ -96,10 +105,67 @@ class GenerativeAIService {
     }
 
     /**
+     * Robustly extracts the first valid JSON object/array from text.
+     */
+    extractJson(text) {
+        let startIndex = text.indexOf('{');
+        let arrayStartIndex = text.indexOf('[');
+
+        // Determine if it's likely an object or array
+        let start = startIndex;
+        if (arrayStartIndex !== -1 && (startIndex === -1 || arrayStartIndex < startIndex)) {
+            start = arrayStartIndex;
+        }
+
+        if (start === -1) return text; // No JSON found
+
+        let openChar = text[start];
+        let closeChar = openChar === '{' ? '}' : ']';
+        let balance = 0;
+        let end = -1;
+        let insideString = false;
+        let escape = false;
+
+        for (let i = start; i < text.length; i++) {
+            const char = text[i];
+
+            if (escape) {
+                escape = false;
+                continue;
+            }
+            if (char === '\\') {
+                escape = true;
+                continue;
+            }
+            if (char === '"') {
+                insideString = !insideString;
+                continue;
+            }
+
+            if (!insideString) {
+                if (char === openChar) {
+                    balance++;
+                } else if (char === closeChar) {
+                    balance--;
+                    if (balance === 0) {
+                        end = i;
+                        break;
+                    }
+                }
+            }
+        }
+
+        if (end !== -1) {
+            return text.substring(start, end + 1);
+        }
+        return text; // Fallback
+    }
+
+    /**
      * Helper to generate and parse JSON
      */
     async generateJson(prompt, config = {}, retries = 3) {
-        // Enforce JSON mime type if supported (Vertex/Gemini 1.5+)
+        // Enforce JSON mime type if supported
         const jsonConfig = {
             ...config,
             generationConfig: {
@@ -109,44 +175,110 @@ class GenerativeAIService {
         };
 
         const result = await this.generateContent(prompt, jsonConfig, retries);
-        const text = result.response.text();
-
-        console.log('[GenerativeAIService] Raw AI Response Length:', text.length);
-        console.log('[GenerativeAIService] Raw AI Response (first 500 chars):', text.substring(0, 500));
-        console.log('[GenerativeAIService] Raw AI Response (last 500 chars):', text.substring(Math.max(0, text.length - 500)));
+        console.log('[GenerativeAIService] Getting response text...');
+        let text;
+        try {
+            text = result.response.text();
+            console.log('[GenerativeAIService] Raw AI Response Length:', text ? text.length : 'N/A');
+        } catch (textError) {
+            console.error('[GenerativeAIService] Failed to get response text:', textError);
+            console.error('[GenerativeAIService] Response object:', JSON.stringify(result.response, null, 2));
+            throw textError;
+        }
 
         try {
-            // Clean markdown if present
-            const cleanText = text.trim()
-                .replace(/^```json\n?/i, '')
-                .replace(/\n?```$/i, '')
-                .trim();
+            // 1. Robust Extraction
+            const cleanText = this.extractJson(text);
 
-            console.log('[GenerativeAIService] Attempting to parse cleaned JSON...');
+            // 2. Attempt Parse
             return JSON.parse(cleanText);
+
         } catch (e) {
-            console.error("[AIService] JSON Parse Error!");
-            console.error("Error Message:", e.message);
+            console.warn(`[AIService] JSON Parse Failed: ${e.message}. Attempting Auto-Repair...`);
 
-            // Log a snippet of the start and end to see where it might be broken
-            console.error("Start of response:", text.substring(0, 200));
-            console.error("End of response:", text.substring(Math.max(0, text.length - 200)));
+            let rawText = "";
+            try {
+                // 3. Auto-Repair: Fix common LaTeX and control character issues
+                rawText = this.extractJson(text);
 
-            throw new Error(`Failed to parse AI response as JSON: ${e.message}`);
+                // --- ARCHITECT'S ABSOLUTE PRECISION REPAIR ---
+                const repairJson = (str) => {
+                    let repaired = "";
+                    let insideString = false;
+
+                    for (let i = 0; i < str.length; i++) {
+                        const char = str[i];
+
+                        if (char === '"') {
+                            // Check if this quote is escaped
+                            let backslashCount = 0;
+                            for (let j = i - 1; j >= 0 && str[j] === '\\'; j--) {
+                                backslashCount++;
+                            }
+                            // If even number of backslashes before it, it's a structural quote
+                            if (backslashCount % 2 === 0) {
+                                insideString = !insideString;
+                            }
+                            repaired += char;
+                        }
+                        else if (insideString && char === '\\') {
+                            // Inside a string, literal backslashes are the #1 cause of failure in Maths Apps.
+                            // We MUST ensure they are escaped for JSON, UNLESS they are escaping a quote.
+                            const nextChar = str[i + 1];
+                            if (nextChar === '"') {
+                                repaired += "\\"; // Let it escape the quote: \" 
+                            } else {
+                                repaired += "\\\\"; // Double it: \\ which JSON.parse sees as one literal \
+                            }
+                        }
+                        else if (insideString) {
+                            // Handle raw control characters inside strings
+                            const code = char.charCodeAt(0);
+                            if (code < 32) {
+                                if (char === '\n') repaired += "\\n";
+                                else if (char === '\r') repaired += "\\r";
+                                else if (char === '\t') repaired += "\\t";
+                                else repaired += "\\u" + code.toString(16).padStart(4, '0');
+                            } else {
+                                repaired += char;
+                            }
+                        }
+                        else {
+                            repaired += char;
+                        }
+                    }
+                    return repaired;
+                };
+
+                const repairedText = repairJson(rawText)
+                    .replace(/,\s*([}\]])/g, '$1') // Remove trailing commas: [1,2,] -> [1,2]
+                    .replace(/,\s*\.\s*([}\]])/g, '$1') // Remove hallucinated trailing dots: [1,2,. ] -> [1,2]
+                    .replace(/([}\]])\s*\.\s*$/g, '$1'); // Remove trailing dots after final bracket: { ... }. -> { ... }
+
+                return JSON.parse(repairedText);
+
+            } catch (repairError) {
+                console.error("[AIService] JSON Parse & Repair Failed!");
+                console.error("Original Error:", e.message);
+                console.error("Repair Error:", repairError.message);
+
+                // Detailed context log
+                const pos = parseInt(repairError.message.match(/position (\d+)/)?.[1] || "0");
+                const snippet = rawText.substring(Math.max(0, pos - 20), Math.min(rawText.length, pos + 20));
+                console.error(`Error at/near: "${snippet}"`);
+                console.error(`Raw Text Tail: "${rawText.slice(-500)}"`); // Log the end of the response
+
+                throw new Error(`Failed to parse AI response as JSON: ${e.message}`);
+            }
         }
     }
 
     /**
-     * Unified sendMessage method for chat sessions with automatic retry and Smart Fallback
+     * Unified sendMessage method
      */
     async sendMessage(chatSession, message, config = {}, retries = 3) {
-        return this.executeWithRetry(async (model, isRetry, currentModelName) => {
+        return this.executeWithRetry(async (model, isRetry) => {
             if (isRetry) {
-                // If it's a retry with a DIFFERENT model, we must use a stateless call 
-                // because the chatSession is locked to the original model.
-                console.log(`[AIService] Fallback detected for chat. Using generateContent for turn.`);
-                // We'll simulate a chat turn using history from the session if possible, 
-                // but for simplicity in fallback, we'll just send the message.
                 return await model.generateContent(message);
             }
             return await chatSession.sendMessage(message);
@@ -154,55 +286,92 @@ class GenerativeAIService {
     }
 
     /**
-     * Core retry/failover logic
+     * Core retry/failover logic - SHARPENED for higher reliability
      */
     async executeWithRetry(action, input, config = {}, retries = 3) {
         await this.init();
 
-        const requestedModel = config.model || "gemini-flash-latest";
-        // FALLBACK STRATEGY: 
-        // 1. Try Requested (e.g. 2.5-flash or 2.0-flash)
-        // 2. Fallback to gemini-2.0-flash (Highest performance/availability for this key)
-        // 3. Fallback to gemini-2.0-flash-lite (Stable lightweight fallback)
-        // 4. Fallback to gemini-1.5-flash-latest (Reliable legacy fallback)
-        const modelQueue = [requestedModel, "gemini-flash-latest", "gemini-pro-latest", "gemini-2.0-flash-lite"];
+        const requestedModel = config.model || "gemini-2.0-flash";
+        const isProModel = requestedModel.includes("pro");
+
+        // Approved Hierarchy: Standard (Flash) vs Premium (Pro)
+        let modelQueue;
+        if (isProModel) {
+            // Priority: 2.5 Pro -> 1.5 Pro -> 2.0 Flash (Strongest Fallback) -> Flash Latest
+            modelQueue = ["gemini-2.5-pro", "gemini-1.5-pro", "gemini-2.0-flash", "gemini-flash-latest"];
+        } else {
+            // Priority: 2.0 Flash (Primary) -> 2.0 Flash Lite (Fast Backup) -> Flash Latest (Catch-all)
+            modelQueue = ["gemini-2.0-flash", "gemini-2.0-flash-lite", "gemini-flash-latest"];
+        }
+
+        // FORCE REQUESTED MODEL TO FRONT
+        if (requestedModel && !modelQueue.includes(requestedModel)) {
+            modelQueue.unshift(requestedModel);
+        } else if (requestedModel) {
+            // Move to front
+            modelQueue = modelQueue.filter(m => m !== requestedModel);
+            modelQueue.unshift(requestedModel);
+        }
+
         const uniqueQueue = [...new Set(modelQueue)];
 
+        let lastError = null;
         for (let i = 0; i < retries; i++) {
-            const currentModelName = uniqueQueue[i % uniqueQueue.length];
-            console.log(`[AIService] 🤖 Attempt ${i + 1} using "${currentModelName}"`);
-
-            const modelConfig = {
-                ...config,
-                model: currentModelName,
-                systemInstruction: config.systemInstruction // Explicitly pass through
-            };
-            const model = this.getModel(modelConfig);
+            // If we have more retries than models, we loop back but might want different variants.
+            // For now, simple rotation is fine.
+            const currentModelName = uniqueQueue[Math.min(i, uniqueQueue.length - 1)];
 
             try {
+                console.log(`[AIService] Attempt ${i + 1}/${retries}: Using model '${currentModelName}'`);
+                const model = this.getModel({ ...config, model: currentModelName });
                 return await action(model, i > 0, currentModelName);
             } catch (error) {
-                const isRateLimit = error.message?.includes('429') || error.message?.includes('Resource exhausted');
-                const isNotFound = error.message?.includes('404') || error.message?.includes('not found') || error.message?.includes('501');
+                lastError = error;
+                const isRateLimit = error.message?.includes('429') || error.message?.toLowerCase().includes('resource exhausted');
+                const isOverloaded = error.message?.includes('503') || error.message?.toLowerCase().includes('busy') || error.message?.toLowerCase().includes('overloaded');
 
-                console.error(`[AIService] Attempt ${i + 1} Failed (${currentModelName}): ${error.message}`);
+                console.error(`[AIService] FAILED Attempt ${i + 1} (${currentModelName}):`, error.message);
+                if (error.status) console.error(`[AIService] Error Status: ${error.status}`);
+
+                // If it's a model-not-supported error or region restriction, try next model IMMEDIATELY
+                const isUnavailable =
+                    error.message?.includes('404') ||
+                    error.message?.includes('501') ||
+                    error.status === 404 ||
+                    error.status === 501 ||
+                    error.message?.toLowerCase().includes('not found') ||
+                    error.message?.toLowerCase().includes('location is not supported');
+
+                if (isUnavailable) {
+                    console.warn(`[AIService] Model ${currentModelName} unavailable, not found, or restricted in this region. Error: ${error.message}. Trying next in queue...`);
+                    continue;
+                }
 
                 if (i < retries - 1) {
-                    // If model is not found, jump to next retry IMMEDIATELY without delay
-                    if (isNotFound) {
-                        console.log(`[AIService] Model "${currentModelName}" not found. Trying next model immediately...`);
-                        continue;
-                    }
+                    // Exponential backoff
+                    // Rate limits (429) need much longer waits than simple overload (503)
+                    // Free tier keys for 2.0 can have very low limits (e.g. 2-10 RPM)
+                    const waitBase = isRateLimit ? 10000 : 3000;
+                    const delay = (Math.pow(1.5, i) * waitBase) + (Math.random() * 3000);
 
-                    // Exponential backoff with jitter for Rate Limits
-                    const baseDelay = isRateLimit ? 2000 : 1000;
-                    const delay = (Math.pow(2, i) * baseDelay) + (Math.random() * 500);
-                    console.log(`[AIService] Retrying in ${delay}ms...`);
+                    console.log(`[AIService] ${isRateLimit ? 'QUOTA HIT (429)' : 'SERVICE BUSY (503)'}. Retrying in ${Math.round(delay)}ms...`);
                     await new Promise(resolve => setTimeout(resolve, delay));
                     continue;
                 }
+
+                // Final Failure: provide architectural context
+                if (isProModel && isRateLimit) {
+                    throw new Error("⚠️ HKDSE-PRO QUOTA EXHAUSTED: Gemini 1.5 Pro is currently at its limit in Development. Please try again in 1 minute, or enable Vertex AI locally for enterprise bandwidth.");
+                }
+                if (!isProModel && isRateLimit) {
+                    throw new Error("⚠️ QUOTA EXHAUSTED: Gemini 2.0 Flash is currently at its limit. Please wait a moment and try again.");
+                }
                 throw error;
             }
+        }
+        if (lastError) {
+            console.error(`[AIService] Final failure after ${retries} attempts. Last model tried: ${uniqueQueue[uniqueQueue.length - 1]}`);
+            throw lastError;
         }
     }
 }

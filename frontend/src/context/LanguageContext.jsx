@@ -15,12 +15,11 @@ export const LanguageProvider = ({ children }) => {
         localStorage.setItem('app-language-v2', language);
     }, [language]);
 
-    const t = (path) => {
+    const t = (path, params = {}) => {
         const keys = path.split('.');
-        // Check if translations[language] exists, fallback to 'zh' then 'en'
         let current = translations[language] || translations['zh'] || translations['en'];
 
-        if (!current) return path; // Should never happen if translations is imported correctly
+        if (!current) return path;
 
         for (const key of keys) {
             if (current[key] === undefined) {
@@ -29,6 +28,19 @@ export const LanguageProvider = ({ children }) => {
             }
             current = current[key];
         }
+
+        // Handle string interpolation for {{key}}
+        if (typeof current === 'string' && params && Object.keys(params).length > 0) {
+            let interpolated = current;
+            Object.keys(params).forEach(key => {
+                const value = params[key];
+                // Case-insensitive replacement to be extra safe
+                const regex = new RegExp(`{{${key}}}`, 'gi');
+                interpolated = interpolated.replace(regex, value !== undefined ? value : '');
+            });
+            return interpolated;
+        }
+
         return current;
     };
 

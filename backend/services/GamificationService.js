@@ -2,6 +2,7 @@ const admin = require('firebase-admin');
 const fs = require('fs');
 const path = require('path');
 const UserProfileService = require('./UserProfileService');
+const moment = require('moment');
 
 // Load Configuration Source of Truth
 const GAMIFICATION_CONFIG = JSON.parse(fs.readFileSync(path.join(__dirname, '../gamification.json'), 'utf8'));
@@ -9,6 +10,42 @@ const GAMIFICATION_CONFIG = JSON.parse(fs.readFileSync(path.join(__dirname, '../
 class GamificationService {
     constructor() {
         this.config = GAMIFICATION_CONFIG;
+    }
+
+    /**
+     * Helper to get the current Week ID (consistent with Admin Factory & Roadmap)
+     */
+    getCurrentWeekId() {
+        return moment().format('YYYY_WW');
+    }
+
+    /**
+     * Get Weekly Quest Status for a user
+     */
+    async getWeeklyQuestStatus(uid) {
+        if (!uid || uid === 'guest') return { weekId: null, completed: false };
+        try {
+            const weekId = this.getCurrentWeekId();
+            const statsDoc = await this.db.collection('users').doc(uid).collection('stats').doc('main').get();
+            if (!statsDoc.exists) return { weekId, completed: false };
+
+            const data = statsDoc.data();
+            const completedQuests = data.weekly_quests_completed || [];
+            return {
+                weekId,
+                completed: completedQuests.includes(weekId)
+            };
+        } catch (e) {
+            console.error("[Gamification] getWeeklyQuestStatus Error:", e);
+            return { weekId: null, completed: false };
+        }
+    }
+
+    /**
+     * Get standardized XP for an adaptive tier (1-4).
+     */
+    getTieredXP(tier) {
+        return this.config.xp_table.adaptive_practice_tiers?.[tier] || 50;
     }
 
     get db() {
@@ -55,13 +92,13 @@ class GamificationService {
      * @param {string} source 'reading', 'writing', 'speaking', 'listening' or 'general'
      * @param {object} actionMetadata Optional metadata for anti-cheat
      */
-    async awardXP(uid, baseAmount, source = 'general', actionMetadata = {}) {
+    async awardXP(uid, baseAmount, source = 'general', actionMetadata = {}, existingTx = null) {
         if (!uid || uid === 'guest') return null;
 
         const userRef = this.db.collection('users').doc(uid);
         const statsRef = userRef.collection('stats').doc('main');
 
-        return this.db.runTransaction(async (t) => {
+        const logic = async (t) => {
             const statsDoc = await t.get(statsRef);
             let stats = statsDoc.exists ? statsDoc.data() : { xp: 0, level: 1, daily_xp: 0, last_xp_date: null };
 
@@ -190,7 +227,13 @@ class GamificationService {
                 .catch(e => console.error("History record failed", e));
 
             return result;
-        });
+        };
+
+        if (existingTx) {
+            return logic(existingTx);
+        } else {
+            return this.db.runTransaction(logic);
+        }
     }
 
     /**
@@ -220,6 +263,109 @@ class GamificationService {
             return { success: true, earned: 0, fresh: false }; // Already completed
         } catch (e) {
             console.error("[Gamification] Quest Completion Error:", e);
+            return { success: false, error: e.message };
+        }
+    }
+
+    /**
+     * Award Factory Quest Completion Bonus (4+2 Card System)
+     */
+    async awardFactoryQuestCompletion(uid, questId, subject, baseXP = null) {
+        if (!uid || !questId) return { success: false };
+
+        try {
+            const statsRef = this.db.collection('users').doc(uid).collection('stats').doc('main');
+            const today = new Date().toDateString();
+
+            return await this.db.runTransaction(async (t) => {
+                const statsDoc = await t.get(statsRef);
+                let statsData = statsDoc.exists ? statsDoc.data() : {};
+
+                let factorySet = statsData.factory_set || { date: today, completed: [] };
+
+                // Handle date rollover
+                if (factorySet.date !== today) {
+                    factorySet = { date: today, completed: [] };
+                }
+
+                if (factorySet.completed.includes(questId)) {
+                    return { success: true, earned: 0, bonusAwarded: false, alreadyCompleted: true };
+                }
+
+                // Award XP for completion (standardize to tier XP if provided)
+                const xpToAward = baseXP || this.config.xp_table.factory_quest.completion || 200;
+                const xpResult = await this.awardXP(uid, xpToAward, 'factory_quest', {
+                    title: `Quest Completed: ${subject}`,
+                    subject: subject
+                }, t);
+
+                factorySet.completed.push(questId);
+                let bonusAwarded = false;
+                let bonusAmount = 0;
+
+                // Check for Set Bonus (All 6 cards done)
+                if (factorySet.completed.length === 6) {
+                    bonusAmount = this.config.xp_table.factory_quest.set_bonus || 200;
+                    await this.awardXP(uid, bonusAmount, 'factory_bonus', {
+                        title: `Full Set Bonus! 🏆`,
+                        subject: 'bonus'
+                    }, t);
+                    bonusAwarded = true;
+                }
+
+                t.set(statsRef, { factory_set: factorySet }, { merge: true });
+
+                return {
+                    success: true,
+                    earned: xpResult.earned,
+                    bonusAwarded,
+                    bonusAmount,
+                    totalEarned: xpResult.earned + bonusAmount
+                };
+            });
+        } catch (e) {
+            console.error("[Gamification] Factory Quest Error:", e);
+            return { success: false, error: e.message };
+        }
+    }
+
+    /**
+     * Award Weekly Quest Completion (Persistent)
+     */
+    async awardWeeklyQuestCompletion(uid) {
+        if (!uid || uid === 'guest') return { success: false };
+
+        const weekId = this.getCurrentWeekId();
+        const statsRef = this.db.collection('users').doc(uid).collection('stats').doc('main');
+
+        try {
+            return await this.db.runTransaction(async (t) => {
+                const statsDoc = await t.get(statsRef);
+                const stats = statsDoc.exists ? statsDoc.data() : {};
+                const completed = stats.weekly_quests_completed || [];
+
+                if (completed.includes(weekId)) {
+                    return { success: true, earned: 0, alreadyCompleted: true };
+                }
+
+                // Award 200 XP for completion
+                const xpToAward = 200;
+                const result = await this.awardXP(uid, xpToAward, 'weekly_quest', {
+                    title: `Weekly Quest Completed: ${weekId}`,
+                    subject: 'reading'
+                }, t);
+
+                completed.push(weekId);
+                t.set(statsRef, { weekly_quests_completed: completed }, { merge: true });
+
+                return {
+                    success: true,
+                    earned: result.earned,
+                    weekId
+                };
+            });
+        } catch (e) {
+            console.error("[Gamification] Weekly Quest Award Error:", e);
             return { success: false, error: e.message };
         }
     }
@@ -284,34 +430,9 @@ class GamificationService {
 
             // Deduct XP
             stats.xp = currentXP - cost;
-            // Note: We do NOT decrease level. Level tracks "Lifetime XP" or "Current Power".
-            // Typically in gamification, spending XP shouldn't de-level you unless XP is currency only.
-            // If XP is both currency and level, spending it is painful.
-            // BETTER ARCHITECTURE: "Total Lifetime XP" for Level, "Spendable Coins" (or just XP) for shop.
-            // Given the prompt implies simple "XP", let's assume spending it reduces your "Balance", but
-            // we should probably keep "level" based on a separate "lifetime_xp" field if we want to be nice.
-            // BUT, if I just update `xp`, the level calculation in `getProgress` uses `xp`.
-            // So spending XP de-levels you? That's harsh.
-            // Let's check `calculateLevelFromXP`. It uses input XP.
-            // SOLUTION: Add `lifetime_xp` to stats. Level is calculated from `lifetime_xp`.
-            // Shop deducts `xp` (spendable).
-            // `awardXP` updates both.
-
-            // MIGRATION FIX in awardXP needed? Or just assume spending reduces Level for this MVP?
-            // User didn't specify. Standard RPG: XP is for Level, Gold is for Shop.
-            // Here we use XP for Shop.
-            // Let's assume for MVP: Spending XP reduces your "Current XP" but we want to freeze the Level?
-            // "Level based on Total XP".
-            // Let's modify awardXP to track `lifetime_xp` if not present, and base level on that.
-            // For now, let's just deduct XP and let the level drop (Hardcore Mode) OR
-            // introduce `coins` separate from XP?
-            // "Spend your hard-earned XP".
-            // Let's deduct it. If level drops, so be it. (Or I can stick `level` in stats and only update it up)
-
             t.set(statsRef, stats, { merge: true });
 
             // Add Item
-            // If blind box, `itemId` might be generic, but `itemMetadata` has the real prize.
             const newItemRef = inventoryRef.doc(); // Auto ID
             t.set(newItemRef, {
                 itemId: itemId,

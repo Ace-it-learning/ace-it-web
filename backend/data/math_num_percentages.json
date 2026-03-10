@@ -1,0 +1,182 @@
+{
+    "is_modular": true,
+    "name": "Percentages & Interest",
+    "name_zh": "百分法與利息",
+    "roadmap": "Master the multiplier method as your primary tool. Apply it to simple percentage changes, then extend it to compound interest and depreciation over time. Finally, tackle business contexts like profit, discount, and tax to excel in Paper 1 Section A.",
+    "roadmap_zh": "首先將「乘數法」掌握為你的核心工具。將其應用於簡單的百分比變化，然後延伸至隨時間變化的複利息與折舊。最後處理利潤、折扣及稅務等商業情境，以在卷一甲部取得佳績。",
+    "learning_modules": [
+        {
+            "module_id": "MOD_01",
+            "title": "Simple & Compound Interest",
+            "title_zh": "單利息與複利息",
+            "concepts": [
+                {
+                    "concept_id": "C01_SIMPLE",
+                    "name": "Simple Interest",
+                    "name_zh": "單利息",
+                    "formula": "I = P \\times r \\times t",
+                    "variables": {
+                        "P": "Principal (Original amount invested/borrowed).",
+                        "r": "Annual interest rate (e.g., $0.05$ for $5\\%$).",
+                        "t": "Time period (usually in years).",
+                        "I": "The total interest earned/owed."
+                    },
+                    "variables_zh": {
+                        "P": "本金（最初投資或借貸的金額）。",
+                        "r": "年利率（例如 $5\\%$ 為 $0.05$）。",
+                        "t": "時間週期（通常以年為單位）。",
+                        "I": "賺取或欠下的總利息。"
+                    },
+                    "key_takeaway": "Simple interest is calculated only on the original principal. It grows at a constant linear rate. The principal remains the same baseline for calculation regardless of how much time has passed.",
+                    "key_takeaway_zh": "單利息僅按最初的本金計算。它以固定的線性速率增長。無論經過多少時間，本金始終是計算的唯一基準。",
+                    "visual_aid": "/images/math/simple_interest.png"
+                },
+                {
+                    "concept_id": "C02_COMPOUND",
+                    "name": "Compound Interest",
+                    "name_zh": "複利息",
+                    "formula": "A = P(1 + r)^n \\\\ \\text{Or: } A = P\\left(1 + \\frac{r}{k}\\right)^{nk}",
+                    "variables": {
+                        "A": "Total Amount (Principal + Interest).",
+                        "k": "Number of compounding periods per year (e.g., monthly $k=12$).",
+                        "n": "Total number of years."
+                    },
+                    "variables_zh": {
+                        "A": "本利和（本金 + 利息）。",
+                        "k": "每年的利息結算次數（例如每月一次則 $k=12$）。",
+                        "n": "總年數。"
+                    },
+                    "key_takeaway": "Compound interest is calculated on the principal PLUS all accumulated interest from previous periods. This leads to exponential growth. The more frequent the compounding ($k$), the higher the final amount ($A$).",
+                    "key_takeaway_zh": "複利息是根據本金「加上」之前所有週期的累積利息來計算的。這會導致指數級增長。利息結算的頻率 ($k$) 越高，最終的本利和 ($A$) 就越大。",
+                    "visual_aid": "/images/math/chart_interest.png"
+                }
+            ],
+            "tips": [
+                "Always convert percentages to decimals before calculating (e.g., $4.5\\% = 0.045$). Use the 'multiplier' approach for speed: $1 + r$ for increase, $1 - r$ for decrease."
+            ],
+            "tips_zh": [
+                "計算前務必將百分比轉換為小數（例如：$4.5\\% = 0.045$）。為求快捷，請使用「乘數法」：增加時用 $1 + r$，減少時用 $1 - r$。"
+            ],
+            "common_traps": [
+                {
+                    "trap": "Amount vs Interest Confusion",
+                    "trap_zh": "本利和與利息的混淆",
+                    "description": "Forgetting that the Compound Interest formula gives the Total Amount ($A$), not the Interest component ($I$).",
+                    "description_zh": "忘記複利息公式計算出的是「本利和」 ($A$)，而非純粹的「利息」 ($I$)。",
+                    "fix": "To find only the interest earned, you must subtract the original principal from the final amount: $I = A - P$. DSE often asks specifically for 'interest' to catch students out.",
+                    "fix_zh": "若要僅計算賺取的利息，你必須從本利和中減去原始本金：$I = A - P$。DSE 經常刻意詢問「利息」以考驗學生是否細心。"
+                }
+            ]
+        },
+        {
+            "module_id": "MOD_02",
+            "title": "Growth & Depreciation",
+            "title_zh": "增長與折舊",
+            "concepts": [
+                {
+                    "concept_id": "C03_GROWTH",
+                    "name": "Growth (Percentage Increase)",
+                    "name_zh": "增長（百分比增加）",
+                    "formula": "V_{new} = V_{old} \\times (1 + r)^n",
+                    "variables": {
+                        "V_{old}": "The original value or population.",
+                        "V_{new}": "The updated value after growth.",
+                        "r": "Constant growth rate per period."
+                    },
+                    "variables_zh": {
+                        "V_{old}": "原始價值或人口數量。",
+                        "V_{new}": "增長後的更新價值。",
+                        "r": "每週期的固定增長率。"
+                    },
+                    "key_takeaway": "Growth occurs when a value increases by a fixed percentage over several periods. The multiplier $(1 + r)$ is greater than 1. This formula is identical to the compound interest formula in structure.",
+                    "key_takeaway_zh": "當一個數值在多個週期內按固定百分比增加時，即發生增長。乘數 $(1 + r)$ 大於 1。此公式在結構上與複利息公式完全相同。",
+                    "visual_aid": "/images/math/growth_factor.png"
+                },
+                {
+                    "concept_id": "C04_DEPRECIATION",
+                    "name": "Depreciation (Percentage Decrease)",
+                    "name_zh": "折舊（百分比減少）",
+                    "formula": "V_{new} = V_{old} \\times (1 - r)^n",
+                    "variables": {
+                        "r": "Depreciation or decay rate (e.g., $0.15$ for a $15\\%$ drop).",
+                        "n": "Number of periods (usually years)."
+                    },
+                    "variables_zh": {
+                        "r": "折舊率或衰減率（例如 $15\\%$ 的下降為 $0.15$）。",
+                        "n": "週期數（通常為年）。"
+                    },
+                    "key_takeaway": "Depreciation describes values that shrink over time by a fixed percentage, common for cars or machinery. The multiplier $(1 - r)$ is less than 1, causing the value to approach zero but never actually reach it mathematically.",
+                    "key_takeaway_zh": "折舊描述數值隨時間按固定百分比縮減的情況，常見於汽車或機械。乘數 $(1 - r)$ 小於 1，令數值趨向零，但在數學上永遠不會真正到達零。",
+                    "visual_aid": "/images/math/depreciation.png"
+                }
+            ],
+            "common_traps": [
+                {
+                    "trap": "The Base Value Fallacy",
+                    "trap_zh": "基準值的誤區",
+                    "description": "Assuming that if A is $25\\%$ more than B, then B is $25\\%$ less than A.",
+                    "description_zh": "錯誤假設若 A 比 B 多 $25\\%$，則 B 比 A 少 $25\\%$。",
+                    "fix": "Focus on the 'base' value (the quantity after 'than'). $A = 1.25B$. To find $B$, use $B = A / 1.25$, which equals $0.8A$. Thus, B is actually $20\\%$ less than A.",
+                    "fix_zh": "著眼於「基準」值（「比」字後的量）。$A = 1.25B$；若要求 $B$，應使用 $B = A / 1.25$，即 $0.8A$。因此，$B$ 實際上比 $A$ 少 $20\\%$。"
+                }
+            ]
+        },
+        {
+            "module_id": "MOD_03",
+            "title": "Business Mathematics",
+            "title_zh": "商業數學",
+            "concepts": [
+                {
+                    "concept_id": "C05_PROFIT_LOSS",
+                    "name": "Profit & Loss",
+                    "name_zh": "盈利與虧蝕",
+                    "formula": "\\text{Profit} = \\text{Selling Price} - \\text{Cost Price} \\\\ \\text{Profit}\\% = \\frac{\\text{Profit}}{\\text{Cost Price}} \\times 100\\%",
+                    "variables": {
+                        "Cost Price (CP)": "The original price the merchant paid.",
+                        "Selling Price (SP)": "The final price paid by the customer."
+                    },
+                    "variables_zh": {
+                        "Cost Price (CP)": "商戶支付的最初價格（成本）。",
+                        "Selling Price (SP)": "顧客支付的最終價格（售價）。"
+                    },
+                    "key_takeaway": "Profit and Loss are strictly calculated as a percentage of the COST PRICE. In most DSE problems, the Cost Price is the 'base' ($100\\%$).",
+                    "key_takeaway_zh": "盈利及虧蝕嚴格地以「成本價」的百分比來計算。在大多數 DSE 題目中，成本價就是基準 ($100\\%$)。",
+                    "visual_aid": "/images/math/profit_loss.png"
+                },
+                {
+                    "concept_id": "C06_DISCOUNT",
+                    "name": "Discount & Marked Price",
+                    "name_zh": "折扣與標價",
+                    "formula": "\\text{Discount} = \\text{Marked Price} - \\text{Selling Price} \\\\ \\text{Discount}\\% = \\frac{\\text{Discount}}{\\text{Marked Price}} \\times 100\\%",
+                    "variables": {
+                        "Marked Price (MP)": "The price originally shown on the sticker.",
+                        "Selling Price (SP)": "The price after the discount is applied."
+                    },
+                    "variables_zh": {
+                        "Marked Price (MP)": "標籤上最初顯示的價格（標價）。",
+                        "Selling Price (SP)": "打折後的最終售出價格（售價）。"
+                    },
+                    "key_takeaway": "Discount is always calculated based on the MARKED PRICE. The Selling Price can be thought of as MP $\\times (1 - \\text{Discount}\\%)$.",
+                    "key_takeaway_zh": "折扣必須以「標價」為基礎計算。售價可以看作是 標價 $\\times (1 - \\text{折扣}\\%)$。",
+                    "visual_aid": "/images/math/discount_basic.png"
+                }
+            ],
+            "tips": [
+                "Think of business as a flow: Cost $\\xrightarrow{Markup}$ Marked Price $\\xrightarrow{Discount}$ Selling Price."
+            ],
+            "tips_zh": [
+                "將商業運作想成一個流程：成本 $\\xrightarrow{標高}$ 標價 $\\xrightarrow{折扣}$ 售價。"
+            ],
+            "common_traps": [
+                {
+                    "trap": "Cumulative Percentage Error",
+                    "trap_zh": "累積百分比錯誤",
+                    "description": "Adding two consecutive percentages together (e.g., $10\\%$ markup then $10\\%$ more markup equals $20\\%$).",
+                    "description_zh": "將連續兩個百分比直接相加（例如：標高 $10\\%$ 後再加 $10\\%$ 等於總共標高 $20\\%$）。",
+                    "fix": "Consecutive changes multiply! $1.1 \\times 1.1 = 1.21$. The total markup is actually $21\\%$. Use multipliers to stay safe.",
+                    "fix_zh": "連續的變化應相乘！$1.1 \\times 1.1 = 1.21$。總標高率實際上是 $21\\%$。使用「乘數法」可確保準確。"
+                }
+            ]
+        }
+    ]
+}

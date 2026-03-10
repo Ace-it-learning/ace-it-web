@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useAuth } from '../../context/AuthContext';
-import { BlockMath } from 'react-katex';
+import { SafeInlineMath, SafeBlockMath } from './SafeMath';
 import MathsQuestionCard from './MathsQuestionCard';
 import { Lightbulb, BookOpen } from 'lucide-react';
+import { formatNumbers, sanitizeMath, prepareMathText, splitContentByDelimiters, looksLikeMath } from '../../utils/mathFormattingUtils';
 
 /**
  * Maths Lab Component
@@ -14,6 +15,82 @@ const MathsLab = ({ topic, level, onComplete }) => {
     const [answers, setAnswers] = useState({});
     const [isLoading, setIsLoading] = useState(true);
     const [isSubmitting, setIsSubmitting] = useState(false);
+
+    // Render text with robust LaTeX support
+    const renderMathContent = (content) => {
+        if (!content) return null;
+
+        const cleanText = prepareMathText(content);
+        const parts = splitContentByDelimiters(cleanText);
+
+        return (
+            <div className="math-content font-sans">
+                {parts.map((part, idx) => {
+                    if (!part) return null;
+
+                    const isBlock = (part.startsWith('\\[') && part.endsWith('\\]')) || (part.startsWith('$$') && part.endsWith('$$'));
+                    const isInline = (part.startsWith('\\(') && part.endsWith('\\)')) || (part.startsWith('$') && part.endsWith('$'));
+
+                    if (isBlock || isInline) {
+                        let math = '';
+                        if (part.startsWith('\\[') || part.startsWith('\\(')) math = part.slice(2, -2);
+                        else if (part.startsWith('$$')) math = part.slice(2, -2);
+                        else math = part.slice(1, -1);
+
+                        math = math
+                            .replace(/\n/g, ' ')
+                            .replace(/%/g, '\\%')
+                            .replace(/___HKD___/g, '\\text{HK}\\$')
+                            .replace(/___USD___/g, '\\$');
+
+                        const labeledMath = sanitizeMath(math);
+                        const finalMath = formatNumbers(labeledMath, true);
+
+                        if (isBlock) {
+                            return (
+                                <SafeBlockMath key={idx} math={finalMath} className="my-2" />
+                            );
+                        } else {
+                            return (
+                                <SafeInlineMath key={idx} math={finalMath} className="mx-0.5" />
+                            );
+                        }
+                    }
+
+                    // Heuristic for standalone math lines
+                    const trimmedLine = part.trim();
+                    if (!trimmedLine) return null;
+
+                    // Use the centralized looksLikeMath from mathFormattingUtils
+                    const isMathLine = looksLikeMath(trimmedLine);
+
+                    if (isMathLine) {
+                        const labeledMath = sanitizeMath(trimmedLine.replace(/%/g, '\\%').replace(/___HKD___/g, '\\text{HK}\\$').replace(/___USD___/g, '\\$'));
+                        const finalMath = formatNumbers(labeledMath, true);
+                        return (
+                            <SafeInlineMath key={idx} math={finalMath} className="mx-1" />
+                        );
+                    }
+
+                    const formattedLine = formatNumbers(trimmedLine);
+                    const html = formattedLine
+                        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                        .replace(/\*(.*?)\*/g, '<em>$1</em>')
+                        .replace(/___HKD___/g, 'HK$')
+                        .replace(/___USD___/g, '$')
+                        .replace(/\\,/g, ' ');
+
+                    return (
+                        <span
+                            key={idx}
+                            className="whitespace-pre-wrap"
+                            dangerouslySetInnerHTML={{ __html: html }}
+                        />
+                    );
+                })}
+            </div>
+        );
+    };
 
     useEffect(() => {
         fetchMathsLesson();
@@ -111,7 +188,9 @@ const MathsLab = ({ topic, level, onComplete }) => {
                 <h1 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-700 to-purple-900 mb-2">
                     {lesson.title || topic}
                 </h1>
-                <p className="text-gray-600">Level {level} • Guided by Matt Sir</p>
+                <p className="text-gray-600">
+                    {parseInt(level) === 0 ? 'Interleaved Practice (Mixed Levels)' : `Level ${level}`} • Guided by Matt Sir
+                </p>
             </div>
 
             {/* Concept Explanation */}
@@ -121,7 +200,7 @@ const MathsLab = ({ topic, level, onComplete }) => {
                         <Lightbulb className="w-5 h-5 text-purple-600" />
                         <h3 className="text-xl font-bold text-purple-900">Concept</h3>
                     </div>
-                    <p className="text-gray-700 leading-relaxed">{lesson.conceptual_explanation}</p>
+                    <div className="text-gray-700 leading-relaxed">{renderMathContent(lesson.conceptual_explanation)}</div>
                 </div>
             )}
 
@@ -135,10 +214,10 @@ const MathsLab = ({ topic, level, onComplete }) => {
                     {lesson.key_formulas.map((formula, i) => (
                         <div key={i} className="bg-white p-4 rounded-lg border-2 border-purple-200">
                             <div className="text-center mb-2">
-                                <BlockMath math={typeof formula === 'string' ? formula : (formula.latex || formula.formula)} />
+                                <SafeBlockMath math={formatNumbers(sanitizeMath(typeof formula === 'string' ? formula : (formula.latex || formula.formula)), true)} />
                             </div>
                             {formula.description && (
-                                <p className="text-sm text-gray-600 text-center">{formula.description}</p>
+                                <div className="text-sm text-gray-600 text-center">{renderMathContent(formula.description)}</div>
                             )}
                         </div>
                     ))}
@@ -152,10 +231,10 @@ const MathsLab = ({ topic, level, onComplete }) => {
                     {lesson.examples.map((example, i) => (
                         <div key={i} className="bg-gradient-to-br from-blue-50 to-purple-50 p-5 rounded-xl border border-purple-200">
                             <h4 className="font-bold text-purple-900 mb-2">Example {i + 1}</h4>
-                            <p className="text-gray-700 mb-3">{example.text || example.problem}</p>
+                            <div className="text-gray-700 mb-3">{renderMathContent(example.text || example.problem)}</div>
                             <div className="bg-white p-4 rounded-lg">
                                 <p className="text-sm text-gray-600 font-semibold mb-2">Solution:</p>
-                                <p className="text-gray-800 whitespace-pre-line">{example.solution}</p>
+                                <div className="text-gray-800 whitespace-pre-line">{renderMathContent(example.solution)}</div>
                             </div>
                         </div>
                     ))}

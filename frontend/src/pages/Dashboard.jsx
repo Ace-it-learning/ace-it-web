@@ -40,6 +40,22 @@ const Dashboard = () => {
         }
     };
 
+    // Listen for Sidebar events
+    React.useEffect(() => {
+        const handleCustomOpen = (e) => {
+            if (e.detail?.filter) {
+                // We need to pass this filter to RoadmapModal.
+                // We'll add a temporary state for initial filter.
+                setRoadmapFilter(e.detail.filter);
+                setIsQuestOpen(true);
+            }
+        };
+        window.addEventListener('open-roadmap', handleCustomOpen);
+        return () => window.removeEventListener('open-roadmap', handleCustomOpen);
+    }, []);
+
+    const [roadmapFilter, setRoadmapFilter] = React.useState('ALL');
+
     return (
         <>
             <div className={cn(
@@ -63,7 +79,11 @@ const Dashboard = () => {
             {/* Global Modals */}
             <RoadmapModal
                 isOpen={isQuestOpen}
-                onClose={() => setIsQuestOpen(false)}
+                onClose={() => {
+                    setIsQuestOpen(false);
+                    setRoadmapFilter('ALL'); // Reset on close
+                }}
+                initialFilter={roadmapFilter}
             />
             {/* Math Quest Modal */}
             <MathRoadmapModal

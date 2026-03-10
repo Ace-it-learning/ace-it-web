@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import { BlockMath, InlineMath } from 'react-katex';
+import { SafeInlineMath, SafeBlockMath } from '../components/maths/SafeMath';
 import 'katex/dist/katex.min.css';
 import MathInput from '../components/maths/MathInput';
 import { ChevronRight, ChevronLeft, Clock, Save, FileText, CheckCircle, AlertTriangle } from 'lucide-react';
+import { formatNumbers, sanitizeMath, prepareMathText, splitContentByDelimiters, looksLikeMath } from '../utils/mathFormattingUtils';
 
 const MathsExamPage = () => {
     const { examId } = useParams();
@@ -138,28 +139,96 @@ const MathsExamPage = () => {
     const renderText = (text) => {
         if (!text) return null;
 
-        // Handle Diagrams
-        const hasDiagram = text.includes('[DIAGRAM') || text.includes('[TABLE');
+        // Safety: ensure it is a string
+        if (typeof text !== 'string') {
+            if (typeof text === 'number') text = String(text);
+            else if (Array.isArray(text)) text = text.join('\n');
+            else text = String(text);
+        }
+
         const displaySubtext = text
             .replace(/\[DIAGRAM REQUIRED:[\s\S]*?\]/g, '')
             .replace(/\[TABLE REQUIRED:[\s\S]*?\]/g, '')
             .trim();
 
-        // Similar to MathsLabPage renderer logic
-        const parts = displaySubtext.split(/(\\\[[\s\S]*?\\\]|\\\([\s\S]*?\\\)|(?:\$\$[\s\S]*?\$\$)|(?:\$[^$]+?\$))/g);
+        const cleanText = prepareMathText(displaySubtext);
+        const parts = splitContentByDelimiters(cleanText);
 
         return (
             <div className="space-y-4">
-                <div className="text-gray-800 text-lg leading-relaxed">
+                <div className="text-gray-800 text-lg leading-relaxed font-sans">
                     {parts.map((part, i) => {
                         if (!part) return null;
-                        if ((part.startsWith('\\[') && part.endsWith('\\]')) || (part.startsWith('$$') && part.endsWith('$$'))) {
-                            return <div key={i} className="my-2 overflow-x-auto"><BlockMath math={part.slice(2, -2)} /></div>;
-                        } else if ((part.startsWith('\\(') && part.endsWith('\\)')) || (part.startsWith('$') && part.endsWith('$'))) {
-                            const math = part.startsWith('\\(') ? part.slice(2, -2) : part.slice(1, -1);
-                            return <InlineMath key={i} math={math} />;
+
+                        const isBlock = (part.startsWith('\\[') && part.endsWith('\\]')) || (part.startsWith('$$') && part.endsWith('$$'));
+                        const isInline = (part.startsWith('\\(') && part.endsWith('\\)')) || (part.startsWith('$') && part.endsWith('$'));
+
+                        if (isBlock || isInline) {
+                            let math = '';
+                            if (part.startsWith('\\[') || part.startsWith('\\(')) math = part.slice(2, -2);
+                            else if (part.startsWith('$$')) math = part.slice(2, -2);
+                            else math = part.slice(1, -1);
+
+                            math = math
+                                .replace(/\n/g, ' ')
+                                .replace(/%/g, '\\%')
+                                .replace(/___HKD___/g, '\\text{HK}\\$')
+                                .replace(/___USD___/g, '\\$');
+
+                            const labeledMath = sanitizeMath(math);
+                            const finalMath = formatNumbers(labeledMath, true);
+
+                            if (isBlock) {
+                                return (
+                                    <SafeBlockMath key={i} math={finalMath} className="my-2" />
+                                );
+                            } else {
+                                return (
+                                    <SafeInlineMath key={i} math={finalMath} className="mx-0.5" />
+                                );
+                            }
                         }
-                        return <span key={i}>{part}</span>;
+
+                        return (
+                            <span key={i}>
+                                {part.split(/(?:\r?\n|(?=\.Step\s*\d+\s*:?))/).map((line, lineIdx, arr) => {
+                                    if (!line.trim() && arr.length > 1) {
+                                        return <br key={lineIdx} />;
+                                    }
+                                    const trimmedLine = line.trim().replace(/^\./, '');
+                                    if (!trimmedLine) return null;
+
+                                    const isMathLine = looksLikeMath(trimmedLine);
+
+                                    if (isMathLine) {
+                                        const mathReadyLine = trimmedLine
+                                            .replace(/%/g, '\\%')
+                                            .replace(/___HKD___/g, '\\text{HK}\\$')
+                                            .replace(/___USD___/g, '\\$');
+
+                                        const labeledMath = sanitizeMath(mathReadyLine);
+                                        const finalMath = formatNumbers(labeledMath, true);
+
+                                        return (
+                                            <SafeInlineMath key={lineIdx} math={finalMath} className="mx-1" />
+                                        );
+                                    } else {
+                                        const formattedLine = formatNumbers(trimmedLine);
+                                        const content = formattedLine
+                                            .replace(/___HKD___/g, 'HK$')
+                                            .replace(/___USD___/g, '$')
+                                            .replace(/\\,/g, ' ');
+
+                                        return (
+                                            <React.Fragment key={lineIdx}>
+                                                <span className="whitespace-pre-wrap">{content}</span>
+                                                {lineIdx < arr.length - 1 && <span className="mx-0.5" />}
+                                            </React.Fragment>
+                                        );
+                                    }
+                                })}
+                            </span>
+                        );
                     })}
                 </div>
             </div>
@@ -333,8 +402,8 @@ const MathsExamPage = () => {
                                                 key={i}
                                                 onClick={() => handleAnswerChange(q.id, opt)}
                                                 className={`p-4 text-left rounded-xl border-2 transition-all flex items-center gap-4 ${answers[q.id] === opt
-                                                        ? 'border-indigo-600 bg-indigo-50 ring-1 ring-indigo-600'
-                                                        : 'border-slate-100 hover:border-indigo-200 hover:bg-slate-50'
+                                                    ? 'border-indigo-600 bg-indigo-50 ring-1 ring-indigo-600'
+                                                    : 'border-slate-100 hover:border-indigo-200 hover:bg-slate-50'
                                                     }`}
                                             >
                                                 <div className={`w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm ${answers[q.id] === opt ? 'bg-indigo-600 text-white' : 'bg-slate-200 text-slate-500'

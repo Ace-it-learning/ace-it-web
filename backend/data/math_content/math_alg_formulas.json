@@ -1,0 +1,57 @@
+{
+    "is_modular": true,
+    "name": "Formulas & Substitution",
+    "name_zh": "公式與代入",
+    "roadmap": "Master the substitution of negative numbers using brackets first. Then, learn the 'unwrapping' logic of changing the subject. For DSE Section B, focus on complex formulas where the target appears in multiple terms, requiring factorization.",
+    "roadmap_zh": "首先掌握使用括號代入負數的方法。接著學習變換主項時的「拆解」邏輯。針對 DSE 乙部，重點在於處理目標項出現在多個項中（需使用因式分解）的複雜公式。",
+    "learning_modules": [
+        {
+            "module_id": "MOD_01",
+            "title": "Substitution Mastery",
+            "title_zh": "代入精通",
+            "concepts": [
+                {
+                    "concept_id": "C01_SUB_PREMIUM",
+                    "name": "Evaluating Expressions",
+                    "name_zh": "數式求值",
+                    "formula": "y = 3x^2 - 5x + 2",
+                    "key_takeaway": "When substituting negative values, brackets are mandatory to handle powers correctly. $(-2)^2 = 4$, but $-2^2 = -4$.",
+                    "key_takeaway_zh": "代入負值時，必須使用括號以正確處理次方運算。$(-2)^2 = 4$，但 $-2^2 = -4$。",
+                    "visual_aid": "/images/math/form_substitution_premium.png"
+                }
+            ]
+        },
+        {
+            "module_id": "MOD_02",
+            "title": "Subject Change Principles",
+            "title_zh": "主項變換原則",
+            "concepts": [
+                {
+                    "concept_id": "C02_UNWRAP_PREMIUM",
+                    "name": "The Unwrapping Method",
+                    "name_zh": "拆解方法",
+                    "formula": "y = \\frac{ax+b}{c} \\to x = \\frac{cy - b}{a}",
+                    "key_takeaway": "Think of changing the subject as reversing the calculation order. Eliminate denominators first, then move additive constants.",
+                    "key_takeaway_zh": "將主項變換視為逆轉運算順序。先消除分母，再移動加減常數。",
+                    "visual_aid": "/images/math/form_subject_flow_premium.png"
+                }
+            ]
+        },
+        {
+            "module_id": "MOD_03",
+            "title": "Complex Subject Change",
+            "title_zh": "複雜主項變換",
+            "concepts": [
+                {
+                    "concept_id": "C03_FACTOR_PREMIUM",
+                    "name": "Grouping & Factorization",
+                    "name_zh": "分組與因式分解",
+                    "formula": "ax = bx + c \\to x(a-b) = c \\to x = \\frac{c}{a-b}",
+                    "key_takeaway": "If the target variable appears in two distinct terms, you MUST group them on one side and factorize. This is the hallmark of Section B formula questions.",
+                    "key_takeaway_zh": "如果目標變項出現在兩個不同的項中，你「必須」將它們歸到同一邊並進行因式分解。這是乙部公式題目的標誌。",
+                    "visual_aid": null
+                }
+            ]
+        }
+    ]
+}

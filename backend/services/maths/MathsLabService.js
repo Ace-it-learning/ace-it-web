@@ -1,12 +1,41 @@
-const GenerativeAIService = require('../GenerativeAIService');
 const admin = require('firebase-admin');
 const crypto = require('crypto');
+const MathEngineBridge = require('./MathEngineBridge');
+const GenerativeAIService = require('../GenerativeAIService');
 const { MATHS_MICRO_SKILLS } = require('../../constants/mathsMicroSkills');
+const { getSyllabusGuidance } = require('../../constants/mathsSyllabusRules');
 
 // Helper: Generate Hash for Deduplication
-const generateQuestionHash = (topic, type, questionText) => {
-    const str = `${topic.toLowerCase()}-${type}-${questionText.trim().substring(0, 50)}`;
+const generateQuestionHash = (topic, type, questionText, level = '') => {
+    // 1.3.3: Use longer substring (500 chars) and include level to prevent collisions on similar prose
+    const str = `${topic.toLowerCase()}-${type}-${level}-${questionText.trim().substring(0, 500)}`;
     return crypto.createHash('md5').update(str).digest('hex');
+};
+
+/**
+ * Deep clean an object for Firestore storage.
+ * Strips undefined values, converts NaN/Infinity to null.
+ */
+const cleanForFirestore = (obj) => {
+    if (obj === null || obj === undefined) return null;
+    if (typeof obj !== 'object') {
+        if (typeof obj === 'number') {
+            if (isNaN(obj) || !isFinite(obj)) return null;
+        }
+        return obj;
+    }
+    if (Array.isArray(obj)) {
+        return obj.map(item => cleanForFirestore(item));
+    }
+    const cleaned = {};
+    Object.keys(obj).forEach(key => {
+        const val = obj[key];
+        const cleanedVal = cleanForFirestore(val);
+        if (cleanedVal !== undefined) {
+            cleaned[key] = cleanedVal;
+        }
+    });
+    return cleaned;
 };
 
 const cleanJsonResponse = (text) => {
@@ -21,260 +50,979 @@ const cleanJsonResponse = (text) => {
     return cleaned;
 };
 
-const MATHS_LAB_PROMPT = `You are an expert HKDSE Mathematics tutor. Generate a comprehensive practice session for topic '{{TOPIC_NAME}}' (ID: {{TOPIC_ID}}) at difficulty level {{LEVEL}}.
+const stripMetaComments = (text) => {
+    if (typeof text !== 'string') return text;
+    // Phrases reported by user + common AI meta-talk
+    const metaPhrases = [
+        /let me recalculate\.?/gi,
+        /my apologies\.?/gi,
+        /i made an error\.?/gi,
+        /wait,?/gi,
+        /actually,?/gi,
+        /recalculating\.?/gi,
+        /oh no,?/gi,
+        /whoops,?/gi
+    ];
+    let result = text;
+    metaPhrases.forEach(regex => {
+        result = result.replace(regex, '').trim();
+    });
+    // Clean up double spaces or periods left behind
+    return result.replace(/\s\s+/g, ' ').replace(/\.\./g, '.').trim();
+};
 
-### CRITICAL REQUIREMENTS:
+// --- REFACTORED: Moved into class ---
 
-1. **HK DSE SYLLABUS ALIGNMENT**:
-   - ALL questions MUST align with the official HKDSE Mathematics Compulsory Part syllabus (Form 4-6 level).
-   - Use terminology and notation consistent with HK DSE past papers.
-   - Question difficulty should match DSE Paper 1 (Conventional) and Paper 2 (MC) standards.
-   - For Level 3: Foundation tier (Grade 3-4 DSE).
-   - For Level 4: Core tier (Grade 4-5 DSE).
-   - For Level 5+: Advanced tier (Grade 5*-5** DSE).
-   - **STRICTNESS**: Ensure questions are not too simple. Avoid Form 1-3 level content unless as a lead-in to a more complex problem.
+/**
+ * Post-process AI-generated text fields to ensure proper math delimiters.
+ * This is a SAFETY NET that catches cases where the AI doesn't follow delimiter instructions.
+ * It auto-wraps undelimited math expressions and fixes spacing around delimiters.
+ */
+const postProcessMathText = (text, isLogicField = false) => {
+    if (!text || typeof text !== 'string') return text;
 
-2. **LATEX FORMATTING** (CRITICAL):
-   - Use LaTeX for ALL mathematical expressions.
-   - MUST use DOUBLE backslashes in JSON: "\\\\frac{1}{2}" NOT "\\frac{1}{2}".
-   - Inline math: Wrap in single $ signs: "$x^2 + 2x + 1 = 0$".
-   - Block math: Wrap in \\\\[ \\\\]: "\\\\[x = \\\\frac{-b \\\\pm \\\\sqrt{b^2-4ac}}{2a}\\\\]".
-   - Common symbols: \\\\pi, \\\\theta, \\\\alpha, \\\\le, \\\\ge, ^\\\\circ (degree).
-   - Fractions: \\\\frac{numerator}{denominator}.
-   - Roots: \\\\sqrt{expression} or \\\\sqrt[n]{expression}.
+    let result = text;
 
-3. **QUESTION MIX**:
-   - Generate EXACTLY 8 questions total.
-   - 5 questions: type "mc" (Multiple Choice, 4 options each).
-   - 3 questions: type "short_answer" (Requires working steps).
-   - Mix question types throughout (don't group all MC together).
+    // 0. NEWLINE NORMALIZATION: AI sometimes outputs literal \n in JSON
+    result = result.replace(/\\n/g, '\n');
 
-4. **VISUALS (DIAGRAMS, FIGURES, TABLES)**:
-   - **MANDATORY**: If the question involves Geometry, Trigonometry, Shapes (圖形), Statistics (Charts/Graphs), or Probability (Tree diagrams/Venn diagrams), OR if a figure would better illustrate the scenario, you MUST:
-     1. Include "imageURL": null.
-     2. Provide a descriptive label at the START of the question text: e.g., "[DIAGRAM REQUIRED: Brief description]" or "[TABLE REQUIRED: Brief description]".
-     3. Provide detailed text description of the figure in the question body.
-     4. **Generate a "diagram_svg" field**: This MUST be a valid SVG string (minified, single line) that visualizes the problem. 
-        - Use a responsive viewBox (e.g., "0 0 400 300").
-        - Use clean black lines (stroke="#000000") and white background.
-        - Label points, angles, and lengths clearly using <text> elements.
-        - For Bearings: Draw the North arrow and the lines from the origin.
-        - For Functions: Draw the axes and the curve/line.
+    // Version 1.6.2: BACKSLASH NORMALIZATION
+    result = result.replace(/\\\\+(begin|end|\[|\]|\(|\))/g, '\\$1');
 
-5. **LANGUAGE**: 
-   - Generate ALL content in {{LANGUAGE}}.
-   - Use proper mathematical terminology for the language.
-   - For Chinese: You MUST use Traditional Chinese (繁體中文) with proper mathematical terms. NEVER use Simplified Chinese (简体中文). Use formal written style with natural HK-style context.
+    // Version 1.6.2: DELIMITER DE-NESTER
+    result = result.replace(/\\begin\{([a-zA-Z*]+)\}\s*\\\[([\s\S]*?)\\\]\s*\\end\{\1\}/g, '\\[ \\begin{$1} $2 \\end{$1} \\]');
+    result = result.replace(/\\begin\{([a-zA-Z*]+)\}\s*\\\(([\s\S]*?)\\\)\s*\\end\{\1\}/g, '\\[ \\begin{$1} $2 \\end{$1} \\]');
 
-6. **ANSWER FORMATS**:
-   - MC: "answer" must be one of the 4 options (exact match).
-   - Short answer: Provide the final answer (e.g., "$x = 3$" or "$\\\\frac{5}{2}$").
-   - Include detailed solution_steps for learning.
+    // Version 1.6.2: ORPHAN CLEANUP
+    result = result.replace(/\\\]\s*$/, '').replace(/\\\)\s*$/, '');
 
-JSON SCHEMA (STRICT):
-{
-  "type": "MATHS",
-  "topic": "{{TOPIC_NAME}}",
-  "level": {{LEVEL}},
-  "conceptual_explanation": "Brief overview of the concept (2-3 sentences)",
-  "key_formulas": ["$formula_1$", "$formula_2$"],
-  "examples": [
-      { 
-        "text": "Example question with LaTeX: $x^2 + 5x + 6 = 0$", 
-        "solution": "Step 1: Factor... Step 2: Solve..." 
-      }
-  ],
-  "interactive_tasks": [
-    { 
-      "id": "q1", 
-      "type": "mc",
-      "topic": "{{TOPIC_NAME}}",
-      "skills": ["{{TOPIC_ID}}"],
-      "text": "Question text with LaTeX: Find $x$ if $2x + 3 = 7$",
-      "options": ["$x = 1$", "$x = 2$", "$x = 3$", "$x = 4$"],
-      "answer": "$x = 2$",
-      "solution_steps": ["Step 1: Subtract 3 from both sides: $2x = 4$", "Step 2: Divide by 2: $x = 2$"],
-      "imageURL": null,
-      "diagram_svg": "<svg ...>...</svg>",
-      "marks": 1
+    // Version 1.6.3: DELIMITER BALANCER
+    // Forcefully close unclosed display blocks at the end of the text
+    const openDisplayCount = (result.match(/\\\[/g) || []).length;
+    let closeDisplayCount = (result.match(/\\\]/g) || []).length;
+    if (openDisplayCount > closeDisplayCount) {
+        result += '\n\\]';
+        console.warn('[MathsLabService] v1.6.3: Forcefully balanced unclosed display block \\[');
     }
-  ],
-  "success_feedback": "Excellent work! You've mastered {{TOPIC_NAME}}!"
-}
 
-IMPORTANT REMINDERS:
-- Generate EXACTLY 8 questions.
-- DOUBLE backslashes for LaTeX: \\\\frac, \\\\sqrt, \\\\pi.
-- All math expressions in $ signs or \\\\[ \\\\] (Note: triple backslash for block math delimiters in prompt to be safe with replace).
-- Align with HK DSE syllabus standards (Form 4-6).
-- Provide AT LEAST 3 lines of logic for short_answer.
-- **OUTPUT MUST BE SINGLE-LINE VALID JSON. NO MARKDOWN. NO CODE BLOCKS.**
-`;
+    // Version 1.6.3: INTERNAL DELIMITER PURGE
+    // Purge any illegal nested inline delimiters from inside display blocks
+    result = result.replace(/\\\[([\s\S]*?)\\\]/g, (match, inner) => {
+        if (!inner) return match;
+        let cleanedInner = inner.replace(/\\\(/g, '').replace(/\\\)/g, '');
+        return `\\[${cleanedInner}\\]`;
+    });
+
+    // 0.5 SURGICAL SELF-HEALING (v1.5.4)
+    // If the AI generated \begin{aligned} but forgot \end{aligned} INSIDE math delimiters, 
+    // we must inject the closer INSIDE the delimiters so KaTeX parsing matches.
+    const envsToCheck = ['aligned', 'cases', 'array', 'matrix', 'pmatrix', 'bmatrix', 'vmatrix'];
+
+    // Process content inside delimiters surgically
+    result = result.replace(/(\\\[[\s\S]*?\\\]|\\\([\s\S]*?\\\))/g, (match) => {
+        let content = match;
+        const closingDelim = content.endsWith('\\]') ? '\\]' : '\\)';
+
+        envsToCheck.forEach(env => {
+            const begins = (content.match(new RegExp(`\\\\begin\\{${env}\\}`, 'g')) || []).length;
+            const ends = (content.match(new RegExp(`\\\\end\\{${env}\\}`, 'g')) || []).length;
+            if (begins > ends) {
+                // Determine closing delimiter length (usually 2 for \[ or \)
+                // Inject \end{env} right before the closing delimiter
+                content = content.slice(0, -2) + ` \\end{${env}} ` + closingDelim;
+                console.debug(`[MathsLabService] Surgically healed unclosed environment: \\begin{${env}} inside ${closingDelim}`);
+            }
+        });
+        return content;
+    });
+
+    // Fallback: Global healing for unclosed environments outside of delimiters
+    envsToCheck.forEach(env => {
+        const begins = (result.match(new RegExp(`\\\\begin\\{${env}\\}`, 'g')) || []).length;
+        const ends = (result.match(new RegExp(`\\\\end\\{${env}\\}`, 'g')) || []).length;
+        if (begins > ends) {
+            result += `\n\\end{${env}}`;
+            console.debug(`[MathsLabService] Globally healed unclosed environment: \\begin{${env}}`);
+        }
+    });
+
+    // 1. NORMALIZE DOUBLE BACKSLASHES for common LaTeX commands
+    result = result.replace(/\\\\(text|begin|end|frac|sqrt|alpha|beta|gamma|delta|theta|pi|sigma|omega|left|right|times|div|pm|mp|approx|neq|le|ge|triangle|sim|cong|angle|deg|parallel|circ|\\)/g, '\\$1');
+
+    // 2. CONVERT ENVIRONMENTS TO DISPLAY MATH (Sync with v1.6.2 Frontend)
+    // Wrap environments in \[ ... \] to prevent KaTeX inline ParseErrors.
+    // We MUST NOT strip the tags or ampersands here!
+    result = result.replace(/\\begin\{(align\*?|aligned|cases|array|matrix|pmatrix|bmatrix|vmatrix)\}([\s\S]*?)\\end\{\1\}/gi, (match, env, inner) => {
+        const outputEnv = env.startsWith('align') ? 'aligned' : env;
+        return `\\[ \\begin{${outputEnv}} ${inner} \\end{${outputEnv}} \\]`;
+    });
+
+    // Version 1.6.3: SYMBOL HALLUCINATION FIX
+    result = result.replace(/\^\{\\degree\}/g, '^\\circ');
+    result = result.replace(/(?<!\\)x2220/g, ' ∠ ')
+        .replace(/(?<!\\)x25EF/g, ' ○ ');
+
+    // 3. SURGICAL AMPERSAND STRIPPING
+    // Process line-by-line to strip naked ampersands from prose lines
+    // Version 1.4.8: STATEFUL stripper that respects multiline environments
+    let inEnv = false;
+    result = result.split('\n').map(line => {
+        const trimmed = line.trim();
+        const envStart = trimmed.includes('\\begin{aligned}') || trimmed.includes('\\begin{cases}') ||
+            trimmed.includes('\\begin{array}') || trimmed.includes('\\begin{matrix}');
+        const envEnd = trimmed.includes('\\end{aligned}') || trimmed.includes('\\end{cases}') ||
+            trimmed.includes('\\end{array}') || trimmed.includes('\\end{matrix}');
+
+        if (envStart) inEnv = true;
+        // Self-Healing
+        if (/^(Step\s*\d*|Answer|Therefore|Hence|So|We|Substitute|Then|Assume|Let|Given|Since|Actually|If|Complete|Note|Using|By|From|Calculate|Determine)/i.test(trimmed)) inEnv = false;
+
+        let processedLine = line;
+        // Version 1.5.2: Intelligent Stripper (Escaped Ampersand Eradicator)
+        if (!inEnv) {
+            processedLine = processedLine.replace(/\\?&=\s*/g, ' = ').replace(/\\?&/g, ' ');
+        } else {
+            processedLine = processedLine.replace(/(?<=[a-z]{2,})\s*\\?&/gi, ' ').replace(/\\?&\s*(?=[a-z]{2,})/gi, ' ');
+        }
+
+        if (envEnd) inEnv = false;
+        return processedLine;
+    }).join('\n');
+
+    // 4. NEUTRAL ZONE: Prevent nested delimiters like \[ \[ ... \] \]
+    // Version 1.5.1: Added Display Wrapper for multiline environments
+    result = result.replace(/\\begin\{(align\*?|aligned|cases|array|matrix|pmatrix|bmatrix|vmatrix)\}([\s\S]*?)\\end\{\1\}/g, (match, env, inner) => {
+        const outputEnv = env.startsWith('align') ? 'aligned' : env;
+        return `\\[ \\begin{${outputEnv}} ${inner} \\end{${outputEnv}} \\]`;
+    });
+
+    result = result.replace(/\\\[\s*\\\[/g, '\\[').replace(/\\\]\s*\\\]/g, '\\]');
+    result = result.replace(/\\\(\s*\\\(/g, '\\(').replace(/\\\)\s*\\\)/g, '\\)');
+
+    // Resolve conflicting nested delimiters
+    result = result.replace(/\\\(\s*\\\[/g, '\\[').replace(/\\\]\s*\\\)/g, '\\]');
+
+    // 5. Fix specific corrupted fragments observed in user reports
+    result = result.replace(/\\?\s?aligned\s+([0-9,.]+)\}/g, ' $1');
+    result = result.replace(/HK\s?\\\$/g, 'HK\\$');
+    result = result.replace(/HK\s?\$/g, 'HK\\$');
+
+    // Fix doubled backslashes in separators
+    result = result.replace(/\\\\\\\\/g, '\\\\');
+
+    // 6. SPACE FIXES
+    result = result.replace(/\.([A-Z])/g, '. $1');
+    result = result.replace(/,([A-Z])/g, ', $1');
+    result = result.replace(/\\?\)\.([A-Z])/g, '\\). $1');
+
+    result = result.replace(/\\\\?\)([a-zA-Z\u4e00-\u9fff])/g, '\\) $1');
+    result = result.replace(/([a-zA-Z\u4e00-\u9fff])\\\\?\(/g, '$1 \\(');
+    result = result.replace(/\\\\?\]([a-zA-Z\u4e00-\u9fff])/g, '\\] $1');
+    result = result.replace(/([a-zA-Z\u4e00-\u9fff])\\\\?\[/g, '$1 \\[');
+
+    // 7. Auto-wrap undelimited math expressions (e.g. \frac{1}{2} -> \(\frac{1}{2}\))
+    const delimiterRegex = /(\\\[[\s\S]*?\\\]|\\\([\s\S]*?\\\))/g;
+    const parts = result.split(delimiterRegex);
+
+    const processedParts = parts.map((part, index) => {
+        if (index % 2 === 1) {
+            // This is content inside delimiters. Apply Newline Neutralizer & Ampersand Purge (v1.5.6)
+            let content = part;
+            content = content.replace(/\n/g, ' ');
+
+            // Nuclear Option (v1.5.6): Only preserve ampersands if a VALID and COMPLETE environment is present.
+            const hasValidEnv = /\\begin\{(aligned|alignat|cases|array|matrix|pmatrix|bmatrix|vmatrix|align\*?|eqnarray|gather|split)\}/i.test(content);
+            if (!hasValidEnv || (content.includes('&') && !content.includes('\\begin{'))) {
+                content = content.replace(/\\?&/g, ' ');
+            }
+
+            // Version 1.5.9: Alignment Auto-Injector
+            if (!hasValidEnv && (content.includes('\\\\') || content.includes('\n'))) {
+                if (/[=><]/.test(content)) {
+                    content = `\\begin{aligned} ${content} \\end{aligned}`;
+                }
+            }
+            return content;
+        }
+
+        // This is prose. Apply auto-wrapper and preserve original newlines.
+        let processed = part;
+        processed = processed.replace(/(?<!\\[(\[])\\?\\?(log|ln|sin|cos|tan|triangle|sim|cong|angle|deg|parallel|perp|circ|odot|because|therefore|times|sqrt|frac)_?\{?[0-9a-z]*\}?\s*\(?[^)]*\)?(?:\s*[=<>\\sim\\approx\\neq\\parallel\\perp]+\s*[0-9a-z.]+)?(?![a-z0-9])(?!.*\\[)\]])/gi, (match) => {
+            if (match.includes('\\(') || match.includes('\\)')) return match;
+            return ` \\(${match.trim()}\\) `;
+        });
+        return processed;
+    });
+
+    result = processedParts.join('');
+    result = result.replace(/\s{2,}/g, ' ').trim();
+
+    return result;
+};
+
+/**
+ * Post-process an entire question object, applying math text fixes to all text fields.
+ */
+const postProcessQuestion = (qResult) => {
+    if (!qResult) return qResult;
+
+    const textFields = [
+        'question', 'question_zh',
+        'explanation', 'explanation_zh',
+        'answer_logic', 'answer_logic_zh'
+    ];
+
+    textFields.forEach(field => {
+        if (qResult[field] && typeof qResult[field] === 'string') {
+            qResult[field] = postProcessMathText(qResult[field]);
+        }
+    });
+
+    // Process arrays
+    const arrayFields = ['solution_steps', 'solution_steps_zh', 'hints', 'hints_zh'];
+    arrayFields.forEach(field => {
+        if (qResult[field] && Array.isArray(qResult[field])) {
+            qResult[field] = qResult[field].map(item =>
+                typeof item === 'string' ? postProcessMathText(item) : item
+            );
+        }
+    });
+
+    // Process options
+    ['options', 'options_zh'].forEach(field => {
+        if (qResult[field] && Array.isArray(qResult[field])) {
+            qResult[field] = qResult[field].map(item =>
+                typeof item === 'string' ? postProcessMathText(item) : item
+            );
+        }
+    });
+
+    return qResult;
+};
 
 class MathsLabService {
+    // --- Matplotlib Helpers ---
+    static needsMatplotlibGraph(topic, isFactory = false) {
+        // Version 2.1: Respect user request to skip high-effort visual aids in Factory mode for specific topics
+        if (isFactory && topic === 'math_geo_rectilinear') return false;
+
+        const graphTopics = [
+            'math_alg_functions',      // Linear, Quadratic, Exponential Graphs
+            'math_geo_circle_eq',      // Circle equations (Coordinate Geo)
+            'math_geo_circles',        // Circle properties (Geometry) -- NEW
+            'math_trig_identities',    // Trig curves
+            'math_stat_dispersion',    // Box plots, Cumulative Frequency
+            'math_alg_variations',     // Variation curves (Direct/Inverse)
+            'math_geo_rectilinear',     // Triangles, Polygons
+            'math_alg_complex_numbers' // Argand diagrams, etc.
+        ];
+        return graphTopics.includes(topic);
+    }
+
+    static async renderGraphWithMatplotlib(spec, id, topic) {
+        if (!spec) return null;
+
+        return new Promise((resolve) => {
+            const { spawn } = require('child_process');
+            const path = require('path');
+            const fs = require('fs');
+
+            // Ensure output directory exists in backend for web access via /output static route
+            const outputDir = path.join(__dirname, '..', '..', 'output');
+            if (!fs.existsSync(outputDir)) {
+                fs.mkdirSync(outputDir, { recursive: true });
+            }
+
+            const fileName = `${topic}_${id}.png`;
+            const specFile = `${topic}_${id}.json`;
+            const outputPath = path.join(outputDir, fileName);
+            const specPath = path.join(outputDir, specFile);
+            const webPath = `output/${fileName}`;
+
+            // Write spec to file for safe transfer to Python
+            fs.writeFileSync(specPath, JSON.stringify(spec));
+
+            // Select script based on topic
+            let scriptName = 'render_math_graph.py';
+            if (topic === 'math_geo_circles') {
+                scriptName = 'render_circle_geometry.py';
+            }
+
+            const scriptPath = path.join(__dirname, '..', '..', 'scripts', scriptName);
+            console.log(`[MathsLabService] Matplotlib Render: Topic=${topic}, Script=${scriptName}`);
+
+            const pythonProcess = spawn('python', [scriptPath, specPath, outputPath]);
+
+            pythonProcess.on('close', (code) => {
+                // Cleanup spec file
+                try { if (fs.existsSync(specPath)) fs.unlinkSync(specPath); } catch (e) { }
+
+                if (code === 0) {
+                    console.log(`[MathsLabService] ✅ Graph generated: ${webPath}`);
+                    resolve(webPath);
+                } else {
+                    console.error(`[MathsLabService] ❌ Matplotlib Render Failed (code ${code}) for ${id}`);
+                    resolve(null);
+                }
+            });
+
+            pythonProcess.stderr.on('data', (data) => {
+                console.error(`[MathsLabService] Python Error: ${data}`);
+            });
+        });
+    }
+
+
+    // New method to mark question IDs as seen for a user
+    static async markQuestionsSeen(uid, questionIds) {
+        const db = admin.firestore();
+        if (!uid || !questionIds || questionIds.length === 0 || uid === 'placeholder') return;
+
+        const batch = db.batch();
+        questionIds.forEach(qid => {
+            const ref = db.collection('users').doc(uid).collection('practice_history').doc(qid);
+            batch.set(ref, {
+                timestamp: admin.firestore.FieldValue.serverTimestamp(),
+                completed: true
+            });
+        });
+        await batch.commit();
+        console.log(`[MathsLabService] Marked ${questionIds.length} questions as seen for ${uid}`);
+    }
+
+    static DIFFICULTY_TIERS = {
+        'easy': { levels: ["3"], xp: 50 },
+        'medium': { levels: ["4"], xp: 75 },
+        'standard': { levels: ["5"], xp: 100 },
+        'elite': { levels: ["7"], xp: 150 }
+    };
+
+    static MATHS_FACTORY_CONFIG = {
+        'math_num_percentages': { name: 'Percentages & Interest', engine: 'AI_Generator' },
+        'math_alg_formulas': { name: 'Formulas & Substitution', engine: 'AI_Generator' },
+        'math_alg_polynomials': { name: 'Polynomials', engine: 'AI_Generator' },
+        'math_alg_quadratics': { name: 'Quadratic Equations', engine: 'AI_Generator' },
+        'math_alg_functions': { name: 'Functions & Graphs', engine: 'AI_Generator' },
+        'math_alg_variations': { name: 'Variations', engine: 'AI_Generator' },
+        'math_alg_apgp': { name: 'AP & GP', engine: 'AI_Generator' },
+        'math_alg_log_exp': { name: 'Log & Exp Functions', engine: 'AI_Generator' },
+        'math_num_inequalities': {
+            name: 'Inequalities',
+            engine: 'hybrid-v1'
+        },
+        'math_num_ratio': { name: 'Ratio & Proportion', engine: 'AI_Generator' },
+        'math_alg_complex_numbers': { name: 'Complex Numbers', engine: 'AI_Generator' },
+        'math_geo_rectilinear': { name: 'Rectilinear Figures', engine: 'AI_Generator' },
+        'math_geo_circles': { name: 'Circle Properties', engine: 'AI_Generator' }
+    };
+
+    static DIFFICULTY_GUIDES = {
+        '3': {
+            label: 'Easy',
+            guide: `- Target: HKDSE Level 3 students (weakest tier).
+- Question complexity: Simple, direct application of ONE formula or definition.
+- Steps to solve: 2-3 short arithmetic steps MAX.
+- Example types: Find the next term, find common difference/ratio, apply T(n) = a + (n-1)d directly.
+- Explanation length: 2-3 sentences. answer_logic: 3-4 lines of working MAX.
+- NO multi-part questions. NO simultaneous equations. NO proofs.`
+        },
+        '4': {
+            label: 'Medium',
+            guide: `- Target: HKDSE Level 4 students.
+- Question complexity: Standard application requiring 2 formulas or a small system.
+- Steps to solve: 3-5 steps.
+- Example types: Find sum of first n terms, find number of terms given sum, simple word problems.
+- Explanation length: 3-5 sentences. answer_logic: 5-8 lines of working.`
+        },
+        '5': {
+            label: 'DSE Standard',
+            guide: `- Target: HKDSE Level 5 students.
+- Question complexity: Multi-step problem requiring linking concepts.
+- Steps to solve: 4-6 steps.
+- Example types: AP/GP word problems, converting between sum and term formulas, finding unknowns.
+- Explanation length: 4-6 sentences. answer_logic: 6-10 lines.`
+        },
+        '7': {
+            label: 'Elite',
+            guide: `- Target: HKDSE Level 5**/5* students (top tier).
+- Question complexity: Challenging multi-concept problem, possibly involving proof or unusual setup.
+- Steps to solve: 6+ steps.
+- Example types: Convergence of infinite GP, compound AP/GP problems, optimization, proof-style.
+- Explanation length: Full rigorous explanation. answer_logic: complete derivation.`
+        }
+    };
+
+    static MATHS_LAB_PROMPT_TEMPLATE = `You are an expert HKDSE Mathematics tutor. Generate EXACTLY 1 practice question.
+
+### TOPIC (STRICT — DO NOT DEVIATE):
+- Topic Name: '{{TOPIC_NAME}}'
+- Topic ID: {{TOPIC_ID}}
+- You MUST generate a question ONLY about '{{TOPIC_NAME}}'. Do NOT generate about any other topic.
+
+### HKDSE SYLLABUS CONSTRAINTS (CRITICAL — MUST FOLLOW):
+{{SYLLABUS_GUIDANCE}}
+
+### DIFFICULTY (CRITICAL):
+Tier: {{DIFFICULTY_LABEL}} (Level {{LEVEL}})
+{{DIFFICULTY_GUIDE}}
+
+### WORKFLOW:
+1. **SOLVE_SCRATCHPAD**: Use the "scratchpad" JSON field for internal reasoning, step-by-step solving, and corrections. If you make a mistake, fix it HERE.
+2. **FINAL_OUTPUT**: student-facing fields ("explanation", "explanation_zh", "answer_logic", "answer_logic_zh", "solution_steps") MUST be polished, textbook-quality, and completely free of meta-comments.
+3. **Tone**: Rigorous, senior DSE Math Columnist.
+
+### STRICT CLEANLINESS RULES:
+- NEVER include phrases like "Let me recalculate", "My apologies", "I made an error", "Wait", "Actually", "Oh", "Recalculating".
+- The final fields must look like they were written by an expert who got it right the first time.
+- If you find an error during your internal process, SILENTLY correct it and only output the correct version.
+- DO NOT explain your thought process or corrections outside the "scratchpad".
+
+### GEOMETRIC CORRECTNESS (CRITICAL — READ CAREFULLY):
+1. **Geometric Integrity**: Ensure the described geometry is physically possible. Distinct points on a circle circumference cannot be collinear.
+2. **Exterior Points**: For points outside a circle (e.g., tangents meet at P), calculate or estimate their absolute "pos": [x, y] coordinates. Do NOT use "angle" for non-circumference points.
+3. **Consistency**: Ensure the coordinates in "diagram_json" match the mathematical values in your "question" and "answer_logic".
+
+### MATH FORMATTING (CRITICAL — READ CAREFULLY):
+1. **Delimiters are MANDATORY**: Every math expression MUST be wrapped in \\\\( ... \\\\) for inline or \\\\[ ... \\\\] for block display.
+2. **Prose words MUST NEVER be inside delimiters**. Only math symbols, numbers, and variables go inside.
+3. **Spaces around delimiters**: Always put a space before \\\\( and after \\\\), and before \\\\[ and after \\\\].
+4. **LaTeX commands**: Use single backslash (e.g. \\\\log, \\\\frac, \\\\sqrt, \\\\parallel, \\\\degree). Always use \\\\log not just "log", and \\\\parallel for parallel lines. Use \\\\degree for angles.
+5. **Currency**: Use \\\\text{HK\\$} inside math. NEVER use bare $ anywhere.
+6. **Bilingual**: English + Traditional Chinese (繁體中文).
+
+#### CORRECT EXAMPLES:
+- "Given that \\\\( \\\\log_2 3 = a \\\\) and \\\\( \\\\log_3 5 = b \\\\), express \\\\( \\\\log_6 45 \\\\) in terms of \\\\( a \\\\) and \\\\( b \\\\)."
+- "If \\\\( x = 3 \\\\), find the value of \\\\( 2x^2 + 5 \\\\)."
+- "Step 1: Substitute \\\\( x = 2 \\\\) into the equation."
+- "Therefore, \\\\( y = 3^3 = 27 \\\\)."
+- "The sum to \\\\( n \\\\) terms is \\\\( S_n = \\\\frac{n}{2}(a + l) \\\\)."
+- "Since \\\\( AB \\\\parallel DC \\\\) and \\\\( \\\\triangle ABE \\\\sim \\\\triangle DCE \\\\), we have \\\\( \\\\frac{AB}{DC} = \\\\frac{BE}{CE} \\\\)."
+
+#### WRONG EXAMPLES (NEVER DO THIS):
+- "Given that \\\\( \\\\log_2 3 = a and \\\\log_3 5 = b, express \\\\log_6 45 in terms of a and b \\\\)." ← WRONG: prose inside delimiters
+- "log_2(3) = a and log_3(5) = b" ← WRONG: no delimiters at all
+- "\\\\( \\\\log_2 3 = a \\\\)and\\\\( \\\\log_3 5 = b \\\\)" ← WRONG: no space around delimiters
+
+### JSON SCHEMA:
+{
+  "type": "mc | short_answer",
+  "scratchpad": "Internal reasoning & corrections. Put your mistakes and self-corrections here ONLY.",
+  "question": "English question with LaTeX (every math expression wrapped in delimiters)",
+  "question_zh": "繁體中文 question with LaTeX (every math expression wrapped in delimiters)",
+  "options": ["A: ...", "B: ...", "C: ...", "D: ..."],
+  "options_zh": ["A: ...", "B: ...", "C: ...", "D: ..."],
+  "answer": "Exact string from options (for MC) OR the numeric/expression value (for short_answer)",
+  "answer_letter": "A|B|C|D (MC only, null for short_answer)",
+  "solution_steps": ["Step 1 derivation", "Step 2 derivation", "Step 3 derivation"],
+  "solution_steps_zh": ["繁體中文 Step 1 derivation", "繁體中文 Step 2 derivation", "繁體中文 Step 3 derivation"],
+  "hints": ["Hint 1: Conceptual nudge", "Hint 2: Relevant formula", "Hint 3: Specific strategy"],
+  "hints_zh": ["提示 1: 概念引導", "提示 2: 相關公式", "提示 3: 具體解題策略"],
+  "explanation": "Confident textbook answer key with proper delimiters. NO self-corrections.",
+  "explanation_zh": "繁體中文 explanation with proper delimiters. NO self-corrections.",
+  "answer_logic": "Rigorous, clean derivation with proper delimiters. NO meta-reasoning.",
+  "answer_logic_zh": "繁體中文 derivation with proper delimiters. NO meta-reasoning.",
+  "diagram_json": "null OR a valid JSON object matching the requested specification for geometric/graphical topics."
+}
+
+### SCENARIO SEED:
+{{ SEED }}
+
+### RECENTLY GENERATED QUESTIONS (DO NOT DUPLICATE):
+The following questions already exist in the bank for this specific topic and level.
+You MUST generate a NEW question that is LOGICALLY DISTINCT from these.
+- DO NOT use the same scenario or identical parameters.
+- DO NOT just change numeric values.
+- If existing questions are all "direct calculation", try a "word problem" or "find unknown variable" type.
+- Ensure the complexity is appropriate for Level {{LEVEL}}.
+
+Existing questions:
+{{RECENT_QUESTIONS_CONTEXT}}
+
+### FINAL RULES:
+1. NO meta-comments ("Wait", "Error", "Recalculate", "Apologies").
+2. SILENTLY ADAPT if the seed is impossible. NEVER complain in output.
+3. For Level 4+, prefer 'short_answer' type unless it is a multi-step logic problem better suited for MC.
+4. If type is 'short_answer', the 'answer' field MUST NOT include any 'A:', 'B:' prefixes.
+5. 'solution_steps' must be a list of 2-5 bite-sized mathematical steps WITH PROPER DELIMITERS.
+6. Every math expression in EVERY field must use \\\\( ... \\\\) or \\\\[ ... \\\\] delimiters. No exceptions.
+7. Prose and English/Chinese words must ALWAYS be OUTSIDE delimiters with proper spacing.
+8. Valid JSON only.
+9. FOR GEOMETRY TOPICS: You MUST provide a detailed "diagram_json" field as specified in the SYLLABUS_GUIDANCE. This is NOT optional.
+`;
+
+    static async generateScenarioSeeds(topicName, count, topicId) {
+        console.log(`[MathsLabService] Generating ${count} scenario seeds for variety(Topic: ${topicName})...`);
+        const syllabusGuidance = getSyllabusGuidance(topicId || '');
+        const prompt = `Generate ${count} HIGHLY DIVERSE and UNIQUE scenario seeds for HKDSE math practice questions STRICTLY about '${topicName}'.
+Each seed MUST describe a COMPLETELY DIFFERENT geometric configuration, algebraic structure, or numeric setup.
+For Geometry topics, explicitly dictate DIFFERENT diagram setups in each seed (e.g., Seed 1: A cyclic quadrilateral with diagonals. Seed 2: A tangent meeting a secant outside the circle. Seed 3: Intersecting chords forming 'bowtie' triangles. Seed 4: A semicircle with an inscribed triangle). AVOID generating the exact same basic shape twice.
+The seeds must ONLY be about '${topicName}'. Do NOT include seeds about other math topics.
+
+### HKDSE SYLLABUS SCOPE (seeds MUST stay within this scope):
+${syllabusGuidance}
+
+Return as a JSON array of strings.`;
+
+        try {
+            const data = await GenerativeAIService.generateJson(prompt, { model: "gemini-2.5-pro" });
+            return Array.isArray(data) ? data : (data.seeds || []);
+        } catch (err) {
+            console.error("[MathsLabService] Error generating scenario seeds:", err);
+            return [];
+        }
+    }
 
     static async generateLesson(params) {
         const db = admin.firestore();
-        const { topic, level, uid, language = 'en' } = params;
+        const { topic, level, uid, language = 'en', targetCount, isFactory, clusterId } = params;
+        const numericLevel = parseInt(level);
+        const TARGET_COUNT = targetCount || 5;
 
-        // Resolve Topic by language
-        const skill = MATHS_MICRO_SKILLS[topic];
-        const resolvedTopic = skill ? skill.name : (topic || 'General Maths');
-        const resolvedId = skill ? skill.id : (topic || 'math_general');
-        const languageName = language === 'zh' ? 'Traditional Chinese (廣東話口語化/書面語)' : 'English';
-        const TARGET_COUNT = 8;
-
-        console.log(`[MathsLabService] Generating session for: ${resolvedTopic} (Level ${level}) in ${language}`);
-
-        try {
-            // 1. Fetch Seen Question IDs for this user to ensure variety
-            let seenQuestionIds = new Set();
-            if (uid) {
-                try {
-                    const historySnapshot = await db.collection('users').doc(uid).collection('practice_history').get();
-                    historySnapshot.forEach(doc => seenQuestionIds.add(doc.id));
-                } catch (err) {
-                    console.warn("[MathsLabService] Could not fetch user history:", err);
-                }
-            }
-
-            // 2. Hybrid Strategy: Check Question Bank first
-            let questions = [];
+        // 1. Fetch seen questions to avoid duplication
+        let seenQuestionIds = new Set();
+        if (uid && uid !== 'placeholder') {
             try {
+                const historySnapshot = await db.collection('users').doc(uid).collection('practice_history').get();
+                historySnapshot.forEach(doc => seenQuestionIds.add(doc.id));
+                console.log(`[MathsLabService] User ${uid} has seen ${seenQuestionIds.size} questions.`);
+            } catch (historyErr) {
+                console.warn(`[MathsLabService] Failed to fetch practice history for ${uid}:`, historyErr);
+            }
+        }
+
+        // 2. FETCH-FIRST: Check Bank for Approved & Released questions
+        // Version 1.3.1: Bypass bank fetch in factory mode to ensure NEW questions are generated for audit.
+        try {
+            if (!isFactory) {
+                console.log(`[MathsLabService] Fetch-First (Strict) check for ${topic} (Level ${level})`);
                 const bankSnapshot = await db.collection('question_bank')
-                    .where('topic', '==', resolvedTopic)
-                    .where('level', '==', parseInt(level))
-                    .limit(20)
+                    .where('topic_id', '==', topic)
+                    .where('level', '==', numericLevel)
+                    .where('is_approved', '==', true)
+                    .limit(50) // Fetch a decent pool to sample from
                     .get();
 
+                let bankQuestions = [];
                 bankSnapshot.forEach(doc => {
-                    if (!seenQuestionIds.has(doc.id)) {
-                        questions.push({ ...doc.data(), id: doc.id });
+                    const data = doc.data();
+                    // Ensure it has a topic_id set (released status)
+                    if (data.topic_id && !seenQuestionIds.has(doc.id)) {
+                        bankQuestions.push({ ...data, id: doc.id });
                     }
                 });
 
-                // Shuffle and pick up to TARGET_COUNT
-                questions = questions.sort(() => 0.5 - Math.random()).slice(0, TARGET_COUNT);
-                console.log(`[MathsLabService] Found ${questions.length} existing questions in bank.`);
-            } catch (e) {
-                console.warn("[MathsLabService] Bank fetch failed:", e);
+                if (bankQuestions.length > 0) {
+                    // Shuffle and limit to TARGET_COUNT
+                    const finalQuestions = bankQuestions.sort(() => 0.5 - Math.random()).slice(0, TARGET_COUNT);
+                    console.log(`[MathsLabService] SUCCESS: Served ${finalQuestions.length} approved/released questions from bank.`);
+                    return {
+                        type: "MATHS",
+                        topic: topic,
+                        level: numericLevel,
+                        interactive_tasks: finalQuestions,
+                        source: 'bank'
+                    };
+                }
             }
 
-            // 3. Generate remainder via AI if needed
-            if (questions.length < TARGET_COUNT) {
-                const neededCount = TARGET_COUNT - questions.length;
-                console.log(`[MathsLabService] Need ${neededCount} more questions. Calling AI...`);
+            // 2.5 LOCKDOWN: If not in factory mode and bank is empty, refuse slow AI generation
+            if (!isFactory) {
+                console.log(`[MathsLabService] LOCKDOWN: No approved/released questions for ${topic}. Refusing slow generation for student.`);
+                return {
+                    type: "MATHS",
+                    topic: topic,
+                    level: numericLevel,
+                    interactive_tasks: [],
+                    error: "BANK_EMPTY",
+                    message: "Our AI tutors are still preparing questions for this specific topic and level. Please try another topic or check back later!"
+                };
+            }
 
-                const prompt = MATHS_LAB_PROMPT
-                    .replace(/{{TOPIC_NAME}}/g, resolvedTopic)
-                    .replace(/{{TOPIC_ID}}/g, resolvedId)
-                    .replace('{{LEVEL}}', level)
-                    .replace('{{LANGUAGE}}', languageName)
-                    .replace('EXACTLY 5 questions', `EXACTLY ${neededCount} questions`);
+            console.log(`[MathsLabService] Bank empty. User is admin/factory: Proceeding to AI Generation...`);
+        } catch (bankErr) {
+            console.error("[MathsLabService] Bank fetch failed:", bankErr);
+        }
 
+        // 2.6 RECENT CONTEXT: Fetch a small pool of existing questions to avoid AI-duplication
+        let recentQuestionsContext = "None yet.";
+        try {
+            const recentSnapshot = await db.collection('question_bank')
+                .where('topic_id', '==', topic)
+                .where('level', '==', numericLevel)
+                .where('is_approved', '==', true)
+                .orderBy('created_at', 'desc')
+                .limit(10)
+                .get();
+
+            if (!recentSnapshot.empty) {
+                const contextPool = [];
+                recentSnapshot.forEach(doc => {
+                    const q = doc.data().question;
+                    if (q) contextPool.push(`- ${q.substring(0, 200)}...`);
+                });
+                recentQuestionsContext = contextPool.join('\n');
+            }
+        } catch (ctxErr) {
+            console.warn("[MathsLabService] Failed to fetch recent context (ignoring):", ctxErr.message);
+        }
+
+        // 3. HYBRID GENERATION (FALLBACK)
+        if (MathsLabService.MATHS_FACTORY_CONFIG[topic]) {
+            const config = MathsLabService.MATHS_FACTORY_CONFIG[topic];
+            console.log(`[MathsLabService] Hybrid Engine Mode: ${config.engine} for ${topic}.`);
+
+            const seeds = await this.generateScenarioSeeds(config.name, TARGET_COUNT, topic);
+            const questions = [];
+
+            // Version 2.0: Sequential generation with gemini-2.5-pro for highest quality
+            // Generate one question at a time to avoid rate limits on Pro model
+            for (let i = 0; i < TARGET_COUNT; i++) {
+                const seed = seeds[i] || "General numeric example";
                 try {
-                    let data = await GenerativeAIService.generateJson(prompt, {
-                        model: "gemini-2.0-flash"
-                    });
+                    const diffInfo = MathsLabService.DIFFICULTY_GUIDES[String(numericLevel)] || MathsLabService.DIFFICULTY_GUIDES['5'];
+                    let syllabusGuidance = getSyllabusGuidance(topic);
 
-                    // Unwrapping logic (simplified here as we handle parts)
-                    let newTasks = data.interactive_tasks || data.tasks || (Array.isArray(data) ? data : []);
+                    // Version 2.1: If visual aids are disabled for this topic/mode, remove "MANDATORY diagram" requirements from prompt
+                    if (!MathsLabService.needsMatplotlibGraph(topic, isFactory)) {
+                        syllabusGuidance = syllabusGuidance.replace(/- MANDATORY REQUIREMENT: Provide a "diagram_json" for ALL geometric configurations\./g, '');
+                        syllabusGuidance = syllabusGuidance.replace(/- MANDATORY: Provide a highly detailed "diagram_json" featuring dashed lines (strokeDasharray: "5,5") for hidden interior lines in 3D\./g, '');
+                    }
 
-                    const batch = db.batch();
-                    newTasks.forEach(task => {
-                        if (!task.text && task.question) task.text = task.question;
-                        const qHash = generateQuestionHash(resolvedTopic, 'maths', task.text || task.id);
-                        task.id = qHash;
+                    const prompt = MathsLabService.MATHS_LAB_PROMPT_TEMPLATE
+                        .replace(/\{\{TOPIC_NAME\}\}/g, config.name)
+                        .replace('{{TOPIC_ID}}', topic)
+                        .replace('{{LEVEL}}', level)
+                        .replace('{{DIFFICULTY_LABEL}}', diffInfo.label)
+                        .replace('{{DIFFICULTY_GUIDE}}', diffInfo.guide)
+                        .replace('{{SYLLABUS_GUIDANCE}}', syllabusGuidance)
+                        .replace('{{ SEED }}', seed)
+                        .replace('{{RECENT_QUESTIONS_CONTEXT}}', recentQuestionsContext);
 
-                        // Save to Bank
-                        const docRef = db.collection('question_bank').doc(qHash);
-                        batch.set(docRef, {
-                            ...task,
-                            topic: resolvedTopic,
-                            level: parseInt(level),
-                            created_at: admin.firestore.FieldValue.serverTimestamp()
-                        }, { merge: true });
+                    console.log(`[MathsLabService] 🔬 Generating question ${i + 1}/${TARGET_COUNT} with gemini-2.5-pro...`);
+                    const result = await GenerativeAIService.generateJson(prompt, { model: "gemini-2.5-pro" });
+                    let qResult = Array.isArray(result) ? result[0] : result;
 
-                        questions.push(task);
-                    });
-                    await batch.commit();
+                    if (qResult && qResult.question) {
+                        // Sanitization: Strip meta-comments from AI-generated text fields
+                        const fieldsToSanitize = ['explanation', 'explanation_zh', 'answer_logic', 'answer_logic_zh'];
+                        fieldsToSanitize.forEach(field => {
+                            if (qResult[field]) qResult[field] = stripMetaComments(qResult[field]);
+                        });
+                        if (qResult.solution_steps && Array.isArray(qResult.solution_steps)) {
+                            qResult.solution_steps = qResult.solution_steps.map(step => stripMetaComments(step));
+                        }
 
-                } catch (error) {
-                    console.error("[MathsLabService] AI Gen failed:", error);
-                    if (questions.length === 0) throw error; // Re-throw only if we have nothing
+                        // Post-process: Fix math delimiters and spacing
+                        qResult = postProcessQuestion(qResult);
+
+                        const qHash = generateQuestionHash(topic, 'factory', qResult.question, numericLevel);
+
+                        // 1.3.3 SAFETY: Check if quest already exists and is APPROVED. 
+                        // If so, DO NOT overwrite it with a pending version (avoids "rollbacks").
+                        try {
+                            const existingDoc = await db.collection('question_bank').doc(qHash).get();
+                            if (existingDoc.exists && existingDoc.data().is_approved) {
+                                console.log(`[MathsLabService] 🛡️ Question collision: "${qHash}" already approved. Skipping overwrite.`);
+                                questions.push({ ...existingDoc.data(), id: qHash });
+                                continue;
+                            }
+                        } catch (collisionErr) {
+                            console.warn(`[MathsLabService] Collision check failed for ${qHash}:`, collisionErr.message);
+                        }
+
+                        const diagramUrl = MathsLabService.needsMatplotlibGraph(topic, isFactory) ?
+                            await MathsLabService.renderGraphWithMatplotlib(qResult.diagram_json || qResult.graph_spec, qHash, topic) :
+                            null;
+
+                        const quest = {
+                            ...qResult,
+                            diagram_json: qResult.diagram_json ? JSON.stringify(qResult.diagram_json) : null,
+                            id: qHash,
+                            topic: config.name,
+                            topic_id: topic,
+                            level: numericLevel,
+                            subject: 'Maths',
+                            diagram_url: diagramUrl,
+                            created_at: new Date().toISOString(),
+                            is_approved: !isFactory,
+                            is_factory: true
+                        };
+
+                        // FINAL SAFETY: Clean for Firestore to prevent "invalid nested entity" or undefined errors
+                        const cleanedQuest = cleanForFirestore(quest);
+
+                        await db.collection('question_bank').doc(qHash).set(cleanedQuest);
+                        questions.push(cleanedQuest);
+                        console.log(`[MathsLabService] ✅ Question ${i + 1}/${TARGET_COUNT} generated successfully.`);
+                    } else {
+                        console.warn(`[MathsLabService] ⚠️ Question ${i + 1}/${TARGET_COUNT} returned empty result.`);
+                    }
+                } catch (err) {
+                    console.error(`[MathsLabService] ❌ Question ${i + 1}/${TARGET_COUNT} failed:`, err.message);
+                }
+
+                // Rate-limit protection: Wait 3 seconds between requests for Pro model
+                if (i < TARGET_COUNT - 1) {
+                    console.log(`[MathsLabService] ⏳ Waiting 3s before next generation (rate-limit protection)...`);
+                    await new Promise(resolve => setTimeout(resolve, 3000));
                 }
             }
 
             return {
                 type: "MATHS",
-                topic: topic, // Use technical ID
-                topicName: resolvedTopic, // Human-readable name
-                level: parseInt(level),
-                interactive_tasks: questions.slice(0, TARGET_COUNT)
+                topic: topic,
+                level: numericLevel,
+                interactive_tasks: questions,
+                source: 'ai_hybrid'
             };
+        }
 
+        return {
+            type: "MATHS",
+            topic: topic,
+            level: numericLevel,
+            interactive_tasks: [],
+            error: "Topic not configured for generation and bank empty."
+        };
+    }
+
+    static async getLearningContent(topicId, language = 'en') {
+        const admin = require('firebase-admin');
+        const db = admin.firestore();
+
+        try {
+            // Check Firestore for modular content
+            const docRef = db.collection('learning_content').doc(topicId);
+            const docSnap = await docRef.get();
+
+            if (docSnap.exists) {
+                console.log(`[MathsLabService] Loaded modular content for ${topicId} from Firestore`);
+                return docSnap.data();
+            }
         } catch (error) {
-            console.error("=== Maths Lab Generation Failed ===");
-            console.error("Error Type:", error.constructor.name);
-            console.error("Error Message:", error.message);
-            console.error("Error Stack:", error.stack);
-            console.error("Topic:", topic);
-            console.error("Level:", level);
-            console.error("Language:", language);
-            console.error("===================================");
-            throw error;
+            console.error(`[MathsLabService] Error fetching learning content for ${topicId}:`, error);
+        }
+
+        // Generic fallback if not in Firestore
+        const isChinese = language === 'zh' || language === 'zh-HK';
+
+        return {
+            name: "Learning Brief",
+            name_zh: "學習簡報",
+            roadmap: isChinese ? "此主題的學習路徑即將推出。" : "Mastery roadmap for this topic is coming soon.",
+            content_en: {
+                concept: "Learning content for this topic is being prepared by our AI tutors.",
+                methodology: "Step-by-step methodology will be available shortly.",
+                tips: "Expert tips are being curated.",
+                traps: "DSE traps are being analyzed."
+            },
+            content_zh: {
+                concept: "AI 導師正在準備此主題的學習內容。",
+                methodology: "詳細的解題步驟即將推出。",
+                tips: "專家提示正在編寫中。",
+                traps: "DSE 考試陷阱正在分析中。"
+            }
+        };
+    }
+
+    static async getHint(params) {
+        const { question, question_zh, topic, level } = params;
+        console.log(`[MathsLabService] Generating 3 progressive hints for: ${topic} (Level ${level})`);
+
+        const prompt = `You are an expert HKDSE Mathematics tutor. Generate exactly 3 PROGRESSIVE pedagogical hints for the following question.
+The hints should NOT give away the final answer.
+- Hint 1: Conceptual nudge (Broad).
+- Hint 2: Key formula or relationship (Moderate).
+- Hint 3: Strategic advice or setup (Specific).
+
+### QUESTION (EN):
+${question}
+
+### QUESTION (ZH):
+${question_zh}
+
+### CONTEXT:
+Topic: ${topic} (Level ${level})
+
+### JSON SCHEMA:
+{
+  "hints": ["Hint 1", "Hint 2", "Hint 3"],
+  "hints_zh": ["繁體中文提示 1", "繁體中文提示 2", "繁體中文提示 3"]
+}
+Return valid JSON only.`;
+
+        try {
+            const result = await GenerativeAIService.generateJson(prompt, { model: "gemini-2.0-flash" });
+            const data = Array.isArray(result) ? result[0] : result;
+            return {
+                hints: data.hints || [data.hint || "Think about the core formula."],
+                hints_zh: data.hints_zh || [data.hint_zh || "思考一下核心公式。"]
+            };
+        } catch (err) {
+            console.error("[MathsLabService] Error generating hints:", err);
+            return {
+                hints: ["Think about the core formula for this topic."],
+                hints_zh: ["思考一下這個主題的核心公式。"]
+            };
         }
     }
 
     static async explainStep(params) {
         const { question, fullSolution, targetStep, language = 'en' } = params;
-        const languageName = language === 'zh' ? 'Traditional Chinese (廣東話口語化/書面語)' : 'English';
+        console.log(`[MathsLabService] Explaining step...`);
 
-        const prompt = `You are Mr. Wong, an elite HKDSE Mathematics tutor. A student is struggling to understand a specific step in a mathematical solution.
+        const prompt = `You are an expert HKDSE Mathematics tutor. A student has asked you to explain a specific step in a math solution.
 
-### CONTEXT:
-**Question**: 
+### ORIGINAL QUESTION:
 ${question}
 
-**Full Solution Provided**:
+### FULL SOLUTION:
 ${fullSolution}
 
-**Target Step Needing Clarification**:
+### THE STEP THE STUDENT WANTS EXPLAINED:
 ${targetStep}
 
-### YOUR MISSION:
-Explain this specific step tactically and effectively. Break down the pain points for a DSE student.
+### INSTRUCTIONS:
+1. Explain exactly how this specific step is derived from the previous steps, or what mathematical rule/formula is being applied.
+2. Provide 1 to 3 "prerequisites" (short phrases) that are needed to understand this step (e.g., "Laws of Indices", "Factor Theorem").
+3. Provide a short "pro_tip" or common pitfall to watch out for.
+4. If there is math in your explanation, format it for LaTeX using \\( ... \\) for inline and \\[ ... \\] for blocks.
+5. Provide the output in ${language === 'zh' ? 'Traditional Chinese (繁體中文)' : 'English'}.
 
-### GUIDELINES:
-1. **Persona**: Speak as Mr. Wong. Be encouraging but precise. Use "DSE tactics" (e.g., "examiners often look for...", "common trap here is...").
-2. **Breakdown**: 
-   - Identify any underlying identities, theorems, or algebraic rules used in this step (e.g., Change of Base, Sine Rule, Completing the Square).
-   - Explain the logical bridge from the PREVIOUS line to this line.
-   - Mention why this step is necessary for the final answer.
-3. **Clarity**: Keep it concise but deep. Use LaTeX for math.
-4. **Language**: Use {{LANGUAGE}}.
-   - For Chinese: Use Traditional Chinese (繁體中文). Use HK-style DSE terminology.
-
-### OUTPUT FORMAT:
-Return a JSON object:
+Return ONLY valid JSON matching this schema:
 {
-  "explanation": "Your detailed explanation here with LaTeX.",
-  "prerequisites": ["List of skills/concepts needed"],
-  "pro_tip": "A quick DSE examiner tip related to this concept."
-}
-
-**OUTPUT MUST BE SINGLE-LINE VALID JSON. NO MARKDOWN. NO CODE BLOCKS.**`
-            .replace('{{LANGUAGE}}', languageName);
+  "prerequisites": ["Concept 1", "Concept 2"],
+  "explanation": "Detailed explanation of exactly what is happening in this step.",
+  "pro_tip": "A brief helpful tip or common DSE trap."
+}`;
 
         try {
-            const data = await GenerativeAIService.generateJson(prompt, {
-                model: "gemini-2.0-flash"
-            });
-            return data;
-        } catch (error) {
-            console.error("[MathsLabService] explainStep failed:", error);
-            throw error;
+            const result = await GenerativeAIService.generateJson(prompt, { model: "gemini-2.0-flash" });
+            const data = Array.isArray(result) ? result[0] : result;
+            return {
+                prerequisites: data.prerequisites || [],
+                explanation: data.explanation || "This step follows from the previous mathematical logic.",
+                pro_tip: data.pro_tip || ""
+            };
+        } catch (err) {
+            console.error("[MathsLabService] Error explaining step:", err);
+            return {
+                prerequisites: [],
+                explanation: "Sorry, I encountered an error trying to explain this step.",
+                pro_tip: ""
+            };
         }
+    }
+
+    static async gradeShortAnswers(questions, answers, language = 'en', imageAnswers = {}) {
+        const admin = require('firebase-admin');
+        console.log(`[MathsLabService] AI Grading ${questions.length} answers in ${language}...`);
+
+        // Filter out MC questions as they are graded exactly by frontend/backend logic
+        const shortAnswerQuestions = questions.filter(q => q.type !== 'mc');
+        if (shortAnswerQuestions.length === 0) return [];
+
+        const gradingPromises = shortAnswerQuestions.map(async (q) => {
+            const userAnswer = answers[q.id] || "No answer provided";
+            const hasImage = !!imageAnswers[q.id];
+            const maxScore = q.marks || 3;
+
+            // If the user's answer is exactly the answer string and no image, skip AI
+            if (!hasImage && userAnswer.trim() === String(q.answer).trim()) {
+                return {
+                    id: q.id,
+                    isCorrect: true,
+                    score: maxScore,
+                    maxScore: maxScore,
+                    feedback: language === 'zh' ? "完全正確！" : "Perfect match!"
+                };
+            }
+
+            const promptText = `You are an expert HKDSE Mathematics scorer. Grade the student's answer against the official key.
+            
+### QUESTION:
+${q.text || q.question}
+
+### OFFICIAL ANSWER KEY:
+Final Answer: ${q.answer}
+Working/Steps: ${q.solution_steps ? q.solution_steps.join('\n') : "N/A"}
+
+### STUDENT'S ANSWER:
+${hasImage ? `[The student has uploaded a handwritten image of their working steps and answer. Please read the handwriting carefully from the attached image.]` : ''}
+${userAnswer && userAnswer !== "No answer provided" ? `Text answer: ${userAnswer}` : ''}
+
+### INSTRUCTIONS:
+1. Max score for this question is ${maxScore}.
+2. ${hasImage ? 'Carefully read the handwritten working and final answer from the uploaded image.' : 'Compare the student\'s final answer and working (if provided) with the official key.'}
+3. If the student's final answer is mathematically equivalent to the official answer (e.g. "1/2" vs "0.5", or "x+y=2" vs "y=-x+2", or "d=4, a=5" vs "a=5, d=4"), award full score (${maxScore}) and set isCorrect to true.
+4. If the final answer is wrong but some working steps are correct, award partial marks (e.g., 1 or 2) and set isCorrect to false.
+5. If completely wrong, award 0 and set isCorrect to false.
+6. Provide a very brief, encouraging feedback explaining the mark in ${language === 'zh' ? 'Traditional Chinese (繁體中文)' : 'English'}.
+
+Return ONLY valid JSON in this format:
+{
+    "score": [number from 0 to ${maxScore}],
+    "isCorrect": [boolean, true ONLY if score == ${maxScore}],
+    "feedback": "[Brief feedback]"
+}`;
+
+            try {
+                let result;
+
+                if (hasImage) {
+                    // Multimodal grading: fetch image and send as inline data
+                    console.log(`[MathsLabService] Multimodal grading for Q ${q.id} with image`);
+                    try {
+                        const imageUrl = imageAnswers[q.id];
+                        const imageResponse = await fetch(imageUrl);
+                        const imageArrayBuffer = await imageResponse.arrayBuffer();
+                        const base64Image = Buffer.from(imageArrayBuffer).toString('base64');
+                        const contentType = imageResponse.headers.get('content-type') || 'image/jpeg';
+
+                        // Use multimodal prompt with image
+                        const multimodalPrompt = [
+                            { text: promptText },
+                            {
+                                inlineData: {
+                                    mimeType: contentType,
+                                    data: base64Image
+                                }
+                            }
+                        ];
+
+                        result = await GenerativeAIService.generateJson(multimodalPrompt, { model: "gemini-2.0-flash" });
+                    } catch (imgErr) {
+                        console.warn(`[MathsLabService] Image fetch failed for Q ${q.id}, falling back to text-only:`, imgErr.message);
+                        // Fallback to text-only grading
+                        result = await GenerativeAIService.generateJson(promptText, { model: "gemini-2.0-flash" });
+                    }
+                } else {
+                    result = await GenerativeAIService.generateJson(promptText, { model: "gemini-2.0-flash" });
+                }
+
+                const gradings = Array.isArray(result) ? result[0] : result;
+
+                return {
+                    id: q.id,
+                    isCorrect: gradings.isCorrect || gradings.score === maxScore,
+                    score: gradings.score || 0,
+                    maxScore: maxScore,
+                    feedback: gradings.feedback || ""
+                };
+            } catch (err) {
+                console.error("[MathsLabService] AI Grader error for question", q.id, err);
+                return {
+                    id: q.id,
+                    isCorrect: false,
+                    score: 0,
+                    maxScore: maxScore,
+                    feedback: "Failed to grade automatically over network."
+                };
+            }
+        });
+
+        return await Promise.all(gradingPromises);
+
     }
 }
 

@@ -1,0 +1,1 @@
+{"type":"function","expressions":[{"expr":"0.004 * x / (2**2)","label":"R(L) when d=2","color":"blue"}],"x_range":[0,100],"y_range":[0,0.1],"points":[{"x":50,"y":0.05,"label":"(50, 0.05)"}],"show_grid":true}

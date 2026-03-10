@@ -1,84 +1,176 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { useLanguage } from '../context/LanguageContext';
-import { ChevronLeft, CheckCircle, XCircle, Trophy, Home } from 'lucide-react';
-import { BlockMath, InlineMath } from 'react-katex';
+import { useAvatar } from '../context/AvatarContext';
+import { ChevronLeft, CheckCircle, XCircle, Trophy, Home, Maximize2, Minimize2 } from 'lucide-react';
+import { SafeInlineMath, SafeBlockMath } from '../components/maths/SafeMath';
 import 'katex/dist/katex.min.css';
 import { getMathSkillName } from '../constants/mathMicroSkills';
 import MathStepExplainer from '../components/maths/MathStepExplainer';
+import { getMasteryStats } from '../utils/masteryUtils';
+import { formatNumbers, sanitizeMath, prepareMathText, splitContentByDelimiters, looksLikeMath } from '../utils/mathFormattingUtils';
+import GeometryRenderer from '../components/maths/GeometryRenderer';
 
 const MathsLabReview = () => {
     const { user } = useAuth();
-    const { language } = useLanguage();
+    const { language, toggleLanguage } = useLanguage();
+    const { setActiveAgentId } = useAvatar();
     const navigate = useNavigate();
     const location = useLocation();
-    const { questions, answers, topic, level, taskId, title, xp } = location.state || {};
+    const { questions, answers, imageAnswers, topic, level, taskId, title, xp, isFactoryQuest } = location.state || {};
+
+    const [submitting, setSubmitting] = useState(!location.state?.already_submitted);
+    const [isSubmitted, setIsSubmitted] = useState(!!location.state?.already_submitted);
+    const [expandedDiagrams, setExpandedDiagrams] = useState({});
+
+    const toggleDiagram = (id) => {
+        setExpandedDiagrams(prev => ({ ...prev, [id]: !prev[id] }));
+    };
+
+    // Level progression logic
+    const MATHS_LEVELS = [3, 4, 5, '5*', '5**'];
+    const currentLevelIdx = MATHS_LEVELS.indexOf(level);
+    const nextLevel = currentLevelIdx !== -1 && currentLevelIdx < MATHS_LEVELS.length - 1 ? MATHS_LEVELS[currentLevelIdx + 1] : null;
 
     const [results, setResults] = useState([]);
     const [score, setScore] = useState(0);
-    const [submitting, setSubmitting] = useState(true);
+    const [totalPossible, setTotalPossible] = useState(0);
+    const [isGrading, setIsGrading] = useState(true);
+
+    const currentTier = getMasteryStats(level, language === 'zh');
+    const nextTier = nextLevel ? getMasteryStats(nextLevel, language === 'zh') : null;
 
     useEffect(() => {
+        // Ensure the math tutor is active when reviewing results
+        setActiveAgentId('math');
+
         if (!questions || !answers) {
-            navigate('/dashboard');
+            if (!isSubmitted && !location.state?.already_submitted) {
+                console.warn('[MathsLabReview] Missing state, redirecting to dashboard');
+                navigate('/dashboard');
+            }
             return;
         }
-        gradeAnswers();
-    }, [questions, answers]);
 
-    const gradeAnswers = async () => {
-        // Grade all answers
-        const gradedResults = questions.map(q => {
-            const userAnswer = (answers[q.id] || '').trim();
-            const correctAnswer = (q.answer || '').trim();
+        const gradeAnswers = async () => {
+            // If we have cached graded results (from a page refresh/back), use them natively
+            if (location.state?.already_submitted && location.state?.graded_results) {
+                setResults(location.state.graded_results);
+                setScore(location.state.score);
+                setTotalPossible(location.state.totalPossible || questions.reduce((sum, q) => sum + (q.marks || 3), 0));
+                setIsGrading(false);
+                if (submitting) setSubmitting(false);
+                return;
+            }
 
-            // 1. Exact match (pre-cleaning)
-            let isCorrect = userAnswer === correctAnswer;
+            setIsGrading(true);
 
-            // 2. Short Answer smart matching
-            if (!isCorrect && q.type === 'short_answer') {
-                // Clean both of LaTeX markers and whitespace
-                const clean = (str) => str.replace(/[\$\\]/g, '').replace(/\s+/g, '').toLowerCase();
-                const cUser = clean(userAnswer);
-                const cCorrect = clean(correctAnswer);
+            // 1. Basic synchronous grading (Exact Match)
+            const baseResults = questions.map(q => {
+                const userAnswer = (answers[q.id] || '').trim();
+                const correctAnswer = (q.answer || '').trim();
+                let isCorrect = userAnswer === correctAnswer;
 
-                if (cUser === cCorrect) {
-                    isCorrect = true;
-                } else if (cUser.includes(cCorrect) && cCorrect.length > 1) {
-                    // Fallback: If the user solution contains the final answer
-                    isCorrect = true;
+                if (!isCorrect && q.type === 'short_answer') {
+                    const clean = (str) => str.replace(/[\$\\]/g, '').replace(/\s+/g, '').toLowerCase();
+                    const cUser = clean(userAnswer);
+                    const cCorrect = clean(correctAnswer);
+                    if (cUser === cCorrect) isCorrect = true;
+                    else if (cUser.includes(cCorrect) && cCorrect.length > 2) isCorrect = true;
+                }
+
+                const maxScore = q.marks || 3;
+                return { id: q.id, correct: isCorrect, score: isCorrect ? maxScore : 0, maxScore, userAnswer, correctAnswer, question: q };
+            });
+
+            // 2. AI Grading for short answers over the network
+            const hasShortAnswers = questions.some(q => q.type === 'short_answer');
+            let finalResults = [...baseResults];
+
+            if (hasShortAnswers) {
+                try {
+                    const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+                    const res = await fetch(`${API_URL}/api/maths/lab/grade`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ questions, answers, imageAnswers: imageAnswers || {}, language })
+                    });
+
+                    if (res.ok) {
+                        const aiGrades = await res.json();
+                        finalResults = finalResults.map(r => {
+                            const aiGrade = aiGrades.find(g => g.id === r.id);
+                            if (aiGrade) {
+                                return {
+                                    ...r,
+                                    correct: aiGrade.isCorrect,
+                                    score: aiGrade.score ?? r.score,
+                                    maxScore: aiGrade.maxScore ?? r.maxScore,
+                                    aiFeedback: aiGrade.feedback
+                                };
+                            }
+                            return r;
+                        });
+                    }
+                } catch (e) {
+                    console.error("AI Grading failed, falling back to basic matching", e);
                 }
             }
 
-            return {
-                id: q.id,
-                correct: isCorrect,
-                userAnswer,
-                correctAnswer,
-                question: q
-            };
-        });
+            const totalEarned = finalResults.reduce((sum, r) => sum + (r.score || 0), 0);
+            const totalMax = finalResults.reduce((sum, r) => sum + (r.maxScore || 1), 0);
 
-        const correctCount = gradedResults.filter(r => r.correct).length;
-        setResults(gradedResults);
-        setScore(correctCount);
+            setResults(finalResults);
+            setScore(totalEarned);
+            setTotalPossible(totalMax);
+            setIsGrading(false);
 
-        // Submit to backend for XP/progress
+            // 3. Submit final results to backend
+            if (!isSubmitted && !location.state?.already_submitted) {
+                submitFinalResults(totalEarned, totalMax, finalResults);
+            } else if (submitting) {
+                setSubmitting(false);
+            }
+        };
+
+        // If results array is empty, we haven't graded yet for this load cycle
+        if (results.length === 0) {
+            gradeAnswers();
+        }
+    }, [questions, answers, language, isSubmitted, location.state?.already_submitted]);
+
+    const submitFinalResults = async (totalEarned, totalMax, gradedArray) => {
         try {
+            console.log('[MathsLabReview] Submitting final results to backend...');
             const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+            const potentialXp = xp || 50;
+            const earnedXp = Math.floor((totalEarned / totalMax) * potentialXp);
+
+            const submissionData = {
+                uid: user?.uid,
+                topic,
+                level,
+                score: totalEarned,
+                total: totalMax,
+                taskId,
+                xp: earnedXp,
+                isFactoryQuest,
+                questionIds: questions.map(q => q.id)
+            };
+
             await fetch(`${API_URL}/api/maths/diagnostic/practice/submit`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    uid: user?.uid,
-                    topic,
-                    level,
-                    score: correctCount,
-                    total: questions.length,
-                    taskId,
-                    xp
-                })
+                body: JSON.stringify(submissionData)
+            });
+
+            setIsSubmitted(true);
+
+            // PERSISTENCE: Replace history state with "already_submitted" flag AND grades
+            navigate(location.pathname, {
+                replace: true,
+                state: { ...location.state, already_submitted: true, graded_results: gradedArray, score: totalEarned, totalPossible: totalMax }
             });
         } catch (error) {
             console.error('Failed to submit results:', error);
@@ -90,6 +182,13 @@ const MathsLabReview = () => {
     const renderMath = (text) => {
         if (!text) return null;
 
+        // Safety: Ensure text is a string
+        if (typeof text !== 'string') {
+            if (typeof text === 'number') text = String(text);
+            else if (Array.isArray(text)) text = text.join('\n');
+            else text = String(text);
+        }
+
         // 1. Extract and Hide [DIAGRAM REQUIRED: ...] and [TABLE REQUIRED: ...] tags
         const diagramMatch = text.match(/\[DIAGRAM REQUIRED:([\s\S]*?)\]/);
         const tableMatch = text.match(/\[TABLE REQUIRED:([\s\S]*?)\]/);
@@ -100,48 +199,85 @@ const MathsLabReview = () => {
             .replace(/\[TABLE REQUIRED:[\s\S]*?\]/g, '')
             .trim();
 
-        // 2. Smart Mixed-Mode Renderer to handle text, inline math ($...$, \(...\)), and block math (\[...\], $$...$$)
-        // Correcting escaped delimeters if they exist
-        const cleanText = displaySubtext.replace(/\\\\\$/g, '$').replace(/\\\\\\\[/g, '\\[').replace(/\\\\\\\]/g, '\\]');
-
-        // Regex for math delimiters
-        const parts = cleanText.split(/(\\\[[\s\S]*?\\\]|\\\([\s\S]*?\\\)|(?:\$\$[\s\S]*?\$\$)|(?:\$[^$]+?\$))/g);
+        const cleanText = prepareMathText(displaySubtext);
+        const parts = splitContentByDelimiters(cleanText);
 
         return (
-            <div className="text-gray-800 leading-relaxed space-y-4">
-                <div>
-                    {parts.map((part, i) => {
-                        if (!part) return null;
+            <div className="text-gray-800 leading-relaxed font-sans">
+                {parts.map((part, i) => {
+                    if (!part) return null;
 
-                        // Block Math: \[ ... \] or $$ ... $$
-                        if ((part.startsWith('\\[') && part.endsWith('\\]')) || (part.startsWith('$$') && part.endsWith('$$'))) {
-                            const math = part.slice(2, -2);
+                    const isBlock = (part.startsWith('\\[') && part.endsWith('\\]')) || (part.startsWith('$$') && part.endsWith('$$'));
+                    const isInline = (part.startsWith('\\(') && part.endsWith('\\)')) || (part.startsWith('$') && part.endsWith('$'));
+
+                    if (isBlock || isInline) {
+                        let math = '';
+                        if (part.startsWith('\\[') || part.startsWith('\\(')) math = part.slice(2, -2);
+                        else if (part.startsWith('$$')) math = part.slice(2, -2);
+                        else math = part.slice(1, -1);
+
+                        math = math
+                            .replace(/\n/g, ' ')
+                            .replace(/%/g, '\\%')
+                            .replace(/___HKD___/g, '\\text{HK}\\$')
+                            .replace(/___USD___/g, '\\$');
+
+                        const labeledMath = sanitizeMath(math);
+                        const finalMath = formatNumbers(labeledMath, true);
+
+                        if (isBlock) {
                             return (
-                                <div key={i} className="my-3 overflow-x-auto text-center bg-slate-50 p-4 rounded-xl border border-slate-100">
-                                    <BlockMath math={math} />
-                                </div>
+                                <SafeBlockMath key={i} math={finalMath} className="my-2" />
+                            );
+                        } else {
+                            return (
+                                <SafeInlineMath key={i} math={finalMath} className="mx-0.5" />
                             );
                         }
-                        // Inline Math: \( ... \) or $ ... $
-                        else if ((part.startsWith('\\(') && part.endsWith('\\)')) || (part.startsWith('$') && part.endsWith('$'))) {
-                            const math = part.startsWith('\\(') ? part.slice(2, -2) : part.slice(1, -1);
-                            return <InlineMath key={i} math={math} />;
-                        }
+                    }
 
-                        // Safety Net: If the whole part is raw LaTeX but missing delimiters
-                        // Heuristic: contains common LaTeX and doesn't look like plain text
-                        const isRawMath = (/[\\^=]/.test(part) || part.includes('_')) && !/^[A-Z][a-z]+ /.test(part);
-                        if (isRawMath && parts.length === 1) {
-                            return (
-                                <div key={i} className="my-3 overflow-x-auto text-center bg-slate-50 p-4 rounded-xl border border-slate-100 italic">
-                                    <BlockMath math={part} />
-                                </div>
-                            );
-                        }
+                    return (
+                        <span key={i}>
+                            {part.split(/(?:\r?\n|(?=\.Step\s*\d+\s*:?))/).map((line, lineIdx) => {
+                                const trimmedLine = line.trim().replace(/^\./, '');
+                                if (!trimmedLine && line.length > 0) return <br key={lineIdx} />;
+                                if (!trimmedLine) return null;
 
-                        return <span key={i}>{part}</span>;
-                    })}
-                </div>
+                                const isMathLine = looksLikeMath(trimmedLine);
+                                const isStepLine = line.trim().startsWith('Step') || line.trim().startsWith('.Step');
+
+                                if (isMathLine) {
+                                    const mathReadyLine = trimmedLine
+                                        .replace(/%/g, '\\%')
+                                        .replace(/___HKD___/g, '\\text{HK}\\$')
+                                        .replace(/___USD___/g, '\\$');
+
+                                    const labeledMath = sanitizeMath(mathReadyLine);
+                                    const finalMath = formatNumbers(labeledMath, true);
+
+                                    return (
+                                        <React.Fragment key={lineIdx}>
+                                            {(lineIdx > 0 || isStepLine) && <br />}
+                                            <SafeInlineMath math={finalMath} className="mx-1" />
+                                        </React.Fragment>
+                                    );
+                                } else {
+                                    const formattedLine = formatNumbers(trimmedLine);
+                                    const html = formattedLine.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>').replace(/\*(.*?)\*/g, '<em>$1</em>')
+                                        .replace(/___HKD___/g, 'HK$').replace(/___USD___/g, '$')
+                                        .replace(/\\,/g, ' '); // Strip LaTeX spaces in plain text
+
+                                    return (
+                                        <React.Fragment key={lineIdx}>
+                                            {(lineIdx > 0 || isStepLine) && <br />}
+                                            <span className="whitespace-pre-wrap" dangerouslySetInnerHTML={{ __html: html }} />
+                                        </React.Fragment>
+                                    );
+                                }
+                            })}
+                        </span>
+                    );
+                })}
 
                 {description && (
                     <div className="bg-slate-50 p-4 rounded-xl border border-slate-100 flex flex-col items-center gap-2 text-center my-2">
@@ -158,12 +294,16 @@ const MathsLabReview = () => {
         );
     };
 
-    if (submitting) {
+    if (submitting || isGrading) {
         return (
             <div className="min-h-screen bg-slate-50 flex flex-col items-center justify-center">
                 <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-600 mb-4"></div>
-                <h2 className="text-xl font-bold text-slate-700">Grading Your Answers...</h2>
-                <p className="text-slate-500">Analyzing your responses</p>
+                <h2 className="text-xl font-bold text-slate-700">
+                    {isGrading ? 'AI Examiner is Grading...' : 'Saving Results...'}
+                </h2>
+                <p className="text-slate-500">
+                    {isGrading ? 'Analyzing your steps and final answer' : 'Please wait while we record your progress'}
+                </p>
             </div>
         );
     }
@@ -185,7 +325,7 @@ const MathsLabReview = () => {
         );
     }
 
-    const scorePercent = Math.round((score / questions.length) * 100);
+    const scorePercent = totalPossible > 0 ? Math.round((score / totalPossible) * 100) : 0;
 
     return (
         <div className="min-h-screen bg-slate-50">
@@ -203,15 +343,25 @@ const MathsLabReview = () => {
                             Practice Review
                         </h1>
                         <p className="text-slate-500 text-[10px] font-black uppercase tracking-[0.2em]">
-                            {getMathSkillName(topic, language)} • Level {level}
+                            {getMathSkillName(topic, language)} • {currentTier.displayName}
                         </p>
                     </div>
                 </div>
 
                 <div className="flex items-center gap-4">
+                    <button
+                        onClick={toggleLanguage}
+                        className={`px-3 py-1.5 rounded-lg border text-xs font-black transition-all flex items-center gap-2 ${language === 'zh'
+                            ? 'bg-purple-600 border-purple-600 text-white shadow-sm'
+                            : 'bg-white border-slate-200 text-slate-400 hover:border-purple-300 hover:text-purple-600'
+                            }`}
+                        title="Toggle Language"
+                    >
+                        {language === 'zh' ? '繁體中文' : 'ENGLISH'}
+                    </button>
                     <div className="text-right">
                         <p className="text-sm text-slate-500 font-medium">Your Score</p>
-                        <p className="text-2xl font-black text-purple-600">{score}/{questions.length}</p>
+                        <p className="text-2xl font-black text-purple-600">{score}/{totalPossible}</p>
                     </div>
                 </div>
             </header>
@@ -231,7 +381,7 @@ const MathsLabReview = () => {
                         </div>
                         <div className="text-right">
                             <div className="text-6xl font-black">{score}</div>
-                            <div className="text-purple-200 text-sm">out of {questions.length}</div>
+                            <div className="text-purple-200 text-sm">out of {totalPossible}</div>
                         </div>
                     </div>
                 </div>
@@ -244,10 +394,10 @@ const MathsLabReview = () => {
                             className="bg-white rounded-2xl shadow-lg border-2 border-slate-100 overflow-hidden"
                         >
                             {/* Question Header */}
-                            <div className={`px-6 py-4 flex items-center justify-between ${result.correct ? 'bg-emerald-50' : 'bg-red-50'
+                            <div className={`px-6 py-4 flex items-center justify-between ${result.correct || result.score === result.maxScore ? 'bg-emerald-50' : 'bg-red-50'
                                 }`}>
                                 <div className="flex items-center gap-3">
-                                    {result.correct ? (
+                                    {result.correct || result.score === result.maxScore ? (
                                         <CheckCircle className="w-6 h-6 text-emerald-600" />
                                     ) : (
                                         <XCircle className="w-6 h-6 text-red-600" />
@@ -256,8 +406,8 @@ const MathsLabReview = () => {
                                         <span className="text-xs font-black uppercase tracking-wider text-slate-500">
                                             Question {idx + 1}
                                         </span>
-                                        <p className={`font-black ${result.correct ? 'text-emerald-700' : 'text-red-700'}`}>
-                                            {result.correct ? 'Correct' : 'Incorrect'}
+                                        <p className={`font-black ${result.score === result.maxScore ? 'text-emerald-700' : result.score > 0 ? 'text-amber-700' : 'text-red-700'}`}>
+                                            {result.score} / {result.maxScore} Marks
                                         </p>
                                     </div>
                                 </div>
@@ -271,14 +421,40 @@ const MathsLabReview = () => {
                                 {/* Question Text */}
                                 <div>
                                     <div className="text-lg font-medium text-slate-800">
-                                        {renderMath(result.question.text)}
+                                        {renderMath(language === 'zh' ? (result.question.text_zh || result.question.text) : result.question.text)}
                                     </div>
-                                    {result.question.diagram_svg && (
-                                        <div
-                                            className="mt-4 p-4 bg-white border-2 border-slate-100 rounded-xl flex items-center justify-center overflow-x-auto"
-                                            dangerouslySetInnerHTML={{ __html: result.question.diagram_svg }}
-                                        />
+                                    {/* Diagram Section */}
+                                    {topic !== 'math_alg_apgp' && (result.question.diagram_url || result.question.diagram_json || result.question.diagram_svg) && (
+                                        <div className={`mt-6 flex flex-col items-center mx-auto transition-all duration-300 ${expandedDiagrams[result.id] ? 'w-full' : 'w-[280px]'}`}>
+                                            <div className="w-full relative bg-gradient-to-br from-slate-50 to-slate-100 p-4 border-2 border-dashed border-slate-200 rounded-3xl flex flex-col items-center justify-center">
+                                                <button
+                                                    onClick={() => toggleDiagram(result.id)}
+                                                    className="absolute top-2 right-2 z-10 p-2 bg-white/80 backdrop-blur-md rounded-xl border border-slate-200 shadow-sm text-slate-600 hover:text-purple-600 transition-all scale-75 hover:scale-100"
+                                                >
+                                                    {expandedDiagrams[result.id] ? <Minimize2 size={16} /> : <Maximize2 size={16} />}
+                                                </button>
+
+                                                {result.question.diagram_url ? (
+                                                    <div className="w-full bg-white rounded-2xl p-4 shadow-sm border border-slate-200 flex justify-center items-center overflow-hidden">
+                                                        <img
+                                                            src={`${import.meta.env.VITE_API_URL}/${result.question.diagram_url}`}
+                                                            alt="Mathematical Graph"
+                                                            className={`max-w-full object-contain ${expandedDiagrams[result.id] ? 'max-h-[500px]' : 'max-h-48'}`}
+                                                        />
+                                                    </div>
+                                                ) : result.question.diagram_json ? (
+                                                    <div className="w-full bg-white rounded-2xl p-4 shadow-sm border border-slate-200 flex justify-center items-center">
+                                                        <GeometryRenderer data={result.question.diagram_json} />
+                                                    </div>
+                                                ) : result.question.diagram_svg ? (
+                                                    <div className={`w-full bg-white rounded-2xl p-4 shadow-sm border border-slate-200 flex justify-center items-center ${expandedDiagrams[result.id] ? '' : 'overflow-hidden max-h-48'}`}
+                                                        dangerouslySetInnerHTML={{ __html: result.question.diagram_svg }}
+                                                    />
+                                                ) : null}
+                                            </div>
+                                        </div>
                                     )}
+
                                 </div>
 
                                 {/* User Answer */}
@@ -289,45 +465,67 @@ const MathsLabReview = () => {
                                         : 'bg-red-50 border-red-200'
                                         }`}>
                                         {result.userAnswer ? (
-                                            renderMath(result.userAnswer)
+                                            <div className="whitespace-pre-wrap font-sans">{renderMath(result.userAnswer)}</div>
                                         ) : (
-                                            <span className="text-slate-400 italic">No answer provided</span>
+                                            <span className="text-slate-400 italic">No text answer provided</span>
+                                        )}
+                                        {imageAnswers?.[result.id] && (
+                                            <div className="mt-3 pt-3 border-t border-slate-200">
+                                                <p className="text-[10px] font-black text-purple-500 uppercase tracking-wider mb-2">Handwritten Steps</p>
+                                                <img
+                                                    src={imageAnswers[result.id]}
+                                                    alt="Handwritten answer"
+                                                    className="max-w-sm max-h-64 object-contain rounded-xl border border-slate-200 shadow-sm"
+                                                />
+                                            </div>
                                         )}
                                     </div>
                                 </div>
+
+                                {/* AI Feedback */}
+                                {result.aiFeedback && (
+                                    <div>
+                                        <p className="text-xs font-black text-indigo-600 uppercase tracking-wider mb-2">AI Examiner Feedback</p>
+                                        <div className="p-4 rounded-xl bg-indigo-50 border-2 border-indigo-200 text-indigo-900 whitespace-pre-wrap font-sans">
+                                            {result.aiFeedback}
+                                        </div>
+                                    </div>
+                                )}
 
                                 {/* Correct Answer (if wrong) */}
                                 {!result.correct && (
                                     <div>
                                         <p className="text-xs font-black text-emerald-600 uppercase tracking-wider mb-2">Correct Answer</p>
                                         <div className="p-4 rounded-xl bg-emerald-50 border-2 border-emerald-200">
-                                            {renderMath(result.correctAnswer)}
+                                            {renderMath(language === 'zh' && result.question.type === 'mc' ? (result.question.options_zh?.[result.question.options?.indexOf(result.correctAnswer)] || result.correctAnswer) : result.correctAnswer)}
                                         </div>
                                     </div>
                                 )}
 
                                 {/* Solution Steps */}
-                                {result.question.solution_steps && result.question.solution_steps.length > 0 && (
+                                {((result.question.solution_steps && result.question.solution_steps.length > 0) || result.question.answer_logic_zh) && (
                                     <div>
                                         <p className="text-xs font-black text-purple-600 uppercase tracking-wider mb-3">Step-by-Step Solution</p>
                                         <div className="space-y-4">
-                                            {result.question.solution_steps.map((step, stepIdx) => (
-                                                <div key={stepIdx} className="flex gap-3 group relative">
-                                                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-purple-100 text-purple-700 font-black text-sm flex items-center justify-center">
-                                                        {stepIdx + 1}
-                                                    </div>
-                                                    <div className="flex-1 pt-1 flex items-start justify-between gap-4">
-                                                        <div className="flex-1">
-                                                            {renderMath(step)}
+                                            {(language === 'zh'
+                                                ? (result.question.solution_steps_zh || (result.question.answer_logic_zh ? result.question.answer_logic_zh.split('\\n').filter(s => s.trim()) : result.question.solution_steps))
+                                                : result.question.solution_steps).map((step, stepIdx) => (
+                                                    <div key={stepIdx} className="flex gap-3 group relative">
+                                                        <div className="flex-shrink-0 w-8 h-8 rounded-full bg-purple-100 text-purple-700 font-black text-sm flex items-center justify-center">
+                                                            {stepIdx + 1}
                                                         </div>
-                                                        <MathStepExplainer
-                                                            question={result.question.text}
-                                                            fullSolution={result.question.solution_steps.join('\n')}
-                                                            targetStep={step}
-                                                        />
+                                                        <div className="flex-1 pt-1 flex items-start justify-between gap-4">
+                                                            <div className="flex-1">
+                                                                {renderMath(step)}
+                                                            </div>
+                                                            <MathStepExplainer
+                                                                question={language === 'zh' ? (result.question.text_zh || result.question.text) : result.question.text}
+                                                                fullSolution={language === 'zh' ? (result.question.answer_logic_zh || (result.question.solution_steps_zh ? result.question.solution_steps_zh.join('\\n') : result.question.solution_steps.join('\\n'))) : result.question.solution_steps.join('\\n')}
+                                                                targetStep={step}
+                                                            />
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            ))}
+                                                ))}
                                         </div>
                                     </div>
                                 )}
@@ -339,18 +537,37 @@ const MathsLabReview = () => {
                 {/* Footer Actions */}
                 <div className="mt-12 flex gap-4 justify-center">
                     <button
-                        onClick={() => navigate('/dashboard')}
+                        onClick={() => navigate('/dashboard', {
+                            state: {
+                                labCompleted: true,
+                                topic: title || topic || "Maths Lab",
+                                earnedXp: Math.floor((score / (totalPossible || 1)) * (xp || 50)),
+                                masteryScore: Math.round((score / (totalPossible || 1)) * 100)
+                            }
+                        })}
                         className="px-8 py-4 rounded-2xl bg-slate-100 text-slate-700 font-black hover:bg-slate-200 transition-all flex items-center gap-2"
                     >
                         <Home className="w-5 h-5" />
                         Back to Dashboard
                     </button>
                     <button
-                        onClick={() => window.location.reload()}
+                        onClick={() => navigate('/maths/lab', {
+                            state: { topic, level, taskId, title, xp, isFactoryQuest }
+                        })}
                         className="px-8 py-4 rounded-2xl bg-purple-600 text-white font-black hover:bg-purple-700 transition-all shadow-lg shadow-purple-200"
                     >
-                        Practice Again
+                        Practice again ({currentTier.displayName})
                     </button>
+                    {nextLevel && (
+                        <button
+                            onClick={() => navigate('/maths/lab', {
+                                state: { topic, level: nextLevel, taskId, title, xp, isFactoryQuest }
+                            })}
+                            className="px-8 py-4 rounded-2xl bg-indigo-600 text-white font-black hover:bg-indigo-700 transition-all shadow-lg shadow-indigo-200"
+                        >
+                            Practice Next Level ({nextTier.displayName})
+                        </button>
+                    )}
                 </div>
             </main>
         </div>

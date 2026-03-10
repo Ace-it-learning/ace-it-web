@@ -1,0 +1,632 @@
+{
+    "meta": {
+        "description": "Static factory prompts for DSE Writing Genres. Each genre has 10 topics.",
+        "version": "1.0"
+    },
+    "prompts": {
+        "Debate Speech": [
+            {
+                "id": "deb_001",
+                "title": "AI in Education",
+                "prompt": "Motion: 'Artificial Intelligence will replace teachers within 20 years.' Write a debate speech arguing FOR the motion."
+            },
+            {
+                "id": "deb_002",
+                "title": "Compulsory Volunteering",
+                "prompt": "Motion: 'Secondary students should be required to complete 100 hours of volunteer work.' Write a speech arguing AGAINST this."
+            },
+            {
+                "id": "deb_003",
+                "title": "Social Media Ban",
+                "prompt": "Motion: 'Social media platforms should be banned for users under 16.' Argue FOR the motion."
+            },
+            {
+                "id": "deb_004",
+                "title": "Meat Tax",
+                "prompt": "Motion: 'The government should impose a heavy tax on meat products to combat climate change.' Argue AGAINST the motion."
+            },
+            {
+                "id": "deb_005",
+                "title": "Cashless Society",
+                "prompt": "Motion: 'A fully cashless society is beneficial for Hong Kong.' Argue FOR the motion."
+            },
+            {
+                "id": "deb_006",
+                "title": "Animal Testing",
+                "prompt": "Motion: 'Animal testing for cosmetics should be banned globally.' Argue FOR the motion."
+            },
+            {
+                "id": "deb_007",
+                "title": "University Education",
+                "prompt": "Motion: 'University education should be free for all students.' Argue AGAINST this due to economic concerns."
+            },
+            {
+                "id": "deb_008",
+                "title": "E-Sports Olympics",
+                "prompt": "Motion: 'E-sports should be included as an official Olympic event.' Argue FOR the motion."
+            },
+            {
+                "id": "deb_009",
+                "title": "Space Exploration",
+                "prompt": "Motion: 'Governments spend too much money on space exploration.' Argue FOR the motion."
+            },
+            {
+                "id": "deb_010",
+                "title": "Homework Ban",
+                "prompt": "Motion: 'Homework should be banned in primary schools.' Argue AGAINST the motion."
+            }
+        ],
+        "Letter to the Editor": [
+            {
+                "id": "lte_001",
+                "title": "Plastic Waste",
+                "prompt": "Write a letter to the editor expressing concern about the increasing amount of single-use plastic in Hong Kong supermarkets."
+            },
+            {
+                "id": "lte_002",
+                "title": "Old Buildings",
+                "prompt": "Write a letter to the editor regarding the preservation of historic buildings in your district."
+            },
+            {
+                "id": "lte_003",
+                "title": "Tutorial Culture",
+                "prompt": "Write a letter to the editor criticizing the intense tutorial culture among Hong Kong students."
+            },
+            {
+                "id": "lte_004",
+                "title": "Electric Scooters",
+                "prompt": "Write a letter to the editor arguing that electric scooters should be legalized on cycle tracks."
+            },
+            {
+                "id": "lte_005",
+                "title": "Food Waste",
+                "prompt": "Write a letter suggestion solutions to the massive food waste problem in local restaurants."
+            },
+            {
+                "id": "lte_006",
+                "title": "MTR Fares",
+                "prompt": "Write a letter complaining about the recent increase in MTR fares despite frequent delays."
+            },
+            {
+                "id": "lte_007",
+                "title": "Street Performance",
+                "prompt": "Write a letter supporting the regulation of street performers in pedestrian zones."
+            },
+            {
+                "id": "lte_008",
+                "title": "Light Pollution",
+                "prompt": "Write a letter demanding stricter laws against light pollution from large advertising screens."
+            },
+            {
+                "id": "lte_009",
+                "title": "Integration of Elderly",
+                "prompt": "Write a letter suggesting ways to better integrate the elderly into the digital community."
+            },
+            {
+                "id": "lte_010",
+                "title": "Cage Homes",
+                "prompt": "Write a letter urging the government to take immediate action on the 'cage home' crisis."
+            }
+        ],
+        "Expository Essay": [
+            {
+                "id": "exp_001",
+                "title": "Fast Fashion",
+                "prompt": "Explain the environmental impact of 'Fast Fashion' and what consumers can do to help."
+            },
+            {
+                "id": "exp_002",
+                "title": "Sleep Deprivation",
+                "prompt": "Discuss the causes and effects of sleep deprivation on teenagers' academic performance."
+            },
+            {
+                "id": "exp_003",
+                "title": "Remote Work",
+                "prompt": "Analyze the pros and cons of remote working for employees and employers."
+            },
+            {
+                "id": "exp_004",
+                "title": "K-Pop Phenomenon",
+                "prompt": "Examine the global rise of K-Pop and its cultural influence on youth."
+            },
+            {
+                "id": "exp_005",
+                "title": "Cyberbullying",
+                "prompt": "Explain the psychological effects of cyberbullying and how schools should handle it."
+            },
+            {
+                "id": "exp_006",
+                "title": "Smart Cities",
+                "prompt": "Describe what a 'Smart City' is and how technology improves urban living."
+            },
+            {
+                "id": "exp_007",
+                "title": "Gap Year",
+                "prompt": "Discuss the advantages and disadvantages of taking a 'Gap Year' before university."
+            },
+            {
+                "id": "exp_008",
+                "title": "Minimalism",
+                "prompt": "Explain the lifestyle concept of 'Minimalism' and why it is gaining popularity."
+            },
+            {
+                "id": "exp_009",
+                "title": "Streaming Services",
+                "prompt": "How have streaming services changed the way we consume movies and music?"
+            },
+            {
+                "id": "exp_010",
+                "title": "Vertical Farming",
+                "prompt": "Explain the concept of Vertical Farming and its potential to solve food shortages."
+            }
+        ],
+        "Formal Letter": [
+            {
+                "id": "fml_001",
+                "title": "Complaint: Restaurant",
+                "prompt": "Write a letter to a restaurant manager complaining about poor service and cold food during a recent dinner."
+            },
+            {
+                "id": "fml_002",
+                "title": "Job Application",
+                "prompt": "Write a letter applying for the position of 'Student Helper' at the local library."
+            },
+            {
+                "id": "fml_003",
+                "title": "Invitation: Guest Speaker",
+                "prompt": "Write a letter inviting a famous author to give a talk at your school's 'Reading Week'."
+            },
+            {
+                "id": "fml_004",
+                "title": "Request: Sponsorship",
+                "prompt": "Write a letter to a local business requesting sponsorship for your school's charity fair."
+            },
+            {
+                "id": "fml_005",
+                "title": "Complaint: Noise",
+                "prompt": "Write a letter to the Environmental Protection Department regarding excessive construction noise near your home."
+            },
+            {
+                "id": "fml_006",
+                "title": "Enquiry: Course",
+                "prompt": "Write a letter to a university enquiring about the admission requirements for their Architecture program."
+            },
+            {
+                "id": "fml_007",
+                "title": "Resignation",
+                "prompt": "Write a formal letter of resignation to your part-time employer."
+            },
+            {
+                "id": "fml_008",
+                "title": "Complaint: Bus Driver",
+                "prompt": "Write a letter to the bus company complaining about a driver who skipped a stop."
+            },
+            {
+                "id": "fml_009",
+                "title": "Principal Request",
+                "prompt": "Write a letter to your Principal requesting permission to start a 'Gaming Club'."
+            },
+            {
+                "id": "fml_010",
+                "title": "Scholarship Application",
+                "prompt": "Write a letter to the selection committee explaining why you deserve the 'Outstanding Student Scholarship'."
+            }
+        ],
+        "Report": [
+            {
+                "id": "rpt_001",
+                "title": "Sports Day",
+                "prompt": "Write a report for the school newsletter summarizing the highlights of the annual Sports Day."
+            },
+            {
+                "id": "rpt_002",
+                "title": "Canteen Survey",
+                "prompt": "Your Student Union conducted a survey on canteen food quality. Write a report on the findings."
+            },
+            {
+                "id": "rpt_003",
+                "title": "Library Usage",
+                "prompt": "Write a report on the declining usage of the school library and suggest improvements."
+            },
+            {
+                "id": "rpt_004",
+                "title": "Study Tour",
+                "prompt": "Write a report on the recent school study tour to Beijing, detailing the itinerary and student feedback."
+            },
+            {
+                "id": "rpt_005",
+                "title": "Fashion Show",
+                "prompt": "Write a report on the Inter-house Fashion Show, covering the theme, participation, and results."
+            },
+            {
+                "id": "rpt_006",
+                "title": "Online Learning",
+                "prompt": "Write a report on students' experience with online learning based on a recent questionnaire."
+            },
+            {
+                "id": "rpt_007",
+                "title": "Charity Sale",
+                "prompt": "Write a report on the outcome of the charity bake sale, including funds raised and expenses."
+            },
+            {
+                "id": "rpt_008",
+                "title": "Accident Report",
+                "prompt": "As a prefect, write a factual report on a minor accident that happened in the playground."
+            },
+            {
+                "id": "rpt_009",
+                "title": "Career Fair",
+                "prompt": "Write a report evaluating the effectiveness of the recent Career Fair held at school."
+            },
+            {
+                "id": "rpt_010",
+                "title": "Uniform Policy",
+                "prompt": "Write a report summarizing student opinions on a proposed change to the school uniform."
+            }
+        ],
+        "Proposal": [
+            {
+                "id": "prp_001",
+                "title": "Green Week",
+                "prompt": "Write a proposal to the Principal for organizing a 'Green Week' to promote environmental awareness."
+            },
+            {
+                "id": "prp_002",
+                "title": "Talent Show",
+                "prompt": "Propose a plan for a school-wide Talent Show to boost student morale."
+            },
+            {
+                "id": "prp_003",
+                "title": "Mental Health Day",
+                "prompt": "Write a proposal for a 'Mental Health Awareness Day' activities and budget."
+            },
+            {
+                "id": "prp_004",
+                "title": "e-Learning Platform",
+                "prompt": "Propose the adoption of a new e-learning platform to the school board."
+            },
+            {
+                "id": "prp_005",
+                "title": "Rooftop Garden",
+                "prompt": "Write a proposal to convert the school rooftop into an organic garden."
+            },
+            {
+                "id": "prp_006",
+                "title": "Mentorship Program",
+                "prompt": "Propose a 'Big Brother/Sister' mentorship program for incoming Form 1 students."
+            },
+            {
+                "id": "prp_007",
+                "title": "Cafeteria Menu",
+                "prompt": "Propose changes to the cafeteria menu to include more healthy and vegetarian options."
+            },
+            {
+                "id": "prp_008",
+                "title": "Mobile Phone Policy",
+                "prompt": "Write a proposal to update the school's mobile phone policy to allow usage during lunch."
+            },
+            {
+                "id": "prp_009",
+                "title": "Fitness Corner",
+                "prompt": "Propose the installation of a 'Fitness Corner' in the playground."
+            },
+            {
+                "id": "prp_010",
+                "title": "Reading Scheme",
+                "prompt": "Propose a new 'Reward-based Reading Scheme' to encourage students to read more English books."
+            }
+        ],
+        "Short Story": [
+            {
+                "id": "fic_001",
+                "title": "The Ancient Ruin",
+                "prompt": "Write a short story that begins with: 'The old key turned with a groan, and the door creaked open, revealing a world I never knew existed.'\n\nSituation: You are a young explorer venturing into an ancient, forgotten ruin. Local legends warned against entering, speaking of hidden power. Driven by curiosity, you ignore the warnings. \n\nFocus: Your initial experiences, emphasizing sights, sounds, and emotions. How does this world challenge your understanding of reality?"
+            },
+            {
+                "id": "fic_002",
+                "title": "The Memory Shop",
+                "prompt": "Write a short story that begins with: 'The label on the dusty glass jar simply read: \"The Day I Flew\".'\n\nSituation: You live in a future where people buy and sell memories. While exploring a junk shop, you find a jar containing a memory that seems to call out to you. After experiencing it, you realize it belongs to someone you know. \n\nFocus: The sensory details of the 'flight' and the moral dilemma of returning the memory or keeping it for yourself."
+            },
+            {
+                "id": "fic_003",
+                "title": "The Digital Glitch",
+                "prompt": "Write a short story that begins with: 'I blinked, and for a split second, the sunset turned into a sea of green binary code.'\n\nSituation: You are a student in a ultra-modern city where everything is digital. You start seeing 'glitches' that suggest your world is a simulation. A mysterious stranger hands you a physical, paper map to an 'Exit'. \n\nFocus: The feeling of paranoia and the transition from your comfortable digital life to the mysterious 'Exit'. What do you find when you follow the map?"
+            },
+            {
+                "id": "fic_004",
+                "title": "The Shadow Exchange",
+                "prompt": "Write a short story that begins with: 'The man at the corner offered me a deal: my shadow in exchange for perfect luck.'\n\nSituation: You have been plagued by bad luck for years. Desperate, you accept a strange man's offer to trade your shadow. Suddenly, your life is perfect, but you realize your shadow was also your conscience. \n\nFocus: The unexpected consequences of being 'too lucky' and the internal conflict as you try to get your shadow back."
+            },
+            {
+                "id": "fic_005",
+                "title": "The Uncharted Floor",
+                "prompt": "Write a short story that begins with: 'The elevator chime was higher than usual, and the display flickered to a floor that wasn't on the directory.'\n\nSituation: While heading to a boring class in your school's high-rise building, you end up on a hidden floor. It is a vast, indoor jungle filled with extinct animals and ancient technology. \n\nFocus: The contrast between the sterile school environment and this wild world. Describe your exploration and the discovery of why the floor was hidden."
+            },
+            {
+                "id": "fic_006",
+                "title": "The Silent Melody",
+                "prompt": "Write a short story that begins with: 'The device clicked, and for the first time in fifteen years, the city of Hong Kong fell perfectly silent.'\n\nSituation: The government has installed 'Silence Orbs' to stop noise pollution. In the total silence, you begin to hear a beautiful, haunting melody coming from the harbor that no one else seems to notice. \n\nFocus: Your journey to find the source of the music. Use vivid auditory descriptions to contrast the artificial silence with the mysterious melody."
+            },
+            {
+                "id": "fic_007",
+                "title": "The Clockwork Prediction",
+                "prompt": "Write a short story that begins with: 'The mechanical bird landed on my shoulder and whispered a date: tomorrow.'\n\nSituation: You find a small brass bird that speaks. It tells you that something life-changing will happen tomorrow at noon in Central. You have 24 hours to prepare, but you don't know if the change is good or bad. \n\nFocus: The tension of the countdown and the choices you make as you prepare for the unknown. How do your friends and family react to your strange behavior?"
+            },
+            {
+                "id": "fic_008",
+                "title": "The Mirror's Warning",
+                "prompt": "Write a short story that begins with: 'I walked past the mirror, but my reflection didn't move until three seconds later.'\n\nSituation: You discover that your reflection is a separate version of you living in a parallel world. It starts leaving urgent messages on the bathroom mirror, warning you about a person in your 'real' world who isn't what they seem. \n\nFocus: The psychological mystery of who to trust and the eerie communication between the two worlds."
+            },
+            {
+                "id": "fic_009",
+                "title": "The Buried Message",
+                "prompt": "Write a short story that begins with: 'The rust-covered lid finally gave way, revealing a smartphone that shouldn't have been buried in 1920.'\n\nSituation: While helping with a garden renovation at an old heritage site, you dig up a time capsule. Inside is a modern phone with one single video saved—a message from your future self. \n\nFocus: The shock and confusion of the discovery. What does the message say, and how does it change your plans for the upcoming school year?"
+            },
+            {
+                "id": "fic_010",
+                "title": "The Last Real Thing",
+                "prompt": "Write a short story that begins with: 'The holographic forest flickered out, revealing the gray, concrete reality beneath.'\n\nSituation: You live in a domed colony on a barren planet where all nature is a projection. During a power failure, you find a small, real green sprout growing in a crack in the floor—the first real life in a century. \n\nFocus: The wonder of seeing something 'real' and your mission to protect the plant from being destroyed by city cleaning droids."
+            }
+        ],
+        "Personal Experience": [
+            {
+                "id": "per_001",
+                "title": "Overcoming Fear",
+                "prompt": "Describe a time you overcame a major fear. What happened and how did you feel?"
+            },
+            {
+                "id": "per_002",
+                "title": "A Mistake",
+                "prompt": "Write about a mistake you made that taught you a valuable lesson."
+            },
+            {
+                "id": "per_003",
+                "title": "Memorable Trip",
+                "prompt": "Describe the most memorable trip you have ever taken with your family."
+            },
+            {
+                "id": "per_004",
+                "title": "Helping Someone",
+                "prompt": "Reflect on a time you helped a stranger. Why did you do it and what was the result?"
+            },
+            {
+                "id": "per_005",
+                "title": "A Special Meal",
+                "prompt": "Describe a meal that was significant to you (e.g., a reunion dinner)."
+            },
+            {
+                "id": "per_006",
+                "title": "Lost Item",
+                "prompt": "Write about the panic of losing something important and how you resolved it."
+            },
+            {
+                "id": "per_007",
+                "title": "Teacher Influence",
+                "prompt": "Describe a teacher who has had a positive influence on your life."
+            },
+            {
+                "id": "per_008",
+                "title": "Team Victory",
+                "prompt": "Describe the feeling of winning a team sports event after months of training."
+            },
+            {
+                "id": "per_009",
+                "title": "Rainy Day",
+                "prompt": "Describe a rainy day spent indoors and how it made you feel."
+            },
+            {
+                "id": "per_010",
+                "title": "New Skill",
+                "prompt": "Write about the experience of learning a difficult new skill (e.g., playing guitar)."
+            }
+        ],
+        "Biographical Profile": [
+            {
+                "id": "bio_001",
+                "title": "Local Hero",
+                "prompt": "Write a profile of a 'local hero' in your community who helps others."
+            },
+            {
+                "id": "bio_002",
+                "title": "Grandparent",
+                "prompt": "Write a biographical profile of your grandparent, focusing on their childhood."
+            },
+            {
+                "id": "bio_003",
+                "title": "School Captain",
+                "prompt": "Interview the School Captain and write a profile for the school magazine."
+            },
+            {
+                "id": "bio_004",
+                "title": "Favorite Athlete",
+                "prompt": "Write a profile of an athlete you admire, highlighting their struggles and success."
+            },
+            {
+                "id": "bio_005",
+                "title": "Street Cleaner",
+                "prompt": "Write a profile of a street cleaner to raise awareness of their hard work."
+            },
+            {
+                "id": "bio_006",
+                "title": "Inspiring Teacher",
+                "prompt": "Write a profile of a teacher who is retiring after 30 years of service."
+            },
+            {
+                "id": "bio_007",
+                "title": "Young Inventor",
+                "prompt": "Write a profile of a young student who invented something useful."
+            },
+            {
+                "id": "bio_008",
+                "title": "Charity Worker",
+                "prompt": "Write a profile of someone who dedicates their life to charity."
+            },
+            {
+                "id": "bio_009",
+                "title": "Artist",
+                "prompt": "Write a profile of a local artist and their creative process."
+            },
+            {
+                "id": "bio_010",
+                "title": "Underdog",
+                "prompt": "Write a profile of someone who succeeded despite many failures."
+            }
+        ],
+        "Review": [
+            {
+                "id": "rev_001",
+                "title": "Movie Review",
+                "prompt": "Write a review of the last movie you watched. Would you recommend it?"
+            },
+            {
+                "id": "rev_002",
+                "title": "Restaurant Review",
+                "prompt": "Write a review of a new cafe in your neighborhood. Discuss food, service, and vibe."
+            },
+            {
+                "id": "rev_003",
+                "title": "Book Review",
+                "prompt": "Write a review of a book that you think every teenager should read."
+            },
+            {
+                "id": "rev_004",
+                "title": "Game Review",
+                "prompt": "Write a review of a popular mobile game. Is it worth the hype?"
+            },
+            {
+                "id": "rev_005",
+                "title": "Event Review",
+                "prompt": "Write a review of the school's Christmas Concert."
+            },
+            {
+                "id": "rev_006",
+                "title": "Product Review",
+                "prompt": "Write a review of a new electronic gadget you recently bought."
+            },
+            {
+                "id": "rev_007",
+                "title": "Hotel Review",
+                "prompt": "Write a review of a hotel you stayed at during a holiday."
+            },
+            {
+                "id": "rev_008",
+                "title": "Website Review",
+                "prompt": "Write a review of an online learning website. Is it effective?"
+            },
+            {
+                "id": "rev_009",
+                "title": "Show Review",
+                "prompt": "Write a review of a TV series that everyone is talking about."
+            },
+            {
+                "id": "rev_010",
+                "title": "Theme Park",
+                "prompt": "Write a review of a visit to Disneyland or Ocean Park."
+            }
+        ],
+        "Feature Article": [
+            {
+                "id": "art_001",
+                "title": "Stress Busters",
+                "prompt": "Write a feature article titled '5 Ways to Beat Exam Stress' for the school magazine."
+            },
+            {
+                "id": "art_002",
+                "title": "Hidden Gems",
+                "prompt": "Write a feature article about 'Hidden Gems' (places to eat/visit) in your district."
+            },
+            {
+                "id": "art_003",
+                "title": "Digital Detox",
+                "prompt": "Write a feature article on the benefits of a 'Digital Detox' weekend."
+            },
+            {
+                "id": "art_004",
+                "title": "Healthy Eating",
+                "prompt": "Write a feature article on how to eat healthy on a student budget."
+            },
+            {
+                "id": "art_005",
+                "title": "DIY Gifts",
+                "prompt": "Write a guide on making simple DIY gifts for friends."
+            },
+            {
+                "id": "art_006",
+                "title": "Future Careers",
+                "prompt": "Write a feature article on 'Jobs of the Future' that usually don't exist yet."
+            },
+            {
+                "id": "art_007",
+                "title": "Volunteer Work",
+                "prompt": "Write an article persuading students to try volunteering."
+            },
+            {
+                "id": "art_008",
+                "title": "Learn a Language",
+                "prompt": "Write an article on the benefits of learning a third language."
+            },
+            {
+                "id": "art_009",
+                "title": "Exercise Myths",
+                "prompt": "Write an article busting common myths about exercise and fitness."
+            },
+            {
+                "id": "art_010",
+                "title": "Sustainable Living",
+                "prompt": "Write an article giving practical tips on how students can live more sustainably."
+            }
+        ],
+        "Personal Letter/Email": [
+            {
+                "id": "per_let_001",
+                "title": "Invitation to Party",
+                "prompt": "Write an email to your friend inviting them to your 18th birthday party. Mention the theme and activities."
+            },
+            {
+                "id": "per_let_002",
+                "title": "Holiday Advice",
+                "prompt": "Your cousin is visiting Hong Kong. Write an email suggesting 3 must-visit places and 2 local dishes to try."
+            },
+            {
+                "id": "per_let_003",
+                "title": "Thank You Letter",
+                "prompt": "Write a letter to your aunt thanking her for the Christmas present and describing how you used it."
+            },
+            {
+                "id": "per_let_004",
+                "title": "Apology to Friend",
+                "prompt": "You missed your best friend's basketball match. Write an email apologizing and explaining why you couldn't make it."
+            },
+            {
+                "id": "per_let_005",
+                "title": "Future Plans",
+                "prompt": "Write an email to a pen-pal discussing your plans for the upcoming summer holiday and your career aspirations."
+            },
+            {
+                "id": "per_let_006",
+                "title": "Asking for Help",
+                "prompt": "Write an email to a senior student asking for advice on how to prepare for the DSE English exam."
+            },
+            {
+                "id": "per_let_007",
+                "title": "Congratulations",
+                "prompt": "Your friend won a singing competition. Write an email congratulating them and suggesting a celebration dinner."
+            },
+            {
+                "id": "per_let_008",
+                "title": "Moving House",
+                "prompt": "Write a letter to a friend who moved away, updating them on the latest news in your school and neighborhood."
+            },
+            {
+                "id": "per_let_009",
+                "title": "Pet Advice",
+                "prompt": "A friend just got a new puppy. Write an email sharing your experience and giving tips on pet care."
+            },
+            {
+                "id": "per_let_010",
+                "title": "Reunion Plan",
+                "prompt": "Write an email to your primary school classmates proposing a reunion gathering during the Lunar New Year."
+            }
+        ]
+    }
+}

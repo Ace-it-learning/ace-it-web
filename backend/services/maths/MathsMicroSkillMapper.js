@@ -11,9 +11,6 @@ const SKILL_KEYWORDS = {
     'growth': 'math_num_percentages',
     'decay': 'math_num_percentages',
 
-    'estimat': 'math_num_estimation', // estimation, estimate
-    'error': 'math_num_estimation',
-    'significant': 'math_num_estimation',
 
     'ratio': 'math_num_ratio',
     'proportion': 'math_num_ratio',

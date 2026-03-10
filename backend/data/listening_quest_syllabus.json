@@ -1,0 +1,96 @@
+{
+    "title": "HKDSE Paper 3: Listening & Integrated Skills",
+    "learning_objectives": [
+        "Master the decoding of diverse accents (British, American, Australian, Local)",
+        "Develop speed processing and ambiguity handling",
+        "Enhance strategic note-taking and gist extraction",
+        "Synthesize auditory information into integrated tasks"
+    ],
+    "learning_content": [
+        {
+            "id": "pillar_decoding",
+            "title": "Pillar 1: Decoding & Processing (The Ear)",
+            "description": "Focus on low-level mechanics: Accent, Speed, and Ambiguity.",
+            "dse_objective": "Accurately parse words despite accent, speed, or noise.",
+            "british_tutor_hint": "Don't let the accent throw you. Focus on the stressed vowels.",
+            "micro_skills": [
+                {
+                    "id": "accent_recognition",
+                    "name": "Accent Recognition",
+                    "weight": 40
+                },
+                {
+                    "id": "speed_processing",
+                    "name": "Speed Processing",
+                    "weight": 30
+                },
+                {
+                    "id": "ambiguity_handling",
+                    "name": "Ambiguity Handling",
+                    "weight": 30
+                }
+            ]
+        },
+        {
+            "id": "pillar_capture",
+            "title": "Pillar 2: Strategic Capture (The Pen)",
+            "description": "Focus on mid-level strategy: Prediction and Note-taking.",
+            "dse_objective": "Efficiently record key details and the general gist.",
+            "british_tutor_hint": "Use abbreviations. If they say 'approximately', write '~'.",
+            "micro_skills": [
+                {
+                    "id": "note_taking",
+                    "name": "Note-Taking",
+                    "weight": 25
+                },
+                {
+                    "id": "prediction",
+                    "name": "Prediction",
+                    "weight": 25
+                },
+                {
+                    "id": "detail_listening",
+                    "name": "Detail Listening",
+                    "weight": 25
+                },
+                {
+                    "id": "listening_for_gist",
+                    "name": "Listening for Gist",
+                    "weight": 25
+                }
+            ]
+        },
+        {
+            "id": "pillar_synthesis",
+            "title": "Pillar 3: Critical Synthesis (The Brain)",
+            "description": "Focus on high-level interpretation: Attitude and Integration.",
+            "dse_objective": "Interpret tone and synthesize data into formal tasks.",
+            "british_tutor_hint": "Listen to the pitch. High pitch often means surprise or sarcasm.",
+            "micro_skills": [
+                {
+                    "id": "main_idea",
+                    "name": "Main Idea Listening",
+                    "weight": 30
+                },
+                {
+                    "id": "speaker_attitude",
+                    "name": "Speaker Attitude",
+                    "weight": 30
+                },
+                {
+                    "id": "integrated_tasks",
+                    "name": "Integrated Tasks",
+                    "weight": 40
+                }
+            ]
+        }
+    ],
+    "quest_types": [
+        {
+            "id": "listening_mission",
+            "title": "Listening Mission",
+            "description": "A complete scenario testing all 3 pillars.",
+            "pillar": "all"
+        }
+    ]
+}

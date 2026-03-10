@@ -1,0 +1,71 @@
+{
+  "meta": {
+    "title": "Writing Mock: Youth Development Blueprint",
+    "topic": "Youth Development Blueprint",
+    "generated_at": "2026-01-31T06:24:21.768Z",
+    "blueprint_version": "2026_V1"
+  },
+  "Part_A": [
+    {
+      "part": "Part A",
+      "genre": "Formal Email (Application/Enquiry)",
+      "title": "Enquiry about Summer Internship Programme",
+      "instructions": "Write about 200 words. Pay attention to the format and tone of a formal email.",
+      "situation": "You are a Form Five student interested in applying for a summer internship programme at 'TechForward Solutions', a local technology company. You saw an advertisement for the programme on their website but would like to know more details before submitting your application.",
+      "requirements": [
+        "Enquire about the specific skills and experience TechForward Solutions is looking for in potential interns.",
+        "Ask about the application deadline and required documents.",
+        "Express your enthusiasm for the programme and your interest in technology.",
+        "Provide a brief overview of your relevant skills or experience (e.g., participation in coding clubs, relevant coursework)."
+      ],
+      "format_guides": [
+        "Use a formal greeting and closing (e.g., 'Dear Sir/Madam', 'Yours faithfully').",
+        "Maintain a professional and polite tone.",
+        "Include your name and contact information.",
+        "Clearly state the purpose of your email in the subject line."
+      ]
+    }
+  ],
+  "Part_B": [
+    {
+      "elective": "Sports Communication",
+      "question": "Your school newspaper is launching a new sports section. As the editor, you need to write an article (approx. 400 words) profiling a local athlete who overcame significant adversity to achieve success. The athlete should be relatively unknown but have a compelling story that will inspire readers. In your article, detail the athlete's challenges, their training regimen, key moments in their career, and how they inspire the community. Include a quote from the athlete and a quote from someone who supports them.",
+      "type": "Article"
+    },
+    {
+      "elective": "Drama",
+      "question": "Your drama club is performing an original play about the challenges faced by teenagers in Hong Kong. As the playwright, you need to write a scene (approx. 400 words) involving two characters arguing about the pressure to succeed academically. One character is highly driven and focused on achieving top grades, while the other feels overwhelmed and burnt out. The scene should demonstrate their contrasting viewpoints and reveal the emotional toll of academic stress on their friendship. Include stage directions.",
+      "type": "Play Script Scene"
+    },
+    {
+      "elective": "Poems/Songs",
+      "question": "Write a song (approx. 400 words) with at least three verses and a chorus, exploring the theme of cultural identity in Hong Kong. The song should reflect the unique blend of Eastern and Western influences in the city, and how this shapes the experiences and perspectives of its residents. Consider incorporating imagery related to local landmarks, traditions, and contemporary issues. Your song must also contain a bridge section that changes the tone and introduces a contrasting point of view.",
+      "type": "Song Lyrics"
+    },
+    {
+      "elective": "Debating",
+      "question": "Your school is holding a debate on the motion: 'This house believes that social media has a net positive impact on society.' Prepare a speech (approx. 400 words) either for or against the motion. Clearly state your position and present at least three well-developed arguments supported by evidence and examples. Address potential counter-arguments and conclude with a strong call to action. Assume you are speaking to an audience of secondary school students and teachers.",
+      "type": "Debate Speech"
+    },
+    {
+      "elective": "Social Issues",
+      "question": "Write a letter to the editor (approx. 400 words) of a local newspaper expressing your concern about a social issue affecting your community. Choose an issue such as poverty, environmental pollution, or inequality. Describe the problem clearly, explain its impact on the community, and propose at least three specific solutions that could be implemented to address the issue. Support your arguments with evidence and examples, and persuade readers to take action.",
+      "type": "Letter to the Editor"
+    },
+    {
+      "elective": "Workplace Comms",
+      "question": "You are the project leader of a team tasked with organizing a company-wide charity event. Write a proposal (approx. 400 words) to your manager outlining your plan for the event. Include details about the chosen charity, the proposed activities, the budget, and the timeline. Explain how the event will benefit the company's image and contribute to the community. Persuade your manager to approve your proposal by highlighting its feasibility and potential impact.",
+      "type": "Proposal"
+    },
+    {
+      "elective": "Pop Culture",
+      "question": "Write a review (approx. 400 words) of a recent film, television show, or video game that has had a significant impact on popular culture. Analyze its themes, characters, and narrative structure. Discuss its strengths and weaknesses, and explain why it has resonated with audiences. Consider its social and cultural significance, and how it reflects or challenges contemporary values. Conclude with a recommendation (or not) for your audience.",
+      "type": "Review"
+    },
+    {
+      "elective": "Short Stories",
+      "question": "Write a short story (approx. 400 words) about a character who discovers a hidden talent or ability that changes their life. The story should be set in Hong Kong and incorporate local elements. Focus on the character's emotional journey and the challenges they face as they learn to embrace their newfound talent. Consider themes of self-discovery, acceptance, and the power of unexpected opportunities. Include vivid descriptions and compelling dialogue.",
+      "type": "Short Story"
+    }
+  ]
+}

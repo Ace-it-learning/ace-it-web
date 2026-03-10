@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4F46E5"/>
+      <stop offset="100%" stop-color="#312E81"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#bg)" rx="20"/>
+  
+  <text x="200" y="50" font-family="sans-serif" font-size="24" font-weight="bold" fill="white" text-anchor="middle" letter-spacing="1">DIVISION</text>
+  
+  <g transform="translate(20, 120)" font-family="serif" font-size="28" font-style="italic">
+    <text x="0" y="0" fill="white">a + bi</text>
+    <line x1="0" y1="10" x2="80" y2="10" stroke="white" stroke-width="2"/>
+    <text x="0" y="40" fill="white">c + di</text>
+    
+    <text x="100" y="20" fill="white">×</text>
+    
+    <text x="140" y="0" fill="#C7D2FE">c - di</text>
+    <line x1="140" y1="10" x2="220" y2="10" stroke="#C7D2FE" stroke-width="2"/>
+    <text x="140" y="40" fill="#C7D2FE">c - di</text>
+    
+    <text x="240" y="20" fill="white">=</text>
+    
+    <text x="280" y="0" fill="white">(...)</text>
+    <line x1="280" y1="10" x2="360" y2="10" stroke="white" stroke-width="2"/>
+    <text x="280" y="40" fill="#6EE7B7">c² + d²</text>
+  </g>
+  
+  <text x="200" y="240" font-family="sans-serif" font-size="14" fill="#C7D2FE" text-anchor="middle">Multiply by Conjugate</text>
+  <text x="200" y="260" font-family="sans-serif" font-size="14" fill="#6EE7B7" text-anchor="middle">Real Denominator</text>
+</svg>

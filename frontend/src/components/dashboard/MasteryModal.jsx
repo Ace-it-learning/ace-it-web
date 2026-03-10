@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import * as Dialog from '@radix-ui/react-dialog';
-import { Compass, Info, Award, TrendingUp, X, BookOpen, PenTool, Headphones, Mic, ChevronRight, Trophy } from 'lucide-react';
+import { Compass, Info, Award, TrendingUp, X, BookOpen, PenTool, Headphones, Mic, ChevronRight, Trophy, Lock } from 'lucide-react';
 import MasteryRadar from './MasteryRadar';
 import { getUserMastery, getMasteryHistory } from '../../services/masteryService';
 import { useAuth } from '../../context/AuthContext';
 import { useLanguage } from '../../context/LanguageContext';
+import { useMockGate } from '../../hooks/useMockGate';
 import { getSkillName, getSkillDesc, getSkillsByPaper } from '../../constants/microSkills';
 
 const MasteryModal = ({ isOpen, onClose }) => {
@@ -15,7 +16,7 @@ const MasteryModal = ({ isOpen, onClose }) => {
     const [masteryData, setMasteryData] = useState(null);
     const [historyData, setHistoryData] = useState([]);
     const [loading, setLoading] = useState(true);
-
+    const { englishUnlocked } = useMockGate(user?.uid);
     useEffect(() => {
         if (isOpen && user?.uid) {
             const fetchData = async () => {
@@ -64,20 +65,22 @@ const MasteryModal = ({ isOpen, onClose }) => {
 
         const paperPrefix = selectedPaper.toLowerCase();
         const filtered = {};
-        Object.entries(skillsObj)
-            .filter(([key]) => key.toLowerCase().startsWith(paperPrefix))
-            .forEach(([key, val]) => {
-                const translatedName = getSkillName(key, language);
-                filtered[translatedName] = (val.level || val) * 14.28;
-            });
 
-        // If specific paper has no skills data but we want to show empty radar
-        if (Object.keys(filtered).length === 0 && selectedPaper !== 'Overview') {
-            const defaultSkills = getSkillsByPaper(paperPrefix);
-            defaultSkills.forEach(skillId => {
-                filtered[getSkillName(skillId, language)] = 0;
-            });
-        }
+        // iterate over ALL defined skills for this paper, not just what the user has progress in
+        const allSkillIds = getSkillsByPaper(paperPrefix);
+
+        allSkillIds.forEach(skillId => {
+            const translatedName = getSkillName(skillId, language);
+            const val = skillsObj[skillId];
+
+            // If user has progress, use it. Otherwise 0.
+            let level = 0;
+            if (val) {
+                level = (typeof val === 'object' ? val.level : val) || 0;
+            }
+
+            filtered[translatedName] = level * 14.28; // Scale 0-7 to 0-100%
+        });
 
         return filtered;
     };
@@ -225,7 +228,14 @@ const MasteryModal = ({ isOpen, onClose }) => {
                                         <p className="text-4xl font-black text-white drop-shadow-[0_0_15px_rgba(34,211,238,0.5)]">
                                             {t(`mastery.level_labels.${Math.floor(Number(masteryData?.level || 0))}`)}
                                         </p>
-                                        <p className="text-[10px] text-cyan-400/80 mt-1 font-medium italic">HKDSE Equivalent Grade</p>
+                                        {englishUnlocked ? (
+                                            <p className="text-[10px] text-cyan-400/80 mt-1 font-medium italic">HKDSE Equivalent Grade</p>
+                                        ) : (
+                                            <div className="flex items-center gap-1 mt-1 text-cyan-300/50 text-[10px]">
+                                                <Lock className="w-3 h-3" />
+                                                <span>Complete all 4 English Mock Papers to unlock DSE Grade</span>
+                                            </div>
+                                        )}
                                     </div>
                                 )}
 

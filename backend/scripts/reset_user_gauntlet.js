@@ -23,17 +23,25 @@ async function resetUser(email) {
 
         const userRef = db.collection('users').doc(uid);
 
-        // 1. Delete all subcollections
-        const subcollections = await userRef.listCollections();
-        for (const sub of subcollections) {
-            console.log(`Deleting subcollection: ${sub.id}`);
-            const snapshot = await sub.get();
-            if (snapshot.size > 0) {
-                const batch = db.batch();
-                snapshot.docs.forEach(doc => batch.delete(doc.ref));
-                await batch.commit();
+        // 1. Delete all subcollections recursively
+        async function deleteRecursive(ref) {
+            const subcollections = await ref.listCollections();
+            for (const sub of subcollections) {
+                console.log(`Scanning subcollection: ${sub.id}`);
+                const snapshot = await sub.get();
+                if (snapshot.size > 0) {
+                    const batch = db.batch();
+                    for (const doc of snapshot.docs) {
+                        await deleteRecursive(doc.ref);
+                        batch.delete(doc.ref);
+                    }
+                    await batch.commit();
+                }
             }
         }
+
+        await deleteRecursive(userRef);
+        console.log("✅ All user data and subcollections deleted.");
 
         // 2. Clear conversation history records pointing to this UID
         const historySnapshot = await db.collection('history').where('uid', '==', uid).get();

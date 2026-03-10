@@ -1,0 +1,81 @@
+{
+    "exam_type": "dse_english_paper_4",
+    "version": "1.0",
+    "structure": {
+        "Part_A": {
+            "title": "Group Interaction",
+            "duration": "8 minutes",
+            "prep_time": "10 minutes",
+            "description": "Candidates take part in a group discussion based on a given short text.",
+            "roles": [
+                "Examiner",
+                "Candidate A",
+                "Candidate B",
+                "Candidate C",
+                "Candidate D (User)"
+            ]
+        },
+        "Part_B": {
+            "title": "Individual Response",
+            "duration": "1 minute",
+            "description": "Each candidate responds individually to an Examiner's question related to the discussion topic.",
+            "roles": [
+                "Examiner",
+                "Candidate D (User)"
+            ]
+        }
+    },
+    "simulation_config": {
+        "turn_taking": {
+            "min_turns": 3,
+            "max_turns": 6,
+            "interruption_chance": 0.2
+        },
+        "voices": {
+            "Examiner": "en-GB-Standard-A",
+            "Candidate_A": "en-US-Standard-B",
+            "Candidate_B": "en-AU-Standard-C",
+            "Candidate_C": "en-IN-Standard-D"
+        }
+    },
+    "assessment_criteria": {
+        "Pronunciation_And_Delivery": {
+            "weight": 30,
+            "aspects": [
+                "Intonation",
+                "Stress",
+                "Fluency",
+                "Clarity"
+            ]
+        },
+        "Communication_Strategies": {
+            "weight": 30,
+            "aspects": [
+                "Turn-taking",
+                "Responding",
+                "Clarifying",
+                "Body Language (Simulated)"
+            ]
+        },
+        "Vocabulary_And_Language_Patterns": {
+            "weight": 20,
+            "aspects": [
+                "Range",
+                "Accuracy",
+                "Appropriacy"
+            ]
+        },
+        "Ideas_And_Organization": {
+            "weight": 20,
+            "aspects": [
+                "Relevance",
+                "Development",
+                "Coherence"
+            ]
+        }
+    },
+    "prompt_template": {
+        "Part_A": "You are discussing {TOPIC}. You have read an article titled '{ARTICLE_TITLE}'. Your group should discuss: 1. {POINT_1}, 2. {POINT_2}, 3. {POINT_3}.",
+        "Part_B": "Candidate D, {QUESTION}"
+    }
+}

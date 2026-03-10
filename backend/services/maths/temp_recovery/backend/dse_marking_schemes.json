@@ -1,0 +1,81 @@
+{
+    "paper1_reading": {
+        "structure": "Part A (Compulsory), Part B1 (Easier) or Part B2 (Difficult)",
+        "marking_domains": [
+            "Content",
+            "Language",
+            "Organization"
+        ],
+        "max_sub_score": 7,
+        "total_marks": 21,
+        "descriptors": {
+            "language": {
+                "7": "Extremely accurate grammar, vocabulary well-chosen, punctuation entirely correct.",
+                "4": "Mostly accurate grammar with occasional errors, sufficient sentence structures.",
+                "1": "Fragmented language, difficult to understand."
+            }
+        }
+    },
+    "paper2_writing": {
+        "marking_domains": [
+            "Content",
+            "Language",
+            "Organization"
+        ],
+        "scoring": "7/7/7",
+        "descriptors": {
+            "Content": {
+                "max": 7,
+                "key_traits": [
+                    "Extensive",
+                    "Relevant",
+                    "Creativity"
+                ]
+            },
+            "Language": {
+                "max": 7,
+                "key_traits": [
+                    "Sentence Range",
+                    "Accuracy",
+                    "Vocabulary"
+                ]
+            },
+            "Organization": {
+                "max": 7,
+                "key_traits": [
+                    "Logically developed",
+                    "Cohesive ties",
+                    "Coherent"
+                ]
+            }
+        }
+    },
+    "paper4_speaking": {
+        "marking_domains": [
+            "Pronunciation & Delivery",
+            "Communication Strategies",
+            "Vocabulary & Language Patterns",
+            "Ideas & Organization"
+        ],
+        "scoring": "0-7 Scale per Domain",
+        "max_sub_score": 7,
+        "key_focus": [
+            "Audibility",
+            "Initiation/Maintenance",
+            "Range of vocabulary",
+            "Logical linking"
+        ],
+        "descriptors": {
+            "Pronunciation & Delivery": {
+                "7": "Native-like intonation, clear articulation, effective stress.",
+                "4": "Generally clear, some errors in stress/intonation but understood.",
+                "1": "Frequent errors making comprehension difficult."
+            },
+            "Communication Strategies": {
+                "7": "Sustains interaction effectively, excellent turn-taking skills.",
+                "4": "Maintains interaction, responds appropriately most times.",
+                "1": "Limited interaction, passive."
+            }
+        }
+    }
+}

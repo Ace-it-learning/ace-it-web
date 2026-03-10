@@ -1,12 +1,17 @@
 import React, { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { BlockMath, InlineMath } from 'react-katex';
+import { SafeInlineMath, SafeBlockMath } from '../maths/SafeMath';
 import { Sigma, Calculator, ChevronLeft, CheckCircle, XCircle, AlertCircle } from 'lucide-react';
+import { useLanguage } from '../../context/LanguageContext';
+import { formatNumbers, sanitizeMath, prepareMathText, splitContentByDelimiters, looksLikeMath } from '../../utils/mathFormattingUtils';
+import MathStepExplainer from '../maths/MathStepExplainer';
+import GeometryRenderer from '../maths/GeometryRenderer';
 
 const MathsDiagnosticAnalysis = () => {
     const { state } = useLocation();
     const navigate = useNavigate();
+    const { language, t } = useLanguage();
     const [activeTab, setActiveTab] = useState('paper1'); // Default to Conventional
 
     if (!state || !state.results) {
@@ -85,12 +90,14 @@ const MathsDiagnosticAnalysis = () => {
                             <ConventionalAnalysis
                                 results={results.details.filter(d => d.id.includes('p1'))}
                                 paper={results.paper || { questions: [] }}
+                                language={language}
                             />
                         )}
                         {activeTab === 'paper2' && (
                             <MCQAnalysis
                                 results={results.details.filter(d => d.id.includes('p2'))}
                                 paper={results.paper || { questions: [] }}
+                                language={language}
                             />
                         )}
                     </motion.div>
@@ -106,95 +113,102 @@ const MathsDiagnosticAnalysis = () => {
 const SmartMathText = ({ text }) => {
     if (!text) return null;
 
-    // 1. Strip [DIAGRAM REQUIRED: ...] and [TABLE REQUIRED: ...] tags from visual display
     const displaySubtext = text
         .replace(/\[DIAGRAM REQUIRED:[\s\S]*?\]/g, '')
         .replace(/\[TABLE REQUIRED:[\s\S]*?\]/g, '')
         .trim();
 
-    // Split by newlines to handle multi-row requirement
-    const lines = displaySubtext.split(/\n/g);
+    const cleanText = prepareMathText(displaySubtext);
+    const parts = splitContentByDelimiters(cleanText);
 
     return (
         <div className="space-y-4">
-            {lines.map((line, lineIdx) => {
-                if (!line.trim()) return lineIdx === 0 ? null : <div key={lineIdx} className="h-2" />;
+            <div className="text-slate-700 font-medium font-sans leading-relaxed">
+                {parts.map((part, i) => {
+                    if (!part) return null;
 
-                // Detect "Step X:" prefix
-                const stepMatch = line.match(/^(Step \d+:)/i);
-                let content = line;
-                let stepPrefix = null;
+                    const isBlock = (part.startsWith('\\[') && part.endsWith('\\]')) || (part.startsWith('$$') && part.endsWith('$$'));
+                    const isInline = (part.startsWith('\\(') && part.endsWith('\\)')) || (part.startsWith('$') && part.endsWith('$'));
 
-                if (stepMatch) {
-                    stepPrefix = stepMatch[1];
-                    content = line.replace(stepMatch[1], '').trim();
-                }
+                    if (isBlock || isInline) {
+                        let math = '';
+                        if (part.startsWith('\\[') || part.startsWith('\\(')) math = part.slice(2, -2);
+                        else if (part.startsWith('$$')) math = part.slice(2, -2);
+                        else math = part.slice(1, -1);
 
-                // 2. Smart Mixed-Mode Renderer to handle text, inline math ($...$, \(...\)), and block math (\[...\], $$...$$)
-                const cleanLine = content.replace(/\\\\\$/g, '$').replace(/\\\\\\\[/g, '\\[').replace(/\\\\\\\]/g, '\\]');
-                const parts = cleanLine.split(/(\\\[[\s\S]*?\\\]|\\\([\s\S]*?\\\)|(?:\$\$[\s\S]*?\$\$)|(?:\$[^$]+?\$))/g);
+                        math = math
+                            .replace(/\n/g, ' ')
+                            .replace(/%/g, '\\%')
+                            .replace(/___HKD___/g, '\\text{HK}\\$')
+                            .replace(/___USD___/g, '\\$');
 
-                return (
-                    <div key={lineIdx} className="leading-relaxed flex flex-wrap items-baseline gap-x-1">
-                        {stepPrefix && (
-                            <span className={`inline-flex px-2 py-0.5 rounded-md text-[10px] font-black uppercase tracking-wider mr-1 shadow-sm shrink-0 ${stepPrefix.includes('1') ? 'bg-indigo-100 text-indigo-700' :
-                                stepPrefix.includes('2') ? 'bg-violet-100 text-violet-700' :
-                                    stepPrefix.includes('3') ? 'bg-fuchsia-100 text-fuchsia-700' :
-                                        'bg-teal-100 text-teal-700'
-                                }`}>
-                                {stepPrefix}
-                            </span>
-                        )}
-                        <span className="text-slate-700 font-medium whitespace-pre-wrap">
-                            {parts.map((part, i) => {
-                                if (!part) return null;
-                                // Block Math: \[ ... \] or $$ ... $$
-                                if ((part.startsWith('\\[') && part.endsWith('\\]')) || (part.startsWith('$$') && part.endsWith('$$'))) {
-                                    return <div key={i} className="my-2 w-full text-center bg-slate-50/50 p-3 rounded-lg"><BlockMath math={part.slice(2, -2)} /></div>;
+                        const labeledMath = sanitizeMath(math);
+                        const finalMath = formatNumbers(labeledMath, true);
+
+                        if (isBlock) {
+                            return (
+                                <SafeBlockMath key={i} math={finalMath} className="my-2" />
+                            );
+                        } else {
+                            return (
+                                <SafeInlineMath key={i} math={finalMath} className="mx-0.5" />
+                            );
+                        }
+                    }
+
+                    // For plain text, split by lines to handle "Step X:" prefixes
+                    return (
+                        <span key={i}>
+                            {part.split(/(?:\r?\n|(?=\.Step\s*\d+\s*:?))/).map((line, lineIdx, arr) => {
+                                if (!line.trim() && arr.length > 1) {
+                                    return <br key={lineIdx} />;
                                 }
-                                // 0. Extract diagram/table description
-                                const diagramMatch = part.match(/\[DIAGRAM REQUIRED:([\s\S]*?)\]/);
-                                const tableMatch = part.match(/\[TABLE REQUIRED:([\s\S]*?)\]/);
-                                const description = (diagramMatch ? diagramMatch[1] : (tableMatch ? tableMatch[1] : '')).trim();
+                                const trimmedLine = line.trim().replace(/^\./, ''); // Clean leading dot artifact
+                                if (!trimmedLine) return null;
 
-                                if (description) {
-                                    return (
-                                        <div key={i} className="my-2 w-full p-4 bg-slate-50 border border-slate-100 rounded-xl flex flex-col items-center gap-2 text-center">
-                                            <div className="w-8 h-8 bg-white rounded-lg shadow-sm flex items-center justify-center text-slate-400">
-                                                <i className={`fas ${tableMatch ? 'fa-table' : 'fa-chart-area'}`}></i>
-                                            </div>
-                                            <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest leading-none">
-                                                Technical {tableMatch ? 'Data' : 'Figure'} Preview
-                                            </p>
-                                            <p className="text-sm text-slate-600 italic font-medium leading-relaxed">"{description}"</p>
+                                // Detect "Step X:" prefix (more flexible regex)
+                                const stepMatch = trimmedLine.match(/^(Step\s*\d+\s*:?)/i);
+                                let innerContent = trimmedLine;
+                                let stepPrefix = null;
+
+                                if (stepMatch) {
+                                    stepPrefix = stepMatch[1];
+                                    innerContent = trimmedLine.replace(stepMatch[1], '').trim();
+                                }
+
+                                const isMathLine = looksLikeMath(innerContent || stepPrefix);
+
+                                return (
+                                    <React.Fragment key={lineIdx}>
+                                        <div className="flex flex-wrap items-baseline gap-x-1 mb-1">
+                                            {stepPrefix && (
+                                                <span className={`inline-flex px-2 py-0.5 rounded-md text-[10px] font-black uppercase tracking-wider mr-1 shadow-sm shrink-0 ${stepPrefix.includes('1') ? 'bg-indigo-100 text-indigo-700' :
+                                                    stepPrefix.includes('2') ? 'bg-violet-100 text-violet-700' :
+                                                        stepPrefix.includes('3') ? 'bg-fuchsia-100 text-fuchsia-700' :
+                                                            'bg-teal-100 text-teal-700'
+                                                    }`}>
+                                                    {stepPrefix}
+                                                </span>
+                                            )}
+                                            {isMathLine ? (
+                                                <SafeInlineMath key={lineIdx} math={formatNumbers(sanitizeMath(innerContent.replace(/%/g, '\\%').replace(/___HKD___/g, '\\text{HK}\\$').replace(/___USD___/g, '\\$')), true)} className="mx-1" />
+                                            ) : (
+                                                <span className="whitespace-pre-wrap">{formatNumbers(innerContent).replace(/___HKD___/g, 'HK$').replace(/___USD___/g, '$').replace(/\\,/g, ' ')}</span>
+                                            )}
                                         </div>
-                                    );
-                                }
-
-                                // Inline Math: \( ... \) or $ ... $
-                                else if ((part.startsWith('\\(') && part.endsWith('\\)')) || (part.startsWith('$') && part.endsWith('$'))) {
-                                    const math = part.startsWith('\\(') ? part.slice(2, -2) : part.slice(1, -1);
-                                    return <InlineMath key={i} math={math} />;
-                                }
-
-                                // Safety Net: If the whole part is raw LaTeX but missing delimiters
-                                // Heuristic: contains common LaTeX and doesn't look like plain text
-                                const isRawMath = (/[\\^=]/.test(part) || part.includes('_')) && !/^[A-Z][a-z]+ /.test(part);
-                                if (isRawMath && parts.length === 1) {
-                                    return <div key={i} className="my-2 w-full text-center bg-slate-50/50 p-3 rounded-lg"><BlockMath math={part} /></div>;
-                                }
-
-                                return <span key={i}>{part}</span>;
+                                    </React.Fragment>
+                                );
                             })}
                         </span>
-                    </div>
-                );
-            })}
+                    );
+                })}
+            </div>
         </div>
     );
 };
 
-const ConventionalAnalysis = ({ results }) => {
+const ConventionalAnalysis = ({ results, language }) => {
+    const isChinese = language?.startsWith('zh');
     return (
         <div className="space-y-10">
             {results.map((item, idx) => (
@@ -223,6 +237,11 @@ const ConventionalAnalysis = ({ results }) => {
                         <div className="mb-10 text-xl text-slate-800 bg-slate-50 p-6 rounded-2xl border border-dashed border-slate-200">
                             <div className="text-[10px] font-black text-slate-400 uppercase mb-3 tracking-widest">Question Fragment</div>
                             <SmartMathText text={item.question_text} />
+                            {item.diagram_json && (
+                                <div className="mt-6 p-4 bg-white rounded-2xl border border-slate-100 flex items-center justify-center">
+                                    <GeometryRenderer data={item.diagram_json} />
+                                </div>
+                            )}
                         </div>
 
                         {/* Analysis Grid */}
@@ -233,12 +252,12 @@ const ConventionalAnalysis = ({ results }) => {
                                 <div className="p-6 bg-slate-50 rounded-2xl border border-slate-100 min-h-[80px]">
                                     {item.student_answer ? (
                                         <div className="text-lg">
-                                            <BlockMath math={
+                                            <SmartMathText text={
                                                 typeof item.student_answer === 'string'
-                                                    ? item.student_answer.replace(/\n/g, ' \\\\[1.2em] ')
+                                                    ? item.student_answer
                                                     : Object.entries(item.student_answer)
-                                                        .map(([k, v]) => `\\text{Part (${k}): } ${v}`)
-                                                        .join(' \\\\[1.2em] ')
+                                                        .map(([k, v]) => `Part (${k}): ${v}`)
+                                                        .join('\n')
                                             } />
                                         </div>
                                     ) : (
@@ -255,10 +274,14 @@ const ConventionalAnalysis = ({ results }) => {
                                 </label>
                                 <div className="p-8 bg-purple-50/50 rounded-2xl border border-purple-100 text-slate-800 leading-relaxed font-medium">
                                     <div className="mb-6">
-                                        <h4 className="text-sm font-bold text-purple-900 mb-2">Step-by-Step Explanation</h4>
-                                        <div className="text-base text-slate-700 space-y-2">
-                                            <SmartMathText text={item.explanation || item.feedback || "Detailed analysis unavailable."} />
+                                        <div className="text-base text-slate-700 space-y-2 mb-4">
+                                            <SmartMathText text={(isChinese && item.explanation_zh) ? item.explanation_zh : (item.explanation || item.feedback || "Detailed analysis unavailable.")} />
                                         </div>
+                                        <MathStepExplainer
+                                            question={item.question_text}
+                                            fullSolution={item.explanation || item.feedback}
+                                            targetStep={item.explanation || item.feedback}
+                                        />
                                     </div>
 
                                     {item.micro_skills && item.micro_skills.length > 0 && (
@@ -283,7 +306,8 @@ const ConventionalAnalysis = ({ results }) => {
     );
 };
 
-const MCQAnalysis = ({ results }) => {
+const MCQAnalysis = ({ results, language }) => {
+    const isChinese = language?.startsWith('zh');
     return (
         <div className="grid grid-cols-1 gap-6">
             {results.map((item, idx) => (
@@ -298,33 +322,41 @@ const MCQAnalysis = ({ results }) => {
                         <div className="flex justify-between items-center mb-1">
                             <h4 className="font-bold text-slate-400 text-xs uppercase tracking-widest">Question {idx + 1} • {item.topic}</h4>
                             <div className="flex gap-2">
-                                <span className="text-[10px] font-black px-2 py-0.5 rounded bg-slate-100 text-slate-500 uppercase border border-slate-200">
-                                    {item.max} Mark
-                                </span>
-                                <span className={`text-[10px] font-black px-2 py-0.5 rounded uppercase ${item.is_correct ? 'bg-emerald-400 text-white' : 'bg-rose-400 text-white'
-                                    }`}>
-                                    {item.is_correct ? 'Correct' : 'Incorrect'}
+                                <span className={`text-[10px] font-black px-2 py-0.5 rounded uppercase ${item.score === item.max ? 'bg-emerald-400 text-white' : item.score > 0 ? 'bg-amber-400 text-white' : 'bg-rose-400 text-white'}`}>
+                                    {item.score || 0} / {item.max || 1} Marks
                                 </span>
                             </div>
                         </div>
 
                         <div className="mb-4 text-slate-800 font-medium text-lg">
                             <SmartMathText text={item.question_text} />
+                            {item.diagram_json && (
+                                <div className="mt-4 p-4 bg-white rounded-2xl border border-slate-100 flex items-center justify-center">
+                                    <GeometryRenderer data={item.diagram_json} />
+                                </div>
+                            )}
                         </div>
 
                         <div className="flex items-center gap-6 mb-6">
                             <div className="flex items-center gap-2">
                                 <span className="text-slate-400 text-xs font-bold">Your Ans:</span>
                                 <span className={`font-black text-lg ${item.is_correct ? 'text-emerald-600' : 'text-rose-600'}`}>
-                                    <InlineMath math={item.student_answer || 'N/A'} />
+                                    {/[\\$α-ωΔ-Ω]/.test(item.student_answer || '') ? (
+                                        <SafeInlineMath math={sanitizeMath(item.student_answer || 'N/A')} />
+                                    ) : (
+                                        <span>{item.student_answer || 'N/A'}</span>
+                                    )}
                                 </span>
                             </div>
                             {!item.is_correct && (
                                 <div className="flex items-center gap-2 border-l border-slate-200 pl-6">
                                     <span className="text-slate-400 text-xs font-bold">Correct:</span>
                                     <span className="font-black text-lg text-slate-800">
-                                        <InlineMath math={item.explanation?.match(/Answer: (.*)/)?.[1] || item.correct_answer || 'Check Explanation'} />
-                                        {/* Fallback to simple logic if exact answer not strictly parsed */}
+                                        {/[\\$α-ωΔ-Ω]/.test(item.correct_answer || item.explanation || '') ? (
+                                            <SafeInlineMath math={sanitizeMath(item.explanation?.match(/Answer: (.*)/)?.[1] || item.correct_answer || 'Check Explanation')} />
+                                        ) : (
+                                            <span>{item.explanation?.match(/Answer: (.*)/)?.[1] || item.correct_answer || 'Check Explanation'}</span>
+                                        )}
                                     </span>
                                 </div>
                             )}
@@ -335,9 +367,14 @@ const MCQAnalysis = ({ results }) => {
                             <h5 className="text-[10px] font-black text-purple-500 uppercase tracking-widest mb-2 flex items-center gap-1">
                                 🔍 Logic Breakdown
                             </h5>
-                            <p className="text-sm text-slate-600 leading-relaxed">
-                                <SmartMathText text={item.explanation || "No deep analysis available."} />
+                            <p className="text-sm text-slate-600 leading-relaxed mb-4">
+                                <SmartMathText text={(isChinese && item.explanation_zh) ? item.explanation_zh : (item.explanation || "No deep analysis available.")} />
                             </p>
+                            <MathStepExplainer
+                                question={item.question_text}
+                                fullSolution={item.explanation}
+                                targetStep={item.explanation}
+                            />
 
                             {item.micro_skills && item.micro_skills.length > 0 && (
                                 <div className="mt-4 flex flex-wrap gap-2">

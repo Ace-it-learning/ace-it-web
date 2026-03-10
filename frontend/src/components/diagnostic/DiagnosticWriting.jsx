@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Clock, Zap } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 
-const DiagnosticWriting = ({ assets, onSubmit }) => {
+const DiagnosticWriting = ({ assets, onSubmit, isSubmitting }) => {
     const { user } = useAuth();
     const [text, setText] = useState('');
     const [showCheat, setShowCheat] = useState(false);
@@ -80,6 +80,7 @@ const DiagnosticWriting = ({ assets, onSubmit }) => {
                     placeholder="Start writing here..."
                     value={text}
                     onChange={(e) => setText(e.target.value)}
+                    disabled={isSubmitting}
                 />
                 <div className="absolute bottom-4 right-4 text-xs font-mono text-gray-500 bg-white px-2 py-1 rounded">
                     {wordCount} words
@@ -88,13 +89,13 @@ const DiagnosticWriting = ({ assets, onSubmit }) => {
 
             <button
                 onClick={handleSubmit}
-                disabled={wordCount < 10}
-                className={`w-full mt-6 py-4 rounded-xl font-bold transition-all shadow-lg ${wordCount < 10
+                disabled={wordCount < 10 || isSubmitting}
+                className={`w-full mt-6 py-4 rounded-xl font-bold transition-all shadow-lg ${wordCount < 10 || isSubmitting
                     ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
                     : 'bg-blue-600 hover:bg-blue-700 text-white hover:shadow-xl'
                     }`}
             >
-                Submit Writing Sample
+                {isSubmitting ? "Processing Analysis..." : "Submit Writing Sample"}
             </button>
 
             {/* Developer Cheat Button */}

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#064E3B"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#bg)"/>
+  
+  <text x="200" y="70" font-family="sans-serif" font-size="24" font-weight="bold" fill="white" text-anchor="middle" letter-spacing="2">CROSS MULTIPLICATION</text>
+  
+  <!-- Fraction 1 -->
+  <text x="120" y="140" font-family="serif" font-size="56" font-style="italic" fill="white">a</text>
+  <line x1="100" y1="160" x2="160" y2="160" stroke="#A7F3D0" stroke-width="4"/>
+  <text x="120" y="210" font-family="serif" font-size="56" font-style="italic" fill="white">b</text>
+
+  <text x="200" y="180" font-family="sans-serif" font-size="48" fill="white" text-anchor="middle">=</text>
+
+  <!-- Fraction 2 -->
+  <text x="280" y="140" font-family="serif" font-size="56" font-style="italic" fill="white">c</text>
+  <line x1="260" y1="160" x2="320" y2="160" stroke="#A7F3D0" stroke-width="4"/>
+  <text x="280" y="210" font-family="serif" font-size="56" font-style="italic" fill="white">d</text>
+
+  <!-- Cross arrows -->
+  <path d="M 150 130 L 260 200" fill="none" stroke="#FBBF24" stroke-width="6" stroke-linecap="round"/>
+  <polygon points="265,205 250,205 260,192" fill="#FBBF24"/>
+
+  <path d="M 150 200 L 260 130" fill="none" stroke="#60A5FA" stroke-width="6" stroke-linecap="round"/>
+  <polygon points="265,125 250,125 260,138" fill="#60A5FA"/>
+
+  <text x="200" y="270" font-family="sans-serif" font-size="16" font-weight="bold" fill="#FDE047" text-anchor="middle">ad = bc</text>
+</svg>

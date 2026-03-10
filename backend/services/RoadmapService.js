@@ -91,13 +91,24 @@ class RoadmapService {
                 const title = isObject ? planItem.title : planItem;
                 const topic = isObject ? planItem.topic : planItem;
 
+                // Tiered XP Logic for Roadmap
+                const skillLevel = (subject === 'maths' ? diag?.microSkills?.[topic]?.level : diag?.microSkills?.[topic]?.level) || startLevel || 1;
+                const GamificationService = require('./GamificationService');
+
+                let tier = 1;
+                if (skillLevel >= 6.0) tier = 4;
+                else if (skillLevel >= 4.5) tier = 3;
+                else if (skillLevel >= 2.5) tier = 2;
+
+                const taskXp = GamificationService.getTieredXP(tier);
+
                 return {
                     id: `week_${moment().format('WW')}_task_${idx}`,
                     title: title, // e.g., "Master Indefinite Articles"
                     topic: topic, // Used to seed the Chat/Lab context
                     type: 'PRACTICE', // Force all to PRACTICE
                     category: 'PERSONALIZED', // AI-generated personalized quest
-                    xp: 100, // Tailored tasks earn 100 XP
+                    xp: taskXp, // Standardized tiered XP
                     status: 'PENDING'
                 };
             });

@@ -1,0 +1,12 @@
+﻿[dotenv@17.2.3] injecting env (1) from .env -- tip: 🔄 add secrets lifecycle management: https://dotenvx.com/ops
+Using API Key: AIzaS...
+--- Testing Model Availability ---
+❌ gemini-1.5-flash (v1beta): FAILED ([GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent: [404 Not Fou)
+❌ gemini-1.5-flash-latest (v1beta): FAILED ([GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent: [404 )
+❌ gemini-1.5-pro (v1beta): FAILED ([GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent: [404 Not Found)
+❌ gemini-1.5-pro-latest (v1beta): FAILED ([GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro-latest:generateContent: [404 No)
+❌ gemini-2.0-flash-exp (v1beta): FAILED ([GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent: [404 Not)
+✅ gemini-2.0-flash (v1beta): AVAILABLE
+❌ gemini-1.5-flash (v1): FAILED ([GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash:generateContent: [404 Not Found] )
+❌ gemini-1.5-pro (v1): FAILED ([GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1/models/gemini-1.5-pro:generateContent: [404 Not Found] mo)
+❌ gemini-pro (v1): FAILED ([GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1/models/gemini-pro:generateContent: [404 Not Found] models)

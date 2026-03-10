@@ -1,0 +1,105 @@
+{
+    "project": "Ace it Project",
+    "paper": "Paper 2 (Writing)",
+    "learning_content": [
+        {
+            "domain": "Content (The Brains)",
+            "id": "pillar_content",
+            "skills_integrated": [
+                "Relevance",
+                "Development",
+                "Originality"
+            ],
+            "dse_objective": "Ensure ideas are expanded with specific examples rather than vague generalizations.",
+            "british_tutor_hint": "Don't just tell me it's important; show me why! Use the 'What if?' technique to develop your points.",
+            "ai_checks": [
+                "Does this answer the prompt directly?",
+                "Are there specific examples provided?",
+                "Is the argument logical?"
+            ]
+        },
+        {
+            "domain": "Language (The Beauty)",
+            "id": "pillar_language",
+            "skills_integrated": [
+                "Vocabulary Range",
+                "Collocations",
+                "Idiomatic Expressions",
+                "Register",
+                "Sentence Variety",
+                "Grammar",
+                "Punctuation"
+            ],
+            "dse_objective": "Move from Level 3 'Safe' English to Level 5* 'Sophisticated' English.",
+            "british_tutor_hint": "Stop using 'very' and 'good'. Try 'exceptionally' or 'commendable'. Use an inverted sentence or a conditional for that Level 5 'wow' factor.",
+            "power_ups": [
+                "Swap weak adjectives for strong collocations",
+                "Combine short sentences using complex structures",
+                "Ensure tone is appropriate for the text type"
+            ]
+        },
+        {
+            "domain": "Organization (The Bones)",
+            "id": "pillar_organization",
+            "skills_integrated": [
+                "Paragraph Structure",
+                "Transitions",
+                "Coherence"
+            ],
+            "dse_objective": "Create a logical flow where each paragraph acts as a stepping stone to the conclusion.",
+            "british_tutor_hint": "Your transitions shouldn't be 'Firstly, Secondly'. That's boring. Try 'Building on this notion' or 'Conversely'.",
+            "transition_types": [
+                "Contrast",
+                "Addition",
+                "Cause & Effect",
+                "Sequence"
+            ]
+        }
+    ],
+    "genre_matrix": [
+        {
+            "type": "Argumentative (議論文)",
+            "id": "cat_argumentative",
+            "formats": [
+                "Debate Speech",
+                "Letter to the Editor",
+                "Expository Essay"
+            ],
+            "key_feature": "Logical structure, counter-arguments, persuasive devices.",
+            "register_rule": "Formal & Persuasive"
+        },
+        {
+            "type": "Narrative (記事/抒情)",
+            "id": "cat_narrative",
+            "formats": [
+                "Short Story",
+                "Personal Experience",
+                "Biographical Profile"
+            ],
+            "key_feature": "Descriptive adjectives, past tenses, emotional arc.",
+            "register_rule": "Descriptive & Engaging"
+        },
+        {
+            "type": "Transactional (實用文)",
+            "id": "cat_transactional",
+            "formats": [
+                "Formal Letter",
+                "Report",
+                "Proposal"
+            ],
+            "key_feature": "Headings, bullet points, objective register.",
+            "register_rule": "Formal & Objective"
+        },
+        {
+            "type": "Discursive (評論)",
+            "id": "cat_discursive",
+            "formats": [
+                "Review",
+                "Feature Article",
+                "Personal Letter/Email"
+            ],
+            "key_feature": "Subjective opinion, catchy headlines, direct audience address.",
+            "register_rule": "Semi-formal to Informal"
+        }
+    ]
+}

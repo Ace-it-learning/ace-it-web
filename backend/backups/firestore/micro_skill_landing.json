@@ -1,0 +1,1741 @@
+{
+  "reading_authorPurpose": {
+    "micro_skill": "Author's Purpose",
+    "micro_skill_zh": "作者意圖 / 寫作目的",
+    "category": "Critical Reading",
+    "difficulty_target": "Level 3-5",
+    "learning_content": {
+      "anatomy": {
+        "definition": "The reason why an author writes a specific text or includes a particular detail—usually categorized into Informing, Persuading, Entertaining, or Criticizing.",
+        "definition_zh": "作者創作特定文本或加入特定細節的原因——通常分為提供資訊、說服、娛樂或批評。",
+        "formula": "Text Type + Tone + Targeted Audience = Author's Purpose",
+        "formula_zh": "文本類型 + 語調 + 目標受眾 = 寫作目的",
+        "examples": [
+          {
+            "scenario": "Specific Detail Purpose",
+            "text": "The author includes a heartbreaking story about a family losing their home to rising sea levels in a report about climate change.",
+            "clues": [
+              "heartbreaking story",
+              "family losing home"
+            ],
+            "logic": "Anecdotes are often used to evoke empathy and make a dry scientific topic feel more urgent.",
+            "inference_en": "To humanize the statistics and persuade the reader to take environmental action.",
+            "inference_zh": "將數據人性化，並說服讀者採取環保行動。"
+          },
+          {
+            "scenario": "Overall Text Purpose",
+            "text": "A travel guide that lists the history, ticket prices, and opening hours of the Palace Museum.",
+            "clues": [
+              "history",
+              "prices",
+              "hours"
+            ],
+            "logic": "The content is purely factual and designed to help a visitor plan a trip.",
+            "inference_en": "To provide practical information and educate the reader about a cultural landmark.",
+            "inference_zh": "提供實用資訊，並教育讀者了解文化地標。"
+          }
+        ]
+      },
+      "dse_appearance": [
+        {
+          "type": "The 'Why' Question (目的題)",
+          "description": "Asking why a specific phrase, example, or paragraph was included.",
+          "examples": [
+            "Q: What is the main purpose of paragraph 1?",
+            "Q: Why does the writer mention 'The Titanic' in line 12?"
+          ]
+        },
+        {
+          "type": "Overall Intent (整體意圖)",
+          "description": "Identifying the writer's goal for the entire passage.",
+          "examples": [
+            "Q: The writer wrote this article mainly to...",
+            "Q: Who is the intended audience of this passage?"
+          ]
+        }
+      ],
+      "common_traps": [
+        {
+          "trap": "Confusing Topic with Purpose (主題與目的混淆)",
+          "description": "Answering 'what the book is about' instead of 'why it was written'.",
+          "example_trap": "Purpose: 'To talk about dogs' (This is a topic, not a purpose like 'to encourage dog adoption').",
+          "solution_zh": "使用動詞開頭。正確答案通常由動詞（如 'to argue', 'to highlight', 'to criticize', 'to promote'）引領。"
+        },
+        {
+          "trap": "Surface-Level Purpose (過於表面)",
+          "description": "Missing the underlying irony or sarcasm.",
+          "solution_zh": "注意語氣。如果作者在讚美一個顯然很糟糕的政策，他的目的可能是「嘲諷 (to satirize)」而非真的支持。"
+        }
+      ],
+      "pro_tips_en": [
+        "The 'P.I.E.E.' Framework: Is it to Persuade, Inform, Entertain, or Explain?",
+        "Check the Conclusion: The final paragraph often contains a 'call to action' which clearly states the author's ultimate goal.",
+        "Analyze the Source: An article from a 'Science Journal' aims to inform; an 'Opinion Piece' in a newspaper aims to persuade."
+      ]
+    }
+  },
+  "reading_cohesionReference": {
+    "micro_skill": "Cohesion and Reference",
+    "micro_skill_zh": "銜接與指代",
+    "category": "Linguistic Analysis",
+    "difficulty_target": "Level 2-4",
+    "learning_content": {
+      "anatomy": {
+        "definition": "The ability to identify how words (pronouns, determiners) and phrases link back to previously mentioned ideas or forward to upcoming ones.",
+        "definition_zh": "辨識詞語（代詞、限定詞）與短語如何連結至前文提到的概念或預示後文內容的能力。",
+        "formula": "Reference Word (It/This/They) + Contextual Backtracking = Antecedent (The Answer)",
+        "formula_zh": "指代詞 (It/This/They) + 語境回溯 = 先行詞 (答案)",
+        "examples": [
+          {
+            "scenario": "Pronoun Reference",
+            "text": "The local residents were unhappy with the new park regulations. They argued that these rules were too restrictive.",
+            "clues": [
+              "They",
+              "these rules"
+            ],
+            "logic": "'They' is a plural pronoun referring to the people mentioned earlier. 'These rules' refers to the 'regulations'.",
+            "inference_en": "'They' refers to the local residents; 'these rules' refers to the new park regulations.",
+            "inference_zh": "「They」指代當地居民；「these rules」指代新的公園條例。"
+          },
+          {
+            "scenario": "Abstract Reference",
+            "text": "Rising sea levels, extreme heatwaves, and frequent flooding have become the new normal. This reality is forcing cities to rethink urban planning.",
+            "clues": [
+              "This reality"
+            ],
+            "logic": "'This reality' summarizes the entire previous sentence's list of environmental issues.",
+            "inference_en": "'This reality' refers to the fact that rising sea levels, heatwaves, and flooding have become common.",
+            "inference_zh": "「This reality」指代海平面上升、極端熱浪和頻繁洪水已成常態的事實。"
+          }
+        ]
+      },
+      "dse_appearance": [
+        {
+          "type": "Reference Questions (指代題)",
+          "description": "Identifying the noun or idea a pronoun stands for.",
+          "examples": [
+            "Q: In line 15, what does the word 'them' refer to?",
+            "Q: What does 'this trend' (line 22) refer to?"
+          ]
+        },
+        {
+          "type": "Cohesive Devices (銜接手段)",
+          "description": "Understanding how transition words link paragraphs together.",
+          "examples": [
+            "Q: How does the word 'However' in paragraph 3 change the direction of the argument?"
+          ]
+        }
+      ],
+      "common_traps": [
+        {
+          "trap": "The 'Nearest Noun' Trap (就近原則陷阱)",
+          "description": "Picking the noun physically closest to the pronoun, even if it doesn't make sense.",
+          "solution_zh": "進行「代入測試」。將你找到的答案放回原句替換代詞，如果句子語意不通，那就找錯了。"
+        },
+        {
+          "trap": "Plural/Singular Mismatch (單複數不符)",
+          "description": "Choosing a singular noun for a plural pronoun like 'them' or 'those'.",
+          "solution_zh": "語法匹配。如果代詞是 'they'，你的答案必須是一個複數名詞或一個代表複數概念的詞組。"
+        }
+      ],
+      "pro_tips_en": [
+        "The 'Substitution' Rule: Replace the pronoun with your answer. If the sentence sounds perfect, you've found it.",
+        "Look for 'Such': Words like 'such a problem' or 'such people' always link back to a description in the previous sentence.",
+        "Track the Subject: Often, the subject of the previous sentence remains the subject of the next one, even if it becomes a pronoun."
+      ]
+    }
+  },
+  "reading_detailRecognition": {
+    "micro_skill": "Detail Recognition",
+    "micro_skill_zh": "細節辨識",
+    "category": "Reading Comprehension",
+    "difficulty_target": "Level 2-4",
+    "learning_content": {
+      "anatomy": {
+        "definition": "The ability to pinpoint specific facts, figures, names, or sequences within a text to answer targeted questions.",
+        "definition_zh": "從文本中精確定位特定事實、數據、名稱或順序，以回答針對性問題的能力。",
+        "formula": "Scan for Nouns/Numbers + Compare with Options = Detail Verified",
+        "formula_zh": "掃描名詞/數字 + 選項比對 = 確認細節",
+        "examples": [
+          {
+            "scenario": "Filtering Distractors",
+            "text": "While the concert was originally planned for the outdoor stadium, the 15% chance of rain forced organizers to move it to the City Hall basement.",
+            "clues": [
+              "outdoor stadium (original)",
+              "City Hall basement (final)"
+            ],
+            "logic": "The question asks where the concert *actually* took place, not where it was planned.",
+            "inference_en": "The concert took place at the City Hall basement.",
+            "inference_zh": "音樂會實際在市政廳地下室舉行。"
+          },
+          {
+            "scenario": "Numerical Accuracy",
+            "text": "The subscription fee is $50 per month, but early birds receive a 20% discount, bringing the total down to $40.",
+            "clues": [
+              "$50 (original)",
+              "20% (discount)",
+              "$40 (final)"
+            ],
+            "logic": "DSE often tests if you can distinguish between the 'original' price and the 'discounted' price.",
+            "inference_en": "Early bird members pay $40.",
+            "inference_zh": "早鳥會員需支付 40 美元。"
+          }
+        ]
+      },
+      "dse_appearance": [
+        {
+          "type": "Fact vs. Fiction (是非判斷)",
+          "description": "Identifying which detail in a list is NOT mentioned or is incorrect.",
+          "examples": [
+            "Q: Which of the following is NOT true about the new library?",
+            "Q: According to the text, what are the THREE requirements for the scholarship?"
+          ]
+        },
+        {
+          "type": "Table/Flowchart Completion (圖表填空)",
+          "description": "Extracting technical details to fill in a summary table.",
+          "examples": [
+            "Q: Complete the table below using information from Paragraph 4."
+          ]
+        }
+      ],
+      "common_traps": [
+        {
+          "trap": "The 'Half-Truth' (半真半假)",
+          "description": "An option that uses words from the text but changes a key detail like the date or the person's name.",
+          "solution_zh": "仔細核對。選項中可能 90% 的字都對，但只要有一個數字或名字不符，就是錯誤答案。"
+        },
+        {
+          "trap": "Proximity Error (鄰近誤差)",
+          "description": "Picking a detail simply because it is physically close to a keyword in the text, even if it's unrelated.",
+          "solution_zh": "不要只看關鍵字旁邊的詞。要讀完完整個句子，確保該細節與題目要求的邏輯關係一致。"
+        }
+      ],
+      "pro_tips_en": [
+        "Spot the 'Qualifiers': Words like 'only', 'all', 'mostly', or 'sometimes' change the detail entirely. Be wary of these in MCQs.",
+        "Use the 'Search & Destroy' Method: For 'Which of the following is NOT true' questions, find the three true ones in the text and cross them out.",
+        "Mind the Tense: A detail about what 'will happen' is different from what 'has happened'."
+      ]
+    }
+  },
+  "reading_factVsOpinion": {
+    "micro_skill": "Fact vs. Opinion",
+    "micro_skill_zh": "事實與意見辨析",
+    "category": "Critical Reading",
+    "difficulty_target": "Level 3-5",
+    "learning_content": {
+      "anatomy": {
+        "definition": "The ability to distinguish between objective information that can be proven (Fact) and subjective beliefs or emotional expressions (Opinion).",
+        "definition_zh": "辨別客觀可證明的資訊（事實）與主觀信念或情感表達（意見）的能力。",
+        "formula": "Verifiable Data = Fact; Emotional Adjectives/Predictions = Opinion",
+        "formula_zh": "可證實數據 = 事實；情感形容詞/預測 = 意見",
+        "examples": [
+          {
+            "scenario": "Statistical vs. Evaluative",
+            "text": "The city's population grew by 10% last year, which is a disastrous trend for our local infrastructure.",
+            "clues": [
+              "10% growth (Fact)",
+              "disastrous (Opinion)"
+            ],
+            "logic": "The number is a verifiable statistic; the word 'disastrous' is a value judgment.",
+            "inference_en": "The growth rate is a fact, but the negative impact is the writer's opinion.",
+            "inference_zh": "增長率是事實，但其負面影響是作者的個人意見。"
+          },
+          {
+            "scenario": "Quote Attribution",
+            "text": "Dr. Wong stated that the vaccine is safe, though many protesters believe it was rushed.",
+            "clues": [
+              "Dr. Wong stated (Fact - it happened)",
+              "safe (Dr. Wong's Opinion)",
+              "protesters believe (Fact - they have this belief)",
+              "rushed (Protesters' Opinion)"
+            ],
+            "logic": "Reporting that someone *said* something is a fact; the *content* of what they said is often their opinion.",
+            "inference_en": "It is a fact that different groups hold these conflicting opinions.",
+            "inference_zh": "不同群體持有這些矛盾的意見，這本身是一個客觀事實。"
+          }
+        ]
+      },
+      "dse_appearance": [
+        {
+          "type": "Identification (辨識題)",
+          "description": "Determining if a specific statement from the text is a fact or an opinion.",
+          "examples": [
+            "Q: Based on paragraph 4, is the statement 'The festival was a success' a fact or an opinion? Explain."
+          ]
+        },
+        {
+          "type": "Writer's Stance (作者立場)",
+          "description": "Analyzing how the writer uses opinions to persuade the reader.",
+          "examples": [
+            "Q: Which of the following best describes the writer's opinion on the new law?"
+          ]
+        }
+      ],
+      "common_traps": [
+        {
+          "trap": "Expert Bias (專家誤導)",
+          "description": "Assuming that because an expert said it, it must be a fact.",
+          "solution_zh": "注意動詞。如果文中用 'suggests', 'claims', 'believes'，即便說者是專家，該內容仍屬意見。"
+        },
+        {
+          "trap": "Hidden Opinions (隱藏意見)",
+          "description": "Failing to notice 'loaded' adjectives that turn a factual sentence into an opinion.",
+          "example_trap": "The 'small' crowd gathered. (The size is a fact, but 'small' is a subjective comparison).",
+          "solution_zh": "尋找形容詞。形容詞（如 'wonderful', 'alarming', 'excessive'）通常是判斷意見的關鍵信號。"
+        }
+      ],
+      "pro_tips_en": [
+        "The Verification Test: Ask, 'Can this be proven with a clock, a ruler, a calculator, or a historical record?' If yes, it's likely a fact.",
+        "Look for Modal Verbs: Words like 'should', 'must', 'could', or 'might' almost always signal an opinion or a recommendation.",
+        "Identify Source Bias: Is the writer a scientist reporting data or a columnist writing an editorial? The source heavily influences the ratio of fact to opinion."
+      ]
+    }
+  },
+  "reading_inference": {
+    "micro_skill": "Inference",
+    "micro_skill_zh": "推斷能力",
+    "category": "Reading Comprehension",
+    "difficulty_target": "Level 4-5**",
+    "learning_content": {
+      "anatomy": {
+        "definition": "The ability to deduce unstated meanings by combining textual clues with logical reasoning.",
+        "definition_zh": "結合文字線索與邏輯推理，推導出作者未直接言明的深層意義。",
+        "formula": "Textual Evidence (Clues) + Prior Knowledge (Logic) = Inference",
+        "formula_zh": "文本證據 (線索) + 常識背景 (邏輯) = 推斷結論",
+        "examples": [
+          {
+            "scenario": "Physical Cues",
+            "text": "The CEO's hands trembled slightly as she approached the podium, and she avoided eye contact with the journalists.",
+            "clues": [
+              "hands trembled",
+              "avoided eye contact"
+            ],
+            "logic": "Shaking and avoiding gaze are universal signs of anxiety or hiding something.",
+            "inference_en": "The CEO is likely nervous or apprehensive about the announcement.",
+            "inference_zh": "執行長對即將發表的聲明感到緊張或憂慮。"
+          },
+          {
+            "scenario": "Environmental Cues",
+            "text": "The once-bustling high street was now a row of boarded-up windows and 'For Lease' signs.",
+            "clues": [
+              "boarded-up windows",
+              "For Lease signs"
+            ],
+            "logic": "Empty shops and lack of people suggest a failing local economy.",
+            "inference_en": "The neighborhood is experiencing a significant economic downturn.",
+            "inference_zh": "該社區正經歷嚴重的經濟衰退。"
+          }
+        ]
+      },
+      "dse_appearance": [
+        {
+          "type": "Tone and Attitude (語氣與態度)",
+          "description": "Identifying the writer's feelings toward a subject based on word choice.",
+          "examples": [
+            "Q: What is the writer’s tone in paragraph 3? (e.g., Cynical, Optimistic, Objective)",
+            "Q: How does the writer feel about the rise of social media? (e.g., Skeptical, Supportive)"
+          ]
+        },
+        {
+          "type": "Implicit Meaning (隱含意義)",
+          "description": "Understanding the 'subtext' or why a specific detail was included.",
+          "examples": [
+            "Q: What does the writer imply by saying 'the project was a drop in the ocean'?",
+            "Q: Why does the author mention the failure of the 1990s initiative?"
+          ]
+        }
+      ],
+      "common_traps": [
+        {
+          "trap": "Over-inferencing (過度推論)",
+          "description": "Using personal bias rather than textual evidence.",
+          "example_trap": "The text says 'he was late'; you infer 'he is a lazy person' (No evidence for personality).",
+          "solution_zh": "堅持「證據鏈」原則。如果無法從原文找到對應詞彙支撐，該推論極可能是錯誤的。"
+        },
+        {
+          "trap": "The Literal Trap (字面陷阱)",
+          "description": "Choosing a factually true statement from the text that fails to 'read between the lines'.",
+          "example_trap": "The question asks what 'the dark clouds' suggest, and you answer 'it was cloudy'.",
+          "solution_zh": "若題目問的是「暗示 (imply)」，答案通常需要進行意思轉述 (Paraphrase) 而非直接引用。"
+        }
+      ],
+      "pro_tips_en": [
+        "Check the Adjectives: Words like 'supposedly' or 'so-called' often imply the author doubts the truth of something.",
+        "The 'Purpose' Test: Ask yourself, 'If the author deleted this sentence, what would the reader miss?' The answer is usually the inference.",
+        "Two-Part Answers: In open-ended DSE questions, always state the 'Clue' from the text first, then explain your 'Inference'."
+      ]
+    },
+    "updated_at": {
+      "_seconds": 1771087047,
+      "_nanoseconds": 903000000
+    }
+  },
+  "reading_literalComprehension": {
+    "micro_skill": "Literal Comprehension",
+    "micro_skill_zh": "字面理解 / 直接理解",
+    "category": "Reading Comprehension",
+    "difficulty_target": "Level 1-3 (Foundation for all levels)",
+    "learning_content": {
+      "anatomy": {
+        "definition": "The ability to identify and retrieve information that is explicitly stated in the text.",
+        "definition_zh": "準確辨識並提取文本中直接陳述的資訊。",
+        "formula": "Question Keywords + Textual Scanning = Direct Answer",
+        "formula_zh": "題目關鍵字 + 文本掃描 = 直接答案",
+        "examples": [
+          {
+            "scenario": "Identifying Specific Data",
+            "text": "The research team, led by Dr. Aris, surveyed 4,500 students across three continents over a period of six months.",
+            "clues": [
+              "Dr. Aris",
+              "4,500 students",
+              "six months"
+            ],
+            "logic": "The question asks for 'who' and 'how many'; the text provides these numbers directly.",
+            "inference_en": "Dr. Aris led the team and they surveyed 4,500 students.",
+            "inference_zh": "由 Aris 博士帶領的團隊共調查了 4,500 名學生。"
+          },
+          {
+            "scenario": "Following Instructions/Steps",
+            "text": "Before applying the sealant, ensure the surface is scrubbed clean and completely dry to avoid peeling.",
+            "clues": [
+              "scrubbed clean",
+              "completely dry"
+            ],
+            "logic": "The text lists specific conditions that must be met before an action.",
+            "inference_en": "The surface must be clean and dry before applying the sealant.",
+            "inference_zh": "在使用密封劑之前，表面必須擦洗乾淨並保持完全乾燥。"
+          }
+        ]
+      },
+      "dse_appearance": [
+        {
+          "type": "Wh- Questions (基本問答)",
+          "description": "Questions starting with Who, When, Where, or How many.",
+          "examples": [
+            "Q: According to paragraph 1, when was the bridge built?",
+            "Q: Who is the target audience of this advertisement?"
+          ]
+        },
+        {
+          "type": "True/False/Not Given (是非題)",
+          "description": "Checking if a statement matches the facts in the text.",
+          "examples": [
+            "Q: State whether the following statement is True, False, or Not Given: 'The company made a profit in 2022.'"
+          ]
+        }
+      ],
+      "common_traps": [
+        {
+          "trap": "Over-thinking (想得太多)",
+          "description": "Adding your own logic to a simple factual question.",
+          "example_trap": "The text says 'It rained'; the student answers 'The game was cancelled' (The text didn't say that!).",
+          "solution_zh": "不要推論。題目問什麼，就回原文找那個事實，不要替作者解釋後果。"
+        },
+        {
+          "trap": "Lifting Errors (抄錄錯誤)",
+          "description": "Copying too much or too little from the text, including irrelevant pronouns.",
+          "example_trap": "Writing 'He said...' instead of 'The principal said...'",
+          "solution_zh": "確保答案完整。如果引用原句，要檢查人稱代詞（如 he/she/they）是否需要更改為具體名詞以便清晰。"
+        }
+      ],
+      "pro_tips_en": [
+        "Keyword Matching: Underline the nouns and verbs in the question and hunt for the exact same words (or synonyms) in the passage.",
+        "The 'Point-and-Check' Method: Once you find the answer, put one finger on the question and one on the text. Do they match 100%?",
+        "Grammar Consistency: Ensure your copied answer fits the grammatical structure of the question (e.g., if the question is in the past tense, your answer should be too)."
+      ]
+    }
+  },
+  "reading_mainIdea": {
+    "micro_skill": "Main Idea Identification",
+    "micro_skill_zh": "主旨辨識",
+    "category": "Reading Comprehension",
+    "difficulty_target": "Level 3-5",
+    "learning_content": {
+      "anatomy": {
+        "definition": "The ability to summarize the central point or primary message of a paragraph or an entire passage.",
+        "definition_zh": "辨識並概括段落或整篇文章的核心點或主要訊息的能力。",
+        "formula": "Topic Sentence + Repeated Keywords + Concluding Summary = Main Idea",
+        "formula_zh": "主題句 + 重複關鍵詞 + 總結句 = 主旨大意",
+        "examples": [
+          {
+            "scenario": "Paragraph Level",
+            "text": "While urban farming provides fresh produce, its most significant impact is community building. Neighbors meet at the soil, children learn about nature together, and elderly residents find a renewed sense of purpose. It is a social glue disguised as a garden.",
+            "clues": [
+              "significant impact is community building",
+              "social glue"
+            ],
+            "logic": "The author mentions produce briefly but spends the rest of the text listing social benefits.",
+            "inference_en": "The main purpose of urban farming is to strengthen social ties rather than just grow food.",
+            "inference_zh": "都市耕種的主要目的是增進社交聯繫，而不僅則產出食物。"
+          },
+          {
+            "scenario": "Article Level",
+            "text": "The opening explores the history of AI. The middle sections debate its ethical risks in medicine. The conclusion calls for global regulation. Overall, the text weighs progress against safety.",
+            "clues": [
+              "history",
+              "ethical risks",
+              "regulation"
+            ],
+            "logic": "The text moves from past to present to future, all centered around the management of technology.",
+            "inference_en": "The passage provides a comprehensive overview of the ethical challenges and need for AI oversight.",
+            "inference_zh": "本文全面概述了人工智能面臨的倫理挑戰及監管必要性。"
+          }
+        ]
+      },
+      "dse_appearance": [
+        {
+          "type": "Heading Matching (標題配對)",
+          "description": "Matching a list of potential titles to specific paragraphs.",
+          "examples": [
+            "Q: Which of the following is the best title for the whole passage?",
+            "Q: Match the headings to Paragraphs 2-5."
+          ]
+        },
+        {
+          "type": "Summary Completion (總結填空)",
+          "description": "Filling in a cloze-style summary of a section of the text.",
+          "examples": [
+            "Q: Complete the summary of the writer's argument by choosing one word from the text for each blank."
+          ]
+        }
+      ],
+      "common_traps": [
+        {
+          "trap": "The 'Too Broad' Trap (過於籠統)",
+          "description": "Choosing a main idea that covers the general topic but ignores the specific focus of the text.",
+          "example_trap": "The text is about 'Plastic in the Atlantic,' but the student chooses 'Environmental Issues'.",
+          "solution_zh": "確保主旨涵蓋了文章的具體範疇。如果文章只講大西洋，就不能選全球環境問題。"
+        },
+        {
+          "trap": "The 'Too Narrow' Trap (過於片面)",
+          "description": "Focusing on a supporting detail or a single example instead of the whole paragraph.",
+          "example_trap": "Choosing 'Elderly residents' as the main idea for the urban farming example above.",
+          "solution_zh": "問自己：這個句子能概括整段內容嗎？如果它只是其中一個例子，那它就不是主旨。"
+        }
+      ],
+      "pro_tips_en": [
+        "The First & Last Sentence Rule: In DSE texts, the 'Topic Sentence' is usually at the start or end of a paragraph.",
+        "Identify the 'Turning Point': Look for words like 'But', 'However', or 'Yet'. The main idea often shifts after these words.",
+        "The 'Elevator Pitch': If you had to explain the paragraph to a friend in 5 seconds, what would you say? That is your main idea."
+      ]
+    }
+  },
+  "reading_metaphoricalLanguage": {
+    "micro_skill": "Metaphorical Language",
+    "micro_skill_zh": "隱喻與修辭語言",
+    "category": "Linguistic Analysis",
+    "difficulty_target": "Level 4-5**",
+    "learning_content": {
+      "anatomy": {
+        "definition": "The use of words or phrases in a non-literal way to create a vivid image, emphasize a point, or evoke an emotional response.",
+        "definition_zh": "以非字面意義的方式使用詞語或短語，以創造生動形象、強調重點或喚起情感反應。",
+        "formula": "The Image (Vehicle) + Shared Quality + The Subject (Tenor) = Metaphorical Meaning",
+        "formula_zh": "修辭意象 + 共同特徵 + 描述主體 = 比喻意義",
+        "examples": [
+          {
+            "scenario": "Metaphor in Social Commentary",
+            "text": "The city’s housing market has become a ticking time bomb for the younger generation.",
+            "clues": [
+              "ticking time bomb"
+            ],
+            "logic": "A bomb is dangerous, hidden, and set to explode. This suggests the housing market is reaching a point of sudden, violent crisis.",
+            "inference_en": "The housing market is in a dangerous state and is likely to collapse or cause a crisis soon.",
+            "inference_zh": "房地產市場處於危險狀態，很可能很快就會崩潰或引發危機。"
+          },
+          {
+            "scenario": "Simile in Character Description",
+            "text": "The memory of the event was like a stain on his conscience that no amount of apology could wash away.",
+            "clues": [
+              "like a stain",
+              "wash away"
+            ],
+            "logic": "A stain is permanent and ruins the appearance of something. This shows the guilt is lasting and difficult to remove.",
+            "inference_en": "The guilt from the event is permanent and deeply affects his sense of morality.",
+            "inference_zh": "該事件帶來的罪惡感是永久性的，深深影響了他的道德觀。"
+          }
+        ]
+      },
+      "dse_appearance": [
+        {
+          "type": "Meaning of Phrases (短語含義)",
+          "description": "Explaining what the author means by a specific metaphorical expression.",
+          "examples": [
+            "Q: What does the writer mean by the phrase 'an island of calm in a sea of chaos' in line 14?"
+          ]
+        },
+        {
+          "type": "Effect of Language (修辭效果)",
+          "description": "Analyzing why the author used a specific metaphor or simile.",
+          "examples": [
+            "Q: Why does the author describe the internet as a 'double-edged sword'?"
+          ]
+        }
+      ],
+      "common_traps": [
+        {
+          "trap": "Literal Interpretation (字面陷阱)",
+          "description": "Describing the physical image instead of the symbolic meaning.",
+          "example_trap": "Saying a 'ticking time bomb' means a literal explosive device with a clock.",
+          "solution_zh": "進行「去意象化」。問自己：作者想用這個東西的哪種特性（如：危險、美麗、快速）來形容主體？"
+        },
+        {
+          "trap": "Incomplete Explanation (解釋不全)",
+          "description": "Explaining the image but failing to connect it back to the subject of the sentence.",
+          "solution_zh": "使用「橋接法」。解釋完意象後，必須明確指出這反映了主體的什麼特徵（例如：...這反映了該政策的不可預測性）。"
+        }
+      ],
+      "pro_tips_en": [
+        "The 'Shared Quality' Test: If the author calls a person a 'lion,' focus on the qualities of a lion (bravery, strength, leadership) that fit a human.",
+        "Identify the Emotion: Metaphors are rarely neutral. Ask, 'Does this image make me feel positive (e.g., sunshine) or negative (e.g., shadow)?'",
+        "Cultural Context: Some metaphors are idiomatic. If a metaphor sounds strange literally (e.g., 'barking up the wrong tree'), check if it’s a common English idiom."
+      ]
+    }
+  },
+  "reading_paraphrasing": {
+    "micro_skill": "Paraphrasing",
+    "micro_skill_zh": "文字改寫 / 意譯能力",
+    "category": "Linguistic Transformation",
+    "difficulty_target": "Level 4-5**",
+    "learning_content": {
+      "anatomy": {
+        "definition": "The ability to rewrite a piece of information from the text using different words and structures while keeping the original meaning 100% intact.",
+        "definition_zh": "在保持原意完全不變的前提下，利用不同的詞彙和句式結構重寫文本資訊的能力。",
+        "formula": "Synonyms (Same Meaning) + Syntax Shift (New Structure) = Successful Paraphrase",
+        "formula_zh": "同義詞 (意思不變) + 句式轉換 (結構改變) = 成功的改寫",
+        "examples": [
+          {
+            "scenario": "Synonym & Voice Swap",
+            "text": "The government abandoned the controversial project due to public outcry.",
+            "clues": [
+              "abandoned -> scrapped",
+              "controversial -> disputed",
+              "public outcry -> citizens' protests"
+            ],
+            "logic": "Changing 'abandoned' to 'scrapped' and moving from active to passive voice prevents direct lifting.",
+            "inference_en": "The disputed plan was scrapped because citizens protested against it.",
+            "inference_zh": "由於市民的反對，這項引發爭議的計劃被取消了。"
+          },
+          {
+            "scenario": "Word Class Transformation",
+            "text": "The scientist was successful in discovering a new species.",
+            "clues": [
+              "successful (adj) -> successfully (adv)",
+              "discovering (verb) -> discovery (noun)"
+            ],
+            "logic": "Changing an adjective to an adverb or a verb to a noun is a high-level DSE trick.",
+            "inference_en": "The scientist's discovery of a new species was conducted successfully.",
+            "inference_zh": "該科學家成功地發現了一個新物種。"
+          }
+        ]
+      },
+      "dse_appearance": [
+        {
+          "type": "Own Words Questions (自選詞彙題)",
+          "description": "Questions that strictly forbid copying from the text.",
+          "examples": [
+            "Q: Based on paragraph 3, why was the campaign effective? Answer in your own words."
+          ]
+        },
+        {
+          "type": "Summary Cloze (總結填空)",
+          "description": "Filling in a summary where the text uses one word but the summary requires a different but related word.",
+          "examples": [
+            "Q: Complete the summary. Use ONE word not found in the text."
+          ]
+        }
+      ],
+      "common_traps": [
+        {
+          "trap": "Meaning Drift (意思偏離)",
+          "description": "Changing the words so much that the original meaning is lost or exaggerated.",
+          "solution_zh": "進行「回檢」。改寫後，將你的句子與原句對照，確保程度（如：'often' 變為 'always' 就是錯誤的）完全一致。"
+        },
+        {
+          "trap": "The Thesaurus Trap (同義詞誤用)",
+          "description": "Choosing a synonym that doesn't fit the context (e.g., using 'huge' to describe an 'important' person).",
+          "solution_zh": "考慮語境。並非所有同義詞都能互換，要注意詞彙的搭配 (Collocation) 和語境。"
+        }
+      ],
+      "pro_tips_en": [
+        "The 'Noun to Verb' Trick: If the text says 'made a decision,' you write 'decided.' This is the fastest way to paraphrase.",
+        "Flip the Sentence: Start from the end of the author's sentence and work backward to the beginning.",
+        "Identify 'Non-negotiable' Words: Proper nouns (Hong Kong), technical terms (DNA), and dates should not be paraphrased."
+      ]
+    }
+  },
+  "reading_registerStyle": {
+    "micro_skill": "Register & Style",
+    "micro_skill_zh": "語域與風格",
+    "category": "Linguistic Analysis",
+    "difficulty_target": "Level 4-5*",
+    "learning_content": {
+      "anatomy": {
+        "definition": "The choice of language, sentence structure, and level of formality used by a writer to suit a specific purpose and audience.",
+        "definition_zh": "作者根據特定目的和受眾所選擇的語言、句式結構及正式程度。",
+        "formula": "Vocabulary Choice + Sentence Complexity + Personal Pronouns = Register/Style",
+        "formula_zh": "詞彙選擇 + 句子複雜度 + 人稱代詞 = 語域/風格",
+        "examples": [
+          {
+            "scenario": "Formal/Academic Register",
+            "text": "The implementation of the aforementioned policy is anticipated to yield significant socio-economic benefits for the marginalized populace.",
+            "clues": [
+              "implementation",
+              "aforementioned",
+              "yield",
+              "passive voice"
+            ],
+            "logic": "The use of multi-syllabic Latinate vocabulary and passive voice indicates a formal, professional, or academic setting.",
+            "inference_en": "The register is formal/professional; the style is objective and authoritative.",
+            "inference_zh": "語域屬正式/專業；風格客觀且具權威性。"
+          },
+          {
+            "scenario": "Informal/Colloquial Register",
+            "text": "Check it out! The new rules are gonna totally change how we hang out after school. It's about time, right?",
+            "clues": [
+              "Check it out!",
+              "gonna",
+              "slang ('hang out')",
+              "direct address ('we', 'right?')"
+            ],
+            "logic": "The use of contractions, slang, and direct interaction with the reader indicates a casual or personal style.",
+            "inference_en": "The register is informal/conversational; the style is engaging and subjective.",
+            "inference_zh": "語域屬非正式/對話式；風格具吸引力且主觀。"
+          }
+        ]
+      },
+      "dse_appearance": [
+        {
+          "type": "Text Type Identification (文本類型辨析)",
+          "description": "Identifying where the text was likely published based on its style.",
+          "examples": [
+            "Q: Based on the register used, this passage is most likely taken from: (A. A scientific journal, B. A personal blog, C. A legal document, D. A tabloid newspaper)"
+          ]
+        },
+        {
+          "type": "Effect of Style (風格影響力)",
+          "description": "Explaining why the author chose a specific style.",
+          "examples": [
+            "Q: Why does the writer use personal pronouns like 'you' and 'we' throughout the article?"
+          ]
+        }
+      ],
+      "common_traps": [
+        {
+          "trap": "Inconsistency Overlook (忽視風格不一)",
+          "description": "Missing a 'shift' in register where an author suddenly uses slang in a formal text to create irony.",
+          "solution_zh": "留意「語氣轉折」。如果正式文章中突然出現俚語，通常是為了強調作者的諷刺或與讀者拉近距離。"
+        },
+        {
+          "trap": "Vague Descriptions (描述過於籠統)",
+          "description": "Using 'good' or 'bad' to describe style instead of precise terms like 'eloquent', 'concise', or 'verbose'.",
+          "solution_zh": "使用專業術語。練習使用學術詞彙，如 Academic (學術), Colloquial (口語), Technical (技術性), 或 Persuasive (具說服力)。"
+        }
+      ],
+      "pro_tips_en": [
+        "The 'I/You' Test: Frequent use of 'I' and 'You' usually signals an informal or persuasive register. A lack of personal pronouns signals an objective, formal register.",
+        "Sentence Length: Long, complex sentences with multiple clauses often indicate a formal style; short, punchy sentences indicate a modern or casual style.",
+        "Identify Jargon: Technical terms (e.g., 'photosynthesis', 'arbitration') indicate a specialized register aimed at an educated audience."
+      ]
+    }
+  },
+  "reading_sequencing": {
+    "micro_skill": "Sequencing",
+    "micro_skill_zh": "排序能力 / 邏輯順序",
+    "category": "Reading Comprehension",
+    "difficulty_target": "Level 2-4",
+    "learning_content": {
+      "anatomy": {
+        "definition": "The ability to identify the order in which events occur or steps are taken, regardless of the order in which they are mentioned in the text.",
+        "definition_zh": "辨識事件發生或步驟進行的先後順序，不受文本敘述順序影響的能力。",
+        "formula": "Time Markers + Logical Connectives + Event Mapping = Correct Sequence",
+        "formula_zh": "時間標記 + 邏輯連接詞 + 事件圖譜 = 正確排序",
+        "examples": [
+          {
+            "scenario": "Narrative Flashback",
+            "text": "Before he finally won the gold medal in 2022, John had spent years recovering from the injury he sustained during the 2018 qualifiers.",
+            "clues": [
+              "finally won (2022)",
+              "recovering (years)",
+              "injury (2018)"
+            ],
+            "logic": "The text mentions the 2022 win first, but the injury happened first in time.",
+            "inference_en": "1. Sustained injury (2018) -> 2. Recovered -> 3. Won gold (2022).",
+            "inference_zh": "1. 2018年受傷 -> 2. 多年康復 -> 3. 2022年奪金。"
+          },
+          {
+            "scenario": "Process/Instructions",
+            "text": "The final report can only be generated once the data has been verified. However, you must first input the raw figures into the system.",
+            "clues": [
+              "final report (last)",
+              "verified (middle)",
+              "input raw figures (first)"
+            ],
+            "logic": "Words like 'first' and 'only once' dictate the sequence regardless of sentence position.",
+            "inference_en": "1. Input figures -> 2. Verify data -> 3. Generate report.",
+            "inference_zh": "1. 輸入數據 -> 2. 驗證資料 -> 3. 生成報告。"
+          }
+        ]
+      },
+      "dse_appearance": [
+        {
+          "type": "Flowchart Completion (流程圖填空)",
+          "description": "Placing events from the text into boxes with arrows indicating the order.",
+          "examples": [
+            "Q: Fill in the flow chart below to show the development of the company."
+          ]
+        },
+        {
+          "type": "Ordering Events (事件排序)",
+          "description": "Numbering a list of sentences (1-5) to show the correct order of occurrence.",
+          "examples": [
+            "Q: Put the following events in the correct order by writing 1-4 in the boxes."
+          ]
+        }
+      ],
+      "common_traps": [
+        {
+          "trap": "Mention Order vs. Occurrence Order (敘述順序與發生順序)",
+          "description": "Assuming the first thing the author writes is the first thing that happened.",
+          "solution_zh": "不要按「出場順序」排序。尋找時間詞（如 'previously', 'initially', 'subsequently'）來定位真實的時間線。"
+        },
+        {
+          "trap": "The 'After/Before' Confusion (前後混淆)",
+          "description": "Misinterpreting complex sentences like 'Prior to X, Y happened.'",
+          "solution_zh": "將複雜句拆解。看到 'Before X, Y'，即表示 Y 才是第一步。"
+        }
+      ],
+      "pro_tips_en": [
+        "Circle Time Markers: Immediately circle dates, years, and adverbs of time (e.g., 'meanwhile', 'eventually') during your first read.",
+        "The 'Reverse Check': Once you have your sequence, read it backward. Does the logic still hold? If step 3 couldn't happen without step 2, you are on the right track.",
+        "Look for Passive Clues: Phrases like 'Having finished...' or 'With the task completed...' indicate that an action happened before the main verb of the sentence."
+      ]
+    }
+  },
+  "reading_skimmingScanning": {
+    "micro_skill": "Skimming & Scanning",
+    "micro_skill_zh": "略讀與掃描",
+    "category": "Reading Strategy",
+    "difficulty_target": "Level 3-5",
+    "learning_content": {
+      "anatomy": {
+        "definition": "Skimming is for the 'Big Picture'; Scanning is for 'Specific Details'.",
+        "definition_zh": "略讀用於掌握大意；掃描用於尋找特定細節。",
+        "formula": "Speed + Keyword Identification = Efficiency",
+        "formula_zh": "速度 + 關鍵詞識別 = 高效率解題",
+        "examples": [
+          {
+            "scenario": "Skimming for Gist",
+            "text": "The first sentence of a paragraph discusses 'rising sea levels,' and the last sentence mentions 'economic catastrophe.'",
+            "clues": [
+              "Topic sentence",
+              "Concluding sentence"
+            ],
+            "logic": "The first and last sentences usually contain the main argument.",
+            "inference_en": "I can skip the middle examples and know this paragraph is about the negative impact of climate change.",
+            "inference_zh": "通過首尾句即可得知本段主旨是關於氣候變化的負面影響，無需深究中間細節。"
+          },
+          {
+            "scenario": "Scanning for Names",
+            "text": "The question asks for a study conducted by 'Professor Higgins' in '2014'.",
+            "clues": [
+              "Capital letters (Higgins)",
+              "Numbers (2014)"
+            ],
+            "logic": "Proper nouns and dates stand out visually in a block of text.",
+            "inference_en": "I should let my eyes 'float' over the text until I see 'Higgins' or '2014'.",
+            "inference_zh": "目光快速掃過文本，直到發現大寫字母 'Higgins' 或數字 '2014'，精確定位答案點。"
+          }
+        ]
+      },
+      "dse_appearance": [
+        {
+          "type": "Heading Matching (配對標題)",
+          "description": "Requires Skimming to understand the focus of multiple paragraphs quickly.",
+          "examples": [
+            "Q: Match the following headings (A-E) to paragraphs 1-4."
+          ]
+        },
+        {
+          "type": "Data Retrieval (提取資料)",
+          "description": "Requires Scanning to find specific figures or terms in a long passage.",
+          "examples": [
+            "Q: According to the text, how many people attended the 2018 summit?"
+          ]
+        }
+      ],
+      "common_traps": [
+        {
+          "trap": "Reading Every Word (閱讀強迫症)",
+          "description": "Treating a 1,000-word DSE text like a novel.",
+          "solution_zh": "練習「跳讀」。在尋找特定答案時，有意識地忽視與關鍵詞無關的句子。"
+        },
+        {
+          "trap": "Scanning for the Wrong Word (關鍵詞失誤)",
+          "description": "Scanning for a word that the author has paraphrased in the text.",
+          "solution_zh": "不要只找題目出現的字，也要找它的同義詞 (Synonyms)."
+        }
+      ],
+      "pro_tips_en": [
+        "The T-S-C Method: Read the Title, Subheadings, and Captions first to prime your brain.",
+        "Use Your Finger: Physically moving your finger or pen under the line helps maintain focus during high-speed scanning.",
+        "Identify Signposts: Words like 'However,' 'Therefore,' or 'In contrast' tell you when the 'gist' is changing direction."
+      ]
+    }
+  },
+  "reading_synthesis": {
+    "micro_skill": "Synthesis",
+    "micro_skill_zh": "綜合分析 / 資訊整合",
+    "category": "Reading Comprehension",
+    "difficulty_target": "Level 4-5**",
+    "learning_content": {
+      "anatomy": {
+        "definition": "The ability to combine information from different parts of a text (or multiple texts) to form a coherent conclusion or summary.",
+        "definition_zh": "結合文本中不同部分（或多篇文本）的資訊，以形成完整結論或總結的能力。",
+        "formula": "Point A (Para 1) + Point B (Para 4) = Synthesized Conclusion",
+        "formula_zh": "論點 A (第一段) + 論點 B (第四段) = 綜合結論",
+        "examples": [
+          {
+            "scenario": "Cross-Paragraph Connection (跨段連結)",
+            "text": "Para 1: The government proposed a new tax on sugar... Para 5: Local beverage companies reported a 20% drop in stock prices.",
+            "clues": [
+              "sugar tax proposal",
+              "beverage stocks drop"
+            ],
+            "logic": "The drop in stocks is a direct reaction to the proposed tax mentioned earlier.",
+            "inference_en": "Investors fear the sugar tax will hurt the profitability of beverage companies.",
+            "inference_zh": "投資者擔心糖稅會損害飲料公司的盈利能力。"
+          },
+          {
+            "scenario": "Multi-Factor Summary (多因素總結)",
+            "text": "Para 2 lists 'cost'; Para 3 lists 'lack of expertise'; Para 6 lists 'public fear' as barriers.",
+            "clues": [
+              "cost",
+              "expertise",
+              "fear"
+            ],
+            "logic": "To answer 'What are the challenges?', you must combine these three distinct points.",
+            "inference_en": "Nuclear energy faces financial, technical, and psychological obstacles.",
+            "inference_zh": "核能面臨財務、技術及心理層面的多重障礙。"
+          }
+        ]
+      },
+      "dse_appearance": [
+        {
+          "type": "Summary Table (綜合表格)",
+          "description": "Filling in a table that requires data from various paragraphs.",
+          "examples": [
+            "Q: Based on the whole article, fill in the pros and cons of remote work."
+          ]
+        },
+        {
+          "type": "Comparison Questions (比較題)",
+          "description": "Identifying similarities or differences between two people or ideas mentioned far apart.",
+          "examples": [
+            "Q: How does the views of Dr. Smith differ from the findings of the 2020 report?"
+          ]
+        }
+      ],
+      "common_traps": [
+        {
+          "trap": "The 'Isolated Answer' (孤立答案)",
+          "description": "Answering based on only one paragraph when the question asks for the whole text's view.",
+          "solution_zh": "看清題號範圍。如果題目問 'According to the text' 而非 'According to Para 1'，答案通常分散在不同段落。"
+        },
+        {
+          "trap": "Contradiction Oversight (忽視矛盾)",
+          "description": "Failing to notice that the author's view changed from the beginning to the end of the text.",
+          "solution_zh": "注意語氣轉變。作者可能在開頭提出一個觀點，但在結尾透過新的證據將其推翻。"
+        }
+      ],
+      "pro_tips_en": [
+        "The 'Common Thread' Hunt: Look for recurring themes in different contexts.",
+        "Use Transition Links: Words like 'Similarly', 'In contrast', and 'Furthermore' are your maps.",
+        "Categorization: Try to group details into buckets (e.g., Social, Economic, Environmental)."
+      ]
+    }
+  },
+  "reading_textOrganization": {
+    "micro_skill": "Text Organisation",
+    "micro_skill_zh": "文本組織 / 文章結構",
+    "category": "Structural Analysis",
+    "difficulty_target": "Level 3-5",
+    "learning_content": {
+      "anatomy": {
+        "definition": "The ability to recognize how a text is structured and how ideas are connected logically through transitions and cohesive devices.",
+        "definition_zh": "辨識文本結構以及想法如何透過轉折詞和銜接手段進行邏輯連接的能力。",
+        "formula": "Connectives (Transitions) + Paragraph Function + Logical Flow = Text Organisation",
+        "formula_zh": "連接詞 + 段落功能 + 邏輯流向 = 文本組織",
+        "examples": [
+          {
+            "scenario": "Problem-Solution Structure",
+            "text": "Para 1: The city is facing a waste crisis. Para 2: To address this, the government is introducing a plastic ban.",
+            "clues": [
+              "facing a crisis",
+              "To address this"
+            ],
+            "logic": "The first paragraph presents a negative situation, and the second offers a remedy.",
+            "inference_en": "The relationship between Para 1 and Para 2 is Problem and Solution.",
+            "inference_zh": "第一段與第二段之間的關係是「問題與解決方案」。"
+          },
+          {
+            "scenario": "Cause and Effect",
+            "text": "The massive influx of tourists led to an increase in local prices, which consequently pushed many long-term residents out of the neighborhood.",
+            "clues": [
+              "led to",
+              "consequently"
+            ],
+            "logic": "The text shows a chain reaction where one event triggers another.",
+            "inference_en": "The sentence structure illustrates a cause-and-effect relationship.",
+            "inference_zh": "句子結構展示了「因果關係」。"
+          }
+        ]
+      },
+      "dse_appearance": [
+        {
+          "type": "Paragraph Function (段落功能)",
+          "description": "Identifying what a specific paragraph does for the whole text.",
+          "examples": [
+            "Q: What is the main purpose of paragraph 4? (e.g., To provide a counter-argument, To give a specific example, To conclude the discussion)"
+          ]
+        },
+        {
+          "type": "Connective Identification (連接詞填空)",
+          "description": "Choosing the right logical link (e.g., However, Moreover, Therefore) to join two ideas.",
+          "examples": [
+            "Q: Based on the context of paragraph 2, which word best fits the blank in line 5?"
+          ]
+        }
+      ],
+      "common_traps": [
+        {
+          "trap": "Misidentifying Transitions (轉折詞誤判)",
+          "description": "Confusing 'Moreover' (Addition) with 'However' (Contrast).",
+          "solution_zh": "建立「連接詞分類表」。將詞彙按功能分類：Addition (補充), Contrast (對比), Result (結果), Time (時間)。"
+        },
+        {
+          "trap": "Ignoring Pronoun References (無視代詞指代)",
+          "description": "Failing to see how words like 'This' or 'Such' link back to the previous paragraph's idea.",
+          "solution_zh": "追蹤「代詞指代」。當看到 'This trend' 時，立刻回頭找前一段描述的是什麼趨勢。"
+        }
+      ],
+      "pro_tips_en": [
+        "The 'Anchor' Method: Identify the first and last paragraphs first. They usually contain the 'Introduction' and 'Conclusion/Call to Action'.",
+        "Look for 'Echo' Words: If Para 1 ends with 'economic challenges' and Para 2 starts with 'Financial hurdles', they are logically linked by synonyms.",
+        "Check the Visuals: Subheadings, bullet points, and bold text are intentional structural choices that signal a change in sub-topic."
+      ]
+    }
+  },
+  "reading_toneAttitude": {
+    "micro_skill": "Tone & Attitude",
+    "micro_skill_zh": "語調與態度",
+    "category": "Critical Reading",
+    "difficulty_target": "Level 4-5**",
+    "learning_content": {
+      "anatomy": {
+        "definition": "The writer's emotional perspective or stance toward the subject matter, conveyed through word choice and sentence structure.",
+        "definition_zh": "作者對主題的情緒立場或態度，透過選詞和句式結構來表達。",
+        "formula": "Diction (Loaded Words) + Punctuation/Emphasis + Context = Tone/Attitude",
+        "formula_zh": "用詞 (強烈情感詞) + 標點/強調 + 語境 = 語調/態度",
+        "examples": [
+          {
+            "scenario": "Sarcastic/Cynical Tone",
+            "text": "Oh great! Another 'groundbreaking' shopping mall in a city that already has five on every street corner.",
+            "clues": [
+              "Oh great!",
+              "'groundbreaking' in quotes",
+              "five on every street corner"
+            ],
+            "logic": "The use of 'Oh great' for something clearly redundant, combined with sarcastic quotes, shows the writer is mocking the idea.",
+            "inference_en": "The writer's tone is cynical/sarcastic; they feel the new mall is unnecessary.",
+            "inference_zh": "作者的語調帶有諷刺/憤世嫉俗；他們認為新商場是多餘的。"
+          },
+          {
+            "scenario": "Objective/Neutral Tone",
+            "text": "The report indicates a 5% increase in annual rainfall. While significant, further data is required to determine a long-term trend.",
+            "clues": [
+              "indicates",
+              "further data is required",
+              "determine"
+            ],
+            "logic": "The language is clinical and avoids emotional adjectives. It focuses on evidence and caution.",
+            "inference_en": "The tone is objective and professional; the attitude is cautious.",
+            "inference_zh": "語調客觀專業；態度審慎。"
+          }
+        ]
+      },
+      "dse_appearance": [
+        {
+          "type": "Adjective Identification (形容詞選擇)",
+          "description": "Choosing the best adjective to describe the writer's feelings.",
+          "examples": [
+            "Q: Which of the following words best describes the writer’s attitude in lines 20-25? (A. Indifferent, B. Apprehensive, C. Enthusiastic, D. Mocking)"
+          ]
+        },
+        {
+          "type": "Textual Evidence (證據支持)",
+          "description": "Finding words in the text that prove a specific tone.",
+          "examples": [
+            "Q: Give one example of a word or phrase from paragraph 3 that shows the writer is skeptical of the plan."
+          ]
+        }
+      ],
+      "common_traps": [
+        {
+          "trap": "Confusing the Subject's Tone with the Writer's Tone (對象與作者的混淆)",
+          "description": "If a writer quotes an angry person, it doesn't mean the *writer* is angry.",
+          "solution_zh": "區分「引文」與「作者敘述」。作者可能用客觀的語氣來描述一個非常憤怒的抗議活動。"
+        },
+        {
+          "trap": "Vocabulary Deficit (詞彙量不足)",
+          "description": "Knowing how the writer feels but not knowing the English word for it (e.g., 'Resentful' vs. 'Indifferent').",
+          "solution_zh": "建立「情緒詞彙庫」。背誦 DSE 常見語調詞，如 Objective, Sarcastic, Empathetic, Nostalgic。"
+        }
+      ],
+      "pro_tips_en": [
+        "The 'Punctuation' Hint: Frequent use of exclamation marks (!) suggests excitement or anger; rhetorical questions (?) often suggest sarcasm or skepticism.",
+        "Check the 'Adverbs': Words like 'unfortunately', 'allegedly', or 'surprisingly' are huge clues to the author's stance.",
+        "Irony Alert: If the author says something is 'brilliant' but then lists 10 reasons why it failed, the attitude is definitely negative."
+      ]
+    }
+  },
+  "writing_genre_art": {
+    "updated_at": {
+      "_seconds": 1771344894,
+      "_nanoseconds": 481000000
+    },
+    "learning_content": {
+      "pro_tips_en": [
+        "Use a catchy headline.",
+        "Use direct address ('You') to engage the reader.",
+        "Mix factual info with colorful descriptions."
+      ],
+      "micro_skill": "Journalistic Engagement",
+      "anatomy": {
+        "examples": [
+          {
+            "scenario": "The Slow Living Trend",
+            "text": "In a city that never sleeps, some Hong Kongers are finally hitting the 'pause' button.",
+            "clues": [
+              "city that never sleeps",
+              "hitting the 'pause' button"
+            ],
+            "logic": "Using metaphors and idiomatic language to grab attention.",
+            "inference_en": "Tone is lively and hooks the reader's interest immediately.",
+            "inference_zh": "語氣生動，立即勾起讀者的興趣。"
+          }
+        ],
+        "formula_zh": "搶眼標題 + 署名 + 開場白 + 人情味細節 + 總結",
+        "formula": "Catchy Headline + Byline + Lead + Human Element + Conclusion",
+        "definition": "An engaging piece of journalism focusing on people, trends, or human-interest stories.",
+        "definition_zh": "引人入勝的新聞寫作，專注於人物、趨勢或人情味故事。"
+      },
+      "dse_appearance": [
+        {
+          "type": "Magazine Features",
+          "description": "Human interest pieces for school or local magazines.",
+          "examples": [
+            "Living in the digital age",
+            "Tradition vs Modernity"
+          ]
+        }
+      ],
+      "common_traps": [
+        {
+          "trap": "Boring Title",
+          "description": "Using a literal title that sounds like a textbook.",
+          "example_trap": "An Article about Technology.",
+          "solution_zh": "使用頭韻 (Alliteration) 或疑問句，如 'Tech: Tool or Torture?'"
+        }
+      ]
+    },
+    "subject": "English",
+    "name": "Feature Article"
+  },
+  "writing_genre_bio": {
+    "updated_at": {
+      "_seconds": 1771344894,
+      "_nanoseconds": 481000000
+    },
+    "learning_content": {
+      "pro_tips_en": [
+        "Use chronological order for events.",
+        "Use inspirational language.",
+        "Highlight challenges they overcame."
+      ],
+      "micro_skill": "Human Profile Synthesis",
+      "anatomy": {
+        "examples": [
+          {
+            "scenario": "Local Hero",
+            "text": "Born into a modest family in Sham Shui Po, Dr. Lam's journey to becoming a world-renowned surgeon was paved with resilience.",
+            "clues": [
+              "Born into",
+              "journey to becoming",
+              "paved with resilience"
+            ],
+            "logic": "Setting up a 'hero's journey' narrative for the biography.",
+            "inference_en": "Highlights the person's character (resilience) alongside facts.",
+            "inference_zh": "在事實之外，突出了人物的性格（韌性）。"
+          }
+        ],
+        "formula_zh": "標題 + 引言 (代表性) + 生平進程 + 傳奇/影響",
+        "formula": "Heading + Intro (Key Significance) + Lifecycle + Legacy",
+        "definition": "A detailed description of a person's life, achievements, and impact.",
+        "definition_zh": "對一個人的生平、成就和影響的詳細描述。"
+      },
+      "dse_appearance": [
+        {
+          "type": "Hero Profiles",
+          "description": "Writing about a role model or historical figure.",
+          "examples": [
+            "A pioneer in technology",
+            "A local community leader"
+          ]
+        }
+      ],
+      "common_traps": [
+        {
+          "trap": "Fact Listing",
+          "description": "Writing a list of dates like a history timeline.",
+          "example_trap": "In 1990 he did X. In 1995 he did Y.",
+          "solution_zh": "使用連結詞將事件與人物的動機或社會影響聯繫起來。"
+        }
+      ]
+    },
+    "subject": "English",
+    "name": "Biographical Profile"
+  },
+  "writing_genre_debate": {
+    "updated_at": {
+      "_seconds": 1771344894,
+      "_nanoseconds": 481000000
+    },
+    "learning_content": {
+      "pro_tips_en": [
+        "Use signposting words like 'My first point is...'",
+        "Include rhetorical questions to engage the audience.",
+        "End with a summary call-to-action."
+      ],
+      "micro_skill": "Debate Speech Architecture",
+      "anatomy": {
+        "examples": [
+          {
+            "scenario": "School Uniforms",
+            "text": "Honorable Chairman, ladies and gentlemen, I am here today to speak strongly in favor of the abolition of school uniforms.",
+            "clues": [
+              "Honorable Chairman",
+              "speak strongly in favor of"
+            ],
+            "logic": "Establishing formal tone and clear stance immediately.",
+            "inference_en": "The speaker respects the formal hierarchy and sets a definitive tone.",
+            "inference_zh": "講者尊重正式場合的層級，並奠定了明確的基調。"
+          }
+        ],
+        "formula_zh": "問候語 + 立場 + 分論點 + 反駁 + 總結",
+        "formula": "Greeting + Stance + Points (1,2,3) + Rebuttal + Closing",
+        "definition": "A formal spoken presentation arguing a specific stance to persuade an audience.",
+        "definition_zh": "正式的辯論演講，旨在說服聽眾接受特定立場。"
+      },
+      "dse_appearance": [
+        {
+          "type": "Formal Debate",
+          "description": "Standard inter-school debate competition.",
+          "examples": [
+            "Is social media more harmful than helpful?"
+          ]
+        }
+      ],
+      "common_traps": [
+        {
+          "trap": "Forgetting the audience",
+          "description": "Writing it like a silent essay instead of a speech.",
+          "example_trap": "Using complex passive structures without direct address.",
+          "solution_zh": "多使用 'You', 'We', 'Our school' 等詞彙，增加互動感。"
+        }
+      ]
+    },
+    "subject": "English",
+    "name": "Debate Speech"
+  },
+  "writing_genre_exp": {
+    "updated_at": {
+      "_seconds": 1771344894,
+      "_nanoseconds": 481000000
+    },
+    "learning_content": {
+      "pro_tips_en": [
+        "Focus on 'What', 'Why', and 'How'.",
+        "Use a neutral, authoritative voice.",
+        "Provide specific facts and data."
+      ],
+      "micro_skill": "Expository Clarity",
+      "anatomy": {
+        "examples": [
+          {
+            "scenario": "Benefits of AI",
+            "text": "In the past decade, Artificial Intelligence has transformed from a futuristic concept into a daily utility.",
+            "clues": [
+              "In the past decade",
+              "has transformed"
+            ],
+            "logic": "Providing historical context and factual background.",
+            "inference_en": "The author is setting an objective foundation for the explanation.",
+            "inference_zh": "作者正在為解釋奠定客觀的基礎。"
+          }
+        ],
+        "formula_zh": "引言 (Hook/Thesis) + 內容段落 + 總結",
+        "formula": "Intro (Hook/Thesis) + Content Paragraphs + Conclusion",
+        "definition": "An essay designed to inform, explain, or describe a topic neutrally.",
+        "definition_zh": "旨在中立地提供資訊、解釋或描述特定主題的文章。"
+      },
+      "dse_appearance": [
+        {
+          "type": "Informative Articles",
+          "description": "Explaining a trend or phenomenon.",
+          "examples": [
+            "The rise of e-sports",
+            "Renewable energy trends"
+          ]
+        }
+      ],
+      "common_traps": [
+        {
+          "trap": "Taking Sides",
+          "description": "Slipping into an argumentative tone.",
+          "example_trap": "AI is clearly better than humans in every way.",
+          "solution_zh": "改用平衡句式，如 'While AI offers efficiency, human judgment remains vital.'"
+        }
+      ]
+    },
+    "subject": "English",
+    "name": "Expository Essay"
+  },
+  "writing_genre_fic": {
+    "updated_at": {
+      "_seconds": 1771344894,
+      "_nanoseconds": 481000000
+    },
+    "learning_content": {
+      "pro_tips_en": [
+        "Show, Don't Tell - use descriptive language.",
+        "Build tension through pacing.",
+        "Use dialogue effectively but sparingly."
+      ],
+      "micro_skill": "Narrative Craftsmanship",
+      "anatomy": {
+        "examples": [
+          {
+            "scenario": "The Forgotten Key",
+            "text": "The heavy iron door groaned as it swung open, revealing a dusty hall I hadn't seen in years.",
+            "clues": [
+              "groaned",
+              "dusty hall",
+              "hadn't seen in years"
+            ],
+            "logic": "Building atmosphere and mystery immediately.",
+            "inference_en": "Uses sensory details (sound/sight) to 'show' the setting.",
+            "inference_zh": "使用感官細節（聲音/視覺）來「呈現」場景。"
+          }
+        ],
+        "formula_zh": "開端 -> 發展 -> 高潮 -> 結局",
+        "formula": "Exposition -> Rising Action -> Climax -> Resolution",
+        "definition": "A fictional narrative focusing on a self-contained incident or series of linked incidents.",
+        "definition_zh": "專注於單一事件或一系列相關事件的虛構敘事。"
+      },
+      "dse_appearance": [
+        {
+          "type": "Prompt-based Fiction",
+          "description": "Writing a story based on a specific opening line or image.",
+          "examples": [
+            "The day everything changed...",
+            "A lost item found."
+          ]
+        }
+      ],
+      "common_traps": [
+        {
+          "trap": "Flat Ending",
+          "description": "Ending too suddenly without resolving the emotional arc.",
+          "example_trap": "And then I woke up, it was all a dream.",
+          "solution_zh": "著重描述角色的心理轉變或事件留下的餘韻。"
+        }
+      ]
+    },
+    "subject": "English",
+    "name": "Short Story"
+  },
+  "writing_genre_fml": {
+    "updated_at": {
+      "_seconds": 1771344894,
+      "_nanoseconds": 481000000
+    },
+    "learning_content": {
+      "pro_tips_en": [
+        "Get straight to the point in paragraph 1.",
+        "Use the 'You' approach - focus on the recipient.",
+        "Ensure correct salutation/closing pairing."
+      ],
+      "micro_skill": "Transactional Formalism",
+      "anatomy": {
+        "examples": [
+          {
+            "scenario": "Complaint Letter",
+            "text": "I am writing to formally lodge a complaint regarding the substandard service received at your restaurant.",
+            "clues": [
+              "formally lodge a complaint",
+              "regarding the substandard service"
+            ],
+            "logic": "Standard professional vocabulary for complaints.",
+            "inference_en": "The tone is firm, polite, and clearly defines the issue.",
+            "inference_zh": "語氣堅定且客氣，並明確定義了問題。"
+          }
+        ],
+        "formula_zh": "地址 + 稱呼 + 目的 + 正文 + 結尾敬語",
+        "formula": "Addresses + Salutation + Purpose + Body + Complimentary Close",
+        "definition": "A business or professional letter following strict conventions of layout and register.",
+        "definition_zh": "遵循嚴格排版和語域規範的商務或專業信函。"
+      },
+      "dse_appearance": [
+        {
+          "type": "Complaint/Inquiry",
+          "description": "Professional correspondence for specific goals.",
+          "examples": [
+            "Job application",
+            "Complaint to a company"
+          ]
+        }
+      ],
+      "common_traps": [
+        {
+          "trap": "Inconsistent Register",
+          "description": "Starting formally but using slang or casual phrases later.",
+          "example_trap": "Dear Sir... Thanks a lot for the help!",
+          "solution_zh": "全程避免縮寫 (Contractions)，使用 'Thank you for your assistance'。"
+        }
+      ]
+    },
+    "subject": "English",
+    "name": "Formal Letter"
+  },
+  "writing_genre_let": {
+    "updated_at": {
+      "_seconds": 1771344894,
+      "_nanoseconds": 481000000
+    },
+    "learning_content": {
+      "pro_tips_en": [
+        "Use contractions for a natural feel.",
+        "Ask questions back to the recipient.",
+        "Use exclamation marks and emotive language."
+      ],
+      "micro_skill": "Interpersonal Connection",
+      "anatomy": {
+        "examples": [
+          {
+            "scenario": "Advice to a Friend",
+            "text": "I was so sorry to hear you're feeling stressed about the exams. Trust me, we've all been there!",
+            "clues": [
+              "so sorry to hear",
+              "Trust me",
+              "all been there"
+            ],
+            "logic": "Empathetic and colloquial tone appropriate for friends.",
+            "inference_en": "Establishes a warm, supportive personal relationship.",
+            "inference_zh": "建立了溫暖且支持性的個人關係。"
+          }
+        ],
+        "formula_zh": "Hi [Name] + 問候 + 目的 + 正文 + 結語",
+        "formula": "Hi [Name] + Greeting + Purpose + Body + Best/Cheers",
+        "definition": "Informal or semi-formal correspondence between friends or acquaintances.",
+        "definition_zh": "朋友或熟人之間的非正式或半正式通訊。"
+      },
+      "dse_appearance": [
+        {
+          "type": "Friendly Advice",
+          "description": "Sharing news or giving suggestions to a peer.",
+          "examples": [
+            "Invite to a party",
+            "Study tips for a friend"
+          ]
+        }
+      ],
+      "common_traps": [
+        {
+          "trap": "Too Formal",
+          "description": "Using overly stiff language with a friend.",
+          "example_trap": "I am writing this letter to inform you of my recent activities.",
+          "solution_zh": "改用 'Wanted to catch up and tell you what's been happening!'"
+        }
+      ]
+    },
+    "subject": "English",
+    "name": "Personal Letter/Email"
+  },
+  "writing_genre_lte": {
+    "updated_at": {
+      "_seconds": 1771344894,
+      "_nanoseconds": 481000000
+    },
+    "learning_content": {
+      "pro_tips_en": [
+        "Use a formal, objective tone.",
+        "Structure: Problem -> Cause -> Impact -> Suggestion.",
+        "Cite local context to show relevance."
+      ],
+      "micro_skill": "Public Discourse & Letters",
+      "anatomy": {
+        "examples": [
+          {
+            "scenario": "Urban Noise Pollution",
+            "text": "I am writing to express my deep concern regarding the escalating noise pollution in our neighborhood.",
+            "clues": [
+              "I am writing to express",
+              "deep concern"
+            ],
+            "logic": "Standard formal opening for LTE.",
+            "inference_en": "States the purpose and urgency clearly in the first sentence.",
+            "inference_zh": "在第一句話中明確說明目的和緊迫性。"
+          }
+        ],
+        "formula_zh": "Dear Editor + 目的 + 邏輯框架 + Yours faithfully",
+        "formula": "Dear Editor + Purpose + Logic (P-C-I-S) + Yours faithfully",
+        "definition": "A formal letter written to a newspaper/magazine to express a viewpoint on public issues.",
+        "definition_zh": "寫給報章雜誌編者的信，旨在對公眾議題發表見解。"
+      },
+      "dse_appearance": [
+        {
+          "type": "Social Issues",
+          "description": "Commenting on recent changes in society or policy.",
+          "examples": [
+            "Waste charging schemes",
+            "Youth mental health"
+          ]
+        }
+      ],
+      "common_traps": [
+        {
+          "trap": "Personal Venting",
+          "description": "Being too emotional or aggressive without logic.",
+          "example_trap": "I hate these noises and the government is doing nothing!",
+          "solution_zh": "改用中性詞彙，如 'The situation is regrettable' 並提供解決建議。"
+        }
+      ]
+    },
+    "subject": "English",
+    "name": "Letter to the Editor"
+  },
+  "writing_genre_per": {
+    "updated_at": {
+      "_seconds": 1771344894,
+      "_nanoseconds": 481000000
+    },
+    "learning_content": {
+      "pro_tips_en": [
+        "Use internal verbs like 'I pondered', 'I realized'.",
+        "Connect personal events to broader life lessons.",
+        "Balance narrative with reflection."
+      ],
+      "micro_skill": "Reflective Writing",
+      "anatomy": {
+        "examples": [
+          {
+            "scenario": "Failing a Test",
+            "text": "Staring at the red marks on my paper, I realized that shortcuts never lead to success.",
+            "clues": [
+              "Staring at",
+              "I realized"
+            ],
+            "logic": "Connecting a physical action to an internal realization.",
+            "inference_en": "Self-reflective tone shows maturity and personal growth.",
+            "inference_zh": "自我反思的語氣展現了成熟和個人成長。"
+          }
+        ],
+        "formula_zh": "事件回顧 + 內在反思 + 最終啟發",
+        "formula": "Event Recap + Internal Reflection + Final Insight",
+        "definition": "A first-person account of a life event focusing on personal growth or lessons learned.",
+        "definition_zh": "以第一人稱敘述生活事件，側個人成長或所學教訓。"
+      },
+      "dse_appearance": [
+        {
+          "type": "Reflective Essay",
+          "description": "Narrating a challenge or meaningful encounter.",
+          "examples": [
+            "A person who inspired me",
+            "A mistake I regret"
+          ]
+        }
+      ],
+      "common_traps": [
+        {
+          "trap": "Storytelling without Lesson",
+          "description": "Telling what happened without saying why it matters.",
+          "example_trap": "I went to Japan, ate sushi, and came home.",
+          "solution_zh": "增加一段關於該經歷如何改變你的世界觀的描述。"
+        }
+      ]
+    },
+    "subject": "English",
+    "name": "Personal Experience"
+  },
+  "writing_genre_prp": {
+    "updated_at": {
+      "_seconds": 1771344894,
+      "_nanoseconds": 481000000
+    },
+    "learning_content": {
+      "pro_tips_en": [
+        "Focus on persuasion - why should they say YES?",
+        "Be specific with details (dates, roles).",
+        "Highlight the long-term benefits."
+      ],
+      "micro_skill": "Strategic Justification",
+      "anatomy": {
+        "examples": [
+          {
+            "scenario": "Recycling Program",
+            "text": "This proposal outlines a strategy to implement a centralized recycling system within our campus.",
+            "clues": [
+              "outlines a strategy to",
+              "implement a centralized"
+            ],
+            "logic": "Clear declaration of the proposal's scope.",
+            "inference_en": "Professional and forward-looking tone.",
+            "inference_zh": "專業且具前瞻性的語氣。"
+          }
+        ],
+        "formula_zh": "目的 + 基本原理/動機 + 擬議計畫 + 預算 + 效益",
+        "formula": "Purpose + Rationale + Proposed Plan + Budget + Benefits",
+        "definition": "A document requesting permission or funding for a plan, emphasizing benefits.",
+        "definition_zh": "請求許可或資金支持的計畫書，強調其效益。"
+      },
+      "dse_appearance": [
+        {
+          "type": "Event Proposal",
+          "description": "Planning a school activity or community project.",
+          "examples": [
+            "English Week proposal",
+            "Charity run plan"
+          ]
+        }
+      ],
+      "common_traps": [
+        {
+          "trap": "Vague Plans",
+          "description": "Suggesting ideas without explaining HOW they work.",
+          "example_trap": "We should help the environment.",
+          "solution_zh": "提供具體細節，如 'Installation of 5 recycling bins in the canteen by September'."
+        }
+      ]
+    },
+    "subject": "English",
+    "name": "Proposal"
+  },
+  "writing_genre_rev": {
+    "updated_at": {
+      "_seconds": 1771344894,
+      "_nanoseconds": 481000000
+    },
+    "learning_content": {
+      "pro_tips_en": [
+        "Use evaluative adjectives (e.g. underwhelming, riveting).",
+        "Provide a balanced view.",
+        "End with a clear rating or target audience."
+      ],
+      "micro_skill": "Evaluative Critiquing",
+      "anatomy": {
+        "examples": [
+          {
+            "scenario": "Movie Review",
+            "text": "While the cinematography was breathtaking, the plot struggled to maintain coherence in the final act.",
+            "clues": [
+              "While",
+              "breathtaking",
+              "struggled to maintain coherence"
+            ],
+            "logic": "Balanced evaluation using contrast ('While').",
+            "inference_en": "Shows critical thinking by acknowledging both strengths and weaknesses.",
+            "inference_zh": "透過承認優點和缺點，展現了批判性思考。"
+          }
+        ],
+        "formula_zh": "標題 + 引言 (基本資訊) + 優缺點分析 + 評分/建議",
+        "formula": "Title + Intro (What/Where) + Pros/Cons + Recommendation",
+        "definition": "A balanced assessment of a creative work or service with a recommendation.",
+        "definition_zh": "對創意作品或服務的平衡評估，並附帶建議。"
+      },
+      "dse_appearance": [
+        {
+          "type": "Cultural Reviews",
+          "description": "Reviewing books, films, apps, or performances.",
+          "examples": [
+            "Review of a local play",
+            "A travel app review"
+          ]
+        }
+      ],
+      "common_traps": [
+        {
+          "trap": "Just Summarizing",
+          "description": "Telling the whole story without giving an opinion.",
+          "example_trap": "The movie is about a boy who finds a lost dog. They walk home...",
+          "solution_zh": "減少情節敘述，增加對演技、配樂或主題的評價。"
+        }
+      ]
+    },
+    "subject": "English",
+    "name": "Review"
+  },
+  "writing_genre_rpt": {
+    "updated_at": {
+      "_seconds": 1771344894,
+      "_nanoseconds": 481000000
+    },
+    "learning_content": {
+      "pro_tips_en": [
+        "Use sub-headings clearly.",
+        "Use passive voice for objectivity.",
+        "Include bullet points for clarity."
+      ],
+      "micro_skill": "Data & Findings Reporting",
+      "anatomy": {
+        "examples": [
+          {
+            "scenario": "Library Usage Report",
+            "text": "It was observed that student attendance in the school library has dropped by 20% this term.",
+            "clues": [
+              "It was observed that",
+              "has dropped by 20%"
+            ],
+            "logic": "Using passive voice and statistics for objectivity.",
+            "inference_en": "Presents findings neutrally without personal bias.",
+            "inference_zh": "中立地展示調查結果，不帶個人偏見。"
+          }
+        ],
+        "formula_zh": "標題 + 收/發件人/日期 + 小標題 + 建議",
+        "formula": "Title + To/From/Date + Subheadings + Recommendations",
+        "definition": "A factual document that organizes information for a specific audience and purpose.",
+        "definition_zh": "為特定讀者和目的整理資訊的實用文體。"
+      },
+      "dse_appearance": [
+        {
+          "type": "School/Work Report",
+          "description": "Summarizing activities or research.",
+          "examples": [
+            "Report on a field trip",
+            "Analysis of student habits"
+          ]
+        }
+      ],
+      "common_traps": [
+        {
+          "trap": "Personal Bias",
+          "description": "Using 'I think' instead of 'The survey indicates'.",
+          "example_trap": "I think the library is too noisy.",
+          "solution_zh": "改用 'Feedback from students suggests that the library environment is noisy.'"
+        }
+      ]
+    },
+    "subject": "English",
+    "name": "Report"
+  }
+}

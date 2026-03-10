@@ -1,0 +1,849 @@
+{
+  "meta": {
+    "topic": "Tech Unicorns HK",
+    "generated_at": "2026-01-27T15:12:56.453Z",
+    "module": "Module 3 (Reading Pipeline)",
+    "blueprint_version": "2026_V1",
+    "paper_type": "Reading"
+  },
+  "Part_A": {
+    "resources": {
+      "Text_1": {
+        "title": "Hong Kong's Tech Unicorns Navigate Choppy Waters",
+        "subheading": "Local start-ups face global headwinds amid shifting investment landscape.",
+        "content": {
+          "p1": "Hong Kong's burgeoning tech scene, once touted as a rival to Silicon Valley, is experiencing a period of recalibration. Several of its celebrated 'unicorn' companies – privately held start-ups valued at over $1 billion USD – are confronting significant challenges amid a global economic slowdown and changing investor sentiment. The initial exuberance that propelled these companies to dizzying valuations has given way to a more cautious and discerning approach from venture capitalists.",
+          "p2": "Recent reports indicate that funding for Hong Kong-based tech start-ups has decreased significantly compared to the previous year. This contraction is attributed to a confluence of factors, including rising interest rates, geopolitical uncertainties, and concerns about the long-term profitability of some business models. Several unicorns are reportedly implementing cost-cutting measures, including workforce reductions, to weather the storm. The long-term impact of these adjustments on Hong Kong's innovation ecosystem remains to be seen, but the prevailing mood suggests a more tempered outlook for the sector."
+        },
+        "metadata": {
+          "word_count": 150,
+          "genre": "News Article"
+        }
+      },
+      "Text_2": {
+        "title": "The Future of Innovation in Hong Kong: Beyond the Unicorn Myth",
+        "subheading": "Examining the structural challenges and opportunities for sustainable growth in Hong Kong's tech sector.",
+        "content": {
+          "p1": "The narrative surrounding 'unicorns' often overshadows the broader complexities of fostering a sustainable and thriving innovation ecosystem. While these high-profile start-ups capture headlines and attract investment, a more nuanced analysis reveals that Hong Kong's tech sector faces deep-seated structural challenges that need to be addressed for long-term success. These challenges include a relatively small domestic market, a reliance on imported talent, and a regulatory environment that, while improving, still lags behind other global hubs.",
+          "p2": "One critical aspect is the need to diversify beyond a handful of dominant sectors. While fintech and e-commerce have been significant drivers of growth, Hong Kong needs to cultivate expertise in emerging areas such as artificial intelligence, biotechnology, and sustainable technologies. This requires strategic investments in research and development, as well as fostering closer collaboration between universities, industry, and government. Furthermore, the city must strengthen its support for early-stage start-ups and small- and medium-sized enterprises (SMEs), which are the backbone of any vibrant innovation ecosystem.",
+          "p3": "Another area of concern is the talent pipeline. While Hong Kong boasts a highly educated workforce, attracting and retaining top tech talent remains a challenge. The high cost of living, coupled with increasing competition from other global centres, makes it difficult to compete for skilled engineers, data scientists, and entrepreneurs. To address this, Hong Kong needs to implement policies that make it a more attractive destination for talent, including tax incentives, affordable housing options, and streamlined visa processes. Investing in STEM education and providing opportunities for continuous learning are also crucial for developing a skilled local workforce.",
+          "p4": "Moreover, the regulatory landscape needs to be further refined to promote innovation without stifling growth. While the government has taken steps to create a more supportive environment for start-ups, more needs to be done to address regulatory hurdles and create a level playing field for all players. This includes streamlining licensing procedures, reducing bureaucratic red tape, and promoting regulatory sandboxes that allow companies to experiment with new technologies in a controlled environment. Open data initiatives and policies that encourage data sharing are also essential for fostering innovation and creating new opportunities.",
+          "p5": "Finally, it is crucial to move beyond a purely financial metric of success. While unicorn status is undoubtedly a significant achievement, it should not be the sole measure of a vibrant innovation ecosystem. The number of patents filed, the amount of R&D spending, the number of new jobs created, and the impact on society are all important indicators of success. By focusing on these broader metrics, Hong Kong can create a more sustainable and equitable innovation ecosystem that benefits all stakeholders. The future of innovation in Hong Kong depends not just on creating more unicorns, but on fostering a culture of creativity, collaboration, and resilience that enables all companies to thrive.",
+          "p6": "In conclusion, while Hong Kong's tech unicorns are facing headwinds, the city's potential for innovation remains considerable. By addressing the structural challenges outlined above and embracing a more holistic approach to measuring success, Hong Kong can solidify its position as a leading hub for innovation in Asia and beyond. The key lies in moving beyond the allure of the unicorn myth and focusing on building a strong foundation for sustainable growth."
+        },
+        "metadata": {
+          "word_count": 600,
+          "genre": "Feature Article"
+        }
+      }
+    },
+    "questions": [
+      {
+        "id": "q1",
+        "part": "A",
+        "type": "mc_main_idea",
+        "question": "What is the main idea of Text 1?",
+        "options": [
+          "Hong Kong's tech unicorns are facing challenges due to economic factors.",
+          "Silicon Valley is superior to Hong Kong in tech innovation.",
+          "Venture capitalists are solely responsible for the success of tech companies.",
+          "Hong Kong's tech industry is unaffected by global events."
+        ],
+        "answer": "A",
+        "marks": 2,
+        "logic": "The passage discusses the challenges faced by Hong Kong's tech unicorns due to the economic slowdown and changing investor sentiment.",
+        "segment_ref": "Text_1:p1"
+      },
+      {
+        "id": "q2",
+        "part": "A",
+        "type": "short_answer",
+        "question": "According to Text 1, identify two factors that have contributed to the decrease in funding for Hong Kong-based tech start-ups.",
+        "answer": "Rising interest rates and geopolitical uncertainties.",
+        "marks": 2,
+        "logic": "The passage explicitly mentions these factors.",
+        "segment_ref": "Text_1:p2"
+      },
+      {
+        "id": "q3",
+        "part": "A",
+        "type": "reference",
+        "question": "In Text 1, paragraph 2, to what specific situation does 'this contraction' refer?",
+        "answer": "The decreased funding for Hong Kong-based tech start-ups.",
+        "marks": 2,
+        "logic": "The phrase 'This contraction' refers back to the previous statement about funding decreases.",
+        "segment_ref": "Text_1:p2"
+      },
+      {
+        "id": "q4",
+        "part": "A",
+        "type": "mc_main_idea",
+        "question": "What is the main idea of Text 2?",
+        "options": [
+          "Hong Kong's tech sector should focus solely on creating unicorns.",
+          "Hong Kong's tech sector needs to address structural challenges for sustainable growth.",
+          "Hong Kong's tech sector is already the best in Asia.",
+          "Hong Kong's tech sector does not need government support."
+        ],
+        "answer": "B",
+        "marks": 2,
+        "logic": "The passage argues that Hong Kong's tech sector needs to address structural challenges for sustainable growth, rather than just focusing on creating unicorns.",
+        "segment_ref": "Text_2:p1"
+      },
+      {
+        "id": "q5",
+        "part": "A",
+        "type": "short_answer",
+        "question": "According to Text 2, identify two emerging areas in which Hong Kong needs to develop expertise.",
+        "answer": "Artificial intelligence and biotechnology.",
+        "marks": 2,
+        "logic": "The passage explicitly mentions these areas as needing expertise.",
+        "segment_ref": "Text_2:p2"
+      },
+      {
+        "id": "q6",
+        "part": "A",
+        "type": "short_answer",
+        "question": "According to Text 2, what are two examples of policy changes that would help Hong Kong attract and retain top tech talent?",
+        "answer": "Tax incentives and affordable housing options.",
+        "marks": 2,
+        "logic": "The text explicitly mentions these as ways to attract and retain talent.",
+        "segment_ref": "Text_2:p3"
+      },
+      {
+        "id": "q7",
+        "part": "A",
+        "type": "short_answer",
+        "question": "According to Text 2, what is one specific action the government can take to create a more supportive environment for start-ups?",
+        "answer": "Streamlining licensing procedures.",
+        "marks": 2,
+        "logic": "The text mentions this specifically in relation to a supportive environment for start-ups.",
+        "segment_ref": "Text_2:p4"
+      },
+      {
+        "id": "q9",
+        "part": "A",
+        "type": "true_false_not_given",
+        "question": "Text 1 suggests that all Hong Kong tech start-ups are failing.",
+        "options": [
+          "False",
+          "True",
+          "Not Given"
+        ],
+        "answer": "False",
+        "marks": 3,
+        "logic": "Text 1 discusses challenges but does not say all start-ups are failing, only that some are facing headwinds.",
+        "segment_ref": "Text_1:p1"
+      },
+      {
+        "id": "q10",
+        "part": "A",
+        "type": "true_false_not_given",
+        "question": "Text 2 claims Hong Kong currently has the best regulatory environment for tech companies in Asia.",
+        "options": [
+          "False",
+          "True",
+          "Not Given"
+        ],
+        "answer": "False",
+        "marks": 3,
+        "logic": "The passage says the regulatory environment is improving but still lags behind other global hubs, meaning it is not the best.",
+        "segment_ref": "Text_2:p1"
+      },
+      {
+        "id": "q11",
+        "part": "A",
+        "type": "true_false_not_given",
+        "question": "Text 2 states that investment in STEM education is unimportant for Hong Kong's innovation.",
+        "options": [
+          "False",
+          "True",
+          "Not Given"
+        ],
+        "answer": "False",
+        "marks": 3,
+        "logic": "The text says that investing in STEM education is crucial for developing a skilled local workforce",
+        "segment_ref": "Text_2:p3"
+      },
+      {
+        "id": "q12",
+        "part": "A",
+        "type": "reference",
+        "question": "In Text 2, paragraph 6, what specific idea does 'the allure of the unicorn myth' represent?",
+        "answer": "Focusing solely on creating companies valued at over $1 billion USD as the only measure of success.",
+        "marks": 2,
+        "logic": "The 'unicorn myth' refers to the idea that creating unicorns is the only goal.",
+        "segment_ref": "Text_2:p6"
+      },
+      {
+        "id": "q13",
+        "part": "A",
+        "type": "summary_cloze",
+        "question": "Complete the following summary of Text 1 and Text 2 using the words provided. \n\n Hong Kong's tech sector faces (1) __________ due to a global economic slowdown and shifting investor sentiment. Text 2 suggests that Hong Kong needs to address (2) __________ challenges, such as a small domestic market and reliance on (3) __________ talent, to achieve sustainable growth. Furthermore, Hong Kong needs to diversify into emerging sectors such as AI and (4) __________.",
+        "options": [
+          "structural",
+          "biotechnology",
+          "headwinds",
+          "imported"
+        ],
+        "answer": "headwinds, structural, imported, biotechnology",
+        "marks": 4,
+        "logic": "The cloze passage summarizes the main points of both texts.",
+        "segment_ref": "Text_1:p1, Text_2:p1, Text_2:p2"
+      },
+      {
+        "id": "q14",
+        "part": "A",
+        "type": "short_answer",
+        "question": "According to Text 1, what is one action that several unicorn companies are reportedly taking in response to recent financial challenges?",
+        "answer": "Workforce reductions.",
+        "marks": 2,
+        "logic": "The text explicitly states this.",
+        "segment_ref": "Text_1:p2"
+      },
+      {
+        "id": "q15",
+        "part": "A",
+        "type": "short_answer",
+        "question": "According to Text 2, what does the acronym SMEs stand for?",
+        "answer": "Small and medium-sized enterprises.",
+        "marks": 1,
+        "logic": "The text defines SMEs.",
+        "segment_ref": "Text_2:p2"
+      },
+      {
+        "id": "q16",
+        "part": "A",
+        "type": "short_answer",
+        "question": "According to Text 2, identify one factor that makes it difficult for Hong Kong to compete for skilled tech talent.",
+        "answer": "The high cost of living.",
+        "marks": 2,
+        "logic": "The text explicitly states this.",
+        "segment_ref": "Text_2:p3"
+      },
+      {
+        "id": "q17",
+        "part": "A",
+        "type": "short_answer",
+        "question": "According to Text 2, streamlining visa processes would primarily help to attract and retain what?",
+        "answer": "Top tech talent.",
+        "marks": 1,
+        "logic": "The text explicitly states this.",
+        "segment_ref": "Text_2:p3"
+      },
+      {
+        "id": "q18",
+        "part": "A",
+        "type": "short_answer",
+        "question": "According to Text 2, besides streamlining licensing procedures, what other type of obstacle does the government need to reduce for start-ups?",
+        "answer": "Bureaucratic red tape.",
+        "marks": 1,
+        "logic": "The text explicitly states this.",
+        "segment_ref": "Text_2:p4"
+      },
+      {
+        "id": "q19",
+        "part": "A",
+        "type": "short_answer",
+        "question": "According to Text 2, what is the primary function of regulatory sandboxes?",
+        "answer": "Allow companies to experiment with new technologies in a controlled environment.",
+        "marks": 2,
+        "logic": "The text explicitly states this.",
+        "segment_ref": "Text_2:p4"
+      },
+      {
+        "id": "q20",
+        "part": "A",
+        "type": "short_answer",
+        "question": "According to Text 2, what specific type of initiatives are essential for fostering innovation and creating new opportunities?",
+        "answer": "Open data initiatives.",
+        "marks": 2,
+        "logic": "The text explicitly states this.",
+        "segment_ref": "Text_2:p4"
+      },
+      {
+        "id": "q21",
+        "part": "A",
+        "type": "short_answer",
+        "question": "According to Text 2, what broader consideration, beyond financial metrics, is key for Hong Kong to create a more sustainable and equitable innovation ecosystem?",
+        "answer": "Impact on society.",
+        "marks": 2,
+        "logic": "The text explicitly states this.",
+        "segment_ref": "Text_2:p5"
+      },
+      {
+        "id": "q22",
+        "part": "A",
+        "type": "short_answer",
+        "question": "According to Text 2, what is the key focus for Hong Kong to consolidate its position as a leading hub of innovation in Asia?",
+        "answer": "Building a strong foundation for sustainable growth.",
+        "marks": 2,
+        "logic": "The text explicitly states this.",
+        "segment_ref": "Text_2:p6"
+      }
+    ],
+    "meta": {
+      "topics": [
+        "Text_1",
+        "Text_2"
+      ]
+    }
+  },
+  "Part_B1": {
+    "resources": {
+      "Text_1": {
+        "title": "Hong Kong Tech Unicorns Navigate Global Headwinds",
+        "subheading": "Local Start-ups Face Funding Challenges Amidst Economic Uncertainty",
+        "content": {
+          "p1": "Hong Kong's burgeoning tech scene, once hailed as a regional powerhouse, is facing a precarious moment. Several promising tech unicorns – privately held start-ups valued at over $1 billion USD – are grappling with the impact of global economic headwinds. Venture capital funding, which fueled their rapid growth in recent years, has become significantly scarcer, forcing these companies to reassess their strategies and prioritise profitability over relentless expansion.",
+          "p2": "The challenges are multifaceted. Rising interest rates, geopolitical tensions, and persistent supply chain disruptions have dampened investor sentiment. Furthermore, increased regulatory scrutiny, both locally and internationally, is adding to the complexity of operating in this dynamic environment. While some unicorns are demonstrating resilience by adapting their business models and seeking new revenue streams, others face the prospect of down rounds or even acquisition by larger, more established players. The coming months will be crucial in determining the long-term viability of Hong Kong's tech unicorn ecosystem.",
+          "p3": "Experts suggest that the focus is shifting from aggressive growth at all costs to sustainable development and achieving profitability. Companies with strong fundamentals, innovative products, and a clear path to profitability are more likely to weather the storm. The need for prudence and careful resource management is paramount. Moreover, governmental support and initiatives aimed at fostering innovation and attracting investment remain critical to ensuring Hong Kong's position as a leading tech hub in the region. The current situation serves as a reminder that even the most promising ventures are not immune to the vagaries of the global economy, and adaptability is key to long-term success."
+        },
+        "metadata": {
+          "word_count": 250,
+          "genre": "News Article"
+        }
+      },
+      "Text_2": {
+        "title": "The Evolving Landscape of Hong Kong's Tech Unicorns: A Deep Dive",
+        "subheading": "Analysing the Factors Shaping the Future of Innovation and Investment in the Region",
+        "content": {
+          "p1": "Hong Kong's technology sector has experienced remarkable growth over the past decade, with several start-ups achieving unicorn status. These companies, spanning diverse industries from fintech and logistics to e-commerce and artificial intelligence, have become symbols of the region's innovative spirit and entrepreneurial drive. However, the current global economic climate presents both opportunities and challenges for these burgeoning behemoths. A confluence of factors, including macroeconomic instability, geopolitical tensions, and evolving regulatory frameworks, are reshaping the landscape and demanding a more nuanced understanding of the sector's dynamics.",
+          "p2": "One of the most significant challenges facing Hong Kong's tech unicorns is access to capital. The era of easy money, characterised by ultra-low interest rates and abundant venture capital funding, is drawing to a close. Investors are becoming more discerning, placing greater emphasis on profitability and sustainable growth rather than simply chasing topline revenue. This shift in sentiment necessitates a recalibration of business models, with a focus on cost optimisation, operational efficiency, and the development of robust revenue streams. Companies that can demonstrate a clear path to profitability and a proven ability to generate positive cash flow are more likely to attract investment and thrive in the long term.",
+          "p3": "Furthermore, the evolving regulatory landscape poses a complex set of challenges for Hong Kong's tech unicorns. Increased scrutiny from both local and international regulators is placing greater demands on compliance, data privacy, and cybersecurity. Companies must invest in robust governance structures and compliance frameworks to navigate this increasingly complex regulatory environment. The development of clear and consistent regulatory guidelines is crucial to fostering innovation and attracting investment while ensuring consumer protection and market integrity.",
+          "p4": "Despite these challenges, Hong Kong's tech sector retains significant potential. The region benefits from a highly skilled workforce, a strategic location at the heart of Asia, and a well-developed financial infrastructure. Government initiatives aimed at fostering innovation and supporting start-ups, such as tax incentives, research grants, and incubation programmes, are playing a vital role in nurturing the ecosystem. Moreover, the increasing adoption of digital technologies across various sectors of the economy is creating new opportunities for tech companies to develop innovative solutions and address pressing societal challenges.",
+          "p5": "Looking ahead, the future of Hong Kong's tech unicorns will depend on their ability to adapt to the evolving landscape, embrace innovation, and build sustainable business models. Companies that can navigate the challenges, capitalise on the opportunities, and demonstrate a commitment to long-term value creation are poised to thrive. The region's vibrant entrepreneurial ecosystem, coupled with its strategic advantages and supportive government policies, provides a solid foundation for continued growth and innovation in the years to come. The focus must remain on fostering a resilient and adaptable tech sector capable of weathering economic storms and driving long-term economic prosperity."
+        },
+        "metadata": {
+          "word_count": 450,
+          "genre": "Feature Article"
+        }
+      }
+    },
+    "questions": [
+      {
+        "id": "q1",
+        "part": "Text_1",
+        "type": "mc_main_idea",
+        "question": "What is the main idea of Text_1?",
+        "options": [
+          "Hong Kong's tech unicorns are facing challenges due to global economic headwinds.",
+          "Venture capital funding is increasing for Hong Kong tech unicorns.",
+          "Hong Kong's tech scene is unaffected by global economic issues.",
+          "All Hong Kong tech unicorns will be acquired by larger companies."
+        ],
+        "answer": "A",
+        "marks": 2,
+        "logic": "The passage discusses the challenges faced by Hong Kong's tech unicorns due to global economic issues.",
+        "segment_ref": "Text_1:p1"
+      },
+      {
+        "id": "q2",
+        "part": "Text_1",
+        "type": "true_false_not_given",
+        "question": "Venture capital funding has increased for Hong Kong tech unicorns recently.",
+        "options": [
+          "False",
+          "True",
+          "Not Given"
+        ],
+        "answer": "False",
+        "marks": 2,
+        "logic": "The passage states that venture capital funding has become scarcer.",
+        "segment_ref": "Text_1:p1"
+      },
+      {
+        "id": "q3",
+        "part": "Text_1",
+        "type": "short_answer",
+        "question": "According to Text_1, identify two factors mentioned that have negatively impacted investor sentiment.",
+        "answer": "Rising interest rates and geopolitical tensions.",
+        "marks": 3,
+        "logic": "The text mentions rising interest rates and geopolitical tensions as factors.",
+        "segment_ref": "Text_1:p2"
+      },
+      {
+        "id": "q4",
+        "part": "Text_1",
+        "type": "reference",
+        "question": "In paragraph 2, what situation does 'this' refer to?",
+        "answer": "Operating in the dynamic environment with increased regulatory scrutiny.",
+        "marks": 3,
+        "logic": "\"This\" refers to the situation described in the previous sentence about operating in a dynamic environment with increased scrutiny.",
+        "segment_ref": "Text_1:p2"
+      },
+      {
+        "id": "q5",
+        "part": "Text_1",
+        "type": "gap_fill",
+        "question": "Fill in the blanks: Experts suggest a shift towards ______ development and achieving ________.",
+        "answer": "sustainable; profitability",
+        "marks": 2,
+        "logic": "The text explicitly mentions sustainable development and achieving profitability.",
+        "segment_ref": "Text_1:p3"
+      },
+      {
+        "id": "q6",
+        "part": "Text_2",
+        "type": "mc_main_idea",
+        "question": "What is the primary focus of Text_2?",
+        "options": [
+          "Analyzing the factors shaping the future of innovation and investment in Hong Kong's tech unicorns.",
+          "Describing the historical development of Hong Kong's technology sector.",
+          "Comparing Hong Kong's tech unicorns to those in other regions.",
+          "Predicting the downfall of Hong Kong's tech unicorn ecosystem."
+        ],
+        "answer": "A",
+        "marks": 2,
+        "logic": "Text 2 analyzes the factors impacting innovation and investment in Hong Kong's Tech Unicorns.",
+        "segment_ref": "Text_2:p1"
+      },
+      {
+        "id": "q7",
+        "part": "Text_2",
+        "type": "true_false_not_given",
+        "question": "Hong Kong's tech sector has not experienced much growth in the past decade.",
+        "options": [
+          "False",
+          "True",
+          "Not Given"
+        ],
+        "answer": "False",
+        "marks": 1,
+        "logic": "Text 2 states that Hong Kong's Tech Sector has experienced remarkable growth over the past decade.",
+        "segment_ref": "Text_2:p1"
+      },
+      {
+        "id": "q9",
+        "part": "Text_2",
+        "type": "reference",
+        "question": "In paragraph 2, what does 'this shift' refer to?",
+        "answer": "Investors placing greater emphasis on profitability and sustainable growth rather than simply chasing topline revenue.",
+        "marks": 3,
+        "logic": "\"This shift\" refers to the changing investor sentiment.",
+        "segment_ref": "Text_2:p2"
+      },
+      {
+        "id": "q10",
+        "part": "Text_2",
+        "type": "gap_fill",
+        "question": "Fill in the blanks: Investors are becoming more _________, placing greater emphasis on _________ and sustainable growth.",
+        "answer": "discerning; profitability",
+        "marks": 2,
+        "logic": "These words appear in the specified section of the text.",
+        "segment_ref": "Text_2:p2"
+      },
+      {
+        "id": "q11",
+        "part": "Text_2",
+        "type": "true_false_not_given",
+        "question": "Hong Kong regulators are decreasing scrutiny on tech companies.",
+        "options": [
+          "False",
+          "True",
+          "Not Given"
+        ],
+        "answer": "False",
+        "marks": 1,
+        "logic": "The text states there is increased scrutiny.",
+        "segment_ref": "Text_2:p3"
+      },
+      {
+        "id": "q12",
+        "part": "Text_2",
+        "type": "short_answer",
+        "question": "According to Text 2, name two areas mentioned that require increased investment due to evolving regulations.",
+        "answer": "Data privacy and cybersecurity.",
+        "marks": 3,
+        "logic": "Text specifically mentions these as requiring increased investment.",
+        "segment_ref": "Text_2:p3"
+      },
+      {
+        "id": "q13",
+        "part": "Text_2",
+        "type": "gap_fill",
+        "question": "Fill in the blank: Government initiatives provide ______, research grants and incubation programmes.",
+        "answer": "tax incentives",
+        "marks": 2,
+        "logic": "The sentence lists tax incentives, research grants and incubation programmes as governmental support.",
+        "segment_ref": "Text_2:p4"
+      },
+      {
+        "id": "q14",
+        "part": "Text_2",
+        "type": "true_false_not_given",
+        "question": "Hong Kong has a poorly developed financial infrastructure.",
+        "options": [
+          "False",
+          "True",
+          "Not Given"
+        ],
+        "answer": "False",
+        "marks": 1,
+        "logic": "The text states that Hong Kong has a well-developed financial infrastructure.",
+        "segment_ref": "Text_2:p4"
+      },
+      {
+        "id": "q15",
+        "part": "Text_2",
+        "type": "short_answer",
+        "question": "Name one advantage Hong Kong has in the tech sector, according to the text.",
+        "answer": "Highly skilled workforce.",
+        "marks": 2,
+        "logic": "The text states a highly skilled workforce is an advantage.",
+        "segment_ref": "Text_2:p4"
+      },
+      {
+        "id": "q16",
+        "part": "Text_2",
+        "type": "reference",
+        "question": "In paragraph 5, what does 'the evolving landscape' refer to?",
+        "answer": "Challenges, opportunities, and the need for sustainable business models for Hong Kong's tech unicorns.",
+        "marks": 3,
+        "logic": "It summarizes the context of the paragraph.",
+        "segment_ref": "Text_2:p5"
+      },
+      {
+        "id": "q17",
+        "part": "Text_2",
+        "type": "mc_main_idea",
+        "question": "According to Text 2, what is critical for Hong Kong's tech unicorn's future success?",
+        "options": [
+          "Ability to adapt to the evolving landscape and build sustainable business models.",
+          "Ignoring regulatory challenges and focusing solely on revenue growth.",
+          "Relying entirely on government support and incentives.",
+          "Expanding operations to other regions outside of Asia."
+        ],
+        "answer": "A",
+        "marks": 2,
+        "logic": "Adaptation to the evolving landscape is a critical idea.",
+        "segment_ref": "Text_2:p5"
+      },
+      {
+        "id": "q18",
+        "part": "Text_1 & Text_2",
+        "type": "matching",
+        "question": "Match the following concepts with the texts that discuss them:\n1. Governmental Support\n2. Sustainable Development\n3. Regulatory Scrutiny",
+        "options": [
+          "Text 1",
+          "Text 2",
+          "Both Text 1 and Text 2"
+        ],
+        "answer": "1:Text 2, 2:Text 1, 3:Text 2",
+        "marks": 5,
+        "logic": "Govt. support is mainly in Text 2. Sustainable dev. mainly in Text 1. Reg. Scrutiny in Text 2.",
+        "segment_ref": "Text_1:p3, Text_2:p3, Text_2:p4"
+      }
+    ],
+    "meta": {
+      "topics": [
+        "Text_1",
+        "Text_2"
+      ]
+    }
+  },
+  "Part_B2": {
+    "resources": {
+      "Text_1": {
+        "title": "Hong Kong's Tech Unicorns: Navigating Choppy Waters",
+        "subheading": "Despite global economic headwinds, several Hong Kong-based tech start-ups continue to demonstrate resilience and innovation.",
+        "content": {
+          "p1": "Hong Kong's tech ecosystem, while smaller than those of Silicon Valley or Beijing, has quietly cultivated a stable of 'unicorns' – privately held start-ups valued at over $1 billion. These companies, spanning fintech, logistics, and AI, represent a beacon of innovation in a city traditionally dominated by finance and property. However, recent global economic uncertainties have cast a shadow over the sector, raising questions about the sustainability of this growth.",
+          "p2": "The challenges are manifold. Rising interest rates, geopolitical tensions, and a cooling venture capital market have made it more difficult for unicorns to secure funding. Companies are facing increased pressure to demonstrate profitability, moving away from the 'growth at all costs' mentality that characterised the past decade. This shift requires a recalibration of strategies, with a greater emphasis on efficiency and sustainable business models.",
+          "p3": "Despite these hurdles, Hong Kong's tech unicorns possess several advantages. The city's proximity to mainland China provides access to a vast market and manufacturing base. Its robust legal framework and sophisticated financial infrastructure offer a stable environment for innovation. Furthermore, the government's commitment to supporting the tech sector, through initiatives such as tax breaks and funding programmes, provides a crucial lifeline. The coming months will be pivotal in determining whether these unicorns can weather the storm and emerge stronger."
+        },
+        "metadata": {
+          "word_count": 285,
+          "genre": "News Article"
+        }
+      },
+      "Text_2": {
+        "title": "The Shifting Sands of Hong Kong's Unicorn Landscape: A Deep Dive",
+        "subheading": "An in-depth analysis of the factors influencing the trajectory of Hong Kong's tech unicorns, examining both internal dynamics and external pressures.",
+        "content": {
+          "p1": "The narrative surrounding Hong Kong's tech unicorns has evolved considerably in recent years. What was once a tale of unbridled optimism, fueled by cheap capital and rapid expansion, is now a more nuanced story of adaptation and resilience. While some unicorns continue to thrive, others face significant headwinds, prompting a reassessment of their business models and long-term prospects. This report delves into the underlying factors shaping the fortunes of these companies, exploring both the opportunities and challenges that lie ahead.",
+          "p2": "One key factor is the changing global economic climate. The era of ultra-low interest rates, which fuelled a surge in venture capital investment, is over. Investors are now demanding greater returns and are scrutinising start-ups' financials more closely. This has put pressure on unicorns to demonstrate profitability, a metric that many have historically neglected in favour of rapid growth. The transition from a growth-oriented to a profit-oriented mindset requires significant adjustments, including cost-cutting measures, increased efficiency, and a sharper focus on revenue generation.",
+          "p3": "Another critical aspect is the evolving regulatory landscape. Governments around the world are increasingly scrutinising the tech sector, particularly in areas such as data privacy, competition, and cybersecurity. Hong Kong is no exception, and its regulatory framework is becoming more stringent. This presents both challenges and opportunities for unicorns. On the one hand, compliance with regulations can be costly and time-consuming. On the other hand, it can enhance trust and credibility, providing a competitive advantage over less compliant rivals.",
+          "p4": "Furthermore, the competitive landscape is becoming increasingly crowded. As more start-ups enter the market, competition for talent, customers, and funding intensifies. This necessitates a constant drive for innovation and differentiation. Unicorns must continually adapt their products and services to meet the evolving needs of their customers and stay ahead of the curve. Those that fail to innovate risk being overtaken by more agile and adaptable competitors.",
+          "p5": "Despite these challenges, Hong Kong's tech unicorns possess several inherent strengths. The city's strategic location, its sophisticated financial infrastructure, and its access to a vast market in mainland China provide a solid foundation for growth. Moreover, the Hong Kong government is actively supporting the tech sector through various initiatives, including funding programmes, tax breaks, and the development of innovation hubs. However, the effectiveness of these initiatives depends on their ability to address the specific needs of unicorns and foster a vibrant ecosystem that encourages innovation and entrepreneurship.",
+          "p6": "Looking ahead, the future of Hong Kong's tech unicorns remains uncertain. The global economic outlook is precarious, and the regulatory landscape is constantly evolving. However, those unicorns that are able to adapt to these challenges, embrace innovation, and build sustainable business models have the potential to thrive. The key will be to focus on creating genuine value for customers, building strong teams, and maintaining a long-term perspective. Only then can Hong Kong's tech unicorns navigate the shifting sands of the global economy and achieve lasting success.",
+          "p7": "The success of Hong Kong's tech unicorns also depends on their ability to attract and retain top talent. The global competition for skilled engineers, data scientists, and product managers is fierce, and Hong Kong must compete with other major tech hubs to attract the best and brightest. This requires creating a compelling work environment, offering competitive salaries and benefits, and providing opportunities for professional development. Furthermore, it is crucial to foster a culture of innovation and collaboration, where employees feel empowered to take risks and contribute to the company's success.",
+          "p8": "In conclusion, the journey of Hong Kong's tech unicorns is far from over. While the path ahead is fraught with challenges, the potential rewards are significant. By embracing innovation, adapting to changing circumstances, and focusing on long-term sustainability, these companies can play a pivotal role in shaping the future of Hong Kong's economy. Their success will not only benefit their shareholders but also contribute to the creation of jobs, the development of new technologies, and the enhancement of Hong Kong's global competitiveness. The world is watching to see if these nascent behemoths can truly take flight.",
+          "p9": "Ultimately, the future hinges on the adaptability of these companies. Hong Kong's unique position as a gateway to China presents unparalleled opportunities, but also exposes these unicorns to distinct regulatory and geopolitical pressures. A nuanced understanding of these dynamics, combined with a proactive approach to risk management, will be critical for survival and sustained growth. The next few years will undoubtedly be a defining period for Hong Kong's tech ambitions."
+        },
+        "metadata": {
+          "word_count": 780,
+          "genre": "Feature Article"
+        }
+      }
+    },
+    "questions": [
+      {
+        "id": "q1",
+        "part": "Text_1",
+        "type": "mc_main_idea",
+        "question": "What is the main idea of Text_1?",
+        "options": [
+          "Hong Kong's tech unicorns are exclusively focused on fintech.",
+          "Hong Kong's tech ecosystem faces challenges but possesses advantages.",
+          "Silicon Valley and Beijing are the only true tech hubs.",
+          "Hong Kong's government is hindering the growth of tech unicorns."
+        ],
+        "answer": "B",
+        "marks": 2,
+        "logic": "The text discusses both the challenges and advantages faced by Hong Kong's tech unicorns.",
+        "segment_ref": "Text_1:p1"
+      },
+      {
+        "id": "q2",
+        "part": "Text_1",
+        "type": "short_answer",
+        "question": "According to Text_1, what are two challenges that Hong Kong's tech unicorns are currently facing?",
+        "options": [],
+        "answer": "Rising interest rates and geopolitical tensions.",
+        "marks": 2,
+        "logic": "These are directly stated in paragraph 2 as challenges.",
+        "segment_ref": "Text_1:p2"
+      },
+      {
+        "id": "q3",
+        "part": "Text_1",
+        "type": "true_false_not_given",
+        "question": "According to Text_1, have Hong Kong unicorns shifted their focus towards profitability?",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "True",
+        "marks": 1,
+        "logic": "Paragraph 2 mentions the shift from 'growth at all costs' to profitability.",
+        "segment_ref": "Text_1:p2"
+      },
+      {
+        "id": "q4",
+        "part": "Text_1",
+        "type": "gap_fill",
+        "question": "Hong Kong's proximity to mainland China provides access to a vast ______ and ______. Its robust legal framework and sophisticated financial infrastructure offer a ______ environment for innovation.",
+        "options": [],
+        "answer": "market, manufacturing base, stable",
+        "marks": 3,
+        "logic": "These words directly fill the blanks according to Text_1.",
+        "segment_ref": "Text_1:p3"
+      },
+      {
+        "id": "q5",
+        "part": "Text_1",
+        "type": "reference",
+        "question": "In Text_1, paragraph 3, what does 'these hurdles' refer to?",
+        "options": [],
+        "answer": "Rising interest rates, geopolitical tensions, and a cooling venture capital market.",
+        "marks": 2,
+        "logic": "It refers to the challenges mentioned in paragraph 2.",
+        "segment_ref": "Text_1:p2, Text_1:p3"
+      },
+      {
+        "id": "q6",
+        "part": "Text_2",
+        "type": "mc_main_idea",
+        "question": "What is the primary focus of Text_2?",
+        "options": [
+          "The unwavering success of Hong Kong's tech unicorns.",
+          "The factors influencing the trajectory of Hong Kong's tech unicorns.",
+          "The superiority of Hong Kong's regulatory framework compared to other regions.",
+          "The complete failure of Hong Kong's government initiatives to support tech."
+        ],
+        "answer": "B",
+        "marks": 2,
+        "logic": "Text_2 provides an in-depth analysis of factors influencing Hong Kong's tech unicorns.",
+        "segment_ref": "Text_2:p1"
+      },
+      {
+        "id": "q7",
+        "part": "Text_2",
+        "type": "short_answer",
+        "question": "According to Text_2, what is one way in which the changing global economic climate has affected Hong Kong's tech unicorns?",
+        "options": [],
+        "answer": "Investors are demanding greater returns and scrutinising start-ups' financials more closely.",
+        "marks": 2,
+        "logic": "This is a direct consequence of the changing economic climate as stated in paragraph 2.",
+        "segment_ref": "Text_2:p2"
+      },
+      {
+        "id": "q8",
+        "part": "Text_2",
+        "type": "true_false_not_given",
+        "question": "According to Text_2, does compliance with regulations always hinder a unicorn's competitive advantage?",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "False",
+        "marks": 1,
+        "logic": "Text_2 argues that compliance enhances trust and credibility, providing a competitive advantage.",
+        "segment_ref": "Text_2:p3"
+      },
+      {
+        "id": "q9",
+        "part": "Text_2",
+        "type": "gap_fill",
+        "question": "Hong Kong's strategic location, its ______ financial infrastructure, and its access to a vast market in mainland China provide a ______ foundation for growth. The Hong Kong government is ______ supporting the tech sector.",
+        "options": [],
+        "answer": "sophisticated, solid, actively",
+        "marks": 3,
+        "logic": "These words accurately complete the sentences based on information in the text.",
+        "segment_ref": "Text_2:p5"
+      },
+      {
+        "id": "q10",
+        "part": "Text_2",
+        "type": "reference",
+        "question": "In Text_2, paragraph 5, what does 'these initiatives' refer to?",
+        "options": [],
+        "answer": "Funding programmes, tax breaks, and the development of innovation hubs.",
+        "marks": 2,
+        "logic": "These are the examples of the initiatives given in the same sentence.",
+        "segment_ref": "Text_2:p5"
+      },
+      {
+        "id": "q11",
+        "part": "Text_2",
+        "type": "short_answer",
+        "question": "According to Text_2, what is the 'key' to navigating the shifting sands of the global economy?",
+        "options": [],
+        "answer": "Focusing on creating genuine value for customers, building strong teams, and maintaining a long-term perspective.",
+        "marks": 2,
+        "logic": "Directly stated in Text_2 paragraph 6.",
+        "segment_ref": "Text_2:p6"
+      },
+      {
+        "id": "q12",
+        "part": "Text_2",
+        "type": "true_false_not_given",
+        "question": "According to Text_2, is attracting and retaining top talent important for Hong Kong's tech unicorns?",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "False",
+        "marks": 1,
+        "logic": "Text_2 states that it is crucial to attract and retain talent.",
+        "segment_ref": "Text_2:p7"
+      },
+      {
+        "id": "q13",
+        "part": "Text_2",
+        "type": "short_answer",
+        "question": "According to Text_2, what is required to attract the best and brightest talent?",
+        "options": [],
+        "answer": "Creating a compelling work environment, offering competitive salaries and benefits, and providing opportunities for professional development.",
+        "marks": 2,
+        "logic": "Directly stated in Text_2 paragraph 7.",
+        "segment_ref": "Text_2:p7"
+      },
+      {
+        "id": "q14",
+        "part": "Text_2",
+        "type": "mc_main_idea",
+        "question": "According to Text_2, what distinct pressures does Hong Kong's unique position as a gateway to China expose the unicorns to?",
+        "options": [
+          "More funding and better resources.",
+          "Easier access to global markets.",
+          "Distinct regulatory and geopolitical pressures.",
+          "No challenges at all."
+        ],
+        "answer": "C",
+        "marks": 2,
+        "logic": "Directly stated in Text_2 paragraph 9.",
+        "segment_ref": "Text_2:p9"
+      },
+      {
+        "id": "q15",
+        "part": "Text_2",
+        "type": "gap_fill",
+        "question": "Hong Kong's unique position as a gateway to China presents ______ opportunities, but also exposes these unicorns to distinct ______ and ______ pressures. A nuanced understanding of these dynamics, combined with a ______ approach to risk management, will be critical for survival.",
+        "options": [],
+        "answer": "unparalleled, regulatory, geopolitical, proactive",
+        "marks": 4,
+        "logic": "Directly taken from Text_2 paragraph 9.",
+        "segment_ref": "Text_2:p9"
+      },
+      {
+        "id": "q16",
+        "part": "Text_1",
+        "type": "true_false_not_given",
+        "question": "According to Text_1, have Hong Kong unicorns already overcome all economic uncertainties?",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "False",
+        "marks": 1,
+        "logic": "The text suggests uncertainty, not complete overcoming.",
+        "segment_ref": "Text_1:p1"
+      },
+      {
+        "id": "q17",
+        "part": "Text_1",
+        "type": "short_answer",
+        "question": "Besides tax breaks and funding programmes, according to Text_1 what else does the government provide to support the tech sector?",
+        "options": [],
+        "answer": "A crucial lifeline.",
+        "marks": 2,
+        "logic": "This is a paraphrase of government initiatives that support Hong Kong's tech unicorns.",
+        "segment_ref": "Text_1:p3"
+      },
+      {
+        "id": "q18",
+        "part": "Text_2",
+        "type": "reference",
+        "question": "In Text_2, paragraph 4, what does 'this' refer to?",
+        "options": [],
+        "answer": "The intensifying competition for talent, customers, and funding as more start-ups enter the market.",
+        "marks": 2,
+        "logic": "This refers to what was stated in the previous sentence.",
+        "segment_ref": "Text_2:p4"
+      },
+      {
+        "id": "q19",
+        "part": "Text_2",
+        "type": "mc_main_idea",
+        "question": "According to Text_2, what is a key characteristic of the evolving regulatory landscape for Hong Kong's tech unicorns?",
+        "options": [
+          "It is becoming less stringent and more flexible.",
+          "It is non-existent, giving free rein to unicorns.",
+          "It is becoming more stringent, requiring greater compliance.",
+          "It is only focused on data privacy issues."
+        ],
+        "answer": "C",
+        "marks": 2,
+        "logic": "This directly reflects information in paragraph 3.",
+        "segment_ref": "Text_2:p3"
+      },
+      {
+        "id": "q20",
+        "part": "Text_2",
+        "type": "true_false_not_given",
+        "question": "According to Text 2, is the future success of Hong Kong unicorns guaranteed?",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "False",
+        "marks": 1,
+        "logic": "Paragraph 6 states the future is uncertain, not guaranteed.",
+        "segment_ref": "Text_2:p6"
+      }
+    ],
+    "meta": {
+      "topics": [
+        "Text_1",
+        "Text_2"
+      ]
+    }
+  }
+}

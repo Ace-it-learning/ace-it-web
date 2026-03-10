@@ -109,7 +109,7 @@ router.post('/practice/generate', async (req, res) => {
         language: req.body.language
     });
 
-    const { uid, topic, level, language } = req.body;
+    const { uid, topic, level, language, isFactory } = req.body;
     if (!uid || !topic) {
         console.log('[Practice Generate] Missing required fields');
         return res.status(400).json({ error: "Missing data" });
@@ -124,7 +124,8 @@ router.post('/practice/generate', async (req, res) => {
             uid,
             topic,
             level: level || 3,
-            language: language || 'en'
+            language: language || 'en',
+            isFactory: isFactory || false
         });
 
         console.log('[Practice Generate] Success! Returning data');
@@ -145,33 +146,34 @@ router.post('/practice/generate', async (req, res) => {
 
 // POST /practice/submit - Submit answer and award XP
 router.post('/practice/submit', async (req, res) => {
-    const { uid, taskId, xp, topic } = req.body;
+    const { uid, taskId, xp, topic, questionIds } = req.body;
     // taskId is the roadmap task id (e.g. week_12_task_0)
+    // questionIds is an array of IDs from the practice set
 
     if (!uid || !xp) return res.status(400).json({ error: "Missing data" });
 
     try {
-        // 1. Award XP
+        const MathsLabService = require('../../services/maths/MathsLabService');
+
+        // 1. Mark questions as seen
+        if (questionIds && Array.isArray(questionIds)) {
+            await MathsLabService.markQuestionsSeen(uid, questionIds);
+        }
+
+        // 2. Award XP
         const GamificationService = require('../../services/GamificationService');
         await GamificationService.awardXP(uid, xp, 'maths', {
-            title: `Practice: ${topic}`,
+            title: `Practice: ${topic || 'Maths'}`,
             score: 100, // Full marks for correct answer
             subject: 'maths',
             topic: topic
         });
 
-        // 2. Complete Roadmap Task if provided
+        // 3. Complete Roadmap Task if provided
         if (taskId) {
-            const RoadmapService = require('../../services/RoadmapService');
-            // Check if it's a general quest or weekly
-            if (taskId.startsWith('week_')) {
-                await RoadmapService.completeTask(uid, taskId, 'maths');
-            } else {
-                // General quest tracking could be added here (e.g. UserProfileService.updatePracticedSkills)
-                // For now, we assume frontend manages the "checked" state visually or we persist it
-                const UserProfileService = require('../../services/UserProfileService');
-                // We don't have a direct "addPracticedSkill" yet, but we can verify it via updateMathSkills if needed.
-                // Or just use the XP history as record.
+            const questResult = await GamificationService.awardQuestCompletion(uid, taskId, 'maths');
+            if (questResult.success && questResult.fresh) {
+                console.log(`[MathsPractice] Quest Bonus Awarded: ${questResult.earned} XP`);
             }
         }
 

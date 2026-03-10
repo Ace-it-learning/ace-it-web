@@ -177,7 +177,7 @@ const IntegratedListeningBoard = ({
                                     disabled={isGenerating}
                                     className="w-full py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg font-bold transition-all shadow-md hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed text-sm uppercase tracking-wide"
                                 >
-                                    {isGenerating ? "Processing..." : "Submit Answers"}
+                                    {isGenerating ? "Processing Analysis..." : "Submit Answers"}
                                 </button>
                             </div>
                         </div>

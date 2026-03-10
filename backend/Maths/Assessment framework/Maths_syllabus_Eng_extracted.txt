@@ -1,0 +1,1029 @@
+
+
+ 
+ 
+17
+ 
+17
+ 
+Learning Content of the Compulsory Part 
+Notes: 
+1. Learning units are grouped under three strands (“Number and Algebra”, “Measures, Shape and Space” and “Data Handling”) and a Further 
+Learning Unit. 
+2. Related learning objectives are grouped under the same learning unit.    
+3. The learning objectives underlined are the Non-foundation Topics. 
+4. The notes in the “Remarks” column of the table may be considered as supplementary information about the learning objectives. 
+5. To aid teachers in judging how far to take a given topic, a suggested lesson time in hours is given against each learning unit.    However, the 
+lesson time assigned is for their reference only.    Teachers may adjust the lesson time to meet their individual needs. 
+6. Schools may allocate up to 313 hours (i.e. 12.5% of the total lesson time) to those students who need more time for learning. 
+ 
+Learning Unit Learning Objective Time Remarks 
+Number and Algebra Strand 
+1. Quadratic equations in 
+one unknown 
+1.1 solve quadratic equations by the factor method 19  
+1.2 form quadratic equations from given roots  The given roots are confined to real numbers. 
+1.3 solve the equation   ax
+2 
++ bx + c = 0    by plotting 
+the graph of the parabola   y = ax
+2 
++ bx + c  and 
+reading the x-intercepts 
+  
+
+ 
+ 
+18
+ 
+18
+ 
+Learning Unit Learning Objective Time Remarks 
+ 1.4 solve quadratic equations by the quadratic formula  The  following  are not required  for  students 
+taking only the Foundation Topics: 
+ expressing nonreal roots in the form a ± bi  
+ simplifying   expressions   involving   surds 
+such as 
+48
+2
+
+  
+1.5 understand  the  relations  between  the  discriminant 
+of a quadratic equation and the nature of its roots 
+ 
+When  <  0,  students  have  to  point  out  that 
+“the  equation has no  real  roots”  or  “the 
+equation  has two  nonreal  roots” as they are 
+expected    to    recognise    the    existence    of 
+complex numbers in Learning Objective 1.8. 
+1.6 solve problems involving quadratic equations  Teachers should select the problems related to 
+students’ experiences. 
+Problems   involving   complicated   equations 
+such as 
+5
+1
+6
+6
+
+
+
+x
+x
+ are required only in 
+the  Non-foundation  Topics  and  dealt  with  in 
+Learning Objective 5.4. 
+
+ 
+ 
+19
+ 
+19
+ 
+Learning Unit Learning Objective Time Remarks 
+ 1.7 understand  the  relations  between  the  roots  and 
+coefficients  and  form  quadratic  equations  using 
+these relations 
+ The    relations    between    the    roots    and 
+coefficients include: 
+ 
+a
+b
+
+
+
+
+
+ and 
+a
+c
+ 
+, 
+where  and  are  the  roots  of  the  equation 
+ax
+2
+ + bx + c = 0 and a  0. 
+1.8 appreciate the development of the number systems 
+including the system of complex numbers 
+ The topics such as the hierarchy of the number 
+systems and the conversion between recurring 
+decimals and fractions may be discussed. 
+1.9 perform  addition,  subtraction,  multiplication  and 
+division of complex numbers 
+ Complex numbers are confined to the form a 
+ bi . 
+ 
+Note: The  coefficients  of  quadratic  equations 
+are confined to real numbers. 
+2. Functions and graphs 2.1 recognise   the   intuitive   concepts   of   functions, 
+domains    and    co-domains,    independent    and 
+dependent variables 
+10  
+ 
+
+ 
+ 
+20
+ 
+20
+ 
+Learning Unit Learning Objective Time Remarks 
+ 2.2 recognise the notation of functions and use tabular, 
+algebraic   and   graphical   methods   to   represent 
+functions 
+ 
+Representations like  
+ 
+can also be accepted. 
+ 2.3 understand  the  features  of  the  graphs  of  quadratic 
+functions 
+ 
+The   features   of   the   graphs   of   quadratic 
+functions include: 
+ the vertex 
+ the axis of symmetry 
+ the direction of opening 
+ relations with the axes 
+Students are required to find the maximum and 
+minimum values of quadratic functions by the 
+graphical method.  
+2.4 find   the   maximum   and   minimum   values   of 
+quadratic functions by the algebraic method 
+ 
+The   method   of   completing   the   square   is 
+required. 
+Students   are required to   solve   problems 
+related to  maximum  and  minimum  values  of 
+quadratic functions. 
+1   2 
+
+ 
+ 
+21
+ 
+21
+ 
+Learning Unit Learning Objective Time Remarks 
+3. Exponential and 
+logarithmic functions 
+3.1 understand the definitions of rational indices 16 The definitions include  and  . 
+3.2 understand the laws of rational indices  
+The laws of rational indices include: 
+ a
+ p 
+a
+ q
+ = a
+ p + q
+  
+ 
+q
+p
+a
+a
+ = a
+ p 
+
+ q
+  
+ (a
+ p
+)
+q
+ = a
+ pq
+  
+ a
+ p
+ b
+ p
+ = (ab)
+ p
+  
+ 
+p
+p
+p
+b
+a
+b
+a
+
+
+
+
+
+
+
+ 
+ 3.3 understand    the    definition    and    properties    of 
+logarithms (including the change of base) 
+ 
+The properties of logarithms include: 
+ log
+ a 
+1 = 0 
+ log
+ a 
+a = 1 
+ log
+ a 
+MN = log
+ a 
+M + log
+ a 
+N  
+ log
+ a
+N
+M
+= log
+ a 
+M  log
+ a 
+N  
+ log
+ a
+ M
+ k
+ = k log
+ a 
+M  
+ log 
+b 
+N =
+b
+N
+a
+a
+log
+log
+ 
+
+ 
+ 
+22
+ 
+22
+ 
+Learning Unit Learning Objective Time Remarks 
+ 3.4 understand the properties of exponential functions 
+and   logarithmic   functions   and recognise   the 
+features of their graphs 
+ The properties and features include: 
+ the domains of the functions 
+ the function f (x) = a
+ x
+ and f (x) = log 
+a
+ x 
+increases  (decreases)  as x increases  for  
+a > 1 (0 < a < 1) 
+ y = a
+ x
+  is  symmetric  to    y =  log
+ a 
+x  
+about y = x  
+ the intercepts with the axes 
+ the rate of increasing/the rate of decreasing 
+of the functions (by direct inspection) 
+ 3.5 solve    exponential    equations    and    logarithmic 
+equations 
+ Equations   which   can   be   transformed   into 
+quadratic equations such as    4
+x
+  3  2
+x
+  4 = 
+0    or    log (x  22)  +  log (x +  26)  =  2    are 
+dealt with in Learning Objective 5.3. 
+ 3.6 appreciate the applications of logarithms in real-life 
+situations 
+ The applications such as measuring 
+earthquake  intensity  in  the  Richter  Scale  and 
+sound   intensity   level   in   decibels may be 
+discussed. 
+
+ 
+ 
+23
+ 
+23
+ 
+Learning Unit Learning Objective Time Remarks 
+ 3.7 appreciate  the  development  of  the  concepts  of 
+logarithms 
+ The topics such as the historical development 
+of    the    concepts    of    logarithms    and    its 
+applications   to   the   design   of   some   past 
+calculation  tools  such  as  slide  rules  and  the 
+logarithmic table may be discussed. 
+4. More about 
+polynomials 
+4.1 perform division of polynomials  14 Methods other  than  long  division  are  also 
+accepted. 
+4.2 understand the remainder theorem    
+4.3 understand the factor theorem  Students are required to use factor theorem to 
+factorise polynomials such as x
+3 
+ a
+3
+. 
+4.4 understand  the  concepts  of  the  greatest  common 
+divisor    and    the    least    common    multiple    of 
+polynomials 
+ The terms “H.C.F.” , “gcd”, etc. can be used. 
+4.5 perform  addition,  subtraction,  multiplication  and 
+division of rational functions 
+ Computation  of  rational  functions  with  more 
+than two variables is not required. 
+Rational functions refer to algebraic fractions 
+at Key Stage 3. 
+5. More about equations 5.1 use  the  graphical  method  to  solve  simultaneous 
+equations  in  two  unknowns,  one  linear  and  one 
+quadratic in the form y = ax
+2
+ + bx + c  
+10  
+
+ 
+ 
+24
+ 
+24
+ 
+Learning Unit Learning Objective Time Remarks 
+ 
+5.2 use  the  algebraic method  to  solve  simultaneous 
+equations  in  two  unknowns,  one  linear  and  one 
+quadratic 
+  
+5.3 solve  equations  (including  fractional  equations, 
+exponential  equations,  logarithmic  equations  and 
+trigonometric equations) which can be transformed 
+into quadratic equations 
+ Solutions   for   trigonometric   equations   are 
+confined to the interval from 0 to 360 . 
+5.4 solve  problems  involving  equations  which  can  be 
+transformed into quadratic equations 
+ Teachers should select the problems related to 
+students’ experience. 
+6. Variations 
+6.1 understand direct variations and inverse variations, 
+and their applications to solving real-life problems 
+7  
+6.2 understand   the   graphs   of   direct   and   inverse 
+variations 
+  
+6.3 understand  joint  and  partial  variations,  and  their 
+applications to solving real-life problems 
+  
+7. Arithmetic and 
+geometric sequences 
+and their summations 
+7.1 understand   the   concept   and   the   properties   of 
+arithmetic sequences 
+17 The    properties    of    arithmetic    sequences 
+include: 
+ T
+n
+ = ½  ( T
+n–1
+ + T
+n+1
+ )  
+ if  T
+1
+ , T
+2
+ , T
+3
+ ,  ...  is  an arithmetic 
+sequence, then k T
+1
+ + a , k T
+2
+ + a , k T
+3
+ + 
+a , ... is also an arithmetic sequence 
+
+ 
+ 
+25
+ 
+25
+ 
+Learning Unit Learning Objective Time Remarks 
+ 7.2 understand   the   general   term   of   an   arithmetic 
+sequence 
+  
+7.3 understand   the   concept   and   the   properties   of 
+geometric sequences 
+ The    properties    of    geometric    sequences 
+include: 
+ T
+n
+2
+ = T
+n
+
+1
+  T
+n+1
+ 
+ if    T
+1
+ , T
+2
+ , T
+3
+ ,  ...    is  a  geometric 
+sequence,  then  k T
+1
+ ,  k T
+2
+ ,  k T
+3
+ , ... is 
+also a geometric sequence 
+7.4 understand   the   general   term   of   a   geometric 
+sequence 
+  
+7.5 understand  the  general  formulae  of  the  sum  to  a 
+finite  number  of terms  of  an  arithmetic  sequence 
+and a geometric sequence and use the formulae to 
+solve related problems 
+ Example: geometrical problems involving the 
+sum of arithmetic or geometric sequences. 
+7.6 explore the general formulae of the sum to infinity 
+for certain   geometric   sequences   and   use   the 
+formulae to solve related problems 
+ Example:   geometrical   problems   involving 
+infinite sum of the geometric sequences. 
+ 7.7 solve related real-life problems  Examples: problems about interest, growth or 
+depreciation. 
+
+ 
+ 
+26
+ 
+26
+ 
+Learning Unit Learning Objective Time Remarks 
+8. Inequalities  and  linear 
+programming 
+8.1 solve compound linear inequalities in one unknown 
+16 Compound    inequalities    involving    logical 
+connectives “and” or “or” are required. 
+Solving  the  problems on  triangle  inequalities 
+is required. 
+ 
+8.2 solve quadratic inequalities in one unknown by the 
+graphical method 
+  
+8.3 solve quadratic inequalities in one unknown by the 
+algebraic method 
+  
+8.4 represent  the  graphs  of  linear  inequalities  in  two 
+unknowns in the rectangular coordinate plane 
+  
+8.5 solve   systems   of   linear inequalities   in   two 
+unknowns 
+  
+8.6 solve linear programming problems 
+  
+9. More  about  graphs  of 
+functions 
+9.1 sketch  and  compare  graphs  of  various  types  of 
+functions   including   constant,   linear,   quadratic, 
+trigonometric, exponential and logarithmic 
+functions 
+11 Comparison  includes  domains,  existence  of 
+maximum or minimum values, symmetry and 
+periodicity.    
+9.2 solve  the  equation  f (x) = k  using  the  graph  of  
+y = f (x) 
+  
+
+ 
+ 
+27
+ 
+27
+ 
+Learning Unit Learning Objective Time Remarks 
+9.3 solve the inequalities   f (x) > k ,   f (x) < k ,    
+f (x)  k and f (x)  k  using the graph of   
+y = f (x) 
+  
+9.4 understand the transformations of the function      
+f (x)    including   f (x)  + k ,   f (x  +  k) ,   k f (x)   
+and   f (kx)    from tabular, symbolic and graphical 
+perspectives 
+  
+Measures, Shape and Space Strand 
+10. Equations of straight 
+lines 
+10.1 understand the equation of a straight line 7 Students are required to find the equation of a 
+straight line from given conditions such as: 
+ the  coordinates  of  any  two  points  on  the 
+straight line 
+ the   slope   of   the   straight   line   and   the 
+coordinates of a point on it 
+ the slope and the y-intercept of the straight 
+line 
+Students are required to  describe the features 
+of   a   straight   line   from   its   equation.   The 
+features include: 
+ the slope 
+
+ 
+ 
+28
+ 
+28
+ 
+Learning Unit Learning Objective Time Remarks 
+  
+ the intercepts with the axes 
+ whether it passes through a given point 
+The normal form is not required. 
+Students are required to recognise the relation 
+between slope and inclination. 
+10.2 understand the possible intersection of two straight 
+lines 
+ Students are required to determine the number 
+of intersection points of two straight lines from 
+their equations. 
+At Key Stage 3, students are required to solve 
+simultaneous     linear     equations     in     two 
+unknowns. 
+Note: Teachers  are  suggested  to  arrange  the 
+teaching of this Learning Unit in the first term 
+of S4. 
+11. Basic properties of 
+circles 
+11.1 understand  the  properties  of  chords  and  arcs  of  a 
+circle 
+23 The  properties  of  chords  and  arcs  of  a  circle 
+include: 
+ the chords of equal arcs are equal 
+ equal chords cut off equal arcs 
+ the perpendicular from the centre to a chord 
+bisects the chord 
+
+ 
+ 
+29
+ 
+29
+ 
+Learning Unit Learning Objective Time Remarks 
+   
+ the  straight  line  joining  the  centre  and  the 
+mid-point   of   a   chord   which   is   not   a 
+diameter is perpendicular to the chord 
+ the perpendicular bisector of a chord passes 
+through the centre 
+ equal chords are equidistant from the centre 
+ chords equidistant from the centre are equal 
+Students are required to understand that there 
+is  one  and  only  one  circle  passing  through 
+given three non-collinear points. 
+The property that the arcs are proportional to 
+their corresponding angles at the centre should 
+be discussed at Key Stage 3 when the formula 
+for calculating arc lengths is being explicated. 
+ 11.2 understand the angle properties of a circle  The angle properties of a circle include: 
+ the angle subtended by an arc of a circle at 
+the centre is double the angle subtended by 
+the  arc  at  any  point  on  the  remaining  part 
+of the circumference 
+ angles in the same segment are equal 
+ the    arcs    are    proportional    to    their 
+corresponding angles at the circumference 
+
+ 
+ 
+30
+ 
+30
+ 
+Learning Unit Learning Objective Time Remarks 
+ 
+  
+ the angle in a semi-circle is a right angle 
+ if the angle at the circumference is a right 
+angle,  then  the  chord  that  subtends  the 
+angle is a diameter 
+ 
+11.3 understand the properties of a cyclic quadrilateral   The   properties   of   a   cyclic   quadrilateral 
+include: 
+ the opposite angles of a cyclic quadrilateral 
+are supplementary 
+ an  exterior  angle  of  a  cyclic  quadrilateral 
+equals its interior opposite angle 
+ 
+11.4 understand the tests for concyclic points and cyclic 
+quadrilaterals 
+ The   tests   for   concyclic   points   and   cyclic 
+quadrilaterals include: 
+ if A and D are two points on the same side 
+of the line BC and BAC = BDC ,    then   
+A , B , C and D are concyclic 
+ if    a    pair    of    opposite    angles    of    a 
+quadrilateral are  supplementary,  then the 
+quadrilateral is cyclic 
+ if  the  exterior   angle  of  a  quadrilateral 
+equals  its  interior  opposite  angle,  then the 
+quadrilateral is cyclic 
+
+ 
+ 
+31
+ 
+31
+ 
+Learning Unit Learning Objective Time Remarks 
+ 11.5 understand the properties of tangents to a circle and 
+angles in the alternate segments 
+ 
+ The properties include: 
+ a tangent to a circle is perpendicular to the 
+radius through the point of contact 
+ the straight line perpendicular to a radius of 
+a circle at its external extremity is a tangent 
+to the circle  
+ the perpendicular to a tangent at its point of 
+contact  passes  through  the  centre  of  the 
+circle 
+ if  two tangents  are  drawn  to  a  circle  from 
+an external point, then: 
+- the distances from the external point 
+to the points of contact are equal 
+- the tangents subtend equal angles at 
+the centre 
+- the straight line joining the centre to 
+the  external  point  bisects  the  angle 
+between the tangents 
+ if a straight line is tangent to a circle, then 
+the  tangent-chord  angle  is  equal  to  the 
+angle in the alternate segment 
+
+ 
+ 
+32
+ 
+32
+ 
+Learning Unit Learning Objective Time Remarks 
+   
+ if a straight line passes through an end point 
+of  a  chord  of  a  circle  so  that  the  angle  it 
+makes with the chord is equal to the angle 
+in  the  alternate  segment,  then  the  straight 
+line touches the circle 
+ 11.6 use the basic properties of circles to perform simple 
+geometric proofs 
+ Knowledge on geometry learnt at Key Stage 3 
+can be involved in the geometric proofs. 
+12. Loci 
+12.1 understand the concept of loci 6  
+12.2 describe  and  sketch  the  locus  of  points  satisfying 
+given conditions 
+ 
+The conditions include: 
+ maintaining  a  fixed  distance  from  a  fixed 
+point 
+ maintaining  an  equal  distance  from  two 
+given points 
+ maintaining a fixed distance from a line 
+ maintaining  an  equal  distance  from  two 
+parallel lines 
+ maintaining  an  equal  distance  from  two 
+intersecting lines 
+
+ 
+ 
+33
+ 
+33
+ 
+Learning Unit Learning Objective Time Remarks 
+12.3 describe   the   locus   of   points   with   algebraic 
+equations 
+ Students are required to find the equations of 
+simple   loci, which   include equations   of 
+straight  lines,  circles  and  parabolas  (in  the 
+form of  y = ax
+2
+ + bx + c ). 
+13. Equations of circles 13.1 understand the equation of a circle 7 Students are required to find the equation of a 
+circle from given conditions such as: 
+ the coordinates of the centre and the radius 
+of the circle 
+ the  coordinates  of  any  three  points  on  the 
+circle 
+Students are required to  describe the features 
+of  a  circle  from  its  equation.  The  features 
+include: 
+ the centre 
+ the radius 
+ whether a given point lies inside, outside or 
+on the circle 
+ 13.2 find the coordinates of the intersections of a straight 
+line   and   a   circle   and   understand   the   possible 
+intersection of a straight line and a circle 
+ Students are required to find the equations of 
+tangents to a circle. 
+
+ 
+ 
+34
+ 
+34
+ 
+Learning Unit Learning Objective Time Remarks 
+14. More about 
+trigonometry 
+14.1 understand the  functions  sine,  cosine  and  tangent, 
+and    their    graphs    and    properties,    including 
+maximum and minimum values and periodicity 
+25 Simplification  of  expressions  involving  sine, 
+cosine  and  tangent  of     ,  90   ,   
+180  , ... , etc. is required. 
+14.2 solve the trigonometric equations   a sin  = b ,  
+a cos  = b , a tan  = b  (solutions in the interval 
+from    0  to    360 ) and  other  trigonometric 
+equations  (solutions  in  the  interval  from    0  to   
+360 ) 
+ Equations   that   can   be   transformed   into 
+quadratic equations  are  required  only  in  the 
+Non-foundation   Topics   and   dealt   with   in 
+Learning Objective 5.3. 
+ 14.3 understand the formula    ½  ab sin C  for areas of 
+triangles 
+  
+14.4 understand the sine and cosine formulae   
+14.5 understand Heron’s formula   
+14.6 understand the concept of projection   
+14.7 understand  the  angle  between  a  line  and  a  plane, 
+and the angle between 2 planes 
+ The concept of inclination is required. 
+14.8 understand the theorem of three perpendiculars   
+
+ 
+ 
+35
+ 
+35
+ 
+Learning Unit Learning Objective Time Remarks 
+14.9 solve   related   2-dimensional   and   3-dimensional 
+problems 
+ 3-dimensional  problems  include  finding  the 
+angle between two lines, the angle between a 
+line and a plane, the angle between two planes, 
+the   distance   between   points, the   distance 
+between  a  point  and  a  line, and  the  distance 
+between a point and a plane. 
+Data Handling Strand 
+15. Permutations and 
+combinations 
+15.1 understand the addition rule and multiplication rule 
+in the counting principle 
+11  
+ 15.2 understand the concept and notation of permutation  
+Notations such as “
+n
+r
+P
+” , “
+n
+P
+r
+” , “ 
+n
+P
+r
+” , etc. 
+can be used. 
+ 15.3 solve  problems  on  the  permutation  of  distinct 
+objects without repetition 
+ Problems such as “permutation of objects in 
+which  three  particular  objects  are  put  next  to 
+each other” are required. 
+Circular permutation is not required. 
+ 15.4 understand the     concept     and     notation     of 
+combination 
+ 
+Notations  such  as  “
+n
+r
+C
+”  ,  “
+n
+C
+r
+”  ,  “
+ n
+C
+r
+”  , 
+“
+
+
+
+
+
+
+
+
+r
+n
+” , etc. can be used. 
+
+ 
+ 
+36
+ 
+36
+ 
+Learning Unit Learning Objective Time Remarks 
+15.5 solve  problems  on  the  combination  of  distinct 
+objects without repetition 
+  
+16. More about 
+probability 
+16.1 recognise  the  notation  of  set  language  including 
+union, intersection and complement 
+10 The concept of Venn Diagram is required. 
+16.2 understand the addition law of probability and the 
+concepts of    mutually    exclusive    events    and 
+complementary events 
+ The addition law of probability refers to  
+“P(A  B) = P(A) + P(B)  P(A  B) ”. 
+16.3 understand  the  multiplication  law  of  probability 
+and the concept of independent events 
+ The multiplication law of probability refers to   
+“P(A  B)  = P(A)  P(B)  ,  where   A  and   
+B  are independent events”. 
+16.4 recognise  the  concept  and  notation  of  conditional 
+probability 
+ 
+The rule “P(A  B)  = P(A)  P(B | A)”    is 
+required. 
+Bayes’ Theorem is not required. 
+16.5 use permutation and combination to solve problems 
+related to probability 
+  
+17. Measures of 
+dispersion 
+17.1 understand the concept of dispersion 13  
+17.2 understand the concepts of range and inter-quartile 
+range  
+  
+
+ 
+ 
+37
+ 
+37
+ 
+Learning Unit Learning Objective Time Remarks 
+ 17.3 construct    and    interpret    the    box-and-whisker 
+diagram and use it to compare the distributions of 
+different sets of data 
+ A box-and-whisker diagram can also be called 
+a “boxplot”. 
+17.4 understand  the  concept  of  standard  deviation  for 
+both grouped and ungrouped data sets 
+ Students  are  required  to  recognise  the  term 
+“variance”  and  that  variance  equals  to  the 
+square of standard deviation. 
+Students are   required   to   understand   the 
+following formula for standard deviation: 
+ = 
+N
+x
+x
+N
+2
+2
+1
+)
+(
+)
+(
+
+
+
+
+
+
+
+. 
+17.5 compare  the  dispersions  of  different  sets  of  data 
+using appropriate measures 
+  
+17.6 understand the applications of standard deviation to 
+real-life  problems  involving  standard  scores  and 
+the normal distribution 
+  
+17.7 understand the effect of the following operations on 
+the dispersion of the data: 
+(i) adding a common constant to each item of the 
+set of data 
+(ii) multiplying  each  item  of  the set  of  data  by  a 
+common constant 
+  
+
+ 
+ 
+38
+ 
+38
+ 
+Learning Unit Learning Objective Time Remarks 
+18. Uses   and   abuses   of 
+statistics 
+18.1 recognise  different  techniques  in  survey  sampling 
+and the basic principles of questionnaire design 
+4 Students    are    required    to    recognise    the 
+concepts of “populations” and “samples”. 
+Students are required to recognise probability 
+sampling and non-probability sampling. 
+Students are  required  to recognise  that,  in 
+constructing  questionnaires,  factors  such  as 
+the  types,  wording  and  ordering  of  questions 
+and  response  options  influence  their  validity 
+and reliability. 
+18.2 discuss  and  recognise  the  uses  and  abuses  of 
+statistical methods in various daily-life activities or 
+investigations 
+  
+18.3 assess    statistical    investigations    presented    in 
+different  sources  such  as  news  media,  research 
+reports, etc. 
+  
+Further Learning Unit 
+19. Further applications 
+ 
+Solve   more   sophisticated   real-life   and   mathematical 
+problems   that   may   require   students   to   search   the 
+information for clues, to explore different strategies, or to 
+integrate  various  parts  of  mathematics  which they  have 
+learned in different areas 
+ 
+14 Examples: 
+ solve  simple  financial  problems  in  areas 
+such as taxation and instalment payment 
+ analyse   and   interpret   data   collected   in 
+surveys 
+
+ 
+ 
+39
+ 
+39
+ 
+Learning Unit Learning Objective Time Remarks 
+ The main focuses are: 
+(a) to  explore  and  solve  more  sophisticated  real-life 
+problems 
+(b) to  appreciate  the  connections  between  different 
+areas of mathematics 
+ 
+ 
+ explore and interpret graphs related to real-
+life situations 
+ explore  Ptolemy’s  Theorem  and  its 
+applications 
+ model the relation between two sets of data 
+which show a strong linear correlation and 
+explore  how  to  reduce  simple  non-linear 
+relations  such  as     y = m
+x
+ + c  and    
+y = k a
+x
+  to linear relations 
+ explore the relation between the Fibonacci 
+sequence and the Golden Ratio 
+ appreciate the applications of cryptography  
+ explore the  Ceva’s  Theorem  and  its 
+applications 
+ analyse  mathematical  games  (e.g.  explore 
+the general solution of the water puzzle) 
+20. Inquiry and 
+investigation 
+Through   various learning    activities,   discover   and 
+construct   knowledge,   further   improve   the   ability   to 
+inquire,     communicate,     reason     and     conceptualise 
+mathematical concepts 
+10 This   is not an   independent   and   isolated 
+learning  unit.      The  time  is  allocated  for 
+students to engage in learning  activities from 
+different learning units. 
+Grand total: 250 hours 

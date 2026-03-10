@@ -1,6 +1,9 @@
 import React from 'react';
-import { InlineMath, BlockMath } from 'react-katex';
+import { SafeInlineMath, SafeBlockMath } from '../maths/SafeMath';
 import 'katex/dist/katex.min.css';
+import GeometryRenderer from '../maths/GeometryRenderer';
+import { useLanguage } from '../../context/LanguageContext';
+import { formatNumbers, sanitizeMath, prepareMathText, splitContentByDelimiters, looksLikeMath } from '../../utils/mathFormattingUtils';
 
 /**
  * Polymorphic Question Card Component
@@ -16,7 +19,12 @@ const QuestionCard = ({
     questionNumber,
     showChallengeBadge = true
 }) => {
-    const { id, text, type, options, level } = question;
+    const { language } = useLanguage();
+    const { id, text, text_zh, type, options, options_zh, level } = question;
+
+    // Select localized content
+    const displayText = (language === 'zh' && text_zh) ? text_zh : text;
+    const displayOptions = (language === 'zh' && options_zh) ? options_zh : options;
 
     // Determine border and badge colors based on question type
     const getBorderColor = () => {
@@ -59,53 +67,122 @@ const QuestionCard = ({
     };
 
     // Render text with optional LaTeX support
-    const renderText = (content) => {
-        if (!renderMath || !content) return content;
+    const renderText = (content, hideVisualDescription = false) => {
+        if (!content) return '';
+
+        // Safety: Ensure content is a string
+        if (typeof content !== 'string') {
+            if (typeof content === 'number') {
+                content = String(content);
+            } else if (Array.isArray(content)) {
+                content = content.join('\n');
+            } else {
+                console.warn('[QuestionCard] Received non-string content:', content);
+                try {
+                    content = JSON.stringify(content);
+                } catch (e) { content = String(content); }
+            }
+        }
+        if (!renderMath) return content;
 
         // 1. Extract diagram/table description before stripping
         const diagramMatch = content.match(/\[DIAGRAM REQUIRED:([\s\S]*?)\]/);
         const tableMatch = content.match(/\[TABLE REQUIRED:([\s\S]*?)\]/);
         const description = (diagramMatch ? diagramMatch[1] : (tableMatch ? tableMatch[1] : '')).trim();
 
-        // 2. Strip tags for clean text display
         const displaySubtext = content
             .replace(/\[DIAGRAM REQUIRED:[\s\S]*?\]/g, '')
             .replace(/\[TABLE REQUIRED:[\s\S]*?\]/g, '')
+            .replace(/(Step\s*\d*\s*:?)\s*\n\s*/gi, '$1 ')
             .trim();
 
-        // Simple LaTeX detection
-        const hasLatex = displaySubtext.includes('\\(') || displaySubtext.includes('\\[') || displaySubtext.includes('$');
-        if (!hasLatex && !description) return displaySubtext;
-
-        // Split by LaTeX delimiters
-        const parts = displaySubtext.split(/(\\\[[\s\S]*?\\\]|\\\([\s\S]*?\\\)|(?:\$\$[\s\S]*?\$\$)|(?:\$[^$]+?\$))/g);
+        const cleanText = prepareMathText(displaySubtext);
+        const parts = splitContentByDelimiters(cleanText);
 
         return (
             <div className="math-container space-y-4">
-                <div className="text-gray-800">
+                <div className="text-gray-800 leading-relaxed font-sans text-left">
                     {parts.map((part, idx) => {
                         if (!part) return null;
 
-                        if ((part.startsWith('\\[') && part.endsWith('\\]')) || (part.startsWith('$$') && part.endsWith('$$'))) {
-                            const math = part.slice(2, -2);
-                            return <BlockMath key={idx} math={math} />;
-                        }
-                        else if ((part.startsWith('\\(') && part.endsWith('\\)')) || (part.startsWith('$') && part.endsWith('$'))) {
-                            const math = part.startsWith('\\(') ? part.slice(2, -2) : part.slice(1, -1);
-                            return <InlineMath key={idx} math={math} />;
+                        const isBlock = (part.startsWith('\\[') && part.endsWith('\\]')) || (part.startsWith('$$') && part.endsWith('$$'));
+                        const isInline = (part.startsWith('\\(') && part.endsWith('\\)')) || (part.startsWith('$') && part.endsWith('$'));
+
+                        if (isBlock || isInline) {
+                            let math = '';
+                            if (part.startsWith('\\[') || part.startsWith('\\(')) math = part.slice(2, -2);
+                            else if (part.startsWith('$$')) math = part.slice(2, -2);
+                            else math = part.slice(1, -1);
+
+                            math = math
+                                .replace(/\n/g, ' ')
+                                .replace(/%/g, '\\%')
+                                .replace(/___HKD___/g, '\\text{HK}\\$')
+                                .replace(/___USD___/g, '\\$');
+
+                            const labeledMath = sanitizeMath(math);
+                            const finalMath = formatNumbers(labeledMath, true);
+
+                            if (isBlock) {
+                                return (
+                                    <SafeBlockMath key={idx} math={finalMath} className="my-2" />
+                                );
+                            } else {
+                                return (
+                                    <SafeInlineMath key={idx} math={finalMath} className="mx-0.5" />
+                                );
+                            }
                         }
 
-                        // Safety Net
-                        const isRawMath = (/[\\^=]/.test(part) || part.includes('_')) && !/^[A-Z][a-z]+ /.test(part);
-                        if (isRawMath && parts.length === 1) {
-                            return <BlockMath key={idx} math={part} />;
-                        }
+                        return (
+                            <span key={idx}>
+                                {part.split(/(?:\r?\n|(?=\.Step\s*\d+\s*:?))/).map((line, lineIdx, arr) => {
+                                    if (!line.trim() && arr.length > 1) {
+                                        return <br key={lineIdx} />;
+                                    }
+                                    const trimmedLine = line.trim().replace(/^\./, '');
+                                    if (!trimmedLine) return null;
 
-                        return <span key={idx}>{part}</span>;
+                                    const isMathLine = looksLikeMath(trimmedLine);
+
+                                    if (isMathLine) {
+                                        const mathReadyLine = trimmedLine
+                                            .replace(/%/g, '\\%')
+                                            .replace(/___HKD___/g, '\\text{HK}\\$')
+                                            .replace(/___USD___/g, '\\$');
+
+                                        const labeledMath = sanitizeMath(mathReadyLine);
+                                        const finalMath = formatNumbers(labeledMath, true);
+
+                                        return (
+                                            <SafeInlineMath key={lineIdx} math={finalMath} className="mx-1" />
+                                        );
+                                    } else {
+                                        const formattedLine = formatNumbers(trimmedLine);
+                                        const html = formattedLine
+                                            .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                                            .replace(/\*(.*?)\*/g, '<em>$1</em>')
+                                            .replace(/\\text\{___HKD___\}/g, '___HKD___')
+                                            .replace(/\\text\{___USD___\}/g, '___USD___')
+                                            .replace(/___HKD___/g, 'HK$')
+                                            .replace(/___USD___/g, '$')
+                                            .replace(/\\,/g, ' ');
+
+                                        return (
+                                            <span
+                                                key={lineIdx}
+                                                className="whitespace-pre-wrap"
+                                                dangerouslySetInnerHTML={{ __html: html }}
+                                            />
+                                        );
+                                    }
+                                })}
+                            </span>
+                        );
                     })}
                 </div>
 
-                {description && (
+                {description && !hideVisualDescription && (
                     <div className="bg-slate-50 p-4 rounded-xl border border-slate-100 flex flex-col items-center gap-2 text-center">
                         <div className="w-10 h-10 bg-white rounded-xl shadow-sm flex items-center justify-center text-slate-400">
                             <i className={`fas ${tableMatch ? 'fa-table' : 'fa-chart-area'}`}></i>
@@ -143,16 +220,24 @@ const QuestionCard = ({
 
             {/* Question Text */}
             <div className="text-gray-900 mb-4 text-base font-medium leading-relaxed">
-                {renderText(text)}
+                {renderText(displayText, !!(question.diagram_json || question.diagram_svg))}
             </div>
 
             {/* Diagram Placeholder or SVG Figure */}
-            {question.diagram_svg ? (
+            {question.diagram_json ? (
+                <div className="mb-6 flex justify-center transform scale-95 origin-top">
+                    {/* Lazy load renderer to avoid cycle if possible, or just import at top */}
+                    {/* Assuming GeometryRenderer is imported at top */}
+                    <div className="bg-white p-2 rounded-xl border-2 border-slate-100 shadow-sm">
+                        <GeometryRenderer data={question.diagram_json} />
+                    </div>
+                </div>
+            ) : question.diagram_svg ? (
                 <div
                     className="mb-6 p-4 bg-white border-2 border-slate-100 rounded-xl flex items-center justify-center overflow-x-auto"
                     dangerouslySetInnerHTML={{ __html: question.diagram_svg }}
                 />
-            ) : (question.imageURL === null && (text.includes('[DIAGRAM') || text.includes('[TABLE'))) && (
+            ) : (question.imageURL === null && (displayText.includes('[DIAGRAM') || displayText.includes('[TABLE'))) && (
                 <div className="mb-6 p-8 bg-slate-50 border-2 border-dashed border-slate-300 rounded-xl flex flex-col items-center justify-center text-slate-400">
                     <svg className="w-12 h-12 mb-2 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -163,26 +248,29 @@ const QuestionCard = ({
             )}
 
             {/* Answer Input */}
-            {type === 'mc' && options ? (
+            {type === 'mc' && displayOptions ? (
                 // Multiple Choice - Radio buttons
                 <div className="space-y-2">
-                    {options.map((option, optIdx) => (
-                        <label
-                            key={optIdx}
-                            className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer transition-colors"
-                        >
-                            <input
-                                type="radio"
-                                name={id}
-                                value={option}
-                                disabled={disabled}
-                                checked={answer === option}
-                                onChange={(e) => onChange(id, e.target.value)}
-                                className="w-4 h-4 text-green-600 focus:ring-2 focus:ring-green-500 disabled:opacity-50"
-                            />
-                            <span className="text-gray-800">{renderText(option)}</span>
-                        </label>
-                    ))}
+                    {displayOptions.map((opt, optIdx) => {
+                        const cleanOpt = typeof opt === 'string' ? opt.replace(/^[A-D]\s*[:.]\s*/i, '').trim() : opt;
+                        return (
+                            <label
+                                key={optIdx}
+                                className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer transition-colors"
+                            >
+                                <input
+                                    type="radio"
+                                    name={id}
+                                    value={opt}
+                                    disabled={disabled}
+                                    checked={answer === opt}
+                                    onChange={(e) => onChange(id, e.target.value)}
+                                    className="w-4 h-4 text-green-600 focus:ring-2 focus:ring-green-500 disabled:opacity-50"
+                                />
+                                <span className="text-gray-800">{renderText(cleanOpt)}</span>
+                            </label>
+                        );
+                    })}
                 </div>
             ) : (
                 // Short Answer / Fill in Blank - Textarea

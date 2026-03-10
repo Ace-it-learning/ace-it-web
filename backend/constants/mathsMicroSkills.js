@@ -19,6 +19,13 @@ const MATHS_MICRO_SKILLS = {
         description: 'Binary/Hexadecimal, complex numbers basics.',
         paper: 'Paper 2'
     },
+    'math_alg_formulas': {
+        id: 'math_alg_formulas',
+        name: 'Formulas & Substitution',
+        category: 'Number & Algebra',
+        description: 'Change of subject, algebraic substitution.',
+        paper: 'Paper 1'
+    },
     'math_alg_quadratics': {
         id: 'math_alg_quadratics',
         name: 'Quadratic Equations',
@@ -56,14 +63,14 @@ const MATHS_MICRO_SKILLS = {
     },
     'math_alg_sequences': {
         id: 'math_alg_sequences',
-        name: 'AS & GS Sequences',
+        name: 'AP & GP',
         category: 'Number & Algebra',
         description: 'Arithmetic/Geometric sequences, summation.',
         paper: 'Paper 1'
     },
-    'math_alg_inequalities': {
-        id: 'math_alg_inequalities',
-        name: 'Linear & Quadratic Inequalities',
+    'math_num_inequalities': {
+        id: 'math_num_inequalities',
+        name: 'Inequalities',
         category: 'Number & Algebra',
         description: 'Solving inequalities, graphical representation.',
         paper: 'Paper 1/2'
@@ -86,7 +93,7 @@ const MATHS_MICRO_SKILLS = {
     },
     'math_geo_properties_circle': {
         id: 'math_geo_properties_circle',
-        name: 'Properties of Circle',
+        name: 'Circle Properties',
         category: 'Geometry',
         description: 'Chords, arcs, tangents, cyclic quads.',
         paper: 'Paper 1/2'
@@ -147,6 +154,92 @@ const MATHS_MICRO_SKILLS = {
         name: 'Permutations & Combinations',
         category: 'Data Handling',
         description: 'nCr, nPr, arrangement problems.',
+        paper: 'Paper 1/2'
+    },
+    'math_trig_applications': {
+        id: 'math_trig_applications',
+        name: 'Trig Applications',
+        category: 'Geometry',
+        description: 'Sine/Cosine rule, Area of triangle, 2D/3D problems.',
+        paper: 'Paper 1'
+    },
+    'math_num_ratio': {
+        id: 'math_num_ratio',
+        name: 'Ratio & Proportion',
+        category: 'Number & Algebra',
+        description: 'Ratio, proportion, and simple rates.',
+        paper: 'Paper 1'
+    },
+    'math_num_inequalities': {
+        id: 'math_num_inequalities',
+        name: 'Inequalities',
+        category: 'Number & Algebra',
+        description: 'Linear inequalities, systems of inequalities.',
+        paper: 'Paper 1/2'
+    },
+    'math_alg_log_exp': {
+        id: 'math_alg_log_exp',
+        name: 'Log & Exp Functions',
+        category: 'Number & Algebra',
+        description: 'Properties of logarithms and exponents.',
+        paper: 'Paper 1/2'
+    },
+    'math_alg_complex_numbers': {
+        id: 'math_alg_complex_numbers',
+        name: 'Complex Numbers',
+        category: 'Number & Algebra',
+        description: 'Basic operations of complex numbers.',
+        paper: 'Paper 1'
+    },
+    'math_prob_advanced': {
+        id: 'math_prob_advanced',
+        name: 'Advanced Probability',
+        category: 'Data Handling',
+        description: 'Conditional probability, Combinations & Permutations.',
+        paper: 'Paper 1/2'
+    },
+
+    // === FRONTEND COMPATIBILITY ALIASES ===
+    'math_geo_circles': {
+        id: 'math_geo_circles',
+        name: 'Circle Properties',
+        category: 'Geometry',
+        description: 'Angles in circles, chords, tangents (Frontend Alias)',
+        paper: 'Paper 1/2'
+    },
+    'math_geo_rectilinear': {
+        id: 'math_geo_rectilinear',
+        name: 'Rectilinear Figures',
+        category: 'Geometry',
+        description: 'Triangles, polygons, similarity (Frontend Alias)',
+        paper: 'Paper 1'
+    },
+    'math_mensuration': {
+        id: 'math_mensuration',
+        name: 'Mensuration',
+        category: 'Geometry',
+        description: 'Volume and Surface Area (Frontend Alias)',
+        paper: 'Paper 1'
+    },
+    'math_alg_apgp': {
+        id: 'math_alg_apgp',
+        name: 'AP & GP',
+        category: 'Number & Algebra',
+        description: 'Arithmetic and Geometric sequences (Frontend Alias)',
+        paper: 'Paper 1'
+    },
+    'math_stat_charts': {
+        id: 'math_stat_charts',
+        name: 'Statistical Charts',
+        category: 'Data Handling',
+        description: 'Box-and-whisker, Stem-and-leaf (Frontend Alias)',
+        paper: 'Paper 1'
+    },
+    'math_prob_basic': {
+        id: 'math_prob_basic',
+        name: 'Basic Probability',
+        category: 'Data Handling',
+        description: 'Classic probability (Frontend Alias)',
         paper: 'Paper 1/2'
     }
 };

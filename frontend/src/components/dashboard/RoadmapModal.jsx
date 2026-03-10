@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
-import { Lock, CheckCircle, Play, Map, Star, Clock, X, Trophy, Search, Sparkles, Zap, BookOpen, PenTool, Mic, MessageSquare, Layers, RefreshCcw } from 'lucide-react';
-import { MICRO_SKILLS, getSkillName, getSkillDesc } from '../../constants/microSkills';
+import { useLanguage } from '../../context/LanguageContext';
+import { Lock, CheckCircle, Play, Map, Star, Clock, X, Trophy, Search, Sparkles, Zap, BookOpen, PenTool, Mic, MessageSquare, Layers, RefreshCcw, GraduationCap, Ear, ArrowRight } from 'lucide-react';
+import { MICRO_SKILLS, getSkillName, getSkillDesc, getSkillOutcome } from '../../constants/microSkills';
+import { calculateTier, getTierMetadata, getMasteryStats } from '../../utils/masteryUtils';
 
-const RoadmapModal = ({ isOpen, onClose }) => {
+const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
     const { user } = useAuth();
+    const { language, t } = useLanguage();
     const navigate = useNavigate();
     const [plan, setPlan] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -14,7 +17,30 @@ const RoadmapModal = ({ isOpen, onClose }) => {
     const [searchQuery, setSearchQuery] = useState('');
     const [userSkills, setUserSkills] = useState({});
     const [practicedSkills, setPracticedSkills] = useState([]);
-    const [paperFilter, setPaperFilter] = useState('ALL'); // 'ALL' | 'READING' | 'WRITING' | 'LISTENING' | 'SPEAKING'
+    const [paperFilter, setPaperFilter] = useState(initialFilter); // 'ALL' | 'READING' | 'WRITING' | 'LISTENING' | 'SPEAKING'
+    const [selectedLevels, setSelectedLevels] = useState({}); // skillId -> level
+    const [weeklyQuestStatus, setWeeklyQuestStatus] = useState({ completed: false });
+    const [listeningMissions, setListeningMissions] = useState([]);
+
+    // Fetch Listening Missions when filter is active
+    useEffect(() => {
+        if (paperFilter === 'LISTENING' && isOpen) {
+            const fetchListening = async () => {
+                try {
+                    const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+                    // Use the existing public endpoint (relative path via proxy also works)
+                    const res = await fetch(`${API_URL}/api/lab/listening`);
+                    if (res.ok) {
+                        const data = await res.json();
+                        setListeningMissions(data);
+                    }
+                } catch (e) {
+                    console.error("Failed to fetch listening missions", e);
+                }
+            };
+            fetchListening();
+        }
+    }, [paperFilter, isOpen]);
 
     const fetchUserSkills = async () => {
         try {
@@ -24,6 +50,27 @@ const RoadmapModal = ({ isOpen, onClose }) => {
                 const data = await res.json();
                 setUserSkills(data.microSkills || {});
                 setPracticedSkills(data.practicedSkills || []);
+                if (data.weeklyQuest) setWeeklyQuestStatus(data.weeklyQuest);
+
+                // Initialize selected levels based on current mastery + progression logic
+                const initialSelected = {};
+                Object.entries(data.microSkills || {}).forEach(([id, meta]) => {
+                    const masteryLevel = meta.level || 0;
+                    const practiced = (data.practicedSkills || []).includes(id);
+
+                    if (!practiced) {
+                        // Unpracticed: default based on current mastery
+                        if (masteryLevel < 3.5) initialSelected[id] = '3';
+                        else if (masteryLevel < 5.0) initialSelected[id] = '4';
+                        else initialSelected[id] = '5';
+                    } else {
+                        // Practiced: auto-advance to next level to encourage progression
+                        if (masteryLevel < 4) initialSelected[id] = '4'; // Attempted Easy, suggest Medium
+                        else if (masteryLevel < 5) initialSelected[id] = '5'; // Attempted Medium, suggest DSE Standard
+                        else initialSelected[id] = '5';
+                    }
+                });
+                setSelectedLevels(initialSelected);
             }
         } catch (error) {
             console.error("Failed to load user skills", error);
@@ -34,10 +81,11 @@ const RoadmapModal = ({ isOpen, onClose }) => {
         try {
             setLoading(true);
             const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
-            const res = await fetch(`${API_URL}/api/roadmap?uid=${user.uid}`);
+            // NEW: Fetch from Factory Model's personalized endpoint
+            const res = await fetch(`${API_URL}/api/quests/personalized?uid=${user.uid}`);
             if (res.ok) {
                 const data = await res.json();
-                setPlan(data);
+                setPlan({ tasks: data });
             }
         } catch (error) {
             console.error("Failed to load roadmap", error);
@@ -53,17 +101,8 @@ const RoadmapModal = ({ isOpen, onClose }) => {
         }
     }, [user, isOpen]);
 
-    const formatDSELevel = (numericLevel) => {
-        if (numericLevel === null || numericLevel === undefined) return '1';
-        const lvl = Number(numericLevel);
-        if (lvl >= 7) return '5**';
-        if (lvl >= 6) return '5*';
-        if (lvl >= 5) return '5';
-        if (lvl >= 4) return '4';
-        if (lvl >= 3) return '3';
-        if (lvl >= 2) return '2';
-        return '1';
-    };
+    // formatDSELevel is defined but never used - fixing by using it or removing it.
+    // Actually it's a helper that might be useful so I'll keep it but ensure it doesn't cause errors.
 
     const handleRegenerate = async () => {
         if (!user || regenerating) return;
@@ -88,8 +127,6 @@ const RoadmapModal = ({ isOpen, onClose }) => {
         }
     };
 
-
-
     const handleTaskClick = (task) => {
         console.log("RoadmapModal: Clicked Task", task);
         if (task.locked) return;
@@ -103,8 +140,55 @@ const RoadmapModal = ({ isOpen, onClose }) => {
             return;
         }
 
-        if (task.type === 'LEARN' || task.type === 'PRACTICE') {
-            const targetLevel = task.level || (plan ? Number(plan.level_at_start) + 1 : 1);
+        if (task.type === 'LEARN' || task.type === 'PRACTICE' || task.type === 'WEEKLY_QUEST') {
+            const topic = task.topic?.toLowerCase() || '';
+            const skillId = task.id;
+            const skillData = MICRO_SKILLS[skillId];
+            const cluster = skillData?.cluster;
+
+            // REDIRECTION LOGIC FOR SPEAKING
+            if (topic.includes('speaking') || skillId.startsWith('speaking_')) {
+                let targetRoute = '/lab'; // Fallback
+                let moduleParam = '';
+
+                if (cluster === 'delivery') {
+                    targetRoute = '/speaking/quest/delivery';
+                    moduleParam = 'delivery';
+                } else if (cluster === 'flow' || skillId === 'speaking_individualResponse') {
+                    targetRoute = '/speaking/quest/flow';
+                    moduleParam = 'flow';
+                } else if (cluster === 'interaction' || skillId === 'speaking_groupDiscussion') {
+                    targetRoute = '/speaking/quest/interaction';
+                    moduleParam = 'interaction';
+                }
+
+                if (targetRoute !== '/lab') {
+                    navigate(`${targetRoute}?module=${moduleParam}&level=${task.level || '3'}&taskId=${task.id}`, {
+                        state: {
+                            topic: task.topic,
+                            taskId: task.id,
+                            taskTitle: task.title,
+                            taskXp: task.xp
+                        }
+                    });
+                    return;
+                }
+            }
+
+            // REDIRECTION LOGIC FOR WRITING (Genre Factory)
+            if (skillId.startsWith('writing_genre_')) {
+                // Navigate to Writing Briefing Page
+                const genreName = skillData?.en?.name || 'General Writing';
+                navigate(`/writing/briefing/${encodeURIComponent(genreName)}`, {
+                    state: {
+                        initialGenre: genreName,
+                        taskId: task.id
+                    }
+                });
+                return;
+            }
+
+            const targetLevel = task.level || '5';
             const params = new URLSearchParams({
                 topic: task.topic,
                 level: targetLevel,
@@ -114,12 +198,14 @@ const RoadmapModal = ({ isOpen, onClose }) => {
                     autoStart: {
                         topic: task.topic,
                         focus: ["grammar", "vocabulary"],
-                        level: targetLevel
+                        level: targetLevel,
+                        isWeeklyQuest: task.type === 'WEEKLY_QUEST'
                     },
                     taskId: task.id,
                     taskTitle: task.title,
                     taskXp: task.xp,
-                    taskDescription: task.description || "Master this skill to level up."
+                    taskDescription: task.type === 'WEEKLY_QUEST' ? "Master this week's theme and earn bonus XP." : task.description || "Master this skill to level up.",
+                    isWeeklyQuest: task.type === 'WEEKLY_QUEST'
                 }
             });
         } else if (task.type === 'CHALLENGE') {
@@ -142,9 +228,9 @@ const RoadmapModal = ({ isOpen, onClose }) => {
 
     if (!isOpen) return null;
 
-    const completedCount = plan ? plan.tasks.filter(t => t.status === 'COMPLETED' && t.type !== 'MOCK').length : 0;
+    const completedCount = plan?.tasks ? plan.tasks.filter(t => t.status === 'COMPLETED' && t.type !== 'MOCK').length : 0;
     const totalKeys = 5; // Fixed at 5 targets
-    const bossTask = plan ? plan.tasks.find(t => t.type === 'MOCK') : null;
+    const bossTask = plan?.tasks ? plan.tasks.find(t => t.type === 'MOCK') : null;
     const canUnlockBoss = completedCount >= 4;
 
     const filteredSkills = Object.entries(MICRO_SKILLS).filter(([id, data]) => {
@@ -171,29 +257,49 @@ const RoadmapModal = ({ isOpen, onClose }) => {
             if (id === 'speaking_groupDiscussion' || id === 'speaking_individualResponse') {
                 return false;
             }
+            // Hide old writing skills, show Genres
+            if (paperFilter === 'WRITING') {
+                if (id.startsWith('writing_') && !id.startsWith('writing_genre_')) return false;
+            }
         }
+
+        // Hide Granular Speaking Skills (Consolidated into General)
+        if (data.isGranular) return false;
 
         return true;
     });
 
+    // Helper: Calculate Aggregated Level for General Skills
+    const getAggregatedLevel = (skillId) => {
+        if (!skillId.endsWith('_general') && !skillId.startsWith('writing_genre_')) return userSkills[skillId]?.level || 0;
+
+        // If it's a genre or has its own level, use it
+        if (userSkills[skillId]?.level) return userSkills[skillId].level;
+
+        // Aggregate Writing Genres logic? Not needed for now as they are individual.
+        if (skillId.startsWith('writing_genre_')) return userSkills[skillId]?.level || 0;
+
+        // Otherwise, aggregate from children (Speking logic)
+        const cluster = MICRO_SKILLS[skillId]?.cluster;
+        if (!cluster) return 0;
+
+        const children = Object.keys(MICRO_SKILLS).filter(k => MICRO_SKILLS[k].cluster === cluster && k !== skillId);
+        if (children.length === 0) return 0;
+
+        const levels = children.map(k => userSkills[k]?.level || 0).filter(l => l > 0);
+        if (levels.length === 0) return 0;
+
+        // Return average level
+        return levels.reduce((a, b) => a + b, 0) / levels.length;
+    };
+
     return (
         <div className="fixed inset-0 z-[3000] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in duration-200">
-            <div className="bg-white rounded-2xl shadow-2xl w-[85vw] h-[85vh] flex flex-col overflow-hidden animate-in zoom-in-95 duration-200">
-                {/* Header - Slimmer Version */}
-                <div className={`p-4 relative overflow-hidden ${activeTab === 'CHALLENGE' ? 'bg-indigo-900' : 'bg-amber-500'}`}>
-                    <div className="absolute top-0 right-0 p-2 opacity-10">
-                        <Trophy className="w-24 h-24 text-white transform rotate-12" />
-                    </div>
-
-                    <div className="absolute top-3 right-14 z-[60]">
-                        <button
-                            onClick={handleRegenerate}
-                            disabled={regenerating}
-                            className={`p-2 text-white/80 hover:text-white transition-colors rounded-full hover:bg-white/10 ${regenerating ? 'animate-spin' : ''}`}
-                            title="Regenerate Plan"
-                        >
-                            <RefreshCcw className="w-5 h-5" />
-                        </button>
+            <div className="bg-white rounded-2xl shadow-2xl w-[90vw] h-[90vh] flex flex-col overflow-hidden animate-in zoom-in-95 duration-200">
+                {/* Header - English Theme (Indigo/Purple) */}
+                <div className={`p-4 relative overflow-hidden ${activeTab === 'CHALLENGE' ? 'bg-indigo-950' : 'bg-[#FF6600] border-b border-white/10'}`}>
+                    <div className="absolute top-0 right-0 p-2 opacity-5">
+                        <GraduationCap className="w-32 h-32 text-white transform rotate-12" />
                     </div>
 
                     <button
@@ -203,40 +309,34 @@ const RoadmapModal = ({ isOpen, onClose }) => {
                         <X className="w-6 h-6" />
                     </button>
 
-                    <div className="relative z-10 text-white flex justify-between items-end">
+                    <div className="relative z-10 text-white flex flex-col md:flex-row justify-between items-end gap-4">
                         <div>
                             <div className="flex items-center gap-2 mb-1 opacity-90 text-[10px] font-bold tracking-wider uppercase">
-                                <Map className="w-3 h-3" />
-                                Quest System
+                                <Sparkles className="w-3 h-3 text-yellow-400" />
+                                {t('lab.personalized_quest_system')}
                             </div>
-                            <h2 className="text-2xl font-bold leading-tight">My Weekly Learning Path</h2>
-                            <p className="text-white/80 text-xs opacity-90 truncate">
-                                {activeTab === 'WEEKLY'
-                                    ? "Complete targets to unlock the Master Quest!"
-                                    : activeTab === 'CHALLENGE'
-                                        ? "Take on elite challenges to prove your mastery."
-                                        : "Practice any specific skill to master it."}
+                            <h2 className="text-2xl font-bold leading-tight">{t('dashboard.roadmap')}</h2>
+                            <p className="text-white/80 text-xs opacity-90">
+                                Complete your daily set to earn 200 XP Bonus!
                             </p>
                         </div>
 
                         {/* Tab Switcher */}
-                        <div className={`flex p-1 rounded-lg backdrop-blur-sm border ${activeTab === 'CHALLENGE' ? 'bg-indigo-800/40 border-indigo-400/30' : 'bg-amber-600/40 border-amber-400/30'}`}>
+                        <div className="flex p-1 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20">
                             {[
-                                { id: 'WEEKLY', label: 'Personalised Quest', icon: Clock },
-                                { id: 'GENERAL', label: 'General Quest', icon: Sparkles },
-                                { id: 'CHALLENGE', label: 'Challenge', icon: Zap }
+                                { id: 'WEEKLY', label: 'Weekly Quests', icon: Clock },
+                                { id: 'GENERAL', label: 'General Quests', icon: Search },
+                                { id: 'CHALLENGE', label: 'Elite Quests', icon: Trophy }
                             ].map(tab => (
                                 <button
                                     key={tab.id}
-                                    onClick={() => {
-                                        setActiveTab(tab.id);
-                                        setPaperFilter('ALL'); // Reset filter on switch
-                                    }}
+                                    onClick={() => setActiveTab(tab.id)}
                                     className={`
                                         flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-bold transition-all
                                         ${activeTab === tab.id
-                                            ? 'bg-white text-slate-800 shadow-sm'
-                                            : 'text-white hover:bg-white/10'}
+                                            ? 'bg-white text-slate-900 shadow-sm'
+                                            : 'text-white hover:bg-white/10'
+                                        }
                                     `}
                                 >
                                     <tab.icon className="w-3.5 h-3.5" />
@@ -248,140 +348,120 @@ const RoadmapModal = ({ isOpen, onClose }) => {
                 </div>
 
                 {loading ? (
-                    <div className="p-12 text-center text-slate-400 flex-1 flex items-center justify-center">Loading your quest...</div>
+                    <div className="p-12 text-center text-slate-400 flex-1 flex items-center justify-center">
+                        <div className="flex flex-col items-center gap-3">
+                            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-slate-900"></div>
+                            <p>{t('common.loading')}</p>
+                        </div>
+                    </div>
                 ) : (
                     <div className="flex-1 flex flex-col min-h-0 bg-slate-50/50">
                         {activeTab === 'WEEKLY' ? (
                             <div className="p-6 flex-1 overflow-y-auto custom-scrollbar">
-                                {/* Progress */}
-                                <div className="mb-6">
-                                    <div className="flex justify-between items-end mb-2">
-                                        <div>
-                                            <span className="text-2xl font-bold text-slate-800">{completedCount}</span>
-                                            <span className="text-slate-400 text-sm ml-1">/{totalKeys} Practice Targets</span>
+                                {/* Weekly Reading Quest Card */}
+                                {weeklyQuestStatus.completed ? (
+                                    <div className="mb-6 p-5 bg-slate-100 border-2 border-slate-200 rounded-2xl flex items-center justify-between opacity-80">
+                                        <div className="flex items-center gap-4">
+                                            <div className="p-3 bg-green-100 rounded-xl">
+                                                <CheckCircle className="w-6 h-6 text-green-600" />
+                                            </div>
+                                            <div>
+                                                <h4 className="font-bold text-slate-900 text-base">Weekly Reading Quest</h4>
+                                                <p className="text-xs text-slate-500">Quest finished! Refresh next Monday.</p>
+                                            </div>
                                         </div>
-                                        <div className="text-amber-600 font-bold text-xs bg-amber-50 px-3 py-1 rounded-full border border-amber-100">
-                                            Status: {canUnlockBoss ? 'Master Quest Unlocked!' : `${4 - completedCount} more to unlock Master Quest`}
+                                        <div className="px-4 py-1.5 bg-green-500 text-white rounded-lg text-xs font-bold">
+                                            COMPLETED
                                         </div>
                                     </div>
-                                    <div className="h-3 bg-slate-100 rounded-full overflow-hidden">
-                                        <div
-                                            className="h-full bg-gradient-to-r from-amber-400 to-amber-600 transition-all duration-700 ease-out shadow-[0_0_10px_rgba(245,158,11,0.5)]"
-                                            style={{ width: `${(completedCount / totalKeys) * 100}%` }}
-                                        />
-                                    </div>
-                                </div>
+                                ) : (
+                                    <div
+                                        onClick={() => handleTaskClick({
+                                            id: 'weekly_quest_reading',
+                                            type: 'WEEKLY_QUEST',
+                                            topic: 'reading_weekly',
+                                            title: 'Weekly Reading Quest',
+                                            xp: 200,
+                                            level: '5'
+                                        })}
+                                        className="mb-6 p-5 bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-700 rounded-2xl shadow-lg shadow-indigo-500/20 relative overflow-hidden cursor-pointer hover:scale-[1.01] active:scale-[0.99] transition-all group"
+                                    >
+                                        {/* Decorative background elements */}
+                                        <div className="absolute top-0 right-0 w-40 h-40 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2 group-hover:bg-white/10 transition-colors" />
+                                        <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2 group-hover:bg-white/10 transition-colors" />
 
-                                {/* Task Grid */}
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pb-4">
-                                    {plan?.tasks.filter(t => t.type !== 'MOCK').map((task, idx) => {
-                                        const isCompleted = task.status === 'COMPLETED';
-                                        return (
-                                            <div
-                                                key={task.id}
-                                                onClick={() => handleTaskClick(task)}
-                                                className={`
-                                                    group relative p-4 rounded-xl border-2 text-left transition-all duration-200
-                                                    ${isCompleted
-                                                        ? 'bg-amber-100 border-amber-500 shadow-[0_4px_12px_rgba(245,158,11,0.2)] ring-1 ring-amber-200'
-                                                        : task.category === 'SPECIAL' && task.type === 'CHALLENGE'
-                                                            ? 'bg-purple-50 border-purple-300 hover:border-purple-500 hover:shadow-lg cursor-pointer shadow-purple-100 transform hover:scale-[1.01]'
-                                                            : task.category === 'SPECIAL' && task.type === 'SPEAKING_CHALLENGE'
-                                                                ? 'bg-indigo-50 border-indigo-300 hover:border-indigo-500 hover:shadow-lg cursor-pointer shadow-indigo-100 transform hover:scale-[1.01]'
-                                                                : 'bg-white border-slate-100 hover:border-amber-300 hover:shadow-lg cursor-pointer'
-                                                    }
-                                                `}
-                                            >
-                                                <div className="flex justify-between items-start mb-2">
-                                                    <span className={`
-                                                        px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wide
-                                                        ${isCompleted
-                                                            ? 'bg-amber-100 text-amber-700'
-                                                            : task.category === 'SPECIAL' && task.type === 'CHALLENGE'
-                                                                ? 'bg-purple-600 text-white'
-                                                                : task.category === 'SPECIAL' && task.type === 'SPEAKING_CHALLENGE'
-                                                                    ? 'bg-indigo-600 text-white'
-                                                                    : 'bg-slate-100 text-slate-600'}
-                                                    `}>
-                                                        {isCompleted
-                                                            ? 'COLLECTED'
-                                                            : task.category === 'SPECIAL' && task.type === 'CHALLENGE'
-                                                                ? '⚡ SPECIAL CHALLENGE'
-                                                                : task.category === 'SPECIAL' && task.type === 'SPEAKING_CHALLENGE'
-                                                                    ? '🎙️ SPECIAL CHALLENGE'
-                                                                    : 'AI PERSONALIZED'}
-                                                    </span>
-                                                    {isCompleted && <Trophy className="w-5 h-5 text-amber-500 fill-amber-100" />}
+                                        <div className="relative z-10 flex items-center justify-between">
+                                            <div className="flex items-center gap-4">
+                                                <div className="p-3 bg-white/15 backdrop-blur-sm rounded-xl border border-white/20 group-hover:border-white/40 transition-colors">
+                                                    <BookOpen className="w-6 h-6 text-white" />
                                                 </div>
-
-                                                <h3 className={`font-bold text-slate-800 mb-1 group-hover:text-amber-600 transition-colors`}>
-                                                    {task.title}
-                                                </h3>
-                                                <p className="text-xs text-slate-500 line-clamp-2 leading-relaxed">
-                                                    {task.description || "Master this skill to level up your English."}
-                                                </p>
-
-                                                <div className="mt-3 flex items-center justify-between">
-                                                    {isCompleted ? (
-                                                        <span className="text-[10px] font-bold text-amber-600 flex items-center gap-1 bg-amber-50 px-2 py-1 rounded-full border border-amber-200">
-                                                            <RefreshCcw className="w-3 h-3" />
-                                                            Completed! (Repeat: +50 XP)
+                                                <div>
+                                                    <div className="flex items-center gap-2 mb-0.5">
+                                                        <h4 className="font-bold text-white text-base">Weekly Reading Quest</h4>
+                                                        <span className="px-2 py-0.5 bg-yellow-400/20 border border-yellow-400/30 rounded-full text-[9px] font-black text-yellow-300 uppercase tracking-wider">
+                                                            NEW
                                                         </span>
-                                                    ) : (
-                                                        <span className="text-xs font-bold text-amber-500 flex items-center gap-1">
-                                                            <Star className="w-3 h-3 fill-current" /> +{task.xp} XP
-                                                        </span>
-                                                    )}
-
-                                                    {task.status !== 'COMPLETED' ? (
-                                                        <div className="opacity-0 group-hover:opacity-100 transition-opacity bg-amber-100 text-amber-700 p-1.5 rounded-full">
-                                                            <Play className="w-4 h-4 ml-0.5" />
-                                                        </div>
-                                                    ) : (
-                                                        <div className="opacity-0 group-hover:opacity-100 transition-opacity bg-amber-50 text-amber-600 p-1.5 rounded-full border border-amber-100">
-                                                            <Play className="w-3.5 h-3.5 ml-0.5" />
-                                                        </div>
-                                                    )}
-                                                </div>
-                                            </div>
-                                        );
-                                    })}
-
-                                    {/* Master Quest (Boss) Card */}
-                                    {bossTask && (
-                                        <div className={`
-                                            relative p-4 rounded-xl border-2 flex flex-col justify-center items-center text-center transition-all duration-300
-                                            ${bossTask.locked && !canUnlockBoss
-                                                ? 'bg-slate-50 border-slate-200 text-slate-400 grayscale'
-                                                : 'bg-gradient-to-br from-amber-50 to-white border-amber-400 shadow-amber-100 shadow-xl cursor-pointer transform hover:scale-[1.02]'
-                                            }
-                                        `}
-                                            onClick={() => (!bossTask.locked || canUnlockBoss) && handleTaskClick(bossTask)}
-                                        >
-                                            <div className={`
-                                                mb-3 p-3 rounded-full shadow-inner
-                                                ${bossTask.locked && !canUnlockBoss ? 'bg-slate-200 text-white' : 'bg-amber-500 text-white animate-pulse'}
-                                            `}>
-                                                {bossTask.locked && !canUnlockBoss ? <Lock className="w-6 h-6" /> : <Trophy className="w-6 h-6" />}
-                                            </div>
-                                            <h3 className="font-bold text-lg leading-tight mb-1">Weekly Master Quest</h3>
-                                            <p className="text-xs font-medium mb-3 opacity-80 text-amber-700">Consolidated Review & Exam</p>
-
-                                            <div className="bg-white/80 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-amber-600 border border-amber-200 flex items-center gap-1.5">
-                                                <Star className="w-3.5 h-3.5 fill-current" />
-                                                <span>500 XP Reward</span>
-                                            </div>
-
-                                            {(bossTask.locked && !canUnlockBoss) && (
-                                                <div className="absolute inset-0 bg-white/40 backdrop-blur-[1px] flex items-center justify-center rounded-xl">
-                                                    <div className="bg-slate-800 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg flex items-center gap-2">
-                                                        <Lock className="w-3 h-3" />
-                                                        Complete {4 - completedCount} more targets
                                                     </div>
+                                                    <p className="text-xs text-white/70">
+                                                        One DSE-standard passage • Personalised question set
+                                                    </p>
                                                 </div>
-                                            )}
+                                            </div>
+                                            <div className="flex items-center gap-3">
+                                                <div className="text-right mr-2 hidden md:block">
+                                                    <div className="text-[10px] font-bold text-white/60 uppercase tracking-tighter">Expires in</div>
+                                                    <div className="text-xs font-black text-white">{weeklyQuestStatus.daysRemaining || 7} Days</div>
+                                                </div>
+                                                <div className="bg-white text-indigo-700 p-2 rounded-lg shadow-md group-hover:shadow-indigo-400/50 transition-all">
+                                                    <Play className="w-5 h-5 fill-current" />
+                                                </div>
+                                            </div>
                                         </div>
-                                    )}
+                                    </div>
+                                )}
+
+                                {/* Tasks Grid */}
+                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pb-12">
+                                    {(plan?.tasks || []).map((task) => (
+                                        <div
+                                            key={task.id}
+                                            onClick={() => handleTaskClick(task)}
+                                            className={`
+                                                group relative p-5 rounded-xl border-2 text-left transition-all duration-200 cursor-pointer
+                                                bg-white border-slate-100 hover:border-indigo-300 hover:shadow-lg
+                                            `}
+                                        >
+                                            <div className="flex items-center justify-between mb-4">
+                                                <div className={`p-2 rounded-lg ${task.status === 'COMPLETED' ? 'bg-green-50 text-green-600' : 'bg-indigo-50 text-indigo-600'}`}>
+                                                    {task.type === 'LEARN' ? <BookOpen size={18} /> :
+                                                        task.type === 'PRACTICE' ? <RefreshCcw size={18} /> :
+                                                            task.type === 'SPEAKING_CHALLENGE' ? <Mic size={18} /> :
+                                                                <Sparkles size={18} />}
+                                                </div>
+                                                {task.status === 'COMPLETED' ? (
+                                                    <CheckCircle size={18} className="text-green-500" />
+                                                ) : (
+                                                    <div className="text-[10px] font-bold px-2 py-0.5 bg-slate-100 text-slate-500 rounded-full">
+                                                        {task.type}
+                                                    </div>
+                                                )}
+                                            </div>
+
+                                            <h4 className="font-bold text-slate-900 mb-1 line-clamp-1">{task.title}</h4>
+                                            <p className="text-[11px] text-slate-500 mb-4 line-clamp-2 leading-tight">
+                                                {task.description}
+                                            </p>
+
+                                            <div className="mt-4 flex items-center justify-between">
+                                                <span className="text-xs font-bold text-indigo-600 flex items-center gap-1">
+                                                    <Star className="w-3 h-3 fill-current" /> +{task.xp} XP
+                                                </span>
+                                                <span className="text-[9px] font-black text-slate-300 uppercase">
+                                                    Factory v1.0
+                                                </span>
+                                            </div>
+                                        </div>
+                                    ))}
                                 </div>
                             </div>
                         ) : (
@@ -422,7 +502,8 @@ const RoadmapModal = ({ isOpen, onClose }) => {
                                                     flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] font-bold whitespace-nowrap transition-all border
                                                     ${paperFilter === filter.id
                                                         ? 'bg-amber-100 border-amber-200 text-amber-700 shadow-sm'
-                                                        : 'bg-white border-slate-200 text-slate-500 hover:bg-slate-50'}
+                                                        : 'bg-white border-slate-200 text-slate-500 hover:bg-slate-50'
+                                                    }
                                                 `}
                                             >
                                                 <filter.icon className="w-3 h-3" />
@@ -432,140 +513,257 @@ const RoadmapModal = ({ isOpen, onClose }) => {
                                     </div>
                                 </div>
 
-                                {/* Skills Grid */}
-                                <div className="p-6 flex-1 overflow-y-auto custom-scrollbar">
-                                    {filteredSkills.length === 0 ? (
-                                        <div className="text-center py-20 opacity-50">
-                                            <div className="bg-slate-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                                                <Search className="w-8 h-8 text-slate-400" />
-                                            </div>
-                                            <p className="font-bold text-slate-500">No skills found matching your filters.</p>
-                                        </div>
-                                    ) : (
-                                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 pb-4">
-                                            {filteredSkills.map(([id, data]) => {
-                                                const name = getSkillName(id);
-                                                const desc = getSkillDesc(id);
-                                                const currentLevel = userSkills[id]?.level || 0;
-                                                const mastered = currentLevel >= 4;
-                                                const paper = id.split('_')[0];
-
-                                                // 3-Tier Mapping Logic
-                                                let targetLevel;
-                                                let xpReward = 50;
-
-                                                if (activeTab === 'CHALLENGE') {
-                                                    targetLevel = 7; // Challenge always aims for Elite
-                                                    xpReward = 100;
-                                                } else {
-                                                    // General Tab Logic:
-                                                    // If < 3 => Foundation (3)
-                                                    // Else => Standard (5)
-                                                    if (currentLevel < 3) targetLevel = 3;
-                                                    else targetLevel = 5;
-                                                }
-
-                                                const outcome = paper === 'reading' ? 'Boost comprehension & speed' :
-                                                    paper === 'writing' ? 'Improve clarity & vocabulary' :
-                                                        paper === 'listening' ? 'Capture details & nuances' :
-                                                            'Master fluency & expression';
-
-                                                const isPracticed = practicedSkills.includes(id) || practicedSkills.includes(name);
+                                {paperFilter === 'LISTENING' ? (
+                                    <div className="p-6 flex-1 overflow-y-auto custom-scrollbar">
+                                        {/* Listening Quests Grid */}
+                                        {/* Listening Quests Grid */}
+                                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pb-12">
+                                            {/* Fetched Listening Missions */}
+                                            {listeningMissions.map((mission) => {
+                                                // Default Level Logic
+                                                const defaultLevel = userSkills['listening_general']?.level || 3;
+                                                const currentSelected = selectedLevels[mission.id] || (defaultLevel < 3.5 ? '3' : defaultLevel < 5.0 ? '4' : '5');
+                                                const stats = getMasteryStats(Number(currentSelected), false, false);
+                                                const isPracticed = false; // TODO: Track practiced listening missions?
 
                                                 return (
                                                     <div
-                                                        key={id}
-                                                        onClick={() => handleTaskClick({
-                                                            id: `general_${id}`,
-                                                            title: `${activeTab === 'CHALLENGE' ? 'Elite' : 'Practice'}: ${name}`,
-                                                            topic: id,
-                                                            type: 'PRACTICE',
-                                                            xp: xpReward,
-                                                            level: targetLevel
-                                                        })}
-                                                        className={`group relative p-4 rounded-xl border-2 transition-all flex flex-col cursor-pointer
-                                                            ${isPracticed
-                                                                ? 'bg-amber-100 border-amber-500 shadow-[0_4px_12px_rgba(245,158,11,0.2)] ring-1 ring-amber-200'
-                                                                : activeTab === 'CHALLENGE'
-                                                                    ? 'bg-white border-indigo-100 shadow-sm hover:border-indigo-400'
-                                                                    : 'bg-white border-slate-100 hover:border-amber-300 hover:shadow-md'
-                                                            }`}
+                                                        key={mission.id}
+                                                        onClick={() => {
+                                                            onClose();
+                                                            navigate(`/listening/briefing/${mission.id}`, {
+                                                                state: {
+                                                                    questData: mission,
+                                                                    targetLevel: currentSelected,
+                                                                    targetXp: stats.xp
+                                                                }
+                                                            });
+                                                        }}
+                                                        className="group relative p-4 rounded-xl border-2 transition-all flex flex-col cursor-pointer bg-white border-slate-100 hover:border-rose-300 hover:shadow-md"
                                                     >
-                                                        {/* Completion/Mastery Status Overlay */}
                                                         <div className="flex justify-between items-start mb-2">
-                                                            <span className={`px-2 py-0.5 rounded text-[9px] font-black uppercase tracking-wider ${paper === 'reading' ? 'bg-blue-50 text-blue-600' :
-                                                                paper === 'writing' ? 'bg-purple-50 text-purple-600' :
-                                                                    paper === 'listening' ? 'bg-orange-50 text-orange-600' :
-                                                                        'bg-green-50 text-green-600'
-                                                                }`}>
-                                                                {paper}
+                                                            <span className="px-2 py-0.5 rounded text-[9px] font-black uppercase tracking-wider bg-rose-50 text-rose-600">
+                                                                LISTENING
                                                             </span>
+                                                            <select
+                                                                value={currentSelected}
+                                                                onClick={(e) => e.stopPropagation()}
+                                                                onChange={(e) => {
+                                                                    e.stopPropagation();
+                                                                    setSelectedLevels(prev => ({ ...prev, [mission.id]: e.target.value }));
+                                                                }}
+                                                                className={`px-2 py-0.5 rounded text-[9px] font-black uppercase tracking-wider border outline-none cursor-pointer hover:bg-gray-50 transition-colors ${stats.color}`}
+                                                            >
+                                                                <option value="3">Easy</option>
+                                                                <option value="4">Medium</option>
+                                                                <option value="5">DSE Standard</option>
+                                                                <option value="6">Elite</option>
+                                                            </select>
                                                             <div className="flex items-center gap-1.5">
-                                                                {isPracticed && (
-                                                                    <div className="bg-amber-100 text-amber-600 p-1 rounded-full border border-amber-200" title="Completed!">
-                                                                        <CheckCircle className="w-3.5 h-3.5 fill-white" />
+                                                                {/* Mastery Circles Placeholder - can be real if we track history per mission */}
+                                                                {[
+                                                                    { l: 4, label: 'E', name: 'Easy' },
+                                                                    { l: 5, label: 'M', name: 'Medium' },
+                                                                    { l: 6, label: 'S', name: 'DSE Standard' }
+                                                                ].map((tier) => (
+                                                                    <div
+                                                                        key={tier.l}
+                                                                        className="w-4 h-4 rounded-full flex items-center justify-center text-[8px] font-bold border transition-all bg-slate-50 border-slate-200 text-slate-400"
+                                                                    >
+                                                                        {tier.label}
                                                                     </div>
-                                                                )}
-                                                                {mastered && <Trophy className="w-4 h-4 text-amber-500 drop-shadow-sm" />}
+                                                                ))}
                                                             </div>
                                                         </div>
 
-                                                        <h4 className={`text-sm font-bold mb-1 group-hover:text-amber-600 transition-colors ${isPracticed ? 'text-slate-800' : 'text-slate-800'}`}>
-                                                            {name}
+                                                        <h4 className="text-sm font-bold mb-1 group-hover:text-rose-600 transition-colors text-slate-800 line-clamp-1">
+                                                            {mission.title}
                                                         </h4>
                                                         <p className="text-[11px] text-slate-500 mb-3 line-clamp-2 leading-tight min-h-[2.4em]">
-                                                            {desc || "Master this skill to excel in HKDSE English."}
+                                                            {mission.description || "Integrated listening mission covering all 3 pillars."}
                                                         </p>
 
                                                         <div className="pt-3 border-t border-slate-50 mt-auto">
                                                             <div className="flex items-center justify-between mb-2">
                                                                 <div className="flex items-center gap-2">
-                                                                    {isPracticed ? (
-                                                                        <div className="px-2 py-0.5 bg-amber-100 rounded text-[10px] font-bold text-amber-700 uppercase tracking-wide flex items-center gap-1.5 border border-amber-200">
-                                                                            <RefreshCcw className="w-3 h-3" />
-                                                                            Repeat Quest
-                                                                        </div>
-                                                                    ) : activeTab === 'CHALLENGE' ? (
-                                                                        <div className="px-2 py-0.5 bg-indigo-100 rounded text-[10px] font-bold text-indigo-600 uppercase tracking-wide flex items-center gap-1">
-                                                                            <Zap className="w-3 h-3 fill-current" />
-                                                                            Elite Quest
-                                                                        </div>
-                                                                    ) : (
-                                                                        <div className="px-2 py-0.5 bg-slate-100 rounded text-[10px] font-bold text-slate-500 uppercase tracking-wide">
-                                                                            General Quest
-                                                                        </div>
-                                                                    )}
+                                                                    <div className="px-2 py-0.5 bg-slate-100 rounded text-[10px] font-bold text-slate-500 uppercase tracking-wide flex items-center gap-1.5">
+                                                                        <Play className="w-2.5 h-2.5" />
+                                                                        Start Mission
+                                                                    </div>
                                                                 </div>
-                                                                <div className={`text-[10px] font-bold ${isPracticed ? 'text-amber-600' : activeTab === 'CHALLENGE' ? 'text-indigo-600' : 'text-amber-500'}`}>
-                                                                    {isPracticed ? `Completed (+${xpReward} XP)` : `+${xpReward} XP`}
+                                                                <div className="text-[10px] font-bold text-rose-600">
+                                                                    +{stats.xp} XP
                                                                 </div>
                                                             </div>
 
                                                             <div className="flex items-center justify-between">
                                                                 <div className="flex items-center gap-1.5 text-[10px] text-slate-400 italic">
-                                                                    <Sparkles className={`w-3 h-3 ${activeTab === 'CHALLENGE' ? 'text-indigo-400' : 'text-amber-400'}`} />
-                                                                    <span>Outcome: {outcome}</span>
+                                                                    <Sparkles className="w-3 h-3 text-rose-400" />
+                                                                    <span>Outcome: Exam Proficiency</span>
                                                                 </div>
-                                                                {isPracticed && (
-                                                                    <div className="opacity-0 group-hover:opacity-100 transition-opacity">
-                                                                        <Play className="w-3.5 h-3.5 text-amber-500" />
-                                                                    </div>
-                                                                )}
+                                                                <div className="opacity-0 group-hover:opacity-100 transition-opacity">
+                                                                    <Play className="w-3.5 h-3.5 text-rose-500" />
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 );
                                             })}
                                         </div>
-                                    )}
-                                </div>
+                                    </div>
+                                ) : (
+                                    <div className="p-6 flex-1 overflow-y-auto custom-scrollbar">
+                                        {filteredSkills.length === 0 ? (
+                                            <div className="text-center py-20 opacity-50">
+                                                <div className="bg-slate-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                                    <Search className="w-8 h-8 text-slate-400" />
+                                                </div>
+                                                <p className="font-bold text-slate-500">No skills found matching your filters.</p>
+                                            </div>
+                                        ) : (
+                                            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 pb-4">
+                                                {filteredSkills.map(([id]) => {
+                                                    const name = getSkillName(id);
+                                                    const desc = getSkillDesc(id);
+                                                    const currentLevel = getAggregatedLevel(id);
+                                                    const paper = id.split('_')[0];
+
+                                                    let targetLevel;
+                                                    if (activeTab === 'CHALLENGE') {
+                                                        targetLevel = 7;
+                                                    } else {
+                                                        if (currentLevel < 3) targetLevel = 3;
+                                                        else targetLevel = 5;
+                                                    }
+
+                                                    const outcome = getSkillOutcome(id, language);
+                                                    const isPracticed = practicedSkills.includes(id) || practicedSkills.includes(name);
+
+                                                    return (
+                                                        <div
+                                                            key={id}
+                                                            onClick={() => {
+                                                                const skillLevel = getAggregatedLevel(id);
+                                                                const levelToUse = selectedLevels[id] || (activeTab === 'CHALLENGE' ? '7' : (skillLevel < 3.5 ? '3' : skillLevel < 5.0 ? '4' : '5'));
+                                                                const stats = getMasteryStats(Number(levelToUse), false, false);
+
+                                                                handleTaskClick({
+                                                                    id: id,
+                                                                    title: `${activeTab === 'CHALLENGE' ? 'Elite' : 'Practice'}: ${name}`,
+                                                                    topic: id,
+                                                                    type: 'PRACTICE',
+                                                                    xp: stats.xp,
+                                                                    level: levelToUse
+                                                                });
+                                                            }}
+                                                            className={`group relative p-4 rounded-xl border-2 transition-all flex flex-col cursor-pointer
+                                                                ${activeTab === 'CHALLENGE'
+                                                                    ? 'bg-white border-indigo-100 shadow-sm hover:border-indigo-400'
+                                                                    : 'bg-white border-slate-100 hover:border-amber-300 hover:shadow-md'
+                                                                }`}
+                                                        >
+                                                            <div className="flex justify-between items-start mb-2">
+                                                                <span className={`px-2 py-0.5 rounded text-[9px] font-black uppercase tracking-wider ${paper === 'reading' ? 'bg-blue-50 text-blue-600' :
+                                                                    paper === 'writing' ? 'bg-purple-50 text-purple-600' :
+                                                                        paper === 'listening' ? 'bg-orange-50 text-orange-600' :
+                                                                            'bg-green-50 text-green-600'
+                                                                    }`}>
+                                                                    {paper}
+                                                                </span>
+                                                                {activeTab !== 'CHALLENGE' && paper !== 'writing' && (paper !== 'speaking' || id === 'speaking_delivery_general') && (
+                                                                    <select
+                                                                        value={selectedLevels[id] || '3'}
+                                                                        onClick={(e) => e.stopPropagation()}
+                                                                        onChange={(e) => {
+                                                                            e.stopPropagation();
+                                                                            setSelectedLevels(prev => ({ ...prev, [id]: e.target.value }));
+                                                                        }}
+                                                                        className={`px-2 py-0.5 rounded text-[9px] font-black uppercase tracking-wider border outline-none cursor-pointer hover:bg-gray-50 transition-colors ${getMasteryStats(Number(selectedLevels[id] || '3'), false, false).color}`}
+                                                                    >
+                                                                        <option value="3">Easy</option>
+                                                                        <option value="4">Medium</option>
+                                                                        <option value="5">DSE Standard</option>
+                                                                    </select>
+                                                                )}
+                                                                <div className="flex items-center gap-1.5">
+                                                                    {(currentLevel >= 3 || isPracticed) && (
+                                                                        <div className="flex items-center gap-1 translate-y-[-1px]">
+                                                                            {[
+                                                                                { l: 4, label: 'E', name: 'Easy' },
+                                                                                { l: 5, label: 'M', name: 'Medium' },
+                                                                                { l: 6, label: 'S', name: 'DSE Standard' }
+                                                                            ].map((tier) => {
+                                                                                const isPassed = isPracticed && currentLevel >= tier.l;
+                                                                                return (
+                                                                                    <div
+                                                                                        key={tier.l}
+                                                                                        title={isPassed ? `${tier.name} Mastery Verified` : `${tier.name} Level`}
+                                                                                        className={`w-4 h-4 rounded-full flex items-center justify-center text-[8px] font-bold border transition-all ${isPassed
+                                                                                            ? 'bg-amber-500 border-amber-600 text-white shadow-sm'
+                                                                                            : 'bg-slate-50 border-slate-200 text-slate-400'
+                                                                                            }`}
+                                                                                    >
+                                                                                        {isPassed ? '✓' : tier.label}
+                                                                                    </div>
+                                                                                );
+                                                                            })}
+                                                                        </div>
+                                                                    )}
+                                                                </div>
+                                                            </div>
+
+                                                            <h4 className="text-sm font-bold mb-1 group-hover:text-amber-600 transition-colors text-slate-800">
+                                                                {name}
+                                                            </h4>
+                                                            <p className="text-[11px] text-slate-500 mb-3 line-clamp-2 leading-tight min-h-[2.4em]">
+                                                                {desc || "Master this skill to excel in HKDSE English."}
+                                                            </p>
+
+                                                            <div className="pt-3 border-t border-slate-50 mt-auto">
+                                                                <div className="flex items-center justify-between mb-2">
+                                                                    <div className="flex items-center gap-2">
+                                                                        {activeTab === 'CHALLENGE' ? (
+                                                                            <div className="px-2 py-0.5 bg-indigo-100 rounded text-[10px] font-bold text-indigo-600 uppercase tracking-wide flex items-center gap-1">
+                                                                                <Zap className="w-3 h-3 fill-current" />
+                                                                                Elite Quest
+                                                                            </div>
+                                                                        ) : (
+                                                                            <div className="px-2 py-0.5 bg-slate-100 rounded text-[10px] font-bold text-slate-500 uppercase tracking-wide flex items-center gap-1.5">
+                                                                                {isPracticed ? <RefreshCcw className="w-2.5 h-2.5" /> : <Play className="w-2.5 h-2.5" />}
+                                                                                {isPracticed ? 'Continue Training' : 'Start Training'}
+                                                                            </div>
+                                                                        )}
+                                                                    </div>
+                                                                    <div className={`text-[10px] font-bold ${activeTab === 'CHALLENGE' ? 'text-indigo-600' : 'text-amber-600'}`}>
+                                                                        +{getMasteryStats(Number(selectedLevels[id] || targetLevel), false, activeTab !== 'CHALLENGE').xp} XP
+                                                                    </div>
+                                                                </div>
+
+                                                                <div className="flex items-center justify-between">
+                                                                    <div className="flex items-center gap-1.5 text-[10px] text-slate-400 italic">
+                                                                        <Sparkles className={`w-3 h-3 ${activeTab === 'CHALLENGE' ? 'text-indigo-400' : 'text-amber-400'}`} />
+                                                                        <span>Outcome: {outcome}</span>
+                                                                    </div>
+                                                                    {isPracticed && (
+                                                                        <div className="opacity-0 group-hover:opacity-100 transition-opacity">
+                                                                            <Play className="w-3.5 h-3.5 text-amber-500" />
+                                                                        </div>
+                                                                    )}
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    );
+                                                })}
+                                            </div>
+                                        )}
+                                    </div>
+                                )}
                             </div>
                         )}
                     </div>
-                )
-                }
-            </div >
-        </div >
+                )}
+            </div>
+        </div>
     );
 };
 

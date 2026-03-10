@@ -121,16 +121,6 @@ module.exports = {
 
             // --- PART 2: MCQ (Multiple Choice) ---
             {
-                id: 'm_p2_1',
-                part: 2,
-                type: 'mc',
-                topic: 'Estimation',
-                marks: 1,
-                text: "Round off $0.045928$ to 3 significant figures.",
-                options: ['0.0459', '0.046', '0.04593', '0.0460'],
-                answer: '0.0459'
-            },
-            {
                 id: 'm_p2_2',
                 part: 2,
                 type: 'mc',

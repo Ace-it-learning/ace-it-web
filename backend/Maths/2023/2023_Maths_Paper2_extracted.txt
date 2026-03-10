@@ -1,0 +1,687 @@
+
+
+2023-DSE 
+MATH CP 
+PAPER 2 
+HONG KONG EXAMINATIONS AND ASSESSMENT AUTHORITY 
+HONG KONG DIPLOMA OF SECONDARY EDUCATION EXAMINATION 2023 
+MATHEMATICS Compulsory Part 
+PAPER 2 
+11:30 am -12:45 pm (1'Y4 hours) 
+INSTRUCTIONS 
+I. Read carefully the instructions on the Answer Sheet. After the announcement of the start of the examination, 
+you should first stick a  barcode label and insert the information required in the spaces provided. No extra 
+time will be given for sticking on the barcode label after the 'Time is up' announcement. 
+2. When told to open this book, you should check that all the questions are there. Look for the words 'END OF 
+PAPER' after the last question. 
+3. All questions carry equal marks. 
+4. ANSWER ALL QUESTIONS. You are advised to use an HB pencil to mark all the answers on the Answer 
+Sheet, so that wrong marks can be completely erased with a clean rubber. You must mark the answers clearly; 
+otherwise you will lose marks 
+if the answers cannot be captured. 
+5. You should mark only ONE answer for each question. If you mark more than one answer, you will receive 
+NO MARKS for that question. 
+6. No marks will be deducted for wrong answers. 
+© i!? ~ "% ~ l?<J¥ ;f1< JijJ 15R 'i' JTEHt 
+Hong Kong Examinations and Assessment Authority 
+All Rights Reserved 2023 
+2023-DSE-MATH-CP 2-1 
+Not to be taken away before the 
+end 
+of the examination session 
+
+There are 30 questions in Section A and 15 questions in Section B. 
+The diagrams in this paper are not necessarily drawn to scale. 
+Choose the best answer for each question. 
+Section A 
+1. 
+If 
+a+5b 
+1 
+--,then 
+a= 
+7a+2b 
+b+3 
+A. 
+4-b 
+5b
+2
++13b 
+B. 
+4+b 
+5b
+2
++13b 
+c. 
+5b
+2
++13b 
+4-b 
+D. 
+5b
+2
++13b 
+4+b 
+2. 
+2 
+-----= 
+5-4x 
+5+4x 
+A. 
+5+4x 
+25-16x
+2 
+B. 
+5-4x 
+25-16x
+2 
+c. 
+5+12x 
+25 -16x
+2 
+D. 
+5-12x 
+25 -16x
+2 
+3. 
+4n+2 32n+4 = 
+A. 
+62n+4 . 
+B. 
+6
+4n+8 . 
+c. 12
+2n+4 . 
+D. 
+12
+3n+6 . 
+2023-DSE-MATH-CP 2-2 
+2 
+
+4. 2x
+2
++xy-/+4x+4y = 
+A. (x+ y)(2x+ y-4) . 
+B. (x+y)(2x-y+4). 
+C. (x-y)(2x+ y-4) . 
+D. (x-y)(2x-y+4). 
+5. If c and d are constants such that (x + 2)(x +c)+ 12 = x(x +d)+ 6c(x + 1) ,  then d = 
+6. 
+7. 
+A. -13 . 
+B. -3. 
+c. 3. 
+D. 17. 
+6-x 
+The solution of x-3 < -5 or --< 2 is 
+4 
+A. x<-2 
+B. x>-2 
+c. x=-2 
+D. 
+x:;t:-2 
+If y = 73.8 (correct to 3 significant figures), fmd the range of values of y. 
+A. 73.7~y<73.9 
+B. 73.7 < y ~ 73.9 
+c. 73.75 ~ y < 73.85 
+D. 73.75 < y ~ 73.85 
+2023-DSE-MATH-CP 2-3 
+3 
+Go on to the next page > 
+
+8. Let g(x) = 13-5x
+2 
+. 
+If a is  a constant, find g(l-3a) . 
+A. 8-45a
+2 
+C. 8 -30a +45a
+2 
+D. 8+30a-45a
+2 
+9. Let h(x)=ax
+6
++16x
+3
++b, where a and b are constants. If h(x) is divisible by 2x-3 , fmd the 
+remainder when 
+h(x) is divided by 2x+3 . 
+A. -108 
+B. -54 
+c. 54 
+D. 
+108 
+10. 
+Which of the following statements about the graph of y = 5 + (x-3)
+2 
+is true? 
+A. The graph opens downwards. 
+B. The x-intercept of the graph is 3  . 
+C. They-intercept of the graph is 5  . 
+D. The graph passes through the point (3, 5) . 
+11. The marked price 
+of a jacket is 60% above its cost. A profit of $104 is  made by selling the jacket at a 
+discount 
+of 25% on its marked price. Find the cost of the jacket. 
+A. 
+$416 
+B. $520 
+c. $728 
+D. $832 
+2023-DSE-MATH-CP 2-4 4 
+
+12. The scale of a map is 1:50 000 . If the actual area of an airport is 10 km
+2 
+, 
+then the area of this airport on 
+the map is 
+C. 20cm
+2 
+. 
+D. 40cm
+2
+• 
+13. It is given that z varies as the square of x and the cube root of y. When x = 12 and y = 64 , z = 36 . 
+When 
+x=16 and y=729 , z= 
+A. 108. 
+B. 144. 
+c. 162. 
+D. 216. 
+14. Let an be the nth term of a  sequence. If a
+6 
+= 23 , a
+8 
+= 60 and an+
+2 
+=an+ I+ an for any positive 
+integer 
+n, then a
+3 
+= 
+A. 
+4. 
+B. 5. 
+c. 9. 
+D. 14. 
+15. The length of a  side of a  solid cube is 60 cm .  The volume of a solid right circular cylinder is equal to the 
+volume 
+of the cube while the curved surface area of the circular cylinder is equal to the total surface area of 
+the cube. Find the base radius ofthe circular cylinder. 
+A. 
+20 cm 
+B. 30cm 
+C. 76cm 
+D. 172cm 
+2023-DSE-MATH-CP 2-5 5 
+Go on to the next page :> 
+
+16. In the figure, AC is  a diameter of the circle ABCD while BD and EF are diameters of the circle BEDF. 
+It is  given that C and E lie on AF. Let G be the point of intersection of AF and BD. If AG = 30 cm 
+and CG 
+= 10 cm ,  fmd the area of the shaded region correct to the nearest cm 
+2 
+. 
+A. 
+209 cm
+2 
+B. 367 cm
+2 
+c. 383 cm
+2 
+A 
+F 
+D. 540cm
+2 
+17. In the figure, PQRS is a parallelogram. Let X be a point lying on PQ . Denote the point of intersection 
+of PR and SX by Y. If the area of l:l.PXY and the area of the quadrilateral QRYX are 32 cm
+2 
+and 58cm
+2 
+respectively, then the area of l:l.RSY is 
+A. 
+40cm
+2
+• 
+B. 50 cm
+2 
+• 
+c. 
+58cm
+2 
+• 
+D. 72cm
+2 
+• 
+p 
+18. According to the figure, which 
+of the following must be true? 
+I. 
+a+b=90° 
+II. 
+c+d=l80° 
+Ill. 
+a+b+c=d 
+A. 
+I  and II only 
+B. I  and Ill only 
+c. 
+II and Ill only 
+D. 
+I, II and Ill 
+2023-DSE-MATH-CP 2-6 
+6 
+
+19. It is given that ABCD is  a rhombus. Denote the point of intersection of AC and BD by E. Which ofthe 
+following must be true? 
+I. AE=BE 
+Il. 
+AE BE 
+-=-
+AC BD 
+Ill. AE
+2 
++ BE
+2 
+= CD
+2 
+A. I  and 11 only 
+B. I  and Ill only 
+c. 
+11 and Ill only 
+D. 
+I, 11 and Ill 
+20. The figure shows the square ABCD, the regular pentagon ADEFG and the regular hexagon AGHIJK. 
+Find LABK. 
+c 
+B. 72° 
+J 
+E 
+I 
+H 
+21. 
+In the figure, PQRS is a rectangle. Let T be a point lying on QR such that LPTS = 90° . PQ produced 
+and 
+ST produced meet at the point U. PT is produced to the point V such that RT =RV . Which of the 
+following 
+must be true? 
+R 
+A. RV/1ST 
+B. 
+LPTQ=LRTS 
+V 
+C. 
+11PST ~ 11UTQ 
+D. 11PQT::: 11TRS 
+Q 
+V 
+2023-DSE-MATH-CP 2-7 
+7 
+I Go on to the next page > 
+
+22. The figure shows the cyclic quadrilateral RSTU, where ST =TU . RS produced and UT produced meet 
+at the point 
+V while RU produced and ST produced meet at the point W . If LRWS = 32° 
+and LRVU = 48° ,  then LRSU = 
+w 
+B. 73° 
+c. 80°. 
+23. In the figure, ABCD is a  trapezium with AD/IBC . Let E be the mid-point of AD . It is given 
+that 
+LABE = LBCE = 90° .  Find 
+CE 
+DE 
+A. 
+1 
+D 
+2 
+E 
+~------------------~----------------------.---~A 
+a 
+B. 
+c. 
+tan a 
+D. sinacosa 
+B 
+24. The rectangular coordinates of the point P are ( .J2, -.J2) . If P is rotated anticlockwise about the 
+origin through 90° ,  then the polar coordinates of its image are 
+2023-DSE-MATH-CP 2-8 8 
+
+25. Findtheconstant a suchthatthestraightlines 2x+(a+3)y-5=0 and ax-4y+I=O areperpendicular 
+to each other. 
+A. -6 
+B. -5 
+c. -2 
+D. 4 
+26. The equations of the straight lines e and L are 9x + 12y-37 = 0 and 12x + I6y + 85 = 0 respectively. 
+e cuts the x-axis at the point A while L cuts the y-axis at the point B . Let P be a moving point in the 
+rectangular coordinate plane such that the perpendicular distance from 
+P to e is equal to the perpendicular 
+distance from 
+P to L. Denote the locus of P by r . Which of the following are true? 
+I. r is parallel to L . 
+II. r is perpendicular to AB . 
+IlL 
+r passes through the mid-point of AB . 
+A. I  and II only 
+B. I  and 
+Ill only 
+C. II and Ill only 
+D. I , II and 
+Ill 
+27. Theequationsofthecircles C
+1 
+and C
+2 
+are x
+2
++i+7x-4y+15=0 and 2x
+2
++2i-2x-16y-17=0 
+respectively. Let G
+1 
+and G
+2 
+be the centres of C
+1 
+and C
+2 
+respectively. Denote the origin by 0 . 
+Which of the following are true? 
+I. 
+l:!OGPz 
+is an equilateral triangle. 
+Il. 
+The line segment OG
+1 
+lies inside 
+Cz. 
+m. c
+1 
+and C
+2 
+intersect at two distinct points. 
+A. 
+I  and II only 
+B. I  and 
+Ill only 
+c. II and Ill only 
+D. 
+I, II and Ill 
+2023-DSE-MATH-CP 2-9 
+9 
+Go on to the next page > 
+
+28. A box contains five cards numbered 1 , 2, 3  ,  4 and 5 respectively while another box contains four cards 
+numbered 6 ,  7  ,  8 and 9 respectively. 
+If a number is randomly drawn from each box, find the probability 
+that the product 
+of the two numbers drawn is  divisible by 4  . 
+A. 
+B. 
+c. 
+D. 
+1 
+5 
+3 
+10 
+7 
+20 
+9 
+20 
+29. The box-and~whisker diagram below shows the distribution of the numbers of training hours of some 
+engineers in a year. Find the upper quartile 
+of the distribution. 
+Hi 
+I  I  I 
+---i--+-+----if---+-+--i--+--i--i-Number of training hours 
+10 20 30 40 50 60 70 80 90 
+A. 20 
+B. 40 
+c. 60 
+D. 70 
+30. 
+There are 14 full-time employees and 56 part-time employees in a  company. The mean salary of the 
+full-time employees is 
+$31530 while the mean salary of the part-time employees is $21525 .   Find the 
+mean salary 
+of these employees of the company. 
+A. $23 526 
+B. $25 527 
+c. $27 528 
+D. $29529 
+2023-DSE-MATH-CP 2-10 
+10 
+
+Section B 
+31. 
+10110010110010112 = 
+B. llx2
+12 
++11x2
+6 
++11 
+32. 
+The L.C.M. 
+of a
+4
+b
+2
+c , a
+3
+b
+4
+c and 
+a2b5c2 
+is 
+A. 
+a
+2
+b
+2
+c . 
+B. 
+a2b2c2 . 
+c. a
+4
+b
+5
+c . 
+D. 
+a4b5c2 . 
+33. It is given that log
+8 
+y is a  linear function of log
+4 
+x . The intercepts on the vertical axis and on the 
+horizontal axis 
+of the graph of the linear function are 5 and 3 respectively. Which of the following must 
+be true? 
+A. 
+xsl= 
+8
+1o 
+B. 
+x6/ =820 
+c. 
+xlo l=
+8
+2o 
+D. 
+x9 ylo= 
+8
+3o 
+2023-DSE-MATH-CP 2-11 
+11 
+Go on to the next page > 
+
+34. 
+If k is  a real number, then the real part of _i-+ -
+2
+-
+is 
+k-i k+i 
+A. 
+2k+l 
+k
+2
+-l 
+B. 
+2k-l 
+k
+2
++1 
+c. 
+k+2 
+k
+2
+-1 
+D. 
+k-2 
+k
+2
++l 
+35. Let f(x) = 3x
+2
++ l8mx+22m
+2 
+, 
+where m is a real constant. Which of the following statements about the 
+graph 
+of y = -f(3x) must be true? 
+I. The x-coordinate of the vertex of the graph is m . 
+II. They-coordinate of the vertex of the graph is 5m
+2 
+• 
+III. The equation of the axis of symmetry of the graph is x +m = 0 . 
+A. I  only 
+B. II only 
+C. I  and m only 
+D. II and 
+m only 
+36. Let T(n) 
+be the nth term of an arithmetic sequence. If T(ll) = 83 and T(25) + T(30) = 463 ,   fmd the 
+leastvalueof k such that T(l)+T(2)+T(3)+···+T(k)>4x10
+5
+. 
+A. 299 
+B. 300 
+C. 944 
+D. 945 
+2023-DSE-MATH-CP 2-12 12 
+
+3 7. Consider the following system of inequalities: 
+{
+x+3~0 
+2x+3y-12:;:;0 
+5x-3y+12:;:;0 
+Let D be the region which represents the solution of the above system of inequalities. Find the range of 
+values of f3 such that the greatest value of f3x+6y is 24, where (x, y) is a point lying in D. 
+A. p:;:;-10 
+B. /3~-10 
+C. {3:;:;4 
+D. /3~4 
+38. In the figure, P, Q and R are points lying on a  circle. ST, TU and SU are the tangents to the circle 
+at 
+P, Q and R respectively. RQ produced and ST produced meet at the point V. If LPSR = 34° 
+and LQPT = 46° , then LPVQ = 
+A. 
+u 
+B. 22°. 
+c. 27° . 
+39. Thestraightline hx+ky=6 andthecircle x
+2
++i-8x-4y-18=0 intersectatthepoints M and N, 
+where h and k are constants. If the coordinates of the mid-point of MN are (1, 0) , find k. 
+A. 4 
+B. 6 
+c. 9 
+D. 12 
+2023-DSE-MATH-CP 2-13 
+13 
+Go on to the next page > 
+
+40. The base of the right pyramid VABCD is the square ABCD . Let (} be the angle between !lAB V 
+and !lBCV . If AB: AV= 5:4 ,  then cos(}= 
+A. 
+-25 
+--
+39 
+B. 
+-17 
+33 
+c. 
+-9 
+16 
+D. 
+0 . 
+41. The equations of the straight lines L
+1 
+and L
+2 
+are 3x-4 y + k = 0 and 4x + 3 y-k = 0 respectively, 
+where k is a  positive constant. It is given that L
+1 
+cuts the x-axis at the point P . Denote the point of 
+intersection of L
+1 
+and L
+2 
+by Q . If R is a point lying on L
+2 
+such that the in-centre of !lPQR lies on 
+the x-axis, then the x-coordinate of R is 
+A. -1k . 
+B. -k. 
+c. k. 
+D. 1k. 
+42. There are 15 teachers in a group. If 5 teachers are selected from the group to form a committee consisting 
+of 1  chairperson and 4 members, how many different committees can be formed? 
+A. 3 003 
+B. 15 015 
+c. 20 475 
+D. 360360 
+2023-DSE-MATH-CP 2-14 
+14 
+
+43. When a boy throws a dart, the probability that he hits the target is 0.6 . Ifthis boy throws the dart 4 times, 
+find the probability that he hits the target at least 2 times. 
+A. 
+0.5248 
+B. 0.7056 
+c. 0.8208 
+D. 0.8464 
+44. The table below shows the scores (in marks) and the corresponding standard scores of three students in an 
+examination. 
+Score (marks) 46 
+X 
+86 
+Standard score 
+-3 
+1 
+2 
+Find 
+x. 
+A. 64 
+B. 66 
+c. 70 
+D. 78 
+45. It is  given that 
+n is  an integer. Let u, v and w be the standard deviation, the median and the range of the 
+group of numbers { 1-9n, 3 -9n, 4 -9n, 5 -9n, 7 -9n} respectively. Which of the following must be 
+true? 
+I. 
+u=2 
+I I. 
+v<4 
+Ill. 
+W>6 
+A. I  only 
+B. 
+II only 
+c. I  and Ill only 
+D. II and 
+Ill only 
+END OF PAPER 
+2023-DSE-MATH-CP 2-15 
+15 

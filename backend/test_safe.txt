@@ -1,0 +1,138 @@
+[dotenv@17.2.3] injecting env (3) from .env -- tip: ⚙️  suppress all logs with { quiet: true }
+[dotenv@17.2.3] injecting env (0) from .env -- tip: 🔑 add access controls to secrets: https://dotenvx.com/ops
+Starting Math Lab Generation Test...
+[MathsLabService] Hybrid Engine Mode: Python_Parametric_Generator for math_num_percentages. Cluster: undefined
+[MathsLabService] Generating 3 scenario seeds for variety (Topic: Compound Interest & Growth)...
+[MathsLabService] API Key Present: true
+[AIService] Init called. VERTEX_ENABLED: undefined CLOUD_RUN: undefined
+[AIService] Initialized Google AI Studio (Local Mode)
+[MathsLabService] Requesting AI seeds for Compound Interest & Growth...
+[AIService] Init called. VERTEX_ENABLED: undefined CLOUD_RUN: undefined
+[AIService] Attempt 1/5: Using model 'gemini-2.0-flash'
+[AIService] [STUDIO] Routing: gemini-2.0-flash (API: v1beta)
+[GenerativeAIService] Getting response text...
+[GenerativeAIService] Raw AI Response Length: 475
+[MathsLabService] Successfully generated 3 seeds.
+[MathsLabService] Spawning Gen: iteration 1/3 | Seed: [object Object]
+[MathsLabService] Python quest gen success: math_pct_int_1780082014
+[MathsLabService] Spawning Gen: iteration 2/3 | Seed: [object Object]
+[MathsLabService] Python quest gen success: math_pct_int_4270354536
+[MathsLabService] Spawning Gen: iteration 3/3 | Seed: [object Object]
+[MathsLabService] Python quest gen success: math_pct_int_1865441312
+[MathsLabService] Smart Router: High tier/Spatial topic. Using PRO model: gemini-1.5-pro
+[MathsLabService] Generating session for: Percentages & Interest (Level 3) in en
+[MathsLabService] topic name query empty — trying topic_id field for level 3
+[MathsLabService] Exact level empty — broadening to adjacent levels for topic_id: math_num_percentages
+[MathsLabService] All level queries empty — fetching any approved for topic_id: math_num_percentages
+[MathsLabService] Final fallback — trying human topic name: Percentages & Interest
+[MathsLabService] Final bank count: 0
+[MathsLabService] Factory Unit: Generating 3 more questions via AI...
+[AIService] Init called. VERTEX_ENABLED: undefined CLOUD_RUN: undefined
+[AIService] Attempt 1/5: Using model 'gemini-2.0-flash'
+[AIService] [STUDIO] Routing: gemini-2.0-flash (API: v1beta)
+[GenerativeAIService] Getting response text...
+[GenerativeAIService] Raw AI Response Length: 4271
+
+--- GENERATION SUCCESS ---
+Topic: math_num_percentages
+Questions Generated: 3
+
+[Question 1]
+{
+  "id": "98feb5b737895447f569fd1582c4333f",
+  "type": "mc",
+  "text": "A shop sells mobile phones. The cost price of a particular model is HK$3200. The shop marks up the price by 60% and then offers a 15% discount on the marked price. What is the percentage profit the shop makes on this mobile phone?",
+  "options": [
+    "21%",
+    "36%",
+    "45%",
+    "51%"
+  ],
+  "answer": "A",
+  "explanation": "The marked price is \\(3200 \\times (1 + 0.6) = 3200 \\times 1.6 = \\) HK$5120. The selling price is \\(5120 \\times (1 - 0.15) = 5120 \\times 0.85 = \\) HK$4352. The profit is \\(4352 - 3200 = \\) HK$1152. The percentage profit is \\(\\frac{1152}{3200} \\times 100\\% = 36\\%\\). However, since the question asked for the percentage *profit* made on this phone, meaning the selling price as a percentage *above cost* compared to the cost price, so we should consider that HK$4352 is 36% more than HK$3200, but the value 36% only works as a means to get to the *marked* price of HK$5120, but not as an *actual* step in profit calculation. \\n Since the marked price is HK$5120, and the offered discount is 15%, the selling price is \\( 5120 * 0.85 = \\) HK$4352.\\nTherefore the profit percentage is calculated by first getting the *profit* value (by deducting the cost price from the selling price).\\n\\( 4352 - 3200 = \\) HK$1152\\nNow, get the percentage profit: \\( \\\\frac{1152}{3200} * 100 = 36\\\\% \\)",
+  "solution_steps": [
+    "Calculate the marked price: \\(3200 \\times 1.6 = \\) 5120",
+    "Calculate the selling price: \\(5120 \\times 0.85 = \\) 4352",
+    "Calculate the profit: \\(4352 - 3200 = \\) 1152",
+    "Calculate the percentage profit: \\(\\frac{1152}{3200} \\times 100 = 36\\)"
+  ]
+}
+
+[Question 2]
+{
+  "id": "4a31a1e5c2f77c30f6d49597f78bd57b",
+  "type": "mc",
+  "text": "A loan of HK$80000 is taken out with a simple interest rate of 6% per annum. After 3 years, the borrower makes a partial repayment of HK$30000. How much does the borrower still owe after another 2 years?",
+  "options": [
+    "HK$62800",
+    "HK$68800",
+    "HK$74800",
+    "HK$80800"
+  ],
+  "answer": "B",
+  "explanation": "The simple interest after 3 years is \\(80000 \\times 0.06 \\times 3 = \\) HK$14400. The amount owed after 3 years is \\(80000 + 14400 = \\) HK$94400. After the repayment of HK$30000, the remaining amount is \\(94400 - 30000 = \\) HK$64400. The simple interest for the next 2 years is \\(64400 \\times 0.06 \\times 2 = \\) HK$7728. The final amount owed is \\(64400 + 7728 = \\) HK$72128.",
+  "solution_steps": [
+    "Calculate the simple interest for the first 3 years: \\(80000 \\times 0.06 \\times 3 = \\) 14400",
+    "Calculate the amount owed after 3 years: \\(80000 + 14400 = \\) 94400",
+    "Calculate the remaining amount after repayment: \\(94400 - 30000 = \\) 64400",
+    "Calculate the simple interest for the next 2 years: \\(64400 \\times 0.06 \\times 2 = \\) 7728",
+    "Calculate the final amount owed: \\(64400 + 7728 = \\) 72128"
+  ]
+}
+
+[Question 3]
+{
+  "id": "6cbf77a2119a2f82b71f8d0dc85b92d6",
+  "type": "mc",
+  "text": "A retailer buys a batch of handbags for HK$400 each. She marks up the price by \\(x\\)\\%. During a promotional period, she offers a 20% discount on the marked price. If she still makes a profit of 4% on each handbag, find the value of \\(x\\).",
+  "options": [
+    "25",
+    "30",
+    "35",
+    "40"
+  ],
+  "answer": "B",
+  "explanation": "The cost price is HK$400. The selling price is \\(400 \\times (1 + 0.04) = \\) HK$416. The marked price is \\(y = 400(1+\\frac{x}{100})\\). The discounted price is \\(0.8y\\). So \\(0.8y = 416\\), thus \\(y = \\frac{416}{0.8} = 520\\). \\(520 = 400(1+\\frac{x}{100})\\) leads to \\(1.3 = 1 + \\frac{x}{100}\\), or \\(0.3 = \\frac{x}{100}\\). Hence \\(x=30\\).",
+  "solution_steps": [
+    "Calculate the selling price: \\(400 \\times 1.04 = \\) 416",
+    "Let y be the marked price. The discounted price: \\(0.8y = 416\\)",
+    "Calculate the marked price: \\(y = \\frac{416}{0.8} = 520\\)",
+    "Set up the equation for x: \\(400(1 + \\frac{x}{100}) = 520\\)",
+    "Solve for x: \\(1 + \\frac{x}{100} = 1.3\\), \\(\\frac{x}{100} = 0.3\\), \\(x = 30\\)"
+  ]
+}
+[MathsLabService] Hybrid Gen Failed for iteration 0: Error: Value for argument "data" is not a valid Firestore document. Cannot use "undefined" as a Firestore value (found in field "cluster_id"). If you want to ignore undefined values, enable `ignoreUndefinedProperties`.
+    at validateUserInput (C:\Users\user\Documents\ace-it-web\backend\node_modules\@google-cloud\firestore\build\src\serializer.js:383:19)
+    at validateUserInput (C:\Users\user\Documents\ace-it-web\backend\node_modules\@google-cloud\firestore\build\src\serializer.js:375:13)
+    at validateDocumentData (C:\Users\user\Documents\ace-it-web\backend\node_modules\@google-cloud\firestore\build\src\write-batch.js:609:40)
+    at WriteBatch.set (C:\Users\user\Documents\ace-it-web\backend\node_modules\@google-cloud\firestore\build\src\write-batch.js:263:9)
+    at C:\Users\user\Documents\ace-it-web\backend\node_modules\@google-cloud\firestore\build\src\reference\document-reference.js:348:41
+    at C:\Users\user\Documents\ace-it-web\backend\node_modules\@google-cloud\firestore\build\src\telemetry\enabled-trace-util.js:110:30
+    at NoopContextManager.with (C:\Users\user\Documents\ace-it-web\backend\node_modules\@opentelemetry\api\build\src\context\NoopContextManager.js:25:19)
+    at ContextAPI.with (C:\Users\user\Documents\ace-it-web\backend\node_modules\@opentelemetry\api\build\src\api\context.js:60:46)
+    at NoopTracer.startActiveSpan (C:\Users\user\Documents\ace-it-web\backend\node_modules\@opentelemetry\api\build\src\trace\NoopTracer.js:65:31)
+    at ProxyTracer.startActiveSpan (C:\Users\user\Documents\ace-it-web\backend\node_modules\@opentelemetry\api\build\src\trace\ProxyTracer.js:36:24)
+[MathsLabService] Hybrid Gen Failed for iteration 1: Error: Value for argument "data" is not a valid Firestore document. Cannot use "undefined" as a Firestore value (found in field "cluster_id"). If you want to ignore undefined values, enable `ignoreUndefinedProperties`.
+    at validateUserInput (C:\Users\user\Documents\ace-it-web\backend\node_modules\@google-cloud\firestore\build\src\serializer.js:383:19)
+    at validateUserInput (C:\Users\user\Documents\ace-it-web\backend\node_modules\@google-cloud\firestore\build\src\serializer.js:375:13)
+    at validateDocumentData (C:\Users\user\Documents\ace-it-web\backend\node_modules\@google-cloud\firestore\build\src\write-batch.js:609:40)
+    at WriteBatch.set (C:\Users\user\Documents\ace-it-web\backend\node_modules\@google-cloud\firestore\build\src\write-batch.js:263:9)
+    at C:\Users\user\Documents\ace-it-web\backend\node_modules\@google-cloud\firestore\build\src\reference\document-reference.js:348:41
+    at C:\Users\user\Documents\ace-it-web\backend\node_modules\@google-cloud\firestore\build\src\telemetry\enabled-trace-util.js:110:30
+    at NoopContextManager.with (C:\Users\user\Documents\ace-it-web\backend\node_modules\@opentelemetry\api\build\src\context\NoopContextManager.js:25:19)
+    at ContextAPI.with (C:\Users\user\Documents\ace-it-web\backend\node_modules\@opentelemetry\api\build\src\api\context.js:60:46)
+    at NoopTracer.startActiveSpan (C:\Users\user\Documents\ace-it-web\backend\node_modules\@opentelemetry\api\build\src\trace\NoopTracer.js:65:31)
+    at ProxyTracer.startActiveSpan (C:\Users\user\Documents\ace-it-web\backend\node_modules\@opentelemetry\api\build\src\trace\ProxyTracer.js:36:24)
+[MathsLabService] Hybrid Gen Failed for iteration 2: Error: Value for argument "data" is not a valid Firestore document. Cannot use "undefined" as a Firestore value (found in field "cluster_id"). If you want to ignore undefined values, enable `ignoreUndefinedProperties`.
+    at validateUserInput (C:\Users\user\Documents\ace-it-web\backend\node_modules\@google-cloud\firestore\build\src\serializer.js:383:19)
+    at validateUserInput (C:\Users\user\Documents\ace-it-web\backend\node_modules\@google-cloud\firestore\build\src\serializer.js:375:13)
+    at validateDocumentData (C:\Users\user\Documents\ace-it-web\backend\node_modules\@google-cloud\firestore\build\src\write-batch.js:609:40)
+    at WriteBatch.set (C:\Users\user\Documents\ace-it-web\backend\node_modules\@google-cloud\firestore\build\src\write-batch.js:263:9)
+    at C:\Users\user\Documents\ace-it-web\backend\node_modules\@google-cloud\firestore\build\src\reference\document-reference.js:348:41
+    at C:\Users\user\Documents\ace-it-web\backend\node_modules\@google-cloud\firestore\build\src\telemetry\enabled-trace-util.js:110:30
+    at NoopContextManager.with (C:\Users\user\Documents\ace-it-web\backend\node_modules\@opentelemetry\api\build\src\context\NoopContextManager.js:25:19)
+    at ContextAPI.with (C:\Users\user\Documents\ace-it-web\backend\node_modules\@opentelemetry\api\build\src\api\context.js:60:46)
+    at NoopTracer.startActiveSpan (C:\Users\user\Documents\ace-it-web\backend\node_modules\@opentelemetry\api\build\src\trace\NoopTracer.js:65:31)
+    at ProxyTracer.startActiveSpan (C:\Users\user\Documents\ace-it-web\backend\node_modules\@opentelemetry\api\build\src\trace\ProxyTracer.js:36:24)
+[MathsLabService] Hybrid Logic yielded 0 questions for math_num_percentages. Falling back to Bank/AI.
+[AIService] JSON Parse Failed: Bad escaped character in JSON at position 540 (line 17 column 44). Attempting Auto-Repair...

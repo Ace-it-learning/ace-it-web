@@ -1,6 +1,7 @@
 const admin = require('firebase-admin');
 const { MICRO_SKILLS } = require('../constants/microSkills');
 const { MATHS_MICRO_SKILLS } = require('../constants/mathsMicroSkills');
+const { DSE_SCORING, accuracyToLevel, laplaceSmooth } = require('../constants/dseScoring');
 
 /**
  * Service to manage User Profiles in Firestore
@@ -324,13 +325,29 @@ class UserProfileService {
                 ['reading', 'writing', 'listening', 'speaking'].filter(p => !profile.diagnostic_results.english.raw_results?.[p])
                 : [];
 
+            // FETCH WEEKLY QUEST STATUS
+            const GamificationService = require('./GamificationService');
+            const weeklyStatus = await GamificationService.getWeeklyQuestStatus(uid);
+
+            // Calculate days remaining in the current week (Quest expires on Sunday night)
+            const now = new Date();
+            const daysToSunday = (7 - now.getDay()) % 7 || 7;
+            const expirationDate = new Date(now);
+            expirationDate.setDate(now.getDate() + daysToSunday);
+            expirationDate.setHours(23, 59, 59, 999);
+
             return {
                 nickname: profile?.nickname || profile?.displayName || "Student",
                 grade: profile?.grade || "F4",
                 level: formatLevel(skillMap?.level),
                 topWeaknesses,
                 recentMistakes: mistakes.map(m => m.term).filter(Boolean),
-                skippedPapers
+                skippedPapers,
+                weeklyQuest: {
+                    weekId: weeklyStatus.weekId,
+                    completed: weeklyStatus.completed,
+                    daysRemaining: daysToSunday
+                }
             };
         } catch (err) {
             console.error(`[UserProfileService] Error creating personalized context for ${uid}:`, err);
@@ -367,25 +384,38 @@ class UserProfileService {
             if (metadata.weekly_quest_plan) currentData.weekly_quest_plan = metadata.weekly_quest_plan;
             if (metadata.one_month_plan) currentData.one_month_plan = metadata.one_month_plan;
 
-            // Merge new skill levels with existing (weighted average)
+            // Merge new skill levels using HKEAA evidence-accumulation model.
+            // The 70/30 weighted average is ONLY used for the Overall Subject Level (macro bar).
+            // Micro-skills on the Ability Radar use strict evidence accumulation + difficulty caps.
             Object.entries(skillUpdates).forEach(([skillId, update]) => {
-                const existing = currentData.microSkills[skillId];
-                if (existing) {
-                    // Weighted average: 70% existing, 30% new (for incremental learning)
-                    const newLevel = (existing.level * 0.7) + (update.level * 0.3);
-                    currentData.microSkills[skillId] = {
-                        level: Math.round(newLevel * 100) / 100, // Round to 2 decimals
-                        lastUpdated: admin.firestore.FieldValue.serverTimestamp(),
-                        practiceCount: (existing.practiceCount || 0) + (update.practiceCount || 1)
-                    };
-                } else {
-                    // First time seeing this skill
-                    currentData.microSkills[skillId] = {
-                        level: update.level,
-                        lastUpdated: admin.firestore.FieldValue.serverTimestamp(),
-                        practiceCount: update.practiceCount || 1
-                    };
-                }
+                const existing = currentData.microSkills[skillId] || {};
+
+                // Accumulate raw evidence across all sessions
+                const newTotalCorrect = (existing.totalCorrect || existing.correctCount || 0) + (update.correctCount || 0);
+                const newTotalAttempts = (existing.totalAttempts || existing.practiceCount || 0) + (update.practiceCount || 1);
+
+                // Calculate new candidate level from cumulative accuracy
+                const cumulativeAccuracy = newTotalAttempts > 0 ? newTotalCorrect / newTotalAttempts : 0;
+                const candidateLevel = accuracyToLevel(cumulativeAccuracy);
+
+                // Diagnostic cap: micro-skills from diagnostic are already capped at Level 4.
+                // For lab/mock updates arriving here, use the level as-is from the update.
+                // The difficulty cap is applied in updateMicroSkillLevel for lab sessions.
+                const newLevel = Math.max(existing.level || 1, Math.min(candidateLevel, update.level || candidateLevel));
+
+                // Gate check: must have enough correct answers to qualify for this level
+                const minCorrect = DSE_SCORING.MIN_CORRECT_FOR_LEVEL[newLevel] || 0;
+                const finalLevel = newTotalCorrect >= minCorrect ? newLevel : (existing.level || update.level || 1);
+
+                currentData.microSkills[skillId] = {
+                    level: finalLevel,
+                    totalCorrect: newTotalCorrect,
+                    totalAttempts: newTotalAttempts,
+                    accuracy: Math.round(cumulativeAccuracy * 100) / 100,
+                    lastUpdated: admin.firestore.FieldValue.serverTimestamp(),
+                    practiceCount: newTotalAttempts,
+                    source: update.source || 'lab'
+                };
             });
 
             // Recalculate overall level
@@ -425,15 +455,31 @@ class UserProfileService {
             currentData.last_paper_done = source;
 
             // Maintain practicedSkills (consistent with English)
-            const practicedSkills = currentData.practicedSkills || [];
-            Object.keys(skillUpdates).forEach(skillId => {
-                if (!practicedSkills.includes(skillId)) {
-                    practicedSkills.push(skillId);
-                }
-            });
-            currentData.practicedSkills = Array.from(new Set(practicedSkills));
+            // CRITICAL: ONLY add to practicedSkills if this is NOT a diagnostic session.
+            // Diagnostics assess many skills at once, but we only want to show "Repeat Quest" 
+            // in the Library if the user has actually performed a dedicated practice/mission.
+            if (!source.startsWith('diagnostic')) {
+                const practicedSkills = currentData.practicedSkills || [];
+                Object.keys(skillUpdates).forEach(skillId => {
+                    if (!practicedSkills.includes(skillId)) {
+                        practicedSkills.push(skillId);
+                    }
+                });
+                currentData.practicedSkills = Array.from(new Set(practicedSkills));
+            }
 
             await progressRef.set(currentData, { merge: true });
+
+            // Ensure main user document flags are set if this is a diagnostic
+            if (source.startsWith('diagnostic')) {
+                await this.usersCollection.doc(uid).update({
+                    has_maths_diagnostic: true,
+                    is_new_student: false,
+                    status: 'active',
+                    updatedAt: admin.firestore.FieldValue.serverTimestamp()
+                });
+                console.log(`[UserProfileService] Force updated main flags for ${uid} after Math diagnostic completion.`);
+            }
 
             // Save snapshot to history
             await this.usersCollection.doc(uid).collection('progress').doc('maths_history').collection('snapshots').add({
@@ -606,6 +652,56 @@ class UserProfileService {
                 updatedAt: admin.firestore.FieldValue.serverTimestamp()
             });
 
+            // --- Evidence Seeding -----------------------------------------------
+            // Mine per-question evidence from question_breakdown to seed totalCorrect/
+            // totalAttempts. This lets MIN_CORRECT_FOR_LEVEL gates work correctly after
+            // quests, and makes the Mastery Radar non-blank immediately post-diagnostic.
+            const rawResults = result.raw_results || {};
+            const questionEvidence = {}; // { skillId: { correct, total } }
+
+            ['reading', 'writing', 'listening', 'speaking'].forEach(paper => {
+                const paperResult = rawResults[paper];
+                if (!paperResult?.question_breakdown) return;
+                paperResult.question_breakdown.forEach(q => {
+                    (q.skills || []).forEach(skillId => {
+                        if (!questionEvidence[skillId]) {
+                            questionEvidence[skillId] = { correct: 0, total: 0 };
+                        }
+                        questionEvidence[skillId].total++;
+                        if (q.status === 'correct') {
+                            questionEvidence[skillId].correct++;
+                        }
+                    });
+                });
+            });
+
+            // Build normalised micro-skill objects with evidence counts
+            const normalizedSkills = {};
+            Object.entries(result.microSkills || {}).forEach(([skillId, assessment]) => {
+                const evidence = questionEvidence[skillId] || { correct: 0, total: 0 };
+                const aiLevel = typeof assessment === 'object' ? (assessment.level || 1) : (assessment || 1);
+                // Cap diagnostic-seeded level at DIAGNOSTIC_MAX_LEVEL (4)
+                const diagnosticLevel = Math.min(aiLevel, DSE_SCORING.DIAGNOSTIC_MAX_LEVEL);
+                // Smooth accuracy only when we have real evidence
+                const smoothedAccuracy = evidence.total > 0
+                    ? Math.round(laplaceSmooth(evidence.correct, evidence.total) * 100) / 100
+                    : null;
+
+                normalizedSkills[skillId] = {
+                    level: diagnosticLevel,
+                    totalCorrect: evidence.correct,
+                    totalAttempts: evidence.total,
+                    accuracy: smoothedAccuracy,
+                    confidence: typeof assessment === 'object' ? (assessment.confidence || null) : null,
+                    evidence: typeof assessment === 'object' ? (assessment.evidence || null) : null,
+                    source: 'diagnostic',
+                    lastUpdated: admin.firestore.FieldValue.serverTimestamp()
+                };
+            });
+
+            console.log(`[UserProfileService] Evidence-seeded ${Object.keys(normalizedSkills).length} micro-skills for ${uid} (tagged evidence for ${Object.keys(questionEvidence).length} skills)`);
+            // --- End Evidence Seeding ---------------------------------------------
+
             const progressData = {
                 archetype,
                 roadmap: result.weekly_quest_plan || result.one_month_plan || roadmap,
@@ -616,9 +712,9 @@ class UserProfileService {
                 critical_areas: result.critical_areas || [],
                 overall_level: result.overall_level || 1,
                 level: result.overall_level || 1, // Start at assessed level
-                microSkills: result.microSkills || {}, // Persist 47 micro-skills
+                microSkills: normalizedSkills, // Evidence-seeded micro-skills
                 weaknessPriority: result.weaknessPriority || [],
-                raw_results: result.raw_results || {}, // Persist raw data for possible re-mapping
+                raw_results: rawResults, // Persist raw data for possible re-mapping
                 lastUpdated: admin.firestore.FieldValue.serverTimestamp()
             };
 
@@ -682,44 +778,82 @@ class UserProfileService {
      * Incrementally update a specific micro-skill level.
      * Logic: A high mastery score (+80%) triggers a level increment (+1) until level 7.
      */
-    async updateMicroSkillLevel(uid, subject, skillId, masteryScore) {
+    async updateMicroSkillLevel(uid, subject, skillId, masteryScore, sessionDetails = {}) {
         if (!uid || uid === 'guest' || !skillId) return;
         try {
             const progressRef = this.db.collection('users').doc(uid).collection('progress').doc(subject);
             const doc = await progressRef.get();
-            if (!doc.exists) return;
 
-            const data = doc.data();
+            let data = {};
+            if (doc.exists) {
+                data = doc.data();
+            } else {
+                console.log(`[UserProfileService] Creating initial progress document for ${uid} / ${subject}`);
+            }
+
             const microSkills = data.microSkills || {};
-            const skillData = microSkills[skillId] || { level: 1, confidence: 0.5 };
+            // Preserve diagnostic-seeded evidence counts so MIN_CORRECT gates accumulate
+            // correctly instead of resetting to 0/0 on first quest completion.
+            const existing = microSkills[skillId] || {};
+            const skillData = {
+                level: typeof existing.level === 'number' ? existing.level : 1,
+                totalAttempts: existing.totalAttempts || 0,
+                totalCorrect: existing.totalCorrect || 0,
+            };
             const practicedSkills = data.practicedSkills || [];
 
-            let updateNeeded = false;
-
-            // Always mark as practiced if they finished a mission
+            // Always mark as practiced when a mission is finished
             if (!practicedSkills.includes(skillId)) {
                 practicedSkills.push(skillId);
-                updateNeeded = true;
             }
 
-            // Threshold for level up: Mastery Score >= 80%
-            if (masteryScore >= 80 && skillData.level < 7) {
-                skillData.level += 1;
-                skillData.confidence = Math.min(1.0, (skillData.confidence || 0.5) + 0.1);
-                microSkills[skillId] = skillData;
-                updateNeeded = true;
+            // 1. Accumulate evidence from this session
+            const sessionTotal = sessionDetails.totalQuestions || 5;
+            const sessionCorrect = Math.round((masteryScore / 100) * sessionTotal);
+
+            skillData.totalAttempts = (skillData.totalAttempts || 0) + sessionTotal;
+            skillData.totalCorrect = (skillData.totalCorrect || 0) + sessionCorrect;
+
+            // 2. Calculate candidate level from accumulated accuracy
+            const cumulativeAccuracy = skillData.totalCorrect / skillData.totalAttempts;
+            const candidateLevel = accuracyToLevel(cumulativeAccuracy);
+
+            // 3. Apply Difficulty Cap ("Stay Hungry" safeguard)
+            //    Writing is always exempt; all others default to capped.
+            const sessionDifficulty = sessionDetails.difficulty || 4; // Default Medium-High
+            const skillRules = DSE_SCORING.SUBJECT_RULES[subject]?.[skillId] || {};
+            const useCap = (subject === 'english' && skillId === 'writing')
+                ? false
+                : (skillRules.useDifficultyCap ?? true);
+
+            let cappedCandidateLevel = candidateLevel;
+            if (useCap) {
+                const difficultyCap = DSE_SCORING.DIFFICULTY_CAPS[sessionDifficulty] || 7;
+                cappedCandidateLevel = Math.min(candidateLevel, difficultyCap);
+                console.log(`[DSE_SCORING] Applied difficulty cap of ${difficultyCap} for ${skillId} (diff=${sessionDifficulty})`);
+            } else {
+                console.log(`[DSE_SCORING] Bypassed difficulty cap for ${skillId} (assessment-based)`);
             }
 
-            if (updateNeeded) {
-                await progressRef.update({
-                    microSkills,
-                    practicedSkills: Array.from(new Set(practicedSkills)),
-                    lastUpdated: admin.firestore.FieldValue.serverTimestamp()
-                });
-                if (masteryScore >= 80) {
-                    console.log(`[UserProfileService] Level up for ${uid} skill ${skillId}: Now Level ${skillData.level}`);
-                }
+            // 4. Gate check: need enough correct answers to qualify for the capped level
+            const minCorrect = DSE_SCORING.MIN_CORRECT_FOR_LEVEL[cappedCandidateLevel] || 0;
+            if (skillData.totalCorrect >= minCorrect) {
+                // Prevent demotion if student hits an accidental Easy quest after hard work
+                skillData.level = Math.max(skillData.level || 1, cappedCandidateLevel);
             }
+            // Always persist updated evidence counts even if level didn't change
+            skillData.accuracy = Math.round(cumulativeAccuracy * 100) / 100;
+            skillData.lastUpdated = admin.firestore.FieldValue.serverTimestamp();
+
+            microSkills[skillId] = skillData;
+
+            await progressRef.set({
+                microSkills,
+                practicedSkills: Array.from(new Set(practicedSkills)),
+                lastUpdated: admin.firestore.FieldValue.serverTimestamp()
+            }, { merge: true });
+
+            console.log(`[UserProfileService] Skill ${skillId} for ${uid}: Level ${skillData.level} (acc=${(cumulativeAccuracy * 100).toFixed(1)}%, gate=${minCorrect})`);
         } catch (error) {
             console.error(`[UserProfileService] Error updating micro-skill for ${uid}:`, error);
         }
@@ -736,33 +870,31 @@ class UserProfileService {
         if (!uid || uid === 'guest') return;
         try {
             console.log(`[UserProfileService] RESETTING USER: ${uid}`);
+            const userRef = this.usersCollection.doc(uid);
 
-            // 1. Delete Subcollections (Helper)
-            const deleteCollection = async (collectionPath) => {
-                const ref = this.usersCollection.doc(uid).collection(collectionPath);
-                const snapshot = await ref.get();
-                if (snapshot.size === 0) return;
-
-                const batch = this.db.batch();
-                snapshot.docs.forEach(doc => batch.delete(doc.ref));
-                await batch.commit();
+            const deleteRecursive = async (ref) => {
+                const subcollections = await ref.listCollections();
+                for (const sub of subcollections) {
+                    const snapshot = await sub.get();
+                    if (snapshot.size > 0) {
+                        const batch = this.db.batch();
+                        for (const doc of snapshot.docs) {
+                            await deleteRecursive(doc.ref);
+                            batch.delete(doc.ref);
+                        }
+                        await batch.commit();
+                    }
+                }
             };
 
-            await deleteCollection('stats');
-            await deleteCollection('progress');
-            await deleteCollection('chat_history');
-            await deleteCollection('notebook');
-            await deleteCollection('roadmap');
-            await deleteCollection('inventory');
-            await deleteCollection('timeline');
-            await deleteCollection('practice_history');
+            await deleteRecursive(userRef);
+            await userRef.delete();
 
-            // 2. Delete Main Doc
-            await this.usersCollection.doc(uid).delete();
-
-            console.log(`[UserProfileService] User ${uid} wiped.`);
+            console.log(`[UserProfileService] User ${uid} wiped completely (including nested data).`);
             return { success: true };
         } catch (e) {
+            console.error(`[UserProfileService] Reset failed for ${uid}:`, e);
+            throw e;
         }
     }
 

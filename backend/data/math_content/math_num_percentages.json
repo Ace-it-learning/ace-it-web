@@ -1,0 +1,57 @@
+{
+    "is_modular": true,
+    "name": "Percentages & Interest",
+    "name_zh": "百分法與利息",
+    "roadmap": "Master the multiplier method (1+r) for growth and (1-r) for decay. Progress to compound interest with different compounding frequencies. Finally, handle business mathematics like profit/discount and tax calculations, which form the core of DSE Section A.",
+    "roadmap_zh": "掌握運用乘數法 (1+r) 計算增長及 (1-r) 計算衰減。進步到學習不同結算頻率的複利息。最後，處理利潤/折扣及稅務計算等商業數學，這構成了 DSE 甲部的核心。",
+    "learning_modules": [
+        {
+            "module_id": "MOD_01",
+            "title": "Growth, Decay & Multipliers",
+            "title_zh": "增長、衰減與乘數",
+            "concepts": [
+                {
+                    "concept_id": "C01_MULTIPLIERS",
+                    "name": "The Multiplier Method",
+                    "name_zh": "乘數法",
+                    "formula": "V_{new} = V_{old} \\times (1 \\pm r)^n",
+                    "key_takeaway": "Using multipliers (e.g., 1.05 for 5% growth) is faster and less error-prone than calculating interest separately. It handles multiple periods (n) easily.",
+                    "key_takeaway_zh": "使用乘數（如 5% 增長使用 1.05）比分開計算利息更快且更不易出錯。它能輕鬆處理多個週期 (n)。",
+                    "visual_aid": "/images/math/pct_growth_decay_premium.png"
+                }
+            ]
+        },
+        {
+            "module_id": "MOD_02",
+            "title": "Advanced Compounding",
+            "title_zh": "進階複利計算",
+            "concepts": [
+                {
+                    "concept_id": "C02_FREQ",
+                    "name": "Compounding Frequency (k)",
+                    "name_zh": "結算頻率 (k)",
+                    "formula": "A = P(1 + \\frac{r}{k})^{nk}",
+                    "key_takeaway": "The more frequent the compounding (higher k), the higher the final amount. Common DSE traps involve monthly (k=12) or quarterly (k=4) compounding.",
+                    "key_takeaway_zh": "結算頻率越高 (k 越大)，最終本利和越高。DSE 常考陷阱包括按月 (k=12) 或按季 (k=4) 結算。",
+                    "visual_aid": "/images/math/pct_compounding_premium.png"
+                }
+            ]
+        },
+        {
+            "module_id": "MOD_03",
+            "title": "Business & Profit Flow",
+            "title_zh": "商業與利潤流程",
+            "concepts": [
+                {
+                    "concept_id": "C03_BUSINESS_FLOW",
+                    "name": "The Price Flow",
+                    "name_zh": "價格流程",
+                    "formula": "\\text{Cost} \\xrightarrow{Markup} \\text{Marked Price} \\xrightarrow{Discount} \\text{Selling Price}",
+                    "key_takeaway": "Profits are strictly based on COST PRICE, while discounts are based on MARKED PRICE. Confusing these two bases is the most common student error.",
+                    "key_takeaway_zh": "利潤嚴格基於成本價，而折扣則基於標價。混淆這兩個基準是學生最常犯的錯誤。",
+                    "visual_aid": "/images/math/pct_business_flow.png"
+                }
+            ]
+        }
+    ]
+}

@@ -9,10 +9,6 @@ const MATH_MICRO_SKILLS = {
         en: { name: 'Percentages & Interest', desc: 'Compound interest, growth/decay, taxation' },
         zh: { name: '百分法與利息', desc: '複利息、增長/衰退、稅收' }
     },
-    math_num_estimation: {
-        en: { name: 'Estimation & Errors', desc: 'Absolute/relative errors, significant figures' },
-        zh: { name: '估算與誤差', desc: '絕對/相對誤差、有效數字' }
-    },
     math_alg_formulas: {
         en: { name: 'Formulas & Substitution', desc: 'Change of subject, algebraic substitution' },
         zh: { name: '公式與代入', desc: '主項變換、代數代入' }

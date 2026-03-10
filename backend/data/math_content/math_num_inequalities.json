@@ -1,0 +1,66 @@
+{
+    "is_modular": true,
+    "name": "Linear & Quadratic Inequalities",
+    "name_zh": "一元一次及一元二次不等式",
+    "roadmap": "Master the logic of compound inequalities (AND/OR) on a number line first. Progress to quadratic inequalities using parabolas. Finally, bridge into Section B with linear inequalities in two variables and the graphical interpretation of solutions.",
+    "roadmap_zh": "首先掌握數線上複合不等式（「且」與「或」）的邏輯。進階到運用拋物線求解一元二次不等式。最後，進入 DSE 乙部課題：二元一次不等式及其解的圖像詮釋。",
+    "learning_modules": [
+        {
+            "module_id": "MOD_01",
+            "title": "One-Variable Inequalities",
+            "title_zh": "一元不等式",
+            "concepts": [
+                {
+                    "concept_id": "C01_COMPOUND_VISUAL",
+                    "name": "Compound Conditions on Number Line",
+                    "name_zh": "數線上的複合條件",
+                    "formula": "x > a \\text{ and } x \\leq b \\iff a < x \\leq b",
+                    "key_takeaway": "AND (Intersection) requires overlap. OR (Union) combines all shaded regions. Hollow circles mean 'strictly greater/less', solid circles include the value.",
+                    "key_takeaway_zh": "「且」（交集）要求重疊。「或」（聯集）則合併所有陰影區域。空心圓代表「嚴格大於/小於」，實心圓則包含該值。",
+                    "visual_aid": "/images/math/ineq_number_line.png"
+                },
+                {
+                    "concept_id": "C02_QUAD_GRAPH_PREMIUM",
+                    "name": "Quadratic Parabolas",
+                    "name_zh": "二次拋物線法",
+                    "formula": "ax^2 + bx + c < 0 \\implies \\text{Region between roots (if } a > 0)",
+                    "key_takeaway": "For $a > 0$, the inequality $< 0$ is the 'valley' between roots, and $> 0$ represents the 'wings' outside the roots.",
+                    "key_takeaway_zh": "當 $a > 0$ 時，不等式 $< 0$ 對應兩根之間的「谷地」，而 $> 0$ 則對應兩根之外的「兩翼」。",
+                    "visual_aid": "/images/math/ineq_quad_shading.png"
+                }
+            ]
+        },
+        {
+            "module_id": "MOD_02",
+            "title": "Two-Variable Inequalities",
+            "title_zh": "二元不等式",
+            "concepts": [
+                {
+                    "concept_id": "C03_LINEAR_2V",
+                    "name": "Shaded Regions in 2D",
+                    "name_zh": "平面上的陰影區域",
+                    "formula": "ax + by + c \\geq 0",
+                    "key_takeaway": "A linear inequality in two variables represents a half-plane. Use a 'test point' like $(0,0)$ to determine which side of the boundary line to shade.",
+                    "key_takeaway_zh": "二元一次不等式代表一個半平面。使用如 $(0,0)$ 的「測試點」來確定邊界線的哪一側應畫上陰影。",
+                    "visual_aid": "/images/math/ineq_linear_2v.png"
+                }
+            ]
+        },
+        {
+            "module_id": "MOD_03",
+            "title": "Section B: Always Positive/Negative",
+            "title_zh": "乙部課題：恆正與恆負",
+            "concepts": [
+                {
+                    "concept_id": "C04_DELTA_INEQ",
+                    "name": "Inequalities with no roots ($\\Delta < 0$)",
+                    "name_zh": "無根不等式 ($\\Delta < 0$)",
+                    "formula": "ax^2 + bx + c > 0 \\text{ for all } x \\iff a > 0 \\text{ and } \\Delta < 0",
+                    "key_takeaway": "If $\\Delta < 0$, the parabola never touches the x-axis. It is either 'always positive' or 'always negative' for all real $x$. This is a frequent Section B theory point.",
+                    "key_takeaway_zh": "若 $\\Delta < 0$，拋物線永遠不會接觸 x 軸。對於所有實數 x，它不是「恆正」就是「恆負」。這是乙部常用的理論考點。",
+                    "visual_aid": null
+                }
+            ]
+        }
+    ]
+}

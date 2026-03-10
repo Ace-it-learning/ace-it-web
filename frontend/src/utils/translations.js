@@ -131,7 +131,8 @@ export const translations = {
         },
         common: {
             cancel: "Cancel",
-            confirm: "Confirm"
+            confirm: "Confirm",
+            loading: "Loading..."
         },
         sidebar: {
             study_duo: "Study Duo",
@@ -154,7 +155,8 @@ export const translations = {
         },
         dashboard: {
             select_partner: "Select Your Study Partner",
-            partner_desc: "Engage in deep conversations with AI mentors to breakthrough DSE challenges."
+            partner_desc: "Engage in deep conversations with AI mentors to breakthrough DSE challenges.",
+            roadmap: "Personalized Roadmap"
         },
         chat: {
             start_mock: "Start Mock Exam",
@@ -180,8 +182,6 @@ export const translations = {
             placeholder_ace: "Ask Ace sir",
             upload_tooltip_math: "Upload your Maths question (photo)",
             type_what_to_study: "Type what you want to study...",
-            type_answer: "Type your answer...",
-            add_desc: "Add a description (optional)...",
             type_answer: "Type your answer...",
             add_desc: "Add a description (optional)...",
             guest_nudge: "Sign up to save our progress & unlock full DSE tools ✨",
@@ -337,6 +337,7 @@ export const translations = {
             default_tutor: "Your learning companion"
         },
         lab: {
+            personalized_quest_system: "Personalized Quest System",
             designing_lesson: "Designing your lesson...",
             connection_interrupted: "Connection Interrupted",
             return_dashboard: "Return to Dashboard",
@@ -375,7 +376,7 @@ export const translations = {
             my_answer: "My Answer",
             selected: "Selected: {{answer}}",
             no_answer: "(No Answer)",
-            feedback_logic: "Miss Janie's Feedback & Explanation"
+            feedback_logic: "Feedback & Explanation"
         },
         mastery: {
             title: "Abilities",
@@ -428,6 +429,7 @@ export const translations = {
             footer_info: "Updated after every diagnostic, practice lab, and mock exam session.",
             close: "Close",
             overall_level: "Estimated Math Grade",
+            not_available: "N/A",
             current: "Current",
             baseline: "Baseline",
             skill_glossary: "Skill Glossary",
@@ -436,6 +438,9 @@ export const translations = {
             level_prefix: "Mastery Level: ",
             loading: "Loading your mastery data...",
             complete_more_labs: "Complete more labs to get data",
+            interleaved_practice: "Interleaved Practice (Mixed Levels)",
+            interleaved_desc: "Scientifically proven to improve retention by mixing difficulty levels.",
+            start_interleaved: "Start Mixed Practice",
             level_labels: {
                 7: "5**",
                 6: "5*",
@@ -444,15 +449,15 @@ export const translations = {
                 3: "3",
                 2: "2",
                 1: "1",
-                0: "U"
+                0: "N/A"
             }
         },
         math_tutor: {
             explain_step: "Explain this step",
             deep_dive_title: "Deep Dive: Step Breakdown",
-            loading: "Asking Mr. Wong...",
+            loading: "Asking {{tutorName}}...",
             prereqs: "Prerequisites",
-            pro_tip: "Mr. Wong's Pro-Tip",
+            pro_tip: "{{tutorName}}'s Pro-Tip",
             close: "Got it!"
         }
     },
@@ -581,7 +586,8 @@ export const translations = {
         },
         common: {
             cancel: "取消",
-            confirm: "確認"
+            confirm: "確認",
+            loading: "載入中..."
         },
         sidebar: {
             study_duo: "學習拍檔",
@@ -604,7 +610,8 @@ export const translations = {
         },
         dashboard: {
             select_partner: "選擇您的學習夥伴",
-            partner_desc: "與 AI 導師學習，突破 DSE 難關"
+            partner_desc: "與 AI 導師學習，突破 DSE 難關",
+            roadmap: "個人學習藍圖"
         },
         chat: {
             start_mock: "開始模擬考試",
@@ -632,7 +639,6 @@ export const translations = {
             upload_tooltip_math: "上傳你的數學題目 (相片)",
             type_what_to_study: "請輸入你想學習的內容... (Type what you want to study)",
             type_answer: "請輸入你的答案... (Type your answer)",
-            add_desc: "加入描述 (選填)...",
             add_desc: "加入描述 (選填)...",
             guest_nudge: "註冊以保存進度並解鎖完整 DSE 工具 ✨",
             greeting_new: "歡迎來到 Ace It，{{userName}}！我是 {{agentName}}。在開始你的 DSE 旅程之前，我想邀請你花 15 分鐘進行一個**能力測試** (Study Calibration)，完成後我會為你制定專屬的學習藍圖。準備好開始了嗎？",
@@ -787,6 +793,7 @@ export const translations = {
             default_tutor: "你的學習夥伴"
         },
         lab: {
+            personalized_quest_system: "個人化任務系統",
             designing_lesson: "正在為你編排課堂...",
             connection_interrupted: "連線中斷",
             return_dashboard: "返回儀表板",
@@ -825,7 +832,7 @@ export const translations = {
             my_answer: "我的答案",
             selected: "已選擇：{{answer}}",
             no_answer: "(未有輸入)",
-            feedback_logic: "Miss Janie 的評語與解析"
+            feedback_logic: "評語與解析"
         },
         mastery: {
             title: "能力值",
@@ -878,6 +885,7 @@ export const translations = {
             footer_info: "在每次診斷、練習及模擬考試後更新。",
             close: "關閉",
             overall_level: "預計數學等級",
+            not_available: "未有資料",
             current: "當前",
             baseline: "基準",
             skill_glossary: "技能詞錄",
@@ -886,17 +894,26 @@ export const translations = {
             level_prefix: "等級：",
             loading: "正在讀取數據...",
             complete_more_labs: "完成更多練習以獲取更準確數據",
+            interleaved_practice: "混合水平練習 (更佳成效)",
+            interleaved_desc: "科學證實：混合不同難度題目能提升長期記憶及應變靈活性。",
+            start_interleaved: "開始混合練習",
             level_labels: {
+                7: "Level 5**",
+                6: "Level 5*",
+                5: "Level 5",
+                4: "Level 4",
+                3: "Level 3",
+                2: "Level 2",
                 1: "Level 1",
-                0: "U"
+                0: "未有資料"
             }
         },
         math_tutor: {
             explain_step: "解說此步驟",
             deep_dive_title: "深度分析：步驟解構",
-            loading: "正在詢問王老師 (Mr. Wong)...",
+            loading: "正在詢問 {{tutorName}}...",
             prereqs: "必備知識",
-            pro_tip: "王老師應試心得",
+            pro_tip: "{{tutorName}} 應試心得",
             close: "明白！"
         }
     }

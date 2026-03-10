@@ -8,6 +8,7 @@ process.on('unhandledRejection', (reason, promise) => {
     console.error('❌ UNHANDLED REJECTION:', reason);
 });
 
+
 const express = require('express');
 const cors = require('cors');
 const fs = require('fs');
@@ -20,9 +21,14 @@ const { GoogleGenerativeAI } = require('@google/generative-ai');
 require('dotenv').config({ path: path.join(__dirname, '.env') });
 const moment = require('moment');
 
+
+
 // --- INITIALIZE FIREBASE ADMIN (MUST BE FIRST) ---
 const serviceAccountPath = path.join(__dirname, 'serviceAccountKey.json');
 let db_firestore = null;
+
+console.log(`[DEBUG] Checking for Service Account at: ${serviceAccountPath}`);
+console.log(`[DEBUG] File Exists: ${fs.existsSync(serviceAccountPath)}`);
 
 if (fs.existsSync(serviceAccountPath)) {
     try {
@@ -35,6 +41,8 @@ if (fs.existsSync(serviceAccountPath)) {
     } catch (error) {
         console.error("Firebase Admin initialization failed:", error);
     }
+} else {
+    console.error("❌ Firebase Service Account NOT FOUND at " + serviceAccountPath);
 }
 
 const { writingCheatAgent } = require('./prompts/writingCheatAgent');
@@ -42,12 +50,16 @@ const { writingGradingAgent } = require('./prompts/writingGradingAgent');
 const { listeningCheatAgent } = require('./prompts/listeningCheatAgent');
 const { listeningGradingAgent } = require('./prompts/listeningGradingAgent');
 const { generateListeningMock } = require('./listeningMockGenerator');
+
+
 const UserProfileService = require('./services/UserProfileService');
 const DiagnosticService = require('./services/DiagnosticService');
 const MathsLabService = require('./services/maths/MathsLabService');
 const MathsIntentRouter = require('./services/maths/MathsIntentRouter');
 const LabService = require('./services/LabService');
 const GamificationService = require('./services/GamificationService');
+
+
 const {
     WRITING_POLISHER_PROMPT,
     READING_DECODER_PROMPT,
@@ -59,7 +71,9 @@ const TokenService = require('./services/TokenService');
 const RoadmapService = require('./services/RoadmapService');
 
 
+
 // Initialize Apps & Middleware
+
 const app = express();
 const PORT = process.env.PORT || 3001;
 
@@ -67,17 +81,25 @@ app.use(bodyParser.json({ limit: '50mb' }));
 app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
 
 // --- SECURITY & COST GUARDRAILS (PHASE 4) ---
-app.use(helmet()); // Secure HTTP headers
+const isProduction = process.env.NODE_ENV === 'production';
+
+if (isProduction) {
+    app.use(helmet()); // Secure HTTP headers
+} else {
+    console.log("[DEBUG] Dev Mode: Helmet disabled for easier local debugging.");
+}
 
 // Rate Limiting: 100 requests per 15 minutes
 // Rate Limiting: Strict for Production, Relaxed for Dev
-const isProduction = process.env.NODE_ENV === 'production';
 const limiter = rateLimit({
     windowMs: isProduction ? 15 * 60 * 1000 : 1 * 60 * 1000, // 15 mins (Prod) vs 1 min (Dev)
     max: isProduction ? 100 : 10000, // 100 requests (Prod) vs 10,000 (Dev)
     message: { error: "Too many requests, please try again later." }
 });
 app.use('/api/', limiter);
+
+// Serve generated math diagrams
+app.use('/output', express.static(path.join(__dirname, 'output')));
 
 // --- MODULE ROUTES ---
 // (Moved to after CORS middleware)
@@ -93,7 +115,7 @@ app.use((req, res, next) => {
         res.header('Access-Control-Allow-Origin', origin);
     }
     res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
-    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, x-admin-secret');
     res.header('Access-Control-Allow-Credentials', 'true');
 
     if (req.method === 'OPTIONS') {
@@ -111,8 +133,23 @@ app.use((req, res, next) => {
 });
 
 // --- MODULE ROUTES ---
+
+app.use('/api/admin', require('./routes/adminRoutes'));
 app.use('/api/maths/diagnostic', require('./routes/maths/mathsDiagnosticRoutes'));
 app.use('/api/reading', require('./routes/readingScaffoldRoutes'));
+app.use('/api/speaking', require('./routes/speakingQuestRoutes'));
+app.use('/api/lab', require('./routes/english/labRoutes'));
+app.get('/api/quests/personalized', async (req, res) => {
+    const { uid } = req.query;
+    if (!uid) return res.status(400).json({ error: "Missing uid" });
+    try {
+        const PersonalizedQuestService = require('./services/quests/PersonalizedQuestService');
+        const batch = await PersonalizedQuestService.getPersonalizedBatch(uid);
+        res.json(batch);
+    } catch (e) {
+        res.status(500).json({ error: e.message });
+    }
+});
 
 // --- DEBUG: Developer Cheat Endpoint (Top Priority) ---
 app.get('/api/debug/answers/:examId', async (req, res) => {
@@ -491,8 +528,8 @@ app.get('/api/stats', async (req, res) => {
         const user = await UserProfileService.getProfile(uid);
 
         // Check if diagnostic is done - specify flags for different subjects
-        const hasDiagnosticEnglish = user?.diagnostic_completed === true;
-        const hasDiagnosticMaths = user?.has_maths_diagnostic === true;
+        const hasDiagnosticEnglish = user?.diagnostic_completed === true || !!user?.diagnostic_results?.english;
+        const hasDiagnosticMaths = user?.has_maths_diagnostic === true || !!user?.maths_diagnostic;
 
         // Final flag depends on agentId context in frontend, but we'll send everything
         const hasDiagnostic = {
@@ -527,21 +564,33 @@ app.get('/api/microskills/:uid', async (req, res) => {
     try {
         // Fetch from progress subcollection (English is primary subject)
         const progressDoc = await admin.firestore().collection('users').doc(uid).collection('progress').doc('english').get();
-        if (!progressDoc.exists) {
-            return res.json({ microSkills: {}, weaknessPriority: [] });
+
+        let microSkills = {};
+        let weaknessPriority = [];
+        let practicedSkills = [];
+        let lastUpdated = null;
+        let version = 1;
+
+        if (progressDoc.exists) {
+            const progressData = progressDoc.data();
+            microSkills = progressData.microSkills || {};
+            weaknessPriority = progressData.weaknessPriority || [];
+            practicedSkills = progressData.practicedSkills || [];
+            lastUpdated = progressData.lastUpdated;
+            version = progressData.version || 1;
         }
 
-        const progressData = progressDoc.data();
-        const microSkills = progressData.microSkills || {};
-        const weaknessPriority = progressData.weaknessPriority || [];
-        const practicedSkills = progressData.practicedSkills || [];
+        // Fetch Weekly Quest Status
+        const GamificationService = require('./services/GamificationService');
+        const weeklyStatus = await GamificationService.getWeeklyQuestStatus(uid);
 
         res.json({
             microSkills,
             weaknessPriority,
             practicedSkills,
-            timestamp: progressData.lastUpdated,
-            version: progressData.version || 1
+            timestamp: lastUpdated,
+            version,
+            weeklyQuest: weeklyStatus
         });
     } catch (error) {
         console.error('[MicroSkills API] Error fetching micro-skills:', error);
@@ -872,6 +921,8 @@ const profileRoutes = require('./routes/profileRoutes');
 app.use('/api/profile', profileRoutes);
 app.use('/api/gamification', profileRoutes);
 app.use('/api/skillmap', profileRoutes);
+const writingRoutes = require('./routes/writingRoutes'); // Phase 23
+app.use('/api/writing', writingRoutes); // Phase 23
 app.use('/api/redemption', profileRoutes);
 
 // --- DICTIONARY API ---
@@ -1526,7 +1577,9 @@ app.post('/api/chat', async (req, res) => {
         });
     }
 
-    const isDiagCompleted = agentId === 'math' ? user?.has_maths_diagnostic : (agentId === 'chinese' ? user?.has_chinese_diagnostic : user?.diagnostic_completed);
+    const isDiagCompleted = agentId === 'math'
+        ? (user?.has_maths_diagnostic === true || !!user?.maths_diagnostic)
+        : (agentId === 'chinese' ? user?.has_chinese_diagnostic === true : (user?.diagnostic_completed === true || !!user?.diagnostic_results?.english));
     const isNewStudent = user ? (user.is_new_student !== false && !isDiagCompleted && user.status !== 'active') : true;
     console.log(`[Debug] isNewStudent Calc(${agentId}): user.is_new: ${user?.is_new_student}, status: ${user?.status}, isDiagComp: ${isDiagCompleted}, hasSkillMap: ${!!skillMap} `);
 
@@ -1548,11 +1601,16 @@ app.post('/api/chat', async (req, res) => {
 
                 const skippedText = pContext?.skippedPapers?.length > 0 ? `Note: The student SKIPPED these sections during calibration: ${pContext.skippedPapers.join(', ')}.` : '';
 
+                const weeklyQuestText = pContext?.weeklyQuest?.completed
+                    ? "Great news: They have already completed this week's Weekly Reading Quest! Don't suggest it again."
+                    : `They have NOT yet completed this week's Weekly Reading Quest (${pContext?.weeklyQuest?.weekId}). It expires in ${pContext?.weeklyQuest?.daysRemaining} days. Gently encourage them to try it for +200 XP.`;
+
                 promptOverride = `SYSTEM INSTRUCTION: Returning student. 
                 Context about ${pContext?.nickname || 'the student'}:
                 - Level: ${pContext?.level || 1}
                 - Grade: ${pContext?.grade || 'F4'}
                 - Calibration Completed: ${isDiagCompleted ? 'YES' : 'NO'}
+                - Weekly Quest: ${weeklyQuestText}
                 - Weaknesses: ${weaknessText}
                 - Recent Mistakes: ${mistakeText}
                 ${skippedText}
@@ -1560,9 +1618,9 @@ app.post('/api/chat', async (req, res) => {
                 TASK:
                 1. Greet them warmly by their nickname: ${pContext?.nickname}.
                 2. Briefly acknowledge their progress or one of their recent struggles/mistakes. 
-                3. PROPOSE a specific next study step (e.g., "Ready to tackle some [Weak Topic] practice?" or "Shall we review the concept behind your recent mistake in [Mistake Topic]?").
+                3. PROPOSE a specific next study step. ${pContext?.weeklyQuest?.completed ? '' : 'Mention the Weekly Quest as a prime objective.'}
                 4. Since Calibration is ${isDiagCompleted ? 'ALREADY COMPLETED' : 'NOT YET DONE'}, ${isDiagCompleted ? 'do NOT ask them to calibrate again' : 'gently suggest they can finish the missing sections (' + pContext.skippedPapers.join(', ') + ') anytime, but focus on their current next step first'}.
-                5. Output exactly 3 personalized suggestion chips at the end: [SUGGESTIONS: Action 1, Action 2, Action 3].`;
+                5. Output exactly 3 personalized suggestion chips at the end: [SUGGESTIONS: Action 1, Action 2, Action 3]. ${pContext?.weeklyQuest?.completed ? '' : 'One chip MUST be "Start Weekly Quest".'}`;
             }
 
             // HYDRATE SYSTEM PROMPT
@@ -2090,9 +2148,16 @@ The student has just completed the "${subjectLabel} Study Calibration".
 **ACTUAL PERSONALIZED WEEKLY QUESTS**:
 ${currentPlan?.tasks?.filter(t => t.id !== 'boss').map((t, i) => `${i + 1}. ${t.title}`).join('\n')}
 
-**Mentor Goal**: Welcome them, explain their archetype, and explicitly mention their **Personalized Weekly Quests** listed above as their immediate roadmap. **GOLDEN NUGGET**: Based on their weaknesses, provide 1 specific, actionable piece of advice using the [SAVE_NUGGET: Advice text | Topic] tag. 
+**Mentor Goal**: Welcome them and explain their archetype.
+**CRITICAL (Nuance & Accuracy)**: 
+1. Since this was only a 15-minute diagnostic, do NOT make definitive claims like "You are Level 4". 
+2. Instead, use estimated/speculative language: "Based on this quick check, you appear to be around Level ${diagnosticResult.overall_level}", or "This preliminary result suggests a DSE ${levelDisplay} foundation."
+3. Emphasize that we will solidify and verify this level together through regular practice.
 
-**STRICT PERSONA REMAINDER**: Maintain your identity as **Miss Janie**. Use a warm, peer-like, and highly encouraging tone. Use phrases like "You've got this!" or "I'm so proud of your progress!". If English is the subject, use high-energy English encouragement.`;
+**Immediate Roadmap**: Explicitly mention their **Personalized Weekly Quests** listed above. 
+**GOLDEN NUGGET**: Based on their weaknesses, provide 1 specific, actionable piece of advice using the [SAVE_NUGGET: Advice text | Topic] tag. 
+
+**STRICT PERSONA REMAINDER**: Maintain your identity as **${agentId === 'math' ? 'Matt sir' : 'Miss Janie'}**. ${agentId === 'math' ? 'Be the precise, encouraging specialist.' : 'Use a warm, peer-like, and highly encouraging tone.'}`;
                 }
             }
 
@@ -2135,7 +2200,12 @@ ${masteryScore ? `**Mastery Score**: ${masteryScore}%` : ''}
 The student just finished their **Roadmap Quest** for "${topic}" and returned to the dashboard. 
 **Mentor Goal**: Proactively greet them and summarize their big achievement. Use phrases like "Welcome back! I saw you just crushed that ${topic} quest!" or "Great job completing your ${topic} mission!". 
 Briefly tell them why this specific skill (${topic}) is a 'game-changer' for their DSE target grade. 
-**NEXT STEP**: Check their roadmap and suggest the *very next* task they should tackle. If they've finished everything for the week, suggest a "Free Practice" or "Mock Exam" to test their limits.
+**NEXT STEP**: Check their roadmap and suggest the *very next* task they should tackle. 
+**STRICT OUTPUT FORMAT**: You MUST return your response as a valid JSON object:
+{
+  "text": "Your celebration and advice message here (plain text, no markdown blocks)",
+  "suggested_chips": ["Short label for Next Quest", "Another option", "View Progress"]
+}
 Maintain a high-energy, supportive "Big Sister/Brother" tone.`;
             }
 
@@ -3508,24 +3578,28 @@ app.post('/api/speaking/chat', async (req, res) => {
         // --- ENFORCE UNIQUE SPEAKERS (Anti-Loop Guard) ---
         const candidates = ['Candidate_A', 'Candidate_B', 'Candidate_C'];
 
-        // 1. Identify Last Speaker from History
+        // 1. Identify Last Speaker from History (or current context)
         let lastSpeaker = currentSpeaker;
         if (history && history.length > 0) {
-            const lastEntry = history[history.length - 1];
-            if (lastEntry.role !== 'user') lastSpeaker = lastEntry.role;
+            // Scan backwards for the last non-system/non-user speaker
+            for (let i = history.length - 1; i >= 0; i--) {
+                const h = history[i];
+                if (h.role && candidates.includes(h.role)) {
+                    lastSpeaker = h.role;
+                    break;
+                }
+            }
         }
 
-        // 2. Iterate and Fix
+        // 2. Iterate and Fix turns in this batch
         let prev = lastSpeaker;
         finalTurns.forEach(turn => {
             if (turn.speaker === prev) {
-                // Conflict detected: Pick a new speaker
-                const validAllocations = candidates.filter(c => c !== prev && c !== 'Candidate_D');
-                if (validAllocations.length > 0) {
-                    const fallback = validAllocations[Math.floor(Math.random() * validAllocations.length)];
-                    console.log(`[Speaking] Consecutve speaker fix: ${turn.speaker} -> ${fallback}`);
-                    turn.speaker = fallback;
-                }
+                // Conflict detected: Pick a different candidate
+                const otherCandidates = candidates.filter(c => c !== prev);
+                const fallback = otherCandidates[Math.floor(Math.random() * otherCandidates.length)];
+                console.log(`[Speaking] Consecutive speaker fix: ${turn.speaker} -> ${fallback} (prev was ${prev})`);
+                turn.speaker = fallback;
             }
             prev = turn.speaker;
         });
@@ -3757,9 +3831,10 @@ app.post('/api/debug/reset_user', async (req, res) => {
     }
 });
 
+console.log("[DEBUG] Attempting to start server on port " + PORT);
 const server = app.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT}`);
+    console.log(`[OK] Server running on http://localhost:${PORT}`);
 });
 
-// Increase timeout for long-running AI generations (4 minutes)
-server.timeout = 240000;
+// Increase timeout for long-running AI generations (10 minutes)
+server.timeout = 600000;

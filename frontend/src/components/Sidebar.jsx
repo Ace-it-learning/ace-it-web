@@ -4,7 +4,7 @@ import { useAuth } from '../context/AuthContext';
 import { useLanguage } from '../context/LanguageContext';
 import { clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
-import { BookOpen, Sparkles, Mic, Activity, Lightbulb } from 'lucide-react';
+import { BookOpen, Sparkles, Mic, Activity, Lightbulb, Ear } from 'lucide-react';
 import ExamTipsModal from './ace/ExamTipsModal';
 import CardPreviewModal from './CardPreviewModal';
 import { cn } from '../utils/cn';
@@ -191,6 +191,7 @@ const Sidebar = () => {
                     )}
                 </div>
             </div>
+
 
             {/* --- AGENT SELECTION --- */}
             <div className="space-y-3">

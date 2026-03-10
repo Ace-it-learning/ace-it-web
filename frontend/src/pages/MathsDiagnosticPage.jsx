@@ -2,10 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { ArrowRight, CheckCircle, Clock } from 'lucide-react';
-import { BlockMath, InlineMath } from 'react-katex';
+import { SafeInlineMath, SafeBlockMath } from '../components/maths/SafeMath';
+import 'katex/dist/katex.min.css';
 import MathInput from '../components/maths/MathInput';
 import MathsDiagnosticResult from '../components/diagnostic/MathsDiagnosticResult';
 import MathsDiagnosticLanding from '../components/diagnostic/MathsDiagnosticLanding';
+import { formatNumbers, sanitizeMath, prepareMathText, splitContentByDelimiters, looksLikeMath } from '../utils/mathFormattingUtils';
 
 const MathsAnalysisLoading = () => {
     const [progress, setProgress] = useState(0);
@@ -265,46 +267,84 @@ const MathsDiagnosticPage = () => {
             .replace(/\[TABLE REQUIRED:[\s\S]*?\]/g, '')
             .trim();
 
-        // 2. Smart Mixed-Mode Renderer to handle text, inline math ($...$, \(...\)), and block math (\[...\], $$...$$)
-        // Correcting escaped delimeters if they exist
-        const cleanText = displaySubtext.replace(/\\\\\$/g, '$').replace(/\\\\\\\[/g, '\\[').replace(/\\\\\\\]/g, '\\]');
-
-        // Regex for math delimiters
-        const parts = cleanText.split(/(\\\[[\s\S]*?\\\]|\\\([\s\S]*?\\\)?|(?:\$\$[\s\S]*?\$\$)|(?:\$[^\$]+?\$))/g);
+        const cleanText = prepareMathText(displaySubtext);
+        const parts = splitContentByDelimiters(cleanText);
 
         return (
             <div className="space-y-4">
-                <div className="text-gray-800 leading-relaxed text-lg font-medium whitespace-pre-line break-words">
+                <div className="text-gray-800 leading-relaxed text-lg font-medium font-sans">
                     {parts.map((part, i) => {
                         if (!part) return null;
 
-                        // Block Math: \[ ... \] or $$ ... $$
-                        if ((part.startsWith('\\[') && part.endsWith('\\]')) || (part.startsWith('$$') && part.endsWith('$$'))) {
-                            const math = part.slice(2, -2);
-                            return (
-                                <div key={i} className="my-4 overflow-x-auto text-center bg-slate-50 p-4 rounded-xl border border-slate-100">
-                                    <BlockMath math={math} />
-                                </div>
-                            );
-                        }
-                        // Inline Math: \( ... \) or $ ... $
-                        else if ((part.startsWith('\\(') && part.endsWith('\\)')) || (part.startsWith('$') && part.endsWith('$'))) {
-                            const math = part.startsWith('\\(') ? part.slice(2, -2) : part.slice(1, -1);
-                            return <InlineMath key={i} math={math} />;
+                        const isBlock = (part.startsWith('\\[') && part.endsWith('\\]')) || (part.startsWith('$$') && part.endsWith('$$'));
+                        const isInline = (part.startsWith('\\(') && part.endsWith('\\)')) || (part.startsWith('$') && part.endsWith('$'));
+
+                        if (isBlock || isInline) {
+                            let math = '';
+                            if (part.startsWith('\\[') || part.startsWith('\\(')) math = part.slice(2, -2);
+                            else if (part.startsWith('$$')) math = part.slice(2, -2);
+                            else math = part.slice(1, -1);
+
+                            math = math
+                                .replace(/\n/g, ' ')
+                                .replace(/%/g, '\\%')
+                                .replace(/___HKD___/g, '\\text{HK}\\$')
+                                .replace(/___USD___/g, '\\$');
+
+                            const labeledMath = sanitizeMath(math);
+                            const finalMath = formatNumbers(labeledMath, true);
+
+                            if (isBlock) {
+                                return (
+                                    <SafeBlockMath key={i} math={finalMath} className="my-2" />
+                                );
+                            } else {
+                                return (
+                                    <SafeInlineMath key={i} math={finalMath} className="mx-0.5" />
+                                );
+                            }
                         }
 
-                        // Safety Net: If the whole part is raw LaTeX but missing delimiters
-                        // Heuristic: contains common LaTeX and doesn't look like plain text
-                        const isRawMath = (/[\\^=]/.test(part) || part.includes('_')) && !/^[A-Z][a-z]+ /.test(part);
-                        if (isRawMath && parts.length === 1) {
-                            return (
-                                <div key={i} className="my-4 overflow-x-auto text-center bg-slate-50 p-4 rounded-xl border border-slate-100 italic">
-                                    <BlockMath math={part} />
-                                </div>
-                            );
-                        }
+                        return (
+                            <span key={i}>
+                                {part.split(/\r?\n/).map((line, lineIdx, arr) => {
+                                    if (!line.trim() && arr.length > 1) {
+                                        return <br key={lineIdx} />;
+                                    }
+                                    const trimmedLine = line.trim();
+                                    if (!trimmedLine) return null;
 
-                        return <span key={i}>{part}</span>;
+                                    const isMathLine = looksLikeMath(trimmedLine);
+
+                                    if (isMathLine) {
+                                        const mathReadyLine = trimmedLine
+                                            .replace(/%/g, '\\%')
+                                            .replace(/___HKD___/g, '\\text{HK}\\$')
+                                            .replace(/___USD___/g, '\\$');
+
+                                        const labeledMath = sanitizeMath(mathReadyLine);
+                                        const finalMath = formatNumbers(labeledMath, true);
+
+                                        return (
+                                            <SafeInlineMath key={lineIdx} math={finalMath} className="mx-1" />
+                                        );
+                                    } else {
+                                        const formattedLine = formatNumbers(trimmedLine);
+                                        const content = formattedLine
+                                            .replace(/___HKD___/g, 'HK$')
+                                            .replace(/___USD___/g, '$')
+                                            .replace(/\\,/g, ' ');
+
+                                        return (
+                                            <React.Fragment key={lineIdx}>
+                                                <span className="whitespace-pre-wrap">{content}</span>
+                                                {lineIdx < arr.length - 1 && <span className="mx-0.5" />}
+                                            </React.Fragment>
+                                        );
+                                    }
+                                })}
+                            </span>
+                        );
                     })}
                 </div>
 
@@ -349,7 +389,7 @@ const MathsDiagnosticPage = () => {
     if (stage === 'result') {
         return (
             <div className="min-h-screen bg-slate-50 p-6 overflow-y-auto">
-                <MathsDiagnosticResult results={results} />
+                <MathsDiagnosticResult results={results} uid={user?.uid} />
             </div>
         );
     }
@@ -472,7 +512,11 @@ const MathsDiagnosticPage = () => {
                                                 {String.fromCharCode(65 + i)}
                                             </div>
                                             <div className="flex-1">
-                                                <InlineMath math={opt} />
+                                                {/[\\$]/.test(opt) ? (
+                                                    <SafeInlineMath math={sanitizeMath(opt.replace(/^\$|\$$/g, '').replace(/^\\\(|\\\)$/g, ''))} />
+                                                ) : (
+                                                    <span className="text-gray-800">{opt}</span>
+                                                )}
                                             </div>
                                         </div>
                                     </button>

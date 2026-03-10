@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "title": "Writing Mock: Socio-economic Divide",
+    "topic": "Socio-economic Divide",
+    "generated_at": "2026-01-31T06:25:12.776Z",
+    "blueprint_version": "2026_V1"
+  },
+  "Part_A": {
+    "part": "Part A",
+    "genre": "Feature Article",
+    "title": "Bridging the Gap: Education Inequality in Hong Kong",
+    "instructions": "Write about 200 words. Pay attention to format/tone and the target audience.",
+    "situation": "You are a student journalist writing for your school newspaper. The editor has asked you to write a feature article on the disparity in educational opportunities for students from different socioeconomic backgrounds in Hong Kong. Highlight the challenges faced by underprivileged students and suggest possible solutions to promote greater equity in education.",
+    "requirements": [
+      "Describe the challenges faced by students from low-income families.",
+      "Explain how these challenges impact their academic performance and future prospects.",
+      "Suggest at least two practical solutions to address educational inequality."
+    ],
+    "format_guides": [
+      "Include a catchy title.",
+      "Use a semi-formal tone appropriate for a school newspaper.",
+      "Structure the article with clear paragraphs and headings."
+    ]
+  },
+  "Part_B": [
+    {
+      "elective": "Sports Communication",
+      "question": "Your school newspaper is launching a new monthly column dedicated to covering local sports. As the lead sports writer, you've been asked to write the inaugural article. Choose a recent sporting event involving your school or a local team. Write an engaging and informative sports report (approximately 400 words) that captures the excitement of the event, highlights key players and moments, and analyzes the team's performance. Consider including quotes from players or coaches to add depth to your report.",
+      "type": "Sports Report"
+    },
+    {
+      "elective": "Drama",
+      "question": "Your drama club is performing an original play about the impact of social media on teenage relationships. You are the playwright. Write the script for a pivotal scene (approximately 400 words) where two close friends, initially connected through social media, experience a significant conflict arising from misunderstandings and misinterpretations online. Focus on realistic dialogue and stage directions that effectively portray the emotional tension and complexities of their relationship.",
+      "type": "Play Script Scene"
+    },
+    {
+      "elective": "Poems/Songs",
+      "question": "Compose a song or poem (approximately 400 words) that explores the theme of 'Hidden Voices.' Your piece should give a voice to someone or something often overlooked or ignored in society. Consider exploring the perspective of a marginalized community, an inanimate object, or an abstract concept. Pay close attention to imagery, metaphor, and rhythm to create a powerful and evocative message.",
+      "type": "Song/Poem"
+    },
+    {
+      "elective": "Debating",
+      "question": "Your school debating society is holding a public debate on the motion: 'This house believes that artificial intelligence poses a greater threat than benefit to society.' You have been assigned the role of the lead speaker for the proposition (i.e., you must argue in favour of the motion). Write a persuasive speech (approximately 400 words) outlining your key arguments, supporting them with relevant evidence and examples, and addressing potential counter-arguments from the opposition. Focus on logical reasoning, clear articulation, and engaging rhetoric.",
+      "type": "Debate Speech"
+    },
+    {
+      "elective": "Social Issues",
+      "question": "Write a proposal (approximately 400 words) to your school principal outlining a plan to address a social issue prevalent in your school or local community. Clearly identify the issue, explain its impact, propose specific and actionable solutions, and justify why your plan is feasible and beneficial. Support your proposal with relevant data or statistics to demonstrate the seriousness of the issue and the potential effectiveness of your solutions.",
+      "type": "Proposal"
+    },
+    {
+      "elective": "Workplace Comms",
+      "question": "You are the marketing manager of a small company launching a new eco-friendly product. Write an email (approximately 400 words) to potential investors, outlining the key features and benefits of the product, emphasizing its environmental sustainability, and explaining the potential return on investment. Your email should be persuasive, professional, and tailored to the interests and values of environmentally conscious investors. Include specific data points about market analysis and projected sales.",
+      "type": "Email"
+    },
+    {
+      "elective": "Pop Culture",
+      "question": "Write a review (approximately 400 words) of a recent popular culture phenomenon (e.g., a movie, TV show, video game, social media trend, or music album). Analyze its cultural impact, assess its artistic merit, and explain why it has resonated with audiences. Support your analysis with specific examples and references, and express your own informed opinion about its overall significance.",
+      "type": "Review"
+    },
+    {
+      "elective": "Short Stories",
+      "question": "Write a short story (approximately 400 words) that explores the theme of 'Second Chances.' Your story should feature a character who makes a significant mistake and is presented with an opportunity to redeem themselves. Focus on character development, plot progression, and vivid imagery to create a compelling and thought-provoking narrative.",
+      "type": "Short Story"
+    }
+  ]
+}

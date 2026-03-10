@@ -1,8 +1,38 @@
 const express = require('express');
 const router = express.Router();
 const MathsPapers = require('../../services/maths/MathsPapers');
+const MathsMockService = require('../../services/maths/MathsMockService');
 const UserProfileService = require('../../services/UserProfileService');
 const GamificationService = require('../../services/GamificationService');
+
+// POST /api/maths/exam/generate
+// Generate a dynamic mock exam based on type (1 or 2)
+router.post('/generate', async (req, res) => {
+    const { type, language = 'en', uid } = req.body;
+
+    try {
+        let paper;
+        if (type === '1' || type === 1) {
+            paper = await MathsMockService.generatePaper1(uid, language);
+        } else {
+            paper = await MathsMockService.generatePaper2(uid, language);
+        }
+
+        // Generate a temporary ID for this session
+        const examId = `mock_${Date.now()}`;
+
+        // In a real app, we'd save this to Firestore so the user can continue/submit it.
+        // For now, we'll return it directly and let the frontend handle the ephemeral session.
+        res.json({
+            ...paper,
+            id: examId,
+            is_dynamic: true
+        });
+    } catch (e) {
+        console.error("Exam Generation Error:", e);
+        res.status(500).json({ error: "Failed to generate mock exam." });
+    }
+});
 
 // GET /api/maths/exam/:id
 // Fetch a specific Math Mock Exam (e.g., 'A', 'B')

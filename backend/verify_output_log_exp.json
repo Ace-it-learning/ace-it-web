@@ -1,0 +1,58 @@
+{
+  "type": "MATHS",
+  "topic": "math_alg_log_exp",
+  "level": 5,
+  "interactive_tasks": [
+    {
+      "type": "short_answer",
+      "scratchpad": "The curve equation is y = a(2^{bx}). \\nPoint 1: (1, 6) -> 6 = a(2^b) \\nPoint 2: (3, 24) -> 24 = a(2^{3b}) \\nDividing the equations: 24/6 = (a * 2^{3b}) / (a * 2^b) => 4 = 2^{2b}. \\nSince 4 = 2^2, we have 2b = 2, so b = 1. \\nSubstituting b = 1 into 6 = a(2^1): a = 3. \\nNow transform the equation y = 3(2^x) into the form log_4 y = mx + k. \\nlog_4 y = log_4 (3 * 2^x) \\nlog_4 y = log_4 3 + log_4 2^x \\nlog_4 y = (log_4 2)x + log_4 3 \\nComparing with log_4 y = mx + k, the slope m = log_4 2. \\nSince 4 = 2^2, log_4 2 = log_{2^2} 2 = 1/2 = 0.5. \\nValues: a = 3, b = 1, m = 0.5.",
+      "question": "The curve \\(y = a(2^{bx})\\) passes through the points \\((1, 6)\\) and \\((3, 24)\\), where \\(a\\) and \\(b\\) are constants. \\n(a) Find the values of \\(a\\) and \\(b\\).\\n(b) If the relationship between \\(x\\) and \\(y\\) is expressed as \\(\\log_4 y = mx + k\\), find the value of \\(m\\).",
+      "question_zh": "曲線 \\(y = a(2^{bx})\\) 通過點 \\((1, 6)\\) 及 \\((3, 24)\\)，其中 \\(a\\) 及 \\(b\\) 為常數。\\n(a) 求 \\(a\\) 及 \\(b\\) 的值。\\n(b) 若 \\(x\\) 與 \\(y\\) 的關係表示為 \\(\\log_4 y = mx + k\\)，求 \\(m\\) 的值。",
+      "options": null,
+      "options_zh": null,
+      "answer": "a = 3, b = 1, m = 0.5",
+      "answer_letter": null,
+      "solution_steps": [
+        "Substitute \\((1, 6)\\) and \\((3, 24)\\) into the equation to get \\(6 = a(2^b)\\) and \\(24 = a(2^{3b})\\).",
+        "Divide the two equations to eliminate \\(a\\): \\(\\frac{24}{6} = \\frac{2^{3b}}{2^b}\\), which gives \\(4 = 2^{2b}\\).",
+        "Solve for \\(b\\): \\(2^2 = 2^{2b} \\implies 2b = 2 \\implies b = 1\\).",
+        "Substitute \\(b = 1\\) into \\(6 = a(2^b)\\) to find \\(a = 3\\).",
+        "Apply \\(\\log_4\\) to both sides of \\(y = 3(2^x)\\): \\(\\log_4 y = \\log_4 3 + x \\log_4 2\\).",
+        "Identify \\(m\\) as the coefficient of \\(x\\): \\(m = \\log_4 2 = 0.5\\)."
+      ],
+      "solution_steps_zh": [
+        "將 \\((1, 6)\\) 及 \\((3, 24)\\) 代入方程，得 \\(6 = a(2^b)\\) 及 \\(24 = a(2^{3b})\\)。",
+        "將兩方程相除以消去 \\(a\\)：\\(\\frac{24}{6} = \\frac{2^{3b}}{2^b}\\)，得 \\(4 = 2^{2b}\\)。",
+        "解 \\(b\\)：\\(2^2 = 2^{2b} \\implies 2b = 2 \\implies b = 1\\)。",
+        "將 \\(b = 1\\) 代入 \\(6 = a(2^b)\\) 求得 \\(a = 3\\)。",
+        "對 \\(y = 3(2^x)\\) 兩邊取 \\(\\log_4\\)：\\(\\log_4 y = \\log_4 3 + x \\log_4 2\\)。",
+        "確定 \\(m\\) 為 \\(x\\) 的係數：\\(m = \\log_4 2 = 0.5\\)。"
+      ],
+      "hints": [
+        "Hint 1: Use the method of elimination by dividing exponential equations to find the base-related constant.",
+        "Hint 2: Remember that \\(\\log_a(xy) = \\log_a x + \\log_a y\\) and \\(\\log_a(x^k) = k \\log_a x\\).",
+        "Hint 3: For the linear transformation, compare the resulting equation to the slope-intercept form \\(Y = mX + c\\)."
+      ],
+      "hints_zh": [
+        "提示 1: 使用除法消去法處理指數方程組，從而求得與底數相關的常數。",
+        "提示 2: 記住 \\(\\log_a(xy) = \\log_a x + \\log_a y\\) 及 \\(\\log_a(x^k) = k \\log_a x\\)。",
+        "提示 3: 對於線性變換，將所得方程與斜截式 \\(Y = mX + c\\) 進行比較。"
+      ],
+      "explanation": "To solve this problem, we first substitute the given coordinates into the exponential function to establish a system of equations. By dividing the two equations, we can isolate the exponential term and solve for the constant \\(b\\). Once \\(b\\) is determined, substituting it back into the initial equation yields the value of the coefficient \\(a\\). For the second part, applying the properties of logarithms—specifically the product rule and the power rule—allows us to transform the exponential relation into a linear form. Finally, by comparing the resulting linear equation \\(\\log_4 y = (\\log_4 2)x + \\log_4 3\\) with the standard form \\(Y = mX + k\\), we identify the slope \\(m\\) as \\(\\log_4 2\\), which simplifies to \\(0.5\\).",
+      "explanation_zh": "要解決這個問題，我們首先將給定的坐標代入指數函數中，建立一個方程組。通過將兩個方程相除，我們可以孤立指數項並求出常數 \\(b\\)。求得 \\(b\\) 後，將其代回初始方程即可求出係數 \\(a\\) 的值。對於第二部分，利用對數性質（特別是積的準則和冪的準則），我們可以將指數關係轉換為線性形式。最後，將得到的線性方程 \\(\\log_4 y = (\\log_4 2)x + \\log_4 3\\) 與標準形式 \\(Y = mX + k\\) 進行比較，即可確定斜率 \\(m\\) 為 \\(\\log_4 2\\)，化簡後等於 \\(0.5\\)。",
+      "answer_logic": "1. Substitute points into \\(y = a(2^{bx})\\):\\n \\(6 = a \\cdot 2^{b(1)} \\implies 6 = a \\cdot 2^b\\) (Eq. 1)\\n \\(24 = a \\cdot 2^{b(3)} \\implies 24 = a \\cdot 2^{3b}\\) (Eq. 2)\\n2. Divide (Eq. 2) by (Eq. 1):\\n \\(\\frac{24}{6} = \\frac{a \\cdot 2^{3b}}{a \\cdot 2^b} \\implies 4 = 2^{2b}\\)\\n3. Solve for \\(b\\):\\n \\(2^2 = 2^{2b} \\implies 2 = 2b \\implies b = 1\\)\\n4. Solve for \\(a\\):\\n \\(6 = a \\cdot 2^1 \\implies a = 3\\)\\n5. Transform the equation to \\(\\log_4 y\\):\\n \\(\\log_4 y = \\log_4(3 \\cdot 2^x) = \\log_4 3 + \\log_4 2^x\\)\\n \\(\\log_4 y = ( \\log_4 2 )x + \\log_4 3\\)\\n6. Calculate \\(m\\):\\n \\(m = \\log_4 2 = \\log_{2^2} 2 = \\frac{1}{2} = 0.5\\)",
+      "answer_logic_zh": "1. 將點代入 \\(y = a(2^{bx})\\):\\n \\(6 = a \\cdot 2^{b(1)} \\implies 6 = a \\cdot 2^b\\) (方程 1)\\n \\(24 = a \\cdot 2^{b(3)} \\implies 24 = a \\cdot 2^{3b}\\) (方程 2)\\n2. 將 (方程 2) 除以 (方程 1):\\n \\(\\frac{24}{6} = \\frac{a \\cdot 2^{3b}}{a \\cdot 2^b} \\implies 4 = 2^{2b}\\)\\n3. 解 \\(b\\):\\n \\(2^2 = 2^{2b} \\implies 2 = 2b \\implies b = 1\\)\\n4. 解 \\(a\\):\\n \\(6 = a \\cdot 2^1 \\implies a = 3\\)\\n5. 將方程轉換為 \\(\\log_4 y\\) 形式:\\n \\(\\log_4 y = \\log_4(3 \\cdot 2^x) = \\log_4 3 + \\log_4 2^x\\)\\n \\(\\log_4 y = ( \\log_4 2 )x + \\log_4 3\\)\\n6. 計算 \\(m\\):\\n \\(m = \\log_4 2 = \\log_{2^2} 2 = \\frac{1}{2} = 0.5\\)",
+      "graph_spec": null,
+      "id": "56d863628086feb6c276ab6a6edad828",
+      "topic": "Log & Exp Functions",
+      "topic_id": "math_alg_log_exp",
+      "level": 5,
+      "subject": "Maths",
+      "diagram_url": null,
+      "created_at": "2026-03-05T06:22:26.913Z",
+      "is_approved": false,
+      "is_factory": true
+    }
+  ],
+  "source": "ai_hybrid"
+}

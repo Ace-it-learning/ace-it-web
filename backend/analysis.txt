@@ -1,0 +1,28 @@
+
+=== Doc: 4579b51422c976c9a89375acc904a0fb ===
+RAW TEXT (JSON): "The electrical resistance \\( R \\) of a wire varies directly as its length \\( L \\) and inversely as the square of its diameter \\( D \\). A wire of length 2 meters and diameter 0.5 mm has a resistance of 4 ohms. Find the resistance of a wire of length 5 meters and diameter 1 mm."
+
+AFTER prepareMathText: "The electrical resistance \\(R\\) of a wire varies directly as its length \\(L\\) and inversely as the square of its diameter \\(D\\). A wire of length 2 meters and diameter 0.5 mm has a resistance of 4 ohms. Find the resistance of a wire of length 5 meters and diameter 1 mm."
+
+AFTER splitContentByDelimiters (7 parts):
+  Part[0]: isBlock=false isInline=false localMath=false exportedMath=false spaces=2 text="The electrical resistance"
+  Part[1]: isBlock=false isInline=true localMath=true exportedMath=false spaces=0 text="\\(R\\)"
+  Part[2]: isBlock=false isInline=false localMath=false exportedMath=false spaces=7 text="of a wire varies directly as its length"
+  Part[3]: isBlock=false isInline=true localMath=true exportedMath=false spaces=0 text="\\(L\\)"
+  Part[4]: isBlock=false isInline=false localMath=false exportedMath=false spaces=7 text="and inversely as the square of its diameter"
+  Part[5]: isBlock=false isInline=true localMath=true exportedMath=false spaces=0 text="\\(D\\)"
+  Part[6]: isBlock=false isInline=false localMath=false exportedMath=false spaces=30 text=". A wire of length 2 meters and diameter 0.5 mm has a resistance of 4 ohms. Find"
+
+=== Doc: a93a50990bf9f8ed25a84d774f777a25 ===
+RAW TEXT (JSON): "The electrical resistance \\( R \\) of a wire varies directly as its length \\( L \\) and inversely as the square of its diameter \\( D \\). A wire of length 50 cm and diameter 2 mm has a resistance of 0.05 ohms. Find the resistance of a wire of the same material with length 100 cm and diameter 3 mm."
+
+AFTER prepareMathText: "The electrical resistance \\(R\\) of a wire varies directly as its length \\(L\\) and inversely as the square of its diameter \\(D\\). A wire of length 50 cm and diameter 2 mm has a resistance of 0.05 ohms. Find the resistance of a wire of the same material with length 100 cm and diameter 3 mm."
+
+AFTER splitContentByDelimiters (7 parts):
+  Part[0]: isBlock=false isInline=false localMath=false exportedMath=false spaces=2 text="The electrical resistance"
+  Part[1]: isBlock=false isInline=true localMath=true exportedMath=false spaces=0 text="\\(R\\)"
+  Part[2]: isBlock=false isInline=false localMath=false exportedMath=false spaces=7 text="of a wire varies directly as its length"
+  Part[3]: isBlock=false isInline=true localMath=true exportedMath=false spaces=0 text="\\(L\\)"
+  Part[4]: isBlock=false isInline=false localMath=false exportedMath=false spaces=7 text="and inversely as the square of its diameter"
+  Part[5]: isBlock=false isInline=true localMath=true exportedMath=false spaces=0 text="\\(D\\)"
+  Part[6]: isBlock=false isInline=false localMath=false exportedMath=false spaces=34 text=". A wire of length 50 cm and diameter 2 mm has a resistance of 0.05 ohms. Find t"

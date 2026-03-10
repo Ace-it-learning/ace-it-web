@@ -60,6 +60,7 @@ const ChatInterface = ({ onOpenQuest }) => {
 
     // State definitions moved to top
     const [hasDiagnostic, setHasDiagnostic] = useState(false);
+    const [isHistoryLoading, setIsHistoryLoading] = useState(false);
 
 
     // Dynamic Chips Logic based on User State
@@ -197,43 +198,48 @@ const ChatInterface = ({ onOpenQuest }) => {
     // Initial greeting or History restore
     useEffect(() => {
         setDynamicChips([]); // Reset dynamic chips on agent switch
+        setMessages([]); // Clear messages immediately for instant feedback
+        setIsHistoryLoading(true);
+        setHasDiagnostic(false);
+
         const fetchHistory = async () => {
-            // Fetch History and Profile together
             if (user) {
                 try {
                     const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
 
-                    // 1. Fetch Stats / Profile
-                    let currentHasDiagnostic = false;
-                    try {
-                        const statsRes = await fetch(`${API_URL}/api/stats?uid=${user.uid}`);
-                        if (statsRes.ok) {
-                            const statsData = await statsRes.json();
-                            if (statsData.gender) setGender(statsData.gender);
-                            if (statsData.is_new_student !== undefined) setIsNewStudent(statsData.is_new_student);
+                    // 1 & 2. Parallelize Fetches
+                    const [statsRes, historyRes] = await Promise.all([
+                        fetch(`${API_URL}/api/stats?uid=${user.uid}`).catch(err => {
+                            console.warn("Stats fetch failed", err);
+                            return { ok: false };
+                        }),
+                        fetch(`${API_URL}/api/history/${activeAgentId}?uid=${user.uid}`).catch(err => {
+                            console.warn("History fetch failed", err);
+                            return { ok: false };
+                        })
+                    ]);
 
-                            currentHasDiagnostic = typeof statsData?.hasDiagnostic === 'object' && statsData?.hasDiagnostic !== null
-                                ? (activeAgentId === 'math' ? statsData.hasDiagnostic.maths : statsData.hasDiagnostic.english)
-                                : statsData?.hasDiagnostic === true;
-                        }
-                    } catch (sErr) {
-                        console.warn("Stats fetch failed for greeting logic", sErr);
+                    let currentHasDiagnostic = false;
+                    if (statsRes.ok) {
+                        const statsData = await statsRes.json();
+                        if (statsData.gender) setGender(statsData.gender);
+                        if (statsData.is_new_student !== undefined) setIsNewStudent(statsData.is_new_student);
+
+                        currentHasDiagnostic = typeof statsData?.hasDiagnostic === 'object' && statsData?.hasDiagnostic !== null
+                            ? (activeAgentId === 'math' ? statsData.hasDiagnostic.maths : statsData.hasDiagnostic.english)
+                            : statsData?.hasDiagnostic === true;
                     }
+
+                    // Correctly set hasDiagnostic based ONLY on current fetch result
                     setHasDiagnostic(currentHasDiagnostic);
 
-                    // 2. Fetch History
                     let visibleHistory = [];
-                    try {
-                        const historyRes = await fetch(`${API_URL}/api/history/${activeAgentId}?uid=${user.uid}`);
-                        if (historyRes.ok) {
-                            const history = await historyRes.json();
-                            visibleHistory = history.filter(m =>
-                                !m.content.includes('[SYSTEM:') &&
-                                !m.content.includes('[ACTIVATING_EXAM_MODE]')
-                            );
-                        }
-                    } catch (hErr) {
-                        console.warn("History fetch failed, defaulting to empty", hErr);
+                    if (historyRes.ok) {
+                        const history = await historyRes.json();
+                        visibleHistory = history.filter(m =>
+                            !m.content.includes('[SYSTEM:') &&
+                            !m.content.includes('[ACTIVATING_EXAM_MODE]')
+                        );
                     }
 
                     if (visibleHistory.length > 0) {
@@ -241,7 +247,6 @@ const ChatInterface = ({ onOpenQuest }) => {
                         setShowChips(true);
                     } else {
                         let initialContent;
-                        // Use safe defaults for greetings if profile missing
                         const agentName = activeAgent?.name || "Ace Sir";
                         const userName = user?.displayName || user?.email?.split('@')[0] || "小戰士";
 
@@ -251,13 +256,9 @@ const ChatInterface = ({ onOpenQuest }) => {
                                 ? `你好 ${userName}！我係 Ace Sir。聽講你目標係入 **${subject}**？同我講你嘅計劃，我幫你制定 DSE 奪星策略，確保你穩入大學！`
                                 : `你好 ${userName}！我係 Ace Sir。想入邊間大學？同我講你嘅目標，我幫你制定全方位奪星藍圖，助你進軍大學、稱霸 DSE！`;
                         } else if (['english', 'math'].includes(activeAgentId) && !currentHasDiagnostic) {
-                            initialContent = t('chat.greeting_new')
-                                .replace(/{{agentName}}/g, agentName)
-                                .replace(/{{userName}}/g, userName);
+                            initialContent = t('chat.greeting_new', { agentName, userName });
                         } else {
-                            initialContent = t('chat.greeting_return')
-                                .replace(/{{agentName}}/g, agentName)
-                                .replace(/{{userName}}/g, userName);
+                            initialContent = t('chat.greeting_return', { agentName, userName });
                         }
 
                         setMessages([{
@@ -270,30 +271,28 @@ const ChatInterface = ({ onOpenQuest }) => {
 
                     // 3. Process Post-Activity State SEQUENTIALLY after history is loaded
                     if (!isProcessedRef.current) {
-                        // Check Search Params first (for redirects from LabPage)
                         const searchParams = new URLSearchParams(location.search);
                         const questCompleted = searchParams.get('quest_completed');
                         const questTopic = searchParams.get('topic');
 
-                        if (questCompleted === 'true') {
+                        if (questCompleted === 'true' || location.state?.questCompleted) {
                             isProcessedRef.current = true;
-                            handleSendMessage(`[SYSTEM: QUEST_COMPLETED: ${questTopic || 'Activity'}]`, true);
-                            // Clear params from URL
-                            navigate('/dashboard', { replace: true });
+                            const topicToReport = questTopic || location.state?.topic || 'Activity';
+                            handleSendMessage(`[SYSTEM: QUEST_COMPLETED: ${topicToReport}]`, true);
+                            navigate('/dashboard', { replace: true, state: {} });
+                            window.history.replaceState({}, document.title);
                         } else if (location.state?.diagnosticCompleted) {
                             isProcessedRef.current = true;
                             setHasDiagnostic(true);
                             const criticalAreas = location.state.criticalAreas || [];
                             const archetype = location.state.archetype || "Student";
-
-                            // OPTIONAL: Switch agent if requested
                             if (location.state.activeAgentId) {
                                 setActiveAgentId(location.state.activeAgentId);
                             }
-
                             setDynamicChips(criticalAreas);
                             handleSendMessage(`[SYSTEM: DIAGNOSTIC_JUST_COMPLETED: ${archetype}]`, true);
                             window.history.replaceState({}, document.title);
+                            navigate('/dashboard', { replace: true, state: {} });
                         } else if (location.state?.labCompleted) {
                             isProcessedRef.current = true;
                             const { topic, earnedXp, masteryScore } = location.state;
@@ -319,19 +318,16 @@ const ChatInterface = ({ onOpenQuest }) => {
                     }
                 } catch (err) {
                     console.error("fetchHistory failed", err);
+                } finally {
+                    setIsHistoryLoading(false);
                 }
             } else {
                 // GUEST MODE
                 const agentName = activeAgent?.name || "Ace Sir";
-                const userName = "小戰士"; // Generic term for guest
-
+                const userName = "小戰士";
                 let content = ['english', 'math'].includes(activeAgentId)
-                    ? t('chat.greeting_new')
-                    : t('chat.greeting_generic');
-
-                content = content
-                    .replace(/{{agentName}}/g, agentName)
-                    .replace(/{{userName}}/g, userName);
+                    ? t('chat.greeting_new', { agentName, userName })
+                    : t('chat.greeting_generic', { agentName, userName });
 
                 setMessages([{
                     role: 'assistant',
@@ -339,6 +335,7 @@ const ChatInterface = ({ onOpenQuest }) => {
                     agentId: activeAgentId
                 }]);
                 setShowChips(true);
+                setIsHistoryLoading(false);
             }
         };
 
@@ -1006,8 +1003,28 @@ const ChatInterface = ({ onOpenQuest }) => {
             let rawReply = data.reply || data.text;
             if (!rawReply) throw new Error("Backend failed to generate a reply.");
 
-            // Type Safety: Ensure replyText is a string even if backend returns an object (e.g. from mock responses)
-            let replyText = typeof rawReply === 'object' ? (rawReply.text || JSON.stringify(rawReply)) : String(rawReply);
+            // Type Safety: Ensure replyText is a string even if backend returns an object
+            let replyText = '';
+            let parsedReply = null;
+
+            if (typeof rawReply === 'string' && (rawReply.trim().startsWith('{') || rawReply.trim().startsWith('['))) {
+                try {
+                    parsedReply = JSON.parse(rawReply);
+                } catch (e) {
+                    // Not valid JSON, treat as string
+                }
+            } else if (typeof rawReply === 'object') {
+                parsedReply = rawReply;
+            }
+
+            if (parsedReply) {
+                replyText = parsedReply.text || parsedReply.reply || (typeof rawReply === 'string' ? rawReply : JSON.stringify(parsedReply));
+                if (parsedReply.suggested_chips && Array.isArray(parsedReply.suggested_chips)) {
+                    setDynamicChips(parsedReply.suggested_chips);
+                }
+            } else {
+                replyText = String(rawReply);
+            }
 
             const forceTTS = replyText.includes('[FORCE_TTS]');
             const shouldClear = replyText.includes('[TRIGGER_CLEAR]');
@@ -1376,16 +1393,20 @@ const ChatInterface = ({ onOpenQuest }) => {
                         </button>
                     )}
 
-                    {/* NEW: MOCK EXAM BUTTON */}
-                    {user && activeAgentId !== 'ace' && hasDiagnostic && (
+                    {/* NEW: MOCK EXAM BUTTON - Now always visible but locked if no diagnostic */}
+                    {user && activeAgentId !== 'ace' && (
                         <button
                             onClick={() => navigate('/mock-exam')}
+                            disabled={!hasDiagnostic}
                             className={cn(
-                                "px-6 py-2.5 rounded-full transition-all flex items-center gap-2 shadow-sm border hover:shadow-md active:scale-95 bg-indigo-50 text-indigo-700 border-indigo-200/50 min-w-[120px] justify-center"
+                                "px-6 py-2.5 rounded-full transition-all flex items-center gap-2 shadow-sm border hover:shadow-md active:scale-95 min-w-[120px] justify-center",
+                                hasDiagnostic
+                                    ? "bg-indigo-50 text-indigo-700 border-indigo-200/50"
+                                    : "bg-gray-100 text-gray-400 cursor-not-allowed opacity-60 border-gray-200"
                             )}
-                            title="Enter Mock Exam Hall"
+                            title={hasDiagnostic ? "Enter Mock Exam Hall" : t('nav.complete_diagnostic_first')}
                         >
-                            <BookOpen className="w-5 h-5 stroke-[2.5]" />
+                            {hasDiagnostic ? <BookOpen className="w-5 h-5 stroke-[2.5]" /> : <Lock className="w-4 h-4" />}
                             <span className="text-sm font-black tracking-wide uppercase whitespace-nowrap">{t('nav.mock_exam') || "Mock Exam"}</span>
                         </button>
                     )}
@@ -1393,12 +1414,16 @@ const ChatInterface = ({ onOpenQuest }) => {
                     {user && activeAgentId !== 'ace' && (
                         <button
                             onClick={handleOpenMastery}
+                            disabled={!hasDiagnostic}
                             className={cn(
-                                "px-6 py-2.5 rounded-full transition-all flex items-center gap-2 shadow-sm border hover:shadow-md active:scale-95 bg-cyan-50 text-cyan-700 border-cyan-200/50 min-w-[120px] justify-center"
+                                "px-6 py-2.5 rounded-full transition-all flex items-center gap-2 shadow-sm border hover:shadow-md active:scale-95 min-w-[120px] justify-center",
+                                hasDiagnostic
+                                    ? "bg-cyan-50 text-cyan-700 border-cyan-200/50"
+                                    : "bg-gray-100 text-gray-400 cursor-not-allowed opacity-60 border-gray-200"
                             )}
-                            title={t('nav.mastery_compass')}
+                            title={hasDiagnostic ? t('nav.mastery_compass') : t('nav.complete_diagnostic_first')}
                         >
-                            <Compass className="w-5 h-5 stroke-[2.5]" />
+                            {hasDiagnostic ? <Compass className="w-5 h-5 stroke-[2.5]" /> : <Lock className="w-4 h-4" />}
                             <span className="text-sm font-black tracking-wide uppercase whitespace-nowrap">
                                 {activeAgentId === 'math' ? t('math_ability.title') : t('nav.mastery_compass')}
                             </span>
@@ -1472,6 +1497,29 @@ const ChatInterface = ({ onOpenQuest }) => {
 
             {/* Chat Area - Scrollable */}
             <div ref={chatContainerRef} className="flex-1 overflow-y-auto p-8 flex flex-col gap-6">
+                {/* Skeleton Loading State */}
+                {isHistoryLoading && (
+                    <div className="flex flex-col gap-6">
+                        {[1, 2, 3].map((i) => (
+                            <div key={i} className={cn(
+                                "flex items-start gap-4 animate-pulse",
+                                i % 2 === 0 ? "ml-auto justify-end" : ""
+                            )}>
+                                {i % 2 !== 0 && (
+                                    <div className="w-[44px] h-[44px] rounded-full bg-gray-200 dark:bg-gray-700 shrink-0" />
+                                )}
+                                <div className={cn(
+                                    "h-20 w-64 rounded-2xl bg-gray-100 dark:bg-gray-800",
+                                    i % 2 === 0 ? "rounded-tr-none" : "rounded-tl-none"
+                                )} />
+                                {i % 2 === 0 && (
+                                    <div className="w-[44px] h-[44px] rounded-full bg-gray-200 dark:bg-gray-700 shrink-0" />
+                                )}
+                            </div>
+                        ))}
+                    </div>
+                )}
+
                 {messages.map((msg, idx) => {
                     const isLastUserMsg = msg.role === 'user' && idx === messages.findLastIndex(m => m.role === 'user');
 

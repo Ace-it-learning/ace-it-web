@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import { Lock, CheckCircle, Play, Map, Star, Clock, RefreshCcw } from 'lucide-react';
+import { MICRO_SKILLS } from '../../constants/microSkills';
 
 const RoadmapWidget = () => {
     const { user } = useAuth();
@@ -51,6 +52,52 @@ const RoadmapWidget = () => {
                 }
             });
         } else if (task.type === 'PRACTICE') {
+            // REDIRECTION LOGIC FOR SPEAKING
+            const topic = task.topic?.toLowerCase() || '';
+            const skillId = task.id;
+            const skillData = MICRO_SKILLS[skillId];
+            const cluster = skillData?.cluster;
+
+            if (topic.includes('speaking') || skillId.startsWith('speaking_')) {
+                let targetRoute = '/lab'; // Fallback
+                let moduleParam = '';
+
+                if (cluster === 'delivery') {
+                    targetRoute = '/speaking/quest/delivery';
+                    moduleParam = 'delivery';
+                } else if (cluster === 'flow' || skillId === 'speaking_individualResponse') {
+                    targetRoute = '/speaking/quest/flow';
+                    moduleParam = 'flow';
+                } else if (cluster === 'interaction' || skillId === 'speaking_groupDiscussion') {
+                    targetRoute = '/speaking/quest/interaction';
+                    moduleParam = 'interaction';
+                }
+
+                if (targetRoute !== '/lab') {
+                    navigate(`${targetRoute}?module=${moduleParam}&level=${plan.level_at_start + 1}&taskId=${task.id}`, {
+                        state: {
+                            topic: task.topic,
+                            taskId: task.id,
+                            taskTitle: task.title,
+                            taskXp: task.xp
+                        }
+                    });
+                    return;
+                }
+            }
+
+            // REDIRECTION LOGIC FOR WRITING (Genre Factory)
+            if (skillId.startsWith('writing_genre_')) {
+                const genreName = skillData?.en?.name || 'General Writing';
+                navigate(`/writing/briefing/${encodeURIComponent(genreName)}`, {
+                    state: {
+                        initialGenre: genreName,
+                        taskId: task.id
+                    }
+                });
+                return;
+            }
+
             // Navigate to Lab with Topic Query Param to avoid dashboard redirect
             navigate(`/lab?topic=${encodeURIComponent(task.topic)}`, {
                 state: {

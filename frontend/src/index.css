@@ -126,6 +126,16 @@
   }
 }
 
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(400%);
+  }
+}
+
 @layer utilities {
   .animate-pulse-slow {
     animation: ring-shimmer 3s infinite ease-in-out;
@@ -137,5 +147,9 @@
 
   .ring-sparkle {
     animation: ring-sparkle 2s infinite;
+  }
+
+  .animate-shimmer {
+    animation: shimmer 2s infinite linear;
   }
 }

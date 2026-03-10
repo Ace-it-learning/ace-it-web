@@ -38,6 +38,16 @@
         "onboarding": {
             "profile_setup": 50,
             "diagnostic_test": 200
+        },
+        "adaptive_practice_tiers": {
+            "1": 50,
+            "2": 75,
+            "3": 100,
+            "4": 150
+        },
+        "factory_quest": {
+            "completion": 200,
+            "set_bonus": 200
         }
     }
 }

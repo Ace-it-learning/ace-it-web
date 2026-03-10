@@ -1,0 +1,66 @@
+{
+    "is_modular": true,
+    "name": "Ratio & Proportion",
+    "name_zh": "比與比例",
+    "roadmap": "Master the algebraic manipulation of ratios and the 'LCM bridge' for combining them. Bridge into geometry by understanding how length ratios (k) transform into Area (k^2) and Volume (k^3) ratios. This is a high-frequency Section B topic.",
+    "roadmap_zh": "掌握比的代數運算以及合併比時使用的「LCM 橋樑」。透過理解長度比 (k) 如何轉化為面積 (k^2) 和體積 (k^3) 比，進入幾何領域。這是乙部的高頻考點。",
+    "learning_modules": [
+        {
+            "module_id": "MOD_01",
+            "title": "Ratio Manipulation",
+            "title_zh": "比的運算",
+            "concepts": [
+                {
+                    "concept_id": "C01_COMBINING_PREMIUM",
+                    "name": "Combining Ratios (LCM Bridge)",
+                    "name_zh": "合併比 (LCM 橋樑)",
+                    "formula": "a:b=2:3, b:c=4:5 \\implies a:b:c = 8:12:15",
+                    "key_takeaway": "To link a:b and b:c, find the LCM of the common term 'b'. Scaling everything correctly ensures the ratio remains consistent.",
+                    "key_takeaway_zh": "要連結 a:b 與 b:c，先求共通項 'b' 的最小公倍數 (LCM)。正確地按比例縮放可確保比的一致性。",
+                    "visual_aid": "/images/math/ratio_combining_premium.png"
+                }
+            ]
+        },
+        {
+            "module_id": "MOD_02",
+            "title": "Geometric Scaling",
+            "title_zh": "幾何縮放",
+            "concepts": [
+                {
+                    "concept_id": "C02_SIMILARITY_PREMIUM",
+                    "name": "Similar Figures ($k^2, k^3$)",
+                    "name_zh": "相似圖形 ($k^2, k^3$)",
+                    "formula": "l_1:l_2=k \\implies A_1:A_2=k^2, V_1:V_2=k^3",
+                    "key_takeaway": "For similar figures, the area ratio is the SQUARE of the length ratio, and the volume ratio is the CUBE. This applies to any shape (circles, triangles, cones).",
+                    "key_takeaway_zh": "對於相似圖形，面積比是長度比的「平方」，而體積比是長度比的「立方」。這適用於任何形狀（圓形、三角形、圓錐體）。",
+                    "visual_aid": "/images/math/ratio_similar_premium.png"
+                },
+                {
+                    "concept_id": "C03_MAP_SCALES_PREMIUM",
+                    "name": "Map Scale Logic",
+                    "name_zh": "地圖比例尺邏輯",
+                    "formula": "1:n \\implies \\text{Area Ratio } 1:n^2",
+                    "key_takeaway": "Map scales are linear. When converting map area to real area, you MUST square the scale. Always check your units (cm to km).",
+                    "key_takeaway_zh": "地圖比例尺是線性的。將地圖面積轉換為實際面積時，「必須」將比例取平方。務必檢查單位換算（cm 到 km）。",
+                    "visual_aid": "/images/math/ratio_map_scale_premium.png"
+                }
+            ]
+        },
+        {
+            "module_id": "MOD_03",
+            "title": "Algebraic Proportions",
+            "title_zh": "代數比例",
+            "concepts": [
+                {
+                    "concept_id": "C04_K_METHOD",
+                    "name": "The k-Method",
+                    "name_zh": "k-方法",
+                    "formula": "x:y = 2:3 \\implies x=2k, y=3k",
+                    "key_takeaway": "When substituting ratios into expressions like $x^2 + y^2$, always use a constant $k$ to avoid degree errors.",
+                    "key_takeaway_zh": "將比代入如 $x^2 + y^2$ 的算式時，務必使用常數 $k$，以避免次方錯誤。",
+                    "visual_aid": null
+                }
+            ]
+        }
+    ]
+}

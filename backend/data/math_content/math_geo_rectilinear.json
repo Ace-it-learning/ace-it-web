@@ -1,0 +1,128 @@
+{
+    "is_modular": true,
+    "name": "Rectilinear Figures",
+    "name_zh": "直線圖形",
+    "roadmap": "Start with the basic properties of parallel lines and angles. Then, master the sum of interior and exterior angles of triangles and convex polygons. Progress to special quadrilaterals like parallelograms and trapeziums. Finally, apply Pythagoras' theorem and the concepts of congruence and similarity to solve complex geometric problems.",
+    "roadmap_zh": "從平行線和角的基本性質開始。接著，掌握三角形和凸多邊形的內角和與外角和。進階到特殊四邊形，如平行四邊形和梯形。最後，應用勾股定理以及全等和相似的概念來解決複雜的幾何問題。",
+    "learning_modules": [
+        {
+            "module_id": "MOD_01",
+            "title": "Parallel Lines & Angles",
+            "title_zh": "平行線及角",
+            "concepts": [
+                {
+                    "concept_id": "C01_PARALLEL_PROPS",
+                    "name": "Angles of Parallel Lines",
+                    "name_zh": "平行線的角",
+                    "formula": "\\text{Corr. } \\angle, \\text{ Alt. } \\angle, \\text{ Int. } \\angle",
+                    "key_takeaway": "When two parallel lines are cut by a transversal: Corresponding angles are equal, Alternate angles are equal, and Interior angles sum to 180 degrees.",
+                    "key_takeaway_zh": "當兩條平行線被一條截線所截時：同位角相等，內錯角相等，同旁內角互補（和為 180 度）。",
+                    "visual_aid": "/images/math/rectilinear_parallel_lines.png"
+                }
+            ]
+        },
+        {
+            "module_id": "MOD_02",
+            "title": "Triangle Properties",
+            "title_zh": "三角形性質",
+            "concepts": [
+                {
+                    "concept_id": "C02_TRIANGLE_SUM",
+                    "name": "Angle Sum of Triangle",
+                    "name_zh": "三角形內角和",
+                    "formula": "\\[ A + B + C = 180^\\circ \\]",
+                    "key_takeaway": "The sum of the interior angles of any triangle is always 180 degrees. This is written as '∠ sum of △'.",
+                    "key_takeaway_zh": "任何三角形的內角和始終為 180 度。簡寫為「三角形內角和」。",
+                    "visual_aid": "/images/math/rectilinear_triangle_sum.png"
+                },
+                {
+                    "concept_id": "C03_EXTERIOR_ANGLE",
+                    "name": "Exterior Angle of Triangle",
+                    "name_zh": "三角形外角",
+                    "formula": "\\[ \\text{ext. } \\angle = \\text{ sum of opp. int. } \\angle s \\]",
+                    "key_takeaway": "An exterior angle of a triangle is equal to the sum of the two opposite interior angles.",
+                    "key_takeaway_zh": "三角形的一個外角等於另外兩個不相鄰內角的和。",
+                    "visual_aid": "/images/math/rectilinear_exterior_angle.png"
+                }
+            ]
+        },
+        {
+            "module_id": "MOD_03",
+            "title": "Polygons",
+            "title_zh": "多邊形",
+            "concepts": [
+                {
+                    "concept_id": "C04_POLYGON_INT_SUM",
+                    "name": "Interior Angle Sum",
+                    "name_zh": "內角和",
+                    "formula": "\\[ (n - 2) \\times 180^\\circ \\]",
+                    "variables": {
+                        "n": "The number of sides of the polygon."
+                    },
+                    "key_takeaway": "An n-sided polygon can be divided into (n-2) triangles, leading to a sum of (n-2) * 180 degrees.",
+                    "key_takeaway_zh": "一個 n 邊形可以被分割成 (n-2) 個三角形，因此內角和為 (n-2) * 180 度。",
+                    "visual_aid": "/images/math/rectilinear_polygon_sum.png"
+                },
+                {
+                    "concept_id": "C05_POLYGON_EXT_SUM",
+                    "name": "Exterior Angle Sum",
+                    "name_zh": "外角和",
+                    "formula": "\\[ \\text{Sum} = 360^\\circ \\]",
+                    "key_takeaway": "The sum of the exterior angles of any convex polygon is ALWAYS 360 degrees, regardless of the number of sides.",
+                    "key_takeaway_zh": "任何凸多邊形的外角和始終為 360 度，與邊數無關。",
+                    "visual_aid": "/images/math/rectilinear_polygon_exterior.png"
+                }
+            ]
+        },
+        {
+            "module_id": "MOD_04",
+            "title": "Pythagoras & Ratios",
+            "title_zh": "勾股定理與比例",
+            "concepts": [
+                {
+                    "concept_id": "C06_PYTHAGORAS",
+                    "name": "Pythagoras' Theorem",
+                    "name_zh": "勾股定理",
+                    "formula": "\\[ a^2 + b^2 = c^2 \\]",
+                    "key_takeaway": "In a right-angled triangle, the sum of squares of the legs equals the square of the hypotenuse.",
+                    "key_takeaway_zh": "在直角三角形中，兩條直角邊的平方和等於斜邊的平方。",
+                    "visual_aid": "/images/math/rectilinear_pythagoras.png"
+                },
+                {
+                    "concept_id": "C07_SIMILAR_RATIO",
+                    "name": "Area Ratio",
+                    "name_zh": "面積比",
+                    "formula": "\\[ \\frac{A_1}{A_2} = \\left( \\frac{l_1}{l_2} \\right)^2 \\]",
+                    "key_takeaway": "Area ratio is the SQUARE of the length ratio. Always check if figures are similar first!",
+                    "key_takeaway_zh": "面積比是邊長比的「平方」。在使用前務必先確認圖形是否相似！",
+                    "visual_aid": "/images/math/rectilinear_similar_ratio.png"
+                }
+            ]
+        },
+        {
+            "module_id": "MOD_05",
+            "title": "Congruence & Similarity Tests",
+            "title_zh": "全等及相似判定",
+            "concepts": [
+                {
+                    "concept_id": "C08_CONGRUENCE",
+                    "name": "Congruent Triangle Tests ($\\\\cong$)",
+                    "name_zh": "全等三角形判定",
+                    "formula": "\\\\text{SSS, SAS, ASA, AAS, RHS}",
+                    "key_takeaway": "Five tests prove triangles are identical in shape AND size. AAA is NOT a test for congruence!",
+                    "key_takeaway_zh": "五個判定法證明三角形形狀與大小完全相同。注意：AAA 「不是」全等判定法！",
+                    "visual_aid": "/images/math/rectilinear_congruence.png"
+                },
+                {
+                    "concept_id": "C09_SIMILARITY",
+                    "name": "Similar Triangle Tests ($\\\\sim$)",
+                    "name_zh": "相似三角形判定",
+                    "formula": "\\\\text{AAA, 3 sides prop., ratio 2 sides inc. } \\\\angle",
+                    "key_takeaway": "Similar triangles have the same shape but different sizes. All corresponding angles must be equal.",
+                    "key_takeaway_zh": "相似三角形形狀相同但大小不同。所有對應角必須相等。",
+                    "visual_aid": "/images/math/rectilinear_similarity.png"
+                }
+            ]
+        }
+    ]
+}

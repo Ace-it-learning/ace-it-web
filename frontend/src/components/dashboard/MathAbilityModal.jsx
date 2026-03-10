@@ -1,19 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import * as Dialog from '@radix-ui/react-dialog';
-import { Compass, Info, Award, TrendingUp, X, ChevronRight, Trophy, Calculator, Shapes, BarChart3 } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
+import { Compass, Info, Award, TrendingUp, X, ChevronRight, Trophy, Calculator, Shapes, BarChart3, Zap, Lock } from 'lucide-react';
 import MasteryRadar from './MasteryRadar';
 import { getMathMastery, getMathHistory } from '../../services/mathMasteryService'; // New Service
 import { useAuth } from '../../context/AuthContext';
 import { useLanguage } from '../../context/LanguageContext';
 import { getMathSkillName, getMathSkillDesc, getSkillsByCategory } from '../../constants/mathMicroSkills';
+import { useMockGate } from '../../hooks/useMockGate';
+import { calculateTier, getMasteryStats } from '../../utils/masteryUtils';
 
 const MathAbilityModal = ({ isOpen, onClose }) => {
     const { user } = useAuth();
     const { t, language } = useLanguage();
+    const navigate = useNavigate();
     const [selectedCategory, setSelectedCategory] = useState({ id: 'Overview', name: t('math_ability.overview'), icon: Compass, color: 'text-cyan-400' });
     const [showGlossary, setShowGlossary] = useState(false);
     const [masteryData, setMasteryData] = useState(null);
     const [historyData, setHistoryData] = useState([]);
+    const { mathsUnlocked } = useMockGate(user?.uid);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
@@ -94,14 +99,21 @@ const MathAbilityModal = ({ isOpen, onClose }) => {
         return filtered;
     };
 
-    const handleStartSkillChat = (skillId) => {
-        const skillName = getMathSkillName(skillId, language);
-        const message = `I want to improve on "${skillName}" in Mathematics. Can you give me some practice questions or explain the key concepts?`;
+    const handleLearnSkill = (skillId) => {
+        const skillsObj = masteryData?.microSkills || {};
+        const currentLevel = skillsObj[skillId]?.level || 0;
 
-        const event = new CustomEvent('start-ai-chat', {
-            detail: { message, skillId, agent: 'math' } // Specify agent!
+        // Use shared logic for adaptive steering
+        const recommendedLevel = calculateTier(currentLevel, true); // Cap at DSE in modal too
+        const stats = getMasteryStats(currentLevel, false, true); // Cap at DSE for learning flow
+
+        navigate(`/maths/learn/${skillId}`, {
+            state: {
+                topic: skillId,
+                level: recommendedLevel,
+                xp: stats.xp
+            }
         });
-        window.dispatchEvent(event);
         onClose();
     };
 
@@ -274,11 +286,20 @@ const MathAbilityModal = ({ isOpen, onClose }) => {
                                             <span className="text-xs font-bold text-indigo-100/80 uppercase tracking-widest">{t('math_ability.overall_level')}</span>
                                         </div>
                                         <p className="text-4xl font-black text-white drop-shadow-[0_0_15px_rgba(99,102,241,0.5)]">
-                                            {typeof (masteryData?.level) === 'number'
-                                                ? t(`math_ability.level_labels.${Math.floor(masteryData.level)}`)
-                                                : (masteryData?.level || '1')}
+                                            {mathsUnlocked
+                                                ? (typeof (masteryData?.level) === 'number'
+                                                    ? t(`math_ability.level_labels.${Math.floor(masteryData.level)}`)
+                                                    : (masteryData?.level || '1'))
+                                                : t('math_ability.not_available')}
                                         </p>
-                                        <p className="text-[10px] text-indigo-400/80 mt-1 font-medium italic">HKDSE Equivalent Grade</p>
+                                        <p className="text-[10px] text-indigo-400/80 mt-1 font-medium italic">
+                                            {mathsUnlocked ? 'HKDSE Equivalent Grade' : (
+                                                <span className="flex items-center gap-1 text-indigo-300/50">
+                                                    <Lock className="w-3 h-3" />
+                                                    Complete Maths Papers 1 &amp; 2 to unlock
+                                                </span>
+                                            )}
+                                        </p>
                                     </div>
                                 )}
 
@@ -302,18 +323,25 @@ const MathAbilityModal = ({ isOpen, onClose }) => {
 
                                 <div className="mt-4">
                                     <h4 className="text-[10px] font-semibold text-slate-500 uppercase tracking-wider mb-2">{t('math_ability.improvement_plan')}</h4>
+
+
                                     <div className="space-y-2">
                                         {weaknesses.length > 0 ? weaknesses.map((w) => (
                                             <button
                                                 key={w.skillId}
-                                                onClick={() => handleStartSkillChat(w.skillId)}
+                                                onClick={() => handleLearnSkill(w.skillId)}
                                                 className="w-full text-left p-2.5 bg-slate-800/30 border border-slate-700/50 rounded-xl space-y-1 hover:bg-slate-800/50 hover:border-indigo-500/30 transition-all group"
                                             >
-                                                <div className="flex items-center justify-between">
-                                                    <span className="text-xs font-medium text-slate-200 group-hover:text-indigo-400 transition-colors uppercase tracking-tight">{getMathSkillName(w.skillId, language)}</span>
-                                                    <span className="text-[9px] px-1.5 py-0.5 bg-rose-500/10 text-rose-400 rounded-full border border-rose-500/20">
-                                                        {t('math_ability.priority_tag')}
-                                                    </span>
+                                                <div className="flex items-center justify-between gap-2">
+                                                    <span className="text-xs font-bold text-slate-200 group-hover:text-indigo-400 transition-colors uppercase tracking-tight truncate flex-1">{getMathSkillName(w.skillId, language)}</span>
+                                                    <div className="flex items-center gap-2 flex-shrink-0">
+                                                        <span className={`text-[8px] px-1.5 py-0.5 rounded-full border ${getMasteryStats(masteryData?.microSkills?.[w.skillId]?.level || 0, false, true).color}`}>
+                                                            {getMasteryStats(masteryData?.microSkills?.[w.skillId]?.level || 0, false, true).displayName}
+                                                        </span>
+                                                        <span className="text-[8px] px-1.5 py-0.5 bg-rose-500/10 text-rose-400 rounded-full border border-rose-500/20 whitespace-nowrap">
+                                                            {t('math_ability.priority_tag')}
+                                                        </span>
+                                                    </div>
                                                 </div>
                                                 <p className="text-[10px] text-slate-400 leading-relaxed italic line-clamp-2">
                                                     {w.recommendedAction}

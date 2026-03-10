@@ -46,6 +46,20 @@ async function bulkDeleteByQuery(collectionName, field, value) {
     console.log(`   - Deleted ${snapshot.size} records from ${collectionName}.`);
 }
 
+async function deleteCollectionRecursive(collectionRef) {
+    const snapshot = await collectionRef.get();
+    if (snapshot.size === 0) return;
+
+    for (const doc of snapshot.docs) {
+        // Recursively delete subcollections of each document
+        const subcollections = await doc.ref.listCollections();
+        for (const sub of subcollections) {
+            await deleteCollectionRecursive(sub);
+        }
+        await doc.ref.delete();
+    }
+}
+
 async function fullWipe(email) {
     if (!email) {
         console.error("❌ No email provided.");
@@ -76,15 +90,15 @@ async function fullWipe(email) {
         const uid = user.uid;
         console.log(`🆔 User Identity: ${uid}`);
 
-        // 1. Delete Firestore User Document & Subcollections
+        // 1. Delete Firestore User Document & ALL Subcollections (Recursive)
         const userRef = db.collection('users').doc(uid);
         const subcollections = await userRef.listCollections();
         for (const sub of subcollections) {
-            console.log(`🗑️ Deleting subcollection: users/${uid}/${sub.id}`);
-            await deleteCollection(sub);
+            console.log(`🗑️ Recursively deleting subcollection: users/${uid}/${sub.id}`);
+            await deleteCollectionRecursive(sub);
         }
         await userRef.delete();
-        console.log("✅ Main user document deleted.");
+        console.log("✅ Main user document and all subcollections deleted.");
 
         // 2. Delete Global Records referencing UID
         const collectionsToClean = [
@@ -93,7 +107,10 @@ async function fullWipe(email) {
             { name: 'exam_submissions', field: 'uid' },
             { name: 'exam_attempts', field: 'uid' },
             { name: 'writings', field: 'userId' },
-            { name: 'token_usage', field: 'uid' } // Just in case
+            { name: 'token_usage', field: 'uid' }, // Just in case
+            { name: 'skillmap', field: 'uid' },
+            { name: 'writing_mocks', field: 'uid' },
+            { name: 'mock_exams', field: 'uid' }
         ];
 
         for (const col of collectionsToClean) {

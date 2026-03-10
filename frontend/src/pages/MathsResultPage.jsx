@@ -1,8 +1,11 @@
 import React from 'react';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import { CheckCircle, XCircle, Award, ArrowRight, RotateCcw, BarChart2 } from 'lucide-react';
-import { Doughnut } from 'react-chartjs-2';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
+import { SafeInlineMath, SafeBlockMath } from '../components/maths/SafeMath';
+import 'katex/dist/katex.min.css';
+import 'katex/dist/katex.min.css';
+import { formatNumbers, sanitizeMath, looksLikeMath } from '../utils/mathFormattingUtils';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -33,6 +36,33 @@ const MathsResultPage = () => {
     const options = {
         cutout: '75%',
         plugins: { legend: { display: false }, tooltip: { enabled: false } },
+    };
+
+    const renderMath = (text) => {
+        if (!text) return null;
+
+        // Safety enforcement
+        const safeText = typeof text === 'string' ? text : (typeof text === 'number' ? String(text) : (Array.isArray(text) ? text.join('\n') : String(text || '')));
+
+        return (
+            <div className="space-y-1">
+                {safeText.split(/(?:\r?\n|(?=\.Step\s*\d+\s*:?))/).map((line, i) => {
+                    const trimmedLine = line.trim().replace(/^\./, '');
+                    if (!trimmedLine) return null;
+
+                    const isMath = looksLikeMath(trimmedLine);
+                    return (
+                        <div key={i} className="flex flex-wrap items-baseline gap-1">
+                            {isMath ? (
+                                <SafeInlineMath math={sanitizeMath(formatNumbers(trimmedLine, true))} />
+                            ) : (
+                                <span className="text-slate-700">{formatNumbers(trimmedLine)}</span>
+                            )}
+                        </div>
+                    );
+                })}
+            </div>
+        );
     };
 
     return (
@@ -96,8 +126,10 @@ const MathsResultPage = () => {
                         {Object.entries(details).map(([qId, detail]) => (
                             <div key={qId} className="flex justify-between items-center p-3 rounded-lg hover:bg-slate-50 transition-colors border border-transparent hover:border-slate-100">
                                 <div className="flex items-center gap-3">
-                                    {detail.isCorrect ? (
+                                    {detail.score === detail.maxScore ? (
                                         <CheckCircle className="w-5 h-5 text-emerald-500" />
+                                    ) : detail.score > 0 ? (
+                                        <CheckCircle className="w-5 h-5 text-amber-500" />
                                     ) : (
                                         <XCircle className="w-5 h-5 text-red-500" />
                                     )}
@@ -109,8 +141,8 @@ const MathsResultPage = () => {
                                     </div>
                                 </div>
                                 {!detail.isCorrect && (
-                                    <div className="text-xs text-red-500 font-medium">
-                                        Your Answer: {detail.userAnswer || '(Empty)'}
+                                    <div className="text-xs text-indigo-500 font-medium bg-indigo-50 px-2 py-1 rounded">
+                                        Your Answer: {renderMath(detail.userAnswer || '(Empty)')}
                                     </div>
                                 )}
                             </div>

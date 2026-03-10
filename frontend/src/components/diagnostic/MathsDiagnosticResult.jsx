@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Target, CheckCircle, TrendingUp, AlertTriangle, ArrowRight, Eye, Calculator, Sigma } from 'lucide-react';
+import { Target, CheckCircle, TrendingUp, AlertTriangle, ArrowRight, Eye, Calculator, Sigma, Lock } from 'lucide-react';
+import { useMockGate } from '../../hooks/useMockGate';
 
 const LoadingState = () => {
     const [progress, setProgress] = React.useState(0);
@@ -74,10 +75,11 @@ const LoadingState = () => {
     );
 };
 
-const MathsDiagnosticResult = ({ results }) => {
+const MathsDiagnosticResult = ({ results, uid }) => {
     const navigate = useNavigate();
     const profile = results?.profile;
     const [isLeaving, setIsLeaving] = useState(false);
+    const { mathsUnlocked } = useMockGate(uid);
 
     const handleStartJourney = () => {
         setIsLeaving(true);
@@ -124,12 +126,23 @@ const MathsDiagnosticResult = ({ results }) => {
                             profile.archetype.includes('Tactician') ? '🏹' : '🧭'}
                 </div>
                 <div className="flex-1 text-center md:text-left text-white">
-                    <h3 className="text-purple-200 text-xs font-black uppercase tracking-[0.3em] mb-3">Predicted DSE Performance</h3>
+                    <h3 className="text-purple-200 text-xs font-black uppercase tracking-[0.3em] mb-3">Calibration Profile</h3>
                     <h2 className="text-5xl font-black mb-3 tracking-tighter">{profile.archetype}</h2>
-                    <div className="inline-flex items-center gap-3 bg-black/20 backdrop-blur-sm px-6 py-2.5 rounded-2xl border border-white/10">
-                        <span className="text-white/80 font-bold">Projected Grade:</span>
-                        <span className="text-yellow-400 font-extrabold text-3xl drop-shadow-md">Level {profile.overall_level}</span>
+                    <div className="inline-flex items-center gap-3 bg-black/20 backdrop-blur-sm px-6 py-2.5 rounded-2xl border border-white/10 mb-3">
+                        <span className="text-white/80 font-bold">Ability Score:</span>
+                        <span className="text-white font-extrabold text-3xl drop-shadow-md">{profile.overall_level} / 7</span>
                     </div>
+                    {mathsUnlocked ? (
+                        <div className="flex items-center gap-2 mt-2">
+                            <span className="text-white/70 text-sm font-bold">DSE Grade:</span>
+                            <span className="text-yellow-400 font-extrabold text-2xl drop-shadow-md">Level {profile.overall_level}</span>
+                        </div>
+                    ) : (
+                        <div className="flex items-center gap-2 mt-2 text-purple-200/70 text-sm">
+                            <Lock className="w-3.5 h-3.5" />
+                            <span>Complete Maths Papers 1 &amp; 2 to unlock your DSE Grade Projection</span>
+                        </div>
+                    )}
                 </div>
             </div>
 

@@ -3,7 +3,8 @@ import { useSearchParams, useNavigate, useLocation } from 'react-router-dom';
 import { ArrowRight, Award, Book, BookOpen, CheckCircle2, ChevronRight, GraduationCap, Layout, Layers, Loader2, MessageSquare, Mic, MousePointerClick, Play, RefreshCcw, Save, Sparkles, Square, Star, Trophy, Volume2, X } from 'lucide-react';
 import NextPathRecommendations from '../components/lab/NextPathRecommendations';
 import { useAuth } from '../context/AuthContext';
-import { getSkillName } from '../constants/microSkills';
+import { MICRO_SKILLS, getSkillName, getSkillDesc } from '../constants/microSkills';
+import { calculateTier, getMasteryStats } from '../utils/masteryUtils';
 import { addToNotebook } from '../services/notebookService';
 import WritingWorkspace from '../components/lab/WritingWorkspace';
 import WritingReview from '../components/lab/WritingReview';
@@ -13,6 +14,7 @@ import VocabSpotlight from '../components/reading/VocabSpotlight';
 import ParagraphInsight from '../components/reading/ParagraphInsight';
 import ArgumentMap from '../components/reading/ArgumentMap';
 import { useLanguage } from '../context/LanguageContext';
+import { motion, Reorder } from 'framer-motion';
 
 // --- Dictionary Popover Component ---
 const DictionaryPopover = ({ data, position, onClose, onAddToNotebook, loading }) => {
@@ -84,6 +86,68 @@ const DictionaryPopover = ({ data, position, onClose, onAddToNotebook, loading }
     );
 };
 
+// --- Ordering Task Component ---
+const OrderingTask = ({ task, value, onChange, disabled }) => {
+    const [items, setItems] = React.useState(() => {
+        // value is a string of indices like "0-2-1-3"
+        // If empty, use natural order
+        const indices = (value && typeof value === 'string' && value.includes('-'))
+            ? value.split('-').map(v => {
+                const num = Number(v);
+                if (!isNaN(num)) return num;
+                // Handle letters A-Z
+                const charCode = v.toUpperCase().charCodeAt(0);
+                if (charCode >= 65 && charCode <= 90) return charCode - 65;
+                return 0;
+            })
+            : task.options.map((_, i) => i);
+
+        // Safety check: ensure indices match available options
+        if (indices.length !== task.options.length) {
+            return task.options.map((text, id) => ({ id, text }));
+        }
+
+        return indices.map(idx => ({
+            id: idx,
+            text: task.options[idx] || '???'
+        }));
+    });
+
+    // Update parent state when items are reordered
+    const handleReorder = (newItems) => {
+        if (disabled) return;
+        setItems(newItems);
+        const newValue = newItems.map(item => item.id).join('-');
+        onChange(newValue);
+    };
+
+    return (
+        <Reorder.Group
+            axis="y"
+            values={items}
+            onReorder={handleReorder}
+            className="space-y-2 mt-4"
+        >
+            {items.map((item, idx) => (
+                <Reorder.Item
+                    key={item.id}
+                    value={item}
+                    disabled={disabled}
+                    className={`p-4 bg-white dark:bg-gray-800 border-2 rounded-xl flex items-center gap-4 transition-all ${disabled
+                        ? 'border-gray-100 dark:border-gray-800 cursor-default opacity-80'
+                        : 'border-gray-50 dark:border-gray-700 cursor-grab active:cursor-grabbing hover:border-indigo-300 shadow-sm'
+                        }`}
+                >
+                    <div className="size-8 bg-indigo-100 dark:bg-indigo-900/30 rounded-lg flex items-center justify-center text-indigo-600 dark:text-indigo-400 text-xs font-black shrink-0">
+                        {idx + 1}
+                    </div>
+                    <span className="text-gray-700 dark:text-gray-300 font-bold text-sm leading-relaxed">{item.text}</span>
+                </Reorder.Item>
+            ))}
+        </Reorder.Group>
+    );
+};
+
 const LabPage = () => {
     const [searchParams] = useSearchParams();
     const navigate = useNavigate();
@@ -104,11 +168,25 @@ const LabPage = () => {
     console.log("LabPage: Location State", location.state);
 
     const [currentLevel, setCurrentLevel] = useState(() => {
-        // 3-Tier Normalization Logic
+        // Standardized Normalization: Support both 1-4 Tiers AND 3-7 Semantic Levels
         const lvlStr = String(initialLevel);
-        if (lvlStr.includes('5**') || lvlStr.startsWith('7') || lvlStr.startsWith('6')) return '7';
-        if (lvlStr.includes('5') || lvlStr.startsWith('5') || lvlStr.startsWith('4')) return '5';
-        return '3'; // Default/Fallback to 3
+
+        // 1. Literal Tiers (Legacy)
+        if (lvlStr === '1') return '3';
+        if (lvlStr === '2') return '4';
+        // Note: We skip '3' and '4' here if they are intended to be literal levels, 
+        // but traditionally Tier 3 -> Level 5 and Tier 4 -> Level 7.
+
+        // 2. Semantic Levels (Standard)
+        if (lvlStr === '7' || lvlStr.includes('5**')) return '7';
+        if (lvlStr === '6' || lvlStr.includes('5*')) return '6';
+        if (lvlStr === '5' || lvlStr.includes('5')) return '5'; // Match '5', 'HKDSE 5', etc.
+        if (lvlStr === '4') return '4';
+        if (lvlStr === '3') return '3';
+
+        // 3. Fallback Mapping (Heuristic for Tier vs level ambiguity)
+        // If it's '3' or '4' and we reached here, treat it as a level first.
+        return lvlStr || '3';
     });
 
     const [loading, setLoading] = useState(true);
@@ -124,6 +202,9 @@ const LabPage = () => {
     const [hasErrors, setHasErrors] = useState(false); // Track if current attempt has errors
     const [earnedXp, setEarnedXp] = useState(0);
     const [masteryScore, setMasteryScore] = useState(0);
+    const [qBatch, setQBatch] = useState(0); // 0 or 1 for Easy level question sets
+    const isFactoryQuest = location.state?.isFactoryQuest || false;
+    const isWeeklyQuest = location.state?.isWeeklyQuest || topic === 'reading_weekly';
 
     // Dictionary State
     const [popover, setPopover] = useState(null);
@@ -193,8 +274,12 @@ const LabPage = () => {
         if (urlLevel) {
             let normalized = '3';
             const lvlStr = String(urlLevel);
-            if (lvlStr.includes('5**') || lvlStr.startsWith('7') || lvlStr.startsWith('6')) normalized = '7';
-            else if (lvlStr.includes('5') || lvlStr.startsWith('5') || lvlStr.startsWith('4')) normalized = '5';
+            // Standardized Normalization: Support both 1-4 Tiers AND 3-7 Semantic Levels
+            if (lvlStr === '7' || lvlStr.includes('5**')) normalized = '7';
+            else if (lvlStr === '6' || lvlStr.includes('5*')) normalized = '6';
+            else if (lvlStr === '5' || (lvlStr.startsWith('5') && lvlStr !== '5*')) normalized = '5';
+            else if (lvlStr === '4' || lvlStr === '2') normalized = '4'; // Level 4 or Tier 2
+            else if (lvlStr === '3' || lvlStr === '1') normalized = '3'; // Level 3 or Tier 1
 
             if (normalized !== currentLevel) {
                 setCurrentLevel(normalized);
@@ -254,6 +339,9 @@ const LabPage = () => {
                     } else {
                         payload.topic = topic;
                         payload.focus = focus;
+                        if (location.state?.isWeeklyQuest || topic === 'reading_weekly') {
+                            payload.isWeeklyQuest = true;
+                        }
                     }
 
                     const response = await fetch(endpoint, {
@@ -326,6 +414,14 @@ const LabPage = () => {
                         ];
                     }
 
+                    // Phase 24 & 25: Limit questions for Easy level (CurrentLevel '3')
+                    // We now support 2 batches of 5 questions each
+                    if (currentLevel === '3' && data.interactive_tasks) {
+                        const start = qBatch * 5;
+                        console.log(`[LabPage] Slicing for Easy level. Batch: ${qBatch}, Start: ${start}`);
+                        data.interactive_tasks = data.interactive_tasks.slice(start, start + 5);
+                    }
+
                     setLessonData(data); // Writing API returns { mode, theme, ... }
 
                     // Initialize answers
@@ -333,7 +429,16 @@ const LabPage = () => {
                     if (!isWritingLab) {
                         // Standard Lab Initialization
                         if (data.interactive_tasks && data.interactive_tasks.length > 0) {
-                            data.interactive_tasks.forEach(t => initialAnswers[t.id] = '');
+                            data.interactive_tasks.forEach(t => {
+                                if (t.type === 'CATEGORIZATION') {
+                                    initialAnswers[t.id] = {};
+                                } else if (t.type === 'ORDERING') {
+                                    // Default sequence: index-index-index
+                                    initialAnswers[t.id] = (t.options || []).map((_, i) => i).join('-');
+                                } else {
+                                    initialAnswers[t.id] = '';
+                                }
+                            });
                         } else if (data.interactive_task) {
                             const taskId = 'q1';
                             initialAnswers[taskId] = '';
@@ -349,7 +454,7 @@ const LabPage = () => {
                     console.warn(`Attempt ${attempts} failed:`, err);
                     if (attempts >= maxAttempts) {
                         console.error("Lab Error (Final):", err);
-                        setGenError(err.message);
+                        setGenError(err.message || "Failed to generate lesson content.");
                         setLoading(false);
                     } else {
                         await new Promise(r => setTimeout(r, 2000 * attempts));
@@ -359,7 +464,7 @@ const LabPage = () => {
         };
 
         fetchLesson();
-    }, [topic, currentLevel]); // Re-fetch when level changes
+    }, [topic, currentLevel, qBatch]); // Re-fetch when level or batch changes
 
     const handleTextClick = async (e) => {
         // Prevent event from bubbling to window (prevents immediate close)
@@ -463,7 +568,8 @@ const LabPage = () => {
             const params = new URLSearchParams();
             params.set('quest_completed', 'true');
             if (topic) params.set('topic', topic);
-            navigate(`/dashboard?${params.toString()}`);
+            // Use window.location.href to ensure a clean break/mount for ChatInterface greeting
+            window.location.href = `/dashboard?${params.toString()}`;
             return;
         }
 
@@ -509,6 +615,31 @@ const LabPage = () => {
         }
     };
 
+    const handleRetry = () => {
+        if (currentLevel === '3') {
+            // Toggle batch (0 -> 1 or 1 -> 0)
+            setQBatch(prev => prev === 0 ? 1 : 0);
+
+            // Clear current answers and feedbacks
+            setUserAnswers({});
+            setFeedbacks({});
+            setHasErrors(false);
+            setEarnedXp(0);
+
+            // Jump back to briefing first to allow fetchLesson to finish
+            setStep('EXPLORE');
+            setLoading(true);
+            setLessonData(null);
+        } else {
+            // For other levels, standard retry (re-fetch)
+            setStep('EXPLORE');
+            setLessonData(null);
+            setUserAnswers({});
+            setFeedbacks({});
+            setLoading(true);
+        }
+    };
+
     const handleAnswerChange = (id, value) => {
         setUserAnswers(prev => ({ ...prev, [id]: value }));
         if (feedbacks[id]) {
@@ -532,7 +663,8 @@ const LabPage = () => {
                     tasks: lessonData.interactive_tasks,
                     answers: userAnswers,
                     uid: user?.uid || 'placeholder',
-                    category: lessonData.type
+                    category: lessonData.type,
+                    isFactoryQuest
                 })
             });
 
@@ -583,9 +715,12 @@ const LabPage = () => {
                     uid: user?.uid || 'placeholder',
                     results,
                     xp: calculatedXp,
+                    level: currentLevel,
                     masteryScore: calculatedMasteryScore,
                     topic: lessonData.topic || 'Learning Lab',
-                    mistakes // Send detected mistakes
+                    mistakes, // Send detected mistakes
+                    isFactoryQuest,
+                    isWeeklyQuest
                 })
             });
             if (!submitRes.ok) throw new Error("Failed to save mission progress");
@@ -677,7 +812,8 @@ const LabPage = () => {
                 xp: finalXp,
                 masteryScore: numericScore,
                 topic: skillId,
-                mistakes: []
+                mistakes: [],
+                isFactoryQuest
             };
 
             await fetch(`${API_URL}/api/lab/submit`, {
@@ -773,14 +909,22 @@ const LabPage = () => {
 
     // --- ERROR STATE ---
     if (genError) {
+        const isComingSoon = genError.includes('QUEST_BANK_EMPTY');
+
         return (
             <div className="min-h-screen bg-white dark:bg-gray-950 flex items-center justify-center">
                 <div className="text-center space-y-4 p-8">
-                    <div className="inline-flex p-4 bg-red-100 dark:bg-red-900/30 text-red-600 rounded-full mb-4">
-                        <X size={32} />
+                    <div className={`inline-flex p-4 ${isComingSoon ? 'bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600' : 'bg-red-100 dark:bg-red-900/30 text-red-600'} rounded-full mb-4`}>
+                        {isComingSoon ? <Layers size={32} /> : <X size={32} />}
                     </div>
-                    <h2 className="text-2xl font-bold text-gray-900 dark:text-white">{t('lab.connection_interrupted')}</h2>
-                    <p className="text-gray-500 max-w-md mx-auto">{genError}</p>
+                    <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
+                        {isComingSoon ? "Quest Coming Soon" : t('lab.connection_interrupted')}
+                    </h2>
+                    <p className="text-gray-500 max-w-md mx-auto">
+                        {isComingSoon
+                            ? "We are currently manufacturing fresh quest content for this micro-skill. Please check back later!"
+                            : genError}
+                    </p>
                     <button
                         onClick={() => navigate('/dashboard')}
                         className="px-6 py-3 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-xl font-bold hover:scale-105 transition-transform"
@@ -792,11 +936,27 @@ const LabPage = () => {
         );
     }
 
-    // Standard Lab Render...
     return (
         <div className="min-h-screen bg-white dark:bg-gray-950 flex flex-col animate-in fade-in duration-300">
-            {/* ... Existing standard header ... */}
-            {/* Same header code as before, we just need to ensure we don't duplicate or lose it */}
+            <header className="fixed top-0 inset-x-0 h-16 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-100 dark:border-gray-800 z-50 px-6 flex items-center justify-between">
+                <div className="flex items-center gap-4">
+                    <button onClick={handleClose} className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-xl transition-colors">
+                        <X className="w-5 h-5 text-gray-500" />
+                    </button>
+                    <div>
+                        <h1 className="text-base font-black text-gray-900 dark:text-gray-100 tracking-tight leading-tight">{displayTopic}</h1>
+                        <div className="flex items-center gap-2">
+                            <span className={`px-2 py-0.5 rounded text-[8px] font-bold uppercase tracking-wider border ${getMasteryStats(searchParams.get('level') || (currentLevel === '7' ? 4 : currentLevel === '5' ? 3 : currentLevel === '4' ? 2 : 1), false, false).color}`}>
+                                {getMasteryStats(searchParams.get('level') || (currentLevel === '7' ? 4 : currentLevel === '5' ? 3 : currentLevel === '4' ? 2 : 1), false, false).displayName}
+                            </span>
+                            <span className="text-[8px] font-bold text-gray-400 uppercase tracking-widest flex items-center gap-1">
+                                <Sparkles size={10} className="text-amber-500" />
+                                MISSION XP: +{getMasteryStats(searchParams.get('level') || (currentLevel === '7' ? 4 : currentLevel === '5' ? 3 : currentLevel === '4' ? 2 : 1)).xp}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </header>
 
             {/* Dictionary Popover Overlay */}
             {popover && (
@@ -859,25 +1019,7 @@ const LabPage = () => {
                     {t('lab.live_training')}
                 </div>
 
-                {/* Difficulty Selector */}
-                <div className="flex items-center gap-2 bg-gray-50 dark:bg-gray-900 rounded-lg p-1 border border-gray-100 dark:border-gray-800">
-                    <span className="text-[10px] font-bold text-gray-400 pl-2 uppercase tracking-wide">{t('lab.level')}</span>
-                    <select
-                        value={currentLevel}
-                        onChange={(e) => {
-                            // NEW: Sync to URL instead of just local state
-                            const newLevel = e.target.value;
-                            const params = new URLSearchParams(window.location.search);
-                            params.set('level', newLevel);
-                            navigate(`${window.location.pathname}?${params.toString()}`, { replace: true });
-                        }}
-                        className="bg-white dark:bg-gray-800 text-sm font-bold text-gray-700 dark:text-gray-200 py-1 px-2 rounded-md outline-none border border-gray-200 dark:border-gray-700 cursor-pointer hover:border-indigo-500 transition-colors"
-                    >
-                        <option value="3">{t('lab.foundation_building')}</option>
-                        <option value="5">{t('lab.dse_standard')}</option>
-                        <option value="7">{t('lab.elite_challenge')}</option>
-                    </select>
-                </div>
+
 
                 <button
                     onClick={handleClose}
@@ -890,7 +1032,7 @@ const LabPage = () => {
 
             {/* Immersive Scroll Content */}
             <main className="flex-1 bg-gray-50/50 dark:bg-transparent select-none">
-                <div className="w-full px-8 md:px-12 py-10 md:py-20 font-sans">
+                <div className="w-full px-8 md:px-12 py-6 md:py-12 font-sans">
 
                     {step === 'EXPLORE' && (
                         <div className="space-y-16 animate-in slide-in-from-bottom-8 duration-700">
@@ -900,7 +1042,7 @@ const LabPage = () => {
                                     {t('lab.briefing')}
                                 </span>
                                 <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
-                                    <h1 className="text-5xl md:text-7xl font-black tracking-tight text-gray-900 dark:text-white max-w-4xl leading-[1.1]">
+                                    <h1 className="text-4xl md:text-6xl font-black tracking-tight text-gray-900 dark:text-white max-w-4xl leading-[1.1]">
                                         {t('lab.mastering').replace('{{topic}}', displayTopic)}
                                     </h1>
                                     <div className="flex flex-col items-center justify-center p-6 bg-amber-50 dark:bg-amber-900/20 border-2 border-amber-200 dark:border-amber-800 rounded-[2.5rem] shadow-sm transform hover:rotate-3 transition-transform">
@@ -919,52 +1061,164 @@ const LabPage = () => {
                             {/* Main Lesson Block */}
                             <div className="grid grid-cols-1 xl:grid-cols-3 gap-12">
                                 <div className="xl:col-span-2 space-y-12">
-                                    <section className="bg-white dark:bg-gray-900 p-8 md:p-14 rounded-[3rem] shadow-sm border border-gray-100 dark:border-gray-800">
-                                        <div className="prose prose-xl prose-indigo dark:prose-invert max-w-none text-gray-600 dark:text-gray-300 leading-relaxed font-medium">
-                                            {lessonData.conceptual_explanation}
-                                        </div>
+                                    {/* Specialized Learning Content (Phase 11) */}
+                                    {lessonData?.learning_content ? (
+                                        <div className="space-y-12">
+                                            {/* Anatomy Section */}
+                                            <section className="bg-white dark:bg-gray-900 p-8 md:p-14 rounded-[3rem] shadow-sm border border-gray-100 dark:border-gray-800">
+                                                <div className="flex items-center gap-4 mb-8">
+                                                    <div className="p-3 bg-indigo-600 rounded-2xl text-white">
+                                                        <BookOpen size={24} />
+                                                    </div>
+                                                    <h2 className="text-2xl font-black dark:text-white">Anatomy: {lessonData.learning_content.micro_skill}</h2>
+                                                </div>
 
-                                        {(lessonData.key_points || []).length > 0 && (
-                                            <div className="mt-12 space-y-4">
-                                                <h4 className="text-sm font-black text-gray-400 uppercase tracking-widest px-2">{t('lab.key_competencies')}</h4>
-                                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                                    {(lessonData.key_points || []).map((pt, idx) => (
-                                                        <div key={idx} className="flex items-center gap-4 p-5 bg-gray-50 dark:bg-gray-800/40 border border-gray-100 dark:border-gray-700 rounded-2xl">
-                                                            <div className="size-8 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center shrink-0">
-                                                                <CheckCircle2 size={18} className="text-green-600 dark:text-green-500" />
+                                                <div className="space-y-8">
+                                                    {lessonData.learning_content.anatomy.formula && (
+                                                        <div className="p-8 bg-gray-50 dark:bg-gray-800/40 rounded-3xl border-2 border-dashed border-indigo-200 dark:border-indigo-800">
+                                                            <h4 className="text-xs font-black text-indigo-600 dark:text-indigo-400 uppercase tracking-widest mb-4">Genre Format / Formula</h4>
+                                                            <p className="text-2xl font-black text-gray-900 dark:text-white mb-2">{lessonData.learning_content.anatomy.formula}</p>
+                                                            <p className="text-sm font-bold text-gray-500">{lessonData.learning_content.anatomy.formula_zh}</p>
+                                                        </div>
+                                                    )}
+
+                                                    <div className="bg-indigo-50 dark:bg-indigo-900/20 p-8 rounded-3xl border border-indigo-100 dark:border-indigo-800">
+                                                        <p className="text-xl font-bold text-indigo-900 dark:text-indigo-200 leading-relaxed mb-4">
+                                                            {lessonData.learning_content.anatomy.definition}
+                                                        </p>
+                                                        <p className="text-lg text-indigo-700 dark:text-indigo-400 font-medium">
+                                                            {lessonData.learning_content.anatomy.definition_zh}
+                                                        </p>
+                                                    </div>
+
+                                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                                        <div className="p-8 bg-amber-50 dark:bg-amber-900/20 rounded-3xl border border-amber-100 dark:border-amber-800">
+                                                            <h4 className="text-xs font-black text-amber-600 uppercase tracking-widest mb-4">Target Level</h4>
+                                                            <p className="text-2xl font-black text-indigo-700 dark:text-indigo-400 mb-1">
+                                                                {getMasteryStats(Number(currentLevel)).displayName}
+                                                            </p>
+                                                            <p className="text-sm font-bold text-amber-700 opacity-80">
+                                                                {getMasteryStats(Number(currentLevel)).desc}
+                                                            </p>
+                                                        </div>
+                                                        {/* Optional secondary card if needed */}
+                                                    </div>
+                                                </div>
+                                            </section>
+
+                                            {/* DSE Appearance */}
+                                            <section className="space-y-6">
+                                                <h3 className="text-2xl font-black text-gray-900 dark:text-white px-4">DSE Question Types</h3>
+                                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                                    {lessonData.learning_content.dse_appearance.map((type, idx) => (
+                                                        <div key={idx} className="bg-white dark:bg-gray-900 p-8 rounded-[2.5rem] border border-gray-100 dark:border-gray-800 shadow-sm">
+                                                            <h4 className="text-lg font-black text-indigo-600 mb-2">{type.type}</h4>
+                                                            <p className="text-gray-600 dark:text-gray-400 text-sm mb-6 leading-relaxed">{type.description}</p>
+                                                            <div className="space-y-2">
+                                                                {type.examples.map((ex, eIdx) => (
+                                                                    <div key={eIdx} className="p-3 bg-gray-50 dark:bg-gray-800 rounded-xl text-xs font-bold text-gray-500 italic">
+                                                                        {ex}
+                                                                    </div>
+                                                                ))}
                                                             </div>
-                                                            <span className="text-base font-bold dark:text-white">{pt}</span>
                                                         </div>
                                                     ))}
                                                 </div>
+                                            </section>
+
+                                            {/* Common Traps */}
+                                            <section className="space-y-6">
+                                                <h3 className="text-2xl font-black text-red-600 px-4 flex items-center gap-3">
+                                                    <AlertModal.Icon type="error" size={24} />
+                                                    Common Traps (常見陷阱)
+                                                </h3>
+                                                <div className="space-y-6">
+                                                    {lessonData.learning_content.common_traps.map((trap, idx) => (
+                                                        <div key={idx} className="bg-red-50 dark:bg-red-900/10 p-8 md:p-12 rounded-[3.5rem] border-2 border-red-100 dark:border-red-900/40">
+                                                            <div className="flex flex-col md:flex-row gap-10">
+                                                                <div className="flex-1 space-y-4">
+                                                                    <div className="inline-block px-4 py-1 bg-red-600 text-white text-[10px] font-black rounded-full uppercase tracking-widest">
+                                                                        TRAP: {trap.trap}
+                                                                    </div>
+                                                                    <p className="text-lg font-bold text-red-900 dark:text-red-200">{trap.description}</p>
+                                                                    <div className="p-4 bg-white/50 dark:bg-black/20 rounded-2xl text-sm italic text-gray-600 dark:text-gray-400 border border-red-100">
+                                                                        <strong>Example:</strong> {trap.example_trap}
+                                                                    </div>
+                                                                </div>
+                                                                <div className="flex-1 bg-white dark:bg-gray-950 p-6 rounded-3xl border-2 border-green-500 shadow-lg relative">
+                                                                    <div className="absolute -top-4 left-6 px-4 py-1 bg-green-500 text-white text-[10px] font-black rounded-full uppercase tracking-widest">
+                                                                        Solution
+                                                                    </div>
+                                                                    <p className="text-green-700 dark:text-green-400 font-bold leading-relaxed">
+                                                                        {trap.solution_zh}
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    ))}
+                                                </div>
+                                            </section>
+                                        </div>
+                                    ) : (
+                                        <section className="bg-white dark:bg-gray-900 p-8 md:p-14 rounded-[3rem] shadow-sm border border-gray-100 dark:border-gray-800">
+                                            <div className="prose prose-xl prose-indigo dark:prose-invert max-w-none text-gray-600 dark:text-gray-300 leading-relaxed font-medium">
+                                                {lessonData.conceptual_explanation}
                                             </div>
-                                        )}
-                                    </section>
+
+                                            {(lessonData.key_points || []).length > 0 && (
+                                                <div className="mt-12 space-y-4">
+                                                    <h4 className="text-sm font-black text-gray-400 uppercase tracking-widest px-2">{t('lab.key_competencies')}</h4>
+                                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                                        {(lessonData.key_points || []).map((pt, idx) => (
+                                                            <div key={idx} className="flex items-center gap-4 p-5 bg-gray-50 dark:bg-gray-800/40 border border-gray-100 dark:border-gray-700 rounded-2xl">
+                                                                <div className="size-8 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center shrink-0">
+                                                                    <CheckCircle2 size={18} className="text-green-600 dark:text-green-500" />
+                                                                </div>
+                                                                <span className="text-base font-bold dark:text-white">{pt}</span>
+                                                            </div>
+                                                        ))}
+                                                    </div>
+                                                </div>
+                                            )}
+                                        </section>
+                                    )}
                                 </div>
 
                                 <div className="space-y-6">
-                                    {/* Quest Task Panel */}
-                                    {location.state?.taskTitle && (
-                                        <div className="p-6 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-[2rem] text-white shadow-xl animate-in slide-in-from-right-8 duration-700 mb-8">
-                                            <div className="flex items-start justify-between mb-4">
-                                                <div className="p-2 bg-white/20 rounded-xl">
-                                                    <Award size={24} />
-                                                </div>
-                                                <span className="px-3 py-1 bg-white/20 rounded-full text-xs font-bold uppercase tracking-wider">
-                                                    +{location.state.taskXp || 50} XP
-                                                </span>
-                                            </div>
-                                            <h3 className="text-xl font-bold mb-2 leading-tight">
-                                                {location.state.taskTitle}
-                                            </h3>
-                                            <p className="text-indigo-100 text-sm opacity-90">
-                                                {location.state.taskDescription}
-                                            </p>
-                                        </div>
-                                    )}
+
 
                                     {/* Case Studies Section - Safe Render */}
-                                    {(lessonData.examples || []).length > 0 && (
+                                    {lessonData.learning_content?.anatomy.examples ? (
+                                        <>
+                                            <h3 className="text-xl font-black text-gray-900 dark:text-white flex items-center gap-3">
+                                                <Sparkles className="text-indigo-500" size={24} />
+                                                Case Studies
+                                            </h3>
+                                            {lessonData.learning_content.anatomy.examples.map((ex, idx) => (
+                                                <div key={idx} className="p-8 bg-white dark:bg-gray-900 rounded-[2.5rem] border border-gray-100 dark:border-gray-800 shadow-sm group hover:border-indigo-300 transition-all duration-300">
+                                                    <h4 className="text-[10px] font-black text-indigo-600 uppercase tracking-widest mb-4">{ex.scenario}</h4>
+                                                    <p className="text-lg font-bold text-gray-800 dark:text-gray-200 mb-6 italic leading-relaxed">
+                                                        "{ex.text}"
+                                                    </p>
+                                                    <div className="space-y-4">
+                                                        <div className="flex gap-3">
+                                                            <div className="size-6 bg-blue-100 text-blue-600 rounded flex items-center justify-center shrink-0 text-[10px] font-black">CLUE</div>
+                                                            <p className="text-xs font-bold text-gray-600 dark:text-gray-400 italic">"{ex.clues.join(', ')}"</p>
+                                                        </div>
+                                                        <div className="flex gap-3">
+                                                            <div className="size-6 bg-purple-100 text-purple-600 rounded flex items-center justify-center shrink-0 text-[10px] font-black">LOGIC</div>
+                                                            <p className="text-xs font-bold text-gray-600 dark:text-gray-400">{ex.logic}</p>
+                                                        </div>
+                                                        <div className="mt-4 p-4 bg-indigo-600 text-white rounded-2xl">
+                                                            <div className="text-[10px] font-black uppercase tracking-widest opacity-80 mb-1">Inference</div>
+                                                            <p className="font-bold leading-relaxed">{ex.inference_en}</p>
+                                                            <p className="text-sm opacity-90 mt-1">{ex.inference_zh}</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            ))}
+                                        </>
+                                    ) : (lessonData.examples || []).length > 0 && (
                                         <>
                                             <h3 className="text-xl font-black text-gray-900 dark:text-white flex items-center gap-3">
                                                 <Sparkles className="text-indigo-500" size={24} />
@@ -1007,7 +1261,7 @@ const LabPage = () => {
                             <div className={`flex flex-col ${lessonData.reading_passage ? 'lg:flex-row' : ''} gap-8 items-start`}>
                                 {/* Reading Passage Context - Left Panel */}
                                 {lessonData.reading_passage && (
-                                    <div className="w-full lg:w-[58%] sticky top-24 max-h-[calc(100vh-140px)] overflow-y-auto bg-white dark:bg-gray-900 rounded-[2rem] border-2 border-indigo-100 dark:border-indigo-900/40 shadow-sm custom-scrollbar">
+                                    <div className="w-full lg:w-[58%] sticky top-24 max-h-[calc(100vh-80px)] overflow-y-auto bg-white dark:bg-gray-900 rounded-[2rem] border-2 border-indigo-100 dark:border-indigo-900/40 shadow-sm custom-scrollbar">
                                         <div className="p-6 md:p-10">
                                             {/* Scaffold Toolbar */}
                                             <ScaffoldToolbar settings={scaffoldSettings} onChange={(s) => {
@@ -1182,19 +1436,39 @@ const LabPage = () => {
                                             <div className="relative">
                                                 {task.type === 'MCQ' && task.options ? (
                                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-4">
-                                                        {task.options.map((opt, oIdx) => (
-                                                            <button
-                                                                key={oIdx}
-                                                                onClick={() => handleAnswerChange(task.id, opt.substring(0, 1))}
-                                                                className={`p-4 text-left rounded-xl border-2 transition-all font-bold ${userAnswers[task.id] === opt.substring(0, 1)
-                                                                    ? 'border-indigo-600 bg-indigo-50 text-indigo-700'
-                                                                    : 'border-gray-100 bg-gray-50 text-gray-600 hover:border-indigo-300'
-                                                                    }`}
-                                                            >
-                                                                {opt}
-                                                            </button>
-                                                        ))}
+                                                        {task.options.map((opt, oIdx) => {
+                                                            const match = opt.match(/^([A-Da-d])[\)\.]?\s/);
+                                                            const optKey = match ? match[1].toUpperCase() : String.fromCharCode(65 + oIdx);
+                                                            const isSelected = userAnswers[task.id] === optKey;
+
+                                                            return (
+                                                                <button
+                                                                    key={oIdx}
+                                                                    onClick={() => handleAnswerChange(task.id, optKey)}
+                                                                    className={`p-4 text-left rounded-xl border-2 transition-all font-bold ${isSelected
+                                                                        ? 'border-indigo-600 bg-indigo-50 text-indigo-700'
+                                                                        : 'border-gray-100 bg-gray-50 text-gray-600 hover:border-indigo-300'
+                                                                        }`}
+                                                                >
+                                                                    {opt}
+                                                                </button>
+                                                            );
+                                                        })}
                                                     </div>
+                                                ) : task.type === 'ORDERING' ? (
+                                                    <OrderingTask
+                                                        task={task}
+                                                        value={userAnswers[task.id]}
+                                                        onChange={(val) => handleAnswerChange(task.id, val)}
+                                                        disabled={!!feedbacks[task.id]}
+                                                    />
+                                                ) : task.type === 'CATEGORIZATION' ? (
+                                                    <CategorizationTask
+                                                        task={task}
+                                                        value={userAnswers[task.id]}
+                                                        onChange={(val) => handleAnswerChange(task.id, val)}
+                                                        disabled={!!feedbacks[task.id]}
+                                                    />
                                                 ) : (
                                                     <textarea
                                                         value={userAnswers[task.id] || ''}
@@ -1217,22 +1491,24 @@ const LabPage = () => {
                                                 )}
                                             </div>
 
-                                            {feedbacks[task.id] && (
-                                                <div className={`mt-6 p-6 rounded-2xl border flex items-start gap-4 animate-in slide-in-from-top-4 duration-300 ${feedbacks[task.id].correct
-                                                    ? 'bg-green-50 dark:bg-green-900/20 border-green-100 dark:border-green-800 text-green-700 dark:text-green-400'
-                                                    : 'bg-red-50 dark:bg-red-900/20 border-red-100 dark:border-red-800 text-red-700 dark:text-red-400'
-                                                    }`}>
-                                                    <div className="mt-1 shrink-0">
-                                                        {feedbacks[task.id].correct ? <CheckCircle2 size={24} /> : <div className="text-2xl">💡</div>}
+                                            {
+                                                feedbacks[task.id] && (
+                                                    <div className={`mt-6 p-6 rounded-2xl border flex items-start gap-4 animate-in slide-in-from-top-4 duration-300 ${feedbacks[task.id].correct
+                                                        ? 'bg-green-50 dark:bg-green-900/20 border-green-100 dark:border-green-800 text-green-700 dark:text-green-400'
+                                                        : 'bg-red-50 dark:bg-red-900/20 border-red-100 dark:border-red-800 text-red-700 dark:text-red-400'
+                                                        }`}>
+                                                        <div className="mt-1 shrink-0">
+                                                            {feedbacks[task.id].correct ? <CheckCircle2 size={24} /> : <div className="text-2xl">💡</div>}
+                                                        </div>
+                                                        <div className="space-y-1">
+                                                            <p className="font-black uppercase tracking-widest text-[10px]">
+                                                                {feedbacks[task.id].correct ? t('lab.excellent_work') : t('lab.hint')}
+                                                            </p>
+                                                            <p className="text-lg font-bold leading-relaxed">{feedbacks[task.id].logic}</p>
+                                                        </div>
                                                     </div>
-                                                    <div className="space-y-1">
-                                                        <p className="font-black uppercase tracking-widest text-[10px]">
-                                                            {feedbacks[task.id].correct ? t('lab.excellent_work') : t('lab.hint')}
-                                                        </p>
-                                                        <p className="text-lg font-bold leading-relaxed">{feedbacks[task.id].logic}</p>
-                                                    </div>
-                                                </div>
-                                            )}
+                                                )
+                                            }
                                         </div>
                                     ))}
                                 </div>
@@ -1255,7 +1531,11 @@ const LabPage = () => {
                                     </button>
                                     <button
                                         onClick={handleSubmitMission}
-                                        disabled={isSubmitting || Object.values(userAnswers).some(a => !a.trim())}
+                                        disabled={isSubmitting || Object.values(userAnswers).some(a => {
+                                            if (typeof a === 'string') return !a.trim();
+                                            if (typeof a === 'object' && a !== null) return false; // Objects (Categorization) are considered "filled" if they exist
+                                            return !a; // Fallback for undefined/null
+                                        })}
                                         className="flex-[2] py-6 bg-indigo-600 hover:bg-indigo-700 disabled:opacity-50 text-white rounded-full font-black text-2xl shadow-[0_20px_50px_rgba(79,70,229,0.3)] transition-all flex items-center justify-center gap-3 active:scale-95"
                                     >
                                         {isSubmitting ? (
@@ -1361,17 +1641,67 @@ const LabPage = () => {
                                                         <p className="text-xs font-black text-gray-400 uppercase tracking-widest mb-2">{t('lab.my_answer')}</p>
                                                         {task.type === 'MCQ' ? (
                                                             <div className="space-y-2">
-                                                                <p className="text-lg font-black text-indigo-600 dark:text-indigo-400">{t('lab.selected').replace('{{option}}', userAnswers[task.id])}</p>
+                                                                <p className="text-lg font-black text-indigo-600 dark:text-indigo-400">{t('lab.selected').replace('{{answer}}', userAnswers[task.id])}</p>
                                                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 opacity-60">
-                                                                    {task.options?.map((opt, oIdx) => (
-                                                                        <div
-                                                                            key={oIdx}
-                                                                            className={`p-3 rounded-xl border text-sm font-bold ${userAnswers[task.id] === opt.substring(0, 1) ? 'border-indigo-500 bg-indigo-50 text-indigo-700' : 'border-gray-100 bg-gray-50 text-gray-400'}`}
-                                                                        >
-                                                                            {opt}
-                                                                        </div>
-                                                                    ))}
+                                                                    {task.options?.map((opt, oIdx) => {
+                                                                        const match = opt.match(/^([A-Da-d])[\)\.]?\s/);
+                                                                        const optKey = match ? match[1].toUpperCase() : String.fromCharCode(65 + oIdx);
+                                                                        const isSelected = userAnswers[task.id] === optKey;
+                                                                        return (
+                                                                            <div
+                                                                                key={oIdx}
+                                                                                className={`p-3 rounded-xl border text-sm font-bold ${isSelected ? 'border-indigo-500 bg-indigo-50 text-indigo-700' : 'border-gray-100 bg-gray-50 text-gray-400'}`}
+                                                                            >
+                                                                                {opt}
+                                                                            </div>
+                                                                        );
+                                                                    })}
                                                                 </div>
+                                                            </div>
+                                                        ) : task.type === 'ORDERING' ? (
+                                                            <div className="space-y-2 mt-2">
+                                                                {(() => {
+                                                                    const val = userAnswers[task.id];
+                                                                    if (!val || typeof val !== 'string' || !val.includes('-')) {
+                                                                        return <p className="text-lg font-medium text-gray-400 italic">"{t('lab.no_answer')}"</p>;
+                                                                    }
+                                                                    const parts = val.split('-');
+                                                                    return parts.map((part, sequenceIdx) => {
+                                                                        const num = Number(part);
+                                                                        const idx = !isNaN(num) ? num : (part.toUpperCase().charCodeAt(0) - 65);
+                                                                        const itemText = task.options?.[idx] || part;
+                                                                        const letter = String.fromCharCode(65 + idx);
+                                                                        return (
+                                                                            <div key={sequenceIdx} className="flex items-center gap-3 p-3 bg-gray-50 dark:bg-gray-800/50 border border-gray-100 dark:border-gray-700 rounded-xl">
+                                                                                <div className="size-6 bg-indigo-100 dark:bg-indigo-900/30 rounded flex items-center justify-center text-indigo-600 dark:text-indigo-400 text-[10px] font-black shrink-0">
+                                                                                    {sequenceIdx + 1}
+                                                                                </div>
+                                                                                <span className="text-sm font-bold text-gray-700 dark:text-gray-300 italic">
+                                                                                    <span className="text-primary mr-2">{letter}:</span>
+                                                                                    "{itemText}"
+                                                                                </span>
+                                                                            </div>
+                                                                        );
+                                                                    });
+                                                                })()}
+                                                            </div>
+                                                        ) : task.type === 'CATEGORIZATION' ? (
+                                                            <div className="space-y-4 mt-2">
+                                                                {Object.entries(userAnswers[task.id] || {}).map(([bucket, indices]) => (
+                                                                    <div key={bucket} className="bg-gray-50 dark:bg-gray-800/50 border border-gray-100 dark:border-gray-700 rounded-xl p-4">
+                                                                        <p className="text-[10px] font-black text-indigo-600 dark:text-indigo-400 uppercase tracking-widest mb-2">{bucket}</p>
+                                                                        <div className="flex flex-wrap gap-2">
+                                                                            {Array.isArray(indices) && indices.map(idx => (
+                                                                                <span key={idx} className="px-3 py-1 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-200">
+                                                                                    {task.options?.[idx] || `Item ${idx}`}
+                                                                                </span>
+                                                                            ))}
+                                                                            {(!Array.isArray(indices) || indices.length === 0) && (
+                                                                                <span className="text-xs text-gray-400 italic">No items assigned</span>
+                                                                            )}
+                                                                        </div>
+                                                                    </div>
+                                                                ))}
                                                             </div>
                                                         ) : (
                                                             <p className="text-lg font-medium text-gray-800 dark:text-gray-200 bg-gray-50 dark:bg-gray-800/50 p-4 rounded-xl border border-gray-100 dark:border-gray-700 italic">
@@ -1381,7 +1711,7 @@ const LabPage = () => {
                                                     </div>
 
                                                     <div>
-                                                        <p className="text-xs font-black text-indigo-600 dark:text-indigo-400 uppercase tracking-widest mb-2">{t('lab.ai_feedback_explanation')}</p>
+                                                        <p className="text-xs font-black text-indigo-600 dark:text-indigo-400 uppercase tracking-widest mb-2">{t('lab.feedback_logic')}</p>
                                                         <div className={`p-6 rounded-2xl border leading-relaxed font-medium ${feedbacks[task.id]?.correct
                                                             ? 'bg-indigo-50 dark:bg-indigo-900/20 border-indigo-100 dark:border-indigo-800 text-gray-700 dark:text-gray-300'
                                                             : 'bg-red-50 dark:bg-red-900/10 border-red-100 dark:border-red-900/30 text-red-800 dark:text-red-200'
@@ -1396,10 +1726,11 @@ const LabPage = () => {
                                         {/* Next Path Recommendations (Shared) */}
                                         <NextPathRecommendations
                                             level={currentLevel}
-                                            topic={displayTopic} // or location.state.topicId if available for cleaner logic
+                                            topic={topic} // Pass raw topic ID
                                             lessonMode={lessonData.type} // passing type as mode for R/L/S logic
-                                            onRetry={() => setStep('EXPLORE')}
+                                            onRetry={handleRetry}
                                             onExit={handleClose}
+                                            isWeeklyQuest={isWeeklyQuest}
                                         />
                                     </div>
                                 </div>
@@ -1407,9 +1738,154 @@ const LabPage = () => {
                         </div>
                     )}
                 </div>
-            </main>
+            </main >
         </div >
     );
 };
 
+
+// --- CATEGORIZATION TASK COMPONENT ---
+function CategorizationTask({ task, value, onChange, disabled }) {
+    // Debug logging to catch the "no options" state
+    React.useEffect(() => {
+        if (!task.options || task.options.length === 0) {
+            console.warn(`[CategorizationTask] Warning: Task ${task.id} has no options!`, task);
+        }
+    }, [task]);
+
+    // Derive current buckets state from value prop or initialize
+    const currentBuckets = React.useMemo(() => {
+        const initial = {};
+        (task.buckets || []).forEach(b => initial[b] = []);
+
+        if (value && typeof value === 'object' && value !== null) {
+            Object.keys(initial).forEach(b => {
+                if (Array.isArray(value[b])) initial[b] = value[b];
+            });
+        }
+        return initial;
+    }, [value, task.buckets]);
+
+    // Compute which items haven't been assigned yet
+    const unassignedItems = React.useMemo(() => {
+        const assignedIndices = new Set();
+        Object.values(currentBuckets).forEach(indices => {
+            indices.forEach(i => {
+                if (typeof i === 'number') assignedIndices.add(i);
+            });
+        });
+        return (task.options || []).map((_, i) => i).filter(i => !assignedIndices.has(i));
+    }, [currentBuckets, task.options]);
+
+    // Move item between buckets or back to unassigned
+    const moveItem = (itemIndex, targetBucket) => {
+        if (disabled) return;
+
+        const newBuckets = { ...currentBuckets };
+        // Remove from all existing buckets
+        Object.keys(newBuckets).forEach(b => {
+            newBuckets[b] = (newBuckets[b] || []).filter(i => i !== itemIndex);
+        });
+
+        // Add to target bucket if one is provided
+        if (targetBucket && newBuckets[targetBucket]) {
+            newBuckets[targetBucket] = [...newBuckets[targetBucket], itemIndex].sort((a, b) => a - b);
+        }
+
+        onChange(newBuckets);
+    };
+
+    const taskPrefix = task.id || 'task';
+
+    return (
+        <div className="space-y-6 select-none">
+            {/* Source Area */}
+            <div className={`p-4 bg-gray-50 dark:bg-gray-800/50 rounded-xl border-2 border-dashed transition-all duration-300 ${unassignedItems.length > 0 ? 'border-gray-200 dark:border-gray-700' : 'border-transparent opacity-50'}`}>
+                <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3">Items to Sort</p>
+                <div className="flex flex-wrap gap-2 min-h-[40px]">
+                    {unassignedItems.map(idx => (
+                        <motion.div
+                            layoutId={`cat-item-${taskPrefix}-${idx}`}
+                            key={`unassigned-${idx}`}
+                            className={`cursor-grab active:cursor-grabbing px-3 py-2 bg-white dark:bg-gray-700 shadow-sm border border-gray-200 dark:border-gray-600 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-200 select-none ${disabled ? 'opacity-50 pointer-events-none' : 'hover:border-primary hover:text-primary transition-colors'}`}
+                            draggable={!disabled}
+                            onDragStart={(e) => {
+                                e.dataTransfer.setData('text/plain', idx.toString());
+                                e.stopPropagation();
+                                if (window.getSelection) window.getSelection().removeAllRanges();
+                            }}
+                        >
+                            {task.options[idx]}
+                        </motion.div>
+                    ))}
+                    {unassignedItems.length === 0 && task.options?.length > 0 && (
+                        <span className="text-xs text-gray-400 italic">All items sorted!</span>
+                    )}
+                    {(!task.options || task.options.length === 0) && (
+                        <span className="text-xs text-red-400 italic">Error: No items found for this task.</span>
+                    )}
+                </div>
+            </div>
+
+            {/* Buckets Area */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {(task.buckets || []).map((bucketName, bIdx) => (
+                    <div
+                        key={bucketName}
+                        onDragOver={(e) => e.preventDefault()}
+                        onDrop={(e) => {
+                            e.preventDefault();
+                            const idx = parseInt(e.dataTransfer.getData('text/plain'));
+                            if (!isNaN(idx)) moveItem(idx, bucketName);
+                        }}
+                        className="flex flex-col h-full min-h-[160px] bg-indigo-50/30 dark:bg-indigo-900/10 border-2 border-indigo-100 dark:border-indigo-500/20 rounded-2xl p-4 transition-all hover:border-indigo-300 dark:hover:border-indigo-500/40"
+                    >
+                        <div className="flex items-center gap-2 mb-3 pb-2 border-b border-indigo-100 dark:border-indigo-500/20">
+                            <div className="w-2 h-2 rounded-full bg-indigo-500" />
+                            <span className="font-bold text-indigo-900 dark:text-indigo-300">{bucketName}</span>
+                            <span className="ml-auto text-xs bg-white dark:bg-gray-800 px-2 py-0.5 rounded-full text-indigo-400 font-mono shadow-sm">
+                                {(currentBuckets[bucketName] || []).length}
+                            </span>
+                        </div>
+
+                        <div className="flex-1 space-y-2">
+                            {(currentBuckets[bucketName] || []).map(idx => (
+                                <motion.div
+                                    layoutId={`cat-item-${taskPrefix}-${idx}`}
+                                    key={`bucketed-${bucketName}-${idx}`}
+                                    className="group relative px-3 py-2 bg-white dark:bg-gray-800 shadow-sm border border-indigo-100 dark:border-indigo-500/30 rounded-lg text-sm text-gray-600 dark:text-gray-300 flex items-start gap-2"
+                                >
+                                    <span className="flex-1">{task.options[idx]}</span>
+                                    {!disabled && (
+                                        <button
+                                            onClick={() => moveItem(idx, null)}
+                                            className="opacity-0 group-hover:opacity-100 text-gray-400 hover:text-red-500 transition-opacity p-1"
+                                            title="Unassign"
+                                        >
+                                            <X className="w-3.5 h-3.5" />
+                                        </button>
+                                    )}
+                                </motion.div>
+                            ))}
+                            {(currentBuckets[bucketName] || []).length === 0 && (
+                                <div className="h-full flex items-center justify-center py-8">
+                                    <span className="text-[10px] text-indigo-300 dark:text-indigo-500/50 uppercase font-black tracking-widest">Drop here</span>
+                                </div>
+                            )}
+                        </div>
+                    </div>
+                ))}
+            </div>
+            {unassignedItems.length > 0 && (
+                <div className="flex justify-center">
+                    <p className="text-[10px] font-black uppercase tracking-[0.2em] text-red-500/50 animate-pulse bg-red-50 dark:bg-red-900/10 px-4 py-1.5 rounded-full border border-red-100 dark:border-red-900/20">
+                        Sort all items to complete!
+                    </p>
+                </div>
+            )}
+        </div>
+    );
+}
+
 export default LabPage;
+

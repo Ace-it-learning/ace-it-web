@@ -3,6 +3,7 @@ const MATH_PAPERS = require('./MathsPapers');
 const GenerativeAIService = require('../GenerativeAIService');
 const TIER_1_MODEL = "gemini-flash-latest"; // Pro model for high-quality diagnostic analysis
 const { mapSkillToId } = require('./MathsMicroSkillMapper');
+const { DSE_SCORING, accuracyToLevel } = require('../../constants/dseScoring');
 
 class MathsDiagnosticService {
 
@@ -102,16 +103,19 @@ TASK:
    - **CRITICAL**: If the equation is correct but calculation is wrong, give Method Mark but NOT Answer Mark.
    - **STEP-BY-STEP DERIVATION (MANDATORY)**: You MUST provide a complete derivation of the correct answer. 
      * Show at least 3 mathematical steps using LaTeX.
+     * **CRITICAL**: Each derivation MUST be specific to the question topic. DO NOT overuse the vertex formula (x = -b/2a) unless the question is actually about the vertex of a quadratic function.
      * Separator: Each Step MUST be separated by a newline escape sequence (\\n). 
      * CRITICAL: DO NOT use literal newlines within JSON strings. Use '\\n' for all line breaks.
      * Format: "Step 1: [Explanation] \\nStep 2: [Explanation] \\nStep 3: [Explanation]"
-     * Explain the logic behind each step clearly.
+     * Explain the logic behind each step clearly using standard mathematical principles (expansion, indices, trig rules, etc).
 2. MC Questions: **ALWAYS explain the complete logical reasoning**, even if the student answered correctly.
-   - Show the equation/formula used
+   - Show the equation/formula used. **BE DIVERSE**: If it's statistics, show mean/SD logic. If it's geometry, show vertical/interior angle logic.
    - Explain the step-by-step logic in 2-3 clear points
    - For CORRECT answers: "✓ Correct! Here's why: [detailed explanation]"
    - For INCORRECT answers: "✗ The correct answer is [X]. Here's the logic: [detailed explanation]"
 3. Micro-skills: Identify 2-3 sub-skills per question. **CRITICAL**: Always include the 'topic' provided in DATA as one of the micro-skills.
+- **Language**: Use {{LANGUAGE}}.
+- **STRICTLY FORBIDDEN**: Colloquial Cantonese (口語).
 
 OUTPUT JSON (STRICT):
 IMPORTANT: Return raw JSON only. Do not use markdown code blocks or any other text.
@@ -121,13 +125,20 @@ IMPORTANT: Return raw JSON only. Do not use markdown code blocks or any other te
             "id": "question_id",
             "score": number, // Only used for Conventional. MUST NOT EXCEED 'marks'.
             "max": number,   // MUST match 'marks' provided in DATA.
-            "explanation": "Step 1: [Logic] \\[ LaTeX Equation \\] \\nStep 2: [Logic] \\[ LaTeX Equation \\] \\nStep 3: [Logic] \\[ LaTeX Equation \\] \\n\\nFinal Answer: ... (Method Mark X, Answer Mark Y)", 
+            "explanation": "Step 1: [Logic in {{LANGUAGE}}] \\[ LaTeX Equation \\] \\nStep 2: [Logic in {{LANGUAGE}}] \\[ LaTeX Equation \\] \\n\\nFinal Answer: ... (Method Mark X, Answer Mark Y)", 
             "micro_skills": ["Skill A", "Skill B"]
         }
     ]
 }
 `;
-            const aiResponse = await GenerativeAIService.generateJson(gradingPrompt, {
+            const language = submission.language || 'en';
+            const languageName = (language === 'zh' || language === 'zh-HK' || language === 'zh-TW')
+                ? 'Traditional Chinese (Formal Written Chinese - 書面語)'
+                : 'English';
+
+            const finalPrompt = gradingPrompt.replace(/{{LANGUAGE}}/g, languageName);
+
+            const aiResponse = await GenerativeAIService.generateJson(finalPrompt, {
                 model: TIER_1_MODEL
             });
 
@@ -217,14 +228,25 @@ IMPORTANT: Return raw JSON only. Do not use markdown code blocks or any other te
             }
         });
 
-        // Convert to level (0-7 DSE scale based on accuracy)
+        // Convert to level using HKEAA-aligned scoring with Laplacian smoothing + diagnostic cap
         const processedSkills = {};
         Object.keys(skillUpdates).forEach(skillId => {
-            const accuracy = skillUpdates[skillId].correct / skillUpdates[skillId].total;
+            const { correct, total } = skillUpdates[skillId];
+
+            // Laplacian smoothing: prevents 0/1 → 0% or 1/1 → 100% extremes
+            const smoothedAccuracy = (correct + 1) / (total + 2);
+            const rawLevel = accuracyToLevel(smoothedAccuracy);
+
+            // Diagnostic cap: even perfect results cap at Level 4 ("Medium")
+            // Students must earn Level 5+ through accumulated Lab practice
+            const cappedLevel = Math.min(rawLevel, DSE_SCORING.DIAGNOSTIC_MAX_LEVEL);
+
             processedSkills[skillId] = {
-                level: Math.round(accuracy * 7 * 100) / 100, // 0-7 scale, 2 decimals
-                accuracy,
-                practiceCount: 1
+                level: cappedLevel,
+                accuracy: smoothedAccuracy,
+                practiceCount: total,   // Track actual attempts
+                correctCount: correct,  // Track actual correct answers
+                source: 'diagnostic'
             };
         });
 
@@ -247,13 +269,12 @@ IMPORTANT: Return raw JSON only. Do not use markdown code blocks or any other te
     }
 
     calculateLevel(percentage) {
-        if (percentage >= 90) return "5**";
-        if (percentage >= 85) return "5*";
-        if (percentage >= 75) return "5";
-        if (percentage >= 65) return "4";
-        if (percentage >= 50) return "3";
-        if (percentage >= 35) return "2";
-        return "1";
+        // Use shared DSE_SCORING thresholds for consistency across English and Maths
+        const accuracy = percentage / 100;
+        for (const threshold of DSE_SCORING.LEVEL_THRESHOLDS) {
+            if (accuracy >= threshold.minAccuracy) return threshold.label;
+        }
+        return '1';
     }
 
     generateProfileMetadata(results, percentage) {

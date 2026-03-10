@@ -3,7 +3,7 @@ import { Zap } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 import { QuestionCard, DiagnosticLayout, TwoColumnLayout } from '../shared';
 
-const DiagnosticReading = ({ assets, onSubmit }) => {
+const DiagnosticReading = ({ assets, onSubmit, isSubmitting }) => {
     const { user } = useAuth();
     const [answers, setAnswers] = useState({});
     const [showCheat, setShowCheat] = useState(false);
@@ -75,8 +75,8 @@ const DiagnosticReading = ({ assets, onSubmit }) => {
             title="Part 1: Reading"
             estimatedTime="8 mins"
             onSubmit={handleSubmit}
-            isSubmitting={isGenerating}
-            submitButtonText={isGenerating ? "Generating..." : "Submit Reading Check"}
+            isSubmitting={isGenerating || isSubmitting}
+            submitButtonText={isGenerating ? "Generating..." : (isSubmitting ? "Processing Analysis..." : "Submit Reading Check")}
             subjectColor="blue"
         >
             <TwoColumnLayout
@@ -91,7 +91,7 @@ const DiagnosticReading = ({ assets, onSubmit }) => {
                                 question={q}
                                 answer={answers[q.id]}
                                 onChange={handleAnswerChange}
-                                disabled={isGenerating}
+                                disabled={isGenerating || isSubmitting}
                                 questionNumber={i + 1}
                                 showChallengeBadge={true}
                             />

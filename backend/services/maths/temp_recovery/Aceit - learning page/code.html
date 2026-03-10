@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html class="light" lang="zh-Hant"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ace It! Learning Dashboard V1</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ff6a00",
+                        "electric-orange": "#FF6B00","background-light": "#f8f7f5",
+                        "background-dark": "#23170f",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "Noto Sans TC", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .glass-container {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .dark .glass-container {
+            background: rgba(35, 23, 15, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen flex flex-col">
+<header class="sticky top-0 z-50 w-full bg-black px-6 md:px-20 py-4 flex items-center justify-between shadow-lg">
+<div class="flex items-center gap-3">
+<div class="size-10 bg-primary rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-3xl">smart_toy</span>
+</div>
+<h1 class="text-white text-2xl font-bold tracking-tight font-display">Ace It!</h1>
+</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-white/80 hover:text-primary transition-colors text-sm font-medium" href="#">AI 導師</a>
+<a class="text-white/80 hover:text-primary transition-colors text-sm font-medium" href="#">協助</a>
+<a class="text-white/80 hover:text-primary transition-colors text-sm font-medium" href="#">定價</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="px-6 py-2 rounded-full bg-primary text-white text-sm font-bold hover:brightness-110 transition-all">
+                免費試用
+            </button>
+<button class="px-6 py-2 rounded-full border border-white/20 text-white text-sm font-bold hover:bg-white/10 transition-all">
+                登入
+            </button>
+</div>
+</header>
+<main class="flex-1 max-w-[1400px] mx-auto w-full px-6 md:px-10 py-8 flex flex-col gap-6">
+<div class="w-full">
+<h2 class="text-[#1d130c] dark:text-white text-3xl font-bold font-display">選擇您的學習夥伴</h2>
+<p class="text-[#a16b45] dark:text-[#a16b45]/80 text-lg mt-1">與 AI 導師進行深度對話，突破 DSE 難關</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<aside class="lg:col-span-3 flex flex-col gap-4">
+<div class="flex items-center gap-4 p-4 rounded-xl bg-white dark:bg-[#2d1f16] shadow-sm border-2 border-primary ring-2 ring-primary/20 cursor-pointer">
+<div class="size-14 rounded-full bg-blue-100 flex items-center justify-center overflow-hidden">
+<img alt="English AI Tutor Avatar - Friendly, sophisticated, human-like AI with ethereal quality" class="w-full h-full object-cover opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAlFTHD4t68TXCYZYAl7Ye8ql9q8_7Ihb5Mrq8K1ZEg9qchtix_yHJr6m9ryYb4dR8sBcTNj1wszseR6KQmu6sEoVY8tn51Mn4CnPHg01VDrCgwP2of-dXyXCK4nIU-eegUj16WqMlTHVqL5JpOrg9jKaSQyYo9x6cGI0s0mCyStzZynGhKW42247I0bkHLEUpfgRxsVdRypAp_8f8Z4XVrYTzbR_QbTVa2FHlcH6zHgYakA5Slk166dRtGJZ8oTg_4MjJEzk1-Of_"/>
+</div>
+<div>
+<p class="font-bold text-[#1d130c] dark:text-white">英文導師</p>
+<p class="text-xs text-[#a16b45]">進行中的測驗</p>
+</div>
+</div>
+<div class="flex items-center gap-4 p-4 rounded-xl bg-white/50 dark:bg-[#2d1f16]/50 hover:bg-white dark:hover:bg-[#2d1f16] shadow-sm transition-all cursor-pointer border border-transparent hover:border-primary/30">
+<div class="size-14 rounded-full bg-green-100 flex items-center justify-center overflow-hidden">
+<img alt="Math AI Tutor Avatar - Friendly, sophisticated, human-like AI with ethereal quality" class="w-full h-full object-cover opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAlFTHD4t68TXCYZYAl7Ye8ql9q8_7Ihb5Mrq8K1ZEg9qchtix_yHJr6m9ryYb4dR8sBcTNj1wszseR6KQmu6sEoVY8tn51Mn4CnPHg01VDrCgwP2of-dXyXCK4nIU-eegUj16WqMlTHVqL5JpOrg9jKaSQyYo9x6cGI0s0mCyStzZynGhKW42247I0bkHLEUpfgRxsVdRypAp_8f8Z4XVrYTzbR_QbTVa2FHlcH6zHgYakA5Slk166dRtGJZ8oTg_4MjJEzk1-Of_"/>
+</div>
+<div>
+<p class="font-bold text-[#1d130c] dark:text-white">數學導師</p>
+<p class="text-xs text-[#a16b45]">幾何專題複習</p>
+</div>
+</div>
+<div class="flex items-center gap-4 p-4 rounded-xl bg-white/50 dark:bg-[#2d1f16]/50 hover:bg-white dark:hover:bg-[#2d1f16] shadow-sm transition-all cursor-pointer border border-transparent hover:border-primary/30">
+<div class="size-14 rounded-full bg-purple-100 flex items-center justify-center overflow-hidden">
+<img alt="Chinese AI Tutor Avatar - Friendly, sophisticated, human-like AI with ethereal quality" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAlFTHD4t68TXCYZYAl7Ye8ql9q8_7Ihb5Mrq8K1ZEg9qchtix_yHJr6m9ryYb4dR8sBcTNj1wszseR6KQmu6sEoVY8tn51Mn4CnPHg01VDrCgwP2of-dXyXCK4nIU-eegUj16WqMlTHVqL5JpOrg9jKaSQyYo9x6cGI0s0mCyStzZynGhKW42247I0bkHLEUpfgRxsVdRypAp_8f8Z4XVrYTzbR_QbTVa2FHlcH6zHgYakA5Slk166dRtGJZ8oTg_4MjJEzk1-Of_"/>
+</div>
+<div>
+<p class="font-bold text-[#1d130c] dark:text-white">中文導師</p>
+<p class="text-xs text-[#a16b45]">範文背誦挑戰</p>
+</div>
+</div>
+<div class="flex items-center gap-4 p-4 rounded-xl bg-white/50 dark:bg-[#2d1f16]/50 hover:bg-white dark:hover:bg-[#2d1f16] shadow-sm transition-all cursor-pointer border border-transparent hover:border-primary/30">
+<div class="size-14 rounded-full bg-primary/20 flex items-center justify-center overflow-hidden">
+<img alt="Ace Sir AI Avatar - Friendly, sophisticated, human-like AI with ethereal quality" class="w-full h-full object-cover opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAlFTHD4t68TXCYZYAl7Ye8ql9q8_7Ihb5Mrq8K1ZEg9qchtix_yHJr6m9ryYb4dR8sBcTNj1wszseR6KQmu6sEoVY8tn51Mn4CnPHg01VDrCgwP2of-dXyXCK4nIU-eegUj16WqMlTHVqL5JpOrg9jKaSQyYo9x6cGI0s0mCyStzZynGhKW42247I0bkHLEUpfgRxsVdRypAp_8f8Z4XVrYTzbR_QbTVa2FHlcH6zHgYakA5Slk166dRtGJZ8oTg_4MjJEzk1-Of_"/>
+</div>
+<div>
+<p class="font-bold text-[#1d130c] dark:text-white">Ace Sir</p>
+<p class="text-xs text-[#a16b45]">全方位應試策略</p>
+</div>
+</div>
+<div class="mt-6 p-6 bg-white dark:bg-[#2d1f16] rounded-xl shadow-lg border border-primary/20 flex flex-col items-center gap-4">
+<h3 class="font-bold text-[#1d130c] dark:text-white text-lg">Natalie's Corner</h3>
+<div class="w-full h-64 overflow-hidden rounded-lg bg-[#FFFFFF] dark:bg-[#FFFFFF] flex items-end justify-center">
+<img alt="Full-body student avatar in Hong Kong secondary school uniform with thoughtful expression" class="h-full w-auto object-cover object-bottom" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzZhhdaHLSWZQwm3KKKGqFDCN7QjeP__UQR9J8teQ8WZCgjIwvi-RcuR36r-uQJX_XSXTFB1KTWgp-h5cfPZ8qjaOw0_Be_smd9n9wXqv6G9BCJA33rwxWOGYJtzQA4amsF2Eh31iQCcvCiSMdAeYP3YOdOn_qnjjK35eZys7v3M7OeEwl3RBfBT6RF8YBPRUXOfEX3nWlO0_IgmRIG91ggWDklFp0pj4U3iVPtv9pIWiSZQOhuf5HNfHRyO7obxjjPKvHXKC13BEs"/>
+</div>
+<p class="text-sm text-[#a16b45] text-center">保持活力，與您的 AI 導師一起學習！</p>
+</div>
+</aside>
+<section class="lg:col-span-9 flex flex-col h-[600px] rounded-3xl glass-container shadow-2xl relative overflow-hidden">
+<div class="px-8 py-4 border-b border-black/5 dark:border-white/10 flex items-center gap-4">
+<div class="size-3 bg-green-500 rounded-full"></div>
+<span class="font-medium text-[#1d130c] dark:text-white">英文導師 • 在線協助中</span>
+</div>
+<div class="flex-1 overflow-y-auto p-8 flex flex-col gap-6">
+<div class="flex items-start gap-4 max-w-[80%]">
+<div class="size-10 shrink-0 rounded-full bg-blue-100 overflow-hidden">
+<img alt="AI Avatar - Friendly, sophisticated, human-like AI with ethereal quality" class="w-full h-full object-cover opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6DigggWERDthNCSmVMUNNfSFd1-jFtiOK3b6O4TCNgZMta8QHEh5KbiZzi7ORiYj_tWWFbwRS9spESJcalrepfIs9fT7BPKM3ZTpQvxcNQQqKwQ-dhhTKw-9wdk4JRZcnGVER1oXEGTkR0HG2e0-kJjCUZr6b5fwHmUIjhCrCDWF-9DOXeeoIAqYwk5LmOm6biNc7LwcNUGjwTx0gSas4-tF2HTQ1imoDuN0ciYxajimhuK3yRdmSLrtFysx6-1opShgEMbcTdTBp"/>
+</div>
+<div class="bg-white dark:bg-[#3d2c20] p-5 rounded-2xl rounded-tl-none shadow-sm border border-black/5">
+<p class="text-[#1d130c] dark:text-white leading-relaxed">
+                                午安！我是你的 AI 英文導師。根據你昨天的進度，我們今天可以專注於 Paper 1 的 Reading 技巧。
+                                <br/><br/>
+                                在開始具體練習之前，你能先說說你理解的「有效閱讀策略」有哪些嗎？
+                            </p>
+</div>
+</div>
+<div class="flex items-start gap-4 justify-end max-w-[80%] ml-auto">
+<div class="bg-primary/10 dark:bg-primary/20 p-5 rounded-2xl rounded-tr-none shadow-sm border border-black/5">
+<p class="text-[#1d130c] dark:text-white leading-relaxed">
+                                我認為有效的閱讀策略包括：先預覽文章結構、找出主題句和關鍵詞、做筆記、以及在閱讀後回顧內容來檢查理解程度。
+                            </p>
+</div>
+<div class="size-10 shrink-0 rounded-full bg-gray-200 overflow-hidden">
+<img alt="Student avatar in Hong Kong secondary school uniform" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQZzao9lF3biaiHXLV7UnY79OpyxIJ5fbvV_jTDf0J5wAIqFuM4JoE_HbznpvB7AQIWKlVzlZF7mNYCdTzPcIejjVzV0rVphkD_0VglO_XxHg43W93WzYdq4G42X9_d7WN1A20-rwG8MOoeF78Wu3pWVk4oA32Ebn1Dvp-6NzFXjFyB7X7Y6eHPiUgRv15W_uVa6hvjKmS9DzgF4Kg7xgekIkPG1YFYEITkJuAvnFt_copRTFfxP5T4g_glC32vLzYj67CHOOLamg5"/>
+</div>
+</div>
+</div>
+<div class="p-6 bg-white/40 dark:bg-black/20 flex flex-col gap-4">
+<div class="flex gap-2">
+<button class="px-4 py-1.5 rounded-full bg-primary text-white text-sm font-medium hover:brightness-110 transition-all flex items-center gap-2">
+<span>下一題：詞彙應用</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+<button class="px-4 py-1.5 rounded-full bg-white/80 dark:bg-white/10 text-[#1d130c] dark:text-white text-sm font-medium hover:bg-white transition-all border border-black/5">
+                            回顧錯題
+                        </button>
+</div>
+<div class="flex items-center gap-3 bg-white dark:bg-[#1a110a] rounded-2xl p-2 shadow-inner border border-black/5">
+<button class="p-2 text-[#a16b45] hover:text-primary transition-colors">
+<span class="material-symbols-outlined">attachment</span>
+</button>
+<button class="p-2 text-[#a16b45] hover:text-primary transition-colors">
+<span class="material-symbols-outlined">mic</span>
+</button>
+<input class="flex-1 bg-transparent border-none focus:ring-0 text-[#1d130c] dark:text-white placeholder-[#a16b45]/50" placeholder="輸入您的答案..." type="text"/>
+<button class="bg-primary text-white p-3 rounded-xl flex items-center justify-center hover:scale-105 transition-transform">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+</section>
+</div>
+<div class="w-full mt-auto">
+<div class="bg-black text-white p-6 rounded-full flex flex-col md:flex-row items-center justify-between gap-8 px-12 shadow-xl border border-white/10">
+<div class="flex items-center gap-6 flex-1 w-full max-w-md">
+<span class="text-sm font-bold text-primary shrink-0">經驗值 EXP</span>
+<div class="h-3 bg-white/10 rounded-full flex-1 overflow-hidden">
+<div class="h-full bg-primary w-[75%] rounded-full shadow-[0_0_15px_rgba(255,106,0,0.5)]"></div>
+</div>
+<span class="text-xs font-medium text-white/60 shrink-0">1,240 / 2,000</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-primary/20 flex items-center justify-center border border-primary/40">
+<span class="material-symbols-outlined text-primary">military_tech</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] text-white/40 uppercase tracking-widest font-bold">Current Status</span>
+<span class="text-lg font-bold">等級 5</span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-white/5 flex items-center justify-center border border-white/10">
+<span class="material-symbols-outlined text-white/60">schedule</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] text-white/40 uppercase tracking-widest font-bold">Learning Time</span>
+<span class="text-lg font-bold">42小時</span>
+</div>
+</div>
+<div class="hidden xl:block">
+<button class="px-8 py-2 rounded-full border border-primary text-primary text-sm font-bold hover:bg-primary hover:text-white transition-all">
+                        查看完整成就
+                    </button>
+</div>
+</div>
+</div>
+</main>
+<footer class="w-full bg-electric-orange text-white py-8 px-6 md:px-20 mt-10">
+<div class="flex flex-wrap justify-center gap-x-10 gap-y-4 mb-6">
+<a class="text-white hover:underline text-sm font-medium" href="#">關於我們</a>
+<a class="text-white hover:underline text-sm font-medium" href="#">條款</a>
+<a class="text-white hover:underline text-sm font-medium" href="#">私隱</a>
+<a class="text-white hover:underline text-sm font-medium" href="#">聯絡</a>
+<a class="text-white hover:underline text-sm font-medium" href="#">合作伙伴</a>
+</div>
+<div class="flex justify-center gap-6">
+<a class="text-white hover:text-gray-200 transition-colors" href="#">
+<svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path clip-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.776-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" fill-rule="evenodd"></path></svg>
+</a>
+<a class="text-white hover:text-gray-200 transition-colors" href="#">
+<svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path clip-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.715.056 2.047.092 3.393.882 4.402 1.897 1.01.997 1.802 2.345 1.896 4.396.043.973.056 1.372.056 3.71 0 2.43-1.3 3.682-1.896 4.396-1.01.997-2.345 1.802-4.396 1.896-.973.043-1.372.056-3.71.056-2.43 0-2.784-.013-3.715-.056-2.047-.092-3.393-.882-4.402-1.897-1.01-.997-1.802-2.345-1.896-4.396C2.013 15.372 2 14.973 2 12.315c0-2.43.013-2.784.056-3.715.092-2.047.882-3.393 1.897-4.402C4.945 3.106 6.293 2.314 8.344 2.22c.973-.043 1.372-.056 3.71-.056zm0 2.13c-2.38 0-2.659.009-3.606.052-1.92.085-2.955.772-3.606 1.423-.65.651-1.338 1.686-1.423 3.606-.043.947-.052 1.226-.052 3.606s.009 2.659.052 3.606c.085 1.92.772 2.955 1.423 3.606.651.65 1.686 1.338 3.606 1.423.947.043 1.226.052 3.606.052s2.659-.009 3.606-.052c1.92-.085 2.955-.772 3.606-1.423.65-.651 1.338-1.686 1.423-3.606.043-.947.052-1.226.052-3.606s-.009-2.659-.052-3.606c-.085-1.92-.772-2.955-1.423-3.606-.651-.65-1.686-1.338-3.606-1.423-.947-.043-1.226-.052-3.606-.052zM12.315 7.18c2.613 0 4.73 2.116 4.73 4.73s-2.117 4.73-4.73 4.73-4.73-2.116-4.73-4.73 2.117-4.73 4.73-4.73zm0 2.13c-1.432 0-2.596 1.164-2.596 2.596s1.164 2.596 2.596 2.596 2.596-1.164 2.596-2.596-1.164-2.596-2.596-2.596zm7.258-4.008c-.812 0-1.47.658-1.47 1.47s.658 1.47 1.47 1.47 1.47-.658 1.47-1.47-.658-1.47-1.47-1.47z" fill-rule="evenodd"></path></svg>
+</a>
+<a class="text-white hover:text-gray-200 transition-colors" href="#">
+<svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19.615 2.105a1.605 1.605 0 011.086.755c.092.213.14.492.14.734v3.177a3.86 3.86 0 01-1.17 2.457c-.896.896-2.022 1.407-3.238 1.407H9.256c-1.216 0-2.342-.511-3.238-1.407a3.86 3.86 0 01-1.17-2.457V3.594c0-.242.048-.521.14-.734a1.605 1.605 0 011.086-.755C6.182 2.054 6.784 2 7.7 2h8.6c.916 0 1.518.054 2.27.105zM12 4.25c-2.485 0-4.5 2.015-4.5 4.5s2.015 4.5 4.5 4.5 4.5-2.015 4.5-4.5-2.015-4.5-4.5-4.5zm0 1.5a3 3 0 100 6 3 3 0 000-6z" fill-rule="evenodd"></path><path d="M22 12c0 5.523-4.477 10-10 10S2 17.523 2 12h2c0 4.418 3.582 8 8 8s8-3.582 8-8h2z" fill-rule="evenodd"></path></svg>
+</a>
+</div>
+</footer>
+</body></html>

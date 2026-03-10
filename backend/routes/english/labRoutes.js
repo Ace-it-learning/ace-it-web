@@ -4,6 +4,33 @@ const LabService = require('../../services/LabService');
 const GamificationService = require('../../services/GamificationService');
 const UserProfileService = require('../../services/UserProfileService');
 
+// GET /api/lab/listening
+router.get('/listening', async (req, res) => {
+    console.log(`[LabRoute] GET /listening hit`);
+    try {
+        const quests = await LabService.getListeningQuests();
+        console.log(`[LabRoute] Found ${quests.length} quests`);
+        res.json(quests);
+    } catch (e) {
+        console.error("Listening Quests Fetch Error:", e);
+        res.status(500).json({ error: "Failed to fetch listening quests" });
+    }
+});
+
+// GET /api/lab/listening/:id
+router.get('/listening/:id', async (req, res) => {
+    const { id } = req.params;
+    console.log(`[LabRoute] GET /listening/${id} hit`);
+    try {
+        const quest = await LabService.getQuestById(id);
+        if (!quest) return res.status(404).json({ error: "Quest not found" });
+        res.json(quest);
+    } catch (e) {
+        console.error("Listening Quest Fetch Error:", e);
+        res.status(500).json({ error: "Failed to fetch quest" });
+    }
+});
+
 // POST /api/lab/generate
 router.post('/generate', async (req, res) => {
     const { topic, focus, level, uid } = req.body;
@@ -46,8 +73,27 @@ router.post('/submit', async (req, res) => {
         let questXP = 0;
         let practiceXP = 0;
 
-        // 1. Quest Completion (Roadmap Bonus) - Only if not previously completed
-        if (req.body.taskId) {
+        // 3. Factory Model Quest Completion (Phase 5)
+        if (req.body.isFactoryQuest) {
+            const ENGLISH_XP_MAPPING = { "3": 50, "4": 75, "5": 100, "7": 150 };
+            const baseXP = ENGLISH_XP_MAPPING[String(req.body.level)] || 100;
+            const factoryResult = await GamificationService.awardFactoryQuestCompletion(uid, req.body.taskId || questionIds[0], 'english', baseXP);
+            if (factoryResult.success) {
+                questXP = factoryResult.totalEarned || factoryResult.earned;
+                console.log(`[Lab] Factory Quest Awarded: ${questXP} XP (Bonus: ${factoryResult.bonusAwarded})`);
+            }
+        } else if (req.body.isWeeklyQuest || req.body.topic === 'reading_weekly') {
+            // 4. Weekly Quest Completion (Phase 6b)
+            console.log(`[Lab] Attempting Weekly Quest Award for user: ${uid} (Topic: ${req.body.topic})`);
+            const weeklyResult = await GamificationService.awardWeeklyQuestCompletion(uid);
+            if (weeklyResult.success) {
+                questXP = weeklyResult.earned;
+                console.log(`[Lab] Weekly Quest Awarded: ${questXP} XP. WeekId: ${weeklyResult.weekId}`);
+            } else {
+                console.warn(`[Lab] Weekly Quest Award Failed: ${weeklyResult.error}`);
+            }
+        } else if (req.body.taskId) {
+            // 1. Legacy Quest Completion (Roadmap Bonus)
             const questResult = await GamificationService.awardQuestCompletion(uid, req.body.taskId, 'english');
             if (questResult.success && questResult.fresh) {
                 questXP = questResult.earned;
@@ -79,8 +125,8 @@ router.post('/submit', async (req, res) => {
         }
 
         // Return the total XP earned in this session so frontend can show " +150 XP "
-        res.json({ success: true, earnedTotal: questXP + practiceXP, questBonus: questXP, practiceXP });
-        return; // Early return to avoid double sending res.json below
+        res.json({ success: true, earnedTotal: questXP + practiceXP, questBonus: questXP, practiceXP, isFactoryQuest: req.body.isFactoryQuest });
+        return;
 
         res.json({ success: true });
     } catch (e) {
@@ -191,7 +237,11 @@ router.post('/cheat', async (req, res) => {
         res.json(answers);
     } catch (e) {
         console.error("Lab Cheat Error:", e);
-        res.status(500).json({ error: "Cheat failed" });
+        const isQuotaError = e.message?.includes('429') || e.message?.includes('Quota');
+        res.status(isQuotaError ? 429 : 500).json({
+            error: e.message || "Cheat failed",
+            type: isQuotaError ? 'QUOTA_EXHAUSTED' : 'SERVER_ERROR'
+        });
     }
 });
 
@@ -207,6 +257,26 @@ router.post('/writing/cheat', async (req, res) => {
     } catch (e) {
         console.error("Writing Cheat Error:", e);
         res.status(500).json({ error: "Cheat generation failed" });
+    }
+});
+
+// POST /api/lab/tts (On-Demand Audio)
+router.post('/tts', async (req, res) => {
+    try {
+        const TTSService = require('../../services/TTSService');
+        const { text, gender, accent } = req.body;
+
+        if (!text) return res.status(400).json({ error: "Missing text" });
+
+        // Map accent to language code (simple mapping for now)
+        let lang = 'en-US';
+        if (accent === 'UK' || accent === 'British') lang = 'en-GB';
+
+        const audioBase64 = await TTSService.generateSpeech(text, lang, gender || 'FEMALE');
+        res.json({ audio: audioBase64 });
+    } catch (e) {
+        console.error("TTS Endpoint Error:", e);
+        res.status(500).json({ error: "TTS generation failed" });
     }
 });
 

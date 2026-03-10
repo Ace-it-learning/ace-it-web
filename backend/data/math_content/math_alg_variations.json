@@ -1,0 +1,66 @@
+{
+    "is_modular": true,
+    "name": "Variations",
+    "name_zh": "變分",
+    "roadmap": "Variation describes how quantities change in relation to others. Start with Direct and Inverse variation graphs. Then, progress to the multi-step Partial variation (DSE Section A2/B). Mastering percentage changes in variation is critical for Section B success.",
+    "roadmap_zh": "變分是探討兩個或多個變量之間關係的。從正變與反變的圖像開始。接著進階至多步驟的部分變（DSE 甲部(2)/乙部）。掌握變分中的百分比變化，是乙部取得佳績的關鍵。",
+    "learning_modules": [
+        {
+            "module_id": "MOD_01",
+            "title": "Variation Foundation",
+            "title_zh": "變分基礎",
+            "concepts": [
+                {
+                    "concept_id": "C01_DIRECT_PREMIUM",
+                    "name": "Direct Variation (Linear)",
+                    "name_zh": "正變 (線性)",
+                    "formula": "y = kx \\quad (k \\neq 0)",
+                    "key_takeaway": "In direct variation, $y$ against $x$ is a straight line through $(0,0)$. The ratio $y/x$ is always constant.",
+                    "key_takeaway_zh": "在正變中，$y$ 隨 $x$ 的圖像是一條穿過 $(0,0)$ 的直線。其比值 $y/x$ 恆為常數。",
+                    "visual_aid": "/images/math/var_direct_premium.png"
+                },
+                {
+                    "concept_id": "C02_INVERSE_PREMIUM",
+                    "name": "Inverse Variation (Hyperbola)",
+                    "name_zh": "反變 (雙曲線)",
+                    "formula": "y = \\frac{k}{x} \\quad \\text{or} \\quad xy = k",
+                    "key_takeaway": "In inverse variation, as $x$ increases, $y$ decreases. The area of the rectangle formed by $(x,y)$ and the axes is constant ($k$).",
+                    "key_takeaway_zh": "在反變中，當 $x$ 增加時，$y$ 會減少。由 $(x,y)$ 與座標軸形成的矩形面積恆為 $k$。",
+                    "visual_aid": "/images/math/var_inverse_premium.png"
+                }
+            ]
+        },
+        {
+            "module_id": "MOD_02",
+            "title": "Section B: Partial Variation",
+            "title_zh": "乙部課題：部分變",
+            "concepts": [
+                {
+                    "concept_id": "C03_PARTIAL_PREMIUM",
+                    "name": "Constant & Varying Parts",
+                    "name_zh": "常數與變動部分",
+                    "formula": "y = k_1 + k_2x^2",
+                    "key_takeaway": "Partial variation sums different behaviors. Usually requires setting up simultaneous equations to find $k_1$ and $k_2$.",
+                    "key_takeaway_zh": "部分變結合了不同的變化行為。通常需要建立聯立方程來求解 $k_1$ 及 $k_2$。",
+                    "visual_aid": "/images/math/var_partial_premium.png"
+                }
+            ]
+        },
+        {
+            "module_id": "MOD_03",
+            "title": "Percentage Changes",
+            "title_zh": "百分比變化",
+            "concepts": [
+                {
+                    "concept_id": "C04_VAR_PERCENT",
+                    "name": "The Multiplier Method",
+                    "name_zh": "乘數法",
+                    "formula": "y \\propto x^2 \\implies y_{new} = k(1.1x)^2 = 1.21 y_{old}",
+                    "key_takeaway": "If $x$ increases by $r\\%$, $y$ increases by $(1+r)^n - 1$ where $n$ is the power of $x$. Don't forget to cube/square the percentage multiplier!",
+                    "key_takeaway_zh": "若 $x$ 增加 $r\\%$，則 $y$ 增加 $(1+r)^n - 1$，其中 $n$ 為 $x$ 的次方。務必記得對百分比乘數進行平方或立方運算！",
+                    "visual_aid": null
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,3650 @@
+{
+  "7001": {
+    "name": "Education Unit,Correctional Services Department",
+    "nameCh": "香港懲教署",
+    "region": "Other",
+    "moi": "Other",
+    "code": "7001",
+    "searchKey": "education unit,correctional services department"
+  },
+  "9041": {
+    "name": "Arts & Technology Education Centre",
+    "nameCh": "藝術與科技教育中心",
+    "region": "Other",
+    "moi": "Other",
+    "code": "9041",
+    "searchKey": "arts & technology education centre"
+  },
+  "10001": {
+    "name": "Aberdeen Baptist Lui Ming Choi College",
+    "nameCh": "香港仔浸信會呂明才書院",
+    "region": "Hong Kong Island",
+    "moi": "Other",
+    "code": "10001",
+    "searchKey": "aberdeen baptist lui ming choi college"
+  },
+  "10002": {
+    "name": "Aberdeen Technical School",
+    "nameCh": "香港仔工業學校",
+    "region": "Hong Kong Island",
+    "moi": "Other",
+    "code": "10002",
+    "searchKey": "aberdeen technical school"
+  },
+  "10007": {
+    "name": "Buddhist Wong Fung Ling College",
+    "nameCh": "佛教黃鳳翎中學",
+    "region": "Hong Kong Island",
+    "moi": "Other",
+    "code": "10007",
+    "searchKey": "buddhist wong fung ling college"
+  },
+  "10008": {
+    "name": "Canossa College",
+    "nameCh": "嘉諾撒書院",
+    "region": "Hong Kong Island",
+    "moi": "Other",
+    "code": "10008",
+    "searchKey": "canossa college"
+  },
+  "10010": {
+    "name": "Caritas Chai Wan Marden Foundation Secondary School",
+    "nameCh": "明愛柴灣馬登基金中學",
+    "region": "Hong Kong Island",
+    "moi": "Other",
+    "code": "10010",
+    "searchKey": "caritas chai wan marden foundation secondary school"
+  },
+  "10011": {
+    "name": "Caritas Chong Yuet Ming Secondary School",
+    "nameCh": "明愛莊月明中學",
+    "region": "Hong Kong Island",
+    "moi": "Other",
+    "code": "10011",
+    "searchKey": "caritas chong yuet ming secondary school"
+  },
+  "10012": {
+    "name": "Caritas Wu Cheng-chung College",
+    "nameCh": "明愛胡振中書院",
+    "region": "Hong Kong Island",
+    "moi": "Other",
+    "code": "10012",
+    "searchKey": "caritas wu cheng-chung college"
+  },
+  "10014": {
+    "name": "CCC Kwei Wah Shan College",
+    "nameCh": "中華基督教會桂華山中學",
+    "region": "Hong Kong Island",
+    "moi": "Other",
+    "code": "10014",
+    "searchKey": "ccc kwei wah shan college"
+  },
+  "10015": {
+    "name": "Cheung Chau Government Secondary School",
+    "nameCh": "長洲官立中學",
+    "region": "Hong Kong Island",
+    "moi": "Other",
+    "code": "10015",
+    "searchKey": "cheung chau government secondary school"
+  },
+  "10016": {
+    "name": "Cheung Chuk Shan College",
+    "nameCh": "張祝珊英文中學",
+    "region": "Hong Kong Island",
+    "moi": "EMI",
+    "code": "10016",
+    "searchKey": "cheung chuk shan college"
+  },
+  "10017": {
+    "name": "Chong Gene Hang College",
+    "nameCh": "張振興伉儷書院",
+    "region": "Hong Kong Island",
+    "moi": "Other",
+    "code": "10017",
+    "searchKey": "chong gene hang college"
+  },
+  "10018": {
+    "name": "Clementi Secondary School",
+    "nameCh": "金文泰中學",
+    "region": "Hong Kong Island",
+    "moi": "CMI",
+    "code": "10018",
+    "searchKey": "clementi secondary school"
+  },
+  "10019": {
+    "name": "CNEC Lau Wing Sang Secondary School",
+    "nameCh": "中華傳道會劉永生中學",
+    "region": "Hong Kong Island",
+    "moi": "Other",
+    "code": "10019",
+    "searchKey": "cnec lau wing sang secondary school"
+  },
+  "10020": {
+    "name": "Cognitio College (Hong Kong)",
+    "nameCh": "文理書院 (香港)",
+    "region": "Hong Kong Island",
+    "moi": "Other",
+    "code": "10020",
+    "searchKey": "cognitio college (hong kong)"
+  },
+  "10021": {
+    "name": "Concordia Lutheran School - N.P.",
+    "nameCh": "北角協同中學",
+    "region": "Hong Kong Island",
+    "moi": "Other",
+    "code": "10021",
+    "searchKey": "concordia lutheran school - n.p."
+  },
+  "10022": {
+    "name": "Academy of Innovation (Confucius Hall)",
+    "nameCh": "孔聖堂禮仁書院",
+    "region": "Hong Kong Island",
+    "moi": "Other",
+    "code": "10022",
+    "searchKey": "academy of innovation (confucius hall)"
+  },
+  "10024": {
+    "name": "Fukien Secondary School (Siu Sai Wan)",
+    "nameCh": "福建中學(小西灣)",
+    "region": "Hong Kong Island",
+    "moi": "EMI",
+    "code": "10024",
+    "searchKey": "fukien secondary school (siu sai wan)"
+  },
+  "10025": {
+    "name": "Henrietta Secondary School",
+    "nameCh": "顯理中學",
+    "region": "Hong Kong Island",
+    "moi": "Other",
+    "code": "10025",
+    "searchKey": "henrietta secondary school"
+  },
+  "10026": {
+    "name": "HK Chinese Women's Club College",
+    "nameCh": "香港中國婦女會中學",
+    "region": "Hong Kong Island",
+    "moi": "Other",
+    "code": "10026",
+    "searchKey": "hk chinese women's club college"
+  },
+  "10027": {
+    "name": "HKJCC Chan Nam Cheong Memorial School",
+    "nameCh": "香港青少年培育會陳南昌紀念學校",
+    "region": "Hong Kong Island",
+    "moi": "Other",
+    "code": "10027",
+    "searchKey": "hkjcc chan nam cheong memorial school"
+  },
+  "10028": {
+    "name": "HK Tang King Po College",
+    "nameCh": "香港鄧鏡波書院",
+    "region": "Hong Kong Island",
+    "moi": "Other",
+    "code": "10028",
+    "searchKey": "hk tang king po college"
+  },
+  "10029": {
+    "name": "HK True Light College",
+    "nameCh": "香港真光書院",
+    "region": "Hong Kong Island",
+    "moi": "Other",
+    "code": "10029",
+    "searchKey": "hk true light college"
+  },
+  "10032": {
+    "name": "HKUGA College",
+    "nameCh": "港大同學會書院",
+    "region": "Hong Kong Island",
+    "moi": "Other",
+    "code": "10032",
+    "searchKey": "hkuga college"
+  },
+  "10033": {
+    "name": "Hon Wah College",
+    "nameCh": "漢華中學",
+    "region": "Hong Kong Island",
+    "moi": "Other",
+    "code": "10033",
+    "searchKey": "hon wah college"
+  },
+  "10034": {
+    "name": "Hotung Secondary School",
+    "nameCh": "何東中學",
+    "region": "Hong Kong Island",
+    "moi": "Other",
+    "code": "10034",
+    "searchKey": "hotung secondary school"
+  },
+  "10035": {
+    "name": "Islamic Kasim Tuet Memorial College",
+    "nameCh": "伊斯蘭脫維善紀念中學",
+    "region": "Hong Kong Island",
+    "moi": "Other",
+    "code": "10035",
+    "searchKey": "islamic kasim tuet memorial college"
+  },
+  "10036": {
+    "name": "Kiangsu-Chekiang College",
+    "nameCh": "蘇浙公學",
+    "region": "Hong Kong Island",
+    "moi": "Other",
+    "code": "10036",
+    "searchKey": "kiangsu-chekiang college"
+  },
+  "10037": {
+    "name": "King's College",
+    "nameCh": "英皇書院",
+    "region": "Hong Kong Island",
+    "moi": "EMI",
+    "code": "10037",
+    "searchKey": "king's college"
+  },
+  "10039": {
+    "name": "Lingnan Hang Yee Memorial Secondary School",
+    "nameCh": "嶺南衡怡紀念中學",
+    "region": "Hong Kong Island",
+    "moi": "Other",
+    "code": "10039",
+    "searchKey": "lingnan hang yee memorial secondary school"
+  },
+  "10040": {
+    "name": "Lingnan Secondary School",
+    "nameCh": "嶺南中學",
+    "region": "Hong Kong Island",
+    "moi": "Other",
+    "code": "10040",
+    "searchKey": "lingnan secondary school"
+  },
+  "10041": {
+    "name": "LST Leung Kau Kui College",
+    "nameCh": "樂善堂梁銶琚書院",
+    "region": "Hong Kong Island",
+    "moi": "Other",
+    "code": "10041",
+    "searchKey": "lst leung kau kui college"
+  },
+  "10042": {
+    "name": "Man Kiu College",
+    "nameCh": "閩僑中學",
+    "region": "Hong Kong Island",
+    "moi": "Other",
+    "code": "10042",
+    "searchKey": "man kiu college"
+  },
+  "10046": {
+    "name": "Marymount Secondary School",
+    "nameCh": "瑪利曼中學",
+    "region": "Hong Kong Island",
+    "moi": "Other",
+    "code": "10046",
+    "searchKey": "marymount secondary school"
+  },
+  "10048": {
+    "name": "Munsang College (Hong Kong Island)",
+    "nameCh": "港島民生書院",
+    "region": "Hong Kong Island",
+    "moi": "Other",
+    "code": "10048",
+    "searchKey": "munsang college (hong kong island)"
+  },
+  "10050": {
+    "name": "Precious Blood Secondary School",
+    "nameCh": "寶血女子中學",
+    "region": "Hong Kong Island",
+    "moi": "Other",
+    "code": "10050",
+    "searchKey": "precious blood secondary school"
+  },
+  "10051": {
+    "name": "Pui Kiu Middle School",
+    "nameCh": "培僑中學",
+    "region": "Hong Kong Island",
+    "moi": "Other",
+    "code": "10051",
+    "searchKey": "pui kiu middle school"
+  },
+  "10052": {
+    "name": "Pui Tak Canossian College",
+    "nameCh": "嘉諾撒培德書院",
+    "region": "Hong Kong Island",
+    "moi": "Other",
+    "code": "10052",
+    "searchKey": "pui tak canossian college"
+  },
+  "10053": {
+    "name": "Pui Ying Secondary School",
+    "nameCh": "培英中學",
+    "region": "Hong Kong Island",
+    "moi": "Other",
+    "code": "10053",
+    "searchKey": "pui ying secondary school"
+  },
+  "10054": {
+    "name": "Queen's College",
+    "nameCh": "皇仁書院",
+    "region": "Hong Kong Island",
+    "moi": "EMI",
+    "code": "10054",
+    "searchKey": "queen's college"
+  },
+  "10055": {
+    "name": "Raimondi College",
+    "nameCh": "高主教書院",
+    "region": "Hong Kong Island",
+    "moi": "Other",
+    "code": "10055",
+    "searchKey": "raimondi college"
+  },
+  "10059": {
+    "name": "Salesian English School",
+    "nameCh": "慈幼英文學校",
+    "region": "Hong Kong Island",
+    "moi": "EMI",
+    "code": "10059",
+    "searchKey": "salesian english school"
+  },
+  "10061": {
+    "name": "Shau Kei Wan Govt. Secondary School",
+    "nameCh": "筲箕灣官立中學",
+    "region": "Hong Kong Island",
+    "moi": "Other",
+    "code": "10061",
+    "searchKey": "shau kei wan govt. secondary school"
+  },
+  "10062": {
+    "name": "SKH Li Fook Hing Secondary School",
+    "nameCh": "聖公會李福慶中學",
+    "region": "Hong Kong Island",
+    "moi": "Other",
+    "code": "10062",
+    "searchKey": "skh li fook hing secondary school"
+  },
+  "10063": {
+    "name": "SKH Lui Ming Choi Secondary School",
+    "nameCh": "聖公會呂明才中學",
+    "region": "Hong Kong Island",
+    "moi": "Other",
+    "code": "10063",
+    "searchKey": "skh lui ming choi secondary school"
+  },
+  "10064": {
+    "name": "SKH Tang Shiu Kin Secondary School",
+    "nameCh": "聖公會鄧肇堅中學",
+    "region": "Hong Kong Island",
+    "moi": "Other",
+    "code": "10064",
+    "searchKey": "skh tang shiu kin secondary school"
+  },
+  "10065": {
+    "name": "St. Clare's Girls' School",
+    "nameCh": "聖嘉勒女書院",
+    "region": "Hong Kong Island",
+    "moi": "Other",
+    "code": "10065",
+    "searchKey": "st. clare's girls' school"
+  },
+  "10066": {
+    "name": "St. Francis' Canossian College",
+    "nameCh": "嘉諾撒聖方濟各書院",
+    "region": "Hong Kong Island",
+    "moi": "Other",
+    "code": "10066",
+    "searchKey": "st. francis' canossian college"
+  },
+  "10067": {
+    "name": "St. Joan of Arc Secondary School",
+    "nameCh": "聖貞德中學",
+    "region": "Hong Kong Island",
+    "moi": "Other",
+    "code": "10067",
+    "searchKey": "st. joan of arc secondary school"
+  },
+  "10068": {
+    "name": "St. Joseph's College",
+    "nameCh": "聖若瑟書院",
+    "region": "Hong Kong Island",
+    "moi": "EMI",
+    "code": "10068",
+    "searchKey": "st. joseph's college"
+  },
+  "10069": {
+    "name": "St. Louis School",
+    "nameCh": "聖類斯中學",
+    "region": "Hong Kong Island",
+    "moi": "Other",
+    "code": "10069",
+    "searchKey": "st. louis school"
+  },
+  "10071": {
+    "name": "St. Mark's School",
+    "nameCh": "聖馬可中學",
+    "region": "Hong Kong Island",
+    "moi": "EMI",
+    "code": "10071",
+    "searchKey": "st. mark's school"
+  },
+  "10072": {
+    "name": "St. Paul's Co-educational College",
+    "nameCh": "聖保羅男女中學",
+    "region": "Hong Kong Island",
+    "moi": "EMI",
+    "code": "10072",
+    "searchKey": "st. paul's co-educational college"
+  },
+  "10073": {
+    "name": "St. Paul's College",
+    "nameCh": "聖保羅書院",
+    "region": "Hong Kong Island",
+    "moi": "EMI",
+    "code": "10073",
+    "searchKey": "st. paul's college"
+  },
+  "10074": {
+    "name": "St. Paul's Convent School",
+    "nameCh": "聖保祿學校",
+    "region": "Hong Kong Island",
+    "moi": "Other",
+    "code": "10074",
+    "searchKey": "st. paul's convent school"
+  },
+  "10075": {
+    "name": "St. Paul's Secondary School",
+    "nameCh": "聖保祿中學",
+    "region": "Hong Kong Island",
+    "moi": "Other",
+    "code": "10075",
+    "searchKey": "st. paul's secondary school"
+  },
+  "10076": {
+    "name": "St. Peter's Secondary School",
+    "nameCh": "聖伯多祿中學",
+    "region": "Hong Kong Island",
+    "moi": "Other",
+    "code": "10076",
+    "searchKey": "st. peter's secondary school"
+  },
+  "10077": {
+    "name": "St. Stephen's Church College",
+    "nameCh": "聖士提反堂中學",
+    "region": "Hong Kong Island",
+    "moi": "Other",
+    "code": "10077",
+    "searchKey": "st. stephen's church college"
+  },
+  "10078": {
+    "name": "St. Stephen's College",
+    "nameCh": "聖士提反書院",
+    "region": "Hong Kong Island",
+    "moi": "Other",
+    "code": "10078",
+    "searchKey": "st. stephen's college"
+  },
+  "10079": {
+    "name": "St. Stephen's Girls' College",
+    "nameCh": "聖士提反女子中學",
+    "region": "Hong Kong Island",
+    "moi": "EMI",
+    "code": "10079",
+    "searchKey": "st. stephen's girls' college"
+  },
+  "10080": {
+    "name": "SWCS Chan Pak Sha School",
+    "nameCh": "新會商會陳白沙紀念中學",
+    "region": "Hong Kong Island",
+    "moi": "Other",
+    "code": "10080",
+    "searchKey": "swcs chan pak sha school"
+  },
+  "10081": {
+    "name": "The Chinese Foundation Secondary School",
+    "nameCh": "中華基金中學",
+    "region": "Hong Kong Island",
+    "moi": "Other",
+    "code": "10081",
+    "searchKey": "the chinese foundation secondary school"
+  },
+  "10082": {
+    "name": "Hong Kong Red Cross John F. Kennedy Centre",
+    "nameCh": "香港紅十字會甘迺迪中心",
+    "region": "Hong Kong Island",
+    "moi": "Other",
+    "code": "10082",
+    "searchKey": "hong kong red cross john f. kennedy centre"
+  },
+  "10083": {
+    "name": "The Methodist Church HK Wesley College",
+    "nameCh": "衛理中學",
+    "region": "Hong Kong Island",
+    "moi": "Other",
+    "code": "10083",
+    "searchKey": "the methodist church hk wesley college"
+  },
+  "10084": {
+    "name": "True Light Middle School of Hong Kong",
+    "nameCh": "香港真光中學",
+    "region": "Hong Kong Island",
+    "moi": "CMI",
+    "code": "10084",
+    "searchKey": "true light middle school of hong kong"
+  },
+  "10085": {
+    "name": "TSK Victoria Government Secondary School",
+    "nameCh": "鄧肇堅維多利亞官立中學",
+    "region": "Hong Kong Island",
+    "moi": "Other",
+    "code": "10085",
+    "searchKey": "tsk victoria government secondary school"
+  },
+  "10086": {
+    "name": "TWGHs Lee Ching Dea Memorial College",
+    "nameCh": "東華三院李潤田紀念中學",
+    "region": "Hong Kong Island",
+    "moi": "Other",
+    "code": "10086",
+    "searchKey": "twghs lee ching dea memorial college"
+  },
+  "10087": {
+    "name": "Wah Yan College, Hong Kong",
+    "nameCh": "香港華仁書院",
+    "region": "Hong Kong Island",
+    "moi": "EMI",
+    "code": "10087",
+    "searchKey": "wah yan college, hong kong"
+  },
+  "10088": {
+    "name": "Ying Wa Girls' School",
+    "nameCh": "英華女學校",
+    "region": "Hong Kong Island",
+    "moi": "Other",
+    "code": "10088",
+    "searchKey": "ying wa girls' school"
+  },
+  "10097": {
+    "name": "Hong Kong Sea School",
+    "nameCh": "香港航海學校",
+    "region": "Hong Kong Island",
+    "moi": "Other",
+    "code": "10097",
+    "searchKey": "hong kong sea school"
+  },
+  "20204": {
+    "name": "Beacon College (Mong Kok)",
+    "nameCh": "遵理學校(旺角)",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20204",
+    "searchKey": "beacon college (mong kok)"
+  },
+  "20206": {
+    "name": "Bishop Hall Jubilee School",
+    "nameCh": "何明華會督銀禧中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20206",
+    "searchKey": "bishop hall jubilee school"
+  },
+  "20207": {
+    "name": "Buddhist Ho Nam Kam College",
+    "nameCh": "佛教何南金中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20207",
+    "searchKey": "buddhist ho nam kam college"
+  },
+  "20208": {
+    "name": "Buddhist Hung Sean Chau Memorial College",
+    "nameCh": "佛教孔仙洲紀念中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20208",
+    "searchKey": "buddhist hung sean chau memorial college"
+  },
+  "20209": {
+    "name": "Buddhist Tai Hung College",
+    "nameCh": "佛教大雄中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20209",
+    "searchKey": "buddhist tai hung college"
+  },
+  "20210": {
+    "name": "C.M.A. Secondary School",
+    "nameCh": "廠商會中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20210",
+    "searchKey": "c.m.a. secondary school"
+  },
+  "20212": {
+    "name": "Carmel Divine Grace Foundation Secondary School",
+    "nameCh": "迦密主恩中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20212",
+    "searchKey": "carmel divine grace foundation secondary school"
+  },
+  "20213": {
+    "name": "Carmel Secondary School",
+    "nameCh": "迦密中學",
+    "region": "Kowloon",
+    "moi": "EMI",
+    "code": "20213",
+    "searchKey": "carmel secondary school"
+  },
+  "20214": {
+    "name": "Catholic Ming Yuen Secondary School",
+    "nameCh": "天主教鳴遠中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20214",
+    "searchKey": "catholic ming yuen secondary school"
+  },
+  "20215": {
+    "name": "CCC Heep Woh College",
+    "nameCh": "中華基督教會協和書院",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20215",
+    "searchKey": "ccc heep woh college"
+  },
+  "20216": {
+    "name": "CCC Kei Chi Secondary School",
+    "nameCh": "中華基督教會基智中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20216",
+    "searchKey": "ccc kei chi secondary school"
+  },
+  "20219": {
+    "name": "CCC Kei To Secondary School",
+    "nameCh": "中華基督教會基道中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20219",
+    "searchKey": "ccc kei to secondary school"
+  },
+  "20220": {
+    "name": "CCC Ming Kei College",
+    "nameCh": "中華基督教會銘基書院",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20220",
+    "searchKey": "ccc ming kei college"
+  },
+  "20221": {
+    "name": "CCC Ming Yin College",
+    "nameCh": "中華基督教會銘賢書院",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20221",
+    "searchKey": "ccc ming yin college"
+  },
+  "20222": {
+    "name": "CCC Mong Man Wai College",
+    "nameCh": "中華基督教會蒙民偉書院",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20222",
+    "searchKey": "ccc mong man wai college"
+  },
+  "20223": {
+    "name": "CCC Rotary Secondary School",
+    "nameCh": "中華基督教會扶輪中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20223",
+    "searchKey": "ccc rotary secondary school"
+  },
+  "20225": {
+    "name": "Wellington Education Organization Chang Pui Chung Memorial School",
+    "nameCh": "威靈頓教育機構張沛松紀念中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20225",
+    "searchKey": "wellington education organization chang pui chung memorial school"
+  },
+  "20227": {
+    "name": "Cheung Sha Wan Catholic Secondary School",
+    "nameCh": "長沙灣天主教英文中學",
+    "region": "Kowloon",
+    "moi": "EMI",
+    "code": "20227",
+    "searchKey": "cheung sha wan catholic secondary school"
+  },
+  "20230": {
+    "name": "Christian & Missionary Alliance Sun Kei Sec Sch",
+    "nameCh": "基督教宣道會宣基中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20230",
+    "searchKey": "christian & missionary alliance sun kei sec sch"
+  },
+  "20232": {
+    "name": "Cognitio College (Kowloon)",
+    "nameCh": "文理書院(九龍)",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20232",
+    "searchKey": "cognitio college (kowloon)"
+  },
+  "20233": {
+    "name": "Concordia Lutheran School",
+    "nameCh": "路德會協同中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20233",
+    "searchKey": "concordia lutheran school"
+  },
+  "20234": {
+    "name": "Creative Secondary School",
+    "nameCh": "啟思中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20234",
+    "searchKey": "creative secondary school"
+  },
+  "20237": {
+    "name": "Delia Memorial School (Broadway)",
+    "nameCh": "地利亞修女紀念學校 (百老匯)",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20237",
+    "searchKey": "delia memorial school (broadway)"
+  },
+  "20238": {
+    "name": "Delia Memorial School (Glee Path)",
+    "nameCh": "地利亞修女紀念學校 (吉利徑)",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20238",
+    "searchKey": "delia memorial school (glee path)"
+  },
+  "20243": {
+    "name": "Diocesan Boys' School",
+    "nameCh": "拔萃男書院",
+    "region": "Kowloon",
+    "moi": "EMI",
+    "code": "20243",
+    "searchKey": "diocesan boys' school"
+  },
+  "20244": {
+    "name": "Diocesan Girls' School",
+    "nameCh": "拔萃女書院",
+    "region": "Kowloon",
+    "moi": "EMI",
+    "code": "20244",
+    "searchKey": "diocesan girls' school"
+  },
+  "20245": {
+    "name": "ECF Saint Too Canaan College",
+    "nameCh": "基督教中國佈道會聖道迦南書院",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20245",
+    "searchKey": "ecf saint too canaan college"
+  },
+  "20246": {
+    "name": "ELCHK Lutheran Secondary School",
+    "nameCh": "基督教香港信義會信義中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20246",
+    "searchKey": "elchk lutheran secondary school"
+  },
+  "20248": {
+    "name": "Evangel College",
+    "nameCh": "播道書院",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20248",
+    "searchKey": "evangel college"
+  },
+  "20249": {
+    "name": "FDBWA Szeto Ho Secondary School",
+    "nameCh": "五邑司徒浩中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20249",
+    "searchKey": "fdbwa szeto ho secondary school"
+  },
+  "20250": {
+    "name": "Fukien Secondary School",
+    "nameCh": "福建中學",
+    "region": "Kowloon",
+    "moi": "EMI",
+    "code": "20250",
+    "searchKey": "fukien secondary school"
+  },
+  "20251": {
+    "name": "Good Hope School",
+    "nameCh": "德望學校",
+    "region": "Kowloon",
+    "moi": "EMI",
+    "code": "20251",
+    "searchKey": "good hope school"
+  },
+  "20252": {
+    "name": "GT (Ellen Yeung) College",
+    "nameCh": "優才(楊殷有娣)書院",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20252",
+    "searchKey": "gt (ellen yeung) college"
+  },
+  "20253": {
+    "name": "Heep Yunn School",
+    "nameCh": "協恩中學",
+    "region": "Kowloon",
+    "moi": "EMI",
+    "code": "20253",
+    "searchKey": "heep yunn school"
+  },
+  "20254": {
+    "name": "Heung To Middle School",
+    "nameCh": "香島中學",
+    "region": "Kowloon",
+    "moi": "CMI",
+    "code": "20254",
+    "searchKey": "heung to middle school"
+  },
+  "20255": {
+    "name": "Heung To Secondary School (Tseung Kwan O)",
+    "nameCh": "將軍澳香島中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20255",
+    "searchKey": "heung to secondary school (tseung kwan o)"
+  },
+  "20256": {
+    "name": "HHCKLA Buddhist Ching Kok Secondary School",
+    "nameCh": "香海正覺蓮社佛教正覺中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20256",
+    "searchKey": "hhckla buddhist ching kok secondary school"
+  },
+  "20257": {
+    "name": "HK & KLN Chiu Chow Public Assn Secondary School",
+    "nameCh": "港九潮州公會中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20257",
+    "searchKey": "hk & kln chiu chow public assn secondary school"
+  },
+  "20263": {
+    "name": "HKCCC Union Logos Academy",
+    "nameCh": "香港華人基督教聯會真道書院",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20263",
+    "searchKey": "hkccc union logos academy"
+  },
+  "20268": {
+    "name": "HKICC Lee Shau Kee School of Creativity",
+    "nameCh": "香港兆基創意書院",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20268",
+    "searchKey": "hkicc lee shau kee school of creativity"
+  },
+  "20269": {
+    "name": "HKMA David Li Kwok Po College",
+    "nameCh": "香港管理専業協會李國寶中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20269",
+    "searchKey": "hkma david li kwok po college"
+  },
+  "20270": {
+    "name": "HKMLC Queen Maud Secondary School",
+    "nameCh": "港澳信義會慕德中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20270",
+    "searchKey": "hkmlc queen maud secondary school"
+  },
+  "20271": {
+    "name": "HKSKH Bishop Hall Secondary School",
+    "nameCh": "香港聖公會何明華會督中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20271",
+    "searchKey": "hkskh bishop hall secondary school"
+  },
+  "20272": {
+    "name": "HKTA The Yuen Yuen Institute No. 3 Secondary School",
+    "nameCh": "香港道教聯合會圓玄學院第三中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20272",
+    "searchKey": "hkta the yuen yuen institute no. 3 secondary school"
+  },
+  "20273": {
+    "name": "HKWMA Chu Shek Lun Secondary School",
+    "nameCh": "香港布廠商會朱石麟中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20273",
+    "searchKey": "hkwma chu shek lun secondary school"
+  },
+  "20274": {
+    "name": "Ho Lap College (Sponsored By The Sik Sik Yuen)",
+    "nameCh": "可立中學 (嗇色園主辦)",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20274",
+    "searchKey": "ho lap college (sponsored by the sik sik yuen)"
+  },
+  "20275": {
+    "name": "Hoi Ping Chamber of Commerce Secondary School",
+    "nameCh": "旅港開平商會中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20275",
+    "searchKey": "hoi ping chamber of commerce secondary school"
+  },
+  "20276": {
+    "name": "SKH Holy Carpenter Secondary School",
+    "nameCh": "聖公會聖匠中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20276",
+    "searchKey": "skh holy carpenter secondary school"
+  },
+  "20277": {
+    "name": "Holy Family Canossian College",
+    "nameCh": "嘉諾撒聖家書院",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20277",
+    "searchKey": "holy family canossian college"
+  },
+  "20278": {
+    "name": "Holy Trinity College",
+    "nameCh": "寶血會上智英文書院",
+    "region": "Kowloon",
+    "moi": "EMI",
+    "code": "20278",
+    "searchKey": "holy trinity college"
+  },
+  "20279": {
+    "name": "Homantin Government Secondary School",
+    "nameCh": "何文田官立中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20279",
+    "searchKey": "homantin government secondary school"
+  },
+  "20284": {
+    "name": "International Christian Quality Music Secondary & Primary School",
+    "nameCh": "國際基督教優質音樂中學暨小學",
+    "region": "Kowloon",
+    "moi": "EMI",
+    "code": "20284",
+    "searchKey": "international christian quality music secondary & primary school"
+  },
+  "20285": {
+    "name": "Jockey Club Government Secondary School",
+    "nameCh": "賽馬會官立中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20285",
+    "searchKey": "jockey club government secondary school"
+  },
+  "20286": {
+    "name": "King Ling College",
+    "nameCh": "景嶺書院",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20286",
+    "searchKey": "king ling college"
+  },
+  "20289": {
+    "name": "Kit Sam Lam Bing Yim Secondary School",
+    "nameCh": "潔心林炳炎中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20289",
+    "searchKey": "kit sam lam bing yim secondary school"
+  },
+  "20290": {
+    "name": "Ko Lui Secondary School",
+    "nameCh": "高雷中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20290",
+    "searchKey": "ko lui secondary school"
+  },
+  "20291": {
+    "name": "Kowloon Sam Yuk Secondary School",
+    "nameCh": "九龍三育中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20291",
+    "searchKey": "kowloon sam yuk secondary school"
+  },
+  "20292": {
+    "name": "Kowloon Technical School",
+    "nameCh": "九龍工業學校",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20292",
+    "searchKey": "kowloon technical school"
+  },
+  "20293": {
+    "name": "Kowloon Tong School (Secondary Section)",
+    "nameCh": "九龍塘學校(中學部)",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20293",
+    "searchKey": "kowloon tong school (secondary section)"
+  },
+  "20294": {
+    "name": "Kowloon True Light School",
+    "nameCh": "九龍真光中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20294",
+    "searchKey": "kowloon true light school"
+  },
+  "20295": {
+    "name": "Kwun Tong Government Secondary School",
+    "nameCh": "觀塘官立中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20295",
+    "searchKey": "kwun tong government secondary school"
+  },
+  "20296": {
+    "name": "Kwun Tong Kung Lok Government Secondary School",
+    "nameCh": "觀塘功樂官立中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20296",
+    "searchKey": "kwun tong kung lok government secondary school"
+  },
+  "20299": {
+    "name": "Kwun Tong Maryknoll College",
+    "nameCh": "觀塘瑪利諾書院",
+    "region": "Kowloon",
+    "moi": "EMI",
+    "code": "20299",
+    "searchKey": "kwun tong maryknoll college"
+  },
+  "20301": {
+    "name": "Lai Chack Middle School",
+    "nameCh": "麗澤中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20301",
+    "searchKey": "lai chack middle school"
+  },
+  "20302": {
+    "name": "Lee Kau Yan Memorial School",
+    "nameCh": "李求恩紀念中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20302",
+    "searchKey": "lee kau yan memorial school"
+  },
+  "20303": {
+    "name": "Leung Shek Chee College",
+    "nameCh": "梁式芝書院",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20303",
+    "searchKey": "leung shek chee college"
+  },
+  "20304": {
+    "name": "LST Wong Chung Ming Secondary School",
+    "nameCh": "樂善堂王仲銘中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20304",
+    "searchKey": "lst wong chung ming secondary school"
+  },
+  "20305": {
+    "name": "LST Yu Kan Hing Secondary School",
+    "nameCh": "樂善堂余近卿中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20305",
+    "searchKey": "lst yu kan hing secondary school"
+  },
+  "20307": {
+    "name": "Lung Kong WFSL Lau Wong Fat Secondary School",
+    "nameCh": "世界龍岡學校劉皇發中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20307",
+    "searchKey": "lung kong wfsl lau wong fat secondary school"
+  },
+  "20308": {
+    "name": "Rudolf Steiner Education Foundation Hong Kong Maria College",
+    "nameCh": "香港華德福教育基金會瑪利亞書院",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20308",
+    "searchKey": "rudolf steiner education foundation hong kong maria college"
+  },
+  "20311": {
+    "name": "Maryknoll Convent School (Secondary Section)",
+    "nameCh": "瑪利諾修院學校 (中學部)",
+    "region": "Kowloon",
+    "moi": "EMI",
+    "code": "20311",
+    "searchKey": "maryknoll convent school (secondary section)"
+  },
+  "20312": {
+    "name": "Maryknoll Fathers' School",
+    "nameCh": "瑪利諾神父教會學校",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20312",
+    "searchKey": "maryknoll fathers' school"
+  },
+  "20313": {
+    "name": "Maryknoll Secondary School",
+    "nameCh": "瑪利諾中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20313",
+    "searchKey": "maryknoll secondary school"
+  },
+  "20314": {
+    "name": "Delia Memorial School (Hip Wo No.2 College)",
+    "nameCh": "地利亞修女紀念學校 (協和二中）",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20314",
+    "searchKey": "delia memorial school (hip wo no.2 college)"
+  },
+  "20315": {
+    "name": "Methodist College",
+    "nameCh": "循道中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20315",
+    "searchKey": "methodist college"
+  },
+  "20317": {
+    "name": "MKMCF Ma Chan Duen Hey Memorial College",
+    "nameCh": "馬錦明慈善基金馬陳端喜紀念中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20317",
+    "searchKey": "mkmcf ma chan duen hey memorial college"
+  },
+  "20320": {
+    "name": "Mu Kuang English School",
+    "nameCh": "慕光英文書院",
+    "region": "Kowloon",
+    "moi": "EMI",
+    "code": "20320",
+    "searchKey": "mu kuang english school"
+  },
+  "20321": {
+    "name": "Munsang College",
+    "nameCh": "民生書院",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20321",
+    "searchKey": "munsang college"
+  },
+  "20322": {
+    "name": "Nam Wah Catholic Secondary School",
+    "nameCh": "天主教南華中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20322",
+    "searchKey": "nam wah catholic secondary school"
+  },
+  "20323": {
+    "name": "New Asia Middle School",
+    "nameCh": "新亞中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20323",
+    "searchKey": "new asia middle school"
+  },
+  "20325": {
+    "name": "Newman Catholic College",
+    "nameCh": "天主教新民書院",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20325",
+    "searchKey": "newman catholic college"
+  },
+  "20326": {
+    "name": "Ng Wah Catholic Secondary School",
+    "nameCh": "天主教伍華中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20326",
+    "searchKey": "ng wah catholic secondary school"
+  },
+  "20327": {
+    "name": "Ning Po College",
+    "nameCh": "寧波公學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20327",
+    "searchKey": "ning po college"
+  },
+  "20328": {
+    "name": "Ning Po No. 2 College",
+    "nameCh": "寧波第二中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20328",
+    "searchKey": "ning po no. 2 college"
+  },
+  "20330": {
+    "name": "Notre Dame College",
+    "nameCh": "聖母院書院",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20330",
+    "searchKey": "notre dame college"
+  },
+  "20331": {
+    "name": "Our Lady of the Rosary College",
+    "nameCh": "聖母玫瑰書院",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20331",
+    "searchKey": "our lady of the rosary college"
+  },
+  "20332": {
+    "name": "Our Lady's College",
+    "nameCh": "聖母書院",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20332",
+    "searchKey": "our lady's college"
+  },
+  "20333": {
+    "name": "Pentecostal School",
+    "nameCh": "五旬節中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20333",
+    "searchKey": "pentecostal school"
+  },
+  "20335": {
+    "name": "PLK Vicwood K.T. Chong Sixth Form College",
+    "nameCh": "保良局莊啟程預科書院",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20335",
+    "searchKey": "plk vicwood k.t. chong sixth form college"
+  },
+  "20336": {
+    "name": "Po Chiu Catholic Secondary School",
+    "nameCh": "天主教普照中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20336",
+    "searchKey": "po chiu catholic secondary school"
+  },
+  "20337": {
+    "name": "Po Kok Secondary School",
+    "nameCh": "寶覺中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20337",
+    "searchKey": "po kok secondary school"
+  },
+  "20338": {
+    "name": "Po Leung Kuk Ho Yuk Ching (1984) College",
+    "nameCh": "保良局甲子何玉清中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20338",
+    "searchKey": "po leung kuk ho yuk ching (1984) college"
+  },
+  "20339": {
+    "name": "PLK Celine Ho Yam Tong College",
+    "nameCh": "保良局何蔭棠中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20339",
+    "searchKey": "plk celine ho yam tong college"
+  },
+  "20340": {
+    "name": "PLK Laws Foundation College",
+    "nameCh": "保良局羅氏基金中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20340",
+    "searchKey": "plk laws foundation college"
+  },
+  "20341": {
+    "name": "PLK Ngan Po Ling College",
+    "nameCh": "保良局顏寶鈴書院",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20341",
+    "searchKey": "plk ngan po ling college"
+  },
+  "20342": {
+    "name": "PLK No.1 W.H. Cheung College",
+    "nameCh": "保良局第一張永慶中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20342",
+    "searchKey": "plk no.1 w.h. cheung college"
+  },
+  "20343": {
+    "name": "POH 80th Anniversary Tang Ying Hei College",
+    "nameCh": "博愛醫院八十週年鄧英喜中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20343",
+    "searchKey": "poh 80th anniversary tang ying hei college"
+  },
+  "20344": {
+    "name": "Pooi To Middle School",
+    "nameCh": "香港培道中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20344",
+    "searchKey": "pooi to middle school"
+  },
+  "20349": {
+    "name": "Pui Ching Middle School",
+    "nameCh": "香港培正中學",
+    "region": "Kowloon",
+    "moi": "CMI",
+    "code": "20349",
+    "searchKey": "pui ching middle school"
+  },
+  "20350": {
+    "name": "Queen Elizabeth School",
+    "nameCh": "伊利沙伯中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20350",
+    "searchKey": "queen elizabeth school"
+  },
+  "20351": {
+    "name": "Rhenish Church Pang Hok Ko Memorial College",
+    "nameCh": "禮賢會彭學高紀念中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20351",
+    "searchKey": "rhenish church pang hok ko memorial college"
+  },
+  "20352": {
+    "name": "Shun Lee Catholic Secondary School",
+    "nameCh": "順利天主教中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20352",
+    "searchKey": "shun lee catholic secondary school"
+  },
+  "20353": {
+    "name": "Sing Yin Secondary School",
+    "nameCh": "聖言中學",
+    "region": "Kowloon",
+    "moi": "EMI",
+    "code": "20353",
+    "searchKey": "sing yin secondary school"
+  },
+  "20354": {
+    "name": "Sir Ellis Kadoorie Secondary School (West Kowloon)",
+    "nameCh": "官立嘉道理爵士中學 (西九龍)",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20354",
+    "searchKey": "sir ellis kadoorie secondary school (west kowloon)"
+  },
+  "20355": {
+    "name": "SKH All Saints' Middle School",
+    "nameCh": "聖公會諸聖中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20355",
+    "searchKey": "skh all saints' middle school"
+  },
+  "20357": {
+    "name": "SKH Kei Hau Secondary School",
+    "nameCh": "聖公會基孝中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20357",
+    "searchKey": "skh kei hau secondary school"
+  },
+  "20359": {
+    "name": "SKH St. Benedict's School",
+    "nameCh": "聖公會聖本德中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20359",
+    "searchKey": "skh st. benedict's school"
+  },
+  "20360": {
+    "name": "SKH St. Mary's Church Mok Hing Yiu College",
+    "nameCh": "聖公會聖馬利亞堂莫慶堯中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20360",
+    "searchKey": "skh st. mary's church mok hing yiu college"
+  },
+  "20361": {
+    "name": "The IMC of SKH Tsoi Kung Po Secondary School",
+    "nameCh": "聖公會蔡功譜中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20361",
+    "searchKey": "the imc of skh tsoi kung po secondary school"
+  },
+  "20362": {
+    "name": "St. Antonius Girls' College",
+    "nameCh": "聖安當女書院",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20362",
+    "searchKey": "st. antonius girls' college"
+  },
+  "20363": {
+    "name": "St. Bonaventure College and High School",
+    "nameCh": "聖文德書院",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20363",
+    "searchKey": "st. bonaventure college and high school"
+  },
+  "20364": {
+    "name": "St. Catharine's School for Girls",
+    "nameCh": "聖傑靈女子中學",
+    "region": "Kowloon",
+    "moi": "EMI",
+    "code": "20364",
+    "searchKey": "st. catharine's school for girls"
+  },
+  "20365": {
+    "name": "St. Francis Xavier's College",
+    "nameCh": "聖芳濟書院",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20365",
+    "searchKey": "st. francis xavier's college"
+  },
+  "20368": {
+    "name": "St. Joseph's Anglo-Chinese School",
+    "nameCh": "聖若瑟英文中學",
+    "region": "Kowloon",
+    "moi": "EMI",
+    "code": "20368",
+    "searchKey": "st. joseph's anglo-chinese school"
+  },
+  "20369": {
+    "name": "St. Margaret's Co-educational English Secondary & Pri School",
+    "nameCh": "聖瑪加利男女英文中小學",
+    "region": "Kowloon",
+    "moi": "EMI",
+    "code": "20369",
+    "searchKey": "st. margaret's co-educational english secondary & pri school"
+  },
+  "20370": {
+    "name": "St. Mary's Canossian College",
+    "nameCh": "嘉諾撒聖瑪利書院",
+    "region": "Kowloon",
+    "moi": "EMI",
+    "code": "20370",
+    "searchKey": "st. mary's canossian college"
+  },
+  "20372": {
+    "name": "St. Teresa Secondary School",
+    "nameCh": "德蘭中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20372",
+    "searchKey": "st. teresa secondary school"
+  },
+  "20373": {
+    "name": "Stewards Pooi Tun Secondary School",
+    "nameCh": "香港神託會培敦中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20373",
+    "searchKey": "stewards pooi tun secondary school"
+  },
+  "20374": {
+    "name": "STFA Cheng Yu Tung Secondary School",
+    "nameCh": "順德聯誼總會鄭裕彤中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20374",
+    "searchKey": "stfa cheng yu tung secondary school"
+  },
+  "20375": {
+    "name": "STFA Seaward Woo College",
+    "nameCh": "順德聯誼總會胡兆熾中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20375",
+    "searchKey": "stfa seaward woo college"
+  },
+  "20376": {
+    "name": "Tack Ching Girls' Secondary School",
+    "nameCh": "德貞女子中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20376",
+    "searchKey": "tack ching girls' secondary school"
+  },
+  "20377": {
+    "name": "Tak Nga Secondary School",
+    "nameCh": "德雅中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20377",
+    "searchKey": "tak nga secondary school"
+  },
+  "20378": {
+    "name": "Tak Oi Secondary School",
+    "nameCh": "德愛中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20378",
+    "searchKey": "tak oi secondary school"
+  },
+  "20379": {
+    "name": "Tang King Po School",
+    "nameCh": "鄧鏡波學校",
+    "region": "Kowloon",
+    "moi": "CMI",
+    "code": "20379",
+    "searchKey": "tang king po school"
+  },
+  "20381": {
+    "name": "The HKTA Ching Chung Secondary School",
+    "nameCh": "香港道教聯合會青松中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20381",
+    "searchKey": "the hkta ching chung secondary school"
+  },
+  "20382": {
+    "name": "The HKSYCIA Wong Tai Shan Memorial College",
+    "nameCh": "香港四邑商工總會黃棣珊紀念中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20382",
+    "searchKey": "the hksycia wong tai shan memorial college"
+  },
+  "20383": {
+    "name": "The Mission Covenant Church Holm Glad College",
+    "nameCh": "基督教聖約教會堅樂中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20383",
+    "searchKey": "the mission covenant church holm glad college"
+  },
+  "20384": {
+    "name": "The PHC Wing Kwong College",
+    "nameCh": "五旬節聖潔會永光書院",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20384",
+    "searchKey": "the phc wing kwong college"
+  },
+  "20385": {
+    "name": "The Salvation Army William Booth Secondary School",
+    "nameCh": "救世軍卜維廉中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20385",
+    "searchKey": "the salvation army william booth secondary school"
+  },
+  "20388": {
+    "name": "Society of Boys' Centres Shing Tak Centre School",
+    "nameCh": "香港扶幼會盛德中心學校",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20388",
+    "searchKey": "society of boys' centres shing tak centre school"
+  },
+  "20393": {
+    "name": "True Light Girls' College",
+    "nameCh": "真光女書院",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20393",
+    "searchKey": "true light girls' college"
+  },
+  "20394": {
+    "name": "Tseung Kwan O Government Secondary School",
+    "nameCh": "將軍澳官立中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20394",
+    "searchKey": "tseung kwan o government secondary school"
+  },
+  "20395": {
+    "name": "Tsung Tsin Christian Academy",
+    "nameCh": "基督教崇真中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20395",
+    "searchKey": "tsung tsin christian academy"
+  },
+  "20397": {
+    "name": "TWGHs Chang Ming Thien College",
+    "nameCh": "東華三院張明添中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20397",
+    "searchKey": "twghs chang ming thien college"
+  },
+  "20398": {
+    "name": "TWGHs Lui Yun Choy Memorial College",
+    "nameCh": "東華三院呂潤財紀念中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20398",
+    "searchKey": "twghs lui yun choy memorial college"
+  },
+  "20399": {
+    "name": "TWGHs Wong Fut Nam College",
+    "nameCh": "東華三院黃笏南中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20399",
+    "searchKey": "twghs wong fut nam college"
+  },
+  "20400": {
+    "name": "United Christian College",
+    "nameCh": "匯基書院",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20400",
+    "searchKey": "united christian college"
+  },
+  "20401": {
+    "name": "United Christian College (Kowloon East)",
+    "nameCh": "匯基書院(東九龍)",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20401",
+    "searchKey": "united christian college (kowloon east)"
+  },
+  "20403": {
+    "name": "Wa Ying College",
+    "nameCh": "華英中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20403",
+    "searchKey": "wa ying college"
+  },
+  "20404": {
+    "name": "Wah Yan College, Kowloon",
+    "nameCh": "華仁書院 (九龍)",
+    "region": "Kowloon",
+    "moi": "EMI",
+    "code": "20404",
+    "searchKey": "wah yan college, kowloon"
+  },
+  "20405": {
+    "name": "Wai Kiu College",
+    "nameCh": "惠僑英文中學",
+    "region": "Kowloon",
+    "moi": "EMI",
+    "code": "20405",
+    "searchKey": "wai kiu college"
+  },
+  "20406": {
+    "name": "Scientia Secondary School",
+    "nameCh": "創知中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20406",
+    "searchKey": "scientia secondary school"
+  },
+  "20409": {
+    "name": "YCH Lan Chi Pat Memorial Secondary School",
+    "nameCh": "仁濟醫院靚次伯紀念中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20409",
+    "searchKey": "ych lan chi pat memorial secondary school"
+  },
+  "20410": {
+    "name": "YCH Law Chan Chor Si College",
+    "nameCh": "仁濟醫院羅陳楚思中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20410",
+    "searchKey": "ych law chan chor si college"
+  },
+  "20411": {
+    "name": "YCH Wong Wha San Secondary School",
+    "nameCh": "仁濟醫院王華湘中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20411",
+    "searchKey": "ych wong wha san secondary school"
+  },
+  "20412": {
+    "name": "Ying Wa College",
+    "nameCh": "英華書院",
+    "region": "Kowloon",
+    "moi": "EMI",
+    "code": "20412",
+    "searchKey": "ying wa college"
+  },
+  "20414": {
+    "name": "Yu Chun Keung Memorial College",
+    "nameCh": "余振強紀念中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20414",
+    "searchKey": "yu chun keung memorial college"
+  },
+  "20415": {
+    "name": "The Y.W.C.A. Hioe Tjo Yoeng College",
+    "nameCh": "基督教女青年會丘佐榮中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20415",
+    "searchKey": "the y.w.c.a. hioe tjo yoeng college"
+  },
+  "20416": {
+    "name": "Man Kwan QualiEd College",
+    "nameCh": "萬鈞匯知中學",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20416",
+    "searchKey": "man kwan qualied college"
+  },
+  "20417": {
+    "name": "China Holiness College",
+    "nameCh": "中聖書院",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20417",
+    "searchKey": "china holiness college"
+  },
+  "20431": {
+    "name": "Chan Sui Ki (La Salle) College",
+    "nameCh": "陳瑞祺（喇沙）書院",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20431",
+    "searchKey": "chan sui ki (la salle) college"
+  },
+  "20432": {
+    "name": "Sai Kung Sung Tsun Catholic School (Secondary Section)",
+    "nameCh": "西貢崇真天主教學校 (中學部)",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20432",
+    "searchKey": "sai kung sung tsun catholic school (secondary section)"
+  },
+  "20450": {
+    "name": "Caritas Mother Teresa School",
+    "nameCh": "明愛樂恩學校",
+    "region": "Kowloon",
+    "moi": "Other",
+    "code": "20450",
+    "searchKey": "caritas mother teresa school"
+  },
+  "30601": {
+    "name": "AD & FD POHL Leung Sing Tak College",
+    "nameCh": "博愛醫院歷屆總理聯誼會梁省德中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30601",
+    "searchKey": "ad & fd pohl leung sing tak college"
+  },
+  "30604": {
+    "name": "Assembly of God Hebron Secondary School",
+    "nameCh": "神召會康樂中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30604",
+    "searchKey": "assembly of god hebron secondary school"
+  },
+  "30606": {
+    "name": "Baptist Lui Ming Choi Secondary School",
+    "nameCh": "浸信會呂明才中學",
+    "region": "New Territories",
+    "moi": "EMI",
+    "code": "30606",
+    "searchKey": "baptist lui ming choi secondary school"
+  },
+  "30607": {
+    "name": "Baptist Wing Lung Secondary School",
+    "nameCh": "浸信會永隆中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30607",
+    "searchKey": "baptist wing lung secondary school"
+  },
+  "30608": {
+    "name": "Beacon College",
+    "nameCh": "遵理學校",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30608",
+    "searchKey": "beacon college"
+  },
+  "30614": {
+    "name": "Bethel High School",
+    "nameCh": "伯特利中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30614",
+    "searchKey": "bethel high school"
+  },
+  "30615": {
+    "name": "Buddhist Tai Kwong Chi Hong College",
+    "nameCh": "佛教大光慈航中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30615",
+    "searchKey": "buddhist tai kwong chi hong college"
+  },
+  "30618": {
+    "name": "Buddhist Kok Kwong Secondary School",
+    "nameCh": "佛教覺光法師中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30618",
+    "searchKey": "buddhist kok kwong secondary school"
+  },
+  "30619": {
+    "name": "Buddhist Mau Fung Memorial College",
+    "nameCh": "佛教茂峰法師紀念中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30619",
+    "searchKey": "buddhist mau fung memorial college"
+  },
+  "30620": {
+    "name": "Buddhist Sin Tak College",
+    "nameCh": "佛教善德英文中學",
+    "region": "New Territories",
+    "moi": "EMI",
+    "code": "30620",
+    "searchKey": "buddhist sin tak college"
+  },
+  "30621": {
+    "name": "Buddhist Sum Heung Lam Memorial College",
+    "nameCh": "佛教沈香林紀念中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30621",
+    "searchKey": "buddhist sum heung lam memorial college"
+  },
+  "30623": {
+    "name": "Buddhist Wong Wan Tin College",
+    "nameCh": "佛教黃允畋中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30623",
+    "searchKey": "buddhist wong wan tin college"
+  },
+  "30624": {
+    "name": "Buddhist Yip Kei Nam Memorial College",
+    "nameCh": "佛教葉紀南紀念中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30624",
+    "searchKey": "buddhist yip kei nam memorial college"
+  },
+  "30626": {
+    "name": "Caritas Fanling Chan Chun Ha Secondary School",
+    "nameCh": "明愛粉嶺陳震夏中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30626",
+    "searchKey": "caritas fanling chan chun ha secondary school"
+  },
+  "30628": {
+    "name": "Caritas St. Joseph Secondary School",
+    "nameCh": "明愛聖若瑟中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30628",
+    "searchKey": "caritas st. joseph secondary school"
+  },
+  "30630": {
+    "name": "Caritas Yuen Long Chan Chun Ha Secondary School",
+    "nameCh": "明愛元朗陳震夏中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30630",
+    "searchKey": "caritas yuen long chan chun ha secondary school"
+  },
+  "30631": {
+    "name": "Carmel Alison Lam Foundation Secondary School",
+    "nameCh": "迦密愛禮信中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30631",
+    "searchKey": "carmel alison lam foundation secondary school"
+  },
+  "30632": {
+    "name": "Carmel Bunnan Tong Memorial Secondary School",
+    "nameCh": "迦密唐賓南紀念中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30632",
+    "searchKey": "carmel bunnan tong memorial secondary school"
+  },
+  "30633": {
+    "name": "Carmel Holy Word Secondary School",
+    "nameCh": "迦密聖道中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30633",
+    "searchKey": "carmel holy word secondary school"
+  },
+  "30634": {
+    "name": "Carmel Pak U Secondary School",
+    "nameCh": "迦密柏雨中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30634",
+    "searchKey": "carmel pak u secondary school"
+  },
+  "30635": {
+    "name": "CCC Chuen Yuen College",
+    "nameCh": "中華基督教會全完中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30635",
+    "searchKey": "ccc chuen yuen college"
+  },
+  "30636": {
+    "name": "CCC Fong Yun Wah Secondary School",
+    "nameCh": "中華基督教會方潤華中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30636",
+    "searchKey": "ccc fong yun wah secondary school"
+  },
+  "30637": {
+    "name": "CCC Fung Leung Kit Memorial Secondary School",
+    "nameCh": "中華基督教會馮梁結紀念中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30637",
+    "searchKey": "ccc fung leung kit memorial secondary school"
+  },
+  "30638": {
+    "name": "CCC Hoh Fuk Tong College",
+    "nameCh": "中華基督教會何福堂書院",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30638",
+    "searchKey": "ccc hoh fuk tong college"
+  },
+  "30640": {
+    "name": "CCC Kei Long College",
+    "nameCh": "中華基督教會基朗中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30640",
+    "searchKey": "ccc kei long college"
+  },
+  "30641": {
+    "name": "CCC Kei San Secondary School",
+    "nameCh": "中華基督教會基新中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30641",
+    "searchKey": "ccc kei san secondary school"
+  },
+  "30642": {
+    "name": "CCC Kei Yuen College",
+    "nameCh": "中華基督教會基元中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30642",
+    "searchKey": "ccc kei yuen college"
+  },
+  "30643": {
+    "name": "CCC Tam Lee Lai Fun Memorial Secondary School",
+    "nameCh": "中華基督教會譚李麗芬紀念中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30643",
+    "searchKey": "ccc tam lee lai fun memorial secondary school"
+  },
+  "30644": {
+    "name": "CCC Yenching College",
+    "nameCh": "中華基督教會燕京書院",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30644",
+    "searchKey": "ccc yenching college"
+  },
+  "30645": {
+    "name": "China Holiness Church Living Spirit College",
+    "nameCh": "中華聖潔會靈風中學",
+    "region": "New Territories",
+    "moi": "CMI",
+    "code": "30645",
+    "searchKey": "china holiness church living spirit college"
+  },
+  "30646": {
+    "name": "Chinese Y.M.C.A. College",
+    "nameCh": "青年會書院",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30646",
+    "searchKey": "chinese y.m.c.a. college"
+  },
+  "30647": {
+    "name": "Chinese Y.M.C.A. Secondary School",
+    "nameCh": "中華基督教青年會中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30647",
+    "searchKey": "chinese y.m.c.a. secondary school"
+  },
+  "30648": {
+    "name": "Ching Chung Hau Po Woon Secondary School",
+    "nameCh": "青松侯寶垣中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30648",
+    "searchKey": "ching chung hau po woon secondary school"
+  },
+  "30649": {
+    "name": "Chiu Chow Association Secondary School",
+    "nameCh": "潮州會館中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30649",
+    "searchKey": "chiu chow association secondary school"
+  },
+  "30650": {
+    "name": "Chiu Lut Sau Memorial Secondary School",
+    "nameCh": "趙聿修紀念中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30650",
+    "searchKey": "chiu lut sau memorial secondary school"
+  },
+  "30651": {
+    "name": "Christ College",
+    "nameCh": "基督書院",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30651",
+    "searchKey": "christ college"
+  },
+  "30652": {
+    "name": "Christian Alliance Cheng Wing Gee College",
+    "nameCh": "宣道會鄭榮之中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30652",
+    "searchKey": "christian alliance cheng wing gee college"
+  },
+  "30653": {
+    "name": "Christian Alliance College",
+    "nameCh": "宣道中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30653",
+    "searchKey": "christian alliance college"
+  },
+  "30654": {
+    "name": "Christian Alliance S. C. Chan Memorial College",
+    "nameCh": "宣道會陳瑞芝紀念中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30654",
+    "searchKey": "christian alliance s. c. chan memorial college"
+  },
+  "30655": {
+    "name": "Christian Alliance S W Chan Memorial College",
+    "nameCh": "宣道會陳朱素華紀念中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30655",
+    "searchKey": "christian alliance s w chan memorial college"
+  },
+  "30657": {
+    "name": "Chung Sing B.S. Mrs. Aw Boon Haw Secondary School",
+    "nameCh": "鐘聲慈善社胡陳金枝中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30657",
+    "searchKey": "chung sing b.s. mrs. aw boon haw secondary school"
+  },
+  "30658": {
+    "name": "CMA Choi Cheung Kok Secondary School",
+    "nameCh": "廠商會蔡章閣中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30658",
+    "searchKey": "cma choi cheung kok secondary school"
+  },
+  "30659": {
+    "name": "CNEC Christian College",
+    "nameCh": "中華傳道會安柱中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30659",
+    "searchKey": "cnec christian college"
+  },
+  "30660": {
+    "name": "CNEC Lee I Yao Memorial Secondary School",
+    "nameCh": "中華傳道會李賢堯紀念中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30660",
+    "searchKey": "cnec lee i yao memorial secondary school"
+  },
+  "30661": {
+    "name": "Confucian Tai Shing Ho Kwok Pui Chun College",
+    "nameCh": "孔教學院大成何郭佩珍中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30661",
+    "searchKey": "confucian tai shing ho kwok pui chun college"
+  },
+  "30662": {
+    "name": "Cotton Spinners Association Secondary School",
+    "nameCh": "棉紡會中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30662",
+    "searchKey": "cotton spinners association secondary school"
+  },
+  "30663": {
+    "name": "CUHK FAA Chan Chun Ha Secondary School",
+    "nameCh": "香港中文大學校友會聯會陳震夏中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30663",
+    "searchKey": "cuhk faa chan chun ha secondary school"
+  },
+  "30664": {
+    "name": "CUHK FAA Thomas Cheung Secondary School",
+    "nameCh": "香港中文大學校友會聯會張煊昌中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30664",
+    "searchKey": "cuhk faa thomas cheung secondary school"
+  },
+  "30665": {
+    "name": "Cumberland Presbyterian Church Yao Dao Secondary School",
+    "nameCh": "金巴崙長老會耀道中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30665",
+    "searchKey": "cumberland presbyterian church yao dao secondary school"
+  },
+  "30667": {
+    "name": "DMHC Siu Ming Catholic Secondary School",
+    "nameCh": "天主教母佑會蕭明中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30667",
+    "searchKey": "dmhc siu ming catholic secondary school"
+  },
+  "30670": {
+    "name": "Elegantia College (Sponsored by ED CONV)",
+    "nameCh": "風采中學(教育評議會主辦)",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30670",
+    "searchKey": "elegantia college (sponsored by ed conv)"
+  },
+  "30672": {
+    "name": "Fanling Government Secondary School",
+    "nameCh": "粉嶺官立中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30672",
+    "searchKey": "fanling government secondary school"
+  },
+  "30673": {
+    "name": "Fanling Kau Yan College",
+    "nameCh": "粉嶺救恩書院",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30673",
+    "searchKey": "fanling kau yan college"
+  },
+  "30674": {
+    "name": "Fanling Rhenish Church Secondary School",
+    "nameCh": "粉嶺禮賢會中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30674",
+    "searchKey": "fanling rhenish church secondary school"
+  },
+  "30675": {
+    "name": "Fung Kai Liu Man Shek Tong Secondary School",
+    "nameCh": "鳳溪廖萬石堂中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30675",
+    "searchKey": "fung kai liu man shek tong secondary school"
+  },
+  "30676": {
+    "name": "Fung Kai No. 1 Secondary School",
+    "nameCh": "鳳溪第一中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30676",
+    "searchKey": "fung kai no. 1 secondary school"
+  },
+  "30677": {
+    "name": "GCCITKD Lau Pak Lok Secondary School",
+    "nameCh": "東莞工商總會劉百樂中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30677",
+    "searchKey": "gccitkd lau pak lok secondary school"
+  },
+  "30678": {
+    "name": "Gertrude Simon Lutheran College",
+    "nameCh": "路德會西門英才中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30678",
+    "searchKey": "gertrude simon lutheran college"
+  },
+  "30680": {
+    "name": "Helen Liang Memorial Sec School (Shatin)",
+    "nameCh": "梁文燕紀念中學(沙田)",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30680",
+    "searchKey": "helen liang memorial sec school (shatin)"
+  },
+  "30682": {
+    "name": "HHCKLA Buddhist Leung Chik Wai College",
+    "nameCh": "香海正覺蓮社佛教梁植偉中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30682",
+    "searchKey": "hhckla buddhist leung chik wai college"
+  },
+  "30685": {
+    "name": "HK & KLN KFWA Sun Fong Chung College",
+    "nameCh": "港九街坊婦女會孫方中書院",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30685",
+    "searchKey": "hk & kln kfwa sun fong chung college"
+  },
+  "30686": {
+    "name": "HK Teachers' Association Lee Heng Kwei Secondary School",
+    "nameCh": "香港教師會李興貴中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30686",
+    "searchKey": "hk teachers' association lee heng kwei secondary school"
+  },
+  "30692": {
+    "name": "HKCWC Fung Yiu King Memorial Secondary School",
+    "nameCh": "香港中國婦女會馮堯敬紀念中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30692",
+    "searchKey": "hkcwc fung yiu king memorial secondary school"
+  },
+  "30693": {
+    "name": "HKFEW Wong Cho Bau Secondary School",
+    "nameCh": "香港教育工作者聯會黃楚標中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30693",
+    "searchKey": "hkfew wong cho bau secondary school"
+  },
+  "30694": {
+    "name": "HKFYG Lee Shau Kee College",
+    "nameCh": "香港青年協會李兆基書院",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30694",
+    "searchKey": "hkfyg lee shau kee college"
+  },
+  "30695": {
+    "name": "HKSYC&IA Chan Nam Chong Memorial College",
+    "nameCh": "香港四邑商工總會陳南昌紀念中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30695",
+    "searchKey": "hksyc&ia chan nam chong memorial college"
+  },
+  "30696": {
+    "name": "HKTA Tang Hin Memorial Secondary School",
+    "nameCh": "香港道教聯合會鄧顯紀念中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30696",
+    "searchKey": "hkta tang hin memorial secondary school"
+  },
+  "30698": {
+    "name": "HKTA The Yuen Yuen Institute No. 2 Secondary School",
+    "nameCh": "香港道教聯合會圓玄學院第二中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30698",
+    "searchKey": "hkta the yuen yuen institute no. 2 secondary school"
+  },
+  "30699": {
+    "name": "Ho Dao College (Sponsored by Sik Sik Yuen)",
+    "nameCh": "可道中學（嗇色園主辦）",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30699",
+    "searchKey": "ho dao college (sponsored by sik sik yuen)"
+  },
+  "30700": {
+    "name": "Ho Fung College (Sponsored by Sik Sik Yuen)",
+    "nameCh": "可風中學 (嗇色園主辦）",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30700",
+    "searchKey": "ho fung college (sponsored by sik sik yuen)"
+  },
+  "30701": {
+    "name": "Ho Ngai College (Sponsored by Sik Sik Yuen)",
+    "nameCh": "嗇色園主辦可藝中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30701",
+    "searchKey": "ho ngai college (sponsored by sik sik yuen)"
+  },
+  "30702": {
+    "name": "Ho Yu College And Primary School (Sponsored By Sik Sik Yuen)",
+    "nameCh": "嗇色園主辦可譽中學暨可譽小學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30702",
+    "searchKey": "ho yu college and primary school (sponsored by sik sik yuen)"
+  },
+  "30704": {
+    "name": "HKBU Affiliated School Wong Kam Fai Secondary & Primary School",
+    "nameCh": "香港浸會大學附屬學校王錦輝中小學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30704",
+    "searchKey": "hkbu affiliated school wong kam fai secondary & primary school"
+  },
+  "30705": {
+    "name": "Hong Kong Red Swastika Society Tai Po Secondary School",
+    "nameCh": "香港紅卍字會大埔卍慈中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30705",
+    "searchKey": "hong kong red swastika society tai po secondary school"
+  },
+  "30706": {
+    "name": "Immaculate Heart of Mary College",
+    "nameCh": "聖母無玷聖心書院",
+    "region": "New Territories",
+    "moi": "EMI",
+    "code": "30706",
+    "searchKey": "immaculate heart of mary college"
+  },
+  "30707": {
+    "name": "Jockey Club Ti-I College",
+    "nameCh": "賽馬會體藝中學",
+    "region": "New Territories",
+    "moi": "EMI",
+    "code": "30707",
+    "searchKey": "jockey club ti-i college"
+  },
+  "30708": {
+    "name": "Ju Ching Chu Secondary School (Kwai Chung)",
+    "nameCh": "裘錦秋中學 (葵涌)",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30708",
+    "searchKey": "ju ching chu secondary school (kwai chung)"
+  },
+  "30710": {
+    "name": "Ju Ching Chu Secondary School (Yuen Long)",
+    "nameCh": "裘錦秋中學 (元朗)",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30710",
+    "searchKey": "ju ching chu secondary school (yuen long)"
+  },
+  "30711": {
+    "name": "Kau Yan College",
+    "nameCh": "救恩書院",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30711",
+    "searchKey": "kau yan college"
+  },
+  "30712": {
+    "name": "Kiangsu-Chekiang College (Kwai Chung)",
+    "nameCh": "葵涌蘇浙公學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30712",
+    "searchKey": "kiangsu-chekiang college (kwai chung)"
+  },
+  "30713": {
+    "name": "Kiangsu-Chekiang College (Shatin)",
+    "nameCh": "沙田蘇浙公學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30713",
+    "searchKey": "kiangsu-chekiang college (shatin)"
+  },
+  "30719": {
+    "name": "Kwai Chung Methodist College",
+    "nameCh": "葵涌循道中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30719",
+    "searchKey": "kwai chung methodist college"
+  },
+  "30720": {
+    "name": "Kwok Tak Seng Catholic Secondary School",
+    "nameCh": "天主教郭得勝中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30720",
+    "searchKey": "kwok tak seng catholic secondary school"
+  },
+  "30722": {
+    "name": "Lam Tai Fai College",
+    "nameCh": "林大輝中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30722",
+    "searchKey": "lam tai fai college"
+  },
+  "30723": {
+    "name": "Law Ting Pong Secondary School",
+    "nameCh": "羅定邦中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30723",
+    "searchKey": "law ting pong secondary school"
+  },
+  "30726": {
+    "name": "Ling Liang Church E Wun Secondary School",
+    "nameCh": "靈糧堂怡文中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30726",
+    "searchKey": "ling liang church e wun secondary school"
+  },
+  "30727": {
+    "name": "Ling Liang Church M.H. Lau Secondary School",
+    "nameCh": "靈糧堂劉梅軒中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30727",
+    "searchKey": "ling liang church m.h. lau secondary school"
+  },
+  "30728": {
+    "name": "Lingnan Dr. Chung Wing Kwong Memorial Secondary School",
+    "nameCh": "嶺南鍾榮光博士紀念中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30728",
+    "searchKey": "lingnan dr. chung wing kwong memorial secondary school"
+  },
+  "30729": {
+    "name": "Lions Clubs International Tseung Chui King College",
+    "nameCh": "獅子會蔣翠琼中學",
+    "region": "New Territories",
+    "moi": "EMI",
+    "code": "30729",
+    "searchKey": "lions clubs international tseung chui king college"
+  },
+  "30730": {
+    "name": "Liu Po Shan Memorial College",
+    "nameCh": "廖寶珊紀念書院",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30730",
+    "searchKey": "liu po shan memorial college"
+  },
+  "30731": {
+    "name": "Lock Tao Secondary School",
+    "nameCh": "樂道中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30731",
+    "searchKey": "lock tao secondary school"
+  },
+  "30732": {
+    "name": "LST Ku Chiu Man Secondary School",
+    "nameCh": "樂善堂顧超文中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30732",
+    "searchKey": "lst ku chiu man secondary school"
+  },
+  "30733": {
+    "name": "LST Leung Chik Wai Memorial School",
+    "nameCh": "樂善堂梁植偉紀念中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30733",
+    "searchKey": "lst leung chik wai memorial school"
+  },
+  "30734": {
+    "name": "LST Young Ko Hsiao Lin Secondary School",
+    "nameCh": "樂善堂楊葛小琳中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30734",
+    "searchKey": "lst young ko hsiao lin secondary school"
+  },
+  "30735": {
+    "name": "Lui Cheung Kwong Lutheran College",
+    "nameCh": "路德會呂祥光中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30735",
+    "searchKey": "lui cheung kwong lutheran college"
+  },
+  "30737": {
+    "name": "Lui Ming Choi Lutheran College",
+    "nameCh": "路德會呂明才中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30737",
+    "searchKey": "lui ming choi lutheran college"
+  },
+  "30739": {
+    "name": "Ma On Shan Tsung Tsin Secondary School",
+    "nameCh": "馬鞍山崇真中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30739",
+    "searchKey": "ma on shan tsung tsin secondary school"
+  },
+  "30740": {
+    "name": "Madam Lau Kam Lung Secondary School of MFBM",
+    "nameCh": "妙法寺劉金龍中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30740",
+    "searchKey": "madam lau kam lung secondary school of mfbm"
+  },
+  "30743": {
+    "name": "The Yuen Yuen Institute MFBM Nei Ming Chan Lui Chung Tak Memorial College",
+    "nameCh": "圓玄學院妙法寺內明陳呂重德紀念中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30743",
+    "searchKey": "the yuen yuen institute mfbm nei ming chan lui chung tak memorial college"
+  },
+  "30747": {
+    "name": "Ng Yuk Secondary School",
+    "nameCh": "五育中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30747",
+    "searchKey": "ng yuk secondary school"
+  },
+  "30748": {
+    "name": "NLSI Peace Evangelical Secondary School",
+    "nameCh": "新生命教育協會平安福音中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30748",
+    "searchKey": "nlsi peace evangelical secondary school"
+  },
+  "30749": {
+    "name": "NTHYK Tai Po District Secondary School",
+    "nameCh": "新界鄉議局大埔區中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30749",
+    "searchKey": "nthyk tai po district secondary school"
+  },
+  "30750": {
+    "name": "NTHYK Yuen Long District Secondary School",
+    "nameCh": "新界鄉議局元朗區中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30750",
+    "searchKey": "nthyk yuen long district secondary school"
+  },
+  "30751": {
+    "name": "Man Kwan Pak Kau College",
+    "nameCh": "萬鈞伯裘書院",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30751",
+    "searchKey": "man kwan pak kau college"
+  },
+  "30752": {
+    "name": "PAOC Ka Chi Secondary School",
+    "nameCh": "加拿大神召會嘉智中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30752",
+    "searchKey": "paoc ka chi secondary school"
+  },
+  "30753": {
+    "name": "Pentecostal Lam Hon Kwong School",
+    "nameCh": "五旬節林漢光中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30753",
+    "searchKey": "pentecostal lam hon kwong school"
+  },
+  "30754": {
+    "name": "Po Leung Kuk Lo Kit Sing (1983) College",
+    "nameCh": "保良局羅傑承(一九八三）中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30754",
+    "searchKey": "po leung kuk lo kit sing (1983) college"
+  },
+  "30755": {
+    "name": "PLK C.W. Chu College",
+    "nameCh": "保良局朱敬文中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30755",
+    "searchKey": "plk c.w. chu college"
+  },
+  "30756": {
+    "name": "PLK Centenary Li Shiu Chung Memorial College",
+    "nameCh": "保良局百周年李兆忠紀念中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30756",
+    "searchKey": "plk centenary li shiu chung memorial college"
+  },
+  "30757": {
+    "name": "PLK Mrs. Ma Kam Ming - Cheung Fook Sien College",
+    "nameCh": "保良局馬錦明夫人章馥仙中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30757",
+    "searchKey": "plk mrs. ma kam ming - cheung fook sien college"
+  },
+  "30759": {
+    "name": "PLK Ma Kam Ming College",
+    "nameCh": "保良局馬錦明中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30759",
+    "searchKey": "plk ma kam ming college"
+  },
+  "30760": {
+    "name": "PLK Tang Yuk Tien College",
+    "nameCh": "保良局董玉娣中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30760",
+    "searchKey": "plk tang yuk tien college"
+  },
+  "30761": {
+    "name": "PLK Wu Chung College",
+    "nameCh": "保良局胡忠中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30761",
+    "searchKey": "plk wu chung college"
+  },
+  "30762": {
+    "name": "PLK Yao Ling Sun College",
+    "nameCh": "保良局姚連生中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30762",
+    "searchKey": "plk yao ling sun college"
+  },
+  "30763": {
+    "name": "POCA Wong Siu Ching Secondary School",
+    "nameCh": "寶安商會王少清中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30763",
+    "searchKey": "poca wong siu ching secondary school"
+  },
+  "30764": {
+    "name": "POH Chan Kai Memorial College",
+    "nameCh": "博愛醫院陳楷紀念中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30764",
+    "searchKey": "poh chan kai memorial college"
+  },
+  "30765": {
+    "name": "POH Tang Pui King Memorial College",
+    "nameCh": "博愛醫院鄧佩瓊紀念中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30765",
+    "searchKey": "poh tang pui king memorial college"
+  },
+  "30766": {
+    "name": "Pope Paul VI College",
+    "nameCh": "保祿六世書院",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30766",
+    "searchKey": "pope paul vi college"
+  },
+  "30767": {
+    "name": "Pui Kiu College",
+    "nameCh": "培僑書院",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30767",
+    "searchKey": "pui kiu college"
+  },
+  "30768": {
+    "name": "Pui Shing Catholic Secondary School",
+    "nameCh": "天主教培聖中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30768",
+    "searchKey": "pui shing catholic secondary school"
+  },
+  "30769": {
+    "name": "QESOSA Tong Kwok Wah Secondary School",
+    "nameCh": "伊利沙伯中學舊生會湯國華中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30769",
+    "searchKey": "qesosa tong kwok wah secondary school"
+  },
+  "30770": {
+    "name": "Queen Elizabeth School Old Students' Assn Secondary School",
+    "nameCh": "伊利沙伯中學舊生會中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30770",
+    "searchKey": "queen elizabeth school old students' assn secondary school"
+  },
+  "30772": {
+    "name": "Queen's College Old Boys' Assn Secondary School",
+    "nameCh": "皇仁舊生會中學",
+    "region": "New Territories",
+    "moi": "EMI",
+    "code": "30772",
+    "searchKey": "queen's college old boys' assn secondary school"
+  },
+  "30775": {
+    "name": "SALEM-Immanuel Lutheran College",
+    "nameCh": "南亞路德會沐恩中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30775",
+    "searchKey": "salem-immanuel lutheran college"
+  },
+  "30776": {
+    "name": "Salesians of Don Bosco Ng Siu Mui Secondary Sch.",
+    "nameCh": "天主教慈幼會伍少梅中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30776",
+    "searchKey": "salesians of don bosco ng siu mui secondary sch."
+  },
+  "30777": {
+    "name": "San Wui Commercial Society Sec Sch",
+    "nameCh": "新會商會中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30777",
+    "searchKey": "san wui commercial society sec sch"
+  },
+  "30778": {
+    "name": "Semple Memorial Secondary School",
+    "nameCh": "深培中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30778",
+    "searchKey": "semple memorial secondary school"
+  },
+  "30779": {
+    "name": "Sha Tin Government Secondary School",
+    "nameCh": "沙田官立中學",
+    "region": "New Territories",
+    "moi": "EMI",
+    "code": "30779",
+    "searchKey": "sha tin government secondary school"
+  },
+  "30780": {
+    "name": "Sha Tin Methodist College",
+    "nameCh": "沙田循道衛理中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30780",
+    "searchKey": "sha tin methodist college"
+  },
+  "30781": {
+    "name": "Shap Pat Heung Rural Committee Kung Yik She Secondary School",
+    "nameCh": "十八鄉鄉事委員會公益社中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30781",
+    "searchKey": "shap pat heung rural committee kung yik she secondary school"
+  },
+  "30783": {
+    "name": "Shatin Pui Ying College",
+    "nameCh": "沙田培英中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30783",
+    "searchKey": "shatin pui ying college"
+  },
+  "30784": {
+    "name": "Shatin Tsung Tsin Secondary School",
+    "nameCh": "沙田崇真中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30784",
+    "searchKey": "shatin tsung tsin secondary school"
+  },
+  "30785": {
+    "name": "Shek Lei Catholic Secondary School",
+    "nameCh": "石籬天主教中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30785",
+    "searchKey": "shek lei catholic secondary school"
+  },
+  "30786": {
+    "name": "Sheung Shui Government Secondary School",
+    "nameCh": "上水官立中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30786",
+    "searchKey": "sheung shui government secondary school"
+  },
+  "30788": {
+    "name": "Shung Tak Catholic English College",
+    "nameCh": "天主教崇德英文書院",
+    "region": "New Territories",
+    "moi": "EMI",
+    "code": "30788",
+    "searchKey": "shung tak catholic english college"
+  },
+  "30789": {
+    "name": "SKH Bishop Baker Secondary School",
+    "nameCh": "聖公會白約翰會督中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30789",
+    "searchKey": "skh bishop baker secondary school"
+  },
+  "30790": {
+    "name": "SKH Bishop Mok Sau Tseng Secondary School",
+    "nameCh": "聖公會莫壽增會督中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30790",
+    "searchKey": "skh bishop mok sau tseng secondary school"
+  },
+  "30791": {
+    "name": "SKH Chan Young Secondary School",
+    "nameCh": "聖公會陳融中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30791",
+    "searchKey": "skh chan young secondary school"
+  },
+  "30792": {
+    "name": "SKH Lam Kau Mow Secondary School",
+    "nameCh": "聖公會林裘謀中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30792",
+    "searchKey": "skh lam kau mow secondary school"
+  },
+  "30793": {
+    "name": "SKH Lam Woo Memorial Secondary School",
+    "nameCh": "聖公會林護紀念中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30793",
+    "searchKey": "skh lam woo memorial secondary school"
+  },
+  "30794": {
+    "name": "SKH Li Ping Secondary School",
+    "nameCh": "聖公會李炳中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30794",
+    "searchKey": "skh li ping secondary school"
+  },
+  "30796": {
+    "name": "SKH Tsang Shiu Tim Secondary School",
+    "nameCh": "聖公會曾肇添中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30796",
+    "searchKey": "skh tsang shiu tim secondary school"
+  },
+  "30797": {
+    "name": "South Tuen Mun Government Secondary School",
+    "nameCh": "南屯門官立中學",
+    "region": "New Territories",
+    "moi": "EMI",
+    "code": "30797",
+    "searchKey": "south tuen mun government secondary school"
+  },
+  "30798": {
+    "name": "St. Francis of Assisi's College",
+    "nameCh": "聖芳濟各書院",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30798",
+    "searchKey": "st. francis of assisi's college"
+  },
+  "30800": {
+    "name": "St. Rose of Lima's College",
+    "nameCh": "聖羅撒書院",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30800",
+    "searchKey": "st. rose of lima's college"
+  },
+  "30801": {
+    "name": "Stewards MKMCF Ma Ko Pan Memorial College",
+    "nameCh": "馬錦明慈善基金馬可賓紀念中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30801",
+    "searchKey": "stewards mkmcf ma ko pan memorial college"
+  },
+  "30802": {
+    "name": "Stewards Pooi Kei College",
+    "nameCh": "香港神託會培基書院",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30802",
+    "searchKey": "stewards pooi kei college"
+  },
+  "30803": {
+    "name": "STFA Lee Shau Kee College",
+    "nameCh": "順德聯誼總會李兆基中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30803",
+    "searchKey": "stfa lee shau kee college"
+  },
+  "30804": {
+    "name": "STFA Leung Kau Kui College",
+    "nameCh": "順德聯誼總會梁銶琚中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30804",
+    "searchKey": "stfa leung kau kui college"
+  },
+  "30805": {
+    "name": "STFA Tam Pak Yu College",
+    "nameCh": "順德聯誼總會譚伯羽中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30805",
+    "searchKey": "stfa tam pak yu college"
+  },
+  "30806": {
+    "name": "STFA Yung Yau College",
+    "nameCh": "順德聯誼總會翁祐中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30806",
+    "searchKey": "stfa yung yau college"
+  },
+  "30809": {
+    "name": "Tai Po Sam Yuk Secondary School",
+    "nameCh": "大埔三育中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30809",
+    "searchKey": "tai po sam yuk secondary school"
+  },
+  "30810": {
+    "name": "Tak Sun Secondary School",
+    "nameCh": "德信中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30810",
+    "searchKey": "tak sun secondary school"
+  },
+  "30811": {
+    "name": "The Hong Kong Management Association K S Lo College",
+    "nameCh": "香港管理專業協會羅桂祥中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30811",
+    "searchKey": "the hong kong management association k s lo college"
+  },
+  "30812": {
+    "name": "The Jockey Club Man Kwan Eduyoung College",
+    "nameCh": "賽馬會萬鈞毅智書院",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30812",
+    "searchKey": "the jockey club man kwan eduyoung college"
+  },
+  "30813": {
+    "name": "The Methodist Lee Wai Lee College",
+    "nameCh": "李惠利中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30813",
+    "searchKey": "the methodist lee wai lee college"
+  },
+  "30814": {
+    "name": "TIACC Woo Hon Fai Secondary School",
+    "nameCh": "紡織學會美國商會胡漢輝中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30814",
+    "searchKey": "tiacc woo hon fai secondary school"
+  },
+  "30815": {
+    "name": "Tin Ka Ping Secondary School",
+    "nameCh": "田家炳中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30815",
+    "searchKey": "tin ka ping secondary school"
+  },
+  "30816": {
+    "name": "Tin Shui Wai Government Secondary School",
+    "nameCh": "天水圍官立中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30816",
+    "searchKey": "tin shui wai government secondary school"
+  },
+  "30817": {
+    "name": "Tin Shui Wai Methodist College",
+    "nameCh": "天水圍循道衞理中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30817",
+    "searchKey": "tin shui wai methodist college"
+  },
+  "30818": {
+    "name": "Toi Shan Association College",
+    "nameCh": "台山商會中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30818",
+    "searchKey": "toi shan association college"
+  },
+  "30819": {
+    "name": "Tsang Pik Shan (Sung Lan) Secondary School",
+    "nameCh": "曾璧山  (崇蘭) 中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30819",
+    "searchKey": "tsang pik shan (sung lan) secondary school"
+  },
+  "30820": {
+    "name": "Tsuen Wan Government Secondary School",
+    "nameCh": "荃灣官立中學",
+    "region": "New Territories",
+    "moi": "EMI",
+    "code": "30820",
+    "searchKey": "tsuen wan government secondary school"
+  },
+  "30821": {
+    "name": "Tsuen Wan Public Ho Chuen Yiu Memorial College",
+    "nameCh": "荃灣公立何傳耀紀念中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30821",
+    "searchKey": "tsuen wan public ho chuen yiu memorial college"
+  },
+  "30822": {
+    "name": "Tsung Tsin College",
+    "nameCh": "崇真書院",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30822",
+    "searchKey": "tsung tsin college"
+  },
+  "30823": {
+    "name": "Tuen Mun Catholic Secondary School",
+    "nameCh": "屯門天主教中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30823",
+    "searchKey": "tuen mun catholic secondary school"
+  },
+  "30824": {
+    "name": "Tuen Mun Government Secondary School",
+    "nameCh": "屯門官立中學",
+    "region": "New Territories",
+    "moi": "EMI",
+    "code": "30824",
+    "searchKey": "tuen mun government secondary school"
+  },
+  "30825": {
+    "name": "Tung Chung Catholic School",
+    "nameCh": "東涌天主教學校",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30825",
+    "searchKey": "tung chung catholic school"
+  },
+  "30826": {
+    "name": "TWGHs C.Y. Ma Memorial College",
+    "nameCh": "東華三院馬振玉紀念中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30826",
+    "searchKey": "twghs c.y. ma memorial college"
+  },
+  "30827": {
+    "name": "TWGHs Chen Zao Men College",
+    "nameCh": "東華三院陳兆民中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30827",
+    "searchKey": "twghs chen zao men college"
+  },
+  "30829": {
+    "name": "TWGHs Kwok Yat Wai College",
+    "nameCh": "東華三院郭一葦中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30829",
+    "searchKey": "twghs kwok yat wai college"
+  },
+  "30830": {
+    "name": "TWGHs Li Ka Shing College",
+    "nameCh": "東華三院李嘉誠中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30830",
+    "searchKey": "twghs li ka shing college"
+  },
+  "30831": {
+    "name": "TWGHs Lo Kon Ting Memorial College",
+    "nameCh": "東華三院盧幹庭紀念中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30831",
+    "searchKey": "twghs lo kon ting memorial college"
+  },
+  "30832": {
+    "name": "TWGHs Mr & Mrs Kwong Sik Kwan College",
+    "nameCh": "東華三院鄺錫坤伉儷中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30832",
+    "searchKey": "twghs mr & mrs kwong sik kwan college"
+  },
+  "30833": {
+    "name": "TWGHs Mrs. Fung Wong Fung Ting College",
+    "nameCh": "東華三院馮黃鳳亭中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30833",
+    "searchKey": "twghs mrs. fung wong fung ting college"
+  },
+  "30834": {
+    "name": "TWGHs Mrs. Wu York Yu Memorial College",
+    "nameCh": "東華三院伍若瑜夫人紀念中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30834",
+    "searchKey": "twghs mrs. wu york yu memorial college"
+  },
+  "30835": {
+    "name": "TWGHs S.C. Gaw Memorial College",
+    "nameCh": "東華三院吳祥川紀念中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30835",
+    "searchKey": "twghs s.c. gaw memorial college"
+  },
+  "30836": {
+    "name": "TWGHs Sun Hoi Directors' College",
+    "nameCh": "東華三院辛亥年總理中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30836",
+    "searchKey": "twghs sun hoi directors' college"
+  },
+  "30838": {
+    "name": "TWGHs Yau Tze Tin Memorial College",
+    "nameCh": "東華三院邱子田紀念中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30838",
+    "searchKey": "twghs yau tze tin memorial college"
+  },
+  "30839": {
+    "name": "TWGHs Yow Kam Yuen College",
+    "nameCh": "東華三院邱金元中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30839",
+    "searchKey": "twghs yow kam yuen college"
+  },
+  "30840": {
+    "name": "Valtorta College",
+    "nameCh": "恩主教書院",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30840",
+    "searchKey": "valtorta college"
+  },
+  "30843": {
+    "name": "Wong Shiu Chi Secondary School",
+    "nameCh": "王肇枝中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30843",
+    "searchKey": "wong shiu chi secondary school"
+  },
+  "30844": {
+    "name": "YCH No.2 Secondary School",
+    "nameCh": "仁濟醫院第二中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30844",
+    "searchKey": "ych no.2 secondary school"
+  },
+  "30846": {
+    "name": "YCH Lim Por Yen Secondary School",
+    "nameCh": "仁濟醫院林百欣中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30846",
+    "searchKey": "ych lim por yen secondary school"
+  },
+  "30847": {
+    "name": "YCH Tung Chi Ying Memorial Secondary School",
+    "nameCh": "仁濟醫院董之英紀念中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30847",
+    "searchKey": "ych tung chi ying memorial secondary school"
+  },
+  "30848": {
+    "name": "YLPMSAA Tang Siu Tong Secondary School",
+    "nameCh": "元朗公立中學校友會鄧兆棠中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30848",
+    "searchKey": "ylpmsaa tang siu tong secondary school"
+  },
+  "30849": {
+    "name": "YMCA of Hong Kong Christian College",
+    "nameCh": "港青基信書院",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30849",
+    "searchKey": "ymca of hong kong christian college"
+  },
+  "30851": {
+    "name": "YPICA Lee Lim Ming College",
+    "nameCh": "恩平工商會李琳明中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30851",
+    "searchKey": "ypica lee lim ming college"
+  },
+  "30852": {
+    "name": "Yuen Long Catholic Secondary School",
+    "nameCh": "元朗天主教中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30852",
+    "searchKey": "yuen long catholic secondary school"
+  },
+  "30854": {
+    "name": "The ELCHK Yuen Long Lutheran Secondary School",
+    "nameCh": "基督教香港信義會元朗信義中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30854",
+    "searchKey": "the elchk yuen long lutheran secondary school"
+  },
+  "30855": {
+    "name": "Yuen Long Merchants Association Secondary School",
+    "nameCh": "元朗商會中學",
+    "region": "New Territories",
+    "moi": "EMI",
+    "code": "30855",
+    "searchKey": "yuen long merchants association secondary school"
+  },
+  "30856": {
+    "name": "Yuen Long Public Secondary School",
+    "nameCh": "元朗公立中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30856",
+    "searchKey": "yuen long public secondary school"
+  },
+  "30862": {
+    "name": "Fanling Lutheran Secondary School",
+    "nameCh": "基督教香港信義會心誠中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30862",
+    "searchKey": "fanling lutheran secondary school"
+  },
+  "30870": {
+    "name": "Lai King Catholic Secondary School",
+    "nameCh": "荔景天主教中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30870",
+    "searchKey": "lai king catholic secondary school"
+  },
+  "30871": {
+    "name": "Ma On Shan St. Joseph's Secondary School",
+    "nameCh": "馬鞍山聖若瑟中學",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30871",
+    "searchKey": "ma on shan st. joseph's secondary school"
+  },
+  "30878": {
+    "name": "ELCHK Lutheran Academy",
+    "nameCh": "基督教香港信義會宏信書院",
+    "region": "New Territories",
+    "moi": "Other",
+    "code": "30878",
+    "searchKey": "elchk lutheran academy"
+  },
+  "40001": {
+    "name": "深圳香港培僑書院龍華信義學校",
+    "nameCh": "深圳香港培僑書院龍華信義學校",
+    "region": "Other",
+    "moi": "EMI",
+    "code": "40001",
+    "searchKey": "深圳香港培僑書院龍華信義學校"
+  },
+  "40003": {
+    "name": "Minxin Hong Kong School (Guangzhou Nansha)",
+    "nameCh": "廣州南沙民心港人子弟學校",
+    "region": "Other",
+    "moi": "Other",
+    "code": "40003",
+    "searchKey": "minxin hong kong school (guangzhou nansha)"
+  },
+  "40004": {
+    "name": "東莞暨大港澳子弟學校",
+    "nameCh": "東莞暨大港澳子弟學校",
+    "region": "Other",
+    "moi": "EMI",
+    "code": "40004",
+    "searchKey": "東莞暨大港澳子弟學校"
+  },
+  "Baptist Lui Ming Choi Secondary School": {
+    "name": "Baptist Lui Ming Choi Secondary School",
+    "region": "New Territories",
+    "moi": "EMI",
+    "searchKey": "baptist lui ming choi secondary school"
+  },
+  "Belilios Public School": {
+    "name": "Belilios Public School",
+    "region": "Hong Kong Island",
+    "moi": "EMI",
+    "searchKey": "belilios public school"
+  },
+  "Carmel Secondary School": {
+    "name": "Carmel Secondary School",
+    "region": "Kowloon",
+    "moi": "EMI",
+    "searchKey": "carmel secondary school"
+  },
+  "Cheung Chuk Shan College": {
+    "name": "Cheung Chuk Shan College",
+    "region": "Hong Kong Island",
+    "moi": "EMI",
+    "searchKey": "cheung chuk shan college"
+  },
+  "China Holiness Church Living Spirit College": {
+    "name": "China Holiness Church Living Spirit College",
+    "region": "New Territories",
+    "moi": "CMI",
+    "searchKey": "china holiness church living spirit college"
+  },
+  "Clementi Secondary School": {
+    "name": "Clementi Secondary School",
+    "region": "Hong Kong Island",
+    "moi": "CMI",
+    "searchKey": "clementi secondary school"
+  },
+  "Diocesan Boys' School": {
+    "name": "Diocesan Boys' School",
+    "region": "Kowloon",
+    "moi": "EMI",
+    "searchKey": "diocesan boys' school"
+  },
+  "Diocesan Girls' School": {
+    "name": "Diocesan Girls' School",
+    "region": "Kowloon",
+    "moi": "EMI",
+    "searchKey": "diocesan girls' school"
+  },
+  "Fukien Secondary School": {
+    "name": "Fukien Secondary School",
+    "region": "Kowloon",
+    "moi": "EMI",
+    "searchKey": "fukien secondary school"
+  },
+  "Good Hope School": {
+    "name": "Good Hope School",
+    "region": "Kowloon",
+    "moi": "EMI",
+    "searchKey": "good hope school"
+  },
+  "Heep Yunn School": {
+    "name": "Heep Yunn School",
+    "region": "Kowloon",
+    "moi": "EMI",
+    "searchKey": "heep yunn school"
+  },
+  "Heung To Middle School": {
+    "name": "Heung To Middle School",
+    "region": "Kowloon",
+    "moi": "CMI",
+    "searchKey": "heung to middle school"
+  },
+  "Holy Trinity College": {
+    "name": "Holy Trinity College",
+    "region": "Kowloon",
+    "moi": "EMI",
+    "searchKey": "holy trinity college"
+  },
+  "Hong Kong Chinese Women's Club College": {
+    "name": "Hong Kong Chinese Women's Club College",
+    "region": "Hong Kong Island",
+    "moi": "EMI",
+    "searchKey": "hong kong chinese women's club college"
+  },
+  "Immaculate Heart of Mary College": {
+    "name": "Immaculate Heart of Mary College",
+    "region": "New Territories",
+    "moi": "EMI",
+    "searchKey": "immaculate heart of mary college"
+  },
+  "Jockey Club Ti-I College": {
+    "name": "Jockey Club Ti-I College",
+    "region": "New Territories",
+    "moi": "EMI",
+    "searchKey": "jockey club ti-i college"
+  },
+  "King's College": {
+    "name": "King's College",
+    "region": "Hong Kong Island",
+    "moi": "EMI",
+    "searchKey": "king's college"
+  },
+  "Kwun Tong Maryknoll College": {
+    "name": "Kwun Tong Maryknoll College",
+    "region": "Kowloon",
+    "moi": "EMI",
+    "searchKey": "kwun tong maryknoll college"
+  },
+  "La Salle College": {
+    "name": "La Salle College",
+    "region": "Kowloon",
+    "moi": "EMI",
+    "searchKey": "la salle college"
+  },
+  "Maryknoll Convent School (Secondary Section)": {
+    "name": "Maryknoll Convent School (Secondary Section)",
+    "region": "Kowloon",
+    "moi": "EMI",
+    "searchKey": "maryknoll convent school (secondary section)"
+  },
+  "New Territories Heung Yee Kuk Yuen Long District Secondary School": {
+    "name": "New Territories Heung Yee Kuk Yuen Long District Secondary School",
+    "region": "New Territories",
+    "moi": "EMI",
+    "searchKey": "new territories heung yee kuk yuen long district secondary school"
+  },
+  "Other": {
+    "name": "Other",
+    "region": "Other",
+    "moi": "Other",
+    "searchKey": "other"
+  },
+  "Po Leung Kuk No.1 W.H. Cheung College": {
+    "name": "Po Leung Kuk No.1 W.H. Cheung College",
+    "region": "Kowloon",
+    "moi": "EMI",
+    "searchKey": "po leung kuk no.1 w.h. cheung college"
+  },
+  "Pui Ching Middle School": {
+    "name": "Pui Ching Middle School",
+    "region": "Kowloon",
+    "moi": "CMI",
+    "searchKey": "pui ching middle school"
+  },
+  "Queen's College": {
+    "name": "Queen's College",
+    "region": "Hong Kong Island",
+    "moi": "EMI",
+    "searchKey": "queen's college"
+  },
+  "Sacred Heart Canossian College": {
+    "name": "Sacred Heart Canossian College",
+    "region": "Hong Kong Island",
+    "moi": "EMI",
+    "searchKey": "sacred heart canossian college"
+  },
+  "Sha Tin Government Secondary School": {
+    "name": "Sha Tin Government Secondary School",
+    "region": "New Territories",
+    "moi": "EMI",
+    "searchKey": "sha tin government secondary school"
+  },
+  "Shau Kei Wan Government Secondary School": {
+    "name": "Shau Kei Wan Government Secondary School",
+    "region": "Hong Kong Island",
+    "moi": "EMI",
+    "searchKey": "shau kei wan government secondary school"
+  },
+  "Sing Yin Secondary School": {
+    "name": "Sing Yin Secondary School",
+    "region": "Kowloon",
+    "moi": "EMI",
+    "searchKey": "sing yin secondary school"
+  },
+  "St. Catharine's School for Girls": {
+    "name": "St. Catharine's School for Girls",
+    "region": "Kowloon",
+    "moi": "EMI",
+    "searchKey": "st. catharine's school for girls"
+  },
+  "St. Joseph's College": {
+    "name": "St. Joseph's College",
+    "region": "Hong Kong Island",
+    "moi": "EMI",
+    "searchKey": "st. joseph's college"
+  },
+  "St. Mark's School": {
+    "name": "St. Mark's School",
+    "region": "Hong Kong Island",
+    "moi": "EMI",
+    "searchKey": "st. mark's school"
+  },
+  "St. Mary's Canossian College": {
+    "name": "St. Mary's Canossian College",
+    "region": "Kowloon",
+    "moi": "EMI",
+    "searchKey": "st. mary's canossian college"
+  },
+  "St. Paul's Co-educational College": {
+    "name": "St. Paul's Co-educational College",
+    "region": "Hong Kong Island",
+    "moi": "EMI",
+    "searchKey": "st. paul's co-educational college"
+  },
+  "St. Paul's College": {
+    "name": "St. Paul's College",
+    "region": "Hong Kong Island",
+    "moi": "EMI",
+    "searchKey": "st. paul's college"
+  },
+  "St. Stephen's Girls' College": {
+    "name": "St. Stephen's Girls' College",
+    "region": "Hong Kong Island",
+    "moi": "EMI",
+    "searchKey": "st. stephen's girls' college"
+  },
+  "Tang King Po School": {
+    "name": "Tang King Po School",
+    "region": "Kowloon",
+    "moi": "CMI",
+    "searchKey": "tang king po school"
+  },
+  "True Light Middle School of Hong Kong": {
+    "name": "True Light Middle School of Hong Kong",
+    "region": "Hong Kong Island",
+    "moi": "CMI",
+    "searchKey": "true light middle school of hong kong"
+  },
+  "Tsuen Wan Government Secondary School": {
+    "name": "Tsuen Wan Government Secondary School",
+    "region": "New Territories",
+    "moi": "EMI",
+    "searchKey": "tsuen wan government secondary school"
+  },
+  "Tuen Mun Government Secondary School": {
+    "name": "Tuen Mun Government Secondary School",
+    "region": "New Territories",
+    "moi": "EMI",
+    "searchKey": "tuen mun government secondary school"
+  },
+  "Wah Yan College, Hong Kong": {
+    "name": "Wah Yan College, Hong Kong",
+    "region": "Hong Kong Island",
+    "moi": "EMI",
+    "searchKey": "wah yan college, hong kong"
+  },
+  "Wah Yan College, Kowloon": {
+    "name": "Wah Yan College, Kowloon",
+    "region": "Kowloon",
+    "moi": "EMI",
+    "searchKey": "wah yan college, kowloon"
+  },
+  "Ying Wa College": {
+    "name": "Ying Wa College",
+    "region": "Kowloon",
+    "moi": "EMI",
+    "searchKey": "ying wa college"
+  },
+  "Yuen Long Merchants Association Secondary School": {
+    "name": "Yuen Long Merchants Association Secondary School",
+    "region": "New Territories",
+    "moi": "EMI",
+    "searchKey": "yuen long merchants association secondary school"
+  }
+}

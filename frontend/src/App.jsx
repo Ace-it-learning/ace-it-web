@@ -19,10 +19,18 @@ import AuthErrorPage from './pages/AuthErrorPage';
 import ExamPage from './pages/ExamPage';
 import WritingExamPage from './pages/WritingExamPage';
 import WritingResultPage from './pages/WritingResultPage';
+import WritingQuestPage from './pages/WritingQuestPage'; // Phase 23
+import WritingQuestMenu from './pages/WritingQuestMenu';
+import WritingQuestBriefing from './components/writing/WritingQuestBriefing'; // Phase 24
 import ListeningExamPage from './pages/ListeningExamPage';
 import ListeningResultPage from './pages/ListeningResultPage';
+import ListeningQuestMenu from './pages/ListeningQuestMenu'; // Phase 25 (Legacy)
+import ListeningBriefing from './components/listening/ListeningBriefing'; // Phase 25 (Refactor)
+import ListeningQuestPage from './pages/ListeningQuestPage'; // Phase 25
 import SpeakingExamPage from './pages/SpeakingExamPage';
 import SpeakingResultPage from './pages/SpeakingResultPage';
+import SpeakingDeliveryPage from './pages/SpeakingDeliveryPage';
+import SpeakingFlowPage from './pages/SpeakingFlowPage';
 import ResultPage from './pages/ResultPage';
 import ReviewPage from './pages/ReviewPage';
 import DiagnosticPage from './pages/DiagnosticPage';
@@ -43,6 +51,7 @@ import MathsDeepDivePage from './pages/MathsDeepDivePage';
 import MathsLearningPage from './pages/MathsLearningPage'; // NEW
 import MockExamPage from './pages/MockExamPage';
 import MathsExamPage from './pages/MathsExamPage';
+import QuestFactoryPage from './pages/QuestFactoryPage';
 
 import ErrorBoundary from './components/ErrorBoundary';
 
@@ -67,6 +76,14 @@ function App() {
                   element={
                     <ProtectedRoute>
                       <AdminDashboard />
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/admin/factory"
+                  element={
+                    <ProtectedRoute>
+                      <QuestFactoryPage />
                     </ProtectedRoute>
                   }
                 />
@@ -137,11 +154,71 @@ function App() {
                   }
                 />
                 <Route
-                  path="/writing/result/:examId"
+                  path="/writing/result/:resultId"
                   element={
                     <ProtectedRoute>
                       <MainLayout>
                         <WritingResultPage />
+                      </MainLayout>
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/writing/quest"
+                  element={
+                    <ProtectedRoute>
+                      <MainLayout>
+                        <WritingQuestPage />
+                      </MainLayout>
+                    </ProtectedRoute>
+                  }
+                />{/* Phase 23 */}
+                <Route
+                  path="/writing/briefing/:genre"
+                  element={
+                    <ProtectedRoute>
+                      <MainLayout>
+                        <WritingQuestBriefing />
+                      </MainLayout>
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/writing/menu"
+                  element={
+                    <ProtectedRoute>
+                      <MainLayout>
+                        <WritingQuestMenu />
+                      </MainLayout>
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/listening/menu"
+                  element={
+                    <ProtectedRoute>
+                      <MainLayout>
+                        <ListeningQuestMenu />
+                      </MainLayout>
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/listening/briefing/:questId"
+                  element={
+                    <ProtectedRoute>
+                      <MainLayout>
+                        <ListeningBriefing />
+                      </MainLayout>
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/listening/quest"
+                  element={
+                    <ProtectedRoute>
+                      <MainLayout>
+                        <ListeningQuestPage />
                       </MainLayout>
                     </ProtectedRoute>
                   }
@@ -345,16 +422,6 @@ function App() {
                   }
                 />
                 <Route
-                  path="/redemption"
-                  element={
-                    <ProtectedRoute>
-                      <MainLayout>
-                        <RedemptionStore />
-                      </MainLayout>
-                    </ProtectedRoute>
-                  }
-                />
-                <Route
                   path="/usage"
                   element={
                     <ProtectedRoute>
@@ -407,6 +474,34 @@ function App() {
                   element={
                     <ProtectedRoute>
                       <SpeakingInteractionPage />
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/speaking/quest/delivery"
+                  element={
+                    <ProtectedRoute>
+                      <MainLayout fullWidth={true}>
+                        <SpeakingDeliveryPage />
+                      </MainLayout>
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/speaking/quest/flow"
+                  element={
+                    <ProtectedRoute>
+                      <SpeakingFlowPage />
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/speaking/quest/interaction"
+                  element={
+                    <ProtectedRoute>
+                      <MainLayout fullWidth={true}>
+                        <SpeakingInteractionPage />
+                      </MainLayout>
                     </ProtectedRoute>
                   }
                 />

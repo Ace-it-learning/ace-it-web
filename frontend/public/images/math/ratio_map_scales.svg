@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300">
+  <defs>
+    <style>
+      .bg { fill: #1e1e1e; }
+      .map { fill: #2c3e50; stroke: #34495e; stroke-width: 3; }
+      .ruler { fill: rgba(255,255,255,0.1); stroke: #ecf0f1; stroke-width: 2; }
+      .ruler-tick { stroke: #ecf0f1; stroke-width: 2; }
+      .text { font-family: sans-serif; fill: #ddd; font-size: 14px; }
+      .title { font-size: 16px; font-weight: bold; fill: #fff; }
+      .math { font-family: serif; font-style: italic; font-size: 16px; fill: #f39c12; }
+      .highlight { fill: #e74c3c; font-weight: bold; }
+    </style>
+  </defs>
+
+  <rect width="600" height="300" class="bg"/>
+
+  <text x="300" y="30" class="title" text-anchor="middle">Map Scales: Linear vs. Area</text>
+
+  <!-- Map Background -->
+  <path d="M 100 80 Q 200 40 300 80 T 500 80 L 500 220 Q 400 260 300 220 T 100 220 Z" class="map"/>
+
+  <!-- Ruler -->
+  <rect x="150" y="140" width="100" height="20" class="ruler"/>
+  <line x1="150" y1="140" x2="150" y2="150" class="ruler-tick"/>
+  <line x1="200" y1="140" x2="200" y2="145" class="ruler-tick"/>
+  <line x1="250" y1="140" x2="250" y2="150" class="ruler-tick"/>
+  <text x="200" y="130" class="text" text-anchor="middle">1 cm on map</text>
+
+  <path d="M 260 150 Q 300 120 350 150" fill="none" stroke="#e74c3c" stroke-width="2" stroke-dasharray="4 4"/>
+  <polygon points="345,145 350,150 345,155" fill="#e74c3c"/>
+
+  <!-- Actual Road/Lake -->
+  <rect x="360" y="130" width="180" height="40" class="ruler" stroke-dasharray="2 2"/>
+  <text x="450" y="120" class="text" text-anchor="middle">n cm (or km) in reality</text>
+  <text x="450" y="155" class="highlight" text-anchor="middle">Scale = 1 : n</text>
+
+  <rect x="150" y="240" width="300" height="40" rx="5" fill="#333" stroke="#555"/>
+  <text x="300" y="265" class="math" text-anchor="middle">Map Area × n² = Actual Area</text>
+</svg>

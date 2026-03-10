@@ -3,7 +3,7 @@ import { Play, Pause, Zap } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 import IntegratedListeningBoard from '../listening/IntegratedListeningBoard';
 
-const DiagnosticListening = ({ assets, onSubmit }) => {
+const DiagnosticListening = ({ assets, onSubmit, isSubmitting }) => {
     const { user } = useAuth();
     const [started, setStarted] = useState(false);
     const [isPlaying, setIsPlaying] = useState(false);
@@ -88,7 +88,7 @@ const DiagnosticListening = ({ assets, onSubmit }) => {
                     questions={assets.questions}
                     onAnswer={(qid, val) => setAnswers(prev => ({ ...prev, [qid]: val }))}
                     answers={answers}
-                    isGenerating={isGenerating}
+                    isGenerating={isGenerating || isSubmitting}
                     onSubmit={handleSubmit}
                 />
             );
@@ -147,10 +147,10 @@ const DiagnosticListening = ({ assets, onSubmit }) => {
 
                     <button
                         onClick={handleSubmit}
-                        disabled={isGenerating}
+                        disabled={isGenerating || isSubmitting}
                         className="w-full py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-bold transition-all shadow-lg hover:shadow-xl mt-8 disabled:bg-gray-400 disabled:cursor-not-allowed"
                     >
-                        {isGenerating ? "Generating..." : "Submit Listening Check"}
+                        {isGenerating ? "Generating..." : (isSubmitting ? "Processing Analysis..." : "Submit Listening Check")}
                     </button>
                 </div>
             </div>

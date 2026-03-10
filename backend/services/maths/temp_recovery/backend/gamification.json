@@ -1,0 +1,43 @@
+{
+    "system_id": "ace_it_gamification_v1",
+    "leveling_curve": {
+        "max_tier": 100,
+        "base_xp_gap": 100,
+        "increment": 200,
+        "formula": "XP_Required_Next = 100 + (current_level - 1) * 200",
+        "total_xp_to_cap": 980100
+    },
+    "anti_cheating": {
+        "daily_xp_cap": 2500,
+        "suspicious_speed_threshold": "completion_time < 20%_of_average",
+        "ai_detection_required_for": [
+            "Level_5_Certificate"
+        ],
+        "suspicious_popup_trigger": "if_speed_threshold_met",
+        "penalty_multiplier": 0.1
+    },
+    "multipliers": {
+        "skill_jump_boost": 1.5,
+        "overall_milestone_grant": 2000
+    },
+    "xp_table": {
+        "practice_question": {
+            "correct": 10,
+            "incorrect": 2
+        },
+        "mock_exam_completion": {
+            "reading": 500,
+            "writing": 500,
+            "listening": 400,
+            "speaking": 300
+        },
+        "mock_exam_bonus": {
+            "level_3_plus": 100,
+            "level_5_plus": 300
+        },
+        "onboarding": {
+            "profile_setup": 50,
+            "diagnostic_test": 200
+        }
+    }
+}

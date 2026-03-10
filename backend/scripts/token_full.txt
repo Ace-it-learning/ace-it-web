@@ -1,0 +1,18 @@
+﻿
+--- User: Jack Tam (XgbHIk8exPSXd8BKQbSPRGTfBal1) ---
+Usage Summary (overall): {
+  "total_prompt_tokens": 16711,
+  "last_updated": {
+    "_seconds": 1772422869,
+    "_nanoseconds": 289000000
+  },
+  "total_cost_usd": 0.0040409999999999995,
+  "total_completion_tokens": 5924
+}
+Profile Data (Quota fields): {}
+Recent Usage Stats:
+- [2026-03-02T03:41:09.208Z] gemini-2.0-flash: 3525 tokens (chat)
+- [2026-02-28T16:28:10.455Z] gemini-2.0-flash: 3294 tokens (chat)
+- [2026-02-26T13:32:31.739Z] gemini-2.0-flash: 3663 tokens (chat)
+- [2026-02-26T06:01:36.941Z] gemini-2.0-flash: 3105 tokens (chat)
+- [2026-02-26T03:12:53.462Z] gemini-2.0-flash: 3309 tokens (chat)

@@ -1,0 +1,222 @@
+{
+    "is_modular": true,
+    "name": "Log & Exp Functions",
+    "name_zh": "對數與指數函數",
+    "roadmap": "Start by mastering the basic laws of indices and understanding exponential growth/decay. Then, learn the properties of logarithms (product, quotient, power rules) and how to change bases. Finally, apply these skills to solve complex exponential and logarithmic equations and understand their graphical representations.",
+    "roadmap_zh": "首先掌握基本的指數定律並理解指數的增長/衰退。然後，學習對數的性質（積、商、冪法則）及換底公式。最後，應用這些技巧來解複雜的指數與對數方程，並理解它們的圖形特徵。",
+    "learning_modules": [
+        {
+            "module_id": "MOD_01",
+            "title": "Laws of Indices & Exponents",
+            "title_zh": "指數定律",
+            "concepts": [
+                {
+                    "concept_id": "C01_INDICES_BASIC",
+                    "name": "Basic Laws of Indices",
+                    "name_zh": "基本指數定律",
+                    "formula": "a^m \\times a^n = a^{m+n} \\\\ \\frac{a^m}{a^n} = a^{m-n} \\\\ (a^m)^n = a^{mn}",
+                    "variables": {
+                        "a": "The base (must be non-zero for division and negative indices).",
+                        "m, n": "The exponents (indices)."
+                    },
+                    "variables_zh": {
+                        "a": "底數（對於除法和負指數，不能為零）。",
+                        "m, n": "指數。"
+                    },
+                    "key_takeaway": "When multiplying terms with the same base, add their exponents. When dividing, subtract them. When raising a power to a power, multiply the exponents.",
+                    "key_takeaway_zh": "當相乘同底數的項時，將指數相加。相除時，將指數相減。當一個乘方再自乘時，將指數相乘。",
+                    "visual_aid": "/images/math/alg_indices.svg"
+                },
+                {
+                    "concept_id": "C02_NEGATIVE_FRACTIONAL",
+                    "name": "Negative & Fractional Indices",
+                    "name_zh": "負指數與分數指數",
+                    "formula": "a^{-n} = \\frac{1}{a^n} \\\\ a^{\\frac{1}{n}} = \\sqrt[n]{a} \\\\ a^{\\frac{m}{n}} = (\\sqrt[n]{a})^m = \\sqrt[n]{a^m}",
+                    "variables": {
+                        "n": "The root in a fractional index or the power in a negative index."
+                    },
+                    "variables_zh": {
+                        "n": "分數指數的分母（根指數）或負指數的數值。"
+                    },
+                    "key_takeaway": "A negative index means 'reciprocal'. A fractional index represents a root, where the denominator is the root and the numerator is the power.",
+                    "key_takeaway_zh": "負指數表示「倒數」。分數指數代表根，其中分母是根指數，分子是次方。",
+                    "visual_aid": "/images/math/alg_fractional_indices.svg"
+                }
+            ],
+            "tips": [
+                "Always try to express numbers with the same prime base (e.g., $9^x$ and $27^y$ should both be converted to base 3) before applying the laws of indices."
+            ],
+            "tips_zh": [
+                "在應用指數定律之前，總是嘗試將數字化為相同的質因數底（例如，將 $9^x$ 和 $27^y$ 都轉換為以 3 為底）。"
+            ],
+            "common_traps": [
+                {
+                    "trap": "Adding Bases that are Multiplied",
+                    "trap_zh": "錯誤相加相乘的底數",
+                    "description": "Thinking that $2^3 \\times 3^3 = 5^3$ or $2^x \\times 3^x = 5^x$.",
+                    "description_zh": "誤以為 $2^3 \\times 3^3 = 5^3$ 或 $2^x \\times 3^x = 5^x$。",
+                    "fix": "You can only combine the bases if the operations and exponents allow it. Specifically, $a^x \\times b^x = (ab)^x$. Thus $2^x \\times 3^x = 6^x$, not $5^x$.",
+                    "fix_zh": "只有當運算和指數允許時才能組合底數。具體來說，$a^x \\times b^x = (ab)^x$。因此 $2^x \\times 3^x = 6^x$，而非 $5^x$。"
+                }
+            ]
+        },
+        {
+            "module_id": "MOD_02",
+            "title": "Properties of Logarithms",
+            "title_zh": "對數的性質",
+            "concepts": [
+                {
+                    "concept_id": "C03_LOG_RULES",
+                    "name": "Product, Quotient & Power Rules",
+                    "name_zh": "對數的積、商與冪法則",
+                    "formula": "\\log_a(xy) = \\log_a x + \\log_a y \\\\ \\log_a \\left(\\frac{x}{y}\\right) = \\log_a x - \\log_a y \\\\ \\log_a(x^n) = n \\log_a x",
+                    "variables": {
+                        "a": "The base of the logarithm ($a > 0, a \\neq 1$).",
+                        "x, y": "The arguments of the logarithm (must be positive)."
+                    },
+                    "variables_zh": {
+                        "a": "對數的底數 ($a > 0, a \\neq 1$)。",
+                        "x, y": "對數的真數（必須為正數）。"
+                    },
+                    "key_takeaway": "Logarithms transform multiplication into addition, division into subtraction, and powers into multiplication. These rules are essential for solving equations where the unknown is an exponent.",
+                    "key_takeaway_zh": "對數將乘法轉化為加法，將除法轉化為減法，將次方轉化為乘法。這些法則是解未知數在指數位置的方程的關鍵。",
+                    "visual_aid": "/images/math/alg_log_rules.svg"
+                },
+                {
+                    "concept_id": "C04_CHANGE_BASE",
+                    "name": "Change of Base Formula",
+                    "name_zh": "換底公式",
+                    "formula": "\\log_a b = \\frac{\\log_c b}{\\log_c a} \\\\ \\log_a b = \\frac{1}{\\log_b a}",
+                    "variables": {
+                        "c": "A new base of your choice (usually 10 for calculators)."
+                    },
+                    "variables_zh": {
+                        "c": "你選擇的新底數（通常在計算機中為 10）。"
+                    },
+                    "key_takeaway": "Use the change of base formula when you need to calculate a logarithm with a non-standard base, or when you need to match bases in a logarithmic equation.",
+                    "key_takeaway_zh": "當需要計算非標準底數的對數，或需要在對數方程中使底數一致時，請使用換底公式。",
+                    "visual_aid": null
+                }
+            ],
+            "tips": [
+                "Remember the fundamental definition: if $y = a^x$, then $x = \\log_a y$. The base of the exponent becomes the base of the logarithm."
+            ],
+            "tips_zh": [
+                "記住基本定義：如果 $y = a^x$，那麼 $x = \\log_a y$。指數的底數變成了對數的底數。"
+            ],
+            "common_traps": [
+                {
+                    "trap": "Logarithm of a Sum",
+                    "trap_zh": "和的對數錯誤",
+                    "description": "Incorrectly stating that $\\log(x + y) = \\log x + \\log y$.",
+                    "description_zh": "錯誤地認為 $\\log(x + y) = \\log x + \\log y$。",
+                    "fix": "The sum rule applies to the *product* of arguments: $\\log(xy) = \\log x + \\log y$. There is no simple expansion for $\\log(x + y)$.",
+                    "fix_zh": "加法則適用於真數的「乘積」：$\\log(xy) = \\log x + \\log y$。對於 $\\log(x + y)$ 沒有簡單的展開公式。"
+                }
+            ]
+        },
+        {
+            "module_id": "MOD_03",
+            "title": "Solving Exponential & Logarithmic Equations",
+            "title_zh": "解指數與對數方程",
+            "concepts": [
+                {
+                    "concept_id": "C05_EXPONENTIAL_EQ",
+                    "name": "Exponential Equations",
+                    "name_zh": "指數方程",
+                    "formula": "a^{f(x)} = a^{g(x)} \\implies f(x) = g(x) \\\\ a^x = b \\implies x = \\log_a b = \\frac{\\log b}{\\log a}",
+                    "variables": {
+                        "x": "The unknown exponent we are trying to find."
+                    },
+                    "variables_zh": {
+                        "x": "我們要求解的未知指數。"
+                    },
+                    "key_takeaway": "If you can express both sides with the same base, simply equate the powers. If not, take the logarithm of both sides to bring the exponent down.",
+                    "key_takeaway_zh": "如果你能將方程兩邊化為相同的底數，只需令次方相等即可。如果不行，則在兩邊取對數以將指數移下。",
+                    "visual_aid": null
+                },
+                {
+                    "concept_id": "C06_LOG_EQ",
+                    "name": "Logarithmic Equations",
+                    "name_zh": "對數方程",
+                    "formula": "\\log_a f(x) = \\log_a g(x) \\implies f(x) = g(x) \\\\ \\log_a f(x) = c \\implies f(x) = a^c",
+                    "variables": {
+                        "f(x), g(x)": "Expressions containing the unknown variable. Both must be strictly > 0."
+                    },
+                    "variables_zh": {
+                        "f(x), g(x)": "含有未知數的表達式。兩者都必須嚴格大於 0。"
+                    },
+                    "key_takeaway": "Combine multiple logarithms using log rules into a single logarithm, then rewrite in exponential form. Always check your final answers to ensure the argument of any logarithm is strictly positive.",
+                    "key_takeaway_zh": "利用對數法則將多個對數合併成單一對數，然後重寫為指數形式。務必檢查最終答案，以確保任何對數的真數嚴格大於零。",
+                    "visual_aid": null
+                }
+            ],
+            "tips": [
+                "For advanced DSE equations like $A(a^{2x}) + B(a^x) + C = 0$, substitute $u = a^x$ to turn it into a familiar quadratic equation $Au^2 + Bu + C = 0$. After solving for $u$, remember to solve for $x$ by $a^x = u$."
+            ],
+            "tips_zh": [
+                "對於進階的 DSE 方程（如 $A(a^{2x}) + B(a^x) + C = 0$），代入 $u = a^x$ 將其轉化為熟悉的二次方程 $Au^2 + Bu + C = 0$。求出 $u$ 後，記住要利用 $a^x = u$ 來求出 $x$。"
+            ],
+            "common_traps": [
+                {
+                    "trap": "Ignoring the Domain of Logarithms",
+                    "trap_zh": "忽略對數的定義域",
+                    "description": "Accepting a solution that makes the argument of a logarithm negative or zero.",
+                    "description_zh": "接受使對數的真數變為負數或零的解。",
+                    "fix": "After solving a logarithmic equation, substitute the solutions back into the original equation. Reject any solutions that result in taking the logarithm of a non-positive number.",
+                    "fix_zh": "解出對數方程後，把解代入原始方程。如果代入後會對非正數取對數，則必須捨去該解。"
+                }
+            ]
+        },
+        {
+            "module_id": "MOD_04",
+            "title": "Graphical Properties",
+            "title_zh": "圖像性質",
+            "concepts": [
+                {
+                    "concept_id": "C07_EXP_GRAPH",
+                    "name": "Exponential Graphs",
+                    "name_zh": "指數函數圖像",
+                    "formula": "y = a^x",
+                    "key_takeaway": "Exponential graphs always pass through (0, 1) and have a horizontal asymptote at y=0. If a > 1, the graph grows; if 0 < a < 1, it decays.",
+                    "key_takeaway_zh": "指數函數圖像恆過 (0, 1) 點，且以 y=0 為水平漸近線。若 a > 1，圖像增長；若 0 < a < 1，圖像衰減。",
+                    "visual_aid": "/images/math/logexp_growth.png"
+                },
+                {
+                    "concept_id": "C08_LOG_GRAPH",
+                    "name": "Logarithmic Graphs",
+                    "name_zh": "對數函數圖像",
+                    "formula": "y = \\log_a x",
+                    "key_takeaway": "Logarithmic graphs are the reflection of exponential graphs across y=x. They pass through (1, 0) and have a vertical asymptote at x=0.",
+                    "key_takeaway_zh": "對數函數圖像與指數函數圖像關於 y=x 對稱。圖像恆過 (1, 0) 點，且以 x=0 為垂直漸近線。",
+                    "visual_aid": "/images/math/logexp_log_graph.png"
+                }
+            ]
+        },
+        {
+            "module_id": "MOD_05",
+            "title": "Linearization (DSE Section B)",
+            "title_zh": "線性化 (DSE 乙部)",
+            "concepts": [
+                {
+                    "concept_id": "C09_LINEAR_EXP",
+                    "name": "Linearizing $y = Ab^x$",
+                    "name_zh": "將 $y = Ab^x$ 線性化",
+                    "formula": "\\log y = x \\log b + \\log A",
+                    "key_takeaway": "A plot of log y against x results in a straight line with slope log b and vertical intercept log A. This is a common Section B topic.",
+                    "key_takeaway_zh": "將 log y 對 x 作圖會得到一條直線，斜率為 log b，垂直截距為 log A。這是乙部的常考題目。",
+                    "visual_aid": "/images/math/logexp_linear_exp.png"
+                },
+                {
+                    "concept_id": "C10_LINEAR_POWER",
+                    "name": "Linearizing $y = Ax^n$",
+                    "name_zh": "將 $y = Ax^n$ 線性化",
+                    "formula": "\\log y = n \\log x + \\log A",
+                    "key_takeaway": "A plot of log y against log x results in a straight line with slope n and vertical intercept log A.",
+                    "key_takeaway_zh": "將 log y 對 log x 作圖會得到一條直線，斜率為 n，垂直截距為 log A。",
+                    "visual_aid": "/images/math/logexp_linear_power.png"
+                }
+            ]
+        }
+    ]
+}

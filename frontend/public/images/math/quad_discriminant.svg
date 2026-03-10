@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4F46E5"/>
+      <stop offset="100%" stop-color="#312E81"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#bg)"/>
+  
+  <text x="200" y="50" font-family="sans-serif" font-size="24" font-weight="bold" fill="white" text-anchor="middle" letter-spacing="1">NATURE OF ROOTS</text>
+  
+  <text x="200" y="100" font-family="serif" font-size="32" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Δ = b² - 4ac</text>
+
+  <!-- Table/Cases -->
+  <g transform="translate(50, 140)">
+    <!-- Case 1 -->
+    <rect x="0" y="0" width="90" height="80" rx="8" fill="white" fill-opacity="0.1" stroke="#6EE7B7" stroke-width="2"/>
+    <text x="45" y="30" font-family="serif" font-size="22" font-weight="bold" fill="#6EE7B7" text-anchor="middle">Δ &gt; 0</text>
+    <text x="45" y="60" font-family="sans-serif" font-size="12" fill="white" text-anchor="middle">2 Real Roots</text>
+    
+    <!-- Case 2 -->
+    <rect x="105" y="0" width="90" height="80" rx="8" fill="white" fill-opacity="0.1" stroke="#FDE047" stroke-width="2"/>
+    <text x="150" y="30" font-family="serif" font-size="22" font-weight="bold" fill="#FDE047" text-anchor="middle">Δ = 0</text>
+    <text x="150" y="60" font-family="sans-serif" font-size="12" fill="white" text-anchor="middle">1 Real Root</text>
+    
+    <!-- Case 3 -->
+    <rect x="210" y="0" width="90" height="80" rx="8" fill="white" fill-opacity="0.1" stroke="#FCA5A5" stroke-width="2"/>
+    <text x="255" y="30" font-family="serif" font-size="22" font-weight="bold" fill="#FCA5A5" text-anchor="middle">Δ &lt; 0</text>
+    <text x="255" y="60" font-family="sans-serif" font-size="12" fill="white" text-anchor="middle">No Real Roots</text>
+  </g>
+
+  <text x="200" y="260" font-family="sans-serif" font-size="14" font-weight="bold" fill="#C7D2FE" text-anchor="middle">DISCRIMINANT (Δ) DETERMINES THE TYPE OF ROOTS</text>
+</svg>

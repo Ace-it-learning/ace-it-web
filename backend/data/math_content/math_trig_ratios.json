@@ -1,0 +1,525 @@
+{
+    "is_modular": true,
+    "name": "Trig Ratios & Applications",
+    "name_zh": "三角比及其應用",
+    "roadmap": "Master the relationships between sides and angles in any triangle. Start with the Sine Rule for sides and angles, then conquer the Cosine Rule for complex triangles. Finally, apply these to real-world scenarios including Area of Triangle and 2D Bearings.",
+    "roadmap_zh": "掌握任何三角形中邊與角之間的關係。從正弦公式開始處理邊與角，然後利用餘弦公式處理複雜三角形。最後，將這些應用於現實場景，包括三角形面積和二維方位。",
+    "learning_modules": [
+        {
+            "module_id": "MOD_01",
+            "title": "Sine Rule & Area of Triangle",
+            "title_zh": "正弦公式與三角形面積",
+            "concepts": [
+                {
+                    "concept_id": "C01_SINE_RULE",
+                    "name": "Sine Rule",
+                    "name_zh": "正弦公式",
+                    "formula": "\\[ \\frac{a}{\\sin A} = \\frac{b}{\\sin B} = \\frac{c}{\\sin C} \\]",
+                    "key_takeaway": "Use the Sine Rule when you know 'matching pairs' of a side and its opposite angle. It works for finding both sides and angles.",
+                    "key_takeaway_zh": "當你知道一組「對邊和對角」時，使用正弦公式。它可以用來求邊長或角度。簡寫：「正弦公式」。",
+                    "diagram_json": {
+                        "type": "coordinate",
+                        "x_range": [
+                            -1,
+                            7
+                        ],
+                        "y_range": [
+                            -1,
+                            6
+                        ],
+                        "points": [
+                            {
+                                "label": "A",
+                                "pos": [
+                                    1,
+                                    1
+                                ],
+                                "offset": [
+                                    -0.5,
+                                    -0.5
+                                ],
+                                "color": "#E11D48"
+                            },
+                            {
+                                "label": "B",
+                                "pos": [
+                                    6,
+                                    1
+                                ],
+                                "offset": [
+                                    0.5,
+                                    -0.5
+                                ],
+                                "color": "#059669"
+                            },
+                            {
+                                "label": "C",
+                                "pos": [
+                                    3,
+                                    5
+                                ],
+                                "offset": [
+                                    0,
+                                    0.5
+                                ],
+                                "color": "#D97706"
+                            }
+                        ],
+                        "lines": [
+                            {
+                                "pts": [
+                                    "B",
+                                    "C"
+                                ],
+                                "color": "#E11D48",
+                                "linewidth": 3,
+                                "label": "a"
+                            },
+                            {
+                                "pts": [
+                                    "C",
+                                    "A"
+                                ],
+                                "color": "#059669",
+                                "linewidth": 3,
+                                "label": "b"
+                            },
+                            {
+                                "pts": [
+                                    "A",
+                                    "B"
+                                ],
+                                "color": "#D97706",
+                                "linewidth": 3,
+                                "label": "c"
+                            }
+                        ],
+                        "angles": [
+                            {
+                                "vertex": [
+                                    1,
+                                    1
+                                ],
+                                "p1": [
+                                    6,
+                                    1
+                                ],
+                                "p2": [
+                                    3,
+                                    5
+                                ],
+                                "label": "A",
+                                "radius": 0.8,
+                                "color": "#E11D48"
+                            },
+                            {
+                                "vertex": [
+                                    6,
+                                    1
+                                ],
+                                "p1": [
+                                    3,
+                                    5
+                                ],
+                                "p2": [
+                                    1,
+                                    1
+                                ],
+                                "label": "B",
+                                "radius": 0.8,
+                                "color": "#059669"
+                            },
+                            {
+                                "vertex": [
+                                    3,
+                                    5
+                                ],
+                                "p1": [
+                                    1,
+                                    1
+                                ],
+                                "p2": [
+                                    6,
+                                    1
+                                ],
+                                "label": "C",
+                                "radius": 0.8,
+                                "color": "#D97706"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "concept_id": "C02_TRIANGLE_AREA",
+                    "name": "Area of Any Triangle",
+                    "name_zh": "三角形面積",
+                    "formula": "\\[ \\text{Area} = \\frac{1}{2}ab \\sin C \\]",
+                    "key_takeaway": "The area is half the product of two sides and the sine of the included angle (the angle between them).",
+                    "key_takeaway_zh": "面積等於兩邊及其夾角正弦值的乘積的一半。簡寫：「三角形面積」。",
+                    "diagram_json": {
+                        "type": "coordinate",
+                        "x_range": [
+                            -1,
+                            6
+                        ],
+                        "y_range": [
+                            -1,
+                            5
+                        ],
+                        "points": [
+                            {
+                                "label": "C",
+                                "pos": [
+                                    0,
+                                    0
+                                ],
+                                "offset": [
+                                    -0.3,
+                                    -0.3
+                                ],
+                                "color": "#4F46E5"
+                            },
+                            {
+                                "label": "A",
+                                "pos": [
+                                    2,
+                                    4
+                                ],
+                                "offset": [
+                                    0,
+                                    0.4
+                                ],
+                                "color": "#059669"
+                            },
+                            {
+                                "label": "B",
+                                "pos": [
+                                    5,
+                                    0
+                                ],
+                                "offset": [
+                                    0.3,
+                                    -0.3
+                                ],
+                                "color": "#E11D48"
+                            }
+                        ],
+                        "lines": [
+                            {
+                                "pts": [
+                                    "C",
+                                    "A"
+                                ],
+                                "color": "#059669",
+                                "linewidth": 3,
+                                "label": "b"
+                            },
+                            {
+                                "pts": [
+                                    "C",
+                                    "B"
+                                ],
+                                "color": "#E11D48",
+                                "linewidth": 3,
+                                "label": "a"
+                            },
+                            {
+                                "pts": [
+                                    "A",
+                                    "B"
+                                ],
+                                "color": "#indigo",
+                                "linewidth": 1.5,
+                                "style": "--"
+                            }
+                        ],
+                        "angles": [
+                            {
+                                "vertex": [
+                                    0,
+                                    0
+                                ],
+                                "p1": [
+                                    5,
+                                    0
+                                ],
+                                "p2": [
+                                    2,
+                                    4
+                                ],
+                                "label": "C",
+                                "radius": 1.0,
+                                "color": "#4F46E5"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "tips": [
+                "Always check for the 'Ambiguous Case' of the Sine Rule. When you are given Side-Side-Angle (SSA) and finding an angle $\\theta$, remember that $\\sin(180^\\circ - \\theta) = \\sin \\theta$. There might be two possible triangles!"
+            ],
+            "tips_zh": [
+                "總是檢查正弦公式的「含糊情況」。當給定 邊-邊-角 (SSA) 並求角度 $\\theta$ 時，請記住 $\\sin(180^\\circ - \\theta) = \\sin \\theta$。可能存在兩個符合條件的三角形！"
+            ],
+            "common_traps": [
+                {
+                    "trap": "Using Sine Rule for SAS",
+                    "trap_zh": "在 SAS 情況下錯誤使用正弦公式",
+                    "description": "Trying to use the Sine Rule when given two sides and the included angle (SAS).",
+                    "description_zh": "當給定兩邊及其夾角 (SAS) 時，嘗試使用正弦公式。",
+                    "fix": "The Sine Rule requires at least one matching pair of a side and its opposite angle. For SAS, you must use the Cosine Rule instead.",
+                    "fix_zh": "正弦公式至少需要一組已知的「對邊與對角」。對於 SAS，必須改用餘弦公式。"
+                }
+            ]
+        },
+        {
+            "module_id": "MOD_02",
+            "title": "Cosine Rule",
+            "title_zh": "餘弦公式",
+            "concepts": [
+                {
+                    "concept_id": "C03_COSINE_RULE",
+                    "name": "Cosine Rule",
+                    "name_zh": "餘弦公式",
+                    "formula": "\\[ \\begin{array}{c} a^2 = b^2 + c^2 - 2bc \\cos A \\\\ \\cos A = \\frac{b^2 + c^2 - a^2}{2bc} \\end{array} \\]",
+                    "key_takeaway": "Use the Cosine Rule for SAS (Side-Angle-Side) to find the opposite side, or SSS (Side-Side-Side) to find any angle.",
+                    "key_takeaway_zh": "給定兩邊及其夾角 (SAS) 時用來求對邊；給定三邊 (SSS) 時用來求任何角。簡寫：「餘弦公式」。",
+                    "diagram_json": {
+                        "type": "coordinate",
+                        "x_range": [
+                            -1,
+                            7
+                        ],
+                        "y_range": [
+                            -1,
+                            6
+                        ],
+                        "points": [
+                            {
+                                "label": "A",
+                                "pos": [
+                                    1,
+                                    1
+                                ],
+                                "offset": [
+                                    -0.4,
+                                    -0.4
+                                ],
+                                "color": "#4F46E5"
+                            },
+                            {
+                                "label": "B",
+                                "pos": [
+                                    6,
+                                    1
+                                ],
+                                "offset": [
+                                    0.4,
+                                    -0.4
+                                ],
+                                "color": "#059669"
+                            },
+                            {
+                                "label": "C",
+                                "pos": [
+                                    4,
+                                    5
+                                ],
+                                "offset": [
+                                    0,
+                                    0.5
+                                ],
+                                "color": "#E11D48"
+                            }
+                        ],
+                        "lines": [
+                            {
+                                "pts": [
+                                    "B",
+                                    "C"
+                                ],
+                                "color": "#E11D48",
+                                "linewidth": 3,
+                                "label": "a"
+                            },
+                            {
+                                "pts": [
+                                    "C",
+                                    "A"
+                                ],
+                                "color": "#059669",
+                                "linewidth": 3,
+                                "label": "b"
+                            },
+                            {
+                                "pts": [
+                                    "A",
+                                    "B"
+                                ],
+                                "color": "#4F46E5",
+                                "linewidth": 3,
+                                "label": "c"
+                            }
+                        ],
+                        "angles": [
+                            {
+                                "vertex": [
+                                    1,
+                                    1
+                                ],
+                                "p1": [
+                                    6,
+                                    1
+                                ],
+                                "p2": [
+                                    4,
+                                    5
+                                ],
+                                "label": "A",
+                                "radius": 0.8,
+                                "color": "#4F46E5"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "tips": [
+                "If you know all three sides (SSS) and need to find all angles, use the Cosine Rule to find the LARGEST angle first (the one opposite the longest side). This naturally handles obtuse angles (since $\\cos \\theta$ is negative for obtuse angles) and prevents the Ambiguous Case if you switch to the Sine Rule later."
+            ],
+            "tips_zh": [
+                "如果已知三邊 (SSS) 並需要求所有角，請先使用餘弦公式求出最大角（最長邊對應的角）。這能自然處理鈍角（因為鈍角的 $\\cos \\theta$ 為負），並且防止之後轉用正弦公式時出現含糊情況。"
+            ],
+            "common_traps": [
+                {
+                    "trap": "Calculator Degree/Radian Mode",
+                    "trap_zh": "計算機的角度/弧度模式錯誤",
+                    "description": "Getting strange answers because the calculator is in Radian mode instead of Degree mode.",
+                    "description_zh": "因為計算機處於弧度模式而非角度模式，導致得出奇怪的答案。",
+                    "fix": "Always check for the 'D' symbol at the top of your calculator screen before starting trigonometry questions in HKDSE.",
+                    "fix_zh": "在開始 HKDSE 的三角學題目之前，務必檢查計算機屏幕頂部是否有「D」符號。"
+                }
+            ]
+        },
+        {
+            "module_id": "MOD_03",
+            "title": "2D Bearings & Elevation",
+            "title_zh": "二維方位角與仰角",
+            "concepts": [
+                {
+                    "concept_id": "C04_BEARINGS",
+                    "name": "Three-Figure Bearings",
+                    "name_zh": "三位方位角",
+                    "formula": "000^\\circ \\le \\theta < 360^\\circ",
+                    "key_takeaway": "Bearings are always measured CLOCKWISE from the NORTH line, and must be written with three digits (e.g., $045^\\circ$ instead of $45^\\circ$).",
+                    "key_takeaway_zh": "方位角總是從正北方向 順時針 測量，並且必須用三位數字書寫（例如 $045^\\circ$ 而非 $45^\\circ$）。",
+                    "diagram_json": {
+                        "type": "coordinate",
+                        "x_range": [
+                            -2,
+                            8
+                        ],
+                        "y_range": [
+                            -2,
+                            8
+                        ],
+                        "points": [
+                            {
+                                "label": "A",
+                                "pos": [
+                                    0,
+                                    0
+                                ],
+                                "offset": [
+                                    -0.5,
+                                    -0.5
+                                ]
+                            },
+                            {
+                                "label": "N",
+                                "pos": [
+                                    0,
+                                    5
+                                ],
+                                "offset": [
+                                    0,
+                                    0.5
+                                ]
+                            },
+                            {
+                                "label": "B",
+                                "pos": [
+                                    4,
+                                    4
+                                ],
+                                "offset": [
+                                    0.5,
+                                    0.5
+                                ]
+                            }
+                        ],
+                        "lines": [
+                            {
+                                "pts": [
+                                    "A",
+                                    "N"
+                                ],
+                                "style": "--"
+                            },
+                            {
+                                "pts": [
+                                    "A",
+                                    "B"
+                                ],
+                                "style": "-"
+                            }
+                        ],
+                        "angles": [
+                            {
+                                "vertex": [
+                                    0,
+                                    0
+                                ],
+                                "p1": [
+                                    0,
+                                    5
+                                ],
+                                "p2": [
+                                    4,
+                                    4
+                                ],
+                                "label": "045\\degree",
+                                "radius": 1.5,
+                                "direction": "clockwise"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "concept_id": "C05_SHORTEST_DIST",
+                    "name": "Shortest Distance to a Line",
+                    "name_zh": "到直線的最短距離",
+                    "formula": "\\text{Distance} = c \\sin \\theta",
+                    "key_takeaway": "The shortest distance from a point to a line is the PERPENDICULAR distance. This often forms a right-angled triangle where you can use basic SOH CAH TOA.",
+                    "key_takeaway_zh": "一點到一條直線的最短距離是 垂直距離。這通常會形成一個直角三角形，讓你大可以使用基本的 SOH CAH TOA。",
+                    "visual_aid": null
+                }
+            ],
+            "tips": [
+                "Whenever dealing with bearings between two points, draw a North line at BOTH points immediately. Use the 'Alternate Angles' or 'Interior Angles' of parallel North lines to find relative angles."
+            ],
+            "tips_zh": [
+                "每當處理兩點之間的方位角時，立即在 兩點 上都畫一條正北線。利用平行正北線的「內錯角」或「同旁內角」來找出相對角度。"
+            ],
+            "common_traps": [
+                {
+                    "trap": "Confusing 'From' and 'To'",
+                    "trap_zh": "混淆起點與終點",
+                    "description": "Misinterpreting 'the bearing of A from B' as 'the bearing of B from A'.",
+                    "description_zh": "將「由 B 測得 A 的方位角」誤解為「由 A 測得 B 的方位角」。",
+                    "fix": "The 'FROM' point is where you stand. 'Bearing of A FROM B' means you draw the North line at point B, face North, and turn clockwise until you face A.",
+                    "fix_zh": "「由」(FROM) 字後面的是你的站立點。「由 B 測 A」意味著你在 B 點畫正北線，面朝北，然後順時針轉向直到面向 A。"
+                }
+            ]
+        }
+    ]
+}

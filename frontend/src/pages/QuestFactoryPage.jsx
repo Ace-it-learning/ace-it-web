@@ -691,11 +691,13 @@ const QuestFactoryPage = () => {
                                 const isMathLine = looksLikeMath(trimmedLine);
 
                                 if (isMathLine) {
-                                    const labeledMath = sanitizeMath(trimmedLine);
-                                    const finalMath = formatNumbers(labeledMath, true);
-
+                                    const mathContent = sanitizeMath(trimmedLine);
+                                    // Version 1.6.0: Use inline math but wrapped in a block-like container for heuristic derivations
+                                    // This prevents the "huge bubble" effect while keeping them on their own lines.
                                     return (
-                                        <SafeInlineMath key={lineIdx} math={finalMath} className="mx-1" />
+                                        <div key={lineIdx} className="mb-1 py-1">
+                                            <SafeInlineMath math={`\\displaystyle ${mathContent}`} />
+                                        </div>
                                     );
                                 }
 
@@ -1403,6 +1405,16 @@ const QuestFactoryPage = () => {
                                                             <div className="flex items-center gap-2">
                                                                 <BarChart3 className="w-4 h-4 text-primary" />
                                                                 <h4 className="text-[10px] text-gray-500 font-black uppercase tracking-[0.2em]">Questions</h4>
+                                                                {currentQuest.standard_version === '3.1-Elite' && (
+                                                                    <div className="px-2 py-0.5 rounded-md bg-gradient-to-r from-indigo-500 to-purple-600 text-[8px] font-black text-white uppercase tracking-widest shadow-lg shadow-purple-500/20">
+                                                                        3.1 Elite
+                                                                    </div>
+                                                                )}
+                                                                {currentQuest.standard_version === '3.0' && (
+                                                                    <div className="px-2 py-0.5 rounded-md bg-gradient-to-r from-amber-400 to-orange-500 text-[8px] font-black text-black uppercase tracking-widest shadow-lg shadow-amber-500/20">
+                                                                        3.0 Premium
+                                                                    </div>
+                                                                )}
                                                             </div>
 
                                                             {baseQuest.isGroup && (
@@ -1555,12 +1567,12 @@ const QuestFactoryPage = () => {
                                                     <div className="relative z-10 space-y-4">
                                                         <div>
                                                             <h4 className="text-[10px] text-green-500 font-black uppercase tracking-widest italic mb-2">Model Answer</h4>
-                                                            <p className="text-sm font-medium text-white">
+                                                            <div className="text-sm font-medium text-white">
                                                                 {currentQuest.type === 'ORDERING' ? (
                                                                     <span className="text-3xl font-black">
                                                                         {(currentQuest.answer || '').split('-').map(idx => parseInt(idx) + 1).join('-')}
                                                                     </span>
-                                                                ) : typeof currentQuest.answer === 'object' ? (
+                                                                ) : (typeof currentQuest.answer === 'object' && currentQuest.answer !== null) ? (
                                                                     <div className="flex flex-col gap-2 mt-1">
                                                                         {Object.entries(currentQuest.answer).map(([bucket, indices]) => (
                                                                             <div key={bucket} className="flex gap-2 text-[11px]">
@@ -1578,21 +1590,21 @@ const QuestFactoryPage = () => {
                                                                     <div className="text-sm text-gray-300 leading-relaxed font-serif whitespace-pre-wrap bg-white/5 p-6 rounded-2xl border border-white/10">
                                                                         {renderMath(currentQuest.answer) || "No model answer provided."}
                                                                     </div>
-                                                                ) : (
+                                                                 ) : (
                                                                     <span className="text-2xl font-black">
-                                                                        {renderMath(currentQuest.answer_letter || currentQuest.answer) || "MANUAL AUDIT"}
+                                                                        {renderMath(currentQuest.answer_letter || currentQuest.answer || currentQuest.content?.final_answer) || "MANUAL AUDIT"}
                                                                     </span>
                                                                 )}
-                                                            </p>
+                                                            </div>
                                                         </div>
 
-                                                        {currentQuest.explanation && (
+                                                        {(currentQuest.explanation || currentQuest.content?.explanation) && (
                                                             <div className="pt-4 border-t border-green-500/20">
                                                                 <h4 className="text-[8px] text-gray-500 font-black uppercase tracking-widest mb-2 px-1">Explanation</h4>
                                                                 <div className={`text-[11px] text-gray-300 leading-relaxed italic`}>
-                                                                    {renderMath(showChinese && currentQuest.explanation_zh
-                                                                        ? currentQuest.explanation_zh
-                                                                        : currentQuest.explanation)}
+                                                                    {renderMath(showChinese && (currentQuest.explanation_zh || currentQuest.content?.explanation_zh)
+                                                                        ? (currentQuest.explanation_zh || currentQuest.content?.explanation_zh)
+                                                                        : (currentQuest.explanation || currentQuest.content?.explanation))}
                                                                 </div>
                                                             </div>
                                                         )}
@@ -1605,7 +1617,9 @@ const QuestFactoryPage = () => {
                                                         <Cpu className="w-3.5 h-3.5" /> Logical Proof (Chain of Thought)
                                                     </h4>
                                                     <div className="p-6 bg-white/[0.03] rounded-3xl border border-white/5 text-xs text-gray-200 leading-relaxed font-mono whitespace-pre-wrap">
-                                                        {renderMath(currentQuest.answer_logic || (currentQuest.solution_steps && (currentQuest?.solution_steps || []).join('\n'))) || "Vetting required: No automated proof generated."}
+                                                        {renderMath(showChinese
+                                                            ? (currentQuest.answer_logic_zh || (currentQuest.solution_steps_zh && (currentQuest?.solution_steps_zh || []).join('\n')) || currentQuest.content?.solution_steps_zh?.join('\n') || currentQuest.answer_logic || (currentQuest.solution_steps && (currentQuest?.solution_steps || []).join('\n')) || currentQuest.content?.solution_steps?.join('\n'))
+                                                            : (currentQuest.answer_logic || (currentQuest.solution_steps && (currentQuest?.solution_steps || []).join('\n')) || currentQuest.content?.solution_steps?.join('\n'))) || "Vetting required: No automated proof generated."}
                                                     </div>
                                                 </div>
                                             </div>
@@ -1837,6 +1851,18 @@ const QuestFactoryPage = () => {
                                                             <span className="text-[10px] text-gray-500 font-mono">ID: {quest.id.substring(0, 8)}</span>
                                                             <div className="w-1 h-1 rounded-full bg-gray-700" />
                                                             <span className="text-[10px] text-gray-500">Lv {getLevelLabel(quest.level)}</span>
+                                                            {quest.standard_version === '3.1-Elite' && (
+                                                                <>
+                                                                    <div className="w-1 h-1 rounded-full bg-purple-500/50" />
+                                                                    <span className="text-[8px] text-purple-400 font-black uppercase tracking-widest">3.1 Elite</span>
+                                                                </>
+                                                            )}
+                                                            {quest.standard_version === '3.0' && (
+                                                                <>
+                                                                    <div className="w-1 h-1 rounded-full bg-amber-500/50" />
+                                                                    <span className="text-[8px] text-amber-500 font-black uppercase tracking-widest">3.0 Premium</span>
+                                                                </>
+                                                            )}
                                                         </div>
                                                     </div>
                                                 </td>
@@ -1936,14 +1962,14 @@ const QuestFactoryPage = () => {
                                                                             <span className="text-xs font-black text-green-500 uppercase tracking-widest">Verified Solution</span>
                                                                         </div>
                                                                         <div className="text-sm text-green-100 font-medium leading-relaxed">
-                                                                            {renderMath(quest.answer || quest.correct_answer || quest.model_answer)}
+                                                                            {renderMath(quest.answer || quest.correct_answer || quest.model_answer || quest.content?.final_answer)}
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div>
                                                                     <span className="text-[10px] font-black text-amber-500/50 uppercase tracking-widest block mb-1">Pedagogical Explanation</span>
                                                                     <div className="text-xs text-gray-400 leading-relaxed bg-white/5 p-4 rounded-2xl border border-white/5">
-                                                                        {renderMath(quest.explanation)}
+                                                                        {renderMath(quest.explanation || quest.content?.explanation || (quest.content?.solution_steps && quest.content.solution_steps.join('\n')))}
                                                                     </div>
                                                                 </div>
                                                             </div>

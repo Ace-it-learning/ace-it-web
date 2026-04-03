@@ -8,7 +8,7 @@ export const AGENTS = {
         name: 'Miss Janie',
         role: '英文導師',
         description: 'HKDSE English Master',
-        avatar: '/avatars/english_v2.jpg',
+        avatar: '/avatars/miss_janie_avatar_1774534465912.png',
         color: 'bg-blue-100',
         headerInfo: 'Miss Janie • Senior English Mentor'
     },
@@ -17,7 +17,7 @@ export const AGENTS = {
         name: 'Matt sir',
         role: '數學導師',
         description: '幾何專題複習',
-        avatar: '/avatars/math.png',
+        avatar: '/avatars/matt_sir_avatar_1774534606517.png',
         color: 'bg-green-100',
         headerInfo: '數學導師 • 在線協助中'
     },
@@ -26,7 +26,7 @@ export const AGENTS = {
         name: 'Miss Lam',
         role: '中文導師',
         description: '範文背誦挑戰',
-        avatar: '/avatars/chinese.png',
+        avatar: '/avatars/miss_lam_avatar_1774534527873.png',
         color: 'bg-purple-100',
         headerInfo: 'Miss Lam (林老師)'
     },
@@ -35,7 +35,7 @@ export const AGENTS = {
         name: 'Ace Sir',
         role: 'Ace Sir',
         description: '全方位應試策略',
-        avatar: '/avatars/ace_sir_new.jpg',
+        avatar: '/avatars/ace_sir_avatar_1774534550933.png',
         color: 'bg-primary/20',
         headerInfo: 'Ace Sir • 在線協助中'
     }

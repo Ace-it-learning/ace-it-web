@@ -42,7 +42,7 @@ class SpeakingQuestService {
     async generateDeliveryQuest(level, cluster, focus = null) {
         const focusName = focus ? (MICRO_SKILLS[focus]?.name || focus) : "General Delivery";
 
-        const wordLimits = { 1: 100, 2: 120, 3: 150, 4: 180, 5: 220 };
+        const wordLimits = { 1: 100, 2: 120, 3: 150, 4: 180, 5: 220, 6: 250, 7: 300 };
         const wordCount = wordLimits[level] || 150;
 
         const contexts = ["HK Current Affairs", "Technology", "Environment", "Education", "Arts & Culture", "Sports & Health", "Tourism & Leisure"];
@@ -83,7 +83,7 @@ OUTPUT JSON FORMAT:
 }
 
 CRITICAL: 
-1. EXHAUSTIVE VOCABULARY: Extract EVERY academic or challenging word from Level 3 to Level 5. I expect at least 10-15 words.
+1. EXHAUSTIVE VOCABULARY: Extract EVERY academic or challenging word appropriate for Level ${level}. For levels 6 and 7, focus on exceptionally sophisticated or nuanced vocabulary typical of 5** DSE standards. I expect at least 10-15 words.
 2. ACCENT: The passage MUST be read in a Native British accent (en-GB).
 3. "pauses" MUST be an array of word indices (0-based) where a student should take a SIGNIFICANT breath (e.g., at commas, semicolons, or clause boundaries). Do NOT put pauses after every word.
 4. Clean IPA: No slashes in the "ipa" field.
@@ -264,9 +264,36 @@ CRITICAL: The hints should help students who get stuck on the LOGICAL THINKING o
     async generateInteractionQuest(level, cluster, focus = null) {
         const focusName = focus ? (MICRO_SKILLS[focus]?.name || focus) : "General Interaction";
         const TOPICS = [
-            { id: "RT_PLASTICS", title: "Banning Single-Use Plastics", prompt: "Should the government ban single-use plastics immediately?", points: ["Environmental impact", "Cost to small businesses", "Public hygiene"] },
-            { id: "RT_AI_HOMEWORK", title: "AI in Assignments", prompt: "Should schools ban the use of AI tools for homework?", points: ["Creativity vs Cheating", "Preparing for future careers", "Fairness in grading"] },
-            { id: "RT_MANDATORY_SPORTS", title: "Mandatory Sports", prompt: "Should sports participation be mandatory for all high school students?", points: ["Health benefits", "Stress relief", "Impact on study time"] }
+            { 
+                id: "RT_HOUSING", 
+                title: "Housing Affordability in HK", 
+                prompt: "Should the government implement stricter rent controls to help young people afford housing in Hong Kong?", 
+                points: ["Impact on property market", "Quality of life for youth", "Alternative living spaces like co-living"] 
+            },
+            { 
+                id: "RT_VICTORIA_HARBOUR", 
+                title: "Victoria Harbour Environment", 
+                prompt: "Is the current protection of Victoria Harbour's water quality sufficient for its future as a tourism hub?", 
+                points: ["Water pollution levels", "Impact on marine life", "Balance between tourism and conservation"] 
+            },
+            { 
+                id: "RT_CANTOPOP", 
+                title: "Canto-pop Resurgence", 
+                prompt: "Does the recent resurgence of Canto-pop help strengthen Hong Kong's cultural identity among the younger generation?", 
+                points: ["Local music industry growth", "Connection to heritage", "Influence of global music trends"] 
+            },
+            { 
+                id: "RT_E_SCOOTERS", 
+                title: "E-scooters on HK Streets", 
+                prompt: "Should e-scooters be legalized for use on Hong Kong's main roads and cycling tracks?", 
+                points: ["Safety concerns for pedestrians", "Environmental benefits", "Infrastructure readiness"] 
+            },
+            { 
+                id: "RT_YOUTH_ELECTION", 
+                title: "Youth Voting Age", 
+                prompt: "Should the voting age in Hong Kong be lowered to 16 to encourage earlier civic engagement among youth?", 
+                points: ["Political maturity of 16-year-olds", "Civic education", "Representation of youth interests"] 
+            }
         ];
 
         const topic = TOPICS[Math.floor(Math.random() * TOPICS.length)];
@@ -293,7 +320,7 @@ CRITICAL: The hints should help students who get stuck on the LOGICAL THINKING o
             subtitle_hints: level <= 3,
             linking_detection: level >= 5,
             filler_nudge_delay: level <= 3 ? 4 : 2,
-            ai_impatience: level >= 5 ? 0.8 : 0.2
+            ai_impatience: level >= 7 ? 0.9 : (level >= 5 ? 0.8 : 0.2)
         };
     }
 

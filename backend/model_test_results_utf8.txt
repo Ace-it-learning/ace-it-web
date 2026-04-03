@@ -1,9 +1,0 @@
-﻿[dotenv@17.2.3] injecting env (0) from backend\.env -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
---- Testing Model Availability ---
-❌ gemini-1.5-flash: FAILED ([GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/mod)
-❌ gemini-1.5-flash-latest: FAILED ([GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/mod)
-❌ gemini-1.5-pro: FAILED ([GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/mod)
-❌ gemini-1.5-pro-latest: FAILED ([GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/mod)
-❌ gemini-2.0-flash: FAILED ([GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/mod)
-❌ gemini-2.0-flash-exp: FAILED ([GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/mod)
-❌ gemini-pro: FAILED ([GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/mod)

@@ -13,7 +13,7 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
     const [plan, setPlan] = useState(null);
     const [loading, setLoading] = useState(true);
     const [regenerating, setRegenerating] = useState(false);
-    const [activeTab, setActiveTab] = useState('WEEKLY'); // 'WEEKLY' | 'GENERAL' | 'CHALLENGE'
+    const [activeTab, setActiveTab] = useState('WEEKLY'); // 'WEEKLY' | 'GENERAL'
     const [searchQuery, setSearchQuery] = useState('');
     const [userSkills, setUserSkills] = useState({});
     const [practicedSkills, setPracticedSkills] = useState([]);
@@ -245,13 +245,6 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
         // 2. Paper Filter
         if (paperFilter !== 'ALL' && paper !== paperFilter) return false;
 
-        // 3. Tab Specific Filter
-        if (activeTab === 'CHALLENGE') {
-            // Only show if user has mastered it (Level 5+)
-            const userLevel = userSkills[id]?.level || 0;
-            return userLevel >= 5;
-        }
-
         // Hide specific speaking skills from GENERAL tab (Use Special Quest instead)
         if (activeTab === 'GENERAL') {
             if (id === 'speaking_groupDiscussion' || id === 'speaking_individualResponse') {
@@ -297,7 +290,7 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
         <div className="fixed inset-0 z-[3000] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in duration-200">
             <div className="bg-white rounded-2xl shadow-2xl w-[90vw] h-[90vh] flex flex-col overflow-hidden animate-in zoom-in-95 duration-200">
                 {/* Header - English Theme (Indigo/Purple) */}
-                <div className={`p-4 relative overflow-hidden ${activeTab === 'CHALLENGE' ? 'bg-indigo-950' : 'bg-[#FF6600] border-b border-white/10'}`}>
+                <div className="p-4 relative overflow-hidden bg-[#FF6600] border-b border-white/10">
                     <div className="absolute top-0 right-0 p-2 opacity-5">
                         <GraduationCap className="w-32 h-32 text-white transform rotate-12" />
                     </div>
@@ -324,9 +317,8 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                         {/* Tab Switcher */}
                         <div className="flex p-1 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20">
                             {[
-                                { id: 'WEEKLY', label: 'Weekly Quests', icon: Clock },
-                                { id: 'GENERAL', label: 'General Quests', icon: Search },
-                                { id: 'CHALLENGE', label: 'Elite Quests', icon: Trophy }
+                                { id: 'WEEKLY', label: 'Targeted Growth', icon: Clock },
+                                { id: 'GENERAL', label: 'General Quests', icon: Search }
                             ].map(tab => (
                                 <button
                                     key={tab.id}
@@ -358,67 +350,99 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                     <div className="flex-1 flex flex-col min-h-0 bg-slate-50/50">
                         {activeTab === 'WEEKLY' ? (
                             <div className="p-6 flex-1 overflow-y-auto custom-scrollbar">
-                                {/* Weekly Reading Quest Card */}
-                                {weeklyQuestStatus.completed ? (
-                                    <div className="mb-6 p-5 bg-slate-100 border-2 border-slate-200 rounded-2xl flex items-center justify-between opacity-80">
-                                        <div className="flex items-center gap-4">
-                                            <div className="p-3 bg-green-100 rounded-xl">
-                                                <CheckCircle className="w-6 h-6 text-green-600" />
-                                            </div>
-                                            <div>
-                                                <h4 className="font-bold text-slate-900 text-base">Weekly Reading Quest</h4>
-                                                <p className="text-xs text-slate-500">Quest finished! Refresh next Monday.</p>
-                                            </div>
-                                        </div>
-                                        <div className="px-4 py-1.5 bg-green-500 text-white rounded-lg text-xs font-bold">
-                                            COMPLETED
-                                        </div>
+                                {/* Top 3 Radar Bottlenecks - Targeted Growth */}
+                                <div className="mb-6">
+                                    <div className="flex items-center gap-2 mb-4">
+                                        <Sparkles className="w-5 h-5 text-indigo-600" />
+                                        <h3 className="text-sm font-black text-slate-800 uppercase tracking-wider">Top 3 Radar Bottlenecks</h3>
                                     </div>
-                                ) : (
-                                    <div
-                                        onClick={() => handleTaskClick({
-                                            id: 'weekly_quest_reading',
-                                            type: 'WEEKLY_QUEST',
-                                            topic: 'reading_weekly',
-                                            title: 'Weekly Reading Quest',
-                                            xp: 200,
-                                            level: '5'
-                                        })}
-                                        className="mb-6 p-5 bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-700 rounded-2xl shadow-lg shadow-indigo-500/20 relative overflow-hidden cursor-pointer hover:scale-[1.01] active:scale-[0.99] transition-all group"
-                                    >
-                                        {/* Decorative background elements */}
-                                        <div className="absolute top-0 right-0 w-40 h-40 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2 group-hover:bg-white/10 transition-colors" />
-                                        <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2 group-hover:bg-white/10 transition-colors" />
-
-                                        <div className="relative z-10 flex items-center justify-between">
-                                            <div className="flex items-center gap-4">
-                                                <div className="p-3 bg-white/15 backdrop-blur-sm rounded-xl border border-white/20 group-hover:border-white/40 transition-colors">
-                                                    <BookOpen className="w-6 h-6 text-white" />
-                                                </div>
-                                                <div>
-                                                    <div className="flex items-center gap-2 mb-0.5">
-                                                        <h4 className="font-bold text-white text-base">Weekly Reading Quest</h4>
-                                                        <span className="px-2 py-0.5 bg-yellow-400/20 border border-yellow-400/30 rounded-full text-[9px] font-black text-yellow-300 uppercase tracking-wider">
-                                                            NEW
-                                                        </span>
+                                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                        {(Object.entries(userSkills).filter(([id]) => id.includes('_') && !id.startsWith('writing_genre_')).length > 0 
+                                            ? Object.entries(userSkills)
+                                                .filter(([id]) => id.includes('_') && !id.startsWith('writing_genre_'))
+                                                .sort((a, b) => (a[1].level || 0) - (b[1].level || 0))
+                                                .slice(0, 3)
+                                            : [
+                                                ['reading_inference', { level: 1 }],
+                                                ['listening_detailRecognition', { level: 1 }],
+                                                ['speaking_pronunciationClarity', { level: 1 }]
+                                            ]
+                                        ).map(([id, skillData]) => {
+                                                const name = getSkillName(id);
+                                                const level = skillData.level || 1;
+                                                const isFallback = Object.keys(userSkills).length === 0;
+                                                return (
+                                                    <div
+                                                        key={`weak_${id}`}
+                                                        onClick={() => handleTaskClick({ id: id, title: `Practice: ${name}`, topic: id, type: 'PRACTICE', xp: 200, level: String(Math.max(3, Math.min(5, Math.ceil(level)))) })}
+                                                        className="bg-white border-2 border-slate-100 hover:border-red-200 hover:shadow-lg p-5 rounded-2xl transition-all cursor-pointer relative overflow-hidden group"
+                                                    >
+                                                        <div className="absolute top-0 right-0 p-3 opacity-5 group-hover:opacity-10 transition-opacity">
+                                                            <Zap className="w-12 h-12 text-red-600" />
+                                                        </div>
+                                                        <div className="flex items-center gap-2 mb-2">
+                                                            <div className={`px-2 py-0.5 rounded text-[9px] font-black uppercase ${isFallback ? 'bg-indigo-50 text-indigo-600' : 'bg-red-50 text-red-600'}`}>
+                                                                {isFallback ? 'Recommended Start' : 'Urgent Mastery'}
+                                                            </div>
+                                                            <div className="px-2 py-0.5 bg-slate-100 text-slate-500 rounded text-[9px] font-bold">Level {level}</div>
+                                                        </div>
+                                                        <h4 className="font-bold text-slate-900 group-hover:text-red-600 transition-colors">{name}</h4>
+                                                        <p className="text-[10px] text-slate-500 mt-1">Practice this to eliminate the "dent" in your Radar chart.</p>
+                                                        <div className="mt-4 flex items-center justify-between">
+                                                            <span className="text-xs font-bold text-red-500">+250 XP</span>
+                                                            <Play className="w-4 h-4 text-slate-300 group-hover:text-red-500 transition-colors" />
+                                                        </div>
                                                     </div>
-                                                    <p className="text-xs text-white/70">
-                                                        One DSE-standard passage • Personalised question set
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <div className="flex items-center gap-3">
-                                                <div className="text-right mr-2 hidden md:block">
-                                                    <div className="text-[10px] font-bold text-white/60 uppercase tracking-tighter">Expires in</div>
-                                                    <div className="text-xs font-black text-white">{weeklyQuestStatus.daysRemaining || 7} Days</div>
-                                                </div>
-                                                <div className="bg-white text-indigo-700 p-2 rounded-lg shadow-md group-hover:shadow-indigo-400/50 transition-all">
-                                                    <Play className="w-5 h-5 fill-current" />
-                                                </div>
-                                            </div>
-                                        </div>
+                                                );
+                                            })}
                                     </div>
-                                )}
+                                </div>
+
+                                {/* Weekly Reading Quest Card */}
+                                <div className="mt-8 flex items-center gap-2 mb-4">
+                                    <Clock className="w-5 h-5 text-indigo-600" />
+                                    <h3 className="text-sm font-black text-slate-800 uppercase tracking-wider">Weekly Adaptive Quests</h3>
+                                </div>
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                                    {[
+                                        { id: 'weekly_reading', topic: 'reading_weekly', title: 'Weekly Reading Quest', icon: BookOpen, color: 'from-blue-600 to-indigo-700', desc: 'Critical Reading & Analysis', type: 'WEEKLY_QUEST' },
+                                        { id: 'weekly_listening', topic: 'listening_weekly', title: 'Weekly Listening Mission', icon: Mic, color: 'from-amber-600 to-orange-700', desc: 'Audio Synthesis & Note-taking', type: 'WEEKLY_QUEST' },
+                                        { id: 'weekly_writing', topic: 'writing_weekly', title: 'Weekly Writing Challenge', icon: PenTool, color: 'from-purple-600 to-fuchsia-700', desc: 'Linguistic Precision & Style', type: 'WEEKLY_QUEST' },
+                                        { id: 'weekly_speaking', topic: 'Speaking Group Discussion', title: 'Weekly Speaking Discussion', icon: MessageSquare, color: 'from-emerald-600 to-teal-700', desc: 'DSE Group Interaction Simulation', type: 'SPEAKING_CHALLENGE' }
+                                    ].map((quest) => {
+                                        const isCompleted = false; // Mocked for now
+                                        return (
+                                            <div
+                                                key={quest.id}
+                                                onClick={() => handleTaskClick({
+                                                    id: quest.id,
+                                                    type: quest.type,
+                                                    topic: quest.topic,
+                                                    title: quest.title,
+                                                    xp: 300,
+                                                    level: '5'
+                                                })}
+                                                className={`p-5 rounded-2xl shadow-lg relative overflow-hidden cursor-pointer hover:scale-[1.02] active:scale-[0.98] transition-all group bg-gradient-to-br ${quest.color}`}
+                                            >
+                                                <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2 group-hover:bg-white/10 transition-colors" />
+                                                <div className="relative z-10 flex items-center justify-between">
+                                                    <div className="flex items-center gap-4">
+                                                        <div className="p-3 bg-white/15 backdrop-blur-sm rounded-xl border border-white/20">
+                                                            <quest.icon className="w-6 h-6 text-white" />
+                                                        </div>
+                                                        <div>
+                                                            <h4 className="font-bold text-white text-sm">{quest.title}</h4>
+                                                            <p className="text-[10px] text-white/70 italic">{quest.desc}</p>
+                                                        </div>
+                                                    </div>
+                                                    <div className="bg-white text-slate-900 p-1.5 rounded-lg shadow-md group-hover:bg-indigo-50 transition-colors">
+                                                        <Play className="w-4 h-4 fill-current" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        );
+                                    })}
+                                </div>
 
                                 {/* Tasks Grid */}
                                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pb-12">
@@ -513,18 +537,21 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                                     </div>
                                 </div>
 
-                                {paperFilter === 'LISTENING' ? (
-                                    <div className="p-6 flex-1 overflow-y-auto custom-scrollbar">
+                                {activeTab === 'GENERAL' && paperFilter === 'LISTENING' ? (
+                                    <div className="p-6 flex-1 overflow-y-auto custom-scrollbar bg-slate-50/50">
+                                        <div className="flex items-center gap-2 mb-4">
+                                            <Layers className="w-5 h-5 text-rose-600" />
+                                            <h3 className="text-sm font-black text-slate-800 uppercase tracking-wider">
+                                                General Listening Quests
+                                            </h3>
+                                        </div>
                                         {/* Listening Quests Grid */}
                                         {/* Listening Quests Grid */}
                                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pb-12">
-                                            {/* Fetched Listening Missions */}
-                                            {listeningMissions.map((mission) => {
-                                                // Default Level Logic
-                                                const defaultLevel = userSkills['listening_general']?.level || 3;
-                                                const currentSelected = selectedLevels[mission.id] || (defaultLevel < 3.5 ? '3' : defaultLevel < 5.0 ? '4' : '5');
-                                                const stats = getMasteryStats(Number(currentSelected), false, false);
-                                                const isPracticed = false; // TODO: Track practiced listening missions?
+                                            {/* Fetched Listening Missions */}                                            {listeningMissions.map((mission) => {
+                                                const currentSelected = selectedLevels[mission.id] || '5';
+                                                const stats = getMasteryStats(Number(currentSelected), false, true);
+                                                const isPracticed = false; 
 
                                                 return (
                                                     <div
@@ -557,52 +584,25 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                                                                 <option value="3">Easy</option>
                                                                 <option value="4">Medium</option>
                                                                 <option value="5">DSE Standard</option>
-                                                                <option value="6">Elite</option>
+                                                                <option value="7">Elite (5**)</option>
                                                             </select>
-                                                            <div className="flex items-center gap-1.5">
-                                                                {/* Mastery Circles Placeholder - can be real if we track history per mission */}
-                                                                {[
-                                                                    { l: 4, label: 'E', name: 'Easy' },
-                                                                    { l: 5, label: 'M', name: 'Medium' },
-                                                                    { l: 6, label: 'S', name: 'DSE Standard' }
-                                                                ].map((tier) => (
-                                                                    <div
-                                                                        key={tier.l}
-                                                                        className="w-4 h-4 rounded-full flex items-center justify-center text-[8px] font-bold border transition-all bg-slate-50 border-slate-200 text-slate-400"
-                                                                    >
-                                                                        {tier.label}
-                                                                    </div>
-                                                                ))}
-                                                            </div>
                                                         </div>
 
-                                                        <h4 className="text-sm font-bold mb-1 group-hover:text-rose-600 transition-colors text-slate-800 line-clamp-1">
+                                                        <h4 className="text-sm font-bold mb-1 transition-colors text-slate-800 line-clamp-1 group-hover:text-rose-600">
                                                             {mission.title}
                                                         </h4>
                                                         <p className="text-[11px] text-slate-500 mb-3 line-clamp-2 leading-tight min-h-[2.4em]">
-                                                            {mission.description || "Integrated listening mission covering all 3 pillars."}
+                                                            {mission.description || "Synthesizing data files and auditory clues for Paper 3 proficiency."}
                                                         </p>
 
                                                         <div className="pt-3 border-t border-slate-50 mt-auto">
                                                             <div className="flex items-center justify-between mb-2">
-                                                                <div className="flex items-center gap-2">
-                                                                    <div className="px-2 py-0.5 bg-slate-100 rounded text-[10px] font-bold text-slate-500 uppercase tracking-wide flex items-center gap-1.5">
-                                                                        <Play className="w-2.5 h-2.5" />
-                                                                        Start Mission
-                                                                    </div>
+                                                                <div className="px-2 py-0.5 bg-slate-100 rounded text-[10px] font-bold text-slate-500 uppercase tracking-wide flex items-center gap-1.5">
+                                                                    <Play className="w-2.5 h-2.5" />
+                                                                    Start Mission
                                                                 </div>
                                                                 <div className="text-[10px] font-bold text-rose-600">
                                                                     +{stats.xp} XP
-                                                                </div>
-                                                            </div>
-
-                                                            <div className="flex items-center justify-between">
-                                                                <div className="flex items-center gap-1.5 text-[10px] text-slate-400 italic">
-                                                                    <Sparkles className="w-3 h-3 text-rose-400" />
-                                                                    <span>Outcome: Exam Proficiency</span>
-                                                                </div>
-                                                                <div className="opacity-0 group-hover:opacity-100 transition-opacity">
-                                                                    <Play className="w-3.5 h-3.5 text-rose-500" />
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -610,6 +610,8 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                                                 );
                                             })}
                                         </div>
+
+                                        {/* Mastery Building Blocks Removed as CHALLENGE tab is removed */}
                                     </div>
                                 ) : (
                                     <div className="p-6 flex-1 overflow-y-auto custom-scrollbar">
@@ -629,12 +631,8 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                                                     const paper = id.split('_')[0];
 
                                                     let targetLevel;
-                                                    if (activeTab === 'CHALLENGE') {
-                                                        targetLevel = 7;
-                                                    } else {
-                                                        if (currentLevel < 3) targetLevel = 3;
-                                                        else targetLevel = 5;
-                                                    }
+                                                    if (currentLevel < 3) targetLevel = 3;
+                                                    else targetLevel = 5;
 
                                                     const outcome = getSkillOutcome(id, language);
                                                     const isPracticed = practicedSkills.includes(id) || practicedSkills.includes(name);
@@ -649,7 +647,7 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
 
                                                                 handleTaskClick({
                                                                     id: id,
-                                                                    title: `${activeTab === 'CHALLENGE' ? 'Elite' : 'Practice'}: ${name}`,
+                                                                    title: `${activeTab === 'CHALLENGE' ? 'Integrated' : 'Practice'}: ${name}`,
                                                                     topic: id,
                                                                     type: 'PRACTICE',
                                                                     xp: stats.xp,
@@ -683,6 +681,7 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                                                                         <option value="3">Easy</option>
                                                                         <option value="4">Medium</option>
                                                                         <option value="5">DSE Standard</option>
+                                                                        <option value="7">Elite (5**)</option>
                                                                     </select>
                                                                 )}
                                                                 <div className="flex items-center gap-1.5">
@@ -691,7 +690,8 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                                                                             {[
                                                                                 { l: 4, label: 'E', name: 'Easy' },
                                                                                 { l: 5, label: 'M', name: 'Medium' },
-                                                                                { l: 6, label: 'S', name: 'DSE Standard' }
+                                                                                { l: 6, label: 'S', name: 'DSE Standard' },
+                                                                                { l: 7, label: 'EL', name: 'Elite' }
                                                                             ].map((tier) => {
                                                                                 const isPassed = isPracticed && currentLevel >= tier.l;
                                                                                 return (
@@ -722,26 +722,19 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                                                             <div className="pt-3 border-t border-slate-50 mt-auto">
                                                                 <div className="flex items-center justify-between mb-2">
                                                                     <div className="flex items-center gap-2">
-                                                                        {activeTab === 'CHALLENGE' ? (
-                                                                            <div className="px-2 py-0.5 bg-indigo-100 rounded text-[10px] font-bold text-indigo-600 uppercase tracking-wide flex items-center gap-1">
-                                                                                <Zap className="w-3 h-3 fill-current" />
-                                                                                Elite Quest
-                                                                            </div>
-                                                                        ) : (
                                                                             <div className="px-2 py-0.5 bg-slate-100 rounded text-[10px] font-bold text-slate-500 uppercase tracking-wide flex items-center gap-1.5">
                                                                                 {isPracticed ? <RefreshCcw className="w-2.5 h-2.5" /> : <Play className="w-2.5 h-2.5" />}
                                                                                 {isPracticed ? 'Continue Training' : 'Start Training'}
                                                                             </div>
-                                                                        )}
                                                                     </div>
-                                                                    <div className={`text-[10px] font-bold ${activeTab === 'CHALLENGE' ? 'text-indigo-600' : 'text-amber-600'}`}>
-                                                                        +{getMasteryStats(Number(selectedLevels[id] || targetLevel), false, activeTab !== 'CHALLENGE').xp} XP
+                                                                    <div className="text-[10px] font-bold text-amber-600">
+                                                                        +{getMasteryStats(Number(selectedLevels[id] || targetLevel), false, false).xp} XP
                                                                     </div>
                                                                 </div>
 
                                                                 <div className="flex items-center justify-between">
                                                                     <div className="flex items-center gap-1.5 text-[10px] text-slate-400 italic">
-                                                                        <Sparkles className={`w-3 h-3 ${activeTab === 'CHALLENGE' ? 'text-indigo-400' : 'text-amber-400'}`} />
+                                                                        <Sparkles className="w-3 h-3 text-amber-400" />
                                                                         <span>Outcome: {outcome}</span>
                                                                     </div>
                                                                     {isPracticed && (

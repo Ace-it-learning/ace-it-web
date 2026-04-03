@@ -73,9 +73,18 @@ const RoadmapService = require('./services/RoadmapService');
 
 
 // Initialize Apps & Middleware
+const PORT = process.env.PORT || 3001;
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+
+// --- GLOBAL TRACING (Immediate) ---
+app.use((req, res, next) => {
+    if (req.url.includes('/api/stats')) {
+        console.log(`[TRACE] Incoming Stats Request: ${req.method} ${req.url} from ${req.ip}`);
+    }
+    next();
+});
+
 
 app.use(bodyParser.json({ limit: '50mb' }));
 app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
@@ -134,7 +143,53 @@ app.use((req, res, next) => {
 
 // --- MODULE ROUTES ---
 
+
+// --- CRITICAL STATS (Moved Up for Debugging) ---
+app.get('/api/stats', async (req, res) => {
+    const { uid } = req.query;
+    if (!uid) return res.status(400).json({ error: "Missing uid" });
+
+    try {
+        console.log(`[DEBUG] /api/stats (High Priority): Starting fetch for UID ${uid}...`);
+        const start = Date.now();
+        const [stats, user] = await Promise.all([
+            GamificationService.getProgress(uid),
+            UserProfileService.getProfile(uid)
+        ]);
+        console.log(`[DEBUG] /api/stats (High Priority): Data fetched in ${Date.now() - start}ms`);
+
+        if (!user) {
+            console.log(`[DEBUG] /api/stats: User ${uid} NOT FOUND in Firestore.`);
+            return res.status(404).json({ error: "User profile not found", is_new_student: true });
+        }
+
+        // Check if diagnostic is done
+        const hasDiagnosticEnglish = user?.diagnostic_completed === true || !!user?.diagnostic_results?.english;
+        const hasDiagnosticMaths = user?.has_maths_diagnostic === true || !!user?.maths_diagnostic;
+
+        res.json({
+            ...stats,
+            diagnostic_completed: hasDiagnosticEnglish,
+            has_maths_diagnostic: hasDiagnosticMaths,
+            hasDiagnostic: {
+                english: hasDiagnosticEnglish,
+                maths: hasDiagnosticMaths
+            },
+            user: {
+                ...user,
+                onboarding_completed: user?.onboarding_completed || false,
+                diagnostic_completed: hasDiagnosticEnglish,
+                has_maths_diagnostic: hasDiagnosticMaths
+            }
+        });
+    } catch (err) {
+        console.error("Stats API Error (High Priority):", err);
+        res.status(500).json({ error: "Failed to fetch stats" });
+    }
+});
+
 app.use('/api/admin', require('./routes/adminRoutes'));
+
 app.use('/api/maths/diagnostic', require('./routes/maths/mathsDiagnosticRoutes'));
 app.use('/api/reading', require('./routes/readingScaffoldRoutes'));
 app.use('/api/speaking', require('./routes/speakingQuestRoutes'));
@@ -512,49 +567,11 @@ app.get('/api/reports/trigger-weekly', async (req, res) => {
     }
 });
 
-// GET User Stats
-// GET User Stats
+// GET Health
 app.get('/api/health', (req, res) => {
     res.json({ status: 'ok', time: new Date().toISOString() });
 });
 
-
-app.get('/api/stats', async (req, res) => {
-    const { uid } = req.query;
-    if (!uid) return res.status(400).json({ error: "Missing uid" });
-
-    try {
-        const stats = await GamificationService.getProgress(uid);
-        const user = await UserProfileService.getProfile(uid);
-
-        // Check if diagnostic is done - specify flags for different subjects
-        const hasDiagnosticEnglish = user?.diagnostic_completed === true || !!user?.diagnostic_results?.english;
-        const hasDiagnosticMaths = user?.has_maths_diagnostic === true || !!user?.maths_diagnostic;
-
-        // Final flag depends on agentId context in frontend, but we'll send everything
-        const hasDiagnostic = {
-            english: hasDiagnosticEnglish,
-            maths: hasDiagnosticMaths
-        };
-
-        const baseline = {
-            xp: 0,
-            level: 1,
-            inventory: [],
-            nextLevelXP: 100,
-            currentStepXP: 0,
-            progressPercent: 0,
-            is_new_student: !user || user.status === 'new' || user.is_new_student === true, // Check for explicit flags
-            email: user?.email || '',
-            nickname: user?.nickname || 'Student'
-        };
-
-        res.json({ ...baseline, ...stats, ...user, hasDiagnostic });
-    } catch (e) {
-        console.error("Stats Error:", e);
-        res.status(500).json({ error: "Internal Server Error" });
-    }
-});
 
 // ===== MICRO-SKILL API ENDPOINTS =====
 
@@ -685,6 +702,57 @@ app.post('/api/microskills/:uid/update', async (req, res) => {
         res.json({ success: true, message: 'Micro-skills updated successfully' });
     } catch (error) {
         console.error('[MicroSkills API] Error updating micro-skills:', error);
+        res.status(500).json({ error: 'Internal server error' });
+    }
+});
+
+// ===== MATH PROFILE API ENDPOINTS =====
+
+// GET Math micro-skills profile (used by MathRoadmapModal)
+app.get('/api/profile/maths', async (req, res) => {
+    const { uid } = req.query;
+    if (!uid) return res.status(400).json({ error: 'Missing uid' });
+
+    try {
+        const mathData = await UserProfileService.getMathSkillMap(uid);
+        res.json({
+            microSkills: mathData?.microSkills || {},
+            practicedSkills: mathData?.practicedSkills || [],
+            weaknessPriority: mathData?.weaknessPriority || [],
+            level: mathData?.level || 0,
+            archetype: mathData?.archetype || null,
+            timestamp: mathData?.last_updated || null
+        });
+    } catch (error) {
+        console.error('[Math Profile API] Error fetching math profile:', error);
+        res.status(500).json({ error: 'Internal server error' });
+    }
+});
+
+// GET Math Skill Map (used by mathMasteryService.js)
+app.get('/api/skillmap/maths', async (req, res) => {
+    const { uid } = req.query;
+    if (!uid) return res.status(400).json({ error: 'Missing uid' });
+
+    try {
+        const mathData = await UserProfileService.getMathSkillMap(uid);
+        res.json(mathData || { subject: 'Mathematics', level: 0, microSkills: {} });
+    } catch (error) {
+        console.error('[Math SkillMap API] Error fetching math skill map:', error);
+        res.status(500).json({ error: 'Internal server error' });
+    }
+});
+
+// GET Math Skill History (used by mathMasteryService.js)
+app.get('/api/skillmap/maths/history', async (req, res) => {
+    const { uid, limit } = req.query;
+    if (!uid) return res.status(400).json({ error: 'Missing uid' });
+
+    try {
+        const history = await UserProfileService.getMathSkillHistory(uid, parseInt(limit) || 5);
+        res.json(history);
+    } catch (error) {
+        console.error('[Math SkillMap API] Error fetching math history:', error);
         res.status(500).json({ error: 'Internal server error' });
     }
 });
@@ -1386,7 +1454,6 @@ LANGUAGE (STRICT): If responding in Chinese, you MUST use Traditional Chinese (ç
 1. **No Shortcuts**: Always show the full working. Skipping steps = confusion later.
 2. **Conceptual First**: Explain WHY a formula works before drilling practice.
 3. **Mistake-Friendly**: Wrong answers are learning opportunities. Analyze errors gently.
-4. **LaTeX Mastery**: Use proper mathematical notation (e.g., \\\\(x^2 + 2x + 1 = 0\\\\)).
 
 **INTERACTION STYLE:**
 - Start with encouragement: "Great question!" or "Let's tackle this together!"
@@ -1399,6 +1466,20 @@ LANGUAGE (STRICT): If responding in Chinese, you MUST use Traditional Chinese (ç
 - Recommend specific math topics to practice based on their DSE Math skill gaps
 - Reference their math diagnostic results and micro-skill proficiency
 - Suggest targeted practice in weak areas (e.g., "Your quadratic equations need work - let's practice!")
+
+[MATH FORMATTING RULES - CRITICAL]
+As an HKDSE Math AI Tutor, you must format all mathematical symbols, variables, and equations strictly according to the following rules so the frontend parser can render them correctly:
+
+1. STRICT DELIMITERS: You MUST use \`$\` for inline math (e.g., \`$x^2 + y^2 = r^2$\`) and \`$$\` for standalone block equations.
+2. NO ALTERNATIVE DELIMITERS: NEVER use \`\\( ... \\)\`, \`\\[ ... \\]\`, or standalone \`\\\` slashes to enclose math. 
+3. NO BACKTICKS: NEVER wrap math variables, numbers, or equations in Markdown backticks (e.g., do not output \`x^2\` or \`$x^2$\`). This breaks the math renderer and turns the text red.
+4. PROPER LATEX: Use standard LaTeX commands inside the \`$\` delimiters (e.g., \`\\Delta\`, \`\\frac{D}{2}\`, \`\\sqrt{x}\`). 
+
+Example of CORRECT formatting: 
+The center is $(h, k)$ and the radius is $r$. The discriminant is $\Delta$.
+
+Example of INCORRECT formatting:
+The center is \`\\(h, k)\\ \` and the radius is \`\\r\\ \` . The discriminant is \`\\\\Delta\\ \` .
 
 ${SINGLE_ROUTER_CONSTRAINT.replace('[Subject]', 'Math').replace('[Target Subject]', 'English/Chinese/Science')}
 
@@ -2366,6 +2447,12 @@ The student just finished a ${rawData} Mock Exam.
             }
         }
         const response = result.response;
+        
+        if (!response) {
+            console.error("âŒ [Trace] No response object found in AI result:", JSON.stringify(result, null, 2));
+            throw new Error("AI provider returned an empty response.");
+        }
+
         let text = response.text();
 
         // FIX: Unwrap JSON if AI returns structured output
@@ -3508,20 +3595,31 @@ const speakingAgent = require('./prompts/speakingAgent');
 
 app.post('/api/speaking/chat', async (req, res) => {
     try {
-        const { history, currentSpeaker, topic, context, uid, userStatus } = req.body;
+        const { history, currentSpeaker, forcedNextSpeaker, topic, context, uid, userStatus, userLevel, candidateLevels } = req.body;
 
-        const historyPayload = (history || []).slice(-10).map(h => {
+        const historyPayload = (history || []).slice(-15).map(h => {
             const role = h.role === 'user' ? 'Candidate_D' : h.role;
             return `${role}: ${h.text}`;
         }).join('\n');
+
+        // Dynamic Personas based on levels
+        const cl = candidateLevels || { 'Candidate_A': 5, 'Candidate_B': 4, 'Candidate_C': 3 };
+        const personas = [
+            `- Examiner (Miss Janie): Formal, facilitates the discussion. Does NOT dominate. Only speaks to prompt or redirect.`,
+            `- Candidate_A (Annie, Level ${cl.Candidate_A}): High confidence, sophisticated vocabulary, often takes the lead or synthesizes points.`,
+            `- Candidate_B (Ben, Level ${cl.Candidate_B}): Competent, uses common transitions, focuses on providing examples.`,
+            `- Candidate_C (Charlie, Level ${cl.Candidate_C}): Basic fluency, simple vocabulary, agrees or disagrees with simple reasons.`
+        ].join('\n');
 
         // Construct context-aware prompt
         const prompt = speakingAgent
             .replace('{TOPIC}', topic || context?.title || 'Unknown Topic')
             .replace('{POINTS}', JSON.stringify(context?.discussion_points || []))
             .replace('{CURRENT_SPEAKER}', currentSpeaker || 'Examiner')
+            .replace('{FORCED_SPEAKER}', forcedNextSpeaker || 'None')
             .replace('{USER_STATUS}', userStatus || 'Idle')
-            .replace('{HISTORY}', historyPayload);
+            .replace('{HISTORY}', historyPayload)
+            .replace('{PERSONAS}', personas);
 
         const result = await GenerativeAIService.generateContent(prompt, {
             model: "gemini-2.0-flash", // User confirmed this is stable
@@ -3831,9 +3929,11 @@ app.post('/api/debug/reset_user', async (req, res) => {
     }
 });
 
-console.log("[DEBUG] Attempting to start server on port " + PORT);
-const server = app.listen(PORT, () => {
-    console.log(`[OK] Server running on http://localhost:${PORT}`);
+// --- START SERVER ---
+const finalPort = process.env.PORT || 3001;
+console.log("[DEBUG] Attempting to start server on port " + finalPort);
+const server = app.listen(finalPort, () => {
+    console.log(`[OK] Server running on http://localhost:${finalPort}`);
 });
 
 // Increase timeout for long-running AI generations (10 minutes)

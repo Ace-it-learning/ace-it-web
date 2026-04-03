@@ -1,4 +1,4 @@
-@import 'katex/dist/katex.min.css';
+﻿@import 'katex/dist/katex.min.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -152,4 +152,104 @@
   .animate-shimmer {
     animation: shimmer 2s infinite linear;
   }
+}
+
+/* Custom Scrollbar for Math Elements */
+.custom-scrollbar::-webkit-scrollbar {
+  height: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(147, 51, 234, 0.1);
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(147, 51, 234, 0.3);
+}
+
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(147, 51, 234, 0.1) transparent;
+}
+
+/* Final KaTeX Scoping & Alignment */
+.katex-display {
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  padding: 0.5rem 0;
+}
+
+.katex-display::-webkit-scrollbar {
+  height: 0px;
+  background: transparent;
+}
+
+span.katex {
+  overflow: visible !important;
+  vertical-align: baseline;
+  margin-left: 0.2em !important;
+  margin-right: 0.2em !important;
+}
+
+/* Ensure block elements don't get unwanted side margins */
+.katex-display span.katex {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.deep-dive-text-container {
+  line-height: 1.6;
+  vertical-align: baseline;
+}
+
+/* Fix for Block Math centering layout in specific containers */
+.mastery-logic-container .katex-display,
+.student-scratchpad-container .katex-display {
+  text-align: left !important;
+  margin-top: 0.5rem !important;
+  margin-bottom: 0.5rem !important;
+  display: block !important;
+}
+
+.mastery-logic-container .katex-display > .katex,
+.student-scratchpad-container .katex-display > .katex {
+  text-align: left !important;
+  display: inline-block !important; /* Prevents the math box from stretching */
+  padding-left: 4px;
+}
+
+/* Ensure flex parents don't break baseline alignment */
+.mastery-logic-container .flex,
+.student-scratchpad-container .flex {
+  align-items: baseline !important;
+}
+
+/* v2.1.2: Geometry Diagram SVGs for Lab and Review */
+.geometry-diagram-container svg {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: 0 auto;
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.05));
+    color: inherit;
+}
+
+.geometry-diagram-container svg text {
+    fill: currentColor !important;
+}
+
+.geometry-diagram-container svg path,
+.geometry-diagram-container svg line,
+.geometry-diagram-container svg circle,
+.geometry-diagram-container svg polygon {
+    stroke: currentColor !important;
+}
+
+.geometry-diagram-container svg [fill="none"] {
+    fill: none !important;
 }

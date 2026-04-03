@@ -128,4 +128,35 @@ router.post('/draft/compare', async (req, res) => {
     }
 });
 
+// --- ELITE EXEMPLARS (Writing Lab) ---
+
+// GET /api/writing/exemplars
+// List all high-quality model essays
+router.get('/exemplars', async (req, res) => {
+    const { genre } = req.query;
+    const WritingLabService = require('../services/WritingLabService');
+    try {
+        const results = await WritingLabService.getExemplarsList(genre || 'all');
+        res.json(results);
+    } catch (err) {
+        console.error("[WritingRoutes] Exemplar list error:", err);
+        res.status(500).json({ error: "Failed to fetch exemplars" });
+    }
+});
+
+// GET /api/writing/exemplars/:id
+// Get full details for a specific exemplar
+router.get('/exemplars/:id', async (req, res) => {
+    const { id } = req.params;
+    const WritingLabService = require('../services/WritingLabService');
+    try {
+        const result = await WritingLabService.getExemplar(id);
+        if (!result) return res.status(404).json({ error: "Exemplar not found" });
+        res.json(result);
+    } catch (err) {
+        console.error("[WritingRoutes] Exemplar fetch error:", err);
+        res.status(500).json({ error: "Failed to fetch exemplar details" });
+    }
+});
+
 module.exports = router;

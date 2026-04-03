@@ -1,0 +1,20 @@
+{
+  "type": "SPEAKING",
+  "topic": "speaking_weekly",
+  "title": "The Ethics of Using AI in Local Secondary Schools",
+  "topic_description": "Artificial intelligence (AI) is rapidly transforming various sectors, including education. While AI offers potential benefits such as personalized learning and automated administrative tasks, its integration into Hong Kong secondary schools raises significant ethical concerns. These concerns encompass data privacy, algorithmic bias, the potential deskilling of teachers, and the impact on students' critical thinking abilities. A balanced approach is needed to harness the advantages of AI while mitigating its risks.",
+  "instructions": "In this group discussion, you will explore the ethical implications of using AI in local secondary schools. You have 1 minute to prepare individually. Following this, you will engage in a 4-minute group discussion to reach a consensus on the most pressing ethical concern and propose a solution. One member will then present your group's decision in a 1-minute presentation.",
+  "discussion_points": [
+    "To what extent does the use of AI-powered assessment tools compromise the privacy of student data, and what measures can be implemented to safeguard this data in Hong Kong's unique educational context?",
+    "How might algorithmic bias in AI-driven learning platforms perpetuate or exacerbate existing inequalities in access to quality education among students from different socioeconomic backgrounds in Hong Kong?",
+    "Considering the potential for AI to automate certain teaching tasks, what strategies can be adopted to ensure that teachers retain their professional autonomy and adapt their roles to effectively integrate AI into the curriculum while fostering students' critical thinking skills?"
+  ],
+  "individual_response_questions": [
+    "Do you believe that the potential benefits of AI in education outweigh the ethical risks, and why or why not? Support your stance with examples relevant to the Hong Kong educational system.",
+    "Imagine you are a school principal. What specific ethical guidelines would you implement to govern the use of AI in your school, and how would you ensure that these guidelines are effectively enforced?"
+  ],
+  "success_feedback": "Well done! Your group demonstrated a strong understanding of the ethical considerations surrounding AI in education and proposed practical solutions. Your arguments were well-reasoned and supported with relevant examples. Excellent collaboration and presentation skills!",
+  "suggested_next_steps": [
+    "Try Writing challenge: Write an article for a local newspaper arguing for or against the increased use of AI in Hong Kong secondary schools."
+  ]
+}

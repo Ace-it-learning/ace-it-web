@@ -1,15 +1,15 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { useLanguage } from '../context/LanguageContext';
 import { useAvatar } from '../context/AvatarContext';
-import { ChevronLeft, CheckCircle, XCircle, Trophy, Home, Maximize2, Minimize2 } from 'lucide-react';
+import { ChevronLeft, CheckCircle, XCircle, Trophy, Home, Maximize2, Minimize2, User, Cpu, RefreshCw } from 'lucide-react';
 import { SafeInlineMath, SafeBlockMath } from '../components/maths/SafeMath';
 import 'katex/dist/katex.min.css';
 import { getMathSkillName } from '../constants/mathMicroSkills';
 import MathStepExplainer from '../components/maths/MathStepExplainer';
 import { getMasteryStats } from '../utils/masteryUtils';
-import { formatNumbers, sanitizeMath, prepareMathText, splitContentByDelimiters, looksLikeMath } from '../utils/mathFormattingUtils';
+import { formatNumbers, sanitizeMath, prepareMathText, splitContentByDelimiters, looksLikeMath, isTipTapJSON, convertTipTapToElite, rescueMangledLatex } from '../utils/mathFormattingUtils';
 import GeometryRenderer from '../components/maths/GeometryRenderer';
 
 const MathsLabReview = () => {
@@ -28,10 +28,7 @@ const MathsLabReview = () => {
         setExpandedDiagrams(prev => ({ ...prev, [id]: !prev[id] }));
     };
 
-    // Level progression logic
-    const MATHS_LEVELS = [3, 4, 5, '5*', '5**'];
-    const currentLevelIdx = MATHS_LEVELS.indexOf(level);
-    const nextLevel = currentLevelIdx !== -1 && currentLevelIdx < MATHS_LEVELS.length - 1 ? MATHS_LEVELS[currentLevelIdx + 1] : null;
+    // Legacy level progression removed (Blended Quests)
 
     const [results, setResults] = useState([]);
     const [score, setScore] = useState(0);
@@ -39,11 +36,125 @@ const MathsLabReview = () => {
     const [isGrading, setIsGrading] = useState(true);
 
     const currentTier = getMasteryStats(level, language === 'zh');
-    const nextTier = nextLevel ? getMasteryStats(nextLevel, language === 'zh') : null;
+
+    const gradeAnswers = useCallback(async () => {
+        // [HARDENING FIX 3.0]: Minimal Loading Time to prevent "Instant Pop"
+        const MIN_LOADING_MS = 1500;
+        const startTime = Date.now();
+        
+        setIsGrading(true);
+        console.log('[Review v4] gradeAnswers started. Questions:', questions?.length);
+        console.table(questions.map(q => ({ id: q.id, type: q.type, marks: q.marks || 3 })));
+        console.log('[Review v4] Answers keys:', Object.keys(answers || {}));
+
+        // 1. Basic synchronous grading (Exact Match) - Use rescued strings for comparison
+        const baseResults = questions.map(q => {
+            const rawUserAnswer = (answers[q.id] || '').trim();
+            const isJson = isTipTapJSON(rawUserAnswer);
+            
+            // CONVERSION: Treat JSON as Elite string if detected
+            const eliteUserAnswer = isJson ? convertTipTapToElite(rawUserAnswer) : rawUserAnswer;
+            const userAnswer = rescueMangledLatex(eliteUserAnswer);
+            const correctAnswer = (q.answer || '').trim();
+            
+            let isCorrect = userAnswer === correctAnswer;
+
+            if (!isCorrect && (q.type === 'short_answer' || q.type === 'AI_Generator' || q.type === 'conventional')) {
+                const clean = (str) => str.replace(/[\$\\]/g, '').replace(/\s+/g, '').toLowerCase();
+                const cUser = clean(userAnswer);
+                const cCorrect = clean(correctAnswer);
+                if (cUser === cCorrect) isCorrect = true;
+                else if (cUser.includes(cCorrect) && cCorrect.length > 2) isCorrect = true;
+            } else if (!isCorrect && q.type === 'mc') {
+                const stripLetter = (str) => str.replace(/^[A-D]\s*[:.]\s*/i, '').trim();
+                const sUser = stripLetter(userAnswer);
+                const sCorrect = stripLetter(correctAnswer);
+                
+                if (sUser === sCorrect || sUser === correctAnswer || userAnswer === sCorrect) {
+                    isCorrect = true;
+                } else if (q.answer_letter && (userAnswer.trim() === q.answer_letter || userAnswer.startsWith(q.answer_letter + ':'))) {
+                    isCorrect = true;
+                }
+            }
+
+            const maxScore = q.marks || 3;
+            return { id: q.id, correct: isCorrect, score: isCorrect ? maxScore : 0, maxScore, userAnswer, correctAnswer, question: q };
+        });
+
+        // 2. AI Grading for short answers over the network
+        const hasShortAnswers = questions.some(q => 
+            q.type === 'short_answer' || 
+            q.type === 'AI_Generator' || 
+            q.type === 'conventional'
+        );
+        let finalResults = [...baseResults];
+
+        if (hasShortAnswers) {
+            try {
+                const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+                const rescuedAnswers = {};
+                Object.keys(answers).forEach(id => {
+                    const rawAns = (answers[id] || '').trim();
+                    const eliteAns = isTipTapJSON(rawAns) ? convertTipTapToElite(rawAns) : rawAns;
+                    const finalAns = rescueMangledLatex(eliteAns);
+                    // Escape solo % signs for KaTeX safety
+                    rescuedAnswers[id] = finalAns.replace(/(?<!\\)%/g, '\\%');
+                });
+
+                console.log('[Review v4] Fetching AI grade for', questions.length, 'questions...');
+                const res = await fetch(`${API_URL}/api/maths/lab/grade`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ questions, answers: rescuedAnswers, imageAnswers: imageAnswers || {}, language })
+                });
+
+                if (res.ok) {
+                    const aiGrades = await res.json();
+                    console.log('[Review v4] AI Grades received:', aiGrades.length);
+                    finalResults = finalResults.map(r => {
+                        const aiGrade = (aiGrades || []).find(g => String(g.id) === String(r.id));
+                        if (aiGrade) {
+                            return {
+                                ...r,
+                                correct: aiGrade.isCorrect,
+                                score: aiGrade.score ?? r.score,
+                                maxScore: aiGrade.maxScore ?? r.maxScore,
+                                aiFeedback: aiGrade.feedback
+                            };
+                         }
+                        return r;
+                    });
+                }
+            } catch (e) {
+                console.error("[Review v4] AI Grading failed, falling back to basic matching", e);
+            }
+        }
+
+        const totalEarned = finalResults.reduce((sum, r) => sum + (r.score || 0), 0);
+        const totalMax = finalResults.reduce((sum, r) => sum + (r.maxScore || 1), 0);
+
+        // [HARDENING 3.1]: Ensure minimal loading time for UX
+        const elapsed = Date.now() - startTime;
+        if (elapsed < MIN_LOADING_MS) {
+            await new Promise(resolve => setTimeout(resolve, MIN_LOADING_MS - elapsed));
+        }
+
+        setResults(finalResults);
+        setScore(totalEarned);
+        setTotalPossible(totalMax);
+        setIsGrading(false);
+
+        if (!isSubmitted && !location.state?.already_submitted) {
+            submitFinalResults(totalEarned, totalMax, finalResults);
+        } else if (submitting) {
+            setSubmitting(false);
+        }
+    }, [questions, answers, language, location.state?.already_submitted, isSubmitted, submitting]);
 
     useEffect(() => {
         // Ensure the math tutor is active when reviewing results
         setActiveAgentId('math');
+        console.log('[Review v2] Component mounted. Results length:', results.length);
 
         if (!questions || !answers) {
             if (!isSubmitted && !location.state?.already_submitted) {
@@ -53,106 +164,32 @@ const MathsLabReview = () => {
             return;
         }
 
-        const gradeAnswers = async () => {
-            // If we have cached graded results (from a page refresh/back), use them natively
-            if (location.state?.already_submitted && location.state?.graded_results) {
-                setResults(location.state.graded_results);
-                setScore(location.state.score);
-                setTotalPossible(location.state.totalPossible || questions.reduce((sum, q) => sum + (q.marks || 3), 0));
-                setIsGrading(false);
-                if (submitting) setSubmitting(false);
-                return;
-            }
-
-            setIsGrading(true);
-
-            // 1. Basic synchronous grading (Exact Match)
-            const baseResults = questions.map(q => {
-                const userAnswer = (answers[q.id] || '').trim();
-                const correctAnswer = (q.answer || '').trim();
-                let isCorrect = userAnswer === correctAnswer;
-
-                if (!isCorrect && q.type === 'short_answer') {
-                    const clean = (str) => str.replace(/[\$\\]/g, '').replace(/\s+/g, '').toLowerCase();
-                    const cUser = clean(userAnswer);
-                    const cCorrect = clean(correctAnswer);
-                    if (cUser === cCorrect) isCorrect = true;
-                    else if (cUser.includes(cCorrect) && cCorrect.length > 2) isCorrect = true;
-                }
-
-                const maxScore = q.marks || 3;
-                return { id: q.id, correct: isCorrect, score: isCorrect ? maxScore : 0, maxScore, userAnswer, correctAnswer, question: q };
-            });
-
-            // 2. AI Grading for short answers over the network
-            const hasShortAnswers = questions.some(q => q.type === 'short_answer');
-            let finalResults = [...baseResults];
-
-            if (hasShortAnswers) {
-                try {
-                    const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
-                    const res = await fetch(`${API_URL}/api/maths/lab/grade`, {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({ questions, answers, imageAnswers: imageAnswers || {}, language })
-                    });
-
-                    if (res.ok) {
-                        const aiGrades = await res.json();
-                        finalResults = finalResults.map(r => {
-                            const aiGrade = aiGrades.find(g => g.id === r.id);
-                            if (aiGrade) {
-                                return {
-                                    ...r,
-                                    correct: aiGrade.isCorrect,
-                                    score: aiGrade.score ?? r.score,
-                                    maxScore: aiGrade.maxScore ?? r.maxScore,
-                                    aiFeedback: aiGrade.feedback
-                                };
-                            }
-                            return r;
-                        });
-                    }
-                } catch (e) {
-                    console.error("AI Grading failed, falling back to basic matching", e);
-                }
-            }
-
-            const totalEarned = finalResults.reduce((sum, r) => sum + (r.score || 0), 0);
-            const totalMax = finalResults.reduce((sum, r) => sum + (r.maxScore || 1), 0);
-
-            setResults(finalResults);
-            setScore(totalEarned);
-            setTotalPossible(totalMax);
-            setIsGrading(false);
-
-            // 3. Submit final results to backend
-            if (!isSubmitted && !location.state?.already_submitted) {
-                submitFinalResults(totalEarned, totalMax, finalResults);
-            } else if (submitting) {
-                setSubmitting(false);
-            }
-        };
-
-        // If results array is empty, we haven't graded yet for this load cycle
-        if (results.length === 0) {
+        if (!location.state?.already_submitted || results.length === 0) {
+            console.log('[Review v4] Triggering gradeAnswers effect...');
             gradeAnswers();
         }
-    }, [questions, answers, language, isSubmitted, location.state?.already_submitted]);
+    }, [questions, answers, gradeAnswers, location.state?.already_submitted]);
 
     const submitFinalResults = async (totalEarned, totalMax, gradedArray) => {
+        // Version 4.1: Robust Identity Check
+        const currentUid = user?.uid || location.state?.uid;
+        if (!currentUid) {
+            console.warn('[Review v4] Delaying submission: No UID yet.');
+            return;
+        }
+
         try {
-            console.log('[MathsLabReview] Submitting final results to backend...');
             const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
             const potentialXp = xp || 50;
             const earnedXp = Math.floor((totalEarned / totalMax) * potentialXp);
 
             const submissionData = {
-                uid: user?.uid,
+                uid: currentUid,
                 topic,
                 level,
                 score: totalEarned,
                 total: totalMax,
+                scorePercent: Math.round((totalEarned / totalMax) * 100),
                 taskId,
                 xp: earnedXp,
                 isFactoryQuest,
@@ -165,9 +202,9 @@ const MathsLabReview = () => {
                 body: JSON.stringify(submissionData)
             });
 
+            console.log(`[Review v4] Successfully recorded practice completion for ${currentUid}`);
             setIsSubmitted(true);
 
-            // PERSISTENCE: Replace history state with "already_submitted" flag AND grades
             navigate(location.pathname, {
                 replace: true,
                 state: { ...location.state, already_submitted: true, graded_results: gradedArray, score: totalEarned, totalPossible: totalMax }
@@ -178,118 +215,51 @@ const MathsLabReview = () => {
             setSubmitting(false);
         }
     };
-
     const renderMath = (text) => {
         if (!text) return null;
-
-        // Safety: Ensure text is a string
-        if (typeof text !== 'string') {
-            if (typeof text === 'number') text = String(text);
-            else if (Array.isArray(text)) text = text.join('\n');
-            else text = String(text);
-        }
-
-        // 1. Extract and Hide [DIAGRAM REQUIRED: ...] and [TABLE REQUIRED: ...] tags
-        const diagramMatch = text.match(/\[DIAGRAM REQUIRED:([\s\S]*?)\]/);
-        const tableMatch = text.match(/\[TABLE REQUIRED:([\s\S]*?)\]/);
-        const description = (diagramMatch ? diagramMatch[1] : (tableMatch ? tableMatch[1] : '')).trim();
-
-        const displaySubtext = text
+        const processedText = (typeof text === 'string') ? text : String(text);
+        const safeMathString = processedText.replace(/\\+dots/g, "...");
+        const cleanText = prepareMathText(isTipTapJSON(safeMathString) ? convertTipTapToElite(safeMathString) : safeMathString);
+        
+        // Remove diagram/table markers for the text pass
+        const displaySubtext = cleanText
             .replace(/\[DIAGRAM REQUIRED:[\s\S]*?\]/g, '')
             .replace(/\[TABLE REQUIRED:[\s\S]*?\]/g, '')
             .trim();
 
-        const cleanText = prepareMathText(displaySubtext);
-        const parts = splitContentByDelimiters(cleanText);
+        const parts = splitContentByDelimiters(displaySubtext);
 
         return (
-            <div className="text-gray-800 leading-relaxed font-sans">
+            <div className="text-gray-800 leading-[1.6] font-sans">
                 {parts.map((part, i) => {
                     if (!part) return null;
 
-                    const isBlock = (part.startsWith('\\[') && part.endsWith('\\]')) || (part.startsWith('$$') && part.endsWith('$$'));
-                    const isInline = (part.startsWith('\\(') && part.endsWith('\\)')) || (part.startsWith('$') && part.endsWith('$'));
+                    // v1.7.6: Robust regex-based detection for math parts
+                    // Bug Fix: Only trim when testing for math part match, but don't re-assign the trimmed version globally
+                    const mathMatch = (typeof part === 'string' ? part.trim() : '').match(/^(\$\$?|\\\(|\\\[)([\s\S]+?)(\$\$?|\\\)|\\\])$/);
 
-                    if (isBlock || isInline) {
-                        let math = '';
-                        if (part.startsWith('\\[') || part.startsWith('\\(')) math = part.slice(2, -2);
-                        else if (part.startsWith('$$')) math = part.slice(2, -2);
-                        else math = part.slice(1, -1);
+                    if (mathMatch) {
+                        const opener = mathMatch[1];
+                        const math = mathMatch[2];
+                        const isBlock = opener === '$$' || opener === '\\[';
 
-                        math = math
-                            .replace(/\n/g, ' ')
-                            .replace(/%/g, '\\%')
-                            .replace(/___HKD___/g, '\\text{HK}\\$')
-                            .replace(/___USD___/g, '\\$');
-
-                        const labeledMath = sanitizeMath(math);
-                        const finalMath = formatNumbers(labeledMath, true);
-
-                        if (isBlock) {
-                            return (
-                                <SafeBlockMath key={i} math={finalMath} className="my-2" />
-                            );
-                        } else {
-                            return (
-                                <SafeInlineMath key={i} math={finalMath} className="mx-0.5" />
-                            );
-                        }
+                        const finalMath = formatNumbers(sanitizeMath(rescueMangledLatex(math).replace(/\n/g, ' ')), true);
+                        return isBlock 
+                            ? <SafeBlockMath key={i} math={finalMath} />
+                            : <SafeInlineMath key={i} math={finalMath} className="mx-0.5" />;
                     }
 
-                    return (
-                        <span key={i}>
-                            {part.split(/(?:\r?\n|(?=\.Step\s*\d+\s*:?))/).map((line, lineIdx) => {
-                                const trimmedLine = line.trim().replace(/^\./, '');
-                                if (!trimmedLine && line.length > 0) return <br key={lineIdx} />;
-                                if (!trimmedLine) return null;
+                    // Prose segment: preserve original part with spacing
+                    const html = formatNumbers(part)
+                        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                        .replace(/\*(.*?)\*/g, '<em>$1</em>')
+                        .replace(/___HKD___/g, 'HK$')
+                        .replace(/___USD___/g, '$')
+                        .replace(/\\,/g, ' ')
+                        .replace(/\n/g, '<br />');
 
-                                const isMathLine = looksLikeMath(trimmedLine);
-                                const isStepLine = line.trim().startsWith('Step') || line.trim().startsWith('.Step');
-
-                                if (isMathLine) {
-                                    const mathReadyLine = trimmedLine
-                                        .replace(/%/g, '\\%')
-                                        .replace(/___HKD___/g, '\\text{HK}\\$')
-                                        .replace(/___USD___/g, '\\$');
-
-                                    const labeledMath = sanitizeMath(mathReadyLine);
-                                    const finalMath = formatNumbers(labeledMath, true);
-
-                                    return (
-                                        <React.Fragment key={lineIdx}>
-                                            {(lineIdx > 0 || isStepLine) && <br />}
-                                            <SafeInlineMath math={finalMath} className="mx-1" />
-                                        </React.Fragment>
-                                    );
-                                } else {
-                                    const formattedLine = formatNumbers(trimmedLine);
-                                    const html = formattedLine.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>').replace(/\*(.*?)\*/g, '<em>$1</em>')
-                                        .replace(/___HKD___/g, 'HK$').replace(/___USD___/g, '$')
-                                        .replace(/\\,/g, ' '); // Strip LaTeX spaces in plain text
-
-                                    return (
-                                        <React.Fragment key={lineIdx}>
-                                            {(lineIdx > 0 || isStepLine) && <br />}
-                                            <span className="whitespace-pre-wrap" dangerouslySetInnerHTML={{ __html: html }} />
-                                        </React.Fragment>
-                                    );
-                                }
-                            })}
-                        </span>
-                    );
+                    return <span key={i} className="whitespace-pre-wrap" dangerouslySetInnerHTML={{ __html: html }} />;
                 })}
-
-                {description && (
-                    <div className="bg-slate-50 p-4 rounded-xl border border-slate-100 flex flex-col items-center gap-2 text-center my-2">
-                        <div className="w-8 h-8 bg-white rounded-lg shadow-sm flex items-center justify-center text-slate-400">
-                            <i className={`fas ${tableMatch ? 'fa-table' : 'fa-chart-area'}`}></i>
-                        </div>
-                        <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest leading-none">
-                            Technical {tableMatch ? 'Data' : 'Figure'} Preview
-                        </p>
-                        <p className="text-sm text-slate-600 italic font-medium leading-relaxed">"{description}"</p>
-                    </div>
-                )}
             </div>
         );
     };
@@ -314,12 +284,7 @@ const MathsLabReview = () => {
                 <div className="text-center bg-white p-12 rounded-3xl shadow-xl border border-slate-200">
                     <h2 className="text-2xl font-black text-slate-800 mb-4">No Results Found</h2>
                     <p className="text-slate-500 mb-8">We couldn't find your practice results.</p>
-                    <button
-                        onClick={() => navigate('/dashboard')}
-                        className="bg-purple-600 px-8 py-3 rounded-2xl text-white font-black hover:bg-purple-700 transition-all"
-                    >
-                        Back to Dashboard
-                    </button>
+                    <button onClick={() => navigate('/dashboard')} className="bg-purple-600 px-8 py-3 rounded-2xl text-white font-black hover:bg-purple-700 transition-all">Back to Dashboard</button>
                 </div>
             </div>
         );
@@ -329,36 +294,19 @@ const MathsLabReview = () => {
 
     return (
         <div className="min-h-screen bg-slate-50">
-            {/* Header */}
             <header className="fixed top-0 left-0 right-0 h-20 bg-white/80 backdrop-blur-xl border-b border-slate-200 z-50 px-6 flex items-center justify-between">
                 <div className="flex items-center gap-6">
-                    <button
-                        onClick={() => navigate('/dashboard')}
-                        className="w-12 h-12 rounded-2xl bg-slate-100 hover:bg-slate-200 flex items-center justify-center transition-all group"
-                    >
+                    <button onClick={() => navigate('/dashboard')} className="w-12 h-12 rounded-2xl bg-slate-100 hover:bg-slate-200 flex items-center justify-center transition-all group">
                         <ChevronLeft className="w-6 h-6 text-slate-600 group-hover:-translate-x-1 transition-transform" />
                     </button>
                     <div>
-                        <h1 className="text-xl font-black text-slate-900 tracking-tight">
-                            Practice Review
-                        </h1>
-                        <p className="text-slate-500 text-[10px] font-black uppercase tracking-[0.2em]">
-                            {getMathSkillName(topic, language)} • {currentTier.displayName}
-                        </p>
+                        <h1 className="text-xl font-black text-slate-900 tracking-tight">Practice Review</h1>
+                        <p className="text-slate-500 text-[10px] font-black uppercase tracking-[0.2em]">{getMathSkillName(topic, language)} • {currentTier.displayName}</p>
                     </div>
                 </div>
 
                 <div className="flex items-center gap-4">
-                    <button
-                        onClick={toggleLanguage}
-                        className={`px-3 py-1.5 rounded-lg border text-xs font-black transition-all flex items-center gap-2 ${language === 'zh'
-                            ? 'bg-purple-600 border-purple-600 text-white shadow-sm'
-                            : 'bg-white border-slate-200 text-slate-400 hover:border-purple-300 hover:text-purple-600'
-                            }`}
-                        title="Toggle Language"
-                    >
-                        {language === 'zh' ? '繁體中文' : 'ENGLISH'}
-                    </button>
+                    <button onClick={toggleLanguage} className={`px-3 py-1.5 rounded-lg border text-xs font-black transition-all flex items-center gap-2 ${language === 'zh' ? 'bg-purple-600 border-purple-600 text-white shadow-sm' : 'bg-white border-slate-200 text-slate-400 hover:border-purple-300 hover:text-purple-600'}`}>{language === 'zh' ? '繁體中文' : 'ENGLISH'}</button>
                     <div className="text-right">
                         <p className="text-sm text-slate-500 font-medium">Your Score</p>
                         <p className="text-2xl font-black text-purple-600">{score}/{totalPossible}</p>
@@ -367,17 +315,14 @@ const MathsLabReview = () => {
             </header>
 
             <main className="max-w-5xl mx-auto px-6 pt-32 pb-20">
-                {/* Score Summary */}
-                <div className="bg-gradient-to-br from-purple-600 to-indigo-600 p-8 rounded-3xl shadow-2xl mb-8 text-white">
+                <div className="bg-gradient-to-br from-purple-600 to-indigo-600 p-8 rounded-3xl shadow-2xl mb-12 text-white">
                     <div className="flex items-center justify-between">
                         <div>
                             <div className="flex items-center gap-3 mb-2">
                                 <Trophy className="w-8 h-8" />
                                 <h2 className="text-3xl font-black">Practice Complete!</h2>
                             </div>
-                            <p className="text-purple-100">
-                                You scored <span className="font-black text-white">{scorePercent}%</span> on this practice set
-                            </p>
+                            <p className="text-purple-100">You scored <span className="font-black text-white">{scorePercent}%</span> on this practice set</p>
                         </div>
                         <div className="text-right">
                             <div className="text-6xl font-black">{score}</div>
@@ -386,146 +331,146 @@ const MathsLabReview = () => {
                     </div>
                 </div>
 
-                {/* Question Review */}
-                <div className="space-y-6">
+                <div className="space-y-12">
                     {results.map((result, idx) => (
-                        <div
-                            key={result.id}
-                            className="bg-white rounded-2xl shadow-lg border-2 border-slate-100 overflow-hidden"
-                        >
-                            {/* Question Header */}
-                            <div className={`px-6 py-4 flex items-center justify-between ${result.correct || result.score === result.maxScore ? 'bg-emerald-50' : 'bg-red-50'
-                                }`}>
-                                <div className="flex items-center gap-3">
-                                    {result.correct || result.score === result.maxScore ? (
-                                        <CheckCircle className="w-6 h-6 text-emerald-600" />
-                                    ) : (
-                                        <XCircle className="w-6 h-6 text-red-600" />
-                                    )}
+                        <div key={idx} className="bg-white rounded-[2rem] shadow-xl border border-slate-100 overflow-hidden transition-all duration-300 hover:shadow-2xl">
+                            <div className={`px-8 py-5 flex items-center justify-between ${result.correct || result.score === result.maxScore ? 'bg-emerald-50/50' : 'bg-red-50/50'}`}>
+                                <div className="flex items-center gap-4">
+                                    <div className={`w-10 h-10 rounded-2xl flex items-center justify-center ${result.correct || result.score === result.maxScore ? 'bg-emerald-100 text-emerald-600' : 'bg-red-100 text-red-600'}`}>
+                                        {result.correct || result.score === result.maxScore ? <CheckCircle size={24} /> : <XCircle size={24} />}
+                                    </div>
                                     <div>
-                                        <span className="text-xs font-black uppercase tracking-wider text-slate-500">
-                                            Question {idx + 1}
-                                        </span>
-                                        <p className={`font-black ${result.score === result.maxScore ? 'text-emerald-700' : result.score > 0 ? 'text-amber-700' : 'text-red-700'}`}>
-                                            {result.score} / {result.maxScore} Marks
-                                        </p>
+                                        <span className="text-[10px] font-black uppercase tracking-widest text-slate-400">Question {idx + 1}</span>
+                                        <div className="flex items-center gap-3">
+                                            <p className={`text-lg font-black ${result.score === result.maxScore ? 'text-emerald-700' : result.score > 0 ? 'text-amber-700' : 'text-red-700'}`}>
+                                                {result.score} / {result.maxScore} Marks
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
-                                <span className="text-xs font-bold text-slate-500 bg-white px-3 py-1 rounded-full">
-                                    {result.question.type === 'mc' ? 'MCQ' : 'Short Answer'}
+                                <span className="px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest bg-white border border-slate-100 text-slate-500 shadow-sm">
+                                    {result.question.type === 'mc' ? 'Multiple Choice' : 'Structured Question'}
                                 </span>
                             </div>
 
-                            {/* Question Content */}
-                            <div className="p-6 space-y-6">
-                                {/* Question Text */}
+                            <div className="p-8 space-y-10">
                                 <div>
-                                    <div className="text-lg font-medium text-slate-800">
-                                        {renderMath(language === 'zh' ? (result.question.text_zh || result.question.text) : result.question.text)}
+                                    <div className="flex flex-col gap-3 mb-8">
+                                        <div className="text-xl font-medium text-slate-800 leading-relaxed">
+                                            {renderMath(result.question.text)}
+                                        </div>
+                                        {result.question.text_zh && (
+                                            <div className="text-xl font-medium text-slate-600 leading-relaxed border-t border-slate-50 pt-3">
+                                                {renderMath(result.question.text_zh)}
+                                            </div>
+                                        )}
                                     </div>
-                                    {/* Diagram Section */}
-                                    {topic !== 'math_alg_apgp' && (result.question.diagram_url || result.question.diagram_json || result.question.diagram_svg) && (
-                                        <div className={`mt-6 flex flex-col items-center mx-auto transition-all duration-300 ${expandedDiagrams[result.id] ? 'w-full' : 'w-[280px]'}`}>
-                                            <div className="w-full relative bg-gradient-to-br from-slate-50 to-slate-100 p-4 border-2 border-dashed border-slate-200 rounded-3xl flex flex-col items-center justify-center">
-                                                <button
-                                                    onClick={() => toggleDiagram(result.id)}
-                                                    className="absolute top-2 right-2 z-10 p-2 bg-white/80 backdrop-blur-md rounded-xl border border-slate-200 shadow-sm text-slate-600 hover:text-purple-600 transition-all scale-75 hover:scale-100"
-                                                >
-                                                    {expandedDiagrams[result.id] ? <Minimize2 size={16} /> : <Maximize2 size={16} />}
+                                    {topic !== 'math_alg_apgp' && (result.question.diagram_url || result.question.diagram_json || result.question.diagram_svg || result.question.content?.diagram_svg) && (
+                                        <div className={`mt-8 flex flex-col items-center mx-auto transition-all duration-300 ${expandedDiagrams[result.id] ? 'w-full' : 'w-[320px]'}`}>
+                                            <div className="w-full relative bg-slate-50 p-6 rounded-[2.5rem] border border-slate-100 shadow-inner flex flex-col items-center justify-center">
+                                                <button onClick={() => toggleDiagram(result.id)} className="absolute top-4 right-4 z-10 p-2 bg-white rounded-xl shadow-md text-slate-400 hover:text-purple-600 transition-all">
+                                                    {expandedDiagrams[result.id] ? <Minimize2 size={20} /> : <Maximize2 size={20} />}
                                                 </button>
-
                                                 {result.question.diagram_url ? (
-                                                    <div className="w-full bg-white rounded-2xl p-4 shadow-sm border border-slate-200 flex justify-center items-center overflow-hidden">
-                                                        <img
-                                                            src={`${import.meta.env.VITE_API_URL}/${result.question.diagram_url}`}
-                                                            alt="Mathematical Graph"
-                                                            className={`max-w-full object-contain ${expandedDiagrams[result.id] ? 'max-h-[500px]' : 'max-h-48'}`}
-                                                        />
-                                                    </div>
+                                                    <img src={`${import.meta.env.VITE_API_URL}/${result.question.diagram_url}`} alt="Graph" className={`max-w-full object-contain mix-blend-multiply ${expandedDiagrams[result.id] ? 'max-h-[600px]' : 'max-h-56'}`} />
                                                 ) : result.question.diagram_json ? (
-                                                    <div className="w-full bg-white rounded-2xl p-4 shadow-sm border border-slate-200 flex justify-center items-center">
-                                                        <GeometryRenderer data={result.question.diagram_json} />
-                                                    </div>
-                                                ) : result.question.diagram_svg ? (
-                                                    <div className={`w-full bg-white rounded-2xl p-4 shadow-sm border border-slate-200 flex justify-center items-center ${expandedDiagrams[result.id] ? '' : 'overflow-hidden max-h-48'}`}
-                                                        dangerouslySetInnerHTML={{ __html: result.question.diagram_svg }}
-                                                    />
+                                                    <GeometryRenderer data={result.question.diagram_json} />
+                                                ) : (result.question.diagram_svg || result.question.content?.diagram_svg) ? (
+                                                     <div 
+                                                        className={`w-full flex items-center justify-center geometry-diagram-container transition-all duration-300 ${expandedDiagrams[result.id] ? 'min-h-[400px]' : 'min-h-[220px]'}`} 
+                                                        dangerouslySetInnerHTML={{ __html: result.question.diagram_svg || result.question.content?.diagram_svg }} 
+                                                     />
                                                 ) : null}
                                             </div>
                                         </div>
                                     )}
-
                                 </div>
 
-                                {/* User Answer */}
-                                <div>
-                                    <p className="text-xs font-black text-slate-400 uppercase tracking-wider mb-2">Your Answer</p>
-                                    <div className={`p-4 rounded-xl border-2 ${result.correct
-                                        ? 'bg-emerald-50 border-emerald-200'
-                                        : 'bg-red-50 border-red-200'
-                                        }`}>
-                                        {result.userAnswer ? (
-                                            <div className="whitespace-pre-wrap font-sans">{renderMath(result.userAnswer)}</div>
-                                        ) : (
-                                            <span className="text-slate-400 italic">No text answer provided</span>
-                                        )}
-                                        {imageAnswers?.[result.id] && (
-                                            <div className="mt-3 pt-3 border-t border-slate-200">
-                                                <p className="text-[10px] font-black text-purple-500 uppercase tracking-wider mb-2">Handwritten Steps</p>
-                                                <img
-                                                    src={imageAnswers[result.id]}
-                                                    alt="Handwritten answer"
-                                                    className="max-w-sm max-h-64 object-contain rounded-xl border border-slate-200 shadow-sm"
-                                                />
-                                            </div>
-                                        )}
-                                    </div>
-                                </div>
-
-                                {/* AI Feedback */}
-                                {result.aiFeedback && (
-                                    <div>
-                                        <p className="text-xs font-black text-indigo-600 uppercase tracking-wider mb-2">AI Examiner Feedback</p>
-                                        <div className="p-4 rounded-xl bg-indigo-50 border-2 border-indigo-200 text-indigo-900 whitespace-pre-wrap font-sans">
-                                            {result.aiFeedback}
+                                <div className="flex flex-col gap-8">
+                                    <div className="space-y-4">
+                                        <div className="flex items-center gap-2 text-slate-400">
+                                            <User size={14} className="opacity-60" />
+                                            <p className="text-[10px] font-black uppercase tracking-widest">Student Scratchpad</p>
+                                        </div>
+                                        <div className={`p-6 rounded-3xl border-2 transition-all student-scratchpad-container ${result.correct ? 'bg-emerald-50/30 border-emerald-100 shadow-sm shadow-emerald-100/50' : 'bg-red-50/30 border-red-100 shadow-sm shadow-red-100/50'}`}>
+                                            {result.userAnswer ? (
+                                                <div className="font-sans prose prose-slate max-w-none">{renderMath(result.userAnswer)}</div>
+                                            ) : (
+                                                <span className="text-slate-400 italic text-sm">No steps provided digitally.</span>
+                                            )}
+                                            {imageAnswers?.[result.id] && (
+                                                <div className="mt-6 pt-6 border-t border-slate-200/50">
+                                                    <p className="text-[10px] font-black text-purple-600 uppercase tracking-wider mb-4">Handwritten Proof</p>
+                                                    <img src={imageAnswers[result.id]} alt="Steps" className="max-w-full rounded-2xl border-4 border-white shadow-xl" />
+                                                </div>
+                                            )}
                                         </div>
                                     </div>
-                                )}
 
-                                {/* Correct Answer (if wrong) */}
-                                {!result.correct && (
-                                    <div>
-                                        <p className="text-xs font-black text-emerald-600 uppercase tracking-wider mb-2">Correct Answer</p>
-                                        <div className="p-4 rounded-xl bg-emerald-50 border-2 border-emerald-200">
-                                            {renderMath(language === 'zh' && result.question.type === 'mc' ? (result.question.options_zh?.[result.question.options?.indexOf(result.correctAnswer)] || result.correctAnswer) : result.correctAnswer)}
-                                        </div>
-                                    </div>
-                                )}
-
-                                {/* Solution Steps */}
-                                {((result.question.solution_steps && result.question.solution_steps.length > 0) || result.question.answer_logic_zh) && (
-                                    <div>
-                                        <p className="text-xs font-black text-purple-600 uppercase tracking-wider mb-3">Step-by-Step Solution</p>
+                                    {((result.question.type !== 'mc' && result.aiFeedback !== undefined) || result.aiFeedback) && (
                                         <div className="space-y-4">
+                                            <div className="flex items-center gap-2 text-indigo-500">
+                                                <Cpu size={14} className="opacity-60" />
+                                                <p className="text-[10px] font-black uppercase tracking-widest">AI Scoring Rubric</p>
+                                            </div>
+                                            <div className="p-6 rounded-3xl bg-indigo-50/40 border-2 border-indigo-100 shadow-sm shadow-indigo-100/50 text-indigo-900 leading-relaxed font-sans text-sm mastery-logic-container">
+                                                {result.aiFeedback ? renderMath(result.aiFeedback) : <span className="text-indigo-400 italic">No detailed feedback provided.</span>}
+                                            </div>
+                                        </div>
+                                    )}
+                                </div>
+
+                                {!result.correct && (
+                                    <div className="bg-emerald-50/40 p-6 rounded-3xl border border-emerald-100/50">
+                                        <p className="text-[10px] font-black text-emerald-600 uppercase tracking-widest mb-3">Target Objective</p>
+                                        <div className="text-emerald-900">
+                                            {(() => {
+                                                const rawAns = language === 'zh' && result.question.type === 'mc' 
+                                                    ? (result.question.options_zh?.[result.question.options?.indexOf(result.correctAnswer)] || result.correctAnswer) 
+                                                    : result.correctAnswer;
+                                                // Bug 2 Fix: Wrap in delimiters to ensure it renders as math component
+                                                const wrappedAns = (rawAns.includes('\\') || rawAns.includes('_') || rawAns.includes('^')) 
+                                                    ? `$${rawAns}$` 
+                                                    : rawAns;
+                                                return renderMath(wrappedAns);
+                                            })()}
+                                        </div>
+                                    </div>
+                                )}
+
+                                {((result.question.solution_steps && result.question.solution_steps.length > 0) || result.question.answer_logic_zh) && (
+                                    <div className="pt-8 border-t border-slate-100">
+                                        <p className="text-[10px] font-black text-purple-600 uppercase tracking-widest mb-6">Mastery Logic (Step-by-Step)</p>
+                                        <div className="space-y-8 mastery-logic-container">
                                             {(language === 'zh'
                                                 ? (result.question.solution_steps_zh || (result.question.answer_logic_zh ? result.question.answer_logic_zh.split('\\n').filter(s => s.trim()) : result.question.solution_steps))
-                                                : result.question.solution_steps).map((step, stepIdx) => (
-                                                    <div key={stepIdx} className="flex gap-3 group relative">
-                                                        <div className="flex-shrink-0 w-8 h-8 rounded-full bg-purple-100 text-purple-700 font-black text-sm flex items-center justify-center">
-                                                            {stepIdx + 1}
-                                                        </div>
-                                                        <div className="flex-1 pt-1 flex items-start justify-between gap-4">
-                                                            <div className="flex-1">
-                                                                {renderMath(step)}
+                                                : result.question.solution_steps).map((step, stepIdx) => {
+                                                    const trimmedStep = (typeof step === 'string') ? step.trim() : '';
+                                                    const isFullMath = (trimmedStep.startsWith('$$') && trimmedStep.endsWith('$$')) ||
+                                                                     (trimmedStep.startsWith('\\[') && trimmedStep.endsWith('\\]'));
+                                                    
+                                                    return (
+                                                        <div key={stepIdx} className="flex gap-4 group">
+                                                            <div className="flex-shrink-0 w-8 h-8 rounded-xl bg-purple-50 text-purple-600 font-black text-xs grid place-items-center border border-purple-100 group-hover:bg-purple-600 group-hover:text-white transition-all leading-none pt-0.5">
+                                                                {stepIdx + 1}
                                                             </div>
-                                                            <MathStepExplainer
-                                                                question={language === 'zh' ? (result.question.text_zh || result.question.text) : result.question.text}
-                                                                fullSolution={language === 'zh' ? (result.question.answer_logic_zh || (result.question.solution_steps_zh ? result.question.solution_steps_zh.join('\\n') : result.question.solution_steps.join('\\n'))) : result.question.solution_steps.join('\\n')}
-                                                                targetStep={step}
-                                                            />
+                                                            <div className="flex-1 min-w-0">
+                                                                <div className="flex items-start justify-between gap-6">
+                                                                    <div className="flex-1 pt-0">
+                                                                        <div className="text-slate-700 leading-relaxed font-sans">{renderMath(step)}</div>
+                                                                    </div>
+                                                                    <div className="opacity-0 group-hover:opacity-100 transition-opacity">
+                                                                        <MathStepExplainer
+                                                                            question={language === 'zh' ? (result.question.text_zh || result.question.text) : result.question.text}
+                                                                            fullSolution={language === 'zh' ? (result.question.answer_logic_zh || (result.question.solution_steps_zh ? result.question.solution_steps_zh.join('\\n') : result.question.solution_steps.join('\\n'))) : result.question.solution_steps.join('\\n')}
+                                                                            targetStep={step}
+                                                                        />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                ))}
+                                                    );
+                                                })}
                                         </div>
                                     </div>
                                 )}
@@ -534,40 +479,19 @@ const MathsLabReview = () => {
                     ))}
                 </div>
 
-                {/* Footer Actions */}
-                <div className="mt-12 flex gap-4 justify-center">
-                    <button
-                        onClick={() => navigate('/dashboard', {
-                            state: {
-                                labCompleted: true,
-                                topic: title || topic || "Maths Lab",
-                                earnedXp: Math.floor((score / (totalPossible || 1)) * (xp || 50)),
-                                masteryScore: Math.round((score / (totalPossible || 1)) * 100)
-                            }
-                        })}
-                        className="px-8 py-4 rounded-2xl bg-slate-100 text-slate-700 font-black hover:bg-slate-200 transition-all flex items-center gap-2"
-                    >
-                        <Home className="w-5 h-5" />
-                        Back to Dashboard
-                    </button>
-                    <button
-                        onClick={() => navigate('/maths/lab', {
-                            state: { topic, level, taskId, title, xp, isFactoryQuest }
-                        })}
-                        className="px-8 py-4 rounded-2xl bg-purple-600 text-white font-black hover:bg-purple-700 transition-all shadow-lg shadow-purple-200"
-                    >
-                        Practice again ({currentTier.displayName})
-                    </button>
-                    {nextLevel && (
-                        <button
-                            onClick={() => navigate('/maths/lab', {
-                                state: { topic, level: nextLevel, taskId, title, xp, isFactoryQuest }
-                            })}
-                            className="px-8 py-4 rounded-2xl bg-indigo-600 text-white font-black hover:bg-indigo-700 transition-all shadow-lg shadow-indigo-200"
+                <div className="mt-16 flex gap-6 justify-center">
+                    <button onClick={() => navigate('/dashboard', { state: { labCompleted: true, topic: title || topic || "Maths Lab", earnedXp: Math.floor((score / (totalPossible || 1)) * (xp || 50)), masteryScore: Math.round((score / (totalPossible || 1)) * 100) } })} className="px-10 py-5 rounded-3xl bg-white text-slate-700 font-black border border-slate-200 hover:bg-slate-50 transition-all flex items-center gap-3 shadow-sm"><Home size={20} /> Dashboard</button>
+                    {user?.email === 'fungtam@gmail.com' && (
+                        <button 
+                            onClick={gradeAnswers} 
+                            disabled={isGrading}
+                            className="px-10 py-5 rounded-3xl bg-purple-50 text-purple-700 font-black border-2 border-purple-200 hover:bg-purple-100 transition-all flex items-center gap-3 shadow-lg shadow-purple-100"
                         >
-                            Practice Next Level ({nextTier.displayName})
+                            <RefreshCw size={20} className={isGrading ? 'animate-spin' : 'animate-pulse text-purple-400'} />
+                            Re-examine with AI
                         </button>
                     )}
+                    <button onClick={() => navigate('/maths/lab', { state: { topic, level, taskId, title, xp, isFactoryQuest } })} className="px-10 py-5 rounded-3xl bg-purple-600 text-white font-black hover:bg-purple-700 transition-all shadow-xl shadow-purple-200">Practice again</button>
                 </div>
             </main>
         </div>

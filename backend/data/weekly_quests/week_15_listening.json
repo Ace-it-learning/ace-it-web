@@ -1,0 +1,168 @@
+{
+  "type": "LISTENING",
+  "topic": "listening_weekly",
+  "title": "Rise of Specialty Coffee Culture in Central: A Social Phenomenon",
+  "prediction_metadata": {
+    "topic_name": "Rise of Specialty Coffee Culture in Central: A Social Phenomenon",
+    "sub_topics": [
+      {
+        "id": "st1",
+        "name": "Historical Context",
+        "category": "Background",
+        "synonyms": [
+          "Origins",
+          "Early Development"
+        ],
+        "is_distractor": false,
+        "hint": "Consider the origins of coffee consumption."
+      },
+      {
+        "id": "st2",
+        "name": "Economic Factors",
+        "category": "Driving Force",
+        "synonyms": [
+          "Market Trends",
+          "Financial Aspects"
+        ],
+        "is_distractor": false,
+        "hint": "Think about the money involved."
+      },
+      {
+        "id": "st3",
+        "name": "Social Media Influence",
+        "category": "Modern Trend",
+        "synonyms": [
+          "Instagrammability",
+          "Online Hype"
+        ],
+        "is_distractor": false,
+        "hint": "How does social media play a role?"
+      },
+      {
+        "id": "st4",
+        "name": "Competition from Chain Stores",
+        "category": "Market Dynamics",
+        "synonyms": [
+          "Corporate Coffee",
+          "Starbucks",
+          "Pacific Coffee"
+        ],
+        "is_distractor": true,
+        "hint": "Large companies changing landscape."
+      },
+      {
+        "id": "st5",
+        "name": "Hong Kong's Rental Prices",
+        "category": "Obstacle",
+        "synonyms": [
+          "High Rents",
+          "Property Costs"
+        ],
+        "is_distractor": true,
+        "hint": "Think about difficulties businesses face because of rent."
+      }
+    ]
+  },
+  "reading_passage": "[Podcast Intro Music] \n\nHost: Welcome back to 'Hong Kong Insights'! Today, we're diving deep into the aroma and culture of specialty coffee in Central. [Sound of coffee grinder] It's more than just a caffeine fix; it's a social phenomenon. We have two experts with us: barista champion, Sarah Lee, and sociologist, Dr. Chan. Welcome!\n\nSarah: Thanks for having me!\n\nDr. Chan: Pleasure to be here.\n\nHost: Sarah, can you explain what exactly defines 'specialty coffee'? [Sound of milk frothing]\n\nSarah: Sure! It's all about the bean quality, the roasting process, and the barista's skill. We're talking single-origin beans, meticulously sourced and roasted to perfection. It's an art form, really. [Emphasis on 'art form']\n\nDr. Chan: And that 'art form' is key. Socially, specialty coffee has become a symbol of status and belonging. People are willing to pay a premium for the experience – the ambiance, the carefully crafted latte art, the feeling of being 'in the know.' [Slight chuckle] It’s a modern ritual.\n\nHost: Interesting. So, Dr. Chan, what are the broader social implications?\n\nDr. Chan: Well, it reflects a shift in consumer values. People are prioritizing experiences and craftsmanship over mass-produced goods. It also fosters a sense of community. These coffee shops often host events, workshops, creating spaces for connection. [Pause for emphasis] However, we also need to consider the exclusivity. Not everyone can afford a $60 cup of coffee. \n\nHost: Good point. Sarah, how do these independent coffee shops compete with the larger chains?\n\nSarah: It’s tough! But we focus on quality, personalized service, and building relationships with our customers. We also try to source locally roasted beans when possible, supporting other small businesses. [Sound of espresso machine] Authenticity is crucial. \n\nDr. Chan: And authenticity resonates with a generation that values transparency and ethical consumption. [Slight nod]. They want to know where their coffee comes from and how it's made. \n\nHost: What about the future? Is this a sustainable trend?\n\nSarah: I think so. As long as we continue to innovate and provide exceptional quality, specialty coffee will thrive. [Optimistic tone]\n\nDr. Chan: I agree. It's not just a fad. It's a reflection of changing social values and a desire for connection and meaningful experiences. [Pause] The challenge is to make it more accessible. \n\nHost: Excellent points, both of you! Thank you for sharing your insights. [Podcast Outro Music]",
+  "conceptual_explanation": "This listening task focuses on the rise of specialty coffee culture in Central, Hong Kong, exploring its economic, social, and cultural dimensions. It examines the factors contributing to its popularity, its impact on consumer behavior, and its sustainability as a trend. Understanding the nuances of speaker attitude and the ability to capture specific information about market forces are key to completing this task successfully.",
+  "key_points": [
+    "Note-taking skills during listening",
+    "Identifying speaker attitude (optimistic, critical, neutral)",
+    "Recognizing key vocabulary related to coffee, business, and social trends",
+    "Differentiating between facts and opinions",
+    "Inferring implied meanings from context"
+  ],
+  "interactive_tasks": [
+    {
+      "type": "MCQ",
+      "question": "What is Sarah Lee's main definition of 'specialty coffee'?",
+      "options": [
+        "Coffee that is mass-produced and widely available.",
+        "Coffee made quickly and efficiently.",
+        "Coffee with high-quality beans, careful roasting, and barista skill.",
+        "Coffee served in a luxurious environment."
+      ],
+      "answer": "Coffee with high-quality beans, careful roasting, and barista skill."
+    },
+    {
+      "type": "GAP_FILL",
+      "question": "Dr. Chan describes specialty coffee as becoming a symbol of _____ and _____.",
+      "answer": [
+        "status",
+        "belonging"
+      ]
+    },
+    {
+      "type": "MCQ",
+      "question": "According to Dr. Chan, what is a negative social implication of the specialty coffee trend?",
+      "options": [
+        "It promotes a sense of community.",
+        "It encourages people to spend more money.",
+        "It's exclusively is accessible to everyone.",
+        "It can be inaccessible due to its price."
+      ],
+      "answer": "It can be inaccessible due to its price."
+    },
+    {
+      "type": "FORM_FILLING",
+      "question": "Complete the following table with factors Sarah mentions for competing with larger coffee chains:\n\n| Factor | Description |\n|---|---| \n| Quality | __________ |\n| Service | __________ |\n| Sourcing | __________ |",
+      "answer": {
+        "Quality": "Exceptional",
+        "Service": "Personalized",
+        "Sourcing": "Locally roasted beans"
+      }
+    },
+    {
+      "type": "SHORT_RESPONSE",
+      "question": "What does Dr. Chan suggest is a key value that resonates with consumers of specialty coffee?",
+      "answer": "Transparency and ethical consumption."
+    },
+    {
+      "type": "MCQ",
+      "question": "What is Sarah’s attitude toward the future of specialty coffee?",
+      "options": [
+        "Pessimistic",
+        "Neutral",
+        "Optimistic",
+        "Uncertain"
+      ],
+      "answer": "Optimistic"
+    },
+    {
+      "type": "GAP_FILL",
+      "question": "According to Dr. Chan, specialty coffee isn't just a fad; it reflects changing social values and a desire for _____ and _____ experiences.",
+      "answer": [
+        "connection",
+        "meaningful"
+      ]
+    },
+    {
+      "type": "SHORT_RESPONSE",
+      "question": "What challenge does Dr. Chan identify for the future of specialty coffee?",
+      "answer": "To make it more accessible."
+    },
+    {
+      "type": "MCQ",
+      "question": "What is the overall tone of the podcast?",
+      "options": [
+        "Critical of consumerism",
+        "Celebratory of economic success",
+        "Informative and balanced",
+        "Skeptical of the future"
+      ],
+      "answer": "Informative and balanced"
+    },
+    {
+      "type": "FORM_FILLING",
+      "question": "Complete the following table identifying the speaker and their main argument:\n\n| Speaker | Main Argument |\n|---|---| \n| Sarah Lee | __________ |\n| Dr. Chan | __________ |",
+      "answer": {
+        "Sarah Lee": "Specialty coffee will thrive with innovation and quality.",
+        "Dr. Chan": "Specialty coffee reflects social values but needs accessibility."
+      }
+    }
+  ],
+  "success_feedback": "Well done! You've demonstrated a strong understanding of the specialty coffee culture in Central. Your listening skills and ability to extract key information are excellent!",
+  "suggested_next_steps": [
+    "Try Reading challenge on related topics such as Hong Kong's business trends or consumer behaviour."
+  ]
+}

@@ -1,7 +1,9 @@
 const MATH_BLUEPRINT = require('../../blueprints/Math_Compulsory_Blueprint.json');
 const MATH_PAPERS = require('./MathsPapers');
 const GenerativeAIService = require('../GenerativeAIService');
-const TIER_1_MODEL = "gemini-flash-latest"; // Pro model for high-quality diagnostic analysis
+const fs = require('fs');
+const path = require('path');
+const TIER_1_MODEL = "gemini-1.5-pro"; // Hardcoded to Gemini 1.5 Pro per User Request
 const { mapSkillToId } = require('./MathsMicroSkillMapper');
 const { DSE_SCORING, accuracyToLevel } = require('../../constants/dseScoring');
 
@@ -97,23 +99,16 @@ Student Submission:
 ${JSON.stringify(studentSubmissions, null, 2)}
 
 TASK:
-1. Conventional Questions: Grade them based strictly on 'marks' provided.
-   - **Method Mark (M)**: Award if they correctly set up the equation (e.g., correct formula substitution, correct expansion). Use full term: "(Method Mark 1)".
-   - **Answer Mark (A)**: Award ONLY if the final answer is correct (check sign, units, precision). Use full term: "(Answer Mark 1)".
+1. Conventional Questions: Grade them based strictly on 'marks' provided. Refer to the system instructions for grading standards.
+   - **Method Mark (M)**: Award if they correctly set up the equation.
+   - **Answer Mark (A)**: Award ONLY if the final answer is correct.
    - **CRITICAL**: If the equation is correct but calculation is wrong, give Method Mark but NOT Answer Mark.
-   - **STEP-BY-STEP DERIVATION (MANDATORY)**: You MUST provide a complete derivation of the correct answer. 
-     * Show at least 3 mathematical steps using LaTeX.
-     * **CRITICAL**: Each derivation MUST be specific to the question topic. DO NOT overuse the vertex formula (x = -b/2a) unless the question is actually about the vertex of a quadratic function.
-     * Separator: Each Step MUST be separated by a newline escape sequence (\\n). 
-     * CRITICAL: DO NOT use literal newlines within JSON strings. Use '\\n' for all line breaks.
-     * Format: "Step 1: [Explanation] \\nStep 2: [Explanation] \\nStep 3: [Explanation]"
-     * Explain the logic behind each step clearly using standard mathematical principles (expansion, indices, trig rules, etc).
-2. MC Questions: **ALWAYS explain the complete logical reasoning**, even if the student answered correctly.
-   - Show the equation/formula used. **BE DIVERSE**: If it's statistics, show mean/SD logic. If it's geometry, show vertical/interior angle logic.
-   - Explain the step-by-step logic in 2-3 clear points
-   - For CORRECT answers: "✓ Correct! Here's why: [detailed explanation]"
-   - For INCORRECT answers: "✗ The correct answer is [X]. Here's the logic: [detailed explanation]"
-3. Micro-skills: Identify 2-3 sub-skills per question. **CRITICAL**: Always include the 'topic' provided in DATA as one of the micro-skills.
+   - **STEP-BY-STEP DERIVATION (MANDATORY)**: You MUST provide a complete derivation of the correct answer using $ and $$ delimiters.
+      * Show at least 3 mathematical steps using LaTeX.
+      * **CRITICAL**: Each derivation MUST be specific to the question topic.
+      * Separator: Each Step MUST be separated by a newline escape sequence (\\n). 
+      * Format: "Step 1: [Explanation] \\nStep 2: [Explanation] \\nStep 3: [Explanation]"
+2. MC Questions: **ALWAYS explain the complete logical reasoning** using $ and $$ delimiters.
 - **Language**: Use {{LANGUAGE}}.
 - **STRICTLY FORBIDDEN**: Colloquial Cantonese (口語).
 
@@ -125,7 +120,7 @@ IMPORTANT: Return raw JSON only. Do not use markdown code blocks or any other te
             "id": "question_id",
             "score": number, // Only used for Conventional. MUST NOT EXCEED 'marks'.
             "max": number,   // MUST match 'marks' provided in DATA.
-            "explanation": "Step 1: [Logic in {{LANGUAGE}}] \\[ LaTeX Equation \\] \\nStep 2: [Logic in {{LANGUAGE}}] \\[ LaTeX Equation \\] \\n\\nFinal Answer: ... (Method Mark X, Answer Mark Y)", 
+            "explanation": "Step 1: [Logic in {{LANGUAGE}}] $ LaTeX Equation $ \\nStep 2: [Logic in {{LANGUAGE}}] $ LaTeX Equation $ \\n\\nFinal Answer: ... (Method Mark X, Answer Mark Y)", 
             "micro_skills": ["Skill A", "Skill B"]
         }
     ]
@@ -137,12 +132,18 @@ IMPORTANT: Return raw JSON only. Do not use markdown code blocks or any other te
                 : 'English';
 
             const finalPrompt = gradingPrompt.replace(/{{LANGUAGE}}/g, languageName);
+            const aiGraderPath = path.join(__dirname, '..', '..', 'prompts', 'AI_Grader.md');
+            const finalSystemInstruction = fs.readFileSync(aiGraderPath, 'utf8');
 
-            const aiResponse = await GenerativeAIService.generateJson(finalPrompt, {
-                model: TIER_1_MODEL
+            const { data: aiResponse } = await GenerativeAIService.generateJson(finalPrompt, {
+                model: TIER_1_MODEL,
+                systemInstruction: finalSystemInstruction,
+                generationConfig: {
+                    temperature: 0.0
+                }
             });
 
-            if (aiResponse.evaluations) {
+            if (aiResponse && aiResponse.evaluations) {
                 aiResponse.evaluations.forEach(evalItem => {
                     const existingDetailIndex = results.details.findIndex(d => d.id === evalItem.id);
                     const q = paper.questions.find(pq => pq.id === evalItem.id);
@@ -157,8 +158,9 @@ IMPORTANT: Return raw JSON only. Do not use markdown code blocks or any other te
                         // Conventional: Add to results
                         const maxScore = q.marks || 2;
                         // Determine score: use AI score but cap at maxScore
-                        let awardedScore = evalItem.score;
+                        let awardedScore = Number(evalItem.score || 0);
                         if (awardedScore > maxScore) awardedScore = maxScore;
+                        if (isNaN(awardedScore)) awardedScore = 0;
 
                         results.sections.paper1.score += awardedScore;
                         results.sections.paper1.max += maxScore;

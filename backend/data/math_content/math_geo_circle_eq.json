@@ -1,0 +1,60 @@
+{
+    "is_modular": true,
+    "name": "Equation of Circle",
+    "name_zh": "圓方程",
+    "roadmap": "Master the two forms of circle equations: Standard Form and General Form. Learn how to convert between them and extract essential properties like the center and radius. Finally, explore the intersection between circles and lines using the discriminant method.",
+    "roadmap_zh": "掌握圓方程的兩種形式：標準式和一般式。學習如何在這兩者之間轉換並提取關鍵性質，如圓心和半徑。最後，利用判別式方法探討圓與直線之間的相交關係。",
+    "learning_modules": [
+        {
+            "module_id": "MOD_01",
+            "title": "Circle Equations & Properties",
+            "title_zh": "圓方程及其性質",
+            "concepts": [
+                {
+                    "concept_id": "C01_STANDARD_FORM",
+                    "name": "Standard Form",
+                    "name_zh": "標準式",
+                    "formula": "(x - h)^2 + (y - k)^2 = r^2",
+                    "key_takeaway": "Center: $(h, k)$, Radius: $r$. This form is most intuitive for graphing.",
+                    "key_takeaway_zh": "圓心: $(h, k)$，半徑: $r$。這種形式對於繪圖最為直觀。",
+                    "visual": "<svg viewBox='0 0 200 180' xmlns='http://www.w3.org/2000/svg'><circle cx='100' cy='90' r='60' fill='none' stroke='#3B82F6' stroke-width='2'/><circle cx='100' cy='90' r='3' fill='#EF4444'/><line x1='100' y1='90' x2='152' y2='60' stroke='#EF4444' stroke-width='2' stroke-dasharray='4'/><text x='90' y='105' font-size='10' fill='#EF4444' font-family='sans-serif'>(h, k)</text><text x='125' y='75' font-size='10' fill='#EF4444' font-family='sans-serif'>r</text></svg>"
+                },
+                {
+                    "concept_id": "C02_GENERAL_FORM",
+                    "name": "General Form",
+                    "name_zh": "一般式",
+                    "formula": "x^2 + y^2 + Dx + Ey + F = 0",
+                    "key_takeaway": "Center $= (\\frac{-D}{2}, \\frac{-E}{2})$. Radius $= \\sqrt{(\\frac{D}{2})^2 + (\\frac{E}{2})^2 - F}$. Requirement: $(\\frac{D}{2})^2 + (\\frac{E}{2})^2 - F > 0$.",
+                    "key_takeaway_zh": "圓心 $= (\\frac{-D}{2}, \\frac{-E}{2})$。半徑 $= \\sqrt{(\\frac{D}{2})^2 + (\\frac{E}{2})^2 - F}$。條件：$(\\frac{D}{2})^2 + (\\frac{E}{2})^2 - F > 0$。",
+                    "visual": "<svg viewBox=\"0 0 200 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"100\" cy=\"100\" r=\"60\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\"/><circle cx=\"100\" cy=\"100\" r=\"3\" fill=\"#3B82F6\"/><text x=\"75\" y=\"90\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#3B82F6\">(-D/2, -E/2)</text><line x1=\"100\" y1=\"100\" x2=\"160\" y2=\"100\" stroke=\"#9ca3af\" stroke-dasharray=\"4,4\"/><text x=\"125\" y=\"95\" font-family=\"sans-serif\" font-size=\"12\">r</text></svg>"
+                }
+            ]
+        },
+        {
+            "module_id": "MOD_02",
+            "title": "Intersection & Geometry",
+            "title_zh": "相交與幾何",
+            "concepts": [
+                {
+                    "concept_id": "C03_INTERSECTION",
+                    "name": "Intersection (Circle & Line)",
+                    "name_zh": "相交 (圓與直線)",
+                    "formula": "\\text{Substitute Line into Circle} \\\\ \\Rightarrow Ax^2 + Bx + C = 0",
+                    "key_takeaway": "Use discriminant $\\Delta$:\n- $\\Delta > 0$: 2 points | $\\Delta = 0$: Tangent | $\\Delta < 0$: None",
+                    "key_takeaway_zh": "利用判別式 $\\Delta$：\n- $\\Delta > 0$: 2 個交點 | $\\Delta = 0$: 切線 | $\\Delta < 0$: 無交點",
+                    "visual": "<svg viewBox=\"0 0 240 200\" xmlns=\"http://www.w3.org/2000/svg\" preserveAspectRatio=\"xMidYMid meet\" style=\"width: 100%; height: auto;\"><circle cx=\"90\" cy=\"100\" r=\"50\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\"/><line x1=\"20\" y1=\"70\" x2=\"185\" y2=\"70\" stroke=\"#10B981\" stroke-width=\"2\"/><text x=\"150\" y=\"65\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" fill=\"#10B981\">Δ > 0</text><line x1=\"20\" y1=\"150\" x2=\"185\" y2=\"150\" stroke=\"#F59E0B\" stroke-width=\"2\"/><text x=\"150\" y=\"145\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" fill=\"#F59E0B\">Δ = 0</text><line x1=\"20\" y1=\"180\" x2=\"185\" y2=\"180\" stroke=\"#EF4444\" stroke-width=\"2\"/><text x=\"150\" y=\"175\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" fill=\"#EF4444\">Δ < 0</text></svg>"
+                }
+            ],
+            "common_traps": [
+                {
+                    "trap": "Coefficient of x^2 and y^2",
+                    "trap_zh": "x^2 與 y^2 的係數",
+                    "description": "Before extracting D, E, F, you MUST ensure coefficients of $x^2$ and $y^2$ are 1.",
+                    "description_zh": "在提取 D, E, F 之前，必須確保 $x^2$ 和 $y^2$ 的係數為 1。",
+                    "fix": "Divide the entire equation by the coefficient if it is not 1.",
+                    "fix_zh": "如果係數不為 1，請將整個方程除以該係數。"
+                }
+            ]
+        }
+    ]
+}

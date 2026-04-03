@@ -1,0 +1,773 @@
+const fs = require('fs');
+const path = require('path');
+
+const questions = [
+  {
+    id: "v4.1.2_circle_1",
+    topic_id: "math_geo_circles",
+    subject: "Maths",
+    level: 3,
+    type: "short_answer",
+    marks: 2,
+    is_factory: true,
+    is_released: true,
+    standard_version: "3.0",
+    meta: { topic: "math_geo_circles", syllabus_layer: "Foundational" },
+    sub_topic: "Circle Properties",
+    difficulty: "easy",
+    question: "Given: $O$ is the center and $\\angle BAC = 48^\\circ$. Find $x$ ($\\angle BOC$).",
+    question_zh: "已知：$O$ 是圓心且 $\\angle BAC = 48^\\circ$。求 $x$ ($\\angle BOC$)。",
+    answer: "96^\\circ",
+    correct_answer: "$96^\\circ$",
+    solution_steps: [
+      "$x = 2 \\times 48^\\circ$",
+      "$x = 96^\\circ$ (angle at center $= 2 \\times$ angle at circum.)"
+    ],
+    solution_steps_zh: [
+      "$x = 2 \\times 48^\\circ$",
+      "$x = 96^\\circ$ (圓心角兩倍於圓周角)"
+    ],
+    grading_rubric: [
+      "M1: $x = 2 \\times 48^\\circ$ (Correct application of angle at center)",
+      "A1: $x = 96^\\circ$ (Correct value with unit)"
+    ],
+    grading_rubric_zh: [
+      "M1: $x = 2 \\times 48^\\circ$ (正確運用圓心角兩倍於圓周角)",
+      "A1: $x = 96^\\circ$ (答案及單位正確)"
+    ],
+    is_approved: true,
+    diagram_svg: "<svg viewBox=\"0 0 300 300\"><circle cx=\"150\" cy=\"150\" r=\"100\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\"/><circle cx=\"150\" cy=\"150\" r=\"3\"/><polygon points=\"63.4,200.0 150.0,50.0 236.6,200.0\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\"/><polygon points=\"63.4,200.0 150,150 236.6,200.0\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\"/><text x=\"145\" y=\"40\">A</text><text x=\"45\" y=\"220\">B</text><text x=\"245\" y=\"220\">C</text><text x=\"145\" y=\"140\">O</text><text x=\"140\" y=\"80\">48&#176;</text><text x=\"145\" y=\"170\">x</text></svg>"
+  },
+  {
+    id: "v4.1.2_circle_2",
+    topic_id: "math_geo_circles",
+    subject: "Maths",
+    level: 3,
+    type: "short_answer",
+    marks: 2,
+    is_factory: true,
+    is_released: true,
+    standard_version: "3.0",
+    meta: { topic: "math_geo_circles", syllabus_layer: "Foundational" },
+    sub_topic: "Circle Properties",
+    difficulty: "easy",
+    question: "Given: $AB$ is the diameter and $\\angle BAC = 49^\\circ$. Find $x$ ($\\angle ABC$).",
+    question_zh: "已知：$AB$ 是直徑且 $\\angle BAC = 49^\\circ$。求 $x$ ($\\angle ABC$)。",
+    answer: "41^\\circ",
+    correct_answer: "$41^\\circ$",
+    solution_steps: [
+      "$\\angle ACB = 90^\\circ$ (angle in semicircle)",
+      "$x = 180^\\circ - 90^\\circ - 49^\\circ$",
+      "$x = 41^\\circ$ (angle sum of triangle)"
+    ],
+    solution_steps_zh: [
+      "$\\angle ACB = 90^\\circ$ (半圓上的圓周角)",
+      "$x = 180^\\circ - 90^\\circ - 49^\\circ$",
+      "$x = 41^\\circ$ (三角形內角和)"
+    ],
+    grading_rubric: [
+      "M1: $\\angle ACB = 90^\\circ$ or correct triangle sum setup",
+      "A1: $x = 41^\\circ$"
+    ],
+    grading_rubric_zh: [
+      "M1: $\\angle ACB = 90^\\circ$ 或正確的三角形內角和算式",
+      "A1: $x = 41^\\circ$"
+    ],
+    is_approved: true,
+    diagram_svg: "<svg viewBox=\"0 0 300 300\"><circle cx=\"150\" cy=\"150\" r=\"100\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\"/><circle cx=\"150\" cy=\"150\" r=\"3\"/><line x1=\"50.0\" y1=\"150.0\" x2=\"250.0\" y2=\"150.0\" stroke=\"#333\" stroke-width=\"2\"/><polygon points=\"50.0,150.0 200.0,63.4 250.0,150.0\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\"/><text x=\"35\" y=\"155\">A</text><text x=\"260\" y=\"155\">B</text><text x=\"205\" y=\"60\">C</text><text x=\"60\" y=\"145\">49&#176;</text><text x=\"220\" y=\"145\">x</text></svg>"
+  },
+  {
+    id: "v4.1.2_circle_3",
+    topic_id: "math_geo_circles",
+    subject: "Maths",
+    level: 3,
+    type: "short_answer",
+    marks: 2,
+    is_factory: true,
+    is_released: true,
+    standard_version: "3.0",
+    meta: { topic: "math_geo_circles", syllabus_layer: "Foundational" },
+    sub_topic: "Circle Properties",
+    difficulty: "easy",
+    question: "Given: $\\angle BAC = 59^\\circ$. Find $x$ ($\\angle BDC$).",
+    question_zh: "已知：$\\angle BAC = 59^\\circ$。求 $x$ ($\\angle BDC$)。",
+    answer: "59^\\circ",
+    correct_answer: "$59^\\circ$",
+    solution_steps: [
+      "$x = 59^\\circ$ (angles in same segment)"
+    ],
+    solution_steps_zh: [
+      "$x = 59^\\circ$ (同弓形內的圓周角)"
+    ],
+    grading_rubric: [
+      "M1: Identifying equal angles in same segment",
+      "A1: $x = 59^\\circ$"
+    ],
+    grading_rubric_zh: [
+      "M1: 識別出同弓形內的圓周角相等",
+      "A1: $x = 59^\\circ$"
+    ],
+    is_approved: true,
+    diagram_svg: "<svg viewBox=\"0 0 300 300\"><circle cx=\"150\" cy=\"150\" r=\"100\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\"/><polygon points=\"79.3,79.3 220.7,220.7 79.3,220.7 220.7,79.3 79.3,79.3\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\"/><text x=\"70\" y=\"80\">A</text><text x=\"70\" y=\"230\">B</text><text x=\"220\" y=\"230\">C</text><text x=\"220\" y=\"80\">D</text><text x=\"90\" y=\"105\">59&#176;</text><text x=\"200\" y=\"105\">x</text></svg>"
+  },
+  {
+    id: "v4.1.2_circle_4",
+    topic_id: "math_geo_circles",
+    subject: "Maths",
+    level: 3,
+    type: "short_answer",
+    marks: 2,
+    is_factory: true,
+    is_released: true,
+    standard_version: "3.0",
+    meta: { topic: "math_geo_circles", syllabus_layer: "Foundational" },
+    sub_topic: "Circle Properties",
+    difficulty: "easy",
+    question: "Given: $ABCD$ is a cyclic quadrilateral. $\\angle DAB = 93^\\circ$. Find $x$ ($\\angle BCD$).",
+    question_zh: "已知：$ABCD$ 是圓內接四邊形。$\\angle DAB = 93^\\circ$。求 $x$ ($\\angle BCD$)。",
+    answer: "87^\\circ",
+    correct_answer: "$87^\\circ$",
+    solution_steps: [
+      "$x + 93^\\circ = 180^\\circ$ (opp. angles, cyclic quad.)",
+      "$x = 87^\\circ$"
+    ],
+    solution_steps_zh: [
+      "$x + 93^\\circ = 180^\\circ$ (圓內接四邊形對角)",
+      "$x = 87^\\circ$"
+    ],
+    grading_rubric: [
+      "M1: Use of supplementary opposite angles property",
+      "A1: $x = 87^\\circ$"
+    ],
+    grading_rubric_zh: [
+      "M1: 使用圓內接四邊形對角互補性質",
+      "A1: $x = 87^\\circ$"
+    ],
+    is_approved: true,
+    diagram_svg: "<svg viewBox=\"0 0 300 300\"><circle cx=\"150\" cy=\"150\" r=\"100\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\"/><polygon points=\"100.0,63.4 63.4,200.0 236.6,200.0 220.7,79.3\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\"/><text x=\"90\" y=\"60\">A</text><text x=\"40\" y=\"210\">B</text><text x=\"250\" y=\"210\">C</text><text x=\"230\" y=\"60\">D</text><text x=\"110\" y=\"90\">93&#176;</text><text x=\"200\" y=\"190\">x</text></svg>"
+  },
+  {
+    id: "v4.1.2_circle_5",
+    topic_id: "math_geo_circles",
+    subject: "Maths",
+    level: 3,
+    type: "short_answer",
+    marks: 2,
+    is_factory: true,
+    is_released: true,
+    standard_version: "3.0",
+    meta: { topic: "math_geo_circles", syllabus_layer: "Foundational" },
+    sub_topic: "Circle Properties",
+    difficulty: "easy",
+    question: "Given: Radius $= 10$, Chord $AB = 16$. $OM \\perp AB$. Find $x$ ($OM$).",
+    question_zh: "已知：半徑為 10，弦 $AB = 16$。$OM \\perp AB$。求 $x$ ($OM$)。",
+    answer: "6",
+    correct_answer: "$6$",
+    solution_steps: [
+      "$AM = 16 / 2 = 8$ (line from center $\\perp$ to chord bisects chord)",
+      "$x^2 + 8^2 = 10^2$ (Pythagoras theorem)",
+      "$x = \\sqrt{100 - 64} = 6$"
+    ],
+    solution_steps_zh: [
+      "$AM = 16 / 2 = 8$ (由圓心至弦的垂線平分該弦)",
+      "$x^2 + 8^2 = 10^2$ (勾股定理)",
+      "$x = \\sqrt{100 - 64} = 6$"
+    ],
+    grading_rubric: [
+      "M1: Finding half chord length $AM = 8$ and use Pythagoras",
+      "A1: $x = 6$"
+    ],
+    grading_rubric_zh: [
+      "M1: 求出弦長一半 $AM = 8$ 並運用勾股定理",
+      "A1: $x = 6$"
+    ],
+    is_approved: true,
+    diagram_svg: "<svg viewBox=\"0 0 300 300\"><circle cx=\"150\" cy=\"150\" r=\"100\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\"/><circle cx=\"150\" cy=\"150\" r=\"3\"/><line x1=\"70\" y1=\"210\" x2=\"230\" y2=\"210\" stroke=\"#333\" stroke-width=\"2\"/><line x1=\"150\" y1=\"150\" x2=\"150\" y2=\"210\" stroke=\"#333\" stroke-width=\"2\" stroke-dasharray=\"5,5\"/><line x1=\"150\" y1=\"150\" x2=\"230\" y2=\"210\" stroke=\"#333\" stroke-width=\"2\"/><text x=\"140\" y=\"140\">O</text><text x=\"55\" y=\"225\">A</text><text x=\"240\" y=\"225\">B</text><text x=\"135\" y=\"230\">M</text><text x=\"180\" y=\"170\">10</text><text x=\"120\" y=\"180\">x</text></svg>"
+  },
+  {
+    id: "v4.1.2_circle_6",
+    topic_id: "math_geo_circles",
+    subject: "Maths",
+    level: 4,
+    type: "short_answer",
+    marks: 3,
+    is_factory: true,
+    is_released: true,
+    standard_version: "3.0",
+    meta: { topic: "math_geo_circles", syllabus_layer: "DSE Level" },
+    sub_topic: "Circle Properties",
+    difficulty: "medium",
+    question: "Given: $ABCD$ is a cyclic quadrilateral. Line $BC$ is extended to $E$. $\\angle DAB = 97^\\circ$. Find $y$ ($\\angle DCE$).",
+    question_zh: "已知：$ABCD$ 是圓內接四邊形。延長 $BC$ 至 $E$。$\\angle DAB = 97^\\circ$。求 $y$ ($\\angle DCE$)。",
+    answer: "97^\\circ",
+    correct_answer: "$97^\\circ$",
+    solution_steps: [
+      "$y = 97^\\circ$ (ext. angle, cyclic quad.)"
+    ],
+    solution_steps_zh: [
+      "$y = 97^\\circ$ (圓內接四邊形外角)"
+    ],
+    grading_rubric: [
+      "M2: Identify property of exterior angle of cyclic quadrilateral",
+      "A1: $y = 97^\\circ$"
+    ],
+    grading_rubric_zh: [
+      "M2: 識別圓內接四邊形外角性質",
+      "A1: $y = 97^\\circ$"
+    ],
+    is_approved: true,
+    diagram_svg: "<svg viewBox=\"0 0 300 300\"><circle cx=\"150\" cy=\"150\" r=\"100\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\"/><polygon points=\"71.2,88.4 79.3,220.7 220.7,220.7 201.5,64.3\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\"/><line x1=\"220.7\" y1=\"220.7\" x2=\"260.7\" y2=\"220.7\" stroke=\"#333\" stroke-width=\"2\"/><text x=\"55\" y=\"85\">A</text><text x=\"70\" y=\"235\">B</text><text x=\"215\" y=\"235\">C</text><text x=\"210\" y=\"60\">D</text><text x=\"270\" y=\"225\">E</text><text x=\"85\" y=\"110\">97&#176;</text><text x=\"230\" y=\"215\">y</text></svg>"
+  },
+  {
+    id: "v4.1.2_circle_7",
+    topic_id: "math_geo_circles",
+    subject: "Maths",
+    level: 4,
+    type: "short_answer",
+    marks: 3,
+    is_factory: true,
+    is_released: true,
+    standard_version: "3.0",
+    meta: { topic: "math_geo_circles", syllabus_layer: "DSE Level" },
+    sub_topic: "Circle Properties",
+    difficulty: "medium",
+    question: "Given: $TA$ and $TB$ are tangents. $\\angle ATB = 50^\\circ$. Find $y$ ($\\angle TAB$).",
+    question_zh: "已知：$TA$ 與 $TB$ 為切線。$\\angle ATB = 50^\\circ$。求 $y$ ($\\angle TAB$)。",
+    answer: "65^\\circ",
+    correct_answer: "$65^\\circ$",
+    solution_steps: [
+      "$TA = TB$ (tangent properties)",
+      "$\\angle TAB = \\angle TBA$ (base angles, isosceles triangle)",
+      "$y = (180^\\circ - 50^\\circ) / 2 = 65^\\circ$"
+    ],
+    solution_steps_zh: [
+      "$TA = TB$ (切線性質)",
+      "$\\angle TAB = \\angle TBA$ (等腰三角形底角)",
+      "$y = (180^\\circ - 50^\\circ) / 2 = 65^\\circ$"
+    ],
+    grading_rubric: [
+      "M1: State $TA = TB$ and isosceles triangle property",
+      "M1: Correct calculation setup",
+      "A1: $y = 65^\\circ$"
+    ],
+    grading_rubric_zh: [
+      "M1: 指出 $TA = TB$ 及等腰三角形性質",
+      "M1: 正確的計算算式",
+      "A1: $y = 65^\\circ$"
+    ],
+    is_approved: true,
+    diagram_svg: "<svg viewBox=\"0 0 300 300\"><circle cx=\"150\" cy=\"150\" r=\"100\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\"/><line x1=\"150\" y1=\"280\" x2=\"63.4\" y2=\"200\" stroke=\"#333\" stroke-width=\"2\"/><line x1=\"150\" y1=\"280\" x2=\"236.6\" y2=\"200\" stroke=\"#333\" stroke-width=\"2\"/><line x1=\"63.4\" y1=\"200\" x2=\"236.6\" y2=\"200\" stroke=\"#333\" stroke-width=\"2\"/><text x=\"45\" y=\"200\">A</text><text x=\"245\" y=\"200\">B</text><text x=\"145\" y=\"295\">T</text><text x=\"140\" y=\"260\">50&#176;</text><text x=\"80\" y=\"220\">y</text></svg>"
+  },
+  {
+    id: "v4.1.2_circle_8",
+    topic_id: "math_geo_circles",
+    subject: "Maths",
+    level: 4,
+    type: "short_answer",
+    marks: 3,
+    is_factory: true,
+    is_released: true,
+    standard_version: "3.0",
+    meta: { topic: "math_geo_circles", syllabus_layer: "DSE Level" },
+    sub_topic: "Circle Properties",
+    difficulty: "medium",
+    question: "Given: $AT$ is the tangent at $A$. $\\angle BAT = 62^\\circ$. Find $y$ ($\\angle ACB$).",
+    question_zh: "已知：$AT$ 在 $A$ 點與圓相切。$\\angle BAT = 62^\\circ$。求 $y$ ($\\angle ACB$)。",
+    answer: "62^\\circ",
+    correct_answer: "$62^\\circ$",
+    solution_steps: [
+      "$y = 62^\\circ$ (angle in alt. segment)"
+    ],
+    solution_steps_zh: [
+      "$y = 62^\\circ$ (交錯弓形的圓周角)"
+    ],
+    grading_rubric: [
+      "M2: Identify alternate segment theorem",
+      "A1: $y = 62^\\circ$"
+    ],
+    grading_rubric_zh: [
+      "M2: 識別交錯弓形定理",
+      "A1: $y = 62^\\circ$"
+    ],
+    is_approved: true,
+    diagram_svg: "<svg viewBox=\"0 0 300 300\"><circle cx=\"150\" cy=\"150\" r=\"100\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\"/><line x1=\"50\" y1=\"250\" x2=\"250\" y2=\"250\" stroke=\"#333\" stroke-width=\"2\"/><polygon points=\"150.0,250.0 244.0,184.2 56.0,115.8\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\"/><text x=\"145\" y=\"270\">A</text><text x=\"250\" y=\"210\">B</text><text x=\"40\" y=\"110\">C</text><text x=\"255\" y=\"265\">T</text><text x=\"180\" y=\"240\">62&#176;</text><text x=\"90\" y=\"150\">y</text></svg>"
+  },
+  {
+    id: "v4.1.2_circle_9",
+    topic_id: "math_geo_circles",
+    subject: "Maths",
+    level: 4,
+    type: "short_answer",
+    marks: 3,
+    is_factory: true,
+    is_released: true,
+    standard_version: "3.0",
+    meta: { topic: "math_geo_circles", syllabus_layer: "DSE Level" },
+    sub_topic: "Circle Properties",
+    difficulty: "medium",
+    question: "Given: $AB$ is tangent at $A$. $\\angle OBA = 43^\\circ$. Find $y$ ($\\angle AOB$).",
+    question_zh: "已知：$AB$ 在 $A$ 點與圓相切。$\\angle OBA = 43^\\circ$。求 $y$ ($\\angle AOB$)。",
+    answer: "47^\\circ",
+    correct_answer: "$47^\\circ$",
+    solution_steps: [
+      "$\\angle OAB = 90^\\circ$ (tangent $\\perp$ radius)",
+      "$y = 180^\\circ - 90^\\circ - 43^\\circ$",
+      "$y = 47^\\circ$ (angle sum of triangle)"
+    ],
+    solution_steps_zh: [
+      "$\\angle OAB = 90^\\circ$ (切線 $\\perp$ 半徑)",
+      "$y = 180^\\circ - 90^\\circ - 43^\\circ$",
+      "$y = 47^\\circ$ (三角形內角和)"
+    ],
+    grading_rubric: [
+      "M1: State $\\angle OAB = 90^\\circ$",
+      "M1: Correct use of triangle angle sum",
+      "A1: $y = 47^\\circ$"
+    ],
+    grading_rubric_zh: [
+      "M1: 指出 $\\angle OAB = 90^\\circ$",
+      "M1: 正確運用三角形內角和",
+      "A1: $y = 47^\\circ$"
+    ],
+    is_approved: true,
+    diagram_svg: "<svg viewBox=\"0 0 300 300\"><circle cx=\"150\" cy=\"150\" r=\"100\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\"/><circle cx=\"150\" cy=\"150\" r=\"3\"/><line x1=\"70\" y1=\"250\" x2=\"250\" y2=\"250\" stroke=\"#333\" stroke-width=\"2\"/><line x1=\"150\" y1=\"150\" x2=\"150\" y2=\"250\" stroke=\"#333\" stroke-width=\"2\"/><line x1=\"150\" y1=\"150\" x2=\"250\" y2=\"250\" stroke=\"#333\" stroke-width=\"2\"/><text x=\"140\" y=\"140\">O</text><text x=\"145\" y=\"270\">A</text><text x=\"250\" y=\"240\">B</text><text x=\"210\" y=\"240\">43&#176;</text><text x=\"155\" y=\"180\">y</text></svg>"
+  },
+  {
+    id: "v4.1.2_circle_10",
+    topic_id: "math_geo_circles",
+    subject: "Maths",
+    level: 4,
+    type: "short_answer",
+    marks: 3,
+    is_factory: true,
+    is_released: true,
+    standard_version: "3.0",
+    meta: { topic: "math_geo_circles", syllabus_layer: "DSE Level" },
+    sub_topic: "Circle Properties",
+    difficulty: "medium",
+    question: "Given: $\\angle BOC = 130^\\circ$ where $O$ is the center. Find $y$ ($\\angle BAC$).",
+    question_zh: "已知：$O$ 為圓心且 $\\angle BOC = 130^\\circ$。求 $y$ ($\\angle BAC$)。",
+    answer: "65^\\circ",
+    correct_answer: "$65^\\circ$",
+    solution_steps: [
+      "$y = 130^\\circ / 2$",
+      "$y = 65^\\circ$ (angle at center $= 2 \\times$ angle at circum.)"
+    ],
+    solution_steps_zh: [
+      "$y = 130^\\circ / 2$",
+      "$y = 65^\\circ$ (圓心角兩倍於圓周角)"
+    ],
+    grading_rubric: [
+      "M2: Correct use of angle at center property",
+      "A1: $y = 65^\\circ$"
+    ],
+    grading_rubric_zh: [
+      "M2: 正確運用圓心角性質",
+      "A1: $y = 65^\\circ$"
+    ],
+    is_approved: true,
+    diagram_svg: "<svg viewBox=\"0 0 300 300\"><circle cx=\"150\" cy=\"150\" r=\"100\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\"/><circle cx=\"150\" cy=\"150\" r=\"3\"/><polygon points=\"63.4,200.0 150.0,50.0 236.6,200.0\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\"/><polygon points=\"63.4,200.0 150,150 236.6,200.0\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\"/><text x=\"45\" y=\"220\">B</text><text x=\"245\" y=\"220\">C</text><text x=\"145\" y=\"40\">A</text><text x=\"145\" y=\"140\">O</text><text x=\"135\" y=\"180\">130&#176;</text><text x=\"145\" y=\"70\">y</text></svg>"
+  },
+  {
+    id: "v4.1.2_circle_11",
+    topic_id: "math_geo_circles",
+    subject: "Maths",
+    level: 5,
+    type: "short_answer",
+    marks: 4,
+    is_factory: true,
+    is_released: true,
+    standard_version: "3.0",
+    meta: { topic: "math_geo_circles", syllabus_layer: "DSE Level" },
+    sub_topic: "Circle Properties",
+    difficulty: "hard",
+    question: "Given: $O$ is the center. $\\angle AOB = 117^\\circ$. Find $z$ ($\\angle OAB$).",
+    question_zh: "已知：$O$ 為圓心。$\\angle AOB = 117^\\circ$。求 $z$ ($\\angle OAB$)。",
+    answer: "31.5^\\circ",
+    correct_answer: "$31.5^\\circ$",
+    solution_steps: [
+      "$OA = OB$ (radii)",
+      "$\\angle OAB = \\angle OBA$ (base angles, isosceles triangle)",
+      "$z = (180^\\circ - 117^\\circ) / 2$",
+      "$z = 31.5^\\circ$"
+    ],
+    solution_steps_zh: [
+      "$OA = OB$ (半徑)",
+      "$\\angle OAB = \\angle OBA$ (等腰三角形底角)",
+      "$z = (180^\\circ - 117^\\circ) / 2$",
+      "$z = 31.5^\\circ$"
+    ],
+    grading_rubric: [
+      "M1: State $OA = OB$ as radii",
+      "M2: Isosceles triangle property and correct formula",
+      "A1: $z = 31.5^\\circ$"
+    ],
+    grading_rubric_zh: [
+      "M1: 指出 $OA = OB$ 為半徑",
+      "M2: 等腰三角形性質及正確公式",
+      "A1: $z = 31.5^\\circ$"
+    ],
+    is_approved: true,
+    diagram_svg: "<svg viewBox=\"0 0 300 300\"><circle cx=\"150\" cy=\"150\" r=\"100\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\"/><circle cx=\"150\" cy=\"150\" r=\"3\"/><polygon points=\"150,150 63.4,200.0 236.6,200.0\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\"/><text x=\"140\" y=\"140\">O</text><text x=\"45\" y=\"220\">A</text><text x=\"245\" y=\"220\">B</text><text x=\"140\" y=\"180\">117&#176;</text><text x=\"80\" y=\"205\">z</text></svg>"
+  },
+  {
+    id: "v4.1.2_circle_12",
+    topic_id: "math_geo_circles",
+    subject: "Maths",
+    level: 5,
+    type: "short_answer",
+    marks: 4,
+    is_factory: true,
+    is_released: true,
+    standard_version: "3.0",
+    meta: { topic: "math_geo_circles", syllabus_layer: "DSE Level" },
+    sub_topic: "Circle Properties",
+    difficulty: "hard",
+    question: "Given: $BC$ is the diameter. $AT$ is tangent at $A$. $\\angle ABC = 41^\\circ$. Find $z$ ($\\angle CAT$).",
+    question_zh: "已知：$BC$ 為直徑。$AT$ 在 $A$ 點與圓相切。$\\angle ABC = 41^\\circ$。求 $z$ ($\\angle CAT$)。",
+    answer: "41^\\circ",
+    correct_answer: "$41^\\circ$",
+    solution_steps: [
+      "$z = 41^\\circ$ (angle in alt. segment)"
+    ],
+    solution_steps_zh: [
+      "$z = 41^\\circ$ (交錯弓形的圓周角)"
+    ],
+    grading_rubric: [
+      "M3: Recognition of alternate segment theorem with given tangent",
+      "A1: $z = 41^\\circ$"
+    ],
+    grading_rubric_zh: [
+      "M3: 識別切線下的交錯弓形定理",
+      "A1: $z = 41^\\circ$"
+    ],
+    is_approved: true,
+    diagram_svg: "<svg viewBox=\"0 0 300 300\"><circle cx=\"150\" cy=\"150\" r=\"100\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\"/><line x1=\"50\" y1=\"250\" x2=\"250\" y2=\"250\" stroke=\"#333\" stroke-width=\"2\"/><line x1=\"50.0\" y1=\"150.0\" x2=\"250.0\" y2=\"150.0\" stroke=\"#333\" stroke-width=\"2\"/><polygon points=\"50.0,150.0 150.0,250.0 250.0,150.0\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\"/><text x=\"35\" y=\"150\">B</text><text x=\"260\" y=\"150\">C</text><text x=\"145\" y=\"240\">A</text><text x=\"250\" y=\"265\">T</text><text x=\"60\" y=\"170\">41&#176;</text><text x=\"170\" y=\"240\">z</text></svg>"
+  },
+  {
+    id: "v4.1.2_circle_13",
+    topic_id: "math_geo_circles",
+    subject: "Maths",
+    level: 5,
+    type: "short_answer",
+    marks: 4,
+    is_factory: true,
+    is_released: true,
+    standard_version: "3.0",
+    meta: { topic: "math_geo_circles", syllabus_layer: "DSE Level" },
+    sub_topic: "Circle Properties",
+    difficulty: "hard",
+    question: "Given: $AB \\parallel CD$. $\\angle BAD = 69^\\circ$. Find $z$ ($\\angle ADC$).",
+    question_zh: "已知：$AB \\parallel CD$。$\\angle BAD = 69^\\circ$。求 $z$ ($\\angle ADC$)。",
+    answer: "69^\\circ",
+    correct_answer: "$69^\\circ$",
+    solution_steps: [
+      "$z = \\angle BAD$",
+      "$z = 69^\\circ$ (alt. angles, $AB \\parallel CD$)"
+    ],
+    solution_steps_zh: [
+      "$z = \\angle BAD$",
+      "$z = 69^\\circ$ (內錯角，$AB \\parallel CD$)"
+    ],
+    grading_rubric: [
+      "M2: Identify parallel lines and alternate angles",
+      "M1: Correct identification of angle pairs",
+      "A1: $z = 69^\\circ$"
+    ],
+    grading_rubric_zh: [
+      "M2: 識別平行線及內錯角",
+      "M1: 正確識別角對",
+      "A1: $z = 69^\\circ$"
+    ],
+    is_approved: true,
+    diagram_svg: "<svg viewBox=\"0 0 300 300\"><circle cx=\"150\" cy=\"150\" r=\"100\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\"/><line x1=\"63.4\" y1=\"100.0\" x2=\"236.6\" y2=\"100.0\" stroke=\"#333\" stroke-width=\"2\"/><line x1=\"63.4\" y1=\"200.0\" x2=\"236.6\" y2=\"200.0\" stroke=\"#333\" stroke-width=\"2\"/><polygon points=\"63.4,100.0 236.6,200.0 63.4,200.0\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\"/><text x=\"50\" y=\"90\">A</text><text x=\"240\" y=\"90\">B</text><text x=\"50\" y=\"220\">C</text><text x=\"240\" y=\"220\">D</text><text x=\"80\" y=\"115\">69&#176;</text><text x=\"210\" y=\"195\">z</text></svg>"
+  },
+  {
+    id: "v4.1.2_circle_14",
+    topic_id: "math_geo_circles",
+    subject: "Maths",
+    level: 5,
+    type: "short_answer",
+    marks: 4,
+    is_factory: true,
+    is_released: true,
+    standard_version: "3.0",
+    meta: { topic: "math_geo_circles", syllabus_layer: "DSE Level" },
+    sub_topic: "Circle Properties",
+    difficulty: "hard",
+    question: "Given: $ABCD$ cyclic quadrilateral. $\\angle BAC = 33^\\circ$, $\\angle CAD = 43^\\circ$. Find $z$ ($\\angle BCD$).",
+    question_zh: "已知：$ABCD$ 圓內接四邊形。$\\angle BAC = 33^\\circ$，$\\angle CAD = 43^\\circ$。求 $z$ ($\\angle BCD$)。",
+    answer: "104^\\circ",
+    correct_answer: "$104^\\circ$",
+    solution_steps: [
+      "$\\angle BAD = 33^\\circ + 43^\\circ = 76^\\circ$",
+      "$z + 76^\\circ = 180^\\circ$ (opp. angles, cyclic quad.)",
+      "$z = 104^\\circ$"
+    ],
+    solution_steps_zh: [
+      "$\\angle BAD = 33^\\circ + 43^\\circ = 76^\\circ$",
+      "$z + 76^\\circ = 180^\\circ$ (圓內接四邊形對角)",
+      "$z = 104^\\circ$"
+    ],
+    grading_rubric: [
+      "M1: Finding total $\\angle BAD$",
+      "M2: Applying cyclic quadrilateral opposite angle sum",
+      "A1: $z = 104^\\circ$"
+    ],
+    grading_rubric_zh: [
+      "M1: 求出 $\\angle BAD$ 總和",
+      "M2: 運用圓內接四邊形對角和性質",
+      "A1: $z = 104^\\circ$"
+    ],
+    is_approved: true,
+    diagram_svg: "<svg viewBox=\"0 0 300 300\"><circle cx=\"150\" cy=\"150\" r=\"100\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\"/><polygon points=\"79.3,79.3 79.3,220.7 220.7,220.7 220.7,79.3\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\"/><line x1=\"79.3\" y1=\"79.3\" x2=\"220.7\" y2=\"220.7\" stroke=\"#333\" stroke-width=\"2\"/><text x=\"70\" y=\"80\">A</text><text x=\"70\" y=\"230\">B</text><text x=\"220\" y=\"230\">C</text><text x=\"220\" y=\"80\">D</text><text x=\"90\" y=\"110\">33&#176;</text><text x=\"110\" y=\"95\">43&#176;</text><text x=\"200\" y=\"210\">z</text></svg>"
+  },
+  {
+    id: "v4.1.2_circle_15",
+    topic_id: "math_geo_circles",
+    subject: "Maths",
+    level: 5,
+    type: "short_answer",
+    marks: 4,
+    is_factory: true,
+    is_released: true,
+    standard_version: "3.0",
+    meta: { topic: "math_geo_circles", syllabus_layer: "DSE Level" },
+    sub_topic: "Circle Properties",
+    difficulty: "hard",
+    question: "Given: $AT$ is tangent at $A$. $AT \\parallel BC$. $\\angle BAT = 75^\\circ$. Find $z$ ($\\angle ABC$).",
+    question_zh: "已知：$AT$ 在 $A$ 點與圓相切。$AT \\parallel BC$。$\\angle BAT = 75^\\circ$。求 $z$ ($\\angle ABC$)。",
+    answer: "75^\\circ",
+    correct_answer: "$75^\\circ$",
+    solution_steps: [
+      "$\\angle BCA = 75^\\circ$ (angle in alt. segment)",
+      "$z = \\angle BCA$ (alt. angles, $AT \\parallel BC$)",
+      "$z = 75^\\circ$"
+    ],
+    solution_steps_zh: [
+      "$\\angle BCA = 75^\\circ$ (交錯弓形的圓周角)",
+      "$z = \\angle BCA$ (內錯角，$AT \\parallel BC$)",
+      "$z = 75^\\circ$"
+    ],
+    grading_rubric: [
+      "M2: Applying alternate segment theorem",
+      "M1: Using parallel lines alternate angles property",
+      "A1: $z = 75^\\circ$"
+    ],
+    grading_rubric_zh: [
+      "M2: 運用交錯弓形定理",
+      "M1: 使用平行線內錯角性質度",
+      "A1: $z = 75^\\circ$"
+    ],
+    is_approved: true,
+    diagram_svg: "<svg viewBox=\"0 0 300 300\"><circle cx=\"150\" cy=\"150\" r=\"100\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\"/><line x1=\"50\" y1=\"250\" x2=\"250\" y2=\"250\" stroke=\"#333\" stroke-width=\"2\"/><line x1=\"63.4\" y1=\"200.0\" x2=\"236.6\" y2=\"200.0\" stroke=\"#333\" stroke-width=\"2\"/><polygon points=\"150.0,250.0 63.4,200.0 236.6,200.0\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\"/><text x=\"145\" y=\"270\">A</text><text x=\"250\" y=\"265\">T</text><text x=\"45\" y=\"220\">B</text><text x=\"245\" y=\"220\">C</text><text x=\"180\" y=\"240\">75&#176;</text><text x=\"80\" y=\"200\">z</text></svg>"
+  },
+  {
+    id: "v4.1.2_circle_16",
+    topic_id: "math_geo_circles",
+    subject: "Maths",
+    level: 5,
+    type: "short_answer",
+    marks: 4,
+    is_factory: true,
+    is_released: true,
+    standard_version: "3.0",
+    meta: { topic: "math_geo_circles", syllabus_layer: "DSE Level" },
+    sub_topic: "Circle Properties",
+    difficulty: "hard",
+    question: "Given: $TA, TB$ are tangents. $\\angle ATB = 45^\\circ$. Find $w$ ($\\angle AOB$).",
+    question_zh: "已知：$TA, TB$ 為切線。$\\angle ATB = 45^\\circ$ 。求 $w$ ($\\angle AOB$)。",
+    answer: "135^\\circ",
+    correct_answer: "$135^\\circ$",
+    solution_steps: [
+      "$\\angle OAT = \\angle OBT = 90^\\circ$ (tangent $\\perp$ radius)",
+      "$w = 360^\\circ - 90^\\circ - 90^\\circ - 45^\\circ$ (angle sum of polygon)",
+      "$w = 135^\\circ$"
+    ],
+    solution_steps_zh: [
+      "$\\angle OAT = \\angle OBT = 90^\\circ$ (切線 $\\perp$ 半徑)",
+      "$w = 360^\\circ - 90^\\circ - 90^\\circ - 45^\\circ$ (多邊形內角和)",
+      "$w = 135^\\circ$"
+    ],
+    grading_rubric: [
+      "M1: State $\\angle OAT = \\angle OBT = 90^\\circ$",
+      "M2: Sum of angles in quadrilateral $OATB$",
+      "A1: $w = 135^\\circ$"
+    ],
+    grading_rubric_zh: [
+      "M1: 指出 $\\angle OAT = \\angle OBT = 90^\\circ$",
+      "M2: 四邊形 $OATB$ 的內角和",
+      "A1: $w = 135^\\circ$"
+    ],
+    is_approved: true,
+    diagram_svg: "<svg viewBox=\"0 0 300 300\"><circle cx=\"150\" cy=\"150\" r=\"100\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\"/><circle cx=\"150\" cy=\"150\" r=\"3\"/><line x1=\"150\" y1=\"280\" x2=\"79.3\" y2=\"220.7\" stroke=\"#333\" stroke-width=\"2\"/><line x1=\"150\" y1=\"280\" x2=\"220.7\" y2=\"220.7\" stroke=\"#333\" stroke-width=\"2\"/><polygon points=\"79.3,220.7 150,150 220.7,220.7\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\"/><text x=\"60\" y=\"220\">A</text><text x=\"230\" y=\"220\">B</text><text x=\"145\" y=\"295\">T</text><text x=\"140\" y=\"140\">O</text><text x=\"140\" y=\"260\">45&#176;</text><text x=\"140\" y=\"170\">w</text></svg>"
+  },
+  {
+    id: "v4.1.2_circle_17",
+    topic_id: "math_geo_circles",
+    subject: "Maths",
+    level: 5,
+    type: "short_answer",
+    marks: 4,
+    is_factory: true,
+    is_released: true,
+    standard_version: "3.0",
+    meta: { topic: "math_geo_circles", syllabus_layer: "DSE Level" },
+    sub_topic: "Circle Properties",
+    difficulty: "hard",
+    question: "Given: $AT$ is tangent. $AB = AC$. $\\angle BAT = 59^\\circ$. Find $w$ ($\\angle BAC$).",
+    question_zh: "已知：$AT$ 為切線。$AB = AC$。$\\angle BAT = 59^\\circ$ 。求 $w$ ($\\angle BAC$)。",
+    answer: "62^\\circ",
+    correct_answer: "$62^\\circ$",
+    solution_steps: [
+      "$\\angle ACB = 59^\\circ$ (angle in alt. segment)",
+      "$\\angle ABC = \\angle ACB = 59^\\circ$ (base angles, isosceles triangle)",
+      "$w = 180^\\circ - 2 \\times 59^\\circ$",
+      "$w = 62^\\circ$ (angle sum of triangle)"
+    ],
+    solution_steps_zh: [
+      "$\\angle ACB = 59^\\circ$ (交錯弓形的圓周角)",
+      "$\\angle ABC = \\angle ACB = 59^\\circ$ (等腰三角形底角)",
+      "$w = 180^\\circ - 2 \\times 59^\\circ$",
+      "$w = 62^\\circ$ (三角形內角和)"
+    ],
+    grading_rubric: [
+      "M1: $\\angle ACB = 59^\\circ$ (Alt. segment theorem)",
+      "M2: Isosceles triangle property and final triangle sum",
+      "A1: $w = 62^\\circ$"
+    ],
+    grading_rubric_zh: [
+      "M1: $\\angle ACB = 59^\\circ$ (交錯弓形定理由)",
+      "M2: 等腰三角形性質及最終三角形內角和計算",
+      "A1: $w = 62^\\circ$"
+    ],
+    is_approved: true,
+    diagram_svg: "<svg viewBox=\"0 0 300 300\"><circle cx=\"150\" cy=\"150\" r=\"100\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\"/><line x1=\"50\" y1=\"250\" x2=\"250\" y2=\"250\" stroke=\"#333\" stroke-width=\"2\"/><polygon points=\"150.0,250.0 244.0,184.2 56.0,184.2\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\"/><line x1=\"190\" y1=\"210\" x2=\"200\" y2=\"220\" stroke=\"#333\"/><line x1=\"100\" y1=\"220\" x2=\"110\" y2=\"210\" stroke=\"#333\"/><text x=\"145\" y=\"270\">A</text><text x=\"250\" y=\"210\">B</text><text x=\"40\" y=\"210\">C</text><text x=\"255\" y=\"265\">T</text><text x=\"180\" y=\"240\">59&#176;</text><text x=\"145\" y=\"180\">w</text></svg>"
+  },
+  {
+    id: "v4.1.2_circle_18",
+    topic_id: "math_geo_circles",
+    subject: "Maths",
+    level: 5,
+    type: "short_answer",
+    marks: 4,
+    is_factory: true,
+    is_released: true,
+    standard_version: "3.0",
+    meta: { topic: "math_geo_circles", syllabus_layer: "DSE Level" },
+    sub_topic: "Circle Properties",
+    difficulty: "hard",
+    question: "Given: Chords $AB$ and $CD$ intersect at $E$. $\\angle ACD = 35^\\circ, \\angle CAB = 46^\\circ$. Find $w$ ($\\angle CEB$).",
+    question_zh: "已知：弦 $AB$ 與 $CD$ 相交於 $E$。$\\angle ACD = 35^\\circ, \\angle CAB = 46^\\circ$ 。求 $w$ ($\\angle CEB$)。",
+    answer: "81^\\circ",
+    correct_answer: "$81^\\circ$",
+    solution_steps: [
+      "$\\angle ABD = \\angle ACD = 35^\\circ$ (angles in same segment)",
+      "$w = 35^\\circ + 46^\\circ$ (ext. angle of $\\triangle ACE$)",
+      "$w = 81^\\circ$"
+    ],
+    solution_steps_zh: [
+      "$\\angle ABD = \\angle ACD = 35^\\circ$ (同弓形內的圓周角)",
+      "$w = 35^\\circ + 46^\\circ$ ($\\triangle ACE$ 的外角)",
+      "$w = 81^\\circ$"
+    ],
+    grading_rubric: [
+      "M2: Identify equal angles in same segment",
+      "M1: Use of exterior angle property of triangle",
+      "A1: $w = 81^\\circ$"
+    ],
+    grading_rubric_zh: [
+      "M2: 識別同弓形內的圓周角相等",
+      "M1: 運用三角形外角性質",
+      "A1: $w = 81^\\circ$"
+    ],
+    is_approved: true,
+    diagram_svg: "<svg viewBox=\"0 0 300 300\"><circle cx=\"150\" cy=\"150\" r=\"100\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\"/><line x1=\"79.3\" y1=\"79.3\" x2=\"220.7\" y2=\"220.7\" stroke=\"#333\" stroke-width=\"2\"/><line x1=\"220.7\" y1=\"79.3\" x2=\"79.3\" y2=\"220.7\" stroke=\"#333\" stroke-width=\"2\"/><polygon points=\"79.3,79.3 220.7,79.3\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\"/><text x=\"70\" y=\"80\">A</text><text x=\"220\" y=\"230\">B</text><text x=\"220\" y=\"80\">C</text><text x=\"70\" y=\"230\">D</text><text x=\"140\" y=\"130\">E</text><text x=\"100\" y=\"95\">35&#176;</text><text x=\"180\" y=\"95\">46&#176;</text><text x=\"145\" y=\"170\">w</text></svg>"
+  },
+  {
+    id: "v4.1.2_circle_19",
+    topic_id: "math_geo_circles",
+    subject: "Maths",
+    level: 5,
+    type: "short_answer",
+    marks: 4,
+    is_factory: true,
+    is_released: true,
+    standard_version: "3.0",
+    meta: { topic: "math_geo_circles", syllabus_layer: "DSE Level" },
+    sub_topic: "Circle Properties",
+    difficulty: "hard",
+    question: "Given: Chords $AB$ and $CD$ extended meet at $E$. $\\angle CAB = 40^\\circ, \\angle AEC = 45^\\circ$. Find $w$ ($\\angle ACD$).",
+    question_zh: "已知：弦 $AB$ 與 $CD$ 的延長線相交於 $E$。$\\angle CAB = 40^\\circ, \\angle AEC = 45^\\circ$ 。求 $w$ ($\\angle ACD$)。",
+    answer: "85^\\circ",
+    correct_answer: "$85^\\circ$",
+    solution_steps: [
+      "$\\angle ACD = \\angle CAB + \\angle AEC$ (ext. angle of $\\triangle ACE$)",
+      "$w = 40^\\circ + 45^\\circ$",
+      "$w = 85^\\circ$"
+    ],
+    solution_steps_zh: [
+      "$\\angle ACD = \\angle CAB + \\angle AEC$ ($\\triangle ACE$ 的外角)",
+      "$w = 40^\\circ + 45^\\circ$",
+      "$w = 85^\\circ$"
+    ],
+    grading_rubric: [
+      "M3: Recognition and application of exterior angle theorem in context",
+      "A1: $w = 85^\\circ$"
+    ],
+    grading_rubric_zh: [
+      "M3: 在情境中識別並運用外角定理",
+      "A1: $w = 85^\\circ$"
+    ],
+    is_approved: true,
+    diagram_svg: "<svg viewBox=\"0 0 300 300\"><circle cx=\"150\" cy=\"150\" r=\"100\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\"/><polygon points=\"79.3,79.3 220.7,220.7 280,150\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\"/><polygon points=\"220.7,79.3 79.3,220.7 280,150\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\"/><text x=\"60\" y=\"70\">A</text><text x=\"60\" y=\"240\">C</text><text x=\"230\" y=\"240\">D</text><text x=\"230\" y=\"70\">B</text><text x=\"285\" y=\"155\">E</text><text x=\"110\" y=\"110\">40&#176;</text><text x=\"250\" y=\"155\">45&#176;</text><text x=\"110\" y=\"200\">w</text></svg>"
+  },
+  {
+    id: "v4.1.2_circle_20",
+    topic_id: "math_geo_circles",
+    subject: "Maths",
+    level: 5,
+    type: "short_answer",
+    marks: 4,
+    is_factory: true,
+    is_released: true,
+    standard_version: "3.0",
+    meta: { topic: "math_geo_circles", syllabus_layer: "DSE Level" },
+    sub_topic: "Circle Properties",
+    difficulty: "hard",
+    question: "Given: $AB$ is diameter extended to $T$. $CT$ is tangent at $C$. $\\angle BTC = 24^\\circ$. Find $w$ ($\\angle BAC$).",
+    question_zh: "已知：直徑 $AB$ 延長至 $T$。$CT$ 在 $C$ 點與圓相切。$\\angle BTC = 24^\\circ$ 。求 $w$ ($\\angle BAC$)。",
+    answer: "33^\\circ",
+    correct_answer: "$33^\\circ$",
+    solution_steps: [
+      "$\\angle OCT = 90^\\circ$ (tangent $\\perp$ radius)",
+      "$\\angle COT = 180^\\circ - 90^\\circ - 24^\\circ = 66^\\circ$ (angle sum of triangle)",
+      "$w = 66^\\circ / 2$ (angle at center $= 2 \\times$ angle at circum.)",
+      "$w = 33^\\circ$"
+    ],
+    solution_steps_zh: [
+      "$\\angle OCT = 90^\\circ$ (切線 $\\perp$ 半徑)",
+      "$\\angle COT = 180^\\circ - 90^\\circ - 24^\\circ = 66^\\circ$ (三角形內角和)",
+      "$w = 66^\\circ / 2$ (圓心角兩倍於圓周角)",
+      "$w = 33^\\circ$"
+    ],
+    grading_rubric: [
+      "M1: State $\\angle OCT = 90^\\circ$",
+      "M2: Finding $\\angle COT$ using triangle sum",
+      "M1: Use of angle at center property",
+      "A1: $w = 33^\\circ$"
+    ],
+    grading_rubric_zh: [
+      "M1: 指出 $\\angle OCT = 90^\\circ$",
+      "M2: 利用三角形內部角和求 $\\angle COT$",
+      "M1: 運用圓心角性質",
+      "A1: $w = 33^\\circ$"
+    ],
+    is_approved: true,
+    diagram_svg: "<svg viewBox=\"0 0 450 300\"><circle cx=\"150\" cy=\"150\" r=\"100\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\"/><circle cx=\"150\" cy=\"150\" r=\"3\"/><line x1=\"50.0\" y1=\"150.0\" x2=\"395.8\" y2=\"150.0\" stroke=\"#333\" stroke-width=\"2\"/><line x1=\"190.7\" y1=\"241.4\" x2=\"395.8\" y2=\"150.0\" stroke=\"#333\" stroke-width=\"2\"/><line x1=\"50.0\" y1=\"150.0\" x2=\"190.7\" y2=\"241.4\" stroke=\"#333\" stroke-width=\"2\"/><text x=\"35\" y=\"150\">A</text><text x=\"250\" y=\"140\">B</text><text x=\"190.7\" y=\"261.4\">C</text><text x=\"395.8\" y=\"140.0\">T</text><text x=\"140\" y=\"140\">O</text><text x=\"355.8\" y=\"165.0\">24&#176;</text><text x=\"70\" y=\"165\">w</text></svg>"
+  }
+];
+
+const outputPath = path.join(__dirname, '..', 'data', 'v4_1_circles_data.json');
+fs.writeFileSync(outputPath, JSON.stringify(questions, null, 2));
+console.log('✅ Correctly merged full question text into \"question\" field + added solution_steps and rubrics at:', outputPath);

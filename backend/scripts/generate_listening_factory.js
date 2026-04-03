@@ -17,7 +17,28 @@ const db = admin.firestore();
 const TOPICS = [
     { title: "Campus Radio Proposal", level: "4" },
     { title: "Complaint Hotline", level: "5" },
-    { title: "University Interview", level: "5*" }
+    { title: "University Interview", level: "5*" },
+    { title: "Technology Podcast", level: "5**" },
+    { title: "Police Report", level: "4" },
+    { title: "School Heritage Tour Itinerary", level: "3" },
+    { title: "Student Union Election Campaign", level: "5" },
+    { title: "Library Renovation Proposal", level: "4" },
+    { title: "Drama Club Annual Production", level: "3" },
+    { title: "International Exchange Student Welcoming", level: "5" },
+    { title: "School Canteen Quality Survey", level: "4" },
+    { title: "Community Garden Project", level: "3" },
+    { title: "Heritage Building Conservation", level: "5" },
+    { title: "Sustainable Living Workshop", level: "4" },
+    { title: "Street Performance (Busking) Regulation", level: "5*" },
+    { title: "Charity Marathon Logistics", level: "5" },
+    { title: "Summer Internship Orientation", level: "4" },
+    { title: "Career Fair Preparation", level: "5" },
+    { title: "Workplace Safety Training", level: "4" },
+    { title: "Staff Well-being Seminar", level: "5" },
+    { title: "Local Food Culture Documentary", level: "5**" },
+    { title: "Music Festival Volunteer Info", level: "4" },
+    { title: "Modern Art Museum Audio Guide", level: "5" },
+    { title: "Travel Agency Itinerary Planning", level: "4" }
 ];
 
 async function generateAudioSegments(script) {
@@ -98,17 +119,19 @@ async function runFactory() {
         // We need to inject the LISTENING_LAB_PROMPT logic if it's not default.
         // Actually LabService determines prompt based on params.
 
+        // Resolve level
+        let resolvedLevel = t.level;
+        if (resolvedLevel === "5*") resolvedLevel = "6";
+        if (resolvedLevel === "5**") resolvedLevel = "7";
+
         // Mock the params for LabService
         const params = {
-            topic: 'listening_comprehension', // Triggers "General" listening logic? 
-            // Wait, LabService checks `isListening` based on "topic" string usually?
-            // "listening_quest_syllabus.json" has mapped topics?
-            // Let's pass a special flag or just use 'listening' in topic name.
             topic: `Listening: ${t.title}`,
-            level: t.level,
+            level: resolvedLevel,
             focus: "Integrated Skills",
             targetCount: 4,
-            uid: "FACTORY_ADMIN"
+            uid: "FACTORY_ADMIN",
+            isFactory: true
         };
 
         // Note: We need to ensure LabService uses LISTENING_LAB_PROMPT
@@ -117,25 +140,30 @@ async function runFactory() {
         // So passing "Listening: ..." should work.
 
         try {
+            console.log(`[FACTORY] Starting generation for: ${t.title} (${resolvedLevel})`);
             const questJson = await LabService.generateLesson(params);
 
             if (!questJson || !questJson.reading_passage) {
-                console.error("FAILED to generate valid quest JSON.");
+                console.error(`[FACTORY] FAILED to generate valid JSON for: ${t.title}`);
                 continue;
             }
 
-            console.log("Script Generated. Length:", questJson.reading_passage.length);
+            console.log(`[FACTORY] Script Generated. Passage Length: ${questJson.reading_passage.length}`);
 
             // 2. Synthesize Audio
+            console.log(`[FACTORY] Synthesizing Audio for: ${t.title}...`);
             const audioSegments = await generateAudioSegments(questJson.reading_passage);
+            console.log(`[FACTORY] Audio Segments: ${audioSegments.length}`);
 
             // 3. Construct Final Object
             const factoryQuest = {
                 ...questJson,
                 title: t.title,
-                level: t.level,
+                level: resolvedLevel,
+                levelLabel: t.level,
                 type: 'listening_mission',
-                audio_segments: audioSegments, // Array of {speaker, text, audio(base64)}
+                paper: 'Listening', 
+                audio_segments: audioSegments,
                 created_at: admin.firestore.FieldValue.serverTimestamp(),
                 is_approved: true,
                 factory_generated: true
@@ -143,10 +171,10 @@ async function runFactory() {
 
             // 4. Save to Firestore
             const docRef = await db.collection('question_bank').add(factoryQuest);
-            console.log(`SAVED to Firestore: ${docRef.id}`);
+            console.log(`[FACTORY] SUCCESS! Saved with ID: ${docRef.id}`);
 
         } catch (err) {
-            console.error("Critical Error during generation:", err);
+            console.error(`[FACTORY] CRITICAL ERROR for ${t.title}:`, err);
         }
     }
 

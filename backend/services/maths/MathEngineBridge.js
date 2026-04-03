@@ -3,14 +3,25 @@ const path = require('path');
 
 class MathEngineBridge {
     constructor() {
-        this.scriptsDir = path.join(__dirname, 'math_engine');
+        // Updated to top-level math_engine directory
+        this.scriptsDir = path.join(__dirname, '..', '..', 'math_engine');
+    }
+
+    /**
+     * Calls a Python seed generator script.
+     * @param {string} scriptName - e.g., 'number_systems_gen.py'
+     * @param {number} count - Number of seeds to generate
+     * @returns {Promise<string[]>} - Array of seed strings
+     */
+    async generateSeeds(scriptName, count = 5) {
+        return this.generateQuest(scriptName, { count });
     }
 
     /**
      * Calls a Python generator script with input data.
      * @param {string} scriptName - e.g., 'circle_gen.py'
      * @param {object} input - Input data for the generator (difficulty, seed, etc.)
-     * @returns {Promise<object>} - Resulting quest bundle
+     * @returns {Promise<any>} - Resulting data (seeds or quest bundle)
      */
     async generateQuest(scriptName, input = {}) {
         return new Promise((resolve, reject) => {

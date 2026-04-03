@@ -1,0 +1,103 @@
+{
+    "is_modular": true,
+    "name": "Coordinate Geometry",
+    "name_zh": "坐標幾何",
+    "roadmap": "Begin with the basics of points and lines: Distance, Slope, and Point of Division. Master the Equations of Straight Lines including parallel and perpendicular properties. Finally, explore the Equations of Circles (Standard and General forms) and Locus, which are common in DSE Section A(2) and Section B.",
+    "roadmap_zh": "從點和直線的基礎開始：距離、斜率和分點。掌握直線方程，包括平行和垂直性質。最後，探討圓方程（標準式和一般式）和軌跡，這些是 DSE 甲部(2) 和乙部的常見題目。",
+    "learning_modules": [
+        {
+            "module_id": "MOD_01",
+            "title": "Point Geometry: Distance, Slope & Midpoint",
+            "title_zh": "點幾何：距離、斜率及中點",
+            "concepts": [
+                {
+                    "concept_id": "C01_DISTANCE_MIDPOINT",
+                    "name": "Distance & Midpoint",
+                    "name_zh": "距離與中點",
+                    "formula": "D = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2} \\\\\\\\ M = \\left(\\frac{x_1 + x_2}{2}, \\frac{y_1 + y_2}{2}\\right)",
+                    "key_takeaway": "Distance is derived from Pythagoras' Theorem. Midpoint is the average of coordinates.",
+                    "key_takeaway_zh": "距離源自畢氏定理。中點是坐標的平均值。",
+                    "visual": "<svg viewBox='0 0 200 150' xmlns='http://www.w3.org/2000/svg'><line x1='40' y1='110' x2='160' y2='40' stroke='#3B82F6' stroke-width='2'/><circle cx='40' cy='110' r='3' fill='#3B82F6'/><circle cx='160' cy='40' r='3' fill='#3B82F6'/><circle cx='100' cy='75' r='3' fill='#EF4444'/><line x1='40' y1='110' x2='160' y2='110' stroke='#94A3B8' stroke-dasharray='4'/><line x1='160' y1='110' x2='160' y2='40' stroke='#94A3B8' stroke-dasharray='4'/><text x='20' y='125' font-size='10' font-family='sans-serif'>A(x₁,y₁)</text><text x='150' y='30' font-size='10' font-family='sans-serif'>B(x₂,y₂)</text><text x='90' y='70' font-size='10' fill='#EF4444' font-family='sans-serif'>M</text></svg>"
+                },
+                {
+                    "concept_id": "C02_SLOPE_INCLINATION",
+                    "name": "Slope & Inclination",
+                    "name_zh": "斜率與傾角",
+                    "formula": "m = \\frac{y_2 - y_1}{x_2 - x_1} = \\tan \\theta",
+                    "key_takeaway": "Slope $m$ represents 'rise over run'. The angle $\\theta$ is measured from the positive x-axis.",
+                    "key_takeaway_zh": "斜率 $m$ 代表「垂直改變量除以水平改變量」。傾角 $\\theta$ 是從正 x 軸開始測量的。",
+                    "visual": "<svg viewBox='0 0 200 150' xmlns='http://www.w3.org/2000/svg'><line x1='20' y1='130' x2='180' y2='130' stroke='#94A3B8' stroke-width='1'/><line x1='40' y1='130' x2='160' y2='40' stroke='#3B82F6' stroke-width='2'/><path d='M 70 130 A 30 30 0 0 0 63 113' fill='none' stroke='#EF4444' stroke-width='2'/><text x='75' y='125' font-size='12' fill='#EF4444' font-family='sans-serif'>θ</text><text x='150' y='50' font-size='10' font-family='sans-serif'>m = tan θ</text></svg>"
+                }
+            ],
+            "common_traps": [
+                {
+                    "trap": "Mixing (x2 - x1) and (y1 - y2)",
+                    "trap_zh": "混淆 (x2 - x1) 與 (y1 - y2)",
+                    "description": "The order of points must be consistent in both numerator and denominator.",
+                    "description_zh": "分子和分母中點的順序必須一致。",
+                    "fix": "Always use $\\frac{y_2 - y_1}{x_2 - x_1}$ or $\\frac{y_1 - y_2}{x_1 - x_2}$.",
+                    "fix_zh": "始終使用 $\\frac{y_2 - y_1}{x_2 - x_1}$ 或 $\\frac{y_1 - y_2}{x_1 - x_2}$。"
+                }
+            ]
+        },
+        {
+            "module_id": "MOD_02",
+            "title": "Straight Lines and Points of Division",
+            "title_zh": "直線與分點",
+            "concepts": [
+                {
+                    "concept_id": "C03_DIVISION_POINT",
+                    "name": "Point of Division (Section Formula)",
+                    "name_zh": "分點公式",
+                    "formula": "P = \\left(\\frac{nx_1 + mx_2}{m + n}, \\frac{ny_1 + my_2}{m + n}\\right)",
+                    "key_takeaway": "For a ratio m:n, the 'm' multiplies the far coordinate and 'n' multiplies the near coordinate (Cross-multiplication).",
+                    "key_takeaway_zh": "對於比例 m:n，「m」乘以遠端的坐標，「n」乘以近端的坐標（交叉相乘）。",
+                    "visual": "<svg viewBox='0 0 200 100' xmlns='http://www.w3.org/2000/svg'><line x1='30' y1='70' x2='170' y2='30' stroke='#3B82F6' stroke-width='2'/><circle cx='30' cy='70' r='3' fill='#3B82F6'/><circle cx='170' cy='30' r='3' fill='#3B82F6'/><circle cx='123' cy='43.5' r='4' fill='#EF4444'/><text x='20' y='85' font-size='10' font-family='sans-serif'>A</text><text x='115' y='35' font-size='10' fill='#EF4444' font-family='sans-serif'>P</text><text x='170' y='25' font-size='10' font-family='sans-serif'>B</text><text x='70' y='50' font-size='10' font-family='sans-serif'>m</text><text x='140' y='35' font-size='10' font-family='sans-serif'>n</text></svg>"
+                },
+                {
+                    "concept_id": "C04_LINE_EQ_FORMS",
+                    "name": "Equations of Lines",
+                    "name_zh": "直線方程",
+                    "formula": "y = mx + c \\quad \\text{(Slope-Intercept Form)} \\\\\\\\ y - y_1 = m(x - x_1) \\quad \\text{(Point-Slope Form)} \\\\\\\\ Ax + By + C = 0 \\quad \\text{(General Form)}",
+                    "key_takeaway": "Point-Slope form is usually the most efficient starting point for derivations.",
+                    "key_takeaway_zh": "點斜式通常是推導最有效的起點。",
+                    "visual": "<svg viewBox='0 0 200 150' xmlns='http://www.w3.org/2000/svg'><line x1='100' y1='10' x2='100' y2='140' stroke='#94A3B8'/><line x1='10' y1='100' x2='190' y2='100' stroke='#94A3B8'/><line x1='30' y1='140' x2='170' y2='20' stroke='#3B82F6' stroke-width='2'/><circle cx='100' cy='80' r='3' fill='#EF4444'/><text x='105' y='85' font-size='10' fill='#EF4444' font-family='sans-serif'>(0, c)</text><text x='150' y='40' font-size='10' font-family='sans-serif'>y=mx+c</text></svg>"
+                },
+                {
+                    "concept_id": "C05_PARALLEL_PERP",
+                    "name": "Parallel & Perpendicular Lines",
+                    "name_zh": "平行與垂直線",
+                    "formula": "L_1 \\parallel L_2 \\iff m_1 = m_2 \\\\\\\\ L_1 \\perp L_2 \\iff m_1 \\times m_2 = -1",
+                    "key_takeaway": "Perpendicular slopes are negative reciprocals of each other.",
+                    "key_takeaway_zh": "垂直線的斜率互為負倒數。",
+                    "visual": "<svg viewBox='0 0 200 150' xmlns='http://www.w3.org/2000/svg'><line x1='30' y1='120' x2='170' y2='60' stroke='#3B82F6' stroke-width='2'/><line x1='30' y1='100' x2='170' y2='40' stroke='#3B82F6' stroke-width='2' stroke-dasharray='4'/><line x1='70' y1='30' x2='130' y2='140' stroke='#EF4444' stroke-width='2'/><rect x='103' y='83' width='10' height='10' transform='rotate(26 103 83)' fill='none' stroke='#EF4444'/></svg>"
+                }
+            ]
+        },
+        {
+            "module_id": "MOD_03",
+            "title": "Circle Geometry",
+            "title_zh": "圓幾何",
+            "concepts": [
+                {
+                    "concept_id": "C06_CIRCLE_EQ",
+                    "name": "Circle Equations",
+                    "name_zh": "圓方程",
+                    "formula": "(x-h)^2 + (y-k)^2 = r^2 \\quad \\text{(Standard)} \\\\\\\\ x^2 + y^2 + Dx + Ey + F = 0 \\quad \\text{(General)}",
+                    "key_takeaway": "Center of General form is $\\left(-\\frac{D}{2}, -\\frac{E}{2}\\right)$. Radius $r = \\sqrt{\\left(\\frac{D}{2}\\right)^2 + \\left(\\frac{E}{2}\\right)^2 - F}$.",
+                    "key_takeaway_zh": "一般式的圓心是 $\\left(-\\frac{D}{2}, -\\frac{E}{2}\\right)$。半徑 $r = \\sqrt{\\left(\\frac{D}{2}\\right)^2 + \\left(\\frac{E}{2}\\right)^2 - F}$。",
+                    "visual": "<svg viewBox='0 0 200 180' xmlns='http://www.w3.org/2000/svg'><circle cx='100' cy='90' r='60' fill='none' stroke='#3B82F6' stroke-width='2'/><circle cx='100' cy='90' r='3' fill='#EF4444'/><line x1='100' y1='90' x2='152' y2='60' stroke='#EF4444' stroke-width='2' stroke-dasharray='4'/><text x='90' y='105' font-size='10' fill='#EF4444' font-family='sans-serif'>(h, k)</text><text x='125' y='75' font-size='10' fill='#EF4444' font-family='sans-serif'>r</text></svg>"
+                },
+                {
+                    "concept_id": "C07_LOCUS",
+                    "name": "Simple Locus",
+                    "name_zh": "簡單軌跡",
+                    "formula": "$$ \\text{Eq. of Perpendicular Bisector} \\\\ \\text{Eq. of Angle Bisector} \\\\ \\text{Distance from points/lines} $$",
+                    "key_takeaway": "Locus is the set of points satisfying a given condition. Use variable $(x, y)$ and apply distance formulas.",
+                    "key_takeaway_zh": "軌跡是滿足給定條件的點集。使用變量 $(x, y)$ 並應用距離公式。",
+                    "visual": "<svg viewBox='0 0 200 150' xmlns='http://www.w3.org/2000/svg'><circle cx='50' cy='75' r='3' fill='#3B82F6'/><circle cx='150' cy='75' r='3' fill='#3B82F6'/><line x1='100' y1='20' x2='100' y2='130' stroke='#EF4444' stroke-width='2'/><text x='35' y='90' font-size='10' font-family='sans-serif'>A</text><text x='155' y='90' font-size='10' font-family='sans-serif'>B</text><text x='110' y='40' font-size='10' fill='#EF4444' font-family='sans-serif'>Locus (PA=PB)</text></svg>"
+                }
+            ]
+        }
+    ]
+}

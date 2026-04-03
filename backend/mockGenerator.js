@@ -8,7 +8,7 @@ const { AUDITOR_PROMPT_TEMPLATE } = require('./prompts/auditorAgent');
 
 const GEN_AI_KEY = process.env.GEMINI_API_KEY;
 const genAI = new GoogleGenerativeAI(GEN_AI_KEY);
-const MODEL_NAME = "gemini-2.0-flash";
+const MODEL_NAME = "gemini-2.5-pro";
 
 const OUTPUT_DIR = path.join(__dirname, 'generated_mocks');
 

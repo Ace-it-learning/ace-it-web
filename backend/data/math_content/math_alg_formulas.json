@@ -1,57 +1,117 @@
 {
-    "is_modular": true,
-    "name": "Formulas & Substitution",
-    "name_zh": "公式與代入",
-    "roadmap": "Master the substitution of negative numbers using brackets first. Then, learn the 'unwrapping' logic of changing the subject. For DSE Section B, focus on complex formulas where the target appears in multiple terms, requiring factorization.",
-    "roadmap_zh": "首先掌握使用括號代入負數的方法。接著學習變換主項時的「拆解」邏輯。針對 DSE 乙部，重點在於處理目標項出現在多個項中（需使用因式分解）的複雜公式。",
-    "learning_modules": [
+  "is_modular": true,
+  "name": "Formulas & Substitution",
+  "name_zh": "公式與代入法",
+  "roadmap": "Master the substitution of numbers into formulas first. Then, learn how to change the subject using inverse operations. For DSE Section B, focus on advanced fraction problems where factorization is key.",
+  "roadmap_zh": "首先掌握將數字代入公式的方法。接著學習如何利用逆運算變換主項。針對 DSE 乙部，重點在於處理需使用因式分解的進階分數題目。",
+  "learning_modules": [
+    {
+      "module_id": "MOD_01",
+      "title": "Substitution Mastery",
+      "title_zh": "代入精通",
+      "concepts": [
         {
-            "module_id": "MOD_01",
-            "title": "Substitution Mastery",
-            "title_zh": "代入精通",
-            "concepts": [
-                {
-                    "concept_id": "C01_SUB_PREMIUM",
-                    "name": "Evaluating Expressions",
-                    "name_zh": "數式求值",
-                    "formula": "y = 3x^2 - 5x + 2",
-                    "key_takeaway": "When substituting negative values, brackets are mandatory to handle powers correctly. $(-2)^2 = 4$, but $-2^2 = -4$.",
-                    "key_takeaway_zh": "代入負值時，必須使用括號以正確處理次方運算。$(-2)^2 = 4$，但 $-2^2 = -4$。",
-                    "visual_aid": "/images/math/form_substitution_premium.png"
-                }
-            ]
-        },
-        {
-            "module_id": "MOD_02",
-            "title": "Subject Change Principles",
-            "title_zh": "主項變換原則",
-            "concepts": [
-                {
-                    "concept_id": "C02_UNWRAP_PREMIUM",
-                    "name": "The Unwrapping Method",
-                    "name_zh": "拆解方法",
-                    "formula": "y = \\frac{ax+b}{c} \\to x = \\frac{cy - b}{a}",
-                    "key_takeaway": "Think of changing the subject as reversing the calculation order. Eliminate denominators first, then move additive constants.",
-                    "key_takeaway_zh": "將主項變換視為逆轉運算順序。先消除分母，再移動加減常數。",
-                    "visual_aid": "/images/math/form_subject_flow_premium.png"
-                }
-            ]
-        },
-        {
-            "module_id": "MOD_03",
-            "title": "Complex Subject Change",
-            "title_zh": "複雜主項變換",
-            "concepts": [
-                {
-                    "concept_id": "C03_FACTOR_PREMIUM",
-                    "name": "Grouping & Factorization",
-                    "name_zh": "分組與因式分解",
-                    "formula": "ax = bx + c \\to x(a-b) = c \\to x = \\frac{c}{a-b}",
-                    "key_takeaway": "If the target variable appears in two distinct terms, you MUST group them on one side and factorize. This is the hallmark of Section B formula questions.",
-                    "key_takeaway_zh": "如果目標變項出現在兩個不同的項中，你「必須」將它們歸到同一邊並進行因式分解。這是乙部公式題目的標誌。",
-                    "visual_aid": null
-                }
-            ]
+          "concept_id": "C01_SUB_BASIC",
+          "name": "Basic Substitution",
+          "name_zh": "基本代入法",
+          "content": [
+            "Substitution involves replacing a variable in a formula with a specific numerical value. Always use brackets when substituting, especially for negative numbers, to ensure correct calculations.",
+            "Follow the order of operations ($BODMAS$ / $PEMDAS$): Brackets, Orders (Powers), Division/Multiplication, and Addition/Subtraction."
+          ],
+          "content_zh": [
+            "代入法是指將公式中的變項替換為特定的數值。代入時務必使用括號（特別是代入負數時），以確保運算正確。",
+            "遵循運算順序 ($BODMAS$ / $PEMDAS$)：括號、次方、乘除、後加減。"
+          ],
+          "example_steps": [
+            "Given $V = \\frac{1}{3}\\pi r^2 h$, find $V$ when $r=3$ and $h=10$.",
+            "Substitute the values: $V = \\frac{1}{3}\\pi (3)^2 (10)$",
+            "Calculate the power: $V = \\frac{1}{3}\\pi (9) (10)$",
+            "Simplify: $V = 3 \\times \\pi \\times 10$",
+            "Final Answer: $V = 30\\pi$"
+          ],
+          "example_steps_zh": [
+            "已知 $V = \\frac{1}{3}\\pi r^2 h$，求當 $r=3$ 及 $h=10$ 時 $V$ 的值。",
+            "代入數值：$V = \\frac{1}{3}\\pi (3)^2 (10)$",
+            "計算次方：$V = \\frac{1}{3}\\pi (9) (10)$",
+            "簡化：$V = 3 \\times \\pi \\times 10$",
+            "最終答案：$V = 30\\pi$"
+          ],
+          "key_takeaway": "Always wrap values in brackets when substituting: $x^2$ becomes $(-2)^2 = 4$ if $x=-2$.",
+          "key_takeaway_zh": "代入時務必使用括號：若 $x=-2$，則 $x^2$ 應寫成 $(-2)^2 = 4$。"
         }
-    ]
+      ]
+    },
+    {
+      "module_id": "MOD_02",
+      "title": "Inverse Operations",
+      "title_zh": "逆運算",
+      "concepts": [
+        {
+          "concept_id": "C02_SUBJECT_BASIC",
+          "name": "Changing the Subject - Basic",
+          "name_zh": "主項變換 - 基礎",
+          "content": [
+            "Changing the subject means isolating a specific variable on one side of the equals sign (usually the left).",
+            "Use inverse operations: Addition $\\leftrightarrow$ Subtraction, Multiplication $\\leftrightarrow$ Division."
+          ],
+          "content_zh": [
+            "變換主項是指將特定變項獨立出現在等號的一邊（通常是左邊）。",
+            "使用逆運算：加 $\\leftrightarrow$ 減，乘 $\\leftrightarrow$ 除。"
+          ],
+          "example_steps": [
+            "Make $x$ the subject of $y = 3x - 5$.",
+            "Move the constant term: $y + 5 = 3x$",
+            "Reverse the sides: $3x = y + 5$",
+            "Divide by the coefficient: $x = \\frac{y + 5}{3}$"
+          ],
+          "example_steps_zh": [
+            "將 $x$ 設為 $y = 3x - 5$ 的主項。",
+            "移項常數項：$y + 5 = 3x$",
+            "左右對調：$3x = y + 5$",
+            "除以係數：$x = \\frac{y + 5}{3}$"
+          ],
+          "key_takeaway": "Think of it as 'unwrapping' the target variable by reversing the calculation steps.",
+          "key_takeaway_zh": "將其視為透過逆轉運算步驟來「拆解」目標變項。"
+        }
+      ]
+    },
+    {
+      "module_id": "MOD_03",
+      "title": "DSE Section B Advanced",
+      "title_zh": "DSE 乙部進階",
+      "concepts": [
+        {
+          "concept_id": "C03_SUBJECT_ADVANCED",
+          "name": "Changing the Subject - Advanced Fractions",
+          "name_zh": "主項變換 - 進階分數",
+          "content": [
+            "In HKDSE questions, the target variable often appears in multiple terms or within a denominator. Follow the standard workflow: Eliminate denominators, group target terms, and factorize.",
+            "Crucial Step: If $x$ appears twice, use $x(a + b)$ to isolate it."
+          ],
+          "content_zh": [
+            "在 DSE 題目中，目標變項經常出現在多個項或分母中。請遵循標準步驟：消除分母、歸類目標項、並進行因式分解。",
+            "關鍵步驟：如果 $x$ 出現兩次，使用 $x(a + b)$ 來提取它。"
+          ],
+          "example_steps": [
+            "Make $x$ the subject of $y = \\frac{2x - 3}{x + 4}$.",
+            "Cross-multiply: $y(x + 4) = 2x - 3$",
+            "Expand the bracket: $yx + 4y = 2x - 3$",
+            "Group $x$ terms on one side: $yx - 2x = -4y - 3$",
+            "Factor out $x$: $x(y - 2) = -(4y + 3)$",
+            "Divide: $x = \\frac{-(4y + 3)}{y - 2}$ or $x = \\frac{4y + 3}{2 - y}$"
+          ],
+          "example_steps_zh": [
+            "將 $x$ 設為 $y = \\frac{2x - 3}{x + 4}$ 的主項。",
+            "交叉相乘：$y(x + 4) = 2x - 3$",
+            "展開括號：$yx + 4y = 2x - 3$",
+            "將含 $x$ 的項歸到一邊：$yx - 2x = -4y - 3$",
+            "因式分解提取 $x$：$x(y - 2) = -(4y + 3)$",
+            "除以剩餘項：$x = \\frac{-(4y + 3)}{y - 2}$ 或 $x = \\frac{4y + 3}{2 - y}$"
+          ],
+          "key_takeaway": "Grouping and Factorization is the 'Golden Key' for Section B formula questions.",
+          "key_takeaway_zh": "「歸類與因式分解」是處理乙部公式題目的金鑰。"
+        }
+      ]
+    }
+  ]
 }

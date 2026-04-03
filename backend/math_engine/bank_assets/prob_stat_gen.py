@@ -1,0 +1,537 @@
+import json
+import os
+
+def generate_30_prob_stat_seeds():
+    seeds = []
+    topic_id = "math_stat_prob"
+    subject = "maths"
+    q_type = "short_answer"
+    
+    # ------------------ LEVEL 3: EASY (5 Questions) ------------------
+    # q01: Mean calculation
+    seeds.append({
+        "id": "prob_stat_01", "topic_id": topic_id, "subject": subject, "level": 3, "type": q_type, "marks": 2,
+        "question": "The ages of 5 students are $12, 14, 15, 15, 19$. Find the mean age.",
+        "question_zh": "5 名學生的年齡分別為 $12, 14, 15, 15, 19$。求平均年齡。",
+        "answer": "15", "correct_answer": "15",
+        "solution_steps": [
+            "Sum of ages $= 12 + 14 + 15 + 15 + 19 = 75$.",
+            "Mean $= \\frac{75}{5} = 15$."
+        ],
+        "solution_steps_zh": [
+            "年齡之和 $= 12 + 14 + 15 + 15 + 19 = 75$。",
+            "平均數 $= \\frac{75}{5} = 15$。"
+        ]
+    })
+
+    # q02: Median (Odd N)
+    seeds.append({
+        "id": "prob_stat_02", "topic_id": topic_id, "subject": subject, "level": 3, "type": q_type, "marks": 2,
+        "question": "Find the median of the following dataset: $8, 3, 11, 15, 6$.",
+        "question_zh": "求以下數集的中位數：$8, 3, 11, 15, 6$。",
+        "answer": "8", "correct_answer": "8",
+        "solution_steps": [
+            "Arrange the data in ascending order: $3, 6, 8, 11, 15$.",
+            "The middle value is the 3rd term, which is $8$."
+        ],
+        "solution_steps_zh": [
+            "將數據按升序排列：$3, 6, 8, 11, 15$。",
+            "中間值為第 3 項，即為 $8$。"
+        ]
+    })
+
+    # q03: Range
+    seeds.append({
+        "id": "prob_stat_03", "topic_id": topic_id, "subject": subject, "level": 3, "type": q_type, "marks": 2,
+        "question": "Find the range of the dataset: $23, 45, 12, 34, 56, 18$.",
+        "question_zh": "求以下數集的全距：$23, 45, 12, 34, 56, 18$。",
+        "answer": "44", "correct_answer": "44",
+        "solution_steps": [
+            "Maximum value $= 56$.",
+            "Minimum value $= 12$.",
+            "Range $= 56 - 12 = 44$."
+        ],
+        "solution_steps_zh": [
+            "最大值 $= 56$。",
+            "最小值 $= 12$。",
+            "全距 $= 56 - 12 = 44$。"
+        ]
+    })
+
+    # q04: Simple Probability (Balls)
+    seeds.append({
+        "id": "prob_stat_04", "topic_id": topic_id, "subject": subject, "level": 3, "type": q_type, "marks": 2,
+        "question": "A bag contains $3$ red balls and $7$ blue balls. If a ball is randomly drawn, find the probability that it is red.",
+        "question_zh": "袋子中有 $3$ 個紅球和 $7$ 個藍球。隨機抽取一個球，求抽到紅球的概率。",
+        "answer": "0.3 (or 3/10)", "correct_answer": "3/10",
+        "solution_steps": [
+            "Total number of balls $= 3 + 7 = 10$.",
+            "Number of red balls $= 3$.",
+            "Probability $= \\frac{3}{10} = 0.3$."
+        ],
+        "solution_steps_zh": [
+            "球的總數 $= 3 + 7 = 10$。",
+            "紅球的數量 $= 3$。",
+            "概率 $= \\frac{3}{10} = 0.3$。"
+        ]
+    })
+
+    # q05: Mode
+    seeds.append({
+        "id": "prob_stat_05", "topic_id": topic_id, "subject": subject, "level": 3, "type": q_type, "marks": 2,
+        "question": "Find the mode of the dataset: $5, 8, 5, 2, 8, 5, 1, 9$.",
+        "question_zh": "求以下數集的眾數：$5, 8, 5, 2, 8, 5, 1, 9$。",
+        "answer": "5", "correct_answer": "5",
+        "solution_steps": [
+            "Count frequencies: $1(1), 2(1), 5(3), 8(2), 9(1)$.",
+            "The value with the highest frequency is $5$."
+        ],
+        "solution_steps_zh": [
+            "計算頻數：$1(1), 2(1), 5(3), 8(2), 9(1)$。",
+            "頻數最高的值為 $5$。"
+        ]
+    })
+
+    # ------------------ LEVEL 4: MEDIUM (5 Questions) ------------------
+    # q06: Dataset Transformation (Mean)
+    seeds.append({
+        "id": "prob_stat_06", "topic_id": topic_id, "subject": subject, "level": 4, "type": q_type, "marks": 3,
+        "question": "The mean of a dataset is $20$. If each data item is multiplied by $3$ and then increased by $5$, find the new mean.",
+        "question_zh": "一組數據的平均值為 $20$。若將每個數據項乘以 $3$ 然後增加 $5$，求新的平均值。",
+        "answer": "65", "correct_answer": "65",
+        "solution_steps": [
+            "New Mean $= (\\text{Old Mean} \\times 3) + 5$.",
+            "New Mean $= (20 \\times 3) + 5 = 60 + 5 = 65$."
+        ],
+        "solution_steps_zh": [
+            "新平均值 $= (\\text{舊平均值} \\times 3) + 5$。",
+            "新平均值 $= (20 \\times 3) + 5 = 60 + 5 = 65$。"
+        ]
+    })
+
+    # q07: Dataset Transformation (Range/SD)
+    seeds.append({
+        "id": "prob_stat_07", "topic_id": topic_id, "subject": subject, "level": 4, "type": q_type, "marks": 3,
+        "question": "The standard deviation of a dataset is $4$. If $10$ is added to each data item, find the new standard deviation.",
+        "question_zh": "一組數據的標準差為 $4$。若每個數據項都加上 $10$，求新的標準差。",
+        "answer": "4", "correct_answer": "4",
+        "solution_steps": [
+            "Adding a constant to each data item does not change the dispersion of the data.",
+            "Standard deviation remains unchanged.",
+            "New SD $= 4$."
+        ],
+        "solution_steps_zh": [
+            "每個數據項加上一個常數不會改變數據的離散程度。",
+            "標準差保持不變。",
+            "新標準差 $= 4$。"
+        ]
+    })
+
+    # q08: Standard Score (z-score)
+    seeds.append({
+        "id": "prob_stat_08", "topic_id": topic_id, "subject": subject, "level": 4, "type": q_type, "marks": 3,
+        "question": "A student scored $75$ marks in a test. The mean score is $60$ and the standard deviation is $10$. Find the standard score of this student.",
+        "question_zh": "一名學生在考試中獲得 $75$ 分。平均分為 $60$，標準差為 $10$。求該學生的標準分。",
+        "answer": "1.5", "correct_answer": "1.5",
+        "solution_steps": [
+            "Standard Score $z = \\frac{x - \\mu}{\\sigma}$.",
+            "$z = \\frac{75 - 60}{10} = \\frac{15}{10} = 1.5$."
+        ],
+        "solution_steps_zh": [
+            "標準分 $z = \\frac{x - \\mu}{\\sigma}$。",
+            "$z = \\frac{75 - 60}{10} = \\frac{15}{10} = 1.5$。"
+        ]
+    })
+
+    # q09: Median (Even N)
+    seeds.append({
+        "id": "prob_stat_09", "topic_id": topic_id, "subject": subject, "level": 4, "type": q_type, "marks": 3,
+        "question": "Find the median of the following $6$ scores: $2, 9, 4, 7, 5, 8$.",
+        "question_zh": "求以下 $6$ 個得分的中位數：$2, 9, 4, 7, 5, 8$。",
+        "answer": "6", "correct_answer": "6",
+        "solution_steps": [
+            "Order data: $2, 4, 5, 7, 8, 9$.",
+            "Since $N=6$ is even, the median is the mean of the 3rd and 4th terms.",
+            "Median $= \\frac{5 + 7}{2} = \\frac{12}{2} = 6$."
+        ],
+        "solution_steps_zh": [
+            "排列數據：$2, 4, 5, 7, 8, 9$。",
+            "由於 $N=6$ 是偶數，中位數是第 3 和第 4 項的平均值。",
+            "中位數 $= \\frac{5 + 7}{2} = \\frac{12}{2} = 6$。"
+        ]
+    })
+
+    # q10: Inter-quartile Range (IQR) Basics
+    seeds.append({
+        "id": "prob_stat_10", "topic_id": topic_id, "subject": subject, "level": 4, "type": q_type, "marks": 3,
+        "question": "Given $Q_1 = 15$ and $Q_3 = 42$, find the inter-quartile range.",
+        "question_zh": "已知 $Q_1 = 15$ 及 $Q_3 = 42$，求四分位數間距。",
+        "answer": "27", "correct_answer": "27",
+        "solution_steps": [
+            "IQR $= Q_3 - Q_1$.",
+            "IQR $= 42 - 15 = 27$."
+        ],
+        "solution_steps_zh": [
+            "四分位數間距 $= Q_3 - Q_1$。",
+            "四分位數間距 $= 42 - 15 = 27$。"
+        ]
+    })
+
+    # ------------------ LEVEL 5: DSE STANDARD (10 Questions) ------------------
+    # q11: Expected Value
+    seeds.append({
+        "id": "prob_stat_11", "topic_id": topic_id, "subject": subject, "level": 5, "type": q_type, "marks": 4,
+        "question": "In a lucky draw, the probability of winning a prize of $\$100$ is $0.2$, and a prize of $\$50$ is $0.3$. Find the expected value of the prize.",
+        "question_zh": "在一項抽獎中，贏得 $\$100$ 獎金的概率為 $0.2$，贏得 $\$50$ 獎金的概率為 $0.3$。求獎金的期望值。",
+        "answer": "35", "correct_answer": "35",
+        "solution_steps": [
+            "Expected Value $E(X) = \\sum P_i \\times X_i$.",
+            "$E(X) = (0.2 \\times 100) + (0.3 \\times 50) + (0.5 \\times 0)$.",
+            "$E(X) = 20 + 15 = 35$."
+        ],
+        "solution_steps_zh": [
+            "期望值 $E(X) = \\sum P_i \\times X_i$。",
+            "$E(X) = (0.2 \\times 100) + (0.3 \\times 50) + (0.5 \\times 0)$。",
+            "$E(X) = 20 + 15 = 35$。"
+        ]
+    })
+
+    # q12: nCr Combination
+    seeds.append({
+        "id": "prob_stat_12", "topic_id": topic_id, "subject": subject, "level": 5, "type": q_type, "marks": 4,
+        "question": "How many ways can a committee of $3$ members be chosen from a group of $10$ people?",
+        "question_zh": "從 $10$ 個人中選出 $3$ 名委員的方法有多少種？",
+        "answer": "120", "correct_answer": "120",
+        "solution_steps": [
+            "Since the order of selection doesn't matter, we use combinations.",
+            "Number of ways $= C_3^{10} = \\frac{10 \\times 9 \\times 8}{3 \\times 2 \\times 1} = 120$."
+        ],
+        "solution_steps_zh": [
+            "由於選拔的順序並不重要，我們使用組合。",
+            "方法數 $= C_3^{10} = \\frac{10 \\times 9 \\times 8}{3 \\times 2 \\times 1} = 120$。"
+        ]
+    })
+
+    # q13: Adding/Subtracting Datasets (Variance)
+    seeds.append({
+        "id": "prob_stat_13", "topic_id": topic_id, "subject": subject, "level": 5, "type": q_type, "marks": 4,
+        "question": "If the variance of a dataset is $25$ and each data item is multiplied by $2$, what is the new variance?",
+        "question_zh": "若一組數據的方差為 $25$，且每個數據項都乘以 $2$，求新的方差。",
+        "answer": "100", "correct_answer": "100",
+        "solution_steps": [
+            "New Variance $= (\\text{Multiplier})^2 \\times \\text{Old Variance}$.",
+            "New Variance $= 2^2 \\times 25 = 4 \\times 25 = 100$."
+        ],
+        "solution_steps_zh": [
+            "新方差 $= (\\text{倍數})^2 \\times \\text{舊方差}$。",
+            "新方差 $= 2^2 \\times 25 = 4 \\times 25 = 100$。"
+        ]
+    })
+
+    # q14: Mutually Exclusive Probability
+    seeds.append({
+        "id": "prob_stat_14", "topic_id": topic_id, "subject": subject, "level": 5, "type": q_type, "marks": 4,
+        "question": "Two events $A$ and $B$ are mutually exclusive. If $P(A) = 0.35$ and $P(B) = 0.4$, find $P(A \\cup B)$.",
+        "question_zh": "兩個事件 $A$ 及 $B$ 為互斥事件。若 $P(A) = 0.35$ 且 $P(B) = 0.4$，求 $P(A \\cup B)$。",
+        "answer": "0.75", "correct_answer": "0.75",
+        "solution_steps": [
+            "For mutually exclusive events, $P(A \\cup B) = P(A) + P(B)$.",
+            "$P(A \\cup B) = 0.35 + 0.4 = 0.75$."
+        ],
+        "solution_steps_zh": [
+            "對於互斥事件，$P(A \\cup B) = P(A) + P(B)$。",
+            "$P(A \\cup B) = 0.35 + 0.4 = 0.75$。"
+        ]
+    })
+
+    # q15: Independent Events Probability
+    seeds.append({
+        "id": "prob_stat_15", "topic_id": topic_id, "subject": subject, "level": 5, "type": q_type, "marks": 4,
+        "question": "Two events $A$ and $B$ are independent. If $P(A) = 0.6$ and $P(B) = 0.25$, find $P(A \\cap B)$.",
+        "question_zh": "兩個事件 $A$ 及 $B$ 為獨立事件。若 $P(A) = 0.6$ 且 $P(B) = 0.25$，求 $P(A \\cap B)$。",
+        "answer": "0.15", "correct_answer": "0.15",
+        "solution_steps": [
+            "For independent events, $P(A \\cap B) = P(A) \\times P(B)$.",
+            "$P(A \\cap B) = 0.6 \\times 0.25 = 0.15$."
+        ],
+        "solution_steps_zh": [
+            "對於獨立事件，$P(A \\cap B) = P(A) \\times P(B)$。",
+            "$P(A \\cap B) = 0.6 \\times 0.25 = 0.15$。"
+        ]
+    })
+
+    # q16: Standard Score Comparison
+    seeds.append({
+        "id": "prob_stat_16", "topic_id": topic_id, "subject": subject, "level": 5, "type": q_type, "marks": 4,
+        "question": "Student $X$ got $80$ marks in Math (mean $65$, SD $10$). Student $Y$ got $70$ marks in English (mean $55$, SD $8$). Who performed better relative to their class?",
+        "question_zh": "學生 $X$ 數學得 $80$ 分（平均 $65$，標準差 $10$）。學生 $Y$ 英文得 $70$ 分（平均 $55$，標準差 $8$）。相對於班級，誰的表現更好？",
+        "answer": "Student Y", "correct_answer": "Student Y",
+        "solution_steps": [
+            "Calculate z-scores:",
+            "$z_X = \\frac{80 - 65}{10} = 1.5$.",
+            "$z_Y = \\frac{70 - 55}{8} = 1.875$.",
+            "Since $z_Y > z_X$, Student $Y$ performed better."
+        ],
+        "solution_steps_zh": [
+            "計算標準分：",
+            "$z_X = \\frac{80 - 65}{10} = 1.5$。",
+            "$z_Y = \\frac{70 - 55}{8} = 1.875$。",
+            "由於 $z_Y > z_X$，學生 $Y$ 的表現更好。"
+        ]
+    })
+
+    # q17: Weighted Mean
+    seeds.append({
+        "id": "prob_stat_17", "topic_id": topic_id, "subject": subject, "level": 5, "type": q_type, "marks": 4,
+        "question": "A student's score in three tests are $60, 70, 80$. The weights are $20\\%, 30\\%, 50\\%$ respectively. Find the weighted mean.",
+        "question_zh": "一名學生在三次測試中的得分分別為 $60, 70, 80$。權重分別為 $20\\%, 30\\%, 50\\%$。求加權平均分。",
+        "answer": "73", "correct_answer": "73",
+        "solution_steps": [
+            "Weighted Mean $= (60 \\times 0.2) + (70 \\times 0.3) + (80 \\times 0.5)$.",
+            "Weighted Mean $= 12 + 21 + 40 = 73$."
+        ],
+        "solution_steps_zh": [
+            "加權平均分 $= (60 \\times 0.2) + (70 \\times 0.3) + (80 \\times 0.5)$。",
+            "加權平均分 $= 12 + 21 + 40 = 73$。"
+        ]
+    })
+
+    # q18: Prob overlapping events (P(A U B))
+    seeds.append({
+        "id": "prob_stat_18", "topic_id": topic_id, "subject": subject, "level": 5, "type": q_type, "marks": 4,
+        "question": "If $P(A) = 0.5, P(B) = 0.4$ and $P(A \\cap B) = 0.1$, find $P(A \\cup B)$.",
+        "question_zh": "若 $P(A) = 0.5, P(B) = 0.4$ 且 $P(A \\cap B) = 0.1$，求 $P(A \\cup B)$。",
+        "answer": "0.8", "correct_answer": "0.8",
+        "solution_steps": [
+            "Formula: $P(A \\cup B) = P(A) + P(B) - P(A \\cap B)$.",
+            "$P(A \\cup B) = 0.5 + 0.4 - 0.1 = 0.8$."
+        ],
+        "solution_steps_zh": [
+            "公式：$P(A \\cup B) = P(A) + P(B) - P(A \\cap B)$。",
+            "$P(A \\cup B) = 0.5 + 0.4 - 0.1 = 0.8$。"
+        ]
+    })
+
+    # q19: Expected Value of Game (Profit)
+    seeds.append({
+        "id": "prob_stat_19", "topic_id": topic_id, "subject": subject, "level": 5, "type": q_type, "marks": 4,
+        "question": "A game costs $\$10$ to play. You have $1/20$ chance to win $\$100$, and $1/5$ chance to win $\$20$. Find the expected profit.",
+        "question_zh": "一項遊戲的入場費為 $\$10$。你有 $1/20$ 的機會贏得 $\$100$，有 $1/5$ 的機會贏得 $\$20$。求期望利潤。",
+        "answer": "-1", "correct_answer": "-1",
+        "solution_steps": [
+            "Expected reward $= (1/20 \\times 100) + (1/5 \\times 20) = 5 + 4 = 9$.",
+            "Expected profit $= \\text{Expected reward} - \\text{Cost} = 9 - 10 = -1$."
+        ],
+        "solution_steps_zh": [
+            "期望回報 $= (1/20 \\times 100) + (1/5 \\times 20) = 5 + 4 = 9$。",
+            "期望利潤 $= \\text{期望回報} - \\text{入場費} = 9 - 10 = -1$。"
+        ]
+    })
+
+    # q20: Basic nPr Permutation
+    seeds.append({
+        "id": "prob_stat_20", "topic_id": topic_id, "subject": subject, "level": 5, "type": q_type, "marks": 4,
+        "question": "How many $3$-letter 'words' can be formed from the letters $\{A, B, C, D, E\}$ if repetition is not allowed?",
+        "question_zh": "從字母集 $\{A, B, C, D, E\}$ 中，在不允許重覆的情況下，可以組成多少個 $3$ 字母的「單詞」？",
+        "answer": "60", "correct_answer": "60",
+        "solution_steps": [
+            "We use permutations because the order of letters matters.",
+            "Number of ways $= P_3^5 = 5 \\times 4 \\times 3 = 60$."
+        ],
+        "solution_steps_zh": [
+            "我們使用排列，因為字母的順序很重要。",
+            "方法數 $= P_3^5 = 5 \\times 4 \\times 3 = 60$。"
+        ]
+    })
+
+    # ------------------ LEVEL 7: ELITE (10 Questions) ------------------
+    # q21: Conditional Probability P(A|B)
+    seeds.append({
+        "id": "prob_stat_21", "topic_id": topic_id, "subject": subject, "level": 7, "type": q_type, "marks": 4,
+        "question": "Given $P(A) = 0.6, P(B) = 0.3$ and $P(A \\cup B) = 0.72$. Find $P(A|B)$.",
+        "question_zh": "已知 $P(A) = 0.6, P(B) = 0.3$ 及 $P(A \\cup B) = 0.72$。求 $P(A|B)$。",
+        "answer": "0.6", "correct_answer": "0.6",
+        "solution_steps": [
+            "First find $P(A \\cap B) = P(A) + P(B) - P(A \\cup B) = 0.6 + 0.3 - 0.72 = 0.18$.",
+            "Formula: $P(A|B) = \\frac{P(A \\cap B)}{P(B)} = \\frac{0.18}{0.3} = 0.6$."
+        ],
+        "solution_steps_zh": [
+            "首先求 $P(A \\cap B) = P(A) + P(B) - P(A \\cup B) = 0.6 + 0.3 - 0.72 = 0.18$。",
+            "公式：$P(A|B) = \\frac{P(A \\cap B)}{P(B)} = \\frac{0.18}{0.3} = 0.6$。"
+        ]
+    })
+
+    # q22: Non-replacement Probability (Balls)
+    seeds.append({
+        "id": "prob_stat_22", "topic_id": topic_id, "subject": subject, "level": 7, "type": q_type, "marks": 4,
+        "question": "A bag has $4$ red and $6$ white balls. If two balls are drawn one after another WITHOUT replacement, find the probability that both are red.",
+        "question_zh": "袋子中有 $4$ 個紅球和 $6$ 個白球。如果不放回地連續抽取兩個球，求兩個球都是紅色的概率。",
+        "answer": "2/15", "correct_answer": "2/15",
+        "solution_steps": [
+            "P(1st is red) $= 4/10$.",
+            "P(2nd is red | 1st is red) $= 3/9$.",
+            "Total probability $= \\frac{4}{10} \\times \\frac{3}{9} = \\frac{12}{90} = \\frac{2}{15}$."
+        ],
+        "solution_steps_zh": [
+            "P(第一個是紅球) $= 4/10$。",
+            "P(第二個是紅球 | 第一個是紅球) $= 3/9$。",
+            "總概率 $= \\frac{4}{10} \\times \\frac{3}{9} = \\frac{12}{90} = \\frac{2}{15}$。"
+        ]
+    })
+
+    # q23: Combinatorics (Committee with constraints)
+    seeds.append({
+        "id": "prob_stat_23", "topic_id": topic_id, "subject": subject, "level": 7, "type": q_type, "marks": 4,
+        "question": "A committee of $3$ is chosen from $5$ men and $4$ women. If at least $2$ women must be in the committee, how many ways are there?",
+        "question_zh": "從 $5$ 男 $4$ 女中選出 $3$ 名委員。若委員會中至少要有 $2$ 名女性，共有多少種選法？",
+        "answer": "34", "correct_answer": "34",
+        "solution_steps": [
+            "Case 1: $2$ women and $1$ man $= C_2^4 \\times C_1^5 = 6 \\times 5 = 30$.",
+            "Case 2: $3$ women and $0$ men $= C_3^4 \\times C_0^5 = 4 \\times 1 = 4$.",
+            "Total ways $= 30 + 4 = 34$."
+        ],
+        "solution_steps_zh": [
+            "情況 1：$2$ 女 $1$ 男 $= C_2^4 \\times C_1^5 = 6 \\times 5 = 30$。",
+            "情況 2：$3$ 女 $0$ 男 $= C_3^4 \\times C_0^5 = 4 \\times 1 = 4$。",
+            "總方法數 $= 30 + 4 = 34$。"
+        ]
+    })
+
+    # q24: Forming Numbers (Even constraint)
+    seeds.append({
+        "id": "prob_stat_24", "topic_id": topic_id, "subject": subject, "level": 7, "type": q_type, "marks": 4,
+        "question": "How many even $4$-digit numbers can be formed using digits $\{1, 2, 3, 4, 5, 6\}$ without repetition?",
+        "question_zh": "使用數字 $\{1, 2, 3, 4, 5, 6\}$ 且不重覆，可以組成多少個 $4$ 位偶數？",
+        "answer": "180", "correct_answer": "180",
+        "solution_steps": [
+            "The last digit must be $2, 4,$ or $6$ ($3$ options).",
+            "After choosing the last digit, there are $5$ digits left for the 1st position, $4$ for the 2nd, and $3$ for the 3rd.",
+            "Total $= 3 \\times (5 \\times 4 \\times 3) = 180$."
+        ],
+        "solution_steps_zh": [
+            "最後一位數字必須是 $2, 4$ 或 $6$（有 $3$ 種選擇）。",
+            "選定最後一位後，第 1 位有 $5$ 個選擇，第 2 位有 $4$ 個，第 3 位有 $3$ 個。",
+            "總數 $= 3 \\times (5 \\times 4 \\times 3) = 180$。"
+        ]
+    })
+
+    # q25: Inclusion-Exclusion Probability
+    seeds.append({
+        "id": "prob_stat_25", "topic_id": topic_id, "subject": subject, "level": 7, "type": q_type, "marks": 4,
+        "question": "In a class, $40\\%$ like Math, $50\\%$ like Science, and $20\\%$ like both. Find the probability that a random student likes neither.",
+        "question_zh": "在一班級中，$40\\%$ 喜歡數學，$50\\%$ 喜歡科學，而 $20\\%$ 兩者都喜歡。隨機抽取一名學生，求不喜歡這兩科的概率。",
+        "answer": "0.3 (or 30%)", "correct_answer": "0.3",
+        "solution_steps": [
+            "P(M U S) $= P(M) + P(S) - P(M \\cap S) = 0.4 + 0.5 - 0.2 = 0.7$.",
+            "P(Neither) $= 1 - P(M U S) = 1 - 0.7 = 0.3$."
+        ],
+        "solution_steps_zh": [
+            "P(M U S) $= P(M) + P(S) - P(M \\cap S) = 0.4 + 0.5 - 0.2 = 0.7$。",
+            "P(不喜歡兩者) $= 1 - P(M U S) = 1 - 0.7 = 0.3$。"
+        ]
+    })
+
+    # q26: Dataset Transformation (Complex)
+    seeds.append({
+        "id": "prob_stat_26", "topic_id": topic_id, "subject": subject, "level": 7, "type": q_type, "marks": 4,
+        "question": "A dataset has variance $\\sigma^2$. A new dataset is formed by $y_i = \\frac{x_i - \\mu}{\\sigma}$. Find the variance of the new dataset.",
+        "question_zh": "一組數據的方差為 $\\sigma^2$。新的數據集由 $y_i = \\frac{x_i - \\mu}{\\sigma}$ 組成。求新數據集的方差。",
+        "answer": "1", "correct_answer": "1",
+        "solution_steps": [
+            "The transformation is $y = \\frac{1}{\\sigma}x - \\frac{\\mu}{\\sigma}$.",
+            "New Variance $= (\\frac{1}{\\sigma})^2 \\times \\text{Old Variance} = \\frac{1}{\\sigma^2} \\times \\sigma^2 = 1$."
+        ],
+        "solution_steps_zh": [
+            "變換公式為 $y = \\frac{1}{\\sigma}x - \\frac{\\mu}{\\sigma}$。",
+            "新方差 $= (\\frac{1}{\\sigma})^2 \\times \\text{舊方差} = \\frac{1}{\\sigma^2} \\times \\sigma^2 = 1$。"
+        ]
+    })
+
+    # q27: Arrangement (Seating in a row)
+    seeds.append({
+        "id": "prob_stat_27", "topic_id": topic_id, "subject": subject, "level": 7, "type": q_type, "marks": 4,
+        "question": "In how many ways can $3$ boys and $2$ girls sit in a row if the $2$ girls must sit together?",
+        "question_zh": "如果 $2$ 名女孩必須坐在一起，那麼 $3$ 名男孩和 $2$ 名女孩排成一排有多少種坐法？",
+        "answer": "48", "correct_answer": "48",
+        "solution_steps": [
+            "Treat the $2$ girls as one unit. There are $3+1=4$ units to arrange: $4! = 24$.",
+            "Within the girl unit, the girls can swap places: $2! = 2$.",
+            "Total ways $= 24 \\times 2 = 48$."
+        ],
+        "solution_steps_zh": [
+            "將 $2$ 名女孩視為一個整體。共有 $3+1=4$ 個單位需要排列：$4! = 24$。",
+            "在女孩整體內部，兩位女孩可以互換位置：$2! = 2$。",
+            "總方法數 $= 24 \\times 2 = 48$。"
+        ]
+    })
+
+    # q28: Advanced Expected Value (Sum of Dices)
+    seeds.append({
+        "id": "prob_stat_28", "topic_id": topic_id, "subject": subject, "level": 7, "type": q_type, "marks": 4,
+        "question": "Find the expected value of the sum of two fair $6$-sided dice.",
+        "question_zh": "求兩枚公正 $6$ 面骰子點數之和的期望值。",
+        "answer": "7", "correct_answer": "7",
+        "solution_steps": [
+            "E(Sum) $= E(D_1) + E(D_2)$.",
+            "E(One Dice) $= (1+2+3+4+5+6)/6 = 3.5$.",
+            "E(Sum) $= 3.5 + 3.5 = 7$."
+        ],
+        "solution_steps_zh": [
+            "期望值之和 $= E(D_1) + E(D_2)$。",
+            "一枚骰子的期望值 $= (1+2+3+4+5+6)/6 = 3.5$。",
+            "總期望值 $= 3.5 + 3.5 = 7$。"
+        ]
+    })
+
+    # q29: Standard Score shift logic
+    seeds.append({
+        "id": "prob_stat_29", "topic_id": topic_id, "subject": subject, "level": 7, "type": q_type, "marks": 4,
+        "question": "If each mark in a test is increased by $5$ and then multiplied by $1.2$, what happens to the standard scores of the students?",
+        "question_zh": "若將測試中的每個分數先增加 $5$，再乘以 $1.2$，學生的標準分會發生什麼變化？",
+        "answer": "No change", "correct_answer": "No change",
+        "solution_steps": [
+            "Standard score $z = (x - \\mu) / \\sigma$.",
+            "The new mark $y = 1.2(x+5) = 1.2x + 6$.",
+            "New mean $\\mu' = 1.2\\mu + 6$, new SD $\\sigma' = 1.2\\sigma$.",
+            "$z' = \\frac{(1.2x+6) - (1.2\\mu+6)}{1.2\\sigma} = \\frac{1.2(x-\\mu)}{1.2\\sigma} = z$.",
+            "The standard scores remain unchanged."
+        ],
+        "solution_steps_zh": [
+            "標準分 $z = (x - \\mu) / \\sigma$。",
+            "新分數 $y = 1.2(x+5) = 1.2x + 6$。",
+            "新平均值 $\\mu' = 1.2\\mu + 6$，新標準差 $\\sigma' = 1.2\\sigma$。",
+            "$z' = \\frac{(1.2x+6) - (1.2\\mu+6)}{1.2\\sigma} = \\frac{1.2(x-\\mu)}{1.2\\sigma} = z$。",
+            "標準分保持不變。"
+        ]
+    })
+
+    # q30: Prob with Logic (At least one)
+    seeds.append({
+        "id": "prob_stat_30", "topic_id": topic_id, "subject": subject, "level": 7, "type": q_type, "marks": 4,
+        "question": "Two independent marksmen fire at a target. The probability that the first hit the target is $0.7$ and the second is $0.8$. Find the probability that the target is hit.",
+        "question_zh": "兩名獨立的射手對目標開火。第一名射手擊中目標的概率為 $0.7$，第二名為 $0.8$。求目標被擊中的概率。",
+        "answer": "0.94", "correct_answer": "0.94",
+        "solution_steps": [
+            "P(Hit) $= 1 - P(\\text{Both miss})$.",
+            "P(1st misses) $= 1 - 0.7 = 0.3$.",
+            "P(2nd misses) $= 1 - 0.8 = 0.2$.",
+            "P(Both miss) $= 0.3 \\times 0.2 = 0.06$.",
+            "P(Hit) $= 1 - 0.06 = 0.94$."
+        ],
+        "solution_steps_zh": [
+            "P(擊中) $= 1 - P(\\text{兩人都脫靶}) $。",
+            "P(第一個人脫靶) $= 1 - 0.7 = 0.3$。",
+            "P(第二個人脫靶) $= 1 - 0.8 = 0.2$。",
+            "P(兩人都脫靶) $= 0.3 \\times 0.2 = 0.06$。",
+            "P(擊中) $= 1 - 0.06 = 0.94$。"
+        ]
+    })
+
+    return seeds
+
+if __name__ == "__main__":
+    filepath = r'c:\Users\user\Documents\ace-it-web\backend\math_engine\bank_assets\math_stat_prob.json'
+    seeds = generate_30_prob_stat_seeds()
+    with open(filepath, 'w', encoding='utf-8') as f:
+        json.dump(seeds, f, ensure_ascii=False, indent=2)
+    print(f"Generated 30 questions in {filepath}")

@@ -25,7 +25,7 @@ const MathsLabPage = () => {
 
     // Support both location.state (from Roadmap) and URL params (from AI Tutor)
     const topic = location.state?.topic || searchParams.get('topic');
-    const level = location.state?.level || parseInt(searchParams.get('level')) || 3;
+    const level = location.state?.level || parseInt(searchParams.get('level')) || 1;
     const { taskId, title, xp, isFactoryQuest } = location.state || {};
 
     const [loading, setLoading] = useState(true);
@@ -40,6 +40,9 @@ const MathsLabPage = () => {
     const [hintIndex, setHintIndex] = useState(-1);
     const [loadingHint, setLoadingHint] = useState(false);
     const [isDiagramExpanded, setIsDiagramExpanded] = useState(false);
+    const [isAuditMode, setIsAuditMode] = useState(false);
+    const [isAuditing, setIsAuditing] = useState(false);
+    const [isReviewMode, setIsReviewMode] = useState(false);
 
     const tier = getMasteryStats(level || 3, language === 'zh');
     const potentialXP = xp || tier.xp || 100;
@@ -81,9 +84,12 @@ const MathsLabPage = () => {
         return () => document.removeEventListener('click', handleClickOutside);
     }, [showCheatMenu]);
 
-    const generatePracticeSession = async () => {
+    const generatePracticeSession = async (overrideMode = null) => {
+        if (isAuditMode) return; // Managed by handleStartAudit
         console.log('[MathsLabPage] generatePracticeSession called with:', { topic, level, language, uid: user?.uid });
-        // setLoading is handled in fetchData
+        
+        setLoading(true);
+        setError(null);
         setQuestions([]);
         setAnswers({});
         setCurrentIndex(0);
@@ -93,11 +99,24 @@ const MathsLabPage = () => {
             const res = await fetch(`${API_URL}/api/maths/diagnostic/practice/generate`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ uid: user?.uid, topic, level: level || 3, language: language || 'en', isFactory: false })
+                body: JSON.stringify({ 
+                    uid: user?.uid, 
+                    topic, 
+                    level: level || 3, 
+                    language: language || 'en', 
+                    isFactory: false, // Always use false for student lab to hit bank
+                    mode: overrideMode
+                })
             });
 
             if (res.ok) {
                 let data = await res.json();
+                if (data.error) {
+                    setError(data.error);
+                    setLoading(false);
+                    return;
+                }
+                setIsReviewMode(!!data.isReview || overrideMode === 'review');
                 let tasks = [];
                 if (Array.isArray(data)) {
                     tasks = data;
@@ -111,6 +130,7 @@ const MathsLabPage = () => {
 
                 if (!tasks || tasks.length === 0) {
                     setError("No questions available for this level/topic yet.");
+                    setLoading(false);
                     return;
                 }
 
@@ -121,10 +141,13 @@ const MathsLabPage = () => {
                     id: t.id || `q_${Date.now()}_${idx}`,
                     // Force short_answer for Quests even if stored as MC
                     type: isQuest ? 'short_answer' : ((t.type || '').includes('mc') ? 'mc' : 'short_answer'),
-                    text: t.text || t.question
+                    text: t.text || t.question,
+                    text_zh: t.text_zh || t.question_zh
                 }));
 
+                console.log('[MathsLabPage] Formatted Questions:', formattedTasks);
                 setQuestions(formattedTasks);
+                setLoading(false);
             } else {
                 let errorMessage = `Server Error: ${res.status}`;
                 try {
@@ -138,6 +161,97 @@ const MathsLabPage = () => {
         } catch (error) {
             console.error("Failed to generate practice", error);
             setError(error.message);
+        }
+    };
+
+    const handleStartAudit = async () => {
+        setIsAuditing(true);
+        setQuestions([]);
+        setAnswers({});
+        setCurrentIndex(0);
+        setError(null);
+
+        try {
+            const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+            const res = await fetch(`${API_URL}/api/admin/maths/topic-audit?topicId=${topic}`, {
+                headers: { 'x-admin-secret': 'ace-it-admin-secret-123' } // Hardcoded for this specific user's convenience
+            });
+
+            if (res.ok) {
+                const allQs = await res.json();
+                if (allQs.length === 0) {
+                    setError("No questions found for this topic.");
+                    return;
+                }
+
+                const formatted = allQs.map(q => ({
+                    ...q,
+                    type: q.type || 'short_answer',
+                    text: q.text || q.question,
+                    text_zh: q.text_zh || q.question_zh
+                }));
+
+                setQuestions(formatted);
+                setIsAuditMode(true);
+
+                // PERFORMANCE/CONVENIENCE: Automatically fill all answers with solutions
+                const auditAnswers = {};
+                formatted.forEach(q => {
+                    // Support modular 'content' schema + legacy fields
+                    const rawSteps = q.solution_steps || q.content?.solution_steps || [];
+                    const explanation = q.explanation || q.content?.explanation || "";
+                    
+                    // Use a clean joiner that our TipTap parser understands
+                    let steps = (rawSteps || []).map(s => s.trim()).join('\n\n');
+                    
+                    // If steps are empty but explanation exists, use explanation
+                    if (!steps && explanation) steps = explanation;
+                    
+                    const ans = q.answer || q.correct_answer || q.model_answer || q.content?.final_answer || '';
+                    
+                    // Wrap final answer in math if it's not already
+                    const mathAns = ans.toString().startsWith('$') ? ans : `$${ans}$`;
+                    
+                    auditAnswers[q.id] = steps ? `${steps}\n\nFinal Answer: ${mathAns}` : mathAns;
+                });
+                setAnswers(auditAnswers);
+
+                alert(`🧬 SUPER AUDIT: Found ${formatted.length} questions for this topic.`);
+            }
+        } catch (err) {
+            console.error("Audit failed:", err);
+            setError("Failed to initialize audit mode.");
+        } finally {
+            setIsAuditing(false);
+        }
+    };
+
+    const handleAuditDelete = async () => {
+        const currentQ = questions[currentIndex];
+        if (!window.confirm("🗑️ PERMANENTLY DELETE current question from database?")) return;
+
+        try {
+            const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+            const res = await fetch(`${API_URL}/api/admin/quests/delete`, {
+                method: 'DELETE',
+                headers: { 'Content-Type': 'application/json', 'x-admin-secret': 'ace-it-admin-secret-123' },
+                body: JSON.stringify({ questId: currentQ.id })
+            });
+
+            if (res.ok) {
+                const updated = [...questions];
+                updated.splice(currentIndex, 1);
+                setQuestions(updated);
+                if (currentIndex >= updated.length && updated.length > 0) {
+                    setCurrentIndex(updated.length - 1);
+                }
+                alert("Question removed successfully.");
+            }
+        } catch (err) {
+            console.error('[MathsLabPage] Error:', err);
+            setError('Connection Error: Failed to generate practice set.');
+        } finally {
+            setLoading(false);
         }
     };
 
@@ -268,11 +382,14 @@ const MathsLabPage = () => {
             if (isPerfect) {
                 // Perfect Derivation
                 if (steps.length > 0) {
-                    solutionStr += steps.map((s, i) => s.toLowerCase().startsWith('step') ? s : `Step ${i + 1}: ${s}`).join('\n');
+                    solutionStr += steps.map((s, i) => {
+                        const prefix = s.toLowerCase().startsWith('step') ? '' : `Step ${i + 1}: `;
+                        return `${prefix}${s}`;
+                    }).join('\n\n');
                 } else {
                     solutionStr += `Derivation: Use formula and plug in values correctly.`;
                 }
-                solutionStr += `\n\nFinal Answer: ${finalAns}`;
+                solutionStr += `\n\nFinal Answer: $${finalAns}$`;
             } else if (isHigh) {
                 // Good but less formal
                 solutionStr = `Solution:\n`;
@@ -315,7 +432,7 @@ const MathsLabPage = () => {
             if (!confirmed) return;
         }
         navigate('/maths-lab-review', {
-            state: { questions, answers, imageAnswers, topic, level, taskId, title, xp: potentialXP, isFactoryQuest }
+            state: { questions, answers, imageAnswers, topic, level, taskId, title, xp: isReviewMode ? 0 : potentialXP, isFactoryQuest }
         });
     };
 
@@ -337,14 +454,25 @@ const MathsLabPage = () => {
         const cleanText = prepareMathText(displaySubtext);
         const parts = splitContentByDelimiters(cleanText);
 
-        const hasVisual = !!(
+        // High-precision visual detection
+        const nonVisualTopics = ['math_prob_basic', 'math_num_percentages', 'math_alg_formulas', 'math_num_num_systems', 'math_alg_complex_numbers', 'math_num_ratio'];
+        
+        const hasActualVisualContent = !!(
             question?.diagram_url ||
-            (question?.diagram_json && Object.keys(question.diagram_json).length > 0) ||
-            question?.diagram_svg
+            (question?.diagram_json && (
+                typeof question.diagram_json === 'object' 
+                    ? (Object.keys(question.diagram_json).length > 2 || (question.diagram_json.elements?.length > 0) || (question.diagram_json.points?.length > 0))
+                    : (question.diagram_json !== '{}' && question.diagram_json.length > 15)
+            )) ||
+            (question?.diagram_svg && question.diagram_svg.length > 50)
         );
 
+        // Hide if topic is in blacklist AND no actual content (image/json) was generated
+        // FORCE FALSE for non-graphical topics to suppress legacy ghost graphs in the bank
+        const hasVisual = hasActualVisualContent && !nonVisualTopics.includes(topic);
+
         return (
-            <div className={`flex flex-col ${hasVisual && !isDiagramExpanded ? 'lg:flex-row' : ''} gap-8 items-start`}>
+            <div className={`flex flex-col ${hasVisual && !isDiagramExpanded ? 'lg:flex-row' : ''} gap-8 items-start mastery-logic-container`}>
                 <div className={`flex-1 text-gray-800 leading-relaxed font-sans w-full ${hasVisual && !isDiagramExpanded ? 'lg:max-w-[75%]' : ''}`}>
                     {parts.map((part, i) => {
                         if (!part) return null;
@@ -375,9 +503,10 @@ const MathsLabPage = () => {
                         return (
                             <span key={i}>
                                 {part.split(/(?:\r?\n|(?=\.Step\s*\d+\s*:?))/).map((line, lineIdx) => {
-                                    const trimmedLine = line.trim().replace(/^\./, '');
+                                    // Bug 1 Fix: Preserve leading/trailing whitespace in prose segments
+                                    const trimmedLine = line.replace(/^\./, '');
                                     if (!trimmedLine && line.length > 0) return <br key={lineIdx} />;
-                                    if (!trimmedLine) return null;
+                                    if (!trimmedLine && line.length === 0) return null;
 
                                     const isMathLine = looksLikeMath(trimmedLine);
                                     const isStepLine = line.trim().startsWith('Step') || line.trim().startsWith('.Step');
@@ -389,7 +518,7 @@ const MathsLabPage = () => {
                                         return (
                                             <React.Fragment key={lineIdx}>
                                                 {(lineIdx > 0 || isStepLine) && <br />}
-                                                <SafeInlineMath key={lineIdx} math={finalMath} className="mx-1" />
+                                                <SafeInlineMath key={lineIdx} math={finalMath} className="mx-0.5" />
                                             </React.Fragment>
                                         );
                                     } else {
@@ -424,12 +553,13 @@ const MathsLabPage = () => {
                                 {isDiagramExpanded ? <Minimize2 size={16} /> : <Maximize2 size={16} />}
                             </button>
 
-                            {question?.diagram_url ? (
+                            {question?.diagram_url && question.diagram_url.length > 2 ? (
                                 <div className="w-full h-full bg-white rounded-2xl p-4 shadow-lg border border-slate-200 flex flex-col items-center justify-center">
                                     <img
-                                        src={`${import.meta.env.VITE_API_URL}/${question.diagram_url}`}
+                                        src={question.diagram_url.startsWith('http') ? question.diagram_url : `${import.meta.env.VITE_API_URL}/${question.diagram_url}`}
                                         alt="Mathematical Graph"
                                         className="max-w-full max-h-full object-contain rounded-lg"
+                                        onError={(e) => { e.target.style.display = 'none'; }}
                                     />
                                     {description && isDiagramExpanded && <p className="text-xs text-slate-600 italic text-center mt-4">{description}</p>}
                                 </div>
@@ -438,19 +568,24 @@ const MathsLabPage = () => {
                                     <GeometryRenderer data={question.diagram_json} />
                                     {description && isDiagramExpanded && <p className="text-xs text-slate-600 italic text-center mt-4">{description}</p>}
                                 </div>
-                            ) : question?.diagram_svg ? (
+                            ) : (question?.diagram_svg || question?.diagramSVG) ? (
                                 <div className="w-full h-full bg-white rounded-2xl p-4 shadow-lg border border-slate-200 flex flex-col items-center justify-center">
-                                    <div className="w-full h-full flex items-center justify-center" dangerouslySetInnerHTML={{ __html: question.diagram_svg }} />
+                                    <div 
+                                        className="w-full h-full flex items-center justify-center diagram-svg-container" 
+                                        dangerouslySetInnerHTML={{ __html: question.diagram_svg || question.diagramSVG }} 
+                                    />
                                     {description && isDiagramExpanded && <p className="text-xs text-slate-600 italic text-center mt-4">{description}</p>}
                                 </div>
                             ) : (
-                                <>
-                                    <div className="w-16 h-16 bg-white rounded-2xl shadow-sm flex items-center justify-center mb-4 text-indigo-500/40">
-                                        {text.includes('[TABLE') ? <i className="fas fa-table text-2xl"></i> : <i className="fas fa-chart-area text-2xl"></i>}
+                                <div className="w-full h-full bg-white rounded-2xl p-8 border border-slate-200 flex flex-col items-center justify-center text-center">
+                                    <div className="w-16 h-16 bg-slate-50 rounded-2xl flex items-center justify-center mb-4 text-slate-300">
+                                        {text.includes('[TABLE') ? <AlertCircle size={32} /> : <Maximize2 size={32} />}
                                     </div>
-                                    <h3 className="text-xs font-bold text-slate-600 uppercase tracking-widest mb-2 text-center">{text.includes('[TABLE') ? 'Statistical Data' : 'Geometric Visualization'}</h3>
-                                    {description && <div className="bg-white/80 backdrop-blur-sm p-4 rounded-xl border border-slate-200 text-slate-700 w-full shadow-sm text-center text-xs line-clamp-3">"{description}"</div>}
-                                </>
+                                    <h3 className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">
+                                        {text.includes('[TABLE') ? 'Data Table' : 'Geometric Diagram'}
+                                    </h3>
+                                    <p className="text-[9px] text-slate-400 font-bold">Visual representation not available for this question</p>
+                                </div>
                             )}
                         </div>
                     </div>
@@ -478,6 +613,43 @@ const MathsLabPage = () => {
                     </button>
                     <button onClick={() => navigate('/dashboard')} className="w-full py-3 bg-slate-100 text-slate-600 rounded-xl font-bold hover:bg-opacity-90 transition-all">
                         Back to Dashboard
+                    </button>
+                </div>
+            </div>
+        );
+    }
+
+    if (error === 'BANK_EMPTY_SEEN') {
+        return (
+            <div className="min-h-screen bg-slate-50 flex flex-col items-center justify-center p-6 text-center">
+                <div className="bg-white p-10 rounded-3xl shadow-2xl max-w-md w-full border-2 border-slate-50">
+                    <div className="w-20 h-20 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <RotateCcw className="w-10 h-10 text-indigo-500" />
+                    </div>
+                    <h2 className="text-2xl font-black text-slate-800 mb-2">
+                        Questions Completed!
+                    </h2>
+                    <p className="text-slate-500 mb-8">
+                        You have completed all pre-generated {getMathSkillName(topic, language)} questions at this level.<br/><br/>
+                        Do you want to review them again (0 XP), or generate a new set of questions in real-time?
+                    </p>
+                    <button
+                        onClick={() => { setError(null); generatePracticeSession('review'); }}
+                        className="w-full py-3 bg-slate-100 text-slate-600 rounded-xl font-bold hover:bg-slate-200 transition-all mb-3"
+                    >
+                        Review Existing Questions
+                    </button>
+                    <button
+                        onClick={() => { setError(null); generatePracticeSession('realtime'); }}
+                        className="w-full py-3 bg-purple-600 text-white rounded-xl font-bold hover:bg-opacity-90 transition-all flex items-center justify-center gap-2 mb-3"
+                    >
+                        <i className="fas fa-magic"></i> Generate New Questions
+                    </button>
+                    <button
+                        onClick={() => navigate('/dashboard')}
+                        className="w-full py-3 mt-4 text-slate-400 font-bold hover:text-slate-600 transition-all text-sm underline"
+                    >
+                        Return to Dashboard
                     </button>
                 </div>
             </div>
@@ -525,6 +697,10 @@ const MathsLabPage = () => {
     const progress = ((currentIndex + 1) / questions.length) * 100;
     const isLastQuestion = currentIndex === questions.length - 1;
 
+    const currentTier = questions[currentIndex]
+        ? getMasteryStats(questions[currentIndex].level, language === 'zh')
+        : tier;
+
     return (
         <div className="min-h-screen bg-slate-50 flex flex-col">
             <header className="fixed top-0 left-0 right-0 h-16 bg-white/90 backdrop-blur-md border-b border-gray-200 z-50 px-6 flex items-center justify-between">
@@ -533,7 +709,7 @@ const MathsLabPage = () => {
                     <div>
                         <h1 className="text-lg font-black text-slate-900">{getMathSkillName(topic, language)}</h1>
                         <div className="flex items-center gap-2">
-                            <span className={`px-2 py-0.5 rounded text-[10px] font-black uppercase tracking-wider ${tier.color} bg-white border border-current`}>{tier.displayName}</span>
+                            <span className={`px-2 py-0.5 rounded text-[10px] font-black uppercase tracking-wider ${currentTier.color} bg-white border border-current`}>{currentTier.displayName}</span>
                             <p className="text-[10px] text-slate-500 font-black uppercase tracking-wider">Practice Lab • {potentialXP} XP Potential</p>
                         </div>
                     </div>
@@ -544,6 +720,23 @@ const MathsLabPage = () => {
                         <button onClick={() => setShowCheatMenu(!showCheatMenu)} className="px-4 py-2 rounded-lg bg-amber-100 text-amber-700 text-xs font-bold flex items-center gap-1">Cheat <ChevronDown className="w-3 h-3" /></button>
                         {showCheatMenu && <div className="absolute right-0 mt-2 w-48 bg-white rounded-xl shadow-2xl border py-2 z-50">{[3, 4, 5, '5*', '5**'].map((lvl) => <button key={lvl} onClick={() => handleCheat(lvl)} className="w-full px-4 py-2 text-left text-sm hover:bg-slate-50 transition-colors">Level {lvl}</button>)}</div>}
                     </div>
+                    {user?.email === 'fungtam@gmail.com' && !isAuditMode && (
+                        <button
+                            onClick={handleStartAudit}
+                            disabled={isAuditing}
+                            className="px-6 py-2 rounded-lg bg-indigo-600 text-white text-sm font-black uppercase tracking-widest shadow-lg shadow-indigo-600/30 animate-pulse hover:animate-none"
+                        >
+                            {isAuditing ? 'Auditing...' : 'Manager Audit'}
+                        </button>
+                    )}
+                    {isAuditMode && (
+                        <button
+                            onClick={handleAuditDelete}
+                            className="px-6 py-2 rounded-lg bg-red-600 text-white text-sm font-black uppercase tracking-widest shadow-lg shadow-red-600/30"
+                        >
+                            Remove Question
+                        </button>
+                    )}
                     <button onClick={handleSubmitAll} className="px-6 py-2 rounded-lg bg-purple-600 text-white text-sm font-bold shadow-md">Submit All</button>
                 </div>
             </header>
@@ -593,9 +786,20 @@ const MathsLabPage = () => {
                                             <div className="shrink-0 mt-0.5 text-amber-500">
                                                 <Lightbulb size={16} />
                                             </div>
-                                            <div>
+                                            <div className="flex-1 mastery-logic-container">
                                                 <div className="font-bold text-[10px] uppercase tracking-wider mb-1 text-amber-600/80">Hint {idx + 1}</div>
-                                                <div className="text-sm leading-relaxed">{h}</div>
+                                                <div className="text-sm leading-relaxed">
+                                                    {(() => {
+                                                        const trimmedHint = (typeof h === 'string') ? h.trim() : '';
+                                                        const isFullMath = (trimmedHint.startsWith('$$') && trimmedHint.endsWith('$$')) ||
+                                                                         (trimmedHint.startsWith('\\[') && trimmedHint.endsWith('\\]'));
+                                                        
+                                                        if (isFullMath) {
+                                                            return <div className="flex justify-center my-2"><SafeBlockMath math={trimmedHint.slice(2, -2)} /></div>;
+                                                        }
+                                                        return renderQuestionText(h);
+                                                    })()}
+                                                </div>
                                             </div>
                                         </div>
                                     );
@@ -615,7 +819,7 @@ const MathsLabPage = () => {
                                     return (
                                         <button key={i} onClick={() => handleAnswerChange(opt)} className={`p-6 text-left rounded-xl border-2 transition-all ${currentAns === opt ? 'border-purple-600 bg-purple-50 ring-1 ring-purple-600' : 'border-gray-200 hover:bg-gray-50'}`}>
                                             <div className="flex items-center gap-3">
-                                                <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold ${currentAns === opt ? 'bg-purple-600 text-white' : 'bg-gray-200 text-gray-600'}`}>{String.fromCharCode(65 + i)}</div>
+                                                <div className={`w-8 h-8 rounded-full grid place-items-center text-sm font-bold leading-none pt-0.5 ${currentAns === opt ? 'bg-purple-600 text-white' : 'bg-gray-200 text-gray-600'}`}>{String.fromCharCode(65 + i)}</div>
                                                 <div className="flex-1">
                                                     {renderQuestionText(isChinese ? (currentQ.options_zh?.[i] || cleanOpt) : cleanOpt)}
                                                 </div>
@@ -626,11 +830,12 @@ const MathsLabPage = () => {
                             </div>
                         ) : (
                             <div className="space-y-4">
-                                <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
-                                    <div className="bg-slate-50 px-4 py-2 text-[10px] text-slate-500 font-black font-bold uppercase tracking-widest border-b">
-                                        Show your steps below (LaTeX supported)
+                                <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden student-scratchpad-container">
+                                    <div className="bg-slate-50 px-4 py-2 text-[10px] text-slate-500 font-black font-bold uppercase tracking-widest border-b flex justify-between items-center">
+                                        <span>Show your steps (Formulas & Values only is fine)</span>
+                                        <span className="opacity-60 hidden md:block">AI Grader detects Method Marks (M) & Answer Marks (A)</span>
                                     </div>
-                                    <MathInput id={`math-input-${currentQ.id}`} value={currentAns} onChange={handleAnswerChange} placeholder="Start typing your solution... (e.g. x^2 + 2x...)" />
+                                    <MathInput id={`math-input-${currentQ.id}`} value={currentAns} onChange={handleAnswerChange} placeholder="Enter your equations... (e.g. 0.1 * 0.6 = 0.06)" />
                                 </div>
                                 <div className="relative">
                                     <div className="absolute inset-0 flex items-center" aria-hidden="true">

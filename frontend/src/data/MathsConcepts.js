@@ -114,6 +114,118 @@ const MathsConcepts = {
             ]
         }
     },
+    'math_geo_circle_eq': {
+        en: {
+            title: "Equation of Circle",
+            time_estimate: "6 mins",
+            difficulty: "Medium",
+            concepts: [
+                {
+                    title: "Standard Form",
+                    content: "$$(x - h)^2 + (y - k)^2 = r^2$$ Center: $(h, k)$, Radius: $r$",
+                    type: "formula"
+                },
+                {
+                    title: "General Form",
+                    content: "$$x^2 + y^2 + Dx + Ey + F = 0$$",
+                    type: "formula",
+                    takeaway: "Center $= (\\frac{-D}{2}, \\frac{-E}{2})$. Radius $= \\sqrt{(\\frac{D}{2})^2 + (\\frac{E}{2})^2 - F}$. Requirement: $(\\frac{D}{2})^2 + (\\frac{E}{2})^2 - F > 0$.",
+                    diagram: `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><circle cx="100" cy="100" r="60" fill="none" stroke="#333" stroke-width="2"/><circle cx="100" cy="100" r="3" fill="#3B82F6"/><text x="75" y="90" font-family="sans-serif" font-size="12" fill="#3B82F6">(-D/2, -E/2)</text><line x1="100" y1="100" x2="160" y2="100" stroke="#9ca3af" stroke-dasharray="4,4"/><text x="125" y="95" font-family="sans-serif" font-size="12">r</text></svg>`
+                },
+                {
+                    title: "Intersection (Circle & Line)",
+                    content: "Substitute the line equation into the circle to form a quadratic. Use $\\Delta$ to finding the number of intersection points.",
+                    type: "text",
+                    diagram: `<svg viewBox="0 0 220 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" style="width: 100%; height: auto;"><circle cx="100" cy="100" r="50" fill="none" stroke="#333" stroke-width="2"/><line x1="20" y1="70" x2="180" y2="70" stroke="#10B981" stroke-width="2"/><text x="125" y="65" font-family="sans-serif" font-size="12" fill="#10B981">Δ > 0</text><line x1="20" y1="150" x2="180" y2="150" stroke="#F59E0B" stroke-width="2"/><text x="125" y="145" font-family="sans-serif" font-size="12" fill="#F59E0B">Δ = 0</text><line x1="20" y1="180" x2="180" y2="180" stroke="#EF4444" stroke-width="2"/><text x="125" y="175" font-family="sans-serif" font-size="12" fill="#EF4444">Δ < 0</text></svg>`
+                }
+            ],
+            steps: [
+                {
+                    step: 1,
+                    title: "Identify Form",
+                    description: "Determine if the equation is in Standard Form or General Form."
+                },
+                {
+                    step: 2,
+                    title: "Normalize",
+                    description: "For General Form, ensure coefficients of $x^2$ and $y^2$ are 1."
+                },
+                {
+                    step: 3,
+                    title: "Extract Parameters",
+                    description: "Calculate the center coordinates and radius length."
+                }
+            ],
+            example: {
+                question: "Find the center and radius of $x^2 + y^2 - 4x + 6y - 12 = 0$.",
+                steps: [
+                    "Identify $D = -4, E = 6, F = -12$.",
+                    "Center $(h, k) = (\\frac{-D}{2}, \\frac{-E}{2}) = (2, -3)$.",
+                    "Radius $r = \\sqrt{2^2 + (-3)^2 - (-12)} = \\sqrt{4 + 9 + 12} = \\sqrt{25} = 5$.",
+                    "Final Answer: Center (2, -3), Radius 5"
+                ]
+            },
+            pitfalls: [
+                "Coefficient of $x^2$ and $y^2$ must be 1.",
+                "Radius must be a positive number; if $h^2 + k^2 - F < 0$, it's not a real circle."
+            ]
+        },
+        zh: {
+            title: "圓方程",
+            time_estimate: "6 分鐘",
+            difficulty: "中等",
+            concepts: [
+                {
+                    title: "標準式",
+                    content: "$$(x - h)^2 + (y - k)^2 = r^2$$ 圓心: $(h, k)$, 半徑: $r$",
+                    type: "formula"
+                },
+                {
+                    title: "一般式",
+                    content: "$$x^2 + y^2 + Dx + Ey + F = 0$$",
+                    type: "formula",
+                    takeaway: "圓心 $= (\\frac{-D}{2}, -\\frac{E}{2})$。半徑 $= \\sqrt{(\\frac{D}{2})^2 + (\\frac{E}{2})^2 - F}$。條件：$(\\frac{D}{2})^2 + (\\frac{E}{2})^2 - F > 0$。",
+                    diagram: `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><circle cx="100" cy="100" r="60" fill="none" stroke="#333" stroke-width="2"/><circle cx="100" cy="100" r="3" fill="#3B82F6"/><text x="75" y="90" font-family="sans-serif" font-size="12" fill="#3B82F6">(-D/2, -E/2)</text><line x1="100" y1="100" x2="160" y2="100" stroke="#9ca3af" stroke-dasharray="4,4"/><text x="125" y="95" font-family="sans-serif" font-size="12">r</text></svg>`
+                },
+                {
+                    title: "相交 (圓與直線)",
+                    content: "將直線方程代入圓方程中構成二次方程。利用判別式 $\\Delta$ 找出交點數量。",
+                    type: "text",
+                    diagram: `<svg viewBox="0 0 220 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" style="width: 100%; height: auto;"><circle cx="100" cy="100" r="50" fill="none" stroke="#333" stroke-width="2"/><line x1="20" y1="70" x2="180" y2="70" stroke="#10B981" stroke-width="2"/><text x="125" y="65" font-family="sans-serif" font-size="12" fill="#10B981">Δ > 0</text><line x1="20" y1="150" x2="180" y2="150" stroke="#F59E0B" stroke-width="2"/><text x="125" y="145" font-family="sans-serif" font-size="12" fill="#F59E0B">Δ = 0</text><line x1="20" y1="180" x2="180" y2="180" stroke="#EF4444" stroke-width="2"/><text x="125" y="175" font-family="sans-serif" font-size="12" fill="#EF4444">Δ < 0</text></svg>`
+                }
+            ],
+            steps: [
+                {
+                    step: 1,
+                    title: "識別形式",
+                    description: "確定方程是標準式還是一般式。"
+                },
+                {
+                    step: 2,
+                    title: "標準化",
+                    description: "對於一般式，確保 $x^2$ 和 $y^2$ 的係數為 1。"
+                },
+                {
+                    step: 3,
+                    title: "提取參數",
+                    description: "計算圓心坐標和半徑長度。"
+                }
+            ],
+            example: {
+                question: "求 $x^2 + y^2 - 4x + 6y - 12 = 0$ 的圓心和半徑。",
+                steps: [
+                    "識別 $D = -4, E = 6, F = -12$。",
+                    "圓心 $(h, k) = (\\frac{-D}{2}, \\frac{-E}{2}) = (2, -3)$。",
+                    "半徑 $r = \\sqrt{2^2 + (-3)^2 - (-12)} = \\sqrt{4 + 9 + 12} = \\sqrt{25} = 5$。",
+                    "最終答案: 圓心 (2, -3), 半徑 5"
+                ]
+            },
+            pitfalls: [
+                "$x^2$ 和 $y^2$ 的係數必須為 1。",
+                "半徑必須為正數；如果 $h^2 + k^2 - F < 0$，則該方程不代表一個實圓。"
+            ]
+        }
+    },
     // --- STATISTICS ---
     'histograms': {
         en: {

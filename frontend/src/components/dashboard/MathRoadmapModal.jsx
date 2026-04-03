@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import { useLanguage } from '../../context/LanguageContext';
-import { Lock, CheckCircle, Play, Map, Star, Clock, X, Trophy, Search, Sparkles, Zap, Calculator, PieChart, Shapes, Ruler, RefreshCcw, ChevronDown } from 'lucide-react';
+import { Lock, CheckCircle, Play, Map, Star, Clock, X, Trophy, Search, Sparkles, Zap, Calculator, PieChart, Shapes, Ruler, RefreshCcw, ChevronDown, BarChart3 } from 'lucide-react';
 import { MATH_MICRO_SKILLS, getMathSkillName, getMathSkillDesc, getMathSkillMinForm } from '../../constants/mathMicroSkills';
-import { calculateTier, getTierMetadata, getMasteryStats, getDifficultyTierDetails } from '../../utils/masteryUtils';
+import { calculateTier, getTierMetadata, getMasteryStats, getDifficultyTierDetails, getMasteryPercentage } from '../../utils/masteryUtils';
 
 const calculateCurrentForm = (baseGrade, joinedDateTimestamp) => {
     if (!baseGrade) return 6; // Default to F6 if unknown
@@ -73,10 +73,10 @@ const MathRoadmapModal = ({ isOpen, onClose }) => {
             myPath: "My Math Path",
             subtitleWeekly: "Complete 5 targets to unlock the Master Challenge!",
             subtitleGeneral: "Select a topic to generate practice questions.",
-            tabPersonalised: "Personalised",
-            tabLibrary: "General",
-            tabElite: "Elite",
-            loading: "Calculating path...",
+            tabPersonalised: "Targeted Growth",
+            tabLibrary: "Skill Library",
+            tabIntegrated: "Integrated Maths",
+            loading: "Calculating your optimal path...",
             targets: "Targets",
             bossUnlocked: "Boss Unlocked!",
             bossToUnlock: (count) => `${count} to unlock Boss`,
@@ -94,7 +94,12 @@ const MathRoadmapModal = ({ isOpen, onClose }) => {
                 ALGEBRA: "Number & Algebra",
                 GEOMETRY: "Geometry",
                 DATA: "Data Handling"
-            }
+            },
+            mastery: "Mastery",
+            emptyGrowthTitle: "Unlock Your Potential",
+            emptyGrowthDesc: "Your Targeted Growth path is currently a blank slate. Start practicing in the Skill Library! As you complete quests, our AI will analyze your performance, identify your unique bottlenecks, and curate personalized targets to help you level up faster.",
+            emptyGrowthAction: "Explore Skill Library",
+            helpText: "How to enable?"
         },
         zh: {
             questSystem: "數學任務",
@@ -102,8 +107,8 @@ const MathRoadmapModal = ({ isOpen, onClose }) => {
             subtitleWeekly: "完成 5 個目標以解鎖大師挑戰！",
             subtitleGeneral: "選擇一個主題以生成練習題。",
             tabPersonalised: "個人化任務",
-            tabLibrary: "綜合",
-            tabElite: "精英挑戰",
+            tabLibrary: "技能庫",
+            tabIntegrated: "綜合數學",
             loading: "正在計算路徑...",
             targets: "個目標",
             bossUnlocked: "挑戰已解鎖！",
@@ -122,7 +127,12 @@ const MathRoadmapModal = ({ isOpen, onClose }) => {
                 ALGEBRA: "數與代數",
                 GEOMETRY: "度量、圖形與空間",
                 DATA: "數據處理"
-            }
+            },
+            mastery: "掌握度",
+            emptyGrowthTitle: "啟動你的個人化路徑",
+            emptyGrowthDesc: "你的『個人化任務』目前還是空白的。請先前往技能庫開始練習！當你完成任務後，AI 會分析你的表現，找出你的薄弱環節，並為你量身打造專屬的練習目標，助你更高效地進步。",
+            emptyGrowthAction: "前往技能庫",
+            helpText: "如何啟動？"
         }
     };
 
@@ -172,6 +182,10 @@ const MathRoadmapModal = ({ isOpen, onClose }) => {
 
         onClose(); // Close modal
 
+        // Normalize level to FE tier 1-4 if it's a bank level (3, 4, 5, 7)
+        // This ensures the backend mapping (!isFactory flow) works correctly.
+        const tier = calculateTier(task.level || 3);
+
         // For Math Factory Model quests, navigate to the specialized learn page
         navigate(`/maths/learn/${task.meta?.topic || task.topic}`, {
             state: {
@@ -180,7 +194,7 @@ const MathRoadmapModal = ({ isOpen, onClose }) => {
                 title: task.meta?.topic || task.topic,
                 xp: task.xp || 200, // Factory Quest standard fallback
                 isFactoryQuest: true,
-                level: task.meta?.difficulty || task.level
+                level: 0 // ADAPTIVE (Uses Scaffolded sequence: Easy -> Medium -> DSE)
             }
         });
     };
@@ -211,9 +225,11 @@ const MathRoadmapModal = ({ isOpen, onClose }) => {
 
         // 3. Tab Filter
         if (activeTab === 'CHALLENGE') {
-            const userLevel = userSkills[id]?.level || 0;
-            return userLevel >= 5;
+            return id.startsWith('math_int');
         }
+
+        // Only show single topics in GENERAL / WEEKLY tabs
+        if (id.startsWith('math_int')) return false;
 
         return true;
     });
@@ -253,7 +269,7 @@ const MathRoadmapModal = ({ isOpen, onClose }) => {
                             {[
                                 { id: 'WEEKLY', label: t.tabPersonalised, icon: Clock },
                                 { id: 'GENERAL', label: t.tabLibrary, icon: Sparkles },
-                                { id: 'CHALLENGE', label: t.tabElite, icon: Zap }
+                                { id: 'CHALLENGE', label: t.tabIntegrated, icon: Zap }
                             ].map(tab => (
                                 <button
                                     key={tab.id}
@@ -297,64 +313,138 @@ const MathRoadmapModal = ({ isOpen, onClose }) => {
                     <div className="flex-1 flex flex-col min-h-0 bg-slate-50/50">
                         {activeTab === 'WEEKLY' ? (
                             <div className="p-6 flex-1 overflow-y-auto custom-scrollbar">
-                                {/* Batch Info */}
-                                <div className="mb-6 flex items-center justify-between p-4 bg-violet-50 border border-violet-100 rounded-xl">
-                                    <div className="flex items-center gap-3">
-                                        <div className="p-2 bg-violet-600 text-white rounded-lg">
-                                            <Shapes className="w-5 h-5" />
+                                {Object.keys(userSkills || {}).filter(id => id.startsWith('math_') && !id.startsWith('math_int')).length === 0 && (plan?.tasks || []).length === 0 ? (
+                                    <div className="h-full flex flex-col items-center justify-center text-center p-8">
+                                        <div className="w-24 h-24 bg-violet-100/50 rounded-full flex items-center justify-center mb-6">
+                                            <Sparkles className="w-12 h-12 text-violet-500 animate-pulse" />
                                         </div>
-                                        <div>
-                                            <h4 className="font-bold text-slate-900">Your Adaptive Set</h4>
-                                            <p className="text-xs text-slate-500">4 English • 2 Math Questions</p>
+                                        <h3 className="text-2xl font-bold text-slate-800 mb-3">{t.emptyGrowthTitle}</h3>
+                                        <p className="text-slate-500 max-w-lg mb-8 leading-relaxed">
+                                            {t.emptyGrowthDesc}
+                                        </p>
+                                        <div className="flex flex-col items-center gap-4">
+                                            <button
+                                                onClick={() => setActiveTab('GENERAL')}
+                                                className="px-8 py-4 bg-violet-600 text-white rounded-2xl font-bold hover:bg-violet-700 hover:scale-105 transition-all shadow-xl shadow-violet-200 flex items-center gap-2 group"
+                                            >
+                                                {t.emptyGrowthAction}
+                                                <Play className="w-4 h-4 fill-current group-hover:translate-x-1 transition-transform" />
+                                            </button>
+                                            <div className="flex items-center gap-2 text-slate-400 text-xs font-medium">
+                                                <div className="w-1.5 h-1.5 rounded-full bg-violet-400" />
+                                                <span>{t.helpText} Finish any quest in the library to get started.</span>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div className="text-right">
-                                        <div className="text-xs font-bold text-violet-600 uppercase tracking-wider">Set Bonus</div>
-                                        <div className="text-lg font-black text-slate-900">+200 XP</div>
-                                    </div>
-                                </div>
+                                ) : (
+                                    <>
+                                        {/* Bottom 3 Bottlenecks - Targeted Growth */}
+                                        {Object.keys(userSkills || {}).filter(id => id.startsWith('math_') && !id.startsWith('math_int')).length > 0 && (
+                                            <div className="mb-6">
+                                                <div className="flex items-center gap-2 mb-4">
+                                                    <Sparkles className="w-5 h-5 text-violet-600" />
+                                                    <h3 className="text-sm font-black text-slate-800 uppercase tracking-wider">Top 3 Radar Bottlenecks</h3>
+                                                </div>
+                                                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                                    {Object.entries(userSkills)
+                                                        .filter(([id]) => id.startsWith('math_') && !id.startsWith('math_int'))
+                                                        .sort((a, b) => (a[1].level || 0) - (b[1].level || 0))
+                                                        .slice(0, 3)
+                                                        .map(([id, skillData]) => {
+                                                            const name = getMathSkillName(id, language);
+                                                            const level = skillData.level || 1;
+                                                            return (
+                                                                <div
+                                                                    key={`weak_${id}`}
+                                                                    onClick={() => handleTaskClick({ topic: id, level: level, xp: 200, subject: 'Maths' })}
+                                                                    className="bg-white border-2 border-slate-100 hover:border-red-200 hover:shadow-lg p-5 rounded-2xl transition-all cursor-pointer relative overflow-hidden group"
+                                                                >
+                                                                    <div className="absolute top-0 right-0 p-3 opacity-5 group-hover:opacity-10 transition-opacity">
+                                                                        <Zap className="w-12 h-12 text-red-600" />
+                                                                    </div>
+                                                                    <div className="flex items-center gap-2 mb-2">
+                                                                        <div className="px-2 py-0.5 bg-red-50 text-red-600 rounded text-[9px] font-black uppercase">Urgent Mastery</div>
+                                                                        <div className="px-2 py-0.5 bg-slate-100 text-slate-500 rounded text-[9px] font-bold">Level {level}</div>
+                                                                    </div>
+                                                                    <h4 className="font-bold text-slate-900 group-hover:text-red-600 transition-colors">{name}</h4>
+                                                                    
+                                                                    {/* Mastery Bar */}
+                                                                    <div className="mt-4 space-y-1.5">
+                                                                        <div className="flex justify-between text-[9px] font-black tracking-widest text-slate-400 uppercase">
+                                                                            <span>{t.mastery}</span>
+                                                                            <span>{getMasteryPercentage(level)}%</span>
+                                                                        </div>
+                                                                        <div className="h-1.5 bg-slate-100 rounded-full overflow-hidden border border-slate-200/50">
+                                                                            <div 
+                                                                                className="h-full bg-gradient-to-r from-red-500 to-orange-500 transition-all duration-1000"
+                                                                                style={{ width: `${getMasteryPercentage(level)}%` }}
+                                                                            />
+                                                                        </div>
+                                                                    </div>
 
-                                {/* Tasks Grid */}
-                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pb-12">
-                                    {(plan?.tasks || []).map((task) => (
-                                        <div
-                                            key={task.id}
-                                            onClick={() => handleTaskClick(task)}
-                                            className={`
-                                                group relative p-5 rounded-xl border-2 text-left transition-all duration-200 cursor-pointer
-                                                bg-white border-slate-100 hover:border-violet-300 hover:shadow-lg
-                                            `}
-                                        >
-                                            <div className="flex justify-between items-start mb-3">
-                                                <span className={`
-                                                    px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wide
-                                                    ${task.subject === 'Maths' ? 'bg-violet-100 text-violet-700' : 'bg-indigo-100 text-indigo-700'}
-                                                `}>
-                                                    {task.subject}
-                                                </span>
-                                                <div className="bg-slate-100 text-slate-600 p-1.5 rounded-full group-hover:bg-violet-600 group-hover:text-white transition-all">
-                                                    <Play className="w-3.5 h-3.5 ml-0.5" />
+                                                                    <p className="text-[10px] text-slate-400 mt-3 italic">Defeat this bottleneck to level up.</p>
+                                                                    <div className="mt-4 flex items-center justify-between">
+                                                                        <span className="text-xs font-bold text-red-500">+Adaptive XP</span>
+                                                                        <Play className="w-4 h-4 text-slate-300 group-hover:text-red-500 transition-colors" />
+                                                                    </div>
+                                                                </div>
+                                                            );
+                                                        })}
                                                 </div>
                                             </div>
+                                        )}
 
-                                            <h3 className="font-bold text-slate-800 mb-1 leading-tight group-hover:text-violet-600 transition-colors">
-                                                {task.meta?.topic || task.topic}
-                                            </h3>
-                                            <p className="text-[10px] text-slate-500 line-clamp-2">
-                                                {task.subject === 'Maths' ? `DSE F${task.meta?.syllabus_layer || task.level} level challenge.` : `DSE English mastery target.`}
-                                            </p>
+                                        {/* Personalized Batch */}
+                                        {(plan?.tasks || []).length > 0 && (
+                                            <>
+                                                <div className="mt-8 flex items-center gap-2 mb-4">
+                                                    <Clock className="w-5 h-5 text-indigo-600" />
+                                                    <h3 className="text-sm font-black text-slate-800 uppercase tracking-wider">Weekly Adaptive Quests</h3>
+                                                </div>
+                                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pb-12">
+                                                    {(plan?.tasks || []).map((task) => (
+                                                        <div
+                                                            key={task.id}
+                                                            onClick={() => handleTaskClick(task)}
+                                                            className={`
+                                                                group relative p-5 rounded-xl border-2 text-left transition-all duration-200 cursor-pointer
+                                                                bg-white border-slate-100 hover:border-violet-300 hover:shadow-lg
+                                                            `}
+                                                        >
+                                                            <div className="flex justify-between items-start mb-3">
+                                                                <span className={`
+                                                                    px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wide
+                                                                    ${task.subject === 'Maths' ? 'bg-violet-100 text-violet-700' : 'bg-indigo-100 text-indigo-700'}
+                                                                `}>
+                                                                    {task.subject}
+                                                                </span>
+                                                                <div className="bg-slate-100 text-slate-600 p-1.5 rounded-full group-hover:bg-violet-600 group-hover:text-white transition-all">
+                                                                    <Play className="w-3.5 h-3.5 ml-0.5" />
+                                                                </div>
+                                                            </div>
 
-                                            <div className="mt-4 flex items-center justify-between">
-                                                <span className="text-xs font-bold text-violet-600 flex items-center gap-1">
-                                                    <Star className="w-3 h-3 fill-current" /> +200 XP
-                                                </span>
-                                                <span className="text-[9px] font-black text-slate-300 uppercase">
-                                                    Factory v1.0
-                                                </span>
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div>
+                                                            <h3 className="font-bold text-slate-800 mb-1 leading-tight group-hover:text-violet-600 transition-colors">
+                                                                {task.meta?.topic || task.topic}
+                                                            </h3>
+                                                            <p className="text-[10px] text-slate-500 line-clamp-2">
+                                                                {task.subject === 'Maths' ? `DSE F${task.meta?.syllabus_layer || task.level} level challenge.` : `DSE English mastery target.`}
+                                                            </p>
+
+                                                            <div className="mt-4 flex items-center justify-between">
+                                                                <span className="text-xs font-bold text-violet-600 flex items-center gap-1">
+                                                                    <Star className="w-3 h-3 fill-current" /> +200 XP
+                                                                </span>
+                                                                <span className="text-[9px] font-black text-slate-300 uppercase">
+                                                                    Factory v1.0
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    ))}
+                                                </div>
+                                            </>
+                                        )}
+                                    </>
+                                )}
                             </div>
                         ) : (
                             <div className="flex-1 flex flex-col min-h-0">
@@ -376,6 +466,7 @@ const MathRoadmapModal = ({ isOpen, onClose }) => {
                                         </div>
                                     </div>
 
+                                {activeTab === 'GENERAL' && (
                                     <div className="flex gap-2 overflow-x-auto pb-1 hide-scrollbar">
                                         {[
                                             { id: 'ALL', label: t.areas.ALL, icon: Calculator },
@@ -387,18 +478,19 @@ const MathRoadmapModal = ({ isOpen, onClose }) => {
                                                 key={cat.id}
                                                 onClick={() => setFilterCategory(cat.id)}
                                                 className={`
-                                                     flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] font-bold whitespace-nowrap border transition-all
-                                                     ${filterCategory === cat.id
+                                                      flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] font-bold whitespace-nowrap border transition-all
+                                                      ${filterCategory === cat.id
                                                         ? 'bg-violet-100 border-violet-200 text-violet-700'
                                                         : 'bg-white border-slate-200 text-slate-500 hover:bg-slate-50'}
-                                                 `}
+                                                  `}
                                             >
                                                 <cat.icon className="w-3 h-3" />
                                                 {cat.label}
                                             </button>
                                         ))}
                                     </div>
-                                </div>
+                                )}
+                            </div>
 
 
                                 {/* Skills List */}
@@ -461,19 +553,9 @@ const MathRoadmapModal = ({ isOpen, onClose }) => {
                                                                     </span>
                                                                 )}
                                                                 {!isPracticed && (
-                                                                    <div className="relative flex items-center" onClick={(e) => e.stopPropagation()}>
-                                                                        <select
-                                                                            value={selectedLevels[id] !== undefined ? selectedLevels[id] : calculateTier(userSkills[id]?.level || 0, activeTab !== 'CHALLENGE')}
-                                                                            onChange={(e) => setSelectedLevels(prev => ({ ...prev, [id]: parseInt(e.target.value) }))}
-                                                                            className={`pl-2 pr-5 py-0.5 rounded text-[9px] font-black uppercase tracking-wider border ${getDifficultyTierDetails(selectedLevels[id] !== undefined ? selectedLevels[id] : calculateTier(userSkills[id]?.level || 0, activeTab !== 'CHALLENGE'), language === 'zh').color} appearance-none cursor-pointer focus:outline-none focus:ring-1 focus:ring-violet-500`}
-                                                                        >
-                                                                            {[1, 2, 3, 4].map(lvl => (
-                                                                                <option key={lvl} value={lvl} className="text-slate-800 bg-white">
-                                                                                    {getDifficultyTierDetails(lvl, language === 'zh').displayName}
-                                                                                </option>
-                                                                            ))}
-                                                                        </select>
-                                                                        <ChevronDown className="absolute right-1 w-3 h-3 pointer-events-none opacity-60" />
+                                                                    <div className="px-2 py-0.5 bg-indigo-50 text-indigo-600 rounded text-[9px] font-black uppercase tracking-wider flex items-center gap-1">
+                                                                        <Zap className="w-3 h-3" />
+                                                                        {language === 'zh' ? '自適應練習' : 'Adaptive'}
                                                                     </div>
                                                                 )}
                                                             </div>
@@ -489,7 +571,22 @@ const MathRoadmapModal = ({ isOpen, onClose }) => {
                                                         <h4 className="text-sm font-bold text-slate-800 mb-1 group-hover:text-violet-600 transition-colors">
                                                             {name}
                                                         </h4>
-                                                        <p className="text-[11px] text-slate-500 line-clamp-2 leading-tight">
+                                                        
+                                                        {/* Mastery Bar */}
+                                                        <div className="mt-3 space-y-1">
+                                                            <div className="flex justify-between text-[8px] font-black text-slate-400 uppercase tracking-widest">
+                                                                <span>{t.mastery}</span>
+                                                                <span>{getMasteryPercentage(level)}%</span>
+                                                            </div>
+                                                            <div className="h-1 bg-slate-100 rounded-full overflow-hidden border border-slate-200/50">
+                                                                <div 
+                                                                    className="h-full bg-gradient-to-r from-violet-500 to-indigo-600 transition-all duration-1000"
+                                                                    style={{ width: `${getMasteryPercentage(level)}%` }}
+                                                                />
+                                                            </div>
+                                                        </div>
+
+                                                        <p className="text-[10px] text-slate-500 mt-3 line-clamp-1 leading-tight opacity-70">
                                                             {desc}
                                                         </p>
                                                     </div>

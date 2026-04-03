@@ -158,7 +158,8 @@ const ProtectedRoute = ({ children }) => {
     }
 
     // CHECK EMAIL VERIFICATION
-    if (!user.emailVerified) {
+    // Localhost Bypass: Allow development without real email verification
+    if (!user.emailVerified && window.location.hostname !== 'localhost') {
         console.log("ProtectedRoute: User NOT VERIFIED, redirecting to login with notice.");
         return <Navigate to="/login" state={{ message: "Please verify your email address to continue." }} />;
     }

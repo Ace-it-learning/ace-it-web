@@ -3,7 +3,7 @@
  */
 
 export const MASTERY_TIERS = {
-    0: { id: 'mixed', label: 'Mixed (Interleaved)', zh: '混合練習', color: 'bg-indigo-500 text-white border-indigo-600 shadow-lg shadow-indigo-500/20', xp: 125, desc: 'Scientifically proven to improve retention' },
+    0: { id: 'mixed', label: 'Adaptive Blending', zh: '自適應練習', color: 'bg-indigo-500 text-white border-indigo-600 shadow-lg shadow-indigo-500/20', xp: 150, desc: 'Scientifically scaffolded progression' },
     1: { id: 'easy', label: 'Easy', zh: '基礎', color: 'bg-emerald-100 text-emerald-700 border-emerald-200', xp: 50, desc: 'DSE Level 2-3 · Foundation & Core Concepts' },
     2: { id: 'medium', label: 'Medium', zh: '進階', color: 'bg-amber-100 text-amber-700 border-amber-200', xp: 75, desc: 'DSE Level 4 · Exam Readiness & Application' },
     3: { id: 'dse', label: 'DSE Standard', zh: 'DSE 水平', color: 'bg-indigo-100 text-indigo-700 border-indigo-200', xp: 100, desc: 'DSE Level 5 · Full HKDSE Exam Standard' },
@@ -70,4 +70,16 @@ export const getDifficultyTierDetails = (difficultyLevel, isChinese = false) => 
         ...meta,
         displayName: isChinese ? meta.zh : meta.label
     };
+};
+
+/**
+ * Maps a mastery level (1-4) to a percentage (0-100).
+ */
+export const getMasteryPercentage = (level = 1) => {
+    const lvl = parseInt(level) || 0;
+    if (lvl >= 4) return 100;
+    if (lvl === 3) return 85;
+    if (lvl === 2) return 50;
+    if (lvl === 1) return 25;
+    return 0;
 };

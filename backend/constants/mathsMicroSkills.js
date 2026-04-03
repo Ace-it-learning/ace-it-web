@@ -241,6 +241,36 @@ const MATHS_MICRO_SKILLS = {
         category: 'Data Handling',
         description: 'Classic probability (Frontend Alias)',
         paper: 'Paper 1/2'
+    },
+
+    // === INTEGRATED TOPICS (Section B Style) ===
+    'math_int_algebra': {
+        id: 'math_int_algebra',
+        name: 'Integrated: Algebra & Sequences',
+        category: 'Integrated',
+        description: 'Combining AP/GP with Logarithms and Polynomials (DSE Section B).',
+        paper: 'Paper 1'
+    },
+    'math_int_geometry': {
+        id: 'math_int_geometry',
+        name: 'Integrated: Circle & Coordinate Geometry',
+        category: 'Integrated',
+        description: 'Solving circle equations with lines, tangent properties and locus.',
+        paper: 'Paper 1'
+    },
+    'math_int_trig': {
+        id: 'math_int_trig',
+        name: 'Integrated: 3D Trigonometry & Mensuration',
+        category: 'Integrated',
+        description: 'Calculating volume/angles in complex 3D solids using multiple trig rules.',
+        paper: 'Paper 1'
+    },
+    'math_int_data': {
+        id: 'math_int_data',
+        name: 'Integrated: Probability & Statistics',
+        category: 'Integrated',
+        description: 'Using measures of dispersion to calculate conditional probabilities.',
+        paper: 'Paper 1'
     }
 };
 

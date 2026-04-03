@@ -1,0 +1,782 @@
+[
+  {
+    "id": "v1_mensuration_1",
+    "topic_id": "math_mensuration",
+    "subject": "Maths",
+    "level": 3,
+    "type": "short_answer",
+    "marks": 3,
+    "is_factory": true,
+    "is_released": true,
+    "standard_version": "3.0",
+    "meta": {
+      "topic": "math_mensuration",
+      "syllabus_layer": "Foundational"
+    },
+    "sub_topic": "Mensuration",
+    "difficulty": "easy",
+    "question": "Find the arc length of a sector with radius 7 cm and angle $70^\\circ$. (Take $\\pi \\approx 3.14$)",
+    "question_zh": "求半徑為 7 cm，圓心角為 $70^\\circ$ 的扇形的弧長。(取 $\\pi \\approx 3.14$)",
+    "answer": "8.55 cm",
+    "correct_answer": "8.55 cm",
+    "solution_steps": [
+      "Arc length formula: $L = 2 \\pi r \\times \\frac{\\theta}{360^\\circ}$",
+      "Substitute $r = 7$ and $\\theta = 70^\\circ$",
+      "$L = 2 \\pi (7) \\times \\frac{70}{360}$",
+      "$L \\approx 8.55$ cm"
+    ],
+    "solution_steps_zh": [
+      "弧長公式：$L = 2 \\pi r \\times \\frac{\\theta}{360^\\circ}$",
+      "代入 $r = 7$ 及 $\\theta = 70^\\circ$",
+      "$L = 2 \\pi (7) \\times \\frac{70}{360}$",
+      "$L \\approx 8.55$ cm"
+    ],
+    "grading_rubric": [
+      "M1: Correct substitution",
+      "A1: Final answer 8.55 cm"
+    ],
+    "is_approved": true,
+    "diagram_svg": "<svg viewBox=\"0 0 300 300\"><path d=\"M 150 150 L 230.0,150.0 A 80 80 0 0 0 177.4,74.8 Z\" fill=\"rgba(59,130,246,0.1)\" stroke=\"#333\" stroke-width=\"2\"/><text x=\"160\" y=\"145\">70&#176;</text><text x=\"180\" y=\"170\">r=7</text></svg>"
+  },
+  {
+    "id": "v1_mensuration_2",
+    "topic_id": "math_mensuration",
+    "subject": "Maths",
+    "level": 3,
+    "type": "short_answer",
+    "marks": 3,
+    "is_factory": true,
+    "is_released": true,
+    "standard_version": "3.0",
+    "meta": {
+      "topic": "math_mensuration",
+      "syllabus_layer": "Foundational"
+    },
+    "sub_topic": "Mensuration",
+    "difficulty": "easy",
+    "question": "Calculate the area of a sector with radius 6 cm and central angle $148^\\circ$.",
+    "question_zh": "求半徑為 6 cm，圓心角為 $148^\\circ$ 的扇形的面積。",
+    "answer": "46.50 cm^2",
+    "correct_answer": "46.50 cm^2",
+    "solution_steps": [
+      "Sector Area formula: $A = \\pi r^2 \\times \\frac{\\theta}{360^\\circ}$",
+      "Substitute $r = 6$ and $\\theta = 148^\\circ$",
+      "$A = \\pi (6)^2 \\times \\frac{148}{360}$",
+      "$A \\approx 46.50$ cm$^2$"
+    ],
+    "solution_steps_zh": [
+      "扇形面積公式：$A = \\pi r^2 \\times \\frac{\\theta}{360^\\circ}$",
+      "代入 $r = 6$ 及 $\\theta = 148^\\circ$",
+      "$A = \\pi (6)^2 \\times \\frac{148}{360}$",
+      "$A \\approx 46.50$ cm$^2$"
+    ],
+    "grading_rubric": [
+      "M1: Correct substitution",
+      "A1: Final answer 46.50 cm^2"
+    ],
+    "is_approved": true,
+    "diagram_svg": "<svg viewBox=\"0 0 300 300\"><path d=\"M 150 150 L 219.3,110.0 A 80 80 0 0 0 70.0,147.2 Z\" fill=\"rgba(59,130,246,0.3)\" stroke=\"#333\" stroke-width=\"2\"/><text x=\"140\" y=\"130\">148&#176;</text><text x=\"180\" y=\"160\">6 cm</text></svg>"
+  },
+  {
+    "id": "v1_mensuration_3",
+    "topic_id": "math_mensuration",
+    "subject": "Maths",
+    "level": 3,
+    "type": "short_answer",
+    "marks": 3,
+    "is_factory": true,
+    "is_released": true,
+    "standard_version": "3.0",
+    "meta": {
+      "topic": "math_mensuration",
+      "syllabus_layer": "Foundational"
+    },
+    "sub_topic": "Mensuration",
+    "difficulty": "easy",
+    "question": "A cylinder has radius 4 cm and height 14 cm. Find its volume.",
+    "question_zh": "一直圓柱體，其半徑為 4 cm 及高為 14 cm。求其體積。",
+    "answer": "703.72 cm^3",
+    "correct_answer": "703.72 cm^3",
+    "solution_steps": [
+      "Cylinder Volume: $V = \\pi r^2 h$",
+      "Substitute $r = 4, h = 14$",
+      "$V = \\pi (4)^2 (14)$",
+      "$V \\approx 703.72$ cm$^3$"
+    ],
+    "solution_steps_zh": [
+      "圓柱體體積：$V = \\pi r^2 h$",
+      "代入 $r = 4, h = 14$",
+      "$V = \\pi (4)^2 (14)$",
+      "$V \\approx 703.72$ cm$^3$"
+    ],
+    "grading_rubric": [
+      "M1: Correct substitution",
+      "A1: Final answer 703.72 cm^3"
+    ],
+    "is_approved": true,
+    "diagram_svg": "<svg viewBox=\"0 0 300 300\"><ellipse cx=\"150\" cy=\"80\" rx=\"40\" ry=\"15\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\"/><ellipse cx=\"150\" cy=\"220\" rx=\"40\" ry=\"15\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\"/><line x1=\"110\" y1=\"80\" x2=\"110\" y2=\"220\" stroke=\"#333\" stroke-width=\"2\"/><line x1=\"190\" y1=\"80\" x2=\"190\" y2=\"220\" stroke=\"#333\" stroke-width=\"2\"/><text x=\"195\" y=\"150\">h=14</text><text x=\"150\" y=\"90\">r=4</text></svg>"
+  },
+  {
+    "id": "v1_mensuration_4",
+    "topic_id": "math_mensuration",
+    "subject": "Maths",
+    "level": 3,
+    "type": "short_answer",
+    "marks": 3,
+    "is_factory": true,
+    "is_released": true,
+    "standard_version": "3.0",
+    "meta": {
+      "topic": "math_mensuration",
+      "syllabus_layer": "Foundational"
+    },
+    "sub_topic": "Mensuration",
+    "difficulty": "easy",
+    "question": "Find the surface area of a sphere with radius 7 cm.",
+    "question_zh": "求一個半徑為 7 cm 的球體的表面積。",
+    "answer": "615.75 cm^2",
+    "correct_answer": "615.75 cm^2",
+    "solution_steps": [
+      "Sphere Surface Area: $A = 4 \\pi r^2$",
+      "Substitute $r = 7$",
+      "$A = 4 \\pi (7)^2$",
+      "$A \\approx 615.75$ cm$^2$"
+    ],
+    "solution_steps_zh": [
+      "球體表面積：$A = 4 \\pi r^2$",
+      "代入 $r = 7$",
+      "$A = 4 \\pi (7)^2$",
+      "$A \\approx 615.75$ cm$^2$"
+    ],
+    "grading_rubric": [
+      "M1: Correct substitution",
+      "A1: Final answer 615.75 cm^2"
+    ],
+    "is_approved": true,
+    "diagram_svg": "<svg viewBox=\"0 0 300 300\"><circle cx=\"150\" cy=\"150\" r=\"70\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\"/><ellipse cx=\"150\" cy=\"150\" rx=\"70\" ry=\"25\" fill=\"none\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"5,5\"/><text x=\"160\" y=\"145\">r=7</text></svg>"
+  },
+  {
+    "id": "v1_mensuration_5",
+    "topic_id": "math_mensuration",
+    "subject": "Maths",
+    "level": 3,
+    "type": "short_answer",
+    "marks": 3,
+    "is_factory": true,
+    "is_released": true,
+    "standard_version": "3.0",
+    "meta": {
+      "topic": "math_mensuration",
+      "syllabus_layer": "Foundational"
+    },
+    "sub_topic": "Mensuration",
+    "difficulty": "easy",
+    "question": "A square pyramid has a base side of 7 cm and a vertical height of 11 cm. Find its volume.",
+    "question_zh": "一個正方形底棱錐，其底邊長為 7 cm，垂直高為 11 cm。求其體積。",
+    "answer": "179.67 cm^3",
+    "correct_answer": "179.67 cm^3",
+    "solution_steps": [
+      "Pyramid Volume: $V = \\frac{1}{3} \\times \\text{Base Area} \\times \\text{Height}$",
+      "Base is a square: $\\text{Base Area} = 7^2 = 49$",
+      "$V = \\frac{1}{3} \\times 49 \\times 11$",
+      "$V \\approx 179.67$ cm$^3$"
+    ],
+    "solution_steps_zh": [
+      "棱錐體積：$V = \\frac{1}{3} \\times \\text{底面積} \\times \\text{高}$",
+      "底面為正方形：$\\text{底面積} = 7^2 = 49$",
+      "$V = \\frac{1}{3} \\times 49 \\times 11$",
+      "$V \\approx 179.67$ cm$^3$"
+    ],
+    "grading_rubric": [
+      "M1: Correct substitution",
+      "A1: Final answer 179.67 cm^3"
+    ],
+    "is_approved": true,
+    "diagram_svg": "<svg viewBox=\"0 0 300 300\"><polygon points=\"150,50 80,220 220,220\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\"/><line x1=\"150\" y1=\"50\" x2=\"150\" y2=\"220\" stroke=\"#333\" stroke-dasharray=\"5,5\"/><text x=\"155\" y=\"140\">h=11</text><text x=\"140\" y=\"240\">base=7</text></svg>"
+  },
+  {
+    "id": "v1_mensuration_6",
+    "topic_id": "math_mensuration",
+    "subject": "Maths",
+    "level": 4,
+    "type": "short_answer",
+    "marks": 4,
+    "is_factory": true,
+    "is_released": true,
+    "standard_version": "3.0",
+    "meta": {
+      "topic": "math_mensuration",
+      "syllabus_layer": "DSE Level"
+    },
+    "sub_topic": "Mensuration",
+    "difficulty": "medium",
+    "question": "Find the perimeter of a sector with radius 10 cm and angle $118^\\circ$.",
+    "question_zh": "求一個半徑為 10 cm，圓心角為 $118^\\circ$ 的扇形的周界。",
+    "answer": "40.59 cm",
+    "correct_answer": "40.59 cm",
+    "solution_steps": [
+      "Perimeter of sector = Arc length + $2r$",
+      "Arc length = $2 \\pi (10) \\times \\frac{118}{360} \\approx 20.59$",
+      "Perimeter $\\approx 20.59 + 2(10) = 40.59$ cm"
+    ],
+    "solution_steps_zh": [
+      "扇形周界 = 弧長 + $2r$",
+      "弧長 = $2 \\pi (10) \\times \\frac{118}{360} \\approx 20.59$",
+      "周界 $\\approx 20.59 + 2(10) = 40.59$ cm"
+    ],
+    "grading_rubric": [
+      "M1: Correct substitution",
+      "A1: Final answer 40.59 cm"
+    ],
+    "is_approved": true,
+    "diagram_svg": "<svg viewBox=\"0 0 300 300\"><path d=\"M 150 150 L 230 150 A 80 80 0 0 0 180 80 Z\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\"/><text x=\"180\" y=\"140\">118&#176;</text><text x=\"200\" y=\"165\">r=10</text></svg>"
+  },
+  {
+    "id": "v1_mensuration_7",
+    "topic_id": "math_mensuration",
+    "subject": "Maths",
+    "level": 4,
+    "type": "short_answer",
+    "marks": 4,
+    "is_factory": true,
+    "is_released": true,
+    "standard_version": "3.0",
+    "meta": {
+      "topic": "math_mensuration",
+      "syllabus_layer": "DSE Level"
+    },
+    "sub_topic": "Mensuration",
+    "difficulty": "medium",
+    "question": "A solid hemisphere has radius 10 cm. Find its total surface area.",
+    "question_zh": "一個實心半球體的半徑為 10 cm。求其總表面積。",
+    "answer": "942.48 cm^2",
+    "correct_answer": "942.48 cm^2",
+    "solution_steps": [
+      "Hemisphere Total SA = Curved SA + Base Area",
+      "Total SA = $2 \\pi r^2 + \\pi r^2 = 3 \\pi r^2$",
+      "Substitute $r = 10$: Total SA = $3 \\pi (10)^2$",
+      "Total SA $\\approx 942.48$ cm$^2$"
+    ],
+    "solution_steps_zh": [
+      "半球體總表面積 = 曲面面積 + 底面積",
+      "總表面積 = $2 \\pi r^2 + \\pi r^2 = 3 \\pi r^2$",
+      "代入 $r = 10$：總表面積 = $3 \\pi (10)^2$",
+      "總表面積 $\\approx 942.48$ cm$^2$"
+    ],
+    "grading_rubric": [
+      "M1: Correct substitution",
+      "A1: Final answer 942.48 cm^2"
+    ],
+    "is_approved": true,
+    "diagram_svg": "<svg viewBox=\"0 0 300 300\"><path d=\"M 70 150 A 80 80 0 0 1 230 150 Z\" fill=\"rgba(59,130,246,0.1)\" stroke=\"#333\" stroke-width=\"2\"/><ellipse cx=\"150\" cy=\"150\" rx=\"80\" ry=\"25\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\"/><text x=\"160\" y=\"140\">r=10</text></svg>"
+  },
+  {
+    "id": "v1_mensuration_8",
+    "topic_id": "math_mensuration",
+    "subject": "Maths",
+    "level": 4,
+    "type": "short_answer",
+    "marks": 4,
+    "is_factory": true,
+    "is_released": true,
+    "standard_version": "3.0",
+    "meta": {
+      "topic": "math_mensuration",
+      "syllabus_layer": "DSE Level"
+    },
+    "sub_topic": "Mensuration",
+    "difficulty": "medium",
+    "question": "A right circular cone has radius 6 cm and slant height 10 cm. Find its volume.",
+    "question_zh": "一個直圓錐體，其底半徑為 6 cm，斜高為 10 cm。求其體積。",
+    "answer": "301.59 \\text{ cm}^3",
+    "correct_answer": "301.59 \\text{ cm}^3",
+    "solution_steps": [
+      "First find height $h$ using Pythagoras: $h = \\sqrt-12$",
+      "$h = \\sqrt{10^2 - 6^2} = \\sqrt{64} = 8.0$",
+      "Cone Volume $V = \\frac{1}{3} \\pi r^2 h$",
+      "$V = \\frac{1}{3} \\pi (6^2) (8.0) \\approx 301.59 \\text{ cm}^3$"
+    ],
+    "solution_steps_zh": [
+      "首先利用勾股定理求高 $h$：$h = \\sqrt-12$",
+      "$h = \\sqrt{10^2 - 6^2} = \\sqrt{64} = 8.0$",
+      "圓錐體體積 $V = \\frac{1}{3} \\pi r^2 h$",
+      "$V = \\frac{1}{3} \\pi (6^2) (8.0) \\approx 301.59 \\text{ cm}^3$"
+    ],
+    "grading_rubric": [
+      "M1: Correct substitution",
+      "A1: Final answer 301.59 \\text{ cm}^3"
+    ],
+    "is_approved": true,
+    "diagram_svg": "<svg viewBox=\"0 0 300 300\"><ellipse cx=\"150\" cy=\"220\" rx=\"60\" ry=\"20\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\"/><line x1=\"90\" y1=\"220\" x2=\"150\" y2=\"50\" stroke=\"#333\" stroke-width=\"2\"/><line x1=\"210\" y1=\"220\" x2=\"150\" y2=\"50\" stroke=\"#333\" stroke-width=\"2\"/><text x=\"185\" y=\"140\">s=10</text><text x=\"120\" y=\"235\">r=6</text></svg>"
+  },
+  {
+    "id": "v1_mensuration_9",
+    "topic_id": "math_mensuration",
+    "subject": "Maths",
+    "level": 4,
+    "type": "short_answer",
+    "marks": 4,
+    "is_factory": true,
+    "is_released": true,
+    "standard_version": "3.0",
+    "meta": {
+      "topic": "math_mensuration",
+      "syllabus_layer": "DSE Level"
+    },
+    "sub_topic": "Mensuration",
+    "difficulty": "medium",
+    "question": "Calculate the curved surface area of a cylinder with radius 7 cm and height 15 cm.",
+    "question_zh": "求一個半徑為 7 cm，高為 15 cm 的圓柱體的曲面面積。",
+    "answer": "659.73 cm^2",
+    "correct_answer": "659.73 cm^2",
+    "solution_steps": [
+      "Curved Surface Area (CSA) of cylinder = $2 \\pi r h$",
+      "Substitute $r = 7, h = 15$",
+      "CSA = $2 \\pi (7) (15) \\approx 659.73$ cm$^2$"
+    ],
+    "solution_steps_zh": [
+      "圓柱體曲面面積 = $2 \\pi r h$",
+      "代入 $r = 7, h = 15$",
+      "面積 = $2 \\pi (7) (15) \\approx 659.73$ cm$^2$"
+    ],
+    "grading_rubric": [
+      "M1: Correct substitution",
+      "A1: Final answer 659.73 cm^2"
+    ],
+    "is_approved": true,
+    "diagram_svg": "<svg viewBox=\"0 0 300 300\"><ellipse cx=\"150\" cy=\"80\" rx=\"40\" ry=\"15\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\"/><path d=\"M 110 80 L 110 220 A 40 15 0 0 0 190 220 L 190 80\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\" stroke-dasharray=\"5,5\"/><text x=\"195\" y=\"150\">h=15</text><text x=\"150\" y=\"90\">r=7</text></svg>"
+  },
+  {
+    "id": "v1_mensuration_10",
+    "topic_id": "math_mensuration",
+    "subject": "Maths",
+    "level": 4,
+    "type": "short_answer",
+    "marks": 4,
+    "is_factory": true,
+    "is_released": true,
+    "standard_version": "3.0",
+    "meta": {
+      "topic": "math_mensuration",
+      "syllabus_layer": "DSE Level"
+    },
+    "sub_topic": "Mensuration",
+    "difficulty": "medium",
+    "question": "The area of a sector is 65 cm$^2$ and its radius is 10 cm. Find the central angle in degrees.",
+    "question_zh": "一個扇形的面積為 65 cm$^2$，半徑為 10 cm。求其圓心角 (以度數表示)。",
+    "answer": "74.5^\\circ",
+    "correct_answer": "74.5^\\circ",
+    "solution_steps": [
+      "Area = $\\pi r^2 \\times \\frac{\\theta}{360^\\circ}$",
+      "$65 = \\pi (10)^2 \\times \\frac{\\theta}{360}$",
+      "$\\theta = \\frac{65 \\times 360}{100 \\pi} \\approx 74.5^\\circ$"
+    ],
+    "solution_steps_zh": [
+      "面積 = $\\pi r^2 \\times \\frac{\\theta}{360^\\circ}$",
+      "$65 = \\pi (10)^2 \\times \\frac{\\theta}{360}$",
+      "$\\theta = \\frac{65 \\times 360}{100 \\pi} \\approx 74.5^\\circ$"
+    ],
+    "grading_rubric": [
+      "M1: Correct substitution",
+      "A1: Final answer 74.5^\\circ"
+    ],
+    "is_approved": true,
+    "diagram_svg": "<svg viewBox=\"0 0 300 300\"><path d=\"M 150 150 L 230 150 A 80 80 0 0 0 200 90 Z\" fill=\"rgba(59,130,246,0.3)\" stroke=\"#333\" stroke-width=\"2\"/><text x=\"170\" y=\"130\">&#952;=?</text><text x=\"170\" y=\"165\">r=10</text><text x=\"210\" y=\"120\">Area=65</text></svg>"
+  },
+  {
+    "id": "v1_mensuration_11",
+    "topic_id": "math_mensuration",
+    "subject": "Maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 4,
+    "is_factory": true,
+    "is_released": true,
+    "standard_version": "3.0",
+    "meta": {
+      "topic": "math_mensuration",
+      "syllabus_layer": "DSE Level"
+    },
+    "sub_topic": "Mensuration",
+    "difficulty": "dse standard",
+    "question": "Two similar solid spheres have volumes 27 cm$^3$ and 64 cm$^3$. If the surface area of the smaller sphere is 18 cm$^2$, find the surface area of the larger sphere.",
+    "question_zh": "兩個相似實心球體的體積分別為 27 cm$^3$ 及 64 cm$^3$。若較小球體的表面積為 18 cm$^2$，求較大球體的表面積。",
+    "answer": "32.0 cm^2",
+    "correct_answer": "32.0 cm^2",
+    "solution_steps": [
+      "Let the ratio of heights be $k$. Then $k^3 = \\frac{V_2}{V_1} = \\frac{64}{27}$",
+      "$k = \\sqrt[3]{\\frac{64}{27}} = \\frac{4}{3}$",
+      "Ratio of Surface Areas = $k^2 = (\\frac{4}{3})^2 = \\frac{16}{9}$",
+      "Surface Area of larger solid = $18 \\times \\frac{16}{9} = 32.0$ cm$^2$"
+    ],
+    "solution_steps_zh": [
+      "設高的比例為 $k$。則 $k^3 = \\frac{V_2}{V_1} = \\frac{64}{27}$",
+      "$k = \\sqrt[3]{\\frac{64}{27}} = \\frac{4}{3}$",
+      "表面積比例 = $k^2 = (\\frac{4}{3})^2 = \\frac{16}{9}$",
+      "較大立體的表面積 = $18 \\times \\frac{16}{9} = 32.0$ cm$^2$"
+    ],
+    "grading_rubric": [
+      "M1: Correct substitution",
+      "A1: Final answer 32.0 cm^2"
+    ],
+    "is_approved": true,
+    "diagram_svg": "<svg viewBox=\"0 0 300 300\"><circle cx=\"100\" cy=\"150\" r=\"30\" fill=\"none\" stroke=\"#333\"/><circle cx=\"200\" cy=\"150\" r=\"40\" fill=\"none\" stroke=\"#333\"/><text x=\"80\" y=\"200\">V=27</text><text x=\"180\" y=\"210\">V=64</text><text x=\"80\" y=\"100\">Area=18</text></svg>"
+  },
+  {
+    "id": "v1_mensuration_12",
+    "topic_id": "math_mensuration",
+    "subject": "Maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 4,
+    "is_factory": true,
+    "is_released": true,
+    "standard_version": "3.0",
+    "meta": {
+      "topic": "math_mensuration",
+      "syllabus_layer": "DSE Level"
+    },
+    "sub_topic": "Mensuration",
+    "difficulty": "dse standard",
+    "question": "Find the area of the segment cut off by a chord of length $10\\sqrt{2}$ cm in a circle of radius 10 cm (subtending $90^\\circ$ at center).",
+    "question_zh": "在一個半徑為 10 cm 的圓中，有一長為 $10\\sqrt{2}$ cm 的弦 (對應圓心角為 $90^\\circ$)。求該弦所截得之弓形的面積。",
+    "answer": "28.54 cm^2",
+    "correct_answer": "28.54 cm^2",
+    "solution_steps": [
+      "Area of segment = Area of sector - Area of triangle",
+      "Area of sector = $\\pi (10^2) \\times \\frac{90^\\circ}{360^\\circ} = 25 \\pi \\approx 78.54$",
+      "Area of triangle = $\\frac{1}{2} (10)(10) \\sin(90^\\circ) = 50$",
+      "Area of segment $\\approx 78.54 - 50 = 28.54$ cm$^2$"
+    ],
+    "solution_steps_zh": [
+      "弓形面積 = 扇形面積 - 三角形面積",
+      "扇形面積 = $\\pi (10^2) \\times \\frac{90^\\circ}{360^\\circ} = 25 \\pi \\approx 78.54$",
+      "三角形面積 = $\\frac{1}{2} (10)(10) \\sin(90^\\circ) = 50$",
+      "弓形面積 $\\approx 78.54 - 50 = 28.54$ cm$^2$"
+    ],
+    "grading_rubric": [
+      "M1: Correct substitution",
+      "A1: Final answer 28.54 cm^2"
+    ],
+    "is_approved": true,
+    "diagram_svg": "<svg viewBox=\"0 0 300 300\"><path d=\"M 150 150 L 230 150 A 80 80 0 0 0 150 70 Z\" fill=\"rgba(59,130,246,0.1)\" stroke=\"#333\"/><line x1=\"230\" y1=\"150\" x2=\"150\" y2=\"70\" stroke=\"#3b82f6\" stroke-width=\"2\"/><text x=\"160\" y=\"140\">90&#176;</text><text x=\"180\" y=\"165\">10 cm</text></svg>"
+  },
+  {
+    "id": "v1_mensuration_13",
+    "topic_id": "math_mensuration",
+    "subject": "Maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 4,
+    "is_factory": true,
+    "is_released": true,
+    "standard_version": "3.0",
+    "meta": {
+      "topic": "math_mensuration",
+      "syllabus_layer": "DSE Level"
+    },
+    "sub_topic": "Mensuration",
+    "difficulty": "dse standard",
+    "question": "A solid sphere of radius 6 cm is melted and recast into 27 identical solid cylinders of radius 2 cm. Find the height of each cylinder.",
+    "question_zh": "一個半徑為 6 cm 的實心球體被熔化，並重新鑄造成 27 個底半徑為 2 cm 的相同實心圓柱體。求每個圓柱體的高。",
+    "answer": "2.67 cm",
+    "correct_answer": "2.67 cm",
+    "solution_steps": [
+      "Volume of sphere = $\\frac{4}{3} \\pi (6)^3 = 288 \\pi$",
+      "Volume of 27 cylinders = $27 \\times \\pi (2)^2 \\times h = 108 \\pi h$",
+      "Equating volumes: $288 \\pi = 108 \\pi h$",
+      "$h = \\frac{288}{108} = 2.67$ cm"
+    ],
+    "solution_steps_zh": [
+      "球體體積 = $\\frac{4}{3} \\pi (6)^3 = 288 \\pi$",
+      "27 個圓柱體的體積 = $27 \\times \\pi (2)^2 \\times h = 108 \\pi h$",
+      "體積相等：$288 \\pi = 108 \\pi h$",
+      "$h = \\frac{288}{108} = 2.67$ cm"
+    ],
+    "grading_rubric": [
+      "M1: Correct substitution",
+      "A1: Final answer 2.67 cm"
+    ],
+    "is_approved": true,
+    "diagram_svg": "<svg viewBox=\"0 0 300 300\"><circle cx=\"100\" cy=\"150\" r=\"50\" fill=\"none\" stroke=\"#333\"/><text x=\"160\" y=\"150\">&#8594;</text><ellipse cx=\"230\" cy=\"140\" rx=\"15\" ry=\"5\"/><ellipse cx=\"230\" cy=\"160\" rx=\"15\" ry=\"5\"/><line x1=\"215\" y1=\"140\" x2=\"215\" y2=\"160\" stroke=\"#333\"/></svg>"
+  },
+  {
+    "id": "v1_mensuration_14",
+    "topic_id": "math_mensuration",
+    "subject": "Maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 4,
+    "is_factory": true,
+    "is_released": true,
+    "standard_version": "3.0",
+    "meta": {
+      "topic": "math_mensuration",
+      "syllabus_layer": "DSE Level"
+    },
+    "sub_topic": "Mensuration",
+    "difficulty": "dse standard",
+    "question": "A cone's top is cut off to form a frustum with base radii 10 cm and 5 cm, and height 12 cm. Find its volume.",
+    "question_zh": "將一個圓錐的頂部切去，形成一個底半徑分別為 10 cm 及 5 cm，高為 12 cm 的圓錐台。求其體積。",
+    "answer": "2199.11 cm^3",
+    "correct_answer": "2199.11 cm^3",
+    "solution_steps": [
+      "Volume of Frustum $V = \\frac{1}{3} \\pi h (R^2 + Rr + r^2)$",
+      "Substitute $R=10, r=5, h=12$",
+      "$V = \\frac{1}{3} \\pi (12) (100 + 50 + 25) = 4 \\pi (175) = 700 \\pi$",
+      "$V \\approx 2199.11$ cm$^3$"
+    ],
+    "solution_steps_zh": [
+      "圓錐台體積 $V = \\frac{1}{3} \\pi h (R^2 + Rr + r^2)$",
+      "代入 $R=10, r=5, h=12$",
+      "$V = \\frac{1}{3} \\pi (12) (100 + 50 + 25) = 4 \\pi (175) = 700 \\pi$",
+      "體積 $\\approx 2199.11$ cm$^3$"
+    ],
+    "grading_rubric": [
+      "M1: Correct substitution",
+      "A1: Final answer 2199.11 cm^3"
+    ],
+    "is_approved": true,
+    "diagram_svg": "<svg viewBox=\"0 0 300 300\"><ellipse cx=\"150\" cy=\"80\" rx=\"30\" ry=\"10\" stroke=\"#333\"/><ellipse cx=\"150\" cy=\"220\" rx=\"60\" ry=\"20\" stroke=\"#333\"/><line x1=\"120\" y1=\"80\" x2=\"90\" y2=\"220\" stroke=\"#333\"/><line x1=\"180\" y1=\"80\" x2=\"210\" y2=\"220\" stroke=\"#333\"/><text x=\"150\" y=\"70\">r=5</text><text x=\"150\" y=\"250\">R=10</text><text x=\"180\" y=\"150\">h=12</text></svg>"
+  },
+  {
+    "id": "v1_mensuration_15",
+    "topic_id": "math_mensuration",
+    "subject": "Maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 4,
+    "is_factory": true,
+    "is_released": true,
+    "standard_version": "3.0",
+    "meta": {
+      "topic": "math_mensuration",
+      "syllabus_layer": "DSE Level"
+    },
+    "sub_topic": "Mensuration",
+    "difficulty": "dse standard",
+    "question": "A circle is inscribed in a square of side 20 cm. Find the area of the shaded region (the corners of the square outside the circle).",
+    "question_zh": "一個圓形內切於一個邊長為 20 cm 的正方形。求正方形內但在圓形外的陰影部分面積。",
+    "answer": "85.84 cm^2",
+    "correct_answer": "85.84 cm^2",
+    "solution_steps": [
+      "Area of Square = $20^2 = 400$",
+      "Radius of inscribed circle $r = \\frac{20}{2} = 10.0$",
+      "Area of Circle = $\\pi (10.0)^2 = 100.0 \\pi \\approx 314.16$",
+      "Shaded Area = $400 - 314.16 \\approx 85.84$ cm$^2$"
+    ],
+    "solution_steps_zh": [
+      "正方形面積 = $20^2 = 400$",
+      "內切圓半徑 $r = \\frac{20}{2} = 10.0$",
+      "圓形面積 = $\\pi (10.0)^2 = 100.0 \\pi \\approx 314.16$",
+      "陰影部分面積 = $400 - 314.16 \\approx 85.84$ cm$^2$"
+    ],
+    "grading_rubric": [
+      "M1: Correct substitution",
+      "A1: Final answer 85.84 cm^2"
+    ],
+    "is_approved": true,
+    "diagram_svg": "<svg viewBox=\"0 0 300 300\"><rect x=\"75\" y=\"75\" width=\"150\" height=\"150\" fill=\"rgba(59,130,246,0.2)\" stroke=\"#333\"/><circle cx=\"150\" cy=\"150\" r=\"75\" fill=\"white\" stroke=\"#333\"/><text x=\"150\" y=\"240\">side=20</text></svg>"
+  },
+  {
+    "id": "v1_mensuration_16",
+    "topic_id": "math_mensuration",
+    "subject": "Maths",
+    "level": 7,
+    "type": "short_answer",
+    "marks": 4,
+    "is_factory": true,
+    "is_released": true,
+    "standard_version": "3.0",
+    "meta": {
+      "topic": "math_mensuration",
+      "syllabus_layer": "DSE Level"
+    },
+    "sub_topic": "Mensuration",
+    "difficulty": "elite",
+    "question": "A right-angled trapezium with parallel sides 4 cm and 10 cm, and height 8 cm, is rotated $360^\\circ$ about the side of length 8 cm. Find the volume of the solid generated.",
+    "question_zh": "一個直角梯形的平行邊長分別為 4 cm 及 10 cm，高為 8 cm。若將該梯形繞長度為 8 cm 的邊旋轉 $360^\\circ$，求所得旋轉體的體積。",
+    "answer": "1306.90 cm^3",
+    "correct_answer": "1306.90 cm^3",
+    "solution_steps": [
+      "Rotating a right-angled trapezium about the height side $h$ forms a frustum.",
+      "Top radius $r = 4$, bottom radius $R = 10$, height $h = 8$",
+      "Volume = $\\frac{1}{3} \\pi (8) (4^2 + 4\\times10 + 10^2)$",
+      "Volume = $\\frac{8}{3} \\pi (16 + 40 + 100) = \\frac{8}{3} \\pi (156) = 416 \\pi$",
+      "Volume $\\approx 1306.90$ cm$^3$"
+    ],
+    "solution_steps_zh": [
+      "將一直角梯形繞其高的邊 $h$旋轉，會形成一個圓錐台。",
+      "頂半徑 $r = 4$，底半徑 $R = 10$，高 $h = 8$",
+      "體積 = $\\frac{1}{3} \\pi (8) (4^2 + 4\\times10 + 10^2)$",
+      "體積 = $\\frac{8}{3} \\pi (16 + 40 + 100) = \\frac{8}{3} \\pi (156) = 416 \\pi$",
+      "體積 $\\approx 1306.90$ cm$^3$"
+    ],
+    "grading_rubric": [
+      "M1: Correct substitution",
+      "A1: Final answer 1306.90 cm^3"
+    ],
+    "is_approved": true,
+    "diagram_svg": "<svg viewBox=\"0 0 300 300\"><polygon points=\"100,50 180,50 250,250 100,250\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\"/><line x1=\"100\" y1=\"50\" x2=\"100\" y2=\"250\" stroke=\"#333\" stroke-dasharray=\"5,5\"/><text x=\"110\" y=\"150\">Axis</text><text x=\"135\" y=\"40\">4</text><text x=\"135\" y=\"265\">10</text><text x=\"260\" y=\"155\">8</text></svg>"
+  },
+  {
+    "id": "v1_mensuration_17",
+    "topic_id": "math_mensuration",
+    "subject": "Maths",
+    "level": 7,
+    "type": "short_answer",
+    "marks": 4,
+    "is_factory": true,
+    "is_released": true,
+    "standard_version": "3.0",
+    "meta": {
+      "topic": "math_mensuration",
+      "syllabus_layer": "DSE Level"
+    },
+    "sub_topic": "Mensuration",
+    "difficulty": "elite",
+    "question": "Find the maximum volume of a right circular cylinder that can be inscribed in a sphere of radius 12 cm.",
+    "question_zh": "求一個能內切於半徑為 12 cm 的球體中的圓柱體的最大體積。",
+    "answer": "4178.99 cm^3",
+    "correct_answer": "4178.99 cm^3",
+    "solution_steps": [
+      "For a cylinder inscribed in a sphere of radius $R$ to have max volume:",
+      "Height $h = \\frac{2R}{\\sqrt{3}}$, Cylinder radius $r = R \\sqrt{\\frac{2}{3}}$",
+      "Substitution $R = 12$",
+      "$V = \\pi (R^2 \\frac{2}{3}) (\\frac{2R}{\\sqrt{3}}) = \\frac{4 \\pi R^3}{3\\sqrt{3}}$",
+      "$V \\approx 4178.99$ cm$^3$"
+    ],
+    "solution_steps_zh": [
+      "當圓柱體內切於半徑為 $R$ 的球體且體積最大時：",
+      "高度 $h = \\frac{2R}{\\sqrt{3}}$，圓柱半徑 $r = R \\sqrt{\\frac{2}{3}}$",
+      "代入 $R = 12$",
+      "$V = \\pi (R^2 \\frac{2}{3}) (\\frac{2R}{\\sqrt{3}}) = \\frac{4 \\pi R^3}{3\\sqrt{3}}$",
+      "體積 $\\approx 4178.99$ cm$^3$"
+    ],
+    "grading_rubric": [
+      "M1: Correct substitution",
+      "A1: Final answer 4178.99 cm^3"
+    ],
+    "is_approved": true,
+    "diagram_svg": "<svg viewBox=\"0 0 300 300\"><circle cx=\"150\" cy=\"150\" r=\"80\" fill=\"none\" stroke=\"#333\"/><rect x=\"110\" y=\"100\" width=\"80\" height=\"100\" fill=\"none\" stroke=\"#3b82f6\"/><text x=\"160\" y=\"140\">R=12</text></svg>"
+  },
+  {
+    "id": "v1_mensuration_18",
+    "topic_id": "math_mensuration",
+    "subject": "Maths",
+    "level": 7,
+    "type": "short_answer",
+    "marks": 4,
+    "is_factory": true,
+    "is_released": true,
+    "standard_version": "3.0",
+    "meta": {
+      "topic": "math_mensuration",
+      "syllabus_layer": "DSE Level"
+    },
+    "sub_topic": "Mensuration",
+    "difficulty": "elite",
+    "question": "A cylinder of radius 5 cm and height 20 cm is tilted at $30^\\circ$ to the vertical. Water is poured in until it just reaches the top rim. Find the volume of water.",
+    "question_zh": "一個半徑為 5 cm，高為 20 cm 的圓柱體向垂直方向傾斜了 $30^\\circ$。現將水注入其中，直至水位剛好到達頂部邊緣。求水的體積。",
+    "answer": "1344.07 cm^3",
+    "correct_answer": "1344.07 cm^3",
+    "solution_steps": [
+      "The volume of a partially filled cylinder at a tilt is $V = \\pi r^2 \\times h_{avg}$",
+      "Max height at edge $h_{max} = 20$",
+      "Height at center $h_{avg} = 20 - r \\tan(30^\\circ)$",
+      "$h_{avg} = 20 - 5 \\tan(30^\\circ) \\approx 17.11$",
+      "$V \\approx \\pi (5^2) (17.11) \\approx 1344.07$ cm$^3$"
+    ],
+    "solution_steps_zh": [
+      "傾斜圓柱體中水的體積為 $V = \\pi r^2 \\times h_{平均}$",
+      "邊緣最大高度 $h_{最大} = 20$",
+      "中心高度 $h_{平均} = 20 - r \\tan(30^\\circ)$",
+      "$h_{平均} = 20 - 5 \\tan(30^\\circ) \\approx 17.11$",
+      "$V \\approx \\pi (5^2) (17.11) \\approx 1344.07$ cm$^3$"
+    ],
+    "grading_rubric": [
+      "M1: Correct substitution",
+      "A1: Final answer 1344.07 cm^3"
+    ],
+    "is_approved": true,
+    "diagram_svg": "<svg viewBox=\"0 0 300 300\"><g transform=\"rotate(-30 150 150)\"><rect x=\"120\" y=\"50\" width=\"60\" height=\"200\" stroke=\"#333\" fill=\"none\" stroke-width=\"2\"/><line x1=\"120\" y1=\"100\" x2=\"180\" y2=\"70\" stroke=\"#3b82f6\" stroke-width=\"2\"/></g><text x=\"155\" y=\"30\" font-family=\"sans-serif\">30&#176;</text><text x=\"110\" y=\"270\" font-family=\"sans-serif\">r=5</text><text x=\"215\" y=\"160\" font-family=\"sans-serif\">h=20</text></svg>"
+  },
+  {
+    "id": "v1_mensuration_19",
+    "topic_id": "math_mensuration",
+    "subject": "Maths",
+    "level": 7,
+    "type": "short_answer",
+    "marks": 4,
+    "is_factory": true,
+    "is_released": true,
+    "standard_version": "3.0",
+    "meta": {
+      "topic": "math_mensuration",
+      "syllabus_layer": "DSE Level"
+    },
+    "sub_topic": "Mensuration",
+    "difficulty": "elite",
+    "question": "A square pyramid has base side 10 cm and height 10 cm. Find the angle between a slant edge and the base diagonal.",
+    "question_zh": "一個正方形底棱錐的底邊長為 10 cm，垂直高為 10 cm。求一條斜邊與底面對角線之間的夾角。",
+    "answer": "54.7^\\circ",
+    "correct_answer": "54.7^\\circ",
+    "solution_steps": [
+      "The slant edge makes an angle $\\theta$ with the base diagonal.",
+      "Half diagonal of square base $d/2 = \\frac{\\sqrt{10^2 + 10^2}}{2} = 5\\sqrt{2} \\approx 7.07$",
+      "$\\tan \\theta = \\frac{\\text{Height}}{d/2} = \\frac{10}{7.07} \\approx 1.414$",
+      "$\\theta = \\tan^{-1}(1.414) \\approx 54.7^\\circ$"
+    ],
+    "solution_steps_zh": [
+      "斜邊與底面角線的夾角為 $\\theta$。",
+      "正方形底面對角線的一半 $d/2 = \\frac{\\sqrt{10^2 + 10^2}}{2} = 5\\sqrt{2} \\approx 7.07$",
+      "$\\tan \\theta = \\frac{\\text{高}}{d/2} = \\frac{10}{7.07} \\approx 1.414$",
+      "$\\theta = \\tan^{-1}(1.414) \\approx 54.7^\\circ$"
+    ],
+    "grading_rubric": [
+      "M1: Correct substitution",
+      "A1: Final answer 54.7^\\circ"
+    ],
+    "is_approved": true,
+    "diagram_svg": "<svg viewBox=\"0 0 300 300\"><polygon points=\"80,220 150,50 220,220\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\"/><line x1=\"150\" y1=\"50\" x2=\"150\" y2=\"220\" stroke=\"#333\" stroke-width=\"2\" stroke-dasharray=\"5,5\"/><text x=\"155\" y=\"140\" font-family=\"sans-serif\">h=10</text><text x=\"120\" y=\"240\" font-family=\"sans-serif\">base=10</text><text x=\"135\" y=\"215\" font-family=\"sans-serif\" font-style=\"italic\">&#952;</text></svg>"
+  },
+  {
+    "id": "v1_mensuration_20",
+    "topic_id": "math_mensuration",
+    "subject": "Maths",
+    "level": 7,
+    "type": "short_answer",
+    "marks": 4,
+    "is_factory": true,
+    "is_released": true,
+    "standard_version": "3.0",
+    "meta": {
+      "topic": "math_mensuration",
+      "syllabus_layer": "DSE Level"
+    },
+    "sub_topic": "Mensuration",
+    "difficulty": "elite",
+    "question": "A solid sphere of radius 10 cm is dropped into a cylindrical tank of radius 15 cm partially filled with water. Find the rise in water level.",
+    "question_zh": "將一個半徑為 10 cm 的實心球體放入一個半徑為 15 cm 且部分裝有水的圓柱形水箱中。求水位上升的高度。",
+    "answer": "5.93 cm",
+    "correct_answer": "5.93 cm",
+    "solution_steps": [
+      "Volume of sphere $V_s = \\frac{4}{3} \\pi (10)^3 = \\frac{4000}{3} \\pi$",
+      "Area of cylinder base $A = \\pi (15)^2 = 225 \\pi$",
+      "Water level rise $h_{rise} = \\frac{V_s}{A} = \\frac{4000 \\pi / 3}{225 \\pi}$",
+      "$h_{rise} = \\frac{4000}{675} \\approx 5.93$ cm"
+    ],
+    "solution_steps_zh": [
+      "球體體積 $V_s = \\frac{4}{3} \\pi (10)^3 = \\frac{4000}{3} \\pi$",
+      "圓柱底面積 $A = \\pi (15)^2 = 225 \\pi$",
+      "水位上升高度 $h_{\\text{上升}} = \\frac{V_s}{A} = \\frac{4000 \\pi / 3}{225 \\pi}$",
+      "$h_{\\text{上升}} = \\frac{4000}{675} \\approx 5.93$ cm"
+    ],
+    "grading_rubric": [
+      "M1: Correct substitution",
+      "A1: Final answer 5.93 cm"
+    ],
+    "is_approved": true,
+    "diagram_svg": "<svg viewBox=\"0 0 300 300\"><rect x=\"100\" y=\"100\" width=\"100\" height=\"150\" stroke=\"#333\" fill=\"none\"/><circle cx=\"150\" cy=\"200\" r=\"30\" fill=\"rgba(59,130,246,0.3)\"/><text x=\"135\" y=\"240\">r=10</text><text x=\"210\" y=\"90\">R=15</text></svg>"
+  }
+]

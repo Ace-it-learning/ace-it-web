@@ -38,13 +38,15 @@ class UserProfileService {
         if (!uid || uid === 'guest') return this.getGuestProfile();
 
         try {
-            const userDoc = await this.usersCollection.doc(uid).get();
+            // Concurrent retrieval of profile and stats
+            const [userDoc, statsDoc] = await Promise.all([
+                this.usersCollection.doc(uid).get(),
+                this.usersCollection.doc(uid).collection('stats').doc('main').get()
+            ]);
+
             if (!userDoc.exists) return null;
 
             const userData = userDoc.data();
-
-            // Fetch separate stats doc
-            const statsDoc = await this.usersCollection.doc(uid).collection('stats').doc('main').get();
             const stats = statsDoc.exists ? statsDoc.data() : { xp: 0, level: 1, learningTime: 0 };
 
             return { ...userData, ...stats, uid };

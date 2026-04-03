@@ -113,7 +113,7 @@ const generateWritingMock = async (topic) => {
         .replace('{{ARCHETYPE}}', topic);
 
     const contentA = await GenerativeAIService.generateJson(promptA, {
-        model: "gemini-flash-latest"
+        model: "gemini-2.5-pro"
     });
     console.log("Part A Generated.");
 
@@ -123,7 +123,7 @@ const generateWritingMock = async (topic) => {
         .replace('{{TARGET_LEVEL}}', blueprint.sections.Part_B.target_level);
 
     const contentB = await GenerativeAIService.generateJson(promptB, {
-        model: "gemini-2.0-flash"
+        model: "gemini-2.5-pro"
     });
     console.log(`Part B Generated (${contentB.length} questions).`);
 

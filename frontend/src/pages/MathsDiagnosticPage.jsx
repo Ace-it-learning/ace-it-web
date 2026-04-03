@@ -271,7 +271,7 @@ const MathsDiagnosticPage = () => {
         const parts = splitContentByDelimiters(cleanText);
 
         return (
-            <div className="space-y-4">
+            <div className="space-y-4 mastery-logic-container">
                 <div className="text-gray-800 leading-relaxed text-lg font-medium font-sans">
                     {parts.map((part, i) => {
                         if (!part) return null;
@@ -464,7 +464,7 @@ const MathsDiagnosticPage = () => {
                             <div className="space-y-6">
                                 {currentQ.parts ? (
                                     currentQ.parts.map((part) => (
-                                        <div key={part.id} className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden flex flex-col">
+                                        <div key={part.id} className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden flex flex-col student-scratchpad-container">
                                             <div className="bg-blue-50 px-4 py-2 text-xs text-blue-700 font-medium">
                                                 Part {part.label}: Show your steps below (LaTeX supported)
                                             </div>
@@ -479,7 +479,7 @@ const MathsDiagnosticPage = () => {
                                         </div>
                                     ))
                                 ) : (
-                                    <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden flex flex-col">
+                                    <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden flex flex-col student-scratchpad-container">
                                         <div className="bg-blue-50 px-4 py-2 text-xs text-blue-700 font-medium">
                                             Show your steps below (LaTeX supported)
                                         </div>

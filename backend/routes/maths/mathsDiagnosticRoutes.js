@@ -109,7 +109,7 @@ router.post('/practice/generate', async (req, res) => {
         language: req.body.language
     });
 
-    const { uid, topic, level, language, isFactory } = req.body;
+    const { uid, topic, level, language, isFactory, mode } = req.body;
     if (!uid || !topic) {
         console.log('[Practice Generate] Missing required fields');
         return res.status(400).json({ error: "Missing data" });
@@ -125,7 +125,8 @@ router.post('/practice/generate', async (req, res) => {
             topic,
             level: level || 3,
             language: language || 'en',
-            isFactory: isFactory || false
+            isFactory: isFactory || false,
+            mode
         });
 
         console.log('[Practice Generate] Success! Returning data');
@@ -146,21 +147,64 @@ router.post('/practice/generate', async (req, res) => {
 
 // POST /practice/submit - Submit answer and award XP
 router.post('/practice/submit', async (req, res) => {
-    const { uid, taskId, xp, topic, questionIds } = req.body;
-    // taskId is the roadmap task id (e.g. week_12_task_0)
-    // questionIds is an array of IDs from the practice set
+    const { uid, taskId, xp, topic, questionIds, level, scorePercent } = req.body;
+    console.log(`[MathsPractice] Submission received for uid: ${uid}, topic: ${topic}, questions: ${questionIds?.length || 0}`);
 
-    if (!uid || !xp) return res.status(400).json({ error: "Missing data" });
+    if (!uid || !xp) {
+        console.warn('[MathsPractice] Submission rejected: Missing UID or XP');
+        return res.status(400).json({ error: "Missing data" });
+    }
 
     try {
         const MathsLabService = require('../../services/maths/MathsLabService');
+        const UserProfileService = require('../../services/UserProfileService');
 
-        // 1. Mark questions as seen
+        // 1. Mark questions as seen & Quality-Gated Auto-Approval
         if (questionIds && Array.isArray(questionIds)) {
             await MathsLabService.markQuestionsSeen(uid, questionIds);
+            
+            const db = admin.firestore();
+            const batch = db.batch();
+            const graphTopics = ['math_geo_coord', 'math_geo_circle', 'math_geo_trig', 'math_geo_mensuration'];
+
+            for (const qid of questionIds) {
+                const qRef = db.collection('question_bank').doc(qid);
+                const qDoc = await qRef.get();
+                if (qDoc.exists) {
+                    const data = qDoc.data();
+                    const isVisualTopic = graphTopics.includes(data.topic_id);
+                    const hasVisual = !!(data.diagram_svg || data.diagram_url || (data.content && data.content.diagram_svg));
+                    
+                    // Only approve if it's not a visual topic OR if it successfully generated a visual
+                    if (!isVisualTopic || hasVisual) {
+                        batch.set(qRef, { is_approved: true }, { merge: true });
+                    } else {
+                        console.log(`[MathsPractice] Skipping auto-approval for ${qid} due to missing diagram in visual topic.`);
+                    }
+                }
+            }
+            await batch.commit();
+            console.log(`[MathsPractice] ${questionIds.length} questions processed for uid: ${uid}`);
         }
 
-        // 2. Award XP
+        // 2. Update Micro-skill Mastery (Ability Radar & Mastery Bars)
+        if (topic) {
+            // Mapping frontend difficulty (0=adaptive, 1=easy, 2=med, 3=dse, 4=elite)
+            // to DSE_SCORING difficulty caps (3, 4, 5, 7)
+            const difficultyMap = { 0: 5, 1: 3, 2: 4, 3: 5, 4: 7 };
+            const sessionDifficulty = difficultyMap[level] || 5;
+
+            const masteryScore = req.body.scorePercent !== undefined ? req.body.scorePercent : 100;
+            
+            await UserProfileService.updateMicroSkillLevel(uid, 'maths', topic, masteryScore, {
+                totalQuestions: questionIds?.length || 5,
+                difficulty: sessionDifficulty,
+                source: 'lab'
+            });
+            console.log(`[MathsPractice] Topic mastery updated for ${topic} (uid: ${uid}, score: ${masteryScore}%)`);
+        }
+
+        // 3. Award XP
         const GamificationService = require('../../services/GamificationService');
         await GamificationService.awardXP(uid, xp, 'maths', {
             title: `Practice: ${topic || 'Maths'}`,
@@ -169,7 +213,7 @@ router.post('/practice/submit', async (req, res) => {
             topic: topic
         });
 
-        // 3. Complete Roadmap Task if provided
+        // 4. Complete Roadmap Task if provided
         if (taskId) {
             const questResult = await GamificationService.awardQuestCompletion(uid, taskId, 'maths');
             if (questResult.success && questResult.fresh) {

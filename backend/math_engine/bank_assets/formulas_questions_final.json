@@ -1,0 +1,866 @@
+[
+  {
+    "id": "formula_sub_01",
+    "topic_id": "math_alg_formula",
+    "subject": "maths",
+    "level": 3,
+    "type": "short_answer",
+    "marks": 2,
+    "question": "Given $y = 5x + 7$, find the value of $y$ when $x = 3$.",
+    "question_zh": "已知 $y = 5x + 7$，求當 $x = 3$ 時 $y$ 的值。",
+    "answer": "22",
+    "correct_answer": "22",
+    "solution_steps": [
+      "Substitute $x = 3$ into the formula:",
+      "$y = 5(3) + 7$",
+      "$y = 15 + 7$",
+      "$y = 22$"
+    ],
+    "solution_steps_zh": [
+      "將 $x = 3$ 代入公式：",
+      "$y = 5(3) + 7$",
+      "$y = 15 + 7$",
+      "$y = 22$"
+    ]
+  },
+  {
+    "id": "formula_sub_02",
+    "topic_id": "math_alg_formula",
+    "subject": "maths",
+    "level": 3,
+    "type": "short_answer",
+    "marks": 2,
+    "question": "The volume of a cone is given by $V = \\frac{1}{3}\\pi r^2 h$. Find $V$ in terms of $\\pi$ if $r = 3$ and $h = 10$.",
+    "question_zh": "圓錐體的體積公式為 $V = \\frac{1}{3}\\pi r^2 h$。若 $r = 3$ 及 $h = 10$，求以 $\\pi$ 表示的 $V$ 的值。",
+    "answer": "30\\pi",
+    "correct_answer": "30\\pi",
+    "solution_steps": [
+      "Substitute $r = 3$ and $h = 10$:",
+      "$V = \\frac{1}{3}\\pi (3)^2 (10)$",
+      "$V = \\frac{1}{3}\\pi (9) (10)$",
+      "$V = 30\\pi$"
+    ],
+    "solution_steps_zh": [
+      "代入 $r = 3$ 及 $h = 10$：",
+      "$V = \\frac{1}{3}\\pi (3)^2 (10)$",
+      "$V = \\frac{1}{3}\\pi (9) (10)$",
+      "$V = 30\\pi$"
+    ]
+  },
+  {
+    "id": "formula_sub_03",
+    "topic_id": "math_alg_formula",
+    "subject": "maths",
+    "level": 3,
+    "type": "short_answer",
+    "marks": 2,
+    "question": "Make $x$ the subject of the formula $x + 11 = y$.",
+    "question_zh": "將 $x$ 設為公式 $x + 11 = y$ 的主項。",
+    "answer": "x = y - 11",
+    "correct_answer": "x = y - 11",
+    "solution_steps": [
+      "To isolate $x$, subtract 11 from both sides:",
+      "$x = y - 11$"
+    ],
+    "solution_steps_zh": [
+      "要獨立出 $x$，從等式兩邊減去 11：",
+      "$x = y - 11$"
+    ]
+  },
+  {
+    "id": "formula_sub_04",
+    "topic_id": "math_alg_formula",
+    "subject": "maths",
+    "level": 3,
+    "type": "short_answer",
+    "marks": 2,
+    "question": "Make $x$ the subject of the formula $3x = y$.",
+    "question_zh": "將 $x$ 設為公式 $3x = y$ 的主項。",
+    "answer": "x = \\frac{y}{3}",
+    "correct_answer": "x = \\frac{y}{3}",
+    "solution_steps": [
+      "To isolate $x$, divide both sides by 3:",
+      "$x = \\frac{y}{3}$"
+    ],
+    "solution_steps_zh": [
+      "要獨立出 $x$，將等式兩邊除以 3：",
+      "$x = \\frac{y}{3}$"
+    ]
+  },
+  {
+    "id": "formula_sub_05",
+    "topic_id": "math_alg_formula",
+    "subject": "maths",
+    "level": 3,
+    "type": "short_answer",
+    "marks": 2,
+    "question": "Make $x$ the subject of the formula $y = x - 9$.",
+    "question_zh": "將 $x$ 設為公式 $y = x - 9$ 的主項。",
+    "answer": "x = y + 9",
+    "correct_answer": "x = y + 9",
+    "solution_steps": [
+      "Add 9 to both sides:",
+      "$y + 9 = x$",
+      "Swap the sides:",
+      "$x = y + 9$"
+    ],
+    "solution_steps_zh": [
+      "等式兩邊同時加 9：",
+      "$y + 9 = x$",
+      "左右對調：",
+      "$x = y + 9$"
+    ]
+  },
+  {
+    "id": "formula_sub_06",
+    "topic_id": "math_alg_formula",
+    "subject": "maths",
+    "level": 4,
+    "type": "short_answer",
+    "marks": 3,
+    "question": "Given $y = 3x^2 + (-2)x + (6)$, find $y$ when $x = -3$.",
+    "question_zh": "已知 $y = 3x^2 + (-2)x + (6)$，求當 $x = -3$ 時 $y$ 的值。",
+    "answer": "39",
+    "correct_answer": "39",
+    "solution_steps": [
+      "Substitute $x = -3$ with brackets:",
+      "$y = 3(-3)^2 + (-2)(-3) + (6)$",
+      "$y = 3(9) + (6) + (6)$",
+      "$y = 27 + 6 + 6$",
+      "$y = 39$"
+    ],
+    "solution_steps_zh": [
+      "使用括號代入 $x = -3$：",
+      "$y = 3(-3)^2 + (-2)(-3) + (6)$",
+      "$y = 3(9) + (6) + (6)$",
+      "$y = 27 + 6 + 6$",
+      "$y = 39$"
+    ]
+  },
+  {
+    "id": "formula_sub_07",
+    "topic_id": "math_alg_formula",
+    "subject": "maths",
+    "level": 4,
+    "type": "short_answer",
+    "marks": 3,
+    "question": "Given $z = \\frac{x + y}{2}$, find $z$ when $x = 15$ and $y = 13$.",
+    "question_zh": "已知 $z = \\frac{x + y}{2}$，求當 $x = 15$ 且 $y = 13$ 時 $z$ 的值。",
+    "answer": "14",
+    "correct_answer": "14",
+    "solution_steps": [
+      "Substitute values into the fraction:",
+      "$z = \\frac{15 + 13}{2}$",
+      "$z = \\frac{28}{2}$",
+      "$z = 14$"
+    ],
+    "solution_steps_zh": [
+      "將數值代入分數中：",
+      "$z = \\frac{15 + 13}{2}$",
+      "$z = \\frac{28}{2}$",
+      "$z = 14$"
+    ]
+  },
+  {
+    "id": "formula_sub_08",
+    "topic_id": "math_alg_formula",
+    "subject": "maths",
+    "level": 4,
+    "type": "short_answer",
+    "marks": 3,
+    "question": "Make $x$ the subject of the formula $y = 2x + 3$.",
+    "question_zh": "將 $x$ 設為公式 $y = 2x + 3$ 的主項。",
+    "answer": "x = \\frac{y - 3}{2}",
+    "correct_answer": "x = \\frac{y - 3}{2}",
+    "solution_steps": [
+      "Subtract 3 from both sides:",
+      "$y - 3 = 2x$",
+      "Divide both sides by 2:",
+      "$x = \\frac{y - 3}{2}$"
+    ],
+    "solution_steps_zh": [
+      "等式兩邊同時減去 3：",
+      "$y - 3 = 2x$",
+      "兩邊同時除以 2：",
+      "$x = \\frac{y - 3}{2}$"
+    ]
+  },
+  {
+    "id": "formula_sub_09",
+    "topic_id": "math_alg_formula",
+    "subject": "maths",
+    "level": 4,
+    "type": "short_answer",
+    "marks": 3,
+    "question": "Make $x$ the subject of the formula $y = \\frac{x - 3}{3}$.",
+    "question_zh": "將 $x$ 設為公式 $y = \\frac{x - 3}{3}$ 的主項。",
+    "answer": "x = 3y + 3",
+    "correct_answer": "x = 3y + 3",
+    "solution_steps": [
+      "Multiply both sides by 3 to remove the denominator:",
+      "$3y = x - 3$",
+      "Add 3 to both sides:",
+      "$x = 3y + 3$"
+    ],
+    "solution_steps_zh": [
+      "兩邊同時乘以 3 以消除分母：",
+      "$3y = x - 3$",
+      "兩邊同時加上 3：",
+      "$x = 3y + 3$"
+    ]
+  },
+  {
+    "id": "formula_sub_10",
+    "topic_id": "math_alg_formula",
+    "subject": "maths",
+    "level": 4,
+    "type": "short_answer",
+    "marks": 3,
+    "question": "Make $x$ the subject of the formula $y = 5(x + 5)$.",
+    "question_zh": "將 $x$ 設為公式 $y = 5(x + 5)$ 的主項。",
+    "answer": "x = \\frac{y}{5} - 5",
+    "correct_answer": "x = \\frac{y}{5} - 5",
+    "solution_steps": [
+      "Method 1: Divide by 5 first:",
+      "$\\frac{y}{5} = x + 5$",
+      "$x = \\frac{y}{5} - 5$",
+      "Alternatively, expand first:",
+      "$y = 5x + 25$",
+      "$y - 25 = 5x$",
+      "$x = \\frac{y - 25}{5}$"
+    ],
+    "solution_steps_zh": [
+      "方法 1：先除以 5：",
+      "$\\frac{y}{5} = x + 5$",
+      "$x = \\frac{y}{5} - 5$",
+      "或者先展開括號：",
+      "$y = 5x + 25$",
+      "$y - 25 = 5x$",
+      "$x = \\frac{y - 25}{5}$"
+    ]
+  },
+  {
+    "id": "formula_sub_11",
+    "topic_id": "math_alg_formula",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 4,
+    "question": "Make $x$ the subject of the formula $kx = 6 - qx$.",
+    "question_zh": "將 $x$ 設為公式 $kx = 6 - qx$ 的主項。",
+    "answer": "x = \\frac{6}{k + q}",
+    "correct_answer": "x = \\frac{6}{k + q}",
+    "solution_steps": [
+      "Group all terms containing $x$ on one side:",
+      "$kx + qx = 6$",
+      "Factor out $x$ (The Golden Step):",
+      "$x(k + q) = 6$",
+      "Divide by the bracket term:",
+      "$x = \\frac{6}{k + q}$"
+    ],
+    "solution_steps_zh": [
+      "將所有含 $x$ 的項歸到一邊：",
+      "$kx + qx = 6$",
+      "提取公因式 $x$（關鍵步驟）：",
+      "$x(k + q) = 6$",
+      "除以括號內的項：",
+      "$x = \\frac{6}{k + q}$"
+    ]
+  },
+  {
+    "id": "formula_sub_12",
+    "topic_id": "math_alg_formula",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 4,
+    "question": "Make $x$ the subject of the formula $kx = 9 - nx$.",
+    "question_zh": "將 $x$ 設為公式 $kx = 9 - nx$ 的主項。",
+    "answer": "x = \\frac{9}{k + n}",
+    "correct_answer": "x = \\frac{9}{k + n}",
+    "solution_steps": [
+      "Group all terms containing $x$ on one side:",
+      "$kx + nx = 9$",
+      "Factor out $x$ (The Golden Step):",
+      "$x(k + n) = 9$",
+      "Divide by the bracket term:",
+      "$x = \\frac{9}{k + n}$"
+    ],
+    "solution_steps_zh": [
+      "將所有含 $x$ 的項歸到一邊：",
+      "$kx + nx = 9$",
+      "提取公因式 $x$（關鍵步驟）：",
+      "$x(k + n) = 9$",
+      "除以括號內的項：",
+      "$x = \\frac{9}{k + n}$"
+    ]
+  },
+  {
+    "id": "formula_sub_13",
+    "topic_id": "math_alg_formula",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 4,
+    "question": "Make $x$ the subject of the formula $kx = 5 - nx$.",
+    "question_zh": "將 $x$ 設為公式 $kx = 5 - nx$ 的主項。",
+    "answer": "x = \\frac{5}{k + n}",
+    "correct_answer": "x = \\frac{5}{k + n}",
+    "solution_steps": [
+      "Group all terms containing $x$ on one side:",
+      "$kx + nx = 5$",
+      "Factor out $x$ (The Golden Step):",
+      "$x(k + n) = 5$",
+      "Divide by the bracket term:",
+      "$x = \\frac{5}{k + n}$"
+    ],
+    "solution_steps_zh": [
+      "將所有含 $x$ 的項歸到一邊：",
+      "$kx + nx = 5$",
+      "提取公因式 $x$（關鍵步驟）：",
+      "$x(k + n) = 5$",
+      "除以括號內的項：",
+      "$x = \\frac{5}{k + n}$"
+    ]
+  },
+  {
+    "id": "formula_sub_14",
+    "topic_id": "math_alg_formula",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 4,
+    "question": "Make $x$ the subject of the formula $y = \\frac{x + 6}{2x}$.",
+    "question_zh": "將 $x$ 設為公式 $y = \\frac{x + 6}{2x}$ 的主項。",
+    "answer": "x = \\frac{6}{2y - 1}",
+    "correct_answer": "x = \\frac{6}{2y - 1}",
+    "solution_steps": [
+      "Multiply both sides by $2x$ (Cross-multiplication):",
+      "$2xy = x + 6$",
+      "Move the $x$ term to the left side:",
+      "$2xy - x = 6$",
+      "Factor out $x$:",
+      "$x(2y - 1) = 6$",
+      "Final Step:",
+      "$x = \\frac{6}{2y - 1}$"
+    ],
+    "solution_steps_zh": [
+      "兩邊同時乘以 $2x$（交叉相乘）：",
+      "$2xy = x + 6$",
+      "將 $x$ 項移到左邊：",
+      "$2xy - x = 6$",
+      "提取公因式 $x$：",
+      "$x(2y - 1) = 6$",
+      "最終步驟：",
+      "$x = \\frac{6}{2y - 1}$"
+    ]
+  },
+  {
+    "id": "formula_sub_15",
+    "topic_id": "math_alg_formula",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 4,
+    "question": "Make $x$ the subject of the formula $y = \\frac{x + 8}{3x}$.",
+    "question_zh": "將 $x$ 設為公式 $y = \\frac{x + 8}{3x}$ 的主項。",
+    "answer": "x = \\frac{8}{3y - 1}",
+    "correct_answer": "x = \\frac{8}{3y - 1}",
+    "solution_steps": [
+      "Multiply both sides by $3x$ (Cross-multiplication):",
+      "$3xy = x + 8$",
+      "Move the $x$ term to the left side:",
+      "$3xy - x = 8$",
+      "Factor out $x$:",
+      "$x(3y - 1) = 8$",
+      "Final Step:",
+      "$x = \\frac{8}{3y - 1}$"
+    ],
+    "solution_steps_zh": [
+      "兩邊同時乘以 $3x$（交叉相乘）：",
+      "$3xy = x + 8$",
+      "將 $x$ 項移到左邊：",
+      "$3xy - x = 8$",
+      "提取公因式 $x$：",
+      "$x(3y - 1) = 8$",
+      "最終步驟：",
+      "$x = \\frac{8}{3y - 1}$"
+    ]
+  },
+  {
+    "id": "formula_sub_16",
+    "topic_id": "math_alg_formula",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 4,
+    "question": "Make $x$ the subject of the formula $y = \\frac{3x - 2}{x + 5}$.",
+    "question_zh": "將 $x$ 設為公式 $y = \\frac{3x - 2}{x + 5}$ 的主項。",
+    "answer": "x = \\frac{5y + 2}{3 - y}",
+    "correct_answer": "x = \\frac{5y + 2}{3 - y}",
+    "solution_steps": [
+      "Multiply both sides by $(x + 5)$:",
+      "$y(x + 5) = 3x - 2$",
+      "Expand the bracket:",
+      "$yx + 5y = 3x - 2$",
+      "Group $x$ terms on the left side:",
+      "$yx - 3x = -5y - 2$",
+      "Factor out $x$:",
+      "$x(y - 3) = -5y - 2$",
+      "Isolate $x$:",
+      "$x = \\frac{-5y - 2}{y - 3}$ or $x = \\frac{5y + 2}{3 - y}$"
+    ],
+    "solution_steps_zh": [
+      "等式兩邊同時乘以 $(x + 5)$：",
+      "$y(x + 5) = 3x - 2$",
+      "展開括號：",
+      "$yx + 5y = 3x - 2$",
+      "將含 $x$ 的項歸到左邊：",
+      "$yx - 3x = -5y - 2$",
+      "提取公因式 $x$：",
+      "$x(y - 3) = -5y - 2$",
+      "獨立出 $x$：",
+      "$x = \\frac{-5y - 2}{y - 3}$ 或 $x = \\frac{5y + 2}{3 - y}$"
+    ]
+  },
+  {
+    "id": "formula_sub_17",
+    "topic_id": "math_alg_formula",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 4,
+    "question": "Make $x$ the subject of the formula $y = \\frac{\\sqrt{x - 3}}{4}$.",
+    "question_zh": "將 $x$ 設為公式 $y = \\frac{\\sqrt{x - 3}}{4}$ 的主項。",
+    "answer": "x = 16y^2 + 3",
+    "correct_answer": "x = 16y^2 + 3",
+    "solution_steps": [
+      "Isolate the square root term:",
+      "$4y = \\sqrt{x - 3}$",
+      "Square both sides to remove the root:",
+      "$(4y)^2 = x - 3$",
+      "$16y^2 = x - 3$",
+      "Add 3 to both sides:",
+      "$x = 16y^2 + 3$"
+    ],
+    "solution_steps_zh": [
+      "首先獨立出根號項：",
+      "$4y = \\sqrt{x - 3}$",
+      "兩邊同時平方以消除根號：",
+      "$(4y)^2 = x - 3$",
+      "$16y^2 = x - 3$",
+      "兩邊同時加上 3：",
+      "$x = 16y^2 + 3$"
+    ]
+  },
+  {
+    "id": "formula_sub_18",
+    "topic_id": "math_alg_formula",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 4,
+    "question": "Make $x$ the subject of the formula $y = \\frac{\\sqrt{x - 7}}{2}$.",
+    "question_zh": "將 $x$ 設為公式 $y = \\frac{\\sqrt{x - 7}}{2}$ 的主項。",
+    "answer": "x = 4y^2 + 7",
+    "correct_answer": "x = 4y^2 + 7",
+    "solution_steps": [
+      "Isolate the square root term:",
+      "$2y = \\sqrt{x - 7}$",
+      "Square both sides to remove the root:",
+      "$(2y)^2 = x - 7$",
+      "$4y^2 = x - 7$",
+      "Add 7 to both sides:",
+      "$x = 4y^2 + 7$"
+    ],
+    "solution_steps_zh": [
+      "首先獨立出根號項：",
+      "$2y = \\sqrt{x - 7}$",
+      "兩邊同時平方以消除根號：",
+      "$(2y)^2 = x - 7$",
+      "$4y^2 = x - 7$",
+      "兩邊同時加上 7：",
+      "$x = 4y^2 + 7$"
+    ]
+  },
+  {
+    "id": "formula_sub_19",
+    "topic_id": "math_alg_formula",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 4,
+    "question": "Make $x$ the subject of the formula $4(x + 5) = 2x + n$.",
+    "question_zh": "將 $x$ 設為公式 $4(x + 5) = 2x + n$ 的主項。",
+    "answer": "x = \\frac{n - 20}{2}",
+    "correct_answer": "x = \\frac{n - 20}{2}",
+    "solution_steps": [
+      "Step 1: Expand the bracket:",
+      "$4x + 20 = 2x + n$",
+      "Step 2: Group all $x$ terms on the left side:",
+      "$4x - 2x = n - 20$",
+      "Step 3: Factor out $x$:",
+      "$x(4 - 2) = n - 20$",
+      "Step 4: Isolate $x$:",
+      "$x = \\frac{n - 20}{4 - 2}$",
+      "Result: $x = \\frac{n - 20}{2}$"
+    ],
+    "solution_steps_zh": [
+      "步驟 1：展開括號：",
+      "$4x + 20 = 2x + n$",
+      "步驟 2：將所有含 $x$ 的項歸到左邊：",
+      "$4x - 2x = n - 20$",
+      "步驟 3：提取公因式 $x$：",
+      "$x(4 - 2) = n - 20$",
+      "步驟 4：獨立出 $x$：",
+      "$x = \\frac{n - 20}{4 - 2}$",
+      "結果：$x = \\frac{n - 20}{2}$"
+    ]
+  },
+  {
+    "id": "formula_sub_20",
+    "topic_id": "math_alg_formula",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 4,
+    "question": "Make $x$ the subject of the formula $6(x + 3) = 1x + m$.",
+    "question_zh": "將 $x$ 設為公式 $6(x + 3) = 1x + m$ 的主項。",
+    "answer": "x = \\frac{m - 18}{5}",
+    "correct_answer": "x = \\frac{m - 18}{5}",
+    "solution_steps": [
+      "Step 1: Expand the bracket:",
+      "$6x + 18 = 1x + m$",
+      "Step 2: Group all $x$ terms on the left side:",
+      "$6x - 1x = m - 18$",
+      "Step 3: Factor out $x$:",
+      "$x(6 - 1) = m - 18$",
+      "Step 4: Isolate $x$:",
+      "$x = \\frac{m - 18}{6 - 1}$",
+      "Result: $x = \\frac{m - 18}{5}$"
+    ],
+    "solution_steps_zh": [
+      "步驟 1：展開括號：",
+      "$6x + 18 = 1x + m$",
+      "步驟 2：將所有含 $x$ 的項歸到左邊：",
+      "$6x - 1x = m - 18$",
+      "步驟 3：提取公因式 $x$：",
+      "$x(6 - 1) = m - 18$",
+      "步驟 4：獨立出 $x$：",
+      "$x = \\frac{m - 18}{6 - 1}$",
+      "結果：$x = \\frac{m - 18}{5}$"
+    ]
+  },
+  {
+    "id": "formula_sub_21",
+    "topic_id": "math_alg_formula",
+    "subject": "maths",
+    "level": 7,
+    "type": "short_answer",
+    "marks": 4,
+    "question": "Make $x$ the subject of the formula $P = \\frac{5x + 1}{2x + 3}$.",
+    "question_zh": "將 $x$ 設為公式 $P = \\frac{5x + 1}{2x + 3}$ 的主項。",
+    "answer": "x = \\frac{1 - 3P}{2P - 5}",
+    "correct_answer": "x = \\frac{1 - 3P}{2P - 5}",
+    "solution_steps": [
+      "Step 1: Multiply both sides by the denominator ($2x + 3$):",
+      "$P(2x + 3) = 5x + 1$",
+      "Step 2: Expand the bracket:",
+      "$2xP + 3P = 5x + 1$",
+      "Step 3: Move all $x$-containing terms to the left side:",
+      "$2xP - 5x = 1 - 3P$",
+      "Step 4: Factor out $x$ (The 'Golden Key'):",
+      "$x(2P - 5) = 1 - 3P$",
+      "Step 5: Divide by the remaining bracket:",
+      "$x = \\frac{1 - 3P}{2P - 5}$"
+    ],
+    "solution_steps_zh": [
+      "步驟 1：等式兩邊同時乘以分母 ($2x + 3$)：",
+      "$P(2x + 3) = 5x + 1$",
+      "步驟 2：展開括號：",
+      "$2xP + 3P = 5x + 1$",
+      "步驟 3：將所有含 $x$ 的項歸到左邊：",
+      "$2xP - 5x = 1 - 3P$",
+      "步驟 4：提取公因式 $x$（關鍵步驟）：",
+      "$x(2P - 5) = 1 - 3P$",
+      "步驟 5：除以括號內的項：",
+      "$x = \\frac{1 - 3P}{2P - 5}$"
+    ]
+  },
+  {
+    "id": "formula_sub_22",
+    "topic_id": "math_alg_formula",
+    "subject": "maths",
+    "level": 7,
+    "type": "short_answer",
+    "marks": 4,
+    "question": "Make $x$ the subject of the formula $k = \\frac{5x + 4}{4x + 6}$.",
+    "question_zh": "將 $x$ 設為公式 $k = \\frac{5x + 4}{4x + 6}$ 的主項。",
+    "answer": "x = \\frac{4 - 6k}{4k - 5}",
+    "correct_answer": "x = \\frac{4 - 6k}{4k - 5}",
+    "solution_steps": [
+      "Step 1: Multiply both sides by the denominator ($4x + 6$):",
+      "$k(4x + 6) = 5x + 4$",
+      "Step 2: Expand the bracket:",
+      "$4xk + 6k = 5x + 4$",
+      "Step 3: Move all $x$-containing terms to the left side:",
+      "$4xk - 5x = 4 - 6k$",
+      "Step 4: Factor out $x$ (The 'Golden Key'):",
+      "$x(4k - 5) = 4 - 6k$",
+      "Step 5: Divide by the remaining bracket:",
+      "$x = \\frac{4 - 6k}{4k - 5}$"
+    ],
+    "solution_steps_zh": [
+      "步驟 1：等式兩邊同時乘以分母 ($4x + 6$)：",
+      "$k(4x + 6) = 5x + 4$",
+      "步驟 2：展開括號：",
+      "$4xk + 6k = 5x + 4$",
+      "步驟 3：將所有含 $x$ 的項歸到左邊：",
+      "$4xk - 5x = 4 - 6k$",
+      "步驟 4：提取公因式 $x$（關鍵步驟）：",
+      "$x(4k - 5) = 4 - 6k$",
+      "步驟 5：除以括號內的項：",
+      "$x = \\frac{4 - 6k}{4k - 5}$"
+    ]
+  },
+  {
+    "id": "formula_sub_23",
+    "topic_id": "math_alg_formula",
+    "subject": "maths",
+    "level": 7,
+    "type": "short_answer",
+    "marks": 4,
+    "question": "Make $x$ the subject of the formula $P = \\frac{4x + 6}{2x + 8}$.",
+    "question_zh": "將 $x$ 設為公式 $P = \\frac{4x + 6}{2x + 8}$ 的主項。",
+    "answer": "x = \\frac{6 - 8P}{2P - 4}",
+    "correct_answer": "x = \\frac{6 - 8P}{2P - 4}",
+    "solution_steps": [
+      "Step 1: Multiply both sides by the denominator ($2x + 8$):",
+      "$P(2x + 8) = 4x + 6$",
+      "Step 2: Expand the bracket:",
+      "$2xP + 8P = 4x + 6$",
+      "Step 3: Move all $x$-containing terms to the left side:",
+      "$2xP - 4x = 6 - 8P$",
+      "Step 4: Factor out $x$ (The 'Golden Key'):",
+      "$x(2P - 4) = 6 - 8P$",
+      "Step 5: Divide by the remaining bracket:",
+      "$x = \\frac{6 - 8P}{2P - 4}$"
+    ],
+    "solution_steps_zh": [
+      "步驟 1：等式兩邊同時乘以分母 ($2x + 8$)：",
+      "$P(2x + 8) = 4x + 6$",
+      "步驟 2：展開括號：",
+      "$2xP + 8P = 4x + 6$",
+      "步驟 3：將所有含 $x$ 的項歸到左邊：",
+      "$2xP - 4x = 6 - 8P$",
+      "步驟 4：提取公因式 $x$（關鍵步驟）：",
+      "$x(2P - 4) = 6 - 8P$",
+      "步驟 5：除以括號內的項：",
+      "$x = \\frac{6 - 8P}{2P - 4}$"
+    ]
+  },
+  {
+    "id": "formula_sub_24",
+    "topic_id": "math_alg_formula",
+    "subject": "maths",
+    "level": 7,
+    "type": "short_answer",
+    "marks": 4,
+    "question": "Make $x$ the subject of the formula $\\frac{1}{x} + \\frac{1}{3} = \\frac{1}{y}$.",
+    "question_zh": "將 $x$ 設為公式 $\\frac{1}{x} + \\frac{1}{3} = \\frac{1}{y}$ 的主項。",
+    "answer": "x = \\frac{3y}{3 - y}",
+    "correct_answer": "x = \\frac{3y}{3 - y}",
+    "solution_steps": [
+      "Step 1: Subtract $\\frac{1}{3}$ from both sides:",
+      "$\\frac{1}{x} = \\frac{1}{y} - \\frac{1}{3}$",
+      "Step 2: Combine the fractions on the right side using a common denominator ($ay$):",
+      "$\\frac{1}{x} = \\frac{3 - y}{3y}$",
+      "Step 3: Reciprocate both sides to solve for $x$:",
+      "$x = \\frac{3y}{3 - y}$"
+    ],
+    "solution_steps_zh": [
+      "步驟 1：等式兩邊同時減去 $\\frac{1}{3}$：",
+      "$\\frac{1}{x} = \\frac{1}{y} - \\frac{1}{3}$",
+      "步驟 2：使用通分（公分母為 $ay$）將右邊的分數合併：",
+      "$\\frac{1}{x} = \\frac{3 - y}{3y}$",
+      "步驟 3：將等式兩邊同時取倒數，求出 $x$：",
+      "$x = \\frac{3y}{3 - y}$"
+    ]
+  },
+  {
+    "id": "formula_sub_25",
+    "topic_id": "math_alg_formula",
+    "subject": "maths",
+    "level": 7,
+    "type": "short_answer",
+    "marks": 4,
+    "question": "Make $x$ the subject of the formula $\\frac{1}{x} + \\frac{1}{7} = \\frac{1}{y}$.",
+    "question_zh": "將 $x$ 設為公式 $\\frac{1}{x} + \\frac{1}{7} = \\frac{1}{y}$ 的主項。",
+    "answer": "x = \\frac{7y}{7 - y}",
+    "correct_answer": "x = \\frac{7y}{7 - y}",
+    "solution_steps": [
+      "Step 1: Subtract $\\frac{1}{7}$ from both sides:",
+      "$\\frac{1}{x} = \\frac{1}{y} - \\frac{1}{7}$",
+      "Step 2: Combine the fractions on the right side using a common denominator ($ay$):",
+      "$\\frac{1}{x} = \\frac{7 - y}{7y}$",
+      "Step 3: Reciprocate both sides to solve for $x$:",
+      "$x = \\frac{7y}{7 - y}$"
+    ],
+    "solution_steps_zh": [
+      "步驟 1：等式兩邊同時減去 $\\frac{1}{7}$：",
+      "$\\frac{1}{x} = \\frac{1}{y} - \\frac{1}{7}$",
+      "步驟 2：使用通分（公分母為 $ay$）將右邊的分數合併：",
+      "$\\frac{1}{x} = \\frac{7 - y}{7y}$",
+      "步驟 3：將等式兩邊同時取倒數，求出 $x$：",
+      "$x = \\frac{7y}{7 - y}$"
+    ]
+  },
+  {
+    "id": "formula_sub_26",
+    "topic_id": "math_alg_formula",
+    "subject": "maths",
+    "level": 7,
+    "type": "short_answer",
+    "marks": 4,
+    "question": "Make $d$ the subject of the arithmetic sequence sum formula $S = \\frac{n}{2}[2a + (n - 1)d]$.",
+    "question_zh": "將 $d$ 設為等差數列求和公式 $S = \\frac{n}{2}[2a + (n - 1)d]$ 的主項。",
+    "answer": "d = \\frac{2S - 2an}{n(n - 1)}",
+    "correct_answer": "d = \\frac{2S - 2an}{n(n - 1)}",
+    "solution_steps": [
+      "Step 1: Multiply both sides by 2:",
+      "$2S = n[2a + (n - 1)d]$",
+      "Step 2: Divide by $n$:",
+      "$\\frac{2S}{n} = 2a + (n - 1)d$",
+      "Step 3: Subtract $2a$:",
+      "$\\frac{2S}{n} - 2a = (n - 1)d$",
+      "Step 4: Divide by $(n - 1)$:",
+      "$d = \\frac{\\frac{2S}{n} - 2a}{n - 1}$",
+      "Step 5: Simplify the complex fraction (optional but recommended):",
+      "$d = \\frac{2S - 2an}{n(n - 1)}$"
+    ],
+    "solution_steps_zh": [
+      "步驟 1：兩邊同時乘以 2：",
+      "$2S = n[2a + (n - 1)d]$",
+      "步驟 2：兩邊同時除以 $n$：",
+      "$\\frac{2S}{n} = 2a + (n - 1)d$",
+      "步驟 3：兩邊同時減去 $2a$：",
+      "$\\frac{2S}{n} - 2a = (n - 1)d$",
+      "步驟 4：兩邊同時除以 $(n - 1)$：",
+      "$d = \\frac{\\frac{2S}{n} - 2a}{n - 1}$",
+      "步驟 5：化簡繁分數（可選，但建議進行）：",
+      "$d = \\frac{2S - 2an}{n(n - 1)}$"
+    ]
+  },
+  {
+    "id": "formula_sub_27",
+    "topic_id": "math_alg_formula",
+    "subject": "maths",
+    "level": 7,
+    "type": "short_answer",
+    "marks": 4,
+    "question": "Make $u$ the subject of the kinematics formula $v^2 = u^2 + 2as$ (Assume $u > 0$).",
+    "question_zh": "將 $u$ 設為運動學公式 $v^2 = u^2 + 2as$ 的主項（假設 $u > 0$）。",
+    "answer": "u = \\sqrt{v^2 - 2as}",
+    "correct_answer": "u = \\sqrt{v^2 - 2as}",
+    "solution_steps": [
+      "Subtract $2as$ from both sides:",
+      "$v^2 - 2as = u^2$",
+      "Swap the sides:",
+      "$u^2 = v^2 - 2as$",
+      "Take the square root of both sides (Since $u > 0$):",
+      "$u = \\sqrt{v^2 - 2as}$"
+    ],
+    "solution_steps_zh": [
+      "等式兩邊同時減去 $2as$：",
+      "$v^2 - 2as = u^2$",
+      "左右對調：",
+      "$u^2 = v^2 - 2as$",
+      "兩邊同時取平方根（由於 $u > 0$）：",
+      "$u = \\sqrt{v^2 - 2as}$"
+    ]
+  },
+  {
+    "id": "formula_sub_28",
+    "topic_id": "math_alg_formula",
+    "subject": "maths",
+    "level": 7,
+    "type": "short_answer",
+    "marks": 4,
+    "question": "Make $h$ the subject of the cylinder surface area formula $A = 2\\pi r^2 + 2\\pi rh$.",
+    "question_zh": "將 $h$ 設為圓柱體表面積公式 $A = 2\\pi r^2 + 2\\pi rh$ 的主項。",
+    "answer": "h = \\frac{A - 2\\pi r^2}{2\\pi r}",
+    "correct_answer": "h = \\frac{A - 2\\pi r^2}{2\\pi r}",
+    "solution_steps": [
+      "Subtract $2\\pi r^2$ from both sides:",
+      "$A - 2\\pi r^2 = 2\\pi rh$",
+      "Isolate the $h$ term by dividing both sides by $2\\pi r$:",
+      "$h = \\frac{A - 2\\pi r^2}{2\\pi r}$",
+      "Simplify the fraction (optional):",
+      "$h = \\frac{A}{2\\pi r} - r$"
+    ],
+    "solution_steps_zh": [
+      "等式兩邊同時減去 $2\\pi r^2$：",
+      "$A - 2\\pi r^2 = 2\\pi rh$",
+      "兩邊同時除以 $2\\pi r$ 以獨立出 $h$：",
+      "$h = \\frac{A - 2\\pi r^2}{2\\pi r}$",
+      "化簡分數（可選）：",
+      "$h = \\frac{A}{2\\pi r} - r$"
+    ]
+  },
+  {
+    "id": "formula_sub_29",
+    "topic_id": "math_alg_formula",
+    "subject": "maths",
+    "level": 7,
+    "type": "short_answer",
+    "marks": 4,
+    "question": "Make $v$ the subject of the lens formula $\\frac{1}{f} = \\frac{1}{u} + \\frac{1}{v}$.",
+    "question_zh": "將 $v$ 設為透鏡公式 $\\frac{1}{f} = \\frac{1}{u} + \\frac{1}{v}$ 的主項。",
+    "answer": "v = \\frac{uf}{u - f}",
+    "correct_answer": "v = \\frac{uf}{u - f}",
+    "solution_steps": [
+      "Step 1: Isolate the term with $v$:",
+      "$\\frac{1}{v} = \\frac{1}{f} - \\frac{1}{u}$",
+      "Step 2: Combine terms on the right using a common denominator:",
+      "$\\frac{1}{v} = \\frac{u - f}{uf}$",
+      "Step 3: Reciprocate both sides:",
+      "$v = \\frac{uf}{u - f}$"
+    ],
+    "solution_steps_zh": [
+      "步驟 1：獨立出含 $v$ 的項：",
+      "$\\frac{1}{v} = \\frac{1}{f} - \\frac{1}{u}$",
+      "步驟 2：使用通分將右邊的項合併：",
+      "$\\frac{1}{v} = \\frac{u - f}{uf}$",
+      "步驟 3：將兩邊同時取倒數：",
+      "$v = \\frac{uf}{u - f}$"
+    ]
+  },
+  {
+    "id": "formula_sub_30",
+    "topic_id": "math_alg_formula",
+    "subject": "maths",
+    "level": 7,
+    "type": "short_answer",
+    "marks": 4,
+    "question": "Make $R_1$ the subject of the parallel resistance formula $\\frac{1}{R} = \\frac{1}{R_1} + \\frac{1}{R_2}$.",
+    "question_zh": "將 $R_1$ 設為並聯電阻公式 $\\frac{1}{R} = \\frac{1}{R_1} + \\frac{1}{R_2}$ 的主項。",
+    "answer": "R_1 = \\frac{RR_2}{R_2 - R}",
+    "correct_answer": "R_1 = \\frac{RR_2}{R_2 - R}",
+    "solution_steps": [
+      "Isolate the term with $R_1$:",
+      "$\\frac{1}{R_1} = \\frac{1}{R} - \\frac{1}{R_2}$",
+      "Combine the fractions on the right using a common denominator ($RR_2$):",
+      "$\\frac{1}{R_1} = \\frac{R_2 - R}{RR_2}$",
+      "Reciprocate both sides:",
+      "$R_1 = \\frac{RR_2}{R_2 - R}$"
+    ],
+    "solution_steps_zh": [
+      "獨立出含 $R_1$ 的項：",
+      "$\\frac{1}{R_1} = \\frac{1}{R} - \\frac{1}{R_2}$",
+      "使用通分（公分母為 $RR_2$）將右邊的分數合併：",
+      "$\\frac{1}{R_1} = \\frac{R_2 - R}{RR_2}$",
+      "將等式兩邊同時取倒數：",
+      "$R_1 = \\frac{RR_2}{R_2 - R}$"
+    ]
+  }
+]

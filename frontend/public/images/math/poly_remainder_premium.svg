@@ -1,0 +1,19 @@
+<svg width="600" height="250" viewBox="0 0 600 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Grid -->
+      <path d="M50 200 L 550 200" stroke="#cbd5e1" stroke-width="1" />
+      <path d="M100 20 L 100 220" stroke="#cbd5e1" stroke-width="1" />
+      
+      <!-- Curve -->
+      <path d="M100 180 Q 250 20, 500 150" stroke="#6366f1" stroke-width="4" />
+      
+      <!-- Point -->
+      <circle cx="300" cy="85" r="8" fill="#ec4899" />
+      <text x="315" y="75" fill="#ec4899" font-family="Inter" font-weight="bold" font-size="16">(a, f(a))</text>
+
+      <!-- Projections -->
+      <path d="M300 85 L 300 200" stroke="#ec4899" stroke-width="2" stroke-dasharray="4 4" />
+      <path d="M300 85 L 100 85" stroke="#ec4899" stroke-width="2" stroke-dasharray="4 4" />
+      
+      <text x="300" y="215" text-anchor="middle" fill="#64748b" font-family="Inter" font-size="14">x = a</text>
+      <text x="50" y="90" text-anchor="middle" fill="#ec4899" font-family="Inter" font-weight="bold" font-size="16">R = f(a)</text>
+    </svg>

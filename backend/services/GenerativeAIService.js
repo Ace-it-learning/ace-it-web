@@ -164,7 +164,7 @@ class GenerativeAIService {
     /**
      * Helper to generate and parse JSON
      */
-    async generateJson(prompt, config = {}, retries = 3) {
+    async generateJson(prompt, config = {}, retries = 6) {
         // Enforce JSON mime type if supported
         const jsonConfig = {
             ...config,
@@ -175,11 +175,12 @@ class GenerativeAIService {
         };
 
         const result = await this.generateContent(prompt, jsonConfig, retries);
-        console.log('[GenerativeAIService] Getting response text...');
+        const usedModel = result.usedModel;
+        console.log(`[GenerativeAIService] Getting response text from ${usedModel}...`);
         let text;
         try {
             text = result.response.text();
-            console.log('[GenerativeAIService] Raw AI Response Length:', text ? text.length : 'N/A');
+            console.log(`[GenerativeAIService] Raw AI Response Length:`, text ? text.length : 'N/A');
         } catch (textError) {
             console.error('[GenerativeAIService] Failed to get response text:', textError);
             console.error('[GenerativeAIService] Response object:', JSON.stringify(result.response, null, 2));
@@ -188,86 +189,72 @@ class GenerativeAIService {
 
         try {
             // 1. Robust Extraction
-            const cleanText = this.extractJson(text);
+            const rawText = this.extractJson(text);
 
-            // 2. Attempt Parse
-            return JSON.parse(cleanText);
+            // 2. ARCHITECT'S ABSOLUTE PRECISION HARDENING (v1.9.5)
+            const hardenJson = (str) => {
+                let hardened = "";
+                let insideString = false;
+                for (let i = 0; i < str.length; i++) {
+                    const char = str[i];
+                    if (char === '"') {
+                        let backslashCount = 0;
+                        for (let j = i - 1; j >= 0 && str[j] === '\\'; j--) {
+                            backslashCount++;
+                        }
+                        if (backslashCount % 2 === 0) insideString = !insideString;
+                        hardened += char;
+                    } 
+                    else if (insideString && char === '\\') {
+                        // JSON escaping: \, ", /, b, f, n, r, t, u
+                        const nextChar = str[i + 1];
+                        const escapable = ['\\', '"', '/', 'b', 'f', 'n', 'r', 't', 'u'].includes(nextChar);
+                        
+                        if (escapable) {
+                            hardened += "\\"; // Keep existing valid escape
+                        } else {
+                            hardened += "\\\\"; // Escape an unescaped backslash (likely for LaTeX like \times)
+                        }
+                    } 
+                    else if (insideString) {
+                        const code = char.charCodeAt(0);
+                        if (code < 32) {
+                            if (char === '\n') hardened += "\\n";
+                            else if (char === '\r') hardened += "\\r";
+                            else if (char === '\t') hardened += "\\t";
+                            else hardened += "\\u" + code.toString(16).padStart(4, '0');
+                        } else {
+                            hardened += char;
+                        }
+                    } 
+                    else {
+                        hardened += char;
+                    }
+                }
+                return hardened;
+            };
+
+            const safeText = hardenJson(rawText)
+                .replace(/,\s*([}\]])/g, '$1')
+                .replace(/,\s*\.\s*([}\]])/g, '$1')
+                .replace(/([}\]])\s*\.\s*$/g, '$1');
+
+            // 3. Attempt Parse
+            const data = JSON.parse(safeText);
+            return { data, model: usedModel };
 
         } catch (e) {
-            console.warn(`[AIService] JSON Parse Failed: ${e.message}. Attempting Auto-Repair...`);
+            console.warn(`[AIService] JSON Parse/Hardening Failed: ${e.message}. Attempting simple raw fallback...`);
+            console.log(`[AIService] Corrupted Text Fragment: ${text ? text.substring(0, 500) : 'NULL'}`);
 
-            let rawText = "";
             try {
-                // 3. Auto-Repair: Fix common LaTeX and control character issues
-                rawText = this.extractJson(text);
-
-                // --- ARCHITECT'S ABSOLUTE PRECISION REPAIR ---
-                const repairJson = (str) => {
-                    let repaired = "";
-                    let insideString = false;
-
-                    for (let i = 0; i < str.length; i++) {
-                        const char = str[i];
-
-                        if (char === '"') {
-                            // Check if this quote is escaped
-                            let backslashCount = 0;
-                            for (let j = i - 1; j >= 0 && str[j] === '\\'; j--) {
-                                backslashCount++;
-                            }
-                            // If even number of backslashes before it, it's a structural quote
-                            if (backslashCount % 2 === 0) {
-                                insideString = !insideString;
-                            }
-                            repaired += char;
-                        }
-                        else if (insideString && char === '\\') {
-                            // Inside a string, literal backslashes are the #1 cause of failure in Maths Apps.
-                            // We MUST ensure they are escaped for JSON, UNLESS they are escaping a quote.
-                            const nextChar = str[i + 1];
-                            if (nextChar === '"') {
-                                repaired += "\\"; // Let it escape the quote: \" 
-                            } else {
-                                repaired += "\\\\"; // Double it: \\ which JSON.parse sees as one literal \
-                            }
-                        }
-                        else if (insideString) {
-                            // Handle raw control characters inside strings
-                            const code = char.charCodeAt(0);
-                            if (code < 32) {
-                                if (char === '\n') repaired += "\\n";
-                                else if (char === '\r') repaired += "\\r";
-                                else if (char === '\t') repaired += "\\t";
-                                else repaired += "\\u" + code.toString(16).padStart(4, '0');
-                            } else {
-                                repaired += char;
-                            }
-                        }
-                        else {
-                            repaired += char;
-                        }
-                    }
-                    return repaired;
-                };
-
-                const repairedText = repairJson(rawText)
-                    .replace(/,\s*([}\]])/g, '$1') // Remove trailing commas: [1,2,] -> [1,2]
-                    .replace(/,\s*\.\s*([}\]])/g, '$1') // Remove hallucinated trailing dots: [1,2,. ] -> [1,2]
-                    .replace(/([}\]])\s*\.\s*$/g, '$1'); // Remove trailing dots after final bracket: { ... }. -> { ... }
-
-                return JSON.parse(repairedText);
-
-            } catch (repairError) {
-                console.error("[AIService] JSON Parse & Repair Failed!");
-                console.error("Original Error:", e.message);
-                console.error("Repair Error:", repairError.message);
-
-                // Detailed context log
-                const pos = parseInt(repairError.message.match(/position (\d+)/)?.[1] || "0");
-                const snippet = rawText.substring(Math.max(0, pos - 20), Math.min(rawText.length, pos + 20));
-                console.error(`Error at/near: "${snippet}"`);
-                console.error(`Raw Text Tail: "${rawText.slice(-500)}"`); // Log the end of the response
-
+                // 4. Final Fallback: Parse the raw extracted JSON without any hardening
+                const rawText = this.extractJson(text);
+                const data = JSON.parse(rawText);
+                return { data, model: usedModel };
+            } catch (fallbackError) {
+                console.error("[AIService] JSON Final Fallback Failed!");
+                console.error("[AIService] Full Raw Text for Debugging:", text);
                 throw new Error(`Failed to parse AI response as JSON: ${e.message}`);
             }
         }
@@ -288,20 +275,21 @@ class GenerativeAIService {
     /**
      * Core retry/failover logic - SHARPENED for higher reliability
      */
-    async executeWithRetry(action, input, config = {}, retries = 3) {
+    async executeWithRetry(action, input, config = {}, retries = 6) {
         await this.init();
 
         const requestedModel = config.model || "gemini-2.0-flash";
         const isProModel = requestedModel.includes("pro");
+        const highQuality = config.highQuality === true;
 
         // Approved Hierarchy: Standard (Flash) vs Premium (Pro)
         let modelQueue;
         if (isProModel) {
-            // Priority: 2.5 Pro -> 1.5 Pro -> 2.0 Flash (Strongest Fallback) -> Flash Latest
-            modelQueue = ["gemini-2.5-pro", "gemini-1.5-pro", "gemini-2.0-flash", "gemini-flash-latest"];
+            // Priority: 1.5 Pro (Most Stable) -> 2.0 Flash (Strongest Fallback) -> Flash Latest
+            modelQueue = ["gemini-1.5-pro", "gemini-1.5-pro-latest", "gemini-2.0-flash", "gemini-1.5-flash", "gemini-flash-latest"];
         } else {
-            // Priority: 2.0 Flash (Primary) -> 2.0 Flash Lite (Fast Backup) -> Flash Latest (Catch-all)
-            modelQueue = ["gemini-2.0-flash", "gemini-2.0-flash-lite", "gemini-flash-latest"];
+            // Priority: 1.5 Flash (Most Stable) -> 2.0 Flash -> 2.0 Flash-Lite -> Flash Latest
+            modelQueue = ["gemini-1.5-flash", "gemini-1.5-flash-latest", "gemini-2.0-flash", "gemini-2.0-flash-lite", "gemini-flash-latest"];
         }
 
         // FORCE REQUESTED MODEL TO FRONT
@@ -314,17 +302,42 @@ class GenerativeAIService {
         }
 
         const uniqueQueue = [...new Set(modelQueue)];
-
         let lastError = null;
-        for (let i = 0; i < retries; i++) {
-            // If we have more retries than models, we loop back but might want different variants.
-            // For now, simple rotation is fine.
-            const currentModelName = uniqueQueue[Math.min(i, uniqueQueue.length - 1)];
+        const unavailableModels = new Set();
+        
+        // If highQuality is true, we increase retries specifically for the Pro models
+        const totalRetries = highQuality ? Math.max(retries, 15) : retries;
+
+        for (let i = 0; i < totalRetries; i++) {
+            let currentModelName;
+            
+            // Smarter model selection: skip known-bad models
+            const workingQueue = uniqueQueue.filter(m => !unavailableModels.has(m));
+            if (workingQueue.length === 0) {
+                console.error("[AIService] CRITICAL: All models in queue have failed.");
+                break;
+            }
+
+            if (highQuality && i < 4 && !unavailableModels.has(uniqueQueue[0])) {
+                // For high quality, stay on the first (best) model for the first 4 attempts
+                currentModelName = uniqueQueue[0];
+            } else {
+                // Otherwise rotate through the queue of working models
+                currentModelName = workingQueue[Math.min(i, workingQueue.length - 1)];
+            }
 
             try {
-                console.log(`[AIService] Attempt ${i + 1}/${retries}: Using model '${currentModelName}'`);
+                console.log(`[AIService] Attempt ${i + 1}/${totalRetries}: Using model '${currentModelName}'${highQuality ? ' (High Quality Mode)' : ''}`);
                 const model = this.getModel({ ...config, model: currentModelName });
-                return await action(model, i > 0, currentModelName);
+                const result = await action(model, i > 0, currentModelName);
+                // Return the raw result (with .response) but also include the model name
+                const finalResult = result;
+                if (typeof finalResult === 'object') {
+                    finalResult.usedModel = currentModelName;
+                    // For backward compatibility with server.js where it expects result.response
+                    // the Google SDK result already has a .response property.
+                }
+                return finalResult;
             } catch (error) {
                 lastError = error;
                 const isRateLimit = error.message?.includes('429') || error.message?.toLowerCase().includes('resource exhausted');
@@ -332,27 +345,32 @@ class GenerativeAIService {
 
                 console.error(`[AIService] FAILED Attempt ${i + 1} (${currentModelName}):`, error.message);
                 if (error.status) console.error(`[AIService] Error Status: ${error.status}`);
+                if (error.stack) console.error(`[AIService] Error Stack: ${error.stack.substring(0, 300)}...`);
 
-                // If it's a model-not-supported error or region restriction, try next model IMMEDIATELY
+                // If it's a model-not-supported error or region restriction, or a low-level fetch failure, try next model IMMEDIATELY
+                const errorStr = (error.message || "").toLowerCase();
                 const isUnavailable =
-                    error.message?.includes('404') ||
-                    error.message?.includes('501') ||
                     error.status === 404 ||
                     error.status === 501 ||
-                    error.message?.toLowerCase().includes('not found') ||
-                    error.message?.toLowerCase().includes('location is not supported');
+                    errorStr.includes('404') ||
+                    errorStr.includes('501') ||
+                    errorStr.includes('fetch failed') || // Handle Node low-level network failures
+                    errorStr.includes('not found') ||
+                    errorStr.includes('location is not supported') ||
+                    errorStr.includes('model is not available');
 
                 if (isUnavailable) {
-                    console.warn(`[AIService] Model ${currentModelName} unavailable, not found, or restricted in this region. Error: ${error.message}. Trying next in queue...`);
+                    console.warn(`[AIService] Model ${currentModelName} unavailable, unreachable, or restricted. Error: ${error.message}. Removing from working set and falling back...`);
+                    unavailableModels.add(currentModelName);
                     continue;
                 }
 
-                if (i < retries - 1) {
+                if (i < totalRetries - 1) {
                     // Exponential backoff
-                    // Rate limits (429) need much longer waits than simple overload (503)
-                    // Free tier keys for 2.0 can have very low limits (e.g. 2-10 RPM)
-                    const waitBase = isRateLimit ? 10000 : 3000;
-                    const delay = (Math.pow(1.5, i) * waitBase) + (Math.random() * 3000);
+                    let waitBase = isRateLimit ? 15000 : 3000;
+                    if (highQuality) waitBase *= 1.5; // Wait longer in high quality mode to recover quota
+                    
+                    const delay = (Math.pow(2, i % 5) * waitBase) + (Math.random() * 5000);
 
                     console.log(`[AIService] ${isRateLimit ? 'QUOTA HIT (429)' : 'SERVICE BUSY (503)'}. Retrying in ${Math.round(delay)}ms...`);
                     await new Promise(resolve => setTimeout(resolve, delay));
@@ -370,7 +388,7 @@ class GenerativeAIService {
             }
         }
         if (lastError) {
-            console.error(`[AIService] Final failure after ${retries} attempts. Last model tried: ${uniqueQueue[uniqueQueue.length - 1]}`);
+            console.error(`[AIService] Final failure after ${totalRetries} attempts. Last model tried: ${uniqueQueue[uniqueQueue.length - 1]}`);
             throw lastError;
         }
     }

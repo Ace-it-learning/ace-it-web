@@ -1,0 +1,764 @@
+[
+  {
+    "id": "circle_eq_01",
+    "topic_id": "math_geo_circle_eq",
+    "subject": "maths",
+    "level": 3,
+    "type": "short_answer",
+    "marks": 2,
+    "question": "Find the center and radius of the circle with equation $(x - 0)^2 + (y - 0)^2 = 49$.",
+    "question_zh": "Find the center and radius of the circle with equation $(x - 0)^2 + (y - 0)^2 = 49$.",
+    "answer": "Center: (0, 0), Radius: 7",
+    "correct_answer": "Center: (0, 0), Radius: 7",
+    "solution_steps": [
+      "Compare with the standard form $(x-h)^2 + (y-k)^2 = r^2$.",
+      "Center $(h, k) = (0, 0)$.",
+      "Radius $r = \\sqrt{49} = 7$."
+    ],
+    "solution_steps_zh": [
+      "Compare with the standard form $(x-h)^2 + (y-k)^2 = r^2$.",
+      "Center $(h, k) = (0, 0)$.",
+      "Radius $r = \\sqrt{49} = 7$."
+    ]
+  },
+  {
+    "id": "circle_eq_02",
+    "topic_id": "math_geo_circle_eq",
+    "subject": "maths",
+    "level": 3,
+    "type": "short_answer",
+    "marks": 2,
+    "question": "Find the equation of a circle with center $(1, -5)$ and radius 4 in standard form.",
+    "question_zh": "Find the equation of a circle with center $(1, -5)$ and radius 4 in standard form.",
+    "answer": "(x - 1)^2 + (y + 5)^2 = 16",
+    "correct_answer": "(x - 1)^2 + (y + 5)^2 = 16",
+    "solution_steps": [
+      "The standard form is $(x-h)^2 + (y-k)^2 = r^2$.",
+      "Substitute $h=1$, $k=-5$, and $r=4$.",
+      "Equation: $(x - 1)^2 + (y + 5)^2 = 16$."
+    ],
+    "solution_steps_zh": [
+      "The standard form is $(x-h)^2 + (y-k)^2 = r^2$.",
+      "Substitute $h=1$, $k=-5$, and $r=4$.",
+      "Equation: $(x - 1)^2 + (y + 5)^2 = 16$."
+    ]
+  },
+  {
+    "id": "circle_eq_03",
+    "topic_id": "math_geo_circle_eq",
+    "subject": "maths",
+    "level": 3,
+    "type": "short_answer",
+    "marks": 2,
+    "question": "Does the point $(4, 3)$ lie on, inside, or outside the circle $x^2 + y^2 = 25$?",
+    "question_zh": "Does the point $(4, 3)$ lie on, inside, or outside the circle $x^2 + y^2 = 25$?",
+    "answer": "On the circle",
+    "correct_answer": "On the circle",
+    "solution_steps": [
+      "Substitute $x=4$ and $y=3$ into $x^2 + y^2$.",
+      "$4^2 + 3^2 = 25$.",
+      "Since 25 = 25, the point lies on the circle."
+    ],
+    "solution_steps_zh": [
+      "Substitute $x=4$ and $y=3$ into $x^2 + y^2$.",
+      "$4^2 + 3^2 = 25$.",
+      "Since 25 = 25, the point lies on the circle."
+    ]
+  },
+  {
+    "id": "circle_eq_04",
+    "topic_id": "math_geo_circle_eq",
+    "subject": "maths",
+    "level": 3,
+    "type": "short_answer",
+    "marks": 2,
+    "question": "Find the center of the circle where $A(0, 0)$ and $B(6, 8)$ are endpoints of a diameter.",
+    "question_zh": "Find the center of the circle where $A(0, 0)$ and $B(6, 8)$ are endpoints of a diameter.",
+    "answer": "(3, 4)",
+    "correct_answer": "(3, 4)",
+    "solution_steps": [
+      "The center is the midpoint of the diameter endpoints.",
+      "Center $= (\\frac{0+6}{2}, \\frac{0+8}{2}) = (3, 4)$."
+    ],
+    "solution_steps_zh": [
+      "The center is the midpoint of the diameter endpoints.",
+      "Center $= (\\frac{0+6}{2}, \\frac{0+8}{2}) = (3, 4)$."
+    ]
+  },
+  {
+    "id": "circle_eq_05",
+    "topic_id": "math_geo_circle_eq",
+    "subject": "maths",
+    "level": 3,
+    "type": "short_answer",
+    "marks": 2,
+    "question": "Find the radius of the circle $x^2 + y^2 - 4x - 6y + 4 = 0$.",
+    "question_zh": "Find the radius of the circle $x^2 + y^2 - 4x - 6y + 4 = 0$.",
+    "answer": "3",
+    "correct_answer": "3",
+    "solution_steps": [
+      "Identify $D=-4$ and $E=-6$ and $F=4$.",
+      "Center $(h, k) = (-D/2, -E/2) = (2, 3)$.",
+      "Radius $r = \\sqrt{h^2 + k^2 - F} = \\sqrt{2^2 + 3^2 - 4} = \\sqrt{9} = 3$."
+    ],
+    "solution_steps_zh": [
+      "Identify $D=-4$ and $E=-6$ and $F=4$.",
+      "Center $(h, k) = (-D/2, -E/2) = (2, 3)$.",
+      "Radius $r = \\sqrt{h^2 + k^2 - F} = \\sqrt{2^2 + 3^2 - 4} = \\sqrt{9} = 3$."
+    ]
+  },
+  {
+    "id": "circle_eq_06",
+    "topic_id": "math_geo_circle_eq",
+    "subject": "maths",
+    "level": 4,
+    "type": "short_answer",
+    "marks": 3,
+    "question": "Find the center and radius of the circle $2x^2 + 2y^2 - 8x + 12y - 6 = 0$.",
+    "question_zh": "Find the center and radius of the circle $2x^2 + 2y^2 - 8x + 12y - 6 = 0$.",
+    "answer": "Center: (2, -3), Radius: 4",
+    "correct_answer": "Center: (2, -3), Radius: 4",
+    "solution_steps": [
+      "Divide the entire equation by 2 to make the coefficients of $x^2$ and $y^2$ equal to 1.",
+      "$x^2 + y^2 - 4x + 6y - 3 = 0$",
+      "Center $(h, k) = (-(-4)/2, -(6)/2) = (2, -3)$.",
+      "Radius $r = \\sqrt{2^2 + (-3)^2 - (-3)} = \\sqrt{4 + 9 + 3} = \\sqrt{16} = 4$."
+    ],
+    "solution_steps_zh": [
+      "Divide the entire equation by 2 to make the coefficients of $x^2$ and $y^2$ equal to 1.",
+      "$x^2 + y^2 - 4x + 6y - 3 = 0$",
+      "Center $(h, k) = (-(-4)/2, -(6)/2) = (2, -3)$.",
+      "Radius $r = \\sqrt{2^2 + (-3)^2 - (-3)} = \\sqrt{4 + 9 + 3} = \\sqrt{16} = 4$."
+    ]
+  },
+  {
+    "id": "circle_eq_07",
+    "topic_id": "math_geo_circle_eq",
+    "subject": "maths",
+    "level": 4,
+    "type": "short_answer",
+    "marks": 3,
+    "question": "Find the x-intercepts of the circle $x^2 + y^2 - 6x - 8y + 9 = 0$.",
+    "question_zh": "Find the x-intercepts of the circle $x^2 + y^2 - 6x - 8y + 9 = 0$.",
+    "answer": "3",
+    "correct_answer": "3",
+    "solution_steps": [
+      "To find x-intercepts, set $y=0$.",
+      "$x^2 + 0^2 - 6x - 8(0) + 9 = 0 \\Rightarrow x^2 - 6x + 9 = 0$.",
+      "$(x - 3)^2 = 0 \\Rightarrow x = 3$.",
+      "The circle touches the x-axis at $x=3$."
+    ],
+    "solution_steps_zh": [
+      "To find x-intercepts, set $y=0$.",
+      "$x^2 + 0^2 - 6x - 8(0) + 9 = 0 \\Rightarrow x^2 - 6x + 9 = 0$.",
+      "$(x - 3)^2 = 0 \\Rightarrow x = 3$.",
+      "The circle touches the x-axis at $x=3$."
+    ]
+  },
+  {
+    "id": "circle_eq_08",
+    "topic_id": "math_geo_circle_eq",
+    "subject": "maths",
+    "level": 4,
+    "type": "short_answer",
+    "marks": 3,
+    "question": "A circle with center $(5, 3)$ is tangent to the y-axis. Find its equation in general form.",
+    "question_zh": "A circle with center $(5, 3)$ is tangent to the y-axis. Find its equation in general form.",
+    "answer": "x^2 + y^2 - 10x - 6y + 9 = 0",
+    "correct_answer": "x^2 + y^2 - 10x - 6y + 9 = 0",
+    "solution_steps": [
+      "Since the circle is tangent to the y-axis, the radius $r$ is the absolute value of the x-coordinate of the center.",
+      "$r = |5| = 5$.",
+      "Equation in standard form: $(x - 5)^2 + (y - 3)^2 = 5^2$.",
+      "$x^2 - 10x + 25 + y^2 - 6y + 9 = 25$.",
+      "General form: $x^2 + y^2 - 10x - 6y + 9 = 0$."
+    ],
+    "solution_steps_zh": [
+      "Since the circle is tangent to the y-axis, the radius $r$ is the absolute value of the x-coordinate of the center.",
+      "$r = |5| = 5$.",
+      "Equation in standard form: $(x - 5)^2 + (y - 3)^2 = 5^2$.",
+      "$x^2 - 10x + 25 + y^2 - 6y + 9 = 25$.",
+      "General form: $x^2 + y^2 - 10x - 6y + 9 = 0$."
+    ]
+  },
+  {
+    "id": "circle_eq_09",
+    "topic_id": "math_geo_circle_eq",
+    "subject": "maths",
+    "level": 4,
+    "type": "short_answer",
+    "marks": 3,
+    "question": "The equation $x^2 + y^2 + 4x - 2y + k = 0$ represents a circle with radius 5. Find the value of $k$.",
+    "question_zh": "The equation $x^2 + y^2 + 4x - 2y + k = 0$ represents a circle with radius 5. Find the value of $k$.",
+    "answer": "-20",
+    "correct_answer": "-20",
+    "solution_steps": [
+      "Center $(h, k_{mid}) = (-2, 1)$.",
+      "Radius formula: $r^2 = h^2 + k_{mid}^2 - F$.",
+      "$5^2 = (-2)^2 + 1^2 - k$.",
+      "$25 = 4 + 1 - k \\Rightarrow k = 5 - 25 = -20$."
+    ],
+    "solution_steps_zh": [
+      "Center $(h, k_{mid}) = (-2, 1)$.",
+      "Radius formula: $r^2 = h^2 + k_{mid}^2 - F$.",
+      "$5^2 = (-2)^2 + 1^2 - k$.",
+      "$25 = 4 + 1 - k \\Rightarrow k = 5 - 25 = -20$."
+    ]
+  },
+  {
+    "id": "circle_eq_10",
+    "topic_id": "math_geo_circle_eq",
+    "subject": "maths",
+    "level": 4,
+    "type": "short_answer",
+    "marks": 3,
+    "question": "Find the equation of the circle with center $(3, -4)$ that passes through the origin $(0, 0)$.",
+    "question_zh": "Find the equation of the circle with center $(3, -4)$ that passes through the origin $(0, 0)$.",
+    "answer": "x^2 + y^2 - 6x + 8y = 0",
+    "correct_answer": "x^2 + y^2 - 6x + 8y = 0",
+    "solution_steps": [
+      "The radius is the distance from $(3, -4)$ to $(0, 0)$.",
+      "$r^2 = (3-0)^2 + (-4-0)^2 = 9 + 16 = 25$.",
+      "Standard form: $(x - 3)^2 + (y + 4)^2 = 25$.",
+      "$x^2 - 6x + 9 + y^2 + 8y + 16 = 25$.",
+      "$x^2 + y^2 - 6x + 8y = 0$."
+    ],
+    "solution_steps_zh": [
+      "The radius is the distance from $(3, -4)$ to $(0, 0)$.",
+      "$r^2 = (3-0)^2 + (-4-0)^2 = 9 + 16 = 25$.",
+      "Standard form: $(x - 3)^2 + (y + 4)^2 = 25$.",
+      "$x^2 - 6x + 9 + y^2 + 8y + 16 = 25$.",
+      "$x^2 + y^2 - 6x + 8y = 0$."
+    ]
+  },
+  {
+    "id": "circle_eq_11",
+    "topic_id": "math_geo_circle_eq",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 4,
+    "question": "Points $A(-1, 2)$ and $B(5, 6)$ are the endpoints of a diameter of circle $C$. Find the equation of $C$ in general form.",
+    "question_zh": "Points $A(-1, 2)$ and $B(5, 6)$ are the endpoints of a diameter of circle $C$. Find the equation of $C$ in general form.",
+    "answer": "x^2 + y^2 - 4x - 8y + 7 = 0",
+    "correct_answer": "x^2 + y^2 - 4x - 8y + 7 = 0",
+    "solution_steps": [
+      "Center $O = (\\frac{-1+5}{2}, \\frac{2+6}{2}) = (2, 4)$.",
+      "Radius squared $r^2 = (5-2)^2 + (6-4)^2 = 3^2 + 2^2 = 9 + 4 = 13$.",
+      "Standard form: $(x-2)^2 + (y-4)^2 = 13$.",
+      "Expand: $x^2 - 4x + 4 + y^2 - 8y + 16 = 13$.",
+      "General form: $x^2 + y^2 - 4x - 8y + 7 = 0$."
+    ],
+    "solution_steps_zh": [
+      "Center $O = (\\frac{-1+5}{2}, \\frac{2+6}{2}) = (2, 4)$.",
+      "Radius squared $r^2 = (5-2)^2 + (6-4)^2 = 3^2 + 2^2 = 9 + 4 = 13$.",
+      "Standard form: $(x-2)^2 + (y-4)^2 = 13$.",
+      "Expand: $x^2 - 4x + 4 + y^2 - 8y + 16 = 13$.",
+      "General form: $x^2 + y^2 - 4x - 8y + 7 = 0$."
+    ]
+  },
+  {
+    "id": "circle_eq_12",
+    "topic_id": "math_geo_circle_eq",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 4,
+    "question": "Find the values of $c$ such that the line $y = 2x + c$ is tangent to the circle $x^2 + y^2 = 5$.",
+    "question_zh": "求 $c$ 的值，使得直線 $y = 2x + c$ 與圓 $x^2 + y^2 = 5$ 相切。",
+    "answer": "c = 5 or c = -5",
+    "correct_answer": "c = 5 or c = -5",
+    "solution_steps": [
+      "Substitute $y = 2x + c$ into the circle equation $x^2 + y^2 = 5$.",
+      "$x^2 + (2x + c)^2 = 5 \\implies x^2 + 4x^2 + 4cx + c^2 = 5$.",
+      "$5x^2 + 4cx + (c^2 - 5) = 0$.",
+      "For the line to be tangent to the circle, the discriminant $\\Delta$ must be $0$.",
+      "$\\Delta = (4c)^2 - 4(5)(c^2 - 5) = 0$.",
+      "$16c^2 - 20(c^2 - 5) = 0 \\implies 16c^2 - 20c^2 + 100 = 0$.",
+      "$-4c^2 + 100 = 0 \\implies 4c^2 = 100$.",
+      "$c^2 = 25 \\implies c = 5$ or $c = -5$."
+    ],
+    "solution_steps_zh": [
+      "將 $y = 2x + c$ 代入圓方程 $x^2 + y^2 = 5$。",
+      "$x^2 + (2x + c)^2 = 5 \\implies x^2 + 4x^2 + 4cx + c^2 = 5$。",
+      "$5x^2 + 4cx + (c^2 - 5) = 0$。",
+      "若直線與圓相切，則判別式 $\\Delta$ 必須等於 $0$。",
+      "$\\Delta = (4c)^2 - 4(5)(c^2 - 5) = 0$。",
+      "$16c^2 - 20(c^2 - 5) = 0 \\implies 16c^2 - 20c^2 + 100 = 0$。",
+      "$-4c^2 + 100 = 0 \\implies 4c^2 = 100$。",
+      "$c^2 = 25 \\implies c = 5$ 或 $c = -5$。"
+    ]
+  },
+  {
+    "id": "circle_eq_13",
+    "topic_id": "math_geo_circle_eq",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 4,
+    "question": "For what values of $k$ does the line $y = x + k$ intersect the circle $x^2 + y^2 = 8$ at two distinct points?",
+    "question_zh": "For what values of $k$ does the line $y = x + k$ intersect the circle $x^2 + y^2 = 8$ at two distinct points?",
+    "answer": "-4 < k < 4",
+    "correct_answer": "-4 < k < 4",
+    "solution_steps": [
+      "Substitute $y = x + k$ into the circle equation.",
+      "$x^2 + (x + k)^2 = 8 \\Rightarrow x^2 + x^2 + 2kx + k^2 - 8 = 0$.",
+      "$2x^2 + 2kx + (k^2 - 8) = 0$.",
+      "For two distinct points, $\\Delta > 0$.",
+      "$(2k)^2 - 4(2)(k^2 - 8) > 0$.",
+      "$4k^2 - 8k^2 + 64 > 0 \\Rightarrow -4k^2 + 64 > 0$.",
+      "$k^2 < 16 \\Rightarrow -4 < k < 4$."
+    ],
+    "solution_steps_zh": [
+      "Substitute $y = x + k$ into the circle equation.",
+      "$x^2 + (x + k)^2 = 8 \\Rightarrow x^2 + x^2 + 2kx + k^2 - 8 = 0$.",
+      "$2x^2 + 2kx + (k^2 - 8) = 0$.",
+      "For two distinct points, $\\Delta > 0$.",
+      "$(2k)^2 - 4(2)(k^2 - 8) > 0$.",
+      "$4k^2 - 8k^2 + 64 > 0 \\Rightarrow -4k^2 + 64 > 0$.",
+      "$k^2 < 16 \\Rightarrow -4 < k < 4$."
+    ]
+  },
+  {
+    "id": "circle_eq_14",
+    "topic_id": "math_geo_circle_eq",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 4,
+    "question": "A circle in the first quadrant is tangent to both the x-axis and the y-axis, and its center lies on the line $x + y = 10$. Find its equation.",
+    "question_zh": "A circle in the first quadrant is tangent to both the x-axis and the y-axis, and its center lies on the line $x + y = 10$. Find its equation.",
+    "answer": "(x - 5)^2 + (y - 5)^2 = 25",
+    "correct_answer": "(x - 5)^2 + (y - 5)^2 = 25",
+    "solution_steps": [
+      "Since the circle is tangent to both axes in the first quadrant, its center is $(r, r)$ and its radius is $r$.",
+      "Substitute $(r, r)$ into the line $x + y = 10$.",
+      "$r + r = 10 \\Rightarrow 2r = 10 \\Rightarrow r = 5$.",
+      "Equation: $(x - 5)^2 + (y - 5)^2 = 25$."
+    ],
+    "solution_steps_zh": [
+      "Since the circle is tangent to both axes in the first quadrant, its center is $(r, r)$ and its radius is $r$.",
+      "Substitute $(r, r)$ into the line $x + y = 10$.",
+      "$r + r = 10 \\Rightarrow 2r = 10 \\Rightarrow r = 5$.",
+      "Equation: $(x - 5)^2 + (y - 5)^2 = 25$."
+    ]
+  },
+  {
+    "id": "circle_eq_15",
+    "topic_id": "math_geo_circle_eq",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 4,
+    "question": "Find the equation of the tangent line to the circle $x^2 + y^2 = 25$ at the point $(3, 4)$.",
+    "question_zh": "Find the equation of the tangent line to the circle $x^2 + y^2 = 25$ at the point $(3, 4)$.",
+    "answer": "3x + 4y - 25 = 0",
+    "correct_answer": "3x + 4y - 25 = 0",
+    "solution_steps": [
+      "The slope of the radius from $(0, 0)$ to $(3, 4)$ is $m_r = \\frac{4-0}{3-0} = \\frac{4}{3}$.",
+      "The tangent is perpendicular to the radius, so its slope is $m_t = -\\frac{3}{4}$.",
+      "Equation: $y - 4 = -\\frac{3}{4}(x - 3)$.",
+      "$4y - 16 = -3x + 9 \\Rightarrow 3x + 4y - 25 = 0$."
+    ],
+    "solution_steps_zh": [
+      "The slope of the radius from $(0, 0)$ to $(3, 4)$ is $m_r = \\frac{4-0}{3-0} = \\frac{4}{3}$.",
+      "The tangent is perpendicular to the radius, so its slope is $m_t = -\\frac{3}{4}$.",
+      "Equation: $y - 4 = -\\frac{3}{4}(x - 3)$.",
+      "$4y - 16 = -3x + 9 \\Rightarrow 3x + 4y - 25 = 0$."
+    ]
+  },
+  {
+    "id": "circle_eq_16",
+    "topic_id": "math_geo_circle_eq",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 4,
+    "question": "The line $y = x + 2$ intersects the circle $x^2 + y^2 = 10$ at points $A$ and $B$. Find the coordinates of the midpoint of $AB$.",
+    "question_zh": "The line $y = x + 2$ intersects the circle $x^2 + y^2 = 10$ at points $A$ and $B$. Find the coordinates of the midpoint of $AB$.",
+    "answer": "(-1, 1)",
+    "correct_answer": "(-1, 1)",
+    "solution_steps": [
+      "Substitute $y = x + 2$ into $x^2 + y^2 = 10$.",
+      "$x^2 + (x + 2)^2 = 10 \\Rightarrow 2x^2 + 4x - 6 = 0 \\Rightarrow x^2 + 2x - 3 = 0$.",
+      "$(x + 3)(x - 1) = 0 \\Rightarrow x_1 = -3, x_2 = 1$.",
+      "Corresponding $y$ values: $y_1 = -1, y_2 = 3$.",
+      "Midpoint $= (\\frac{-3+1}{2}, \\frac{-1+3}{2}) = (-1, 1)$."
+    ],
+    "solution_steps_zh": [
+      "Substitute $y = x + 2$ into $x^2 + y^2 = 10$.",
+      "$x^2 + (x + 2)^2 = 10 \\Rightarrow 2x^2 + 4x - 6 = 0 \\Rightarrow x^2 + 2x - 3 = 0$.",
+      "$(x + 3)(x - 1) = 0 \\Rightarrow x_1 = -3, x_2 = 1$.",
+      "Corresponding $y$ values: $y_1 = -1, y_2 = 3$.",
+      "Midpoint $= (\\frac{-3+1}{2}, \\frac{-1+3}{2}) = (-1, 1)$."
+    ]
+  },
+  {
+    "id": "circle_eq_17",
+    "topic_id": "math_geo_circle_eq",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 4,
+    "question": "Circle $C_1: x^2 + y^2 = 4$ and Circle $C_2: (x-6)^2 + (y-8)^2 = 9$. Find the shortest distance between the two circles.",
+    "question_zh": "Circle $C_1: x^2 + y^2 = 4$ and Circle $C_2: (x-6)^2 + (y-8)^2 = 9$. Find the shortest distance between the two circles.",
+    "answer": "5",
+    "correct_answer": "5",
+    "solution_steps": [
+      "Centers: $O_1(0, 0)$, $O_2(6, 8)$. Radii: $r_1=2, r_2=3$.",
+      "Distance between centers $d = \\sqrt{6^2 + 8^2} = 10$.",
+      "Shortest distance between circles $= d - r_1 - r_2 = 10 - 2 - 3 = 5$."
+    ],
+    "solution_steps_zh": [
+      "Centers: $O_1(0, 0)$, $O_2(6, 8)$. Radii: $r_1=2, r_2=3$.",
+      "Distance between centers $d = \\sqrt{6^2 + 8^2} = 10$.",
+      "Shortest distance between circles $= d - r_1 - r_2 = 10 - 2 - 3 = 5$."
+    ]
+  },
+  {
+    "id": "circle_eq_18",
+    "topic_id": "math_geo_circle_eq",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 4,
+    "question": "Find the area of the circle $x^2 + y^2 + 4x - 10y + 13 = 0$ in terms of $\\pi$.",
+    "question_zh": "Find the area of the circle $x^2 + y^2 + 4x - 10y + 13 = 0$ in terms of $\\pi$.",
+    "answer": "16\\pi",
+    "correct_answer": "16\\pi",
+    "solution_steps": [
+      "Center $(h, k) = (-2, 5)$.",
+      "Radius squared $r^2 = (-2)^2 + 5^2 - 13 = 4 + 25 - 13 = 16$.",
+      "Area $= \\pi r^2 = 16\\pi$."
+    ],
+    "solution_steps_zh": [
+      "Center $(h, k) = (-2, 5)$.",
+      "Radius squared $r^2 = (-2)^2 + 5^2 - 13 = 4 + 25 - 13 = 16$.",
+      "Area $= \\pi r^2 = 16\\pi$."
+    ]
+  },
+  {
+    "id": "circle_eq_19",
+    "topic_id": "math_geo_circle_eq",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 4,
+    "question": "A circle centered at $(2, -3)$ has a circumference of $10\\pi$. Find its equation in general form.",
+    "question_zh": "A circle centered at $(2, -3)$ has a circumference of $10\\pi$. Find its equation in general form.",
+    "answer": "x^2 + y^2 - 4x + 6y - 12 = 0",
+    "correct_answer": "x^2 + y^2 - 4x + 6y - 12 = 0",
+    "solution_steps": [
+      "Circumference $2\\pi r = 10\\pi \\Rightarrow r = 5$.",
+      "Standard form: $(x - 2)^2 + (y + 3)^2 = 25$.",
+      "Expand: $x^2 - 4x + 4 + y^2 + 6y + 9 = 25$.",
+      "General form: $x^2 + y^2 - 4x + 6y - 12 = 0$."
+    ],
+    "solution_steps_zh": [
+      "Circumference $2\\pi r = 10\\pi \\Rightarrow r = 5$.",
+      "Standard form: $(x - 2)^2 + (y + 3)^2 = 25$.",
+      "Expand: $x^2 - 4x + 4 + y^2 + 6y + 9 = 25$.",
+      "General form: $x^2 + y^2 - 4x + 6y - 12 = 0$."
+    ]
+  },
+  {
+    "id": "circle_eq_20",
+    "topic_id": "math_geo_circle_eq",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 4,
+    "question": "Find the range of $k$ such that the point $(k, 2)$ lies outside the circle $x^2 + (y-1)^2 = 5$.",
+    "question_zh": "Find the range of $k$ such that the point $(k, 2)$ lies outside the circle $x^2 + (y-1)^2 = 5$.",
+    "answer": "k < -2 or k > 2",
+    "correct_answer": "k < -2 or k > 2",
+    "solution_steps": [
+      "Substitute $(k, 2)$ into the circle inequality $(x)^2 + (y-1)^2 > 5$.",
+      "$k^2 + (2-1)^2 > 5 \\Rightarrow k^2 + 1 > 5$.",
+      "$k^2 > 4 \\Rightarrow k < -2$ or $k > 2$."
+    ],
+    "solution_steps_zh": [
+      "Substitute $(k, 2)$ into the circle inequality $(x)^2 + (y-1)^2 > 5$.",
+      "$k^2 + (2-1)^2 > 5 \\Rightarrow k^2 + 1 > 5$.",
+      "$k^2 > 4 \\Rightarrow k < -2$ or $k > 2$."
+    ]
+  },
+  {
+    "id": "circle_eq_21",
+    "topic_id": "math_geo_circle_eq",
+    "subject": "maths",
+    "level": 7,
+    "type": "short_answer",
+    "marks": 5,
+    "question": "Find the equation of the circle passing through $(0, 0)$, $(4, 0)$, and $(0, 6)$.",
+    "question_zh": "Find the equation of the circle passing through $(0, 0)$, $(4, 0)$, and $(0, 6)$.",
+    "answer": "x^2 + y^2 - 4x - 6y = 0",
+    "correct_answer": "x^2 + y^2 - 4x - 6y = 0",
+    "solution_steps": [
+      "General equation: $x^2 + y^2 + Dx + Ey + F = 0$.",
+      "Through $(0,0) \\Rightarrow F = 0$.",
+      "Through $(4,0) \\Rightarrow 16 + 0 + 4D + 0 = 0 \\Rightarrow D = -4$.",
+      "Through $(0,6) \\Rightarrow 0 + 36 + 0 + 6E = 0 \\Rightarrow E = -6$.",
+      "Equation: $x^2 + y^2 - 4x - 6y = 0$."
+    ],
+    "solution_steps_zh": [
+      "General equation: $x^2 + y^2 + Dx + Ey + F = 0$.",
+      "Through $(0,0) \\Rightarrow F = 0$.",
+      "Through $(4,0) \\Rightarrow 16 + 0 + 4D + 0 = 0 \\Rightarrow D = -4$.",
+      "Through $(0,6) \\Rightarrow 0 + 36 + 0 + 6E = 0 \\Rightarrow E = -6$.",
+      "Equation: $x^2 + y^2 - 4x - 6y = 0$."
+    ]
+  },
+  {
+    "id": "circle_eq_22",
+    "topic_id": "math_geo_circle_eq",
+    "subject": "maths",
+    "level": 7,
+    "type": "short_answer",
+    "marks": 5,
+    "question": "Given points $A(0,0)$, $B(4,0)$, $C(0,6)$, and $D(k, 6)$ are concyclic. Find the non-zero value of $k$.",
+    "question_zh": "已知點 $A(0,0)$, $B(4,0)$, $C(0,6)$ 及 $D(k, 6)$ 共圓。求 $k$ 的非零值。",
+    "answer": "4",
+    "correct_answer": "4",
+    "solution_steps": [
+      "Since $A(0,0)$, $B(4,0)$, and $C(0,6)$ form a right-angled triangle at the origin, the circle passing through them has $BC$ as its diameter.",
+      "Center of circle = Midpoint of $AB$? No, midpoint of $BC$ which is $( (4+0)/2, (0+6)/2 ) = (2, 3)$.",
+      "Radius squared $r^2 = (2-0)^2 + (3-0)^2 = 4 + 9 = 13$.",
+      "Equation of the circle: $(x-2)^2 + (y-3)^2 = 13$.",
+      "Substitute $D(k, 6)$ into the equation: $(k-2)^2 + (6-3)^2 = 13$.",
+      "$(k-2)^2 + 9 = 13 \\implies (k-2)^2 = 4$.",
+      "$k-2 = 2$ or $k-2 = -2$.",
+      "$k = 4$ or $k = 0$. Since $k$ is non-zero, $k = 4$."
+    ],
+    "solution_steps_zh": [
+      "由於 $A(0,0)$, $B(4,0)$ 和 $C(0,6)$ 在原點構成直角三角形，通過它們的圓以 $BC$ 為直徑。",
+      "圓心 = $BC$ 的中點，即 $( (4+0)/2, (0+6)/2 ) = (2, 3)$。",
+      "半徑平方 $r^2 = (2-0)^2 + (3-0)^2 = 4 + 9 = 13$。",
+      "圓方程：$(x-2)^2 + (y-3)^2 = 13$。",
+      "將 $D(k, 6)$ 代入方程：$(k-2)^2 + (6-3)^2 = 13$。",
+      "$(k-2)^2 + 9 = 13 \\implies (k-2)^2 = 4$。",
+      "$k-2 = 2$ 或 $k-2 = -2$。",
+      "$k = 4$ 或 $k = 0$。由於 $k$ 是非零值，因此 $k = 4$。"
+    ]
+  },
+  {
+    "id": "circle_eq_23",
+    "topic_id": "math_geo_circle_eq",
+    "subject": "maths",
+    "level": 7,
+    "type": "short_answer",
+    "marks": 5,
+    "question": "Find the length of the chord intercepted by the circle $x^2 + y^2 = 25$ on the line $x + y = 1$.",
+    "question_zh": "Find the length of the chord intercepted by the circle $x^2 + y^2 = 25$ on the line $x + y = 1$.",
+    "answer": "7\\sqrt{2}",
+    "correct_answer": "7\\sqrt{2}",
+    "solution_steps": [
+      "Center $(0,0)$, $r=5$. Line $x+y-1=0$.",
+      "Perpendicular distance from $(0,0)$ to line $d = \\frac{|0+0-1|}{\\sqrt{1^2+1^2}} = \\frac{1}{\\sqrt{2}}$.",
+      "Half chord length $c = \\sqrt{r^2 - d^2} = \\sqrt{25 - 0.5} = \\sqrt{24.5}$.",
+      "Total length $= 2 \\times \\sqrt{24.5} = 2 \\times \\sqrt{\\frac{49}{2}} = \\frac{14}{\\sqrt{2}} = 7\\sqrt{2}$."
+    ],
+    "solution_steps_zh": [
+      "Center $(0,0)$, $r=5$. Line $x+y-1=0$.",
+      "Perpendicular distance from $(0,0)$ to line $d = \\frac{|0+0-1|}{\\sqrt{1^2+1^2}} = \\frac{1}{\\sqrt{2}}$.",
+      "Half chord length $c = \\sqrt{r^2 - d^2} = \\sqrt{25 - 0.5} = \\sqrt{24.5}$.",
+      "Total length $= 2 \\times \\sqrt{24.5} = 2 \\times \\sqrt{\\frac{49}{2}} = \\frac{14}{\\sqrt{2}} = 7\\sqrt{2}$."
+    ]
+  },
+  {
+    "id": "circle_eq_24",
+    "topic_id": "math_geo_circle_eq",
+    "subject": "maths",
+    "level": 7,
+    "type": "short_answer",
+    "marks": 5,
+    "question": "Line $y = mx$ intersects the circle $x^2 + y^2 - 4x - 4y = 0$ at origin $O$ and point $A$. Find the locus of the midpoint of $OA$.",
+    "question_zh": "直線 $y = mx$ 與圓 $x^2 + y^2 - 4x - 4y = 0$ 相交於原點 $O$ 及點 $A$。求 $OA$ 中點的軌跡。",
+    "answer": "x^2 + y^2 - 2x - 2y = 0",
+    "correct_answer": "x^2 + y^2 - 2x - 2y = 0",
+    "solution_steps": [
+      "Let the midpoint of $OA$ be $(X, Y)$. Then $A = (2X, 2Y)$.",
+      "Substitute $A(2X, 2Y)$ into the circle equation $x^2 + y^2 - 4x - 4y = 0$.",
+      "$(2X)^2 + (2Y)^2 - 4(2X) - 4(2Y) = 0$.",
+      "$4X^2 + 4Y^2 - 8X - 8Y = 0$.",
+      "Divide by 4: $X^2 + Y^2 - 2X - 2Y = 0$.",
+      "The locus of the midpoint is $x^2 + y^2 - 2x - 2y = 0$."
+    ],
+    "solution_steps_zh": [
+      "設 $OA$ 的中點為 $(X, Y)$。則 $A = (2X, 2Y)$。",
+      "將 $A(2X, 2Y)$ 代入圓方程 $x^2 + y^2 - 4x - 4y = 0$。",
+      "$(2X)^2 + (2Y)^2 - 4(2X) - 4(2Y) = 0$。",
+      "$4X^2 + 4Y^2 - 8X - 8Y = 0$。",
+      "除以 4：$X^2 + Y^2 - 2X - 2Y = 0$。",
+      "中點的軌跡為 $x^2 + y^2 - 2x - 2y = 0$。"
+    ]
+  },
+  {
+    "id": "circle_eq_25",
+    "topic_id": "math_geo_circle_eq",
+    "subject": "maths",
+    "level": 7,
+    "type": "short_answer",
+    "marks": 5,
+    "question": "Find the length of the tangent from the point $(8, 6)$ to the circle $x^2 + y^2 - 4x - 6y + 4 = 0$.",
+    "question_zh": "Find the length of the tangent from the point $(8, 6)$ to the circle $x^2 + y^2 - 4x - 6y + 4 = 0$.",
+    "answer": "6",
+    "correct_answer": "6",
+    "solution_steps": [
+      "The squared length of the tangent from $(x_1, y_1)$ to $x^2 + y^2 + Dx + Ey + F = 0$ is $L^2 = x_1^2 + y_1^2 + Dx_1 + Ey_1 + F$.",
+      "$L^2 = 8^2 + 6^2 - 4(8) - 6(6) + 4 = 64 + 36 - 32 - 36 + 4 = 36$.",
+      "$L = \\sqrt{36} = 6$."
+    ],
+    "solution_steps_zh": [
+      "The squared length of the tangent from $(x_1, y_1)$ to $x^2 + y^2 + Dx + Ey + F = 0$ is $L^2 = x_1^2 + y_1^2 + Dx_1 + Ey_1 + F$.",
+      "$L^2 = 8^2 + 6^2 - 4(8) - 6(6) + 4 = 64 + 36 - 32 - 36 + 4 = 36$.",
+      "$L = \\sqrt{36} = 6$."
+    ]
+  },
+  {
+    "id": "circle_eq_26",
+    "topic_id": "math_geo_circle_eq",
+    "subject": "maths",
+    "level": 7,
+    "type": "short_answer",
+    "marks": 5,
+    "question": "A circle is tangent to the x-axis at $(4, 0)$ and passes through the point $(0, 2)$. Find its equation.",
+    "question_zh": "A circle is tangent to the x-axis at $(4, 0)$ and passes through the point $(0, 2)$. Find its equation.",
+    "answer": "(x - 4)^2 + (y - 5)^2 = 25",
+    "correct_answer": "(x - 4)^2 + (y - 5)^2 = 25",
+    "solution_steps": [
+      "Since it is tangent to the x-axis at $(4, 0)$, the center must be $(4, k)$ and the radius $r = |k|$.",
+      "The distance from $(4, k)$ to $(0, 2)$ must be $r = |k|$.",
+      "$(4-0)^2 + (k-2)^2 = k^2$.",
+      "$16 + k^2 - 4k + 4 = k^2$.",
+      "$20 - 4k = 0 \\Rightarrow k = 5$.",
+      "Equation: $(x-4)^2 + (y-5)^2 = 25$."
+    ],
+    "solution_steps_zh": [
+      "Since it is tangent to the x-axis at $(4, 0)$, the center must be $(4, k)$ and the radius $r = |k|$.",
+      "The distance from $(4, k)$ to $(0, 2)$ must be $r = |k|$.",
+      "$(4-0)^2 + (k-2)^2 = k^2$.",
+      "$16 + k^2 - 4k + 4 = k^2$.",
+      "$20 - 4k = 0 \\Rightarrow k = 5$.",
+      "Equation: $(x-4)^2 + (y-5)^2 = 25$."
+    ]
+  },
+  {
+    "id": "circle_eq_27",
+    "topic_id": "math_geo_circle_eq",
+    "subject": "maths",
+    "level": 7,
+    "type": "short_answer",
+    "marks": 5,
+    "question": "Find the equation of the circle passing through $(1, 2)$ and $(3, 4)$ with its center on the line $y = 2x$.",
+    "question_zh": "Find the equation of the circle passing through $(1, 2)$ and $(3, 4)$ with its center on the line $y = 2x$.",
+    "answer": "(x - 1.4)^2 + (y - 2.8)^2 = 0.8",
+    "correct_answer": "(x - 1.4)^2 + (y - 2.8)^2 = 0.8",
+    "solution_steps": [
+      "Let center be $(h, 2h)$.",
+      "Distance to $(1,2)$ squared = Distance to $(3,4)$ squared.",
+      "$(h-1)^2 + (2h-2)^2 = (h-3)^2 + (2h-4)^2$.",
+      "$h^2 - 2h + 1 + 4h^2 - 8h + 4 = h^2 - 6h + 9 + 4h^2 - 16h + 16$.",
+      "$-10h + 5 = -22h + 25 \\Rightarrow 12h = 20 \\Rightarrow h = 5/3$.",
+      "Center $(5/3, 10/3)$, $r^2 = (5/3 - 1)^2 + (10/3 - 2)^2 = (2/3)^2 + (4/3)^2 = 20/9$."
+    ],
+    "solution_steps_zh": [
+      "Let center be $(h, 2h)$.",
+      "Distance to $(1,2)$ squared = Distance to $(3,4)$ squared.",
+      "$(h-1)^2 + (2h-2)^2 = (h-3)^2 + (2h-4)^2$.",
+      "$h^2 - 2h + 1 + 4h^2 - 8h + 4 = h^2 - 6h + 9 + 4h^2 - 16h + 16$.",
+      "$-10h + 5 = -22h + 25 \\Rightarrow 12h = 20 \\Rightarrow h = 5/3$.",
+      "Center $(5/3, 10/3)$, $r^2 = (5/3 - 1)^2 + (10/3 - 2)^2 = (2/3)^2 + (4/3)^2 = 20/9$."
+    ]
+  },
+  {
+    "id": "circle_eq_28",
+    "topic_id": "math_geo_circle_eq",
+    "subject": "maths",
+    "level": 7,
+    "type": "short_answer",
+    "marks": 5,
+    "question": "Find $k$ such that the circle $x^2 + y^2 = 1$ and $(x-k)^2 + y^2 = 9$ touch each other internally.",
+    "question_zh": "Find $k$ such that the circle $x^2 + y^2 = 1$ and $(x-k)^2 + y^2 = 9$ touch each other internally.",
+    "answer": "k = 2 or k = -2",
+    "correct_answer": "k = 2 or k = -2",
+    "solution_steps": [
+      "Centers: $O_1(0,0), O_2(k,0)$. Radii: $r_1=1, r_2=3$.",
+      "For internal contact, distance between centers $d = |r_2 - r_1|$.",
+      "$\\sqrt{(k-0)^2 + 0} = |3 - 1| = 2$.",
+      "$|k| = 2 \\Rightarrow k = \\pm 2$."
+    ],
+    "solution_steps_zh": [
+      "Centers: $O_1(0,0), O_2(k,0)$. Radii: $r_1=1, r_2=3$.",
+      "For internal contact, distance between centers $d = |r_2 - r_1|$.",
+      "$\\sqrt{(k-0)^2 + 0} = |3 - 1| = 2$.",
+      "$|k| = 2 \\Rightarrow k = \\pm 2$."
+    ]
+  },
+  {
+    "id": "circle_eq_29",
+    "topic_id": "math_geo_circle_eq",
+    "subject": "maths",
+    "level": 7,
+    "type": "short_answer",
+    "marks": 5,
+    "question": "Find the equation of the circle passing through $A(4, 1)$, $B(-2, 3)$, and $C(0, -1)$.",
+    "question_zh": "Find the equation of the circle passing through $A(4, 1)$, $B(-2, 3)$, and $C(0, -1)$.",
+    "answer": "x^2 + y^2 - 2x - 4y - 5 = 0",
+    "correct_answer": "x^2 + y^2 - 2x - 4y - 5 = 0",
+    "solution_steps": [
+      "Assume $x^2 + y^2 + Dx + Ey + F = 0$.",
+      "At $C(0, -1)$: $1 - E + F = 0 \\Rightarrow F = E - 1$.",
+      "At $A(4, 1)$: $16 + 1 + 4D + E + F = 0 \\Rightarrow 4D + E + F = -17$.",
+      "At $B(-2, 3)$: $4 + 9 - 2D + 3E + F = 0 \\Rightarrow -2D + 3E + F = -13$.",
+      "Substitute $F = E - 1$ into eq A and B.",
+      "4D + 2E = -16 \\Rightarrow 2D + E = -8$.",
+      "-2D + 4E = -12 \\Rightarrow -D + 2E = -6$.",
+      "Solve: $5E = -20 \\Rightarrow E = -4, D = -2, F = -5$.",
+      "Equation: $x^2 + y^2 - 2x - 4y - 5 = 0$."
+    ],
+    "solution_steps_zh": [
+      "Assume $x^2 + y^2 + Dx + Ey + F = 0$.",
+      "At $C(0, -1)$: $1 - E + F = 0 \\Rightarrow F = E - 1$.",
+      "At $A(4, 1)$: $16 + 1 + 4D + E + F = 0 \\Rightarrow 4D + E + F = -17$.",
+      "At $B(-2, 3)$: $4 + 9 - 2D + 3E + F = 0 \\Rightarrow -2D + 3E + F = -13$.",
+      "Substitute $F = E - 1$ into eq A and B.",
+      "4D + 2E = -16 \\Rightarrow 2D + E = -8$.",
+      "-2D + 4E = -12 \\Rightarrow -D + 2E = -6$.",
+      "Solve: $5E = -20 \\Rightarrow E = -4, D = -2, F = -5$.",
+      "Equation: $x^2 + y^2 - 2x - 4y - 5 = 0$."
+    ]
+  },
+  {
+    "id": "circle_eq_30",
+    "topic_id": "math_geo_circle_eq",
+    "subject": "maths",
+    "level": 7,
+    "type": "short_answer",
+    "marks": 5,
+    "question": "Find the equations of the two tangents from the origin $(0,0)$ to the circle $x^2 + y^2 - 10x - 10y + 25 = 0$.",
+    "question_zh": "求從原點 $(0,0)$ 到圓 $x^2 + y^2 - 10x - 10y + 25 = 0$ 的兩條切線的方程。",
+    "answer": "x = 0 and y = 0",
+    "correct_answer": "x = 0 and y = 0",
+    "solution_steps": [
+      "Equation of the circle: $(x-5)^2 + (y-5)^2 = 5^2$. Center is $(5, 5)$, radius is 5.",
+      "Let a tangent from $(0,0)$ be $ax + by = 0$.",
+      "The distance from $(5, 5)$ to $ax + by = 0$ is equal to the radius 5.",
+      "$\\frac{|5a + 5b|}{\\sqrt{a^2 + b^2}} = 5 \\implies |a + b| = \\sqrt{a^2 + b^2}$.",
+      "Squaring both sides: $(a+b)^2 = a^2 + b^2 \\implies a^2 + 2ab + b^2 = a^2 + b^2$.",
+      "$2ab = 0 \\implies a = 0$ or $b = 0$.",
+      "If $a = 0$, the equation is $y = 0$. If $b = 0$, the equation is $x = 0$.",
+      "The tangents are $x = 0$ and $y = 0$."
+    ],
+    "solution_steps_zh": [
+      "圓方程為：$(x-5)^2 + (y-5)^2 = 5^2$。圓心為 $(5, 5)$，半徑為 5。",
+      "設從 $(0,0)$ 出發的切線為 $ax + by = 0$。",
+      "從 $(5, 5)$ 到 $ax + by = 0$ 的距離等於半徑 5。",
+      "$\\frac{|5a + 5b|}{\\sqrt{a^2 + b^2}} = 5 \\implies |a + b| = \\sqrt{a^2 + b^2}$。",
+      "兩邊平方：$(a+b)^2 = a^2 + b^2 \\implies a^2 + 2ab + b^2 = a^2 + b^2$。",
+      "$2ab = 0 \\implies a = 0$ 或 $b = 0$。",
+      "若 $a = 0$，方程為 $y = 0$。若 $b = 0$，方程為 $x = 0$。",
+      "切線分別為 $x = 0$ 及 $y = 0$。"
+    ]
+  }
+]

@@ -51,6 +51,11 @@ Image Attached: {{HAS_IMAGE}}
    - Trigger: Student asks for "vocab for [Topic]", "words for [Topic]", "golden sentences".
    - Params: { "topic": "Topic Name" }
 
+4. **WRITING_EXEMPLAR (LAB)**:
+   - Trigger: Student asks for "model answers", "5** essays", "exemplars", "how to write a proposal/essay", "masterclass samples".
+   - Action: "LAUNCH_MODULE"
+   - Module: "WRITING_LAB"
+
 [STRICT]: If context shows diagnostic_completed is false, any request for LAB or EXAM MUST include a bridge_text that politely explains: "I'd love to help with that! However, I first need to assess your current level with a quick 15-minute Study Calibration to unlock your roadmap. How about we start there first?"
 [STRICT]: If the student message contains "diagnostic" or "calibration", it is ALWAYS ONBOARDING.
 [STRICT]: If the student asks for a specific SUBJECT (Speaking, Reading, Writing, Listening, Maths, Chinese) or "practice", route to LAB or EXAM_ROUTER. 
@@ -79,12 +84,12 @@ class IntentRouter {
         .replace('{{IS_NEW}}', context.is_new_student || false)
         .replace('{{ACTIVE_EXAM}}', context.has_active_exam || false);
 
-      const result = await GenerativeAIService.generateContent(prompt, {
+      const finalResult = await GenerativeAIService.generateContent(prompt, {
         model: "gemini-2.0-flash",
         generationConfig: { responseMimeType: "application/json" }
-      }, 1); // Only 1 attempt for router (fail fast)
+      }, 1); 
 
-      const response = result.response;
+      const response = finalResult.response;
       const text = response.text();
 
       console.log(`[IntentRouter] Raw Response: ${text} `);

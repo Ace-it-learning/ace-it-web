@@ -1,0 +1,168 @@
+{
+  "type": "LISTENING",
+  "topic": "listening_weekly",
+  "title": "Sham Shui Po Culinary Journey",
+  "prediction_metadata": {
+    "topic_name": "Sham Shui Po Culinary Journey",
+    "sub_topics": [
+      {
+        "id": "st1",
+        "name": "Traditional Snacks",
+        "category": "Food Type",
+        "synonyms": [
+          "Street food",
+          "Local delicacies"
+        ],
+        "is_distractor": false,
+        "hint": "Think about the history of the district."
+      },
+      {
+        "id": "st2",
+        "name": "Restaurant Recommendations",
+        "category": "Location",
+        "synonyms": [
+          "Eateries",
+          "Dining spots"
+        ],
+        "is_distractor": false,
+        "hint": "Pay attention to the names mentioned."
+      },
+      {
+        "id": "st3",
+        "name": "Chef Interviews",
+        "category": "People",
+        "synonyms": [
+          "Cooks",
+          "Culinary experts"
+        ],
+        "is_distractor": false,
+        "hint": "Focus on their personal stories."
+      },
+      {
+        "id": "st4",
+        "name": "Food Critics",
+        "category": "People",
+        "synonyms": [
+          "Reviewers",
+          "Gastronomy analysts"
+        ],
+        "is_distractor": true,
+        "hint": "They offer a specific viewpoint."
+      },
+      {
+        "id": "st5",
+        "name": "Cooking Techniques",
+        "category": "Process",
+        "synonyms": [
+          "Preparation methods",
+          "Culinary skills"
+        ],
+        "is_distractor": true,
+        "hint": "Focus on specific methods."
+      }
+    ]
+  },
+  "reading_passage": "[SCENE START]\n[SOUND of bustling street market]\nNarrator: Welcome to the \"Hong Kong Foodie Adventures\" podcast! Today, we're diving deep into the vibrant culinary scene of Sham Shui Po, a district brimming with history and delectable eats.\n[SOUND of sizzling food]\nNarrator: Joining me is local food blogger, Sarah Lee. Sarah, thanks for being here.\nSarah: It's my pleasure! Sham Shui Po is a food lover's paradise.\nNarrator: Absolutely. Let's start with the basics. For someone new to the area, what are some must-try dishes?\nSarah: Definitely the cheung fun from Hop Yik Tai. Their smooth rice noodle rolls with sesame sauce and sweet sauce are legendary. Then there's the tofu fa from Kung Wo Beancurd Factory. It's silky smooth and melts in your mouth.\nNarrator: Those sound amazing! Any recommendations for a more substantial meal?\nSarah: You can't miss the wonton noodles from Mak Man Kee Noodle Shop. They've been serving up delicious wontons for generations. And for something a bit different, try the snake soup from Ser Wong Fun. It's a Cantonese delicacy.\nNarrator: Snake soup? That's adventurous! What makes Sham Shui Po's food scene so special?\nSarah: It's the authenticity. Many of these places are family-run businesses that have been around for decades, using traditional recipes passed down through generations. They care about quality and preserving the local food culture.\nNarrator: That's wonderful. Are there any hidden gems that tourists might overlook?\nSarah: Definitely. Try the pineapple bun with butter from Kam Wah Cafe. It's a simple but incredibly satisfying treat. And for something savory, check out the curry fish balls from a street vendor near Apliu Street. They're cheap, cheerful, and full of flavor.\nNarrator: Great tips! Now, let's talk about the history behind these dishes. Can you share some insights?\nSarah: Well, cheung fun originated as a simple street food for laborers. It was cheap, filling, and easy to eat on the go. Tofu fa, on the other hand, has a longer history, dating back to ancient China. It's a delicate dessert that's enjoyed throughout the region.\nNarrator: Fascinating! And what about the future of Sham Shui Po's food scene? Are you optimistic?\nSarah: Absolutely! Despite the challenges of rising rents and changing tastes, I believe that Sham Shui Po's food culture will continue to thrive. There's a strong sense of community here, and people are passionate about preserving their culinary heritage.\nNarrator: That's inspiring. Sarah, thank you so much for sharing your insights. This has been a delicious journey through Sham Shui Po!\nSarah: My pleasure!\n[SOUND of street market fades out]\nNarrator: That's all for this episode of \"Hong Kong Foodie Adventures.\" Join us next time as we explore another exciting culinary destination!\n[SCENE END]",
+  "conceptual_explanation": "This listening exercise explores the vibrant food culture of Sham Shui Po, a district in Hong Kong known for its authentic and diverse culinary offerings. The exercise focuses on identifying key food recommendations, understanding the history and significance of local dishes, and appreciating the perspectives of local food experts.",
+  "key_points": [
+    "Taking concise notes on specific dishes and locations.",
+    "Identifying the speaker's opinions and attitudes towards different foods and establishments.",
+    "Distinguishing between must-try dishes and hidden gems.",
+    "Understanding the historical context of the food scene.",
+    "Inferring the cultural significance of traditional foods."
+  ],
+  "interactive_tasks": [
+    {
+      "type": "MCQ",
+      "question": "What is Sarah Lee's profession?",
+      "options": [
+        "Restaurant Owner",
+        "Food Critic",
+        "Local Food Blogger",
+        "Tour Guide"
+      ],
+      "answer": "Local Food Blogger",
+      "explanation": "Sarah Lee is introduced as a local food blogger who is familiar with the Sham Shui Po food scene."
+    },
+    {
+      "type": "GAP_FILL",
+      "question": "According to Sarah, the _________ from Hop Yik Tai are legendary.",
+      "answer": "cheung fun",
+      "explanation": "Sarah mentions that the cheung fun from Hop Yik Tai are legendary."
+    },
+    {
+      "type": "FORM_FILLING",
+      "question": "Complete the table with recommendations from the podcast:\n\n| Dish          | Restaurant/Vendor           |\n|---------------|-------------------------------|\n| Tofu fa       | _______________________________ |\n| ___________  | Mak Man Kee Noodle Shop       |\n| Snake Soup    | _______________________________ |",
+      "answer": {
+        "Tofu fa": "Kung Wo Beancurd Factory",
+        "___________": "Wonton Noodles",
+        "Snake Soup": "Ser Wong Fun"
+      },
+      "explanation": "The table should be completed with the restaurant/vendor names mentioned in the podcast for each dish."
+    },
+    {
+      "type": "SHORT_RESPONSE",
+      "question": "What makes Sham Shui Po's food scene special, according to Sarah?",
+      "answer": "The authenticity and the family-run businesses that have been around for decades, using traditional recipes.",
+      "explanation": "Sarah emphasizes the authenticity and the preservation of local food culture as key aspects of Sham Shui Po's food scene."
+    },
+    {
+      "type": "MCQ",
+      "question": "Which of the following is mentioned as a 'hidden gem' in Sham Shui Po?",
+      "options": [
+        "Wonton Noodles from Mak Man Kee",
+        "Snake Soup from Ser Wong Fun",
+        "Pineapple Bun with Butter from Kam Wah Cafe",
+        "Cheung Fun from Hop Yik Tai"
+      ],
+      "answer": "Pineapple Bun with Butter from Kam Wah Cafe",
+      "explanation": "The pineapple bun with butter from Kam Wah Cafe is specifically mentioned as a hidden gem."
+    },
+    {
+      "type": "GAP_FILL",
+      "question": "Cheung fun originated as a simple street food for _________.",
+      "answer": "laborers",
+      "explanation": "The podcast states that cheung fun originated as a simple street food for laborers."
+    },
+    {
+      "type": "FORM_FILLING",
+      "question": "Fill in the missing word: 'There's a strong sense of _________ here, and people are passionate about preserving their culinary heritage.'",
+      "answer": "community",
+      "explanation": "The missing word is 'community'.",
+      "options": [
+        "belonging",
+        "community",
+        "ownership"
+      ]
+    },
+    {
+      "type": "SHORT_RESPONSE",
+      "question": "According to the conversation, what challenge(s) does Sham Shui Po's food scene face?",
+      "answer": "Rising rents and changing tastes.",
+      "explanation": "The podcast highlights rising rents and changing tastes as challenges to the food scene."
+    },
+    {
+      "type": "MCQ",
+      "question": "What is the general tone of Sarah's voice when she talks about Sham Shui Po's food culture?",
+      "options": [
+        "Pessimistic",
+        "Neutral",
+        "Optimistic",
+        "Indifferent"
+      ],
+      "answer": "Optimistic",
+      "explanation": "Sarah expresses optimism about the future of Sham Shui Po's food scene, despite the challenges."
+    },
+    {
+      "type": "GAP_FILL",
+      "question": "The podcast is part of a series called \"Hong Kong Foodie _________\"",
+      "answer": "Adventures",
+      "explanation": "The podcast is called \"Hong Kong Foodie Adventures\"."
+    }
+  ],
+  "success_feedback": "Well done! You've navigated the culinary landscape of Sham Shui Po and demonstrated excellent listening comprehension skills!",
+  "suggested_next_steps": [
+    "Try Reading challenge: Read an article about the history of Hong Kong street food.",
+    "Explore another Listening Lab focusing on a different district in Hong Kong."
+  ]
+}

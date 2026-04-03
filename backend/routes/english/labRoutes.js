@@ -33,11 +33,11 @@ router.get('/listening/:id', async (req, res) => {
 
 // POST /api/lab/generate
 router.post('/generate', async (req, res) => {
-    const { topic, focus, level, uid } = req.body;
-    console.log(`[Lab] Generating lesson for topic: ${topic}, user: ${uid}, level: ${level}`);
+    const { topic, focus, level, uid, isFactory } = req.body;
+    console.log(`[Lab] Generating lesson for topic: ${topic}, user: ${uid}, level: ${level}, isFactory: ${isFactory}`);
 
     try {
-        const lesson = await LabService.generateLesson({ topic, focus, level, uid });
+        const lesson = await LabService.generateLesson({ topic, focus, level, uid, isFactory });
         res.json(lesson);
     } catch (e) {
         console.error("Lab Generation API Error:", e);
@@ -168,7 +168,7 @@ Return a SINGLE JSON OBJECT where keys are the task IDs.
 Format: { "id": { "correct": boolean, "feedback": "..." } }`;
 
         const result = await GenerativeAIService.generateContent(prompt, {
-            model: "gemini-2.0-flash",
+            model: "gemini-2.5-pro",
             generationConfig: { responseMimeType: "application/json" }
         });
 

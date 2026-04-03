@@ -3,9 +3,9 @@ import { Sparkles, Loader2, X, ChevronRight, Info } from 'lucide-react';
 import { useLanguage } from '../../context/LanguageContext';
 import { useAuth } from '../../context/AuthContext';
 import { useAvatar } from '../../context/AvatarContext';
-import { SafeInlineMath, SafeBlockMath } from './SafeMath';
 import 'katex/dist/katex.min.css';
-import { formatNumbers, sanitizeMath, prepareMathText, splitContentByDelimiters, looksLikeMath } from '../../utils/mathFormattingUtils';
+import { formatNumbers } from '../../utils/mathFormattingUtils';
+import MathRenderer from '../MathRenderer';
 
 const MathStepExplainer = ({ question, fullSolution, targetStep }) => {
     const { t, language } = useLanguage();
@@ -61,31 +61,32 @@ const MathStepExplainer = ({ question, fullSolution, targetStep }) => {
         const parts = splitContentByDelimiters(cleanText);
 
         return (
-            <div className="space-y-4 font-sans text-slate-700">
+            <div className="flex flex-wrap items-baseline gap-1 font-sans text-slate-700 leading-relaxed mastery-logic-container">
                 {parts.map((part, i) => {
                     if (!part) return null;
 
-                    const isBlock = (part.startsWith('\\[') && part.endsWith('\\]')) || (part.startsWith('$$') && part.endsWith('$$'));
-                    const isInline = (part.startsWith('\\(') && part.endsWith('\\)')) || (part.startsWith('$') && part.endsWith('$'));
+                    // v1.7.6: Robust regex-based detection for math parts
+                    const mathMatch = part.trim().match(/^(\$\$?|\\\(|\\\[)([\s\S]+?)(\$\$?|\\\)|\\\])$/);
 
-                    if (isBlock || isInline) {
-                        let math = '';
-                        if (part.startsWith('\\[') || part.startsWith('\\(')) math = part.slice(2, -2);
-                        else if (part.startsWith('$$')) math = part.slice(2, -2);
-                        else math = part.slice(1, -1);
+                    if (mathMatch) {
+                        const opener = mathMatch[1];
+                        const math = mathMatch[2];
+                        const isBlock = opener === '$$' || opener === '\\[';
 
-                        math = math
+                        const sanitized = math
                             .replace(/\n/g, ' ')
                             .replace(/%/g, '\\%')
                             .replace(/___HKD___/g, '\\text{HK}\\$')
                             .replace(/___USD___/g, '\\$');
 
-                        const labeledMath = sanitizeMath(math);
+                        const labeledMath = sanitizeMath(sanitized);
                         const finalMath = formatNumbers(labeledMath, true);
 
                         if (isBlock) {
                             return (
-                                <SafeBlockMath key={i} math={finalMath} className="my-2" />
+                                <div key={i} className="my-4">
+                                    <SafeBlockMath math={finalMath} />
+                                </div>
                             );
                         } else {
                             return (
@@ -94,9 +95,9 @@ const MathStepExplainer = ({ question, fullSolution, targetStep }) => {
                         }
                     }
 
-                    // For plain text, split by newlines so we can render paragraphs and apply heuristics to standalone lines
+                    // For plain text, split by newlines and render as inline spans
                     return (
-                        <span key={i}>
+                        <span key={i} className="align-baseline">
                             {part.split(/\r?\n/).map((line, lineIdx, arr) => {
                                 if (!line.trim() && arr.length > 1) {
                                     return <br key={lineIdx} />;
@@ -122,11 +123,11 @@ const MathStepExplainer = ({ question, fullSolution, targetStep }) => {
                                     const formattedLine = formatNumbers(trimmedLine);
                                     const html = formattedLine.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>').replace(/\*(.*?)\*/g, '<em>$1</em>')
                                         .replace(/___HKD___/g, 'HK$').replace(/___USD___/g, '$')
-                                        .replace(/\\,/g, ' '); // Strip LaTeX spaces in plain text
+                                        .replace(/\\,/g, ' '); 
 
                                     return (
                                         <React.Fragment key={lineIdx}>
-                                            <span className="whitespace-pre-wrap" dangerouslySetInnerHTML={{ __html: html }} />
+                                            <span className="whitespace-pre-wrap align-baseline" dangerouslySetInnerHTML={{ __html: html }} />
                                             {lineIdx < arr.length - 1 && <span className="mx-0.5" />}
                                         </React.Fragment>
                                     );
@@ -183,12 +184,12 @@ const MathStepExplainer = ({ question, fullSolution, targetStep }) => {
                         </div>
 
                         {/* Content */}
-                        <div className="p-6 space-y-6 max-h-[70vh] overflow-y-auto custom-scrollbar">
+                        <div className="p-6 space-y-6 max-h-[70vh] overflow-y-auto custom-scrollbar mastery-logic-container">
                             {/* Target Step Highlight */}
                             <div className="bg-slate-50 border-l-4 border-indigo-500 p-4 rounded-r-xl">
                                 <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">Target Line</p>
                                 <div className="text-lg font-bold text-slate-800">
-                                    {renderMathText(targetStep)}
+                                    <MathRenderer content={targetStep} />
                                 </div>
                             </div>
 
@@ -204,8 +205,8 @@ const MathStepExplainer = ({ question, fullSolution, targetStep }) => {
                             )}
 
                             {/* Main Explanation */}
-                            <div className="bg-white text-slate-700 leading-relaxed text-sm">
-                                {renderMathText(explanation.explanation)}
+                            <div className="bg-white text-slate-700 deep-dive-text-container text-sm">
+                                <MathRenderer content={explanation.explanation} />
                             </div>
 
                             {/* Pro-Tip */}

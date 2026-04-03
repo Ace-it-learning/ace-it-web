@@ -19,6 +19,8 @@ import DreamProgramsModal from './dashboard/DreamProgramsModal'; // Ace Sir - Dr
 import { getUserMastery, getMasteryHistory } from '../services/masteryService';
 import { Compass } from 'lucide-react';
 import { MathsLab, MathsDiagnostic } from './maths';
+import { SafeInlineMath, SafeBlockMath } from './maths/SafeMath';
+import { splitContentByDelimiters } from '../utils/mathFormattingUtils';
 import PolisherCard from './tutor/PolisherCard';
 import DecoderCard from './tutor/DecoderCard';
 import VocabCard from './tutor/VocabCard';
@@ -43,12 +45,76 @@ const DISPOSABLE_DOMAINS = [
 
 // AuthForm removed - moved to separate file
 
+/**
+ * Robust chat message formatter that handles:
+ * - Markdown bold (**text**)
+ * - LaTeX inline math: $...$ and \(...\)
+ * - LaTeX block math: $$...$$ and \[...\]
+ * - Markdown headers: ### heading
+ * - Cleans stray backslashes from legacy AI messages
+ */
 const formatMessageContent = (content) => {
     if (typeof content !== 'string') return content;
     const cleanContent = content.replace(/\n{3,}/g, '\n\n');
-    return cleanContent.split(/\*\*(.*?)\*\*/g).map((part, index) =>
-        index % 2 === 1 ? <strong key={index} className="font-bold">{part}</strong> : part
-    );
+
+    // Unified regex to split by ALL math delimiter types + bold + headers
+    // Order matters: longest/most-specific patterns first
+    // 1. $$...$$ (block math)
+    // 2. \[...\] (block math, escaped)
+    // 3. \(...\) (inline math, escaped)
+    // 4. $...$ (inline math, non-greedy, must not match $$)
+    // 5. **...** (bold)
+    // 6. ### (header lines)
+    const UNIFIED_REGEX = /(\$\$[\s\S]*?\$\$|\\?\\\[[\s\S]*?\\?\\\]|\\?\\\([\s\S]*?\\?\\\)|(?<!\$)\$(?!\$)(?:[^$\\]|\\.)*?\$(?!\$)|\*\*(.*?)\*\*|^###\s+(.+)$)/gm;
+
+    const parts = cleanContent.split(UNIFIED_REGEX);
+    
+    return parts.map((part, idx) => {
+        if (!part && part !== '') return null;
+        if (part === undefined) return null;
+        const key = `fmt-${idx}`;
+        
+        // Block Math: $$...$$
+        if (part.startsWith('$$') && part.endsWith('$$') && part.length > 4) {
+            const mathStr = part.slice(2, -2).trim();
+            return <SafeBlockMath key={key} math={mathStr} />;
+        }
+        
+        // Block Math: \[...\] (may have optional leading \)
+        if (/^\\?\\\[/.test(part) && /\\?\\\]$/.test(part)) {
+            const mathStr = part.replace(/^\\?\\\[/, '').replace(/\\?\\\]$/, '').trim();
+            return <SafeBlockMath key={key} math={mathStr} />;
+        }
+        
+        // Inline Math: \(...\) (may have optional leading \)
+        if (/^\\?\\\(/.test(part) && /\\?\\\)$/.test(part)) {
+            let mathStr = part.replace(/^\\?\\\(/, '').replace(/\\?\\\)$/, '').trim();
+            // Clean trailing stray backslashes from legacy AI output
+            mathStr = mathStr.replace(/\\+$/, '').trim();
+            return <SafeInlineMath key={key} math={mathStr} />;
+        }
+        
+        // Inline Math: $...$
+        if (part.startsWith('$') && part.endsWith('$') && !part.startsWith('$$') && part.length > 2) {
+            const mathStr = part.slice(1, -1).trim();
+            if (mathStr.length > 0) {
+                return <SafeInlineMath key={key} math={mathStr} />;
+            }
+        }
+
+        // Bold: **text** (captured group from regex)
+        if (part.startsWith('**') && part.endsWith('**')) {
+            return <strong key={key} className="font-bold">{part.slice(2, -2)}</strong>;
+        }
+        
+        // Header: ### heading
+        if (part.startsWith('### ')) {
+            return <div key={key} className="font-bold text-base mt-3 mb-1">{part.slice(4)}</div>;
+        }
+
+        // Regular Text
+        return <span key={key}>{part}</span>;
+    }).filter(Boolean);
 };
 
 const ChatInterface = ({ onOpenQuest }) => {
@@ -75,8 +141,8 @@ const ChatInterface = ({ onOpenQuest }) => {
         }
         if (!hasDiagnostic) {
             return [
-                { label: t('chat.start_calibration'), value: "I want to start the diagnostic test", emoji: "⚡" },
-                { label: t('chat.what_is_ace_it'), value: "What is Ace It?", emoji: "🤔" }
+                { label: t('chat.what_is_ace_it'), value: "What is Ace It?", emoji: "🤔" },
+                { label: t('chat.start_mock'), value: "I want to try a mock exam", emoji: "📝" }
             ];
         } else {
             return [
@@ -256,6 +322,7 @@ const ChatInterface = ({ onOpenQuest }) => {
                                 ? `你好 ${userName}！我係 Ace Sir。聽講你目標係入 **${subject}**？同我講你嘅計劃，我幫你制定 DSE 奪星策略，確保你穩入大學！`
                                 : `你好 ${userName}！我係 Ace Sir。想入邊間大學？同我講你嘅目標，我幫你制定全方位奪星藍圖，助你進軍大學、稱霸 DSE！`;
                         } else if (['english', 'math'].includes(activeAgentId) && !currentHasDiagnostic) {
+                            // Always use greeting_new for new students, which now has no calibration mention
                             initialContent = t('chat.greeting_new', { agentName, userName });
                         } else {
                             initialContent = t('chat.greeting_return', { agentName, userName });
@@ -1379,34 +1446,28 @@ const ChatInterface = ({ onOpenQuest }) => {
                     {activeAgentId !== 'ace' && (
                         <button
                             onClick={() => onOpenQuest(activeAgentId)}
-                            disabled={!hasDiagnostic}
                             className={cn(
                                 "px-6 py-2.5 rounded-full transition-all flex items-center gap-2 shadow-sm border hover:shadow-md active:scale-95 min-w-[120px] justify-center",
-                                hasDiagnostic
-                                    ? "bg-amber-100/80 hover:bg-amber-100 text-amber-700 border-amber-200/50"
-                                    : "bg-gray-100 text-gray-400 cursor-not-allowed opacity-60 border-gray-200"
+                                "bg-amber-100/80 hover:bg-amber-100 text-amber-700 border-amber-200/50"
                             )}
-                            title={hasDiagnostic ? t('nav.view_daily_quest') : t('nav.complete_diagnostic_first')}
+                            title={t('nav.view_daily_quest')}
                         >
-                            {hasDiagnostic ? <Target className="w-5 h-5 stroke-[2.5]" /> : <Lock className="w-4 h-4" />}
+                            <Target className="w-5 h-5 stroke-[2.5]" />
                             <span className="text-sm font-black tracking-wide uppercase whitespace-nowrap">{t('nav.quest')}</span>
                         </button>
                     )}
 
-                    {/* NEW: MOCK EXAM BUTTON - Now always visible but locked if no diagnostic */}
+                    {/* NEW: MOCK EXAM BUTTON - Always Unlocked */}
                     {user && activeAgentId !== 'ace' && (
                         <button
                             onClick={() => navigate('/mock-exam')}
-                            disabled={!hasDiagnostic}
                             className={cn(
                                 "px-6 py-2.5 rounded-full transition-all flex items-center gap-2 shadow-sm border hover:shadow-md active:scale-95 min-w-[120px] justify-center",
-                                hasDiagnostic
-                                    ? "bg-indigo-50 text-indigo-700 border-indigo-200/50"
-                                    : "bg-gray-100 text-gray-400 cursor-not-allowed opacity-60 border-gray-200"
+                                "bg-indigo-50 text-indigo-700 border-indigo-200/50"
                             )}
-                            title={hasDiagnostic ? "Enter Mock Exam Hall" : t('nav.complete_diagnostic_first')}
+                            title="Enter Mock Exam Hall"
                         >
-                            {hasDiagnostic ? <BookOpen className="w-5 h-5 stroke-[2.5]" /> : <Lock className="w-4 h-4" />}
+                            <BookOpen className="w-5 h-5 stroke-[2.5]" />
                             <span className="text-sm font-black tracking-wide uppercase whitespace-nowrap">{t('nav.mock_exam') || "Mock Exam"}</span>
                         </button>
                     )}
@@ -1414,16 +1475,13 @@ const ChatInterface = ({ onOpenQuest }) => {
                     {user && activeAgentId !== 'ace' && (
                         <button
                             onClick={handleOpenMastery}
-                            disabled={!hasDiagnostic}
                             className={cn(
                                 "px-6 py-2.5 rounded-full transition-all flex items-center gap-2 shadow-sm border hover:shadow-md active:scale-95 min-w-[120px] justify-center",
-                                hasDiagnostic
-                                    ? "bg-cyan-50 text-cyan-700 border-cyan-200/50"
-                                    : "bg-gray-100 text-gray-400 cursor-not-allowed opacity-60 border-gray-200"
+                                "bg-cyan-50 text-cyan-700 border-cyan-200/50"
                             )}
-                            title={hasDiagnostic ? t('nav.mastery_compass') : t('nav.complete_diagnostic_first')}
+                            title={t('nav.mastery_compass')}
                         >
-                            {hasDiagnostic ? <Compass className="w-5 h-5 stroke-[2.5]" /> : <Lock className="w-4 h-4" />}
+                            <Compass className="w-5 h-5 stroke-[2.5]" />
                             <span className="text-sm font-black tracking-wide uppercase whitespace-nowrap">
                                 {activeAgentId === 'math' ? t('math_ability.title') : t('nav.mastery_compass')}
                             </span>
@@ -1447,10 +1505,7 @@ const ChatInterface = ({ onOpenQuest }) => {
 
                 <div className="flex items-center gap-3">
                     <div className="text-xs font-bold text-primary/60 dark:text-primary/40 uppercase tracking-widest hidden sm:block text-right min-w-[120px]">
-                        {avatarState === 'THINKING' ? t('chat.ai_thinking') :
-                            studentState === 'TALKING' ? t('chat.you_speaking') :
-                                studentState === 'STUDYING' ? t('chat.you_studying') :
-                                    ''}
+                        {/* Status text removed at user request */}
                     </div>
                     {/* Clear History Button */}
                     {user && (
@@ -1554,12 +1609,12 @@ const ChatInterface = ({ onOpenQuest }) => {
                                 {msg.image && (
                                     <img src={msg.image.preview} alt="Uploaded handwriting" className="max-w-xs rounded-lg border border-black/10 shadow-sm" />
                                 )}
-                                <p className={cn(
+                                <div className={cn(
                                     "text-[#1d130c] dark:text-white whitespace-pre-wrap transition-all",
                                     isEnlarged ? "text-[16px] leading-relaxed" : "text-[14px] leading-snug"
                                 )}>
                                     {formatMessageContent(msg.content)}
-                                </p>
+                                </div>
                                 {/* Custom Component: Active Mock List */}
                                 {msg.customComponent === 'active_mock_list' && (
                                     <div className="mt-4 grid gap-2">
@@ -1603,6 +1658,8 @@ const ChatInterface = ({ onOpenQuest }) => {
                                                 if (params.topic) searchParams.set('topic', params.topic);
                                                 if (params.level) searchParams.set('level', params.level);
                                                 navigate(`/maths-lab?${searchParams.toString()}`);
+                                            } else if (payload.module === 'WRITING_LAB') {
+                                                navigate('/writing-lab');
                                             } else {
                                                 const params = payload.params || {};
                                                 const searchParams = new URLSearchParams();

@@ -202,21 +202,6 @@ const MathsLearningPage = () => {
                             <Languages className="w-4 h-4 group-hover:scale-110 transition-transform" />
                             <span className="text-[10px] font-black uppercase tracking-widest">{isChinese ? 'EN' : '中文'}</span>
                         </button>
-
-                        <div className="relative flex items-center">
-                            <select
-                                value={selectedLevel}
-                                onChange={handleLevelChange}
-                                className={`pl-4 pr-8 py-1 rounded-full text-xs font-black uppercase tracking-tighter ${getDifficultyTierDetails(selectedLevel, isChinese).color} appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-1 transition-all`}
-                            >
-                                {[1, 2, 3, 4].map(lvl => (
-                                    <option key={lvl} value={lvl} className="text-slate-800 bg-white">
-                                        {getDifficultyTierDetails(lvl, isChinese).displayName}
-                                    </option>
-                                ))}
-                            </select>
-                            <ChevronDown className="absolute right-2.5 w-3.5 h-3.5 pointer-events-none opacity-60" />
-                        </div>
                     </div>
                 </header>
 
@@ -225,7 +210,7 @@ const MathsLearningPage = () => {
                         <section key={module.module_id} className="space-y-8 animate-in slide-in-from-bottom-4 duration-500">
                             <div className="flex items-center gap-4 border-b border-slate-200 pb-4">
                                 <div className="size-10 bg-indigo-600 rounded-xl flex items-center justify-center text-white font-black text-sm">
-                                    {module.module_id}
+                                    {module.module_id.replace('MOD_', '').replace(/^0+/, '')}
                                 </div>
                                 <h2 className="text-2xl font-black text-slate-900 tracking-tight">
                                     {isChinese ? module.title_zh : module.title}
@@ -234,7 +219,7 @@ const MathsLearningPage = () => {
 
                             <div className="grid grid-cols-1 gap-8">
                                 {module.concepts.map((concept) => (
-                                    <div key={concept.concept_id} className="bg-white p-8 rounded-[2rem] shadow-xl shadow-slate-200/50 border border-slate-100 relative overflow-hidden group hover:border-indigo-200 transition-colors">
+                                    <div key={concept.concept_id} className="bg-white p-8 rounded-[2rem] shadow-xl shadow-slate-200/50 border border-slate-100 relative group hover:border-indigo-200 transition-colors">
                                         <div className="flex flex-col md:flex-row md:items-start justify-between gap-6 relative z-10">
                                             <div className="flex-1 space-y-4">
                                                 <div className="flex items-center gap-2">
@@ -244,9 +229,11 @@ const MathsLearningPage = () => {
                                                     </h3>
                                                 </div>
 
-                                                <div className="p-6 bg-slate-900 rounded-2xl text-white shadow-inner overflow-x-auto text-xl font-medium">
-                                                    {renderTex(concept.formula)}
-                                                </div>
+                                                {concept.formula && (
+                                                    <div className="p-6 bg-slate-900 rounded-2xl text-white shadow-inner overflow-x-auto text-xl font-medium">
+                                                        {renderTex(concept.formula)}
+                                                    </div>
+                                                )}
 
                                                 {concept.variables && (
                                                     <div className="bg-slate-50 p-4 rounded-xl space-y-2">
@@ -259,8 +246,8 @@ const MathsLearningPage = () => {
                                                                     <span className="text-indigo-600 font-bold">{key}</span>
                                                                     <span className="text-xs text-slate-600">
                                                                         {isChinese && concept.variables_zh && concept.variables_zh[key]
-                                                                            ? concept.variables_zh[key]
-                                                                            : val}
+                                                                            ? renderTex(concept.variables_zh[key])
+                                                                            : renderTex(val)}
                                                                     </span>
                                                                 </div>
                                                             ))}
@@ -274,16 +261,32 @@ const MathsLearningPage = () => {
                                                         <span className="text-[10px] font-black uppercase tracking-widest">{t('takeaway')}</span>
                                                     </div>
                                                     <p className="text-sm font-medium text-amber-900 leading-relaxed">
-                                                        {isChinese ? concept.key_takeaway_zh : concept.key_takeaway}
+                                                        {isChinese ? renderTex(concept.key_takeaway_zh) : renderTex(concept.key_takeaway)}
                                                     </p>
                                                 </div>
                                             </div>
 
-                                            {(concept.visual_aid_type || concept.visual_aid || concept.diagram_json) && (
-                                                <div className="md:w-64 shrink-0 rounded-2xl overflow-hidden border border-slate-100 shadow-sm bg-slate-100 flex flex-col p-4 gap-3">
+                                            {(concept.visual_aid_type || concept.visual_aid || concept.diagram_json || concept.visual) && (
+                                                <div className="md:w-80 shrink-0 rounded-2xl border border-slate-100 shadow-sm bg-slate-100 flex flex-col p-4 gap-3">
                                                     {concept.diagram_json ? (
                                                         <div className="bg-white p-2 rounded-xl border border-slate-50 shadow-inner h-48 flex items-center justify-center overflow-hidden">
                                                             <GeometryRenderer data={concept.diagram_json} />
+                                                        </div>
+                                                    ) : concept.visual && concept.visual.includes('<svg') ? (
+                                                        <div className="relative group/img cursor-zoom-in" onClick={() => {
+                                                            setEnlargedImage({ type: 'svg', content: concept.visual });
+                                                        }}>
+                                                            <div className="w-full h-48 flex items-center justify-center bg-white rounded-lg p-2">
+                                                                <div 
+                                                                    className="w-full h-full flex items-center justify-center"
+                                                                    dangerouslySetInnerHTML={{ __html: concept.visual }} 
+                                                                />
+                                                            </div>
+                                                            <div className="absolute inset-0 bg-black/0 group-hover/img:bg-black/5 flex items-center justify-center opacity-0 group-hover/img:opacity-100 transition-all">
+                                                                <div className="bg-white/90 p-2 rounded-full shadow-lg">
+                                                                    <Maximize2 className="w-4 h-4 text-slate-900" />
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     ) : (
                                                         <div className="relative group/img cursor-zoom-in" onClick={() => setEnlargedImage(concept.visual_aid || `/static/assets/${concept.visual_aid_type}.png`)}>
@@ -303,7 +306,13 @@ const MathsLearningPage = () => {
 
                                                     {!concept.diagram_json && (
                                                         <button
-                                                            onClick={() => setEnlargedImage(concept.visual_aid || `/static/assets/${concept.visual_aid_type}.png`)}
+                                                            onClick={() => {
+                                                                if (concept.visual && concept.visual.includes('<svg')) {
+                                                                    setEnlargedImage({ type: 'svg', content: concept.visual });
+                                                                } else {
+                                                                    setEnlargedImage(concept.visual_aid || `/static/assets/${concept.visual_aid_type}.png`);
+                                                                }
+                                                            }}
                                                             className="w-full py-2 bg-slate-200/50 hover:bg-slate-200 text-slate-600 rounded-xl text-[10px] font-black uppercase tracking-widest flex items-center justify-center gap-2 transition-colors"
                                                         >
                                                             <Maximize2 className="w-3 h-3" /> Enlarge Visual
@@ -413,12 +422,19 @@ const MathsLearningPage = () => {
                             className="relative max-w-5xl w-full max-h-[85vh] bg-white rounded-[2.5rem] overflow-hidden shadow-2xl flex items-center justify-center p-4 md:p-8 animate-in zoom-in-95 duration-300"
                             onClick={(e) => e.stopPropagation()}
                         >
-                            <img
-                                src={enlargedImage}
-                                alt="Enlarged Visual Aid"
-                                className="max-w-full max-h-full object-contain rounded-xl"
-                                onError={(e) => { e.target.src = 'https://placehold.co/800x600?text=Visual+Aid'; }}
-                            />
+                            {enlargedImage && typeof enlargedImage === 'object' && enlargedImage.type === 'svg' ? (
+                                <div 
+                                    className="w-full h-full flex items-center justify-center bg-white p-4"
+                                    dangerouslySetInnerHTML={{ __html: enlargedImage.content }}
+                                />
+                            ) : (
+                                <img
+                                    src={enlargedImage}
+                                    alt="Enlarged Visual Aid"
+                                    className="max-w-full max-h-full object-contain rounded-xl"
+                                    onError={(e) => { e.target.src = 'https://placehold.co/800x600?text=Visual+Aid'; }}
+                                />
+                            )}
                         </div>
 
                         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/60 text-xs font-bold uppercase tracking-[0.2em] flex items-center gap-2">

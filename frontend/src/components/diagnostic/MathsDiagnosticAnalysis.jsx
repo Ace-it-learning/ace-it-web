@@ -122,8 +122,8 @@ const SmartMathText = ({ text }) => {
     const parts = splitContentByDelimiters(cleanText);
 
     return (
-        <div className="space-y-4">
-            <div className="text-slate-700 font-medium font-sans leading-relaxed">
+        <div className="space-y-4 mastery-logic-container">
+            <div className="flex flex-wrap items-baseline gap-1 text-slate-700 font-medium font-sans leading-relaxed">
                 {parts.map((part, i) => {
                     if (!part) return null;
 
@@ -180,7 +180,7 @@ const SmartMathText = ({ text }) => {
 
                                 return (
                                     <React.Fragment key={lineIdx}>
-                                        <div className="flex flex-wrap items-baseline gap-x-1 mb-1">
+                                        <div className="flex flex-wrap items-baseline gap-1 mb-1">
                                             {stepPrefix && (
                                                 <span className={`inline-flex px-2 py-0.5 rounded-md text-[10px] font-black uppercase tracking-wider mr-1 shadow-sm shrink-0 ${stepPrefix.includes('1') ? 'bg-indigo-100 text-indigo-700' :
                                                     stepPrefix.includes('2') ? 'bg-violet-100 text-violet-700' :
@@ -210,7 +210,7 @@ const SmartMathText = ({ text }) => {
 const ConventionalAnalysis = ({ results, language }) => {
     const isChinese = language?.startsWith('zh');
     return (
-        <div className="space-y-10">
+        <div className="space-y-10 mastery-logic-container">
             {results.map((item, idx) => (
                 <div key={idx} className="bg-white rounded-[2rem] border border-slate-200 shadow-sm overflow-hidden group hover:shadow-xl transition-all duration-500">
                     {/* Header: Score & Topic */}

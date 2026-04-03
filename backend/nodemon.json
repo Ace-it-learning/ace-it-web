@@ -7,8 +7,8 @@
         "chat_error.log",
         "error.log",
         "error_log.txt",
-        "generated_mocks/*",
-        "output/*"
+        "generated_mocks",
+        "output"
     ],
     "delay": "2500"
 }

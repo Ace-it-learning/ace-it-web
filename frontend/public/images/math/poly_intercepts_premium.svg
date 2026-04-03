@@ -1,0 +1,20 @@
+<svg width="600" height="250" viewBox="0 0 600 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Axis -->
+      <path d="M50 150 L 550 150" stroke="#94a3b8" stroke-width="2" />
+      <path d="M540 145 L 550 150 L 540 155" stroke="#94a3b8" stroke-width="2" />
+      
+      <!-- Cubic Curve -->
+      <path d="M100 220 C 150 100, 250 80, 300 150 S 450 220, 500 20" stroke="#8b5cf6" stroke-width="4" />
+      
+      <!-- Intercepts -->
+      <circle cx="125" cy="151" r="8" fill="#22c55e" />
+      <text x="125" y="130" text-anchor="middle" fill="#22c55e" font-family="Inter" font-weight="bold" font-size="14">(x - a)</text>
+      
+      <circle cx="300" cy="150" r="8" fill="#22c55e" />
+      <text x="300" y="130" text-anchor="middle" fill="#22c55e" font-family="Inter" font-weight="bold" font-size="14">(x - b)</text>
+      
+      <circle cx="445" cy="149" r="8" fill="#22c55e" />
+      <text x="445" y="130" text-anchor="middle" fill="#22c55e" font-family="Inter" font-weight="bold" font-size="14">(x - c)</text>
+      
+      <text x="520" y="170" fill="#94a3b8" font-family="Inter" font-size="14">x-axis</text>
+    </svg>

@@ -16,11 +16,11 @@ const SpeakingInteractionPage = () => {
         const name = location.state?.topic || questTopic || 'speaking_interaction_general';
         if (name === 'speaking_interaction_general') {
             const dseTopics = [
-                "The impact of social media on teen mental health",
-                "Whether Hong Kong should implement a four-day work week",
-                "The pros and cons of artificial intelligence in education",
-                "How to promote sustainable living among secondary students",
-                "The importance of preserving local heritage in a globalized city"
+                "Housing affordability crisis in Hong Kong",
+                "Environmental concerns about Victoria Harbour",
+                "Rise of local pop music (Canto‑pop) resurgence",
+                "Popularity of e‑scooters on Hong Kong streets",
+                "Impact of the 2024 Hong Kong election on youth engagement"
             ];
             // Stable random selection for this session
             const index = Math.floor(Math.random() * dseTopics.length);
@@ -70,11 +70,18 @@ const SpeakingInteractionPage = () => {
 
     // Dynamic Avatars
     const [candidateAvatars] = useState({
-        Candidate_A: `https://api.dicebear.com/7.x/avataaars/svg?seed=Annie&backgroundColor=b6e3f4`,
-        Candidate_B: `https://api.dicebear.com/7.x/avataaars/svg?seed=Ben&backgroundColor=c0aede`,
-        Candidate_C: `https://api.dicebear.com/7.x/avataaars/svg?seed=Charlie&backgroundColor=ffdfbf`,
+        Candidate_A: `/avatars/annie_avatar_1774534170846.png`,
+        Candidate_B: `/avatars/ben_avatar_1774534233060.png`,
+        Candidate_C: `/avatars/charlie_avatar_1774534209003.png`,
         Examiner: examinerAvatar
     });
+    const candidateDisplayNames = {
+        Examiner: "Miss Janie",
+        Candidate_A: "Annie",
+        Candidate_B: "Ben",
+        Candidate_C: "Charlie",
+        You: "You"
+    };
 
     // Refs
     const synth = useRef(window.speechSynthesis);
@@ -98,6 +105,7 @@ const SpeakingInteractionPage = () => {
     const localTurnQueue = useRef([]);
     const lastAirtimeUpdate = useRef(Date.now());
     const isInternalTransition = useRef(false); // Locking ref to prevent race conditions
+    const lastSpeakerRef = useRef(null);
 
     const [isEasyMode, setIsEasyMode] = useState(!location.state?.mode?.includes('mock')); // Auto-ON for Practice
 
@@ -129,6 +137,7 @@ const SpeakingInteractionPage = () => {
         };
         setExamData(questData);
         setStatus('PREP');
+        setTimeLeft(isQuest ? 180 : 600); // Phase 35: 3 mins for Quest, 10 mins for Practice (DSE Standard)
 
         // Reset airtime
         setAirtime({ 'You': 0, 'Candidate_A': 0, 'Candidate_B': 0, 'Candidate_C': 0 });
@@ -301,20 +310,36 @@ const SpeakingInteractionPage = () => {
             r.onend = () => setMicActive(false);
             r.onresult = (event) => {
                 let finalTranscript = "";
+                let interimTranscript = "";
+                
                 for (let i = event.resultIndex; i < event.results.length; ++i) {
-                    if (event.results[i].isFinal) finalTranscript += event.results[i][0].transcript;
+                    const result = event.results[i];
+                    if (result.isFinal) {
+                        finalTranscript += result[0].transcript;
+                    } else {
+                        interimTranscript += result[0].transcript;
+                    }
                 }
+                
+                // Show interim results in the UI immediately
+                if (interimTranscript) {
+                    setActiveSpeechText(interimTranscript); 
+                }
+
                 if (finalTranscript) {
                     collectedTranscript.current += " " + finalTranscript;
-                    addLog(`📝 Interim: "${finalTranscript.substring(0, 15)}..."`);
+                    addLog(`📝 Final: "${finalTranscript.substring(0, 15)}..."`);
                 }
+                
                 if (userSilenceTimer.current) clearTimeout(userSilenceTimer.current);
                 userSilenceTimer.current = setTimeout(() => {
-                    if (collectedTranscript.current.trim()) {
+                    const totalSpeech = collectedTranscript.current.trim();
+                    if (totalSpeech) {
+                        addLog("🤫 Silence detected: processing turn...");
                         r.stop();
-                        handleUserSpeech(collectedTranscript.current.trim());
+                        handleUserSpeech(totalSpeech);
                     }
-                }, 1000);
+                }, 1800); // 1.8s silence (native VAD)
             };
             recognition.current = r;
         }
@@ -323,19 +348,62 @@ const SpeakingInteractionPage = () => {
     // Helper: Get Voice
     const getVoice = (role) => {
         if (!voices || voices.length === 0) return null;
-        const englishVoices = voices.filter(v => v.lang.toLowerCase().startsWith('en'));
+        
+        // Filter for English voices, prioritizing high-quality ones
+        const englishVoices = voices.filter(v => 
+            v.lang.toLowerCase().startsWith('en')
+        ).sort((a, b) => {
+            // Prefer "Google" voices as they are usually more stable in Chrome
+            const aIsGoogle = a.name.toLowerCase().includes('google');
+            const bIsGoogle = b.name.toLowerCase().includes('google');
+            if (aIsGoogle && !bIsGoogle) return -1;
+            if (!aIsGoogle && bIsGoogle) return 1;
+            return 0;
+        });
+
         const pool = englishVoices.length > 0 ? englishVoices : voices;
-        const find = (lang, namePart) => pool.find(v => v.lang.toLowerCase().includes(lang.toLowerCase()) && (!namePart || v.name.toLowerCase().includes(namePart.toLowerCase())));
-        const safeVoice = find('Google US English') || find('en-US');
+        
+        const find = (langCode, nameInclude = "", gender = "") => {
+            return pool.find(v => {
+                const matchesLang = v.lang.toLowerCase().includes(langCode.toLowerCase());
+                const matchesName = !nameInclude || v.name.toLowerCase().includes(nameInclude.toLowerCase());
+                
+                // Stricter Gender Matching: Avoid 'female' in name if 'male' is requested
+                const nameLower = v.name.toLowerCase();
+                const maleKeywords = /male|man|boy|daniel|david|alex|fred|thomas|mark|daniel|james|oliver|harry/i;
+                const femaleKeywords = /female|woman|girl|samantha|victoria|moira|veena|zira|susan|mary/i;
+                
+                let matchesGender = true;
+                if (gender === 'Female') {
+                    matchesGender = femaleKeywords.test(nameLower) && !maleKeywords.test(nameLower);
+                } else if (gender === 'Male') {
+                    matchesGender = maleKeywords.test(nameLower) && !femaleKeywords.test(nameLower);
+                }
+                
+                return matchesLang && matchesName && matchesGender;
+            });
+        };
 
-        if (role === 'Examiner') return find('en-GB') || safeVoice;
-        const hkVoice = find('en-HK') || find('Hong Kong');
-        const gbVoice = find('en-GB');
-        const fallback = safeVoice || pool[0];
+        const safeVoice = find('Google US English') || find('en-US') || pool[0];
+        const fallback = safeVoice;
 
-        if (role === 'Candidate_A') return find('en-GB', 'Female') || hkVoice || gbVoice || fallback;
-        if (role === 'Candidate_B') return find('en-GB', 'Male') || hkVoice || gbVoice || fallback;
-        if (role === 'Candidate_C') return find('en-US', 'Female') || hkVoice || gbVoice || fallback;
+        if (role === 'Examiner') {
+            // Examiner: Mature, formal (Female)
+            return find('en-GB', '', 'Female') || find('en-US', 'Samantha') || fallback;
+        }
+        if (role === 'Candidate_A') {
+            // Annie: Confident (Female)
+            return find('en-GB', '', 'Female') || find('en-US', 'Zira') || fallback;
+        }
+        if (role === 'Candidate_B') {
+            // Ben: Competent (Male)
+            return find('en-GB', '', 'Male') || find('en-US', 'David') || find('en-US', 'James') || find('', '', 'Male') || fallback;
+        }
+        if (role === 'Candidate_C') {
+            // Charlie: Hesitant (Male)
+            return find('en-HK', '', 'Male') || find('en-US', 'Daniel') || find('en-GB', 'Harry') || find('', '', 'Male') || fallback;
+        }
+        
         return fallback;
     };
 
@@ -347,138 +415,131 @@ const SpeakingInteractionPage = () => {
 
     const playSpeech = (role, text, onEnd) => {
         const cleaned = cleanText(text);
-        setActiveSpeechText(cleaned); // Show text IMMEDIATELY to avoid the "..." delay
-        addLog(`🗣️ [${role}]: ${cleaned.substring(0, 30)}...`);
-        setTranscript(prev => [...prev, { role, text }]);
-
         if (!cleaned) {
             setActiveSpeechText("");
-            setTimeout(onEnd, 1000);
+            setTimeout(onEnd, 100);
             return;
         }
 
+        setActiveSpeechText(cleaned); 
+        addLog(`🗣️ [${role}]: ${cleaned.substring(0, 30)}...`);
+        setTranscript(prev => [...prev, { role, text: cleaned }]); 
+
         if (window.speechSynthesis) window.speechSynthesis.cancel();
 
-        const u = new SpeechSynthesisUtterance(cleaned);
-        activeUtterance.current = u;
-        window[`tts_${role}`] = u; // Global ref
+        // Phase 36: Speech Chunking for Chrome Reliability
+        // Chrome TTS engine often cuts off long utterances or fails mid-way.
+        // We split by punctuation and play chunks sequentially.
+        const chunks = cleaned.match(/[^.!?]+[.!?]*/g) || [cleaned];
+        let currentChunkIndex = 0;
 
-        const voice = getVoice(role);
-        if (voice) u.voice = voice;
-        u.pitch = 1.0;
-        u.rate = 1.0; // Normal Speed
-
-        let hasFinished = false;
-        isTransitioning.current = false;
-
-        const safeOnEnd = () => {
-            if (hasFinished) return;
-            hasFinished = true;
-            setActiveSpeechText(""); // Clear subtitles when speech ends
-            if (activeUtterance.current === u) activeUtterance.current = null;
-            window.lastSpeakingActivity = Date.now();
-
-            // Phase 22: Chunking Safeguard - Clear the global ref
-            window[`tts_${role}`] = null;
-
-            setTimeout(() => {
-                const turnTimeGap = 300; // Reduced from 1000 to improve flow
-                isTransitioning.current = false;
-                if (onEnd) onEnd();
-            }, turnTimeGap);
-        };
-
-        u.onend = () => safeOnEnd();
-        u.onerror = (e) => {
-            console.error("TTS Error", e);
-            if (e.error === 'interrupted') return; // Ignore intentional interrupts
-            safeOnEnd();
-        };
-        u.onboundary = () => {
-            window.lastSpeakingActivity = Date.now(); // Alive signal
-            // CHROME FIX: Resume simply to keep the engine awake
-            if (window.speechSynthesis.paused) window.speechSynthesis.resume();
-        };
-
-        // Phase 30: Heartbeat to keep activity alive during long turns
-        const heartbeat = setInterval(() => {
-            if (activeUtterance.current === u) {
-                window.lastSpeakingActivity = Date.now();
-            } else {
-                clearInterval(heartbeat);
+        const speakNextChunk = () => {
+            if (currentChunkIndex >= chunks.length) {
+                // Done with all chunks
+                setTimeout(() => {
+                    setActiveSpeechText(""); 
+                    isTransitioning.current = false;
+                    if (onEnd) onEnd();
+                }, 500); 
+                return;
             }
-        }, 2000);
 
-        window.lastSpeakingActivity = Date.now();
-        if (window.speechSynthesis) {
-            window.speechSynthesis.resume(); // Wake up
-            window.speechSynthesis.cancel(); // Clear queue
+            const chunkText = chunks[currentChunkIndex].trim();
+            if (!chunkText) {
+                currentChunkIndex++;
+                speakNextChunk();
+                return;
+            }
+
+            const u = new SpeechSynthesisUtterance(chunkText);
+            activeUtterance.current = u;
+            const voice = getVoice(role);
+            if (voice) u.voice = voice;
+            u.pitch = role === 'Examiner' ? 0.9 : 1.0; 
+            u.rate = role === 'Candidate_C' ? 0.9 : 1.0;
+
+            u.onend = () => {
+                currentChunkIndex++;
+                speakNextChunk();
+            };
+
+            u.onerror = (e) => {
+                console.error("TTS Chunk Error", e);
+                currentChunkIndex++;
+                speakNextChunk();
+            };
+
             window.speechSynthesis.speak(u);
-        } else {
-            safeOnEnd();
-        }
+        };
+
+        isTransitioning.current = true;
+        speakNextChunk();
+    };
+
+    // Calculate dynamic fluency levels based on user level
+    const getFluencyLevel = (role) => {
+        // Base levels from persona
+        const baseLevels = {
+            'Candidate_A': 5, // 5**
+            'Candidate_B': 4,
+            'Candidate_C': 3
+        };
+        
+        const userLevel = parseInt(location.state?.userLevel || "3");
+        const base = baseLevels[role];
+        
+        // Adjust candidate level to be around user level +1/-1
+        // but respect the persona (Annie is always the best)
+        if (role === 'Candidate_A') return Math.max(userLevel + 1, 5); 
+        if (role === 'Candidate_B') return userLevel;
+        if (role === 'Candidate_C') return Math.max(1, userLevel - 1);
+        
+        return base;
     };
 
     const handleUserSpeech = (text) => {
         if (userSilenceTimer.current) clearTimeout(userSilenceTimer.current);
         userSilenceTimer.current = null;
 
-        // Phase 26 Fix: Ensure state is reset even if speech recognition returns empty or crashes
+        // Reset user state immediately to prevent AI double-triggering
         setCurrentSpeaker(null);
         setIsUserTurn(false);
         isUserTurnRef.current = false;
 
         const cleaned = (text || "").trim();
         if (!cleaned) {
-            addLog("⚠️ Speech empty or cancelled.");
-            // Force AI to pick up if user stays silent
+            addLog("⚠️ Speech empty. Waiting for user to click SPEAK again or AI to take initiative.");
+            // If user stays silent, wait 2s then AI might take over
             setTimeout(() => {
-                if (!isUserTurnRef.current && status === 'DISCUSSION') triggerAITurn();
-            }, 1000);
+                if (!isUserTurnRef.current && !activeUtterance.current && status === 'DISCUSSION') {
+                    addLog("🎲 AI taking initiative due to silence...");
+                    triggerAITurn();
+                }
+            }, 3000);
             return;
         }
 
         addLog(`🎙️ User said: "${cleaned.substring(0, 20)}..."`);
         setTranscript(prev => [...prev, { role: "You", text: cleaned }]);
         chatHistory.current.push({ role: "user", text: cleaned });
-        // Phase 28: DO NOT clear localTurnQueue immediately to preserve pre-fetched turns for speed
-        if (localTurnQueue.current.length > 3) localTurnQueue.current = [];
+        
+        // Substantial turns invalidate the pre-fetched queue
+        if (cleaned.length > 20) {
+            addLog("🧠 Context changed. Fetching fresh responses...");
+            localTurnQueue.current = []; 
+        }
 
         if (status === 'INDIVIDUAL') {
-            playSpeech("Examiner", "Thank you. That is the end.", () => setStatus('FINISHED'));
+            playSpeech("Examiner", "Thank you. That is the end of the individual response.", () => setStatus('FINISHED'));
             return;
         }
 
-        // Phase 33: Smart Context & Fillers
-        // If user says something substantial (> 15 chars), invalidate queue to address NEW context.
-        // If trivial ("Yeah", "Okay"), keep queue for speed.
-        if (cleaned.length > 15) {
-            addLog("🧠 Substantial turn detected: Invalidating queue for new context...");
-            localTurnQueue.current = []; // Clear stale turns
-
-            // Pick next speaker for filler
-            const pick = ["Candidate_A", "Candidate_B", "Candidate_C", "Examiner"][Math.floor(Math.random() * 4)];
-            const fillerList = FILLERS[pick] || FILLERS["Candidate_A"];
-            const filler = fillerList[Math.floor(Math.random() * fillerList.length)];
-
-            // Start fetching REAL response in background
-            fetchBatchInBackground(pick);
-
-            // Play filler immediately to mask latency
-            playSpeech(pick, filler, () => {
-                // When filler ends, trigger the real turn (which should be arriving)
-                triggerAITurn(pick);
-            });
-            return; // Skip the standard timeout flow
-        }
-
-        // Phase 29/32: Immediate handoff to AI (Standard Flow)
+        // Delay AI response naturally but quickly (Immediate follow-up)
         setTimeout(() => {
-            if (!isUserTurnRef.current && !isQueued.current) {
-                const pick = ["Candidate_A", "Candidate_B", "Candidate_C"][Math.floor(Math.random() * 3)];
-                triggerAITurn(pick);
+            if (!isUserTurnRef.current && !activeUtterance.current && status === 'DISCUSSION') {
+                triggerAITurn();
             }
-        }, 100); // Reduced from 500ms to 100ms
+        }, 800); // Reduced delay to 0.8s for "immediate" feel after user finishes 
     };
 
     const startUserTurn = () => {
@@ -492,9 +553,6 @@ const SpeakingInteractionPage = () => {
         localTurnQueue.current = []; // Phase 32: Cleared ONLY on start, but allow background fills
         // Actually, we WANT to preserve if it was just filled by background fetch? 
         // No, startUserTurn means user is talking NOW, so previous queue is likely stale unless it's the response to THIS turn.
-        // Wait, the plan said "Remove localTurnQueue.current = [] from startUserTurn".
-        // Let's comment it out to preserve pre-fetched, but we must ensure we don't play stale responses.
-        // However, standard flow is: User speaks -> Fetch happens -> Response logic picks from queue.
         // If we clear it here, we lose anything fetched *while* user was prepping.
         // Phase 32: Preserve queue (commented out clear)
         // localTurnQueue.current = []; 
@@ -513,9 +571,14 @@ const SpeakingInteractionPage = () => {
     };
 
     const handleChipIn = () => {
-        addLog("✋ User requested Chip-In: Interrupting immediately");
-        // Phase 32: Interruption is now allowed at ANY time
-        if (window.speechSynthesis) window.speechSynthesis.cancel();
+        if (currentSpeaker && currentSpeaker !== "You") {
+            addLog("✋ User requested Chip-In: Queued for next turn");
+            isQueued.current = true;
+            setIsQueuedState(true);
+            return;
+        }
+        
+        addLog("✋ User taking the floor");
         startUserTurn();
     };
 
@@ -534,6 +597,7 @@ const SpeakingInteractionPage = () => {
 
     const playQueuedTurn = (turn) => {
         const { speaker, content } = turn;
+        lastSpeakerRef.current = speaker;
         setCurrentSpeaker(speaker);
         playSpeech(speaker, content, () => {
             setCurrentSpeaker(null);
@@ -557,16 +621,26 @@ const SpeakingInteractionPage = () => {
         }
         isFetchingAI.current = true;
         try {
+            const userLevel = location.state?.userLevel || "3";
+            const candidateLevels = {
+                'Candidate_A': getFluencyLevel('Candidate_A'),
+                'Candidate_B': getFluencyLevel('Candidate_B'),
+                'Candidate_C': getFluencyLevel('Candidate_C')
+            };
+
             const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
             const res = await fetch(`${API_URL}/api/speaking/chat`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     history: chatHistory.current.slice(-15),
-                    currentSpeaker: hintSpeaker,
-                    topic: examData?.title || roadmapTopic, // Fallback to roadmapTopic if examData is null
+                    currentSpeaker: lastSpeakerRef.current || 'Examiner', // The one who JUST finished
+                    forcedNextSpeaker: hintSpeaker !== "Candidate_A" ? hintSpeaker : null, // Only pass if it's a specific invitation (hintSpeaker defaults to A in signature)
+                    topic: examData?.title || roadmapTopic, 
                     context: examData,
-                    uid: user?.uid
+                    uid: user?.uid,
+                    userLevel,
+                    candidateLevels
                 }),
                 signal: AbortSignal.timeout(30000)
             });
@@ -605,6 +679,8 @@ const SpeakingInteractionPage = () => {
         const isActuallySpeaking = window.speechSynthesis && window.speechSynthesis.speaking;
         if (isTransitioning.current || activeUtterance.current || isActuallySpeaking || isInternalTransition.current) {
             addLog(`🚫 Turn blocked: Trans=${isTransitioning.current} Actv=${!!activeUtterance.current} SynthSpeaking=${isActuallySpeaking} InternalLock=${isInternalTransition.current}`);
+            // Phase 38: Robust Retry - If blocked, retry shortly after to catch transitions
+            setTimeout(() => triggerAITurn(forceSpeaker), 400);
             return;
         }
 
@@ -612,7 +688,10 @@ const SpeakingInteractionPage = () => {
         setTimeout(() => { isInternalTransition.current = false; }, 200); // Phase 32: Short lock reduced to 200ms
 
         if (localTurnQueue.current.length > 0) {
-            const next = localTurnQueue.current.shift();
+            // Enforcement: Do not repeat speaker if possible
+            const nextIdx = localTurnQueue.current.findIndex(t => t.speaker !== lastSpeakerRef.current);
+            const next = nextIdx !== -1 ? localTurnQueue.current.splice(nextIdx, 1)[0] : localTurnQueue.current.shift();
+            
             if (localTurnQueue.current.length <= 1) fetchBatchInBackground();
             playQueuedTurn(next);
             return;
@@ -624,8 +703,12 @@ const SpeakingInteractionPage = () => {
 
         // Re-check after fetch - if we are still ready to play, do it
         if (!isUserTurnRef.current && !isTransitioning.current && !activeUtterance.current && localTurnQueue.current.length > 0) {
-            addLog(`✅ Playing fetched turn for: ${localTurnQueue.current[0].speaker}`);
-            playQueuedTurn(localTurnQueue.current.shift());
+            // Enforcement: Do not repeat speaker if possible
+            const nextIdx = localTurnQueue.current.findIndex(t => t.speaker !== lastSpeakerRef.current);
+            const turnToPlay = nextIdx !== -1 ? localTurnQueue.current.splice(nextIdx, 1)[0] : localTurnQueue.current.shift();
+            
+            addLog(`✅ Playing turn for: ${turnToPlay.speaker}`);
+            playQueuedTurn(turnToPlay);
         } else {
             addLog("⚠️ Still waiting for turns (Polling)...");
             // Phase 34: Polling Loop - Retry even if fetching, to catch when it finishes
@@ -640,10 +723,25 @@ const SpeakingInteractionPage = () => {
         hasStartedRef.current = true;
         setStatus('DISCUSSION');
         setTimeLeft(8 * 60);
+
+        // Phase 37: Randomize First Speaker
+        const candidates = ["Candidate_A", "Candidate_B", "Candidate_C", "You"];
+        const firstSpeaker = candidates[Math.floor(Math.random() * candidates.length)];
+        const callOut = firstSpeaker === "You" ? "What are your thoughts on this, Candidate D?" : "Shall we start? Candidate A, what are your thoughts?";
+        // Note: The above is a bit hardcoded, ideally we'd use the name, but this fits the intro.
+        
+        addLog(`🗳️ Examiner starting discussion. Invited: ${firstSpeaker}`);
         setCurrentSpeaker("Examiner");
-        playSpeech("Examiner", `Good afternoon. We are here to discuss ${examData?.title || roadmapTopic}. What are your thoughts on this?`, () => {
+        
+        const introPrompt = `Good afternoon. We are here to discuss ${examData?.title || roadmapTopic}. Who would like to start the discussion? Maybe ${candidateDisplayNames[firstSpeaker]}?`;
+        
+        playSpeech("Examiner", introPrompt, () => {
             setCurrentSpeaker(null);
-            startUserTurn();
+            if (firstSpeaker === "You") {
+                startUserTurn();
+            } else {
+                triggerAITurn(firstSpeaker);
+            }
         });
     };
 
@@ -695,17 +793,19 @@ const SpeakingInteractionPage = () => {
     };
 
     const getUserAvatar = () => {
-        // In real app, fetch from stats or user profile
-        return '/avatars/student_male_1.jpg';
+        return '/avatars/male_student_avatar_1774534573731.png';
     };
 
     // Render Helpers
     const formatTime = (s) => `${Math.floor(s / 60)}:${(s % 60).toString().padStart(2, '0')}`;
     const getPos = (role) => {
-        // Square Table Layout (1-on-1)
+        // DSE Group Layout (Semicircle)
         const positions = {
-            'Examiner': { top: '50%', left: '25%' }, // Left side
-            'You': { top: '50%', left: '75%' }      // Right side
+            'Examiner': { top: '32%', left: '50%' },     
+            'Candidate_A': { top: '55%', left: '20%' },  
+            'Candidate_B': { top: '78%', left: '35%' },  // Raised slightly
+            'Candidate_C': { top: '55%', left: '80%' },  
+            'You': { top: '78%', left: '65%' }           // Raised slightly
         };
         return positions[role] || { top: '50%', left: '50%' };
     };
@@ -719,32 +819,29 @@ const SpeakingInteractionPage = () => {
     );
 
     return (
-        <div className="h-screen w-full relative overflow-hidden flex flex-col font-sans">
-            {/* Blackboard Background */}
-            <div className="absolute inset-0 z-0 bg-[#1e2f23] overflow-hidden">
-                {/* Chalkboard Texture */}
-                <div className="absolute inset-0 opacity-20 pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/pinstriped-suit.png')]"></div>
-                {/* Wooden Frame */}
-                <div className="absolute inset-4 border-[16px] border-[#5d4037] rounded-lg shadow-2xl"></div>
-                {/* Subtle Dust/Smudges */}
-                <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-black/10"></div>
+        <div className="h-screen w-full relative overflow-hidden flex flex-col font-sans text-white">
+            {/* New 3D Stylized Classroom Background */}
+            <div className="absolute inset-0 z-0 bg-[#0c130d] overflow-hidden">
+                {/* The main background image with contrast tuning */}
+                <img 
+                    src="/backgrounds/hk_dse_classroom.png" 
+                    alt="DSE Classroom" 
+                    className="w-full h-full object-cover brightness-[0.7] saturate-[1.2] contrast-[1.1]"
+                />
+                
+                {/* Cinematic Vignette Overlay to make avatars pop */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/30 pointer-events-none"></div>
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_20%,rgba(0,0,0,0.4)_100%)] pointer-events-none"></div>
 
-                {/* Chalk Dust Effect at bottom */}
-                <div className="absolute bottom-12 left-1/4 right-1/4 h-1 bg-white/10 blur-sm rounded-full"></div>
-
-                {/* Blackboard Tray (粉刷/粉筆架) */}
-                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-3/4 h-8 bg-[#3e2723] border-t-4 border-[#2d1b15] shadow-xl flex items-center justify-around px-12 rounded-b-lg">
-                    {/* Chalk Pieces (粉筆) */}
-                    <div className="flex gap-4">
-                        <div className="w-8 h-2 bg-white rounded-full rotate-12 shadow-sm"></div>
-                        <div className="w-7 h-2 bg-yellow-100 rounded-full -rotate-6 shadow-sm"></div>
-                        <div className="w-8 h-2 bg-blue-100 rounded-full rotate-45 shadow-sm"></div>
+                {/* Blackboard Tray remains as a high-fidelity 3D element */}
+                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-4/5 h-10 bg-[#3e2723] border-t-8 border-[#2d1b15] shadow-2xl flex items-center justify-around px-12 rounded-t-xl z-20 transition-all opacity-95">
+                    <div className="flex gap-6">
+                        <div className="w-10 h-3 bg-white rounded-full rotate-12 shadow-md"></div>
+                        <div className="w-9 h-3 bg-yellow-100 rounded-full -rotate-6 shadow-md"></div>
+                        <div className="w-10 h-3 bg-indigo-100 rounded-full rotate-12 shadow-md opacity-70"></div>
                     </div>
-                    {/* Board Eraser (粉刷) */}
-                    <div className="relative w-16 h-6 bg-[#5d4037] border-2 border-[#3e2723] rounded shadow-lg group">
-                        {/* Eraser Bristles (Brush part) */}
-                        <div className="absolute -bottom-1 inset-0.5 h-1 bg-gray-400 opacity-50 blur-[1px]"></div>
-                        {/* Eraser Top Handle */}
+                    <div className="relative w-20 h-8 bg-[#5d4037] border-2 border-[#3e2723] rounded-lg shadow-2xl overflow-hidden">
+                        <div className="absolute -bottom-1 inset-0.5 h-2 bg-gray-400 opacity-60"></div>
                         <div className="absolute inset-0 bg-gradient-to-b from-[#7d5d4a] to-[#5d4037]"></div>
                     </div>
                 </div>
@@ -769,82 +866,40 @@ const SpeakingInteractionPage = () => {
 
             {/* Main Area */}
             <div className="flex-1 relative z-10 w-full max-w-7xl mx-auto flex flex-col items-center justify-center">
-                {/* 3D Realistic Table */}
-                <div className="absolute top-[60%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[350px] z-0">
-                    {/* Shadow underneath */}
-                    <div className="absolute inset-x-8 bottom-[-20px] h-10 bg-black/20 blur-xl rounded-[100%]"></div>
-
-                    {/* Table Surface (Wood/Glass Mix) */}
-                    <div className="relative w-full h-full rounded-[60px] bg-gradient-to-b from-[#7d5d4a] via-[#5d4037] to-[#3e2723] border-[4px] border-[#8d6e63]/30 shadow-2xl overflow-hidden group">
-                        {/* Realistic Grain Overlay */}
-                        <div className="absolute inset-0 opacity-10 pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/wood-pattern-with-twigs.png')]"></div>
-
-                        {/* Glossy Reflection */}
-                        <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-white/10"></div>
-
-                        {/* Central Glass Inset for High-Tech feel */}
-                        <div className="absolute inset-12 rounded-[40px] border border-white/10 bg-white/5 backdrop-blur-[2px] shadow-inner"></div>
-                    </div>
-
-                    {/* Table Edge/Rim */}
-                    <div className="absolute inset-0 -z-10 translate-y-4 w-full h-full rounded-[60px] bg-[#2d1b15] shadow-2xl"></div>
-                </div>
-
-                {/* Participants - Only Examiner and You */}
-                {["Examiner", "You"].map(role => {
+                {/* Participants - Full Group */}
+                {["Examiner", "Candidate_A", "Candidate_B", "Candidate_C", "You"].map(role => {
                     const pos = getPos(role);
                     const isSpeaking = currentSpeaker === role;
                     const isUser = role === "You";
-                    const avatarSrc = role === "Examiner" ? examinerImg : getUserAvatar();
+                    const avatarSrc = role === "Examiner" ? examinerImg : (candidateAvatars[role] || getUserAvatar());
 
                     return (
-                        <div key={role} className={`absolute transition-all duration-500 flex flex-col items-center ${isSpeaking ? "z-30 scale-110" : "z-20 grayscale-[20%]"}`} style={{ top: pos.top, left: pos.left, transform: 'translate(-50%, -50%)' }}>
-                            <div className={`relative size-44 rounded-full border-8 bg-white shadow-2xl overflow-hidden transition-all duration-300 ${isSpeaking ? "border-emerald-400 ring-[12px] ring-emerald-400/20" : "border-white/80"}`}>
+                        <div 
+                            key={role} 
+                            className={`absolute transition-all duration-700 flex flex-col items-center ${isSpeaking ? "z-40 scale-125 -translate-y-8" : "z-20 grayscale-[10%]"}`} 
+                            style={{ top: pos.top, left: pos.left, transform: 'translate(-50%, -50%)' }}
+                        >
+                            <div className={`relative size-48 rounded-full border-8 bg-white shadow-[0_20px_50px_rgba(0,0,0,0.5)] overflow-hidden transition-all duration-500 ${isSpeaking ? "border-emerald-400 ring-[20px] ring-emerald-400/10 scale-110" : "border-white/90"}`}>
                                 <img
                                     src={avatarSrc}
                                     alt={role}
-                                    className="w-full h-full object-cover"
+                                    className={`w-full h-full object-cover transition-transform duration-500 ${isSpeaking ? "scale-105" : "scale-100"}`}
                                     onError={role === "Examiner" ? handleExaminerImgError : null}
                                 />
                                 {isSpeaking && (
-                                    <div className="absolute inset-0 border-[6px] border-emerald-400 animate-pulse rounded-full"></div>
+                                    <div className="absolute inset-0 border-[8px] border-emerald-400 animate-pulse rounded-full shadow-[inset_0_0_20px_rgba(52,211,153,0.5)]"></div>
                                 )}
                             </div>
 
-                            {/* User Controls - Repositioned below avatar */}
-                            {isUser && status === 'DISCUSSION' && (
-                                <div className="absolute top-[110%] left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 min-w-[200px] z-[100]">
-                                    {isUserTurn ? (
-                                        <button
-                                            onMouseDown={(e) => {
-                                                e.stopPropagation();
-                                                handleManualFinish();
-                                            }}
-                                            className="w-full px-6 py-3 bg-red-500 hover:bg-red-600 active:bg-red-700 text-white rounded-xl font-black text-base shadow-[0_6px_0_rgb(185,28,28)] active:translate-y-1 active:shadow-none transition-all animate-in zoom-in-95 cursor-pointer flex items-center justify-center gap-2"
-                                        >
-                                            <div className="size-3 bg-white rounded-sm animate-pulse"></div>
-                                            STOP SPEAKING
-                                        </button>
-                                    ) : (
-                                        <button
-                                            onMouseDown={(e) => {
-                                                e.stopPropagation();
-                                                handleChipIn();
-                                            }}
-                                            className="group relative w-full px-6 py-3 bg-emerald-500 hover:bg-emerald-600 active:bg-emerald-700 text-white rounded-xl font-black text-base shadow-[0_6px_0_rgb(5,150,105)] active:translate-y-1 active:shadow-none transition-all flex items-center justify-center gap-2 cursor-pointer"
-                                        >
-                                            <span className="size-2 bg-white rounded-full animate-ping"></span>
-                                            SPEAK
-                                            {isQueuedState && <span className="absolute -top-3 -right-3 bg-amber-500 text-[10px] px-2 py-1 rounded-md shadow-md animate-bounce">QUEUED</span>}
-                                        </button>
-                                    )}
-                                </div>
-                            )}
+                            {/* Deluxe Label */}
+                            <div className={`mt-3 px-4 py-1 rounded-full text-sm font-black tracking-wide shadow-lg border-2 border-white/20 backdrop-blur-md transition-all duration-300 ${isSpeaking ? "bg-emerald-500 text-white scale-110 -translate-y-2 border-emerald-400" : "bg-black/40 text-white/90"}`}>
+                                {candidateDisplayNames[role] || role}
+                            </div>
 
-                            {/* Airtime Bar */}
+                            {/* Airtime Indicator */}
                             {status === 'DISCUSSION' && (
-                                <div className="mt-4 w-32 h-2 bg-gray-200 rounded-full overflow-hidden">
-                                    <div className="h-full bg-indigo-500 transition-all duration-1000" style={{ width: `${Math.min(100, (airtime[role] || 0) / 60 * 100)}%` }}></div>
+                                <div className="mt-4 w-36 h-2 bg-black/20 rounded-full overflow-hidden backdrop-blur-sm border border-white/10">
+                                    <div className="h-full bg-indigo-400 shadow-[0_0_10px_rgba(129,140,248,0.8)] transition-all duration-1000" style={{ width: `${Math.min(100, (airtime[role] || 0) / 60 * 100)}%` }}></div>
                                 </div>
                             )}
                         </div>
@@ -867,17 +922,16 @@ const SpeakingInteractionPage = () => {
                                                 {micActive ? (collectedTranscript.current || "Listening...") : "Go ahead, speak!"}
                                             </span>
                                         ) : (
-                                            <span>{activeSpeechText || (isFetchingAI.current ? "*Miss Janie is thinking...*" : "")}</span>
+                                            <span>{activeSpeechText || (isFetchingAI.current ? "*Thinking...*" : "")}</span>
                                         )}
                                     </div>
                                 </>
                             ) : (
-                                // Idle Hint or Easy Mode History
                                 <div className="text-lg font-medium text-white/70 leading-tight italic px-8">
                                     {isUserTurn ? (
                                         <span className="text-emerald-300/80 animate-pulse">*Speak now, or click STOP to finish*</span>
                                     ) : (isFetchingAI.current || localTurnQueue.current.length > 0) ? (
-                                        <span className="text-white/50 animate-pulse">*Miss Janie is thinking...*</span>
+                                        <span className="text-white/50 animate-pulse">*Thinking...*</span>
                                     ) : (
                                         <span>*Click SPEAK to join the discussion*</span>
                                     )}
@@ -887,19 +941,89 @@ const SpeakingInteractionPage = () => {
                     </div>
                 )}
 
-                {/* Prep Overlay */}
-                {status === 'PREP' && (
-                    <div className="absolute inset-0 z-40 flex items-center justify-center bg-white/60 backdrop-blur-sm">
-                        <div className="bg-white p-8 rounded-3xl shadow-2xl max-w-md w-full text-center">
-                            <h2 className="text-2xl font-bold mb-4">Preparation Time</h2>
-                            <p className="mb-6">{examData.topic_description}</p>
-                            <button onClick={() => {
-                                const w = new SpeechSynthesisUtterance(' ');
-                                window.speechSynthesis.speak(w);
-                                setTimeLeft(0);
-                            }} className="w-full py-4 bg-primary text-white rounded-xl font-bold text-lg shadow-lg hover:scale-105 transition-transform">
-                                Start Discussion Now
+                {/* Fixed Bottom Control Bar */}
+                <div className="fixed bottom-12 left-1/2 -translate-x-1/2 flex gap-4 z-50">
+                    {status === 'DISCUSSION' && (
+                        isUserTurn ? (
+                            <button
+                                onMouseDown={(e) => { e.stopPropagation(); handleManualFinish(); }}
+                                className="px-6 py-3 bg-red-500 hover:bg-red-600 active:bg-red-700 text-white rounded-xl font-black text-base shadow-[0_6px_0_rgb(185,28,28)] active:translate-y-1 active:shadow-none transition-all flex items-center justify-center gap-2"
+                            >
+                                <div className="size-3 bg-white rounded-sm animate-pulse"></div>
+                                STOP SPEAKING
+                                <span className="text-[10px] opacity-70 ml-2 font-medium">(Auto-detecting silence...)</span>
                             </button>
+                        ) : (
+                            <button
+                                onMouseDown={(e) => { e.stopPropagation(); handleChipIn(); }}
+                                className="group relative px-6 py-3 bg-emerald-500 hover:bg-emerald-600 active:bg-emerald-700 text-white rounded-xl font-black text-base shadow-[0_6px_0_rgb(5,150,105)] active:translate-y-1 active:shadow-none transition-all flex items-center justify-center gap-2"
+                            >
+                                <span className="size-2 bg-white rounded-full animate-ping"></span>
+                                SPEAK
+                                {isQueuedState && <span className="absolute -top-3 -right-3 bg-amber-500 text-[10px] px-2 py-1 rounded-md shadow-md animate-bounce">QUEUED</span>}
+                            </button>
+                        )
+                    )}
+                </div>
+
+                {/* Prep Overlay: DSE Briefing Style */}
+                {status === 'PREP' && (
+                    <div className="absolute inset-0 z-40 flex items-center justify-center bg-slate-900/60 backdrop-blur-md">
+                        <div className="bg-white rounded-3xl shadow-2xl max-w-2xl w-full flex flex-col overflow-hidden animate-in zoom-in-95 duration-300">
+                            {/* Header */}
+                            <div className="bg-indigo-600 p-6 text-white text-center">
+                                <h2 className="text-sm font-black tracking-widest uppercase opacity-80 mb-1">Part A: Group Discussion</h2>
+                                <h3 className="text-2xl font-black">{examData.title}</h3>
+                            </div>
+                            
+                            {/* Content */}
+                            <div className="p-8 space-y-6 overflow-y-auto max-h-[60vh]">
+                                <div className="space-y-2">
+                                    <h4 className="font-black text-slate-400 text-xs uppercase tracking-tighter">Your Task</h4>
+                                    <p className="text-slate-700 leading-relaxed font-medium bg-slate-50 p-4 rounded-xl border border-slate-100 italic">
+                                        Your group is preparing a presentation for the school magazine about {examData.title}. 
+                                        Discuss what to include and how to make it engaging for fellow students.
+                                    </p>
+                                </div>
+
+                                <div className="space-y-4">
+                                    <h4 className="font-black text-slate-400 text-xs uppercase tracking-tighter">Points to discuss</h4>
+                                    <ul className="space-y-3">
+                                        {(examData.discussion_points || []).map((p, i) => (
+                                            <li key={i} className="flex gap-4 items-start p-3 bg-indigo-50/50 rounded-xl border border-indigo-100/50 hover:bg-indigo-50 transition-colors">
+                                                <div className="size-6 bg-indigo-600 text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5 shadow-md">{i+1}</div>
+                                                <p className="text-slate-800 font-bold">{p}</p>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+
+                                <div className="p-4 bg-amber-50 rounded-xl border border-amber-200 flex gap-4 items-center">
+                                    <div className="size-12 bg-amber-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                        <span className="text-2xl">⏳</span>
+                                    </div>
+                                    <div>
+                                        <p className="text-xs font-black text-amber-600 uppercase">Preparation Time Remaining</p>
+                                        <p className="text-xl font-black text-amber-900 font-mono tracking-wider">{formatTime(timeLeft)}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            {/* Footer */}
+                            <div className="p-6 bg-slate-50 border-t border-slate-100 flex gap-4">
+                                <button 
+                                    onClick={() => {
+                                        // "Warm up" speech synthesis to prevent first-time silence in Chrome
+                                        const w = new SpeechSynthesisUtterance(' ');
+                                        window.speechSynthesis.speak(w);
+                                        setTimeLeft(0);
+                                    }} 
+                                    className="flex-1 py-4 bg-indigo-600 text-white rounded-2xl font-black text-lg shadow-[0_6px_0_rgb(55,48,163)] hover:translate-y-0.5 hover:shadow-[0_4px_0_rgb(55,48,163)] active:translate-y-1 active:shadow-none transition-all flex items-center justify-center gap-2"
+                                >
+                                    START DISCUSSION NOW
+                                    <span className="text-xs font-medium opacity-70">(Exam Starts Immediately)</span>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 )}    {/* Grading Result Overlay (Quest) */}

@@ -2,6 +2,7 @@ import React from 'react';
 import { SafeInlineMath, SafeBlockMath } from '../maths/SafeMath';
 import 'katex/dist/katex.min.css';
 import GeometryRenderer from '../maths/GeometryRenderer';
+import ImageUploadInput from '../maths/ImageUploadInput';
 import { useLanguage } from '../../context/LanguageContext';
 import { formatNumbers, sanitizeMath, prepareMathText, splitContentByDelimiters, looksLikeMath } from '../../utils/mathFormattingUtils';
 
@@ -14,6 +15,9 @@ const QuestionCard = ({
     question,
     answer,
     onChange,
+    onImageUpload,
+    uid,
+    imageAnswers = {},
     disabled = false,
     renderMath = false,
     questionNumber,
@@ -223,20 +227,17 @@ const QuestionCard = ({
                 {renderText(displayText, !!(question.diagram_json || question.diagram_svg))}
             </div>
 
-            {/* Diagram Placeholder or SVG Figure */}
-            {question.diagram_json ? (
+            {(question.diagram_svg || question.content?.diagram_svg) ? (
+                <div
+                    className="geometry-diagram-container flex justify-center mb-6 text-slate-800 dark:text-slate-200"
+                    dangerouslySetInnerHTML={{ __html: question.diagram_svg || question.content?.diagram_svg }}
+                />
+            ) : question.diagram_json ? (
                 <div className="mb-6 flex justify-center transform scale-95 origin-top">
-                    {/* Lazy load renderer to avoid cycle if possible, or just import at top */}
-                    {/* Assuming GeometryRenderer is imported at top */}
                     <div className="bg-white p-2 rounded-xl border-2 border-slate-100 shadow-sm">
                         <GeometryRenderer data={question.diagram_json} />
                     </div>
                 </div>
-            ) : question.diagram_svg ? (
-                <div
-                    className="mb-6 p-4 bg-white border-2 border-slate-100 rounded-xl flex items-center justify-center overflow-x-auto"
-                    dangerouslySetInnerHTML={{ __html: question.diagram_svg }}
-                />
             ) : (question.imageURL === null && (displayText.includes('[DIAGRAM') || displayText.includes('[TABLE'))) && (
                 <div className="mb-6 p-8 bg-slate-50 border-2 border-dashed border-slate-300 rounded-xl flex flex-col items-center justify-center text-slate-400">
                     <svg className="w-12 h-12 mb-2 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -282,6 +283,19 @@ const QuestionCard = ({
                     value={answer || ''}
                     onChange={(e) => onChange(id, e.target.value)}
                 />
+            )}
+
+            {/* Handwriting Scanner for Maths Short Answers */}
+            {renderMath && type === 'short_answer' && (
+                <div className="mt-6 pt-6 border-t border-slate-100">
+                    <ImageUploadInput 
+                        questionId={id}
+                        uid={uid}
+                        existingUrl={imageAnswers[id]}
+                        onUpload={(url) => onImageUpload?.(id, url)}
+                        onRemove={() => onImageUpload?.(id, null)}
+                    />
+                </div>
             )}
         </div>
     );

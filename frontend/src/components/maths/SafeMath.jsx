@@ -7,7 +7,9 @@
  * 3. Consistent styling across all pages
  */
 import React from 'react';
-import { InlineMath, BlockMath } from 'react-katex';
+import * as _katex from 'katex';
+const katex = _katex.default || _katex;
+import { sanitizeMath } from '../../utils/mathFormattingUtils';
 import 'katex/dist/katex.min.css';
 
 /**
@@ -63,28 +65,29 @@ const stripLatexToPlainText = (math) => {
  * If KaTeX fails, it displays the expression as cleaned plaintext.
  */
 export const SafeInlineMath = ({ math, className = '' }) => {
-    const safeMathInput = typeof math === 'string' ? math : String(math || '');
-    if (!safeMathInput.trim()) return null;
+    const rawMath = typeof math === 'string' ? math : String(math || '');
+    if (!rawMath.trim()) return null;
 
-    // Version 1.5.5: THE NEWLINE NEUTRALIZER
+    const sanitized = sanitizeMath(rawMath);
     // KaTeX's InlineMath component crashes on literal newlines.
-    // We replace them with spaces here as a final safety net.
-    const finalMath = safeMathInput.replace(/\n/g, ' ');
+    const finalMath = sanitized.replace(/\n/g, ' ');
+
+    let html;
+    try {
+        html = katex.renderToString(finalMath, {
+            throwOnError: false,
+            strict: false,
+            displayMode: false
+        });
+    } catch (e) {
+        html = `<span class="text-amber-700 font-mono text-sm bg-amber-50 px-1 rounded">${stripLatexToPlainText(finalMath)}</span>`;
+    }
 
     return (
-        <span className={`inline-block ${className}`}>
-            <InlineMath
-                math={finalMath}
-                renderError={(error) => (
-                    <span
-                        className="text-amber-700 font-mono text-sm bg-amber-50 px-1 rounded"
-                        title={`Original: ${finalMath}\nError: ${error.message}`}
-                    >
-                        {stripLatexToPlainText(finalMath)}
-                    </span>
-                )}
-            />
-        </span>
+        <span 
+            className={`inline-block align-baseline whitespace-nowrap overflow-visible max-w-full leading-normal pt-0.5 pb-1 ${className}`}
+            dangerouslySetInnerHTML={{ __html: html }}
+        />
     );
 };
 
@@ -93,26 +96,29 @@ export const SafeInlineMath = ({ math, className = '' }) => {
  * Uses InlineMath with \displaystyle for consistent rendering.
  */
 export const SafeBlockMath = ({ math, className = '' }) => {
-    const safeMathInput = typeof math === 'string' ? math : String(math || '');
-    if (!safeMathInput.trim()) return null;
+    const rawMath = typeof math === 'string' ? math : String(math || '');
+    if (!rawMath.trim()) return null;
 
-    // Version 1.5.5: THE NEWLINE NEUTRALIZER
-    const finalMath = safeMathInput.replace(/\n/g, ' ');
+    const sanitized = sanitizeMath(rawMath);
+    const finalMath = sanitized.replace(/\n/g, ' ');
+
+    let html;
+    try {
+        html = katex.renderToString(finalMath, {
+            throwOnError: false,
+            strict: false,
+            displayMode: true
+        });
+    } catch (e) {
+        html = `<span class="text-amber-700 font-mono text-sm bg-amber-50 px-1 rounded">${stripLatexToPlainText(finalMath)}</span>`;
+    }
 
     return (
-        <div className={`my-2 w-full overflow-x-auto text-left ${className}`}>
-            <InlineMath
-                math={`\\displaystyle ${finalMath}`}
-                renderError={(error) => (
-                    <span
-                        className="text-amber-700 font-mono text-sm bg-amber-50 px-1 rounded"
-                        title={`Original: ${finalMath}\nError: ${error.message}`}
-                    >
-                        {stripLatexToPlainText(finalMath)}
-                    </span>
-                )}
-            />
-        </div>
+        <div 
+            className={`w-full overflow-x-auto overflow-y-hidden text-left whitespace-nowrap leading-[1.6] pt-0.5 pb-1 ${className} custom-scrollbar`}
+            style={{ scrollbarWidth: 'thin' }}
+            dangerouslySetInnerHTML={{ __html: html }}
+        />
     );
 };
 

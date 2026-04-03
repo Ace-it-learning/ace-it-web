@@ -1,0 +1,111 @@
+{
+  "is_modular": true,
+  "name": "Probability & Statistics",
+  "name_zh": "概率與統計",
+  "roadmap": "Master the art of data analysis and the laws of chance. Start with Descriptive Statistics to summarize data with precision. Progress to Probability Theory to calculate outcomes of random events and calculate expected values. Finally, tackle Section B challenges like conditional probability and counting principles (nPr/nCr).",
+  "roadmap_zh": "精通數據分析的藝術與概率規律。首先通過描述統計學精確地總括數據；進階到概率理論以計算隨機事件的結果及期望值；最後攻克 DSE 乙部挑戰，如條件概率和計數原理（排列與組合）。",
+  "learning_modules": [
+    {
+      "module_id": "MOD_01",
+      "title": "Descriptive Statistics",
+      "title_zh": "描述統計學",
+      "concepts": [
+        {
+          "concept_id": "C01_CENTRAL",
+          "name": "Measures of Central Tendency",
+          "name_zh": "集中趨勢的量度",
+          "formula": "\\text{Mean } \\mu = \\frac{\\sum x_i}{N}",
+          "key_takeaway": "Mean is the average. Median is the middle value of ordered data. Mode is the most frequent value. For grouped data, use class mid-points.",
+          "key_takeaway_zh": "平均值為平均數。中位數是按順序排列數據的中間值。眾數是出現頻率最高的值。對於組數據，請使用組中點。",
+          "visual_aid": null
+        },
+        {
+          "concept_id": "C02_DISPERSION",
+          "name": "Measures of Dispersion",
+          "name_zh": "離散程度的量度",
+          "formula": "\\text{SD } \\sigma = \\sqrt{\\frac{\\sum (x_i - \\mu)^2}{N}}",
+          "key_takeaway": "Range and IQR measure spread based on position. Standard Deviation (SD) measures spread based on distance from the mean. Variance is $\\sigma^2$.",
+          "key_takeaway_zh": "全距及四分位數間距 (IQR) 是基於位置的離散度。標準差 (SD) 是基於與平均值的距離。方差則是 $\\sigma^2$。",
+          "visual_aid": null
+        },
+        {
+          "concept_id": "C03_TRANSFORM",
+          "name": "Data Transformation",
+          "name_zh": "數據變換",
+          "formula": "y = ax + b \\implies \\mu_y = a\\mu_x + b, \\sigma_y = |a|\\sigma_x",
+          "key_takeaway": "Adding a constant shifts the mean but NOT the SD/IQR. Multiplying by a constant affects both Mean and SD/IQR. Variance changes by $a^2$.",
+          "key_takeaway_zh": "加上常數只會改變平均值，不會改變標準差或 IQR。乘以常數則會同時影響平均值和標準差/IQR。方差則按 $a^2$ 比例改變。",
+          "visual_aid": null
+        }
+      ]
+    },
+    {
+      "module_id": "MOD_02",
+      "title": "Probability Laws",
+      "title_zh": "概率定律",
+      "concepts": [
+        {
+          "concept_id": "C04_BASIC_PROB",
+          "name": "Probability Foundations",
+          "name_zh": "概率基礎",
+          "formula": "P(A) = \\frac{\\text{Successful Outcomes}}{\\text{Total Outcomes}}",
+          "key_takeaway": "Probabilities always sum to 1. Use $1 - P(\\text{Event A})$ to find the complementary event $P(\\text{Not A})$.",
+          "key_takeaway_zh": "概率總和必定為 1。利用 $1 - P(\\text{事件 A})$ 來找出互補事件 $P(\\text{非 A})$。",
+          "visual_aid": null
+        },
+        {
+          "concept_id": "C05_LAWS",
+          "name": "Addition & Multiplication Rules",
+          "name_zh": "加法及乘法定律",
+          "formula": "P(A \\cup B) = P(A) + P(B) - P(A \\cap B)",
+          "key_takeaway": "Addition Rule: For 'OR' events. Multiplication Rule: For 'AND' events. Events are Independent if $P(A \\cap B) = P(A) \\times P(B)$.",
+          "key_takeaway_zh": "加法：用於「或」事件。乘法：用於「及」事件。若 $P(A \\cap B) = P(A) \\times P(B)$，則事件屬「獨立」。",
+          "visual_aid": null
+        },
+        {
+          "concept_id": "C06_EXPECTED",
+          "name": "Expected Value",
+          "name_zh": "期望值",
+          "formula": "E(X) = \\sum P_i x_i",
+          "key_takeaway": "Expected value is the 'average' result of a random trial. Profit = Reward - Cost.",
+          "key_takeaway_zh": "期望值是隨機試驗的「平均」結果。利潤 = 獎金 - 成本。",
+          "visual_aid": null
+        }
+      ]
+    },
+    {
+      "module_id": "MOD_03",
+      "title": "Combinatorics & Conditional",
+      "title_zh": "排列組合與條件概率",
+      "concepts": [
+        {
+          "concept_id": "C07_COUNTING",
+          "name": "nPr vs nCr",
+          "name_zh": "排列與組合",
+          "formula": "P_r^n \\text{ (Order matters) vs } C_r^n \\text{ (Order doesn't)}",
+          "key_takeaway": "Use Permutation ($P$) for arrangements where position matters. Use Combination ($C$) for group selection where order is irrelevant.",
+          "key_takeaway_zh": "排列 ($P$) 用於位置重要的安排；組合 ($C$) 用於順序不重要的群組選擇。",
+          "visual_aid": null
+        },
+        {
+          "concept_id": "C08_CONDITIONAL",
+          "name": "Conditional Probability",
+          "name_zh": "條件概率",
+          "formula": "P(A|B) = \\frac{P(A \\cap B)}{P(B)}",
+          "key_takeaway": "The probability of A happening given that B has already happened. Crucial for 'without replacement' scenarios.",
+          "key_takeaway_zh": "指在事件 B 已發生的情況下，事件 A 發生的概率。在「不放回」的情況下尤為重要。",
+          "visual_aid": null
+        },
+        {
+          "concept_id": "C09_ZSCORE",
+          "name": "Standard Score",
+          "name_zh": "標準分",
+          "formula": "z = \\frac{x - \\mu}{\\sigma}",
+          "key_takeaway": "A z-score compares data from different sets. It tells you how many SDs a result is above/below the mean. Median/SD/IQR of z-scores is always $0/1/1.35$.",
+          "key_takeaway_zh": "標準分（z 分）用於比較不同數集的數據。它顯示結果高於或低於平均值多少個標準差。",
+          "visual_aid": null
+        }
+      ]
+    }
+  ]
+}

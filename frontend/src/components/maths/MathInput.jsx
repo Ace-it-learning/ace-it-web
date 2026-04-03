@@ -1,52 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useEditor, EditorContent } from '@tiptap/react';
+import StarterKit from '@tiptap/starter-kit';
+import Underline from '@tiptap/extension-underline';
+import Placeholder from '@tiptap/extension-placeholder';
+import { MathNode } from './TipTapMathExtension';
+import { BookOpen, X, Calculator, Bold, Italic, Type } from 'lucide-react';
+import { SafeInlineMath } from './SafeMath';
+import 'mathlive';
 import 'katex/dist/katex.min.css';
-import { SafeInlineMath, SafeBlockMath } from './SafeMath';
-import { BookOpen, X } from 'lucide-react';
-import { formatNumbers, sanitizeMath, prepareMathText, splitContentByDelimiters, looksLikeMath } from '../../utils/mathFormattingUtils';
-
-const SYMBOL_CATEGORIES = {
-    essentials: {
-        label: 'Essential',
-        symbols: [
-            { label: '\\frac{a}{b}', insert: '\\frac{}{}', description: 'Fraction' },
-            { label: '\\sqrt{x}', insert: '\\sqrt{}', description: 'Square root' },
-            { label: 'x^2', insert: '^2', description: 'Square' },
-            { label: 'x^n', insert: '^{}', description: 'Power' },
-            { label: '\\pm', insert: '\\pm', description: 'Plus-minus' },
-            { label: '\\approx', insert: '\\approx', description: 'Approximately equal' },
-            { label: '\\neq', insert: '\\neq', description: 'Not equal' },
-            { label: '\\cdot', insert: '\\cdot', description: 'Multiplication dot' },
-            { label: 'x^\\circ', insert: '^\\circ', description: 'Degree' },
-        ]
-    },
-    geometry: {
-        label: 'Geometry',
-        symbols: [
-            { label: '\\triangle', insert: '\\triangle', description: 'Triangle' },
-            { label: '\\angle', insert: '\\angle', description: 'Angle' },
-            { label: '\\therefore', insert: '\\therefore', description: 'Therefore' },
-            { label: '\\because', insert: '\\because', description: 'Because' },
-            { label: '\\sim', insert: '\\sim', description: 'Similar to' },
-            { label: '\\cong', insert: '\\cong', description: 'Congruent to' },
-            { label: '\\parallel', insert: '\\parallel', description: 'Parallel' },
-            { label: '\\perp', insert: '\\perp', description: 'Perpendicular' },
-        ]
-    },
-    advanced: {
-        label: 'Advanced',
-        symbols: [
-            { label: '\\propto', insert: '\\propto', description: 'Varies as (Proportional)' },
-            { label: '\\equiv', insert: '\\equiv', description: 'Identically equal to' },
-            { label: '\\infty', insert: '\\infty', description: 'Infinity' },
-            { label: '\\pi', insert: '\\pi', description: 'Pi' },
-            { label: '\\theta', insert: '\\theta', description: 'Theta' },
-            { label: '\\alpha', insert: '\\alpha', description: 'Alpha' },
-            { label: '\\beta', insert: '\\beta', description: 'Beta' },
-            { label: '\\gamma', insert: '\\gamma', description: 'Gamma' },
-            { label: '\\sigma', insert: '\\sigma', description: 'Sigma' },
-        ]
-    }
-};
+import { isTipTapJSON, convertTipTapToElite, rescueMangledLatex } from '../../utils/mathFormattingUtils';
 
 const COMMON_FORMULAS = [
     { name: 'Quadratic Formula', tex: 'x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}' },
@@ -58,117 +20,195 @@ const COMMON_FORMULAS = [
     { name: 'Sphere Vol', tex: 'V = \\frac{4}{3} \\pi r^3' },
 ];
 
-const MathInput = ({ value, onChange, placeholder = "Type your steps here...", id = "math-input-area" }) => {
+const MathInput = ({ value, onChange, placeholder = "Type your explanation here. Click the Pi icon to insert math equations...", id = "math-input-area" }) => {
     const [showFormulas, setShowFormulas] = useState(false);
-    const [activeCategory, setActiveCategory] = useState('essentials');
 
-    const insertSymbol = (symbol) => {
-        const textarea = document.getElementById(id);
-        if (!textarea) return;
+    const editor = useEditor({
+        extensions: [
+            StarterKit,
+            Underline,
+            MathNode,
+            Placeholder.configure({
+                placeholder: placeholder,
+                emptyEditorClass: 'is-editor-empty',
+            }),
+        ],
+        content: '', // Initial content set in useEffect to avoid hydration issues
+        onUpdate: ({ editor }) => {
+            const json = editor.getJSON();
+            let textOutput = '';
+            
+            const processNode = (node) => {
+                if (node.type === 'text') {
+                    textOutput += node.text;
+                } else if (node.type === 'math') {
+                    // Use a placeholder for the backslash to prevent it from being escaped/eaten
+                    // by intermediate string handlers if necessary, but here we just ensure
+                    // it's a clean string.
+                    textOutput += `$${node.attrs.latex}$`;
+                } else if (node.type === 'paragraph') {
+                    if (node.content) {
+                        node.content.forEach(processNode);
+                    }
+                    textOutput += '\n';
+                } else if (node.content) {
+                    node.content.forEach(processNode);
+                }
+            };
+            
+            if (json.content) {
+                json.content.forEach(processNode);
+            }
+            
+            // Explicitly handle common escape sequences that might be mangled
+            const finalOutput = textOutput.trim();
+            onChange(finalOutput);
+        },
+    });
 
-        const start = textarea.selectionStart;
-        const end = textarea.selectionEnd;
-        const text = value || '';
-
-        // Add a space after the symbol to prevent LaTeX syntax errors if needed
-        const symbolWithSpace = symbol + (symbol.endsWith('}') ? '' : ' ');
-        const newValue = text.substring(0, start) + symbolWithSpace + text.substring(end);
-
-        onChange(newValue);
-
-        // Position cursor inside braces if it's a \frac or \sqrt
-        let cursorOffset = symbolWithSpace.length;
-        if (symbol.includes('{}')) {
-            cursorOffset = symbol.indexOf('{') + 1;
-        }
-
-        const newPos = start + cursorOffset;
-
-        setTimeout(() => {
-            textarea.focus();
-            textarea.setSelectionRange(newPos, newPos);
-        }, 10);
-    };
-
-    // PROCESSOR: Convert plain text newlines (\n) to LaTeX line breaks (\\) for the preview
-    // Added [1.2em] to give more vertical "breadth" between lines as requested.
-    const getProcessedMath = (val) => {
-        if (!val) return '';
-        // Handle explicit newlines from textarea
+    // Helper to parse string content (with $ math $) into TipTap JSON
+    const parseValueToContent = (val) => {
+        if (!val) return [];
+        
+        // Split by newlines first to handle paragraphs
         const lines = val.split('\n');
-        // Join with LaTeX newline
-        return lines.join(' \\\\[1.2em] ');
+        return lines.map(line => {
+            const children = [];
+            // Regex to find $...$ or $$...$$ or \[...\] or \(...\)
+            // We use a non-capturing group for the delimiters to keep the content clean
+            const parts = line.split(/(\$\$[\s\S]*?\$\$|\$[\s\S]*?\$|\\\[[\s\S]*?\\\]|\\\([\s\S]*?\\\))/g);
+            
+            parts.forEach(part => {
+                if (!part) return;
+                
+                let mathMatch = part.match(/^\$\$([\s\S]*)\$\$$/) || 
+                                part.match(/^\$([\s\S]*)\$/) ||
+                                part.match(/^\\\[([\s\S]*)\\\]$/) ||
+                                part.match(/^\\\(([\s\S]*)\\\)$/);
+                
+                if (mathMatch) {
+                    // CRITICAL: Preserve backslashes by ensuring we don't treat them as escape chars
+                    // and apply the rescue logic for eaten backslashes.
+                    const latex = rescueMangledLatex(mathMatch[1]);
+                    children.push({
+                        type: 'math',
+                        attrs: { latex: latex }
+                    });
+                } else {
+                    children.push({
+                        type: 'text',
+                        text: part
+                    });
+                }
+            });
+
+            return {
+                type: 'paragraph',
+                content: children.length > 0 ? children : undefined
+            };
+        });
     };
+
+    // Initial content sync & handle external updates (e.g. Cheat button)
+    useEffect(() => {
+        if (!editor) return;
+
+        // Simple check to avoid feedback loops: compare trimmed strings
+        const currentJSON = editor.getJSON();
+        let currentText = '';
+        const flatten = (node) => {
+            if (node.type === 'text') currentText += node.text;
+            else if (node.type === 'math') {
+                // When comparing, we must also apply rescue to current editor content
+                // if it hasn't been rescued yet, but here we assume nodes are clean.
+                currentText += `$${node.attrs.latex}$`;
+            }
+            else if (node.content) node.content.forEach(flatten);
+            if (node.type === 'paragraph') currentText += '\n';
+        };
+        currentJSON.content?.forEach(flatten);
+
+        if (value !== undefined && value.trim() !== currentText.trim()) {
+            const newContent = parseValueToContent(value);
+            editor.commands.setContent(newContent);
+        }
+    }, [editor, value]);
+
+    const insertMath = (latex = '') => {
+        if (editor) {
+            editor.chain().focus().insertMath(latex).run();
+        }
+    };
+
+    if (!editor) {
+        return null;
+    }
 
     return (
-        <div className="flex flex-col gap-4 bg-slate-50 rounded-lg relative border border-gray-200 shadow-sm">
-            {/* Toolbar */}
-            <div className="flex flex-col bg-white rounded-t-lg border-b border-gray-200 shadow-sm">
-                <div className="flex items-center justify-between p-2 pb-0">
-                    {/* Category Tabs */}
-                    <div className="flex gap-1">
-                        {Object.entries(SYMBOL_CATEGORIES).map(([id, cat]) => (
-                            <button
-                                key={id}
-                                onClick={() => setActiveCategory(id)}
-                                className={`px-4 py-2 text-xs font-bold uppercase tracking-wider transition-all border-b-2 ${activeCategory === id
-                                    ? 'border-purple-600 text-purple-600'
-                                    : 'border-transparent text-slate-400 hover:text-slate-600'
-                                    }`}
-                            >
-                                {cat.label}
-                            </button>
-                        ))}
-                    </div>
-
-                    {/* Formula Sheet Toggle */}
+        <div className="flex flex-col gap-0 bg-white rounded-2xl relative border border-slate-200 shadow-xl overflow-hidden min-h-[450px]">
+            {/* Header / Toolbar */}
+            <div className="flex items-center justify-between p-3 bg-slate-50 border-b border-slate-100 flex-wrap gap-2">
+                <div className="flex items-center gap-1 p-1 bg-white rounded-xl border border-slate-200 shadow-sm">
                     <button
-                        onClick={() => setShowFormulas(!showFormulas)}
-                        className={`px-3 py-1.5 rounded-lg flex items-center gap-2 text-xs font-bold transition-all shadow-sm ${showFormulas ? 'bg-purple-600 text-white' : 'bg-yellow-50 text-yellow-700 border border-yellow-200 hover:bg-yellow-100'
-                            }`}
+                        onClick={() => editor.chain().focus().toggleBold().run()}
+                        disabled={!editor.can().chain().focus().toggleBold().run()}
+                        className={`p-2 rounded-lg transition-all ${editor.isActive('bold') ? 'bg-purple-100 text-purple-600' : 'text-slate-400 hover:bg-slate-50 hover:text-slate-600'}`}
+                        title="Bold"
                     >
-                        <BookOpen className="w-4 h-4" />
-                        <span className="hidden sm:inline uppercase">Formula Sheet</span>
+                        <Bold className="w-4 h-4" />
+                    </button>
+                    <button
+                        onClick={() => editor.chain().focus().toggleItalic().run()}
+                        disabled={!editor.can().chain().focus().toggleItalic().run()}
+                        className={`p-2 rounded-lg transition-all ${editor.isActive('italic') ? 'bg-purple-100 text-purple-600' : 'text-slate-400 hover:bg-slate-50 hover:text-slate-600'}`}
+                        title="Italic"
+                    >
+                        <Italic className="w-4 h-4" />
+                    </button>
+                    <div className="w-px h-4 bg-slate-200 mx-1" />
+                    <button
+                        onClick={() => insertMath()}
+                        className="p-2 rounded-lg bg-purple-600 text-white shadow-md shadow-purple-200 hover:bg-purple-700 transition-all flex items-center gap-1"
+                        title="Insert Equation"
+                    >
+                        <Calculator className="w-4 h-4" />
+                        <span className="text-[10px] font-black uppercase tracking-widest hidden sm:inline">Equation</span>
                     </button>
                 </div>
 
-                <div className="flex gap-2 flex-wrap p-3 items-center min-h-[56px]">
-                    {/* Math Symbols for active category */}
-                    {SYMBOL_CATEGORIES[activeCategory].symbols.map((s, i) => (
-                        <button
-                            key={i}
-                            onClick={() => insertSymbol(s.insert)}
-                            title={s.description}
-                            className="px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg hover:bg-purple-50 hover:border-purple-200 text-sm transition-all text-slate-700 min-w-[48px] flex items-center justify-center group"
-                        >
-                            <div className="transform group-active:scale-95 transition-transform">
-                                <SafeInlineMath math={s.label} />
-                            </div>
-                        </button>
-                    ))}
+                <div className="flex items-center gap-2">
+                    {/* Formula Sheet Toggle */}
+                    <button
+                        onClick={() => setShowFormulas(!showFormulas)}
+                        className={`px-4 py-2 rounded-xl flex items-center gap-2 text-[10px] font-black tracking-widest transition-all shadow-sm ${showFormulas ? 'bg-purple-600 text-white' : 'bg-white text-slate-600 border border-slate-200 hover:border-purple-300 hover:bg-purple-50'
+                            }`}
+                    >
+                        <BookOpen className="w-4 h-4" />
+                        <span className="uppercase">Formula Library</span>
+                    </button>
                 </div>
             </div>
 
             {/* Formula Panel (Overlay) */}
             {showFormulas && (
-                <div className="absolute top-14 right-2 z-10 w-80 bg-white border border-gray-200 shadow-xl rounded-xl overflow-hidden flex flex-col animate-in fade-in slide-in-from-top-2 duration-200">
-                    <div className="bg-gray-50 px-4 py-2 border-b border-gray-100 flex justify-between items-center">
-                        <span className="text-xs font-bold text-gray-500 uppercase tracking-wider">Reference Formulas</span>
-                        <button onClick={() => setShowFormulas(false)} className="text-gray-400 hover:text-gray-600">
-                            <X className="w-4 h-4" />
+                <div className="absolute top-16 right-4 z-20 w-80 bg-white border border-slate-200 shadow-2xl rounded-2xl overflow-hidden flex flex-col animate-in fade-in slide-in-from-top-4 duration-300">
+                    <div className="bg-slate-50 px-4 py-3 border-b border-slate-100 flex justify-between items-center">
+                        <span className="text-xs font-bold text-slate-400 uppercase tracking-widest">Select Formula</span>
+                        <button onClick={() => setShowFormulas(false)} className="text-slate-300 hover:text-slate-500 transition-colors">
+                            <X className="w-5 h-5" />
                         </button>
                     </div>
-                    <div className="p-2 max-h-60 overflow-y-auto grid gap-1">
+                    <div className="p-3 max-h-80 overflow-y-auto grid gap-2 scrollbar-hide">
                         {COMMON_FORMULAS.map((f, i) => (
                             <button
                                 key={i}
                                 onClick={() => {
-                                    insertSymbol(f.tex);
+                                    insertMath(f.tex);
                                     setShowFormulas(false);
                                 }}
-                                className="text-left p-2 hover:bg-purple-50 rounded border border-transparent hover:border-purple-100 group"
+                                className="text-left p-3 hover:bg-purple-50 rounded-xl border border-transparent hover:border-purple-100 transition-all group"
                             >
-                                <div className="text-[10px] text-gray-400 group-hover:text-purple-600 mb-1">{f.name}</div>
+                                <div className="text-[10px] text-slate-400 font-bold uppercase tracking-tighter group-hover:text-purple-600 mb-1">{f.name}</div>
                                 <div className="text-sm">
                                     <SafeInlineMath math={f.tex} />
                                 </div>
@@ -178,86 +218,49 @@ const MathInput = ({ value, onChange, placeholder = "Type your steps here...", i
                 </div>
             )}
 
-            <div className="flex flex-col md:flex-row gap-4 px-4 pb-4">
-                {/* Input Area */}
-                <div className="basis-1/2 min-w-0 flex flex-col gap-2">
-                    <label className="text-[10px] font-bold text-slate-400 uppercase">Your Work (Scratchpad)</label>
-                    <textarea
-                        id={id}
-                        value={value || ''}
-                        onChange={(e) => onChange(e.target.value)}
-                        placeholder={placeholder}
-                        className="w-full min-h-[300px] p-4 font-mono text-base bg-white border border-slate-200 rounded-xl focus:ring-2 focus:ring-purple-500 focus:outline-none resize-y shadow-inner leading-relaxed"
-                        spellCheck="false"
-                    />
-                </div>
-
-                <div className="basis-1/2 min-w-0 flex flex-col gap-2">
-                    <label className="text-[10px] font-bold text-slate-400 uppercase">Mathematical Preview</label>
-                    <div className="min-h-[300px] p-6 bg-white border border-slate-200 rounded-xl shadow-sm overflow-x-auto text-gray-800 leading-relaxed">
-                        {value ? (
-                            <div>
-                                {value.split('\n').map((line, i) => {
-                                    if (!line.trim()) return <br key={i} />;
-
-                                    // Check if line is mixed content (has $ delimiters)
-                                    const hasDelimiters = line.includes('$');
-
-                                    if (hasDelimiters || line.includes('\\[') || line.includes('\\(')) {
-                                        // Mixed Mode: Split by standard delimiters and render
-                                        const cleanLine = prepareMathText(line);
-                                        const parts = splitContentByDelimiters(cleanLine);
-                                        return (
-                                            <div key={i} className="mb-2 flex flex-wrap items-baseline gap-x-1">
-                                                {parts.map((part, j) => {
-                                                    if (!part) return null;
-                                                    const isBlock = (part.startsWith('\\[') && part.endsWith('\\]')) || (part.startsWith('$$') && part.endsWith('$$'));
-                                                    const isInline = (part.startsWith('\\(') && part.endsWith('\\)')) || (part.startsWith('$') && part.endsWith('$'));
-
-                                                    if (isBlock || isInline) {
-                                                        const math = (part.startsWith('\\[') || part.startsWith('\\(')) ? part.slice(2, -2) : (part.startsWith('$$') ? part.slice(2, -2) : part.slice(1, -1));
-                                                        const sanitized = formatNumbers(sanitizeMath(math), true);
-                                                        if (isBlock) {
-                                                            return <div key={j} className="my-2 w-full"><SafeBlockMath math={sanitized} /></div>;
-                                                        }
-                                                        return <SafeInlineMath key={j} math={sanitized} />;
-                                                    } else {
-                                                        return <span key={j}>{formatNumbers(part)}</span>;
-                                                    }
-                                                })}
-                                            </div>
-                                        );
-                                    } else {
-                                        // No explicit delimiters. 
-                                        // Version 1.1.4: Use robust splitting for preview
-                                        return line.split(/(?:\r?\n|(?=\.Step\s*\d+\s*:?))/).map((subLine, subIdx) => {
-                                            const trimmedSub = subLine.trim().replace(/^\./, '');
-                                            if (!trimmedSub) return <br key={subIdx} />;
-
-                                            const isMathLine = looksLikeMath(trimmedSub);
-
-                                            if (isMathLine) {
-                                                const sanitized = formatNumbers(sanitizeMath(trimmedSub.replace(/%/g, '\\%').replace(/___HKD___/g, '\\text{HK}\\$').replace(/___USD___/g, '\\$')), true);
-                                                return (
-                                                    <div key={subIdx} className="mb-2">
-                                                        <SafeInlineMath math={sanitized} />
-                                                    </div>
-                                                );
-                                            } else {
-                                                return <div key={subIdx} className="mb-2 whitespace-pre-wrap">{formatNumbers(trimmedSub).replace(/___HKD___/g, 'HK$').replace(/___USD___/g, '$').replace(/\\,/g, ' ')}</div>;
-                                            }
-                                        });
-                                    }
-                                })}
-                            </div>
-                        ) : (
-                            <div className="text-slate-300 italic text-center mt-20 text-sm">
-                                Use the Equation Sheet and Toolbar to show your steps clearly!
-                            </div>
-                        )}
-                    </div>
-                </div>
+            {/* TipTap Editor Area */}
+            <div className="flex-1 p-8 bg-white overflow-y-auto">
+                <EditorContent 
+                    editor={editor} 
+                    className="prose prose-slate max-w-none min-h-[350px] outline-none text-slate-800 text-lg"
+                />
             </div>
+
+            {/* Footer Style Toggles / Hints */}
+            <div className="px-6 py-3 bg-slate-50 border-t border-slate-100 flex justify-between items-center text-[9px] font-black text-slate-400 uppercase tracking-widest">
+                <div className="flex items-center gap-6">
+                    <span className="flex items-center gap-1.5">
+                        <Type className="w-3 h-3 text-purple-400" />
+                        Mixed Content Mode
+                    </span>
+                    <span className="flex items-center gap-1.5">
+                        <Calculator className="w-3 h-3 text-purple-400" />
+                        Inline Math Nodes
+                    </span>
+                </div>
+                <span className="flex items-center gap-1 opacity-60">
+                    <span className="w-1.5 h-1.5 rounded-full bg-green-500" />
+                    AI-Ready Input
+                </span>
+            </div>
+
+            <style dangerouslySetInnerHTML={{ __html: `
+                .ProseMirror p.is-editor-empty:first-child::before {
+                    content: attr(data-placeholder);
+                    float: left;
+                    color: #cbd5e1;
+                    pointer-events: none;
+                    height: 0;
+                }
+                .ProseMirror {
+                    min-height: 350px;
+                    outline: none !important;
+                }
+                .ProseMirror p {
+                    margin-bottom: 0.5em;
+                    line-height: 1.6;
+                }
+            `}} />
         </div>
     );
 };

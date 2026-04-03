@@ -13,6 +13,7 @@ const MathsLab = ({ topic, level, onComplete }) => {
     const { user } = useAuth();
     const [lesson, setLesson] = useState(null);
     const [answers, setAnswers] = useState({});
+    const [imageAnswers, setImageAnswers] = useState({});
     const [isLoading, setIsLoading] = useState(true);
     const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -127,6 +128,16 @@ const MathsLab = ({ topic, level, onComplete }) => {
         setAnswers({ ...answers, [questionId]: value });
     };
 
+    const handleImageUpload = (questionId, url) => {
+        if (!url) {
+            const newImages = { ...imageAnswers };
+            delete newImages[questionId];
+            setImageAnswers(newImages);
+        } else {
+            setImageAnswers({ ...imageAnswers, [questionId]: url });
+        }
+    };
+
     const handleSubmit = async () => {
         setIsSubmitting(true);
         try {
@@ -150,6 +161,7 @@ const MathsLab = ({ topic, level, onComplete }) => {
                     uid: user.uid,
                     topic,
                     results: answers,
+                    imageAnswers,
                     masteryScore,
                     xp: masteryScore >= 70 ? 100 : 50
                 })
@@ -253,7 +265,10 @@ const MathsLab = ({ topic, level, onComplete }) => {
                             key={task.id}
                             question={task}
                             answer={answers[task.id]}
+                            imageAnswers={imageAnswers}
+                            uid={user?.uid}
                             onChange={handleAnswerChange}
+                            onImageUpload={handleImageUpload}
                             disabled={isSubmitting}
                             questionNumber={i + 1}
                         />

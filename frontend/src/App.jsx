@@ -51,6 +51,7 @@ import MathsDeepDivePage from './pages/MathsDeepDivePage';
 import MathsLearningPage from './pages/MathsLearningPage'; // NEW
 import MockExamPage from './pages/MockExamPage';
 import MathsExamPage from './pages/MathsExamPage';
+import WritingLabPage from './pages/WritingLabPage';
 import QuestFactoryPage from './pages/QuestFactoryPage';
 
 import ErrorBoundary from './components/ErrorBoundary';
@@ -349,6 +350,16 @@ function App() {
                     <ProtectedRoute>
                       <MainLayout fullWidth={true}>
                         <MathsLabPage />
+                      </MainLayout>
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/writing-lab"
+                  element={
+                    <ProtectedRoute>
+                      <MainLayout fullWidth={true}>
+                        <WritingLabPage />
                       </MainLayout>
                     </ProtectedRoute>
                   }

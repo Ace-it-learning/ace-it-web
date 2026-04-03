@@ -600,4 +600,36 @@ router.delete('/quests/wipe-pending', requireAdmin, async (req, res) => {
     }
 });
 
+// GET /api/admin/maths/topic-audit (Super Audit Mode for specific topic)
+router.get('/maths/topic-audit', requireAdmin, async (req, res) => {
+    const { topicId } = req.query;
+    if (!topicId) return res.status(400).json({ error: "Topic ID required" });
+
+    const db = admin.firestore();
+    try {
+        console.log(`[AdminAudit] Fetching all questions for topic: ${topicId}`);
+        const snapshot = await db.collection('question_bank')
+            .where('topic_id', '==', topicId)
+            .get();
+
+        const questions = snapshot.docs.map(doc => ({ 
+            id: doc.id, 
+            ...doc.data(),
+            // Ensure visual consistency for audit
+            text: doc.data().text || doc.data().question
+        }));
+        
+        // Sort by level and date
+        questions.sort((a, b) => {
+            if (a.level !== b.level) return a.level - b.level;
+            return (b.created_at || 0) - (a.created_at || 0);
+        });
+
+        res.json(questions);
+    } catch (e) {
+        console.error("Topic Audit Error:", e);
+        res.status(500).json({ error: e.message });
+    }
+});
+
 module.exports = router;

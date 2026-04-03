@@ -1,0 +1,124 @@
+{
+    "is_modular": true,
+    "name": "Mensuration",
+    "name_zh": "求積法",
+    "roadmap": "Start with 2D areas (sectors, segments) then advance to 3D solids (cylinders, cones, spheres). Master the frustum and composite-solid problems that appear in DSE Section A(2) and Section B.",
+    "roadmap_zh": "從二維面積（扇形、弓形）開始，然後進階到三維立體（圓柱、圓錐、球體）。掌握 DSE 甲部(2) 和乙部常見的截頭體和組合立體題目。",
+    "learning_modules": [
+        {
+            "module_id": "MOD_01",
+            "title": "2D Mensuration: Sectors & Segments",
+            "title_zh": "二維求積法：扇形與弓形",
+            "concepts": [
+                {
+                    "concept_id": "C01_ARC_SECTOR",
+                    "name": "Arc Length & Sector Area",
+                    "name_zh": "弧長與扇形面積",
+                    "formula": "\\text{Arc length} = \\frac{\\theta}{360^\\circ} \\times 2\\pi r \\\\\\\\ \\text{Sector area} = \\frac{\\theta}{360^\\circ} \\times \\pi r^2",
+                    "variables": {
+                        "r": "Radius of the circle",
+                        "θ": "Angle of the sector (in degrees)"
+                    },
+                    "variables_zh": {
+                        "r": "圓的半徑",
+                        "θ": "扇形的角度（以度為單位）"
+                    },
+                    "key_takeaway": "Both arc length and sector area are simply the fraction $\\frac{\\theta}{360^\\circ}$ of the full circle's circumference or area. This fraction is the key to all sector problems.",
+                    "key_takeaway_zh": "弧長和扇形面積都只是整圓周長或面積的 $\\frac{\\theta}{360^\\circ}$ 分數。這個分數是所有扇形問題的關鍵。"
+                },
+                {
+                    "concept_id": "C02_SEGMENT",
+                    "name": "Area of a Segment",
+                    "name_zh": "弓形面積",
+                    "formula": "\\text{Segment area} = \\text{Sector area} - \\text{Triangle area} \\\\\\\\ = \\frac{\\theta}{360^\\circ} \\pi r^2 - \\frac{1}{2} r^2 \\sin\\theta",
+                    "key_takeaway": "A segment is the region between a chord and its arc. Always subtract the triangle from the sector. Remember $\\frac{1}{2}r^2 \\sin\\theta$ for the triangle area.",
+                    "key_takeaway_zh": "弓形是弦與弧之間的區域。總是從扇形中減去三角形。記住三角形面積公式 $\\frac{1}{2}r^2 \\sin\\theta$。"
+                }
+            ],
+            "common_traps": [
+                {
+                    "trap": "Using radians instead of degrees",
+                    "trap_zh": "混用弧度和角度",
+                    "description": "DSE questions always use degrees. Don't accidentally use radian formulas like $s = r\\theta$.",
+                    "description_zh": "DSE 題目一律使用角度。不要不小心使用弧度公式如 $s = r\\theta$。",
+                    "fix": "Always check: if the angle is given in degrees, use $\\frac{\\theta}{360}$ fraction formulas.",
+                    "fix_zh": "務必檢查：如果角度以度為單位，使用 $\\frac{\\theta}{360}$ 分數公式。"
+                }
+            ]
+        },
+        {
+            "module_id": "MOD_02",
+            "title": "3D Solids: Volume & Surface Area",
+            "title_zh": "三維立體：體積與表面面積",
+            "concepts": [
+                {
+                    "concept_id": "C03_CYLINDER",
+                    "name": "Cylinder",
+                    "name_zh": "圓柱體",
+                    "formula": "V = \\pi r^2 h \\\\\\\\ \\text{Total SA} = 2\\pi r^2 + 2\\pi r h",
+                    "key_takeaway": "The curved surface area of a cylinder is $2\\pi rh$ — imagine unrolling the side into a rectangle of width $2\\pi r$ and height $h$.",
+                    "key_takeaway_zh": "圓柱的曲面面積是 $2\\pi rh$ — 想像把側面展開成寬 $2\\pi r$、高 $h$ 的長方形。"
+                },
+                {
+                    "concept_id": "C04_CONE",
+                    "name": "Cone",
+                    "name_zh": "圓錐體",
+                    "formula": "V = \\frac{1}{3}\\pi r^2 h \\\\\\\\ \\text{Curved SA} = \\pi r l \\\\\\\\ l = \\sqrt{r^2 + h^2}",
+                    "variables": {
+                        "r": "Base radius",
+                        "h": "Perpendicular height",
+                        "l": "Slant height"
+                    },
+                    "variables_zh": {
+                        "r": "底面半徑",
+                        "h": "垂直高度",
+                        "l": "斜面高度"
+                    },
+                    "key_takeaway": "Cone volume is $\\frac{1}{3}$ of the cylinder with the same base and height. The slant height $l$ connects the apex to the circumference — use Pythagoras to find it.",
+                    "key_takeaway_zh": "圓錐體積是同底同高圓柱的 $\\frac{1}{3}$。斜面高度 $l$ 連接頂點和底面圓周 — 用勾股定理求它。"
+                },
+                {
+                    "concept_id": "C05_SPHERE",
+                    "name": "Sphere",
+                    "name_zh": "球體",
+                    "formula": "V = \\frac{4}{3}\\pi r^3 \\\\\\\\ \\text{SA} = 4\\pi r^2",
+                    "key_takeaway": "Surface area equals exactly 4 great circles. Volume formula's $\\frac{4}{3}$ and the cube of $r$ are the most commonly forgotten details.",
+                    "key_takeaway_zh": "表面面積正好等於 4 個大圓的面積。體積公式中的 $\\frac{4}{3}$ 和 $r$ 的立方是最常忘記的細節。"
+                }
+            ],
+            "common_traps": [
+                {
+                    "trap": "Confusing height and slant height",
+                    "trap_zh": "混淆垂直高度和斜面高度",
+                    "description": "Volume uses the perpendicular height $h$, but curved surface area of a cone uses the slant height $l$. These are different!",
+                    "description_zh": "體積使用垂直高度 $h$，但圓錐曲面面積使用斜面高度 $l$。它們是不同的！",
+                    "fix": "Draw a right triangle inside the cone: $l^2 = r^2 + h^2$. Always check which one the question asks for.",
+                    "fix_zh": "在圓錐內畫一個直角三角形：$l^2 = r^2 + h^2$。務必檢查題目要求的是哪一個。"
+                }
+            ]
+        },
+        {
+            "module_id": "MOD_03",
+            "title": "Frustums & Similar Solids",
+            "title_zh": "截頭體與相似立體",
+            "concepts": [
+                {
+                    "concept_id": "C06_FRUSTUM",
+                    "name": "Frustum (Truncated Cone/Pyramid)",
+                    "name_zh": "截頭體（截去頂部的錐體/角錐）",
+                    "formula": "V_{\\text{frustum}} = V_{\\text{large cone}} - V_{\\text{small cone}}",
+                    "key_takeaway": "A frustum is NOT a separate shape — it's a large cone with a small cone cut off. Use similarity ratios to find the small cone's dimensions.",
+                    "key_takeaway_zh": "截頭體不是一個獨立的形狀 — 它是一個大圓錐減去一個小圓錐。使用相似比來求小圓錐的尺寸。"
+                },
+                {
+                    "concept_id": "C07_SIMILAR_SOLIDS",
+                    "name": "Ratios of Similar Solids",
+                    "name_zh": "相似立體的比例",
+                    "formula": "\\frac{l_1}{l_2} = k \\implies \\frac{A_1}{A_2} = k^2 \\implies \\frac{V_1}{V_2} = k^3",
+                    "key_takeaway": "If linear dimensions scale by $k$, areas scale by $k^2$ and volumes by $k^3$. This is one of the most tested concepts in DSE Section A(2).",
+                    "key_takeaway_zh": "如果線性尺寸按 $k$ 倍縮放，面積按 $k^2$ 倍縮放，體積按 $k^3$ 倍縮放。這是 DSE 甲部(2) 最常考的概念之一。"
+                }
+            ]
+        }
+    ]
+}

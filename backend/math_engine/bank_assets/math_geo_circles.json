@@ -1,0 +1,929 @@
+{
+    "is_modular": true,
+    "name": "Circle Properties",
+    "name_zh": "圓的性質",
+    "roadmap": "Begin with basic angle properties (angles at center and circumference). Move on to chord properties and cyclic quadrilaterals. Finally, master the properties of tangents and the alternate segment theorem. This step-by-step approach ensures a solid foundation for complex geometric proofs in Section B.",
+    "roadmap_zh": "從基本的角性質（圓心角和圓周角）開始。接著學習弦的性質和圓內接四邊形。最後，掌握切線的性質和弦切角定理。這種循序漸進的方法為解決乙部（Section B）中的複雜幾何證明奠定了堅實的基礎。",
+    "learning_modules": [
+        {
+            "module_id": "MOD_01",
+            "title": "Angles in a Circle",
+            "title_zh": "圓的角性質",
+            "concepts": [
+                {
+                    "concept_id": "C01_CENTER_CIRCUM",
+                    "name": "Angle at Center & Circumference",
+                    "name_zh": "圓心角與圓周角",
+                    "formula": "\\[ \\angle \\text{ at center} = 2 \\times \\angle \\text{ at circumference} \\]",
+                    "key_takeaway": "The angle subtended by an arc at the center is twice the angle subtended by the same arc at the circumference. Notation: '∠ at center = 2∠ at circum.'.",
+                    "key_takeaway_zh": "弧在圓心所對的角（圓心角）是該弧在圓周上所對的角（圓周角）的兩倍。簡寫：「圓心角 = 2圓周角」。",
+                    "diagram_json": {
+                        "center": [
+                            0,
+                            0
+                        ],
+                        "radius": 5,
+                        "points": [
+                            {
+                                "label": "O",
+                                "pos": [
+                                    0,
+                                    0
+                                ],
+                                "offset": [
+                                    -1,
+                                    -1
+                                ]
+                            },
+                            {
+                                "label": "A",
+                                "angle": 210,
+                                "offset": [
+                                    -1,
+                                    -1
+                                ]
+                            },
+                            {
+                                "label": "B",
+                                "angle": 330,
+                                "offset": [
+                                    1,
+                                    -1
+                                ]
+                            },
+                            {
+                                "label": "C",
+                                "angle": 90,
+                                "offset": [
+                                    0,
+                                    1
+                                ]
+                            }
+                        ],
+                        "lines": [
+                            {
+                                "pts": [
+                                    "O",
+                                    "A"
+                                ]
+                            },
+                            {
+                                "pts": [
+                                    "O",
+                                    "B"
+                                ]
+                            },
+                            {
+                                "pts": [
+                                    "C",
+                                    "A"
+                                ]
+                            },
+                            {
+                                "pts": [
+                                    "C",
+                                    "B"
+                                ]
+                            }
+                        ],
+                        "angles": [
+                            {
+                                "pts": [
+                                    "A",
+                                    "O",
+                                    "B"
+                                ],
+                                "label": "2x",
+                                "radius": 1.2
+                            },
+                            {
+                                "pts": [
+                                    "A",
+                                    "C",
+                                    "B"
+                                ],
+                                "label": "x",
+                                "radius": 1.2
+                            }
+                        ]
+                    }
+                },
+                {
+                    "concept_id": "C02_SAME_SEGMENT",
+                    "name": "Angles in the Same Segment",
+                    "name_zh": "同弓形內的圓周角",
+                    "formula": "\\[ \\angle\\text{s in same segment are equal} \\]",
+                    "key_takeaway": "Angles subtended by the same arc at the circumference are equal. This is commonly known as the 'butterfly' or 'bow-tie' property.",
+                    "key_takeaway_zh": "由同一段弧在圓周上所對的所有圓周角都相等。這通常被稱為「蝴蝶」或「领结」性質。簡寫：「同弓形內的圓周角」。",
+                    "diagram_json": {
+                        "center": [
+                            0,
+                            0
+                        ],
+                        "radius": 5,
+                        "points": [
+                            {
+                                "label": "A",
+                                "angle": 210,
+                                "offset": [
+                                    -1,
+                                    -1
+                                ]
+                            },
+                            {
+                                "label": "B",
+                                "angle": 330,
+                                "offset": [
+                                    1,
+                                    -1
+                                ]
+                            },
+                            {
+                                "label": "C",
+                                "angle": 120,
+                                "offset": [
+                                    -1,
+                                    1
+                                ]
+                            },
+                            {
+                                "label": "D",
+                                "angle": 60,
+                                "offset": [
+                                    1,
+                                    1
+                                ]
+                            }
+                        ],
+                        "lines": [
+                            {
+                                "pts": [
+                                    "C",
+                                    "A"
+                                ]
+                            },
+                            {
+                                "pts": [
+                                    "C",
+                                    "B"
+                                ]
+                            },
+                            {
+                                "pts": [
+                                    "D",
+                                    "A"
+                                ]
+                            },
+                            {
+                                "pts": [
+                                    "D",
+                                    "B"
+                                ]
+                            }
+                        ],
+                        "angles": [
+                            {
+                                "pts": [
+                                    "A",
+                                    "C",
+                                    "B"
+                                ],
+                                "label": "a",
+                                "radius": 1
+                            },
+                            {
+                                "pts": [
+                                    "A",
+                                    "D",
+                                    "B"
+                                ],
+                                "label": "a",
+                                "radius": 1
+                            }
+                        ]
+                    }
+                },
+                {
+                    "concept_id": "C03_SEMI_CIRCLE",
+                    "name": "Angle in a Semi-circle",
+                    "name_zh": "半圓上的圓周角",
+                    "formula": "\\[ \\angle \\text{ in semi-circle} = 90^\\circ \\]",
+                    "key_takeaway": "The angle subtended by a diameter at the circumference is always a right angle (90°).",
+                    "key_takeaway_zh": "直徑在圓周上所對的圓周角始終為直角（90度）。簡寫：「半圓上的圓周角」。",
+                    "diagram_json": {
+                        "center": [
+                            0,
+                            0
+                        ],
+                        "radius": 5,
+                        "points": [
+                            {
+                                "label": "O",
+                                "pos": [
+                                    0,
+                                    0
+                                ],
+                                "offset": [
+                                    0,
+                                    -1
+                                ]
+                            },
+                            {
+                                "label": "A",
+                                "angle": 180,
+                                "offset": [
+                                    -1,
+                                    0
+                                ]
+                            },
+                            {
+                                "label": "B",
+                                "angle": 0,
+                                "offset": [
+                                    1,
+                                    0
+                                ]
+                            },
+                            {
+                                "label": "C",
+                                "angle": 70,
+                                "offset": [
+                                    1,
+                                    1
+                                ]
+                            }
+                        ],
+                        "lines": [
+                            {
+                                "pts": [
+                                    "A",
+                                    "B"
+                                ],
+                                "style": "-"
+                            },
+                            {
+                                "pts": [
+                                    "C",
+                                    "A"
+                                ]
+                            },
+                            {
+                                "pts": [
+                                    "C",
+                                    "B"
+                                ]
+                            }
+                        ],
+                        "angles": [
+                            {
+                                "pts": [
+                                    "A",
+                                    "C",
+                                    "B"
+                                ],
+                                "label": "90°",
+                                "radius": 0.8
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "module_id": "MOD_02",
+            "title": "Chords & Arc Properties",
+            "title_zh": "弦與弧的性質",
+            "concepts": [
+                {
+                    "concept_id": "C04_CHORD_BISECTOR",
+                    "name": "Perpendicular from Center",
+                    "name_zh": "圓心至弦的垂線",
+                    "formula": "\\[ \\text{line from center } \\perp \\text{ chord bisects chord} \\]",
+                    "key_takeaway": "The perpendicular line from the center of a circle to a chord bisects the chord. Conversely, the line joining the center to the midpoint of a chord is perpendicular to the chord.",
+                    "key_takeaway_zh": "從圓心到弦的垂線平分該弦。反之，圓心與弦中點的連線垂直於該弦。簡寫：「圓心至弦的垂線平分弦」。",
+                    "diagram_json": {
+                        "center": [
+                            0,
+                            0
+                        ],
+                        "radius": 5,
+                        "points": [
+                            {
+                                "label": "O",
+                                "pos": [
+                                    0,
+                                    0
+                                ],
+                                "offset": [
+                                    0,
+                                    1
+                                ]
+                            },
+                            {
+                                "label": "A",
+                                "angle": 210,
+                                "offset": [
+                                    -1,
+                                    -1
+                                ]
+                            },
+                            {
+                                "label": "B",
+                                "angle": 330,
+                                "offset": [
+                                    1,
+                                    -1
+                                ]
+                            },
+                            {
+                                "label": "M",
+                                "pos": [
+                                    0,
+                                    -2.5
+                                ],
+                                "offset": [
+                                    0,
+                                    -1
+                                ]
+                            }
+                        ],
+                        "lines": [
+                            {
+                                "pts": [
+                                    "A",
+                                    "B"
+                                ]
+                            },
+                            {
+                                "pts": [
+                                    "O",
+                                    "M"
+                                ],
+                                "style": "--"
+                            }
+                        ],
+                        "angles": [
+                            {
+                                "pts": [
+                                    "O",
+                                    "M",
+                                    "B"
+                                ],
+                                "label": "90°",
+                                "radius": 0.5
+                            }
+                        ]
+                    }
+                },
+                {
+                    "concept_id": "C05_EQUAL_CHORDS",
+                    "name": "Equal Chords & Arcs",
+                    "name_zh": "等弦與等弧",
+                    "formula": "\\[ \\text{equal chords } \\leftrightarrow \\text{ equal arcs } \\leftrightarrow \\text{ equal angles} \\]",
+                    "key_takeaway": "Equal chords subtend equal angles at the center and correspond to equal arc lengths.",
+                    "key_takeaway_zh": "等弦對等角（圓心角或圓周角）且對等弧。簡寫：「等弦對等角」。",
+                    "diagram_json": {
+                        "center": [
+                            0,
+                            0
+                        ],
+                        "radius": 5,
+                        "points": [
+                            {
+                                "label": "O",
+                                "pos": [
+                                    0,
+                                    0
+                                ]
+                            },
+                            {
+                                "label": "A",
+                                "angle": 30
+                            },
+                            {
+                                "label": "B",
+                                "angle": 90
+                            },
+                            {
+                                "label": "C",
+                                "angle": 210
+                            },
+                            {
+                                "label": "D",
+                                "angle": 270
+                            }
+                        ],
+                        "lines": [
+                            {
+                                "pts": [
+                                    "A",
+                                    "B"
+                                ]
+                            },
+                            {
+                                "pts": [
+                                    "C",
+                                    "D"
+                                ]
+                            },
+                            {
+                                "pts": [
+                                    "O",
+                                    "A"
+                                ],
+                                "style": "--"
+                            },
+                            {
+                                "pts": [
+                                    "O",
+                                    "B"
+                                ],
+                                "style": "--"
+                            },
+                            {
+                                "pts": [
+                                    "O",
+                                    "C"
+                                ],
+                                "style": "--"
+                            },
+                            {
+                                "pts": [
+                                    "O",
+                                    "D"
+                                ],
+                                "style": "--"
+                            }
+                        ],
+                        "angles": [
+                            {
+                                "pts": [
+                                    "A",
+                                    "O",
+                                    "B"
+                                ],
+                                "label": "x",
+                                "radius": 1.2
+                            },
+                            {
+                                "pts": [
+                                    "C",
+                                    "O",
+                                    "D"
+                                ],
+                                "label": "x",
+                                "radius": 1.2
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "module_id": "MOD_03",
+            "title": "Cyclic Quadrilaterals",
+            "title_zh": "圓內接四邊形",
+            "concepts": [
+                {
+                    "concept_id": "C06_OPP_ANGLES",
+                    "name": "Opposite Angles of Cyclic Quad.",
+                    "name_zh": "對角互補",
+                    "formula": "\\[ \\angle A + \\angle C = 180^\\circ \\]",
+                    "key_takeaway": "The opposite angles of a cyclic quadrilateral (a four-sided figure inside a circle) are supplementary (sum to 180°).",
+                    "key_takeaway_zh": "圓內接四邊形的對角互補（和為 180 度）。簡寫：「圓內接四邊形對角」。",
+                    "diagram_json": {
+                        "center": [
+                            0,
+                            0
+                        ],
+                        "radius": 5,
+                        "points": [
+                            {
+                                "label": "A",
+                                "angle": 120
+                            },
+                            {
+                                "label": "B",
+                                "angle": 45
+                            },
+                            {
+                                "label": "C",
+                                "angle": 300
+                            },
+                            {
+                                "label": "D",
+                                "angle": 210
+                            }
+                        ],
+                        "lines": [
+                            {
+                                "pts": [
+                                    "A",
+                                    "B"
+                                ]
+                            },
+                            {
+                                "pts": [
+                                    "B",
+                                    "C"
+                                ]
+                            },
+                            {
+                                "pts": [
+                                    "C",
+                                    "D"
+                                ]
+                            },
+                            {
+                                "pts": [
+                                    "D",
+                                    "A"
+                                ]
+                            }
+                        ],
+                        "angles": [
+                            {
+                                "pts": [
+                                    "D",
+                                    "A",
+                                    "B"
+                                ],
+                                "label": "a",
+                                "radius": 1
+                            },
+                            {
+                                "pts": [
+                                    "B",
+                                    "C",
+                                    "D"
+                                ],
+                                "label": "180-a",
+                                "radius": 1
+                            }
+                        ]
+                    }
+                },
+                {
+                    "concept_id": "C07_EXT_ANGLE",
+                    "name": "Exterior Angle of Cyclic Quad.",
+                    "name_zh": "外角等於內對角",
+                    "formula": "\\[ \\text{ext. } \\angle = \\text{ int. opp. } \\angle \\]",
+                    "key_takeaway": "An exterior angle of a cyclic quadrilateral is equal to its interior opposite angle.",
+                    "key_takeaway_zh": "圓內接四邊形的一個外角等於其內對角。簡寫：「圓內接四邊形外角」。",
+                    "diagram_json": {
+                        "center": [
+                            0,
+                            0
+                        ],
+                        "radius": 5,
+                        "points": [
+                            {
+                                "label": "A",
+                                "angle": 120
+                            },
+                            {
+                                "label": "B",
+                                "angle": 60
+                            },
+                            {
+                                "label": "C",
+                                "angle": 300
+                            },
+                            {
+                                "label": "D",
+                                "angle": 210
+                            },
+                            {
+                                "label": "E",
+                                "pos": [
+                                    7,
+                                    1.4
+                                ],
+                                "offset": [
+                                    1,
+                                    1
+                                ]
+                            }
+                        ],
+                        "lines": [
+                            {
+                                "pts": [
+                                    "A",
+                                    "B"
+                                ]
+                            },
+                            {
+                                "pts": [
+                                    "B",
+                                    "C"
+                                ]
+                            },
+                            {
+                                "pts": [
+                                    "C",
+                                    "D"
+                                ]
+                            },
+                            {
+                                "pts": [
+                                    "D",
+                                    "A"
+                                ]
+                            },
+                            {
+                                "pts": [
+                                    "B",
+                                    "E"
+                                ],
+                                "style": "--"
+                            }
+                        ],
+                        "angles": [
+                            {
+                                "pts": [
+                                    "C",
+                                    "B",
+                                    "E"
+                                ],
+                                "label": "x",
+                                "radius": 1.2
+                            },
+                            {
+                                "pts": [
+                                    "A",
+                                    "D",
+                                    "C"
+                                ],
+                                "label": "x",
+                                "radius": 1.2
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "module_id": "MOD_04",
+            "title": "Tangent Properties",
+            "title_zh": "切線性質",
+            "concepts": [
+                {
+                    "concept_id": "C08_TANGENT_RADIUS",
+                    "name": "Tangent Perpendicular to Radius",
+                    "name_zh": "切線垂直於半徑",
+                    "formula": "\\[ \\text{tangent } \\perp \\text{ radius} \\]",
+                    "key_takeaway": "A tangent to a circle at any point is perpendicular to the radius through that point of contact.",
+                    "key_takeaway_zh": "圓在任何一點的切線都垂直於過該切點的半徑。簡寫：「切線垂直於半徑」。",
+                    "diagram_json": {
+                        "center": [
+                            0,
+                            0
+                        ],
+                        "radius": 5,
+                        "points": [
+                            {
+                                "label": "O",
+                                "pos": [
+                                    0,
+                                    0
+                                ]
+                            },
+                            {
+                                "label": "P",
+                                "angle": 270
+                            },
+                            {
+                                "label": "T1",
+                                "pos": [
+                                    -4,
+                                    -5
+                                ],
+                                "offset": [
+                                    -1,
+                                    -1
+                                ]
+                            },
+                            {
+                                "label": "T2",
+                                "pos": [
+                                    4,
+                                    -5
+                                ],
+                                "offset": [
+                                    1,
+                                    -1
+                                ]
+                            }
+                        ],
+                        "lines": [
+                            {
+                                "pts": [
+                                    "O",
+                                    "P"
+                                ]
+                            },
+                            {
+                                "pts": [
+                                    "T1",
+                                    "T2"
+                                ]
+                            }
+                        ],
+                        "angles": [
+                            {
+                                "pts": [
+                                    "O",
+                                    "P",
+                                    "T2"
+                                ],
+                                "label": "90°",
+                                "radius": 0.8
+                            }
+                        ]
+                    }
+                },
+                {
+                    "concept_id": "C09_TANGENT_EXT_POINT",
+                    "name": "Tangents from External Point",
+                    "name_zh": "外點到切線的性質",
+                    "formula": "\\[ PA = PB \\]",
+                    "key_takeaway": "Tangents drawn from an external point to a circle are equal in length and subtend equal angles at the point and the center.",
+                    "key_takeaway_zh": "從圓外一點向圓引的兩條切線長度相等，且該點與圓心的連線平分兩切線的夾角。簡寫：「切線性質」。",
+                    "diagram_json": {
+                        "center": [
+                            0,
+                            0
+                        ],
+                        "radius": 5,
+                        "points": [
+                            {
+                                "label": "O",
+                                "pos": [
+                                    0,
+                                    0
+                                ]
+                            },
+                            {
+                                "label": "P",
+                                "pos": [
+                                    10,
+                                    0
+                                ]
+                            },
+                            {
+                                "label": "A",
+                                "angle": 60
+                            },
+                            {
+                                "label": "B",
+                                "angle": 300
+                            }
+                        ],
+                        "lines": [
+                            {
+                                "pts": [
+                                    "P",
+                                    "A"
+                                ]
+                            },
+                            {
+                                "pts": [
+                                    "P",
+                                    "B"
+                                ]
+                            },
+                            {
+                                "pts": [
+                                    "O",
+                                    "A"
+                                ]
+                            },
+                            {
+                                "pts": [
+                                    "O",
+                                    "B"
+                                ]
+                            },
+                            {
+                                "pts": [
+                                    "O",
+                                    "P"
+                                ],
+                                "style": "--"
+                            }
+                        ],
+                        "angles": [
+                            {
+                                "pts": [
+                                    "A",
+                                    "P",
+                                    "O"
+                                ],
+                                "label": "y",
+                                "radius": 1.5
+                            },
+                            {
+                                "pts": [
+                                    "B",
+                                    "P",
+                                    "O"
+                                ],
+                                "label": "y",
+                                "radius": 1.5
+                            }
+                        ]
+                    }
+                },
+                {
+                    "concept_id": "C10_ALT_SEGMENT",
+                    "name": "Angles in Alternate Segment",
+                    "name_zh": "弦切角定理",
+                    "formula": "\\[ \\angle\\text{ (tangent, chord)} = \\angle\\text{ (alt. segment)} \\]",
+                    "key_takeaway": "The angle between a tangent and a chord through the point of contact is equal to the angle subtended by the chord in the alternate segment.",
+                    "key_takeaway_zh": "切線與過切點的弦之間的夾角（弦切角）等於該弦在交錯弓形內所對的圓周角。簡寫：「弦切角定理」。",
+                    "diagram_json": {
+                        "center": [
+                            0,
+                            0
+                        ],
+                        "radius": 5,
+                        "points": [
+                            {
+                                "label": "A",
+                                "angle": 270
+                            },
+                            {
+                                "label": "B",
+                                "angle": 30
+                            },
+                            {
+                                "label": "C",
+                                "angle": 150
+                            },
+                            {
+                                "label": "T1",
+                                "pos": [
+                                    -4,
+                                    -5
+                                ]
+                            },
+                            {
+                                "label": "T2",
+                                "pos": [
+                                    4,
+                                    -5
+                                ]
+                            }
+                        ],
+                        "lines": [
+                            {
+                                "pts": [
+                                    "T1",
+                                    "T2"
+                                ]
+                            },
+                            {
+                                "pts": [
+                                    "A",
+                                    "B"
+                                ]
+                            },
+                            {
+                                "pts": [
+                                    "B",
+                                    "C"
+                                ]
+                            },
+                            {
+                                "pts": [
+                                    "C",
+                                    "A"
+                                ]
+                            }
+                        ],
+                        "angles": [
+                            {
+                                "pts": [
+                                    "B",
+                                    "A",
+                                    "T2"
+                                ],
+                                "label": "θ",
+                                "radius": 1
+                            },
+                            {
+                                "pts": [
+                                    "B",
+                                    "C",
+                                    "A"
+                                ],
+                                "label": "θ",
+                                "radius": 1
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

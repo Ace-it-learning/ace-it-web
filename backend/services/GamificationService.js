@@ -387,24 +387,35 @@ class GamificationService {
      */
     async getProgress(uid) {
         if (!uid || uid === 'guest') return null;
-        const doc = await this.db.collection('users').doc(uid).collection('stats').doc('main').get();
-        if (!doc.exists) return null;
 
-        const data = doc.data();
-        const totalXP = data.total_xp || data.xp || 0;
-        const levelData = this.calculateLevelFromXP(totalXP);
+        try {
+            // Concurrent retrieval of stats and inventory
+            const [doc, inventorySnap] = await Promise.all([
+                this.db.collection('users').doc(uid).collection('stats').doc('main').get(),
+                this.db.collection('users').doc(uid).collection('inventory')
+                    .orderBy('acquiredAt', 'desc')
+                    .limit(50) // Enforce the 50 limit correctly
+                    .get()
+            ]);
 
-        // Fetch Inventory (Limited to last 50 for now)
-        const inventorySnap = await this.db.collection('users').doc(uid).collection('inventory').orderBy('acquiredAt', 'desc').get();
-        const inventory = inventorySnap.docs.map(d => d.data());
+            if (!doc.exists) return null;
 
-        return {
-            ...data,
-            nextLevelXP: levelData.nextLevelXP,
-            currentStepXP: levelData.currentStepXP, // Progress in current level
-            progressPercent: (levelData.currentStepXP / levelData.nextLevelXP) * 100,
-            inventory
-        };
+            const data = doc.data();
+            const totalXP = data.total_xp || data.xp || 0;
+            const levelData = this.calculateLevelFromXP(totalXP);
+            const inventory = inventorySnap.docs.map(d => d.data());
+
+            return {
+                ...data,
+                nextLevelXP: levelData.nextLevelXP,
+                currentStepXP: levelData.currentStepXP, // Progress in current level
+                progressPercent: (levelData.currentStepXP / levelData.nextLevelXP) * 100,
+                inventory
+            };
+        } catch (error) {
+            console.error(`[GamificationService] Error fetching progress for ${uid}:`, error);
+            throw error;
+        }
     }
 
     /**

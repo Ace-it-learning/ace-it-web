@@ -1,0 +1,160 @@
+{
+  "type": "READING",
+  "topic": "reading_weekly",
+  "title": "Sustainable Housing and the Subdivided Flat Crisis in Hong Kong",
+  "reading_passage": "Hong Kong, a city renowned for its dynamic skyline and vibrant culture, grapples with a severe housing crisis. The scarcity of land, coupled with a rapidly growing population, has led to the proliferation of subdivided flats – tiny, often unsanitary units carved out of existing apartments. This precarious living situation affects a significant portion of the city's low-income residents, raising pressing questions about social justice, public health, and sustainable urban development.\n\nThe problem is multifaceted. Property developers, driven by profit margins, have historically prioritized luxury developments over affordable housing options. Government policies, while aiming to address the issue, have often been slow to adapt to the evolving needs of the population. The result is a widening gap between the supply of affordable housing and the ever-increasing demand, forcing many into cramped and inadequate living conditions.\n\nSubdivided flats typically lack essential amenities and are often plagued by safety hazards. Overcrowding is common, with families crammed into spaces as small as 50 square feet. Ventilation is often inadequate, leading to poor air quality and increased risk of respiratory illnesses. Electrical wiring is frequently overloaded, posing a fire hazard. Furthermore, the lack of privacy and personal space can have a detrimental impact on mental health and overall well-being.\n\nAddressing the subdivided flat crisis requires a multi-pronged approach. Firstly, the government must increase the supply of affordable housing through initiatives such as public housing projects and subsidized rental schemes. Secondly, stricter regulations are needed to ensure that subdivided flats meet minimum safety and hygiene standards. Landlords should be held accountable for providing habitable living conditions and preventing exploitation of vulnerable tenants.\n\nBeyond immediate relief measures, the long-term solution lies in promoting sustainable urban development. This includes exploring innovative housing designs, such as modular construction and co-living spaces, which can maximize the efficient use of land resources. It also requires investing in infrastructure and transportation networks to connect residents to employment opportunities and essential services.\n\nFurthermore, fostering a culture of corporate social responsibility among property developers is crucial. Incentivizing developers to incorporate affordable housing units into their projects can help to address the supply shortage and create more inclusive communities. Public-private partnerships can also play a significant role in financing and developing sustainable housing solutions.\n\nThe challenge of resolving the subdivided flat crisis is complex, but it is not insurmountable. By adopting a holistic and proactive approach that prioritizes social equity, public health, and environmental sustainability, Hong Kong can build a more inclusive and livable city for all its residents.",
+  "conceptual_explanation": "This article explores the critical issue of subdivided flats in Hong Kong, examining its root causes, consequences, and potential solutions with a focus on sustainable development.",
+  "key_points": [
+    "Subdivided flats are a consequence of land scarcity and high property prices in Hong Kong.",
+    "These flats often lack essential amenities and pose significant health and safety risks.",
+    "Addressing the crisis requires a multi-pronged approach involving government intervention, sustainable development, and corporate social responsibility."
+  ],
+  "interactive_tasks": [
+    {
+      "id": "q1",
+      "type": "MCQ",
+      "instruction": "Choose the best option. Which of the following best describes the primary reason for the proliferation of subdivided flats in Hong Kong?",
+      "question": "Which of the following best describes the primary reason for the proliferation of subdivided flats in Hong Kong?",
+      "options": [
+        "A. A decline in the overall population of Hong Kong.",
+        "B. An overabundance of luxury housing options.",
+        "C. The scarcity of land coupled with a rapidly growing population.",
+        "D. Government policies that actively encourage the creation of subdivided flats."
+      ],
+      "answer": "C",
+      "explanation": "Option C accurately reflects the passage's explanation: limited land and a growing population are key drivers."
+    },
+    {
+      "id": "q2",
+      "type": "SHORT_ANSWER",
+      "instruction": "Answer in no more than 10 words. According to the article, what is one common safety hazard found in subdivided flats?",
+      "question": "According to the article, what is one common safety hazard found in subdivided flats?",
+      "options": [],
+      "answer": "Overloaded electrical wiring (or similar).",
+      "explanation": "The article explicitly mentions overloaded electrical wiring as a fire hazard."
+    },
+    {
+      "id": "q3",
+      "type": "MCQ",
+      "instruction": "Choose the best option. According to the article, what is the long-term solution to the subdivided flat crisis?",
+      "question": "According to the article, what is the long-term solution to the subdivided flat crisis?",
+      "options": [
+        "A. Focusing solely on increasing the supply of luxury housing.",
+        "B. Promoting sustainable urban development and innovative housing designs.",
+        "C. Ignoring the issue and allowing market forces to resolve it.",
+        "D. Relocating residents of subdivided flats to other countries."
+      ],
+      "answer": "B",
+      "explanation": "The article advocates for sustainable urban development as the long-term solution."
+    },
+    {
+      "id": "q4",
+      "type": "ORDERING",
+      "instruction": "Place these potential solutions to the subdivided flat crisis in order from short-term to long-term impact.",
+      "question": "Place these potential solutions to the subdivided flat crisis in order from short-term to long-term impact:",
+      "options": [
+        "Stricter regulations for subdivided flats.",
+        "Increased supply of affordable housing.",
+        "Promoting sustainable urban development.",
+        "Subsidized rental schemes."
+      ],
+      "answer": [
+        "Stricter regulations for subdivided flats.",
+        "Subsidized rental schemes.",
+        "Increased supply of affordable housing.",
+        "Promoting sustainable urban development."
+      ],
+      "explanation": "Regulations offer immediate relief, subsidies provide short-term support, increasing housing supply takes longer, and sustainable development is a long-term systemic solution."
+    },
+    {
+      "id": "q5",
+      "type": "MCQ",
+      "instruction": "Choose the best option. What is the implication of 'fostering a culture of corporate social responsibility' in the context of the article?",
+      "question": "What is the implication of 'fostering a culture of corporate social responsibility' in the context of the article?",
+      "options": [
+        "A. Encouraging property developers to prioritize profit maximization above all else.",
+        "B. Promoting the construction of exclusively luxury apartments.",
+        "C. Incentivizing developers to incorporate affordable housing units into their projects.",
+        "D. Reducing government oversight of the property development industry."
+      ],
+      "answer": "C",
+      "explanation": "Corporate social responsibility implies developers considering the social impact and contributing to affordable housing."
+    },
+    {
+      "id": "q6",
+      "type": "SHORT_ANSWER",
+      "instruction": "Answer in no more than 15 words. According to the passage, what is one potential negative impact of living in overcrowded subdivided flats on a resident's well-being?",
+      "question": "According to the passage, what is one potential negative impact of living in overcrowded subdivided flats on a resident's well-being?",
+      "options": [],
+      "answer": "Detrimental impact on mental health due to lack of privacy and space.",
+      "explanation": "The passage directly mentions the negative impact on mental health."
+    },
+    {
+      "id": "q7",
+      "type": "CATEGORIZATION",
+      "instruction": "Categorize these statements as either a CAUSE or a CONSEQUENCE of the subdivided flat crisis.",
+      "question": "Categorize these statements as either a CAUSE or a CONSEQUENCE of the subdivided flat crisis.",
+      "options": [
+        "Scarcity of land in Hong Kong",
+        "Overcrowding and poor air quality",
+        "Rapidly growing population",
+        "Increased risk of respiratory illnesses",
+        "Prioritization of luxury developments"
+      ],
+      "answer": {
+        "CAUSE": [
+          "Scarcity of land in Hong Kong",
+          "Rapidly growing population",
+          "Prioritization of luxury developments"
+        ],
+        "CONSEQUENCE": [
+          "Overcrowding and poor air quality",
+          "Increased risk of respiratory illnesses"
+        ]
+      },
+      "explanation": "Land scarcity, population growth, and development priorities contribute to the crisis. Overcrowding and health risks are the result."
+    },
+    {
+      "id": "q8",
+      "type": "MCQ",
+      "instruction": "Choose the best option. What does the phrase 'multi-pronged approach' suggest in the context of the article?",
+      "question": "What does the phrase 'multi-pronged approach' suggest in the context of the article?",
+      "options": [
+        "A. A single, unified solution to the problem.",
+        "B. A series of unrelated and independent actions.",
+        "C. A comprehensive strategy involving multiple interconnected solutions.",
+        "D. An approach that relies solely on government intervention."
+      ],
+      "answer": "C",
+      "explanation": "A 'multi-pronged approach' implies a comprehensive strategy with multiple, interconnected solutions."
+    },
+    {
+      "id": "q9",
+      "type": "SHORT_ANSWER",
+      "instruction": "Answer in no more than 8 words. Besides public housing, what other subsidized scheme is mentioned?",
+      "question": "Besides public housing, what other subsidized scheme is mentioned?",
+      "options": [],
+      "answer": "Subsidized rental schemes are also mentioned.",
+      "explanation": "The article mentions subsidized rental schemes as another form of assistance."
+    },
+    {
+      "id": "q10",
+      "type": "MCQ",
+      "instruction": "Choose the best option. Which of the following is NOT directly mentioned as a benefit of sustainable housing design?",
+      "question": "Which of the following is NOT directly mentioned as a benefit of sustainable housing design?",
+      "options": [
+        "A. Maximizing efficient use of land resources.",
+        "B. Connecting residents to employment opportunities.",
+        "C. Reducing construction costs significantly.",
+        "D. Creating more inclusive communities."
+      ],
+      "answer": "C",
+      "explanation": "While sustainable design might lead to cost savings, the article doesn't directly state it reduces construction costs *significantly*."
+    }
+  ],
+  "success_feedback": "Well done! You have demonstrated a strong understanding of the complex issues surrounding subdivided flats and sustainable housing in Hong Kong.",
+  "suggested_next_steps": [
+    "Try Writing challenge: Write an argumentative essay discussing the most effective solutions to the subdivided flat crisis in Hong Kong.",
+    "Research the policies relating to the current status of subdivided flats."
+  ]
+}

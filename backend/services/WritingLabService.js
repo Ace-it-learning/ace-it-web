@@ -88,7 +88,7 @@ class WritingLabService {
             `;
         }
 
-        const response = await GenerativeAIService.generateJson(prompt);
+        const response = await GenerativeAIService.generateJson(prompt, { model: "gemini-2.5-pro" });
         return response;
     }
 
@@ -132,12 +132,94 @@ class WritingLabService {
 
         try {
             // Direct JSON generation
-            return await GenerativeAIService.generateJson(prompt);
+            return await GenerativeAIService.generateJson(prompt, { model: "gemini-2.5-pro" });
         } catch (e) {
             console.error("Polisher JSON Error", e);
             // Fallback: parse text if needed
             throw e;
         }
+    }
+
+    /**
+     * Fetch a premium exemplar by ID
+     */
+    async getExemplar(id) {
+        const doc = await this.db.collection('writing_exemplars').doc(id).get();
+        if (!doc.exists) return null;
+        return { id: doc.id, ...doc.data() };
+    }
+
+    /**
+     * Get a list of available exemplars by genre
+     */
+    async getExemplarsList(genre = 'all') {
+        let query = this.db.collection('writing_exemplars');
+        
+        if (genre !== 'all') {
+            query = query.where('genre', '==', genre);
+        }
+
+        const snapshot = await query.orderBy('created_at', 'desc').get();
+        const results = [];
+        snapshot.forEach(doc => {
+            const data = doc.data();
+            results.push({
+                id: doc.id,
+                title: data.title,
+                genre: data.genre,
+                theme: data.theme,
+                level: data.level || "5**",
+                word_count: data.word_count || 0,
+                difficulty: data.difficulty || "ELITE"
+            });
+        });
+        return results;
+    }
+
+    /**
+     * Internal: High-Quality Exemplar Generator (Used by the Factory)
+     */
+    async generateEliteExemplar(genreId, specificTheme = null) {
+        const { ENGLISH_WRITING_GENRES } = require('../constants/englishWritingSyllabus');
+        const genre = ENGLISH_WRITING_GENRES[genreId];
+        if (!genre) throw new Error("Invalid Genre ID");
+
+        const prompt = `
+        You are a Senior HKDSE English Paper 2 Marker (Chief Examiner).
+        GOAL: Generate an **Elite (Level 5**)** Writing Exemplar.
+
+        GENRE: ${genre.name} (${genre.description})
+        CRITERIA: ${genre.elite_criteria}
+        ${specificTheme ? `THEME: ${specificTheme}` : "Select a popular, high-difficulty HKDSE theme (e.g., MSW Charging, AI, Aging Population, or Youth Mental Health)."}
+
+        ### FORMAT REQUIREMENT (JSON):
+        {
+          "title": "A short, engaging title",
+          "genre": "${genreId}",
+          "theme": "The chosen theme",
+          "prompt": "The full realistic Paper 2 Part B prompt (approx 100 words context).",
+          "model_answer": "The full Level 5** essay (approx 400-500 words). Use sophisticated vocabulary and structures.",
+          "structural_analysis": [
+            {"part": "Introduction", "logic": "A hook followed by a clear thesis statement...", "snippet": "First 2 sentences"},
+            {"part": "Body Paragraph 1", "logic": "Developing point 1 with data/examples...", "snippet": "Example sentence"},
+            {"part": "Counter-argument", "logic": "Acknowledging the opposition and rebutting...", "snippet": "Refutation sentence"},
+            {"part": "Conclusion", "logic": "Summary and impactful closing statement...", "snippet": "Final thought"}
+          ],
+          "vocabulary_bank": [
+            {"word": "word", "meaning": "definition", "syllables": "...", "usage_example": "snippet from essay"}
+          ],
+          "connective_masterclass": [
+             {"phrase": "In light of...", "function": "Causal relationship", "why_elite": "More formal than 'because'"}
+          ],
+          "word_count": 450,
+          "level": "5**"
+        }
+        Return ONLY valid JSON.
+        `;
+
+        const { data: resData } = await GenerativeAIService.generateJson(prompt, { model: "gemini-2.5-pro" });
+        const data = Array.isArray(resData) ? resData[0] : resData;
+        return data;
     }
 }
 

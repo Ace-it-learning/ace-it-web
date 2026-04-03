@@ -1,6 +1,7 @@
 const GenerativeAIService = require('./GenerativeAIService');
 const admin = require('firebase-admin');
 const fs = require('fs'); // For debugging logs
+const path = require('path');
 const crypto = require('crypto'); // For deterministic hashing
 const { MICRO_SKILLS } = require('../constants/microSkills');
 
@@ -270,6 +271,17 @@ class LabService {
       lvl = lvl.charAt(0);
     }
 
+    // Version 1.1: Frontend Level Mapping (1-4 -> 3, 4, 5, 7)
+    const mappedLevels = {
+        '1': '3',
+        '2': '4',
+        '3': '5',
+        '4': '7'
+    };
+    if (mappedLevels[lvl]) {
+        lvl = mappedLevels[lvl];
+    }
+
     if (lvl === '7') return 'HKDSE Level 5** (Mastery)';
     if (lvl === '6') return 'HKDSE Level 5* (Exemplary)';
     if (lvl === '5') return 'HKDSE Level 5 (Strong)';
@@ -338,6 +350,46 @@ class LabService {
     const isReadingTopic = isWeeklyQuest || skillsKey.includes('reading') || skillsKey.includes('comprehension');
     const isWritingTopic = skillsKey.includes('writing');
     const isListeningTopic = skillsKey.includes('listening') || paperType.includes('listening');
+    const isSpeakingTopic = skillsKey.includes('speaking') || skillsKey.includes('interaction');
+
+    // --- WEEKLY QUEST: PRE-GENERATED CONTENT CHECK ---
+    if (isWeeklyQuest || topic?.includes('weekly')) {
+      try {
+        // Calculate ISO Week (Native)
+        const d = new Date();
+        d.setHours(0, 0, 0, 0);
+        d.setDate(d.getDate() + 4 - (d.getDay() || 7));
+        const weekNum = Math.ceil((((d - new Date(d.getFullYear(), 0, 1)) / 8.64e7) + 1) / 7);
+        const year = d.getFullYear(); // Could use year too if needed for multi-year support
+
+        let typeLabel = 'reading';
+        if (isWritingTopic) typeLabel = 'writing';
+        else if (isListeningTopic) typeLabel = 'listening';
+        else if (isSpeakingTopic) typeLabel = 'speaking';
+
+        const filename = `week_${weekNum}_${typeLabel}.json`;
+        const filepath = path.join(__dirname, '..', 'data', 'weekly_quests', filename);
+
+        if (fs.existsSync(filepath)) {
+          console.log(`[LabService] SUCCESS: Loading pre-generated weekly quest: ${filename}`);
+          let content = JSON.parse(fs.readFileSync(filepath, 'utf8'));
+          
+          // Handle array wrapper if present
+          if (Array.isArray(content)) {
+            console.log(`[LabService] Quest data is array, extracting first element.`);
+            content = content[0];
+          }
+
+          // Ensure it has the topic/level the user requested
+          content.level = level; 
+          return content;
+        } else {
+          console.log(`[LabService] INFO: Pre-generated file ${filename} not found. Falling back to dynamic gen.`);
+        }
+      } catch (err) {
+        console.error("[LabService] Pre-generated loading error:", err);
+      }
+    }
 
     // Default target counts based on user request:
     // Easy (Level 3) -> 5 questions
@@ -804,7 +856,7 @@ STRICT RULE: Do NOT use the same hooks, starting sentences, or specific scenario
 
         console.log("[LabService] Calling GenerativeAIService.generateJson");
         let data = await GenerativeAIService.generateJson(finalPrompt, {
-          model: "gemini-2.0-flash", // Proven working alias
+          model: "gemini-2.0-flash", // Use Flash for batch generation speed
           uid: uid || 'system',
           generationConfig: {
             maxOutputTokens: 8192,

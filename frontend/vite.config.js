@@ -12,10 +12,10 @@ export default defineConfig({
         target: 'http://localhost:3001',
         changeOrigin: true,
         secure: false,
-      },
-      hmr: {
-        overlay: false
       }
+    },
+    hmr: {
+      overlay: false
     }
   },
   test: {

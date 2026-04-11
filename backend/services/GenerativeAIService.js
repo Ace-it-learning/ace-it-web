@@ -263,10 +263,13 @@ class GenerativeAIService {
     /**
      * Unified sendMessage method
      */
-    async sendMessage(chatSession, message, config = {}, retries = 3) {
-        return this.executeWithRetry(async (model, isRetry) => {
+    async sendMessage(chatSession, message, config = {}, retries = 6) {
+        return this.executeWithRetry(async (retryModel, isRetry) => {
             if (isRetry) {
-                return await model.generateContent(message);
+                // If a retry is triggered with a different model, the original chatSession 
+                // is no longer compatible. We fall back to standard stateless generation 
+                // for the retry attempt to ensure the user gets a response.
+                return await retryModel.generateContent(message);
             }
             return await chatSession.sendMessage(message);
         }, message, config, retries);

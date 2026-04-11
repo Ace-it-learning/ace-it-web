@@ -83,6 +83,9 @@ router.post('/chat', async (req, res) => {
     const { uid, message, history: clientHistory, agentId, audio, audioType, image } = req.body;
     const db_firestore = admin.firestore();
 
+    // Force production environment discovery before chat initialization
+    await GenerativeAIService.init();
+
     if (!uid) return res.status(400).json({ error: "Missing uid" });
 
     // 1. Handle Audio Input

@@ -86,12 +86,12 @@ app.use('/api/english/mock', require('./routes/englishMockRoutes'));
 app.use('/api/dictionary', require('./routes/dictionaryRoutes'));
 
 // User & Platform Specifics
+app.use('/api', chatRoutes);
+app.use('/api', require('./routes/utilRoutes'));
 app.use('/api/user', require('./routes/userRoutes'));
 app.use('/api/stats', require('./routes/statsRoutes'));
 app.use('/api/roadmap', require('./routes/roadmapRoutes'));
-app.use('/api/util', require('./routes/utilRoutes'));
-app.use('/api', chatRoutes);
-app.use('/api/exam', require('./routes/examRoutes'));
+app.use('/api/exams', require('./routes/examRoutes'));
 app.use('/api', profileRoutes);
 app.use('/api/gamification', profileRoutes);
 app.use('/api/skillmap', profileRoutes);
@@ -104,10 +104,10 @@ app.use('/api/admin', require('./routes/adminRoutes'));
 // Usage & Costing endpoints moved to statsRoutes and userRoutes in modular build.
 // Redundant handlers removed for architecture consistency.
 
-// Legacy compatibility redirects
+// Legacy compatibility redirects (307 preserves POST body)
 app.post('/api/submit-exam', (req, res) => res.redirect(307, '/api/exams/submit-exam'));
-app.post('/api/ocr', (req, res) => res.redirect(307, '/api/utils/ocr'));
-app.post('/api/dictionary', (req, res) => res.redirect(307, '/api/utils/dictionary'));
+app.post('/api/ocr', (req, res) => res.redirect(307, '/api/ocr'));
+app.post('/api/dictionary', (req, res) => res.redirect(307, '/api/dictionary'));
 
 // --- GLOBAL ERROR HANDLING ---
 app.use((err, req, res, next) => {

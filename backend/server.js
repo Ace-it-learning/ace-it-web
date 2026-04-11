@@ -14,6 +14,9 @@ require('dotenv').config({ path: path.join(__dirname, '.env') });
 const app = express();
 const isProduction = process.env.NODE_ENV === 'production';
 
+// Trust Cloud Run Proxy
+app.set('trust proxy', 1);
+
 // --- INITIALIZE FIREBASE ADMIN ---
 const serviceAccountPath = path.join(__dirname, 'serviceAccountKey.json');
 if (require('fs').existsSync(serviceAccountPath)) {

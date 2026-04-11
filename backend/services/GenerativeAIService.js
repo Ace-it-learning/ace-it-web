@@ -27,7 +27,7 @@ class GenerativeAIService {
 
                 // Allow local developers to use Vertex AI by providing a service account path
                 const vertexOptions = {
-                    project: process.env.GOOGLE_CLOUD_PROJECT,
+                    project: process.env.GOOGLE_CLOUD_PROJECT || 'ace-it-learning',
                     location: process.env.GOOGLE_CLOUD_LOCATION || 'asia-east2'
                 };
 

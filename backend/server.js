@@ -87,7 +87,7 @@ app.use('/api/user', require('./routes/userRoutes'));
 app.use('/api/stats', require('./routes/statsRoutes'));
 app.use('/api/roadmap', require('./routes/roadmapRoutes'));
 app.use('/api/util', require('./routes/utilRoutes'));
-app.use('/api/chat', chatRoutes);
+app.use('/api', chatRoutes);
 app.use('/api/exam', require('./routes/examRoutes'));
 app.use('/api', profileRoutes);
 app.use('/api/gamification', profileRoutes);
@@ -98,64 +98,8 @@ app.use('/api/tutors', require('./routes/tutorRoutes'));
 app.use('/api/debug', require('./routes/debugRoutes'));
 app.use('/api/admin', require('./routes/adminRoutes'));
 
-// History & Timeline (Legacy Restore)
-app.get('/api/history/:agentId', async (req, res) => {
-    const { agentId } = req.params;
-    const { uid } = req.query;
-    if (!uid) return res.status(400).json({ error: "Missing uid" });
-    try {
-        const history = await UserProfileService.getChatHistory(uid, agentId);
-        res.json(history || []);
-    } catch (e) {
-        res.json([]);
-    }
-});
-
-app.post('/api/history/:agentId', async (req, res) => {
-    const { agentId } = req.params;
-    const { uid, role, content } = req.body;
-    if (!uid || !role || !content) return res.status(400).json({ error: "Missing fields" });
-    try {
-        await UserProfileService.saveChatMessage(uid, agentId, { role, content });
-        res.json({ success: true });
-    } catch (e) {
-        res.status(500).json({ error: "Failed to save" });
-    }
-});
-
-app.get('/api/timeline', async (req, res) => {
-    const { uid } = req.query;
-    if (!uid) return res.status(400).json({ error: "Missing uid" });
-    try {
-        const timeline = await UserProfileService.getTimeline(uid);
-        res.json(timeline || []);
-    } catch (e) {
-        res.json([]);
-    }
-});
-
-// Usage & Costing (Legacy Restore)
-app.get('/api/usage/summary', async (req, res) => {
-    const { uid } = req.query;
-    if (!uid) return res.status(400).json({ error: "Missing uid" });
-    try {
-        const stats = await UserProfileService.getUsageSummary(uid);
-        res.json(stats);
-    } catch (e) {
-        res.status(500).json({ error: "Failed to fetch usage" });
-    }
-});
-
-app.get('/api/usage/stats', async (req, res) => {
-    const { uid } = req.query;
-    if (!uid) return res.status(400).json({ error: "Missing uid" });
-    try {
-        const stats = await UserProfileService.getUsageStats(uid, 20);
-        res.json(stats);
-    } catch (e) {
-        res.status(500).json({ error: "Failed to fetch usage stats" });
-    }
-});
+// Usage & Costing endpoints moved to statsRoutes and userRoutes in modular build.
+// Redundant handlers removed for architecture consistency.
 
 // Legacy compatibility redirects
 app.post('/api/submit-exam', (req, res) => res.redirect(307, '/api/exams/submit-exam'));

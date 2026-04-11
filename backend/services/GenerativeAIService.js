@@ -15,13 +15,13 @@ class GenerativeAIService {
     }
 
     async init() {
-        console.log("[AIService] Init called. VERTEX_ENABLED:", process.env.VERTEX_ENABLED, "CLOUD_RUN:", process.env.CLOUD_RUN_SERVICE);
+        console.log("[AIService] Init called. VERTEX_ENABLED:", process.env.VERTEX_ENABLED, "K_SERVICE:", process.env.K_SERVICE);
         if (this.initialized) return;
 
         // Determination Logic:
-        // Use Vertex AI if CLOUD_RUN_SERVICE is set (Production) 
+        // Use Vertex AI if K_SERVICE is set (Production) 
         // or if VERTEX_ENABLED is explicitly true.
-        if (process.env.CLOUD_RUN_SERVICE || process.env.VERTEX_ENABLED === 'true') {
+        if (process.env.K_SERVICE || process.env.VERTEX_ENABLED === 'true') {
             try {
                 const { VertexAI } = require('@google-cloud/vertexai');
 

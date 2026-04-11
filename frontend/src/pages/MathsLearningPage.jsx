@@ -5,7 +5,7 @@ import { getDifficultyTierDetails } from '../utils/masteryUtils';
 import { ChevronLeft, ChevronDown, ArrowRight, Lightbulb, Target, BookOpen, AlertTriangle, Map, Sparkles, Loader2, CheckCircle, Maximize2, X, Languages } from 'lucide-react';
 import { SafeInlineMath, SafeBlockMath } from '../components/maths/SafeMath';
 import 'katex/dist/katex.min.css';
-import { formatNumbers, sanitizeMath, prepareMathText, splitContentByDelimiters, looksLikeMath } from '../utils/mathFormattingUtils';
+import { formatNumbers, sanitizeMath, prepareMathText, splitContentByDelimiters } from '../utils/mathFormattingUtils';
 import GeometryRenderer from '../components/maths/GeometryRenderer';
 
 const MathsLearningPage = () => {
@@ -55,9 +55,18 @@ const MathsLearningPage = () => {
 
     const renderTex = (text) => {
         if (!text) return null;
+        const safeText = typeof text === 'string' ? text : String(text || '');
 
-        // Safety enforcement
-        const safeText = typeof text === 'string' ? text : (typeof text === 'number' ? String(text) : (Array.isArray(text) ? text.join('\n') : String(text || '')));
+        // GOD-TIER SAFETY: If no delimiters exist, it's definitely NOT math.
+        // Render it as pure text immediately to stop KaTeX from thinking it can "guess".
+        if (!safeText.includes('$') && !safeText.includes('\\(') && !safeText.includes('\\[')) {
+            const formattedLine = formatNumbers(safeText);
+            const content = formattedLine
+                .replace(/___HKD___/g, 'HK$')
+                .replace(/___USD___/g, '$')
+                .replace(/\\,/g, ' ');
+            return <span className="whitespace-pre-wrap">{content}</span>;
+        }
 
         const cleanText = prepareMathText(safeText);
         const parts = splitContentByDelimiters(cleanText);
@@ -83,15 +92,8 @@ const MathsLearningPage = () => {
                 const labeledMath = sanitizeMath(math);
                 const finalMath = formatNumbers(labeledMath, true);
 
-                if (isBlock) {
-                    return (
-                        <SafeBlockMath key={i} math={finalMath} className="my-2" />
-                    );
-                } else {
-                    return (
-                        <SafeInlineMath key={i} math={finalMath} className="mx-0.5" />
-                    );
-                }
+                if (isBlock) return <SafeBlockMath key={i} math={finalMath} className="my-2" />;
+                return <SafeInlineMath key={i} math={finalMath} className="mx-0.5" />;
             }
 
             return (
@@ -101,42 +103,32 @@ const MathsLearningPage = () => {
                         if (!trimmedLine && line.length > 0) return <br key={lineIdx} />;
                         if (!trimmedLine) return null;
 
-                        const isMathLine = looksLikeMath(trimmedLine);
-                        const isStepLine = line.trim().startsWith('Step') || line.trim().startsWith('.Step');
+                        const formattedLine = formatNumbers(trimmedLine);
+                        const content = formattedLine
+                            .replace(/___HKD___/g, 'HK$')
+                            .replace(/___USD___/g, '$')
+                            .replace(/\\,/g, ' ');
 
-                        if (isMathLine) {
-                            const mathReadyLine = trimmedLine
-                                .replace(/%/g, '\\%')
-                                .replace(/___HKD___/g, '\\text{HK}\\$')
-                                .replace(/___USD___/g, '\\$');
-
-                            const labeledMath = sanitizeMath(mathReadyLine);
-                            const finalMath = formatNumbers(labeledMath, true);
-
-                            return (
-                                <React.Fragment key={lineIdx}>
-                                    {(lineIdx > 0 || isStepLine) && <br />}
-                                    <SafeInlineMath key={lineIdx} math={finalMath} className="mx-1" />
-                                </React.Fragment>
-                            );
-                        } else {
-                            const formattedLine = formatNumbers(trimmedLine);
-                            const content = formattedLine
-                                .replace(/___HKD___/g, 'HK$')
-                                .replace(/___USD___/g, '$')
-                                .replace(/\\,/g, ' ');
-
-                            return (
-                                <React.Fragment key={lineIdx}>
-                                    {(lineIdx > 0 || isStepLine) && <br />}
-                                    <span className="whitespace-pre-wrap">{content}</span>
-                                </React.Fragment>
-                            );
-                        }
+                        return (
+                            <React.Fragment key={lineIdx}>
+                                <span className="whitespace-pre-wrap">{content}</span>
+                            </React.Fragment>
+                        );
                     })}
                 </span>
             );
         });
+    };
+
+    const renderNarrativeText = (text) => {
+        if (!text) return null;
+        const safeText = String(text);
+        // Only use full KaTeX renderer if there are explicit delimiters
+        // This prevents the 'looksLikeMath' heuristic from ruining normal sentences
+        if (safeText.includes('$') || safeText.includes('\\(') || safeText.includes('\\[')) {
+            return renderTex(safeText);
+        }
+        return <span className="whitespace-pre-wrap">{safeText}</span>;
     };
 
     if (loading) {
@@ -213,7 +205,7 @@ const MathsLearningPage = () => {
                                     {module.module_id.replace('MOD_', '').replace(/^0+/, '')}
                                 </div>
                                 <h2 className="text-2xl font-black text-slate-900 tracking-tight">
-                                    {isChinese ? module.title_zh : module.title}
+                                    {isChinese ? renderNarrativeText(module.title_zh) : renderNarrativeText(module.title)}
                                 </h2>
                             </div>
 
@@ -224,8 +216,8 @@ const MathsLearningPage = () => {
                                             <div className="flex-1 space-y-4">
                                                 <div className="flex items-center gap-2">
                                                     <Sparkles className="w-4 h-4 text-indigo-500" />
-                                                    <h3 className="text-lg font-black text-slate-800 tracking-tight uppercase">
-                                                        {isChinese ? concept.name_zh : concept.name}
+                                                    <h3 className="text-lg font-black text-slate-800 tracking-tight">
+                                                        {isChinese ? renderNarrativeText(concept.name_zh) : renderNarrativeText(concept.name)}
                                                     </h3>
                                                 </div>
 
@@ -261,25 +253,25 @@ const MathsLearningPage = () => {
                                                         <span className="text-[10px] font-black uppercase tracking-widest">{t('takeaway')}</span>
                                                     </div>
                                                     <p className="text-sm font-medium text-amber-900 leading-relaxed">
-                                                        {isChinese ? renderTex(concept.key_takeaway_zh) : renderTex(concept.key_takeaway)}
+                                                        {isChinese ? renderNarrativeText(concept.key_takeaway_zh) : renderNarrativeText(concept.key_takeaway)}
                                                     </p>
                                                 </div>
                                             </div>
 
-                                            {(concept.visual_aid_type || concept.visual_aid || concept.diagram_json || concept.visual) && (
+                                            {(concept.visual_aid_type || concept.visual_aid || concept.diagram_json || concept.visual || concept.diagram_svg) && (
                                                 <div className="md:w-80 shrink-0 rounded-2xl border border-slate-100 shadow-sm bg-slate-100 flex flex-col p-4 gap-3">
                                                     {concept.diagram_json ? (
                                                         <div className="bg-white p-2 rounded-xl border border-slate-50 shadow-inner h-48 flex items-center justify-center overflow-hidden">
                                                             <GeometryRenderer data={concept.diagram_json} />
                                                         </div>
-                                                    ) : concept.visual && concept.visual.includes('<svg') ? (
+                                                    ) : (concept.visual || concept.diagram_svg) && (concept.visual?.includes('<svg') || concept.diagram_svg?.includes('<svg')) ? (
                                                         <div className="relative group/img cursor-zoom-in" onClick={() => {
-                                                            setEnlargedImage({ type: 'svg', content: concept.visual });
+                                                            setEnlargedImage({ type: 'svg', content: concept.visual || concept.diagram_svg });
                                                         }}>
                                                             <div className="w-full h-48 flex items-center justify-center bg-white rounded-lg p-2">
                                                                 <div 
                                                                     className="w-full h-full flex items-center justify-center"
-                                                                    dangerouslySetInnerHTML={{ __html: concept.visual }} 
+                                                                    dangerouslySetInnerHTML={{ __html: concept.visual || concept.diagram_svg }} 
                                                                 />
                                                             </div>
                                                             <div className="absolute inset-0 bg-black/0 group-hover/img:bg-black/5 flex items-center justify-center opacity-0 group-hover/img:opacity-100 transition-all">
@@ -333,8 +325,8 @@ const MathsLearningPage = () => {
                                                 <AlertTriangle className="w-16 h-16" />
                                             </div>
                                             <div className="relative z-10 space-y-3">
-                                                <h3 className="text-sm font-black text-rose-700 uppercase tracking-widest flex items-center gap-2">
-                                                    {t('traps')}: {isChinese && trap.trap_zh ? trap.trap_zh : trap.trap}
+                                                <h3 className="text-sm font-black text-rose-700 tracking-widest flex items-center gap-2">
+                                                    {t('traps')}: {isChinese && trap.trap_zh ? renderTex(trap.trap_zh) : renderTex(trap.trap)}
                                                 </h3>
                                                 <p className="text-rose-900/80 font-medium">
                                                     {renderTex(isChinese ? trap.description_zh : trap.description)}
@@ -366,13 +358,13 @@ const MathsLearningPage = () => {
                     ))}
 
                     {/* Roadmap */}
-                    <section className="bg-slate-900 p-10 rounded-[2.5rem] text-white shadow-2xl relative overflow-hidden">
+                    <section className="bg-indigo-950 p-10 rounded-[2.5rem] text-white shadow-2xl relative overflow-hidden">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
                         <h2 className="text-xs font-black text-indigo-400 uppercase tracking-[0.3em] mb-6 flex items-center gap-2">
                             <Map className="w-4 h-4" /> {t('roadmap')}
                         </h2>
                         <p className="text-xl font-medium text-slate-200 leading-relaxed mb-8">
-                            {isChinese ? content.roadmap_zh : content.roadmap}
+                            {isChinese ? renderNarrativeText(content.roadmap_zh) : renderNarrativeText(content.roadmap)}
                         </p>
                         <div className="flex items-center gap-3 bg-white/5 p-4 rounded-2xl border border-white/10">
                             <div className="w-10 h-10 bg-indigo-500 rounded-xl flex items-center justify-center font-black">
@@ -532,7 +524,7 @@ const MathsLearningPage = () => {
                         <Map className="w-4 h-4" /> {t('roadmap')}
                     </h2>
                     <p className="text-xl font-medium text-slate-200 leading-relaxed mb-8">
-                        {content.roadmap}
+                        {isChinese ? renderNarrativeText(content.roadmap_zh) : renderNarrativeText(content.roadmap)}
                     </p>
                     <div className="flex items-center gap-3 bg-white/5 p-4 rounded-2xl border border-white/10">
                         <div className="w-10 h-10 bg-indigo-500 rounded-xl flex items-center justify-center font-black">

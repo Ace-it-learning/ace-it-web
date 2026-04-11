@@ -11,16 +11,29 @@
                 "AI_Originality_Check_Passed"
             ]
         },
-        "blind_box": {
-            "cost": 750,
+        "blind_box_standard": {
+            "name": "Standard Mystery Box",
+            "cost": 500,
             "pool": [
-                "50_student_avatars",
-                "50_star_tutors"
+                "student_cards"
             ],
-            "rarity_split": {
-                "avatar": 0.8,
-                "tutor": 0.2
-            }
+            "description": "A random student avatar card."
+        },
+        "blind_box_tutor": {
+            "name": "Tutor Star Box",
+            "cost": 1500,
+            "pool": [
+                "tutor_cards"
+            ],
+            "description": "Guaranteed AI Tutor card with unique personality."
+        },
+        "blind_box_aesthetics": {
+            "name": "Aesthetics Box",
+            "cost": 800,
+            "pool": [
+                "avatar_frames"
+            ],
+            "description": "Unlock exclusive avatar frames and chat visuals."
         },
         "promo_code_hkd10": {
             "cost": 10000,

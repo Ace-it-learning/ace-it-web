@@ -2,13 +2,16 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import { useLanguage } from '../../context/LanguageContext';
-import { Lock, CheckCircle, Play, Map, Star, Clock, X, Trophy, Search, Sparkles, Zap, BookOpen, PenTool, Mic, MessageSquare, Layers, RefreshCcw, GraduationCap, Ear, ArrowRight } from 'lucide-react';
+import { Lock, CheckCircle, Play, Map, Star, Clock, X, Trophy, Search, Sparkles, Zap, BookOpen, PenTool, Mic, MessageSquare, Layers, RefreshCcw, GraduationCap, Ear, ArrowRight, Calculator } from 'lucide-react';
+import { useAvatar } from '../../context/AvatarContext';
 import { MICRO_SKILLS, getSkillName, getSkillDesc, getSkillOutcome } from '../../constants/microSkills';
+import { getMathSkillName } from '../../constants/mathMicroSkills';
 import { calculateTier, getTierMetadata, getMasteryStats } from '../../utils/masteryUtils';
 
 const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
     const { user } = useAuth();
     const { language, t } = useLanguage();
+    const { activeAgentId } = useAvatar();
     const navigate = useNavigate();
     const [plan, setPlan] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -21,15 +24,23 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
     const [selectedLevels, setSelectedLevels] = useState({}); // skillId -> level
     const [weeklyQuestStatus, setWeeklyQuestStatus] = useState({ completed: false });
     const [listeningMissions, setListeningMissions] = useState([]);
+    const [writingMissions, setWritingMissions] = useState([]);
+    const [isWritingLoading, setIsWritingLoading] = useState(false);
 
-    // Fetch Listening Missions when filter is active
+    // Fetch Listening/Writing Missions when filter is active
     useEffect(() => {
-        if (paperFilter === 'LISTENING' && isOpen) {
+        if (!isOpen) return;
+
+        // Use relative path for local proxy support
+        const API_BASE = '/api';
+
+        if (paperFilter === 'LISTENING') {
+            // Reset other list to prevent contamination
+            setWritingMissions([]);
+            
             const fetchListening = async () => {
                 try {
-                    const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
-                    // Use the existing public endpoint (relative path via proxy also works)
-                    const res = await fetch(`${API_URL}/api/lab/listening`);
+                    const res = await fetch(`${API_BASE}/lab/listening`);
                     if (res.ok) {
                         const data = await res.json();
                         setListeningMissions(data);
@@ -40,12 +51,38 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
             };
             fetchListening();
         }
+
+        if (paperFilter === 'WRITING') {
+            // Reset other list to prevent contamination
+            setListeningMissions([]);
+            
+            const fetchWriting = async () => {
+                try {
+                    setIsWritingLoading(true);
+                    console.log("[Roadmap] Fetching writing missions...");
+                    const res = await fetch(`${API_BASE}/writing/scenarios`);
+                    if (res.ok) {
+                        const data = await res.json();
+                        console.log(`[Roadmap] Received ${data.length} writing missions`);
+                        setWritingMissions(data);
+                    } else {
+                        console.error("[Roadmap] Failed to fetch scenarios:", res.status);
+                    }
+                } catch (e) {
+                    console.error("Failed to fetch writing missions", e);
+                } finally {
+                    setIsWritingLoading(false);
+                }
+            };
+            fetchWriting();
+        }
     }, [paperFilter, isOpen]);
 
     const fetchUserSkills = async () => {
         try {
             const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
-            const res = await fetch(`${API_URL}/api/microskills/${user.uid}`);
+            const subject = (activeAgentId === 'math' || activeAgentId === 'maths') ? 'maths' : 'english';
+            const res = await fetch(`${API_URL}/api/microskills/${user.uid}?subject=${subject}`);
             if (res.ok) {
                 const data = await res.json();
                 setUserSkills(data.microSkills || {});
@@ -109,12 +146,17 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
         setRegenerating(true);
         try {
             const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+            const getGenSubject = () => {
+                if (activeAgentId === 'chinese') return 'chinese';
+                if (activeAgentId === 'math' || activeAgentId === 'maths') return 'maths';
+                return 'english';
+            };
             const res = await fetch(`${API_URL}/api/roadmap/regenerate`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ uid: user.uid, subject: 'english' }) // Default to english for now
+                body: JSON.stringify({ uid: user.uid, subject: getGenSubject() })
             });
             if (res.ok) {
                 const newPlan = await res.json();
@@ -148,31 +190,38 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
 
             // REDIRECTION LOGIC FOR SPEAKING
             if (topic.includes('speaking') || skillId.startsWith('speaking_')) {
-                let targetRoute = '/lab'; // Fallback
-                let moduleParam = '';
+                // Phase 26: Redirect foundation criteria to the Pillar Menu
+                const pillarMap = {
+                    'speaking_delivery': 'criterion_a',
+                    'speaking_strategies': 'criterion_b',
+                    'speaking_language': 'criterion_c',
+                    'speaking_organization': 'criterion_d'
+                };
 
-                if (cluster === 'delivery') {
-                    targetRoute = '/speaking/quest/delivery';
-                    moduleParam = 'delivery';
-                } else if (cluster === 'flow' || skillId === 'speaking_individualResponse') {
-                    targetRoute = '/speaking/quest/flow';
-                    moduleParam = 'flow';
-                } else if (cluster === 'interaction' || skillId === 'speaking_groupDiscussion') {
-                    targetRoute = '/speaking/quest/interaction';
-                    moduleParam = 'interaction';
+                if (pillarMap[skillId]) {
+                    navigate('/speaking/menu', {
+                        state: { activePillar: pillarMap[skillId] }
+                    });
+                    return;
                 }
 
-                if (targetRoute !== '/lab') {
-                    navigate(`${targetRoute}?module=${moduleParam}&level=${task.level || '3'}&taskId=${task.id}`, {
-                        state: {
-                            topic: task.topic,
-                            taskId: task.id,
-                            taskTitle: task.title,
-                            taskXp: task.xp
+                // Handle Integrated simulation (direct route)
+                if (skillId === 'speaking_groupDiscussion') {
+                    navigate('/speaking/quest/interaction?module=interaction&level=3&taskId=speaking_groupDiscussion', {
+                        state: { 
+                            topic: 'Group Discussion', 
+                            taskId: 'speaking_groupDiscussion',
+                            taskTitle: 'Part A Simulation: Group Discussion'
                         }
                     });
                     return;
                 }
+
+                // Fallback for labs
+                navigate(`/lab?module=speaking&level=${task.level || '3'}&taskId=${task.id}`, {
+                    state: { topic: task.topic, taskId: task.id }
+                });
+                return;
             }
 
             // REDIRECTION LOGIC FOR WRITING (Genre Factory)
@@ -220,7 +269,7 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                 }
             });
         } else if (task.type === 'MOCK' || task.type === 'BOSS') { // Support both labels
-            navigate('/exam/selector');
+            navigate('/mock-exam');
         } else if (task.type === 'DIAGNOSTIC') {
             navigate('/diagnostic');
         }
@@ -247,13 +296,11 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
 
         // Hide specific speaking skills from GENERAL tab (Use Special Quest instead)
         if (activeTab === 'GENERAL') {
-            if (id === 'speaking_groupDiscussion' || id === 'speaking_individualResponse') {
+            if (id === 'speaking_individualResponse') {
                 return false;
             }
-            // Hide old writing skills, show Genres
-            if (paperFilter === 'WRITING') {
-                if (id.startsWith('writing_') && !id.startsWith('writing_genre_')) return false;
-            }
+            // Hide old writing/listening skills, only show Genres in English Writing
+            if ((id.startsWith('writing_') && !id.startsWith('writing_genre_')) || id.startsWith('listening_')) return false;
         }
 
         // Hide Granular Speaking Skills (Consolidated into General)
@@ -286,56 +333,81 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
         return levels.reduce((a, b) => a + b, 0) / levels.length;
     };
 
+    const getSubjectInfo = () => {
+        switch (activeAgentId) {
+            case 'chinese':
+                return {
+                    title: t('roadmap.title_chinese'),
+                    icon: PenTool
+                };
+            case 'math':
+            case 'maths':
+                return {
+                    title: t('roadmap.title_math'),
+                    icon: Calculator
+                };
+            default:
+                return {
+                    title: t('roadmap.title_english'),
+                    icon: GraduationCap
+                };
+        }
+    };
+
+    const subjectInfo = getSubjectInfo();
+    const SubjectIcon = subjectInfo.icon;
+
     return (
         <div className="fixed inset-0 z-[3000] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in duration-200">
             <div className="bg-white rounded-2xl shadow-2xl w-[90vw] h-[90vh] flex flex-col overflow-hidden animate-in zoom-in-95 duration-200">
-                {/* Header - English Theme (Indigo/Purple) */}
-                <div className="p-4 relative overflow-hidden bg-[#FF6600] border-b border-white/10">
-                    <div className="absolute top-0 right-0 p-2 opacity-5">
-                        <GraduationCap className="w-32 h-32 text-white transform rotate-12" />
+                {/* Header - Standardized Ace It! Theme (Brand Orange) */}
+                <div className="p-6 relative overflow-hidden bg-[#FF6600] border-b border-white/10 shrink-0">
+                    <div className="absolute top-0 right-0 p-4 opacity-10">
+                        <SubjectIcon className="w-40 h-40 text-white transform rotate-12" />
                     </div>
 
                     <button
                         onClick={onClose}
-                        className="absolute top-3 right-4 text-white/80 hover:text-white transition-colors z-[60]"
+                        className="absolute top-4 right-6 text-white/80 hover:text-white transition-colors z-[60]"
                     >
-                        <X className="w-6 h-6" />
+                        <X className="w-7 h-7" />
                     </button>
 
-                    <div className="relative z-10 text-white flex flex-col md:flex-row justify-between items-end gap-4">
-                        <div>
-                            <div className="flex items-center gap-2 mb-1 opacity-90 text-[10px] font-bold tracking-wider uppercase">
-                                <Sparkles className="w-3 h-3 text-yellow-400" />
-                                {t('lab.personalized_quest_system')}
-                            </div>
-                            <h2 className="text-2xl font-bold leading-tight">{t('dashboard.roadmap')}</h2>
-                            <p className="text-white/80 text-xs opacity-90">
-                                Complete your daily set to earn 200 XP Bonus!
+                    <div className="relative z-10 text-white grid grid-cols-1 md:grid-cols-3 items-center gap-6">
+                        <div className="text-center md:text-left">
+                            <h2 className="text-3xl font-black leading-tight tracking-tight mb-1">{subjectInfo.title}</h2>
+                            <p className="text-white/90 text-sm font-medium opacity-90">
+                                {t('roadmap.complete_quest_xp')}
                             </p>
                         </div>
 
-                        {/* Tab Switcher */}
-                        <div className="flex p-1 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20">
-                            {[
-                                { id: 'WEEKLY', label: 'Targeted Growth', icon: Clock },
-                                { id: 'GENERAL', label: 'General Quests', icon: Search }
-                            ].map(tab => (
-                                <button
-                                    key={tab.id}
-                                    onClick={() => setActiveTab(tab.id)}
-                                    className={`
-                                        flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-bold transition-all
-                                        ${activeTab === tab.id
-                                            ? 'bg-white text-slate-900 shadow-sm'
-                                            : 'text-white hover:bg-white/10'
-                                        }
-                                    `}
-                                >
-                                    <tab.icon className="w-3.5 h-3.5" />
-                                    {tab.label}
-                                </button>
-                            ))}
+                        {/* Tab Switcher - Centered & Larger & Energetic Blue */}
+                        <div className="flex justify-center">
+                            <div className="flex p-1.5 bg-white/20 backdrop-blur-md rounded-xl border border-white/30 shadow-inner">
+                                {[
+                                    { id: 'WEEKLY', label: t('roadmap.targeted_growth'), icon: Clock },
+                                    { id: 'GENERAL', label: t('roadmap.quests_lab'), icon: Search }
+                                ].map(tab => (
+                                    <button
+                                        key={tab.id}
+                                        onClick={() => setActiveTab(tab.id)}
+                                        className={`
+                                            flex items-center gap-2 px-6 py-2.5 rounded-lg text-sm font-black transition-all duration-300
+                                            ${activeTab === tab.id
+                                                ? 'bg-[#007AFF] text-white shadow-lg scale-105'
+                                                : 'text-white hover:bg-white/10'
+                                            }
+                                        `}
+                                    >
+                                        <tab.icon className="w-4 h-4" />
+                                        {tab.label}
+                                    </button>
+                                ))}
+                            </div>
                         </div>
+
+                        {/* Empty spacer for balancing the grid and avoiding close button overlap */}
+                        <div className="hidden md:block w-full h-px" />
                     </div>
                 </div>
 
@@ -357,24 +429,50 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                                         <h3 className="text-sm font-black text-slate-800 uppercase tracking-wider">Top 3 Radar Bottlenecks</h3>
                                     </div>
                                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                                        {(Object.entries(userSkills).filter(([id]) => id.includes('_') && !id.startsWith('writing_genre_')).length > 0 
+                                        {(Object.entries(userSkills).filter(([id]) => id.includes('_') && 
+                                            ((activeAgentId === 'math' || activeAgentId === 'maths') ? id.startsWith('math_') : (!id.startsWith('writing_') && !id.startsWith('listening_')))
+                                        ).length > 0 
                                             ? Object.entries(userSkills)
-                                                .filter(([id]) => id.includes('_') && !id.startsWith('writing_genre_'))
+                                                .filter(([id]) => id.includes('_') && 
+                                                    ((activeAgentId === 'math' || activeAgentId === 'maths') ? id.startsWith('math_') : (!id.startsWith('writing_') && !id.startsWith('listening_')))
+                                                )
                                                 .sort((a, b) => (a[1].level || 0) - (b[1].level || 0))
                                                 .slice(0, 3)
-                                            : [
-                                                ['reading_inference', { level: 1 }],
-                                                ['listening_detailRecognition', { level: 1 }],
-                                                ['speaking_pronunciationClarity', { level: 1 }]
-                                            ]
+                                            : ((activeAgentId === 'math' || activeAgentId === 'maths') 
+                                                ? [
+                                                    ['math_num_percentages', { level: 1 }],
+                                                    ['math_alg_quadratics', { level: 1 }],
+                                                    ['math_geo_circles', { level: 1 }]
+                                                  ]
+                                                : [
+                                                    ['reading_inference', { level: 1 }],
+                                                    ['reading_vocabularyContext', { level: 1 }],
+                                                    ['speaking_pronunciationClarity', { level: 1 }]
+                                                  ]
+                                              )
                                         ).map(([id, skillData]) => {
-                                                const name = getSkillName(id);
+                                                const name = (activeAgentId === 'math' || activeAgentId === 'maths') ? (Math.getMathSkillName ? Math.getMathSkillName(id, language) : id) : getSkillName(id);
+                                                // Note: I need the math labels. I'll import getMathSkillName if not available or just use id.
+                                                // Actually getMathSkillName is imported above from mathMicroSkills.
+                                                const finalName = (activeAgentId === 'math' || activeAgentId === 'maths') 
+                                                    ? (typeof getMathSkillName === 'function' ? getMathSkillName(id, language) : id.replace('math_', '').replace('_', ' '))
+                                                    : getSkillName(id);
+                                                
                                                 const level = skillData.level || 1;
                                                 const isFallback = Object.keys(userSkills).length === 0;
                                                 return (
                                                     <div
                                                         key={`weak_${id}`}
-                                                        onClick={() => handleTaskClick({ id: id, title: `Practice: ${name}`, topic: id, type: 'PRACTICE', xp: 200, level: String(Math.max(3, Math.min(5, Math.ceil(level)))) })}
+                                                        onClick={() => {
+                                                            if (activeAgentId === 'math' || activeAgentId === 'maths') {
+                                                                onClose();
+                                                                navigate(`/maths/learn/${id}`, {
+                                                                    state: { topic: id, level: '3', xp: 250 }
+                                                                });
+                                                            } else {
+                                                                handleTaskClick({ id: id, title: `Practice: ${finalName}`, topic: id, type: 'PRACTICE', xp: 200, level: String(Math.max(3, Math.min(5, Math.ceil(level)))) });
+                                                            }
+                                                        }}
                                                         className="bg-white border-2 border-slate-100 hover:border-red-200 hover:shadow-lg p-5 rounded-2xl transition-all cursor-pointer relative overflow-hidden group"
                                                     >
                                                         <div className="absolute top-0 right-0 p-3 opacity-5 group-hover:opacity-10 transition-opacity">
@@ -386,7 +484,7 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                                                             </div>
                                                             <div className="px-2 py-0.5 bg-slate-100 text-slate-500 rounded text-[9px] font-bold">Level {level}</div>
                                                         </div>
-                                                        <h4 className="font-bold text-slate-900 group-hover:text-red-600 transition-colors">{name}</h4>
+                                                        <h4 className="font-bold text-slate-900 group-hover:text-red-600 transition-colors">{finalName}</h4>
                                                         <p className="text-[10px] text-slate-500 mt-1">Practice this to eliminate the "dent" in your Radar chart.</p>
                                                         <div className="mt-4 flex items-center justify-between">
                                                             <span className="text-xs font-bold text-red-500">+250 XP</span>
@@ -398,30 +496,40 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                                     </div>
                                 </div>
 
-                                {/* Weekly Reading Quest Card */}
+                                {/* Weekly Adaptive Quest Card */}
                                 <div className="mt-8 flex items-center gap-2 mb-4">
                                     <Clock className="w-5 h-5 text-indigo-600" />
                                     <h3 className="text-sm font-black text-slate-800 uppercase tracking-wider">Weekly Adaptive Quests</h3>
                                 </div>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-                                    {[
-                                        { id: 'weekly_reading', topic: 'reading_weekly', title: 'Weekly Reading Quest', icon: BookOpen, color: 'from-blue-600 to-indigo-700', desc: 'Critical Reading & Analysis', type: 'WEEKLY_QUEST' },
-                                        { id: 'weekly_listening', topic: 'listening_weekly', title: 'Weekly Listening Mission', icon: Mic, color: 'from-amber-600 to-orange-700', desc: 'Audio Synthesis & Note-taking', type: 'WEEKLY_QUEST' },
-                                        { id: 'weekly_writing', topic: 'writing_weekly', title: 'Weekly Writing Challenge', icon: PenTool, color: 'from-purple-600 to-fuchsia-700', desc: 'Linguistic Precision & Style', type: 'WEEKLY_QUEST' },
-                                        { id: 'weekly_speaking', topic: 'Speaking Group Discussion', title: 'Weekly Speaking Discussion', icon: MessageSquare, color: 'from-emerald-600 to-teal-700', desc: 'DSE Group Interaction Simulation', type: 'SPEAKING_CHALLENGE' }
-                                    ].map((quest) => {
-                                        const isCompleted = false; // Mocked for now
+                                    {((activeAgentId === 'math' || activeAgentId === 'maths') 
+                                        ? [
+                                            { id: 'weekly_math', topic: 'integrated_challenge', title: 'Weekly Integrated Challenge', icon: Calculator, color: 'from-orange-600 to-red-700', desc: 'Section B Integrated Mastery', type: 'MATH_CHALLENGE' },
+                                            { id: 'mock_teaser', topic: 'Maths Paper 2 (MCQ)', title: 'Mock Speed Drill', icon: Zap, color: 'from-blue-600 to-indigo-700', desc: 'Full-length Paper 2 Simulation', type: 'MOCK' }
+                                          ]
+                                        : [
+                                            { id: 'weekly_reading', topic: 'reading_weekly', title: 'Weekly Reading Quest', icon: BookOpen, color: 'from-blue-600 to-indigo-700', desc: 'Critical Reading & Analysis', type: 'WEEKLY_QUEST' },
+                                            { id: 'weekly_speaking', topic: 'Speaking Group Discussion', title: 'Weekly Speaking Discussion', icon: MessageSquare, color: 'from-emerald-600 to-teal-700', desc: 'DSE Group Interaction Simulation', type: 'SPEAKING_CHALLENGE' }
+                                          ]
+                                    ).map((quest) => {
                                         return (
                                             <div
                                                 key={quest.id}
-                                                onClick={() => handleTaskClick({
-                                                    id: quest.id,
-                                                    type: quest.type,
-                                                    topic: quest.topic,
-                                                    title: quest.title,
-                                                    xp: 300,
-                                                    level: '5'
-                                                })}
+                                                onClick={() => {
+                                                    if (quest.type === 'MATH_CHALLENGE') {
+                                                        onClose();
+                                                        navigate('/maths/lab', { state: { topic: 'integrated_challenge' } });
+                                                    } else {
+                                                        handleTaskClick({
+                                                            id: quest.id,
+                                                            type: quest.type,
+                                                            topic: quest.topic,
+                                                            title: quest.title,
+                                                            xp: 300,
+                                                            level: '5'
+                                                        });
+                                                    }
+                                                }}
                                                 className={`p-5 rounded-2xl shadow-lg relative overflow-hidden cursor-pointer hover:scale-[1.02] active:scale-[0.98] transition-all group bg-gradient-to-br ${quest.color}`}
                                             >
                                                 <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2 group-hover:bg-white/10 transition-colors" />
@@ -434,9 +542,6 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                                                             <h4 className="font-bold text-white text-sm">{quest.title}</h4>
                                                             <p className="text-[10px] text-white/70 italic">{quest.desc}</p>
                                                         </div>
-                                                    </div>
-                                                    <div className="bg-white text-slate-900 p-1.5 rounded-lg shadow-md group-hover:bg-indigo-50 transition-colors">
-                                                        <Play className="w-4 h-4 fill-current" />
                                                     </div>
                                                 </div>
                                             </div>
@@ -537,7 +642,8 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                                     </div>
                                 </div>
 
-                                {activeTab === 'GENERAL' && paperFilter === 'LISTENING' ? (
+                                {/* Listening Missions (Paper 3) - Specialized View */}
+                                {paperFilter === 'LISTENING' ? (
                                     <div className="p-6 flex-1 overflow-y-auto custom-scrollbar bg-slate-50/50">
                                         <div className="flex items-center gap-2 mb-4">
                                             <Layers className="w-5 h-5 text-rose-600" />
@@ -545,13 +651,19 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                                                 General Listening Quests
                                             </h3>
                                         </div>
-                                        {/* Listening Quests Grid */}
-                                        {/* Listening Quests Grid */}
                                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pb-12">
-                                            {/* Fetched Listening Missions */}                                            {listeningMissions.map((mission) => {
-                                                const currentSelected = selectedLevels[mission.id] || '5';
-                                                const stats = getMasteryStats(Number(currentSelected), false, true);
-                                                const isPracticed = false; 
+                                            {listeningMissions.map((mission) => {
+                                                const currentSelected = (() => {
+                                                    const lvl = mission.level;
+                                                    if (lvl === 'Elite (5**)') return '7';
+                                                    if (lvl === 'Elite (5*)') return '6';
+                                                    if (lvl === 'DSE Standard' || lvl === '5') return '5';
+                                                    if (lvl === 'Medium' || lvl === '4') return '4';
+                                                    if (lvl === 'Easy' || lvl === '3' || lvl === 'HKDSE Level 3') return '3';
+                                                    return '5'; // Default to DSE Standard
+                                                })();
+                                                
+                                                const stats = getMasteryStats(currentSelected, false, false);
 
                                                 return (
                                                     <div
@@ -572,20 +684,6 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                                                             <span className="px-2 py-0.5 rounded text-[9px] font-black uppercase tracking-wider bg-rose-50 text-rose-600">
                                                                 LISTENING
                                                             </span>
-                                                            <select
-                                                                value={currentSelected}
-                                                                onClick={(e) => e.stopPropagation()}
-                                                                onChange={(e) => {
-                                                                    e.stopPropagation();
-                                                                    setSelectedLevels(prev => ({ ...prev, [mission.id]: e.target.value }));
-                                                                }}
-                                                                className={`px-2 py-0.5 rounded text-[9px] font-black uppercase tracking-wider border outline-none cursor-pointer hover:bg-gray-50 transition-colors ${stats.color}`}
-                                                            >
-                                                                <option value="3">Easy</option>
-                                                                <option value="4">Medium</option>
-                                                                <option value="5">DSE Standard</option>
-                                                                <option value="7">Elite (5**)</option>
-                                                            </select>
                                                         </div>
 
                                                         <h4 className="text-sm font-bold mb-1 transition-colors text-slate-800 line-clamp-1 group-hover:text-rose-600">
@@ -597,10 +695,6 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
 
                                                         <div className="pt-3 border-t border-slate-50 mt-auto">
                                                             <div className="flex items-center justify-between mb-2">
-                                                                <div className="px-2 py-0.5 bg-slate-100 rounded text-[10px] font-bold text-slate-500 uppercase tracking-wide flex items-center gap-1.5">
-                                                                    <Play className="w-2.5 h-2.5" />
-                                                                    Start Mission
-                                                                </div>
                                                                 <div className="text-[10px] font-bold text-rose-600">
                                                                     +{stats.xp} XP
                                                                 </div>
@@ -610,8 +704,85 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                                                 );
                                             })}
                                         </div>
+                                    </div>
+                                ) : paperFilter === 'WRITING' ? (
+                                    <div className="p-6 flex-1 overflow-y-auto custom-scrollbar bg-slate-50/50">
+                                        <div className="flex items-center justify-between mb-4">
+                                            <div className="flex items-center gap-2">
+                                                <PenTool className="w-5 h-5 text-purple-600" />
+                                                <h3 className="text-sm font-black text-slate-800 uppercase tracking-wider">
+                                                    Elite Writing Quests
+                                                </h3>
+                                            </div>
+                                            <button 
+                                                onClick={() => {
+                                                    setWritingMissions([]);
+                                                    setPaperFilter('WRITING'); // Trigger effect
+                                                }}
+                                                className="p-1.5 hover:bg-slate-100 rounded-lg transition-colors text-slate-400 hover:text-purple-600"
+                                                title="Refresh Missions"
+                                            >
+                                                <RefreshCcw className={`w-4 h-4 ${isWritingLoading ? 'animate-spin' : ''}`} />
+                                            </button>
+                                        </div>
+                                        {isWritingLoading ? (
+                                             <div className="flex flex-col items-center justify-center py-20 opacity-30">
+                                                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-purple-600 mb-4" />
+                                                <p className="text-[10px] font-black uppercase tracking-widest text-slate-400">Syncing Missions...</p>
+                                             </div>
+                                        ) : writingMissions.length === 0 ? (
+                                            <div className="flex flex-col items-center justify-center py-20 bg-white/50 rounded-2xl border-2 border-dashed border-slate-200">
+                                                <div className="bg-slate-100 p-4 rounded-full mb-4">
+                                                    <Search className="w-8 h-8 text-slate-400" />
+                                                </div>
+                                                <h4 className="font-black text-slate-800 uppercase tracking-tight">No Missions Found</h4>
+                                                <p className="text-[11px] text-slate-500 mt-1">Please try refreshing or check your connection.</p>
+                                            </div>
+                                        ) : (
+                                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pb-12">
+                                                {writingMissions.map((mission) => {
+                                                    const stats = getMasteryStats(5, false, false); // Default to DSE Standard
 
-                                        {/* Mastery Building Blocks Removed as CHALLENGE tab is removed */}
+                                                    return (
+                                                        <div
+                                                            key={mission.id}
+                                                            onClick={() => {
+                                                                onClose();
+                                                                navigate(`/writing/quest`, {
+                                                                    state: {
+                                                                        questData: mission
+                                                                    }
+                                                                });
+                                                            }}
+                                                            className="group relative p-4 rounded-xl border-2 transition-all flex flex-col cursor-pointer bg-white border-slate-100 hover:border-purple-300 hover:shadow-md"
+                                                        >
+                                                            <div className="flex justify-between items-start mb-2">
+                                                                <div className="flex flex-col">
+                                                                    <span className="px-2 py-0.5 rounded text-[9px] font-black uppercase tracking-wider bg-purple-50 text-purple-600 inline-block w-fit mb-1">
+                                                                        {mission.genre || 'QUEST'}
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+
+                                                            <h4 className="text-sm font-bold mb-1 transition-colors text-slate-800 line-clamp-1 group-hover:text-purple-600">
+                                                                {mission.title}
+                                                            </h4>
+                                                            <p className="text-[11px] text-slate-500 mb-3 line-clamp-2 leading-tight min-h-[2.4em]">
+                                                                {mission.prompt || "Advancing DSE linguistic proficiency through high-fidelity mission simulation."}
+                                                            </p>
+
+                                                            <div className="pt-3 border-t border-slate-50 mt-auto">
+                                                                <div className="flex items-center justify-between mb-2">
+                                                                    <div className="text-[10px] font-bold text-purple-600 px-2 py-0.5 bg-purple-50 rounded-lg">
+                                                                        +{stats.xp + 100} XP
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    );
+                                                })}
+                                            </div>
+                                        )}
                                     </div>
                                 ) : (
                                     <div className="p-6 flex-1 overflow-y-auto custom-scrollbar">
@@ -637,94 +808,62 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                                                     const outcome = getSkillOutcome(id, language);
                                                     const isPracticed = practicedSkills.includes(id) || practicedSkills.includes(name);
 
+                                                    const isIntegrated = MICRO_SKILLS[id]?.isIntegrated;
+
                                                     return (
                                                         <div
                                                             key={id}
                                                             onClick={() => {
                                                                 const skillLevel = getAggregatedLevel(id);
-                                                                const levelToUse = selectedLevels[id] || (activeTab === 'CHALLENGE' ? '7' : (skillLevel < 3.5 ? '3' : skillLevel < 5.0 ? '4' : '5'));
+                                                                const levelToUse = paper === 'listening' ? '5' : (selectedLevels[id] || (activeTab === 'CHALLENGE' ? '7' : (skillLevel < 3.5 ? '3' : skillLevel < 5.0 ? '4' : '5')));
                                                                 const stats = getMasteryStats(Number(levelToUse), false, false);
 
                                                                 handleTaskClick({
                                                                     id: id,
                                                                     title: `${activeTab === 'CHALLENGE' ? 'Integrated' : 'Practice'}: ${name}`,
                                                                     topic: id,
-                                                                    type: 'PRACTICE',
+                                                                    type: isIntegrated ? 'SPEAKING_CHALLENGE' : 'PRACTICE',
                                                                     xp: stats.xp,
                                                                     level: levelToUse
                                                                 });
                                                             }}
                                                             className={`group relative p-4 rounded-xl border-2 transition-all flex flex-col cursor-pointer
-                                                                ${activeTab === 'CHALLENGE'
-                                                                    ? 'bg-white border-indigo-100 shadow-sm hover:border-indigo-400'
-                                                                    : 'bg-white border-slate-100 hover:border-amber-300 hover:shadow-md'
+                                                                ${isIntegrated 
+                                                                    ? 'bg-gradient-to-br from-indigo-600 via-purple-600 to-fuchsia-700 border-indigo-400 shadow-xl scale-[1.02]' 
+                                                                    : activeTab === 'CHALLENGE'
+                                                                        ? 'bg-white border-indigo-100 shadow-sm hover:border-indigo-400'
+                                                                        : 'bg-white border-slate-100 hover:border-amber-300 hover:shadow-md'
                                                                 }`}
                                                         >
                                                             <div className="flex justify-between items-start mb-2">
-                                                                <span className={`px-2 py-0.5 rounded text-[9px] font-black uppercase tracking-wider ${paper === 'reading' ? 'bg-blue-50 text-blue-600' :
+                                                                <span className={`px-2 py-0.5 rounded text-[9px] font-black uppercase tracking-wider ${isIntegrated ? 'bg-white/20 text-white' : paper === 'reading' ? 'bg-blue-50 text-blue-600' :
                                                                     paper === 'writing' ? 'bg-purple-50 text-purple-600' :
                                                                         paper === 'listening' ? 'bg-orange-50 text-orange-600' :
                                                                             'bg-green-50 text-green-600'
                                                                     }`}>
-                                                                    {paper}
+                                                                    {isIntegrated ? 'DSE Simulation' : paper}
                                                                 </span>
-                                                                {activeTab !== 'CHALLENGE' && paper !== 'writing' && (paper !== 'speaking' || id === 'speaking_delivery_general') && (
-                                                                    <select
-                                                                        value={selectedLevels[id] || '3'}
-                                                                        onClick={(e) => e.stopPropagation()}
-                                                                        onChange={(e) => {
-                                                                            e.stopPropagation();
-                                                                            setSelectedLevels(prev => ({ ...prev, [id]: e.target.value }));
-                                                                        }}
-                                                                        className={`px-2 py-0.5 rounded text-[9px] font-black uppercase tracking-wider border outline-none cursor-pointer hover:bg-gray-50 transition-colors ${getMasteryStats(Number(selectedLevels[id] || '3'), false, false).color}`}
-                                                                    >
-                                                                        <option value="3">Easy</option>
-                                                                        <option value="4">Medium</option>
-                                                                        <option value="5">DSE Standard</option>
-                                                                        <option value="7">Elite (5**)</option>
-                                                                    </select>
+                                                                {isIntegrated && (
+                                                                    <div className="flex items-center gap-1 px-2 py-0.5 bg-yellow-400/90 text-yellow-950 rounded text-[8px] font-black tracking-tight">
+                                                                        <Sparkles className="w-2 h-2" />
+                                                                        Integrated Skill
+                                                                    </div>
                                                                 )}
-                                                                <div className="flex items-center gap-1.5">
-                                                                    {(currentLevel >= 3 || isPracticed) && (
-                                                                        <div className="flex items-center gap-1 translate-y-[-1px]">
-                                                                            {[
-                                                                                { l: 4, label: 'E', name: 'Easy' },
-                                                                                { l: 5, label: 'M', name: 'Medium' },
-                                                                                { l: 6, label: 'S', name: 'DSE Standard' },
-                                                                                { l: 7, label: 'EL', name: 'Elite' }
-                                                                            ].map((tier) => {
-                                                                                const isPassed = isPracticed && currentLevel >= tier.l;
-                                                                                return (
-                                                                                    <div
-                                                                                        key={tier.l}
-                                                                                        title={isPassed ? `${tier.name} Mastery Verified` : `${tier.name} Level`}
-                                                                                        className={`w-4 h-4 rounded-full flex items-center justify-center text-[8px] font-bold border transition-all ${isPassed
-                                                                                            ? 'bg-amber-500 border-amber-600 text-white shadow-sm'
-                                                                                            : 'bg-slate-50 border-slate-200 text-slate-400'
-                                                                                            }`}
-                                                                                    >
-                                                                                        {isPassed ? '✓' : tier.label}
-                                                                                    </div>
-                                                                                );
-                                                                            })}
-                                                                        </div>
-                                                                    )}
-                                                                </div>
                                                             </div>
 
-                                                            <h4 className="text-sm font-bold mb-1 group-hover:text-amber-600 transition-colors text-slate-800">
+                                                            <h4 className={`text-sm font-bold mb-1 transition-colors ${isIntegrated ? 'text-white' : 'text-slate-800 group-hover:text-amber-600'}`}>
                                                                 {name}
                                                             </h4>
-                                                            <p className="text-[11px] text-slate-500 mb-3 line-clamp-2 leading-tight min-h-[2.4em]">
+                                                            <p className={`text-[11px] mb-3 line-clamp-2 leading-tight min-h-[2.4em] ${isIntegrated ? 'text-indigo-100' : 'text-slate-500'}`}>
                                                                 {desc || "Master this skill to excel in HKDSE English."}
                                                             </p>
 
-                                                            <div className="pt-3 border-t border-slate-50 mt-auto">
+                                                            <div className={`pt-3 border-t mt-auto ${isIntegrated ? 'border-white/10' : 'border-slate-50'}`}>
                                                                 <div className="flex items-center justify-between mb-2">
                                                                     <div className="flex items-center gap-2">
-                                                                            <div className="px-2 py-0.5 bg-slate-100 rounded text-[10px] font-bold text-slate-500 uppercase tracking-wide flex items-center gap-1.5">
+                                                                            <div className={`px-2 py-0.5 rounded text-[10px] font-bold flex items-center gap-1.5 ${isIntegrated ? 'bg-white/20 text-white' : 'bg-slate-100 text-slate-500 uppercase tracking-wide'}`}>
                                                                                 {isPracticed ? <RefreshCcw className="w-2.5 h-2.5" /> : <Play className="w-2.5 h-2.5" />}
-                                                                                {isPracticed ? 'Continue Training' : 'Start Training'}
+                                                                                {isIntegrated ? 'Simulate exam' : isPracticed ? 'Continue Training' : 'Start Training'}
                                                                             </div>
                                                                     </div>
                                                                     <div className="text-[10px] font-bold text-amber-600">

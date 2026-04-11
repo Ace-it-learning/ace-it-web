@@ -88,8 +88,8 @@ class WritingLabService {
             `;
         }
 
-        const response = await GenerativeAIService.generateJson(prompt, { model: "gemini-2.5-pro" });
-        return response;
+        const result = await GenerativeAIService.generateJson(prompt, { model: "gemini-1.5-pro" });
+        return result.data;
     }
 
     /**
@@ -99,44 +99,100 @@ class WritingLabService {
      */
     async evaluateSubmission(studentText, context) {
         const prompt = `
-        You are a Senior HKDSE English Marker (Level 5** Expert).
-        
-        **TASK**:
-        The student is attempting a ${context.mode} task.
-        Theme: ${context.theme}
-        Instruction: ${context.instruction || context.question_text}
-        Target Level: ${context.target_level}
+            You are a Senior HKDSE English Marker (Level 5** Expert).
+            Task: Provide a PROFESSIONAL and DETAILED assessment of the student's work.
+            
+            Context: ${context.mode} for theme "${context.theme}".
+            Instruction: ${context.instruction || context.question_text || context.prompt_text}
+            Target Level: ${context.target_level}
 
-        **STUDENT TEXT**:
-        "${studentText}"
+            Student Submission:
+            "${studentText}"
 
-        **YOUR JOB (The "Writing Polisher")**:
-        1. **Critique**: Identify 3 specific strengths/weaknesses.
-        2. **Polished Version**: Rewrite the text to a solid Level 5/5* standard. 
-           - Preserve the student's core ideas/arguments. 
-           - UPGRADE syntax, vocabulary, and cohesion.
-           - Ensure tone is appropriate (e.g., formal for essay, persuasive for speech).
-        3. **Analysis**: Explain 3 key changes you made and WHY they improve the grade (e.g., "Changed 'bad' to 'detrimental' for precise tone").
+            Requirements:
+            1. **Critique**: Provide 3 specific strengths/weaknesses.
+            2. **Polished Version**: Rewrite the text to a solid Level 5/5* standard.
+            3. **Hotspots**: Identify specific improvements within the rewrite compared to original.
+               - "original_phrase": Exact substring from student work.
+               - "improved_phrase": The refined version in your rewrite.
+               - "explanation": { "en": "...", "zh": "..." } - Bilingual reason.
 
-        JSON Output Format:
-        {
-            "score_estimated": "string (e.g. 3, 4, 5, 5*)",
-            "critique_points": ["string", "string", "string"],
-            "polished_text": "string (The full rewrite)",
-            "key_changes": [
-                { "original": "snippet", "improved": "snippet", "reason": "string" }
-            ],
-            "general_comment": "string"
-        }
+            ABSOLUTE RULES:
+            - ALL qualitative fields MUST contain both "en" and "zh" objects (Traditional Chinese).
+            - LANGUAGE: EXCLUSIVELY use Traditional Chinese (繁體中文) for all "zh" fields.
+            - Ensure "polished_text" is a high-quality model rewrite.
+
+            Output JSON Format:
+            {
+                "score_estimated": "Level (e.g. 4, 5, 5*)",
+                "critique_points": [
+                    { "en": "Point 1", "zh": "重點 1" }
+                ],
+                "polished_text": "Full rewrite content...",
+                "hotspots": [
+                    { 
+                        "original_phrase": "snippet", 
+                        "improved_phrase": "snippet", 
+                        "explanation": { "en": "...", "zh": "..." }
+                    }
+                ],
+                "general_comment": { "en": "...", "zh": "..." }
+            }
         `;
 
         try {
-            // Direct JSON generation
-            return await GenerativeAIService.generateJson(prompt, { model: "gemini-2.5-pro" });
+            // Fix: gemini-1.5-pro was a hallucination; using stable 1.5-pro
+            const result = await GenerativeAIService.generateJson(prompt, { model: "gemini-1.5-pro" });
+            return result.data;
         } catch (e) {
-            console.error("Polisher JSON Error", e);
-            // Fallback: parse text if needed
+            console.error("[WritingLabService] Evaluation Error:", e);
             throw e;
+        }
+    }
+
+    /**
+     * Get a list of available exemplars by genre
+     */
+    async getExemplarsList(genre = 'all') {
+        try {
+            // Priority 1: Check Local JSON (Hardened Lab Mode)
+            const fs = require('fs');
+            const path = require('path');
+            const localDataPath = path.join(__dirname, '../data/writing_exemplars.json');
+            
+            if (fs.existsSync(localDataPath)) {
+                const localExemplars = JSON.parse(fs.readFileSync(localDataPath, 'utf8'));
+                const filtered = genre === 'all' 
+                    ? localExemplars 
+                    : localExemplars.filter(e => e.genre === genre);
+                
+                if (filtered.length > 0) return filtered;
+            }
+
+            // Priority 2: Firestore (Production/Dynamic Mode)
+            let query = this.db.collection('writing_exemplars');
+            if (genre !== 'all') {
+                query = query.where('genre', '==', genre);
+            }
+
+            const snapshot = await query.orderBy('created_at', 'desc').get();
+            const results = [];
+            snapshot.forEach(doc => {
+                const data = doc.data();
+                results.push({
+                    id: doc.id,
+                    title: data.title,
+                    genre: data.genre,
+                    theme: data.theme,
+                    level: data.level || "5**",
+                    word_count: data.word_count || 0,
+                    difficulty: data.difficulty || "ELITE"
+                });
+            });
+            return results;
+        } catch (err) {
+            console.error("[WritingLabService] Error fetching exemplars:", err);
+            return []; // Fail gracefully
         }
     }
 
@@ -144,36 +200,20 @@ class WritingLabService {
      * Fetch a premium exemplar by ID
      */
     async getExemplar(id) {
+        // Check Local JSON first
+        const fs = require('fs');
+        const path = require('path');
+        const localDataPath = path.join(__dirname, '../data/writing_exemplars.json');
+        
+        if (fs.existsSync(localDataPath)) {
+            const localExemplars = JSON.parse(fs.readFileSync(localDataPath, 'utf8'));
+            const localMatch = localExemplars.find(e => e.id === id);
+            if (localMatch) return localMatch;
+        }
+
         const doc = await this.db.collection('writing_exemplars').doc(id).get();
         if (!doc.exists) return null;
         return { id: doc.id, ...doc.data() };
-    }
-
-    /**
-     * Get a list of available exemplars by genre
-     */
-    async getExemplarsList(genre = 'all') {
-        let query = this.db.collection('writing_exemplars');
-        
-        if (genre !== 'all') {
-            query = query.where('genre', '==', genre);
-        }
-
-        const snapshot = await query.orderBy('created_at', 'desc').get();
-        const results = [];
-        snapshot.forEach(doc => {
-            const data = doc.data();
-            results.push({
-                id: doc.id,
-                title: data.title,
-                genre: data.genre,
-                theme: data.theme,
-                level: data.level || "5**",
-                word_count: data.word_count || 0,
-                difficulty: data.difficulty || "ELITE"
-            });
-        });
-        return results;
     }
 
     /**
@@ -217,7 +257,7 @@ class WritingLabService {
         Return ONLY valid JSON.
         `;
 
-        const { data: resData } = await GenerativeAIService.generateJson(prompt, { model: "gemini-2.5-pro" });
+        const { data: resData } = await GenerativeAIService.generateJson(prompt, { model: "gemini-1.5-pro" });
         const data = Array.isArray(resData) ? resData[0] : resData;
         return data;
     }

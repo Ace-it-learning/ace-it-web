@@ -1,0 +1,28 @@
+[
+    {
+        "id": "ex_arg_essay_ai",
+        "scenarioId": "arg_essay_1",
+        "title": "The AI Revolution: Why Personal Tutors are Essential",
+        "genre": "arg_essay",
+        "theme": "AI in Education",
+        "level": "5**",
+        "word_count": 520,
+        "prompt": "With the rise of Artificial Intelligence, some argue that human teachers will become obsolete. Write an essay discussing whether AI tutors should replace or supplement human educators in Hong Kong schools.",
+        "model_answer": "In the silicon-scented corridors of the 21st century, the debate surrounding Artificial Intelligence (AI) has transitioned from science fiction to pedagogical reality. The advent of AI personal tutors has sparked a polarizing discourse: can an algorithm truly replicate the nuanced mentorship of a human educator? While technological purists advocate for a total digital shift, a more balanced perspective suggests that AI, though revolutionary, serves best as a sophisticated supplement rather than a wholesale replacement. \n\nFirstly, AI tutors offer an unprecedented level of personalized learning. In a typical Hong Kong classroom of thirty-five students, a single teacher struggles to cater to the divergent learning paces of every individual. AI algorithms, conversely, can analyze a student's weaknesses in real-time, providing bespoke exercises that target specific linguistic gaps. For instance, if a student consistently falters with inversion or participle phrases, the AI can immediately generate targeted remedial drills. This level of granular customization is simply unattainable for a human teacher burdened by administrative duties and syllabus constraints.\n\nHowever, the 'soul' of education resides in emotional intelligence and moral guidance—areas where AI remains fundamentally deficient. A 5** student is not merely a generator of complex syntax; they are a critical thinker with empathy and social awareness. A human teacher provides the pastoral care necessary to navigate the stresses of the DSE, offering encouragement that transcends binary code. Mentorship involves reading the 'unspoken'—the frustration in a student's eyes or the hesitation in their voice—nuances that even the most advanced Large Language Models fail to parse.\n\nIn conclusion, the integration of AI tutors into the Hong Kong education system should be viewed as a synergistic partnership. AI can handle the mechanics of drills and data-driven feedback, liberating human educators to focus on the humanistic elements of teaching. By embracing this hybrid model, we can cultivate a generation of learners who are both technologically proficient and emotionally resilient.",
+        "structural_analysis": [
+            {"part": "Introduction", "logic": "Strong use of imagery ('silicon-scented') and clear thesis statement.", "snippet": "In the silicon-scented corridors..."},
+            {"part": "Body 1 (Advantage)", "logic": "Focuses on 'granular customization' and the limitations of traditional classrooms.", "snippet": "AI tutors offer an unprecedented level..."},
+            {"part": "Body 2 (Limitation)", "logic": "Counters the AI-only view by emphasizing 'pastoral care' and 'emotional intelligence'.", "snippet": "the 'soul' of education resides in..."},
+            {"part": "Conclusion", "logic": "Summarizes the 'synergistic partnership' as the optimal path forward.", "snippet": "By embracing this hybrid model..."}
+        ],
+        "vocabulary_bank": [
+            {"word": "Bespoke", "meaning": "Made for a particular customer or user.", "syllables": "be-spoke", "usage_example": "providing bespoke exercises that target specific linguistic gaps."},
+            {"word": "Granular", "meaning": "Including small details.", "syllables": "gran-u-lar", "usage_example": "This level of granular customization is simply unattainable."},
+            {"word": "Synergistic", "meaning": "Relating to the interaction or cooperation of two or more organizations/substances.", "syllables": "syn-er-gis-tic", "usage_example": "should be viewed as a synergistic partnership."}
+        ],
+        "connective_masterclass": [
+            {"phrase": "Conversely", "function": "Contrast", "why_elite": "Used to transition smoothly from a limitation to a technological solution."},
+            {"phrase": "In light of...", "function": "Contextual introduction", "why_elite": "Sets a formal, academic tone from the start."}
+        ]
+    }
+]

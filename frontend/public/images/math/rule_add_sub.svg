@@ -1,0 +1,18 @@
+<svg width="400" height="150" viewBox="0 0 400 150" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="150" rx="15" fill="#f8faff"/>
+  <text x="20" y="40" font-family="Arial" font-size="18" font-weight="bold" fill="#333">Rule 1: Addition &amp; Subtraction</text>
+  
+  <g transform="translate(50, 70)">
+    <text x="0" y="30" font-family="'Courier New', monospace" font-size="24" fill="#0066cc">x &lt; y</text>
+    <path d="M80,25 L120,25" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <text x="140" y="30" font-family="'Courier New', monospace" font-size="24" fill="#0066cc">x + k &lt; y + k</text>
+  </g>
+  
+  <text x="20" y="130" font-family="Arial" font-size="14" fill="#666">The inequality sign remains the same.</text>
+  
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#666" />
+    </marker>
+  </defs>
+</svg>

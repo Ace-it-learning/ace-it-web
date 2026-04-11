@@ -1,0 +1,391 @@
+[
+  {
+    "id": "ct_mcq_171",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": [
+      "math_mensuration"
+    ],
+    "marks": 1,
+    "difficulty": 5,
+    "paper": 2,
+    "section": "A",
+    "question_en": "The figure shows a hemispherical bowl of radius 12 cm. If water is poured into the bowl to a depth of 6 cm, find the area of the water surface.",
+    "question_zh": "圖中所示為一個半徑為 12 cm 的半球形碗。若將水注入碗中至 6 cm 的深度，求水面的面積。",
+    "options": [
+      "A. $36\\pi$ cm$^2$",
+      "B. $72\\pi$ cm$^2$",
+      "C. $108\\pi$ cm$^2$",
+      "D. $144\\pi$ cm$^2$"
+    ],
+    "correct_answer": "C",
+    "solution_steps_en": [
+      "Let $r$ be the radius of the water surface.",
+      "The distance from the center of the sphere to the water surface is $12 - 6 = 6$ cm.",
+      "By Pythagoras' theorem, $r^2 + 6^2 = 12^2$.",
+      "$r^2 = 144 - 36 = 108$.",
+      "Area of water surface $= \\pi r^2 = 108\\pi$ cm$^2$."
+    ],
+    "solution_steps_zh": [
+      "設 $r$ 為水面的半徑。",
+      "球心到水面的距離為 $12 - 6 = 6$ cm。",
+      "根據畢氏定理，$r^2 + 6^2 = 12^2$。",
+      "$r^2 = 144 - 36 = 108$。",
+      "水面面積 $= \\pi r^2 = 108\\pi$ cm$^2$。"
+    ],
+    "diagram_json": {
+      "elements": [
+        { "type": "ellipse", "cx": 200, "cy": 100, "rx": 100, "ry": 30, "stroke": "#333", "strokeWidth": 2, "fill": "rgba(59, 130, 246, 0.2)" },
+        { "type": "arc", "cx": 200, "cy": 100, "r": 100, "startAngle": 180, "endAngle": 360, "stroke": "#333", "strokeWidth": 2 },
+        { "type": "line", "x1": 200, "y1": 100, "x2": 200, "y2": 200, "stroke": "#dc2626", "strokeDasharray": "5,5", "label": "12", "labelDx": 10 },
+        { "type": "line", "x1": 200, "y1": 100, "x2": 100, "y2": 100, "stroke": "#333", "strokeDasharray": "3,3", "label": "r" },
+        { "type": "line", "x1": 200, "y1": 150, "x2": 200, "y2": 200, "stroke": "#3b82f6", "strokeWidth": 3, "label": "6", "labelDx": 10 }
+      ],
+      "canvas": { "width": 400, "height": 300, "viewBox": "80 50 240 200" }
+    },
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_172",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": [
+      "math_stat_prob"
+    ],
+    "marks": 1,
+    "difficulty": 4,
+    "paper": 2,
+    "section": "A",
+    "question_en": "Three fair coins are tossed. Find the probability that at least one head is obtained.",
+    "question_zh": "擲三枚均勻硬幣。求獲得最少一個硬幣正面的概率。",
+    "options": [
+      "A. 1/8",
+      "B. 3/8",
+      "C. 5/8",
+      "D. 7/8"
+    ],
+    "correct_answer": "D",
+    "solution_steps_en": [
+      "Using the complement rule: $P(\\text{at least one head}) = 1 - P(\\text{no heads})$.",
+      "$P(\\text{no heads}) = P(\\text{TTT}) = (1/2) \\times (1/2) \\times (1/2) = 1/8$.",
+      "Probability $= 1 - 1/8 = 7/8$."
+    ],
+    "solution_steps_zh": [
+      "使用餘概率：$P(\\text{最少一個正面}) = 1 - P(\\text{沒有正面})$。",
+      "$P(\\text{沒有正面}) = P(TTT) = (1/2) \\times (1/2) \\times (1/2) = 1/8$。",
+      "概率 $= 1 - 1/8 = 7/8$。"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_173",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": [
+      "math_stat_charts"
+    ],
+    "marks": 1,
+    "difficulty": 5,
+    "paper": 2,
+    "section": "A",
+    "question_en": "The table below shows the distribution of scores of a group of students in a test.\n\n[HTML]<div style=\"width: 100%; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; display: flex; justify-content: center; padding: 10px;\"><table style=\"border-collapse: collapse; width: 100%; max-width: 320px; background: white; border: 1px solid #e2e8f0; font-size: 14px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);\"><thead><tr style=\"background: #f8fafc; border-bottom: 2px solid #e2e8f0;\"><th style=\"padding: 12px 8px; text-align: center; color: #475569; font-weight: 800; border-right: 1px solid #e2e8f0;\">Statistic</th><th style=\"padding: 12px 8px; text-align: center; color: #475569; font-weight: 800;\">Score</th></tr></thead><tbody style=\"color: #334155;\"><tr style=\"border-bottom: 1px solid #f1f5f9;\"><td style=\"padding: 10px; font-weight: 600; border-right: 1px solid #f1f5f9; background: #fafafa;\">Minimum</td><td style=\"padding: 10px; text-align: center;\">20</td></tr><tr style=\"border-bottom: 1px solid #f1f5f9; background: #fff;\"><td style=\"padding: 10px; font-weight: 600; border-right: 1px solid #f1f5f9; background: #fafafa;\">Lower Quartile (Q1)</td><td style=\"padding: 10px; text-align: center;\">40</td></tr><tr style=\"border-bottom: 1px solid #f1f5f9; background: #fff;\"><td style=\"padding: 10px; font-weight: 600; border-right: 1px solid #f1f5f9; background: #fafafa;\">Median</td><td style=\"padding: 10px; text-align: center;\">55</td></tr><tr style=\"border-bottom: 1px solid #f1f5f9; background: #fff;\"><td style=\"padding: 10px; font-weight: 600; border-right: 1px solid #f1f5f9; background: #fafafa;\">Upper Quartile (Q3)</td><td style=\"padding: 10px; text-align: center;\">80</td></tr><tr><td style=\"padding: 10px; font-weight: 600; border-right: 1px solid #f1f5f9; background: #fafafa;\">Maximum</td><td style=\"padding: 10px; text-align: center;\">85</td></tr></tbody></table></div>[/HTML]",
+    "question_zh": "下表顯示一組學生的測驗分數分佈。\n\n[HTML]<div style=\"width: 100%; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; display: flex; justify-content: center; padding: 10px;\"><table style=\"border-collapse: collapse; width: 100%; max-width: 320px; background: white; border: 1px solid #e2e8f0; font-size: 14px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);\"><thead><tr style=\"background: #f8fafc; border-bottom: 2px solid #e2e8f0;\"><th style=\"padding: 12px 8px; text-align: center; color: #475569; font-weight: 800; border-right: 1px solid #e2e8f0;\">統計量</th><th style=\"padding: 12px 8px; text-align: center; color: #475569; font-weight: 800;\">分數</th></tr></thead><tbody style=\"color: #334155;\"><tr style=\"border-bottom: 1px solid #f1f5f9;\"><td style=\"padding: 10px; font-weight: 600; border-right: 1px solid #f1f5f9; background: #fafafa;\">最小值</td><td style=\"padding: 10px; text-align: center;\">20</td></tr><tr style=\"border-bottom: 1px solid #f1f5f9; background: #fff;\"><td style=\"padding: 10px; font-weight: 600; border-right: 1px solid #f1f5f9; background: #fafafa;\">下四分位數 (Q1)</td><td style=\"padding: 10px; text-align: center;\">40</td></tr><tr style=\"border-bottom: 1px solid #f1f5f9; background: #fff;\"><td style=\"padding: 10px; font-weight: 600; border-right: 1px solid #f1f5f9; background: #fafafa;\">中位數</td><td style=\"padding: 10px; text-align: center;\">55</td></tr><tr style=\"border-bottom: 1px solid #f1f5f9; background: #fff;\"><td style=\"padding: 10px; font-weight: 600; border-right: 1px solid #f1f5f9; background: #fafafa;\">上四分位數 (Q3)</td><td style=\"padding: 10px; text-align: center;\">80</td></tr><tr><td style=\"padding: 10px; font-weight: 600; border-right: 1px solid #f1f5f9; background: #fafafa;\">最大值</td><td style=\"padding: 10px; text-align: center;\">85</td></tr></tbody></table></div>[/HTML]\n\n求該分佈的四分位位距。",
+    "options": [
+      "A. 20",
+      "B. 30",
+      "C. 40",
+      "D. 50"
+    ],
+    "correct_answer": "C",
+    "solution_steps_en": [
+      "From the table, the lower quartile (Q1) is 40.",
+      "The upper quartile (Q3) is 80.",
+      "Interquartile range $= 80 - 40 = 40$."
+    ],
+    "solution_steps_zh": [
+      "從表可得，下四分位數 (Q1) 為 40。",
+      "上四分位數 (Q3) 為 80。",
+      "四分位數間距 $= 80 - 40 = 40$。"
+    ],
+    "visual": null,
+    "diagram_json": null,
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_174",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": [
+      "math_alg_variations"
+    ],
+    "marks": 1,
+    "difficulty": 6,
+    "paper": 2,
+    "section": "A",
+    "question_en": "It is given that $z$ is the sum of two parts, one part varies directly as $x$ and the other part varies directly as $y^2$. When $x = 1, y = 2, z = 14$; when $x = 2, y = 1, z = 7$. Find $z$ when $x = 3, y = 3$.",
+    "question_zh": "已知 $z$ 為兩部分之和，一部分隨 $x$ 正變，另一部分隨 $y^2$ 正變。當 $x = 1, y = 2, z = 14$；當 $x = 2, y = 1, z = 7$。求當 $x = 3, y = 3$ 時 $z$ 的值。",
+    "options": [
+      "A. 27",
+      "B. 33",
+      "C. 39",
+      "D. 45"
+    ],
+    "correct_answer": "B",
+    "solution_steps_en": [
+      "Let $z = k_1 x + k_2 y^2$.",
+      "Substituting (1, 2, 14): $k_1 + 4k_2 = 14$.",
+      "Substituting (2, 1, 7): $2k_1 + k_2 = 7$.",
+      "Solving the system: $k_2 = 7 - 2k_1$. Substitute: $k_1 + 4(7 - 2k_1) = 14 \\Rightarrow k_1 + 28 - 8k_1 = 14 \\Rightarrow -7k_1 = -14 \\Rightarrow k_1 = 2, k_2 = 3$.",
+      "So $z = 2x + 3y^2$. When $x=3, y=3$, $z = 2(3) + 3(9) = 6 + 27 = 33$."
+    ],
+    "solution_steps_zh": [
+      "設 $z = k_1 x + k_2 y^2$。",
+      "代入 (1, 2, 14)：$k_1 + 4k_2 = 14$。",
+      "代入 (2, 1, 7)：$2k_1 + k_2 = 7$。",
+      "解方程組：$k_2 = 7 - 2k_1$。代入得 $k_1 + 4(7-2k_1) = 14 \\Rightarrow -7k_1 = -14 \\Rightarrow k_1 = 2, k_2 = 3$。",
+      "因此 $z = 2x + 3y^2$。當 $x=3, y=3$ 時，$z = 6 + 27 = 33$。"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_175",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": [
+      "math_geo_coord"
+    ],
+    "marks": 1,
+    "difficulty": 4,
+    "paper": 2,
+    "section": "A",
+    "question_en": "If the point $P(2, -3)$ is rotated clockwise about the origin by $90^\\circ$ through the coordinates, and then translated left by 4 units, find the new coordinates of $P$.",
+    "question_zh": "若將點 $P(2, -3)$ 繞原點按順時針方向旋轉 $90^\\circ$，然後向左平移 4 單位，求 $P$ 的新坐標。",
+    "options": [
+      "A. $(-7, -2)$",
+      "B. $(-1, -2)$",
+      "C. $(-7, 2)$",
+      "D. $(-1, 2)$"
+    ],
+    "correct_answer": "A",
+    "solution_steps_en": [
+      "Clockwise rotation by $90^\\circ$ mapping: $(x, y) \\rightarrow (y, -x)$.",
+      "For $P(2, -3)$, new is $(-3, -2)$.",
+      "Translation left by 4 units: $x \\rightarrow x - 4$.",
+      "New $x = -3 - 4 = -7$.",
+      "New coordinates: $(-7, -2)$."
+    ],
+    "solution_steps_zh": [
+      "順時針旋轉 $90^\\circ$ 的變換：$(x, y) \\rightarrow (y, -x)$。",
+      "對於 $P(2, -3)$，旋轉後為 $(-3, -2)$。",
+      "向左平移 4 單位：$x \\rightarrow x - 4$。",
+      "新 $x = -3 - 4 = -7$。",
+      "新坐標：$(-7, -2)$。"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_176",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": [
+      "math_alg_apgp",
+      "math_alg_log_exp"
+    ],
+    "marks": 1,
+    "difficulty": 7,
+    "paper": 2,
+    "section": "B",
+    "question_en": "It is given that $x, y, z$ is a geometric progression with common ratio $r > 1$. If $\\log_y x, \\log_y y, \\log_y z$ is an arithmetic progression, find the common difference.",
+    "question_zh": "已知 $x, y, z$ 為一個公比為 $r > 1$ 的等比數列。若 $\\log_y x, \\log_y y, \\log_y z$ 為一個等差數列，求該數列的公差。",
+    "options": [
+      "A. $\\log_y r$",
+      "B. $\\log_r y$",
+      "C. $1$",
+      "D. $r$"
+    ],
+    "correct_answer": "A",
+    "solution_steps_en": [
+      "Let $x = y/r$ and $z = yr$。",
+      "Then $\\log_y x = \\log_y (y/r) = \\log_y y - \\log_y r = 1 - \\log_y r$.",
+      "And $\\log_y y = 1$; $\\log_y z = \\log_y (yr) = \\log_y y + \\log_y r = 1 + \\log_y r$.",
+      "The terms are $1 - \\log_y r, 1, 1 + \\log_y r$.",
+      "This is an AP with common difference $d = \\log_y r$."
+    ],
+    "solution_steps_zh": [
+      "設 $x = y/r$ 及 $z = yr$。",
+      "則 $\\log_y x = \\log_y (y/r) = 1 - \\log_y r$。",
+      "$\\log_y y = 1$。",
+      "$\\log_y z = 1 + \\log_y r$。",
+      "該數列為 $1 - \\log_y r, 1, 1 + \\log_y r$。",
+      "公差為 $\\log_y r$。"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_177",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": [
+      "math_alg_apgp",
+      "math_alg_variations"
+    ],
+    "marks": 1,
+    "difficulty": 6,
+    "paper": 2,
+    "section": "B",
+    "question_en": "It is given that $y \\propto x^3$. If $x_1, x_2, x_3, \\dots$ is a geometric progression with common ratio $k$, then $y_1, y_2, y_3, \\dots$ is",
+    "question_zh": "已知 $y \\propto x^3$。若 $x_1, x_2, x_3, \\dots$ 為一個公比為 $k$ 的等比數列，則 $y_1, y_2, y_3, \\dots$ 為",
+    "options": [
+      "A. a geometric progression with common ratio $k$.",
+      "B. a geometric progression with common ratio $k^3$.",
+      "C. an arithmetic progression with common difference $3k$.",
+      "D. an arithmetic progression with common difference $k^3$."
+    ],
+    "correct_answer": "B",
+    "solution_steps_en": [
+      "$y = Cx^3$ for some constant $C$.",
+      "$x_n = x_1 k^{n-1}$.",
+      "$y_n = C (x_1 k^{n-1})^3 = (C x_1^3) (k^3)^{n-1}$.",
+      "This is a geometric progression with first term $y_1 = C x_1^3$ and common ratio $k^3$."
+    ],
+    "solution_steps_zh": [
+      "$y = Cx^3$ (其中 $C$ 為常數)。",
+      "$x_n = x_1 k^{n-1}$。",
+      "$y_n = C (x_1 k^{n-1})^3 = (C x_1^3) (k^3)^{n-1}$。",
+      "這是一個首項為 $y_1$，公比為 $k^3$ 的等比數列。"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_178",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": [
+      "math_geo_coord",
+      "math_geo_circle_eq",
+      "math_alg_quadratics"
+    ],
+    "marks": 1,
+    "difficulty": 7,
+    "paper": 2,
+    "section": "B",
+    "question_en": "The line $y = mx$ is a chord of the circle $x^2 + y^2 - 4x = 0$. If the length of the chord is 2, find the possible value(s) of $m$.",
+    "question_zh": "直線 $y = mx$ 為圓 $x^2 + y^2 - 4x = 0$ 的一條弦。若弦長為 2，求 $m$ 的可能值。",
+    "options": [
+      "A. $\\pm 1/\\sqrt{3}$",
+      "B. $\\pm \\sqrt{3}$",
+      "C. $\\pm 1$",
+      "D. $\\pm 2$"
+    ],
+    "correct_answer": "B",
+    "solution_steps_en": [
+      "Circle: $(x-2)^2 + y^2 = 4$. Center (2, 0), radius 2.",
+      "The distance $d$ from center to line satisfies $d^2 + (chord/2)^2 = r^2$.",
+      "$d^2 + 1^2 = 2^2 \\Rightarrow d^2 = 3 \\Rightarrow d = \\sqrt{3}$.",
+      "Distance from (2, 0) to $mx - y = 0$ is $\\frac{|2m - 0|}{\\sqrt{m^2 + 1}} = \\sqrt{3}$.",
+      "$4m^2 = 3(m^2 + 1) \\Rightarrow 4m^2 = 3m^2 + 3 \\Rightarrow m^2 = 3 \\Rightarrow m = \\pm \\sqrt{3}$."
+    ],
+    "solution_steps_zh": [
+      "圓方程：$(x-2)^2 + y^2 = 4$。圓心為 (2, 0)，半徑為 2。",
+      "設圓心到直線的距離為 $d$。則 $d^2 + (2/2)^2 = 2^2 \\Rightarrow d = \\sqrt{3}$。",
+      "利用點到直線距離公式：$\\frac{|2m|}{\\sqrt{m^2+1}} = \\sqrt{3}$。",
+      "$4m^2 = 3m^2 + 3 \\Rightarrow m^2 = 3 \\Rightarrow m = \\pm \\sqrt{3}$。"
+    ],
+    "diagram_json": null,
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_179",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": [
+      "math_trig_applications",
+      "math_geo_rectilinear"
+    ],
+    "marks": 1,
+    "difficulty": 6,
+    "paper": 2,
+    "section": "B",
+    "question_en": "In $\\triangle ABC$, $AB=8, BC=10$. If the area of $\\triangle ABC$ is 40, find $\\sin B$.",
+    "question_zh": "在 $\\triangle ABC$ 中，$AB=8, BC=10$。若 $\\triangle ABC$ 的面積為 40，求 $\\sin B$。",
+    "options": [
+      "A. 1/2",
+      "B. $\\sqrt{3}/2$",
+      "C. 1",
+      "D. Cannot be determined"
+    ],
+    "correct_answer": "C",
+    "solution_steps_en": [
+      "Area of triangle $= \\frac{1}{2} ab \\sin C$.",
+      "Area $= \\frac{1}{2} (AB)(BC) \\sin B = \\frac{1}{2} (8)(10) \\sin B = 40 \\sin B$.",
+      "Given Area $= 40$, so $40 \\sin B = 40 \\Rightarrow \\sin B = 1$."
+    ],
+    "solution_steps_zh": [
+      "三角形面積 $= \\frac{1}{2} ab \\sin C$。",
+      "面積 $= \\frac{1}{2} (8)(10) \\sin B = 40 \\sin B$。",
+      "已知面積為 40，故 $40 \\sin B = 40 \\Rightarrow \\sin B = 1$。"
+    ],
+    "diagram_json": {
+      "elements": [
+        { "type": "polyline", "points": [{ "x": 100, "y": 250 }, { "x": 350, "y": 250 }, { "x": 100, "y": 90 }], "stroke": "#333", "strokeWidth": 2, "fill": "rgba(124, 58, 237, 0.1)" },
+        { "type": "rect", "x": 100, "y": 235, "width": 15, "height": 15, "stroke": "#333", "strokeWidth": 1, "fill": "none" },
+        { "type": "text", "x": 100, "y": 75, "label": "A", "fontSize": 16, "fontWeight": "bold", "textAnchor": "middle" },
+        { "type": "text", "x": 80, "y": 270, "label": "B", "fontSize": 16, "fontWeight": "bold", "textAnchor": "middle" },
+        { "type": "text", "x": 370, "y": 270, "label": "C", "fontSize": 16, "fontWeight": "bold", "textAnchor": "middle" },
+        { "type": "line", "x1": 100, "y1": 250, "x2": 100, "y2": 90, "label": "8", "labelDx": -20 },
+        { "type": "line", "x1": 100, "y1": 250, "x2": 350, "y2": 250, "label": "10", "labelDy": 25 }
+      ],
+      "canvas": { "width": 400, "height": 300, "viewBox": "50 50 350 250" }
+    },
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_180",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": [
+      "math_mensuration",
+      "math_trig_applications"
+    ],
+    "marks": 1,
+    "difficulty": 7,
+    "paper": 2,
+    "section": "B",
+    "question_en": "A right circular cone has a semi-vertical angle $\\theta$. If the radius of the base is $r$ and the curved surface area is twice the base area, find $\\theta$.",
+    "question_zh": "一個直立圓錐的半頂角為 $\\theta$。若底半徑為 $r$ 且側面積為底面積的兩倍，求 $\\theta$。",
+    "options": [
+      "A. $30^\\circ$",
+      "B. $45^\\circ$",
+      "C. $60^\\circ$",
+      "D. $75^\\circ$"
+    ],
+    "correct_answer": "A",
+    "solution_steps_en": [
+      "Base area $= \\pi r^2$.",
+      "Curved surface area $= \\pi r l$, where $l$ is the slant height.",
+      "Given $\\pi r l = 2 (\\pi r^2) \\Rightarrow l = 2r$.",
+      "In the right triangle formed by $r, h, l$, $\\sin \\theta = r/l$.",
+      "$\\sin \\theta = r/(2r) = 1/2$.",
+      "$\\theta = 30^\\circ$."
+    ],
+    "solution_steps_zh": [
+      "底面積 $= \\pi r^2$。",
+      "側面積 $= \\pi r l$，其中 $l$ 為母線（斜高）。",
+      "已知 $\\pi r l = 2\\pi r^2 \\Rightarrow l = 2r$。",
+      "在直角三角形中，$\\sin \\theta = r/l$。",
+      "$\\sin \\theta = r/(2r) = 1/2 \\Rightarrow \\theta = 30^\\circ$。"
+    ],
+    "diagram_json": {
+      "elements": [
+        { "type": "ellipse", "cx": 200, "cy": 250, "rx": 80, "ry": 25, "stroke": "#333", "strokeWidth": 2 },
+        { "type": "line", "x1": 120, "y1": 250, "x2": 200, "y2": 50, "stroke": "#7c3aed", "strokeWidth": 2 },
+        { "type": "line", "x1": 280, "y1": 250, "x2": 200, "y2": 50, "stroke": "#7c3aed", "strokeWidth": 2 },
+        { "type": "line", "x1": 200, "y1": 250, "x2": 200, "y2": 50, "stroke": "#ccc", "strokeDasharray": "5,5" },
+        { "type": "line", "x1": 200, "y1": 250, "x2": 280, "y2": 250, "label": "r" },
+        { "type": "arc", "cx": 200, "cy": 50, "r": 30, "startAngle": 270, "endAngle": 300, "stroke": "#dc2626", "label": "θ", "labelDx": 10 }
+      ],
+      "canvas": { "width": 400, "height": 300, "viewBox": "100 0 200 280" }
+    },
+    "status": "approved"
+  }
+]

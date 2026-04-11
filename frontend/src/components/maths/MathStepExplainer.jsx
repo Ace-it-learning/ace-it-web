@@ -19,6 +19,12 @@ const MathStepExplainer = ({ question, fullSolution, targetStep }) => {
     const [loading, setLoading] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
 
+    // Reset explanation when language changes so that User can fetch translated explanation
+    React.useEffect(() => {
+        setExplanation(null);
+        setIsOpen(false);
+    }, [language]);
+
     // Local formatting helpers replaced by mathFormattingUtils
 
     const handleExplain = async (e) => {

@@ -69,7 +69,8 @@ export const translations = {
             quest: "Quest",
             view_daily_quest: "View Daily Quest",
             complete_diagnostic_first: "Complete Diagnostic first",
-            mock_exam: "Mock Exam"
+            mock_exam: "Mock Exam",
+            back_to_roadmap: "Back to Roadmap"
         },
         exam: {
             reading: "Reading",
@@ -84,55 +85,82 @@ export const translations = {
         pricing: {
             title: "Simple, Transparent Pricing",
             subtitle: "Invest in your future. Choose the plan that fits your study pace and academic goals.",
+            most_popular: "Most Popular",
+            free_name: "Free Trial",
+            free_f1: "1st Quest of each category",
+            free_f2: "Diagnostic Test access",
+            free_f3: "Earn base XP",
+            free_f4: "Avatar browsing",
+            pro_name: "Pro Plan",
+            pro_f1: "English & Math Full Access",
+            pro_f2: "10 Questions/Quest/Month",
+            pro_f3: "4 Mock Exams/Subject",
+            pro_f4: "1.2x XP Multiplier",
+            premium_name: "Premium Plan",
+            premium_f1: "Unlimited Questions",
+            premium_f2: "Unlimited Mock Exams",
+            premium_f3: "All current & future subjects",
+            premium_f4: "1.5x XP & 5 Device Limit",
             tiers: {
-                scholar: {
-                    name: "Scholar",
+                free: {
+                    name: "Free Trial",
                     price: "HK$0",
-                    period: "14 Days Trial",
+                    period: "Indefinite",
                     desc: "Perfect for exploring the AI-powered DSE experience.",
-                    cta: "Start 14-Day Trial",
-                    features: [
-                        "AI English Buddy (24/7)",
-                        "1 Full Study Calibration",
-                        "Introductory Grammar Quests",
-                        "Daily XP Rewards",
-                        "Community Support"
-                    ]
+                    cta: "Start Learning",
+                    features: ["1st Quest of each category", "Diagnostic Test", "Base XP rewards", "Avatar library"]
                 },
-                achiever: {
-                    name: "Achiever",
-                    price: "HK$98",
+                pro: {
+                    name: "Pro Plan",
+                    price: "HK$68",
                     period: "/month",
-                    desc: "The core toolkit for serious DSE preparation.",
-                    cta: "Go Achiever",
-                    features: [
-                        "Everything in Scholar",
-                        "Unlimited AI Tutors (All Subjects)",
-                        "Dynamic Personalized Roadmap",
-                        "4 Pro-Graded Mock Exams / month",
-                        "Abilities (Deep Skill Analysis)",
-                        "Weekly AI Recap & Strategy"
-                    ]
+                    desc: "Comprehensive toolkit for steady DSE success.",
+                    cta: "Go Pro",
+                    features: ["Full English & Math access", "10 Questions/Quest/Month", "4 Mock Exams per subject", "1.2x XP Multiplier"]
                 },
-                elite: {
-                    name: "Elite",
-                    price: "HK$148",
+                premium: {
+                    name: "Premium Plan",
+                    price: "HK$128",
                     period: "/month",
-                    desc: "Premium mastery for top-tier academic goals.",
-                    cta: "Join Elite",
-                    features: [
-                        "Everything in Achiever",
-                        "Unlimited Pro-Graded Mock Exams",
-                        "Gemini 1.5 Pro Power Mode",
-                        "AI Past Paper Predictions"
-                    ]
+                    desc: "Unlimited power for top-tier academic mastery.",
+                    cta: "Go Premium",
+                    features: ["Unlimited everything", "All current & future subjects", "1.5x XP Multiplier", "5 Device Limit"]
                 }
             }
+        },
+        subscription: {
+            title: "Subscription & Devices",
+            subtitle: "Manage your plan and secure your account access.",
+            current_plan: "Current Plan",
+            active: "Active",
+            select_plan: "Select Plan",
+            devices_title: "Active Devices",
+            no_devices: "No devices registered yet.",
+            last_seen: "Last seen",
+            forget_device: "Forget Device",
+            confirm_forget_device: "Are you sure you want to remove this device? You will be signed out on that machine.",
+            device_warning: "You can register up to 3 devices on Free/Pro (5 on Premium). If you reach the limit, you must 'forget' a device before signing in on a new one.",
+            promo_title: "Promo Codes",
+            promo_subtitle: "Enter a referral or promotional code to unlock special discounts.",
+            promo_placeholder: "E.G. ACEIT2025",
+            limited_offer: "Limited Time",
+            referral_title: "Refer a friend, get 1 month Pro for free!",
+            learn_more: "Learn More",
+            parent_report_title: "Parental Oversight",
+            parent_report_subtitle: "Weekly progress reports sent directly to your parents.",
+            parent_report_email: "Parent's Email Address",
+            parent_report_toggle: "Enable Weekly Reports",
+            parent_report_desc: "Sent every Monday morning. Includes study time, mastered skills, and predicted DSE grades.",
+            parent_report_locked: "Premium Exclusive",
+            test_report: "Send Test Report",
+            report_sent: "Test report sent!",
+            settings_saved: "Settings saved"
         },
         common: {
             cancel: "Cancel",
             confirm: "Confirm",
-            loading: "Loading..."
+            loading: "Loading...",
+            back_to_dashboard: "Back to Dashboard"
         },
         sidebar: {
             study_duo: "Study Duo",
@@ -158,11 +186,19 @@ export const translations = {
             partner_desc: "Engage in deep conversations with AI mentors to breakthrough DSE challenges.",
             roadmap: "Personalized Roadmap"
         },
+        roadmap: {
+            title_english: "English Practice Library",
+            title_math: "Mathematics Practice Library",
+            title_chinese: "Chinese Practice Library",
+            targeted_growth: "Targeted Growth",
+            quests_lab: "Quests Lab",
+            complete_quest_xp: "Complete Quest to earn XP Bonus!"
+        },
         chat: {
             start_mock: "Start Mock Exam",
             what_is_ace_it: "What is Ace It?",
-            start_calibration: "Start 15-min Calibration",
-            start_diagnostic: "Unlock Your Roadmap (15-min Check)",
+            start_calibration: "Start 15-min Diagnostic",
+            start_diagnostic: "Unlock Your Roadmap (15-min Diagnostic)",
             review_mistake: "Review my last mistake",
             clear_history: "Clear conversation history",
             practice_vocab: "Practice Vocabulary",
@@ -228,6 +264,34 @@ export const translations = {
             },
             marks: "marks"
         },
+        writing_result: {
+            dashboard_title: "Performance Dashboard",
+            mission_completed: "MISSION COMPLETED",
+            try_next: "Try Next",
+            final_assessment: "Final Assessment",
+            dse_calibrated: "DSE 2025 Calibrated",
+            clo_title: "C-L-O Triad Breakdown",
+            clo_subtitle: "Pillar Proficiency (Scale 1-7)",
+            content: "Content",
+            language: "Language",
+            organization: "Organization",
+            examiner_verdict: "EXAMINER VERDICT",
+            primary_goal: "Primary Improvement Goal",
+            focus_on_highlights: "Focus on the pink highlights below",
+            elite_refinement: "ELITE EXEMPLAR REFINEMENT",
+            elite_subtitle: "A side-by-side comparison of your work vs a 5** standard.",
+            your_answer: "Your Original Answer",
+            master_version: "Alternative Master Version",
+            insight_title: "Linguistic Insight",
+            expert_recommendation: "Elite Recommendation",
+            export_pdf: "Export PDF",
+            topic_label: "Topic",
+            pro_eval_subtitle: "Professional DSE Evaluation",
+            original_tag: "Original",
+            elite_tag: "Elite choice",
+            dse_standard: "DSE Level 5** Standard",
+            back_to_roadmap: "Back to Roadmap"
+        },
         vocabulary: {
             title: "Vocab Library",
             subtitle: "DSE HIGH-FREQUENCY WORDS",
@@ -278,7 +342,7 @@ export const translations = {
             events: {
                 onboarding: "Joined Ace It!",
                 onboarding_fallback: "Joined Ace It!",
-                diagnostic: "Study Calibration (Diagnostic)"
+                diagnostic: "Diagnostic Test"
             },
             just_now: "Just now",
             hours_ago: "{{count}} hour{{s}} ago",
@@ -317,7 +381,16 @@ export const translations = {
             cert_chi_reading: "Reading",
             cert_chi_writing: "Writing",
             cert_locked: "Level 4+ Required",
-            cert_hint: "Complete Mock Exams with Level 4 or above to earn certificates."
+            cert_hint: "Complete Mock Exams with Level 4 or above to earn certificates.",
+            standard_box: "Standard Box",
+            standard_box_desc: "Common & Rare Student/Frames",
+            tutor_box: "Tutor Star Box",
+            tutor_box_desc: "Guaranteed Tutor Card",
+            frames_box: "Aesthetics Box",
+            frames_box_desc: "Rare & Legendary Frames",
+            congrats: "Congratulations! You found a new item.",
+            awesome: "Awesome!",
+            check_collection: "Check your collection to equip it."
         },
         collection: {
             title: "My Collection",
@@ -347,7 +420,7 @@ export const translations = {
             level: "Level",
             foundation_building: "Foundation Building",
             dse_standard: "DSE Standard",
-            elite_challenge: "Elite Challenge",
+            elite_challenge: "Masters Quest",
             exit_lab: "Exit Lab",
             briefing: "Conceptual Briefing",
             mastering: "Mastering {{topic}}",
@@ -402,6 +475,7 @@ export const translations = {
             level_prefix: "Mastery Level: ",
             loading: "Loading your mastery data...",
             complete_more_labs: "Complete more labs to get data",
+            estimated_grade: "Estimated DSE Grade",
             level_labels: {
                 7: "5**",
                 6: "5*",
@@ -411,7 +485,12 @@ export const translations = {
                 2: "2",
                 1: "1",
                 0: "N/A"
-            }
+            },
+            keep_practicing: "Keep practicing to reveal",
+            mock_exam_tab: "Mock Exam Assessment",
+            practice_analysis_tab: "Skill Practice Analysis",
+            mock_data_label: "Data based on your latest Mock Exam performance",
+            practice_data_label: "Data based on your last 10 {{category}} sessions"
         },
         math_ability: {
             title: "Abilities",
@@ -450,7 +529,13 @@ export const translations = {
                 2: "2",
                 1: "1",
                 0: "N/A"
-            }
+            },
+            estimated_grade: "Estimated DSE Grade",
+            unlock_warning: "Complete both Paper 1 & 2 mocks to unlock grade prediction.",
+            mock_exam_tab: "Mock Exam Assessment",
+            practice_analysis_tab: "Daily Practice Analysis",
+            mock_data_label: "Data based on your latest Mock Exam performance",
+            practice_data_label: "Data based on your last 10 {{category}} sessions"
         },
         math_tutor: {
             explain_step: "Explain this step",
@@ -539,55 +624,82 @@ export const translations = {
         pricing: {
             title: "簡單、透明的定價",
             subtitle: "投資您的未來。選擇適合您學習進度和目標的計劃。",
+            most_popular: "最受歡迎",
+            free_name: "免費試用",
+            free_f1: "每個類別的第一個任務",
+            free_f2: "能力診斷測試",
+            free_f3: "賺取基礎 XP",
+            free_f4: "瀏覽頭像收藏",
+            pro_name: "專業計劃 (Pro)",
+            pro_f1: "英文及數學完整使用權",
+            pro_f2: "每個微技能任務每月 10 題",
+            pro_f3: "每科 4 次模擬考試",
+            pro_f4: "1.2x XP 經驗值加成",
+            premium_name: "至尊計劃 (Premium)",
+            premium_f1: "無限題目練習",
+            premium_f2: "無限次模擬考試",
+            premium_f3: "包含所有現有及未來科目",
+            premium_f4: "1.5x XP 加成 & 5 台裝置上限",
             tiers: {
-                scholar: {
-                    name: "學士 (Scholar)",
+                free: {
+                    name: "免費試用",
                     price: "HK$0",
-                    period: "14 天試用",
-                    desc: "開啟 AI 驅動的 DSE 學習體驗。",
-                    cta: "開始 14 天試用",
-                    features: [
-                        "AI 英文夥伴 (24/7)",
-                        "1 次完整能力測試",
-                        "初級語法測試",
-                        "每日 XP 獎勵",
-                        "社群支援"
-                    ]
+                    period: "無限期",
+                    desc: "體驗 AI 驅動的 DSE 學習旅程。",
+                    cta: "開始學習",
+                    features: ["每個類別的首個任務", "能力診斷測試", "基礎 XP 獎勵", "頭像收藏館"]
                 },
-                achiever: {
-                    name: "奮進者 (Achiever)",
-                    price: "HK$98",
+                pro: {
+                    name: "專業計劃 (Pro)",
+                    price: "HK$68",
                     period: "/月",
-                    desc: "專為 DSE 考生設計的核心工具。",
-                    cta: "選擇 奮進者",
-                    features: [
-                        "包含學士 (Scholar) 所有功能",
-                        "無限 AI 導師 (全科)",
-                        "動態個人學習藍圖",
-                        "每月 4 次專業批改模擬試卷",
-                        "能力值 (深度能力分析)",
-                        "每週 AI 總結與策略指導"
-                    ]
+                    desc: "為穩步晉升 DSE 等級而設的核心工具。",
+                    cta: "立即升級 Pro",
+                    features: ["英文及數學完整存取", "每月每任務 10 題限制", "每科 4 次模擬試紀錄", "1.2x XP 經驗值加速"]
                 },
-                elite: {
-                    name: "精英 (Elite)",
-                    price: "HK$148",
+                premium: {
+                    name: "至尊計劃 (Premium)",
+                    price: "HK$128",
                     period: "/月",
-                    desc: "追求頂尖成績的精英之選。",
-                    cta: "加入 精英",
-                    features: [
-                        "包含奮進者 (Achiever) 所有功能",
-                        "無限次專業批改模擬試卷",
-                        "Gemini 1.5 Pro 高效模式",
-                        "AI 歷屆試題分析預測"
-                    ]
+                    desc: "解鎖最強 AI 戰力，追求頂尖奪星目標。",
+                    cta: "立即升級 Premium",
+                    features: ["所有功能無限制", "包含現有及未來所有科目", "1.5x XP 經驗值加速", "5 台裝置上限"]
                 }
             }
+        },
+        subscription: {
+            title: "訂閱與裝置管理",
+            subtitle: "管理您的計劃並確保帳號安全存取。",
+            current_plan: "當前計劃",
+            active: "使用中",
+            select_plan: "選擇計劃",
+            devices_title: "已登入裝置",
+            no_devices: "暫未偵測到已登記裝置。",
+            last_seen: "最後在線",
+            forget_device: "移除裝置",
+            confirm_forget_device: "您確定要移除此裝置嗎？該裝置將會自動登出。",
+            device_warning: "免費/專業版帳戶最多可登記 3 台裝置 (至尊版為 5 台)。若達上限，您必須先移除舊裝置才能在新裝置登入。",
+            promo_title: "優惠碼",
+            promo_subtitle: "輸入推薦碼或促銷號碼以獲得特別折扣。",
+            promo_placeholder: "例如：ACEIT2025",
+            limited_offer: "限時優惠",
+            referral_title: "推薦朋友加入，即可免費獲得 1 個月專業版 (Pro)！",
+            learn_more: "了解更多",
+            parent_report_title: "家長監督",
+            parent_report_subtitle: "每週進度報告將直接發送到您父母的電子郵箱。",
+            parent_report_email: "父母的電子郵件地址",
+            parent_report_toggle: "啟用每週報告",
+            parent_report_desc: "每週一早上發送。包括學習時間、已掌握的技能和預測的 DSE 等級。",
+            parent_report_locked: "至尊版特權",
+            test_report: "發送測試報告",
+            report_sent: "測試報告已發送！",
+            settings_saved: "設定已儲存"
         },
         common: {
             cancel: "取消",
             confirm: "確認",
-            loading: "載入中..."
+            loading: "載入中...",
+            back_to_dashboard: "返回儀表板"
         },
         sidebar: {
             study_duo: "學習拍檔",
@@ -613,12 +725,20 @@ export const translations = {
             partner_desc: "與 AI 導師學習，突破 DSE 難關",
             roadmap: "個人學習藍圖"
         },
+        roadmap: {
+            title_english: "英文練習寶庫",
+            title_math: "數學練習寶庫",
+            title_chinese: "中文練習寶庫",
+            targeted_growth: "個人化成長",
+            quests_lab: "任務研發室",
+            complete_quest_xp: "完成任務以獲取 XP 獎勵！"
+        },
         chat: {
             start_mock: "開始模擬考試",
             what_is_ace_it: "Ace It 是什麼？",
             check_grammar: "檢查語法",
-            start_calibration: "開始 15 分鐘能力測試",
-            start_diagnostic: "解鎖學習地圖 (15 分鐘能力測試)",
+            start_calibration: "開始 15 分鐘能力診斷",
+            start_diagnostic: "解鎖學習地圖 (15 分鐘能力診斷)",
             review_mistake: "複習錯誤",
             clear_history: "清除對話紀錄",
             practice_vocab: "練習詞彙",
@@ -684,6 +804,34 @@ export const translations = {
             },
             marks: "分"
         },
+        writing_result: {
+            dashboard_title: "寫作表現分析",
+            mission_completed: "任務已完成",
+            try_next: "嘗試下一篇",
+            final_assessment: "最終評估",
+            dse_calibrated: "已按 DSE 2025 標準校準",
+            clo_title: "C-L-O 三維表現分析",
+            clo_subtitle: "分項熟練度 (1-7分)",
+            content: "內容 (Content)",
+            language: "語言 (Language)",
+            organization: "組織 (Organization)",
+            examiner_verdict: "閱卷員總結",
+            primary_goal: "重點改進目標",
+            focus_on_highlights: "請留意下方的粉色標註",
+            elite_refinement: "精英範文精鍊對比",
+            elite_subtitle: "將你的草稿與 5** 標杆進行側重對比。",
+            your_answer: "你的原始答案",
+            master_version: "5** 精英範文本",
+            insight_title: "語言洞察",
+            expert_recommendation: "導師亮句建議",
+            export_pdf: "匯出 PDF 報告",
+            topic_label: "題目",
+            pro_eval_subtitle: "專業 DSE 評估",
+            original_tag: "原始草稿",
+            elite_tag: "精英選詞",
+            dse_standard: "DSE Level 5** 標準",
+            back_to_roadmap: "返回發展導覽"
+        },
         vocabulary: {
             title: "詞彙寶庫",
             subtitle: "HKDSE 高頻必背詞彙",
@@ -734,7 +882,7 @@ export const translations = {
             events: {
                 onboarding: "加入 Ace It! (建立檔案)",
                 onboarding_fallback: "加入 Ace It!",
-                diagnostic: "能力測試 (Calibration)"
+                diagnostic: "能力診斷 (Diagnostic)"
             },
             just_now: "剛才",
             hours_ago: "{{count}} 小時前",
@@ -773,7 +921,17 @@ export const translations = {
             cert_chi_reading: "閱讀",
             cert_chi_writing: "寫作",
             cert_locked: "需要 Level 4+",
-            cert_hint: "完成模擬考試並獲得 Level 4 或以上即可獲取證書。"
+            cert_hint: "完成模擬考試並獲得 Level 4 或以上即可獲取證書。",
+            back_to_roadmap: "返回發展導覽",
+            standard_box: "標準盲盒",
+            standard_box_desc: "包含普通及稀有學生頭像/邊框",
+            tutor_box: "名師星鑽盒",
+            tutor_box_desc: "必中導師卡片",
+            frames_box: "幻彩美學盒",
+            frames_box_desc: "包含稀有及傳說級邊框",
+            congrats: "恭喜！你獲得了一個新項目。",
+            awesome: "太棒了！",
+            check_collection: "前往「我的收藏」進行裝備。"
         },
         collection: {
             title: "我的收藏",
@@ -858,6 +1016,7 @@ export const translations = {
             level_prefix: "等級：",
             loading: "正在讀取能力數據...",
             complete_more_labs: "完成更多練習以獲取更準確數據",
+            estimated_grade: "預計文憑試等級",
             level_labels: {
                 7: "Level 5**",
                 6: "Level 5*",
@@ -867,7 +1026,12 @@ export const translations = {
                 2: "Level 2",
                 1: "Level 1",
                 0: "N/A"
-            }
+            },
+            keep_practicing: "持續練習以顯示數據",
+            mock_exam_tab: "模擬試評分",
+            practice_analysis_tab: "技能練習分析",
+            mock_data_label: "數據基於你最新的模擬試表現",
+            practice_data_label: "數據基於你最近 10 次的 {{category}} 練習"
         },
         math_ability: {
             title: "能力",
@@ -906,7 +1070,14 @@ export const translations = {
                 2: "Level 2",
                 1: "Level 1",
                 0: "未有資料"
-            }
+            },
+            estimated_grade: "預計文憑試等級",
+            level_prefix: "等級：",
+            unlock_warning: "完成卷一及卷二模擬試後即可解鎖預計等級。",
+            mock_exam_tab: "模擬試評分",
+            practice_analysis_tab: "日常練習分析",
+            mock_data_label: "數據基於你最新的模擬試表現",
+            practice_data_label: "數據基於你最近 10 次的 {{category}} 練習"
         },
         math_tutor: {
             explain_step: "解說此步驟",

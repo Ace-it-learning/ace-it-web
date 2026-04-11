@@ -1,0 +1,569 @@
+﻿[
+  {
+    "level": 3,
+    "topic": "Solving by Factorization",
+    "question": "Solve the quadratic equation $x^2 - 5x + 6 = 0$.",
+    "question_zh": "\u89e3\u4e8c\u6b21\u65b9\u7a0b $x^2 - 5x + 6 = 0$\u3002",
+    "answer": "x = 2 or x = 3",
+    "answer_zh": "x = 2 \u6216 x = 3",
+    "steps": [
+      "Factorize the quadratic expression: $(x - 2)(x - 3) = 0$.",
+      "Set each factor to zero: $x - 2 = 0$ or $x - 3 = 0$.",
+      "Solutions: $x = 2$ or $x = 3$."
+    ],
+    "steps_zh": [
+      "\u5c07\u4e8c\u6b21\u5f0f\u56e0\u5f0f\u5206\u89e3\uff1a$(x - 2)(x - 3) = 0$\u3002",
+      "\u5c07\u6bcf\u500b\u56e0\u5f0f\u8a2d\u70ba\u96f6\uff1a$x - 2 = 0$ \u6216 $x - 3 = 0$\u3002",
+      "\u89e3\u70ba\uff1a$x = 2$ \u6216 $x = 3$\u3002"
+    ]
+  },
+  {
+    "level": 3,
+    "topic": "Nature of Roots",
+    "question": "Find the discriminant of $x^2 - 4x + 4 = 0$ and state the nature of its roots.",
+    "question_zh": "\u6c42 $x^2 - 4x + 4 = 0$ \u7684\u5224\u5225\u5f0f\uff0c\u4e26\u5beb\u51fa\u5176\u6839\u7684\u6027\u8cea\u3002",
+    "answer": "$\\Delta = 0$, equal real roots",
+    "answer_zh": "$\\Delta = 0$\uff0c\u6709\u7b49\u5be6\u6839",
+    "steps": [
+      "Identify $a=1, b=-4, c=4$.",
+      "Discriminant $\\Delta = b^2 - 4ac = (-4)^2 - 4(1)(4) = 16 - 16 = 0$.",
+      "Since $\\Delta = 0$, the equation has one real root (equal real roots)."
+    ],
+    "steps_zh": [
+      "\u8fa8\u8b58 $a=1, b=-4, c=4$\u3002",
+      "\u5224\u5225\u5f0f $\\Delta = b^2 - 4ac = (-4)^2 - 4(1)(4) = 16 - 16 = 0$\u3002",
+      "\u7531\u65bc $\\Delta = 0$\uff0c\u8a72\u65b9\u7a0b\u6709\u4e00\u500b\u5be6\u6839\uff08\u7b49\u5be6\u6839\uff09\u3002"
+    ]
+  },
+  {
+    "level": 3,
+    "topic": "Quadratic Formula",
+    "question": "Use the quadratic formula to solve $x^2 + 2x - 1 = 0$. (Leave answer in surd form)",
+    "question_zh": "\u5229\u7528\u4e8c\u6b21\u516c\u5f0f\u89e3 $x^2 + 2x - 1 = 0$\u3002\uff08\u7b54\u6848\u4ee5\u6839\u5f0f\u8868\u793a\uff09",
+    "answer": "x = -1 \\pm \\sqrt{2}",
+    "steps": [
+      "Quadratic formula: $x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}$.",
+      "$x = \\frac{-2 \\pm \\sqrt{2^2 - 4(1)(-1)}}{2(1)} = \\frac{-2 \\pm \\sqrt{4 + 4}}{2}$.",
+      "$x = \\frac{-2 \\pm \\sqrt{8}}{2} = \\frac{-2 \\pm 2\\sqrt{2}}{2} = -1 \\pm \\sqrt{2}$."
+    ],
+    "steps_zh": [
+      "\u4e8c\u6b21\u516c\u5f0f\uff1a$x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}$\u3002",
+      "$x = \\frac{-2 \\pm \\sqrt{2^2 - 4(1)(-1)}}{2(1)} = \\frac{-2 \\pm \\sqrt{4 + 4}}{2}$\u3002",
+      "$x = \\frac{-2 \\pm \\sqrt{8}}{2} = \\frac{-2 \\pm 2\\sqrt{2}}{2} = -1 \\pm \\sqrt{2}$\u3002"
+    ]
+  },
+  {
+    "level": 3,
+    "topic": "Basic Vieta's",
+    "question": "For the equation $2x^2 + 7x - 4 = 0$, find the sum of roots and product of roots.",
+    "question_zh": "\u5c0d\u65bc\u65b9\u7a0b $2x^2 + 7x - 4 = 0$\uff0c\u6c42\u5176\u5169\u6839\u4e4b\u548c\u53ca\u5169\u6839\u4e4b\u7a4d\u3002",
+    "answer": "Sum = -3.5, Product = -2",
+    "answer_zh": "\u548c = -3.5\uff0c\u7a4d = -2",
+    "steps": [
+      "Sum of roots $\\alpha + \\beta = -b/a = -7/2 = -3.5$.",
+      "Product of roots $\\alpha\\beta = c/a = -4/2 = -2$."
+    ],
+    "steps_zh": [
+      "\u5169\u6839\u4e4b\u548c $\\alpha + \\beta = -b/a = -7/2 = -3.5$\u3002",
+      "\u5169\u6839\u4e4b\u7a4d $\\alpha\\beta = c/a = -4/2 = -2$\u3002"
+    ]
+  },
+  {
+    "level": 3,
+    "topic": "Standard Form",
+    "question": "Rearrange $x(x - 3) = 10$ into the form $ax^2 + bx + c = 0$ and solve for $x$.",
+    "question_zh": "\u5c07 $x(x - 3) = 10$ \u91cd\u6574\u70ba $ax^2 + bx + c = 0$ \u7684\u5f62\u5f0f\uff0c\u4e26\u6c42 $x$\u3002",
+    "answer": "x = 5 or x = -2",
+    "answer_zh": "x = 5 \u6216 x = -2",
+    "steps": [
+      "Expand LHS: $x^2 - 3x = 10$.",
+      "Rearrange: $x^2 - 3x - 10 = 0$.",
+      "Factorize: $(x - 5)(x + 2) = 0$.",
+      "Solutions: $x = 5$ or $x = -2$."
+    ],
+    "steps_zh": [
+      "\u5c55\u958b\u5de6\u65b9\uff1a$x^2 - 3x = 10$\u3002",
+      "\u91cd\u6574\uff1a$x^2 - 3x - 10 = 0$\u3002",
+      "\u56e0\u5f0f\u5206\u89e3\uff1a$(x - 5)(x + 2) = 0$\u3002",
+      "\u89e3\u70ba\uff1a$x = 5$ \u6216 $x = -2$\u3002"
+    ]
+  },
+  {
+    "level": 4,
+    "topic": "Completing the Square",
+    "question": "Express $y = x^2 - 6x + 5$ in vertex form $y = (x - h)^2 + k$.",
+    "question_zh": "\u5c07 $y = x^2 - 6x + 5$ \u8868\u793a\u6210\u9802\u9ede\u5f0f $y = (x - h)^2 + k$\u3002",
+    "answer": "y = (x - 3)^2 - 4",
+    "steps": [
+      "$y = (x^2 - 6x + 9) - 9 + 5$.",
+      "$y = (x - 3)^2 - 4$."
+    ],
+    "steps_zh": [
+      "$y = (x^2 - 6x + 9) - 9 + 5$\u3002",
+      "$y = (x - 3)^2 - 4$\u3002"
+    ]
+  },
+  {
+    "level": 4,
+    "topic": "Nature of Roots",
+    "question": "The equation $x^2 + kx + 9 = 0$ has equal real roots. Find the possible values of $k$.",
+    "question_zh": "\u65b9\u7a0b $x^2 + kx + 9 = 0$ \u6709\u7b49\u5be6\u6839\u3002\u6c42 $k$ \u7684\u53ef\u80fd\u503c\u3002",
+    "answer": "k = 6 or k = -6",
+    "answer_zh": "k = 6 \u6216 k = -6",
+    "steps": [
+      "For equal roots, $\\Delta = 0$.",
+      "$k^2 - 4(1)(9) = 0$.",
+      "$k^2 - 36 = 0 \\Rightarrow k^2 = 36$.",
+      "$k = 6$ or $k = -6$."
+    ],
+    "steps_zh": [
+      "\u5c0d\u65bc\u7b49\u5be6\u6839\uff0c$\\Delta = 0$\u3002",
+      "$k^2 - 4(1)(9) = 0$\u3002",
+      "$k^2 - 36 = 0 \\Rightarrow k^2 = 36$\u3002",
+      "$k = 6$ \u6216 $k = -6$\u3002"
+    ]
+  },
+  {
+    "level": 4,
+    "topic": "Optimization",
+    "question": "Find the maximum value of the function $f(x) = -2(x + 1)^2 + 7$.",
+    "question_zh": "\u6c42\u51fd\u6578 $f(x) = -2(x + 1)^2 + 7$ \u7684\u6975\u5927\u503c\u3002",
+    "answer": "7",
+    "steps": [
+      "The function is in vertex form $a(x-h)^2 + k$ with $a = -2 < 0$.",
+      "The maximum value occurs at the vertex $(h, k) = (-1, 7)$.",
+      "Maximum value is 7."
+    ],
+    "steps_zh": [
+      "\u8a72\u51fd\u6578\u70ba\u9802\u9ede\u5f0f $a(x-h)^2 + k$\uff0c\u5176\u4e2d $a = -2 < 0$\u3002",
+      "\u6975\u5927\u503c\u767c\u751f\u5728\u9802\u9ede $(h, k) = (-1, 7)$ \u8655\u3002",
+      "\u6975\u5927\u503c\u70ba 7\u3002"
+    ]
+  },
+  {
+    "level": 4,
+    "topic": "Forming Equations",
+    "question": "Form a quadratic equation with integer coefficients whose roots are $1/2$ and $-3$.",
+    "question_zh": "\u5efa\u7acb\u4e00\u500b\u4ee5 $1/2$ \u53ca $-3$ \u70ba\u6839\u4e14\u4fc2\u6578\u70ba\u6574\u6578\u7684\u4e8c\u6b21\u65b9\u7a0b\u3002",
+    "answer": "2x^2 + 5x - 3 = 0",
+    "steps": [
+      "Sum of roots $= 1/2 + (-3) = -2.5$.",
+      "Product of roots $= (1/2)(-3) = -1.5$.",
+      "Equation: $x^2 - (sum)x + (product) = 0$.",
+      "$x^2 + 2.5x - 1.5 = 0$.",
+      "Multiply by 2 for integer coefficients: $2x^2 + 5x - 3 = 0$."
+    ],
+    "steps_zh": [
+      "\u5169\u6839\u4e4b\u548c $= 1/2 + (-3) = -2.5$\u3002",
+      "\u5169\u6839\u4e4b\u7a4d $= (1/2)(-3) = -1.5$\u3002",
+      "\u65b9\u7a0b\uff1a$x^2 - (\u548c)x + (\u7a4d) = 0$\u3002",
+      "$x^2 + 2.5x - 1.5 = 0$\u3002",
+      "\u4e58\u4ee5 2 \u4ee5\u7372\u5f97\u6574\u6578\u4fc2\u6578\uff1a$2x^2 + 5x - 3 = 0$\u3002"
+    ]
+  },
+  {
+    "level": 4,
+    "topic": "Graph Transformations",
+    "question": "The graph of $y = x^2$ is shifted 2 units to the right and 3 units downwards. Find the new equation.",
+    "question_zh": "\u5c07 $y = x^2$ \u7684\u5716\u50cf\u5411\u53f3\u5e73\u79fb 2 \u55ae\u4f4d\uff0c\u518d\u5411\u4e0b\u5e73\u79fb 3 \u55ae\u4f4d\u3002\u6c42\u65b0\u65b9\u7a0b\u3002",
+    "answer": "y = (x - 2)^2 - 3",
+    "steps": [
+      "Shift right by 2: replace $x$ with $x - 2$. Result: $y = (x - 2)^2$.",
+      "Shift down by 3: subtract 3 from the expression. Result: $y = (x - 2)^2 - 3$."
+    ],
+    "steps_zh": [
+      "\u5411\u53f3\u5e73\u79fb 2 \u55ae\u4f4d\uff1a\u5c07 $x$ \u66ff\u63db\u70ba $x - 2$\u3002\u7d50\u679c\uff1a$y = (x - 2)^2$\u3002",
+      "\u5411\u4e0b\u5e73\u79fb 3 \u55ae\u4f4d\uff1a\u5f9e\u8868\u9054\u5f0f\u4e2d\u6e1b\u53bb 3\u3002\u7d50\u679c\uff1a$y = (x - 2)^2 - 3$\u3002"
+    ]
+  },
+  {
+    "level": 5,
+    "topic": "Nature of Roots (Range)",
+    "question": "Find the range of values of $k$ such that $x^2 + 6x + k = 0$ has two distinct real roots.",
+    "question_zh": "\u6c42 $k$ \u7684\u53d6\u503c\u7bc4\u570d\uff0c\u4f7f\u5f97 $x^2 + 6x + k = 0$ \u6709\u5169\u500b\u4e0d\u76f8\u7b49\u7684\u5be6\u6839\u3002",
+    "answer": "k < 9",
+    "steps": [
+      "For two distinct real roots, $\\Delta > 0$.",
+      "$6^2 - 4(1)(k) > 0$.",
+      "$36 - 4k > 0 \\Rightarrow 36 > 4k$.",
+      "$k < 9$."
+    ],
+    "steps_zh": [
+      "\u5c0d\u65bc\u5169\u500b\u4e0d\u76f8\u7b49\u7684\u5be6\u6839\uff0c$\\Delta > 0$\u3002",
+      "$6^2 - 4(1)(k) > 0$\u3002",
+      "$36 - 4k > 0 \\Rightarrow 36 > 4k$\u3002",
+      "$k < 9$\u3002"
+    ]
+  },
+  {
+    "level": 5,
+    "topic": "Line-Curve Intersection",
+    "question": "Find the coordinates of the points of intersection of the line $y = x + 1$ and the curve $y = x^2 - x - 2$.",
+    "question_zh": "\u6c42\u76f4\u7dda $y = x + 1$ \u8207\u66f2\u7dda $y = x^2 - x - 2$ \u7684\u4ea4\u9ede\u5750\u6a19\u3002",
+    "answer": "(-1, 0) and (3, 4)",
+    "answer_zh": "(-1, 0) \u53ca (3, 4)",
+    "steps": [
+      "Equate the expressions: $x^2 - x - 2 = x + 1$.",
+      "Rearrange to quadratic: $x^2 - 2x - 3 = 0$.",
+      "Factorize: $(x - 3)(x + 1) = 0 \\Rightarrow x = 3$ or $x = -1$.",
+      "Find corresponding $y$ values using line $y = x + 1$:",
+      "For $x=3$, $y=4$. Intersection $(3, 4)$.",
+      "For $x=-1$, $y=0$. Intersection $(-1, 0)$."
+    ],
+    "steps_zh": [
+      "\u8a2d\u8868\u9054\u5f0f\u76f8\u7b49\uff1a$x^2 - x - 2 = x + 1$\u3002",
+      "\u91cd\u6574\u70ba\u4e8c\u6b21\u65b9\u7a0b\uff1a$x^2 - 2x - 3 = 0$\u3002",
+      "\u56e0\u5f0f\u5206\u89e3\uff1a$(x - 3)(x + 1) = 0 \\Rightarrow x = 3$ \u6216 $x = -1$\u3002",
+      "\u5229\u7528\u76f4\u7dda $y = x + 1$ \u6c42\u76f8\u61c9\u7684 $y$ \u503c\uff1a",
+      "\u7576 $x=3$ \u6642\uff0c$y=4$\u3002\u4ea4\u9ede\u70ba $(3, 4)$\u3002",
+      "\u7576 $x=-1$ \u6642\uff0c$y=0$\u3002\u4ea4\u9ede\u70ba $(-1, 0)$\u3002"
+    ]
+  },
+  {
+    "level": 5,
+    "topic": "Coordinate Geometry of Quadratics",
+    "question": "Find the vertex and the axis of symmetry of $y = 2x^2 + 8x + 3$.",
+    "question_zh": "\u6c42 $y = 2x^2 + 8x + 3$ \u7684\u9802\u9ede\u53ca\u5c0d\u7a31\u8ef8\u3002",
+    "answer": "Vertex: (-2, -5), Axis: x = -2",
+    "answer_zh": "\u9802\u9ede\uff1a(-2, -5)\uff0c\u5c0d\u7a31\u8ef8\uff1ax = -2",
+    "steps": [
+      "x-coordinate of vertex $h = -b/(2a) = -8/(2 \times 2) = -2$.",
+      "y-coordinate $k = 2(-2)^2 + 8(-2) + 3 = 8 - 16 + 3 = -5$.",
+      "Vertex is $(-2, -5)$.",
+      "Axis of symmetry is $x = h$, so $x = -2$."
+    ],
+    "steps_zh": [
+      "\u9802\u9ede\u7684 x \u5750\u6a19 $h = -b/(2a) = -8/(2 \times 2) = -2$\u3002",
+      "y \u5750\u6a19 $k = 2(-2)^2 + 8(-2) + 3 = 8 - 16 + 3 = -5$\u3002",
+      "\u9802\u9ede\u70ba $(-2, -5)$\u3002",
+      "\u5c0d\u7a31\u8ef8\u70ba $x = h$\uff0c\u5373 $x = -2$\u3002"
+    ]
+  },
+  {
+    "level": 5,
+    "topic": "Vieta's Formulas",
+    "question": "If $\\alpha$ and $\\beta$ are the roots of $x^2 - 4x + 1 = 0$, evaluate $\\alpha^2 + \\beta^2$.",
+    "question_zh": "\u82e5 $\\alpha$ \u53ca $\\beta$ \u70ba $x^2 - 4x + 1 = 0$ \u7684\u6839\uff0c\u6c42 $\\alpha^2 + \\beta^2$ \u7684\u503c\u3002",
+    "answer": "14",
+    "steps": [
+      "From equation, $\\alpha + \\beta = 4$ and $\\alpha\\beta = 1$.",
+      "$\\alpha^2 + \\beta^2 = (\\alpha + \\beta)^2 - 2\\alpha\\beta$.",
+      "$\\alpha^2 + \\beta^2 = 4^2 - 2(1) = 16 - 2 = 14$."
+    ],
+    "steps_zh": [
+      "\u6839\u64da\u65b9\u7a0b\uff0c$\\alpha + \\beta = 4$ \u4e14 $\\alpha\\beta = 1$\u3002",
+      "$\\alpha^2 + \\beta^2 = (\\alpha + \\beta)^2 - 2\\alpha\\beta$\u3002",
+      "$\\alpha^2 + \\beta^2 = 4^2 - 2(1) = 16 - 2 = 14$\u3002"
+    ]
+  },
+  {
+    "level": 5,
+    "topic": "Root Transformations",
+    "question": "The roots of $x^2 - 2x - 2 = 0$ are $\\alpha$ and $\\beta$. Find a quadratic equation whose roots are $\\alpha+1$ and $\\beta+1$.",
+    "question_zh": "$x^2 - 2x - 2 = 0$ \u7684\u6839\u70ba $\\alpha$ \u53ca $\\beta$\u3002\u6c42\u4e00\u500b\u4ee5 $\\alpha+1$ \u53ca $\\beta+1$ \u70ba\u6839\u7684\u4e8c\u6b21\u65b9\u7a0b\u3002",
+    "answer": "x^2 - 4x + 1 = 0",
+    "steps": [
+      "Original: $\\alpha + \\beta = 2, \\alpha\\beta = -2$.",
+      "New sum $S = (\\alpha+1) + (\\beta+1) = (\\alpha + \\beta) + 2 = 2 + 2 = 4$.",
+      "New product $P = (\\alpha+1)(\\beta+1) = \\alpha\\beta + (\\alpha + \\beta) + 1 = -2 + 2 + 1 = 1$.",
+      "New equation: $x^2 - Sx + P = 0 \\Rightarrow x^2 - 4x + 1 = 0$."
+    ],
+    "steps_zh": [
+      "\u539f\u65b9\u7a0b\uff1a$\\alpha + \\beta = 2, \\alpha\\beta = -2$\u3002",
+      "\u65b0\u548c $S = (\\alpha+1) + (\\beta+1) = (\\alpha + \\beta) + 2 = 2 + 2 = 4$\u3002",
+      "\u65b0\u7a4d $P = (\\alpha+1)(\\beta+1) = \\alpha\\beta + (\\alpha + \\beta) + 1 = -2 + 2 + 1 = 1$\u3002",
+      "\u65b0\u65b9\u7a0b\uff1a$x^2 - Sx + P = 0 \\Rightarrow x^2 - 4x + 1 = 0$\u3002"
+    ]
+  },
+  {
+    "level": 5,
+    "topic": "Line-Curve Intersection Condition",
+    "question": "Find the range of $k$ such that the line $y = kx$ does not intersect the curve $y = x^2 + 1$.",
+    "question_zh": "\u6c42 $k$ \u7684\u53d6\u503c\u7bc4\u570d\uff0c\u4f7f\u5f97\u76f4\u7dda $y = kx$ \u8207\u66f2\u7dda $y = x^2 + 1$ \u4e0d\u76f8\u4ea4\u3002",
+    "answer": "-2 < k < 2",
+    "steps": [
+      "Equate: $x^2 + 1 = kx \\Rightarrow x^2 - kx + 1 = 0$.",
+      "For no intersection, $\\Delta < 0$.",
+      "$(-k)^2 - 4(1)(1) < 0 \\Rightarrow k^2 - 4 < 0$.",
+      "$k^2 < 4 \\Rightarrow -2 < k < 2$."
+    ],
+    "steps_zh": [
+      "\u8a2d\u76f8\u7b49\uff1a$x^2 + 1 = kx \\Rightarrow x^2 - kx + 1 = 0$\u3002",
+      "\u5c0d\u65bc\u4e0d\u76f8\u4ea4\u72c0\u6cc1\uff0c$\\Delta < 0$\u3002",
+      "$(-k)^2 - 4(1)(1) < 0 \\Rightarrow k^2 - 4 < 0$\u3002",
+      "$k^2 < 4 \\Rightarrow -2 < k < 2$\u3002"
+    ]
+  },
+  {
+    "level": 5,
+    "topic": "Line Tangent to Curve",
+    "question": "The line $y = 2x + k$ is tangent to the curve $y = x^2 - 4x$. Find the value of $k$.",
+    "question_zh": "\u76f4\u7dda $y = 2x + k$ \u662f\u66f2\u7dda $y = x^2 - 4x$ \u7684\u5207\u7dda\u3002\u6c42 $k$ \u7684\u503c\u3002",
+    "answer": "-9",
+    "steps": [
+      "Equate expressions: $x^2 - 4x = 2x + k \\Rightarrow x^2 - 6x - k = 0$.",
+      "Since it is tangent, $\\Delta = 0$.",
+      "$(-6)^2 - 4(1)(-k) = 0$.",
+      "$36 + 4k = 0 \\Rightarrow 4k = -36 \\Rightarrow k = -9$."
+    ],
+    "steps_zh": [
+      "\u8a2d\u8868\u9054\u5f0f\u76f8\u7b49\uff1a$x^2 - 4x = 2x + k \\Rightarrow x^2 - 6x - k = 0$\u3002",
+      "\u7531\u65bc\u662f\u76f8\u5207\uff0c$\\Delta = 0$\u3002",
+      "$(-6)^2 - 4(1)(-k) = 0$\u3002",
+      "$36 + 4k = 0 \\Rightarrow 4k = -36 \\Rightarrow k = -9$\u3002"
+    ]
+  },
+  {
+    "level": 5,
+    "topic": "Properties of Function",
+    "question": "Find the range of the function $f(x) = 2x^2 - 4x + 5$ for all real values of $x$.",
+    "question_zh": "\u6c42\u51fd\u6578 $f(x) = 2x^2 - 4x + 5$ \u5c0d\u65bc\u6240\u6709 $x$ \u5be6\u6578\u503c\u7684\u5c0d\u61c9\u503c\u7bc4\u570d\uff08\u503c\u57df\uff09\u3002",
+    "answer": "f(x) \\ge 3",
+    "steps": [
+      "Find the vertex: $x = -(-4)/(2 \times 2) = 1$.",
+      "Minimum value $= f(1) = 2(1)^2 - 4(1) + 5 = 2 - 4 + 5 = 3$.",
+      "Since $a = 2 > 0$, the parabola opens upwards.",
+      "Range: $f(x) \\ge 3$."
+    ],
+    "steps_zh": [
+      "\u6c42\u9802\u9ede\uff1a$x = -(-4)/(2 \times 2) = 1$\u3002",
+      "\u6975\u5c0f\u503c $= f(1) = 2(1)^2 - 4(1) + 5 = 2 - 4 + 5 = 3$\u3002",
+      "\u7531\u65bc $a = 2 > 0$\uff0c\u62cb\u7269\u7dda\u5411\u4e0a\u958b\u53e3\u3002",
+      "\u503c\u57df\uff1a$f(x) \\ge 3$\u3002"
+    ]
+  },
+  {
+    "level": 5,
+    "topic": "Graph Intercepts",
+    "question": "Find the x-intercepts and y-intercept of the curve $y = x^2 - 2x - 8$.",
+    "question_zh": "\u6c42\u66f2\u7dda $y = x^2 - 2x - 8$ \u7684 x \u8ef8\u622a\u8ddd\u53ca y \u8ef8\u622a\u8ddd\u3002",
+    "answer": "x: (4,0), (-2,0); y: (0,-8)",
+    "answer_zh": "x: (4,0), (-2,0)\uff1by: (0,-8)",
+    "steps": [
+      "y-intercept: set $x=0$, $y = -8 \\Rightarrow (0, -8)$.",
+      "x-intercepts: set $y=0$, $x^2 - 2x - 8 = 0$.",
+      "Factorize: $(x - 4)(x + 2) = 0 \\Rightarrow x = 4$ or $x = -2$.",
+      "Intercepts are $(4, 0)$ and $(-2, 0)$."
+    ],
+    "steps_zh": [
+      "y \u8ef8\u622a\u8ddd\uff1a\u8a2d $x=0$\uff0c$y = -8 \\Rightarrow (0, -8)$\u3002",
+      "x \u8ef8\u622a\u8ddd\uff1a\u8a2d $y=0$\uff0c$x^2 - 2x - 8 = 0$\u3002",
+      "\u56e0\u5f0f\u5206\u89e3\uff1a$(x - 4)(x + 2) = 0 \\Rightarrow x = 4$ \u6216 $x = -2$\u3002",
+      "\u622a\u8ddd\u70ba $(4, 0)$ \u53ca $(-2, 0)$\u3002"
+    ]
+  },
+  {
+    "level": 5,
+    "topic": "Applied Quadratics",
+    "question": "The length of a rectangle is 3 cm more than its width. If the area is 40 cm$^2$, find its dimensions.",
+    "question_zh": "\u9577\u65b9\u5f62\u7684\u9577\u6bd4\u5bec\u591a 3 cm\u3002\u82e5\u9762\u7a4d\u70ba 40 cm$^2$\uff0c\u6c42\u5176\u9577\u5bec\u3002",
+    "answer": "Length = 8 cm, Width = 5 cm",
+    "answer_zh": "\u9577 = 8 cm\uff0c\u5bec = 5 cm",
+    "steps": [
+      "Let width be $w$, then length is $w + 3$.",
+      "Area $= w(w + 3) = 40$.",
+      "$w^2 + 3w - 40 = 0$.",
+      "Factorize: $(w + 8)(w - 5) = 0 \\Rightarrow w = 5$ ($w > 0$).",
+      "Width $= 5$ cm, Length $= 5 + 3 = 8$ cm."
+    ],
+    "steps_zh": [
+      "\u8a2d\u5bec\u70ba $w$\uff0c\u5247\u9577\u70ba $w + 3$\u3002",
+      "\u9762\u7a4d $= w(w + 3) = 40$\u3002",
+      "$w^2 + 3w - 40 = 0$\u3002",
+      "\u56e0\u5f0f\u5206\u89e3\uff1a$(w + 8)(w - 5) = 0 \\Rightarrow w = 5$ (\u53d6\u6b63\u503c)\u3002",
+      "\u5bec\u70ba 5 cm\uff0c\u9577\u70ba $5 + 3 = 8$ cm\u3002"
+    ]
+  },
+  {
+    "level": 7,
+    "topic": "Elite Vieta's Manipulation",
+    "question": "If $\\alpha$ and $\\beta$ are the roots of $2x^2 - 5x + 1 = 0$, evaluate $\\frac{1}{\\alpha^2} + \\frac{1}{\\beta^2}$.",
+    "question_zh": "\u82e5 $\\alpha$ \u53ca $\\beta$ \u70ba $2x^2 - 5x + 1 = 0$ \u7684\u6839\uff0c\u6c42 $\\frac{1}{\\alpha^2} + \\frac{1}{\\beta^2}$ \u7684\u503c\u3002",
+    "answer": "21",
+    "steps": [
+      "$\\alpha + \\beta = 2.5$, $\\alpha\\beta = 0.5$.",
+      "$\\frac{1}{\\alpha^2} + \\frac{1}{\\beta^2} = \\frac{\\alpha^2 + \\beta^2}{(\\alpha\\beta)^2}$.",
+      "$\\alpha^2 + \\beta^2 = (2.5)^2 - 2(0.5) = 6.25 - 1 = 5.25$.",
+      "Result $= \\frac{5.25}{0.5^2} = \\frac{5.25}{0.25} = 21$."
+    ],
+    "steps_zh": [
+      "$\\alpha + \\beta = 2.5$\uff0c$\\alpha\\beta = 0.5$\u3002",
+      "$\\frac{1}{\\alpha^2} + \\frac{1}{\\beta^2} = \\frac{\\alpha^2 + \\beta^2}{(\\alpha\\beta)^2}$\u3002",
+      "$\\alpha^2 + \\beta^2 = (2.5)^2 - 2(0.5) = 6.25 - 1 = 5.25$\u3002",
+      "\u7d50\u679c $= \\frac{5.25}{0.5^2} = \\frac{5.25}{0.25} = 21$\u3002"
+    ]
+  },
+  {
+    "level": 7,
+    "topic": "Substitute Back Trick",
+    "question": "Given that $\\alpha$ is a root of $x^2 - 4x - 7 = 0$, find the value of $\\alpha^2 - 4\\alpha + 10$.",
+    "question_zh": "\u5df2\u77e5 $\\alpha$ \u70ba $x^2 - 4x - 7 = 0$ \u7684\u6839\uff0c\u6c42 $\\alpha^2 - 4\\alpha + 10$ \u7684\u503c\u3002",
+    "answer": "17",
+    "steps": [
+      "Since $\\alpha$ is a root, it satisfies the equation: $\\alpha^2 - 4\\alpha - 7 = 0$.",
+      "Rearranging gives $\\alpha^2 - 4\\alpha = 7$.",
+      "Substitute this into the expression: $7 + 10 = 17$."
+    ],
+    "steps_zh": [
+      "\u7531\u65bc $\\alpha$ \u662f\u6839\uff0c\u5b83\u6eff\u8db3\u65b9\u7a0b\uff1a$\\alpha^2 - 4\\alpha - 7 = 0$\u3002",
+      "\u91cd\u6574\u5f97 $\\alpha^2 - 4\\alpha = 7$\u3002",
+      "\u5c07\u6b64\u4ee3\u5165\u8868\u9054\u5f0f\u4e2d\uff1a$7 + 10 = 17$\u3002"
+    ]
+  },
+  {
+    "level": 7,
+    "topic": "Advanced Intersection Condition",
+    "question": "The line $y = x + k$ intersects the parabola $y = x^2 - 3x + 5$ at two distinct points. Find the range of $k$.",
+    "question_zh": "\u76f4\u7dda $y = x + k$ \u8207\u62cb\u7269\u7dda $y = x^2 - 3x + 5$ \u76f8\u4ea4\u65bc\u5169\u500b\u4e0d\u76f8\u7b49\u7684\u9ede\u3002\u6c42 $k$ \u7684\u7bc4\u570d\u3002",
+    "answer": "k > 1",
+    "steps": [
+      "Equate: $x^2 - 3x + 5 = x + k \\Rightarrow x^2 - 4x + (5 - k) = 0$.",
+      "For two distinct points, $\\Delta > 0$.",
+      "$(-4)^2 - 4(1)(5 - k) > 0$.",
+      "$16 - 20 + 4k > 0$.",
+      "$4k - 4 > 0 \\Rightarrow 4k > 4 \\Rightarrow k > 1$."
+    ],
+    "steps_zh": [
+      "\u8a2d\u76f8\u7b49\uff1a$x^2 - 3x + 5 = x + k \\Rightarrow x^2 - 4x + (5 - k) = 0$\u3002",
+      "\u5c0d\u65bc\u5169\u500b\u4e0d\u76f8\u7b49\u7684\u9ede\uff0c$\\Delta > 0$\u3002",
+      "$(-4)^2 - 4(1)(5 - k) > 0$\u3002",
+      "$16 - 20 + 4k > 0$\u3002",
+      "$4k - 4 > 0 \\Rightarrow 4k > 4 \\Rightarrow k > 1$\u3002"
+    ]
+  },
+  {
+    "level": 7,
+    "topic": "Elite Root Transformations",
+    "question": "The roots of $x^2 - 4x + 2 = 0$ are $\\alpha$ and $\\beta$. Form a quadratic equation whose roots are $\\alpha^2$ and $\\beta^2$.",
+    "question_zh": "$x^2 - 4x + 2 = 0$ \u7684\u6839\u70ba $\\alpha$ \u53ca $\\beta$\u3002\u6c42\u4e00\u500b\u4ee5 $\\alpha^2$ \u53ca $\\beta^2$ \u70ba\u6839\u7684\u4e8c\u6b21\u65b9\u7a0b\u3002",
+    "answer": "x^2 - 12x + 4 = 0",
+    "steps": [
+      "$\\alpha + \\beta = 4, \\alpha\\beta = 2$.",
+      "New sum $S = \\alpha^2 + \\beta^2 = (\\alpha + \\beta)^2 - 2\\alpha\\beta = 4^2 - 2(2) = 12$.",
+      "New product $P = \\alpha^2\\beta^2 = (\\alpha\\beta)^2 = 2^2 = 4$.",
+      "New equation: $x^2 - Sx + P = 0 \\Rightarrow x^2 - 12x + 4 = 0$."
+    ],
+    "steps_zh": [
+      "$\\alpha + \\beta = 4, \\alpha\\beta = 2$\u3002",
+      "\u65b0\u548c $S = \\alpha^2 + \\beta^2 = (\\alpha + \\beta)^2 - 2\\alpha\\beta = 4^2 - 2(2) = 12$\u3002",
+      "\u65b0\u7a4d $P = \\alpha^2\\beta^2 = (\\alpha\\beta)^2 = 2^2 = 4$\u3002",
+      "\u65b0\u65b9\u7a0b\uff1a$x^2 - Sx + P = 0 \\Rightarrow x^2 - 12x + 4 = 0$\u3002"
+    ]
+  },
+  {
+    "level": 7,
+    "topic": "Power Reduction Trick",
+    "question": "If $\\alpha$ is a root of $x^2 - 3x + 1 = 0$, evaluate $\\alpha^3 - 3\\alpha^2 + \\alpha + 5$.",
+    "question_zh": "\u82e5 $\\alpha$ \u70ba $x^2 - 3x + 1 = 0$ \u7684\u6839\uff0c\u6c42 $\\alpha^3 - 3\\alpha^2 + \\alpha + 5$ \u7684\u503c\u3002",
+    "answer": "5",
+    "steps": [
+      "Factor the expression by grouping: $\\alpha^3 - 3\\alpha^2 + \\alpha = \\alpha(\\alpha^2 - 3\\alpha + 1)$.",
+      "Since $\\alpha$ is a root, $\\alpha^2 - 3\\alpha + 1 = 0$.",
+      "Thus, $\\alpha(\\alpha^2 - 3\\alpha + 1) = \\alpha(0) = 0$.",
+      "The expression simplifies to $0 + 5 = 5$."
+    ],
+    "steps_zh": [
+      "\u5c07\u8868\u9054\u5f0f\u5206\u7d44\u56e0\u5f0f\u5206\u89e3\uff1a$\\alpha^3 - 3\\alpha^2 + \\alpha = \\alpha(\\alpha^2 - 3\\alpha + 1)$\u3002",
+      "\u7531\u65bc $\\alpha$ \u662f\u6839\uff0c$\\alpha^2 - 3\\alpha + 1 = 0$\u3002",
+      "\u56e0\u6b64\uff0c$\\alpha(\\alpha^2 - 3\\alpha + 1) = \\alpha(0) = 0$\u3002",
+      "\u8a72\u8868\u9054\u5f0f\u7c21\u5316\u70ba $0 + 5 = 5$\u3002"
+    ]
+  },
+  {
+    "level": 7,
+    "topic": "Secondary Inequality",
+    "question": "Find the range of $m$ such that the line $y = mx - 1$ is tangent to the curve $y = x^2$.",
+    "question_zh": "\u6c42 $m$ \u7684\u53d6\u503c\u7bc4\u570d\uff0c\u4f7f\u5f97\u76f4\u7dda $y = mx - 1$ \u6b63\u597d\u8207\u66f2\u7dda $y = x^2$ \u76f8\u5207\u3002",
+    "answer": "m = 2 or m = -2",
+    "answer_zh": "m = 2 \u6216 m = -2",
+    "steps": [
+      "Equate: $x^2 = mx - 1 \\Rightarrow x^2 - mx + 1 = 0$.",
+      "For tangency, $\\Delta = 0$.",
+      "$(-m)^2 - 4(1)(1) = 0 \\Rightarrow m^2 = 4$.",
+      "$m = \\pm 2$."
+    ],
+    "steps_zh": [
+      "\u8a2d\u76f8\u7b49\uff1a$x^2 = mx - 1 \\Rightarrow x^2 - mx + 1 = 0$\u3002",
+      "\u5c0d\u65bc\u76f8\u5207\u72c0\u6cc1\uff0c$\\Delta = 0$\u3002",
+      "$(-m)^2 - 4(1)(1) = 0 \\Rightarrow m^2 = 4$\u3002",
+      "$m = \\pm 2$\u3002"
+    ]
+  },
+  {
+    "level": 7,
+    "topic": "Transformation with Unknowns",
+    "question": "The graph of $y = x^2 + ax + b$ has its vertex at $(1, 2)$. Find $a$ and $b$.",
+    "question_zh": "\u5df2\u77e5 $y = x^2 + ax + b$ \u7684\u9802\u9ede\u5728 $(1, 2)$\u3002\u6c42 $a$ \u53ca $b$ \u7684\u503c\u3002",
+    "answer": "a = -2, b = 3",
+    "steps": [
+      "Vertex form: $y = (x - 1)^2 + 2$.",
+      "Expand: $y = x^2 - 2x + 1 + 2 = x^2 - 2x + 3$.",
+      "Compare with $y = x^2 + ax + b$: $a = -2, b = 3$."
+    ],
+    "steps_zh": [
+      "\u9802\u9ede\u5f0f\uff1a$y = (x - 1)^2 + 2$\u3002",
+      "\u5c55\u958b\uff1a$y = x^2 - 2x + 1 + 2 = x^2 - 2x + 3$\u3002",
+      "\u8207 $y = x^2 + ax + b$ \u6bd4\u8f03\uff1a$a = -2, b = 3$\u3002"
+    ]
+  },
+  {
+    "level": 7,
+    "topic": "Reciprocal Roots",
+    "question": "The roots of $ax^2 + bx + c = 0$ are $\\alpha$ and $\\beta$. Show that the equation whose roots are $1/\\alpha$ and $1/\\beta$ is $cx^2 + bx + a = 0$.",
+    "question_zh": "\u5df2\u77e5 $ax^2 + bx + c = 0$ \u7684\u6839\u70ba $\\alpha$ \u53ca $\\beta$\u3002\u8b49\u660e\u4ee5 $1/\\alpha$ \u53ca $1/\\beta$ \u70ba\u6839\u7684\u65b9\u7a0b\u662f $cx^2 + bx + a = 0$\u3002",
+    "answer": "Proved (cx^2 + bx + a = 0)",
+    "answer_zh": "\u5df2\u8b49\u660e (cx^2 + bx + a = 0)",
+    "steps": [
+      "New sum $S = 1/\\alpha + 1/\\beta = (\\alpha + \\beta)/(\\alpha\\beta) = (-b/a)/(c/a) = -b/c$.",
+      "New product $P = (1/\\alpha)(1/\\beta) = 1/(\\alpha\\beta) = 1/(c/a) = a/c$.",
+      "Equation: $x^2 - (-b/c)x + (a/c) = 0 \\Rightarrow x^2 + (b/c)x + (a/c) = 0$.",
+      "Multiply by $c$: $cx^2 + bx + a = 0$."
+    ],
+    "steps_zh": [
+      "\u65b0\u548c $S = 1/\\alpha + 1/\\beta = (\\alpha + \\beta)/(\\alpha\\beta) = (-b/a)/(c/a) = -b/c$\u3002",
+      "\u65b0\u7a4d $P = (1/\\alpha)(1/\\beta) = 1/(\\alpha\\beta) = 1/(c/a) = a/c$\u3002",
+      "\u65b9\u7a0b\uff1a$x^2 - (-b/c)x + (a/c) = 0 \\Rightarrow x^2 + (b/c)x + (a/c) = 0$\u3002",
+      "\u4e58\u4ee5 $c$\uff1a$cx^2 + bx + a = 0$\u3002"
+    ]
+  },
+  {
+    "level": 7,
+    "topic": "Applied Optimization",
+    "question": "A gardener has 40 m of fencing to enclose a rectangular garden. What is the maximum area possible?",
+    "question_zh": "\u4e00\u540d\u5712\u4e01\u6709 40 m \u7684\u570d\u6b04\u4f86\u570d\u5408\u4e00\u500b\u9577\u65b9\u5f62\u82b1\u5712\u3002\u6240\u80fd\u570d\u5408\u7684\u6700\u5927\u9762\u7a4d\u662f\u591a\u5c11\uff1f",
+    "answer": "100 m^2",
+    "steps": [
+      "Let side lengths be $x$ and $y$. Perimeter $2(x + y) = 40 \\Rightarrow x + y = 20 \\Rightarrow y = 20 - x$.",
+      "Area $A = x(20 - x) = 20x - x^2$.",
+      "This is a downward parabola with vertex at $x = -20/(2 \\times -1) = 10$.",
+      "Maximum Area $= 20(10) - 10^2 = 200 - 100 = 100$ m$^2$."
+    ],
+    "steps_zh": [
+      "\u8a2d\u908a\u9577\u70ba $x$ \u53ca $y$\u3002\u5468\u754c $2(x + y) = 40 \\Rightarrow x + y = 20 \\Rightarrow y = 20 - x$\u3002",
+      "\u9762\u7a4d $A = x(20 - x) = 20x - x^2$\u3002",
+      "\u9019\u662f\u4e00\u500b\u958b\u53e3\u5411\u4e0b\u7684\u62cb\u7269\u7dda\uff0c\u9802\u9ede\u5728 $x = -20/(2 \\times -1) = 10$ \u8655\u3002",
+      "\u6700\u5927\u9762\u7a4d $= 20(10) - 10^2 = 200 - 100 = 100$ m$^2$\u3002"
+    ]
+  },
+  {
+    "level": 7,
+    "topic": "Advanced Discriminant",
+    "question": "For what values of $k$ does the equation $x^2 + (k-2)x + (k+1) = 0$ have real roots?",
+    "question_zh": "\u7576 $k$ \u53d6\u4f55\u503c\u6642\uff0c\u65b9\u7a0b $x^2 + (k-2)x + (k+1) = 0$ \u6709\u5be6\u6839\uff1f",
+    "answer": "k \\le 0 or k \\ge 8",
+    "steps": [
+      "For real roots, $\\Delta \\ge 0$.",
+      "$(k-2)^2 - 4(1)(k+1) \\ge 0$.",
+      "$k^2 - 4k + 4 - 4k - 4 \\ge 0$.",
+      "$k^2 - 8k \\ge 0 \\Rightarrow k(k - 8) \\ge 0$.",
+      "$k \\le 0$ or $k \\ge 8$."
+    ],
+    "steps_zh": [
+      "\u5c0d\u65bc\u5be6\u6839\uff0c$\\Delta \\ge 0$\u3002",
+      "$(k-2)^2 - 4(1)(k+1) \\ge 0$\u3002",
+      "$k^2 - 4k + 4 - 4k - 4 \\ge 0$\u3002",
+      "$k^2 - 8k \\ge 0 \\Rightarrow k(k - 8) \\ge 0$\u3002",
+      "$k \\le 0$ \u6216 $k \\ge 8$\u3002"
+    ]
+  }
+]

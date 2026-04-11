@@ -13,6 +13,7 @@ import ScaffoldToolbar from '../components/reading/ScaffoldToolbar';
 import VocabSpotlight from '../components/reading/VocabSpotlight';
 import ParagraphInsight from '../components/reading/ParagraphInsight';
 import ArgumentMap from '../components/reading/ArgumentMap';
+import MockCountdownTimer from '../components/utils/MockCountdownTimer';
 import { useLanguage } from '../context/LanguageContext';
 import { motion, Reorder } from 'framer-motion';
 
@@ -205,6 +206,8 @@ const LabPage = () => {
     const [qBatch, setQBatch] = useState(0); // 0 or 1 for Easy level question sets
     const isFactoryQuest = location.state?.isFactoryQuest || false;
     const isWeeklyQuest = location.state?.isWeeklyQuest || topic === 'reading_weekly';
+    const isMock = location.state?.isMock || false;
+    const duration = location.state?.duration || 0;
 
     // Dictionary State
     const [popover, setPopover] = useState(null);
@@ -302,9 +305,19 @@ const LabPage = () => {
             setGenError(null);
             setLoading(true);
 
-            // Determine if this is a Writing 2.0 request
-            // We use 'writing' topic OR detect writing modes passed via state/URL OR check for writing_* skill IDs
-            const isWritingLab = topic === 'writing' || topic.startsWith('writing_') || ['SENTENCE_BUILDER', 'PARAGRAPH_PLANNER', 'MINI_ESSAY'].includes(focus?.[0]);
+            // Determine if this is a Writing/Listening 2.0 request
+            const isLegacyWriting = topic === 'writing' || topic.startsWith('writing_') || ['SENTENCE_BUILDER', 'PARAGRAPH_PLANNER', 'MINI_ESSAY'].includes(focus?.[0]);
+            const isLegacyListening = topic.startsWith('listening_');
+            const isWritingLab = isLegacyWriting; // Defined here to prevent ReferenceError below
+
+            // [ARCHIVED] Blocking Legacy Lab Activities
+            if (isLegacyWriting || isLegacyListening) {
+                console.log(`[LabPage] Intercepted legacy ${isLegacyWriting ? 'writing' : 'listening'} request. Redirecting to Quests Lab.`);
+                setLoading(false);
+                setGenError(`This ${isLegacyWriting ? 'writing' : 'listening'} activity has moved to the Quests Lab. Please access the latest Quests via the 'Quests Lab' tab in the Roadmap.`);
+                return;
+            }
+
 
             // Retry Logic for Frontend
             let attempts = 0;
@@ -344,11 +357,17 @@ const LabPage = () => {
                         }
                     }
 
+                    // AbortController: Kill fetch after 90 seconds to prevent infinite spinner
+                    const controller = new AbortController();
+                    const timeoutId = setTimeout(() => controller.abort(), 90000);
+
                     const response = await fetch(endpoint, {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify(payload)
+                        body: JSON.stringify(payload),
+                        signal: controller.signal
                     });
+                    clearTimeout(timeoutId);
 
                     if (!response.ok) {
                         const errorData = await response.json();
@@ -564,6 +583,12 @@ const LabPage = () => {
     };
 
     const handleClose = () => {
+        if (isMock && step !== 'SUCCESS') {
+            if (!window.confirm("An exam is in progress. Leaving now will submit your current progress. Are you sure?")) return;
+            handleSubmitMission();
+            return;
+        }
+
         if (step === 'SUCCESS') {
             const params = new URLSearchParams();
             params.set('quest_completed', 'true');
@@ -844,7 +869,7 @@ const LabPage = () => {
                     <span className="font-black text-indigo-600 uppercase tracking-widest text-sm">
                         Writing Lab
                     </span>
-                    <div className="w-10" />
+                    <div className="w-10"></div>
                 </header>
                 <div className="flex-1 overflow-y-auto">
                     <WritingWorkspace
@@ -925,12 +950,26 @@ const LabPage = () => {
                             ? "We are currently manufacturing fresh quest content for this micro-skill. Please check back later!"
                             : genError}
                     </p>
-                    <button
-                        onClick={() => navigate('/dashboard')}
-                        className="px-6 py-3 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-xl font-bold hover:scale-105 transition-transform"
-                    >
-                        {t('lab.return_dashboard')}
-                    </button>
+                    {genError.includes("moved to the Quests Lab") ? (
+                        <button
+                            onClick={() => navigate('/dashboard', { 
+                                state: { 
+                                    openRoadmap: 'ENGLISH', 
+                                    roadmapFilter: genError.includes('listening') ? 'LISTENING' : 'WRITING' 
+                                } 
+                            })}
+                            className="px-6 py-3 bg-indigo-600 text-white rounded-xl font-bold hover:scale-105 transition-transform"
+                        >
+                            Go to Quests Lab
+                        </button>
+                    ) : (
+                        <button
+                            onClick={() => navigate('/dashboard')}
+                            className="px-6 py-3 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-xl font-bold hover:scale-105 transition-transform"
+                        >
+                            {t('lab.return_dashboard')}
+                        </button>
+                    )}
                 </div>
             </div>
         );
@@ -1001,7 +1040,7 @@ const LabPage = () => {
                 </div>
 
                 <div className="flex items-center gap-3">
-                    {user?.email === 'fungtam@gmail.com' && (
+                    {user?.email === 'fungtam@gmail.com' && !isMock && (
                         <div className="flex items-center gap-1 bg-amber-50 dark:bg-amber-900/20 p-1 rounded-lg border border-amber-200">
                             <span className="text-[10px] font-black text-amber-600 px-1">DEBUG CHEAT:</span>
                             {['3', '4', '5', '5*', '5**'].map(lvl => (
@@ -1016,18 +1055,35 @@ const LabPage = () => {
                             ))}
                         </div>
                     )}
-                    {t('lab.live_training')}
+                    
+                    {isMock && duration > 0 && step === 'PRACTICE' && (
+                        <MockCountdownTimer 
+                            initialSeconds={duration} 
+                            onTimeUp={() => {
+                                alert("Time is up! Submitting your mission...");
+                                handleSubmitMission();
+                            }} 
+                        />
+                    )}
+
+                    {isMock ? (
+                        <div className="px-3 py-1 bg-rose-600 text-white rounded-lg text-[10px] font-black uppercase tracking-widest animate-pulse shadow-lg shadow-rose-600/20">
+                            Mock Active
+                        </div>
+                    ) : (
+                        <span className="text-[10px] font-bold text-gray-400 dark:text-gray-500 uppercase tracking-widest hidden md:inline">
+                            {t('lab.live_training')}
+                        </span>
+                    )}
+
+                    <button
+                        onClick={handleClose}
+                        className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-all group"
+                        title={t('lab.exit_lab')}
+                    >
+                        <X size={20} className="text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" />
+                    </button>
                 </div>
-
-
-
-                <button
-                    onClick={handleClose}
-                    className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-all group"
-                    title={t('lab.exit_lab')}
-                >
-                    <X size={20} className="text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" />
-                </button>
             </header>
 
             {/* Immersive Scroll Content */}
@@ -1557,7 +1613,7 @@ const LabPage = () => {
                             {/* Mission Header */}
                             <div className="text-center py-10 md:py-20">
                                 <div className="relative inline-block mb-16">
-                                    <div className="absolute inset-0 bg-yellow-400 blur-[80px] opacity-40 animate-pulse" />
+                                    <div className="absolute inset-0 bg-yellow-400 blur-[80px] opacity-40 animate-pulse"></div>
                                     <div className="relative p-16 bg-gradient-to-br from-yellow-400 via-orange-500 to-red-500 text-white rounded-[5rem] shadow-[0_40px_100px_rgba(234,179,8,0.3)]">
                                         <Award size={100} strokeWidth={2.5} />
                                     </div>
@@ -1841,7 +1897,7 @@ function CategorizationTask({ task, value, onChange, disabled }) {
                         className="flex flex-col h-full min-h-[160px] bg-indigo-50/30 dark:bg-indigo-900/10 border-2 border-indigo-100 dark:border-indigo-500/20 rounded-2xl p-4 transition-all hover:border-indigo-300 dark:hover:border-indigo-500/40"
                     >
                         <div className="flex items-center gap-2 mb-3 pb-2 border-b border-indigo-100 dark:border-indigo-500/20">
-                            <div className="w-2 h-2 rounded-full bg-indigo-500" />
+                            <div className="w-2 h-2 rounded-full bg-indigo-500"></div>
                             <span className="font-bold text-indigo-900 dark:text-indigo-300">{bucketName}</span>
                             <span className="ml-auto text-xs bg-white dark:bg-gray-800 px-2 py-0.5 rounded-full text-indigo-400 font-mono shadow-sm">
                                 {(currentBuckets[bucketName] || []).length}

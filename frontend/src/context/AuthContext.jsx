@@ -13,15 +13,54 @@ const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
+    const [profile, setProfile] = useState(null);
     const [loading, setLoading] = useState(true);
+    const [isProfileLoading, setIsProfileLoading] = useState(false);
+
+    const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+
+    const fetchProfile = async (uid) => {
+        if (!uid || uid === 'guest') {
+            setProfile(null);
+            return;
+        }
+        setIsProfileLoading(true);
+        try {
+            const res = await fetch(`${API_URL}/api/user/profile/${uid}`);
+            if (res.ok) {
+                const data = await res.json();
+                setProfile(data);
+            }
+        } catch (error) {
+            console.error("[AuthContext] Failed to fetch profile:", error);
+        } finally {
+            setIsProfileLoading(false);
+        }
+    };
+
+    const refreshProfile = () => {
+        if (user?.uid) fetchProfile(user.uid);
+    };
 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
             setUser(currentUser);
-            setLoading(false);
+            if (currentUser) {
+                fetchProfile(currentUser.uid);
+            } else {
+                setProfile(null);
+                setLoading(false);
+            }
         });
         return unsubscribe;
     }, []);
+
+    // Also update loading state once profile is handled
+    useEffect(() => {
+        if (!isProfileLoading) {
+            setLoading(false);
+        }
+    }, [isProfileLoading]);
 
     const loginWithGoogle = () => {
         console.log("Initiating Google Sign-In Popup inside AuthContext...");
@@ -52,14 +91,16 @@ export const AuthProvider = ({ children }) => {
     return (
         <AuthContext.Provider value={{
             user,
-            loading,
+            profile,
+            refreshProfile,
+            loading: loading || isProfileLoading,
             loginWithGoogle,
             signupWithEmail,
             loginWithEmail,
             verifyEmail,
             logout
         }}>
-            {!loading && children}
+            {children}
         </AuthContext.Provider>
     );
 };

@@ -1,0 +1,22 @@
+<svg viewBox="0 0 500 250" xmlns="http://www.w3.org/2000/svg">
+  <rect width="500" height="250" fill="#FFFFFF" />
+  
+  <!-- 1D: Length -->
+  <line x1="50" y1="130" x2="130" y2="130" stroke="#1E293B" stroke-width="4" stroke-linecap="round" />
+  <text x="90" y="80" font-family="sans-serif" font-size="18" text-anchor="middle" fill="#3B82F6" font-weight="bold">Scale = 1 : k</text>
+  <text x="90" y="170" font-family="sans-serif" font-size="20" text-anchor="middle" fill="#1E293B">Length</text>
+  
+  <!-- 2D: Area -->
+  <rect x="210" y="100" width="60" height="60" stroke="#1E293B" stroke-width="2" fill="#3B82F6" fill-opacity="0.1" />
+  <text x="240" y="80" font-family="sans-serif" font-size="18" text-anchor="middle" fill="#3B82F6" font-weight="bold">Scale = 1 : k²</text>
+  <text x="240" y="185" font-family="sans-serif" font-size="20" text-anchor="middle" fill="#1E293B">Area</text>
+  
+  <!-- 3D: Volume -->
+  <g transform="translate(380, 100)">
+    <path d="M 25 10 L 50 0 L 75 10 L 50 20 Z" fill="#F59E0B" fill-opacity="0.1" stroke="#1E293B" stroke-width="2" /> <!-- Top -->
+    <path d="M 25 10 L 25 40 L 50 50 L 50 20 Z" fill="#F59E0B" fill-opacity="0.1" stroke="#1E293B" stroke-width="2" /> <!-- Left -->
+    <path d="M 75 10 L 75 40 L 50 50 L 50 20 Z" fill="#F59E0B" fill-opacity="0.1" stroke="#1E293B" stroke-width="2" /> <!-- Right -->
+  </g>
+  <text x="430" y="80" font-family="sans-serif" font-size="18" text-anchor="middle" fill="#3B82F6" font-weight="bold">Scale = 1 : k³</text>
+  <text x="430" y="185" font-family="sans-serif" font-size="20" text-anchor="middle" fill="#1E293B">Volume</text>
+</svg>

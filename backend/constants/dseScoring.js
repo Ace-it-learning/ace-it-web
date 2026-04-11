@@ -74,7 +74,76 @@ const DSE_SCORING = {
         },
         weekly_quest: { useDifficultyCap: true }, // Weekly Quests follow Level + 1
     },
+
+    // --- RENORMALIZED ENGLISH WEIGHTS (Excluding SBA) ---
+    // Paper 1 (Reading): 20/85 = 23.5%
+    // Paper 2 (Writing): 25/85 = 29.4%
+    // Paper 3 (Listening): 30/85 = 35.3%
+    // Paper 4 (Speaking): 10/85 = 11.8%
+    ENGLISH_PAPER_WEIGHTS: {
+        reading: 0.235,
+        writing: 0.294,
+        listening: 0.353,
+        speaking: 0.118
+    },
+
+    // --- MATH STRAND WEIGHTS (Compulsory Part) ---
+    // Number & Algebra: 45%
+    // Geometry & Trigonometry: 30%
+    // Data Handling: 25%
+    MATH_STRAND_WEIGHTS: {
+        algebra: 0.45,
+        geometry: 0.30,
+        data: 0.25
+    }
 };
+
+/**
+ * Calculates a weighted DSE level based on paper averages.
+ * @param {Object} paperLevels - { reading: val, writing: val, listening: val, speaking: val }
+ * @returns {number} Weighted average level (1-7)
+ */
+function calculateWeightedEnglishGrade(paperLevels) {
+    const weights = DSE_SCORING.ENGLISH_PAPER_WEIGHTS;
+    let total = 0;
+    
+    // Fallback to Level 1 if paper hasn't been practiced
+    const scores = {
+        reading: paperLevels.reading || 1,
+        writing: paperLevels.writing || 1,
+        listening: paperLevels.listening || 1,
+        speaking: paperLevels.speaking || 1
+    };
+
+    total += (scores.reading * weights.reading);
+    total += (scores.writing * weights.writing);
+    total += (scores.listening * weights.listening);
+    total += (scores.speaking * weights.speaking);
+
+    return Math.round(total);
+}
+
+/**
+ * Calculates a weighted DSE level based on Math strands.
+ * @param {Object} strandLevels - { algebra: val, geometry: val, data: val }
+ * @returns {number} Weighted average level (1-7)
+ */
+function calculateWeightedMathGrade(strandLevels) {
+    const weights = DSE_SCORING.MATH_STRAND_WEIGHTS;
+    let total = 0;
+    
+    const scores = {
+        algebra: strandLevels.algebra || 1,
+        geometry: strandLevels.geometry || 1,
+        data: strandLevels.data || 1
+    };
+
+    total += (scores.algebra * weights.algebra);
+    total += (scores.geometry * weights.geometry);
+    total += (scores.data * weights.data);
+
+    return Math.round(total);
+}
 
 /**
  * Converts a cumulative accuracy (0–1) to a DSE level (1–7).
@@ -111,4 +180,11 @@ function laplaceSmooth(correct, total) {
     return (correct + 1) / (total + 2);
 }
 
-module.exports = { DSE_SCORING, accuracyToLevel, levelToLabel, laplaceSmooth };
+module.exports = { 
+    DSE_SCORING, 
+    accuracyToLevel, 
+    levelToLabel, 
+    laplaceSmooth, 
+    calculateWeightedEnglishGrade,
+    calculateWeightedMathGrade
+};

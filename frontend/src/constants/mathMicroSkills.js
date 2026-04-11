@@ -51,6 +51,11 @@ export const MATH_MICRO_SKILLS = {
         zh: { name: '對數與指數', desc: '對數與指數性質' },
         minForm: 4
     },
+    math_alg_indices: {
+        en: { name: 'Laws of Indices', desc: 'Positive, negative, and fractional indices' },
+        zh: { name: '指數定律', desc: '正、負及分數指數' },
+        minForm: 2
+    },
     math_num_ratio: {
         en: { name: 'Ratio & Proportion', desc: 'Ratio, proportion, and simple rates' },
         zh: { name: '比與比例', desc: '比、比例及率' },
@@ -98,9 +103,9 @@ export const MATH_MICRO_SKILLS = {
         zh: { name: '三角學應用', desc: '正弦/餘弦公式、三角形面積、立體問題' },
         minForm: 5
     },
-    math_trig_graphs: {
-        en: { name: 'Trig Functions & Graphs', desc: 'Sine, Cosine curves and transformations' },
-        zh: { name: '三角函數圖像', desc: '正弦、餘弦圖形及變換' },
+    math_geo_trig_func: {
+        en: { name: 'Trig Functions & Graphs', desc: 'ASTC rule, Sine/Cosine curves and transformations' },
+        zh: { name: '三角函數與圖像', desc: 'ASTC 法則、正弦/餘弦圖形及變換' },
         minForm: 5
     },
     math_mensuration: {
@@ -111,14 +116,36 @@ export const MATH_MICRO_SKILLS = {
 
     // --- DATA HANDLING ---
     math_stat_prob: {
-        en: { name: 'Probability & Statistics', desc: 'Central tendency, dispersion, probability laws, and combinatorics' },
-        zh: { name: '概率與統計', desc: '集中趨勢、離散程度、概率定律及排列組合' },
+        en: { name: 'Probability & Statistics (Quest)', desc: 'Consolidated DSE Data Handling' },
+        zh: { name: '概率與統計 (任務)', desc: 'DSE 數據處理綜合練習' },
         minForm: 3
+    },
+    math_stat_probability: {
+        en: { name: 'Probability', desc: 'Laws of probability, conditional probability, expectation' },
+        zh: { name: '概率', desc: '概率定律、條件概率、期望值' },
+        minForm: 3
+    },
+    math_stat_counting: {
+        en: { name: 'Counting & Combinatorics', desc: 'Permutations and Combinations (nPr, nCr)' },
+        zh: { name: '排列與組合', desc: '排列與組合 (nPr, nCr)' },
+        minForm: 5
+    },
+    math_stat_measures: {
+        en: { name: 'Measures of Dispersion', desc: 'Range, IQR, Standard Deviation, Variance' },
+        zh: { name: '離散程度的量度', desc: '全距、四分位數間距、標準差、方差' },
+        minForm: 4
     },
     math_stat_charts: {
         en: { name: 'Statistical Charts', desc: 'Box-and-whisker, Stem-and-leaf, Histograms' },
         zh: { name: '統計圖表', desc: '箱形圖、幹葉圖、直方圖' },
         minForm: 1 // Foundation
+    },
+
+    // --- MASTERY CHALLENGES ---
+    integrated_challenge: {
+        en: { name: 'Weekly Quest', desc: 'Top-tier DSE Section B mastery' },
+        zh: { name: '每週任務', desc: '乙部頂尖 DSE 綜合試題' },
+        minForm: 6
     },
 
     // --- INTEGRATED (Section B) ---
@@ -164,14 +191,15 @@ export const getSkillsByCategory = (category) => {
         algebra: [
             'math_num_percentages', 'math_num_num_systems', 'math_num_ratio', 'math_num_inequalities',
             'math_alg_formulas', 'math_alg_polynomials', 'math_alg_quadratics', 'math_alg_functions',
-            'math_alg_variations', 'math_alg_apgp', 'math_alg_log_exp', 'math_alg_complex_numbers'
+            'math_alg_variations', 'math_alg_apgp', 'math_alg_log_exp', 'math_alg_complex_numbers',
+            'math_alg_indices'
         ],
         geometry: [
             'math_geo_rectilinear', 'math_geo_circles', 'math_geo_coord', 'math_geo_circle_eq',
-            'math_trig_ratios', 'math_trig_applications', 'math_mensuration'
+            'math_trig_ratios', 'math_trig_applications', 'math_geo_trig_func', 'math_mensuration'
         ],
         data: [
-            'math_stat_prob', 'math_stat_charts'
+            'math_stat_probability', 'math_stat_counting', 'math_stat_measures', 'math_stat_charts'
         ]
     };
     return categories[category] || [];

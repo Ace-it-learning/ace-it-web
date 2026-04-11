@@ -59,13 +59,25 @@ const Header = () => {
                         </button>
                     </>
                 )}
-                <a
-                    href="#pricing"
-                    className="flex items-center gap-2 text-gray-800 hover:text-[#FF6600] transition-colors text-sm font-bold tracking-wide group"
-                >
-                    {user && <Zap className="w-4 h-4 text-primary group-hover:animate-pulse" />}
-                    {user ? t('nav.upgrade_plan') : t('nav.pricing')}
-                </a>
+                {user && (
+                    <>
+                        <button
+                            onClick={() => navigate('/subscription')}
+                            className="flex items-center gap-2 text-gray-800 hover:text-[#FF6600] transition-colors text-sm font-bold tracking-wide group"
+                        >
+                            <Zap className="w-4 h-4 text-primary group-hover:animate-pulse" />
+                            {t('nav.upgrade_plan')}
+                        </button>
+                    </>
+                )}
+                {!user && (
+                    <a
+                        href="#pricing"
+                        className="flex items-center gap-2 text-gray-800 hover:text-[#FF6600] transition-colors text-sm font-bold tracking-wide group"
+                    >
+                        {t('nav.pricing')}
+                    </a>
+                )}
 
                 {user && (
                     <button

@@ -5,10 +5,12 @@ import { Lock, CheckCircle, Play, Map, Star, Clock, RefreshCcw } from 'lucide-re
 import { MICRO_SKILLS } from '../../constants/microSkills';
 
 const RoadmapWidget = () => {
-    const { user } = useAuth();
+    const { user, profile } = useAuth();
     const navigate = useNavigate();
     const [plan, setPlan] = useState(null);
     const [loading, setLoading] = useState(true);
+
+    const tier = profile?.subscription_tier || 'free';
 
     useEffect(() => {
         if (user?.uid) fetchRoadmap();
@@ -29,8 +31,35 @@ const RoadmapWidget = () => {
         }
     };
 
+    // --- GATING LOGIC ---
+    // Returns true if a task is locked for free users
+    const isPremiumLocked = (task) => {
+        if (tier !== 'free') return false;
+        if (task.status === 'COMPLETED') return false; // Always allow repeats of done stuff
+        
+        // Find first of each type
+        const displayTasks = plan.tasks.filter(t => t.type !== 'MOCK');
+        const firstOfEachType = [];
+        const seenTypes = new Set();
+        displayTasks.forEach(t => {
+            if (!seenTypes.has(t.type)) {
+                seenTypes.add(t.type);
+                firstOfEachType.push(t.id);
+            }
+        });
+
+        // Lock if not the first of its type
+        return !firstOfEachType.includes(task.id);
+    };
+
     const handleTaskClick = (task) => {
         if (task.status === 'COMPLETED' || task.locked) return;
+
+        // FREE TIER GATE
+        if (isPremiumLocked(task)) {
+            navigate('/subscription');
+            return;
+        }
 
         // 0. Specialized Challenge Check (Title Fallback)
         if (task.title?.includes('Eraser Challenge')) {
@@ -112,8 +141,8 @@ const RoadmapWidget = () => {
                 }
             });
         } else if (task.type === 'MOCK') {
-            // Navigate to Exam Menu
-            navigate('/exam/selector'); // Assuming exam selector exists or just general exam page
+            // Navigate to Exam Library
+            navigate('/mock-exam');
         } else if (task.type === 'CHALLENGE') {
             // Navigate to Eraser Challenge
             navigate('/eraser-challenge', {
@@ -175,84 +204,97 @@ const RoadmapWidget = () => {
 
             {/* Task List */}
             <div className="p-4 flex-1 overflow-y-auto space-y-3 custom-scrollbar">
-                {plan.tasks.filter(t => t.type !== 'MOCK').map((task, idx) => (
-                    <div
-                        key={task.id}
-                        onClick={() => handleTaskClick(task)}
-                        className={`
-                            relative p-3 rounded-lg border transition-all duration-200 group
-                            ${task.status === 'COMPLETED'
-                                ? 'bg-amber-100 border-amber-500 shadow-[0_4px_12px_rgba(245,158,11,0.2)] ring-1 ring-amber-200'
-                                : task.category === 'SPECIAL' && task.type === 'CHALLENGE'
-                                    ? 'bg-purple-50 border-purple-300 hover:border-purple-500 hover:shadow-lg cursor-pointer shadow-purple-100'
-                                    : task.category === 'SPECIAL' && task.type === 'SPEAKING_CHALLENGE'
-                                        ? 'bg-indigo-50 border-indigo-300 hover:border-indigo-500 hover:shadow-lg cursor-pointer shadow-indigo-100'
-                                        : 'bg-white border-slate-200 hover:border-amber-300 hover:shadow-md cursor-pointer'
-                            }
-                        `}
-                    >
-                        <div className="flex items-start gap-3">
-                            <div className={`
-                                mt-0.5 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold
-                                ${task.status === 'COMPLETED'
-                                    ? 'bg-amber-100 text-amber-600'
+                {plan.tasks.filter(t => t.type !== 'MOCK').map((task, idx) => {
+                    const locked = isPremiumLocked(task);
+                    return (
+                        <div
+                            key={task.id}
+                            onClick={() => handleTaskClick(task)}
+                            className={`
+                                relative p-3 rounded-lg border transition-all duration-200 group
+                                ${locked ? 'bg-slate-50 border-slate-200 opacity-60 grayscale cursor-not-allowed' : 
+                                  task.status === 'COMPLETED'
+                                    ? 'bg-amber-100 border-amber-500 shadow-[0_4px_12px_rgba(245,158,11,0.2)] ring-1 ring-amber-200'
                                     : task.category === 'SPECIAL' && task.type === 'CHALLENGE'
-                                        ? 'bg-purple-100 text-purple-600'
+                                        ? 'bg-purple-50 border-purple-300 hover:border-purple-500 hover:shadow-lg cursor-pointer shadow-purple-100'
                                         : task.category === 'SPECIAL' && task.type === 'SPEAKING_CHALLENGE'
-                                            ? 'bg-indigo-100 text-indigo-600'
-                                            : 'bg-slate-100 text-slate-500'}
-                            `}>
-                                {task.status === 'COMPLETED' ? <CheckCircle className="w-4 h-4 fill-white" /> : idx + 1}
-                            </div>
-                            <div className="flex-1">
-                                <h4 className={`text-sm font-semibold ${task.status === 'COMPLETED' ? 'text-slate-800' : 'text-slate-800'}`}>
-                                    {task.title}
-                                </h4>
-                                <div className="flex items-center gap-2 mt-1">
-                                    {task.status === 'COMPLETED' ? (
-                                        <span className="text-[10px] text-amber-600 font-bold bg-amber-50 px-2 py-0.5 rounded border border-amber-100 flex items-center gap-1">
-                                            <RefreshCcw className="w-2.5 h-2.5" />
-                                            REPEAT QUEST
-                                        </span>
-                                    ) : task.category === 'SPECIAL' ? (
-                                        <span className={`text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded ${task.type === 'CHALLENGE'
-                                            ? 'bg-purple-600 text-white'
-                                            : 'bg-indigo-600 text-white'
-                                            }`}>
-                                            {task.type === 'CHALLENGE' ? '⚡ SPECIAL CHALLENGE' : '🎙️ SPECIAL CHALLENGE'}
-                                        </span>
-                                    ) : (
-                                        <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-slate-100 text-slate-600">
-                                            AI Personalized
-                                        </span>
-                                    )}
-                                    {task.status === 'COMPLETED' ? (
-                                        <span className="text-[10px] text-amber-600 font-bold">
-                                            Earned {task.xp} XP
-                                        </span>
-                                    ) : (
-                                        <span className="text-xs text-amber-500 font-medium flex items-center gap-0.5">
-                                            <Star className="w-3 h-3 fill-current" /> +{task.xp} XP
-                                        </span>
-                                    )}
+                                            ? 'bg-indigo-50 border-indigo-300 hover:border-indigo-500 hover:shadow-lg cursor-pointer shadow-indigo-100'
+                                            : 'bg-white border-slate-200 hover:border-amber-300 hover:shadow-md cursor-pointer'
+                                }
+                            `}
+                        >
+                            <div className="flex items-start gap-3">
+                                <div className={`
+                                    mt-0.5 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold
+                                    ${locked ? 'bg-slate-200 text-slate-400' :
+                                      task.status === 'COMPLETED'
+                                        ? 'bg-amber-100 text-amber-600'
+                                        : task.category === 'SPECIAL' && task.type === 'CHALLENGE'
+                                            ? 'bg-purple-100 text-purple-600'
+                                            : task.category === 'SPECIAL' && task.type === 'SPEAKING_CHALLENGE'
+                                                ? 'bg-indigo-100 text-indigo-600'
+                                                : 'bg-slate-100 text-slate-500'}
+                                `}>
+                                    {locked ? <Lock className="w-3 h-3" /> : (task.status === 'COMPLETED' ? <CheckCircle className="w-4 h-4 fill-white" /> : idx + 1)}
                                 </div>
-                            </div>
-                            {task.status !== 'COMPLETED' ? (
-                                <div className="opacity-0 group-hover:opacity-100 transition-opacity">
-                                    <div className="w-8 h-8 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center">
-                                        <Play className="w-4 h-4 ml-0.5" />
+                                <div className="flex-1">
+                                    <h4 className="text-sm font-semibold text-slate-800">
+                                        {task.title}
+                                    </h4>
+                                    <div className="flex items-center gap-2 mt-1">
+                                        {locked ? (
+                                            <span className="text-[10px] text-slate-400 font-bold bg-slate-100 px-2 py-0.5 rounded border border-slate-200 flex items-center gap-1">
+                                                <Crown className="w-2.5 h-2.5" />
+                                                PREMIUM QUEST
+                                            </span>
+                                        ) : task.status === 'COMPLETED' ? (
+                                            <span className="text-[10px] text-amber-600 font-bold bg-amber-50 px-2 py-0.5 rounded border border-amber-100 flex items-center gap-1">
+                                                <RefreshCcw className="w-2.5 h-2.5" />
+                                                REPEAT QUEST
+                                            </span>
+                                        ) : task.category === 'SPECIAL' ? (
+                                            <span className={`text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded ${task.type === 'CHALLENGE'
+                                                ? 'bg-purple-600 text-white'
+                                                : 'bg-indigo-600 text-white'
+                                                }`}>
+                                                {task.type === 'CHALLENGE' ? '⚡ SPECIAL CHALLENGE' : '🎙️ SPECIAL CHALLENGE'}
+                                            </span>
+                                        ) : (
+                                            <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-slate-100 text-slate-600">
+                                                AI Personalized
+                                            </span>
+                                        )}
+                                        {!locked && (
+                                            task.status === 'COMPLETED' ? (
+                                                <span className="text-[10px] text-amber-600 font-bold">
+                                                    Earned {task.xp} XP
+                                                </span>
+                                            ) : (
+                                                <span className="text-xs text-amber-500 font-medium flex items-center gap-0.5">
+                                                    <Star className="w-3 h-3 fill-current" /> +{task.xp} XP
+                                                </span>
+                                            )
+                                        )}
                                     </div>
                                 </div>
-                            ) : (
-                                <div className="opacity-0 group-hover:opacity-100 transition-opacity">
-                                    <div className="w-8 h-8 rounded-full bg-amber-50 text-amber-600 flex items-center justify-center border border-amber-100">
-                                        <Play className="w-3.5 h-3.5 ml-0.5" />
+                                {!locked && (
+                                    <div className="opacity-0 group-hover:opacity-100 transition-opacity">
+                                        <div className={`w-8 h-8 rounded-full flex items-center justify-center ${task.status === 'COMPLETED' ? 'bg-amber-50 text-amber-600 border border-amber-100' : 'bg-blue-50 text-blue-600'}`}>
+                                            <Play className={`w-4 h-4 ml-0.5 ${task.status === 'COMPLETED' ? 'w-3.5 h-3.5' : ''}`} />
+                                        </div>
                                     </div>
-                                </div>
-                            )}
+                                )}
+                                {locked && (
+                                    <div className="opacity-0 group-hover:opacity-100 transition-opacity">
+                                        <div className="w-8 h-8 rounded-full bg-slate-100 text-slate-400 flex items-center justify-center">
+                                            <Lock className="w-4 h-4" />
+                                        </div>
+                                    </div>
+                                )}
+                            </div>
                         </div>
-                    </div>
-                ))}
+                    );
+                })}
 
                 {/* Boss Task */}
                 {bossTask && (

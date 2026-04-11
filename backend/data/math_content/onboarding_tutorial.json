@@ -1,0 +1,38 @@
+{
+  "tutorial_id": "onboarding_wysiwyg_01",
+  "dummy_question": "Welcome! Let's learn how to use the editor. Solve the equation $2x = 6$.",
+  "dummy_question_zh": "歡迎！讓我們學習如何使用編輯器。請解方程 $2x = 6$。",
+  "ui_script": [
+    {
+      "step_order": 1,
+      "action_required": "highlight_top_bar",
+      "instruction_en": "Welcome to the Math Lab! If you ever forget how to use the editor, you can always click the 'Tutorial' button on the top bar.",
+      "instruction_zh": "歡迎來到數學實驗室！如果你忘記如何使用編輯器，可以隨時點擊頂部欄的「教學」按鈕。"
+    },
+    {
+      "step_order": 2,
+      "action_required": "type_text",
+      "instruction_en": "First, type your explanation in the text area. Type: 'Divide both sides by 2'",
+      "instruction_zh": "首先，在文本區輸入你的解釋。請輸入：'兩邊除以 2'"
+    },
+    {
+      "step_order": 3,
+      "action_required": "click_equation_button",
+      "instruction_en": "Great! Now, click the purple 'EQUATION' button to insert a math node.",
+      "instruction_zh": "太棒了！現在，點擊紫色的「EQUATION」按鈕插入一個數學節點。"
+    },
+    {
+      "step_order": 4,
+      "action_required": "type_math",
+      "expected_latex": "x = 3",
+      "instruction_en": "Inside the new math box, type your answer: $x = 3$. You can use the virtual keyboard for special symbols.",
+      "instruction_zh": "在新的數學方塊中，輸入你的答案：$x = 3$。你可以使用虛擬鍵盤輸入特殊符號。"
+    },
+    {
+      "step_order": 5,
+      "action_required": "submit",
+      "instruction_en": "Perfect! Click Submit to complete the tutorial.",
+      "instruction_zh": "完美！點擊提交以完成教學。"
+    }
+  ]
+}

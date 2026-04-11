@@ -27,6 +27,19 @@ router.get('/format/:id', async (req, res) => {
     }
 });
 
+// GET /api/writing/scenarios
+// Returns ALL scenarios for the Roadmap UI
+router.get('/scenarios', async (req, res) => {
+    try {
+        const scenarios = await WritingQuestService.getAllScenarios();
+        console.log(`[WritingRoutes] Returning ${scenarios.length} scenarios for Roadmap.`);
+        res.json(scenarios);
+    } catch (err) {
+        console.error("[WritingRoutes] Error fetching all scenarios:", err);
+        res.status(500).json({ error: "Failed to fetch all scenarios" });
+    }
+});
+
 // POST /api/writing/brainstorm
 // Pillar 1: Generate "PEE" prompts
 router.post('/brainstorm', async (req, res) => {
@@ -50,6 +63,19 @@ router.post('/draft/powerup', async (req, res) => {
     } catch (err) {
         console.error(err);
         res.status(500).json({ error: "Analysis failed" });
+    }
+});
+
+// POST /api/writing/draft/review
+// Real-time analysis for "Review Draft" button
+router.post('/draft/review', async (req, res) => {
+    try {
+        const { content, topic, textType } = req.body;
+        const result = await WritingQuestService.analyzeRealTime(content, topic, textType || "Essay");
+        res.json(result);
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: "Review failed" });
     }
 });
 
@@ -156,6 +182,27 @@ router.get('/exemplars/:id', async (req, res) => {
     } catch (err) {
         console.error("[WritingRoutes] Exemplar fetch error:", err);
         res.status(500).json({ error: "Failed to fetch exemplar details" });
+    }
+});
+
+// --- ADMIN/TESTING CHEAT LIBRARY ---
+
+// GET /api/writing/admin/cheat-library
+// Returns the pre-generated hardcoded cheat essays for testing
+router.get('/admin/cheat-library', async (req, res) => {
+    const fs = require('fs');
+    const path = require('path');
+    const libraryPath = path.join(__dirname, '../data/writing_cheat_library.json');
+    
+    try {
+        if (!fs.existsSync(libraryPath)) {
+            return res.status(404).json({ error: "Cheat library not yet generated." });
+        }
+        const data = fs.readFileSync(libraryPath, 'utf8');
+        res.json(JSON.parse(data));
+    } catch (err) {
+        console.error("[WritingRoutes] Cheat library error:", err);
+        res.status(500).json({ error: "Failed to load cheat library" });
     }
 });
 

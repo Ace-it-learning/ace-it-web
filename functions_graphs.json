@@ -1,0 +1,625 @@
+[
+  {
+    "id": "func_01",
+    "topic_id": "math_alg_functions",
+    "subject": "maths",
+    "level": 3,
+    "type": "short_answer",
+    "marks": 2,
+    "question": "Given $f(x) = 3x^2 - 5x + 2$, find the value of $f(2)$.",
+    "question_zh": "已知 $f(x) = 3x^2 - 5x + 2$，求 $f(2)$ 的值。",
+    "answer": "4",
+    "correct_answer": "4",
+    "solution_steps": [
+      "1. Substitute $x = 2$ into the function: $f(2) = 3(2)^2 - 5(2) + 2$.",
+      "2. $f(2) = 3(4) - 10 + 2 = 12 - 10 + 2 = 4$."
+    ],
+    "solution_steps_zh": [
+      "1. 將 $x = 2$ 代入函數：$f(2) = 3(2)^2 - 5(2) + 2$。",
+      "2. $f(2) = 12 - 10 + 2 = 4$。"
+    ]
+  },
+  {
+    "id": "func_02",
+    "topic_id": "math_alg_functions",
+    "subject": "maths",
+    "level": 3,
+    "type": "short_answer",
+    "marks": 2,
+    "question": "Find the $y$-intercept of the graph of $y = -x^2 + 4x - 9$.",
+    "question_zh": "求 $y = -x^2 + 4x - 9$ 的圖像之 $y$ 軸截距。",
+    "answer": "-9",
+    "correct_answer": "-9",
+    "solution_steps": [
+      "1. The $y$-intercept occurs when $x = 0$.",
+      "2. Substitute $x = 0$ into the equation: $y = -(0)^2 + 4(0) - 9 = -9$."
+    ],
+    "solution_steps_zh": [
+      "1. 當 $x = 0$ 時出現 $y$ 軸截距。",
+      "2. 代入 $x = 0$ 到方程：$y = -(0)^2 + 4(0) - 9 = -9$。"
+    ]
+  },
+  {
+    "id": "func_03",
+    "topic_id": "math_alg_functions",
+    "subject": "maths",
+    "level": 3,
+    "type": "short_answer",
+    "marks": 3,
+    "question": "Find the $x$-intercepts of the graph $y = x^2 - 7x + 10$. (Separate by comma, smallest first)",
+    "question_zh": "求 $y = x^2 - 7x + 10$ 的圖像之 $x$ 軸截距。（以逗號分隔，由小到大排列）",
+    "answer": "2, 5",
+    "correct_answer": "2, 5",
+    "solution_steps": [
+      "1. Set $y = 0$: $x^2 - 7x + 10 = 0$.",
+      "2. Factor the quadratic: $(x - 2)(x - 5) = 0$.",
+      "3. Solve for $x$: $x = 2$ or $x = 5$."
+    ],
+    "solution_steps_zh": [
+      "1. 令 $y = 0$：$x^2 - 7x + 10 = 0$。",
+      "2. 因式分解：$(x - 2)(x - 5) = 0$。",
+      "3. 解得 $x = 2$ 或 $5$。"
+    ]
+  },
+  {
+    "id": "func_04",
+    "topic_id": "math_alg_functions",
+    "subject": "maths",
+    "level": 3,
+    "type": "short_answer",
+    "marks": 2,
+    "question": "Does the point $(1, 4)$ lie on the graph of $y = 2x^2 + 3x - 1$? (Type 'Yes' or 'No')",
+    "question_zh": "點 $(1, 4)$ 是否在 $y = 2x^2 + 3x - 1$ 的圖像上？（輸入 'Yes' 或 'No'）",
+    "answer": "Yes",
+    "correct_answer": "Yes",
+    "solution_steps": [
+      "1. Substitute $x = 1$ into the equation: $y = 2(1)^2 + 3(1) - 1 = 2 + 3 - 1 = 4$.",
+      "2. Since the $y$-value matches the given point, it lies on the graph."
+    ],
+    "solution_steps_zh": [
+      "1. 將 $x = 1$ 代入方程：$y = 2(1)^2 + 3(1) - 1 = 4$。",
+      "2. 由於 $y$ 值與給定點匹配，故在圖像上。"
+    ]
+  },
+  {
+    "id": "func_05",
+    "topic_id": "math_alg_functions",
+    "subject": "maths",
+    "level": 3,
+    "type": "short_answer",
+    "marks": 2,
+    "question": "Determine the direction of opening for the graph of $y = 5 - 2x - x^2$. (Type 'up' or 'down')",
+    "question_zh": "判斷 $y = 5 - 2x - x^2$ 的圖像開口方向。（輸入 'up' 或 'down'）",
+    "answer": "down",
+    "correct_answer": "down",
+    "solution_steps": [
+      "1. The coefficient of $x^2$ is $a = -1$.",
+      "2. Since $a \\lt 0$, the parabola opens downwards."
+    ],
+    "solution_steps_zh": [
+      "1. $x^2$ 的係數 $a = -1$。",
+      "2. 由於 $a \\lt 0$，拋物線開口向下。"
+    ]
+  },
+  {
+    "id": "func_06",
+    "topic_id": "math_alg_functions",
+    "subject": "maths",
+    "level": 4,
+    "type": "short_answer",
+    "marks": 3,
+    "question": "Find the equation of the axis of symmetry for $y = 2x^2 - 12x + 7$.",
+    "question_zh": "求 $y = 2x^2 - 12x + 7$ 的對稱軸方程。",
+    "answer": "x = 3",
+    "correct_answer": "x = 3",
+    "solution_steps": [
+      "1. The axis of symmetry formula is $x = -b / (2a)$.",
+      "2. Here $a = 2$ and $b = -12$.",
+      "3. $x = -(-12) / (2 \\times 2) = 12 / 4 = 3$."
+    ],
+    "solution_steps_zh": [
+      "1. 對稱軸公式為 $x = -b / (2a)$。",
+      "2. 這裡 $a = 2$ 及 $b = -12$。",
+      "3. $x = 12 / 4 = 3$。"
+    ]
+  },
+  {
+    "id": "func_07",
+    "topic_id": "math_alg_functions",
+    "subject": "maths",
+    "level": 4,
+    "type": "short_answer",
+    "marks": 4,
+    "question": "Find the vertex of $y = (x + 4)^2 - 5$. (Format: (h, k))",
+    "question_zh": "求 $y = (x + 4)^2 - 5$ 的頂點。（格式：(h, k)）",
+    "answer": "(-4, -5)",
+    "correct_answer": "(-4, -5)",
+    "solution_steps": [
+      "1. The vertex form is $y = a(x - h)^2 + k$, where the vertex is $(h, k)$.",
+      "2. For $y = (x + 4)^2 - 5$, $h = -4$ and $k = -5$."
+    ],
+    "solution_steps_zh": [
+      "1. 頂點式為 $y = a(x - h)^2 + k$，其中頂點為 $(h, k)$。",
+      "2. 對於 $y = (x + 4)^2 - 5$，$h = -4$ 且 $k = -5$。"
+    ]
+  },
+  {
+    "id": "func_08",
+    "topic_id": "math_alg_functions",
+    "subject": "maths",
+    "level": 4,
+    "type": "short_answer",
+    "marks": 3,
+    "question": "The graph of $y = x^2 + 2x + c$ passes through $(1, 10)$. Find the value of $c$.",
+    "question_zh": "$y = x^2 + 2x + c$ 的圖像經過 $(1, 10)$。求 $c$ 的值。",
+    "answer": "7",
+    "correct_answer": "7",
+    "solution_steps": [
+      "1. Substitute $(1, 10)$ into the equation: $10 = (1)^2 + 2(1) + c$.",
+      "2. $10 = 1 + 2 + c = 3 + c$.",
+      "3. $c = 10 - 3 = 7$."
+    ],
+    "solution_steps_zh": [
+      "1. 將 $(1, 10)$ 代入方程：$10 = (1)^2 + 2(1) + c$。",
+      "2. $10 = 3 + c \\implies c = 7$。"
+    ]
+  },
+  {
+    "id": "func_09",
+    "topic_id": "math_alg_functions",
+    "subject": "maths",
+    "level": 4,
+    "type": "short_answer",
+    "marks": 2,
+    "question": "If the graph of $y = f(x)$ is shifted upwards by 6 units, what is the new equation in terms of $f(x)$?",
+    "question_zh": "若 $y = f(x)$ 的圖像向上平移 6 個單位，以 $f(x)$ 表示新方程。",
+    "answer": "y = f(x) + 6",
+    "correct_answer": "y = f(x) + 6",
+    "solution_steps": [
+      "1. An upward shift of $k$ units is represented by $f(x) + k$.",
+      "2. Here $k = 6$, so the equation is $y = f(x) + 6$."
+    ],
+    "solution_steps_zh": [
+      "1. 向上平移 $k$ 單位由 $f(x) + k$ 表示。",
+      "2. 這裡 $k = 6$，故方程為 $y = f(x) + 6$。"
+    ]
+  },
+  {
+    "id": "func_10",
+    "topic_id": "math_alg_functions",
+    "subject": "maths",
+    "level": 4,
+    "type": "short_answer",
+    "marks": 3,
+    "question": "Calculate the discriminant of $y = x^2 + 6x + 9$.",
+    "question_zh": "計算 $y = x^2 + 6x + 9$ 的判別式。",
+    "answer": "0",
+    "correct_answer": "0",
+    "solution_steps": [
+      "1. Discriminant $\\Delta = b^2 - 4ac$.",
+      "2. $\\Delta = 6^2 - 4(1)(9) = 36 - 36 = 0$."
+    ],
+    "solution_steps_zh": [
+      "1. 判別式 $\\Delta = b^2 - 4ac$。",
+      "2. $\\Delta = 36 - 36 = 0$。"
+    ]
+  },
+  {
+    "id": "func_11",
+    "topic_id": "math_alg_functions",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 4,
+    "question": "Find the value of $k$ if the graph of $y = x^2 - 10x + k$ is tangent to the $x$-axis.",
+    "question_zh": "若 $y = x^2 - 10x + k$ 的圖像與 $x$ 軸相切，求 $k$ 的值。",
+    "answer": "25",
+    "correct_answer": "25",
+    "solution_steps": [
+      "1. Tangent to $x$-axis means $\\Delta = 0$.",
+      "2. $(-10)^2 - 4(1)(k) = 0 \\implies 100 - 4k = 0$.",
+      "3. $4k = 100 \\implies k = 25$."
+    ],
+    "solution_steps_zh": [
+      "1. 與 $x$ 軸相切意指 $\\Delta = 0$。",
+      "2. $100 - 4k = 0 \\implies k = 25$。"
+    ]
+  },
+  {
+    "id": "func_12",
+    "topic_id": "math_alg_functions",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 4,
+    "question": "Find the range of values of $m$ if the graph $y = x^2 + 8x + m$ has no $x$-intercepts.",
+    "question_zh": "若 $y = x^2 + 8x + m$ 沒有 $x$ 軸截距，求 $m$ 的範圍。",
+    "answer": "m > 16",
+    "correct_answer": "m \\gt 16",
+    "solution_steps": [
+      "1. No $x$-intercepts means $\\Delta \\lt 0$.",
+      "2. $8^2 - 4(1)(m) \\lt 0 \\implies 64 - 4m \\lt 0$.",
+      "3. $64 \\lt 4m \\implies m \\gt 16$."
+    ],
+    "solution_steps_zh": [
+      "1. 沒有 $x$ 軸截距意指 $\\Delta \\lt 0$。",
+      "2. $64 - 4m \\lt 0 \\implies m \\gt 16$。"
+    ]
+  },
+  {
+    "id": "func_13",
+    "topic_id": "math_alg_functions",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 3,
+    "question": "If $f(x) = x^2$, write the equation of $g(x) = f(x - 5)$.",
+    "question_zh": "若 $f(x) = x^2$，求 $g(x) = f(x - 5)$ 的方程。",
+    "answer": "y = (x-5)^2",
+    "correct_answer": "y = (x-5)^2",
+    "solution_steps": [
+      "1. $f(x - 5)$ replaces $x$ with $x - 5$.",
+      "2. $g(x) = (x - 5)^2$."
+    ],
+    "solution_steps_zh": [
+      "1. $f(x - 5)$ 將 $x$ 替換為 $x - 5$。",
+      "2. $g(x) = (x - 5)^2$。"
+    ]
+  },
+  {
+    "id": "func_14",
+    "topic_id": "math_alg_functions",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 3,
+    "question": "Find the equation of the reflection of $y = 3x^2 + 2$ across the $x$-axis.",
+    "question_zh": "求 $y = 3x^2 + 2$ 沿 $x$ 軸反射後的方程。",
+    "answer": "y = -3x^2 - 2",
+    "correct_answer": "y = -3x^2 - 2",
+    "solution_steps": [
+      "1. Reflection across x-axis is $-f(x)$.",
+      "2. $y = -(3x^2 + 2) = -3x^2 - 2$."
+    ],
+    "solution_steps_zh": [
+      "1. 沿 $x$ 軸反射為 $-f(x)$。",
+      "2. $y = -(3x^2 + 2) = -3x^2 - 2$。"
+    ]
+  },
+  {
+    "id": "func_15",
+    "topic_id": "math_alg_functions",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 4,
+    "question": "Find the $x$-coordinates of the intersections of $y = x^2 - 9$ and $y = 7$. (Smaller first, comma separated)",
+    "question_zh": "求 $y = x^2 - 9$ 與 $y = 7$ 交點的 $x$ 座標。（較小在前，以逗號分隔）",
+    "answer": "-4, 4",
+    "correct_answer": "-4, 4",
+    "solution_steps": [
+      "1. Set $x^2 - 9 = 7$.",
+      "2. $x^2 = 16 \\implies x = 4$ or $x = -4$."
+    ],
+    "solution_steps_zh": [
+      "1. 令 $x^2 - 9 = 7$。",
+      "2. $x^2 = 16 \\implies x = 4$ 或 $-4$。"
+    ]
+  },
+  {
+    "id": "func_16",
+    "topic_id": "math_alg_functions",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 4,
+    "question": "Determine the quadratic equation with roots $x = -2$ and $x = 5$ in standard form where $a = 1$.",
+    "question_zh": "求以 $x = -2$ 及 $x = 5$ 為根且 $a = 1$ 的二次方程標準式。",
+    "answer": "y = x^2 - 3x - 10",
+    "correct_answer": "y = x^2 - 3x - 10",
+    "solution_steps": [
+      "1. $y = (x + 2)(x - 5)$.",
+      "2. $y = x^2 - 5x + 2x - 10 = x^2 - 3x - 10$."
+    ],
+    "solution_steps_zh": [
+      "1. $y = (x + 2)(x - 5)$。",
+      "2. $y = x^2 - 3x - 10$。"
+    ]
+  },
+  {
+    "id": "func_17",
+    "topic_id": "math_alg_functions",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 3,
+    "question": "Find the minimum value of $y = 2(x - 3)^2 + 15$.",
+    "question_zh": "求 $y = 2(x - 3)^2 + 15$ 的最小值。",
+    "answer": "15",
+    "correct_answer": "15",
+    "solution_steps": [
+      "1. In $y = a(x - h)^2 + k$, if $a \\gt 0$, the minimum is $k$.",
+      "2. Here $a = 2$ and $k = 15$."
+    ],
+    "solution_steps_zh": [
+      "1. 在 $y = a(x - h)^2 + k$ 中，若 $a \\gt 0$，最小值為 $k$。",
+      "2. 這裡 $a = 2$，$k = 15$。"
+    ]
+  },
+  {
+    "id": "func_18",
+    "topic_id": "math_alg_functions",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 5,
+    "question": "Express $y = x^2 - 6x + 5$ in vertex form by completing the square.",
+    "question_zh": "通過配方法將 $y = x^2 - 6x + 5$ 化為頂點式。",
+    "answer": "y = (x-3)^2 - 4",
+    "correct_answer": "y = (x-3)^2 - 4",
+    "solution_steps": [
+      "1. $y = (x^2 - 6x + 9) - 9 + 5$.",
+      "2. $y = (x - 3)^2 - 4$."
+    ],
+    "solution_steps_zh": [
+      "1. $y = (x^2 - 6x + 9) - 9 + 5$。",
+      "2. $y = (x - 3)^2 - 4$。"
+    ]
+  },
+  {
+    "id": "func_19",
+    "topic_id": "math_alg_functions",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 4,
+    "question": "Find the maximum value of $y = -2x^2 + 8x - 3$.",
+    "question_zh": "求 $y = -2x^2 + 8x - 3$ 的最大值。",
+    "answer": "5",
+    "correct_answer": "5",
+    "solution_steps": [
+      "1. $x$-coordinate of vertex: $x = -8 / (2 \\times -2) = 2$.",
+      "2. Maximum value: $y = -2(2)^2 + 8(2) - 3 = -8 + 16 - 3 = 5$."
+    ],
+    "solution_steps_zh": [
+      "1. 頂點的 $x$ 座標為 $x = 2$。",
+      "2. 最大值：$y = -2(4) + 16 - 3 = 5$。"
+    ]
+  },
+  {
+    "id": "func_20",
+    "topic_id": "math_alg_functions",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 5,
+    "question": "Find the intersection points of $y = x^2$ and $y = x + 2$. (Format: (x1, y1), (x2, y2) where $x1 \\lt x2$)",
+    "question_zh": "求 $y = x^2$ 與 $y = x + 2$ 的交點。（格式：(x1, y1), (x2, y2)，其中 $x1 \\lt x2$）",
+    "answer": "(-1, 1), (2, 4)",
+    "correct_answer": "(-1, 1), (2, 4)",
+    "solution_steps": [
+      "1. $x^2 = x + 2 \\implies x^2 - x - 2 = 0$.",
+      "2. $(x - 2)(x + 1) = 0 \\implies x = 2$ or $x = -1$.",
+      "3. Points: $(-1, 1)$ and $(2, 4)$."
+    ],
+    "solution_steps_zh": [
+      "1. $x^2 - x - 2 = 0$。",
+      "2. $(x - 2)(x + 1) = 0 \\implies x = 2$ 或 $-1$。",
+      "3. 交點：$(-1, 1)$ 及 $(2, 4)$。"
+    ]
+  },
+  {
+    "id": "func_21",
+    "topic_id": "math_alg_functions",
+    "subject": "maths",
+    "level": 7,
+    "type": "short_answer",
+    "marks": 6,
+    "question": "A rectangle has a perimeter of 40 cm. Find its maximum area in $cm^2$.",
+    "question_zh": "一個長方形的周界為 40 cm。其最大面積是多少 $cm^2$？",
+    "answer": "100",
+    "correct_answer": "100",
+    "solution_steps": [
+      "1. Let width be $x$. Length = $(40 - 2x) / 2 = 20 - x$.",
+      "2. Area $A = x(20 - x) = 20x - x^2$.",
+      "3. Max area at $x = -20 / -2 = 10$.",
+      "4. Max $A = 10(10) = 100$."
+    ],
+    "solution_steps_zh": [
+      "1. 設寬為 $x$。長為 $20 - x$。",
+      "2. 面積 $A = 20x - x^2$。",
+      "3. 當 $x = 10$ 時面積最大。",
+      "4. 最大面積為 100。"
+    ]
+  },
+  {
+    "id": "func_22",
+    "topic_id": "math_alg_functions",
+    "subject": "maths",
+    "level": 7,
+    "type": "short_answer",
+    "marks": 6,
+    "question": "Find the range of $k$ if the line $y = 2x + k$ intersects the parabola $y = x^2 + 4$ at two distinct points.",
+    "question_zh": "若直線 $y = 2x + k$ 與拋物線 $y = x^2 + 4$ 交於兩個相異點，求 $k$ 的範圍。",
+    "answer": "k > 3",
+    "correct_answer": "k \\gt 3",
+    "solution_steps": [
+      "1. $x^2 + 4 = 2x + k \\implies x^2 - 2x + (4 - k) = 0$.",
+      "2. $\\Delta \\gt 0 \\implies (-2)^2 - 4(1)(4 - k) \\gt 0$.",
+      "3. $4 - 16 + 4k \\gt 0 \\implies 4k \\gt 12 \\implies k \\gt 3$."
+    ],
+    "solution_steps_zh": [
+      "1. $x^2 - 2x + (4 - k) = 0$。",
+      "2. $\\Delta \\gt 0 \\implies 4 - 4(4 - k) \\gt 0$。",
+      "3. $4k \\gt 12 \\implies k \\gt 3$。"
+    ]
+  },
+  {
+    "id": "func_23",
+    "topic_id": "math_alg_functions",
+    "subject": "maths",
+    "level": 7,
+    "type": "short_answer",
+    "marks": 6,
+    "question": "The line $y = mx - 4$ is tangent to the parabola $y = x^2$. Find the positive value of $m$.",
+    "question_zh": "直線 $y = mx - 4$ 與拋物線 $y = x^2$ 相切。求 $m$ 的正值。",
+    "answer": "4",
+    "correct_answer": "4",
+    "solution_steps": [
+      "1. $x^2 = mx - 4 \\implies x^2 - mx + 4 = 0$.",
+      "2. $\\Delta = 0 \\implies m^2 - 4(1)(4) = 0$.",
+      "3. $m^2 = 16 \\implies m = 4$ or $m = -4$."
+    ],
+    "solution_steps_zh": [
+      "1. $x^2 - mx + 4 = 0$。",
+      "2. $\\Delta = 0 \\implies m^2 - 16 = 0$。",
+      "3. $m = 4$。"
+    ]
+  },
+  {
+    "id": "func_24",
+    "topic_id": "math_alg_functions",
+    "subject": "maths",
+    "level": 7,
+    "type": "short_answer",
+    "marks": 5,
+    "question": "Starting with $y = x^2$, translate 3 units left and then reflect across the $x$-axis. What is the new equation?",
+    "question_zh": "從 $y = x^2$ 開始，向左平移 3 個單位，再沿 $x$ 軸反射。新方程是什麼？",
+    "answer": "y = -(x+3)^2",
+    "correct_answer": "y = -(x+3)^2",
+    "solution_steps": [
+      "1. Shift left 3: $y = (x + 3)^2$.",
+      "2. Reflect across x-axis: $y = -(x + 3)^2$."
+    ],
+    "solution_steps_zh": [
+      "1. 向左平移 3：$y = (x + 3)^2$。",
+      "2. 沿 $x$ 軸反射：$y = -(x + 3)^2$。"
+    ]
+  },
+  {
+    "id": "func_25",
+    "topic_id": "math_alg_functions",
+    "subject": "maths",
+    "level": 7,
+    "type": "short_answer",
+    "marks": 6,
+    "question": "Express $y = 2x^2 - 12x + 10$ in vertex form $y = a(x - h)^2 + k$.",
+    "question_zh": "將 $y = 2x^2 - 12x + 10$ 化為頂點式 $y = a(x - h)^2 + k$。",
+    "answer": "y = 2(x-3)^2 - 8",
+    "correct_answer": "y = 2(x-3)^2 - 8",
+    "solution_steps": [
+      "1. $y = 2(x^2 - 6x) + 10 = 2(x^2 - 6x + 9 - 9) + 10$.",
+      "2. $y = 2(x - 3)^2 - 18 + 10 = 2(x - 3)^2 - 8$."
+    ],
+    "solution_steps_zh": [
+      "1. $y = 2(x^2 - 6x) + 10 = 2((x-3)^2 - 9) + 10$。",
+      "2. $y = 2(x-3)^2 - 8$。"
+    ]
+  },
+  {
+    "id": "func_26",
+    "topic_id": "math_alg_functions",
+    "subject": "maths",
+    "level": 7,
+    "type": "short_answer",
+    "marks": 6,
+    "question": "Find the range of $m$ such that $x^2 + mx + 9 \\gt 0$ for all real $x$.",
+    "question_zh": "求 $m$ 的範圍，使對於所有實數 $x$，$x^2 + mx + 9 \\gt 0$ 均成立。",
+    "answer": "-6 < m < 6",
+    "correct_answer": "-6 \\lt m \\lt 6",
+    "solution_steps": [
+      "1. $\\Delta \\lt 0$ and $a \\gt 0$.",
+      "2. $m^2 - 4(1)(9) \\lt 0 \\implies m^2 \\lt 36$.",
+      "3. $-6 \\lt m \\lt 6$."
+    ],
+    "solution_steps_zh": [
+      "1. $\\Delta \\lt 0$ 且 $a \\gt 0$。",
+      "2. $m^2 - 36 \\lt 0$。",
+      "3. $-6 \\lt m \\lt 6$。"
+    ]
+  },
+  {
+    "id": "func_27",
+    "topic_id": "math_alg_functions",
+    "subject": "maths",
+    "level": 7,
+    "type": "short_answer",
+    "marks": 5,
+    "question": "The axis of symmetry of a parabola is $x = 3$. If one root is $x = -1$, find the other root.",
+    "question_zh": "拋物線的對稱軸為 $x = 3$。若其中一根為 $x = -1$，求另一根。",
+    "answer": "7",
+    "correct_answer": "7",
+    "solution_steps": [
+      "1. Distance from $-1$ to axis $3$ is $3 - (-1) = 4$.",
+      "2. The other root is $3 + 4 = 7$."
+    ],
+    "solution_steps_zh": [
+      "1. $-1$ 距離對稱軸 $3$ 的距離為 4。",
+      "2. 另一根為 $3 + 4 = 7$。"
+    ]
+  },
+  {
+    "id": "func_28",
+    "topic_id": "math_alg_functions",
+    "subject": "maths",
+    "level": 7,
+    "type": "short_answer",
+    "marks": 6,
+    "question": "A projectile's height is $h(t) = -5t^2 + 30t + 2$. Find its maximum height.",
+    "question_zh": "投射物的高度為 $h(t) = -5t^2 + 30t + 2$。求其最大高度。",
+    "answer": "47",
+    "correct_answer": "47",
+    "solution_steps": [
+      "1. $t = -30 / (2 \\times -5) = 3$.",
+      "2. $h(3) = -5(9) + 90 + 2 = -45 + 92 = 47$."
+    ],
+    "solution_steps_zh": [
+      "1. $t = 3$ 時高度最大。",
+      "2. $h(3) = -45 + 90 + 2 = 47$。"
+    ]
+  },
+  {
+    "id": "func_29",
+    "topic_id": "math_alg_functions",
+    "subject": "maths",
+    "level": 7,
+    "type": "short_answer",
+    "marks": 6,
+    "question": "The graph of $y = f(x)$ is reflected across the $y$-axis and then shifted 4 units down. Find the new equation if $f(x) = x^2 + 2x$.",
+    "question_zh": "若 $y = f(x)$ 的圖像沿 $y$ 軸反射，然後向下平移 4 個單位。若 $f(x) = x^2 + 2x$，求新方程。",
+    "answer": "y = x^2 - 2x - 4",
+    "correct_answer": "y = x^2 - 2x - 4",
+    "solution_steps": [
+      "1. Reflect $y$-axis: $f(-x) = (-x)^2 + 2(-x) = x^2 - 2x$.",
+      "2. Shift down 4: $y = x^2 - 2x - 4$."
+    ],
+    "solution_steps_zh": [
+      "1. 沿 $y$ 軸反射：$f(-x) = x^2 - 2x$。",
+      "2. 向下平移 4：$y = x^2 - 2x - 4$。"
+    ]
+  },
+  {
+    "id": "func_30",
+    "topic_id": "math_alg_functions",
+    "subject": "maths",
+    "level": 7,
+    "type": "short_answer",
+    "marks": 6,
+    "question": "Find the quadratic equation passing through $(0, 5), (1, 6),$ and $(2, 9)$.",
+    "question_zh": "求經過 $(0, 5), (1, 6)$ 和 $(2, 9)$ 的二次方程。",
+    "answer": "y = x^2 + 5",
+    "correct_answer": "y = x^2 + 5",
+    "solution_steps": [
+      "1. $(0, 5) \\implies c = 5$.",
+      "2. $a + b + 5 = 6 \\implies a + b = 1$.",
+      "3. $4a + 2b + 5 = 9 \\implies 4a + 2b = 4 \\implies 2a + b = 2$.",
+      "4. $a = 1, b = 0$."
+    ],
+    "solution_steps_zh": [
+      "1. $c = 5$。",
+      "2. $a + b = 1$。",
+      "3. $2a + b = 2$。",
+      "4. $a = 1, b = 0 \\implies y = x^2 + 5$。"
+    ]
+  }
+]

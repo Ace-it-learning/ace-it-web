@@ -66,11 +66,9 @@ const ListeningQuestMenu = () => {
     }, []);
 
     const handleStartMission = (mission) => {
-        navigate('/listening/quest', {
+        navigate(`/listening/briefing/${mission.id}`, {
             state: {
-                questId: mission.id,
-                questData: mission,
-                mode: 'mission'
+                questData: mission
             }
         });
     };

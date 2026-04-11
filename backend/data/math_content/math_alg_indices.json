@@ -1,0 +1,99 @@
+{
+    "is_modular": true,
+    "name": "Laws of Indices",
+    "name_zh": "指數定律",
+    "roadmap": "Master the fundamental rules of indices for positive integers first. Progress to understanding the physical meaning of zero and negative indices. Finally, master fractional indices (radicals) and solve exponential equations by equating bases or using logarithms.",
+    "roadmap_zh": "首先掌握正整數指數的基本定律。進階到理解零指數及負指數的物理意義。最後，掌握分數指數（根式）並通過統一底數或使用對數來解指數方程。",
+    "learning_modules": [
+        {
+            "module_id": "MOD_01",
+            "title": "Fundamental Laws",
+            "title_zh": "基本定律",
+            "concepts": [
+                {
+                    "concept_id": "C01_BASE_OPERATIONS",
+                    "name": "Multiplication & Division",
+                    "name_zh": "乘法與除法",
+                    "formula": "a^m \\times a^n = a^{m+n} \\quad \\text{and} \\quad \\frac{a^m}{a^n} = a^{m-n}",
+                    "key_takeaway": "When multiplying or dividing powers with the SAME base, we add or subtract their indices. Never try to apply these laws if the bases are different.",
+                    "key_takeaway_zh": "當底數「相同」的冪相乘或相除時，我們將指數相加或相減。若底數不同，絕對不能直接套用這些定律。",
+                    "visual_aid": null
+                },
+                {
+                    "concept_id": "C02_POWER_OF_POWER",
+                    "name": "Power of a Power",
+                    "name_zh": "積及商的冪",
+                    "formula": "(a^m)^n = a^{mn} \\quad , \\quad (ab)^n = a^n b^n",
+                    "key_takeaway": "A power raised to another power results in the multiplication of indices. Similarly, a power applies to every factor inside a bracket.",
+                    "key_takeaway_zh": "冪的冪會導致指數相乘。同樣地，括號外的指數會套用到括號內的每一個項。",
+                    "visual_aid": null
+                }
+            ],
+            "common_traps": [
+                {
+                    "trap": "Addition Confusion",
+                    "trap_zh": "加法混淆",
+                    "description": "Students often incorrectly add indices when terms are added together.",
+                    "description_zh": "學生常在項與項相加時錯誤地將指數相加。",
+                    "example": "3^2 + 3^3 = 3^5",
+                    "example_zh": "3^2 + 3^3 = 3^5",
+                    "fix": "Indices only add during multiplication. $3^2 + 3^3 = 9 + 27 = 36$, not $3^5$.",
+                    "fix_zh": "指數僅在乘法時相加。$3^2 + 3^3 = 9 + 27 = 36$，而非 $3^5$。"
+                }
+            ]
+        },
+        {
+            "module_id": "MOD_02",
+            "title": "Zero, Negative & Fractional",
+            "title_zh": "零、負及分數指數",
+            "concepts": [
+                {
+                    "concept_id": "C03_ZERO_NEG",
+                    "name": "The Meaning of Nothing",
+                    "name_zh": "零與負數的意義",
+                    "formula": "a^0 = 1 \\quad (a \\neq 0) \\quad \\text{and} \\quad a^{-n} = \\frac{1}{a^n}",
+                    "key_takeaway": "Any non-zero base to the power of 0 is 1. A negative index represents a reciprocal (flipping to the denominator).",
+                    "key_takeaway_zh": "任何非零底數的零次方均等於 1。負指數代表倒數（即移至分母）。",
+                    "visual_aid": null
+                },
+                {
+                    "concept_id": "C04_FRACTIONAL",
+                    "name": "Rational Indices (Roots)",
+                    "name_zh": "分數指數（根式）",
+                    "formula": "a^{\\frac{1}{n}} = \\sqrt[n]{a} \\quad \\text{and} \\quad a^{\\frac{m}{n}} = \\sqrt[n]{a^m} = (\\sqrt[n]{a})^m",
+                    "key_takeaway": "The denominator of a fractional index is the 'root', and the numerator is the 'power'. Always evaluate the root first to keep numbers smaller.",
+                    "key_takeaway_zh": "分數指數的分母代表「方根」，分子代表「次方」。通常先計算方根再計算次方，以保持數值較小，易於計算。",
+                    "visual_aid": null
+                }
+            ]
+        },
+        {
+            "module_id": "MOD_03",
+            "title": "Exponential Equations",
+            "title_zh": "指數方程",
+            "concepts": [
+                {
+                    "concept_id": "C05_SAME_BASE",
+                    "name": "Equating the Base",
+                    "name_zh": "統一底數法",
+                    "formula": "a^x = a^y \\implies x = y",
+                    "key_takeaway": "The standard strategy for DSE Paper 1 is to rewrite both sides of an equation with the same prime base (e.g., convert 4 and 8 into $2^2$ and $2^3$).",
+                    "key_takeaway_zh": "DSE 卷一的標準策略是將方程兩邊重寫為相同的質數底（例如：將 4 和 8 轉換為 $2^2$ 和 $2^3$）。",
+                    "visual_aid": null
+                }
+            ],
+            "common_traps": [
+                {
+                    "trap": "Negative Base Error",
+                    "trap_zh": "負底數錯誤",
+                    "description": "Confusion between $(-a)^n$ and $-a^n$.",
+                    "description_zh": "混淆 $(-a)^n$ 與 $-a^n$。",
+                    "example": "-3^2 = 9",
+                    "example_zh": "-3^2 = 9",
+                    "fix": "$-3^2$ means $-(3 \\times 3) = -9$. Only $(-3)^2$ equals $9$.",
+                    "fix_zh": "$-3^2$ 代表 $-(3 \\times 3) = -9$。只有 $(-3)^2$ 才等於 $9$。"
+                }
+            ]
+        }
+    ]
+}

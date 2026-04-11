@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { background: #f8fafc; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; font-family: sans-serif; }
+        .card { background: white; border-radius: 12px; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); padding: 24px; position: relative; }
+        .label { position: absolute; top: 12px; left: 12px; font-size: 10px; color: #64748b; text-transform: uppercase; letter-spacing: 0.05em; }
+        svg { border: 1px solid #e2e8f0; border-radius: 8px; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="label">Preview: 3D Cone Inscribed in Sphere</div>
+        <svg width="400" height="300" viewBox="0 0 400 300">
+            <!-- Sphere -->
+            <circle cx="200" cy="150" r="120" stroke="#94a3b8" stroke-dasharray="5,5" stroke-width="1.5" fill="rgba(226, 232, 240, 0.2)" />
+            
+            <!-- Hidden Back Edge of Base -->
+            <polyline points="140.0,253.92 140.74,251.11 142.94,248.36 146.54,245.75 151.46,243.34 157.57,241.2 165.27,239.36 174.14,237.89 184.28,236.96 193.3,236.2 201.2,236.2 215.72,236.96 225.86,237.89 234.73,239.36 242.43,241.2 248.54,243.34 253.46,245.75 257.06,248.36 259.26,251.11 260.0,253.92" 
+                fill="none" stroke="#7c3aed" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.6" />
+            
+            <!-- Cone Body (Triangle sides + front face) -->
+            <polygon points="200,150 140.0,253.92 140.74,256.74 142.94,259.49 146.54,262.09 151.46,264.5 157.57,266.65 165.27,268.49 174.14,269.96 184.28,270.88 200,271.92 215.72,270.88 225.86,269.96 234.73,268.49 242.43,266.65 248.54,264.5 253.46,262.09 257.06,259.49 259.26,256.74 260.0,253.92" 
+                fill="rgba(124, 58, 237, 0.1)" stroke="#7c3aed" stroke-width="2.5" />
+            
+            <!-- Slant Height (R) -->
+            <line x1="200" y1="150" x2="260" y2="253.92" stroke="#2563eb" stroke-width="2" />
+            <text x="235" y="200" font-size="16" font-weight="bold" fill="#2563eb">R</text>
+            
+            <!-- Height (h) -->
+            <line x1="200" y1="150" x2="200" y2="253.92" stroke="#dc2626" stroke-dasharray="4,4" stroke-width="2" />
+            <text x="180" y="210" font-size="16" font-weight="bold" fill="#dc2626">h</text>
+            
+            <!-- Vertex / Center -->
+            <circle cx="200" cy="150" r="3" fill="#1e293b" />
+            <text x="195" y="140" font-size="14" font-weight="bold" fill="#1e293b">V</text>
+            
+            <!-- Angle (30 deg) -->
+            <path d="M 200 180 A 30 30 0 0 0 215 176" fill="none" stroke="#d97706" stroke-width="2" />
+            <text x="210" y="200" font-size="12" font-weight="bold" fill="#d97706">30°</text>
+        </svg>
+    </div>
+</body>
+</html>

@@ -1,0 +1,331 @@
+[
+  {
+    "id": "ct_mcq_131",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": [
+      "math_alg_polynomials"
+    ],
+    "marks": 1,
+    "difficulty": 7,
+    "paper": 2,
+    "section": "B",
+    "question_en": "If $\\alpha, \\beta, \\gamma$ are the roots of $x^3 - 6x^2 + 11x - 6 = 0$, find the value of $\\alpha^2 + \\beta^2 + \\gamma^2$.",
+    "question_zh": "若 $\\alpha, \\beta, \\gamma$ 是 $x^3 - 6x^2 + 11x - 6 = 0$ 的根，求 $\\alpha^2 + \\beta^2 + \\gamma^2$ 的值。",
+    "options": [
+      "A. 14",
+      "B. 36",
+      "C. 24",
+      "D. 11"
+    ],
+    "correct_answer": "A",
+    "solution_steps_en": [
+      "Use Vieta's formulas:",
+      "$\\alpha + \\beta + \\gamma = -(-6)/1 = 6$.",
+      "$\\alpha\\beta + \\beta\\gamma + \\gamma\\alpha = 11/1 = 11$.",
+      "Formula: $(\\alpha + \\beta + \\gamma)^2 = \\alpha^2 + \\beta^2 + \\gamma^2 + 2(\\alpha\\beta + \\beta\\gamma + \\gamma\\alpha)$.",
+      "$6^2 = \\alpha^2 + \\beta^2 + \\gamma^2 + 2(11)$.",
+      "$36 = \\alpha^2 + \\beta^2 + \\gamma^2 + 22 \\Rightarrow \\alpha^2 + \\beta^2 + \\gamma^2 = 14$."
+    ],
+    "solution_steps_zh": [
+      "使用韋達定理：",
+      "$\\sum \\alpha = 6$，$\\sum \\alpha\\beta = 11$。",
+      "$(\\sum \\alpha)^2 = \\sum \\alpha^2 + 2\\sum \\alpha\\beta$。",
+      "$36 = \\sum \\alpha^2 + 22 \\Rightarrow \\sum \\alpha^2 = 14$。"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_132",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": [
+      "math_geo_coord"
+    ],
+    "marks": 1,
+    "difficulty": 6,
+    "paper": 2,
+    "section": "B",
+    "question_en": "Find the center of the circle $x^2 + y^2 - 10x + 4y - 7 = 0$.",
+    "question_zh": "求圓 $x^2 + y^2 - 10x + 4y - 7 = 0$ 的中心。",
+    "options": [
+      "A. (5, -2)",
+      "B. (-5, 2)",
+      "C. (10, -4)",
+      "D. (5, 2)"
+    ],
+    "correct_answer": "A",
+    "solution_steps_en": [
+      "General form $x^2 + y^2 + Dx + Ey + F = 0$.",
+      "Center is $(-D/2, -E/2)$.",
+      "Here $D = -10, E = 4$.",
+      "Center $= (-(-10)/2, -4/2) = (5, -2)$."
+    ],
+    "solution_steps_zh": [
+      "一般式中心為 $(-D/2, -E/2)$。",
+      "此處 $D = -10, E = 4$。",
+      "中心 $= (5, -2)$。"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_sa_131",
+    "type": "short_answer",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": [
+      "math_geo_coord"
+    ],
+    "marks": 13,
+    "difficulty": 8,
+    "paper": 1,
+    "section": "B",
+    "question_en": "Consider the circle $C: x^2 + y^2 = 25$. A point $P(7, 1)$ lies outside the circle.\n(a) Find the equations of the two tangents from $P$ to the circle. (8 marks)\n(b) If the two tangents touch the circle at $A$ and $B$, find the length of the chord $AB$. (5 marks)",
+    "question_zh": "考慮圓 $C: x^2 + y^2 = 25$。點 $P(7, 1)$ 位於圓外。\n(a) 求從 $P$ 到該圓的兩條切線方程。(8分)\n(b) 若兩條切線分別切圓於 $A$ 及 $B$，求弦 $AB$ 的長度。(5分)",
+    "correct_answer": "3x+4y-25=0, 4x-3y-25=0; AB = sqrt(50) = 7.07",
+    "solution_steps_en": [
+      "(a) Let the tangent be $y - 1 = m(x - 7) \\Rightarrow mx - y + (1 - 7m) = 0$.",
+      "Distance from center $(0,0)$ to line is radius 5.",
+      "$\\frac{|1 - 7m|}{\\sqrt{m^2 + 1}} = 5 \\Rightarrow (1 - 7m)^2 = 25(m^2 + 1)$.",
+      "$1 - 14m + 49m^2 = 25m^2 + 25 \\Rightarrow 24m^2 - 14m - 24 = 0 \\Rightarrow 12m^2 - 7m - 12 = 0$.",
+      "$(4m + 3)(3m - 4) = 0 \\Rightarrow m = -3/4$ or $m = 4/3$.",
+      "Lines: $y-1 = -0.75(x-7) \\Rightarrow 3x+4y-25=0$.",
+      "$y-1 = 1.33(x-7) \\Rightarrow 4x-3y-25=0$.",
+      "(b) Radius $r=5$, Distance $OP = \\sqrt{7^2+1^2} = \\sqrt{50} = 5\\sqrt{2}$.",
+      "Tangent length $PA = \\sqrt{OP^2 - r^2} = \\sqrt{50 - 25} = 5$.",
+      "Area of $\\triangle OPA = 0.5 \\times 5 \\times 5 = 12.5$.",
+      "Also Area $= 0.5 \\times OP \\times h$, where $h$ is distance from $A$ to $OP$.",
+      "$12.5 = 0.5 \\times 5\\sqrt{2} \\times h \\Rightarrow h = 5/\\sqrt{2}$.",
+      "Chord $AB = 2h = 10/\\sqrt{2} = 5\\sqrt{2} \\approx 7.07$."
+    ],
+    "solution_steps_zh": [
+      "(a) 設方程為 $y-1 = m(x-7) \\Rightarrow mx-y+1-7m=0$。",
+      "中心 $(0,0)$ 到直線距離為 5。$|1-7m|/\\sqrt{m^2+1} = 5$。",
+      "平方得 $12m^2-7m-12=0 \\Rightarrow m=-3/4, 4/3$。",
+      "方程：$3x+4y-25=0$ 及 $4x-3y-25=0$。",
+      "(b) $OP = 5\\sqrt{2}$。切線長 $PA = 5$。弦長 $AB = 2 \\times (5 \\times 5 / 5\\sqrt{2}) = 5\\sqrt{2} \\approx 7.07$。"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_133",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": [
+      "math_alg_log_exp"
+    ],
+    "marks": 1,
+    "difficulty": 7,
+    "paper": 2,
+    "section": "B",
+    "question_en": "If $\\log_x 81 = 4/3$, find $x$.",
+    "question_zh": "若 $\\log_x 81 = 4/3$，求 $x$ 的值。",
+    "options": [
+      "A. 27",
+      "B. 9",
+      "C. 3",
+      "D. 243"
+    ],
+    "correct_answer": "A",
+    "solution_steps_en": [
+      "$x^{4/3} = 81 = 3^4$.",
+      "$(x^{1/3})^4 = 3^4 \\Rightarrow x^{1/3} = 3$.",
+      "Cube both sides: $x = 3^3 = 27$."
+    ],
+    "solution_steps_zh": [
+      "$x^{4/3} = 81$。",
+      "$x = 81^{3/4} = (3^4)^{3/4} = 3^3 = 27$。"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_134",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": [
+      "math_stat_dispersion"
+    ],
+    "marks": 1,
+    "difficulty": 6,
+    "paper": 2,
+    "section": "A",
+    "question_en": "The lower quartile and upper quartile of a set of data are 25 and 48 respectively. Which of the following may be the standard deviation?",
+    "question_zh": "一組數據的下四分位數和上四分位數分別為 25 和 48。下列哪一項可能是其標準差？",
+    "options": [
+      "A. 10",
+      "B. 30",
+      "C. 50",
+      "D. 100"
+    ],
+    "correct_answer": "A",
+    "solution_steps_en": [
+      "Inter-quartile Range (IQR) $= 48 - 25 = 23$.",
+      "For many distributions, the standard deviation is roughly $0.7$ to $1.5$ times the IQR, depending on spread.",
+      "But SD is generally less than or comparable to IQR for bounded data.",
+      "Check options: 10 is plausible. 30, 50, 100 are unlikely as they would imply much larger spreads than indicated by the quartiles."
+    ],
+    "solution_steps_zh": [
+      "四分位距 (IQR) $= 48 - 25 = 23$。",
+      "標準差通常與 IQR 量級相當或略小。10 是合理的選擇。"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_sa_132",
+    "type": "short_answer",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": [
+      "math_geo_mensuration"
+    ],
+    "marks": 12,
+    "difficulty": 7,
+    "paper": 1,
+    "section": "A",
+    "question_en": "A solid consists of a hemisphere and a right circular cone with a common base of radius 6 cm. The total height of the solid is 14 cm.\n(a) Find the total volume of the solid in terms of $\\pi$. (6 marks)\n(b) Find the total surface area of the solid correct to 3 significant figures. (6 marks)",
+    "question_zh": "一個立體由一個半球體和一個圓錐體組成，兩者共用一個半徑為 6 cm 的底。立體的總高度為 14 cm。\n(a) 以 $\\pi$ 表示立體的總體積。(6分)\n(b) 求立體的總表面積，準確至三位有效數字。(6分)",
+    "correct_answer": "Volume = 240*pi cm^3; Surface Area = 415 cm^2",
+    "solution_steps_en": [
+      "(a) Height of hemisphere = radius = 6 cm.",
+      "Height of cone $h = 14 - 6 = 8$ cm.",
+      "Volume of hemisphere $= \\frac{2}{3}\\pi(6^3) = \\frac{2}{3}\\pi(216) = 144\\pi$.",
+      "Volume of cone $= \\frac{1}{3}\\pi(6^2)(8) = \\frac{1}{3}\\pi(36)(8) = 96\\pi$.",
+      "Total Volume $= 144\\pi + 96\\pi = 240\\pi$ cm$^3$.",
+      "(b) Slant height of cone $l = \\sqrt{6^2 + 8^2} = 10$ cm.",
+      "Curved surface area of hemisphere $= 2\\pi(6^2) = 72\\pi$.",
+      "Curved surface area of cone $= \\pi(6)(10) = 60\\pi$.",
+      "Total Surface Area $= 72\\pi + 60\\pi = 132\\pi \\approx 414.69 \\approx 415$ cm$^2$."
+    ],
+    "solution_steps_zh": [
+      "(a) 半球高 6 cm，圓錐高 8 cm。體積 $= 144\\pi + 96\\pi = 240\\pi$ cm$^3$。",
+      "(b) 側面高 $l = 10$ cm。表面積 $= 2\\pi r^2 + \\pi rl = 72\\pi + 60\\pi = 132\\pi \\approx 415$ cm$^2$。"
+    ],
+    "status": "approved"
+  },
+  { 
+    "id": "q37_replacement", 
+    "topic_id": "math_alg_polynomials", 
+    "subject": "maths", 
+    "level": 7, 
+    "type": "short_answer", 
+    "marks": 12, 
+    "question_en": "Let $f(x) = 2x^3 + ax^2 + bx - 12$, where $a$ and $b$ are constants. When $f(x)$ is divided by $x-2$, the remainder is $-30$. When $f(x)$ is divided by $x+1$, the remainder is $12$.\n\n(a) Find the values of $a$ and $b$. (4 marks)\n\n(b) Is $x-3$ a factor of $f(x)$? Explain your answer. (2 marks)\n\n(c) Solve the equation $f(x) = 0$. (3 marks)\n\n(d) Using the results of (c), solve the equation $2\\left(\\frac{y-1}{y}\\right)^3 + 3\\left(\\frac{y-1}{y}\\right)^2 - 23\\left(\\frac{y-1}{y}\\right) - 12 = 0$. (3 marks)", 
+    "question_zh": "設 $f(x) = 2x^3 + ax^2 + bx - 12$，其中 $a$ 及 $b$ 為常數。當 $f(x)$ 除以 $x-2$ 時，餘數為 $-30$。當 $f(x)$ 除以 $x+1$ 時，餘數為 $12$。\n\n(a) 求 $a$ 及 $b$ 的值。(4 分)\n\n(b) $x-3$ 是否 $f(x)$ 的因式？試解釋你的答案。(2 分)\n\n(c) 解方程 $f(x) = 0$。(3 分)\n\n(d) 利用 (c) 的結果，解方程 $2\\left(\\frac{y-1}{y}\\right)^3 + 3\\left(\\frac{y-1}{y}\\right)^2 - 23\\left(\\frac{y-1}{y}\\right) - 12 = 0$。(3 分)", 
+    "answer": "a = 3, b = -23; Yes; x = 3, -1/2, -4; y = -1/2, 2/3, 1/5", 
+    "correct_answer": "a = 3, b = -23; Yes; x = 3, -1/2, -4; y = -1/2, 2/3, 1/5", 
+    "solution_steps_en": [ 
+      "By Remainder Theorem, $f(2) = -30$ and $f(-1) = 12$.", 
+      "For $x=2$: $2(2)^3 + a(2)^2 + b(2) - 12 = -30 \\Rightarrow 16 + 4a + 2b - 12 = -30 \\Rightarrow 4a + 2b = -34 \\Rightarrow 2a + b = -17$ --- (1)", 
+      "For $x=-1$: $2(-1)^3 + a(-1)^2 + b(-1) - 12 = 12 \\Rightarrow -2 + a - b - 12 = 12 \\Rightarrow a - b = 26$ --- (2)", 
+      "Solving (1) and (2): $(2a + b) + (a - b) = -17 + 26 \\Rightarrow 3a = 9 \\Rightarrow a = 3$. Substitute into (2): $3 - b = 26 \\Rightarrow b = -23$.", 
+      "For part (b), check $f(3)$: $f(3) = 2(3)^3 + 3(3)^2 - 23(3) - 12 = 54 + 27 - 69 - 12 = 81 - 81 = 0$. Since $f(3) = 0$, $x-3$ is a factor of $f(x)$ by Factor Theorem.", 
+      "For part (c), perform polynomial division: $f(x) = (x-3)(2x^2 + 9x + 4)$. Factorizing the quadratic: $f(x) = (x-3)(2x+1)(x+4)$. Setting $f(x) = 0$, we get $x = 3, x = -1/2$ or $x = -4$.", 
+      "For part (d), substitute $x = \\frac{y-1}{y}$ into the equation. From (c), we have $\\frac{y-1}{y} = 3, -1/2, -4$.", 
+      "Case 1: $\\frac{y-1}{y} = 3 \\Rightarrow y-1 = 3y \\Rightarrow 2y = -1 \\Rightarrow y = -1/2$.", 
+      "Case 2: $\\frac{y-1}{y} = -1/2 \\Rightarrow 2y-2 = -y \\Rightarrow 3y = 2 \\Rightarrow y = 2/3$.", 
+      "Case 3: $\\frac{y-1}{y} = -4 \\Rightarrow y-1 = -4y \\Rightarrow 5y = 1 \\Rightarrow y = 1/5$." 
+    ], 
+    "solution_steps_zh": [ 
+      "根據餘式定理，$f(2) = -30$ 及 $f(-1) = 12$。", 
+      "當 $x=2$ 時：$2(2)^3 + a(2)^2 + b(2) - 12 = -30 \\Rightarrow 16 + 4a + 2b - 12 = -30 \\Rightarrow 4a + 2b = -34 \\Rightarrow 2a + b = -17$ --- (1)", 
+      "當 $x=-1$ 時：$2(-1)^3 + a(-1)^2 + b(-1) - 12 = 12 \\Rightarrow -2 + a - b - 12 = 12 \\Rightarrow a - b = 26$ --- (2)", 
+      "解 (1) 及 (2)：$(2a + b) + (a - b) = -17 + 26 \\Rightarrow 3a = 9 \\Rightarrow a = 3$。代入 (2)：$3 - b = 26 \\Rightarrow b = -23$。", 
+      "(b) 部分，檢查 $f(3)$：$f(3) = 2(3)^3 + 3(3)^2 - 23(3) - 12 = 54 + 27 - 69 - 12 = 81 - 81 = 0$。由於 $f(3) = 0$，根據因式定理，$x-3$ 是 $f(x)$ 的因式。", 
+      "(c) 部分，進行多項式除法：$f(x) = (x-3)(2x^2 + 9x + 4)$。因式分解二次項：$f(x) = (x-3)(2x+1)(x+4)$。設 $f(x) = 0$，得 $x = 3, x = -1/2$ 或 $x = -4$。", 
+      "(d) 部分，設 $x = \\frac{y-1}{y}$ 代入方程。由 (c) 的結果得 $\\frac{y-1}{y} = 3, -1/2, -4$。", 
+      "情形 1：$\\frac{y-1}{y} = 3 \\Rightarrow y-1 = 3y \\Rightarrow 2y = -1 \\Rightarrow y = -1/2$。", 
+      "情形 2：$\\frac{y-1}{y} = -1/2 \\Rightarrow 2y-2 = -y \\Rightarrow 3y = 2 \\Rightarrow y = 2/3$。", 
+      "情形 3：$\\frac{y-1}{y} = -4 \\Rightarrow y-1 = -4y \\Rightarrow 5y = 1 \\Rightarrow y = 1/5$。" 
+    ], 
+    "diagram_json": null 
+  }
+,
+  {
+    "id": "ct_mcq_136",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": [
+      "math_alg_variations"
+    ],
+    "marks": 1,
+    "difficulty": 7,
+    "paper": 2,
+    "section": "B",
+    "question_en": "If $x$ varies directly as $y^3$ and inversely as $z^2$. If $y$ is doubled and $z$ is halved, then $x$ will be...",
+    "question_zh": "若 $x$ 隨 $y^3$ 正變且隨 $z^2$ 反變。若 $y$ 增加一倍且 $z$ 減少一半，則 $x$ 會變為...",
+    "options": [
+      "A. 16 times original",
+      "B. 32 times original",
+      "C. 8 times original",
+      "D. 2 times original"
+    ],
+    "correct_answer": "B",
+    "solution_steps_en": [
+      "$x = k \\frac{y^3}{z^2}$.",
+      "New $x' = k \\frac{(2y)^3}{(0.5z)^2} = k \\frac{8y^3}{0.25z^2} = \\frac{8}{0.25} \\cdot k \\frac{y^3}{z^2} = 32x$."
+    ],
+    "solution_steps_zh": [
+      "$x' = \\frac{2^3}{0.5^2} x = \\frac{8}{0.25} x = 32x$。"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_sa_133",
+    "type": "short_answer",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": [
+      "math_alg_apgp"
+    ],
+    "marks": 11,
+    "difficulty": 7,
+    "paper": 1,
+    "section": "A",
+    "question_en": "The first term of an arithmetic sequence is 5 and the common difference is 4. Find the least number of terms $n$ such that the sum of the first $n$ terms exceeds 2000.",
+    "question_zh": "等差數列的首項為 5，公差為 4。求最小項數 $n$，使得首 $n$ 項之和超過 2000。",
+    "correct_answer": "n = 31",
+    "solution_steps_en": [
+      "$S_n = \\frac{n}{2}[2a + (n-1)d] = \\frac{n}{2}[2(5) + (n-1)4] = \\frac{n}{2}[10 + 4n - 4] = \\frac{n}{2}[4n + 6] = n(2n + 3)$.",
+      "Condition: $2n^2 + 3n > 2000$.",
+      "Solve $2n^2 + 3n - 2000 = 0$.",
+      "$n = \\frac{-3 \\pm \\sqrt{3^2 - 4(2)(-2000)}}{2(2)} = \\frac{-3 \\pm \\sqrt{9 + 16000}}{4} = \\frac{-3 \\pm 126.52}{4}$.",
+      "$n \\approx \\frac{123.52}{4} \\approx 30.88$.",
+      "Since $n$ must be an integer, $n = 31$."
+    ],
+    "solution_steps_zh": [
+      "$S_n = n(2n+3) > 2000$。",
+      "解 $2n^2 + 3n - 2000 = 0 \\Rightarrow n \\approx 30.88$。",
+      "項數 $n = 31$。"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_137",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": [
+      "math_alg_complex_numbers"
+    ],
+    "marks": 1,
+    "difficulty": 7,
+    "paper": 2,
+    "section": "B",
+    "question_en": "If $(1+i)^n = (1-i)^n$, where $n$ is a positive integer, find the smallest possible value of $n$.",
+    "question_zh": "若 $(1+i)^n = (1-i)^n$，其中 $n$ 為正整數，求 $n$ 的最小可能值。",
+    "options": [
+      "A. 1",
+      "B. 2",
+      "C. 4",
+      "D. 8"
+    ],
+    "correct_answer": "C",
+    "solution_steps_en": [
+      "Divide: $\\left(\\frac{1+i}{1-i}\\right)^n = 1$.",
+      "Note $\\frac{1+i}{1-i} = \\frac{(1+i)^2}{1^2 - i^2} = \\frac{2i}{2} = i$.",
+      "We need $i^n = 1$.",
+      "Smallest positive integer $n$ is 4."
+    ],
+    "solution_steps_zh": [
+      "$\\left(\\frac{1+i}{1-i}\\right)^n = 1 \\Rightarrow i^n = 1$。",
+      "最小正整數 $n = 4$。"
+    ],
+    "status": "approved"
+  }
+]

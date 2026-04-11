@@ -23,6 +23,20 @@ OUTPUT JSON:
         "grammar": 0-7,
         "total": 0-28
     },
+    "word_analysis": [
+        { 
+            "word": "climate", 
+            "status": "correct",
+            "ipa_actual": "...",
+            "advice": null 
+        },
+        { 
+            "word": "crisis", 
+            "status": "incorrect", 
+            "ipa_actual": "...",
+            "advice": "Ensure the /s/ at the end is clearly articulated; don't swallow the final consonant." 
+        }
+    ],
     "feedback": {
         "summary": "Expert assessment of the overall delivery",
         "phoneme_issues": ["Specific sounds to practice, e.g., /th/ clusters"],

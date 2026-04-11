@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { AvatarProvider } from './context/AvatarContext';
 import { AuthProvider } from './context/AuthContext';
 import { LanguageProvider } from './context/LanguageContext';
@@ -16,18 +16,14 @@ import LoginPage from './pages/LoginPage';
 import VerifyEmailSuccess from './pages/VerifyEmailSuccess';
 import AuthErrorPage from './pages/AuthErrorPage';
 
-import ExamPage from './pages/ExamPage';
-import WritingExamPage from './pages/WritingExamPage';
 import WritingResultPage from './pages/WritingResultPage';
-import WritingQuestPage from './pages/WritingQuestPage'; // Phase 23
+import WritingQuestPage from './pages/WritingQuestPage'; 
 import WritingQuestMenu from './pages/WritingQuestMenu';
-import WritingQuestBriefing from './components/writing/WritingQuestBriefing'; // Phase 24
-import ListeningExamPage from './pages/ListeningExamPage';
+import WritingQuestBriefing from './components/writing/WritingQuestBriefing';
 import ListeningResultPage from './pages/ListeningResultPage';
 import ListeningQuestMenu from './pages/ListeningQuestMenu'; // Phase 25 (Legacy)
 import ListeningBriefing from './components/listening/ListeningBriefing'; // Phase 25 (Refactor)
 import ListeningQuestPage from './pages/ListeningQuestPage'; // Phase 25
-import SpeakingExamPage from './pages/SpeakingExamPage';
 import SpeakingResultPage from './pages/SpeakingResultPage';
 import SpeakingDeliveryPage from './pages/SpeakingDeliveryPage';
 import SpeakingFlowPage from './pages/SpeakingFlowPage';
@@ -48,13 +44,17 @@ import EraserChallengePage from './pages/EraserChallengePage';
 import SpeakingInteractionPage from './pages/SpeakingInteractionPage';
 import MathsResultPage from './pages/MathsResultPage';
 import MathsDeepDivePage from './pages/MathsDeepDivePage';
-import MathsLearningPage from './pages/MathsLearningPage'; // NEW
-import MockExamPage from './pages/MockExamPage';
-import MathsExamPage from './pages/MathsExamPage';
-import WritingLabPage from './pages/WritingLabPage';
+import MathsLearningPage from './pages/MathsLearningPage'; 
+import MockExamLibrary from './pages/MockExamLibrary';
+import SpeakingPillarMenu from './pages/SpeakingPillarMenu';
 import QuestFactoryPage from './pages/QuestFactoryPage';
-
+import MasteryPage from './pages/MasteryPage';
+import MathsAbilityPage from './pages/MathsAbilityPage';
 import ErrorBoundary from './components/ErrorBoundary';
+
+import ScrollToTop from './components/utils/ScrollToTop';
+
+import SubscriptionPage from './pages/SubscriptionPage';
 
 function App() {
   return (
@@ -63,7 +63,18 @@ function App() {
         <LanguageProvider>
           <AvatarProvider>
             <BrowserRouter>
+              <ScrollToTop />
               <Routes>
+                <Route
+                  path="/subscription"
+                  element={
+                    <ProtectedRoute>
+                      <MainLayout>
+                        <SubscriptionPage />
+                      </MainLayout>
+                    </ProtectedRoute>
+                  }
+                />
                 <Route
                   path="/onboarding"
                   element={
@@ -135,27 +146,17 @@ function App() {
                   }
                 />
                 <Route
-                  path="/exam/:examId"
-                  element={
-                    <ProtectedRoute>
-                      <MainLayout>
-                        <ExamPage />
-                      </MainLayout>
-                    </ProtectedRoute>
-                  }
-                />
-                <Route
-                  path="/writing/exam/:examId"
-                  element={
-                    <ProtectedRoute>
-                      <MainLayout>
-                        <WritingExamPage />
-                      </MainLayout>
-                    </ProtectedRoute>
-                  }
-                />
-                <Route
                   path="/writing/result/:resultId"
+                  element={
+                    <ProtectedRoute>
+                      <MainLayout>
+                        <WritingResultPage />
+                      </MainLayout>
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/writing/result"
                   element={
                     <ProtectedRoute>
                       <MainLayout>
@@ -205,6 +206,16 @@ function App() {
                   }
                 />
                 <Route
+                  path="/speaking/menu"
+                  element={
+                    <ProtectedRoute>
+                      <MainLayout>
+                        <SpeakingPillarMenu />
+                      </MainLayout>
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
                   path="/listening/briefing/:questId"
                   element={
                     <ProtectedRoute>
@@ -218,19 +229,7 @@ function App() {
                   path="/listening/quest"
                   element={
                     <ProtectedRoute>
-                      <MainLayout>
-                        <ListeningQuestPage />
-                      </MainLayout>
-                    </ProtectedRoute>
-                  }
-                />
-                <Route
-                  path="/listening/exam/:examId"
-                  element={
-                    <ProtectedRoute>
-                      <MainLayout>
-                        <ListeningExamPage />
-                      </MainLayout>
+                      <ListeningQuestPage />
                     </ProtectedRoute>
                   }
                 />
@@ -240,26 +239,6 @@ function App() {
                     <ProtectedRoute>
                       <MainLayout>
                         <ReviewPage />
-                      </MainLayout>
-                    </ProtectedRoute>
-                  }
-                />
-                <Route
-                  path="/speaking/exam/:examId"
-                  element={
-                    <ProtectedRoute>
-                      <MainLayout>
-                        <SpeakingExamPage />
-                      </MainLayout>
-                    </ProtectedRoute>
-                  }
-                />
-                <Route
-                  path="/speaking-exam/:examId"
-                  element={
-                    <ProtectedRoute>
-                      <MainLayout>
-                        <SpeakingExamPage />
                       </MainLayout>
                     </ProtectedRoute>
                   }
@@ -355,45 +334,16 @@ function App() {
                   }
                 />
                 <Route
-                  path="/writing-lab"
-                  element={
-                    <ProtectedRoute>
-                      <MainLayout fullWidth={true}>
-                        <WritingLabPage />
-                      </MainLayout>
-                    </ProtectedRoute>
-                  }
-                />
-                <Route
                   path="/mock-exam"
                   element={
                     <ProtectedRoute>
-                      <MainLayout fullWidth={true}>
-                        <MockExamPage />
+                      <MainLayout>
+                        <MockExamLibrary />
                       </MainLayout>
                     </ProtectedRoute>
                   }
                 />
-                <Route
-                  path="/maths/learn/:topicId"
-                  element={
-                    <ProtectedRoute>
-                      <MainLayout fullWidth={true}>
-                        <MathsLearningPage />
-                      </MainLayout>
-                    </ProtectedRoute>
-                  }
-                />
-                <Route
-                  path="/maths/exam/:examId"
-                  element={
-                    <ProtectedRoute>
-                      <MainLayout fullWidth={true}>
-                        <MathsExamPage />
-                      </MainLayout>
-                    </ProtectedRoute>
-                  }
-                />
+                
                 <Route
                   path="/maths/exam/result/:examId"
                   element={
@@ -499,6 +449,16 @@ function App() {
                   }
                 />
                 <Route
+                  path="/speaking/delivery"
+                  element={
+                    <ProtectedRoute>
+                      <MainLayout fullWidth={true}>
+                        <SpeakingDeliveryPage />
+                      </MainLayout>
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
                   path="/speaking/quest/flow"
                   element={
                     <ProtectedRoute>
@@ -515,6 +475,30 @@ function App() {
                       </MainLayout>
                     </ProtectedRoute>
                   }
+                />
+                <Route
+                  path="/maths/ability"
+                  element={
+                    <ProtectedRoute>
+                      <MainLayout fullWidth={true}>
+                        <MathsAbilityPage />
+                      </MainLayout>
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/english/mastery"
+                  element={
+                    <ProtectedRoute>
+                      <MainLayout fullWidth={true}>
+                        <MasteryPage />
+                      </MainLayout>
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/maths/mastery"
+                  element={<Navigate to="/maths/ability" replace />}
                 />
               </Routes>
             </BrowserRouter>

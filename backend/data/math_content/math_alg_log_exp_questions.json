@@ -1,0 +1,764 @@
+[
+  {
+    "id": "log_exp_01",
+    "topic_id": "math_alg_logexp",
+    "subject": "maths",
+    "level": 3,
+    "type": "short_answer",
+    "marks": 2,
+    "question": "Evaluate $\\log_{2} 64$.",
+    "question_zh": "試求 $\\log_{2} 64$ 的值。",
+    "answer": "6",
+    "correct_answer": "6",
+    "solution_steps": [
+      "Let $x = \\log_{2} 64$.",
+      "By definition, $2^x = 64$.",
+      "Since $2^6 = 64$, we have $x = 6$."
+    ],
+    "solution_steps_zh": [
+      "設 $x = \\log_{2} 64$。",
+      "根據定義，$2^x = 64$。",
+      "由於 $2^6 = 64$，因此 $x = 6$。"
+    ]
+  },
+  {
+    "id": "log_exp_02",
+    "topic_id": "math_alg_logexp",
+    "subject": "maths",
+    "level": 3,
+    "type": "short_answer",
+    "marks": 2,
+    "question": "Evaluate $\\log_{3} 243$.",
+    "question_zh": "試求 $\\log_{3} 243$ 的值。",
+    "answer": "5",
+    "correct_answer": "5",
+    "solution_steps": [
+      "Let $x = \\log_{3} 243$.",
+      "By definition, $3^x = 243$.",
+      "Since $3^5 = 243$, we have $x = 5$."
+    ],
+    "solution_steps_zh": [
+      "設 $x = \\log_{3} 243$。",
+      "根據定義，$3^x = 243$。",
+      "由於 $3^5 = 243$，因此 $x = 5$。"
+    ]
+  },
+  {
+    "id": "log_exp_03",
+    "topic_id": "math_alg_logexp",
+    "subject": "maths",
+    "level": 3,
+    "type": "short_answer",
+    "marks": 2,
+    "question": "Evaluate $\\log_{5} 125$.",
+    "question_zh": "試求 $\\log_{5} 125$ 的值。",
+    "answer": "3",
+    "correct_answer": "3",
+    "solution_steps": [
+      "Let $x = \\log_{5} 125$.",
+      "By definition, $5^x = 125$.",
+      "Since $5^3 = 125$, we have $x = 3$."
+    ],
+    "solution_steps_zh": [
+      "設 $x = \\log_{5} 125$。",
+      "根據定義，$5^x = 125$。",
+      "由於 $5^3 = 125$，因此 $x = 3$。"
+    ]
+  },
+  {
+    "id": "log_exp_04",
+    "topic_id": "math_alg_logexp",
+    "subject": "maths",
+    "level": 3,
+    "type": "short_answer",
+    "marks": 2,
+    "question": "Evaluate $\\log_{10} 100000$.",
+    "question_zh": "試求 $\\log_{10} 100000$ 的值。",
+    "answer": "5",
+    "correct_answer": "5",
+    "solution_steps": [
+      "Let $x = \\log_{10} 100000$.",
+      "By definition, $10^x = 100000$.",
+      "Since $10^5 = 100000$, we have $x = 5$."
+    ],
+    "solution_steps_zh": [
+      "設 $x = \\log_{10} 100000$。",
+      "根據定義，$10^x = 100000$。",
+      "由於 $10^5 = 100000$，因此 $x = 5$。"
+    ]
+  },
+  {
+    "id": "log_exp_05",
+    "topic_id": "math_alg_logexp",
+    "subject": "maths",
+    "level": 3,
+    "type": "short_answer",
+    "marks": 3,
+    "question": "Simplify $\\log 12 + \\log 15 - \\log 18$.",
+    "question_zh": "簡化 $\\log 12 + \\log 15 - \\log 18$。",
+    "answer": "1",
+    "correct_answer": "1",
+    "solution_steps": [
+      "Using the properties of logarithms:",
+      "$\\log 12 + \\log 15 - \\log 18 = \\log\\left( \\frac{12 \\cdot 15}{18} \\right)$",
+      "$= \\log\\left( \\frac{180}{18} \\right) = \\log 10$",
+      "$= 1$"
+    ],
+    "solution_steps_zh": [
+      "利用對數性質：",
+      "$\\log 12 + \\log 15 - \\log 18 = \\log\\left( \\frac{12 \\cdot 15}{18} \\right)$",
+      "$= \\log\\left( \\frac{180}{18} \\right) = \\log 10$",
+      "$= 1$"
+    ]
+  },
+  {
+    "id": "log_exp_06",
+    "topic_id": "math_alg_logexp",
+    "subject": "maths",
+    "level": 3,
+    "type": "short_answer",
+    "marks": 3,
+    "question": "Simplify $\\log 16 + \\log 25 - \\log 4$.",
+    "question_zh": "簡化 $\\log 16 + \\log 25 - \\log 4$。",
+    "answer": "2",
+    "correct_answer": "2",
+    "solution_steps": [
+      "Using the properties of logarithms:",
+      "$\\log 16 + \\log 25 - \\log 4 = \\log\\left( \\frac{16 \\cdot 25}{4} \\right)$",
+      "$= \\log\\left( \\frac{400}{4} \\right) = \\log 100$",
+      "$= 2$"
+    ],
+    "solution_steps_zh": [
+      "利用對數性質：",
+      "$\\log 16 + \\log 25 - \\log 4 = \\log\\left( \\frac{16 \\cdot 25}{4} \\right)$",
+      "$= \\log\\left( \\frac{400}{4} \\right) = \\log 100$",
+      "$= 2$"
+    ]
+  },
+  {
+    "id": "log_exp_07",
+    "topic_id": "math_alg_logexp",
+    "subject": "maths",
+    "level": 3,
+    "type": "short_answer",
+    "marks": 3,
+    "question": "Given that $\\log_{2} 3 = k$, express $\\log_{3} 8$ in terms of $k$.",
+    "question_zh": "已知 $\\log_{2} 3 = k$，試以 $k$ 表示 $\\log_{3} 8$。",
+    "answer": "\\frac{3}{k}",
+    "correct_answer": "\\frac{3}{k}",
+    "solution_steps": [
+      "By Change of Base formula: $\\log_{3} 8 = \\frac{\\log_{2} 8}{\\log_{2} 3}$.",
+      "Since $8 = 2^3$, $\\log_{2} 8 = 3$.",
+      "Given $\\log_{2} 3 = k$, we have $\\log_{3} 8 = \\frac{3}{k}$."
+    ],
+    "solution_steps_zh": [
+      "利用換底公式：$\\log_{3} 8 = \\frac{\\log_{2} 8}{\\log_{2} 3}$。",
+      "由於 $8 = 2^3$，因此 $\\log_{2} 8 = 3$。",
+      "已知 $\\log_{2} 3 = k$，故 $\\log_{3} 8 = \\frac{3}{k}$。"
+    ]
+  },
+  {
+    "id": "log_exp_08",
+    "topic_id": "math_alg_logexp",
+    "subject": "maths",
+    "level": 3,
+    "type": "short_answer",
+    "marks": 3,
+    "question": "Given that $\\log_{5} 7 = m$, express $\\log_{7} 25$ in terms of $m$.",
+    "question_zh": "已知 $\\log_{5} 7 = m$，試以 $m$ 表示 $\\log_{7} 25$。",
+    "answer": "\\frac{2}{m}",
+    "correct_answer": "\\frac{2}{m}",
+    "solution_steps": [
+      "By Change of Base formula: $\\log_{7} 25 = \\frac{\\log_{5} 25}{\\log_{5} 7}$.",
+      "Since $25 = 5^2$, $\\log_{5} 25 = 2$.",
+      "Given $\\log_{5} 7 = m$, we have $\\log_{7} 25 = \\frac{2}{m}$."
+    ],
+    "solution_steps_zh": [
+      "利用換底公式：$\\log_{7} 25 = \\frac{\\log_{5} 25}{\\log_{5} 7}$。",
+      "由於 $25 = 5^2$，因此 $\\log_{5} 25 = 2$。",
+      "已知 $\\log_{5} 7 = m$，故 $\\log_{7} 25 = \\frac{2}{m}$。"
+    ]
+  },
+  {
+    "id": "log_exp_09",
+    "topic_id": "math_alg_logexp",
+    "subject": "maths",
+    "level": 4,
+    "type": "short_answer",
+    "marks": 3,
+    "question": "Solve $2^{x+3} = 8^{x-1}$.",
+    "question_zh": "解方程 $2^{x+3} = 8^{x-1}$。",
+    "answer": "3",
+    "correct_answer": "3",
+    "solution_steps": [
+      "Express both sides in the same base:",
+      "$2^{x+3} = (2^3)^{x-1}$",
+      "$2^{x+3} = 2^{3(x-1)}$",
+      "Equating exponents: $x+3=3x-3$",
+      "The solution is $x = 3$."
+    ],
+    "solution_steps_zh": [
+      "將兩邊化為相同底數：",
+      "$2^{x+3} = (2^3)^{x-1}$",
+      "$2^{x+3} = 2^{3(x-1)}$",
+      "令指數相等：$x+3=3x-3$",
+      "解得 $x = 3$。"
+    ]
+  },
+  {
+    "id": "log_exp_10",
+    "topic_id": "math_alg_logexp",
+    "subject": "maths",
+    "level": 4,
+    "type": "short_answer",
+    "marks": 3,
+    "question": "Solve $3^{x+5} = 27^{2x-1}$.",
+    "question_zh": "解方程 $3^{x+5} = 27^{2x-1}$。",
+    "answer": "1.6",
+    "correct_answer": "1.6",
+    "solution_steps": [
+      "Express both sides in the same base:",
+      "$3^{x+5} = (3^3)^{2x-1}$",
+      "$3^{x+5} = 3^{3(2x-1)}$",
+      "Equating exponents: $x+5=6x-3$",
+      "The solution is $x = 1.6$."
+    ],
+    "solution_steps_zh": [
+      "將兩邊化為相同底數：",
+      "$3^{x+5} = (3^3)^{2x-1}$",
+      "$3^{x+5} = 3^{3(2x-1)}$",
+      "令指數相等：$x+5=6x-3$",
+      "解得 $x = 1.6$。"
+    ]
+  },
+  {
+    "id": "log_exp_11",
+    "topic_id": "math_alg_logexp",
+    "subject": "maths",
+    "level": 4,
+    "type": "short_answer",
+    "marks": 3,
+    "question": "Solve $5^{x+4} = 25^{x-2}$.",
+    "question_zh": "解方程 $5^{x+4} = 25^{x-2}$。",
+    "answer": "8",
+    "correct_answer": "8",
+    "solution_steps": [
+      "Express both sides in the same base:",
+      "$5^{x+4} = (5^2)^{x-2}$",
+      "$5^{x+4} = 5^{2(x-2)}$",
+      "Equating exponents: $x+4=2x-4$",
+      "The solution is $x = 8$."
+    ],
+    "solution_steps_zh": [
+      "將兩邊化為相同底數：",
+      "$5^{x+4} = (5^2)^{x-2}$",
+      "$5^{x+4} = 5^{2(x-2)}$",
+      "令指數相等：$x+4=2x-4$",
+      "解得 $x = 8$。"
+    ]
+  },
+  {
+    "id": "log_exp_12",
+    "topic_id": "math_alg_logexp",
+    "subject": "maths",
+    "level": 4,
+    "type": "short_answer",
+    "marks": 3,
+    "question": "Solve $4^{x+1} = 32^{x-1}$.",
+    "question_zh": "解方程 $4^{x+1} = 32^{x-1}$。",
+    "answer": "7/3",
+    "correct_answer": "7/3",
+    "solution_steps": [
+      "Express both sides in the same base:",
+      "$4^{x+1} = (2^2)^{x+1} = 2^{2x+2}$",
+      "$32^{x-1} = (2^5)^{x-1} = 2^{5x-5}$",
+      "Equating exponents: $2x+2=5x-5$",
+      "The solution is $x = 7/3$."
+    ],
+    "solution_steps_zh": [
+      "將兩邊化為相同底數：",
+      "$4^{x+1} = (2^2)^{x+1} = 2^{2x+2}$",
+      "$32^{x-1} = (2^5)^{x-1} = 2^{5x-5}$",
+      "令指數相等：$2x+2=5x-5$",
+      "解得 $x = 7/3$。"
+    ]
+  },
+  {
+    "id": "log_exp_13",
+    "topic_id": "math_alg_logexp",
+    "subject": "maths",
+    "level": 4,
+    "type": "short_answer",
+    "marks": 4,
+    "question": "Solve $\\log_{10} (x) + \\log_{10} (x-3) = 1$.",
+    "question_zh": "解方程 $\\log_{10} (x) + \\log_{10} (x-3) = 1$。",
+    "answer": "10",
+    "correct_answer": "10",
+    "solution_steps": [
+      "Combine logarithms: $\\log_{10} [(x)(x-3)] = 1$.",
+      "Convert to exponential form: $(x)(x-3) = 10^{1} = 10$.",
+      "Expanding: $x^2-3x-10=0$",
+      "Factoring: $(x-5)(x+2)=0$",
+      "Checking validity ($f(x)>0$), we reject negative roots.",
+      "Solution is $x = 5$."
+    ],
+    "solution_steps_zh": [
+      "合併對數：$\\log_{10} [(x)(x-3)] = 1$。",
+      "化為指數形式：$(x)(x-3) = 10^{1} = 10$。",
+      "展開：$x^2-3x-10=0$",
+      "因式分解：$(x-5)(x+2)=0$",
+      "檢查有效性（真數必須大於 0），捨去負根。",
+      "解為 $x = 5$。"
+    ]
+  },
+  {
+    "id": "log_exp_14",
+    "topic_id": "math_alg_logexp",
+    "subject": "maths",
+    "level": 4,
+    "type": "short_answer",
+    "marks": 4,
+    "question": "Solve $\\log_{10} (x+1) + \\log_{10} (x-2) = 1$.",
+    "question_zh": "解方程 $\\log_{10} (x+1) + \\log_{10} (x-2) = 1$。",
+    "answer": "4",
+    "correct_answer": "4",
+    "solution_steps": [
+      "Combine logarithms: $\\log_{10} [(x+1)(x-2)] = 1$.",
+      "Convert to exponential form: $(x+1)(x-2) = 10^{1} = 10$.",
+      "Expanding: $x^2-x-2=10$",
+      "Factoring: $x^2-x-12=0$",
+      "Checking validity ($f(x)>0$), we reject negative roots.",
+      "Solution is $x = 4$."
+    ],
+    "solution_steps_zh": [
+      "合併對數：$\\log_{10} [(x+1)(x-2)] = 1$。",
+      "化為指數形式：$(x+1)(x-2) = 10^{1} = 10$。",
+      "展開：$x^2-x-2=10$",
+      "因式分解：$x^2-x-12=0$",
+      "檢查有效性（真數必須大於 0），捨去負根。",
+      "解為 $x = 4$。"
+    ]
+  },
+  {
+    "id": "log_exp_15",
+    "topic_id": "math_alg_logexp",
+    "subject": "maths",
+    "level": 4,
+    "type": "short_answer",
+    "marks": 4,
+    "question": "Solve $\\log_{2} (x) + \\log_{2} (x-2) = 3$.",
+    "question_zh": "解方程 $\\log_{2} (x) + \\log_{2} (x-2) = 3$。",
+    "answer": "4",
+    "correct_answer": "4",
+    "solution_steps": [
+      "Combine logarithms: $\\log_{2} [(x)(x-2)] = 3$.",
+      "Convert to exponential form: $(x)(x-2) = 2^{3} = 8$.",
+      "Expanding: $x^2-2x-8=0$",
+      "Factoring: $(x-4)(x+2)=0$",
+      "Checking validity ($f(x)>0$), we reject negative roots.",
+      "Solution is $x = 4$."
+    ],
+    "solution_steps_zh": [
+      "合併對數：$\\log_{2} [(x)(x-2)] = 3$。",
+      "化為指數形式：$(x)(x-2) = 2^{3} = 8$。",
+      "展開：$x^2-2x-8=0$",
+      "因式分解：$(x-4)(x+2)=0$",
+      "檢查有效性（真數必須大於 0），捨去負根。",
+      "解為 $x = 4$。"
+    ]
+  },
+  {
+    "id": "log_exp_16",
+    "topic_id": "math_alg_logexp",
+    "subject": "maths",
+    "level": 4,
+    "type": "short_answer",
+    "marks": 4,
+    "question": "Solve $\\log_{2} (x) + \\log_{2} (x+2) = 3$.",
+    "question_zh": "解方程 $\\log_{2} (x) + \\log_{2} (x+2) = 3$。",
+    "answer": "2",
+    "correct_answer": "2",
+    "solution_steps": [
+      "Combine logarithms: $\\log_{2} [(x)(x+2)] = 3$.",
+      "Convert to exponential form: $(x)(x+2) = 2^{3} = 8$.",
+      "Expanding: $x^2+2x-8=0$",
+      "Factoring: $(x-2)(x+4)=0$",
+      "Checking validity ($f(x)>0$), we reject negative roots.",
+      "Solution is $x = 2$."
+    ],
+    "solution_steps_zh": [
+      "合併對數：$\\log_{2} [(x)(x+2)] = 3$。",
+      "化為指數形式：$(x)(x+2) = 2^{3} = 8$。",
+      "展開：$x^2+2x-8=0$",
+      "因式分解：$(x-2)(x+4)=0$",
+      "檢查有效性（真數必須大於 0），捨去負根。",
+      "解為 $x = 2$。"
+    ]
+  },
+  {
+    "id": "log_exp_17",
+    "topic_id": "math_alg_logexp",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 4,
+    "question": "Solve $2^{2x} - 5(2^x) + 4 = 0$.",
+    "question_zh": "解方程 $2^{2x} - 5(2^x) + 4 = 0$。",
+    "answer": "0, 2",
+    "correct_answer": "0, 2",
+    "solution_steps": [
+      "Let $u = 2^x$. Then $u^2 - 5u + 4 = 0$.",
+      "By factoring, $(u - 4)(u - 1) = 0$.",
+      "So, $u = 4$ or $u = 1$.",
+      "Substitute back: $2^x = 4 \\Rightarrow x = 2$ or $2^x = 1 \\Rightarrow x = 0$."
+    ],
+    "solution_steps_zh": [
+      "設 $u = 2^x$。則 $u^2 - 5u + 4 = 0$。",
+      "經因式分解，$(u - 4)(u - 1) = 0$。",
+      "因此，$u = 4$ 或 $u = 1$。",
+      "代回：$2^x = 4 \\Rightarrow x = 2$ 或 $2^x = 1 \\Rightarrow x = 0$。"
+    ]
+  },
+  {
+    "id": "log_exp_18",
+    "topic_id": "math_alg_logexp",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 4,
+    "question": "Solve $3^{2x} - 12(3^x) + 27 = 0$.",
+    "question_zh": "解方程 $3^{2x} - 12(3^x) + 27 = 0$。",
+    "answer": "1, 2",
+    "correct_answer": "1, 2",
+    "solution_steps": [
+      "Let $u = 3^x$. Then $u^2 - 12u + 27 = 0$.",
+      "By factoring, $(u - 9)(u - 3) = 0$.",
+      "So, $u = 9$ or $u = 3$.",
+      "Substitute back: $3^x = 9 \\Rightarrow x = 2$ or $3^x = 3 \\Rightarrow x = 1$."
+    ],
+    "solution_steps_zh": [
+      "設 $u = 3^x$。則 $u^2 - 12u + 27 = 0$。",
+      "經因式分解，$(u - 9)(u - 3) = 0$。",
+      "因此，$u = 9$ 或 $u = 3$。",
+      "代回：$3^x = 9 \\Rightarrow x = 2$ 或 $3^x = 3 \\Rightarrow x = 1$。"
+    ]
+  },
+  {
+    "id": "log_exp_19",
+    "topic_id": "math_alg_logexp",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 4,
+    "question": "Solve $5^{2x} - 6(5^x) + 5 = 0$.",
+    "question_zh": "解方程 $5^{2x} - 6(5^x) + 5 = 0$。",
+    "answer": "0, 1",
+    "correct_answer": "0, 1",
+    "solution_steps": [
+      "Let $u = 5^x$. Then $u^2 - 6u + 5 = 0$.",
+      "By factoring, $(u - 5)(u - 1) = 0$.",
+      "So, $u = 5$ or $u = 1$.",
+      "Substitute back: $5^x = 5 \\Rightarrow x = 1$ or $5^x = 1 \\Rightarrow x = 0$."
+    ],
+    "solution_steps_zh": [
+      "設 $u = 5^x$。則 $u^2 - 6u + 5 = 0$。",
+      "經因式分解，$(u - 5)(u - 1) = 0$。",
+      "因此，$u = 5$ 或 $u = 1$。",
+      "代回：$5^x = 5 \\Rightarrow x = 1$ 或 $5^x = 1 \\Rightarrow x = 0$。"
+    ]
+  },
+  {
+    "id": "log_exp_20",
+    "topic_id": "math_alg_logexp",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 4,
+    "question": "Solve $2^{2x} - 7(2^x) - 8 = 0$.",
+    "question_zh": "解方程 $2^{2x} - 7(2^x) - 8 = 0$。",
+    "answer": "3",
+    "correct_answer": "3",
+    "solution_steps": [
+      "Let $u = 2^x$. Then $u^2 - 7u - 8 = 0$.",
+      "By factoring, $(u - 8)(u + 1) = 0$.",
+      "So, $u = 8$ or $u = -1$ (rejected since $2^x > 0$).",
+      "Substitute back: $2^x = 8 \\Rightarrow x = 3$."
+    ],
+    "solution_steps_zh": [
+      "設 $u = 2^x$。則 $u^2 - 7u - 8 = 0$。",
+      "經因式分解，$(u - 8)(u + 1) = 0$。",
+      "因此，$u = 8$ 或 $u = -1$（因 $2^x > 0$ 而捨去）。",
+      "代回：$2^x = 8 \\Rightarrow x = 3$。"
+    ]
+  },
+  {
+    "id": "log_exp_21",
+    "topic_id": "math_alg_logexp",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 4,
+    "question": "Solve $(\\log_{2} x)^2 - 3(\\log_{2} x) + 2 = 0$.",
+    "question_zh": "解方程 $(\\log_{2} x)^2 - 3(\\log_{2} x) + 2 = 0$。",
+    "answer": "2, 4",
+    "correct_answer": "2, 4",
+    "solution_steps": [
+      "Let $u = \\log_{2} x$. Then $u^2 - 3u + 2 = 0$.",
+      "By factoring, $(u - 2)(u - 1) = 0$.",
+      "So, $u = 2$ or $u = 1$.",
+      "Substitute back: $\\log_{2} x = 2 \\Rightarrow x = 4$ or $\\log_{2} x = 1 \\Rightarrow x = 2$."
+    ],
+    "solution_steps_zh": [
+      "設 $u = \\log_{2} x$。則 $u^2 - 3u + 2 = 0$。",
+      "經因式分解，$(u - 2)(u - 1) = 0$。",
+      "因此，$u = 2$ 或 $u = 1$。",
+      "代回：$\\log_{2} x = 2 \\Rightarrow x = 4$ 或 $\\log_{2} x = 1 \\Rightarrow x = 2$。"
+    ]
+  },
+  {
+    "id": "log_exp_22",
+    "topic_id": "math_alg_logexp",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 4,
+    "question": "Solve $(\\log_{3} x)^2 - 4(\\log_{3} x) + 3 = 0$.",
+    "question_zh": "解方程 $(\\log_{3} x)^2 - 4(\\log_{3} x) + 3 = 0$。",
+    "answer": "3, 27",
+    "correct_answer": "3, 27",
+    "solution_steps": [
+      "Let $u = \\log_{3} x$. Then $u^2 - 4u + 3 = 0$.",
+      "By factoring, $(u - 3)(u - 1) = 0$.",
+      "So, $u = 3$ or $u = 1$.",
+      "Substitute back: $\\log_{3} x = 3 \\Rightarrow x = 27$ or $\\log_{3} x = 1 \\Rightarrow x = 3$."
+    ],
+    "solution_steps_zh": [
+      "設 $u = \\log_{3} x$。則 $u^2 - 4u + 3 = 0$。",
+      "經因式分解，$(u - 3)(u - 1) = 0$。",
+      "因此，$u = 3$ 或 $u = 1$。",
+      "代回：$\\log_{3} x = 3 \\Rightarrow x = 27$ 或 $\\log_{3} x = 1 \\Rightarrow x = 3$。"
+    ]
+  },
+  {
+    "id": "log_exp_23",
+    "topic_id": "math_alg_logexp",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 4,
+    "question": "Solve $(\\log_{10} x)^2 - 1(\\log_{10} x) - 2 = 0$.",
+    "question_zh": "解方程 $(\\log_{10} x)^2 - 1(\\log_{10} x) - 2 = 0$。",
+    "answer": "0.1, 100",
+    "correct_answer": "0.1, 100",
+    "solution_steps": [
+      "Let $u = \\log_{10} x$. Then $u^2 - u - 2 = 0$.",
+      "By factoring, $(u - 2)(u + 1) = 0$.",
+      "So, $u = 2$ or $u = -1$.",
+      "Substitute back: $\\log_{10} x = 2 \\Rightarrow x = 100$ or $\\log_{10} x = -1 \\Rightarrow x = 0.1$."
+    ],
+    "solution_steps_zh": [
+      "設 $u = \\log_{10} x$。則 $u^2 - u - 2 = 0$。",
+      "經因式分解，$(u - 2)(u + 1) = 0$。",
+      "因此，$u = 2$ 或 $u = -1$。",
+      "代回：$\\log_{10} x = 2 \\Rightarrow x = 100$ 或 $\\log_{10} x = -1 \\Rightarrow x = 0.1$。"
+    ]
+  },
+  {
+    "id": "log_exp_24",
+    "topic_id": "math_alg_logexp",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 4,
+    "question": "Solve $(\\log_{5} x)^2 - 5(\\log_{5} x) + 6 = 0$.",
+    "question_zh": "解方程 $(\\log_{5} x)^2 - 5(\\log_{5} x) + 6 = 0$。",
+    "answer": "25, 125",
+    "correct_answer": "25, 125",
+    "solution_steps": [
+      "Let $u = \\log_{5} x$. Then $u^2 - 5u + 6 = 0$.",
+      "By factoring, $(u - 3)(u - 2) = 0$.",
+      "So, $u = 3$ or $u = 2$.",
+      "Substitute back: $\\log_{5} x = 3 \\Rightarrow x = 125$ or $\\log_{5} x = 2 \\Rightarrow x = 25$."
+    ],
+    "solution_steps_zh": [
+      "設 $u = \\log_{5} x$。則 $u^2 - 5u + 6 = 0$。",
+      "經因式分解，$(u - 3)(u - 2) = 0$。",
+      "因此，$u = 3$ 或 $u = 2$。",
+      "代回：$\\log_{5} x = 3 \\Rightarrow x = 125$ 或 $\\log_{5} x = 2 \\Rightarrow x = 25$。"
+    ]
+  },
+  {
+    "id": "log_exp_25",
+    "topic_id": "math_alg_logexp",
+    "subject": "maths",
+    "level": 7,
+    "type": "short_answer",
+    "marks": 4,
+    "question": "The graph of $\\log_{3} y$ against $x$ is a straight line passing through $(0, 2)$ and $(2, 6)$. Express $y$ in terms of $x$ in the form $y = ab^x$.",
+    "question_zh": "$\\log_{3} y$ 對 $x$ 的圖像是一條穿過 $(0, 2)$ 及 $(2, 6)$ 的直線。試以 $y = ab^x$ 的形式將 $y$ 表示為 $x$ 的函數。",
+    "answer": "y = 9 \\cdot 9^x",
+    "correct_answer": "y = 9 \\cdot 9^x",
+    "solution_steps": [
+      "The equation of the line is $\\log_{3} y = mx + c$.",
+      "Slope $m = \\frac{6 - 2}{2 - 0} = 2$.",
+      "Intercept $c = 2$.",
+      "So, $\\log_{3} y = 2x + 2$.",
+      "Rewrite in exponential form: $y = 3^{2x + 2}$.",
+      "$y = 3^2 \\cdot (3^2)^x$.",
+      "The required form is $y = 9 \\cdot 9^x$."
+    ],
+    "solution_steps_zh": [
+      "直線方程為 $\\log_{3} y = mx + c$。",
+      "斜率 $m = \\frac{6 - 2}{2 - 0} = 2$。",
+      "截距 $c = 2$。",
+      "因此，$\\log_{3} y = 2x + 2$。",
+      "改寫為指數形式：$y = 3^{2x + 2}$。",
+      "$y = 3^2 \\cdot (3^2)^x$。",
+      "所求之形式為 $y = 9 \\cdot 9^x$。"
+    ]
+  },
+  {
+    "id": "log_exp_26",
+    "topic_id": "math_alg_logexp",
+    "subject": "maths",
+    "level": 7,
+    "type": "short_answer",
+    "marks": 4,
+    "question": "The graph of $\\log_{2} y$ against $x$ is a straight line passing through $(0, 1)$ and $(3, 7)$. Express $y$ in terms of $x$ in the form $y = ab^x$.",
+    "question_zh": "$\\log_{2} y$ 對 $x$ 的圖像是一條穿過 $(0, 1)$ 及 $(3, 7)$ 的直線。試以 $y = ab^x$ 的形式將 $y$ 表示為 $x$ 的函數。",
+    "answer": "y = 2 \\cdot 4^x",
+    "correct_answer": "y = 2 \\cdot 4^x",
+    "solution_steps": [
+      "The equation of the line is $\\log_{2} y = mx + c$.",
+      "Slope $m = \\frac{7 - 1}{3 - 0} = 2$.",
+      "Intercept $c = 1$.",
+      "So, $\\log_{2} y = 2x + 1$.",
+      "Rewrite in exponential form: $y = 2^{2x + 1}$.",
+      "$y = 2^1 \\cdot (2^2)^x$.",
+      "The required form is $y = 2 \\cdot 4^x$."
+    ],
+    "solution_steps_zh": [
+      "直線方程為 $\\log_{2} y = mx + c$。",
+      "斜率 $m = \\frac{7 - 1}{3 - 0} = 2$。",
+      "截距 $c = 1$。",
+      "因此，$\\log_{2} y = 2x + 1$。",
+      "改寫為指數形式：$y = 2^{2x + 1}$。",
+      "$y = 2^1 \\cdot (2^2)^x$。",
+      "所求之形式為 $y = 2 \\cdot 4^x$。"
+    ]
+  },
+  {
+    "id": "log_exp_27",
+    "topic_id": "math_alg_logexp",
+    "subject": "maths",
+    "level": 7,
+    "type": "short_answer",
+    "marks": 4,
+    "question": "The graph of $\\log_{10} y$ against $x$ is a straight line passing through $(0, 2)$ and $(1, 2.5)$. Express $y$ in terms of $x$ in the form $y = ab^x$.",
+    "question_zh": "$\\log_{10} y$ 對 $x$ 的圖像是一條穿過 $(0, 2)$ 及 $(1, 2.5)$ 的直線。試以 $y = ab^x$ 的形式將 $y$ 表示為 $x$ 的函數。",
+    "answer": "y = 100 \\cdot (10^{0.5})^x",
+    "correct_answer": "y = 100 \\cdot (10^{0.5})^x",
+    "solution_steps": [
+      "The equation of the line is $\\log_{10} y = mx + c$.",
+      "Slope $m = \\frac{2.5 - 2}{1 - 0} = 0.5$.",
+      "Intercept $c = 2$.",
+      "So, $\\log_{10} y = 0.5x + 2$.",
+      "Rewrite in exponential form: $y = 10^{0.5x + 2} = 10^2 \\cdot (10^{0.5})^x$.",
+      "The required form is $y = 100 \\cdot (10^{0.5})^x$."
+    ],
+    "solution_steps_zh": [
+      "直線方程為 $\\log_{10} y = mx + c$。",
+      "斜率 $m = \\frac{2.5 - 2}{1 - 0} = 0.5$。",
+      "截距 $c = 2$。",
+      "因此，$\\log_{10} y = 0.5x + 2$。",
+      "改寫為指數形式：$y = 10^{0.5x + 2} = 10^2 \\cdot (10^{0.5})^x$。",
+      "因此 $y = 100 \\cdot (10^{0.5})^x$。"
+    ]
+  },
+  {
+    "id": "log_exp_28",
+    "topic_id": "math_alg_logexp",
+    "subject": "maths",
+    "level": 7,
+    "type": "short_answer",
+    "marks": 4,
+    "question": "The graph of $\\log_{5} y$ against $x$ is a straight line passing through $(0, 1)$ and $(1, 3)$. Express $y$ in terms of $x$ in the form $y = ab^x$.",
+    "question_zh": "$\\log_{5} y$ 對 $x$ 的圖像是一條穿過 $(0, 1)$ 及 $(1, 3)$ 的直線。試以 $y = ab^x$ 的形式將 $y$ 表示為 $x$ 的函數。",
+    "answer": "y = 5 \\cdot 25^x",
+    "correct_answer": "y = 5 \\cdot 25^x",
+    "solution_steps": [
+      "The equation of the line is $\\log_{5} y = mx + c$.",
+      "Slope $m = \\frac{3 - 1}{1 - 0} = 2$.",
+      "Intercept $c = 1$.",
+      "So, $\\log_{5} y = 2x + 1$.",
+      "Rewrite in exponential form: $y = 5^{2x + 1}$.",
+      "$y = 5^1 \\cdot (5^2)^x$.",
+      "The required form is $y = 5 \\cdot 25^x$."
+    ],
+    "solution_steps_zh": [
+      "直線方程為 $\\log_{5} y = mx + c$。",
+      "斜率 $m = \\frac{3 - 1}{1 - 0} = 2$。",
+      "截距 $c = 1$。",
+      "因此，$\\log_{5} y = 2x + 1$。",
+      "改寫為指數形式：$y = 5^{2x + 1}$。",
+      "$y = 5^1 \\cdot (5^2)^x$。",
+      "所求之形式為 $y = 5 \\cdot 25^x$。"
+    ]
+  },
+  {
+    "id": "log_exp_29",
+    "topic_id": "math_alg_logexp",
+    "subject": "maths",
+    "level": 7,
+    "type": "short_answer",
+    "marks": 4,
+    "question": "The graph of $\\log_{2} y$ against $x$ is a straight line passing through $(0, 4)$ and $(4, 0)$. Express $y$ in terms of $x$ in the form $y = ab^x$.",
+    "question_zh": "$\\log_{2} y$ 對 $x$ 的圖像是一條穿過 $(0, 4)$ 及 $(4, 0)$ 的直線。試以 $y = ab^x$ 的形式將 $y$ 表示為 $x$ 的函數。",
+    "answer": "y = 16 \\cdot (0.5)^x",
+    "correct_answer": "y = 16 \\cdot (0.5)^x",
+    "solution_steps": [
+      "The equation of the line is $\\log_{2} y = mx + c$.",
+      "Slope $m = \\frac{0 - 4}{4 - 0} = -1$.",
+      "Intercept $c = 4$.",
+      "So, $\\log_{2} y = -x + 4$.",
+      "Rewrite in exponential form: $y = 2^{-x + 4} = 2^4 \\cdot (0.5)^x$.",
+      "The required form is $y = 16 \\cdot (0.5)^x$."
+    ],
+    "solution_steps_zh": [
+      "直線方程為 $\\log_{2} y = mx + c$。",
+      "斜率 $m = \\frac{0 - 4}{4 - 0} = -1$。",
+      "截距 $c = 4$。",
+      "因此，$\\log_{2} y = -x + 4$。",
+      "改寫為指數形式：$y = 2^{-x + 4} = 2^4 \\cdot (0.5)^x$。",
+      "因此 $y = 16 \\cdot (0.5)^x$。"
+    ]
+  },
+  {
+    "id": "log_exp_30",
+    "topic_id": "math_alg_logexp",
+    "subject": "maths",
+    "level": 7,
+    "type": "short_answer",
+    "marks": 4,
+    "question": "The graph of $\\log_{4} y$ against $x$ is a straight line passing through $(0, 1)$ and $(2, 2)$. Express $y$ in terms of $x$ in the form $y = ab^x$.",
+    "question_zh": "$\\log_{4} y$ 對 $x$ 的圖像是一條穿過 $(0, 1)$ 及 $(2, 2)$ 的直線。試以 $y = ab^x$ 的形式將 $y$ 表示為 $x$ 的函數。",
+    "answer": "y = 4 \\cdot 2^x",
+    "correct_answer": "y = 4 \\cdot 2^x",
+    "solution_steps": [
+      "The equation of the line is $\\log_{4} y = mx + c$.",
+      "Slope $m = \\frac{2 - 1}{2 - 0} = 0.5$.",
+      "Intercept $c = 1$.",
+      "So, $\\log_{4} y = 0.5x + 1$.",
+      "Rewrite in exponential form: $y = 4^{0.5x + 1} = 4^1 \\cdot (4^{0.5})^x = 4 \\cdot 2^x$.",
+      "The required form is $y = 4 \\cdot 2^x$."
+    ],
+    "solution_steps_zh": [
+      "直線方程為 $\\log_{4} y = mx + c$。",
+      "斜率 $m = \\frac{2 - 1}{2 - 0} = 0.5$。",
+      "截距 $c = 1$。",
+      "因此，$\\log_{4} y = 0.5x + 1$。",
+      "改寫為指數形式：$y = 4^{0.5x + 1} = 4 \\cdot 2^x$。",
+      "因此 $y = 4 \\cdot 2^x$。"
+    ]
+  }
+]

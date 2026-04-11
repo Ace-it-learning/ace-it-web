@@ -1,0 +1,81 @@
+{
+    "is_modular": true,
+    "name": "Complex Numbers",
+    "name_zh": "複數",
+    "roadmap": "Master the algebra of complex numbers through the three Golden Rules: definition, power cycles, and the conjugate trick. This foundation will allow you to solve quadratic equations with negative discriminants and systems of complex equations, which are high-yield topics in DSE Section A.",
+    "roadmap_zh": "透過三大「黃金法則」掌握複數代數：定義、冪循環和共軛技巧。這些基礎將助你解決負判別式的二次方程及複數聯立方程，這些都是 DSE 甲部的高分題目。",
+    "learning_modules": [
+        {
+            "module_id": "MOD_01",
+            "title": "The Golden Rules",
+            "title_zh": "黃金法則",
+            "concepts": [
+                {
+                    "concept_id": "C01_DEFINITION",
+                    "name": "Rule 1: The Definition",
+                    "name_zh": "法一：定義",
+                    "formula": "i = \\sqrt{-1} \\implies i^2 = -1",
+                    "key_takeaway": "The imaginary unit i allows us to solve square roots of negative numbers. Always replace $i^2$ with $-1$ in your calculations.",
+                    "key_takeaway_zh": "虛數單位 i 讓我們能計算負數的平方根。在計算中，務必將 $i^2$ 替換為 $-1$。"
+                },
+                {
+                    "concept_id": "C02_POWER_CYCLE",
+                    "name": "Rule 2: The Power Cycle",
+                    "name_zh": "法二：冪循環",
+                    "formula": "i^1 = i, \\quad i^2 = -1, \\quad i^3 = -i, \\quad i^4 = 1",
+                    "key_takeaway": "The powers of i loop every 4 steps. To find $i^n$, divide $n$ by 4 and use the remainder: $i^1, i^2, i^3$, or $i^0 (1)$.",
+                    "key_takeaway_zh": "i 的冪每 4 步循環一次。要計算 $i^n$，將 $n$ 除以 4 並根據餘數判斷：$i^1, i^2, i^3$ 或 $i^0 (1)$。"
+                },
+                {
+                    "concept_id": "C03_CONJUGATE_TRICK",
+                    "name": "Rule 3: The Conjugate Trick",
+                    "name_zh": "法三：共軛技巧",
+                    "formula": "(a + bi)(a - bi) = a^2 + b^2",
+                    "key_takeaway": "Multiplying a complex number by its conjugate results in a pure REAL number. This is essential for dividing complex numbers.",
+                    "key_takeaway_zh": "將複數與其共軛複數相乘會得到一個純實數。這是進行複數除法的核心技巧。"
+                }
+            ]
+        },
+        {
+            "module_id": "MOD_02",
+            "title": "Advanced Applications",
+            "title_zh": "進階應用",
+            "concepts": [
+                {
+                    "concept_id": "C04_EQUALITY",
+                    "name": "Equality of Complex Numbers",
+                    "name_zh": "複數相等",
+                    "formula": "a + bi = c + di \\iff a = c, b = d",
+                    "key_takeaway": "DSE often tests this by providing one complex equation that hides two real equations. Set the real parts equal and the imaginary parts equal.",
+                    "key_takeaway_zh": "DSE 常透過一個隱藏兩個實數方程的複數方程來進行測試。將實部與實部、虛部與虛部分別設為相等即可求解。"
+                },
+                {
+                    "concept_id": "C05_QUADRATIC_ROOTS",
+                    "name": "Roots of Quadratic Equations",
+                    "name_zh": "二次方程的根",
+                    "formula": "x = \\frac{-b \\pm \\sqrt{\\Delta}}{2a}, \\quad \\Delta < 0 \\implies x = p \\pm qi",
+                    "key_takeaway": "When the discriminant is negative, the roots are conjugate complex numbers. This bridges quadratic algebra with complex numbers.",
+                    "key_takeaway_zh": "當判別式為負時，根為共軛複數。這將二次代數與複數聯繫起來。"
+                }
+            ],
+            "common_traps": [
+                {
+                    "trap": "The i^2 Sign Flip",
+                    "trap_zh": "i^2 正負號翻轉",
+                    "description": "Forgetting that i squared is negative one, which often leads to sign errors in multiplication.",
+                    "description_zh": "忘記 i 的平方是負一，這常導致乘法運算中的正負號錯誤。",
+                    "fix": "Always treat $i^2$ as a distinct step: replace with $(-1)$ and flip the sign of the coefficient immediately.",
+                    "fix_zh": "務必將 $i^2$ 視為獨立步驟：立即替換為 $(-1)$ 並翻轉係數的正負號。"
+                },
+                {
+                    "trap": "Missing Conjugate Brackets",
+                    "trap_zh": "漏掉共軛括號",
+                    "description": "Failing to wrap the numerator in brackets when multiplying by the conjugate.",
+                    "description_zh": "在乘以共軛複數時，忘記給分子加上括號。",
+                    "fix": "Express division as a fraction and apply the conjugate to both top and bottom with clear brackets.",
+                    "fix_zh": "將除法表示為分數，並在分子分母上使用清晰的括號來應用共軛技巧。"
+                }
+            ]
+        }
+    ]
+}

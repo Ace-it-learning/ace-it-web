@@ -391,12 +391,19 @@ router.get('/quests/search', requireAdmin, async (req, res) => {
         const snapshot = await query.limit(Number(limit)).get();
         let results = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
 
-        // Refine "Released" status in-memory if needed, or just handle it via metadata
+        // Refine "Released" status and apply bilingual field mapping for math
         results = results.map(q => {
             let currentStatus = 'Pending';
             if (q.is_approved) {
                 currentStatus = q.topic_id ? 'Approved and Released' : 'Approved';
             }
+
+            // Universal Bilingual Mapping for Math
+            if (q.subject?.toLowerCase() === 'maths') {
+                q.text = q.text || q.question || q.question_en;
+                q.text_zh = q.text_zh || q.question_zh;
+            }
+
             return { ...q, currentStatus };
         });
 
@@ -608,16 +615,30 @@ router.get('/maths/topic-audit', requireAdmin, async (req, res) => {
     const db = admin.firestore();
     try {
         console.log(`[AdminAudit] Fetching all questions for topic: ${topicId}`);
-        const snapshot = await db.collection('question_bank')
-            .where('topic_id', '==', topicId)
-            .get();
+        
+        // --- NEW: SPECIALIZED ROUTING FOR INTEGRATED QUESTS ---
+        let query;
+        if (topicId === 'integrated_challenge') {
+            query = db.collection('integrated_challenges');
+        } else {
+            query = db.collection('question_bank').where('topic_id', '==', topicId);
+        }
 
-        const questions = snapshot.docs.map(doc => ({ 
-            id: doc.id, 
-            ...doc.data(),
+        const snapshot = await query.get();
+
+        const questions = snapshot.docs.map(doc => {
+            const data = doc.data();
             // Ensure visual consistency for audit
-            text: doc.data().text || doc.data().question
-        }));
+            let text = data.text || data.question || data.question_en || data.content_en;
+            let text_zh = data.text_zh || data.question_zh || data.content_zh;
+            
+            return { 
+                id: doc.id, 
+                ...data,
+                text,
+                text_zh
+            };
+        });
         
         // Sort by level and date
         questions.sort((a, b) => {

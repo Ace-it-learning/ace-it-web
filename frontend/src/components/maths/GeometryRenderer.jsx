@@ -78,8 +78,8 @@ const GeometryRenderer = ({ data }) => {
             const pointMap = {};
             if (data_internal.points && Array.isArray(data_internal.points)) {
                 data_internal.points.forEach(p => {
-                    const px = mapX(p.pos[0]);
-                    const py = mapY(p.pos[1]);
+                    const px = mapX(p.pos?.[0] ?? p.x ?? 0);
+                    const py = mapY(p.pos?.[1] ?? p.y ?? 0);
                     if (p.label) pointMap[p.label] = { x: px, y: py };
 
                     elements.push({
@@ -100,7 +100,7 @@ const GeometryRenderer = ({ data }) => {
                     if (l.pts && l.pts.length >= 2) {
                         pts = l.pts.map(pName => pointMap[pName]).filter(p => !!p);
                     } else if (l.points && l.points.length >= 2) {
-                        pts = l.points.map(p => ({ x: mapX(p[0]), y: mapY(p[1]) }));
+                        pts = l.points.map(p => ({ x: mapX(p?.[0] ?? p?.x ?? 0), y: mapY(p?.[1] ?? p?.y ?? 0) }));
                     }
 
                     if (pts.length >= 2) {
@@ -122,8 +122,8 @@ const GeometryRenderer = ({ data }) => {
                 data_internal.circles.forEach(c => {
                     elements.push({
                         type: 'circle',
-                        cx: mapX(c.center[0]),
-                        cy: mapY(c.center[1]),
+                        cx: mapX(c.center?.[0] ?? c.cx ?? 0),
+                        cy: mapY(c.center?.[1] ?? c.cy ?? 0),
                         r: (c.radius || 1) * scale,
                         stroke: c.color || '#ff4d4d',
                         strokeDasharray: c.style === '--' ? '5,5' : undefined
@@ -136,8 +136,8 @@ const GeometryRenderer = ({ data }) => {
                 data_internal.labels.forEach(lbl => {
                     elements.push({
                         type: 'text',
-                        x: mapX(lbl.pos[0]),
-                        y: mapY(lbl.pos[1]),
+                        x: mapX(lbl.pos?.[0] ?? lbl.x ?? 0),
+                        y: mapY(lbl.pos?.[1] ?? lbl.y ?? 0),
                         text: lbl.text,
                         color: lbl.color || '#666'
                     });
@@ -153,9 +153,9 @@ const GeometryRenderer = ({ data }) => {
                         mid = pointMap[ang.pts[1]];
                         v2 = pointMap[ang.pts[2]];
                     } else if (ang.vertex && ang.p1 && ang.p2) {
-                        mid = { x: mapX(ang.vertex[0]), y: mapY(ang.vertex[1]) };
-                        v1 = { x: mapX(ang.p1[0]), y: mapY(ang.p1[1]) };
-                        v2 = { x: mapX(ang.p2[0]), y: mapY(ang.p2[1]) };
+                        mid = { x: mapX(ang.vertex?.[0] ?? ang.vertex?.x ?? 0), y: mapY(ang.vertex?.[1] ?? ang.vertex?.y ?? 0) };
+                        v1 = { x: mapX(ang.p1?.[0] ?? ang.p1?.x ?? 0), y: mapY(ang.p1?.[1] ?? ang.p1?.y ?? 0) };
+                        v2 = { x: mapX(ang.p2?.[0] ?? ang.p2?.x ?? 0), y: mapY(ang.p2?.[1] ?? ang.p2?.y ?? 0) };
                     }
 
                     if (mid && v1 && v2) {
@@ -393,7 +393,25 @@ const GeometryRenderer = ({ data }) => {
                     } else {
                         x1 = el.x1; y1 = el.y1; x2 = el.x2; y2 = el.y2;
                     }
-                    return <line key={idx} x1={x1} y1={y1} x2={x2} y2={y2} stroke={el.stroke || "currentColor"} strokeWidth={el.strokeWidth || 2} strokeDasharray={el.strokeDasharray} />;
+                    return (
+                        <g key={idx}>
+                            <line x1={x1} y1={y1} x2={x2} y2={y2} stroke={el.stroke || "currentColor"} strokeWidth={el.strokeWidth || 2} strokeDasharray={el.strokeDasharray} />
+                            {el.label && (
+                                <text 
+                                    x={(x1 + x2) / 2} 
+                                    y={(y1 + y2) / 2} 
+                                    dx={el.labelDx || 0} 
+                                    dy={el.labelDy || 0} 
+                                    textAnchor="middle" 
+                                    fontSize={el.fontSize || 14} 
+                                    fontWeight="bold" 
+                                    fill={el.stroke || "currentColor"}
+                                >
+                                    {el.label}
+                                </text>
+                            )}
+                        </g>
+                    );
                 }
                 case 'polyline': {
                     if (!el.points || !Array.isArray(el.points)) return null;
@@ -436,14 +454,15 @@ const GeometryRenderer = ({ data }) => {
                 case 'arc':
                 case 'sector': {
                     if (el.path) return <path key={idx} d={el.path} fill={el.fill || "none"} stroke={el.stroke || "currentColor"} strokeWidth={1} />;
-                    if (el.center && el.radius && el.startAngle !== undefined && el.endAngle !== undefined) {
-                        const mid = resolveCoords(el.center, elements);
+                    const radius = el.radius ?? el.r;
+                    if ((el.center || (el.cx !== undefined && el.cy !== undefined)) && radius && el.startAngle !== undefined && el.endAngle !== undefined) {
+                        const mid = el.center ? resolveCoords(el.center, elements) : { x: el.cx, y: el.cy };
                         const sRad = el.startAngle * (Math.PI / 180); const eRad = el.endAngle * (Math.PI / 180);
-                        const x1 = mid.x + el.radius * Math.cos(sRad); const y1 = mid.y - el.radius * Math.sin(sRad);
-                        const x2 = mid.x + el.radius * Math.cos(eRad); const y2 = mid.y - el.radius * Math.sin(eRad);
+                        const x1 = mid.x + radius * Math.cos(sRad); const y1 = mid.y - radius * Math.sin(sRad);
+                        const x2 = mid.x + radius * Math.cos(eRad); const y2 = mid.y - radius * Math.sin(eRad);
                         const largeFlag = Math.abs(el.endAngle - el.startAngle) > 180 ? 1 : 0;
                         const sweep = el.endAngle > el.startAngle ? 0 : 1;
-                        const d = ["M", x1, y1, "A", el.radius, el.radius, 0, largeFlag, sweep, x2, y2].join(" ");
+                        const d = ["M", x1, y1, "A", radius, radius, 0, largeFlag, sweep, x2, y2].join(" ");
 
                         // Render Label if exists
                         let labelEl = null;
@@ -451,7 +470,7 @@ const GeometryRenderer = ({ data }) => {
                             const midAngle = (el.startAngle + el.endAngle) / 2;
                             const midRad = midAngle * (Math.PI / 180);
                             // Push label further out than the arc
-                            const labelDist = el.radius * 1.5;
+                            const labelDist = radius * 1.5;
                             const lx = mid.x + labelDist * Math.cos(midRad);
                             const ly = mid.y - labelDist * Math.sin(midRad);
                             labelEl = <text x={lx} y={ly} fontSize={12} fontWeight="bold" fill="currentColor" textAnchor="middle">{el.label}</text>;
@@ -465,6 +484,23 @@ const GeometryRenderer = ({ data }) => {
                         );
                     }
                     return null;
+                }
+                case 'ellipse': {
+                    const cx = el.cx || (el.center ? resolveCoords(el.center, elements).x : 200);
+                    const cy = el.cy || (el.center ? resolveCoords(el.center, elements).y : 150);
+                    return (
+                        <ellipse 
+                            key={idx} 
+                            cx={cx} 
+                            cy={cy} 
+                            rx={el.rx || 50} 
+                            ry={el.ry || 20} 
+                            fill={el.fill || "none"} 
+                            stroke={el.stroke || "currentColor"} 
+                            strokeWidth={el.strokeWidth || 1}
+                            strokeDasharray={el.strokeDasharray}
+                        />
+                    );
                 }
                 case 'text':
                 case 'label':

@@ -6,6 +6,18 @@ const admin = require('firebase-admin');
 class WritingQuestService {
     constructor() {
         this.aiService = GenerativeAIService;
+        // Safety: Initialize default app if it doesn't exist (prevents crashes in scripts)
+        if (admin.apps.length === 0) {
+            try {
+                const serviceAccount = require('../../serviceAccountKey.json');
+                admin.initializeApp({
+                    credential: admin.credential.cert(serviceAccount)
+                });
+                console.log("[WritingQuestService] Safely initialized Firebase Admin.");
+            } catch (err) {
+                console.warn("[WritingQuestService] Firebase initialization skip/fail (likely running in restricted dev env).");
+            }
+        }
     }
 
     getSyllabus() {
@@ -170,7 +182,8 @@ class WritingQuestService {
         `;
 
         try {
-            const data = await this.aiService.generateJson(prompt);
+            const result = await this.aiService.generateJson(prompt);
+            const data = result.data;
             return {
                 intro_message: data.intro_message,
                 questions: [{ id: 1, text: data.next_question, hint: data.hint }],
@@ -233,7 +246,8 @@ class WritingQuestService {
         `;
 
         try {
-            return await this.aiService.generateJson(prompt);
+            const result = await this.aiService.generateJson(prompt);
+            return result.data;
         } catch (error) {
             console.error("[WritingQuest] Analyze Draft Error:", error);
             return {
@@ -269,7 +283,8 @@ class WritingQuestService {
         `;
 
         try {
-            return await this.aiService.generateJson(prompt);
+            const result = await this.aiService.generateJson(prompt);
+            return result.data;
         } catch (error) {
             console.error("[WritingQuest] Rewrite Error:", error);
             return { rewritten_text: text }; // Fallback to original
@@ -304,7 +319,8 @@ class WritingQuestService {
         `;
 
         try {
-            return await this.aiService.generateJson(prompt);
+            const result = await this.aiService.generateJson(prompt);
+            return result.data;
         } catch (error) {
             console.error("[WritingQuest] Generate Essay Error:", error);
             return { essay_content: `Error: Could not generate essay for ${topic}.` };
@@ -314,6 +330,22 @@ class WritingQuestService {
     /**
      * Comparison Feature: Compare student draft with a model answer
      */
+    /**
+     * Get all scenarios across all genres
+     */
+    async getAllScenarios() {
+        const uniqueScenarios = new Map();
+        for (const genreId in genrePrompts.prompts) {
+            const formatScenarios = await this.getFactoryTopics(genreId);
+            formatScenarios.forEach(s => {
+                if (s.id && !uniqueScenarios.has(s.id)) {
+                    uniqueScenarios.set(s.id, s);
+                }
+            });
+        }
+        return Array.from(uniqueScenarios.values());
+    }
+
     async compareEssays(content, topic, textType, targetLevel) {
         // 1. Generate the model essay first
         // Reuse points if we had them? In result step we might not have them easily, so generate holistically.
@@ -355,7 +387,7 @@ class WritingQuestService {
         try {
             const result = await this.aiService.generateJson(prompt);
             return {
-                ...result,
+                ...result.data,
                 model_essay: modelEssay // Use the one we generated
             };
         } catch (error) {
@@ -395,7 +427,8 @@ class WritingQuestService {
         `;
 
         try {
-            return await this.aiService.generateJson(prompt);
+            const result = await this.aiService.generateJson(prompt);
+            return result.data;
         } catch (error) {
             console.error("[WritingQuest] Connection Check Error:", error);
             return { rating: "ok", comment: "Transitions look okay.", suggested_transition: null };
@@ -435,7 +468,8 @@ class WritingQuestService {
         `;
 
         try {
-            return await this.aiService.generateJson(prompt);
+            const result = await this.aiService.generateJson(prompt);
+            return result.data;
         } catch (error) {
             console.error("[WritingQuest] Structure Review Error:", error);
             return {
@@ -448,75 +482,174 @@ class WritingQuestService {
     }
 
     /**
-     * Final Grading: Assess all 3 pillars (Content, Language, Organization)
+     * Real-time Analysis: Review Draft
+     * Performs a paragraph-by-paragraph analysis focusing on C-L-O.
+     */
+    async analyzeRealTime(content, topic, textType) {
+        const paragraphs = content.split(/\n\n|\n/).filter(p => p.trim().length > 0);
+        
+        const prompt = `
+            Role: expert HKDSE Writing AI Marker.
+            Task: Provide real-time structural and linguistic analysis for a "${textType}" on "${topic}".
+            
+            Content to analyze:
+            ${content}
+
+            Requirements:
+            1. **Paragraph-Level feedback**: Identify specific strengths and weaknesses in the current draft.
+            2. **C-L-O Status**: Estimate the current status of Content, Language, and Organization (0-100%).
+            3. **Genre Adherence**: Check if the "${textType}" must-haves are present.
+            4. **Vocabulary Boost**: Suggest 3-4 "Tier 3" sophisticated vocabulary replacements for simple words used in the text.
+
+            Output JSON (Bilingual):
+            {
+                "overall_feedback": { "en": "...", "zh": "..." },
+                "clo_status": {
+                    "content": 0-100,
+                    "language": 0-100,
+                    "organization": 0-100
+                },
+                "paragraph_analysis": [
+                    { 
+                        "para_index": 0, 
+                        "feedback": { "en": "...", "zh": "..." }, 
+                        "type": "strength" | "improvement" 
+                    }
+                ],
+                "vocabulary_upgrades": [
+                    { 
+                        "original": "...", 
+                        "suggestion": "...", 
+                        "explanation": { "en": "...", "zh": "..." } 
+                    }
+                ],
+                "checklist_status": [
+                    { 
+                        "item": { "en": "...", "zh": "..." }, 
+                        "status": "met" | "missing" | "partial" 
+                    }
+                ]
+            }
+
+            ABSOLUTE RULES:
+            - EXCLUSIVELY use Traditional Chinese (繁體中文) for all "zh" fields.
+            - ALL feedback must be bilingual.
+        `;
+
+        try {
+            const result = await this.aiService.generateJson(prompt);
+            return result.data;
+        } catch (error) {
+            console.error("[WritingQuest] Real-time Analysis Error:", error);
+            return {
+                overall_feedback: "Keep writing! Use the 'Review' button for deeper analysis.",
+                clo_status: { content: 50, language: 50, organization: 50 },
+                paragraph_analysis: [],
+                vocabulary_upgrades: [],
+                checklist_status: []
+            };
+        }
+    }
+
+    /**
+     * Final Grading: Assess all 3 pillars (Content, Language, Organization) + Predicted Level
      */
     async gradeFinalPiece(topic, textType, content) {
         const prompt = `
-            Role: Expert HKDSE Writing Examiner.
-            Task: Provide a PROFESSIONAL and DETAILED assessment of this student's work.
+            You are a Senior HKDSE English Marker (Level 5** Expert).
+            Task: Provide a PROFESSIONAL and DETAILED assessment of the student's work based on 2025 Level Descriptors.
             
             Topic: "${topic}"
             Text Type: "${textType}"
-            Student Content:
-            "${content}"
+            Student Content: "${content}"
 
-            Grading Criteria (HKDSE 1-7 Scale):
-            1. **Content**: Relevance, development of ideas, awareness of audience, role fulfillment.
-            2. **Language**: Accuracy, range of vocabulary, sentence structures, register, tone.
-            3. **Organization**: Coherence, logical progression, structural conventions of "${textType}".
+            Grading Criteria (HKDSE 1-7 Scale for Content, Language, Organization):
+            - **Content (C)**: Addressing prompt, idea development, depth.
+            - **Language (L)**: Vocabulary range, grammar accuracy, complexity.
+            - **Organization (O)**: Structure, cohesion, transitions.
 
-            HKDSE Micro-skills to Analyze (Deep Dive):
-            - Content: [Relevance, Development, Originality]
-            - Language: [Vocabulary Range, Collocations, Idiomatic Expressions, Register, Sentence Variety, Grammar, Punctuation]
-            - Organization: [Paragraph Structure, Transitions, Coherence]
+            Requirements:
+            1. Assign a score (1-7) for each pillar and predict an overall HKDSE Level.
+            2. Identify 3-4 "Hotspots" for improvement. 
+               - "original_phrase": EXACT substring from student work. Do not hallucinate punctuation.
+               - "improved_phrase": Refined version in DSE 5** style.
+               - "explanation": { "en": "...", "zh": "..." } - Linguistic reason for change.
+            3. MODEL ANSWER: Provide a FULL-LENGTH 5** model answer (450+ words).
+            4. HIGH SCORE TIPS: Provide 3 specific, tactical "DSE Tricks" or "Markers' Favorites" that would elevate this specific piece.
+            
+            ABSOLUTE RULES:
+            - ALL qualitative fields MUST contain both "en" and "zh" objects.
+            - LANGUAGE: EXCLUSIVELY use Traditional Chinese (繁體中文) for all "zh" fields.
+            - Ensure every feedback field is fully translated into Traditional Chinese.
+            - No preamble. No meta-commentary.
 
-            Feedback Requirements:
-            - **Be Specific**: Mention specific points or phrases used by the student.
-            - **Strict Micro-skill Tagging**: You MUST start the content of each Strength/Improvement paragraph with the specific micro-skill tag in brackets.
-            - **Examples of Tag usage**:
-                - **Strength:** [Language: Sentence Variety] The student demonstrates high proficiency by using an inverted conditional "Had I known..."
-                - **Improvement:** [Organization: Coherence] While the ideas are sound, the transitions between Para 2 and 3 are mechanical (e.g., "Secondly"). Use more sophisticated connectives like "Building upon this notion".
-                - **Strength:** [Content: Development] Excellent expansion on the environmental impact using the "What if?" technique.
-                - **Improvement:** [Language: Register] Phrases like "gonna" and "totally cool" are too informal for this Report format.
-            - **Split & Bold**: For EACH pillar, return TWO distinct paragraphs:
-                - Paragraph 1: **Strength:** [Tag] ...
-                - Paragraph 2: **Improvement:** [Tag] ...
-            - **Examiner's Summary**: A holistic 2-3 sentence overview of the piece's effectiveness.
-
-            Output JSON:
+            Output JSON Format (Strict):
             {
-                "overall_score": 1-7,
+                "predicted_level": "Level (e.g. 5, 5*, 5**)",
+                "overall_score": float,
                 "pillar_scores": {
-                    "content": { 
-                        "score": 1-7, 
-                        "feedback": "**Strength:** ... \\n\\n**Improvement:** ..." 
-                    },
-                    "language": { 
-                        "score": 1-7, 
-                        "feedback": "**Strength:** ... \\n\\n**Improvement:** ..." 
-                    },
-                    "organization": { 
-                        "score": 1-7, 
-                        "feedback": "**Strength:** ... \\n\\n**Improvement:** ..." 
-                    }
+                    "content": { "score": int, "feedback": { "en": "...", "zh": "..." } },
+                    "language": { "score": int, "feedback": { "en": "...", "zh": "..." } },
+                    "organization": { "score": int, "feedback": { "en": "...", "zh": "..." } }
                 },
-                "examiner_summary": "Professional overview here.",
-                "suggested_title": "..."
+                "examiner_summary": { "en": "...", "zh": "..." },
+                "improvement_goal": { "en": "...", "zh": "..." },
+                "exemplar_comparison": {
+                    "original_paragraph": "Student original text",
+                    "upgraded_paragraph": "Polished version",
+                    "hotspots": [
+                        { "original_phrase": "...", "improved_phrase": "...", "explanation": { "en": "...", "zh": "..." } }
+                    ]
+                },
+                "high_score_tips": [
+                    { "title": { "en": "...", "zh": "..." }, "description": { "en": "...", "zh": "..." } }
+                ],
+                "model_answer_5_star": "..."
             }
         `;
 
         try {
-            return await this.aiService.generateJson(prompt);
+            const result = await this.aiService.generateJson(prompt);
+            const data = result.data;
+
+            // Normalize internal pillar keys to lowercase for deterministic frontend mapping
+            const rawPillars = data.pillar_scores || data.pillarScores || {};
+            const normalizedPillars = {};
+            Object.keys(rawPillars).forEach(key => {
+                normalizedPillars[key.toLowerCase()] = rawPillars[key];
+            });
+
+            // Secondary normalization to ensure snake_case for frontend top-level fields
+            return {
+                ...data,
+                predicted_level: data.predicted_level || data.predictedLevel || "4",
+                overall_score: data.overall_score || data.overallScore || 4,
+                pillar_scores: Object.keys(normalizedPillars).length > 0 ? normalizedPillars : {
+                    content: { score: 4, feedback: { en: "Feedback loading...", zh: "正在載入評語..." } },
+                    language: { score: 4, feedback: { en: "Feedback loading...", zh: "正在載入評語..." } },
+                    organization: { score: 4, feedback: { en: "Feedback loading...", zh: "正在載入評語..." } }
+                }
+            };
         } catch (error) {
             console.error("[WritingQuest] Grading Error:", error);
             return {
+                predicted_level: "4",
                 overall_score: 4,
                 pillar_scores: {
-                    content: { score: 4, feedback: "**Strength:** Good effort. The student addresses the topic. \\n\\n**Improvement:** Development could be more detailed with concrete examples." },
-                    language: { score: 4, feedback: "**Strength:** Solid accuracy. Grammar is mostly correct. \\n\\n**Improvement:** Work on vocabulary range and sentence variety." },
-                    organization: { score: 4, feedback: "**Strength:** Clear structure. The essay is easy to follow. \\n\\n**Improvement:** Use more sophisticated connectives and transitions." }
+                    content: { score: 4, feedback: { en: "Solid attempt. Ensure all prompt requirements are fully addressed with deeper analysis.", zh: "表現尚可。請確保充分回應題目要求，並進行更深入的分析。" } },
+                    language: { score: 4, feedback: { en: "Generally clear but could benefit from more sophisticated vocabulary and grammatical structures.", zh: "表達基本清晰，但若能使用更豐富的詞彙和語法結構會更好。" } },
+                    organization: { score: 4, feedback: { en: "Coherent structure, but transitions could be smoother between complex ideas.", zh: "結構連貫，但在處理複雜觀點時，段落間的過渡可以更流暢。" } }
                 },
-                examiner_summary: "A consistent attempt that meets basic requirements, though further polish in language and detail would elevate the level."
+                examiner_summary: {
+                    en: "A satisfactory performance overall. Focus on elevating the sophistication of your arguments and linguistic range to reach higher DSE tiers.",
+                    zh: "整體表現令人滿意。建議專注於提升論點的深度以及語言運用的變化，以達到 DSE 更高等級。"
+                },
+                improvement_goal: {
+                    en: "Refine linguistic precision and depth.",
+                    zh: "應致力於優化語言的精確度及內容深度。"
+                },
+                exemplar_comparison: null,
+                model_answer_5_star: "High-level exemplars are available in the gallery. / 請參考範文清單以獲取 5** 範本。"
             };
         }
     }

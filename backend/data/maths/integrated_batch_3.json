@@ -1,0 +1,336 @@
+[
+  {
+    "id": "ct_mcq_121",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": [
+      "math_alg_log_exp"
+    ],
+    "marks": 1,
+    "difficulty": 7,
+    "paper": 2,
+    "section": "B",
+    "question_en": "Solve the equation $9^{x+1} - 10(3^x) + 1 = 0$.",
+    "question_zh": "解方程 $9^{x+1} - 10(3^x) + 1 = 0$。",
+    "options": [
+      "A. $x = 0$ or $x = -2$",
+      "B. $x = 1$ or $x = 1/9$",
+      "C. $x = 0$ or $x = -1$",
+      "D. $x = -1$ or $x = -2$"
+    ],
+    "correct_answer": "A",
+    "solution_steps_en": [
+      "Let $u = 3^x$. Then $9^{x+1} = 9 \\cdot (3^2)^x = 9u^2$.",
+      "Equation becomes $9u^2 - 10u + 1 = 0$.",
+      "$(9u - 1)(u - 1) = 0 \\Rightarrow u = 1/9$ or $u = 1$.",
+      "$3^x = 1/3^2 \\Rightarrow x = -2$.",
+      "$3^x = 1 \\Rightarrow x = 0$."
+    ],
+    "solution_steps_zh": [
+      "設 $u = 3^x$。則 $9^{x+1} = 9 \\cdot 9^x = 9u^2$。",
+      "方程變為 $9u^2 - 10u + 1 = 0$。",
+      "$(9u - 1)(u - 1) = 0 \\Rightarrow u = 1/9$ 或 $u = 1$。",
+      "$3^x = 3^{-2} \\Rightarrow x = -2$。",
+      "$3^x = 1 \\Rightarrow x = 0$。"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_122",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": [
+      "math_geo_coord"
+    ],
+    "marks": 1,
+    "difficulty": 7,
+    "paper": 2,
+    "section": "B",
+    "question_en": "Find the locus of a point $P(x,y)$ such that its distance from $(4,0)$ is twice its distance from the origin.",
+    "question_zh": "求點 $P(x,y)$ 的轨迹方程，使得 $P$ 到 $(4,0)$ 的距離是其到原點距離的兩倍。",
+    "options": [
+      "A. $3x^2 + 3y^2 + 8x - 16 = 0$",
+      "B. $3x^2 + 3y^2 - 8x + 16 = 0$",
+      "C. $x^2 + y^2 - 8x + 16 = 0$",
+      "D. $x^2 + y^2 + 8x - 16 = 0$"
+    ],
+    "correct_answer": "A",
+    "solution_steps_en": [
+      "Let $P = (x,y)$. Distance to $(4,0)$ is $\\sqrt{(x-4)^2 + y^2}$.",
+      "Distance to $(0,0)$ is $\\sqrt{x^2 + y^2}$.",
+      "Condition: $\\sqrt{(x-4)^2 + y^2} = 2\\sqrt{x^2 + y^2}$.",
+      "Square both sides: $(x-4)^2 + y^2 = 4(x^2 + y^2)$.",
+      "$x^2 - 8x + 16 + y^2 = 4x^2 + 4y^2$.",
+      "$3x^2 + 3y^2 + 8x - 16 = 0$."
+    ],
+    "solution_steps_zh": [
+      "設 $P = (x,y)$。到 $(4,0)$ 的距離為 $\\sqrt{(x-4)^2 + y^2}$。",
+      "到 $(0,0)$ 的距離為 $\\sqrt{x^2 + y^2}$。",
+      "條件：$\\sqrt{(x-4)^2 + y^2} = 2\\sqrt{x^2 + y^2}$。",
+      "兩邊平方：$(x-4)^2 + y^2 = 4(x^2 + y^2)$。",
+      "$x^2 - 8x + 16 + y^2 = 4x^2 + 4y^2$。",
+      "$3x^2 + 3y^2 + 8x - 16 = 0$。"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_sa_121",
+    "type": "short_answer",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": [
+      "math_trig_applications"
+    ],
+    "marks": 12,
+    "difficulty": 7,
+    "paper": 1,
+    "section": "B",
+    "question_en": "In a tetrahedron $VABC$, $ABC$ is an equilateral triangle with side 6 cm. $V$ is vertically above the center $G$ of the base. If $VG = 4$ cm:\n(a) Find the slant height of each triangular face. (4 marks)\n(b) Find the angle between a slant edge and the base. (4 marks)\n(c) Find the angle between a slant face and the base. (4 marks)",
+    "question_zh": "在四面體 $VABC$ 中，$ABC$ 是一個邊長為 6 cm 的等邊三角形。頂點 $V$ 位於底面中心 $G$ 的正上方。若 $VG = 4$ cm：\n(a) 求每個側面三角形的斜高。(4分)\n(b) 求側稜與底面之交角。(4分)\n(c) 求側面與底面之交角。(4分)",
+    "correct_answer": "Slant Height = 4.40 cm; angle_edge = 49.1 deg; angle_face = 66.6 deg",
+    "solution_steps_en": [
+      "(a) Let $M$ be midpoint of $BC$. $AM = 6 \\sin 60^\\circ = 3\\sqrt{3}$.",
+      "$G$ is centroid, so $GM = \\frac{1}{3}AM = \\sqrt{3}$.",
+      "Slant height $VM = \\sqrt{VG^2 + GM^2} = \\sqrt{4^2 + (\\sqrt{3})^2} = \\sqrt{19} \\approx 4.36$ cm. (Re-checking: $4^2+3=19$).",
+      "(b) $AG = \\frac{2}{3}AM = 2\\sqrt{3}$.",
+      "$\\tan(\\angle VAG) = \\frac{VG}{AG} = \\frac{4}{2\\sqrt{3}} = \\frac{2}{\\sqrt{3}}$.",
+      "$\\angle VAG = \\tan^{-1}(1.1547) \\approx 49.1^\\circ$.",
+      "(c) Use $\\triangle VGM$. $\\tan(\\angle VMG) = \\frac{VG}{GM} = \\frac{4}{\\sqrt{3}} \\approx 2.309$.",
+      "$\\angle VMG = \\tan^{-1}(2.309) \\approx 66.6^\\circ$."
+    ],
+    "solution_steps_zh": [
+      "(a) 設 $M$ 為 $BC$ 中點。$AM = 3\\sqrt{3}$，$GM = \\sqrt{3}$。側面斜高 $VM = \\sqrt{4^2+3} = \\sqrt{19} \\approx 4.36$ cm。",
+      "(b) $AG = 2\\sqrt{3}$。側稜與底面角 $\\theta = \\tan^{-1}(4/(2\\sqrt{3})) \\approx 49.1^\\circ$。",
+      "(c) 側面與底面角 $\\phi = \\tan^{-1}(4/\\sqrt{3}) \\approx 66.6^\\circ$。"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_123",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": [
+      "math_stat_dispersion"
+    ],
+    "marks": 1,
+    "difficulty": 6,
+    "paper": 2,
+    "section": "B",
+    "question_en": "The variance of a set of 10 numbers is 4. If a constant $k$ is added to each number, the new variance becomes...",
+    "question_zh": "一組 10 個數的方差為 4。若將每個數都加上一個常數 $k$，則新方差變為...",
+    "options": [
+      "A. 4",
+      "B. $4 + k$",
+      "C. $4 + k^2$",
+      "D. $4k^2$"
+    ],
+    "correct_answer": "A",
+    "solution_steps_en": [
+      "Adding a constant to each data point does not change the spread/dispersion.",
+      "Therefore, variance remains unchanged.",
+      "New variance = 4."
+    ],
+    "solution_steps_zh": [
+      "對每個數據點加上一個常數不會改變數據的分散程度。",
+      "因此，方差保持不變。",
+      "新方差 = 4。"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_124",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": [
+      "math_alg_functions"
+    ],
+    "marks": 1,
+    "difficulty": 7,
+    "paper": 2,
+    "section": "B",
+    "question_en": "Given $f(x) = p \\cdot a^x$. If $f(1) = 6$ and $f(3) = 54$, find $f(0)$.",
+    "question_zh": "已知 $f(x) = p \\cdot a^x$。若 $f(1) = 6$ 且 $f(3) = 54$，求 $f(0)$ 的值。",
+    "options": [
+      "A. 2",
+      "B. 3",
+      "C. 0",
+      "D. 1"
+    ],
+    "correct_answer": "A",
+    "solution_steps_en": [
+      "$f(1) = pa = 6$.",
+      "$f(3) = pa^3 = 54$.",
+      "Divide: $\\frac{pa^3}{pa} = \\frac{54}{6} \\Rightarrow a^2 = 9$.",
+      "Since $a$ is usually positive for exponential growth, $a=3$.",
+      "Then $3p = 6 \\Rightarrow p = 2$.",
+      "$f(0) = p \\cdot a^0 = p = 2$."
+    ],
+    "solution_steps_zh": [
+      "$pa = 6$ 且 $pa^3 = 54$。",
+      "相除：$a^2 = 9 \\Rightarrow a = 3$。",
+      "則 $3p = 6 \\Rightarrow p = 2$。",
+      "$f(0) = p = 2$。"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_sa_122",
+    "type": "short_answer",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": [
+      "math_stat_prob"
+    ],
+    "marks": 11,
+    "difficulty": 7,
+    "paper": 1,
+    "section": "B",
+    "question_en": "A bag contains 4 red balls and 6 blue balls. Three balls are drawn one by one without replacement.\n(a) Find probability all 3 are blue. (3 marks)\n(b) Find probability at least one is red. (4 marks)\n(c) Given specifically that the first ball is red, find the probability that the third ball is blue. (4 marks)",
+    "question_zh": "袋中有 4 個紅球和 6 個藍球。隨機抽出三個球（不放回）。\n(a) 求三個球均為藍色的概率。(3分)\n(b) 求最少有一個紅球的概率。(4分)\n(c) 已知第一個球是紅色，求第三個球是藍色的概率。(4分)",
+    "correct_answer": "P(all_blue)=1/6; P(at_least_one_red)=5/6; P(3rd_blue|1st_red)=2/3",
+    "solution_steps_en": [
+      "(a) $P(B_1 B_2 B_3) = \\frac{6}{10} \\times \\frac{5}{9} \\times \\frac{4}{8} = \\frac{120}{720} = \\frac{1}{6}$.",
+      "(b) $P(\\text{at least one red}) = 1 - P(\\text{no red}) = 1 - P(\\text{all blue}) = 1 - 1/6 = 5/6$.",
+      "(c) If 1st is red: remaining are 3 red, 6 blue (total 9).\nDraw 2nd: could be R or B. Draw 3rd: want Blue.\n$P(B_3 | R_1) = P(B_2 B_3 | R_1) + P(R_2 B_3 | R_1)$\n$= \\frac{6}{9} \\times \\frac{5}{8} + \\frac{3}{9} \\times \\frac{6}{8} = \\frac{30}{72} + \\frac{18}{72} = \\frac{48}{72} = \\frac{2}{3}$."
+    ],
+    "solution_steps_zh": [
+      "(a) $P(\\text{全藍}) = \\frac{6}{10} \\times \\frac{5}{9} \\times \\frac{4}{8} = 1/6$。",
+      "(b) $P(\\text{最少一紅}) = 1 - P(\\text{全藍}) = 1 - 1/6 = 5/6$。",
+      "(c) 已知第 1 個為紅回，剩餘 3 紅 6 藍。第 2 次可為紅或藍。第 3 次為藍的概率為 $(6/9 \\times 5/8) + (3/9 \\times 6/8) = 2/3$。"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_125",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": [
+      "math_geo_coord"
+    ],
+    "marks": 1,
+    "difficulty": 7,
+    "paper": 2,
+    "section": "B",
+    "question_en": "The line $L$ passes through $A(1, 2)$ and $B(4, 6)$. Find the equation of the perpendicular bisector of $AB$.",
+    "question_zh": "直線 $L$ 通過 $A(1, 2)$ 及 $B(4, 6)$。求 $AB$ 的垂直平分線方程。",
+    "options": [
+      "A. $3x + 4y - 23.5 = 0$",
+      "B. $6x + 8y - 47 = 0$",
+      "C. $3x - 4y + 11 = 0$",
+      "D. $4x + 3y - 22 = 0$"
+    ],
+    "correct_answer": "B",
+    "solution_steps_en": [
+      "Midpoint $M = (2.5, 4)$.",
+      "Slope $m_{AB} = \\frac{6-2}{4-1} = 4/3$.",
+      "Perpendicular slope $m = -3/4$.",
+      "Equation: $y - 4 = -0.75(x - 2.5)$.",
+      "$4y - 16 = -3x + 7.5 \\Rightarrow 3x + 4y - 23.5 = 0$.",
+      "Multiply by 2: $6x + 8y - 47 = 0$."
+    ],
+    "solution_steps_zh": [
+      "中點 $M = (2.5, 4)$。",
+      "斜率 $m_{AB} = 4/3 \\Rightarrow$ 垂直斜率為 -3/4。",
+      "方程：$y - 4 = -3/4(x - 2.5) \\Rightarrow 3x + 4y - 23.5 = 0$。",
+      "即 $6x + 8y - 47 = 0$。"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_126",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": [
+      "math_alg_variations"
+    ],
+    "marks": 1,
+    "difficulty": 6,
+    "paper": 2,
+    "section": "B",
+    "question_en": "It is given that $z$ varies directly as $x^2$ and inversely as $\\sqrt{y}$. If $x$ is increased by 20% and $y$ is increased by 44%, find the percentage change in $z$.",
+    "question_zh": "已知 $z$ 隨 $x^2$ 正變且隨 $\\sqrt{y}$ 反變。若 $x$ 增加 20% 且 $y$ 增加 44%，求 $z$ 的百分比變化。",
+    "options": [
+      "A. 20% increase",
+      "B. 4% increase",
+      "C. 20% decrease",
+      "D. No change"
+    ],
+    "correct_answer": "A",
+    "solution_steps_en": [
+      "$z = \\frac{kx^2}{\\sqrt{y}}$.",
+      "New $x' = 1.2x$, new $y' = 1.44y$.",
+      "New $z' = k \\frac{(1.2x)^2}{\\sqrt{1.44y}} = k \\frac{1.44x^2}{1.2\\sqrt{y}} = 1.2 \\cdot \\frac{kx^2}{\\sqrt{y}} = 1.2z$.",
+      "Percentage change = (1.2 - 1) * 100% = 20% increase."
+    ],
+    "solution_steps_zh": [
+      "$z' = \\frac{1.2^2}{\\sqrt{1.44}} z = \\frac{1.44}{1.2} z = 1.2z$。",
+      "增加 20%。"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_sa_123",
+    "type": "short_answer",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": [
+      "math_alg_variations",
+      "math_alg_polynomials"
+    ],
+    "marks": 12,
+    "difficulty": 7,
+    "paper": 1,
+    "section": "B",
+    "question_en": "The cost of building a fence US＄$C$ consists of two parts. One part is a constant $K$, and the other part varies as the square root of the length $L$ meters. If $L=16$, $C=2000$. If $L=36$, $C=2800$.\n(a) Find the equation relating $C$ and $L$. (5 marks)\n(b) If the budget is US＄4000, find the maximum length of fence possible. (4 marks)\n(c) Find the rate of change of cost with respect to length when $L=64$. (3 marks)",
+    "question_zh": "建造圍欄的成本 US＄$C$ 由兩部分組成。一部分是常數 $K$，另一部分隨長度 $L$ 米的平方根而變。若 $L=16$，$C=2000$。若 $L=36$，$C=2800$。\n(a) 求 $C$ 與 $L$ 的關係式。(5分)\n(b) 若預算為 4000 美元，求可建造的最長長度。(4分)\n(c) 當 $L=64$ 時，成本對長度的變化率。(3分)",
+    "correct_answer": "C = 400 + 400*sqrt(L); L_max = 81 m; Rate = 25 US/m",
+    "solution_steps_en": [
+      "(a) $C = K + a\\sqrt{L}$.",
+      "$L=16, C=2000 \\Rightarrow K + 4a = 2000$.",
+      "$L=36, C=2800 \\Rightarrow K + 6a = 2800$.",
+      "Subtract: $2a = 800 \\Rightarrow a = 400$.",
+      "Then $K + 4(400) = 2000 \\Rightarrow K = 400$.",
+      "Equation: $C = 400 + 400\\sqrt{L}$.",
+      "(b) $4000 = 400 + 400\\sqrt{L} \\Rightarrow 3600 = 400\\sqrt{L} \\Rightarrow 9 = \\sqrt{L} \\Rightarrow L = 81$ m.",
+      "(c) Rate for small interval (using slope or derivative if known, here use difference as proxy):",
+      "When $L=64, C = 400 + 400(8) = 3600$.",
+      "When $L=65, C \\approx 3624.8$. Diff $\\approx 25$.",
+      "Actually, derivative $dC/dL = 400 \\cdot \\frac{1}{2\\sqrt{L}} = \\frac{200}{\\sqrt{L}}$.",
+      "At $L=64$, Rate $= 200/8 = 25$ US＄/m."
+    ],
+    "solution_steps_zh": [
+      "(a) $C = 400 + 400\\sqrt{L}$。",
+      "(b) $4000 = 400 + 400\\sqrt{L} \\Rightarrow 9 = \\sqrt{L} \\Rightarrow L = 81$ m。",
+      "(c) 變化率 $dC/dL = 200/\\sqrt{L}$。當 $L=64$ 時，速率為 $200/8 = 25$ 美元/米。"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_127",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": [
+      "math_alg_complex_numbers"
+    ],
+    "marks": 1,
+    "difficulty": 7,
+    "paper": 2,
+    "section": "B",
+    "question_en": "If $z = \\frac{k + i}{1 - i}$ is a purely imaginary number, find the value of $k$.",
+    "question_zh": "若 $z = \\frac{k + i}{1 - i}$ 是一個純虛數，求 $k$ 的值。",
+    "options": [
+      "A. -1",
+      "B. 1",
+      "C. 0",
+      "D. 2"
+    ],
+    "correct_answer": "B",
+    "solution_steps_en": [
+      "$z = \\frac{(k+i)(1+i)}{(1-i)(1+i)} = \\frac{k + ki + i + i^2}{2} = \\frac{(k-1) + (k+1)i}{2}$.",
+      "For $z$ to be purely imaginary, the real part must be zero.",
+      "$\\frac{k-1}{2} = 0 \\Rightarrow k = 1$."
+    ],
+    "solution_steps_zh": [
+      "$z = \\frac{(k-1) + (k+1)i}{2}$。",
+      "若為純虛數，實部 $= 0 \\Rightarrow k-1=0 \\Rightarrow k=1$。"
+    ],
+    "status": "approved"
+  }
+]

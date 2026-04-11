@@ -3,6 +3,8 @@ import { useSearchParams, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { Mic, Play, Pause, RotateCcw, CheckCircle2, Volume2, Loader2, ArrowRight, Zap, Languages, Sparkles } from 'lucide-react';
 import DeliveryScaffoldPassage from '../components/speaking/DeliveryScaffoldPassage';
+import SpeakingWaveform from '../components/speaking/SpeakingWaveform';
+import PhonemeSpotlight from '../components/speaking/PhonemeSpotlight';
 
 // Simplified Speaking Scaffold Toolbar
 const SpeakingScaffoldToolbar = ({ settings, onChange }) => {
@@ -36,7 +38,7 @@ const SpeakingScaffoldToolbar = ({ settings, onChange }) => {
                 >
                     <Icon className="w-3.5 h-3.5" />
                     <span>{label}</span>
-                    <div className={`w-1 h-1 rounded-full ${settings[key] ? dotActiveClass : 'bg-gray-300'}`} />
+                    <div className={`w-1 h-1 rounded-full ${settings[key] ? dotActiveClass : 'bg-gray-300'}`}></div>
                 </button>
             ))}
         </div>
@@ -48,139 +50,136 @@ const SpeakingDeliveryPage = () => {
     const navigate = useNavigate();
     const { user } = useAuth();
 
+    // 1. Module & Content Selection
+    const topicId = searchParams.get('topic') || 'a_1';
     const level = searchParams.get('level') || '3';
-    const taskId = searchParams.get('taskId') || '';
+    const [currentSegment, setCurrentSegment] = useState(null);
+    const [isLoading, setIsLoading] = useState(true);
+    const [scaffoldSettings, setScaffoldSettings] = useState({ vocab: true, prosody: true });
+    
+    // Results & Feedback State
+    const [gradingResult, setGradingResult] = useState(null);
+    const [isGrading, setIsGrading] = useState(false);
+    const [resultsMode, setResultsMode] = useState(false);
 
-    const [quest, setQuest] = useState(null);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
-    const hasInitialized = useRef(false);
-
-    // Multi-Round State (Kept for compatibility, but logic handles single-round)
+    // [RESTORED MISSING STATE]
     const [currentSegmentIndex, setCurrentSegmentIndex] = useState(0);
     const [results, setResults] = useState([]);
     const [isFinished, setIsFinished] = useState(false);
-
-    // Recording State
-    const [isRecording, setIsRecording] = useState(false);
     const [recordedBlob, setRecordedBlob] = useState(null);
-    const [isPlayingMaster, setIsPlayingMaster] = useState(false);
-    const [isPlayingStudent, setIsPlayingStudent] = useState(false);
-    const [voiceLevel, setVoiceLevel] = useState(0);
-
-    // Grading State
-    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [recordedBlobUrl, setRecordedBlobUrl] = useState(null);
     const [segmentFeedback, setSegmentFeedback] = useState(null);
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [isPlayingStudent, setIsPlayingStudent] = useState(false);
+    const [isRecording, setIsRecording] = useState(false);
+    const [isPlayingMaster, setIsPlayingMaster] = useState(false);
+    const [voiceLevel, setVoiceLevel] = useState(0);
+    const [quest, setQuest] = useState({ segments: [], role: 'Candidate', scenario: 'Speaking Drill' });
 
-    // Scaffolding State
-    const [scaffoldSettings, setScaffoldSettings] = useState({ vocab: true, prosody: false });
-
+    // [RESTORED MISSING REFS]
     const mediaRecorder = useRef(null);
     const audioChunks = useRef([]);
-    const masterAudio = useRef(null);
-    const studentAudio = useRef(null);
-    const silenceTimeout = useRef(null);
     const audioContext = useRef(null);
     const analyser = useRef(null);
     const animationFrame = useRef(null);
+    const silenceTimeout = useRef(null);
+    const studentAudio = useRef(null);
+    const wavesurferRecorder = useRef(null);
+    const masterAudio = useRef(null);
 
-    const currentSegment = quest?.segments?.[currentSegmentIndex];
-
-    // 1. Load Quest
     useEffect(() => {
-        if (hasInitialized.current) return;
-
-        const fetchQuest = async () => {
-            hasInitialized.current = true;
+        const fetchDrill = async () => {
+            setIsLoading(true);
             try {
                 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
-                const res = await fetch(`${API_URL}/api/speaking/quest/generate?module=delivery&level=${level}&uid=${user?.uid || 'guest'}&focus=${taskId}`);
-
-                if (!res.ok) throw new Error('Failed to load quest');
-
+                const res = await fetch(`${API_URL}/api/speaking/quest/generate?module=delivery&level=${level}&focus=${topicId}&uid=${user?.uid || 'guest'}`);
+                if (!res.ok) throw new Error('Generation failed');
                 const data = await res.json();
                 setQuest(data);
-                setLoading(false);
+                setCurrentSegment(data.segments[0]);
             } catch (err) {
-                console.error('Quest load error:', err);
-                setError(err.message);
-                setLoading(false);
-                hasInitialized.current = false;
+                console.error('Drill load error:', err);
+            } finally {
+                setIsLoading(false);
             }
         };
 
-        fetchQuest();
+        fetchDrill();
+        return () => stopMasterAudio();
+    }, [topicId, level, user?.uid]);
 
-        return () => {
-            if (animationFrame.current) cancelAnimationFrame(animationFrame.current);
-            if (audioContext.current) audioContext.current.close();
-        };
-    }, [level, user?.uid]);
-
-    // 2. Play Master Audio (Cloud TTS - plain text, let Neural2 handle natural pacing)
-    const playMasterAudio = async () => {
-        if (!currentSegment) return;
-
-        // stop any existing master audio
-        if (masterAudio.current) {
-            masterAudio.current.pause();
-            masterAudio.current.currentTime = 0;
-        }
-
-        setIsPlayingMaster(true);
-
-        try {
-            const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
-
-            // Send plain text — Google Neural2 voices handle natural pacing,
-            // emphasis, and pauses far better than manually injected SSML.
-            const res = await fetch(`${API_URL}/api/tts`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    text: currentSegment.master_script,
-                    languageCode: 'en-GB',
-                    gender: 'FEMALE'
-                })
-            });
-
-            if (!res.ok) throw new Error('TTS failed');
-            const { audioContent } = await res.json();
-
-            const audioUrl = `data:audio/mp3;base64,${audioContent}`;
-            const audio = new Audio(audioUrl);
-            masterAudio.current = audio;
-
-            audio.play();
-            audio.onended = () => setIsPlayingMaster(false);
-            audio.onerror = () => setIsPlayingMaster(false);
-
-        } catch (err) {
-            console.error('Master audio error:', err);
-            // Fallback to browser TTS if cloud fails
-            fallbackPlayMasterAudio();
-        }
-    };
-
-    const fallbackPlayMasterAudio = () => {
-        window.speechSynthesis.cancel();
-        const utterance = new SpeechSynthesisUtterance(currentSegment.master_script);
-        const voices = window.speechSynthesis.getVoices();
-        const targetVoice = voices.find(v => v.lang === 'en-GB' || v.name.includes('Google UK English'));
-        if (targetVoice) utterance.voice = targetVoice;
-        utterance.rate = 0.9;
-        utterance.onend = () => setIsPlayingMaster(false);
-        window.speechSynthesis.speak(utterance);
-    };
-
+    // Cleanup audio
     const stopMasterAudio = () => {
         if (masterAudio.current) {
             masterAudio.current.pause();
             masterAudio.current.currentTime = 0;
         }
-        window.speechSynthesis.cancel();
         setIsPlayingMaster(false);
+        setActiveWordIndex(-1);
     };
+
+    // --- Audio Control Functions ---
+
+    // 2. Play Master Audio with Word Highlighting
+    const [activeWordIndex, setActiveWordIndex] = useState(-1);
+
+    const playMasterAudio = async () => {
+        if (!currentSegment) return;
+        stopMasterAudio();
+        setIsPlayingMaster(true);
+        setActiveWordIndex(-1);
+
+        try {
+            const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+            const res = await fetch(`${API_URL}/api/lab/tts`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    text: currentSegment.master_script,
+                    languageCode: 'en-GB',
+                    gender: 'FEMALE',
+                    includeTimepoints: true
+                })
+            });
+
+            if (!res.ok) throw new Error('TTS failed');
+            const { audio, timepoints } = await res.json();
+
+            const audioUrl = `data:audio/mp3;base64,${audio}`;
+            const audioObj = new Audio(audioUrl);
+            masterAudio.current = audioObj;
+
+            audioObj.ontimeupdate = () => {
+                const currentTime = audioObj.currentTime;
+                const passedTimepoints = (timepoints || [])
+                    .filter(t => t.timeSeconds <= currentTime)
+                    .sort((a, b) => b.timeSeconds - a.timeSeconds);
+
+                if (passedTimepoints.length > 0) {
+                    const latestOffset = passedTimepoints[0].offsetCodePoint;
+                    const text = currentSegment.master_script;
+                    const wordsBeforeChar = text.substring(0, latestOffset).split(/\s+/).filter(w => w.length > 0).length;
+                    setActiveWordIndex(wordsBeforeChar);
+                }
+            };
+            
+            audioObj.play();
+            audioObj.onended = () => {
+                setIsPlayingMaster(false);
+                setActiveWordIndex(-1);
+            };
+            audioObj.onerror = () => setIsPlayingMaster(false);
+
+        } catch (err) {
+            console.error('Master audio error:', err);
+            fallbackPlayMasterAudio();
+        }
+    };
+
+    // Multi-Speaker Fallback (Simplified)
+    const fallbackPlayMasterAudio = () => {
+    };
+
 
     // 3. Recording with Silence Detection
     const startRecording = async () => {
@@ -282,7 +281,7 @@ const SpeakingDeliveryPage = () => {
             formData.append('master_script', currentSegment.master_script);
             formData.append('level', level);
             formData.append('uid', user?.uid || 'guest');
-            formData.append('focus', taskId);
+            formData.append('focus', topicId);
 
             const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
             const res = await fetch(`${API_URL}/api/speaking/quest/submit`, {
@@ -329,7 +328,7 @@ const SpeakingDeliveryPage = () => {
         setResults(prev => prev.slice(0, -1));
     };
 
-    if (loading) return (
+    if (isLoading) return (
         <div className="h-screen bg-indigo-50 flex flex-col items-center justify-center gap-4">
             <Loader2 className="w-12 h-12 text-indigo-600 animate-spin" />
             <p className="text-indigo-600 font-bold animate-pulse">Generating Voice & Clarity Master Quest...</p>
@@ -479,6 +478,7 @@ const SpeakingDeliveryPage = () => {
                                 vocabulary={currentSegment.vocabulary}
                                 prosody={currentSegment.prosody}
                                 settings={scaffoldSettings}
+                                activeWordIndex={activeWordIndex}
                             />
                         </div>
                     </div>
@@ -513,7 +513,7 @@ const SpeakingDeliveryPage = () => {
                                         <div
                                             className="absolute -inset-4 rounded-full border-4 border-red-500/20 animate-ping"
                                             style={{ animationDuration: '3s' }}
-                                        />
+                                        ></div>
                                     )}
                                     <button
                                         onClick={isRecording ? stopRecording : startRecording}
@@ -521,12 +521,10 @@ const SpeakingDeliveryPage = () => {
                                             }`}
                                     >
                                         <Mic className="w-8 h-8 text-white" />
-                                        {isRecording && (
                                             <div
                                                 className="absolute -inset-2 rounded-full border-4 border-red-400 opacity-50"
                                                 style={{ transform: `scale(${1 + (voiceLevel / 100)})` }}
-                                            />
-                                        )}
+                                            ></div>
                                     </button>
                                 </div>
 

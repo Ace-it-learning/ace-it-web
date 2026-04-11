@@ -1,66 +1,40 @@
 {
-    "is_modular": true,
-    "name": "Functions & Graphs",
-    "name_zh": "函數與圖像",
-    "roadmap": "Understand function notation and domain restrictions first. Then master symmetry (Even/Odd) and composite functions. Finally, conquer graph transformations, which represent the most challenging part of the HKDSE coordinate geometry section.",
-    "roadmap_zh": "首先理解函數符號與定義域限制。然後掌握對稱性（偶函數/奇函數）與複合函數。最後，征服圖像變換，這是 DSE 坐標幾何部分最具挑戰性的課題。",
-    "learning_modules": [
+  "is_modular": true,
+  "name": "Functions & Graphs",
+  "name_zh": "函數與圖像",
+  "roadmap": "Master the visual-algebraic connections of quadratic functions. Understand how parameters control the graph's anatomy, use the discriminant to predict intercepts, and apply transformations to shift and reflect parent functions.",
+  "roadmap_zh": "掌握二次函數的代數與圖像關聯。理解參數如何控制圖像結構，利用判別式預測截距，並應用變換來平移與反射基本函數。",
+  "learning_modules": [
+    {
+      "module_id": "MOD_01",
+      "title": "Golden Rules of Functions",
+      "title_zh": "函數黃金法則",
+      "concepts": [
         {
-            "module_id": "MOD_01",
-            "title": "Domain, Range & Symmetry",
-            "title_zh": "定義域、值域與對稱性",
-            "concepts": [
-                {
-                    "concept_id": "C01_DOMAIN_ADV",
-                    "name": "Domain Restrictions",
-                    "name_zh": "定義域限制",
-                    "formula": "\\text{Denom } \\neq 0, \\quad \\sqrt{f(x)} \\implies f(x) \\geq 0",
-                    "key_takeaway": "The domain is the set of all possible REAL x-inputs. Watch out for vertical asymptotes and square root boundaries.",
-                    "key_takeaway_zh": "定義域是所有可能的實數輸入 (x) 之集合。注意垂直漸近線與根號邊界。",
-                    "visual_aid": "/images/math/func_domain_range_premium.png"
-                },
-                {
-                    "concept_id": "C02_SYMMETRY",
-                    "name": "Even & Odd Functions",
-                    "name_zh": "偶函數與奇函數",
-                    "formula": "\\text{Even: } f(x)=f(-x), \\quad \\text{Odd: } f(-x)=-f(x)",
-                    "key_takeaway": "Even functions are symmetric about the y-axis (e.g., $x^2$). Odd functions are symmetric about the origin (e.g., $x^3$).",
-                    "key_takeaway_zh": "偶函數關於 y 軸對稱（如 $x^2$）。奇函數關於原點對稱（如 $x^3$）。",
-                    "visual_aid": "/images/math/func_even_odd_premium.png"
-                }
-            ]
+          "concept_id": "C01_QUADRATIC_ANATOMY",
+          "name": "The Quadratic Anatomy",
+          "name_zh": "二次函數結構",
+          "formula": "y = ax^2 + bx + c",
+          "key_takeaway": "a controls opening direction (up if positive, down if negative). c is the y-intercept. The axis of symmetry is the line $x = -b/2a$.",
+          "key_takeaway_zh": "a 控制開口方向（正數向上，負數向下）。c 是 y 軸截距。對稱軸是直線 $x = -b/2a$。"
         },
         {
-            "module_id": "MOD_02",
-            "title": "Graph Transformations",
-            "title_zh": "圖像變換",
-            "concepts": [
-                {
-                    "concept_id": "C03_TRANS_RIGID",
-                    "name": "Translations & Reflections",
-                    "name_zh": "平移與反射",
-                    "formula": "y=f(x-h)+k, \\quad y=-f(x), \\quad y=f(-x)",
-                    "key_takeaway": "Transformations inside brackets affect x (opposite direction). Transformations outside affect y (same direction).",
-                    "key_takeaway_zh": "括號內的變換影響 x（反方向）。括號外的變換影響 y（同方向）。",
-                    "visual_aid": "/images/math/func_transform_premium.png"
-                }
-            ]
+          "concept_id": "C02_DISCRIMINANT",
+          "name": "The Discriminant ($\\Delta$)",
+          "name_zh": "判別式 ($\\Delta$)",
+          "formula": "\\Delta = b^2 - 4ac",
+          "key_takeaway": "Relates strictly to graphical x-intercepts: $\\Delta \\gt 0$ (2 intercepts), $\\Delta = 0$ (1 intercept), $\\Delta \\lt 0$ (0 intercepts).",
+          "key_takeaway_zh": "與圖像的 x 軸截距嚴格相關：$\\Delta \\gt 0$（2 個截距），$\\Delta = 0$（1 個截距），$\\Delta \\lt 0$（0 個截距）。"
         },
         {
-            "module_id": "MOD_03",
-            "title": "Composite & Advanced Mappings",
-            "title_zh": "複合函數與進階映射",
-            "concepts": [
-                {
-                    "concept_id": "C04_COMPOSITE",
-                    "name": "Composite Functions $g(f(x))$",
-                    "name_zh": "複合函數 $g(f(x))$",
-                    "formula": "(g \\circ f)(x) = g(f(x))",
-                    "key_takeaway": "Apply the inner function first, then use the result as the input for the outer function. Order matters: $g(f(x)) \\neq f(g(x))$ in general.",
-                    "key_takeaway_zh": "先應用內層函數，再將結果作為外層函數的輸入。順序很重要：通常 $g(f(x)) \\neq f(g(x))$。",
-                    "visual_aid": null
-                }
-            ]
+          "concept_id": "C03_TRANSFORMATIONS",
+          "name": "Function Transformations",
+          "name_zh": "函數變換",
+          "formula": "y = f(x - h) + k, \\quad y = -f(x)",
+          "key_takeaway": "f(x) + k shifts up/down. f(x - h) shifts left/right. -f(x) reflects across the x-axis.",
+          "key_takeaway_zh": "f(x) + k 上下平移。f(x - h) 左右平移。-f(x) 沿 x 軸反射。"
         }
-    ]
+      ]
+    }
+  ]
 }

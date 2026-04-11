@@ -1,27 +1,41 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { Navigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import { Sparkles } from 'lucide-react';
 
 const ProtectedRoute = ({ children }) => {
     const { user, loading } = useAuth();
     const [isOnboarded, setIsOnboarded] = useState(null);
-    const [checkedUid, setCheckedUid] = useState(null); // Track WHICH user we verified
+    const onboardedRef = useRef(null); // Ref for timeout closure safety
+    const [checkedUid, setCheckedUid] = useState(null);
     const [showFallback, setShowFallback] = useState(false);
     const location = useLocation();
 
     // Reset state when user or UID changes to force a re-check
     useEffect(() => {
         setIsOnboarded(null);
+        onboardedRef.current = null;
         setShowFallback(false);
     }, [user?.uid]);
 
     useEffect(() => {
         console.log("ProtectedRoute useEffect: user =", user?.uid);
+
+        // Emergency timeout if onboarding check hangs
+        const timeout = setTimeout(() => {
+            // Check the ref, not the state, to get the freshest value in the closure
+            if (onboardedRef.current === null && user) {
+                console.warn("ProtectedRoute: Onboarding check taking too long, showing fallback.");
+                setShowFallback(true);
+            }
+        }, 5000); // Reduced from 8s for better UX
+
         if (user) {
             console.log(`ProtectedRoute: User is AUTHENTICATED (${user.uid})`);
             if (!user.uid) {
                 console.error("ProtectedRoute: user found but uid is missing!");
                 setIsOnboarded(true); // Don't block if something is weird
+                clearTimeout(timeout);
                 return;
             }
             // Fallback: Check if user has a profile/onboarding complete via API
@@ -41,6 +55,7 @@ const ProtectedRoute = ({ children }) => {
                             console.log("ProtectedRoute: User is flagged as NEW, setting isOnboarded to false");
                             localStorage.removeItem('justOnboarded'); // Clear stale flag
                             setIsOnboarded(false);
+                            onboardedRef.current = false;
                             setCheckedUid(user.uid);
                             return;
                         }
@@ -49,6 +64,7 @@ const ProtectedRoute = ({ children }) => {
                         if (location.state?.justOnboarded || localStorage.getItem('justOnboarded') === 'true') {
                             console.log("ProtectedRoute: User just onboarded (flag detected), setting isOnboarded to true");
                             setIsOnboarded(true);
+                            onboardedRef.current = true;
                             setCheckedUid(user.uid);
                             // Clear localStorage after verify
                             setTimeout(() => localStorage.removeItem('justOnboarded'), 5000);
@@ -58,6 +74,7 @@ const ProtectedRoute = ({ children }) => {
                         // Default behavior: if profile exists but not flagged as new, they are onboarded
                         console.log(`ProtectedRoute: User ${user.uid} verified onboarded.`);
                         setIsOnboarded(true);
+                        onboardedRef.current = true;
                         setCheckedUid(user.uid);
                     } else if (res.status === 404) {
                         if (retries > 0) {
@@ -66,16 +83,25 @@ const ProtectedRoute = ({ children }) => {
                         } else {
                             console.log("ProtectedRoute: User profile not found after retries. Assuming NEW.");
                             setIsOnboarded(false);
+                            onboardedRef.current = false;
                             setCheckedUid(user.uid);
                         }
                     } else {
-                        console.error(`ProtectedRoute: API error ${res.status}`);
-                        setShowFallback(true);
+                        console.error(`ProtectedRoute: API error ${res.status}. Allowing access as fallback.`);
+                        setIsOnboarded(true);
+                        onboardedRef.current = true;
+                        setCheckedUid(user.uid);
                     }
                 } catch (err) {
-                    console.error("ProtectedRoute check failed", err);
-                    if (retries > 0) setTimeout(() => checkOnboarding(retries - 1), 500);
-                    else setShowFallback(true);
+                    console.error("ProtectedRoute check failed:", err);
+                    if (retries > 0) {
+                        setTimeout(() => checkOnboarding(retries - 1), 1000);
+                    } else {
+                        console.warn("ProtectedRoute: Max retries reached. Allowing access as emergency fallback.");
+                        setIsOnboarded(true);
+                        onboardedRef.current = true;
+                        setCheckedUid(user.uid);
+                    }
                 }
             };
 
@@ -83,22 +109,14 @@ const ProtectedRoute = ({ children }) => {
             if (checkedUid !== user.uid) {
                 console.log(`ProtectedRoute: UID mismatch (${checkedUid} vs ${user.uid}), triggering check...`);
                 setIsOnboarded(null); // Reset to loading
+                onboardedRef.current = null;
                 checkOnboarding();
             }
-            return;
         } else {
             console.log("ProtectedRoute: User is GUEST (null)");
             setIsOnboarded(true);
             setCheckedUid('guest');
         }
-
-        // Emergency timeout if onboarding check hangs
-        const timeout = setTimeout(() => {
-            if (isOnboarded === null) {
-                console.warn("ProtectedRoute: Onboarding check taking too long, showing fallback.");
-                setShowFallback(true);
-            }
-        }, 8000);
 
         return () => clearTimeout(timeout);
     }, [user?.uid, location.pathname]); // Removed isOnboarded from deps to prevent loop, used user?.uid for stability
@@ -178,20 +196,37 @@ const ProtectedRoute = ({ children }) => {
     }
 
     if (isOnboarded === null || (user && checkedUid !== user.uid)) {
-        console.log("ProtectedRoute: Waiting for onboarding check (or UID sync)");
         return (
-            <div className="fixed inset-0 flex flex-col items-center justify-center bg-white z-[9999]">
-                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mb-4"></div>
-                <p className="text-gray-500 font-medium">Loading your profile...</p>
+            <div className="fixed inset-0 flex flex-col items-center justify-center bg-slate-50 z-[9999] p-6 text-center">
+                <div className="relative mb-8">
+                    <div className="w-20 h-20 border-4 border-slate-200 border-t-orange-600 rounded-full animate-spin"></div>
+                    <div className="absolute inset-0 flex items-center justify-center">
+                        <Sparkles className="w-8 h-8 text-orange-600/20 animate-pulse" />
+                    </div>
+                </div>
+                
+                <h2 className="text-2xl font-black text-slate-900 mb-2 tracking-tight">Preparing your <span className="text-orange-600">Ace-it</span> experience...</h2>
+                <p className="text-slate-500 font-medium max-w-xs mx-auto">Syncing your progress and personalizing your dashboard.</p>
+                
                 {showFallback && (
-                    <div className="mt-8 flex flex-col items-center gap-4 animate-in fade-in duration-500">
-                        <p className="text-sm text-red-500 bg-red-50 px-4 py-2 rounded-lg">Taking longer than usual...</p>
-                        <button
-                            onClick={() => setIsOnboarded(true)}
-                            className="text-primary font-bold hover:underline"
-                        >
-                            Skip Check & Enter Dashboard
-                        </button>
+                    <div className="mt-12 p-8 bg-white rounded-[2rem] border border-slate-100 shadow-2xl shadow-slate-200/50 max-w-sm w-full animate-in fade-in slide-in-from-bottom-4 duration-700">
+                        <p className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-4">Connection Notice</p>
+                        <p className="text-slate-600 mb-8 leading-relaxed">It's taking a bit longer to fetch your data. You can try skipping the check if you're in a hurry.</p>
+                        
+                        <div className="flex flex-col gap-3">
+                            <button
+                                onClick={() => setIsOnboarded(true)}
+                                className="w-full py-4 bg-orange-600 text-white rounded-2xl font-black uppercase tracking-widest text-xs shadow-lg shadow-orange-200 hover:scale-[1.02] transition-transform active:scale-[0.98]"
+                            >
+                                Skip & Continue
+                            </button>
+                            <button
+                                onClick={() => window.location.href = '/dashboard'}
+                                className="w-full py-4 bg-slate-100 text-slate-600 rounded-2xl font-black uppercase tracking-widest text-xs hover:bg-slate-200 transition-colors"
+                            >
+                                Back to Dashboard
+                            </button>
+                        </div>
                     </div>
                 )}
             </div>

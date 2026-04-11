@@ -118,10 +118,19 @@ function ResultPage() {
             <div className="max-w-7xl mx-auto mb-6 flex justify-between items-center">
                 <h1 className="text-2xl font-bold text-gray-900">{t('result.title')}</h1>
                 <button
-                    onClick={() => navigate('/', { state: { examCompleted: true, examId } })}
+                    onClick={() => {
+                        const subject = state?.examData?.subject?.toUpperCase() || 'ENGLISH';
+                        const category = state?.examData?.topic_category?.toUpperCase();
+                        let filter = 'ALL';
+                        if (category?.includes('READING')) filter = 'READING';
+                        else if (category?.includes('LISTENING')) filter = 'LISTENING';
+                        else if (category?.includes('SPEAKING')) filter = 'SPEAKING';
+                        
+                        navigate('/dashboard', { state: { openRoadmap: subject === 'MATHS' ? 'MATHS' : 'ENGLISH', roadmapFilter: filter } });
+                    }}
                     className="text-gray-600 hover:text-gray-900 font-medium flex items-center gap-2 px-4 py-2 bg-white rounded-lg shadow-sm border border-gray-200"
                 >
-                    <span>← {t('result.back_dashboard')}</span>
+                    <span>← {t('result.back_roadmap') || 'Back to Roadmap'}</span>
                 </button>
             </div>
 

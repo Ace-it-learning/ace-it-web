@@ -316,7 +316,7 @@ class DiagnosticService {
 
         try {
             const result = await GenerativeAIService.generateContent(prompt, {
-                model: "gemini-2.5-pro",
+                model: "gemini-1.5-pro",
                 generationConfig: { responseMimeType: "application/json" }
             });
             const response = result.response;
@@ -432,7 +432,7 @@ class DiagnosticService {
                         speaking: fullResults.speaking
                     }),
                     GenerativeAIService.generateContent(prompt, {
-                        model: "gemini-2.5-pro",
+                        model: "gemini-1.5-pro",
                         generationConfig: { responseMimeType: "application/json" }
                     })
                 ]),

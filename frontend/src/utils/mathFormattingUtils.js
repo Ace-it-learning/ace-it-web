@@ -33,17 +33,18 @@ export const looksLikeMath = (str) => {
         const idx = trimmed.indexOf(w);
         return idx === 0 || trimmed[idx - 1] !== '\\'; // word not part of a command
     });
-    
-    if (hasPlainEnglish && !/[=><+\-]/.test(trimmed) && !/\\[a-z]+\{/i.test(trimmed)) return false;
 
-    // Fast-fail if it starts with a text prefix and has 3+ words
-    if (words.length >= 3 && TEXT_LIKE_PREFIXES.test(trimmed)) return false;
+    // v1.8.10: Variable Protection - Ignore underscores/carets if they are likely prose IDs (e.g. Q_1)
+    if (hasPlainEnglish && words.length >= 2) {
+        // Must have a "Hard" math marker to wrap a whole sentence
+        const hasHardMath = /[\\[\]{}=><+\-]/.test(trimmed) || /\b(theta|pi|phi|sigma|mu|alpha|beta|delta|frac|sqrt|sum)\b/i.test(trimmed);
+        if (!hasHardMath) return false;
+    }
 
     return (
-        trimmed.includes('\\') ||
-        trimmed.includes('$') ||
-        trimmed.includes('^') ||
-        trimmed.includes('_') ||
+        trimmed.includes('\\') ||  // Still includes \sigma
+        (/\$.*?\$/.test(trimmed)) || 
+        (!hasPlainEnglish && (trimmed.includes('^') || trimmed.includes('_'))) || // Only trigger _/^ if NO English
         trimmed.includes('{') ||
         trimmed.includes('}') ||
         /\b(arrow|theta|pi|phi|infty|times|pm|mp|le|ge|ne|alpha|beta|gamma|delta|epsilon|zeta|eta|iota|kappa|lambda|mu|nu|xi|omicron|rho|sigma|tau|upsilon|chi|psi|omega)\b/i.test(trimmed) ||
@@ -123,10 +124,48 @@ export const formatNumbers = (text, isMath = false) => {
 export const sanitizeMath = (t) => {
     if (!t) return t;
     let formatted = String(t);
+    
+    // --- ABSOLUTE ROW-BREAK STANDARDIZER: Final Rendering Guarantee ---
+    // [V1.8.8 FIX] Removed automatic $$ wrapping of environments.
+    // Environments should be explicitly delimited with $$ or \[ in the source data
+    // to avoid the "magic" fallback path which causes double-wrapping.
+    
+    // 1. Global Slash Normalization: Reduce all 3+ backslash clusters to 2 backslashes
+    formatted = formatted.replace(/\\{3,}/g, '\\\\');
+    
+    // 3. Command Normalization: Ensure common commands have exactly one slash
+    formatted = formatted.replace(/\\+(begin|end|text|sigma|mu|implies|frac|sqrt|mathrm|times|div|sum|prod)/g, '\\$1');
+    
+    // 4. Diagram Standardizer: Repair "starved" row breaks in arrays
+    if (formatted.includes('array')) {
+        // Step A: Force row breaks to have exactly two backslashes (KaTeX row-break)
+        // Functional replacement bypassing JS string-escape logic
+        formatted = formatted.replace(/\\{2,}/g, () => '\\\\'); 
+        
+        // [V1.8.7 FIX] Removed aggressive single-backslash doubling that was mangling commands like \text
+        // and \hline into invalid KaTeX sequences.
+        
+        // Step B: Ensure \hline has exactly one valid row break (\\ \hline)
+        // [V1.9.0 SAFE FIX] Use a temporary token instead of lookbehind for cross-browser safety
+        // 1. Protect the array preamble
+        formatted = formatted.replace(/(\\begin\{array\}\{.*?\})/g, '$1##HLINE_PREAMBLE##');
+        
+        // 2. Format ALL hlines with a row-break
+        formatted = formatted.replace(/(?:\\\\)?\s*\\?hline/g, ' \\\\ \\hline');
+        
+        // 3. Cleanup the one right after the preamble (it shouldn't have a break)
+        formatted = formatted.replace(/##HLINE_PREAMBLE##\s*\\\\/g, '##HLINE_PREAMBLE##');
+        formatted = formatted.replace(/##HLINE_PREAMBLE##/g, '');
+        
+        // Step C: Normalizing the start/end to avoid over-injection
+        formatted = formatted.replace(/\\\\ \\\\/g, () => '\\\\');
+        formatted = formatted.replace(/(\\begin\{array\}\{.*?\})\s*\\\\/g, '$1');
+    }
+
     const textBlocks = [];
     formatted = formatted.replace(/\\text\{([^{}]*(?:\{[^{}]*\}[^{}]*)*)\}/g, (match) => {
         textBlocks.push(match);
-        return `___TEXT_BLOCK_${textBlocks.length - 1}___`;
+        return `___MTS_TB_${textBlocks.length - 1}___`;
     });
     formatted = formatted.replace(/\n/g, ' ');
 
@@ -148,12 +187,13 @@ export const sanitizeMath = (t) => {
     });
     formatted = formatted.replace(/\\begin\{align\*?\}([\s\S]*?)\\end\{align\*?\}/g, (m, inner) => `\\begin{aligned} ${inner} \\end{aligned}`);
     const supportedEnvs = ['cases', 'pmatrix', 'bmatrix', 'vmatrix', 'Bmatrix', 'matrix', 'array', 'aligned', 'gathered', 'alignedat'];
-    formatted = formatted.replace(/\\begin\{([^}]+)\}([\s\S]*?)\\end\{\1\}/g, (match, envName, inner) => {
+    formatted = formatted.replace(/\\begin\{([^}]+)\}(\{[^}]*\})?([\s\S]*?)\\end\{\1\}/g, (match, envName, args, inner) => {
         if (supportedEnvs.includes(envName)) return match;
-        return inner.replace(/&/g, ' ').replace(/\\\\/g, ', ').replace(/\s+/g, ' ').trim();
+        // If not supported, we "gracefully" degrade but preserve any arguments provided
+        return (args || '') + inner.replace(/&/g, ' ').replace(/\\\\/g, ', ').replace(/\s+/g, ' ').trim();
     });
     formatted = formatted.replace(/[\u2212\u2013\u2014\u2015]/g, '-');
-    formatted = formatted.replace(/\\\\+(log|ln|sin|cos|tan|frac|sqrt|text|alpha|beta|gamma|theta|pi|Delta|Sigma|Omega|mu|lambda|infty|pm|times|div|approx|neq|le|ge|cdot|mathrm|Rightarrow|leftarrow|rightarrow|implies|iff|parallel|circ|degree)/g, '\\$1');
+    formatted = formatted.replace(/\\\\+(log|ln|sin|cos|tan|frac|sqrt|text|alpha|beta|gamma|theta|pi|Delta|Sigma|Omega|mu|lambda|sigma|sum|prod|int|partial|nabla|cup|cap|subset|subseteq|in|notin|exists|forall|infty|pm|times|div|approx|neq|le|ge|cdot|mathrm|Rightarrow|leftarrow|rightarrow|implies|iff|parallel|circ|degree)/g, '\\$1');
     formatted = formatted.replace(/\\\\(div|times|mathrm|rightarrow)/g, '\\$1'); // User-requested specific reduction logic
 
     formatted = formatted.replace(/<sup>(.*?)<\/sup>/gi, '^{$1}').replace(/<sub>(.*?)<\/sub>/gi, '_{$1}');
@@ -168,7 +208,7 @@ export const sanitizeMath = (t) => {
     });
     formatted = wrapCJK(formatted);
     formatted = cleanStringForMath(formatted);
-    textBlocks.forEach((val, i) => { formatted = formatted.replace(`___TEXT_BLOCK_${i}___`, val); });
+    textBlocks.forEach((val, i) => { formatted = formatted.split(`___MTS_TB_${i}___`).join(val); });
     codeBlocks.forEach((block, i) => { formatted = formatted.replace(`___CODEBLOCK_${i}___`, block); });
     return formatted;
 };
@@ -181,7 +221,9 @@ export const sanitizeMath = (t) => {
  */
 export const prepareMathText = (displaySubtext) => {
     if (!displaySubtext) return '';
-    let text = String(displaySubtext);
+    let text = String(displaySubtext)
+        .replace(/___HKD___/g, 'HK$')
+        .replace(/___USD___/g, '$');
 
     // v1.8.5: Strip leading orphaned numbers/short tokens.
     // The AI often inserts the current dividend value (e.g. "25\n") as a
@@ -217,6 +259,6 @@ export const prepareMathText = (displaySubtext) => {
 
 export const splitContentByDelimiters = (text) => {
     if (!text || typeof text !== 'string') return [text || ''];
-    const delimiterRegex = /(\\\[[\s\S]*?\\\]|\\\([\s\S]*?\\\)|\$\$[\s\S]*?\$\$|\$[\s\S]*?\$)/g;
+    const delimiterRegex = /(\[HTML\][\s\S]*?\[\/HTML\]|\\\[[\s\S]*?\\\]|\\\([\s\S]*?\\\)|\$\$[\s\S]*?\$\$|\$[\s\S]*?\$)/g;
     return text.split(delimiterRegex);
 };

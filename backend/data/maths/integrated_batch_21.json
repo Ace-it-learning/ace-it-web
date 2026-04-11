@@ -1,0 +1,363 @@
+[
+  {
+    "id": "ct_mcq_301",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_alg_polynomials"],
+    "marks": 1,
+    "difficulty": 4,
+    "paper": 2,
+    "section": "A",
+    "question_en": "Simplify $\\frac{(2 \\times 10^3)^4}{4 \\times 10^{-2}}$ and express the result in scientific notation.",
+    "question_zh": "簡化 $\\frac{(2 \\times 10^3)^4}{4 \\times 10^{-2}}$，並以科學記數法表示結果。",
+    "options": [
+      "A. $4 \\times 10^5$",
+      "B. $4 \\times 10^{13}$",
+      "C. $4 \\times 10^{14}$",
+      "D. $16 \\times 10^{14}$"
+    ],
+    "correct_answer": "C",
+    "solution_steps_en": [
+      "Numerator: $(2 \\times 10^3)^4 = 2^4 \\times (10^3)^4 = 16 \\times 10^{12}$.",
+      "$\"Expression\" = \\frac{16 \\times 10^{12}}{4 \\times 10^{-2}}$.",
+      "Divide coefficients: $16 / 4 = 4$.",
+      "Divide powers of 10: $10^{12} / 10^{-2} = 10^{12 - (-2)} = 10^{14}$.",
+      "Final Result: $4 \\times 10^{14}$."
+    ],
+    "solution_steps_zh": [
+      "分子：$(2 \\times 10^3)^4 = 2^4 \\times (10^3)^4 = 16 \\times 10^{12}$。",
+      "\"原式\" $= \\frac{16 \\times 10^{12}}{4 \\times 10^{-2}}$。",
+      "常數相除：$16 / 4 = 4$。",
+      "10 的冪相除：$10^{12} / 10^{-2} = 10^{14}$。",
+      "最終結果：$4 \\times 10^{14}$。"
+    ],
+    "diagram_json": null,
+    "tags": ["numbers", "scientific-notation"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_302",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_alg_equations"],
+    "marks": 1,
+    "difficulty": 5,
+    "paper": 2,
+    "section": "A",
+    "question_en": "If $y = \\frac{x + 3}{x - 2}$, then $x =$ ",
+    "question_zh": "若 $y = \\frac{x + 3}{x - 2}$，則 $x =$ ",
+    "options": [
+      "A. $\\frac{2y + 3}{y - 1}$",
+      "B. $\\frac{2y - 3}{y + 1}$",
+      "C. $\\frac{3y + 2}{y - 1}$",
+      "D. $\\frac{2y + 3}{y + 1}$"
+    ],
+    "correct_answer": "A",
+    "solution_steps_en": [
+      "$y(x - 2) = x + 3$",
+      "$xy - 2y = x + 3$",
+      "$xy - x = 2y + 3$",
+      "$x(y - 1) = 2y + 3$",
+      "$x = \\frac{2y + 3}{y - 1}$"
+    ],
+    "solution_steps_zh": [
+      "$y(x - 2) = x + 3$",
+      "$xy - 2y = x + 3$",
+      "$xy - x = 2y + 3$",
+      "$x(y - 1) = 2y + 3$",
+      "$x = \\frac{2y + 3}{y - 1}$"
+    ],
+    "diagram_json": null,
+    "tags": ["algebra", "change-of-subject"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_303",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_alg_inequalities"],
+    "marks": 1,
+    "difficulty": 6,
+    "paper": 2,
+    "section": "A",
+    "question_en": "Which of the following systems of inequalities defines the shaded region in the figure?",
+    "question_zh": "下列哪組不等式表示圖中的陰影區域？",
+    "options": [
+      "A. $\\begin{cases} x + y \\le 5 \\\\ y \\ge 2 \\\\ x \\ge 0 \\end{cases}$",
+      "B. $\\begin{cases} x + y \\ge 5 \\\\ y \\ge 2 \\\\ x \\ge 0 \\end{cases}$",
+      "C. $\\begin{cases} x + y \\le 5 \\\\ y \\le 2 \\\\ x \\ge 0 \\end{cases}$",
+      "D. $\\begin{cases} x + y \\le 5 \\\\ y \\ge 2 \\\\ y \\ge 0 \\end{cases}$"
+    ],
+    "correct_answer": "A",
+    "solution_steps_en": [
+      "The vertical line is not shown, but the region is to the right of the y-axis, hence $x \\ge 0$.",
+      "The horizontal boundary is $y = 2$. Shaded part is above, hence $y \\ge 2$.",
+      "The slant boundary passes through $(5,0)$ and $(0,5)$, its equation is $x + y = 5$.",
+      "Testing $(0,0)$ relative to $x+y=5$: $0+0 < 5$. Since shaded area is on the same side as $(0,0)$, it is $x+y \\le 5$."
+    ],
+    "solution_steps_zh": [
+      "區域位於 y 軸右側，故 $x \\ge 0$。",
+      "水平邊界為 $y = 2$，陰影在其上方，故 $y \\ge 2$。",
+      "斜線通過 $(5,0)$ 及 $(0,5)$，方程為 $x + y = 5$。",
+      "測試 $(0,0)$：$0+0 < 5$。陰影區域與原點同側，故 $x+y \\le 5$。"
+    ],
+    "diagram_json": {
+      "canvas": { "width": 300, "height": 300, "viewBox": "0 0 300 300" },
+      "elements": [
+        { "type": "line", "x1": 50, "y1": 250, "x2": 280, "y2": 250, "stroke": "#94a3b8", "label": "x-axis" },
+        { "type": "line", "x1": 50, "y1": 250, "x2": 50, "y2": 20, "stroke": "#94a3b8", "label": "y-axis" },
+        { "type": "line", "x1": 50, "y1": 150, "x2": 280, "y2": 150, "stroke": "#334155" },
+        { "type": "line", "x1": 50, "y1": 50, "x2": 250, "y2": 250, "stroke": "#334155" },
+        { "type": "polyline", "points": [{"x": 50, "y": 150}, {"x": 150, "y": 150}, {"x": 50, "y": 50}], "stroke": "none", "fill": "rgba(59, 130, 246, 0.3)" },
+        { "type": "text", "x": 40, "y": 155, "text": "2", "fontSize": 12 },
+        { "type": "text", "x": 255, "y": 265, "text": "5", "fontSize": 12 },
+        { "type": "text", "x": 35, "y": 55, "text": "5", "fontSize": 12 }
+      ]
+    },
+    "tags": ["inequalities", "coordinate-region"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_304",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_geo_mensuration"],
+    "marks": 1,
+    "difficulty": 5,
+    "paper": 2,
+    "section": "A",
+    "question_en": "Two similar solid cones $X$ and $Y$ have volumes in the ratio $8:27$. If the surface area of cone $X$ is 16 cm$^2$, find the surface area of cone $Y$.",
+    "question_zh": "兩個相似立體圓錐 $X$ 及 $Y$ 的體積比為 $8:27$。若圓錐 $X$ 的表面積為 16 cm$^2$，求圓錐 $Y$ 的表面積。",
+    "options": [
+      "A. 24 cm$^2$",
+      "B. 36 cm$^2$",
+      "C. 54 cm$^2$",
+      "D. 81 cm$^2$"
+    ],
+    "correct_answer": "B",
+    "solution_steps_en": [
+      "Ratio of volumes $= \\ell^3 = 8/27$.",
+      "Ratio of lengths $\\ell = \\sqrt[3]{8/27} = 2/3$.",
+      "Ratio of surface areas $= \\ell^2 = (2/3)^2 = 4/9$.",
+      "Area of $Y = 16 \\times (9/4) = 36$ cm$^2$."
+    ],
+    "solution_steps_zh": [
+      "體積比 $= \\ell^3 = 8/27$。",
+      "長度比 $\\ell = \\sqrt[3]{8/27} = 2/3$。",
+      "表面積比 $= \\ell^2 = (2/3)^2 = 4/9$。",
+      "圓錐 $Y$ 的面積 $= 16 \\times (9/4) = 36$ cm$^2$。"
+    ],
+    "diagram_json": null,
+    "tags": ["mensuration", "similarity"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_305",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_geo_coordinate_geo"],
+    "marks": 1,
+    "difficulty": 6,
+    "paper": 2,
+    "section": "A",
+    "question_en": "Point $P(3, -4)$ is reflected in the $y$-axis to point $P'$. $P'$ is then rotated clockwise about the origin through $90^\\circ$ to point $P''$. Find the coordinates of $P''$.",
+    "question_zh": "點 $P(3, -4)$ 對 $y$ 軸反射至點 $P'$。$P'$ 再繞原點順時針旋轉 $90^\\circ$ 至點 $P''$。求 $P''$ 的坐標。",
+    "options": [
+      "A. $(-4, 3)$",
+      "B. $(4, 3)$",
+      "C. $(-4, -3)$",
+      "D. $(4, -3)$"
+    ],
+    "correct_answer": "A",
+    "solution_steps_en": [
+      "Step 1: Reflect $P(3, -4)$ in $y$-axis $\\rightarrow P'(-3, -4)$.",
+      "Step 2: Rotate $(x, y)$ clockwise $90^\\circ \\rightarrow (y, -x)$.",
+      "$P'' = (-4, -(-3)) = (-4, 3)$."
+    ],
+    "solution_steps_zh": [
+      "第 1 步：將 $P(3, -4)$ 對 $y$ 軸反射 $\\rightarrow P'(-3, -4)$。",
+      "第 2 步：順時針旋轉 $90^\\circ$ 公式為 $(x, y) \\rightarrow (y, -x)$。",
+      "$P'' = (-4, -(-3)) = (-4, 3)$。"
+    ],
+    "diagram_json": null,
+    "tags": ["coordinate-geo", "transformations"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_306",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_stat_prob"],
+    "marks": 1,
+    "difficulty": 6,
+    "paper": 2,
+    "section": "A",
+    "question_en": "The cumulative frequency curve shows the weight distribution of 80 students. Find the interquartile range (IQR) of the weights.",
+    "question_zh": "累積頻數多邊形顯示了 80 位學生的體重分佈。求體重的四分位距 (IQR)。",
+    "options": [
+      "A. 10 kg",
+      "B. 15 kg",
+      "C. 20 kg",
+      "D. 25 kg"
+    ],
+    "correct_answer": "C",
+    "solution_steps_en": [
+      "Total students $= 80$.",
+      "$Q_1$ (lower quartile) at 20th student $\\rightarrow$ From graph: 45 kg.",
+      "$Q_3$ (upper quartile) at 60th student $\\rightarrow$ From graph: 65 kg.",
+      "IQR $= 65 - 45 = 20$ kg."
+    ],
+    "solution_steps_zh": [
+      "總人數 $= 80$。",
+      "$Q_1$ (下四分位數) 在第 20 位學生 $\\rightarrow$ 從圖中讀取：45 kg。",
+      "$Q_3$ (上四分位數) 在第 60 位學生 $\\rightarrow$ 從圖中讀取：65 kg。",
+      "IQR $= 65 - 45 = 20$ kg。"
+    ],
+    "diagram_json": {
+      "canvas": { "width": 400, "height": 300, "viewBox": "0 0 400 300" },
+      "elements": [
+        { "type": "line", "x1": 50, "y1": 250, "x2": 380, "y2": 250, "stroke": "#94a3b8", "label": "Weight (kg)" },
+        { "type": "line", "x1": 50, "y1": 250, "x2": 50, "y2": 20, "stroke": "#94a3b8", "label": "Cum. Freq" },
+        { "type": "polyline", "points": [{"x": 50, "y": 250}, {"x": 100, "y": 240}, {"x": 150, "y": 200}, {"x": 200, "y": 125}, {"x": 250, "y": 70}, {"x": 300, "y": 40}, {"x": 350, "y": 20}], "stroke": "#3b82f6", "strokeWidth": 2, "fill": "none" },
+        { "type": "line", "x1": 50, "y1": 200, "x2": 150, "y2": 200, "stroke": "#ef4444", "strokeDasharray": "4,4", "label": "Q1 20" },
+        { "type": "line", "x1": 150, "y1": 200, "x2": 150, "y2": 250, "stroke": "#ef4444", "strokeDasharray": "4,4" },
+        { "type": "line", "x1": 50, "y1": 70, "x2": 250, "y2": 70, "stroke": "#ef4444", "strokeDasharray": "4,4", "label": "Q3 60" },
+        { "type": "line", "x1": 250, "y1": 70, "x2": 250, "y2": 250, "stroke": "#ef4444", "strokeDasharray": "4,4" },
+        { "type": "text", "x": 140, "y": 265, "text": "45", "fontSize": 12 },
+        { "type": "text", "x": 240, "y": 265, "text": "65", "fontSize": 12 },
+        { "type": "text", "x": 20, "y": 205, "text": "20", "fontSize": 12 },
+        { "type": "text", "x": 20, "y": 75, "text": "60", "fontSize": 12 },
+        { "type": "text", "x": 15, "y": 150, "text": "Freq", "fontSize": 10, "rotate": -90 }
+      ]
+    },
+    "tags": ["statistics", "cumulative-frequency"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_sa_307",
+    "type": "short_answer",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_alg_polynomials"],
+    "marks": 9,
+    "difficulty": 7,
+    "paper": 1,
+    "section": "A",
+    "question_en": "When a polynomial $P(x)$ is divided by $x^2 - x - 2$, the quotient is $2x + 3$ and the remainder is $5x - 1$. Find $P(x)$.",
+    "question_zh": "當多項式 $P(x)$ 除以 $x^2 - x - 2$ 時，商式為 $2x + 3$，餘式為 $5x - 1$。求 $P(x)$。",
+    "solution_steps_en": [
+      "Using the division algorithm: $P(x) = D(x)Q(x) + R(x)$.",
+      " $P(x) = (x^2 - x - 2)(2x + 3) + (5x - 1)$.",
+      " Expand $(x^2 - x - 2)(2x + 3) = 2x^3 + 3x^2 - 2x^2 - 3x - 4x - 6 = 2x^3 + x^2 - 7x - 6$.",
+      " Add remainder: $P(x) = (2x^3 + x^2 - 7x - 6) + 5x - 1 = 2x^3 + x^2 - 2x - 7$."
+    ],
+    "solution_steps_zh": [
+      "使用除法算法：$P(x) = D(x)Q(x) + R(x)$。",
+      " $P(x) = (x^2 - x - 2)(2x + 3) + (5x - 1)$。",
+      " 展開 $(x^2 - x - 2)(2x + 3) = 2x^3 + 3x^2 - 2x^2 - 3x - 4x - 6 = 2x^3 + x^2 - 7x - 6$。",
+      " 加上餘式：$P(x) = 2x^3 + x^2 - 2x - 7$。"
+    ],
+    "diagram_json": null,
+    "tags": ["polynomials", "division-algorithm"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_sa_308",
+    "type": "short_answer",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_geo_coordinate_geo"],
+    "marks": 11,
+    "difficulty": 7,
+    "paper": 1,
+    "section": "A",
+    "question_en": "Points $A(2, 6)$ and $B(8, 2)$ are given. The locus of a moving point $P$ is equidistant from $A$ and $B$.\n(a) Describe the geometric relationship of the locus to points $A$ and $B$. (2 marks)\n(b) Find the equation of the locus of $P$. (9 marks)",
+    "question_zh": "已知點 $A(2, 6)$ 及 $B(8, 2)$。動點 $P$ 的軌跡與 $A$ 及 $B$ 等距。\n(a) 描述該軌跡與點 $A, B$ 的幾何關係。(2分)\n(b) 求 $P$ 的軌跡方程。(9分)",
+    "solution_steps_en": [
+      "(a) The locus of $P$ is the perpendicular bisector of the line segment $AB$.",
+      "(b) Let $P$ be $(x, y)$. Since $PA = PB$, $PA^2 = PB^2$.",
+      " $(x - 2)^2 + (y - 6)^2 = (x - 8)^2 + (y - 2)^2$.",
+      " $x^2 - 4x + 4 + y^2 - 12y + 36 = x^2 - 16x + 64 + y^2 - 4y + 4$.",
+      " $-4x - 12y + 40 = -16x - 4y + 68$.",
+      " $12x - 8y - 28 = 0$. Divide by 4: $3x - 2y - 7 = 0$."
+    ],
+    "solution_steps_zh": [
+      "(a) $P$ 的軌跡是線段 $AB$ 的垂直平分線。",
+      "(b) 設 $P$ 為 $(x, y)$。由於 $PA = PB$，故 $PA^2 = PB^2$。",
+      " $(x - 2)^2 + (y - 6)^2 = (x - 8)^2 + (y - 2)^2$。",
+      " $x^2 - 4x + 4 + y^2 - 12y + 36 = x^2 - 16x + 64 + y^2 - 4y + 4$。",
+      " $12x - 8y - 28 = 0$。同除以 4 得 $3x - 2y - 7 = 0$。"
+    ],
+    "diagram_json": {
+      "canvas": { "width": 300, "height": 300, "viewBox": "0 0 300 300" },
+      "elements": [
+        { "type": "line", "x1": 20, "y1": 280, "x2": 280, "y2": 280, "stroke": "#cbd5e1" },
+        { "type": "line", "x1": 20, "y1": 280, "x2": 20, "y2": 20, "stroke": "#cbd5e1" },
+        { "type": "point", "x": 60, "y": 100, "label": "A(2,6)" },
+        { "type": "point", "x": 180, "y": 220, "label": "B(8,2)" },
+        { "type": "line", "x1": 60, "y1": 100, "x2": 180, "y2": 220, "stroke": "#94a3b8", "strokeDasharray": "4,4" },
+        { "type": "line", "x1": 0, "y1": 265, "x2": 230, "y2": -80, "stroke": "#ef4444", "strokeWidth": 2, "label": "Locus" }
+      ]
+    },
+    "tags": ["coordinate-geo", "locus"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_sa_309",
+    "type": "short_answer",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_stat_prob"],
+    "marks": 10,
+    "difficulty": 7,
+    "paper": 1,
+    "section": "A",
+    "question_en": "Two fair dice are thrown. Find the probability that the sum of the numbers is a prime number, given that the sum is greater than 5.",
+    "question_zh": "擲出兩枚均勻骰子。已知點數之和多於 5，求該和是質數的概率。",
+    "solution_steps_en": [
+      "Total outcomes in $S = 36$.",
+      "Sums $\\le 5$: $(1,1), (1,2), (2,1), (1,3), (3,1), (2,2), (1,4), (4,1), (2,3), (3,2)$. Total 10 cases.",
+      "Condition: Sum $> 5 \\rightarrow 36 - 10 = 26$ cases.",
+      "Prime sums $> 5$: 7 and 11.",
+      "Sum 7: (1,6), (6,1), (2,5), (5,2), (3,4), (4,3) $\\rightarrow$ 6 cases.",
+      "Sum 11: (5,6), (6,5) $\\rightarrow$ 2 cases.",
+      "Total prime outcomes $= 6 + 2 = 8$.",
+      "Prob $= \\frac{8}{26} = \\frac{4}{13}$."
+    ],
+    "solution_steps_zh": [
+      "樣本空間總數 $S = 36$。",
+      "點數和 $\\le 5$ 的情況：(1,1) 至 (3,2) 共 10 種情況。",
+      "條件：點數和 $> 5 \\rightarrow 36 - 10 = 26$ 種情況。",
+      "多於 5 的質數和：7 及 11。",
+      "和為 7：6 種情況；和為 11：2 種情況。共 8 種。",
+      "概率 $= \\frac{8}{26} = \\frac{4}{13}$。"
+    ],
+    "diagram_json": null,
+    "tags": ["probability", "conditional-probability"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_sa_310",
+    "type": "short_answer",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_alg_polynomials"],
+    "marks": 12,
+    "difficulty": 7,
+    "paper": 1,
+    "section": "A",
+    "question_en": "The first row of a theater has 20 seats. Each subsequent row has 4 additional seats than the previous row.\n(a) Find the number of seats in the 15th row. (4 marks)\n(b) If the theater has 25 rows in total, find the total seating capacity of the theater. (8 marks)",
+    "question_zh": "劇院的第一排有 20 個座位。隨後的每一排都比前一排多 4 個座位。\n(a) 求第 15 排的座位數目。(4分)\n(b) 若劇院共有 25 排，求劇院的總座位數。(8分)",
+    "solution_steps_en": [
+      "(a) This is an Arithmetic Progression (AP) with $a = 20$ and $d = 4$.",
+      " $T_{15} = a + (15 - 1)d = 20 + 14(4) = 20 + 56 = 76$.",
+      "(b) Total capacity $= S_{25} = \\frac{n}{2}[2a + (n - 1)d]$.",
+      " $S_{25} = \\frac{25}{2}[2(20) + (25 - 1)4] = 12.5[40 + 96] = 12.5 \\times 136 = 1700$."
+    ],
+    "solution_steps_zh": [
+      "(a) 這是一個等差數列 (AP)，$a = 20$，$d = 4$。",
+      " $T_{15} = a + 14d = 20 + 56 = 76$。",
+      "(b) 總座位數 $= S_{25} = \\frac{n}{2}[2a + (n - 1)d]$。",
+      " $S_{25} = \\frac{25}{2}[40 + 24(4)] = 12.5[136] = 1700$。"
+    ],
+    "diagram_json": null,
+    "tags": ["arithmetic-progression", "real-life"],
+    "status": "approved"
+  }
+]

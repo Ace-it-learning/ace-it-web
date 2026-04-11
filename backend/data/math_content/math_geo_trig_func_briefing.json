@@ -1,0 +1,61 @@
+{
+  "is_modular": true,
+  "name": "Trig Functions & Graphs",
+  "name_zh": "三角函數與圖像",
+  "roadmap": "Master the trigonometric functions by understanding the ASTC quadrant rule, analyzing wave transformations, and developing efficient strategies for solving quadratic trigonometric equations across the full 0° to 360° range.",
+  "roadmap_zh": "透過理解 ASTC 象限法則、分析波形變換，以及建立在 0° 至 360° 全範圍內求解二次三角方程的高效策略，全面掌握三角函數。",
+  "learning_modules": [
+    {
+      "module_id": "MOD_01",
+      "title": "Core Concepts & Wave Properties",
+      "title_zh": "核心概念與波形性質",
+      "concepts": [
+        {
+          "concept_id": "C01_ASTC_RULE",
+          "name": "The ASTC (CAST) Rule",
+          "name_zh": "ASTC (CAST) 法則",
+          "formula": "\\sin(180^\\circ - \\theta) = \\sin\\theta, \\quad \\cos(180^\\circ + \\theta) = -\\cos\\theta",
+          "key_takeaway": "The ASTC rule tells us which trig ratios are positive in each quadrant: All (I), Sine (II), Tangent (III), and Cosine (IV). Use this to find all possible angles between 0° and 360°.",
+          "key_takeaway_zh": "ASTC 法則告訴我們每個象限中哪些三角比為正值：全部 (I)、正弦 (II)、正切 (III) 和餘弦 (IV)。利用此法則可尋找 0° 至 360° 之間的所有可能角度。",
+          "visual": "<svg viewBox='0 0 500 250' xmlns='http://www.w3.org/2000/svg'><line x1='50' y1='125' x2='450' y2='125' stroke='#333' stroke-width='2'/><line x1='250' y1='25' x2='250' y2='225' stroke='#333' stroke-width='2'/><text x='460' y='130' font-size='14' font-family='Arial'>x</text><text x='245' y='15' font-size='14' font-family='Arial'>y</text><text x='350' y='75' font-size='24' font-weight='bold' fill='#e63946' text-anchor='middle'>A</text><text x='350' y='100' font-size='12' fill='#333' text-anchor='middle'>(All +)</text><text x='150' y='75' font-size='24' font-weight='bold' fill='#457b9d' text-anchor='middle'>S</text><text x='150' y='100' font-size='12' fill='#333' text-anchor='middle'>(Sine +)</text><text x='150' y='175' font-size='24' font-weight='bold' fill='#2a9d8f' text-anchor='middle'>T</text><text x='150' y='200' font-size='12' fill='#333' text-anchor='middle'>(Tan +)</text><text x='350' y='175' font-size='24' font-weight='bold' fill='#f4a261' text-anchor='middle'>C</text><text x='350' y='200' font-size='12' fill='#333' text-anchor='middle'>(Cos +)</text><text x='400' y='115' font-size='12' fill='#666'>0°/360°</text><text x='255' y='40' font-size='12' fill='#666'>90°</text><text x='60' y='115' font-size='12' fill='#666'>180°</text><text x='255' y='215' font-size='12' fill='#666'>270°</text></svg>"
+        },
+        {
+          "concept_id": "C02_WAVE_ANATOMY",
+          "name": "Wave Anatomy & Transformations",
+          "name_zh": "波形結構與變換",
+          "formula": "y = a \\\\sin(bx) + c",
+          "key_takeaway": "For any sine/cosine wave, Amplitude = $|a|$, Period = $360^\\circ/b$, and the vertical shift $c$ determines the principal axis about which the wave oscillates.",
+          "key_takeaway_zh": "對於任何正弦/餘弦波，振幅 = $|a|$，週期 = $360^\\circ/b$，而垂直平移 $c$ 則決定了波形振盪的主軸。",
+          "visual": null
+        },
+        {
+          "concept_id": "C03_SOLVING_EQS",
+          "name": "Solving Trigonometric Equations",
+          "name_zh": "求解三角方程",
+          "formula": "2\\\\cos^2\\theta - 1 = 0 \\\\implies \\\\cos\\theta = \\\\pm \\\\frac{1}{\\\\sqrt{2}}",
+          "key_takeaway": "Solve quadratic trig equations by factoring (like $u^2 - u = 0$) and then using the ASTC rule to find ALL valid solutions within the given range (usually $0^\\circ \\le \\theta < 360^\\circ$).",
+          "key_takeaway_zh": "透過因式分解（如 $u^2 - u = 0$）求解二次三角方程，然後利用 ASTC 法則在給定範圍內（通常為 $0^\\circ \\le \\theta < 360^\\circ$）尋找所有有效解。",
+          "visual": null
+        }
+      ],
+      "common_traps": [
+        {
+          "trap": "The 'Missing Root' Trap",
+          "trap_zh": "「遺漏根」陷阱",
+          "description": "Failing to check all relevant quadrants. For example, if $\\\\sin\\theta = 0.5$, students often find 30° but forget 150°.",
+          "description_zh": "未能檢查所有相關象限。例如，若 $\\\\sin\\theta = 0.5$，學生常只找到 30° 而忘記 150°。",
+          "fix": "Always sketch the ASTC quadrants and mark the two quadrants where the trig ratio has the required sign.",
+          "fix_zh": "務必草繪 ASTC 象限，並標記出該三角比符號符合要求的兩個象限。"
+        },
+        {
+          "trap": "Period vs. Frequency Confusion",
+          "trap_zh": "週期與頻率混淆",
+          "description": "Mistakenly taking the coefficient $b$ as the period instead of using $360^\\circ / b$.",
+          "description_zh": "錯誤地將係數 $b$ 視為週期，而非使用 $360^\\circ / b$。",
+          "fix": "Remember the formula: Period = $360^\\circ / b$. Higher $b$ values 'squeeze' the graph tighter, making the period shorter.",
+          "fix_zh": "記住公式：週期 = $360^\\circ / b$。較高的 $b$ 值會使圖像「擠壓」得更緊，從而使週期變短。"
+        }
+      ]
+    }
+  ]
+}

@@ -99,8 +99,10 @@ class GamificationService {
         const statsRef = userRef.collection('stats').doc('main');
 
         const logic = async (t) => {
-            const statsDoc = await t.get(statsRef);
+            const [statsDoc, userDoc] = await Promise.all([t.get(statsRef), t.get(userRef)]);
             let stats = statsDoc.exists ? statsDoc.data() : { xp: 0, level: 1, daily_xp: 0, last_xp_date: null };
+            const userData = userDoc.exists ? userDoc.data() : {};
+            const tier = userData.subscription_tier || 'free';
 
             // 1. Check Daily Cap & Streak
             const today = new Date().toDateString();
@@ -127,7 +129,11 @@ class GamificationService {
                 return { success: false, reason: 'daily_cap_reached', earned: 0 };
             }
 
-            let finalAmount = baseAmount;
+            // --- TIER MULTIPLIER ---
+            const tierMultipliers = { free: 1, pro: 1.2, premium: 1.5 };
+            const multiplier = tierMultipliers[tier] || 1;
+            let finalAmount = Math.floor(baseAmount * multiplier);
+
             let cheatingDetected = false;
             let cheatReason = null;
 
@@ -389,14 +395,24 @@ class GamificationService {
         if (!uid || uid === 'guest') return null;
 
         try {
-            // Concurrent retrieval of stats and inventory
-            const [doc, inventorySnap] = await Promise.all([
-                this.db.collection('users').doc(uid).collection('stats').doc('main').get(),
-                this.db.collection('users').doc(uid).collection('inventory')
+            console.log(`[GamificationService] getProgress: Fetching stats doc for ${uid}`);
+            const statsDocPromise = this.db.collection('users').doc(uid).collection('stats').doc('main').get();
+            
+            console.log(`[GamificationService] getProgress: Fetching inventory for ${uid}`);
+            let inventorySnap;
+            try {
+                inventorySnap = await this.db.collection('users').doc(uid).collection('inventory')
                     .orderBy('acquiredAt', 'desc')
-                    .limit(50) // Enforce the 50 limit correctly
-                    .get()
-            ]);
+                    .limit(50)
+                    .get();
+            } catch (inventoryError) {
+                console.warn(`[GamificationService] Inventory fetch failed (possibly missing index):`, inventoryError.message);
+                // Fallback: Fetch without ordering or just return empty
+                inventorySnap = { docs: [] };
+            }
+
+            const doc = await statsDocPromise;
+            console.log(`[GamificationService] getProgress: Stats doc received.`);
 
             if (!doc.exists) return null;
 
@@ -407,9 +423,13 @@ class GamificationService {
 
             return {
                 ...data,
+                xp: totalXP,          // Explicit: use the resolved total XP
+                level: levelData.level, // Explicit: use the FRESHLY CALCULATED level (not stale DB value)
                 nextLevelXP: levelData.nextLevelXP,
-                currentStepXP: levelData.currentStepXP, // Progress in current level
-                progressPercent: (levelData.currentStepXP / levelData.nextLevelXP) * 100,
+                currentStepXP: levelData.currentStepXP,
+                progressPercent: levelData.nextLevelXP > 0
+                    ? Math.round((levelData.currentStepXP / levelData.nextLevelXP) * 100)
+                    : 0,
                 inventory
             };
         } catch (error) {

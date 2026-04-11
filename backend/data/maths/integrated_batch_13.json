@@ -1,0 +1,341 @@
+[
+  {
+    "id": "ct_mcq_221",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_alg_log_exp"],
+    "marks": 1,
+    "difficulty": 5,
+    "paper": 2,
+    "section": "A",
+    "question_en": "Simplify $\\frac{(a^2 b^{-3})^2}{a^{-1} b^2}$ and express your answer with positive indices.",
+    "question_zh": "化簡 $\\frac{(a^2 b^{-3})^2}{a^{-1} b^2}$ 並以正指數表示答案。",
+    "options": [
+      "A. $\\frac{a^5}{b^8}$",
+      "B. $\\frac{a^5}{b^4}$",
+      "C. $\\frac{a^3}{b^8}$",
+      "D. $a^5 b^4$"
+    ],
+    "correct_answer": "A",
+    "solution_steps_en": [
+      "Square the numerator: $(a^2 b^{-3})^2 = a^{2\\times 2} b^{-3\\times 2} = a^4 b^{-6}$.",
+      "Divide by the denominator: $\\frac{a^4 b^{-6}}{a^{-1} b^2} = a^{4 - (-1)} b^{-6 - 2}$.",
+      "Simplify the powers: $a^5 b^{-8}$.",
+      "Convert to positive indices: $\\frac{a^5}{b^8}$."
+    ],
+    "solution_steps_zh": [
+      "計算分子之平方：$(a^2 b^{-3})^2 = a^4 b^{-6}$。",
+      "除以分母：$\\frac{a^4 b^{-6}}{a^{-1} b^2} = a^{4 - (-1)} b^{-6 - 2}$。",
+      "化簡指數：$a^5 b^{-8}$。",
+      "以正指數表示：$\\frac{a^5}{b^8}$。"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_sa_222",
+    "type": "short_answer",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_geo_trig_app"],
+    "marks": 12,
+    "difficulty": 7,
+    "paper": 1,
+    "section": "B",
+    "question_en": "In a tetrahedron $VABC$, the base $ABC$ is an equilateral triangle with side length $10\\text{ cm}$. The height of the tetrahedron is $12\\text{ cm}$ and the foot of the perpendicular from $V$ to the base is the centroid $G$ of $ABC$. \\n(a) Find the distance from $A$ to $BC$. (3 marks)\\n(b) Find the length of $VG$. (1 mark)\\n(c) Find the angle between the plane $VBC$ and the base $ABC$. (4 marks)\\n(d) Find the area of the face $VBC$. (4 marks)",
+    "question_zh": "在四面體 $VABC$ 中，底 $ABC$ 是一個邊長為 $10\\text{ cm}$ 的等邊三角形。四面體的高為 $12\\text{ cm}$，且由 $V$ 到面 $ABC$ 的垂足為 $ABC$ 的重心 $G$。\n(a) 求 $A$ 與 $BC$ 之間的距離。(3分)\n(b) 求 $VG$ 的長度。(1分)\n(c) 求面 $VBC$ 與底 $ABC$ 之間的交角。(4分)\n(d) 求面 $VBC$ 的面積。(4分)",
+    "solution_steps_en": [
+      "(a) Let $M$ be the midpoint of $BC$. In equilateral $\\triangle ABC$, $AM \\perp BC$. $AM = 10 \\sin 60^\\circ = 10 \\times \\frac{\\sqrt{3}}{2} = 5\\sqrt{3} \\approx 8.66\\text{ cm}$.",
+      "(b) Given height $VG = 12\\text{ cm}$.",
+      "(c) $G$ is the centroid, so $GM = \\frac{1}{3} AM = \\frac{5\\sqrt{3}}{3}$. The angle between $VBC$ and $ABC$ is $\\angle VMG$.",
+      "$\\tan \\angle VMG = \\frac{VG}{GM} = \\frac{12}{5\\sqrt{3}/3} = \\frac{36}{5\\sqrt{3}} = \\frac{12\\sqrt{3}}{5} \\approx 4.1569$.",
+      "$\\angle VMG \\approx \\tan^{-1}(4.1569) \\approx 76.5^\\circ$.",
+      "(d) Area $VBC = \\frac{1}{2} \\times BC \\times VM$. $VM = \\sqrt{VG^2 + GM^2} = \\sqrt{144 + 25/3} = \\sqrt{457/3} \\approx 12.34$.",
+      "Area $\\approx \\frac{1}{2} \\times 10 \\times 12.34 = 61.7\\text{ cm}^2$."
+    ],
+    "solution_steps_zh": [
+      "(a) 設 $M$ 為 $BC$ 的中點。$AM = 10 \\sin 60^\\circ = 5\\sqrt{3} \\approx 8.66\\text{ cm}$。",
+      "(b) 已知高 $VG = 12\\text{ cm}$。",
+      "(c) $G$ 為重心，故 $GM = \\frac{1}{3} AM = \\frac{5\\sqrt{3}}{3}$。所求角為 $\\angle VMG$。",
+      "$\\tan \\angle VMG = \\frac{12}{GM} \\approx 4.1569 \\Rightarrow \\angle VMG \\approx 76.5^\\circ$。",
+      "(d) 面 $VBC$ 的面積 $= \\frac{1}{2} \\times 10 \\times VM$。$VM = \\sqrt{12^2 + GM^2} \\approx 12.34$。",
+      "Area $\\approx 61.7\\text{ cm}^2$."
+    ],
+    "diagram_json": {
+      "elements": [
+        { "type": "polyline", "points": [{ "x": 100, "y": 240 }, { "x": 300, "y": 240 }, { "x": 200, "y": 180 }, { "x": 100, "y": 240 }], "stroke": "#94a3b8", "strokeWidth": 1, "dash": [4, 4], "fill": "rgba(148, 163, 184, 0.05)" },
+        { "type": "polyline", "points": [{ "x": 200, "y": 60 }, { "x": 100, "y": 240 }, { "x": 300, "y": 240 }, { "x": 200, "y": 60 }], "stroke": "#7c3aed", "strokeWidth": 2, "fill": "rgba(124, 58, 237, 0.1)" },
+        { "type": "line", "x1": 200, "y1": 60, "x2": 200, "y2": 180, "stroke": "#94a3b8", "strokeWidth": 1, "dash": [4, 4] },
+        { "type": "line", "x1": 200, "y1": 60, "x2": 200, "y2": 220, "stroke": "#ef4444", "strokeWidth": 1.5, "dash": [3, 3], "label": "h=12" },
+        { "type": "line", "x1": 200, "y1": 220, "x2": 200, "y2": 240, "stroke": "#10b981", "strokeWidth": 1.5, "dash": [2, 2] },
+        { "type": "line", "x1": 200, "y1": 60, "x2": 200, "y2": 240, "stroke": "#7c3aed", "strokeWidth": 2 },
+        { "type": "point", "x": 200, "y": 60, "label": "V", "labelDy": -15 },
+        { "type": "point", "x": 100, "y": 240, "label": "B", "labelDx": -15 },
+        { "type": "point", "x": 300, "y": 240, "label": "C", "labelDx": 15 },
+        { "type": "point", "x": 200, "y": 180, "label": "A", "labelDy": -10 },
+        { "type": "point", "x": 200, "y": 220, "label": "G", "labelDx": 12 },
+        { "type": "point", "x": 200, "y": 240, "label": "M", "labelDy": 15 }
+      ],
+      "canvas": { "width": 400, "height": 300, "viewBox": "80 40 240 220" }
+    },
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_223",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_stat_analysis"],
+    "marks": 1,
+    "difficulty": 6,
+    "paper": 2,
+    "section": "B",
+    "question_en": "If the variance of a set of data $\\{x_1, x_2, \\dots, x_n\\}$ is $v$, find the variance of the set $\\{3x_1 - 5, 3x_2 - 5, \\dots, 3x_n - 5\\}$.",
+    "question_zh": "若一組數據 $\\{x_1, x_2, \\dots, x_n\\}$ 的方差為 $v$，求數據 $\\{3x_1 - 5, 3x_2 - 5, \\dots, 3x_n - 5\\}$ 的方差。",
+    "options": [
+      "A. $v$",
+      "B. $3v$",
+      "C. $3v - 5$",
+      "D. $9v$"
+    ],
+    "correct_answer": "D",
+    "solution_steps_en": [
+      "Adding/Subtracting a constant does not change the variance.",
+      "Multiplying each data point by a constant $k$ changes the variance by a factor of $k^2$.",
+      "Here, $k = 3$, so the new variance is $3^2 \\times v = 9v$."
+    ],
+    "solution_steps_zh": [
+      "加減常數不改變方差。",
+      "將每個數據乘以常數 $k$ 會使方差變為原本的 $k^2$ 倍。",
+      "此處 $k = 3$，故新方差為 $3^2 \\times v = 9v$。"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_224",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_alg_polynomials"],
+    "marks": 1,
+    "difficulty": 5,
+    "paper": 2,
+    "section": "A",
+    "question_en": "When the polynomial $P(x) = 2x^3 - kx^2 + 5x - 3$ is divided by $x - 2$, the remainder is 7. Find the value of $k$.",
+    "question_zh": "當多項式 $P(x) = 2x^3 - kx^2 + 5x - 3$ 除以 $x - 2$ 時，餘數為 7。求 $k$ 的值。",
+    "options": [
+      "A. -1",
+      "B. 1",
+      "C. 4",
+      "D. 9"
+    ],
+    "correct_answer": "C",
+    "solution_steps_en": [
+      "By Remainder Theorem, $P(2) = 7$.",
+      "$2(2)^3 - k(2)^2 + 5(2) - 3 = 7$.",
+      "$16 - 4k + 10 - 3 = 7$.",
+      "$23 - 4k = 7 \\Rightarrow 4k = 16$.",
+      "Therefore, $k = 4$."
+    ],
+    "solution_steps_zh": [
+      "根據餘數定理，$P(2) = 7$。",
+      "$2(2)^3 - k(2)^2 + 5(2) - 3 = 7$。",
+      "$16 - 4k + 10 - 3 = 7$。",
+      "$23 - 4k = 7 \\Rightarrow 4k = 16 \\Rightarrow k = 4$。"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_sa_225",
+    "type": "short_answer",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_trig_app"],
+    "marks": 11,
+    "difficulty": 6,
+    "paper": 1,
+    "section": "A",
+    "question_en": "In $\\triangle ABC$, $AB = 8\\text{ cm}$, $\\angle BAC = 45^\\circ$, and $\\angle ABC = 60^\\circ$. \\n(a) Find the length of $AC$. (4 marks)\\n(b) Find the area of $\\triangle ABC$. (4 marks)\\n(c) Find the length of the altitude from $A$ to $BC$. (3 marks)",
+    "question_zh": "在 $\\triangle ABC$ 中，$AB = 8\\text{ cm}$，$\\angle BAC = 45^\\circ$ 且 $\\angle ABC = 60^\\circ$。\n(a) 求 $AC$ 的長度。(4分)\n(b) 求 $\\triangle ABC$ 的面積。(4分)\n(c) 求由 $A$ 到 $BC$ 的高。(3分)",
+    "diagram_json": {
+      "elements": [
+        { "type": "polyline", "points": [{ "x": 100, "y": 200 }, { "x": 250, "y": 200 }, { "x": 150, "y": 80 }, { "x": 100, "y": 200 }], "stroke": "#7c3aed", "strokeWidth": 2, "fill": "rgba(124, 58, 237, 0.05)" },
+        { "type": "arc", "center": { "x": 100, "y": 200 }, "r": 35, "startAngle": 0, "endAngle": 67, "label": "60°", "stroke": "#ef4444" },
+        { "type": "arc", "center": { "x": 150, "y": 80 }, "r": 35, "startAngle": 247, "endAngle": 310, "label": "45°", "stroke": "#ef4444" },
+        { "type": "point", "x": 100, "y": 200, "label": "B", "labelDx": -15, "labelDy": 10 },
+        { "type": "point", "x": 250, "y": 200, "label": "C", "labelDx": 10, "labelDy": 10 },
+        { "type": "point", "x": 150, "y": 80, "label": "A", "labelDy": -15 },
+        { "type": "text", "x": 125, "y": 140, "text": "8 cm", "dx": -15, "textAnchor": "end", "fill": "#1f2937", "fontSize": 12, "fontWeight": "bold" }
+      ],
+      "canvas": { "width": 400, "height": 300, "viewBox": "60 50 220 180" }
+    },
+    "solution_steps_en": [
+      "(a) $\\angle ACB = 180^\\circ - 45^\\circ - 60^\\circ = 75^\\circ$.",
+      "By Sine Rule: $\\frac{AC}{\\sin 60^\\circ} = \\frac{8}{\\sin 75^\\circ}$.",
+      "$AC = \\frac{8 \\sin 60^\\circ}{\\sin 75^\\circ} \\approx 7.17\\text{ cm}$.",
+      "(b) Area $= \\frac{1}{2} AB \\cdot AC \\sin \\angle BAC = \\frac{1}{2} \\times 8 \\times 7.17 \\times \\sin 45^\\circ$.",
+      "Area $\\approx 20.3\\text{ cm}^2$.",
+      "(c) Let $h$ be the altitude. $h = 8 \\sin 60^\\circ = 4\\sqrt{3} \\approx 6.93\\text{ cm}$."
+    ],
+    "solution_steps_zh": [
+      "(a) $\\angle ACB = 75^\\circ$。利用正弦定理：$AC = \\frac{8 \\sin 60^\\circ}{\\sin 75^\\circ} \\approx 7.17\\text{ cm}$。",
+      "(b) 面積 $= \\frac{1}{2} (8)(7.17) \\sin 45^\\circ \\approx 20.3\\text{ cm}^2$。",
+      "(c) 高 $h = 8 \\sin 60^\\circ = 4\\sqrt{3} \\approx 6.93\\text{ cm}$。"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_226",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_alg_apgp"],
+    "marks": 1,
+    "difficulty": 5,
+    "paper": 2,
+    "section": "A",
+    "question_en": "In an arithmetic sequence, the 5th term is 14 and the 12th term is 35. Find the 20th term.",
+    "question_zh": "在一等差數列中，第 5 項為 14，第 12 項為 35。求第 20 項。",
+    "options": [
+      "A. 56",
+      "B. 59",
+      "C. 62",
+      "D. 65"
+    ],
+    "correct_answer": "B",
+    "solution_steps_en": [
+      "Let $a$ be the first term and $d$ be the common difference.",
+      "$a + 4d = 14$ (Eq 1). $a + 11d = 35$ (Eq 2).",
+      "Subtract Eq 1 from Eq 2: $7d = 21 \\Rightarrow d = 3$.",
+      "Substitute into Eq 1: $a + 12 = 14 \\Rightarrow a = 2$.",
+      "20th term $= a + 19d = 2 + 19(3) = 2 + 57 = 59$."
+    ],
+    "solution_steps_zh": [
+      "設首項為 $a$，公差為 $d$。",
+      "$a + 4d = 14$ 及 $a + 11d = 35$。",
+      "相減得 $7d = 21 \\Rightarrow d = 3$。代入得 $a = 2$。",
+      "第 20 項 $= a + 19d = 2 + 57 = 59$。"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_227",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_geo_circle_eq"],
+    "marks": 1,
+    "difficulty": 6,
+    "paper": 2,
+    "section": "B",
+    "question_en": "The straight line $y = x + k$ is a tangent to the circle $x^2 + y^2 = 8$. Find the possible values of $k$.",
+    "question_zh": "直線 $y = x + k$ 是圓 $x^2 + y^2 = 8$ 的切線。求 $k$ 的可能值。",
+    "options": [
+      "A. $\\pm 2$",
+      "B. $\\pm 4$",
+      "C. $\\pm 8$",
+      "D. $\\pm 16$"
+    ],
+    "correct_answer": "B",
+    "solution_steps_en": [
+      "Substitute $y = x + k$ into $x^2 + y^2 = 8$.",
+      "$x^2 + (x + k)^2 = 8 \\Rightarrow x^2 + x^2 + 2kx + k^2 - 8 = 0$.",
+      "$2x^2 + 2kx + (k^2 - 8) = 0$.",
+      "For tangent, discriminant $\\Delta = 0$.",
+      "$(2k)^2 - 4(2)(k^2 - 8) = 0$.",
+      "$4k^2 - 8k^2 + 64 = 0 \\Rightarrow -4k^2 = -64$.",
+      "$k^2 = 16 \\Rightarrow k = \\pm 4$."
+    ],
+    "solution_steps_zh": [
+      "代入 $y = x + k$ 得 $2x^2 + 2kx + (k^2 - 8) = 0$。",
+      "對於切線，判別式 $\\Delta = 0$。",
+      "$(2k)^2 - 4(2)(k^2 - 8) = 0 \\Rightarrow 4k^2 - 8k^2 + 64 = 0$。",
+      "$4k^2 = 64 \\Rightarrow k^2 = 16 \\Rightarrow k = \\pm 4$。"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_sa_228",
+    "type": "short_answer",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_stat_prob"],
+    "marks": 13,
+    "difficulty": 7,
+    "paper": 1,
+    "section": "B",
+    "question_en": "A bag contains 5 red balls and 3 green balls. Two balls are drawn one by one without replacement. \\n(a) What is the probability that both balls are red? (4 marks)\\n(b) What is the probability that the two balls are of different colors? (5 marks)\\n(c) Given that the second ball is red, what is the probability that the first ball was also red? (4 marks)",
+    "question_zh": "袋子中有 5 個紅球和 3 個綠球。每次抽出一個球且不放回，共抽出兩個。 \n(a) 求兩個球都是紅色的概率。(4分)\n(b) 求兩個球顏色不同的概率。(5分)\n(c) 已知第二個球是紅色，求第一個球也是紅色的概率。(4分)",
+    "solution_steps_en": [
+      "(a) $P(R1 \\cap R2) = P(R1) \\times P(R2|R1) = \\frac{5}{8} \\times \\frac{4}{7} = \\frac{20}{56} = \\frac{5}{14}$.",
+      "(b) $P(\\text{different}) = P(R1 \\cap G2) + P(G1 \\cap R2)$.",
+      "$P(R1 \\cap G2) = \\frac{5}{8} \\times \\frac{3}{7} = \\frac{15}{56}$.",
+      "$P(G1 \\cap R2) = \\frac{3}{8} \\times \\frac{5}{7} = \\frac{15}{56}$.",
+      "$P(\\text{different}) = \\frac{30}{56} = \\frac{15}{28}$.",
+      "(c) Conditional probability $P(R1|R2) = \\frac{P(R1 \\cap R2)}{P(R2)}$.",
+      "$P(R2) = P(R1 \\cap R2) + P(G1 \\cap R2) = \\frac{20}{56} + \\frac{15}{56} = \\frac{35}{56} = \\frac{5}{8}$.",
+      "$P(R1|R2) = \\frac{20/56}{35/56} = \\frac{20}{35} = \\frac{4}{7}$."
+    ],
+    "solution_steps_zh": [
+      "(a) $P(\\text{兩紅}) = \\frac{5}{8} \\times \\frac{4}{7} = \\frac{5}{14}$。",
+      "(b) $P(\\text{不同色}) = \\frac{5}{8} \\times \\frac{3}{7} + \\frac{3}{8} \\times \\frac{5}{7} = \\frac{30}{56} = \\frac{15}{28}$。",
+      "(c) $P(R1|R2) = \\frac{P(R1 \\cap R2)}{P(R2)}$。",
+      "$P(R2) = \\frac{20}{56} + \\frac{15}{56} = \\frac{35}{56} = \\frac{5}{8}$。",
+      "$P(R1|R2) = \\frac{20}{35} = \\frac{4}{7}$。"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_229",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_geo_coord"],
+    "marks": 1,
+    "difficulty": 6,
+    "paper": 2,
+    "section": "A",
+    "question_en": "Describe the locus of a point $P$ which moves such that it is always equidistant from two fixed points $A(2, 5)$ and $B(6, 1)$.",
+    "question_zh": "描述動點 $P$ 的軌跡，該點移動時始終與兩定點 $A(2, 5)$ 及 $B(6, 1)$ 等距。",
+    "options": [
+      "A. The circle with diameter $AB$.",
+      "B. The perpendicular bisector of $AB$.",
+      "C. The angle bisector of $AB$ with respect to the origin.",
+      "D. The straight line $x + y = 6$."
+    ],
+    "correct_answer": "B",
+    "solution_steps_en": [
+      "The locus of points equidistant from two fixed points is the perpendicular bisector of the line segment joining the two points.",
+      "Identify points: $A(2, 5)$ and $B(6, 1)$.",
+      "The locus is the perpendicular bisector of $AB$."
+    ],
+    "solution_steps_zh": [
+      "與兩定點等距的點之軌跡是該兩點連線段的垂直平分線。",
+      "軌跡為 $AB$ 的垂直平分線。"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_sa_230",
+    "type": "short_answer",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_alg_quadratics"],
+    "marks": 10,
+    "difficulty": 6,
+    "paper": 1,
+    "section": "A",
+    "question_en": "Solve the simultaneous equations \\n$\\begin{cases} y = x^2 - 4x + 7 \\\\ y = 2x - 1 \\end{cases}$",
+    "question_zh": "解聯立方程 \n$\\begin{cases} y = x^2 - 4x + 7 \\\\ y = 2x - 1 \\end{cases}$",
+    "solution_steps_en": [
+      "Substitute $y = 2x - 1$ into the first equation:",
+      "$2x - 1 = x^2 - 4x + 7$.",
+      "Rearrange into standard quadratic form: $x^2 - 6x + 8 = 0$.",
+      "Factorize the quadratic: $(x - 2)(x - 4) = 0$.",
+      "Solutions for $x$: $x_1 = 2$ and $x_2 = 4$.",
+      "Find corresponding $y$ values:",
+      "When $x = 2$, $y = 2(2) - 1 = 3$.",
+      "When $x = 4$, $y = 2(4) - 1 = 7$.",
+      "The solutions are $(2, 3)$ and $(4, 7)$."
+    ],
+    "solution_steps_zh": [
+      "將 $y = 2x - 1$ 代入第一個方程：$2x - 1 = x^2 - 4x + 7$。",
+      "整理得 $x^2 - 6x + 8 = 0$。",
+      "因式分解：$(x - 2)(x - 4) = 0$。",
+      "解得 $x = 2$ 或 $x = 4$。",
+      "當 $x = 2$ 時，$y = 3$。當 $x = 4$ 時，$y = 7$。",
+      "聯立方程的解為 $(2, 3)$ 及 $(4, 7)$。"
+    ],
+    "status": "approved"
+  }
+]

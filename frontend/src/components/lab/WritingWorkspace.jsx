@@ -97,6 +97,19 @@ const WritingWorkspace = ({ lessonData, onSubmit, isSubmitting }) => {
 
     return (
         <div className="max-w-4xl mx-auto pb-20 animate-in slide-in-from-bottom-4 duration-500">
+            {/* Archival Banner */}
+            <div className="mb-8 p-4 bg-amber-50 border-2 border-dashed border-amber-200 rounded-2xl flex items-center justify-between">
+                <div className="flex items-center gap-3 text-amber-800">
+                    <div className="bg-amber-100 p-2 rounded-lg">
+                        <Info size={20} />
+                    </div>
+                    <div>
+                        <p className="font-black uppercase tracking-widest text-[10px]">Legacy Component</p>
+                        <p className="text-sm font-bold">This writing workshop has been archived in favor of the new Quests Lab.</p>
+                    </div>
+                </div>
+            </div>
+
             {/* Header */}
             <div className="mb-8 text-center space-y-2">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-100 text-indigo-700 text-xs font-black uppercase tracking-widest">

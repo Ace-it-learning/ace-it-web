@@ -1,0 +1,344 @@
+[
+  {
+    "id": "ct_mcq_261",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_alg_inequalities"],
+    "marks": 1,
+    "difficulty": 6,
+    "paper": 2,
+    "section": "A",
+    "question_en": "Find the range of values of $x$ that satisfy $(x - 2)(x + 3) < 0$.",
+    "question_zh": "求滿足 $(x - 2)(x + 3) < 0$ 的 $x$ 值範圍。",
+    "options": [
+      "A. $x < -3$ or $x > 2$",
+      "B. $-3 < x < 2$",
+      "C. $x < -2$ or $x > 3$",
+      "D. $-2 < x < 3$"
+    ],
+    "correct_answer": "B",
+    "solution_steps_en": [
+      "The roots of the corresponding equation $(x-2)(x+3) = 0$ are $x = 2$ and $x = -3$.",
+      "Since the leading coefficient of $x^2 + x - 6$ is positive, the parabola opens upwards.",
+      "The value is negative ($< 0$) between the roots.",
+      "So, $-3 < x < 2$."
+    ],
+    "solution_steps_zh": [
+      "對應方程 $(x-2)(x+3) = 0$ 的根為 $x = 2$ 及 $x = -3$。",
+      "由於 $x^2 + x - 6$ 的首項係數為正數，拋物線開口向上。",
+      "在兩根之間，函數值為負 ($< 0$)。",
+      "故 $-3 < x < 2$。"
+    ],
+    "diagram_json": null,
+    "tags": ["inequalities", "quadratic-inequalities"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_262",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_geo_circles"],
+    "marks": 1,
+    "difficulty": 5,
+    "paper": 2,
+    "section": "A",
+    "question_en": "In a circle, $A, B, C, D$ are points on the circumference. If $\\angle CAD = 40^\\circ$, find $\\angle CBD$.",
+    "question_zh": "在一圓中，$A, B, C, D$ 為圓周上的點。若 $\\angle CAD = 40^\\circ$，求 $\\angle CBD$。",
+    "options": [
+      "A. 20°",
+      "B. 40°",
+      "C. 50°",
+      "D. 80°"
+    ],
+    "correct_answer": "B",
+    "solution_steps_en": [
+      "By the property 'angles in the same segment', the angles subtended by the same arc at the circumference are equal.",
+      "Both $\\angle CAD$ and $\\angle CBD$ are subtended by arc $CD$.",
+      "Therefore, $\\angle CBD = \\angle CAD = 40^\\circ$."
+    ],
+    "solution_steps_zh": [
+      "根據「同弓形內的圓周角」性質，由同一弧所對的圓周角相等。",
+      "$\\angle CAD$ 及 $\\angle CBD$ 均由弧 $CD$ 所對。",
+      "因此，$\\angle CBD = \\angle CAD = 40^\\circ$。"
+    ],
+    "diagram_json": null,
+    "tags": ["circle-geometry", "geometry-theorems"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_263",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_trig_applications"],
+    "marks": 1,
+    "difficulty": 5,
+    "paper": 2,
+    "section": "A",
+    "question_en": "In $\\triangle ABC$, $AB = 6$ cm, $AC = 4$ cm and $\\angle A = 30^\\circ$. Find the area of the triangle.",
+    "question_zh": "在 $\\triangle ABC$ 中，$AB = 6$ cm，$AC = 4$ cm 且 $\\angle A = 30^\\circ$。求該三角形的面積。",
+    "options": [
+      "A. 6 cm$^2$",
+      "B. 12 cm$^2$",
+      "C. 24 cm$^2$",
+      "D. $6\\sqrt{3}$ cm$^2$"
+    ],
+    "correct_answer": "A",
+    "solution_steps_en": [
+      "Area $= \\frac{1}{2} bc \\sin A$.",
+      "Area $= \\frac{1}{2} (4)(6) \\sin 30^\\circ = 12 \\times 0.5 = 6$ cm$^2$."
+    ],
+    "solution_steps_zh": [
+      "面積 $= \\frac{1}{2} bc \\sin A$。",
+      "面積 $= \\frac{1}{2} (4)(6) \\sin 30^\\circ = 12 \\times 0.5 = 6$ cm$^2$。"
+    ],
+    "diagram_json": null,
+    "tags": ["trigonometry", "area-of-triangle"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_264",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_stat_prob"],
+    "marks": 1,
+    "difficulty": 6,
+    "paper": 2,
+    "section": "B",
+    "question_en": "In a mathematics test, the mean score is 70 and the standard deviation is 5. If John's score is 80, find his standard score.",
+    "question_zh": "在一次數學測驗中，平均分為 70，標準差為 5。若小明的得分為 80，求他的標準分。",
+    "options": [
+      "A. 1",
+      "B. 2",
+      "C. 5",
+      "D. 10"
+    ],
+    "correct_answer": "B",
+    "solution_steps_en": [
+      "Standard Score $z = \\frac{x - \\mu}{\\sigma}$.",
+      "$z = \\frac{80 - 70}{5} = \\frac{10}{5} = 2$."
+    ],
+    "solution_steps_zh": [
+      "標準分 $z = \\frac{x - \\mu}{\\sigma}$。",
+      "$z = \\frac{80 - 70}{5} = \\frac{10}{5} = 2$。"
+    ],
+    "diagram_json": null,
+    "tags": ["dispersion", "standard-score"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_265",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_alg_inequalities"],
+    "marks": 1,
+    "difficulty": 6,
+    "paper": 2,
+    "section": "B",
+    "question_en": "Find the maximum value of $f = x + 2y$ subject to $x \\ge 2$, $y \\ge 1$ and $x + y \\le 6$.",
+    "question_zh": "在 $x \\ge 2$，$y \\ge 1$ 及 $x + y \\le 6$ 的條件下，求 $f = x + 2y$ 的最大值。",
+    "options": [
+      "A. 6",
+      "B. 8",
+      "C. 10",
+      "D. 11"
+    ],
+    "correct_answer": "C",
+    "solution_steps_en": [
+      "Feasible region vertices: Intersection of $(x=2, y=1) \\to (2,1)$, $(y=1, x+y=6) \\to (5,1)$, $(x=2, x+y=6) \\to (2,4)$.",
+      "At $(2, 1): f = 2 + 2(1) = 4$.",
+      "At $(5, 1): f = 5 + 2(1) = 7$.",
+      "At $(2, 4): f = 2 + 2(4) = 10$.",
+      "Maximum value is 10."
+    ],
+    "solution_steps_zh": [
+      "可行解區域頂點：$(x=2, y=1) \\to (2,1)$、$(y=1, x+y=6) \\to (5,1)$、$(x=2, x+y=6) \\to (2,4)$。",
+      "在 $(2, 1)$：$f = 2 + 2(1) = 4$。",
+      "在 $(5, 1)$：$f = 5 + 2(1) = 7$。",
+      "在 $(2, 4)$：$f = 2 + 2(4) = 10$。",
+      "最大值為 10。"
+    ],
+    "diagram_json": null,
+    "tags": ["linear-programming", "optimization"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_266",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_num_percentages"],
+    "marks": 1,
+    "difficulty": 5,
+    "paper": 2,
+    "section": "A",
+    "question_en": "The price of a computer first increases by 20% and then decreases by 10%. What is the net percentage change in the price?",
+    "question_zh": "一部電腦的價格先增加 20%，然後減少 10%。價格的淨百分比變化是多少？",
+    "options": [
+      "A. Increase 10%",
+      "B. Increase 8%",
+      "C. Increase 12%",
+      "D. Decrease 2%"
+    ],
+    "correct_answer": "B",
+    "solution_steps_en": [
+      "Let initial price be $P$.",
+      "Price after increase: $P \\times (1 + 0.2) = 1.2P$.",
+      "Price after decrease: $1.2P \\times (1 - 0.1) = 1.2P \\times 0.9 = 1.08P$.",
+      "Net change: $(1.08 - 1) \\times 100\\% = 8\\%$ increase."
+    ],
+    "solution_steps_zh": [
+      "設初始價格為 $P$。",
+      "增加後的價格：$P \\times 1.2 = 1.2P$。",
+      "減少後的價格：$1.2P \\times 0.9 = 1.08P$。",
+      "淨變化：$(1.08 - 1) \\times 100\\% = 8\\%$ 增加。"
+    ],
+    "diagram_json": null,
+    "tags": ["percentages", "number-systems"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_sa_267",
+    "type": "short_answer",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_geo_coord"],
+    "marks": 11,
+    "difficulty": 8,
+    "paper": 1,
+    "section": "B",
+    "question_en": "A triangle $ABC$ has vertices $A(0, 0)$, $B(6, 0)$ and $C(3, 9)$.\n(a) Find the coordinates of the centroid $G$ of constant $\\triangle ABC$. (4 marks)\n(b) Find the equation of the median from $C$ to $AB$. (4 marks)\n(c) Show that $G$ lies on the median from $C$. (3 marks)",
+    "question_zh": "三角形 $ABC$ 的頂點為 $A(0, 0)$, $B(6, 0)$ 及 $C(3, 9)$。\n(a) 求 $\\triangle ABC$ 的形心 $G$ 的坐標。(4分)\n(b) 求從點 $C$ 到 $AB$ 的中線方程。(4分)\n(c) 證明 $G$ 位於從 $C$ 出發的中線上。(3分)",
+    "solution_steps_en": [
+      "(a) Centroid $G = (\\frac{0+6+3}{3}, \\frac{0+0+9}{3}) = (3, 3)$.",
+      "(b) Midpoint of $AB$, $M = (\\frac{0+6}{2}, \\frac{0+0}{2}) = (3, 0)$.",
+      " Equation of median $CM$: The x-coordinates of $C(3, 9)$ and $M(3, 0)$ are both 3.",
+      " So the equation is $x = 3$.",
+      "(c) Since the $x$-coordinate of $G(3, 3)$ is 3, it satisfies $x = 3$.",
+      " Thus $G$ lies on the median $CM$."
+    ],
+    "solution_steps_zh": [
+      "(a) 形心 $G = (\\frac{0+6+3}{3}, \\frac{0+0+9}{3}) = (3, 3)$。",
+      "(b) $AB$ 的中點 $M = (\\frac{0+6}{2}, \\frac{0+0}{2}) = (3, 0)$。",
+      "中線 $CM$ 的方程：$C(3, 9)$ 與 $M(3, 0)$ 的 $x$-坐標均為 3。",
+      "故方程為 $x = 3$。",
+      "(c) 由於 $G(3, 3)$ 的 $x$-坐標為 3，它滿足 $x = 3$。",
+      "因此 $G$ 位於中線 $CM$ 上。"
+    ],
+    "diagram_json": {
+      "canvas": { "width": 400, "height": 300, "viewBox": "0 0 400 300" },
+      "elements": [
+        { "type": "line", "x1": 50, "y1": 250, "x2": 350, "y2": 250, "stroke": "#94a3b8" },
+        { "type": "line", "x1": 100, "y1": 50, "x2": 100, "y2": 280, "stroke": "#94a3b8" },
+        { "type": "polyline", "points": [{"x": 100, "y": 250}, {"x": 280, "y": 250}, {"x": 190, "y": 70}], "stroke": "#64748b", "fill": "rgba(241, 245, 249, 0.5)" },
+        { "type": "point", "x": 100, "y": 250, "label": "A(0,0)" },
+        { "type": "point", "x": 280, "y": 250, "label": "B(6,0)" },
+        { "type": "point", "x": 190, "y": 70, "label": "C(3,9)" },
+        { "type": "point", "x": 190, "y": 190, "label": "G(3,3)", "stroke": "#7c3aed" },
+        { "type": "line", "x1": 190, "y1": 70, "x2": 190, "y2": 250, "stroke": "#dc2626", "strokeDasharray": "4,4", "label": "median" }
+      ]
+    },
+    "tags": ["coordinate-geometry", "triangle-centers"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_sa_268",
+    "type": "short_answer",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_alg_apgp"],
+    "marks": 12,
+    "difficulty": 7,
+    "paper": 1,
+    "section": "A",
+    "question_en": "The general term of an arithmetic sequence is $T_n = 5n + 2$.\n(a) Find the first term and the common difference. (4 marks)\n(b) Find the sum of the first 50 terms. (4 marks)\n(c) Find the least value of $k$ such that the sum of the first $k$ terms exceeds 2000. (4 marks)",
+    "question_zh": "等差數列的通項為 $T_n = 5n + 2$。\n(a) 求首項及公差。(4分)\n(b) 求首 50 項之和。(4分)\n(c) 求 $k$ 的最小值使得首 $k$ 項之和超過 2000。(4分)",
+    "solution_steps_en": [
+      "(a) $T_1 = 5(1) + 2 = 7$. $T_2 = 5(2) + 2 = 12$. Difference $d = 12 - 7 = 5$.",
+      "(b) $S_{50} = \\frac{50}{2} [2(7) + (50-1)(5)] = 25 [14 + 245] = 25 [259] = 6475$.",
+      "(c) $S_k = \\frac{k}{2} [14 + (k-1)5] = \\frac{k}{2} [5k + 9] > 2000$.",
+      "$5k^2 + 9k - 4000 > 0$.",
+      "Roots of $5k^2 + 9k - 4000 = 0$ are $k \\approx 27.38$.",
+      "Least integer $k = 28$."
+    ],
+    "solution_steps_zh": [
+      "(a) $T_1 = 7, T_2 = 12$。公差 $d = 5$。",
+      "(b) $S_{50} = 25 [14 + 245] = 6475$。",
+      "(c) $S_k = \\frac{k}{2} [5k + 9] > 2000 \\Rightarrow 5k^2 + 9k - 4000 > 0$。",
+      "方程的根約為 $27.38$。最小整數 $k = 28$。"
+    ],
+    "diagram_json": null,
+    "tags": ["arithmetic-sequence", "summation"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_sa_269",
+    "type": "short_answer",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_geo_mensuration"],
+    "marks": 13,
+    "difficulty": 8,
+    "paper": 1,
+    "section": "B",
+    "question_en": "A frustum is formed by cutting a right circular cone of height 12 cm and base radius 5 cm with a plane parallel to the base at a height of 6 cm from the base.\n(a) Find the radius of the top circular surface of the frustum. (4 marks)\n(b) Find the volume of the original cone. (3 marks)\n(c) Find the volume of the frustum in terms of $\\pi$. (6 marks)",
+    "question_zh": "一個下底半徑為 5 cm、高為 12 cm 的正圓錐體，在距離底部 6 cm 處被一個平行於底面的平面截斷，形成一個圓台。\n(a) 求圓台頂部圓面的半徑。(4分)\n(b) 求原圓錐體的體積。(3分)\n(c) 以 $\\pi$ 表示圓台的體積。(6分)",
+    "solution_steps_en": [
+      "(a) Using similar triangles: $\\frac{r}{5} = \\frac{12 - 6}{12} = \\frac{1}{2}$.",
+      " So top radius $r = 2.5$ cm.",
+      "(b) Vol of large cone $= \\frac{1}{3} \\pi (5^2)(12) = 100\\pi$ cm$^3$.",
+      "(c) Vol of small cone removed $= \\frac{1}{3} \\pi (2.5^2)(6) = \\frac{1}{3} \\pi (6.25)(6) = 12.5\\pi$ cm$^3$.",
+      " Vol of frustum $= 100\\pi - 12.5\\pi = 87.5\\pi$ cm$^3$."
+    ],
+    "solution_steps_zh": [
+      "(a) 利用相似三角形：$\\frac{r}{5} = \\frac{6}{12} = \\frac{1}{2}$。",
+      "頂部半徑 $r = 2.5$ cm。",
+      "(b) 大圓錐體積 $= \\frac{1}{3} \\pi (5^2)(12) = 100\\pi$ cm$^3$。",
+      "(c) 被截去的小圓錐體積 $= \\frac{1}{3} \\pi (2.5^2)(6) = 12.5\\pi$ cm$^3$。",
+      "圓台體積 $= 100\\pi - 12.5\\pi = 87.5\\pi$ cm$^3$。"
+    ],
+    "diagram_json": {
+      "canvas": { "width": 400, "height": 300, "viewBox": "0 0 400 300" },
+      "elements": [
+        { "type": "ellipse", "cx": 200, "cy": 250, "rx": 80, "ry": 25, "stroke": "#334155", "fill": "rgba(241, 245, 249, 0.5)" },
+        { "type": "ellipse", "cx": 200, "cy": 130, "rx": 40, "ry": 12, "stroke": "#334155", "fill": "white" },
+        { "type": "line", "x1": 120, "y1": 250, "x2": 160, "y2": 130, "stroke": "#334155" },
+        { "type": "line", "x1": 280, "y1": 250, "x2": 240, "y2": 130, "stroke": "#334155" },
+        { "type": "line", "x1": 160, "y1": 130, "x2": 200, "y2": 10, "stroke": "#94a3b8", "strokeDasharray": "3,3" },
+        { "type": "line", "x1": 240, "y1": 130, "x2": 200, "y2": 10, "stroke": "#94a3b8", "strokeDasharray": "3,3" },
+        { "type": "line", "x1": 200, "y1": 10, "x2": 200, "y2": 250, "stroke": "#ef4444", "strokeDasharray": "1,1", "label": "h=12" },
+        { "type": "line", "x1": 200, "y1": 250, "x2": 280, "y2": 250, "stroke": "#3b82f6", "label": "R=5" },
+        { "type": "line", "x1": 200, "y1": 130, "x2": 240, "y2": 130, "stroke": "#3b82f6", "label": "r" }
+      ]
+    },
+    "tags": ["mensuration", "solid-geometry", "frustum"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_sa_270",
+    "type": "short_answer",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_stat_prob"],
+    "marks": 12,
+    "difficulty": 8,
+    "paper": 1,
+    "section": "B",
+    "question_en": "A committee of 3 is to be chosen from a group of 5 boys and 4 girls.\n(a) How many different committees can be formed? (3 marks)\n(b) If the committee must contain at least one girl, find the number of possible committees. (4 marks)\n(c) If two specific boys refused to be in the same committee together, how many ways can the committee be formed? (5 marks)",
+    "question_zh": "從 5 名男孩及 4 名女孩中挑選 3 人組成一個委員會。\n(a) 共有多少種不同的組成方法？(3分)\n(b) 若委員會中必須至少包含一名女孩，求組成方法的數目。(4分)\n(c) 若兩位指定的男孩拒絕在同一個委員會中出現，求組成方法的數目。(5分)",
+    "solution_steps_en": [
+      "(a) Total combinations $C^9_3 = \\frac{9 \\times 8 \\times 7}{3 \\times 2 \\times 1} = 84$.",
+      "(b) Total - (No girls). No girls means all boys: $C^5_3 = 10$.",
+      " Ways $= 84 - 10 = 74$.",
+      "(c) Total - (Both specific boys are inside).",
+      " If both specific boys are in, we need 1 more person from the remaining 7.",
+      " Ways with both boys $= C^7_1 = 7$.",
+      " Required ways $= 84 - 7 = 77$."
+    ],
+    "solution_steps_zh": [
+      "(a) 總組合數 $C^9_3 = 84$。",
+      "(b) 總數 - (全男孩)。全男孩為 $C^5_3 = 10$。",
+      "方法數 $= 84 - 10 = 74$。",
+      "(c) 總數 - (兩位指定男孩同時加入)。",
+      "若兩位均加入，則剩下的 7 人中選 1 人：$C^7_1 = 7$。",
+      "要求的方法數 $= 84 - 7 = 77$。"
+    ],
+    "diagram_json": null,
+    "tags": ["combinations", "counting-principles"],
+    "status": "approved"
+  }
+]

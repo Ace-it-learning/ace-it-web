@@ -1,0 +1,757 @@
+[
+  {
+    "id": "ind_01",
+    "topic": "Laws of Indices",
+    "topic_id": "math_alg_indices",
+    "subject": "maths",
+    "level": 3,
+    "type": "short_answer",
+    "marks": 2,
+    "is_approved": true,
+    "is_factory": true,
+    "question": "Simplify $\\frac{a^{12}}{a^4}$ and express it with a positive index.",
+    "question_zh": "簡化 $\\frac{a^{12}}{a^4}$ 並以正指數表示。",
+    "answer": "a^8",
+    "correct_answer": "a^8",
+    "solution_steps": [
+      "Use the law $\\frac{a^m}{a^n} = a^{m-n}$.",
+      "$\\frac{a^{12}}{a^4} = a^{12-4} = a^8$."
+    ],
+    "solution_steps_zh": [
+      "使用定律 $\\frac{a^m}{a^n} = a^{m-n}$。",
+      "$\\frac{a^{12}}{a^4} = a^{12-4} = a^8$。"
+    ]
+  },
+  {
+    "id": "ind_02",
+    "topic": "Laws of Indices",
+    "topic_id": "math_alg_indices",
+    "subject": "maths",
+    "level": 3,
+    "type": "short_answer",
+    "marks": 2,
+    "is_approved": true,
+    "is_factory": true,
+    "question": "Simplify $(x^3)^5$ and express it with a positive index.",
+    "question_zh": "簡化 $(x^3)^5$ 並以正指數表示。",
+    "answer": "x^{15}",
+    "correct_answer": "x^{15}",
+    "solution_steps": [
+      "Use the law $(a^m)^n = a^{mn}$.",
+      "$(x^3)^5 = x^{3 \\times 5} = x^{15}$."
+    ],
+    "solution_steps_zh": [
+      "使用定律 $(a^m)^n = a^{mn}$。",
+      "$(x^3)^5 = x^{3 \\times 5} = x^{15}$。"
+    ]
+  },
+  {
+    "id": "ind_03",
+    "topic": "Laws of Indices",
+    "topic_id": "math_alg_indices",
+    "subject": "maths",
+    "level": 3,
+    "type": "short_answer",
+    "marks": 2,
+    "is_approved": true,
+    "is_factory": true,
+    "question": "Simplify $b^7 \\cdot b^2$ and express it with a positive index.",
+    "question_zh": "簡化 $b^7 \\cdot b^2$ 並以正指數表示。",
+    "answer": "b^9",
+    "correct_answer": "b^9",
+    "solution_steps": [
+      "Use the law $a^m \\cdot a^n = a^{m+n}$.",
+      "$b^7 \\cdot b^2 = b^{7+2} = b^9$."
+    ],
+    "solution_steps_zh": [
+      "使用定律 $a^m \\cdot a^n = a^{m+n}$。",
+      "$b^7 \\cdot b^2 = b^{7+2} = b^9$。"
+    ]
+  },
+  {
+    "id": "ind_04",
+    "topic": "Laws of Indices",
+    "topic_id": "math_alg_indices",
+    "subject": "maths",
+    "level": 3,
+    "type": "short_answer",
+    "marks": 2,
+    "is_approved": true,
+    "is_factory": true,
+    "question": "Simplify $(2k^4)^3$ and express it with a positive index.",
+    "question_zh": "簡化 $(2k^4)^3$ 並以正指數表示。",
+    "answer": "8k^{12}",
+    "correct_answer": "8k^{12}",
+    "solution_steps": [
+      "Use the law $(ab)^n = a^n b^n$.",
+      "$(2k^4)^3 = 2^3 \\cdot (k^4)^3 = 8 \\cdot k^{4 \\times 3} = 8k^{12}$."
+    ],
+    "solution_steps_zh": [
+      "使用定律 $(ab)^n = a^n b^n$。",
+      "$(2k^4)^3 = 2^3 \\cdot (k^4)^3 = 8 \\cdot k^{4 \\times 3} = 8k^{12}$。"
+    ]
+  },
+  {
+    "id": "ind_05",
+    "topic": "Laws of Indices",
+    "topic_id": "math_alg_indices",
+    "subject": "maths",
+    "level": 3,
+    "type": "short_answer",
+    "marks": 2,
+    "is_approved": true,
+    "is_factory": true,
+    "question": "Simplify $\\frac{1}{x^{-5}}$ and express it with a positive index.",
+    "question_zh": "簡化 $\\frac{1}{x^{-5}}$ 並以正指數表示。",
+    "answer": "x^5",
+    "correct_answer": "x^5",
+    "solution_steps": [
+      "Use the law $\\frac{1}{a^{-n}} = a^n$.",
+      "$\\frac{1}{x^{-5}} = x^5$."
+    ],
+    "solution_steps_zh": [
+      "使用定律 $\\frac{1}{a^{-n}} = a^n$。",
+      "$\\frac{1}{x^{-5}} = x^5$。"
+    ]
+  },
+  {
+    "id": "ind_06",
+    "topic": "Laws of Indices",
+    "topic_id": "math_alg_indices",
+    "subject": "maths",
+    "level": 3,
+    "type": "short_answer",
+    "marks": 2,
+    "is_approved": true,
+    "is_factory": true,
+    "question": "Evaluate $27^0 \\times 3^2$.",
+    "question_zh": "計算 $27^0 \\times 3^2$ 的值。",
+    "answer": "9",
+    "correct_answer": "9",
+    "solution_steps": [
+      "Recall that $a^0 = 1$ for any $a \\neq 0$.",
+      "$27^0 = 1$.",
+      "$1 \\times 3^2 = 1 \\times 9 = 9$."
+    ],
+    "solution_steps_zh": [
+      "記住對於任何 $a \\neq 0$，$a^0 = 1$。",
+      "$27^0 = 1$。",
+      "$1 \\times 3^2 = 1 \\times 9 = 9$。"
+    ]
+  },
+  {
+    "id": "ind_07",
+    "topic": "Laws of Indices",
+    "topic_id": "math_alg_indices",
+    "subject": "maths",
+    "level": 3,
+    "type": "short_answer",
+    "marks": 2,
+    "is_approved": true,
+    "is_factory": true,
+    "question": "Simplify $y^8 \\div y^{-2}$ and express it with a positive index.",
+    "question_zh": "簡化 $y^8 \\div y^{-2}$ 並以正指數表示。",
+    "answer": "y^{10}",
+    "correct_answer": "y^{10}",
+    "solution_steps": [
+      "Use the law $a^m \\div a^n = a^{m-n}$.",
+      "$y^8 \\div y^{-2} = y^{8 - (-2)} = y^{8+2} = y^{10}$."
+    ],
+    "solution_steps_zh": [
+      "使用定律 $a^m \\div a^n = a^{m-n}$。",
+      "$y^8 \\div y^{-2} = y^{8 - (-2)} = y^{8+2} = y^{10}$。"
+    ]
+  },
+  {
+    "id": "ind_08",
+    "topic": "Laws of Indices",
+    "topic_id": "math_alg_indices",
+    "subject": "maths",
+    "level": 3,
+    "type": "short_answer",
+    "marks": 2,
+    "is_approved": true,
+    "is_factory": true,
+    "question": "Simplify $(m^{-2})^4 \\cdot m^{10}$ and express it with a positive index.",
+    "question_zh": "簡化 $(m^{-2})^4 \\cdot m^{10}$ 並以正指數表示。",
+    "answer": "m^2",
+    "correct_answer": "m^2",
+    "solution_steps": [
+      "First simplify $(m^{-2})^4 = m^{-2 \\times 4} = m^{-8}$.",
+      "Then $m^{-8} \\cdot m^{10} = m^{-8+10} = m^2$."
+    ],
+    "solution_steps_zh": [
+      "先簡化 $(m^{-2})^4 = m^{-2 \\times 4} = m^{-8}$。",
+      "然後 $m^{-8} \\cdot m^{10} = m^{-8+10} = m^2$。"
+    ]
+  },
+  {
+    "id": "ind_09",
+    "topic": "Laws of Indices",
+    "topic_id": "math_alg_indices",
+    "subject": "maths",
+    "level": 3,
+    "type": "short_answer",
+    "marks": 2,
+    "is_approved": true,
+    "is_factory": true,
+    "question": "Simplify $\\frac{(a^2b)^3}{a^4}$ and express it with a positive index.",
+    "question_zh": "簡化 $\\frac{(a^2b)^3}{a^4}$ 並以正指數表示。",
+    "answer": "a^2b^3",
+    "correct_answer": "a^2b^3",
+    "solution_steps": [
+      "Expand the numerator: $(a^2b)^3 = (a^2)^3 \\cdot b^3 = a^6b^3$.",
+      "Simplify the fraction: $\\frac{a^6b^3}{a^4} = a^{6-4}b^3 = a^2b^3$."
+    ],
+    "solution_steps_zh": [
+      "展開分子：$(a^2b)^3 = (a^2)^3 \\cdot b^3 = a^6b^3$。",
+      "簡化分式：$\\frac{a^6b^3}{a^4} = a^{6-4}b^3 = a^2b^3$。"
+    ]
+  },
+  {
+    "id": "ind_10",
+    "topic": "Laws of Indices",
+    "topic_id": "math_alg_indices",
+    "subject": "maths",
+    "level": 3,
+    "type": "short_answer",
+    "marks": 2,
+    "is_approved": true,
+    "is_factory": true,
+    "question": "Simplify $x^5 \\cdot x^0 \\div x^{-3}$ and express it with a positive index.",
+    "question_zh": "簡化 $x^5 \\cdot x^0 \\div x^{-3}$ 並以正指數表示。",
+    "answer": "x^8",
+    "correct_answer": "x^8",
+    "solution_steps": [
+      "Since $x^0 = 1$, the expression becomes $x^5 \\cdot 1 \\div x^{-3} = x^5 \\div x^{-3}$.",
+      "Using the division law: $x^{5 - (-3)} = x^{5+3} = x^8$."
+    ],
+    "solution_steps_zh": [
+      "因 $x^0 = 1$，表達式變為 $x^5 \\cdot 1 \\div x^{-3} = x^5 \\div x^{-3}$。",
+      "使用除法定律：$x^{5 - (-3)} = x^{5+3} = x^8$。"
+    ]
+  },
+  {
+    "id": "ind_11",
+    "topic": "Laws of Indices",
+    "topic_id": "math_alg_indices",
+    "subject": "maths",
+    "level": 4,
+    "type": "short_answer",
+    "marks": 3,
+    "is_approved": true,
+    "is_factory": true,
+    "question": "Simplify $\\frac{(x^2y^{-3})^2}{x^5y^{-4}}$ and express your answer with positive indices.",
+    "question_zh": "簡化 $\\frac{(x^2y^{-3})^2}{x^5y^{-4}}$ 並以正指數表示答案。",
+    "answer": "\\frac{1}{xy^2}",
+    "correct_answer": "\\frac{1}{xy^2}",
+    "solution_steps": [
+      "Expand the numerator: $(x^2y^{-3})^2 = x^4y^{-6}$.",
+      "Simplify the fraction: $\\frac{x^4y^{-6}}{x^5y^{-4}} = x^{4-5}y^{-6-(-4)} = x^{-1}y^{-2}$.",
+      "Express with positive indices: $\\frac{1}{xy^2}$."
+    ],
+    "solution_steps_zh": [
+      "展開分子：$(x^2y^{-3})^2 = x^4y^{-6}$。",
+      "簡化分式：$\\frac{x^4y^{-6}}{x^5y^{-4}} = x^{4-5}y^{-6-(-4)} = x^{-1}y^{-2}$。",
+      "以正指數表示：$\\frac{1}{xy^2}$。"
+    ]
+  },
+  {
+    "id": "ind_12",
+    "topic": "Laws of Indices",
+    "topic_id": "math_alg_indices",
+    "subject": "maths",
+    "level": 4,
+    "type": "short_answer",
+    "marks": 3,
+    "is_approved": true,
+    "is_factory": true,
+    "question": "Simplify $(\\frac{8x^6}{y^3})^{1/3}$ and express your answer with positive indices.",
+    "question_zh": "簡化 $(\\frac{8x^6}{y^3})^{1/3}$ 並以正指數表示答案。",
+    "answer": "\\frac{2x^2}{y}",
+    "correct_answer": "\\frac{2x^2}{y}",
+    "solution_steps": [
+      "Apply the power to each term: $(\\frac{8x^6}{y^3})^{1/3} = \\frac{8^{1/3} (x^6)^{1/3}}{(y^3)^{1/3}}$.",
+      "Evaluate each part: $8^{1/3} = 2$, $(x^6)^{1/3} = x^{6/3} = x^2$, $(y^3)^{1/3} = y^{3/3} = y$.",
+      "Combine to get $\\frac{2x^2}{y}$."
+    ],
+    "solution_steps_zh": [
+      "將指數應用於每一項：$(\\frac{8x^6}{y^3})^{1/3} = \\frac{8^{1/3} (x^6)^{1/3}}{(y^3)^{1/3}}$。",
+      "計算各部分：$8^{1/3} = 2$，$(x^6)^{1/3} = x^{6/3} = x^2$，$(y^3)^{1/3} = y^{3/3} = y$。",
+      "合併得出 $\\frac{2x^2}{y}$。"
+    ]
+  },
+  {
+    "id": "ind_13",
+    "topic": "Laws of Indices",
+    "topic_id": "math_alg_indices",
+    "subject": "maths",
+    "level": 4,
+    "type": "short_answer",
+    "marks": 3,
+    "is_approved": true,
+    "is_factory": true,
+    "question": "Simplify $\\frac{9^n \\cdot 3^{n+2}}{27^n}$.",
+    "question_zh": "簡化 $\\frac{9^n \\cdot 3^{n+2}}{27^n}$。",
+    "answer": "9",
+    "correct_answer": "9",
+    "solution_steps": [
+      "Express all bases as powers of 3: $9^n = (3^2)^n = 3^{2n}$ and $27^n = (3^3)^n = 3^{3n}$.",
+      "Substitute and simplify: $\\frac{3^{2n} \\cdot 3^{n+2}}{3^{3n}} = \\frac{3^{2n+n+2}}{3^{3n}} = \\frac{3^{3n+2}}{3^{3n}}$.",
+      "Using the division law: $3^{3n+2 - 3n} = 3^2 = 9$."
+    ],
+    "solution_steps_zh": [
+      "將所有底數表示為 3 的冪：$9^n = (3^2)^n = 3^{2n}$ 及 $27^n = (3^3)^n = 3^{3n}$。",
+      "代入並簡化：$\\frac{3^{2n} \\cdot 3^{n+2}}{3^{3n}} = \\frac{3^{3n+2}}{3^{3n}}$。",
+      "使用除法定律：$3^{3n+2 - 3n} = 3^2 = 9$。"
+    ]
+  },
+  {
+    "id": "ind_14",
+    "topic": "Laws of Indices",
+    "topic_id": "math_alg_indices",
+    "subject": "maths",
+    "level": 4,
+    "type": "short_answer",
+    "marks": 3,
+    "is_approved": true,
+    "is_factory": true,
+    "question": "Solve the equation $4^{x+1} = 32$.",
+    "question_zh": "解方程 $4^{x+1} = 32$。",
+    "answer": "1.5",
+    "correct_answer": "1.5",
+    "solution_steps": [
+      "Express both sides as powers of 2: $4^{x+1} = (2^2)^{x+1} = 2^{2x+2}$ and $32 = 2^5$.",
+      "Set the indices equal: $2x + 2 = 5$.",
+      "Solve for $x$: $2x = 3 \\Rightarrow x = 1.5$."
+    ],
+    "solution_steps_zh": [
+      "將等式兩邊表示為 2 的冪：$4^{x+1} = (2^2)^{x+1} = 2^{2x+2}$ 及 $32 = 2^5$。",
+      "令指數相等：$2x + 2 = 5$。",
+      "解 $x$：$2x = 3 \\Rightarrow x = 1.5$。"
+    ]
+  },
+  {
+    "id": "ind_15",
+    "topic": "Laws of Indices",
+    "topic_id": "math_alg_indices",
+    "subject": "maths",
+    "level": 4,
+    "type": "short_answer",
+    "marks": 3,
+    "is_approved": true,
+    "is_factory": true,
+    "question": "Simplify $\\frac{x^n \\cdot x^{n-1}}{x^{2n-3}}$.",
+    "question_zh": "簡化 $\\frac{x^n \\cdot x^{n-1}}{x^{2n-3}}$。",
+    "answer": "x^2",
+    "correct_answer": "x^2",
+    "solution_steps": [
+      "Combine the numerator: $x^n \\cdot x^{n-1} = x^{n + n - 1} = x^{2n-1}$.",
+      "Divide by the denominator: $\\frac{x^{2n-1}}{x^{2n-3}} = x^{(2n-1) - (2n-3)}$.",
+      "Simplify the index: $2n - 1 - 2n + 3 = 2$, so the answer is $x^2$."
+    ],
+    "solution_steps_zh": [
+      "合併分子：$x^n \\cdot x^{n-1} = x^{n + n - 1} = x^{2n-1}$。",
+      "除以分母：$\\frac{x^{2n-1}}{x^{2n-3}} = x^{(2n-1) - (2n-3)}$。",
+      "簡化指數：$2n - 1 - 2n + 3 = 2$，故答案為 $x^2$。"
+    ]
+  },
+  {
+    "id": "ind_16",
+    "topic": "Laws of Indices",
+    "topic_id": "math_alg_indices",
+    "subject": "maths",
+    "level": 4,
+    "type": "short_answer",
+    "marks": 3,
+    "is_approved": true,
+    "is_factory": true,
+    "question": "Find the value of $16^{-3/4}$.",
+    "question_zh": "求 $16^{-3/4}$ 的值。",
+    "answer": "0.125",
+    "correct_answer": "0.125",
+    "solution_steps": [
+      "Express 16 as a power of 2: $16 = 2^4$.",
+      "Apply the power: $(2^4)^{-3/4} = 2^{4 \\times (-3/4)} = 2^{-3}$.",
+      "Evaluate: $2^{-3} = \\frac{1}{2^3} = \\frac{1}{8} = 0.125$."
+    ],
+    "solution_steps_zh": [
+      "將 16 表示為 2 的冪：$16 = 2^4$。",
+      "應用指數：$(2^4)^{-3/4} = 2^{4 \\times (-3/4)} = 2^{-3}$。",
+      "計算：$2^{-3} = \\frac{1}{2^3} = \\frac{1}{8} = 0.125$。"
+    ]
+  },
+  {
+    "id": "ind_17",
+    "topic": "Laws of Indices",
+    "topic_id": "math_alg_indices",
+    "subject": "maths",
+    "level": 4,
+    "type": "short_answer",
+    "marks": 3,
+    "is_approved": true,
+    "is_factory": true,
+    "question": "Simplify $\\frac{(ab^2)^{-1}}{a^{-2}b^3}$ and express it with positive indices.",
+    "question_zh": "簡化 $\\frac{(ab^2)^{-1}}{a^{-2}b^3}$ 並以正指數表示。",
+    "answer": "\\frac{a}{b^5}",
+    "correct_answer": "\\frac{a}{b^5}",
+    "solution_steps": [
+      "Expand the numerator: $(ab^2)^{-1} = a^{-1}b^{-2}$.",
+      "Simplify the fraction: $\\frac{a^{-1}b^{-2}}{a^{-2}b^3} = a^{-1 - (-2)}b^{-2 - 3} = a^1b^{-5}$.",
+      "Express with positive indices: $\\frac{a}{b^5}$."
+    ],
+    "solution_steps_zh": [
+      "展開分子：$(ab^2)^{-1} = a^{-1}b^{-2}$。",
+      "簡化分式：$\\frac{a^{-1}b^{-2}}{a^{-2}b^3} = a^{-1 - (-2)}b^{-2 - 3} = a^1b^{-5}$。",
+      "以正指數表示：$\\frac{a}{b^5}$。"
+    ]
+  },
+  {
+    "id": "ind_18",
+    "topic": "Laws of Indices",
+    "topic_id": "math_alg_indices",
+    "subject": "maths",
+    "level": 4,
+    "type": "short_answer",
+    "marks": 3,
+    "is_approved": true,
+    "is_factory": true,
+    "question": "Simplify $(x^{1/2}y^{3/4})^4$ and express it with positive indices.",
+    "question_zh": "簡化 $(x^{1/2}y^{3/4})^4$ 並以正指數表示。",
+    "answer": "x^2y^3",
+    "correct_answer": "x^2y^3",
+    "solution_steps": [
+      "Apply the power to each term: $(x^{1/2}y^{3/4})^4 = (x^{1/2})^4 \\cdot (y^{3/4})^4$.",
+      "Simplify the indices: $x^{1/2 \\times 4} \\cdot y^{3/4 \\times 4} = x^2y^3$."
+    ],
+    "solution_steps_zh": [
+      "將指數應用於每一項：$(x^{1/2}y^{3/4})^4 = (x^{1/2})^4 \\cdot (y^{3/4})^4$。",
+      "簡化指數：$x^{1/2 \\times 4} \\cdot y^{3/4 \\times 4} = x^2y^3$。"
+    ]
+  },
+  {
+    "id": "ind_19",
+    "topic": "Laws of Indices",
+    "topic_id": "math_alg_indices",
+    "subject": "maths",
+    "level": 4,
+    "type": "short_answer",
+    "marks": 3,
+    "is_approved": true,
+    "is_factory": true,
+    "question": "If $2^x = a$ and $2^y = b$, express $2^{3x-y}$ in terms of $a$ and $b$.",
+    "question_zh": "若 $2^x = a$ 且 $2^y = b$，以 $a$ 及 $b$ 表示 $2^{3x-y}$。",
+    "answer": "\\frac{a^3}{b}",
+    "correct_answer": "\\frac{a^3}{b}",
+    "solution_steps": [
+      "Use the laws of indices: $2^{3x-y} = \\frac{2^{3x}}{2^y}$.",
+      "Express $2^{3x}$ as $(2^x)^3 = a^3$.",
+      "Substitute $2^y = b$ to get $\\frac{a^3}{b}$."
+    ],
+    "solution_steps_zh": [
+      "使用指數定律：$2^{3x-y} = \\frac{2^{3x}}{2^y}$。",
+      "將 $2^{3x}$ 表示為 $(2^x)^3 = a^3$。",
+      "代入 $2^y = b$，得出 $\\frac{a^3}{b}$。"
+    ]
+  },
+  {
+    "id": "ind_20",
+    "topic": "Laws of Indices",
+    "topic_id": "math_alg_indices",
+    "subject": "maths",
+    "level": 4,
+    "type": "short_answer",
+    "marks": 3,
+    "is_approved": true,
+    "is_factory": true,
+    "question": "Simplify $\\frac{\\sqrt{x^6y^{-4}}}{x^2y}$ and express it with positive indices.",
+    "question_zh": "簡化 $\\frac{\\sqrt{x^6y^{-4}}}{x^2y}$ 並以正指數表示。",
+    "answer": "\\frac{x}{y^3}",
+    "correct_answer": "\\frac{x}{y^3}",
+    "solution_steps": [
+      "Simplify the square root: $\\sqrt{x^6y^{-4}} = (x^6y^{-4})^{1/2} = x^{6/2}y^{-4/2} = x^3y^{-2}$.",
+      "Divide by the denominator: $\\frac{x^3y^{-2}}{x^2y} = x^{3-2}y^{-2-1} = x^1y^{-3}$.",
+      "Express with positive indices: $\\frac{x}{y^3}$."
+    ],
+    "solution_steps_zh": [
+      "簡化平方根：$\\sqrt{x^6y^{-4}} = (x^6y^{-4})^{1/2} = x^{6/2}y^{-4/2} = x^3y^{-2}$。",
+      "除以分母：$\\frac{x^3y^{-2}}{x^2y} = x^{3-2}y^{-2-1} = x^1y^{-3}$。",
+      "以正指數表示：$\\frac{x}{y^3}$。"
+    ]
+  },
+  {
+    "id": "ind_21",
+    "topic": "Laws of Indices",
+    "topic_id": "math_alg_indices",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 4,
+    "is_approved": true,
+    "is_factory": true,
+    "question": "Solve the equation $3^{2x+1} - 10 \\cdot 3^x + 3 = 0$.",
+    "question_zh": "解方程 $3^{2x+1} - 10 \\cdot 3^x + 3 = 0$。",
+    "answer": "x = -1 \\text{ or } x = 1",
+    "correct_answer": "x = -1 \\text{ or } x = 1",
+    "solution_steps": [
+      "Rewrite $3^{2x+1}$ as $3 \\cdot (3^x)^2$.",
+      "Let $u = 3^x$. Then the equation is $3u^2 - 10u + 3 = 0$.",
+      "Factorize: $(3u - 1)(u - 3) = 0 \\Rightarrow u = 1/3$ or $u = 3$.",
+      "Since $u = 3^x$, then $3^x = 3^{-1}$ or $3^x = 3^1$.",
+      "Therefore, $x = -1$ or $x = 1$."
+    ],
+    "solution_steps_zh": [
+      "將 $3^{2x+1}$ 重寫為 $3 \\cdot (3^x)^2$。",
+      "設 $u = 3^x$，則方程為 $3u^2 - 10u + 3 = 0$。",
+      "因式分解：$(3u - 1)(u - 3) = 0 \\Rightarrow u = 1/3$ 或 $u = 3$。",
+      "由於 $u = 3^x$，故 $3^x = 3^{-1}$ 或 $3^x = 3^1$。",
+      "因此，$x = -1$ 或 $x = 1$。"
+    ]
+  },
+  {
+    "id": "ind_22",
+    "topic": "Laws of Indices",
+    "topic_id": "math_alg_indices",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 4,
+    "is_approved": true,
+    "is_factory": true,
+    "question": "Arrange the following numbers in descending order: $2^{300}, 3^{200}, 10^{100}$.",
+    "question_zh": "將下列各數按降序排列：$2^{300}, 3^{200}, 10^{100}$。",
+    "answer": "10^{100} > 3^{200} > 2^{300}",
+    "correct_answer": "10^{100} > 3^{200} > 2^{300}",
+    "solution_steps": [
+      "Express all numbers with the same power, 100: ",
+      "$2^{300} = (2^3)^{100} = 8^{100}$.",
+      "$3^{200} = (3^2)^{100} = 9^{100}$.",
+      "$10^{100}$ is already in the form.",
+      "Comparing the bases: $10 > 9 > 8$, so $10^{100} > 9^{100} > 8^{100}$.",
+      "Final order: $10^{100} > 3^{200} > 2^{300}$."
+    ],
+    "solution_steps_zh": [
+      "將所有數表示為相同的指數 100：",
+      "$2^{300} = (2^3)^{100} = 8^{100}$。",
+      "$3^{200} = (3^2)^{100} = 9^{100}$。",
+      "$10^{100}$ 已是此形式。",
+      "比較底數：$10 > 9 > 8$，故 $10^{100} > 9^{100} > 8^{100}$。",
+      "最終順序：$10^{100} > 3^{200} > 2^{300}$。"
+    ]
+  },
+  {
+    "id": "ind_23",
+    "topic": "Laws of Indices",
+    "topic_id": "math_alg_indices",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 4,
+    "is_approved": true,
+    "is_factory": true,
+    "question": "Solve the equation $8^x - 3 \\cdot 4^x = 0$.",
+    "question_zh": "解方程 $8^x - 3 \\cdot 4^x = 0$。",
+    "answer": "\\log_2 3",
+    "correct_answer": "\\log_2 3",
+    "solution_steps": [
+      "Rewrite using base 2: $(2^3)^x - 3 \\cdot (2^2)^x = 0 \\Rightarrow 2^{3x} - 3 \\cdot 2^{2x} = 0$.",
+      "Factor out $2^{2x}$: $2^{2x}(2^x - 3) = 0$.",
+      "Since $2^{2x} > 0$ for all $x$, we must have $2^x - 3 = 0$.",
+      "$2^x = 3$.",
+      "Take logs: $x = \\log_2 3$."
+    ],
+    "solution_steps_zh": [
+      "以底數 2 重寫：$2^{3x} - 3 \\cdot 2^{2x} = 0$。",
+      "提取公因式 $2^{2x}$：$2^{2x}(2^x - 3) = 0$。",
+      "由於對於所有 $x$，$2^{2x} > 0$，故必有 $2^x - 3 = 0$。",
+      "$2^x = 3$。",
+      "取對數：$x = \\log_2 3$。"
+    ]
+  },
+  {
+    "id": "ind_24",
+    "topic": "Laws of Indices",
+    "topic_id": "math_alg_indices",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 4,
+    "is_approved": true,
+    "is_factory": true,
+    "question": "Simplify $\\frac{4^{n+1} - 2^{2n+1}}{2^{2n}}$.",
+    "question_zh": "簡化 $\\frac{4^{n+1} - 2^{2n+1}}{2^{2n}}$。",
+    "answer": "2",
+    "correct_answer": "2",
+    "solution_steps": [
+      "Express all terms with base 2: $4^{n+1} = (2^2)^{n+1} = 2^{2n+2}$.",
+      "The expression becomes $\\frac{2^{2n+2} - 2^{2n+1}}{2^{2n}}$.",
+      "Factor out $2^{2n}$ from the numerator: $\\frac{2^{2n}(2^2 - 2^1)}{2^{2n}}$.",
+      "Cancel $2^{2n}$ and simplify: $4 - 2 = 2$."
+    ],
+    "solution_steps_zh": [
+      "將所有項表示為底數 2：$4^{n+1} = (2^2)^{n+1} = 2^{2n+2}$。",
+      "表達式變為 $\\frac{2^{2n+2} - 2^{2n+1}}{2^{2n}}$。",
+      "在分子中提取 $2^{2n}$：$\\frac{2^{2n}(2^2 - 2^1)}{2^{2n}}$。",
+      "消去 $2^{2n}$ 並簡化：$4 - 2 = 2$。"
+    ]
+  },
+  {
+    "id": "ind_25",
+    "topic": "Laws of Indices",
+    "topic_id": "math_alg_indices",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 4,
+    "is_approved": true,
+    "is_factory": true,
+    "question": "Solve the equation $\\sqrt{2^{x+3}} = 4^{x-1}$.",
+    "question_zh": "解方程 $\\sqrt{2^{x+3}} = 4^{x-1}$。",
+    "answer": "2.333",
+    "correct_answer": "2.333",
+    "solution_steps": [
+      "Express both sides with base 2: $(2^{x+3})^{1/2} = (2^2)^{x-1}$.",
+      "Set the indices equal: $\\frac{x+3}{2} = 2x - 2$.",
+      "Multiply by 2: $x + 3 = 4x - 4$.",
+      "Solve for $x$: $3x = 7 \\Rightarrow x = 7/3 \\approx 2.333$."
+    ],
+    "solution_steps_zh": [
+      "將兩邊表示為底數 2：$(2^{x+3})^{1/2} = (2^2)^{x-1}$。",
+      "令指數相等：$\\frac{x+3}{2} = 2x - 2$。",
+      "兩邊乘以 2：$x + 3 = 4x - 4$。",
+      "解 $x$：$3x = 7 \\Rightarrow x = 7/3 \\approx 2.333$。"
+    ]
+  },
+  {
+    "id": "ind_26",
+    "topic": "Laws of Indices",
+    "topic_id": "math_alg_indices",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 4,
+    "is_approved": true,
+    "is_factory": true,
+    "question": "If $x^2 = y^3$, find the value of $(\\frac{x}{y})^{12}$ in terms of $x$.",
+    "question_zh": "若 $x^2 = y^3$，以 $x$ 表示 $(\\frac{x}{y})^{12}$ 的值。",
+    "answer": "x^4",
+    "correct_answer": "x^4",
+    "solution_steps": [
+      "From $x^2 = y^3$, we have $y = (x^2)^{1/3} = x^{2/3}$.",
+      "Then $\\frac{x}{y} = \\frac{x}{x^{2/3}} = x^{1 - 2/3} = x^{1/3}$.",
+      "Therefore, $(\\frac{x}{y})^{12} = (x^{1/3})^{12} = x^{12/3} = x^4$."
+    ],
+    "solution_steps_zh": [
+      "由 $x^2 = y^3$ 可得 $y = (x^2)^{1/3} = x^{2/3}$。",
+      "則 $\\frac{x}{y} = \\frac{x}{x^{2/3}} = x^{1 - 2/3} = x^{1/3}$。",
+      "因此，$(\\frac{x}{y})^{12} = (x^{1/3})^{12} = x^{12/3} = x^4$。"
+    ]
+  },
+  {
+    "id": "ind_27",
+    "topic": "Laws of Indices",
+    "topic_id": "math_alg_indices",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 4,
+    "is_approved": true,
+    "is_factory": true,
+    "question": "Solve the equation $2^{x+1} + 2^x = 24$.",
+    "question_zh": "解方程 $2^{x+1} + 2^x = 24$。",
+    "answer": "3",
+    "correct_answer": "3",
+    "solution_steps": [
+      "Factor out $2^x$: $2^x(2^1 + 1) = 24$.",
+      "Simplify: $2^x(3) = 24$.",
+      "Divide by 3: $2^x = 8$.",
+      "Since $8 = 2^3$, then $x = 3$."
+    ],
+    "solution_steps_zh": [
+      "提取公因式 $2^x$：$2^x(2^1 + 1) = 24$。",
+      "簡化：$2^x(3) = 24$。",
+      "除以 3：$2^x = 8$。",
+      "由於 $8 = 2^3$，故 $x = 3$。"
+    ]
+  },
+  {
+    "id": "ind_28",
+    "topic": "Laws of Indices",
+    "topic_id": "math_alg_indices",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 4,
+    "is_approved": true,
+    "is_factory": true,
+    "question": "Find the value of $m$ such that $\\frac{5^m}{25^{m-1}} = 125$.",
+    "question_zh": "求 $m$ 的值，使得 $\\frac{5^m}{25^{m-1}} = 125$。",
+    "answer": "-1",
+    "correct_answer": "-1",
+    "solution_steps": [
+      "Express with base 5: $\\frac{5^m}{(5^2)^{m-1}} = 5^3$.",
+      "Simplify the left side: $\\frac{5^m}{5^{2m-2}} = 5^{m - (2m-2)} = 5^{-m+2}$.",
+      "Set the indices equal: $-m + 2 = 3$.",
+      "Solve for $m$: $m = -1$."
+    ],
+    "solution_steps_zh": [
+      "以底數 5 表示：$\\frac{5^m}{(5^2)^{m-1}} = 5^3$。",
+      "簡化左邊：$\\frac{5^m}{5^{2m-2}} = 5^{m - (2m-2)} = 5^{-m+2}$。",
+      "令指數相等：$-m + 2 = 3$。",
+      "解 $m$：$m = -1$。"
+    ]
+  },
+  {
+    "id": "ind_29",
+    "topic": "Laws of Indices",
+    "topic_id": "math_alg_indices",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 4,
+    "is_approved": true,
+    "is_factory": true,
+    "question": "Simplify $\\frac{(x^a \\cdot x^b)^c}{x^{ab}}$ if $a=2, b=3, c=4$.",
+    "question_zh": "當 $a=2, b=3, c=4$ 時，簡化 $\\frac{(x^a \\cdot x^b)^c}{x^{ab}}$。",
+    "answer": "x^{14}",
+    "correct_answer": "x^{14}",
+    "solution_steps": [
+      "Substitute values: $\\frac{(x^2 \\cdot x^3)^4}{x^{2\\cdot 3}} = \\frac{(x^5)^4}{x^6}$.",
+      "Simplify indices: $\\frac{x^{20}}{x^6} = x^{20-6} = x^{14}$."
+    ],
+    "solution_steps_zh": [
+      "代入數值：$\\frac{(x^2 \\cdot x^3)^4}{x^{2\\cdot 3}} = \\frac{(x^5)^4}{x^6}$。",
+      "簡化指數：$\\frac{x^{20}}{x^6} = x^{20-6} = x^{14}$。"
+    ]
+  },
+  {
+    "id": "ind_30",
+    "topic": "Laws of Indices",
+    "topic_id": "math_alg_indices",
+    "subject": "maths",
+    "level": 7,
+    "type": "short_answer",
+    "marks": 4,
+    "is_approved": true,
+    "is_factory": true,
+    "question": "Solve the equation $2^{x+2} - 17 \\cdot 2^{x/2} + 4 = 0$.",
+    "question_zh": "解方程 $2^{x+2} - 17 \\cdot 2^{x/2} + 4 = 0$。",
+    "answer": "x = -4 \\text{ or } x = 4",
+    "correct_answer": "x = -4 \\text{ or } x = 4",
+    "solution_steps": [
+      "Let $u = 2^{x/2}$. Then $2^x = (2^{x/2})^2 = u^2$.",
+      "Therefore $2^{x+2} = 2^2 \\cdot 2^x = 4u^2$.",
+      "The equation becomes $4u^2 - 17u + 4 = 0$.",
+      "Factorize: $(4u - 1)(u - 4) = 0 \\Rightarrow u = 1/4$ or $u = 4$.",
+      "Case 1: $2^{x/2} = 2^{-2} \\Rightarrow x/2 = -2 \\Rightarrow x = -4$.",
+      "Case 2: $2^{x/2} = 2^2 \\Rightarrow x/2 = 2 \\Rightarrow x = 4$."
+    ],
+    "solution_steps_zh": [
+      "設 $u = 2^{x/2}$，則 $2^x = u^2$ 及 $2^{x+2} = 4u^2$。",
+      "方程變為 $4u^2 - 17u + 4 = 0$。",
+      "因式分解：$(4u - 1)(u - 4) = 0 \\Rightarrow u = 1/4$ 或 $u = 4$。",
+      "情況 1：$2^{x/2} = 2^{-2} \\Rightarrow x = -4$。",
+      "情況 2：$2^{x/2} = 2^2 \\Rightarrow x = 4$。"
+    ]
+  }
+]

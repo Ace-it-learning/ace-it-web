@@ -1,0 +1,332 @@
+[
+  {
+    "id": "ct_mcq_211",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_alg_linear_programming"],
+    "marks": 1,
+    "difficulty": 7,
+    "paper": 2,
+    "section": "B",
+    "question_en": "Consider the constraints: $x + y \\le 8$, $2x + y \\le 12$, $x \\ge 0$, and $y \\ge 0$. Find the maximum value of $P = 3x + 2y$.",
+    "question_zh": "考慮約束條件：$x + y \\le 8$，$2x + y \\le 12$，$x \\ge 0$ 及 $y \\ge 0$。求 $P = 3x + 2y$ 的最大值。",
+    "options": [
+      "A. 16",
+      "B. 18",
+      "C. 20",
+      "D. 24"
+    ],
+    "correct_answer": "C",
+    "solution_steps_en": [
+      "The vertices of the feasible region are $(0, 0)$, $(0, 8)$, $(4, 4)$, and $(6, 0)$.",
+      "Evaluate $P$ at each vertex:",
+      "At $(0, 0)$: $P = 0$.",
+      "At $(0, 8)$: $P = 3(0) + 2(8) = 16$.",
+      "At $(4, 4)$: $P = 3(4) + 2(4) = 12 + 8 = 20$.",
+      "At $(6, 0)$: $P = 3(6) + 2(0) = 18$.",
+      "Maximum value is 20."
+    ],
+    "solution_steps_zh": [
+      "可行區域的頂點為 $(0, 0)$，$(0, 8)$，$(4, 4)$ 及 $(6, 0)$。",
+      "在各頂點計算 $P$ 的值：",
+      "在 $(0, 0)$ 處：$P = 0$。",
+      "在 $(0, 8)$ 處：$P = 16$。",
+      "在 $(4, 4)$ 處：$P = 12 + 8 = 20$。",
+      "在 $(6, 0)$ 處：$P = 18$。",
+      "最大值為 20。"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_212",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_num_complex"],
+    "marks": 1,
+    "difficulty": 6,
+    "paper": 2,
+    "section": "B",
+    "question_en": "If $z$ is a complex number such that $z = (k + 3i)(2 - i)$ is a purely imaginary number, find the value of the real constant $k$.",
+    "question_zh": "若複數 $z = (k + 3i)(2 - i)$ 是一個純虛數，求實常數 $k$ 的值。",
+    "options": [
+      "A. -6",
+      "B. -1.5",
+      "C. 1.5",
+      "D. 6"
+    ],
+    "correct_answer": "B",
+    "solution_steps_en": [
+      "Expand $z = (k + 3i)(2 - i) = 2k - ki + 6i - 3i^2$.",
+      "Since $i^2 = -1$, $z = 2k - ki + 6i + 3 = (2k + 3) + (6 - k)i$.",
+      "For $z$ to be purely imaginary, the real part must be zero: $2k + 3 = 0$.",
+      "Therefore, $k = -3/2 = -1.5$."
+    ],
+    "solution_steps_zh": [
+      "展開 $z = (k + 3i)(2 - i) = 2k - ki + 6i + 3$。",
+      "整理得 $z = (2k + 3) + (6 - k)i$。",
+      "若 $z$ 為純虛數，實部必須為零：$2k + 3 = 0$。",
+      "故 $k = -1.5$。"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_sa_213",
+    "type": "short_answer",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_geo_circles"],
+    "marks": 12,
+    "difficulty": 7,
+    "paper": 1,
+    "section": "A",
+    "question_en": "In the figure, $TP$ is a tangent to the circle at point $P$. $PAB$ is a triangle inscribed in the circle such that $\\angle TPA = 40^\\circ$ and $PB = AB$. \n(a) Find $\\angle PBA$. (4 marks)\n(b) Find $\\angle APB$. (4 marks)\n(c) Is $PA$ a diameter of the circle? Explain your answer. (4 marks)",
+    "question_zh": "圖中，$TP$ 是圓在 $P$ 點的切線。$PAB$ 是圓內接三角形，使得 $\\angle TPA = 40^\\circ$ 且 $PB = AB$。\n(a) 求 $\\angle PBA$。(4分)\n(b) 求 $\\angle APB$。(4分)\n(c) $PA$ 是否為圓的一條直徑？試解釋你的答案。(4分)",
+    "diagram_json": {
+      "elements": [
+        { "type": "circle", "cx": 200, "cy": 150, "r": 80, "stroke": "#334155", "strokeWidth": 2 },
+        { "type": "line", "x1": 50, "y1": 230, "x2": 320, "y2": 230, "stroke": "#94a3b8", "strokeDasharray": "5,5" },
+        { "type": "arc", "center": { "x": 200, "y": 230 }, "r": 30, "startAngle": 140, "endAngle": 180, "label": "40°", "stroke": "#ef4444" },
+        { "type": "polyline", "points": [{ "x": 121, "y": 164 }, { "x": 251, "y": 89 }, { "x": 200, "y": 230 }], "stroke": "#7c3aed", "strokeWidth": 2, "fill": "rgba(124, 58, 237, 0.05)" },
+        { "type": "line", "x1": 121, "y1": 164, "x2": 200, "y2": 230, "stroke": "#7c3aed", "strokeWidth": 2 },
+        { "type": "point", "x": 121, "y": 164, "label": "A", "labelDx": -15, "labelDy": -5 },
+        { "type": "point", "x": 200, "y": 230, "label": "P", "labelDy": 15 },
+        { "type": "point", "x": 251, "y": 89, "label": "B", "labelDx": 10, "labelDy": -10 },
+        { "type": "point", "x": 80, "y": 230, "label": "T", "labelDx": -15, "labelDy": -5 }
+      ],
+      "canvas": { "width": 400, "height": 300, "viewBox": "40 50 320 220" }
+    },
+    "solution_steps_en": [
+      "(a) $\\angle PBA = \\angle TPA = 40^\\circ$ (angles in alternate segment).",
+      "(b) In $\\triangle PAB$, since $PB = AB$, $\\angle APB = \\angle BAP$.",
+      "Let $\\angle APB = x$. Then $x + x + 40^\\circ = 180^\\circ$ $\\Rightarrow 2x = 140^\\circ$ $\\Rightarrow x = 70^\\circ$.",
+      "(c) To be a diameter, $\\angle PBA$ or $\\angle APB$ would need to involve a $90^\\circ$ angle context.",
+      "In this circle, $\\angle PBA = 40^\\circ$. The angle subtended by $PA$ at any point on the circumference is $40^\\circ$, not $90^\\circ$.",
+      "Therefore, $PA$ is not a diameter."
+    ],
+    "solution_steps_zh": [
+      "(a) $\\angle PBA = \\angle TPA = 40^\\circ$ (弦切角)。",
+      "(b) 在 $\\triangle PAB$ 中，因 $PB = AB$，故 $\\angle APB = \\angle BAP$。",
+      "設其為 $x$，則 $2x + 40^\\circ = 180^\\circ \\Rightarrow x = 70^\\circ$。",
+      "(c) 要成為直徑，其所對的圓周角應為 $90^\\circ$。",
+      "在此圓中，$PA$ 所對的圓周角 $\\angle PBA = 40^\\circ \\neq 90^\\circ$。故 $PA$ 不是直徑。"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_214",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_trig_functions"],
+    "marks": 1,
+    "difficulty": 6,
+    "paper": 2,
+    "section": "B",
+    "question_en": "The period of the function $y = 3 \\cos (4x - \\pi/2)$ is",
+    "question_zh": "函數 $y = 3 \\cos (4x - \\pi/2)$ 的週期為",
+    "options": [
+      "A. $\\pi/2$",
+      "B. $\\pi$",
+      "C. $2\\pi$",
+      "D. $4\\pi$"
+    ],
+    "correct_answer": "A",
+    "solution_steps_en": [
+      "The general form is $y = A \\cos (Bx + C)$.",
+      "Period $T = \\frac{2\\pi}{B}$.",
+      "Here $B = 4$, so $T = \\frac{2\\pi}{4} = \\pi/2$."
+    ],
+    "solution_steps_zh": [
+      "一般形式為 $y = A \\cos (Bx + C)$。",
+      "週期 $T = \\frac{2\\pi}{B}$。",
+      "這裡 $B = 4$，故 $T = \\pi/2$。"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_sa_215",
+    "type": "short_answer",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_alg_variations"],
+    "marks": 12,
+    "difficulty": 6,
+    "paper": 1,
+    "section": "A",
+    "question_en": "The cost of printing a book $C$ is the sum of two parts. One part is constant and the other part varies directly as the number of pages $n$. When $n = 100, C = 40$; when $n = 200, C = 70$.\n(a) Find the relation between $C$ and $n$. (4 marks)\n(b) Find the cost when $n = 350$. (4 marks)\n(c) If the total budget is $100$, what is the maximum number of pages that can be printed? (4 marks)",
+    "question_zh": "印刷一本書的成本 $C$ 為兩部分之和。一部分為常數，另一部分隨頁數 $n$ 正變。當 $n = 100, C = 40$；當 $n = 200, C = 70$。\n(a) 求 $C$ 與 $n$ 的關係式。(4分)\n(b) 求當 $n = 350$ 時的成本。(4分)\n(c) 若總預算為 $100$，最多可以印刷多少頁？(4分)",
+    "solution_steps_en": [
+      "(a) Let $C = k_1 + k_2 n$.",
+      "$40 = k_1 + 100k_2$ (Eq 1). $70 = k_1 + 200k_2$ (Eq 2).",
+      "Subtract Eq 1 from Eq 2: $30 = 100k_2 \\Rightarrow k_2 = 0.3$.",
+      "Substitute into Eq 1: $40 = k_1 + 30 \\Rightarrow k_1 = 10$. Relation: $C = 10 + 0.3n$.",
+      "For $n = 350$, $C = 10 + 0.3(350) = 10 + 105 = 115$.",
+      "(c) $10 + 0.3n \\le 100 \\Rightarrow 0.3n \\le 90 \\Rightarrow n \\le 300$. Max 300 pages."
+    ],
+    "solution_steps_zh": [
+      "(a) 設 $C = k_1 + k_2 n$。",
+      "由聯立方程得 $k_1 = 10, k_2 = 0.3$。關係式為 $C = 10 + 0.3n$。",
+      "(b) 當 $n = 350$ 時，$C = 10 + 105 = 115$。",
+      "(c) $10 + 0.3n \\le 100 \\Rightarrow n \\le 300$。最多 300 頁。"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_216",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_geo_coord"],
+    "marks": 1,
+    "difficulty": 5,
+    "paper": 2,
+    "section": "A",
+    "question_en": "Point $P(3, -4)$ is rotated counter-clockwise about the origin by $90^\\circ$ to point $Q$. $Q$ is then reflected about the $y$-axis to point $R$. Find the coordinates of $R$.",
+    "question_zh": "點 $P(3, -4)$ 繞原點逆時針旋轉 $90^\\circ$ 到達 $Q$ 點。$Q$ 點再以此 $y$ 軸為對稱軸反射至 $R$ 點。求 $R$ 的座標。",
+    "options": [
+      "A. (4, 3)",
+      "B. (-4, -3)",
+      "C. (-4, 3)",
+      "D. (4, -3)"
+    ],
+    "correct_answer": "C",
+    "solution_steps_en": [
+      "Rotation of $(x, y)$ by $90^\\circ$ CCW: $(-y, x)$.",
+      "$Q = (4, 3)$.",
+      "Reflection of $(x, y)$ about $y$-axis: $(-x, y)$.",
+      "$R = (-4, 3)$."
+    ],
+    "solution_steps_zh": [
+      "逆時針旋轉 $90^\\circ$：$(x, y) \\to (-y, x)$。故 $Q = (4, 3)$。",
+      "以此 $y$ 軸反射：$(x, y) \\to (-x, y)$。故 $R = (-4, 3)$。"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_sa_217",
+    "type": "short_answer",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_stat_prob"],
+    "marks": 13,
+    "difficulty": 7,
+    "paper": 1,
+    "section": "B",
+    "question_en": "A committee of 5 is to be selected from 6 men and 4 women.\n(a) Find the total number of ways to form the committee. (4 marks)\n(b) Find the number of ways if the committee must contain at least 2 women. (5 marks)\n(c) What is the probability that exactly 3 women are in the committee? (4 marks)",
+    "question_zh": "從 6 名男士及 4 名女士中選出 5 人組成委員會。\n(a) 求組成委員會的總方法數。(4分)\n(b) 若委員會必須包含最少 2 名女士，求方法數。(5分)\n(c) 委員會中恰好有 3 名女士的概率是多少？(4分)",
+    "solution_steps_en": [
+      "(a) Total ways $= C^{10}_5 = \\frac{10 \\times 9 \\times 8 \\times 7 \\times 6}{5 \\times 4 \\times 3 \\times 2 \\times 1} = 252$.",
+      "(b) Total ways - cases with 0 or 1 woman.",
+      "0 women: $C^6_5 \\times C^4_0 = 6 \\times 1 = 6$.",
+      "1 woman: $C^6_4 \\times C^4_1 = 15 \\times 4 = 60$.",
+      "Ways with $\\ge 2$ women $= 252 - (6 + 60) = 186$.",
+      "(c) Ways with exactly 3 women: $C^6_2 \\times C^4_3 = 15 \\times 4 = 60$.",
+      "Probability $= 60 / 252 = 5/21 \\approx 0.238$."
+    ],
+    "solution_steps_zh": [
+      "(a) 總方法數 $= C^{10}_5 = 252$。",
+      "(b) 最少 2 名女士 = 總數 - (0 名或 1 名女士)。",
+      "0 名女士：$C^6_5 = 6$。1 名女士：$C^6_4 \\times C^4_1 = 60$。",
+      "結果 $= 252 - 66 = 186$。",
+      "(c) 恰好 3 名女士的方法數 $= C^6_2 \\times C^4_3 = 60$。",
+      "概率 $= 60/252 = 5/21$。"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_218",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_stat_analysis"],
+    "marks": 1,
+    "difficulty": 6,
+    "paper": 2,
+    "section": "A",
+    "question_en": "The weights of 40 students are shown in the cumulative frequency curve. Find the interquartile range of the weights.",
+    "question_zh": "圖中顯示 40 名學生重量之累積頻數曲線。求重量的四分位數間距。",
+    "options": [
+      "A. 10 kg",
+      "B. 15 kg",
+      "C. 20 kg",
+      "D. 25 kg"
+    ],
+    "correct_answer": "B",
+    "diagram_json": {
+      "elements": [
+        { "type": "polyline", "points": [{ "x": 100, "y": 250 }, { "x": 150, "y": 230 }, { "x": 200, "y": 200 }, { "x": 250, "y": 140 }, { "x": 300, "y": 100 }, { "x": 350, "y": 80 }], "stroke": "#7c3aed", "strokeWidth": 2.5 },
+        { "type": "line", "x1": 50, "y1": 250, "x2": 380, "y2": 250, "stroke": "#94a3b8", "label": "Weight (kg)" },
+        { "type": "line", "x1": 50, "y1": 50, "x2": 50, "y2": 250, "stroke": "#94a3b8", "label": "Cum. Freq." },
+        { "type": "line", "x1": 50, "y1": 200, "x2": 200, "y2": 200, "stroke": "#ef4444", "strokeDasharray": "3,3", "label": "Q1" },
+        { "type": "line", "x1": 50, "y1": 100, "x2": 300, "y2": 100, "stroke": "#ef4444", "strokeDasharray": "3,3", "label": "Q3" },
+        { "type": "point", "x": 50, "y": 250, "label": "0", "labelDx": -15 },
+        { "type": "point", "x": 50, "y": 200, "label": "10", "labelDx": -15 },
+        { "type": "point", "x": 50, "y": 150, "label": "20", "labelDx": -15 },
+        { "type": "point", "x": 50, "y": 100, "label": "30", "labelDx": -15 },
+        { "type": "point", "x": 50, "y": 50, "label": "40", "labelDx": -15 }
+      ],
+      "canvas": { "width": 400, "height": 300, "viewBox": "30 40 360 220" }
+    },
+    "solution_steps_en": [
+      "Total students = 40.",
+      "$Q_1$ (lower quartile) is the value at frequency 10. From curve, $W_1 \\approx 45$ kg.",
+      "$Q_3$ (upper quartile) is the value at frequency 30. From curve, $W_3 \\approx 60$ kg.",
+      "IQR $= 60 - 45 = 15$ kg."
+    ],
+    "solution_steps_zh": [
+      "總人數 = 40。",
+      "$Q_1$ 為第 10 名數據對應之重量，約為 45 kg。",
+      "$Q_3$ 為第 30 名數據對應之重量，約為 60 kg。",
+      "IQR $= 15$ kg。"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_219",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_num_percentages"],
+    "marks": 1,
+    "difficulty": 5,
+    "paper": 2,
+    "section": "A",
+    "question_en": "A sector has a radius of 12 cm and a central angle of $150^\\circ$. Find the perimeter of the sector to the nearest cm.",
+    "question_zh": "一個扇形的半徑為 12 cm，圓心角為 $150^\\circ$。求該扇形的周界（準確至最接近的 cm）。",
+    "options": [
+      "A. 31 cm",
+      "B. 43 cm",
+      "C. 55 cm",
+      "D. 70 cm"
+    ],
+    "correct_answer": "C",
+    "solution_steps_en": [
+      "Arc length $L = 2\\pi r \\times \\frac{\\theta}{360} = 2\\pi(12) \\times \\frac{150}{360}$.",
+      "$L = 24\\pi \\times \\frac{5}{12} = 10\\pi \\approx 31.42$ cm.",
+      "Perimeter $= L + 2r = 31.42 + 24 = 55.42 \\approx 55$ cm."
+    ],
+    "solution_steps_zh": [
+      "弧長 $L = 24\\pi \\times \\frac{150}{360} = 10\\pi \\approx 31.42$ cm。",
+      "周界 $= L + 2 \\times 12 = 31.42 + 24 = 55.42 \\approx 55$ cm。"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_sa_220",
+    "type": "short_answer",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_alg_quadratics"],
+    "marks": 11,
+    "difficulty": 7,
+    "paper": 1,
+    "section": "B",
+    "question_en": "A farmer has $40$ meters of fencing to enclose a rectangular vegetable garden against a straight wall (one side does not need fencing). \\n(a) If the side perpendicular to the wall is $x$ meters, express the area $A$ in terms of $x$. (3 marks)\\n(b) Using the method of completing the square, find the maximum area of the garden. (4 marks)\\n(c) What are the dimensions of the garden when the area is maximized? (4 marks)",
+    "question_zh": "一名農夫有 40 米長的圍欄，用於在一堵直牆下圍出一個長方形菜園（其中一邊不需要圍欄）。\n(a) 若垂直於牆的一邊長度為 $x$ 米，將面積 $A$ 以 $x$ 表示。(3分)\n(b) 利用配方法求菜園的最大面積。(4分)\n(c) 面積最大時，菜園的尺寸是多少？(4分)",
+    "solution_steps_en": [
+      "(a) Let $x$ be the width. The length along the wall is $40 - 2x$.",
+      "$A = x(40 - 2x) = 40x - 2x^2$.",
+      "(b) $A = -2(x^2 - 20x) = -2(x^2 - 20x + 100 - 100) = -2(x - 10)^2 + 200$.",
+      "Maximum area is 200 sq. meters.",
+      "(c) Maximized when $x = 10$. Dimensions: $10$ m $\\times 20$ m."
+    ],
+    "solution_steps_zh": [
+      "(a) 設寬為 $x$，則長為 $40 - 2x$。面積 $A = 40x - 2x^2$。",
+      "(b) $A = -2(x - 10)^2 + 200$。最大面積為 200 平方米。",
+      "(c) 當 $x = 10$ 時。尺寸為 10 米 $\\times$ 20 米。"
+    ],
+    "status": "approved"
+  }
+]

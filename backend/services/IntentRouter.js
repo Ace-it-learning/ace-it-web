@@ -1,4 +1,5 @@
 const GenerativeAIService = require('./GenerativeAIService');
+const CacheService = require('./CacheService');
 
 const ROUTER_PROMPT = `Analyze student message vs history to route intent. Output ONLY JSON.
 
@@ -70,6 +71,17 @@ Image Attached: {{HAS_IMAGE}}
 class IntentRouter {
   static async classify(message, history = [], uid = null, context = {}) {
     try {
+      // Semantic Cache Check for Generic Navigational Commands
+      const isUniversal = CacheService.isUniversalRoutingCommand(message);
+      if (isUniversal) {
+         const cacheKey = `intent_${message.toLowerCase().trim()}_${context.diagnostic_completed}`;
+         const cachedIntent = CacheService.getIntentCache(cacheKey);
+         if (cachedIntent) {
+             console.log(`[IntentRouter] ⚡ Semantic Cache Hit for: "${message}" ->`, cachedIntent.intent);
+             return cachedIntent;
+         }
+      }
+
       // Flatten history last 3 turns for context
       const subHistory = history.slice(-3).map(m => {
         const content = m.content || (m.parts && m.parts[0]?.text) || "";
@@ -102,6 +114,14 @@ class IntentRouter {
 
       try {
         const json = JSON.parse(text);
+        
+        // Save to Semantic Cache if eligible
+        const isUniversal = CacheService.isUniversalRoutingCommand(message);
+        if (isUniversal) {
+            const cacheKey = `intent_${message.toLowerCase().trim()}_${context.diagnostic_completed}`;
+            CacheService.setIntentCache(cacheKey, json);
+        }
+
         return json;
       } catch (e) {
         console.error("Router JSON Parse Error:", e, text);

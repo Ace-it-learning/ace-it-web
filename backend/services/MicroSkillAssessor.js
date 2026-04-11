@@ -77,6 +77,9 @@ MICRO-SKILLS & KEYS:
 10. Register & Style (reading_registerStyle)
 11. Metaphorical Language (reading_metaphoricalLanguage)
 12. Text Organization (reading_textOrganization)
+13. Skimming & Scanning (reading_skimmingScanning)
+14. Paraphrasing (reading_paraphrasing)
+15. Cohesion & Reference (reading_cohesionReference)
 
 Student Responses:
 ${JSON.stringify(readingData, null, 2)}
@@ -124,29 +127,10 @@ HKDSE WRITING CRITERIA:
 - Level 3: Simple development, basic vocabulary, common grammatical errors.
 - Level 1/2: Limited content, fragmented organization, frequent errors affecting meaning.
 
-MICRO-SKILLS & KEYS:
-Content & Ideas:
-1. Relevance (writing_relevance)
-2. Development (writing_development)
-3. Originality (writing_originality)
-
-Language & Vocabulary:
-4. Vocabulary Range (writing_vocabularyRange)
-5. Collocations (writing_collocations)
-6. Idiomatic Expressions (writing_idiomaticExpressions)
-7. Register Appropriateness (writing_registerAppropriate)
-8. Word Choice Precision (writing_wordChoicePrecision)
-
-Grammar & Sentence Structure:
-9. Sentence Variety (writing_sentenceVariety)
-10. Advanced Structures (writing_advancedStructures)
-11. Grammatical Accuracy (writing_grammaticalAccuracy)
-12. Punctuation (writing_punctuation)
-
-Organization & Coherence:
-13. Paragraph Structure (writing_paragraphStructure)
-14. Transitions (writing_transitions)
-15. Overall Coherence (writing_overallCoherence)
+MICRO-SKILLS & PILLARS (Strict HKEAA Standard):
+1. Content (writing_content): Substance, development, and relevance.
+2. Language (writing_language): Grammar, vocabulary range, and accuracy.
+3. Organization (writing_organization): Cohesion, structure, and paragraphing.
 
 Writing Sample:
 ${JSON.stringify(writingData, null, 2)}
@@ -198,26 +182,17 @@ Return ONLY a JSON object with this structure:
         const prompt = `Analyze the following listening comprehension responses and assess the student's proficiency in these 10 micro-skills based STRICTLY on the HKDSE English Language Paper 3 (Listening & Integrated Skills) Assessment Framework.
 ${empiricalEvidence}
 
-HKDSE LISTENING CRITERIA:
-- Level 5**: Comprehends all details/tone, captures speaker attitude precisely.
-- Level 4/5: Good recall, mostly accurate, identifies main points clearly.
-- Level 3: grasps basic info, misses specific names/numbers or subtle attitude.
-- Level 1/2: Catches isolated words only, frequent context misunderstandings.
+HKDSE LISTENING & INTEGRATED CRITERIA (Paper 3):
+- Level 5**: Comprehensive synthesis of multi-source data; perfect Part A accuracy; native-like tone detection.
+- Level 4/5: Strong extraction of details; clear organization in Part B; minor errors in accuracy.
+- Level 3: Basic gist understanding; misses subtle Part B content points.
+- Level 1/2: Fragmented data extraction; frequent errors in Part A.
 
-MICRO-SKILLS & KEYS:
-Comprehension Skills:
-1. Main Idea Listening (listening_mainIdea)
-2. Detail Listening (listening_detailListening)
-3. Note-Taking (listening_noteTaking)
-4. Prediction (listening_prediction)
-5. Listening for Gist (listening_gist)
-
-Advanced Listening Skills:
-6. Accent Recognition (listening_accentRecognition)
-7. Speed Processing (listening_speedProcessing)
-8. Speaker Attitude (listening_speakerAttitude)
-9. Integrated Tasks (listening_integratedTasks)
-10. Ambiguity Handling (listening_ambiguityHandling)
+MICRO-SKILLS & PILLARS (Strict HKEAA Standard):
+1. Part A Comprehension (listening_part_a): Accuracy in gap-fill, MCQs, and factual details.
+2. Part B Content (listening_content): Synthesis of Data File info and multi-source points.
+3. Part B Language (listening_language): Register, appropriateness, and grammatical precision.
+4. Part B Organization (listening_organization): Cohesion and professional formatting.
 
 Student Responses:
 ${JSON.stringify(listeningData, null, 2)}
@@ -229,7 +204,7 @@ For each micro-skill, provide:
 
 Return ONLY a JSON object with this structure:
 {
-  "listening_mainIdea": { "level": 4, "confidence": 0.85, "evidence": "..." },
+  "listening_part_a": { "level": 4, "confidence": 0.85, "evidence": "..." },
   ...
 }
 `;
@@ -254,28 +229,17 @@ Return ONLY a JSON object with this structure:
         if (!speakingData) return {};
         const prompt = `Analyze the following speaking performance and assess the student's proficiency in these 10 micro-skills based STRICTLY on the HKDSE English Language Paper 4 (Speaking) Assessment Framework.
 
-HKDSE SPEAKING CRITERIA:
-- Level 5**: Charismatic delivery, sophisticated patterns, effortless fluency.
-- Level 4/5: Sustained conversation, clear pronunciation, active engagement.
-- Level 3: Basic communication, simple structures, some hesitation.
-- Level 1/2: Fragmented phrases, frequent silence, pronunciation obstacles.
+HKDSE SPEAKING CRITERIA (Paper 4):
+- Level 5**: Natural delivery; sophisticated language patterns; facilities discussion effortlessly.
+- Level 4/5: Clear pronunciation; coherent ideas; good communicative strategies.
+- Level 3: Adequate communication; simple vocabulary; minor hesitation.
+- Level 1/2: Minimal participation; fragmented sentences; frequent pauses.
 
-MICRO-SKILLS & KEYS:
-Fluency & Delivery:
-1. Pronunciation Clarity (speaking_pronunciationClarity)
-2. Intonation (speaking_intonation)
-3. Pace & Rhythm (speaking_paceRhythm)
-4. Confidence & Naturalness (speaking_confidence)
-
-Interactive Skills:
-5. Turn-Taking (speaking_turnTaking)
-6. Active Listening (speaking_activeListening)
-7. Facilitation (speaking_facilitation)
-
-Language Use:
-8. Spontaneity (speaking_spontaneity)
-9. Vocabulary in Speech (speaking_vocabularyInSpeech)
-10. Grammatical Accuracy in Speech (speaking_grammaticalAccuracyInSpeech)
+MICRO-SKILLS & PILLARS (Strict HKEAA Standard):
+1. Pronunciation & Delivery (speaking_delivery): Clarity, intonation, and stress.
+2. Communication Strategies (speaking_strategies): Interaction, turn-taking, and active listening.
+3. Vocabulary & Language Patterns (speaking_language): Range and accuracy of vocabulary and grammar.
+4. Ideas & Organization (speaking_organization): Development of ideas and logical flow.
 
 Speaking Data:
 ${JSON.stringify(speakingData, null, 2)}
@@ -287,7 +251,7 @@ For each micro-skill, provide:
 
 Return ONLY a JSON object with this structure:
 {
-  "speaking_pronunciationClarity": { "level": 4, "confidence": 0.85, "evidence": "..." },
+  "speaking_delivery": { "level": 4, "confidence": 0.85, "evidence": "..." },
   ...
 }
 `;

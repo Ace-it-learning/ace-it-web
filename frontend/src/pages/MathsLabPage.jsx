@@ -9,6 +9,8 @@ import 'katex/dist/katex.min.css';
 import MathInput from '../components/maths/MathInput';
 import ImageUploadInput from '../components/maths/ImageUploadInput';
 import GeometryRenderer from '../components/maths/GeometryRenderer';
+import TutorialOverlay from '../components/maths/TutorialOverlay';
+import MockCountdownTimer from '../components/utils/MockCountdownTimer'; // NEW
 import { getMathSkillName } from '../constants/mathMicroSkills';
 import { getMasteryStats, getDifficultyTierDetails } from '../utils/masteryUtils';
 import { formatNumbers, sanitizeMath, prepareMathText, splitContentByDelimiters, looksLikeMath } from '../utils/mathFormattingUtils';
@@ -26,7 +28,7 @@ const MathsLabPage = () => {
     // Support both location.state (from Roadmap) and URL params (from AI Tutor)
     const topic = location.state?.topic || searchParams.get('topic');
     const level = location.state?.level || parseInt(searchParams.get('level')) || 1;
-    const { taskId, title, xp, isFactoryQuest } = location.state || {};
+    const { taskId, title, xp, isFactoryQuest, isMock, duration } = location.state || {};
 
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -43,9 +45,27 @@ const MathsLabPage = () => {
     const [isAuditMode, setIsAuditMode] = useState(false);
     const [isAuditing, setIsAuditing] = useState(false);
     const [isReviewMode, setIsReviewMode] = useState(false);
+    const [showTutorial, setShowTutorial] = useState(false);
+    const [currentBatch, setCurrentBatch] = useState(1);
+    const [mathInputInsertLatex, setMathInputInsertLatex] = useState(null);
+    const [showXPModal, setShowXPModal] = useState(false);
+    const [xpModalData, setXpModalData] = useState(null);
+    const [isBatchMode, setIsBatchMode] = useState(false);
 
-    const tier = getMasteryStats(level || 3, language === 'zh');
-    const potentialXP = xp || tier.xp || 100;
+    useEffect(() => {
+        if (!localStorage.getItem('hasSeenMathTutorial') && !isMock) {
+            setShowTutorial(true);
+        }
+    }, [isMock]);
+
+    const closeTutorial = () => {
+        setShowTutorial(false);
+        localStorage.setItem('hasSeenMathTutorial', 'true');
+    };
+
+    const isWeeklyQuest = (topic === 'integrated_challenge');
+    const potentialXP = isWeeklyQuest ? 300 : (xp || tier.xp || 100);
+    const [currentPotentialXP, setCurrentPotentialXP] = useState(potentialXP);
 
     const lastFetchKey = useRef("");
 
@@ -179,8 +199,14 @@ const MathsLabPage = () => {
 
             if (res.ok) {
                 const allQs = await res.json();
+                console.log(`[v1.2.7-F] Audit data received:`, allQs);
+                
+                if (!Array.isArray(allQs)) {
+                    throw new Error(`Invalid audit response: Expected array, got ${typeof allQs}`);
+                }
+
                 if (allQs.length === 0) {
-                    setError("No questions found for this topic.");
+                    setError(`No questions found for topic: ${topic}`);
                     return;
                 }
 
@@ -197,30 +223,45 @@ const MathsLabPage = () => {
                 // PERFORMANCE/CONVENIENCE: Automatically fill all answers with solutions
                 const auditAnswers = {};
                 formatted.forEach(q => {
-                    // Support modular 'content' schema + legacy fields
-                    const rawSteps = q.solution_steps || q.content?.solution_steps || [];
-                    const explanation = q.explanation || q.content?.explanation || "";
+                    // Support modular 'content' schema + bilingual fields
+                    const rawStepsZH = q.solution_steps_zh || q.content?.solution_steps_zh || [];
+                    const rawStepsEN = q.solution_steps_en || q.content?.solution_steps_en || q.solution_steps || q.content?.solution_steps || [];
+                    
+                    const explanationZH = q.explanation_zh || q.content?.explanation_zh || "";
+                    const explanationEN = q.explanation_en || q.content?.explanation_en || q.explanation || q.content?.explanation || "";
+                    
+                    const localizedSteps = showChinese ? rawStepsZH : rawStepsEN;
+                    const fallbackSteps = showChinese ? rawStepsEN : rawStepsZH;
+                    const finalStepsRaw = (localizedSteps && localizedSteps.length > 0) ? localizedSteps : fallbackSteps;
+                    
+                    const localizedExpl = showChinese ? explanationZH : explanationEN;
+                    const fallbackExpl = showChinese ? explanationEN : explanationZH;
+                    const finalExpl = localizedExpl || fallbackExpl;
                     
                     // Use a clean joiner that our TipTap parser understands
-                    let steps = (rawSteps || []).map(s => s.trim()).join('\n\n');
+                    let stepsStr = Array.isArray(finalStepsRaw) ? finalStepsRaw.map(s => String(s || '').trim()).join('\n\n') : (typeof finalStepsRaw === 'string' ? finalStepsRaw : '');
                     
                     // If steps are empty but explanation exists, use explanation
-                    if (!steps && explanation) steps = explanation;
+                    if (!stepsStr && finalExpl) stepsStr = finalExpl;
                     
                     const ans = q.answer || q.correct_answer || q.model_answer || q.content?.final_answer || '';
                     
-                    // Wrap final answer in math if it's not already
-                    const mathAns = ans.toString().startsWith('$') ? ans : `$${ans}$`;
+                    // Safe string conversion to prevent crashes on null answers
+                    const ansStr = String(ans || '');
+                    const mathAns = ansStr.startsWith('$') ? ansStr : `$${ansStr}$`;
                     
-                    auditAnswers[q.id] = steps ? `${steps}\n\nFinal Answer: ${mathAns}` : mathAns;
+                    auditAnswers[q.id] = stepsStr || mathAns;
                 });
                 setAnswers(auditAnswers);
 
-                alert(`🧬 SUPER AUDIT: Found ${formatted.length} questions for this topic.`);
+                alert(`🧬 [v1.2.7-F] SUPER AUDIT: Found ${formatted.length} questions for topic: ${topic}`);
+            } else {
+                const errorData = await res.json().catch(() => ({}));
+                setError(`Audit Request Failed: ${res.status} - ${errorData.error || 'Server error'}`);
             }
         } catch (err) {
-            console.error("Audit failed:", err);
-            setError("Failed to initialize audit mode.");
+            console.error("[v1.2.7-F] Audit failed:", err);
+            setError(`Failed to initialize audit mode: ${err.message}`);
         } finally {
             setIsAuditing(false);
         }
@@ -267,9 +308,10 @@ const MathsLabPage = () => {
         setHints([]);
         setHintIndex(-1);
         setIsDiagramExpanded(false);
-        if (currentIndex < questions.length - 1) {
+        const lastIdxInBatch = isBatchMode ? Math.min(currentBatch * 10 - 1, questions.length - 1) : questions.length - 1;
+        if (currentIndex < lastIdxInBatch) {
             setCurrentIndex(prev => prev + 1);
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            window.scrollTo({ top: 0, behavior: 'instant' });
         }
     };
 
@@ -277,24 +319,96 @@ const MathsLabPage = () => {
         setHints([]);
         setHintIndex(-1);
         setIsDiagramExpanded(false);
-        if (currentIndex > 0) {
+        const firstIdxInBatch = isBatchMode ? (currentBatch - 1) * 10 : 0;
+        if (currentIndex > firstIdxInBatch) {
             setCurrentIndex(prev => prev - 1);
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            window.scrollTo({ top: 0, behavior: 'instant' });
+        }
+    };
+
+    const visibleQuestions = (isAuditMode && isBatchMode) 
+        ? questions.slice((currentBatch - 1) * 10, currentBatch * 10)
+        : questions;
+
+    const handleBatchChange = (batchNum) => {
+        const num = parseInt(batchNum);
+        setCurrentBatch(num);
+        // Jump to the first question of that batch (1 -> 0, 2 -> 10, etc)
+        const targetIdx = (num - 1) * 10;
+        if (questions[targetIdx]) {
+            setCurrentIndex(targetIdx);
+        } else if (questions.length > 0) {
+            // If the question doesn't exist yet, go to the last available one
+            setCurrentIndex(Math.min(targetIdx, questions.length - 1));
+        }
+    };
+
+    const handleJumpToQuestion = (numStr) => {
+        const num = parseInt(numStr);
+        if (isNaN(num)) return;
+        const targetIdx = num - 1; // 1-indexed to 0-indexed
+        if (targetIdx >= 0 && targetIdx < questions.length) {
+            setCurrentIndex(targetIdx);
+            // Sync batch if needed
+            setCurrentBatch(Math.floor(targetIdx / 10) + 1);
+        } else {
+            alert(`Question ${num} not found. Range: 1 to ${questions.length}`);
         }
     };
 
     const checkForHints = async () => {
         const currentQ = questions[currentIndex];
 
+        // Unified hints array: new schema is an array of objects with { level, cost_xp, content_en, content_zh }
+        let hintsArr = currentQ.hints;
+
+        // Force a re-fetch of hints if they are in the old string format OR if they look like placeholder/bad data
+        const isLegacyString = hintsArr && hintsArr.length > 0 && typeof hintsArr[0] === 'string';
+        const firstHint = (hintsArr && hintsArr.length > 0) ? hintsArr[0] : null;
+        const isPlaceholder = firstHint && typeof firstHint === 'object' && 
+                             ((firstHint.content_zh || '').includes('translation') || 
+                              (firstHint.content_zh || '').includes('Traditional Chinese') ||
+                              (firstHint.content_en || '').includes('specific strategy') ||
+                              (firstHint.content_en || '').includes('Review the question\'s core values'));
+
+        if (isLegacyString || isPlaceholder) {
+            console.log(`[MathsLabPage] Found stale/placeholder hints (v1.2.5). Resetting for fresh fetch.`);
+            hintsArr = null;
+        }
+
         // 1. If we already have hints locally and haven't shown them all
-        if ((currentQ.hints || currentQ.hints_zh) && (hintIndex < (isChinese ? (currentQ.hints_zh?.length || 0) : (currentQ.hints?.length || 0)) - 1)) {
+        if (hintsArr && hintsArr.length > 0 && hintIndex < hintsArr.length - 1) {
             const nextIdx = hintIndex + 1;
+            const hintData = hintsArr[nextIdx];
+            const cost = Number(hintData?.cost_xp) || 0;
+            
+            console.log(`[MathsLabPage] Showing local hint ${nextIdx + 1}, cost: ${cost}`);
+
+            if (cost > 0) {
+                setXpModalData({
+                    title: isChinese ? "解鎖提示" : "Unlock Hint",
+                    description: isChinese 
+                        ? `解鎖 Hint ${nextIdx + 1} 需要消耗 ${cost} XP。`
+                        : `Unlocking Hint ${nextIdx + 1} costs ${cost} XP.`,
+                    cost,
+                    currentXP: currentPotentialXP,
+                    isChinese,
+                    onConfirm: () => {
+                        setCurrentPotentialXP(prev => Math.max(0, prev - cost));
+                        setHintIndex(nextIdx);
+                        setShowXPModal(false);
+                    }
+                });
+                setShowXPModal(true);
+                return;
+            }
+            
             setHintIndex(nextIdx);
             return;
         }
 
-        // 2. Fetch from backend if not present or if we need more
-        if (!currentQ.hints && !currentQ.hints_zh) {
+        // 2. Fetch from backend if not present or if we decided to overwrite legacy hints
+        if (!hintsArr) {
             setLoadingHint(true);
             try {
                 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
@@ -312,15 +426,48 @@ const MathsLabPage = () => {
 
                 if (res.ok) {
                     const data = await res.json();
+                    
+                    const fetchedHints = data.hints || [];
+                    const firstHintCost = Number(fetchedHints[0]?.cost_xp) || 0;
+                    
+                    console.log(`[MathsLabPage] SUCCESS: Fetched ${fetchedHints.length} hints. First cost: ${firstHintCost}`);
 
-                    // Save back to question object to avoid re-fetching
-                    const updatedQuestions = [...questions];
-                    updatedQuestions[currentIndex] = {
-                        ...currentQ,
-                        hints: data.hints,
-                        hints_zh: data.hints_zh
-                    };
-                    setQuestions(updatedQuestions);
+                    if (firstHintCost > 0) {
+                        setXpModalData({
+                            title: isChinese ? "解鎖提示" : "Unlock Hint",
+                            description: isChinese 
+                                ? `獲取新的提示需要消耗 ${firstHintCost} XP。`
+                                : `Fetching new hints costs ${firstHintCost} XP.`,
+                            cost: firstHintCost,
+                            currentXP: currentPotentialXP,
+                            isChinese,
+                            onConfirm: () => {
+                                setCurrentPotentialXP(prev => Math.max(0, prev - firstHintCost));
+                                setQuestions(prevQuestions => {
+                                    const next = [...prevQuestions];
+                                    if (next[currentIndex]) {
+                                        next[currentIndex] = { ...next[currentIndex], hints: fetchedHints };
+                                    }
+                                    return next;
+                                });
+                                setHintIndex(0);
+                                setShowXPModal(false);
+                            }
+                        });
+                        setShowXPModal(true);
+                        setLoadingHint(false);
+                        return;
+                    }
+
+                    // CRITICAL: Use functional update to ensure we move from the LATEST questions state
+                    setQuestions(prev => {
+                        const next = [...prev];
+                        if (next[currentIndex]) {
+                            next[currentIndex] = { ...next[currentIndex], hints: fetchedHints };
+                        }
+                        return next;
+                    });
+                    
                     setHintIndex(0);
                 }
             } catch (err) {
@@ -331,6 +478,7 @@ const MathsLabPage = () => {
         }
     };
 
+
     const handleCheat = (cheatLevel) => {
         const cheatAnswers = {};
         questions.forEach(q => {
@@ -339,21 +487,21 @@ const MathsLabPage = () => {
             const isMedium = cheatLevel === '4';
             const isLow = cheatLevel === '3';
 
-            if (q.type === 'mc') {
-                cheatAnswers[q.id] = q.answer;
+            if (q.type === 'mc' || q.type === 'mcq') {
+                const targetLetter = (q.correct_answer || q.answer || 'A').trim().charAt(0).toUpperCase();
+                const fullOption = q.options?.find(opt => opt.trim().toUpperCase().startsWith(targetLetter)) || targetLetter;
+                cheatAnswers[q.id] = fullOption;
                 return;
             }
 
             // For Short Answer, we vary the solution quality
             let solutionStr = '';
-            let finalAns = q.answer || '';
+            let finalAns = (q.correct_answer || q.answer || '').trim();
 
             // CLEANUP: If type is NOT 'mc', strip any "A: ", "B: ", etc prefixes that might have leaked from AI
-            if (q.type !== 'mc') {
+            if (q.type !== 'mc' && q.type !== 'mcq') {
                 finalAns = finalAns.replace(/^[A-D]\s*[:.]\s*/i, '').trim();
             }
-
-            const rawSteps = q.solution_steps || [];
 
             // Pattern-based fallback for older question bank entries which might have placeholders
             const replacePlaceholders = (text) => {
@@ -361,13 +509,13 @@ const MathsLabPage = () => {
 
                 // Heuristic: Extract percentages/numbers if metabolic data is missing
                 const qText = isChinese ? (q.text_zh || q.text) : q.text;
-                const numbers = qText.match(/\d+(\.\d+)?/g) || [];
+                const numbers = String(qText || '').match(/\d+(\.\d+)?/g) || [];
 
                 let valD1 = q.d1 || (numbers[0] ? numbers[0] : 'd1');
                 let valD2 = q.d2 || (numbers[1] ? numbers[1] : 'd2');
                 let valMP = q.marked_price || (numbers.find(n => parseFloat(n) > 100) || 'MP');
 
-                return text
+                return String(text)
                     .replace(/\bd1\b/g, valD1)
                     .replace(/\bd2\b/g, valD2)
                     .replace(/\bMP\b/g, valMP)
@@ -377,8 +525,20 @@ const MathsLabPage = () => {
                     .replace(/\bt\b/g, (q.years || 't'));
             };
 
-            const steps = rawSteps.map(s => replacePlaceholders(s));
+            const rawStepsZH = q.solution_steps_zh || q.content?.solution_steps_zh || [];
+            const rawStepsEN = q.solution_steps_en || q.content?.solution_steps_en || q.solution_steps || q.content?.solution_steps || [];
+            
+            const localizedStepsRaw = isChinese ? rawStepsZH : rawStepsEN;
+            const fallbackStepsRaw = isChinese ? rawStepsEN : rawStepsZH;
+            const finalStepsRaw = (localizedStepsRaw && localizedStepsRaw.length > 0) ? localizedStepsRaw : fallbackStepsRaw;
 
+            const rawSteps = Array.isArray(finalStepsRaw) 
+                ? finalStepsRaw 
+                : (typeof finalStepsRaw === 'string' ? finalStepsRaw.split('\n') : []);
+            
+            const steps = rawSteps.map(s => replacePlaceholders(String(s || '')));
+
+            const passport = (cheatLevel === '5*' || cheatLevel === '5**') ? '\n\n[PASSPORT: AUDIT_VERIFIED]' : '';
             if (isPerfect) {
                 // Perfect Derivation
                 if (steps.length > 0) {
@@ -389,7 +549,7 @@ const MathsLabPage = () => {
                 } else {
                     solutionStr += `Derivation: Use formula and plug in values correctly.`;
                 }
-                solutionStr += `\n\nFinal Answer: $${finalAns}$`;
+                solutionStr += ``;
             } else if (isHigh) {
                 // Good but less formal
                 solutionStr = `Solution:\n`;
@@ -412,7 +572,11 @@ const MathsLabPage = () => {
                 solutionStr += `Result: ${flawedAns}`;
             }
 
-            cheatAnswers[q.id] = solutionStr;
+            if (passport) {
+                cheatAnswers[q.id] = (solutionStr + '\n\n' + "Final Answer: " + finalAns + passport).trim();
+            } else {
+                cheatAnswers[q.id] = solutionStr.trim();
+            }
         });
         setAnswers(cheatAnswers);
         setShowCheatMenu(false);
@@ -420,19 +584,45 @@ const MathsLabPage = () => {
     };
 
     const handleSubmitAll = async () => {
-        const unanswered = questions.filter(q => {
-            const hasText = answers[q.id] && answers[q.id].trim() !== '';
+        const isWeeklyChallenge = topic === 'integrated_challenge';
+        const questionsToSubmit = (isAuditMode && isWeeklyChallenge) 
+            ? questions.slice((currentBatch - 1) * 10, currentBatch * 10)
+            : questions;
+
+        const unanswered = questionsToSubmit.filter(q => {
+            const hasText = answers[q.id] && String(answers[q.id]).trim() !== '';
             const hasImage = !!imageAnswers[q.id];
             return !hasText && !hasImage;
         });
+
         if (unanswered.length > 0) {
             const confirmed = window.confirm(
-                `You have ${unanswered.length} unanswered question(s). Do you want to submit anyway?`
+                `You have ${unanswered.length} unanswered question(s) in this ${isAuditMode ? 'batch' : 'set'}. Do you want to submit anyway?`
             );
             if (!confirmed) return;
         }
+
+        // Filter answers/images to only include visible questions
+        const filteredAnswers = {};
+        const filteredImages = {};
+        questionsToSubmit.forEach(q => {
+            filteredAnswers[q.id] = answers[q.id];
+            if (imageAnswers[q.id]) filteredImages[q.id] = imageAnswers[q.id];
+        });
+
         navigate('/maths-lab-review', {
-            state: { questions, answers, imageAnswers, topic, level, taskId, title, xp: isReviewMode ? 0 : potentialXP, isFactoryQuest }
+            state: { 
+                questions: questionsToSubmit, 
+                answers: filteredAnswers, 
+                imageAnswers: filteredImages, 
+                topic, 
+                level, 
+                taskId, 
+                title, 
+                xp: isReviewMode ? 0 : currentPotentialXP, 
+                isFactoryQuest,
+                isAuditMode 
+            }
         });
     };
 
@@ -455,7 +645,7 @@ const MathsLabPage = () => {
         const parts = splitContentByDelimiters(cleanText);
 
         // High-precision visual detection
-        const nonVisualTopics = ['math_prob_basic', 'math_num_percentages', 'math_alg_formulas', 'math_num_num_systems', 'math_alg_complex_numbers', 'math_num_ratio'];
+        const nonVisualTopics = ['math_prob_basic', 'math_num_percentages', 'math_alg_formulas', 'math_num_num_systems', 'math_alg_complex_numbers', 'math_num_ratio', 'math_alg_functions'];
         
         const hasActualVisualContent = !!(
             question?.diagram_url ||
@@ -464,7 +654,8 @@ const MathsLabPage = () => {
                     ? (Object.keys(question.diagram_json).length > 2 || (question.diagram_json.elements?.length > 0) || (question.diagram_json.points?.length > 0))
                     : (question.diagram_json !== '{}' && question.diagram_json.length > 15)
             )) ||
-            (question?.diagram_svg && question.diagram_svg.length > 50)
+            (question?.diagram_svg && question.diagram_svg.length > 50) ||
+            (question?.visual && question.visual.length > 50)
         );
 
         // Hide if topic is in blacklist AND no actual content (image/json) was generated
@@ -479,6 +670,14 @@ const MathsLabPage = () => {
 
                         const isBlock = (part.startsWith('\\[') && part.endsWith('\\]')) || (part.startsWith('$$') && part.endsWith('$$'));
                         const isInline = (part.startsWith('\\(') && part.endsWith('\\)')) || (part.startsWith('$') && part.endsWith('$'));
+                        const isHTML = part.startsWith('[HTML]') && part.endsWith('[/HTML]');
+
+                        if (isHTML) {
+                            const html = part.slice(6, -7);
+                            return (
+                                <div key={i} className="w-full my-6 overflow-x-auto" dangerouslySetInnerHTML={{ __html: html }} />
+                            );
+                        }
 
                         if (isBlock || isInline) {
                             let math = '';
@@ -522,11 +721,8 @@ const MathsLabPage = () => {
                                             </React.Fragment>
                                         );
                                     } else {
-                                        const formattedLine = formatNumbers(trimmedLine);
-                                        const content = formattedLine
-                                            .replace(/___HKD___/g, 'HK$')
-                                            .replace(/___USD___/g, '$')
-                                            .replace(/\\,/g, ' ');
+                                        const content = formatNumbers(trimmedLine);
+                                        const finalContent = content.replace(/\\,/g, ' ');
 
                                         return (
                                             <React.Fragment key={lineIdx}>
@@ -568,11 +764,11 @@ const MathsLabPage = () => {
                                     <GeometryRenderer data={question.diagram_json} />
                                     {description && isDiagramExpanded && <p className="text-xs text-slate-600 italic text-center mt-4">{description}</p>}
                                 </div>
-                            ) : (question?.diagram_svg || question?.diagramSVG) ? (
+                            ) : (question?.diagram_svg || question?.diagramSVG || question?.visual) ? (
                                 <div className="w-full h-full bg-white rounded-2xl p-4 shadow-lg border border-slate-200 flex flex-col items-center justify-center">
                                     <div 
                                         className="w-full h-full flex items-center justify-center diagram-svg-container" 
-                                        dangerouslySetInnerHTML={{ __html: question.diagram_svg || question.diagramSVG }} 
+                                        dangerouslySetInnerHTML={{ __html: question.diagram_svg || question.diagramSVG || question.visual }} 
                                     />
                                     {description && isDiagramExpanded && <p className="text-xs text-slate-600 italic text-center mt-4">{description}</p>}
                                 </div>
@@ -690,12 +886,13 @@ const MathsLabPage = () => {
     }
 
 
-    if (!questions[currentIndex]) return <div className="p-10 text-center">No questions available.</div>;
+    if (!visibleQuestions[currentIndex]) return <div className="p-10 text-center">No questions available in this batch.</div>;
 
-    const currentQ = questions[currentIndex];
+    const currentQ = visibleQuestions[currentIndex];
     const currentAns = answers[currentQ.id] || '';
-    const progress = ((currentIndex + 1) / questions.length) * 100;
-    const isLastQuestion = currentIndex === questions.length - 1;
+    const progress = ((currentIndex + 1) / visibleQuestions.length) * 100;
+    const lastBatchIdx = isBatchMode ? Math.min(currentBatch * 10 - 1, questions.length - 1) : questions.length - 1;
+    const isLastQuestion = currentIndex === lastBatchIdx;
 
     const currentTier = questions[currentIndex]
         ? getMasteryStats(questions[currentIndex].level, language === 'zh')
@@ -709,17 +906,50 @@ const MathsLabPage = () => {
                     <div>
                         <h1 className="text-lg font-black text-slate-900">{getMathSkillName(topic, language)}</h1>
                         <div className="flex items-center gap-2">
+                            {isAuditMode && (
+                                <button 
+                                    onClick={() => {
+                                        setIsBatchMode(!isBatchMode);
+                                        setCurrentIndex(0);
+                                    }}
+                                    className={`px-2 py-0.5 rounded text-[10px] font-black uppercase tracking-wider transition-all ${isBatchMode ? 'bg-purple-600 text-white animate-pulse' : 'bg-slate-100 text-slate-400 border border-slate-200'}`}
+                                >
+                                    {isBatchMode ? `Batch ${currentBatch} Active` : "Audit: Batch Filter Off"}
+                                </button>
+                            )}
                             <span className={`px-2 py-0.5 rounded text-[10px] font-black uppercase tracking-wider ${currentTier.color} bg-white border border-current`}>{currentTier.displayName}</span>
-                            <p className="text-[10px] text-slate-500 font-black uppercase tracking-wider">Practice Lab • {potentialXP} XP Potential</p>
+                            <p className="text-[10px] text-slate-500 font-black uppercase tracking-wider">
+                                {isMock ? 'Mock Paper' : 'Practice Lab'} • {isMock ? 'High Stakes' : `${potentialXP} XP Potential`}
+                            </p>
                         </div>
                     </div>
                 </div>
                 <div className="flex items-center gap-4">
-                    <span className="text-sm font-bold text-slate-600 hidden md:inline">Question {currentIndex + 1} of {questions.length}</span>
-                    <div className="relative cheat-menu-container">
-                        <button onClick={() => setShowCheatMenu(!showCheatMenu)} className="px-4 py-2 rounded-lg bg-amber-100 text-amber-700 text-xs font-bold flex items-center gap-1">Cheat <ChevronDown className="w-3 h-3" /></button>
-                        {showCheatMenu && <div className="absolute right-0 mt-2 w-48 bg-white rounded-xl shadow-2xl border py-2 z-50">{[3, 4, 5, '5*', '5**'].map((lvl) => <button key={lvl} onClick={() => handleCheat(lvl)} className="w-full px-4 py-2 text-left text-sm hover:bg-slate-50 transition-colors">Level {lvl}</button>)}</div>}
-                    </div>
+                    {isMock && duration > 0 && (
+                        <MockCountdownTimer 
+                            initialSeconds={duration} 
+                            onTimeUp={() => {
+                                alert("Time is up! Your paper is being submitted.");
+                                handleSubmitAll();
+                            }} 
+                        />
+                    )}
+                    {!isMock && (
+                        <button 
+                            onClick={() => setShowTutorial(true)}
+                            className="px-3 py-2 rounded-lg bg-indigo-50 text-indigo-600 text-xs font-bold flex items-center gap-1 hover:bg-indigo-100 transition-colors"
+                            id="tutorial-btn-top"
+                        >
+                            <Lightbulb className="w-3 h-3" /> <span className="hidden md:inline">Tutorial</span>
+                        </button>
+                    )}
+                    <span className="text-sm font-bold text-slate-600 hidden md:inline">Question {isBatchMode ? (currentIndex % 10 + 1) : (currentIndex + 1)} of {visibleQuestions.length}</span>
+                    {!isMock && (
+                        <div className="relative cheat-menu-container">
+                            <button onClick={() => setShowCheatMenu(!showCheatMenu)} className="px-4 py-2 rounded-lg bg-amber-100 text-amber-700 text-xs font-bold flex items-center gap-1">Cheat <ChevronDown className="w-3 h-3" /></button>
+                            {showCheatMenu && <div className="absolute right-0 mt-2 w-48 bg-white rounded-xl shadow-2xl border py-2 z-50">{[3, 4, 5, '5*', '5**'].map((lvl) => <button key={lvl} onClick={() => handleCheat(lvl)} className="w-full px-4 py-2 text-left text-sm hover:bg-slate-50 transition-colors">Level {lvl}</button>)}</div>}
+                        </div>
+                    )}
                     {user?.email === 'fungtam@gmail.com' && !isAuditMode && (
                         <button
                             onClick={handleStartAudit}
@@ -730,12 +960,77 @@ const MathsLabPage = () => {
                         </button>
                     )}
                     {isAuditMode && (
-                        <button
-                            onClick={handleAuditDelete}
-                            className="px-6 py-2 rounded-lg bg-red-600 text-white text-sm font-black uppercase tracking-widest shadow-lg shadow-red-600/30"
-                        >
-                            Remove Question
-                        </button>
+                        <div className="flex items-center gap-2 bg-slate-100 p-1 rounded-xl border border-slate-200">
+                            {/* Prev/Next Audit Buttons */}
+                            <button 
+                                onClick={handlePrev}
+                                disabled={currentIndex === 0}
+                                className="w-8 h-8 rounded-lg bg-white flex items-center justify-center text-slate-600 disabled:opacity-30 hover:bg-slate-50 transition-colors shadow-sm"
+                            >
+                                <ArrowLeft size={14} />
+                            </button>
+                            
+                            <span className="text-[10px] font-black text-slate-400 w-12 text-center">#{isBatchMode ? (currentIndex % 10 + 1) : (currentIndex + 1)} <span className="opacity-40">/ {visibleQuestions.length}</span></span>
+
+                            <button 
+                                onClick={handleNext}
+                                disabled={isLastQuestion}
+                                className="w-8 h-8 rounded-lg bg-white flex items-center justify-center text-slate-600 disabled:opacity-30 hover:bg-slate-50 transition-colors shadow-sm"
+                            >
+                                <ArrowRight size={14} />
+                            </button>
+
+                            <div className="w-[1px] h-4 bg-slate-200 mx-1" />
+
+                            {/* Jump to Question */}
+                            <div className="relative group">
+                                <input 
+                                    type="text"
+                                    placeholder="Jump #"
+                                    className="w-16 h-8 rounded-lg bg-white border-0 text-[10px] font-black text-center focus:ring-2 focus:ring-indigo-500 shadow-sm"
+                                    onKeyDown={(e) => {
+                                        if (e.key === 'Enter') {
+                                            handleJumpToQuestion(e.target.value);
+                                            e.target.value = '';
+                                        }
+                                    }}
+                                />
+                            </div>
+
+                            {/* Batch Selection */}
+                            <select 
+                                value={currentBatch}
+                                onChange={(e) => handleBatchChange(e.target.value)}
+                                className="h-8 rounded-lg bg-white border-0 text-[10px] font-black px-2 focus:ring-2 focus:ring-indigo-500 shadow-sm outline-none cursor-pointer"
+                            >
+                                {[...Array(25)].map((_, i) => (
+                                    <option key={i+1} value={i+1}>Batch {i+1}</option>
+                                ))}
+                            </select>
+
+                            <button
+                                onClick={() => {
+                                    handleCheat('5**');
+                                    // Also show a brief success state
+                                    const btn = document.getElementById('auto-fill-btn');
+                                    if (btn) btn.innerHTML = '✅ Filled';
+                                    setTimeout(() => { if (btn) btn.innerHTML = 'Auto-fill (Audit)'; }, 2000);
+                                }}
+                                id="auto-fill-btn"
+                                className="px-3 h-8 rounded-lg bg-emerald-100 text-emerald-700 text-[10px] font-black uppercase tracking-wider hover:bg-emerald-200 transition-colors shadow-sm"
+                                title="Instantly fill all questions with perfect answers for auditing"
+                             >
+                                Auto-fill (Audit)
+                            </button>
+
+                            <button
+                                onClick={handleAuditDelete}
+                                className="w-8 h-8 rounded-lg bg-red-50 text-red-600 flex items-center justify-center hover:bg-red-100 transition-colors"
+                                title="Remove Question"
+                            >
+                                <X size={14} />
+                            </button>
+                        </div>
                     )}
                     <button onClick={handleSubmitAll} className="px-6 py-2 rounded-lg bg-purple-600 text-white text-sm font-bold shadow-md">Submit All</button>
                 </div>
@@ -758,48 +1053,80 @@ const MathsLabPage = () => {
                                 </button>
                             </div>
                             <div className="flex items-center gap-2">
-                                {currentQ.type === 'short_answer' && (
+                                {(!isMock && currentQ.type === 'short_answer') && (
                                     <button
                                         onClick={checkForHints}
-                                        disabled={loadingHint || (hintIndex >= (isChinese ? (currentQ.hints_zh?.length || 0) : (currentQ.hints?.length || 0)) - 1)}
+                                        disabled={loadingHint || (currentQ.hints && hintIndex >= currentQ.hints.length - 1)}
                                         className={`px-3 py-1 text-[10px] font-black uppercase tracking-widest rounded-full transition-all flex items-center gap-1 ${loadingHint
                                             ? 'bg-slate-100 text-slate-400 cursor-not-allowed'
-                                            : (hintIndex >= (isChinese ? (currentQ.hints_zh?.length || 0) : (currentQ.hints?.length || 0)) - 1)
+                                            : (currentQ.hints && hintIndex >= currentQ.hints.length - 1)
                                                 ? 'bg-slate-100 text-slate-300 cursor-not-allowed'
                                                 : 'bg-amber-100 text-amber-700 hover:bg-amber-200'}`}
                                     >
                                         <Lightbulb size={10} className={loadingHint ? 'animate-pulse' : ''} />
-                                        {loadingHint ? 'Loading Hints...' : (hintIndex === -1 ? 'Check for Hints' : `Show Next Hint (${hintIndex + 1}/${isChinese ? (currentQ.hints_zh?.length || 0) : (currentQ.hints?.length || 0)})`)}
+                                        {loadingHint ? 'Loading Hints...' : (hintIndex === -1 ? 'Check for Hints' : `Show Next Hint (${hintIndex + 1}/${currentQ.hints?.length || 0})`)}
                                     </button>
                                 )}
                             </div>
                         </div>
 
-                        {/* Progressive Hints Display */}
-                        {hintIndex !== -1 && (currentQ.hints || currentQ.hints_zh) && (
+                        {/* Progressive Hints Display — new object schema */}
+                        {hintIndex !== -1 && currentQ.hints && (
                             <div className="mb-6 space-y-3">
                                 {[...Array(hintIndex + 1)].map((_, idx) => {
-                                    const h = isChinese ? (currentQ.hints_zh?.[idx] || currentQ.hints?.[idx]) : (currentQ.hints?.[idx] || currentQ.hints_zh?.[idx]);
-                                    if (!h) return null;
+                                    const hintObj = currentQ.hints?.[idx];
+                                    if (!hintObj) return null;
+                                    const isLegacy = typeof hintObj === 'string';
+                                    const hText = isChinese ? (hintObj.content_zh || hintObj.content_en) : (hintObj.content_en || hintObj.content_zh);
+                                    // Backwards compat: old schema was plain strings
+                                    const hContent = isLegacy ? hintObj : hText;
+                                    const hasScaffold = hintObj?.editor_insert_latex;
+                                    const xpCost = isLegacy ? (idx === 0 ? 0 : idx === 1 ? 5 : 10) : hintObj?.cost_xp;
                                     return (
                                         <div key={idx} className="p-4 rounded-xl border bg-amber-50/50 border-amber-100 text-amber-900 animate-in fade-in slide-in-from-top-2 duration-300 flex gap-3">
                                             <div className="shrink-0 mt-0.5 text-amber-500">
                                                 <Lightbulb size={16} />
                                             </div>
                                             <div className="flex-1 mastery-logic-container">
-                                                <div className="font-bold text-[10px] uppercase tracking-wider mb-1 text-amber-600/80">Hint {idx + 1}</div>
-                                                <div className="text-sm leading-relaxed">
+                                                <div className="flex items-center gap-2 mb-1">
+                                                    <span className="font-bold text-[10px] uppercase tracking-wider text-amber-600/80">Hint {idx + 1} <span className="opacity-50 ml-1">v1.2.5</span></span>
+                                                    {xpCost > 0 && (
+                                                        <span className="px-1.5 py-0.5 rounded-full bg-amber-200 text-amber-800 text-[9px] font-black">{xpCost} XP</span>
+                                                    )}
+                                                    {xpCost === 0 && (
+                                                        <span className="px-1.5 py-0.5 rounded-full bg-green-100 text-green-700 text-[9px] font-black">FREE</span>
+                                                    )}
+                                                </div>
+                                                <div className="leading-relaxed" style={{ fontSize: '18px', fontWeight: '600' }}>
                                                     {(() => {
-                                                        const trimmedHint = (typeof h === 'string') ? h.trim() : '';
-                                                        const isFullMath = (trimmedHint.startsWith('$$') && trimmedHint.endsWith('$$')) ||
-                                                                         (trimmedHint.startsWith('\\[') && trimmedHint.endsWith('\\]'));
+                                                        const hintObj = currentQ.hints?.[idx];
+                                                        const isObj = typeof hintObj === 'object' && hintObj !== null;
+                                                        const hContent = isObj 
+                                                            ? (isChinese ? (hintObj.content_zh || hintObj.content_en) : (hintObj.content_en || hintObj.content_zh))
+                                                            : hintObj; // Legacy string fallback
                                                         
+                                                        let processedHint = (typeof hContent === 'string') ? hContent.replace(/（請將此提示翻譯成香港繁體中文）。|（請直接寫出繁體中文提示，不要包含翻譯占位符）。/g, '').trim() : '';
+                                                        const isFullMath = (processedHint.startsWith('$$') && processedHint.endsWith('$$')) ||
+                                                                         (processedHint.startsWith('\\[') && processedHint.endsWith('\\]'));
                                                         if (isFullMath) {
-                                                            return <div className="flex justify-center my-2"><SafeBlockMath math={trimmedHint.slice(2, -2)} /></div>;
+                                                            return <div className="flex justify-center my-2"><SafeBlockMath math={processedHint.slice(2, -2)} /></div>;
                                                         }
-                                                        return renderQuestionText(h);
+                                                        // Ensure Traditional Chinese preference is respected here too
+                                                        return renderQuestionText(processedHint);
                                                     })()}
                                                 </div>
+                                                {hasScaffold && (
+                                                    <button
+                                                        onClick={() => {
+                                                            setMathInputInsertLatex(hintObj.editor_insert_latex);
+                                                            // Reset after a tick so re-clicking works
+                                                            setTimeout(() => setMathInputInsertLatex(null), 500);
+                                                        }}
+                                                        className="mt-3 px-3 py-1.5 bg-purple-600 text-white text-[10px] font-black uppercase tracking-widest rounded-lg flex items-center gap-1.5 hover:bg-purple-700 transition-colors shadow-sm"
+                                                    >
+                                                        <span>↓</span> {isChinese ? '將支架插入編輯器' : 'Insert Scaffold into Editor'}
+                                                    </button>
+                                                )}
                                             </div>
                                         </div>
                                     );
@@ -812,7 +1139,7 @@ const MathsLabPage = () => {
                     </div>
 
                     <div className="flex-1">
-                        {currentQ.type === 'mc' ? (
+                        {currentQ.type === 'mc' || currentQ.type === 'mcq' ? (
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 {currentQ.options?.map((opt, i) => {
                                     const cleanOpt = (typeof opt === 'string' ? opt : String(opt || '')).replace(/^[A-D]\s*[:.]\s*/i, '').trim();
@@ -835,7 +1162,7 @@ const MathsLabPage = () => {
                                         <span>Show your steps (Formulas & Values only is fine)</span>
                                         <span className="opacity-60 hidden md:block">AI Grader detects Method Marks (M) & Answer Marks (A)</span>
                                     </div>
-                                    <MathInput id={`math-input-${currentQ.id}`} value={currentAns} onChange={handleAnswerChange} placeholder="Enter your equations... (e.g. 0.1 * 0.6 = 0.06)" />
+                                <MathInput id={`math-input-${currentQ.id}`} value={currentAns} onChange={handleAnswerChange} insertLatex={mathInputInsertLatex} placeholder="Enter your equations... (e.g. 0.1 * 0.6 = 0.06)" />
                                 </div>
                                 <div className="relative">
                                     <div className="absolute inset-0 flex items-center" aria-hidden="true">
@@ -859,13 +1186,68 @@ const MathsLabPage = () => {
                     <div className="flex justify-between items-center pt-4">
                         <button onClick={handlePrev} disabled={currentIndex === 0} className={`px-6 py-3 rounded-full font-semibold flex items-center gap-2 ${currentIndex === 0 ? 'bg-gray-100 text-gray-400 cursor-not-allowed' : 'bg-gray-200 text-gray-700'}`}><ArrowLeft className="w-4 h-4" /> Previous</button>
                         {isLastQuestion ? (
-                            <button onClick={handleSubmitAll} className="px-8 py-3 rounded-full font-bold bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-lg flex items-center gap-2">Submit All <CheckCircle className="w-4 h-4" /></button>
+                            <button onClick={handleSubmitAll} className="px-8 py-3 rounded-full font-bold bg-gradient-to-r from-indigo-600 to-indigo-900 text-white shadow-lg flex items-center gap-2">
+                                {isMock ? (isChinese ? '提交試卷' : 'Hand in Paper') : 'Submit All'} 
+                                <CheckCircle className="w-4 h-4" />
+                            </button>
                         ) : (
                             <button onClick={handleNext} className="px-6 py-3 rounded-full font-semibold bg-purple-600 text-white flex items-center gap-2">Next <ArrowRight className="w-4 h-4" /></button>
                         )}
                     </div>
                 </div>
             </main>
+
+            {showTutorial && <TutorialOverlay onClose={closeTutorial} isChinese={isChinese} />}
+            
+            {/* XP Confirmation Modal */}
+            {showXPModal && xpModalData && (
+                <div className="fixed inset-0 z-[1000] flex items-center justify-center p-4">
+                    <div className="absolute inset-0 bg-slate-900/60 backdrop-blur-sm" onClick={() => setShowXPModal(false)}></div>
+                    <div className="relative bg-white rounded-3xl shadow-2xl p-8 max-w-sm w-full animate-in zoom-in-95 fade-in duration-300 border border-purple-100">
+                        <div className="flex flex-col items-center text-center space-y-6">
+                            <div className="w-20 h-20 bg-amber-100 rounded-full flex items-center justify-center text-amber-600 animate-bounce-slow">
+                                <Lightbulb size={40} className="fill-amber-600/20" />
+                            </div>
+                            
+                            <div className="space-y-2">
+                                <h3 className="text-2xl font-black text-slate-900 uppercase tracking-tight">{xpModalData.title}</h3>
+                                <p className="text-slate-600 font-medium leading-relaxed">
+                                    {xpModalData.description}
+                                </p>
+                            </div>
+
+                            <div className="bg-slate-50 rounded-2xl p-4 w-full border border-slate-100 flex items-center justify-around">
+                                <div className="text-center">
+                                    <div className="text-[10px] uppercase font-black text-slate-400 tracking-widest mb-1">Current Reward</div>
+                                    <div className="text-xl font-bold text-slate-700">{xpModalData.currentXP} <span className="text-xs">XP</span></div>
+                                </div>
+                                <div className="text-slate-300">
+                                    <ArrowRight size={20} />
+                                </div>
+                                <div className="text-center">
+                                    <div className="text-[10px] uppercase font-black text-amber-500 tracking-widest mb-1">New Reward</div>
+                                    <div className="text-xl font-bold text-amber-600">{xpModalData.currentXP - xpModalData.cost} <span className="text-xs">XP</span></div>
+                                </div>
+                            </div>
+
+                            <div className="flex flex-col w-full gap-3">
+                                <button 
+                                    onClick={xpModalData.onConfirm}
+                                    className="w-full py-4 bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-black uppercase tracking-widest rounded-2xl shadow-lg shadow-purple-200 hover:scale-[1.02] active:scale-95 transition-all text-sm"
+                                >
+                                    {xpModalData.isChinese ? "立即解鎖" : "Unlock Now"}
+                                </button>
+                                <button 
+                                    onClick={() => setShowXPModal(false)}
+                                    className="w-full py-3 text-slate-400 font-bold uppercase tracking-widest text-[10px] hover:text-slate-600 transition-colors"
+                                >
+                                    {xpModalData.isChinese ? "再想一想" : "Keep Thinking"}
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )}
         </div>
     );
 };

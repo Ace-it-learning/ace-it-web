@@ -2,8 +2,8 @@
     "is_modular": true,
     "name": "Quadratic Equations",
     "name_zh": "二次方程",
-    "roadmap": "Master solving methods first, then dive into the roots' nature using the discriminant. Finally, bridge algebra with geometry through vertex form and relationships between roots, which are core Section B requirements.",
-    "roadmap_zh": "首先掌握解方程方法，然後利用判別式深入探討根的性質。最後，透過頂點式及兩根關係（乙部核心要求）將代數與幾何聯結起來。",
+    "roadmap": "Master solving methods first, then dive into the roots' nature using the discriminant. Finally, bridge algebra with geometry through vertex form and Vieta's gymnastics, which are core Section B requirements.",
+    "roadmap_zh": "首先掌握解方程方法，然後利用判別式深入探討根的性質。最後，透過頂點式及韋達定理（乙部核心要求）將代數與幾何聯結起來。",
     "learning_modules": [
         {
             "module_id": "MOD_01",
@@ -24,9 +24,9 @@
                     "name": "Discriminant ($\\Delta$) Analysis",
                     "name_zh": "判別式 ($\\Delta$) 分析",
                     "formula": "\\Delta = b^2 - 4ac",
-                    "key_takeaway": "$\\Delta > 0 \\implies 2$ real roots; $\\Delta = 0 \\implies 1$ real root; $\\Delta < 0 \\implies 0$ real roots. In Section B, this is used for line-curve intersection.",
-                    "key_takeaway_zh": "$\\Delta > 0$ 有 2 個實根；$\\Delta = 0$ 有 1 個實根；$\\Delta < 0$ 無實根。在乙部中，這常與直線及曲線及相交問題結合。",
-                    "visual_aid": "/images/math/quad_delta_cases.png"
+                    "key_takeaway": "$\\Delta > 0 \\implies 2$ real roots; $\\Delta = 0 \\implies 1$ real root; $\\Delta < 0 \\implies 0$ real roots. In DSE, this is often used for line-curve intersections.",
+                    "key_takeaway_zh": "$\\Delta > 0$ 有 2 個相異實根；$\\Delta = 0$ 有 1 個二重實根；$\\Delta < 0$ 無實根。在 DSE 中，這常用於判斷直線與曲線的相交情況。",
+                    "visual_aid": "/images/math/quad_discriminant_premium.svg"
                 }
             ]
         },
@@ -37,21 +37,21 @@
             "concepts": [
                 {
                     "concept_id": "C03_ROOT_RELATE",
-                    "name": "Relationships Between Roots",
-                    "name_zh": "兩根關係",
+                    "name": "Relationships Between Roots (Vieta's)",
+                    "name_zh": "兩根關係 (韋達定理)",
                     "formula": "\\alpha + \\beta = -b/a, \\quad \\alpha \\beta = c/a",
-                    "key_takeaway": "Find values of $\\alpha^2 + \\beta^2$ or $1/\\alpha + 1/\\beta$ without solving the equation. Essential for Section B algebra proofs.",
-                    "key_takeaway_zh": "無需解方程即可求出 $\\alpha^2 + \\beta^2$ 或 $1/\\alpha + 1/\\beta$ 的值。這對乙部代數證明題至關重要。",
-                    "visual_aid": "/images/math/quad_roots_relations.png"
+                    "key_takeaway": "Evaluate symmetric expressions like $\\alpha^2 + \\beta^2$ or $1/\\alpha + 1/\\beta$ without solving the equation. Essential for Section B algebra proofs.",
+                    "key_takeaway_zh": "無需解方程即可求出 $\\alpha^2 + \\beta^2$ 或 $1/\\alpha + 1/\\beta$ 等對稱式的值。這對乙部題目至關重要。",
+                    "visual_aid": "/images/math/quad_vieta_premium.svg"
                 },
                 {
                     "concept_id": "C04_VERTEX_SHIFTS",
                     "name": "Vertex Form & Transformations",
-                    "name_zh": "頂點式與變換",
+                    "name_zh": "頂點式與圖像變換",
                     "formula": "y = a(x - h)^2 + k",
-                    "key_takeaway": "Directly identifies the turning point $(h, k)$. Used to find max/min values and understand graph shifts.",
-                    "key_takeaway_zh": "直接辨識轉向點 $(h, k)$。用於尋找極大/極小值並理解圖像平移。",
-                    "visual_aid": "/images/math/quad_vertex_shift.png"
+                    "key_takeaway": "Identifies the turning point $(h, k)$ directly. Used to find max/min values and understand how the graph shifts horizontally or vertically.",
+                    "key_takeaway_zh": "直接辨識轉向點 $(h, k)$。用於尋找極大/極小值及理解圖像如何進行水平或垂直平移。",
+                    "visual_aid": "/images/math/quad_vertex_premium.svg"
                 }
             ]
         }

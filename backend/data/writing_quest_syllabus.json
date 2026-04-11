@@ -1,105 +1,61 @@
 {
-    "project": "Ace it Project",
+    "project": "Ace it Writing Lab Studio",
     "paper": "Paper 2 (Writing)",
+    "scoring_model": "C-L-O (1-7)",
     "learning_content": [
         {
-            "domain": "Content (The Brains)",
+            "domain": "Content (C)",
             "id": "pillar_content",
             "skills_integrated": [
-                "Relevance",
-                "Development",
-                "Originality"
+                "Address all parts of prompt",
+                "Ideas development",
+                "Creativity & Depth",
+                "Awareness of audience"
             ],
-            "dse_objective": "Ensure ideas are expanded with specific examples rather than vague generalizations.",
-            "british_tutor_hint": "Don't just tell me it's important; show me why! Use the 'What if?' technique to develop your points.",
-            "ai_checks": [
-                "Does this answer the prompt directly?",
-                "Are there specific examples provided?",
-                "Is the argument logical?"
-            ]
+            "hkeaa_standards": {
+                "Level 5**": "Excellent development of ideas with high degree of creativity and depth. Content is highly relevant and engaging.",
+                "Level 2": "Ideas are limited or repetitive. Content may jump back and forth without clear development."
+            },
+            "british_tutor_hint": "Don't just mention a point; elaborate with the 'What if?' technique. Level 5** writers show, they don't just tell."
         },
         {
-            "domain": "Language (The Beauty)",
+            "domain": "Language (L)",
             "id": "pillar_language",
             "skills_integrated": [
-                "Vocabulary Range",
-                "Collocations",
-                "Idiomatic Expressions",
-                "Register",
-                "Sentence Variety",
-                "Grammar",
-                "Punctuation"
+                "Vocabulary Range (Tier 3)",
+                "Grammatical Accuracy",
+                "Complex Structures (Conditionals/Relative Clauses)",
+                "Register & Tone"
             ],
-            "dse_objective": "Move from Level 3 'Safe' English to Level 5* 'Sophisticated' English.",
-            "british_tutor_hint": "Stop using 'very' and 'good'. Try 'exceptionally' or 'commendable'. Use an inverted sentence or a conditional for that Level 5 'wow' factor.",
+            "hkeaa_standards": {
+                "Level 5**": "Sophisticated vocabulary and complex sentence structures with high degree of accuracy.",
+                "Level 3": "Simple sentences are mostly accurate, but complex structures often lead to errors."
+            },
             "power_ups": [
-                "Swap weak adjectives for strong collocations",
-                "Combine short sentences using complex structures",
-                "Ensure tone is appropriate for the text type"
+                "Swap common verbs for precise academic alternatives",
+                "Use Inversion or Subjunctive Mood for emphasis",
+                "Ensure consistent register throughout"
             ]
         },
         {
-            "domain": "Organization (The Bones)",
+            "domain": "Organization (O)",
             "id": "pillar_organization",
             "skills_integrated": [
-                "Paragraph Structure",
-                "Transitions",
-                "Coherence"
+                "Topic Sentences",
+                "Cohesive Devices",
+                "Paragraph Logic",
+                "Genre Conventions"
             ],
-            "dse_objective": "Create a logical flow where each paragraph acts as a stepping stone to the conclusion.",
-            "british_tutor_hint": "Your transitions shouldn't be 'Firstly, Secondly'. That's boring. Try 'Building on this notion' or 'Conversely'.",
-            "transition_types": [
-                "Contrast",
-                "Addition",
-                "Cause & Effect",
-                "Sequence"
+            "hkeaa_standards": {
+                "Level 5**": "Logically and effectively organized. Relationships between ideas are explicit.",
+                "Level 4": "Generally logical but some transitions may be mechanical (e.g., Firstly, Secondly)."
+            },
+            "transition_mastery": [
+                "In light of",
+                "Conversely",
+                "Notwithstanding",
+                "Building upon this notion"
             ]
         }
-    ],
-    "genre_matrix": [
-        {
-            "type": "Argumentative (議論文)",
-            "id": "cat_argumentative",
-            "formats": [
-                "Debate Speech",
-                "Letter to the Editor",
-                "Expository Essay"
-            ],
-            "key_feature": "Logical structure, counter-arguments, persuasive devices.",
-            "register_rule": "Formal & Persuasive"
-        },
-        {
-            "type": "Narrative (記事/抒情)",
-            "id": "cat_narrative",
-            "formats": [
-                "Short Story",
-                "Personal Experience",
-                "Biographical Profile"
-            ],
-            "key_feature": "Descriptive adjectives, past tenses, emotional arc.",
-            "register_rule": "Descriptive & Engaging"
-        },
-        {
-            "type": "Transactional (實用文)",
-            "id": "cat_transactional",
-            "formats": [
-                "Formal Letter",
-                "Report",
-                "Proposal"
-            ],
-            "key_feature": "Headings, bullet points, objective register.",
-            "register_rule": "Formal & Objective"
-        },
-        {
-            "type": "Discursive (評論)",
-            "id": "cat_discursive",
-            "formats": [
-                "Review",
-                "Feature Article",
-                "Personal Letter/Email"
-            ],
-            "key_feature": "Subjective opinion, catchy headlines, direct audience address.",
-            "register_rule": "Semi-formal to Informal"
-        }
     ]
-}
+}

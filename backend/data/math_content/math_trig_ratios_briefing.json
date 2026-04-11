@@ -1,0 +1,43 @@
+{
+  "is_modular": true,
+  "name": "Trigonometric Ratios",
+  "name_zh": "三角比",
+  "roadmap": "Start with the fundamental SOH CAH TOA ratios in right-angled triangles. Master the exact values of special angles (30°, 45°, 60°) which are essential for non-calculator papers. Finally, learn the core identities to simplify complex trigonometric expressions.",
+  "roadmap_zh": "從直角三角形的基本 SOH CAH TOA 比例開始。掌握特殊角（30°、45°、60°）的精確值，這對於非計算機試卷至關重要。最後，學習核心恆等式以簡化複雜的三角表達式。",
+  "learning_modules": [
+    {
+      "module_id": "MOD_01",
+      "title": "The Golden Rules of Trigonometry",
+      "title_zh": "三角學黃金律",
+      "concepts": [
+        {
+          "concept_id": "C01_SOH_CAH_TOA",
+          "name": "The Fundamental Ratios (SOH CAH TOA)",
+          "name_zh": "基本三角比 (SOH CAH TOA)",
+          "formula": "\\sin\\theta = \\frac{Opp}{Hyp}, \\quad \\cos\\theta = \\frac{Adj}{Hyp}, \\quad \\tan\\theta = \\frac{Opp}{Adj}",
+          "key_takeaway": "SOH CAH TOA is your primary tool for solving right-angled triangles. 'Opposite' and 'Adjacent' are defined relative to the angle \\theta.",
+          "key_takeaway_zh": "SOH CAH TOA 是求解直角三角形的主要工具。「對邊」(Opposite) 和「鄰邊」(Adjacent) 是相對於角度 \\theta 定義的。",
+          "visual": "<svg viewBox='0 0 500 250' xmlns='http://www.w3.org/2000/svg'><polygon points='100,50 100,200 400,200' fill='none' stroke='currentColor' stroke-width='3'/><rect x='100' y='180' width='20' height='20' fill='none' stroke='currentColor' stroke-width='2'/><text x='80' y='50' font-family='Arial' font-size='20' fill='currentColor'>A</text><text x='80' y='220' font-family='Arial' font-size='20' fill='currentColor'>B</text><text x='410' y='220' font-family='Arial' font-size='20' fill='currentColor'>C</text><text x='340' y='190' font-family='Arial' font-size='24' fill='currentColor'>\\theta</text><path d='M 360,200 A 40,40 0 0 0 330,175' fill='none' stroke='currentColor' stroke-width='2'/><text x='30' y='125' font-family='Arial' font-size='18' fill='currentColor'>Opposite</text><text x='200' y='230' font-family='Arial' font-size='18' fill='currentColor'>Adjacent</text><text x='250' y='110' font-family='Arial' font-size='18' fill='currentColor' transform='rotate(-26 250,110)'>Hypotenuse</text></svg>"
+        },
+        {
+          "concept_id": "C02_SPECIAL_ANGLES",
+          "name": "Special Angles (30^\\circ, 45^\\circ, 60^\\circ)",
+          "name_zh": "特殊角 (30^\\circ, 45^\\circ, 60^\\circ)",
+          "formula": "\\sin 45^\\circ = \\frac{1}{\\sqrt{2}}, \\quad \\sin 30^\\circ = \\frac{1}{2}, \\quad \\sin 60^\\circ = \\frac{\\sqrt{3}}{2}",
+          "key_takeaway": "Derive exact values using the unit isosceles triangle (45-45-90) and the equilateral half (30-60-90). Essential for Level 5+ precision.",
+          "key_takeaway_zh": "使用等腰直角三角形 (45-45-90) 和等邊三角形的一半 (30-60-90) 來推導精確值。這對於達到 5 級或以上水平的精確度至關重要。",
+          "visual": "<svg viewBox='0 0 500 250' xmlns='http://www.w3.org/2000/svg'><g transform='translate(50,50)'><polygon points='0,0 0,150 150,150' fill='none' stroke='currentColor' stroke-width='2'/><text x='-15' y='75' font-size='16' fill='currentColor'>1</text><text x='75' y='170' font-size='16' fill='currentColor'>1</text><text x='80' y='80' font-size='16' fill='currentColor' transform='rotate(-45 80,80)'>\\sqrt{2}</text><text x='20' y='140' font-size='14' fill='currentColor'>45^\\circ</text><text x='5' y='30' font-size='14' fill='currentColor'>45^\\circ</text><rect x='0' y='135' width='15' height='15' fill='none' stroke='currentColor'/></g><g transform='translate(300,50)'><polygon points='0,0 0,150 86.6,150' fill='none' stroke='currentColor' stroke-width='2'/><text x='-15' y='75' font-size='16' fill='currentColor'>\\sqrt{3}</text><text x='40' y='170' font-size='16' fill='currentColor'>1</text><text x='50' y='75' font-size='16' fill='currentColor' transform='rotate(-60 50,75)'>2</text><text x='20' y='140' font-size='14' fill='currentColor'>60^\\circ</text><text x='5' y='30' font-size='14' fill='currentColor'>30^\\circ</text><rect x='0' y='135' width='15' height='15' fill='none' stroke='currentColor'/></g></svg>"
+        },
+        {
+          "concept_id": "C03_IDENTITIES",
+          "name": "Core Trigonometric Identities",
+          "name_zh": "核心三角恆等式",
+          "formula": "\\sin^2\\theta + \\cos^2\\theta = 1, \\quad \\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta}",
+          "key_takeaway": "The Pythagorean identity stems from the unit circle (x^2 + y^2 = r^2). Use these to simplify expressions and solve trigonometric equations.",
+          "key_takeaway_zh": "畢氏恆等式源於單位圓 (x^2 + y^2 = r^2)。使用這些恆等式來簡化表達式並求解三角方程。",
+          "visual": "<svg viewBox='0 0 500 250' xmlns='http://www.w3.org/2000/svg'><line x1='50' y1='200' x2='450' y2='200' stroke='currentColor' stroke-width='1' stroke-opacity='0.3'/><line x1='100' y1='50' x2='100' y2='230' stroke='currentColor' stroke-width='1' stroke-opacity='0.3'/><path d='M 100,200 m 150,0 a 150,150 0 0 0 -43.9,-106.1' fill='none' stroke='currentColor' stroke-width='2' stroke-dasharray='5,5'/><line x1='100' y1='200' x2='206' y2='94' stroke='currentColor' stroke-width='3'/><line x1='206' y1='94' x2='206' y2='200' stroke='currentColor' stroke-width='2' stroke-dasharray='3,3'/><line x1='100' y1='200' x2='206' y2='200' stroke='currentColor' stroke-width='2' stroke-dasharray='3,3'/><text x='150' y='140' font-size='18' fill='currentColor'>1</text><text x='215' y='150' font-size='16' fill='currentColor'>\\sin\\theta</text><text x='140' y='220' font-size='16' fill='currentColor'>\\cos\\theta</text><text x='125' y='190' font-size='18' fill='currentColor'>\\theta</text><text x='210' y='90' font-size='14' fill='currentColor'>(x, y)</text></svg>"
+        }
+      ]
+    }
+  ]
+}

@@ -40,7 +40,7 @@ const CardPreviewModal = ({ isOpen, onClose, card, type = 'tutor' }) => {
                     <img
                         src={card.image || card.avatar}
                         alt={card.name}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover scale-[1.35] translate-y-[5%]"
                         onError={(e) => {
                             e.target.onerror = null;
                             e.target.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(card.name)}&background=random&size=400&bold=true`;
@@ -68,8 +68,22 @@ const CardPreviewModal = ({ isOpen, onClose, card, type = 'tutor' }) => {
                         {card.description || card.tone || ''}
                     </p>
 
+                    {/* Tutor Traits */}
+                    {card.traits && (
+                        <div className="grid grid-cols-2 gap-2 mb-4 p-3 bg-white/50 rounded-2xl border border-white/50">
+                            {Object.entries(card.traits).map(([key, val]) => (
+                                <div key={key} className="flex flex-col">
+                                    <span className="text-[8px] uppercase font-black text-gray-400 tracking-wider">
+                                        {key === 'intensity' ? 'Level' : key === 'disposition' ? 'Mood' : key === 'vibe' ? 'Manner' : key}
+                                    </span>
+                                    <span className="text-[10px] font-bold text-gray-700 capitalize">{val}</span>
+                                </div>
+                            ))}
+                        </div>
+                    )}
+
                     {/* Trait / Personality */}
-                    {(card.trait || card.personality) && (
+                    {(card.trait || card.personality) && !card.traits && (
                         <div className="flex items-center gap-2 mb-4">
                             <Sparkles className="w-3.5 h-3.5 text-amber-500" />
                             <span className="text-xs font-bold text-gray-500 uppercase tracking-wider">

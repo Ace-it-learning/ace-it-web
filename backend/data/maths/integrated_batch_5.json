@@ -1,0 +1,320 @@
+[
+  {
+    "id": "ct_mcq_141",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": [
+      "math_alg_polynomials"
+    ],
+    "marks": 1,
+    "difficulty": 7,
+    "paper": 2,
+    "section": "B",
+    "question_en": "How many real roots does the equation $x^4 - 5x^2 + 4 = 0$ have?",
+    "question_zh": "方程 $x^4 - 5x^2 + 4 = 0$ 有多少個實根？",
+    "options": [
+      "A. 1",
+      "B. 2",
+      "C. 4",
+      "D. 0"
+    ],
+    "correct_answer": "C",
+    "solution_steps_en": [
+      "Let $u = x^2$. Equation becomes $u^2 - 5u + 4 = 0$.",
+      "$(u-4)(u-1) = 0 \\Rightarrow u=4$ or $u=1$.",
+      "$x^2 = 4 \\Rightarrow x = \\pm 2$.",
+      "$x^2 = 1 \\Rightarrow x = \\pm 1$.",
+      "There are 4 distinct real roots."
+    ],
+    "solution_steps_zh": [
+      "設 $u = x^2$。方程變為 $u^2 - 5u + 4 = 0$。",
+      "$(u-4)(u-1) = 0 \\Rightarrow u=4$ 或 $u=1$。",
+      "$x^2 = 4 \\Rightarrow x = \\pm 2$；$x^2 = 1 \\Rightarrow x = \\pm 1$。",
+      "共有 4 個實根。"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_142",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": [
+      "math_geo_coord"
+    ],
+    "marks": 1,
+    "difficulty": 6,
+    "paper": 2,
+    "section": "A",
+    "question_en": "Find the area of the triangle with vertices $A(0,0)$, $B(6,0)$, and $C(4,5)$.",
+    "question_zh": "求頂點為 $A(0,0)$、$B(6,0)$ 及 $C(4,5)$ 的三角形面積。",
+    "options": [
+      "A. 15",
+      "B. 30",
+      "C. 12",
+      "D. 20"
+    ],
+    "correct_answer": "A",
+    "solution_steps_en": [
+      "Base $AB = 6$ units (along x-axis).",
+      "Height is the y-coordinate of $C$, which is 5 units.",
+      "Area $= 0.5 \\times \\text{base} \\times \\text{height} = 0.5 \\times 6 \\times 5 = 15$."
+    ],
+    "solution_steps_zh": [
+      "底為 6，高為 5。",
+      "面積 $= 0.5 \\times 6 \\times 5 = 15$。"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_sa_141",
+    "type": "short_answer",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": [
+      "math_trig_applications"
+    ],
+    "marks": 14,
+    "difficulty": 8,
+    "paper": 1,
+    "section": "B",
+    "question_en": "A rectangular block $ABCD-EFGH$ has dimensions $AB=12$, $BC=5$, and $AE=8$. $M$ is the midpoint of $FG$.\n(a) Find the distance $AM$. (4 marks)\n(b) Find the angle between line $AM$ and the base $ABCD$. (4 marks)\n(c) Find the angle between plane $AMD$ and the base $ABCD$. (6 marks)",
+    "question_zh": "一個長方體 $ABCD-EFGH$ 的尺寸為 $AB=12$，$BC=5$，$AE=8$。$M$ 為 $FG$ 的中點。\n(a) 求 $AM$ 的距離。(4分)\n(b) 求直線 $AM$ 與底面 $ABCD$ 的交角。(4分)\n(c) 求平面 $AMD$ 與底面 $ABCD$ 的交角。(6分)",
+    "correct_answer": "AM = 14.6 cm; angle_line = 33.1 deg; angle_plane = 33.7 deg",
+    "solution_steps_en": [
+      "(a) Coordinates: $A(0,0,0)$, $D(0,5,0)$, $B(12,0,0)$, $E(0,0,8)$.",
+      "$F(12,0,8)$, $G(12,5,8)$. Midpoint $M = (12, 2.5, 8)$.",
+      "$AM = \\sqrt{12^2 + 2.5^2 + 8^2} = \\sqrt{144 + 6.25 + 64} = \\sqrt{214.25} \\approx 14.64$ units.",
+      "(b) Let $M'$ be projection of $M$ on base: $M'(12, 2.5, 0)$.",
+      "Distance $AM' = \\sqrt{12^2 + 2.5^2} = \\sqrt{150.25} \\approx 12.26$.",
+      "$\\tan \\theta = 8 / 12.26 \\approx 0.6526 \\Rightarrow \\theta \\approx 33.13^\\circ$.",
+      "(c) Plane $AMD$ contains $A(0,0,0)$, $D(0,5,0)$, $M(12,2.5,8)$.",
+      "The projection of $M(12, 2.5, 8)$ onto the base is $M'(12, 2.5, 0)$.",
+      "The line $AD$ is on y-axis ($x=0, z=0$).",
+      "The perpendicular distance from $M'(12, 2.5, 0)$ to line $AD$ is exactly 12 units.",
+      "$\\tan \\phi = 8/12 = 2/3$.",
+      "$\\phi = \\tan^{-1}(2/3) \\approx 33.7^\\circ$."
+    ],
+    "solution_steps_zh": [
+      "(a) $M = (12, 2.5, 8)$。$AM = \\sqrt{12^2 + 2.5^2 + 8^2} \\approx 14.6$。",
+      "(b) $\\tan \\theta = 8 / \\sqrt{12^2 + 2.5^2} \\Rightarrow \\theta \\approx 33.1^\\circ$。",
+      "(c) $M$ 到直線 $AD$ 的距離影向為 12。$\\tan \\phi = 8/12 \\Rightarrow \\phi \\approx 33.7^\\circ$。"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_143",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": [
+      "math_alg_log_exp"
+    ],
+    "marks": 1,
+    "difficulty": 7,
+    "paper": 2,
+    "section": "B",
+    "question_en": "The graph of $\\log_3 y$ against $\\log_3 x$ is a straight line with slope 2 and vertical intercept 0. Express $y$ in terms of $x$.",
+    "question_zh": "$\\log_3 y$ 對 $\\log_3 x$ 的圖像是一條斜率為 2 且縱截距為 0 的直線。試以 $x$ 表示 $y$。",
+    "options": [
+      "A. $y = 2x$",
+      "B. $y = x^2$",
+      "C. $y = 3^{2x}$",
+      "D. $y = 9^x$"
+    ],
+    "correct_answer": "B",
+    "solution_steps_en": [
+      "Equation: $\\log_3 y = 2 \\log_3 x + 0$.",
+      "$\\log_3 y = \\log_3(x^2)$.",
+      "So $y = x^2$."
+    ],
+    "solution_steps_zh": [
+      "方程：$\\log_3 y = 2 \\log_3 x$。",
+      "$y = x^2$。"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_144",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": [
+      "math_stat_dispersion"
+    ],
+    "marks": 1,
+    "difficulty": 7,
+    "paper": 2,
+    "section": "B",
+    "question_en": "A set of data has mean $\\mu$ and standard deviation $\\sigma$. If each number is increased by 10%, which of the following is correct?",
+    "question_zh": "一組數據的平均值為 $\\mu$，標準差為 $\\sigma$。若將每個數都增加 10%，下列哪項是正確的？",
+    "options": [
+      "A. New Mean $1.1\\mu$, New SD $\\sigma$",
+      "B. New Mean $1.1\\mu$, New SD $1.1\\sigma$",
+      "C. New Mean $\\mu + 0.1$, New SD $\\sigma + 0.1$",
+      "D. New Mean $1.1\\mu$, New SD $\\sigma + 0.1$"
+    ],
+    "correct_answer": "B",
+    "solution_steps_en": [
+      "Multiplying each data point by a constant $k=1.1$.",
+      "Mean becomes $k \\cdot \\mu$.",
+      "Standard deviation becomes $k \\cdot \\sigma$."
+    ],
+    "solution_steps_zh": [
+      "每個數乘以 1.1。",
+      "平均值變為 $1.1\\mu$。",
+      "標準差變為 $1.1\\sigma$。"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_sa_142",
+    "type": "short_answer",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": [
+      "math_stat_prob"
+    ],
+    "marks": 12,
+    "difficulty": 7,
+    "paper": 1,
+    "section": "B",
+    "question_en": "Bag A contains 3 red and 2 white balls. Bag B contains 2 red and 4 white balls. A ball is drawn at random from Bag A and put into Bag B. Then a ball is drawn from Bag B.\n(a) Find the probability that the ball drawn from Bag B is red. (6 marks)\n(b) Given that the ball drawn from Bag B is red, find the probability that the ball transferred from Bag A was red. (6 marks)",
+    "question_zh": "袋 A 有 3 紅 2 白，袋 B 有 2 紅 4 白。從袋 A 隨機抽出一球放入袋 B，再從袋 B 抽出一球。\n(a) 求從袋 B 抽出紅球的概率。(6分)\n(b) 已知從袋 B 抽出的是紅球，求從袋 A 轉移的是紅球的概率。(6分)",
+    "correct_answer": "P(B_red)=13/35; P(A_red|B_red)=9/13",
+    "solution_steps_en": [
+      "(a) $P(B_R) = P(A_R)P(B_R|A_R) + P(A_W)P(B_R|A_W)$.",
+      "$P(A_R) = 3/5, P(A_W) = 2/5$.",
+      "Case 1 (A_R): Bag B now has 3 red, 4 white (total 7). $P(B_R|A_R) = 3/7$.",
+      "Case 2 (A_W): Bag B now has 2 red, 5 white (total 7). $P(B_R|A_W) = 2/7$.",
+      "$P(B_R) = (3/5 \\times 3/7) + (2/5 \\times 2/7) = 9/35 + 4/35 = 13/35$.",
+      "(b) $P(A_R|B_R) = \\frac{P(A_R \\cap B_R)}{P(B_R)} = \\frac{9/35}{13/35} = 9/13$."
+    ],
+    "solution_steps_zh": [
+      "(a) $P(\\text{袋B紅}) = (3/5 \\times 3/7) + (2/5 \\times 2/7) = 13/35$。",
+      "(b) $P(\\text{袋A紅} | \\text{袋B紅}) = (9/35) / (13/35) = 9/13$。"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_145",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": [
+      "math_geo_coord"
+    ],
+    "marks": 1,
+    "difficulty": 7,
+    "paper": 2,
+    "section": "B",
+    "question_en": "The point $P(2, k)$ lies on the circle $(x-1)^2 + (y+3)^2 = 17$. Find the possible values of $k$.",
+    "question_zh": "點 $P(2, k)$ 位於圓 $(x-1)^2 + (y+3)^2 = 17$ 上。求 $k$ 的可能值。",
+    "options": [
+      "A. 1, -7",
+      "B. -1, 7",
+      "C. 0, -6",
+      "D. 4, -10"
+    ],
+    "correct_answer": "A",
+    "solution_steps_en": [
+      "Substitute $(2, k)$ into equation:",
+      "$(2-1)^2 + (k+3)^2 = 17$.",
+      "$1 + (k+3)^2 = 17 \\Rightarrow (k+3)^2 = 16$.",
+      "$k+3 = 4$ or $k+3 = -4$.",
+      "$k = 1$ or $k = -7$."
+    ],
+    "solution_steps_zh": [
+      "代入得 $1 + (k+3)^2 = 17$。",
+      "$(k+3)^2 = 16 \\Rightarrow k+3 = \\pm 4$。",
+      "$k = 1$ 或 -7。"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_146",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": [
+      "math_alg_variations"
+    ],
+    "marks": 1,
+    "difficulty": 6,
+    "paper": 2,
+    "section": "A",
+    "question_en": "The weight of a metal plate $W$ varies directly as its area $A$. If the area is increased by 25%, the weight will be increased by...",
+    "question_zh": "金屬板的重量 $W$ 隨其面積 $A$ 正變。若面積增加 25%，則重量增加...",
+    "options": [
+      "A. 25%",
+      "B. 50%",
+      "C. 56.25%",
+      "D. 12.5%"
+    ],
+    "correct_answer": "A",
+    "solution_steps_en": [
+      "Direct variation: $W = kA$.",
+      "New $A' = 1.25A$.",
+      "New $W' = k(1.25A) = 1.25W$.",
+      "Percentage increase = 25%."
+    ],
+    "solution_steps_zh": [
+      "正變關係 $W' = 1.25W$。",
+      "增加 25%。"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_sa_143",
+    "type": "short_answer",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": [
+      "math_alg_apgp"
+    ],
+    "marks": 13,
+    "difficulty": 8,
+    "paper": 1,
+    "section": "B",
+    "question_en": "The sum of the first $n$ terms of a geometric sequence is $S_n$. If $S_3 = 7$ and $S_6 = 63$, find the first term $a$ and the common ratio $r$.",
+    "question_zh": "等比數列的首 $n$ 項和為 $S_n$。若 $S_3 = 7$ 且 $S_6 = 63$，求首項 $a$ 及公比 $r$。",
+    "correct_answer": "a = 1; r = 2",
+    "solution_steps_en": [
+      "$S_3 = \\frac{a(r^3 - 1)}{r - 1} = 7$.",
+      "$S_6 = \\frac{a(r^6 - 1)}{r - 1} = 63$.",
+      "Divide: $\\frac{S_6}{S_3} = \\frac{r^6 - 1}{r^3 - 1} = \\frac{(r^3 - 1)(r^3 + 1)}{r^3 - 1} = r^3 + 1$.",
+      "$r^3 + 1 = 63/7 = 9$.",
+      "$r^3 = 8 \\Rightarrow r = 2$.",
+      "Substitute back: $\\frac{a(2^3 - 1)}{2 - 1} = 7 \\Rightarrow 7a = 7 \\Rightarrow a = 1$."
+    ],
+    "solution_steps_zh": [
+      "$S_6/S_3 = r^3 + 1 = 9 \\Rightarrow r^3 = 8 \\Rightarrow r = 2$。",
+      "代入 $S_3$ 得 $a(7)/1 = 7 \\Rightarrow a = 1$。"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_147",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": [
+      "math_alg_complex_numbers"
+    ],
+    "marks": 1,
+    "difficulty": 7,
+    "paper": 2,
+    "section": "B",
+    "question_en": "In the Argand diagram, the locus of points $z$ satisfying $|z - 3i| = |z + 1|$ is a straight line. Find its slope.",
+    "question_zh": "在阿干圖中，滿足 $|z - 3i| = |z + 1|$ 的點 $z$ 的軌跡是一條直線。求該直線的斜率。",
+    "options": [
+      "A. -1/3",
+      "B. 3",
+      "C. -3",
+      "D. 1/3"
+    ],
+    "correct_answer": "A",
+    "solution_steps_en": [
+      "Points $z$ are equidistant from $A(0, 3)$ and $B(-1, 0)$.",
+      "Locus is the perpendicular bisector of $AB$.",
+      "Slope $m_{AB} = \\frac{0 - 3}{-1 - 0} = 3$.",
+      "Slope of perpendicular bisector $m = -1/3$."
+    ],
+    "solution_steps_zh": [
+      "軌跡是連接 $(0,3)$ 與 $(-1,0)$ 的垂直平分線。",
+      "連接線斜率為 3。垂直線斜率為 -1/3。"
+    ],
+    "status": "approved"
+  }
+]

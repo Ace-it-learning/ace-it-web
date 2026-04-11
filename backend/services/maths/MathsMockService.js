@@ -1,116 +1,102 @@
-const GenerativeAIService = require('../GenerativeAIService');
+const admin = require('firebase-admin');
 
 /**
  * MathsMockService
- * Generates full DSE-style Mock Exams (Paper 1 & Paper 2)
+ * Orchestrates Mock Exams using the 'integrated_challenges' data bank.
+ * Provides 10 distinct, deterministic papers.
  */
 class MathsMockService {
 
     /**
-     * Generate a Mock Paper 1 (Compulsory Part - Conventional)
-     * Total Marks: 105
+     * Get a Mock Paper by Paper ID (1-10)
+     * Fetches from 'integrated_challenges' bank.
      */
-    static async generatePaper1(uid = 'guest', language = 'en') {
-        const languageName = (language === 'zh' || language === 'zh-HK' || language === 'zh-TW')
-            ? 'Traditional Chinese (Formal Written Chinese - 書面語)'
-            : 'English';
-
-        const prompt = `You are a Chief Examiner for the HKDSE Mathematics. Generate a FULL Paper 1 (Compulsory Part) Mock Exam.
+    static async getMockPaper(paperId, language = 'en') {
+        const db = admin.firestore();
+        const batchNum = parseInt(paperId) || 1;
         
-        ### EXAM STRUCTURE (TOTAL 105 MARKS):
-        1. **SECTION A(1)** (35 marks): ~9 Foundation questions (2-4 marks each).
-           - Topics: Formulas, Indices, Factorization, Linear/Quadratic Equations, Percentages, Mensuration.
-        2. **SECTION A(2)** (35 marks): ~6 Intermediate questions (6-9 marks each).
-           - Topics: Variations, Polynomials, Functions & Graphs, Geometric Properties, Trigonometry.
-        3. **SECTION B** (35 marks): ~4-5 Advanced questions (8-12 marks each).
-           - Topics: Circle Geometry, Sequences, 3D Geometry/Trigonometry, Advanced Statistics/Probability.
-
-        ### REQUIREMENTS:
-        - **Language**: Use ${languageName}.
-        - **Bilingual Context**: If Chinese, use Formal Written Chinese only.
-        - **Scaffolding**: SECTION B questions MUST be multi-part (a), (b), (c).
-        - **JSON SCHEMA**:
-        {
-            "title": "HKDSE Mathematics Compulsory Part Mock Paper 1",
-            "reading_time_minutes": 135,
-            "total_marks": 105,
-            "questions": [
-                {
-                    "id": "p1_q1",
-                    "part": 1, 
-                    "section": "A1",
-                    "type": "short_question",
-                    "topic": "...",
-                    "marks": 3,
-                    "text": "...",
-                    "answer": "...",
-                    "solution_steps": ["..."],
-                    "marking_scheme": "DSE point logic (M1, A1)"
-                }
-            ]
-        }`;
+        console.log(`[MathsMockService] Assembling Mock Paper ${batchNum} (Lang: ${language})...`);
 
         try {
-            const data = await GenerativeAIService.generateJson(prompt, {
-                model: "gemini-1.5-flash", // Use Flash for speed on large JSON
-                systemInstruction: "You are a professional mathematician and examiner. Outout valid JSON only."
+            // Fetch ALL approved integrated challenges
+            // We fetch more than we need then slice deterministically
+            const snapshot = await db.collection('integrated_challenges')
+                .where('status', '==', 'approved')
+                .get();
+
+            if (snapshot.empty) {
+                console.warn("[MathsMockService] Bank empty. Falling back to dynamic placeholder.");
+                return this.generateFallbackMock(batchNum);
+            }
+
+            const allQuestions = [];
+            snapshot.forEach(doc => {
+                const data = doc.data();
+                allQuestions.push({
+                    ...data,
+                    id: doc.id,
+                    text: language === 'zh' ? (data.question_zh || data.text_zh) : (data.question_en || data.text),
+                    text_zh: data.question_zh || data.text_zh,
+                    solution_steps: language === 'zh' ? (data.solution_steps_zh || data.solution_steps) : (data.solution_steps_en || data.solution_steps),
+                    explanation: language === 'zh' ? (data.explanation_zh || data.explanation) : (data.explanation_en || data.explanation)
+                });
             });
-            return data;
+
+            // Deterministic Sort (by ID) to ensure consistency across sessions
+            allQuestions.sort((a, b) => a.id.localeCompare(b.id));
+
+            // Chunk size: If we have ~250 questions, we can give ~25 questions per mock.
+            const QUESTIONS_PER_MOCK = 25;
+            const startIdx = (batchNum - 1) * QUESTIONS_PER_MOCK;
+            
+            // Loop slice for wrap-around if bank is smaller than needed
+            let paperQuestions = [];
+            for (let i = 0; i < QUESTIONS_PER_MOCK; i++) {
+                const idx = (startIdx + i) % allQuestions.length;
+                paperQuestions.push(allQuestions[idx]);
+            }
+
+            // Standardize format for the Mock Runner (MathsLabPage)
+            return {
+                id: `mock_maths_${batchNum}`,
+                batchId: batchNum,
+                title: `DSE Maths Integrated Mock: Paper ${batchNum}`,
+                duration: 3600, // 60 mins for a 25-question session
+                total_marks: paperQuestions.length,
+                interactive_tasks: paperQuestions,
+                source: 'integrated_bank'
+            };
+
         } catch (e) {
-            console.error("[MathsMockService] Paper 1 Generation failed:", e);
+            console.error("[MathsMockService] Error fetching mock paper:", e);
             throw e;
         }
     }
 
-    /**
-     * Generate a Mock Paper 2 (Multiple Choice)
-     * Total: 45 Questions
-     */
-    static async generatePaper2(uid = 'guest', language = 'en') {
-        const languageName = (language === 'zh' || language === 'zh-HK' || language === 'zh-TW')
-            ? 'Traditional Chinese (Formal Written Chinese - 書面語)'
-            : 'English';
-
-        const prompt = `You are an HKDSE Mathematics examiner. Generate a FULL Paper 2 (Multiple Choice) Mock Exam.
-        
-        ### EXAM STRUCTURE:
-        1. **SECTION A** (30 questions): Foundation & Integration level.
-        2. **SECTION B** (15 questions): Advanced & Non-Foundation level.
-        
-        ### REQUIREMENTS:
-        - Total 45 questions.
-        - 4 options (A, B, C, D) per question.
-        - Total Marks: 45 (1 mark each).
-        - **Language**: Use ${languageName}.
-        - **Logic**: Use "Must be true (I, II, III)" types for at least 10% of questions.
-        - **JSON SCHEMA**:
-        {
-            "title": "HKDSE Mathematics Compulsory Part Mock Paper 2",
-            "reading_time_minutes": 75,
-            "total_marks": 45,
-            "questions": [
+    static generateFallbackMock(batchNum) {
+        return {
+            id: `mock_maths_fallback_${batchNum}`,
+            title: `[Backup] DSE Maths Mock Paper ${batchNum}`,
+            duration: 3600,
+            interactive_tasks: [
                 {
-                    "id": "p2_q1",
-                    "part": 2, // 2 indicates Paper 2 / Section B
-                    "type": "mc",
-                    "topic": "...",
-                    "text": "...",
-                    "options": ["A", "B", "C", "D"],
-                    "answer": "A"
+                    id: "fb_q1",
+                    type: "mc",
+                    text: "The bank is currently offline. This is a placeholder for Paper " + batchNum,
+                    options: ["A", "B", "C", "D"],
+                    answer: "A"
                 }
             ]
-        }`;
+        };
+    }
 
-        try {
-            const data = await GenerativeAIService.generateJson(prompt, {
-                model: "gemini-1.5-flash",
-                systemInstruction: "You are a professional math examiner. Output valid JSON only."
-            });
-            return data;
-        } catch (e) {
-            console.error("[MathsMockService] Paper 2 Generation failed:", e);
-            throw e;
-        }
+    // Legacy support for dynamic AI papers (forwarding to bank)
+    static async generatePaper1(uid = 'guest', language = 'en') {
+        return this.getMockPaper(1, language);
+    }
+
+    static async generatePaper2(uid = 'guest', language = 'en') {
+        return this.getMockPaper(2, language);
     }
 }
 

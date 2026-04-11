@@ -1,0 +1,40 @@
+{
+  "is_modular": true,
+  "name": "Functions & Graphs",
+  "name_zh": "函數與圖像",
+  "roadmap": "Master the visual-algebraic connections of quadratic functions. Understand how parameters control the graph's anatomy, use the discriminant to predict intercepts, and apply transformations to shift and reflect parent functions.",
+  "roadmap_zh": "掌握二次函數的代數與圖像關聯。理解參數如何控制圖像結構，利用判別式預測截距，並應用變換來平移與反射基本函數。",
+  "learning_modules": [
+    {
+      "module_id": "MOD_01",
+      "title": "Golden Rules of Functions",
+      "title_zh": "函數黃金法則",
+      "concepts": [
+        {
+          "concept_id": "C01_QUADRATIC_ANATOMY",
+          "name": "The Quadratic Anatomy",
+          "name_zh": "二次函數結構",
+          "formula": "y = ax^2 + bx + c",
+          "key_takeaway": "a controls opening direction (up if positive, down if negative). c is the y-intercept. The axis of symmetry is the line $x = -b/2a$.",
+          "key_takeaway_zh": "a 控制開口方向（正數向上，負數向下）。c 是 y 軸截距。對稱軸是直線 $x = -b/2a$。"
+        },
+        {
+          "concept_id": "C02_DISCRIMINANT",
+          "name": "The Discriminant ($\\Delta$)",
+          "name_zh": "判別式 ($\\Delta$)",
+          "formula": "\\Delta = b^2 - 4ac",
+          "key_takeaway": "Relates strictly to graphical x-intercepts: $\\Delta \\gt 0$ (2 intercepts), $\\Delta = 0$ (1 intercept), $\\Delta \\lt 0$ (0 intercepts).",
+          "key_takeaway_zh": "與圖像的 x 軸截距嚴格相關：$\\Delta \\gt 0$（2 個截距），$\\Delta = 0$（1 個截距），$\\Delta \\lt 0$（0 個截距）。"
+        },
+        {
+          "concept_id": "C03_TRANSFORMATIONS",
+          "name": "Function Transformations",
+          "name_zh": "函數變換",
+          "formula": "y = f(x - h) + k, \\quad y = -f(x)",
+          "key_takeaway": "f(x) + k shifts up/down. f(x - h) shifts left/right. -f(x) reflects across the x-axis.",
+          "key_takeaway_zh": "f(x) + k 上下平移。f(x - h) 左右平移。-f(x) 沿 x 軸反射。"
+        }
+      ]
+    }
+  ]
+}

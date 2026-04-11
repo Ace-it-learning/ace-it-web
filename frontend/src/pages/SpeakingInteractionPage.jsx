@@ -2,7 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useLocation, useNavigate, useSearchParams } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { AGENTS } from '../context/AvatarContext';
-import { Loader2 } from 'lucide-react';
+import { Loader2, Zap, ShieldCheck } from 'lucide-react';
+import MockCountdownTimer from '../components/utils/MockCountdownTimer';
 
 const SpeakingInteractionPage = () => {
     const [searchParams] = useSearchParams();
@@ -107,7 +108,9 @@ const SpeakingInteractionPage = () => {
     const isInternalTransition = useRef(false); // Locking ref to prevent race conditions
     const lastSpeakerRef = useRef(null);
 
-    const [isEasyMode, setIsEasyMode] = useState(!location.state?.mode?.includes('mock')); // Auto-ON for Practice
+    const isMock = location.state?.isMock || false;
+    const duration = location.state?.duration || 0;
+    const [isEasyMode, setIsEasyMode] = useState(!isMock && !location.state?.mode?.includes('mock')); // Auto-OFF for Mocks
 
 
     const addLog = (msg) => {
@@ -850,15 +853,42 @@ const SpeakingInteractionPage = () => {
             {/* Header */}
             <div className="relative z-20 p-6 flex justify-between items-center bg-white/10 backdrop-blur-md border-b border-white/20">
                 <div className="flex items-center gap-3">
-                    <button onClick={() => navigate('/dashboard')} className="size-10 bg-white/80 rounded-full flex items-center justify-center">←</button>
-                    <h1 className="text-xl font-bold">{examData.title}</h1>
-                    {isQuest && <span className="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-xs font-bold">Quest Mode</span>}
+                    <button onClick={() => navigate('/dashboard')} className="size-10 bg-white/80 rounded-full flex items-center justify-center text-slate-800 font-bold hover:bg-white transition-colors">←</button>
+                    <div>
+                        <h1 className="text-xl font-bold text-white drop-shadow-md">{examData?.title || roadmapTopic}</h1>
+                        <div className="flex items-center gap-2 mt-0.5">
+                            {isMock ? (
+                                <div className="flex items-center gap-1.5 px-3 py-0.5 bg-rose-600 text-white rounded-full text-[10px] font-black uppercase tracking-widest shadow-lg shadow-rose-600/30 border border-rose-400/30">
+                                    <ShieldCheck size={10} /> HKEAA MOCK
+                                </div>
+                            ) : (
+                                <div className="flex items-center gap-1.5 px-3 py-0.5 bg-indigo-600 text-white rounded-full text-[10px] font-black uppercase tracking-widest shadow-lg shadow-indigo-600/30">
+                                    <Zap size={10} className="fill-current" /> {isQuest ? "QUEST MODE" : "PRACTICE LAB"}
+                                </div>
+                            )}
+                        </div>
+                    </div>
                 </div>
-                <div className="flex items-center gap-3">
-                    <button onClick={() => setIsEasyMode(!isEasyMode)} className="px-4 py-2 bg-white/50 rounded-full text-sm font-bold">
-                        {isEasyMode ? "📖 Easy Mode ON" : "📖 Easy Mode"}
-                    </button>
-                    <div className="px-6 py-2 bg-emerald-500 text-white rounded-full font-mono font-bold shadow-lg">
+                <div className="flex items-center gap-4">
+                    {isMock && duration > 0 && (status === 'PREP' || status === 'DISCUSSION' || status === 'INDIVIDUAL') && (
+                        <div className="hidden lg:block">
+                            <MockCountdownTimer 
+                                initialSeconds={duration} 
+                                onTimeUp={() => {
+                                    alert("Time up! The exam has concluded.");
+                                    finishExam();
+                                }}
+                            />
+                        </div>
+                    )}
+                    
+                    {!isMock && (
+                        <button onClick={() => setIsEasyMode(!isEasyMode)} className="px-4 py-2 bg-white/50 hover:bg-white/70 text-slate-900 rounded-full text-xs font-bold transition-all">
+                            {isEasyMode ? "📖 Easy Mode ON" : "📖 Easy Mode"}
+                        </button>
+                    )}
+
+                    <div className="px-6 py-2 bg-emerald-500 text-white rounded-full font-mono font-bold shadow-lg border border-emerald-400">
                         {status}: {formatTime(timeLeft)}
                     </div>
                 </div>

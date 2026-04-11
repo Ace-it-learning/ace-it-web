@@ -14,6 +14,44 @@ class SpeakingQuestService {
     async generateQuest(uid, moduleId, level = 3, focus = null) {
         console.log(`[SpeakingQuest] Generating ${moduleId} quest for ${uid} (Level ${level}, Focus: ${focus})`);
 
+        // 1. Check if the topic is a pre-written drill (e.g. a_1, b_2, etc.)
+        // This bypasses AI generation for a snappier experience.
+        const fs = require('fs');
+        const path = require('path');
+        const drillsPath = path.join(__dirname, '../data/speaking_drills.json');
+        
+        if (fs.existsSync(drillsPath)) {
+            const drills = JSON.parse(fs.readFileSync(drillsPath, 'utf8'));
+            const flattenedDrills = [
+                ...(drills.criterion_a || []),
+                ...(drills.criterion_b || []),
+                ...(drills.criterion_c || []),
+                ...(drills.criterion_d || [])
+            ];
+            
+            const preWritten = flattenedDrills.find(d => d.id === focus); // 'focus' is often used as the drill ID in requests
+            if (preWritten) {
+                console.log(`[SpeakingQuest] Registry Hit: Loading pre-written drill ${focus}`);
+                return {
+                    template_id: preWritten.id,
+                    role: preWritten.role || "Speaker",
+                    scenario: preWritten.title,
+                    segments: [{
+                        segment_id: "P1",
+                        title: preWritten.title,
+                        master_script: preWritten.master_script,
+                        master_audio_voice: "en-GB-Standard-A",
+                        vocabulary: preWritten.vocabulary || [],
+                        prosody: preWritten.prosody || { pauses: [], emphasis: [], intonation: [] }
+                    }],
+                    cluster_id: moduleId.includes('interaction') ? 'interaction' : (moduleId.includes('flow') ? 'flow' : 'delivery'),
+                    ux_mode: 'delivery',
+                    is_dynamic: false,
+                    is_prewritten: true
+                };
+            }
+        }
+
         let resolvedModuleId = moduleId;
         if (moduleId === 'speaking_groupDiscussion') resolvedModuleId = 'interaction';
         if (moduleId === 'speaking_individualResponse') resolvedModuleId = 'flow';

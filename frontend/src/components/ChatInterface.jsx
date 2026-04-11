@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { Link, useLocation } from 'react-router-dom';
 import { useAvatar } from '../context/AvatarContext';
 import { useAuth } from '../context/AuthContext';
@@ -13,8 +14,7 @@ import { getAdditionalUserInfo, deleteUser } from 'firebase/auth'; // Import for
 import { db } from '../firebase';
 import LaunchCard from './LaunchCard';
 import AuthForm from './AuthForm';
-import MasteryModal from './dashboard/MasteryModal';
-import MathAbilityModal from './dashboard/MathAbilityModal'; // Integrated
+// Mastery modals removed - now dedicated pages
 import DreamProgramsModal from './dashboard/DreamProgramsModal'; // Ace Sir - Dream University List
 import { getUserMastery, getMasteryHistory } from '../services/masteryService';
 import { Compass } from 'lucide-react';
@@ -65,7 +65,7 @@ const formatMessageContent = (content) => {
     // 4. $...$ (inline math, non-greedy, must not match $$)
     // 5. **...** (bold)
     // 6. ### (header lines)
-    const UNIFIED_REGEX = /(\$\$[\s\S]*?\$\$|\\?\\\[[\s\S]*?\\?\\\]|\\?\\\([\s\S]*?\\?\\\)|(?<!\$)\$(?!\$)(?:[^$\\]|\\.)*?\$(?!\$)|\*\*(.*?)\*\*|^###\s+(.+)$)/gm;
+    const UNIFIED_REGEX = /(\$\$[\s\S]*?\$\$|\\?\\\[[\s\S]*?\\?\\\]|\\?\\\([\s\S]*?\\?\\\)|(?<!\$)\$(?!\$)(?:[^$\\]|\\.)*?\$(?!\$)|\*\*(?:.*?)\*\*|^###\s+(?:.+)$)/gm;
 
     const parts = cleanContent.split(UNIFIED_REGEX);
     
@@ -120,7 +120,13 @@ const formatMessageContent = (content) => {
 const ChatInterface = ({ onOpenQuest }) => {
     const navigate = useNavigate();
     const location = useLocation();
-    const { activeAgent, activeAgentId, setActiveAgentId, avatarState, setAvatarState, studentState, setStudentState, isFocusMode, setIsFocusMode } = useAvatar();
+    const { 
+        activeAgent, activeAgentId, setActiveAgentId, 
+        avatarState, setAvatarState, 
+        studentState, setStudentState, 
+        isFocusMode, setIsFocusMode,
+        equipment, syncEquipment 
+    } = useAvatar();
     const { user, loginWithGoogle, logout, verifyEmail } = useAuth(); // Destructure all needed methods
     const { t, toggleLanguage, language } = useLanguage();
 
@@ -150,10 +156,6 @@ const ChatInterface = ({ onOpenQuest }) => {
             ];
         }
     })();
-    // Note: I cannot change line 271 and 1038 in one chunk if they are far apart.
-    // I will do two chunks.
-    // Chunk 1: Update useLanguage destructuring.
-    // Dynamic Chips Logic based on User State
 
     const [messages, setMessages] = useState([]);
     const [inputValue, setInputValue] = useState('');
@@ -164,6 +166,7 @@ const ChatInterface = ({ onOpenQuest }) => {
     const chatContainerRef = useRef(null);
     const lastUserMessageRef = useRef(null);
     const isHistoryScrolledRef = useRef(false);
+    const sectionRef = useRef(null);
     const [showChips, setShowChips] = useState(false);
     const [isUploaderOpen, setIsUploaderOpen] = useState(false);
     const [mockExams, setMockExams] = useState([]);
@@ -179,46 +182,78 @@ const ChatInterface = ({ onOpenQuest }) => {
     });
     const [isEnlarged, setIsEnlarged] = useState(false);
     const [dynamicChips, setDynamicChips] = useState([]);
-    const [isClearConfirmOpen, setIsClearConfirmOpen] = useState(false); // New state for confirm modal
+    const [isClearConfirmOpen, setIsClearConfirmOpen] = useState(false);
+    const [isAnalyzingImage, setIsAnalyzingImage] = useState(false);
+    const [isImageConfirmOpen, setIsImageConfirmOpen] = useState(false);
+    const [imagePrompt, setImagePrompt] = useState("");
+    const [hasStartedTyping, setHasStartedTyping] = useState(false); // Tracks if user modified the default prompt
+    const [isMuted, setIsMuted] = useState(false);
+    const isMutedRef = useRef(false);
+    const [isRecording, setIsRecording] = useState(false);
+    const [recordingTime, setRecordingTime] = useState(0);
+    const recordingTimerRef = useRef(null);
     const [gender, setGender] = useState(null);
+
+
     const [isNewStudent, setIsNewStudent] = useState(true); // Default to true until fetched
     const idleTimerRef = useRef(null);
 
-    // Mastery Compass State
-    const [isMasteryOpen, setIsMasteryOpen] = useState(false);
-    const [isMathAbilityOpen, setIsMathAbilityOpen] = useState(false); // New State
+    // Mastery Compass State - Redirects to dedicated pages
     const [isDreamProgramsOpen, setIsDreamProgramsOpen] = useState(false); // Ace Sir - Dream University List
-    const [masteryData, setMasteryData] = useState(null);
-    const [masteryHistory, setMasteryHistory] = useState([]);
 
-    const handleOpenMastery = async () => {
+    const handleOpenMastery = () => {
         if (!user) return;
-
-        // Math Agent Specific Handling
         if (activeAgentId === 'math') {
-            setIsMathAbilityOpen(true);
-            return;
+            navigate('/maths/ability');
+        } else {
+            navigate('/english/mastery');
+        }
+    };
+
+    const speakText = (text, agentId) => {
+        if (!text || isMutedRef.current) return;
+
+        // Clean text for speech: remove markdown, LaTeX, and system tags
+        const cleanText = text
+            .replace(/\[SYSTEM:.*?\]/g, '')
+            .replace(/\[FORCE_TTS\]/g, '')
+            .replace(/\[TRIGGER_CLEAR\]/g, '')
+            .replace(/\[STUDENT_STATE:.*?\]/g, '')
+            .replace(/\[REDIRECT_DIAGNOSTIC\]/g, '')
+            .replace(/\[LIST_MOCKS:.*?\]/g, '')
+            .replace(/\$\$[\s\S]*?\$\$/g, ' [mathematical expression] ')
+            .replace(/\\\[[\s\S]*?\\\]/g, ' [mathematical expression] ')
+            .replace(/\\\(|\\\)/g, '')
+            .replace(/\*\*|__/g, '')
+            .replace(/###\s/g, '')
+            .replace(/\\/g, '') // Clean stray backslashes
+            .trim();
+
+        if (!cleanText) return;
+
+        const utterance = new SpeechSynthesisUtterance(cleanText);
+        const voices = window.speechSynthesis.getVoices();
+        
+        let selectedVoice = null;
+        const isEnglish = agentId === 'english';
+
+        if (isEnglish) {
+            selectedVoice = voices.find(v => v.lang.includes('en') && (v.name.includes('Female') || v.name.includes('Google'))) || voices[0];
+        } else {
+            selectedVoice = voices.find(v => v.lang.includes('en') && v.name.includes('Male')) || voices[0];
         }
 
-        setIsMasteryOpen(true);
-        try {
-            const [data, history] = await Promise.all([
-                getUserMastery(user.uid),
-                getMasteryHistory(user.uid)
-            ]);
-            setMasteryData(data);
-            setMasteryHistory(history);
-        } catch (err) {
-            console.error("Failed to load mastery data", err);
-        }
+        if (selectedVoice) utterance.voice = selectedVoice;
+        utterance.rate = 1.0;
+        utterance.pitch = 1.0;
+
+        window.speechSynthesis.cancel();
+        window.speechSynthesis.speak(utterance);
     };
 
 
     const getStudentAvatar = () => {
-        // if (user?.photoURL) return user.photoURL; // Disable photoURL to fix broken google link
-        const g = gender?.toLowerCase();
-        if (g === 'female') return '/avatars/student_female_1.jpg';
-        return '/avatars/student_male_1.jpg';
+        return equipment.student?.image || '/avatars/student_male_1.jpg';
     };
 
     const isProcessedRef = useRef(false);
@@ -296,8 +331,10 @@ const ChatInterface = ({ onOpenQuest }) => {
                             : statsData?.hasDiagnostic === true;
                     }
 
-                    // Correctly set hasDiagnostic based ONLY on current fetch result
-                    setHasDiagnostic(currentHasDiagnostic);
+                        setHasDiagnostic(currentHasDiagnostic);
+
+                    // Sync equipment before greeting
+                    await syncEquipment();
 
                     let visibleHistory = [];
                     if (historyRes.ok) {
@@ -313,7 +350,7 @@ const ChatInterface = ({ onOpenQuest }) => {
                         setShowChips(true);
                     } else {
                         let initialContent;
-                        const agentName = activeAgent?.name || "Ace Sir";
+                        const agentName = equipment.tutor?.name || activeAgent?.name || "Ace Sir";
                         const userName = user?.displayName || user?.email?.split('@')[0] || "小戰士";
 
                         if (activeAgentId === 'ace') {
@@ -411,440 +448,7 @@ const ChatInterface = ({ onOpenQuest }) => {
     }, [activeAgentId, setAvatarState, activeAgent.name, user]);
 
 
-    // Helper to save messages to backend
-    const saveMessageToBackend = async (msg) => {
-        if (!user || !user.uid) return;
-        try {
-            const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
-            await fetch(`${API_URL}/api/history/${activeAgentId}`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    uid: user.uid,
-                    role: msg.role,
-                    content: msg.content
-                })
-            });
-        } catch (err) {
-            console.error("Failed to save message", err);
-        }
-    };
 
-    // Fetch Mock Exams (Firestore for Reading, API for Writing)
-    useEffect(() => {
-        const fetchMocks = async () => {
-            try {
-                // Reading (Firestore) - Keep existing
-                const { collection, getDocs, query, where } = await import('firebase/firestore');
-                const { db } = await import('../firebase');
-                const q = query(collection(db, 'mock_exams'), where('is_published', '==', true));
-                const snap = await getDocs(q);
-                setMockExams(snap.docs.map(d => ({ id: d.id, ...d.data() })));
-
-                // Writing (Backend API)
-                const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
-                const res = await fetch(`${API_URL}/api/writing/exams`);
-                if (res.ok) {
-                    const data = await res.json();
-                    setWritingExams(data);
-                }
-
-                // Listening (Backend API)
-                const resL = await fetch(`${API_URL}/api/listening/exams`);
-                if (resL.ok) {
-                    const data = await resL.json();
-                    setListeningExams(data);
-                }
-
-                // Speaking (Backend API)
-                const resS = await fetch(`${API_URL}/api/speaking/exams`);
-                if (resS.ok) {
-                    const data = await resS.json();
-                    setSpeakingExams(data);
-                }
-            } catch (err) {
-                console.error("Error fetching mocks:", err);
-            }
-        };
-        fetchMocks();
-    }, []);
-
-    // Voice Recording State (replaces speech-to-text)
-    const [isRecording, setIsRecording] = useState(false);
-    const [recordingTime, setRecordingTime] = useState(0);
-    const [voiceQuota, setVoiceQuota] = useState(null); // { used: 5, limit: 10, tier: 'normal' }
-    const mediaRecorderRef = useRef(null);
-    const audioChunksRef = useRef([]);
-    const recordingTimerRef = useRef(null);
-    const [isMuted, setIsMuted] = useState(true); // Default: Sound Off
-    const isMutedRef = useRef(isMuted);
-
-    // Chat Output Language Preference - Sync with UI Language
-    // This is separate from the UI language (LanguageContext) but should start synchronized
-    const [chatLanguage, setChatLanguage] = useState(() => {
-        // Map 'zh' to 'zh-HK' for backend, 'en' stays 'en'
-        return language === 'zh' ? 'zh-HK' : 'en';
-    });
-
-    // Sync ref with state
-    useEffect(() => {
-        isMutedRef.current = isMuted;
-    }, [isMuted]);
-
-    // Stop speaking immediately when muted
-    useEffect(() => {
-        if (isMuted) {
-            window.speechSynthesis.cancel();
-        }
-    }, [isMuted]);
-
-    // Turn-Based Anchoring (Smart Scroll)
-    useEffect(() => {
-        const lastMsg = messages[messages.length - 1];
-        const container = chatContainerRef.current;
-        if (!container) return;
-
-        // 1. Initial History Restoration (On Refresh/Return to Dashboard)
-        // If we have history messages and haven't scrolled yet, snap to bottom immediately
-        if (!isHistoryScrolledRef.current && messages.length > 1) {
-            container.scrollTo({ top: container.scrollHeight, behavior: 'auto' });
-            isHistoryScrolledRef.current = true;
-            return;
-        }
-
-        // 2. Active Turn: Anchor to top of user message when it's sent
-        if (lastMsg?.role === 'user' && lastUserMessageRef.current) {
-            // Use container-local scrollTo for precision and to prevent whole-page jumps
-            container.scrollTo({
-                top: lastUserMessageRef.current.offsetTop - 16, // Align top with small padding
-                behavior: 'smooth'
-            });
-            return;
-        }
-
-        // 3. Initial greeting or cleared chat: Scroll to bottom
-        if (messages.length <= 1) {
-            container.scrollTo({
-                top: container.scrollHeight,
-                behavior: 'smooth'
-            });
-            isHistoryScrolledRef.current = false; // Reset for next history load or clear
-        }
-
-        // 4. AI Thinking or AI response arrival: Do NOT scroll.
-        // This keeps the viewport anchored to the top of the user's message.
-    }, [messages, avatarState, isFocusMode]);
-
-    // Focus Mode Keyboard Listener (Escape to exit)
-    useEffect(() => {
-        const handleEsc = (e) => {
-            if (e.key === 'Escape' && isFocusMode) {
-                setIsFocusMode(false);
-            }
-        };
-        window.addEventListener('keydown', handleEsc);
-
-        // Body scroll lock
-        if (isFocusMode) {
-            document.body.style.overflow = 'hidden';
-            // Scroll to bottom immediately on enter
-            messagesEndRef.current?.scrollIntoView({ behavior: 'auto' });
-        } else {
-            document.body.style.overflow = 'unset';
-        }
-
-        return () => {
-            window.removeEventListener('keydown', handleEsc);
-            document.body.style.overflow = 'unset';
-        };
-    }, [isFocusMode, setIsFocusMode]);
-
-    // Text-to-Speech Function
-    const speakText = (text, agentId = 'english') => {
-        if (!window.speechSynthesis) return;
-        window.speechSynthesis.cancel();
-
-        const utterance = new SpeechSynthesisUtterance(text);
-        const voices = window.speechSynthesis.getVoices();
-
-        // Voice Profiles
-        const PROFILES = {
-            english: { gender: 'female', lang: 'en-GB', rate: 1.0, pitch: 1.1 }, // Miss Janie: Adjusted speed
-            math: { gender: 'male', lang: 'en-GB', rate: 1.05, pitch: 1.0 },
-            chinese: { gender: 'female', lang: 'zh-HK', rate: 1.4, pitch: 1.0 }, // Faster Cantonese
-            science: { gender: 'male', lang: 'en-GB', rate: 1.05, pitch: 1.0 },
-            ace: { gender: 'male', lang: 'zh-HK', rate: 1.4, pitch: 0.95 } // Ace Sir: Cantonese, Traditional Chinese (Faster rate for smoothness)
-        };
-
-        const profile = PROFILES[agentId] || PROFILES.english;
-
-        // Language Detection Override
-        const isChinese = /[\u4e00-\u9fa5]/.test(text);
-        const targetLang = isChinese ? 'zh-HK' : profile.lang;
-
-        // Strip whitespace for Chinese (improves fluency)
-        if (isChinese) {
-            text = text.replace(/\s+/g, '');
-        }
-
-        let preferredVoice;
-
-        if (targetLang === 'zh-HK') {
-            // Priority for Ace Sir: Try Cloud TTS first if configured, else browser fallback
-            if (activeAgentId === 'ace' || profile.gender === 'male') {
-                // We'll prioritize male voices in browser as fallback
-                preferredVoice = voices.find(v => v.lang === "zh-HK" && (v.name.includes("Danny") || v.name.includes("Male"))) ||
-                    voices.find(v => v.name.includes("Google Cantonese"));
-            } else {
-                preferredVoice = voices.find(v => v.name.includes("Google Cantonese")) ||
-                    voices.find(v => v.name.includes("Tracy"));
-            }
-            if (!preferredVoice) preferredVoice = voices.find(v => v.lang === "zh-HK");
-        } else {
-            // English Gender Selection
-            if (profile.gender === 'female') {
-                preferredVoice = voices.find(v => v.name.includes("Google UK English Female")) ||
-                    voices.find(v => v.name.includes("Microsoft Hazel")) || // Windows UK Female
-                    voices.find(v => v.name.includes("Microsoft Susan")) || // Windows UK Female
-                    voices.find(v => v.lang === 'en-GB' && v.name.includes('Female')) ||
-                    voices.find(v => v.name.includes("Zira")) || // Windows US Female fallback
-                    voices.find(v => v.name.includes("Female"));
-            } else {
-                preferredVoice = voices.find(v => v.name.includes("Google UK English Male")) ||
-                    voices.find(v => v.name.includes("Microsoft George")) ||
-                    voices.find(v => v.lang === 'en-GB' && v.name.includes('Male')) ||
-                    voices.find(v => v.name.includes("Microsoft David")) || // Windows US Male fallback
-                    voices.find(v => v.lang === 'en-GB');
-            }
-        }
-
-        console.log(`[TTS] Text: "${text.substring(0, 15)}..." | Lang: ${targetLang} | Goal Gender: ${profile.gender}`);
-        console.log(`[TTS] Voices Available: ${voices.length}. Selected: ${preferredVoice ? preferredVoice.name : 'System Default'}`);
-
-        if (preferredVoice) {
-            utterance.voice = preferredVoice;
-            utterance.lang = preferredVoice.lang;
-        }
-
-        // Apply Profile Settings
-        utterance.rate = profile.rate;
-        utterance.pitch = profile.pitch;
-
-        // SYNC AVATAR STATE
-        utterance.onstart = () => setAvatarState('TALKING');
-        utterance.onend = () => setAvatarState('IDLE');
-
-        // CLOUD TTS (Priority for Ace Sir)
-        if (agentId === 'ace') {
-            console.log("[TTS] Attempting Cloud TTS for Ace Sir...");
-            fetch(`${import.meta.env.VITE_API_URL || 'http://localhost:3001'}/api/tts`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    text: text,
-                    languageCode: 'zh-HK',
-                    gender: 'MALE'
-                })
-            })
-                .then(res => res.json())
-                .then(data => {
-                    if (data.audioContent) {
-                        const audio = new Audio(`data:audio/mp3;base64,${data.audioContent}`);
-                        audio.onplay = () => setAvatarState('TALKING');
-                        audio.onended = () => setAvatarState('IDLE');
-                        audio.play().catch(e => {
-                            console.error("Cloud Audio Playback Failed:", e);
-                            // Fallback to browser
-                            window.speechSynthesis.speak(utterance);
-                        });
-                    } else {
-                        throw new Error("No audio content");
-                    }
-                })
-                .catch(err => {
-                    console.warn("[TTS] Cloud TTS Failed (Quota/Network?), falling back to Browser:", err);
-                    window.speechSynthesis.speak(utterance);
-                });
-            return;
-        }
-
-        // BROWSER TTS (Default for others)
-        window.speechSynthesis.speak(utterance);
-    };
-
-    const handleMicClick = () => {
-        if (!('webkitSpeechRecognition' in window)) {
-            alert("Speech recognition is not supported in this browser. Please use Chrome.");
-            return;
-        }
-
-        const recognition = new window.webkitSpeechRecognition();
-
-        // Cantonese-optimized settings
-        recognition.lang = 'zh-HK'; // Cantonese (Hong Kong)
-        recognition.interimResults = true; // Show partial results for better feedback
-        recognition.maxAlternatives = 3; // Get multiple alternatives for better accuracy
-        recognition.continuous = false; // Stop after one utterance
-
-        recognition.onstart = () => {
-            setIsListening(true);
-            console.log('[Speech] Recognition started - Language: zh-HK (Cantonese)');
-        };
-
-        recognition.onresult = (event) => {
-            // Get the most recent result
-            const last = event.results.length - 1;
-            const result = event.results[last];
-
-            if (result.isFinal) {
-                // Use the best match (highest confidence)
-                const transcript = result[0].transcript;
-                const confidence = result[0].confidence;
-
-                console.log(`[Speech] Final: "${transcript}" (Confidence: ${(confidence * 100).toFixed(1)}%)`);
-                setInputValue(transcript);
-
-                // Log alternatives for debugging
-                if (result.length > 1) {
-                    console.log('[Speech] Alternatives:',
-                        Array.from(result).map((alt, i) =>
-                            `${i + 1}. "${alt.transcript}" (${(alt.confidence * 100).toFixed(1)}%)`
-                        ).join(', ')
-                    );
-                }
-            } else {
-                // Show interim results in console for feedback
-                const interim = result[0].transcript;
-                console.log(`[Speech] Interim: "${interim}"`);
-            }
-        };
-
-        recognition.onend = () => {
-            setIsListening(false);
-            console.log('[Speech] Recognition ended');
-        };
-
-        recognition.onerror = (event) => {
-            console.error('[Speech] Error:', event.error);
-            setIsListening(false);
-
-            // Provide user-friendly error messages
-            let errorMsg = 'Speech recognition error: ';
-            switch (event.error) {
-                case 'no-speech':
-                    errorMsg += 'No speech detected. Please try again and speak clearly.';
-                    break;
-                case 'audio-capture':
-                    errorMsg += 'Microphone not accessible. Please check permissions.';
-                    break;
-                case 'not-allowed':
-                    errorMsg += 'Microphone permission denied. Please allow microphone access.';
-                    break;
-                case 'network':
-                    errorMsg += 'Network error. Speech recognition requires internet connection.';
-                    break;
-                default:
-                    errorMsg += event.error;
-            }
-
-            // Show error to user
-            alert(errorMsg);
-        };
-
-        recognition.start();
-    };
-
-    // NEW: Audio Recording Functions (replaces speech-to-text)
-    const handleVoiceRecording = async () => {
-        if (!user) {
-            alert("Please sign in to use voice recording for pronunciation feedback.");
-            return;
-        }
-
-        if (!isRecording) {
-            await startRecording();
-        } else {
-            await stopRecording();
-        }
-    };
-
-    const startRecording = async () => {
-        try {
-            const stream = await navigator.mediaDevices.getUserMedia({
-                audio: {
-                    echoCancellation: true,
-                    noiseSuppression: true,
-                    sampleRate: 48000
-                }
-            });
-
-            const mediaRecorder = new MediaRecorder(stream, {
-                mimeType: 'audio/webm;codecs=opus'
-            });
-
-            mediaRecorder.ondataavailable = (event) => {
-                if (event.data.size > 0) {
-                    audioChunksRef.current.push(event.data);
-                }
-            };
-
-            mediaRecorder.onstop = async () => {
-                const audioBlob = new Blob(audioChunksRef.current, { type: 'audio/webm' });
-                console.log('[Voice] Recording stopped. Size:', (audioBlob.size / 1024).toFixed(2), 'KB');
-
-                await handleAudioRecording(audioBlob, mediaRecorderRef.current.recordedDuration || recordingTime);
-
-                audioChunksRef.current = [];
-                stream.getTracks().forEach(track => track.stop());
-            };
-
-            mediaRecorder.start();
-            mediaRecorderRef.current = mediaRecorder;
-            setIsRecording(true);
-
-            console.log('[Voice] Recording started');
-
-            recordingTimerRef.current = setInterval(() => {
-                setRecordingTime(prev => {
-                    const newTime = prev + 1;
-                    if (newTime >= 30) {
-                        stopRecording();
-                        return 0;
-                    }
-                    return newTime;
-                });
-            }, 1000);
-
-        } catch (error) {
-            console.error('[Voice] Recording error:', error);
-
-            let errorMsg = 'Could not start recording: ';
-            if (error.name === 'NotAllowedError') {
-                errorMsg += 'Microphone permission denied. Please allow microphone access.';
-            } else if (error.name === 'NotFoundError') {
-                errorMsg += 'No microphone found. Please connect a microphone.';
-            } else {
-                errorMsg += error.message;
-            }
-
-            alert(errorMsg);
-        }
-    };
-
-    const stopRecording = () => {
-        if (mediaRecorderRef.current && mediaRecorderRef.current.state !== 'inactive') {
-            mediaRecorderRef.current.recordedDuration = recordingTime;
-            mediaRecorderRef.current.stop();
-        }
-
-        if (recordingTimerRef.current) {
-            clearInterval(recordingTimerRef.current);
-            recordingTimerRef.current = null;
-        }
-
-        setIsRecording(false);
-        setRecordingTime(0);
-    };
 
     const handleAudioRecording = async (audioBlob, duration) => {
         const reader = new FileReader();
@@ -901,7 +505,15 @@ const ChatInterface = ({ onOpenQuest }) => {
 
     const handleFileSelect = (e) => {
         const file = e.target.files[0];
-        if (!file || !file.type.startsWith('image/')) return;
+        console.log(`[ChatInterface] File selected:`, file ? file.name : 'none');
+        
+        if (!file) return;
+
+        if (!file.type.startsWith('image/')) {
+            console.warn('[ChatInterface] Unsupported file type:', file.type);
+            alert("Matt sir currently only supports Image files (JPG, PNG) for handwriting analysis. Please take a photo of your work!");
+            return;
+        }
 
         // Restriction: Guest 1-upload limit
         if (!user) {
@@ -913,45 +525,38 @@ const ChatInterface = ({ onOpenQuest }) => {
         }
 
         const reader = new FileReader();
-        reader.onloadend = () => {
-            // Compress Image Logic
-            const img = new Image();
-            img.src = reader.result;
-            img.onload = () => {
-                const canvas = document.createElement('canvas');
-                let width = img.width;
-                let height = img.height;
-                const MAX_WIDTH = 1024;
-                const MAX_HEIGHT = 1024;
-
-                if (width > height) {
-                    if (width > MAX_WIDTH) {
-                        height *= MAX_WIDTH / width;
-                        width = MAX_WIDTH;
-                    }
-                } else {
-                    if (height > MAX_HEIGHT) {
-                        width *= MAX_HEIGHT / height;
-                        height = MAX_HEIGHT;
-                    }
-                }
-
-                canvas.width = width;
-                canvas.height = height;
-                const ctx = canvas.getContext('2d');
-                ctx.drawImage(img, 0, 0, width, height);
-
-                const compressedDataUrl = canvas.toDataURL('image/jpeg', 0.7); // 70% quality JPEG
-
-                setSelectedImage({
-                    data: compressedDataUrl.split(',')[1],
-                    type: 'image/jpeg',
-                    preview: compressedDataUrl
-                });
-            };
+        console.log(`[ChatInterface] Starting file read...`);
+        
+        reader.onload = () => {
+            console.log(`[ChatInterface] FileReader finished. Status: ${reader.readyState}`);
+            const base64Data = reader.result.split(',')[1];
+            
+            const previewUrl = URL.createObjectURL(file);
+            setSelectedImage({
+                data: base64Data,
+                type: file.type,
+                preview: previewUrl
+            });
+            console.log(`[ChatInterface] Selected image state set successfully.`);
+            
+            // Trigger the Image Analysis Popup
+            const defaultPrompt = activeAgentId === 'math' 
+                ? "Please analyse my Math question" 
+                : "Please analyze my handwriting";
+            setImagePrompt(defaultPrompt);
+            setHasStartedTyping(false);
+            setIsImageConfirmOpen(true);
         };
+        
+        reader.onerror = (err) => {
+            console.error('[ChatInterface] FileReader error:', err);
+            alert("Failed to read the file. Please try again.");
+        };
+
         reader.readAsDataURL(file);
     };
+
+
 
     const handleSendMessage = async (overrideValue, isHidden = false) => {
         const textToSend = overrideValue || inputValue;
@@ -989,27 +594,41 @@ const ChatInterface = ({ onOpenQuest }) => {
                 setMessages(prev => [...prev, { role: 'assistant', content: `Preparing your ${paperId} mock exam...` }]);
                 setInputValue('');
                 setTimeout(() => {
-                    if (paperId.includes('Speaking')) {
-                        console.log("Routing to Speaking Exam Page...");
-                        navigate(`/speaking-exam/${paperId}`);
-                    } else if (paperId.includes('Writing')) {
-                        console.log("Routing to Writing Exam Page...");
-                        navigate(`/writing/exam/${paperId}`);
-                    } else if (paperId.includes('Listening')) {
-                        console.log("Routing to Listening Exam Page...");
-                        navigate(`/listening/exam/${paperId}`);
-                    } else {
-                        navigate(`/exam/${paperId}`);
-                    }
+                    // Consolidate all legacy exam activations to the new Mock Library
+                    navigate('/mock-exam', { state: { autoSelectId: paperId } });
                 }, 1500);
                 return;
             }
         }
 
         // --- REGULAR CHAT FLOW ---
+        let finalMessage = textToSend;
+        if (!finalMessage.trim() && selectedImage) {
+            // Default text for image-only uploads to provide context in the bubble
+            finalMessage = activeAgentId === 'math' ? "[Math Problem Assessment]" : "[Handwriting Analysis]";
+        }
+
+        const saveMessageToBackend = async (msg) => {
+            if (!user) return;
+            try {
+                const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+                const token = await user.getIdToken();
+                await fetch(`${API_URL}/api/history/${activeAgentId}?uid=${user.uid}`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${token}`
+                    },
+                    body: JSON.stringify(msg)
+                });
+            } catch (err) {
+                console.error("Failed to save message to history:", err);
+            }
+        };
+
         const userMsg = {
             role: 'user',
-            content: textToSend,
+            content: finalMessage,
             image: selectedImage ? { preview: selectedImage.preview } : null
         };
 
@@ -1018,7 +637,8 @@ const ChatInterface = ({ onOpenQuest }) => {
             setMessages(prev => [...prev, userMsg]);
             saveMessageToBackend(userMsg);
         }
-        const currentInput = textToSend;
+
+        const currentInput = finalMessage;
 
         if (showChips) setShowChips(false);
         const currentImage = selectedImage;
@@ -1026,12 +646,15 @@ const ChatInterface = ({ onOpenQuest }) => {
         setInputValue('');
         setSelectedImage(null);
         setAvatarState('THINKING');
+        if (currentImage) setIsAnalyzingImage(true);
         setStudentState('TALKING');
 
         // Reset student to idle/listening after they "finish" speaking
         setTimeout(() => setStudentState('IDLE'), 2000);
 
         try {
+
+
             const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
 
             // Prepare history (exclude the very last user message which is being sent now, if it was already added to state? 
@@ -1055,8 +678,9 @@ const ChatInterface = ({ onOpenQuest }) => {
                     image: currentImage ? { data: currentImage.data, mimeType: currentImage.type } : null,
                     history: history,
                     agentId: activeAgentId,
-                    outputLanguage: chatLanguage // Pass preference to backend
+                    outputLanguage: language // Pass preference to backend
                 })
+
             });
 
             if (!response.ok) {
@@ -1250,12 +874,40 @@ const ChatInterface = ({ onOpenQuest }) => {
                 content: `Error: ${error.message}. Please try again.`
             }]);
         } finally {
-            // Safety valve: Ensure we never get stuck in "Thinking"
-            if (avatarState === 'THINKING') {
-                setAvatarState('IDLE');
-            }
+            console.log(`[ChatInterface] Finally reached. Resetting states...`);
+            setIsAnalyzingImage(false);
+            // Safety valve: Unconditionally reset to IDLE if we are stuck in THINKING
+            // Use functional update to avoid stale closure issues
+            setAvatarState(prev => prev === 'THINKING' ? 'IDLE' : prev);
+        }
+
+    };
+    
+    // --- VOICE RECORDING LOGIC ---
+    const handleVoiceRecording = () => {
+        if (!isRecording) {
+            // Start recording (simulated for UI feedback in this version)
+            setIsRecording(true);
+            setRecordingTime(0);
+            recordingTimerRef.current = setInterval(() => {
+                setRecordingTime(prev => {
+                    if (prev >= 30) {
+                        clearInterval(recordingTimerRef.current);
+                        setIsRecording(false);
+                        handleSendMessage("[VOICE_RECORDING_TIMEOUT] I've finished recording my pronunciation.");
+                        return 30;
+                    }
+                    return prev + 1;
+                });
+            }, 1000);
+        } else {
+            // Stop recording
+            if (recordingTimerRef.current) clearInterval(recordingTimerRef.current);
+            setIsRecording(false);
+            handleSendMessage(`[VOICE_RECORDING_STOPPED] I've finished recording my pronunciation. Duration: ${recordingTime}s`);
         }
     };
+
 
     // Ensure voices are loaded (Chrome quirk)
     useEffect(() => {
@@ -1348,11 +1000,13 @@ const ChatInterface = ({ onOpenQuest }) => {
         return t('chat.type_message');
     };
 
-    return (
-        <section className={cn(
+    const content = (
+        <section 
+            ref={sectionRef}
+            className={cn(
             "flex flex-col rounded-3xl glass-container shadow-2xl relative overflow-hidden transition-all duration-500",
             isFocusMode
-                ? "fixed inset-0 z-[100] rounded-none shadow-none h-screen w-screen"
+                ? "!fixed !top-0 !left-0 !m-0 inset-0 z-[999] rounded-none shadow-none h-screen w-screen flex flex-col overflow-hidden"
                 : "lg:col-span-9 h-[80vh] min-h-[600px] w-full"
         )}>
             {(!user || (user && !user.emailVerified)) && (
@@ -1430,15 +1084,26 @@ const ChatInterface = ({ onOpenQuest }) => {
                             )}></div>
                         </div>
                         <div className={cn(
-                            "w-[36px] h-[36px] rounded-full border-2 border-white overflow-hidden shadow-sm transition-transform",
+                            "w-[36px] h-[36px] rounded-full border-2 border-white overflow-hidden shadow-sm transition-transform relative",
                             studentState === 'TALKING' && "ring-2 ring-green-400 animate-talking-glow",
                             studentState === 'LISTENING' && "animate-pulse",
                             studentState === 'STUDYING' && "ring-2 ring-indigo-400 opacity-80"
                         )}>
                             <img src={getStudentAvatar()} alt="Student" className="w-full h-full object-cover" />
+                            {equipment.frame && (
+                                <img src={equipment.frame.image} alt="Frame" className="absolute inset-0 w-full h-full object-contain pointer-events-none scale-110" />
+                            )}
                         </div>
                     </div>
-
+                    
+                    <div className="flex flex-col">
+                        <span className="text-sm font-bold text-gray-900 dark:text-white leading-none mb-0.5">
+                            {equipment.tutor?.name || activeAgent.name}
+                        </span>
+                        <span className="text-[10px] text-gray-400 font-medium tracking-tight">
+                            {activeAgent.headerInfo}
+                        </span>
+                    </div>
                 </div>
 
                 {/* CENTERED ACTION BUTTONS */}
@@ -1551,7 +1216,7 @@ const ChatInterface = ({ onOpenQuest }) => {
             </div>
 
             {/* Chat Area - Scrollable */}
-            <div ref={chatContainerRef} className="flex-1 overflow-y-auto p-8 flex flex-col gap-6">
+            <div ref={chatContainerRef} className="flex-1 overflow-y-auto p-8 flex flex-col justify-start gap-6 min-h-0">
                 {/* Skeleton Loading State */}
                 {isHistoryLoading && (
                     <div className="flex flex-col gap-6">
@@ -1591,10 +1256,10 @@ const ChatInterface = ({ onOpenQuest }) => {
                             {/* AI Avatar (Left) */}
                             {msg.role === 'assistant' && (
                                 <div className={cn(
-                                    "w-[44px] h-[44px] shrink-0 rounded-full overflow-hidden border border-black/5 bg-white shadow-sm transition-all",
+                                    "w-[44px] h-[44px] shrink-0 rounded-full overflow-hidden border border-black/5 bg-white shadow-sm transition-all relative",
                                     (avatarState === 'TALKING' || avatarState === 'THINKING') && "animate-talking-glow ring-2 ring-green-400"
                                 )}>
-                                    <img src={activeAgent.avatar} alt="AI" className="w-full h-full object-cover object-top" />
+                                    <img src={equipment.tutor?.image || activeAgent.avatar} alt="AI" className="w-full h-full object-cover object-top" />
                                 </div>
                             )}
 
@@ -1699,12 +1364,15 @@ const ChatInterface = ({ onOpenQuest }) => {
                             {/* User Avatar (Right) */}
                             {
                                 msg.role === 'user' && (
-                                    <div className="w-[44px] h-[44px] shrink-0 rounded-full bg-gray-200 overflow-hidden">
+                                    <div className="w-[44px] h-[44px] shrink-0 rounded-full bg-gray-200 overflow-hidden relative">
                                         <img
                                             src={getStudentAvatar()}
                                             alt="User"
                                             className="w-full h-full object-cover"
                                         />
+                                        {equipment.frame && (
+                                            <img src={equipment.frame.image} alt="Frame" className="absolute inset-0 w-full h-full object-contain pointer-events-none scale-110" />
+                                        )}
                                     </div>
                                 )
                             }
@@ -1716,15 +1384,20 @@ const ChatInterface = ({ onOpenQuest }) => {
                 {avatarState === 'THINKING' && (
                     <div className="flex items-start gap-4 max-w-[80%]">
                         <div className={cn(
-                            "size-10 shrink-0 rounded-full overflow-hidden border border-black/5 bg-white shadow-sm animate-talking-glow ring-2 ring-green-400"
+                            "size-10 shrink-0 rounded-full overflow-hidden border border-black/5 bg-white shadow-sm animate-talking-glow ring-2 ring-green-400 relative"
                         )}>
-                            <img src={activeAgent.avatar} alt="AI" className="w-full h-full object-cover object-top" />
+                            <img src={equipment.tutor?.image || activeAgent.avatar} alt="AI" className="w-full h-full object-cover object-top" />
                         </div>
                         <div className="bg-white dark:bg-[#3d2c20] p-4 rounded-2xl rounded-tl-none shadow-sm border border-black/5">
-                            <div className="flex gap-1">
+                            <div className="flex gap-1 items-center">
                                 <span className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></span>
                                 <span className="w-2 h-2 bg-gray-400 rounded-full animate-bounce [animation-delay:0.2s]"></span>
                                 <span className="w-2 h-2 bg-gray-400 rounded-full animate-bounce [animation-delay:0.4s]"></span>
+                                {isAnalyzingImage && (
+                                    <span className="text-xs text-black/40 dark:text-white/40 ml-2 font-medium animate-pulse">
+                                        {activeAgentId === 'math' ? "Analyzing math problem..." : "Analyzing handwriting..."}
+                                    </span>
+                                )}
                             </div>
                         </div>
                     </div>
@@ -1736,7 +1409,7 @@ const ChatInterface = ({ onOpenQuest }) => {
             <div className="p-6 bg-white/60 dark:bg-white/5 flex flex-col gap-4">
                 {/* Suggestion Chips */}
                 {showChips && (
-                    <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide no-scrollbar -mx-2 px-2">
+                    <div className="flex flex-wrap gap-2 pb-2 -mx-2 px-2">
 
 
                         {/* Dynamic AI Chips */}
@@ -1828,7 +1501,8 @@ const ChatInterface = ({ onOpenQuest }) => {
                         accept="image/*"
                         className="hidden"
                     />
-                    {activeAgentId !== 'ace' && (
+                    {/* PAPERCLIP (HANDWRITING / PHOTO) - ENABLED FOR ALL */}
+                    {(
                         <button
                             type="button"
                             onClick={() => fileInputRef.current?.click()}
@@ -1936,27 +1610,93 @@ const ChatInterface = ({ onOpenQuest }) => {
                 </div>
             )}
 
-            {/* Mastery Compass Modal */}
-            <MasteryModal
-                isOpen={isMasteryOpen}
-                onClose={() => setIsMasteryOpen(false)}
-                skillData={masteryData}
-                history={masteryHistory}
-            />
-
-            {/* Math Ability Modal */}
-            <MathAbilityModal
-                isOpen={isMathAbilityOpen}
-                onClose={() => setIsMathAbilityOpen(false)}
-            />
+            {/* Math Ability Modal - REMOVED, now dedicated page */}
 
             {/* Dream University List Modal (Ace Sir) */}
             <DreamProgramsModal
                 isOpen={isDreamProgramsOpen}
                 onClose={() => setIsDreamProgramsOpen(false)}
             />
+
+            {/* Image Analysis Confirmation Popup */}
+            {isImageConfirmOpen && selectedImage && (
+                <div className="fixed inset-0 z-[400] flex items-center justify-center bg-black/60 backdrop-blur-md p-4 animate-in fade-in duration-300">
+                    <div className="bg-white dark:bg-[#1a110a] rounded-[2.5rem] shadow-2xl max-w-2xl w-full border border-white/20 overflow-hidden animate-in zoom-in-95 duration-300">
+                        <div className="flex flex-col md:flex-row h-full max-h-[80vh]">
+                            {/* Left Side: Image Preview */}
+                            <div className="w-full md:w-1/2 bg-gray-100 dark:bg-black/20 flex items-center justify-center p-6 border-b md:border-b-0 md:border-r border-gray-100 dark:border-white/10">
+                                <div className="relative w-full aspect-square md:aspect-auto md:h-full rounded-2xl overflow-hidden shadow-inner flex items-center justify-center bg-white/50 dark:bg-black/40">
+                                    <img 
+                                        src={selectedImage.preview} 
+                                        alt="Preview" 
+                                        className="max-w-full max-h-full object-contain"
+                                    />
+                                </div>
+                            </div>
+
+                            {/* Right Side: Questions & Actions */}
+                            <div className="w-full md:w-1/2 p-8 flex flex-col gap-6">
+                                <div className="space-y-2">
+                                    <h3 className="text-2xl font-black text-gray-900 dark:text-white tracking-tight">Handwriting Analysis</h3>
+                                    <p className="text-sm text-gray-500 dark:text-gray-400 font-medium leading-relaxed">
+                                        {activeAgentId === 'math' 
+                                            ? "Add context or specific questions to help Matt Sir analyze your math problem." 
+                                            : "Add context to help your tutor analyze your handwriting."}
+                                    </p>
+                                </div>
+
+                                <div className="flex-1">
+                                    <label className="text-[10px] font-black uppercase tracking-[0.2em] text-primary mb-2 block">Your Question</label>
+                                    <textarea
+                                        className="w-full h-32 bg-gray-50 dark:bg-white/5 rounded-2xl border-2 border-transparent focus:border-primary focus:bg-white dark:focus:bg-white/10 p-4 text-sm text-gray-800 dark:text-white resize-none transition-all placeholder-gray-400 outline-none"
+                                        placeholder="Type your question here..."
+                                        value={imagePrompt}
+                                        onFocus={() => {
+                                            if (!hasStartedTyping) {
+                                                setImagePrompt("");
+                                                setHasStartedTyping(true);
+                                            }
+                                        }}
+                                        onChange={(e) => {
+                                            setImagePrompt(e.target.value);
+                                            setHasStartedTyping(true);
+                                        }}
+                                    />
+                                </div>
+
+                                <div className="flex gap-3 mt-auto pt-4">
+                                    <button
+                                        onClick={() => {
+                                            setIsImageConfirmOpen(false);
+                                            setSelectedImage(null);
+                                        }}
+                                        className="flex-1 py-4 bg-gray-100 hover:bg-gray-200 dark:bg-white/5 dark:hover:bg-white/10 text-gray-700 dark:text-gray-300 rounded-2xl font-bold text-sm transition-all"
+                                    >
+                                        Cancel
+                                    </button>
+                                    <button
+                                        onClick={() => {
+                                            setIsImageConfirmOpen(false);
+                                            handleSendMessage(imagePrompt);
+                                        }}
+                                        className="flex-[1.5] py-4 bg-primary hover:bg-primary/90 text-white rounded-2xl font-black text-sm shadow-xl shadow-primary/20 transition-all active:scale-95 flex items-center justify-center gap-2"
+                                    >
+                                        <Send size={18} />
+                                        Analyze Now
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )}
         </section>
     );
+
+    if (isFocusMode) {
+        return createPortal(content, document.body);
+    }
+    return content;
 };
 
 export default ChatInterface;

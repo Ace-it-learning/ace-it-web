@@ -109,7 +109,7 @@ router.post('/practice/generate', async (req, res) => {
         language: req.body.language
     });
 
-    const { uid, topic, level, language, isFactory, mode } = req.body;
+    const { uid, topic, level, language, isFactory, mode, batchId } = req.body;
     if (!uid || !topic) {
         console.log('[Practice Generate] Missing required fields');
         return res.status(400).json({ error: "Missing data" });
@@ -118,7 +118,7 @@ router.post('/practice/generate', async (req, res) => {
     try {
         const MathsLabService = require('../../services/maths/MathsLabService');
         console.log('[Practice Generate] Calling MathsLabService.generateLesson...');
-        console.log('[Practice Generate] Parameters:', { uid, topic, level: level || 3, language: language || 'en' });
+        console.log('[Practice Generate] Parameters:', { uid, topic, level: level || 3, language: language || 'en', batchId });
 
         const lessonData = await MathsLabService.generateLesson({
             uid,
@@ -126,7 +126,8 @@ router.post('/practice/generate', async (req, res) => {
             level: level || 3,
             language: language || 'en',
             isFactory: isFactory || false,
-            mode
+            mode,
+            batchId
         });
 
         console.log('[Practice Generate] Success! Returning data');

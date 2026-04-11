@@ -111,6 +111,18 @@ const QuestionCard = ({
 
                         const isBlock = (part.startsWith('\\[') && part.endsWith('\\]')) || (part.startsWith('$$') && part.endsWith('$$'));
                         const isInline = (part.startsWith('\\(') && part.endsWith('\\)')) || (part.startsWith('$') && part.endsWith('$'));
+                        const isHTML = part.startsWith('[HTML]') && part.endsWith('[/HTML]');
+
+                        if (isHTML) {
+                            const rawHTML = part.slice(6, -7);
+                            return (
+                                <div 
+                                    key={idx} 
+                                    className="html-raw-block my-1 overflow-x-auto text-left" 
+                                    dangerouslySetInnerHTML={{ __html: rawHTML }} 
+                                />
+                            );
+                        }
 
                         if (isBlock || isInline) {
                             let math = '';
@@ -166,6 +178,7 @@ const QuestionCard = ({
                                         const html = formattedLine
                                             .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
                                             .replace(/\*(.*?)\*/g, '<em>$1</em>')
+                                            .replace(/<br\s*\/?>/gi, '<br />')
                                             .replace(/\\text\{___HKD___\}/g, '___HKD___')
                                             .replace(/\\text\{___USD___\}/g, '___USD___')
                                             .replace(/___HKD___/g, 'HK$')
@@ -223,8 +236,20 @@ const QuestionCard = ({
             </div>
 
             {/* Question Text */}
-            <div className="text-gray-900 mb-4 text-base font-medium leading-relaxed">
-                {renderText(displayText, !!(question.diagram_json || question.diagram_svg))}
+            <div className="text-gray-900 mb-6 text-base font-medium leading-relaxed space-y-4">
+                {/* English Question */}
+                {text && (
+                    <div className="question-en border-l-4 border-blue-100 pl-4 py-1">
+                        {renderText(text, !!(question.diagram_json || question.diagram_svg))}
+                    </div>
+                )}
+                
+                {/* Chinese Question */}
+                {text_zh && (
+                    <div className="question-zh border-l-4 border-purple-100 pl-4 py-1 mt-4">
+                        {renderText(text_zh, !!(question.diagram_json || question.diagram_svg))}
+                    </div>
+                )}
             </div>
 
             {(question.diagram_svg || question.content?.diagram_svg) ? (

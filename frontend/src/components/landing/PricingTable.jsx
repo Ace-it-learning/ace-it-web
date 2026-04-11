@@ -19,35 +19,35 @@ const PricingTable = () => {
 
     const plans = [
         {
-            name: t('pricing.tiers.scholar.name'),
-            price: t('pricing.tiers.scholar.price'),
-            period: t('pricing.tiers.scholar.period'),
-            desc: t('pricing.tiers.scholar.desc'),
-            features: t('pricing.tiers.scholar.features'),
+            name: t('pricing.tiers.free.name'),
+            price: t('pricing.tiers.free.price'),
+            period: t('pricing.tiers.free.period'),
+            desc: t('pricing.tiers.free.desc'),
+            features: t('pricing.tiers.free.features'),
             icon: <Zap className="w-5 h-5 text-gray-400" />,
             color: "slate",
-            cta: t('pricing.tiers.scholar.cta')
+            cta: t('pricing.tiers.free.cta')
         },
         {
-            name: t('pricing.tiers.achiever.name'),
-            price: t('pricing.tiers.achiever.price'),
-            period: t('pricing.tiers.achiever.period'),
-            desc: t('pricing.tiers.achiever.desc'),
-            features: t('pricing.tiers.achiever.features'),
+            name: t('pricing.tiers.pro.name'),
+            price: t('pricing.tiers.pro.price'),
+            period: t('pricing.tiers.pro.period'),
+            desc: t('pricing.tiers.pro.desc'),
+            features: t('pricing.tiers.pro.features'),
             icon: <ShieldCheck className="w-5 h-5 text-primary" />,
             color: "primary",
-            cta: t('pricing.tiers.achiever.cta'),
+            cta: t('pricing.tiers.pro.cta'),
             popular: true
         },
         {
-            name: t('pricing.tiers.elite.name'),
-            price: t('pricing.tiers.elite.price'),
-            period: t('pricing.tiers.elite.period'),
-            desc: t('pricing.tiers.elite.desc'),
-            features: t('pricing.tiers.elite.features'),
+            name: t('pricing.tiers.premium.name'),
+            price: t('pricing.tiers.premium.price'),
+            period: t('pricing.tiers.premium.period'),
+            desc: t('pricing.tiers.premium.desc'),
+            features: t('pricing.tiers.premium.features'),
             icon: <Sparkles className="w-5 h-5 text-amber-500" />,
             color: "amber",
-            cta: t('pricing.tiers.elite.cta')
+            cta: t('pricing.tiers.premium.cta')
         }
     ];
 

@@ -2,62 +2,81 @@
     "is_modular": true,
     "name": "Linear & Quadratic Inequalities",
     "name_zh": "一元一次及一元二次不等式",
-    "roadmap": "Master the logic of compound inequalities (AND/OR) on a number line first. Progress to quadratic inequalities using parabolas. Finally, bridge into Section B with linear inequalities in two variables and the graphical interpretation of solutions.",
-    "roadmap_zh": "首先掌握數線上複合不等式（「且」與「或」）的邏輯。進階到運用拋物線求解一元二次不等式。最後，進入 DSE 乙部課題：二元一次不等式及其解的圖像詮釋。",
+    "roadmap": "ROADMAP: Master the 'Golden Rules' of sign reversal first. Progress from simple linear inequalities to compound conditions (AND / OR). Finally, master quadratic inequalities and graphical systems for Section B optimization.",
+    "roadmap_zh": "進度路線：首先掌握等號變向的「黃金律」。從簡單的一元一次不等式進階到複合條件（AND 與 OR）。最後，精通一元二次不等式及平面圖像系統，以應對乙部的最優化題目。",
+    "hero_image": "/images/math/inequality_sign_reversal.png",
     "learning_modules": [
         {
             "module_id": "MOD_01",
-            "title": "One-Variable Inequalities",
-            "title_zh": "一元不等式",
+            "title": "The Golden Rules",
+            "title_zh": "不等式黃金律",
             "concepts": [
                 {
-                    "concept_id": "C01_COMPOUND_VISUAL",
-                    "name": "Compound Conditions on Number Line",
-                    "name_zh": "數線上的複合條件",
-                    "formula": "x > a \\text{ and } x \\leq b \\iff a < x \\leq b",
-                    "key_takeaway": "AND (Intersection) requires overlap. OR (Union) combines all shaded regions. Hollow circles mean 'strictly greater/less', solid circles include the value.",
-                    "key_takeaway_zh": "「且」（交集）要求重疊。「或」（聯集）則合併所有陰影區域。空心圓代表「嚴格大於/小於」，實心圓則包含該值。",
-                    "visual_aid": "/images/math/ineq_number_line.png"
+                    "concept_id": "C01_ADD_SUB",
+                    "name": "Rule 1: Addition & Subtraction",
+                    "name_zh": "規則一：加法與減法",
+                    "formula": "a < b \\implies a + c < b + c",
+                    "key_takeaway": "Adding or subtracting the same value never changes the inequality sign.",
+                    "key_takeaway_zh": "在不等式兩邊同時加上或減去同一個數，不等號的方向保持不變。",
+                    "visual_aid": "/images/math/rule_add_sub.svg"
                 },
                 {
-                    "concept_id": "C02_QUAD_GRAPH_PREMIUM",
-                    "name": "Quadratic Parabolas",
-                    "name_zh": "二次拋物線法",
-                    "formula": "ax^2 + bx + c < 0 \\implies \\text{Region between roots (if } a > 0)",
-                    "key_takeaway": "For $a > 0$, the inequality $< 0$ is the 'valley' between roots, and $> 0$ represents the 'wings' outside the roots.",
-                    "key_takeaway_zh": "當 $a > 0$ 時，不等式 $< 0$ 對應兩根之間的「谷地」，而 $> 0$ 則對應兩根之外的「兩翼」。",
-                    "visual_aid": "/images/math/ineq_quad_shading.png"
+                    "concept_id": "C02_MUL_DIV_POS",
+                    "name": "Rule 2: Multiply by Positive",
+                    "name_zh": "規則二：正數乘除法",
+                    "formula": "a < b \\text{ and } c > 0 \\implies ac < bc",
+                    "key_takeaway": "Multiplying or dividing by a positive number maintains the inequality sign.",
+                    "key_takeaway_zh": "當兩邊同時乘以或除以一個正數時，不等號的方向保持不變。",
+                    "visual_aid": "/images/math/rule_mul_pos.svg"
+                },
+                {
+                    "concept_id": "C03_MUL_DIV_NEG",
+                    "name": "Rule 3: The Golden Rule (Negative)",
+                    "name_zh": "規則三：負數乘除「黃金律」",
+                    "formula": "a < b \\text{ and } c < 0 \\implies ac > bc",
+                    "key_takeaway": "IMPORTANT: When multiplying or dividing by a NEGATIVE number, you MUST reverse the inequality sign.",
+                    "key_takeaway_zh": "重要提示：當兩邊同時乘以或除以一個負數時，必須將不等號的方向反轉。",
+                    "visual_aid": "/images/math/rule_mul_neg.svg"
                 }
             ]
         },
         {
             "module_id": "MOD_02",
-            "title": "Two-Variable Inequalities",
-            "title_zh": "二元不等式",
+            "title": "Compound & Quadratic",
+            "title_zh": "複合與一元二次不等式",
             "concepts": [
                 {
-                    "concept_id": "C03_LINEAR_2V",
-                    "name": "Shaded Regions in 2D",
-                    "name_zh": "平面上的陰影區域",
-                    "formula": "ax + by + c \\geq 0",
-                    "key_takeaway": "A linear inequality in two variables represents a half-plane. Use a 'test point' like $(0,0)$ to determine which side of the boundary line to shade.",
-                    "key_takeaway_zh": "二元一次不等式代表一個半平面。使用如 $(0,0)$ 的「測試點」來確定邊界線的哪一側應畫上陰影。",
-                    "visual_aid": "/images/math/ineq_linear_2v.png"
+                    "concept_id": "C04_COMPOUND",
+                    "name": "AND vs OR (Compound)",
+                    "name_zh": "「且」與「或」（複合）",
+                    "formula": "x > a \\cap x < b \\text{ vs } x < a \\cup x > b",
+                    "key_takeaway": "AND requires BOTH conditions to be true (the overlap region). OR requires AT LEAST one condition to be true (the union region).",
+                    "key_takeaway_zh": "「且」(AND) 要求兩個條件同時成立（重疊區域）；「或」(OR) 要求至少一個條件成立（聯集區域）。",
+                    "visual_aid": null
+                },
+                {
+                    "concept_id": "C05_QUADRATIC",
+                    "name": "Quadratic Strategy",
+                    "name_zh": "一元二次不等式策略",
+                    "formula": "(x-a)(x-b) < 0 \\implies a < x < b",
+                    "key_takeaway": "For a positive leading coefficient: - The 'less than 0' region is between roots. - The 'greater than 0' region is outside roots.",
+                    "key_takeaway_zh": "當首項係數為正時： - 「小於 0」的解位於兩根之間。 - 「大於 0」的解位於兩根之外。",
+                    "visual_aid": null
                 }
             ]
         },
         {
             "module_id": "MOD_03",
-            "title": "Section B: Always Positive/Negative",
-            "title_zh": "乙部課題：恆正與恆負",
+            "title": "DSE Section B: Optimization",
+            "title_zh": "乙部課題：線性規劃最優化",
             "concepts": [
                 {
-                    "concept_id": "C04_DELTA_INEQ",
-                    "name": "Inequalities with no roots ($\\Delta < 0$)",
-                    "name_zh": "無根不等式 ($\\Delta < 0$)",
-                    "formula": "ax^2 + bx + c > 0 \\text{ for all } x \\iff a > 0 \\text{ and } \\Delta < 0",
-                    "key_takeaway": "If $\\Delta < 0$, the parabola never touches the x-axis. It is either 'always positive' or 'always negative' for all real $x$. This is a frequent Section B theory point.",
-                    "key_takeaway_zh": "若 $\\Delta < 0$，拋物線永遠不會接觸 x 軸。對於所有實數 x，它不是「恆正」就是「恆負」。這是乙部常用的理論考點。",
+                    "concept_id": "C06_LINEAR_PROGRAMMING",
+                    "name": "Linear Programming",
+                    "name_zh": "線性規劃",
+                    "formula": "P = ax + by",
+                    "key_takeaway": "Identify the feasible region. Maximum or minimum values of the objective function usually occur at the vertices (corners) of this region.",
+                    "key_takeaway_zh": "首先確定可行解區域。目標函數的最大值或最小值通常出現在該區域的頂點（角點）上。",
                     "visual_aid": null
                 }
             ]

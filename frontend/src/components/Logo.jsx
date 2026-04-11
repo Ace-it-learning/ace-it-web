@@ -5,6 +5,8 @@ const Logo = ({ className = "h-10 w-auto" }) => {
         <svg
             viewBox="0 0 100 100"
             className={className}
+            width="40"
+            height="40"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
         >

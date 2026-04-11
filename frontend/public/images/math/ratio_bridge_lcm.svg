@@ -1,0 +1,30 @@
+<svg viewBox="0 0 500 250" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3B82F6" />
+    </marker>
+  </defs>
+  <rect width="500" height="250" fill="#FFFFFF" />
+  
+  <!-- Labels -->
+  <text x="150" y="50" font-family="sans-serif" font-size="20" text-anchor="middle" fill="#1E293B" font-weight="bold">a : b</text>
+  <text x="350" y="50" font-family="sans-serif" font-size="20" text-anchor="middle" fill="#1E293B" font-weight="bold">b : c</text>
+  
+  <!-- Numbers -->
+  <text x="135" y="100" font-family="sans-serif" font-size="32" text-anchor="middle" fill="#1E293B">2 :</text>
+  <text x="165" y="100" font-family="sans-serif" font-size="32" text-anchor="middle" fill="#3B82F6" font-weight="bold">3</text>
+  
+  <text x="335" y="100" font-family="sans-serif" font-size="32" text-anchor="middle" fill="#3B82F6" font-weight="bold">4</text>
+  <text x="365" y="100" font-family="sans-serif" font-size="32" text-anchor="middle" fill="#1E293B">: 5</text>
+  
+  <!-- LCM Box -->
+  <rect x="175" y="145" width="150" height="40" rx="20" fill="#3B82F6" fill-opacity="0.1" stroke="#3B82F6" stroke-width="2" />
+  <text x="250" y="171" font-family="sans-serif" font-size="18" text-anchor="middle" fill="#3B82F6" font-weight="bold">LCM(3, 4) = 12</text>
+  
+  <!-- Arrows -->
+  <path d="M 165 110 L 220 142" stroke="#3B82F6" stroke-width="2" fill="none" marker-end="url(#arrowhead)" />
+  <path d="M 335 110 L 280 142" stroke="#3B82F6" stroke-width="2" fill="none" marker-end="url(#arrowhead)" />
+  
+  <!-- Result -->
+  <text x="250" y="230" font-family="sans-serif" font-size="36" text-anchor="middle" fill="#F59E0B" font-weight="bold">8 : 12 : 15</text>
+</svg>

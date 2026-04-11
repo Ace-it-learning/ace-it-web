@@ -1,0 +1,402 @@
+[
+  {
+    "id": "ct_mcq_161",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": [
+      "math_alg_apgp",
+      "math_alg_log_exp"
+    ],
+    "marks": 3,
+    "difficulty": 7,
+    "paper": 2,
+    "section": "A",
+    "question_en": "In a geometric progression, the 3rd term is 24 and the 6th term is 3. Find the smallest value of $n$ such that the $n$-th term is less than 0.01.",
+    "question_zh": "在一個等比數列中，第 3 項為 24，第 6 項為 3。求使得第 $n$ 項小於 0.01 的最小整數 $n$。",
+    "options": [
+      "A. 14",
+      "B. 15",
+      "C. 16",
+      "D. 17"
+    ],
+    "correct_answer": "B",
+    "solution_steps_en": [
+      "$ar^2 = 24$ and $ar^5 = 3$. Dividing gives $r^3 = 1/8 \\Rightarrow r = 1/2$.",
+      "$a(1/4) = 24 \\Rightarrow a = 96$.",
+      "We want $96(0.5)^{n-1} < 0.01 \\Rightarrow (0.5)^{n-1} < 0.0001041...$",
+      "Using logs: $(n-1) \\log 0.5 < \\log 0.0001041 \\Rightarrow (n-1) > 13.22 \\Rightarrow n > 14.22$.",
+      "Smallest integer $n = 15$."
+    ],
+    "solution_steps_zh": [
+      "$ar^2 = 24$, $ar^5 = 3 \\Rightarrow r^3 = 1/8 \\Rightarrow r = 1/2$。",
+      "$a(1/4) = 24 \\Rightarrow a = 96$。",
+      "$96(0.5)^{n-1} < 0.01 \\Rightarrow (0.5)^{n-1} < 0.0001041$。",
+      "取對數：$(n-1) \\log 0.5 < \\log 0.0001041 \\Rightarrow n-1 > 13.22 \\Rightarrow n = 15$。"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_162",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": [
+      "math_alg_apgp",
+      "math_alg_log_exp"
+    ],
+    "marks": 3,
+    "difficulty": 5,
+    "paper": 2,
+    "section": "A",
+    "question_en": "The population of a city doubles every 5 years. If the current population is $P_0$, find the minimum number of years required for the population to exceed $10P_0$.",
+    "question_zh": "某城市的入口每 5 年翻倍一次。若現時人口為 $P_0$，求人口超過 $10P_0$ 所需的最小年數。",
+    "options": [
+      "A. 16",
+      "B. 17",
+      "C. 18",
+      "D. 19"
+    ],
+    "correct_answer": "B",
+    "solution_steps_en": [
+      "$P = P_0 (2)^{t/5}$. We need $P_0 (2)^{t/5} > 10P_0 \\Rightarrow (2)^{t/5} > 10$.",
+      "Taking logs: $\\frac{t}{5} \\log 2 > \\log 10 = 1$.",
+      "$t > \\frac{5}{\\log 2} \\approx \\frac{5}{0.3010} \\approx 16.61$.",
+      "The minimum number of years is 17."
+    ],
+    "solution_steps_zh": [
+      "$P = P_0 (2)^{t/5}$。我們需要 $(2)^{t/5} > 10$。",
+      "取對數：$\\frac{t}{5} \\log 2 > 1 \\Rightarrow t > 5 / \\log 2 \\approx 16.61$。",
+      "最小整數年數為 17 年。"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_163",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": [
+      "math_geo_coord",
+      "math_geo_circle_eq"
+    ],
+    "marks": 3,
+    "difficulty": 7,
+    "paper": 2,
+    "section": "A",
+    "question_en": "In the figure, the line $y = mx + 3$ is tangent to the circle $x^2 + y^2 = 5$. Find the possible value(s) of $m$.",
+    "question_zh": "圖中，直線 $y = mx + 3$ 與圓 $x^2 + y^2 = 5$ 相切。求 $m$ 的可能值。",
+    "options": [
+      "A. $\\pm 1/2$",
+      "B. $\\pm 2/\\sqrt{5}$",
+      "C. $\\pm \\sqrt{5}/2$",
+      "D. $\\pm 2/3$"
+    ],
+    "correct_answer": "B",
+    "solution_steps_en": [
+      "The distance from the center (0,0) to the line $mx - y + 3 = 0$ must equal the radius $\\sqrt{5}$.",
+      "Distance formula: $\\frac{|m(0) - (0) + 3|}{\\sqrt{m^2 + (-1)^2}} = \\sqrt{5}$.",
+      "$\\frac{3}{\\sqrt{m^2 + 1}} = \\sqrt{5} \\Rightarrow 9 = 5(m^2 + 1)$.",
+      "$9 = 5m^2 + 5 \\Rightarrow 5m^2 = 4 \\Rightarrow m^2 = 4/5$.",
+      "$m = \\pm \\frac{2}{\\sqrt{5}}$."
+    ],
+    "solution_steps_zh": [
+      "圓心 (0,0) 到直線 $mx - y + 3 = 0$ 的距離須等於半徑 $\\sqrt{5}$。",
+      "距離公式：$\\frac{|-0+3|}{\\sqrt{m^2+1}} = \\sqrt{5} \\Rightarrow 9 = 5(m^2+1)$。",
+      "$4 = 5m^2 \\Rightarrow m^2 = 4/5 \\Rightarrow m = \\pm 2/\\sqrt{5}$。"
+    ],
+    "diagram_json": {
+      "elements": [
+        { "type": "axes" },
+        { "type": "circle", "cx": 200, "cy": 150, "r": 89.4, "stroke": "#7c3aed", "strokeWidth": 2, "fill": "rgba(124, 58, 237, 0.05)" },
+        { "type": "line", "x1": 80, "y1": 240, "x2": 320, "y2": 60, "stroke": "#333", "strokeWidth": 2, "label": "L: y=mx+3", "labelDy": -20 },
+        { "type": "point", "x": 200, "y": 150, "label": "O(0,0)", "labelDy": 15 },
+        { "type": "point", "x": 120, "y": 210, "label": "r=√5", "labelDx": -20 }
+      ],
+      "canvas": { "width": 400, "height": 300, "viewBox": "50 50 300 200" }
+    },
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_164",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": [
+      "math_geo_coord",
+      "math_geo_circle_eq"
+    ],
+    "marks": 3,
+    "difficulty": 5,
+    "paper": 2,
+    "section": "A",
+    "question_en": "As shown in the coordinate plane, a circle passes through the origin $(0,0)$ and has its center at $(3,4)$. Which of the following is the equation of the circle?",
+    "question_zh": "如坐標平面圖中所示，一圓經過原點 $(0,0)$ 且圓心位於 $(3,4)$。下列何者為該圓的方程？",
+    "options": [
+      "A. $x^2 + y^2 - 3x - 4y = 0$",
+      "B. $x^2 + y^2 - 6x - 8y = 0$",
+      "C. $x^2 + y^2 + 6x + 8y = 0$",
+      "D. $x^2 + y^2 - 6x - 8y = 25$"
+    ],
+    "correct_answer": "B",
+    "solution_steps_en": [
+      "Radius squared $r^2 = (3-0)^2 + (4-0)^2 = 9 + 16 = 25$.",
+      "Equation: $(x-3)^2 + (y-4)^2 = 25$.",
+      "Expanding: $x^2 - 6x + 9 + y^2 - 8y + 16 = 25$.",
+      "$x^2 + y^2 - 6x - 8y = 0$."
+    ],
+    "solution_steps_zh": [
+      "半徑平方 $r^2 = (3-0)^2 + (4-0)^2 = 25$。",
+      "方程：$(x-3)^2 + (y-4)^2 = 25$。",
+      "展開：$x^2 - 6x + 9 + y^2 - 8y + 16 = 25$。",
+      "$x^2 + y^2 - 6x - 8y = 0$。"
+    ],
+    "diagram_json": {
+      "elements": [
+        { "type": "axes" },
+        { "type": "circle", "cx": 290, "cy": 100, "r": 150, "stroke": "#7c3aed", "strokeWidth": 2, "fill": "rgba(124, 58, 237, 0.05)" },
+        { "type": "point", "x": 200, "y": 150, "label": "(0,0)", "labelDx": -25, "labelDy": 25 },
+        { "type": "point", "x": 290, "y": 100, "label": "C(3,4)", "labelDy": -15 },
+        { "type": "line", "x1": 200, "y1": 150, "x2": 290, "y2": 100, "stroke": "#333", "strokeWidth": 2, "strokeDasharray": "5,5", "label": "r=5", "labelDx": -10, "labelDy": -10 }
+      ],
+      "canvas": { "width": 400, "height": 300, "viewBox": "100 50 250 200" }
+    },
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_165",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": [
+      "math_trig_applications",
+      "math_mensuration"
+    ],
+    "marks": 3,
+    "difficulty": 7,
+    "paper": 2,
+    "section": "A",
+    "question_en": "In the figure, the semi-vertical angle of a right circular cone is $30^\\circ$. Find the ratio of its curved surface area to its base area.",
+    "question_zh": "圖中，一直立圓錐的半頂角為 $30^\\circ$。求其曲面面積與底面積之比。",
+    "options": [
+      "A. $1:2$",
+      "B. $2:1$",
+      "C. $3:1$",
+      "D. $\\sqrt{3}:1$"
+    ],
+    "correct_answer": "B",
+    "solution_steps_en": [
+      "Let radius be $r$ and height be $h$. $\\sin 30^\\circ = r/l$, where $l$ is slant height.",
+      "$1/2 = r/l \\Rightarrow l = 2r$.",
+      "Curved surface area $S = \\pi r l = \\pi r (2r) = 2\\pi r^2$.",
+      "Base area $B = \\pi r^2$.",
+      "Ratio $S:B = 2\\pi r^2 : \\pi r^2 = 2:1$."
+    ],
+    "solution_steps_zh": [
+      "設半徑為 $r$，母線（側面高）為 $l$。$\\sin 30^\\circ = r/l$。",
+      "$1/2 = r/l \\Rightarrow l = 2r$。",
+      "曲面面積 $S = \\pi r l = 2\\pi r^2$。",
+      "底面積 $B = \\pi r^2$。",
+      "比例 $S:B = 2:1$。"
+    ],
+    "diagram_json": {
+      "elements": [
+        { "type": "ellipse", "cx": 200, "cy": 250, "rx": 115, "ry": 25, "stroke": "#333", "strokeWidth": 2 },
+        { "type": "line", "x1": 85, "y1": 250, "x2": 200, "y2": 50, "stroke": "#7c3aed", "strokeWidth": 2 },
+        { "type": "line", "x1": 315, "y1": 250, "x2": 200, "y2": 50, "stroke": "#7c3aed", "strokeWidth": 2 },
+        { "type": "line", "x1": 200, "y1": 250, "x2": 200, "y2": 50, "stroke": "#dc2626", "strokeDasharray": "5,5", "strokeWidth": 1.5 },
+        { "type": "arc", "cx": 200, "cy": 50, "r": 40, "startAngle": 270, "endAngle": 240, "stroke": "#d97706", "label": "30°" }
+      ],
+      "canvas": { "width": 400, "height": 300, "viewBox": "70 0 260 280" }
+    },
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_166",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": [
+      "math_trig_applications",
+      "math_mensuration"
+    ],
+    "marks": 3,
+    "difficulty": 5,
+    "paper": 2,
+    "section": "A",
+    "question_en": "As shown in the figure, $VABCD$ is a right pyramid with a square base $ABCD$ of side length 10 cm. The height $VM$ of the pyramid is 12 cm, where $M$ is the center of the base. Find the angle between the edge $VB$ and the base.",
+    "question_zh": "如圖所示，$VABCD$ 為一直立稜錐，其正方形底 $ABCD$ 的邊長為 10 cm。稜錐的高度 $VM$ 為 12 cm，其中 $M$ 為底面的中心。求側稜 $VB$ 與底面的交角。",
+    "options": [
+      "A. $45.0^\\circ$",
+      "B. $50.2^\\circ$",
+      "C. $59.5^\\circ$",
+      "D. $67.4^\\circ$"
+    ],
+    "correct_answer": "C",
+    "solution_steps_en": [
+      "The angle is $\\angle VBM$. $M$ is the center of the square base $ABCD$.",
+      "$MB = \\frac{1}{2} (\\text{Diagonal}) = \\frac{1}{2} \\sqrt{10^2 + 10^2} = 5\\sqrt{2} \\approx 7.07$ cm.",
+      "In right-angled $\\triangle VBM$, $\\tan(\\angle VBM) = \\frac{VM}{MB} = \\frac{12}{5\\sqrt{2}} \\approx 1.697$.",
+      "$\\angle VBM = \\arctan(1.697) \\approx 59.5^\\circ$."
+    ],
+    "solution_steps_zh": [
+      "該角為 $\\angle VBM$。$M$ 為底面正方形的中心。",
+      "$MB = 1/2 \\times 10\\sqrt{2} = 5\\sqrt{2} \\approx 7.07$ cm。",
+      "在直角 $\\triangle VBM$ 中，$\\tan(\\angle VBM) = 12 / (5\\sqrt{2}) \\approx 1.697$。",
+      "$\\angle VBM \\approx 59.5^\\circ$。"
+    ],
+    "diagram_json": {
+      "elements": [
+        { "type": "polygon", "points": [{ "x": 100, "y": 250 }, { "x": 250, "y": 250 }, { "x": 300, "y": 200 }, { "x": 150, "y": 200 }], "fill": "rgba(124, 58, 237, 0.05)", "stroke": "#64748b" },
+        { "type": "line", "x1": 200, "y1": 225, "x2": 200, "y2": 50, "stroke": "#dc2626", "strokeDasharray": "5,5", "label": "h=12" },
+        { "type": "line", "x1": 200, "y1": 50, "x2": 250, "y2": 250, "stroke": "#7c3aed", "strokeWidth": 2 },
+        { "type": "arc", "cx": 250, "cy": 250, "r": 40, "startAngle": 150, "endAngle": 180, "stroke": "#d97706", "label": "θ" },
+        { "type": "point", "x": 200, "y": 225, "label": "M", "labelDy": 20 }
+      ],
+      "canvas": { "width": 400, "height": 300, "viewBox": "80 30 240 250" }
+    },
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_167",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": [
+      "math_alg_quadratics",
+      "math_alg_functions"
+    ],
+    "marks": 3,
+    "difficulty": 5,
+    "paper": 2,
+    "section": "A",
+    "question_en": "The vertex of the parabola $y = x^2 - 6x + k$ lies on the $x$-axis. Find the value of $k$.",
+    "question_zh": "拋物線 $y = x^2 - 6x + k$ 的頂點位於 $x$ 軸上。求 $k$ 的值。",
+    "options": [
+      "A. 3",
+      "B. 6",
+      "C. 9",
+      "D. 12"
+    ],
+    "correct_answer": "C",
+    "solution_steps_en": [
+      "If the vertex lies on the $x$-axis, the quadratic has only one real root (a perfect square).",
+      "The discriminant $\\Delta = b^2 - 4ac$ must be zero.",
+      "$(-6)^2 - 4(1)(k) = 0 \\Rightarrow 36 - 4k = 0$.",
+      "$4k = 36 \\Rightarrow k = 9$."
+    ],
+    "solution_steps_zh": [
+      "頂點在 $x$ 軸上代表該二次方程只有一實根（完全平方式）。",
+      "判別式 $\\Delta = (-6)^2 - 4(k) = 0$。",
+      "$36 = 4k \\Rightarrow k = 9$。"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_168",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": [
+      "math_alg_quadratics",
+      "math_alg_functions"
+    ],
+    "marks": 3,
+    "difficulty": 7,
+    "paper": 2,
+    "section": "A",
+    "question_en": "In the figure, a parabola passes through $(0,5)$ and has its vertex at $(2,1)$. Find the equation of the axis of symmetry of the parabola.",
+    "question_zh": "圖中，一拋物線經過 $(0,5)$ 且頂點位於 $(2,1)$。求該拋物線的對稱軸方程。",
+    "options": [
+      "A. $x = 1$",
+      "B. $x = 2$",
+      "C. $y = 1$",
+      "D. $y = 2$"
+    ],
+    "correct_answer": "B",
+    "solution_steps_en": [
+      "For any parabola written in vertex form $y = a(x-h)^2 + k$, the vertex is $(h,k)$.",
+      "Here, the vertex is $(2,1)$, so the axis of symmetry is the vertical line passing through $x=2$.",
+      "The equation is $x=2$."
+    ],
+    "solution_steps_zh": [
+      "對於頂點式 $y = a(x-h)^2 + k$，頂點為 $(h,k)$。",
+      "頂點為 $(2,1)$，因此對稱軸為通過 $x=2$ 的鉛垂線。",
+      "方程為 $x=2$。"
+    ],
+    "diagram_json": {
+      "elements": [
+        { "type": "axes" },
+        { "type": "polyline", "points": [{ "x": 100, "y": 40 }, { "x": 150, "y": 140 }, { "x": 200, "y": 200 }, { "x": 250, "y": 140 }, { "x": 300, "y": 40 }], "stroke": "#7c3aed", "strokeWidth": 2 },
+        { "type": "point", "x": 200, "y": 200, "label": "(2,1)", "labelDy": 20 },
+        { "type": "point", "x": 150, "y": 140, "label": "(0,5)", "labelDx": -25 },
+        { "type": "line", "x1": 200, "y1": 40, "x2": 200, "y2": 260, "stroke": "#dc2626", "strokeDasharray": "5,5", "label": "x=2" }
+      ],
+      "canvas": { "width": 400, "height": 300, "viewBox": "50 30 300 240" }
+    },
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_169",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": [
+      "math_alg_polynomials",
+      "math_alg_log_exp"
+    ],
+    "marks": 3,
+    "difficulty": 7,
+    "paper": 2,
+    "section": "A",
+    "question_en": "Find the number of real roots of the equation $\\log_{10}(x^2 - 3x + 2) = 0$.",
+    "question_zh": "求方程 $\\log_{10}(x^2 - 3x + 2) = 0$ 的實根數目。",
+    "options": [
+      "A. 0",
+      "B. 1",
+      "C. 2",
+      "D. Infinitely many"
+    ],
+    "correct_answer": "C",
+    "solution_steps_en": [
+      "$\\log_{10}(x^2 - 3x + 2) = 0 \\Rightarrow x^2 - 3x + 2 = 10^0 = 1$.",
+      "$x^2 - 3x + 1 = 0$.",
+      "Discriminant $\\Delta = (-3)^2 - 4(1)(1) = 9 - 4 = 5 > 0$.",
+      "There are 2 distinct real roots.",
+      "Check domain: $x^2 - 3x + 2$ must be $> 0$.",
+      "When $x^2 - 3x + 2 = 1$, it is clearly $> 0$. Both roots are valid."
+    ],
+    "solution_steps_zh": [
+      "$\\log_{10}(x^2 - 3x + 2) = 0 \\Rightarrow x^2 - 3x + 2 = 1$。",
+      "$x^2 - 3x + 1 = 0$。",
+      "判別式 $\\Delta = 9 - 4 = 5 > 0$。",
+      "存在 2 個相異實根。",
+      "檢查定義域：由於 $x^2 - 3x + 2 = 1 > 0$，兩根均有效。"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_170",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": [
+      "math_alg_variations",
+      "math_alg_apgp"
+    ],
+    "marks": 3,
+    "difficulty": 5,
+    "paper": 2,
+    "section": "A",
+    "question_en": "The value of $y$ varies as $2^n$ where $n$ is a positive integer. If the first term $(n=1)$ is 6, find the 10th term $(n=10)$.",
+    "question_zh": "已知 $y$ 隨 $2^n$ 而變，其中 $n$ 為正整數。若第一項 $(n=1)$ 為 6，求第 10 項 $(n=10)$。",
+    "options": [
+      "A. 1536",
+      "B. 3072",
+      "C. 6144",
+      "D. 1024"
+    ],
+    "correct_answer": "B",
+    "solution_steps_en": [
+      "$y = k \\cdot 2^n$.",
+      "When $n=1$, $y=6 \\Rightarrow 6 = k \\cdot 2^1 \\Rightarrow k = 3$.",
+      "When $n=10$, $y = 3 \\cdot 2^{10} = 3 \\cdot 1024 = 3072$."
+    ],
+    "solution_steps_zh": [
+      "$y = k \\cdot 2^n$。",
+      "當 $n=1$，$y=6 \\Rightarrow 6 = 2k \\Rightarrow k = 3$。",
+      "當 $n=10$，$y = 3 \\times 2^{10} = 3 \\times 1024 = 3072$。"
+    ],
+    "status": "approved"
+  }
+]

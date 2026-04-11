@@ -1,0 +1,350 @@
+[
+  {
+    "id": "ct_mcq_251",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_alg_indices"],
+    "marks": 1,
+    "difficulty": 5,
+    "paper": 2,
+    "section": "A",
+    "question_en": "Simplify $\\frac{(2a^3)^{-2}}{a^{-4}}$ and express the answer with positive indices.",
+    "question_zh": "簡化 $\\frac{(2a^3)^{-2}}{a^{-4}}$，並以正指數表示答案。",
+    "options": [
+      "A. $\\frac{1}{4a^2}$",
+      "B. $\\frac{1}{2a^2}$",
+      "C. $\\frac{a^2}{4}$",
+      "D. $\\frac{a^2}{2}$"
+    ],
+    "correct_answer": "A",
+    "solution_steps_en": [
+      "$(2a^3)^{-2} = 2^{-2} (a^3)^{-2} = \\frac{1}{4} a^{-6}$.",
+      "Expression becomes $\\frac{\\frac{1}{4} a^{-6}}{a^{-4}} = \\frac{1}{4} a^{-6 - (-4)} = \\frac{1}{4} a^{-2}$.",
+      "Positive index: $\\frac{1}{4a^2}$."
+    ],
+    "solution_steps_zh": [
+      "$(2a^3)^{-2} = 2^{-2} (a^3)^{-2} = \\frac{1}{4} a^{-6}$。",
+      "表達式變為 $\\frac{\\frac{1}{4} a^{-6}}{a^{-4}} = \\frac{1}{4} a^{-6 - (-4)} = \\frac{1}{4} a^{-2}$。",
+      "正指數：$\\frac{1}{4a^2}$。"
+    ],
+    "diagram_json": null,
+    "tags": ["indices", "algebra"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_252",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_geo_circles"],
+    "marks": 1,
+    "difficulty": 6,
+    "paper": 2,
+    "section": "A",
+    "question_en": "In the figure, $AB$ is a tangent to the circle at $B$. $BCD$ is a straight line through the center. If $\\angle ABD = 30^\\circ$, find $\\angle BDC$.",
+    "question_zh": "圖中，$AB$ 是圓在 $B$ 點的切線。$BCD$ 是通過圓心的直線。若 $\\angle ABD = 30^\\circ$，求 $\\angle BDC$。",
+    "options": [
+      "A. 30°",
+      "B. 45°",
+      "C. 60°",
+      "D. 75°"
+    ],
+    "correct_answer": "C",
+    "solution_steps_en": [
+      "Since $BCD$ is a diameter, $\\angle CBD = 90^\\circ$ is NOT correct as $BCD$ is a line. Wait.",
+      "Correction: $AB$ tangent at $B$, $OB \\perp AB$. $\\angle OBA = 90^\\circ$.",
+      "Given $\\angle ABD = 30^\\circ$, then $\\angle OBD = 90^\\circ - 30^\\circ = 60^\\circ$.",
+      "In $\\triangle OBD$, $OB = OD$ (radii). So $\\angle ODB = \\angle OBD = 60^\\circ$.",
+      "Thus $\\angle BDC = 60^\\circ$."
+    ],
+    "solution_steps_zh": [
+      "$AB$ 是 $B$ 點的切線，故 $OB \\perp AB$，$\\angle OBA = 90^\\circ$。",
+      "已知 $\\angle ABD = 30^\\circ$，則 $\\angle OBD = 90^\\circ - 30^\\circ = 60^\\circ$。",
+      "在 $\\triangle OBD$ 中，$OB = OD$（半徑），故 $\\angle ODB = \\angle OBD = 60^\\circ$。",
+      "因此 $\\angle BDC = 60^\\circ$。"
+    ],
+    "diagram_json": null,
+    "tags": ["circle-geometry", "tangents"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_253",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_stat_prob"],
+    "marks": 1,
+    "difficulty": 5,
+    "paper": 2,
+    "section": "A",
+    "question_en": "A class consists of 20 boys and 15 girls. The mean score of the boys in a test is 60, and the mean score of the girls is 70. Find the mean score of the whole class.",
+    "question_zh": "一班有 20 名男孩及 15 名女孩。男孩在測驗中的平均分為 60，女孩的平均分為 70。求全班的平均分。",
+    "options": [
+      "A. 64.3",
+      "B. 65.0",
+      "C. 65.7",
+      "D. 66.0"
+    ],
+    "correct_answer": "A",
+    "solution_steps_en": [
+      "Total score of boys: $20 \\times 60 = 1200$.",
+      "Total score of girls: $15 \\times 70 = 1050$.",
+      "Total score of class: $1200 + 1050 = 2250$.",
+      "Total students: $20 + 15 = 35$.",
+      "Class mean: $2250 / 35 \\approx 64.2857 \\approx 64.3$."
+    ],
+    "solution_steps_zh": [
+      "男孩總分：$20 \\times 60 = 1200$。",
+      "女孩總分：$15 \\times 70 = 1050$。",
+      "全班總分：$1200 + 1050 = 2250$。",
+      "總學生數：$20 + 15 = 35$。",
+      "全班平均分：$2250 / 35 \\approx 64.3$。"
+    ],
+    "diagram_json": null,
+    "tags": ["weighted-mean", "statistics"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_254",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_trig_3d"],
+    "marks": 1,
+    "difficulty": 7,
+    "paper": 2,
+    "section": "B",
+    "question_en": "In a right pyramid $VABCD$ with a square base $ABCD$, the length of the base side is 10 and the height of the pyramid is 12. Find the angle between the slant edge $VA$ and the base $ABCD$ correct to the nearest degree.",
+    "question_zh": "在一個底面為正方形 $ABCD$ 的直四稜錐 $VABCD$ 中，底面邊長為 10，高為 12。求斜稜 $VA$ 與底面 $ABCD$ 之間的交角（準確至最接近的度）。",
+    "options": [
+      "A. 50°",
+      "B. 59°",
+      "C. 67°",
+      "D. 71°"
+    ],
+    "correct_answer": "B",
+    "solution_steps_en": [
+      "Let $O$ be the center of the base. $VO = 12$.",
+      "Base diagonal $AC = \\sqrt{10^2 + 10^2} = 10\\sqrt{2} = 14.14$.",
+      "$OA = \\frac{1}{2} AC = 5\\sqrt{2} \\approx 7.071$.",
+      "The angle $\\theta$ between $VA$ and the base is in $\\triangle VOA$.",
+      "$\\tan \\theta = \\frac{VO}{OA} = \\frac{12}{5\\sqrt{2}} \\approx 1.697$.",
+      "$\\theta = \\tan^{-1}(1.697) \\approx 59.49^\\circ \\approx 59^\\circ$."
+    ],
+    "solution_steps_zh": [
+      "設 $O$ 為底面中心。$VO = 12$。",
+      "底面對角線 $AC = \\sqrt{10^2 + 10^2} = 10\\sqrt{2} \\approx 14.14$。",
+      "$OA = \\frac{1}{2} AC = 5\\sqrt{2} \\approx 7.071$。",
+      "$VA$ 與底面之間的交角 $\\theta$ 位於 $\\triangle VOA$ 中。",
+      "$\\tan \\theta = \\frac{VO}{OA} = \\frac{12}{5\\sqrt{2}} \\approx 1.697$。",
+      "$\\theta \\approx 59.49^\\circ \\approx 59^\\circ$。"
+    ],
+    "diagram_json": null,
+    "tags": ["3d-trig", "pyramid"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_255",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_geo_coord"],
+    "marks": 1,
+    "difficulty": 6,
+    "paper": 2,
+    "section": "A",
+    "question_en": "Find the equation of the straight line passing through the point $(1, 2)$ and perpendicular to the line $3x + 4y - 5 = 0$.",
+    "question_zh": "求通過點 $(1, 2)$ 且垂直於直線 $3x + 4y - 5 = 0$ 的直線方程。",
+    "options": [
+      "A. $4x - 3y + 2 = 0$",
+      "B. $4x - 3y + 10 = 0$",
+      "C. $3x + 4y - 11 = 0$",
+      "D. $3x + 4y + 11 = 0$"
+    ],
+    "correct_answer": "A",
+    "solution_steps_en": [
+      "Slope of $3x + 4y - 5 = 0$ is $m_1 = -3/4$.",
+      "Slope of perpendicular line is $m_2 = \\frac{-1}{-3/4} = 4/3$.",
+      "Equation using $(1, 2)$: $y - 2 = \\frac{4}{3}(x - 1)$.",
+      "$3y - 6 = 4x - 4 \\implies 4x - 3y + 2 = 0$."
+    ],
+    "solution_steps_zh": [
+      "直線 $3x + 4y - 5 = 0$ 的斜率為 $m_1 = -3/4$。",
+      "垂直線的斜率為 $m_2 = \\frac{-1}{-3/4} = 4/3$。",
+      "使用點 $(1, 2)$ 的方程：$y - 2 = \\frac{4}{3}(x - 1)$。",
+      "$3y - 6 = 4x - 4 \\implies 4x - 3y + 2 = 0$。"
+    ],
+    "diagram_json": null,
+    "tags": ["coordinate-geometry", "straight-lines"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_256",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_alg_subject"],
+    "marks": 1,
+    "difficulty": 5,
+    "paper": 2,
+    "section": "A",
+    "question_en": "If $y = \\frac{x+1}{x-1}$, express $x$ in terms of $y$.",
+    "question_zh": "若 $y = \\frac{x+1}{x-1}$，將 $x$ 以 $y$ 表示。",
+    "options": [
+      "A. $x = \\frac{y+1}{y-1}$",
+      "B. $x = \\frac{y-1}{y+1}$",
+      "C. $x = \\frac{1-y}{1+y}$",
+      "D. $x = \\frac{y+1}{1-y}$"
+    ],
+    "correct_answer": "A",
+    "solution_steps_en": [
+      "$y(x-1) = x+1$.",
+      "$yx - y = x + 1$.",
+      "$yx - x = y + 1$.",
+      "$x(y-1) = y + 1 \\implies x = \\frac{y+1}{y-1}$."
+    ],
+    "solution_steps_zh": [
+      "$y(x-1) = x+1$。",
+      "$yx - y = x + 1$。",
+      "$yx - x = y + 1$。",
+      "$x(y-1) = y + 1 \\implies x = \\frac{y+1}{y-1}$。"
+    ],
+    "diagram_json": null,
+    "tags": ["change-of-subject", "algebra"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_sa_257",
+    "type": "short_answer",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_alg_variation"],
+    "marks": 11,
+    "difficulty": 7,
+    "paper": 1,
+    "section": "A",
+    "question_en": "It is given that $y$ is the sum of two parts, one part is a constant and the other part varies directly as $x^2$. When $x = 2, y = 13$; when $x = 3, y = 23$.\n(a) Find $y$ in terms of $x$. (6 marks)\n(b) Find the value of $y$ when $x = 5$. (5 marks)",
+    "question_zh": "已知 $y$ 為兩部分之和，一部分為常數，另一部分隨 $x^2$ 正變。當 $x = 2, y = 13$；當 $x = 3, y = 23$。\n(a) 將 $y$ 以 $x$ 表示。(6分)\n(b) 求當 $x = 5$ 時 $y$ 的值。(5分)",
+    "solution_steps_en": [
+      "(a) Let $y = k_1 + k_2 x^2$.",
+      "Substitute $(2, 13)$: $13 = k_1 + 4k_2$ (Eq. 1).",
+      "Substitute $(3, 23)$: $23 = k_1 + 9k_2$ (Eq. 2).",
+      "(Eq. 2) - (Eq. 1): $10 = 5k_2 \\implies k_2 = 2$.",
+      "From (Eq. 1): $13 = k_1 + 4(2) \\implies k_1 = 5$.",
+      "So $y = 5 + 2x^2$.",
+      "(b) When $x = 5$, $y = 5 + 2(5^2) = 5 + 2(25) = 5 + 50 = 55$."
+    ],
+    "solution_steps_zh": [
+      "(a) 設 $y = k_1 + k_2 x^2$。",
+      "代入 $(2, 13)$：$13 = k_1 + 4k_2$（方程 1）。",
+      "代入 $(3, 23)$：$23 = k_1 + 9k_2$（方程 2）。",
+      "（方程 2）-（方程 1）：$10 = 5k_2 \\implies k_2 = 2$。",
+      "從（方程 1）：$13 = k_1 + 4(2) \\implies k_1 = 5$。",
+      "故 $y = 5 + 2x^2$。",
+      "(b) 當 $x = 5$ 時，$y = 5 + 2(5^2) = 5 + 50 = 55$。"
+    ],
+    "diagram_json": null,
+    "tags": ["variation", "partial-variation"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_sa_258",
+    "type": "short_answer",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_geo_mensuration"],
+    "marks": 12,
+    "difficulty": 7,
+    "paper": 1,
+    "section": "A",
+    "question_en": "A composite solid consists of a hemisphere and a cylinder with the same radius $r = 6$ cm. The hemisphere is attached to the top of the cylinder. The height of the cylinder is 10 cm.\n(a) Find the total surface area of the solid in terms of $\\pi$. (6 marks)\n(b) Find the total volume of the solid in terms of $\\pi$. (6 marks)",
+    "question_zh": "一個組合立體由一個半球體及一個半徑相等的圓柱體組成，半徑 $r = 6$ cm。半球體附在圓柱體的頂部。圓柱體的高為 10 cm。\n(a) 以 $\\pi$ 表示該立體的總表面面積。(6分)\n(b) 以 $\\pi$ 表示該立體的總體積。(6分)",
+    "solution_steps_en": [
+      "(a) Area = Surface of Hemisphere + Curved surface of Cylinder + Base of Cylinder.",
+      "Hemisphere: $2\\pi r^2 = 2\\pi(6)^2 = 72\\pi$.",
+      "Cylinder curved: $2\\pi rh = 2\\pi(6)(10) = 120\\pi$.",
+      "Cylinder base: $\\pi r^2 = 36\\pi$.",
+      "Total Area $= 72\\pi + 120\\pi + 36\\pi = 228\\pi$ cm$^2$.",
+      "(b) Volume = Vol of Hemisphere + Vol of Cylinder.",
+      "Hemisphere: $\\frac{2}{3}\\pi r^3 = \\frac{2}{3}\\pi(6)^3 = 144\\pi$.",
+      "Cylinder: $\\pi r^2h = \\pi(6^2)(10) = 360\\pi$.",
+      "Total Volume $= 144\\pi + 360\\pi = 504\\pi$ cm$^3$."
+    ],
+    "solution_steps_zh": [
+      "(a) 總表面面積 = 半球體曲面 + 圓柱體側面 + 圓柱體底面。",
+      "半球體：$2\\pi r^2 = 72\\pi$。",
+      "圓柱側面：$2\\pi rh = 120\\pi$。",
+      "圓柱底面：$\\pi r^2 = 36\\pi$。",
+      "總面積 $= 72\\pi + 120\\pi + 36\\pi = 228\\pi$ cm$^2$。",
+      "(b) 總體積 = 半球體體積 + 圓柱體體積。",
+      "半球體：$\\frac{2}{3}\\pi r^3 = 144\\pi$。",
+      "圓柱體：$\\pi r^2h = 360\\pi$。",
+      "總體積 $= 144\\pi + 360\\pi = 504\\pi$ cm$^3$。"
+    ],
+    "diagram_json": null,
+    "tags": ["mensuration", "composite-solids"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_sa_259",
+    "type": "short_answer",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_alg_quadratics"],
+    "marks": 13,
+    "difficulty": 8,
+    "paper": 1,
+    "section": "B",
+    "question_en": "Suppose $\\alpha$ and $\\beta$ are the roots of the equation $x^2 - 4x + 2 = 0$. \n(a) Find the value of $\\alpha + \\beta$ and $\\alpha\\beta$. (2 marks)\n(b) Find the value of $\\alpha^2 + \\beta^2$. (4 marks)\n(c) Find a quadratic equation whose roots are $\\alpha^2$ and $\\beta^2$. (7 marks)",
+    "question_zh": "設 $\\alpha$ 及 $\\beta$ 為方程 $x^2 - 4x + 2 = 0$ 的根。\n(a) 求 $\\alpha + \\beta$ 及 $\\alpha\\beta$ 的值。(2分)\n(b) 求 $\\alpha^2 + \\beta^2$ 的值。(4分)\n(c) 求一個以 $\\alpha^2$ 及 $\\beta^2$ 為根的二次方程。(7分)",
+    "solution_steps_en": [
+      "(a) $\\alpha + \\beta = 4, \\alpha\\beta = 2$.",
+      "(b) $\\alpha^2 + \\beta^2 = (\\alpha + \\beta)^2 - 2\\alpha\\beta = 4^2 - 2(2) = 16 - 4 = 12$.",
+      "(c) Let the new roots be $u = \\alpha^2$ and $v = \\beta^2$.",
+      "Sum of new roots: $u + v = \\alpha^2 + \\beta^2 = 12$.",
+      "Product of new roots: $uv = (\\alpha\\beta)^2 = 2^2 = 4$.",
+      "The equation is $x^2 - (u+v)x + uv = 0$.",
+      "Result: $x^2 - 12x + 4 = 0$."
+    ],
+    "solution_steps_zh": [
+      "(a) $\\alpha + \\beta = 4, \\alpha\\beta = 2$。",
+      "(b) $\\alpha^2 + \\beta^2 = (\\alpha + \\beta)^2 - 2\\alpha\\beta = 4^2 - 2(2) = 12$。",
+      "(c) 設新根為 $u = \\alpha^2$ 及 $v = \\beta^2$。",
+      "新根之和：$u + v = 12$。",
+      "新根之積：$uv = (\\alpha\\beta)^2 = 4$。",
+      "方程為 $x^2 - (u+v)x + uv = 0$。",
+      "結果：$x^2 - 12x + 4 = 0$。"
+    ],
+    "diagram_json": null,
+    "tags": ["quadratics", "roots-relations"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_sa_260",
+    "type": "short_answer",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_stat_prob"],
+    "marks": 11,
+    "difficulty": 7,
+    "paper": 1,
+    "section": "B",
+    "question_en": "In a lucky draw, a player draws two balls one by one without replacement from a bag containing 3 red balls and 2 white balls.\n(a) Find the probability of drawing two balls of the same color. (4 marks)\n(b) If each red ball drawn wins HKD 50 and each white ball drawn loses HKD 30, find the expected prize of the game. (7 marks)",
+    "question_zh": "在一次抽獎中，參加者從一個含有 3 個紅球及 2 個白球的袋中，先後隨機抽出兩個球且不放回。\n(a) 求抽出兩個球均為同色的概率。(4分)\n(b) 若每抽到一個紅球可獲得 HKD 50，每抽到一個白球則損失 HKD 30，求該遊戲的期望獎金。(7分)",
+    "solution_steps_en": [
+      "(a) P(Same) = P(RR) + P(WW).",
+      "P(RR) = $\\frac{3}{5} \\times \\frac{2}{4} = \\frac{6}{20} = 0.3$.",
+      "P(WW) = $\\frac{2}{5} \\times \\frac{1}{4} = \\frac{2}{20} = 0.1$.",
+      "Total P(Same) $= 0.3 + 0.1 = 0.4$.",
+      "(b) Possible outcomes for prize $X$:",
+      "2 Red: Prize $= 2(50) = 100$. P(RR) $= 0.3$.",
+      "1 Red 1 White: Prize $= 50 - 30 = 20$. P(RW or WR) $= \\frac{3}{5} \\times \\frac{2}{4} + \\frac{2}{5} \\times \\frac{3}{4} = 0.3 + 0.3 = 0.6$.",
+      "2 White: Prize $= 2(-30) = -60$. P(WW) $= 0.1$.",
+      "Expected value $E(X) = 100(0.3) + 20(0.6) + (-60)(0.1) = 30 + 12 - 6 = 36$.",
+      "Expected prize is HKD 36."
+    ],
+    "solution_steps_zh": [
+      "(a) P(同色) = P(紅紅) + P(白白) = $0.3 + 0.1 = 0.4$。",
+      "(b) 獎金 $X$ 的所有可能情況：",
+      "2 紅：獎金 $= 100$，概率 $= 0.3$。",
+      "1 紅 1 白：獎金 $= 20$，概率 $= 0.6$。",
+      "2 白：獎金 $= -60$，概率 $= 0.1$。",
+      "期望值 $E(X) = 100(0.3) + 20(0.6) + (-60)(0.1) = 30 + 12 - 6 = 36$。",
+      "期望獎金為 HKD 36。"
+    ],
+    "diagram_json": null,
+    "tags": ["probability", "expected-value"],
+    "status": "approved"
+  }
+]

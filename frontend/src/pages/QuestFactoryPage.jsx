@@ -651,6 +651,14 @@ const QuestFactoryPage = () => {
 
                     const isBlock = (part.startsWith('\\[') && part.endsWith('\\]')) || (part.startsWith('$$') && part.endsWith('$$'));
                     const isInline = (part.startsWith('\\(') && part.endsWith('\\)')) || (part.startsWith('$') && part.endsWith('$'));
+                    const isHTML = part.startsWith('[HTML]') && part.endsWith('[/HTML]');
+
+                    if (isHTML) {
+                        const html = part.slice(6, -7);
+                        return (
+                            <div key={i} className="w-full my-4 overflow-x-auto" dangerouslySetInnerHTML={{ __html: html }} />
+                        );
+                    }
 
                     if (isBlock || isInline) {
                         let math = '';
@@ -1868,7 +1876,7 @@ const QuestFactoryPage = () => {
                                                 </td>
                                                 <td className="p-4">
                                                     <div className="text-xs text-gray-400 line-clamp-2 italic max-w-sm">
-                                                        {quest.text || quest.question || "No question text provided."}
+                                                        {quest.text || quest.question || quest.question_en || "No question text provided."}
                                                     </div>
                                                 </td>
                                                 <td className="p-4">
@@ -1913,6 +1921,19 @@ const QuestFactoryPage = () => {
                                                     <td colSpan="5" className="p-8">
                                                         <div className="grid grid-cols-2 gap-8">
                                                             <div className="space-y-4">
+                                                                <div>
+                                                                    <span className="text-[10px] font-black text-amber-500/50 uppercase tracking-widest block mb-2">Question Text (EN / ZH)</span>
+                                                                    <div className="bg-white/5 p-4 rounded-2xl border border-white/5 space-y-4">
+                                                                        <div className="text-xs text-gray-200 leading-relaxed font-sans pb-4 border-b border-white/5">
+                                                                            <span className="text-[8px] font-black text-primary/50 uppercase tracking-widest block mb-1">English</span>
+                                                                            {renderMath(quest.text || quest.question_en || quest.question || "No English text available.")}
+                                                                        </div>
+                                                                        <div className="text-xs text-gray-300 leading-relaxed font-sans">
+                                                                            <span className="text-[8px] font-black text-primary/50 uppercase tracking-widest block mb-1">Chinese</span>
+                                                                            {renderMath(quest.text_zh || quest.question_zh || "No Chinese text available.")}
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
                                                                 <div>
                                                                     <span className="text-[10px] font-black text-amber-500/50 uppercase tracking-widest block mb-2">Question Context & Passage</span>
                                                                     <div className="bg-white/5 p-4 rounded-2xl border border-white/5 text-xs text-gray-300 leading-relaxed font-serif whitespace-pre-wrap max-h-60 overflow-y-auto">

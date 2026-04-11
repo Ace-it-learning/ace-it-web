@@ -2,72 +2,60 @@
     "is_modular": true,
     "name": "Arithmetic & Geometric Progressions (AP & GP)",
     "name_zh": "等差與等比數列 (AP & GP)",
-    "roadmap": "Start by mastering the general term and sum formulas for both AP and GP. Progress to understanding the sum to infinity for convergent geometric series. Finally, apply these concepts to real-world scenarios like financial modeling and recursive sequences often found in DSE Section B.",
-    "roadmap_zh": "從掌握 AP 和 GP 的通項與求和公式開始。進階到理解收斂等比級數的無限項之和。最後，將這些概念應用於 DSE 乙部常見的現實場景，如財務模型和遞歸數列。",
+    "roadmap": "Start by mastering the general term and sum formulas for both AP and GP. Progress to understanding the sum to infinity for convergent geometric series. Finally, apply these concepts to real-world scenarios like financial modeling and logarithmic sequences often found in DSE Section B.",
+    "roadmap_zh": "從掌握 AP 和 GP 的通項與求和公式開始。進階到理解收斂等比級數的無限項之和。最後，將這些概念應用於 DSE 乙部常見的現實場景，如財務模型和對數數列。",
     "learning_modules": [
         {
             "module_id": "MOD_01",
-            "title": "Arithmetic Progression (AP)",
-            "title_zh": "等差數列 (AP)",
+            "title": "The Golden Rules",
+            "title_zh": "三大黃金法則",
             "concepts": [
                 {
-                    "concept_id": "C01_AP_BASIC",
-                    "name": "General Term ($T_n$) & Sum ($S_n$)",
-                    "name_zh": "通項 ($T_n$) 與求和 ($S_n$)",
-                    "formula": "T_n = a + (n-1)d \\\\ S_n = \\frac{n}{2}[2a + (n-1)d]",
-                    "key_takeaway": "An AP has a constant difference ($d$). The terms grow or shrink linearly. Always identify 'a' and 'd' first.",
-                    "key_takeaway_zh": "AP 有固定的公差 ($d$)。各項呈線性增長或縮減。務必先找出 'a' 和 'd'。",
-                    "visual_aid": "/images/math/apgp_ap_seq.png"
+                    "concept_id": "C01_GOLDEN_AP",
+                    "name": "Golden Rule 1: AP Constant Difference",
+                    "name_zh": "黃金法則 1：AP 恆等公差",
+                    "formula": "T_n - T_{n-1} = d \\\\text{ (Constant)}",
+                    "key_takeaway": "> [!IMPORTANT]\n> In an **Arithmetic Progression (AP)**, the difference between any two consecutive terms is a constant $d$. \n> $T_n = a + (n-1)d$ \n> $S_n = \\\\frac{n}{2}[2a + (n-1)d]$",
+                    "key_takeaway_zh": "> [!IMPORTANT]\n> 在**等差數列 (AP)** 中，任意兩個連續項之間的差是一個常數 $d$。\n> $T_n = a + (n-1)d$\n> $S_n = \\\\frac{n}{2}[2a + (n-1)d]$"
+                },
+                {
+                    "concept_id": "C02_GOLDEN_GP",
+                    "name": "Golden Rule 2: GP Constant Ratio",
+                    "name_zh": "黃金法則 2：GP 恆等公比",
+                    "formula": "\\\\frac{T_n}{T_{n-1}} = r \\\\text{ (Constant)}",
+                    "key_takeaway": "> [!IMPORTANT]\n> In a **Geometric Progression (GP)**, the ratio of any two consecutive terms is a constant $r$.\n> $T_n = ar^{n-1}$\n> $S_n = \\\\frac{a(r^n - 1)}{r - 1}$",
+                    "key_takeaway_zh": "> [!IMPORTANT]\n> 在**等比數列 (GP)** 中，任意兩個連續項的比是一個常數 $r$。\n> $T_n = ar^{n-1}$\n> $S_n = \\\\frac{a(r^n - 1)}{r - 1}$"
+                },
+                {
+                    "concept_id": "C03_GOLDEN_SINF",
+                    "name": "Golden Rule 3: Sum to Infinity Condition",
+                    "name_zh": "黃金法則 3：無限項之和條件",
+                    "formula": "S_\\\\infty = \\\\frac{a}{1-r} \\\\quad \\\\text{Condition: } |r| < 1",
+                    "key_takeaway": "> [!CAUTION]\n> The **Sum to Infinity ($S_\\\\infty$)** ONLY exists if the common ratio satisfies $|r| < 1$. If $|r| \\\\ge 1$, the series diverges and the sum is undefined.",
+                    "key_takeaway_zh": "> [!CAUTION]\n> **無限項之和 ($S_\\\\infty$)** 僅在公比滿足 $|r| < 1$ 時存在。若 $|r| \\\\ge 1$，級數會發散，總和未定義。"
                 }
             ]
         },
         {
             "module_id": "MOD_02",
-            "title": "Geometric Progression (GP)",
-            "title_zh": "等比數列 (GP)",
+            "title": "DSE Section B Mastery",
+            "title_zh": "DSE 乙部精通",
             "concepts": [
                 {
-                    "concept_id": "C02_GP_BASIC",
-                    "name": "General Term ($T_n$) & Sum ($S_n$)",
-                    "name_zh": "通項 ($T_n$) 與求和 ($S_n$)",
-                    "formula": "T_n = a r^{n-1} \\\\ S_n = \\frac{a(r^n - 1)}{r - 1}",
-                    "key_takeaway": "A GP has a constant ratio ($r$). The terms grow or decay exponentially. Watch the exponent ($n-1$ for $T_n$, $n$ for $S_n$)!",
-                    "key_takeaway_zh": "GP 有固定的公比 ($r$)。各項呈指數級增長或衰減。注意指數（$T_n$ 是 $n-1$，$S_n$ 是 $n$）！",
-                    "visual_aid": "/images/math/apgp_gp_seq.png"
+                    "concept_id": "C04_LOG_SEQ",
+                    "name": "Logarithmic Sequences",
+                    "name_zh": "對數數列",
+                    "formula": "\\\\log(a), \\\\log(ar), \\\\log(ar^2), \\\\dots",
+                    "key_takeaway": "If $x, y, z$ is a GP, then $\\\\log(x), \\\\log(y), \\\\log(z)$ is an AP with common difference $\\\\log(r)$. This is a common trap in DSE Section B.",
+                    "key_takeaway_zh": "若 $x, y, z$ 是 GP，則 $\\\\log(x), \\\\log(y), \\\\log(z)$ 是一公差為 $\\\\log(r)$ 的 AP。這是 DSE 乙部常見的陷阱。"
                 },
                 {
-                    "concept_id": "C03_SUM_INF",
-                    "name": "Sum to Infinity ($S_\\infty$)",
-                    "name_zh": "無限項之和 ($S_\\infty$)",
-                    "formula": "S_\\infty = \\frac{a}{1-r} \\quad (|r| < 1)",
-                    "key_takeaway": "Convergent only if $|r| < 1$. The sum approaches a finite limit as n goes to infinity.",
-                    "key_takeaway_zh": "僅當 $|r| < 1$ 時收斂。當 n 趨向無限時，總和趨向一個有限的極限。",
-                    "visual_aid": "/images/math/apgp_sum_inf.png"
-                }
-            ]
-        },
-        {
-            "module_id": "MOD_03",
-            "title": "Applications & Section B",
-            "title_zh": "應用與乙部課題",
-            "concepts": [
-                {
-                    "concept_id": "C04_FINANCE",
-                    "name": "Financial Modeling",
-                    "name_zh": "財務模型",
-                    "formula": "A = P(1+r)^n",
-                    "key_takeaway": "Compound interest and depreciation are basically GP problems. Use the multiplier method to find 'r'.",
-                    "key_takeaway_zh": "複利息和折舊基本上是 GP 問題。使用乘數法來找出 'r'。",
-                    "visual_aid": "/images/math/apgp_apps.png"
-                },
-                {
-                    "concept_id": "C05_RELATIONSHIPS",
-                    "name": "AP and GP Mixed Problems",
-                    "name_zh": "AP 與 GP 混合題型",
-                    "formula": "T_n \\text{ depends on both properties}",
-                    "key_takeaway": "In Section B, you may be given three terms $a, b, c$ that form an AP, and $a, b+x, c+y$ that form a GP. Solve them simultaneously.",
-                    "key_takeaway_zh": "在乙部中，題目可能會給出形成 AP 的三項 $a, b, c$，以及形成 GP 的 $a, b+x, c+y$。需要聯立求解。",
-                    "visual_aid": null
+                    "concept_id": "C05_INEQUALITIES",
+                    "name": "Solving for $n$ using Logs",
+                    "name_zh": "使用對數求 $n$",
+                    "formula": "S_n > K \\\\Rightarrow n \\\\text{ calculation}",
+                    "key_takeaway": "When solving inequalities like $r^n > K$, remember to flip the inequality sign if you divide by $\\\\log(r)$ and $r < 1$ (since $\\\\log(r)$ is negative).",
+                    "key_takeaway_zh": "解如 $r^n > K$ 的不等式時，若除以 $\\\\log(r)$ 且 $r < 1$，請記住要反轉不等號（因為 $\\\\log(r)$ 是負數）。"
                 }
             ]
         }

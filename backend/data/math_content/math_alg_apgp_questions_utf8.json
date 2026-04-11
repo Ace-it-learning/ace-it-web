@@ -1,0 +1,686 @@
+[
+  {
+    "id": "math_alg_apgp_0304_01",
+    "topic_id": "math_alg_apgp",
+    "subject": "maths",
+    "level": 3,
+    "type": "short_answer",
+    "marks": 2,
+    "question": "In an arithmetic progression (AP), the first term is $10$ and the common difference is $3$. Find the $9$-th term.",
+    "question_zh": "在一等差數列 (AP) 中，首項為 $10$，公差為 $3$。求第 $9$ 項。",
+    "answer": "$34$",
+    "correct_answer": "$34$",
+    "solution_steps": [
+      "Given $a = 10$ and $d = 3$.",
+      "Using the general term formula $T_n = a + (n-1)d$.",
+      "$T_{9} = 10 + (9-1)(3) = 34$."
+    ],
+    "solution_steps_zh": [
+      "已知 $a = 10$ 且 $d = 3$。",
+      "使用通項公式 $T_n = a + (n-1)d$。",
+      "$T_{9} = 10 + (9-1)(3) = 34$。"
+    ]
+  },
+  {
+    "id": "math_alg_apgp_0304_02",
+    "topic_id": "math_alg_apgp",
+    "subject": "maths",
+    "level": 3,
+    "type": "short_answer",
+    "marks": 2,
+    "question": "Find the sum of the first $5$ terms of an arithmetic progression (AP) where the first term is $3$ and the common difference is $4$.",
+    "question_zh": "在一等差數列 (AP) 中，首項為 $3$，公差為 $4$。求首 $5$ 項之和。",
+    "answer": "$55$",
+    "correct_answer": "$55$",
+    "solution_steps": [
+      "Using the sum formula $S_n = \\frac{n}{2}\\\\left[2a + (n-1)d\\\\right]$.",
+      "$S_{5} = \\frac{5}{2}\\\\left[2(3) + (5-1)(4)\\\\right] = 55$."
+    ],
+    "solution_steps_zh": [
+      "使用求和公式 $S_n = \\frac{n}{2}\\\\left[2a + (n-1)d\\\\right]$。",
+      "$S_{5} = \\frac{5}{2}\\\\left[2(3) + (5-1)(4)\\\\right] = 55$。"
+    ]
+  },
+  {
+    "id": "math_alg_apgp_0304_03",
+    "topic_id": "math_alg_apgp",
+    "subject": "maths",
+    "level": 3,
+    "type": "short_answer",
+    "marks": 2,
+    "question": "In an arithmetic progression (AP), the first term is $7$ and the common difference is $7$. Find the $10$-th term.",
+    "question_zh": "在一等差數列 (AP) 中，首項為 $7$，公差為 $7$。求第 $10$ 項。",
+    "answer": "$70$",
+    "correct_answer": "$70$",
+    "solution_steps": [
+      "Given $a = 7$ and $d = 7$.",
+      "Using the general term formula $T_n = a + (n-1)d$.",
+      "$T_{10} = 7 + (10-1)(7) = 70$."
+    ],
+    "solution_steps_zh": [
+      "已知 $a = 7$ 且 $d = 7$。",
+      "使用通項公式 $T_n = a + (n-1)d$。",
+      "$T_{10} = 7 + (10-1)(7) = 70$。"
+    ]
+  },
+  {
+    "id": "math_alg_apgp_0304_04",
+    "topic_id": "math_alg_apgp",
+    "subject": "maths",
+    "level": 3,
+    "type": "short_answer",
+    "marks": 2,
+    "question": "Find the sum of the first $12$ terms of an arithmetic progression (AP) where the first term is $8$ and the common difference is $4$.",
+    "question_zh": "在一等差數列 (AP) 中，首項為 $8$，公差為 $4$。求首 $12$ 項之和。",
+    "answer": "$360$",
+    "correct_answer": "$360$",
+    "solution_steps": [
+      "Using the sum formula $S_n = \\frac{n}{2}\\\\left[2a + (n-1)d\\\\right]$.",
+      "$S_{12} = \\frac{12}{2}\\\\left[2(8) + (12-1)(4)\\\\right] = 360$."
+    ],
+    "solution_steps_zh": [
+      "使用求和公式 $S_n = \\frac{n}{2}\\\\left[2a + (n-1)d\\\\right]$。",
+      "$S_{12} = \\frac{12}{2}\\\\left[2(8) + (12-1)(4)\\\\right] = 360$。"
+    ]
+  },
+  {
+    "id": "math_alg_apgp_0304_05",
+    "topic_id": "math_alg_apgp",
+    "subject": "maths",
+    "level": 3,
+    "type": "short_answer",
+    "marks": 2,
+    "question": "In a geometric progression (GP), the first term is $5$ and the common ratio is $3$. Find the $7$-th term.",
+    "question_zh": "在一等比數列 (GP) 中，首項為 $5$，公比為 $3$。求第 $7$ 項。",
+    "answer": "$3645$",
+    "correct_answer": "$3645$",
+    "solution_steps": [
+      "Given $a = 5$ and $r = 3$.",
+      "Using the general term formula $T_n = ar^{n-1}$.",
+      "$T_{7} = 5(3)^{7-1} = 3645$."
+    ],
+    "solution_steps_zh": [
+      "已知 $a = 5$ 且 $r = 3$。",
+      "使用通項公式 $T_n = ar^{n-1}$。",
+      "$T_{7} = 5(3)^{7-1} = 3645$。"
+    ]
+  },
+  {
+    "id": "math_alg_apgp_0304_06",
+    "topic_id": "math_alg_apgp",
+    "subject": "maths",
+    "level": 3,
+    "type": "short_answer",
+    "marks": 2,
+    "question": "Find the sum of the first $5$ terms of a geometric progression (GP) where the first term is $2$ and the common ratio is $3$.",
+    "question_zh": "在一等比數列 (GP) 中，首項為 $2$，公比為 $3$。求首 $5$ 項之和。",
+    "answer": "$242$",
+    "correct_answer": "$242$",
+    "solution_steps": [
+      "Using the sum formula $S_n = \\frac{a(r^n - 1)}{r - 1}$.",
+      "$S_{5} = \\frac{2(3^{5} - 1)}{3 - 1} = 242$."
+    ],
+    "solution_steps_zh": [
+      "使用求和公式 $S_n = \\frac{a(r^n - 1)}{r - 1}$。",
+      "$S_{5} = \\frac{2(3^{5} - 1)}{3 - 1} = 242$。"
+    ]
+  },
+  {
+    "id": "math_alg_apgp_0304_07",
+    "topic_id": "math_alg_apgp",
+    "subject": "maths",
+    "level": 3,
+    "type": "short_answer",
+    "marks": 2,
+    "question": "In a geometric progression (GP), the first term is $5$ and the common ratio is $2$. Find the $4$-th term.",
+    "question_zh": "在一等比數列 (GP) 中，首項為 $5$，公比為 $2$。求第 $4$ 項。",
+    "answer": "$40$",
+    "correct_answer": "$40$",
+    "solution_steps": [
+      "Given $a = 5$ and $r = 2$.",
+      "Using the general term formula $T_n = ar^{n-1}$.",
+      "$T_{4} = 5(2)^{4-1} = 40$."
+    ],
+    "solution_steps_zh": [
+      "已知 $a = 5$ 且 $r = 2$。",
+      "使用通項公式 $T_n = ar^{n-1}$。",
+      "$T_{4} = 5(2)^{4-1} = 40$。"
+    ]
+  },
+  {
+    "id": "math_alg_apgp_0304_08",
+    "topic_id": "math_alg_apgp",
+    "subject": "maths",
+    "level": 3,
+    "type": "short_answer",
+    "marks": 2,
+    "question": "In a geometric progression (GP), the first term is $3$ and the second term is $-12$. Find the common ratio $r$.",
+    "question_zh": "在一等比數列 (GP) 中，首項為 $3$，第二項為 $-12$。求公比 $r$。",
+    "answer": "$-4$",
+    "correct_answer": "$-4$",
+    "solution_steps": [
+      "Given $T_1 = 3$ and $T_2 = -12$.",
+      "The common ratio $r = \\frac{T_2}{T_1}$.",
+      "$r = \\frac{-12}{3} = -4$."
+    ],
+    "solution_steps_zh": [
+      "已知 $T_1 = 3$ 且 $T_2 = -12$。",
+      "公比 $r = \\frac{T_2}{T_1}$。",
+      "$r = \\frac{-12}{3} = -4$。"
+    ]
+  },
+  {
+    "id": "math_alg_apgp_0304_09",
+    "topic_id": "math_alg_apgp",
+    "subject": "maths",
+    "level": 4,
+    "type": "short_answer",
+    "marks": 3,
+    "question": "The $3$-th term of an arithmetic progression (AP) is $18$ and the $4$-th term is $23$. Find the common difference $d$.",
+    "question_zh": "一等差數列 (AP) 的第 $3$ 項為 $18$，第 $4$ 項為 $23$。求公差 $d$。",
+    "answer": "$5$",
+    "correct_answer": "$5$",
+    "solution_steps": [
+      "Let the first term be $a$ and the common difference be $d$.",
+      "$T_{3} = a + (3-1)d = 18 \\quad \\dots (1)$",
+      "$T_{4} = a + (4-1)d = 23 \\quad \\dots (2)$",
+      "Subtract (1) from (2): $(4-1)d - (3-1)d = 23 - 18$",
+      "$(1)d = 5 \\Rightarrow d = 5$."
+    ],
+    "solution_steps_zh": [
+      "設首項為 $a$，公差為 $d$。",
+      "$T_{3} = a + (3-1)d = 18 \\quad \\dots (1)$",
+      "$T_{4} = a + (4-1)d = 23 \\quad \\dots (2)$",
+      "將 (1) 從 (2) 中減去：$(4-1)d - (3-1)d = 23 - 18$",
+      "$(1)d = 5 \\Rightarrow d = 5$。"
+    ]
+  },
+  {
+    "id": "math_alg_apgp_0304_10",
+    "topic_id": "math_alg_apgp",
+    "subject": "maths",
+    "level": 4,
+    "type": "short_answer",
+    "marks": 3,
+    "question": "The $2$-th term of an arithmetic progression (AP) is $18$ and the $5$-th term is $30$. Find the common difference $d$.",
+    "question_zh": "一等差數列 (AP) 的第 $2$ 項為 $18$，第 $5$ 項為 $30$。求公差 $d$。",
+    "answer": "$4$",
+    "correct_answer": "$4$",
+    "solution_steps": [
+      "Let the first term be $a$ and the common difference be $d$.",
+      "$T_{2} = a + (2-1)d = 18 \\quad \\dots (1)$",
+      "$T_{5} = a + (5-1)d = 30 \\quad \\dots (2)$",
+      "Subtract (1) from (2): $(5-1)d - (2-1)d = 30 - 18$",
+      "$(3)d = 12 \\Rightarrow d = 4$."
+    ],
+    "solution_steps_zh": [
+      "設首項為 $a$，公差為 $d$。",
+      "$T_{2} = a + (2-1)d = 18 \\quad \\dots (1)$",
+      "$T_{5} = a + (5-1)d = 30 \\quad \\dots (2)$",
+      "將 (1) 從 (2) 中減去：$(5-1)d - (2-1)d = 30 - 18$",
+      "$(3)d = 12 \\Rightarrow d = 4$。"
+    ]
+  },
+  {
+    "id": "math_alg_apgp_0304_11",
+    "topic_id": "math_alg_apgp",
+    "subject": "maths",
+    "level": 4,
+    "type": "short_answer",
+    "marks": 3,
+    "question": "The $7$-th term of an arithmetic progression (AP) is $63$ and the $8$-th term is $72$. Find the common difference $d$.",
+    "question_zh": "一等差數列 (AP) 的第 $7$ 項為 $63$，第 $8$ 項為 $72$。求公差 $d$。",
+    "answer": "$9$",
+    "correct_answer": "$9$",
+    "solution_steps": [
+      "Let the first term be $a$ and the common difference be $d$.",
+      "$T_{7} = a + (7-1)d = 63 \\quad \\dots (1)$",
+      "$T_{8} = a + (8-1)d = 72 \\quad \\dots (2)$",
+      "Subtract (1) from (2): $(8-1)d - (7-1)d = 72 - 63$",
+      "$(1)d = 9 \\Rightarrow d = 9$."
+    ],
+    "solution_steps_zh": [
+      "設首項為 $a$，公差為 $d$。",
+      "$T_{7} = a + (7-1)d = 63 \\quad \\dots (1)$",
+      "$T_{8} = a + (8-1)d = 72 \\quad \\dots (2)$",
+      "將 (1) 從 (2) 中減去：$(8-1)d - (7-1)d = 72 - 63$",
+      "$(1)d = 9 \\Rightarrow d = 9$。"
+    ]
+  },
+  {
+    "id": "math_alg_apgp_0304_12",
+    "topic_id": "math_alg_apgp",
+    "subject": "maths",
+    "level": 4,
+    "type": "short_answer",
+    "marks": 3,
+    "question": "The $4$-th term of an arithmetic progression (AP) is $40$ and the $7$-th term is $64$. Find the common difference $d$.",
+    "question_zh": "一等差數列 (AP) 的第 $4$ 項為 $40$，第 $7$ 項為 $64$。求公差 $d$。",
+    "answer": "$8$",
+    "correct_answer": "$8$",
+    "solution_steps": [
+      "Let the first term be $a$ and the common difference be $d$.",
+      "$T_{4} = a + (4-1)d = 40 \\quad \\dots (1)$",
+      "$T_{7} = a + (7-1)d = 64 \\quad \\dots (2)$",
+      "Subtract (1) from (2): $(7-1)d - (4-1)d = 64 - 40$",
+      "$(3)d = 24 \\Rightarrow d = 8$."
+    ],
+    "solution_steps_zh": [
+      "設首項為 $a$，公差為 $d$。",
+      "$T_{4} = a + (4-1)d = 40 \\quad \\dots (1)$",
+      "$T_{7} = a + (7-1)d = 64 \\quad \\dots (2)$",
+      "將 (1) 從 (2) 中減去：$(7-1)d - (4-1)d = 64 - 40$",
+      "$(3)d = 24 \\Rightarrow d = 8$。"
+    ]
+  },
+  {
+    "id": "math_alg_apgp_0304_13",
+    "topic_id": "math_alg_apgp",
+    "subject": "maths",
+    "level": 4,
+    "type": "short_answer",
+    "marks": 3,
+    "question": "Find the sum to infinity of a geometric progression (GP) with first term $64$ and common ratio $\\frac{1}{5}$.",
+    "question_zh": "一等比數列 (GP) 的首項為 $64$，公比為 $\\frac{1}{5}$。求該數列的無限項之和。",
+    "answer": "$80$",
+    "correct_answer": "$80$",
+    "solution_steps": [
+      "Given $a = 64$ and $r = \\frac{1}{5}$.",
+      "Using the sum to infinity formula $S_\\infty = \\frac{a}{1-r}$.",
+      "$S_\\infty = \\frac{64}{1 - \\frac{1}{5}} = \\frac{64}{\\frac{4}{5}} = 80$."
+    ],
+    "solution_steps_zh": [
+      "已知 $a = 64$ 且 $r = \\frac{1}{5}$。",
+      "使用無限項求和公式 $S_\\infty = \\frac{a}{1-r}$。",
+      "$S_\\infty = \\frac{64}{1 - \\frac{1}{5}} = \\frac{64}{\\frac{4}{5}} = 80$。"
+    ]
+  },
+  {
+    "id": "math_alg_apgp_0304_14",
+    "topic_id": "math_alg_apgp",
+    "subject": "maths",
+    "level": 4,
+    "type": "short_answer",
+    "marks": 3,
+    "question": "Find the sum to infinity of a geometric progression (GP) with first term $84$ and common ratio $\\frac{1}{4}$.",
+    "question_zh": "一等比數列 (GP) 的首項為 $84$，公比為 $\\frac{1}{4}$。求該數列的無限項之和。",
+    "answer": "$112$",
+    "correct_answer": "$112$",
+    "solution_steps": [
+      "Given $a = 84$ and $r = \\frac{1}{4}$.",
+      "Using the sum to infinity formula $S_\\infty = \\frac{a}{1-r}$.",
+      "$S_\\infty = \\frac{84}{1 - \\frac{1}{4}} = \\frac{84}{\\frac{3}{4}} = 112$."
+    ],
+    "solution_steps_zh": [
+      "已知 $a = 84$ 且 $r = \\frac{1}{4}$。",
+      "使用無限項求和公式 $S_\\infty = \\frac{a}{1-r}$。",
+      "$S_\\infty = \\frac{84}{1 - \\frac{1}{4}} = \\frac{84}{\\frac{3}{4}} = 112$。"
+    ]
+  },
+  {
+    "id": "math_alg_apgp_0304_15",
+    "topic_id": "math_alg_apgp",
+    "subject": "maths",
+    "level": 4,
+    "type": "short_answer",
+    "marks": 3,
+    "question": "Find the sum to infinity of a geometric progression (GP) with first term $60$ and common ratio $\\frac{1}{2}$.",
+    "question_zh": "一等比數列 (GP) 的首項為 $60$，公比為 $\\frac{1}{2}$。求該數列的無限項之和。",
+    "answer": "$120$",
+    "correct_answer": "$120$",
+    "solution_steps": [
+      "Given $a = 60$ and $r = \\frac{1}{2}$.",
+      "Using the sum to infinity formula $S_\\infty = \\frac{a}{1-r}$.",
+      "$S_\\infty = \\frac{60}{1 - \\frac{1}{2}} = \\frac{60}{\\frac{1}{2}} = 120$."
+    ],
+    "solution_steps_zh": [
+      "已知 $a = 60$ 且 $r = \\frac{1}{2}$。",
+      "使用無限項求和公式 $S_\\infty = \\frac{a}{1-r}$。",
+      "$S_\\infty = \\frac{60}{1 - \\frac{1}{2}} = \\frac{60}{\\frac{1}{2}} = 120$。"
+    ]
+  },
+  {
+    "id": "math_alg_apgp_0304_16",
+    "topic_id": "math_alg_apgp",
+    "subject": "maths",
+    "level": 4,
+    "type": "short_answer",
+    "marks": 3,
+    "question": "Find the sum to infinity of a geometric progression (GP) with first term $52$ and common ratio $\\frac{1}{2}$.",
+    "question_zh": "一等比數列 (GP) 的首項為 $52$，公比為 $\\frac{1}{2}$。求該數列的無限項之和。",
+    "answer": "$104$",
+    "correct_answer": "$104$",
+    "solution_steps": [
+      "Given $a = 52$ and $r = \\frac{1}{2}$.",
+      "Using the sum to infinity formula $S_\\infty = \\frac{a}{1-r}$.",
+      "$S_\\infty = \\frac{52}{1 - \\frac{1}{2}} = \\frac{52}{\\frac{1}{2}} = 104$."
+    ],
+    "solution_steps_zh": [
+      "已知 $a = 52$ 且 $r = \\frac{1}{2}$。",
+      "使用無限項求和公式 $S_\\infty = \\frac{a}{1-r}$。",
+      "$S_\\infty = \\frac{52}{1 - \\frac{1}{2}} = \\frac{52}{\\frac{1}{2}} = 104$。"
+    ]
+  },
+  {
+    "id": "math_alg_apgp_0304_17",
+    "topic_id": "math_alg_apgp",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 3,
+    "question": "The terms $2$, $6$, and $10$ form an arithmetic progression (AP). If $x$ is added to the third term, the new sequence $2$, $6$, $10+x$ forms a geometric progression (GP). Find the value of $x$.",
+    "question_zh": "各項 $2$、$6$ 和 $10$ 形成一個等差數列 (AP)。若將 $x$ 加到第三項，新數列 $2$、$6$、$10+x$ 形成一個等比數列 (GP)。求 $x$ 的值。",
+    "answer": "$8$",
+    "correct_answer": "$8$",
+    "solution_steps": [
+      "The initial sequence is an AP with common difference $d = 6 - 2 = 4$.",
+      "The new sequence is $2$, $6$, $10+x$.",
+      "Since it is a GP, we have $6^2 = 2(10+x)$.",
+      "$36 = 2(10+x) \\Rightarrow 10+x = 18 \\Rightarrow x = 8$."
+    ],
+    "solution_steps_zh": [
+      "原數列是一個公差 $d = 6 - 2 = 4$ 的 AP。",
+      "新數列為 $2$、$6$、$10+x$。",
+      "由於它是 GP，我們有 $6^2 = 2(10+x)$。",
+      "$36 = 2(10+x) \\Rightarrow 10+x = 18 \\Rightarrow x = 8$。"
+    ]
+  },
+  {
+    "id": "math_alg_apgp_0304_18",
+    "topic_id": "math_alg_apgp",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 3,
+    "question": "The terms $4$, $8$, and $12$ form an arithmetic progression (AP). If $x$ is added to the third term, the new sequence $4$, $8$, $12+x$ forms a geometric progression (GP). Find the value of $x$.",
+    "question_zh": "各項 $4$、$8$ 和 $12$ 形成一個等差數列 (AP)。若將 $x$ 加到第三項，新數列 $4$、$8$、$12+x$ 形成一個等比數列 (GP)。求 $x$ 的值。",
+    "answer": "$4$",
+    "correct_answer": "$4$",
+    "solution_steps": [
+      "The initial sequence is an AP with common difference $d = 8 - 4 = 4$.",
+      "The new sequence is $4$, $8$, $12+x$.",
+      "Since it is a GP, we have $8^2 = 4(12+x)$.",
+      "$64 = 4(12+x) \\Rightarrow 12+x = 16 \\Rightarrow x = 4$."
+    ],
+    "solution_steps_zh": [
+      "原數列是一個公差 $d = 8 - 4 = 4$ 的 AP。",
+      "新數列為 $4$、$8$、$12+x$。",
+      "由於它是 GP，我們有 $8^2 = 4(12+x)$。",
+      "$64 = 4(12+x) \\Rightarrow 12+x = 16 \\Rightarrow x = 4$。"
+    ]
+  },
+  {
+    "id": "math_alg_apgp_0304_19",
+    "topic_id": "math_alg_apgp",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 3,
+    "question": "The terms $2$, $4$, and $6$ form an arithmetic progression (AP). If $x$ is added to the third term, the new sequence $2$, $4$, $6+x$ forms a geometric progression (GP). Find the value of $x$.",
+    "question_zh": "各項 $2$、$4$ 和 $6$ 形成一個等差數列 (AP)。若將 $x$ 加到第三項，新數列 $2$、$4$、$6+x$ 形成一個等比數列 (GP)。求 $x$ 的值。",
+    "answer": "$2$",
+    "correct_answer": "$2$",
+    "solution_steps": [
+      "The initial sequence is an AP with common difference $d = 4 - 2 = 2$.",
+      "The new sequence is $2$, $4$, $6+x$.",
+      "Since it is a GP, we have $4^2 = 2(6+x)$.",
+      "$16 = 2(6+x) \\Rightarrow 6+x = 8 \\Rightarrow x = 2$."
+    ],
+    "solution_steps_zh": [
+      "原數列是一個公差 $d = 4 - 2 = 2$ 的 AP。",
+      "新數列為 $2$、$4$、$6+x$。",
+      "由於它是 GP，我們有 $4^2 = 2(6+x)$。",
+      "$16 = 2(6+x) \\Rightarrow 6+x = 8 \\Rightarrow x = 2$。"
+    ]
+  },
+  {
+    "id": "math_alg_apgp_0304_20",
+    "topic_id": "math_alg_apgp",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 3,
+    "question": "The terms $x$, $x+2$, and $x+6$ form a geometric progression (GP). Find the value of $x$.",
+    "question_zh": "各項 $x$、$x+2$ 和 $x+6$ 形成一個等比數列 (GP)。求 $x$ 的值。",
+    "answer": "$2$",
+    "correct_answer": "$2$",
+    "solution_steps": [
+      "Since it is a GP, the ratio of consecutive terms is equal: $\\frac{x+2}{x} = \\frac{x+6}{x+2}$.",
+      "Cross-multiply: $(x+2)^2 = x(x+6)$.",
+      "Expand: $x^2 + 4x + 4 = x^2 + 6x$.",
+      "Simplify: $4x + 4 = 6x \\implies 2x = 4 \\implies x = 2$."
+    ],
+    "solution_steps_zh": [
+      "由於它是 GP，相鄰兩項的比相等：$\\frac{x+2}{x} = \\frac{x+6}{x+2}$。",
+      "交叉相乘：$(x+2)^2 = x(x+6)$。",
+      "展開：$x^2 + 4x + 4 = x^2 + 6x$。",
+      "化簡：$4x + 4 = 6x \\implies 2x = 4 \\implies x = 2$。"
+    ]
+  },
+  {
+    "id": "math_alg_apgp_0304_21",
+    "topic_id": "math_alg_apgp",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 3,
+    "question": "The population of a city is $47157$ and it increases by $5\\%$ every year. Find the population after $3$ years, correct to the nearest integer.",
+    "question_zh": "某城市的入口為 $47157$，且每年增加 $5\\%$。求 $3$ 年後的城市人口（準確至最接近的整數）。",
+    "answer": "$54590$",
+    "correct_answer": "$54590$",
+    "solution_steps": [
+      "This is a GP problem with $a = 47157$ and $r = 1 + 5/100 = 1.05$.",
+      "After $3$ years, the population is $T_{4} = ar^{3}$.",
+      "Population $= 47157(1.05)^{3} \\approx 54590$."
+    ],
+    "solution_steps_zh": [
+      "這是一個 GP 問題，其中 $a = 47157$ 且 $r = 1 + 5/100 = 1.05$。",
+      "$3$ 年後，人口為 $T_{4} = ar^{3}$。",
+      "人口 $= 47157(1.05)^{3} \\approx 54590$。"
+    ]
+  },
+  {
+    "id": "math_alg_apgp_0304_22",
+    "topic_id": "math_alg_apgp",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 3,
+    "question": "The population of a city is $39486$ and it increases by $3\\%$ every year. Find the population after $4$ years, correct to the nearest integer.",
+    "question_zh": "某城市的入口為 $39486$，且每年增加 $3\\%$。求 $4$ 年後的城市人口（準確至最接近的整數）。",
+    "answer": "$44442$",
+    "correct_answer": "$44442$",
+    "solution_steps": [
+      "This is a GP problem with $a = 39486$ and $r = 1 + 3/100 = 1.03$.",
+      "After $4$ years, the population is $T_{5} = ar^{4}$.",
+      "Population $= 39486(1.03)^{4} \\approx 44442$."
+    ],
+    "solution_steps_zh": [
+      "這是一個 GP 問題，其中 $a = 39486$ 且 $r = 1 + 3/100 = 1.03$。",
+      "$4$ 年後，人口為 $T_{5} = ar^{4}$。",
+      "人口 $= 39486(1.03)^{4} \\approx 44442$。"
+    ]
+  },
+  {
+    "id": "math_alg_apgp_0304_23",
+    "topic_id": "math_alg_apgp",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 3,
+    "question": "The population of a city is $20075$ and it increases by $3\\%$ every year. Find the population after $4$ years, correct to the nearest integer.",
+    "question_zh": "某城市的入口為 $20075$，且每年增加 $3\\%$。求 $4$ 年後的城市人口（準確至最接近的整數）。",
+    "answer": "$22595$",
+    "correct_answer": "$22595$",
+    "solution_steps": [
+      "This is a GP problem with $a = 20075$ and $r = 1 + 3/100 = 1.03$.",
+      "After $4$ years, the population is $T_{5} = ar^{4}$.",
+      "Population $= 20075(1.03)^{4} \\approx 22595$."
+    ],
+    "solution_steps_zh": [
+      "這是一個 GP 問題，其中 $a = 20075$ 且 $r = 1 + 3/100 = 1.03$。",
+      "$4$ 年後，人口為 $T_{5} = ar^{4}$。",
+      "人口 $= 20075(1.03)^{4} \\approx 22595$。"
+    ]
+  },
+  {
+    "id": "math_alg_apgp_0304_24",
+    "topic_id": "math_alg_apgp",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 3,
+    "question": "The population of a city is $15671$ and it increases by $4\\%$ every year. Find the population after $5$ years, correct to the nearest integer.",
+    "question_zh": "某城市的入口為 $15671$，且每年增加 $4\\%$。求 $5$ 年後的城市人口（準確至最接近的整數）。",
+    "answer": "$19066$",
+    "correct_answer": "$19066$",
+    "solution_steps": [
+      "This is a GP problem with $a = 15671$ and $r = 1 + 4/100 = 1.04$.",
+      "After $5$ years, the population is $T_{6} = ar^{5}$.",
+      "Population $= 15671(1.04)^{5} \\approx 19066$."
+    ],
+    "solution_steps_zh": [
+      "這是一個 GP 問題，其中 $a = 15671$ 且 $r = 1 + 4/100 = 1.04$。",
+      "$5$ 年後，人口為 $T_{6} = ar^{5}$。",
+      "人口 $= 15671(1.04)^{5} \\approx 19066$。"
+    ]
+  },
+  {
+    "id": "math_alg_apgp_0304_25",
+    "topic_id": "math_alg_apgp",
+    "subject": "maths",
+    "level": 7,
+    "type": "short_answer",
+    "marks": 4,
+    "question": "In an arithmetic progression (AP), the first term is $17$ and the common difference is $5$. Find the minimum value of $n$ such that the sum of the first $n$ terms is greater than $672$.",
+    "question_zh": "在一等差數列 (AP) 中，首項為 $17$，公差為 $5$。求 $n$ 的最小值，使得首 $n$ 項之和超過 $672$。",
+    "answer": "$14$",
+    "correct_answer": "$14$",
+    "solution_steps": [
+      "Using the sum formula $S_n = \\frac{n}{2}\\\\left[2(17) + (n-1)(5)\\\\right] \\\\gt 672$.",
+      "$\\frac{5}{2}n^2 + (17 - \\frac{5}{2})n - 672 \\\\gt 0$.",
+      "Solving the quadratic inequality $n \\\\gt 13.75$.",
+      "Therefore, the minimum integer $n$ is $14$."
+    ],
+    "solution_steps_zh": [
+      "使用求和公式 $S_n = \\frac{n}{2}\\\\left[2(17) + (n-1)(5)\\\\right] \\\\gt 672$。",
+      "$\\frac{5}{2}n^2 + (17 - \\frac{5}{2})n - 672 \\\\gt 0$。",
+      "解二次不等式得 $n \\\\gt 13.75$。",
+      "因此，最小整數 $n$ 為 $14$。"
+    ]
+  },
+  {
+    "id": "math_alg_apgp_0304_26",
+    "topic_id": "math_alg_apgp",
+    "subject": "maths",
+    "level": 7,
+    "type": "short_answer",
+    "marks": 4,
+    "question": "In an arithmetic progression (AP), the first term is $18$ and the common difference is $9$. Find the minimum value of $n$ such that the sum of the first $n$ terms is greater than $729$.",
+    "question_zh": "在一等差數列 (AP) 中，首項為 $18$，公差為 $9$。求 $n$ 的最小值，使得首 $n$ 項之和超過 $729$。",
+    "answer": "$12$",
+    "correct_answer": "$12$",
+    "solution_steps": [
+      "Using the sum formula $S_n = \\frac{n}{2}\\\\left[2(18) + (n-1)(9)\\\\right] \\\\gt 729$.",
+      "$\\frac{9}{2}n^2 + (18 - \\frac{9}{2})n - 729 \\\\gt 0$.",
+      "Solving the quadratic inequality $n \\\\gt 11.32$.",
+      "Therefore, the minimum integer $n$ is $12$."
+    ],
+    "solution_steps_zh": [
+      "使用求和公式 $S_n = \\frac{n}{2}\\\\left[2(18) + (n-1)(9)\\\\right] \\\\gt 729$。",
+      "$\\frac{9}{2}n^2 + (18 - \\frac{9}{2})n - 729 \\\\gt 0$。",
+      "解二次不等式得 $n \\\\gt 11.32$。",
+      "因此，最小整數 $n$ 為 $12$。"
+    ]
+  },
+  {
+    "id": "math_alg_apgp_0304_27",
+    "topic_id": "math_alg_apgp",
+    "subject": "maths",
+    "level": 7,
+    "type": "short_answer",
+    "marks": 4,
+    "question": "In an arithmetic progression (AP), the first term is $18$ and the common difference is $8$. Find the minimum value of $n$ such that the sum of the first $n$ terms is greater than $608$.",
+    "question_zh": "在一等差數列 (AP) 中，首項為 $18$，公差為 $8$。求 $n$ 的最小值，使得首 $n$ 項之和超過 $608$。",
+    "answer": "$11$",
+    "correct_answer": "$11$",
+    "solution_steps": [
+      "Using the sum formula $S_n = \\frac{n}{2}\\\\left[2(18) + (n-1)(8)\\\\right] \\\\gt 608$.",
+      "$\\frac{8}{2}n^2 + (18 - \\frac{8}{2})n - 608 \\\\gt 0$.",
+      "Solving the quadratic inequality $n \\\\gt 10.70$.",
+      "Therefore, the minimum integer $n$ is $11$."
+    ],
+    "solution_steps_zh": [
+      "使用求和公式 $S_n = \\frac{n}{2}\\\\left[2(18) + (n-1)(8)\\\\right] \\\\gt 608$。",
+      "$\\frac{8}{2}n^2 + (18 - \\frac{8}{2})n - 608 \\\\gt 0$。",
+      "解二次不等式得 $n \\\\gt 10.70$。",
+      "因此，最小整數 $n$ 為 $11$。"
+    ]
+  },
+  {
+    "id": "math_alg_apgp_0304_28",
+    "topic_id": "math_alg_apgp",
+    "subject": "maths",
+    "level": 7,
+    "type": "short_answer",
+    "marks": 4,
+    "question": "Consider the sequence $\\log(5)$, $\\log(5\\cdot5)$, $\\log(5\\cdot5^2)$, $\\dots$. Find the sum of the first $5$ terms in terms of $\\log$.",
+    "question_zh": "考慮數列 $\\log(5)$、$\\log(5\\cdot5)$、$\\log(5\\cdot5^2)$、$\\dots$。以 $\\log$ 表示首 $5$ 項之和。",
+    "answer": "$\\log(5^{5}5^{10})$",
+    "correct_answer": "$\\log(5^{5}5^{10})$",
+    "solution_steps": [
+      "This sequence is an AP where the first term is $a = \\log(5)$ and common difference $d = \\log(5)$.",
+      "The sum is $S_{5} = \\frac{5}{2}\\\\left[2\\log(5) + (5-1)\\log(5)\\\\right]$.",
+      "$S_{5} = 5\\log(5) + \\frac{5(5-1)}{2}\\log(5) = \\log(5^{5}5^{10})$."
+    ],
+    "solution_steps_zh": [
+      "該數列是一個 AP，其中首項 $a = \\log(5)$，公差 $d = \\log(5)$。",
+      "總和 $S_{5} = \\frac{5}{2}\\\\left[2\\log(5) + (5-1)\\log(5)\\\\right]$。",
+      "$S_{5} = 5\\log(5) + \\frac{5(5-1)}{2}\\log(5) = \\log(5^{5}5^{10})$。"
+    ]
+  },
+  {
+    "id": "math_alg_apgp_0304_29",
+    "topic_id": "math_alg_apgp",
+    "subject": "maths",
+    "level": 7,
+    "type": "short_answer",
+    "marks": 4,
+    "question": "Consider the sequence $\\log(5)$, $\\log(5\\cdot3)$, $\\log(5\\cdot3^2)$, $\\dots$. Find the sum of the first $6$ terms in terms of $\\log$.",
+    "question_zh": "考慮數列 $\\log(5)$、$\\log(5\\cdot3)$、$\\log(5\\cdot3^2)$、$\\dots$。以 $\\log$ 表示首 $6$ 項之和。",
+    "answer": "$\\log(5^{6}3^{15})$",
+    "correct_answer": "$\\log(5^{6}3^{15})$",
+    "solution_steps": [
+      "This sequence is an AP where the first term is $a = \\log(5)$ and common difference $d = \\log(3)$.",
+      "The sum is $S_{6} = \\frac{6}{2}\\\\left[2\\log(5) + (6-1)\\log(3)\\\\right]$.",
+      "$S_{6} = 6\\log(5) + \\frac{6(6-1)}{2}\\log(3) = \\log(5^{6}3^{15})$."
+    ],
+    "solution_steps_zh": [
+      "該數列是一個 AP，其中首項 $a = \\log(5)$，公差 $d = \\log(3)$。",
+      "總和 $S_{6} = \\frac{6}{2}\\\\left[2\\log(5) + (6-1)\\log(3)\\\\right]$。",
+      "$S_{6} = 6\\log(5) + \\frac{6(6-1)}{2}\\log(3) = \\log(5^{6}3^{15})$。"
+    ]
+  },
+  {
+    "id": "math_alg_apgp_0304_30",
+    "topic_id": "math_alg_apgp",
+    "subject": "maths",
+    "level": 7,
+    "type": "short_answer",
+    "marks": 4,
+    "question": "Consider the sequence $\\log(2)$, $\\log(2\\cdot2)$, $\\log(2\\cdot2^2)$, $\\dots$. Find the sum of the first $5$ terms in terms of $\\log$.",
+    "question_zh": "考慮數列 $\\log(2)$、$\\log(2\\cdot2)$、$\\log(2\\cdot2^2)$、$\\dots$。以 $\\log$ 表示首 $5$ 項之和。",
+    "answer": "$\\log(2^{5}2^{10})$",
+    "correct_answer": "$\\log(2^{5}2^{10})$",
+    "solution_steps": [
+      "This sequence is an AP where the first term is $a = \\log(2)$ and common difference $d = \\log(2)$.",
+      "The sum is $S_{5} = \\frac{5}{2}\\\\left[2\\log(2) + (5-1)\\log(2)\\\\right]$.",
+      "$S_{5} = 5\\log(2) + \\frac{5(5-1)}{2}\\log(2) = \\log(2^{5}2^{10})$."
+    ],
+    "solution_steps_zh": [
+      "該數列是一個 AP，其中首項 $a = \\log(2)$，公差 $d = \\log(2)$。",
+      "總和 $S_{5} = \\frac{5}{2}\\\\left[2\\log(2) + (5-1)\\log(2)\\\\right]$。",
+      "$S_{5} = 5\\log(2) + \\frac{5(5-1)}{2}\\log(2) = \\log(2^{5}2^{10})$。"
+    ]
+  }
+]

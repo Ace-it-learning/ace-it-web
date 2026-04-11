@@ -1,0 +1,330 @@
+[
+  {
+    "id": "ct_mcq_241",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_geo_coord"],
+    "marks": 1,
+    "difficulty": 6,
+    "paper": 2,
+    "section": "B",
+    "question_en": "The graph of $y = f(x)$ is translated 2 units to the right and then 1 unit downwards. What is the equation of the new graph?",
+    "question_zh": "函數 $y = f(x)$ 的圖像向右平移 2 單位，然後向下平移 1 單位。求新圖像的方程。",
+    "options": [
+      "A. $y = f(x-2) - 1$",
+      "B. $y = f(x+2) - 1$",
+      "C. $y = f(x-2) + 1$",
+      "D. $y = f(x+2) + 1$"
+    ],
+    "correct_answer": "A",
+    "solution_steps_en": [
+      "Horizontal translation to the right by $h$ units: $x \\to x-h$. Here $h=2$, so $y = f(x-2)$.",
+      "Vertical translation downwards by $k$ units: $y \\to y-k$. Here $k=-1$, so $y = f(x-2) - 1$."
+    ],
+    "solution_steps_zh": [
+      "向右水平平移 $h$ 單位：$x \\to x-h$。此處 $h=2$，故 $y = f(x-2)$。",
+      "向下垂直平移 $k$ 單位：$y \\to y-k$。此處 $k=-1$，故 $y = f(x-2) - 1$。"
+    ],
+    "diagram_json": null,
+    "tags": ["transformation", "functions"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_242",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_alg_polynomials"],
+    "marks": 1,
+    "difficulty": 7,
+    "paper": 2,
+    "section": "B",
+    "question_en": "If $f(x) = x^3 - kx^2 + 5x - 2$ is divisible by $x-2$, find the value of $k$.",
+    "question_zh": "若 $f(x) = x^3 - kx^2 + 5x - 2$ 可被 $x-2$ 整除，求 $k$ 的值。",
+    "options": [
+      "A. 1",
+      "B. 2",
+      "C. 3",
+      "D. 4"
+    ],
+    "correct_answer": "D",
+    "solution_steps_en": [
+      "By factor theorem, if $f(x)$ is divisible by $(x-c)$, then $f(c) = 0$.",
+      "Set $x=2$: $f(2) = 2^3 - k(2^2) + 5(2) - 2 = 0$.",
+      " $8 - 4k + 10 - 2 = 0$.",
+      " $16 - 4k = 0 \\implies k = 4$."
+    ],
+    "solution_steps_zh": [
+      "根據因式定理，若 $f(x)$ 可被 $(x-c)$ 整除，則 $f(c) = 0$。",
+      "令 $x=2$：$f(2) = 2^3 - k(2^2) + 5(2) - 2 = 0$。",
+      "$8 - 4k + 10 - 2 = 0$。",
+      "$16 - 4k = 0 \\implies k = 4$。"
+    ],
+    "diagram_json": null,
+    "tags": ["factor-theorem", "polynomials"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_243",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_geo_coord"],
+    "marks": 1,
+    "difficulty": 7,
+    "paper": 2,
+    "section": "B",
+    "question_en": "Find the maximum value of $P = 2x + 3y$ subject to the constraints $x \\ge 0$, $y \\ge 0$, and $x + y \\le 5$.",
+    "question_zh": "在滿足約束條件 $x \\ge 0$，$y \\ge 0$ 及 $x + y \\le 5$ 的情況下，求 $P = 2x + 3y$ 的最大值。",
+    "options": [
+      "A. 10",
+      "B. 12",
+      "C. 15",
+      "D. 18"
+    ],
+    "correct_answer": "C",
+    "solution_steps_en": [
+      "The feasible region is a triangle with vertices at $(0, 0)$, $(5, 0)$, and $(0, 5)$.",
+      "Evaluate $P$ at each vertex:",
+      "At $(0, 0)$: $P = 0$.",
+      "At $(5, 0)$: $P = 2(5) + 3(0) = 10$.",
+      "At $(0, 5)$: $P = 2(0) + 3(5) = 15$.",
+      "The maximum value is 15."
+    ],
+    "solution_steps_zh": [
+      "可行解區域是一個頂點為 $(0, 0)$、$(5, 0)$ 及 $(0, 5)$ 的三角形。",
+      "在每個頂點計算 $P$ 的值：",
+      "在 $(0, 0)$：$P = 0$。",
+      "在 $(5, 0)$：$P = 2(5) + 3(0) = 10$。",
+      "在 $(0, 5)$：$P = 2(0) + 3(5) = 15$。",
+      "最大值為 15。"
+    ],
+    "diagram_json": null,
+    "tags": ["linear-programming", "coordinate-geometry"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_244",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_stat_prob"],
+    "marks": 1,
+    "difficulty": 6,
+    "paper": 2,
+    "section": "A",
+    "question_en": "The median and the interquartile range of a set of data are $m$ and $q$ respectively. If each datum is multiplied by 3 and then added by 5, find the new median and interquartile range.",
+    "question_zh": "一組數據的中位數及四分位數間距分別為 $m$ 及 $q$。若每個數據均乘以 3 再加 5，求新的中位數及四分位數間距。",
+    "options": [
+      "A. Median: $3m+5$, IQR: $3q$",
+      "B. Median: $3m+5$, IQR: $3q+5$",
+      "C. Median: $3m$, IQR: $3q$",
+      "D. Median: $3m$, IQR: $3q+5$"
+    ],
+    "correct_answer": "A",
+    "solution_steps_en": [
+      "For median (a measure of central tendency): New Median $= 3m + 5$.",
+      "For IQR (a measure of dispersion): Addition does not affect dispersion. Multiplication by 3 scales it. New IQR $= 3q$."
+    ],
+    "solution_steps_zh": [
+      "中位數（集中趨勢的量度）：新中位數 $= 3m + 5$。",
+      "四分位數間距（離散程度的量度）：加法不影響離散程度。乘以 3 會按比例縮放。新四分位數間距 $= 3q$。"
+    ],
+    "diagram_json": null,
+    "tags": ["statistics", "data-transformation"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_245",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_trig_applications"],
+    "marks": 1,
+    "difficulty": 7,
+    "paper": 2,
+    "section": "A",
+    "question_en": "In $\\triangle ABC$, $AB=8$, $BC=5$ and $\\angle B = 60^\\circ$. Find the length of $AC$.",
+    "question_zh": "在 $\\triangle ABC$ 中，$AB=8$，$BC=5$ 且 $\\angle B = 60^\\circ$。求 $AC$ 的長度。",
+    "options": [
+      "A. 6",
+      "B. 7",
+      "C. 8",
+      "D. 9"
+    ],
+    "correct_answer": "B",
+    "solution_steps_en": [
+      "Use cosine rule: $b^2 = a^2 + c^2 - 2ac \\cos B$.",
+      " $AC^2 = 5^2 + 8^2 - 2(5)(8) \\cos 60^\\circ$.",
+      " $AC^2 = 25 + 64 - 80(0.5) = 89 - 40 = 49$.",
+      " $AC = \\sqrt{49} = 7$."
+    ],
+    "solution_steps_zh": [
+      "使用餘弦定理：$b^2 = a^2 + c^2 - 2ac \\cos B$。",
+      "$AC^2 = 5^2 + 8^2 - 2(5)(8) \\cos 60^\\circ$。",
+      "$AC^2 = 25 + 64 - 80(0.5) = 89 - 40 = 49$。",
+      "$AC = \\sqrt{49} = 7$。"
+    ],
+    "diagram_json": null,
+    "tags": ["cosine-rule", "2D-trig"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_246",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_alg_apgp"],
+    "marks": 1,
+    "difficulty": 6,
+    "paper": 2,
+    "section": "B",
+    "question_en": "The sum of the first $n$ terms of an arithmetic sequence is $S_n = 2n^2 + 3n$. Find the common difference.",
+    "question_zh": "一個等差數列的首 $n$ 項之和為 $S_n = 2n^2 + 3n$。求公差。",
+    "options": [
+      "A. 2",
+      "B. 3",
+      "C. 4",
+      "D. 5"
+    ],
+    "correct_answer": "C",
+    "solution_steps_en": [
+      "Method 1: If $S_n = An^2 + Bn$, the common difference $d = 2A$. Here $d = 2(2) = 4$.",
+      "Method 2: $T_1 = S_1 = 2(1)^2 + 3(1) = 5$.",
+      "$S_2 = 2(2)^2 + 3(2) = 8 + 6 = 14$.",
+      "$T_2 = S_2 - S_1 = 14 - 5 = 9$.",
+      "Difference $d = T_2 - T_1 = 9 - 5 = 4$."
+    ],
+    "solution_steps_zh": [
+      "方法 1：若 $S_n = An^2 + Bn$，則公差 $d = 2A$。此處 $d = 2(2) = 4$。",
+      "方法 2：$T_1 = S_1 = 2(1)^2 + 3(1) = 5$。",
+      "$S_2 = 2(2)^2 + 3(2) = 8 + 6 = 14$。",
+      "$T_2 = S_2 - S_1 = 14 - 5 = 9$。",
+      "公差 $d = T_2 - T_1 = 9 - 5 = 4$。"
+    ],
+    "diagram_json": null,
+    "tags": ["AP-summation", "arithmetic-sequence"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_sa_247",
+    "type": "short_answer",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_alg_quadratics"],
+    "marks": 11,
+    "difficulty": 7,
+    "paper": 1,
+    "section": "B",
+    "question_en": "Suppose $\\alpha$ and $\\beta$ are the roots of the equation $x^2 - 6x + 4 = 0$. \n(a) Write down the value of $\\alpha + \\beta$ and $\\alpha\\beta$. (2 marks)\n(b) Without solving the equation, find the value of $\\frac{1}{\\alpha} + \\frac{1}{\\beta}$. (4 marks)\n(c) Find the value of $\\alpha^2 + \\beta^2$. (5 marks)",
+    "question_zh": "設 $\\alpha$ 及 $\\beta$ 為方程 $x^2 - 6x + 4 = 0$ 的根。\n(a) 寫出 $\\alpha + \\beta$ 及 $\\alpha\\beta$ 的值。(2分)\n(b) 在不解方程的情況下，求 $\\frac{1}{\\alpha} + \\frac{1}{\\beta}$ 的值。(4分)\n(c) 求 $\\alpha^2 + \\beta^2$ 的值。(5分)",
+    "solution_steps_en": [
+      "(a) From $x^2 - 6x + 4 = 0$: $\\alpha + \\beta = 6$ and $\\alpha\\beta = 4$.",
+      "(b) $\\frac{1}{\\alpha} + \\frac{1}{\\beta} = \\frac{\\alpha + \\beta}{\\alpha\\beta} = \\frac{6}{4} = 1.5$.",
+      "(c) $(\\alpha + \\beta)^2 = \\alpha^2 + 2\\alpha\\beta + \\beta^2$.",
+      " $\\alpha^2 + \\beta^2 = (\\alpha + \\beta)^2 - 2\\alpha\\beta$.",
+      " $\\alpha^2 + \\beta^2 = (6)^2 - 2(4) = 36 - 8 = 28$."
+    ],
+    "solution_steps_zh": [
+      "(a) 從 $x^2 - 6x + 4 = 0$ 中：$\\alpha + \\beta = 6$ 且 $\\alpha\\beta = 4$。",
+      "(b) $\\frac{1}{\\alpha} + \\frac{1}{\\beta} = \\frac{\\alpha + \\beta}{\\alpha\\beta} = \\frac{6}{4} = 1.5$。",
+      "(c) $(\\alpha + \\beta)^2 = \\alpha^2 + 2\\alpha\\beta + \\beta^2$。",
+      "$\\alpha^2 + \\beta^2 = (\\alpha + \\beta)^2 - 2\\alpha\\beta$。",
+      "$\\alpha^2 + \\beta^2 = (6)^2 - 2(4) = 36 - 8 = 28$。"
+    ],
+    "diagram_json": null,
+    "tags": ["quadratics", "roots-relations"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_sa_248",
+    "type": "short_answer",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_geo_circle_eq", "math_geo_coord"],
+    "marks": 13,
+    "difficulty": 8,
+    "paper": 1,
+    "section": "B",
+    "question_en": "A circle $C$ has the equation $x^2 + y^2 = 25$. Point $P(-3, 4)$ lies on the circle.\n(a) Find the slope of the radius $OP$, where $O$ is the origin. (3 marks)\n(b) Find the equation of the tangent line to the circle $C$ at point $P$. (6 marks)\n(c) Find the coordinates of the points where the tangent line intersects the axes. (4 marks)",
+    "question_zh": "圓 $C$ 的方程為 $x^2 + y^2 = 25$。點 $P(-3, 4)$ 位於該圓上。\n(a) 求半徑 $OP$ 的斜率，其中 $O$ 為原點。(3分)\n(b) 求圓 $C$ 在點 $P$ 的切線方程。(6分)\n(c) 求切線與軸的交點坐標。(4分)",
+    "solution_steps_en": [
+      "(a) $O = (0, 0), P = (-3, 4)$. Slope $m_{OP} = \\frac{4 - 0}{-3 - 0} = -\\frac{4}{3}$.",
+      "(b) Since tangent is perpendicular to radius, its slope $m_T = \\frac{-1}{-4/3} = \\frac{3}{4}$.",
+      " Equation: $y - 4 = \\frac{3}{4}(x - (-3))$.",
+      " $4y - 16 = 3x + 9 \\implies 3x - 4y + 25 = 0$.",
+      "(c) x-intercept: set $y=0 \\implies 3x + 25 = 0 \\implies x = -25/3$. Point: $(-25/3, 0)$.",
+      " y-intercept: set $x=0 \\implies -4y + 25 = 0 \\implies y = 25/4$. Point: $(0, 25/4)$."
+    ],
+    "solution_steps_zh": [
+      "(a) $O = (0, 0), P = (-3, 4)$。斜率 $m_{OP} = \\frac{4 - 0}{-3 - 0} = -\\frac{4}{3}$。",
+      "(b) 由於切線垂直於半徑，故其斜率 $m_T = \\frac{-1}{-4/3} = \\frac{3}{4}$。",
+      "方程：$y - 4 = \\frac{3}{4}(x - (-3))$。",
+      "$4y - 16 = 3x + 9 \\implies 3x - 4y + 25 = 0$。",
+      "(c) x-軸截距：令 $y=0 \\implies 3x + 25 = 0 \\implies x = -25/3$。點：$(-25/3, 0)$。",
+      "y-軸截距：令 $x=0 \\implies -4y + 25 = 0 \\implies y = 25/4$。點：$(0, 25/4)$。"
+    ],
+    "diagram_json": null,
+    "tags": ["circle-geometry", "tangent-equation"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_sa_249",
+    "type": "short_answer",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_alg_quadratics"],
+    "marks": 14,
+    "difficulty": 8,
+    "paper": 1,
+    "section": "B",
+    "question_en": "A farmer has 120 meters of fencing to enclose a rectangular area against a straight wall. No fencing is needed for the side along the wall.\n(a) Let $x$ be the width (perpendicular to the wall) and $y$ be the length. Express the area $A$ in terms of $x$. (4 marks)\n(b) By completing the square, find the value of $x$ that maximizes the area. (6 marks)\n(c) Find the maximum area of the enclosure. (4 marks)",
+    "question_zh": "一名農夫擁有 120 米長的圍欄，用於靠著一面長直牆圍出一個長方形區域。靠牆的一側不需要圍欄。\n(a) 設 $x$ 為寬度（垂直於牆面），$y$ 為長度。以 $x$ 表示面積 $A$。(4分)\n(b) 通過配方法，求使面積最大的 $x$ 值。(6分)\n(c) 求該區域的最大面積。(4分)",
+    "solution_steps_en": [
+      "(a) Fencing length $L = 2x + y = 120 \\implies y = 120 - 2x$.",
+      " Area $A = xy = x(120 - 2x) = 120x - 2x^2$.",
+      "(b) $A = -2(x^2 - 60x)$.",
+      " $A = -2(x^2 - 60x + 30^2 - 30^2) = -2(x - 30)^2 + 2(900)$.",
+      " $A = -2(x - 30)^2 + 1800$.",
+      " Area is maximized when $x = 30$.",
+      "(c) Max area $= 1800$ m$^2$."
+    ],
+    "solution_steps_zh": [
+      "(a) 圍欄長度 $L = 2x + y = 120 \\implies y = 120 - 2x$。",
+      "面積 $A = xy = x(120 - 2x) = 120x - 2x^2$。",
+      "(b) $A = -2(x^2 - 60x)$。",
+      "$A = -2(x^2 - 60x + 30^2 - 30^2) = -2(x - 30)^2 + 2(900)$。",
+      "$A = -2(x - 30)^2 + 1800$。",
+      "當 $x = 30$ 時，面積最大。",
+      "(c) 最大面積 $= 1800$ m$^2$。"
+    ],
+    "diagram_json": null,
+    "tags": ["quadratics", "completing-the-square", "optimization"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_sa_250",
+    "type": "short_answer",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_stat_prob"],
+    "marks": 12,
+    "difficulty": 8,
+    "paper": 1,
+    "section": "B",
+    "question_en": "5 boys and 3 girls are to be seated in a row of 8 chairs.\n(a) Find the number of ways they can be seated if there are no restrictions. (3 marks)\n(b) Find the number of ways they can be seated if the girls must sit together. (4 marks)\n(c) Find the number of ways they can be seated if the girls must not sit next to one another. (5 marks)",
+    "question_zh": "5 名男孩及 3 名女孩將坐在一排 8 張椅子上。\n(a) 若無限制，求入座的方法數目。(3分)\n(b) 若女孩必須坐在一起，求入座的方法數目。(4分)\n(c) 若女孩互不相鄰，求入座的方法數目。(5分)",
+    "solution_steps_en": [
+      "(a) Total permutations $= 8! = 40320$.",
+      "(b) Group the 3 girls as 1 unit. Total units $= 5 \\text{ boys} + 1 \\text{ unit} = 6$.",
+      " Permutations $= 6! \\times 3! = 720 \\times 6 = 4320$.",
+      "(c) Use the 'gap' method. Arrange 5 boys with gaps: _B_B_B_B_B_ (6 gaps).",
+      " Boys arrangement: $5!$.",
+      " Girls placement: $P^6_3 = 6 \\times 5 \\times 4 = 120$.",
+      " Total ways $= 120 \\times 120 = 14400$."
+    ],
+    "solution_steps_zh": [
+      "(a) 總排列數 $= 8! = 40320$。",
+      "(b) 將 3 名女孩視為 1 個單位。總單位數 $= 5 \\text{ 男孩} + 1 \\text{ 單位} = 6$。",
+      "排列數 $= 6! \\times 3! = 720 \\times 6 = 4320$。",
+      "(c) 使用「插空法」。先排 5 名男孩並留下間隙：_B_B_B_B_B_（6 個間隙）。",
+      "男孩排列數：$5!$。",
+      "女孩入夢位：$P^6_3 = 6 \\times 5 \\times 4 = 120$。",
+      "總方法數 $= 120 \\times 120 = 14400$。"
+    ],
+    "diagram_json": null,
+    "tags": ["permutations", "combinatorics"],
+    "status": "approved"
+  }
+]

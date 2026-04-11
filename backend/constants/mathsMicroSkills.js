@@ -54,6 +54,13 @@ const MATHS_MICRO_SKILLS = {
         description: 'Laws of indices, log properties, solving exponential eq.',
         paper: 'Paper 1/2'
     },
+    'math_alg_indices': {
+        id: 'math_alg_indices',
+        name: 'Laws of Indices',
+        category: 'Number & Algebra',
+        description: 'Simplified laws of indices, including negative and fractional powers.',
+        paper: 'Paper 1'
+    },
     'math_alg_variations': {
         id: 'math_alg_variations',
         name: 'Variations',
@@ -126,11 +133,11 @@ const MATHS_MICRO_SKILLS = {
         description: 'Angle between lines/planes, 3D visualization.',
         paper: 'Paper 1'
     },
-    'math_trig_graphs': {
-        id: 'math_trig_graphs',
+    'math_geo_trig_func': {
+        id: 'math_geo_trig_func',
         name: 'Trig Functions & Graphs',
         category: 'Geometry',
-        description: 'Graphs of sin/cos/tan, solving trig equations.',
+        description: 'ASTC rule, graphs of sin/cos/tan, solving trig equations.',
         paper: 'Paper 2'
     },
 
@@ -154,6 +161,13 @@ const MATHS_MICRO_SKILLS = {
         name: 'Permutations & Combinations',
         category: 'Data Handling',
         description: 'nCr, nPr, arrangement problems.',
+        paper: 'Paper 1/2'
+    },
+    'math_stat_prob': {
+        id: 'math_stat_prob',
+        name: 'Probability & Statistics (Quest)',
+        category: 'Data Handling',
+        description: 'Consolidated DSE Data Handling covering Probability, Counting, and Measures.',
         paper: 'Paper 1/2'
     },
     'math_trig_applications': {

@@ -4,7 +4,7 @@ import { useAuth } from '../../context/AuthContext';
 import { useLanguage } from '../../context/LanguageContext';
 import { Lock, CheckCircle, Play, Map, Star, Clock, X, Trophy, Search, Sparkles, Zap, Calculator, PieChart, Shapes, Ruler, RefreshCcw, ChevronDown, BarChart3 } from 'lucide-react';
 import { MATH_MICRO_SKILLS, getMathSkillName, getMathSkillDesc, getMathSkillMinForm } from '../../constants/mathMicroSkills';
-import { calculateTier, getTierMetadata, getMasteryStats, getDifficultyTierDetails, getMasteryPercentage } from '../../utils/masteryUtils';
+import { calculateTier, getTierMetadata, getMasteryStats, getDifficultyTierDetails, getMasteryPercentage, getMathMasteryPercentage } from '../../utils/masteryUtils';
 
 const calculateCurrentForm = (baseGrade, joinedDateTimestamp) => {
     if (!baseGrade) return 6; // Default to F6 if unknown
@@ -42,7 +42,7 @@ const calculateCurrentForm = (baseGrade, joinedDateTimestamp) => {
 
 const MathRoadmapModal = ({ isOpen, onClose }) => {
     const { user } = useAuth();
-    const { language } = useLanguage();
+    const { language, t: globalT } = useLanguage();
     const navigate = useNavigate();
     const [plan, setPlan] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -71,11 +71,10 @@ const MathRoadmapModal = ({ isOpen, onClose }) => {
         en: {
             questSystem: "Mathematics Quest",
             myPath: "My Math Path",
-            subtitleWeekly: "Complete 5 targets to unlock the Master Challenge!",
+            subtitleWeekly: "Complete 5 targets to unlock the Master Quest!",
             subtitleGeneral: "Select a topic to generate practice questions.",
             tabPersonalised: "Targeted Growth",
             tabLibrary: "Skill Library",
-            tabIntegrated: "Integrated Maths",
             loading: "Calculating your optimal path...",
             targets: "Targets",
             bossUnlocked: "Boss Unlocked!",
@@ -83,8 +82,9 @@ const MathRoadmapModal = ({ isOpen, onClose }) => {
             statusCollected: "COLLECTED",
             statusPractice: "PRACTICE",
             collectedXp: "Collected! (Practice: +50 XP)",
-            masterChallenge: "Weekly Master Challenge",
-            masterDesc: "Prove your mastery of this week's topics.",
+            masterChallenge: "Weekly Quest",
+            masterDescAlt: "Synthesize your skills across all topics.",
+            unlockCondition: (count) => `Complete ${3 - count} more Quests to unlock`,
             moreTargets: (count) => `Complete ${count} more targets`,
             searchPlaceholder: "Search Math skills...",
             skillsFound: (count) => `${count} skills found`,
@@ -104,11 +104,10 @@ const MathRoadmapModal = ({ isOpen, onClose }) => {
         zh: {
             questSystem: "數學任務",
             myPath: "我的數學路徑",
-            subtitleWeekly: "完成 5 個目標以解鎖大師挑戰！",
+            subtitleWeekly: "完成 5 個目標以解鎖每週任務！",
             subtitleGeneral: "選擇一個主題以生成練習題。",
             tabPersonalised: "個人化任務",
             tabLibrary: "技能庫",
-            tabIntegrated: "綜合數學",
             loading: "正在計算路徑...",
             targets: "個目標",
             bossUnlocked: "挑戰已解鎖！",
@@ -116,8 +115,9 @@ const MathRoadmapModal = ({ isOpen, onClose }) => {
             statusCollected: "已完成",
             statusPractice: "開始練習",
             collectedXp: "已完成！(練習：+50 XP)",
-            masterChallenge: "每週大師挑戰",
-            masterDesc: "證明你對本週主題的掌握程度。",
+            masterChallenge: "每週任務 (DSE)",
+            masterDescAlt: "綜合各主題技能，挑戰 DSE 難度題目。",
+            unlockCondition: (count) => `再完成 ${3 - count} 個主題任務以解鎖`,
             moreTargets: (count) => `再完成 ${count} 個目標`,
             searchPlaceholder: "搜尋數學技能...",
             skillsFound: (count) => `找到 ${count} 個技能`,
@@ -139,14 +139,15 @@ const MathRoadmapModal = ({ isOpen, onClose }) => {
     const t = translations[language === 'zh' ? 'zh' : 'en'];
 
     const fetchUserSkills = async () => {
+        if (!user?.uid) return;
         try {
             const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
-            // Use the dedicated Math endpoint
-            const res = await fetch(`${API_URL}/api/profile/maths?uid=${user.uid}`);
+            // Use the dedicated Math skillmap endpoint
+            const res = await fetch(`${API_URL}/api/skillmap/maths?uid=${user.uid}`);
             if (res.ok) {
                 const data = await res.json();
-                setUserSkills(data.microSkills || {});
-                setPracticedSkills(data.practicedSkills || []);
+                setUserSkills(data?.microSkills || {});
+                setPracticedSkills(data?.practicedSkills || []);
             }
         } catch (error) {
             console.error("Failed to load user math skills", error);
@@ -224,12 +225,13 @@ const MathRoadmapModal = ({ isOpen, onClose }) => {
         if (filterCategory !== 'ALL' && cat !== filterCategory) return false;
 
         // 3. Tab Filter
-        if (activeTab === 'CHALLENGE') {
-            return id.startsWith('math_int');
-        }
-
         // Only show single topics in GENERAL / WEEKLY tabs
-        if (id.startsWith('math_int')) return false;
+        if (id.startsWith('math_int') || id === 'integrated_challenge') return false;
+
+        // 4. Redundancy Filter: Consolidate Data Handling
+        // Hide granular sub-skills that are covered by the math_stat_prob Quest
+        const redundantDataSkills = ['math_stat_probability', 'math_stat_counting', 'math_stat_measures'];
+        if (redundantDataSkills.includes(id)) return false;
 
         return true;
     });
@@ -237,62 +239,61 @@ const MathRoadmapModal = ({ isOpen, onClose }) => {
     return (
         <div className="fixed inset-0 z-[3000] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in duration-200">
             <div className="bg-white rounded-2xl shadow-2xl w-[90vw] h-[90vh] flex flex-col overflow-hidden animate-in zoom-in-95 duration-200">
-                {/* Header - Math Theme (Indigo/Purple) */}
-                <div className={`p-4 relative overflow-hidden ${activeTab === 'CHALLENGE' ? 'bg-indigo-950' : 'bg-violet-600'}`}>
-                    <div className="absolute top-0 right-0 p-2 opacity-10">
-                        <Calculator className="w-32 h-32 text-white transform rotate-12" />
+                {/* Header - Standardized Ace It! Theme (Brand Orange) */}
+                <div className="p-6 relative overflow-hidden bg-[#FF6600] border-b border-white/10 shrink-0">
+                    <div className="absolute top-0 right-0 p-4 opacity-10">
+                        <Calculator className="w-40 h-40 text-white transform rotate-12" />
                     </div>
 
                     <button
                         onClick={onClose}
-                        className="absolute top-3 right-4 text-white/80 hover:text-white transition-colors z-[60]"
+                        className="absolute top-4 right-6 text-white/80 hover:text-white transition-colors z-[60]"
                     >
-                        <X className="w-6 h-6" />
+                        <X className="w-7 h-7" />
                     </button>
 
-                    <div className="relative z-10 text-white flex flex-col md:flex-row justify-between items-end gap-4">
-                        <div>
-                            <div className="flex items-center gap-2 mb-1 opacity-90 text-[10px] font-bold tracking-wider uppercase">
-                                <Map className="w-3 h-3" />
-                                {t.questSystem}
-                            </div>
-                            <h2 className="text-2xl font-bold leading-tight">{t.myPath}</h2>
-                            <p className="text-white/80 text-xs opacity-90 truncate max-w-md">
-                                {activeTab === 'WEEKLY'
-                                    ? t.subtitleWeekly
-                                    : t.subtitleGeneral}
+                    <div className="relative z-10 text-white grid grid-cols-1 md:grid-cols-3 items-center gap-6">
+                        <div className="text-center md:text-left">
+                            <h2 className="text-3xl font-black leading-tight tracking-tight mb-1">{globalT('roadmap.title_math')}</h2>
+                            <p className="text-white/90 text-sm font-medium opacity-90">
+                                {globalT('roadmap.complete_quest_xp')}
                             </p>
                         </div>
 
-                        {/* Tab Switcher */}
-                        <div className={`flex p-1 rounded-lg backdrop-blur-sm border ${activeTab === 'CHALLENGE' ? 'bg-indigo-800/40 border-indigo-400/30' : 'bg-violet-700/40 border-violet-400/30'}`}>
-                            {[
-                                { id: 'WEEKLY', label: t.tabPersonalised, icon: Clock },
-                                { id: 'GENERAL', label: t.tabLibrary, icon: Sparkles },
-                                { id: 'CHALLENGE', label: t.tabIntegrated, icon: Zap }
-                            ].map(tab => (
-                                <button
-                                    key={tab.id}
-                                    onClick={() => {
-                                        setActiveTab(tab.id);
-                                        setFilterCategory('ALL');
-                                    }}
-                                    className={`
-                                        flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-bold transition-all
-                                        ${activeTab === tab.id
-                                            ? 'bg-white text-slate-900 shadow-sm'
-                                            : 'text-white hover:bg-white/10'}
-                                    `}
-                                >
-                                    <tab.icon className="w-3.5 h-3.5" />
-                                    {tab.label}
-                                </button>
-                            ))}
+                        {/* Tab Switcher - Centered & Larger & Energetic Blue */}
+                        <div className="flex justify-center">
+                            <div className="flex p-1.5 bg-white/20 backdrop-blur-md rounded-xl border border-white/30 shadow-inner">
+                                {[
+                                    { id: 'WEEKLY', label: globalT('roadmap.targeted_growth'), icon: Clock },
+                                    { id: 'GENERAL', label: globalT('roadmap.quests_lab'), icon: Sparkles }
+                                ].map(tab => (
+                                    <button
+                                        key={tab.id}
+                                        onClick={() => {
+                                            setActiveTab(tab.id);
+                                            setFilterCategory('ALL');
+                                        }}
+                                        className={`
+                                            flex items-center gap-2 px-6 py-2.5 rounded-lg text-sm font-black transition-all duration-300
+                                            ${activeTab === tab.id
+                                                ? 'bg-[#007AFF] text-white shadow-lg scale-105'
+                                                : 'text-white hover:bg-white/10'
+                                            }
+                                        `}
+                                    >
+                                        <tab.icon className="w-4 h-4" />
+                                        {tab.label}
+                                    </button>
+                                ))}
+                            </div>
                         </div>
+
+                        {/* Empty spacer for balancing the grid and avoiding close button overlap */}
+                        <div className="hidden md:block w-full h-px" />
                     </div>
 
-                    {/* Matt's Personalization Banner */}
-                    <div className="bg-indigo-900/40 backdrop-blur-sm border-t border-indigo-500/30 px-6 py-2 text-white/90 text-xs font-medium flex items-center gap-2">
+                    {/* Matt's Personalization Banner - Standardized Contrast */}
+                    <div className="bg-black/20 backdrop-blur-sm border-t border-white/10 px-6 py-2 text-white/90 text-xs font-medium flex items-center gap-2">
                         <Sparkles className="w-3.5 h-3.5 text-yellow-300" />
                         <span>
                             You are currently in <span className="font-bold text-white">Form {currentForm}</span>.
@@ -305,15 +306,15 @@ const MathRoadmapModal = ({ isOpen, onClose }) => {
                 {loading ? (
                     <div className="p-12 text-center text-slate-400 flex-1 flex items-center justify-center">
                         <div className="flex flex-col items-center gap-3">
-                            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-violet-600"></div>
-                            <p>{t.loading}</p>
+                            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#FF6600]"></div>
+                            <p>{globalT ? globalT('common.loading') : t.loading}</p>
                         </div>
                     </div>
                 ) : (
                     <div className="flex-1 flex flex-col min-h-0 bg-slate-50/50">
                         {activeTab === 'WEEKLY' ? (
                             <div className="p-6 flex-1 overflow-y-auto custom-scrollbar">
-                                {Object.keys(userSkills || {}).filter(id => id.startsWith('math_') && !id.startsWith('math_int')).length === 0 && (plan?.tasks || []).length === 0 ? (
+                                 {Object.keys(userSkills || {}).filter(id => id.startsWith('math_') && !id.startsWith('math_int')).length === 0 && (plan?.tasks || []).length === 0 ? (
                                     <div className="h-full flex flex-col items-center justify-center text-center p-8">
                                         <div className="w-24 h-24 bg-violet-100/50 rounded-full flex items-center justify-center mb-6">
                                             <Sparkles className="w-12 h-12 text-violet-500 animate-pulse" />
@@ -325,7 +326,7 @@ const MathRoadmapModal = ({ isOpen, onClose }) => {
                                         <div className="flex flex-col items-center gap-4">
                                             <button
                                                 onClick={() => setActiveTab('GENERAL')}
-                                                className="px-8 py-4 bg-violet-600 text-white rounded-2xl font-bold hover:bg-violet-700 hover:scale-105 transition-all shadow-xl shadow-violet-200 flex items-center gap-2 group"
+                                                className="px-8 py-4 bg-[#FF6600] text-white rounded-2xl font-bold hover:bg-[#e65c00] hover:scale-105 transition-all shadow-xl shadow-orange-200 flex items-center gap-2 group"
                                             >
                                                 {t.emptyGrowthAction}
                                                 <Play className="w-4 h-4 fill-current group-hover:translate-x-1 transition-transform" />
@@ -338,21 +339,131 @@ const MathRoadmapModal = ({ isOpen, onClose }) => {
                                     </div>
                                 ) : (
                                     <>
-                                        {/* Bottom 3 Bottlenecks - Targeted Growth */}
-                                        {Object.keys(userSkills || {}).filter(id => id.startsWith('math_') && !id.startsWith('math_int')).length > 0 && (
-                                            <div className="mb-6">
-                                                <div className="flex items-center gap-2 mb-4">
-                                                    <Sparkles className="w-5 h-5 text-violet-600" />
-                                                    <h3 className="text-sm font-black text-slate-800 uppercase tracking-wider">Top 3 Radar Bottlenecks</h3>
+                                        {/* Weekly Quest Banner */}
+                                        <div className="mb-8">
+                                            <div className="flex items-center gap-2 mb-4">
+                                                <Trophy className="w-5 h-5 text-indigo-600" />
+                                                <h3 className="text-sm font-black text-slate-800 uppercase tracking-wider">{t.masterChallenge}</h3>
+                                            </div>
+                                            
+                                            <div 
+                                                onClick={() => {
+                                                    if (practicedSkills.length < 3) return;
+                                                    onClose();
+                                                    navigate('/maths/lab', {
+                                                        state: {
+                                                            topic: 'integrated_challenge',
+                                                            mode: 'challenge',
+                                                            level: 7, // DSE Elite
+                                                            xp: 300,
+                                                            title: t.masterChallenge,
+                                                            isFactoryQuest: false
+                                                        }
+                                                    });
+                                                }}
+                                                className={`
+                                                    group relative overflow-hidden rounded-[2rem] border-2 transition-all duration-500
+                                                    ${practicedSkills.length < 3 
+                                                        ? 'bg-slate-50 border-slate-200 opacity-80 cursor-not-allowed' 
+                                                        : 'bg-gradient-to-br from-indigo-600 via-violet-600 to-fuchsia-600 border-indigo-400 shadow-xl shadow-indigo-200 cursor-pointer hover:scale-[1.02] hover:shadow-2xl'
+                                                    }
+                                                `}
+                                            >
+                                                {/* Background Decorative Elements */}
+                                                <div className="absolute top-0 right-0 p-8 opacity-20 pointer-events-none group-hover:scale-110 transition-transform duration-700">
+                                                    <Zap className="w-64 h-64 text-white -rotate-12" />
                                                 </div>
-                                                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                                                    {Object.entries(userSkills)
-                                                        .filter(([id]) => id.startsWith('math_') && !id.startsWith('math_int'))
-                                                        .sort((a, b) => (a[1].level || 0) - (b[1].level || 0))
-                                                        .slice(0, 3)
-                                                        .map(([id, skillData]) => {
+                                                <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-white/10 rounded-full blur-3xl" />
+                                                
+                                                <div className="relative z-10 p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+                                                    <div className="flex-1 text-center md:text-left">
+                                                        <div className="flex items-center justify-center md:justify-start gap-3 mb-2">
+                                                            <div className={`px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest ${practicedSkills.length < 3 ? 'bg-slate-200 text-slate-500' : 'bg-white/20 text-white border border-white/30 backdrop-blur-md'}`}>
+                                                                {practicedSkills.length < 3 ? 'Locked' : 'Available Now'}
+                                                            </div>
+                                                            {practicedSkills.length >= 3 && (
+                                                                <div className="flex items-center gap-1 text-yellow-300 font-bold text-xs">
+                                                                    <Sparkles className="w-3.5 h-3.5 fill-current" />
+                                                                    <span>+300 XP</span>
+                                                                </div>
+                                                            )}
+                                                        </div>
+                                                        <h4 className={`text-3xl font-black mb-2 ${practicedSkills.length < 3 ? 'text-slate-600' : 'text-white'}`}>
+                                                            {t.masterChallenge}
+                                                        </h4>
+                                                        <p className={`text-sm leading-relaxed max-w-md ${practicedSkills.length < 3 ? 'text-slate-400' : 'text-indigo-100'}`}>
+                                                            {practicedSkills.length < 3 
+                                                                ? t.unlockCondition(practicedSkills.length)
+                                                                : (language === 'zh' ? '綜合各主題技能，挑戰 DSE 難度題目。' : 'Synthesize your skills across all topics and tackle DSE-style challenges.')
+                                                            }
+                                                        </p>
+                                                    </div>
+                                                    
+                                                    <div className="shrink-0 flex flex-col items-center gap-3">
+                                                        {practicedSkills.length < 3 ? (
+                                                            <div className="w-16 h-16 bg-slate-200 rounded-3xl flex items-center justify-center text-slate-400 shadow-inner border border-slate-300">
+                                                                <Lock className="w-8 h-8" />
+                                                            </div>
+                                                        ) : (
+                                                            <div className="bg-white text-indigo-600 p-6 rounded-[1.5rem] shadow-xl group-hover:scale-110 transition-transform duration-300">
+                                                                <Play className="w-6 h-6 fill-current" />
+                                                            </div>
+                                                        )}
+                                                        <span className={`text-[10px] font-black uppercase tracking-widest ${practicedSkills.length < 3 ? 'text-slate-300' : 'text-white/60'}`}>
+                                                            {practicedSkills.length < 3 ? 'Path Restricted' : 'Begin Challenge'}
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        {/* Top 3 Bottlenecks - Targeted Growth */}
+                                        {(() => {
+                                            const bottlenecks = Object.keys(MATH_MICRO_SKILLS)
+                                                .filter(id => {
+                                                    const skill = MATH_MICRO_SKILLS[id];
+                                                    const isBasic = id.startsWith('math_') && !id.startsWith('math_int');
+                                                    const isRedundant = ['math_stat_probability', 'math_stat_counting', 'math_stat_measures'].includes(id);
+                                                    const isRelevant = skill.minForm <= currentForm;
+                                                    return isBasic && !isRedundant && isRelevant;
+                                                })
+                                                .map(id => ({
+                                                    id,
+                                                    level: userSkills[id]?.level || 0,
+                                                    minForm: MATH_MICRO_SKILLS[id].minForm
+                                                }))
+                                                .sort((a, b) => {
+                                                    // Strictly prioritize absolute lowest level first (0% first, then low levels)
+                                                    if (a.level !== b.level) {
+                                                        return a.level - b.level;
+                                                    }
+                                                    // Tie-break: Prefer skills closest to current form
+                                                    return b.minForm - a.minForm;
+                                                })
+                                                .slice(0, 3);
+
+                                            if (bottlenecks.length === 0) return null;
+
+                                            return (
+                                                <div className="mb-6">
+                                                    <div className="flex items-center gap-2 mb-4">
+                                                        <Sparkles className="w-5 h-5 text-violet-600" />
+                                                        <h3 className="text-sm font-black text-slate-800 uppercase tracking-wider">Top 3 Radar Bottlenecks</h3>
+                                                    </div>
+                                                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                                        {bottlenecks.map(({ id, level }) => {
                                                             const name = getMathSkillName(id, language);
-                                                            const level = skillData.level || 1;
+                                                            const isPracticed = level > 0;
+                                                            
+                                                            // Determine Category Style (same as Quest Lab)
+                                                            let catColor = 'text-slate-500 bg-slate-100';
+                                                            if (id.startsWith('math_num') || id.startsWith('math_alg')) catColor = 'text-blue-600 bg-blue-50';
+                                                            else if (id.startsWith('math_geo')) catColor = 'text-orange-600 bg-orange-50';
+                                                            else if (id.startsWith('math_stat')) catColor = 'text-teal-600 bg-teal-50';
+
+                                                            const masteryTier = calculateTier(level);
+                                                            const masteryPct = getMasteryPercentage(masteryTier);
+
                                                             return (
                                                                 <div
                                                                     key={`weak_${id}`}
@@ -362,9 +473,13 @@ const MathRoadmapModal = ({ isOpen, onClose }) => {
                                                                     <div className="absolute top-0 right-0 p-3 opacity-5 group-hover:opacity-10 transition-opacity">
                                                                         <Zap className="w-12 h-12 text-red-600" />
                                                                     </div>
-                                                                    <div className="flex items-center gap-2 mb-2">
-                                                                        <div className="px-2 py-0.5 bg-red-50 text-red-600 rounded text-[9px] font-black uppercase">Urgent Mastery</div>
-                                                                        <div className="px-2 py-0.5 bg-slate-100 text-slate-500 rounded text-[9px] font-bold">Level {level}</div>
+                                                                    <div className="flex justify-between items-start mb-2">
+                                                                        <div className="flex gap-2">
+                                                                            <span className={`px-2 py-0.5 rounded text-[9px] font-black uppercase tracking-wider ${catColor}`}>
+                                                                                {id.split('_')[1]}
+                                                                            </span>
+                                                                            <div className="px-2 py-0.5 bg-red-50 text-red-600 rounded text-[9px] font-black uppercase">Urgent Mastery</div>
+                                                                        </div>
                                                                     </div>
                                                                     <h4 className="font-bold text-slate-900 group-hover:text-red-600 transition-colors">{name}</h4>
                                                                     
@@ -372,27 +487,30 @@ const MathRoadmapModal = ({ isOpen, onClose }) => {
                                                                     <div className="mt-4 space-y-1.5">
                                                                         <div className="flex justify-between text-[9px] font-black tracking-widest text-slate-400 uppercase">
                                                                             <span>{t.mastery}</span>
-                                                                            <span>{getMasteryPercentage(level)}%</span>
+                                                                            <span>{masteryPct}%</span>
                                                                         </div>
                                                                         <div className="h-1.5 bg-slate-100 rounded-full overflow-hidden border border-slate-200/50">
                                                                             <div 
                                                                                 className="h-full bg-gradient-to-r from-red-500 to-orange-500 transition-all duration-1000"
-                                                                                style={{ width: `${getMasteryPercentage(level)}%` }}
+                                                                                style={{ width: `${masteryPct}%` }}
                                                                             />
                                                                         </div>
                                                                     </div>
 
                                                                     <p className="text-[10px] text-slate-400 mt-3 italic">Defeat this bottleneck to level up.</p>
                                                                     <div className="mt-4 flex items-center justify-between">
-                                                                        <span className="text-xs font-bold text-red-500">+Adaptive XP</span>
+                                                                        <span className="text-xs font-bold text-red-500 flex items-center gap-1">
+                                                                            <Star className="w-3 h-3 fill-current" /> +50 XP
+                                                                        </span>
                                                                         <Play className="w-4 h-4 text-slate-300 group-hover:text-red-500 transition-colors" />
                                                                     </div>
                                                                 </div>
                                                             );
                                                         })}
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        )}
+                                            );
+                                        })()}
 
                                         {/* Personalized Batch */}
                                         {(plan?.tasks || []).length > 0 && (
@@ -573,18 +691,23 @@ const MathRoadmapModal = ({ isOpen, onClose }) => {
                                                         </h4>
                                                         
                                                         {/* Mastery Bar */}
-                                                        <div className="mt-3 space-y-1">
-                                                            <div className="flex justify-between text-[8px] font-black text-slate-400 uppercase tracking-widest">
-                                                                <span>{t.mastery}</span>
-                                                                <span>{getMasteryPercentage(level)}%</span>
-                                                            </div>
-                                                            <div className="h-1 bg-slate-100 rounded-full overflow-hidden border border-slate-200/50">
-                                                                <div 
-                                                                    className="h-full bg-gradient-to-r from-violet-500 to-indigo-600 transition-all duration-1000"
-                                                                    style={{ width: `${getMasteryPercentage(level)}%` }}
-                                                                />
-                                                            </div>
-                                                        </div>
+                                                        {(() => {
+                                                            const masteryPct = getMathMasteryPercentage(level);
+                                                            return (
+                                                                <div className="mt-3 space-y-1">
+                                                                    <div className="flex justify-between text-[8px] font-black text-slate-400 uppercase tracking-widest">
+                                                                        <span>{t.mastery}</span>
+                                                                        <span>{masteryPct}%</span>
+                                                                    </div>
+                                                                    <div className="h-1 bg-slate-100 rounded-full overflow-hidden border border-slate-200/50">
+                                                                        <div 
+                                                                            className="h-full bg-gradient-to-r from-violet-500 to-indigo-600 transition-all duration-1000"
+                                                                            style={{ width: `${masteryPct}%` }}
+                                                                        />
+                                                                    </div>
+                                                                </div>
+                                                            );
+                                                        })()}
 
                                                         <p className="text-[10px] text-slate-500 mt-3 line-clamp-1 leading-tight opacity-70">
                                                             {desc}

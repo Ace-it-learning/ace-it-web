@@ -1,0 +1,29 @@
+
+<svg width="600" height="300" viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Left Side: Curve -->
+  <g transform="translate(50, 50)">
+    <line x1="0" y1="200" x2="180" y2="200" stroke="black" stroke-width="2" />
+    <line x1="0" y1="0" x2="0" y2="200" stroke="black" stroke-width="2" />
+    <path d="M 0 180 Q 50 175 150 20" fill="none" stroke="#3b82f6" stroke-width="3" />
+    <text x="100" y="40" font-family="Arial" font-size="14" fill="#3b82f6">y = ab^x</text>
+    <text x="185" y="205" font-family="Arial" font-size="12">x</text>
+    <text x="-20" y="10" font-family="Arial" font-size="12">y</text>
+  </g>
+  
+  <!-- Arrow -->
+  <g transform="translate(260, 150)">
+    <line x1="0" y1="0" x2="80" y2="0" stroke="#666" stroke-width="3" />
+    <path d="M 80 0 L 70 -5 L 70 5 Z" fill="#666" />
+    <text x="5" y="-10" font-family="Arial" font-size="12" fill="#666">log both sides</text>
+  </g>
+  
+  <!-- Right Side: Straight Line -->
+  <g transform="translate(400, 50)">
+    <line x1="0" y1="200" x2="180" y2="200" stroke="black" stroke-width="2" />
+    <line x1="0" y1="0" x2="0" y2="200" stroke="black" stroke-width="2" />
+    <line x1="0" y1="180" x2="150" y2="20" stroke="#f97316" stroke-width="3" />
+    <text x="40" y="40" font-family="Arial" font-size="14" fill="#f97316">log y = (log b)x + log a</text>
+    <text x="185" y="205" font-family="Arial" font-size="12">x</text>
+    <text x="-40" y="10" font-family="Arial" font-size="12">log y</text>
+  </g>
+</svg>

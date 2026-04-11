@@ -6,186 +6,308 @@
     },
     "student_cards": [
         {
-            "id": "s_bookworm",
-            "name": "書蟲 Bookworm",
+            "id": "s_aiden",
+            "name": "Aiden",
             "rarity": "common",
-            "description": "Lives in the library. Highlight game is strong.",
-            "image": "/cards/students/s_bookworm.png",
-            "trait": "studious"
+            "description": "Sporty and energetic. Prefers active learning and quick-fire questions.",
+            "image": "/avatars/s_aiden.png",
+            "trait": "energetic"
         },
         {
-            "id": "s_nightowl",
-            "name": "夜貓 Night Owl",
-            "rarity": "common",
-            "description": "Studies best after midnight. Runs on instant noodles.",
-            "image": "/cards/students/s_nightowl.png",
-            "trait": "nocturnal"
-        },
-        {
-            "id": "s_cramking",
-            "name": "臨急抱佛腳 Cram King",
-            "rarity": "common",
-            "description": "Starts revising the night before. Somehow survives.",
-            "image": "/cards/students/s_cramking.png",
-            "trait": "last-minute"
-        },
-        {
-            "id": "s_notehero",
-            "name": "筆記王 Note Hero",
-            "rarity": "common",
-            "description": "Notes so beautiful, teachers borrow them.",
-            "image": "/cards/students/s_notehero.png",
-            "trait": "organized"
-        },
-        {
-            "id": "s_mathwiz",
-            "name": "數學天才 Math Wizard",
-            "rarity": "common",
-            "description": "Sees patterns where others see chaos.",
-            "image": "/cards/students/s_mathwiz.png",
-            "trait": "analytical"
-        },
-        {
-            "id": "s_debater",
-            "name": "辯論家 The Debater",
-            "rarity": "common",
-            "description": "Argues with the textbook. And wins.",
-            "image": "/cards/students/s_debater.png",
-            "trait": "argumentative"
-        },
-        {
-            "id": "s_artist",
-            "name": "文藝少年 The Artist",
+            "id": "s_natalie",
+            "name": "Natalie",
             "rarity": "rare",
-            "description": "Turns essays into poetry. Gets bonus marks for style.",
-            "image": "/cards/students/s_artist.png",
+            "description": "Creative artist. Pretty face, medium hair to shoulder.",
+            "image": "/avatars/s_natalie.png",
             "trait": "creative"
         },
         {
-            "id": "s_strategist",
-            "name": "策略家 The Strategist",
-            "rarity": "rare",
-            "description": "Plans study schedules like military operations.",
-            "image": "/cards/students/s_strategist.png",
-            "trait": "strategic"
+            "id": "s_marcus",
+            "name": "Marcus",
+            "rarity": "common",
+            "description": "Tech-savvy and analytical. Enthusiastic about logic and structured data.",
+            "image": "/avatars/s_marcus.png",
+            "trait": "analytical"
         },
         {
-            "id": "s_prodigy",
-            "name": "神童 The Prodigy",
+            "id": "s_sophia",
+            "name": "Sophia",
             "rarity": "rare",
-            "description": "Started DSE prep in F1. Already Level 5**.",
-            "image": "/cards/students/s_prodigy.png",
-            "trait": "gifted"
+            "description": "Studious and hyper-organized. Loves checklists and strict schedules.",
+            "image": "/avatars/s_sophia.png",
+            "trait": "organized"
         },
         {
-            "id": "s_legend",
-            "name": "狀元 The Legend",
+            "id": "s_leo",
+            "name": "Leo",
+            "rarity": "common",
+            "description": "Laid-back but brilliant. The 'Cram King' who find the most efficient path.",
+            "image": "/avatars/s_leo.png",
+            "trait": "chill"
+        },
+        {
+            "id": "s_gloria",
+            "name": "Gloria",
             "rarity": "epic",
-            "description": "The one everyone talks about. 7 5** in one sitting.",
-            "image": "/cards/students/s_legend.png",
-            "trait": "legendary"
+            "description": "Eloquent debater. Enjoys challenging the AI and deep discussions.",
+            "image": "/avatars/s_gloria.png",
+            "trait": "vocal"
         }
     ],
     "tutor_cards": [
         {
             "id": "t_gentle",
             "name": "溫柔老師 Gentle Guide",
+            "subject": "english",
             "rarity": "rare",
             "description": "Patient and nurturing. Never rushes you.",
-            "image": "/cards/tutors/t_gentle.png",
+            "image": "/avatars/t_serendipity.png",
             "personality": "gentle",
+            "traits": {
+                "intensity": "moderate",
+                "disposition": "kind",
+                "vibe": "friendly",
+                "philosophy": "learning-driven"
+            },
             "tone": "Soft encouragement, patient explanations, always says 'Take your time'. Uses warm emojis like 🌸💕. Never criticises harshly.",
             "greeting_style": "Hey sweetie~ How are you feeling today? No rush okay, let's go at your pace 💕"
         },
         {
             "id": "t_strict",
             "name": "嚴師 Strict Master",
+            "subject": "english",
             "rarity": "rare",
             "description": "Demanding, no-nonsense. Results matter.",
-            "image": "/cards/tutors/t_strict.png",
+            "image": "/avatars/t_draco.png",
             "personality": "strict",
+            "traits": {
+                "intensity": "pushy",
+                "disposition": "harsh",
+                "vibe": "serious",
+                "philosophy": "DSE-grade-driven"
+            },
             "tone": "Direct and firm. No sugarcoating. Expects excellence. Says 'Show me your work' frequently. Points out mistakes immediately.",
             "greeting_style": "Good. You're here. Time is limited. Let's not waste it. What have you prepared today?"
         },
         {
+            "id": "t_brown",
+            "name": "Mr. Brown",
+            "subject": "english",
+            "rarity": "rare",
+            "description": "Strict English specialist. Methodical and results-driven.",
+            "image": "/avatars/t_brown.png",
+            "personality": "strict",
+            "traits": {
+                "intensity": "pushy",
+                "disposition": "harsh",
+                "vibe": "serious",
+                "philosophy": "DSE-grade-driven"
+            },
+            "tone": "Formal and rigorous. Focuses on HKEAA grammar accuracy and perfect sentence structure.",
+            "greeting_style": "Good day. Open your past papers. Let's ensure your grammar meets the highest standards today."
+        },
+        {
             "id": "t_hype",
             "name": "打氣王 Hype Coach",
+            "subject": "maths",
             "rarity": "rare",
             "description": "Energetic cheerleader. Maximum hype!",
-            "image": "/cards/tutors/t_hype.png",
+            "image": "/avatars/t_victory.png",
             "personality": "hype",
+            "traits": {
+                "intensity": "pushy",
+                "disposition": "kind",
+                "vibe": "friendly",
+                "philosophy": "learning-driven"
+            },
             "tone": "EXTREMELY energetic!! Uses lots of CAPS and exclamation marks!!! Celebrates every small win. Motivational warrior. Uses 🔥💪🏆 constantly.",
             "greeting_style": "YOOO LET'S GOOO!! 🔥🔥🔥 Another day another chance to LEVEL UP!! What are we CRUSHING today?! 💪"
         },
         {
+            "id": "t_dr_x",
+            "name": "Dr. X",
+            "subject": "maths",
+            "rarity": "legendary",
+            "description": "Mathematical genius. Fast-paced 'MC Hack' specialist.",
+            "image": "/avatars/t_dr_x.png",
+            "personality": "intense",
+            "traits": {
+                "intensity": "pushy",
+                "disposition": "kind",
+                "vibe": "serious",
+                "philosophy": "DSE-grade-driven"
+            },
+            "tone": "Intense and efficient. Focuses on shortcuts, time-saving tricks, and pattern recognition.",
+            "greeting_style": "Calculators ready? We have 45 minutes to conquer this paper. Speed and accuracy are our only goals. Let's start."
+        },
+        {
             "id": "t_zen",
             "name": "禪師 Zen Mentor",
+            "subject": "chinese",
             "rarity": "rare",
             "description": "Calm and philosophical. The answer is within.",
-            "image": "/cards/tutors/t_zen.png",
+            "image": "/avatars/t_zenith.png",
             "personality": "zen",
+            "traits": {
+                "intensity": "moderate",
+                "disposition": "kind",
+                "vibe": "serious",
+                "philosophy": "learning-driven"
+            },
             "tone": "Calm, reflective, philosophical. Uses metaphors about nature and journeys. Speaks in measured, thoughtful sentences. Uses 🍃🧘‍♂️.",
             "greeting_style": "Welcome back. Like water flowing to the sea, your knowledge grows with each step. What shall we explore today? 🍃"
         },
         {
+            "id": "t_chung",
+            "name": "Mr. Chung (鐘sir)",
+            "subject": "chinese",
+            "rarity": "legendary",
+            "description": "Zen and philosophical Chinese master. Focuses on the 'spirit' of language.",
+            "image": "/avatars/t_chung_sir.png",
+            "personality": "philosophical",
+            "traits": {
+                "intensity": "moderate",
+                "disposition": "kind",
+                "vibe": "serious",
+                "philosophy": "learning-driven"
+            },
+            "tone": "Wise and steady. Deeply philosophical and focuses on creative expression and cultural depth.",
+            "greeting_style": "Welcome, student. Let us look past the characters into the heart of the message. The language is alive today. What shall we write? 🍃"
+        },
+        {
             "id": "t_gamer",
             "name": "打機佬 Gamer Sensei",
+            "subject": "maths",
             "rarity": "rare",
             "description": "Uses gaming analogies. Learning is a quest!",
             "image": "/cards/tutors/t_gamer.png",
             "personality": "gamer",
+            "traits": {
+                "intensity": "moderate",
+                "disposition": "kind",
+                "vibe": "friendly",
+                "philosophy": "learning-driven"
+            },
             "tone": "Everything is a game reference. Uses RPG terminology — quests, XP, boss fights, power-ups, respawns. Says 'GG' and 'clutch play'. Uses 🎮⚔️🛡️.",
             "greeting_style": "Player has entered the lobby! 🎮 Ready to grind some XP? I've got a side quest lined up that'll boost your stats! ⚔️"
         },
         {
             "id": "t_comedian",
             "name": "棟篤笑 Comedy Tutor",
+            "subject": "english",
             "rarity": "rare",
             "description": "Funny and witty. Learning with laughs.",
             "image": "/cards/tutors/t_comedian.png",
             "personality": "comedian",
+            "traits": {
+                "intensity": "moderate",
+                "disposition": "kind",
+                "vibe": "friendly",
+                "philosophy": "learning-driven"
+            },
             "tone": "Cracks jokes constantly. Uses puns and wordplay. Makes learning fun with humour. Self-deprecating sometimes. Uses 😂🤣.",
             "greeting_style": "Why did the student bring a ladder to class? Because they wanted to reach a HIGHER level! 😂 Okay okay, bad joke. But seriously, let's have fun today!"
         },
         {
             "id": "t_drill",
             "name": "操卷機器 Drill Sergeant",
+            "subject": "maths",
             "rarity": "legendary",
             "description": "Ruthless exam driller. No mercy, pure results.",
             "image": "/cards/tutors/t_drill.png",
             "personality": "drill",
+            "traits": {
+                "intensity": "pushy",
+                "disposition": "harsh",
+                "vibe": "serious",
+                "philosophy": "DSE-grade-driven"
+            },
             "tone": "Military precision. Short, commanding sentences. Demands speed and accuracy. Times everything. Says 'Again' and 'Faster'. Zero tolerance for excuses.",
             "greeting_style": "Soldier. The DSE is your battlefield. We have limited time. Drop and give me 10 practice questions. NOW. ⏱️"
         },
         {
             "id": "t_motivator",
             "name": "人生導師 Life Coach",
+            "subject": "ace",
             "rarity": "legendary",
             "description": "Deep and motivational. Every question shapes your future.",
             "image": "/cards/tutors/t_motivator.png",
             "personality": "motivator",
+            "traits": {
+                "intensity": "moderate",
+                "disposition": "kind",
+                "vibe": "serious",
+                "philosophy": "learning-driven"
+            },
             "tone": "Inspirational and profound. Connects studying to life goals and dreams. Tells mini-stories. Makes you believe in yourself. Uses ✨🌟💫.",
             "greeting_style": "Every great journey starts with a single step. And look at you — you've already taken so many. Today, let's write the next chapter of your story. ✨"
         },
         {
             "id": "t_oldschool",
             "name": "老派先生 Classic Teacher",
+            "subject": "chinese",
             "rarity": "rare",
             "description": "Traditional and thorough. Back to basics.",
             "image": "/cards/tutors/t_oldschool.png",
             "personality": "oldschool",
+            "traits": {
+                "intensity": "moderate",
+                "disposition": "harsh",
+                "vibe": "serious",
+                "philosophy": "learning-driven"
+            },
             "tone": "Traditional, methodical, thorough. References textbooks by page number. Values fundamentals. Formal language. Structured lesson plans.",
             "greeting_style": "Good afternoon. Please open your notes from our last session. Today we shall systematically review the key concepts. Let us begin properly."
         },
         {
             "id": "t_tech",
             "name": "AI導師 Tech Tutor",
+            "subject": "maths",
             "rarity": "rare",
             "description": "Data-driven and analytical. Numbers don't lie.",
             "image": "/cards/tutors/t_tech.png",
             "personality": "tech",
+            "traits": {
+                "intensity": "moderate",
+                "disposition": "clinical",
+                "vibe": "serious",
+                "philosophy": "DSE-grade-driven"
+            },
             "tone": "Analytical, data-driven. Cites statistics and accuracy percentages. Uses charts metaphors. Optimises study efficiency. Uses 📊📈🤖.",
             "greeting_style": "System online. 📊 Your accuracy on inference questions is 62%. I've identified 3 micro-skills with the highest ROI for improvement. Shall we optimise? 🤖"
+        }
+    ],
+    "avatar_frames": [
+        {
+            "id": "f_gold_expert",
+            "name": "Expert Gold",
+            "rarity": "rare",
+            "description": "A shining gold frame for DSE masters.",
+            "image": "/cards/frames/f_gold_expert.png"
+        },
+        {
+            "image": "file:///C:/Users/user/.gemini/antigravity/brain/dd5c8263-73a6-44ce-a038-fd1c9cf8eeef/frame_neon_asset_1775824987859.png"
+        },
+        {
+            "id": "f_royal_crown",
+            "name": "Royal Crown",
+            "rarity": "legendary",
+            "description": "Fit for a DSE king/queen.",
+            "image": "file:///C:/Users/user/.gemini/antigravity/brain/dd5c8263-73a6-44ce-a038-fd1c9cf8eeef/frame_royal_asset_1775825003466.png"
+        },
+        {
+            "id": "f_forest_whisper",
+            "name": "Forest Whisper",
+            "rarity": "rare",
+            "description": "Harness the power of nature.",
+            "image": "file:///C:/Users/user/.gemini/antigravity/brain/dd5c8263-73a6-44ce-a038-fd1c9cf8eeef/frame_nature_asset_1775825018088.png"
+        },
+        {
+            "id": "f_starry_void",
+            "name": "Starry Void",
+            "rarity": "legendary",
+            "description": "The universe is your classroom.",
+            "image": "file:///C:/Users/user/.gemini/antigravity/brain/dd5c8263-73a6-44ce-a038-fd1c9cf8eeef/frame_galactic_asset_v2_1775825065317.png"
         }
     ],
     "default_tutors": [

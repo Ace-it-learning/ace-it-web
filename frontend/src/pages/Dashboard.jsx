@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import Sidebar from '../components/Sidebar';
 import ChatInterface from '../components/ChatInterface';
 import { cn } from '../utils/cn';
@@ -10,6 +10,7 @@ import RoadmapWidget from '../components/dashboard/RoadmapWidget';
 import RoadmapModal from '../components/dashboard/RoadmapModal';
 import MathRoadmapModal from '../components/dashboard/MathRoadmapModal';
 import { useAuth } from '../context/AuthContext';
+import { useUserStats } from '../hooks/useUserStats';
 
 const Dashboard = () => {
     const navigate = useNavigate();
@@ -19,18 +20,18 @@ const Dashboard = () => {
     const [isQuestOpen, setIsQuestOpen] = React.useState(false);
     const [isMathQuestOpen, setIsMathQuestOpen] = React.useState(false);
     const [diagnosticCompleted, setDiagnosticCompleted] = React.useState(false);
+    const { stats } = useUserStats();
 
     React.useEffect(() => {
-        if (user) {
-            const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
-            fetch(`${API_URL}/api/stats?uid=${user.uid}`)
-                .then(res => res.json())
-                .then(data => {
-                    setDiagnosticCompleted(!!data.diagnostic_completed);
-                })
-                .catch(console.error);
+        if (stats) {
+            setDiagnosticCompleted(!!stats.diagnostic_completed);
         }
-    }, [user]);
+    }, [stats]);
+
+    // Ensure we start at the top of the page when navigating to Dashboard
+    React.useEffect(() => {
+        window.scrollTo({ top: 0, behavior: 'instant' });
+    }, []);
 
     const handleOpenQuest = (agentId) => {
         if (agentId === 'math' || agentId === 'maths') {
@@ -55,6 +56,19 @@ const Dashboard = () => {
     }, []);
 
     const [roadmapFilter, setRoadmapFilter] = React.useState('ALL');
+    const location = useLocation();
+
+    // Handle incoming navigation state (e.g. from Results pages)
+    React.useEffect(() => {
+        if (location.state?.openRoadmap === 'ENGLISH') {
+            setIsQuestOpen(true);
+            if (location.state?.roadmapFilter) {
+                setRoadmapFilter(location.state.roadmapFilter);
+            }
+        } else if (location.state?.openRoadmap === 'MATHS') {
+            setIsMathQuestOpen(true);
+        }
+    }, [location.state]);
 
     return (
         <>

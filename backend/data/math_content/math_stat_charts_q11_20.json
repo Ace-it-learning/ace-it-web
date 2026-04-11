@@ -1,0 +1,239 @@
+[
+  {
+    "id": "stat_11",
+    "topic_id": "math_stat_charts",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 4,
+    "question_en": "The stem-and-leaf diagram below shows the ages of 11 employees. The median age is 34. Find the value of $x$.\n\n$$\n\\begin{array}{r|l} \\text{Stem (10)} & \\text{Leaf (1)} \\\\\\hline 2 & 2, 5, 8 \\\\\ 3 & 1, 3, x, 7 \\\\\ 4 & 0, 4, 6, 9 \\end{array}\n$$",
+    "question_zh": "下表顯示 11 名員工的年齡。年齡的中位數為 34。求 $x$ 的值。\n\n$$\n\\begin{array}{r|l} \\text{莖 (10)} & \\text{葉 (1)} \\\\\\hline 2 & 2, 5, 8 \\\\\ 3 & 1, 3, x, 7 \\\\\ 4 & 0, 4, 6, 9 \\end{array}\n$$",
+    "answer": "4",
+    "correct_answer": "4",
+    "solution_steps_en": [
+      "1. $n = 11$. The median is the 6th value.",
+      "2. Counting from the smallest: (22, 25, 28, 31, 33, 30+x).",
+      "3. The 6th value is $30 + x = 34 \\implies x = 4$."
+    ],
+    "solution_steps_zh": [
+      "1. $n = 11$。中位數是第 6 個數據。",
+      "2. 從最小點算：(22, 25, 28, 31, 33, 30+x)。",
+      "3. 第 6 個數據是 $30 + x = 34 \\implies x = 4$。"
+    ],
+    "diagram_json": null
+  },
+  {
+    "id": "stat_12",
+    "topic_id": "math_stat_charts",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 3,
+    "question_en": "The stem-and-leaf diagram shows the weights of 10 bags. The range of the weights is 25 kg. Find the value of $y$.\n\n$$\n\\begin{array}{r|l} \\text{Stem (10)} & \\text{Leaf (1)} \\\\\\hline 4 & 2, 5, 8 \\\\\ 5 & 1, 3, 3, 7 \\\\\ 6 & 0, 4, y \\end{array}\n$$",
+    "question_zh": "下表顯示 10 袋物品的重量。重量的全距為 25 kg。求 $y$ 的值。\n\n$$\n\\begin{array}{r|l} \\text{莖 (10)} & \\text{葉 (1)} \\\\\\hline 4 & 2, 5, 8 \\\\\ 5 & 1, 3, 3, 7 \\\\\ 6 & 0, 4, y \\end{array}\n$$",
+    "answer": "7",
+    "correct_answer": "7",
+    "solution_steps_en": [
+      "1. Smallest = 42. Largest = $60 + y$.",
+      "2. Range = $(60 + y) - 42 = 25$.",
+      "3. $18 + y = 25 \\implies y = 7$."
+    ],
+    "solution_steps_zh": [
+      "1. 最小值 = 42。最大值 = $60 + y$。",
+      "2. 全距 = $(60 + y) - 42 = 25$。",
+      "3. $18 + y = 25 \\implies y = 7$。"
+    ],
+    "diagram_json": null
+  },
+  {
+    "id": "stat_13",
+    "topic_id": "math_stat_charts",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 4,
+    "question_en": "If the mean mark of 60, 70, 80 with frequencies 5, $k$, 8 is 72, find the value of $k$.",
+    "question_zh": "若 60, 70, 80 的頻數分別為 5, $k$, 8 且平均分為 72，求 $k$ 的值。",
+    "answer": "2",
+    "correct_answer": "2",
+    "solution_steps_en": [
+      "1. Mean = $\\frac{60(5) + 70(k) + 80(8)}{5 + k + 8} = 72$.",
+      "2. $\\frac{300 + 70k + 640}{13 + k} = 72$.",
+      "3. $940 + 70k = 936 + 72k$.",
+      "4. $2k = 4 \\implies k = 2$."
+    ],
+    "solution_steps_zh": [
+      "1. 平均值 = $\\frac{60(5) + 70(k) + 80(8)}{13 + k} = 72$。",
+      "2. $940 + 70k = 936 + 72k$。",
+      "3. $2k = 4 \\implies k = 2$。"
+    ],
+    "diagram_json": null
+  },
+  {
+    "id": "stat_14",
+    "topic_id": "math_stat_charts",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 4,
+    "question_en": "If the median of scores 1(4), 2(6), 3(p), 4(5), 5(3) is 3, find the minimum possible value of $p$.",
+    "question_zh": "若得分 1(4), 2(6), 3(p), 4(5), 5(3) 的中位數為 3，求 $p$ 的最小可能值。",
+    "answer": "3",
+    "correct_answer": "3",
+    "solution_steps_en": [
+      "1. Cumulative frequency of scores 1 and 2 is 10.",
+      "2. $n = 18 + p$. Median is at $(18+p+1)/2$.",
+      "3. For the median to be 3, the middle position must be $> 10$.",
+      "4. $(19+p)/2 > 10 \\implies 19+p > 20 \\implies p > 1$.",
+      "5. If $p=2, n=20$, median is average of 10th (2) and 11th (3) which is 2.5. Not 3.",
+      "6. If $p=3, n=21$, median is 11th (3). Minimum $p = 3$."
+    ],
+    "solution_steps_zh": [
+      "1. 1 分及 2 分的累積頻數為 10。",
+      "2. $n = 18 + p$。中位數位於第 $(19+p)/2$ 個位置。",
+      "3. 為了使中位數為 3，中間位置必須大於 10。",
+      "4. $(19+p)/2 > 10 \\implies p > 1$。",
+      "5. 若 $p=2, n=20$, 中位數是第 10(2) 與第 11(3) 的平均值為 2.5。不合。",
+      "6. 若 $p=3, n=21$, 第 11 個是 3。最小 $p = 3$。"
+    ],
+    "diagram_json": null
+  },
+  {
+    "id": "stat_15",
+    "topic_id": "math_stat_charts",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 3,
+    "question_en": "A set of 19 values has mean 60. If outlier 140 is removed, find the new mean of the 18 items.",
+    "question_zh": "一組 19 個數據平均值為 60。若移除離群值 140，求剩餘 18 項的新平均值。",
+    "answer": "55.56",
+    "correct_answer": "55.56",
+    "solution_steps_en": [
+      "1. Sum = $19 \\\\times 60 = 1140$.",
+      "2. New sum = $1140 - 140 = 1000$.",
+      "3. New mean = $1000 / 18 \\\\approx 55.56$."
+    ],
+    "solution_steps_zh": [
+      "1. 總和 = $1140$。",
+      "2. 新總和 = $1000$。",
+      "3. 新平均值 = $1000 / 18 \\\\approx 55.56$。"
+    ],
+    "diagram_json": null
+  },
+  {
+    "id": "stat_16",
+    "topic_id": "math_stat_charts",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 3,
+    "question_en": "The median of 15 numbers is 42. If the largest number is increased by 20, what is the new median?",
+    "question_zh": "15 個數字的中位數為 42。若將最大的數字增加 20，新的中位數是多少？",
+    "answer": "42",
+    "correct_answer": "42",
+    "solution_steps_en": [
+      "1. The median is the 8th value ($ (15+1)/2 = 8 $).",
+      "2. Increasing the largest value (the 15th value) does not change the 8th item.",
+      "3. Median remains 42."
+    ],
+    "solution_steps_zh": [
+      "1. 中位數是排序後的第 8 個數據（42）。",
+      "2. 增加最大的數值（第 15 個數據）不會影響第 8 個位置的數據。",
+      "3. 中位數保持為 42。"
+    ],
+    "diagram_json": null
+  },
+  {
+    "id": "stat_17",
+    "topic_id": "math_stat_charts",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 3,
+    "question_en": "Range was 50, max was 95. If 110 is added, find the new range.",
+    "question_zh": "全距為 50，最大值為 95。若加入一個 110，求新的全距。",
+    "answer": "65",
+    "correct_answer": "65",
+    "solution_steps_en": [
+      "1. Original min = $95 - 50 = 45$.",
+      "2. New max = 110.",
+      "3. New range = $110 - 45 = 65$."
+    ],
+    "solution_steps_zh": [
+      "1. 原最小值 = $95 - 50 = 45$。",
+      "2. 新最大值 = 110。",
+      "3. 新全距 = $110 - 45 = 65$。"
+    ],
+    "diagram_json": null
+  },
+  {
+    "id": "stat_18",
+    "topic_id": "math_stat_charts",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 4,
+    "question_en": "If 10 is added to every data point in a set where $Q_1=30, Q_3=60$, find new IQR.",
+    "question_zh": "若將組中每個數據都加 10，且已知原 $Q_1=30, Q_3=60$，求新的 IQR。",
+    "answer": "30",
+    "correct_answer": "30",
+    "solution_steps_en": [
+      "1. New $Q_1 = 40, Q_3 = 70$.",
+      "2. New IQR = $70 - 40 = 30$."
+    ],
+    "solution_steps_zh": [
+      "1. 新 $Q_1 = 40, Q_3 = 70$。",
+      "2. 新 IQR = $70 - 40 = 30$。"
+    ],
+    "diagram_json": null
+  },
+  {
+    "id": "stat_19",
+    "topic_id": "math_stat_charts",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 5,
+    "question_en": "Find $a, b$ in stem-leaf with 10 data points if Mean=57.1 and Median=56.\n\n$$\n\\begin{array}{r|l} \\text{Stem} & \\text{Leaf} \\\\\\hline 4 & 5, 8 \\\\\ 5 & 2, 4, a, b \\\\\ 6 & 1, 3, 7, 9 \\end{array}\n$$",
+    "question_zh": "10 個數據的幹葉圖中，若平均值為 57.1 且中位數為 56，求 $a$ 及 $b$。",
+    "answer": "a = 5, b = 7",
+    "correct_answer": "5, 7",
+    "solution_steps_en": [
+      "1. Total sum = $57.1 \\\\times 10 = 571$.",
+      "2. Sum of knowns = $45+48+52+54+61+63+67+69 = 459$.",
+      "3. $(50+a) + (50+b) = 571 - 459 = 112 \\implies a+b = 12$.",
+      "4. Median $(50+a + 50+b)/2 = 56 \\implies a+b = 12$.",
+      "5. If $a=5, b=7$, sorted leaves in Stem 5: [2, 4, 5, 7]. 5th is 55, 6th is 57. Median = 56."
+    ],
+    "solution_steps_zh": [
+      "1. 總和 = 571。",
+      "2. 已知項和 = 459。",
+      "3. $100 + a + b = 112 \\implies a + b = 12$。",
+      "4. 中位數 56 要求第 5 和第 6 個數據之和為 112。",
+      "5. 若 $a=5, b=7$，排序葉子後中位數即為 56。符合所有條件。"
+    ],
+    "diagram_json": null
+  },
+  {
+    "id": "stat_20",
+    "topic_id": "math_stat_charts",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 4,
+    "question_en": "Min=15. Max is 60 more than Min. Find Max and Range.",
+    "question_zh": "最小值為 15。最大值比最小值大 60。求最大值及全距。",
+    "answer": "Max = 75, Range = 60",
+    "correct_answer": "75, 60",
+    "solution_steps_en": [
+      "1. Max = $15 + 60 = 75$.",
+      "2. Range = $75 - 15 = 60$."
+    ],
+    "solution_steps_zh": [
+      "1. 最大值 = $15 + 60 = 75$。",
+      "2. 全距 = $75 - 15 = 60$。"
+    ],
+    "diagram_json": null
+  }
+]

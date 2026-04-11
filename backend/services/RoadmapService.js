@@ -2,6 +2,7 @@ const admin = require('firebase-admin');
 const moment = require('moment'); // You might need to install moment or use native Date
 const GenerativeAIService = require('./GenerativeAIService');
 const UserProfileService = require('./UserProfileService');
+const CacheService = require('./CacheService');
 
 class RoadmapService {
     constructor() {
@@ -13,6 +14,10 @@ class RoadmapService {
      */
     async getCurrentPlan(uid, subject = 'english') {
         if (!uid) return null;
+
+        const cacheKey = `roadmap_${subject}_${uid}`;
+        const cached = CacheService.getDbCache(cacheKey);
+        if (cached) return cached;
 
         const docId = subject === 'maths' ? 'current_maths' : 'current';
         const roadmapRef = this.db.collection('users').doc(uid).collection('roadmap').doc(docId);
@@ -29,6 +34,7 @@ class RoadmapService {
             }
 
             if (expiresAt && new Date() < expiresAt) {
+                CacheService.setDbCache(cacheKey, plan);
                 return plan;
             } else {
                 console.log(`[Roadmap] Plan for ${uid} expired or invalid. Generating new one.`);
@@ -36,7 +42,9 @@ class RoadmapService {
             }
         }
 
-        return this.generatePlan(uid, subject);
+        const newPlan = await this.generatePlan(uid, subject);
+        CacheService.setDbCache(cacheKey, newPlan);
+        return newPlan;
     }
 
     /**
@@ -117,7 +125,7 @@ class RoadmapService {
             console.log(`[Roadmap] No diagnostic found for ${uid}. Defaulting to Onboarding.`);
             generatedTasks.push({
                 id: 'onboarding_step_1',
-                title: 'Complete Study Calibration',
+                title: 'Complete Diagnostic Check (Initial)',
                 topic: 'Diagnostic Test',
                 type: 'DIAGNOSTIC', // Frontend should route this to /diagnostic
                 xp: 200,
@@ -180,6 +188,8 @@ class RoadmapService {
      * UPDATE: Mark Task Complete & Check Boss Unlock
      */
     async completeTask(uid, taskId, subject = 'english') {
+        CacheService.invalidateUserDbCache(uid);
+        
         const docId = subject === 'maths' ? 'current_maths' : 'current';
         const docRef = this.db.collection('users').doc(uid).collection('roadmap').doc(docId);
         const doc = await docRef.get();
@@ -233,6 +243,8 @@ class RoadmapService {
      */
     async completeQuestByContext(uid, contextQuery, isMockEvent = false, subject = 'english') {
         if (!uid) return { success: false };
+
+        CacheService.invalidateUserDbCache(uid);
 
         const docId = subject === 'maths' ? 'current_maths' : 'current';
         const docRef = this.db.collection('users').doc(uid).collection('roadmap').doc(docId);

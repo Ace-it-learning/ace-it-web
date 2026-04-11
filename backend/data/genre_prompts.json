@@ -1,631 +1,401 @@
 {
     "meta": {
-        "description": "Static factory prompts for DSE Writing Genres. Each genre has 10 topics.",
-        "version": "1.0"
+        "description": "HKDSE Writing Lab 'Single-Screen Studio' Scenarios (2024-2026 Trends)",
+        "version": "2.0"
     },
     "prompts": {
-        "Debate Speech": [
-            {
-                "id": "deb_001",
-                "title": "AI in Education",
-                "prompt": "Motion: 'Artificial Intelligence will replace teachers within 20 years.' Write a debate speech arguing FOR the motion."
-            },
-            {
-                "id": "deb_002",
-                "title": "Compulsory Volunteering",
-                "prompt": "Motion: 'Secondary students should be required to complete 100 hours of volunteer work.' Write a speech arguing AGAINST this."
-            },
-            {
-                "id": "deb_003",
-                "title": "Social Media Ban",
-                "prompt": "Motion: 'Social media platforms should be banned for users under 16.' Argue FOR the motion."
-            },
-            {
-                "id": "deb_004",
-                "title": "Meat Tax",
-                "prompt": "Motion: 'The government should impose a heavy tax on meat products to combat climate change.' Argue AGAINST the motion."
-            },
-            {
-                "id": "deb_005",
-                "title": "Cashless Society",
-                "prompt": "Motion: 'A fully cashless society is beneficial for Hong Kong.' Argue FOR the motion."
-            },
-            {
-                "id": "deb_006",
-                "title": "Animal Testing",
-                "prompt": "Motion: 'Animal testing for cosmetics should be banned globally.' Argue FOR the motion."
-            },
-            {
-                "id": "deb_007",
-                "title": "University Education",
-                "prompt": "Motion: 'University education should be free for all students.' Argue AGAINST this due to economic concerns."
-            },
-            {
-                "id": "deb_008",
-                "title": "E-Sports Olympics",
-                "prompt": "Motion: 'E-sports should be included as an official Olympic event.' Argue FOR the motion."
-            },
-            {
-                "id": "deb_009",
-                "title": "Space Exploration",
-                "prompt": "Motion: 'Governments spend too much money on space exploration.' Argue FOR the motion."
-            },
-            {
-                "id": "deb_010",
-                "title": "Homework Ban",
-                "prompt": "Motion: 'Homework should be banned in primary schools.' Argue AGAINST the motion."
-            }
-        ],
         "Letter to the Editor": [
             {
                 "id": "lte_001",
-                "title": "Plastic Waste",
-                "prompt": "Write a letter to the editor expressing concern about the increasing amount of single-use plastic in Hong Kong supermarkets."
+                "title": "The Rise of Deepfakes",
+                "topic": "Cyber-security & Social Ethics",
+                "prompt": "Deepfake technology is becoming increasingly sophisticated and accessible. Write a letter to the editor of the Hong Kong Daily expressing your concerns about the impact of deepfakes on social trust and personal security. Suggest measures the government and public should take to address this issue.",
+                "genre_blueprint": [
+                    "Formal Salutation and Sign-off",
+                    "Clear Statement of Purpose in Intro",
+                    "Evidence-based arguments on societal impact",
+                    "Constructive suggestions for reform",
+                    "Persuasive and urgent tone"
+                ],
+                "checklist": [
+                    "Defined what deepfakes are and their risks",
+                    "Discussed the impact on social ethics/trust",
+                    "Proposed at least two government-level solutions",
+                    "Proposed one public-level awareness strategy",
+                    "Used appropriate formal letter conventions"
+                ]
             },
             {
                 "id": "lte_002",
-                "title": "Old Buildings",
-                "prompt": "Write a letter to the editor regarding the preservation of historic buildings in your district."
-            },
-            {
-                "id": "lte_003",
-                "title": "Tutorial Culture",
-                "prompt": "Write a letter to the editor criticizing the intense tutorial culture among Hong Kong students."
-            },
-            {
-                "id": "lte_004",
-                "title": "Electric Scooters",
-                "prompt": "Write a letter to the editor arguing that electric scooters should be legalized on cycle tracks."
-            },
-            {
-                "id": "lte_005",
-                "title": "Food Waste",
-                "prompt": "Write a letter suggestion solutions to the massive food waste problem in local restaurants."
-            },
-            {
-                "id": "lte_006",
-                "title": "MTR Fares",
-                "prompt": "Write a letter complaining about the recent increase in MTR fares despite frequent delays."
-            },
-            {
-                "id": "lte_007",
-                "title": "Street Performance",
-                "prompt": "Write a letter supporting the regulation of street performers in pedestrian zones."
-            },
-            {
-                "id": "lte_008",
-                "title": "Light Pollution",
-                "prompt": "Write a letter demanding stricter laws against light pollution from large advertising screens."
-            },
-            {
-                "id": "lte_009",
-                "title": "Integration of Elderly",
-                "prompt": "Write a letter suggesting ways to better integrate the elderly into the digital community."
-            },
-            {
-                "id": "lte_010",
-                "title": "Cage Homes",
-                "prompt": "Write a letter urging the government to take immediate action on the 'cage home' crisis."
-            }
-        ],
-        "Expository Essay": [
-            {
-                "id": "exp_001",
-                "title": "Fast Fashion",
-                "prompt": "Explain the environmental impact of 'Fast Fashion' and what consumers can do to help."
-            },
-            {
-                "id": "exp_002",
-                "title": "Sleep Deprivation",
-                "prompt": "Discuss the causes and effects of sleep deprivation on teenagers' academic performance."
-            },
-            {
-                "id": "exp_003",
-                "title": "Remote Work",
-                "prompt": "Analyze the pros and cons of remote working for employees and employers."
-            },
-            {
-                "id": "exp_004",
-                "title": "K-Pop Phenomenon",
-                "prompt": "Examine the global rise of K-Pop and its cultural influence on youth."
-            },
-            {
-                "id": "exp_005",
-                "title": "Cyberbullying",
-                "prompt": "Explain the psychological effects of cyberbullying and how schools should handle it."
-            },
-            {
-                "id": "exp_006",
-                "title": "Smart Cities",
-                "prompt": "Describe what a 'Smart City' is and how technology improves urban living."
-            },
-            {
-                "id": "exp_007",
-                "title": "Gap Year",
-                "prompt": "Discuss the advantages and disadvantages of taking a 'Gap Year' before university."
-            },
-            {
-                "id": "exp_008",
-                "title": "Minimalism",
-                "prompt": "Explain the lifestyle concept of 'Minimalism' and why it is gaining popularity."
-            },
-            {
-                "id": "exp_009",
-                "title": "Streaming Services",
-                "prompt": "How have streaming services changed the way we consume movies and music?"
-            },
-            {
-                "id": "exp_010",
-                "title": "Vertical Farming",
-                "prompt": "Explain the concept of Vertical Farming and its potential to solve food shortages."
-            }
-        ],
-        "Formal Letter": [
-            {
-                "id": "fml_001",
-                "title": "Complaint: Restaurant",
-                "prompt": "Write a letter to a restaurant manager complaining about poor service and cold food during a recent dinner."
-            },
-            {
-                "id": "fml_002",
-                "title": "Job Application",
-                "prompt": "Write a letter applying for the position of 'Student Helper' at the local library."
-            },
-            {
-                "id": "fml_003",
-                "title": "Invitation: Guest Speaker",
-                "prompt": "Write a letter inviting a famous author to give a talk at your school's 'Reading Week'."
-            },
-            {
-                "id": "fml_004",
-                "title": "Request: Sponsorship",
-                "prompt": "Write a letter to a local business requesting sponsorship for your school's charity fair."
-            },
-            {
-                "id": "fml_005",
-                "title": "Complaint: Noise",
-                "prompt": "Write a letter to the Environmental Protection Department regarding excessive construction noise near your home."
-            },
-            {
-                "id": "fml_006",
-                "title": "Enquiry: Course",
-                "prompt": "Write a letter to a university enquiring about the admission requirements for their Architecture program."
-            },
-            {
-                "id": "fml_007",
-                "title": "Resignation",
-                "prompt": "Write a formal letter of resignation to your part-time employer."
-            },
-            {
-                "id": "fml_008",
-                "title": "Complaint: Bus Driver",
-                "prompt": "Write a letter to the bus company complaining about a driver who skipped a stop."
-            },
-            {
-                "id": "fml_009",
-                "title": "Principal Request",
-                "prompt": "Write a letter to your Principal requesting permission to start a 'Gaming Club'."
-            },
-            {
-                "id": "fml_010",
-                "title": "Scholarship Application",
-                "prompt": "Write a letter to the selection committee explaining why you deserve the 'Outstanding Student Scholarship'."
-            }
-        ],
-        "Report": [
-            {
-                "id": "rpt_001",
-                "title": "Sports Day",
-                "prompt": "Write a report for the school newsletter summarizing the highlights of the annual Sports Day."
-            },
-            {
-                "id": "rpt_002",
-                "title": "Canteen Survey",
-                "prompt": "Your Student Union conducted a survey on canteen food quality. Write a report on the findings."
-            },
-            {
-                "id": "rpt_003",
-                "title": "Library Usage",
-                "prompt": "Write a report on the declining usage of the school library and suggest improvements."
-            },
-            {
-                "id": "rpt_004",
-                "title": "Study Tour",
-                "prompt": "Write a report on the recent school study tour to Beijing, detailing the itinerary and student feedback."
-            },
-            {
-                "id": "rpt_005",
-                "title": "Fashion Show",
-                "prompt": "Write a report on the Inter-house Fashion Show, covering the theme, participation, and results."
-            },
-            {
-                "id": "rpt_006",
-                "title": "Online Learning",
-                "prompt": "Write a report on students' experience with online learning based on a recent questionnaire."
-            },
-            {
-                "id": "rpt_007",
-                "title": "Charity Sale",
-                "prompt": "Write a report on the outcome of the charity bake sale, including funds raised and expenses."
-            },
-            {
-                "id": "rpt_008",
-                "title": "Accident Report",
-                "prompt": "As a prefect, write a factual report on a minor accident that happened in the playground."
-            },
-            {
-                "id": "rpt_009",
-                "title": "Career Fair",
-                "prompt": "Write a report evaluating the effectiveness of the recent Career Fair held at school."
-            },
-            {
-                "id": "rpt_010",
-                "title": "Uniform Policy",
-                "prompt": "Write a report summarizing student opinions on a proposed change to the school uniform."
-            }
-        ],
-        "Proposal": [
-            {
-                "id": "prp_001",
-                "title": "Green Week",
-                "prompt": "Write a proposal to the Principal for organizing a 'Green Week' to promote environmental awareness."
-            },
-            {
-                "id": "prp_002",
-                "title": "Talent Show",
-                "prompt": "Propose a plan for a school-wide Talent Show to boost student morale."
-            },
-            {
-                "id": "prp_003",
-                "title": "Mental Health Day",
-                "prompt": "Write a proposal for a 'Mental Health Awareness Day' activities and budget."
-            },
-            {
-                "id": "prp_004",
-                "title": "e-Learning Platform",
-                "prompt": "Propose the adoption of a new e-learning platform to the school board."
-            },
-            {
-                "id": "prp_005",
-                "title": "Rooftop Garden",
-                "prompt": "Write a proposal to convert the school rooftop into an organic garden."
-            },
-            {
-                "id": "prp_006",
-                "title": "Mentorship Program",
-                "prompt": "Propose a 'Big Brother/Sister' mentorship program for incoming Form 1 students."
-            },
-            {
-                "id": "prp_007",
-                "title": "Cafeteria Menu",
-                "prompt": "Propose changes to the cafeteria menu to include more healthy and vegetarian options."
-            },
-            {
-                "id": "prp_008",
-                "title": "Mobile Phone Policy",
-                "prompt": "Write a proposal to update the school's mobile phone policy to allow usage during lunch."
-            },
-            {
-                "id": "prp_009",
-                "title": "Fitness Corner",
-                "prompt": "Propose the installation of a 'Fitness Corner' in the playground."
-            },
-            {
-                "id": "prp_010",
-                "title": "Reading Scheme",
-                "prompt": "Propose a new 'Reward-based Reading Scheme' to encourage students to read more English books."
-            }
-        ],
-        "Short Story": [
-            {
-                "id": "fic_001",
-                "title": "The Ancient Ruin",
-                "prompt": "Write a short story that begins with: 'The old key turned with a groan, and the door creaked open, revealing a world I never knew existed.'\n\nSituation: You are a young explorer venturing into an ancient, forgotten ruin. Local legends warned against entering, speaking of hidden power. Driven by curiosity, you ignore the warnings. \n\nFocus: Your initial experiences, emphasizing sights, sounds, and emotions. How does this world challenge your understanding of reality?"
-            },
-            {
-                "id": "fic_002",
-                "title": "The Memory Shop",
-                "prompt": "Write a short story that begins with: 'The label on the dusty glass jar simply read: \"The Day I Flew\".'\n\nSituation: You live in a future where people buy and sell memories. While exploring a junk shop, you find a jar containing a memory that seems to call out to you. After experiencing it, you realize it belongs to someone you know. \n\nFocus: The sensory details of the 'flight' and the moral dilemma of returning the memory or keeping it for yourself."
-            },
-            {
-                "id": "fic_003",
-                "title": "The Digital Glitch",
-                "prompt": "Write a short story that begins with: 'I blinked, and for a split second, the sunset turned into a sea of green binary code.'\n\nSituation: You are a student in a ultra-modern city where everything is digital. You start seeing 'glitches' that suggest your world is a simulation. A mysterious stranger hands you a physical, paper map to an 'Exit'. \n\nFocus: The feeling of paranoia and the transition from your comfortable digital life to the mysterious 'Exit'. What do you find when you follow the map?"
-            },
-            {
-                "id": "fic_004",
-                "title": "The Shadow Exchange",
-                "prompt": "Write a short story that begins with: 'The man at the corner offered me a deal: my shadow in exchange for perfect luck.'\n\nSituation: You have been plagued by bad luck for years. Desperate, you accept a strange man's offer to trade your shadow. Suddenly, your life is perfect, but you realize your shadow was also your conscience. \n\nFocus: The unexpected consequences of being 'too lucky' and the internal conflict as you try to get your shadow back."
-            },
-            {
-                "id": "fic_005",
-                "title": "The Uncharted Floor",
-                "prompt": "Write a short story that begins with: 'The elevator chime was higher than usual, and the display flickered to a floor that wasn't on the directory.'\n\nSituation: While heading to a boring class in your school's high-rise building, you end up on a hidden floor. It is a vast, indoor jungle filled with extinct animals and ancient technology. \n\nFocus: The contrast between the sterile school environment and this wild world. Describe your exploration and the discovery of why the floor was hidden."
-            },
-            {
-                "id": "fic_006",
-                "title": "The Silent Melody",
-                "prompt": "Write a short story that begins with: 'The device clicked, and for the first time in fifteen years, the city of Hong Kong fell perfectly silent.'\n\nSituation: The government has installed 'Silence Orbs' to stop noise pollution. In the total silence, you begin to hear a beautiful, haunting melody coming from the harbor that no one else seems to notice. \n\nFocus: Your journey to find the source of the music. Use vivid auditory descriptions to contrast the artificial silence with the mysterious melody."
-            },
-            {
-                "id": "fic_007",
-                "title": "The Clockwork Prediction",
-                "prompt": "Write a short story that begins with: 'The mechanical bird landed on my shoulder and whispered a date: tomorrow.'\n\nSituation: You find a small brass bird that speaks. It tells you that something life-changing will happen tomorrow at noon in Central. You have 24 hours to prepare, but you don't know if the change is good or bad. \n\nFocus: The tension of the countdown and the choices you make as you prepare for the unknown. How do your friends and family react to your strange behavior?"
-            },
-            {
-                "id": "fic_008",
-                "title": "The Mirror's Warning",
-                "prompt": "Write a short story that begins with: 'I walked past the mirror, but my reflection didn't move until three seconds later.'\n\nSituation: You discover that your reflection is a separate version of you living in a parallel world. It starts leaving urgent messages on the bathroom mirror, warning you about a person in your 'real' world who isn't what they seem. \n\nFocus: The psychological mystery of who to trust and the eerie communication between the two worlds."
-            },
-            {
-                "id": "fic_009",
-                "title": "The Buried Message",
-                "prompt": "Write a short story that begins with: 'The rust-covered lid finally gave way, revealing a smartphone that shouldn't have been buried in 1920.'\n\nSituation: While helping with a garden renovation at an old heritage site, you dig up a time capsule. Inside is a modern phone with one single video saved—a message from your future self. \n\nFocus: The shock and confusion of the discovery. What does the message say, and how does it change your plans for the upcoming school year?"
-            },
-            {
-                "id": "fic_010",
-                "title": "The Last Real Thing",
-                "prompt": "Write a short story that begins with: 'The holographic forest flickered out, revealing the gray, concrete reality beneath.'\n\nSituation: You live in a domed colony on a barren planet where all nature is a projection. During a power failure, you find a small, real green sprout growing in a crack in the floor—the first real life in a century. \n\nFocus: The wonder of seeing something 'real' and your mission to protect the plant from being destroyed by city cleaning droids."
-            }
-        ],
-        "Personal Experience": [
-            {
-                "id": "per_001",
-                "title": "Overcoming Fear",
-                "prompt": "Describe a time you overcame a major fear. What happened and how did you feel?"
-            },
-            {
-                "id": "per_002",
-                "title": "A Mistake",
-                "prompt": "Write about a mistake you made that taught you a valuable lesson."
-            },
-            {
-                "id": "per_003",
-                "title": "Memorable Trip",
-                "prompt": "Describe the most memorable trip you have ever taken with your family."
-            },
-            {
-                "id": "per_004",
-                "title": "Helping Someone",
-                "prompt": "Reflect on a time you helped a stranger. Why did you do it and what was the result?"
-            },
-            {
-                "id": "per_005",
-                "title": "A Special Meal",
-                "prompt": "Describe a meal that was significant to you (e.g., a reunion dinner)."
-            },
-            {
-                "id": "per_006",
-                "title": "Lost Item",
-                "prompt": "Write about the panic of losing something important and how you resolved it."
-            },
-            {
-                "id": "per_007",
-                "title": "Teacher Influence",
-                "prompt": "Describe a teacher who has had a positive influence on your life."
-            },
-            {
-                "id": "per_008",
-                "title": "Team Victory",
-                "prompt": "Describe the feeling of winning a team sports event after months of training."
-            },
-            {
-                "id": "per_009",
-                "title": "Rainy Day",
-                "prompt": "Describe a rainy day spent indoors and how it made you feel."
-            },
-            {
-                "id": "per_010",
-                "title": "New Skill",
-                "prompt": "Write about the experience of learning a difficult new skill (e.g., playing guitar)."
-            }
-        ],
-        "Biographical Profile": [
-            {
-                "id": "bio_001",
-                "title": "Local Hero",
-                "prompt": "Write a profile of a 'local hero' in your community who helps others."
-            },
-            {
-                "id": "bio_002",
-                "title": "Grandparent",
-                "prompt": "Write a biographical profile of your grandparent, focusing on their childhood."
-            },
-            {
-                "id": "bio_003",
-                "title": "School Captain",
-                "prompt": "Interview the School Captain and write a profile for the school magazine."
-            },
-            {
-                "id": "bio_004",
-                "title": "Favorite Athlete",
-                "prompt": "Write a profile of an athlete you admire, highlighting their struggles and success."
-            },
-            {
-                "id": "bio_005",
-                "title": "Street Cleaner",
-                "prompt": "Write a profile of a street cleaner to raise awareness of their hard work."
-            },
-            {
-                "id": "bio_006",
-                "title": "Inspiring Teacher",
-                "prompt": "Write a profile of a teacher who is retiring after 30 years of service."
-            },
-            {
-                "id": "bio_007",
-                "title": "Young Inventor",
-                "prompt": "Write a profile of a young student who invented something useful."
-            },
-            {
-                "id": "bio_008",
-                "title": "Charity Worker",
-                "prompt": "Write a profile of someone who dedicates their life to charity."
-            },
-            {
-                "id": "bio_009",
-                "title": "Artist",
-                "prompt": "Write a profile of a local artist and their creative process."
-            },
-            {
-                "id": "bio_010",
-                "title": "Underdog",
-                "prompt": "Write a profile of someone who succeeded despite many failures."
-            }
-        ],
-        "Review": [
-            {
-                "id": "rev_001",
-                "title": "Movie Review",
-                "prompt": "Write a review of the last movie you watched. Would you recommend it?"
-            },
-            {
-                "id": "rev_002",
-                "title": "Restaurant Review",
-                "prompt": "Write a review of a new cafe in your neighborhood. Discuss food, service, and vibe."
-            },
-            {
-                "id": "rev_003",
-                "title": "Book Review",
-                "prompt": "Write a review of a book that you think every teenager should read."
-            },
-            {
-                "id": "rev_004",
-                "title": "Game Review",
-                "prompt": "Write a review of a popular mobile game. Is it worth the hype?"
-            },
-            {
-                "id": "rev_005",
-                "title": "Event Review",
-                "prompt": "Write a review of the school's Christmas Concert."
-            },
-            {
-                "id": "rev_006",
-                "title": "Product Review",
-                "prompt": "Write a review of a new electronic gadget you recently bought."
-            },
-            {
-                "id": "rev_007",
-                "title": "Hotel Review",
-                "prompt": "Write a review of a hotel you stayed at during a holiday."
-            },
-            {
-                "id": "rev_008",
-                "title": "Website Review",
-                "prompt": "Write a review of an online learning website. Is it effective?"
-            },
-            {
-                "id": "rev_009",
-                "title": "Show Review",
-                "prompt": "Write a review of a TV series that everyone is talking about."
-            },
-            {
-                "id": "rev_010",
-                "title": "Theme Park",
-                "prompt": "Write a review of a visit to Disneyland or Ocean Park."
+                "title": "Luxury vs. Living Space",
+                "topic": "The ethics of 'nano-flats' in the property market",
+                "prompt": "Hong Kong's property market is notorious for 'nano-flats'—apartments smaller than a parking space. Write a letter to the editor discussing the ethical implications of developers building such small units and the impact on the mental well-being of residents.",
+                "genre_blueprint": [
+                    "Formal Salutation",
+                    "Strong opening hook regarding HK housing",
+                    "Balanced but critical analysis of profit vs. ethics",
+                    "Call to action for housing policy changes"
+                ],
+                "checklist": [
+                    "Addressed the physical and mental impact of nano-flats",
+                    "Critiqued the role of property developers",
+                    "Suggested government intervention or space standards",
+                    "Maintained a formal, civic-minded tone"
+                ]
             }
         ],
         "Feature Article": [
             {
                 "id": "art_001",
-                "title": "Stress Busters",
-                "prompt": "Write a feature article titled '5 Ways to Beat Exam Stress' for the school magazine."
+                "title": "'Mega-Event' Fatigue",
+                "topic": "Balancing tourism with local resident quality of life",
+                "prompt": "Hong Kong has hosted numerous 'Mega-Events' to boost tourism. While these benefit the economy, residents often complain about overcrowding and noise. Write a feature article for a local lifestyle magazine titled 'Beyond the Glitz: Reclaiming our Neighborhoods'.",
+                "genre_blueprint": [
+                    "Catchy Headline",
+                    "Engaging Lead-in (Hook)",
+                    "Multiple perspectives (Tourists vs. Residents)",
+                    "Vivid descriptive language",
+                    "Thought-provoking conclusion"
+                ],
+                "checklist": [
+                    "Created a compelling headline",
+                    "Balanced economic benefits with social costs",
+                    "Included 'quotes' or anecdotes from stakeholders",
+                    "Suggested a more sustainable event model",
+                    "Used semi-formal, engaging register"
+                ]
             },
             {
                 "id": "art_002",
-                "title": "Hidden Gems",
-                "prompt": "Write a feature article about 'Hidden Gems' (places to eat/visit) in your district."
-            },
-            {
-                "id": "art_003",
-                "title": "Digital Detox",
-                "prompt": "Write a feature article on the benefits of a 'Digital Detox' weekend."
-            },
-            {
-                "id": "art_004",
-                "title": "Healthy Eating",
-                "prompt": "Write a feature article on how to eat healthy on a student budget."
-            },
-            {
-                "id": "art_005",
-                "title": "DIY Gifts",
-                "prompt": "Write a guide on making simple DIY gifts for friends."
-            },
-            {
-                "id": "art_006",
-                "title": "Future Careers",
-                "prompt": "Write a feature article on 'Jobs of the Future' that usually don't exist yet."
-            },
-            {
-                "id": "art_007",
-                "title": "Volunteer Work",
-                "prompt": "Write an article persuading students to try volunteering."
-            },
-            {
-                "id": "art_008",
-                "title": "Learn a Language",
-                "prompt": "Write an article on the benefits of learning a third language."
-            },
-            {
-                "id": "art_009",
-                "title": "Exercise Myths",
-                "prompt": "Write an article busting common myths about exercise and fitness."
-            },
-            {
-                "id": "art_010",
-                "title": "Sustainable Living",
-                "prompt": "Write an article giving practical tips on how students can live more sustainably."
+                "title": "The Silver Economy",
+                "topic": "Tech innovations for HK’s aging population",
+                "prompt": "With an aging population, the 'Silver Economy' is booming. Write a feature article exploring how technology (e.g., Gerontech) is transforming the lives of the elderly in Hong Kong and the opportunities it presents for the younger generation.",
+                "genre_blueprint": [
+                    "Informative Headline",
+                    "Positive and forward-looking tone",
+                    "Analysis of specific technological tools",
+                    "Connection between tech and human care"
+                ],
+                "checklist": [
+                    "Explained the concept of the Silver Economy",
+                    "Gave examples of Gerontech (e.g., smart sensors, robots)",
+                    "Discussed the career opportunities for youth",
+                    "Balanced tech benefits with the importance of human touch"
+                ]
             }
         ],
-        "Personal Letter/Email": [
+        "Debate Speech": [
             {
-                "id": "per_let_001",
-                "title": "Invitation to Party",
-                "prompt": "Write an email to your friend inviting them to your 18th birthday party. Mention the theme and activities."
+                "id": "deb_001",
+                "title": "AI Tutors in DSE Prep",
+                "topic": "The impact of LLMs on traditional learning",
+                "prompt": "Motion: 'Artificial Intelligence tutors will inevitably replace human teachers in DSE preparation.' Write a debate speech arguing AGAINST the motion, focusing on the human elements of education.",
+                "genre_blueprint": [
+                    "Formal Salutation (Judges, Chairperson, etc.)",
+                    "Clear stance in the introduction",
+                    "Rebuttal of potential opposing arguments",
+                    "Powerful persuasive closing statement"
+                ],
+                "checklist": [
+                    "Defined the role of the teacher beyond data delivery",
+                    "Addressed the limitations of AI (empathy, ethics)",
+                    "Counter-argued the 'efficiency' argument of AI",
+                    "Ended with a strong, memorable appeal"
+                ]
+            }
+        ],
+        "Proposal": [
+            {
+                "id": "prp_001",
+                "title": "The 4-Day School Week",
+                "topic": "Mental health and productivity reform in HK schools",
+                "prompt": "Your school is considering a trial for a 4-day school week to improve student mental health. As the Chairperson of the Student Union, write a proposal to the Principal outlining the benefits and addressing potential academic concerns.",
+                "genre_blueprint": [
+                    "Title and Subject Heading",
+                    "Objective/Rationale section",
+                    "Proposed Implementation strategy",
+                    "Anticipated challenges and solutions"
+                ],
+                "checklist": [
+                    "Linked the proposal to student burnout statistics",
+                    "Explained how the curriculum would be adjusted",
+                    "Addressed parent concerns about caretaking/supervision",
+                    "Included a timeline or trial period suggestion"
+                ]
             },
             {
-                "id": "per_let_002",
-                "title": "Holiday Advice",
-                "prompt": "Your cousin is visiting Hong Kong. Write an email suggesting 3 must-visit places and 2 local dishes to try."
+                "id": "prp_002",
+                "title": "Animal-Friendly HK",
+                "topic": "Allowing pets on public transport/MTR",
+                "prompt": "Hong Kong is often criticized for being unfriendly to pet owners. Write a proposal to the Transport Department suggesting a trial scheme to allow pets on the MTR and buses during off-peak hours.",
+                "genre_blueprint": [
+                    "Formal Proposal Header",
+                    "Evidence-based rationale (e.g., overseas examples)",
+                    "Detailed trial conditions (e.g., carriers, hours)",
+                    "Hygiene and safety protocols"
+                ],
+                "checklist": [
+                    "Advocated for the benefits to pet owners' well-being",
+                    "Proposed strict safety (leash/muzzle/carrier) rules",
+                    "Suggested specific off-peak hours for the trial",
+                    "Proposed a feedback mechanism for non-pet owners"
+                ]
             },
             {
-                "id": "per_let_003",
-                "title": "Thank You Letter",
-                "prompt": "Write a letter to your aunt thanking her for the Christmas present and describing how you used it."
+                "id": "prp_003",
+                "title": "'Quiet Rooms' in Schools",
+                "topic": "Addressing student burnout and exam stress",
+                "prompt": "To combat exam stress, you want to propose the creation of 'Quiet Rooms'—dedicated spaces for meditation and rest. Write a proposal to the School Board requesting space and funding for this initiative.",
+                "genre_blueprint": [
+                    "Formal Header",
+                    "Current problem statement (Student Stress)",
+                    "Room design and usage policy",
+                    "Budgetary requirements"
+                ],
+                "checklist": [
+                    "Described the intended 'sensory-friendly' environment",
+                    "Explained how usage would be regulated (to prevent misuse)",
+                    "Linked the idea to long-term academic productivity",
+                    "Requested a specific startup budget"
+                ]
             },
             {
-                "id": "per_let_004",
-                "title": "Apology to Friend",
-                "prompt": "You missed your best friend's basketball match. Write an email apologizing and explaining why you couldn't make it."
-            },
+                "id": "prp_004",
+                "title": "The Future of HK Canteens",
+                "topic": "Replacing 'junk food' with traditional healthy meals",
+                "prompt": "School canteens often serve unhealthy fried foods. Write a proposal to the School Management to revitalize the canteen menu with traditional, 'home-style' healthy Cantonese meals.",
+                "genre_blueprint": [
+                    "Formal Header",
+                    "Nutritional analysis of current food",
+                    "Proposed sample menu items",
+                    "Vendor selection/training plan"
+                ],
+                "checklist": [
+                    "Identified the link between diet and student alertness",
+                    "Provided examples of traditional 'healthy' alternatives",
+                    "Addressed potential cost or preparation time issues",
+                    "Suggested a 'Tasting Day' to gather student buy-in"
+                ]
+            }
+        ],
+        "Business Pitch": [
             {
-                "id": "per_let_005",
-                "title": "Future Plans",
-                "prompt": "Write an email to a pen-pal discussing your plans for the upcoming summer holiday and your career aspirations."
-            },
+                "id": "pit_001",
+                "title": "Reviving the 'Night Vibes'",
+                "topic": "Modernizing HK’s traditional night markets",
+                "prompt": "The government's 'Night Vibes Hong Kong' campaign needs fresh ideas. You are an entrepreneur pitching a plan to revitalize a traditional night market (e.g., Temple Street) using modern technology and youth-oriented culture. Write your pitch.",
+                "genre_blueprint": [
+                    "Compelling Vision Statement",
+                    "Target Audience Analysis (Youth/Gen Z)",
+                    "Unique Selling Proposition (Tech-Integration)",
+                    "Monetization and sustainability"
+                ],
+                "checklist": [
+                    "Integrated components like AR/Digital Art into the market",
+                    "Suggested ways to support local traditional craftsmen",
+                    "Proposed youth-friendly 'Instagrammable' installations",
+                    "Addressed crowd management and noise issues"
+                ]
+            }
+        ],
+        "Blog Post": [
             {
-                "id": "per_let_006",
-                "title": "Asking for Help",
-                "prompt": "Write an email to a senior student asking for advice on how to prepare for the DSE English exam."
-            },
+                "id": "blg_001",
+                "title": "The Slasher Generation",
+                "topic": "Pros/cons of multi-hyphenate freelance careers",
+                "prompt": "More young people in Hong Kong are choosing to be 'Slashers' (e.g., Graphic Designer / Yoga Instructor / Barista). Write a blog post titled 'The Freedom and Fear of the Slash Life' to share your thoughts on this career trend.",
+                "genre_blueprint": [
+                    "Conversational, relatable title",
+                    "Personal voice/anecdotes",
+                    "Bullet points for readability",
+                    "Call to action (e.g., comments/shares)"
+                ],
+                "checklist": [
+                    "Defined what being a 'Slasher' entails",
+                    "Discussed the freedom of schedule vs. financial instability",
+                    "Shared a 'hypothetical' or personal routine",
+                    "Offered advice for those considering this path"
+                ]
+            }
+        ],
+        "Editorial": [
             {
-                "id": "per_let_007",
-                "title": "Congratulations",
-                "prompt": "Your friend won a singing competition. Write an email congratulating them and suggesting a celebration dinner."
-            },
+                "id": "edt_001",
+                "title": "The Waste Charging Delay",
+                "topic": "Government policy vs. public readiness",
+                "prompt": "The implementation of the Waste Charging Scheme has been repeatedly delayed. Write an editorial for the school newspaper discussing whether the delay is a sign of practical caution or a failure of environmental leadership.",
+                "genre_blueprint": [
+                    "Stance-driven Headline",
+                    "Strong 'We' voice of the editorial board",
+                    "Analysis of the policy's history",
+                    "Hard-hitting concluding verdict"
+                ],
+                "checklist": [
+                    "Acknowledge the complexity of waste management",
+                    "Argued for or against the delay with clear reasoning",
+                    "Advocated for more public education efforts",
+                    "Maintained a critical but constructive journalistic tone"
+                ]
+            }
+        ],
+        "Social Commentary": [
             {
-                "id": "per_let_008",
-                "title": "Moving House",
-                "prompt": "Write a letter to a friend who moved away, updating them on the latest news in your school and neighborhood."
-            },
+                "id": "com_001",
+                "title": "Digital Loneliness",
+                "topic": "The irony of being 'connected' but lonely in HK",
+                "prompt": "Despite the constant use of social media, many young Hong Kongers report feeling lonely. Write a social commentary piece for a youth magazine titled '10,000 Followers, 0 Real Friends'.",
+                "genre_blueprint": [
+                    "Provocative Title",
+                    "Sociological analysis of current trends",
+                    "Reflective and empathetic tone",
+                    "A call for 'Slow Living' or 'Real Connection'"
+                ],
+                "checklist": [
+                    "Analyzed the hollow nature of 'likes' and 'scrolling'",
+                    "Linked social media addiction to mental health",
+                    "Suggested ways to reclaim face-to-face interaction",
+                    "Used irony or metaphors to highlight the digital/real gap"
+                ]
+            }
+        ],
+        "Memo": [
             {
-                "id": "per_let_009",
-                "title": "Pet Advice",
-                "prompt": "A friend just got a new puppy. Write an email sharing your experience and giving tips on pet care."
-            },
+                "id": "mem_001",
+                "title": "Low-Altitude Economy",
+                "topic": "Integrating delivery drones into HK's airspace",
+                "prompt": "As a consultant for the Logistics Bureau, write a memo to the Secretary for Transport regarding the feasibility of 'Drone Delivery' in high-density districts like Mong Kok. Focus on safety and noise regulations.",
+                "genre_blueprint": [
+                    "Standard Memo Format (To, From, Date, Subject)",
+                    "Objective, professional language",
+                    "Clearly numbered points",
+                    "Brief recommendations"
+                ],
+                "checklist": [
+                    "Addressed the unique challenge of 'Skyline Density'",
+                    "Proposed specific 'Drone Corridors' or altitudes",
+                    "Suggested noise-reduction standards for drone tech",
+                    "Outlined a 3-step 'Pilot Program' phase"
+                ]
+            }
+        ],
+        "Formal Letter": [
             {
-                "id": "per_let_010",
-                "title": "Reunion Plan",
-                "prompt": "Write an email to your primary school classmates proposing a reunion gathering during the Lunar New Year."
+                "id": "fml_001",
+                "title": "The End of 'Ding Ding'?",
+                "topic": "Preserving the iconic tramways vs. urban speed",
+                "prompt": "There are suggestions to remove the Hong Kong Tramways to improve traffic speed in Central. Write a formal letter to the Antiquities and Monuments Office arguing for the preservation of the 'Ding Ding' as a living heritage.",
+                "genre_blueprint": [
+                    "Formal Salutation",
+                    "Historical and cultural rationale",
+                    "Refutation of the 'Traffic Efficiency' argument",
+                    "Passionate but formal closing"
+                ],
+                "checklist": [
+                    "Highlighted the tram's role in HK's identity since 1904",
+                    "Argued that 'Speed' is not the only metric of living",
+                    "Suggested modernizing the tram system instead of removal",
+                    "Maintained a respectful, high-register tone"
+                ]
+            }
+        ],
+        "Argumentative Essay": [
+            {
+                "id": "arg_001",
+                "title": "Esports as a DSE Subject",
+                "topic": "Validating gaming as a professional discipline",
+                "prompt": "Some argue that Esports should be offered as an elective subject in the DSE curriculum, while others see it as a distraction. Write an argumentative essay discussing both views and giving your own opinion.",
+                "genre_blueprint": [
+                    "Neutral Title",
+                    "Balanced introduction (The Contention)",
+                    "Logical body paragraphs (Pros vs. Cons)",
+                    "Clear final stance in the conclusion"
+                ],
+                "checklist": [
+                    "Discussed the cognitive and teamwork skills in Esports",
+                    "Addressed the risks of sedentary behavior/health",
+                    "Compared Esports to traditional Physical Education",
+                    "Concluded with a balanced recommendation for curriculum"
+                ]
+            }
+        ],
+        "Narrative": [
+            {
+                "id": "nar_001",
+                "title": "Vanishing Neon Signs",
+                "topic": "A story told from the perspective of an old neon craftsman",
+                "prompt": "Many neon signs in Hong Kong are being removed for safety reasons. Write a narrative story from the perspective of an elderly craftsman who is watching his final sign being taken down. Focus on memory and heritage.",
+                "genre_blueprint": [
+                    "Atmospheric Title",
+                    "First-person perspective ('I')",
+                    "Sensory imagery (smell, sound, light)",
+                    "Emotional climax and resolution"
+                ],
+                "checklist": [
+                    "Used vivid adjectives to describe the neon glow",
+                    "Used flashbacks to the 'Golden Age' of Nathan Road",
+                    "Evoked a sense of loss and acceptance",
+                    "Ensured a strong narrative voice and arc"
+                ]
+            }
+        ],
+        "Report": [
+            {
+                "id": "rpt_001",
+                "title": "Food Waste & AI",
+                "topic": "Using tech to solve HK's landfill crisis",
+                "prompt": "Your school's Eco-Club used an AI-powered waste tracker for its canteen for one month. Write a report for the School Management summarizing the data and recommending permanent implementation.",
+                "genre_blueprint": [
+                    "Formal Report Title",
+                    "Terms of Reference & Introduction",
+                    "Data-driven Findings section",
+                    "Recommendations and Conclusion"
+                ],
+                "checklist": [
+                    "Included specific 'stats' (e.g., 30% reduction in waste)",
+                    "Explained how the AI tracker functions",
+                    "Addressed the cost-effectiveness of the system",
+                    "Recommended expanding the system to the staff lounge"
+                ]
+            }
+        ],
+        "Review": [
+            {
+                "id": "rev_001",
+                "title": "Canto-pop Global Revival",
+                "topic": "Analyzing the cultural impact of new HK music icons",
+                "prompt": "Canto-pop is experiencing a 'Second Wave' of global popularity with new icons. Write a review of a recent Canto-pop concert or album, analyzing why it resonates with today's youth.",
+                "genre_blueprint": [
+                    "Engaging Review Title",
+                    "Context of the musical artist/trend",
+                    "Critical analysis of performance and lyrics",
+                    "Final star-rating or recommendation"
+                ],
+                "checklist": [
+                    "Identified unique themes in modern Canto-pop lyrics",
+                    "Commented on the use of visual media and social platforms",
+                    "Analyzed the 'Fandom Culture' in Hong Kong",
+                    "Evaluated the production quality of the music"
+                ]
+            }
+        ],
+        "Leaflet/Guide": [
+            {
+                "id": "gui_001",
+                "title": "Eco-Tourism in Sai Kung",
+                "topic": "Balancing 'Instagrammable' spots with nature protection",
+                "prompt": "Sai Kung's 'Instagrammable' spots are suffering from littering and erosion. Design a leaflet for visitors titled 'Take Only Photos, Leave Only Footprints: A Guide to Responsible Hiking'.",
+                "genre_blueprint": [
+                    "Attention-grabbing Header",
+                    "Bullet points and short paragraphs",
+                    "Directional and instructional tone ('Do's and Don'ts')",
+                    "Contact info for reporting issues"
+                ],
+                "checklist": [
+                    "Provided 5 'Golden Rules' for eco-hikers",
+                    "Used persuasive language to encourage protection",
+                    "Included a section on 'The Hidden Cost of the Perfect Photo'",
+                    "Ensured a helpful, informative tone throughout"
+                ]
             }
         ]
     }

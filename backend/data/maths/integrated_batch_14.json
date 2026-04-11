@@ -1,0 +1,373 @@
+[
+  {
+    "id": "ct_mcq_231",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_alg_apgp", "math_alg_log_exp"],
+    "marks": 1,
+    "difficulty": 6,
+    "paper": 2,
+    "section": "B",
+    "question_en": "If $\\log_2 a, \\log_2 b, \\log_2 c$ form an arithmetic sequence with common difference $d$, which of the following must be true?",
+    "question_zh": "若 $\\log_2 a, \\log_2 b, \\log_2 c$ 組成一個公差為 $d$ 的等差數列，則下列那項必為正確？",
+    "options": [
+      "A. $b^2 = ac$",
+      "B. $b = a+c$",
+      "C. $d = \\log_2(a+b)$",
+      "D. $2b = a+c$"
+    ],
+    "correct_answer": "A",
+    "solution_steps_en": [
+      "If $\\log_2 a, \\log_2 b, \\log_2 c$ is an AP, then $2\\log_2 b = \\log_2 a + \\log_2 c$.",
+      "Using log properties: $\\log_2(b^2) = \\log_2(ac)$.",
+      "Therefore, $b^2 = ac$."
+    ],
+    "solution_steps_zh": [
+      "若 $\\log_2 a, \\log_2 b, \\log_2 c$ 是等差數列，則 $2\\log_2 b = \\log_2 a + \\log_2 c$。",
+      "利用對數性質：$\\log_2(b^2) = \\log_2(ac)$。",
+      "因此，$b^2 = ac$。"
+    ],
+    "diagram_json": null,
+    "tags": ["log-properties", "AP-GP-connection"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_232",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_trig_equations", "math_alg_quadratics"],
+    "marks": 1,
+    "difficulty": 7,
+    "paper": 2,
+    "section": "B",
+    "question_en": "Solve $2 \\cos^2 \\theta + 5 \\sin \\theta - 4 = 0$ for $0^\\circ \\leq \\theta < 360^\\circ$.",
+    "question_zh": "解 $2 \\cos^2 \\theta + 5 \\sin \\theta - 4 = 0$，其中 $0^\\circ \\leq \\theta < 360^\\circ$。",
+    "options": [
+      "A. $30^\\circ, 150^\\circ$",
+      "B. $30^\\circ, 330^\\circ$",
+      "C. $60^\\circ, 120^\\circ$",
+      "D. $210^\\circ, 330^\\circ$"
+    ],
+    "correct_answer": "A",
+    "solution_steps_en": [
+      "Replace $\\cos^2 \\theta$ with $1 - \\sin^2 \\theta$: $2(1 - \\sin^2 \\theta) + 5 \\sin \\theta - 4 = 0$.",
+      "$-2 \\sin^2 \\theta + 5 \\sin \\theta - 2 = 0$.",
+      "$2 \\sin^2 \\theta - 5 \\sin \\theta + 2 = 0$.",
+      "Factoring: $(2 \\sin \\theta - 1)(\\sin \\theta - 2) = 0$.",
+      "$\\sin \\theta = 0.5$ or $\\sin \\theta = 2$ (rejected).",
+      "$\\theta = 30^\\circ, 150^\\circ$."
+    ],
+    "solution_steps_zh": [
+      "將 $\\cos^2 \\theta$ 替換為 $1 - \\sin^2 \\theta$：$2(1 - \\sin^2 \\theta) + 5 \\sin \\theta - 4 = 0$。",
+      "$-2 \\sin^2 \\theta + 5 \\sin \\theta - 2 = 0$。",
+      "$2 \\sin^2 \\theta - 5 \\sin \\theta + 2 = 0$。",
+      "因式分解：$(2 \\sin \\theta - 1)(\\sin \\theta - 2) = 0$。",
+      "$\\sin \\theta = 0.5$ 或 $\\sin \\theta = 2$（不成立）。",
+      "$\\theta = 30^\\circ, 150^\\circ$。"
+    ],
+    "diagram_json": null,
+    "tags": ["trig-identity", "quadratics"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_233",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_mensuration"],
+    "marks": 1,
+    "difficulty": 6,
+    "paper": 2,
+    "section": "A",
+    "question_en": "Two similar cylinders have surface areas in the ratio $9:16$. If the volume of the smaller cylinder is $54\\pi$ cm$^3$, find the volume of the larger cylinder.",
+    "question_zh": "兩個相似圓柱體的表面面積之比為 $9:16$。若較小圓柱體的體積為 $54\\pi$ cm$^3$，求較大圓柱體的體積。",
+    "options": [
+      "A. $72\\pi$ cm$^3$",
+      "B. $96\\pi$ cm$^3$",
+      "C. $128\\pi$ cm$^3$",
+      "D. $144\\pi$ cm$^3$"
+    ],
+    "correct_answer": "C",
+    "solution_steps_en": [
+      "Ratio of areas $A_1:A_2 = 9:16$.",
+      "Ratio of lengths $l_1:l_2 = \\sqrt{9}:\\sqrt{16} = 3:4$.",
+      "Ratio of volumes $V_1:V_2 = 3^3:4^3 = 27:64$.",
+      "Given $V_1 = 54\\pi$, so $V_2 = 54\\pi \\times \\frac{64}{27} = 128\\pi$."
+    ],
+    "solution_steps_zh": [
+      "面積之比 $A_1:A_2 = 9:16$。",
+      "長度之比 $l_1:l_2 = \\sqrt{9}:\\sqrt{16} = 3:4$。",
+      "體積之比 $V_1:V_2 = 3^3:4^3 = 27:64$。",
+      "已知 $V_1 = 54\\pi$，故 $V_2 = 54\\pi \\times \\frac{64}{27} = 128\\pi$。"
+    ],
+    "diagram_json": null,
+    "tags": ["similar-solids", "volume-ratio"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_234",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_alg_complex_numbers"],
+    "marks": 1,
+    "difficulty": 7,
+    "paper": 2,
+    "section": "B",
+    "question_en": "Let $z$ be a complex number. If $z$ is rotated clockwise about the origin through $90^\\circ$ in the complex plane, the resulting complex number is $2 + 3i$. Find $z$.",
+    "question_zh": "設 $z$ 為一個複數。若 $z$ 在複平面上繞原點順時針旋轉 $90^\\circ$，所得的複數為 $2 + 3i$。求 $z$。",
+    "options": [
+      "A. $3 - 2i$",
+      "B. $-3 + 2i$",
+      "C. $2 - 3i$",
+      "D. $-2 + 3i$"
+    ],
+    "correct_answer": "B",
+    "solution_steps_en": [
+      "A clockwise rotation by $90^\\circ$ in the complex plane is equivalent to multiplying by $-i$.",
+      "Therefore, $-i \\cdot z = 2 + 3i$.",
+      "Rearranging to solve for $z$: $z = \\frac{2+3i}{-i}$.",
+      "Multiply the numerator and denominator by $i$: $z = \\frac{(2+3i)i}{-i(i)} = \\frac{2i + 3i^2}{-i^2}$.",
+      "Since $i^2 = -1$, this simplifies to $z = \\frac{2i - 3}{1} = -3 + 2i$."
+    ],
+    "solution_steps_zh": [
+      "在複平面上順時針旋轉 $90^\\circ$ 等同於乘以 $-i$。",
+      "因此，$-i \\cdot z = 2 + 3i$。",
+      "移項以解 $z$：$z = \\frac{2+3i}{-i}$。",
+      "分子分母同乘以 $i$：$z = \\frac{(2+3i)i}{-i(i)} = \\frac{2i + 3i^2}{-i^2}$。",
+      "由於 $i^2 = -1$，這簡化為 $z = \\frac{2i - 3}{1} = -3 + 2i$。"
+    ],
+    "diagram_json": null,
+    "tags": ["complex-transformation", "rotation"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_235",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_stat_prob"],
+    "marks": 1,
+    "difficulty": 6,
+    "paper": 2,
+    "section": "B",
+    "question_en": "The variance of a set of data $\\{x_1, x_2, ..., x_n\\}$ is $\\sigma^2$. If each datum is replaced by $5 - 2x_i$, find the variance of the new set of data.",
+    "question_zh": "一組數據 $\\{x_1, x_2, ..., x_n\\}$ 的方差為 $\\sigma^2$。若每個數據都被 $5 - 2x_i$ 替換，求新數據組的方差。",
+    "options": [
+      "A. $2\\sigma^2$",
+      "B. $4\\sigma^2$",
+      "C. $5 - 4\\sigma^2$",
+      "D. $4\\sigma^2 + 5$"
+    ],
+    "correct_answer": "B",
+    "solution_steps_en": [
+      "If $y_i = ax_i + b$, then $\\text{Var}(y) = a^2 \\text{Var}(x)$.",
+      "Here $y_i = -2x_i + 5$, so $a = -2$ and $b = 5$.",
+      "New Variance $= (-2)^2 \\text{Var}(x) = 4\\sigma^2$."
+    ],
+    "solution_steps_zh": [
+      "若 $y_i = ax_i + b$，則 $\\text{Var}(y) = a^2 \\text{Var}(x)$。",
+      "此處 $y_i = -2x_i + 5$，故 $a = -2$ 且 $b = 5$。",
+      "新方差 $= (-2)^2 \\text{Var}(x) = 4\\sigma^2$。"
+    ],
+    "diagram_json": null,
+    "tags": ["data-transformation", "variance"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_236",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_geo_circle_eq", "math_geo_coord"],
+    "marks": 1,
+    "difficulty": 7,
+    "paper": 2,
+    "section": "B",
+    "question_en": "Find the equation of the circle with center $(3, -4)$ that is tangent to the line $3x - 4y + 5 = 0$.",
+    "question_zh": "求圓心為 $(3, -4)$ 且與直線 $3x - 4y + 5 = 0$ 相切的圓方程。",
+    "options": [
+      "A. $(x-3)^2 + (y+4)^2 = 36$",
+      "B. $(x-3)^2 + (y+4)^2 = 6$",
+      "C. $(x-3)^2 + (y+4)^2 = 100$",
+      "D. $(x-3)^2 + (y+4)^2 = 25$"
+    ],
+    "correct_answer": "A",
+    "solution_steps_en": [
+      "The radius $r$ is the perpendicular distance from center $(3, -4)$ to line $3x - 4y + 5 = 0$.",
+      "$r = \\frac{|3(3) - 4(-4) + 5|}{\\sqrt{3^2 + (-4)^2}} = \\frac{|9 + 16 + 5|}{5} = \\frac{30}{5} = 6$.",
+      "Equation: $(x-3)^2 + (y+4)^2 = 6^2 = 36$."
+    ],
+    "solution_steps_zh": [
+      "半徑 $r$ 是圓心 $(3, -4)$ 到直線 $3x - 4y + 5 = 0$ 的垂直距離。",
+      "$r = \\frac{|3(3) - 4(-4) + 5|}{\\sqrt{3^2 + (-4)^2}} = \\frac{|9 + 16 + 5|}{5} = \\frac{30}{5} = 6$。",
+      "方程：$(x-3)^2 + (y+4)^2 = 6^2 = 36$。"
+    ],
+    "diagram_json": null,
+    "tags": ["tangent-circle", "distance-formula"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_sa_237",
+    "type": "short_answer",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_geo_coord", "math_geo_circle_eq"],
+    "marks": 12,
+    "difficulty": 7,
+    "paper": 1,
+    "section": "B",
+    "question_en": "Points $A(0, 0)$ and $B(6, 0)$ are two fixed points. A point $P(x, y)$ moves such that $AP = 2BP$.\n(a) Show that the locus of $P$ is a circle and find its center and radius. (7 marks)\n(b) Find the maximum area of $\\triangle PAB$. (5 marks)",
+    "question_zh": "點 $A(0, 0)$ 及 $B(6, 0)$ 為兩個固定點。點 $P(x, y)$ 在移動時滿足 $AP = 2BP$。\n(a) 證明 $P$ 的軌跡是一個圓，並求其圓心及半徑。(7分)\n(b) 求 $\\triangle PAB$ 面積的最大值。(5分)",
+    "solution_steps_en": [
+      "(a) $AP^2 = 4BP^2$.",
+      "$x^2 + y^2 = 4[(x-6)^2 + y^2]$.",
+      "$x^2 + y^2 = 4[x^2 - 12x + 36 + y^2]$.",
+      "$x^2 + y^2 = 4x^2 - 48x + 144 + 4y^2$.",
+      "$3x^2 + 3y^2 - 48x + 144 = 0$.",
+      "Divide by 3: $x^2 + y^2 - 16x + 48 = 0$.",
+      "Complete the square: $(x-8)^2 + y^2 = 64 - 48 = 16$.",
+      "Locus is a circle with center $(8, 0)$ and radius $4$.",
+      "(b) Area of $\\triangle PAB = \\frac{1}{2} \\times AB \\times |y|$.",
+      "Base $AB = 6$. Height is max $|y|$.",
+      "Since center is $(8, 0)$ and $r=4$, max $|y| = 4$.",
+      "Max area $= \\frac{1}{2} \\times 6 \\times 4 = 12$."
+    ],
+    "solution_steps_zh": [
+      "(a) $AP^2 = 4BP^2$。",
+      "$x^2 + y^2 = 4[(x-6)^2 + y^2]$。",
+      "$x^2 + y^2 = 4[x^2 - 12x + 36 + y^2]$。",
+      "$x^2 + y^2 = 4x^2 - 48x + 144 + 4y^2$。",
+      "$3x^2 + 3y^2 - 48x + 144 = 0$。",
+      "除以 3：$x^2 + y^2 - 16x + 48 = 0$。",
+      "配方：$(x-8)^2 + y^2 = 64 - 48 = 16$。",
+      "軌跡是一個圓，圓心為 $(8, 0)$，半徑為 $4$。",
+      "(b) $\\triangle PAB$ 的面積 $= \\frac{1}{2} \\times AB \\times |y|$。",
+      "底 $AB = 6$。高為 $|y|$ 的最大值。",
+      "由於圓心為 $(8, 0)$ 且 $r=4$，故 $|y|$ 的最大值為 $4$。",
+      "最大面積 $= \\frac{1}{2} \\times 6 \\times 4 = 12$。"
+    ],
+    "diagram_json": null,
+    "tags": ["locus-circle", "area-optimization"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_sa_238",
+    "type": "short_answer",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_trig_applications", "math_mensuration"],
+    "marks": 14,
+    "difficulty": 8,
+    "paper": 1,
+    "section": "B",
+    "question_en": "In the figure, $VABCD$ is a rectangular pyramid. The base $ABCD$ is on a horizontal plane with $AB = 12$ cm and $BC = 9$ cm. The vertex $V$ is vertically above the center $O$ of the base, and the height $VO = 8$ cm.\n(a) Find the length of slant edge $VA$. (4 marks)\n(b) Find the angle between the edge $VA$ and the base $ABCD$. (5 marks)\n(c) Find the angle between face $VAB$ and the base $ABCD$. (5 marks)",
+    "question_zh": "圖中 $VABCD$ 是一個長方形稜錐。底面 $ABCD$ 在水平面上，$AB = 12$ cm 且 $BC = 9$ cm。頂點 $V$ 在底面中心 $O$ 的正上方，且高 $VO = 8$ cm。\n(a) 求斜稜 $VA$ 的長度。(4分)\n(b) 求斜稜 $VA$ 與底面 $ABCD$ 的交角。(5分)\n(c) 求側面 $VAB$ 與底面 $ABCD$ 的交角。(5分)",
+    "solution_steps_en": [
+      "(a) Diagonal of base $AC = \\sqrt{12^2 + 9^2} = \\sqrt{144 + 81} = 15$ cm.",
+      "Distance from center $O$ to vertex $A$, $OA = 15/2 = 7.5$ cm.",
+      "In right $\\triangle VOA$, $VA = \\sqrt{VO^2 + OA^2} = \\sqrt{8^2 + 7.5^2} = \\sqrt{64 + 56.25} = \\sqrt{120.25} = 10.965... \\approx 11.0$ cm.",
+      "(b) Angle between $VA$ and base is $\\angle VAO$.",
+      "$\\tan(\\angle VAO) = \\frac{VO}{OA} = \\frac{8}{7.5} = \\frac{16}{15}$.",
+      "$\\angle VAO = \\tan^{-1}(1.0667) \\approx 46.8^\\circ$.",
+      "(c) Let $M$ be midpoint of $AB$. Angle between $VAB$ and base is $\\angle VMO$.",
+      "$OM$ is parallel to $BC$ and $OM = 9/2 = 4.5$ cm.",
+      "In right $\\triangle VOM$, $\\tan(\\angle VMO) = \\frac{VO}{OM} = \\frac{8}{4.5} = \\frac{16}{9}$.",
+      "$\\angle VMO = \\tan^{-1}(1.7778) \\approx 60.6^\\circ$."
+    ],
+    "solution_steps_zh": [
+      "(a) 底面對角線 $AC = \\sqrt{12^2 + 9^2} = \\sqrt{144 + 81} = 15$ cm。",
+      "中心 $O$ 到頂點 $A$ 的距離 $OA = 15/2 = 7.5$ cm。",
+      "在直角 $\\triangle VOA$ 中，$VA = \\sqrt{VO^2 + OA^2} = \\sqrt{8^2 + 7.5^2} = \\sqrt{120.25} \\approx 11.0$ cm。",
+      "(b) $VA$ 與底面的交角為 $\\angle VAO$。",
+      "$\\tan(\\angle VAO) = \\frac{VO}{OA} = \\frac{8}{7.5}$。",
+      "$\\angle VAO \\approx 46.8^\\circ$。",
+      "(c) 設 $M$ 為 $AB$ 的中點。側面 $VAB$ 與底面的交角為 $\\angle VMO$。",
+      "$OM$ 平行於 $BC$ 且 $OM = 9/2 = 4.5$ cm。",
+      "在直角 $\\triangle VOM$ 中，$\\tan(\\angle VMO) = \\frac{VO}{OM} = \\frac{8}{4.5}$。",
+      "$\\angle VMO \\approx 60.6^\\circ$。"
+    ],
+    "diagram_json": {
+      "canvas": { "width": 400, "height": 300, "viewBox": "0 0 400 300" },
+      "elements": [
+        { "type": "polygon", "points": [{"x": 120, "y": 250}, {"x": 280, "y": 250}, {"x": 340, "y": 180}, {"x": 180, "y": 180}], "stroke": "#64748b", "fill": "rgba(203, 213, 225, 0.2)", "strokeWidth": 1.5 },
+        { "type": "line", "x1": 230, "y1": 215, "x2": 230, "y2": 80, "stroke": "#dc2626", "strokeDasharray": "4,4", "strokeWidth": 2, "label": "VO=8", "labelDx": -25 },
+        { "type": "line", "x1": 230, "y1": 80, "x2": 120, "y2": 250, "stroke": "#7c3aed", "strokeWidth": 2, "label": "VA" },
+        { "type": "line", "x1": 230, "y1": 80, "x2": 280, "y2": 250, "stroke": "#7c3aed", "strokeWidth": 2 },
+        { "type": "line", "x1": 230, "y1": 80, "x2": 340, "y2": 180, "stroke": "#7c3aed", "strokeWidth": 2 },
+        { "type": "line", "x1": 230, "y1": 80, "x2": 180, "y2": 180, "stroke": "#7c3aed", "strokeWidth": 2 },
+        { "type": "point", "x": 230, "y": 80, "label": "V", "labelDy": -15 },
+        { "type": "point", "x": 120, "y": 250, "label": "A", "labelDx": -10, "labelDy": 5 },
+        { "type": "point", "x": 280, "y": 250, "label": "B", "labelDx": 10, "labelDy": 5 },
+        { "type": "point", "x": 340, "y": 180, "label": "C", "labelDx": 10, "labelDy": -5 },
+        { "type": "point", "x": 180, "y": 180, "label": "D", "labelDx": -10, "labelDy": -5 },
+        { "type": "point", "x": 230, "y": 215, "label": "O", "labelDy": 15 },
+        { "type": "arc", "center": {"x": 120, "y": 250}, "radius": 40, "startAngle": 315, "endAngle": 360, "label": "46.8°", "stroke": "#d97706" }
+      ]
+    },
+    "tags": ["3D-trigonometry", "pyramid-angles"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_sa_239",
+    "type": "short_answer",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_stat_prob"],
+    "marks": 11,
+    "difficulty": 7,
+    "paper": 1,
+    "section": "B",
+    "question_en": "Bag A contains 3 red balls and 5 blue balls. Bag B contains 4 red balls and 2 blue balls. A ball is drawn at random from Bag A and put into Bag B. Then a ball is drawn from Bag B.\n(a) Find the probability that the ball drawn from Bag B is red. (5 marks)\n(b) Given that the ball drawn from Bag B is red, find the probability that the ball drawn from Bag A was red. (6 marks)",
+    "question_zh": "袋 A 中有 3 個紅球及 5 個藍球。袋 B 中有 4 個紅球及 2 個藍球。隨機從袋 A 中取出一個球並放入袋 B 中，然後從袋 B 中取出一個球。\n(a) 求從袋 B 中取出紅球的概率。(5分)\n(b) 已知從袋 B 中取出的球是紅球，求從袋 A 中取出的球也是紅球的概率。(6分)",
+    "solution_steps_en": [
+      "(a) Two cases from Bag A:",
+      "Case 1: Red ball drawn from A. $P(R1) = 3/8$. Bag B now has 5 red, 2 blue (total 7). $P(R2|R1) = 5/7$.",
+      "Case 2: Blue ball drawn from A. $P(B1) = 5/8$. Bag B now has 4 red, 3 blue (total 7). $P(R2|B1) = 4/7$.",
+      "Overall $P(R2) = (3/8 \\times 5/7) + (5/8 \\times 4/7) = 15/56 + 20/56 = 35/56 = 5/8$.",
+      "(b) Conditional probability $P(R1|R2) = \\frac{P(R1 \\cap R2)}{P(R2)}$.",
+      "$P(R1 \\cap R2) = 3/8 \\times 5/7 = 15/56$.",
+      "$P(R1|R2) = \\frac{15/56}{35/56} = 15/35 = 3/7$."
+    ],
+    "solution_steps_zh": [
+      "(a) 分成從袋 A 中取出球的兩類情況：",
+      "情況 1：從 A 取出紅球。$P(R1) = 3/8$。此時袋 B 有 5 紅 2 藍（共 7 球）。$P(R2|R1) = 5/7$。",
+      "情況 2：從 A 取出藍球。$P(B1) = 5/8$。此時袋 B 有 4 紅 3 藍（共 7 球）。$P(R2|B1) = 4/7$。",
+      "總概率 $P(R2) = (3/8 \\times 5/7) + (5/8 \\times 4/7) = 15/56 + 20/56 = 35/56 = 5/8$。",
+      "(b) 條件概率 $P(R1|R2) = \\frac{P(R1 \\cap R2)}{P(R2)}$。",
+      "$P(R1 \\cap R2) = 3/8 \\times 5/7 = 15/56$。",
+      "$P(R1|R2) = \\frac{15/56}{35/56} = 15/35 = 3/7$。"
+    ],
+    "diagram_json": null,
+    "tags": ["conditional-probability", "total-probability"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_sa_240",
+    "type": "short_answer",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_alg_apgp"],
+    "marks": 13,
+    "difficulty": 8,
+    "paper": 1,
+    "section": "B",
+    "question_en": "The first three terms of a geometric sequence are $k+4, k, k-3$.\n(a) Find two possible values of $k$. (4 marks)\n(b) For the integer value of $k$ found in (a), determine the common ratio and find the sum to infinity. (5 marks)\n(c) Find the least number of terms such that the sum exceeds 30. (4 marks)",
+    "question_zh": "一個等比數列的首三項分別為 $k+4, k, k-3$。\n(a) 求 $k$ 的兩個可能值。(4分)\n(b) 對於 (a) 中所得的整數 $k$，確定公比並求無限項之和。(5分)\n(c) 求使項數之和超過 30 的最小項數。(4分)",
+    "solution_steps_en": [
+      "For a geometric sequence, the middle term squared equals the product of the outer terms: $k^2 = (k+4)(k-3)$.",
+      "Expanding the right side: $k^2 = k^2 + k - 12 \\implies k = 12$.",
+      "The sequence is $16, 12, 9, \\dots$. The first term $a = 16$ and the common ratio $r = 12/16 = 0.75$.",
+      "The sum to infinity is $S_\\infty = \\frac{16}{1 - 0.75} = 64$.",
+      "We require the sum of the first $n$ terms to exceed 30: $64(1 - 0.75^n) > 30$.",
+      "$1 - 0.75^n > 30/64 \\implies 0.75^n < 17/32$.",
+      "Taking the logarithm on both sides: $n \\log 0.75 < \\log(17/32)$.",
+      "Since $\\log 0.75$ is negative, the inequality sign flips: $n > \\frac{\\log(17/32)}{\\log 0.75} \\approx 2.19$. The least integer is 3."
+    ],
+    "solution_steps_zh": [
+      "對於等比數列，中間項的平方等於前後兩項之積：$k^2 = (k+4)(k-3)$。",
+      "展開右方：$k^2 = k^2 + k - 12 \\implies k = 12$。",
+      "數列為 $16, 12, 9, \\dots$。首項 $a = 16$ 且公比 $r = 12/16 = 0.75$。",
+      "無限項之和為 $S_\\infty = \\frac{16}{1 - 0.75} = 64$。",
+      "我們要求首 $n$ 項之和超過 30：$64(1 - 0.75^n) > 30$。",
+      "$1 - 0.75^n > 30/64 \\implies 0.75^n < 17/32$。",
+      "在等式兩邊取對數：$n \\log 0.75 < \\log(17/32)$。",
+      "由於 $\\log 0.75$ 是負數，不等號方向反轉：$n > \\frac{\\log(17/32)}{\\log 0.75} \\approx 2.19$。最小整數為 3。"
+    ],
+    "diagram_json": null,
+    "tags": ["GP-sum", "logarithmic-inequality"],
+    "status": "approved"
+  }
+]

@@ -8,7 +8,7 @@ import { useAuth } from '../../context/AuthContext';
 import { useLanguage } from '../../context/LanguageContext';
 import { getMathSkillName, getMathSkillDesc, getSkillsByCategory } from '../../constants/mathMicroSkills';
 import { useMockGate } from '../../hooks/useMockGate';
-import { calculateTier, getMasteryStats } from '../../utils/masteryUtils';
+import { calculateTier, getMasteryStats, getMathMasteryPercentage } from '../../utils/masteryUtils';
 
 const MathAbilityModal = ({ isOpen, onClose }) => {
     const { user } = useAuth();
@@ -59,11 +59,8 @@ const MathAbilityModal = ({ isOpen, onClose }) => {
                 const translatedCatName = t(`math_ability.${cat}`);
 
                 if (skillValues.length > 0) {
-                    const sum = skillValues.reduce((a, b) => a + b, 0);
-                    // Avoid division by zero, though unlikely with hardcoded categories
-                    const count = skillValues.filter(v => v > 0).length || 1;
-                    // Use simple average of all skills for category overview
-                    averages[translatedCatName] = sum / skillValues.length;
+                    // Use standardized linear percentage for consistency
+                    averages[translatedCatName] = getMathMasteryPercentage(sum / skillValues.length);
                 } else {
                     averages[translatedCatName] = 0;
                 }
@@ -91,9 +88,8 @@ const MathAbilityModal = ({ isOpen, onClose }) => {
             // "filtered[translatedName] = (val.level || val) * 14.28;"
 
             const rawLevel = skillsObj[skillId]?.level || 0;
-            // Cap at 7
-            const cappedLevel = Math.min(rawLevel, 7);
-            filtered[name] = cappedLevel * 14.28;
+            // Linear mapping (0-7 -> 0-100)
+            filtered[name] = getMathMasteryPercentage(rawLevel);
         });
 
         return filtered;
@@ -145,7 +141,7 @@ const MathAbilityModal = ({ isOpen, onClose }) => {
             targetSkills.forEach(skillId => {
                 const name = getMathSkillName(skillId, language);
                 const raw = previousDataRaw[skillId]?.level || 0;
-                processed[name] = Math.min(raw, 7) * 14.28;
+                processed[name] = getMathMasteryPercentage(raw);
             });
         }
         return processed;
@@ -153,7 +149,43 @@ const MathAbilityModal = ({ isOpen, onClose }) => {
 
     const previousData = getProcessedHistory();
 
-    const weaknesses = masteryData?.weaknessPriority || [];
+    // REFINED LOGIC: Data-driven suggestions
+    const getWeaknessSuggestions = () => {
+        if (!masteryData?.microSkills) return [];
+
+        const allSkills = Object.entries(masteryData.microSkills)
+            .map(([skillId, data]) => ({
+                skillId,
+                level: data.level || 0,
+                name: getMathSkillName(skillId, language)
+            }))
+            .filter(s => s.level < 5.5) // Focus on skills below Level 5*
+            .sort((a, b) => a.level - b.level); // Weakest first
+
+        return allSkills.slice(0, 3).map(s => {
+            let advice = "";
+            if (s.level < 2) {
+                advice = language === 'en' 
+                    ? `Build your foundation in ${s.name}. Mastering the basics here is critical for DSE Section A.`
+                    : `建立 ${s.name} 的基礎。這對 DSE 甲部題目至關重要。`;
+            } else if (s.level < 4) {
+                advice = language === 'en'
+                    ? `Strengthen ${s.name} application. Focus on multi-step problems to reach Level 4 mastery.`
+                    : `加強 ${s.name} 的應用。專注於多步運算題目以達到第 4 級水平。`;
+            } else {
+                advice = language === 'en'
+                    ? `Polish ${s.name} for Section B. High accuracy here is key to unlocking Level 5 or above.`
+                    : `精煉 ${s.name} 以應對乙部題目。高準確性是取得 5 級或以上成績的關鍵。`;
+            }
+
+            return {
+                ...s,
+                recommendedAction: advice
+            };
+        });
+    };
+
+    const weaknesses = getWeaknessSuggestions();
 
     // Calculate Top Growth
     const getTopGrowth = () => {
@@ -164,7 +196,7 @@ const MathAbilityModal = ({ isOpen, onClose }) => {
         Object.entries(strengths).forEach(([id, currentVal]) => {
             const prevVal = previousDataRaw[id];
             if (prevVal) {
-                const growth = currentVal.level - prevVal.level;
+                const growth = (currentVal.level || 0) - (prevVal.level || 0);
                 if (growth > maxGrowth) {
                     maxGrowth = growth;
                     topSkillId = id;
@@ -173,10 +205,6 @@ const MathAbilityModal = ({ isOpen, onClose }) => {
         });
 
         if (!topSkillId || maxGrowth <= 0) return null;
-        // Convert growth (0-7 scale) to percentage for display? Or keep as levels?
-        // English version shows percentage increase.
-        // Let's show Level increase e.g. "+1.5 Levels"
-        // Or convert to %: (growth / 7) * 100
         const pctGrowth = Math.round((maxGrowth / 7) * 100);
         return {
             name: getMathSkillName(topSkillId, language),
@@ -191,8 +219,9 @@ const MathAbilityModal = ({ isOpen, onClose }) => {
         let maxLevel = -Infinity;
 
         Object.entries(strengths).forEach(([id, val]) => {
-            if (val.level > maxLevel) {
-                maxLevel = val.level;
+            const level = val.level || 0;
+            if (level > maxLevel) {
+                maxLevel = level;
                 peakSkillId = id;
             }
         });
@@ -212,28 +241,25 @@ const MathAbilityModal = ({ isOpen, onClose }) => {
     const topGrowth = getTopGrowth() || { name: '---', value: t('math_ability.complete_more_labs') };
     const peakPerf = getPeakPerformance() || { name: '---', value: t('math_ability.complete_more_labs') };
 
-    // Glossary skills
-    const glossarySkills = selectedCategory.id === 'Overview'
-        ? []
-        : getSkillsByCategory(selectedCategory.id);
+    const glossarySkills = selectedCategory.id === 'Overview' ? [] : getSkillsByCategory(selectedCategory.id);
 
     return (
         <Dialog.Root open={isOpen} onOpenChange={onClose}>
             <Dialog.Portal>
-                <Dialog.Overlay className="fixed inset-0 bg-black/60 backdrop-blur-md z-50 animate-in fade-in duration-200" />
+                <Dialog.Overlay className="fixed inset-0 bg-slate-900/40 backdrop-blur-sm z-50 animate-in fade-in duration-200" />
                 <Dialog.Content className="fixed left-[50%] top-[50%] z-50 w-[95vw] max-w-6xl translate-x-[-50%] translate-y-[-50%] outline-none animate-in fade-in zoom-in-95 duration-200 overflow-hidden">
-                    <div className="bg-slate-900 border border-slate-800 text-slate-100 shadow-2xl p-6 rounded-3xl relative">
+                    <div className="bg-white border border-slate-200 text-slate-900 shadow-2xl p-8 rounded-[2.5rem] relative">
                         {/* Header */}
-                        <div className="flex items-center justify-between mb-4">
-                            <div className="flex items-center gap-3">
-                                <div className="p-2 bg-indigo-500/20 rounded-lg">
-                                    <Compass className="w-5 h-5 text-indigo-400" />
+                        <div className="flex items-center justify-between mb-6">
+                            <div className="flex items-center gap-4">
+                                <div className="p-3 bg-indigo-50 rounded-2xl">
+                                    <Compass className="w-6 h-6 text-indigo-600" />
                                 </div>
                                 <div>
-                                    <Dialog.Title className="text-xl font-bold bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">
+                                    <Dialog.Title className="text-3xl font-black tracking-tight text-slate-900">
                                         {t('math_ability.title')}
                                     </Dialog.Title>
-                                    <Dialog.Description className="text-slate-400 italic text-xs">
+                                    <Dialog.Description className="text-slate-500 font-medium text-sm">
                                         {t('math_ability.description')}
                                     </Dialog.Description>
                                 </div>
@@ -241,8 +267,8 @@ const MathAbilityModal = ({ isOpen, onClose }) => {
                         </div>
 
                         {/* Navigation / Control Bar */}
-                        <div className="flex flex-wrap items-center justify-between gap-4 mb-4">
-                            <div className="flex flex-wrap gap-2">
+                        <div className="flex flex-wrap items-center justify-between gap-4 mb-8">
+                            <div className="flex flex-wrap gap-2.5 p-1.5 bg-slate-50 rounded-2xl border border-slate-100">
                                 {CATEGORIES.map(cat => (
                                     <button
                                         key={cat.id}
@@ -250,13 +276,13 @@ const MathAbilityModal = ({ isOpen, onClose }) => {
                                             setSelectedCategory(cat);
                                             setShowGlossary(false);
                                         }}
-                                        className={`flex items-center gap-2 px-3 py-1.5 rounded-xl border transition-all ${selectedCategory.id === cat.id
-                                            ? `bg-indigo-500/20 border-indigo-500/50 ${cat.color}` // Use category color if selected? Or uniform? Let's use uniform active style or dynamic
-                                            : 'bg-slate-800/50 border-slate-700 text-slate-400 hover:bg-slate-800'
-                                            } ${selectedCategory.id === cat.id ? 'text-indigo-400' : ''}`}
+                                        className={`flex items-center gap-2.5 px-5 py-2.5 rounded-xl transition-all duration-300 ${selectedCategory.id === cat.id
+                                            ? 'bg-white shadow-md shadow-indigo-100/50 text-indigo-600 ring-1 ring-slate-200'
+                                            : 'text-slate-400 hover:text-slate-600'
+                                            }`}
                                     >
-                                        <cat.icon className={`w-3.5 h-3.5 ${selectedCategory.id === cat.id ? 'text-indigo-400' : 'text-slate-500'}`} />
-                                        <span className="text-xs font-medium">{cat.name}</span>
+                                        <cat.icon className={`w-4 h-4 ${selectedCategory.id === cat.id ? 'text-indigo-600' : 'text-slate-400'}`} />
+                                        <span className="text-sm font-bold">{cat.name}</span>
                                     </button>
                                 ))}
                             </div>
@@ -264,92 +290,92 @@ const MathAbilityModal = ({ isOpen, onClose }) => {
                             {selectedCategory.id !== 'Overview' && (
                                 <button
                                     onClick={() => setShowGlossary(!showGlossary)}
-                                    className={`flex items-center gap-2 px-3 py-1.5 rounded-xl border transition-all ${showGlossary
-                                        ? 'bg-amber-500/20 border-amber-500/50 text-amber-400'
-                                        : 'bg-slate-800/50 border-slate-700 text-slate-400 hover:bg-slate-800'
+                                    className={`flex items-center gap-2.5 px-5 py-2.5 rounded-xl border transition-all ${showGlossary
+                                        ? 'bg-amber-50 border-amber-200 text-amber-700'
+                                        : 'bg-white border-slate-200 text-slate-500 hover:bg-slate-50 shadow-sm'
                                         }`}
                                 >
-                                    <Info className={`w-3.5 h-3.5 ${showGlossary ? 'text-amber-400' : 'text-slate-500'}`} />
-                                    <span className="text-xs font-medium">{t('math_ability.skill_glossary')}</span>
+                                    <Info className={`w-4 h-4 ${showGlossary ? 'text-amber-600' : 'text-slate-400'}`} />
+                                    <span className="text-sm font-bold">{t('math_ability.skill_glossary')}</span>
                                 </button>
                             )}
                         </div>
 
                         {/* Main Grid Layout */}
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {/* Left Panel: Stats */}
-                            <div className="space-y-3">
+                            <div className="space-y-4">
                                 {selectedCategory.id === 'Overview' && (
-                                    <div className="p-4 bg-gradient-to-br from-indigo-500/20 to-purple-500/20 rounded-xl border border-indigo-500/30 shadow-lg shadow-indigo-500/5 transition-all animate-in fade-in slide-in-from-left-4">
-                                        <div className="flex items-center gap-2 mb-2">
-                                            <Trophy className="w-4 h-4 text-indigo-400" />
-                                            <span className="text-xs font-bold text-indigo-100/80 uppercase tracking-widest">{t('math_ability.overall_level')}</span>
+                                    <div className="p-6 bg-gradient-to-br from-indigo-50 to-white rounded-3xl border border-indigo-100 shadow-xl shadow-indigo-500/5 transition-all animate-in fade-in slide-in-from-left-4">
+                                        <div className="flex items-center gap-3 mb-3">
+                                            <div className="p-1.5 bg-indigo-600 rounded-lg">
+                                                <Trophy className="w-4 h-4 text-white" />
+                                            </div>
+                                            <span className="text-[11px] font-black text-indigo-900/60 uppercase tracking-[0.2em]">{t('math_ability.overall_level')}</span>
                                         </div>
-                                        <p className="text-4xl font-black text-white drop-shadow-[0_0_15px_rgba(99,102,241,0.5)]">
+                                        <p className="text-6xl font-black text-indigo-600 tracking-tighter">
                                             {mathsUnlocked
                                                 ? (typeof (masteryData?.level) === 'number'
                                                     ? t(`math_ability.level_labels.${Math.floor(masteryData.level)}`)
                                                     : (masteryData?.level || '1'))
                                                 : t('math_ability.not_available')}
                                         </p>
-                                        <p className="text-[10px] text-indigo-400/80 mt-1 font-medium italic">
-                                            {mathsUnlocked ? 'HKDSE Equivalent Grade' : (
-                                                <span className="flex items-center gap-1 text-indigo-300/50">
-                                                    <Lock className="w-3 h-3" />
-                                                    Complete Maths Papers 1 &amp; 2 to unlock
+                                        <p className="text-xs text-slate-400 mt-2 font-bold flex items-center gap-2">
+                                            {mathsUnlocked ? (
+                                                <>
+                                                    <span className="px-2 py-0.5 bg-indigo-600 text-white rounded-md text-[10px]">HKDSE</span>
+                                                    Estimated Grade
+                                                </>
+                                            ) : (
+                                                <span className="flex items-center gap-1.5 text-slate-300">
+                                                    <Lock className="w-3.5 h-3.5" />
+                                                    Complete Papers to unlock
                                                 </span>
                                             )}
                                         </p>
                                     </div>
                                 )}
 
-                                <div className="p-3 bg-slate-800/50 rounded-xl border border-slate-700">
-                                    <div className="flex items-center gap-2 mb-2">
-                                        <TrendingUp className="w-3.5 h-3.5 text-emerald-400" />
-                                        <span className="text-xs font-medium text-slate-300">{t('math_ability.top_growth')}</span>
+                                <div className="p-5 bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+                                    <div className="flex items-center gap-3 mb-3">
+                                        <TrendingUp className="w-4 h-4 text-emerald-500" />
+                                        <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">{t('math_ability.top_growth')}</span>
                                     </div>
-                                    <p className="text-base font-bold text-white">{topGrowth.name}</p>
-                                    <p className="text-[10px] text-slate-500">{topGrowth.value}</p>
+                                    <p className="text-lg font-black text-slate-900 leading-tight">{topGrowth.name}</p>
+                                    <p className="text-xs font-bold text-emerald-600 mt-1">{topGrowth.value}</p>
                                 </div>
 
-                                <div className="p-3 bg-slate-800/50 rounded-xl border border-slate-700">
-                                    <div className="flex items-center gap-2 mb-2">
-                                        <Award className="w-3.5 h-3.5 text-amber-400" />
-                                        <span className="text-xs font-medium text-slate-300">{t('math_ability.peak_performance')}</span>
+                                <div className="p-5 bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+                                    <div className="flex items-center gap-3 mb-3">
+                                        <Award className="w-4 h-4 text-amber-500" />
+                                        <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">{t('math_ability.peak_performance')}</span>
                                     </div>
-                                    <p className="text-base font-bold text-white">{peakPerf.name}</p>
-                                    <p className="text-[10px] text-slate-500">{peakPerf.value}</p>
+                                    <p className="text-lg font-black text-slate-900 leading-tight">{peakPerf.name}</p>
+                                    <p className="text-xs font-bold text-amber-600 mt-1">{peakPerf.value}</p>
                                 </div>
 
-                                <div className="mt-4">
-                                    <h4 className="text-[10px] font-semibold text-slate-500 uppercase tracking-wider mb-2">{t('math_ability.improvement_plan')}</h4>
-
-
-                                    <div className="space-y-2">
+                                <div className="pt-2">
+                                    <h4 className="text-[11px] font-black text-slate-400 uppercase tracking-widest mb-4 px-1">{t('math_ability.improvement_plan')}</h4>
+                                    <div className="space-y-3">
                                         {weaknesses.length > 0 ? weaknesses.map((w) => (
                                             <button
                                                 key={w.skillId}
                                                 onClick={() => handleLearnSkill(w.skillId)}
-                                                className="w-full text-left p-2.5 bg-slate-800/30 border border-slate-700/50 rounded-xl space-y-1 hover:bg-slate-800/50 hover:border-indigo-500/30 transition-all group"
+                                                className="w-full text-left p-4 bg-slate-50 border border-slate-100 rounded-2xl group hover:bg-white hover:border-indigo-200 hover:shadow-lg hover:shadow-indigo-500/5 transition-all"
                                             >
-                                                <div className="flex items-center justify-between gap-2">
-                                                    <span className="text-xs font-bold text-slate-200 group-hover:text-indigo-400 transition-colors uppercase tracking-tight truncate flex-1">{getMathSkillName(w.skillId, language)}</span>
-                                                    <div className="flex items-center gap-2 flex-shrink-0">
-                                                        <span className={`text-[8px] px-1.5 py-0.5 rounded-full border ${getMasteryStats(masteryData?.microSkills?.[w.skillId]?.level || 0, false, true).color}`}>
-                                                            {getMasteryStats(masteryData?.microSkills?.[w.skillId]?.level || 0, false, true).displayName}
-                                                        </span>
-                                                        <span className="text-[8px] px-1.5 py-0.5 bg-rose-500/10 text-rose-400 rounded-full border border-rose-500/20 whitespace-nowrap">
-                                                            {t('math_ability.priority_tag')}
-                                                        </span>
-                                                    </div>
+                                                <div className="flex items-center justify-between gap-3 mb-2">
+                                                    <span className="text-sm font-black text-slate-900 group-hover:text-indigo-600 transition-colors truncate">{getMathSkillName(w.skillId, language)}</span>
+                                                    <span className="text-[10px] px-2 py-0.5 bg-rose-50 text-rose-600 rounded-full font-bold whitespace-nowrap border border-rose-100">
+                                                        Priority
+                                                    </span>
                                                 </div>
-                                                <p className="text-[10px] text-slate-400 leading-relaxed italic line-clamp-2">
+                                                <p className="text-xs text-slate-500 font-medium leading-relaxed line-clamp-2">
                                                     {w.recommendedAction}
                                                 </p>
                                             </button>
                                         )) : (
-                                            <div className="p-4 text-center border border-dashed border-slate-800 rounded-xl">
-                                                <p className="text-xs text-slate-600">{t('math_ability.no_plan')}</p>
+                                            <div className="p-8 text-center border-2 border-dashed border-slate-100 rounded-3xl">
+                                                <p className="text-sm text-slate-300 font-bold">{t('math_ability.no_plan')}</p>
                                             </div>
                                         )}
                                     </div>
@@ -357,27 +383,31 @@ const MathAbilityModal = ({ isOpen, onClose }) => {
                             </div>
 
                             {/* Right Panel: Radar / Glossary */}
-                            <div className="md:col-span-2 bg-slate-950/50 rounded-2xl border border-slate-800 p-6 flex flex-col items-center justify-center relative overflow-hidden min-h-[480px]">
-                                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-indigo-500/10 blur-[100px] pointer-events-none" />
+                            <div className="md:col-span-2 bg-slate-50/40 rounded-[2rem] border border-slate-100 p-8 flex flex-col items-center justify-center relative overflow-hidden min-h-[520px]">
+                                <div className="absolute -top-24 -right-24 w-64 h-64 bg-indigo-500/5 blur-[80px] pointer-events-none" />
+                                <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-purple-500/5 blur-[80px] pointer-events-none" />
+                                
                                 {loading ? (
-                                    <div className="flex flex-col items-center gap-3">
-                                        <div className="w-8 h-8 border-4 border-indigo-500 border-t-transparent rounded-full animate-spin" />
-                                        <p className="text-sm text-slate-400">{t('math_ability.loading')}</p>
+                                    <div className="flex flex-col items-center gap-4">
+                                        <div className="w-10 h-10 border-4 border-indigo-600 border-t-transparent rounded-full animate-spin" />
+                                        <p className="text-sm font-bold text-slate-400">{t('math_ability.loading')}</p>
                                     </div>
                                 ) : showGlossary ? (
-                                    <div className="w-full h-full animate-in fade-in slide-in-from-right-4 duration-300">
-                                        <div className="flex items-center gap-2 mb-4">
-                                            <Info className="w-4 h-4 text-amber-400" />
-                                            <h3 className="text-lg font-bold text-white">{t('math_ability.skill_glossary')}</h3>
+                                    <div className="w-full h-full animate-in fade-in slide-in-from-right-4 duration-300 z-10">
+                                        <div className="flex items-center gap-3 mb-6">
+                                            <div className="p-2 bg-amber-50 rounded-xl">
+                                                <Info className="w-5 h-5 text-amber-600" />
+                                            </div>
+                                            <h3 className="text-2xl font-black text-slate-900">{t('math_ability.skill_glossary')}</h3>
                                         </div>
-                                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-h-[380px] overflow-y-auto pr-2 custom-scrollbar">
+                                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-h-[400px] overflow-y-auto pr-4 custom-scrollbar">
                                             {glossarySkills.map(skillId => (
-                                                <div key={skillId} className="p-3 bg-slate-800/40 rounded-xl border border-slate-700/50 group hover:border-indigo-500/30 transition-all">
-                                                    <h5 className="text-sm font-bold text-indigo-400 flex items-center gap-2 mb-1">
-                                                        <ChevronRight className="w-3 h-3 text-slate-500 group-hover:text-indigo-400 transition-colors" />
+                                                <div key={skillId} className="p-5 bg-white/80 backdrop-blur-sm rounded-2xl border border-slate-200 group hover:border-indigo-300 transition-all shadow-sm">
+                                                    <h5 className="text-sm font-black text-indigo-600 flex items-center gap-2 mb-2">
+                                                        <ChevronRight className="w-4 h-4 text-slate-300 group-hover:text-indigo-600 transition-transform group-hover:translate-x-0.5" />
                                                         {getMathSkillName(skillId, language)}
                                                     </h5>
-                                                    <p className="text-[11px] text-slate-400 leading-tight">
+                                                    <p className="text-xs text-slate-500 font-medium leading-normal">
                                                         {getMathSkillDesc(skillId, language)}
                                                     </p>
                                                 </div>
@@ -386,21 +416,21 @@ const MathAbilityModal = ({ isOpen, onClose }) => {
                                     </div>
                                 ) : (
                                     <>
-                                        {/* REUSING MASTERY RADAR */}
                                         <MasteryRadar
                                             data={displayData}
                                             historicalData={selectedCategory.id === 'Overview' ? null : previousData}
                                             isOverview={selectedCategory.id === 'Overview'}
+                                            theme="light"
                                         />
-                                        <div className="flex gap-6 mt-4 text-[10px] font-medium uppercase tracking-widest">
-                                            <div className="flex items-center gap-2">
-                                                <div className="w-2.5 h-2.5 rounded-full bg-indigo-400" />
-                                                <span className="text-slate-300">{t('math_ability.current')}</span>
+                                        <div className="flex gap-8 mt-8 text-[11px] font-black uppercase tracking-widest z-10">
+                                            <div className="flex items-center gap-2.5">
+                                                <div className="w-3 h-3 rounded-full bg-indigo-600 ring-4 ring-indigo-50" />
+                                                <span className="text-slate-900">{t('math_ability.current')}</span>
                                             </div>
                                             {previousDataRaw && selectedCategory.id !== 'Overview' && (
-                                                <div className="flex items-center gap-2">
-                                                    <div className="w-2.5 h-2.5 rounded-full bg-slate-600" />
-                                                    <span className="text-slate-500">{t('math_ability.baseline')}</span>
+                                                <div className="flex items-center gap-2.5">
+                                                    <div className="w-3 h-3 rounded-full bg-slate-300 ring-4 ring-slate-50" />
+                                                    <span className="text-slate-400">{t('math_ability.baseline')}</span>
                                                 </div>
                                             )}
                                         </div>
@@ -410,14 +440,14 @@ const MathAbilityModal = ({ isOpen, onClose }) => {
                         </div>
 
                         {/* Footer */}
-                        <div className="mt-4 flex justify-between items-center pt-3 border-t border-slate-800/50">
-                            <div className="flex items-center gap-2 text-[10px] text-slate-500">
-                                <Info className="w-3 h-3" />
+                        <div className="mt-8 flex justify-between items-center pt-6 border-t border-slate-100">
+                            <div className="flex items-center gap-2.5 text-xs font-bold text-slate-400">
+                                <Info className="w-4 h-4 text-indigo-300" />
                                 <span>{t('math_ability.footer_info')}</span>
                             </div>
                             <button
                                 onClick={onClose}
-                                className="px-5 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-lg text-sm font-medium transition-all"
+                                className="px-8 py-2.5 bg-slate-900 hover:bg-black text-white rounded-xl text-sm font-black transition-all shadow-lg shadow-slate-200"
                             >
                                 {t('math_ability.close')}
                             </button>
@@ -425,10 +455,10 @@ const MathAbilityModal = ({ isOpen, onClose }) => {
 
                         <Dialog.Close asChild>
                             <button
-                                className="absolute top-4 right-4 text-gray-400 hover:text-gray-200 transition-colors rounded-full p-1 hover:bg-white/5 outline-none"
+                                className="absolute top-6 right-6 text-slate-400 hover:text-slate-900 transition-colors rounded-full p-2 bg-slate-50 hover:bg-slate-100 outline-none shadow-sm"
                                 aria-label="Close"
                             >
-                                <X className="w-4 h-4" />
+                                <X className="w-5 h-5" />
                             </button>
                         </Dialog.Close>
                     </div>

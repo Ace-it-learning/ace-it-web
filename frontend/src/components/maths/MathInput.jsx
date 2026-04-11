@@ -20,7 +20,7 @@ const COMMON_FORMULAS = [
     { name: 'Sphere Vol', tex: 'V = \\frac{4}{3} \\pi r^3' },
 ];
 
-const MathInput = ({ value, onChange, placeholder = "Type your explanation here. Click the Pi icon to insert math equations...", id = "math-input-area" }) => {
+const MathInput = ({ value, onChange, insertLatex = null, placeholder = "Type your explanation here. Click the Pi icon to insert math equations...", id = "math-input-area" }) => {
     const [showFormulas, setShowFormulas] = useState(false);
 
     const editor = useEditor({
@@ -139,6 +139,35 @@ const MathInput = ({ value, onChange, placeholder = "Type your explanation here.
             editor.chain().focus().insertMath(latex).run();
         }
     };
+
+    // Insert scaffold LaTeX from hint engine when parent triggers it
+    useEffect(() => {
+        if (insertLatex && editor) {
+            // Split by \\newline to handle vertical scaffolds
+            const parts = insertLatex.split(/\\newline|\\\\newline/);
+            if (parts.length > 1) {
+                const contentToInsert = [];
+                parts.forEach((part, index) => {
+                    const cleanPart = part.trim();
+                    if (!cleanPart) return;
+                    
+                    contentToInsert.push({
+                        type: 'math',
+                        attrs: { latex: cleanPart }
+                    });
+                    
+                    // Add a paragraph gap except after the last item
+                    if (index < parts.length - 1) {
+                        contentToInsert.push({ type: 'paragraph' });
+                    }
+                });
+                editor.chain().focus().insertContent(contentToInsert).run();
+            } else {
+                // Standard single line insertion
+                editor.chain().focus().insertMath(insertLatex).run();
+            }
+        }
+    }, [insertLatex]);
 
     if (!editor) {
         return null;

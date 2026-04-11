@@ -1,0 +1,383 @@
+[
+  {
+    "id": "ct_mcq_331",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_alg_variations"],
+    "marks": 1,
+    "difficulty": 5,
+    "paper": 2,
+    "section": "A",
+    "question_en": "It is given that $z$ varies directly as $x^2$ and inversely as $y$. When $x = 2$ and $y = 3$, $z = 8$. Find the value of $z$ when $x = 3$ and $y = 6$.",
+    "question_zh": "已知 $z$ 隨 $x^2$ 正變且隨 $y$ 反變。當 $x = 2$ 及 $y = 3$ 時，$z = 8$。求當 $x = 3$ 及 $y = 6$ 時 $z$ 的值。",
+    "options": [
+      "A. 4",
+      "B. 9",
+      "C. 12",
+      "D. 18"
+    ],
+    "correct_answer": "B",
+    "solution_steps_en": [
+      "Variation equation: $z = \\frac{kx^2}{y}$.",
+      "Substitute $x=2, y=3, z=8$: $8 = \\frac{k(2^2)}{3} \\Rightarrow 8 = \\frac{4k}{3}$.",
+      "Solve for $k$: $k = \\frac{8 \\times 3}{4} = 6$.",
+      "Substitute $x=3, y=6$ into $z = \\frac{6x^2}{y}$:",
+      " $z = \\frac{6(3^2)}{6} = 3^2 = 9$."
+    ],
+    "solution_steps_zh": [
+      "變項方程：$z = \\frac{kx^2}{y}$。",
+      "代入 $x=2, y=3, z=8$：$8 = \\frac{k(2^2)}{3} \\Rightarrow k = 6$。",
+      "將 $x=3, y=6$ 代入 $z = \\frac{6x^2}{y}$：",
+      " $z = \\frac{6(3^2)}{6} = 9$。"
+    ],
+    "diagram_json": null,
+    "tags": ["variations", "algebra"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_332",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_geo_coordinate_geo"],
+    "marks": 1,
+    "difficulty": 6,
+    "paper": 2,
+    "section": "A",
+    "question_en": "Find the equation of the circle with center $(3, -4)$ and passing through the origin.",
+    "question_zh": "求圓心為 $(3, -4)$ 且經過原點的圓方程。",
+    "options": [
+      "A. $x^2 + y^2 - 6x + 8y = 0$",
+      "B. $x^2 + y^2 + 6x - 8y = 0$",
+      "C. $x^2 + y^2 - 3x + 4y = 0$",
+      "D. $x^2 + y^2 - 6x + 8y = 25$"
+    ],
+    "correct_answer": "A",
+    "solution_steps_en": [
+      "The radius $r$ is the distance from $(3, -4)$ to $(0, 0)$.",
+      " $r^2 = (3 - 0)^2 + (-4 - 0)^2 = 9 + 16 = 25$.",
+      "Equation of circle: $(x - 3)^2 + (y + 4)^2 = 25$.",
+      "Expand: $x^2 - 6x + 9 + y^2 + 8y + 16 = 25$.",
+      " $x^2 + y^2 - 6x + 8y + 25 = 25 \\Rightarrow x^2 + y^2 - 6x + 8y = 0$."
+    ],
+    "solution_steps_zh": [
+      "半徑 $r$ 為 $(3, -4)$ 與 $(0, 0)$ 之間的距離。",
+      " $r^2 = 3^2 + (-4)^2 = 25$。",
+      "圓方程：$(x - 3)^2 + (y + 4)^2 = 25$。",
+      "展開後：$x^2 - 6x + 9 + y^2 + 8y + 16 = 25$。",
+      " $x^2 + y^2 - 6x + 8y = 0$。"
+    ],
+    "diagram_json": null,
+    "tags": ["coordinate-geo", "circle-equation"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_333",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_alg_equations"],
+    "marks": 1,
+    "difficulty": 5,
+    "paper": 2,
+    "section": "A",
+    "question_en": "Factorize $4x^2 - 12xy + 9y^2 - 4x + 6y$.",
+    "question_zh": "因式分解 $4x^2 - 12xy + 9y^2 - 4x + 6y$。",
+    "options": [
+      "A. $(2x - 3y)(2x - 3y + 2)$",
+      "B. $(2x - 3y)(2x - 3y - 2)$",
+      "C. $(2x + 3y)(2x + 3y - 2)$",
+      "D. $(2x - 3y)^2 - 2(2x - 3y)$"
+    ],
+    "correct_answer": "B",
+    "solution_steps_en": [
+      "Group the first three terms: $4x^2 - 12xy + 9y^2 = (2x - 3y)^2$.",
+      "Factorize the last two terms: $-4x + 6y = -2(2x - 3y)$.",
+      "Combine: $(2x - 3y)^2 - 2(2x - 3y)$.",
+      "Take out common factor $(2x - 3y)$:",
+      " $(2x - 3y)[(2x - 3y) - 2] = (2x - 3y)(2x - 3y - 2)$."
+    ],
+    "solution_steps_zh": [
+      "首三項為完全平方：$4x^2 - 12xy + 9y^2 = (2x - 3y)^2$。",
+      "提取後兩項的公因子：$-4x + 6y = -2(2x - 3y)$。",
+      "合併：$(2x - 3y)^2 - 2(2x - 3y)$。",
+      "提取 $(2x - 3y)$：",
+      " $(2x - 3y)(2x - 3y - 2)$。"
+    ],
+    "diagram_json": null,
+    "tags": ["algebra", "factorization"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_334",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_alg_quadratics"],
+    "marks": 1,
+    "difficulty": 6,
+    "paper": 2,
+    "section": "A",
+    "question_en": "If the length of a rectangle is increased by 20% and its width is decreased by 20%, what is the percentage change in its area?",
+    "question_zh": "若長方形的長度增加 20% 而闊度減少 20%，求其面積的百分變化。",
+    "options": [
+      "A. No change",
+      "B. Increased by 4%",
+      "C. Decreased by 4%",
+      "D. Decreased by 40%"
+    ],
+    "correct_answer": "C",
+    "solution_steps_en": [
+      "Let original length be $L$ and width be $W$. Original Area $A_1 = LW$.",
+      "New length $L' = 1.2L$. New width $W' = 0.8W$.",
+      "New Area $A_2 = (1.2L)(0.8W) = 0.96LW$.",
+      "Percentage change $= \\frac{0.96LW - LW}{LW} \\times 100\\% = -4\\%$.",
+      "The area is decreased by 4%."
+    ],
+    "solution_steps_zh": [
+      "設原長度為 $L$，原闊度為 $W$。原面積 $A_1 = LW$。",
+      "新長度 $L' = 1.2L$，新闊度 $W' = 0.8W$。",
+      "新面積 $A_2 = (1.2)(0.8)LW = 0.96LW$。",
+      "百分變化 $= (0.96 - 1) \\times 100\\% = -4\\%$。",
+      "即減少了 4%。"
+    ],
+    "diagram_json": null,
+    "tags": ["percentages", "geometry"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_335",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_stat_prob"],
+    "marks": 1,
+    "difficulty": 6,
+    "paper": 2,
+    "section": "B",
+    "question_en": "If each datum in a set of data is multiplied by 3 and then increased by 5, which of the following remains unchanged?\nI. Range\nII. Standard Deviation\nIII. Interquartile Range",
+    "question_zh": "若將一組數據中的每個數據乘以 3 再加 5，下列哪項保持不變？\nI. 全距 (Range)\nII. 標準差 (Standard Deviation)\nIII. 四分位距 (Interquartile Range)",
+    "options": [
+      "A. None of them",
+      "B. I only",
+      "C. II only",
+      "D. III only"
+    ],
+    "correct_answer": "A",
+    "solution_steps_en": [
+      "For a transformation $y = ax + b$:",
+      " Dispersion measures (Range, SD, IQR) are multiplied by $|a|$.",
+      " Here $a = 3$, so all dispersion measures will be multiplied by 3.",
+      " Adding 5 ($b = 5$) does not affect dispersion, but the multiplication by 3 does.",
+      " Thus, none of them remain unchanged."
+    ],
+    "solution_steps_zh": [
+      "對於變換 $y = ax + b$：",
+      " 離差量（全距、標準差、IQR）會乘以 $|a|$。",
+      " 這裡 $a = 3$，故所有離差量都會變為原來的 3 倍。",
+      " 加 5 ($b = 5$) 不影響離差量，但乘以 3 會令其改變。",
+      " 因此，沒有一項保持不變。"
+    ],
+    "diagram_json": null,
+    "tags": ["statistics", "data-transformation"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_336",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_geo_circles"],
+    "marks": 1,
+    "difficulty": 6,
+    "paper": 2,
+    "section": "A",
+    "question_en": "In the figure, $O$ is the center of the circle. $\\angle ABC = 100^\\circ$. Find $\\angle AOC$.",
+    "question_zh": "圖中，$O$ 為圓心。$\\angle ABC = 100^\\circ$。求 $\\angle AOC$。",
+    "options": [
+      "A. 100°",
+      "B. 160°",
+      "C. 200°",
+      "D. 80°"
+    ],
+    "correct_answer": "B",
+    "solution_steps_en": [
+      "Angle at center is twice the angle at circumference, but they must subtend the same arc.",
+      "The reflex $\\angle AOC = 2 \\times \\angle ABC = 2 \\times 100^\\circ = 200^\\circ$.",
+      "Total angle around $O$ is $360^\\circ$.",
+      "Angle $AOC = 360^\\circ - 200^\\circ = 160^\\circ$."
+    ],
+    "solution_steps_zh": [
+      "圓心角等於兩倍圓周角，但兩者必須對同一個弧。",
+      "優角 (Reflex) $\\angle AOC = 2 \\times \\angle ABC = 200^\\circ$。",
+      "$\\angle AOC = 360^\\circ - 200^\\circ = 160^\\circ$。"
+    ],
+    "diagram_json": {
+      "canvas": { "width": 300, "height": 300, "viewBox": "0 0 300 300" },
+      "elements": [
+        { "type": "circle", "cx": 150, "cy": 150, "r": 80, "stroke": "black", "fill": "none" },
+        { "type": "point", "x": 150, "y": 150, "label": "O" },
+        { "type": "point", "x": 220, "y": 110, "label": "A" },
+        { "type": "point", "x": 150, "y": 70, "label": "B" },
+        { "type": "point", "x": 80, "y": 110, "label": "C" },
+        { "type": "polyline", "points": [
+            {"x": 220, "y": 110}, {"x": 150, "y": 70}, {"x": 80, "y": 110}
+          ], "stroke": "black" },
+        { "type": "arc", "cx": 150, "cy": 70, "r": 20, "startAngle": 210, "endAngle": 330, "stroke": "#ef4444" },
+        { "type": "text", "x": 150, "y": 100, "text": "100°", "fontSize": 10, "fill": "#ef4444" },
+        { "type": "line", "x1": 150, "y1": 150, "x2": 220, "y2": 110, "stroke": "black", "strokeDasharray": "5,5" },
+        { "type": "line", "x1": 150, "y1": 150, "x2": 80, "y2": 110, "stroke": "black", "strokeDasharray": "5,5" }
+      ]
+    },
+    "tags": ["circle-geometry", "angles-at-center"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_sa_337",
+    "type": "short_answer",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_alg_polynomials"],
+    "marks": 9,
+    "difficulty": 6,
+    "paper": 1,
+    "section": "A",
+    "question_en": "Let $f(x) = 2x^3 - 3x^2 + kx + 6$. When $f(x)$ is divided by $x - 2$, the remainder is $-12$.\n(a) Find the value of $k$. (3 marks)\n(b) Factorize $f(x)$ completely. (6 marks)",
+    "question_zh": "設 $f(x) = 2x^3 - 3x^2 + kx + 6$。當 $f(x)$ 除以 $x - 2$ 時，餘數為 $-12$。\n(a) 求 $k$ 的值。(3分)\n(b) 將 $f(x)$ 完全因式分解。(6分)",
+    "solution_steps_en": [
+      "(a) From Remainder Theorem, $f(2) = -12$.",
+      " $2(2^3) - 3(2^2) + k(2) + 6 = -12$.",
+      " $16 - 12 + 2k + 6 = -12$.",
+      " $10 + 2k = -12 \\Rightarrow 2k = -22 \\Rightarrow k = -11$.",
+      "(b) $f(x) = 2x^3 - 3x^2 - 11x + 6$.",
+      " By Factor Theorem, test $f(3) = 2(27) - 3(9) - 11(3) + 6 = 54 - 27 - 33 + 6 = 0$.",
+      " So $(x - 3)$ is a factor.",
+      " Dividing $f(x)$ by $(x - 3)$: $f(x) = (x - 3)(2x^2 + 3x - 2)$.",
+      " Factorize quadratic: $2x^2 + 3x - 2 = (2x - 1)(x + 2)$.",
+      " Final result: $f(x) = (x - 3)(2x - 1)(x + 2)$."
+    ],
+    "solution_steps_zh": [
+      "(a) 根據餘數定理，$f(2) = -12$。",
+      " $2(2^3) - 3(2^2) + 2k + 6 = -12$。",
+      " $4 + 2k + 6 = -12 \\Rightarrow 2k = -22 \\Rightarrow k = -11$。",
+      "(b) $f(x) = 2x^3 - 3x^2 - 11x + 6$。",
+      " 測試 $f(3)$：$f(3) = 54 - 27 - 33 + 6 = 0$。故 $(x - 3)$ 是因式。",
+      " 利用長除法：$f(x) = (x - 3)(2x^2 + 3x - 2)$。",
+      " 完全因式分解：$f(x) = (x - 3)(2x - 1)(x + 2)$。"
+    ],
+    "diagram_json": null,
+    "tags": ["polynomials", "factor-theorem"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_sa_338",
+    "type": "short_answer",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_trig_applications"],
+    "marks": 10,
+    "difficulty": 7,
+    "paper": 1,
+    "section": "B",
+    "question_en": "The figure shows a right pyramid $VABCD$ with a square base $ABCD$. The length of $AB$ is 10 cm and the height of the pyramid is 12 cm. Find the angle between the face $VAB$ and the base $ABCD$, correct to 3 significant figures.",
+    "question_zh": "圖中顯示一正四角錐體 $VABCD$，其底 $ABCD$ 為正方形。$AB$ 長度為 10 cm，錐體高為 12 cm。求側面 $VAB$ 與底面 $ABCD$ 之間的夾角，準確至 3 位有效數字。",
+    "solution_steps_en": [
+      "Let $M$ be the midpoint of $AB$. Since it's a right pyramid, the center of base is $O$.",
+      "The angle between face $VAB$ and base is $\\angle VMO$.",
+      "In $\\triangle VMO$:",
+      " Height $VO = 12$ cm.",
+      " Distance $OM = AB/2 = 10/2 = 5$ cm.",
+      " $\\tan(\\angle VMO) = VO / OM = 12 / 5 = 2.4$.",
+      " $\\angle VMO = \\tan^{-1}(2.4) \\approx 67.380^\\circ$.",
+      " Correct to 3 significant figures: 67.4°."
+    ],
+    "solution_steps_zh": [
+      "設 $M$ 為 $AB$ 的中點，$O$ 為底面中心。",
+      "側面與底面之夾角為 $\\angle VMO$。",
+      "在直角 $\\triangle VMO$ 中：",
+      " 高 $VO = 12$，底 $OM = 5$。",
+      " $\\tan(\\angle VMO) = 12/5 = 2.4$。",
+      " $\\angle VMO \\approx 67.4^\\circ$。"
+    ],
+    "diagram_json": {
+       "canvas": { "width": 400, "height": 300, "viewBox": "0 0 400 300" },
+       "elements": [
+         { "type": "polyline", "points": [ {"x": 100, "y": 250}, {"x": 300, "y": 250}, {"x": 350, "y": 200}, {"x": 150, "y": 200}, {"x": 100, "y": 250} ], "stroke": "black", "fill": "none" },
+         { "type": "line", "x1": 100, "y1": 250, "x2": 225, "y2": 50, "stroke": "black" },
+         { "type": "line", "x1": 300, "y1": 250, "x2": 225, "y2": 50, "stroke": "black" },
+         { "type": "line", "x1": 350, "y1": 200, "x2": 225, "y2": 50, "stroke": "black" },
+         { "type": "line", "x1": 150, "y1": 200, "x2": 225, "y2": 50, "stroke": "black", "strokeDasharray": "5,5" },
+         { "type": "line", "x1": 100, "y1": 270, "x2": 300, "y2": 270, "stroke": "#64748b", "label": "10 cm", "labelDy": 15 },
+         { "type": "text", "x": 225, "y": 40, "text": "V" },
+         { "type": "text", "x": 90, "y": 260, "text": "A" },
+         { "type": "text", "x": 310, "y": 260, "text": "B" },
+         { "type": "line", "x1": 225, "y1": 50, "x2": 225, "y2": 225, "stroke": "red", "strokeDasharray": "2,2", "label": "h=12" }
+       ]
+    },
+    "tags": ["3d-trig", "pyramids"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_sa_339",
+    "type": "short_answer",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_alg_linear_programming"],
+    "marks": 11,
+    "difficulty": 8,
+    "paper": 1,
+    "section": "B",
+    "question_en": "Consider the system of inequalities:\n$x \\ge 0, y \\ge 0, x + y \\le 6, 2x + y \\le 8$.\n(a) Sketch the feasible region. (4 marks)\n(b) Find the maximum value of $P = 3x + 2y$ within this region. (7 marks)",
+    "question_zh": "考慮下列不等式組：\n$x \\ge 0, y \\ge 0, x + y \\le 6, 2x + y \\le 8$。\n(a) 繪出可解區域。(4分)\n(b) 求 $P = 3x + 2y$ 於該區域內的最大值。(7分)",
+    "solution_steps_en": [
+      "(a) The boundary lines are $x=0, y=0, x+y=6, 2x+y=8$.",
+      " Fessible vertices:",
+      " 1. $(0,0)$",
+      " 2. $(4,0)$ from $2x+y=8, y=0$",
+      " 3. $(2,4)$ from $x+y=6, 2x+y=8$ intersection",
+      " 4. $(0,6)$ from $x+y=6, x=0$",
+      "(b) Test P at each vertex:",
+      " At $(0,0)$: $P = 0$",
+      " At $(4,0)$: $P = 3(4) + 0 = 12$",
+      " At $(2,4)$: $P = 3(2) + 2(4) = 6 + 8 = 14$",
+      " At $(0,6)$: $P = 3(0) + 2(6) = 12$",
+      "Maximum value of $P$ is 14 at $(2,4)$."
+    ],
+    "solution_steps_zh": [
+      "(a) 可解區域的頂點為 $(0,0), (4,0), (2,4), (0,6)$。",
+      "(b) 測試 $P = 3x + 2y$：",
+      " $(0,0) \\Rightarrow P = 0$",
+      " $(4,0) \\Rightarrow P = 12$",
+      " $(2,4) \\Rightarrow P = 14$",
+      " $(0,6) \\Rightarrow P = 12$",
+      "最大值為 14。"
+    ],
+    "diagram_json": null,
+    "tags": ["linear-programming", "inequalities"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_sa_340",
+    "type": "short_answer",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_alg_sequences"],
+    "marks": 9,
+    "difficulty": 7,
+    "paper": 1,
+    "section": "B",
+    "question_en": "An arithmetic progression has first term 5 and common difference 3. Find the smallest value of $n$ such that the sum of the first $n$ terms is greater than 1000.",
+    "question_zh": "等差數列的首項為 5，公差為 3。求 $n$ 的最小值，使得首 $n$ 項之和高於 1000。",
+    "solution_steps_en": [
+      "Formula for sum: $S_n = \\frac{n}{2}[2a + (n-1)d]$.",
+      "Substitute $a=5, d=3$: $S_n = \\frac{n}{2}[2(5) + (n-1)3] = \\frac{n}{2}[10 + 3n - 3] = \\frac{n(3n+7)}{2}$.",
+      "Set $S_n > 1000 \\Rightarrow n(3n+7) > 2000$.",
+      "Solve $3n^2 + 7n - 2000 = 0$ using quadratic formula:",
+      " $n = \\frac{-7 \\pm \\sqrt{49 - 4(3)(-2000)}}{6} = \\frac{-7 \\pm \\sqrt{24049}}{6}$.",
+      " Positive root $n \\approx \\frac{-7 + 155.077}{6} \\approx 24.68$.",
+      "Since $n$ must be an integer, $n = 25$."
+    ],
+    "solution_steps_zh": [
+      "求和公式：$S_n = \\frac{n}{2}[2a + (n-1)d]$。",
+      "代入 $a=5, d=3$：$S_n = \\frac{n(3n+7)}{2}$。",
+      "設定 $S_n > 1000 \\Rightarrow n(3n+7) > 2000$。",
+      "解二次方程：$3n^2 + 7n - 2000 = 0$。",
+      "正根 $n \\approx 24.68$。",
+      "由於 $n$ 是正整數，故 $n$ 的最小值為 25。"
+    ],
+    "diagram_json": null,
+    "tags": ["sequences", "arithmetic-progression"],
+    "status": "approved"
+  }
+]

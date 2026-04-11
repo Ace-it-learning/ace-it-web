@@ -1,0 +1,24 @@
+
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Grid -->
+  <line x1="0" y1="350" x2="400" y2="350" stroke="#ccc" stroke-width="1" />
+  <line x1="50" y1="0" x2="50" y2="400" stroke="#ccc" stroke-width="1" />
+  
+  <!-- Diagonal y=x -->
+  <line x1="0" y1="400" x2="400" y2="0" stroke="#888" stroke-width="1" stroke-dasharray="5,5" />
+  <text x="360" y="30" font-family="Arial" font-size="14" fill="#888">y=x</text>
+
+  <!-- Exponential curve y = 1.5^x (scaled) -->
+  <path d="M 50 350 Q 150 340 350 50" fill="none" stroke="#ff4444" stroke-width="3" />
+  <text x="280" y="80" font-family="Arial" font-size="14" fill="#ff4444" font-weight="bold">y = a^x</text>
+
+  <!-- Logarithmic curve y = log_a x (reflected) -->
+  <path d="M 50 350 Q 80 150 350 50" fill="none" stroke="#22c55e" stroke-width="3" transform="rotate(90 200 200) translate(0, 0) scale(1, 1)" style="display:none;"/>
+  <!-- More manually adjusted log curve for better visual -->
+  <path d="M 55 380 Q 70 80 380 55" fill="none" stroke="#22c55e" stroke-width="3" />
+  <text x="300" y="320" font-family="Arial" font-size="14" fill="#22c55e" font-weight="bold">y = log_a x</text>
+  
+  <!-- Axes Labels -->
+  <text x="380" y="370" font-family="Arial" font-size="12">x</text>
+  <text x="30" y="20" font-family="Arial" font-size="12">y</text>
+</svg>

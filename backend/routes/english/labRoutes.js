@@ -260,23 +260,52 @@ router.post('/writing/cheat', async (req, res) => {
     }
 });
 
-// POST /api/lab/tts (On-Demand Audio)
+// POST /api/lab/tts (On-Demand Audio with Multi-Speaker Support)
 router.post('/tts', async (req, res) => {
     try {
         const TTSService = require('../../services/TTSService');
-        const { text, gender, accent } = req.body;
+        const { text, includeTimepoints } = req.body;
 
         if (!text) return res.status(400).json({ error: "Missing text" });
 
-        // Map accent to language code (simple mapping for now)
-        let lang = 'en-US';
-        if (accent === 'UK' || accent === 'British') lang = 'en-GB';
+        // If timepoints are requested, we use the simpler generator for now 
+        // as multi-speaker concatenation makes character-offsets complex.
+        if (includeTimepoints) {
+            const data = await TTSService.generateSpeech(text, 'en-GB', 'FEMALE', 1.0, null, true);
+            return res.json(data);
+        }
 
-        const audioBase64 = await TTSService.generateSpeech(text, lang, gender || 'FEMALE');
+        const audioBase64 = await TTSService.generateMultiSpeakerSpeech(text);
         res.json({ audio: audioBase64 });
     } catch (e) {
         console.error("TTS Endpoint Error:", e);
         res.status(500).json({ error: "TTS generation failed" });
+    }
+});
+
+// POST /api/lab/evaluate_integrated
+router.post('/evaluate_integrated', async (req, res) => {
+    const { questId, studentNotes, studentDraft, targetLevel, uid } = req.body;
+    console.log(`[LabRoute] Evaluating Integrated Simulation for Quest: ${questId}, User: ${uid}`);
+    try {
+        const evaluation = await LabService.evaluateIntegratedSimulation(questId, studentNotes, studentDraft, targetLevel);
+        res.json(evaluation);
+    } catch (e) {
+        console.error("Integrated Evaluation API Error:", e);
+        res.status(500).json({ error: e.message || "Evaluation failed" });
+    }
+});
+
+// POST /api/lab/evaluate_sprint
+router.post('/evaluate_sprint', async (req, res) => {
+    const { questId, answers, uid } = req.body;
+    console.log(`[LabRoute] Evaluating Data Sprint for Quest: ${questId}, User: ${uid}`);
+    try {
+        const evaluation = await LabService.evaluateDataSprint(questId, answers);
+        res.json(evaluation);
+    } catch (e) {
+        console.error("Sprint Evaluation API Error:", e);
+        res.status(500).json({ error: e.message || "Evaluation failed" });
     }
 });
 

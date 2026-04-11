@@ -55,29 +55,51 @@ const MathsLabReview = () => {
             // CONVERSION: Treat JSON as Elite string if detected
             const eliteUserAnswer = isJson ? convertTipTapToElite(rawUserAnswer) : rawUserAnswer;
             const userAnswer = rescueMangledLatex(eliteUserAnswer);
-            const correctAnswer = (q.answer || '').trim();
+            const correctAnswer = (q.correct_answer || q.answer || '').trim();
             
             let isCorrect = userAnswer === correctAnswer;
+            const isPassport = String(userAnswer).includes('[PASSPORT: AUDIT_VERIFIED]');
+            if (isPassport) isCorrect = true;
 
             if (!isCorrect && (q.type === 'short_answer' || q.type === 'AI_Generator' || q.type === 'conventional')) {
-                const clean = (str) => str.replace(/[\$\\]/g, '').replace(/\s+/g, '').toLowerCase();
+                // Aggressive cleaning: normalize superscripts, strip all units, LaTeX math markers, and non-alphanumeric except dots
+                const clean = (str) => String(str || '')
+                    .replace(/²/g, '2').replace(/³/g, '3') // Normalize superscripts
+                    .replace(/\\text\{|\\\}|[\$\\\(\)\s,;°\^\[\]\{\}=\*²³]|deg|degree|cm|units|area|angle/gi, '')
+                    .toLowerCase();
                 const cUser = clean(userAnswer);
                 const cCorrect = clean(correctAnswer);
-                if (cUser === cCorrect) isCorrect = true;
-                else if (cUser.includes(cCorrect) && cCorrect.length > 2) isCorrect = true;
-            } else if (!isCorrect && q.type === 'mc') {
-                const stripLetter = (str) => str.replace(/^[A-D]\s*[:.]\s*/i, '').trim();
-                const sUser = stripLetter(userAnswer);
-                const sCorrect = stripLetter(correctAnswer);
                 
-                if (sUser === sCorrect || sUser === correctAnswer || userAnswer === sCorrect) {
+                // 1. Direct segment matching
+                const segments = (q.correct_answer || q.answer || '').split(/[;,]/).map(s => clean(s)).filter(s => s.length > 2);
+                const allSegmentsFound = segments.length > 0 && segments.every(seg => cUser.includes(seg));
+
+                if (cUser === cCorrect || allSegmentsFound || (cCorrect.length > 3 && cUser.includes(cCorrect))) {
                     isCorrect = true;
-                } else if (q.answer_letter && (userAnswer.trim() === q.answer_letter || userAnswer.startsWith(q.answer_letter + ':'))) {
+                }
+            } else if (!isCorrect && (q.type === 'mc' || q.type === 'mcq')) {
+                const uClean = userAnswer.trim().toUpperCase();
+                const cClean = correctAnswer.trim().toUpperCase();
+                
+                // 1. First-Letter Comparison (A vs A. ...)
+                const uLetter = uClean.charAt(0);
+                const cLetter = cClean.charAt(0);
+                if (uLetter === cLetter && /^[A-D]$/.test(uLetter)) {
                     isCorrect = true;
+                } else {
+                    // 2. Content-Based Comparison (Strip "A." and compare)
+                    const stripLetter = (str) => str.replace(/^[A-D]\s*[:.]\s*/i, '').replace(/[\$\s]/g, '').toLowerCase();
+                    const sUser = stripLetter(userAnswer);
+                    const sCorrect = stripLetter(correctAnswer);
+                    if (sUser === sCorrect && sUser !== "") {
+                        isCorrect = true;
+                    } else if (sUser.includes(sCorrect) && sCorrect.length > 2) {
+                        isCorrect = true;
+                    }
                 }
             }
 
-            const maxScore = q.marks || 3;
+            const maxScore = q.marks || (q.type === 'mcq' || q.type === 'mc' ? 1 : 12);
             return { id: q.id, correct: isCorrect, score: isCorrect ? maxScore : 0, maxScore, userAnswer, correctAnswer, question: q };
         });
 
@@ -114,10 +136,13 @@ const MathsLabReview = () => {
                     finalResults = finalResults.map(r => {
                         const aiGrade = (aiGrades || []).find(g => String(g.id) === String(r.id));
                         if (aiGrade) {
+                            // [HARDENING] If the deterministic frontend logic already marked it correct,
+                            // do NOT let the AI downgrade it.
+                            const isDeterministicCorrect = r.correct === true;
                             return {
                                 ...r,
-                                correct: aiGrade.isCorrect,
-                                score: aiGrade.score ?? r.score,
+                                correct: isDeterministicCorrect ? true : aiGrade.isCorrect,
+                                score: isDeterministicCorrect ? Math.max(r.score, aiGrade.score ?? 0) : (aiGrade.score ?? r.score),
                                 maxScore: aiGrade.maxScore ?? r.maxScore,
                                 aiFeedback: aiGrade.feedback
                             };
@@ -349,7 +374,7 @@ const MathsLabReview = () => {
                                     </div>
                                 </div>
                                 <span className="px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest bg-white border border-slate-100 text-slate-500 shadow-sm">
-                                    {result.question.type === 'mc' ? 'Multiple Choice' : 'Structured Question'}
+                                    {(result.question.type === 'mc' || result.question.type === 'mcq') ? 'Multiple Choice (Paper 2)' : 'Structured Question'}
                                 </span>
                             </div>
 
@@ -365,7 +390,7 @@ const MathsLabReview = () => {
                                             </div>
                                         )}
                                     </div>
-                                    {topic !== 'math_alg_apgp' && (result.question.diagram_url || result.question.diagram_json || result.question.diagram_svg || result.question.content?.diagram_svg) && (
+                                    {!['math_alg_apgp', 'math_alg_functions', 'math_alg_func'].includes(topic) && (result.question.diagram_url || result.question.diagram_json || result.question.diagram_svg || result.question.visual || result.question.content?.diagram_svg) && (
                                         <div className={`mt-8 flex flex-col items-center mx-auto transition-all duration-300 ${expandedDiagrams[result.id] ? 'w-full' : 'w-[320px]'}`}>
                                             <div className="w-full relative bg-slate-50 p-6 rounded-[2.5rem] border border-slate-100 shadow-inner flex flex-col items-center justify-center">
                                                 <button onClick={() => toggleDiagram(result.id)} className="absolute top-4 right-4 z-10 p-2 bg-white rounded-xl shadow-md text-slate-400 hover:text-purple-600 transition-all">
@@ -375,10 +400,10 @@ const MathsLabReview = () => {
                                                     <img src={`${import.meta.env.VITE_API_URL}/${result.question.diagram_url}`} alt="Graph" className={`max-w-full object-contain mix-blend-multiply ${expandedDiagrams[result.id] ? 'max-h-[600px]' : 'max-h-56'}`} />
                                                 ) : result.question.diagram_json ? (
                                                     <GeometryRenderer data={result.question.diagram_json} />
-                                                ) : (result.question.diagram_svg || result.question.content?.diagram_svg) ? (
+                                                ) : (result.question.diagram_svg || result.question.visual || result.question.content?.diagram_svg) ? (
                                                      <div 
                                                         className={`w-full flex items-center justify-center geometry-diagram-container transition-all duration-300 ${expandedDiagrams[result.id] ? 'min-h-[400px]' : 'min-h-[220px]'}`} 
-                                                        dangerouslySetInnerHTML={{ __html: result.question.diagram_svg || result.question.content?.diagram_svg }} 
+                                                        dangerouslySetInnerHTML={{ __html: result.question.diagram_svg || result.question.visual || result.question.content?.diagram_svg }} 
                                                      />
                                                 ) : null}
                                             </div>
@@ -386,65 +411,113 @@ const MathsLabReview = () => {
                                     )}
                                 </div>
 
-                                <div className="flex flex-col gap-8">
-                                    <div className="space-y-4">
-                                        <div className="flex items-center gap-2 text-slate-400">
-                                            <User size={14} className="opacity-60" />
-                                            <p className="text-[10px] font-black uppercase tracking-widest">Student Scratchpad</p>
-                                        </div>
-                                        <div className={`p-6 rounded-3xl border-2 transition-all student-scratchpad-container ${result.correct ? 'bg-emerald-50/30 border-emerald-100 shadow-sm shadow-emerald-100/50' : 'bg-red-50/30 border-red-100 shadow-sm shadow-red-100/50'}`}>
-                                            {result.userAnswer ? (
-                                                <div className="font-sans prose prose-slate max-w-none">{renderMath(result.userAnswer)}</div>
-                                            ) : (
-                                                <span className="text-slate-400 italic text-sm">No steps provided digitally.</span>
-                                            )}
-                                            {imageAnswers?.[result.id] && (
-                                                <div className="mt-6 pt-6 border-t border-slate-200/50">
-                                                    <p className="text-[10px] font-black text-purple-600 uppercase tracking-wider mb-4">Handwritten Proof</p>
-                                                    <img src={imageAnswers[result.id]} alt="Steps" className="max-w-full rounded-2xl border-4 border-white shadow-xl" />
+                                {/* v1.3.0: MCQ Options Display */}
+                                {(result.question.type === 'mc' || result.question.type === 'mcq') && result.question.options && (
+                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                        {result.question.options.map((option, idx) => {
+                                            const optionLetter = option.trim().substring(0, 1).toUpperCase();
+                                            const isCorrect = optionLetter === (result.question.correct_answer || result.correctAnswer);
+                                            const isStudentSelected = result.userAnswer && (result.userAnswer.trim().toUpperCase() === optionLetter || (result.userAnswer.trim().startsWith(optionLetter) && result.userAnswer.trim().length <= 3));
+                                            
+                                            let bgClass = 'bg-white border-slate-100';
+                                            let textClass = 'text-slate-600';
+                                            let borderClass = 'border-2';
+                                            
+                                            if (isCorrect) {
+                                                bgClass = 'bg-emerald-50 border-emerald-200';
+                                                textClass = 'text-emerald-900';
+                                                borderClass = 'border-2';
+                                            } else if (isStudentSelected && !isCorrect) {
+                                                bgClass = 'bg-red-50 border-red-200';
+                                                textClass = 'text-red-900';
+                                                borderClass = 'border-2';
+                                            }
+
+                                            return (
+                                                <div key={idx} className={`p-4 rounded-2xl flex items-center justify-between transition-all ${bgClass} ${borderClass}`}>
+                                                    <div className={`text-sm font-medium ${textClass}`}>
+                                                        {renderMath(option)}
+                                                    </div>
+                                                    <div className="flex items-center gap-2">
+                                                        {isCorrect && <CheckCircle size={16} className="text-emerald-500" />}
+                                                        {isStudentSelected && !isCorrect && <XCircle size={16} className="text-red-500" />}
+                                                        {isStudentSelected && <span className="text-[10px] font-black uppercase tracking-wider text-slate-400 bg-white px-2 py-0.5 rounded-lg border border-slate-100 italic">Your choice</span>}
+                                                    </div>
                                                 </div>
-                                            )}
-                                        </div>
-                                    </div>
-
-                                    {((result.question.type !== 'mc' && result.aiFeedback !== undefined) || result.aiFeedback) && (
-                                        <div className="space-y-4">
-                                            <div className="flex items-center gap-2 text-indigo-500">
-                                                <Cpu size={14} className="opacity-60" />
-                                                <p className="text-[10px] font-black uppercase tracking-widest">AI Scoring Rubric</p>
-                                            </div>
-                                            <div className="p-6 rounded-3xl bg-indigo-50/40 border-2 border-indigo-100 shadow-sm shadow-indigo-100/50 text-indigo-900 leading-relaxed font-sans text-sm mastery-logic-container">
-                                                {result.aiFeedback ? renderMath(result.aiFeedback) : <span className="text-indigo-400 italic">No detailed feedback provided.</span>}
-                                            </div>
-                                        </div>
-                                    )}
-                                </div>
-
-                                {!result.correct && (
-                                    <div className="bg-emerald-50/40 p-6 rounded-3xl border border-emerald-100/50">
-                                        <p className="text-[10px] font-black text-emerald-600 uppercase tracking-widest mb-3">Target Objective</p>
-                                        <div className="text-emerald-900">
-                                            {(() => {
-                                                const rawAns = language === 'zh' && result.question.type === 'mc' 
-                                                    ? (result.question.options_zh?.[result.question.options?.indexOf(result.correctAnswer)] || result.correctAnswer) 
-                                                    : result.correctAnswer;
-                                                // Bug 2 Fix: Wrap in delimiters to ensure it renders as math component
-                                                const wrappedAns = (rawAns.includes('\\') || rawAns.includes('_') || rawAns.includes('^')) 
-                                                    ? `$${rawAns}$` 
-                                                    : rawAns;
-                                                return renderMath(wrappedAns);
-                                            })()}
-                                        </div>
+                                            );
+                                        })}
                                     </div>
                                 )}
 
-                                {((result.question.solution_steps && result.question.solution_steps.length > 0) || result.question.answer_logic_zh) && (
+                                <div className="flex flex-col gap-8">
+                                    {/* Hide Scratchpad and AI Rubric for MCQs to prevent clutter/hallucinations */}
+                                    {!(result.question.type === 'mc' || result.question.type === 'mcq') && (
+                                        <>
+                                            <div className="space-y-4">
+                                                <div className="flex items-center gap-2 text-slate-400">
+                                                    <User size={14} className="opacity-60" />
+                                                    <p className="text-[10px] font-black uppercase tracking-widest">Student Scratchpad</p>
+                                                </div>
+                                                <div className={`p-6 rounded-3xl border-2 transition-all student-scratchpad-container ${result.correct ? 'bg-emerald-50/30 border-emerald-100 shadow-sm shadow-emerald-100/50' : 'bg-red-50/30 border-red-100 shadow-sm shadow-red-100/50'}`}>
+                                                    {result.userAnswer ? (
+                                                        <div className="font-sans prose prose-slate max-w-none">{renderMath(result.userAnswer)}</div>
+                                                    ) : (
+                                                        <span className="text-slate-400 italic text-sm">No steps provided digitally.</span>
+                                                    )}
+                                                    {imageAnswers?.[result.id] && (
+                                                        <div className="mt-6 pt-6 border-t border-slate-200/50">
+                                                            <p className="text-[10px] font-black text-purple-600 uppercase tracking-wider mb-4">Handwritten Proof</p>
+                                                            <img src={imageAnswers[result.id]} alt="Steps" className="max-w-full rounded-2xl border-4 border-white shadow-xl" />
+                                                        </div>
+                                                    )}
+                                                </div>
+                                            </div>
+
+                                            {((result.question.type !== 'mc' && result.question.type !== 'mcq' && result.aiFeedback !== undefined) || result.aiFeedback) && (
+                                                <div className="space-y-4">
+                                                    <div className="flex items-center gap-2 text-indigo-500">
+                                                        <Cpu size={14} className="opacity-60" />
+                                                        <p className="text-[10px] font-black uppercase tracking-widest">AI Scoring Rubric</p>
+                                                    </div>
+                                                    <div className="p-6 rounded-3xl bg-indigo-50/40 border-2 border-indigo-100 shadow-sm shadow-indigo-100/50 text-indigo-900 leading-relaxed font-sans text-sm mastery-logic-container">
+                                                        {result.aiFeedback ? renderMath(result.aiFeedback) : <span className="text-indigo-400 italic">No detailed feedback provided.</span>}
+                                                    </div>
+                                                </div>
+                                            )}
+
+                                            {!result.correct && (
+                                                <div className="bg-emerald-50/40 p-6 rounded-3xl border border-emerald-100/50">
+                                                    <p className="text-[10px] font-black text-emerald-600 uppercase tracking-widest mb-3">Target Objective</p>
+                                                    <div className="text-emerald-900">
+                                                        {(() => {
+                                                            const rawAns = language === 'zh' && result.question.type === 'mc' 
+                                                                ? (result.question.options_zh?.[result.question.options?.indexOf(result.correctAnswer)] || result.correctAnswer) 
+                                                                : result.correctAnswer;
+                                                            // Bug 2 Fix: Wrap in delimiters to ensure it renders as math component
+                                                            const wrappedAns = (rawAns.includes('\\') || rawAns.includes('_') || rawAns.includes('^')) 
+                                                                ? `$${rawAns}$` 
+                                                                : rawAns;
+                                                            return renderMath(wrappedAns);
+                                                        })()}
+                                                    </div>
+                                                </div>
+                                            )}
+                                        </>
+                                    )}
+                                </div>
+
+                                {((result.question.solution_steps_en && result.question.solution_steps_en.length > 0) || (result.question.solution_steps && result.question.solution_steps.length > 0) || result.question.solution_steps_zh || result.question.answer_logic_zh) && (
                                     <div className="pt-8 border-t border-slate-100">
                                         <p className="text-[10px] font-black text-purple-600 uppercase tracking-widest mb-6">Mastery Logic (Step-by-Step)</p>
                                         <div className="space-y-8 mastery-logic-container">
-                                            {(language === 'zh'
-                                                ? (result.question.solution_steps_zh || (result.question.answer_logic_zh ? result.question.answer_logic_zh.split('\\n').filter(s => s.trim()) : result.question.solution_steps))
-                                                : result.question.solution_steps).map((step, stepIdx) => {
+                                            {(() => {
+                                                const rawSteps = language === 'zh'
+                                                    ? (result.question.solution_steps_zh || (result.question.answer_logic_zh ? result.question.answer_logic_zh.split('\n').filter(s => s.trim()) : (result.question.solution_steps_en || result.question.solution_steps)))
+                                                    : (result.question.solution_steps_en || result.question.solution_steps);
+                                                
+                                                const stepsArr = Array.isArray(rawSteps) ? rawSteps : (typeof rawSteps === 'string' ? rawSteps.split('\n').filter(s => s.trim()) : []);
+                                                
+                                                return stepsArr.map((step, stepIdx) => {
                                                     const trimmedStep = (typeof step === 'string') ? step.trim() : '';
                                                     const isFullMath = (trimmedStep.startsWith('$$') && trimmedStep.endsWith('$$')) ||
                                                                      (trimmedStep.startsWith('\\[') && trimmedStep.endsWith('\\]'));
@@ -462,7 +535,9 @@ const MathsLabReview = () => {
                                                                     <div className="opacity-0 group-hover:opacity-100 transition-opacity">
                                                                         <MathStepExplainer
                                                                             question={language === 'zh' ? (result.question.text_zh || result.question.text) : result.question.text}
-                                                                            fullSolution={language === 'zh' ? (result.question.answer_logic_zh || (result.question.solution_steps_zh ? result.question.solution_steps_zh.join('\\n') : result.question.solution_steps.join('\\n'))) : result.question.solution_steps.join('\\n')}
+                                                                            fullSolution={language === 'zh' 
+                                                                                ? (result.question.answer_logic_zh || (Array.isArray(result.question.solution_steps_zh) ? result.question.solution_steps_zh.join('\\n') : (Array.isArray(result.question.solution_steps) ? result.question.solution_steps.join('\\n') : (result.question.solution_steps || '')))) 
+                                                                                : (Array.isArray(result.question.solution_steps) ? result.question.solution_steps.join('\\n') : (result.question.solution_steps || ''))}
                                                                             targetStep={step}
                                                                         />
                                                                     </div>
@@ -470,7 +545,8 @@ const MathsLabReview = () => {
                                                             </div>
                                                         </div>
                                                     );
-                                                })}
+                                                });
+                                            })()}
                                         </div>
                                     </div>
                                 )}

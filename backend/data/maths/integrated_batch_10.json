@@ -1,0 +1,315 @@
+[
+  {
+    "id": "ct_mcq_191",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_alg_polynomials"],
+    "marks": 1,
+    "difficulty": 6,
+    "paper": 2,
+    "section": "A",
+    "question_en": "Let $f(x) = 2x^3 + ax^2 + bx - 4$. It is given that $x - 2$ is a factor of $f(x)$. When $f(x)$ is divided by $x - 1$, the remainder is $-3$. Find the value of $a + b$.",
+    "question_zh": "設 $f(x) = 2x^3 + ax^2 + bx - 4$。已知 $x - 2$ 是 $f(x)$ 的因式。當 $f(x)$ 除以 $x - 1$ 時，餘數為 $-3$。求 $a + b$ 的值。",
+    "options": [
+      "A. -1",
+      "B. -3",
+      "C. -5",
+      "D. -7"
+    ],
+    "correct_answer": "A",
+    "solution_steps_en": [
+      "By factor theorem, $f(2) = 0$: $16 + 4a + 2b - 4 = 0$ → $2a + b = -6$ (Eq. 1).",
+      "By remainder theorem, $f(1) = -3$: $2 + a + b - 4 = -3$ → $a + b = -1$ (Eq. 2).",
+      "Directly from Eq. 2, $a + b = -1$."
+    ],
+    "solution_steps_zh": [
+      "根據因式定理，$f(2) = 0$：$16 + 4a + 2b - 4 = 0$ → $2a + b = -6$ (方程 1)。",
+      "根據餘數定理，$f(1) = -3$：$2 + a + b - 4 = -3$ → $a + b = -1$ (方程 2)。",
+      "直接從方程 2 得出 $a + b = -1$。"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_192",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_alg_log_exp"],
+    "marks": 1,
+    "difficulty": 6,
+    "paper": 2,
+    "section": "B",
+    "question_en": "The graph shows a linear relation between $\\log_{4} y$ and $x$. The line passes through $(0, 1)$ and $(2, 2)$. Express $y$ in terms of $x$.",
+    "question_zh": "圖中顯示 $\\log_{4} y$ 與 $x$ 之間的線性關係。該直線通過 $(0, 1)$ 及 $(2, 2)$。將 $y$ 以 $x$ 表示。",
+    "options": [
+      "A. $y = 4 \\cdot 2^x$",
+      "B. $y = 4^x + 4$",
+      "C. $y = 2 \\cdot 4^x$",
+      "D. $y = 16 \\cdot 2^x$"
+    ],
+    "correct_answer": "A",
+    "diagram_json": {
+      "elements": [
+        { "type": "line", "x1": 100, "y1": 220, "x2": 300, "y2": 100, "stroke": "#4f46e5", "strokeWidth": 2.5 },
+        { "type": "point", "x": 100, "y": 220, "label": "(0, 1)", "labelDx": -35 },
+        { "type": "point", "x": 300, "y": 100, "label": "(2, 2)", "labelDx": 10 },
+        { "type": "line", "x1": 50, "y1": 220, "x2": 350, "y2": 220, "stroke": "#94a3b8", "strokeWidth": 1, "label": "x" },
+        { "type": "line", "x1": 100, "y1": 50, "x2": 100, "y2": 250, "stroke": "#94a3b8", "strokeWidth": 1, "label": "log4 y" }
+      ],
+      "canvas": { "width": 400, "height": 300, "viewBox": "50 40 320 230" }
+    },
+    "solution_steps_en": [
+      "Let $Y = \\log_{4} y$. Slope $m = \\frac{2 - 1}{2 - 0} = \\frac{1}{2}$.",
+      "Intercept $c = 1$. So $Y = \\frac{1}{2}x + 1$.",
+      "$\\log_{4} y = \\frac{1}{2}x + 1$ → $y = 4^{(1/2)x + 1} = 4 \\cdot (4^{1/2})^x = 4 \\cdot 2^x$."
+    ],
+    "solution_steps_zh": [
+      "設 $Y = \\log_{4} y$。斜率 $m = \\frac{1}{2}$，截距 $c = 1$。",
+      "方程為 $Y = \\frac{1}{2}x + 1$。",
+      "$\\log_{4} y = \\frac{1}{2}x + 1$ → $y = 4^{(1/2)x + 1} = 4 \\cdot 2^x$。"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_193",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_geo_circles"],
+    "marks": 1,
+    "difficulty": 5,
+    "paper": 2,
+    "section": "A",
+    "question_en": "In the figure, $O$ is the center of the circle. $A$ and $B$ are points on the circumference such that $\\angle OAB = 35^\\circ$. Find the reflex angle $\\angle AOB$.",
+    "question_zh": "圖中，$O$ 是圓心。$A$ 及 $B$ 是圓周上的點使得 $\\angle OAB = 35^\\circ$。求優角 $\\angle AOB$。",
+    "options": [
+      "A. 110°",
+      "B. 250°",
+      "C. 70°",
+      "D. 290°"
+    ],
+    "correct_answer": "B",
+    "diagram_json": {
+      "elements": [
+        { "type": "circle", "cx": 240, "cy": 150, "r": 80, "stroke": "#334155", "fill": "rgba(241, 245, 249, 0.5)" },
+        { "type": "polyline", "points": [{ "x": 194, "y": 85 }, { "x": 240, "y": 150 }, { "x": 194, "y": 215 }], "stroke": "#7c3aed", "strokeWidth": 2 },
+        { "type": "line", "x1": 194, "y1": 85, "x2": 194, "y2": 215, "stroke": "#3b82f6", "strokeDasharray": "3,3" },
+        { "type": "point", "x": 194, "y": 85, "label": "A", "labelDx": -15, "labelDy": -5 },
+        { "type": "point", "x": 194, "y": 215, "label": "B", "labelDx": -15, "labelDy": 15 },
+        { "type": "point", "x": 240, "y": 150, "label": "O", "labelDx": 15, "labelDy": 5 },
+        { "type": "arc", "center": { "x": 194, "y": 85 }, "radius": 30, "startAngle": 270, "endAngle": 305.3, "label": "35°" }
+      ],
+      "canvas": { "width": 400, "height": 300, "viewBox": "120 50 200 200" }
+    },
+    "solution_steps_en": [
+      "In isosceles $\\triangle OAB$, $\\angle OBA = \\angle OAB = 35^\\circ$.",
+      "$\\angle AOB = 180^\\circ - 70^\\circ = 110^\\circ$.",
+      "Reflex $\\angle AOB = 360^\\circ - 110^\\circ = 250^\\circ$."
+    ],
+    "solution_steps_zh": [
+      "等腰 $\\triangle OAB$ 中，$\\angle OBA = \\angle OAB = 35^\\circ$。",
+      "$\\angle AOB = 180^\\circ - 70^\\circ = 110^\\circ$。",
+      "優角 $\\angle AOB = 360^\\circ - 110^\\circ = 250^\\circ$。"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_194",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_alg_variations"],
+    "marks": 1,
+    "difficulty": 6,
+    "paper": 2,
+    "section": "A",
+    "question_en": "It is given that $z$ is the sum of two parts, one part varies directly as $x$ and the other part varies directly as $\\sqrt{y}$. When $x = 1, y = 4, z = 10$; when $x = 2, y = 9, z = 19$. Find $z$ when $x = 3, y = 16$.",
+    "question_zh": "已知 $z$ 為兩部分之和，一部分隨 $x$ 正變，另一部分隨 $\\sqrt{y}$ 正變。當 $x = 1, y = 4, z = 10$；當 $x = 2, y = 9, z = 19$。求當 $x = 3, y = 16$ 時 $z$ 的值。",
+    "options": [
+      "A. 28",
+      "B. 30",
+      "C. 32",
+      "D. 34"
+    ],
+    "correct_answer": "A",
+    "solution_steps_en": [
+      "Let $z = k_1 x + k_2 \\sqrt{y}$.",
+      "From $(1, 4, 10)$: $10 = k_1 + 2k_2$. From $(2, 9, 19)$: $19 = 2k_1 + 3k_2$.",
+      "Solving gives $k_2 = 1, k_1 = 8$.",
+      "When $x = 3, y = 16$: $z = 8(3) + 1(\\sqrt{16}) = 24 + 4 = 28$."
+    ],
+    "solution_steps_zh": [
+      "設 $z = k_1 x + k_2 \\sqrt{y}$。",
+      "得方程組：$10 = k_1 + 2k_2$ 及 $19 = 2k_1 + 3k_2$。",
+      "解得 $k_1 = 8, k_2 = 1$。",
+      "當 $x = 3, y = 16$ 時，$z = 8(3) + 1(4) = 28$。"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_195",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_stat_prob"],
+    "marks": 1,
+    "difficulty": 6,
+    "paper": 2,
+    "section": "B",
+    "question_en": "A bag contains 4 red balls and 6 white balls. If two balls are drawn one after another without replacement, find the probability that the two balls are of the same color.",
+    "question_zh": "袋中有 4 個紅球及 6 個白球。若先後隨機抽出兩個球且不放回，求兩個球顏色相同的概率。",
+    "options": [
+      "A. 7/15",
+      "B. 8/15",
+      "C. 13/25",
+      "D. 12/25"
+    ],
+    "correct_answer": "A",
+    "solution_steps_en": [
+      "P(same color) = P(RR) + P(WW).",
+      "P(RR) = $\\frac{4}{10} \\times \\frac{3}{9} = \\frac{2}{15}$. P(WW) = $\\frac{6}{10} \\times \\frac{5}{9} = \\frac{1}{3}$.",
+      "Total = $\\frac{2}{15} + \\frac{5}{15} = \\frac{7}{15}$."
+    ],
+    "solution_steps_zh": [
+      "P(同色) = P(紅紅) + P(白白)。",
+      "P(紅紅) = $\\frac{4}{10} \\times \\frac{3}{9} = \\frac{2}{15}$。P(白白) = $\\frac{6}{10} \\times \\frac{5}{9} = \\frac{5}{15}$。",
+      "總概率 = $\\frac{7}{15}$。"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_196",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_num_binary_hex"],
+    "marks": 1,
+    "difficulty": 5,
+    "paper": 2,
+    "section": "A",
+    "question_en": "Express $3 \\cdot 16^4 + 10 \\cdot 16^2 + 15 \\cdot 16^1 + 11$ as a hexadecimal number.",
+    "question_zh": "將 $3 \\cdot 16^4 + 10 \\cdot 16^2 + 15 \\cdot 16^1 + 11$ 表示為十六進制數。",
+    "options": [
+      "A. 30AFB",
+      "B. 3A0FB",
+      "C. 3AF0B",
+      "D. 30ABF"
+    ],
+    "correct_answer": "A",
+    "solution_steps_en": [
+      "Digits: $3, 0, 10(A), 15(F), 11(B)$.",
+      "Result: $30AFB_{16}$."
+    ],
+    "solution_steps_zh": [
+      "數值對應：$3, 0, A, F, B$。",
+      "結果：$30AFB_{16}$。"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_sa_197",
+    "type": "short_answer",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_alg_apgp", "math_num_percentages"],
+    "marks": 12,
+    "difficulty": 7,
+    "paper": 1,
+    "section": "B",
+    "question_en": "The profit of a shop in the first year was HKD 800,000. Each year, the profit increases by 10% of the profit in the previous year.\n(a) Find the profit in the 4th year. (4 marks)\n(b) Find the total profit in the first 8 years. (4 marks)\n(c) After how many years will the total profit exceed HKD 15,000,000? (4 marks)",
+    "question_zh": "某商店首年的發展利潤為 HKD 800,000。每年，利潤較前一年增加 10%。\n(a) 求第 4 年的利潤。(4分)\n(b) 求首 8 年的總利潤。(4分)\n(c) 多少年後總利潤會超過 HKD 15,000,000？(4分)",
+    "solution_steps_en": [
+      "(a) $T_4 = 800,000(1.1)^3 = 1,064,800$.",
+      "(b) $S_8 = \\frac{800,000(1.1^8 - 1)}{0.1} = 9,148,710$.",
+      "(c) $\\frac{800,000(1.1^n - 1)}{0.1} > 15,000,000 \\Rightarrow 1.1^n > 2.875$.",
+      "$n > \\frac{\\log 2.875}{\\log 1.1} \\approx 11.08 \\Rightarrow n = 12$."
+    ],
+    "solution_steps_zh": [
+      "(a) 第 4 年利潤 = $800,000(1.1)^3 = 1,064,800$。",
+      "(b) 總利潤 = $\\frac{800,000(1.1^8 - 1)}{0.1} = 9,148,710$。",
+      "(c) $1.1^n > 2.875 \\Rightarrow n > 11.08 \\Rightarrow n = 12$。"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_sa_198",
+    "type": "short_answer",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_geo_circle_eq", "math_geo_coord"],
+    "marks": 14,
+    "difficulty": 7,
+    "paper": 1,
+    "section": "B",
+    "question_en": "Points $A(0, 0)$ and $B(6, 0)$ are given. A point $P(x, y)$ moves such that $PA : PB = 2 : 1$.\n(a) Find the equation of the locus of $P$. (6 marks)\n(b) Describe the geometric relationship of the locus. (2 marks)\n(c) Find the area of the circle formed by the locus. (6 marks)",
+    "question_zh": "已知點 $A(0, 0)$ 及點 $B(6, 0)$。點 $P(x, y)$ 在移動時滿足 $PA : PB = 2 : 1$。\n(a) 求 $P$ 的軌跡方程。(6分)\n(b) 描述該軌跡的幾何關係。(2分)\n(c) 求該軌跡形成的圓的面積。(6分)",
+    "solution_steps_en": [
+      "(a) $PA^2 = 4PB^2 \\Rightarrow x^2 + y^2 = 4[(x-6)^2 + y^2]$.",
+      "Simplifies to $3x^2 + 3y^2 - 48x + 144 = 0$ or $x^2 + y^2 - 16x + 48 = 0$.",
+      "(b) A circle center $(8, 0)$ radius 4.",
+      "(c) Area = $\\pi (4^2) = 16\\pi$."
+    ],
+    "solution_steps_zh": [
+      "(a) $x^2 + y^2 = 4[(x-6)^2 + y^2] \\Rightarrow x^2 + y^2 - 16x + 48 = 0$。",
+      "(b) 軌跡為圓心在 $(8, 0)$、半徑為 4 的圓。",
+      "(c) 面積 = $16\\pi$。"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_sa_199",
+    "type": "short_answer",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_geo_trig", "math_trig_applications"],
+    "marks": 13,
+    "difficulty": 7,
+    "paper": 1,
+    "section": "B",
+    "question_en": "In a right pyramid $VABCD$ with square base side 12 cm and height 8 cm, let $M$ be the mid-point of $AB$.\n(a) Find the distance $VM$. (4 marks)\n(b) Find the angle between face $VAB$ and base $ABCD$. (4 marks)\n(c) Find the angle between slant edge $VA$ and base $ABCD$. (5 marks)",
+    "question_zh": "在底面邊長為 12 cm、高為 8 cm 的正四稜錐 $VABCD$ 中，設 $M$ 為 $AB$ 的中點。\n(a) 求 $VM$。(4分)\n(b) 求側面 $VAB$ 與底面 $ABCD$ 的交角。(4分)\n(c) 求斜稜 $VA$ 與底面 $ABCD$ 的交角。(5分)",
+    "diagram_json": {
+      "elements": [
+        { "type": "polyline", "points": [{ "x": 120, "y": 230 }, { "x": 280, "y": 230 }, { "x": 330, "y": 180 }], "stroke": "#334155", "strokeWidth": 2, "fill": "rgba(124, 58, 237, 0.05)" },
+        { "type": "line", "x1": 330, "y1": 180, "x2": 170, "y2": 180, "stroke": "#cbd5e1", "strokeWidth": 1, "strokeDasharray": "5,5" },
+        { "type": "line", "x1": 170, "y1": 180, "x2": 120, "y2": 230, "stroke": "#cbd5e1", "strokeWidth": 1, "strokeDasharray": "5,5" },
+        { "type": "line", "x1": 120, "y1": 230, "x2": 225, "y2": 50, "stroke": "#7c3aed", "strokeWidth": 2.5 },
+        { "type": "line", "x1": 280, "y1": 230, "x2": 225, "y2": 50, "stroke": "#7c3aed", "strokeWidth": 2.5 },
+        { "type": "line", "x1": 330, "y1": 180, "x2": 225, "y2": 50, "stroke": "#7c3aed", "strokeWidth": 2.5 },
+        { "type": "line", "x1": 170, "y1": 180, "x2": 225, "y2": 50, "stroke": "#a78bfa", "strokeWidth": 1.5, "strokeDasharray": "4,4" },
+        { "type": "line", "x1": 225, "y1": 205, "x2": 225, "y2": 50, "stroke": "#dc2626", "strokeWidth": 2, "strokeDasharray": "5,5" },
+        { "type": "text", "x": 225, "y": 35, "label": "V" },
+        { "type": "text", "x": 105, "y": 245, "label": "A" },
+        { "type": "text", "x": 295, "y": 245, "label": "B" },
+        { "type": "point", "x": 200, "y": 230, "label": "M" }
+      ],
+      "canvas": { "width": 400, "height": 300, "viewBox": "80 20 280 250" }
+    },
+    "solution_steps_en": [
+      "(a) $VM = \\sqrt{8^2 + 6^2} = 10$ cm.",
+      "(b) $\\tan\\theta = 8/6 \\Rightarrow \\theta \\approx 53.1^\\circ$.",
+      "(c) Distance to center $OA = 6\\sqrt{2}$. $\\tan\\phi = 8/(6\\sqrt{2}) \\Rightarrow \\phi \\approx 43.3^\\circ$."
+    ],
+    "solution_steps_zh": [
+      "(a) $VM = 10$ cm。",
+      "(b) $\\tan\\theta = 8/6 \\Rightarrow \\theta \\approx 53.1^\\circ$。",
+      "(c) $\\tan\\phi = 8/(6\\sqrt{2}) \\Rightarrow \\phi \\approx 43.3^\\circ$。"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_sa_200",
+    "type": "short_answer",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_stat_prob"],
+    "marks": 11,
+    "difficulty": 6,
+    "paper": 1,
+    "section": "A",
+    "question_en": "For the test scores [60, 62, 65, 70, 72, 75, 78, 80, 85, 93]:\n(a) Find mean and standard deviation. (4 marks)\n(b) If scores 40 and 60 join, change in range and S.D.? (3 marks)\n(c) If scores increase by 5 then double, new mean and S.D.? (4 marks)",
+    "question_zh": "對於得分 [60, 62, 65, 70, 72, 75, 78, 80, 85, 93]：\n(a) 求平均數及標準差。(4分)\n(b) 若加入 40 及 60 分，全距及標準差的變化？(3分)\n(c) 若得分增加 5 分然後再增一倍，求新的平均數及標準差。(4分)",
+    "solution_steps_en": [
+      "(a) Mean = 74, S.D. $\\approx 9.79$.",
+      "(b) Range from 33 to 53 (increases); S.D. increases.",
+      "(c) New Mean = $(74+5) \\times 2 = 158$; New S.D. = $9.79 \\times 2 = 19.58$."
+    ],
+    "solution_steps_zh": [
+      "(a) 平均數 = 74，標準差 $\\approx 9.79$。",
+      "(b) 全距增加；標準差增加。",
+      "(c) 新平均數 = 158；新標準差 = 19.58。"
+    ],
+    "status": "approved"
+  }
+]

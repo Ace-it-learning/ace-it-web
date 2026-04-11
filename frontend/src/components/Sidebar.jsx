@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useAvatar, AGENTS } from '../context/AvatarContext';
+import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { useLanguage } from '../context/LanguageContext';
 import { clsx } from 'clsx';
@@ -20,7 +21,8 @@ const rarityRingStyles = {
 };
 
 const Sidebar = () => {
-    const { activeAgentId, setActiveAgentId, activeAgent, avatarState, studentState } = useAvatar();
+    const navigate = useNavigate();
+    const { activeAgentId, setActiveAgentId, activeAgent, avatarState, studentState, equipment } = useAvatar();
     const { user, loginWithGoogle } = useAuth();
     const { t } = useLanguage();
     const [nickname, setNickname] = useState('Student');
@@ -66,6 +68,7 @@ const Sidebar = () => {
 
     // Helper to get avatar
     const getStudentAvatar = () => {
+        if (equipment.student?.image) return equipment.student.image;
         const g = gender?.toLowerCase();
         if (g === 'female') return '/avatars/student_female_1.jpg';
         return '/avatars/student_male_1.jpg';
@@ -117,7 +120,11 @@ const Sidebar = () => {
                                 (avatarState === 'TALKING' || avatarState === 'THINKING') && "animate-talking-glow ring-green-400"
                             )}
                         >
-                            <img src={activeAgent.avatar} alt="AI" className="w-full h-full object-cover object-top" />
+                            <img 
+                                src={equipment.tutor?.image || activeAgent.avatar} 
+                                alt="AI" 
+                                className="w-full h-full object-cover object-top scale-[1.35] translate-y-[5%]" 
+                            />
                         </div>
                         <div className="absolute top-1 right-2 bg-green-500 size-4 rounded-full border-2 border-white shadow-sm"></div>
                         <p className="text-[10px] mt-1 font-bold text-primary truncate w-20 mx-auto">{activeAgent.name}</p>
@@ -142,7 +149,7 @@ const Sidebar = () => {
                             <img
                                 src={getStudentAvatar()}
                                 alt="Student"
-                                className="w-full h-full object-cover"
+                                className="w-full h-full object-cover scale-[1.35] translate-y-[5%]"
                             />
                         </div>
                         <p className="text-[10px] mt-1 font-bold text-orange-600 truncate w-20 mx-auto">{nickname}</p>
@@ -159,39 +166,41 @@ const Sidebar = () => {
 
                 <div className="w-full flex gap-2 z-10 mt-2">
                     {/* Smart Notebook / Exam Tips Button */}
-                    <button
-                        onClick={() => {
-                            if (activeAgentId === 'ace') {
-                                setIsExamTipsOpen(true);
-                            } else {
-                                window.location.href = '/notebook';
-                            }
-                        }}
-                        className="flex-1 flex items-center gap-2 px-3 py-2 bg-white hover:bg-indigo-50/50 border border-indigo-100 hover:border-indigo-200 rounded-xl shadow-sm transition-all group"
-                    >
-                        <div className="size-7 rounded-lg bg-indigo-50 text-indigo-500 flex items-center justify-center group-hover:scale-110 transition-transform shadow-sm">
-                            {activeAgentId === 'ace' ? <Lightbulb className="w-3.5 h-3.5" /> : <BookOpen className="w-3.5 h-3.5" />}
-                        </div>
-                        <p className="text-[10px] font-bold text-indigo-950 uppercase tracking-tight">
-                            {activeAgentId === 'ace' ? t('sidebar.exam_tips') : t('sidebar.notebook')}
-                        </p>
-                    </button>
+                    {!(activeAgentId === 'english' || activeAgentId === 'math') && (
+                        <button
+                            onClick={() => {
+                                if (activeAgentId === 'ace') {
+                                    setIsExamTipsOpen(true);
+                                } else {
+                                    window.location.href = '/notebook';
+                                }
+                            }}
+                            className="flex-1 flex items-center gap-2 px-3 py-2 bg-white hover:bg-indigo-50/50 border border-indigo-100 hover:border-indigo-200 rounded-xl shadow-sm transition-all group"
+                        >
+                            <div className="size-7 rounded-lg bg-indigo-50 text-indigo-500 flex items-center justify-center group-hover:scale-110 transition-transform shadow-sm">
+                                {activeAgentId === 'ace' ? <Lightbulb className="w-3.5 h-3.5" /> : <BookOpen className="w-3.5 h-3.5" />}
+                            </div>
+                            <p className="text-[10px] font-bold text-indigo-950 uppercase tracking-tight">
+                                {activeAgentId === 'ace' ? t('sidebar.exam_tips') : t('sidebar.notebook')}
+                            </p>
+                        </button>
+                    )}
 
                     {/* English Tutor Special Buttons */}
                     {activeAgentId === 'english' && (
-                        <div className="flex-1 flex flex-col gap-2">
+                        <div className="w-full flex flex-row gap-2">
                             <button
-                                onClick={() => window.location.href = '/writing-lab'}
-                                className="w-full flex items-center gap-2 px-3 py-2 bg-indigo-50/50 hover:bg-indigo-100/50 border border-indigo-100 hover:border-indigo-200 rounded-xl shadow-sm transition-all group"
+                                onClick={() => navigate('/dashboard', { state: { openRoadmap: 'ENGLISH', roadmapFilter: 'WRITING' } })}
+                                className="flex-1 flex items-center gap-2 px-3 py-2 bg-indigo-50/50 hover:bg-indigo-100/50 border border-indigo-100 hover:border-indigo-200 rounded-xl shadow-sm transition-all group"
                             >
                                 <div className="size-7 rounded-lg bg-indigo-100 text-indigo-600 flex items-center justify-center group-hover:scale-110 transition-transform shadow-sm">
                                     <Sparkles className="w-3.5 h-3.5" />
                                 </div>
-                                <p className="text-[10px] font-bold text-indigo-950 uppercase tracking-tight">Writing Lab</p>
+                                <p className="text-[10px] font-bold text-indigo-950 uppercase tracking-tight">Writing Quests</p>
                             </button>
                             <button
                                 onClick={() => window.location.href = '/vocabulary'}
-                                className="w-full flex items-center gap-2 px-3 py-2 bg-emerald-50/50 hover:bg-emerald-100/50 border border-emerald-100 hover:border-emerald-200 rounded-xl shadow-sm transition-all group"
+                                className="flex-1 flex items-center gap-2 px-3 py-2 bg-emerald-50/50 hover:bg-emerald-100/50 border border-emerald-100 hover:border-emerald-200 rounded-xl shadow-sm transition-all group"
                             >
                                 <div className="size-7 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center group-hover:scale-110 transition-transform shadow-sm">
                                     <BookOpen className="w-3.5 h-3.5" />

@@ -8,6 +8,37 @@ const GenerativeAIService = require('../services/GenerativeAIService');
 const multer = require('multer');
 const upload = multer({ storage: multer.memoryStorage() });
 
+// Each router owns its sub-paths (e.g. /chat, /history, /stats)
+
+/**
+ * @route   GET /api/speaking/drills/:pillar
+ * @desc    Fetch pre-written drills for a specific pillar
+ */
+router.get('/drills/:pillar', async (req, res) => {
+    try {
+        const { pillar } = req.params;
+        const fs = require('fs');
+        const path = require('path');
+        const drillsPath = path.join(__dirname, '../data/speaking_drills.json');
+        
+        if (!fs.existsSync(drillsPath)) {
+            return res.status(404).json({ error: 'Drills data not found' });
+        }
+        
+        const data = JSON.parse(fs.readFileSync(drillsPath, 'utf8'));
+        const pillarData = data[pillar];
+        
+        if (!pillarData) {
+            return res.status(404).json({ error: `No drills found for pillar: ${pillar}` });
+        }
+        
+        res.json(pillarData);
+    } catch (error) {
+        console.error('[Speaking Drills] Fetch error:', error);
+        res.status(500).json({ error: 'Failed to fetch drills' });
+    }
+});
+
 /**
  * @route   GET /api/speaking/quest/generate
  * @desc    Generate a speaking quest for a specific module

@@ -1,0 +1,374 @@
+[
+  {
+    "id": "ct_mcq_291",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_alg_polynomials"],
+    "marks": 1,
+    "difficulty": 5,
+    "paper": 2,
+    "section": "A",
+    "question_en": "If $\\log 2 = a$ and $\\log 3 = b$, express $\\log 18$ in terms of $a$ and $b$.",
+    "question_zh": "若 $\\log 2 = a$ 及 $\\log 3 = b$，以 $a$ 及 $b$ 表示 $\\log 18$。",
+    "options": [
+      "A. $a + 2b$",
+      "B. $2a + b$",
+      "C. $a + b^2$",
+      "D. $a^2b$"
+    ],
+    "correct_answer": "A",
+    "solution_steps_en": [
+      "$\\log 18 = \\log(2 \\times 3^2)$",
+      "Using properties: $\\log(MN) = \\log M + \\log N$ and $\\log M^k = k \\log M$",
+      "$\\log 18 = \\log 2 + \\log 3^2 = \\log 2 + 2 \\log 3$",
+      "Substituting: $a + 2b$."
+    ],
+    "solution_steps_zh": [
+      "$\\log 18 = \\log(2 \\times 3^2)$",
+      "使用性質：$\\log(MN) = \\log M + \\log N$ 及 $\\log M^k = k \\log M$",
+      "$\\log 18 = \\log 2 + \\log 3^2 = \\log 2 + 2 \\log 3$",
+      "代入：$a + 2b$。"
+    ],
+    "diagram_json": null,
+    "tags": ["logarithms", "properties"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_292",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_trig_applications"],
+    "marks": 1,
+    "difficulty": 5,
+    "paper": 2,
+    "section": "A",
+    "question_en": "Simplify $\\frac{\\sin^2 \\theta + \\cos^2 \\theta}{1 + \\tan^2 \\theta}$.",
+    "question_zh": "簡化 $\\frac{\\sin^2 \\theta + \\cos^2 \\theta}{1 + \\tan^2 \\theta}$。",
+    "options": [
+      "A. $\\sin^2 \\theta$",
+      "B. $\\cos^2 \\theta$",
+      "C. $\\tan^2 \\theta$",
+      "D. 1"
+    ],
+    "correct_answer": "B",
+    "solution_steps_en": [
+      "Numerator: $\\sin^2\\theta + \\cos^2\\theta = 1$.",
+      "Denominator: Express $\\tan\\theta$ in terms of sine and cosine: $1 + \\tan^2\\theta = 1 + \\frac{\\sin^2\\theta}{\\cos^2\\theta}$.",
+      "Combine the denominator into a single fraction: $\\frac{\\cos^2\\theta + \\sin^2\\theta}{\\cos^2\\theta} = \\frac{1}{\\cos^2\\theta}$.",
+      "Expression $= \\frac{1}{1/\\cos^2\\theta} = \\cos^2\\theta$."
+    ],
+    "solution_steps_zh": [
+      "分子：$\\sin^2\\theta + \\cos^2\\theta = 1$。",
+      "分母：將 $\\tan\\theta$ 以正弦及餘弦表示：$1 + \\tan^2\\theta = 1 + \\frac{\\sin^2\\theta}{\\cos^2\\theta}$。",
+      "將分母合併為單一分數：$\\frac{\\cos^2\\theta + \\sin^2\\theta}{\\cos^2\\theta} = \\frac{1}{\\cos^2\\theta}$。",
+      "算式 $= \\frac{1}{1/\\cos^2\\theta} = \\cos^2\\theta$。"
+    ],
+    "diagram_json": null,
+    "tags": ["trig-identities", "simplification"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_293",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_alg_equations"],
+    "marks": 1,
+    "difficulty": 6,
+    "paper": 2,
+    "section": "A",
+    "question_en": "It is given that $z$ varies directly as $x$ and inversely as $y^2$. If $x$ increases by 20% and $y$ decreases by 20%, find the percentage change in $z$.",
+    "question_zh": "已知 $z$ 隨 $x$ 正變且隨 $y^2$ 反變。若 $x$ 增加 20% 且 $y$ 減少 20%，求 $z$ 的百分變化。",
+    "options": [
+      "A. 增加 25%",
+      "B. 增加 50%",
+      "C. 增加 87.5%",
+      "D. 減少 4%"
+    ],
+    "correct_answer": "C",
+    "solution_steps_en": [
+      "Let $z = \\frac{kx}{y^2}$.",
+      "New $x' = 1.2x$ and new $y' = 0.8y$.",
+      "New $z' = \\frac{k(1.2x)}{(0.8y)^2} = \\frac{1.2}{0.64} \\times \\frac{kx}{y^2} = 1.875z$.",
+      "Change $= (1.875 - 1) \\times 100\\% = +87.5\\%$."
+    ],
+    "solution_steps_zh": [
+      "設 $z = \\frac{kx}{y^2}$。",
+      "新 $x' = 1.2x$，新 $y' = 0.8y$。",
+      "新 $z' = \\frac{k(1.2x)}{(0.8y)^2} = \\frac{1.2}{0.64}z = 1.875z$。",
+      "百分變化 $= (1.875 - 1) \\times 100\\% = 87.5\\%$ (增加)。"
+    ],
+    "diagram_json": null,
+    "tags": ["variation", "percentage-change"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_294",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_stat_prob"],
+    "marks": 1,
+    "difficulty": 6,
+    "paper": 2,
+    "section": "A",
+    "question_en": "A box contains 4 red balls and 6 black balls. If two balls are drawn one by one with replacement, find the probability that the balls drawn are of different colors.",
+    "question_zh": "袋中有 4 個紅球及 6 個黑球。若先後隨機抽出兩個球且每次抽出後放回，求抽出的兩球顏色不同的概率。",
+    "options": [
+      "A. 0.24",
+      "B. 0.48",
+      "C. 0.52",
+      "D. 0.60"
+    ],
+    "correct_answer": "B",
+    "solution_steps_en": [
+      "Possible cases for different colors: (Red, Black) or (Black, Red).",
+      "$P(R, B) = \\frac{4}{10} \\times \\frac{6}{10} = 0.24$.",
+      "$P(B, R) = \\frac{6}{10} \\times \\frac{4}{10} = 0.24$.",
+      "Total Prob $= 0.24 + 0.24 = 0.48$."
+    ],
+    "solution_steps_zh": [
+      "不同顏色的可能情況：(紅, 黑) 或 (黑, 紅)。",
+      "$P(紅, 黑) = \\frac{4}{10} \\times \\frac{6}{10} = 0.24$。",
+      "$P(黑, 紅) = \\frac{6}{10} \\times \\frac{4}{10} = 0.24$。",
+      "總概率 $= 0.24 + 0.24 = 0.48$。"
+    ],
+    "diagram_json": null,
+    "tags": ["probability", "multi-stage"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_295",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_geo_mensuration"],
+    "marks": 1,
+    "difficulty": 6,
+    "paper": 2,
+    "section": "A",
+    "question_en": "A composite solid consists of a hemisphere with radius 6 cm on top of a cylinder with the same radius and height 10 cm. Find the total volume of the solid in terms of $\\pi$.",
+    "question_zh": "一個組合立體由一個半徑為 6 cm 的半球放在一個半徑相同且高為 10 cm 的圓柱體上方組成。以 $\\pi$ 表示該立體的總體積。",
+    "options": [
+      "A. $360\\pi$ cm$^3$",
+      "B. $432\\pi$ cm$^3$",
+      "C. $504\\pi$ cm$^3$",
+      "D. $648\\pi$ cm$^3$"
+    ],
+    "correct_answer": "C",
+    "solution_steps_en": [
+      "Volume of hemisphere $= \\frac{1}{2} \\times \\frac{4}{3} \\pi (6^3) = \\frac{2}{3} \\pi (216) = 144\\pi$.",
+      "Volume of cylinder $= \\pi (6^2) (10) = 360\\pi$.",
+      "Total Volume $= 144\\pi + 360\\pi = 504\\pi$."
+    ],
+    "solution_steps_zh": [
+      "半球體積 $= \\frac{1}{2} \\times \\frac{4}{3} \\pi (6^3) = 144\\pi$。",
+      "圓柱體積 $= \\pi (6^2) (10) = 360\\pi$。",
+      "總體積 $= 144\\pi + 360\\pi = 504\\pi$。"
+    ],
+    "diagram_json": null,
+    "tags": ["mensuration", "combined-solids"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_296",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_geo_circles"],
+    "marks": 1,
+    "difficulty": 6,
+    "paper": 2,
+    "section": "A",
+    "question_en": "In the figure, $A, B, C$ and $D$ are points on a circle. $AC$ is a diameter. If $\\angle ACB = 35^\\circ$, find $\\angle BDC$.",
+    "question_zh": "圖中，$A, B, C$ 及 $D$ 為圓上的點。$AC$ 為一條直徑。若 $\\angle ACB = 35^\\circ$，求 $\\angle BDC$。",
+    "options": [
+      "A. 35°",
+      "B. 45°",
+      "C. 55°",
+      "D. 90°"
+    ],
+    "correct_answer": "C",
+    "solution_steps_en": [
+      "Since $AC$ is a diameter, $\\angle ABC = 90^\\circ$ (angle in semi-circle).",
+      "In $\\triangle ABC$, $\\angle BAC = 180^\\circ - 90^\\circ - 35^\\circ = 55^\\circ$.",
+      "$\\angle BDC = \\angle BAC = 55^\\circ$ (angles in the same segment)."
+    ],
+    "solution_steps_zh": [
+      "由於 $AC$ 為直径，$\\angle ABC = 90^\\circ$ (半圓上的圓周角)。",
+      "在 $\\triangle ABC$ 中，$\\angle BAC = 180^\\circ - 90^\\circ - 35^\\circ = 55^\\circ$。",
+      "$\\angle BDC = \\angle BAC = 55^\\circ$ (同弓形內的圓周角)。"
+    ],
+    "diagram_json": {
+      "canvas": { "width": 400, "height": 300, "viewBox": "0 0 400 300" },
+      "elements": [
+        { "type": "circle", "cx": 200, "cy": 150, "r": 100, "stroke": "#64748b", "fill": "none" },
+        { "type": "line", "x1": 100, "y1": 150, "x2": 300, "y2": 150, "stroke": "#94a3b8", "strokeDasharray": "4,4", "label": "diameter" },
+        { "type": "polyline", "points": [{"x": 100, "y": 150}, {"x": 234, "y": 56}, {"x": 300, "y": 150}], "stroke": "#334155", "fill": "none" },
+        { "type": "polyline", "points": [{"x": 234, "y": 56}, {"x": 166, "y": 244}, {"x": 300, "y": 150}], "stroke": "#334155", "fill": "none" },
+        { "type": "point", "x": 100, "y": 150, "label": "A" },
+        { "type": "point", "x": 234, "y": 56, "label": "B" },
+        { "type": "point", "x": 300, "y": 150, "label": "C" },
+        { "type": "point", "x": 166, "y": 244, "label": "D" },
+        { "type": "text", "x": 260, "y": 140, "text": "35°", "fontSize": 14, "fill": "#ef4444" }
+      ]
+    },
+    "tags": ["circle-properties", "angles-in-segment"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_sa_297",
+    "type": "short_answer",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_trig_applications"],
+    "marks": 11,
+    "difficulty": 7,
+    "paper": 1,
+    "section": "A",
+    "question_en": "In a rectangular prism $ABCDEFGH$, $AB = 12$ cm and $BC = 5$ cm. The height of the prism is 8 cm.\n(a) Find the length of the diagonal $AC$ on the base. (3 marks)\n(b) Find the length of the space diagonal $AG$. (3 marks)\n(c) Find the angle between the diagonal $AG$ and the base $ABCD$, correct to the nearest degree. (5 marks)",
+    "question_zh": "在一長方體 $ABCDEFGH$ 中，$AB = 12$ cm 及 $BC = 5$ cm。長方體的高為 8 cm。\n(a) 求底面對角線 $AC$ 的長度。(3分)\n(b) 求空間對角線 $AG$ 的長度。(3分)\n(c) 求對角線 $AG$ 與底面 $ABCD$ 之間的夾角（準確至最接近的度）。(5分)",
+    "solution_steps_en": [
+      "(a) In $\\triangle ABC$, $AC = \\sqrt{12^2 + 5^2} = \\sqrt{169} = 13$ cm.",
+      "(b) In $\\triangle ACG$, where $GC = 8$, $AG = \\sqrt{13^2 + 8^2} = \\sqrt{233} \\approx 15.26$ cm.",
+      "(c) Let $\\theta$ be the angle $\\angle GAC$. $\\tan \\theta = \\frac{GC}{AC} = \\frac{8}{13}$.",
+      " $\\theta = \\tan^{-1}(\\frac{8}{13}) \\approx 31.6^\\circ$. To the nearest degree, $\\theta = 32^\\circ$."
+    ],
+    "solution_steps_zh": [
+      "(a) 在 $\\triangle ABC$ 中，$AC = \\sqrt{12^2 + 5^2} = 13$ cm。",
+      "(b) 在 $\\triangle ACG$ 中，$GC = 8$。$AG = \\sqrt{13^2 + 8^2} = \\sqrt{233} \\approx 15.26$ cm。",
+      "(c) 設 $\\theta$ 為 $\\angle GAC$。$\\tan \\theta = \\frac{8}{13}$。",
+      " $\\theta = \\tan^{-1}(\\frac{8}{13}) \\approx 31.6^\\circ$。準確至整數：$32^\\circ$。"
+    ],
+    "diagram_json": {
+      "canvas": { "width": 400, "height": 250, "viewBox": "0 0 400 250" },
+      "elements": [
+        { "type": "polyline", "points": [{"x": 80, "y": 200}, {"x": 280, "y": 200}, {"x": 280, "y": 80}, {"x": 80, "y": 80}, {"x": 80, "y": 200}], "stroke": "#334155", "fill": "none" },
+        { "type": "polyline", "points": [{"x": 80, "y": 80}, {"x": 150, "y": 40}, {"x": 350, "y": 40}, {"x": 350, "y": 160}, {"x": 280, "y": 200}], "stroke": "#334155", "fill": "none" },
+        { "type": "line", "x1": 280, "y1": 80, "x2": 350, "y2": 40, "stroke": "#334155" },
+        { "type": "line", "x1": 80, "y1": 200, "x2": 150, "y2": 160, "stroke": "#94a3b8", "strokeDasharray": "4,4" },
+        { "type": "line", "x1": 150, "y1": 160, "x2": 350, "y2": 160, "stroke": "#94a3b8", "strokeDasharray": "4,4" },
+        { "type": "line", "x1": 150, "y1": 160, "x2": 150, "y2": 40, "stroke": "#94a3b8", "strokeDasharray": "4,4" },
+        { "type": "point", "x": 80, "y": 200, "label": "A" },
+        { "type": "point", "x": 280, "y": 200, "label": "B" },
+        { "type": "point", "x": 350, "y": 160, "label": "C" },
+        { "type": "point", "x": 150, "y": 160, "label": "D" },
+        { "type": "point", "x": 80, "y": 80, "label": "E" },
+        { "type": "point", "x": 280, "y": 80, "label": "F" },
+        { "type": "point", "x": 350, "y": 40, "label": "G" },
+        { "type": "point", "x": 150, "y": 40, "label": "H" },
+        { "type": "text", "x": 180, "y": 215, "text": "12 cm", "fontSize": 14, "fill": "#64748b" },
+        { "type": "text", "x": 320, "y": 190, "text": "5 cm", "fontSize": 14, "fill": "#64748b" },
+        { "type": "text", "x": 50, "y": 140, "text": "8 cm", "fontSize": 14, "fill": "#64748b" }
+      ]
+    },
+    "tags": ["3d-trig", "rectangular-prism"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_sa_298",
+    "type": "short_answer",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_stat_prob"],
+    "marks": 11,
+    "difficulty": 7,
+    "paper": 1,
+    "section": "A",
+    "question_en": "The box-and-whisker plot below shows the distribution of scores in a test.\n(a) Find the range of the scores. (2 marks)\n(b) Find the interquartile range (IQR). (3 marks)\n(c) If the passing score is 45, what is the percentage of students who passed the test? (6 marks)",
+    "question_zh": "下方的箱形圖顯示了一次測試的分數分佈。\n(a) 求分數的全距。(2分)\n(b) 求四分位距 (IQR)。(3分)\n(c) 若合格分數為 45，則合格學生佔總人數的百分之幾？(6分)",
+    "solution_steps_en": [
+      "(a) Range $= \\text{Max} - \\text{Min} = 90 - 10 = 80$.",
+      "(b) IQR $= Q_3 - Q_1 = 60 - 30 = 30$.",
+      "(c) The score 45 corresponds to the Median ($Q_2$).",
+      " In a box plot, 50% of the data lies above the median.",
+      " Percentage of students who passed $= 50\\%$."
+    ],
+    "solution_steps_zh": [
+      "(a) 全距 $= 90 - 10 = 80$。",
+      "(b) 四分位距 $= 60 - 30 = 30$。",
+      "(c) 分數 45 對應於中位數 ($Q_2$)。",
+      " 在箱形圖中，有 50% 的數據位於中位數或以上。",
+      " 合格百分比 $= 50\\%$。"
+    ],
+    "diagram_json": {
+      "canvas": { "width": 400, "height": 180, "viewBox": "0 0 400 180" },
+      "elements": [
+        { "type": "line", "x1": 50, "y1": 140, "x2": 350, "y2": 140, "stroke": "#94a3b8" },
+        { "type": "text", "x": 50, "y": 160, "text": "10", "fontSize": 12 },
+        { "type": "text", "x": 125, "y": 160, "text": "30", "fontSize": 12 },
+        { "type": "text", "x": 181, "y": 160, "text": "45", "fontSize": 12 },
+        { "type": "text", "x": 237, "y": 160, "text": "60", "fontSize": 12 },
+        { "type": "text", "x": 350, "y": 160, "text": "90", "fontSize": 12 },
+        { "type": "line", "x1": 50, "y1": 70, "x2": 50, "y2": 110, "stroke": "#334155" },
+        { "type": "line", "x1": 50, "y1": 90, "x2": 125, "y2": 90, "stroke": "#334155" },
+        { "type": "rect", "x": 125, "y": 70, "width": 112, "height": 40, "stroke": "#334155", "fill": "#f1f5f9" },
+        { "type": "line", "x1": 181, "y1": 70, "x2": 181, "y2": 110, "stroke": "#ef4444", "label": "Median" },
+        { "type": "line", "x1": 237, "y1": 90, "x2": 350, "y2": 90, "stroke": "#334155" },
+        { "type": "line", "x1": 350, "y1": 70, "x2": 350, "y2": 110, "stroke": "#334155" }
+      ]
+    },
+    "tags": ["statistics", "box-plot"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_sa_299",
+    "type": "short_answer",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_alg_polynomials"],
+    "marks": 12,
+    "difficulty": 7,
+    "paper": 1,
+    "section": "A",
+    "question_en": "Let $f(x) = 2x^3 - kx^2 + 5x - 4$. It is given that $x - 2$ is a factor of $f(x)$.\n(a) Find the value of $k$. (4 marks)\n(b) Find the remainder when $f(x)$ is divided by $2x + 1$. (8 marks)",
+    "question_zh": "設 $f(x) = 2x^3 - kx^2 + 5x - 4$。已知 $x - 2$ 是 $f(x)$ 的因式。\n(a) 求 $k$ 的值。(4分)\n(b) 當 $f(x)$ 除以 $2x + 1$ 時，求餘數。(8分)",
+    "solution_steps_en": [
+      "(a) Since $x - 2$ is a factor, $f(2) = 0$.",
+      " $2(2^3) - k(2^2) + 5(2) - 4 = 16 - 4k + 10 - 4 = 22 - 4k$.",
+      " $22 - 4k = 0 \\implies k = 5.5$.",
+      "(b) Remainder $= f(-0.5)$.",
+      " $f(-0.5) = 2(-0.5)^3 - 5.5(-0.5)^2 + 5(-0.5) - 4$.",
+      " $= 2(-0.125) - 5.5(0.25) - 2.5 - 4 = -0.25 - 1.375 - 2.5 - 4 = -8.125$."
+    ],
+    "solution_steps_zh": [
+      "(a) 由於 $x - 2$ 是因式，$f(2) = 0$。",
+      " $2(8) - k(4) + 10 - 4 = 22 - 4k = 0 \\implies k = 5.5$。",
+      "(b) 餘數 $= f(-0.5)$。",
+      " $f(-0.5) = 2(-0.125) - 5.5(0.25) - 2.5 - 4 = -8.125$。"
+    ],
+    "diagram_json": null,
+    "tags": ["remainder-theorem", "factor-theorem"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_sa_300",
+    "type": "short_answer",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_alg_inequalities"],
+    "marks": 13,
+    "difficulty": 8,
+    "paper": 1,
+    "section": "B",
+    "question_en": "Maximize $P = 40x + 25y$ subject to the following constraints:\n$x + y \\le 10$\n$2x + y \\le 14$\n$x \\ge 0, y \\ge 0$",
+    "question_zh": "在以下限制條件下，最大化 $P = 40x + 25y$：\n$x + y \\le 10$\n$2x + y \\le 14$\n$x \\ge 0, y \\ge 0$",
+    "solution_steps_en": [
+      "Find the vertices of the feasible region:",
+      "1. Intersection of $x+y=10$ and $2x+y=14$: Subtracting eqns: $x = 4$. Then $4+y=10 \\implies y=6$. Point: $(4, 6)$.",
+      "2. Intersections with axes: $(0, 10)$, $(7, 0)$, $(0, 0)$.",
+      "Check values of $P$ at each vertex:",
+      "$(0, 0) \\Rightarrow P = 0$.",
+      "$(7, 0) \\Rightarrow P = 40(7) + 25(0) = 280$.",
+      "$(0, 10) \\Rightarrow P = 40(0) + 25(10) = 250$.",
+      "$(4, 6) \\Rightarrow P = 40(4) + 25(6) = 160 + 150 = 310$.",
+      "The maximum value is 310 at $(4, 6)$."
+    ],
+    "solution_steps_zh": [
+      "尋找可行解區域的頂點：",
+      "1. $x+y=10$ 與 $2x+y=14$ 的交點：相減得 $x=4$。代入得 $4+y=10 \\implies y=6$。頂點：$(4, 6)$。",
+      "2. 與軸的交點：$(0, 10)$、$(7, 0)$及$(0, 0)$。",
+      "計算各頂點的 $P$ 值：",
+      "$(0, 0) \\Rightarrow P = 0$。",
+      "$(7, 0) \\Rightarrow P = 280$。",
+      "$(0, 10) \\Rightarrow P = 250$。",
+      "$(4, 6) \\Rightarrow P = 310$。",
+      "最大值為 310，於 $(4, 6)$。"
+    ],
+    "diagram_json": null,
+    "tags": ["linear-programming", "optimization"],
+    "status": "approved"
+  }
+]

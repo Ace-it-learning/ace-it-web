@@ -1,0 +1,230 @@
+[
+  {
+    "id": "stat_01",
+    "topic_id": "math_stat_charts",
+    "subject": "maths",
+    "level": 3,
+    "type": "short_answer",
+    "marks": 2,
+    "question_en": "The stem-and-leaf diagram below shows the scores of 15 students in a test. Find the median of the scores.\n\n$$\n\\begin{array}{r|l} \\text{Stem (10)} & \\text{Leaf (1)} \\\\\\hline 4 & 2, 5, 8 \\\\\ 5 & 0, 3, 3, 6, 9 \\\\\ 6 & 1, 4, 4, 7, 8 \\\\\ 7 & 2, 5 \\end{array}\n$$",
+    "question_zh": "下表顯示 15 名學生在測驗中的得分。求得分的中位數。\n\n$$\n\\begin{array}{r|l} \\text{莖 (10)} & \\text{葉 (1)} \\\\\\hline 4 & 2, 5, 8 \\\\\ 5 & 0, 3, 3, 6, 9 \\\\\ 6 & 1, 4, 4, 7, 8 \\\\\ 7 & 2, 5 \\end{array}\n$$",
+    "answer": "59",
+    "correct_answer": "59",
+    "solution_steps_en": [
+      "1. Total number of students $n = 15$.",
+      "2. The median is the 8th value ($ (15+1)/2 = 8 $).",
+      "3. Order: (42, 45, 48, 50, 53, 53, 56, 59). The 8th value is 59.",
+      "4. Median = 59."
+    ],
+    "solution_steps_zh": [
+      "1. 學生總數 $n = 15$。",
+      "2. 中位數是第 8 個數據 ($ (15+1)/2 = 8 $)。",
+      "3. 有序數據：(42, 45, 48, 50, 53, 53, 56, 59)。第 8 個數據是 59。",
+      "4. 中位數 = 59。"
+    ],
+    "diagram_json": null
+  },
+  {
+    "id": "stat_02",
+    "topic_id": "math_stat_charts",
+    "subject": "maths",
+    "level": 3,
+    "type": "short_answer",
+    "marks": 2,
+    "question_en": "The stem-and-leaf diagram below shows the heights (cm) of 12 plants. Find the range of the heights.\n\n$$\n\\begin{array}{r|l} \\text{Stem (10)} & \\text{Leaf (1)} \\\\\\hline 10 & 2, 5, 5 \\\\\ 11 & 0, 3, 7, 8 \\\\\ 12 & 1, 4, 6, 9 \\\\\ 13 & 2 \\end{array}\n$$",
+    "question_zh": "下表顯示 12 株植物的高度 (cm)。求高度的全距。\n\n$$\n\\begin{array}{r|l} \\text{莖 (10)} & \\text{葉 (1)} \\\\\\hline 10 & 2, 5, 5 \\\\\ 11 & 0, 3, 7, 8 \\\\\ 12 & 1, 4, 6, 9 \\\\\ 13 & 2 \\end{array}\n$$",
+    "answer": "30 cm",
+    "correct_answer": "30",
+    "solution_steps_en": [
+      "1. Maximum value = 132 cm.",
+      "2. Minimum value = 102 cm.",
+      "3. Range = Max - Min = $132 - 102 = 30$ cm."
+    ],
+    "solution_steps_zh": [
+      "1. 最大值 = 132 cm。",
+      "2. 最小值 = 102 cm。",
+      "3. 全距 = $132 - 102 = 30$ cm。"
+    ],
+    "diagram_json": null
+  },
+  {
+    "id": "stat_03",
+    "topic_id": "math_stat_charts",
+    "subject": "maths",
+    "level": 3,
+    "type": "short_answer",
+    "marks": 2,
+    "question_en": "Find the mode of the following set of data: 12, 15, 12, 18, 20, 15, 12, 22, 18.",
+    "question_zh": "求以下數據集的眾數：12, 15, 12, 18, 20, 15, 12, 22, 18。",
+    "answer": "12",
+    "correct_answer": "12",
+    "solution_steps_en": [
+      "1. Count frequencies: 12 appears 3 times, 15 and 18 appear twice.",
+      "2. The value with the highest frequency is 12.",
+      "3. Mode = 12."
+    ],
+    "solution_steps_zh": [
+      "1. 點算頻數：12 出現 3 次，15 和 18 各出現 2 次。",
+      "2. 頻數最高的數值是 12。",
+      "3. 眾數 = 12。"
+    ],
+    "diagram_json": null
+  },
+  {
+    "id": "stat_04",
+    "topic_id": "math_stat_charts",
+    "subject": "maths",
+    "level": 3,
+    "type": "short_answer",
+    "marks": 2,
+    "question_en": "In a box-and-whisker diagram, the lower quartile, the median, and the upper quartile of a data set are 45, 62, and 78 respectively. Find the interquartile range (IQR).",
+    "question_zh": "在一盒形圖中，某數據集的下四分位數、中位數及上四分位數分別為 45、62 及 78。求四分位位距 (IQR)。",
+    "answer": "33",
+    "correct_answer": "33",
+    "solution_steps_en": [
+      "1. $Q_1 = 45, Q_3 = 78$.",
+      "2. IQR = $Q_3 - Q_1 = 78 - 45 = 33$."
+    ],
+    "solution_steps_zh": [
+      "1. $Q_1 = 45, Q_3 = 78$。",
+      "2. IQR = $Q_3 - Q_1 = 33$。"
+    ],
+    "diagram_json": null
+  },
+  {
+    "id": "stat_05",
+    "topic_id": "math_stat_charts",
+    "subject": "maths",
+    "level": 3,
+    "type": "short_answer",
+    "marks": 2,
+    "question_en": "Find the interquartile range (IQR) of a data set if its 5-number summary is (10, 25, 40, 60, 95).",
+    "question_zh": "若某數據集的五數概括為 (10, 25, 40, 60, 95)，求其四分位位距 (IQR)。",
+    "answer": "35",
+    "correct_answer": "35",
+    "solution_steps_en": [
+      "1. From summary, $Q_1 = 25, Q_3 = 60$.",
+      "2. IQR = $60 - 25 = 35$."
+    ],
+    "solution_steps_zh": [
+      "1. 從概括中得 $Q_1 = 25, Q_3 = 60$。",
+      "2. IQR = $60 - 25 = 35$。"
+    ],
+    "diagram_json": null
+  },
+  {
+    "id": "stat_06",
+    "topic_id": "math_stat_charts",
+    "subject": "maths",
+    "level": 4,
+    "type": "short_answer",
+    "marks": 3,
+    "question_en": "The frequency table below shows the number of pets owned by 20 families. Find the mean number of pets.\n\n$$\n\\begin{array}{|c|c|c|c|c|c|} \\hline \\text{No. of Pets } (x) & 0 & 1 & 2 & 3 & 4 \\\\\\hline \\text{Frequency } (f) & 4 & 7 & 5 & 3 & 1 \\\\\\hline \\end{array}\n$$",
+    "question_zh": "下表顯示 20 個家庭擁有的寵物數量。求寵物數量的平均值。\n\n$$\n\\begin{array}{|c|c|c|c|c|c|} \\hline \\text{寵物數量 } (x) & 0 & 1 & 2 & 3 & 4 \\\\\\hline \\text{頻數 } (f) & 4 & 7 & 5 & 3 & 1 \\\\\\hline \\end{array}\n$$",
+    "answer": "1.5",
+    "correct_answer": "1.5",
+    "solution_steps_en": [
+      "1. Total pets: $\\sum f x = 0(4) + 1(7) + 2(5) + 3(3) + 4(1) = 30$.",
+      "2. Total families $n = 20$.",
+      "3. Mean = $30 / 20 = 1.5$."
+    ],
+    "solution_steps_zh": [
+      "1. 寵物總數：$\\sum f x = 30$。",
+      "2. 家庭總數 $n = 20$。",
+      "3. 平均值 = $30 / 20 = 1.5$。"
+    ],
+    "diagram_json": null
+  },
+  {
+    "id": "stat_07",
+    "topic_id": "math_stat_charts",
+    "subject": "maths",
+    "level": 4,
+    "type": "short_answer",
+    "marks": 3,
+    "question_en": "The frequency table below shows the marks of a quiz. Find the interquartile range (IQR).\n\n$$\n\\begin{array}{|c|c|c|c|c|c|} \\hline \\text{Score } (x) & 2 & 3 & 4 & 5 & 6 \\\\\\hline \\text{Frequency } (f) & 3 & 5 & 8 & 6 & 2 \\\\\\hline \\end{array}\n$$",
+    "question_zh": "下表顯示得分的分佈。求得分的四分位位距 (IQR)。",
+    "answer": "2",
+    "correct_answer": "2",
+    "solution_steps_en": [
+      "1. $n = 24$. $Q_1$ is at $24 \\\\times 0.25 = 6$th position.",
+      "2. Cumulative frequencies: (2): 3, (3): 8. Thus $Q_1 = 3$.",
+      "3. $Q_3$ is at $24 \\\\times 0.75 = 18$th position.",
+      "4. Cumulative: (4): 16, (5): 22. Thus $Q_3 = 5$.",
+      "5. IQR = $5 - 3 = 2$."
+    ],
+    "solution_steps_zh": [
+      "1. $n = 24$。$Q_1$ 位於第 6 個位置。",
+      "2. 累積頻數：(2): 3, (3): 8。故 $Q_1 = 3$。",
+      "3. $Q_3$ 位於第 18 個位置。",
+      "4. 累積頻數至 (4): 16, (5): 22。故 $Q_3 = 5$。",
+      "5. IQR = $5 - 3 = 2$。"
+    ],
+    "diagram_json": null
+  },
+  {
+    "id": "stat_08",
+    "topic_id": "math_stat_charts",
+    "subject": "maths",
+    "level": 4,
+    "type": "short_answer",
+    "marks": 3,
+    "question_en": "Compare the dispersion of heights between Class A and Class B. IQR of Class A is 30 cm and Class B is 22 cm. Which class has more varied heights?",
+    "question_zh": "比較 A 班與 B 班的高度離散程度。A 班的 IQR 為 30 cm，B 班為 22 cm。哪一班的高度較為離散？",
+    "answer": "Class A",
+    "correct_answer": "Class A",
+    "solution_steps_en": [
+      "1. Dispersion can be measured by IQR.",
+      "2. 30 cm > 22 cm, so Class A has more varied heights."
+    ],
+    "solution_steps_zh": [
+      "1. 離散程度可用 IQR 衡量。",
+      "2. 30 cm > 22 cm，故 A 班的高度較為離散。"
+    ],
+    "diagram_json": null
+  },
+  {
+    "id": "stat_09",
+    "topic_id": "math_stat_charts",
+    "subject": "maths",
+    "level": 4,
+    "type": "short_answer",
+    "marks": 3,
+    "question_en": "From an Ogive, the cumulative frequency of 40 kg is 35 and 60 kg is 80. If the total is 100, how many items are between 40 and 60 kg?",
+    "question_zh": "在一累積頻數圖中，40 kg 的累積頻數為 35，60 kg 為 80。總數為 100，求重量介乎 40 與 60 kg 的項目數量。",
+    "answer": "45",
+    "correct_answer": "45",
+    "solution_steps_en": [
+      "1. Number = Cumulative frequency (60) - Cumulative frequency (40) = $80 - 35 = 45$."
+    ],
+    "solution_steps_zh": [
+      "1. 數量 = 累積頻數 (60) - 累積頻數 (40) = $80 - 35 = 45$。"
+    ],
+    "diagram_json": null
+  },
+  {
+    "id": "stat_10",
+    "topic_id": "math_stat_charts",
+    "subject": "maths",
+    "level": 4,
+    "type": "short_answer",
+    "marks": 3,
+    "question_en": "The frequency table shows the number of siblings of 10 students. Find the median.\n\n$$\n\\begin{array}{|c|c|c|c|c|} \\hline \\text{Siblings} & 0 & 1 & 2 & 3 \\\\\\hline \\text{Frequency} & 2 & 3 & 4 & 1 \\\\\\hline \\end{array}\n$$",
+    "question_zh": "下表顯示 10 名學生的兄弟姐妹人數。求數據的中位數。",
+    "answer": "1.5",
+    "correct_answer": "1.5",
+    "solution_steps_en": [
+      "1. $n = 10$. Median is average of 5th and 6th values.",
+      "2. Order: (0,0,1,1,1,2,2,2,2,3).",
+      "3. 5th is 1, 6th is 2.",
+      "4. Median = $(1 + 2) / 2 = 1.5$."
+    ],
+    "solution_steps_zh": [
+      "1. $n = 10$。中位數是第 5 個及第 6 個數值的平均值。",
+      "2. 有序數據：(0,0,1,1,1,2,2,2,2,3)。",
+      "3. 第 5 個是 1，第 6 個是 2。",
+      "4. 中位數 = 1.5。"
+    ],
+    "diagram_json": null
+  }
+]

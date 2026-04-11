@@ -53,8 +53,8 @@ const RedemptionStore = () => {
             .catch(console.error);
     }, [user]);
 
-    const handleOpenBox = async () => {
-        if (xp < BOX_COST) {
+    const handleOpenBox = async (tier = 'standard', cost = 500) => {
+        if (xp < cost) {
             setError(t('redemption.not_enough_xp'));
             return;
         }
@@ -67,7 +67,7 @@ const RedemptionStore = () => {
             const res = await fetch(`${API_URL}/api/redemption/blindbox`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ uid: user.uid })
+                body: JSON.stringify({ uid: user.uid, tier })
             });
             const data = await res.json();
 
@@ -109,9 +109,18 @@ const RedemptionStore = () => {
                         <p className="text-gray-500">{t('redemption.subtitle')}</p>
                     </div>
                 </div>
-                <div className="bg-black text-white px-6 py-3 rounded-2xl flex items-center gap-3 shadow-lg">
-                    <span className="text-xs font-bold text-gray-400 uppercase tracking-wider">{t('redemption.balance')}</span>
-                    <span className="text-2xl font-black text-yellow-500">{xp} XP</span>
+                <div className="flex items-center gap-3">
+                    <button
+                        onClick={() => navigate('/collection')}
+                        className="bg-white/90 backdrop-blur-sm border border-gray-200 text-gray-700 px-4 py-2 rounded-2xl flex items-center gap-2 hover:bg-white hover:shadow-md transition-all font-bold text-sm"
+                    >
+                        <ShoppingBag className="w-4 h-4 text-primary" />
+                        {t('collection.my_collection')}
+                    </button>
+                    <div className="bg-black text-white px-6 py-3 rounded-2xl flex items-center gap-3 shadow-lg">
+                        <span className="text-xs font-bold text-gray-400 uppercase tracking-wider">{t('redemption.balance')}</span>
+                        <span className="text-2xl font-black text-yellow-500">{xp} XP</span>
+                    </div>
                 </div>
             </div>
 
@@ -125,69 +134,72 @@ const RedemptionStore = () => {
             {/* Two-Column Layout */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6" style={{ minHeight: 'calc(100vh - 200px)' }}>
 
-                {/* LEFT: Mystery Box */}
-                <div className="bg-gradient-to-br from-indigo-900 to-purple-900 rounded-[2rem] p-8 text-white relative overflow-hidden shadow-2xl flex flex-col justify-between">
-                    {/* Background Decor */}
-                    <div className="absolute top-0 right-0 w-72 h-72 bg-purple-500/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
-
-                    <div className="relative z-10 flex flex-col h-full">
-                        {/* Top: Title Area */}
-                        <div className="space-y-4 mb-6">
-                            <h2 className="text-3xl xl:text-4xl font-black font-display leading-tight">
-                                {t('redemption.mystery_box')}
-                            </h2>
-                            <p className="text-purple-200 text-sm max-w-xs">
-                                {t('redemption.mystery_box_desc')}
-                            </p>
-                        </div>
-
-                        {/* Middle: Animation Stage */}
-                        <div className="flex-1 flex justify-center items-center min-h-[180px]">
-                            {isOpening ? (
-                                <div className="animate-bounce text-8xl">📦</div>
-                            ) : revealedItem ? (
-                                <div className="text-center animate-in zoom-in duration-500">
-                                    <div className="w-36 h-36 mx-auto mb-3 drop-shadow-[0_0_30px_rgba(255,255,255,0.5)]">
-                                        <img
-                                            src={revealedItem.image || "https://img.freepik.com/free-vector/gradient-avatar-frame-template_23-2150338786.jpg"}
-                                            alt={revealedItem.name}
-                                            className="w-full h-full object-cover rounded-xl border-4 border-white shadow-lg transform hover:scale-110 transition-transform duration-500"
-                                        />
-                                    </div>
-                                    <h3 className="text-xl font-bold">{revealedItem.name}</h3>
-                                    <p className={`uppercase tracking-widest text-xs font-bold mt-1 ${revealedItem.rarity === 'legendary' ? 'text-yellow-400' : revealedItem.rarity === 'epic' ? 'text-purple-300' : 'text-gray-300'}`}>
-                                        {revealedItem.rarity}
-                                    </p>
-                                    <button
-                                        onClick={() => setRevealedItem(null)}
-                                        className="mt-4 text-sm text-white/50 hover:text-white underline"
-                                    >
-                                        {t('redemption.open_another')}
-                                    </button>
+                {/* LEFT: Mystery Box Categories */}
+                <div className="flex flex-col gap-4">
+                    {[
+                        { id: 'standard', name: t('redemption.standard_box'), cost: 500, icon: '📦', color: 'from-blue-600 to-indigo-700', desc: t('redemption.standard_box_desc') },
+                        { id: 'tutor', name: t('redemption.tutor_box'), cost: 1500, icon: '⭐', color: 'from-amber-500 to-orange-600', desc: t('redemption.tutor_box_desc') },
+                        { id: 'aesthetics', name: t('redemption.frames_box'), cost: 800, icon: '✨', color: 'from-emerald-500 to-teal-600', desc: t('redemption.frames_box_desc') },
+                    ].map(box => (
+                        <div key={box.id} className={`bg-gradient-to-r ${box.color} rounded-3xl p-6 text-white shadow-xl flex items-center justify-between group overflow-hidden relative`}>
+                            <div className="flex items-center gap-5 relative z-10">
+                                <div className="text-5xl group-hover:scale-110 transition-transform">{box.icon}</div>
+                                <div>
+                                    <h3 className="text-xl font-bold font-display">{box.name}</h3>
+                                    <p className="text-white/70 text-sm max-w-[200px] leading-tight mt-1">{box.desc}</p>
                                 </div>
-                            ) : (
-                                <div className="relative group cursor-pointer hover:scale-110 transition-transform duration-500">
-                                    <div className="absolute inset-0 bg-yellow-500/20 blur-3xl rounded-full animate-pulse"></div>
-                                    <Gift className="w-36 h-36 text-yellow-400 drop-shadow-2xl relative z-10" />
-                                </div>
-                            )}
-                        </div>
-
-                        {/* Bottom: CTA */}
-                        <div className="flex flex-col sm:flex-row items-center gap-3 mt-4">
+                            </div>
                             <button
-                                onClick={handleOpenBox}
+                                onClick={() => handleOpenBox(box.id, box.cost)}
                                 disabled={isOpening}
-                                className={`px-6 py-3 rounded-2xl font-black text-base flex items-center gap-2 transition-all w-full sm:w-auto justify-center ${isOpening
-                                    ? "bg-gray-600 cursor-wait"
-                                    : "bg-yellow-400 text-black hover:bg-yellow-300 hover:scale-105 shadow-[0_0_30px_rgba(250,204,21,0.4)]"
-                                    }`}
+                                className="bg-white text-gray-900 px-5 py-2.5 rounded-2xl font-black shadow-lg hover:scale-105 active:scale-95 transition-all relative z-10 disabled:opacity-50"
                             >
-                                {isOpening ? t('redemption.opening') : (<><span>🎁</span> {t('redemption.open_for').replace('{{cost}}', BOX_COST)}</>)}
+                                {box.cost} XP
                             </button>
-                            <span className="text-xs text-purple-300 font-medium">{t('redemption.no_duplicates')}</span>
+                            <div className="absolute right-0 top-0 w-32 h-32 bg-white/10 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2"></div>
                         </div>
-                    </div>
+                    ))}
+
+                    {/* Result Overlay / Reveal Area */}
+                    { (isOpening || revealedItem) && (
+                        <div className="fixed inset-0 z-50 flex items-center justify-center p-6 bg-black/80 backdrop-blur-sm animate-in fade-in duration-300">
+                             <div className="bg-white rounded-[3rem] p-10 max-w-sm w-full text-center relative overflow-hidden shadow-[0_0_50px_rgba(255,255,255,0.2)]">
+                                {isOpening ? (
+                                    <div className="py-10">
+                                        <div className="text-8xl animate-bounce mb-6">📦</div>
+                                        <h3 className="text-2xl font-black text-gray-900">{t('redemption.opening')}...</h3>
+                                        <div className="mt-4 w-48 h-2 bg-gray-100 rounded-full mx-auto overflow-hidden">
+                                            <div className="h-full bg-indigo-600 animate-[loading_2s_ease-in-out_infinite]"></div>
+                                        </div>
+                                    </div>
+                                ) : (
+                                    <div className="animate-in zoom-in duration-500">
+                                        <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-400"></div>
+                                        <div className="w-48 h-48 mx-auto mb-6 relative">
+                                            <div className="absolute inset-0 bg-yellow-400/20 blur-3xl rounded-full animate-pulse"></div>
+                                            <img
+                                                src={revealedItem.image || "https://img.freepik.com/free-vector/gradient-avatar-frame-template_23-2150338786.jpg"}
+                                                alt={revealedItem.name}
+                                                className="w-full h-full object-cover rounded-[2rem] border-4 border-gray-100 shadow-xl relative z-10"
+                                            />
+                                        </div>
+                                        <p className="text-xs font-black uppercase tracking-widest text-indigo-500 mb-2">{revealedItem.rarity || 'Common'}</p>
+                                        <h3 className="text-3xl font-black text-gray-900 mb-2">{revealedItem.name}</h3>
+                                        <p className="text-gray-500 text-sm mb-8">{t('redemption.congrats')}</p>
+                                        <button
+                                            onClick={() => setRevealedItem(null)}
+                                            className="w-full bg-gray-900 text-white py-4 rounded-2xl font-black hover:bg-gray-800 transition-all shadow-lg"
+                                        >
+                                            {t('redemption.awesome')}
+                                        </button>
+                                        <div className="mt-4 text-xs text-gray-400">
+                                            {t('redemption.check_collection')}
+                                        </div>
+                                    </div>
+                                )}
+                             </div>
+                        </div>
+                    )}
                 </div>
 
                 {/* RIGHT: Digital Certificates */}

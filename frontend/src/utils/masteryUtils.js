@@ -30,7 +30,8 @@ export const calculateTier = (level = 0, capAtDSE = false) => {
     if (numericLevel >= 6.5) tier = 4; // Elite (5**/5*)
     else if (numericLevel >= 5.0) tier = 3; // DSE Standard (5)
     else if (numericLevel >= 3.5) tier = 2; // Medium (4)
-    else tier = 1; // Easy (2-3)
+    else if (numericLevel > 0) tier = 1; // Easy (2-3)
+    else tier = 0; // Not Started
 
     if (capAtDSE) return Math.min(tier, 3);
     return tier;
@@ -40,7 +41,7 @@ export const calculateTier = (level = 0, capAtDSE = false) => {
  * Returns tier metadata (label, color, xp) for a given tier.
  */
 export const getTierMetadata = (tier, isChinese = false) => {
-    const meta = MASTERY_TIERS[tier] || MASTERY_TIERS[1];
+    const meta = MASTERY_TIERS[tier] || MASTERY_TIERS[0];
     return {
         ...meta,
         displayName: isChinese ? meta.zh : meta.label
@@ -73,13 +74,25 @@ export const getDifficultyTierDetails = (difficultyLevel, isChinese = false) => 
 };
 
 /**
- * Maps a mastery level (1-4) to a percentage (0-100).
+ * Maps a mastery tier (1-4) to a percentage (0-100).
+ * Used for legacy block-based progress bars.
  */
-export const getMasteryPercentage = (level = 1) => {
-    const lvl = parseInt(level) || 0;
-    if (lvl >= 4) return 100;
-    if (lvl === 3) return 85;
-    if (lvl === 2) return 50;
-    if (lvl === 1) return 25;
+export const getMasteryPercentage = (tier = 1) => {
+    const t = parseInt(tier) || 0;
+    if (t >= 4) return 100;
+    if (t === 3) return 85;
+    if (t === 2) return 50;
+    if (t === 1) return 25;
     return 0;
+};
+
+/**
+ * Maps a raw mastery level (0-7) to a linear percentage (0-100).
+ * Standardized for Math Quest data consistency.
+ */
+export const getMathMasteryPercentage = (level = 0) => {
+    const l = Math.max(0, Math.min(7, parseFloat(level) || 0));
+    if (l === 0) return 0;
+    // Map 0-7 to 0-100
+    return Math.round((l / 7) * 100);
 };

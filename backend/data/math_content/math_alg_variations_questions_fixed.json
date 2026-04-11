@@ -1,0 +1,654 @@
+﻿[
+  {
+    "id": "alg_var_01",
+    "topic_id": "math_alg_variations",
+    "subject": "maths",
+    "level": 3,
+    "type": "short_answer",
+    "marks": 2,
+    "question": "It is given that $y$ varies directly as $x$. When $x = 4$, $y = 16$. Find $y$ when $x = 8$.",
+    "question_zh": "已知 $y$ 隨 $x$ 正變。當 $x = 4$ 時，$y = 16$。求當 $x = 8$ 時 $y$ 的值。",
+    "answer": "$32$",
+    "correct_answer": "$32$",
+    "solution_steps": [
+      "Let $y = kx$.",
+      "Substitute $x=4, y=16$: $16 = k(4) \\implies k = 4$.",
+      "When $x=8$, $y = 4(8) = 32$."
+    ],
+    "solution_steps_zh": [
+      "設 $y = kx$。",
+      "代入 $x=4, y=16$：$16 = k(4) \\implies k = 4$。",
+      "當 $x=8$ 時，$y = 4(8) = 32$。"
+    ]
+  },
+  {
+    "id": "alg_var_02",
+    "topic_id": "math_alg_variations",
+    "subject": "maths",
+    "level": 3,
+    "type": "short_answer",
+    "marks": 2,
+    "question": "It is given that $y$ varies directly as $x$. When $x = 2$, $y = 12$. Find $y$ when $x = 9$.",
+    "question_zh": "已知 $y$ 隨 $x$ 正變。當 $x = 2$ 時，$y = 12$。求當 $x = 9$ 時 $y$ 的值。",
+    "answer": "$54$",
+    "correct_answer": "$54$",
+    "solution_steps": [
+      "Let $y = kx$.",
+      "Substitute $x=2, y=12$: $12 = k(2) \\implies k = 6$.",
+      "When $x=9$, $y = 6(9) = 54$."
+    ],
+    "solution_steps_zh": [
+      "設 $y = kx$。",
+      "代入 $x=2, y=12$：$12 = k(2) \\implies k = 6$。",
+      "當 $x=9$ 時，$y = 6(9) = 54$。"
+    ]
+  },
+  {
+    "id": "alg_var_03",
+    "topic_id": "math_alg_variations",
+    "subject": "maths",
+    "level": 3,
+    "type": "short_answer",
+    "marks": 2,
+    "question": "It is given that $y$ varies directly as $x$. When $x = 2$, $y = 8$. Find $y$ when $x = 8$.",
+    "question_zh": "已知 $y$ 隨 $x$ 正變。當 $x = 2$ 時，$y = 8$。求當 $x = 8$ 時 $y$ 的值。",
+    "answer": "$32$",
+    "correct_answer": "$32$",
+    "solution_steps": [
+      "Let $y = kx$.",
+      "Substitute $x=2, y=8$: $8 = k(2) \\implies k = 4$.",
+      "When $x=8$, $y = 4(8) = 32$."
+    ],
+    "solution_steps_zh": [
+      "設 $y = kx$。",
+      "代入 $x=2, y=8$：$8 = k(2) \\implies k = 4$。",
+      "當 $x=8$ 時，$y = 4(8) = 32$。"
+    ]
+  },
+  {
+    "id": "alg_var_04",
+    "topic_id": "math_alg_variations",
+    "subject": "maths",
+    "level": 3,
+    "type": "short_answer",
+    "marks": 2,
+    "question": "It is given that $y$ varies directly as $x$. When $x = 4$, $y = 32$. Find $y$ when $x = 7$.",
+    "question_zh": "已知 $y$ 隨 $x$ 正變。當 $x = 4$ 時，$y = 32$。求當 $x = 7$ 時 $y$ 的值。",
+    "answer": "$56$",
+    "correct_answer": "$56$",
+    "solution_steps": [
+      "Let $y = kx$.",
+      "Substitute $x=4, y=32$: $32 = k(4) \\implies k = 8$.",
+      "When $x=7$, $y = 8(7) = 56$."
+    ],
+    "solution_steps_zh": [
+      "設 $y = kx$。",
+      "代入 $x=4, y=32$：$32 = k(4) \\implies k = 8$。",
+      "當 $x=7$ 時，$y = 8(7) = 56$。"
+    ]
+  },
+  {
+    "id": "alg_var_05",
+    "topic_id": "math_alg_variations",
+    "subject": "maths",
+    "level": 3,
+    "type": "short_answer",
+    "marks": 2,
+    "question": "It is given that $y$ varies inversely as $x$. When $x = 2$, $y = 24$. Find $y$ when $x = 8$.",
+    "question_zh": "已知 $y$ 隨 $x$ 反變。當 $x = 2$ 時，$y = 24$。求當 $x = 8$ 時 $y$ 的值。",
+    "answer": "$6$",
+    "correct_answer": "$6$",
+    "solution_steps": [
+      "Let $y = \\frac{k}{x}$.",
+      "Substitute $x=2, y=24$: $24 = \\frac{k}{2} \\implies k = 48$.",
+      "When $x=8$, $y = \\frac{48}{8} = 6$."
+    ],
+    "solution_steps_zh": [
+      "設 $y = \\frac{k}{x}$。",
+      "代入 $x=2, y=24$：$24 = \\frac{k}{2} \\implies k = 48$。",
+      "當 $x=8$ 時，$y = \\frac{48}{8} = 6$。"
+    ]
+  },
+  {
+    "id": "alg_var_06",
+    "topic_id": "math_alg_variations",
+    "subject": "maths",
+    "level": 3,
+    "type": "short_answer",
+    "marks": 2,
+    "question": "It is given that $y$ varies inversely as $x$. When $x = 4$, $y = 28$. Find $y$ when $x = 20$.",
+    "question_zh": "已知 $y$ 隨 $x$ 反變。當 $x = 4$ 時，$y = 28$。求當 $x = 20$ 時 $y$ 的值。",
+    "answer": "$\\frac{28}{5}$",
+    "correct_answer": "$\\frac{28}{5}$",
+    "solution_steps": [
+      "Let $y = \\frac{k}{x}$.",
+      "Substitute $x=4, y=28$: $28 = \\frac{k}{4} \\implies k = 112$.",
+      "When $x=20$, $y = \\frac{112}{20} = \\frac{28}{5}$."
+    ],
+    "solution_steps_zh": [
+      "設 $y = \\frac{k}{x}$。",
+      "代入 $x=4, y=28$：$28 = \\frac{k}{4} \\implies k = 112$。",
+      "當 $x=20$ 時，$y = \\frac{112}{20} = \\frac{28}{5}$。"
+    ]
+  },
+  {
+    "id": "alg_var_07",
+    "topic_id": "math_alg_variations",
+    "subject": "maths",
+    "level": 3,
+    "type": "short_answer",
+    "marks": 2,
+    "question": "It is given that $y$ varies inversely as $x$. When $x = 4$, $y = 10$. Find $y$ when $x = 8$.",
+    "question_zh": "已知 $y$ 隨 $x$ 反變。當 $x = 4$ 時，$y = 10$。求當 $x = 8$ 時 $y$ 的值。",
+    "answer": "$5$",
+    "correct_answer": "$5$",
+    "solution_steps": [
+      "Let $y = \\frac{k}{x}$.",
+      "Substitute $x=4, y=10$: $10 = \\frac{k}{4} \\implies k = 40$.",
+      "When $x=8$, $y = \\frac{40}{8} = 5$."
+    ],
+    "solution_steps_zh": [
+      "設 $y = \\frac{k}{x}$。",
+      "代入 $x=4, y=10$：$10 = \\frac{k}{4} \\implies k = 40$。",
+      "當 $x=8$ 時，$y = \\frac{40}{8} = 5$。"
+    ]
+  },
+  {
+    "id": "alg_var_08",
+    "topic_id": "math_alg_variations",
+    "subject": "maths",
+    "level": 3,
+    "type": "short_answer",
+    "marks": 2,
+    "question": "It is given that $y$ varies inversely as $x$. When $x = 4$, $y = 19$. Find $y$ when $x = 20$.",
+    "question_zh": "已知 $y$ 隨 $x$ 反變。當 $x = 4$ 時，$y = 19$。求當 $x = 20$ 時 $y$ 的值。",
+    "answer": "$\\frac{19}{5}$",
+    "correct_answer": "$\\frac{19}{5}$",
+    "solution_steps": [
+      "Let $y = \\frac{k}{x}$.",
+      "Substitute $x=4, y=19$: $19 = \\frac{k}{4} \\implies k = 76$.",
+      "When $x=20$, $y = \\frac{76}{20} = \\frac{19}{5}$."
+    ],
+    "solution_steps_zh": [
+      "設 $y = \\frac{k}{x}$。",
+      "代入 $x=4, y=19$：$19 = \\frac{k}{4} \\implies k = 76$。",
+      "當 $x=20$ 時，$y = \\frac{76}{20} = \\frac{19}{5}$。"
+    ]
+  },
+  {
+    "id": "alg_var_09",
+    "topic_id": "math_alg_variations",
+    "subject": "maths",
+    "level": 4,
+    "type": "short_answer",
+    "marks": 3,
+    "question": "It is given that $z$ varies directly as $x$ and inversely as the square of $y$. When $x = 3$ and $y = 2$, $z = \\frac{9}{4}$. Find $z$ when $x = 8$ and $y = 2$.",
+    "question_zh": "已知 $z$ 隨 $x$ 正變且隨 $y$ 的平方反變。當 $x = 3$ 及 $y = 2$ 時，$z = \\frac{9}{4}$。求當 $x = 8$ 及 $y = 2$ 時 $z$ 的值。",
+    "answer": "$6$",
+    "correct_answer": "$6$",
+    "solution_steps": [
+      "Let $z = \\frac{kx}{y^{2}}$.",
+      "Sub $x=3, y=2, z=\\frac{9}{4}$ to find $k=3$.",
+      "When $x=8, y=2$, $z = \\frac{3(8)}{2^{2}} = 6$."
+    ],
+    "solution_steps_zh": [
+      "設 $z = \\frac{kx}{y^{2}}$。",
+      "代入 $x=3, y=2, z=\\frac{9}{4}$ 求得 $k=3$。",
+      "當 $x=8, y=2$ 時，$z = \\frac{3(8)}{2^{2}} = 6$。"
+    ]
+  },
+  {
+    "id": "alg_var_10",
+    "topic_id": "math_alg_variations",
+    "subject": "maths",
+    "level": 4,
+    "type": "short_answer",
+    "marks": 3,
+    "question": "It is given that $z$ varies directly as $x$ and inversely as the square of $y$. When $x = 3$ and $y = 3$, $z = \\frac{2}{3}$. Find $z$ when $x = 5$ and $y = 2$.",
+    "question_zh": "已知 $z$ 隨 $x$ 正變且隨 $y$ 的平方反變。當 $x = 3$ 及 $y = 3$ 時，$z = \\frac{2}{3}$。求當 $x = 5$ 及 $y = 2$ 時 $z$ 的值。",
+    "answer": "$\\frac{5}{2}$",
+    "correct_answer": "$\\frac{5}{2}$",
+    "solution_steps": [
+      "Let $z = \\frac{kx}{y^{2}}$.",
+      "Sub $x=3, y=3, z=\\frac{2}{3}$ to find $k=2$.",
+      "When $x=5, y=2$, $z = \\frac{2(5)}{2^{2}} = \\frac{5}{2}$."
+    ],
+    "solution_steps_zh": [
+      "設 $z = \\frac{kx}{y^{2}}$。",
+      "代入 $x=3, y=3, z=\\frac{2}{3}$ 求得 $k=2$。",
+      "當 $x=5, y=2$ 時，$z = \\frac{2(5)}{2^{2}} = \\frac{5}{2}$。"
+    ]
+  },
+  {
+    "id": "alg_var_11",
+    "topic_id": "math_alg_variations",
+    "subject": "maths",
+    "level": 4,
+    "type": "short_answer",
+    "marks": 3,
+    "question": "It is given that $z$ varies directly as $x$ and inversely as the square of $y$. When $x = 3$ and $y = 4$, $z = \\frac{3}{4}$. Find $z$ when $x = 8$ and $y = 2$.",
+    "question_zh": "已知 $z$ 隨 $x$ 正變且隨 $y$ 的平方反變。當 $x = 3$ 及 $y = 4$ 時，$z = \\frac{3}{4}$。求當 $x = 8$ 及 $y = 2$ 時 $z$ 的值。",
+    "answer": "$8$",
+    "correct_answer": "$8$",
+    "solution_steps": [
+      "Let $z = \\frac{kx}{y^{2}}$.",
+      "Sub $x=3, y=4, z=\\frac{3}{4}$ to find $k=4$.",
+      "When $x=8, y=2$, $z = \\frac{4(8)}{2^{2}} = 8$."
+    ],
+    "solution_steps_zh": [
+      "設 $z = \\frac{kx}{y^{2}}$。",
+      "代入 $x=3, y=4, z=\\frac{3}{4}$ 求得 $k=4$。",
+      "當 $x=8, y=2$ 時，$z = \\frac{4(8)}{2^{2}} = 8$。"
+    ]
+  },
+  {
+    "id": "alg_var_12",
+    "topic_id": "math_alg_variations",
+    "subject": "maths",
+    "level": 4,
+    "type": "short_answer",
+    "marks": 3,
+    "question": "It is given that $z$ varies directly as $x$ and inversely as the square of $y$. When $x = 3$ and $y = 3$, $z = \\frac{2}{3}$. Find $z$ when $x = 5$ and $y = 2$.",
+    "question_zh": "已知 $z$ 隨 $x$ 正變且隨 $y$ 的平方反變。當 $x = 3$ 及 $y = 3$ 時，$z = \\frac{2}{3}$。求當 $x = 5$ 及 $y = 2$ 時 $z$ 的值。",
+    "answer": "$\\frac{5}{2}$",
+    "correct_answer": "$\\frac{5}{2}$",
+    "solution_steps": [
+      "Let $z = \\frac{kx}{y^{2}}$.",
+      "Sub $x=3, y=3, z=\\frac{2}{3}$ to find $k=2$.",
+      "When $x=5, y=2$, $z = \\frac{2(5)}{2^{2}} = \\frac{5}{2}$."
+    ],
+    "solution_steps_zh": [
+      "設 $z = \\frac{kx}{y^{2}}$。",
+      "代入 $x=3, y=3, z=\\frac{2}{3}$ 求得 $k=2$。",
+      "當 $x=5, y=2$ 時，$z = \\frac{2(5)}{2^{2}} = \\frac{5}{2}$。"
+    ]
+  },
+  {
+    "id": "alg_var_13",
+    "topic_id": "math_alg_variations",
+    "subject": "maths",
+    "level": 4,
+    "type": "short_answer",
+    "marks": 3,
+    "question": "It is given that $z$ varies directly as $x^{2}$ and inversely as $y$. If $x$ increases by $10\\%$ and $y$ decreases by $20\\%$, find the percentage change in $z$.",
+    "question_zh": "已知 $z$ 隨 $x^{2}$ 正變且隨 $y$ 反變。若 $x$ 增加 $10\\%$ 及 $y$ 減少 $20\\%$，求 $z$ 的百分比變化。",
+    "answer": "$51.3\\%$",
+    "correct_answer": "$51.3\\%$",
+    "solution_steps": [
+      "New $z' = \\frac{k(1.1x)^{2}}{0.8y} = \\frac{1.1^{2}}{0.8} z = 1.5125z$.",
+      "Change = $(1.5125-1) \\times 100\\% = 51.3\\%$."
+    ],
+    "solution_steps_zh": [
+      "新 $z' = \\frac{k(1.1x)^{2}}{0.8y} = \\frac{1.1^{2}}{0.8} z = 1.5125z$。",
+      "變化 = $(1.5125-1) \\times 100\\% = 51.3\\%$。"
+    ]
+  },
+  {
+    "id": "alg_var_14",
+    "topic_id": "math_alg_variations",
+    "subject": "maths",
+    "level": 4,
+    "type": "short_answer",
+    "marks": 3,
+    "question": "It is given that $z$ varies directly as $x^{2}$ and inversely as $y$. If $x$ increases by $10\\%$ and $y$ decreases by $10\\%$, find the percentage change in $z$.",
+    "question_zh": "已知 $z$ 隨 $x^{2}$ 正變且隨 $y$ 反變。若 $x$ 增加 $10\\%$ 及 $y$ 減少 $10\\%$，求 $z$ 的百分比變化。",
+    "answer": "$34.4\\%$",
+    "correct_answer": "$34.4\\%$",
+    "solution_steps": [
+      "New $z' = \\frac{k(1.1x)^{2}}{0.9y} = \\frac{1.1^{2}}{0.9} z \\approx 1.344z$.",
+      "Change = $(1.344-1) \\times 100\\% = 34.4\\%$."
+    ],
+    "solution_steps_zh": [
+      "新 $z' = \\frac{k(1.1x)^{2}}{0.9y} = \\frac{1.1^{2}}{0.9} z \\approx 1.344z$。",
+      "變化 = $(1.344-1) \\times 100\\% = 34.4\\%$。"
+    ]
+  },
+  {
+    "id": "alg_var_15",
+    "topic_id": "math_alg_variations",
+    "subject": "maths",
+    "level": 4,
+    "type": "short_answer",
+    "marks": 3,
+    "question": "It is given that $z$ varies directly as $x^{2}$ and inversely as $y$. If $x$ increases by $20\\%$ and $y$ decreases by $20\\%$, find the percentage change in $z$.",
+    "question_zh": "已知 $z$ 隨 $x^{2}$ 正變且隨 $y$ 反變。若 $x$ 增加 $20\\%$ 及 $y$ 減少 $20\\%$，求 $z$ 的百分比變化。",
+    "answer": "$80\\%$",
+    "correct_answer": "$80\\%$",
+    "solution_steps": [
+      "New $z' = \\frac{k(1.2x)^{2}}{0.8y} = \\frac{1.2^{2}}{0.8} z = 1.8z$.",
+      "Change = $(1.8-1) \\times 100\\% = 80\\%$."
+    ],
+    "solution_steps_zh": [
+      "新 $z' = \\frac{k(1.2x)^{2}}{0.8y} = \\frac{1.2^{2}}{0.8} z = 1.8z$。",
+      "變化 = $(1.8-1) \\times 100\\% = 80\\%$。"
+    ]
+  },
+  {
+    "id": "alg_var_16",
+    "topic_id": "math_alg_variations",
+    "subject": "maths",
+    "level": 4,
+    "type": "short_answer",
+    "marks": 3,
+    "question": "It is given that $z$ varies directly as $x^{2}$ and inversely as $y$. If $x$ increases by $20\\%$ and $y$ decreases by $25\\%$, find the percentage change in $z$.",
+    "question_zh": "已知 $z$ 隨 $x^{2}$ 正變且隨 $y$ 反變。若 $x$ 增加 $20\\%$ 及 $y$ 減少 $25\\%$，求 $z$ 的百分比變化。",
+    "answer": "$92\\%$",
+    "correct_answer": "$92\\%$",
+    "solution_steps": [
+      "New $z' = \\frac{k(1.2x)^{2}}{0.75y} = \\frac{1.44}{0.75} z = 1.92z$.",
+      "Change = $(1.92-1) \\times 100\\% = 92\\%$."
+    ],
+    "solution_steps_zh": [
+      "新 $z' = \\frac{k(1.2x)^{2}}{0.75y} = \\frac{1.44}{0.75} z = 1.92z$。",
+      "變化 = $(1.92-1) \\times 100\\% = 92\\%$。"
+    ]
+  },
+  {
+    "id": "alg_var_17",
+    "topic_id": "math_alg_variations",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 4,
+    "question": "$y$ is partly constant and partly varies as $x$. When $x=2, y=28$; $x=4, y=38$. Find $y$ when $x=6$.",
+    "question_zh": "$y$ 一部分為常數，另一部分隨 $x$ 正變。當 $x=2, y=28$；$x=4, y=38$。求當 $x=6$ 時 $y$ 的值。",
+    "answer": "$48$",
+    "correct_answer": "$48$",
+    "solution_steps": [
+      "Let $y = k_{1} + k_{2} x$.",
+      "Solve the simultaneous equations to find $k_1$ and $k_2$: $k_{1}=18$ and $k_{2}=5$.",
+      "When $x=6$, $y=18+5(6)=48$."
+    ],
+    "solution_steps_zh": [
+      "設 $y = k_{1} + k_{2} x$。",
+      "代入數值解聯立方程求得 $k_{1}=18$ 及 $k_{2}=5$。",
+      "當 $x=6$ 時，$y=18+5(6)=48$。"
+    ]
+  },
+  {
+    "id": "alg_var_18",
+    "topic_id": "math_alg_variations",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 4,
+    "question": "$y$ is partly constant and partly varies as $x$. When $x=2, y=18$; $x=4, y=24$. Find $y$ when $x=6$.",
+    "question_zh": "$y$ 一部分為常數，另一部分隨 $x$ 正變。當 $x=2, y=18$；$x=4, y=24$。求當 $x=6$ 時 $y$ 的值。",
+    "answer": "$30$",
+    "correct_answer": "$30$",
+    "solution_steps": [
+      "Let $y = k_{1} + k_{2} x$.",
+      "Solve the simultaneous equations to find $k_1$ and $k_2$: $k_{1}=12$ and $k_{2}=3$.",
+      "When $x=6$, $y=12+3(6)=30$."
+    ],
+    "solution_steps_zh": [
+      "設 $y = k_{1} + k_{2} x$。",
+      "代入數值解聯立方程求得 $k_{1}=12$ 及 $k_{2}=3$。",
+      "當 $x=6$ 時，$y=12+3(6)=30$。"
+    ]
+  },
+  {
+    "id": "alg_var_19",
+    "topic_id": "math_alg_variations",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 4,
+    "question": "$y$ is partly constant and partly varies as $x$. When $x=2, y=20$; $x=4, y=30$. Find $y$ when $x=6$.",
+    "question_zh": "$y$ 一部分為常數，另一部分隨 $x$ 正變。當 $x=2, y=20$；$x=4, y=30$。求當 $x=6$ 時 $y$ 的值。",
+    "answer": "$40$",
+    "correct_answer": "$40$",
+    "solution_steps": [
+      "Let $y = k_{1} + k_{2} x$.",
+      "Solve the simultaneous equations to find $k_1$ and $k_2$: $k_{1}=10$ and $k_{2}=5$.",
+      "When $x=6$, $y=10+5(6)=40$."
+    ],
+    "solution_steps_zh": [
+      "設 $y = k_{1} + k_{2} x$。",
+      "代入數值解聯立方程求得 $k_{1}=10$ 及 $k_{2}=5$。",
+      "當 $x=6$ 時，$y=10+5(6)=40$。"
+    ]
+  },
+  {
+    "id": "alg_var_20",
+    "topic_id": "math_alg_variations",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 4,
+    "question": "$y$ is partly constant and partly varies as $x$. When $x=2, y=21$; $x=4, y=29$. Find $y$ when $x=6$.",
+    "question_zh": "$y$ 一部分為常數，另一部分隨 $x$ 正變。當 $x=2, y=21$；$x=4, y=29$。求當 $x=6$ 時 $y$ 的值。",
+    "answer": "$37$",
+    "correct_answer": "$37$",
+    "solution_steps": [
+      "Let $y = k_{1} + k_{2} x$.",
+      "Solve the simultaneous equations to find $k_1$ and $k_2$: $k_{1}=13$ and $k_{2}=4$.",
+      "When $x=6$, $y=13+4(6)=37$."
+    ],
+    "solution_steps_zh": [
+      "設 $y = k_{1} + k_{2} x$。",
+      "代入數值解聯立方程求得 $k_{1}=13$ 及 $k_{2}=4$。",
+      "當 $x=6$ 時，$y=13+4(6)=37$。"
+    ]
+  },
+  {
+    "id": "alg_var_21",
+    "topic_id": "math_alg_variations",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 4,
+    "question": "$y$ is partly constant and partly varies as $x$. When $x=2, y=20$; $x=4, y=28$. Find $y$ when $x=6$.",
+    "question_zh": "$y$ 一部分為常數，另一部分隨 $x$ 正變。當 $x=2, y=20$；$x=4, y=28$。求當 $x=6$ 時 $y$ 的值。",
+    "answer": "$36$",
+    "correct_answer": "$36$",
+    "solution_steps": [
+      "Let $y = k_{1} + k_{2} x$.",
+      "Solve the simultaneous equations to find $k_1$ and $k_2$: $k_{1}=12$ and $k_{2}=4$.",
+      "When $x=6$, $y=12+4(6)=36$."
+    ],
+    "solution_steps_zh": [
+      "設 $y = k_{1} + k_{2} x$。",
+      "代入數值解聯立方程求得 $k_{1}=12$ 及 $k_{2}=4$。",
+      "當 $x=6$ 時，$y=12+4(6)=36$。"
+    ]
+  },
+  {
+    "id": "alg_var_22",
+    "topic_id": "math_alg_variations",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 4,
+    "question": "$y$ is partly constant and partly varies as $x$. When $x=2, y=29$; $x=4, y=39$. Find $y$ when $x=6$.",
+    "question_zh": "$y$ 一部分為常數，另一部分隨 $x$ 正變。當 $x=2, y=29$；$x=4, y=39$。求當 $x=6$ 時 $y$ 的值。",
+    "answer": "$49$",
+    "correct_answer": "$49$",
+    "solution_steps": [
+      "Let $y = k_{1} + k_{2} x$.",
+      "Solve the simultaneous equations to find $k_1$ and $k_2$: $k_{1}=19$ and $k_{2}=5$.",
+      "When $x=6$, $y=19+5(6)=49$."
+    ],
+    "solution_steps_zh": [
+      "設 $y = k_{1} + k_{2} x$。",
+      "代入數值解聯立方程求得 $k_{1}=19$ 及 $k_{2}=5$。",
+      "當 $x=6$ 時，$y=19+5(6)=49$。"
+    ]
+  },
+  {
+    "id": "alg_var_23",
+    "topic_id": "math_alg_variations",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 4,
+    "question": "$y$ is partly constant and partly varies as $x$. When $x=2, y=20$; $x=4, y=30$. Find $y$ when $x=6$.",
+    "question_zh": "$y$ 一部分為常數，另一部分隨 $x$ 正變。當 $x=2, y=20$；$x=4, y=30$。求當 $x=6$ 時 $y$ 的值。",
+    "answer": "$40$",
+    "correct_answer": "$40$",
+    "solution_steps": [
+      "Let $y = k_{1} + k_{2} x$.",
+      "Solve the simultaneous equations to find $k_1$ and $k_2$: $k_{1}=10$ and $k_{2}=5$.",
+      "When $x=6$, $y=10+5(6)=40$."
+    ],
+    "solution_steps_zh": [
+      "設 $y = k_{1} + k_{2} x$。",
+      "代入數值解聯立方程求得 $k_{1}=10$ 及 $k_{2}=5$。",
+      "當 $x=6$ 時，$y=10+5(6)=40$。"
+    ]
+  },
+  {
+    "id": "alg_var_24",
+    "topic_id": "math_alg_variations",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 4,
+    "question": "$y$ is partly constant and partly varies as $x$. When $x=2, y=22$; $x=4, y=26$. Find $y$ when $x=6$.",
+    "question_zh": "$y$ 一部分為常數，另一部分隨 $x$ 正變。當 $x=2, y=22$；$x=4, y=26$。求當 $x=6$ 時 $y$ 的值。",
+    "answer": "$30$",
+    "correct_answer": "$30$",
+    "solution_steps": [
+      "Let $y = k_{1} + k_{2} x$.",
+      "Solve the simultaneous equations to find $k_1$ and $k_2$: $k_{1}=18$ and $k_{2}=2$.",
+      "When $x=6$, $y=18+2(6)=30$."
+    ],
+    "solution_steps_zh": [
+      "設 $y = k_{1} + k_{2} x$。",
+      "代入數值解聯立方程求得 $k_{1}=18$ 及 $k_{2}=2$。",
+      "當 $x=6$ 時，$y=18+2(6)=30$。"
+    ]
+  },
+  {
+    "id": "alg_var_25",
+    "topic_id": "math_alg_variations",
+    "subject": "maths",
+    "level": 7,
+    "type": "short_answer",
+    "marks": 4,
+    "question": "The cost $C$ of a task is partly varies as $n$ and partly as $n^{2}$. If $n=10, C=2860$ and $n=20, C=7920$, find $C$ when $n=30$.",
+    "question_zh": "某項工程的成本 $C$ 一部分隨 $n$ 正變，另一部分隨 $n^{2}$ 正變。若 $n=10, C=2860$ 且 $n=20, C=7920$，求當 $n=30$ 時 $C$ 的值。",
+    "answer": "$15180$",
+    "correct_answer": "$15180$",
+    "solution_steps": [
+      "Let $C = k_{1} n + k_{2} n^{2}$.",
+      "Solve the simultaneous equations: $k_{1}=176$ and $k_{2}=11$.",
+      "At $n=30, C = 176(30) + 11(30^{2}) = 15180$."
+    ],
+    "solution_steps_zh": [
+      "設 $C = k_{1} n + k_{2} n^{2}$。",
+      "解聯立方程：$k_{1}=176$ 及 $k_{2}=11$。",
+      "當 $n=30$ 時，$C = 176(30) + 11(30^{2}) = 15180$。"
+    ]
+  },
+  {
+    "id": "alg_var_26",
+    "topic_id": "math_alg_variations",
+    "subject": "maths",
+    "level": 7,
+    "type": "short_answer",
+    "marks": 4,
+    "question": "The cost $C$ of a task is partly varies as $n$ and partly as $n^{2}$. If $n=10, C=2820$ and $n=20, C=8240$, find $C$ when $n=30$.",
+    "question_zh": "某項工程的成本 $C$ 一部分隨 $n$ 正變，另一部分隨 $n^{2}$ 正變。若 $n=10, C=2820$ 且 $n=20, C=8240$，求當 $n=30$ 時 $C$ 的值。",
+    "answer": "$16260$",
+    "correct_answer": "$16260$",
+    "solution_steps": [
+      "Let $C = k_{1} n + k_{2} n^{2}$.",
+      "Solve the simultaneous equations: $k_{1}=152$ and $k_{2}=13$.",
+      "At $n=30, C = 152(30) + 13(30^{2}) = 16260$."
+    ],
+    "solution_steps_zh": [
+      "設 $C = k_{1} n + k_{2} n^{2}$。",
+      "解聯立方程：$k_{1}=152$ 及 $k_{2}=13$。",
+      "當 $n=30$ 時，$C = 152(30) + 13(30^{2}) = 16260$。"
+    ]
+  },
+  {
+    "id": "alg_var_27",
+    "topic_id": "math_alg_variations",
+    "subject": "maths",
+    "level": 7,
+    "type": "short_answer",
+    "marks": 4,
+    "question": "The cost $C$ of a task is partly varies as $n$ and partly as $n^{2}$. If $n=10, C=2760$ and $n=20, C=7120$, find $C$ when $n=30$.",
+    "question_zh": "某項工程的成本 $C$ 一部分隨 $n$ 正變，另一部分隨 $n^{2}$ 正變。若 $n=10, C=2760$ 且 $n=20, C=7120$，求當 $n=30$ 時 $C$ 的值。",
+    "answer": "$13080$",
+    "correct_answer": "$13080$",
+    "solution_steps": [
+      "Let $C = k_{1} n + k_{2} n^{2}$.",
+      "Solve the simultaneous equations: $k_{1}=196$ and $k_{2}=8$.",
+      "At $n=30, C = 196(30) + 8(30^{2}) = 13080$."
+    ],
+    "solution_steps_zh": [
+      "設 $C = k_{1} n + k_{2} n^{2}$。",
+      "解聯立方程：$k_{1}=196$ 及 $k_{2}=8$。",
+      "當 $n=30$ 時，$C = 196(30) + 8(30^{2}) = 13080$。"
+    ]
+  },
+  {
+    "id": "alg_var_28",
+    "topic_id": "math_alg_variations",
+    "subject": "maths",
+    "level": 7,
+    "type": "short_answer",
+    "marks": 4,
+    "question": "The cost $C$ of a task is partly varies as $n$ and partly as $n^{2}$. If $n=10, C=2600$ and $n=20, C=8000$, find $C$ when $n=30$.",
+    "question_zh": "某項工程的成本 $C$ 一部分隨 $n$ 正變，另一部分隨 $n^{2}$ 正變。若 $n=10, C=2600$ 且 $n=20, C=8000$，求當 $n=30$ 時 $C$ 的值。",
+    "answer": "$16200$",
+    "correct_answer": "$16200$",
+    "solution_steps": [
+      "Let $C = k_{1} n + k_{2} n^{2}$.",
+      "Solve the simultaneous equations: $k_{1}=120$ and $k_{2}=14$.",
+      "At $n=30, C = 120(30) + 14(30^{2}) = 16200$."
+    ],
+    "solution_steps_zh": [
+      "設 $C = k_{1} n + k_{2} n^{2}$。",
+      "解聯立方程：$k_{1}=120$ 及 $k_{2}=14$。",
+      "當 $n=30$ 時，$C = 120(30) + 14(30^{2}) = 16200$。"
+    ]
+  },
+  {
+    "id": "alg_var_29",
+    "topic_id": "math_alg_variations",
+    "subject": "maths",
+    "level": 7,
+    "type": "short_answer",
+    "marks": 4,
+    "question": "The cost $C$ of a task is partly varies as $n$ and partly as $n^{2}$. If $n=10, C=2650$ and $n=20, C=7500$, find $C$ when $n=30$.",
+    "question_zh": "某項工程的成本 $C$ 一部分隨 $n$ 正變，另一部分隨 $n^{2}$ 正變。若 $n=10, C=2650$ 且 $n=20, C=7500$，求當 $n=30$ 時 $C$ 的值。",
+    "answer": "$14550$",
+    "correct_answer": "$14550$",
+    "solution_steps": [
+      "Let $C = k_{1} n + k_{2} n^{2}$.",
+      "Solve the simultaneous equations: $k_{1}=155$ and $k_{2}=11$.",
+      "At $n=30, C = 155(30) + 11(30^{2}) = 14550$."
+    ],
+    "solution_steps_zh": [
+      "設 $C = k_{1} n + k_{2} n^{2}$。",
+      "解聯立方程：$k_{1}=155$ 及 $k_{2}=11$。",
+      "當 $n=30$ 時，$C = 155(30) + 11(30^{2}) = 14550$。"
+    ]
+  },
+  {
+    "id": "alg_var_30",
+    "topic_id": "math_alg_variations",
+    "subject": "maths",
+    "level": 7,
+    "type": "short_answer",
+    "marks": 4,
+    "question": "The cost $C$ of a task is partly varies as $n$ and partly as $n^{2}$. If $n=10, C=2750$ and $n=20, C=7100$, find $C$ when $n=30$.",
+    "question_zh": "某項工程的成本 $C$ 一部分隨 $n$ 正變，另一部分隨 $n^{2}$ 正變。若 $n=10, C=2750$ 且 $n=20, C=7100$，求當 $n=30$ 時 $C$ 的值。",
+    "answer": "$13050$",
+    "correct_answer": "$13050$",
+    "solution_steps": [
+      "Let $C = k_{1} n + k_{2} n^{2}$.",
+      "Solve the simultaneous equations: $k_{1}=195$ and $k_{2}=8$.",
+      "At $n=30, C = 195(30) + 8(30^{2}) = 13050$."
+    ],
+    "solution_steps_zh": [
+      "設 $C = k_{1} n + k_{2} n^{2}$。",
+      "解聯立方程：$k_{1}=195$ 及 $k_{2}=8$。",
+      "當 $n=30$ 時，$C = 195(30) + 8(30^{2}) = 13050$。"
+    ]
+  }
+]

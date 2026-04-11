@@ -1,0 +1,117 @@
+{
+  "tabs": [
+    {
+      "tab_name": "Main",
+      "buttons": [
+        {
+          "id": "btn_add",
+          "display_label": "+",
+          "insert_latex": "+",
+          "cursor_offset": 0
+        },
+        {
+          "id": "btn_sub",
+          "display_label": "−",
+          "insert_latex": "-",
+          "cursor_offset": 0
+        },
+        {
+          "id": "btn_mul",
+          "display_label": "×",
+          "insert_latex": "\\times",
+          "cursor_offset": 0
+        },
+        {
+          "id": "btn_div",
+          "display_label": "÷",
+          "insert_latex": "\\div",
+          "cursor_offset": 0
+        },
+        {
+          "id": "btn_plus_minus",
+          "display_label": "$\\pm$",
+          "insert_latex": "\\pm",
+          "cursor_offset": 0
+        },
+        {
+          "id": "btn_fraction",
+          "display_label": "$\\frac{\\square}{\\square}$",
+          "insert_latex": "\\frac{}{}",
+          "cursor_offset": -3
+        },
+        {
+          "id": "btn_sqrt",
+          "display_label": "$\\sqrt{\\square}$",
+          "insert_latex": "\\sqrt{}",
+          "cursor_offset": -1
+        },
+        {
+          "id": "btn_power",
+          "display_label": "$x^y$",
+          "insert_latex": "^{}",
+          "cursor_offset": -1
+        },
+        {
+          "id": "btn_pi",
+          "display_label": "$\\pi$",
+          "insert_latex": "\\pi",
+          "cursor_offset": 0
+        }
+      ]
+    },
+    {
+      "tab_name": "Algebra & Complex",
+      "buttons": [
+        {
+          "id": "btn_imaginary",
+          "display_label": "$i$",
+          "insert_latex": "i",
+          "cursor_offset": 0
+        },
+        {
+          "id": "btn_bracket_l",
+          "display_label": "(",
+          "insert_latex": "(",
+          "cursor_offset": 0
+        },
+        {
+          "id": "btn_bracket_r",
+          "display_label": ")",
+          "insert_latex": ")",
+          "cursor_offset": 0
+        },
+        {
+          "id": "btn_gt",
+          "display_label": ">",
+          "insert_latex": ">",
+          "cursor_offset": 0
+        },
+        {
+          "id": "btn_lt",
+          "display_label": "<",
+          "insert_latex": "<",
+          "cursor_offset": 0
+        },
+        {
+          "id": "btn_ge",
+          "display_id": "btn_ge",
+          "display_label": "$\\ge$",
+          "insert_latex": "\\ge",
+          "cursor_offset": 0
+        },
+        {
+          "id": "btn_le",
+          "display_label": "$\\le$",
+          "insert_latex": "\\le",
+          "cursor_offset": 0
+        },
+        {
+          "id": "btn_log",
+          "display_label": "$\\log$",
+          "insert_latex": "\\log_{}()",
+          "cursor_offset": -4
+        }
+      ]
+    }
+  ]
+}

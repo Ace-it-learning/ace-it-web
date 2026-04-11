@@ -53,7 +53,7 @@ router.post('/submit', async (req, res) => {
             // But wait, `updateMathSkills` is robust. Let's use it.
             await UserProfileService.updateMathSkills(uid, {
                 [topic]: {
-                    level: Math.max(1, Math.min(7, (score / 100) * 7)), // Map 0-100% to 1-7 (approx)
+                    level: Math.max(1, Math.min(7, (score / 100) * 7.0)), // Standardized linear map 0-100% -> 1-7
                     practiceCount: 1
                 }
             }, 'lab');

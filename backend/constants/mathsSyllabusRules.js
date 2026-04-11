@@ -93,6 +93,16 @@ const MATHS_TOPIC_SYLLABUS = {
         - Level 5: Solving quadratic-like exponential equations (a^(2x) + b*a^x + c = 0). Expressing log(x*y^2) in terms of other logs. Graphing y = a * b^x by transforming to a linear log graph.
         `
   },
+  'math_alg_indices': {
+    guidance: `
+        - Focus on Laws of Integral Indices, Fractional Indices, and Negative Indices.
+        - Level 3 (Easy): Basic simplification using $a^m \cdot a^n = a^{m+n}$, $(a^m)^n = a^{mn}$, and $a^m / a^n = a^{m-n}$. Integral indices only.
+        - Level 4 (Medium): Combined laws with negative and fractional indices. Simplifying expressions like $(x^2 y^{-3})^{1/2} / x^{-1}$.
+        - Level 5 (Standard): Solving exponential equations by constantizing the base (e.g., $9^{x+1} = 27^{x-1}$). Comparing sizes of large powers by making either the base or the index the same.
+        - Level 7 (Elite): Hard exponential equations that reduce to quadratics ($a^{2x} + b \cdot a^x + c = 0$). Abstract index proofs or complex magnitude comparisons.
+        - TRAPS TO AVOID: Remind students that $a^0 = 1$ (for $a \neq 0$) and $a^{-n} = 1/a^n$. Do not mix multiplication and addition laws (e.g., $3^2 + 3^3 \neq 3^5$).
+        `
+  },
   'math_alg_complex_numbers': {
     guidance: `
         - Focus ONLY on the HKDSE Compulsory Part: imaginary unit i (i^2 = -1), real/imaginary parts, and basic operations (a + bi).

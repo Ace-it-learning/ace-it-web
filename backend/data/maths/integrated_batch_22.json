@@ -1,0 +1,373 @@
+[
+  {
+    "id": "ct_mcq_311",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_alg_polynomials"],
+    "marks": 1,
+    "difficulty": 5,
+    "paper": 2,
+    "section": "A",
+    "question_en": "Mrs. Chan deposits $50,000 in a bank at an interest rate of 4% per annum, compounded semi-annually. Find the interest she will receive after 3 years, correct to the nearest dollar.",
+    "question_zh": "陳太太將 $50,000 存入銀行，年利率為 4%，每半年結算利息一次。求 3 年後她所得的利息（準確至最接近的整數）。",
+    "options": [
+      "A. $6,000",
+      "B. $6,243",
+      "C. $6,308",
+      "D. $56,308"
+    ],
+    "correct_answer": "C",
+    "solution_steps_en": [
+      "Principal $P = 50,000$. Rate per period $i = 4\\% / 2 = 2\\% = 0.02$.",
+      "Number of periods $n = 3 \\times 2 = 6$.",
+      "Amount $A = P(1 + i)^n = 50,000(1.02)^6 \\approx 56,308.12$.",
+      "Interest $= A - P = 56,308.12 - 50,000 = 6,308.12$.",
+      "Nearest dollar: $6,308$."
+    ],
+    "solution_steps_zh": [
+      "本金 $P = 50,000$。每期利率 $i = 4\\% / 2 = 2\\% = 0.02$。",
+      "期數 $n = 3 \\times 2 = 6$。",
+      "本利和 $A = P(1 + i)^n = 50,000(1.02)^6 \\approx 56,308.12$。",
+      "利息 $= A - P = 6,308.12$。",
+      "最接近整數：$6,308$。"
+    ],
+    "diagram_json": null,
+    "tags": ["compound-interest", "financial-math"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_312",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_alg_equations"],
+    "marks": 1,
+    "difficulty": 5,
+    "paper": 2,
+    "section": "A",
+    "question_en": "It is given that $y - 2$ varies inversely as $x^3$. When $x = 2$, $y = 3$. Find $y$ when $x = 1$.",
+    "question_zh": "已知 $y - 2$ 隨 $x^3$ 反變。當 $x = 2$ 時，$y = 3$。求當 $x = 1$ 時 $y$ 的值。",
+    "options": [
+      "A. 6",
+      "B. 8",
+      "C. 10",
+      "D. 12"
+    ],
+    "correct_answer": "C",
+    "solution_steps_en": [
+      "Let $y - 2 = \\frac{k}{x^3}$.",
+      "Substitute $x=2, y=3$: $3 - 2 = \\frac{k}{2^3} \\Rightarrow 1 = \\frac{k}{8} \\Rightarrow k = 8$.",
+      "When $x = 1$: $y - 2 = \\frac{8}{1^3} = 8$.",
+      "Thus $y = 8 + 2 = 10$."
+    ],
+    "solution_steps_zh": [
+      "設 $y - 2 = \\frac{k}{x^3}$。",
+      "代入 $x=2, y=3$：$3 - 2 = \\frac{k}{2^3} \\Rightarrow 1 = \\frac{k}{8} \\Rightarrow k = 8$。",
+      "當 $x = 1$ 時：$y - 2 = \\frac{8}{1^3} = 8$。",
+      "故 $y = 10$。"
+    ],
+    "diagram_json": null,
+    "tags": ["variation", "inverse-variation"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_313",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_trig_applications"],
+    "marks": 1,
+    "difficulty": 6,
+    "paper": 2,
+    "section": "A",
+    "question_en": "In $\\triangle ABC$, $AB = 8$ cm, $BC = 10$ cm and $\\angle ABC = 60^\\circ$. Find the length of $AC$.",
+    "question_zh": "在 $\\triangle ABC$ 中，$AB = 8$ cm，$BC = 10$ cm 且 $\\angle ABC = 60^\\circ$。求 $AC$ 的長度。",
+    "options": [
+      "A. $\\sqrt{84}$ cm",
+      "B. $\\sqrt{164}$ cm",
+      "C. 9 cm",
+      "D. 10 cm"
+    ],
+    "correct_answer": "A",
+    "solution_steps_en": [
+      "Apply the Cosine Rule: $AC^2 = AB^2 + BC^2 - 2(AB)(BC)\\cos B$.",
+      " $AC^2 = 8^2 + 10^2 - 2(8)(10)\\cos 60^\\circ$.",
+      " $AC^2 = 64 + 100 - 160(0.5) = 164 - 80 = 84$.",
+      " $AC = \\sqrt{84} \\approx 9.17$ cm."
+    ],
+    "solution_steps_zh": [
+      "應用餘弦定理：$AC^2 = AB^2 + BC^2 - 2(AB)(BC)\\cos B$。",
+      " $AC^2 = 8^2 + 10^2 - 2(8)(10)\\cos 60^\\circ$。",
+      " $AC^2 = 64 + 100 - 80 = 84$。",
+      " $AC = \\sqrt{84}$ cm。"
+    ],
+    "diagram_json": {
+      "canvas": { "width": 300, "height": 200, "viewBox": "0 0 300 200" },
+      "elements": [
+        { "type": "polyline", "points": [{"x": 100, "y": 150}, {"x": 180, "y": 50}, {"x": 250, "y": 150}, {"x": 100, "y": 150}], "stroke": "#334155", "fill": "none" },
+        { "type": "text", "x": 180, "y": 35, "text": "B", "fontSize": 14, "fontWeight": "bold" },
+        { "type": "text", "x": 85, "y": 165, "text": "A", "fontSize": 14, "fontWeight": "bold" },
+        { "type": "text", "x": 255, "y": 165, "text": "C", "fontSize": 14, "fontWeight": "bold" },
+        { "type": "text", "x": 115, "y": 95, "text": "8", "fontSize": 14 },
+        { "type": "text", "x": 235, "y": 95, "text": "10", "fontSize": 14 },
+        { "type": "text", "x": 180, "y": 80, "text": "60°", "fontSize": 12, "fill": "#ef4444", "textAnchor": "middle" }
+      ]
+    },
+    "tags": ["trigonometry", "cosine-rule"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_314",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_geo_circles"],
+    "marks": 1,
+    "difficulty": 5,
+    "paper": 2,
+    "section": "A",
+    "question_en": "In the figure, $ABCD$ is a square and $E$ is the midpoint of $CD$. Find the ratio of the area of $\\triangle ADE$ to the area of square $ABCD$.",
+    "question_zh": "圖中，$ABCD$ 為正方形，$E$ 為 $CD$ 的中點。求 $\\triangle ADE$ 面積與正方形 $ABCD$ 面積之比。",
+    "options": [
+      "A. $1:2$",
+      "B. $1:4$",
+      "C. $1:8$",
+      "D. $2:3$"
+    ],
+    "correct_answer": "B",
+    "solution_steps_en": [
+      "Let the side length of square $ABCD$ be $s$.",
+      "Area of square $ABCD = s^2$.",
+      "In $\\triangle ADE$, base $DE = s/2$ and height $AD = s$.",
+      "Area of $\\triangle ADE = \\frac{1}{2} \\times \\text{base} \\times \\text{height} = \\frac{1}{2} \\times \\frac{s}{2} \\times s = \\frac{s^2}{4}$.",
+      "Ratio $= \\frac{s^2/4}{s^2} = 1:4$."
+    ],
+    "solution_steps_zh": [
+      "設正方形的邊長為 $s$。",
+      "正方形面積 $= s^2$。",
+      "在 $\\triangle ADE$ 中，底 $DE = s/2$，高 $AD = s$。",
+      "三角形面積 $= \\frac{1}{2} \\times \\frac{s}{2} \\times s = s^2/4$。",
+      "面積比 $= 1:4$。"
+    ],
+    "diagram_json": {
+      "canvas": { "width": 200, "height": 200, "viewBox": "0 0 200 200" },
+      "elements": [
+        { "type": "polyline", "points": [{"x": 50, "y": 150}, {"x": 150, "y": 150}, {"x": 150, "y": 50}, {"x": 50, "y": 50}, {"x": 50, "y": 150}], "stroke": "#334155", "fill": "none" },
+        { "type": "line", "x1": 50, "y1": 150, "x2": 100, "y2": 50, "stroke": "#ef4444", "strokeWidth": 2 },
+        { "type": "text", "x": 40, "y": 165, "text": "A", "fontSize": 14 },
+        { "type": "text", "x": 155, "y": 165, "text": "B", "fontSize": 14 },
+        { "type": "text", "x": 155, "y": 45, "text": "C", "fontSize": 14 },
+        { "type": "text", "x": 40, "y": 45, "text": "D", "fontSize": 14 },
+        { "type": "text", "x": 95, "y": 45, "text": "E", "fontSize": 14, "fill": "#ef4444" }
+      ]
+    },
+    "tags": ["plane-geometry", "area-ratio"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_315",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_stat_prob"],
+    "marks": 1,
+    "difficulty": 6,
+    "paper": 2,
+    "section": "A",
+    "question_en": "A set of data has a mean $\\mu$ and standard deviation $\\sigma$. If a constant $k$ (where $k > 0$) is added to each datum in the set, find the new mean and new standard deviation.",
+    "question_zh": "一組數據的平均數為 $\\mu$，標準差為 $\\sigma$。若將該組數據中的每個項都加上一個常數 $k$ ($k > 0$)，求新的平均數及新的標準差。",
+    "options": [
+      "A. New Mean $= \\mu + k$, New SD $= \\sigma + k$",
+      "B. New Mean $= \\mu$, New SD $= \\sigma$",
+      "C. New Mean $= \\mu + k$, New SD $= \\sigma$",
+      "D. New Mean $= \\mu$, New SD $= \\sigma + k$"
+    ],
+    "correct_answer": "C",
+    "solution_steps_en": [
+      "Adding a constant $k$ shifts all data points equally.",
+      "The average position shifts: New Mean $= \\mu + k$.",
+      "The spread of data remains identical: New Standard Deviation $= \\sigma$."
+    ],
+    "solution_steps_zh": [
+      "每個數據項加上 $k$ 會使所有數據點同向移動。",
+      "平均位置移動：新平均數 $= \\mu + k$。",
+      "數據的離散程度不變：新標準差 $= \\sigma$。"
+    ],
+    "diagram_json": null,
+    "tags": ["statistics", "data-transformation"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_316",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_alg_polynomials"],
+    "marks": 1,
+    "difficulty": 7,
+    "paper": 2,
+    "section": "A",
+    "question_en": "Let $f(x) = (x-1)(x^2 + 3x + k)$. If the equation $f(x) = 0$ has only one real root, which of the following must be true?",
+    "question_zh": "設 $f(x) = (x-1)(x^2 + 3x + k)$。若方程 $f(x) = 0$ 只有一個實根，下列哪項必為正確？",
+    "options": [
+      "A. $k < 2.25$",
+      "B. $k = 2.25$",
+      "C. $k > 2.25$",
+      "D. $k = -4$"
+    ],
+    "correct_answer": "C",
+    "solution_steps_en": [
+      "The root of $(x-1)$ is $x=1$, which is a real root.",
+      "For $f(x)=0$ to have only one real root, the quadratic part $(x^2 + 3x + k) = 0$ must have no real roots.",
+      "The discriminant $\\Delta$ must be less than zero: $3^2 - 4(1)(k) < 0$.",
+      " $9 - 4k < 0 \\Rightarrow 4k > 9 \\Rightarrow k > 2.25$."
+    ],
+    "solution_steps_zh": [
+      "$(x-1)$ 的根為 $x=1$，這是一個實根。",
+      "若方程只有一個實根，則二次項 $(x^2 + 3x + k) = 0$ 必須無實根。",
+      "判別式 $\\Delta < 0$：$3^2 - 4(1)(k) < 0$。",
+      " $9 - 4k < 0 \\Rightarrow k > 2.25$。"
+    ],
+    "diagram_json": null,
+    "tags": ["polynomials", "roots-of-equations"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_sa_317",
+    "type": "short_answer",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_alg_inequalities"],
+    "marks": 11,
+    "difficulty": 7,
+    "paper": 1,
+    "section": "A",
+    "question_en": "Consider the region $R$ bounded by the following constraints:\n$x + y \\le 8$\n$x \\ge 2$\n$y \\ge 1$\n(a) Find the coordinates of all vertices of region $R$. (6 marks)\n(b) Minimize $C = 2x + 5y$ over the region $R$. (5 marks)",
+    "question_zh": "考慮由以下限制條件圍成的區域 $R$：\n$x + y \\le 8$\n$x \\ge 2$\n$y \\ge 1$\n(a) 求區域 $R$ 所有頂點的坐標。(6分)\n(b) 在區域 $R$ 中心化 (Minimize) $C = 2x + 5y$。(5分)",
+    "solution_steps_en": [
+      "(a) Intersection of $x=2$ and $y=1$: $(2, 1)$.",
+      " Intersection of $x+y=8$ and $y=1$: $x+1=8 \\Rightarrow x=7$. Point: $(7, 1)$.",
+      " Intersection of $x+y=8$ and $x=2$: $2+y=8 \\Rightarrow y=6$. Point: $(2, 6)$.",
+      "(b) Calculate $C$ at each vertex:",
+      " $C(2, 1) = 2(2) + 5(1) = 9$.",
+      " $C(7, 1) = 2(7) + 5(1) = 19$.",
+      " $C(2, 6) = 2(2) + 5(6) = 34$.",
+      " The minimum value is 9 at $(2, 1)$."
+    ],
+    "solution_steps_zh": [
+      "(a) $x=2$ 與 $y=1$ 的交點：$(2, 1)$。",
+      " $x+y=8$ 與 $y=1$ 的交點：$x=7$。點：$(7, 1)$。",
+      " $x+y=8$ 與 $x=2$ 的交點：$y=6$。點：$(2, 6)$。",
+      "(b) 計算各頂點的 $C$ 值：",
+      " $C(2, 1) = 9$。",
+      " $C(7, 1) = 19$。",
+      " $C(2, 6) = 34$。",
+      " 最小值為 9，於 $(2, 1)$。"
+    ],
+    "diagram_json": {
+      "canvas": { "width": 300, "height": 300, "viewBox": "0 0 300 300" },
+      "elements": [
+        { "type": "line", "x1": 50, "y1": 250, "x2": 280, "y2": 250, "stroke": "#cbd5e1" },
+        { "type": "line", "x1": 50, "y1": 250, "x2": 50, "y2": 20, "stroke": "#cbd5e1" },
+        { "type": "line", "x1": 90, "y1": 250, "x2": 90, "y2": 20, "stroke": "#94a3b8", "strokeDasharray": "4,4", "label": "x=2" },
+        { "type": "line", "x1": 50, "y1": 210, "x2": 280, "y2": 210, "stroke": "#94a3b8", "strokeDasharray": "4,4", "label": "y=1" },
+        { "type": "line", "x1": 50, "y1": 90, "x2": 210, "y2": 250, "stroke": "#334155", "label": "x+y=8" },
+        { "type": "polyline", "points": [{"x": 90, "y": 210}, {"x": 190, "y": 210}, {"x": 90, "y": 110}], "stroke": "none", "fill": "rgba(239, 68, 68, 0.2)" }
+      ]
+    },
+    "tags": ["linear-programming", "optimization"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_sa_318",
+    "type": "short_answer",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_geo_coordinate_geo"],
+    "marks": 12,
+    "difficulty": 8,
+    "paper": 1,
+    "section": "A",
+    "question_en": "A circle $C$ has the equation $(x - 3)^2 + (y - 4)^2 = 25$. Point $P(6, 8)$ lies on the circle.\n(a) Show that $P$ lies on the circle. (2 marks)\n(b) Find the equation of the tangent back to the circle at point $P$. (10 marks)",
+    "question_zh": "圓 $C$ 的方程為 $(x - 3)^2 + (y - 4)^2 = 25$。點 $P(6, 8)$ 位於圓上。\n(a) 證明 $P$ 位於圓上。(2分)\n(b) 求圓於點 $P$ 的切線方程。(10分)",
+    "solution_steps_en": [
+      "(a) Substitute $(6, 8)$ into the equation: $(6-3)^2 + (8-4)^2 = 3^2 + 4^2 = 9 + 16 = 25$. LHS = RHS.",
+      "(b) Center of circle $O = (3, 4)$.",
+      " Slope of radius $OP = \\frac{8 - 4}{6 - 3} = \\frac{4}{3}$.",
+      " Since the tangent is perpendicular to the radius, slope of tangent $m = -\\frac{3}{4}$.",
+      " Equation of tangent: $y - 8 = -\\frac{3}{4}(x - 6)$.",
+      " $4y - 32 = -3x + 18 \\Rightarrow 3x + 4y - 50 = 0$."
+    ],
+    "solution_steps_zh": [
+      "(a) 代入 $(6, 8)$：$(6-3)^2 + (8-4)^2 = 9 + 16 = 25$。左端 = 右端。",
+      "(b) 圓心 $O = (3, 4)$。",
+      " 半徑 $OP$ 的斜率 $= \\frac{8 - 4}{6 - 3} = 4/3$。",
+      " 由於切線垂直於半徑，切線斜率 $m = -3/4$。",
+      " 切線方程：$y - 8 = -3/4(x - 6)$。",
+      " $4y - 32 = -3x + 18 \\Rightarrow 3x + 4y - 50 = 0$。"
+    ],
+    "diagram_json": {
+      "canvas": { "width": 300, "height": 300, "viewBox": "0 0 300 300" },
+      "elements": [
+        { "type": "circle", "cx": 110, "cy": 140, "r": 100, "stroke": "#64748b", "fill": "none" },
+        { "type": "point", "cx": 110, "cy": 140, "label": "O(3,4)" },
+        { "type": "point", "x": 170, "y": 60, "label": "P(6,8)" },
+        { "type": "line", "x1": 110, "y1": 140, "x2": 170, "y2": 60, "stroke": "#94a3b8", "strokeDasharray": "4,4" },
+        { "type": "line", "x1": 125, "y1": 26, "x2": 215, "y2": 94, "stroke": "#ef4444", "strokeWidth": 2, "label": "tangent" }
+      ]
+    },
+    "tags": ["coordinate-geo", "circle-tangent"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_sa_319",
+    "type": "short_answer",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_stat_prob"],
+    "marks": 10,
+    "difficulty": 7,
+    "paper": 1,
+    "section": "A",
+    "question_en": "A committee of 5 members is to be formed from 6 boys and 4 girls. Find the number of ways to form the committee if it must contain at least 3 girls.",
+    "question_zh": "現從 6 名男生及 4 名女生中選出 5 人組成委員會。若委員會必須包含至少 3 名女生，求組成委員會的可能方法數目。",
+    "solution_steps_en": [
+      "Case 1: 3 girls and 2 boys.",
+      " Ways $= C_3^4 \\times C_2^6 = 4 \\times 15 = 60$.",
+      "Case 2: 4 girls and 1 boy.",
+      " Ways $= C_4^4 \\times C_1^6 = 1 \\times 6 = 6$.",
+      "Total Ways $= 60 + 6 = 66$."
+    ],
+    "solution_steps_zh": [
+      "情況 1：3 女生及 2 男生。",
+      " 方法數 $= C_3^4 \\times C_2^6 = 4 \\times 15 = 60$。",
+      "情況 2：4 女生及 1 男生。",
+      " 方法數 $= C_4^4 \\times C_1^6 = 1 \\times 6 = 6$。",
+      "總方法數 $= 60 + 6 = 66$。"
+    ],
+    "diagram_json": null,
+    "tags": ["combinations", "probability"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_sa_320",
+    "type": "short_answer",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_geo_mensuration"],
+    "marks": 12,
+    "difficulty": 8,
+    "paper": 1,
+    "section": "A",
+    "question_en": "A sphere $S$ has a radius $r$. A right circular cylinder $T$ has a base radius $r$ and a height $2r$ (such that the sphere just fits inside the cylinder).\n(a) Express the total surface area of cylinder $T$ in terms of $r$ and $\\pi$. (4 marks)\n(b) Find the ratio of the total surface area of the sphere to the total surface area of the cylinder. (8 marks)",
+    "question_zh": "球體 $S$ 的半徑為 $r$。圓柱體 $T$ 的底半徑為 $r$，高為 $2r$（即球體恰好放入圓柱體內）。\n(a) 以 $r$ 及 $\\pi$ 表示圓柱體 $T$ 的總表面積。(4分)\n(b) 求球體的總表面積對圓柱體的總表面積之比。(8分)",
+    "solution_steps_en": [
+      "(a) Curved surface area of cylinder $= 2\\pi r h = 2\\pi r (2r) = 4\\pi r^2$.",
+      " Area of two bases $= 2 \\pi r^2$.",
+      " Total Surface Area of $T = 4\\pi r^2 + 2\\pi r^2 = 6\\pi r^2$.",
+      "(b) Total Surface Area of sphere $S = 4\\pi r^2$.",
+      " Ratio $= 4\\pi r^2 : 6\\pi r^2 = 4 : 6 = 2 : 3$."
+    ],
+    "solution_steps_zh": [
+      "(a) 圓柱體的曲面面積 $= 2\\pi r (2r) = 4\\pi r^2$。",
+      " 兩個底面的面積 $= 2\\pi r^2$。",
+      " 總表面積 $= 6\\pi r^2$。",
+      "(b) 球體總表面積 $= 4\\pi r^2$。",
+      " 面積比 $= 4 : 6 = 2 : 3$。"
+    ],
+    "diagram_json": null,
+    "tags": ["mensuration", "combined-solids"],
+    "status": "approved"
+  }
+]

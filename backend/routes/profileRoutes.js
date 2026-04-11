@@ -4,7 +4,7 @@ const UserProfileService = require('../services/UserProfileService');
 const admin = require('firebase-admin');
 
 // GET /api/profile
-router.get('/', async (req, res) => {
+router.get('/profile', async (req, res) => {
     const { uid } = req.query;
     if (!uid) return res.status(400).json({ error: "Missing uid" });
     try {
@@ -17,7 +17,7 @@ router.get('/', async (req, res) => {
 });
 
 // POST /api/profile
-router.post('/', async (req, res) => {
+router.post('/profile', async (req, res) => {
     const { uid, ...profileData } = req.body;
     if (!uid) return res.status(400).json({ error: "Missing uid" });
     try {
@@ -43,33 +43,47 @@ router.get('/skillmap', async (req, res) => {
 });
 
 // GET /api/skillmap/maths - Dedicated Math endpoint
-router.get('/maths', async (req, res) => {
+router.get('/skillmap/maths', async (req, res) => {
     const { uid } = req.query;
     if (!uid) return res.status(400).json({ error: "Missing uid" });
     try {
         const mathSkillMap = await UserProfileService.getMathSkillMap(uid);
-        res.json(mathSkillMap || {});
+        res.json(mathSkillMap || { microSkills: {}, weaknessPriority: [], practicedSkills: [] });
     } catch (e) {
         console.error("Math SkillMap Fetch Error:", e);
         res.status(500).json({ error: "Failed to fetch Math skill map" });
     }
 });
 
-// GET /api/skillmap/maths/history - Math skill history
-router.get('/maths/history', async (req, res) => {
+// GET /api/profile/maths - Backwards-compat alias for /api/skillmap/maths
+router.get('/profile/maths', async (req, res) => {
+    const { uid } = req.query;
+    if (!uid) return res.status(400).json({ error: "Missing uid" });
+    try {
+        const mathSkillMap = await UserProfileService.getMathSkillMap(uid);
+        res.json(mathSkillMap || { microSkills: {}, weaknessPriority: [], practicedSkills: [] });
+    } catch (e) {
+        console.error("Profile/Maths Fetch Error:", e);
+        res.status(500).json({ error: "Failed to fetch Math skill map" });
+    }
+});
+
+// GET /api/skillmap/:subject/history - Generic skill history
+router.get('/skillmap/:subject/history', async (req, res) => {
+    const { subject } = req.params;
     const { uid, limit } = req.query;
     if (!uid) return res.status(400).json({ error: "Missing uid" });
     try {
-        const history = await UserProfileService.getMathSkillHistory(uid, parseInt(limit) || 5);
+        const history = await UserProfileService.getSkillHistory(uid, subject, parseInt(limit) || 5);
         res.json(history);
     } catch (e) {
-        console.error("Math History Fetch Error:", e);
-        res.status(500).json({ error: "Failed to fetch Math history" });
+        console.error(`${subject} History Fetch Error:`, e);
+        res.status(500).json({ error: `Failed to fetch ${subject} history` });
     }
 });
 
 // GET /api/gamification
-router.get('/gamification', async (req, res) => {
+router.get('/profile/gamification', async (req, res) => {
     const { uid } = req.query;
     if (!uid) return res.status(400).json({ error: "Missing uid" });
     try {
@@ -84,18 +98,41 @@ router.get('/gamification', async (req, res) => {
 
 // POST /api/redemption/blindbox
 router.post('/redemption/blindbox', async (req, res) => {
-    const { uid } = req.body;
+    const { uid, tier } = req.body;
     if (!uid) return res.status(400).json({ error: "Missing uid" });
 
-    const BOX_COST = 500;
-    const roll = Math.random();
-    const newItem = roll > 0.8
-        ? { id: 'tutor_janice', name: 'Miss Janie (Star Tutor)', type: 'tutor', rarity: 'legendary', icon: '👩‍🏫' }
-        : { id: `avatar_${Math.floor(Math.random() * 5)}`, name: 'Cool Avatar Frame', type: 'avatar', rarity: 'common', icon: '🖼️' };
-
     try {
+        const store = require('../data/../redemption_store.json');
+        const cardPool = require('../data/card_pool.json');
+        const boxTypes = {
+            standard: 'blind_box_standard',
+            tutor: 'blind_box_tutor',
+            aesthetics: 'blind_box_aesthetics'
+        };
+
+        const config = store.redemption_items[boxTypes[tier || 'standard']];
+        if (!config) return res.status(400).json({ error: "Invalid box tier" });
+
+        // Logic to pick item from pool
+        let pool = [];
+        if (config.pool.includes('student_cards')) pool = cardPool.student_cards;
+        else if (config.pool.includes('tutor_cards')) pool = cardPool.tutor_cards;
+        else if (config.pool.includes('avatar_frames')) pool = cardPool.avatar_frames;
+
+        if (pool.length === 0) return res.status(500).json({ error: "Pool is empty" });
+
+        // Simple random draw (can be enhanced with rarity weights later)
+        const drawnItem = pool[Math.floor(Math.random() * pool.length)];
+        const newItem = { 
+            id: drawnItem.id, 
+            name: drawnItem.name, 
+            type: tier === 'standard' ? 'student' : (tier === 'tutor' ? 'tutor' : 'frame'), 
+            rarity: drawnItem.rarity, 
+            image: drawnItem.image 
+        };
+
         const GamificationService = require('../services/GamificationService');
-        const result = await GamificationService.redeemItem(uid, newItem.id, BOX_COST, newItem);
+        const result = await GamificationService.redeemItem(uid, newItem.id, config.cost, newItem);
 
         if (result.success) {
             res.json({ success: true, newItem, newBalance: result.newBalance });
@@ -105,6 +142,73 @@ router.post('/redemption/blindbox', async (req, res) => {
     } catch (e) {
         console.error("Redemption Error:", e);
         res.status(500).json({ error: "Transaction failed" });
+    }
+});
+
+// POST /api/redemption/equip
+router.post('/redemption/equip', async (req, res) => {
+    const { uid, itemId, slot } = req.body;
+    if (!uid || !itemId || !slot) return res.status(400).json({ error: "Missing required fields" });
+    try {
+        const result = await UserProfileService.equipItem(uid, itemId, slot);
+        res.json(result);
+    } catch (e) {
+        res.status(500).json({ error: e.message });
+    }
+});
+
+/**
+ * GET /api/redemption/collection
+ * Fetch full catalog with owned status
+ */
+router.get('/redemption/collection', async (req, res) => {
+    const { uid } = req.query;
+    if (!uid) return res.status(400).json({ error: "Missing uid" });
+    try {
+        const inventorySnap = await admin.firestore().collection('users').doc(uid).collection('inventory').get();
+        const ownedCards = {};
+        inventorySnap.docs.forEach(d => {
+            const data = d.data();
+            ownedCards[data.itemId] = { ...data, docId: d.id };
+        });
+
+        const userDoc = await admin.firestore().collection('users').doc(uid).get();
+        const userData = userDoc.exists ? userDoc.data() : {};
+        const equippedTutor = userData.equipped_tutor || 'default_janie';
+        const equippedStudent = userData.equipped_student_avatar || 's_bookworm';
+        const equippedFrame = userData.equipped_frame || null;
+
+        const cardPool = require('../data/card_pool.json');
+
+        const studentCards = cardPool.student_cards.map(c => ({
+            ...c, type: 'student', owned: !!ownedCards[c.id], equipped: equippedStudent === c.id, acquiredAt: ownedCards[c.id]?.acquiredAt || null
+        }));
+
+        const tutorCards = cardPool.tutor_cards.map(c => ({
+            ...c, type: 'tutor', owned: !!ownedCards[c.id], equipped: equippedTutor === c.id, acquiredAt: ownedCards[c.id]?.acquiredAt || null
+        }));
+
+        const defaultTutors = cardPool.default_tutors.map(c => ({
+            ...c, type: 'tutor', owned: true, equipped: equippedTutor === c.id
+        }));
+
+        const avatarFrames = cardPool.avatar_frames.map(c => ({
+            ...c, type: 'frame', owned: !!ownedCards[c.id], equipped: equippedFrame === c.id, acquiredAt: ownedCards[c.id]?.acquiredAt || null
+        }));
+
+        res.json({
+            catalog: { studentCards, tutorCards: [...defaultTutors, ...tutorCards], avatarFrames },
+            stats: {
+                totalStudentCards: cardPool.student_cards.length,
+                ownedStudentCards: studentCards.filter(c => c.owned).length,
+                totalTutorCards: cardPool.tutor_cards.length + cardPool.default_tutors.length,
+                ownedTutorCards: tutorCards.filter(c => c.owned).length + cardPool.default_tutors.length,
+                ownedFrames: avatarFrames.filter(c => c.owned).length
+            }
+        });
+    } catch (e) {
+        console.error("Collection Fetch Error:", e);
+        res.status(500).json({ error: "Failed to fetch collection" });
     }
 });
 

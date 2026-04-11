@@ -1,40 +1,25 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { Trophy, Clock } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
+import { useUserStats } from '../hooks/useUserStats';
 import { cn } from '../utils/cn';
 
 const StatsBar = () => {
-    const [stats, setStats] = useState({ xp: 0, level: 1, learningTime: 0 });
     const { user } = useAuth();
+    const { stats, mutate } = useUserStats();
 
     useEffect(() => {
         if (!user || !user.uid) return;
 
-        const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
-
-        const fetchStats = () => {
-            console.log(`StatsBar: Fetching stats for user UID: ${user.uid}`);
-            fetch(`${API_URL}/api/stats?uid=${user.uid}`)
-                .then(res => {
-                    if (!res.ok) throw new Error(`Server returned ${res.status}`);
-                    return res.json();
-                })
-                .then(data => setStats(data))
-                .catch(err => console.error('StatsBar: Error fetching user stats:', err));
-        };
-
-        // Initial fetch
-        fetchStats();
-
         // Listen for XP updates (Triggered by ChatInterface or others)
         const handleXPUpdate = () => {
             console.log("StatsBar: Received xp_update event. Refreshing...");
-            fetchStats();
+            mutate();
         };
 
         window.addEventListener('xp_update', handleXPUpdate);
         return () => window.removeEventListener('xp_update', handleXPUpdate);
-    }, [user]);
+    }, [user, mutate]);
 
     // Calculate XP percentage safely
     const xpPercentage = stats?.progressPercent || 0;

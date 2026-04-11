@@ -1,0 +1,715 @@
+[
+  {
+    "id": "stat_01",
+    "topic_id": "math_stat_charts",
+    "subject": "maths",
+    "level": 3,
+    "type": "short_answer",
+    "marks": 2,
+    "question_en": "The stem-and-leaf diagram below shows the scores of 15 students in a test. Find the median of the scores. \\[ \\begin{array}{r|l} \\text{Stem (10)} & \\text{Leaf (1)} \\\\ \\hline 4 & 2, 5, 8 \\\\ 5 & 0, 3, 3, 6, 9 \\\\ 6 & 1, 4, 4, 7, 8 \\\\ 7 & 2, 5 \\end{array} \\]",
+    "question_zh": "下表顯示 15 名學生在測驗中的得分。求得分的中位數。 \\[ \\begin{array}{r|l} \\text{莖 (10)} & \\text{葉 (1)} \\\\ \\hline 4 & 2, 5, 8 \\\\ 5 & 0, 3, 3, 6, 9 \\\\ 6 & 1, 4, 4, 7, 8 \\\\ 7 & 2, 5 \\end{array} \\]",
+    "answer": "59",
+    "correct_answer": "59",
+    "solution_steps_en": [
+      "1. Total number of students \\( n = 15 \\).",
+      "2. The median is the 8th value (\\( (15+1)/2 = 8 \\)).",
+      "3. Order: (42, 45, 48, 50, 53, 53, 56, 59). The 8th value is 59.",
+      "4. Median = 59."
+    ],
+    "solution_steps_zh": [
+      "1. 學生總數 \\( n = 15 \\)。",
+      "2. 中位數是第 8 個數據 (\\( (15+1)/2 = 8 \\))。",
+      "3. 有序數據：(42, 45, 48, 50, 53, 53, 56, 59)。第 8 個數據是 59。",
+      "4. 中位數 = 59。"
+    ],
+    "diagram_json": null
+  },
+  {
+    "id": "stat_02",
+    "topic_id": "math_stat_charts",
+    "subject": "maths",
+    "level": 3,
+    "type": "short_answer",
+    "marks": 2,
+    "question_en": "The stem-and-leaf diagram below shows the heights (cm) of 12 plants. Find the range of the heights. \\[ \\begin{array}{r|l} \\text{Stem (10)} & \\text{Leaf (1)} \\\\ \\hline 10 & 2, 5, 5 \\\\ 11 & 0, 3, 7, 8 \\\\ 12 & 1, 4, 6, 9 \\\\ 13 & 2 \\end{array} \\]",
+    "question_zh": "下表顯示 12 株植物的高度 (cm)。求高度的全距。 \\[ \\begin{array}{r|l} \\text{莖 (10)} & \\text{葉 (1)} \\\\ \\hline 10 & 2, 5, 5 \\\\ 11 & 0, 3, 7, 8 \\\\ 12 & 1, 4, 6, 9 \\\\ 13 & 2 \\end{array} \\]",
+    "answer": "30 cm",
+    "correct_answer": "30",
+    "solution_steps_en": [
+      "1. Maximum value = 132 cm.",
+      "2. Minimum value = 102 cm.",
+      "3. Range = Max - Min = \\( 132 - 102 = 30 \\) cm."
+    ],
+    "solution_steps_zh": [
+      "1. 最大值 = 132 cm。",
+      "2. 最小值 = 102 cm。",
+      "3. 全距 = \\( 132 - 102 = 30 \\) cm。"
+    ],
+    "diagram_json": null
+  },
+  {
+    "id": "stat_03",
+    "topic_id": "math_stat_charts",
+    "subject": "maths",
+    "level": 3,
+    "type": "short_answer",
+    "marks": 2,
+    "question_en": "Find the mode of the following set of data: 12, 15, 12, 18, 20, 15, 12, 22, 18.",
+    "question_zh": "求以下數據集的眾數：12, 15, 12, 18, 20, 15, 12, 22, 18。",
+    "answer": "12",
+    "correct_answer": "12",
+    "solution_steps_en": [
+      "1. Count frequencies: 12 appears 3 times, 15 and 18 appear twice.",
+      "2. The value with the highest frequency is 12.",
+      "3. Mode = 12."
+    ],
+    "solution_steps_zh": [
+      "1. 點算頻數：12 出現 3 次，15 和 18 各出現 2 次。",
+      "2. 頻數最高的數值是 12。",
+      "3. 眾數 = 12。"
+    ],
+    "diagram_json": null
+  },
+  {
+    "id": "stat_04",
+    "topic_id": "math_stat_charts",
+    "subject": "maths",
+    "level": 3,
+    "type": "short_answer",
+    "marks": 2,
+    "question_en": "In a box-and-whisker diagram, the lower quartile, the median, and the upper quartile of a data set are 45, 62, and 78 respectively. Find the interquartile range (IQR).",
+    "question_zh": "在一盒形圖中，某數據集的下四分位數、中位數及上四分位數分別為 45、62 及 78。求四分位位距 (IQR)。",
+    "answer": "33",
+    "correct_answer": "33",
+    "solution_steps_en": [
+      "1. \\( Q_1 = 45, Q_3 = 78 \\).",
+      "2. IQR = \\( Q_3 - Q_1 = 78 - 45 = 33 \\)."
+    ],
+    "solution_steps_zh": [
+      "1. \\( Q_1 = 45, Q_3 = 78 \\)。",
+      "2. IQR = \\( Q_3 - Q_1 = 33 \\)。"
+    ],
+    "diagram_json": null
+  },
+  {
+    "id": "stat_05",
+    "topic_id": "math_stat_charts",
+    "subject": "maths",
+    "level": 3,
+    "type": "short_answer",
+    "marks": 2,
+    "question_en": "Find the interquartile range (IQR) of a data set if its 5-number summary is (10, 25, 40, 60, 95).",
+    "question_zh": "若某數據集的五數概括為 (10, 25, 40, 60, 95)，求其四分位位距 (IQR)。",
+    "answer": "35",
+    "correct_answer": "35",
+    "solution_steps_en": [
+      "1. From summary, \\( Q_1 = 25, Q_3 = 60 \\).",
+      "2. IQR = \\( 60 - 25 = 35 \\)."
+    ],
+    "solution_steps_zh": [
+      "1. 從概括中得 \\( Q_1 = 25, Q_3 = 60 \\)。",
+      "2. IQR = \\( 60 - 25 = 35 \\)。"
+    ],
+    "diagram_json": null
+  },
+  {
+    "id": "stat_06",
+    "topic_id": "math_stat_charts",
+    "subject": "maths",
+    "level": 4,
+    "type": "short_answer",
+    "marks": 3,
+    "question_en": "The frequency table below shows the number of pets owned by 20 families. Find the mean number of pets. \\[ \\begin{array}{|c|c|c|c|c|c|} \\hline \\text{No. of Pets } (x) & 0 & 1 & 2 & 3 & 4 \\\\ \\hline \\text{Frequency } (f) & 4 & 7 & 5 & 3 & 1 \\\\ \\hline \\end{array} \\]",
+    "question_zh": "下表顯示 20 個家庭擁有的寵物數量。求寵物數量的平均值。 \\[ \\begin{array}{|c|c|c|c|c|c|} \\hline \\text{寵物數量 } (x) & 0 & 1 & 2 & 3 & 4 \\\\ \\hline \\text{頻數 } (f) & 4 & 7 & 5 & 3 & 1 \\\\ \\hline \\end{array} \\]",
+    "answer": "1.5",
+    "correct_answer": "1.5",
+    "solution_steps_en": [
+      "1. Total pets: \\( \\\\sum f x = 0(4) + 1(7) + 2(5) + 3(3) + 4(1) = 30 \\).",
+      "2. Total families \\( n = 20 \\).",
+      "3. Mean = \\( 30 / 20 = 1.5 \\)."
+    ],
+    "solution_steps_zh": [
+      "1. 寵物總數：\\( \\sum f x = 30 \\)。",
+      "2. 家庭總數 \\( n = 20 \\)。",
+      "3. 平均值 = \\( 30 / 20 = 1.5 \\)。"
+    ],
+    "diagram_json": null
+  },
+  {
+    "id": "stat_07",
+    "topic_id": "math_stat_charts",
+    "subject": "maths",
+    "level": 4,
+    "type": "short_answer",
+    "marks": 3,
+    "question_en": "The frequency table below shows the marks of a quiz. Find the interquartile range (IQR). \\[ \\begin{array}{|c|c|c|c|c|c|} \\hline \\text{Score } (x) & 2 & 3 & 4 & 5 & 6 \\\\ \\hline \\text{Frequency } (f) & 3 & 5 & 8 & 6 & 2 \\\\ \\hline \\end{array} \\]",
+    "question_zh": "下表顯示得分的分佈。求得分的四分位位距 (IQR)。",
+    "answer": "2",
+    "correct_answer": "2",
+    "solution_steps_en": [
+      "1. \\( n = 24 \\). \\( Q_1 \\) is at \\( 24 \\\\times 0.25 = 6 \\)th position.",
+      "2. Cumulative frequencies: (2): 3, (3): 8. Thus \\( Q_1 = 3 \\).",
+      "3. \\( Q_3 \\) is at \\( 24 \\\\times 0.75 = 18 \\)th position.",
+      "4. Cumulative: (4): 16, (5): 22. Thus \\( Q_3 = 5 \\).",
+      "5. IQR = \\( 5 - 3 = 2 \\)."
+    ],
+    "solution_steps_zh": [
+      "1. \\( n = 24 \\)。\\( Q_1 \\) 位於第 6 個位置。",
+      "2. 累積頻數：(2): 3, (3): 8。故 \\( Q_1 = 3 \\)。",
+      "3. \\( Q_3 \\) 位於第 18 個位置。",
+      "4. 累積頻數至 (4): 16, (5): 22。故 \\( Q_3 = 5 \\)。",
+      "5. IQR = \\( 5 - 3 = 2 \\)。"
+    ],
+    "diagram_json": null
+  },
+  {
+    "id": "stat_08",
+    "topic_id": "math_stat_charts",
+    "subject": "maths",
+    "level": 4,
+    "type": "short_answer",
+    "marks": 3,
+    "question_en": "Compare the dispersion of heights between Class A and Class B. IQR of Class A is 30 cm and Class B is 22 cm. Which class has more varied heights?",
+    "question_zh": "比較 A 班與 B 班的高度離散程度。A 班的 IQR 為 30 cm，B 班為 22 cm。哪一班的高度較為離散？",
+    "answer": "Class A",
+    "correct_answer": "Class A",
+    "solution_steps_en": [
+      "1. Dispersion can be measured by IQR.",
+      "2. 30 cm > 22 cm, so Class A has more varied heights."
+    ],
+    "solution_steps_zh": [
+      "1. 離散程度可用 IQR 衡量。",
+      "2. 30 cm > 22 cm，故 A 班的高度較為離散。"
+    ],
+    "diagram_json": null
+  },
+  {
+    "id": "stat_09",
+    "topic_id": "math_stat_charts",
+    "subject": "maths",
+    "level": 4,
+    "type": "short_answer",
+    "marks": 3,
+    "question_en": "From an Ogive, the cumulative frequency of 40 kg is 35 and 60 kg is 80. If the total is 100, how many items are between 40 and 60 kg?",
+    "question_zh": "在一累積頻數圖中，40 kg 的累積頻數為 35，60 kg 為 80。總數為 100，求重量介乎 40 與 60 kg 的項目數量。",
+    "answer": "45",
+    "correct_answer": "45",
+    "solution_steps_en": [
+      "1. Number = Cumulative frequency (60) - Cumulative frequency (40) = \\( 80 - 35 = 45 \\)."
+    ],
+    "solution_steps_zh": [
+      "1. 數量 = 累積頻數 (60) - 累積頻數 (40) = \\( 80 - 35 = 45 \\)。"
+    ],
+    "diagram_json": null
+  },
+  {
+    "id": "stat_10",
+    "topic_id": "math_stat_charts",
+    "subject": "maths",
+    "level": 4,
+    "type": "short_answer",
+    "marks": 3,
+    "question_en": "The frequency table shows the number of siblings of 10 students. Find the median. \\[ \\begin{array}{|c|c|c|c|c|} \\hline \\text{Siblings} & 0 & 1 & 2 & 3 \\\\ \\hline \\text{Frequency} & 2 & 3 & 4 & 1 \\\\ \\hline \\end{array} \\]",
+    "question_zh": "下表顯示 10 名學生的兄弟姐妹人數。求數據的中位數。",
+    "answer": "1.5",
+    "correct_answer": "1.5",
+    "solution_steps_en": [
+      "1. \\( n = 10 \\). Median is average of 5th and 6th values.",
+      "2. Order: (0,0,1,1,1,2,2,2,2,3).",
+      "3. 5th is 1, 6th is 2.",
+      "4. Median = \\( (1 + 2) / 2 = 1.5 \\)."
+    ],
+    "solution_steps_zh": [
+      "1. \\( n = 10 \\)。中位數是第 5 個及第 6 個數值的平均值。",
+      "2. 有序數據：(0,0,1,1,1,2,2,2,2,3)。",
+      "3. 第 5 個是 1，第 6 個是 2。",
+      "4. 中位數 = 1.5。"
+    ],
+    "diagram_json": null
+  },
+  {
+    "id": "stat_11",
+    "topic_id": "math_stat_charts",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 4,
+    "question_en": "The stem-and-leaf diagram below shows the ages of 11 employees. The median age is 34. Find the value of \\( x \\). \\[ \\begin{array}{r|l} \\text{Stem (10)} & \\text{Leaf (1)} \\\\ \\hline 2 & 2, 5, 8 \\\\ 3 & 1, 3, x, 7 \\\\ 4 & 0, 4, 6, 9 \\end{array} \\]",
+    "question_zh": "下表顯示 11 名員工的年齡。年齡的中位數為 34。求 \\( x \\) 的值。 \\[ \\begin{array}{r|l} \\text{莖 (10)} & \\text{葉 (1)} \\\\ \\hline 2 & 2, 5, 8 \\\\ 3 & 1, 3, x, 7 \\\\ 4 & 0, 4, 6, 9 \\end{array} \\]",
+    "answer": "4",
+    "correct_answer": "4",
+    "solution_steps_en": [
+      "1. \\( n = 11 \\). The median is the 6th value.",
+      "2. Counting from the smallest: (22, 25, 28, 31, 33, 30+x).",
+      "3. The 6th value is \\( 30 + x = 34 \\\\implies x = 4 \\)."
+    ],
+    "solution_steps_zh": [
+      "1. \\( n = 11 \\)。中位數是第 6 個數據。",
+      "2. 從最小點算：(22, 25, 28, 31, 33, 30+x)。",
+      "3. 第 6 個數據是 \\( 30 + x = 34 \\\\implies x = 4 \\)。"
+    ],
+    "diagram_json": null
+  },
+  {
+    "id": "stat_12",
+    "topic_id": "math_stat_charts",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 3,
+    "question_en": "The stem-and-leaf diagram shows the weights of 10 bags. The range of the weights is 25 kg. Find the value of \\( y \\). \\[ \\begin{array}{r|l} \\text{Stem (10)} & \\text{Leaf (1)} \\\\ \\hline 4 & 2, 5, 8 \\\\ 5 & 1, 3, 3, 7 \\\\ 6 & 0, 4, y \\end{array} \\]",
+    "question_zh": "下表顯示 10 袋物品的重量。重量的全距為 25 kg。求 \\( y \\) 的值。 \\[ \\begin{array}{r|l} \\text{莖 (10)} & \\text{葉 (1)} \\\\ \\hline 4 & 2, 5, 8 \\\\ 5 & 1, 3, 3, 7 \\\\ 6 & 0, 4, y \\end{array} \\]",
+    "answer": "7",
+    "correct_answer": "7",
+    "solution_steps_en": [
+      "1. Smallest = 42. Largest = \\( 60 + y \\).",
+      "2. Range = \\( (60 + y) - 42 = 25 \\).",
+      "3. \\( 18 + y = 25 \\\\implies y = 7 \\)."
+    ],
+    "solution_steps_zh": [
+      "1. 最小值 = 42。最大值 = \\( 60 + y \\)。",
+      "2. 全距 = \\( (60 + y) - 42 = 25 \\)。",
+      "3. \\( 18 + y = 25 \\\\implies y = 7 \\)。"
+    ],
+    "diagram_json": null
+  },
+  {
+    "id": "stat_13",
+    "topic_id": "math_stat_charts",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 4,
+    "question_en": "If the mean mark of 60, 70, 80 with frequencies 5, \\( k \\), 8 is 72, find the value of \\( k \\).",
+    "question_zh": "若 60, 70, 80 的頻數分別為 5, \\( k \\), 8 且平均分為 72，求 \\( k \\) 的值。",
+    "answer": "2",
+    "correct_answer": "2",
+    "solution_steps_en": [
+      "1. Mean = \\( \\\\frac{60(5) + 70(k) + 80(8)}{5 + k + 8} = 72 \\).",
+      "2. \\( \\\\frac{300 + 70k + 640}{13 + k} = 72 \\).",
+      "3. \\( 940 + 70k = 936 + 72k \\).",
+      "4. \\( 2k = 4 \\\\implies k = 2 \\)."
+    ],
+    "solution_steps_zh": [
+      "1. 平均值 = \\( \\\\frac{60(5) + 70(k) + 80(8)}{13 + k} = 72 \\)。",
+      "2. \\( 940 + 70k = 936 + 72k \\)。",
+      "3. \\( 2k = 4 \\\\implies k = 2 \\)。"
+    ],
+    "diagram_json": null
+  },
+  {
+    "id": "stat_14",
+    "topic_id": "math_stat_charts",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 4,
+    "question_en": "If the median of scores 1(4), 2(6), 3(p), 4(5), 5(3) is 3, find the minimum possible value of \\( p \\).",
+    "question_zh": "若得分 1(4), 2(6), 3(p), 4(5), 5(3) 的中位數為 3，求 \\( p \\) 的最小可能值。",
+    "answer": "3",
+    "correct_answer": "3",
+    "solution_steps_en": [
+      "1. Cumulative frequency of scores 1 and 2 is 10.",
+      "2. \\( n = 18 + p \\). Median is at \\( (18+p+1)/2 \\).",
+      "3. For the median to be 3, the middle position must be \\( > 10 \\).",
+      "4. \\( (19+p)/2 > 10 \\\\implies 19+p > 20 \\\\implies p > 1 \\).",
+      "5. If \\( p=2, n=20 \\), median is average of 10th (2) and 11th (3) which is 2.5. Not 3.",
+      "6. If \\( p=3, n=21 \\), median is 11th (3). Minimum \\( p = 3 \\)."
+    ],
+    "solution_steps_zh": [
+      "1. 1 分及 2 分的累積頻數為 10。",
+      "2. \\( n = 18 + p \\)。中位數位於第 \\( (19+p)/2 \\) 個位置。",
+      "3. 為了使中位數為 3，中間位置必須大於 10。",
+      "4. \\( (19+p)/2 > 10 \\\\implies p > 1 \\)。",
+      "5. 若 \\( p=2, n=20 \\), 中位數是第 10(2) 與第 11(3) 的平均值為 2.5。不合。",
+      "6. 若 \\( p=3, n=21 \\), 第 11 個是 3。最小 \\( p = 3 \\)。"
+    ],
+    "diagram_json": null
+  },
+  {
+    "id": "stat_15",
+    "topic_id": "math_stat_charts",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 3,
+    "question_en": "A set of 19 values has mean 60. If outlier 140 is removed, find the new mean of the 18 items.",
+    "question_zh": "一組 19 個數據平均值為 60。若移除離群值 140，求剩餘 18 項的新平均值。",
+    "answer": "55.56",
+    "correct_answer": "55.56",
+    "solution_steps_en": [
+      "1. Sum = \\( 19 \\\\times 60 = 1140 \\).",
+      "2. New sum = \\( 1140 - 140 = 1000 \\).",
+      "3. New mean = \\( 1000 / 18 \\\\approx 55.56 \\)."
+    ],
+    "solution_steps_zh": [
+      "1. 總和 = \\( 1140 \\)。",
+      "2. 新總和 = \\( 1000 \\)。",
+      "3. 新平均值 = \\( 1000 / 18 \\\\approx 55.56 \\)。"
+    ],
+    "diagram_json": null
+  },
+  {
+    "id": "stat_16",
+    "topic_id": "math_stat_charts",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 3,
+    "question_en": "The median of 15 numbers is 42. If the largest number is increased by 20, what is the new median?",
+    "question_zh": "15 個數字的中位數為 42。若將最大的數字增加 20，新的中位數是多少？",
+    "answer": "42",
+    "correct_answer": "42",
+    "solution_steps_en": [
+      "1. The median is the 8th value (\\( (15+1)/2 = 8 \\)).",
+      "2. Increasing the largest value (the 15th value) does not change the 8th item.",
+      "3. Median remains 42."
+    ],
+    "solution_steps_zh": [
+      "1. 中位數是排序後的第 8 個數據（42）。",
+      "2. 增加最大的數值（第 15 個數據）不會影響第 8 個位置的數據。",
+      "3. 中位數保持為 42。"
+    ],
+    "diagram_json": null
+  },
+  {
+    "id": "stat_17",
+    "topic_id": "math_stat_charts",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 3,
+    "question_en": "Range was 50, max was 95. If 110 is added, find the new range.",
+    "question_zh": "全距為 50，最大值為 95。若加入一個 110，求新的全距。",
+    "answer": "65",
+    "correct_answer": "65",
+    "solution_steps_en": [
+      "1. Original min = \\( 95 - 50 = 45 \\).",
+      "2. New max = 110.",
+      "3. New range = \\( 110 - 45 = 65 \\)."
+    ],
+    "solution_steps_zh": [
+      "1. 原最小值 = \\( 95 - 50 = 45 \\)。",
+      "2. 新最大值 = 110。",
+      "3. 新全距 = \\( 110 - 45 = 65 \\)。"
+    ],
+    "diagram_json": null
+  },
+  {
+    "id": "stat_18",
+    "topic_id": "math_stat_charts",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 4,
+    "question_en": "If 10 is added to every data point in a set where \\( Q_1=30, Q_3=60 \\), find new IQR.",
+    "question_zh": "若將組中每個數據都加 10，且已知原 \\( Q_1=30, Q_3=60 \\)，求新的 IQR。",
+    "answer": "30",
+    "correct_answer": "30",
+    "solution_steps_en": [
+      "1. New \\( Q_1 = 40, Q_3 = 70 \\).",
+      "2. New IQR = \\( 70 - 40 = 30 \\)."
+    ],
+    "solution_steps_zh": [
+      "1. 新 \\( Q_1 = 40, Q_3 = 70 \\)。",
+      "2. 新 IQR = \\( 70 - 40 = 30 \\)。"
+    ],
+    "diagram_json": null
+  },
+  {
+    "id": "stat_19",
+    "topic_id": "math_stat_charts",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 5,
+    "question_en": "Find \\( a, b \\) in stem-leaf with 10 data points if Mean=57.1 and Median=56. \\[ \\begin{array}{r|l} \\text{Stem} & \\text{Leaf} \\\\ \\hline 4 & 5, 8 \\\\ 5 & 2, 4, a, b \\\\ 6 & 1, 3, 7, 9 \\end{array} \\]",
+    "question_zh": "10 個數據的幹葉圖中，若平均值為 57.1 且中位數為 56，求 \\( a \\) 及 \\( b \\)。",
+    "answer": "a = 5, b = 7",
+    "correct_answer": "5, 7",
+    "solution_steps_en": [
+      "1. Total sum = \\( 57.1 \\\\times 10 = 571 \\).",
+      "2. Sum of knowns = \\( 45+48+52+54+61+63+67+69 = 459 \\).",
+      "3. \\( (50+a) + (50+b) = 571 - 459 = 112 \\\\implies a+b = 12 \\).",
+      "4. Median \\( (50+a + 50+b)/2 = 56 \\\\implies a+b = 12 \\).",
+      "5. If \\( a=5, b=7 \\), sorted leaves in Stem 5: [2, 4, 5, 7]. 5th is 55, 6th is 57. Median = 56."
+    ],
+    "solution_steps_zh": [
+      "1. 總和 = 571。",
+      "2. 已知項和 = 459。",
+      "3. \\( 100 + a + b = 112 \\\\implies a + b = 12 \\)。",
+      "4. 中位數 56 要求第 5 和第 6 個數據之和為 112。",
+      "5. 若 \\( a=5, b=7 \\)，排序葉子後中位數即為 56。符合所有條件。"
+    ],
+    "diagram_json": null
+  },
+  {
+    "id": "stat_20",
+    "topic_id": "math_stat_charts",
+    "subject": "maths",
+    "level": 5,
+    "type": "short_answer",
+    "marks": 4,
+    "question_en": "Min=15. Max is 60 more than Min. Find Max and Range.",
+    "question_zh": "最小值為 15。最大值比最小值大 60。求最大值及全距。",
+    "answer": "Max = 75, Range = 60",
+    "correct_answer": "75, 60",
+    "solution_steps_en": [
+      "1. Max = \\( 15 + 60 = 75 \\).",
+      "2. Range = \\( 75 - 15 = 60 \\)."
+    ],
+    "solution_steps_zh": [
+      "1. 最大值 = \\( 15 + 60 = 75 \\)。",
+      "2. 全距 = \\( 75 - 15 = 60 \\)。"
+    ],
+    "diagram_json": null
+  },
+  {
+    "id": "stat_21",
+    "topic_id": "math_stat_charts",
+    "subject": "maths",
+    "level": 7,
+    "type": "short_answer",
+    "marks": 5,
+    "question_en": "The standard deviation of a data set \\( x \\) is \\( \\sigma = 4 \\). If each data point in \\( x \\) is multiplied by \\( 3 \\) and then \\( 10 \\) is subtracted from the product to form a new data set \\( y \\), find the standard deviation of \\( y \\).",
+    "question_zh": "數據集 \\( x \\) 的標準差為 \\( \\sigma = 4 \\)。若將 \\( x \\) 中的每個數據均乘以 \\( 3 \\) 且從乘積中減去 \\( 10 \\) 以組成新數據集 \\( y \\)，求 \\( y \\) 的標準差。",
+    "answer": "12",
+    "correct_answer": "12",
+    "solution_steps_en": [
+      "1. For a linear transformation \\( y = ax + b \\), the relationship between the standard deviations is given by \\sigma_y = |a| \\times \\sigma_x \\) .",
+      "2. In this transformation, \\( a = 3 \\) and \\( b = -10 \\).",
+      "\\( 3. The new standard deviation \\sigma_y = |3| \\times 4 = 12 \\) ."
+    ],
+    "solution_steps_zh": [
+      "1. 對於線性變換 \\( y = ax + b \\)，標準差之間的關係為 \\sigma_y = |a| \\times \\sigma_x \\) 。",
+      "2. 在此變換中，\\( a = 3 \\) 且 \\( b = -10 \\)。",
+      "\\( 3. 新的標準差 \\sigma_y = |3| \\times 4 = 12 \\) 。"
+    ],
+    "diagram_json": null
+  },
+  {
+    "id": "stat_22",
+    "topic_id": "math_stat_charts",
+    "subject": "maths",
+    "level": 7,
+    "type": "short_answer",
+    "marks": 5,
+    "question_en": "The variance of a data set \\( x \\) is \\( 25 \\). If the relationship between \\( x \\) and \\( y \\) is given by \\( y = -2x + 5 \\), find the variance of \\( y \\).",
+    "question_zh": "數據集 \\( x \\) 的方差為 \\( 25 \\)。若 \\( x \\) 與 \\( y \\) 之間的關係為 \\( y = -2x + 5 \\)，求 \\( y \\) 的方差。",
+    "answer": "100",
+    "correct_answer": "100",
+    "solution_steps_en": [
+      "1. For a linear transformation \\( y = ax + b \\), the relationship between the variances is given by \\text{Var}(y) = a^2 \\times \\text{Var}(x) \\) .",
+      "2. In this case, \\( a = -2 \\).",
+      "\\( 3. The new variance \\text{Var}(y) = (-2)^2 \\times 25 = 4 \\times 25 = 100 \\) ."
+    ],
+    "solution_steps_zh": [
+      "1. 對於線性變換 \\( y = ax + b \\)，方差之間的關係為 \\text{Var}(y) = a^2 \\times \\text{Var}(x) \\) 。",
+      "2. 在此情況下，\\( a = -2 \\)。",
+      "\\( 3. 新的方差 \\text{Var}(y) = (-2)^2 \\times 25 = 100 \\) 。"
+    ],
+    "diagram_json": null
+  },
+  {
+    "id": "stat_23",
+    "topic_id": "math_stat_charts",
+    "subject": "maths",
+    "level": 7,
+    "type": "short_answer",
+    "marks": 6,
+    "question_en": "In a school, Class A has \\( 25 \\) students with a mean score of \\( 60 \\) marks, while Class B has \\( 35 \\) students with a mean score of \\( 72 \\) marks. Find the combined mean score of the two classes.",
+    "question_zh": "在一所學校中，A 班有 \\( 25 \\) 名學生，其平均分為 \\( 60 \\) 分；而 B 班則有 \\( 35 \\) 名學生，其平均分為 \\( 72 \\) 分。求這兩班的總平均分。",
+    "answer": "67",
+    "correct_answer": "67",
+    "solution_steps_en": [
+      "1. Calculate the total score of Class A: \\( 25 \\times 60 = 1500 \\) marks.",
+      "2. Calculate the total score of Class B: \\( 35 \\times 72 = 2520 \\) marks.",
+      "3. The combined total score of both classes is \\( 1500 + 2520 = 4020 \\) marks.",
+      "4. The total number of students in both classes is \\( 25 + 35 = 60 \\).",
+      "5. The combined mean score is \\( 4020 / 60 = 67 \\) marks."
+    ],
+    "solution_steps_zh": [
+      "1. 計算 A 班的總分：\\( 25 \\times 60 = 1500 \\) 分。",
+      "2. 計算 B 班的總分：\\( 35 \\times 72 = 2520 \\) 分。",
+      "3. 兩班的總得分為 \\( 1500 + 2520 = 4020 \\) 分。",
+      "4. 兩班的總人數為 \\( 25 + 35 = 60 \\) 人。",
+      "5. 總平均分為 \\( 4020 / 60 = 67 \\) 分。"
+    ],
+    "diagram_json": null
+  },
+  {
+    "id": "stat_24",
+    "topic_id": "math_stat_charts",
+    "subject": "maths",
+    "level": 7,
+    "type": "short_answer",
+    "marks": 6,
+    "question_en": "There are two groups of data, each consisting of \\( 10 \\) data points. Both groups have a variance of \\( 9 \\) and they share the same mean. Find the variance of the combined group of \\( 20 \\) data points.",
+    "question_zh": "現有兩組各含有 \\( 10 \\) 個數據的數據集。這兩組的方差均為 \\( 9 \\) 且平均值相同。求組合後共 \\( 20 \\) 個數據的方差。",
+    "answer": "9",
+    "correct_answer": "9",
+    "solution_steps_en": [
+      "1. Since both groups have the same mean, the combined mean remains identical to the group means.",
+      "\\( 2. If two groups have the same mean, the combined variance \\text{Var}_{comb} is given by \\frac{n_1 \\text{Var}_1 + n_2 \\text{Var}_2}{n_1 + n_2} \\) .",
+      "\\( 3. Substituting the values: \\text{Var}_{comb} = \\frac{10(9) + 10(9)}{10 + 10} = \\frac{180}{20} = 9 \\) ."
+    ],
+    "solution_steps_zh": [
+      "1. 由於兩組平均值相同，組合後的平均值與各組平均值相同。",
+      "\\( 2. 若兩組平均值相同，組合方差 \\text{Var}_{comb} 為 \\frac{n_1 \\text{Var}_1 + n_2 \\text{Var}_2}{n_1 + n_2} \\) 。",
+      "\\( 3. 代入數值：\\text{Var}_{comb} = \\frac{10(9) + 10(9)}{10 + 10} = 9 \\) 。"
+    ],
+    "diagram_json": null
+  },
+  {
+    "id": "stat_25",
+    "topic_id": "math_stat_charts",
+    "subject": "maths",
+    "level": 7,
+    "type": "short_answer",
+    "marks": 6,
+    "question_en": "The mean weight of a group of \\( 10 \\) boys is \\( 50 \\) kg and that of \\( 20 \\) girls is \\( 44 \\) kg. If another girl with a weight of \\( 47 \\) kg joins the group, find the new mean weight of the \\( 31 \\) children. (Correct your answer to 2 decimal places.)",
+    "question_zh": "一組 \\( 10 \\) 名男孩的平均體重為 \\( 50 \\) kg，而 \\( 20 \\) 名女孩的平均體重則為 \\( 44 \\) kg。若另一名體重為 \\( 47 \\) kg 的女孩加入該組，求這 \\( 31 \\) 名孩子的新平均體重。（答案須取至小數點後兩個位。）",
+    "answer": "46.03 kg",
+    "correct_answer": "46.03",
+    "solution_steps_en": [
+      "1. Calculate the total weight of the boys: \\( 10 \\times 50 = 500 \\) kg.",
+      "2. Calculate the total weight of the girls: \\( 20 \\times 44 = 880 \\) kg.",
+      "3. The new total weight after the additional girl joins is \\( 500 + 880 + 47 = 1427 \\) kg.",
+      "4. The new total number of children is \\( 31 \\).",
+      "5. The new mean weight is \\( 1427 / 31 \\approx 46.0322... \\approx 46.03 \\) kg."
+    ],
+    "solution_steps_zh": [
+      "1. 計算男孩的總重量：\\( 10 \\times 50 = 500 \\) kg。",
+      "2. 計算女孩的總重量：\\( 20 \\times 44 = 880 \\) kg。",
+      "3. 加入新成員後的總重為 \\( 500 + 880 + 47 = 1427 \\) kg。",
+      "4. 總人數增加至 \\( 31 \\) 人。",
+      "5. 新平均體重為 \\( 1427 / 31 \\approx 46.03 \\) kg。"
+    ],
+    "diagram_json": null
+  },
+  {
+    "id": "stat_26",
+    "topic_id": "math_stat_charts",
+    "subject": "maths",
+    "level": 7,
+    "type": "short_answer",
+    "marks": 4,
+    "question_en": "A student obtained a score of \\( 84 \\) marks in a test. If this score is \\( 2 \\) standard deviations above the mean score of \\( 60 \\) marks, find the standard deviation of the test.",
+    "question_zh": "一名學生在測驗中取得 \\( 84 \\) 分。若該分數比平均分 \\( 60 \\) 分高出 \\( 2 \\) 個標準差，求該測驗的標準差。",
+    "answer": "12",
+    "correct_answer": "12",
+    "solution_steps_en": [
+      "1. Use the standard score relationship: \\( x = \\mu + z\\sigma \\).",
+      "2. Given \\( x = 84 \\), \\( \\mu = 60 \\), and \\( z = 2 \\).",
+      "3. Substitute these into the equation: \\( 84 = 60 + 2\\sigma \\).",
+      "4. Solve for \\( \\sigma \\): \\( 2\\sigma = 24 \\implies \\sigma = 12 \\)."
+    ],
+    "solution_steps_zh": [
+      "1. 使用標準分的關係式：\\( x = \\mu + z\\sigma \\)。",
+      "2. 已知 \\( x = 84 \\)、\\( \\mu = 60 \\) 且 \\( z = 2 \\)。",
+      "3. 代入關係式：\\( 84 = 60 + 2\\sigma \\)。",
+      "4. 解 \\( \\sigma \\)：\\( 2\\sigma = 24 \\implies \\sigma = 12 \\)。"
+    ],
+    "diagram_json": null
+  },
+  {
+    "id": "stat_27",
+    "topic_id": "math_stat_charts",
+    "subject": "maths",
+    "level": 7,
+    "type": "short_answer",
+    "marks": 6,
+    "question_en": "In a mid-term examination, a student scored \\( 75 \\) marks in Mathematics and \\( 80 \\) marks in Biology. The mean and standard deviation of the two subjects are shown below: \\[ \\begin{array}{|c|c|c|} \\hline & \\text{Mean} & \\text{Standard Deviation} \\\\ \\hline \\text{Mathematics} & 60 & 10 \\\\ \\hline \\text{Biology} & 70 & 8 \\\\ \\hline \\end{array} \\] In which subject did the student perform better relative to the class?",
+    "question_zh": "在一次中期考試中，一名學生在數學科取得 \\( 75 \\) 分，在生物科取得 \\( 80 \\) 分。這兩科的平均分及標準差如下表所示： \\[ \\begin{array}{|c|c|c|} \\hline & \\text{平均分} & \\text{標準差} \\\\ \\hline \\text{數學} & 60 & 10 \\\\ \\hline \\text{生物} & 70 & 8 \\\\ \\hline \\end{array} \\] 相對於全班，該學生在哪一科表現較佳？",
+    "answer": "Mathematics",
+    "correct_answer": "Mathematics",
+    "solution_steps_en": [
+      "1. Calculate the standard score (\\( z \\)-score) for Mathematics: \\( z_{Math} = (75 - 60) / 10 = 1.5 \\).",
+      "2. Calculate the standard score (\\( z \\)-score) for Biology: \\( z_{Bio} = (80 - 70) / 8 = 1.25 \\).",
+      "3. Comparing the standard scores: \\( 1.5 > 1.25 \\).",
+      "4. Therefore, the student performed better in Mathematics relative to the class."
+    ],
+    "solution_steps_zh": [
+      "1. 計算數學科的標準分：\\( z_{數學} = (75 - 60) / 10 = 1.5 \\)。",
+      "2. 計算生物科的標準分：\\( z_{生物} = (80 - 70) / 8 = 1.25 \\)。",
+      "3. 比較兩科的標準分：\\( 1.5 > 1.25 \\)。",
+      "4. 因此，該學生在數學科的表現相對較佳。"
+    ],
+    "diagram_json": null
+  },
+  {
+    "id": "stat_28",
+    "topic_id": "math_stat_charts",
+    "subject": "maths",
+    "level": 7,
+    "type": "short_answer",
+    "marks": 5,
+    "question_en": "The mean and standard deviation of a set of test scores are \\( 100 \\) marks and \\( 20 \\) marks respectively. If a student's standard score is \\( -1.5 \\), find the student's original score.",
+    "question_zh": "一組測驗得分的平均分及標準差分別為 \\( 100 \\) 分及 \\( 20 \\) 分。若一名學生的標準分為 \\( -1.5 \\)，求該學生的原始分數。",
+    "answer": "70",
+    "correct_answer": "70",
+    "solution_steps_en": [
+      "1. Use the \\( z \\)-score formula: \\( z = (x - \\mu) / \\sigma \\).",
+      "2. Substitute the given values: \\( -1.5 = (x - 100) / 20 \\).",
+      "3. Rearrange to solve for \\( x \\): \\( x - 100 = -1.5 \\times 20 = -30 \\).",
+      "4. The original score \\( x = 100 - 30 = 70 \\) marks."
+    ],
+    "solution_steps_zh": [
+      "1. 使用標準分公式：\\( z = (x - \\mu) / \\sigma \\)。",
+      "2. 代入已知數值：\\( -1.5 = (x - 100) / 20 \\)。",
+      "3. 解 \\( x \\)：\\( x - 100 = -30 \\)。",
+      "4. 原始分數 \\( x = 70 \\) 分。"
+    ],
+    "diagram_json": null
+  },
+  {
+    "id": "stat_29",
+    "topic_id": "math_stat_charts",
+    "subject": "maths",
+    "level": 7,
+    "type": "short_answer",
+    "marks": 5,
+    "question_en": "The standard deviation of a data set is \\( 15 \\). If a score of \\( 120 \\) in the data set corresponds to a standard score of \\( 1.2 \\), find the mean of the data set.",
+    "question_zh": "一組數據集的標準差為 \\( 15 \\)。若該數據集中數值為 \\( 120 \\) 的數據所對應的標準分為 \\( 1.2 \\)，求該數據集的平均值。",
+    "answer": "102",
+    "correct_answer": "102",
+    "solution_steps_en": [
+      "1. Use the \\( z \\)-score formula: \\( z = (x - \\mu) / \\sigma \\).",
+      "2. Substitute the given values: \\( 1.2 = (120 - \\mu) / 15 \\).",
+      "3. Rearrange to solve for \\mu: \\( 120 - \\mu = 1.2 \\times 15 = 18 \\).",
+      "\\( 4. The mean \\mu = 120 - 18 = 102 \\) ."
+    ],
+    "solution_steps_zh": [
+      "1. 使用標準分公式：\\( z = (x - \\mu) / \\sigma \\)。",
+      "2. 代入已知數值：\\( 1.2 = (120 - \\mu) / 15 \\)。",
+      "3. 解 \\mu：\\( 120 - \\mu = 18 \\)。",
+      "\\( 4. 平均值 \\mu = 120 - 18 = 102 \\) 。"
+    ],
+    "diagram_json": null
+  },
+  {
+    "id": "stat_30",
+    "topic_id": "math_stat_charts",
+    "subject": "maths",
+    "level": 7,
+    "type": "short_answer",
+    "marks": 6,
+    "question_en": "The following frequency distribution table shows the heights (cm) of a group of students: \\[ \\begin{array}{|c|c|} \\hline \\text{Height (cm)} & \\text{Frequency} \\\\ \\hline 140 - 150 & 6 \\\\ \\hline 150 - 160 & 14 \\\\ \\hline 160 - 170 & 10 \\\\ \\hline \\end{array} \\] Estimate the mean height of the group of students using class marks.",
+    "question_zh": "下表顯示一組學生的身高 (cm) 頻數分佈： \\[ \\begin{array}{|c|c|} \\hline \\text{身高 (cm)} & \\text{頻數} \\\\ \\hline 140 - 150 & 6 \\\\ \\hline 150 - 160 & 14 \\\\ \\hline 160 - 170 & 10 \\\\ \\hline \\end{array} \\] 利用組中點估計該組學生的平均身高。",
+    "answer": "156.33 cm",
+    "correct_answer": "156.33",
+    "solution_steps_en": [
+      "1. Find the class marks (mid-points) for each interval: \\( 145, 155, 165 \\).",
+      "2. Calculate the sum of (\\( x \\times f \\)): \\( 145(6) + 155(14) + 165(10) = 870 + 2170 + 1650 = 4690 \\).",
+      "3. Find the total frequency \\( n = 6 + 14 + 10 = 30 \\).",
+      "4. Estimated mean = \\( \\sum (x \\times f) / n = 4690 / 30 \\approx 156.333... \\approx 156.33 \\) cm."
+    ],
+    "solution_steps_zh": [
+      "1. 求各組組中點：\\( 145, 155, 165 \\)。",
+      "2. 計算各組 (組中點 \\times 頻數) 之和：\\( 145(6) + 155(14) + 165(10) = 4690 \\)。",
+      "3. 總頻數為 \\( n = 30 \\)。",
+      "4. 估計平均身高 = \\( 4690 / 30 \\approx 156.33 \\) cm。"
+    ],
+    "diagram_json": null
+  }
+]

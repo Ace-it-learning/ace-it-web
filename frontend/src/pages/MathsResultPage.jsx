@@ -2,6 +2,7 @@ import React from 'react';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import { CheckCircle, XCircle, Award, ArrowRight, RotateCcw, BarChart2 } from 'lucide-react';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
+import { Doughnut } from 'react-chartjs-2';
 import { SafeInlineMath, SafeBlockMath } from '../components/maths/SafeMath';
 import 'katex/dist/katex.min.css';
 import 'katex/dist/katex.min.css';
@@ -103,10 +104,10 @@ const MathsResultPage = () => {
 
                     <div className="flex gap-4">
                         <button
-                            onClick={() => navigate('/dashboard')}
+                            onClick={() => navigate('/dashboard', { state: { openRoadmap: 'MATHS' } })}
                             className="flex-1 py-3 bg-slate-100 text-slate-600 font-bold rounded-xl hover:bg-slate-200 transition-colors flex items-center justify-center gap-2"
                         >
-                            <RotateCcw className="w-4 h-4" /> Dashboard
+                            <RotateCcw className="w-4 h-4" /> Back to Roadmap
                         </button>
                         <button
                             onClick={() => navigate(`/maths/exam/review/${examId}`, { state: { result: state.result } })}

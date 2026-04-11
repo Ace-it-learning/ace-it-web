@@ -1,12 +1,30 @@
 import React from 'react';
 import { ArrowRight, CheckCircle, AlertCircle, RefreshCcw, Star } from 'lucide-react';
 import NextPathRecommendations from './NextPathRecommendations';
+import WritingHighlighter from '../writing/WritingHighlighter';
+import { useLanguage } from '../../context/LanguageContext';
+import { getLocalizedValue } from '../../utils/writingUtils';
 
 const WritingReview = ({ submission, feedback, onTryAgain, onNext, topic, level, lessonMode }) => {
-    // feedback schema: { score_estimated, critique_points[], polished_text, key_changes[], general_comment }
-
+    // feedback schema: { score_estimated, critique_points[], polished_text, hotspots[], general_comment }
+    const { language, t } = useLanguage();
+    const isChinese = language?.startsWith('zh');
+    
     return (
         <div className="max-w-[1400px] mx-auto pb-20 animate-in fade-in duration-700">
+            {/* Archival Banner */}
+            <div className="mb-12 p-6 bg-amber-50 border-2 border-dashed border-amber-200 rounded-[2rem] flex items-center justify-between">
+                <div className="flex items-center gap-4 text-amber-800">
+                    <div className="bg-amber-100 p-3 rounded-2xl">
+                        <AlertCircle size={24} />
+                    </div>
+                    <div>
+                        <p className="font-black uppercase tracking-widest text-xs mb-1">Legacy Report</p>
+                        <p className="text-lg font-bold">This evaluation interface has been archived. Recent results use the new Writing Result Page.</p>
+                    </div>
+                </div>
+            </div>
+
             {/* Header / Score Card */}
             <div className="text-center mb-12">
                 <div className="inline-flex items-center gap-2 mb-4 px-4 py-1.5 bg-yellow-100 text-yellow-800 rounded-full text-sm font-black uppercase tracking-widest shadow-sm">
@@ -17,7 +35,7 @@ const WritingReview = ({ submission, feedback, onTryAgain, onNext, topic, level,
                     Writing Polish Report
                 </h1>
                 <p className="text-xl text-gray-500 max-w-2xl mx-auto font-medium">
-                    {feedback.general_comment}
+                    {getLocalizedValue(feedback, 'general_comment', isChinese)}
                 </p>
             </div>
 
@@ -30,9 +48,13 @@ const WritingReview = ({ submission, feedback, onTryAgain, onNext, topic, level,
                         <span className="text-xs font-black text-gray-400 uppercase tracking-widest">Your Draft</span>
                     </div>
                     <div className="bg-white p-8 rounded-[2rem] shadow-sm border border-gray-100 h-full min-h-[400px]">
-                        <p className="whitespace-pre-wrap text-lg leading-relaxed text-gray-600 font-serif">
-                            {submission}
-                        </p>
+                        <WritingHighlighter 
+                            text={submission} 
+                            hotspots={feedback.hotspots} 
+                            isChinese={isChinese}
+                            t={t}
+                            className="text-lg leading-relaxed text-gray-600 font-serif"
+                        />
                     </div>
                 </div>
 
@@ -71,33 +93,33 @@ const WritingReview = ({ submission, feedback, onTryAgain, onNext, topic, level,
                                 <span className="flex-none size-6 rounded-full bg-indigo-50 text-indigo-600 flex items-center justify-center font-bold text-xs mt-0.5">
                                     {idx + 1}
                                 </span>
-                                {point}
+                                {typeof point === 'object' ? getLocalizedValue({ p: point }, 'p', isChinese) : point}
                             </li>
                         ))}
                     </ul>
                 </div>
 
-                {/* Key Changes (Diffs) */}
+                {/* Key Changes (Diffs) - Fallback if hotspots mapping isn't preferred or available */}
                 <div className="lg:col-span-2 bg-gray-50 rounded-[2rem] p-8 border border-gray-200">
                     <h3 className="text-lg font-black text-gray-900 mb-6 flex items-center gap-2">
                         <CheckCircle className="text-green-600" />
                         Why It's Better (Key Changes)
                     </h3>
                     <div className="space-y-4">
-                        {feedback.key_changes.map((change, idx) => (
+                        {(feedback.hotspots || []).map((change, idx) => (
                             <div key={idx} className="bg-white rounded-2xl p-5 shadow-sm flex flex-col md:flex-row gap-4 items-start md:items-center">
                                 <div className="flex-1 space-y-2">
                                     <div className="flex items-center gap-3 text-sm">
                                         <span className="bg-red-50 text-red-600 px-2 py-0.5 rounded line-through decoration-red-300 decoration-2">
-                                            {change.original}
+                                            {change.original_phrase}
                                         </span>
                                         <ArrowRight size={14} className="text-gray-300" />
                                         <span className="bg-green-50 text-green-700 px-2 py-0.5 rounded font-bold border border-green-100">
-                                            {change.improved}
+                                            {change.improved_phrase}
                                         </span>
                                     </div>
                                     <p className="text-sm text-gray-500 italic">
-                                        "{change.reason}"
+                                        "{getLocalizedValue(change, 'explanation', isChinese)}"
                                     </p>
                                 </div>
                             </div>

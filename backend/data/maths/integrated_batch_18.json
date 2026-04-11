@@ -1,0 +1,318 @@
+[
+  {
+    "id": "ct_mcq_271",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_alg_polynomials"],
+    "marks": 1,
+    "difficulty": 5,
+    "paper": 2,
+    "section": "A",
+    "question_en": "When $f(x) = 2x^3 - 3x^2 + kx - 5$ is divided by $2x - 1$, the remainder is $-2$. Find the value of $k$.",
+    "question_zh": "當 $f(x) = 2x^3 - 3x^2 + kx - 5$ 除以 $2x - 1$ 時，餘數為 $-2$。求 $k$ 的值。",
+    "options": [
+      "A. 1",
+      "B. 7",
+      "C. 13",
+      "D. 15"
+    ],
+    "correct_answer": "B",
+    "solution_steps_en": [
+      "By remainder theorem, $f(1/2) = -2$.",
+      "$2(1/2)^3 - 3(1/2)^2 + k(1/2) - 5 = -2$.",
+      "$\\frac{2}{8} - \\frac{3}{4} + \\frac{k}{2} - 5 = -2$.",
+      "$1/4 - 3/4 + k/2 - 5 = -2 \\implies -0.5 + k/2 - 5 = -2$.",
+      "$k/2 - 5.5 = -2 \\implies k/2 = 3.5 \\implies k = 7$."
+    ],
+    "solution_steps_zh": [
+      "根據餘數定理，$f(1/2) = -2$。",
+      "$2(1/2)^3 - 3(1/2)^2 + k(1/2) - 5 = -2$。",
+      "$\\frac{1}{4} - \\frac{3}{4} + \\frac{k}{2} - 5 = -2$。",
+      "$-0.5 + \\frac{k}{2} - 5 = -2 \\implies \\frac{k}{2} = 3.5 \\implies k = 7$。"
+    ],
+    "diagram_json": null,
+    "tags": ["remainder-theorem", "polynomials"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_272",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_geo_circles"],
+    "marks": 1,
+    "difficulty": 6,
+    "paper": 2,
+    "section": "A",
+    "question_en": "In a circle with center $O$, a chord $PQ$ of length 16 cm is at a distance of 6 cm from the center. Find the radius of the circle.",
+    "question_zh": "在一圓心為 $O$ 的圓中，一條長為 16 cm 的弦 $PQ$ 距離圓心 6 cm。求該圓的半徑。",
+    "options": [
+      "A. 8 cm",
+      "B. 10 cm",
+      "C. 12 cm",
+      "D. 14 cm"
+    ],
+    "correct_answer": "B",
+    "solution_steps_en": [
+      "Let $M$ be the midpoint of $PQ$. $PM = 16/2 = 8$ cm.",
+      "The line from center to midpoint is perpendicular to the chord. $OM = 6$ cm.",
+      "In right-angled $\\triangle OPM$, $OP^2 = OM^2 + PM^2$.",
+      "$OP^2 = 6^2 + 8^2 = 36 + 64 = 100$.",
+      "Radius $OP = \\sqrt{100} = 10$ cm."
+    ],
+    "solution_steps_zh": [
+      "設 $M$ 為 $PQ$ 的中點。$PM = 16/2 = 8$ cm。",
+      "由圓心至弦中點的連線垂直於弦。$OM = 6$ cm。",
+      "在直角 $\\triangle OPM$ 中，$OP^2 = OM^2 + PM^2$。",
+      "$OP^2 = 6^2 + 8^2 = 100$。",
+      "半徑 $OP = 10$ cm。"
+    ],
+    "diagram_json": null,
+    "tags": ["circle-geometry", "chords"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_273",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_trig_graphs"],
+    "marks": 1,
+    "difficulty": 6,
+    "paper": 2,
+    "section": "B",
+    "question_en": "The figure shows the graph of $y = a \\cos(bx^\\circ)$, where $0 \\le x \\le 180$. If the amplitude is 3 and the period is $120^\\circ$, find the values of $a$ and $b$.",
+    "question_zh": "圖中顯示 $y = a \\cos(bx^\\circ)$ 的圖像，其中 $0 \\le x \\le 180$。若振幅為 3 且週期為 $120^\\circ$，求 $a$ 及 $b$ 的值。",
+    "options": [
+      "A. $a=3, b=2$",
+      "B. $a=3, b=3$",
+      "C. $a=2, b=3$",
+      "D. $a=3, b=60$"
+    ],
+    "correct_answer": "B",
+    "solution_steps_en": [
+      "Amplitude $a = 3$.",
+      "Period $= \\frac{360^\\circ}{b} = 120^\\circ \\implies b = \\frac{360}{120} = 3$.",
+      "Thus $a=3, b=3$."
+    ],
+    "solution_steps_zh": [
+      "振幅 $a = 3$。",
+      "週期 $= \\frac{360^\\circ}{b} = 120^\\circ \\implies b = 3$。",
+      "因此 $a=3, b=3$。"
+    ],
+    "diagram_json": null,
+    "tags": ["trig-graphs", "periodic-functions"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_274",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_stat_prob"],
+    "marks": 1,
+    "difficulty": 6,
+    "paper": 2,
+    "section": "A",
+    "question_en": "The variance of a set of data is 4. If each datum is multiplied by 2 and then increased by 3, find the variance of the new set of data.",
+    "question_zh": "一組數據的方差為 4。若每個數據均乘以 2 再增加 3，求新數據組的方差。",
+    "options": [
+      "A. 4",
+      "B. 8",
+      "C. 16",
+      "D. 19"
+    ],
+    "correct_answer": "C",
+    "solution_steps_en": [
+      "Addition ($+3$) does not affect the variance or standard deviation.",
+      "Multiplication by $k$ ($k=2$) scales the variance by $k^2$.",
+      "New Variance $= 2^2 \\times \\text{Old Variance} = 4 \\times 4 = 16$."
+    ],
+    "solution_steps_zh": [
+      "加法 ($+3$) 不會影響方差或標準差。",
+      "乘以 $k$ ($k=2$) 會使方差縮放 $k^2$ 倍。",
+      "新方差 $= 2^2 \\times 4 = 16$。"
+    ],
+    "diagram_json": null,
+    "tags": ["statistics", "data-transformation"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_275",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_alg_logarithms"],
+    "marks": 1,
+    "difficulty": 6,
+    "paper": 2,
+    "section": "B",
+    "question_en": "Solve $\\log_2(x+1) + \\log_2(x-1) = 3$.",
+    "question_zh": "解 $\\log_2(x+1) + \\log_2(x-1) = 3$。",
+    "options": [
+      "A. $x = 3$",
+      "B. $x = 4$",
+      "C. $x = \\sqrt{7}$",
+      "D. $x = \\pm 3$"
+    ],
+    "correct_answer": "A",
+    "solution_steps_en": [
+      "Using $\\log A + \\log B = \\log(AB)$: $\\log_2((x+1)(x-1)) = 3$.",
+      "$\\log_2(x^2 - 1) = 3 \\implies x^2 - 1 = 2^3$.",
+      "$x^2 - 1 = 8 \\implies x^2 = 9$.",
+      "$x = 3$ or $x = -3$.",
+      "Since $x-1$ must be positive, $x=3$ is the only valid solution."
+    ],
+    "solution_steps_zh": [
+      "使用 $\\log A + \\log B = \\log(AB)$：$\\log_2(x^2 - 1) = 3$。",
+      "$x^2 - 1 = 2^3 = 8 \\implies x^2 = 9$。",
+      "$x = 3$ 或 $x = -3$。",
+      "由於 $x-1$ 必須為正數，故 $x=3$ 是唯一解。"
+    ],
+    "diagram_json": null,
+    "tags": ["logarithms", "equations"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_276",
+    "type": "mcq",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_geo_coord"],
+    "marks": 1,
+    "difficulty": 5,
+    "paper": 2,
+    "section": "A",
+    "question_en": "A point $P(2, -3)$ is reflected about the $x$-axis and then rotated $180^\\circ$ about the origin. Find the coordinates of the final point.",
+    "question_zh": "點 $P(2, -3)$ 先對 $x$ 軸作反射，然後繞原點旋轉 $180^\\circ$。求最後點的坐標。",
+    "options": [
+      "A. $(-2, -3)$",
+      "B. $(-2, 3)$",
+      "C. $(2, 3)$",
+      "D. $(-3, 2)$"
+    ],
+    "correct_answer": "A",
+    "solution_steps_en": [
+      "Reflection about $x$-axis: $(x, y) \\to (x, -y)$. $P(2, -3) \\to P'(2, 3)$.",
+      "Rotation $180^\\circ$ about origin: $(x, y) \\to (-x, -y)$. $P'(2, 3) \\to P''(-2, -3)$."
+    ],
+    "solution_steps_zh": [
+      "對 $x$ 軸反射：$(x, y) \\to (x, -y)$。$P(2, -3) \\to P'(2, 3)$。",
+      "繞原點旋轉 $180^\\circ$：$(x, y) \\to (-x, -y)$。$P'(2, 3) \\to P''(-2, -3)$。"
+    ],
+    "diagram_json": null,
+    "tags": ["coordinate-geometry", "transformations"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_sa_277",
+    "type": "short_answer",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_alg_quadratics"],
+    "marks": 13,
+    "difficulty": 7,
+    "paper": 1,
+    "section": "A",
+    "question_en": "A rectangular garden has a perimeter of 40 m. \n(a) Let $x$ m be the width of the garden. Express the area $A$ of the garden in terms of $x$. (4 marks)\n(b) Find the maximum possible area of the garden using the vertex method (completing the square). (6 marks)\n(c) State the dimensions of the garden when the area is maximized. (3 marks)",
+    "question_zh": "一個長方形花園的周界為 40 m。\n(a) 設 $x$ m 為花園的寬度。以 $x$ 表示花園的面積 $A$。(4分)\n(b) 利用頂點法（配方法），求花園可能的最大面積。(6分)\n(c) 當面積最大時，寫出花園的長度及寬度。(3分)",
+    "solution_steps_en": [
+      "(a) Perimeter $2(x + \\text{length}) = 40 \\implies \\text{length} = 20 - x$.",
+      " Area $A = x(20 - x) = 20x - x^2$.",
+      "(b) $A = -(x^2 - 20x) = -(x^2 - 20x + 10^2 - 100) = -(x-10)^2 + 100$.",
+      " Max area is 100 m$^2$.",
+      "(c) Max area occurs when $x = 10$. Width $= 10$ m, Length $= 20 - 10 = 10$ m."
+    ],
+    "solution_steps_zh": [
+      "(a) 周界 $2(x + \\text{長度}) = 40 \\implies \\text{長度} = 20 - x$。",
+      "面積 $A = x(20 - x) = 20x - x^2$。",
+      "(b) $A = -(x^2 - 20x) = -(x^2 - 20x + 10^2 - 100) = -(x-10)^2 + 100$。",
+      "最大面積為 100 m$^2$。",
+      "(c) 當 $x = 10$ 時面積最大。此時寬度及長度均為 10 m。"
+    ],
+    "diagram_json": null,
+    "tags": ["quadratics", "completing-the-square", "optimization"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_sa_278",
+    "type": "short_answer",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_geo_circle_eq"],
+    "marks": 12,
+    "difficulty": 8,
+    "paper": 1,
+    "section": "B",
+    "question_en": "A circle $C$ passes through $O(0, 0)$, $A(4, 0)$ and $B(0, 8)$.\n(a) Find the coordinates of the center $K$ of the circle. (Hint: The triangle is right-angled). (4 marks)\n(b) Find the radius of the circle. (3 marks)\n(c) Hence, find the equation of the circle in the general form. (5 marks)",
+    "question_zh": "圓 $C$ 通過 $O(0, 0)$、$A(4, 0)$ 及 $B(0, 8)$。\n(a) 求圓的圓心 $K$ 的坐標。（提示：該三角形為直角三角形）(4分)\n(b) 求圓的半徑。(3分)\n(c) 因此，求圓的方程的一般式。(5分)",
+    "solution_steps_en": [
+      "(a) Since $\\angle AOB = 90^\\circ$ and $O, A, B$ lie on the circle, $AB$ must be a diameter.",
+      " Center $K$ is the midpoint of $AB = (\\frac{4+0}{2}, \\frac{0+8}{2}) = (2, 4)$.",
+      "(b) Radius $r = OK = \\sqrt{2^2 + 4^2} = \\sqrt{4 + 16} = \\sqrt{20}$.",
+      "(c) Equation: $(x-2)^2 + (y-4)^2 = (\\sqrt{20})^2$.",
+      " $x^2 - 4x + 4 + y^2 - 8y + 16 = 20$.",
+      " $x^2 + y^2 - 4x - 8y = 0$."
+    ],
+    "solution_steps_zh": [
+      "(a) 由於 $\\angle AOB = 90^\\circ$，故 $AB$ 是圓的直徑。",
+      "圓心 $K$ 為 $AB$ 的中點，即 $(2, 4)$。",
+      "(b) 半徑 $r = OK = \\sqrt{2^2 + 4^2} = \\sqrt{20}$。",
+      "(c) 方程：$(x-2)^2 + (y-4)^2 = 20$。",
+      "$x^2 - 4x + 4 + y^2 - 8y + 16 = 20 \\implies x^2 + y^2 - 4x - 8y = 0$。"
+    ],
+    "diagram_json": null,
+    "tags": ["circle-equation", "coordinate-geometry"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_sa_279",
+    "type": "short_answer",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_stat_prob"],
+    "marks": 14,
+    "difficulty": 7,
+    "paper": 1,
+    "section": "B",
+    "question_en": "The test scores of two groups $(A$ and $B)$ are shown below:\nGroup A: 40, 50, 60, 70, 80\nGroup B: 55, 58, 60, 62, 65\n(a) Find the mean and standard deviation of Group A. (4 marks)\n(b) Find the mean and standard deviation of Group B. (4 marks)\n(c) Compare the scores of the two groups in terms of central tendency and dispersion. (6 marks)",
+    "question_zh": "兩組學生（$A$ 及 $B$）的測驗分數如下：\n組 A：40, 50, 60, 70, 80\n組 B：55, 58, 60, 62, 65\n(a) 求組 A 的平均分及標準差。(4分)\n(b) 求組 B 的平均分及標準差。(4分)\n(c) 從集中趨勢及離散程度兩方面比較兩組的分數。(6分)",
+    "solution_steps_en": [
+      "(a) Mean A $= (40+50+60+70+80)/5 = 60$. SD A $= \\sqrt{\\frac{(40-60)^2 + ...}{5}} = \\sqrt{\\frac{1000}{5}} = \\sqrt{200} \\approx 14.14$.",
+      "(b) Mean B $= (55+58+60+62+65)/5 = 60$. SD B $= \\sqrt{\\frac{(55-60)^2 + ... + (65-60)^2}{5}} = \\sqrt{\\frac{25+4+0+4+25}{5}} = \\sqrt{58/5} \\approx 3.41$.",
+      "(c) Central tendency: Both groups have the same mean score (60).",
+      " Dispersion: Group A has a much larger standard deviation than Group B (14.1 vs 3.4).",
+      " Therefore, the performance of Group B is more consistent (stable) than Group A."
+    ],
+    "solution_steps_zh": [
+      "(a) 組 A：平均分 $= 60$，標準差 $\\approx 14.14$。",
+      "(b) 組 B：平均分 $= 60$，標準差 $\\approx 3.41$。",
+      "(c) 集中趨勢：兩組的平均分相同，均為 60。",
+      "離散程度：組 A 的標準差遠大於組 B。",
+      "故此，組 B 的表現較組 A 更為穩定/一致。"
+    ],
+    "diagram_json": null,
+    "tags": ["statistics", "measures-of-dispersion"],
+    "status": "approved"
+  },
+  {
+    "id": "ct_sa_280",
+    "type": "short_answer",
+    "topic_id": "integrated_challenge",
+    "prerequisite_topics": ["math_stat_prob"],
+    "marks": 12,
+    "difficulty": 8,
+    "paper": 1,
+    "section": "B",
+    "question_en": "Bag $X$ contains 2 red balls and 3 green balls. Bag $Y$ contains 4 red balls and 1 green ball. A coin is tossed; if it is heads, a ball is drawn from Bag $X$. If it is tails, a ball is drawn from Bag $Y$.\n(a) Find the probability of drawing a red ball. (6 marks)\n(b) If a red ball is drawn, find the probability that it was drawn from Bag $X$. (6 marks)",
+    "question_zh": "袋 $X$ 含有 2 個紅球及 3 個綠球。袋 $Y$ 含有 4 個紅球及 1 個綠球。投擲一枚硬幣；若得正面，從袋 $X$ 中取出一個球。若得反面，從袋 $Y$ 中取出一個球。\n(a) 求取出紅球的概率。(6分)\n(b) 若取出的是紅球，求它是從袋 $X$ 中取出的概率。(6分)",
+    "solution_steps_en": [
+      "(a) $P(R) = P(H \\cap R) + P(T \\cap R)$.",
+      " $P(H \\cap R) = 0.5 \\times \\frac{2}{5} = 0.2$.",
+      " $P(T \\cap R) = 0.5 \\times \\frac{4}{5} = 0.4$.",
+      " $P(R) = 0.2 + 0.4 = 0.6$.",
+      "(b) Using conditional probability: $P(X|R) = \\frac{P(X \\cap R)}{P(R)}$.",
+      " $P(X \\cap R) = P(H)P(R|H) = 0.5 \\times 0.4 = 0.2$.",
+      " $P(X|R) = \\frac{0.2}{0.6} = 1/3$."
+    ],
+    "solution_steps_zh": [
+      "(a) $P(紅) = P(正面 \\cap 紅) + P(反面 \\cap 紅) = 0.5(2/5) + 0.5(4/5) = 0.2 + 0.4 = 0.6$。",
+      "(b) 使用條件概率：$P(X | 紅) = \\frac{P(X \\cap 紅)}{P(紅)} = \\frac{0.2}{0.6} = 1/3$。"
+    ],
+    "diagram_json": null,
+    "tags": ["probability", "conditional-probability"],
+    "status": "approved"
+  }
+]

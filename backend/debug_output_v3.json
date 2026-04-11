@@ -1,0 +1,80 @@
+﻿[dotenv@17.2.3] injecting env (3) from .env -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }
+[MathsLabService] Loaded modular content for math_num_ratio from Firestore (Applying Post-Processor)
+--- DEBUG: math_num_ratio content ---
+{
+  "topic_id": "math_num_ratio",
+  "is_modular": true,
+  "name": "Ratio Proportion",
+  "name_zh": "比及比例",
+  "description": "Mastering the art of comparison through ratios, scales, and proportional reasoning.",
+  "roadmap": "Start by mastering the 'LCM Bridge' to combine multiple ratios. Then, learn the 'k-method' to solve complex algebraic ratio problems. Finally, conquer the 'Dimension Trap' in map scales, which is the most frequent area of error in HKDSE.",
+  "roadmap_zh": "首先掌握「最小公倍數橋樑」以合併多個比例。接著，學習「k-法」以解決複雜的代數比例問題。最後，攻克地圖比例尺中的「維度陷阱」，這是 HKDSE 中最容易出錯的地方。",
+  "learning_modules": [
+    {
+      "module_id": "MOD_01",
+      "title": "Ratio Combination",
+      "title_zh": "比例合併",
+      "concepts": [
+        {
+          "concept_id": "C01_LCM_BRIDGE",
+          "name": "The LCM Bridge",
+          "name_zh": "最小公倍數橋樑 (LCM Bridge)",
+          "formula": "\\[ \\begin{aligned} a:b = x:y, \\quad b:c = z:w \\\\\\\\ \\implies \\\\text{Link via } \\\\text{LCM}(y, z) \\end{aligned} \\]",
+          "variables": {
+            "a, b, c": "The quantities being compared",
+            "x, y, z, w": "Relative parts of the ratio"
+          },
+          "key_takeaway": "When linking two ratios, always find the Least Common Multiple of the shared variable to create a unified 'bridge'.",
+          "key_takeaway_zh": "連接兩個比例時，務必找出共同項的最小公倍數 (LCM)，以此建立統一的「橋樑」。",
+          "visual_aid": "/images/math/ratio_bridge_lcm.svg",
+          "visual": "<svg viewBox=\"0 0 500 250\" xmlns=\"http://www.w3.org/2000/svg\"><defs><marker id=\"arrowhead\" markerWidth=\"10\" markerHeight=\"7\" refX=\"0\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0, 10 3.5, 0 7\" fill=\"#3B82F6\" /></marker></defs><rect width=\"500\" height=\"250\" fill=\"#FFFFFF\" /><text x=\"150\" y=\"50\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#1E293B\" font-weight=\"bold\">a : b</text><text x=\"350\" y=\"50\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#1E293B\" font-weight=\"bold\">b : c</text><text x=\"135\" y=\"100\" font-family=\"sans-serif\" font-size=\"32\" text-anchor=\"middle\" fill=\"#1E293B\">2 :</text><text x=\"165\" y=\"100\" font-family=\"sans-serif\" font-size=\"32\" text-anchor=\"middle\" fill=\"#3B82F6\" font-weight=\"bold\">3</text><text x=\"335\" y=\"100\" font-family=\"sans-serif\" font-size=\"32\" text-anchor=\"middle\" fill=\"#3B82F6\" font-weight=\"bold\">4</text><text x=\"365\" y=\"100\" font-family=\"sans-serif\" font-size=\"32\" text-anchor=\"middle\" fill=\"#1E293B\">: 5</text><rect x=\"175\" y=\"145\" width=\"150\" height=\"40\" rx=\"20\" fill=\"#3B82F6\" fill-opacity=\"0.1\" stroke=\"#3B82F6\" stroke-width=\"2\" /><text x=\"250\" y=\"171\" font-family=\"sans-serif\" font-size=\"18\" text-anchor=\"middle\" fill=\"#3B82F6\" font-weight=\"bold\">LCM(3, 4) = 12</text><path d=\"M 165 110 L 220 142\" stroke=\"#3B82F6\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#arrowhead)\" /><path d=\"M 335 110 L 280 142\" stroke=\"#3B82F6\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#arrowhead)\" /><text x=\"250\" y=\"230\" font-family=\"sans-serif\" font-size=\"36\" text-anchor=\"middle\" fill=\"#F59E0B\" font-weight=\"bold\">8 : 12 : 15</text></svg>"
+        }
+      ]
+    },
+    {
+      "module_id": "MOD_02",
+      "title": "Algebraic Ratios",
+      "title_zh": "代數比例",
+      "concepts": [
+        {
+          "concept_id": "C02_K_METHOD",
+          "name": "The k-Method",
+          "name_zh": "k-法 (The k-Method)",
+          "formula": "\\[ x:y = a:b \\implies x = ak, \\quad y = bk \\]",
+          "variables": {
+            "x, y": "Unknown quantities",
+            "a, b": "Given ratio constants",
+            "k": "Non-zero scaling constant"
+          },
+          "key_takeaway": "For algebraic expressions like $\\frac{3x+y}{x-y}$, substituting $x=ak$ and $y=bk$ allows the $k$ to cancel out, leaving a pure numerical value.",
+          "key_takeaway_zh": "對於如 $\\frac{3x+y}{x-y}$ 的代數式，代入 $x=ak$ 及 $y=bk$ 可使 $k$ 互相抵消，從而求得純數值。"
+        }
+      ]
+    },
+    {
+      "module_id": "MOD_03",
+      "title": "Map Scales Dimensions",
+      "title_zh": "地圖比例尺與維度",
+      "concepts": [
+        {
+          "concept_id": "C03_SCALE_TRAP",
+          "name": "The Dimension Trap ($k^2$ Rule)",
+          "name_zh": "維度陷阱 ($k^2$ 法則)",
+          "formula": "\\[ \\text{Scale } 1:n \\implies \\text{Area Ratio } 1:n^2 \\]",
+          "variables": {
+            "n": "Linear scale factor",
+            "n^2": "Area scale factor",
+            "n^3": "Volume scale factor"
+          },
+          "key_takeaway": "DSE Trap: Map scales are linear ($1:n$). If a question asks for Area on a map, you MUST square the scale factor.",
+          "key_takeaway_zh": "DSE 陷阱：地圖比例尺是線性的 ($1:n$)。如果題目要求地圖上的「面積」，你必須將比例尺平方 ($1:n^2$)。",
+          "visual_aid": "/images/math/dimension_trap.svg",
+          "visual": "<svg viewBox=\"0 0 500 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"250\" fill=\"#FFFFFF\" /><line x1=\"50\" y1=\"130\" x2=\"130\" y2=\"130\" stroke=\"#1E293B\" stroke-width=\"4\" stroke-linecap=\"round\" /><text x=\"90\" y=\"80\" font-family=\"sans-serif\" font-size=\"18\" text-anchor=\"middle\" fill=\"#3B82F6\" font-weight=\"bold\">Scale = 1 : k</text><text x=\"90\" y=\"170\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#1E293B\">Length</text><rect x=\"210\" y=\"100\" width=\"60\" height=\"60\" stroke=\"#1E293B\" stroke-width=\"2\" fill=\"#3B82F6\" fill-opacity=\"0.1\" /><text x=\"240\" y=\"80\" font-family=\"sans-serif\" font-size=\"18\" text-anchor=\"middle\" fill=\"#3B82F6\" font-weight=\"bold\">Scale = 1 : k²</text><text x=\"240\" y=\"185\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#1E293B\">Area</text><g transform=\"translate(380, 100)\"><path d=\"M 25 10 L 50 0 L 75 10 L 50 20 Z\" fill=\"#F59E0B\" fill-opacity=\"0.1\" stroke=\"#1E293B\" stroke-width=\"2\" /><path d=\"M 25 10 L 25 40 L 50 50 L 50 20 Z\" fill=\"#F59E0B\" fill-opacity=\"0.1\" stroke=\"#1E293B\" stroke-width=\"2\" /><path d=\"M 75 10 L 75 40 L 50 50 L 50 20 Z\" fill=\"#F59E0B\" fill-opacity=\"0.1\" stroke=\"#1E293B\" stroke-width=\"2\" /></g><text x=\"430\" y=\"80\" font-family=\"sans-serif\" font-size=\"18\" text-anchor=\"middle\" fill=\"#3B82F6\" font-weight=\"bold\">Scale = 1 : k³</text><text x=\"430\" y=\"185\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#1E293B\">Volume</text></svg>"
+        }
+      ]
+    }
+  ],
+  "completion_xp": 500,
+  "marks_requirement": 80,
+  "updated_at": "2026-04-03T17:04:59.727Z"
+}

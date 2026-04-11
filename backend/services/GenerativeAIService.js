@@ -284,19 +284,28 @@ class GenerativeAIService {
 
         // Approved Hierarchy: Standard (Flash) vs Premium (Pro)
         let modelQueue;
-        if (isProModel) {
-            // Priority: 1.5 Pro (Most Stable) -> 2.0 Flash (Strongest Fallback) -> Flash Latest
-            modelQueue = ["gemini-1.5-pro", "gemini-1.5-pro-latest", "gemini-2.0-flash", "gemini-1.5-flash", "gemini-flash-latest"];
+        
+        if (this.isVertex) {
+            // VERTEX AI SPECIFIC QUEUE (Optimized for asia-east2 stable foundation models)
+            if (isProModel) {
+                modelQueue = ["gemini-1.5-pro-002", "gemini-1.5-pro-001", "gemini-1.5-pro"];
+            } else {
+                modelQueue = ["gemini-1.5-flash-002", "gemini-1.5-flash-001", "gemini-1.5-flash"];
+            }
         } else {
-            // Priority: 1.5 Flash (Most Stable) -> 2.0 Flash -> 2.0 Flash-Lite -> Flash Latest
-            modelQueue = ["gemini-1.5-flash", "gemini-1.5-flash-latest", "gemini-2.0-flash", "gemini-2.0-flash-lite", "gemini-flash-latest"];
+            // AI STUDIO QUEUE (Local Development)
+            if (isProModel) {
+                modelQueue = ["gemini-1.5-pro", "gemini-1.5-pro-latest", "gemini-2.0-flash"];
+            } else {
+                modelQueue = ["gemini-1.5-flash", "gemini-1.5-flash-latest", "gemini-2.0-flash"];
+            }
         }
 
-        // FORCE REQUESTED MODEL TO FRONT
+        // FORCE REQUESTED MODEL TO FRONT (If valid for the platform)
         if (requestedModel && !modelQueue.includes(requestedModel)) {
+            // If requested model isn't in stable queue, honor it but it might 404
             modelQueue.unshift(requestedModel);
         } else if (requestedModel) {
-            // Move to front
             modelQueue = modelQueue.filter(m => m !== requestedModel);
             modelQueue.unshift(requestedModel);
         }
@@ -345,6 +354,14 @@ class GenerativeAIService {
 
                 console.error(`[AIService] FAILED Attempt ${i + 1} (${currentModelName}):`, error.message);
                 if (error.status) console.error(`[AIService] Error Status: ${error.status}`);
+                
+                // Deep extraction for Vertex AI errors
+                if (this.isVertex && error.response) {
+                    try {
+                        console.error(`[AIService] Vertex Error Payload:`, JSON.stringify(error.response, null, 2));
+                    } catch (e) {}
+                }
+
                 if (error.stack) console.error(`[AIService] Error Stack: ${error.stack.substring(0, 300)}...`);
 
                 // If it's a model-not-supported error or region restriction, or a low-level fetch failure, try next model IMMEDIATELY

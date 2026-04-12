@@ -15,17 +15,15 @@ class GenerativeAIService {
     }
 
     async init() {
-        console.log("[AIService] Init called. VERTEX_ENABLED:", process.env.VERTEX_ENABLED, "K_SERVICE:", process.env.K_SERVICE);
         if (this.initialized) return;
 
-        // Determination Logic:
-        // Use Vertex AI if K_SERVICE is set (Production) 
-        // or if VERTEX_ENABLED is explicitly true.
-        if (process.env.K_SERVICE || process.env.VERTEX_ENABLED === 'true') {
+        // EMERGENCY OVERRIDE: Force AI Studio if Vertex quota is too low
+        const forceAIStudio = process.env.USE_AI_STUDIO_IN_PROD === 'true';
+
+        if ((process.env.K_SERVICE || process.env.VERTEX_ENABLED === 'true') && !forceAIStudio) {
             try {
                 const { VertexAI } = require('@google-cloud/vertexai');
 
-                // Allow local developers to use Vertex AI by providing a service account path
                 // Returning to Hong Kong (asia-east2) as user has confirmed quota/paid account
                 const vertexOptions = {
                     project: process.env.GOOGLE_CLOUD_PROJECT || 'ace-it-learning',
@@ -34,12 +32,13 @@ class GenerativeAIService {
 
                 this.vertex = new VertexAI(vertexOptions);
                 this.isVertex = true;
-                console.log(`[AIService] Re-Initialized Vertex AI in HONG KONG (asia-east2)`);
+                console.log(`[AIService] Initialized Vertex AI in HONG KONG (asia-east2)`);
             } catch (e) {
                 console.error("[AIService] Vertex AI Initialization failed, falling back to AI Studio:", e.message);
                 this.initAIStudio();
             }
         } else {
+            if (forceAIStudio) console.log("[AIService] EMERGENCY BYPASS: Using AI Studio mode in production.");
             this.initAIStudio();
         }
 

@@ -26,19 +26,17 @@ class GenerativeAIService {
                 const { VertexAI } = require('@google-cloud/vertexai');
 
                 // Allow local developers to use Vertex AI by providing a service account path
+                // Returning to Hong Kong (asia-east2) as user has confirmed quota/paid account
                 const vertexOptions = {
                     project: process.env.GOOGLE_CLOUD_PROJECT || 'ace-it-learning',
-                    location: process.env.GOOGLE_CLOUD_LOCATION || 'us-central1'
+                    location: 'asia-east2'
                 };
-
-                // If running locally and a key file is provided, Google Cloud SDK will pick it up 
-                // from GOOGLE_APPLICATION_CREDENTIALS automatically if it's set in the env.
 
                 this.vertex = new VertexAI(vertexOptions);
                 this.isVertex = true;
-                console.log(`[AIService] Initialized Vertex AI (Region: ${vertexOptions.location})`);
+                console.log(`[AIService] Re-Initialized Vertex AI in HONG KONG (asia-east2)`);
             } catch (e) {
-                console.error("[AIService] Failed to load Vertex SDK, falling back to AI Studio:", e);
+                console.error("[AIService] Vertex AI Initialization failed, falling back to AI Studio:", e.message);
                 this.initAIStudio();
             }
         } else {

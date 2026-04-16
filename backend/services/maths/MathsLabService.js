@@ -618,7 +618,7 @@ ${syllabusGuidance}
 Return as a JSON array of strings.`;
 
         try {
-            const result = await GenerativeAIService.generateJson(prompt, { model: "gemini-1.5-pro" });
+            const result = await GenerativeAIService.generateJson(prompt, { model: "ace-it-flash" });
             const data = result.data;
             return Array.isArray(data) ? data : (data.seeds || []);
         } catch (err) {
@@ -863,7 +863,7 @@ Return as a JSON array of strings.`;
                         .replace('{{RECENT_QUESTIONS_CONTEXT}}', recentQuestionsContext);
 
                     console.log(`[MathsLabService] 🔬 Generating question ${i + 1}/${TARGET_COUNT} with gemini-1.5-pro...`);
-                    const result = await GenerativeAIService.generateJson(prompt, { model: "gemini-1.5-pro" });
+                    const result = await GenerativeAIService.generateJson(prompt, { model: "ace-it-flash" });
                     let qResult = Array.isArray(result) ? result[0] : result;
 
                     if (qResult && qResult.question) {
@@ -1054,7 +1054,7 @@ Output ONLY a valid JSON object matching this schema. Double-escape all LaTeX ba
 Return valid JSON only. NO EXPLANATORY TEXT.`;
 
         try {
-            const result = await GenerativeAIService.generateJson(prompt, { model: "gemini-2.0-flash" });
+            const result = await GenerativeAIService.generateJson(prompt, { model: "ace-it-flash" });
             const data = result.data;
 
             // Validate the new schema shape
@@ -1125,7 +1125,7 @@ Return ONLY valid JSON matching this schema:
 }`;
 
         try {
-            const result = await GenerativeAIService.generateJson(prompt, { model: "gemini-2.0-flash" });
+            const result = await GenerativeAIService.generateJson(prompt, { model: "ace-it-flash" });
             const data = result.data;
             return {
                 prerequisites: data.prerequisites || [],
@@ -1235,14 +1235,14 @@ Return ONLY valid JSON in this format:
                             }
                         ];
 
-                        result = await GenerativeAIService.generateJson(multimodalPrompt, { model: "gemini-2.0-flash" });
+                        result = await GenerativeAIService.generateJson(multimodalPrompt, { model: "ace-it-pro" });
                     } catch (imgErr) {
                         console.warn(`[MathsLabService] Image fetch failed for Q ${q.id}, falling back to text-only:`, imgErr.message);
                         // Fallback to text-only grading
-                        result = await GenerativeAIService.generateJson(promptText, { model: "gemini-2.0-flash" });
+                        result = await GenerativeAIService.generateJson(promptText, { model: "ace-it-pro" });
                     }
                 } else {
-                    result = await GenerativeAIService.generateJson(promptText, { model: "gemini-2.0-flash" });
+                    result = await GenerativeAIService.generateJson(promptText, { model: "ace-it-pro" });
                 }
 
                 const gradings = result.data;
@@ -1316,7 +1316,7 @@ Return ONLY valid JSON in this format:
                         }
                     }
                 ]);
-            }, prompt, { model: "gemini-1.5-flash" });
+            }, prompt, { model: "ace-it-pro" });
 
             const text = result.response.text();
             console.log(`[MathsLabService] Raw AI Assessment Length: ${text.length}`);

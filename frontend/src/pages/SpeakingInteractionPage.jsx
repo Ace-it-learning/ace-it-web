@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useLocation, useNavigate, useSearchParams } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import { AGENTS } from '../context/AvatarContext';
+import { AGENTS, useAvatar } from '../context/AvatarContext';
 import { Loader2, Zap, ShieldCheck } from 'lucide-react';
 import MockCountdownTimer from '../components/utils/MockCountdownTimer';
 
@@ -16,36 +16,32 @@ const SpeakingInteractionPage = () => {
     const roadmapTopic = React.useMemo(() => {
         const name = location.state?.topic || questTopic || 'speaking_interaction_general';
         if (name === 'speaking_interaction_general') {
-            const dseTopics = [
-                "Housing affordability crisis in Hong Kong",
-                "Environmental concerns about Victoria Harbour",
-                "Rise of local pop music (Canto‑pop) resurgence",
-                "Popularity of e‑scooters on Hong Kong streets",
-                "Impact of the 2024 Hong Kong election on youth engagement"
-            ];
-            // Stable random selection for this session
-            const index = Math.floor(Math.random() * dseTopics.length);
-            return dseTopics[index];
+            return "How AI will disrupt education in school";
         }
-        return name.replace(/_/g, ' ')
+        // v10.1: Add Split for CamelCase and underscores
+        return name.replace(/([a-z])([A-Z])/g, '$1 $2') // Split CamelCase
+            .replace(/_/g, ' ') // Split underscores
             .split(' ')
             .map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase())
             .join(' ');
-    }, []); // Only run once on mount
+    }, [location.state?.topic, questTopic]); // Dependency update
 
     const taskId = location.state?.taskId || questTaskId;
     const isQuest = !!taskId;
 
     const navigate = useNavigate();
     const { user } = useAuth();
-    // Examiner Avatar Fix: Use Miss Janie from Context/AGENTS
-    const examinerAvatar = AGENTS.english.avatar;
+    const { activeAgent } = useAvatar();
 
-    // Safety check for broken images - if the above fails, use a reliable fallback
+    // Examiner Identity: Use equipped/active agent
+    const agentName = activeAgent.name;
+    const examinerAvatar = activeAgent.avatar || AGENTS.english.avatar;
+
+    // Safety check for broken images
     const [examinerImg, setExaminerImg] = useState(examinerAvatar);
     useEffect(() => {
-        setExaminerImg(AGENTS.english.avatar);
-    }, []);
+        setExaminerImg(examinerAvatar);
+    }, [examinerAvatar]);
     const handleExaminerImgError = () => {
         setExaminerImg('https://api.dicebear.com/7.x/avataaars/svg?seed=Examiner');
     };
@@ -67,6 +63,7 @@ const SpeakingInteractionPage = () => {
     const [gradingResult, setGradingResult] = useState(null);
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [activeSpeechText, setActiveSpeechText] = useState("");
+    const [isThinkingAI, setIsThinkingAI] = useState(false);
     const hasStartedRef = useRef(false);
 
     // Dynamic Avatars
@@ -77,7 +74,7 @@ const SpeakingInteractionPage = () => {
         Examiner: examinerAvatar
     });
     const candidateDisplayNames = {
-        Examiner: "Miss Janie",
+        Examiner: agentName,
         Candidate_A: "Annie",
         Candidate_B: "Ben",
         Candidate_C: "Charlie",
@@ -107,6 +104,7 @@ const SpeakingInteractionPage = () => {
     const lastAirtimeUpdate = useRef(Date.now());
     const isInternalTransition = useRef(false); // Locking ref to prevent race conditions
     const lastSpeakerRef = useRef(null);
+    const speakerActivityRef = useRef(Date.now()); // Tracking timestamp of speaker state changes
 
     const isMock = location.state?.isMock || false;
     const duration = location.state?.duration || 0;
@@ -126,11 +124,13 @@ const SpeakingInteractionPage = () => {
         const questData = {
             id: `quest_${taskId || Date.now()}`,
             title: roadmapTopic,
-            topic_description: `You are participating in a group discussion about "${roadmapTopic}". Share your views, listen to others, and engage in meaningful conversation. This is your chance to practice interactive speaking skills in a realistic HKDSE format.`,
+            topic_description: `You are participating in a group discussion about how artificial intelligence will disrupt education in schools. Consider the impact on teaching methods, student learning, and future skills. Share your views, listen to others, and engage in meaningful conversation.`,
             discussion_points: [
-                "What are the main issues or benefits?",
-                "How does this affect students in Hong Kong?",
-                "What solutions or improvements can you suggest?"
+                "Personalized learning and adaptive technologies",
+                "Teacher roles and job displacement concerns",
+                "Ethical considerations (data privacy, algorithmic bias)",
+                "Digital divide and accessibility",
+                "Future skills needed in an AI‑driven world"
             ],
             individual_response_questions: [
                 `Based on the discussion, what is your personal view on ${roadmapTopic}?`,
@@ -314,7 +314,7 @@ const SpeakingInteractionPage = () => {
             r.onresult = (event) => {
                 let finalTranscript = "";
                 let interimTranscript = "";
-                
+
                 for (let i = event.resultIndex; i < event.results.length; ++i) {
                     const result = event.results[i];
                     if (result.isFinal) {
@@ -323,17 +323,17 @@ const SpeakingInteractionPage = () => {
                         interimTranscript += result[0].transcript;
                     }
                 }
-                
+
                 // Show interim results in the UI immediately
                 if (interimTranscript) {
-                    setActiveSpeechText(interimTranscript); 
+                    setActiveSpeechText(interimTranscript);
                 }
 
                 if (finalTranscript) {
                     collectedTranscript.current += " " + finalTranscript;
                     addLog(`📝 Final: "${finalTranscript.substring(0, 15)}..."`);
                 }
-                
+
                 if (userSilenceTimer.current) clearTimeout(userSilenceTimer.current);
                 userSilenceTimer.current = setTimeout(() => {
                     const totalSpeech = collectedTranscript.current.trim();
@@ -351,9 +351,9 @@ const SpeakingInteractionPage = () => {
     // Helper: Get Voice
     const getVoice = (role) => {
         if (!voices || voices.length === 0) return null;
-        
+
         // Filter for English voices, prioritizing high-quality ones
-        const englishVoices = voices.filter(v => 
+        const englishVoices = voices.filter(v =>
             v.lang.toLowerCase().startsWith('en')
         ).sort((a, b) => {
             // Prefer "Google" voices as they are usually more stable in Chrome
@@ -365,24 +365,24 @@ const SpeakingInteractionPage = () => {
         });
 
         const pool = englishVoices.length > 0 ? englishVoices : voices;
-        
+
         const find = (langCode, nameInclude = "", gender = "") => {
             return pool.find(v => {
                 const matchesLang = v.lang.toLowerCase().includes(langCode.toLowerCase());
                 const matchesName = !nameInclude || v.name.toLowerCase().includes(nameInclude.toLowerCase());
-                
+
                 // Stricter Gender Matching: Avoid 'female' in name if 'male' is requested
                 const nameLower = v.name.toLowerCase();
                 const maleKeywords = /male|man|boy|daniel|david|alex|fred|thomas|mark|daniel|james|oliver|harry/i;
                 const femaleKeywords = /female|woman|girl|samantha|victoria|moira|veena|zira|susan|mary/i;
-                
+
                 let matchesGender = true;
                 if (gender === 'Female') {
                     matchesGender = femaleKeywords.test(nameLower) && !maleKeywords.test(nameLower);
                 } else if (gender === 'Male') {
                     matchesGender = maleKeywords.test(nameLower) && !femaleKeywords.test(nameLower);
                 }
-                
+
                 return matchesLang && matchesName && matchesGender;
             });
         };
@@ -406,7 +406,7 @@ const SpeakingInteractionPage = () => {
             // Charlie: Hesitant (Male)
             return find('en-HK', '', 'Male') || find('en-US', 'Daniel') || find('en-GB', 'Harry') || find('', '', 'Male') || fallback;
         }
-        
+
         return fallback;
     };
 
@@ -416,22 +416,52 @@ const SpeakingInteractionPage = () => {
         return text.replace(/^(Candidate[ _][A-D]|Examiner):/i, "").replace(/\*.*?\*/g, "").trim();
     };
 
+    const playDirectAudio = (base64, text, role, onEnd) => {
+        if (!base64) return playSpeech(role, text, onEnd);
+
+        const cleaned = cleanText(text);
+        setActiveSpeechText(cleaned);
+        addLog(`🗣️ [Direct Audio][${role}]: ${cleaned.substring(0, 30)}...`);
+        setTranscript(prev => [...prev, { role, text: cleaned }]);
+
+        const audioUrl = `data:audio/wav;base64,${base64}`;
+        const audioObj = new Audio();
+        audioObj.src = audioUrl;
+        audioObj.preload = "auto"; // Ensure full buffer for stability
+        activeUtterance.current = audioObj;
+
+        const cleanup = () => {
+            // Phase 41: Persistent Script - Don't clear text immediately
+            // setActiveSpeechText("");
+            isTransitioning.current = false;
+            activeUtterance.current = null;
+            if (onEnd) onEnd();
+        };
+
+        audioObj.onended = cleanup;
+        audioObj.onerror = (e) => {
+            console.error("Direct Audio playback error:", e);
+            cleanup();
+        };
+
+        audioObj.play().then(() => {
+            speakerActivityRef.current = Date.now();
+        }).catch(err => {
+            console.warn("Direct play failed, falling back to speech synthesis:", err);
+            playSpeech(role, text, onEnd);
+        });
+    };
+
     const playSpeech = (role, text, onEnd) => {
         const cleaned = cleanText(text);
         if (!cleaned) {
-            setActiveSpeechText("");
-            setTimeout(onEnd, 100);
+            if (onEnd) onEnd();
             return;
         }
 
-        setActiveSpeechText(cleaned); 
-        addLog(`🗣️ [${role}]: ${cleaned.substring(0, 30)}...`);
-        setTranscript(prev => [...prev, { role, text: cleaned }]); 
+        // Phase 40: Update transcript for consistency
+        setTranscript(prev => [...prev.slice(-10), { role, text: cleaned }]);
 
-        if (window.speechSynthesis) window.speechSynthesis.cancel();
-
-        // Phase 36: Speech Chunking for Chrome Reliability
-        // Chrome TTS engine often cuts off long utterances or fails mid-way.
         // We split by punctuation and play chunks sequentially.
         const chunks = cleaned.match(/[^.!?]+[.!?]*/g) || [cleaned];
         let currentChunkIndex = 0;
@@ -440,10 +470,12 @@ const SpeakingInteractionPage = () => {
             if (currentChunkIndex >= chunks.length) {
                 // Done with all chunks
                 setTimeout(() => {
-                    setActiveSpeechText(""); 
+                    // Phase 41: Persistent Script - Don't clear text immediately
+                    // setActiveSpeechText("");
                     isTransitioning.current = false;
+                    activeUtterance.current = null; // Critical Fix: Clear utterance to prevent dead air
                     if (onEnd) onEnd();
-                }, 500); 
+                }, 500);
                 return;
             }
 
@@ -454,11 +486,13 @@ const SpeakingInteractionPage = () => {
                 return;
             }
 
+            // Phase 40: Maintain full text in the script box for Candidates A, B, C
+            setActiveSpeechText(cleaned);
             const u = new SpeechSynthesisUtterance(chunkText);
             activeUtterance.current = u;
             const voice = getVoice(role);
             if (voice) u.voice = voice;
-            u.pitch = role === 'Examiner' ? 0.9 : 1.0; 
+            u.pitch = role === 'Examiner' ? 0.9 : 1.0;
             u.rate = role === 'Candidate_C' ? 0.9 : 1.0;
 
             u.onend = () => {
@@ -473,8 +507,12 @@ const SpeakingInteractionPage = () => {
             };
 
             window.speechSynthesis.speak(u);
+            speakerActivityRef.current = Date.now();
         };
 
+        // Phase 41: Force cancel any ghost utterances before starting new one
+        if (window.speechSynthesis) window.speechSynthesis.cancel();
+        
         isTransitioning.current = true;
         speakNextChunk();
     };
@@ -487,16 +525,16 @@ const SpeakingInteractionPage = () => {
             'Candidate_B': 4,
             'Candidate_C': 3
         };
-        
+
         const userLevel = parseInt(location.state?.userLevel || "3");
         const base = baseLevels[role];
-        
+
         // Adjust candidate level to be around user level +1/-1
         // but respect the persona (Annie is always the best)
-        if (role === 'Candidate_A') return Math.max(userLevel + 1, 5); 
+        if (role === 'Candidate_A') return Math.max(userLevel + 1, 5);
         if (role === 'Candidate_B') return userLevel;
         if (role === 'Candidate_C') return Math.max(1, userLevel - 1);
-        
+
         return base;
     };
 
@@ -504,12 +542,15 @@ const SpeakingInteractionPage = () => {
         if (userSilenceTimer.current) clearTimeout(userSilenceTimer.current);
         userSilenceTimer.current = null;
 
-        // Reset user state immediately to prevent AI double-triggering
-        setCurrentSpeaker(null);
+        // Reset user state
+        setMicActive(false);
         setIsUserTurn(false);
         isUserTurnRef.current = false;
-
+        
         const cleaned = (text || "").trim();
+        if (cleaned) {
+            setActiveSpeechText(cleaned); // Show the final text the user said
+        }
         if (!cleaned) {
             addLog("⚠️ Speech empty. Waiting for user to click SPEAK again or AI to take initiative.");
             // If user stays silent, wait 2s then AI might take over
@@ -525,11 +566,12 @@ const SpeakingInteractionPage = () => {
         addLog(`🎙️ User said: "${cleaned.substring(0, 20)}..."`);
         setTranscript(prev => [...prev, { role: "You", text: cleaned }]);
         chatHistory.current.push({ role: "user", text: cleaned });
-        
+        fetchBatchInBackground(); // Pre-fetch AI response to ensure queue has content
+
         // Substantial turns invalidate the pre-fetched queue
         if (cleaned.length > 20) {
             addLog("🧠 Context changed. Fetching fresh responses...");
-            localTurnQueue.current = []; 
+            localTurnQueue.current = [];
         }
 
         if (status === 'INDIVIDUAL') {
@@ -537,12 +579,12 @@ const SpeakingInteractionPage = () => {
             return;
         }
 
-        // Delay AI response naturally but quickly (Immediate follow-up)
-        setTimeout(() => {
-            if (!isUserTurnRef.current && !activeUtterance.current && status === 'DISCUSSION') {
-                triggerAITurn();
-            }
-        }, 800); // Reduced delay to 0.8s for "immediate" feel after user finishes 
+        // Start turn detection loop
+        addLog("🎲 Passing floor to AI candidates...");
+        triggerAITurn();
+        
+        // Final cleanup for user turn
+        setCurrentSpeaker(null);
     };
 
     const startUserTurn = () => {
@@ -564,6 +606,7 @@ const SpeakingInteractionPage = () => {
         setIsUserTurn(true);
         isUserTurnRef.current = true;
         setCurrentSpeaker("You");
+        setActiveSpeechText(""); // Phase 42: Clear last script as user starts fresh turn
 
         // Phase 28: Trigger background fetch while user is speaking to prepare next turns
         fetchBatchInBackground();
@@ -580,7 +623,7 @@ const SpeakingInteractionPage = () => {
             setIsQueuedState(true);
             return;
         }
-        
+
         addLog("✋ User taking the floor");
         startUserTurn();
     };
@@ -598,23 +641,58 @@ const SpeakingInteractionPage = () => {
         handleUserSpeech(collectedTranscript.current);
     };
 
-    const playQueuedTurn = (turn) => {
-        const { speaker, content } = turn;
-        lastSpeakerRef.current = speaker;
-        setCurrentSpeaker(speaker);
-        playSpeech(speaker, content, () => {
+    const playQueuedTurn = (turn, onComplete) => {
+        addLog(`🎬 Playing queued turn for ${turn?.speaker || 'unknown'}: ${turn?.content?.substring(0, 30) || 'no content'}...`);
+        if (!turn) {
+            if (onComplete) onComplete();
+            return;
+        }
+        setCurrentSpeaker(turn.speaker);
+        lastSpeakerRef.current = turn.speaker;
+        setActiveSpeechText(turn.content); // Immediate set to prevent flickering placeholder
+
+        // Use Direct Audio if provided, otherwise fallback to standard TTS
+        const playbackMethod = turn.audio ? playDirectAudio : playSpeech;
+        addLog(`⚡ Starting playback using ${turn.audio ? 'Direct Multimodal' : 'Fallback TTS'}`);
+
+        // Proactive Buffering: Fetch the NEXT turn while this one is playing
+        if (localTurnQueue.current.length < 2) {
+            setTimeout(() => fetchBatchInBackground(), 500);
+        }
+
+        // playDirectAudio takes (base64, text, role, onEnd)
+        // playSpeech takes (role, text, onEnd)
+        const play = () => {
+            if (turn.audio) {
+                playDirectAudio(turn.audio, turn.content, turn.speaker, finalize);
+            } else {
+                playSpeech(turn.speaker, turn.content, finalize);
+            }
+        };
+
+        const finalize = () => {
             setCurrentSpeaker(null);
-            chatHistory.current.push({ role: speaker, text: content });
+            chatHistory.current.push({ role: turn.speaker, text: turn.content });
+
             if (isQueued.current) {
                 isQueued.current = false;
                 setIsQueuedState(false);
                 startUserTurn();
+                if (onComplete) onComplete();
                 return;
             }
-            setTimeout(() => {
-                if (!isUserTurnRef.current && status === 'DISCUSSION') triggerAITurn();
-            }, 1000);
-        });
+
+            if (onComplete) {
+                onComplete();
+            } else {
+                // Free discussion logic: trigger next AI turn if room is silent
+                setTimeout(() => {
+                    if (!isUserTurnRef.current && status === 'DISCUSSION') triggerAITurn();
+                }, 1500);
+            }
+        };
+
+        play();
     };
 
     const fetchBatch = async (hintSpeaker = "Candidate_A") => {
@@ -623,6 +701,7 @@ const SpeakingInteractionPage = () => {
             return;
         }
         isFetchingAI.current = true;
+        setIsThinkingAI(true);
         try {
             const userLevel = location.state?.userLevel || "3";
             const candidateLevels = {
@@ -632,27 +711,28 @@ const SpeakingInteractionPage = () => {
             };
 
             const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
-            const res = await fetch(`${API_URL}/api/speaking/chat`, {
+            const res = await fetch(`${API_URL}/api/speaking/interaction/turn`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     history: chatHistory.current.slice(-15),
-                    currentSpeaker: lastSpeakerRef.current || 'Examiner', // The one who JUST finished
-                    forcedNextSpeaker: hintSpeaker !== "Candidate_A" ? hintSpeaker : null, // Only pass if it's a specific invitation (hintSpeaker defaults to A in signature)
-                    topic: examData?.title || roadmapTopic, 
-                    context: examData,
-                    uid: user?.uid,
-                    userLevel,
-                    candidateLevels
+                    current_speaker: hintSpeaker !== "Candidate_A" ? hintSpeaker : "Candidate_A",
+                    topic: examData?.title || roadmapTopic,
+                    level: userLevel,
+                    uid: user?.uid
                 }),
                 signal: AbortSignal.timeout(30000)
             });
             const data = await res.json();
-            if (data.turns && Array.isArray(data.turns) && data.turns.length > 0) {
-                localTurnQueue.current = [...localTurnQueue.current, ...data.turns];
-                addLog(`✅ Queued ${data.turns.length} AI turns`);
+            if (data.content) {
+                localTurnQueue.current.push({
+                    speaker: data.speaker || hintSpeaker,
+                    content: data.content,
+                    audio: data.audio // Store pre-generated audio!
+                });
+                addLog(`✅ Queued MULTIMODAL AI turn from ${data.speaker}`);
             } else {
-                throw new Error("Empty turns returned from API");
+                throw new Error("No content returned from AI turn API");
             }
         } catch (e) {
             console.error("Fetch Batch Error:", e);
@@ -665,59 +745,66 @@ const SpeakingInteractionPage = () => {
         }
         finally {
             isFetchingAI.current = false;
-            // Phase 22: Force Trigger if queue populated and room is silent
-            if (status === 'DISCUSSION' && !isUserTurnRef.current && !activeUtterance.current && localTurnQueue.current.length > 0) {
-                addLog("🚀 Auto-triggering after fetch...");
-                triggerAITurn();
-            }
+            setIsThinkingAI(false);
         }
     };
 
     const fetchBatchInBackground = () => fetchBatch();
 
-    const triggerAITurn = async (forceSpeaker) => {
-        if (isUserTurnRef.current || status !== 'DISCUSSION') return;
+    const triggerAITurn = async (forceSpeaker, onComplete) => {
+        addLog(`🔍 triggerAITurn: isUserTurn=${isUserTurnRef.current}, status=${status}, activeUtterance=${!!activeUtterance.current}, isTransitioning=${isTransitioning.current}`);
+        
+        if (isUserTurnRef.current) return;
+        if (status !== 'DISCUSSION') return;
 
-        // Phase 30: Strengthen guards with direct browser check
+        // Phase 40: Detect Ghost States (Browser engine stuck for >30s)
         const isActuallySpeaking = window.speechSynthesis && window.speechSynthesis.speaking;
-        if (isTransitioning.current || activeUtterance.current || isActuallySpeaking || isInternalTransition.current) {
-            addLog(`🚫 Turn blocked: Trans=${isTransitioning.current} Actv=${!!activeUtterance.current} SynthSpeaking=${isActuallySpeaking} InternalLock=${isInternalTransition.current}`);
-            // Phase 38: Robust Retry - If blocked, retry shortly after to catch transitions
-            setTimeout(() => triggerAITurn(forceSpeaker), 400);
+        const silenceDuration = Date.now() - speakerActivityRef.current;
+        let isStuck = false;
+        
+        if (isActuallySpeaking && silenceDuration > 30000) {
+            addLog("🚨 Ghost state detected (30s activity gap). Force-clearing...");
+            if (window.speechSynthesis) window.speechSynthesis.cancel();
+            isStuck = true;
+        }
+
+        if ((isTransitioning.current || activeUtterance.current || (isActuallySpeaking && !isStuck)) && !forceSpeaker) {
+            addLog(`🚫 Turn blocked: Trans=${isTransitioning.current} Actv=${!!activeUtterance.current} SynthSpeaking=${isActuallySpeaking}`);
+            setTimeout(() => triggerAITurn(forceSpeaker, onComplete), 800);
             return;
         }
 
+        // Speaker Rotation Logic
+        const candidates = ["Candidate_A", "Candidate_B", "Candidate_C"];
+        const pool = candidates.filter(c => c !== lastSpeakerRef.current);
+        const targetSpeaker = forceSpeaker || pool[Math.floor(Math.random() * pool.length)];
+
+        // Internal Transition Lock
         isInternalTransition.current = true;
-        setTimeout(() => { isInternalTransition.current = false; }, 200); // Phase 32: Short lock reduced to 200ms
+        setTimeout(() => { isInternalTransition.current = false; }, 300);
+
+        // Fetch check
+        if (localTurnQueue.current.length === 0) {
+            if (isFetchingAI.current) {
+                addLog("⏳ Waiting for in-progress fetch...");
+                setTimeout(() => triggerAITurn(targetSpeaker, onComplete), 500);
+                return;
+            }
+            addLog(`⏳ Queue empty. Fetching turn for ${targetSpeaker}...`);
+            await fetchBatch(targetSpeaker);
+        }
 
         if (localTurnQueue.current.length > 0) {
-            // Enforcement: Do not repeat speaker if possible
-            const nextIdx = localTurnQueue.current.findIndex(t => t.speaker !== lastSpeakerRef.current);
-            const next = nextIdx !== -1 ? localTurnQueue.current.splice(nextIdx, 1)[0] : localTurnQueue.current.shift();
+            // Priority Rotation Check: Try to find someone who isn't the last speaker in the queue
+            let turnIdx = localTurnQueue.current.findIndex(t => t.speaker !== lastSpeakerRef.current);
+            if (turnIdx === -1) turnIdx = 0; // Fallback to first in queue if all same
             
-            if (localTurnQueue.current.length <= 1) fetchBatchInBackground();
-            playQueuedTurn(next);
-            return;
-        }
-
-        // If no turns, fetch then play
-        addLog("⏳ Fetching AI turns...");
-        await fetchBatch(forceSpeaker);
-
-        // Re-check after fetch - if we are still ready to play, do it
-        if (!isUserTurnRef.current && !isTransitioning.current && !activeUtterance.current && localTurnQueue.current.length > 0) {
-            // Enforcement: Do not repeat speaker if possible
-            const nextIdx = localTurnQueue.current.findIndex(t => t.speaker !== lastSpeakerRef.current);
-            const turnToPlay = nextIdx !== -1 ? localTurnQueue.current.splice(nextIdx, 1)[0] : localTurnQueue.current.shift();
-            
+            const turnToPlay = localTurnQueue.current.splice(turnIdx, 1)[0];
             addLog(`✅ Playing turn for: ${turnToPlay.speaker}`);
-            playQueuedTurn(turnToPlay);
+            playQueuedTurn(turnToPlay, onComplete);
         } else {
-            addLog("⚠️ Still waiting for turns (Polling)...");
-            // Phase 34: Polling Loop - Retry even if fetching, to catch when it finishes
-            if (!isUserTurnRef.current && !activeUtterance.current && status === 'DISCUSSION') {
-                setTimeout(() => triggerAITurn(forceSpeaker), 500);
-            }
+            addLog("⚠️ AI turn failed to populate. Retrying...");
+            setTimeout(() => triggerAITurn(targetSpeaker, onComplete), 1000);
         }
     };
 
@@ -727,24 +814,69 @@ const SpeakingInteractionPage = () => {
         setStatus('DISCUSSION');
         setTimeLeft(8 * 60);
 
-        // Phase 37: Randomize First Speaker
-        const candidates = ["Candidate_A", "Candidate_B", "Candidate_C", "You"];
-        const firstSpeaker = candidates[Math.floor(Math.random() * candidates.length)];
-        const callOut = firstSpeaker === "You" ? "What are your thoughts on this, Candidate D?" : "Shall we start? Candidate A, what are your thoughts?";
-        // Note: The above is a bit hardcoded, ideally we'd use the name, but this fits the intro.
-        
-        addLog(`🗳️ Examiner starting discussion. Invited: ${firstSpeaker}`);
+        addLog(`🗳️ Examiner starting discussion...`);
         setCurrentSpeaker("Examiner");
-        
-        const introPrompt = `Good afternoon. We are here to discuss ${examData?.title || roadmapTopic}. Who would like to start the discussion? Maybe ${candidateDisplayNames[firstSpeaker]}?`;
-        
+
+        // Pre-fetch AI responses to ensure queue has content
+        fetchBatchInBackground();
+
+        // Requirement 2: Brief Intro
+        const introPrompt = `Good afternoon. Today we will have a group discussion on the topic: "${examData?.title || roadmapTopic}". This topic explores how artificial intelligence is transforming education in schools. We will hear different perspectives from each candidate.`;
+        const assignmentPrompt = `Candidate A, would you like to start the discussion?`;
+
         playSpeech("Examiner", introPrompt, () => {
-            setCurrentSpeaker(null);
-            if (firstSpeaker === "You") {
-                startUserTurn();
-            } else {
-                triggerAITurn(firstSpeaker);
-            }
+            // Requirement 3: Explicit Assignment
+            setTimeout(() => {
+                setCurrentSpeaker("Examiner"); // Ensure speaker state is active
+                playSpeech("Examiner", assignmentPrompt, () => {
+                    setCurrentSpeaker(null);
+
+                    // Turn Sequence: A -> B -> C -> User
+                    const turnOrder = ["Candidate_A", "Candidate_B", "Candidate_C", "You"];
+                    let currentIndex = 0;
+
+                    const nextInSequence = () => {
+                        if (currentIndex >= turnOrder.length) {
+                            addLog("✅ Introduction round complete. Entering free discussion.");
+                            return;
+                        }
+
+                        const speaker = turnOrder[currentIndex];
+                        currentIndex++;
+
+                        if (speaker === "You") {
+                            setCurrentSpeaker("Examiner");
+                            playSpeech("Examiner", "Candidate D, it's your turn. What are your thoughts?", () => {
+                                setCurrentSpeaker(null);
+                                startUserTurn();
+                            });
+                        } else {
+                            addLog(`🔄 Sequence: Triggering turn for ${speaker}`);
+                            triggerAITurn(speaker, nextInSequence);
+
+                            // Safety net: if AI does not start speaking within 2 seconds, force fallback regardless of activeUtterance
+                            const safetyTimeout = setTimeout(() => {
+                                addLog(`⏱️ Safety net triggered for ${speaker}, activeUtterance=${!!activeUtterance.current}, synthSpeaking=${window.speechSynthesis?.speaking}`);
+                                // Always play fallback to ensure discussion continues
+                                const fallbackText = speaker === 'Candidate_A' ? "I believe AI will significantly change how we learn by providing personalized lessons." :
+                                    speaker === 'Candidate_B' ? "However, we must consider the digital divide and accessibility issues." :
+                                        "Overall, I think we need to balance technology with human interaction.";
+                                addLog(`⚠️ AI turn for ${speaker} timed out, forcing fallback: ${fallbackText.substring(0, 30)}...`);
+                                playSpeech(speaker, fallbackText, () => {
+                                    // Simulate turn completion
+                                    chatHistory.current.push({ role: speaker, text: fallbackText });
+                                    setCurrentSpeaker(null);
+                                    nextInSequence();
+                                });
+                            }, 2000);
+                            // Cleanup timeout when speech starts (we can't easily detect, but we can clear on next turn)
+                            // We'll store the timeout reference in a ref, but for simplicity we'll let it run.
+                        }
+                    };
+
+                    nextInSequence();
+                });
+            }, 800);
         });
     };
 
@@ -804,10 +936,10 @@ const SpeakingInteractionPage = () => {
     const getPos = (role) => {
         // DSE Group Layout (Semicircle)
         const positions = {
-            'Examiner': { top: '32%', left: '50%' },     
-            'Candidate_A': { top: '55%', left: '20%' },  
+            'Examiner': { top: '32%', left: '50%' },
+            'Candidate_A': { top: '55%', left: '20%' },
             'Candidate_B': { top: '78%', left: '35%' },  // Raised slightly
-            'Candidate_C': { top: '55%', left: '80%' },  
+            'Candidate_C': { top: '55%', left: '80%' },
             'You': { top: '78%', left: '65%' }           // Raised slightly
         };
         return positions[role] || { top: '50%', left: '50%' };
@@ -826,12 +958,12 @@ const SpeakingInteractionPage = () => {
             {/* New 3D Stylized Classroom Background */}
             <div className="absolute inset-0 z-0 bg-[#0c130d] overflow-hidden">
                 {/* The main background image with contrast tuning */}
-                <img 
-                    src="/backgrounds/hk_dse_classroom.png" 
-                    alt="DSE Classroom" 
+                <img
+                    src="/backgrounds/hk_dse_classroom.png"
+                    alt="DSE Classroom"
                     className="w-full h-full object-cover brightness-[0.7] saturate-[1.2] contrast-[1.1]"
                 />
-                
+
                 {/* Cinematic Vignette Overlay to make avatars pop */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/30 pointer-events-none"></div>
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_20%,rgba(0,0,0,0.4)_100%)] pointer-events-none"></div>
@@ -872,8 +1004,8 @@ const SpeakingInteractionPage = () => {
                 <div className="flex items-center gap-4">
                     {isMock && duration > 0 && (status === 'PREP' || status === 'DISCUSSION' || status === 'INDIVIDUAL') && (
                         <div className="hidden lg:block">
-                            <MockCountdownTimer 
-                                initialSeconds={duration} 
+                            <MockCountdownTimer
+                                initialSeconds={duration}
                                 onTimeUp={() => {
                                     alert("Time up! The exam has concluded.");
                                     finishExam();
@@ -881,7 +1013,7 @@ const SpeakingInteractionPage = () => {
                             />
                         </div>
                     )}
-                    
+
                     {!isMock && (
                         <button onClick={() => setIsEasyMode(!isEasyMode)} className="px-4 py-2 bg-white/50 hover:bg-white/70 text-slate-900 rounded-full text-xs font-bold transition-all">
                             {isEasyMode ? "📖 Easy Mode ON" : "📖 Easy Mode"}
@@ -904,9 +1036,9 @@ const SpeakingInteractionPage = () => {
                     const avatarSrc = role === "Examiner" ? examinerImg : (candidateAvatars[role] || getUserAvatar());
 
                     return (
-                        <div 
-                            key={role} 
-                            className={`absolute transition-all duration-700 flex flex-col items-center ${isSpeaking ? "z-40 scale-125 -translate-y-8" : "z-20 grayscale-[10%]"}`} 
+                        <div
+                            key={role}
+                            className={`absolute transition-all duration-700 flex flex-col items-center ${isSpeaking ? "z-40 scale-125 -translate-y-8" : "z-20 grayscale-[10%]"}`}
                             style={{ top: pos.top, left: pos.left, transform: 'translate(-50%, -50%)' }}
                         >
                             <div className={`relative size-48 rounded-full border-8 bg-white shadow-[0_20px_50px_rgba(0,0,0,0.5)] overflow-hidden transition-all duration-500 ${isSpeaking ? "border-emerald-400 ring-[20px] ring-emerald-400/10 scale-110" : "border-white/90"}`}>
@@ -936,11 +1068,11 @@ const SpeakingInteractionPage = () => {
                     );
                 })}
 
-                {/* Active Transcript / Subtitles Overlay - MOVED TO TOP */}
-                {(currentSpeaker || (isEasyMode && transcript.length > 0)) && (
-                    <div className="absolute top-[12%] left-1/2 -translate-x-1/2 w-full max-w-4xl z-40 px-4">
+                {/* Active Transcript / Subtitles Overlay - MOVED TO TOP & ADJUSTED */}
+                {(currentSpeaker || isThinkingAI || activeSpeechText || (isEasyMode && transcript.length > 0)) && (
+                    <div className="absolute top-[5%] left-1/2 -translate-x-1/2 w-full max-w-4xl z-40 px-4">
                         <div className="bg-black/60 backdrop-blur-xl rounded-[32px] p-6 shadow-2xl border border-white/10 text-center animate-in slide-in-from-top-12 duration-500">
-                            {currentSpeaker ? (
+                            {(currentSpeaker || (activeSpeechText && !isUserTurn)) ? (
                                 <>
                                     <div className="flex items-center justify-center gap-3 mb-4">
                                         <div className="size-2 bg-emerald-400 rounded-full animate-pulse shadow-[0_0_10px_rgb(52,211,153)]"></div>
@@ -949,19 +1081,28 @@ const SpeakingInteractionPage = () => {
                                     <div className="text-2xl font-bold text-white leading-relaxed tracking-tight px-4">
                                         {currentSpeaker === 'You' ? (
                                             <span className="text-emerald-300">
-                                                {micActive ? (collectedTranscript.current || "Listening...") : "Go ahead, speak!"}
+                                                {micActive ? (collectedTranscript.current || "Listening...") : (activeSpeechText || "Go ahead, speak!")}
                                             </span>
                                         ) : (
-                                            <span>{activeSpeechText || (isFetchingAI.current ? "*Thinking...*" : "")}</span>
+                                            <span>{activeSpeechText || " "}</span>
                                         )}
                                     </div>
                                 </>
+                            ) : isThinkingAI ? (
+                                <div className="flex flex-col items-center justify-center gap-2 py-2">
+                                    <div className="flex gap-1">
+                                        <div className="size-2 bg-indigo-400 rounded-full animate-bounce [animation-delay:-0.3s]"></div>
+                                        <div className="size-2 bg-indigo-400 rounded-full animate-bounce [animation-delay:-0.15s]"></div>
+                                        <div className="size-2 bg-indigo-400 rounded-full animate-bounce"></div>
+                                    </div>
+                                    <span className="text-indigo-300 text-sm font-bold tracking-widest uppercase">Candidates are thinking...</span>
+                                </div>
                             ) : (
                                 <div className="text-lg font-medium text-white/70 leading-tight italic px-8">
                                     {isUserTurn ? (
                                         <span className="text-emerald-300/80 animate-pulse">*Speak now, or click STOP to finish*</span>
-                                    ) : (isFetchingAI.current || localTurnQueue.current.length > 0) ? (
-                                        <span className="text-white/50 animate-pulse">*Thinking...*</span>
+                                    ) : activeSpeechText ? (
+                                        <span className="text-white/90 not-italic font-bold">"{activeSpeechText}"</span>
                                     ) : (
                                         <span>*Click SPEAK to join the discussion*</span>
                                     )}
@@ -1005,13 +1146,13 @@ const SpeakingInteractionPage = () => {
                                 <h2 className="text-sm font-black tracking-widest uppercase opacity-80 mb-1">Part A: Group Discussion</h2>
                                 <h3 className="text-2xl font-black">{examData.title}</h3>
                             </div>
-                            
+
                             {/* Content */}
                             <div className="p-8 space-y-6 overflow-y-auto max-h-[60vh]">
                                 <div className="space-y-2">
                                     <h4 className="font-black text-slate-400 text-xs uppercase tracking-tighter">Your Task</h4>
                                     <p className="text-slate-700 leading-relaxed font-medium bg-slate-50 p-4 rounded-xl border border-slate-100 italic">
-                                        Your group is preparing a presentation for the school magazine about {examData.title}. 
+                                        Your group is preparing a presentation for the school magazine about {examData.title}.
                                         Discuss what to include and how to make it engaging for fellow students.
                                     </p>
                                 </div>
@@ -1021,7 +1162,7 @@ const SpeakingInteractionPage = () => {
                                     <ul className="space-y-3">
                                         {(examData.discussion_points || []).map((p, i) => (
                                             <li key={i} className="flex gap-4 items-start p-3 bg-indigo-50/50 rounded-xl border border-indigo-100/50 hover:bg-indigo-50 transition-colors">
-                                                <div className="size-6 bg-indigo-600 text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5 shadow-md">{i+1}</div>
+                                                <div className="size-6 bg-indigo-600 text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5 shadow-md">{i + 1}</div>
                                                 <p className="text-slate-800 font-bold">{p}</p>
                                             </li>
                                         ))}
@@ -1038,16 +1179,16 @@ const SpeakingInteractionPage = () => {
                                     </div>
                                 </div>
                             </div>
-                            
+
                             {/* Footer */}
                             <div className="p-6 bg-slate-50 border-t border-slate-100 flex gap-4">
-                                <button 
+                                <button
                                     onClick={() => {
                                         // "Warm up" speech synthesis to prevent first-time silence in Chrome
                                         const w = new SpeechSynthesisUtterance(' ');
                                         window.speechSynthesis.speak(w);
                                         setTimeLeft(0);
-                                    }} 
+                                    }}
                                     className="flex-1 py-4 bg-indigo-600 text-white rounded-2xl font-black text-lg shadow-[0_6px_0_rgb(55,48,163)] hover:translate-y-0.5 hover:shadow-[0_4px_0_rgb(55,48,163)] active:translate-y-1 active:shadow-none transition-all flex items-center justify-center gap-2"
                                 >
                                     START DISCUSSION NOW

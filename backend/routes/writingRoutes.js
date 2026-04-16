@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const WritingQuestService = require('../services/writing/WritingQuestService');
+const UserProfileService = require('../services/UserProfileService');
 
 // GET /api/writing/syllabus
 // Returns the Master JSON for the 3 Pillars
@@ -44,8 +45,19 @@ router.get('/scenarios', async (req, res) => {
 // Pillar 1: Generate "PEE" prompts
 router.post('/brainstorm', async (req, res) => {
     try {
-        const { topic, weakSkills, messages, points } = req.body;
+        const { topic, weakSkills, messages, points, uid } = req.body;
+        const persona = await UserProfileService.getPersona(uid, 'english');
         const result = await WritingQuestService.generateBrainstormingPrompts(topic, weakSkills, messages, points);
+        
+        // Dynamic identity injection
+        if (result.intro_message) result.intro_message = result.intro_message.replace(/{{agentName}}/g, persona.name);
+        if (result.questions) {
+            result.questions = result.questions.map(q => ({
+                ...q,
+                text: q.text.replace(/{{agentName}}/g, persona.name)
+            }));
+        }
+
         res.json(result);
     } catch (err) {
         console.error(err);
@@ -57,8 +69,15 @@ router.post('/brainstorm', async (req, res) => {
 // Pillar 2: Analyze paragraph for "Level 5" upgrades & Register check
 router.post('/draft/powerup', async (req, res) => {
     try {
-        const { text, textType, brainstormPoints } = req.body;
+        const { text, textType, brainstormPoints, uid } = req.body;
+        const persona = await UserProfileService.getPersona(uid, 'english');
         const result = await WritingQuestService.analyzeDraftParagraph(text, textType || "Essay", "5*", brainstormPoints);
+        
+        // Inject identity if needed (though powerup is mostly technical feedback)
+        if (typeof result === 'object' && result.feedback_summary) {
+            result.feedback_summary = result.feedback_summary.replace(/{{agentName}}/g, persona.name);
+        }
+
         res.json(result);
     } catch (err) {
         console.error(err);
@@ -126,7 +145,7 @@ router.post('/draft/structure', async (req, res) => {
 // POST /api/writing/grade
 // Final assessment of the piece
 router.post('/grade', async (req, res) => {
-    let { topic, textType, content, question, answer } = req.body;
+    let { topic, textType, content, question, answer, uid } = req.body;
 
     // Normalize inputs to support both Quest (topic/content) and Exam (question/answer) formats
     const finalContent = content || answer;
@@ -136,7 +155,33 @@ router.post('/grade', async (req, res) => {
     if (!finalContent) return res.status(400).json({ error: "Content/Answer required" });
 
     try {
+        const persona = await UserProfileService.getPersona(uid, 'english');
         const result = await WritingQuestService.gradeFinalPiece(finalTopic, finalTextType, finalContent);
+        
+        // Inject identity into assessment
+        if (result.examiner_summary) {
+            if (result.examiner_summary.en) result.examiner_summary.en = result.examiner_summary.en.replace(/{{agentName}}/g, persona.name);
+            if (result.examiner_summary.zh) result.examiner_summary.zh = result.examiner_summary.zh.replace(/{{agentName}}/g, persona.name);
+        }
+
+        // --- PERSIST MASTERY DATA ---
+        if (uid && uid !== 'guest' && result.pillar_scores) {
+            const pillars = ['content', 'language', 'organization'];
+            const updatePromises = pillars.map(p => {
+                const pillarData = result.pillar_scores[p];
+                if (pillarData && pillarData.score) {
+                    // Update micro-skills: writing_content, writing_language, writing_organization
+                    return UserProfileService.updateMicroSkillLevel(uid, 'english', `writing_${p}`, (pillarData.score / 7) * 100, {
+                        type: 'Quest',
+                        difficulty: 5 // Writing quests are generally DSE standard
+                    });
+                }
+                return Promise.resolve();
+            });
+            await Promise.all(updatePromises);
+            console.log(`[WritingRoutes] Persisted mastery data for ${uid}`);
+        }
+
         res.json(result);
     } catch (err) {
         console.error(err);

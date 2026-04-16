@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import { BookOpen, CheckCircle, ArrowRight, Star, Lightbulb, PenTool, Globe, RefreshCw } from 'lucide-react';
 import { useLanguage } from '../../context/LanguageContext';
+import { useAvatar } from '../../context/AvatarContext';
 
 const WritingQuestBriefing = () => {
     const { genre } = useParams(); // e.g., "debate-speech" (slug) or "Debate Speech" (raw) - we might need to handle encoding
@@ -9,6 +10,7 @@ const WritingQuestBriefing = () => {
     const location = useLocation();
     const { initialGenre, taskId } = location.state || {}; // Fallback from state
     const { t } = useLanguage();
+    const { activeAgent } = useAvatar();
 
     const [loading, setLoading] = useState(true);
     const [syllabus, setSyllabus] = useState(null);
@@ -214,7 +216,7 @@ const WritingQuestBriefing = () => {
                                 </h3>
                                 <p className="text-blue-800 text-sm leading-relaxed">
                                     You will write a <b>{genreName}</b> based on the prompt above.
-                                    Our AI tutor, Miss Janie, will guide you through brainstorming,
+                                    Our AI tutor, {activeAgent.name}, will guide you through brainstorming,
                                     drafting, and finalizing your piece.
                                 </p>
                             </div>

@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Send, Loader2, Lightbulb } from 'lucide-react';
+import { useAvatar } from '../../context/AvatarContext';
 
 const BrainstormingStep = ({ topic, title, onComplete, pillarData }) => {
+    const { activeAgent } = useAvatar();
     const hasInitialized = React.useRef(false);
     const scrollRef = React.useRef(null);
 
@@ -34,7 +36,7 @@ const BrainstormingStep = ({ topic, title, onComplete, pillarData }) => {
         // Start conversation - Use ref to prevent double-init in StrictMode
         if (!hasInitialized.current && messages.length === 0) {
             hasInitialized.current = true;
-            addBotMessage(`Hello! I'm Miss Janie. Today we're going to **Spark Ideas** for: "**${title || topic}**".\n\n**Our Task:** ${topic}\n\nTo get a high score, we need deep arguments, not just surface ideas. Let's start: what is your **strongest argument** for this topic?`);
+            addBotMessage(`Hello! I'm ${activeAgent.name}. Today we're going to **Spark Ideas** for: "**${title || topic}**".\n\n**Our Task:** ${topic}\n\nTo get a high score, we need deep arguments, not just surface ideas. Let's start: what is your **strongest argument** for this topic?`);
         }
     }, [topic, title]);
 
@@ -89,7 +91,7 @@ const BrainstormingStep = ({ topic, title, onComplete, pillarData }) => {
                 <div className="bg-indigo-50 p-4 border-b flex flex-col gap-2">
                     <div className="flex items-center gap-2">
                         <div className="size-8 rounded-full bg-indigo-200 flex items-center justify-center">🤖</div>
-                        <span className="font-bold text-indigo-900">Miss Janie (Writing Tutor)</span>
+                        <span className="font-bold text-indigo-900">{activeAgent.name} (Writing Tutor)</span>
                     </div>
                     {pillarData?.british_tutor_hint && (
                         <div className="bg-white/80 p-2 rounded-lg text-xs text-indigo-800 italic border border-indigo-100 flex gap-2">

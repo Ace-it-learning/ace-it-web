@@ -16,6 +16,7 @@ export const AuthProvider = ({ children }) => {
     const [profile, setProfile] = useState(null);
     const [loading, setLoading] = useState(true);
     const [isProfileLoading, setIsProfileLoading] = useState(false);
+    const [initialized, setInitialized] = useState(false); // New state to track if onAuthStateChanged fired
 
     const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
 
@@ -35,6 +36,7 @@ export const AuthProvider = ({ children }) => {
             console.error("[AuthContext] Failed to fetch profile:", error);
         } finally {
             setIsProfileLoading(false);
+            setInitialized(true); // Initialized after profile fetch attempt
         }
     };
 
@@ -43,24 +45,26 @@ export const AuthProvider = ({ children }) => {
     };
 
     useEffect(() => {
-        const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+        const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
+            console.log("[AuthContext] onAuthStateChanged:", currentUser?.uid || 'guest');
             setUser(currentUser);
             if (currentUser) {
-                fetchProfile(currentUser.uid);
+                await fetchProfile(currentUser.uid);
             } else {
                 setProfile(null);
                 setLoading(false);
+                setInitialized(true); // Definitive guest state
             }
         });
         return unsubscribe;
     }, []);
 
-    // Also update loading state once profile is handled
+    // Also update loading state once profile and auth are handled
     useEffect(() => {
-        if (!isProfileLoading) {
+        if (initialized && !isProfileLoading) {
             setLoading(false);
         }
-    }, [isProfileLoading]);
+    }, [initialized, isProfileLoading]);
 
     const loginWithGoogle = () => {
         console.log("Initiating Google Sign-In Popup inside AuthContext...");
@@ -93,7 +97,9 @@ export const AuthProvider = ({ children }) => {
             user,
             profile,
             refreshProfile,
-            loading: loading || isProfileLoading,
+            loading,
+            isProfileLoading,
+            initialized,
             loginWithGoogle,
             signupWithEmail,
             loginWithEmail,

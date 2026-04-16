@@ -5,6 +5,28 @@ node_modules/
 .env
 backend/.env
 backend/serviceAccountKey.json
+backend/config/*.json
+backend/config/serviceAccountKey.json
+backend/*.json
+backend/*.txt
+backend/bridge_*.js
+backend/inspect_*.js
+backend/list_auth_*.js
+backend/sync_*.js
+backend/production-key.json
+backend/production_env.example
+
+# Diagnostic & Scratch Scripts
+backend/check_*.js
+backend/test_*.js
+backend/verify_*.js
+backend/find_*.js
+backend/fix_*.js
+backend/scratch/
+scratch/
+plans/
+frontend/.env.*
+frontend/build_log.txt
 
 # Build Output
 dist/

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Headphones, Timer, CheckCircle, AlertCircle, Send, Table as TableIcon, ListChecks, Zap, Clock } from 'lucide-react';
+import { Headphones, Timer, CheckCircle, AlertCircle, Send, Table as TableIcon, ListChecks, Zap, Clock, Play, Loader2 } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
+import AudioWaveform from '../utils/AudioWaveform';
 
 const DataSprintBoard = ({ questData, onComplete }) => {
     const { user } = useAuth();
@@ -11,7 +12,7 @@ const DataSprintBoard = ({ questData, onComplete }) => {
     const [currentAudioSrc, setCurrentAudioSrc] = useState(null);
     const audioRef = React.useRef(null);
 
-    const sprintTasks = questData?.sprint_data?.tasks || [];
+    const sprintTasks = questData?.sprint_data?.tasks || questData?.sprint_data?.interactive_tasks || [];
 
     // Cleanup audio on unmount
     useEffect(() => {
@@ -27,11 +28,11 @@ const DataSprintBoard = ({ questData, onComplete }) => {
         const cheatAnswers = {};
         sprintTasks.forEach(task => {
             if (task.type === 'TABLE') {
-                task.rows.forEach((row, idx) => { cheatAnswers[`${task.id}_${idx}`] = row.answer; });
+                (task.rows || []).forEach((row, idx) => { cheatAnswers[`${task.id}_${idx}`] = row.answer; });
             } else if (task.type === 'LIST') {
-                task.items.forEach((item, idx) => { cheatAnswers[`${task.id}_${idx}`] = item.answer; });
+                (task.items || []).forEach((item, idx) => { cheatAnswers[`${task.id}_${idx}`] = item.answer; });
             } else if (task.type === 'MCQ_BATCH') {
-                task.questions.forEach((q, idx) => { cheatAnswers[`${task.id}_${idx}`] = q.answer; });
+                (task.questions || []).forEach((q, idx) => { cheatAnswers[`${task.id}_${idx}`] = q.answer; });
             } else {
                 cheatAnswers[task.id] = task.answer;
             }
@@ -110,7 +111,7 @@ const DataSprintBoard = ({ questData, onComplete }) => {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
-                    text: questData?.sprint_data?.audio_transcript || "Starting Part A exam recording.",
+                    text: questData?.sprint_data?.audio_transcript || questData?.audio_transcript || "Starting Part A exam recording.",
                     accent: 'UK',
                     gender: 'FEMALE'
                 })
@@ -136,15 +137,30 @@ const DataSprintBoard = ({ questData, onComplete }) => {
     };
 
     const renderTask = (task, idx) => {
+        const isCompleted = task.type === 'TABLE' 
+            ? (task.rows || []).every((_, rIdx) => !!answers[`${task.id}_${rIdx}`])
+            : task.type === 'LIST'
+            ? (task.items || []).every((_, iIdx) => !!answers[`${task.id}_${iIdx}`])
+            : !!answers[task.id];
+
+        const cardStyle = isCompleted 
+            ? 'bg-white border-indigo-100 shadow-md ring-1 ring-indigo-50' 
+            : 'bg-white border-slate-100 shadow-sm opacity-90 hover:opacity-100 transition-opacity';
+
         switch (task.type) {
             case 'TABLE':
                 return (
-                    <div key={task.id} className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100">
-                        <div className="flex items-center gap-4 mb-6">
-                            <span className="w-8 h-8 bg-amber-500 text-white rounded-lg flex items-center justify-center font-black">{idx + 1}</span>
-                            <h3 className="text-xl font-bold text-slate-800">{task.label}</h3>
+                    <div key={task.id} className={`${cardStyle} p-8 rounded-[2rem] border-2 transition-all duration-500`}>
+                        <div className="flex items-center justify-between mb-8">
+                            <div className="flex items-center gap-4">
+                                <span className={`w-10 h-10 rounded-xl flex items-center justify-center font-black transition-colors ${isCompleted ? 'bg-indigo-600 text-white' : 'bg-slate-100 text-slate-400'}`}>
+                                    {idx + 1}
+                                </span>
+                                <h3 className="text-xl font-extrabold text-slate-800 tracking-tight">{task.label}</h3>
+                            </div>
+                            {isCompleted && <CheckCircle size={24} className="text-emerald-500 animate-in zoom-in duration-300" />}
                         </div>
-                        <div className="overflow-x-auto rounded-2xl border border-slate-100">
+                        <div className="overflow-hidden rounded-2xl border border-slate-100 bg-slate-50/30">
                             <table className="w-full text-left border-collapse">
                                 <thead className="bg-slate-50">
                                     <tr>
@@ -153,14 +169,14 @@ const DataSprintBoard = ({ questData, onComplete }) => {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {task.rows.map((row, rIdx) => (
-                                        <tr key={rIdx} className="border-t border-slate-50">
-                                            <td className="p-4 text-sm font-black text-slate-600 bg-slate-50/50">{row.label}</td>
-                                            <td className="p-2">
+                                    {(task.rows || []).map((row, rIdx) => (
+                                        <tr key={rIdx} className="border-t border-slate-100/50 group">
+                                            <td className="p-4 text-xs font-black text-slate-500 bg-slate-50/50 w-1/3 italic">{row.label}</td>
+                                            <td className="p-3">
                                                 <input 
                                                     type="text"
                                                     placeholder={row.placeholder}
-                                                    className="w-full bg-white border border-slate-100 rounded-xl p-3 text-sm font-bold text-slate-900 focus:ring-2 focus:ring-amber-500 outline-none"
+                                                    className="w-full bg-white border-2 border-slate-100 rounded-xl px-4 py-3 text-sm font-bold text-slate-900 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10 outline-none transition-all placeholder:text-slate-300"
                                                     value={answers[`${task.id}_${rIdx}`] || ""}
                                                     onChange={(e) => handleAnswer(`${task.id}_${rIdx}`, e.target.value)}
                                                 />
@@ -174,19 +190,24 @@ const DataSprintBoard = ({ questData, onComplete }) => {
                 );
             case 'LIST':
                 return (
-                    <div key={task.id} className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100">
-                        <div className="flex items-center gap-4 mb-6">
-                            <span className="w-8 h-8 bg-amber-500 text-white rounded-lg flex items-center justify-center font-black">{idx + 1}</span>
-                            <h3 className="text-xl font-bold text-slate-800">{task.label}</h3>
+                    <div key={task.id} className={`${cardStyle} p-8 rounded-[2rem] border-2 transition-all duration-500`}>
+                        <div className="flex items-center justify-between mb-8">
+                            <div className="flex items-center gap-4">
+                                <span className={`w-10 h-10 rounded-xl flex items-center justify-center font-black transition-colors ${isCompleted ? 'bg-indigo-600 text-white' : 'bg-slate-100 text-slate-400'}`}>
+                                    {idx + 1}
+                                </span>
+                                <h3 className="text-xl font-extrabold text-slate-800 tracking-tight">{task.label}</h3>
+                            </div>
+                            {isCompleted && <CheckCircle size={24} className="text-emerald-500 animate-in zoom-in duration-300" />}
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            {task.items.map((item, iIdx) => (
-                                <div key={iIdx}>
-                                    <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2 block">{item.label}</label>
+                            {(task.items || []).map((item, iIdx) => (
+                                <div key={iIdx} className="relative group">
+                                    <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2 block group-focus-within:text-indigo-600 transition-colors">{item.label}</label>
                                     <input 
                                         type="text"
-                                        placeholder={item.placeholder}
-                                        className="w-full bg-slate-50 border border-slate-100 rounded-xl p-4 text-sm font-bold text-slate-900 focus:ring-2 focus:ring-amber-500 outline-none"
+                                        placeholder={item.placeholder || "Enter details..."}
+                                        className="w-full bg-slate-50 border-2 border-slate-100 rounded-2xl p-4 text-sm font-bold text-slate-900 focus:bg-white focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10 outline-none transition-all placeholder:text-slate-300"
                                         value={answers[`${task.id}_${iIdx}`] || ""}
                                         onChange={(e) => handleAnswer(`${task.id}_${iIdx}`, e.target.value)}
                                     />
@@ -197,29 +218,40 @@ const DataSprintBoard = ({ questData, onComplete }) => {
                 );
             case 'MCQ_BATCH':
                 return (
-                    <div key={task.id} className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100">
-                        <div className="flex items-center gap-4 mb-8">
-                            <span className="w-8 h-8 bg-amber-500 text-white rounded-lg flex items-center justify-center font-black">{idx + 1}</span>
-                            <h3 className="text-xl font-bold text-slate-800">{task.label}</h3>
+                    <div key={task.id} className={`${cardStyle} p-8 rounded-[2rem] border-2 transition-all duration-500`}>
+                        <div className="flex items-center justify-between mb-10">
+                            <div className="flex items-center gap-4">
+                                <span className={`w-10 h-10 rounded-xl flex items-center justify-center font-black transition-colors ${isCompleted ? 'bg-indigo-600 text-white' : 'bg-slate-100 text-slate-400'}`}>
+                                    {idx + 1}
+                                </span>
+                                <h3 className="text-xl font-extrabold text-slate-800 tracking-tight">{task.label}</h3>
+                            </div>
+                            {isCompleted && <CheckCircle size={24} className="text-emerald-500 animate-in zoom-in duration-300" />}
                         </div>
-                        <div className="space-y-8">
-                            {task.questions.map((q, qIdx) => (
-                                <div key={qIdx} className="space-y-4">
-                                    <p className="font-bold text-slate-800 flex gap-2">
-                                        <span className="text-amber-500">Q{qIdx + 11}.</span> {q.question}
+                        <div className="space-y-10">
+                            {(task.questions || []).map((q, qIdx) => (
+                                <div key={qIdx} className="space-y-5">
+                                    <p className="font-extrabold text-slate-800 flex gap-3 leading-snug">
+                                        <span className="text-indigo-400 shrink-0">Q{qIdx + 11}.</span> 
+                                        {q.question}
                                     </p>
-                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                                        {q.options.map((opt, oIdx) => (
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                        {(q.options || []).map((opt, oIdx) => (
                                             <button
                                                 key={oIdx}
                                                 onClick={() => handleAnswer(`${task.id}_${qIdx}`, opt[0])}
-                                                className={`p-4 rounded-xl border-2 text-left transition-all font-bold text-sm
+                                                className={`p-5 rounded-2xl border-2 text-left transition-all font-bold text-sm group
                                                     ${answers[`${task.id}_${qIdx}`] === opt[0]
-                                                        ? 'bg-amber-50 border-amber-500 text-amber-700 shadow-sm' 
-                                                        : 'bg-white border-slate-100 text-slate-600 hover:border-slate-300'}
+                                                        ? 'bg-indigo-600 border-indigo-600 text-white shadow-lg shadow-indigo-900/20' 
+                                                        : 'bg-white border-slate-100 text-slate-600 hover:border-indigo-200 hover:bg-indigo-50/30'}
                                                 `}
                                             >
-                                                {opt}
+                                                <div className="flex items-center gap-3">
+                                                    <span className={`w-6 h-6 rounded-lg flex items-center justify-center text-[10px] font-black shadow-sm ${answers[`${task.id}_${qIdx}`] === opt[0] ? 'bg-white/20' : 'bg-slate-100 text-slate-400 group-hover:bg-indigo-100 group-hover:text-indigo-600'}`}>
+                                                        {opt[0]}
+                                                    </span>
+                                                    {opt.substring(3)}
+                                                </div>
                                             </button>
                                         ))}
                                     </div>
@@ -230,16 +262,18 @@ const DataSprintBoard = ({ questData, onComplete }) => {
                 );
             default:
                 return (
-                    <div key={task.id} className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100">
-                        <div className="flex items-start gap-4 mb-6">
-                            <span className="flex-shrink-0 w-8 h-8 bg-slate-900 text-white flex items-center justify-center font-black rounded-lg text-sm">{idx + 1}</span>
-                            <h3 className="text-lg font-bold text-slate-800 leading-snug">{task.question}</h3>
+                    <div key={task.id} className={`${cardStyle} p-8 rounded-[2rem] border-2 transition-all duration-500`}>
+                        <div className="flex items-start gap-4 mb-8">
+                            <span className={`flex-shrink-0 w-10 h-10 flex items-center justify-center font-black rounded-xl text-sm transition-colors ${isCompleted ? 'bg-indigo-600 text-white' : 'bg-slate-900 text-white'}`}>
+                                {idx + 1}
+                            </span>
+                            <h3 className="text-xl font-extrabold text-slate-800 leading-tight tracking-tight">{task.question}</h3>
                         </div>
-                        <div className="ml-12">
+                        <div className="ml-14">
                             <input
                                 type="text"
-                                placeholder="Type answer exactly as heard..."
-                                className="w-full bg-slate-50 border border-slate-200 rounded-xl p-4 text-slate-900 font-bold focus:outline-none focus:ring-2 focus:ring-amber-500 outline-none transition-all placeholder:text-slate-400"
+                                placeholder="Capture details precisely..."
+                                className="w-full bg-slate-50 border-2 border-slate-100 rounded-2xl p-5 text-slate-900 font-bold text-lg focus:outline-none focus:bg-white focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10 transition-all placeholder:text-slate-300"
                                 value={answers[task.id] || ''}
                                 onChange={(e) => handleAnswer(task.id, e.target.value)}
                             />
@@ -250,119 +284,146 @@ const DataSprintBoard = ({ questData, onComplete }) => {
     };
 
     return (
-        <div className="flex flex-col gap-6 animate-in fade-in duration-700">
-            {/* Header / Stats */}
-            <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex flex-wrap items-center justify-between gap-4">
-                <div className="flex items-center gap-4">
-                    <div className={`p-4 rounded-xl ${isPlaying ? 'bg-amber-100 text-amber-600 animate-pulse' : 'bg-slate-100 text-slate-400'}`}>
-                        <Headphones size={24} />
+        <div className="flex flex-col gap-8 animate-in fade-in duration-1000">
+            {/* High-Fidelity Header / Waveform Section */}
+            <div className="bg-white p-8 rounded-[3rem] shadow-2xl shadow-indigo-900/5 border border-slate-100 flex flex-col gap-8 relative overflow-hidden">
+                <div className="flex flex-wrap items-center justify-between gap-6 relative z-10">
+                    <div className="flex items-center gap-6">
+                        <div className={`p-5 rounded-2xl transition-all duration-500 shadow-lg ${isPlaying ? 'bg-indigo-600 text-white shadow-indigo-900/40 animate-pulse' : 'bg-slate-100 text-slate-400 shadow-slate-200'}`}>
+                            <Headphones size={32} />
+                        </div>
+                        <div>
+                            <div className="flex items-center gap-2 mb-1">
+                                <span className="bg-indigo-100 text-indigo-700 text-[10px] font-black uppercase tracking-widest px-2.5 py-1 rounded-md">Mission Alpha</span>
+                                <h2 className="text-3xl font-black text-slate-900 tracking-tighter tabular-nums">Part A: The Data Sprint</h2>
+                            </div>
+                            <p className="text-sm text-slate-500 font-bold italic tracking-tight opacity-70">Focus: Dynamic Information Extraction (1.0x Speed)</p>
+                        </div>
                     </div>
-                    <div>
-                        <h2 className="text-xl font-black text-slate-800">Part A: The Data Sprint</h2>
-                        <p className="text-sm text-slate-500 font-medium tracking-tight">Factual Extraction & Information Retrieval</p>
+
+                    <div className="flex items-center gap-4">
+                        {user?.email === 'fungtam@gmail.com' && (
+                            <button 
+                                onClick={handleCheat}
+                                className="flex items-center gap-2 px-6 py-4 bg-slate-900 text-amber-400 rounded-2xl text-[10px] font-black uppercase tracking-widest hover:bg-black transition-all border border-amber-400/30 shadow-xl shadow-amber-900/20"
+                            >
+                                <Zap size={18} className="fill-current" /> Admin Cheat
+                            </button>
+                        )}
+                        <button 
+                            onClick={handlePlayAudio}
+                            disabled={isPlaying}
+                            className={`px-10 py-5 rounded-2xl font-black text-lg transition-all flex items-center gap-3 shadow-xl
+                                ${isPlaying ? 'bg-slate-100 text-slate-300 cursor-not-allowed' : 'bg-indigo-600 text-white hover:bg-indigo-500 hover:scale-105 active:scale-95 shadow-indigo-900/20'}
+                            `}
+                        >
+                            {isPlaying ? (
+                                <><Loader2 size={24} className="animate-spin" /> Recording Live...</>
+                            ) : (
+                                <><Play size={24} className="fill-current" /> Start Audio Briefing</>
+                            )}
+                        </button>
                     </div>
                 </div>
 
-                <div className="flex items-center gap-6">
-                    {user?.email === 'fungtam@gmail.com' && (
-                        <button 
-                            onClick={handleCheat}
-                            className="flex items-center gap-2 px-4 py-2 bg-slate-900 text-amber-400 rounded-xl text-[10px] font-black uppercase tracking-widest hover:bg-black transition-all border border-amber-400/30 shadow-lg shadow-amber-900/20"
-                        >
-                            <Zap size={14} className="fill-current" /> Admin Cheat
-                        </button>
-                    )}
-                    <div className="flex flex-col items-end">
-                        <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest leading-none mb-1 text-right">Mission Status</span>
-                        <div className="text-xl font-black text-slate-800 text-right">
-                             {isPlaying ? 'Assessment Active' : 'Waiting for Briefing'}
-                        </div>
+                {/* Integrated Waveform Component */}
+                <div className={`transition-all duration-700 overflow-hidden ${isPlaying ? 'max-h-[150px] opacity-100' : 'max-h-0 opacity-0'}`}>
+                    <div className="bg-slate-50 rounded-[2rem] p-6 border-2 border-indigo-50 border-dashed">
+                        <AudioWaveform 
+                            audioSrc={currentAudioSrc} 
+                            isPlaying={isPlaying} 
+                            height={80}
+                            waveColor="#cbd5e1"
+                            progressColor="#6366f1"
+                        />
                     </div>
-                    <button 
-                        onClick={handlePlayAudio}
-                        disabled={isPlaying}
-                        className={`px-6 py-3 rounded-xl font-black transition-all flex items-center gap-2 shadow-sm
-                            ${isPlaying ? 'bg-slate-100 text-slate-400' : 'bg-amber-500 text-white hover:bg-amber-600 hover:scale-105 active:scale-95 shadow-amber-100'}
-                        `}
-                    >
-                        {isPlaying ? 'Audio Playing...' : 'Start Audio'}
-                    </button>
                 </div>
             </div>
 
             {/* Task Grid */}
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-                {/* Left: QA Book */}
-                <div className="lg:col-span-8 flex flex-col gap-6">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
+                {/* Left: Question-Answer Book */}
+                <div className="lg:col-span-8 flex flex-col gap-8">
                     {sprintTasks.map((task, idx) => renderTask(task, idx))}
                 </div>
 
-                {/* Right: Summary & Submission */}
+                {/* Right: Summary & Control Panel */}
                 <div className="lg:col-span-4">
-                    <div className="sticky top-24 flex flex-col gap-6">
-                        {/* Floating Timer */}
-                        <div className="bg-slate-900 rounded-3xl p-8 shadow-2xl border-b-4 border-amber-500 text-white">
-                            <div className="flex items-center gap-3 mb-4 text-amber-500">
-                                <Clock size={20} />
-                                <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Time Remaining</span>
+                    <div className="sticky top-28 flex flex-col gap-8 animate-in slide-in-from-right duration-500">
+                        {/* Digital Examination Timer (Floating) */}
+                        <div className="bg-slate-900 rounded-[2.5rem] p-10 shadow-2xl border-b-[8px] border-indigo-500 text-white relative overflow-hidden group">
+                            <div className="flex items-center gap-3 mb-6 relative z-10">
+                                <Clock size={22} className="text-indigo-400" />
+                                <span className="text-[10px] font-black text-slate-400 uppercase tracking-[0.3em]">Exam Remaining</span>
                             </div>
-                            <div className={`text-5xl font-black tabular-nums tracking-tighter mb-4 ${timeLeft < 60 ? 'text-rose-500 animate-pulse' : 'text-white'}`}>
+                            <div className={`text-6xl font-black tabular-nums tracking-tighter mb-6 relative z-10 transition-colors duration-500 ${timeLeft < 60 ? 'text-rose-500 animate-pulse' : 'text-white'}`}>
                                 {formatTime(timeLeft)}
                             </div>
-                            <div className="h-1.5 bg-white/10 rounded-full overflow-hidden">
+                            <div className="h-2 bg-white/10 rounded-full overflow-hidden relative z-10">
                                 <div 
-                                    className="h-full bg-amber-500 transition-all duration-1000" 
+                                    className="h-full bg-indigo-500 transition-all duration-1000 shadow-[0_0_20px_rgba(99,102,241,0.5)]" 
                                     style={{ width: `${(timeLeft / 600) * 100}%` }}
                                 />
                             </div>
                         </div>
 
-                        {/* Progress Tracker */}
-                        <div className="bg-white rounded-3xl p-8 shadow-sm border border-slate-100">
-                            <div className="flex items-center justify-between mb-6">
-                                <h3 className="font-black text-slate-800 uppercase tracking-widest text-xs">Mission Progress</h3>
-                                <span className="text-xs font-black text-indigo-600 bg-indigo-50 px-3 py-1 rounded-full">
-                                    {completedCount} / {totalFields}
-                                </span>
+                        {/* High-Fidelity Progress Card */}
+                        <div className="bg-white rounded-[2.5rem] p-10 shadow-xl border border-slate-100 overflow-hidden relative">
+                            <div className="flex items-center justify-between mb-8">
+                                <div>
+                                    <h3 className="font-black text-slate-900 uppercase tracking-widest text-xs mb-1">Audit Status</h3>
+                                    <p className="text-[10px] font-bold text-slate-400 uppercase tracking-tight">Real-time Task Completion</p>
+                                </div>
+                                <div className="text-right">
+                                    <span className="text-3xl font-black text-indigo-600 leading-none">
+                                        {completedCount}<span className="text-slate-200 text-sm mx-1">/</span>{totalFields}
+                                    </span>
+                                </div>
                             </div>
                             
-                            <div className="w-full bg-slate-100 h-3 rounded-full overflow-hidden mb-8">
+                            <div className="w-full bg-slate-100 h-4 rounded-full overflow-hidden mb-10 p-1 shadow-inner">
                                 <div 
-                                    className="bg-indigo-600 h-full transition-all duration-700 ease-out shadow-[0_0_15px_rgba(79,70,229,0.4)]"
+                                    className="bg-indigo-600 h-full rounded-full transition-all duration-1000 ease-out shadow-[0_0_20px_rgba(79,70,229,0.3)] relative"
                                     style={{ width: `${completionRate}%` }}
-                                />
+                                >
+                                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-[shimmer_2s_infinite]" />
+                                </div>
                             </div>
 
                             <button 
                                 onClick={handleSubmit}
-                                disabled={isSubmitting}
-                                className={`w-full py-5 rounded-[1.5rem] font-black text-lg transition-all flex items-center justify-center gap-3 shadow-xl
-                                    ${completionRate === 100 
-                                        ? 'bg-slate-900 text-white hover:bg-black hover:scale-105 active:scale-95 shadow-slate-200' 
+                                disabled={isSubmitting || completionRate < 50}
+                                className={`w-full py-6 rounded-[2rem] font-black text-xl transition-all flex items-center justify-center gap-3 shadow-2xl relative z-10
+                                    ${completionRate >= 50 && !isSubmitting
+                                        ? 'bg-slate-900 text-white hover:bg-black hover:scale-[1.02] active:scale-95 shadow-slate-300' 
                                         : 'bg-slate-100 text-slate-300 cursor-not-allowed shadow-none'}
                                 `}
                             >
                                 {isSubmitting ? (
                                     <>
-                                        <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
-                                        Analyzing...
+                                        <Loader2 size={24} className="animate-spin" />
+                                        Analyzing Patterns...
                                     </>
                                 ) : (
-                                    <><CheckCircle size={20} /> Finish Part A</>
+                                    <><Send size={20} /> Finish Part A</>
                                 )}
                             </button>
                             
-                            <p className="mt-4 text-[10px] text-slate-400 text-center uppercase tracking-widest font-black">
-                                Manual Audit Submission
+                            <p className="mt-6 text-[10px] text-slate-400 text-center uppercase tracking-[0.2em] font-black italic opacity-60">
+                                Verify all fields before submission
                             </p>
                         </div>
 
-                        <div className="bg-amber-50 border border-amber-100 rounded-[2rem] p-6">
-                            <h4 className="font-black text-amber-900 text-sm mb-3 flex items-center gap-2">
-                                <AlertCircle size={16} /> Exam Pro-Tip
+                        {/* Examiner Insight Pill */}
+                        <div className="bg-indigo-50/50 border-2 border-indigo-100 border-dashed rounded-[2.5rem] p-8">
+                            <h4 className="font-extrabold text-indigo-900 text-sm mb-4 flex items-center gap-3">
+                                <AlertCircle size={20} className="text-indigo-600" /> 
+                                Examiner Intelligence
                             </h4>
-                            <p className="text-xs text-amber-800/70 font-bold leading-relaxed">
-                                HKDSE markers focus on capitalization for proper nouns (names, places). Use your 10 minutes wisely to proofread your spellings!
+                            <p className="text-xs text-indigo-800/70 font-bold leading-relaxed">
+                                Most students lose marks on Part A due to **spelling inconsistencies**. Ensure your answers match the audio transcript accurately. 
+                                <br/><br/>
+                                <span className="text-indigo-600 uppercase tracking-widest text-[10px]">Tip: Watch out for plurals!</span>
                             </p>
                         </div>
                     </div>

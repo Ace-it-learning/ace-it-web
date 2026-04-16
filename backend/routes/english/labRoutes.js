@@ -264,22 +264,41 @@ router.post('/writing/cheat', async (req, res) => {
 router.post('/tts', async (req, res) => {
     try {
         const TTSService = require('../../services/TTSService');
-        const { text, includeTimepoints } = req.body;
+        const { text, includeTimepoints, languageCode, gender, premium } = req.body;
 
         if (!text) return res.status(400).json({ error: "Missing text" });
 
-        // If timepoints are requested, we use the simpler generator for now 
-        // as multi-speaker concatenation makes character-offsets complex.
+        // PREMIUM/MULTIPODAL FLOW (Highly Stable)
+        // Default to premium for English pedagogically critical lines
+        const isEnglish = (languageCode || '').startsWith('en');
+        if (premium || (isEnglish && text.length > 20)) {
+            try {
+                console.log(`[TTS] Using Premium Multimodal Generation for stability...`);
+                // Note: gender mapping is now handled inside TTSService.generateMultimodalSpeech
+                const audioBase64 = await TTSService.generateMultimodalSpeech(text, gender || 'FEMALE');
+                return res.json({ audio: audioBase64, mode: 'premium' });
+            } catch (premiumError) {
+                console.warn(`[TTS] Premium generation failed, falling back to standard:`, premiumError.message);
+                // Fall through to standard flow
+            }
+        }
+
+        // Standard Flow
         if (includeTimepoints) {
-            const data = await TTSService.generateSpeech(text, 'en-GB', 'FEMALE', 1.0, null, true);
+            const data = await TTSService.generateSpeech(text, languageCode || 'en-GB', gender || 'FEMALE', 1.0, null, true);
             return res.json(data);
         }
 
-        const audioBase64 = await TTSService.generateMultiSpeakerSpeech(text);
+        if (gender) {
+            const audioBase64 = await TTSService.generateSpeech(text, languageCode || 'en-GB', gender);
+            return res.json({ audio: audioBase64 });
+        }
+
+        const audioBase64 = await TTSService.generateMultiSpeakerSpeech(text, languageCode || 'en-GB', gender || 'FEMALE');
         res.json({ audio: audioBase64 });
     } catch (e) {
-        console.error("TTS Endpoint Error:", e);
-        res.status(500).json({ error: "TTS generation failed" });
+        console.error("TTS Endpoint Error [DEBUG]:", e);
+        res.status(500).json({ error: "TTS generation failed", details: e.message });
     }
 });
 

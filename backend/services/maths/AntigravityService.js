@@ -33,7 +33,7 @@ class AntigravityService {
             ];
 
             const { data: resData } = await GenerativeAIService.generateJson(multimodalInput, {
-                model: "gemini-1.5-pro",
+                model: "ace-it-pro",
                 systemInstruction: systemInstruction,
                 generationConfig: {
                     temperature: 0.0 // Strict grading

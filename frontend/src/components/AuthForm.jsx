@@ -88,7 +88,6 @@ const AuthForm = ({ onAuthSuccess }) => {
                 if (!allowed) {
                     await deleteUser(userCred.user);
                     setMessage({ type: 'error', text: "Device limit reached. You can only create 2 trial accounts on this device." });
-                    setLoading(false);
                     return;
                 }
                 await incrementDeviceCount(userCred.user.uid);
@@ -97,6 +96,7 @@ const AuthForm = ({ onAuthSuccess }) => {
         } catch (error) {
             console.error("Google Login Error:", error);
             setMessage({ type: 'error', text: `Login failed: ${error.message}` });
+        } finally {
             setLoading(false);
         }
     };

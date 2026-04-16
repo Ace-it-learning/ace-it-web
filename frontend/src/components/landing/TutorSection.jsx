@@ -2,6 +2,7 @@ import React from 'react';
 import { Heart } from 'lucide-react';
 import { useIntersectionObserver } from '../../hooks/useIntersectionObserver';
 import { useLanguage } from '../../context/LanguageContext';
+import { AGENTS } from '../../context/AvatarContext';
 
 const TutorSection = () => {
     const [sectionRef, isVisible] = useIntersectionObserver({ threshold: 0.1 });
@@ -9,35 +10,35 @@ const TutorSection = () => {
 
     const tutors = [
         {
-            name: "Ace Sir",
+            name: AGENTS.ace.name,
             role: t('landing.tutors.ace_sir.role'),
             vision: t('landing.tutors.ace_sir.vision'),
             highlights: t('landing.tutors.ace_sir.highlights'),
-            avatar: "/avatars/ace_sir_new.jpg",
+            avatar: AGENTS.ace.avatar,
             color: "orange"
         },
         {
-            name: "Miss Janie",
+            name: AGENTS.english.name,
             role: t('landing.tutors.miss_janie.role'),
             vision: t('landing.tutors.miss_janie.vision'),
             highlights: t('landing.tutors.miss_janie.highlights'),
-            avatar: "/avatars/english_v2.jpg",
+            avatar: AGENTS.english.avatar,
             color: "blue"
         },
         {
-            name: "Mr. Wong",
+            name: AGENTS.math.name,
             role: t('landing.tutors.mr_wong.role'),
             vision: t('landing.tutors.mr_wong.vision'),
             highlights: t('landing.tutors.mr_wong.highlights'),
-            avatar: "/avatars/math.png",
+            avatar: AGENTS.math.avatar,
             color: "emerald"
         },
         {
-            name: "Miss Chen",
+            name: AGENTS.chinese.name,
             role: t('landing.tutors.miss_chen.role'),
             vision: t('landing.tutors.miss_chen.vision'),
             highlights: t('landing.tutors.miss_chen.highlights'),
-            avatar: "/avatars/chinese.png",
+            avatar: AGENTS.chinese.avatar,
             color: "amber"
         }
     ];

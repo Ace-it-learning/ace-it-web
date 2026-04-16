@@ -53,7 +53,7 @@ const SpeakingWaveform = ({ isRecording, onReady }) => {
         <div className="w-full bg-white/50 backdrop-blur-sm rounded-2xl p-4 border border-indigo-100 shadow-inner overflow-hidden">
             <div ref={waveformRef} className="w-full" />
             {!isRecording && !wavesurfer.current?.decodedData && (
-                <div className="flex justify-center items-center h-[60px] text-gray-400 text-xs font-medium italic">
+                <div className="flex justify-center items-center h-[60px] text-gray-400 text-xs font-medium italic animate-pulse">
                     Visualizer ready... Press record to see your voice ribbon
                 </div>
             )}

@@ -4,7 +4,7 @@ import { useAuth } from '../context/AuthContext';
 import { Sparkles } from 'lucide-react';
 
 const ProtectedRoute = ({ children }) => {
-    const { user, loading } = useAuth();
+    const { user, loading, initialized } = useAuth();
     const [isOnboarded, setIsOnboarded] = useState(null);
     const onboardedRef = useRef(null); // Ref for timeout closure safety
     const [checkedUid, setCheckedUid] = useState(null);
@@ -121,81 +121,8 @@ const ProtectedRoute = ({ children }) => {
         return () => clearTimeout(timeout);
     }, [user?.uid, location.pathname]); // Removed isOnboarded from deps to prevent loop, used user?.uid for stability
 
-    // --- PRIVACY MODE GUARDIAN ---
-    // PRIVATE on Production (aceit-learning.com), OPEN on Localhost
-    const IS_PRIVATE_MODE = window.location.hostname !== 'localhost';
-    const { loginWithGoogle } = useAuth(); // Destructure login method
-
-    if (loading) {
-        console.log("ProtectedRoute: Still loading auth state...");
-        return (
-            <div className="fixed inset-0 flex flex-col items-center justify-center bg-white z-[9999]">
-                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mb-4"></div>
-                <p className="text-gray-500 font-medium">Authenticating...</p>
-            </div>
-        );
-    }
-
-    // PRIVACY CHECK
-    if (IS_PRIVATE_MODE) {
-        if (!user) {
-            // Render a "Under Construction" screen for guests
-            return (
-                <div className="h-screen w-screen flex flex-col items-center justify-center bg-gray-50 text-center p-4">
-                    <h1 className="text-4xl font-bold text-gray-800 mb-4">🚧 Work In Progress 🚧</h1>
-                    <p className="text-gray-600 mb-8">Ace It Learning is currently in private beta.</p>
-                    <p className="text-sm text-gray-400">Please check back later!</p>
-
-                    {/* Admin Login Button */}
-                    <button
-                        onClick={loginWithGoogle}
-                        className="mt-8 px-6 py-2 bg-gray-200 hover:bg-gray-300 text-gray-700 rounded-full text-xs font-bold transition-all"
-                    >
-                        Admin Login
-                    </button>
-                </div>
-            );
-        }
-
-        // If logged in but not in allowlist (Optional: remove this if you want ANY logged in user to see it)
-        // For now, let's just assume if they managed to log in, they are "internal" enough, 
-        // OR enforce the email check strictly. Let's enforce strictly if you want it PRIVATE.
-        /*
-        if (!ALLOWED_EMAILS.includes(user.email)) {
-             return <div>Access Denied. Your email ({user.email}) is not on the private beta list.</div>;
-        }
-        */
-    }
-
-    if (!user) {
-        console.log("ProtectedRoute: Rendering children for GUEST on", location.pathname);
-        if (location.pathname === '/onboarding' || location.pathname === '/dashboard') {
-            return <Navigate to="/login" />;
-        }
-        return children;
-    }
-
-    // CHECK EMAIL VERIFICATION
-    // Localhost Bypass: Allow development without real email verification
-    if (!user.emailVerified && window.location.hostname !== 'localhost') {
-        console.log("ProtectedRoute: User NOT VERIFIED, redirecting to login with notice.");
-        return <Navigate to="/login" state={{ message: "Please verify your email address to continue." }} />;
-    }
-
-    // Special case for onboarding page
-    if (location.pathname === '/onboarding') {
-        console.log("ProtectedRoute: Rendering Onboarding Page for Auth User");
-        return children;
-    }
-
-    // Redirect to onboarding if profile not found
-    // IMPORTANT: Only check this if we have actually verified the CURRENT user
-    if (user && checkedUid === user.uid && isOnboarded === false) {
-        console.log("ProtectedRoute: User not onboarded, REDIRECTING to /onboarding");
-        return <Navigate to="/onboarding" />;
-    }
-
-    if (isOnboarded === null || (user && checkedUid !== user.uid)) {
+    // 1. Wait for initialization before making any redirection decisions
+    if (!initialized || (user && checkedUid !== user.uid)) {
         return (
             <div className="fixed inset-0 flex flex-col items-center justify-center bg-slate-50 z-[9999] p-6 text-center">
                 <div className="relative mb-8">
@@ -231,6 +158,48 @@ const ProtectedRoute = ({ children }) => {
                 )}
             </div>
         );
+    }
+
+    // 2. Handle Unauthenticated (Guest) Users
+    // Only redirect if we are CERTAIN there is no user AND auth has initialized
+    if (!user && initialized) {
+        console.log("ProtectedRoute: User confirmed GUEST, checking redirect...");
+        if (location.pathname === '/onboarding' || location.pathname === '/dashboard') {
+            return <Navigate to="/login" />;
+        }
+        return children;
+    }
+
+    // 3. Handle Authenticated Users but loading onboarding status
+    if (isOnboarded === null) {
+        return (
+            <div className="fixed inset-0 flex flex-col items-center justify-center bg-slate-50 z-[9999] p-6 text-center">
+                <div className="relative mb-8">
+                    <div className="w-20 h-20 border-4 border-slate-200 border-t-orange-600 rounded-full animate-spin"></div>
+                </div>
+                <h2 className="text-2xl font-black text-slate-900 mb-2 tracking-tight">Verifying profile...</h2>
+            </div>
+        );
+    }
+
+    // 4. CHECK EMAIL VERIFICATION
+    // Localhost Bypass: Allow development without real email verification
+    if (!user.emailVerified && window.location.hostname !== 'localhost') {
+        console.log("ProtectedRoute: User NOT VERIFIED, redirecting to login with notice.");
+        return <Navigate to="/login" state={{ message: "Please verify your email address to continue." }} />;
+    }
+
+    // Special case for onboarding page
+    if (location.pathname === '/onboarding') {
+        console.log("ProtectedRoute: Rendering Onboarding Page for Auth User");
+        return children;
+    }
+
+    // Redirect to onboarding if profile not found
+    // IMPORTANT: Only check this if we have actually verified the CURRENT user
+    if (user && checkedUid === user.uid && isOnboarded === false) {
+        console.log("ProtectedRoute: User not onboarded, REDIRECTING to /onboarding");
+        return <Navigate to="/onboarding" />;
     }
 
     console.log("ProtectedRoute: Access GRANTED for", user.uid, "on", location.pathname);

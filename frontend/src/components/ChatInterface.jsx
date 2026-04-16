@@ -210,10 +210,22 @@ const ChatInterface = ({ onOpenQuest }) => {
         }
     };
 
-    const speakText = (text, agentId) => {
+    const speakText = (text, agentId, audioContent = null) => {
         if (!text || isMutedRef.current) return;
 
-        // Clean text for speech: remove markdown, LaTeX, and system tags
+        // 1. High-Fidelity Gemini Audio (Multimodal)
+        if (audioContent) {
+            try {
+                const audio = new Audio("data:audio/mp3;base64," + audioContent);
+                audio.play();
+                console.log("[TTS] Playing Native High-Fidelity Gemini Audio");
+                return;
+            } catch (err) {
+                console.error("[TTS] Failed to play backend audio, falling back to browser TTS", err);
+            }
+        }
+
+        // 2. Browser-Native Fallback
         const cleanText = text
             .replace(/\[SYSTEM:.*?\]/g, '')
             .replace(/\[FORCE_TTS\]/g, '')
@@ -350,14 +362,14 @@ const ChatInterface = ({ onOpenQuest }) => {
                         setShowChips(true);
                     } else {
                         let initialContent;
-                        const agentName = equipment.tutor?.name || activeAgent?.name || "Ace Sir";
+                        const agentName = activeAgent?.name || "Ace Sir";
                         const userName = user?.displayName || user?.email?.split('@')[0] || "小戰士";
 
                         if (activeAgentId === 'ace') {
                             const subject = user?.dreamSubject;
                             initialContent = subject
-                                ? `你好 ${userName}！我係 Ace Sir。聽講你目標係入 **${subject}**？同我講你嘅計劃，我幫你制定 DSE 奪星策略，確保你穩入大學！`
-                                : `你好 ${userName}！我係 Ace Sir。想入邊間大學？同我講你嘅目標，我幫你制定全方位奪星藍圖，助你進軍大學、稱霸 DSE！`;
+                                ? `你好 ${userName}！我係 ${agentName}。聽講你目標係入 **${subject}**？同我講你嘅計劃，我幫你制定 DSE 奪星策略，確保你穩入大學！`
+                                : `你好 ${userName}！我係 ${agentName}。想入邊間大學？同我講你嘅目標，我幫你制定全方位奪星藍圖，助你進軍大學、稱霸 DSE！`;
                         } else if (['english', 'math'].includes(activeAgentId) && !currentHasDiagnostic) {
                             // Always use greeting_new for new students, which now has no calibration mention
                             initialContent = t('chat.greeting_new', { agentName, userName });
@@ -447,6 +459,19 @@ const ChatInterface = ({ onOpenQuest }) => {
         setAvatarState('IDLE');
     }, [activeAgentId, setAvatarState, activeAgent.name, user]);
 
+    // Auto-scroll to bottom whenever messages update or history finishes loading
+    useEffect(() => {
+        if (!isHistoryLoading && messages.length > 0 && chatContainerRef.current) {
+            const timer = setTimeout(() => {
+                chatContainerRef.current.scrollTo({
+                    top: chatContainerRef.current.scrollHeight,
+                    behavior: "smooth"
+                });
+            }, 100);
+            return () => clearTimeout(timer);
+        }
+    }, [messages.length, isHistoryLoading]);
+
 
 
 
@@ -485,6 +510,9 @@ const ChatInterface = ({ onOpenQuest }) => {
                 if (data.text) {
                     console.log('[Voice] Adding message to chat');
                     setMessages(prev => [...prev, { role: 'assistant', content: data.text, agentId: activeAgentId }]);
+                    if (!isMutedRef.current) {
+                        speakText(data.text, activeAgentId, data.audioContent);
+                    }
                 } else {
                     console.error('[Voice] No text in response. Full data:', data);
                     if (data.error) {
@@ -635,7 +663,6 @@ const ChatInterface = ({ onOpenQuest }) => {
         // Only add to UI if NOT hidden
         if (!isHidden) {
             setMessages(prev => [...prev, userMsg]);
-            saveMessageToBackend(userMsg);
         }
 
         const currentInput = finalMessage;
@@ -810,7 +837,6 @@ const ChatInterface = ({ onOpenQuest }) => {
                 setMessages([aiMsg]);
             } else {
                 setMessages(prev => [...prev, aiMsg]);
-                saveMessageToBackend(aiMsg);
             }
 
 
@@ -852,7 +878,7 @@ const ChatInterface = ({ onOpenQuest }) => {
 
             // Speak logic: Speak if NOT muted OR if FORCE_TTS is present
             if (!isMutedRef.current || forceTTS) {
-                speakText(replyText, activeAgentId);
+                speakText(replyText, activeAgentId, data.audioContent);
             }
 
             // Reset to IDLE after a few seconds (only if it was the default listening)
@@ -993,9 +1019,9 @@ const ChatInterface = ({ onOpenQuest }) => {
         }
 
         // --- CUSTOM PER-AGENT PLACEHOLDERS ---
-        if (activeAgentId === 'ace') return t('chat.placeholder_ace');
-        if (activeAgentId === 'math') return t('chat.placeholder_math');
-        if (activeAgentId === 'english') return t('chat.placeholder_english');
+        if (activeAgentId === 'ace') return t('chat.placeholder_ace', { agentName: activeAgent.name });
+        if (activeAgentId === 'math') return t('chat.placeholder_math', { agentName: activeAgent.name });
+        if (activeAgentId === 'english') return t('chat.placeholder_english', { agentName: activeAgent.name });
 
         return t('chat.type_message');
     };
@@ -1098,7 +1124,7 @@ const ChatInterface = ({ onOpenQuest }) => {
                     
                     <div className="flex flex-col">
                         <span className="text-sm font-bold text-gray-900 dark:text-white leading-none mb-0.5">
-                            {equipment.tutor?.name || activeAgent.name}
+                            {activeAgent.name}
                         </span>
                         <span className="text-[10px] text-gray-400 font-medium tracking-tight">
                             {activeAgent.headerInfo}
@@ -1259,7 +1285,7 @@ const ChatInterface = ({ onOpenQuest }) => {
                                     "w-[44px] h-[44px] shrink-0 rounded-full overflow-hidden border border-black/5 bg-white shadow-sm transition-all relative",
                                     (avatarState === 'TALKING' || avatarState === 'THINKING') && "animate-talking-glow ring-2 ring-green-400"
                                 )}>
-                                    <img src={equipment.tutor?.image || activeAgent.avatar} alt="AI" className="w-full h-full object-cover object-top" />
+                                    <img src={activeAgent.avatar} alt={activeAgent.name} className="w-full h-full object-cover object-top" />
                                 </div>
                             )}
 
@@ -1386,7 +1412,7 @@ const ChatInterface = ({ onOpenQuest }) => {
                         <div className={cn(
                             "size-10 shrink-0 rounded-full overflow-hidden border border-black/5 bg-white shadow-sm animate-talking-glow ring-2 ring-green-400 relative"
                         )}>
-                            <img src={equipment.tutor?.image || activeAgent.avatar} alt="AI" className="w-full h-full object-cover object-top" />
+                            <img src={activeAgent.avatar} alt={activeAgent.name} className="w-full h-full object-cover object-top" />
                         </div>
                         <div className="bg-white dark:bg-[#3d2c20] p-4 rounded-2xl rounded-tl-none shadow-sm border border-black/5">
                             <div className="flex gap-1 items-center">

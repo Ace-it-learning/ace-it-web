@@ -130,6 +130,18 @@ router.get('/schools', async (req, res) => {
  * GET /api/trigger-weekly
  * Manual trigger for developer testing of weekly reports
  */
+/**
+ * GET /api/health
+ * Standard health check for Cloud Run and monitoring
+ */
+router.get('/health', (req, res) => {
+    res.json({ 
+        status: "operational", 
+        timestamp: new Date().toISOString(),
+        environment: process.env.NODE_ENV || 'development'
+    });
+});
+
 router.get('/trigger-weekly', async (req, res) => {
     const { uid, email } = req.query;
     if (!uid || !email) return res.status(400).json({ error: 'Missing uid or email' });
@@ -146,5 +158,6 @@ router.get('/trigger-weekly', async (req, res) => {
         res.status(500).json({ error: "Trigger failed" });
     }
 });
+
 
 module.exports = router;

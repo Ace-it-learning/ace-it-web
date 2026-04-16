@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import { useLanguage } from '../../context/LanguageContext';
-import { Lock, CheckCircle, Play, Map, Star, Clock, X, Trophy, Search, Sparkles, Zap, Calculator, PieChart, Shapes, Ruler, RefreshCcw, ChevronDown, BarChart3 } from 'lucide-react';
+import { Lock, CheckCircle, Play, Map, Star, Clock, X, Trophy, Search, Sparkles, Zap, Calculator, PieChart, Shapes, Ruler, RefreshCcw, ChevronDown, BarChart3, PenTool } from 'lucide-react';
 import { MATH_MICRO_SKILLS, getMathSkillName, getMathSkillDesc, getMathSkillMinForm } from '../../constants/mathMicroSkills';
 import { calculateTier, getTierMetadata, getMasteryStats, getDifficultyTierDetails, getMasteryPercentage, getMathMasteryPercentage } from '../../utils/masteryUtils';
 
@@ -162,7 +162,7 @@ const MathRoadmapModal = ({ isOpen, onClose }) => {
             const res = await fetch(`${API_URL}/api/quests/personalized?uid=${user.uid}`);
             if (res.ok) {
                 const data = await res.json();
-                setPlan({ tasks: data });
+                setPlan(data);
             }
         } catch (error) {
             console.error("Failed to load math roadmap", error);

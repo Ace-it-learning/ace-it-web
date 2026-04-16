@@ -97,7 +97,7 @@ Return ONLY a JSON object with this structure:
 `;
 
         const result = await GenerativeAIService.generateContent(prompt, {
-            model: "gemini-flash-latest"
+            model: "ace-it-flash"
         });
         const response = result.response.text();
 
@@ -148,7 +148,7 @@ Return ONLY a JSON object with this structure:
 `;
 
         const result = await GenerativeAIService.generateContent(prompt, {
-            model: "gemini-flash-latest"
+            model: "ace-it-flash"
         });
         const response = result.response.text();
 
@@ -210,7 +210,7 @@ Return ONLY a JSON object with this structure:
 `;
 
         const result = await GenerativeAIService.generateContent(prompt, {
-            model: "gemini-flash-latest"
+            model: "ace-it-flash"
         });
         const response = result.response.text();
 
@@ -257,7 +257,7 @@ Return ONLY a JSON object with this structure:
 `;
 
         const result = await GenerativeAIService.generateContent(prompt, {
-            model: "gemini-2.0-flash"
+            model: "ace-it-flash"
         });
         const response = result.response.text();
 

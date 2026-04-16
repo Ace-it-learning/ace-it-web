@@ -1,14 +1,11 @@
 const fs = require('fs');
 const path = require('path');
-require('dotenv').config({ path: path.join(__dirname, '.env') });
-const { GoogleGenerativeAI } = require("@google/generative-ai");
+const GenerativeAIService = require('./services/GenerativeAIService');
 const { JOURNALIST_PROMPT_TEMPLATE } = require('./prompts/journalistAgent');
 const { EXAMINER_PROMPT_TEMPLATE } = require('./prompts/examinerAgent');
 const { AUDITOR_PROMPT_TEMPLATE } = require('./prompts/auditorAgent');
 
-const GEN_AI_KEY = process.env.GEMINI_API_KEY;
-const genAI = new GoogleGenerativeAI(GEN_AI_KEY);
-const MODEL_NAME = "gemini-2.5-pro";
+const DEFAULT_MODEL = "gemini-1.5-pro";
 
 const OUTPUT_DIR = path.join(__dirname, 'generated_mocks');
 
@@ -60,7 +57,10 @@ const generateSection = async (topic, sectionName, sectionConfig, previousContex
         .replace('{{CONSTRAINTS}}', constraintsJournalist);
 
     console.log(`[Journalist] Writing ${contentType} for ${sectionName}...`);
-    const jModel = genAI.getGenerativeModel({ model: MODEL_NAME, generationConfig: { responseMimeType: "application/json" } });
+    const jModel = GenerativeAIService.getModel({ 
+        model: DEFAULT_MODEL, 
+        generationConfig: { responseMimeType: "application/json" } 
+    });
     const jResult = await jModel.generateContent(journalistPrompt);
     const texts = JSON.parse(jResult.response.text());
     console.log(`[Journalist] Created ${Object.keys(texts).length} resources.`);
@@ -108,7 +108,10 @@ const generateSection = async (topic, sectionName, sectionConfig, previousContex
         .replace('{{AVAILABLE_SKILLS}}', availableSkills);
 
     console.log(`[Examiner] Creating questions for ${sectionName}...`);
-    const eModel = genAI.getGenerativeModel({ model: MODEL_NAME, generationConfig: { responseMimeType: "application/json" } });
+    const eModel = GenerativeAIService.getModel({ 
+        model: DEFAULT_MODEL, 
+        generationConfig: { responseMimeType: "application/json" } 
+    });
     const eResult = await eModel.generateContent(examinerPrompt);
     let questions = JSON.parse(eResult.response.text());
     console.log(`[Examiner] Created ${questions.length} items.`);
@@ -122,7 +125,10 @@ const generateSection = async (topic, sectionName, sectionConfig, previousContex
         .replace('{{QUESTIONS_JSON}}', JSON.stringify(questions, null, 2));
 
     // Note: Auditor can be expensive. We use a faster model or the same one.
-    const aModel = genAI.getGenerativeModel({ model: MODEL_NAME, generationConfig: { responseMimeType: "application/json" } });
+    const aModel = GenerativeAIService.getModel({ 
+        model: DEFAULT_MODEL, 
+        generationConfig: { responseMimeType: "application/json" } 
+    });
     const aResult = await aModel.generateContent(auditorPrompt);
     const auditedOutput = JSON.parse(aResult.response.text());
 

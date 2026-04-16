@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Sparkles, MessageSquare, ChevronRight, Target, Star, Loader2, ShieldAlert } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useLanguage } from '../../context/LanguageContext';
+import { getLocalizedValue } from '../../utils/writingUtils';
 
 const WritingStudioControlPanel = ({ 
     sparkNotes, 
@@ -10,6 +12,8 @@ const WritingStudioControlPanel = ({
     isReviewing,
     isMock = false
 }) => {
+    const { language } = useLanguage();
+    const isChinese = language?.startsWith('zh');
     const [activeTab, setActiveTab] = useState('spark');
 
     const tabs = [
@@ -157,7 +161,7 @@ const WritingStudioControlPanel = ({
                                         <div className="space-y-4">
                                             <div className="p-4 bg-indigo-50/50 border border-indigo-100 rounded-2xl">
                                                 <p className="text-xs font-bold text-indigo-900 leading-relaxed italic">
-                                                    {reviewData.overall_feedback}
+                                                    {getLocalizedValue(reviewData, 'overall_feedback', isChinese) || reviewData.overall_feedback}
                                                 </p>
                                             </div>
 
@@ -170,7 +174,7 @@ const WritingStudioControlPanel = ({
                                                         </span>
                                                     </div>
                                                     <p className="text-xs font-bold text-slate-700 leading-tight">
-                                                        {item.feedback}
+                                                        {getLocalizedValue(item, 'feedback', isChinese) || item.feedback}
                                                     </p>
                                                 </div>
                                             ))}
@@ -184,7 +188,9 @@ const WritingStudioControlPanel = ({
                                                         <ChevronRight size={12} className="text-indigo-400" />
                                                         <div className="flex-1">
                                                             <span className="text-xs font-black text-indigo-600 block">{item.suggestion}</span>
-                                                            <span className="text-[8px] font-bold text-slate-500 italic block">{item.reason}</span>
+                                                            <span className="text-[8px] font-bold text-slate-500 italic block">
+                                                                {getLocalizedValue(item, 'reason', isChinese) || getLocalizedValue(item, 'explanation', isChinese) || item.reason || item.explanation}
+                                                            </span>
                                                         </div>
                                                     </div>
                                                 ))}

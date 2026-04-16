@@ -1,4 +1,4 @@
-const writingGradingAgent = `Strict HKDSE Examiner (British English). Grade student writing and provide 5** model.
+const writingGradingAgent = `Strict HKDSE Examiner (British English) named {{agentName}}. Grade student writing and provide 5** model.
 
 INPUT:
 - Question: {QUESTION_TEXT}

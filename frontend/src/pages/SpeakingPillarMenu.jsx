@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { Mic, MessageSquare, Languages, Sparkles, Layout, ChevronRight, Loader2, Zap, Play } from 'lucide-react';
+import { Mic, MessageSquare, Languages, Sparkles, Layout, ChevronRight, Loader2, Zap, Play, Activity } from 'lucide-react';
 
 const SpeakingPillarMenu = () => {
     const navigate = useNavigate();
@@ -9,9 +9,10 @@ const SpeakingPillarMenu = () => {
     // Mapping of internal keys to display names
     const PILLARS = [
         { id: 'criterion_a', label: 'Pronunciation', icon: Languages, color: 'emerald', route: '/speaking/quest/delivery' },
-        { id: 'criterion_b', label: 'Strategies', icon: MessageSquare, color: 'blue', route: '/speaking/quest/interaction' },
-        { id: 'criterion_c', label: 'Language', icon: Sparkles, color: 'fuchsia', route: '/speaking/quest/flow' },
-        { id: 'criterion_d', label: 'Ideas', icon: Layout, color: 'orange', route: '/speaking/quest/flow' }
+        { id: 'criterion_b', label: 'Strategies', icon: MessageSquare, color: 'blue', route: '/speaking/quest/interaction-lab' },
+        { id: 'criterion_c', label: 'Vocab Lab', icon: Sparkles, color: 'fuchsia', route: '/speaking/quest/language' },
+        { id: 'criterion_d', label: 'Ideas', icon: Layout, color: 'orange', route: '/speaking/quest/ideas' },
+        { id: 'flow', label: 'Fluency', icon: Activity, color: 'purple', route: '/speaking/quest/flow' }
     ];
 
     const LEVELS = [
@@ -76,10 +77,15 @@ const SpeakingPillarMenu = () => {
 
     const handleStartDrill = (drill) => {
         // Navigate to the specific lab with the drill ID
-        // Note: level passed depends on actual drill level
-        const levelVal = drill.level === '5**' ? '6' : drill.level;
-        navigate(activePillar.route, {
-            query: `?module=${activePillar.id}&taskId=${drill.id}&level=${levelVal}`,
+        const levelVal = drill.level === '5**' ? '7' : (drill.level === '5*' ? '6' : (drill.level === '5' ? '5' : drill.level));
+        
+        let moduleType = 'delivery';
+        if (activePillar.id === 'criterion_b') moduleType = 'interaction';
+        if (activePillar.id === 'criterion_c') moduleType = 'language_patterns';
+        if (activePillar.id === 'criterion_d') moduleType = 'ideas_organisation';
+        if (activePillar.id === 'flow') moduleType = 'flow';
+        
+        navigate(`${activePillar.route}?module=${moduleType}&topic=${drill.id}&level=${levelVal}`, {
             state: {
                 drill: drill,
                 pillarId: activePillar.id
@@ -208,19 +214,7 @@ const SpeakingPillarMenu = () => {
                 )}
             </main>
 
-            {/* AI Generator CTA */}
-            <footer className="mt-12 bg-indigo-900 rounded-[2.5rem] p-8 text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl shadow-indigo-200">
-                <div className="text-center md:text-left">
-                    <h3 className="text-2xl font-black mb-2 flex items-center justify-center md:justify-start gap-3">
-                        <Sparkles className="text-amber-400" />
-                        Unleash the Topic Factory
-                    </h3>
-                    <p className="text-indigo-200 font-medium">Finished all exercises? Generate a unique real-time scenario for this pillar.</p>
-                </div>
-                <button className="px-8 py-4 bg-white text-indigo-600 rounded-2xl font-black text-lg hover:bg-slate-50 transition-all active:scale-95 shadow-xl">
-                    Generate New Topic (50 XP)
-                </button>
-            </footer>
+            {/* AI Generator CTA Removed per User Request */}
         </div>
     );
 };

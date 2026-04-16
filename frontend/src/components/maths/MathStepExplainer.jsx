@@ -13,7 +13,7 @@ const MathStepExplainer = ({ question, fullSolution, targetStep }) => {
     const { activeAgent } = useAvatar();
 
     // For Math specific components, we always prioritize Matt sir
-    const tutorName = activeAgent?.id === 'math' ? activeAgent.name : 'Matt sir';
+    const tutorName = activeAgent?.name;
 
     const [explanation, setExplanation] = useState(null);
     const [loading, setLoading] = useState(false);

@@ -104,13 +104,14 @@ router.post('/chat', async (req, res) => {
     const msgLower = (message || pronunciationFeedback?.transcript || "").toString().toLowerCase().trim();
 
     // 2. Pre-load Context
-    let user, skillMap;
+    let user, skillMap, pContext;
     const subject = (agentId === 'math' || agentId === 'maths') ? 'maths' : (agentId === 'chinese' ? 'chinese' : 'english');
     try {
         user = await UserProfileService.getProfile(uid);
-        if (!user) return res.status(404).json({ error: "User not found" });
         skillMap = await UserProfileService.getSkillMap(uid, subject);
+        pContext = await UserProfileService.getPersonalizedContext(uid, agentId);
     } catch (e) {
+        console.error(`[CRITICAL] Context Load Failure: ${e.stack}`);
         return res.status(500).json({ error: "Failed to load user context", details: e.message });
     }
 
@@ -121,19 +122,26 @@ router.post('/chat', async (req, res) => {
         try {
             const subjectLabel = agentId === 'math' ? 'Mathematics' : (agentId === 'chinese' ? 'Chinese' : 'English');
             const onboardingWithSubject = ONBOARDING_PROTOCOL.replace(/{{SUBJECT}}/g, subjectLabel);
+            
             const persona = await UserProfileService.getPersona(uid, agentId);
 
             let promptOverride;
             if (isNewStudent) {
                 promptOverride = `${onboardingWithSubject} \nSYSTEM INSTRUCTION: Step 1: The Invite. Greet the student with excitement, invite them to explore their personalized roadmap. Use your specific persona tone.`;
             } else {
-                const pContext = await UserProfileService.getPersonalizedContext(uid, agentId);
                 promptOverride = `SYSTEM INSTRUCTION: Returning student. Greet warmingly and propose next steps. (Context: Level ${pContext.level}, Weaknesses: ${pContext.topWeaknesses.join(', ')}). Use your specific persona greeting style if available.`;
             }
 
             let systemPrompt = `${GLOBAL_BASE_RULES}\n\n${persona.prompt}\n\n${AGENT_PROMPTS[agentId] || AGENT_PROMPTS.ace}`;
+
+            // [2026] Native HK Speaker Injection for Greeting
+            if (agentId === 'english' || agentId === 'chinese') {
+                systemPrompt += "\nNATIVE HK SPEAKER MODE: Please speak faster like a native Hong Kong speaker. Avoid robotic staccato. Use Cantonese expressions appropriately if tutoring in Chinese/Cantonese context.";
+            }
+
             systemPrompt = systemPrompt
                 .replace(/{{userName}}/g, user.displayName || "Student")
+                .replace(/{{agentName}}/g, persona.name)
                 .replace(/{{DREAM_SUBJECT}}/g, user.dreamSubject || "University")
                 .replace(/{{ONBOARDING}}/g, isNewStudent ? onboardingWithSubject : "");
 
@@ -141,9 +149,19 @@ router.post('/chat', async (req, res) => {
                 ? `${systemPrompt} \n${promptOverride} \n\nYour defined greeting: "${persona.greeting}" \n\nUser: Hello!`
                 : `${systemPrompt} \n${promptOverride} \n\nUser: Hello!`;
 
-            const result = await GenerativeAIService.generateContent(promptToAI, { model: TIER_1_MODEL });
-            return res.json({ text: result.response.text(), role: 'model', tutorName: persona.name });
+            const result = await GenerativeAIService.generateContent(promptToAI, { 
+                model: TIER_1_MODEL,
+                audioOutput: true 
+            });
+            return res.json({ 
+                text: result.response.text(), 
+                role: 'model', 
+                tutorName: persona.name,
+                audioContent: result.audio || null,
+                diag_info: result.usedModel ? `${result.usedPlatform || 'unknown'}: ${result.usedModel}` : null 
+            });
         } catch (err) {
+            console.error("Greeting failure:", err);
             return res.json({ text: "Welcome back! How can I help you today?" });
         }
     }
@@ -155,7 +173,8 @@ router.post('/chat', async (req, res) => {
             const routerContext = {
                 is_new_student: isNewStudent,
                 has_active_exam: !!user?.activeExam,
-                has_image: !!image
+                has_image: !!image,
+                completed_topics: pContext?.completedTopics?.join(', ') || "None"
             };
             if (agentId === 'math') {
                 route = await MathsIntentRouter.classify(message || "", clientHistory || [], uid, routerContext, !!image);
@@ -177,6 +196,7 @@ router.post('/chat', async (req, res) => {
     let systemPrompt = `${GLOBAL_BASE_RULES}\n\n${persona.prompt}\n\n${AGENT_PROMPTS[agentId] || AGENT_PROMPTS.ace}`;
     systemPrompt = systemPrompt
         .replace(/{{userName}}/g, user.displayName || "Student")
+        .replace(/{{agentName}}/g, persona.name)
         .replace(/{{DREAM_SUBJECT}}/g, user.dreamSubject || "University");
 
     const ragSnippets = message ? KnowledgeService.retrieveKnowledge(message) : null;
@@ -186,22 +206,40 @@ router.post('/chat', async (req, res) => {
     if (useAceSir) systemPrompt = `${ACE_SIR_INJECTION}\n\n${systemPrompt}`;
 
     try {
+        // [2026] Native HK Speaker Injection for Chat
+        if (agentId === 'english' || agentId === 'chinese') {
+            systemPrompt += "\nNATIVE HK SPEAKER MODE: Please speak faster like a native Hong Kong speaker. Avoid robotic staccato. Use Cantonese expressions appropriately if tutoring in Chinese/Cantonese context. Proactively skip topics already completed by the student: " + (pContext?.completedTopics?.join(', ') || "None");
+        }
+
         const result = await GenerativeAIService.generateContent(message, { 
-            model: selectedModelName,
-            systemInstruction: systemPrompt
+            model: "gemini-2.0-flash", // Force newest 2.0 model for multimodal fidelity
+            systemInstruction: systemPrompt,
+            audioOutput: true
         });
 
-        const historyRef = db_firestore.collection('users').doc(uid).collection('chat_history');
-        await historyRef.add({
-            agentId,
-            message,
-            response: result.response.text(),
-            timestamp: admin.firestore.FieldValue.serverTimestamp()
+        // Persist history using the unified service
+        await UserProfileService.saveChatMessage(uid, agentId, {
+            role: 'user',
+            content: message
+        });
+        await UserProfileService.saveChatMessage(uid, agentId, {
+            role: 'model',
+            content: result.response.text()
         });
 
-        res.json({ text: result.response.text(), role: 'model', tutorName: persona.name });
+        res.json({ 
+            text: result.response.text(), 
+            role: 'model', 
+            tutorName: persona.name,
+            audioContent: result.audio || null,
+            diag_info: result.usedModel ? `${result.usedPlatform || 'unknown'}: ${result.usedModel}` : null 
+        });
     } catch (e) {
-        res.status(500).json({ text: getMockResponse(agentId) });
+        console.error("Chat API Error:", e);
+        res.status(500).json({ 
+            text: getMockResponse(agentId),
+            diag_info: `failed: ${selectedModelName} (platform error)`
+        });
     }
 });
 

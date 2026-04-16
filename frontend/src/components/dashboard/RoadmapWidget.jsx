@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
-import { Lock, CheckCircle, Play, Map, Star, Clock, RefreshCcw } from 'lucide-react';
+import { Lock, CheckCircle, Play, Map, Star, Clock, RefreshCcw, Crown } from 'lucide-react';
 import { MICRO_SKILLS } from '../../constants/microSkills';
 
 const RoadmapWidget = () => {

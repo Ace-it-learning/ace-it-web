@@ -17,78 +17,211 @@ class GenerativeAIService {
     async init() {
         if (this.initialized) return;
 
-        // EMERGENCY OVERRIDE: Force AI Studio if Vertex quota is too low
+        // Configuration
+        const NODE_ENV = process.env.NODE_ENV || 'development';
+        const isProduction = NODE_ENV === 'production' || !!process.env.K_SERVICE;
         const forceAIStudio = process.env.USE_AI_STUDIO_IN_PROD === 'true';
 
-        if ((process.env.K_SERVICE || process.env.VERTEX_ENABLED === 'true') && !forceAIStudio) {
+        // Use Vertex ONLY if in Production AND not forced to AI Studio
+        if (isProduction && !forceAIStudio) {
             try {
                 const { VertexAI } = require('@google-cloud/vertexai');
+                const fs = require('fs');
+                
+                // 2026 ARCHITECTURAL REQUIREMENTS:
+                // 1. Project ID: Dynamically retrieved from SA JSON
+                // 2. Location: asia-southeast1 (Singapore)
+                // 3. Auth: Explicitly load antigravity-tutor-prod-key.json
+                
+                const saPath = path.join(__dirname, '../config/antigravity-tutor-prod-key.json');
 
-                // Returning to Hong Kong (asia-east2) as user has confirmed quota/paid account
-                const vertexOptions = {
-                    project: process.env.GOOGLE_CLOUD_PROJECT || 'ace-it-learning',
-                    location: 'asia-east2'
+                if (!fs.existsSync(saPath)) {
+                    throw new Error(`CRITICAL: Production service account key missing at ${saPath}`);
+                }
+
+                // Explicitly load credentials (Bypass ADC for explicit control)
+                const credentials = JSON.parse(fs.readFileSync(saPath, 'utf8'));
+                const projectId = credentials.project_id;
+                const region = process.env.VERTEX_LOCATION || 'asia-southeast1'; 
+
+                console.log(`[AIService] 🛡️ Initializing Vertex AI for Project: ${projectId}`);
+
+                const vertexConfig = { 
+                    project: projectId, 
+                    location: region,
+                    googleAuthOptions: { credentials }
                 };
 
-                this.vertex = new VertexAI(vertexOptions);
+                this.vertex = new VertexAI(vertexConfig);
                 this.isVertex = true;
-                console.log(`[AIService] Initialized Vertex AI in HONG KONG (asia-east2)`);
+                this.currentRegion = region;
+                this.vertexConfig = vertexConfig; 
+
+                // 2026 Model Mapping
+                this.vertexModelMap = {
+                    "ace-it-flash": "gemini-2.5-flash",
+                    "ace-it-pro": "gemini-2.5-pro",
+                    "ace-it-multimodal": "gemini-2.5-flash",
+                    "gemini-flash-latest": "gemini-2.5-flash",
+                    "gemini-pro-latest": "gemini-2.5-pro",
+                    "gemini-1.5-flash": "gemini-2.5-flash",
+                    "gemini-1.5-pro": "gemini-2.5-pro",
+                    "gemini-2.0-flash": "gemini-2.5-flash",
+                    "gemini-2.5-flash": "gemini-2.5-flash",
+                    "gemini-2.5-pro": "gemini-2.5-pro",
+                    "gemini-3.1-flash": "gemini-2.5-flash", 
+                    "gemini-3.5-pro": "gemini-2.5-pro"
+                };
+
+                console.log(`[AIService] 🚀 Vertex AI Production Online (${region})`);
+
             } catch (e) {
-                console.error("[AIService] Vertex AI Initialization failed, falling back to AI Studio:", e.message);
+                console.error("[AIService] ❌ Vertex AI Production Initialization Failed:", e.message);
+                console.warn("[AIService] ⚠️ Falling back to AI Studio...");
                 this.initAIStudio();
             }
         } else {
-            if (forceAIStudio) console.log("[AIService] EMERGENCY BYPASS: Using AI Studio mode in production.");
+            // Development environment or forced AI Studio
             this.initAIStudio();
         }
 
         this.initialized = true;
     }
 
+    /**
+     * Regional Failsafe Re-initialization
+     * Switches to us-central1 if Singapore is unreachable
+     */
+    async switchToFailsafeRegion() {
+        if (!this.isVertex || this.currentRegion === 'us-central1') return false;
+        
+        console.warn(`[AIService] ⚠️ Pivoting to Failsafe Region: us-central1...`);
+        try {
+            const { VertexAI } = require('@google-cloud/vertexai');
+            this.currentRegion = 'us-central1';
+            this.vertexConfig.location = 'us-central1';
+            this.vertex = new VertexAI(this.vertexConfig);
+            return true;
+        } catch (err) {
+            console.error(`[AIService] 🚨 Failsafe Region pivot failed: ${err.message}`);
+            return false;
+        }
+    }
+
     initAIStudio() {
         const apiKey = process.env.GOOGLE_API_KEY || process.env.GEMINI_API_KEY;
-        if (!apiKey) {
-            console.warn("[AIService] Warning: No GOOGLE_API_KEY or GEMINI_API_KEY found for AI Studio fallback.");
-        }
         this.genAI = new GoogleGenerativeAI(apiKey);
         this.isVertex = false;
+        this.currentRegion = 'global/api_key';
+
+        this.studioModelMap = {
+            "ace-it-flash": "gemini-flash-latest",
+            "ace-it-pro": "gemini-pro-latest",
+            "ace-it-multimodal": "gemini-flash-latest",
+            "gemini-flash-latest": "gemini-flash-latest",
+            "gemini-pro-latest": "gemini-pro-latest",
+            "gemini-1.5-flash": "gemini-flash-latest",
+            "gemini-1.5-pro": "gemini-pro-latest",
+            "gemini-2.0-flash": "gemini-2.0-flash",
+            "gemini-3.1-flash": "gemini-flash-latest",
+            "gemini-2.5-pro": "gemini-pro-latest",
+            "gemini-3.1-pro": "gemini-pro-latest"
+        };
+
         console.log("[AIService] Initialized Google AI Studio (Local Mode)");
     }
 
-    /**
-     * Get a generative model instance
-     */
     getModel(config = {}) {
-        const modelName = config.model || "gemini-2.0-flash";
-        const generationConfig = config.generationConfig || {};
+        const requested = config.model || "ace-it-flash";
 
-        const safetySettings = [
-            { category: HarmCategory.HARM_CATEGORY_HARASSMENT, threshold: HarmBlockThreshold.BLOCK_NONE },
-            { category: HarmCategory.HARM_CATEGORY_HATE_SPEECH, threshold: HarmBlockThreshold.BLOCK_NONE },
-            { category: HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT, threshold: HarmBlockThreshold.BLOCK_NONE },
-            { category: HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT, threshold: HarmBlockThreshold.BLOCK_NONE },
-        ];
-
-        const modelOptions = {
-            model: modelName,
-            generationConfig: generationConfig,
-            safetySettings: safetySettings
-        };
-
-        if (config.systemInstruction) {
-            modelOptions.systemInstruction = config.systemInstruction;
+        let modelName = requested;
+        if (this.isVertex && this.vertexModelMap?.[requested]) {
+            modelName = this.vertexModelMap[requested];
+        } else if (!this.isVertex) {
+            // Local AI Studio: Use stable aliases (gemini-flash-latest) instead of versioned IDs that may 404
+            modelName = this.studioModelMap?.[requested] || requested || "gemini-flash-latest";
         }
 
         if (this.isVertex) {
-            console.log(`[AIService] [VERTEX] Routing: ${modelName}`);
-            return this.vertex.getGenerativeModel(modelOptions);
-        } else {
-            console.log(`[AIService] [STUDIO] Routing: ${modelName} (API: v1beta)`);
-            const requestOptions = {
-                timeout: 300000,
-                apiVersion: 'v1beta' // Crucial for gemini-2.0-flash and latest features
+            // Vertex AI specific constants and formatting
+            const { HarmCategory: VHC, HarmBlockThreshold: VHBT } = require('@google-cloud/vertexai');
+
+            const vSafetySettings = [
+                { category: VHC.HARM_CATEGORY_HARASSMENT, threshold: VHBT.BLOCK_NONE },
+                { category: VHC.HARM_CATEGORY_HATE_SPEECH, threshold: VHBT.BLOCK_NONE },
+                { category: VHC.HARM_CATEGORY_SEXUALLY_EXPLICIT, threshold: VHBT.BLOCK_NONE },
+                { category: VHC.HARM_CATEGORY_DANGEROUS_CONTENT, threshold: VHBT.BLOCK_NONE },
+            ];
+
+            const vModelOptions = {
+                model: modelName,
+                generationConfig: {
+                    ...(config.generationConfig || {}),
+                    ...(config.audioOutput ? { 
+                        responseModalities: ["text", "audio"],
+                        speechConfig: config.speechConfig || {
+                            voiceConfig: { prebuiltVoiceConfig: { voiceName: "Achird" } }
+                        }
+                    } : {})
+                },
+                safetySettings: vSafetySettings
             };
-            return this.genAI.getGenerativeModel(modelOptions, requestOptions);
+
+            // Support Gemini Context Caching for PROD (Vertex)
+            if (config.cachedContent) {
+                vModelOptions.cachedContent = config.cachedContent;
+                console.log(`[AIService] ⚡ Using Vertex Context Cache: ${config.cachedContent.substring(0, 40)}...`);
+            }
+
+            if (config.systemInstruction) {
+                // Vertex SDK requires systemInstruction parts structure
+                vModelOptions.systemInstruction = {
+                    role: 'system',
+                    parts: [{ text: config.systemInstruction }]
+                };
+            }
+
+            console.log(`[AIService] [VERTEX:${this.currentRegion}] Routing: ${modelName}`);
+            return this.vertex.getGenerativeModel(vModelOptions);
+        } else {
+            console.log(`[AIService] [STUDIO] Routing: ${modelName}`);
+
+            const safetySettings = [
+                { category: HarmCategory.HARM_CATEGORY_HARASSMENT, threshold: HarmBlockThreshold.BLOCK_NONE },
+                { category: HarmCategory.HARM_CATEGORY_HATE_SPEECH, threshold: HarmBlockThreshold.BLOCK_NONE },
+                { category: HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT, threshold: HarmBlockThreshold.BLOCK_NONE },
+                { category: HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT, threshold: HarmBlockThreshold.BLOCK_NONE },
+            ];
+
+            const modelOptions = {
+                model: modelName,
+                generationConfig: config.generationConfig || {},
+                safetySettings: safetySettings
+            };
+
+            if (config.systemInstruction) {
+                modelOptions.systemInstruction = config.systemInstruction;
+            }
+
+            // Support Gemini Context Caching for DEV (Studio)
+            if (config.cachedContent) {
+                modelOptions.cachedContent = config.cachedContent;
+                console.log(`[AIService] ⚡ Using Studio Context Cache: ${config.cachedContent.substring(0, 40)}...`);
+            }
+
+            // [2026] Multimodal Audio Config
+            if (config.audioOutput) {
+                modelOptions.generationConfig = {
+                    ...modelOptions.generationConfig,
+                    responseModalities: ["text", "audio"],
+                    speechConfig: config.speechConfig || {
+                        voiceConfig: { prebuiltVoiceConfig: { voiceName: "Achird" } }
+                    }
+                };
+            }
+
+            // Revert to v1beta for AI Studio locally, as v1 returns 404 for gemini-1.5 models on this key
+            return this.genAI.getGenerativeModel(modelOptions, { apiVersion: 'v1beta' });
         }
     }
 
@@ -96,9 +229,25 @@ class GenerativeAIService {
      * Unified generateContent method with automatic retry and Smart Fallback
      */
     async generateContent(prompt, config = {}, retries = 3) {
-        return this.executeWithRetry(async (model) => {
+        const result = await this.executeWithRetry(async (model) => {
             return await model.generateContent(prompt);
         }, prompt, config, retries);
+
+        // Standardize the response structure (Ensuring .text() is ALWAYS a function)
+        if (result && result.response) {
+            if (typeof result.response.text !== 'function') {
+                const rawText = result.response?.candidates?.[0]?.content?.parts?.find(p => p.text)?.text || "";
+                result.response.text = () => rawText;
+            }
+
+            // [2026] Extract Multimodal Audio Content
+            const audioPart = result.response?.candidates?.[0]?.content?.parts?.find(p => p.inlineData || p.fileData);
+            if (audioPart && audioPart.inlineData) {
+                result.audio = audioPart.inlineData.data; // Base64
+            }
+        }
+
+        return result;
     }
 
     /**
@@ -174,13 +323,15 @@ class GenerativeAIService {
         const result = await this.generateContent(prompt, jsonConfig, retries);
         const usedModel = result.usedModel;
         console.log(`[GenerativeAIService] Getting response text from ${usedModel}...`);
+        
         let text;
         try {
             text = result.response.text();
-            console.log(`[GenerativeAIService] Raw AI Response Length:`, text ? text.length : 'N/A');
+            if (!text) throw new Error("No text content found in AI response.");
+            
+            console.log(`[GenerativeAIService] Raw AI Response Length:`, text.length);
         } catch (textError) {
             console.error('[GenerativeAIService] Failed to get response text:', textError);
-            console.error('[GenerativeAIService] Response object:', JSON.stringify(result.response, null, 2));
             throw textError;
         }
 
@@ -201,18 +352,18 @@ class GenerativeAIService {
                         }
                         if (backslashCount % 2 === 0) insideString = !insideString;
                         hardened += char;
-                    } 
+                    }
                     else if (insideString && char === '\\') {
                         // JSON escaping: \, ", /, b, f, n, r, t, u
                         const nextChar = str[i + 1];
                         const escapable = ['\\', '"', '/', 'b', 'f', 'n', 'r', 't', 'u'].includes(nextChar);
-                        
+
                         if (escapable) {
                             hardened += "\\"; // Keep existing valid escape
                         } else {
                             hardened += "\\\\"; // Escape an unescaped backslash (likely for LaTeX like \times)
                         }
-                    } 
+                    }
                     else if (insideString) {
                         const code = char.charCodeAt(0);
                         if (code < 32) {
@@ -223,7 +374,7 @@ class GenerativeAIService {
                         } else {
                             hardened += char;
                         }
-                    } 
+                    }
                     else {
                         hardened += char;
                     }
@@ -238,7 +389,7 @@ class GenerativeAIService {
 
             // 3. Attempt Parse
             const data = JSON.parse(safeText);
-            return { data, model: usedModel };
+            return { data, model: usedModel, audio: result.audio };
 
         } catch (e) {
             console.warn(`[AIService] JSON Parse/Hardening Failed: ${e.message}. Attempting simple raw fallback...`);
@@ -248,7 +399,7 @@ class GenerativeAIService {
                 // 4. Final Fallback: Parse the raw extracted JSON without any hardening
                 const rawText = this.extractJson(text);
                 const data = JSON.parse(rawText);
-                return { data, model: usedModel };
+                return { data, model: usedModel, audio: result.audio };
             } catch (fallbackError) {
                 console.error("[AIService] JSON Final Fallback Failed!");
                 console.error("[AIService] Full Raw Text for Debugging:", text);
@@ -278,48 +429,55 @@ class GenerativeAIService {
     async executeWithRetry(action, input, config = {}, retries = 6) {
         await this.init();
 
-        const requestedModel = config.model || "gemini-2.0-flash";
+        const requestedModel = config.model || "gemini-2.5-flash";
         const isProModel = requestedModel.includes("pro");
         const highQuality = config.highQuality === true;
 
         // Approved Hierarchy: Standard (Flash) vs Premium (Pro)
         let modelQueue;
-        
+
         if (this.isVertex) {
-            // VERTEX AI SPECIFIC QUEUE (Optimized for asia-east2 stable foundation models)
+            // VERTEX AI SPECIFIC QUEUE - Optimized for 2026 Stable Models
             if (isProModel) {
-                modelQueue = ["gemini-1.5-pro-002", "gemini-1.5-pro-001", "gemini-1.5-pro"];
+                modelQueue = ["ace-it-pro"];
             } else {
-                modelQueue = ["gemini-1.5-flash-002", "gemini-1.5-flash-001", "gemini-1.5-flash"];
+                modelQueue = ["ace-it-flash"];
             }
         } else {
             // AI STUDIO QUEUE (Local Development)
             if (isProModel) {
-                modelQueue = ["gemini-1.5-pro", "gemini-1.5-pro-latest", "gemini-2.0-flash"];
+                modelQueue = ["ace-it-pro"];
             } else {
-                modelQueue = ["gemini-1.5-flash", "gemini-1.5-flash-latest", "gemini-2.0-flash"];
+                modelQueue = ["ace-it-flash"];
             }
         }
 
-        // FORCE REQUESTED MODEL TO FRONT (If valid for the platform)
-        if (requestedModel && !modelQueue.includes(requestedModel)) {
-            // If requested model isn't in stable queue, honor it but it might 404
-            modelQueue.unshift(requestedModel);
-        } else if (requestedModel) {
-            modelQueue = modelQueue.filter(m => m !== requestedModel);
-            modelQueue.unshift(requestedModel);
+        // Resolve model aliases for Vertex AI
+        let effectiveRequestedModel = requestedModel;
+        if (this.isVertex && this.vertexModelMap?.[requestedModel]) {
+            effectiveRequestedModel = this.vertexModelMap[requestedModel];
         }
 
         const uniqueQueue = [...new Set(modelQueue)];
+
+        // Ensure requested model is at the front
+        if (effectiveRequestedModel) {
+            const finalQueue = uniqueQueue.filter(m => m !== effectiveRequestedModel);
+            finalQueue.unshift(effectiveRequestedModel);
+            modelQueue = finalQueue;
+        } else {
+            modelQueue = uniqueQueue;
+        }
+
         let lastError = null;
         const unavailableModels = new Set();
-        
+
         // If highQuality is true, we increase retries specifically for the Pro models
         const totalRetries = highQuality ? Math.max(retries, 15) : retries;
 
         for (let i = 0; i < totalRetries; i++) {
             let currentModelName;
-            
+
             // Smarter model selection: skip known-bad models
             const workingQueue = uniqueQueue.filter(m => !unavailableModels.has(m));
             if (workingQueue.length === 0) {
@@ -339,14 +497,12 @@ class GenerativeAIService {
                 console.log(`[AIService] Attempt ${i + 1}/${totalRetries}: Using model '${currentModelName}'${highQuality ? ' (High Quality Mode)' : ''}`);
                 const model = this.getModel({ ...config, model: currentModelName });
                 const result = await action(model, i > 0, currentModelName);
-                // Return the raw result (with .response) but also include the model name
-                const finalResult = result;
-                if (typeof finalResult === 'object') {
-                    finalResult.usedModel = currentModelName;
-                    // For backward compatibility with server.js where it expects result.response
-                    // the Google SDK result already has a .response property.
+                // Return the raw result (with .response) but also include diagnostic metadata
+                if (typeof result === 'object' && result !== null) {
+                    result.usedModel = currentModelName;
+                    result.usedPlatform = this.isVertex ? 'vertex' : 'studio';
                 }
-                return finalResult;
+                return result;
             } catch (error) {
                 lastError = error;
                 const isRateLimit = error.message?.includes('429') || error.message?.toLowerCase().includes('resource exhausted');
@@ -354,12 +510,12 @@ class GenerativeAIService {
 
                 console.error(`[AIService] FAILED Attempt ${i + 1} (${currentModelName}):`, error.message);
                 if (error.status) console.error(`[AIService] Error Status: ${error.status}`);
-                
+
                 // Deep extraction for Vertex AI errors
                 if (this.isVertex && error.response) {
                     try {
                         console.error(`[AIService] Vertex Error Payload:`, JSON.stringify(error.response, null, 2));
-                    } catch (e) {}
+                    } catch (e) { }
                 }
 
                 if (error.stack) console.error(`[AIService] Error Stack: ${error.stack.substring(0, 300)}...`);
@@ -377,6 +533,16 @@ class GenerativeAIService {
                     errorStr.includes('model is not available');
 
                 if (isUnavailable) {
+                    // REGIONAL FAILOVER: If Singapore fails, pivot to US-Central1
+                    if (this.isVertex && this.currentRegion === 'asia-southeast1') {
+                        console.warn(`[AIService] [FAILOVER] Singapore region reported 404/Unreachable. Pivoting to US...`);
+                        const pivoted = await this.switchToFailsafeRegion();
+                        if (pivoted) {
+                            i--; // Retry same attempt index but in new region
+                            continue;
+                        }
+                    }
+
                     console.warn(`[AIService] Model ${currentModelName} unavailable, unreachable, or restricted. Error: ${error.message}. Removing from working set and falling back...`);
                     unavailableModels.add(currentModelName);
                     continue;
@@ -386,7 +552,7 @@ class GenerativeAIService {
                     // Exponential backoff
                     let waitBase = isRateLimit ? 15000 : 3000;
                     if (highQuality) waitBase *= 1.5; // Wait longer in high quality mode to recover quota
-                    
+
                     const delay = (Math.pow(2, i % 5) * waitBase) + (Math.random() * 5000);
 
                     console.log(`[AIService] ${isRateLimit ? 'QUOTA HIT (429)' : 'SERVICE BUSY (503)'}. Retrying in ${Math.round(delay)}ms...`);

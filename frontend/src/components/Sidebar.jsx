@@ -5,7 +5,7 @@ import { useAuth } from '../context/AuthContext';
 import { useLanguage } from '../context/LanguageContext';
 import { clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
-import { BookOpen, Sparkles, Mic, Activity, Lightbulb, Ear } from 'lucide-react';
+import { BookOpen, Sparkles, Mic, Activity, Lightbulb, Ear, Zap } from 'lucide-react';
 import ExamTipsModal from './ace/ExamTipsModal';
 import CardPreviewModal from './CardPreviewModal';
 import { cn } from '../utils/cn';
@@ -22,7 +22,7 @@ const rarityRingStyles = {
 
 const Sidebar = () => {
     const navigate = useNavigate();
-    const { activeAgentId, setActiveAgentId, activeAgent, avatarState, studentState, equipment } = useAvatar();
+    const { activeAgentId, setActiveAgentId, activeAgent, avatarState, studentState, equipment, getAgentIdentity } = useAvatar();
     const { user, loginWithGoogle } = useAuth();
     const { t } = useLanguage();
     const [nickname, setNickname] = useState('Student');
@@ -53,7 +53,8 @@ const Sidebar = () => {
             fetch(`${API_URL}/api/redemption/collection?uid=${user.uid}`)
                 .then(res => res.json())
                 .then(data => {
-                    const equipped = data.tutorCards?.find(c => c.equipped);
+                    const catalog = data.catalog || {};
+                    const equipped = catalog.tutorCards?.find(c => c.equipped);
                     if (equipped) {
                         setEquippedTutorCard(equipped);
                         setEquippedTutorRarity(equipped.rarity || 'rare');
@@ -75,11 +76,23 @@ const Sidebar = () => {
     };
 
     const handleTutorAvatarClick = () => {
-        const cardData = equippedTutorCard || {
+        // Subject normalization mapping
+        const subjectMap = {
+            'english': ['english'],
+            'math': ['maths', 'math'],
+            'chinese': ['chinese'],
+            'ace': ['general', 'ace']
+        };
+
+        // Only show the equipped card if it matches the current subject
+        const targetSubjects = subjectMap[activeAgentId] || [];
+        const isMatch = equippedTutorCard && targetSubjects.includes(equippedTutorCard.subject);
+
+        const cardData = isMatch ? equippedTutorCard : {
             id: activeAgent.id,
             name: activeAgent.name,
             image: activeAgent.avatar,
-            description: activeAgent.headerInfo,
+            description: activeAgent.headerInfo || t('card_preview.default_tutor'),
             rarity: 'default',
         };
         setPreviewCard(cardData);
@@ -121,13 +134,15 @@ const Sidebar = () => {
                             )}
                         >
                             <img 
-                                src={equipment.tutor?.image || activeAgent.avatar} 
+                                src={activeAgent.avatar} 
                                 alt="AI" 
                                 className="w-full h-full object-cover object-top scale-[1.35] translate-y-[5%]" 
                             />
                         </div>
                         <div className="absolute top-1 right-2 bg-green-500 size-4 rounded-full border-2 border-white shadow-sm"></div>
-                        <p className="text-[10px] mt-1 font-bold text-primary truncate w-20 mx-auto">{activeAgent.name}</p>
+                        <p className="text-[10px] mt-1 font-bold text-primary truncate w-24 mx-auto">
+                            {activeAgent.name}
+                        </p>
                     </div>
 
                     {/* Linking Line */}
@@ -216,51 +231,38 @@ const Sidebar = () => {
             {/* --- AGENT SELECTION --- */}
             <div className="space-y-3">
                 <p className="text-xs font-bold text-[#a16b45] uppercase tracking-wider ml-2 opacity-60">{t('sidebar.your_mentors')}</p>
-                {Object.values(AGENTS).map((agent) => (
-                    <div
-                        key={agent.id}
-                        onClick={() => setActiveAgentId(agent.id)}
-                        className={cn(
-                            "flex items-center gap-3 p-3 rounded-2xl shadow-sm transition-all cursor-pointer border group",
-                            activeAgentId === agent.id
-                                ? "bg-white dark:bg-white/10 border-primary shadow-md"
-                                : "bg-white/40 dark:bg-white/5 border-transparent hover:bg-white dark:hover:bg-white/20 hover:border-primary/20"
-                        )}
-                    >
-                        <div className="size-10 rounded-full flex items-center justify-center overflow-hidden bg-white border border-black/5">
-                            <img
-                                src={agent.avatar}
-                                alt={agent.name}
-                                className={cn("w-full h-full object-cover object-top transition-all", activeAgentId !== agent.id && "grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100")}
-                            />
+                {Object.values(AGENTS).map((agentDef) => {
+                    const agent = getAgentIdentity(agentDef.id);
+                    return (
+                        <div
+                            key={agent.id}
+                            onClick={() => setActiveAgentId(agent.id)}
+                            className={cn(
+                                "flex items-center gap-3 p-3 rounded-2xl shadow-sm transition-all cursor-pointer border group",
+                                activeAgentId === agent.id
+                                    ? "bg-white dark:bg-white/10 border-primary shadow-md"
+                                    : "bg-white/40 dark:bg-white/5 border-transparent hover:bg-white dark:hover:bg-white/20 hover:border-primary/20"
+                            )}
+                        >
+                            <div className="size-10 rounded-full flex items-center justify-center overflow-hidden bg-white border border-black/5">
+                                <img
+                                    src={agent.avatar}
+                                    alt={agent.name}
+                                    className={cn("w-full h-full object-cover object-top transition-all", activeAgentId !== agent.id && "grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100")}
+                                />
+                            </div>
+                            <div className="flex-1">
+                                <p className="font-bold text-sm text-[#1d130c] dark:text-white leading-none">{agent.name}</p>
+                                <p className="text-[10px] text-[#a16b45] mt-1">{t(`agents.${agent.id}.description`)}</p>
+                            </div>
+                            {activeAgentId === agent.id && (
+                                <div className="size-2 bg-primary rounded-full animate-pulse shadow-[0_0_8px_rgba(var(--primary-rgb),0.5)]"></div>
+                            )}
                         </div>
-                        <div className="flex-1">
-                            <p className="font-bold text-sm text-[#1d130c] dark:text-white leading-none">{agent.name}</p>
-                            <p className="text-[10px] text-[#a16b45] mt-1">{t(`agents.${agent.id}.description`)}</p>
-                        </div>
-                        {activeAgentId === agent.id && (
-                            <div className="size-2 bg-primary rounded-full animate-pulse shadow-[0_0_8px_rgba(var(--primary-rgb),0.5)]"></div>
-                        )}
-                    </div>
-                ))}
+                    );
+                })}
             </div>
 
-            {/* --- UTILS --- */}
-            <div className="space-y-3">
-                <p className="text-xs font-bold text-[#a16b45] uppercase tracking-wider ml-2 opacity-60">System</p>
-                <div
-                    onClick={() => window.location.href = '/usage'}
-                    className="flex items-center gap-3 p-3 rounded-2xl bg-white/40 dark:bg-white/5 border border-transparent hover:bg-white transition-all cursor-pointer group"
-                >
-                    <div className="size-10 rounded-full flex items-center justify-center bg-blue-50 text-blue-500">
-                        📊
-                    </div>
-                    <div className="flex-1">
-                        <p className="font-bold text-sm text-gray-800">Usage & Costing</p>
-                        <p className="text-[10px] text-gray-400">Monitor AI Tokens</p>
-                    </div>
-                </div>
-            </div>
 
             {!user && (
                 <div className="mt-2 p-5 bg-gradient-to-br from-primary/90 to-primary rounded-3xl text-white shadow-xl">

@@ -18,19 +18,42 @@ const isProduction = process.env.NODE_ENV === 'production';
 app.set('trust proxy', 1);
 
 // --- INITIALIZE FIREBASE ADMIN ---
-const serviceAccountPath = path.join(__dirname, 'serviceAccountKey.json');
-if (require('fs').existsSync(serviceAccountPath)) {
+const NODE_ENV = process.env.NODE_ENV || 'development';
+const saFilename = NODE_ENV === 'production' ? 'config/antigravity-tutor-prod-key.json' : 'config/antigravity-tutor-dev-key.json';
+const serviceAccountPath = path.join(__dirname, saFilename);
+
+// Force production mode if running on Cloud Run or project matches
+const forceProduction = !!process.env.K_SERVICE || process.env.GOOGLE_CLOUD_PROJECT === 'ace-it-production-1e0a4';
+
+if (forceProduction || NODE_ENV === 'production') {
+    // ON CLOUD RUN: We MUST use the production key or ADC.
     try {
-        admin.initializeApp({
-            credential: admin.credential.cert(require(serviceAccountPath))
-        });
+        const options = require('fs').existsSync(serviceAccountPath) 
+            ? { credential: admin.credential.cert(require(serviceAccountPath)) } 
+            : {}; // Fallback to ADC
+        
+        admin.initializeApp(options);
         global.db = admin.firestore();
-        console.log("Firebase Admin initialized successfully.");
+        
+        const projectId = admin.app().options.credential.projectId || process.env.GOOGLE_CLOUD_PROJECT;
+        console.log(`\n✅ PRODUCTION BACKEND ACTIVE`);
+        console.log(`🆔 Project ID: ${projectId}`);
     } catch (error) {
-        console.error("Firebase Admin initialization failed:", error);
+        console.error("❌ Firebase Admin Production initialization failed:", error);
+        process.exit(1);
+    }
+} else if (require('fs').existsSync(serviceAccountPath)) {
+    // LOCAL DEVELOPMENT
+    try {
+        admin.initializeApp({ credential: admin.credential.cert(require(serviceAccountPath)) });
+        global.db = admin.firestore();
+        console.log(`\n🛠️ DEVELOPMENT BACKEND ACTIVE`);
+        console.log(`🆔 Project ID: ${admin.app().options.credential.projectId}\n`);
+    } catch (error) {
+        console.error("❌ Firebase Admin Development initialization failed:", error);
     }
 } else {
-    console.warn("⚠️ Firebase Service Account NOT FOUND. Firestore features will be disabled.");
+    console.warn(`⚠️ No Firebase Service Account found at ${saFilename}. Firestore features disabled.`);
 }
 
 // --- MIDDLEWARE ---
@@ -41,7 +64,13 @@ app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
 // CORS Implementation
 app.use((req, res, next) => {
     const origin = req.headers.origin;
-    if (origin) res.header('Access-Control-Allow-Origin', origin);
+    // Explicitly allow local development port 3005
+    if (origin === 'http://localhost:3005' || origin?.includes('localhost:')) {
+        res.header('Access-Control-Allow-Origin', origin);
+    } else if (origin) {
+        res.header('Access-Control-Allow-Origin', origin);
+    }
+    
     res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
     res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, x-admin-secret');
     res.header('Access-Control-Allow-Credentials', 'true');
@@ -100,11 +129,19 @@ app.use('/api/diagnostic', require('./routes/diagnosticRoutes'));
 app.use('/api/tutors', require('./routes/tutorRoutes'));
 app.use('/api/debug', require('./routes/debugRoutes'));
 app.use('/api/admin', require('./routes/adminRoutes'));
+app.use('/api', require('./routes/ttsRoutes'));
+
+// --- COMPATIBILITY ALIASES (Frontend Support) ---
+app.get('/api/microskills/:uid', (req, res) => res.redirect(307, '/api/stats/microskills/' + req.params.uid));
+app.get('/api/quests/personalized', (req, res) => res.redirect(307, '/api/roadmap?uid=' + (req.query.uid || '')) );
+
 
 // Usage & Costing endpoints moved to statsRoutes and userRoutes in modular build.
 // Redundant handlers removed for architecture consistency.
 
 // Legacy compatibility redirects (307 preserves POST body)
+app.post('/api/onboarding', (req, res) => res.redirect(307, '/api/user/onboarding'));
+app.post('/api/onboarding/submit', (req, res) => res.redirect(307, '/api/user/onboarding'));
 app.post('/api/submit-exam', (req, res) => res.redirect(307, '/api/exams/submit-exam'));
 app.post('/api/ocr', (req, res) => res.redirect(307, '/api/ocr'));
 app.post('/api/dictionary', (req, res) => res.redirect(307, '/api/dictionary'));

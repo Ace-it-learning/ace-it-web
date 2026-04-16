@@ -72,51 +72,92 @@ const WritingQuestPage = () => {
     // Initialize Studio
     useEffect(() => {
         const loadQuest = async () => {
-            const lStateData = location.state?.questData;
-            // Use ID from state or localStorage
-            const questId = lStateData?.id || localStorage.getItem('active_writing_quest_id');
+            const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+            
+            // 1. Resolve Data Source
+            // Source A: Roadmap/Quest Lab (passes questData object)
+            const roadmapData = location.state?.questData;
+            
+            // Source B: Writer's Studio Menu (passes prompt/format directly)
+            const menuTopic = location.state?.topic;
+            const menuFormat = location.state?.format;
+            const menuTitle = location.state?.title;
 
-            if (!questId) {
-                console.warn("[WritingQuest] No quest ID found. Returning to menu.");
-                navigate('/dashboard', { state: { openRoadmap: 'ENGLISH', roadmapFilter: 'WRITING' } });
-                return;
-            }
+            // Source C: Persistent ID (Refresh fallback)
+            const persistentId = localStorage.getItem('active_writing_quest_id');
+
+            console.log("[WritingQuest] Initialization Debug:", { roadmapData, menuTopic, persistentId });
 
             try {
-                const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+                // Priority 1: Mock Papers (Special case)
                 const paperId = location.state?.paperId;
-
                 if (isMock && paperId) {
-                    console.log("[WritingQuest] Loading Mock Paper:", paperId);
                     const res = await fetch(`${API_URL}/api/english/mock/${paperId}`);
                     if (res.ok) {
                         const data = await res.json();
                         setQuestData(data);
                         setStep('studio');
-                        return; // Exit early as we have the mock data
+                        return;
                     }
                 }
 
-                // Fallback to normal quest loading...
-                const lStateData = location.state?.questData;
-                const questId = lStateData?.id || localStorage.getItem('active_writing_quest_id');
+                // Priority 2: Direct Menu Navigation (Topic Factory)
+                if (menuTopic) {
+                    const factoryData = {
+                        id: 'factory_' + Date.now(),
+                        title: menuTitle || 'Writing Mission',
+                        prompt: menuTopic,
+                        genre: menuFormat || 'Essay',
+                        isFactory: true
+                    };
+                    setQuestData(factoryData);
+                    setStep('studio');
+                } 
+                // Priority 3: Roadmap Data
+                else if (roadmapData) {
+                    setQuestData(roadmapData);
+                    if (roadmapData.id) localStorage.setItem('active_writing_quest_id', roadmapData.id);
+                    setStep('studio');
+                }
+                // Priority 4: Refresh/Direct URL with ID
+                else if (persistentId) {
+                    const res = await fetch(`${API_URL}/api/writing/quest/${persistentId}`);
+                    if (res.ok) {
+                        const data = await res.json();
+                        setQuestData(data);
+                        setStep('studio');
+                    } else {
+                        // If ID fetch fails, we can't do much
+                        throw new Error("Quest ID invalid on refresh");
+                    }
+                }
+                else {
+                    // Critical failure: No data and no ID
+                    throw new Error("No quest data found in navigation state");
+                }
 
-                // Fetch Cheat Library if in cheat mode (Developer only)
+                // Final Step: Fetch Cheat Library for authorized developers
                 if (user?.email === 'fungtam@gmail.com') {
-                    const cheatRes = await fetch(`${API_URL}/api/writing/admin/cheat-library`);
-                    if (cheatRes.ok) {
-                        const lib = await cheatRes.ok ? await cheatRes.json() : null;
-                        if (lib) setCheatLibrary(lib);
+                    try {
+                        const cheatRes = await fetch(`${API_URL}/api/writing/admin/cheat-library`);
+                        if (cheatRes.ok) {
+                            const lib = await cheatRes.json();
+                            if (lib) setCheatLibrary(lib);
+                        }
+                    } catch (cheatErr) {
+                        console.warn("[WritingQuest] Cheat library load failed (ignoring):", cheatErr);
                     }
                 }
+
             } catch (err) {
                 console.error("[WritingQuest] Initialization Error:", err);
+                // Return to dashboard if completely stuck
                 navigate('/dashboard', { state: { openRoadmap: 'ENGLISH', roadmapFilter: 'WRITING' } });
             }
         };
 
         loadQuest();
-    }, [location.state, navigate]);
+    }, [location.state, navigate, user?.email]);
 
     // Actions
     const handleToggleChecklist = (idx) => {
@@ -165,7 +206,8 @@ const WritingQuestPage = () => {
                     topic: questData.title,
                     textType: questData.genre || questData.id?.split('_')[0],
                     content: content,
-                    userEmail: user?.email
+                    userEmail: user?.email,
+                    uid: user?.uid
                 })
             });
             const results = await res.json();
@@ -186,14 +228,35 @@ const WritingQuestPage = () => {
     };
 
     const handleCheatInject = (level) => {
-        // 1. Try quest-specific hardcoded library first
-        if (cheatLibrary && questData?.id && cheatLibrary[questData.id]) {
-            const libContent = cheatLibrary[questData.id][level];
-            if (libContent && !libContent.startsWith('Error:')) {
-                setTitle(`[Cheat ${level}] ${questData.title}`);
-                setContent(libContent);
-                console.log(`[Cheat] Injected hardcoded Level ${level} for ${questData.id}`);
-                return;
+        // 1. Try quest-specific hardcoded library
+        if (cheatLibrary) {
+            // Attempt A: Direct ID match (Scenarios/Roadmap)
+            let libEntry = questData?.id ? cheatLibrary[questData.id] : null;
+
+            // Attempt B: Title-based search (Factory Topics/Menu)
+            if (!libEntry && questData?.title) {
+                // Fuzzy match: Find key in library that matches the title
+                const scenarioTitlesMap = {
+                    "The Rise of Deepfakes": "lte_001",
+                    "Luxury vs. Living Space": "lte_002",
+                    "'Mega-Event' Fatigue": "art_001",
+                    "The Silver Economy": "art_002",
+                    "AI Tutors in DSE Prep": "deb_001"
+                    // Add more if needed, but these are primary test cases
+                };
+                
+                const matchedId = scenarioTitlesMap[questData.title];
+                if (matchedId) libEntry = cheatLibrary[matchedId];
+            }
+
+            if (libEntry) {
+                const libContent = libEntry[level];
+                if (libContent && !libContent.startsWith('Error:')) {
+                    setTitle(`[Cheat ${level}] ${questData.title}`);
+                    setContent(libContent);
+                    console.log(`[Cheat] Injected hardcoded Level ${level} for ${questData.id} via title/ID match.`);
+                    return;
+                }
             }
         }
         

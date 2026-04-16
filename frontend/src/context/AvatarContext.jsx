@@ -5,8 +5,8 @@ const AvatarContext = createContext();
 
 export const AGENTS = {
     english: { id: 'english', name: 'Miss Janie', role: '英文導師', color: 'bg-blue-100', avatar: '/avatars/miss_janie_avatar_1774534465912.png' },
-    math: { id: 'math', name: 'Matt sir', role: '數學導師', color: 'bg-green-100', avatar: '/avatars/matt_sir_avatar_1774534606517.png' },
-    chinese: { id: 'chinese', name: 'Miss Lam', role: '中文導師', color: 'bg-purple-100', avatar: '/avatars/miss_lam_avatar_1774534527873.png' },
+    math: { id: 'math', name: 'Matt Sir', role: '數學導師', color: 'bg-green-100', avatar: '/avatars/matt_sir_avatar_1774534606517.png' },
+    chinese: { id: 'chinese', name: 'Miss Lam (林老師)', role: '中文導師', color: 'bg-purple-100', avatar: '/avatars/miss_lam_avatar_1774534527873.png' },
     ace: { id: 'ace', name: 'Ace Sir', role: 'Ace Sir', color: 'bg-primary/20', avatar: '/avatars/ace_sir_avatar_1774534550933.png' }
 };
 
@@ -50,7 +50,33 @@ export const AvatarProvider = ({ children }) => {
         if (user) syncEquipment();
     }, [user]);
 
-    const activeAgent = AGENTS[activeAgentId];
+    // Subject normalization mapping: activeAgentId -> card_pool subject
+    const subjectMap = {
+        'english': ['english'],
+        'math': ['maths', 'math'],
+        'chinese': ['chinese'],
+        'ace': ['general', 'ace']
+    };
+
+    const isSkinEnabled = (agentId, tutorCard) => {
+        if (!tutorCard) return false;
+        const targetSubjects = subjectMap[agentId] || [];
+        return targetSubjects.includes(tutorCard.subject);
+    };
+
+    const getAgentIdentity = (agentId) => {
+        const base = AGENTS[agentId];
+        if (!base) return { name: 'Unknown', avatar: '' };
+        
+        const isSkinned = isSkinEnabled(agentId, equipment.tutor);
+        return {
+            ...base,
+            name: isSkinned ? equipment.tutor.name : base.name,
+            avatar: isSkinned ? equipment.tutor.image : base.avatar
+        };
+    };
+
+    const activeAgent = getAgentIdentity(activeAgentId);
 
     return (
         <AvatarContext.Provider value={{
@@ -64,7 +90,8 @@ export const AvatarProvider = ({ children }) => {
             isFocusMode,
             setIsFocusMode,
             equipment,
-            syncEquipment
+            syncEquipment,
+            getAgentIdentity
         }}>
             {children}
         </AvatarContext.Provider>

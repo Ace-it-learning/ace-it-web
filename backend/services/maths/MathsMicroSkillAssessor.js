@@ -32,7 +32,7 @@ class MathsMicroSkillAssessor {
 
         try {
             const result = await GenerativeAIService.generateContent(prompt, {
-                model: "gemini-2.0-flash",
+                model: "ace-it-pro",
                 generationConfig: { responseMimeType: "application/json" }
             });
             const text = result.response.text();

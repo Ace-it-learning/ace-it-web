@@ -1,7 +1,8 @@
-import React from 'react';
 import { ArrowRight, Sparkles, BookOpen } from 'lucide-react';
+import { useAvatar } from '../context/AvatarContext';
 
 const LaunchCard = ({ payload, onLaunch }) => {
+    const { activeAgent } = useAvatar();
     // payload = { action: "LAUNCH_MODULE", module: "LEARNING_LAB" | "MATHS_LAB" | "EXAM_ROUTER", params: {...} }
     const { params } = payload;
     const isMock = payload.module === 'EXAM_ROUTER';
@@ -15,7 +16,7 @@ const LaunchCard = ({ payload, onLaunch }) => {
     const description = isMock
         ? "Enter the exam environment for a full simulation."
         : isMathsLab
-            ? "Master concepts with Matt Sir's step-by-step guidance."
+            ? `Master concepts with ${activeAgent?.name || "Your tutor"}'s step-by-step guidance.`
             : "Interactive practice and visual mastery.";
 
     const bgGradient = isMathsLab
@@ -44,7 +45,7 @@ const LaunchCard = ({ payload, onLaunch }) => {
                     <div>
                         <h3 className="font-bold text-gray-900 dark:text-white capitalize">{title}</h3>
                         <p className="text-xs text-gray-500 dark:text-gray-400">
-                            {isMathsLab ? 'Maths Lab • Matt Sir' : 'Ace it! Learning Module'}
+                            {isMathsLab ? `Maths Lab • ${activeAgent?.name || "Your tutor"}` : 'Ace it! Learning Module'}
                         </p>
                     </div>
                 </div>

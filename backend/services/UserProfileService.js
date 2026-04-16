@@ -43,13 +43,33 @@ class UserProfileService {
             const cached = CacheService.getDbCache(cacheKey);
             if (cached) return cached;
 
-            // Concurrent retrieval of profile and stats
             const [userDoc, statsDoc] = await Promise.all([
                 this.usersCollection.doc(uid).get(),
                 this.usersCollection.doc(uid).collection('stats').doc('main').get()
             ]);
 
-            if (!userDoc.exists) return null;
+            if (!userDoc.exists) {
+                console.log(`[UserProfileService] New user detected: ${uid}. Provisioning default profile...`);
+                // Auto-provision a basic profile
+                const defaultProfile = {
+                    nickname: "Student",
+                    role: 'student',
+                    is_new_student: true,
+                    status: 'active',
+                    createdAt: admin.firestore.FieldValue.serverTimestamp(),
+                    updatedAt: admin.firestore.FieldValue.serverTimestamp(),
+                    equipped_tutor: 'default_janie',
+                    equipped_student_avatar: 's_bookworm'
+                };
+                await this.usersCollection.doc(uid).set(defaultProfile);
+                
+                const stats = { xp: 0, level: 1, learningTime: 0 };
+                await this.usersCollection.doc(uid).collection('stats').doc('main').set(stats);
+                
+                const result = { ...defaultProfile, ...stats, uid };
+                CacheService.setDbCache(cacheKey, result);
+                return result;
+            }
 
             const userData = userDoc.data();
             const stats = statsDoc.exists ? statsDoc.data() : { xp: 0, level: 1, learningTime: 0 };
@@ -129,16 +149,23 @@ class UserProfileService {
         }
 
         // --- PARENTS OVERLOOK ---
+        const userDoc = await this.usersCollection.doc(uid).get();
+        const userData = userDoc.exists ? userDoc.data() : {};
+
         if (data.parent_email !== undefined) profileUpdate.parent_email = data.parent_email;
         if (data.parent_report_enabled !== undefined) profileUpdate.parent_report_enabled = data.parent_report_enabled;
-        if (!data.hasOwnProperty('parent_report_enabled') && !userData.parent_report_enabled) {
-            // Only set default if not already present
+        
+        // Only set default if not already present in payload AND not already in DB
+        if (!data.hasOwnProperty('parent_report_enabled') && userData.parent_report_enabled === undefined) {
             profileUpdate.parent_report_enabled = false;
         }
 
         // If creating new, add createdAt
-        // We'll use set with merge, so we check existence first or just simple valid check?
-        // Firestore set(..., {merge: true}) is robust.
+        if (!userDoc.exists) {
+            profileUpdate.createdAt = admin.firestore.FieldValue.serverTimestamp();
+            profileUpdate.is_new_student = true;
+            profileUpdate.status = 'active';
+        }
 
         try {
             await this.usersCollection.doc(uid).set(profileUpdate, { merge: true });
@@ -430,6 +457,10 @@ class UserProfileService {
             expirationDate.setDate(now.getDate() + daysToSunday);
             expirationDate.setHours(23, 59, 59, 999);
 
+            // FETCH COMPLETED TOPICS
+            const RoadmapService = require('./RoadmapService');
+            const completedTopics = await RoadmapService.getCompletedTopics(uid, subject === 'math' ? 'maths' : subject);
+
             return {
                 nickname: profile?.nickname || profile?.displayName || "Student",
                 grade: profile?.grade || "F4",
@@ -437,6 +468,7 @@ class UserProfileService {
                 topWeaknesses,
                 recentMistakes: mistakes.map(m => m.term).filter(Boolean),
                 skippedPapers,
+                completedTopics,
                 weeklyQuest: {
                     weekId: weeklyStatus.weekId,
                     completed: weeklyStatus.completed,
@@ -724,13 +756,33 @@ class UserProfileService {
                 .where('agentId', '==', agentId)
                 .get();
 
-            const history = snapshot.docs.map(doc => {
+            const history = [];
+            snapshot.docs.forEach(doc => {
                 const d = doc.data();
-                return {
-                    role: d.role,
-                    content: d.content,
-                    timestamp: d.timestamp?.toDate() || new Date(0)
-                };
+                const ts = d.timestamp?.toDate() || new Date(0);
+                
+                // Legacy Fallback: combined document format { message, response }
+                if (d.message && d.response) {
+                    history.push({
+                        role: 'user',
+                        content: d.message,
+                        timestamp: ts
+                    });
+                    // AI response timestamp set slightly later to preserve order
+                    history.push({
+                        role: 'model',
+                        content: d.response,
+                        timestamp: new Date(ts.getTime() + 100)
+                    });
+                } 
+                // Standard format: individual document per role { role, content }
+                else if (d.role && d.content) {
+                    history.push({
+                        role: d.role === 'assistant' ? 'model' : d.role,
+                        content: d.content,
+                        timestamp: ts
+                    });
+                }
             });
 
             // Filter and Sort in Memory to avoid Index requirements
@@ -1222,10 +1274,40 @@ class UserProfileService {
         
         const cardPool = require('../data/card_pool.json');
         
-        // Find tutor in pool (either custom or default)
+        // Subject normalization mapping
+        const subjectMap = {
+            'english': ['english'],
+            'math': ['maths', 'math'],
+            'chinese': ['chinese'],
+            'ace': ['general', 'ace']
+        };
+
+        const isSubjectMatch = (agentId, tutorCard) => {
+            if (!tutorCard) return false;
+            const targetSubjects = subjectMap[agentId] || [];
+            return targetSubjects.includes(tutorCard.subject);
+        };
+
+        // Find tutor in pool
         let tutor = cardPool.tutor_cards.find(c => c.id === equippedTutorId);
         if (!tutor) tutor = cardPool.default_tutors.find(c => c.id === equippedTutorId);
-        if (!tutor) tutor = cardPool.default_tutors[0]; // Fallback to Miss Janie
+
+        // Filter by subject compatibility
+        if (tutor && !isSubjectMatch(agentId, tutor)) {
+            tutor = null; // Ignore non-matching equipped skin
+        }
+
+        // Fallback to subject defaults if no match
+        if (!tutor) {
+            const defaultIdMap = {
+                'english': 'default_janie',
+                'math': 'default_matt',
+                'chinese': 'default_chung',
+                'ace': 'default_ace'
+            };
+            const defaultId = defaultIdMap[agentId] || 'default_ace';
+            tutor = cardPool.default_tutors.find(c => c.id === defaultId) || cardPool.default_tutors[0];
+        }
 
         const traits = tutor.traits || {
             intensity: "moderate",

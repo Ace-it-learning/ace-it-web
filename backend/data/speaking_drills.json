@@ -1,6 +1,19 @@
 {
   "criterion_a": [
-    { "id": "a_1", "title": "Climate Crisis", "level": "3", "level_label": "Easy", "scenario": "News Reporter describing an environmental report.", "master_script": "The rapid melting of Arctic ice is a clear indicator of global warming. We must take immediate action to reduce carbon emissions. Reducing waste and saving energy are simple ways to help our planet stay healthy and green for everyone. If we all work together, we can make a big difference in protecting our environment. Every small change in our daily lives, like recycling plastic or using less water, adds up to a cleaner future for the next generation. Let's start making better choices today to ensure a sustainable world for tomorrow. It is not too late to act, but we must be consistent and dedicated to this global cause. Our earth is beautiful, and keeping it that way is our shared responsibility." },
+    { "id": "a_1", "title": "Climate Crisis", "level": "3", "level_label": "Easy", "scenario": "News Reporter describing an environmental report.", "master_script": "The rapid melting of Arctic ice is a clear indicator of global warming. We must take immediate action to reduce carbon emissions. Reducing waste and saving energy are simple ways to help our planet stay healthy and green for everyone. If we all work together, we can make a big difference in protecting our environment. Every small change in our daily lives, like recycling plastic or using less water, adds up to a cleaner future for the next generation. Let's start making better choices today to ensure a sustainable world for tomorrow. It is not too late to act, but we must be consistent and dedicated to this global cause. Our earth is beautiful, and keeping it that way is our shared responsibility.", "vocabulary": [
+      { "word": "indicator", "ipa": "ˈɪndɪkeɪtə", "translation": "指標", "definition": "A thing that indicates the state or level of something." },
+      { "word": "emissions", "ipa": "ɪˈmɪʃənz", "translation": "排放", "definition": "The production and discharge of something, especially gas or radiation." },
+      { "word": "sustainable", "ipa": "səˈsteɪnəbl", "translation": "可持續", "definition": "Able to be maintained at a certain rate or level." },
+      { "word": "responsibility", "ipa": "rɪˌspɒnsəˈbɪlɪti", "translation": "責任", "definition": "The state or fact of having a duty to deal with something." }
+    ], "prosody": {
+      "pauses": [6, 13, 22, 31, 40],
+      "emphasis": ["rapid", "immediate", "difference", "choices", "consistent"],
+      "intonation": [
+        { "text": "Arctic ice", "type": "falling" },
+        { "text": "global warming", "type": "falling" },
+        { "text": "for tomorrow", "type": "rising" }
+      ]
+    }, "focus_phonemes": ["/r/", "/s/", "/th/"] },
     { "id": "a_2", "title": "Artificial Intelligence", "level": "3", "level_label": "Easy", "scenario": "Tech presentation opening.", "master_script": "Artificial intelligence is revolutionizing health care and education. It helps doctors find diseases faster and helps students learn at their own pace. While some people worry about robots, most experts agree that AI will move us forward in very positive ways. By using smart machines, we can solve complex problems that were once impossible. For example, AI can analyze huge amounts of weather data to predict storms more accurately, saving many lives. In schools, AI tutors can help children who are struggling with math or language. This technology is a powerful tool that makes our lives easier and more efficient. As we continue to develop AI, we must focus on using it safely and fairly for the benefit of all people around the world." },
     { "id": "a_3", "title": "Sustainable Fashion", "level": "3", "level_label": "Easy", "scenario": "Podcast segment on lifestyle.", "master_script": "Many brands are now adopting recycled materials to create beautiful clothes. This shift toward sustainable fashion is helping to reduce the huge amount of waste produced by the clothing industry. You can help by choosing quality over quantity and supporting companies that care about the earth. Fast fashion often leads to pollution and poor working conditions, so being a mindful shopper is very important. When you buy a piece of clothing, think about how long it will last and where it came from. Buying second-hand or swapping clothes with friends are also great ways to be stylish and eco-friendly. Small steps like these can change the way the world thinks about fashion. Let's celebrate style that doesn't harm our planet." },
     { "id": "a_4", "title": "Local Traditions", "level": "3", "level_label": "Easy", "scenario": "Cultural tour guide.", "master_script": "The annual Fire Dragon Dance attracts thousands of visitors to our city every year. This vibrant tradition involves hundreds of performers carrying a dragon made of glowing incense sticks through the narrow streets. It is a symbol of luck and protection for the local community. The rhythmic drumming and the smell of the burning incense create a magical atmosphere that you will never forget. Families gather to watch the parade, and children often carry their own small lanterns. This festival has been celebrated for over a century, passing down stories and values from one generation to the next. It reminds us of our history and the strength of our community. We invite you to join us in this colorful celebration of our unique heritage and culture." },
@@ -22,15 +35,110 @@
     { "id": "a_20", "title": "Quantum Computing", "level": "5**", "level_label": "Elite", "scenario": "Science program narration.", "master_script": "Quantum computing represents a paradigm shift in our computational capabilities, promising to solve problems that are currently beyond the theoretical reach of even the most powerful classical supercomputers. By harnessing the principles of quantum mechanics, such as superposition and entanglement, researchers are developing processors that can perform complex calculations at speeds that would revolutionize fields ranging from drug discovery to materials science. The potential to simulate molecular interactions with unprecedented precision could lead to the development of life-saving medications and high-efficiency energy storage solutions. However, the realization of fully functional, large-scale quantum computers remains a formidable engineering challenge, requiring the maintenance of extremely low temperatures and the mitigation of quantum decoherence. Scientists are also grappling with the implications for global cybersecurity, as quantum algorithms have the potential to render many of our current encryption methods obsolete. Despite these immense hurdles, the global race to master quantum technology is accelerating, driven by the profound realization that the quantum era will fundamentally redefine our relationship with information and the physical world. We are standing on the brink of a new scientific frontier." }
   ],
   "criterion_b": [
-    { "id": "b_1", "title": "Agreeing", "level": "3", "level_label": "Easy", "scenario": "Team meeting scenario." },
-    { "id": "b_16", "title": "Synthesizing Views", "level": "5**", "level_label": "Elite", "scenario": "Problem-solving seminar." }
+    { 
+      "id": "b_1", 
+      "title": "Agreeing", 
+      "level": "3", 
+      "level_label": "Easy", 
+      "scenario": "Team meeting about school canteen food.",
+      "stimulus": "I think the canteen should offer more healthy options, like fresh fruit and salads, because students often eat too much junk food during lunch.",
+      "strategy_goal": "Acknowledge the point and agree with the reasoning.",
+      "power_phrases": [
+        "I couldn't agree more with you.",
+        "That's a very valid point, especially regarding...",
+        "I'm exactly of the same opinion.",
+        "You've hit the nail on the head."
+      ]
+    },
+    { 
+      "id": "b_16", 
+      "title": "Synthesizing Views", 
+      "level": "5**", 
+      "level_label": "Elite", 
+      "scenario": "Problem-solving seminar on urban congestion.",
+      "stimulus": "Candidate A suggested that we should increase road tolls, while Candidate B thinks improving the frequency of trains is the only way to reduce traffic.",
+      "strategy_goal": "Summarize both perspectives and propose a middle ground or a comprehensive solution.",
+      "power_phrases": [
+        "Looking at both perspectives, it seems clear that...",
+        "While both suggestions have merits, a combined approach might...",
+        "To synthesize what has been discussed so far...",
+        "Balancing these two viewpoints, we could consider..."
+      ]
+    }
   ],
   "criterion_c": [
-    { "id": "c_1", "title": "Economic Trends", "level": "3", "level_label": "Easy", "scenario": "Financial talk." },
-    { "id": "c_16", "title": "Cybersecurity", "level": "5**", "level_label": "Elite", "scenario": "IT security briefing." }
+    { 
+      "id": "c_1", 
+      "title": "Advancements in Automation", 
+      "level": "4", 
+      "level_label": "Medium", 
+      "scenario": "A formal presentation on the influence of robotics on the labor market.",
+      "starting_question": "How do you think increasing automation will transform traditional career paths for young people in Hong Kong?",
+      "practice_sentences": [
+        { "text": "The integration of AI will **inevitably** change how we perceive work.", "target_word": "inevitably", "explanation": "Certain to happen." },
+        { "text": "In the future, automated systems will **predominantly** handle routine tasks.", "target_word": "predominantly", "explanation": "Mainly; for the most part." },
+        { "text": "This shift represents an **unprecedented** challenge for the global workforce.", "target_word": "unprecedented", "explanation": "Never done or known before." },
+        { "text": "Concerns remain that robots might **displace** human workers in manufacturing.", "target_word": "displace", "explanation": "Take the place of." },
+        { "text": "However, human **versatility** remains a key advantage in creative industries.", "target_word": "versatility", "explanation": "Ability to adapt to many functions." }
+      ],
+      "power_words": [
+        { "word": "inevitably", "ipa": "ɪnˈevɪtəbli", "translation": "不可避免地", "definition": "As is certain to happen." },
+        { "word": "predominantly", "ipa": "prɪˈdɒmɪnəntli", "translation": "主要地", "definition": "Mainly; for the most part." },
+        { "word": "unprecedented", "ipa": "ʌnˈpresɪdentɪd", "translation": "前所未有的", "definition": "Never done or known before." },
+        { "word": "displace", "ipa": "dɪsˈpleɪs", "translation": "取代", "definition": "Take the place of (someone or something)." },
+        { "word": "versatility", "ipa": "ˌvɜːsəˈtɪlɪti", "translation": "多功能性", "definition": "Ability to adapt or be adapted to many different functions or activities." },
+        { "word": "detrimental", "ipa": "ˌdetrɪˈmentəl", "translation": "有害的", "definition": "Tending to cause harm." }
+      ]
+    },
+    { "id": "c_16", "title": "Cybersecurity Governance", "level": "5**", "level_label": "Elite", "scenario": "International cybersecurity conference briefing.", "starting_question": "In light of escalating digital threats, what comprehensive governance frameworks should governments implement to safeguard citizen data?",
+      "practice_sentences": [
+        { "text": "Digital threats are scaling **exponentially** across the globe.", "target_word": "exponentially", "explanation": "Scaling rapidily." },
+        { "text": "Securing national **infrastructure** is now a top priority for defense.", "target_word": "infrastructure", "explanation": "Basic structures/systems." },
+        { "text": "Hackers often exploit minor **vulnerabilities** in outdated software.", "target_word": "vulnerabilities", "explanation": "Weaknesses." },
+        { "text": "State actors can **orchestrate** complex cyber assaults on rivals.", "target_word": "orchestrate", "explanation": "Plan or coordinate." },
+        { "text": "We need a **comprehensive** strategy to protect sensitive citizen data.", "target_word": "comprehensive", "explanation": "Including all elements." }
+      ],
+      "power_words": [
+        { "word": "exponentially", "ipa": "ˌekspəˈnenʃəli", "translation": "成倍地", "definition": "In a way that becomes more and more rapid." },
+        { "word": "infrastructure", "ipa": "ˈɪnfrəstrʌktʃə", "translation": "基礎設施", "definition": "The basic physical and organizational structures." },
+        { "word": "vulnerabilities", "ipa": "ˌvʌlnərəˈbɪlɪtiz", "translation": "漏洞", "definition": "Weaknesses that can be exploited." },
+        { "word": "orchestrate", "ipa": "ˈɔːkɪstreɪt", "translation": "策劃", "definition": "Plan or coordinate (a complex situation or event)." },
+        { "word": "comprehensive", "ipa": "ˌkɒmprɪˈhensɪv", "translation": "全面的", "definition": "Including or dealing with all or nearly all elements or aspects." }
+      ]
+    }
   ],
   "criterion_d": [
-    { "id": "d_1", "title": "School Policy", "level": "3", "level_label": "Easy", "scenario": "Formal debate." },
-    { "id": "d_16", "title": "Auto Cars", "level": "5**", "level_label": "Elite", "scenario": "Transportation review." }
+    { 
+      "id": "d_1", 
+      "title": "School Policy: Mobile Phones", 
+      "level": "3", 
+      "level_label": "Easy", 
+      "scenario": "A student debate on whether mobile phones should be allowed during lunch breaks.",
+      "starting_question": "Do you believe allowing mobile phones during lunch breaks would be beneficial or distracting for students?",
+      "mind_map": {
+        "center_issue": "Phones at Lunch",
+        "branches": [
+          { "title": "Benefits", "sub_points": ["Social connection", "Information access", "Relaxation"] },
+          { "title": "Drawbacks", "sub_points": ["Cyberbullying", "Less physical interaction", "Addiction focus"] }
+        ]
+      },
+      "guidance": "Use P.E.E.L: State your Point (e.g., social connection), provide Evidence (e.g., keeping in touch with parents), Explain why it matters, and Link back to wait reason."
+    },
+    { 
+      "id": "d_16", 
+      "title": "Autonomous Transport", 
+      "level": "5**", 
+      "level_label": "Elite", 
+      "scenario": "Transportation planning review on self-driving taxis.",
+      "starting_question": "Evaluate the ethical and logistical implications of replacing human taxi drivers with autonomous systems in a high-density urban environment.",
+      "mind_map": {
+        "center_issue": "Autonomous Taxis",
+        "branches": [
+          { "title": "Logistical", "sub_points": ["24/7 efficiency", "Traffic flow optimization", "Technological failure risks"] },
+          { "title": "Ethical", "sub_points": ["Job displacement", "Algorithm bias in safety", "Liability in accidents"] }
+        ]
+      },
+      "guidance": "Focus on the 'Synthesis' part of DSE Criterion D. Link logical points between job security and social stability."
+    }
   ]
 }

@@ -73,7 +73,7 @@ const MathsAnalysisLoading = () => {
             </div>
 
             <p className="text-slate-400 text-sm max-w-xs leading-relaxed italic">
-                Matt Sir is evaluating your mathematical steps to map your DSE potential. This usually takes about 30 seconds.
+                Your mentor is evaluating your mathematical steps to map your DSE potential. This usually takes about 30 seconds.
             </p>
         </div>
     );

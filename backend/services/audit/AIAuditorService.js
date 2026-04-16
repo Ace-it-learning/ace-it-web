@@ -1,12 +1,12 @@
-const { GoogleGenerativeAI } = require("@google/generative-ai");
-const dotenv = require("dotenv");
-dotenv.config();
-
-const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+const GenerativeAIService = require('../GenerativeAIService');
 
 class AIAuditorService {
     constructor() {
-        this.model = genAI.getGenerativeModel({ model: "gemini-1.5-pro" });
+        // Model will be fetched dynamically via GenerativeAIService
+    }
+
+    async getModel() {
+        return GenerativeAIService.getModel({ model: "gemini-1.5-pro" });
     }
 
     /**
@@ -37,7 +37,8 @@ class AIAuditorService {
         `;
 
         try {
-            const result = await this.model.generateContent(prompt);
+            const model = await this.getModel();
+            const result = await model.generateContent(prompt);
             const response = await result.response;
             const text = response.text();
 
@@ -79,7 +80,8 @@ class AIAuditorService {
         `;
 
         try {
-            const result = await this.model.generateContent([
+            const model = await this.getModel();
+            const result = await model.generateContent([
                 prompt,
                 {
                     inlineData: {

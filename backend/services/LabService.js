@@ -382,7 +382,7 @@ class LabService {
 
     console.log(`[LabService] Prompting Gemini for Simulator Content: ${title}`);
     const result = await GenerativeAIService.generateContent(prompt, {
-      model: "gemini-2.0-flash",
+      model: "ace-it-flash",
       generationConfig: { responseMimeType: "application/json" }
     });
 
@@ -910,7 +910,7 @@ STRICT RULE: Do NOT use the same hooks, starting sentences, or specific scenario
 
         console.log("[LabService] Calling GenerativeAIService.generateJson");
         let data = await GenerativeAIService.generateJson(finalPrompt, {
-          model: "gemini-2.0-flash", // Use Flash for batch generation speed
+          model: "ace-it-flash", // Use Flash for batch generation speed
           uid: uid || 'system',
           generationConfig: {
             maxOutputTokens: 8192,
@@ -1228,7 +1228,7 @@ STRICT RULE: Do NOT use the same hooks, starting sentences, or specific scenario
     Return ONLY the JSON. No trailing punctuation.`;
 
     const result = await GenerativeAIService.generateContent(prompt, {
-      model: "gemini-2.0-flash",
+      model: "ace-it-flash",
       generationConfig: { responseMimeType: "application/json" }
     });
 
@@ -1262,7 +1262,7 @@ STRICT RULE: Do NOT use the same hooks, starting sentences, or specific scenario
     - Keep length appropriate for the mode (Sentence: 1 sentence, Paragraph: 100-150 words, Essay: 400 words).`;
 
     const result = await GenerativeAIService.generateContent(prompt, {
-      model: "gemini-2.0-flash"
+      model: "ace-it-flash"
     });
 
     return { text: result.response.text().trim() };
@@ -1343,7 +1343,7 @@ STRICT RULE: Do NOT use the same hooks, starting sentences, or specific scenario
     Return ONLY the JSON response.`;
 
     const result = await GenerativeAIService.generateContent(prompt, {
-      model: "gemini-2.0-flash",
+      model: "ace-it-flash",
       generationConfig: { responseMimeType: "application/json" }
     });
 
@@ -1423,7 +1423,7 @@ STRICT RULE: Do NOT use the same hooks, starting sentences, or specific scenario
     Return ONLY the JSON response.`;
 
     const result = await GenerativeAIService.generateContent(prompt, {
-      model: "gemini-2.0-flash",
+      model: "ace-it-flash",
       generationConfig: { responseMimeType: "application/json" }
     });
 

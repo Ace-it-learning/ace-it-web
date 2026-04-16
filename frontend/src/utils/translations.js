@@ -68,7 +68,7 @@ export const translations = {
             enter_classroom: "Enter Classroom",
             quest: "Quest",
             view_daily_quest: "View Daily Quest",
-            complete_diagnostic_first: "Complete Diagnostic first",
+            complete_diagnostic_first: "Complete Mock Exam first",
             mock_exam: "Mock Exam",
             back_to_roadmap: "Back to Roadmap"
         },
@@ -88,7 +88,7 @@ export const translations = {
             most_popular: "Most Popular",
             free_name: "Free Trial",
             free_f1: "1st Quest of each category",
-            free_f2: "Diagnostic Test access",
+            free_f2: "Personalized Roadmap",
             free_f3: "Earn base XP",
             free_f4: "Avatar browsing",
             pro_name: "Pro Plan",
@@ -197,8 +197,6 @@ export const translations = {
         chat: {
             start_mock: "Start Mock Exam",
             what_is_ace_it: "What is Ace It?",
-            start_calibration: "Start 15-min Diagnostic",
-            start_diagnostic: "Unlock Your Roadmap (15-min Diagnostic)",
             review_mistake: "Review my last mistake",
             clear_history: "Clear conversation history",
             practice_vocab: "Practice Vocabulary",
@@ -213,9 +211,9 @@ export const translations = {
             exit_focus: "Exit Focus Mode",
             no_mock_exams: "No Reading mock exams available at this moment.",
             type_message: "Type your message...",
-            placeholder_english: "Ask Miss Janie",
-            placeholder_math: "Ask Matt sir",
-            placeholder_ace: "Ask Ace sir",
+            placeholder_english: "Ask {{agentName}}",
+            placeholder_math: "Ask {{agentName}}",
+            placeholder_ace: "Ask {{agentName}}",
             upload_tooltip_math: "Upload your Maths question (photo)",
             type_what_to_study: "Type what you want to study...",
             type_answer: "Type your answer...",
@@ -315,7 +313,7 @@ export const translations = {
                 description: "HKDSE English Master"
             },
             math: {
-                role: "Matt sir",
+                role: "{{agentName}}",
                 description: "Geometry Specialist"
             },
             chinese: {
@@ -463,8 +461,8 @@ export const translations = {
             peak_performance: "Peak Performance",
             improvement_plan: "Priority Improvement Plan",
             priority_tag: "Priority",
-            no_plan: "Complete a diagnostic to see your plan.",
-            footer_info: "Updated after every diagnostic, practice lab, and mock exam session.",
+            no_plan: "Start practicing to see your plan.",
+            footer_info: "Updated after every practice lab and mock exam session.",
             close: "Close",
             overall_level: "Estimated English Grade",
             current: "Current",
@@ -540,9 +538,9 @@ export const translations = {
         math_tutor: {
             explain_step: "Explain this step",
             deep_dive_title: "Deep Dive: Step Breakdown",
-            loading: "Asking {{tutorName}}...",
+            loading: "Asking {{agentName}}...",
             prereqs: "Prerequisites",
-            pro_tip: "{{tutorName}}'s Pro-Tip",
+            pro_tip: "{{agentName}}'s Pro-Tip",
             close: "Got it!"
         }
     },
@@ -615,7 +613,7 @@ export const translations = {
             enter_classroom: "進入課室",
             quest: "任務",
             view_daily_quest: "查看每日任務",
-            complete_diagnostic_first: "請先完成能力測試",
+            complete_diagnostic_first: "請先完成模擬考試",
             mock_exam: "模擬試場"
         },
         footer: {
@@ -737,8 +735,6 @@ export const translations = {
             start_mock: "開始模擬考試",
             what_is_ace_it: "Ace It 是什麼？",
             check_grammar: "檢查語法",
-            start_calibration: "開始 15 分鐘能力診斷",
-            start_diagnostic: "解鎖學習地圖 (15 分鐘能力診斷)",
             review_mistake: "複習錯誤",
             clear_history: "清除對話紀錄",
             practice_vocab: "練習詞彙",
@@ -753,9 +749,9 @@ export const translations = {
             exit_focus: "退出專注模式",
             no_mock_exams: "暫無閱讀模擬試卷。",
             type_message: "輸入您的答案... (Type your message)",
-            placeholder_english: "問問 Miss Janie",
-            placeholder_math: "問問 Matt sir",
-            placeholder_ace: "問問 Ace sir",
+            placeholder_english: "問問 {{agentName}}",
+            placeholder_math: "問問 {{agentName}}",
+            placeholder_ace: "問問 {{agentName}}",
             upload_tooltip_math: "上傳你的數學題目 (相片)",
             type_what_to_study: "請輸入你想學習的內容... (Type what you want to study)",
             type_answer: "請輸入你的答案... (Type your answer)",

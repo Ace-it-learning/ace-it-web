@@ -196,13 +196,31 @@ router.get('/redemption/collection', async (req, res) => {
             ...c, type: 'frame', owned: !!ownedCards[c.id], equipped: equippedFrame === c.id, acquiredAt: ownedCards[c.id]?.acquiredAt || null
         }));
 
+        const allTutorCards = [...defaultTutors, ...tutorCards];
+        const uniqueTutors = [];
+        const seenTutors = new Set();
+        
+        allTutorCards.forEach(card => {
+            // Deduplicate by name + subject to avoid "Miss Janie" appearing twice
+            // but allow different mentors with different names.
+            const key = `${card.name}-${card.subject}`;
+            if (!seenTutors.has(key)) {
+                uniqueTutors.push(card);
+                seenTutors.add(key);
+            } else if (card.equipped) {
+                // If this specific instance is equipped, ensure the one in the list marks it as equipped
+                const existing = uniqueTutors.find(t => `${t.name}-${t.subject}` === key);
+                if (existing) existing.equipped = true;
+            }
+        });
+
         res.json({
-            catalog: { studentCards, tutorCards: [...defaultTutors, ...tutorCards], avatarFrames },
+            catalog: { studentCards, tutorCards: uniqueTutors, avatarFrames },
             stats: {
                 totalStudentCards: cardPool.student_cards.length,
                 ownedStudentCards: studentCards.filter(c => c.owned).length,
-                totalTutorCards: cardPool.tutor_cards.length + cardPool.default_tutors.length,
-                ownedTutorCards: tutorCards.filter(c => c.owned).length + cardPool.default_tutors.length,
+                totalTutorCards: uniqueTutors.length,
+                ownedTutorCards: uniqueTutors.filter(c => c.owned).length,
                 ownedFrames: avatarFrames.filter(c => c.owned).length
             }
         });

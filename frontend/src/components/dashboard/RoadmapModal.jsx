@@ -122,7 +122,7 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
             const res = await fetch(`${API_URL}/api/quests/personalized?uid=${user.uid}`);
             if (res.ok) {
                 const data = await res.json();
-                setPlan({ tasks: data });
+                setPlan(data);
             }
         } catch (error) {
             console.error("Failed to load roadmap", error);
@@ -507,10 +507,7 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                                             { id: 'weekly_math', topic: 'integrated_challenge', title: 'Weekly Integrated Challenge', icon: Calculator, color: 'from-orange-600 to-red-700', desc: 'Section B Integrated Mastery', type: 'MATH_CHALLENGE' },
                                             { id: 'mock_teaser', topic: 'Maths Paper 2 (MCQ)', title: 'Mock Speed Drill', icon: Zap, color: 'from-blue-600 to-indigo-700', desc: 'Full-length Paper 2 Simulation', type: 'MOCK' }
                                           ]
-                                        : [
-                                            { id: 'weekly_reading', topic: 'reading_weekly', title: 'Weekly Reading Quest', icon: BookOpen, color: 'from-blue-600 to-indigo-700', desc: 'Critical Reading & Analysis', type: 'WEEKLY_QUEST' },
-                                            { id: 'weekly_speaking', topic: 'Speaking Group Discussion', title: 'Weekly Speaking Discussion', icon: MessageSquare, color: 'from-emerald-600 to-teal-700', desc: 'DSE Group Interaction Simulation', type: 'SPEAKING_CHALLENGE' }
-                                          ]
+                                        : []
                                     ).map((quest) => {
                                         return (
                                             <div
@@ -551,7 +548,13 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
 
                                 {/* Tasks Grid */}
                                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pb-12">
-                                    {(plan?.tasks || []).map((task) => (
+                                    {(plan?.tasks || [])
+                                        .filter(task => {
+                                            if (activeAgentId === 'math' || activeAgentId === 'maths') return true;
+                                            // Hide specific static cards for English as requested
+                                            return !['MOCK', 'DIAGNOSTIC', 'CHALLENGE', 'SPEAKING_CHALLENGE'].includes(task.type);
+                                        })
+                                        .map((task) => (
                                         <div
                                             key={task.id}
                                             onClick={() => handleTaskClick(task)}

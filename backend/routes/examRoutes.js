@@ -144,10 +144,12 @@ router.get('/writing/exam/:id', (req, res) => {
 router.post('/writing/grade', async (req, res) => {
     try {
         const { question, requirements, answer, uid } = req.body;
+        const persona = await UserProfileService.getPersona(uid, 'english');
         const prompt = writingGradingAgent
             .replace('{QUESTION_TEXT}', question || "General writing task")
             .replace('{REQUIREMENTS}', Array.isArray(requirements) ? requirements.join(', ') : (requirements || "Standard requirements"))
-            .replace('{STUDENT_ANSWER}', answer);
+            .replace('{STUDENT_ANSWER}', answer)
+            .replace(/{{agentName}}/g, persona.name);
 
         const result = await GenerativeAIService.generateContent(prompt, {
             model: TIER_2_MODEL,
@@ -336,11 +338,11 @@ router.get('/speaking/exam/:id', (req, res) => {
 
 router.post('/speaking/chat', async (req, res) => {
     try {
-        const { history, currentSpeaker, forcedNextSpeaker, topic, context, uid, candidateLevels } = req.body;
+        const persona = await UserProfileService.getPersona(uid, 'english');
         const historyPayload = (history || []).slice(-15).map(h => `${h.role === 'user' ? 'Candidate_D' : h.role}: ${h.text}`).join('\n');
         const cl = candidateLevels || { 'Candidate_A': 5, 'Candidate_B': 4, 'Candidate_C': 3 };
         const personas = [
-            `- Examiner (Miss Janie): Formal, facilitates the discussion. Does NOT dominate. Only speaks to prompt or redirect.`,
+            `- Examiner (${persona.name}): Formal, facilitates the discussion. Does NOT dominate. Only speaks to prompt or redirect.`,
             `- Candidate_A (Annie, Level ${cl.Candidate_A}): High confidence, sophisticated vocabulary, often takes the lead or synthesizes points.`,
             `- Candidate_B (Ben, Level ${cl.Candidate_B}): Competent, uses common transitions, focuses on providing examples.`,
             `- Candidate_C (Charlie, Level ${cl.Candidate_C}): Basic fluency, simple vocabulary, agrees or disagrees with simple reasons.`

@@ -19,7 +19,7 @@ class SpeakingQuestService {
         const fs = require('fs');
         const path = require('path');
         const drillsPath = path.join(__dirname, '../data/speaking_drills.json');
-        
+
         if (fs.existsSync(drillsPath)) {
             const drills = JSON.parse(fs.readFileSync(drillsPath, 'utf8'));
             const flattenedDrills = [
@@ -28,33 +28,63 @@ class SpeakingQuestService {
                 ...(drills.criterion_c || []),
                 ...(drills.criterion_d || [])
             ];
-            
+
             const preWritten = flattenedDrills.find(d => d.id === focus); // 'focus' is often used as the drill ID in requests
             if (preWritten) {
                 console.log(`[SpeakingQuest] Registry Hit: Loading pre-written drill ${focus}`);
-                return {
+                
+                // Determine UX Mode and Cluster
+                let uxMode = 'delivery';
+                let clusterId = 'delivery';
+                if (preWritten.id.startsWith('b_')) { uxMode = 'interaction_lab'; clusterId = 'interaction'; }
+                if (preWritten.id.startsWith('c_')) { uxMode = 'vocabulary_lab'; clusterId = 'language_patterns'; }
+                if (preWritten.id.startsWith('d_')) { uxMode = 'logical_lab'; clusterId = 'ideas_organisation'; }
+                if (moduleId === 'flow') { uxMode = 'flow'; clusterId = 'flow'; }
+
+                const response = {
                     template_id: preWritten.id,
-                    role: preWritten.role || "Speaker",
-                    scenario: preWritten.title,
-                    segments: [{
-                        segment_id: "P1",
-                        title: preWritten.title,
-                        master_script: preWritten.master_script,
-                        master_audio_voice: "en-GB-Standard-A",
-                        vocabulary: preWritten.vocabulary || [],
-                        prosody: preWritten.prosody || { pauses: [], emphasis: [], intonation: [] }
-                    }],
-                    cluster_id: moduleId.includes('interaction') ? 'interaction' : (moduleId.includes('flow') ? 'flow' : 'delivery'),
-                    ux_mode: 'delivery',
+                    role: preWritten.role || "AI Mentor",
+                    scenario: preWritten.scenario || preWritten.title,
+                    description: preWritten.description,
+                    starting_question: preWritten.starting_question,
+                    cluster_id: clusterId,
+                    ux_mode: uxMode,
                     is_dynamic: false,
                     is_prewritten: true
                 };
+
+                // Inject specialized data for C/D
+                if (clusterId === 'language_patterns') {
+                    response.power_words = preWritten.power_words || [];
+                    response.practice_sentences = preWritten.practice_sentences || [];
+                } else if (clusterId === 'ideas_organisation') {
+                    response.mind_map = preWritten.mind_map;
+                    response.guidance = preWritten.guidance;
+                } else {
+                    // Fallback to legacy segment-based structure for Delivery/Interaction
+                    response.segments = [{
+                        segment_id: "P1",
+                        title: preWritten.title,
+                        master_script: preWritten.master_script || preWritten.stimulus,
+                        master_audio_voice: "en-GB-Standard-A",
+                        vocabulary: preWritten.vocabulary || [],
+                        prosody: preWritten.prosody || { pauses: [], emphasis: [], intonation: [] },
+                        focus_advice: preWritten.focus_advice || preWritten.strategy_goal || "Focus on natural rhythm and sentence-level stress.",
+                        stimulus: preWritten.stimulus,
+                        strategy_goal: preWritten.strategy_goal,
+                        power_phrases: preWritten.power_phrases || []
+                    }];
+                }
+
+                return response;
             }
         }
 
         let resolvedModuleId = moduleId;
         if (moduleId === 'speaking_groupDiscussion') resolvedModuleId = 'interaction';
         if (moduleId === 'speaking_individualResponse') resolvedModuleId = 'flow';
+        if (moduleId === 'language_patterns') resolvedModuleId = 'language_patterns';
+        if (moduleId === 'ideas_organisation') resolvedModuleId = 'ideas_organisation';
 
         const clusterKey = Object.keys(SPEAKING_CLUSTERS).find(k => k === resolvedModuleId || SPEAKING_CLUSTERS[k].module_id === resolvedModuleId);
         if (!clusterKey) throw new Error(`Invalid Speaking Module ID: ${moduleId}`);
@@ -68,6 +98,10 @@ class SpeakingQuestService {
                 return this.generateFlowQuest(uid, level, cluster, focus);
             case 'interaction':
                 return this.generateInteractionQuest(level, cluster, focus);
+            case 'language_patterns':
+                return this.generateLanguageQuest(level, cluster, focus);
+            case 'ideas_organisation':
+                return this.generateIdeasQuest(level, cluster, focus);
             default:
                 throw new Error(`Unsupported Speaking Cluster: ${clusterKey}`);
         }
@@ -132,6 +166,7 @@ CRITICAL:
 
         try {
             const aiGenerated = await GenerativeAIService.generateJson(prompt, {
+                model: "ace-it-flash",
                 generationConfig: { temperature: 0.8 }
             });
 
@@ -245,6 +280,7 @@ CRITICAL: The hints should help students who get stuck on the LOGICAL THINKING o
 
         try {
             const aiGenerated = await GenerativeAIService.generateJson(prompt, {
+                model: "ace-it-flash",
                 generationConfig: { temperature: 0.7 }
             });
 
@@ -302,39 +338,15 @@ CRITICAL: The hints should help students who get stuck on the LOGICAL THINKING o
     async generateInteractionQuest(level, cluster, focus = null) {
         const focusName = focus ? (MICRO_SKILLS[focus]?.name || focus) : "General Interaction";
         const TOPICS = [
-            { 
-                id: "RT_HOUSING", 
-                title: "Housing Affordability in HK", 
-                prompt: "Should the government implement stricter rent controls to help young people afford housing in Hong Kong?", 
-                points: ["Impact on property market", "Quality of life for youth", "Alternative living spaces like co-living"] 
-            },
-            { 
-                id: "RT_VICTORIA_HARBOUR", 
-                title: "Victoria Harbour Environment", 
-                prompt: "Is the current protection of Victoria Harbour's water quality sufficient for its future as a tourism hub?", 
-                points: ["Water pollution levels", "Impact on marine life", "Balance between tourism and conservation"] 
-            },
-            { 
-                id: "RT_CANTOPOP", 
-                title: "Canto-pop Resurgence", 
-                prompt: "Does the recent resurgence of Canto-pop help strengthen Hong Kong's cultural identity among the younger generation?", 
-                points: ["Local music industry growth", "Connection to heritage", "Influence of global music trends"] 
-            },
-            { 
-                id: "RT_E_SCOOTERS", 
-                title: "E-scooters on HK Streets", 
-                prompt: "Should e-scooters be legalized for use on Hong Kong's main roads and cycling tracks?", 
-                points: ["Safety concerns for pedestrians", "Environmental benefits", "Infrastructure readiness"] 
-            },
-            { 
-                id: "RT_YOUTH_ELECTION", 
-                title: "Youth Voting Age", 
-                prompt: "Should the voting age in Hong Kong be lowered to 16 to encourage earlier civic engagement among youth?", 
-                points: ["Political maturity of 16-year-olds", "Civic education", "Representation of youth interests"] 
+            {
+                id: "RT_AI_EDUCATION",
+                title: "How AI will disrupt education in school",
+                prompt: "Discuss how artificial intelligence will disrupt education in schools. Consider both positive and negative impacts.",
+                points: ["Personalized learning", "Teacher roles", "Ethical concerns", "Digital divide", "Future skills"]
             }
         ];
 
-        const topic = TOPICS[Math.floor(Math.random() * TOPICS.length)];
+        const topic = TOPICS[0]; // Fixed topic
 
         return {
             template_id: topic.id,
@@ -360,6 +372,108 @@ CRITICAL: The hints should help students who get stuck on the LOGICAL THINKING o
             filler_nudge_delay: level <= 3 ? 4 : 2,
             ai_impatience: level >= 7 ? 0.9 : (level >= 5 ? 0.8 : 0.2)
         };
+    }
+
+    /**
+     * Module 4: Language Patterns (Vocabulary Lab)
+     */
+    async generateLanguageQuest(level, cluster, focus = null) {
+        const focusName = focus ? (MICRO_SKILLS[focus]?.name || focus) : "Language Patterns";
+        const prompt = `You are a DSE English Material Writer. Generate a Language Patterns Quest.
+Student Level: ${level}
+Focus: ${focusName}
+
+OUTPUT JSON FORMAT:
+{
+    "scenario": "A short, engaging title",
+    "description": "A brief description of the situation",
+    "ai_persona": "Persona name",
+    "power_words": [
+        { "word": "sophisticated word", "ipa": "...", "translation": "...", "definition": "..." },
+        ... (at least 6-8 words)
+    ],
+    "practice_sentences": [
+        { "text": "Sentence using power word in **bold**", "target_word": "bolded_word", "explanation": "Simple meaning" },
+        ... (EXACTLY 5 sentences)
+    ],
+    "starting_question": "An open-ended question that requires the use of the power words."
+}
+
+CRITICAL: The power words should be challenging for Level ${level} but relevant to the scenario.`;
+
+        try {
+            const aiGenerated = await GenerativeAIService.generateJson(prompt, { model: "ace-it-flash" });
+            return {
+                template_id: `LANG_DYNAMIC_${Date.now()}`,
+                role: aiGenerated.ai_persona,
+                scenario: aiGenerated.scenario,
+                description: aiGenerated.description,
+                power_words: aiGenerated.power_words,
+                practice_sentences: aiGenerated.practice_sentences || [],
+                starting_question: aiGenerated.starting_question,
+                cluster_id: cluster.id,
+                ux_mode: cluster.ux_mode,
+                ui_components: cluster.ui_components,
+                evaluation_metrics: cluster.evaluation_metrics,
+                scaffolding: this.getScaffoldingRules(level),
+                focus_skill: focus,
+                focus_name: focusName
+            };
+        } catch (error) {
+            console.error("[SpeakingLanguage] AI Generation failed:", error);
+            return { template_id: "LANG_FALLBACK", ...aiGenerated }; // Simplification for fallback
+        }
+    }
+
+    /**
+     * Module 5: Ideas & Organisation (Logical Lab)
+     */
+    async generateIdeasQuest(level, cluster, focus = null) {
+        const focusName = focus ? (MICRO_SKILLS[focus]?.name || focus) : "Ideas & Organisation";
+        const prompt = `You are a DSE English Material Writer. Generate an Ideas & Organisation Quest.
+Student Level: ${level}
+Focus: ${focusName}
+
+OUTPUT JSON FORMAT:
+{
+    "scenario": "A short, engaging title",
+    "description": "A brief description of the situation",
+    "ai_persona": "Persona name",
+    "mind_map": {
+        "center_issue": "Main topic",
+        "branches": [
+            { "title": "Branch 1", "sub_points": ["Point A", "Point B"] },
+            ...
+        ]
+    },
+    "guidance": "Instructions on using the P.E.E.L structure for this specific topic.",
+    "starting_question": "A complex question that requires logical structuring."
+}
+
+CRITICAL: The mind_map should provide a clear logical framework for the student to follow.`;
+
+        try {
+            const aiGenerated = await GenerativeAIService.generateJson(prompt, { model: "ace-it-flash" });
+            return {
+                template_id: `IDEAS_DYNAMIC_${Date.now()}`,
+                role: aiGenerated.ai_persona,
+                scenario: aiGenerated.scenario,
+                description: aiGenerated.description,
+                mind_map: aiGenerated.mind_map,
+                guidance: aiGenerated.guidance,
+                starting_question: aiGenerated.starting_question,
+                cluster_id: cluster.id,
+                ux_mode: cluster.ux_mode,
+                ui_components: cluster.ui_components,
+                evaluation_metrics: cluster.evaluation_metrics,
+                scaffolding: this.getScaffoldingRules(level),
+                focus_skill: focus,
+                focus_name: focusName
+            };
+        } catch (error) {
+            console.error("[SpeakingIdeas] AI Generation failed:", error);
+            throw error;
+        }
     }
 
     /**

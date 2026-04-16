@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Target, CheckCircle, TrendingUp, AlertTriangle, ArrowRight, Eye, Calculator, Sigma, Lock } from 'lucide-react';
 import { useMockGate } from '../../hooks/useMockGate';
+import { useAvatar } from '../../context/AvatarContext';
 
 const LoadingState = () => {
     const [progress, setProgress] = React.useState(0);
@@ -77,6 +78,7 @@ const LoadingState = () => {
 
 const MathsDiagnosticResult = ({ results, uid }) => {
     const navigate = useNavigate();
+    const { activeAgent } = useAvatar();
     const profile = results?.profile;
     const [isLeaving, setIsLeaving] = useState(false);
     const { mathsUnlocked } = useMockGate(uid);
@@ -114,7 +116,7 @@ const MathsDiagnosticResult = ({ results, uid }) => {
                 </div>
 
                 <h1 className="text-4xl font-black text-slate-900 mb-3 tracking-tight">Calibration Results</h1>
-                <p className="text-slate-500 text-lg font-medium">Matt sir has mapped your mathematical potential.</p>
+                <p className="text-slate-500 text-lg font-medium">{activeAgent?.name || "Your tutor"} has mapped your mathematical potential.</p>
             </div>
 
             {/* Archetype Card */}
@@ -204,7 +206,7 @@ const MathsDiagnosticResult = ({ results, uid }) => {
                     </div>
                     <div>
                         <h3 className="text-white font-black text-3xl tracking-tight">Weekly Quest Plan</h3>
-                        <p className="text-slate-400 font-medium">Matt's strategic roadmap for your Level Upgrade</p>
+                        <p className="text-slate-400 font-medium">{activeAgent?.name || "Your tutor"}'s strategic roadmap for your Level Upgrade</p>
                     </div>
                 </div>
 
@@ -230,7 +232,7 @@ const MathsDiagnosticResult = ({ results, uid }) => {
                     onClick={handleStartJourney}
                     className="w-full py-6 bg-purple-600 text-white rounded-[2rem] font-black text-2xl hover:bg-purple-700 hover:scale-[1.02] active:scale-[0.98] transition-all shadow-3xl shadow-purple-200 flex items-center justify-center gap-3 mb-4"
                 >
-                    Start My Math Journey with Matt Sir <ArrowRight className="w-7 h-7" />
+                    Start My Math Journey with {activeAgent?.name || "Your tutor"} <ArrowRight className="w-7 h-7" />
                 </button>
                 <p className="text-center text-slate-400 text-sm font-bold uppercase tracking-widest">
                     Study calibration record secured • XP updated

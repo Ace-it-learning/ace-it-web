@@ -57,5 +57,31 @@
                 "Building upon this notion"
             ]
         }
+    ],
+    "genre_matrix": [
+        {
+            "id": "cat_argumentative",
+            "type": "Argumentative (DSE Part B)",
+            "formats": ["Debate Speech", "Argumentative Essay", "Editorial", "Business Pitch"],
+            "key_feature": "Stance & Rebuttal"
+        },
+        {
+            "id": "cat_narrative",
+            "type": "Narrative & Creative",
+            "formats": ["Narrative", "Blog Post"],
+            "key_feature": "Voice & Atmosphere"
+        },
+        {
+            "id": "cat_transactional",
+            "type": "Transactional & Formal",
+            "formats": ["Letter to the Editor", "Formal Letter", "Proposal", "Report", "Memo"],
+            "key_feature": "Tone & Register"
+        },
+        {
+            "id": "cat_discursive",
+            "type": "Discursive & Analysis",
+            "formats": ["Feature Article", "Review", "Social Commentary", "Leaflet/Guide"],
+            "key_feature": "Balance & Insight"
+        }
     ]
-}
+}

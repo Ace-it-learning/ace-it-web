@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { AvatarProvider } from './context/AvatarContext';
 import { AuthProvider } from './context/AuthContext';
 import { LanguageProvider } from './context/LanguageContext';
+import { HeaderProvider } from './context/HeaderContext';
 import ProtectedRoute from './components/ProtectedRoute';
 import MainLayout from './layouts/MainLayout';
 import LandingPage from './pages/LandingPage';
@@ -36,12 +37,15 @@ import MathsDiagnosticAnalysis from './components/diagnostic/MathsDiagnosticAnal
 import AchievementTimeline from './pages/AchievementTimeline';
 import RedemptionStore from './pages/RedemptionStore';
 import CardCollection from './pages/CardCollection';
-import UsagePage from './pages/UsagePage';
+
 import PromptTipsPage from './pages/PromptTipsPage';
 import NotebookPage from './pages/NotebookPage';
 import VocabularyPage from './pages/VocabularyPage';
 import EraserChallengePage from './pages/EraserChallengePage';
 import SpeakingInteractionPage from './pages/SpeakingInteractionPage';
+import SpeakingStrategiesLab from './pages/SpeakingStrategiesLab';
+import SpeakingLanguageLab from './pages/SpeakingLanguageLab';
+import SpeakingIdeasLab from './pages/SpeakingIdeasLab';
 import MathsResultPage from './pages/MathsResultPage';
 import MathsDeepDivePage from './pages/MathsDeepDivePage';
 import MathsLearningPage from './pages/MathsLearningPage'; 
@@ -61,6 +65,7 @@ function App() {
     <ErrorBoundary>
       <AuthProvider>
         <LanguageProvider>
+        <HeaderProvider>
           <AvatarProvider>
             <BrowserRouter>
               <ScrollToTop />
@@ -382,16 +387,7 @@ function App() {
                     </ProtectedRoute>
                   }
                 />
-                <Route
-                  path="/usage"
-                  element={
-                    <ProtectedRoute>
-                      <MainLayout>
-                        <UsagePage />
-                      </MainLayout>
-                    </ProtectedRoute>
-                  }
-                />
+
                 <Route
                   path="/prompts"
                   element={
@@ -477,11 +473,51 @@ function App() {
                   }
                 />
                 <Route
+                  path="/speaking/quest/interaction-lab"
+                  element={
+                    <ProtectedRoute>
+                      <MainLayout fullWidth={true}>
+                        <SpeakingStrategiesLab />
+                      </MainLayout>
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/speaking/quest/language"
+                  element={
+                    <ProtectedRoute>
+                      <MainLayout fullWidth={true}>
+                        <SpeakingLanguageLab />
+                      </MainLayout>
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/speaking/quest/ideas"
+                  element={
+                    <ProtectedRoute>
+                      <MainLayout fullWidth={true}>
+                        <SpeakingIdeasLab />
+                      </MainLayout>
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
                   path="/maths/ability"
                   element={
                     <ProtectedRoute>
                       <MainLayout fullWidth={true}>
                         <MathsAbilityPage />
+                      </MainLayout>
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/maths/learn/:topicId"
+                  element={
+                    <ProtectedRoute>
+                      <MainLayout fullWidth={true}>
+                        <MathsLearningPage />
                       </MainLayout>
                     </ProtectedRoute>
                   }
@@ -503,6 +539,7 @@ function App() {
               </Routes>
             </BrowserRouter>
           </AvatarProvider>
+        </HeaderProvider>
         </LanguageProvider>
       </AuthProvider>
     </ErrorBoundary>

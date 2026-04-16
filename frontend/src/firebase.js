@@ -3,15 +3,16 @@ import { getAuth, GoogleAuthProvider } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 
-// These keys are now configured with the user's project: ace-it-learning
+// These keys dynamically switch to production (via Vite env variables) 
+// but default to 'ace-it-learning' for localhost development to prevent breakage.
 const firebaseConfig = {
-    apiKey: "AIzaSyA_agPkJIIW9k7gpIQcy_mG523bXgHnDec",
-    authDomain: "ace-it-learning.firebaseapp.com",
-    projectId: "ace-it-learning",
-    storageBucket: "ace-it-learning.firebasestorage.app",
-    messagingSenderId: "162154835481",
-    appId: "1:162154835481:web:b29e09eabafdbbc1574488",
-    measurementId: "G-ZQ77CNHBPD"
+    apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+    authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+    projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+    storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+    appId: import.meta.env.VITE_FIREBASE_APP_ID,
+    measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
 };
 
 const app = initializeApp(firebaseConfig);

@@ -14,29 +14,25 @@ ROUTING RULES:
    - CONFIRMATION to a proposal ("Yes", "Ok" after agent asks "Do you want to practice?").
    - Params: { topic: string (mapped to Maths topic), difficulty: "Foundation"|"Non-Foundation" }
 
-3. ONBOARDING:
-   - "Start diagnostics", "Maths calibration", "Take the maths test".
-
-4. ASSESS:
+3. ASSESS:
    - Request to solve or explain a specific math problem, especially when an image is provided.
    - "Solve this", "What is the answer to this photo?", "Assess my handwriting".
 
 SCHEMA:
 - CHAT: {"intent":"CHAT"}
 - LAB: {"intent":"LAB", "bridge_text":"(Required) Encouraging text.", "ui_command":{"action":"LAUNCH_MODULE", "module": "MATHS_LAB", "params":{...}}}
-- ONBOARDING: {"intent":"ONBOARDING"}
 - ASSESS: {"intent":"ASSESS"}
-
-[STRICT]: If context shows diagnostic_completed is false, any request for LAB or EXAM MUST include a bridge_text that politely explains: "I'd love to help with that! However, I first need to assess your current level with a quick 15-minute Study Calibration to unlock your roadmap. How about we start there first?"
 
 Student: "{{MESSAGE}}"
 History: "{{HISTORY}}"
 Has Image: {{HAS_IMAGE}}
 
 [CONTEXT]:
-- Diagnostic Completed: {{DIAG_COMPLETED}}
 - Is New Student: {{IS_NEW}}
-- Active Exam: {{ACTIVE_EXAM}}`;
+- Active Exam: {{ACTIVE_EXAM}}
+- Already Completed Topics: {{COMPLETED_TOPICS}}
+
+[STRICT RULE]: NEVER suggest or route to a topic that is present in the "Already Completed Topics" list.`;
 
 class MathsIntentRouter {
     static async classify(message, history = [], uid = null, context = {}, hasImage = false) {
@@ -48,10 +44,11 @@ class MathsIntentRouter {
                 .replace('{{DIAG_COMPLETED}}', context.diagnostic_completed || false)
                 .replace('{{IS_NEW}}', context.is_new_student || false)
                 .replace('{{ACTIVE_EXAM}}', context.has_active_exam || false)
-                .replace('{{HAS_IMAGE}}', hasImage ? 'YES' : 'NO');
+                .replace('{{HAS_IMAGE}}', hasImage ? 'YES' : 'NO')
+                .replace('{{COMPLETED_TOPICS}}', context.completed_topics || "None");
 
             const result = await GenerativeAIService.generateContent(prompt, {
-                model: "gemini-2.0-flash",
+                model: "ace-it-flash",
                 generationConfig: { responseMimeType: "application/json" }
             });
 

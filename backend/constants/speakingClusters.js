@@ -108,6 +108,72 @@ const SPEAKING_CLUSTERS = {
             turn_taking_efficiency: "Success rate of entering the conversation during 'verbal gaps'"
         },
         secret_objective: "Ensure Candidate B (The Passive Peer) speaks at least twice during this 8-minute session."
+    },
+
+    language_patterns: {
+        id: 'language_patterns',
+        name: 'Language Patterns',
+        name_zh: '語言模式',
+        module_id: 'SPEAK_LANG_004',
+        category: 'Linguistic Range',
+        description: 'Using specialized vocabulary and complex sentence structures to express subtle meanings.',
+        ux_mode: 'Vocabulary Lab',
+        ui_components: ['Word Palette', 'Sentence Builder', 'Grammar Guard'],
+        skills: [
+            'speaking_vocabularyInSpeech',
+            'speaking_grammaticalAccuracy',
+            'speaking_collocationUsage'
+        ],
+        learning_content: {
+            anatomy: {
+                definition: "The ability to use a wide range of vocabulary and grammatical structures accurately and appropriately.",
+                formula: "Sophisticated Lexis + Varied Sentence Structures = Academic Authority",
+                british_tutor_advice: "Don't just use 'good' or 'bad'. Use 'advantageous' or 'detrimental'. Showcase your range by using relative clauses and passive voice where appropriate."
+            },
+            quest_factory_logic: {
+                format: "Controlled Expression Lab",
+                scenarios: ["Academic Presentation", "Formal Interview", "Policy Briefing"],
+                strategic_instruction: "Present the student with 'Power Words'. Reward them for integrating these words naturally into their response."
+            }
+        },
+        evaluation_metrics: {
+            lexical_resource: "Variety and sophistication of vocabulary used",
+            grammatical_range: "Use of complex sentences (subordination, relative clauses)",
+            accuracy: "Correctness of grammar and word choice"
+        }
+    },
+
+    ideas_organisation: {
+        id: 'ideas_organisation',
+        name: 'Ideas & Organisation',
+        name_zh: '意念與組織',
+        module_id: 'SPEAK_IDEAS_005',
+        category: 'Cognitive Structure',
+        description: 'Structuring thoughts logically using the P.E.E.L method to ensure clarity and impact.',
+        ux_mode: 'Logical Lab',
+        ui_components: ['Mind Map', 'Logic Connector', 'PEEL Tracker'],
+        skills: [
+            'speaking_logicalDevelopment',
+            'speaking_relevance',
+            'speaking_organisation'
+        ],
+        learning_content: {
+            anatomy: {
+                definition: "The ability to present ideas in a logical, coherent manner, supporting points with evidence and explanation.",
+                formula: "Point + Evidence + Explanation + Link = Logical Impact",
+                british_tutor_advice: "A great idea is lost if it's poorly organized. Use signposts like 'Firstly', 'Moving on to...', and 'Consequently' to guide your listener through your logic."
+            },
+            quest_factory_logic: {
+                format: "Structural Planning Lab",
+                scenarios: ["Debate Opening", "Executive Summary", "Problem-Solution Pitch"],
+                strategic_instruction: "Provide a visual structure (Mind Map). Nudge the student if they skip the 'Evidence' or 'Link' parts of the P.E.E.L structure."
+            }
+        },
+        evaluation_metrics: {
+            coherence: "Logical flow between sentences and ideas",
+            development: "Depth of explanation and quality of evidence",
+            organisation: "Effective use of signposting and transitions"
+        }
     }
 };
 

@@ -47,7 +47,10 @@ describe('WritingQuestPage Integration', () => {
 
         expect(screen.getByText(/Writer's Studio/i)).toBeInTheDocument();
         expect(screen.getByText(/Test Topic/i)).toBeInTheDocument();
-        expect(screen.getByText(/Miss Janie/i)).toBeInTheDocument();
+        // Since we now use dynamic agents, we just check that a name is present or mock it
+        // The default in AvatarContext is currently Miss Janie, so it might still pass, 
+        // but we'll make it regex-friendly.
+        expect(screen.queryByText(/Miss Janie|Mentor|Tutor/i)).toBeInTheDocument();
     });
 
     test('Flow: Completes Brainstorming and moves to Drafting', async () => {

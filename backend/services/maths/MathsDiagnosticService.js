@@ -3,7 +3,7 @@ const MATH_PAPERS = require('./MathsPapers');
 const GenerativeAIService = require('../GenerativeAIService');
 const fs = require('fs');
 const path = require('path');
-const TIER_1_MODEL = "gemini-1.5-pro"; // Hardcoded to Gemini 1.5 Pro per User Request
+const TIER_1_MODEL = "ace-it-pro"; // Hardcoded to Gemini 1.5 Pro per User Request
 const { mapSkillToId } = require('./MathsMicroSkillMapper');
 const { DSE_SCORING, accuracyToLevel } = require('../../constants/dseScoring');
 

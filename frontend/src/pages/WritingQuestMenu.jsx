@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { BookOpen, PenTool, Layout, MessageSquare, ChevronRight, Lock, Briefcase } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
+import { getLocalizedValue } from '../utils/writingUtils';
 
 const WritingQuestMenu = () => {
     const navigate = useNavigate();
@@ -10,6 +12,8 @@ const WritingQuestMenu = () => {
     const [selectedFormat, setSelectedFormat] = useState(null);
     const [factoryTopics, setFactoryTopics] = useState([]);
     const [loadingTopics, setLoadingTopics] = useState(false);
+    const { language } = useLanguage();
+    const isChinese = language?.startsWith('zh');
 
     useEffect(() => {
         const fetchSyllabus = async () => {
@@ -24,7 +28,7 @@ const WritingQuestMenu = () => {
                     const initialGenre = location.state?.initialGenre;
                     if (initialGenre && data.genre_matrix) {
                         // Find category containing this genre
-                        const cat = data.genre_matrix.find(c => c.formats.includes(initialGenre));
+                        const cat = data.genre_matrix.find(c => c.formats?.includes(initialGenre));
                         if (cat) {
                             setSelectedCategory(cat);
                             handleFormatSelect(initialGenre);
@@ -112,7 +116,12 @@ const WritingQuestMenu = () => {
                                     : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200'}`}
                         >
                             {getIconForCategory(cat.id)}
-                            <span className="font-semibold">{cat.type.split(' ')[0]}</span>
+                            <span className="font-semibold">
+                                {(() => {
+                                    const typeVal = getLocalizedValue(cat, 'type', isChinese);
+                                    return typeVal ? typeVal.split(' ')[0] : (getLocalizedValue(cat, 'name', isChinese) || 'Category');
+                                })()}
+                            </span>
                         </button>
                     ))}
                 </div>
@@ -138,13 +147,13 @@ const WritingQuestMenu = () => {
                                         {selectedFormat === fmt && <div className="h-2 w-2 rounded-full bg-indigo-600 animate-pulse"></div>}
                                     </div>
                                     <p className="text-xs text-slate-500">
-                                        Target: {selectedCategory.id === 'cat_argumentative' ? 'Persuade' :
-                                            selectedCategory.id === 'cat_narrative' ? 'Entertain' :
-                                                selectedCategory.id === 'cat_transactional' ? 'Inform' : 'Analyze'}
+                                        Target: {selectedCategory.id === 'cat_argumentative' ? (isChinese ? '說服' : 'Persuade') :
+                                            selectedCategory.id === 'cat_narrative' ? (isChinese ? '娛樂/敘述' : 'Entertain') :
+                                                selectedCategory.id === 'cat_transactional' ? (isChinese ? '知會' : 'Inform') : (isChinese ? '分析' : 'Analyze')}
                                     </p>
                                     {/* Key Feature Tooltip Effect */}
                                     <div className="mt-2 text-xs text-indigo-600 font-medium py-1 px-2 bg-indigo-100 rounded inline-block">
-                                        {selectedCategory.key_feature}
+                                        {getLocalizedValue(selectedCategory, 'key_feature', isChinese)}
                                     </div>
                                 </button>
                             ))}
@@ -183,12 +192,12 @@ const WritingQuestMenu = () => {
                                             >
                                                 <div className="flex justify-between items-start">
                                                     <span className="text-sm font-bold text-slate-700 group-hover:text-indigo-700 mb-1 block">
-                                                        {topic.title}
+                                                        {getLocalizedValue(topic, 'title', isChinese) || topic.title}
                                                     </span>
                                                     <ChevronRight size={16} className="text-slate-300 group-hover:text-indigo-500 transform group-hover:translate-x-1 transition-transform" />
                                                 </div>
                                                 <p className="text-xs text-slate-500 line-clamp-2 leading-relaxed">
-                                                    {topic.prompt}
+                                                    {getLocalizedValue(topic, 'prompt', isChinese) || topic.prompt}
                                                 </p>
                                             </button>
                                         ))}

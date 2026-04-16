@@ -3,6 +3,7 @@ import { useAuth } from '../../context/AuthContext';
 import { SafeInlineMath, SafeBlockMath } from './SafeMath';
 import MathsQuestionCard from './MathsQuestionCard';
 import { Lightbulb, BookOpen } from 'lucide-react';
+import { useAvatar } from '../../context/AvatarContext';
 import { formatNumbers, sanitizeMath, prepareMathText, splitContentByDelimiters, looksLikeMath } from '../../utils/mathFormattingUtils';
 
 /**
@@ -11,6 +12,7 @@ import { formatNumbers, sanitizeMath, prepareMathText, splitContentByDelimiters,
  */
 const MathsLab = ({ topic, level, onComplete }) => {
     const { user } = useAuth();
+    const { activeAgent } = useAvatar();
     const [lesson, setLesson] = useState(null);
     const [answers, setAnswers] = useState({});
     const [imageAnswers, setImageAnswers] = useState({});
@@ -183,7 +185,7 @@ const MathsLab = ({ topic, level, onComplete }) => {
             <div className="flex items-center justify-center h-screen">
                 <div className="text-center">
                     <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-600 mx-auto mb-4"></div>
-                    <p className="text-gray-600">Matt Sir is preparing your lesson...</p>
+                    <p className="text-gray-600">{activeAgent?.name || "Your tutor"} is preparing your lesson...</p>
                 </div>
             </div>
         );
@@ -201,7 +203,7 @@ const MathsLab = ({ topic, level, onComplete }) => {
                     {lesson.title || topic}
                 </h1>
                 <p className="text-gray-600">
-                    {parseInt(level) === 0 ? 'Interleaved Practice (Mixed Levels)' : `Level ${level}`} • Guided by Matt Sir
+                    {parseInt(level) === 0 ? 'Interleaved Practice (Mixed Levels)' : `Level ${level}`} • Guided by {activeAgent?.name || "Your tutor"}
                 </p>
             </div>
 
@@ -258,7 +260,7 @@ const MathsLab = ({ topic, level, onComplete }) => {
                 <div className="space-y-4">
                     <h3 className="text-xl font-bold text-gray-900">Practice Questions</h3>
                     <p className="text-sm text-gray-600 mb-4">
-                        Try these questions to test your understanding. Matt Sir believes in you! 💪
+                        Try these questions to test your understanding. {activeAgent?.name || "Your tutor"} believes in you! 💪
                     </p>
                     {lesson.interactive_tasks.map((task, i) => (
                         <MathsQuestionCard

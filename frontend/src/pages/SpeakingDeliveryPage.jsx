@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useSearchParams, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import { Mic, Play, Pause, RotateCcw, CheckCircle2, Volume2, Loader2, ArrowRight, Zap, Languages, Sparkles } from 'lucide-react';
+import { Mic, Play, Pause, Square, RotateCcw, CheckCircle2, Volume2, Loader2, ArrowRight, Zap, Languages, Sparkles } from 'lucide-react';
 import DeliveryScaffoldPassage from '../components/speaking/DeliveryScaffoldPassage';
 import SpeakingWaveform from '../components/speaking/SpeakingWaveform';
 import PhonemeSpotlight from '../components/speaking/PhonemeSpotlight';
@@ -15,13 +15,6 @@ const SpeakingScaffoldToolbar = ({ settings, onChange }) => {
             icon: Languages,
             activeClasses: 'bg-emerald-100 text-emerald-700 border-emerald-300',
             dotActiveClass: 'bg-emerald-500'
-        },
-        {
-            key: 'prosody',
-            label: 'Prosody Guide',
-            icon: Sparkles,
-            activeClasses: 'bg-indigo-100 text-indigo-700 border-indigo-300',
-            dotActiveClass: 'bg-indigo-500'
         }
     ];
 
@@ -55,7 +48,7 @@ const SpeakingDeliveryPage = () => {
     const level = searchParams.get('level') || '3';
     const [currentSegment, setCurrentSegment] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
-    const [scaffoldSettings, setScaffoldSettings] = useState({ vocab: true, prosody: true });
+    const [scaffoldSettings, setScaffoldSettings] = useState({ vocab: true });
     
     // Results & Feedback State
     const [gradingResult, setGradingResult] = useState(null);
@@ -76,7 +69,7 @@ const SpeakingDeliveryPage = () => {
     const [voiceLevel, setVoiceLevel] = useState(0);
     const [quest, setQuest] = useState({ segments: [], role: 'Candidate', scenario: 'Speaking Drill' });
 
-    // [RESTORED MISSING REFS]
+    // Audio & Recording Refs
     const mediaRecorder = useRef(null);
     const audioChunks = useRef([]);
     const audioContext = useRef(null);
@@ -85,7 +78,34 @@ const SpeakingDeliveryPage = () => {
     const silenceTimeout = useRef(null);
     const studentAudio = useRef(null);
     const wavesurferRecorder = useRef(null);
-    const masterAudio = useRef(null);
+    const audioRef = useRef(null);
+
+    // Audio Playback for Spotlight
+    const handlePlayWord = async (word) => {
+        try {
+            const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+            const res = await fetch(`${API_URL}/api/lab/tts`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    text: word,
+                    languageCode: 'en-GB',
+                    gender: 'FEMALE'
+                })
+            });
+
+            if (!res.ok) throw new Error('TTS failed');
+            const { audio } = await res.json();
+            const audioUrl = `data:audio/mp3;base64,${audio}`;
+            const audioObj = new Audio(audioUrl);
+            audioObj.play();
+        } catch (err) {
+            console.error('Word playback error:', err);
+            const utterance = new SpeechSynthesisUtterance(word);
+            utterance.lang = 'en-GB';
+            window.speechSynthesis.speak(utterance);
+        }
+    };
 
     useEffect(() => {
         const fetchDrill = async () => {
@@ -95,8 +115,27 @@ const SpeakingDeliveryPage = () => {
                 const res = await fetch(`${API_URL}/api/speaking/quest/generate?module=delivery&level=${level}&focus=${topicId}&uid=${user?.uid || 'guest'}`);
                 if (!res.ok) throw new Error('Generation failed');
                 const data = await res.json();
+                console.log('[Speaking Delivery] Loaded Data:', data);
+                
+                // DATA KEY UNIFICATION (v10.0 Deep Clean)
+                // Handle different backend formats (stimulus, master_script, etc.)
+                if (data && data.segments?.[0]) {
+                    const seg = data.segments[0];
+                    // Map stimulus to master_script if missing
+                    if (!seg.master_script && seg.stimulus) seg.master_script = seg.stimulus;
+                    // Map strategy_goal to focus_advice if missing
+                    if (!seg.focus_advice && seg.strategy_goal) seg.focus_advice = seg.strategy_goal;
+                    
+                    // Priority check for focusAdvice
+                    if (!data.focusAdvice) {
+                        data.focusAdvice = seg.focus_advice || seg.strategy_goal || data.focus_advice || "Focus on your pacing and intonation.";
+                    }
+                }
+                
                 setQuest(data);
-                setCurrentSegment(data.segments[0]);
+                if (data?.segments?.[0]) {
+                    setCurrentSegment(data.segments[0]);
+                }
             } catch (err) {
                 console.error('Drill load error:', err);
             } finally {
@@ -105,17 +144,30 @@ const SpeakingDeliveryPage = () => {
         };
 
         fetchDrill();
-        return () => stopMasterAudio();
+        return () => stopAllAudio();
     }, [topicId, level, user?.uid]);
 
     // Cleanup audio
     const stopMasterAudio = () => {
-        if (masterAudio.current) {
-            masterAudio.current.pause();
-            masterAudio.current.currentTime = 0;
+        if (audioRef.current) {
+            audioRef.current.pause();
+            audioRef.current.onended = null;
+            audioRef.current.ontimeupdate = null;
+        }
+        if (window.speechSynthesis) {
+            window.speechSynthesis.cancel();
         }
         setIsPlayingMaster(false);
         setActiveWordIndex(-1);
+    };
+
+    const stopAllAudio = () => {
+        stopMasterAudio();
+        if (studentAudio.current) {
+            studentAudio.current.pause();
+            studentAudio.current.onended = null;
+        }
+        setIsPlayingStudent(false);
     };
 
     // --- Audio Control Functions ---
@@ -124,10 +176,8 @@ const SpeakingDeliveryPage = () => {
     const [activeWordIndex, setActiveWordIndex] = useState(-1);
 
     const playMasterAudio = async () => {
-        if (!currentSegment) return;
-        stopMasterAudio();
+        stopAllAudio(); // Kill any previous sound
         setIsPlayingMaster(true);
-        setActiveWordIndex(-1);
 
         try {
             const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
@@ -136,43 +186,136 @@ const SpeakingDeliveryPage = () => {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     text: currentSegment.master_script,
-                    languageCode: 'en-GB',
-                    gender: 'FEMALE',
-                    includeTimepoints: true
+                    includeTimepoints: true // Track 1: Server-Side Sync
                 })
             });
 
-            if (!res.ok) throw new Error('TTS failed');
-            const { audio, timepoints } = await res.json();
+            if (!res.ok) throw new Error('Offline');
 
+            const { audio, timepoints } = await res.json();
             const audioUrl = `data:audio/mp3;base64,${audio}`;
             const audioObj = new Audio(audioUrl);
-            masterAudio.current = audioObj;
+            audioRef.current = audioObj;
 
+            // WORD COUNT for Linear Sync estimation (Track 1.5)
+            const words = (currentSegment.master_script || "").trim().split(/\s+/);
+            const wordCount = words.length;
+
+            // TRACK 1 & 1.5: Server-Side Sync or Linear Estimation
             audioObj.ontimeupdate = () => {
                 const currentTime = audioObj.currentTime;
-                const passedTimepoints = (timepoints || [])
-                    .filter(t => t.timeSeconds <= currentTime)
-                    .sort((a, b) => b.timeSeconds - a.timeSeconds);
 
-                if (passedTimepoints.length > 0) {
-                    const latestOffset = passedTimepoints[0].offsetCodePoint;
-                    const text = currentSegment.master_script;
-                    const wordsBeforeChar = text.substring(0, latestOffset).split(/\s+/).filter(w => w.length > 0).length;
-                    setActiveWordIndex(wordsBeforeChar);
+                if (timepoints && timepoints.length > 0) {
+                    // Method A: Server Marks. Find the last word index before the current time.
+                    const currentTimeMs = currentTime * 1000;
+                    let newWordIndex = -1;
+
+                    for (let i = 0; i < timepoints.length; i++) {
+                        const tp = timepoints[i];
+                        const timepointTime = (tp.timeSeconds || tp.time_seconds || tp.time || 0) * 1000;
+                        
+                        if (timepointTime <= currentTimeMs) {
+                            const markLabel = tp.markName || tp.name || tp.mark_name || tp.label;
+                            if (markLabel && markLabel.startsWith('w')) {
+                                const wordIdx = parseInt(markLabel.substring(1), 10);
+                                if (!isNaN(wordIdx)) {
+                                    newWordIndex = wordIdx;
+                                }
+                            }
+                        } else {
+                            break;
+                        }
+                    }
+
+                    if (newWordIndex !== -1) {
+                        setActiveWordIndex(newWordIndex);
+                    }
+                } else {
+                    const duration = audioObj.duration;
+                    if (duration > 0 && wordCount > 0) {
+                        // Method B: Linear Estimation (Karaoke Pace Fix)
+                        const progress = currentTime / duration;
+                        const estimatedWordIdx = Math.floor(progress * wordCount);
+                        if (estimatedWordIdx < wordCount) {
+                            setActiveWordIndex(estimatedWordIdx);
+                        }
+                    }
                 }
             };
-            
-            audioObj.play();
+
             audioObj.onended = () => {
                 setIsPlayingMaster(false);
                 setActiveWordIndex(-1);
             };
-            audioObj.onerror = () => setIsPlayingMaster(false);
 
+            audioObj.play();
         } catch (err) {
-            console.error('Master audio error:', err);
-            fallbackPlayMasterAudio();
+            console.warn('[SpeakingQuest] Falling back to Simulation Mode (Track 2)');
+            
+            // TRACK 2: Precise Simulation with speed-estimated Char Seeker
+            const normalizedText = (currentSegment.master_script || "").replace(/\s+/g, ' ');
+            const utterance = new SpeechSynthesisUtterance(normalizedText);
+            utterance.lang = 'en-GB';
+            utterance.rate = 0.85;
+
+            // Pre-calculate Word Map for simulation - IGNORE PUNCTUATION/SPACES
+            // Split by everything NOT a word character or preserve words
+            const textToMap = normalizedText;
+            const charToWordMap = new Array(textToMap.length).fill(-1);
+            
+            let currentWordIdx = 0;
+            let inWord = false;
+            
+            for (let i = 0; i < textToMap.length; i++) {
+                const char = textToMap[i];
+                const isWordChar = /\w/.test(char); // Basic word character check
+                
+                if (isWordChar) {
+                    if (!inWord) {
+                        inWord = true;
+                    }
+                    charToWordMap[i] = currentWordIdx;
+                } else {
+                    if (inWord) {
+                        currentWordIdx++;
+                        inWord = false;
+                    }
+                    charToWordMap[i] = -1;
+                }
+            }
+
+            utterance.onboundary = (event) => {
+                if (event.name === 'word') {
+                    // Try to find the nearest valid word index
+                    const charIdx = event.charIndex;
+                    let targetIdx = charToWordMap[charIdx];
+                    
+                    if (targetIdx === -1 || targetIdx === undefined) {
+                        // Scan forward/backward to find the nearest word
+                        for (let k = 1; k <= 5; k++) {
+                           if (charIdx + k < charToWordMap.length && charToWordMap[charIdx + k] !== -1) {
+                               targetIdx = charToWordMap[charIdx + k];
+                               break;
+                           }
+                           if (charIdx - k >= 0 && charToWordMap[charIdx - k] !== -1) {
+                               targetIdx = charToWordMap[charIdx - k];
+                               break;
+                           }
+                        }
+                    }
+                    
+                    if (targetIdx !== -1 && targetIdx !== undefined) {
+                        setActiveWordIndex(targetIdx);
+                    }
+                }
+            };
+
+            utterance.onend = () => {
+                setIsPlayingMaster(false);
+                setActiveWordIndex(-1);
+            };
+
+            window.speechSynthesis.speak(utterance);
         }
     };
 
@@ -183,6 +326,7 @@ const SpeakingDeliveryPage = () => {
 
     // 3. Recording with Silence Detection
     const startRecording = async () => {
+        stopAllAudio(); // CRITICAL: Stop all TTS and Demo audio before recording starts
         try {
             const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
 
@@ -238,7 +382,7 @@ const SpeakingDeliveryPage = () => {
         silenceTimeout.current = setTimeout(() => {
             console.log("[SpeakingQuest] Auto-stopping due to silence...");
             stopRecording();
-        }, 4000); // 4 seconds of silence = stop
+        }, 6000); // 6 seconds of silence = stop
     };
 
     const stopRecording = () => {
@@ -292,6 +436,13 @@ const SpeakingDeliveryPage = () => {
             if (!res.ok) throw new Error('Grading failed');
 
             const feedbackData = await res.json();
+            
+            // Safety: Ensure total score exists
+            if (feedbackData.scores && feedbackData.scores.total === undefined) {
+                const s = feedbackData.scores;
+                feedbackData.scores.total = (s.pronunciation || 0) + (s.intonation || 0) + (s.pacing || 0) + (s.grammar || 0);
+            }
+
             setSegmentFeedback(feedbackData);
             setResults(prev => [...prev, feedbackData]);
         } catch (err) {
@@ -335,90 +486,108 @@ const SpeakingDeliveryPage = () => {
         </div>
     );
 
+    const handleTryNext = () => {
+        if (!topicId) return;
+        // Logic: infer next topic (e.g., a_1 -> a_2)
+        const currentMatch = topicId.match(/([a-z]+)_(\d+)/);
+        if (currentMatch) {
+            const prefix = currentMatch[1];
+            const nextNum = parseInt(currentMatch[2]) + 1;
+            navigate(`/speaking/delivery/${level}/${prefix}_${nextNum}`);
+            // Force a reload as we are navigating to the same component with different params
+            window.location.reload();
+        }
+    };
+
     if (isFinished) {
         return (
-            <div className="h-screen bg-gradient-to-br from-indigo-50 to-purple-100 flex flex-col overflow-hidden">
-                <div className="flex-1 overflow-y-auto p-8">
-                    <div className="max-w-4xl mx-auto">
-                        <div className="text-center mb-12 animate-in zoom-in-95">
-                            <h1 className="text-4xl font-black text-gray-900 mb-2 leading-tight">Assessment Result</h1>
-                            <div className="text-7xl font-black text-indigo-600 my-8 flex flex-col items-center">
-                                <div>
-                                    {results[0]?.scores?.total} <span className="text-2xl opacity-50">/ 28</span>
-                                </div>
-                                {results[0]?.xp_awarded > 0 && (
-                                    <div className="mt-2 px-4 py-1 bg-amber-100 text-amber-600 rounded-full text-sm font-bold tracking-widest uppercase animate-in slide-in-from-bottom-2">
-                                        +{results[0].xp_awarded} XP Earned
-                                    </div>
-                                )}
-                            </div>
+            <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-purple-100 flex flex-col pb-24">
+                <div className="max-w-4xl mx-auto p-8 w-full">
+                    <div className="text-center mb-12 animate-in zoom-in-95">
+                        <div className="flex flex-col items-center gap-1 mb-4">
+                            <span className="text-[10px] font-black text-indigo-500 uppercase tracking-[0.3em]">
+                                {quest.title || "Delivery Quest"}
+                            </span>
+                            <h1 className="text-4xl font-black text-gray-900 leading-tight">
+                                {currentSegment?.title || "Mission Assessment"}
+                            </h1>
                         </div>
 
-                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-                            {Object.entries(results[0]?.scores || {}).map(([key, val]) => (
-                                key !== 'total' && (
-                                    <div key={key} className="bg-white rounded-2xl p-5 text-center shadow-lg border border-indigo-100 animate-in slide-in-from-bottom-4">
-                                        <p className="text-[10px] font-black text-gray-400 upper tracking-widest mb-1">{key.replace('_', ' ')}</p>
-                                        <div className="flex items-baseline justify-center gap-1">
-                                            <p className="text-3xl font-black text-indigo-700">{val}</p>
-                                            <p className="text-xs text-gray-400">/7</p>
-                                        </div>
+                        <div className="text-7xl font-black text-indigo-600 my-8 flex flex-col items-center">
+                            <div>
+                                {results[0]?.scores?.total} <span className="text-2xl opacity-50">/ 28</span>
+                            </div>
+                            {results[0]?.xp_awarded > 0 && (
+                                <div className="mt-2 px-4 py-1 bg-amber-100 text-amber-600 rounded-full text-sm font-bold tracking-widest uppercase animate-in slide-in-from-bottom-2">
+                                    +{results[0].xp_awarded} XP Earned
+                                </div>
+                            )}
+                        </div>
+                    </div>
+
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+                        {Object.entries(results[0]?.scores || {}).map(([key, val]) => (
+                            key !== 'total' && (
+                                <div key={key} className="bg-white rounded-2xl p-5 text-center shadow-lg border border-indigo-100 animate-in slide-in-from-bottom-4">
+                                    <p className="text-[10px] font-black text-gray-400 upper tracking-widest mb-1">{key.replace('_', ' ')}</p>
+                                    <div className="flex items-baseline justify-center gap-1">
+                                        <p className="text-3xl font-black text-indigo-700">{val}</p>
+                                        <p className="text-xs text-gray-400">/7</p>
                                     </div>
-                                )
-                            ))}
+                                </div>
+                            )
+                        ))}
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                        <div className="bg-white rounded-3xl p-8 shadow-xl border border-indigo-50">
+                            <div className="flex items-center gap-2 mb-4">
+                                <Languages className="w-4 h-4 text-emerald-500" />
+                                <h4 className="font-black text-xs text-gray-400 uppercase tracking-[0.2em]">Pronunciation Details</h4>
+                            </div>
+                            <PhonemeSpotlight 
+                                wordAnalysis={results[0]?.word_analysis || []} 
+                                onPlayWord={handlePlayWord} 
+                            />
                         </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                            <div className="bg-white rounded-3xl p-8 shadow-xl border border-indigo-50">
-                                <div className="flex items-center gap-2 mb-4">
-                                    <Languages className="w-4 h-4 text-emerald-500" />
-                                    <h4 className="font-black text-xs text-gray-400 uppercase tracking-[0.2em]">Pronunciation Details</h4>
-                                </div>
-                                {results[0]?.feedback?.phoneme_issues?.length > 0 ? (
-                                    <div className="flex flex-wrap gap-2">
-                                        {results[0].feedback.phoneme_issues.map((issue, i) => (
-                                            <span key={i} className="px-3 py-1.5 bg-emerald-50 text-emerald-700 rounded-lg text-xs font-bold border border-emerald-100">
-                                                {issue}
-                                            </span>
-                                        ))}
-                                    </div>
-                                ) : (
-                                    <p className="text-sm text-gray-500 italic">No specific phoneme issues detected.</p>
-                                )}
+                        <div className="bg-white rounded-3xl p-8 shadow-xl border border-indigo-50">
+                            <div className="flex items-center gap-2 mb-4">
+                                <Sparkles className="w-4 h-4 text-indigo-500" />
+                                <h4 className="font-black text-xs text-gray-400 uppercase tracking-[0.2em]">Rhythm & Melody</h4>
                             </div>
+                            <p className="text-sm text-gray-700 font-medium leading-relaxed">
+                                {results[0]?.scores?.total === 0 ? "N/A - Insufficient speech for analysis." : (results[0]?.feedback?.rhythm_score || "Good sentence-level stress and pacing.")}
+                            </p>
+                        </div>
+                    </div>
 
-                            <div className="bg-white rounded-3xl p-8 shadow-xl border border-indigo-50">
-                                <div className="flex items-center gap-2 mb-4">
-                                    <Sparkles className="w-4 h-4 text-indigo-500" />
-                                    <h4 className="font-black text-xs text-gray-400 uppercase tracking-[0.2em]">Rhythm & Melody</h4>
-                                </div>
-                                <p className="text-sm text-gray-700 font-medium leading-relaxed">
-                                    {results[0]?.feedback?.rhythm_score || "Good sentence-level stress and pacing."}
-                                </p>
-                            </div>
+                    <div className="space-y-6">
+                        <div className="bg-white rounded-3xl p-8 shadow-xl border border-indigo-50">
+                            <h4 className="font-black text-xs text-indigo-400 uppercase tracking-[0.2em] mb-4">Examiner Summary</h4>
+                            <p className="text-lg text-gray-800 font-medium italic leading-relaxed">"{results[0]?.feedback?.summary}"</p>
                         </div>
 
-                        <div className="space-y-6">
-                            <div className="bg-white rounded-3xl p-8 shadow-xl border border-indigo-50">
-                                <h4 className="font-black text-xs text-indigo-400 uppercase tracking-[0.2em] mb-4">Examiner Summary</h4>
-                                <p className="text-lg text-gray-800 font-medium italic leading-relaxed">"{results[0]?.feedback?.summary}"</p>
-                            </div>
-
-                            <div className="bg-indigo-900 text-white rounded-3xl p-8 shadow-xl">
-                                <h4 className="font-black text-xs text-indigo-300 uppercase tracking-[0.2em] mb-4">Improvement Roadmap</h4>
-                                <p className="text-indigo-50 leading-relaxed font-light">{results[0]?.feedback?.improvement_advice}</p>
-                            </div>
+                        <div className="bg-indigo-900 text-white rounded-3xl p-8 shadow-xl">
+                            <h4 className="font-black text-xs text-indigo-300 uppercase tracking-[0.2em] mb-4">Improvement Roadmap</h4>
+                            <p className="text-indigo-50 leading-relaxed font-light">{results[0]?.feedback?.improvement_advice}</p>
                         </div>
                     </div>
                 </div>
 
-                <div className="p-8 bg-white/50 backdrop-blur-sm border-t border-indigo-100 flex-shrink-0">
-                    <div className="max-w-4xl mx-auto">
+                <div className="fixed bottom-0 left-0 right-0 p-6 bg-white/80 backdrop-blur-md border-t border-indigo-100 z-50">
+                    <div className="max-w-4xl mx-auto flex gap-4">
                         <button
                             onClick={() => navigate('/dashboard')}
-                            className="w-full py-5 bg-indigo-600 text-white rounded-2xl font-black text-xl shadow-2xl hover:bg-indigo-700 transition-all hover:scale-[1.01] active:scale-95 flex items-center justify-center gap-3"
+                            className="flex-1 py-4 bg-gray-100 text-gray-700 rounded-2xl font-black text-lg hover:bg-gray-200 transition-all active:scale-95 flex items-center justify-center gap-3"
                         >
-                            Return to Dashboard <ArrowRight className="w-6 h-6" />
+                            Return to Dashboard
+                        </button>
+                        <button
+                            onClick={handleTryNext}
+                            className="flex-[2] py-4 bg-indigo-600 text-white rounded-2xl font-black text-lg shadow-xl hover:bg-indigo-700 transition-all hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-3"
+                        >
+                            Try Next Mission <ArrowRight className="w-6 h-6" />
                         </button>
                     </div>
                 </div>
@@ -427,8 +596,8 @@ const SpeakingDeliveryPage = () => {
     }
 
     return (
-        <div className="h-screen flex flex-col bg-indigo-50 overflow-hidden">
-            {/* Header */}
+        <div className="min-h-screen bg-[#FDFDFF] font-sans selection:bg-indigo-100 relative overflow-hidden flex flex-col">
+            {/* Background Accents (Glassmorphism) */}
             <div className="bg-white/90 backdrop-blur-md border-b z-20 flex-shrink-0">
                 <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
                     <div className="flex items-center gap-4">
@@ -476,9 +645,10 @@ const SpeakingDeliveryPage = () => {
                             <DeliveryScaffoldPassage
                                 text={currentSegment.master_script}
                                 vocabulary={currentSegment.vocabulary}
-                                prosody={currentSegment.prosody}
                                 settings={scaffoldSettings}
                                 activeWordIndex={activeWordIndex}
+                                resultsMode={!!segmentFeedback}
+                                wordAnalysis={segmentFeedback?.word_analysis || []}
                             />
                         </div>
                     </div>
@@ -499,7 +669,7 @@ const SpeakingDeliveryPage = () => {
                             className={`w-full py-3.5 rounded-xl font-black flex items-center justify-center gap-3 transition-all ${isPlayingMaster ? 'bg-red-500 text-white shadow-lg' : 'bg-indigo-600 text-white hover:bg-indigo-700'
                                 }`}
                         >
-                            {isPlayingMaster ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5" />}
+                            {isPlayingMaster ? <Square className="w-5 h-5 fill-current" /> : <Play className="w-5 h-5" />}
                             <span className="text-[10px] uppercase tracking-widest">{isPlayingMaster ? 'STOP DEMO' : 'MASTER DEMO'}</span>
                         </button>
                     </div>
@@ -508,6 +678,9 @@ const SpeakingDeliveryPage = () => {
                     <div className="bg-white rounded-2xl shadow-md border border-gray-100 p-6 flex flex-col items-center gap-6">
                         {!segmentFeedback ? (
                             <>
+                                <div className="w-full mb-4">
+                                    <SpeakingWaveform isRecording={isRecording} />
+                                </div>
                                 <div className="relative">
                                     {isRecording && (
                                         <div
@@ -554,24 +727,27 @@ const SpeakingDeliveryPage = () => {
                                         Auto-stopping after 4s silence...
                                     </p>
                                 )}
+
+                                {!recordedBlob && !isRecording && (
+                                    <button
+                                        disabled
+                                        className="w-full py-4 bg-gray-50 text-gray-400 rounded-xl font-black text-[10px] tracking-[0.2em] border border-gray-200 cursor-not-allowed opacity-60 flex items-center justify-center gap-2"
+                                    >
+                                        SUBMIT PERFORMANCE
+                                    </button>
+                                )}
                             </>
                         ) : (
                             <div className="w-full space-y-4 animate-in slide-in-from-bottom-6">
-                                <div className="bg-green-600 rounded-xl p-5 text-white">
-                                    <div className="flex items-center justify-between mb-3">
-                                        <span className="text-[10px] font-black uppercase opacity-80 tracking-widest">Score</span>
-                                        <span className="text-3xl font-black">{segmentFeedback.scores?.total}<span className="text-sm opacity-50">/28</span></span>
-                                    </div>
-                                    <p className="text-xs font-medium opacity-95 leading-relaxed">
-                                        {segmentFeedback.feedback?.summary}
-                                    </p>
-                                </div>
                                 <button
                                     onClick={nextRound}
-                                    className="w-full py-4 bg-indigo-600 text-white rounded-xl font-black text-xs tracking-[0.2em] flex items-center justify-center gap-2 hover:bg-indigo-700 transition-all shadow-lg"
+                                    className="w-full py-5 bg-indigo-600 text-white rounded-2xl font-black text-xs tracking-[0.2em] flex items-center justify-center gap-2 hover:bg-indigo-700 transition-all shadow-xl hover:-translate-y-1 active:scale-[0.98]"
                                 >
-                                    CONTINUE <ArrowRight className="w-4 h-4" />
+                                    CONTINUE TO FULL ASSESSMENT <ArrowRight className="w-4 h-4" />
                                 </button>
+                                <p className="text-[10px] text-gray-400 font-bold text-center uppercase tracking-widest leading-relaxed">
+                                    Review ready. Final scores and<br />word analysis available on the next page.
+                                </p>
                             </div>
                         )}
                     </div>

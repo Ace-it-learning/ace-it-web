@@ -2,11 +2,18 @@ const textToSpeech = require('@google-cloud/text-to-speech');
 const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
+const multimodalTTS = require('./MultimodalTTSService');
 
 // Initialize Client
-const keyPath = path.join(__dirname, '../serviceAccountKey.json');
-const clientOptions = fs.existsSync(keyPath) ? { keyFilename: keyPath } : {};
-console.log(`[TTSService] Init - Key Check: ${fs.existsSync(keyPath) ? 'Found local key' : 'Using default env'}`);
+const NODE_ENV = process.env.NODE_ENV || 'development';
+const saFilename = NODE_ENV === 'production' ? 'config/antigravity-tutor-prod-key.json' : 'config/antigravity-tutor-dev-key.json';
+const keyPath = path.join(__dirname, '../', saFilename);
+const isProduction = process.env.NODE_ENV === 'production';
+const hasKey = fs.existsSync(keyPath);
+
+const clientOptions = hasKey ? { keyFilename: keyPath } : {};
+console.log(`[TTSService] Init - Key Check: ${hasKey ? 'Found local key' : 'Using default env'}`);
+console.log(`[TTSService] Mode: ${isProduction ? 'PRODUCTION (GCloud preferred)' : 'DEVELOPMENT (AI Studio/Gemini preferred)'}`);
 
 const client = new textToSpeech.TextToSpeechClient(clientOptions);
 
@@ -73,9 +80,24 @@ function getSpeakerProfile(name) {
 async function generateSpeech(text, languageCode = 'en-US', gender = 'FEMALE', speakingRate = 1.0, forcedVoice = null, includeTimepoints = false) {
     try {
         const isMixedCantonese = languageCode === 'zh-HK';
-        const isSSML = text.trim().startsWith('<speak>');
+        let isSSML = text.trim().startsWith('<speak>');
 
-        let input = isSSML ? { ssml: text } : (isMixedCantonese ? { ssml: convertToSSML(text) } : { text: text });
+        let input;
+        if (includeTimepoints && !isSSML) {
+            // Convert to SSML with word-level marks
+            const words = text.split(/(\s+)/);
+            let wordCounter = 0;
+            const ssmlText = words.map(w => {
+                if (/^\s+$/.test(w)) return w;
+                const mark = `<mark name="w${wordCounter}"/>${escapeSSML(w)}`;
+                wordCounter++;
+                return mark;
+            }).join('');
+            input = { ssml: `<speak>${ssmlText}</speak>` };
+            isSSML = true;
+        } else {
+            input = isSSML ? { ssml: text } : (isMixedCantonese ? { ssml: convertToSSML(text) } : { text: text });
+        }
 
         const request = {
             input: input,
@@ -83,19 +105,28 @@ async function generateSpeech(text, languageCode = 'en-US', gender = 'FEMALE', s
             audioConfig: { audioEncoding: 'MP3', speakingRate: speakingRate },
         };
 
-        // Enable character timepoints for highlighting
+        // Enable timepoints for highlighting
         if (includeTimepoints) {
-            request.enableTimepoints = ['CHARACTER_TIMEPOINT'];
+            request.enableTimepoints = ['SSML_MARK'];
         }
 
-        if (forcedVoice) {
-            request.voice.name = forcedVoice;
-        } else if (isMixedCantonese) {
-            request.audioConfig.speakingRate = speakingRate || 1.2;
-            request.voice.name = gender === 'MALE' ? 'yue-HK-Standard-D' : 'yue-HK-Standard-A';
-        } else {
-            const pool = VOICE_POOL[languageCode]?.[gender] || [];
-            request.voice.name = pool[0] || (languageCode === 'en-GB' ? 'en-GB-Neural2-A' : 'en-US-Neural2-F');
+        // TRACK SELECTION: If we are in Dev (save costs) OR if no service account OR if Gemini is forced
+        const useMultimodal = (isMixedCantonese || languageCode === 'yue-HK' || !hasKey || !isProduction);
+
+        if (useMultimodal) {
+            console.log(`[TTSService] Routing to AI Studio (Gemini) for ${languageCode}...`);
+            const audioContent = await multimodalTTS.generateAudio(text, {
+                voiceName: gender === 'MALE' ? 'Puck' : 'Algenib',
+                notes: languageCode === 'en-GB' ? "Speak in clear, academic British English." : undefined
+            });
+
+            if (includeTimepoints) {
+                return {
+                    audio: audioContent,
+                    timepoints: [] // Gemini does not support timepoints yet
+                };
+            }
+            return audioContent;
         }
 
         const [response] = await client.synthesizeSpeech(request);
@@ -110,7 +141,27 @@ async function generateSpeech(text, languageCode = 'en-US', gender = 'FEMALE', s
         return response.audioContent.toString('base64');
     } catch (error) {
         console.error('[TTSService] API Error:', error);
-        throw error;
+        console.error('[TTSService] Context:', { languageCode, gender, isSSML: text.trim().startsWith('<speak>') });
+        
+        // Error Detection: If API is disabled or credentials fail
+        const isServiceDisabled = error.message?.includes('SERVICE_DISABLED') || error.code === 7;
+        
+        if (isServiceDisabled) {
+            console.warn('[TTSService] Detection: Cloud TTS API is disabled. Forcing Gemini fallback.');
+        }
+
+        // Final Emergency Fallback to AI Studio if SDK fails
+        try {
+            console.warn('[TTSService] SDK Failed. Attempting emergency Multimodal fallback...');
+            const audioData = await multimodalTTS.generateAudio(text, {
+                notes: "Output ONLY the audio of the following text clearly. " + (languageCode === 'en-GB' ? "Use a British accent." : "")
+            });
+            console.log('[TTSService] Emergency fallback successful.');
+            return includeTimepoints ? { audio: audioData, timepoints: [] } : audioData;
+        } catch (innerError) {
+            console.error('[TTSService] Emergency Fallback also failed:', innerError);
+            throw error;
+        }
     }
 }
 
@@ -135,13 +186,13 @@ async function generateMultiSpeakerSpeech(transcript) {
     let audioBase64;
     if (matches.length === 0) {
         const profile = getSpeakerProfile('speaker');
-        const ssml = `<speak><break time="2.0s"/>${escapeSSML(transcript).replace(/\[PAUSE\]/g, '<break time="1s"/>')}</speak>`;
+        const ssml = `<speak>${escapeSSML(transcript).replace(/\[PAUSE\]/g, '<break time="1s"/>')}</speak>`;
         audioBase64 = await generateSpeech(ssml, profile.lang, profile.gender);
     } else {
         const speakerVoiceMap = {};
         const usedVoices = new Set();
         const buffers = [];
-        let currentSSML = '<speak><break time="2.0s"/>'; 
+        let currentSSML = '<speak><break time="400ms"/>'; 
         let charCount = currentSSML.length;
 
         for (const match of matches) {
@@ -192,4 +243,33 @@ async function generateMultiSpeakerSpeech(transcript) {
     return audioBase64;
 }
 
-module.exports = { generateSpeech, generateMultiSpeakerSpeech };
+/**
+ * Premium Multimodal Speech Generation
+ * Uses Gemini 2.5 Flash to generate audio directly. 
+ * This is statistically more stable and has more natural prosody than standard TTS.
+ */
+async function generateMultimodalSpeech(text, gender = 'FEMALE') {
+    const GenerativeAIService = require('./GenerativeAIService');
+    
+    // Voice selection based on gender
+    const voiceName = gender === 'MALE' ? 'Puck' : 'Achird';
+    
+    const prompt = `You are a professional HKDSE examiner. Read the following text out loud with a clear, supportive, and formal accent: "${text}"`;
+    
+    // Request direct audio output from Gemini
+    const result = await GenerativeAIService.generateContent(prompt, {
+        model: 'ace-it-multimodal',
+        audioOutput: true,
+        speechConfig: {
+            voiceConfig: { prebuiltVoiceConfig: { voiceName: voiceName } }
+        }
+    });
+
+    if (!result.audio) {
+        throw new Error("Multimodal audio generation failed.");
+    }
+
+    return result.audio; // Base64
+}
+
+module.exports = { generateSpeech, generateMultiSpeakerSpeech, generateMultimodalSpeech };

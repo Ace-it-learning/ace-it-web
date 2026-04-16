@@ -19,14 +19,11 @@ RULES:
 
 3. EXAM: 
    - Mock exams, past papers, or specific paper tests.
-   - *CRITICAL*: "Diagnostic", "Calibration", "Capability Test", "能力測試" belong to ONBOARDING.
    - Module: "EXAM_ROUTER"
    - Params: { type: "speaking"|"reading"|"writing"|"listening" }
 
 4. ONBOARDING:
    - "Ready", "OK", "Sure", "Let's start", "I'm ready", "Go", "開始".
-   - EXPLICIT REQUESTS: "Start diagnostic", "I want to do the calibration", "Take the test", "Start 15-mins calibration", "Diagnostic test".
-   - Insistence on the diagnostic/calibration test even if the agent suggests something else.
 
 SCHEMA:
 - CHAT: {"intent":"CHAT","bridge_text":null,"ui_command":null}
@@ -57,16 +54,15 @@ Image Attached: {{HAS_IMAGE}}
    - Action: "LAUNCH_MODULE"
    - Module: "WRITING_LAB"
 
-[STRICT]: If context shows diagnostic_completed is false, any request for LAB or EXAM MUST include a bridge_text that politely explains: "I'd love to help with that! However, I first need to assess your current level with a quick 15-minute Study Calibration to unlock your roadmap. How about we start there first?"
-[STRICT]: If the student message contains "diagnostic" or "calibration", it is ALWAYS ONBOARDING.
 [STRICT]: If the student asks for a specific SUBJECT (Speaking, Reading, Writing, Listening, Maths, Chinese) or "practice", route to LAB or EXAM_ROUTER. 
-[STRICT]: If history shows a LAB proposal but student says "diagnostic" or "calibration", route to ONBOARDING.
 [STRICT]: LAB requests take precedence over CHAT.
 
 [CONTEXT]:
-- Diagnostic Completed: {{DIAG_COMPLETED}}
 - Is New Student: {{IS_NEW}}
-- Active Exam: {{ACTIVE_EXAM}}`;
+- Active Exam: {{ACTIVE_EXAM}}
+- Already Completed Topics: {{COMPLETED_TOPICS}}
+
+[STRICT RULE]: NEVER suggest or route to a topic that is present in the "Already Completed Topics" list. If the user asks for more practice, pick a new topic not in the list.`;
 
 class IntentRouter {
   static async classify(message, history = [], uid = null, context = {}) {
@@ -94,12 +90,18 @@ class IntentRouter {
         .replace('{{HAS_IMAGE}}', context.has_image || false)
         .replace('{{DIAG_COMPLETED}}', context.diagnostic_completed || false)
         .replace('{{IS_NEW}}', context.is_new_student || false)
-        .replace('{{ACTIVE_EXAM}}', context.has_active_exam || false);
+        .replace('{{ACTIVE_EXAM}}', context.has_active_exam || false)
+        .replace('{{COMPLETED_TOPICS}}', context.completed_topics || "None");
 
       const finalResult = await GenerativeAIService.generateContent(prompt, {
-        model: "gemini-2.0-flash",
+        model: "ace-it-flash",
         generationConfig: { responseMimeType: "application/json" }
       }, 1); 
+
+      if (!finalResult || !finalResult.response) {
+        console.warn("[IntentRouter] AI returned empty response. Falling back to CHAT.");
+        return { intent: "CHAT" };
+      }
 
       const response = finalResult.response;
       const text = response.text();
@@ -113,6 +115,7 @@ class IntentRouter {
       }
 
       try {
+        if (!text || text.trim() === "") return { intent: "CHAT" };
         const json = JSON.parse(text);
         
         // Save to Semantic Cache if eligible

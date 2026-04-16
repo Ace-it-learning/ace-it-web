@@ -24,7 +24,15 @@ class RoadmapService {
         const doc = await roadmapRef.get();
 
         if (doc.exists) {
-            const plan = doc.data();
+            let plan = doc.data();
+
+            // Force removal of specific static types for English Roadmap as requested
+            if (subject === 'english' && plan.tasks) {
+                plan.tasks = plan.tasks.filter(t => 
+                    !['MOCK', 'DIAGNOSTIC', 'CHALLENGE', 'SPEAKING_CHALLENGE'].includes(t.type)
+                );
+            }
+
             // Check Expiry (7 days)
             let expiresAt;
             if (plan.expiresAt && typeof plan.expiresAt.toDate === 'function') {
@@ -120,43 +128,6 @@ class RoadmapService {
                     status: 'PENDING'
                 };
             });
-        } else {
-            // Fallback: If no diagnostic, the ONLY task is to take it.
-            console.log(`[Roadmap] No diagnostic found for ${uid}. Defaulting to Onboarding.`);
-            generatedTasks.push({
-                id: 'onboarding_step_1',
-                title: 'Complete Diagnostic Check (Initial)',
-                topic: 'Diagnostic Test',
-                type: 'DIAGNOSTIC', // Frontend should route this to /diagnostic
-                xp: 200,
-                status: 'PENDING'
-            });
-        }
-
-        // --- INJECT ERASER CHALLENGE ---
-        if (subject === 'english') {
-            generatedTasks.unshift({
-                id: `eraser_challenge_${moment().format('YYYY_MM_DD')}`,
-                title: 'Eraser Challenge: Remove the Weakness',
-                topic: 'Eraser Challenge: General Academic',
-                type: 'CHALLENGE',
-                category: 'SPECIAL', // Special weekly challenge
-                xp: 150,
-                status: 'PENDING'
-            });
-        }
-
-        // --- INJECT SPEAKING INTERACTION ---
-        if (subject === 'english') {
-            generatedTasks.unshift({
-                id: `speaking_interaction_${moment().format('YYYY_MM_DD')}`,
-                title: 'Speaking Interaction: Group Discussion',
-                topic: 'Speaking: Academic Discussion',
-                type: 'SPEAKING_CHALLENGE',
-                category: 'SPECIAL', // Special weekly challenge
-                xp: 200,
-                status: 'PENDING'
-            });
         }
 
         // 3. Construct the Week Object
@@ -165,17 +136,7 @@ class RoadmapService {
             generatedAt: admin.firestore.FieldValue.serverTimestamp(),
             expiresAt: admin.firestore.Timestamp.fromDate(this.getNextMondayHK()),
             level_at_start: startLevel,
-            tasks: [
-                ...generatedTasks,
-                {
-                    id: 'boss',
-                    title: `Weekly Master Quest (Lvl ${startLevel})`,
-                    type: 'MOCK',
-                    xp: 500,
-                    locked: true,
-                    status: 'LOCKED'
-                }
-            ]
+            tasks: generatedTasks
         };
 
         // 4. Save to DB
@@ -306,6 +267,23 @@ class RoadmapService {
         }
 
         return { success: updated, completedQuests: completedTitles, xpAwarded: newTasks.filter(t => completedTitles.includes(t.title)).reduce((sum, t) => sum + (t.xp || 0), 0) };
+    }
+
+    /**
+     * Helper: Get list of completed topics for filtering AI recommendations
+     */
+    async getCompletedTopics(uid, subject = 'english') {
+        const docId = subject === 'maths' ? 'current_maths' : 'current';
+        const doc = await this.db.collection('users').doc(uid).collection('roadmap').doc(docId).get();
+        if (!doc.exists) return [];
+
+        const plan = doc.data();
+        if (!plan.tasks) return [];
+
+        return plan.tasks
+            .filter(t => t.status === 'COMPLETED')
+            .map(t => t.topic || t.title)
+            .filter(Boolean);
     }
 }
 

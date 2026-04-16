@@ -12,7 +12,7 @@ const CardCollection = () => {
     const navigate = useNavigate();
 
     const [tab, setTab] = useState('student');
-    const [subTab, setSubTab] = useState('english'); // For tutor sub-tabs
+    const [subTab, setSubTab] = useState('all'); // For tutor sub-tabs
     const [studentCards, setStudentCards] = useState([]);
     const [tutorCards, setTutorCards] = useState([]);
     const [avatarFrames, setAvatarFrames] = useState([]);
@@ -89,7 +89,7 @@ const CardCollection = () => {
 
     const cardsMap = {
         student: studentCards,
-        tutor: tutorCards.filter(c => !subTab || c.subject === subTab),
+        tutor: tutorCards.filter(c => subTab === 'all' || !subTab || c.subject === subTab),
         frame: avatarFrames
     };
     const activeCards = cardsMap[tab] || [];
@@ -144,6 +144,7 @@ const CardCollection = () => {
             {tab === 'tutor' && (
                 <div className="flex gap-3 mb-8 overflow-x-auto pb-2 custom-scrollbar animate-in slide-in-from-left duration-500">
                     {[
+                        { id: 'all', label: 'All', color: 'bg-gray-50 text-gray-600' },
                         { id: 'english', label: t('redemption.english'), color: 'bg-blue-50 text-blue-600' },
                         { id: 'maths', label: t('redemption.maths'), color: 'bg-violet-50 text-violet-600' },
                         { id: 'chinese', label: t('redemption.chinese'), color: 'bg-rose-50 text-rose-600' },

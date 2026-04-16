@@ -132,7 +132,7 @@ const PromptTipsPage = () => {
                     <div className="inline-block p-8 bg-white/50 dark:bg-white/5 backdrop-blur-md rounded-[3rem] border border-white dark:border-white/10 max-w-2xl">
                         <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">💡 Pro Tip for HKDSE</h3>
                         <p className="text-sm text-gray-600 dark:text-gray-400 italic">
-                            "The more context you provide (e.g., attaching your essay or specifying the score you're aiming for), the more tailored Miss Janie's feedback will be. Don't be afraid to ask 'Why?' after she gives you an answer."
+                            "The more context you provide (e.g., attaching your essay or specifying the score you're aiming for), the more tailored the tutor's feedback will be. Don't be afraid to ask 'Why?' after they give you an answer."
                         </p>
                     </div>
                 </div>

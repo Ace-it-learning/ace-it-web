@@ -1,10 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { 
-    Trophy, Home, RotateCcw, Award, CheckCircle2, 
     Layers, Zap, Star, AlertCircle, MessageSquare, 
     ChevronRight, X, RefreshCw, Volume2, PlayCircle,
     CheckCircle, ListChecks, FileText, Layout,
-    MinusCircle, PenTool
+    MinusCircle, PenTool, Award, Trophy, Home, RotateCcw
 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
@@ -146,7 +145,7 @@ const ListeningResultsStep = ({ results, audioSrc, mode, level, marginalXP, prev
 
                         <div className="flex flex-wrap items-center justify-center md:justify-start gap-3">
                             <div className="bg-white/5 border border-white/10 px-6 py-2 rounded-2xl flex items-center gap-3">
-                                <CheckCircle2 className="text-green-500" size={18} />
+                                <CheckCircle className="text-green-500" size={18} />
                                 <span className="text-xl font-black">{score}% <span className="text-[10px] text-slate-500 uppercase tracking-widest ml-1 font-black">Score</span></span>
                             </div>
                             <div className={`px-6 py-2 rounded-2xl shadow-lg flex items-center gap-2 ${marginalXP > 0 ? 'bg-indigo-600 text-white' : 'bg-slate-800 text-slate-400'}`}>
@@ -210,7 +209,7 @@ const ListeningResultsStep = ({ results, audioSrc, mode, level, marginalXP, prev
                 {isPartA ? (
                     /* PART A BREAKDOWN: Row-by-Row Q&A Analysis */
                     <div className="grid gap-4">
-                        {breakdown.map((item, idx) => (
+                        {(breakdown || []).map((item, idx) => (
                             <div key={item.id || idx} className="bg-white rounded-3xl p-6 border border-slate-100 shadow-sm transition-all hover:shadow-md group">
                                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
                                     <div className="flex-1">
@@ -281,7 +280,7 @@ const ListeningResultsStep = ({ results, audioSrc, mode, level, marginalXP, prev
                                 </div>
                             </div>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                {contentPoints.map((point, idx) => (
+                                {(contentPoints || []).map((point, idx) => (
                                     <div key={idx} className={`p-5 rounded-2xl border flex items-start gap-4 transition-all ${point.met ? 'bg-green-50 border-green-100' : 'bg-slate-50 border-slate-100 grayscale-[0.6]'}`}>
                                         <div className={`p-2 rounded-xl mt-0.5 ${point.met ? 'bg-green-600 text-white' : 'bg-slate-200 text-slate-400'}`}>
                                             {point.met ? <CheckCircle size={14} /> : <MinusCircle size={14} />}

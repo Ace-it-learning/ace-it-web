@@ -1,8 +1,21 @@
 .git
 .gitignore
 node_modules/
-
-README.md
+frontend/
+dist/
 *.log
-npm-debug.log*
 .DS_Store
+.gemini/
+**/node_modules/**
+**/dist/**
+serviceAccountKey.json
+production-key.json
+config/serviceAccountKey.json
+
+# Exclude Python files to prevent misidentification by Buildpacks
+*.py
+*.pyc
+requirements.txt
+__pycache__/
+venv/
+.venv/

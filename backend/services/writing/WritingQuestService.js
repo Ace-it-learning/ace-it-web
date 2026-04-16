@@ -6,22 +6,19 @@ const admin = require('firebase-admin');
 class WritingQuestService {
     constructor() {
         this.aiService = GenerativeAIService;
-        // Safety: Initialize default app if it doesn't exist (prevents crashes in scripts)
-        if (admin.apps.length === 0) {
-            try {
-                const serviceAccount = require('../../serviceAccountKey.json');
-                admin.initializeApp({
-                    credential: admin.credential.cert(serviceAccount)
-                });
-                console.log("[WritingQuestService] Safely initialized Firebase Admin.");
-            } catch (err) {
-                console.warn("[WritingQuestService] Firebase initialization skip/fail (likely running in restricted dev env).");
-            }
-        }
+        // Firebase Admin should be initialized globally in server.js or by the caller script.
     }
 
     getSyllabus() {
-        return writingSyllabus;
+        const fs = require('fs');
+        const path = require('path');
+        const syllabusPath = path.resolve(__dirname, '../../data/writing_quest_syllabus.json');
+        try {
+            return JSON.parse(fs.readFileSync(syllabusPath, 'utf8'));
+        } catch (e) {
+            console.error("[WritingQuestService] Failed to read syllabus:", e);
+            return writingSyllabus; // Fallback to require'd version if disk read fails
+        }
     }
 
     async getFactoryTopics(genre) {
@@ -149,7 +146,7 @@ class WritingQuestService {
             : "No previous messages.";
 
         const prompt = `
-            Role: Expert HKDSE English Writing Tutor (British Persona named Miss Janie).
+            Role: Expert HKDSE English Writing Tutor (British Persona named {{agentName}}).
             Task: Guide the student to brainstorm for the topic: "${topic}".
             
             Objective: ${pillar.dse_objective}
@@ -215,7 +212,7 @@ class WritingQuestService {
             : "";
 
         const prompt = `
-            Role: Expert HKDSE English Writing Tutor.
+            Role: Expert HKDSE English Writing Tutor (Persona named {{agentName}}).
             Task: Analyze this draft paragraph for a "${textType}" text.
             Draft: "${text}"
             ${pointsContext}
@@ -264,7 +261,7 @@ class WritingQuestService {
      */
     async rewriteParagraph(text, textType, targetLevel = "5*") {
         const prompt = `
-            Role: Expert HKDSE English Writing Tutor.
+            Role: Expert HKDSE English Writing Tutor (Persona named {{agentName}}).
             Task: Rewrite the following paragraph to achieve a "${targetLevel}" (Top Level) standard.
             
             Original Text: "${text}"
@@ -299,7 +296,7 @@ class WritingQuestService {
         const pointsStr = points.map(p => `- ${p.point}`).join('\n');
 
         const prompt = `
-            Role: Expert HKDSE English Writing Tutor.
+            Role: Expert HKDSE English Writing Tutor (Persona named {{agentName}}).
             Task: Write a full ${textType} on the topic "${topic}".
             
             Target Level: ${level} (HKDSE Standard)
@@ -353,7 +350,7 @@ class WritingQuestService {
         const modelEssay = modelData.essay_content;
 
         const prompt = `
-            Role: Expert HKDSE Writing Examiner.
+            Role: Expert HKDSE Writing Examiner (Persona named {{agentName}}).
             Task: Compare a student's draft with a Level ${targetLevel} Model Answer.
             
             Topic: "${topic}"
@@ -407,7 +404,7 @@ class WritingQuestService {
         const pillar = writingSyllabus.learning_content.find(p => p.id === 'pillar_organization');
 
         const prompt = `
-            Role: Expert HKDSE Writing Tutor.
+            Role: Expert HKDSE Writing Tutor (Persona named {{agentName}}).
             Task: Analyze the transition between these two paragraphs.
             
             Para 1 (End): "...${prevParagraph.slice(-100)}"
@@ -442,7 +439,7 @@ class WritingQuestService {
     async reviewStructure(paragraphs, topic, textType) {
         const fullContent = paragraphs.join('\n\n');
         const prompt = `
-            Role: Expert HKDSE Writing Examiner.
+            Role: Expert HKDSE Writing Examiner (Persona named {{agentName}}).
             Task: Analyze the overall STRUCTURE of this "${textType}".
             Topic: "${topic}"
             
@@ -489,7 +486,7 @@ class WritingQuestService {
         const paragraphs = content.split(/\n\n|\n/).filter(p => p.trim().length > 0);
         
         const prompt = `
-            Role: expert HKDSE Writing AI Marker.
+            Role: expert HKDSE Writing AI Marker (Persona named {{agentName}}).
             Task: Provide real-time structural and linguistic analysis for a "${textType}" on "${topic}".
             
             Content to analyze:
@@ -556,7 +553,7 @@ class WritingQuestService {
      */
     async gradeFinalPiece(topic, textType, content) {
         const prompt = `
-            You are a Senior HKDSE English Marker (Level 5** Expert).
+            You are a Senior HKDSE English Marker (Level 5** Expert) named {{agentName}}.
             Task: Provide a PROFESSIONAL and DETAILED assessment of the student's work based on 2025 Level Descriptors.
             
             Topic: "${topic}"

@@ -180,7 +180,7 @@
             "subject": "maths",
             "rarity": "rare",
             "description": "Uses gaming analogies. Learning is a quest!",
-            "image": "/cards/tutors/t_gamer.png",
+            "image": "/avatars/t_gamer.png",
             "personality": "gamer",
             "traits": {
                 "intensity": "moderate",
@@ -197,7 +197,7 @@
             "subject": "english",
             "rarity": "rare",
             "description": "Funny and witty. Learning with laughs.",
-            "image": "/cards/tutors/t_comedian.png",
+            "image": "/avatars/t_comedian.png",
             "personality": "comedian",
             "traits": {
                 "intensity": "moderate",
@@ -214,7 +214,7 @@
             "subject": "maths",
             "rarity": "legendary",
             "description": "Ruthless exam driller. No mercy, pure results.",
-            "image": "/cards/tutors/t_drill.png",
+            "image": "/avatars/t_drill.png",
             "personality": "drill",
             "traits": {
                 "intensity": "pushy",
@@ -231,7 +231,7 @@
             "subject": "ace",
             "rarity": "legendary",
             "description": "Deep and motivational. Every question shapes your future.",
-            "image": "/cards/tutors/t_motivator.png",
+            "image": "/avatars/t_motivator.png",
             "personality": "motivator",
             "traits": {
                 "intensity": "moderate",
@@ -248,7 +248,7 @@
             "subject": "chinese",
             "rarity": "rare",
             "description": "Traditional and thorough. Back to basics.",
-            "image": "/cards/tutors/t_oldschool.png",
+            "image": "/avatars/t_oldschool.png",
             "personality": "oldschool",
             "traits": {
                 "intensity": "moderate",
@@ -265,7 +265,7 @@
             "subject": "maths",
             "rarity": "rare",
             "description": "Data-driven and analytical. Numbers don't lie.",
-            "image": "/cards/tutors/t_tech.png",
+            "image": "/avatars/t_tech.png",
             "personality": "tech",
             "traits": {
                 "intensity": "moderate",
@@ -275,6 +275,74 @@
             },
             "tone": "Analytical, data-driven. Cites statistics and accuracy percentages. Uses charts metaphors. Optimises study efficiency. Uses 📊📈🤖.",
             "greeting_style": "System online. 📊 Your accuracy on inference questions is 62%. I've identified 3 micro-skills with the highest ROI for improvement. Shall we optimise? 🤖"
+        },
+        {
+            "id": "t_janie",
+            "name": "Miss Janie",
+            "subject": "english",
+            "rarity": "common",
+            "description": "Your default English tutor. Warm, professional, and encouraging.",
+            "image": "/avatars/miss_janie_avatar_1774534465912.png",
+            "personality": "gentle",
+            "traits": {
+                "intensity": "moderate",
+                "disposition": "kind",
+                "vibe": "friendly",
+                "philosophy": "learning-driven"
+            },
+            "tone": "Warm, empathetic older sibling. Encouraging and supportive.",
+            "greeting_style": "Welcome to Ace it, {{userName}}! I'm {{agentName}}, your dedicated HKDSE mentor. Ready to dive into our English lesson today? ✨"
+        },
+        {
+            "id": "t_matt",
+            "name": "Matt Sir",
+            "subject": "maths",
+            "rarity": "common",
+            "description": "Your default Maths tutor. Clear, logical, and patient.",
+            "image": "/avatars/matt_sir_avatar_1774534606517.png",
+            "personality": "math-nerd",
+            "traits": {
+                "intensity": "moderate",
+                "disposition": "kind",
+                "vibe": "serious",
+                "philosophy": "logic-driven"
+            },
+            "tone": "Passionate, patient math enthusiast. Always breaks things down step-by-step.",
+            "greeting_style": "Hello there! I'm {{agentName}}. Let's dive into some numbers and break them down step-by-step! 📐"
+        },
+        {
+            "id": "t_lam",
+            "name": "Miss Lam (林老師)",
+            "subject": "chinese",
+            "rarity": "common",
+            "description": "Your default Chinese tutor. Wise and literary.",
+            "image": "/avatars/miss_lam_avatar_1774534527873.png",
+            "personality": "scholarly",
+            "traits": {
+                "intensity": "moderate",
+                "disposition": "kind",
+                "vibe": "serious",
+                "philosophy": "culture-driven"
+            },
+            "tone": "Gentle, firm, and profound literature knowledge. Values fundamentals.",
+            "greeting_style": "你好！我是{{agentName}}。讓我們一同領略中國語文之美，積累實力，取悅閱卷員。🍃"
+        },
+        {
+            "id": "t_ace",
+            "name": "Ace Sir",
+            "subject": "general",
+            "rarity": "common",
+            "description": "The Headmaster of Ace It Academy. Visionary and supportive.",
+            "image": "/avatars/ace_sir_avatar_1774534550933.png",
+            "personality": "strategist",
+            "traits": {
+                "intensity": "pushy",
+                "disposition": "kind",
+                "vibe": "serious",
+                "philosophy": "grade-driven"
+            },
+            "tone": "Professional, data-driven, and motivational. Focuses on overall exam strategy.",
+            "greeting_style": "你好! 我係 {{agentName}}。目標係 5** 嗎？同我講你嘅目標，我幫你制定最強 DSE 奪星藍圖！🔥"
         }
     ],
     "avatar_frames": [
@@ -283,31 +351,28 @@
             "name": "Expert Gold",
             "rarity": "rare",
             "description": "A shining gold frame for DSE masters.",
-            "image": "/cards/frames/f_gold_expert.png"
-        },
-        {
-            "image": "file:///C:/Users/user/.gemini/antigravity/brain/dd5c8263-73a6-44ce-a038-fd1c9cf8eeef/frame_neon_asset_1775824987859.png"
+            "image": "/avatars/f_neon.png"
         },
         {
             "id": "f_royal_crown",
             "name": "Royal Crown",
             "rarity": "legendary",
             "description": "Fit for a DSE king/queen.",
-            "image": "file:///C:/Users/user/.gemini/antigravity/brain/dd5c8263-73a6-44ce-a038-fd1c9cf8eeef/frame_royal_asset_1775825003466.png"
+            "image": "/avatars/f_royal.png"
         },
         {
             "id": "f_forest_whisper",
             "name": "Forest Whisper",
             "rarity": "rare",
             "description": "Harness the power of nature.",
-            "image": "file:///C:/Users/user/.gemini/antigravity/brain/dd5c8263-73a6-44ce-a038-fd1c9cf8eeef/frame_nature_asset_1775825018088.png"
+            "image": "/avatars/f_nature.png"
         },
         {
             "id": "f_starry_void",
             "name": "Starry Void",
             "rarity": "legendary",
             "description": "The universe is your classroom.",
-            "image": "file:///C:/Users/user/.gemini/antigravity/brain/dd5c8263-73a6-44ce-a038-fd1c9cf8eeef/frame_galactic_asset_v2_1775825065317.png"
+            "image": "/avatars/f_galactic.png"
         }
     ],
     "default_tutors": [
@@ -316,28 +381,28 @@
             "name": "Miss Janie",
             "subject": "english",
             "description": "Your default English tutor. Warm, professional, and encouraging.",
-            "image": "/cards/defaults/miss_janie.png"
+            "image": "/avatars/miss_janie_avatar_1774534465912.png"
         },
         {
             "id": "default_matt",
             "name": "Matt Sir",
             "subject": "maths",
             "description": "Your default Maths tutor. Clear, logical, and patient.",
-            "image": "/cards/defaults/matt_sir.png"
+            "image": "/avatars/matt_sir_avatar_1774534606517.png"
         },
         {
             "id": "default_chung",
             "name": "鐘Sir",
             "subject": "chinese",
             "description": "Your default Chinese tutor. Scholarly, wise, and inspiring.",
-            "image": "/cards/defaults/chung_sir.png"
+            "image": "/avatars/t_chung_sir.png"
         },
         {
             "id": "default_ace",
             "name": "Ace Sir",
             "subject": "general",
             "description": "The headmaster of Ace It Academy. Visionary and supportive.",
-            "image": "/cards/defaults/ace_sir.png"
+            "image": "/avatars/ace_sir_avatar_1774534550933.png"
         }
     ]
 }

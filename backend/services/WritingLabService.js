@@ -13,6 +13,15 @@ class WritingLabService {
      * @param {string} mode - "SENTENCE_BUILDER" | "PARAGRAPH_PLANNER" | "MINI_ESSAY"
      */
     async generateSession(topic, level, mode) {
+        // [2026] Semantic Cache Check
+        const CacheService = require('./CacheService');
+        const cacheKey = `writing_session_${topic}_${level}_${mode}`;
+        const cached = CacheService.getDbCache(cacheKey);
+        if (cached) {
+            console.log(`[WritingLabService] ⚡ Cache Hit: ${cacheKey}`);
+            return cached;
+        }
+
         // HKDSE Hot Topics & Frequent Past Paper Themes
         const HK_CONTEXT_PROMPT = `
         ### CONTEXTUAL REQUIREMENT:
@@ -88,8 +97,10 @@ class WritingLabService {
             `;
         }
 
-        const result = await GenerativeAIService.generateJson(prompt, { model: "gemini-1.5-pro" });
-        return result.data;
+        const result = await GenerativeAIService.generateJson(prompt, { model: "ace-it-flash" });
+        const data = result.data;
+        CacheService.setDbCache(cacheKey, data, 3600); // Cache for 1 hour
+        return data;
     }
 
     /**
@@ -141,8 +152,7 @@ class WritingLabService {
         `;
 
         try {
-            // Fix: gemini-1.5-pro was a hallucination; using stable 1.5-pro
-            const result = await GenerativeAIService.generateJson(prompt, { model: "gemini-1.5-pro" });
+            const result = await GenerativeAIService.generateJson(prompt, { model: "ace-it-flash" });
             return result.data;
         } catch (e) {
             console.error("[WritingLabService] Evaluation Error:", e);
@@ -257,7 +267,7 @@ class WritingLabService {
         Return ONLY valid JSON.
         `;
 
-        const { data: resData } = await GenerativeAIService.generateJson(prompt, { model: "gemini-1.5-pro" });
+        const { data: resData } = await GenerativeAIService.generateJson(prompt, { model: "ace-it-flash" });
         const data = Array.isArray(resData) ? resData[0] : resData;
         return data;
     }

@@ -41,6 +41,9 @@ const Dashboard = () => {
         }
     };
 
+    const [roadmapFilter, setRoadmapFilter] = React.useState('ALL');
+    const location = useLocation();
+
     // Listen for Sidebar events
     React.useEffect(() => {
         const handleCustomOpen = (e) => {
@@ -54,9 +57,6 @@ const Dashboard = () => {
         window.addEventListener('open-roadmap', handleCustomOpen);
         return () => window.removeEventListener('open-roadmap', handleCustomOpen);
     }, []);
-
-    const [roadmapFilter, setRoadmapFilter] = React.useState('ALL');
-    const location = useLocation();
 
     // Handle incoming navigation state (e.g. from Results pages)
     React.useEffect(() => {

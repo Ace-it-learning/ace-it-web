@@ -1,4 +1,4 @@
-﻿@import 'katex/dist/katex.min.css';
+@import 'katex/dist/katex.min.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -151,6 +151,10 @@
 
   .animate-shimmer {
     animation: shimmer 2s infinite linear;
+  }
+
+  .animate-spin-slow {
+    animation: spin 3s linear infinite;
   }
 }
 

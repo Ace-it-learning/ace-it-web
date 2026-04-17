@@ -30,8 +30,9 @@ router.post('/tts', async (req, res) => {
         );
 
         res.json({
+            audio: audioContent,
             audioContent: audioContent,
-            mimeType: 'audio/wav' // Wrapper handled by service
+            mimeType: 'audio/mpeg' // Standards update
         });
     } catch (error) {
         console.error("[ttsRoutes] TTS Generation failed:", error);

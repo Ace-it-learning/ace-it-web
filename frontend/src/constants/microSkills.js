@@ -100,18 +100,18 @@ export const MICRO_SKILLS = {
 
     // SPEAKING (HKEAA Target Pillars + Master Quest)
     speaking_delivery: {
-        en: { name: 'Pronunciation & Delivery', desc: 'Clarity, intonation, pace, and rhythm', outcome: 'Deliver speech with near-native intonation and clarity' },
-        zh: { name: '發音與交付', desc: '發音清晰度、語調及說話節奏', outcome: '以近乎母語的自然語調清晰表達' },
+        en: { name: 'Pronunciation', desc: 'Clarity, intonation, pace, and rhythm', outcome: 'Deliver speech with near-native intonation and clarity' },
+        zh: { name: '發音', desc: '發音清晰度、語調及說話節奏', outcome: '以近乎母語的自然語調清晰表達' },
         cluster: 'delivery'
     },
     speaking_strategies: {
-        en: { name: 'Comm. Strategies', desc: 'Turn-taking, active listening, and facilitation', outcome: 'Strategically lead and facilitate group discussions' },
+        en: { name: 'Communication Strategies', desc: 'Turn-taking, active listening, and facilitation', outcome: 'Strategically lead and facilitate group discussions' },
         zh: { name: '溝通策略', desc: '發言時機、積極聆聽及帶動討論', outcome: '以策略性互動引導並推向討論高潮' },
         cluster: 'interaction'
     },
     speaking_language: {
-        en: { name: 'Language Patterns', desc: 'Vocabulary range and grammatical accuracy in speech', outcome: 'Master complex language patterns during live speech' },
-        zh: { name: '語言模式', desc: '口語表達中詞彙的豐富度與語法準確性', outcome: '在即時說話中熟練運用複雜語言模式' },
+        en: { name: 'Vocabulary', desc: 'Vocabulary range and grammatical accuracy in speech', outcome: 'Master complex language patterns during live speech' },
+        zh: { name: '詞彙', desc: '口語表達中詞彙的豐富度與語法準確性', outcome: '在即時說話中熟練運用複雜語言模式' },
         cluster: 'flow'
     },
     speaking_organization: {

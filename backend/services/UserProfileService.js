@@ -1069,12 +1069,12 @@ class UserProfileService {
             let overallLevel = data.overall_level || 1;
             
             if (subject === 'english') {
-                const { getPaperBySkill } = require('../constants/microSkills');
+                const { MICRO_SKILLS } = require('../constants/microSkills');
                 const paperAvgs = { reading: [], writing: [], listening: [], speaking: [] };
                 
                 // Group micro-skills by paper and calculate paper-wide averages
                 Object.keys(microSkills).forEach(sid => {
-                    const paper = getPaperBySkill(sid);
+                    const paper = MICRO_SKILLS[sid]?.paper;
                     if (paper && paperAvgs[paper]) {
                         paperAvgs[paper].push(microSkills[sid].level || 1);
                     }

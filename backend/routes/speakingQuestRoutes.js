@@ -73,6 +73,8 @@ router.post('/quest/submit', upload.single('audio'), async (req, res) => {
 
         let prompt = "";
         let mockTranscript = "";
+        let transcribedText = "";
+        let historyToGrade = [];
 
         if (module === 'delivery') {
             if (!audioFile) return res.status(400).json({ error: 'No audio file provided for delivery quest' });
@@ -139,17 +141,19 @@ router.post('/quest/submit', upload.single('audio'), async (req, res) => {
                 .replace('{STUDENT_RESPONSES}', studentResponses)
                 .replace('{LATENCY_DATA}', latencyData)
                 .replace('{POWER_WORDS_DETECTED}', usedWords);
-        } else if (module === 'interaction' || module === 'strategies') {
-            const history = typeof messages === 'string' ? JSON.parse(messages) : (messages || []);
+        } else if (module === 'interaction' || module === 'strategies' || module === 'delivery') {
+            const userLabel = (module === 'interaction' || module === 'strategies' || req.body.mode === 'lab') ? 'Student' : 'Candidate_D';
+            const rawMessages = messages || req.body.transcript || [];
+            const history = Array.isArray(rawMessages) ? rawMessages : (typeof rawMessages === 'string' ? JSON.parse(rawMessages) : []);
             const studentMessages = history.filter(m =>
                 m.speaker === 'Student' ||
                 m.role === 'user' ||
                 m.speaker === 'Jack Tam' ||
-                m.speaker === 'Candidate_D'
+                m.role === 'Student' ||
+                m.speaker === userLabel
             );
 
             // transcription of the latest recorded response
-            let transcribedText = "";
             if (audioFile) {
                 const PronunciationService = require('../services/PronunciationService');
                 const analysis = await PronunciationService.analyzePronunciation(audioFile.buffer.toString('base64'), audioFile.mimetype);
@@ -168,22 +172,23 @@ router.post('/quest/submit', upload.single('audio'), async (req, res) => {
             }
 
             // Inject the transcribed text into the history if it was a Lab turn
-            let historyToGrade = [...history];
+            historyToGrade = [...history];
             if (transcribedText) {
                 // Find the latest user message to update its content from placeholder to real text
-                const lastUserIdx = [...historyToGrade].reverse().findIndex(m => m.speaker === 'Student' || m.role === 'user');
+                const lastUserIdx = [...historyToGrade].reverse().findIndex(m => m.speaker === 'Student' || m.role === 'user' || m.speaker === userLabel);
                 if (lastUserIdx !== -1) {
                     const actualIdx = (historyToGrade.length - 1) - lastUserIdx;
                     historyToGrade[actualIdx] = { ...historyToGrade[actualIdx], text: transcribedText };
                 }
             }
 
-            const historyText = historyToGrade.map(m => `${m.speaker || m.role}: ${m.text}`).join('\n');
+            const historyText = historyToGrade.map(m => `${m.speaker || m.role || userLabel}: ${m.text}`).join('\n');
 
             prompt = interactionGradingAgent
                 .replace('{TOPIC}', master_script || 'General Discussion')
                 .replace('{HISTORY}', historyText)
                 .replace('{LEVEL}', level)
+                .replace('{USER_LABEL}', userLabel)
                 .replace('{FOCUS_AREA}', focus || 'General Interaction');
         } else if (module === 'language_patterns') {
             const history = typeof messages === 'string' ? JSON.parse(messages) : (messages || []);
@@ -193,9 +198,20 @@ router.post('/quest/submit', upload.single('audio'), async (req, res) => {
 
             // Format results for AI
             const resultsText = practiceResults.length > 0
-                ? practiceResults.map((r, i) => `[Sentence ${i + 1}]: ${r.sentence} | Target: ${r.target_word}`).join('\n')
+                ? practiceResults.map((r, i) => {
+                    // Robust lookup for transcript across different possible structures
+                    const msg = history[i];
+                    const studentText = msg?.text || msg?.content || msg?.transcript || "No transcript available";
+                    
+                    return `[SENTENCE ${i + 1}]
+- [TARGET]: ${r.sentence}
+- [STUDENT ACTUAL]: ${studentText}
+- [POWER WORD]: ${r.target_word}`;
+                }).join('\n\n')
                 : `Student Direct Responses:\n${studentResponses}`;
 
+            console.log(`[Speaking Language] Final Assessment Data constructed for ${practiceResults.length} sentences.`);
+            
             prompt = languagePatternsGradingAgent
                 .replace('{PRACTICE_RESULTS}', resultsText)
                 .replace('{LEVEL}', level);
@@ -230,8 +246,18 @@ router.post('/quest/submit', upload.single('audio'), async (req, res) => {
             console.error(`[Speaking ${module}] AI Grading failed:`, aiError);
             result = {
                 data: {
-                    scores: { total: 16, pronunciation: 4, intonation: 4, pacing: 4, grammar: 4 },
-                    feedback: { summary: "AI grading is currently unavailable.", improvement_advice: "Keep practicing!" }
+                    scores: { 
+                        total: 16, 
+                        pronunciation: 4, 
+                        intonation: 4, 
+                        vocabulary: 4, 
+                        grammar_range: 4,
+                        grammar: 4 
+                    },
+                    feedback: { 
+                        summary: "AI grading is currently unavailable.", 
+                        improvement_advice: "Keep practicing!" 
+                    }
                 }
             };
         }
@@ -260,7 +286,7 @@ router.post('/quest/submit', upload.single('audio'), async (req, res) => {
             const skillMappings = {
                 'delivery': ['speaking_delivery'],
                 'flow': ['speaking_language', 'speaking_organization'],
-                'interaction': ['speaking_strategies'],
+                'interaction': ['speaking_pronunciationClarity', 'speaking_activeListening', 'speaking_vocabularyInSpeech', 'speaking_organisation'],
                 'language_patterns': ['speaking_vocabularyInSpeech', 'speaking_grammaticalAccuracy'],
                 'ideas_organisation': ['speaking_logicalDevelopment', 'speaking_organisation']
             };
@@ -280,7 +306,7 @@ router.post('/quest/submit', upload.single('audio'), async (req, res) => {
             scores: finalResult.scores,
             feedback: finalResult.feedback,
             word_analysis: finalResult.word_analysis || [],
-            transcript: mockTranscript,
+            transcript: historyToGrade || [],
             xp_awarded: xpResult.earned || 0
         });
     } catch (error) {
@@ -335,21 +361,46 @@ router.post('/flow/respond', async (req, res) => {
  */
 router.post('/interaction/turn', upload.single('audio'), async (req, res) => {
     try {
-        const { history: historyStr, current_speaker, topic, level, uid, focus } = req.body;
+        const { history: historyStr, current_speaker, topic, level, uid, focus, user_transcript: clientTranscript } = req.body;
         const history = typeof historyStr === 'string' ? JSON.parse(historyStr) : (historyStr || []);
         const audioFile = req.file;
 
         // Build conversation history string
-        const conversationHistory = history.map(turn => {
-            const speakerLabel = turn.speaker === 'Student' ? 'Candidate_D' : (turn.speaker || 'Candidate_A').replace(' ', '_');
+        const userLabel = req.body.mode === 'lab' ? 'Student' : 'Candidate_D';
+
+        let conversationHistory = history.map(turn => {
+            const speakerLabel = (turn.speaker === 'Student' || turn.role === 'user') ? userLabel : (turn.speaker || 'Candidate_A').replace(' ', '_');
             return `${speakerLabel}: ${turn.text}`;
         }).join('\n');
+        
+        // Ensure the latest transcript is in the history string for the AI to see (De-duplication logic)
+        if (clientTranscript && !conversationHistory.toLowerCase().includes(clientTranscript.toLowerCase().substring(0, 15))) {
+            conversationHistory += `\n${userLabel}: ${clientTranscript}`;
+        }
 
-        const prompt = speakingAgent
-            .replace('{TOPIC}', topic)
-            .replace('{HISTORY}', conversationHistory)
-            .replace('{MY_IDENTITY}', current_speaker || 'Candidate_A')
-            .replace('{LEVEL}', level);
+        // Instruction to ensure JSON adherence (Reasoning length now handled by prompt template)
+        const formatMandate = `\nEnsure your output is a single, valid JSON object with NO extra text. Escape all newlines in the "content" field.`;
+
+        let prompt = speakingAgent
+            .replace(/{TOPIC}/g, topic)
+            .replace(/{HISTORY}/g, conversationHistory)
+            .replace(/{MY_IDENTITY}/g, current_speaker || 'Candidate_A')
+            .replace(/{USER_LABEL}/g, userLabel)
+            .replace(/{LEVEL}/g, level);
+
+        // Inject format mandate at the end of the context
+        prompt += formatMandate;
+
+        // Phase 48: Anti-Hallucination - If history is empty OR student hasn't spoken yet, forbid referencing them
+        const hasStudentSpoken = history.some(m => 
+            m.role === 'user' || m.role === 'Student' || m.speaker === 'Student' || m.speaker === 'Candidate_D' || m.speaker === userLabel
+        );
+
+        if (!hasStudentSpoken) {
+            prompt += "\nIMPORTANT: Candidate D (the student) has NOT spoken yet. Do NOT mention, quote, or agree with Candidate D. Focus on your own points and engaging with other candidates.";
+        } else if (!conversationHistory || conversationHistory.trim().length === 0) {
+            prompt += "\nIMPORTANT: This is the very beginning of the discussion. Do NOT reference what other candidates said yet. Start by stating your own initial perspective on the topic.";
+        }
 
         // Voice mapping based on role
         const voiceMap = {
@@ -364,8 +415,37 @@ router.post('/interaction/turn', upload.single('audio'), async (req, res) => {
             voiceConfig: { prebuiltVoiceConfig: { voiceName: voiceName } }
         };
 
+        const genAIConfig = {
+            model: 'ace-it-flash',
+            audioOutput: req.body.audioOutput === true || req.body.audioOutput === 'true', // Hard Boolean Check
+            speechConfig: speechConfig,
+            generationConfig: { 
+                temperature: 0.7,
+                responseMimeType: "application/json"
+            }
+        };
+
         let result;
-        if (audioFile) {
+        // FAST PATH: If client provided transcription, use it to bypass or speed up multimodal STT
+        if (clientTranscript) {
+             console.log(`[Interaction Turn] Fast Path Triggered. Client provided transcript: ${clientTranscript.substring(0, 30)}...`);
+             const fastPrompt = `${prompt}\n\n[USER JUST SAID]: ${clientTranscript}\n\nREPLY IN JSON FORMAT.`;
+             
+             if (audioFile) {
+                const parts = [
+                    { text: fastPrompt },
+                    {
+                        inlineData: {
+                            data: audioFile.buffer.toString('base64'),
+                            mimeType: audioFile.mimetype
+                        }
+                    }
+                ];
+                result = await GenerativeAIService.generateJson(parts, genAIConfig);
+             } else {
+                result = await GenerativeAIService.generateJson(fastPrompt, genAIConfig);
+             }
+        } else if (audioFile) {
             console.log(`[Interaction Turn] Multimodal Audio detected. Fusing Text + Voice pass...`);
             const parts = [
                 { text: prompt },
@@ -377,29 +457,23 @@ router.post('/interaction/turn', upload.single('audio'), async (req, res) => {
                 }
             ];
 
-            result = await GenerativeAIService.generateJson(parts, {
-                model: 'gemini-2.5-flash',
-                audioOutput: true,
-                speechConfig: speechConfig,
-                generationConfig: { temperature: 0.7 }
-            });
+            result = await GenerativeAIService.generateJson(parts, genAIConfig);
         } else {
-            result = await GenerativeAIService.generateJson(prompt, {
-                model: 'gemini-2.5-flash',
-                audioOutput: true,
-                speechConfig: speechConfig,
-                generationConfig: { temperature: 0.7 }
-            });
+            result = await GenerativeAIService.generateJson(prompt, genAIConfig);
         }
 
-        const aiContent = result.data?.content || null;
-        const transcribedUserText = result.data?.user_transcript || "";
-        const aiAudio = result.audio;
+        const aiContent = result?.data?.content || null;
+        const transcribedUserText = clientTranscript || result?.data?.user_transcript || "";
+        const aiAudio = result?.audio;
+
+        if (!aiContent && !aiAudio) {
+            console.error(`[Speaking Interaction] CRITICAL: AI returned null content and audio. Result Info:`, JSON.stringify({ model: result?.usedModel, data: result?.data }));
+        }
 
         console.log(`[Speaking Interaction] AI Respond: "${aiContent ? aiContent.substring(0, 50) : 'NULL'}..." | Audio: ${aiAudio ? 'YES' : 'NO'}`);
 
         res.json({
-            content: aiContent || "That's an interesting point, Jack. How about we look at it from another angle?",
+            content: aiContent || "I see what you mean. However, we should also consider the broader implications of this issue, particularly how it affects students' long-term development in a changing environment.",
             speaker: current_speaker,
             user_transcript: transcribedUserText,
             audio: aiAudio

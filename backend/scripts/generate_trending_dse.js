@@ -106,7 +106,7 @@ async function generateAll() {
             }
             CRITICAL: The vocabulary must be at the highest 5** level, comparable to The Economist or elite academic texts.
             `;
-            const { data: reading } = await GenerativeAIService.generateJson(prompt, { model: "gemini-2.5-flash" });
+            const { data: reading } = await GenerativeAIService.generateJson(prompt, { model: "ace-it-flash" });
             const rId = `reading_mock_${topic.id}_${Date.now()}`;
             await db.collection('question_bank').doc(rId).set({
                 ...reading,

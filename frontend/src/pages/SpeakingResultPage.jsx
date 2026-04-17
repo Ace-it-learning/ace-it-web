@@ -88,10 +88,10 @@ const SpeakingResultPage = () => {
                     {/* RADAR / DOMAIN SCORES */}
                     <div className="space-y-3">
                         {[
-                            { label: "Pronunciation & Delivery", score: scores.pronunciation, icon: "🎤" },
+                            { label: "Pronunciation", score: scores.pronunciation, icon: "🎤" },
                             { label: "Communication Strategies", score: scores.communication, icon: "🤝" },
-                            { label: "Vocabulary & Patterns", score: scores.vocabulary, icon: "📖" },
-                            { label: "Ideas & Organization", score: scores.ideas, icon: "💡" }
+                            { label: "Vocabulary", score: scores.vocabulary, icon: "📖" },
+                            { label: "Ideas & Organisation", score: scores.ideas, icon: "💡" }
                         ].map(item => (
                             <div key={item.label} className="bg-gray-800 p-4 rounded-xl border border-gray-700 flex justify-between items-center">
                                 <span className="flex items-center gap-3 font-bold text-gray-300">

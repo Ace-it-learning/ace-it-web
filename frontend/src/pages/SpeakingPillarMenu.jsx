@@ -9,18 +9,17 @@ const SpeakingPillarMenu = () => {
     // Mapping of internal keys to display names
     const PILLARS = [
         { id: 'criterion_a', label: 'Pronunciation', icon: Languages, color: 'emerald', route: '/speaking/quest/delivery' },
-        { id: 'criterion_b', label: 'Strategies', icon: MessageSquare, color: 'blue', route: '/speaking/quest/interaction-lab' },
-        { id: 'criterion_c', label: 'Vocab Lab', icon: Sparkles, color: 'fuchsia', route: '/speaking/quest/language' },
-        { id: 'criterion_d', label: 'Ideas', icon: Layout, color: 'orange', route: '/speaking/quest/ideas' },
-        { id: 'flow', label: 'Fluency', icon: Activity, color: 'purple', route: '/speaking/quest/flow' }
+        { id: 'criterion_b', label: 'Communication Strategies', icon: MessageSquare, color: 'blue', route: '/speaking/quest/interaction-lab' },
+        { id: 'criterion_c', label: 'Vocabulary', icon: Sparkles, color: 'fuchsia', route: '/speaking/quest/language' },
+        { id: 'criterion_d', label: 'Ideas', icon: Layout, color: 'orange', route: '/speaking/quest/ideas' }
     ];
 
     const LEVELS = [
         { label: 'All Levels', value: 'all' },
-        { label: 'Easy (Level 3)', value: 'Easy' },
-        { label: 'Medium (Level 4)', value: 'Medium' },
-        { label: 'DSE Standard (Level 5)', value: 'DSE Standard' },
-        { label: 'Elite (Level 5**)', value: 'Elite' }
+        { label: 'Easy - Grade 3', value: 'Easy' },
+        { label: 'Medium - Grade 4', value: 'Medium' },
+        { label: 'DSE Standard - Grade 5', value: 'DSE Standard' },
+        { label: 'Elite - Grade 5**', value: 'Elite' }
     ];
 
     const [activePillar, setActivePillar] = useState(null);
@@ -83,7 +82,6 @@ const SpeakingPillarMenu = () => {
         if (activePillar.id === 'criterion_b') moduleType = 'interaction';
         if (activePillar.id === 'criterion_c') moduleType = 'language_patterns';
         if (activePillar.id === 'criterion_d') moduleType = 'ideas_organisation';
-        if (activePillar.id === 'flow') moduleType = 'flow';
         
         navigate(`${activePillar.route}?module=${moduleType}&topic=${drill.id}&level=${levelVal}`, {
             state: {
@@ -172,12 +170,13 @@ const SpeakingPillarMenu = () => {
                                 className="group bg-white p-6 rounded-[2rem] border border-slate-100 hover:border-indigo-400 hover:shadow-2xl hover:shadow-indigo-100 transition-all duration-300 text-left relative overflow-hidden"
                             >
                                 {/* Level Badge */}
-                                <div className={`absolute top-6 right-6 px-2.5 py-1 text-[9px] font-black rounded-lg uppercase tracking-widest border ${
-                                    drill.level_label === 'Elite' ? 'bg-amber-50 text-amber-600 border-amber-100' : 
-                                    drill.level_label === 'DSE Standard' ? 'bg-indigo-50 text-indigo-600 border-indigo-100' :
-                                    'bg-slate-50 text-slate-400 border-slate-100'
+                                <div className={`absolute top-6 right-6 px-3 py-1.5 text-[10px] font-black rounded-xl uppercase tracking-widest border transition-all ${
+                                    drill.level_label === 'Elite' ? 'bg-amber-50 text-amber-600 border-amber-200' : 
+                                    drill.level_label === 'DSE Standard' ? 'bg-indigo-50 text-indigo-600 border-indigo-200' :
+                                    drill.level_label === 'Medium' ? 'bg-emerald-50 text-emerald-600 border-emerald-200' :
+                                    'bg-slate-50 text-slate-500 border-slate-200'
                                 }`}>
-                                    {drill.level_label === 'Elite' ? 'Level 5**' : `Level ${drill.level}`}
+                                    {drill.level_label} - Grade {drill.level}
                                 </div>
 
                                 <div className="flex flex-col h-full">

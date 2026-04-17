@@ -1,10 +1,10 @@
 // CLUSTER-SPECIFIC GRADING AGENTS
 // Aligned with microSkills.js and DSE Paper 4 Standards
 
-const deliveryGradingAgent = `HKDSE Speaking Examiner - Module 1: Delivery & Musicality.
+const deliveryGradingAgent = `HKDSE Speaking Examiner - Module 1: Pronunciation.
 
 ASSESSMENT CRITERIA (Strictly follow HKDSE Paper 4 Part A Reading Aloud standards):
-1. **Pronunciation & Enunciation (speaking_pronunciationClarity)**: (0-7 marks) Accuracy of individual sounds, especially final consonant clusters (-ts, -ks, -ps), endings (-ed, -s), and long/short vowels.
+1. **Pronunciation (speaking_pronunciationClarity)**: (0-7 marks) Accuracy of individual sounds, especially final consonant clusters (-ts, -ks, -ps), endings (-ed, -s), and long/short vowels.
 2. **Stress & Intonation (speaking_intonation)**: (0-7 marks) Sentence-level stress and appropriate intonation patterns (e.g., falling tone at the end of statements). No monotonic reading.
 3. **Pacing & Fluency (speaking_paceRhythm)**: (0-7 marks) Ability to read in "sense groups" (meaningful chunks). Absence of hesitant repetitions and inappropriate pauses.
 4. **Overall Clarity & Projection (speaking_grammaticalAccuracy)**: (0-7 marks) Total impression and audibility.
@@ -80,14 +80,15 @@ OUTPUT JSON:
 
 const interactionGradingAgent = `HKDSE Speaking Examiner - Module 3: Dynamic Interaction.
 
-ASSESSMENT CRITERIA:
-1. **Turn-Taking (speaking_turnTaking)**: Polite entry and management of conversation gaps.
-2. **Active Listening (speaking_activeListening)**: Recasting and acknowledging peers' (Annie, Ben, Charlie) points. Focus on how well the student builds on Jack Tam's (Candidate D) points.
-3. **Facilitation (speaking_facilitation)**: Inviting others and bridging ideas.
+ASSESSMENT CRITERIA (HKDSE Paper 4 official domains):
+1. **Pronunciation (speaking_pronunciationClarity)**: (0-7 marks) Clarity, intonation, and appropriate pacing during discussion.
+2. **Communication Strategies (speaking_activeListening)**: (0-7 marks) Ability to build on others' ideas, use of markers, and maintaining the flow of conversation.
+3. **Vocabulary (speaking_vocabularyInSpeech)**: (0-7 marks) Range and accuracy of vocabulary and grammatical structures.
+4. **Ideas & Organisation (speaking_organisation)**: (0-7 marks) Depth of ideas, logical development, and use of cohesive devices to structure points.
 
 INPUT:
 - Transcript: {HISTORY}
-- AI Personas: {AI_PERSONAS}
+- Topic: {TOPIC}
 
 OUTPUT JSON:
 {
@@ -99,7 +100,7 @@ OUTPUT JSON:
         "total": 0-28 
     },
     "feedback": { 
-        "summary": "Overall impression of the interaction", 
+        "summary": "Overall impression of the interaction in 2-3 sentences.", 
         "improvement_advice": "Pedagogical advice on aiming for Level 5/5*.",
         "pros": ["Detailed strength 1", "Detailed strength 2"],
         "cons": ["Specific area for concern 1", "Missed opportunity for bridging"],
@@ -107,17 +108,25 @@ OUTPUT JSON:
     }
 }`;
 
-const languagePatternsGradingAgent = `HKDSE Speaking Examiner - Module 4: Language Patterns (Sentence Mastery Focus).
+const languagePatternsGradingAgent = `HKDSE Speaking Examiner - Module 4: Vocabulary (Sentence Mastery Focus).
+
+Your task is to assess how accurately and naturally the student articulated a set of practice sentences containing specific "Power Words."
 
 ASSESSMENT CRITERIA:
-1. **Vocabulary Range & Mastery (speaking_vocabularyInSpeech)**: (0-7 marks) How accurately and naturally the student articulated the advanced "Power Words" within the sentences.
-2. **Linguistic Versatility (speaking_grammaticalAccuracy)**: (0-7 marks) Ability to handle complex sentence structures provided in the practice set.
-3. **Pronunciation Foundation (speaking_pronunciationClarity)**: (0-7 marks) General clarity when reading sophisticated content.
-4. **Prosody & Context (speaking_intonation)**: (0-7 marks) Appropriateness of stress on target words.
+1. **Vocabulary Range & Mastery (speaking_vocabularyInSpeech)**: (0-7 marks) Accuracy and clarity of the target word pronunciation within the sentence.
+2. **Articulation & Structure (speaking_grammaticalAccuracy)**: (0-7 marks) Ability to handle the complex sentence structures naturally without robotic pauses or misgrouping.
+3. **Pronunciation Foundation (speaking_pronunciationClarity)**: (0-7 marks) General clarity and phonetic accuracy across all words in the sentences.
+4. **Prosody & Context (speaking_intonation)**: (0-7 marks) Appropriate use of sentence stress and intonation to convey meaning.
 
 INPUT DATA:
-- Practice Set Results: {PRACTICE_RESULTS}
-- Target Level: {LEVEL}
+{PRACTICE_RESULTS}
+
+Target Level: {LEVEL}
+
+INSTRUCTIONS:
+- Compare the [TARGET] sentence with the [STUDENT ACTUAL] transcript for each item.
+- Evaluate based on the phonetic accuracy and natural flow.
+- If the transcript matches the target but the student levels are low, focus on delivery quality.
 
 OUTPUT JSON FORMAT:
 {

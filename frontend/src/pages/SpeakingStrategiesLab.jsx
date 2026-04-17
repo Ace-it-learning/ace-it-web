@@ -45,17 +45,20 @@ const SpeakingStrategiesLab = () => {
     const [chatHistory, setChatHistory] = useState([]);
     const [timeLeft, setTimeLeft] = useState(180); // 3 minutes
     const [isAITurn, setIsAITurn] = useState(false);
-    const [isThinking, setIsThinking] = useState(false);
     const [currentSpeaker, setCurrentSpeaker] = useState('Candidate_A'); // Locked to Annie
     
     // Interaction States
     const [isRecording, setIsRecording] = useState(false);
-    const [isSpeaking, setIsSpeaking] = useState(false); // For TTS
     const [recordedBlob, setRecordedBlob] = useState(null);
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [gradingResult, setGradingResult] = useState(null);
     const [voiceLevel, setVoiceLevel] = useState(0);
-    const [activeSpeechText, setActiveSpeechText] = useState("");
+    const [interimTranscript, setInterimTranscript] = useState("");
+    const [speechState, setSpeechState] = useState({ 
+        text: "", 
+        role: null, 
+        isSpeaking: false 
+    });
 
     // Refs
     const mediaRecorder = useRef(null);
@@ -65,6 +68,11 @@ const SpeakingStrategiesLab = () => {
     const animationFrame = useRef(null);
     const audioRef = useRef(null);
     const timerRef = useRef(null);
+    const recognition = useRef(null);
+    const finalTranscriptRef = useRef("");
+    const isFetchingRef = useRef({}); // Phase 48: Independent Fetching Status
+    const localTurnQueue = useRef([]); // Phase 48: Pre-fetching buffer
+    const isTurnInProgressRef = useRef(false); // Phase 48: Singleton guard
 
     const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
 
@@ -73,7 +81,9 @@ const SpeakingStrategiesLab = () => {
         const fetchQuest = async () => {
             setIsLoading(true);
             try {
-                const res = await fetch(`${API_URL}/api/speaking/quest/generate?module=interaction&level=${level}&focus=${topicId}&uid=${user?.uid || 'guest'}`);
+                const res = await fetch(`${API_URL}/api/speaking/quest/generate?module=interaction&level=${level}&focus=${topicId}&uid=${user?.uid || 'guest'}`, {
+                    signal: AbortSignal.timeout(15000)
+                });
                 if (!res.ok) throw new Error('Generation failed');
                 const data = await res.json();
                 const segment = data.segments?.[0];
@@ -93,8 +103,44 @@ const SpeakingStrategiesLab = () => {
         };
 
         fetchQuest();
+
+        // 2.a Speech Recognition Setup
+        if ('webkitSpeechRecognition' in window) {
+            const SpeechRecognition = window.webkitSpeechRecognition;
+            recognition.current = new SpeechRecognition();
+            recognition.current.continuous = true;
+            recognition.current.interimResults = true;
+            recognition.current.lang = 'en-US';
+
+            recognition.current.onresult = (event) => {
+                let interim = '';
+                let final = finalTranscriptRef.current;
+
+                for (let i = event.resultIndex; i < event.results.length; ++i) {
+                    if (event.results[i].isFinal) {
+                        final += event.results[i][0].transcript;
+                    } else {
+                        interim += event.results[i][0].transcript;
+                    }
+                }
+                finalTranscriptRef.current = final;
+                setInterimTranscript(final + interim);
+            };
+
+            recognition.current.onerror = (event) => {
+                console.error('Speech recognition error:', event.error);
+            };
+        }
+
+        // Listen for tab close/navigation to kill ghost audio
+        window.addEventListener('beforeunload', stopAllAudio);
+        window.addEventListener('pagehide', stopAllAudio);
+
         return () => {
             if (timerRef.current) clearInterval(timerRef.current);
+            if (recognition.current) recognition.current.stop();
+            window.removeEventListener('beforeunload', stopAllAudio);
+            window.removeEventListener('pagehide', stopAllAudio);
             stopAllAudio();
         };
     }, [topicId, level]);
@@ -128,29 +174,53 @@ const SpeakingStrategiesLab = () => {
     const stopAllAudio = () => {
         if (audioRef.current) {
             audioRef.current.pause();
+            // Critical loop cleanup to prevent ghost audio
+            audioRef.current.onended = null;
+            audioRef.current.onerror = null;
+            audioRef.current.src = "";
+            audioRef.current.load();
             audioRef.current = null;
         }
         if (window.speechSynthesis) {
             window.speechSynthesis.cancel();
         }
-        setIsSpeaking(false);
+        setSpeechState({ text: "", role: null, isSpeaking: false });
     };
 
     const playDirectAudio = (base64, text, role, onEnd) => {
-        if (!base64) return playAudio(text, role, onEnd);
-        
-        setIsSpeaking(true);
-        setActiveSpeechText(text);
+        // Phase 47: Fast-Path - Always use local synthesis to eliminate cloud audio lag
+        playAudio(text, role, onEnd);
+    };
 
-        const audioUrl = `data:audio/wav;base64,${base64}`;
-        const audioObj = new Audio();
-        audioObj.src = audioUrl;
-        audioObj.preload = "auto";
-        audioRef.current = audioObj;
+    const playAudio = (text, role, onEnd) => {
+        stopAllAudio();
+        const cleaned = text.replace(/^(Candidate[ _][A-D]|Examiner|Tutor):/i, "").replace(/\*.*?\*/g, "").trim();
+        setSpeechState({ text: cleaned, role, isSpeaking: true });
+
+        const utterance = new SpeechSynthesisUtterance(cleaned);
+        
+        // Priority Voice Selection (Premium Browser Voices)
+        const voices = window.speechSynthesis.getVoices();
+        const preferredVoice = voices.find(v => v.name.includes('Google UK English Female') && v.lang.startsWith('en')) || 
+                        voices.find(v => v.lang.startsWith('en-GB')) || 
+                        voices.find(v => v.lang.startsWith('en-US')) ||
+                        voices[0];
+                        
+        if (preferredVoice) utterance.voice = preferredVoice;
+        utterance.lang = 'en-GB';
+        
+        // Character Personality Adjustments
+        if (role === 'Tutor' || role === 'Examiner') {
+            utterance.pitch = 1.0;
+            utterance.rate = 0.9;
+        } else { // Annie
+            utterance.pitch = 1.05;
+            utterance.rate = 1.0;
+        }
 
         const cleanup = () => {
-            setIsSpeaking(false);
-            setActiveSpeechText("");
+            if (watchdog) clearTimeout(watchdog);
+            setSpeechState({ text: "", role: null, isSpeaking: false });
             if (onEnd) {
                 const cb = onEnd;
                 onEnd = null;
@@ -158,128 +228,73 @@ const SpeakingStrategiesLab = () => {
             }
         };
 
-        audioObj.onended = cleanup;
-        audioObj.onerror = (e) => {
-            console.error("Direct Audio playback error:", e);
+        // Network/System Watchdog (15s)
+        const watchdog = setTimeout(() => {
+            console.warn("Speech Watchdog triggered - Proceeding.");
+            cleanup();
+        }, 15000);
+
+        utterance.onend = cleanup;
+        utterance.onerror = (e) => {
+            console.error("Local Speech Error:", e);
             cleanup();
         };
 
-        const failSafe = setTimeout(() => {
-            if (audioRef.current === audioObj && isSpeaking) {
-                console.warn("Direct Audio fail-safe triggered");
-                cleanup();
-            }
-        }, 60000);
-
-        audioObj.play().catch(e => {
-            console.error("Direct Playback blocked, falling back to synthesis:", e);
-            playAudio(text, role, onEnd);
-        });
+        if (window.speechSynthesis) {
+            window.speechSynthesis.cancel();
+            window.speechSynthesis.speak(utterance);
+        } else {
+            cleanup();
+        }
     };
 
-    const playAudio = async (text, role, onEnd) => {
-        stopAllAudio();
-        setIsSpeaking(true);
-        setActiveSpeechText(text);
+    const fetchBatch = async (hintSpeaker = "Annie", userTranscript = null) => {
+        if (isFetchingRef.current[hintSpeaker]) return;
+        isFetchingRef.current[hintSpeaker] = true;
 
         try {
-            const res = await fetch(`${API_URL}/api/lab/tts`, {
+            const historyToUse = chatHistory.slice(-10);
+            const res = await fetch(`${API_URL}/api/speaking/interaction/turn`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
-                    text: text,
-                    languageCode: 'en-GB',
-                    gender: 'FEMALE',
-                    premium: true // Force Premium Multimodal Speech
-                })
+                    history: historyToUse,
+                    current_speaker: hintSpeaker,
+                    topic: questData?.scenario || questData?.scenario_intro,
+                    level: level,
+                    uid: user?.uid || 'guest',
+                    user_transcript: userTranscript,
+                    audioOutput: false,
+                    mode: 'lab'
+                }),
+                signal: AbortSignal.timeout(20000)
             });
 
-            if (!res.ok) throw new Error('TTS failed');
-            const { audio } = await res.json();
-            const audioUrl = `data:audio/wav;base64,${audio}`;
-            const audioObj = new Audio();
-            audioObj.src = audioUrl;
-            audioObj.preload = "auto"; // Pre-buffer to prevent midway stalling
-            audioRef.current = audioObj;
-            
-            const cleanup = () => {
-                if (escapeHatch) clearTimeout(escapeHatch);
-                setIsSpeaking(false);
-                setActiveSpeechText("");
-                if (onEnd) {
-                    const cb = onEnd;
-                    onEnd = null; // Prevent double trigger
-                    cb();
-                }
-            };
-
-            // HARD ESCAPE HATCH: If after 20 seconds we haven't finished, force proceed.
-            // This prevents the lab from getting stuck if anything hangs.
-            const escapeHatch = setTimeout(() => {
-                console.warn("Speech Escape Hatch triggered - moving on.");
-                cleanup();
-            }, 20000);
-
-            audioObj.onended = cleanup;
-            audioObj.onerror = (e) => {
-                console.error("Audio object error:", e);
-                cleanup();
-            };
-
-            // Standard fail-safe (for long audio)
-            const failSafe = setTimeout(() => {
-                if (audioRef.current === audioObj && isSpeaking) {
-                    console.warn("Audio fail-safe triggered");
-                    cleanup();
-                }
-            }, 60000);
-
-            try {
-                await audioObj.play();
-            } catch (playErr) {
-                console.warn("Audio play() blocked/failed, falling back to local synthesis:", playErr);
-                clearTimeout(failSafe);
-                throw playErr; // Trigger catch block fallback
+            const data = await res.json();
+            if (data.content) {
+                localTurnQueue.current.push({
+                    speaker: data.speaker || hintSpeaker,
+                    text: data.content
+                });
+                console.log(`✅ Queued turn for ${hintSpeaker}`);
             }
-        } catch (err) {
-            console.error('TTS playback error - falling back to speechSynthesis:', err);
-            const utterance = new SpeechSynthesisUtterance(text);
-            utterance.lang = 'en-GB';
-            
-            const cleanup = () => {
-                setIsSpeaking(false);
-                setActiveSpeechText("");
-                if (onEnd) {
-                    const cb = onEnd;
-                    onEnd = null;
-                    cb();
-                }
-            };
-
-            utterance.onend = cleanup;
-            utterance.onerror = (e) => {
-                console.error("SpeechSynthesis error:", e);
-                cleanup();
-            };
-
-            // Force cleanup after a while if synthesis hangs
-            setTimeout(cleanup, 15000);
-
-            if (window.speechSynthesis) {
-                window.speechSynthesis.cancel();
-                window.speechSynthesis.speak(utterance);
-            } else {
-                cleanup(); // No speech support, just move on
-            }
+        } catch (e) {
+            console.warn(`⚠️ Background fetch for ${hintSpeaker} Failed:`, e.message);
+        } finally {
+            isFetchingRef.current[hintSpeaker] = false;
         }
     };
 
     const runIntro = () => {
-        const introText = `Good afternoon. We are here to discuss "${questData?.scenario}". Annie, would you like to start?`;
+        const introText = `Good afternoon. We are here to discuss "${questData?.scenario || questData?.scenario_intro}". Annie, would you like to start?`;
+        
+        // Phase 48: Pre-fetch Annie's stimulus turn as Janie starts
+        fetchBatch("Candidate_A");
+
         playAudio(introText, 'Tutor', () => {
             setPhase('DISCUSSION');
             setTurnIndex(1);
-            triggerAITurn(true); // First turn is the pre-written stimulus
+            triggerAITurn(true); 
         });
     };
 
@@ -290,85 +305,92 @@ const SpeakingStrategiesLab = () => {
         });
     };
 
-    const triggerAITurn = async (isFirst = false, audioBlob = null) => {
+    const triggerAITurn = async (isFirst = false, audioBlob = null, userTranscript = null, manualHistory = null) => {
+        if (isTurnInProgressRef.current && !isFirst) return;
+        isTurnInProgressRef.current = true;
         setIsAITurn(true);
-        let turnText = "";
 
-        if (isFirst) {
-            turnText = questData?.stimulus;
-        } else {
-            // Latency Masking: Show a filler phrase immediately while processing
-            setIsThinking(true);
-            const randomFiller = FILLERS[Math.floor(Math.random() * FILLERS.length)];
-            setActiveSpeechText(randomFiller);
+        const target = 'Annie';
+        let turnToPlay = null;
 
-            // Fetch dynamic response from AI
-            try {
-                const formData = new FormData();
-                formData.append('history', JSON.stringify(chatHistory));
-                formData.append('current_speaker', currentSpeaker || 'Candidate_A');
-                formData.append('topic', questData?.scenario);
-                formData.append('level', level);
-                if (audioBlob) {
-                    formData.append('audio', audioBlob, 'turn.webm');
+        // Phase 48: Fast-Path - Check for pre-fetched turn first
+        if (localTurnQueue.current.length > 0) {
+            turnToPlay = localTurnQueue.current.shift();
+            console.log("🎯 Playing turn from high-speed buffer");
+        } 
+        
+        // Polling Recovery: If no turn ready yet, poll every 500ms (Max 20s)
+        if (!turnToPlay && !isFirst) {
+            let waitPoll = 0;
+            while (!turnToPlay && waitPoll < 40) {
+                if (!isFetchingRef.current[target]) {
+                    console.log("⏳ Buffer empty. Starting rescue fetch...");
+                    await fetchBatch(target, userTranscript);
                 }
-
-                const res = await fetch(`${API_URL}/api/speaking/interaction/turn`, {
-                    method: 'POST',
-                    body: formData
-                });
-                
-                const data = await res.json();
-                setIsThinking(false);
-                
-                // If there was a user transcript returned, add it to history first
-                if (data.user_transcript) {
-                    setChatHistory(prev => [...prev, { speaker: 'Student', text: data.user_transcript }]);
+                await new Promise(r => setTimeout(r, 500));
+                if (localTurnQueue.current.length > 0) {
+                    turnToPlay = localTurnQueue.current.shift();
+                    break;
                 }
-                
-                turnText = data.content || "That's an interesting point. What do the rest of you think?";
-                aiDirectAudio = data.audio; // Pre-load direct audio
-                setIsThinking(false);
-                
-                // Persona Locking: Annie only, no rotation
-                setCurrentSpeaker('Candidate_A');
-            } catch (e) {
-                console.error("AI Turn Error:", e);
-                turnText = "I agree with that. We should also consider other options.";
+                waitPoll++;
             }
         }
 
-        let aiDirectAudio = null; // Defined above for closure use
-        if (false) {} // Placeholder to keep logic clean
+        // Stimulus Handler
+        if (isFirst && !turnToPlay) {
+            turnToPlay = { text: questData?.stimulus || "Let's start the discussion." };
+        }
 
-        const currentAILabel = currentSpeaker || 'Candidate_A';
-        playAudio(turnText, currentAILabel, () => {
-            setChatHistory(prev => [...prev, { speaker: currentAILabel, text: turnText }]);
+        const turnText = turnToPlay?.text || "I see your point. Building on that, I believe we should also consider the broader implications for student development.";
+
+        // Instant Text Display
+        const currentAILabel = 'Annie';
+        setChatHistory(prev => [
+            ...prev.filter(m => m.text !== "Processing speech..."), 
+            { speaker: currentAILabel, text: turnText }
+        ]);
+
+        const onPlaybackEnd = () => {
             setIsAITurn(false);
-            
+            isTurnInProgressRef.current = false;
             if (!isFirst) {
                 setTurnIndex(prev => prev + 1);
                 if (turnIndex >= 7) {
                     setPhase('OUTRO');
                 }
             }
-        });
+        };
+
+        playAudio(turnText, currentAILabel, onPlaybackEnd);
     };
 
-    const handleUserRecordingFinished = async (blob) => {
+    const handleUserRecordingFinished = async (blob, transcription = null) => {
         setIsSubmitting(true);
         try {
-            await triggerAITurn(false, blob);
+            // Append the transcription to chat history immediately for instant visual
+            const userText = transcription || "Processing speech...";
+            const nextHistory = [...chatHistory.filter(m => m.text !== "Processing speech..."), { speaker: 'Student', text: userText }];
+            setChatHistory(nextHistory);
+            
+            // Pass the updated history directly to triggerAITurn to ENSURE context relevance
+            await triggerAITurn(false, blob, transcription, nextHistory);
         } catch (err) {
             console.error('Recording finish error:', err);
         } finally {
             setIsSubmitting(false);
             setRecordedBlob(null);
+            setInterimTranscript("");
+            finalTranscriptRef.current = "";
         }
     };
 
     const startRecording = async () => {
         if (isAITurn || phase !== 'DISCUSSION') return;
+        
+        // Phase 48: Predictive Pre-fetching (Discussion Pattern)
+        // Start 'thinking' as soon as the student opens the mic
+        fetchBatch("Candidate_A");
+
         try {
             const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
             audioContext.current = new (window.AudioContext || window.webkitAudioContext)();
@@ -396,9 +418,17 @@ const SpeakingStrategiesLab = () => {
                 stream.getTracks().forEach(t => t.stop());
                 
                 // Transcribe and continue
-                await handleUserRecordingFinished(blob);
+                const finalTranscription = (finalTranscriptRef.current + interimTranscript).trim();
+                await handleUserRecordingFinished(blob, finalTranscription);
             };
             mediaRecorder.current.start();
+            
+            if (recognition.current) {
+                finalTranscriptRef.current = "";
+                setInterimTranscript("");
+                try { recognition.current.start(); } catch (e) {} 
+            }
+            
             setIsRecording(true);
         } catch (err) {
             console.error('Record error:', err);
@@ -408,6 +438,7 @@ const SpeakingStrategiesLab = () => {
 
     const stopRecording = () => {
         if (mediaRecorder.current) mediaRecorder.current.stop();
+        if (recognition.current) recognition.current.stop();
         setIsRecording(false);
     };
 
@@ -420,6 +451,7 @@ const SpeakingStrategiesLab = () => {
             formData.append('level', level);
             formData.append('uid', user?.uid || 'guest');
             formData.append('messages', JSON.stringify(chatHistory));
+            formData.append('mode', 'lab');
 
             const res = await fetch(`${API_URL}/api/speaking/quest/submit`, {
                 method: 'POST',
@@ -474,8 +506,8 @@ const SpeakingStrategiesLab = () => {
 
                         <div className="bg-white p-8 rounded-[3rem] border border-slate-100 shadow-xl flex flex-col items-center justify-center min-w-[220px] relative overflow-hidden group">
                            <div className="absolute top-0 left-0 w-full h-2 bg-indigo-600" />
-                            <div className="text-7xl font-black text-indigo-600 mb-1 group-hover:scale-110 transition-transform duration-500">Level {getLevel(totalScore)}</div>
-                            <div className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">Predicted Grade ({totalScore}/28)</div>
+                            <div className="text-7xl font-black text-indigo-600 mb-1 group-hover:scale-110 transition-transform duration-500">{getLevel(totalScore)}</div>
+                            <div className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">Predicted DSE Grade ({totalScore}/28)</div>
                         </div>
                     </div>
                 </div>
@@ -646,7 +678,29 @@ const SpeakingStrategiesLab = () => {
                     </div>
                 </div>
 
-                {/* Tutor Overlay/Phase Indicator (Moved to Top) */}
+                {/* 2. Goal Card (Horizontal & Compact) */}
+                <AnimatePresence mode="wait">
+                    {phase !== 'REVIEW' && (
+                        <motion.div 
+                            initial={{ opacity: 0, y: 10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, height: 0 }}
+                            className="bg-gradient-to-r from-indigo-600 to-violet-600 rounded-[2.5rem] p-6 text-white shadow-2xl overflow-hidden relative"
+                        >
+                            <div className="relative z-10 flex flex-row items-center gap-6">
+                                <div className="bg-white/10 backdrop-blur-md p-4 rounded-2xl border border-white/20 flex-shrink-0">
+                                    <Brain className="w-6 h-6 text-indigo-100" />
+                                </div>
+                                <div className="flex-1 min-w-0">
+                                    <h2 className="text-[10px] font-black uppercase tracking-[0.2em] text-indigo-100 mb-0.5">Pedagogical Goal</h2>
+                                    <p className="text-xl font-black leading-tight whitespace-nowrap overflow-hidden text-ellipsis">{questData?.strategy_goal}</p>
+                                </div>
+                            </div>
+                        </motion.div>
+                    )}
+                </AnimatePresence>
+
+                {/* Tutor Overlay/Phase Indicator (Moved down) */}
                 <AnimatePresence>
                     {(phase === 'INTRO' || phase === 'OUTRO') && (
                         <motion.div 
@@ -660,29 +714,7 @@ const SpeakingStrategiesLab = () => {
                             </div>
                             <div className="flex-1">
                                 <h4 className="text-sm font-black text-indigo-400 uppercase tracking-widest">{activeAgent.name}</h4>
-                                <p className="text-lg font-bold leading-tight">{activeSpeechText}</p>
-                            </div>
-                        </motion.div>
-                    )}
-                </AnimatePresence>
-
-                {/* 2. Goal Card */}
-                <AnimatePresence>
-                    {phase !== 'REVIEW' && (
-                        <motion.div 
-                            initial={{ opacity: 0, y: 10 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, height: 0 }}
-                            className="bg-gradient-to-r from-indigo-600 to-violet-600 rounded-[2.5rem] p-8 text-white shadow-2xl overflow-hidden relative"
-                        >
-                            <div className="relative z-10 flex flex-col md:flex-row items-center gap-6">
-                                <div className="bg-white/10 backdrop-blur-md p-5 rounded-2xl border border-white/20">
-                                    <Brain className="w-8 h-8 text-indigo-100" />
-                                </div>
-                                <div className="flex-1">
-                                    <h2 className="text-[10px] font-black uppercase tracking-[0.2em] text-indigo-100 mb-1">Pedagogical Goal</h2>
-                                    <p className="text-2xl font-black leading-tight max-w-2xl">{questData?.strategy_goal}</p>
-                                </div>
+                                <p className="text-lg font-bold leading-tight">{speechState.text}</p>
                             </div>
                         </motion.div>
                     )}
@@ -693,34 +725,34 @@ const SpeakingStrategiesLab = () => {
                     <div className="flex flex-col gap-4">
                         <motion.div 
                             initial={false}
-                            animate={{ scale: isAITurn ? 1.02 : 1 }}
-                            className={`bg-white rounded-[2.5rem] p-8 border-2 transition-all duration-500 overflow-hidden relative flex-1 ${isAITurn ? 'border-indigo-600 shadow-2xl' : 'border-slate-100 shadow-xl'}`}
+                            animate={{ scale: speechState.isSpeaking && speechState.role !== 'Tutor' ? 1.02 : 1 }}
+                            className={`bg-white rounded-[2.5rem] p-8 border-2 transition-all duration-500 overflow-hidden relative flex-1 ${speechState.isSpeaking && speechState.role !== 'Tutor' ? 'border-indigo-600 shadow-2xl' : 'border-slate-100 shadow-xl'}`}
                         >
                             <div className="flex items-center gap-4 mb-6">
-                                <div className="size-14 rounded-2xl bg-slate-100 flex items-center justify-center overflow-hidden border border-slate-200">
+                                <div className="size-14 rounded-2xl bg-white flex items-center justify-center overflow-hidden border border-slate-200">
                                     <img 
-                                        src={`https://api.dicebear.com/7.x/avataaars/svg?seed=${currentSpeaker || 'Candidate_A'}`} 
-                                        alt={currentSpeaker} 
+                                        src="/avatars/annie_avatar_1774534170846.png" 
+                                        alt="Annie" 
                                         className="size-full object-cover" 
                                     />
                                 </div>
                                 <div>
                                     <h3 className="font-black text-slate-800">
-                                        {currentSpeaker?.replace('_', ' ') || 'Candidate A'}
+                                        {currentSpeaker === 'Candidate_A' ? 'Annie' : (currentSpeaker?.replace('_', ' ') || 'Annie')}
                                     </h3>
-                                    <p className="text-xs font-bold text-slate-400">Current Partner</p>
+                                    <p className="text-xs font-bold text-slate-400">Practice buddy</p>
                                 </div>
-                                {isAITurn && (
-                                    <div className="ml-auto flex items-center gap-2 px-3 py-1 bg-indigo-100 text-indigo-600 rounded-lg text-[10px] font-black uppercase">
-                                        <div className="w-1.5 h-1.5 bg-indigo-600 rounded-full animate-pulse"></div>
-                                        {isThinking ? "Thinking..." : "Speaking"}
+                                 {isAITurn && speechState.isSpeaking && speechState.role !== 'Tutor' && (
+                                    <div className="ml-auto flex items-center gap-2 px-3 py-1 bg-emerald-100 text-emerald-600 rounded-lg text-[10px] font-black uppercase">
+                                        <div className="w-1.5 h-1.5 bg-emerald-600 rounded-full animate-pulse"></div>
+                                        Speaking
                                     </div>
                                 )}
                             </div>
 
                             <div className="min-h-[120px] bg-slate-50 rounded-3xl p-6 relative">
-                                <p className={`text-lg font-bold leading-relaxed transition-all duration-700 ${!isSpeaking && !activeSpeechText ? 'text-slate-400 italic' : 'text-slate-700'}`}>
-                                    {activeSpeechText || (chatHistory.filter(m => m.speaker === (currentSpeaker || 'Candidate_A')).pop()?.text || "Waiting to start...") }
+                                 <p className={`text-lg font-bold leading-relaxed transition-all duration-700 ${!speechState.isSpeaking ? 'text-slate-400 italic' : 'text-slate-700'}`}>
+                                    {(speechState.isSpeaking && speechState.role !== 'Tutor') ? speechState.text : (chatHistory.filter(m => m.speaker === (currentSpeaker || 'Candidate_A')).pop()?.text || "") }
                                 </p>
                             </div>
                         </motion.div>
@@ -748,7 +780,7 @@ const SpeakingStrategiesLab = () => {
                                 </div>
                                 <div>
                                     <h3 className="font-black text-slate-800">{user?.displayName || "You"}</h3>
-                                    <p className="text-xs font-bold text-slate-400">Student Identity (Candidate D)</p>
+                                    <p className="text-xs font-bold text-slate-400">Interaction Partner (Student)</p>
                                 </div>
                             </div>
 
@@ -759,18 +791,22 @@ const SpeakingStrategiesLab = () => {
                                             <div className="w-full">
                                                 <SpeakingWaveform isRecording={isRecording} />
                                             </div>
+                                            <div className="w-full px-4 py-3 bg-white/50 backdrop-blur-sm rounded-2xl border border-emerald-200">
+                                                <p className="text-sm font-bold text-slate-700 leading-relaxed text-center">
+                                                    {interimTranscript || "Listening to your point..."}
+                                                </p>
+                                            </div>
                                             <button 
                                                 onClick={stopRecording}
                                                 className="size-16 bg-red-500 text-white rounded-full flex items-center justify-center shadow-xl shadow-red-100 hover:scale-110 active:scale-95 transition-all"
                                             >
                                                 <Square className="fill-current w-6 h-6" />
                                             </button>
-                                            <span className="text-[10px] font-black uppercase text-red-500 animate-pulse tracking-widest">Recording...</span>
                                         </>
                                     ) : isSubmitting ? (
                                         <>
                                             <Loader2 className="w-10 h-10 text-indigo-600 animate-spin" />
-                                            <p className="text-xs font-black uppercase text-slate-400 tracking-widest">Processing response...</p>
+                                            <p className="text-xs font-black uppercase text-indigo-600 tracking-widest animate-pulse">Annie is thinking...</p>
                                         </>
                                     ) : (
                                         <>
@@ -782,7 +818,7 @@ const SpeakingStrategiesLab = () => {
                                                 <Mic className="w-8 h-8" />
                                             </button>
                                             <span className="text-xs font-black uppercase text-slate-400 tracking-widest">
-                                                {isAITurn ? 'Waiting for Candidate A...' : (phase === 'DISCUSSION' ? 'Click to speak' : 'Press Start to begin')}
+                                                {isAITurn ? 'Annie is speaking' : (phase === 'DISCUSSION' ? 'Click to speak' : 'Press Start to begin')}
                                             </span>
                                         </>
                                     )}

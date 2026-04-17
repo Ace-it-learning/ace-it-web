@@ -498,7 +498,7 @@ const ChatInterface = ({ onOpenQuest }) => {
                         audio: base64Audio,
                         audioType: 'audio/webm',
                         agentId: activeAgentId,
-                        outputLanguage: chatLanguage,
+                        outputLanguage: language,
                         history: messages.map(m => ({ role: m.role === 'user' ? 'user' : 'model', parts: [{ text: m.content }] }))
                     })
                 });

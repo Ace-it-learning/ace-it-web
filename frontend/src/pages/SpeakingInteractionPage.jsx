@@ -2,7 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useLocation, useNavigate, useSearchParams } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { AGENTS, useAvatar } from '../context/AvatarContext';
-import { Loader2, Zap, ShieldCheck } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Loader2, Zap, ShieldCheck, Target, AlertTriangle, MessageSquare, RotateCcw, ArrowRight, CheckCircle2, Award, Clock } from 'lucide-react';
 import MockCountdownTimer from '../components/utils/MockCountdownTimer';
 
 const SpeakingInteractionPage = () => {
@@ -61,8 +62,22 @@ const SpeakingInteractionPage = () => {
     // Quest: Airtime Tracking
     const [airtime, setAirtime] = useState({ 'You': 0, 'Candidate_A': 0, 'Candidate_B': 0, 'Candidate_C': 0 });
     const [gradingResult, setGradingResult] = useState(null);
+
+    // DSE Level Mapping
+    const getDSELevel = (s) => {
+        if (s >= 26) return "5**";
+        if (s >= 23) return "5*";
+        if (s >= 21) return "5";
+        if (s >= 18) return "4";
+        if (s >= 15) return "3";
+        if (s >= 12) return "2";
+        return "1";
+    };
+
     const [isSubmitting, setIsSubmitting] = useState(false);
+    const [isGrading, setIsGrading] = useState(false);
     const [activeSpeechText, setActiveSpeechText] = useState("");
+    const [activeSubtitle, setActiveSubtitle] = useState(""); // [NEW] Dedicated AI subtitle state
     const [isThinkingAI, setIsThinkingAI] = useState(false);
     const hasStartedRef = useRef(false);
 
@@ -75,10 +90,10 @@ const SpeakingInteractionPage = () => {
     });
     const candidateDisplayNames = {
         Examiner: agentName,
-        Candidate_A: "Annie",
-        Candidate_B: "Ben",
-        Candidate_C: "Charlie",
-        You: "You"
+        Candidate_A: "Candidate A: Annie",
+        Candidate_B: "Candidate B: Ben",
+        Candidate_C: "Candidate C: Charlie",
+        You: "Candidate D: You"
     };
 
     // Refs
@@ -105,6 +120,11 @@ const SpeakingInteractionPage = () => {
     const isInternalTransition = useRef(false); // Locking ref to prevent race conditions
     const lastSpeakerRef = useRef(null);
     const speakerActivityRef = useRef(Date.now()); // Tracking timestamp of speaker state changes
+    const statusRef = useRef(status); // Phase 42: Sync status tracking
+    const activeTurnLoopId = useRef(0); // Phase 43: Concurrency protection
+    const interactionIndexRef = useRef(0); // [NEW] Track sequence (A, B, C, You) reliably
+    const isTurnInProgressRef = useRef(false); // [NEW] Singleton turn guard
+    const isFetchingRef = useRef({}); // [NEW] Track per-speaker fetching status
 
     const isMock = location.state?.isMock || false;
     const duration = location.state?.duration || 0;
@@ -145,9 +165,8 @@ const SpeakingInteractionPage = () => {
         // Reset airtime
         setAirtime({ 'You': 0, 'Candidate_A': 0, 'Candidate_B': 0, 'Candidate_C': 0 });
 
-        // Phase 19: Pre-fetch first batch during PREP phase to reduce latency
-        // Pass a "pre-warmed" hint to avoid the null examData crash
-        fetchBatch("Candidate_A");
+        // Phase 46: Instant Annie - Pre-fetch immediately on page load
+        setTimeout(() => fetchBatch("Candidate_A"), 100);
     }, [roadmapTopic, taskId]);
 
     // Airtime Ticker
@@ -199,29 +218,42 @@ const SpeakingInteractionPage = () => {
         }, 10000);
         return () => {
             clearInterval(resumeInterval);
-            if (window.speechSynthesis) window.speechSynthesis.cancel();
+            if (window.speechSynthesis) {
+                console.log("[SpeakingInteraction] Page Leave: Cancelling all speech...");
+                window.speechSynthesis.cancel();
+            }
         };
     }, []);
+
+    // Phase 42: Sync statusRef with status state
+    useEffect(() => {
+        statusRef.current = status;
+    }, [status]);
 
     // 4. Watchdog
     useEffect(() => {
         if (status !== 'DISCUSSION') return;
-        const watchdog = setInterval(() => {
-            const now = Date.now();
-            const lastActivity = window.lastSpeakingActivity || now;
-            const silenceDuration = now - lastActivity;
+    const watchdog = setInterval(() => {
+        const now = Date.now();
+        const lastActivity = window.lastSpeakingActivity || now;
+        const silenceDuration = now - lastActivity;
 
-            // Dead Air Detection
-            if (!currentSpeaker && !isUserTurn && !micActive && !isQueued.current && !activeUtterance.current) {
-                const hangThreshold = 10000; // Reduced from 15s to 10s for better pace
-                if (silenceDuration > hangThreshold) {
-                    addLog(`🚨 System Hang Guard: Restarting flow...`);
-                    const pick = ["Candidate_A", "Candidate_B", "Candidate_C"][Math.floor(Math.random() * 3)];
-                    isFetchingAI.current = false;
-                    triggerAITurn(pick);
-                    window.lastSpeakingActivity = Date.now();
-                }
+        // Dead Air Detection
+        if (!currentSpeaker && !isUserTurn && !micActive && !isQueued.current && !activeUtterance.current) {
+            const hangThreshold = 10000; // 10s for better pace
+            if (silenceDuration > hangThreshold && statusRef.current === 'DISCUSSION') {
+                addLog(`🚨 System Hang Guard: FORCING lock reset...`);
+                // Force Reset all locks
+                isTurnInProgressRef.current = false;
+                isTransitioning.current = false;
+                isFetchingAI.current = false;
+                window.speechSynthesis?.cancel();
+
+                const pick = ["Candidate_A", "Candidate_B", "Candidate_C"][Math.floor(Math.random() * 3)];
+                triggerAITurn(pick);
+                window.lastSpeakingActivity = Date.now();
             }
+        }
             // User Silence / Proactive Examiner Prompt
             else if (isUserTurn && !micActive && !activeUtterance.current) {
                 const idleThreshold = 12000; // 12 seconds silence
@@ -262,24 +294,28 @@ const SpeakingInteractionPage = () => {
                         window.lastSpeakingActivity = Date.now();
                     }
                 } else {
-                    // Phase 30: Increase threshold to 45s for long DSE turns
-                    const stuckThreshold = activeUtterance.current ? 45000 : 8000;
-                    if (silenceDuration > stuckThreshold && !isFetchingAI.current) {
-                        addLog(`🚨 Speaker Stuck Guard (45s): Force-ending ${currentSpeaker}`);
-                        setCurrentSpeaker(null);
-                        activeUtterance.current = null;
-                        isTransitioning.current = false;
-                        if (window.speechSynthesis) window.speechSynthesis.cancel();
-                        window.lastSpeakingActivity = Date.now();
-                    }
+                const stuckThreshold = activeUtterance.current ? 45000 : 15000; // Increased from 8s to 15s to be more patient
+                if (silenceDuration > stuckThreshold && !isFetchingAI.current) {
+                    addLog(`🚨 Speaker Stuck Guard (${stuckThreshold/1000}s): Force-ending ${currentSpeaker}`);
+                    setCurrentSpeaker(null);
+                    activeUtterance.current = null;
+                    setActiveSubtitle(""); // Clear subtitle only on force reset
+                    isTransitioning.current = false;
+                    isTurnInProgressRef.current = false; // Phase 48: Reset lock to recover
+                    if (window.speechSynthesis) window.speechSynthesis.cancel();
+                    window.lastSpeakingActivity = Date.now();
+                }
                 }
             }
-            // Phase 31: Stuck Queue Guard
-            // No speaker, no mic, but items in queue and no active transition/fetch
-            else if (!currentSpeaker && !isUserTurn && !micActive && !isFetchingAI.current && localTurnQueue.current.length > 0 && !activeUtterance.current && !isInternalTransition.current) {
-                if (silenceDuration > 3000) {
-                    addLog("🚨 Stuck queue recovery: Forcing triggerAITurn...");
-                    triggerAITurn();
+            // Phase 31 & 48: Stuck Queue or Empty Discussion Guard
+            // If no activity for 8s and it's discussion time, force a new trigger
+            else if (!isUserTurn && !micActive && !isFetchingAI.current && !activeUtterance.current && !isInternalTransition.current) {
+                const idleThreshold = localTurnQueue.current.length > 0 ? 3000 : 8000;
+                if (silenceDuration > idleThreshold && status === 'DISCUSSION') {
+                    addLog(`🌀 Loop Recovery: Jumpstarting discussion after ${idleThreshold}ms idle...`);
+                    isTurnInProgressRef.current = false; // Force clear
+                    isTransitioning.current = false;
+                    triggerAITurn(null, null, activeTurnLoopId.current);
                     window.lastSpeakingActivity = Date.now();
                 }
             }
@@ -294,7 +330,8 @@ const SpeakingInteractionPage = () => {
             return () => clearInterval(timer);
         } else if (timeLeft === 0) {
             if (status === 'PREP') startDiscussion();
-            if (status === 'DISCUSSION') endDiscussion();
+            else if (status === 'DISCUSSION') endDiscussion();
+            else if (status === 'INDIVIDUAL') concludeSession();
         }
     }, [timeLeft, status]);
 
@@ -342,118 +379,113 @@ const SpeakingInteractionPage = () => {
                         r.stop();
                         handleUserSpeech(totalSpeech);
                     }
-                }, 1800); // 1.8s silence (native VAD)
+                }, 1200); // Phase 47: Reduced to 1.2s for snappier VAD
             };
             recognition.current = r;
         }
+
+        return () => {
+            if (recognition.current) {
+                console.log("[SpeakingInteraction] Page Leave: Stopping speech recognition...");
+                try {
+                    recognition.current.stop();
+                    recognition.current.onend = null; // Prevent trigger onEnd state changes
+                } catch (e) {
+                    console.warn("Recognition cleanup failed", e);
+                }
+            }
+        };
     }, []);
 
-    // Helper: Get Voice
+    // Helper: Get Premium Browser Voice
     const getVoice = (role) => {
         if (!voices || voices.length === 0) return null;
 
-        // Filter for English voices, prioritizing high-quality ones
+        // Phase 47: Target Premium "Natural" or "Google" voices
         const englishVoices = voices.filter(v =>
             v.lang.toLowerCase().startsWith('en')
         ).sort((a, b) => {
-            // Prefer "Google" voices as they are usually more stable in Chrome
-            const aIsGoogle = a.name.toLowerCase().includes('google');
-            const bIsGoogle = b.name.toLowerCase().includes('google');
+            const aName = a.name.toLowerCase();
+            const bName = b.name.toLowerCase();
+            
+            // Priority 1: "Natural" voices (best quality)
+            const aIsNatural = aName.includes('natural');
+            const bIsNatural = bName.includes('natural');
+            if (aIsNatural && !bIsNatural) return -1;
+            if (!aIsNatural && bIsNatural) return 1;
+
+            // Priority 2: "Google" voices (stable in Chrome)
+            const aIsGoogle = aName.includes('google');
+            const bIsGoogle = bName.includes('google');
             if (aIsGoogle && !bIsGoogle) return -1;
             if (!aIsGoogle && bIsGoogle) return 1;
+
             return 0;
         });
 
         const pool = englishVoices.length > 0 ? englishVoices : voices;
 
-        const find = (langCode, nameInclude = "", gender = "") => {
+        const find = (keywords, gender = "") => {
             return pool.find(v => {
-                const matchesLang = v.lang.toLowerCase().includes(langCode.toLowerCase());
-                const matchesName = !nameInclude || v.name.toLowerCase().includes(nameInclude.toLowerCase());
-
-                // Stricter Gender Matching: Avoid 'female' in name if 'male' is requested
                 const nameLower = v.name.toLowerCase();
-                const maleKeywords = /male|man|boy|daniel|david|alex|fred|thomas|mark|daniel|james|oliver|harry/i;
-                const femaleKeywords = /female|woman|girl|samantha|victoria|moira|veena|zira|susan|mary/i;
-
-                let matchesGender = true;
+                const matchesKeyword = keywords.some(k => nameLower.includes(k.toLowerCase()));
+                
                 if (gender === 'Female') {
-                    matchesGender = femaleKeywords.test(nameLower) && !maleKeywords.test(nameLower);
+                    const femaleKeywords = /female|woman|girl|samantha|victoria|moira|veena|zira|susan|mary|aria/i;
+                    const maleKeywords = /male|man|boy|david|alex|guy/i;
+                    if (!femaleKeywords.test(nameLower) || maleKeywords.test(nameLower)) return false;
                 } else if (gender === 'Male') {
-                    matchesGender = maleKeywords.test(nameLower) && !femaleKeywords.test(nameLower);
+                    const maleKeywords = /male|man|boy|david|alex|guy|daniel|james|oliver|harry/i;
+                    const femaleKeywords = /female|woman|girl|samantha/i;
+                    if (!maleKeywords.test(nameLower) || femaleKeywords.test(nameLower)) return false;
                 }
 
-                return matchesLang && matchesName && matchesGender;
+                return matchesKeyword;
             });
         };
 
-        const safeVoice = find('Google US English') || find('en-US') || pool[0];
-        const fallback = safeVoice;
-
         if (role === 'Examiner') {
-            // Examiner: Mature, formal (Female)
-            return find('en-GB', '', 'Female') || find('en-US', 'Samantha') || fallback;
+            return find(['Google US English', 'Samantha', 'Aria'], 'Female') || pool[0];
         }
-        if (role === 'Candidate_A') {
-            // Annie: Confident (Female)
-            return find('en-GB', '', 'Female') || find('en-US', 'Zira') || fallback;
+        if (role === 'Candidate_A') { // Annie: Confident Female
+            return find(['Google UK English Female', 'English United Kingdom', 'Victoria', 'Moira'], 'Female') || pool[0];
         }
-        if (role === 'Candidate_B') {
-            // Ben: Competent (Male)
-            return find('en-GB', '', 'Male') || find('en-US', 'David') || find('en-US', 'James') || find('', '', 'Male') || fallback;
+        if (role === 'Candidate_B') { // Ben: Competent Male
+            return find(['Google US English Male', 'English United States', 'David', 'Guy', 'Alex'], 'Male') || pool[1] || pool[0];
         }
-        if (role === 'Candidate_C') {
-            // Charlie: Hesitant (Male)
-            return find('en-HK', '', 'Male') || find('en-US', 'Daniel') || find('en-GB', 'Harry') || find('', '', 'Male') || fallback;
+        if (role === 'Candidate_C') { // Charlie: Hesitant Male
+            return find(['en-HK', 'Microsoft Daniel', 'Daniel', 'English Australia'], 'Male') || pool[2] || pool[0];
         }
 
-        return fallback;
+        return pool[0];
     };
 
     const cleanText = (text) => {
         if (!text) return "";
-        // Remove "Candidate A:", "Candidate_A:", "Examiner:", etc.
-        return text.replace(/^(Candidate[ _][A-D]|Examiner):/i, "").replace(/\*.*?\*/g, "").trim();
+        return text
+            .replace(/^(Candidate[ _][A-D]|Examiner):/i, "") // Clear prefixes
+            .replace(/\*.*?\*/g, "") // Clear markdown italics
+            .replace(/([A-Z][a-z]+)_([A-D])/g, "$1 $2") // Phase 48: Fix "Candidate_D" -> "Candidate D" for TTS
+            .trim();
     };
 
     const playDirectAudio = (base64, text, role, onEnd) => {
-        if (!base64) return playSpeech(role, text, onEnd);
+        // Phase 47: Fast Path - Redirect to Browser TTS instantly to eliminate server rendering lag
+        addLog(`⚡ Fast-path triggered for ${role}`);
+        playSpeech(role, text, onEnd);
+    };
 
-        const cleaned = cleanText(text);
-        setActiveSpeechText(cleaned);
-        addLog(`🗣️ [Direct Audio][${role}]: ${cleaned.substring(0, 30)}...`);
-        setTranscript(prev => [...prev, { role, text: cleaned }]);
-
-        const audioUrl = `data:audio/wav;base64,${base64}`;
-        const audioObj = new Audio();
-        audioObj.src = audioUrl;
-        audioObj.preload = "auto"; // Ensure full buffer for stability
-        activeUtterance.current = audioObj;
-
-        const cleanup = () => {
-            // Phase 41: Persistent Script - Don't clear text immediately
-            // setActiveSpeechText("");
-            isTransitioning.current = false;
-            activeUtterance.current = null;
-            if (onEnd) onEnd();
-        };
-
-        audioObj.onended = cleanup;
-        audioObj.onerror = (e) => {
-            console.error("Direct Audio playback error:", e);
-            cleanup();
-        };
-
-        audioObj.play().then(() => {
-            speakerActivityRef.current = Date.now();
-        }).catch(err => {
-            console.warn("Direct play failed, falling back to speech synthesis:", err);
-            playSpeech(role, text, onEnd);
-        });
+    const cleanAIText = (text) => {
+        if (!text) return "";
+        return text
+            .replace(/{USER_LABEL}/g, "Candidate D")
+            .replace(/{Student}/g, "Candidate D")
+            .replace(/Candidate_D/g, "Candidate D")
+            .replace(/{{[^{}]+}}/g, ""); // Remove any other curly-brace placeholders
     };
 
     const playSpeech = (role, text, onEnd) => {
-        const cleaned = cleanText(text);
+        const cleaned = cleanText(cleanAIText(text));
         if (!cleaned) {
             if (onEnd) onEnd();
             return;
@@ -470,12 +502,11 @@ const SpeakingInteractionPage = () => {
             if (currentChunkIndex >= chunks.length) {
                 // Done with all chunks
                 setTimeout(() => {
-                    // Phase 41: Persistent Script - Don't clear text immediately
-                    // setActiveSpeechText("");
                     isTransitioning.current = false;
-                    activeUtterance.current = null; // Critical Fix: Clear utterance to prevent dead air
+                    activeUtterance.current = null;
+                    setActiveSubtitle(""); // Phase 48: Ensure subtitle clears when Examiner/Candidate stops
                     if (onEnd) onEnd();
-                }, 500);
+                }, 100); // Phase 47: Reduced from 500ms
                 return;
             }
 
@@ -487,24 +518,60 @@ const SpeakingInteractionPage = () => {
             }
 
             // Phase 40: Maintain full text in the script box for Candidates A, B, C
-            setActiveSpeechText(cleaned);
+            setActiveSubtitle(cleaned); 
             const u = new SpeechSynthesisUtterance(chunkText);
             activeUtterance.current = u;
+            
+            // Phase 48: Character Voice Profiling
             const voice = getVoice(role);
             if (voice) u.voice = voice;
-            u.pitch = role === 'Examiner' ? 0.9 : 1.0;
-            u.rate = role === 'Candidate_C' ? 0.9 : 1.0;
 
-            u.onend = () => {
+            if (role === 'Candidate_A') {
+                u.pitch = 1.1; 
+                u.rate = 1.15;
+            } else if (role === 'Candidate_B') {
+                u.pitch = 1.0; 
+                u.rate = 1.05;
+            } else if (role === 'Candidate_C') {
+                u.pitch = 0.9; 
+                u.rate = 0.98;
+            } else {
+                u.pitch = 1.0;
+                u.rate = 1.0;
+            }
+
+            let chunkFinished = false;
+            const finalizeChunk = () => {
+                if (chunkFinished) return;
+                chunkFinished = true;
                 currentChunkIndex++;
                 speakNextChunk();
             };
+            u.onend = finalizeChunk;
 
             u.onerror = (e) => {
                 console.error("TTS Chunk Error", e);
-                currentChunkIndex++;
-                speakNextChunk();
+                finalizeChunk();
             };
+
+            // Safety Net: 1s per word + 5s buffer
+            const wordCount = chunkText.split(/\s+/).length;
+            const safetyDuration = (wordCount * 1000) + 5000;
+            const chunkTimer = setTimeout(() => {
+                if (!chunkFinished) {
+                    addLog(`⏱️ TTS Safety Net triggered for ${role}`);
+                    finalizeChunk();
+                }
+            }, safetyDuration);
+
+            // Clear timer on completion
+            const originalFinalize = finalizeChunk;
+            const wrappedFinalize = () => {
+                clearTimeout(chunkTimer);
+                originalFinalize();
+            };
+            u.onend = wrappedFinalize;
+            u.onerror = wrappedFinalize;
 
             window.speechSynthesis.speak(u);
             speakerActivityRef.current = Date.now();
@@ -542,46 +609,39 @@ const SpeakingInteractionPage = () => {
         if (userSilenceTimer.current) clearTimeout(userSilenceTimer.current);
         userSilenceTimer.current = null;
 
-        // Reset user state
+        // Phase 43: Hard reset of all transition flags to prevent "Stunned" AI
+        addLog("🛑 User turn ended. Resetting speech flags...");
         setMicActive(false);
         setIsUserTurn(false);
         isUserTurnRef.current = false;
+        isTransitioning.current = false; 
+        activeUtterance.current = null;
+        isTurnInProgressRef.current = false; // Phase 48: Essential reset to allow AI to continue
+        localTurnQueue.current = []; // CLEAR QUEUE for fresh context relevance
         
         const cleaned = (text || "").trim();
         if (cleaned) {
             setActiveSpeechText(cleaned); // Show the final text the user said
-        }
-        if (!cleaned) {
-            addLog("⚠️ Speech empty. Waiting for user to click SPEAK again or AI to take initiative.");
-            // If user stays silent, wait 2s then AI might take over
-            setTimeout(() => {
-                if (!isUserTurnRef.current && !activeUtterance.current && status === 'DISCUSSION') {
-                    addLog("🎲 AI taking initiative due to silence...");
-                    triggerAITurn();
-                }
-            }, 3000);
-            return;
-        }
+            addLog(`🎙️ User said: "${cleaned.substring(0, 20)}..."`);
+            setTranscript(prev => [...prev, { role: "You", text: cleaned }]);
+            chatHistory.current.push({ role: "user", text: cleaned });
+            fetchBatchInBackground(); // Pre-fetch AI response to ensure queue has content
 
-        addLog(`🎙️ User said: "${cleaned.substring(0, 20)}..."`);
-        setTranscript(prev => [...prev, { role: "You", text: cleaned }]);
-        chatHistory.current.push({ role: "user", text: cleaned });
-        fetchBatchInBackground(); // Pre-fetch AI response to ensure queue has content
+            // Substantial turns invalidate the pre-fetched queue
+            if (cleaned.length > 20) {
+                addLog("🧠 Context changed. Fetching fresh responses...");
+                localTurnQueue.current = [];
+            }
 
-        // Substantial turns invalidate the pre-fetched queue
-        if (cleaned.length > 20) {
-            addLog("🧠 Context changed. Fetching fresh responses...");
-            localTurnQueue.current = [];
+            if (status === 'INDIVIDUAL') {
+                playSpeech("Examiner", "Thank you. That is the end of the individual response.", () => setStatus('FINISHED'));
+                return;
+            }
+
+            // Start turn detection loop
+            addLog("🎲 Passing floor to AI candidates...");
+            triggerAITurn();
         }
-
-        if (status === 'INDIVIDUAL') {
-            playSpeech("Examiner", "Thank you. That is the end of the individual response.", () => setStatus('FINISHED'));
-            return;
-        }
-
-        // Start turn detection loop
-        addLog("🎲 Passing floor to AI candidates...");
-        triggerAITurn();
         
         // Final cleanup for user turn
         setCurrentSpeaker(null);
@@ -651,29 +711,34 @@ const SpeakingInteractionPage = () => {
         lastSpeakerRef.current = turn.speaker;
         setActiveSpeechText(turn.content); // Immediate set to prevent flickering placeholder
 
+        // Phase 48: Context Sync - Push to history IMMEDIATELY so background fetches (buffering) know what happened
+        const cleanTurnEntry = { role: turn.speaker, text: turn.content, audio: null };
+        chatHistory.current.push(cleanTurnEntry);
+        setTranscript(prev => [...prev.slice(-15), { role: turn.speaker, text: turn.content }]);
+
         // Use Direct Audio if provided, otherwise fallback to standard TTS
         const playbackMethod = turn.audio ? playDirectAudio : playSpeech;
         addLog(`⚡ Starting playback using ${turn.audio ? 'Direct Multimodal' : 'Fallback TTS'}`);
 
-        // Proactive Buffering: Fetch the NEXT turn while this one is playing
-        if (localTurnQueue.current.length < 2) {
-            setTimeout(() => fetchBatchInBackground(), 500);
+        // Proactive Buffering: Predict and fetch the NEXT speaker while current one is speaking
+        if (localTurnQueue.current.length < 1) {
+            const turnOrder = ["Candidate_A", "Candidate_B", "Candidate_C"];
+            const currentIdx = turnOrder.indexOf(turn.speaker);
+            const nextTarget = (currentIdx !== -1) ? turnOrder[(currentIdx + 1) % 3] : "Candidate_A";
+            
+            setTimeout(() => {
+                if (statusRef.current === 'DISCUSSION') {
+                    addLog(`🧠 Pre-fetching turn for ${nextTarget} in background...`);
+                    fetchBatch(nextTarget);
+                }
+            }, 500);
         }
 
         // playDirectAudio takes (base64, text, role, onEnd)
-        // playSpeech takes (role, text, onEnd)
-        const play = () => {
-            if (turn.audio) {
-                playDirectAudio(turn.audio, turn.content, turn.speaker, finalize);
-            } else {
-                playSpeech(turn.speaker, turn.content, finalize);
-            }
-        };
-
         const finalize = () => {
             setCurrentSpeaker(null);
-            chatHistory.current.push({ role: turn.speaker, text: turn.content });
-
+            setActiveSubtitle(""); // Clear subtitle explicitly when the FULL turn is done
+            
             if (isQueued.current) {
                 isQueued.current = false;
                 setIsQueuedState(false);
@@ -682,13 +747,40 @@ const SpeakingInteractionPage = () => {
                 return;
             }
 
+            // Phase 46: Advanced Pre-fetching - Trigger NEXT speaker immediately
+            const turnOrder = ["Candidate_A", "Candidate_B", "Candidate_C"];
+            const currentIdx = turnOrder.indexOf(turn.speaker);
+            if (currentIdx !== -1) {
+                const nextTarget = turnOrder[(currentIdx + 1) % 3];
+                // Only pre-fetch if we aren't in intro sequence (intro handles its own pre-fetching)
+                if (activeTurnLoopId.current > 0) {
+                    addLog(`🧠 Pre-fetching ${nextTarget} in background...`);
+                    fetchBatch(nextTarget);
+                }
+            }
+
+            // Phase 48: Integrated Completion Logic
+            // Ensure flag is ALWAYS reset, then decide whether to trigger onComplete or auto-advance
+            isTurnInProgressRef.current = false;
+
             if (onComplete) {
                 onComplete();
             } else {
-                // Free discussion logic: trigger next AI turn if room is silent
+                // In free-flow discussion (Super-Fast Mode), trigger the next turn automatically
                 setTimeout(() => {
-                    if (!isUserTurnRef.current && status === 'DISCUSSION') triggerAITurn();
-                }, 1500);
+                    if (!isUserTurnRef.current && statusRef.current === 'DISCUSSION') {
+                        addLog(`🔄 Advancing free-flow interaction (Loop: ${activeTurnLoopId.current})`);
+                        triggerAITurn(null, null, activeTurnLoopId.current);
+                    }
+                }, 100);
+            }
+        };
+
+        const play = () => {
+            if (turn.audio) {
+                playDirectAudio(turn.audio, turn.content, turn.speaker, finalize);
+            } else {
+                playSpeech(turn.speaker, turn.content, finalize);
             }
         };
 
@@ -696,115 +788,160 @@ const SpeakingInteractionPage = () => {
     };
 
     const fetchBatch = async (hintSpeaker = "Candidate_A") => {
-        if (isFetchingAI.current) {
-            addLog("ℹ️ Fetch already in progress...");
+        // Phase 46: Independent Fetching - Only block if THIS specific speaker is already fetching
+        if (isFetchingRef.current[hintSpeaker]) {
+            addLog(`ℹ️ Fetch for ${hintSpeaker} already active.`);
             return;
         }
-        isFetchingAI.current = true;
+
+        isFetchingRef.current[hintSpeaker] = true;
         setIsThinkingAI(true);
         try {
-            const userLevel = location.state?.userLevel || "3";
-            const candidateLevels = {
-                'Candidate_A': getFluencyLevel('Candidate_A'),
-                'Candidate_B': getFluencyLevel('Candidate_B'),
-                'Candidate_C': getFluencyLevel('Candidate_C')
-            };
-
+            const userLevel = location.state?.userLevel || "3"; // Defaults to Easy (3) if not found
             const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+            
             const res = await fetch(`${API_URL}/api/speaking/interaction/turn`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
-                    history: chatHistory.current.slice(-15),
-                    current_speaker: hintSpeaker !== "Candidate_A" ? hintSpeaker : "Candidate_A",
+                    history: chatHistory.current.slice(-10), // Truncated for faster roundtrip
+                    current_speaker: hintSpeaker,
                     topic: examData?.title || roadmapTopic,
                     level: userLevel,
-                    uid: user?.uid
+                    uid: user?.uid,
+                    audioOutput: false // Phase 47: DISABLE slow cloud audio for <2s turnaround
                 }),
-                signal: AbortSignal.timeout(30000)
+                signal: AbortSignal.timeout(15000) // Lowered to 15s - if it takes longer, it's not "live"
             });
             const data = await res.json();
             if (data.content) {
                 localTurnQueue.current.push({
                     speaker: data.speaker || hintSpeaker,
                     content: data.content,
-                    audio: data.audio // Store pre-generated audio!
+                    audio: data.audio
                 });
-                addLog(`✅ Queued MULTIMODAL AI turn from ${data.speaker}`);
-            } else {
-                throw new Error("No content returned from AI turn API");
+                addLog(`✅ Queued turn for ${data.speaker}`);
             }
         } catch (e) {
-            console.error("Fetch Batch Error:", e);
-            addLog("❌ Failed to fetch turns. Using Fail-Safe.");
-            // Phase 34: Fail-Safe Response to prevent hang
+            addLog(`⚠️ Fetch for ${hintSpeaker} Failed: ${e.message}`);
+            const fallbacks = {
+                'Candidate_A': "I believe AI will significantly change how we learn by providing personalized lessons, but we must be careful about data privacy.",
+                'Candidate_B': "That's a valid point, Annie. However, we must also consider the digital divide and ensure all students have access to these tools.",
+                'Candidate_C': "I agree. We should balance technology with human interaction to make sure students still develop social skills."
+            };
+            
             localTurnQueue.current.push({
-                speaker: hintSpeaker || "Examiner",
-                content: "That is a complex issue. Let's move on to the next point."
+                speaker: hintSpeaker,
+                content: fallbacks[hintSpeaker] || "Indeed. Building on that, I believe we should prioritize interactive learning methods to better engage students."
             });
         }
         finally {
-            isFetchingAI.current = false;
-            setIsThinkingAI(false);
+            isFetchingRef.current[hintSpeaker] = false;
+            // Only stop "thinking" if NO one is fetching
+            setIsThinkingAI(Object.values(isFetchingRef.current).some(v => v));
         }
     };
 
+
     const fetchBatchInBackground = () => fetchBatch();
 
-    const triggerAITurn = async (forceSpeaker, onComplete) => {
-        addLog(`🔍 triggerAITurn: isUserTurn=${isUserTurnRef.current}, status=${status}, activeUtterance=${!!activeUtterance.current}, isTransitioning=${isTransitioning.current}`);
-        
-        if (isUserTurnRef.current) return;
-        if (status !== 'DISCUSSION') return;
-
-        // Phase 40: Detect Ghost States (Browser engine stuck for >30s)
-        const isActuallySpeaking = window.speechSynthesis && window.speechSynthesis.speaking;
-        const silenceDuration = Date.now() - speakerActivityRef.current;
-        let isStuck = false;
-        
-        if (isActuallySpeaking && silenceDuration > 30000) {
-            addLog("🚨 Ghost state detected (30s activity gap). Force-clearing...");
-            if (window.speechSynthesis) window.speechSynthesis.cancel();
-            isStuck = true;
-        }
-
-        if ((isTransitioning.current || activeUtterance.current || (isActuallySpeaking && !isStuck)) && !forceSpeaker) {
-            addLog(`🚫 Turn blocked: Trans=${isTransitioning.current} Actv=${!!activeUtterance.current} SynthSpeaking=${isActuallySpeaking}`);
-            setTimeout(() => triggerAITurn(forceSpeaker, onComplete), 800);
+    const triggerAITurn = async (forceSpeaker, onComplete, loopId = null) => {
+        // Singleton Guard: If a turn is already in progress, abort this trigger
+        if (isTurnInProgressRef.current && !onComplete) {
+            addLog(`🚫 Turn rejected: Another turn is in progress.`);
             return;
         }
 
-        // Speaker Rotation Logic
-        const candidates = ["Candidate_A", "Candidate_B", "Candidate_C"];
-        const pool = candidates.filter(c => c !== lastSpeakerRef.current);
-        const targetSpeaker = forceSpeaker || pool[Math.floor(Math.random() * pool.length)];
-
-        // Internal Transition Lock
-        isInternalTransition.current = true;
-        setTimeout(() => { isInternalTransition.current = false; }, 300);
-
-        // Fetch check
-        if (localTurnQueue.current.length === 0) {
-            if (isFetchingAI.current) {
-                addLog("⏳ Waiting for in-progress fetch...");
-                setTimeout(() => triggerAITurn(targetSpeaker, onComplete), 500);
-                return;
-            }
-            addLog(`⏳ Queue empty. Fetching turn for ${targetSpeaker}...`);
-            await fetchBatch(targetSpeaker);
+        const currentId = loopId === null ? activeTurnLoopId.current : loopId;
+        if (loopId !== null && loopId < activeTurnLoopId.current) {
+            addLog(`🛑 Aborting stale loop (Loop ${loopId} < current ${activeTurnLoopId.current})`);
+            return;
         }
 
+        addLog(`🔍 triggerAITurn [ID:${currentId}]: Speaker=${forceSpeaker || 'random'}, UserTurn=${isUserTurnRef.current}`);
+        
+        if (isUserTurnRef.current || statusRef.current !== 'DISCUSSION') return;
+
+        // Block if synthesis is speaking
+        const isActuallySpeaking = window.speechSynthesis && window.speechSynthesis.speaking;
+        if ((isTransitioning.current || activeUtterance.current || isActuallySpeaking) && !forceSpeaker) {
+            setTimeout(() => {
+                if (activeTurnLoopId.current === currentId) triggerAITurn(forceSpeaker, onComplete, currentId);
+            }, 800);
+            return;
+        }
+
+        isTurnInProgressRef.current = true;
+
+        // Selection Logic: Strict Speaker Matching
+        let turnToPlay = null;
         if (localTurnQueue.current.length > 0) {
-            // Priority Rotation Check: Try to find someone who isn't the last speaker in the queue
-            let turnIdx = localTurnQueue.current.findIndex(t => t.speaker !== lastSpeakerRef.current);
-            if (turnIdx === -1) turnIdx = 0; // Fallback to first in queue if all same
+            // Requirement 2: Passive Examiner - during DISCUSSION, Examiner shouldn't be picked randomly from the queue
+            if (!forceSpeaker) {
+                const nonExaminerIdx = localTurnQueue.current.findIndex(t => t.speaker !== 'Examiner');
+                if (nonExaminerIdx !== -1) {
+                    turnToPlay = localTurnQueue.current.splice(nonExaminerIdx, 1)[0];
+                    addLog(`🎯 Picking next candidate: ${turnToPlay.speaker}`);
+                } else {
+                    // Free flow: Just pick anyone who wasn't the last speaker
+                    const poolIdx = localTurnQueue.current.findIndex(t => t.speaker !== lastSpeakerRef.current);
+                    if (poolIdx !== -1) {
+                        turnToPlay = localTurnQueue.current.splice(poolIdx, 1)[0];
+                    }
+                }
+            } else {
+                // Try to find EXACT match for this speaker
+                const matchIdx = localTurnQueue.current.findIndex(t => t.speaker === forceSpeaker);
+                if (matchIdx !== -1) {
+                    turnToPlay = localTurnQueue.current.splice(matchIdx, 1)[0];
+                    addLog(`🎯 Exact match found for ${forceSpeaker}`);
+                } else {
+                    addLog(`🧹 Discarding mismatched queue turns for ${forceSpeaker}. Re-fetching...`);
+                    localTurnQueue.current = []; // Clear queue to prevent stale responses
+                }
+            }
+        }
+
+        // Fetch if nothing found
+        if (!turnToPlay) {
+            const target = forceSpeaker || ["Candidate_A", "Candidate_B", "Candidate_C"].filter(c => c !== lastSpeakerRef.current)[0];
             
-            const turnToPlay = localTurnQueue.current.splice(turnIdx, 1)[0];
-            addLog(`✅ Playing turn for: ${turnToPlay.speaker}`);
-            playQueuedTurn(turnToPlay, onComplete);
+            // Phase 45: Show 'Thinking' indicator for non-intro rounds to eliminate "dead air" feel
+            if (activeTurnLoopId.current > 0) {
+                const displayName = target.replace('_', ' ');
+                setActiveSpeechText(`${displayName} is thinking...`);
+                setCurrentSpeaker(target);
+            }
+
+            if (!isFetchingRef.current[target]) {
+                addLog(`⏳ Fetching fresh turn for ${target}...`);
+                await fetchBatch(target);
+            } else {
+                addLog(`⏳ Waiting for active fetch for ${target}...`);
+                // Wait up to 3s for the active fetch to finish
+                let waitPoll = 0;
+                while (isFetchingRef.current[target] && waitPoll < 6) {
+                    await new Promise(r => setTimeout(r, 500));
+                    waitPoll++;
+                }
+            }
+            
+            // Try again after fetch
+            if (localTurnQueue.current.length > 0) {
+                const matchIdx = forceSpeaker ? localTurnQueue.current.findIndex(t => t.speaker === forceSpeaker) : 0;
+                if (matchIdx !== -1) turnToPlay = localTurnQueue.current.splice(matchIdx, 1)[0];
+            }
+        }
+
+        if (turnToPlay) {
+            addLog(`✅ Playing turn: ${turnToPlay.speaker} (Loop ${currentId})`);
+            playQueuedTurn(turnToPlay, onComplete); // Pass onComplete directly
         } else {
-            addLog("⚠️ AI turn failed to populate. Retrying...");
-            setTimeout(() => triggerAITurn(targetSpeaker, onComplete), 1000);
+            isTurnInProgressRef.current = false;
+            addLog(`⚠️ Still no turn ready. Retrying loop...`);
+            setTimeout(() => {
+                if (activeTurnLoopId.current === currentId) triggerAITurn(forceSpeaker, onComplete, currentId);
+            }, 500); // Reduced delay for faster retry
         }
     };
 
@@ -812,7 +949,9 @@ const SpeakingInteractionPage = () => {
         if (hasStartedRef.current) return;
         hasStartedRef.current = true;
         setStatus('DISCUSSION');
-        setTimeLeft(8 * 60);
+        statusRef.current = 'DISCUSSION';
+        const practiceDuration = 2.5 * 60; // Temporarily 2.5 minutes for testing
+        setTimeLeft(practiceDuration);
 
         addLog(`🗳️ Examiner starting discussion...`);
         setCurrentSpeaker("Examiner");
@@ -833,44 +972,42 @@ const SpeakingInteractionPage = () => {
 
                     // Turn Sequence: A -> B -> C -> User
                     const turnOrder = ["Candidate_A", "Candidate_B", "Candidate_C", "You"];
-                    let currentIndex = 0;
+                    interactionIndexRef.current = 0;
 
                     const nextInSequence = () => {
-                        if (currentIndex >= turnOrder.length) {
-                            addLog("✅ Introduction round complete. Entering free discussion.");
+                        // Phase 44: Secure check using Ref
+                        if (activeTurnLoopId.current > 0) {
+                            addLog("🛑 Intro sequence aborted: Interaction loop advanced.");
                             return;
                         }
 
-                        const speaker = turnOrder[currentIndex];
-                        currentIndex++;
+                        if (interactionIndexRef.current >= turnOrder.length) {
+                            addLog("✅ Introduction round complete. Entering free discussion.");
+                            // Phase 47: Start the free-discussion loop by incrementing the Loop ID
+                            activeTurnLoopId.current++;
+                            setTimeout(() => {
+                                if (!isUserTurnRef.current && statusRef.current === 'DISCUSSION') {
+                                    triggerAITurn(null, null, activeTurnLoopId.current);
+                                }
+                            }, 500);
+                            return;
+                        }
+
+                        const speaker = turnOrder[interactionIndexRef.current];
+                        interactionIndexRef.current++;
 
                         if (speaker === "You") {
                             setCurrentSpeaker("Examiner");
                             playSpeech("Examiner", "Candidate D, it's your turn. What are your thoughts?", () => {
-                                setCurrentSpeaker(null);
-                                startUserTurn();
+                                if (activeTurnLoopId.current === 0) {
+                                    setCurrentSpeaker(null);
+                                    startUserTurn();
+                                    // Watchdog for user silence to transition back to AI
+                                }
                             });
                         } else {
-                            addLog(`🔄 Sequence: Triggering turn for ${speaker}`);
-                            triggerAITurn(speaker, nextInSequence);
-
-                            // Safety net: if AI does not start speaking within 2 seconds, force fallback regardless of activeUtterance
-                            const safetyTimeout = setTimeout(() => {
-                                addLog(`⏱️ Safety net triggered for ${speaker}, activeUtterance=${!!activeUtterance.current}, synthSpeaking=${window.speechSynthesis?.speaking}`);
-                                // Always play fallback to ensure discussion continues
-                                const fallbackText = speaker === 'Candidate_A' ? "I believe AI will significantly change how we learn by providing personalized lessons." :
-                                    speaker === 'Candidate_B' ? "However, we must consider the digital divide and accessibility issues." :
-                                        "Overall, I think we need to balance technology with human interaction.";
-                                addLog(`⚠️ AI turn for ${speaker} timed out, forcing fallback: ${fallbackText.substring(0, 30)}...`);
-                                playSpeech(speaker, fallbackText, () => {
-                                    // Simulate turn completion
-                                    chatHistory.current.push({ role: speaker, text: fallbackText });
-                                    setCurrentSpeaker(null);
-                                    nextInSequence();
-                                });
-                            }, 2000);
-                            // Cleanup timeout when speech starts (we can't easily detect, but we can clear on next turn)
-                            // We'll store the timeout reference in a ref, but for simplicity we'll let it run.
+                            addLog(`🔄 Sequence: Moving to Participant Index ${interactionIndexRef.current - 1} (${speaker})`);
+                            triggerAITurn(speaker, nextInSequence, 0); 
                         }
                     };
 
@@ -882,7 +1019,8 @@ const SpeakingInteractionPage = () => {
 
     const endDiscussion = () => {
         setStatus('INDIVIDUAL');
-        setTimeLeft(60);
+        statusRef.current = 'INDIVIDUAL';
+        setTimeLeft(30); // Temporarily 30s for testing
         playSpeech("Examiner", "Thank you. Candidate D, I have a question for you.", () => {
             const qs = examData.individual_response_questions || [];
             const q = qs[0] || "What is your view?";
@@ -892,8 +1030,23 @@ const SpeakingInteractionPage = () => {
         });
     };
 
+    const concludeSession = () => {
+        addLog("🏁 Conclusion triggered. Miss Janie wrapping up...");
+        setCurrentSpeaker("Examiner");
+        const outroText = "Thank you very much. That is all the time we have for the discussion today. You may stop now.";
+        
+        playSpeech("Examiner", outroText, () => {
+            setCurrentSpeaker(null);
+            finishExam();
+        });
+    };
+
     const finishExam = async () => {
+        if (isGrading) return;
+        setIsGrading(true);
+        addLog("🗳️ Submitting discussion for HKDSE Grading...");
         setStatus('FINISHED');
+        statusRef.current = 'FINISHED';
         if (synth.current) synth.current.cancel();
 
         // Quest Logic: Inline Grading
@@ -907,9 +1060,9 @@ const SpeakingInteractionPage = () => {
                     body: JSON.stringify({
                         module: 'interaction',
                         taskId,
-                        transcript: chatHistory.current,
-                        userId: user?.uid,
-                        level: "3",
+                        messages: chatHistory.current,
+                        uid: user?.uid,
+                        level: location.state?.userLevel || "3",
                         quest_id: examData.id
                     })
                 });
@@ -955,6 +1108,17 @@ const SpeakingInteractionPage = () => {
 
     return (
         <div className="h-screen w-full relative overflow-hidden flex flex-col font-sans text-white">
+            <style>
+                {`
+                    @keyframes speaking-glow {
+                        0%, 100% { box-shadow: 0 0 20px 5px rgba(52, 211, 153, 0.4), inset 0 0 15px rgba(52, 211, 153, 0.3); border-color: #34d399; }
+                        50% { box-shadow: 0 0 50px 15px rgba(52, 211, 153, 0.7), inset 0 0 25px rgba(52, 211, 153, 0.5); border-color: #6ee7b7; }
+                    }
+                    .speaking-avatar {
+                        animation: speaking-glow 2s infinite ease-in-out;
+                    }
+                `}
+            </style>
             {/* New 3D Stylized Classroom Background */}
             <div className="absolute inset-0 z-0 bg-[#0c130d] overflow-hidden">
                 {/* The main background image with contrast tuning */}
@@ -1007,8 +1171,7 @@ const SpeakingInteractionPage = () => {
                             <MockCountdownTimer
                                 initialSeconds={duration}
                                 onTimeUp={() => {
-                                    alert("Time up! The exam has concluded.");
-                                    finishExam();
+                                    concludeSession();
                                 }}
                             />
                         </div>
@@ -1041,16 +1204,13 @@ const SpeakingInteractionPage = () => {
                             className={`absolute transition-all duration-700 flex flex-col items-center ${isSpeaking ? "z-40 scale-125 -translate-y-8" : "z-20 grayscale-[10%]"}`}
                             style={{ top: pos.top, left: pos.left, transform: 'translate(-50%, -50%)' }}
                         >
-                            <div className={`relative size-48 rounded-full border-8 bg-white shadow-[0_20px_50px_rgba(0,0,0,0.5)] overflow-hidden transition-all duration-500 ${isSpeaking ? "border-emerald-400 ring-[20px] ring-emerald-400/10 scale-110" : "border-white/90"}`}>
+                            <div className={`relative size-48 rounded-full border-8 bg-white shadow-[0_20px_50px_rgba(0,0,0,0.5)] overflow-hidden transition-all duration-500 ${isSpeaking ? "speaking-avatar scale-110" : "border-white/90"}`}>
                                 <img
                                     src={avatarSrc}
                                     alt={role}
                                     className={`w-full h-full object-cover transition-transform duration-500 ${isSpeaking ? "scale-105" : "scale-100"}`}
                                     onError={role === "Examiner" ? handleExaminerImgError : null}
                                 />
-                                {isSpeaking && (
-                                    <div className="absolute inset-0 border-[8px] border-emerald-400 animate-pulse rounded-full shadow-[inset_0_0_20px_rgba(52,211,153,0.5)]"></div>
-                                )}
                             </div>
 
                             {/* Deluxe Label */}
@@ -1084,7 +1244,7 @@ const SpeakingInteractionPage = () => {
                                                 {micActive ? (collectedTranscript.current || "Listening...") : (activeSpeechText || "Go ahead, speak!")}
                                             </span>
                                         ) : (
-                                            <span>{activeSpeechText || " "}</span>
+                                            <span>{activeSubtitle || activeSpeechText || " "}</span>
                                         )}
                                     </div>
                                 </>
@@ -1197,57 +1357,171 @@ const SpeakingInteractionPage = () => {
                             </div>
                         </div>
                     </div>
-                )}    {/* Grading Result Overlay (Quest) */}
-                {status === 'FINISHED' && isQuest && (
-                    <div className="absolute inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-md">
-                        <div className="bg-white p-8 rounded-3xl shadow-2xl max-w-lg w-full">
-                            <h2 className="text-3xl font-bold mb-4">Quest Completed! 🎉</h2>
-                            {isSubmitting ? (
-                                <div className="flex flex-col items-center justify-center py-12 gap-4">
-                                    <Loader2 className="w-12 h-12 text-indigo-600 animate-spin" />
-                                    <p className="text-indigo-600 font-bold animate-pulse">Analyzing Interaction...</p>
-                                </div>
-                            ) : (
-                                <div>
-                                    <div className="text-center mb-6">
-                                        <div className="text-6xl font-black text-emerald-500 mb-2 flex flex-col items-center">
-                                            <div>{gradingResult?.scores?.total || 0} <span className="text-2xl opacity-50">/ 28</span></div>
-                                            {gradingResult?.xp_awarded > 0 && (
-                                                <div className="mt-2 px-4 py-1 bg-amber-100 text-amber-600 rounded-full text-sm font-bold tracking-widest uppercase animate-in slide-in-from-bottom-2">
-                                                    +{gradingResult.xp_awarded} XP Earned
-                                                </div>
-                                            )}
+                )}
+                
+                {/* High-Fidelity Review Phase (DSE Aligned) */}
+                <AnimatePresence>
+                    {status === 'FINISHED' && gradingResult && (
+                        <motion.div 
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            className="fixed inset-0 z-[100] bg-slate-50 overflow-y-auto"
+                        >
+                            {/* 1. Hero Header */}
+                            <div className="bg-white border-b border-slate-200 pt-16 pb-12 px-6">
+                                <div className="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+                                    <div className="space-y-4">
+                                        <div className="flex gap-3">
+                                            <span className="px-4 py-1.5 bg-indigo-600 text-white rounded-full text-[10px] font-black uppercase tracking-widest shadow-sm">DSE Interaction Mastery</span>
+                                            <span className="px-4 py-1.5 bg-indigo-50 text-indigo-700 rounded-full text-[10px] font-black uppercase tracking-widest border border-indigo-100 italic">Group Discussion Quest</span>
                                         </div>
+                                        <h1 className="text-5xl font-black text-slate-900 tracking-tight leading-none">Speaking Performance Report</h1>
+                                        <p className="text-slate-500 font-bold text-lg max-w-2xl leading-relaxed">
+                                            {gradingResult.feedback?.summary || "Outstanding participation. Here is your detailed interaction analysis aligned with DSE Paper 4."}
+                                        </p>
+                                    </div>
 
-                                        <div className="grid grid-cols-2 gap-2 mb-6">
-                                            {Object.entries(gradingResult?.scores || {}).map(([key, val]) => (
-                                                key !== 'total' && (
-                                                    <div key={key} className="bg-slate-50 rounded p-2 text-center border border-slate-100">
-                                                        <p className="text-[10px] font-black text-slate-400 uppercase leading-none mb-1">{key.replace('_', ' ')}</p>
-                                                        <p className="text-lg font-black text-slate-700 leading-none">{val}/7</p>
+                                    <motion.div 
+                                        initial={{ scale: 0.8, opacity: 0 }}
+                                        animate={{ scale: 1, opacity: 1 }}
+                                        className="bg-white p-8 rounded-[3.5rem] border border-slate-100 shadow-2xl flex flex-col items-center justify-center min-w-[240px] relative overflow-hidden group"
+                                    >
+                                        <div className="absolute top-0 left-0 w-full h-3 bg-indigo-600" />
+                                        <div className="text-7xl font-black text-indigo-600 mb-1 group-hover:scale-110 transition-transform duration-500">Level {getDSELevel(gradingResult.scores?.total || 0)}</div>
+                                        <div className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">Predicted Grade ({gradingResult.scores?.total || 0}/28)</div>
+                                    </motion.div>
+                                </div>
+                            </div>
+
+                            <div className="max-w-5xl mx-auto px-6 mt-12 space-y-12 pb-20">
+                                {/* 2. DSE Criteria Breakdown */}
+                                <section>
+                                    <h2 className="text-sm font-black uppercase tracking-[0.2em] text-slate-400 mb-6 flex items-center gap-3">
+                                        <Award className="w-5 h-5 text-indigo-500" /> DSE Paper 4 Criteria Analysis
+                                    </h2>
+                                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                                        {[
+                                            { label: 'Pronunciation', score: gradingResult.scores?.delivery, desc: 'Pronunciation' },
+                                            { label: 'Communication Strategies', score: gradingResult.scores?.strategies, desc: 'Communication Strategies' },
+                                            { label: 'Vocabulary', score: gradingResult.scores?.language, desc: 'Vocabulary' },
+                                            { label: 'Organisation', score: gradingResult.scores?.organisation, desc: 'Ideas & Organisation' }
+                                        ].map((stat, i) => (
+                                            <motion.div 
+                                                key={i}
+                                                initial={{ y: 20, opacity: 0 }}
+                                                animate={{ y: 0, opacity: 1 }}
+                                                transition={{ delay: i * 0.1 }}
+                                                className="bg-white rounded-3xl p-6 border border-slate-100 shadow-sm hover:border-indigo-200 transition-all group"
+                                            >
+                                                <div className="flex justify-between items-end mb-4">
+                                                    <div className="text-3xl font-black text-slate-800 group-hover:text-indigo-600 transition-colors">{stat.score}<span className="text-sm text-slate-300">/7</span></div>
+                                                    <div className="text-[10px] font-black uppercase tracking-widest text-slate-500 mb-1">{stat.label}</div>
+                                                </div>
+                                                <div className="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+                                                    <motion.div 
+                                                        initial={{ width: 0 }}
+                                                        animate={{ width: `${(stat.score / 7) * 100}%` }}
+                                                        transition={{ delay: 0.5 + (i * 0.1), duration: 1 }}
+                                                        className="h-full bg-indigo-500 rounded-full" 
+                                                    />
+                                                </div>
+                                                <p className="mt-3 text-[10px] text-slate-400 font-bold uppercase">{stat.desc}</p>
+                                            </motion.div>
+                                        ))}
+                                    </div>
+                                </section>
+
+                                {/* 3. Pros & Cons */}
+                                <section className="grid md:grid-cols-2 gap-8">
+                                    <div className="space-y-6">
+                                        <h2 className="text-sm font-black uppercase tracking-[0.2em] text-emerald-500 flex items-center gap-3">
+                                            <Zap className="w-5 h-5" /> Communication Strengths
+                                        </h2>
+                                        <div className="bg-emerald-50/50 rounded-3xl border border-emerald-100 p-8 space-y-4">
+                                            {(gradingResult.feedback?.pros || ["Consistently interacted with peers", "Used appropriate opening/closing markers"]).map((pro, i) => (
+                                                <div key={i} className="flex gap-4 items-start">
+                                                    <div className="mt-1 size-5 rounded-full bg-emerald-500 flex items-center justify-center flex-shrink-0">
+                                                        <CheckCircle2 className="w-3 h-3 text-white" />
                                                     </div>
-                                                )
+                                                    <p className="text-slate-700 font-bold leading-relaxed">{pro}</p>
+                                                </div>
                                             ))}
                                         </div>
                                     </div>
-                                    <div className="space-y-4 mb-8">
-                                        <div className="p-4 bg-indigo-50 rounded-xl text-sm border-l-4 border-indigo-500">
-                                            <p className="font-bold text-indigo-900 mb-1">Expert Feedback</p>
-                                            <p className="text-indigo-800">{gradingResult?.feedback?.summary}</p>
+
+                                    <div className="space-y-6">
+                                        <h2 className="text-sm font-black uppercase tracking-[0.2em] text-amber-500 flex items-center gap-3">
+                                            <AlertTriangle className="w-5 h-5" /> Areas to Refine
+                                        </h2>
+                                        <div className="bg-amber-50/50 rounded-3xl border border-amber-100 p-8 space-y-4">
+                                            {(gradingResult.feedback?.cons || ["Elaborate more on points", "Increase bridging frequency"]).map((con, i) => (
+                                                <div key={i} className="flex gap-4 items-start">
+                                                    <div className="mt-1 size-5 rounded-full bg-amber-500 flex items-center justify-center flex-shrink-0 text-white font-black text-[10px]">!</div>
+                                                    <p className="text-slate-700 font-bold leading-relaxed">{con}</p>
+                                                </div>
+                                            ))}
                                         </div>
-                                        {gradingResult?.feedback?.improvement_advice && (
-                                            <div className="p-4 bg-amber-50 rounded-xl text-sm border-l-4 border-amber-500">
-                                                <p className="font-bold text-amber-900 mb-1">Advice</p>
-                                                <p className="text-amber-800">{gradingResult?.feedback?.improvement_advice}</p>
-                                            </div>
-                                        )}
                                     </div>
-                                    <button onClick={() => navigate('/dashboard')} className="w-full py-4 bg-gray-900 text-white rounded-xl font-bold shadow-xl hover:scale-[1.02] transition-transform">Return to Dashboard</button>
-                                </div>
-                            )}
-                        </div>
-                    </div>
-                )}
+                                </section>
+
+                                {/* 4. Elite Mastery (Roadmap Tips) */}
+                                <section className="bg-slate-900 rounded-[3rem] p-10 md:p-16 text-white overflow-hidden relative">
+                                    <div className="absolute top-0 right-0 p-10 opacity-10">
+                                        <Target className="w-40 h-40" />
+                                    </div>
+                                    <div className="relative z-10 max-w-2xl">
+                                        <h2 className="text-[10px] font-black uppercase tracking-[0.3em] text-indigo-400 mb-6">Target Roadmap: Level 5* & 5** Mastery</h2>
+                                        <h3 className="text-4xl font-black mb-8 leading-tight">Expert Strategy for your next mission</h3>
+                                        <div className="space-y-6">
+                                            {(gradingResult.feedback?.roadmap_tips || ["Use advanced bridging markers", "Invite silent partners explicitly"]).map((tip, i) => (
+                                                <div key={i} className="flex gap-6 items-start group">
+                                                    <div className="size-10 rounded-2xl bg-white/10 flex items-center justify-center text-xl font-black text-indigo-400 group-hover:bg-indigo-600 group-hover:text-white transition-all">{i + 1}</div>
+                                                    <p className="text-slate-400 font-bold group-hover:text-slate-200 transition-colors text-lg">{tip}</p>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+                                </section>
+
+                                {/* 5. Integrated Transcript View */}
+                                <section className="bg-white rounded-[3rem] border border-slate-100 overflow-hidden shadow-sm">
+                                    <div className="p-8 border-b border-slate-50 flex justify-between items-center bg-slate-50/50">
+                                        <h4 className="text-xs font-black uppercase tracking-widest text-slate-400 flex items-center gap-2">
+                                            <MessageSquare className="w-4 h-4" /> Final Discussion Archive
+                                        </h4>
+                                    </div>
+                                    <div className="p-8 max-h-[500px] overflow-y-auto space-y-6">
+                                        {chatHistory.current.map((msg, i) => (
+                                            <div key={i} className={`flex flex-col ${msg.speaker === 'You' || msg.role === 'You' ? 'items-end' : 'items-start'}`}>
+                                                <span className="text-[9px] font-black uppercase text-slate-400 mb-2 px-2">{msg.speaker || msg.role}</span>
+                                                <div className={`max-w-[80%] px-6 py-4 rounded-[1.5rem] font-bold text-sm ${msg.speaker === 'You' || msg.role === 'You' ? 'bg-indigo-600 text-white rounded-tr-none' : 'bg-slate-100 text-slate-700 rounded-tl-none'}`}>
+                                                    {msg.text}
+                                                </div>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </section>
+
+                                {/* 6. Footer Actions */}
+                                <section className="flex flex-col md:flex-row gap-4 pt-10">
+                                    <button 
+                                        onClick={() => window.location.reload()}
+                                        className="flex-1 py-6 bg-white border-2 border-slate-200 text-slate-600 rounded-3xl font-black text-xl hover:border-indigo-300 hover:text-indigo-600 transition-all flex items-center justify-center gap-3"
+                                    >
+                                        <RotateCcw className="w-6 h-6" /> Restart Quest
+                                    </button>
+                                    <button 
+                                        onClick={() => navigate('/dashboard')}
+                                        className="flex-1 py-6 bg-indigo-600 text-white rounded-3xl font-black text-xl hover:bg-indigo-700 transition-all shadow-2xl shadow-indigo-200 flex items-center justify-center gap-3 group"
+                                    >
+                                        Return to Hub
+                                        <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
+                                    </button>
+                                </section>
+                            </div>
+                        </motion.div>
+                    )}
+                </AnimatePresence>
             </div>
 
         </div>

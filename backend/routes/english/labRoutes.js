@@ -168,7 +168,7 @@ Return a SINGLE JSON OBJECT where keys are the task IDs.
 Format: { "id": { "correct": boolean, "feedback": "..." } }`;
 
         const result = await GenerativeAIService.generateContent(prompt, {
-            model: "gemini-2.5-pro",
+            model: "ace-it-pro",
             generationConfig: { responseMimeType: "application/json" }
         });
 

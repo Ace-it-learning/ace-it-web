@@ -59,18 +59,18 @@ class GenerativeAIService {
 
                 // 2026 Model Mapping
                 this.vertexModelMap = {
-                    "ace-it-flash": "gemini-2.5-flash",
-                    "ace-it-pro": "gemini-2.5-pro",
-                    "ace-it-multimodal": "gemini-2.5-flash",
-                    "gemini-flash-latest": "gemini-2.5-flash",
-                    "gemini-pro-latest": "gemini-2.5-pro",
-                    "gemini-1.5-flash": "gemini-2.5-flash",
-                    "gemini-1.5-pro": "gemini-2.5-pro",
-                    "gemini-2.0-flash": "gemini-2.5-flash",
-                    "gemini-2.5-flash": "gemini-2.5-flash",
-                    "gemini-2.5-pro": "gemini-2.5-pro",
-                    "gemini-3.1-flash": "gemini-2.5-flash", 
-                    "gemini-3.5-pro": "gemini-2.5-pro"
+                    "ace-it-flash": "gemini-1.5-flash",
+                    "ace-it-pro": "gemini-1.5-pro",
+                    "ace-it-multimodal": "gemini-1.5-flash",
+                    "gemini-flash-latest": "gemini-1.5-flash",
+                    "gemini-pro-latest": "gemini-1.5-pro",
+                    "gemini-1.5-flash": "gemini-1.5-flash",
+                    "gemini-1.5-pro": "gemini-1.5-pro",
+                    "gemini-2.0-flash": "gemini-1.5-flash",
+                    "gemini-2.5-flash": "gemini-1.5-flash",
+                    "gemini-2.5-pro": "gemini-1.5-pro",
+                    "gemini-3.1-flash": "gemini-1.5-flash", 
+                    "gemini-3.5-pro": "gemini-1.5-pro"
                 };
 
                 console.log(`[AIService] 🚀 Vertex AI Production Online (${region})`);
@@ -115,17 +115,17 @@ class GenerativeAIService {
         this.currentRegion = 'global/api_key';
 
         this.studioModelMap = {
-            "ace-it-flash": "gemini-flash-latest",
-            "ace-it-pro": "gemini-pro-latest",
-            "ace-it-multimodal": "gemini-flash-latest",
-            "gemini-flash-latest": "gemini-flash-latest",
-            "gemini-pro-latest": "gemini-pro-latest",
-            "gemini-1.5-flash": "gemini-flash-latest",
-            "gemini-1.5-pro": "gemini-pro-latest",
-            "gemini-2.0-flash": "gemini-2.0-flash",
-            "gemini-3.1-flash": "gemini-flash-latest",
-            "gemini-2.5-pro": "gemini-pro-latest",
-            "gemini-3.1-pro": "gemini-pro-latest"
+            "ace-it-flash": "gemini-2.5-flash-lite",
+            "ace-it-pro": "gemini-2.5-pro",
+            "ace-it-multimodal": "gemini-2.5-flash-lite",
+            "gemini-flash-latest": "gemini-2.5-flash-lite",
+            "gemini-pro-latest": "gemini-2.5-pro",
+            "gemini-1.5-flash": "gemini-2.5-flash-lite",
+            "gemini-1.5-pro": "gemini-2.5-pro",
+            "gemini-2.0-flash": "gemini-2.5-flash-lite",
+            "gemini-3.1-flash": "gemini-2.5-flash-lite",
+            "gemini-2.5-pro": "gemini-2.5-pro",
+            "gemini-3.1-pro": "gemini-2.5-pro"
         };
 
         console.log("[AIService] Initialized Google AI Studio (Local Mode)");
@@ -199,6 +199,18 @@ class GenerativeAIService {
                 safetySettings: safetySettings
             };
 
+            const apiVersion = config.audioOutput ? 'v1beta' : 'v1';
+            
+            // Critical Fix: Remove responseMimeType for v1 calls as it is not supported in generation_config
+            if (apiVersion !== 'v1beta' && modelOptions.generationConfig.responseMimeType) {
+                console.log(`[AIService] Filtering responseMimeType for compatible v1 call...`);
+                delete modelOptions.generationConfig.responseMimeType;
+            }
+
+            if (config.responseMimeType && apiVersion === 'v1beta') {
+                modelOptions.generationConfig.responseMimeType = config.responseMimeType;
+            }
+
             if (config.systemInstruction) {
                 modelOptions.systemInstruction = config.systemInstruction;
             }
@@ -209,7 +221,7 @@ class GenerativeAIService {
                 console.log(`[AIService] ⚡ Using Studio Context Cache: ${config.cachedContent.substring(0, 40)}...`);
             }
 
-            // [2026] Multimodal Audio Config
+            // [2026] Multimodal Audio Config - ONLY available in v1beta
             if (config.audioOutput) {
                 modelOptions.generationConfig = {
                     ...modelOptions.generationConfig,
@@ -220,8 +232,7 @@ class GenerativeAIService {
                 };
             }
 
-            // Revert to v1beta for AI Studio locally, as v1 returns 404 for gemini-1.5 models on this key
-            return this.genAI.getGenerativeModel(modelOptions, { apiVersion: 'v1beta' });
+            return this.genAI.getGenerativeModel(modelOptions, { apiVersion });
         }
     }
 
@@ -241,9 +252,14 @@ class GenerativeAIService {
             }
 
             // [2026] Extract Multimodal Audio Content
-            const audioPart = result.response?.candidates?.[0]?.content?.parts?.find(p => p.inlineData || p.fileData);
+            const parts = result.response?.candidates?.[0]?.content?.parts || [];
+            const audioPart = parts.find(p => p.inlineData || p.fileData);
             if (audioPart && audioPart.inlineData) {
                 result.audio = audioPart.inlineData.data; // Base64
+                console.log(`[AIService] 🎙️ Multimodal Audio Extracted (${result.audio.length} bytes)`);
+            } else if (config.audioOutput) {
+                console.warn(`[AIService] ⚠️ Audio Output requested but no audio part found in response.`);
+                console.warn(`[AIService] Response Parts:`, JSON.stringify(parts, null, 2));
             }
         }
 
@@ -429,7 +445,7 @@ class GenerativeAIService {
     async executeWithRetry(action, input, config = {}, retries = 6) {
         await this.init();
 
-        const requestedModel = config.model || "gemini-2.5-flash";
+        const requestedModel = config.model || "ace-it-flash";
         const isProModel = requestedModel.includes("pro");
         const highQuality = config.highQuality === true;
 
@@ -562,10 +578,10 @@ class GenerativeAIService {
 
                 // Final Failure: provide architectural context
                 if (isProModel && isRateLimit) {
-                    throw new Error("⚠️ HKDSE-PRO QUOTA EXHAUSTED: Gemini 1.5 Pro is currently at its limit in Development. Please try again in 1 minute, or enable Vertex AI locally for enterprise bandwidth.");
+                    throw new Error("⚠️ HKDSE-PRO QUOTA EXHAUSTED: Gemini Pro is currently at its limit. Please try again in 1 minute.");
                 }
                 if (!isProModel && isRateLimit) {
-                    throw new Error("⚠️ QUOTA EXHAUSTED: Gemini 2.0 Flash is currently at its limit. Please wait a moment and try again.");
+                    throw new Error("⚠️ QUOTA EXHAUSTED: Gemini Flash is currently at its limit. Please wait a moment and try again.");
                 }
                 throw error;
             }

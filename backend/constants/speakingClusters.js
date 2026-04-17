@@ -6,8 +6,8 @@
 const SPEAKING_CLUSTERS = {
     delivery: {
         id: 'delivery',
-        name: 'Delivery & Musicality',
-        name_zh: '表達與音樂性',
+        name: 'Pronunciation',
+        name_zh: '發音',
         module_id: 'SPEAK_DELIVERY_001',
         category: 'Mechanical Excellence',
         description: 'The "How" of speaking: Pronunciation, Intonation, Rhythm.',
@@ -73,8 +73,8 @@ const SPEAKING_CLUSTERS = {
 
     interaction: {
         id: 'interaction',
-        name: 'Dynamic Interaction',
-        name_zh: '動態互動',
+        name: 'Communication Strategies',
+        name_zh: '溝通策略',
         module_id: 'SPEAK_INTERACT_003',
         category: 'Social Collaboration',
         description: 'The social core: Engaging, acknowledging, and managing conversation.',
@@ -112,8 +112,8 @@ const SPEAKING_CLUSTERS = {
 
     language_patterns: {
         id: 'language_patterns',
-        name: 'Language Patterns',
-        name_zh: '語言模式',
+        name: 'Vocabulary',
+        name_zh: '詞彙',
         module_id: 'SPEAK_LANG_004',
         category: 'Linguistic Range',
         description: 'Using specialized vocabulary and complex sentence structures to express subtle meanings.',

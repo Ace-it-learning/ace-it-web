@@ -64,7 +64,39 @@
         "To synthesize what has been discussed so far...",
         "Balancing these two viewpoints, we could consider..."
       ]
-    }
+    },
+    { 
+      "id": "b_2", 
+      "title": "Clarifying Points", 
+      "level": "3", 
+      "level_label": "Easy", 
+      "scenario": "School club meeting discussion.",
+      "stimulus": "Candidate A said something about a 'new policy' but didn't explain what it actually is.",
+      "strategy_goal": "Ask for clarification on the specific policy mentioned.",
+      "power_phrases": [
+        "Could you elaborate on that?",
+        "What do you mean by 'new policy'?",
+        "Could you explain that more simply?",
+        "I'm not sure I follow your point about..."
+      ]
+    },
+    { "id": "b_3", "title": "Giving Examples", "level": "3", "level_label": "Easy", "scenario": "Discussing summer activities.", "stimulus": "I think we should do some sports this summer to stay healthy.", "strategy_goal": "Agree and provide 1-2 specific examples of sports.", "power_phrases": ["For example, we could...", "Such as playing...", "Like going to..."] },
+    { "id": "b_4", "title": "Simple Agreement", "level": "3", "level_label": "Easy", "scenario": "Choosing a class mascot.", "stimulus": "A panda would be a great mascot because it's friendly and cute.", "strategy_goal": "Agree with the reason and add a small detail.", "power_phrases": ["I agree, and also...", "That's true, because...", "I feel the same way."] },
+    { "id": "b_5", "title": "Closing a Point", "level": "3", "level_label": "Easy", "scenario": "Concluding a short discussion on uniforms.", "stimulus": "So, we've talked about the comfort and the cost of uniforms.", "strategy_goal": "Summarize the main consensus briefly.", "power_phrases": ["In short, we think...", "To wrap up this point...", "So we all agree that..."] },
+    { "id": "b_6", "title": "Polite Disagreement", "level": "4", "level_label": "Medium", "scenario": "Debating homework policies.", "stimulus": "Homework should be banned because it takes away from our sleep.", "strategy_goal": "Partially agree but explain why homework is still necessary for learning.", "power_phrases": ["I see your point, but...", "While I agree sleep is important...", "I'm afraid I have a different view."] },
+    { "id": "b_7", "title": "Providing Reasons", "level": "4", "level_label": "Medium", "scenario": "Impact of social media.", "stimulus": "Social media is making people more lonely.", "strategy_goal": "Support the view with a logical reason (e.g., less face-to-face time).", "power_phrases": ["The main reason for this is...", "Due to the fact that...", "This is because..."] },
+    { "id": "b_8", "title": "Transitioning Topics", "level": "4", "level_label": "Medium", "scenario": "Planning a school fair.", "stimulus": "We've decided on the food stalls, but we haven't talked about the budget.", "strategy_goal": "Move the discussion from 'food' to 'budget' professionally.", "power_phrases": ["Moving on to the next point...", "Turning our attention to...", "Let's discuss the..."] },
+    { "id": "b_9", "title": "Asking for Opinions", "level": "4", "level_label": "Medium", "scenario": "Environmental campaign ideas.", "stimulus": "I've shared some ideas about recycling bins, but Annie hasn't spoken yet.", "strategy_goal": "Invite another candidate to share their thoughts.", "power_phrases": ["What are your thoughts on this?", "Do you have any ideas?", "Annie, what do you think?"] },
+    { "id": "b_10", "title": "Supporting Peer Ideas", "level": "4", "level_label": "Medium", "scenario": "Extracurricular activities.", "stimulus": "I think a drama club would help students gain confidence.", "strategy_goal": "Build on the peer's point by adding a new benefit.", "power_phrases": ["Adding to that point...", "Building on what you said...", "I'd like to reinforce that..."] },
+    { "id": "b_11", "title": "Handling Counter-arguments", "level": "5", "level_label": "DSE Standard", "scenario": "Tourism development vs preservation.", "stimulus": "Building more hotels will boost the economy, even if it harms the local culture.", "strategy_goal": "Acknowledge the economic benefit but argue for cultural preservation.", "power_phrases": ["While the economic gain is undeniable...", "We must strike a balance between...", "Sustainability is just as crucial as..."] },
+    { "id": "b_12", "title": "Redirecting the Flow", "level": "5", "level_label": "DSE Standard", "scenario": "The role of AI in jobs.", "stimulus": "The group is stuck debating whether AI is 'good' or 'bad'.", "strategy_goal": "Get the group to focus on solutions and 'how to adapt'.", "power_phrases": ["Instead of debating the ethics, let's look at...", "Perhaps we could pivot the discussion to...", "The real question here is not..."] },
+    { "id": "b_13", "title": "Building on Complex Points", "level": "5", "level_label": "DSE Standard", "scenario": "Waste management strategies.", "stimulus": "Candidate A mentioned that a plastic tax would change consumer behavior.", "strategy_goal": "Elaborate by mentioning the 'multiplier effect' on industrial production.", "power_phrases": ["That's a compelling point, and it segments into...", "This strategy could trigger a...", "Furthermore, this policy would..."] },
+    { "id": "b_14", "title": "Summarizing Complex Views", "level": "5", "level_label": "DSE Standard", "scenario": "Urban planning: Parks vs Housing.", "stimulus": "Some want more houses for the poor, but others want more parks for health.", "strategy_goal": "Summarize the conflict and propose a 'multi-use' solution.", "power_phrases": ["To summarize the tension between...", "The consensus seems to be that...", "Considering both the social and environmental..."] },
+    { "id": "b_15", "title": "Challenging Assumptions", "level": "5", "level_label": "DSE Standard", "scenario": "University education value.", "stimulus": "Everyone assumes a degree is the only path to a high-paying job.", "strategy_goal": "Politely challenge the assumption by citing vocational training.", "power_phrases": ["Is it truly the case that...?", "I'd like to question the notion that...", "Correct me if I'm wrong, but..."] },
+    { "id": "b_17", "title": "Nuanced Critique", "level": "5**", "level_label": "Elite", "scenario": "Ethical implications of genetic engineering.", "stimulus": "The previous speaker argued that genetic engineering could eliminate all diseases.", "strategy_goal": "Critique the idealistic view by mentioning the 'socio-economic divide'.", "power_phrases": ["While the utopian vision is appealing...", "However, the pragmatic reality suggests...", "This raises a profound ethical predicament..."] },
+    { "id": "b_18", "title": "High-level Negotiation", "level": "5**", "level_label": "Elite", "scenario": "Allocating a billion-dollar city budget.", "stimulus": "There is a deadlock between 'Education' and 'Healthcare' subsidies.", "strategy_goal": "Propose a 'synergistic' model that targets public health education.", "power_phrases": ["This impasse can be resolved by...", "By creating a symbiotic relationship between...", "Our objective should be a holistic..."] },
+    { "id": "b_19", "title": "Abstract Conceptualization", "level": "5**", "level_label": "Elite", "scenario": "The philosophy of 'Privacy' in the digital age.", "stimulus": "Someone suggested that if you have nothing to hide, you have nothing to fear.", "strategy_goal": "Refute this by explaining privacy as a fundamental 'autonomy' right.", "power_phrases": ["This argument overlooks the ontological value of...", "Privacy is not merely a shield against guilt, but...", "The erosion of digital autonomy is..."] },
+    { "id": "b_20", "title": "Synthetic Conclusion", "level": "5**", "level_label": "Elite", "scenario": "Global cooperation on climate change.", "stimulus": "The discussion has covered carbon taxes, green tech, and diet changes.", "strategy_goal": "Synthesize all three into a 'multi-lateral paradigm shift' conclusion.", "power_phrases": ["Integrating the disparate strands of our discussion...", "This collectively points toward a global...", "Ultimately, the solution lies in a multi-faceted..."] }
   ],
   "criterion_c": [
     { 
@@ -75,28 +107,338 @@
       "scenario": "A formal presentation on the influence of robotics on the labor market.",
       "starting_question": "How do you think increasing automation will transform traditional career paths for young people in Hong Kong?",
       "practice_sentences": [
-        { "text": "The integration of AI will **inevitably** change how we perceive work.", "target_word": "inevitably", "explanation": "Certain to happen." },
-        { "text": "In the future, automated systems will **predominantly** handle routine tasks.", "target_word": "predominantly", "explanation": "Mainly; for the most part." },
-        { "text": "This shift represents an **unprecedented** challenge for the global workforce.", "target_word": "unprecedented", "explanation": "Never done or known before." },
-        { "text": "Concerns remain that robots might **displace** human workers in manufacturing.", "target_word": "displace", "explanation": "Take the place of." },
-        { "text": "However, human **versatility** remains a key advantage in creative industries.", "target_word": "versatility", "explanation": "Ability to adapt to many functions." }
+        { "text": "The integration of AI will **inevitably** change how we perceive work.", "target_word": "inevitably", "explanation": "Certain to happen.", "explanation_cn": "必然發生" },
+        { "text": "In the future, automated systems will **predominantly** handle routine tasks.", "target_word": "predominantly", "explanation": "Mainly; for the most part.", "explanation_cn": "主要地" },
+        { "text": "This shift represents an **unprecedented** challenge for the global workforce.", "target_word": "unprecedented", "explanation": "Never done or known before.", "explanation_cn": "前所未有的" },
+        { "text": "Concerns remain that robots might **displace** human workers in manufacturing.", "target_word": "displace", "explanation": "Take the place of.", "explanation_cn": "取代" },
+        { "text": "However, human **versatility** remains a key advantage in creative industries.", "target_word": "versatility", "explanation": "Ability to adapt to many functions.", "explanation_cn": "多功能性" }
       ],
       "power_words": [
         { "word": "inevitably", "ipa": "ɪnˈevɪtəbli", "translation": "不可避免地", "definition": "As is certain to happen." },
         { "word": "predominantly", "ipa": "prɪˈdɒmɪnəntli", "translation": "主要地", "definition": "Mainly; for the most part." },
         { "word": "unprecedented", "ipa": "ʌnˈpresɪdentɪd", "translation": "前所未有的", "definition": "Never done or known before." },
         { "word": "displace", "ipa": "dɪsˈpleɪs", "translation": "取代", "definition": "Take the place of (someone or something)." },
-        { "word": "versatility", "ipa": "ˌvɜːsəˈtɪlɪti", "translation": "多功能性", "definition": "Ability to adapt or be adapted to many different functions or activities." },
-        { "word": "detrimental", "ipa": "ˌdetrɪˈmentəl", "translation": "有害的", "definition": "Tending to cause harm." }
+        { "word": "versatility", "ipa": "ˌvɜːsəˈtɪlɪti", "translation": "多功能性", "definition": "Ability to adapt or be adapted to many different functions or activities." }
       ]
     },
-    { "id": "c_16", "title": "Cybersecurity Governance", "level": "5**", "level_label": "Elite", "scenario": "International cybersecurity conference briefing.", "starting_question": "In light of escalating digital threats, what comprehensive governance frameworks should governments implement to safeguard citizen data?",
+    {
+      "id": "c_2",
+      "title": "Sustainable Living",
+      "level": "3",
+      "level_label": "Easy",
+      "scenario": "A talk on reducing personal carbon footprint.",
+      "starting_question": "What simple changes can you make in your daily life to contribute to environmental sustainability?",
       "practice_sentences": [
-        { "text": "Digital threats are scaling **exponentially** across the globe.", "target_word": "exponentially", "explanation": "Scaling rapidily." },
-        { "text": "Securing national **infrastructure** is now a top priority for defense.", "target_word": "infrastructure", "explanation": "Basic structures/systems." },
-        { "text": "Hackers often exploit minor **vulnerabilities** in outdated software.", "target_word": "vulnerabilities", "explanation": "Weaknesses." },
-        { "text": "State actors can **orchestrate** complex cyber assaults on rivals.", "target_word": "orchestrate", "explanation": "Plan or coordinate." },
-        { "text": "We need a **comprehensive** strategy to protect sensitive citizen data.", "target_word": "comprehensive", "explanation": "Including all elements." }
+        { "text": "We should **prioritize** recycling plastic bottles and paper.", "target_word": "prioritize", "explanation": "Treat as more important.", "explanation_cn": "優先考慮" },
+        { "text": "Using public transport is a **practical** way to save energy.", "target_word": "practical", "explanation": "Likely to be effective.", "explanation_cn": "實際的" },
+        { "text": "Many people are now **conscious** of their plastic waste.", "target_word": "conscious", "explanation": "Aware of something.", "explanation_cn": "有意識的" },
+        { "text": "Buying local products can **benefit** the community and the earth.", "target_word": "benefit", "explanation": "Bring an advantage to.", "explanation_cn": "對...有益" },
+        { "text": "Small actions can **contribute** to a greener future for everyone.", "target_word": "contribute", "explanation": "Help to cause or bring about.", "explanation_cn": "貢獻" }
+      ],
+      "power_words": [
+        { "word": "prioritize", "ipa": "praɪˈɒrɪtaɪz", "translation": "優先考慮", "definition": "Designate or treat (something) as being very or most important." },
+        { "word": "practical", "ipa": "ˈpræktɪkəl", "translation": "實際的", "definition": "Likely to be effective in real-world situations." },
+        { "word": "conscious", "ipa": "ˈkɒnʃəs", "translation": "有意識的", "definition": "Aware of and responding to one's surroundings." },
+        { "word": "benefit", "ipa": "ˈbenɪfɪt", "translation": "益處", "definition": "An advantage or profit gained from something." },
+        { "word": "contribute", "ipa": "kənˈtrɪbjuːt", "translation": "貢獻", "definition": "Give (something, especially money) in order to help achieve or provide something." }
+      ]
+    },
+    {
+      "id": "c_3",
+      "title": "Social Media Impact",
+      "level": "3",
+      "level_label": "Easy",
+      "scenario": "Discussing the pros and cons of networking apps.",
+      "starting_question": "Do you believe social media does more to connect us or isolate us from reality?",
+      "practice_sentences": [
+        { "text": "Social media allows us to **interact** with friends instantly.", "target_word": "interact", "explanation": "Communicate with each other.", "explanation_cn": "互動" },
+        { "text": "It is fun to **reveal** our hobbies to the world through photos.", "target_word": "reveal", "explanation": "Make something known.", "explanation_cn": "揭露/展示" },
+        { "text": "However, we must be **cautious** about sharing private data.", "target_word": "cautious", "explanation": "Careful to avoid danger.", "explanation_cn": "謹慎的" },
+        { "text": "Apps can sometimes **distract** students from their homework.", "target_word": "distract", "explanation": "Take attention away.", "explanation_cn": "分散注意力" },
+        { "text": "Staying connected online is **convenient** but shouldn't replace meeting in person.", "target_word": "convenient", "explanation": "Fitting in well with needs.", "explanation_cn": "方便的" }
+      ],
+      "power_words": [
+        { "word": "interact", "ipa": "ˌɪntərˈækt", "translation": "互動", "definition": "Act in such a way as to have an effect on another." },
+        { "word": "reveal", "ipa": "rɪˈviːl", "translation": "展示", "definition": "Make (previously unknown or secret information) known to others." },
+        { "word": "cautious", "ipa": "ˈcɔːʃəs", "translation": "謹慎的", "definition": "Careful to avoid potential problems or dangers." },
+        { "word": "distract", "ipa": "dɪˈstrækt", "translation": "分心", "definition": "Prevent (someone) from concentrating on something." },
+        { "word": "convenient", "ipa": "kənˈviːniənt", "translation": "方便的", "definition": "Fitting in well with a person's needs or plans." }
+      ]
+    },
+    {
+      "id": "c_4",
+      "title": "Healthy Habits",
+      "level": "3",
+      "level_label": "Easy",
+      "scenario": "A school health club workshop.",
+      "starting_question": "What is the most effective way for a busy student to maintain a balanced lifestyle?",
+      "practice_sentences": [
+        { "text": "We need to **maintain** a balanced diet to stay healthy.", "target_word": "maintain", "explanation": "Keep something at the same level.", "explanation_cn": "保持" },
+        { "text": "Regular exercise can **improve** your mood and energy.", "target_word": "improve", "explanation": "Make something better.", "explanation_cn": "改善" },
+        { "text": "Drinking enough water is **essential** for your body to work well.", "target_word": "essential", "explanation": "Absolutely necessary.", "explanation_cn": "必要的" },
+        { "text": "Trying to **avoid** oily food is one step toward wellness.", "target_word": "avoid", "explanation": "Keep away from.", "explanation_cn": "避免" },
+        { "text": "Getting enough sleep is the **foundation** of a productive day.", "target_word": "foundation", "explanation": "An underlying basis.", "explanation_cn": "基礎" }
+      ],
+      "power_words": [
+        { "word": "maintain", "ipa": "meɪnˈteɪn", "translation": "保持", "definition": "Cause or enable (a condition or state of affairs) to continue." },
+        { "word": "improve", "ipa": "ɪmˈpruːv", "translation": "改善", "definition": "Make or become better." },
+        { "word": "essential", "ipa": "ɪˈsenʃəl", "translation": "必要的", "definition": "Absolutely necessary; extremely important." },
+        { "word": "avoid", "ipa": "əˈvɔɪd", "translation": "避免", "definition": "Keep away from or stop oneself from doing (something)." },
+        { "word": "foundation", "ipa": "faʊnˈdeɪʃən", "translation": "基礎", "definition": "The lowest load-bearing part of a building, or a basic principle." }
+      ]
+    },
+    {
+      "id": "c_5",
+      "title": "Travel and Culture",
+      "level": "3",
+      "level_label": "Easy",
+      "scenario": "Tourists sharing their experiences in a new city.",
+      "starting_question": "How does visiting new places broaden your understanding of the world?",
+      "practice_sentences": [
+        { "text": "Visiting new cities helps us **appreciate** different cultures.", "target_word": "appreciate", "explanation": "Understand the value of.", "explanation_cn": "欣賞/感激" },
+        { "text": "The local market is always **vibrant** and full of energy.", "target_word": "vibrant", "explanation": "Full of energy and life.", "explanation_cn": "充滿活力的" },
+        { "text": "Traveling can **broaden** your mind and give you new ideas.", "target_word": "broaden", "explanation": "Become larger in distance or scope.", "explanation_cn": "拓寬" },
+        { "text": "We should **respect** the traditions of every place we visit.", "target_word": "respect", "explanation": "Due regard for feelings/rights.", "explanation_cn": "尊重" },
+        { "text": "Trying local food is a **unique** experience that you won't forget.", "target_word": "unique", "explanation": "Being the only one of its kind.", "explanation_cn": "獨特的" }
+      ],
+      "power_words": [
+        { "word": "appreciate", "ipa": "əˈpriːʃieɪt", "translation": "欣賞", "definition": "Recognize the full worth of." },
+        { "word": "vibrant", "ipa": "ˈvaɪbrənt", "translation": "充滿活力的", "definition": "Full of energy and enthusiasm." },
+        { "word": "broaden", "ipa": "ˈbrɔːdən", "translation": "拓寬", "definition": "Become larger in distance from side to side; widen." },
+        { "word": "respect", "ipa": "rɪˈspekt", "translation": "尊重", "definition": "A feeling of deep admiration for someone or something." },
+        { "word": "unique", "ipa": "juːˈniːk", "translation": "獨特的", "definition": "Being the only one of its kind; unlike anything else." }
+      ]
+    },
+    {
+      "id": "c_6",
+      "title": "Online Safety",
+      "level": "4",
+      "level_label": "Medium",
+      "scenario": "A cybersecurity expert briefing school student leaders.",
+      "starting_question": "What measures should students take to protect their digital identities from common online scams?",
+      "practice_sentences": [
+        { "text": "It is vital to **secure** your social media accounts with strong passwords.", "target_word": "secure", "explanation": "Make something safe.", "explanation_cn": "保護/使安全" },
+        { "text": "Hackers often use fake emails to **exploit** unsuspecting individuals.", "target_word": "exploit", "explanation": "Use for one's own benefit.", "explanation_cn": "剝削/利用" },
+        { "text": "Verifying the source of a link can **prevent** potential data theft.", "target_word": "prevent", "explanation": "Stop something from happening.", "explanation_cn": "預防" },
+        { "text": "We should be **vigilant** when clicking on suspicious advertisements.", "target_word": "vigilant", "explanation": "Keeping careful watch.", "explanation_cn": "警覺的" },
+        { "text": "Using two-factor authentication can **fortify** your overall online safety.", "target_word": "fortify", "explanation": "Strengthen a place with defenses.", "explanation_cn": "加固/強化" }
+      ],
+      "power_words": [
+        { "word": "secure", "ipa": "sɪˈkjʊər", "translation": "保護", "definition": "Fixed or fastened so as not to give way, become loose, or be lost." },
+        { "word": "exploit", "ipa": "ɪkˈsplɔɪt", "translation": "利用", "definition": "Make full use of and derive benefit from (a resource)." },
+        { "word": "prevent", "ipa": "prɪˈvent", "translation": "預防", "definition": "Keep (something) from happening or arising." },
+        { "word": "vigilant", "ipa": "ˈvɪdʒɪlənt", "translation": "警覺的", "definition": "Keeping careful watch for possible danger or difficulties." },
+        { "word": "fortify", "ipa": "ˈfɔːrtɪfaɪ", "translation": "加固", "definition": "Strengthen with defensive works so as to protect it against attack." }
+      ]
+    },
+    {
+      "id": "c_7",
+      "title": "Youth Volunteering",
+      "level": "4",
+      "level_label": "Medium",
+      "scenario": "An NGO coordinator encouraging students to join a beach cleanup.",
+      "starting_question": "In what ways can volunteering help teenagers develop essential soft skills for their future careers?",
+      "practice_sentences": [
+        { "text": "Volunteering can significantly **enhance** your communication skills.", "target_word": "enhance", "explanation": "Intensify, increase, or further improve.", "explanation_cn": "增強/提升" },
+        { "text": "Many students **participate** in community projects to help others.", "target_word": "participate", "explanation": "Take part in an action.", "explanation_cn": "參與" },
+        { "text": "Helping the elderly creates a sense of **fulfillment** for young people.", "target_word": "fulfillment", "explanation": "Satisfaction or happiness.", "explanation_cn": "成就感" },
+        { "text": "We can **collaborate** with local charities to organize workshops.", "target_word": "collaborate", "explanation": "Work jointly on an activity.", "explanation_cn": "合作" },
+        { "text": "Social work is a way to **demonstrate** your empathy and leadership.", "target_word": "demonstrate", "explanation": "Clearly show the existence of.", "explanation_cn": "展示/證明" }
+      ],
+      "power_words": [
+        { "word": "enhance", "ipa": "ɪnˈhæns", "translation": "提升", "definition": "Intensify, increase, or further improve the quality, value, or extent of." },
+        { "word": "participate", "ipa": "pɑːrˈtɪsɪpeɪt", "translation": "參與", "definition": "Take part in an action or endeavor." },
+        { "word": "fulfillment", "ipa": "fʊlˈfɪlmənt", "translation": "成就感", "definition": "The achievement of something desired, promised, or predicted." },
+        { "word": "collaborate", "ipa": "kəˈlæbəreɪt", "translation": "合作", "definition": "Work jointly on an activity or project." },
+        { "word": "demonstrate", "ipa": "ˈdemənstreɪt", "translation": "展示", "definition": "Clearly show the existence or truth of (something) by giving proof or evidence." }
+      ]
+    },
+    {
+      "id": "c_8",
+      "title": "Fast Fashion",
+      "level": "4",
+      "level_label": "Medium",
+      "scenario": "A fashion blogger discussing the hidden costs of cheap clothing.",
+      "starting_question": "How can consumers balance their desire for trendy clothes with the need for ethical consumption?",
+      "practice_sentences": [
+        { "text": "Low prices often **mask** the poor working conditions in factories.", "target_word": "mask", "explanation": "Hide or disguise something.", "explanation_cn": "掩蓋/隱藏" },
+        { "text": "The massive production of garments is **harmful** to our rivers and air.", "target_word": "harmful", "explanation": "Causing or likely to cause harm.", "explanation_cn": "有害的" },
+        { "text": "We should **promote** ethical brands that use sustainable materials.", "target_word": "promote", "explanation": "Support or actively encourage.", "explanation_cn": "推廣/促進" },
+        { "text": "Constant shopping creates a lot of **excessive** waste in landfills.", "target_word": "excessive", "explanation": "More than is necessary.", "explanation_cn": "過度的" },
+        { "text": "Educating consumers will **encourage** them to buy quality over quantity.", "target_word": "encourage", "explanation": "Give support or hope to.", "explanation_cn": "鼓勵" }
+      ],
+      "power_words": [
+        { "word": "mask", "ipa": "mæsk", "translation": "掩蓋", "definition": "A thing used to conceal or disguise something." },
+        { "word": "harmful", "ipa": "ˈhɑːrmfʊl", "translation": "有害的", "definition": "Causing or likely to cause harm." },
+        { "word": "promote", "ipa": "prəˈmoʊt", "translation": "推廣", "definition": "Support or actively encourage (a cause, venture, etc.); further the progress of." },
+        { "word": "excessive", "ipa": "ɪkˈsesɪv", "translation": "過度的", "definition": "More than is necessary, normal, or desirable; immoderate." },
+        { "word": "encourage", "ipa": "ɪnˈkɜːrɪdʒ", "translation": "鼓勵", "definition": "Give support, confidence, or hope to (someone)." }
+      ]
+    },
+    {
+      "id": "c_9",
+      "title": "AI in Daily Life",
+      "level": "4",
+      "level_label": "Medium",
+      "scenario": "A technology podcast discussing smart home devices.",
+      "starting_question": "To what extent are AI-powered devices improving our quality of life, and where do they fall short?",
+      "practice_sentences": [
+        { "text": "Smart assistants can **automate** various household tasks for us.", "target_word": "automate", "explanation": "Make a process automatic.", "explanation_cn": "自動化" },
+        { "text": "AI algorithms **analyze** our preferences to suggest music or movies.", "target_word": "analyze", "explanation": "Examine in detail.", "explanation_cn": "分析" },
+        { "text": "Some users find that these smart devices **simplify** their routines.", "target_word": "simplify", "explanation": "Make something easier.", "explanation_cn": "使簡化" },
+        { "text": "However, we should not **rely** entirely on machines for critical decisions.", "target_word": "rely", "explanation": "Depend with full trust.", "explanation_cn": "依賴" },
+        { "text": "The growth of AI will **transform** many aspects of our modern society.", "target_word": "transform", "explanation": "Make a thorough change.", "explanation_cn": "轉型/改造" }
+      ],
+      "power_words": [
+        { "word": "automate", "ipa": "ˈɔːtəmeɪt", "translation": "自動化", "definition": "Convert (a process or facility) to largely automatic operation." },
+        { "word": "analyze", "ipa": "ˈænəlaɪz", "translation": "分析", "definition": "Examine methodically and in detail the constitution or structure of (something)." },
+        { "word": "simplify", "ipa": "ˈsɪmplɪfaɪ", "translation": "簡化", "definition": "Make (something) simpler or easier to do or understand." },
+        { "word": "rely", "ipa": "rɪˈlaɪ", "translation": "依賴", "definition": "Depend on with full trust or confidence." },
+        { "word": "transform", "ipa": "trænsˈfɔːrm", "translation": "轉型", "definition": "Make a thorough or dramatic change in the form, appearance, or character of." }
+      ]
+    },
+    {
+      "id": "c_10",
+      "title": "Environmental Policy",
+      "level": "5",
+      "level_label": "DSE Standard",
+      "scenario": "A policy analyst discussing carbon tax implementation.",
+      "starting_question": "How effective is a carbon tax in incentivizing corporations to adopt cleaner energy solutions?",
+      "practice_sentences": [
+        { "text": "Governments must **implement** stricter laws to curb industrial pollution.", "target_word": "implement", "explanation": "Put into effect.", "explanation_cn": "執行/實施" },
+        { "text": "A carbon tax will **incentivize** companies to invest in green technology.", "target_word": "incentivize", "explanation": "Provide an incentive.", "explanation_cn": "激勵" },
+        { "text": "We need to **mitigate** the effects of climate change before it's too late.", "target_word": "mitigate", "explanation": "Make less severe.", "explanation_cn": "減輕/緩解" },
+        { "text": "Many organizations are now **advocating** for a carbon-neutral world.", "target_word": "advocating", "explanation": "Publicly recommending.", "explanation_cn": "倡導" },
+        { "text": "The transition to solar power is **pivotal** for global energy security.", "target_word": "pivotal", "explanation": "Of crucial importance.", "explanation_cn": "關鍵的" }
+      ],
+      "power_words": [
+        { "word": "implement", "ipa": "ˈɪmplɪment", "translation": "實施", "definition": "Put (a decision, plan, agreement, etc.) into effect." },
+        { "word": "incentivize", "ipa": "ɪnˈsentɪvaɪz", "translation": "激勵", "definition": "Provide (someone) with an incentive for doing something." },
+        { "word": "mitigate", "ipa": "ˈmɪtɪɡeɪt", "translation": "緩解", "definition": "Make (something bad) less severe, serious, or painful." },
+        { "word": "advocating", "ipa": "ˈædvəkeɪtɪŋ", "translation": "倡導", "definition": "Publicly recommend or support." },
+        { "word": "pivotal", "ipa": "ˈpɪvətl", "translation": "關鍵的", "definition": "Of crucial importance in relation to the development or success of something else." }
+      ]
+    },
+    {
+      "id": "c_11",
+      "title": "The Gig Economy",
+      "level": "5",
+      "level_label": "DSE Standard",
+      "scenario": "A labor rights activist discussing food delivery workers.",
+      "starting_question": "Does the flexibility of the gig economy compensate for the lack of traditional employee benefits?",
+      "practice_sentences": [
+        { "text": "The gig economy offers **flexibility** but lacks stable social protections.", "target_word": "flexibility", "explanation": "The quality of bending easily.", "explanation_cn": "靈活性" },
+        { "text": "Many workers have a **precarious** income that depends on daily demand.", "target_word": "precarious", "explanation": "Not securely held or in position.", "explanation_cn": "不穩定的/危險的" },
+        { "text": "Platforms often **classify** their workers as independent contractors.", "target_word": "classify", "explanation": "Assign to a category.", "explanation_cn": "歸類" },
+        { "text": "This shift in employment has **prompted** debates about labor laws.", "target_word": "prompted", "explanation": "Cause or bring about.", "explanation_cn": "促使/引起" },
+        { "text": "We must ensure that workers are not **exploited** by digital algorithms.", "target_word": "exploited", "explanation": "Use for benefit.", "explanation_cn": "剝削" }
+      ],
+      "power_words": [
+        { "word": "flexibility", "ipa": "ˌfleksəˈbɪləti", "translation": "靈活性", "definition": "The quality of bending easily or being easily modified." },
+        { "word": "precarious", "ipa": "prɪˈkeəriəs", "translation": "不穩定的", "definition": "Not securely held or in position; dangerously likely to fall or collapse." },
+        { "word": "classify", "ipa": "ˈklæsɪfaɪ", "translation": "歸類", "definition": "Arrange (a group of people or things) in classes or categories according to shared qualities or characteristics." },
+        { "word": "prompted", "ipa": "ˈprɒmptɪd", "translation": "促使", "definition": "(of an event or fact) cause or bring about (an action or feeling)." },
+        { "word": "exploited", "ipa": "ɪkˈsplɔɪtɪd", "translation": "剝削", "definition": "Make full use of and derive benefit from (a resource)." }
+      ]
+    },
+    {
+      "id": "c_12",
+      "title": "Cultural Preservation",
+      "level": "5",
+      "level_label": "DSE Standard",
+      "scenario": "A museum curator discussing intangible heritage.",
+      "starting_question": "How can modern cities integrate cultural heritage into their rapid urban development projects?",
+      "practice_sentences": [
+        { "text": "Passing down traditions is **fundamental** to maintaining our identity.", "target_word": "fundamental", "explanation": "Forming a necessary base.", "explanation_cn": "基礎的/根本的" },
+        { "text": "Urban development should not **erode** the unique character of old districts.", "target_word": "erode", "explanation": "Gradually wear away.", "explanation_cn": "侵蝕" },
+        { "text": "Community festivals **embody** the spirit of our shared history.", "target_word": "embody", "explanation": "Be an expression of.", "explanation_cn": "體現" },
+        { "text": "We must **safeguard** ancient artifacts for the next generation.", "target_word": "safeguard", "explanation": "Protect from harm.", "explanation_cn": "保護/捍衛" },
+        { "text": "Cultural tourism can **revitalize** neighborhoods while preserving history.", "target_word": "revitalize", "explanation": "Imbue with new life/vitality.", "explanation_cn": "使復興" }
+      ],
+      "power_words": [
+        { "word": "fundamental", "ipa": "ˌfʌndəˈmentl", "translation": "根本的", "definition": "Forming a necessary base or core; of central importance." },
+        { "word": "erode", "ipa": "ɪˈroʊd", "translation": "侵蝕", "definition": "(of wind, water, or other natural agents) gradually wear away (soil, rock, or land)." },
+        { "word": "embody", "ipa": "ɪmˈbɒdi", "translation": "體現", "definition": "Be an expression of or give a tangible or visible form to (an idea, quality, or feeling)." },
+        { "word": "safeguard", "ipa": "ˈseɪfɡɑːrd", "translation": "保護", "definition": "A measure taken to protect someone or something or to prevent something undesirable." },
+        { "word": "revitalize", "ipa": "ˌriːˈvaɪtəlaɪz", "translation": "使復興", "definition": "Imbue (something) with new life and vitality." }
+      ]
+    },
+    {
+      "id": "c_13",
+      "title": "Mental Health Awareness",
+      "level": "5",
+      "level_label": "DSE Standard",
+      "scenario": "A school counselor leading a stress-management seminar.",
+      "starting_question": "What systemic changes could schools implement to better support student mental well-being?",
+      "practice_sentences": [
+        { "text": "It is crucial to **prioritize** self-care alongside academic pursuits.", "target_word": "prioritize", "explanation": "Assign importance to.", "explanation_cn": "優先處理" },
+        { "text": "Discussing stress openly helps to **neutralize** the stigma around it.", "target_word": "neutralize", "explanation": "Render something ineffective.", "explanation_cn": "中和/消除影響" },
+        { "text": "Mindfulness practices can **foster** a more resilient student body.", "target_word": "foster", "explanation": "Encourage development.", "explanation_cn": "培養/促進" },
+        { "text": "Constant pressure can **undermine** a student's confidence and focus.", "target_word": "undermine", "explanation": "Weaken something gradually.", "explanation_cn": "損害/削弱" },
+        { "text": "Supportive environments **facilitate** better mental health for everyone.", "target_word": "facilitate", "explanation": "Make an action easier.", "explanation_cn": "促進/使便利" }
+      ],
+      "power_words": [
+        { "word": "prioritize", "ipa": "praɪˈɒrɪtaɪz", "translation": "優先處理", "definition": "Designate or treat (something) as being very or most important." },
+        { "word": "neutralize", "ipa": "ˈnjuːtrəlaɪz", "translation": "中和", "definition": "Render (something) ineffective or harmless by applying an opposite force or effect." },
+        { "word": "foster", "ipa": "ˈfɒstər", "translation": "培養", "definition": "Encourage or promote the development of (something, typically something regarded as good)." },
+        { "word": "undermine", "ipa": "ˌʌndəˈmaɪn", "translation": "削弱", "definition": "Erode the base or foundation of (a rock formation, structure, or institution)." },
+        { "word": "facilitate", "ipa": "fəˈsɪlɪteɪt", "translation": "促進", "definition": "Make (an action or process) easy or easier." }
+      ]
+    },
+    {
+      "id": "c_14",
+      "title": "Urbanization and Housing",
+      "level": "6",
+      "level_label": "Elite",
+      "scenario": "A debate on urban densification and social equity.",
+      "starting_question": "To what extent can urban planning policies address the deep-rooted issues of housing inequality in hyper-dense cities like Hong Kong?",
+      "practice_sentences": [
+        { "text": "Rapid urbanization creates an **unprecedented** demand for affordable housing.", "target_word": "unprecedented", "explanation": "Never done or known before.", "explanation_cn": "前所未有的" },
+        { "text": "High property prices often **marginalize** lower-income residents in the city.", "target_word": "marginalize", "explanation": "Treat as insignificant.", "explanation_cn": "使邊緣化" },
+        { "text": "Policy makers must **reconcile** economic growth with social equity.", "target_word": "reconcile", "explanation": "Restore friendly relations.", "explanation_cn": "調解/使一致" },
+        { "text": "Densification is **inextricably** linked to the quality of public transport.", "target_word": "inextricably", "explanation": "Impossible to disentangle.", "explanation_cn": "密不可分地" },
+        { "text": "Sustainable urban designs can **mitigate** the heat island effect.", "target_word": "mitigate", "explanation": "Make less severe.", "explanation_cn": "減輕" }
+      ],
+      "power_words": [
+        { "word": "unprecedented", "ipa": "ʌnˈpresɪdentɪd", "translation": "前所未有的", "definition": "Never done or known before." },
+        { "word": "marginalize", "ipa": "ˈmɑːrdʒɪnəlaɪz", "translation": "使邊緣化", "definition": "Treat (a person, group, or concept) as insignificant or peripheral." },
+        { "word": "reconcile", "ipa": "ˈrekənsaɪl", "translation": "調解", "definition": "Restore friendly relations between." },
+        { "word": "inextricably", "ipa": "ˌɪnɪkˈstrɪkəbli", "translation": "密不可分地", "definition": "In a way that is impossible to disentangle or separate." },
+        { "word": "mitigate", "ipa": "ˈmɪtɪɡeɪt", "translation": "減輕", "definition": "Make (something bad) less severe, serious, or painful." }
+      ]
+    },
+    {
+      "id": "c_15",
+      "title": "Global Trade and Economy",
+      "level": "6",
+      "level_label": "Elite",
+      "scenario": "An international economic forum on supply chain resilience.",
+      "starting_question": "How should nations adapt their trade policies to ensure economic stability in an increasingly volatile global landscape?",
+      "practice_sentences": [
+        { "text": "Global supply chains are now **susceptible** to geopolitical tensions.", "target_word": "susceptible", "explanation": "Likely to be influenced.", "explanation_cn": "易受影響的" },
+        { "text": "Nations are seeking to **diversify** their trading partners to reduce risks.", "target_word": "diversify", "explanation": "Make or become more diverse.", "explanation_cn": "使多樣化" },
+        { "text": "Recent events have **exposed** the fragility of just-in-time manufacturing.", "target_word": "exposed", "explanation": "Make visible/vulnerable.", "explanation_cn": "暴露" },
+        { "text": "Economic sanctions can **destabilize** the stability of international markets.", "target_word": "destabilize", "explanation": "Upset the stability of.", "explanation_cn": "動搖/使不穩定" },
+        { "text": "Trade agreements should **incorporate** environmental standards and labor rights.", "target_word": "incorporate", "explanation": "Include as a part.", "explanation_cn": "併入/包含" }
+      ],
+      "power_words": [
+        { "word": "susceptible", "ipa": "səˈseptəbl", "translation": "易受影響的", "definition": "Likely or liable to be influenced or harmed by a particular thing." },
+        { "word": "diversify", "ipa": "daɪˈvɜːrsɪfaɪ", "translation": "多樣化", "definition": "Make or become more diverse or varied." },
+        { "word": "exposed", "ipa": "ɪkˈspoʊzd", "translation": "暴露的", "definition": "Left uncovered; unprotected." },
+        { "word": "destabilize", "ipa": "ˌdiːˈsteɪbəlaɪz", "translation": "動搖", "definition": "Upset the stability of; cause unrest in." },
+        { "word": "incorporate", "ipa": "ɪnˈkɔːrpəreɪt", "translation": "包含", "definition": "Take in or include (something) as part of a whole." }
+      ]
+    },
+    { 
+      "id": "c_16", 
+      "title": "Cybersecurity Governance", "level": "7", "level_label": "Elite", "scenario": "International cybersecurity conference briefing.", 
+      "starting_question": "In light of escalating digital threats, what comprehensive governance frameworks should governments implement to safeguard citizen data?",
+      "practice_sentences": [
+        { "text": "Digital threats are scaling **exponentially** across the globe.", "target_word": "exponentially", "explanation": "Scaling rapidily.", "explanation_cn": "以指數方式增長" },
+        { "text": "Securing national **infrastructure** is now a top priority for defense.", "target_word": "infrastructure", "explanation": "Basic structures/systems.", "explanation_cn": "基礎設施" },
+        { "text": "Hackers often exploit minor **vulnerabilities** in outdated software.", "target_word": "vulnerabilities", "explanation": "Weaknesses.", "explanation_cn": "漏洞" },
+        { "text": "State actors can **orchestrate** complex cyber assaults on rivals.", "target_word": "orchestrate", "explanation": "Plan or coordinate.", "explanation_cn": "策劃" },
+        { "text": "We need a **comprehensive** strategy to protect sensitive citizen data.", "target_word": "comprehensive", "explanation": "Including all elements.", "explanation_cn": "全面的" }
       ],
       "power_words": [
         { "word": "exponentially", "ipa": "ˌekspəˈnenʃəli", "translation": "成倍地", "definition": "In a way that becomes more and more rapid." },
@@ -104,6 +446,94 @@
         { "word": "vulnerabilities", "ipa": "ˌvʌlnərəˈbɪlɪtiz", "translation": "漏洞", "definition": "Weaknesses that can be exploited." },
         { "word": "orchestrate", "ipa": "ˈɔːkɪstreɪt", "translation": "策劃", "definition": "Plan or coordinate (a complex situation or event)." },
         { "word": "comprehensive", "ipa": "ˌkɒmprɪˈhensɪv", "translation": "全面的", "definition": "Including or dealing with all or nearly all elements or aspects." }
+      ]
+    },
+    {
+      "id": "c_17",
+      "title": "Bioethics",
+      "level": "7",
+      "level_label": "Elite",
+      "scenario": "A medical ethics board discussing genetic modification.",
+      "starting_question": "What ethical frameworks should govern the use of CRISPR technology in human embryos?",
+      "practice_sentences": [
+        { "text": "Genetic editing raises **profound** ethical questions about human nature.", "target_word": "profound", "explanation": "Very great or intense.", "explanation_cn": "深遠的/重大的" },
+        { "text": "We must **ascertain** the long-term consequences of altering DNA.", "target_word": "ascertain", "explanation": "Find out for certain.", "explanation_cn": "探明/查明" },
+        { "text": "Technology should not **infringe** upon the fundamental rights of individuals.", "target_word": "infringe", "explanation": "Actively break the terms of.", "explanation_cn": "侵犯/違反" },
+        { "text": "The potential to cure diseases is **tantalizing** but risky.", "target_word": "tantalizing", "explanation": "Teasing with something out of reach.", "explanation_cn": "誘人的" },
+        { "text": "Strict regulations are **imperative** to prevent the misuse of biotechnology.", "target_word": "imperative", "explanation": "Of vital importance.", "explanation_cn": "極其重要的" }
+      ],
+      "power_words": [
+        { "word": "profound", "ipa": "prəˈfaʊnd", "translation": "深遠的", "definition": "(of a state, quality, or emotion) very great or intense." },
+        { "word": "ascertain", "ipa": "ˌæsəˈteɪn", "translation": "查明", "definition": "Find (something) out for certain; make sure of." },
+        { "word": "infringe", "ipa": "ɪnˈfrɪndʒ", "translation": "侵犯", "definition": "Actively break the terms of (a law, agreement, etc.)." },
+        { "word": "tantalizing", "ipa": "ˈtæntəlaɪzɪŋ", "translation": "誘人的", "definition": "Tormenting or teasing with the sight or promise of something unobtainable." },
+        { "word": "imperative", "ipa": "ɪmˈperətɪv", "translation": "極其重要的", "definition": "Of vital importance; crucial." }
+      ]
+    },
+    {
+      "id": "c_18",
+      "title": "Quantum Technology",
+      "level": "7",
+      "level_label": "Elite",
+      "scenario": "A research lab's showcase on quantum computing.",
+      "starting_question": "How will quantum computing revolutionize fields like cryptography and material science in the next decade?",
+      "practice_sentences": [
+        { "text": "Quantum computers operate on the principle of **superposition**.", "target_word": "superposition", "explanation": "Existing in multiple states.", "explanation_cn": "疊加狀態" },
+        { "text": "This technology will **revolutionize** how we process massive datasets.", "target_word": "revolutionize", "explanation": "Change fundamentally.", "explanation_cn": "變革" },
+        { "text": "Classical encryption methods might soon become **obsolete**.", "target_word": "obsolete", "explanation": "No longer produced or used.", "explanation_cn": "過時的" },
+        { "text": "Scientists are working to **mitigate** quantum decoherence in processors.", "target_word": "mitigate", "explanation": "Make less severe.", "explanation_cn": "緩解" },
+        { "text": "The potential for drug discovery is **astounding** with quantum power.", "target_word": "astounding", "explanation": "Surprisingly impressive.", "explanation_cn": "令人震驚的" }
+      ],
+      "power_words": [
+        { "word": "superposition", "ipa": "ˌsuːpəpəˈzɪʃən", "translation": "疊加", "definition": "The action of placing one thing on or above another; in physics, the combination of two or more waves." },
+        { "word": "revolutionize", "ipa": "ˌrevəˈluːʃənaɪz", "translation": "變革", "definition": "Change (something) radically or fundamentally." },
+        { "word": "obsolete", "ipa": "ˈɒbsəliːt", "translation": "過時的", "definition": "No longer produced or used; out of date." },
+        { "word": "mitigate", "ipa": "ˈmɪtɪɡeɪt", "translation": "緩解", "definition": "Make (something bad) less severe, serious, or painful." },
+        { "word": "astounding", "ipa": "əˈstaʊndɪŋ", "translation": "令人震驚的", "definition": "Surprisingly impressive or notable." }
+      ]
+    },
+    {
+      "id": "c_19",
+      "title": "Space Exploration & Ethics",
+      "level": "7",
+      "level_label": "Elite",
+      "scenario": "An international committee on lunar resource extraction.",
+      "starting_question": "Should extraterrestrial resources be governed by individual nations or collective international agreements?",
+      "practice_sentences": [
+        { "text": "Mining the moon raises questions about **sovereignty** in space.", "target_word": "sovereignty", "explanation": "Supreme power or authority.", "explanation_cn": "主權" },
+        { "text": "We must avoid the **exploitation** of celestial bodies for profit.", "target_word": "exploitation", "explanation": "The action of making use of.", "explanation_cn": "開發/剝削" },
+        { "text": "Space missions should be **collaborative** rather than competitive.", "target_word": "collaborative", "explanation": "Produced by two or more parties.", "explanation_cn": "協同的/合作的" },
+        { "text": "Debris in orbit poses an **imminent** threat to future exploration.", "target_word": "imminent", "explanation": "About to happen.", "explanation_cn": "迫在眉睫的" },
+        { "text": "Preserving the pristine environment of Mars is an **ethical** duty.", "target_word": "ethical", "explanation": "Relating to moral principles.", "explanation_cn": "倫理的" }
+      ],
+      "power_words": [
+        { "word": "sovereignty", "ipa": "ˈsɒvərənti", "translation": "主權", "definition": "Supreme power or authority." },
+        { "word": "exploitation", "ipa": "ˌeksplɔɪˈteɪʃən", "translation": "開發", "definition": "The action or fact of treating someone unfairly in order to benefit from their work." },
+        { "word": "collaborative", "ipa": "kəˈlæbərətɪv", "translation": "合作的", "definition": "Produced or conducted by two or more parties working together." },
+        { "word": "imminent", "ipa": "ˈɪmɪnənt", "translation": "迫在眉睫的", "definition": "About to happen." },
+        { "word": "ethical", "ipa": "ˈeθɪkl", "translation": "倫理的", "definition": "Relating to moral principles or the branch of knowledge dealing with these." }
+      ]
+    },
+    {
+      "id": "c_20",
+      "title": "Digital Sovereignty",
+      "level": "7",
+      "level_label": "Elite",
+      "scenario": "A policy debate on data localization and privacy laws.",
+      "starting_question": "How can nations protect their digital sovereignty while maintaining a free and open internet?",
+      "practice_sentences": [
+        { "text": "Data localization is a key aspect of national **sovereignty** today.", "target_word": "sovereignty", "explanation": "Supreme power or authority.", "explanation_cn": "主權" },
+        { "text": "The borderless nature of the internet can **circumvent** local laws.", "target_word": "circumvent", "explanation": "Find a way around.", "explanation_cn": "規備/繞行" },
+        { "text": "We need robust laws to **uphold** the privacy of our citizens.", "target_word": "uphold", "explanation": "Maintain or support.", "explanation_cn": "維護/支持" },
+        { "text": "The dominance of tech giants can **threaten** digital independence.", "target_word": "threaten", "explanation": "State intention to take action.", "explanation_cn": "威脅" },
+        { "text": "Achieving digital autonomy requires **innovative** policy solutions.", "target_word": "innovative", "explanation": "Featuring new methods.", "explanation_cn": "創新的" }
+      ],
+      "power_words": [
+        { "word": "sovereignty", "ipa": "ˈsɒvərənti", "translation": "主權", "definition": "Supreme power or authority." },
+        { "word": "circumvent", "ipa": "ˌsɜːrkəmˈvent", "translation": "規避", "definition": "Find a way around (an obstacle)." },
+        { "word": "uphold", "ipa": "ʌpˈhoʊld", "translation": "維護", "definition": "Confirm or support (a custom or practice)." },
+        { "word": "threaten", "ipa": "ˈθretn", "translation": "威脅", "definition": "State one's intention to take hostile action against someone in retribution for something done or not done." },
+        { "word": "innovative", "ipa": "ˈɪnəveɪtɪv", "translation": "創新的", "definition": "(of a product, idea, etc.) featuring new methods; advanced and original." }
       ]
     }
   ],

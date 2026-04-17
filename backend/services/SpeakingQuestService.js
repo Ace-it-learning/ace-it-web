@@ -389,17 +389,25 @@ OUTPUT JSON FORMAT:
     "description": "A brief description of the situation",
     "ai_persona": "Persona name",
     "power_words": [
-        { "word": "sophisticated word", "ipa": "...", "translation": "...", "definition": "..." },
+        { "word": "sophisticated word", "ipa": "...", "translation": "Chinese translation", "definition": "..." },
         ... (at least 6-8 words)
     ],
     "practice_sentences": [
-        { "text": "Sentence using power word in **bold**", "target_word": "bolded_word", "explanation": "Simple meaning" },
+        { 
+            "text": "Sentence using power word in **bold**", 
+            "target_word": "bolded_word", 
+            "explanation": "English definition",
+            "explanation_cn": "Chinese translation of the definition"
+        },
         ... (EXACTLY 5 sentences)
     ],
     "starting_question": "An open-ended question that requires the use of the power words."
 }
 
-CRITICAL: The power words should be challenging for Level ${level} but relevant to the scenario.`;
+CRITICAL: 
+1. The power words should be challenging for Level ${level} but relevant to the scenario.
+2. SENTENCE COMPLEXITY: For higher levels (5, 6, 7), use longer sentences with complex structures (relative clauses, nominalization). For lower levels (3, 4), keep them concise and direct.
+3. LANGUAGE: Always include "explanation_cn" for every practice sentence.`;
 
         try {
             const aiGenerated = await GenerativeAIService.generateJson(prompt, { model: "ace-it-flash" });

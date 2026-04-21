@@ -20,11 +20,20 @@ class SubscriptionGuard {
             }
 
             const profile = await UserProfileService.getProfile(uid);
-            if (!profile || profile.subscription_tier === 'free') {
+            const isFree = !profile || profile.subscription_tier === 'free';
+            
+            // Check if subscription has expired
+            let isExpired = false;
+            if (profile?.subscription_expiry) {
+                const expiryDate = profile.subscription_expiry.toDate ? profile.subscription_expiry.toDate() : new Date(profile.subscription_expiry);
+                isExpired = expiryDate < new Date();
+            }
+
+            if (isFree || isExpired) {
                 return res.status(403).json({ 
                     error: 'Premium feature', 
                     code: 'PREMIUM_REQUIRED',
-                    message: 'This feature is only available for Pro or Premium members.' 
+                    message: isExpired ? 'Your subscription has expired. Please renew to continue accessing premium features.' : 'This feature is only available for Pro or Premium members.' 
                 });
             }
 
@@ -50,27 +59,35 @@ class SubscriptionGuard {
             if (!profile) return next();
 
             const tier = profile.subscription_tier || 'free';
-            if (tier === 'premium') return next(); // Premium has no limits
+            
+            // Check if subscription has expired (Treat expired as Free)
+            let isExpired = false;
+            if (profile?.subscription_expiry) {
+                const expiryDate = profile.subscription_expiry.toDate ? profile.subscription_expiry.toDate() : new Date(profile.subscription_expiry);
+                isExpired = expiryDate < new Date();
+            }
+
+            const activeTier = isExpired ? 'free' : tier;
+            if (activeTier === 'premium') return next(); // Premium has no limits
 
             const usage = profile.usage_stats || { month: '', quests: {}, mocks: {} };
             const currentMonth = new Date().toISOString().substring(0, 7);
 
-            // 1. FREE USER GATING
-            if (tier === 'free') {
+            // 1. FREE USER GATING (Including Expired)
+            if (activeTier === 'free') {
                 if (type === 'mock') {
                     return res.status(403).json({ 
                         error: 'Mock Exam Locked', 
                         code: 'UPGRADE_PRO',
-                        message: 'Mock exams are available for Pro and Premium members only.' 
+                        message: isExpired ? 'Your subscription has expired. Renew to access Mock Exams!' : 'Mock exams are available for Pro and Premium members only.' 
                     });
                 }
-                // Quests: Only the first quest is allowed (handled in QuestService or by checking questIndex)
-                // For now, let the route handler decide based on quest metadata
                 return next();
             }
 
             // 2. PRO USER LIMITS
-            if (tier === 'pro') {
+            if (activeTier === 'pro') {
+                // ... (rest of logic)
                 // Mock Exam Check
                 if (type === 'mock' && subject) {
                     const mockCount = usage.mocks?.[subject] || 0;

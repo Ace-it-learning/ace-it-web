@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { useLanguage } from '../context/LanguageContext';
-import { Trophy, Calendar, Star, ArrowLeft, Award, ShoppingBag } from 'lucide-react';
+import { Trophy, Calendar, Star, ArrowLeft, Award, ShoppingBag, Eye } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const AchievementTimeline = () => {
@@ -193,26 +193,56 @@ const AchievementTimeline = () => {
 
                                             {/* Content */}
                                             <div className="flex-1 min-w-0">
-                                                <div className="flex items-center gap-2 mb-1">
+                                                <div className="flex items-center gap-2 mb-1 flex-wrap">
                                                     <h3 className="font-bold text-gray-900 text-lg">
-                                                        {getEventTitle(event)}
+                                                        {event.questName || getEventTitle(event)}
                                                     </h3>
-                                                    {event.subject && (
-                                                        <span className={`px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider ${event.subject === 'maths' ? 'bg-blue-100 text-blue-700' : 'bg-purple-100 text-purple-700'
-                                                            }`}>
-                                                            {event.subject}
-                                                        </span>
-                                                    )}
+                                                    <div className="flex gap-1.5 flex-wrap">
+                                                        {event.subject && (
+                                                            <span className={`px-2 py-0.5 rounded text-[10px] font-black uppercase tracking-wider ${event.subject === 'maths' ? 'bg-blue-100 text-blue-700' : 'bg-purple-100 text-purple-700'
+                                                                }`}>
+                                                                {event.subject}
+                                                            </span>
+                                                        )}
+                                                        {event.paper && (
+                                                            <span className="px-2 py-0.5 rounded text-[10px] font-black uppercase tracking-wider bg-indigo-100 text-indigo-700">
+                                                                {event.paper}
+                                                            </span>
+                                                        )}
+                                                    </div>
                                                 </div>
-                                                {event.topic && (
+                                                
+                                                {event.topic && !event.questName && (
                                                     <p className="text-xs font-medium text-slate-500 mb-1">
                                                         {t('timeline.topic')}: <span className="text-slate-700 italic">{event.topic.replace(/_/g, ' ')}</span>
                                                     </p>
                                                 )}
-                                                <p className="text-sm text-gray-500 flex items-center gap-2">
-                                                    <Calendar className="w-3.5 h-3.5" />
-                                                    {getRelativeTime(event.date)}
-                                                </p>
+
+                                                <div className="flex items-center gap-4">
+                                                    <p className="text-sm text-gray-500 flex items-center gap-2">
+                                                        <Calendar className="w-3.5 h-3.5" />
+                                                        {getRelativeTime(event.date)}
+                                                    </p>
+
+                                                    {event.resultId && (
+                                                        <button
+                                                            onClick={() => {
+                                                                const paper = event.paper?.toLowerCase();
+                                                                let route = '';
+                                                                if (paper === 'writing') route = '/writing/result';
+                                                                else if (paper === 'speaking') route = '/speaking/result';
+                                                                else if (paper === 'listening') route = '/listening/result';
+                                                                else if (paper === 'reading') route = '/reading/result';
+                                                                
+                                                                if (route) navigate(`${route}/${event.resultId}`);
+                                                            }}
+                                                            className="flex items-center gap-1 text-[10px] font-black uppercase tracking-widest text-indigo-600 hover:text-indigo-800 transition-colors"
+                                                        >
+                                                            <Eye className="w-3 h-3" />
+                                                            {t('timeline.review_performance') || 'Review Performance'}
+                                                        </button>
+                                                    )}
+                                                </div>
                                             </div>
 
                                             {/* XP Badge */}

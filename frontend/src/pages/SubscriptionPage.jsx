@@ -227,53 +227,38 @@ const SubscriptionPage = () => {
                 {/* 3. DEVICE MANAGEMENT & PROMO SECTION */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                     
-                    {/* DEVICE LIST */}
-                    <div className="bg-white rounded-3xl p-8 shadow-sm border border-slate-200 space-y-6">
-                        <div className="flex justify-between items-center">
-                            <h2 className="text-xl font-bold text-slate-900 flex items-center gap-2">
-                                <Smartphone className="text-primary" />
+                    {/* DEVICE LIST CTA */}
+                    <div className="bg-white rounded-3xl p-8 shadow-sm border border-slate-200 flex flex-col items-center justify-center text-center space-y-6">
+                        <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center text-primary">
+                            <Smartphone className="w-8 h-8" />
+                        </div>
+                        <div className="space-y-2">
+                            <h2 className="text-2xl font-bold text-slate-900">
                                 {t('subscription.devices_title') || 'Active Devices'}
                             </h2>
-                            <span className="text-xs font-bold px-3 py-1 bg-slate-100 text-slate-500 rounded-full">
+                            <p className="text-slate-500 max-w-sm">
+                                {t('subscription.device_cta_desc') || 'Monitor and manage the devices authorized to access your Ace It! account.'}
+                            </p>
+                        </div>
+                        
+                        <div className="flex items-center gap-4 px-6 py-3 bg-slate-50 rounded-2xl border border-slate-100">
+                            <span className="text-xs font-bold text-slate-400 uppercase tracking-widest">Currently Active</span>
+                            <span className="text-lg font-bold text-slate-900">
                                 {activeDevices.length} / {tier === 'premium' ? 5 : 3}
                             </span>
                         </div>
 
-                        <div className="space-y-4">
-                            {activeDevices.length === 0 ? (
-                                <div className="text-center py-8 border-2 border-dashed border-slate-100 rounded-2xl">
-                                    <p className="text-slate-400">{t('subscription.no_devices') || 'No devices registered yet.'}</p>
-                                </div>
-                            ) : (
-                                activeDevices.map((device, i) => (
-                                    <div key={i} className="flex items-center justify-between p-4 bg-slate-50 rounded-2xl border border-slate-100 group">
-                                        <div className="flex items-center gap-4">
-                                            <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm text-slate-400 group-hover:text-primary transition-colors">
-                                                {getDeviceIcon(device.os)}
-                                            </div>
-                                            <div>
-                                                <p className="font-bold text-slate-900">{device.name}</p>
-                                                <p className="text-xs text-slate-500">
-                                                    {device.browser} • {device.os} • {t('subscription.last_seen') || 'Last seen'}: {device.lastSeen?.toDate?.().toLocaleDateString() || 'Recently'}
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <button 
-                                            onClick={() => handleForgetDevice(device.fingerprint)}
-                                            className="p-2 text-slate-400 hover:text-red-500 hover:bg-red-50 transition-all rounded-lg"
-                                            title={t('subscription.forget_device') || 'Forget Device'}
-                                        >
-                                            <Trash2 className="w-5 h-5" />
-                                        </button>
-                                    </div>
-                                ))
-                            )}
-                        </div>
+                        <button 
+                            onClick={() => window.location.href = '/account?tab=subscription'}
+                            className="px-8 py-4 bg-primary text-white font-bold rounded-2xl shadow-lg shadow-primary/20 hover:bg-primary/90 transition-all active:scale-95 flex items-center gap-2"
+                        >
+                            {t('subscription.manage_devices') || 'Manage Active Devices'} <ArrowRight className="w-5 h-5" />
+                        </button>
 
-                        <div className="bg-amber-50 p-4 rounded-2xl border border-amber-100 flex gap-4">
-                            <AlertCircle className="w-6 h-6 text-amber-600 shrink-0" />
-                            <p className="text-xs text-amber-800 leading-relaxed">
-                                {t('subscription.device_warning') || 'You can register up to 3 devices on Free/Pro. If you reach the limit, you must "forget" a device before signing in on a new one.'}
+                        <div className="flex gap-4 p-4 bg-amber-50 rounded-2xl border border-amber-100 max-w-md">
+                            <AlertCircle className="w-5 h-5 text-amber-600 shrink-0" />
+                            <p className="text-[10px] text-amber-800 text-left leading-relaxed">
+                                {t('subscription.device_warning') || 'You can register up to 3 devices on Free/Pro. If you reach the limit, please remove a device from your account settings before signing in on a new machine.'}
                             </p>
                         </div>
                     </div>

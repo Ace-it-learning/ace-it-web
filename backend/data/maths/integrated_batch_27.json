@@ -1,0 +1,349 @@
+[
+  {
+    "id": "ct_mcq_301",
+    "type": "mcq",
+    "topic_id": "math_num_percentages",
+    "prerequisite_topics": [
+      "math_num_percentages"
+    ],
+    "marks": 1,
+    "difficulty": 4,
+    "paper": 2,
+    "section": "A",
+    "question_en": "Find the simple interest on $\\$5000$ at a rate of $6%$ per annum for $3$ years.",
+    "question_zh": "求 $\\$5000$ 按年利率 $6%$ 計算 $3$ 年的單利息。",
+    "options": [
+      "A. $\\$300$",
+      "B. $\\$600$",
+      "C. $\\$900$",
+      "D. $\\$6%200$"
+    ],
+    "correct_answer": "C",
+    "solution_steps_en": [
+      "Simple Interest $I = P \\times R \\times T$.$",
+      "I = 5000 \\times $6%$ \\times 3$.$",
+      "I = 5000 \\times 0.06 \\times 3 = 900$.$"
+    ],
+    "solution_steps_zh": [
+      "單利息 $I = P \\times R \\times T$。",
+      "I = 5000 \\times 0.06 \\times 3 = 900$。"
+    ],
+    "tags": [
+      "simple-interest"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_302",
+    "type": "mcq",
+    "topic_id": "math_num_percentages",
+    "prerequisite_topics": [
+      "math_num_percentages"
+    ],
+    "marks": 1,
+    "difficulty": 6,
+    "paper": 2,
+    "section": "A",
+    "question_en": "If $\\$2000$ is invested at a rate of $10%$ per annum compounded annually for $2$ years, find the interest earned.",
+    "question_zh": "若以年利率 $10%$ 將 $\\$2000$ 存入銀行，按年計複利，求 $2$ 年後所得的利息。",
+    "options": [
+      "A. $\\$400$",
+      "B. $\\$410$",
+      "C. $\\$420$",
+      "D. $\\$440$"
+    ],
+    "correct_answer": "B",
+    "solution_steps_en": [
+      "Amount $A = P(1 + R)^n$.$",
+      "A = 2000(1 + $10%$)^2 = 2000(1.1)^2 = 2000(1.21) = 2420$.$",
+      "Interest $= A - P = 2420 - 2000 = 410$.$"
+    ],
+    "solution_steps_zh": [
+      "本利和 $A = P(1 + R)^n$。",
+      "A = 2000(1 + 0.1)^2 = 2000(1.21) = 2420$。",
+      "利息 $= A - P = 2420 - 2000 = 410$。"
+    ],
+    "tags": [
+      "compound-interest"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_303",
+    "type": "mcq",
+    "topic_id": "math_num_percentages",
+    "prerequisite_topics": [
+      "math_num_percentages"
+    ],
+    "marks": 1,
+    "difficulty": 7,
+    "paper": 2,
+    "section": "A",
+    "question_en": "A sum of money is invested at $8%$ per annum compounded quarterly. Find the effective annual interest rate (correct to 2 decimal places).",
+    "question_zh": "一筆款項按年利率 $8%$ 存放，每季計複利一次。求實際年利率（準確至二位小數）。",
+    "options": [
+      "A. $8%$",
+      "B. $8%$",
+      "C. $8%$",
+      "D. $8%$"
+    ],
+    "correct_answer": "C",
+    "solution_steps_en": [
+      "Quarterly rate $= $8%$ / 4 = $8%$.$",
+      "Effective Annual Rate $= (1 + $8%$)^4 - 1$.$",
+      "Effective Annual Rate $= (1.02)^4 - 1 \\approx 1.08243 - 1 = 0.08243$.$",
+      "Effective Annual Rate $\\approx $8%$.$"
+    ],
+    "solution_steps_zh": [
+      "每季利率 $= $8%$ / 4 = $8%$。",
+      "實際年利率 $= (1 + $8%$)^4 - 1$。",
+      "實際年利率 $= (1.02)^4 - 1 \\approx $8%$。"
+    ],
+    "tags": [
+      "compound-interest",
+      "effective-rate"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_304",
+    "type": "mcq",
+    "topic_id": "math_num_percentages",
+    "prerequisite_topics": [
+      "math_num_percentages"
+    ],
+    "marks": 1,
+    "difficulty": 5,
+    "paper": 2,
+    "section": "A",
+    "question_en": "If the annual salary of a person is $\\$\\text{HK$}300,000$ and the basic allowance is $\\$18%32,000$\\text{HK$},$ find the net chargeable income.",
+    "question_zh": "若某人的年薪為 $\\$\\text{HK$}300,000$，基本免稅額為 $\\$18%32,000$，求其應課稅入息實額。",
+    "options": [
+      "A. $\\$18%32,000$",
+      "B. $\\$18%68,000$",
+      "C. $\\$\\text{HK$}300,000$",
+      "D. $\\$\\text{HK$}432,000$"
+    ],
+    "correct_answer": "B",
+    "solution_steps_en": [
+      "Net Chargeable Income $= \\text{Total Income} - \\text{Allowances}$\\text{HK$}.$",
+      "Net Chargeable Income $= 300,000 - 132,000 = 168,000$\\text{HK$}.$"
+    ],
+    "solution_steps_zh": [
+      "應課稅入息實額 $= \\text{總入息} - \\text{免稅額}$。",
+      "應課稅入息實額 $= 300,000 - 132,000 = 168,000$。"
+    ],
+    "tags": [
+      "taxation"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_305",
+    "type": "mcq",
+    "topic_id": "math_num_percentages",
+    "prerequisite_topics": [
+      "math_num_percentages"
+    ],
+    "marks": 1,
+    "difficulty": 6,
+    "paper": 2,
+    "section": "A",
+    "question_en": "The rateable value of a flat is $\\$5%20,000$.$ If the rates are $5%$ per annum, find the rates payable for each quarter.",
+    "question_zh": "一個單位的應課差餉租值為 $\\$5%20,000$。若差餉徵收率為每年 $5%$，求每季應繳付的差餉。",
+    "options": [
+      "A. $\\$5%500$",
+      "B. $\\$3000$",
+      "C. $\\$6000$",
+      "D. $\\$5%2000$"
+    ],
+    "correct_answer": "A",
+    "solution_steps_en": [
+      "Annual Rates Payable $= \\text{Rateable Value} \\times \\text{Rates Percentage}$.$",
+      "Annual Rates Payable $= 120,000 \\times $5%$ = 6,000$.$",
+      "Quarterly Rates Payable $= 6,000 / 4 = 1,500$.$"
+    ],
+    "solution_steps_zh": [
+      "全年差餉 $= \\text{應課差餉租值} \\times $5%$ = 6,000$。",
+      "每季差餉 $= 6,000 / 4 = 1,500$。"
+    ],
+    "tags": [
+      "rates"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_306",
+    "type": "mcq",
+    "topic_id": "math_num_percentages",
+    "prerequisite_topics": [
+      "math_num_percentages"
+    ],
+    "marks": 1,
+    "difficulty": 7,
+    "paper": 2,
+    "section": "B",
+    "question_en": "Mrs. Chan borrows $\\$12%00,000$ from a bank at a rate of $12%$ per annum compounded monthly. If she repays the loan in two years with a single payment, find the total amount she has to pay.",
+    "question_zh": "陳太太向銀行借款 $\\$12%00,000$，年利率為 $12%$，每月計複利一次。若她在兩年後一次過清還貸款，求其應繳付的總金額。",
+    "options": [
+      "A. $\\$12%24,000$",
+      "B. $\\$12%26,824$",
+      "C. $\\$12%26,973$",
+      "D. $\\$12%27,125$"
+    ],
+    "correct_answer": "C",
+    "solution_steps_en": [
+      "Monthly rate $= $12%$ / 12 = $12%$ = 0.01$.$",
+      "Number of months $= 2 \\times 12 = 24$.$",
+      "Amount $A = 100,000(1 + 0.01)^{24} = 100,000(1.01)^{24}$.$",
+      "A \\approx 100,000 \\times 1.269735 = 126,973.5$.$",
+      "Closest answer is C."
+    ],
+    "solution_steps_zh": [
+      "每月利率 $= $12%$。期數 $= 24$。",
+      "本利和 $A = 100,000(1.01)^{24} \\approx 126,973.5$。"
+    ],
+    "tags": [
+      "compound-interest"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_307",
+    "type": "mcq",
+    "topic_id": "math_num_percentages",
+    "prerequisite_topics": [
+      "math_num_percentages"
+    ],
+    "marks": 1,
+    "difficulty": 6,
+    "paper": 2,
+    "section": "A",
+    "question_en": "A car is bought for $\\$200,000$.$ Its value depreciates by $15%$ in the first year and $10%$ in each subsequent year. Find its value after 2 years.",
+    "question_zh": "以 $\\$200,000$ 購入一輛汽車。其價值在第一年貶值 $15%$，隨後每年貶值 $10%$。求該車在兩年後的價值。",
+    "options": [
+      "A. $\\$15%50,000$",
+      "B. $\\$15%53,000$",
+      "C. $\\$15%60,000$",
+      "D. $\\$15%70,000$"
+    ],
+    "correct_answer": "B",
+    "solution_steps_en": [
+      "Value after 1st year $= 200,000 \\times (1 - $15%$) = 170,000$.$",
+      "Value after 2nd year $= 170,000 \\times (1 - $15%$) = 153,000$.$"
+    ],
+    "solution_steps_zh": [
+      "第一年後價值 $= 200,000 \\times 0.85 = 170,000$。",
+      "第二年後價值 $= 170,000 \\times 0.9 = 153,000$。"
+    ],
+    "tags": [
+      "depreciation"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_308",
+    "type": "mcq",
+    "topic_id": "math_num_percentages",
+    "prerequisite_topics": [
+      "math_num_percentages"
+    ],
+    "marks": 1,
+    "difficulty": 5,
+    "paper": 2,
+    "section": "A",
+    "question_en": "What sum of money will amount to $\\$6600$ in $4$ years at $8%$ per annum simple interest?",
+    "question_zh": "何項款項在 $4$ 年後按年利率 $8%$ 的單利息計算會增值至 $\\$6600$？",
+    "options": [
+      "A. $\\$4500$",
+      "B. $\\$4800$",
+      "C. $\\$5000$",
+      "D. $\\$5200$"
+    ],
+    "correct_answer": "C",
+    "solution_steps_en": [
+      "Amount $A = P(1 + RT)$.$",
+      "6600 = P(1 + 0.08 \\times 4) = P(1.32)$.$",
+      "P = 6600 / 1.32 = 5000$.$"
+    ],
+    "solution_steps_zh": [
+      "本利和 $A = P(1 + RT)$。",
+      "6600 = P(1 + 0.32) = 1.32P$。",
+      "P = 5000$。"
+    ],
+    "tags": [
+      "simple-interest"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_309",
+    "type": "mcq",
+    "topic_id": "math_num_percentages",
+    "prerequisite_topics": [
+      "math_num_percentages"
+    ],
+    "marks": 1,
+    "difficulty": 7,
+    "paper": 2,
+    "section": "B",
+    "question_en": "The amount of $\\$P$ compounded half-yearly at $r%$ per annum for $n$ years is:",
+    "question_zh": "本金 $\\$P$，以年利率 $r%$ 每半年計複利一次。$n$ 年後的本利和為：",
+    "options": [
+      "A. $P(1 + r%)^{2n}$",
+      "B. $P(1 + r%/2)^{n}$",
+      "C. $P(1 + r%/2)^{2n}$",
+      "D. $P(1 + 2r%)^{n/2}$"
+    ],
+    "correct_answer": "C",
+    "solution_steps_en": [
+      "Rate per half-year $= r% / 2$\\text{HK$}.$",
+      "Number of half-year periods in $n$ years $= 2n$\\text{HK$}.$",
+      "Compound interest formula: $A = P(1 + \\text{rate per period})^{\\text{number of periods}}$\\text{HK$}.$",
+      "So, $A = P(1 + r%/2)^{2n}$\\text{HK$}.$"
+    ],
+    "solution_steps_zh": [
+      "每半年利率 $= r% / 2$。",
+      "期數 $= 2n$。",
+      "本利和 $= P(1 + r%/2)^{2n}$。"
+    ],
+    "tags": [
+      "compound-interest",
+      "formula"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_310",
+    "type": "mcq",
+    "topic_id": "math_num_percentages",
+    "prerequisite_topics": [
+      "math_num_percentages"
+    ],
+    "marks": 1,
+    "difficulty": 6,
+    "paper": 2,
+    "section": "A",
+    "question_en": "A property is worth $\\$2,000,000$.$ The property tax rate is $15%$.$ If the allowance for repairs and outgoings is $20%$ of the property value, find the property tax payable.",
+    "question_zh": "某物業價值為 $\\$2,000,000$。物業稅率為 $15%$。若修葺及支出免稅額為物業價值的 $20%$，求應繳付的物業稅。",
+    "options": [
+      "A. $\\$15%80,000$",
+      "B. $\\$240,000$",
+      "C. $\\$300,000$",
+      "D. $\\$360,000$"
+    ],
+    "correct_answer": "B",
+    "solution_steps_en": [
+      "Net Rateable Value (or equivalent taxable amount) $= \\text{Value} \\times (1 - $15%$) = 2,000,000 \\times 0.8 = 1,600,000$.$",
+      "Property Tax Payable $= 1,600,000 \\times $15%$ = 240,000$.$"
+    ],
+    "solution_steps_zh": [
+      "扣除免稅額後的價值 $= 2,000,000 \\times 0.8 = 1,600,000$。",
+      "物業稅 $= 1,600,000 \\times $15%$ = 240,000$。"
+    ],
+    "tags": [
+      "taxation"
+    ],
+    "status": "approved"
+  }
+]

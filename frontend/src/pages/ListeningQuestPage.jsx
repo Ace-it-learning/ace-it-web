@@ -26,6 +26,7 @@ const ListeningQuestPage = () => {
     const [userAudioSrc, setUserAudioSrc] = useState(null);
     const [marginalXP, setMarginalXP] = useState(0);
     const [prevBestScore, setPrevBestScore] = useState(0);
+    const [userNotes, setUserNotes] = useState("");
 
     // Persistence Helpers
     const getSessionKey = (qId, mode) => `ace_it_listening_session_${qId || 'unknown'}_${mode}`;
@@ -79,21 +80,37 @@ const ListeningQuestPage = () => {
 
             try {
                 let data = null;
+                const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
                 
                 // Robust fetch for full scenario data (including sprint_data and integrated_data)
                 if (isMock && location.state?.paperId) {
                     console.log(`[QuestPage] Fetching MOCK paper: ${location.state.paperId}`);
-                    const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
                     const res = await fetch(`${API_URL}/api/english/mock/${location.state.paperId}`);
+                    if (res.ok) data = await res.json();
+                } else if (location.state?.isWeeklyQuest) {
+                    console.log(`[QuestPage] Fetching WEEKLY paper`);
+                    const res = await fetch(`${API_URL}/api/lab/weekly/listening`);
                     if (res.ok) data = await res.json();
                 } else if (questId) {
                     console.log(`[QuestPage] Fetching FRESH scenario data for ID: ${questId}`);
-                    const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
-                    const res = await fetch(`${API_URL}/api/lab/listening/${questId}`);
+                    
+                    // Use special endpoint for weekly quests
+                    const url = (questId.startsWith('weekly_') || location.state?.isWeeklyQuest)
+                        ? `${API_URL}/api/lab/weekly/listening`
+                        : `${API_URL}/api/lab/listening/${questId}`;
+                    
+                    let res = await fetch(url);
+                    
+                    // [FIX] MICRO-SKILL FALLBACK: If a micro-skill ID fails, try a default quest
+                    if (!res.ok && questId.startsWith('listening_') && !questId.startsWith('weekly_')) {
+                        console.warn(`[QuestPage] Quest ID ${questId} not found, falling back to l_001`);
+                        res = await fetch(`${API_URL}/api/lab/listening/l_001`);
+                    }
+
                     if (res.ok) {
                         data = await res.json();
                     } else {
-                        throw new Error("Failed to fetch scenario data");
+                        throw new Error(`Failed to fetch scenario data for ${questId}`);
                     }
                 }
 
@@ -103,10 +120,11 @@ const ListeningQuestPage = () => {
                     // Standard flow: if no saved results, start the simulator
                     if (!savedState) setStep('simulator');
                 } else {
+                    console.error("[QuestPage] No data resolved for quest.");
                     navigate('/dashboard');
                 }
             } catch (err) {
-                console.error("Failed to load quest:", err);
+                console.error("[QuestPage] Initialization Error:", err);
                 if (!savedState) navigate('/dashboard');
             }
         };

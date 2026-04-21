@@ -1,10 +1,10 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useLayoutEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { Link, useLocation } from 'react-router-dom';
 import { useAvatar } from '../context/AvatarContext';
 import { useAuth } from '../context/AuthContext';
 import { useLanguage } from '../context/LanguageContext';
-import { ArrowRight, Radio, Paperclip, Send, Volume2, VolumeX, Edit3, Type, Maximize2, Minimize2, X, MessageSquare, CircleX, Trophy, Lock, Zap, Target, BookOpen } from 'lucide-react';
+import { ArrowRight, Paperclip, Send, Volume2, VolumeX, Edit3, Type, Maximize2, Minimize2, X, MessageSquare, CircleX, Trophy, Lock, Zap, Target, BookOpen, Plus, Settings2, ChevronDown, ChevronUp } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { cn } from '../utils/cn'; // Reusing cn utility
 import EssayUploader from './EssayUploader';
@@ -26,6 +26,7 @@ import DecoderCard from './tutor/DecoderCard';
 import VocabCard from './tutor/VocabCard';
 // RoadmapModal import removed - hoisted to Dashboard
 
+// Suggestions chips logic moved inside component
 const getSuggestionChips = (t) => ({
     guest: [
         { label: t('chat.what_is_ace_it'), value: "What is Ace It?", emoji: "🤔" },
@@ -53,9 +54,23 @@ const DISPOSABLE_DOMAINS = [
  * - Markdown headers: ### heading
  * - Cleans stray backslashes from legacy AI messages
  */
+const parseSuggestions = (content) => {
+    if (typeof content !== 'string') return { text: content, suggestions: [] };
+    const suggestionsMatch = content.match(/\[SUGGESTIONS:\s*([^\]]+)\]/);
+    if (suggestionsMatch) {
+        const suggestions = suggestionsMatch[1].split(',').map(s => s.trim());
+        const cleanedText = content.replace(suggestionsMatch[0], '').trim();
+        return { text: cleanedText, suggestions };
+    }
+    return { text: content, suggestions: [] };
+};
+
 const formatMessageContent = (content) => {
     if (typeof content !== 'string') return content;
-    const cleanContent = content.replace(/\n{3,}/g, '\n\n');
+
+    // Auto-strip suggestions if present (for history/legacy support)
+    const { text: cleanForDisplay } = parseSuggestions(content);
+    const cleanContent = cleanForDisplay.replace(/\n{3,}/g, '\n\n');
 
     // Unified regex to split by ALL math delimiter types + bold + headers
     // Order matters: longest/most-specific patterns first
@@ -68,24 +83,24 @@ const formatMessageContent = (content) => {
     const UNIFIED_REGEX = /(\$\$[\s\S]*?\$\$|\\?\\\[[\s\S]*?\\?\\\]|\\?\\\([\s\S]*?\\?\\\)|(?<!\$)\$(?!\$)(?:[^$\\]|\\.)*?\$(?!\$)|\*\*(?:.*?)\*\*|^###\s+(?:.+)$)/gm;
 
     const parts = cleanContent.split(UNIFIED_REGEX);
-    
+
     return parts.map((part, idx) => {
         if (!part && part !== '') return null;
         if (part === undefined) return null;
         const key = `fmt-${idx}`;
-        
+
         // Block Math: $$...$$
         if (part.startsWith('$$') && part.endsWith('$$') && part.length > 4) {
             const mathStr = part.slice(2, -2).trim();
             return <SafeBlockMath key={key} math={mathStr} />;
         }
-        
+
         // Block Math: \[...\] (may have optional leading \)
         if (/^\\?\\\[/.test(part) && /\\?\\\]$/.test(part)) {
             const mathStr = part.replace(/^\\?\\\[/, '').replace(/\\?\\\]$/, '').trim();
             return <SafeBlockMath key={key} math={mathStr} />;
         }
-        
+
         // Inline Math: \(...\) (may have optional leading \)
         if (/^\\?\\\(/.test(part) && /\\?\\\)$/.test(part)) {
             let mathStr = part.replace(/^\\?\\\(/, '').replace(/\\?\\\)$/, '').trim();
@@ -93,7 +108,7 @@ const formatMessageContent = (content) => {
             mathStr = mathStr.replace(/\\+$/, '').trim();
             return <SafeInlineMath key={key} math={mathStr} />;
         }
-        
+
         // Inline Math: $...$
         if (part.startsWith('$') && part.endsWith('$') && !part.startsWith('$$') && part.length > 2) {
             const mathStr = part.slice(1, -1).trim();
@@ -106,7 +121,7 @@ const formatMessageContent = (content) => {
         if (part.startsWith('**') && part.endsWith('**')) {
             return <strong key={key} className="font-bold">{part.slice(2, -2)}</strong>;
         }
-        
+
         // Header: ### heading
         if (part.startsWith('### ')) {
             return <div key={key} className="font-bold text-base mt-3 mb-1">{part.slice(4)}</div>;
@@ -120,12 +135,12 @@ const formatMessageContent = (content) => {
 const ChatInterface = ({ onOpenQuest }) => {
     const navigate = useNavigate();
     const location = useLocation();
-    const { 
-        activeAgent, activeAgentId, setActiveAgentId, 
-        avatarState, setAvatarState, 
-        studentState, setStudentState, 
+    const {
+        activeAgent, activeAgentId, setActiveAgentId,
+        avatarState, setAvatarState,
+        studentState, setStudentState,
         isFocusMode, setIsFocusMode,
-        equipment, syncEquipment 
+        equipment, syncEquipment
     } = useAvatar();
     const { user, loginWithGoogle, logout, verifyEmail } = useAuth(); // Destructure all needed methods
     const { t, toggleLanguage, language } = useLanguage();
@@ -133,6 +148,46 @@ const ChatInterface = ({ onOpenQuest }) => {
     // State definitions moved to top
     const [hasDiagnostic, setHasDiagnostic] = useState(false);
     const [isHistoryLoading, setIsHistoryLoading] = useState(false);
+
+    // Helper function to save a single message to backend (Firestore) - Memoized to ensure fresh state
+    const saveMessageToBackend = React.useCallback(async (message) => {
+        console.log("[ChatInterface] DEBUG: saveMessageToBackend (API) called for role:", message.role);
+        
+        if (!user || user.uid === 'guest') {
+            console.log("[ChatInterface] Skipping save: Not authenticated user or Guest mode.");
+            return;
+        }
+
+        try {
+            const token = await user.getIdToken();
+            const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+            const targetUrl = `${API_URL}/api/history/${activeAgentId}`;
+            
+            console.log(`[ChatInterface] >>> INITIATING SAVE: [${message.role}] to ${targetUrl} (UID: ${user.uid})`);
+            
+            const response = await fetch(targetUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${token}`
+                },
+                body: JSON.stringify({
+                    uid: user.uid,
+                    role: message.role === 'user' ? 'user' : 'model',
+                    content: message.content
+                })
+            });
+
+            if (!response.ok) {
+                const errData = await response.json();
+                console.error("[ChatInterface] Backend rejected history save:", response.status, errData);
+            } else {
+                console.log("[ChatInterface] <<< SAVE SUCCESSFUL");
+            }
+        } catch (error) {
+            console.error(`[ChatInterface] CRITICAL: Error in saveMessageToBackend:`, error);
+        }
+    }, [user, activeAgentId]);
 
 
     // Dynamic Chips Logic based on User State
@@ -162,6 +217,7 @@ const ChatInterface = ({ onOpenQuest }) => {
     const [selectedImage, setSelectedImage] = useState(null); // { data: base64, type: mimeType, preview: url }
     // isQuestOpen removed - controlled by parent
     const fileInputRef = useRef(null);
+    const textareaRef = useRef(null);
     const messagesEndRef = useRef(null);
     const chatContainerRef = useRef(null);
     const lastUserMessageRef = useRef(null);
@@ -187,12 +243,23 @@ const ChatInterface = ({ onOpenQuest }) => {
     const [isImageConfirmOpen, setIsImageConfirmOpen] = useState(false);
     const [imagePrompt, setImagePrompt] = useState("");
     const [hasStartedTyping, setHasStartedTyping] = useState(false); // Tracks if user modified the default prompt
-    const [isMuted, setIsMuted] = useState(false);
-    const isMutedRef = useRef(false);
-    const [isRecording, setIsRecording] = useState(false);
-    const [recordingTime, setRecordingTime] = useState(0);
-    const recordingTimerRef = useRef(null);
+    const [isMuted, setIsMuted] = useState(true);
+    const isMutedRef = useRef(true);
     const [gender, setGender] = useState(null);
+    const [isToolsOpen, setIsToolsOpen] = useState(false);
+    const toolsRef = useRef(null);
+
+
+    // Close tools menu when clicking outside
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (toolsRef.current && !toolsRef.current.contains(event.target)) {
+                setIsToolsOpen(false);
+            }
+        };
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => document.removeEventListener('mousedown', handleClickOutside);
+    }, []);
 
 
     const [isNewStudent, setIsNewStudent] = useState(true); // Default to true until fetched
@@ -201,14 +268,14 @@ const ChatInterface = ({ onOpenQuest }) => {
     // Mastery Compass State - Redirects to dedicated pages
     const [isDreamProgramsOpen, setIsDreamProgramsOpen] = useState(false); // Ace Sir - Dream University List
 
-    const handleOpenMastery = () => {
-        if (!user) return;
-        if (activeAgentId === 'math') {
-            navigate('/maths/ability');
-        } else {
-            navigate('/english/mastery');
+    // Auto-expand textarea
+    useEffect(() => {
+        if (textareaRef.current) {
+            textareaRef.current.style.height = 'auto';
+            textareaRef.current.style.height = `${textareaRef.current.scrollHeight}px`;
         }
-    };
+    }, [inputValue]);
+
 
     const speakText = (text, agentId, audioContent = null) => {
         if (!text || isMutedRef.current) return;
@@ -245,7 +312,7 @@ const ChatInterface = ({ onOpenQuest }) => {
 
         const utterance = new SpeechSynthesisUtterance(cleanText);
         const voices = window.speechSynthesis.getVoices();
-        
+
         let selectedVoice = null;
         const isEnglish = agentId === 'english';
 
@@ -310,6 +377,7 @@ const ChatInterface = ({ onOpenQuest }) => {
 
     // Initial greeting or History restore
     useEffect(() => {
+        isHistoryScrolledRef.current = false; // Reset scroll state for new agent/history fetch
         setDynamicChips([]); // Reset dynamic chips on agent switch
         setMessages([]); // Clear messages immediately for instant feedback
         setIsHistoryLoading(true);
@@ -319,6 +387,8 @@ const ChatInterface = ({ onOpenQuest }) => {
             if (user) {
                 try {
                     const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+
+                    console.log(`[ChatInterface] Fetching history for UID: ${user.uid}, Agent: ${activeAgentId}`);
 
                     // 1 & 2. Parallelize Fetches
                     const [statsRes, historyRes] = await Promise.all([
@@ -343,7 +413,7 @@ const ChatInterface = ({ onOpenQuest }) => {
                             : statsData?.hasDiagnostic === true;
                     }
 
-                        setHasDiagnostic(currentHasDiagnostic);
+                    setHasDiagnostic(currentHasDiagnostic);
 
                     // Sync equipment before greeting
                     await syncEquipment();
@@ -351,10 +421,10 @@ const ChatInterface = ({ onOpenQuest }) => {
                     let visibleHistory = [];
                     if (historyRes.ok) {
                         const history = await historyRes.json();
-                        visibleHistory = history.filter(m =>
-                            !m.content.includes('[SYSTEM:') &&
-                            !m.content.includes('[ACTIVATING_EXAM_MODE]')
-                        );
+                        console.log(`[ChatInterface] Received ${history.length} messages from history API`);
+                        visibleHistory = history;
+                    } else {
+                        console.error(`[ChatInterface] History API failed with status: ${historyRes.status}`);
                     }
 
                     if (visibleHistory.length > 0) {
@@ -460,81 +530,39 @@ const ChatInterface = ({ onOpenQuest }) => {
     }, [activeAgentId, setAvatarState, activeAgent.name, user]);
 
     // Auto-scroll to bottom whenever messages update or history finishes loading
-    useEffect(() => {
-        if (!isHistoryLoading && messages.length > 0 && chatContainerRef.current) {
-            const timer = setTimeout(() => {
-                chatContainerRef.current.scrollTo({
-                    top: chatContainerRef.current.scrollHeight,
-                    behavior: "smooth"
-                });
-            }, 100);
-            return () => clearTimeout(timer);
+    // We use useLayoutEffect for the initial history jump to prevent the user from seeing the scroll animation
+    useLayoutEffect(() => {
+        if (!isHistoryLoading && messages.length > 0 && chatContainerRef.current && !isHistoryScrolledRef.current) {
+            chatContainerRef.current.scrollTop = chatContainerRef.current.scrollHeight;
+            isHistoryScrolledRef.current = true;
+            console.log("[ChatInterface] History restored: Initial instant scroll applied.");
         }
     }, [messages.length, isHistoryLoading]);
 
-
-
-
-    const handleAudioRecording = async (audioBlob, duration) => {
-        const reader = new FileReader();
-        reader.readAsDataURL(audioBlob);
-        reader.onloadend = async () => {
-            const base64Audio = reader.result.split(',')[1];
-
-            console.log('[Voice] Starting backend request...');
-            console.log('[Voice] Audio size:', (audioBlob.size / 1024).toFixed(2), 'KB');
-            console.log('[Voice] Duration:', duration, 's');
-
-            try {
-                console.log('[Voice] Getting auth token...');
-                const token = await user.getIdToken();
-                console.log('[Voice] Token obtained, sending request...');
-
-                const response = await fetch(`${import.meta.env.VITE_API_URL || 'http://localhost:3001'}/api/chat`, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${token}` },
-                    body: JSON.stringify({
-                        uid: user.uid,
-                        audio: base64Audio,
-                        audioType: 'audio/webm',
-                        agentId: activeAgentId,
-                        outputLanguage: language,
-                        history: messages.map(m => ({ role: m.role === 'user' ? 'user' : 'model', parts: [{ text: m.content }] }))
-                    })
-                });
-
-                console.log('[Voice] Response status:', response.status);
-                const data = await response.json();
-                console.log('[Voice] Response data:', JSON.stringify(data, null, 2));
-
-                if (data.text) {
-                    console.log('[Voice] Adding message to chat');
-                    setMessages(prev => [...prev, { role: 'assistant', content: data.text, agentId: activeAgentId }]);
-                    if (!isMutedRef.current) {
-                        speakText(data.text, activeAgentId, data.audioContent);
-                    }
-                } else {
-                    console.error('[Voice] No text in response. Full data:', data);
-                    if (data.error) {
-                        setMessages(prev => [...prev, {
-                            role: 'assistant',
-                            content: `Backend Error: ${data.error}\n${data.message || ''}`,
-                            agentId: activeAgentId
-                        }]);
-                    }
+    // Subsequent smooth scroll for new incoming messages
+    useEffect(() => {
+        if (isHistoryScrolledRef.current && messages.length > 0 && chatContainerRef.current) {
+            const timer = setTimeout(() => {
+                if (chatContainerRef.current) {
+                    chatContainerRef.current.scrollTo({
+                        top: chatContainerRef.current.scrollHeight,
+                        behavior: "smooth"
+                    });
                 }
-            } catch (error) {
-                console.error('[Voice] Error details:', error);
-                console.error('[Voice] Error stack:', error.stack);
-                setMessages(prev => [...prev, { role: 'assistant', content: `Error: ${error.message}`, agentId: activeAgentId }]);
-            }
-        };
-    };
+            }, 100);
+            return () => clearTimeout(timer);
+        }
+    }, [messages.length]);
+
+
+
+
+
 
     const handleFileSelect = (e) => {
         const file = e.target.files[0];
         console.log(`[ChatInterface] File selected:`, file ? file.name : 'none');
-        
+
         if (!file) return;
 
         if (!file.type.startsWith('image/')) {
@@ -554,11 +582,11 @@ const ChatInterface = ({ onOpenQuest }) => {
 
         const reader = new FileReader();
         console.log(`[ChatInterface] Starting file read...`);
-        
+
         reader.onload = () => {
             console.log(`[ChatInterface] FileReader finished. Status: ${reader.readyState}`);
             const base64Data = reader.result.split(',')[1];
-            
+
             const previewUrl = URL.createObjectURL(file);
             setSelectedImage({
                 data: base64Data,
@@ -566,16 +594,16 @@ const ChatInterface = ({ onOpenQuest }) => {
                 preview: previewUrl
             });
             console.log(`[ChatInterface] Selected image state set successfully.`);
-            
+
             // Trigger the Image Analysis Popup
-            const defaultPrompt = activeAgentId === 'math' 
-                ? "Please analyse my Math question" 
+            const defaultPrompt = activeAgentId === 'math'
+                ? "Please analyse my Math question"
                 : "Please analyze my handwriting";
             setImagePrompt(defaultPrompt);
             setHasStartedTyping(false);
             setIsImageConfirmOpen(true);
         };
-        
+
         reader.onerror = (err) => {
             console.error('[ChatInterface] FileReader error:', err);
             alert("Failed to read the file. Please try again.");
@@ -617,7 +645,7 @@ const ChatInterface = ({ onOpenQuest }) => {
                 setMessages(prev => [...prev, friendlyMessage]);
 
                 // Save raw command to backend for history consistency (optional, or save friendly)
-                saveMessageToBackend({ role: 'user', content: textToSend });
+                // saveMessageToBackend({ role: 'user', content: textToSend }); // Removed: Redundant as /api/chat saves
 
                 setMessages(prev => [...prev, { role: 'assistant', content: `Preparing your ${paperId} mock exam...` }]);
                 setInputValue('');
@@ -636,24 +664,6 @@ const ChatInterface = ({ onOpenQuest }) => {
             finalMessage = activeAgentId === 'math' ? "[Math Problem Assessment]" : "[Handwriting Analysis]";
         }
 
-        const saveMessageToBackend = async (msg) => {
-            if (!user) return;
-            try {
-                const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
-                const token = await user.getIdToken();
-                await fetch(`${API_URL}/api/history/${activeAgentId}?uid=${user.uid}`, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Authorization': `Bearer ${token}`
-                    },
-                    body: JSON.stringify(msg)
-                });
-            } catch (err) {
-                console.error("Failed to save message to history:", err);
-            }
-        };
-
         const userMsg = {
             role: 'user',
             content: finalMessage,
@@ -663,6 +673,9 @@ const ChatInterface = ({ onOpenQuest }) => {
         // Only add to UI if NOT hidden
         if (!isHidden) {
             setMessages(prev => [...prev, userMsg]);
+            // Attempt to save user message to backend immediately
+            // We don't await this so it doesn't block the AI response
+            saveMessageToBackend(userMsg);
         }
 
         const currentInput = finalMessage;
@@ -684,14 +697,12 @@ const ChatInterface = ({ onOpenQuest }) => {
 
             const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
 
-            // Prepare history (exclude the very last user message which is being sent now, if it was already added to state? 
-            // construct from 'messages' which doesn't have the new user msg yet? 
-            // Wait, line 78 adds it to state: `setMessages(prev => [...prev, userMsg]);`
-            // But state update is async. `messages` here is still the OLD value.
-            // So `messages` is perfect as "history".
-
             // Prepare history (start from index 0 to include greeting context)
-            const history = messages.map(m => ({
+            // Ensure that if the current user message was added, it's included in history for context
+            const historyForAPI = [
+                ...(messages.length > 0 ? messages : []),
+                ...(isHidden ? [] : [userMsg])
+            ].map(m => ({
                 role: m.role === 'user' ? 'user' : 'model', // Gemini uses 'model'
                 parts: [{ text: m.content }]
             }));
@@ -703,7 +714,7 @@ const ChatInterface = ({ onOpenQuest }) => {
                     uid: user?.uid || 'guest',
                     message: currentInput,
                     image: currentImage ? { data: currentImage.data, mimeType: currentImage.type } : null,
-                    history: history,
+                    history: historyForAPI, // Use the carefully constructed history
                     agentId: activeAgentId,
                     outputLanguage: language // Pass preference to backend
                 })
@@ -716,6 +727,9 @@ const ChatInterface = ({ onOpenQuest }) => {
             }
 
             const data = await response.json();
+
+            // LOGGING TO HELP DEBUG PERSISTENCE
+            console.log(`[ChatInterface] AI Response received. diag_info: ${data.diag_info}`);
 
             // Handling [FORCE_TTS] tag for Listening Mode
             let rawReply = data.reply || data.text;
@@ -765,11 +779,10 @@ const ChatInterface = ({ onOpenQuest }) => {
             }
 
             // Check for dynamic suggestions tag
-            const suggestionsMatch = replyText.match(/\[SUGGESTIONS:\s*([^\]]+)\]/);
-            if (suggestionsMatch) {
-                const chips = suggestionsMatch[1].split(',').map(s => s.trim());
+            const { suggestions: chips } = parseSuggestions(replyText);
+            if (chips.length > 0) {
                 setDynamicChips(chips);
-                replyText = replyText.replace(suggestionsMatch[0], '');
+                // The display text will be cleaned by formatMessageContent and render logic
             }
 
             // --- MOCK EXAM LISTING TAG ---
@@ -839,8 +852,9 @@ const ChatInterface = ({ onOpenQuest }) => {
                 setMessages(prev => [...prev, aiMsg]);
             }
 
-
-
+            // NEW: Also save AI's message to backend for immediate consistency
+            // Use a small delay for AI message to ensure it appears after the user message in Firestore (timestamp resolution)
+            setTimeout(() => saveMessageToBackend(aiMsg), 200);
 
             // Check for Diagnostic Completion Signal (XP Award Trigger)
             if (data.reply && data.reply.includes('[SYSTEM: DIAGNOSTIC_JUST_COMPLETED]')) {
@@ -906,33 +920,10 @@ const ChatInterface = ({ onOpenQuest }) => {
             // Use functional update to avoid stale closure issues
             setAvatarState(prev => prev === 'THINKING' ? 'IDLE' : prev);
         }
+    };
 
-    };
-    
-    // --- VOICE RECORDING LOGIC ---
-    const handleVoiceRecording = () => {
-        if (!isRecording) {
-            // Start recording (simulated for UI feedback in this version)
-            setIsRecording(true);
-            setRecordingTime(0);
-            recordingTimerRef.current = setInterval(() => {
-                setRecordingTime(prev => {
-                    if (prev >= 30) {
-                        clearInterval(recordingTimerRef.current);
-                        setIsRecording(false);
-                        handleSendMessage("[VOICE_RECORDING_TIMEOUT] I've finished recording my pronunciation.");
-                        return 30;
-                    }
-                    return prev + 1;
-                });
-            }, 1000);
-        } else {
-            // Stop recording
-            if (recordingTimerRef.current) clearInterval(recordingTimerRef.current);
-            setIsRecording(false);
-            handleSendMessage(`[VOICE_RECORDING_STOPPED] I've finished recording my pronunciation. Duration: ${recordingTime}s`);
-        }
-    };
+    // --- STABILIZED VOICE RECORDING LOGIC (MEDIA RECORDER + BACKEND STT) ---
+
 
 
     // Ensure voices are loaded (Chrome quirk)
@@ -1027,14 +1018,14 @@ const ChatInterface = ({ onOpenQuest }) => {
     };
 
     const content = (
-        <section 
+        <section
             ref={sectionRef}
             className={cn(
-            "flex flex-col rounded-3xl glass-container shadow-2xl relative overflow-hidden transition-all duration-500",
-            isFocusMode
-                ? "!fixed !top-0 !left-0 !m-0 inset-0 z-[999] rounded-none shadow-none h-screen w-screen flex flex-col overflow-hidden"
-                : "lg:col-span-9 h-[80vh] min-h-[600px] w-full"
-        )}>
+                "flex flex-col rounded-3xl glass-container shadow-2xl relative overflow-hidden transition-all duration-500",
+                isFocusMode
+                    ? "!fixed !top-0 !left-0 !m-0 inset-0 z-[999] rounded-none shadow-none h-screen w-screen flex flex-col overflow-hidden"
+                    : "lg:col-span-9 h-[80vh] min-h-[600px] w-full"
+            )}>
             {(!user || (user && !user.emailVerified)) && (
                 <div className="absolute inset-0 z-[200] bg-white/50 dark:bg-black/50 backdrop-blur-sm flex flex-col items-center justify-center p-8 text-center">
                     <div className="bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-2xl max-w-md w-full border border-gray-200 dark:border-gray-700 animate-in fade-in zoom-in-95 duration-300">
@@ -1117,11 +1108,11 @@ const ChatInterface = ({ onOpenQuest }) => {
                         )}>
                             <img src={getStudentAvatar()} alt="Student" className="w-full h-full object-cover" />
                             {equipment.frame && (
-                                <img src={equipment.frame.image} alt="Frame" className="absolute inset-0 w-full h-full object-contain pointer-events-none scale-110" />
+                                <img src={equipment.frame.image} alt="Frame" className="absolute inset-0 w-full h-full object-contain pointer-events-none scale-110 avatar-frame-mask" />
                             )}
                         </div>
                     </div>
-                    
+
                     <div className="flex flex-col">
                         <span className="text-sm font-bold text-gray-900 dark:text-white leading-none mb-0.5">
                             {activeAgent.name}
@@ -1163,21 +1154,6 @@ const ChatInterface = ({ onOpenQuest }) => {
                         </button>
                     )}
 
-                    {user && activeAgentId !== 'ace' && (
-                        <button
-                            onClick={handleOpenMastery}
-                            className={cn(
-                                "px-6 py-2.5 rounded-full transition-all flex items-center gap-2 shadow-sm border hover:shadow-md active:scale-95 min-w-[120px] justify-center",
-                                "bg-cyan-50 text-cyan-700 border-cyan-200/50"
-                            )}
-                            title={t('nav.mastery_compass')}
-                        >
-                            <Compass className="w-5 h-5 stroke-[2.5]" />
-                            <span className="text-sm font-black tracking-wide uppercase whitespace-nowrap">
-                                {activeAgentId === 'math' ? t('math_ability.title') : t('nav.mastery_compass')}
-                            </span>
-                        </button>
-                    )}
 
                     {/* Dream Programs Button - Ace Sir Only */}
                     {user && activeAgentId === 'ace' && (
@@ -1306,6 +1282,7 @@ const ChatInterface = ({ onOpenQuest }) => {
                                 )}>
                                     {formatMessageContent(msg.content)}
                                 </div>
+
                                 {/* Custom Component: Active Mock List */}
                                 {msg.customComponent === 'active_mock_list' && (
                                     <div className="mt-4 grid gap-2">
@@ -1397,7 +1374,7 @@ const ChatInterface = ({ onOpenQuest }) => {
                                             className="w-full h-full object-cover"
                                         />
                                         {equipment.frame && (
-                                            <img src={equipment.frame.image} alt="Frame" className="absolute inset-0 w-full h-full object-contain pointer-events-none scale-110" />
+                                            <img src={equipment.frame.image} alt="Frame" className="absolute inset-0 w-full h-full object-contain pointer-events-none scale-110 avatar-frame-mask" />
                                         )}
                                     </div>
                                 )
@@ -1431,182 +1408,115 @@ const ChatInterface = ({ onOpenQuest }) => {
                 <div ref={messagesEndRef} />
             </div>
 
-            {/* Input Area */}
-            <div className="p-6 bg-white/60 dark:bg-white/5 flex flex-col gap-4">
-                {/* Suggestion Chips */}
-                {showChips && (
-                    <div className="flex flex-wrap gap-2 pb-2 -mx-2 px-2">
+            {/* Input Area - Gemini Redesign */}
+            <div className="p-4 bg-white/60 dark:bg-white/5 transition-all duration-300">
+                <div className="max-w-4xl mx-auto bg-white/80 dark:bg-white/10 rounded-[2rem] p-3 shadow-xl border border-black/5 dark:border-white/10 relative">
 
-
-                        {/* Dynamic AI Chips */}
-                        {/* Dynamic AI Chips */}
-                        {(dynamicChips.length > 0
-                            ? dynamicChips.filter(c => {
-                                const val = typeof c === 'string' ? c : c.value;
-                                const lbl = typeof c === 'string' ? c : c.label;
-                                // 1. Filter out Mock Exam duplicates
-                                if (["模擬考試", "開始模擬考試"].includes(val)) return false;
-
-                                // 2. Semantic Deduplication (The Fix)
-                                // If we have "Yes, please", remove "Yes".
-                                // Strategy: If this chip is a substring of another chip in the SAME list, drop it?
-                                // Or explicitly filter out known weak duplicates if a strong one exists.
-                                const lowerVal = val.toLowerCase();
-                                if (lowerVal === 'yes' || lowerVal === 'ok' || lowerVal === 'sure') {
-                                    // Check if a "better" version exists in the list
-                                    const hasBetter = dynamicChips.some(other => {
-                                        const otherVal = (typeof other === 'string' ? other : other.value).toLowerCase();
-                                        return otherVal !== lowerVal && (otherVal.includes('yes') || otherVal.includes('please') || otherVal.includes('sure'));
-                                    });
-                                    if (hasBetter) return false;
-                                }
-
-                                // 3. Filter out calibration chips from dynamic chips (we'll use suggestionChips for that)
-                                if (val === "I want to start the diagnostic test") return false;
-
-                                return true;
-                            })
-                                // Prepend calibration chip to dynamic chips if user hasn't completed diagnostic
-                                .reduce((acc, current, idx) => {
-                                    if (!hasDiagnostic && acc.length === 0) {
-                                        acc.push({ label: t('chat.start_calibration'), value: "I want to start the diagnostic test", emoji: "⚡" });
-                                    }
-                                    acc.push(current);
-                                    return acc;
-                                }, [])
-                            // Fallback to suggestionChips (already contains calibration when !hasDiagnostic)
-                            : suggestionChips
-                        )
-                            .map((item, idx) => {
-                                // Handle dynamic vs static chips
-                                const label = typeof item === 'string' ? item : item.label;
-                                const value = typeof item === 'string' ? item : item.value;
-
-                                // Check if this is the "Start Calibration" chip
-                                const isCalibration = value === "I want to start the diagnostic test";
-                                return (
-                                    <button
-                                        key={idx}
-                                        onClick={() => handleSendMessage(value)}
-                                        className={cn(
-                                            "whitespace-nowrap px-4 py-2 rounded-full border text-sm font-medium transition-all shadow-sm flex items-center gap-2",
-                                            isCalibration
-                                                ? "bg-orange-500 border-orange-600 text-white hover:bg-orange-600 hover:scale-105"
-                                                : "border-primary/20 bg-white/90 dark:bg-white/10 text-[#a16b45] dark:text-gray-200 hover:border-primary hover:text-primary hover:scale-105"
-                                        )}
-                                    >
-                                        {isCalibration && <Zap className="size-4 text-white fill-white" />}
-                                        {label}
-                                    </button>
-                                )
-                            })}
-                    </div>
-                )}
-
-                <div className="flex items-center gap-3 bg-white/80 dark:bg-white/10 rounded-2xl p-2 shadow-sm border border-black/5 dark:border-white/10">
-
-
-                    {/* Mute Toggle */}
-                    <button
-                        onClick={() => {
-                            const newMute = !isMuted;
-                            setIsMuted(newMute);
-                            isMutedRef.current = newMute;
-                            if (newMute) window.speechSynthesis.cancel();
-                        }}
-                        className={cn("p-2 transition-colors rounded-full", isMuted ? "text-gray-400" : "text-green-500 hover:text-green-600")}
-                        title={isMuted ? "Unmute AI Voice" : "Mute AI Voice"}
-                    >
-                        {isMuted ? <VolumeX className="w-5 h-5" /> : <Volume2 className="w-5 h-5" />}
-                    </button>
-
-                    <input
-                        type="file"
-                        ref={fileInputRef}
-                        onChange={handleFileSelect}
-                        accept="image/*"
-                        className="hidden"
-                    />
-                    {/* PAPERCLIP (HANDWRITING / PHOTO) - ENABLED FOR ALL */}
-                    {(
-                        <button
-                            type="button"
-                            onClick={() => fileInputRef.current?.click()}
-                            className={cn("p-2 transition-colors rounded-full relative", selectedImage ? "text-primary" : "text-[#a16b45] hover:text-primary")}
-                            title={activeAgentId === 'math' ? t('chat.upload_tooltip_math') : "Upload Handwriting / Photo"}
-                        >
-                            <Paperclip className="w-5 h-5" />
-                            {selectedImage && (
-                                <span className="absolute top-0 right-0 w-2 h-2 bg-primary rounded-full border-2 border-white"></span>
-                            )}
-                        </button>
-                    )}
-                    {activeAgentId !== 'math' && activeAgentId !== 'ace' && (
-                        <button
-                            onClick={() => setIsUploaderOpen(true)}
-                            className="p-2 text-[#a16b45] hover:text-primary transition-colors rounded-full"
-                            title="Analyze Handwriting (Grade Essay)"
-                        >
-                            <Edit3 className="w-5 h-5" />
-                        </button>
-                    )}
-                    {activeAgentId !== 'math' && activeAgentId !== 'ace' && (
-                        <button
-                            onClick={handleVoiceRecording}
-                            className={cn(
-                                "p-2 transition-all rounded-full relative",
-                                isRecording ? "bg-red-500 text-white animate-pulse" : "text-[#a16b45] hover:text-primary"
-                            )}
-                            title={isRecording ? `Recording... ${recordingTime}s / 30s` : "Record your voice for pronunciation feedback"}
-                        >
-                            <Radio className="w-5 h-5" />
-                            {isRecording && (
-                                <>
-                                    {/* Pulsing red dot indicator */}
-                                    <span className="absolute -top-1 -right-1 flex h-3 w-3">
-                                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                                        <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
-                                    </span>
-                                    {/* Recording timer */}
-                                    <div className="absolute -top-10 left-1/2 -translate-x-1/2 bg-red-500 text-white px-3 py-1 rounded-full text-xs font-bold whitespace-nowrap shadow-lg">
-                                        🔴 {recordingTime}s / 30s
-                                    </div>
-                                </>
-                            )}
-                        </button>
-                    )}
-                    <div className="flex-1 flex flex-col relative">
+                    {/* Top Layer: Message Input */}
+                    <div className="flex-1 flex flex-col relative px-2">
                         {selectedImage && (
-                            <div className="absolute bottom-full left-0 mb-2 p-2 bg-white dark:bg-[#1a110a] rounded-xl shadow-lg border border-primary/20 flex items-center gap-2 animate-in slide-in-from-bottom-2">
+                            <div className="absolute bottom-full left-0 mb-3 p-2 bg-white dark:bg-[#1a110a] rounded-xl shadow-lg border border-primary/20 flex items-center gap-2 animate-in slide-in-from-bottom-2">
                                 <img src={selectedImage.preview} className="size-12 rounded-lg object-cover" alt="Preview" />
                                 <button
                                     onClick={() => setSelectedImage(null)}
                                     className="p-1 hover:bg-black/5 rounded-full text-red-500"
                                 >
-                                    <VolumeX className="size-4 rotate-45" /> {/* Using VolumeX rotated as a close button hack or just Lucide X if I had it, but keeping it simple */}
+                                    <X className="size-4" />
                                 </button>
                             </div>
                         )}
-                        <input
-                            className="w-full bg-transparent border-none focus:ring-0 focus:outline-none text-[#1d130c] dark:text-white placeholder-[#a16b45]/50 px-2 h-10"
+                        <textarea
+                            ref={textareaRef}
+                            rows="1"
+                            className="w-full bg-transparent border-none focus:ring-0 focus:outline-none text-[#1d130c] dark:text-white placeholder-[#a16b45]/50 px-2 py-2 resize-none text-base min-h-[40px] max-h-[200px] transition-[height] duration-100"
                             placeholder={getPlaceholder()}
-                            type="text"
                             value={inputValue}
                             onChange={(e) => setInputValue(e.target.value)}
                             onKeyDown={handleKeyDown}
                             disabled={avatarState === 'THINKING'}
                         />
                     </div>
-                    <button
-                        onClick={() => handleSendMessage()}
-                        disabled={avatarState === 'THINKING'}
-                        className="bg-primary text-white p-3 rounded-xl flex items-center justify-center hover:scale-105 transition-transform disabled:opacity-50 disabled:cursor-not-allowed"
-                    >
-                        <Send className="w-5 h-5" />
-                    </button>
+
+                    {/* Bottom Layer: Toolbar */}
+                    <div className="flex items-center justify-between mt-2 pt-2 border-t border-black/5 dark:border-white/5 px-2">
+                        <div className="flex items-center gap-2 relative" ref={toolsRef}>
+                            <button
+                                onClick={() => setIsToolsOpen(!isToolsOpen)}
+                                className={cn(
+                                    "flex items-center gap-2 px-4 py-2 rounded-full transition-all border shadow-sm",
+                                    isToolsOpen
+                                        ? "bg-primary text-white border-primary"
+                                        : "bg-white/50 dark:bg-white/5 text-[#a16b45] dark:text-gray-300 border-black/5 dark:border-white/10 hover:bg-white dark:hover:bg-white/10"
+                                )}
+                            >
+                                <Plus className={cn("w-4 h-4 transition-transform", isToolsOpen && "rotate-45")} />
+                                <Settings2 className="w-4 h-4" />
+                                <span className="text-xs font-black uppercase tracking-wider">Tools</span>
+                            </button>
+
+                            {/* Tools Context Menu (Popover) */}
+                            {isToolsOpen && (
+                                <div className="absolute bottom-full left-0 mb-3 bg-white dark:bg-[#1a110a] rounded-2xl shadow-2xl border border-black/5 dark:border-white/10 p-2 min-w-[280px] animate-in slide-in-from-bottom-2 fade-in duration-200 z-[100]">
+                                    <h4 className="px-3 py-2 text-[10px] font-black uppercase tracking-wider text-primary opacity-60 text-left">AI Features</h4>
+
+                                    <button
+                                        onClick={() => {
+                                            fileInputRef.current?.click();
+                                            setIsToolsOpen(false);
+                                        }}
+                                        className="w-full flex items-center gap-3 px-3 py-3 hover:bg-black/5 dark:hover:bg-white/5 rounded-xl transition-colors text-sm font-bold text-[#1d130c] dark:text-white group text-left"
+                                    >
+                                        <div className="p-1.5 bg-blue-50 dark:bg-blue-900/20 rounded-lg text-blue-500 group-hover:bg-blue-100 transition-colors">
+                                            <Paperclip size={16} />
+                                        </div>
+                                        Attach Photo
+                                    </button>
+
+                                    {activeAgentId !== 'math' && activeAgentId !== 'ace' && (
+                                        <>
+                                            <button
+                                                onClick={() => {
+                                                    setIsUploaderOpen(true);
+                                                    setIsToolsOpen(false);
+                                                }}
+                                                className="w-full flex items-center gap-3 px-3 py-3 hover:bg-black/5 dark:hover:bg-white/5 rounded-xl transition-colors text-sm font-bold text-[#1d130c] dark:text-white group text-left"
+                                            >
+                                                <div className="p-1.5 bg-amber-50 dark:bg-amber-900/20 rounded-lg text-amber-500 group-hover:bg-amber-100 transition-colors">
+                                                    <Edit3 size={16} />
+                                                </div>
+                                                Grade My Essay
+                                            </button>
+                                        </>
+                                    )}
+                                </div>
+                            )}
+                        </div>
+
+                        {/* Right Actions: Mic/Send */}
+                        <div className="flex items-center gap-3">
+                            <button
+                                onClick={() => handleSendMessage()}
+                                disabled={avatarState === 'THINKING' || (!inputValue.trim() && !selectedImage)}
+                                className={cn(
+                                    "size-12 rounded-full flex items-center justify-center transition-all shadow-md active:scale-90 disabled:opacity-50 relative",
+                                    (inputValue.trim() || selectedImage)
+                                        ? "bg-primary text-white shadow-primary/20"
+                                        : "bg-white dark:bg-white/5 text-primary border border-black/5 dark:border-white/10"
+                                )}
+                            >
+                                <Send className="w-5 h-5" />
+                            </button>
+                        </div>
+                    </div>
                 </div>
 
-
+                <input
+                    type="file"
+                    ref={fileInputRef}
+                    onChange={handleFileSelect}
+                    accept="image/*"
+                    className="hidden"
+                />
             </div>
             {/* RoadmapModal moved to Parent (Dashboard) */}
 
@@ -1652,9 +1562,9 @@ const ChatInterface = ({ onOpenQuest }) => {
                             {/* Left Side: Image Preview */}
                             <div className="w-full md:w-1/2 bg-gray-100 dark:bg-black/20 flex items-center justify-center p-6 border-b md:border-b-0 md:border-r border-gray-100 dark:border-white/10">
                                 <div className="relative w-full aspect-square md:aspect-auto md:h-full rounded-2xl overflow-hidden shadow-inner flex items-center justify-center bg-white/50 dark:bg-black/40">
-                                    <img 
-                                        src={selectedImage.preview} 
-                                        alt="Preview" 
+                                    <img
+                                        src={selectedImage.preview}
+                                        alt="Preview"
                                         className="max-w-full max-h-full object-contain"
                                     />
                                 </div>
@@ -1665,8 +1575,8 @@ const ChatInterface = ({ onOpenQuest }) => {
                                 <div className="space-y-2">
                                     <h3 className="text-2xl font-black text-gray-900 dark:text-white tracking-tight">Handwriting Analysis</h3>
                                     <p className="text-sm text-gray-500 dark:text-gray-400 font-medium leading-relaxed">
-                                        {activeAgentId === 'math' 
-                                            ? "Add context or specific questions to help Matt Sir analyze your math problem." 
+                                        {activeAgentId === 'math'
+                                            ? "Add context or specific questions to help Matt Sir analyze your math problem."
                                             : "Add context to help your tutor analyze your handwriting."}
                                     </p>
                                 </div>

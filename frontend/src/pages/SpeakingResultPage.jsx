@@ -1,24 +1,43 @@
-import React, { useEffect, useState } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate, useParams } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
+import { Languages, Sparkles, MessageSquare, ArrowLeft, Trophy, Calendar, Eye } from 'lucide-react';
 import ExamHeader from '../components/exam/ExamHeader';
 
 const SpeakingResultPage = () => {
     const { state } = useLocation();
+    const { resultId } = useParams();
     const navigate = useNavigate();
-    const [result, setResult] = useState(null);
+    const { user } = useAuth();
+    
+    const [result, setResult] = useState(state?.result || null);
+    const [isFetching, setIsFetching] = useState(false);
 
     useEffect(() => {
-        if (state?.result) {
-            setResult(state.result);
-        } else if (state?.loading) {
-            // Should be handled by loading state in UI if stuck, 
-            // but normally we navigate here only when result is ready or loading=true 
-            // If just loading=true and no result comes (e.g. reload), we might be stuck.
-            // For now, redirect home if no state at all.
-        } else {
+        if (!result && resultId && user) {
+            const fetchResult = async () => {
+                setIsFetching(true);
+                try {
+                    const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+                    const res = await fetch(`${API_URL}/api/results/${resultId}?uid=${user.uid}`);
+                    if (res.ok) {
+                        const data = await res.json();
+                        setResult(data);
+                    } else {
+                        console.error("[SpeakingResult] Failed to fetch historical result");
+                        navigate('/dashboard');
+                    }
+                } catch (err) {
+                    console.error("[SpeakingResult] Error fetching historical result:", err);
+                    navigate('/dashboard');
+                } finally {
+                    setIsFetching(false);
+                }
+            };
+            fetchResult();
+        } else if (!result && !state?.loading && !resultId) {
             navigate('/dashboard');
         }
-    }, [state]);
+    }, [resultId, result, user, navigate, state]);
 
     if (state?.error) return (
         <div className="min-h-screen flex flex-col items-center justify-center bg-gray-900 text-white space-y-6 p-6 text-center">
@@ -39,12 +58,11 @@ const SpeakingResultPage = () => {
         </div>
     );
 
-    if (!result) return (
+    if (isFetching || (!result && state?.loading)) return (
         <div className="min-h-screen flex flex-col items-center justify-center bg-gray-900 text-white space-y-4">
-            <div className="animate-spin rounded-full h-12 w-12 border-4 border-green-500 border-t-transparent"></div>
-            <h2 className="text-xl font-bold animate-pulse">Calculating Your Speaking Score...</h2>
+            <div className="animate-spin rounded-full h-12 w-12 border-4 border-indigo-500 border-t-transparent"></div>
+            <h2 className="text-xl font-bold animate-pulse">Retrieving Your Speaking Performance...</h2>
             <p className="text-gray-400">Analyzing Pronunciation, Fluency & Communication Strategies</p>
-            <p className="text-xs text-gray-500 mt-4 opacity-50">This may take up to 60 seconds.</p>
         </div>
     );
 
@@ -87,25 +105,22 @@ const SpeakingResultPage = () => {
 
                     {/* RADAR / DOMAIN SCORES */}
                     <div className="space-y-3">
-                        {[
-                            { label: "Pronunciation", score: scores.pronunciation, icon: "🎤" },
-                            { label: "Communication Strategies", score: scores.communication, icon: "🤝" },
-                            { label: "Vocabulary", score: scores.vocabulary, icon: "📖" },
-                            { label: "Ideas & Organisation", score: scores.ideas, icon: "💡" }
-                        ].map(item => (
-                            <div key={item.label} className="bg-gray-800 p-4 rounded-xl border border-gray-700 flex justify-between items-center">
-                                <span className="flex items-center gap-3 font-bold text-gray-300">
-                                    <span>{item.icon}</span> {item.label}
-                                </span>
-                                <div className="flex items-center gap-2">
-                                    <div className="flex gap-0.5">
-                                        {[1, 2, 3, 4, 5, 6, 7].map(n => (
-                                            <div key={n} className={`h-1.5 w-3 rounded-full ${n <= item.score ? 'bg-green-500' : 'bg-gray-700'}`}></div>
-                                        ))}
+                        {Object.entries(scores || {}).map(([key, val]) => (
+                            key !== 'total' && typeof val === 'number' && (
+                                <div key={key} className="bg-gray-800 p-4 rounded-xl border border-gray-700 flex justify-between items-center transition-all hover:border-gray-600">
+                                    <span className="flex items-center gap-3 font-bold text-gray-300 capitalize">
+                                        <span className="opacity-50 text-indigo-400">•</span> {key.replace(/_/g, ' ')}
+                                    </span>
+                                    <div className="flex items-center gap-2">
+                                        <div className="flex gap-0.5">
+                                            {[1, 2, 3, 4, 5, 6, 7].map(n => (
+                                                <div key={n} className={`h-1.5 w-3 rounded-full transition-all duration-500 ${n <= val ? 'bg-indigo-500 shadow-[0_0_8px_rgba(99,102,241,0.6)]' : 'bg-gray-700'}`}></div>
+                                            ))}
+                                        </div>
+                                        <span className="font-mono font-bold text-indigo-400 w-8 text-right">{val}</span>
                                     </div>
-                                    <span className="font-mono font-bold text-green-400 w-8 text-right">{item.score}</span>
                                 </div>
-                            </div>
+                            )
                         ))}
                     </div>
                 </div>

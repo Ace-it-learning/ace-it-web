@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
     Trophy, ArrowLeft, Star, BarChart3, 
@@ -26,9 +26,11 @@ const WritingResultPage = () => {
 
     const getLocalizedValueLocal = (data, field) => getLocalizedValue(data, field, isChinese);
     
-    const results = state?.results;
-    const questData = state?.questData;
-    const studentWork = state?.studentWork;
+    const { resultId } = useParams();
+    const [results, setResults] = useState(state?.results || null);
+    const [questData, setQuestData] = useState(state?.questData || null);
+    const [studentWork, setStudentWork] = useState(state?.studentWork || null);
+    const [isFetching, setIsFetching] = useState(false);
 
     const [selectedExemplar, setSelectedExemplar] = useState(null);
     const [activeHotspot, setActiveHotspot] = useState(null);
@@ -72,17 +74,44 @@ const WritingResultPage = () => {
         };
     }, [results]);
 
+    // Fetch Result by ID if passed in URL (Review Mode)
     useEffect(() => {
-        if (!results) {
+        if (!results && resultId && user) {
+            const fetchResult = async () => {
+                setIsFetching(true);
+                try {
+                    const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+                    const res = await fetch(`${API_URL}/api/results/${resultId}?uid=${user.uid}`);
+                    if (res.ok) {
+                        const data = await res.json();
+                        setResults(data);
+                        setQuestData({ genre: data.textType || data.module });
+                        setStudentWork(data.content);
+                    } else {
+                        console.error("[WritingResult] Failed to fetch historical result");
+                        navigate('/dashboard');
+                    }
+                } catch (err) {
+                    console.error("[WritingResult] Error fetching historical result:", err);
+                    navigate('/dashboard');
+                } finally {
+                    setIsFetching(false);
+                }
+            };
+            fetchResult();
+        } else if (!results && !resultId) {
             navigate('/dashboard');
-            return;
         }
+    }, [resultId, results, user, navigate]);
+
+    useEffect(() => {
+        if (!results) return;
 
         const fetchExemplars = async () => {
             setIsLoadingExemplars(true);
             try {
                 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
-                const genre = questData?.genre || questData?.id?.split('_')[0];
+                const genre = questData?.genre || questData?.id?.split('_')[0] || results.textType;
                 const res = await fetch(`${API_URL}/api/writing/exemplars?genre=${genre}`);
                 const data = await res.json();
                 setExemplars(data);
@@ -94,7 +123,16 @@ const WritingResultPage = () => {
         };
 
         fetchExemplars();
-    }, [results, navigate, questData]);
+    }, [results, questData]);
+
+    if (isFetching) return (
+        <div className="h-screen flex items-center justify-center bg-slate-50">
+            <div className="flex flex-col items-center gap-4">
+                <div className="w-12 h-12 border-4 border-rose-600 border-t-transparent rounded-full animate-spin"></div>
+                <p className="font-bold text-slate-400 animate-pulse uppercase tracking-widest text-xs">Retrieving Past Performance...</p>
+            </div>
+        </div>
+    );
 
     if (!results || !normalizedResults) return null;
 

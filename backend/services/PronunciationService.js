@@ -19,10 +19,12 @@ class PronunciationService {
      */
     async analyzePronunciation(audioBase64, audioType) {
         try {
-            // [COST-SAVING] If in development, skip the billable SDK and go straight to Gemini
-            if (!isProduction || !client) {
-                console.log(`[PronunciationService] Local Dev Mode: Skipping GCloud SDK, using Gemini fallback.`);
-                throw new Error("Local Dev mode triggered Gemini fallback");
+            console.log(`[PronunciationService] Audio received: ${audioBase64.length} bytes (Mime: ${audioType})`);
+
+            // Use the Professional SDK whenever a client (Key) is available
+            if (!client) {
+                console.log(`[PronunciationService] No SDK Client detected. Using Gemini fallback.`);
+                throw new Error("No GCloud SDK Client available");
             }
 
             const audio = {
@@ -30,7 +32,7 @@ class PronunciationService {
             };
 
             const config = {
-                encoding: audioType === 'audio/webm' ? 'WEBM_OPUS' : 'LINEAR16',
+                encoding: audioType.includes('webm') ? 'WEBM_OPUS' : 'LINEAR16',
                 sampleRateHertz: 48000,
                 languageCode: 'en-HK',
                 alternativeLanguageCodes: ['en-US', 'zh-HK', 'yue-Hant-HK'],
@@ -89,13 +91,22 @@ class PronunciationService {
             // FINAL FALLBACK: Use Gemini (AI Studio) to transcribe if SDK fails or is unavailable
             try {
                 const GenerativeAIService = require('./GenerativeAIService');
-                console.log(`[PronunciationService] Executing Gemini Emergency Transcription...`);
+                console.log(`[PronunciationService] Fallback: Sending ${audioBase64.length} bytes to Gemini...`);
                 
-                const prompt = "Transcribe the following audio precisely. Correct minor stuttering but keep all words. Return ONLY the raw transcript text.";
+                const prompt = `You are a professional automated stenographer. 
+                TASK: Transcribe the provided audio EXACTLY as spoken. 
+                
+                STRICT RULES:
+                1. Return ONLY the raw transcript text.
+                2. Do NOT output "The heavy black wooden beam" or any other Harvard Calibration Sentences.
+                3. Do NOT invent or "complete" a story if the audio cuts out.
+                4. If you hear ONLY silence, background noise, or cannot recognize any human words, return ONLY '[NO_SPEECH]'.
+                5. Do NOT include any explanations or conversational fillers in your response.`;
+
                 const audioPart = {
                     inlineData: {
                         data: audioBase64,
-                        mimeType: audioType === 'audio/webm' ? 'audio/webm' : 'audio/wav'
+                        mimeType: audioType.includes('webm') ? 'audio/webm' : 'audio/wav'
                     }
                 };
 
@@ -105,9 +116,18 @@ class PronunciationService {
                 ], { model: 'ace-it-flash' });
 
                 const transcript = result.response.text().trim();
-                console.log(`[PronunciationService] Gemini Transcribed: "${transcript}"`);
+                console.log(`[PronunciationService] Fallback Result: "${transcript}"`);
 
-                if (!transcript) throw new Error("Empty transcript from Gemini");
+                if (!transcript || transcript === '[NO_SPEECH]') {
+                    return {
+                        transcript: '',
+                        wordDetails: [],
+                        overallConfidence: 0,
+                        detectedLanguage: 'unknown',
+                        isEnglish: false,
+                        error: 'No speech detected'
+                    };
+                }
 
                 return {
                     transcript,
@@ -117,14 +137,15 @@ class PronunciationService {
                     isEnglish: true
                 };
             } catch (fallbackError) {
-                console.error('[PronunciationService] Gemini Fallback Failed:', fallbackError);
+                console.error('[PronunciationService] Gemini Fallback CRITICAL FAILURE:', fallbackError.message);
+                if (fallbackError.stack) console.error(fallbackError.stack.substring(0, 300));
                 return {
                     transcript: '',
                     wordDetails: [],
                     overallConfidence: 0,
                     detectedLanguage: 'unknown',
                     isEnglish: false,
-                    error: error.message
+                    error: fallbackError.message
                 };
             }
         }

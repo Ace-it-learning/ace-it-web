@@ -11,7 +11,8 @@ const SpeakingPillarMenu = () => {
         { id: 'criterion_a', label: 'Pronunciation', icon: Languages, color: 'emerald', route: '/speaking/quest/delivery' },
         { id: 'criterion_b', label: 'Communication Strategies', icon: MessageSquare, color: 'blue', route: '/speaking/quest/interaction-lab' },
         { id: 'criterion_c', label: 'Vocabulary', icon: Sparkles, color: 'fuchsia', route: '/speaking/quest/language' },
-        { id: 'criterion_d', label: 'Ideas', icon: Layout, color: 'orange', route: '/speaking/quest/ideas' }
+        { id: 'criterion_d', label: 'Ideas', icon: Layout, color: 'orange', route: '/speaking/quest/ideas' },
+        { id: 'discussion', label: 'Group Discussion', icon: MessageSquare, color: 'purple', route: '/speaking/quest/interaction' }
     ];
 
     const LEVELS = [
@@ -82,6 +83,7 @@ const SpeakingPillarMenu = () => {
         if (activePillar.id === 'criterion_b') moduleType = 'interaction';
         if (activePillar.id === 'criterion_c') moduleType = 'language_patterns';
         if (activePillar.id === 'criterion_d') moduleType = 'ideas_organisation';
+        if (activePillar.id === 'discussion') moduleType = 'interaction';
         
         navigate(`${activePillar.route}?module=${moduleType}&topic=${drill.id}&level=${levelVal}`, {
             state: {

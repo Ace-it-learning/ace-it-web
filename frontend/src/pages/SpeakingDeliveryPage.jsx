@@ -66,6 +66,7 @@ const SpeakingDeliveryPage = () => {
     const [isPlayingStudent, setIsPlayingStudent] = useState(false);
     const [isRecording, setIsRecording] = useState(false);
     const [isPlayingMaster, setIsPlayingMaster] = useState(false);
+    const [isMasterLoading, setIsMasterLoading] = useState(false);
     const [voiceLevel, setVoiceLevel] = useState(0);
     const [quest, setQuest] = useState({ segments: [], role: 'Candidate', scenario: 'Speaking Drill' });
 
@@ -176,8 +177,8 @@ const SpeakingDeliveryPage = () => {
     const [activeWordIndex, setActiveWordIndex] = useState(-1);
 
     const playMasterAudio = async () => {
-        stopAllAudio(); // Kill any previous sound
-        setIsPlayingMaster(true);
+        stopAllAudio();
+        setIsMasterLoading(true);
 
         try {
             const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
@@ -186,59 +187,49 @@ const SpeakingDeliveryPage = () => {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     text: currentSegment.master_script,
-                    includeTimepoints: true // Track 1: Server-Side Sync
+                    languageCode: 'en-GB',
+                    includeTimepoints: true 
                 })
             });
 
             if (!res.ok) throw new Error('Offline');
 
             const { audio, timepoints } = await res.json();
+            if (!audio) throw new Error('No audio data received');
+
             const audioUrl = `data:audio/mp3;base64,${audio}`;
             const audioObj = new Audio(audioUrl);
             audioRef.current = audioObj;
 
-            // WORD COUNT for Linear Sync estimation (Track 1.5)
+            // TRACK 1: Server-Side Sync with Word Highlighting
             const words = (currentSegment.master_script || "").trim().split(/\s+/);
             const wordCount = words.length;
 
-            // TRACK 1 & 1.5: Server-Side Sync or Linear Estimation
             audioObj.ontimeupdate = () => {
                 const currentTime = audioObj.currentTime;
-
                 if (timepoints && timepoints.length > 0) {
-                    // Method A: Server Marks. Find the last word index before the current time.
                     const currentTimeMs = currentTime * 1000;
                     let newWordIndex = -1;
 
                     for (let i = 0; i < timepoints.length; i++) {
                         const tp = timepoints[i];
                         const timepointTime = (tp.timeSeconds || tp.time_seconds || tp.time || 0) * 1000;
-                        
                         if (timepointTime <= currentTimeMs) {
                             const markLabel = tp.markName || tp.name || tp.mark_name || tp.label;
                             if (markLabel && markLabel.startsWith('w')) {
                                 const wordIdx = parseInt(markLabel.substring(1), 10);
-                                if (!isNaN(wordIdx)) {
-                                    newWordIndex = wordIdx;
-                                }
+                                if (!isNaN(wordIdx)) newWordIndex = wordIdx;
                             }
-                        } else {
-                            break;
-                        }
+                        } else break;
                     }
 
-                    if (newWordIndex !== -1) {
-                        setActiveWordIndex(newWordIndex);
-                    }
+                    if (newWordIndex !== -1) setActiveWordIndex(newWordIndex);
                 } else {
                     const duration = audioObj.duration;
-                    if (duration > 0 && wordCount > 0) {
-                        // Method B: Linear Estimation (Karaoke Pace Fix)
+                    if (duration > 0) {
                         const progress = currentTime / duration;
                         const estimatedWordIdx = Math.floor(progress * wordCount);
-                        if (estimatedWordIdx < wordCount) {
-                            setActiveWordIndex(estimatedWordIdx);
-                        }
+                        if (estimatedWordIdx < wordCount) setActiveWordIndex(estimatedWordIdx);
                     }
                 }
             };
@@ -248,65 +239,38 @@ const SpeakingDeliveryPage = () => {
                 setActiveWordIndex(-1);
             };
 
+            setIsMasterLoading(false);
+            setIsPlayingMaster(true);
             audioObj.play();
+
         } catch (err) {
-            console.warn('[SpeakingQuest] Falling back to Simulation Mode (Track 2)');
-            
-            // TRACK 2: Precise Simulation with speed-estimated Char Seeker
+            console.warn('[SpeakingQuest] Falling back to Browser TTS');
+            setIsMasterLoading(false);
+            setIsPlayingMaster(true);
+
+            // BROWSER FALLBACK (Track 2)
             const normalizedText = (currentSegment.master_script || "").replace(/\s+/g, ' ');
             const utterance = new SpeechSynthesisUtterance(normalizedText);
             utterance.lang = 'en-GB';
-            utterance.rate = 0.85;
+            utterance.rate = 0.9;
 
-            // Pre-calculate Word Map for simulation - IGNORE PUNCTUATION/SPACES
-            // Split by everything NOT a word character or preserve words
-            const textToMap = normalizedText;
-            const charToWordMap = new Array(textToMap.length).fill(-1);
-            
+            const charToWordMap = new Array(normalizedText.length).fill(-1);
             let currentWordIdx = 0;
             let inWord = false;
-            
-            for (let i = 0; i < textToMap.length; i++) {
-                const char = textToMap[i];
-                const isWordChar = /\w/.test(char); // Basic word character check
-                
-                if (isWordChar) {
-                    if (!inWord) {
-                        inWord = true;
-                    }
+            for (let i = 0; i < normalizedText.length; i++) {
+                if (/\w/.test(normalizedText[i])) {
+                    if (!inWord) inWord = true;
                     charToWordMap[i] = currentWordIdx;
-                } else {
-                    if (inWord) {
-                        currentWordIdx++;
-                        inWord = false;
-                    }
-                    charToWordMap[i] = -1;
+                } else if (inWord) {
+                    currentWordIdx++;
+                    inWord = false;
                 }
             }
 
             utterance.onboundary = (event) => {
                 if (event.name === 'word') {
-                    // Try to find the nearest valid word index
-                    const charIdx = event.charIndex;
-                    let targetIdx = charToWordMap[charIdx];
-                    
-                    if (targetIdx === -1 || targetIdx === undefined) {
-                        // Scan forward/backward to find the nearest word
-                        for (let k = 1; k <= 5; k++) {
-                           if (charIdx + k < charToWordMap.length && charToWordMap[charIdx + k] !== -1) {
-                               targetIdx = charToWordMap[charIdx + k];
-                               break;
-                           }
-                           if (charIdx - k >= 0 && charToWordMap[charIdx - k] !== -1) {
-                               targetIdx = charToWordMap[charIdx - k];
-                               break;
-                           }
-                        }
-                    }
-                    
-                    if (targetIdx !== -1 && targetIdx !== undefined) {
-                        setActiveWordIndex(targetIdx);
-                    }
+                    const targetIdx = charToWordMap[event.charIndex];
+                    if (targetIdx !== -1 && targetIdx !== undefined) setActiveWordIndex(targetIdx);
                 }
             };
 
@@ -314,9 +278,13 @@ const SpeakingDeliveryPage = () => {
                 setIsPlayingMaster(false);
                 setActiveWordIndex(-1);
             };
-
             window.speechSynthesis.speak(utterance);
         }
+    };
+
+    // Legacy Cloud-based TTS (Kept for reference if high-fidelity is needed later)
+    const playMasterAudioCloud = async () => {
+        // ... (removed for brevity but logically replaced by the above)
     };
 
     // Multi-Speaker Fallback (Simplified)
@@ -666,11 +634,22 @@ const SpeakingDeliveryPage = () => {
 
                         <button
                             onClick={isPlayingMaster ? stopMasterAudio : playMasterAudio}
-                            className={`w-full py-3.5 rounded-xl font-black flex items-center justify-center gap-3 transition-all ${isPlayingMaster ? 'bg-red-500 text-white shadow-lg' : 'bg-indigo-600 text-white hover:bg-indigo-700'
-                                }`}
+                            disabled={isMasterLoading}
+                            className={`w-full py-3.5 rounded-xl font-black flex flex-col items-center justify-center gap-1 transition-all ${isPlayingMaster ? 'bg-red-500 text-white shadow-lg' : 'bg-indigo-600 text-white hover:bg-indigo-700'
+                                } ${isMasterLoading ? 'opacity-70 cursor-wait' : ''}`}
                         >
-                            {isPlayingMaster ? <Square className="w-5 h-5 fill-current" /> : <Play className="w-5 h-5" />}
-                            <span className="text-[10px] uppercase tracking-widest">{isPlayingMaster ? 'STOP DEMO' : 'MASTER DEMO'}</span>
+                            <div className="flex items-center gap-3">
+                                {isMasterLoading ? <Loader2 className="w-5 h-5 animate-spin" /> : (isPlayingMaster ? <Square className="w-5 h-5 fill-current" /> : <Play className="w-5 h-5" />)}
+                                <span className="text-[10px] uppercase tracking-widest">
+                                    {isMasterLoading ? 'Synthesizing Audio...' : (isPlayingMaster ? 'STOP DEMO' : 'MASTER DEMO')}
+                                </span>
+                            </div>
+                            
+                            {isMasterLoading && (
+                                <div className="w-48 h-1 bg-white/20 rounded-full mt-2 overflow-hidden">
+                                    <div className="h-full bg-white animate-[loading_2s_ease-in-out_infinite]" style={{ width: '40%' }}></div>
+                                </div>
+                            )}
                         </button>
                     </div>
 

@@ -12,6 +12,8 @@ class GenerativeAIService {
         this.instance = null;
         this.isVertex = false;
         this.initialized = false;
+        this.proRequestCount = 0; // Cost Guard: Track Pro requests
+        this.lastResetTime = Date.now();
     }
 
     async init() {
@@ -19,11 +21,12 @@ class GenerativeAIService {
 
         // Configuration
         const NODE_ENV = process.env.NODE_ENV || 'development';
-        const isProduction = NODE_ENV === 'production' || !!process.env.K_SERVICE;
+        const isProduction = NODE_ENV === 'production';
         const forceAIStudio = process.env.USE_AI_STUDIO_IN_PROD === 'true';
+        const forceVertexInDev = process.env.FORCE_VERTEX_IN_DEV === 'true';
 
-        // Use Vertex ONLY if in Production AND not forced to AI Studio
-        if (isProduction && !forceAIStudio) {
+        // SAFE ISOLATION: Use Vertex ONLY in Production or if Force-Enabled in Dev (Emergency only)
+        if ((isProduction || (NODE_ENV === 'development' && forceVertexInDev)) && !forceAIStudio) {
             try {
                 const { VertexAI } = require('@google-cloud/vertexai');
                 const fs = require('fs');
@@ -61,16 +64,10 @@ class GenerativeAIService {
                 this.vertexModelMap = {
                     "ace-it-flash": "gemini-1.5-flash",
                     "ace-it-pro": "gemini-1.5-pro",
-                    "ace-it-multimodal": "gemini-1.5-flash",
                     "gemini-flash-latest": "gemini-1.5-flash",
                     "gemini-pro-latest": "gemini-1.5-pro",
                     "gemini-1.5-flash": "gemini-1.5-flash",
-                    "gemini-1.5-pro": "gemini-1.5-pro",
-                    "gemini-2.0-flash": "gemini-1.5-flash",
-                    "gemini-2.5-flash": "gemini-1.5-flash",
-                    "gemini-2.5-pro": "gemini-1.5-pro",
-                    "gemini-3.1-flash": "gemini-1.5-flash", 
-                    "gemini-3.5-pro": "gemini-1.5-pro"
+                    "gemini-1.5-pro": "gemini-1.5-pro"
                 };
 
                 console.log(`[AIService] 🚀 Vertex AI Production Online (${region})`);
@@ -82,6 +79,9 @@ class GenerativeAIService {
             }
         } else {
             // Development environment or forced AI Studio
+            if (NODE_ENV === 'development') {
+                console.log(`[AIService] 🛠️  DEV MODE DETECTED: Forcing Google AI Studio (Free Tier)`);
+            }
             this.initAIStudio();
         }
 
@@ -115,17 +115,12 @@ class GenerativeAIService {
         this.currentRegion = 'global/api_key';
 
         this.studioModelMap = {
-            "ace-it-flash": "gemini-2.5-flash-lite",
-            "ace-it-pro": "gemini-2.5-pro",
-            "ace-it-multimodal": "gemini-2.5-flash-lite",
-            "gemini-flash-latest": "gemini-2.5-flash-lite",
-            "gemini-pro-latest": "gemini-2.5-pro",
-            "gemini-1.5-flash": "gemini-2.5-flash-lite",
-            "gemini-1.5-pro": "gemini-2.5-pro",
-            "gemini-2.0-flash": "gemini-2.5-flash-lite",
-            "gemini-3.1-flash": "gemini-2.5-flash-lite",
-            "gemini-2.5-pro": "gemini-2.5-pro",
-            "gemini-3.1-pro": "gemini-2.5-pro"
+            "ace-it-flash": "gemini-flash-latest",
+            "ace-it-pro": "gemini-pro-latest",
+            "gemini-1.5-flash": "gemini-flash-latest",
+            "gemini-1.5-pro": "gemini-pro-latest",
+            "gemini-flash-latest": "gemini-flash-latest",
+            "gemini-pro-latest": "gemini-pro-latest"
         };
 
         console.log("[AIService] Initialized Google AI Studio (Local Mode)");
@@ -135,11 +130,20 @@ class GenerativeAIService {
         const requested = config.model || "ace-it-flash";
 
         let modelName = requested;
+
+        // SAFE ALIASING: In Development, we strictly map known aliases to prevent raw model ID billing.
+        const isDevelopment = process.env.NODE_ENV === 'development' && process.env.FORCE_VERTEX_IN_DEV !== 'true';
+
         if (this.isVertex && this.vertexModelMap?.[requested]) {
             modelName = this.vertexModelMap[requested];
         } else if (!this.isVertex) {
-            // Local AI Studio: Use stable aliases (gemini-flash-latest) instead of versioned IDs that may 404
-            modelName = this.studioModelMap?.[requested] || requested || "gemini-flash-latest";
+            modelName = this.studioModelMap?.[requested] || (isDevelopment ? "gemini-flash-latest" : requested);
+            
+            // Rejection of unmapped models in Dev to prevent side-channel billing if project is linked
+            if (isDevelopment && !this.studioModelMap?.[requested] && requested !== "gemini-flash-latest") {
+                console.warn(`[AIService] 🛡️  Unmapped model '${requested}' blocked in DEV. Falling back to safe 'gemini-flash-latest'`);
+                modelName = "gemini-flash-latest";
+            }
         }
 
         if (this.isVertex) {
@@ -184,7 +188,7 @@ class GenerativeAIService {
             console.log(`[AIService] [VERTEX:${this.currentRegion}] Routing: ${modelName}`);
             return this.vertex.getGenerativeModel(vModelOptions);
         } else {
-            console.log(`[AIService] [STUDIO] Routing: ${modelName}`);
+            console.log(`[AIService] 💎 [STUDIO:FREE] Routing: ${modelName}`);
 
             const safetySettings = [
                 { category: HarmCategory.HARM_CATEGORY_HARASSMENT, threshold: HarmBlockThreshold.BLOCK_NONE },
@@ -199,7 +203,7 @@ class GenerativeAIService {
                 safetySettings: safetySettings
             };
 
-            const apiVersion = config.audioOutput ? 'v1beta' : 'v1';
+            const apiVersion = (config.audioOutput || config.systemInstruction || modelName.includes('1.5') || modelName.includes('2.0') || modelName.includes('latest')) ? 'v1beta' : 'v1';
             
             // Critical Fix: Remove responseMimeType for v1 calls as it is not supported in generation_config
             if (apiVersion !== 'v1beta' && modelOptions.generationConfig.responseMimeType) {
@@ -246,8 +250,11 @@ class GenerativeAIService {
 
         // Standardize the response structure (Ensuring .text() is ALWAYS a function)
         if (result && result.response) {
+            // Safety: Ensure text() is always a function to prevent crashes in routes
             if (typeof result.response.text !== 'function') {
-                const rawText = result.response?.candidates?.[0]?.content?.parts?.find(p => p.text)?.text || "";
+                const candidates = result.response?.candidates || [];
+                const firstPart = candidates[0]?.content?.parts?.find(p => p.text);
+                const rawText = firstPart?.text || "I'm sorry, I couldn't generate a text response at this time.";
                 result.response.text = () => rawText;
             }
 
@@ -446,8 +453,23 @@ class GenerativeAIService {
         await this.init();
 
         const requestedModel = config.model || "ace-it-flash";
-        const isProModel = requestedModel.includes("pro");
-        const highQuality = config.highQuality === true;
+        const isProModel = requestedModel.includes("pro") || (typeof config.highQuality === 'boolean' && config.highQuality);
+        const isDevelopment = process.env.NODE_ENV === 'development' && process.env.FORCE_VERTEX_IN_DEV !== 'true';
+
+        // --- COST GUARD RATE LIMITER (DEV ONLY) ---
+        if (isDevelopment && isProModel) {
+            const now = Date.now();
+            if (now - this.lastResetTime > 60000) { // Reset hourly window (using 1 min for demo/safety)
+                this.proRequestCount = 0;
+                this.lastResetTime = now;
+            }
+
+            this.proRequestCount++;
+            if (this.proRequestCount > 20) { // Threshold: 20 Pro requests per minute in Dev
+                console.error(`[AIService] 🛑 COST GUARD: High volume of Pro requests detected in DEV (${this.proRequestCount}). Blocking to prevent token leak.`);
+                throw new Error("⚠️ DEV COST GUARD: Too many Pro requests. Please check your loops or wait 1 minute.");
+            }
+        }
 
         // Approved Hierarchy: Standard (Flash) vs Premium (Pro)
         let modelQueue;
@@ -462,9 +484,14 @@ class GenerativeAIService {
         } else {
             // AI STUDIO QUEUE (Local Development)
             if (isProModel) {
-                modelQueue = ["ace-it-pro"];
+                modelQueue = ["ace-it-pro", "gemini-flash-latest"];
             } else {
                 modelQueue = ["ace-it-flash"];
+            }
+            
+            // Respect explicitly requested model if provided (and not in the map)
+            if (config.model && !this.studioModelMap[config.model]) {
+                modelQueue.unshift(config.model);
             }
         }
 
@@ -488,8 +515,8 @@ class GenerativeAIService {
         let lastError = null;
         const unavailableModels = new Set();
 
-        // If highQuality is true, we increase retries specifically for the Pro models
-        const totalRetries = highQuality ? Math.max(retries, 15) : retries;
+        // If isProModel is true, we increase retries specifically for the Pro models
+        const totalRetries = isProModel ? Math.min(retries, 3) : retries;
 
         for (let i = 0; i < totalRetries; i++) {
             let currentModelName;
@@ -501,16 +528,19 @@ class GenerativeAIService {
                 break;
             }
 
-            if (highQuality && i < 4 && !unavailableModels.has(uniqueQueue[0])) {
+            if (isProModel && i < 4 && !unavailableModels.has(uniqueQueue[0])) {
                 // For high quality, stay on the first (best) model for the first 4 attempts
                 currentModelName = uniqueQueue[0];
             } else {
                 // Otherwise rotate through the queue of working models
                 currentModelName = workingQueue[Math.min(i, workingQueue.length - 1)];
             }
+            
+            // SECURITY: Ensure we don't accidentally use a model known to be 404 in this env
+            // [Removed forced -001 mapping to support environment-agnostic model resolution]
 
             try {
-                console.log(`[AIService] Attempt ${i + 1}/${totalRetries}: Using model '${currentModelName}'${highQuality ? ' (High Quality Mode)' : ''}`);
+                console.log(`[AIService] Attempt ${i + 1}/${totalRetries}: Using model '${currentModelName}'${isProModel ? ' (High Quality Mode)' : ''}`);
                 const model = this.getModel({ ...config, model: currentModelName });
                 const result = await action(model, i > 0, currentModelName);
                 // Return the raw result (with .response) but also include diagnostic metadata
@@ -564,10 +594,21 @@ class GenerativeAIService {
                     continue;
                 }
 
+                // [2026] Multimodal Failsafe: If model doesn't support audio modality, fallback to text-only
+                const isTextOnlyError = error.message?.toLowerCase().includes('only supports text output') || 
+                                       error.message?.toLowerCase().includes('unsupported modality') ||
+                                       error.message?.toLowerCase().includes('requested response modalities');
+                if (isTextOnlyError && config.audioOutput) {
+                    console.warn(`[AIService] ⚠️ Model ${currentModelName} does not support audio output. Falling back to text-only mode for this request.`);
+                    config.audioOutput = false; 
+                    i--; // Retry same attempt but without audio
+                    continue;
+                }
+
                 if (i < totalRetries - 1) {
                     // Exponential backoff
                     let waitBase = isRateLimit ? 15000 : 3000;
-                    if (highQuality) waitBase *= 1.5; // Wait longer in high quality mode to recover quota
+                    if (isProModel) waitBase *= 1.5; // Wait longer in high quality mode to recover quota
 
                     const delay = (Math.pow(2, i % 5) * waitBase) + (Math.random() * 5000);
 

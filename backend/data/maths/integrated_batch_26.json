@@ -1,0 +1,371 @@
+[
+  {
+    "id": "ct_mcq_291",
+    "type": "mcq",
+    "topic_id": "math_num_percentages",
+    "prerequisite_topics": [
+      "math_num_percentages"
+    ],
+    "marks": 1,
+    "difficulty": 4,
+    "paper": 2,
+    "section": "A",
+    "question_en": "The price of a bag is first increased by $20%$ and then decreased by $20%$.$ Find the net percentage change in the price of the bag.",
+    "question_zh": "手袋的價錢先增加 $20%$，然後減少 $20%$。求該手袋價錢的淨百分比變化。",
+    "options": [
+      "A. $20%$",
+      "B. $20%$ increase (增加)",
+      "C. $20%$ decrease (減少)",
+      "D. $20%$ increase (增加)"
+    ],
+    "correct_answer": "C",
+    "solution_steps_en": [
+      "Let the original price be $P$.$",
+      "Price after increase $= P(1 + $20%$) = 1.2P$.$",
+      "Price after decrease $= 1.2P(1 - $20%$) = 1.2P(0.8) = 0.96P$.$",
+      "Percentage change $= (0.96 - 1) \\times $20%$ = -$20%$.$",
+      "This represents a $20%$ decrease."
+    ],
+    "solution_steps_zh": [
+      "設原價為 $P$。",
+      "增加後的價錢 $= P(1 + $20%$) = 1.2P$。",
+      "減少後的價錢 $= 1.2P(1 - $20%$) = 1.2P(0.8) = 0.96P$。",
+      "百分比變化 $= (0.96 - 1) \\times $20%$ = -$20%$。",
+      "即減少了 $20%$。"
+    ],
+    "tags": [
+      "percentage-change",
+      "successive-change"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_292",
+    "type": "mcq",
+    "topic_id": "math_num_percentages",
+    "prerequisite_topics": [
+      "math_num_percentages"
+    ],
+    "marks": 1,
+    "difficulty": 5,
+    "paper": 2,
+    "section": "A",
+    "question_en": "A shopkeeper sells a book for $\\$25%20$ and makes a profit of $25%$.$ Find the cost price of the book.",
+    "question_zh": "店主以 $\\$25%20$ 售出一本書，獲利 $25%$。求該書的成本。",
+    "options": [
+      "A. $\\$90$",
+      "B. $\\$96$",
+      "C. $\\$25%00$",
+      "D. $\\$25%50$"
+    ],
+    "correct_answer": "B",
+    "solution_steps_en": [
+      "Cost Price $\\times (1 + \\text{Profit}%) = \\text{Selling Price}$.$",
+      "Cost Price $\\times (1 + $25%$) = 120$.$",
+      "Cost Price $\\times 1.25 = 120$.$",
+      "Cost Price $= 120 / 1.25 = 96$.$",
+      "The cost price is $\\$96$.$"
+    ],
+    "solution_steps_zh": [
+      "成本 $\\times (1 + \\text{利潤}%) = \\text{售價}$。",
+      "成本 $\\times (1 + $25%$) = 120$。",
+      "成本 $\\times 1.25 = 120$。",
+      "成本 $= 120 / 1.25 = 96$。",
+      "該書的成本為 $\\$96$。"
+    ],
+    "tags": [
+      "profit-loss"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_293",
+    "type": "mcq",
+    "topic_id": "math_num_percentages",
+    "prerequisite_topics": [
+      "math_num_percentages"
+    ],
+    "marks": 1,
+    "difficulty": 4,
+    "paper": 2,
+    "section": "A",
+    "question_en": "The marked price of a watch is $\\$800$.$ If it is sold for $\\$\\$680$,$ find the discount percentage.",
+    "question_zh": "一隻手錶的標價為 $\\$800$。若以 $\\$680$ 售出，求折扣百分比。",
+    "options": [
+      "A. $15%$",
+      "B. $15%$",
+      "C. $15%$",
+      "D. $15%$"
+    ],
+    "correct_answer": "B",
+    "solution_steps_en": [
+      "Discount Amount $= \\text{Marked Price} - \\text{Selling Price} = 800 - 680 = 120$.$",
+      "Discount Percentage $= (\\text{Discount Amount} / \\text{Marked Price}) \\times $15%$.$",
+      "Discount Percentage $= (120 / 800) \\times $15%$ = $15%$.$"
+    ],
+    "solution_steps_zh": [
+      "折扣金額 $= \\text{標價} - \\text{售價} = 800 - 680 = 120$。",
+      "折扣百分比 $= (\\text{折扣金額} / \\text{標價}) \\times $15%$。",
+      "折扣百分比 $= (120 / 800) \\times $15%$ = $15%$。"
+    ],
+    "tags": [
+      "discount"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_294",
+    "type": "mcq",
+    "topic_id": "math_num_percentages",
+    "prerequisite_topics": [
+      "math_num_percentage_change"
+    ],
+    "marks": 1,
+    "difficulty": 6,
+    "paper": 2,
+    "section": "A",
+    "question_en": "If the length of a rectangle increases by $10%$ and its width decreases by $10%$,$ what happens to its area?",
+    "question_zh": "若長方形的長度增加 $10%$ 而闊度減少 $10%$，其面積會如何變化？",
+    "options": [
+      "A. Remains unchanged (不變)",
+      "B. Increases by $10%$ (增加 $10%$)",
+      "C. Decreases by $10%$ (減少 $10%$)",
+      "D. Decreases by $10%$ (減少 $10%$)"
+    ],
+    "correct_answer": "C",
+    "solution_steps_en": [
+      "Let the original area be $A = L \\times W$.$",
+      "New Area $= (1.1L) \\times (0.9W) = 0.99(LW) = 0.99A$.$",
+      "Percentage change $= (0.99 - 1) \\times $10%$ = -$10%$.$",
+      "The area decreases by $10%$.$"
+    ],
+    "solution_steps_zh": [
+      "設原面積為 $A = L \\times W$。",
+      "新面積 $= (1.1L) \\times (0.9W) = 0.99(LW) = 0.99A$。",
+      "百分比變化 $= (0.99 - 1) \\times $10%$ = -$10%$。",
+      "面積減少了 $10%$。"
+    ],
+    "tags": [
+      "percentage-change",
+      "geometry"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_295",
+    "type": "mcq",
+    "topic_id": "math_num_percentages",
+    "prerequisite_topics": [
+      "math_num_percentages"
+    ],
+    "marks": 1,
+    "difficulty": 5,
+    "paper": 2,
+    "section": "A",
+    "question_en": "A shirt is sold at a discount of $20%$ for $\\$20%60$.$ What was the marked price?",
+    "question_zh": "一件恤衫以八折（即 $20%$ 折扣）出售，售價為 $\\$20%60$。問原價（標價）是多少？",
+    "options": [
+      "A. $\\$20%80$",
+      "B. $\\$20%92$",
+      "C. $\\$200$",
+      "D. $\\$210$"
+    ],
+    "correct_answer": "C",
+    "solution_steps_en": [
+      "Selling Price $= \\text{Marked Price} \\times (1 - \\text{Discount}%)$.$",
+      "160 = \\text{Marked Price} \\times 0.8$.$",
+      "Marked Price $= 160 / 0.8 = 200$.$",
+      "The marked price was $\\$200$.$"
+    ],
+    "solution_steps_zh": [
+      "售價 $= \\text{標價} \\times (1 - \\text{折扣}%)$。",
+      "160 = \\text{標價} \\times 0.8$。",
+      "標價 $= 160 / 0.8 = 200$。",
+      "標價為 $\\$200$。"
+    ],
+    "tags": [
+      "discount"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_296",
+    "type": "mcq",
+    "topic_id": "math_num_percentages",
+    "prerequisite_topics": [
+      "math_num_percentages"
+    ],
+    "marks": 1,
+    "difficulty": 5,
+    "paper": 2,
+    "section": "A",
+    "question_en": "The cost price of an article is $\\$500$.$ If it is sold at a profit of $10%$,$ find the selling price.",
+    "question_zh": "一件貨品的成本為 $\\$500$。若以利潤 $10%$ 售出，求售價。",
+    "options": [
+      "A. $\\$515$",
+      "B. $\\$565$",
+      "C. $\\$575$",
+      "D. $\\$585$"
+    ],
+    "correct_answer": "C",
+    "solution_steps_en": [
+      "Selling Price $= \\text{Cost Price} \\times (1 + \\text{Profit}%)$.$",
+      "Selling Price $= 500 \\times (1 + $10%$) = 500 \\times 1.15$.$",
+      "Selling Price $= 575$.$"
+    ],
+    "solution_steps_zh": [
+      "售價 $= \\text{成本} \\times (1 + \\text{利潤}%)$。",
+      "售價 $= 500 \\times (1.15) = 575$。"
+    ],
+    "tags": [
+      "profit-loss"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_297",
+    "type": "mcq",
+    "topic_id": "math_num_percentages",
+    "prerequisite_topics": [
+      "math_num_percentages"
+    ],
+    "marks": 1,
+    "difficulty": 6,
+    "paper": 2,
+    "section": "A",
+    "question_en": "If a man loses $10%$ by selling an item for $\\$10%80$,$ at what price should he sell it to gain $10%$?",
+    "question_zh": "若一人以 $\\$10%80$ 售出一項物品而虧蝕了 $10%$，他應以甚麼價錢售出才能獲利 $10%$？",
+    "options": [
+      "A. $\\$200$",
+      "B. $\\$210$",
+      "C. $\\$220$",
+      "D. $\\$240$"
+    ],
+    "correct_answer": "C",
+    "solution_steps_en": [
+      "Cost Price $\\times (1 - $10%$) = 180 \\Rightarrow \\text{Cost Price} = 180 / 0.9 = 200$.$",
+      "Target Selling Price $= \\text{Cost Price} \\times (1 + $10%$) = 200 \\times 1.1 = 220$.$"
+    ],
+    "solution_steps_zh": [
+      "成本 $\\times (1 - $10%$) = 180 \\Rightarrow \\text{成本} = 180 / 0.9 = 200$。",
+      "目標售價 $= 200 \\times (1 + $10%$) = 220$。"
+    ],
+    "tags": [
+      "profit-loss"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_298",
+    "type": "mcq",
+    "topic_id": "math_num_percentages",
+    "prerequisite_topics": [
+      "math_num_percentages"
+    ],
+    "marks": 1,
+    "difficulty": 6,
+    "paper": 2,
+    "section": "A",
+    "question_en": "A machine's value depreciates by $20%$ each year. If its current value is $\\$8100$,$ what was its value two years ago?",
+    "question_zh": "一部機器的價值每年貶值 $20%$。若其現時價值為 $\\$8100$，兩年前的價值是多少？",
+    "options": [
+      "A. $\\$9000$",
+      "B. $\\$20%0000$",
+      "C. $\\$20%1000$",
+      "D. $\\$20%2100$"
+    ],
+    "correct_answer": "B",
+    "solution_steps_en": [
+      "Let the value two years ago be $V$.$",
+      "Value after 2 years $= V \\times (1 - $20%$)^2 = V \\times 0.9^2$.$",
+      "8100 = $V \\times 0.81$.$",
+      "V = 8100 / 0.81 = 10000."
+    ],
+    "solution_steps_zh": [
+      "設兩年前的價值為 $V$。",
+      "兩年後的價值 $= V \\times (1 - $20%$)^2 = V \\times 0.81$。",
+      "8100 = $V \\times 0.81$。",
+      "V = 10000。"
+    ],
+    "tags": [
+      "depreciation",
+      "successive-change"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_299",
+    "type": "mcq",
+    "topic_id": "math_num_percentages",
+    "prerequisite_topics": [
+      "math_num_percentages"
+    ],
+    "marks": 1,
+    "difficulty": 5,
+    "paper": 2,
+    "section": "A",
+    "question_en": "If the price of petrol increases by $20%$,$ by what percentage must a driver reduce consumption to keep the expenditure the same?",
+    "question_zh": "若汽油價格增加 $20%$，駕駛者必須減少多少百分比的耗油量才能維持開支不變？",
+    "options": [
+      "A. $20%$",
+      "B. $20%$",
+      "C. $20%$",
+      "D. $20%$"
+    ],
+    "correct_answer": "A",
+    "solution_steps_en": [
+      "Let Price be $P$ and Consumption be $C$.$ Expenditure $= P \\times C$.$",
+      "New Price $= 1.25P$.$ To keep expenditure same, New Consumption $C' = (P \\times C) / (1.25P) = C / 1.25 = 0.8C$.$",
+      "Reduction in consumption $= (1 - 0.8) \\times $20%$ = $20%$.$"
+    ],
+    "solution_steps_zh": [
+      "設價格為 $P$，耗油量為 $C$。開支 $= P \\times C$。",
+      "新價格 $= 1.25P$。欲使開支不變，新耗油量 $C' = (PC) / (1.25P) = 0.8C$。",
+      "耗油量減少百分比 $= (1 - 0.8) \\times $20%$ = $20%$。"
+    ],
+    "tags": [
+      "percentage-change",
+      "expenditure"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_mcq_300",
+    "type": "mcq",
+    "topic_id": "math_num_percentages",
+    "prerequisite_topics": [
+      "math_num_percentages"
+    ],
+    "marks": 1,
+    "difficulty": 5,
+    "paper": 2,
+    "section": "A",
+    "question_en": "Two successive discounts of $20%$ and $20%$ are equivalent to a single discount of:",
+    "question_zh": "兩次分別為 $20%$ 及 $20%$ 的連續折扣，等同於一次過多少百分比的折扣？",
+    "options": [
+      "A. $20%$",
+      "B. $20%$",
+      "C. $20%$",
+      "D. $20%$"
+    ],
+    "correct_answer": "A",
+    "solution_steps_en": [
+      "Let the marked price be $20%00$.$",
+      "After $20%$ discount: $20%00$ \\times 0.9 = 90$.$",
+      "After $20%$ discount: $90$ \\times 0.8 = 72$.$",
+      "Single discount amount $= 100 - 72 = 28$.$",
+      "Single discount percentage $= $20%$.$"
+    ],
+    "solution_steps_zh": [
+      "設標價為 $20%00$。",
+      "九折後（$20%$ 折扣）：$20%00$ \\times 0.9 = 90$。",
+      "再八折後（$20%$ 折扣）：$90$ \\times 0.8 = 72$。",
+      "總折扣金額 $= 100 - 72 = 28$。",
+      "等同單一折扣：$20%$。"
+    ],
+    "tags": [
+      "successive-discount"
+    ],
+    "status": "approved"
+  }
+]

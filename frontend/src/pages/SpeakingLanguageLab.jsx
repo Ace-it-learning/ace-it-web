@@ -276,6 +276,9 @@ const SpeakingLanguageLab = () => {
             const res = await axios.post(`${API_BASE_URL}/speaking/quest/submit`, {
                 module: 'language_patterns',
                 level,
+                uid: user?.uid,
+                missionName: quest?.scenario || 'Vocabulary & Language Lab',
+                paper: 'Speaking',
                 practice_results: responses.map(r => ({
                     sentence: r.sentence,
                     target_word: r.target_word

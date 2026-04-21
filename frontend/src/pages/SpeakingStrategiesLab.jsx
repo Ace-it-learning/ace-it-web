@@ -453,6 +453,9 @@ const SpeakingStrategiesLab = () => {
             formData.append('messages', JSON.stringify(chatHistory));
             formData.append('mode', 'lab');
 
+            formData.append('missionName', questData?.scenario || 'Group Discussion Strategy Lab');
+            formData.append('paper', 'Speaking');
+
             const res = await fetch(`${API_URL}/api/speaking/quest/submit`, {
                 method: 'POST',
                 body: formData

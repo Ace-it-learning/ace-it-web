@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import { useLanguage } from '../../context/LanguageContext';
-import { Lock, CheckCircle, Play, Map, Star, Clock, X, Trophy, Search, Sparkles, Zap, Calculator, PieChart, Shapes, Ruler, RefreshCcw, ChevronDown, BarChart3, PenTool } from 'lucide-react';
-import { MATH_MICRO_SKILLS, getMathSkillName, getMathSkillDesc, getMathSkillMinForm } from '../../constants/mathMicroSkills';
+import { Lock, Compass, CheckCircle, Play, Map, Star, Clock, X, Trophy, Search, Sparkles, Zap, Calculator, PieChart, Shapes, Ruler, RefreshCcw, ChevronDown, BarChart3, PenTool, Layers } from 'lucide-react';
+import { MATH_MICRO_SKILLS, getMathSkillName, getMathSkillDesc, getMathSkillMinForm, getSkillsByCategory } from '../../constants/mathMicroSkills';
 import { calculateTier, getTierMetadata, getMasteryStats, getDifficultyTierDetails, getMasteryPercentage, getMathMasteryPercentage } from '../../utils/masteryUtils';
 
 const calculateCurrentForm = (baseGrade, joinedDateTimestamp) => {
@@ -417,149 +417,203 @@ const MathRoadmapModal = ({ isOpen, onClose }) => {
                                             </div>
                                         </div>
 
-                                        {/* Top 3 Bottlenecks - Targeted Growth */}
-                                        {(() => {
-                                            const bottlenecks = Object.keys(MATH_MICRO_SKILLS)
-                                                .filter(id => {
-                                                    const skill = MATH_MICRO_SKILLS[id];
-                                                    const isBasic = id.startsWith('math_') && !id.startsWith('math_int');
-                                                    const isRedundant = ['math_stat_probability', 'math_stat_counting', 'math_stat_measures'].includes(id);
-                                                    const isRelevant = skill.minForm <= currentForm;
-                                                    return isBasic && !isRedundant && isRelevant;
-                                                })
-                                                .map(id => ({
-                                                    id,
-                                                    level: userSkills[id]?.level || 0,
-                                                    minForm: MATH_MICRO_SKILLS[id].minForm
-                                                }))
-                                                .sort((a, b) => {
-                                                    // Strictly prioritize absolute lowest level first (0% first, then low levels)
-                                                    if (a.level !== b.level) {
-                                                        return a.level - b.level;
+                                        {/* Targeted Growth Strategy - Math Mastery Tracks */}
+                                        <div className="mb-10">
+                                            <div className="flex items-center justify-between mb-6">
+                                                <div className="flex items-center gap-2">
+                                                    <Sparkles className="w-6 h-6 text-indigo-600" />
+                                                    <h3 className="line-clamp-1 font-black text-slate-800 uppercase tracking-widest text-sm">
+                                                        Syllabus Mastery Strategy
+                                                    </h3>
+                                                </div>
+                                                <button 
+                                                    onClick={() => {
+                                                        onClose();
+                                                        navigate('/maths/ability');
+                                                    }}
+                                                    className="px-4 py-1.5 bg-cyan-50 text-[#00aeef] border border-cyan-100 rounded-full text-[10px] font-black uppercase tracking-wider flex items-center gap-2 hover:bg-[#00aeef] hover:text-white transition-all shadow-sm"
+                                                >
+                                                    <Compass className="w-3 h-3" />
+                                                    Detailed Ability Radar
+                                                </button>
+                                            </div>
+
+                                            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                                {[
+                                                    { id: 'algebra', label: 'Algebra Mastery', icon: Calculator, color: 'indigo' },
+                                                    { id: 'geometry', label: 'Geometry & Trig', icon: Map, color: 'blue' },
+                                                    { id: 'data', label: 'Data & Statistics', icon: PieChart, color: 'emerald' }
+                                                ].map((track) => {
+                                                    const skills = getSkillsByCategory(track.id);
+                                                    const levels = skills.length > 0 ? skills.map(sid => userSkills[sid]?.level || 1) : [1];
+                                                    const avgLevel = levels.reduce((a, b) => a + b, 0) / levels.length;
+                                                    
+                                                    // Mapping level (0-7) to percentage (0-100)
+                                                    const progress = (avgLevel / 7) * 100;
+
+                                                    // Find weakest skill in this category
+                                                    let priority = null;
+                                                    if (skills.length > 0) {
+                                                        let minLvl = userSkills[skills[0]]?.level || 1;
+                                                        priority = { id: skills[0], level: minLvl };
+                                                        skills.forEach(sid => {
+                                                            const lvl = userSkills[sid]?.level || 1;
+                                                            if (lvl < minLvl) {
+                                                                minLvl = lvl;
+                                                                priority = { id: sid, level: lvl };
+                                                            }
+                                                        });
                                                     }
-                                                    // Tie-break: Prefer skills closest to current form
-                                                    return b.minForm - a.minForm;
-                                                })
-                                                .slice(0, 3);
 
-                                            if (bottlenecks.length === 0) return null;
+                                                    const missionName = priority ? getMathSkillName(priority.id, language) : 'Core Principles';
 
-                                            return (
-                                                <div className="mb-6">
-                                                    <div className="flex items-center gap-2 mb-4">
-                                                        <Sparkles className="w-5 h-5 text-violet-600" />
-                                                        <h3 className="text-sm font-black text-slate-800 uppercase tracking-wider">Top 3 Radar Bottlenecks</h3>
-                                                    </div>
-                                                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                                                        {bottlenecks.map(({ id, level }) => {
-                                                            const name = getMathSkillName(id, language);
-                                                            const isPracticed = level > 0;
-                                                            
-                                                            // Determine Category Style (same as Quest Lab)
-                                                            let catColor = 'text-slate-500 bg-slate-100';
-                                                            if (id.startsWith('math_num') || id.startsWith('math_alg')) catColor = 'text-blue-600 bg-blue-50';
-                                                            else if (id.startsWith('math_geo')) catColor = 'text-orange-600 bg-orange-50';
-                                                            else if (id.startsWith('math_stat')) catColor = 'text-teal-600 bg-teal-50';
-
-                                                            const masteryTier = calculateTier(level);
-                                                            const masteryPct = getMasteryPercentage(masteryTier);
-
-                                                            return (
-                                                                <div
-                                                                    key={`weak_${id}`}
-                                                                    onClick={() => handleTaskClick({ topic: id, level: level, xp: 200, subject: 'Maths' })}
-                                                                    className="bg-white border-2 border-slate-100 hover:border-red-200 hover:shadow-lg p-5 rounded-2xl transition-all cursor-pointer relative overflow-hidden group"
-                                                                >
-                                                                    <div className="absolute top-0 right-0 p-3 opacity-5 group-hover:opacity-10 transition-opacity">
-                                                                        <Zap className="w-12 h-12 text-red-600" />
+                                                    return (
+                                                        <div key={track.id} className="bg-white rounded-3xl border border-slate-100 p-6 shadow-sm hover:shadow-md transition-shadow">
+                                                            <div className="flex items-center justify-between mb-4">
+                                                                <div className="flex items-center gap-3">
+                                                                    <div className={`p-2 bg-slate-50 text-indigo-600 rounded-xl`}>
+                                                                        <track.icon className={`w-5 h-5`} />
                                                                     </div>
-                                                                    <div className="flex justify-between items-start mb-2">
-                                                                        <div className="flex gap-2">
-                                                                            <span className={`px-2 py-0.5 rounded text-[9px] font-black uppercase tracking-wider ${catColor}`}>
-                                                                                {id.split('_')[1]}
-                                                                            </span>
-                                                                            <div className="px-2 py-0.5 bg-red-50 text-red-600 rounded text-[9px] font-black uppercase">Urgent Mastery</div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <h4 className="font-bold text-slate-900 group-hover:text-red-600 transition-colors">{name}</h4>
-                                                                    
-                                                                    {/* Mastery Bar */}
-                                                                    <div className="mt-4 space-y-1.5">
-                                                                        <div className="flex justify-between text-[9px] font-black tracking-widest text-slate-400 uppercase">
-                                                                            <span>{t.mastery}</span>
-                                                                            <span>{masteryPct}%</span>
-                                                                        </div>
-                                                                        <div className="h-1.5 bg-slate-100 rounded-full overflow-hidden border border-slate-200/50">
-                                                                            <div 
-                                                                                className="h-full bg-gradient-to-r from-red-500 to-orange-500 transition-all duration-1000"
-                                                                                style={{ width: `${masteryPct}%` }}
-                                                                            />
-                                                                        </div>
-                                                                    </div>
-
-                                                                    <p className="text-[10px] text-slate-400 mt-3 italic">Defeat this bottleneck to level up.</p>
-                                                                    <div className="mt-4 flex items-center justify-between">
-                                                                        <span className="text-xs font-bold text-red-500 flex items-center gap-1">
-                                                                            <Star className="w-3 h-3 fill-current" /> +50 XP
-                                                                        </span>
-                                                                        <Play className="w-4 h-4 text-slate-300 group-hover:text-red-500 transition-colors" />
-                                                                    </div>
+                                                                    <span className="font-black text-slate-800 text-sm tracking-tight">{track.label}</span>
                                                                 </div>
-                                                            );
-                                                        })}
-                                                    </div>
-                                                </div>
-                                            );
-                                        })()}
-
-                                        {/* Personalized Batch */}
-                                        {(plan?.tasks || []).length > 0 && (
-                                            <>
-                                                <div className="mt-8 flex items-center gap-2 mb-4">
-                                                    <Clock className="w-5 h-5 text-indigo-600" />
-                                                    <h3 className="text-sm font-black text-slate-800 uppercase tracking-wider">Weekly Adaptive Quests</h3>
-                                                </div>
-                                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pb-12">
-                                                    {(plan?.tasks || []).map((task) => (
-                                                        <div
-                                                            key={task.id}
-                                                            onClick={() => handleTaskClick(task)}
-                                                            className={`
-                                                                group relative p-5 rounded-xl border-2 text-left transition-all duration-200 cursor-pointer
-                                                                bg-white border-slate-100 hover:border-violet-300 hover:shadow-lg
-                                                            `}
-                                                        >
-                                                            <div className="flex justify-between items-start mb-3">
-                                                                <span className={`
-                                                                    px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wide
-                                                                    ${task.subject === 'Maths' ? 'bg-violet-100 text-violet-700' : 'bg-indigo-100 text-indigo-700'}
-                                                                `}>
-                                                                    {task.subject}
+                                                                <span className={`text-xs font-black text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded-lg border border-indigo-100`}>
+                                                                    Level {avgLevel.toFixed(1)}
                                                                 </span>
-                                                                <div className="bg-slate-100 text-slate-600 p-1.5 rounded-full group-hover:bg-violet-600 group-hover:text-white transition-all">
-                                                                    <Play className="w-3.5 h-3.5 ml-0.5" />
-                                                                </div>
                                                             </div>
 
-                                                            <h3 className="font-bold text-slate-800 mb-1 leading-tight group-hover:text-violet-600 transition-colors">
-                                                                {task.meta?.topic || task.topic}
-                                                            </h3>
-                                                            <p className="text-[10px] text-slate-500 line-clamp-2">
-                                                                {task.subject === 'Maths' ? `DSE F${task.meta?.syllabus_layer || task.level} level challenge.` : `DSE English mastery target.`}
-                                                            </p>
+                                                            {/* Progress Gauge */}
+                                                            <div className="w-full h-2 bg-slate-100 rounded-full overflow-hidden mb-5">
+                                                                <div 
+                                                                    className={`h-full bg-gradient-to-r from-indigo-400 to-indigo-600 transition-all duration-1000`} 
+                                                                    style={{ width: `${Math.max(10, progress)}%` }}
+                                                                />
+                                                            </div>
 
-                                                            <div className="mt-4 flex items-center justify-between">
-                                                                <span className="text-xs font-bold text-violet-600 flex items-center gap-1">
-                                                                    <Star className="w-3 h-3 fill-current" /> +200 XP
+                                                            {/* Priority Mission Action */}
+                                                            {priority && (() => {
+                                                                const targetLevel = '5'; // Propose Level 5 for all Mastery Tracks
+                                                                const stats = getMasteryStats(targetLevel);
+                                                                
+                                                                return (
+                                                                    <div 
+                                                                        onClick={(e) => {
+                                                                            e.stopPropagation();
+                                                                            onClose();
+                                                                            navigate(`/maths/learn/${priority.id}`, { 
+                                                                                state: { 
+                                                                                    topic: priority.id, 
+                                                                                    level: targetLevel, 
+                                                                                    xp: stats.xp,
+                                                                                    isFactoryQuest: true
+                                                                                } 
+                                                                            });
+                                                                        }}
+                                                                        className="flex items-center justify-between p-3 bg-slate-50 border border-slate-100 rounded-2xl group cursor-pointer hover:border-indigo-200 hover:bg-indigo-50/30 transition-all"
+                                                                    >
+                                                                        <div className="flex items-center gap-3 pr-2 overflow-hidden">
+                                                                            <div className="p-2 bg-white rounded-lg shadow-xs group-hover:scale-110 transition-transform flex-shrink-0">
+                                                                                <Zap className="w-3 h-3 text-amber-500 fill-amber-500" />
+                                                                            </div>
+                                                                            <div className="min-w-0">
+                                                                                <div className="text-[9px] font-black text-slate-400 uppercase tracking-widest mb-0.5">Priority Boost</div>
+                                                                                <div className="text-[11px] font-black text-slate-700 italic group-hover:text-indigo-600 transition-colors truncate">{missionName}</div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div className="flex items-center gap-2 flex-shrink-0">
+                                                                            <span className="text-[9px] font-black text-indigo-600">+{stats.xp} XP</span>
+                                                                            <Play className="w-3 h-3 text-slate-300 group-hover:text-indigo-600 transition-colors" />
+                                                                        </div>
+                                                                    </div>
+                                                                );
+                                                            })()}
+                                                        </div>
+                                                    );
+                                                })}
+                                            </div>
+                                        </div>
+
+                                        {/* Weekly Adaptive Quest Card */}
+                                        <div className="mt-8 flex items-center gap-2 mb-4">
+                                            <Clock className="w-5 h-5 text-indigo-600" />
+                                            <h3 className="text-sm font-black text-slate-800 uppercase tracking-wider">Weekly Challenge Quests</h3>
+                                        </div>
+                                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+                                            {[
+                                                { id: 'math_foundation', topic: 'math_alg_formulas', title: 'Section A1 Foundation', icon: Zap, color: 'from-emerald-600 to-teal-700', desc: 'Must-Win Core Basics', level: '3' },
+                                                { id: 'math_standard', topic: 'math_alg_quadratics', title: 'Section A2 Mastery', icon: Layers, color: 'from-blue-600 to-indigo-700', desc: 'Standard Core Topics', level: '5' },
+                                                { id: 'weekly_math', topic: 'integrated_challenge', title: 'Section B Challenge', icon: Trophy, color: 'from-orange-600 to-red-700', desc: 'Level 5+ Detailed Analysis', level: '5' },
+                                                { id: 'mock_teaser', topic: 'Maths Paper 2 (MCQ)', title: 'MCQ Speed Drill', icon: Clock, color: 'from-purple-600 to-indigo-700', desc: 'Paper 2 Speed & Tactics', level: '5' }
+                                            ].map((quest) => {
+                                                const stats = getMasteryStats(quest.level);
+                                                return (
+                                                    <div
+                                                        key={quest.id}
+                                                        onClick={() => {
+                                                            onClose();
+                                                            navigate('/maths/lab', { state: { topic: quest.topic, xp: stats.xp, level: quest.level } });
+                                                        }}
+                                                        className={`p-5 h-[120px] rounded-2xl shadow-lg relative overflow-hidden cursor-pointer hover:scale-[1.02] active:scale-[0.98] transition-all group bg-gradient-to-br ${quest.color}`}
+                                                    >
+                                                        <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2 group-hover:bg-white/10 transition-colors" />
+                                                        <div className="relative z-10 h-full flex flex-col justify-between">
+                                                            <div className="flex items-center gap-4">
+                                                                <div className="p-3 bg-white/15 backdrop-blur-sm rounded-xl border border-white/20">
+                                                                    <quest.icon className="w-6 h-6 text-white" />
+                                                                </div>
+                                                                <div>
+                                                                    <h4 className="font-bold text-white text-sm">{quest.title}</h4>
+                                                                    <p className="text-[10px] text-white/70 italic opacity-80">{quest.desc}</p>
+                                                                </div>
+                                                            </div>
+                                                            <div className="flex items-center justify-between mt-auto">
+                                                                <span className="text-[10px] font-black text-white/90 bg-white/20 px-2 py-0.5 rounded-lg border border-white/20">
+                                                                    +{stats.xp} XP
                                                                 </span>
-                                                                <span className="text-[9px] font-black text-slate-300 uppercase">
-                                                                    Factory v1.0
-                                                                </span>
+                                                                <Play className="w-3 h-3 text-white/60 group-hover:text-white transition-colors" />
                                                             </div>
                                                         </div>
-                                                    ))}
-                                                </div>
-                                            </>
+                                                    </div>
+                                                );
+                                            })}
+                                        </div>
+
+                                        {/* Factory Tasks Grid (Hidden if empty or redundant) */}
+                                        {(plan?.tasks || []).length > 0 && (
+                                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pb-12">
+                                                {(plan?.tasks || [])
+                                                    .filter(t => !['MOCK', 'DIAGNOSTIC'].includes(t.type))
+                                                    .map((task) => (
+                                                    <div
+                                                        key={task.id}
+                                                        onClick={() => handleTaskClick(task)}
+                                                        className={`
+                                                            group relative p-5 rounded-xl border-2 text-left transition-all duration-200 cursor-pointer
+                                                            bg-white border-slate-100 hover:border-indigo-300 hover:shadow-lg
+                                                        `}
+                                                    >
+                                                        <div className="flex items-center justify-between mb-4">
+                                                            <div className="p-2 bg-indigo-50 text-indigo-600 rounded-lg">
+                                                                <Calculator size={18} />
+                                                            </div>
+                                                            <div className="text-[10px] font-bold px-2 py-0.5 bg-slate-100 text-slate-500 rounded-full">
+                                                                FACTORY
+                                                            </div>
+                                                        </div>
+
+                                                        <h4 className="font-bold text-slate-900 mb-1 line-clamp-1">{task.meta?.topic || task.topic}</h4>
+                                                        <p className="text-[11px] text-slate-500 mb-4 line-clamp-2 leading-tight">
+                                                            Advanced DSE practice targeting your current form.
+                                                        </p>
+
+                                                        <div className="mt-4 flex items-center justify-between">
+                                                            <span className="text-xs font-bold text-indigo-600 flex items-center gap-1">
+                                                                <Star className="w-3 h-3 fill-current" /> +{task.xp || 200} XP
+                                                            </span>
+                                                            <Play className="w-4 h-4 text-slate-300 group-hover:text-indigo-600 transition-colors" />
+                                                        </div>
+                                                    </div>
+                                                ))}
+                                            </div>
                                         )}
                                     </>
                                 )}

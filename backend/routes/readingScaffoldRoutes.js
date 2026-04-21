@@ -49,7 +49,8 @@ Return ONLY valid JSON in this format:
     const vocabData = await GenerativeAIService.generateJson(prompt, {
       model: 'gemini-2.0-flash'
     });
-    res.json(vocabData);
+    // Flatten result for frontend
+    res.json(vocabData.data || vocabData);
 
   } catch (error) {
     console.error('[ReadingScaffold] Vocab extraction error:', error);
@@ -93,7 +94,8 @@ Return ONLY valid JSON:
     const tagData = await GenerativeAIService.generateJson(prompt, {
       model: 'gemini-2.0-flash'
     });
-    res.json(tagData);
+    // Flatten result for frontend
+    res.json(tagData.data || tagData);
 
   } catch (error) {
     console.error('[ReadingScaffold] Paragraph classification error:', error);
@@ -148,7 +150,8 @@ Return ONLY valid JSON:
     const connectorData = await GenerativeAIService.generateJson(prompt, {
       model: 'gemini-2.0-flash'
     });
-    res.json(connectorData);
+    // Flatten result for frontend
+    res.json(connectorData.data || connectorData);
 
   } catch (error) {
     console.error('[ReadingScaffold] Connector extraction error:', error);
@@ -184,10 +187,8 @@ router.post('/scaffold', async (req, res) => {
 
     const prompt = `You are a senior DSE English reading comprehension tutor. Analyze this passage and provide deep scaffolding data that helps a Hong Kong F.4-F.6 student truly understand the text's structure and argumentation.
 
-PASSAGE (${paras.length} paragraphs):
-"""
-${passage || paras.join('\n\n')}
-"""
+PARAGRAPHS (Use these indices for the JSON response):
+${paras.map((p, i) => `[Paragraph ${i}] ${p}`).join('\n\n')}
 
 Provide a comprehensive analysis with THREE layers. **IMPORTANT**: For all explanatory fields (summary, dse_tip, bridge_sentence, exam_insight), provide BOTH English and Traditional Chinese versions.
 
@@ -195,12 +196,15 @@ Provide a comprehensive analysis with THREE layers. **IMPORTANT**: For all expla
    - word, part of speech, simple definition, Traditional Chinese translation, approximate character position
 
 2. **PARAGRAPH X-RAY** (one per paragraph):
+   - "index": The paragraph number (0, 1, 2...) from the list above.
    - "tag": Purpose label (MAIN_CLAIM, EVIDENCE, COUNTERPOINT, REBUTTAL, CONTEXT, CONCLUSION)
    - "summary": { "en": "English 1-sentence summary", "zh": "繁體中文一句總結" }
    - "key_phrases": Array of 2-4 important phrases from the paragraph (in English, as they appear in the text)
    - "dse_tip": { "en": "English exam strategy tip", "zh": "繁體中文考試策略提示" }
 
-3. **ARGUMENT MAP** (connections between consecutive paragraphs):
+3. **ARGUMENT MAP** (logical connections BETWEEN paragraphs):
+   - "from": The source paragraph index (e.g., 0).
+   - "to": The destination paragraph index (e.g., 1).
    - "type": Relationship type (LEADS_TO, HOWEVER, FOR_EXAMPLE, IN_ADDITION, THEREFORE, ELABORATES)
    - "bridge_sentence": { "en": "English explanation of why paragraph B follows A", "zh": "繁體中文解釋為何段落B跟隨段落A" }
    - "signal_words": Array of actual linking words/phrases found in the text (in English)
@@ -236,9 +240,11 @@ Return ONLY valid JSON:
       model: 'gemini-2.0-flash'
     });
 
-    // Include the paragraphs we used for analysis so frontend stays in sync
+    // Flatten result: merge AI data with our paragraph mapping
+    const finalData = scaffoldData.data || scaffoldData;
+
     res.json({
-      ...scaffoldData,
+      ...finalData,
       paragraphs: paras
     });
 

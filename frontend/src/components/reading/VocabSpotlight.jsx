@@ -25,8 +25,8 @@ const VocabSpotlight = ({ text, vocabData = [], onWordClick }) => {
     const parts = text.split(/(\s+)/);
 
     const renderPart = (part, index) => {
-        // Clean word for lookup (remove punctuation)
-        const cleanWord = part.replace(/[.,!?;:'"()]/g, '').toLowerCase();
+        // Clean word for lookup (remove punctuation from BOTH ends of the word)
+        const cleanWord = part.replace(/^[^a-zA-Z0-9]+|[^a-zA-Z0-9]+$/g, '').toLowerCase();
         const vocabEntry = vocabMap[cleanWord];
 
         if (vocabEntry) {

@@ -1,7 +1,12 @@
 import React, { createContext, useState, useContext, useEffect } from 'react';
 import { translations } from '../utils/translations';
 
-const LanguageContext = createContext();
+const LanguageContext = createContext({
+    language: 'zh',
+    setLanguage: () => { },
+    t: (path) => path,
+    toggleLanguage: () => { }
+});
 
 export const LanguageProvider = ({ children }) => {
     // Default to 'zh' as per existing header, or check localStorage

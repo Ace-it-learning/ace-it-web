@@ -113,6 +113,7 @@ app.use('/api/maths/exam', require('./routes/maths/mathsExamRoutes'));
 app.use('/api/maths/diagnostic', require('./routes/maths/mathsDiagnosticRoutes'));
 app.use('/api/english/mock', require('./routes/englishMockRoutes'));
 app.use('/api/dictionary', require('./routes/dictionaryRoutes'));
+app.use('/api/results', require('./routes/resultRoutes'));
 
 // User & Platform Specifics
 app.use('/api', chatRoutes);
@@ -126,7 +127,9 @@ app.use('/api/gamification', profileRoutes);
 app.use('/api/skillmap', profileRoutes);
 app.use('/api/redemption', profileRoutes);
 app.use('/api/diagnostic', require('./routes/diagnosticRoutes'));
-app.use('/api/tutors', require('./routes/tutorRoutes'));
+app.use('/api/tutor', require('./routes/tutorRoutes'));
+app.post(/^\/api\/tutors\/(.*)/, (req, res) => res.redirect(307, req.url.replace('/api/tutors', '/api/tutor')));
+
 app.use('/api/debug', require('./routes/debugRoutes'));
 app.use('/api/admin', require('./routes/adminRoutes'));
 app.use('/api', require('./routes/ttsRoutes'));

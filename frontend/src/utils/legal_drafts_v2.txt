@@ -1,0 +1,103 @@
+# Ace It! Education - HIGH-FIDELITY LEGAL DOCUMENTATION (Draft v2)
+
+## 1. TERMS AND CONDITIONS
+
+### [EN]
+**TERMS AND CONDITIONS**
+
+**LAST UPDATED: APRIL 17, 2026**
+
+**1. AGREEMENT TO TERMS**
+These Terms and Conditions constitute a legally binding agreement made between you, whether personally or on behalf of an entity (“you”) and Ace It! Education (“Company”, “we”, “us”, or “our”), concerning your access to and use of the Ace It! website as well as any other media form, media channel, mobile website or mobile application related, linked, or otherwise connected thereto (collectively, the “Services”). By accessing the Services, you acknowledge that you have read, understood, and agree to be bound by all of these Terms and Conditions. IF YOU DO NOT AGREE WITH ALL OF THESE TERMS AND CONDITIONS, THEN YOU ARE EXPRESSLY PROHIBITED FROM USING THE SERVICES AND YOU MUST DISCONTINUE USE IMMEDIATELY.
+
+**2. ELIGIBILITY AND USER REPRESENTATIONS**
+By using the Services, you represent and warrant that: (1) all registration information you submit will be true, accurate, current, and complete; (2) you will maintain the accuracy of such information and promptly update such registration information as necessary; (3) you have the legal capacity and you agree to comply with these Terms and Conditions; (4) you are not a minor in the jurisdiction in which you reside, or if a minor, you have received parental permission to use the Services; (5) you will not access the Services through automated or non-human means, whether through a bot, script or otherwise; (6) you will not use the Services for any illegal or unauthorized purpose; and (7) your use of the Services will not violate any applicable law or regulation of the Hong Kong Special Administrative Region (“HKSAR”).
+
+**3. INTELLECTUAL PROPERTY RIGHTS**
+Unless otherwise indicated, the Services and all source code, databases, functionality, software, website designs, audio, video, text, photographs, and graphics on the Services (collectively, the “Content”) and the trademarks, service marks, and logos contained therein (the “Marks”) are owned or controlled by us or licensed to us, and are protected by copyright and trademark laws and various other intellectual property rights and unfair competition laws of Hong Kong, foreign jurisdictions, and international conventions. The Content and the Marks are provided on the Services “AS IS” for your information and personal use only. Except as expressly provided in these Terms and Conditions, no part of the Services and no Content or Marks may be copied, reproduced, aggregated, republished, uploaded, posted, publicly displayed, encoded, translated, transmitted, distributed, sold, licensed, or otherwise exploited for any commercial purpose whatsoever, without our express prior written permission.
+
+**4. SUBSCRIPTION, PAYMENTS, AND REFUND POLICY**
+We accept various forms of payment through our designated third-party payment processors (e.g., Stripe). You agree to provide current, complete, and accurate purchase and account information for all purchases made via the Services. You further agree to promptly update account and payment information, including email address, payment method, and payment card expiration date, so that we can complete your transactions and contact you as needed. 
+
+**ALL SALES ARE FINAL AND NO REFUND SHALL BE ISSUED.** Ace It! Education operates a strict no-refund policy for all subscription tiers. Notwithstanding any dissatisfaction or non-usage of the Services, you acknowledge and agree that you shall not be entitled to any refund, credit, or partial reimbursement for any payments made to the Company. We reserve the right to correct any errors or mistakes in pricing, even if we have already requested or received payment.
+
+**5. PROHIBITED ACTIVITIES**
+You may not access or use the Services for any purpose other than that for which we make the Services available. The Services may not be used in connection with any commercial endeavors except those that are specifically endorsed or approved by us. Prohibited activities include, but are not limited to: (1) systematic retrieval of data or other content from the Services to create or compile, directly or indirectly, a collection, compilation, database, or directory without written permission from us; (2) circumventing, disabling, or otherwise interfering with security-related features of the Services; (3) disparaging, tarnishing, or otherwise harming, in our opinion, us and/or the Services; (4) using any information obtained from the Services in order to harass, abuse, or harm another person; and (5) engaging in any automated use of the system, such as using scripts to send comments or messages, or using any data mining, robots, or similar data gathering and extraction tools.
+
+**6. LIMITATION OF LIABILITY**
+IN NO EVENT WILL WE OR OUR DIRECTORS, EMPLOYEES, OR AGENTS BE LIABLE TO YOU OR ANY THIRD PARTY FOR ANY DIRECT, INDIRECT, CONSEQUENTIAL, EXEMPLARY, INCIDENTAL, SPECIAL, OR PUNITIVE DAMAGES, INCLUDING LOST PROFIT, LOST REVENUE, LOSS OF DATA, OR OTHER DAMAGES ARISING FROM YOUR USE OF THE SERVICES, EVEN IF WE HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. NOTWITHSTANDING ANYTHING TO THE CONTRARY CONTAINED HEREIN, OUR LIABILITY TO YOU FOR ANY CAUSE WHATSOEVER AND REGARDLESS OF THE FORM OF THE ACTION, WILL AT ALL TIMES BE LIMITED TO THE AMOUNT PAID, IF ANY, BY YOU TO US DURING THE SIX (6) MONTH PERIOD PRIOR TO ANY CAUSE OF ACTION ARISING.
+
+**7. GOVERNING LAW AND JURISDICTION**
+These Terms and Conditions and your use of the Services are governed by and construed in accordance with the laws of the Hong Kong Special Administrative Region. Any legal action of whatever nature brought by either you or us shall be commenced or prosecuted in the courts of Hong Kong, and the parties hereby consent to, and waive all defenses of lack of personal jurisdiction and forum non conveniens with respect to venue and jurisdiction in such courts.
+
+---
+
+### [ZH-HK]
+**條款及細則**
+
+**最後更新日期：2026年4月17日**
+
+**1. 協議之接受**
+本條款及細則構成您（無論是個人或代表實體，「您」）與 Ace It! Education（「公司」、「我們」或「我們的」）之間具有法律約束力的協議，內容涉及您對 Ace It! 網站以及與其相關、連結或以其他方式連接的任何其他媒體形式、媒體渠道、移動網站或移動應用程序（統稱為「本服務」）的訪問和使用。訪問本服務即表示您承認已閱讀、理解並同意受所有這些條款及細則的約束。如果您不同意所有這些條款及細則，則明確禁止您使用本服務，並且您必須立即停止使用。
+
+**2. 使用資格與用戶陳述**
+透過使用本服務，您陳述並保證：(1) 您提交的所有註冊信息均為真實、準確、最新且完整的；(2) 您將維護該等信息之準確性，並根據需要及時更新該等註冊信息；(3) 您具有法律行為能力並同意遵守本條款及細則；(4) 您在所居住的司法管轄區不屬於未成年人，或者如果是未成年人，您已獲得家長許可使用本服務；(5) 您不會透過自動化或非人為手段（無論是透過機器人、腳本還是其他方式）訪問本服務；(6) 您不會將本服務用於任何非法或未經授權的目的；以及 (7) 您對本服務的使用不會違反香港特別行政區（下稱「香港特區」）的任何適用法律或法規。
+
+**3. 知識產權**
+除非另有說明，本服務及其所有源代碼、數據庫、功能、軟件、網站設計、音訊、視頻、文本、照片和圖形（統稱為「內容」）以及其中包含的商標、服務標誌和標誌（「標誌」）均由我們擁有或控制，或經授權供我們使用，並受香港、外國司法管轄區的版權法、商標法以及各種其他知識產權法和反不正當競爭法的保護。內容和標誌在服務上按「原樣」提供，僅供您參考和個人使用。除本條款及細則明確規定外，未經我們事先明確書面許可，不得出於任何商業目的複製、重製、匯總、重新發布、上傳、發布、公開展示、編碼、翻譯、傳輸、分發、出售、許可或以其他方式利用本服務的任何部分以及任何內容或標誌。
+
+**4. 訂閱、付款及退款政策**
+我們透過指定的第三方付款處理商（如 Stripe）接受各種形式的付款。您同意為透過本服務進行的所有購買提供最新、完整且準確的購買和帳戶信息。您進一步同意及時更新帳戶和付款信息，包括電子郵件地址、付款方式和支付卡到期日期，以便我們完成您的交易並根據需要與您聯繫。
+
+**所有銷售均為最終銷售，恕不退款。** Ace It! Education 對所有訂閱級別均執行嚴格的不設退款政策。儘管對本服務有任何不滿意或未使用，您承認並同意您無權獲得已支付給公司的任何款項的任何退款、積分或部分補償。我們保留糾正定價中任何錯誤或遺漏的權利，即使我們已經要求或收到了付款。
+
+**5. 禁止行為**
+除了我們提供本服務的目的外，您不得出於任何其他目的訪問或使用本服務。未經我們明確認可或批准，本服務不得用於任何商業活動。禁止活動包括但不限於：(1) 未經我們書面許可，系統地從本服務中檢索數據或其他內容，以直接或間接地創建或編譯匯總、彙編、數據庫或目錄；(2) 規避、禁用或以其他方式干擾本服務與安全相關的功能；(3) 在我們看來，誹謗、抹黑或以其他方式損害我們和/或本服務；(4) 利用從本服務中獲得的任何信息來騷擾、虐待或傷害他人；以及 (5) 參與系統的任何自動化使用，例如使用腳本發送評論或消息，或使用任何數據挖掘、機器人或類似的數據收集和提取工具。
+
+**6. 責任限制**
+在任何情況下，我們或我們的董事、員工或代理人均不對您或任何第三方因您使用本服務而產生的任何直接、間接、衍生性、懲戒性、附帶性、特殊性或懲罰性損害負責，包括利潤損失、收入損失、數據丟失或其他損害，即使我們已被告知發生此類損害的可能性。儘管本文中有任何相反的規定，我們對您因任何原因引起且無論訴訟形式如何的責任，將始終限於您在任何訴訟原因產生前六(6)個月內支付給我們的金額（如有）。
+
+**7. 管轄法律與司法管轄權**
+本條款及細則以及您對本服務的使用受香港特別行政區法律管轄並按其解釋。由您或我們提起的任何性質的法律訴訟均應在香港法院啟動或進行，各方特此同意並放棄對於該等法院的場地和司法管轄權的一切抗辯，包括缺乏個人管轄權和論壇不便（forum non conveniens）。
+
+---
+
+## 2. DISCLAIMER
+
+### [EN]
+**DISCLAIMER**
+
+**1. GENERAL INFORMATIONAL PURPOSES**
+The Services provided by Ace It! Education are intended for supplemental informational and educational purposes only. While we strive to provide high-quality educational guidance for HKDSE preparation, the feedback, grading analysis, and suggestions provided by our AI tutors do not constitute official academic certification and should not be relied upon as the sole basis for academic decision-making.
+
+**2. NO GUARANTEE OF ACADEMIC SUCCESS**
+YOU EXPRESSLY ACKNOWLEDGE AND AGREE THAT THE USE OF THE SERVICES DOES NOT GUARANTEE ANY SPECIFIC ACADEMIC OUTCOME, EXAMINATION RESULT, OR UNIVERSITY ADMISSION. Examination performance is subject to a multitude of external variables beyond the control of the Company, including but not limited to individual student effort, examination conditions, and HKEAA assessment revisions. 
+
+**3. AI ACCURACY AND LIMITATIONS**
+THE SERVICES UTILIZE ADVANCED ARTIFICIAL INTELLIGENCE MODELS WHICH, NOTWITHSTANDING THEIR SOPHISTICATION, ARE SUBJECT TO INHERENT LIMITATIONS. YOU ACKNOWLEDGE AND AGREE THAT THE AI ASSETS MAY OCCASIONALLY GENERATE INACCURATE ACADEMIC DATA, ERRONEOUS FEEDBACK, OR FICTITIOUS INFORMATION (COMMONLY REFERRED TO AS “HALLUCINATIONS”). IT IS YOUR SOLE RESPONSIBILITY TO CROSS-REFERENCE AND VERIFY ANY CRITICAL ACADEMIC CONTENT WITH OFFICIAL TEXTBOOKS, PAST PAPERS, AND QUALIFIED SCHOOL TEACHERS.
+
+**4. NO PROFESSIONAL OR OFFICIAL ADVICE**
+THE INFORMATION PROVIDED THROUGH THE SERVICES DOES NOT CONSTITUTE LEGAL, MEDICAL, OR OFFICIAL ACADEMIC ADVICE. ACE IT! EDUCATION IS AN INDEPENDENT PRIVATE ENTITY AND IS NOT AFFILIATED WITH, ENDORSED BY, OR CONNECTED TO THE HONG KONG EXAMINATIONS AND ASSESSMENT AUTHORITY (“HKEAA”) OR ANY GOVERNMENTAL EDUCATIONAL BODY.
+
+**5. WARRANTY DISCLAIMER**
+THE SERVICES ARE PROVIDED ON AN “AS-IS” AND “AS-AVAILABLE” BASIS. YOU AGREE THAT YOUR USE OF THE SERVICES WILL BE AT YOUR SOLE RISK. TO THE FULLEST EXTENT PERMITTED BY LAW, WE DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, IN CONNECTION WITH THE SERVICES AND YOUR USE THEREOF, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. WE MAKE NO WARRANTIES OR REPRESENTATIONS ABOUT THE ACCURACY OR COMPLETENESS OF THE SERVICES’ CONTENT OR THE CONTENT OF ANY WEBSITES LINKED TO THE SERVICES AND WE WILL ASSUME NO LIABILITY OR RESPONSIBILITY FOR ANY (1) ERRORS, MISTAKES, OR INACCURACIES OF CONTENT AND MATERIALS, (2) PERSONAL INJURY OR PROPERTY DAMAGE, OF ANY NATURE WHATSOEVER, RESULTING FROM YOUR ACCESS TO AND USE OF THE SERVICES, OR (3) ANY UNAUTHORIZED ACCESS TO OR USE OF OUR SECURE SERVERS AND/OR ANY AND ALL PERSONAL INFORMATION AND/OR FINANCIAL INFORMATION STORED THEREIN.
+
+---
+
+### [ZH-HK]
+**免責聲明**
+
+**1. 一般資訊用途**
+Ace It! Education 提供的服務僅用於補充資訊和教育目的。雖然我們努力為 HKDSE 備考提供高質量的教育指導，但我們的 AI 導師提供的反饋、評分分析和建議不構成官方學術認證，不應作為學術決策的唯一依據。
+
+**2. 不保證學術成功**
+您明確承認並同意，使用本服務並不保證任何特定的學術成果、考試成績或大學錄取。考試表現受公司控制範圍之外的多種外部變量影響，包括但不限於學生個人努力、考試環境以及香港考評局的評估修訂。
+
+**3. AI 準確性與局限性**
+本服務利用先進的人工智能模型，儘管這些模型非常複雜，但仍受固有局限性的約束。您承認並同意，AI 資產偶爾可能會生成不準確的學術數據、錯誤的反饋或虛構信息（通常稱為「幻覺」）。您有責任將任何關鍵學術內容與官方教科書、歷屆試題及合資格的學校老師進行交叉引用和驗證。
+
+**4. 非專業或官方建議**
+透過本服務提供的資訊不構成法律、醫療或官方學術建議。ACE IT! EDUCATION 是一家獨立的私人實體，不隸屬於香港考試及評核局（「考評局」）或任何政府教育機構，亦未獲得上述機構的認可或與其有任何聯繫。
+
+**5. 保證免責聲明**
+本服務按「原樣」及「現有」狀態提供。您同意自行承擔使用本服務的風險。在法律允許的最大範圍內，我們不承擔與服務及其使用相關的所有明示或暗示的保證，包括但不限於對適銷性、特定用途的適用性和非侵權性的暗示保證。對於本服務內容或與本服務鏈接的任何網站內容的準確性或完整性，我們不作任何保證或陳述，並且對於以下各項，我們不承擔任何責任：(1) 内容和材料的錯誤、失誤或不準確；(2) 因您訪問和使用本服務而導致的任何性質的人身傷害或財產損失；或 (3) 對我們安全服務器和/或其中存儲的任何及所有個人信息和/或財務信息任何未經授權的訪問或使用。

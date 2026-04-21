@@ -30,7 +30,7 @@ const DictionaryPopover = ({ data, position, onClose, onAddToNotebook, loading }
                 </div>
             ) : data?.error ? (
                 <div className="text-red-500 text-sm py-2">
-                    <p className="font-bold">⚠️ Error</p>
+                    <p className="font-bold">Error</p>
                     <p>{data.error}</p>
                 </div>
             ) : (
@@ -41,7 +41,7 @@ const DictionaryPopover = ({ data, position, onClose, onAddToNotebook, loading }
                     </div>
 
                     <div className="bg-blue-50 p-2 rounded-lg text-blue-900 text-sm">
-                        <span className="font-bold">繁：</span> {data.translation}
+                        <span className="font-bold">Translation:</span> {data.translation}
                     </div>
 
                     {data.example && (
@@ -52,7 +52,7 @@ const DictionaryPopover = ({ data, position, onClose, onAddToNotebook, loading }
                         onClick={() => onAddToNotebook(data)}
                         className="w-full bg-orange-500 text-white py-2 rounded-lg text-sm font-bold hover:bg-orange-600 transition-colors flex items-center justify-center gap-2 mt-2 shadow-sm"
                     >
-                        <span>📓</span> Add to Notebook
+                        Add to Notebook
                     </button>
                 </div>
             )}

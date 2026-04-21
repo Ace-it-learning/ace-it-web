@@ -32,14 +32,6 @@ const TutorSection = () => {
             highlights: t('landing.tutors.mr_wong.highlights'),
             avatar: AGENTS.math.avatar,
             color: "emerald"
-        },
-        {
-            name: AGENTS.chinese.name,
-            role: t('landing.tutors.miss_chen.role'),
-            vision: t('landing.tutors.miss_chen.vision'),
-            highlights: t('landing.tutors.miss_chen.highlights'),
-            avatar: AGENTS.chinese.avatar,
-            color: "amber"
         }
     ];
 

@@ -80,7 +80,65 @@ export const translations = {
             integrated_skills: "Integrated Skills"
         },
         footer: {
-            copyright: "© 2026 Ace It! Education. All rights reserved."
+            copyright: "© 2026 Ace It! Education. All rights reserved.",
+            terms: "Terms & Conditions",
+            disclaimer: "Disclaimer"
+        },
+        legal: {
+            terms_title: "Terms and Conditions",
+            disclaimer_title: "General Disclaimer",
+            terms: [
+                { 
+                    title: "1. AGREEMENT TO TERMS", 
+                    content: "These Terms and Conditions constitute a legally binding agreement made between you, whether personally or on behalf of an entity (“you”) and Ace It! Education (“Company”, “we”, “us”, or “our”), concerning your access to and use of the Ace It! website as well as any other media form, media channel, mobile website or mobile application related, linked, or otherwise connected thereto (collectively, the “Services”). By accessing the Services, you acknowledge that you have read, understood, and agree to be bound by all of these Terms and Conditions. IF YOU DO NOT AGREE WITH ALL OF THESE TERMS AND CONDITIONS, THEN YOU ARE EXPRESSLY PROHIBITED FROM USING THE SERVICES AND YOU MUST DISCONTINUE USE IMMEDIATELY." 
+                },
+                { 
+                    title: "2. ELIGIBILITY AND USER REPRESENTATIONS", 
+                    content: "By using the Services, you represent and warrant that: (1) all registration information you submit will be true, accurate, current, and complete; (2) you will maintain the accuracy of such information and promptly update such registration information as necessary; (3) you have the legal capacity and you agree to comply with these Terms and Conditions; (4) you are not a minor in the jurisdiction in which you reside, or if a minor, you have received parental permission to use the Services; (5) you will not access the Services through automated or non-human means, whether through a bot, script or otherwise; (6) you will not use the Services for any illegal or unauthorized purpose; and (7) your use of the Services will not violate any applicable law or regulation of the Hong Kong Special Administrative Region (“HKSAR”)." 
+                },
+                { 
+                    title: "3. INTELLECTUAL PROPERTY RIGHTS", 
+                    content: "Unless otherwise indicated, the Services and all source code, databases, functionality, software, website designs, audio, video, text, photographs, and graphics on the Services (collectively, the “Content”) and the trademarks, service marks, and logos contained therein (the “Marks”) are owned or controlled by us or licensed to us, and are protected by copyright and trademark laws and various other intellectual property rights and unfair competition laws of Hong Kong, foreign jurisdictions, and international conventions. The Content and the Marks are provided on the Services “AS IS” for your information and personal use only. Except as expressly provided in these Terms and Conditions, no part of the Services and no Content or Marks may be copied, reproduced, aggregated, republished, uploaded, posted, publicly displayed, encoded, translated, transmitted, distributed, sold, licensed, or otherwise exploited for any commercial purpose whatsoever, without our express prior written permission." 
+                },
+                { 
+                    title: "4. SUBSCRIPTION, PAYMENTS, AND REFUND POLICY", 
+                    content: "We accept various forms of payment through our designated third-party payment processors (e.g., Stripe). You agree to provide current, complete, and accurate purchase and account information for all purchases made via the Services. ALL SALES ARE FINAL AND NO REFUND SHALL BE ISSUED. Ace It! Education operates a strict no-refund policy for all subscription tiers. Notwithstanding any dissatisfaction or non-usage of the Services, you acknowledge and agree that you shall not be entitled to any refund, credit, or partial reimbursement for any payments made to the Company." 
+                },
+                { 
+                    title: "5. PROHIBITED ACTIVITIES", 
+                    content: "You may not access or use the Services for any purpose other than that for which we make the Services available. Prohibited activities include, but are not limited to: (1) systematic retrieval of data or other content from the Services to create or compile, directly or indirectly, a collection, compilation, database, or directory without written permission from us; (2) circumventing, disabling, or otherwise interfering with security-related features of the Services; (3) disparaging, tarnishing, or otherwise harming, in our opinion, us and/or the Services; and (4) engaging in any automated use of the system, such as using scripts to send comments or messages, or using any data mining, robots, or similar data gathering and extraction tools." 
+                },
+                { 
+                    title: "6. LIMITATION OF LIABILITY", 
+                    content: "IN NO EVENT WILL WE OR OUR DIRECTORS, EMPLOYEES, OR AGENTS BE LIABLE TO YOU OR ANY THIRD PARTY FOR ANY DIRECT, INDIRECT, CONSEQUENTIAL, EXEMPLARY, INCIDENTAL, SPECIAL, OR PUNITIVE DAMAGES, INCLUDING LOST PROFIT, LOST REVENUE, LOSS OF DATA, OR OTHER DAMAGES ARISING FROM YOUR USE OF THE SERVICES, EVEN IF WE HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. OUR LIABILITY TO YOU FOR ANY CAUSE WHATSOEVER WILL AT ALL TIMES BE LIMITED TO THE AMOUNT PAID, IF ANY, BY YOU TO US DURING THE SIX (6) MONTH PERIOD PRIOR TO ANY CAUSE OF ACTION ARISING." 
+                },
+                { 
+                    title: "7. GOVERNING LAW AND JURISDICTION", 
+                    content: "These Terms and Conditions and your use of the Services are governed by and construed in accordance with the laws of the Hong Kong Special Administrative Region. Any legal action shall be commenced or prosecuted in the courts of Hong Kong, and the parties hereby consent to, and waive all defenses of lack of personal jurisdiction and forum non conveniens with respect to venue and jurisdiction in such courts." 
+                }
+            ],
+            disclaimer: [
+                { 
+                    title: "1. GENERAL INFORMATIONAL PURPOSES", 
+                    content: "The Services provided by Ace It! Education are intended for supplemental informational and educational purposes only. While we strive to provide high-quality educational guidance for HKDSE preparation, the feedback, grading analysis, and suggestions provided by our AI tutors do not constitute official academic certification and should not be relied upon as the sole basis for academic decision-making." 
+                },
+                { 
+                    title: "2. NO GUARANTEE OF ACADEMIC SUCCESS", 
+                    content: "YOU EXPRESSLY ACKNOWLEDGE AND AGREE THAT THE USE OF THE SERVICES DOES NOT GUARANTEE ANY SPECIFIC ACADEMIC OUTCOME, EXAMINATION RESULT, OR UNIVERSITY ADMISSION. Examination performance is subject to a multitude of external variables beyond the control of the Company, including but not limited to individual student effort, examination conditions, and HKEAA assessment revisions." 
+                },
+                { 
+                    title: "3. AI ACCURACY AND LIMITATIONS", 
+                    content: "THE SERVICES UTILIZE ADVANCED ARTIFICIAL INTELLIGENCE MODELS WHICH ARE SUBJECT TO INHERENT LIMITATIONS. YOU ACKNOWLEDGE AND AGREE THAT THE AI ASSETS MAY OCCASIONALLY GENERATE INACCURATE ACADEMIC DATA, ERRONEOUS FEEDBACK, OR FICTITIOUS INFORMATION (COMMONLY REFERRED TO AS “HALLUCINATIONS”). IT IS YOUR SOLE RESPONSIBILITY TO CROSS-REFERENCE AND VERIFY ANY CRITICAL ACADEMIC CONTENT WITH OFFICIAL TEXTBOOKS AND PAST PAPERS." 
+                },
+                { 
+                    title: "4. NO PROFESSIONAL OR OFFICIAL ADVICE", 
+                    content: "THE INFORMATION PROVIDED THROUGH THE SERVICES DOES NOT CONSTITUTE LEGAL, MEDICAL, OR OFFICIAL ACADEMIC ADVICE. ACE IT! EDUCATION IS AN INDEPENDENT PRIVATE ENTITY AND IS NOT AFFILIATED WITH, ENDORSED BY, OR CONNECTED TO THE HONG KONG EXAMINATIONS AND ASSESSMENT AUTHORITY (“HKEAA”) OR ANY GOVERNMENTAL EDUCATIONAL BODY." 
+                },
+                { 
+                    title: "5. WARRANTY DISCLAIMER", 
+                    content: "THE SERVICES ARE PROVIDED ON AN “AS-IS” AND “AS-AVAILABLE” BASIS. YOU AGREE THAT YOUR USE OF THE SERVICES WILL BE AT YOUR SOLE RISK. TO THE FULLEST EXTENT PERMITTED BY LAW, WE DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, IN CONNECTION WITH THE SERVICES AND YOUR USE THEREOF, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT." 
+                }
+            ]
         },
         pricing: {
             title: "Simple, Transparent Pricing",
@@ -126,6 +184,36 @@ export const translations = {
                     cta: "Go Premium",
                     features: ["Unlimited everything", "All current & future subjects", "1.5x XP Multiplier", "5 Device Limit"]
                 }
+            }
+        },
+        features: {
+            title: "Ultimate DSE Toolkit",
+            subtitle: "Every tool you need to conquer the HKDSE, powered by advanced AI and years of elite coaching experience.",
+            tutors: {
+                title: "Personal AI Tutors",
+                desc: "Engage in 24/7 deep conversations with specialized mentors who know your strengths and weaknesses.",
+                ace: "Ace Sir: Exam Strategy",
+                math: "Mr. Wong: Mathematical Logic",
+                english: "Miss Janie: English Excellence"
+            },
+            quest: {
+                title: "The Quest Hub",
+                desc: "Master every DSE paper through our signature interactive Quest system.",
+                tabs: {
+                    reading: "Reading",
+                    writing: "Writing",
+                    listening: "Listening",
+                    speaking: "Speaking"
+                },
+                placeholder: "Interface screenshot placeholder"
+            },
+            weekly: {
+                title: "Weekly Challenges",
+                desc: "Fresh, DSE-aligned content every week to keep your skills sharp and current."
+            },
+            mock: {
+                title: "Mock Exams",
+                desc: "Battle-test your skills in a timed, high-fidelity exam environment with immediate DSE-calibrated grading."
             }
         },
         subscription: {
@@ -390,17 +478,24 @@ export const translations = {
             awesome: "Awesome!",
             check_collection: "Check your collection to equip it."
         },
+        redemption: {
+            english: "English",
+            maths: "Mathematics",
+            ace: "Ace Sir"
+        },
         collection: {
             title: "My Collection",
-            subtitle: "View all your Tutor and Student cards.",
-            student_cards: "Student Cards",
-            tutor_cards: "Tutor Cards",
+            subtitle: "View and manage your unlocked avatars.",
+            students: "Students",
+            tutors: "Tutors",
+            frames: "Frames",
             loading: "Loading collection...",
             empty: "No cards available yet.",
             default: "Default",
-            equipped: "Active",
+            active: "Selected",
             equip: "Equip",
-            my_collection: "My Collection"
+            my_collection: "My Collection",
+            not_owned: "Not Owned"
         },
         card_preview: {
             view_collection: "View Collection",
@@ -542,6 +637,58 @@ export const translations = {
             prereqs: "Prerequisites",
             pro_tip: "{{agentName}}'s Pro-Tip",
             close: "Got it!"
+        },
+        timeline: {
+            title: "Achievements & Quests",
+            subtitle: "Track your progress and celebrate your DSE milestones.",
+            history: "Achievement History",
+            newest_first: "Newest first",
+            no_activity: "No activity recorded yet. Start your first quest!",
+            just_now: "Just now",
+            hours_ago: "{{count}} hour{{s}} ago",
+            yesterday: "Yesterday",
+            days_ago: "{{count}} days ago",
+            redeem: "Redeem",
+            total_xp: "Total XP",
+            current_tier: "Current Tier",
+            active_days: "Active Days",
+            topic: "Topic",
+            review_performance: "Review Performance"
+        },
+        mastery: {
+            to_level: "to level"
+        },
+        prompts: {
+            title: "Prompt Tips",
+            subtitle: "Use these proven prompt structures to get the highest quality feedback from your AI mentors. Click any prompt to copy and start chatting.",
+            pro_tip_title: "💡 Pro Tip for HKDSE",
+            pro_tip_content: "\"The more context you provide (e.g., attaching your essay or specifying the score you're aiming for), the more tailored the tutor's feedback will be. Don't be afraid to ask 'Why?' after they give you an answer.\"",
+            back: "Back",
+            click_to_copy: "Click to Copy",
+            master_ai: "Master the AI",
+            categories: {
+                english: {
+                    title: "English",
+                    p1: "Evaluate the persuasive effectiveness of this argument and suggest 3 high-level rhetorical devices to strengthen it.",
+                    p2: "Compare the tone of these two passages and explain how their different linguistic choices impact the reader's perception.",
+                    p3: "Predict potential DSE examiner pitfalls in this writing sample and provide a corrected version with 5+ Level 5** vocabulary upgrades.",
+                    p4: "Transform this informal brainstorm into a structured DSE Level 5+ essay outline with thematic topic sentences and cohesive ties."
+                },
+                maths: {
+                    title: "Maths",
+                    p1: "Explain the underlying mathematical principles behind this solution and why this specific method is more efficient for DSE timing.",
+                    p2: "Generate a complex multi-part problem that combines trigonometry and coordinate geometry similar to HKDSE Section B.",
+                    p3: "Audit my working steps for this calculus problem to identify any logical gaps that could lead to method mark deductions.",
+                    p4: "Deconstruct this past paper question and show me the 'trap' students usually fall into, then provide the optimal shortcut."
+                },
+                ace: {
+                    title: "Ace Sir",
+                    p1: "What's my current estimated grade based on my recent performance across all subjects?",
+                    p2: "Any suggested Quest for me on more unique about Ace It?",
+                    p3: "How does my current progress align with my Top 3 JUPAS dream programs? Show me a gap analysis.",
+                    p4: "Generate a 7-day 'Survival Plan' to help me bridge the gap to my target Level 5** in my weakest module."
+                }
+            }
         }
     },
     zh: {
@@ -617,7 +764,65 @@ export const translations = {
             mock_exam: "模擬試場"
         },
         footer: {
-            copyright: "© 2026 Ace It! 教育。版權所有。"
+            copyright: "© 2026 Ace It! 教育。版權所有。",
+            terms: "條款及細則",
+            disclaimer: "免責聲明"
+        },
+        legal: {
+            terms_title: "條款及細則",
+            disclaimer_title: "一般免責聲明",
+            terms: [
+                { 
+                    title: "1. 協議之接受", 
+                    content: "本條款及細則構成您（無論是個人或代表實體，「您」）與 Ace It! Education（「公司」、「我們」或「我們的」）之間具有法律約束力的協議。訪問本服務即表示您承認已閱讀、理解並同意受所有這些條款及細則的約束。如果您不同意所有這些條款及細則，則明確禁止您使用本服務，並且您必須立即停止使用。" 
+                },
+                { 
+                    title: "2. 使用資格與用戶陳述", 
+                    content: "透過使用本服務，您陳述並保證：(1) 您提交的所有註冊信息均為真實、準確、最新且完整的；(2) 您將維護該等信息之準確性；(3) 您具有法律行為能力；(4) 您在所居住的司法管轄區不屬於未成年人，或者如果您是未成年人，您已獲得家長許可；(5) 您不會透過自動化手段訪問服務；(6) 您不會將服務用於任何非法目的；以及 (7) 您的使用不會違反香港特別行政區的所有適用法律。" 
+                },
+                { 
+                    title: "3. 知識產權", 
+                    content: "除非另有說明，本服務及其所有源代碼、數據庫、功能、軟件、網站設計及其包含的商標、標誌均由我們擁有或控制。內容和標誌在服務上按「原樣」提供，僅供您參考和個人使用。未經我們事先明確書面許可，不得出於任何商業目的複製、重製、傳輸、分發、出售、許可或以其他方式利用本服務的任何部分。" 
+                },
+                { 
+                    title: "4. 訂閱、付款及退款政策", 
+                    content: "我們透過指定的第三方付款處理商（如 Stripe）接受各種形式的付款。您同意為所有購買提供最新且準確的信息。所有銷售均為最終銷售，恕不退款。Ace It! Education 對所有訂閱級別均執行嚴格的不設退款政策。儘管有任何不滿意或未使用，您承認並同意無權獲得任何款項的退款或積分。" 
+                },
+                { 
+                    title: "5. 禁止行為", 
+                    content: "您不得出於我們提供本服務的目的以外的任何其他目的訪問或使用本服務。禁止活動包括但不限於：(1) 未經許可系統地檢索數據；(2) 規避或干擾安全相關功能；(3) 誹謗或損害我們和/或服務；(4) 骚扰或伤害他人；以及 (5) 參與系統的任何自動化使用，例如使用腳本或數據挖掘工具。" 
+                },
+                { 
+                    title: "6. 責任限制", 
+                    content: "在任何情況下，我們或我們的董事、員工均不對您或任何第三方因您使用服務而產生的任何直接、間接、衍生性、懲戒性、附帶性或特殊損害負責，包括利潤損失或數據丟失。我們對您因任何原因引起的責任，將始終限於您在訴訟原因產生前六(6)個月內支付給我們的金額。" 
+                },
+                { 
+                    title: "7. 管轄法律與司法管轄權", 
+                    content: "本條款及細則以及您對本服務的使用受香港特別行政區法律管轄並按其解釋。由您或我們提起的任何性質的法律訴訟均應在香港法院進行，各方特此同意並放棄對於該等法院司法管轄權的一切抗辯。" 
+                }
+            ],
+            disclaimer: [
+                { 
+                    title: "1. 一般資訊用途", 
+                    content: "Ace It! Education 提供的服務僅用於補充資訊和教育目的。雖然我們努力提供高質量的教育指導，但 AI 導師提供的反饋、評分分析和建議不構成官方學術認證，不應作為學術決策的唯一依據。" 
+                },
+                { 
+                    title: "2. 不保證學術成功", 
+                    content: "您明確承認並同意，使用本服務並不保證任何特定的學術成果、考試成績或大學錄取。考試表現受公司控制範圍之外的多種外部變量影響，包括學生個人努力、考試環境以及考評局的評估修訂。" 
+                },
+                { 
+                    title: "3. AI 準確性與局限性", 
+                    content: "本服務利用先進的人工智能模型，但仍受固有局限性的約束。您承認並同意，AI 資產偶爾可能會生成不準確的數據、錯誤的反饋或虛構信息（稱為「幻覺」）。您有責任將任何關鍵內容與官方教科書、歷屆試題進行交叉驗證。" 
+                },
+                { 
+                    title: "4. 非專業或官方建議", 
+                    content: "透過本服務提供的資訊不構成法律、醫療或官方學術建議。ACE IT! EDUCATION 是一家獨立的私人實體，不隸屬於香港考試及評核局（「考評局」）或任何政府教育機構，亦未獲得上述機構的認可。" 
+                },
+                { 
+                    title: "5. 保證免責聲明", 
+                    content: "本服務按「原樣」及「現有」狀態提供。您同意自行承擔使用本服務的風險。在法律允許的最大範圍內，我們不承擔與服務及其使用相關的所有明示或暗示的保證，包括適銷性、特定用途的適用性和非侵權性。" 
+                }
+            ]
         },
         pricing: {
             title: "簡單、透明的定價",
@@ -663,6 +868,36 @@ export const translations = {
                     cta: "立即升級 Premium",
                     features: ["所有功能無限制", "包含現有及未來所有科目", "1.5x XP 經驗值加速", "5 台裝置上限"]
                 }
+            }
+        },
+        features: {
+            title: "終極 DSE 應試工具箱",
+            subtitle: "融合先進 AI 與多年名師經驗，為你提供戰勝 HKDSE 所需的一切工具。",
+            tutors: {
+                title: "個人 AI 專科導師",
+                desc: "與了解你強弱項的專科導師進行 24/7 深度對話，隨時隨地突破學習瓶頸。",
+                ace: "Ace Sir：應試戰略",
+                math: "Mr. Wong：數學邏輯",
+                english: "Miss Janie：英語卓越"
+            },
+            quest: {
+                title: "任務研發室 (Quest Hub)",
+                desc: "透過我們獨創的互動式任務系統，全面攻克 DSE 各卷別。",
+                tabs: {
+                    reading: "閱讀理解",
+                    writing: "寫作能力",
+                    listening: "聆聽及綜合能力",
+                    speaking: "口語溝通"
+                },
+                placeholder: "界面截圖佔位符"
+            },
+            weekly: {
+                title: "每週挑戰",
+                desc: "每週更新貼近 DSE 趨勢的新鮮題材，確保你的技巧與時並進。"
+            },
+            mock: {
+                title: "模擬試場",
+                desc: "在高度還原的計時考試環境中實戰演練，即時獲得 DSE 標准的評分與反饋。"
             }
         },
         subscription: {
@@ -929,17 +1164,24 @@ export const translations = {
             awesome: "太棒了！",
             check_collection: "前往「我的收藏」進行裝備。"
         },
+        redemption: {
+            english: "英文",
+            maths: "數學",
+            ace: "Ace Sir"
+        },
         collection: {
             title: "我的收藏",
-            subtitle: "查看你所有的導師和學生卡片。",
-            student_cards: "學生卡",
-            tutor_cards: "導師卡",
+            subtitle: "管理你已解鎖的頭像和導師。",
+            students: "學生手冊",
+            tutors: "導師名單",
+            frames: "頭像邊框",
             loading: "正在載入收藏...",
             empty: "暫無卡片。",
             default: "預設",
-            equipped: "已裝備",
+            active: "已選取",
             equip: "裝備",
-            my_collection: "我的收藏"
+            my_collection: "我的收藏",
+            not_owned: "尚未擁有"
         },
         card_preview: {
             view_collection: "查看收藏",
@@ -1082,6 +1324,58 @@ export const translations = {
             prereqs: "必備知識",
             pro_tip: "{{tutorName}} 應試心得",
             close: "明白！"
+        },
+        timeline: {
+            title: "成就與任務",
+            subtitle: "追蹤你的進度，慶祝文憑試里程碑。",
+            history: "成就紀錄",
+            newest_first: "由新至舊",
+            no_activity: "暫無活動紀錄。開始你的第一個任務吧！",
+            just_now: "剛剛",
+            hours_ago: "{{count}} 小時前",
+            yesterday: "昨天",
+            days_ago: "{{count}} 天前",
+            redeem: "兌換",
+            total_xp: "總經驗值",
+            current_tier: "當前等級",
+            active_days: "活躍天數",
+            topic: "課題",
+            review_performance: "回顧表現"
+        },
+        mastery: {
+            to_level: "升級至等級"
+        },
+        prompts: {
+            title: "提問技巧",
+            subtitle: "使用這些經過驗證的提示語結構，從 AI 導師獲取最高質量的反饋。點擊任何提示語即可複製並開始對話。",
+            pro_tip_title: "💡 DSE 應試小貼士",
+            pro_tip_content: "「你提供的語境越多（例如：附上你的文章或註明你的目標分數），導師的反饋就會越有針對性。在他們給出答案後，不要害怕問『為什麼？』」",
+            back: "返回",
+            click_to_copy: "點擊複製",
+            master_ai: "掌握人工智能",
+            categories: {
+                english: {
+                    title: "英文科",
+                    p1: "評估這篇論證的說服力，並建議 3 個高級修辭手法來加強說服力。",
+                    p2: "比較這兩段文字的語氣，並解釋不同的語言選擇如何影響讀者的感知。",
+                    p3: "預測這篇寫作樣本中可能出現的 DSE 閱卷員陷阱，並提供一個包含 5+ 個 5** 級詞彙升級的修改版本。",
+                    p4: "將這段集思廣益轉化為結構化的 DSE Level 5+ 論文大綱，包含主題句和銜接詞。",
+                },
+                maths: {
+                    title: "數學科",
+                    p1: "解釋此解法背後的數學原理，以及為什麼這種特定方法對 DSE 時間分配更有效。",
+                    p2: "生成一個結合三角學和坐標幾何的複雜多部分問題，類似於 HKDSE Section B。",
+                    p3: "審計我解決此微積分問題的步驟，找出可能導致步驟分扣分的邏輯漏洞。",
+                    p4: "拆解這道歷屆試題，指出學生通常會掉進的「陷阱」，並提供最佳的快捷解法。",
+                },
+                ace: {
+                    title: "Ace Sir 戰略",
+                    p1: "根據我最近在所有科目中的表現，我目前的預計等級是多少？",
+                    p2: "你能根據我在 Ace It 上的學習進度，為我推薦一個獨特的「任務」（Quest）嗎？",
+                    p3: "我目前的進度與我的前 3 個 JUPAS 目標課程的一致性如何？請展示差距分析。",
+                    p4: "生成一個為期 7 天的「生存計劃」，幫助我在最弱的模組中縮小與目標 Level 5** 的差距。",
+                }
+            }
         }
     }
 };

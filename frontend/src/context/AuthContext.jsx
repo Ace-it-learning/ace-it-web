@@ -6,7 +6,11 @@ import {
     onAuthStateChanged,
     createUserWithEmailAndPassword,
     signInWithEmailAndPassword,
-    sendEmailVerification
+    sendEmailVerification,
+    updatePassword,
+    reauthenticateWithCredential,
+    EmailAuthProvider,
+    deleteUser
 } from 'firebase/auth';
 
 const AuthContext = createContext();
@@ -88,6 +92,53 @@ export const AuthProvider = ({ children }) => {
         return sendEmailVerification(user, actionCodeSettings);
     };
 
+    const changePassword = async (currentPassword, newPassword) => {
+        if (!user || !user.email) throw new Error("User not authenticated");
+        const credential = EmailAuthProvider.credential(user.email, currentPassword);
+        await reauthenticateWithCredential(user, credential);
+        return updatePassword(user, newPassword);
+    };
+
+    const setPasswordForSocialUser = async (newPassword) => {
+        if (!user) throw new Error("User not authenticated");
+        return updatePassword(user, newPassword);
+    };
+
+    const cancelSubscription = async () => {
+        if (!user) return;
+        const res = await fetch(`${API_URL}/api/user/subscription/cancel`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ uid: user.uid })
+        });
+        if (res.ok) {
+            refreshProfile();
+            return { success: true };
+        } else {
+            const err = await res.json();
+            throw new Error(err.error || "Failed to cancel subscription");
+        }
+    };
+
+    const deleteUserAccount = async () => {
+        if (!user) return;
+        // 1. Delete from backend first (checks if subscription is cancelled)
+        const res = await fetch(`${API_URL}/api/user`, {
+            method: 'DELETE',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ uid: user.uid })
+        });
+
+        if (!res.ok) {
+            const err = await res.json();
+            throw new Error(err.message || err.error || "Failed to delete account from backend");
+        }
+
+        // 2. Delete from Firebase
+        await deleteUser(user);
+        return { success: true };
+    };
+
     const logout = () => {
         return signOut(auth);
     };
@@ -104,6 +155,10 @@ export const AuthProvider = ({ children }) => {
             signupWithEmail,
             loginWithEmail,
             verifyEmail,
+            changePassword,
+            setPasswordForSocialUser,
+            cancelSubscription,
+            deleteUserAccount,
             logout
         }}>
             {children}

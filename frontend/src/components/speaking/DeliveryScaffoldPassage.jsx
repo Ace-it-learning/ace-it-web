@@ -57,7 +57,7 @@ const DeliveryScaffoldPassage = ({
     };
 
     return (
-        <div id="scaffold-passage-root" className="leading-[2.8] text-xl md:text-2xl font-bold tracking-tight px-2 selection:bg-orange-100 antialiased overflow-visible whitespace-pre-wrap">
+        <div id="scaffold-passage-root" className="leading-[3.3] text-xl md:text-2xl font-bold tracking-tight px-2 selection:bg-orange-100 antialiased overflow-visible whitespace-pre-wrap">
             {tokens.map((tk) => {
                 const isActive = tk.index !== -1 && tk.index === activeWordIndex;
                 const isPast = tk.index !== -1 && tk.index < activeWordIndex;

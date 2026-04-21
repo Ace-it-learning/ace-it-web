@@ -1,0 +1,21 @@
+{
+  "type": "SPEAKING",
+  "topic": "speaking_weekly",
+  "title": "Navigating the Ethics and Opportunities of AI in the HKDSE Classroom",
+  "topic_description": "The advent of Generative AI has profoundly disrupted the traditional educational landscape in Hong Kong. While these advanced tools offer unprecedented opportunities for personalized learning, targeted HKDSE exam preparation, and streamlining administrative workloads, they simultaneously introduce severe ethical dilemmas. Issues such as academic dishonesty in School-based Assessments (SBA), the erosion of critical thinking skills, and the widening digital divide among students of different socioeconomic backgrounds are hotly debated. Your school’s Parent-Teacher Association (PTA) has proposed a complete ban on AI tools on campus. However, the Student Union argues that integrating AI responsibly is essential for future-proofing students for an increasingly tech-driven global workforce. As members of the Student Union Executive Committee, you are meeting to discuss a formal counter-proposal to present to the school administration.",
+  "instructions": "You have 1 minute to prepare and 8 minutes for the group discussion (10 minutes for a group of 4). You should interact with your fellow candidates. Do not read out prepared notes. You may make notes during the preparation time, but you should not write out everything you plan to say.",
+  "discussion_points": [
+    "The ethical implications of AI usage in coursework, specifically regarding academic integrity and originality in HKDSE School-based Assessments (SBA).",
+    "The extent to which AI tools might mitigate or exacerbate the educational inequalities among students within the highly competitive Hong Kong context.",
+    "Specific recommendations for a comprehensive school-wide AI policy that fosters digital literacy and critical thinking rather than rote memorization or technological dependency."
+  ],
+  "individual_response_questions": [
+    "Some critics argue that the traditional examination format will eventually become obsolete in an era of ubiquitous AI. To what extent do you agree with this assessment?",
+    "How should Hong Kong educators balance the imperative of preparing students for an AI-driven economy with the ethical responsibility of preserving authentic human creativity and cognitive resilience?"
+  ],
+  "success_feedback": "Well done! You have successfully navigated highly complex, multifaceted arguments, demonstrating the sophisticated vocabulary, nuanced critical thinking, and advanced conversational strategies expected of a Level 5** candidate.",
+  "suggested_next_steps": [
+    "Draft an argumentative essay (Paper 2, Part B) expanding on your proposed school AI policy.",
+    "Practice addressing counter-arguments spontaneously under a strict 1-minute time limit to further sharpen your Individual Response skills."
+  ]
+}

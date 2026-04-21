@@ -21,7 +21,12 @@ const ListeningBriefing = () => {
             if (!questData && questId) {
                 try {
                     const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
-                    const res = await fetch(`${API_URL}/api/lab/listening/${questId}`);
+                    // Use different endpoint for weekly quests
+                    const url = questId.startsWith('weekly_') 
+                        ? `${API_URL}/api/lab/weekly/${questId.replace('weekly_', '')}`
+                        : `${API_URL}/api/lab/listening/${questId}`;
+                    
+                    const res = await fetch(url);
                     if (res.ok) {
                         const data = await res.json();
                         setQuestData(data);
@@ -101,7 +106,8 @@ const ListeningBriefing = () => {
                 level: 'B2', // Unified Elite standard for Part B
                 targetLevel: targetLevel,
                 targetXp: targetXp,
-                isNewSession: true
+                isNewSession: true,
+                isWeeklyQuest: questData?.isWeeklyQuest || questId?.startsWith('weekly_')
             }
         });
     };

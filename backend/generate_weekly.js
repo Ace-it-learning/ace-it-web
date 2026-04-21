@@ -120,31 +120,55 @@ Return JSON ONLY.`;
 };
 
 const run = async () => {
+    // UPDATED: One topic per week for all skills
     const data = [
-        { week: 13, topics: [
-            { type: 'READING', topic: 'The Future of Heritage Conservation in Hong Kong' },
-            { type: 'WRITING', topic: 'The Upcoming Plastic Bottle Ban: A Necessary Burden or Environmental Theater?' },
-            { type: 'LISTENING', topic: 'Rise of Canto-pop Resurgence among Hong Kong Youth' },
-            { type: 'SPEAKING', topic: 'Promoting Local Heritage Sites to International Tourists' }
-        ]},
-        { week: 14, topics: [
-            { type: 'READING', topic: 'Sustainable Housing and the Subdivided Flat Crisis in Hong Kong' },
-            { type: 'WRITING', topic: 'Should E-scooters be Legalized on Hong Kong Bike Paths?' },
-            { type: 'LISTENING', topic: 'The Lantau Tomorrow Vision: Economic Engine or Environmental Drain?' },
-            { type: 'SPEAKING', topic: 'The Ethics of Using AI in Local Secondary Schools' }
-        ]},
-        { week: 15, topics: [
-            { type: 'READING', topic: 'The Impact of AI on Personalised Learning in Local HK Schools' },
-            { type: 'WRITING', topic: 'The Rise of Digital Nomads: Is Hong Kong still Competitive?' },
-            { type: 'LISTENING', topic: 'Rise of Specialty Coffee Culture in Central: A Social Phenomenon' },
-            { type: 'SPEAKING', topic: 'Reducing Single-use Plastics in School Canteens' }
-        ]}
+        { 
+            week: 13, 
+            theme: "Heritage Conservation",
+            topic: "The Future of Heritage Conservation in Hong Kong" 
+        },
+        { 
+            week: 14, 
+            theme: "Sustainable Housing",
+            topic: "Sustainable Housing and the Subdivided Flat Crisis in Hong Kong" 
+        },
+        { 
+            week: 15, 
+            theme: "AI in Education",
+            topic: "The Impact of AI on Personalised Learning in Local HK Schools" 
+        },
+        { 
+            week: 16, 
+            theme: "Vertical Farming",
+            topic: "The Rise of Vertical Farming as a Solution to Urban Food Security" 
+        },
+        { 
+            week: 17, 
+            theme: "AI in Education",
+            topic: "Navigating the Ethics and Opportunities of AI in the HKDSE Classroom" 
+        }
     ];
 
+    const metaPath = path.join(__dirname, 'data', 'weekly_quests', 'weekly_meta.json');
+    let meta = {};
+    if (fs.existsSync(metaPath)) {
+        meta = JSON.parse(fs.readFileSync(metaPath, 'utf8'));
+    }
+
     for (const weekData of data) {
-        console.log(`\n--- Processing Week ${weekData.week} ---`);
-        for (const q of weekData.topics) {
-            const filename = `week_${weekData.week}_${q.type.toLowerCase()}.json`;
+        console.log(`\n--- Processing Week ${weekData.week}: ${weekData.theme} ---`);
+        
+        // Update metadata
+        const weekKey = `2026_${weekData.week}`;
+        meta[weekKey] = {
+            theme: weekData.theme,
+            topic: weekData.topic
+        };
+
+        const types = ['READING', 'WRITING', 'LISTENING', 'SPEAKING'];
+        
+        for (const type of types) {
+            const filename = `week_${weekData.week}_${type.toLowerCase()}.json`;
             const filepath = path.join(__dirname, 'data', 'weekly_quests', filename);
             
             if (fs.existsSync(filepath)) {
@@ -152,13 +176,19 @@ const run = async () => {
                 continue;
             }
 
-            const questJson = await generateWeeklyQuest(q.type, q.topic);
+            const questJson = await generateWeeklyQuest(type, weekData.topic);
             if (questJson) {
+                // Save the individual quest
                 fs.writeFileSync(filepath, JSON.stringify(questJson, null, 2));
                 console.log(`[WeeklyGen] Saved: ${filename}`);
             }
         }
     }
+
+    // Save final metadata
+    fs.writeFileSync(metaPath, JSON.stringify(meta, null, 2));
+    console.log(`[WeeklyGen] Metadata updated at: ${metaPath}`);
+    
     console.log("\n[WeeklyGen] All batches complete.");
     process.exit(0);
 };

@@ -413,6 +413,7 @@ CRITICAL:
             const aiGenerated = await GenerativeAIService.generateJson(prompt, { model: "ace-it-flash" });
             return {
                 template_id: `LANG_DYNAMIC_${Date.now()}`,
+                title: aiGenerated.scenario, // Standardized Title
                 role: aiGenerated.ai_persona,
                 scenario: aiGenerated.scenario,
                 description: aiGenerated.description,
@@ -464,6 +465,7 @@ CRITICAL: The mind_map should provide a clear logical framework for the student 
             const aiGenerated = await GenerativeAIService.generateJson(prompt, { model: "ace-it-flash" });
             return {
                 template_id: `IDEAS_DYNAMIC_${Date.now()}`,
+                title: aiGenerated.scenario, // Standardized Title
                 role: aiGenerated.ai_persona,
                 scenario: aiGenerated.scenario,
                 description: aiGenerated.description,

@@ -249,7 +249,7 @@ Generate a high-fidelity exam scenario for topic '{{TITLE}}' ({{DESCRIPTION}}).
 ### PART A: THE DATA SPRINT (Compulsory)
 - Focus: Rapid, accurate extraction of factual data.
 - Audio Transcript: (300-400 words) incorporate "Consensus Logic" and "Self-Corrections".
-- Tasks: Exactly 5 tasks. Mix of Table Completion, Form Filling, and MCQ (A, B, C, D).
+- Tasks: Exactly 3 distinct tasks (Task 1, Task 2, Task 3). Mix of Table Completion, Form Filling, and MCQ (A, B, C, D).
 
 ### PART B: INTEGRATED SIMULATION
 - Focus: Multi-source data synthesis and professional writing.
@@ -268,7 +268,18 @@ JSON SCHEMA:
 {
   "sprint_data": {
     "audio_transcript": string,
-    "tasks": [{ "id": string, "type": "GAP_FILL"|"MCQ", "question": string, "options": string[], "answer": string, "explanation": string }]
+    "tasks": [
+       { 
+         "id": string, 
+         "type": "GAP_FILL"|"MCQ"|"FORM_FILLING"|"TABLE"|"SHORT_RESPONSE", 
+         "question": string, 
+         "options": string[], // For MCQ
+         "fields": [{ "label": string, "answer": string }], // For FORM_FILLING
+         "rows": [{ "label": string, "answer": string }], // For TABLE
+         "answer": string, 
+         "explanation": string 
+       }
+    ]
   },
   "integrated_data": {
     "audio_transcript": string,
@@ -351,7 +362,12 @@ class LabService {
       let data = doc.data();
 
       // If this is a placeholder/factory quest, generate real content now
-      if (data.factory_template && data.sprint_data.audio_transcript.includes("placeholder")) {
+      const isPlaceholder = data.factory_template && (
+          (data.sprint_data?.audio_transcript || '').includes("placeholder") || 
+          (data.sprint_data?.tasks || []).length <= 1
+      );
+
+      if (isPlaceholder) {
         console.log(`[LabService] Triggering dynamic generation for mission: ${data.title}`);
         try {
           const generated = await this.generateSimulatorScenario(data.title, data.description);
@@ -382,26 +398,130 @@ class LabService {
 
     console.log(`[LabService] Prompting Gemini for Simulator Content: ${title}`);
     const result = await GenerativeAIService.generateContent(prompt, {
-      model: "ace-it-flash",
+      model: "ace-it-pro", // High quality for simulation content
       generationConfig: { responseMimeType: "application/json" }
     });
 
-    let text = result.response.text().trim();
-    text = cleanJsonResponse(text);
-    return JSON.parse(text);
+    const text = result.response.text();
+    return repairJson(text);
+  }
+
+  static async resolveWeeklyQuest(paper) {
+    try {
+      const d = new Date();
+      d.setHours(0, 0, 0, 0);
+      d.setDate(d.getDate() + 4 - (d.getDay() || 7));
+      const weekNum = Math.ceil((((d - new Date(d.getFullYear(), 0, 1)) / 8.64e7) + 1) / 7);
+
+      const filename = `week_${weekNum}_${paper}.json`;
+      const filepath = path.join(__dirname, '..', 'data', 'weekly_quests', filename);
+
+      let universalMeta = null;
+      try {
+        const metaPath = path.join(__dirname, '..', 'data', 'weekly_quests', 'weekly_meta.json');
+        if (fs.existsSync(metaPath)) {
+          const meta = JSON.parse(fs.readFileSync(metaPath, 'utf8'));
+          const weekKey = `2026_${weekNum}`;
+          universalMeta = meta[weekKey] || null;
+        }
+      } catch (mErr) { 
+        console.warn("[LabService] Weekly meta lookup failed:", mErr.message); 
+      }
+
+      if (fs.existsSync(filepath)) {
+        console.log(`[LabService] SUCCESS: Loading weekly quest for ${paper}: ${filename}`);
+        let content = JSON.parse(fs.readFileSync(filepath, 'utf8'));
+        
+        if (Array.isArray(content)) {
+          content = content[0]; // If array, get first element (legacy)
+        }
+
+        // Add special formatting logic depending on paper
+        if (paper === 'listening') {
+          // Mapping for High-Fidelity Listening Simulator
+          if (!content.sprint_data) {
+             content.sprint_data = {
+                 audio_transcript: content.reading_passage || "Listen to the discussion.",
+                 audioContext: {
+                     transcript: content.reading_passage || "Listen to the discussion.",
+                     roles: ["Host", "Guest 1", "Guest 2"],
+                     situation: content.title || "A debate on an important topical issue."
+                 },
+                 tasks: content.interactive_tasks || content.questions || []
+             };
+          }
+          
+          if (!content.integrated_data) {
+              content.integrated_data = {
+                  audio_transcript: content.reading_passage || "Starting Part B planning meeting audio briefing.",
+                  notetaking_fields: content.notetaking_fields || [
+                      { id: 'nt1', label: 'Key Arguments', placeholder: 'Capture the main points mentioned...' },
+                      { id: 'nt2', label: 'Proposed Actions', placeholder: 'What are the suggested next steps?' }
+                  ],
+                  data_file: content.data_file || [
+                      { type: 'ARTICLE', title: 'Contextual Briefing', content: content.reading_passage || "Background info." }
+                  ],
+                  writing_task: {
+                      instruction: content.writing_instruction || content.instruction || "Draft a formal response based on the discussion and the data file provided.",
+                      format: 'Formal Report',
+                      word_count: '200-250'
+                  },
+                  marking_key: content.marking_key || content.key_points || []
+              };
+          }
+
+          if (!content.id) content.id = `weekly_${paper}`;
+          content.isWeeklyQuest = true;
+        }
+
+        if (paper === 'writing') {
+          // Remap writing properties to Writer's Studio format
+          if (!content.id) content.id = `weekly_${paper}`;
+          content.isWeeklyQuest = true;
+          if (!content.prompt && content.reading_passage) content.prompt = content.reading_passage;
+          if (!content.genre) content.genre = "Article";
+        }
+        
+        if (paper === 'speaking') {
+           if (!content.id) content.id = `weekly_${paper}`;
+           content.isWeeklyQuest = true;
+        }
+
+        if (paper === 'reading') {
+           if (!content.id) content.id = `weekly_${paper}`;
+           content.isWeeklyQuest = true;
+        }
+
+        if (universalMeta) {
+          content.universalTopicTitle = universalMeta.theme;
+          content.universalTopicLong = universalMeta.topic;
+          if (!content.title) {
+              content.title = universalMeta.theme + " (" + paper.charAt(0).toUpperCase() + paper.slice(1) + ")";
+          }
+        }
+        return content;
+      } else {
+        return null;
+      }
+    } catch (err) {
+      console.error("[LabService] resolveWeeklyQuest Error:", err);
+      return null;
+    }
   }
 
   static async generateLesson(params) {
     console.log("[LabService] generateLesson START", JSON.stringify(params));
     const db = admin.firestore();
-    let { topic, focus, level, uid, targetCount } = params;
+    let { topic, focus, level, uid, targetCount, themeOverride, mcqRatio, forceHighQuality } = params;
     const isWeeklyQuest = params.isWeeklyQuest || false;
     const skillsKey = (topic || '').toLowerCase();
     const paperType = (params.paperType || '').toLowerCase();
-    const isReadingTopic = isWeeklyQuest || skillsKey.includes('reading') || skillsKey.includes('comprehension');
+    const isReadingTopic = (skillsKey.includes('reading') || skillsKey.includes('comprehension')) && !skillsKey.includes('math');
     const isWritingTopic = skillsKey.includes('writing');
     const isListeningTopic = skillsKey.includes('listening') || paperType.includes('listening');
     const isSpeakingTopic = skillsKey.includes('speaking') || skillsKey.includes('interaction');
+
+    const modelToUse = forceHighQuality ? "ace-it-pro" : "ace-it-flash";
 
     // --- WEEKLY QUEST: PRE-GENERATED CONTENT CHECK ---
     if (isWeeklyQuest || topic?.includes('weekly')) {
@@ -421,40 +541,71 @@ class LabService {
         const filename = `week_${weekNum}_${typeLabel}.json`;
         const filepath = path.join(__dirname, '..', 'data', 'weekly_quests', filename);
 
+        // --- PROACTIVE METADATA LOOKUP (For Steering & Enrichment) ---
+        let universalMeta = null;
+        try {
+          const metaPath = path.join(__dirname, '..', 'data', 'weekly_quests', 'weekly_meta.json');
+          if (fs.existsSync(metaPath)) {
+            const meta = JSON.parse(fs.readFileSync(metaPath, 'utf8'));
+            const weekKey = `2026_${weekNum}`;
+            universalMeta = meta[weekKey] || null;
+          }
+        } catch (mErr) { 
+          console.warn("[LabService] Weekly meta lookup failed:", mErr.message); 
+        }
+
         if (fs.existsSync(filepath)) {
           console.log(`[LabService] SUCCESS: Loading pre-generated weekly quest: ${filename}`);
           let content = JSON.parse(fs.readFileSync(filepath, 'utf8'));
           
-          // Handle array wrapper if present
           if (Array.isArray(content)) {
-            console.log(`[LabService] Quest data is array, extracting first element.`);
             content = content[0];
           }
 
-          // Ensure it has the topic/level the user requested
           content.level = level; 
+
+          // Enrich with universal theme
+          if (universalMeta) {
+            content.universalTopicTitle = universalMeta.theme;
+            content.universalTopicLong = universalMeta.topic;
+            // Ensure topic name is student-friendly if the pre-gen has a technical ID
+            if (!content.title || content.title.toLowerCase().includes('weekly')) {
+                content.title = universalMeta.theme;
+            }
+          }
+
           return content;
         } else {
           console.log(`[LabService] INFO: Pre-generated file ${filename} not found. Falling back to dynamic gen.`);
+          // --- STEERING ---
+          if (universalMeta) {
+             console.log(`[LabService] Steering AI to universal topic: ${universalMeta.theme}`);
+             topic = universalMeta.topic; // Use the long descriptive topic for the prompt
+          }
         }
       } catch (err) {
         console.error("[LabService] Pre-generated loading error:", err);
       }
     }
 
-    // Default target counts based on user request:
-    // Easy (Level 3) -> 5 questions
-    // Medium (Level 4) -> 8 questions 
-    // DSE Standard/Elite (Level 5+) -> 10 questions (default)
-    let dynamicTarget = 10;
+    // Scaling question counts to optimize learning density:
+    // General Quest: Level 3 (8) | Level 4 (10) | Level 5+ (12)
+    // Weekly Challenge: Fixed 15 (Mini-Mock format)
+    let dynamicTarget = 12; // Default for Elite
     if (isReadingTopic) {
-      const lvlNum = parseInt(level);
-      if (lvlNum <= 3) dynamicTarget = 5;
-      else if (lvlNum === 4) dynamicTarget = 8;
-      else dynamicTarget = 10;
+      if (isWeeklyQuest) {
+        dynamicTarget = 15;
+      } else {
+        const lvlNum = parseInt(level);
+        if (lvlNum <= 3) dynamicTarget = 8;
+        else if (lvlNum === 4) dynamicTarget = 10;
+        else dynamicTarget = 12;
+      }
     }
 
-    const TARGET_COUNT = targetCount || dynamicTarget;
+    // HARDSET: For Reading, we ignore the requested targetCount if it's below our premium threshold (8/10/12)
+    // to ensure legacy 5-question clusters are never served.
+    const TARGET_COUNT = isReadingTopic ? dynamicTarget : (targetCount || dynamicTarget);
 
     const levelName = this.formatLevelName(level);
 
@@ -520,22 +671,25 @@ class LabService {
 
         // Find the best cluster
         const clusters = Object.values(passageGroups);
-        // We want a cluster that has at least X questions?
-        // Or if we have checking for "seen", maybe we just pick the biggest remaining cluster.
+        console.log(`[LabService] Found ${clusters.length} clusters for ${resolvedTopic} (${levelName}).`);
+        clusters.forEach((c, i) => console.log(`  Cluster ${i+1}: ${c.questions.length} questions. Passage: ${c.passage.substring(0, 30)}...`));
+
         clusters.sort((a, b) => b.questions.length - a.questions.length);
 
-        if (clusters.length > 0 && clusters[0].questions.length >= 5) {
-          // We have a decent cluster (at least 5 questions) for an existing passage.
-          // We can use it. If it's less than 10, we can GENERATE MORE for THIS SAME PASSAGE?
-          // That's hard because the AI needs the passage. 
-          // Better: If we have < 10, just serve what we have? Or Force Gen?
-          // Let's decide: If we have >= 5, use them. If < 5, force FULL FRESH GEN.
-
+        if (clusters.length > 0 && clusters[0].questions.length >= TARGET_COUNT) {
+          // We have a healthy cluster (at least TARGET_COUNT questions) for an existing passage.
           selectedPassage = clusters[0].passage;
           mixedQuestions = clusters[0].questions.slice(0, TARGET_COUNT);
-          console.log(`[LabService] Found valid cluster with ${mixedQuestions.length} questions.`);
+          console.log(`[LabService] PICKED cluster with ${mixedQuestions.length} questions. Total in cluster: ${clusters[0].questions.length}`);
         } else {
-          console.log(`[LabService] No sufficient question cluster found. Forcing FULL GENERATION.`);
+          console.warn(`[LabService] No sufficient question cluster found (Needed ${TARGET_COUNT}).`);
+          
+          // CRITICAL: Block dynamic generation for Reading missions for students (only Factory Admin allowed)
+          if (isReadingTopic && !params.isFactory && uid !== 'FACTORY_ADMIN') {
+             console.error(`[LabService] BLOckED: Reading generation not allowed for public users. Quest bank is exhausted.`);
+             throw new Error("QUEST_BANK_EMPTY"); // We want to catch this and show a 'Wait for more content' UI
+          }
+          console.log(`[LabService] Forcing FULL GENERATION (Factory Mode).`);
         }
 
       } catch (e) {
@@ -614,25 +768,16 @@ class LabService {
 
     // For READING: If we are missing questions, and we have a selectedPassage, we technically COULD generate more for that passage.
     // But for now, if we don't have enough, let's just generate a FRESH set (10) unless we have a decent amount (e.g. 5+).
-    // If we have 0 questions, we generate 10.
-
-    // Override missingCount logic for Reading:
-    // If Reading and mixedQuestions < TARGET_COUNT, we might just accept a shorter lesson OR force full 10 new ones if we had 0.
-    // If we have defined "cluster >= 5" as success, then missingCount might be > 0.
-    // We will just serve the partial lesson if we found a cluster. 
-    // BUT if we found NO cluster (length 0), we generate 10.
-
     // Refined logic:
-    let needsGeneration = mixedQuestions.length === 0 || isWeeklyQuest;
+    // We need generation IF we have 0 questions OR if we are under our TARGET_COUNT (Healthy state)
+    const isBypassUser = params.isFactory || uid === 'FACTORY_ADMIN' || uid === 'fungtam@gmail.com';
+    let needsGeneration = mixedQuestions.length < TARGET_COUNT || isWeeklyQuest;
 
-    // --- INDUSTRIAL LOCKDOWN: Never generate in real-time for students ---
-    // Exception: Allow speaking_ topics to pass (defensive, as they should be redirected anyway)
-    // Exception: Allow fungtam@gmail.com (Jack Tam) for testing/live feedback
-    const isBypassUser = uid === 'EDZNtvh1RIXSpboSkcBE3Y6D8c12' || params.isFactory;
-    
-    if (needsGeneration && !isBypassUser && !isWeeklyQuest && !resolvedTopic.startsWith('speaking_')) {
-      console.log(`[LabService] LOCKDOWN: Bank is empty for ${resolvedTopic}. Refusing real-time AI generation.`);
-      throw new Error(`QUEST_BANK_EMPTY: No approved quests found for ${resolvedTopic} (${levelName}). Please notify administrator.`);
+    // --- INDUSTRIAL LOCKDOWN: Never generate in real-time for students for Reading ---
+    // Reading MUST come from the high-fidelity premium library.
+    if (isReadingTopic && needsGeneration && !isBypassUser && !isWeeklyQuest) {
+      console.log(`[LabService] LOCKDOWN: Reading Bank is empty for ${resolvedTopic}. Refusing real-time AI generation.`);
+      throw new Error(`QUEST_BANK_EMPTY: No approved Reading quests found for ${resolvedTopic}. Please notify administrator.`);
     }
 
     if (!needsGeneration && mixedQuestions.length > 0) {
@@ -693,7 +838,7 @@ class LabService {
       }
 
       const isHighStakes = ['4', '5', '6', '7'].includes(String(level));
-      const generationTarget = params.targetCount || 20;
+      const generationTarget = params.targetCount || (isReadingTopic ? TARGET_COUNT + 3 : 20);
 
       // Resolve tier for this level
       const numLevel = String(level).replace(/\D/g, '') || '3';
@@ -890,12 +1035,31 @@ ${params.existingPassage}
 
       try {
         let finalPrompt = prompt;
-        // Inject the random theme into the constraints
+        
+        // Inject Theme Override or Random Theme
+        const themeToUse = themeOverride || randomTheme;
         if (isReadingTopic) {
           finalPrompt = finalPrompt.replace(
             '4. **THEME NOVELTY**: Each passage must use a UNIQUE theme and story. DO NOT repeat common narratives (e.g., "a student studying abroad", "a tech startup founder"). Draw inspiration from diverse contexts: literature, history, science, arts, culture, technology, social movements, personal narratives, etc.',
-            `4. **MANDATORY THEME**: Write the passage based on this specific theme: "${randomTheme}". The content must be ORIGINAL and centered around this topic.`
+            `4. **MANDATORY THEME**: Write the passage based on this specific theme: "${themeToUse}". The content must be ORIGINAL and centered around this topic.`
           );
+        }
+
+        // --- MCQ RATIO INJECTION ---
+        if (isReadingTopic && mcqRatio !== undefined) {
+          const mcq = Math.round(mcqRatio * 100);
+          const sa = 100 - mcq;
+          finalPrompt += `\n\n### QUESTION FORMAT CONSTRAINTS:
+1. **PROPORTION**: Approximately ${mcq}% of questions should be Multiple Choice (MCQ) and ${sa}% should be Short Answer/Open-ended. 
+2. **DSE ALIGNMENT**: For MCQs, ensure the distractors are highly plausible to test precise comprehension.`;
+        }
+
+        // --- ELITE PROMPTING FOR PRO MODEL ---
+        if (forceHighQuality) {
+          finalPrompt += `\n\n### SENIOR EXAMINER PROTOCOL (PREMIUM):
+1. **HALLUCINATION GUARD**: For every question generated, explicitly verify that the answer is stated or clearly implied in the passage. Reject any question that relies on general knowledge outside the passage.
+2. **DISTRACTOR LOGIC**: Ensure MCQ options include specific traps (e.g., words used in the text but in the wrong context).
+3. **PASSAGE SOPHISTICATION**: Use a formal, journalistic, or academic register suitable for HKDSE Part B2.`;
         }
 
         // --- DEDUPLICATION INJECTION ---
@@ -910,7 +1074,7 @@ STRICT RULE: Do NOT use the same hooks, starting sentences, or specific scenario
 
         console.log("[LabService] Calling GenerativeAIService.generateJson");
         let data = await GenerativeAIService.generateJson(finalPrompt, {
-          model: "ace-it-flash", // Use Flash for batch generation speed
+          model: modelToUse, // Use specified model (Flash for speed, Pro for quality)
           uid: uid || 'system',
           generationConfig: {
             maxOutputTokens: 8192,
@@ -921,6 +1085,11 @@ STRICT RULE: Do NOT use the same hooks, starting sentences, or specific scenario
         console.log("[LabService] AI Response Data type:", typeof data);
         if (data && typeof data === 'object') {
           console.log("[LabService] AI Raw Keys:", Object.keys(data));
+          // [2026 FIX]: GenerativeAIService.generateJson returns { data, model, audio }
+          if (data.data && typeof data.data === 'object') {
+            console.log("[LabService] Unwrapping actual content from GenerativeAIService response wrapper.");
+            data = data.data;
+          }
         }
 
         if (Array.isArray(data)) {
@@ -1118,8 +1287,9 @@ STRICT RULE: Do NOT use the same hooks, starting sentences, or specific scenario
                 passage: passageToSave,
                 levelLabel: levelLabel, // Save explicit level label if it exists
                 subject: 'English',
-                is_approved: params.isFactory ? false : true,
+                is_approved: (params.isFactory || forceHighQuality) ? true : true, // Set to true for all premium factory content
                 is_factory: params.isFactory || false,
+                is_premium: forceHighQuality || params.isPremium || false,
                 ...(isWeeklyQuest ? {
                   quest_type: 'weekly',
                   week_id: params.weekId || null,
@@ -1382,9 +1552,10 @@ STRICT RULE: Do NOT use the same hooks, starting sentences, or specific scenario
     
     // Format comparison data for LLM
     const gradingBasis = sprintTasks.map(t => {
-        if (t.type === 'TABLE') return { id: t.id, type: t.type, questions: t.rows.map((r, i) => ({ label: r.label, answer: r.answer, student: answers[`${t.id}_${i}`] })) };
-        if (t.type === 'LIST') return { id: t.id, type: t.type, questions: t.items.map((it, i) => ({ label: it.label, answer: it.answer, student: answers[`${t.id}_${i}`] })) };
-        if (t.type === 'MCQ_BATCH') return { id: t.id, type: t.type, questions: t.questions.map((q, i) => ({ question: q.question, answer: q.answer, student: answers[`${t.id}_${i}`] })) };
+        if (t.type === 'TABLE') return { id: t.id, type: t.type, questions: (t.rows || []).map((r, i) => ({ label: r.label, answer: r.answer, student: answers[`${t.id}_${i}`] })) };
+        if (t.type === 'LIST' || t.type === 'GAP_FILL_LIST') return { id: t.id, type: t.type, questions: (t.items || []).map((it, i) => ({ label: it.label, answer: it.answer, student: answers[`${t.id}_${i}`] })) };
+        if (t.type === 'MCQ_BATCH') return { id: t.id, type: t.type, questions: (t.questions || []).map((q, i) => ({ question: q.question, answer: q.answer, student: answers[`${t.id}_${i}`] })) };
+        if (t.type === 'FORM_FILLING') return { id: t.id, type: t.type, questions: (t.fields || []).map((f, i) => ({ label: f.label, answer: f.answer, student: answers[`${t.id}_${i}`] })) };
         return { id: t.id, type: t.type, question: t.question, answer: t.answer, student: answers[t.id] };
     });
 
@@ -1483,44 +1654,6 @@ STRICT RULE: Do NOT use the same hooks, starting sentences, or specific scenario
     return data;
   }
 
-  static async getListeningQuests() {
-    const db = admin.firestore();
-    try {
-      // 1. Fetch only official curated missions to avoid overwhelming the roadmap
-      const snapshot = await db.collection('question_bank')
-        .where('type', '==', 'listening_mission')
-        .limit(30) // Safety limit
-        .get();
-      
-      // 2. Filter for IDs starting with "listening_mission_" (Official Pillar Content)
-      const officialQuests = snapshot.docs
-        .map(doc => ({ id: doc.id, ...doc.data() }))
-        .filter(q => q.id.startsWith('listening_mission_'))
-        .sort((a, b) => {
-           // Sort numerically by ID suffix (1, 2, 3...)
-           const numA = parseInt(a.id.split('_').pop()) || 0;
-           const numB = parseInt(b.id.split('_').pop()) || 0;
-           return numA - numB;
-        });
-
-      return officialQuests.slice(0, 20); // Show top 20 official missions
-    } catch (e) {
-      console.error("[LabService] getListeningQuests Error:", e);
-      return [];
-    }
-  }
-
-  static async getQuestById(id) {
-    const db = admin.firestore();
-    try {
-      const doc = await db.collection('question_bank').doc(id).get();
-      if (!doc.exists) return null;
-      return { id: doc.id, ...doc.data() };
-    } catch (e) {
-      console.error("[LabService] getQuestById Error:", e);
-      return null;
-    }
-  }
 }
 
 module.exports = LabService;

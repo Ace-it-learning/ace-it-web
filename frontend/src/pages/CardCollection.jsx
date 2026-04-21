@@ -12,7 +12,7 @@ const CardCollection = () => {
     const navigate = useNavigate();
 
     const [tab, setTab] = useState('student');
-    const [subTab, setSubTab] = useState('all'); // For tutor sub-tabs
+    const [subTab, setSubTab] = useState('english'); // Default to English tutors
     const [studentCards, setStudentCards] = useState([]);
     const [tutorCards, setTutorCards] = useState([]);
     const [avatarFrames, setAvatarFrames] = useState([]);
@@ -41,19 +41,22 @@ const CardCollection = () => {
         if (user) fetchCollection();
     }, [user]);
 
-    const handleEquip = async (itemId, type) => {
+    const handleEquip = async (card, type) => {
         // Map UI type to Backend Slot
-        const slotMap = {
-            student: 'equipped_student_avatar',
-            tutor: 'equipped_tutor',
-            frame: 'equipped_frame'
-        };
+        let slot = 'equipped_student_avatar';
+        if (type === 'frame') slot = 'equipped_frame';
+        if (type === 'tutor') {
+            const subject = card.subject || 'ace';
+            if (subject === 'maths' || subject === 'math') slot = 'equipped_tutor_maths';
+            else if (subject === 'english') slot = 'equipped_tutor_english';
+            else slot = 'equipped_tutor_ace';
+        }
 
         try {
             const res = await fetch(`${API_URL}/api/redemption/equip`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ uid: user.uid, itemId, slot: slotMap[type] })
+                body: JSON.stringify({ uid: user.uid, itemId: card.id, slot })
             });
             const data = await res.json();
             if (data.success) {
@@ -89,7 +92,7 @@ const CardCollection = () => {
 
     const cardsMap = {
         student: studentCards,
-        tutor: tutorCards.filter(c => subTab === 'all' || !subTab || c.subject === subTab),
+        tutor: tutorCards.filter(c => c.subject !== 'chinese').filter(c => c.subject === subTab || (subTab === 'ace' && c.subject === 'general')),
         frame: avatarFrames
     };
     const activeCards = cardsMap[tab] || [];
@@ -144,10 +147,8 @@ const CardCollection = () => {
             {tab === 'tutor' && (
                 <div className="flex gap-3 mb-8 overflow-x-auto pb-2 custom-scrollbar animate-in slide-in-from-left duration-500">
                     {[
-                        { id: 'all', label: 'All', color: 'bg-gray-50 text-gray-600' },
                         { id: 'english', label: t('redemption.english'), color: 'bg-blue-50 text-blue-600' },
                         { id: 'maths', label: t('redemption.maths'), color: 'bg-violet-50 text-violet-600' },
-                        { id: 'chinese', label: t('redemption.chinese'), color: 'bg-rose-50 text-rose-600' },
                         { id: 'ace', label: 'Ace Sir', color: 'bg-amber-50 text-amber-600' },
                     ].map(st => (
                         <button
@@ -233,7 +234,7 @@ const CardCollection = () => {
                                 {owned ? (
                                     <button
                                         disabled={equipped}
-                                        onClick={() => handleEquip(card.id, tab)}
+                                        onClick={() => handleEquip(card, tab)}
                                         className={`w-full py-4 rounded-2xl font-black text-sm transition-all ${equipped
                                             ? 'bg-green-50 text-green-600 border border-green-200 cursor-default'
                                             : 'bg-gray-900 text-white hover:bg-black shadow-lg shadow-black/10'

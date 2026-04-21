@@ -33,12 +33,6 @@ const DictionaryPopover = ({ data, position, onClose, onAddToNotebook, loading }
         left = window.innerWidth - width - 20;
     }
 
-    // Boundary check for bottom edge
-    if (top + height > window.innerHeight) {
-        top = position.top - height - 10;
-        if (top < 0) top = 20; // Fallback to top if it would overflow both ways
-    }
-
     return (
         <div
             className="dictionary-popover fixed z-[70] bg-white dark:bg-gray-800 rounded-xl shadow-2xl border border-gray-200 dark:border-gray-700 p-4 w-72 animate-in fade-in zoom-in duration-200 text-left"
@@ -47,7 +41,7 @@ const DictionaryPopover = ({ data, position, onClose, onAddToNotebook, loading }
         >
             <div className="flex justify-between items-start mb-2">
                 <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 capitalize">{data?.term || "Dictionary"}</h3>
-                <button onClick={onClose} className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300">✕</button>
+                <button onClick={onClose} className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300">X</button>
             </div>
 
             {loading ? (
@@ -57,7 +51,7 @@ const DictionaryPopover = ({ data, position, onClose, onAddToNotebook, loading }
                 </div>
             ) : data?.error ? (
                 <div className="text-red-500 text-sm py-2">
-                    <p className="font-bold">⚠️ Error</p>
+                    <p className="font-bold">Error</p>
                     <p>{data.error}</p>
                 </div>
             ) : (
@@ -68,7 +62,7 @@ const DictionaryPopover = ({ data, position, onClose, onAddToNotebook, loading }
                     </div>
 
                     <div className="bg-blue-50 dark:bg-blue-900/20 p-2 rounded-lg text-blue-900 dark:text-blue-300 text-sm">
-                        <span className="font-bold">繁：</span> {data.translation}
+                        <span className="font-bold">Translation:</span> {data.translation}
                     </div>
 
                     {data.example && (
@@ -77,9 +71,8 @@ const DictionaryPopover = ({ data, position, onClose, onAddToNotebook, loading }
 
                     <button
                         onClick={() => onAddToNotebook(data)}
-                        className="w-full bg-orange-500 text-white py-2 rounded-lg text-sm font-bold hover:bg-orange-600 transition-colors flex items-center justify-center gap-2 mt-2 shadow-sm"
                     >
-                        <span>📓</span> Add to Notebook
+                        Add to Notebook
                     </button>
                 </div>
             )}
@@ -166,6 +159,7 @@ const LabPage = () => {
     const focus = searchParams.getAll('focus');
     const initialLevel = searchParams.get('level') || '3'; // Default to 3 if not specified
     const location = useLocation(); // Add useLocation for state access
+    const missionXp = location.state?.taskXp || location.state?.xp || 80;
     console.log("LabPage: Location State", location.state);
 
     const [currentLevel, setCurrentLevel] = useState(() => {
@@ -205,7 +199,7 @@ const LabPage = () => {
     const [masteryScore, setMasteryScore] = useState(0);
     const [qBatch, setQBatch] = useState(0); // 0 or 1 for Easy level question sets
     const isFactoryQuest = location.state?.isFactoryQuest || false;
-    const isWeeklyQuest = location.state?.isWeeklyQuest || topic === 'reading_weekly';
+    const isWeeklyQuest = location.state?.isWeeklyQuest || topic?.includes('_weekly');
     const isMock = location.state?.isMock || false;
     const duration = location.state?.duration || 0;
 
@@ -229,12 +223,14 @@ const LabPage = () => {
         ? (isWritingTopic ? `Writing Skill: ${getSkillName(topic)}` : getSkillName(topic))
         : "Learning Lab";
 
-    // Reset scaffold data when passage changes
+    // Reset scaffold data only when passage ACTUALLY changes to something different
+    const lastPassageRef = React.useRef(null);
     useEffect(() => {
-        if (lessonData?.reading_passage) {
-            console.log('[LabPage] Reading passage changed, resetting scaffold data and settings');
+        if (lessonData?.reading_passage && lessonData.reading_passage !== lastPassageRef.current) {
+            console.log('[LabPage] Reading passage changed, resetting scaffold data');
             setScaffoldData(null);
             setScaffoldSettings({ vocab: false, structure: false, logic: false });
+            lastPassageRef.current = lessonData.reading_passage;
         }
     }, [lessonData?.reading_passage]);
 
@@ -306,7 +302,7 @@ const LabPage = () => {
             setLoading(true);
 
             // Determine if this is a Writing/Listening 2.0 request
-            const isLegacyWriting = topic === 'writing' || topic.startsWith('writing_') || ['SENTENCE_BUILDER', 'PARAGRAPH_PLANNER', 'MINI_ESSAY'].includes(focus?.[0]);
+            const isLegacyWriting = (topic === 'writing' || topic.startsWith('writing_')) || ['SENTENCE_BUILDER', 'PARAGRAPH_PLANNER', 'MINI_ESSAY'].includes(focus?.[0]);
             const isLegacyListening = topic.startsWith('listening_');
             const isWritingLab = isLegacyWriting; // Defined here to prevent ReferenceError below
 
@@ -434,12 +430,7 @@ const LabPage = () => {
                     }
 
                     // Phase 24 & 25: Limit questions for Easy level (CurrentLevel '3')
-                    // We now support 2 batches of 5 questions each
-                    if (currentLevel === '3' && data.interactive_tasks) {
-                        const start = qBatch * 5;
-                        console.log(`[LabPage] Slicing for Easy level. Batch: ${qBatch}, Start: ${start}`);
-                        data.interactive_tasks = data.interactive_tasks.slice(start, start + 5);
-                    }
+                    // DEPRECATED: We now allow the full targetCount (8) as per user feedback
 
                     setLessonData(data); // Writing API returns { mode, theme, ... }
 
@@ -742,7 +733,9 @@ const LabPage = () => {
                     xp: calculatedXp,
                     level: currentLevel,
                     masteryScore: calculatedMasteryScore,
-                    topic: lessonData.topic || 'Learning Lab',
+                    topic: lessonData.topic || topic || 'Learning Lab',
+                    title: displayTopic, // NEW: Mission Name
+                    paper: (lessonData.type || 'READING').charAt(0).toUpperCase() + (lessonData.type || 'READING').slice(1).toLowerCase(), // NEW: Normalized Paper Name
                     mistakes, // Send detected mistakes
                     isFactoryQuest,
                     isWeeklyQuest
@@ -837,8 +830,11 @@ const LabPage = () => {
                 xp: finalXp,
                 masteryScore: numericScore,
                 topic: skillId,
+                title: displayTopic, // NEW: Mission Name
+                paper: 'Writing', // NEW: Explicit Paper
                 mistakes: [],
-                isFactoryQuest
+                isFactoryQuest,
+                feedback: feedback // Include feedback for review
             };
 
             await fetch(`${API_URL}/api/lab/submit`, {
@@ -985,12 +981,15 @@ const LabPage = () => {
                     <div>
                         <h1 className="text-base font-black text-gray-900 dark:text-gray-100 tracking-tight leading-tight">{displayTopic}</h1>
                         <div className="flex items-center gap-2">
-                            <span className={`px-2 py-0.5 rounded text-[8px] font-bold uppercase tracking-wider border ${getMasteryStats(searchParams.get('level') || (currentLevel === '7' ? 4 : currentLevel === '5' ? 3 : currentLevel === '4' ? 2 : 1), false, false).color}`}>
-                                {getMasteryStats(searchParams.get('level') || (currentLevel === '7' ? 4 : currentLevel === '5' ? 3 : currentLevel === '4' ? 2 : 1), false, false).displayName}
+                            <span className="px-2 py-0.5 bg-indigo-50 dark:bg-indigo-900/40 text-indigo-600 dark:text-indigo-400 rounded-[4px] text-[8px] font-black uppercase tracking-widest border border-indigo-100 dark:border-indigo-800">
+                                Level {currentLevel === '7' ? '5**' : currentLevel === '6' ? '5*' : currentLevel}
+                            </span>
+                            <span className={`px-2 py-0.5 rounded-[4px] text-[8px] font-bold uppercase tracking-wider border ${getMasteryStats(Number(currentLevel)).color}`}>
+                                {getMasteryStats(Number(currentLevel)).displayName}
                             </span>
                             <span className="text-[8px] font-bold text-gray-400 uppercase tracking-widest flex items-center gap-1">
                                 <Sparkles size={10} className="text-amber-500" />
-                                MISSION XP: +{getMasteryStats(searchParams.get('level') || (currentLevel === '7' ? 4 : currentLevel === '5' ? 3 : currentLevel === '4' ? 2 : 1)).xp}
+                                MISSION XP: +{missionXp}
                             </span>
                         </div>
                     </div>
@@ -1026,17 +1025,32 @@ const LabPage = () => {
                     <div className="p-2 bg-indigo-600 rounded-lg text-white">
                         <Layers size={18} />
                     </div>
-                    <div>
-                        <h2 className="text-sm md:text-base font-black dark:text-white tracking-wider">
-                            {lessonData?.type ? `${lessonData.type.charAt(0) + lessonData.type.slice(1).toLowerCase()} - ` : ''}{displayTopic}
-                        </h2>
-                        <div className="flex items-center gap-2">
-                            <span className="text-[10px] font-bold text-gray-400">{t('lab.mission_type')}</span>
-                            <span className="text-[10px] font-black text-indigo-600 dark:text-indigo-400 uppercase tracking-widest">
-                                {t('lab.comprehensive_practice')}
-                            </span>
-                        </div>
-                    </div>
+                            <div>
+                                <div className="flex items-center gap-2">
+                                    <h2 className="text-sm md:text-base font-black dark:text-white tracking-wider">
+                                        {lessonData?.type ? `${lessonData.type.charAt(0) + lessonData.type.slice(1).toLowerCase()} - ` : ''}{displayTopic}
+                                    </h2>
+                                    {currentLevel && (
+                                        <div className="flex items-center gap-2">
+                                            <span className="px-2 py-0.5 bg-indigo-50 dark:bg-indigo-900/40 text-indigo-600 dark:text-indigo-400 rounded-md text-[10px] font-black uppercase tracking-widest border border-indigo-100 dark:border-indigo-800">
+                                                Level {currentLevel === '7' ? '5**' : currentLevel === '6' ? '5*' : currentLevel}
+                                            </span>
+                                            <span className="hidden sm:inline-block px-2 py-0.5 bg-amber-50 dark:bg-amber-900/40 text-amber-600 dark:text-amber-400 rounded-md text-[10px] font-black uppercase tracking-widest border border-amber-100 dark:border-amber-800">
+                                                {(() => {
+                                                    const stats = typeof getMasteryStats === 'function' ? getMasteryStats(Number(currentLevel)) : null;
+                                                    return (language === 'zh-HK' || language === 'zh-TW') ? stats?.zh : stats?.displayName;
+                                                })()}
+                                            </span>
+                                        </div>
+                                    )}
+                                </div>
+                                <div className="flex items-center gap-2">
+                                    <span className="text-[10px] font-bold text-gray-400">{t('lab.mission_type')}</span>
+                                    <span className="text-[10px] font-black text-indigo-600 dark:text-indigo-400 uppercase tracking-widest">
+                                        {isWeeklyQuest ? "Weekly Challenge" : t('lab.comprehensive_practice')}
+                                    </span>
+                                </div>
+                            </div>
                 </div>
 
                 <div className="flex items-center gap-3">
@@ -1331,16 +1345,19 @@ const LabPage = () => {
                                                     fetch(`${API_URL}/api/reading/scaffold`, {
                                                         method: 'POST',
                                                         headers: { 'Content-Type': 'application/json' },
-                                                        body: JSON.stringify({ passage: lessonData.reading_passage, level: 3 })
+                                                        body: JSON.stringify({ passage: lessonData.reading_passage, level: currentLevel })
                                                     }).then(r => {
                                                         if (!r.ok) return r.json().then(e => { throw new Error(e.error || `Server error: ${r.status}`) });
                                                         return r.json();
                                                     }).then(data => {
                                                         console.log('[LabPage] Scaffold data received:', data);
-                                                        if (!data || (!data.vocab && !data.tags && !data.connectors)) {
+                                                        // Handle potentially nested .data wrapper from GenerativeAIService
+                                                        const normalizedData = data.data || data;
+                                                        
+                                                        if (!normalizedData || (!normalizedData.vocab && !normalizedData.tags && !normalizedData.connectors)) {
                                                             console.warn('[LabPage] Scaffold data empty or malformed');
                                                         }
-                                                        setScaffoldData(data);
+                                                        setScaffoldData(normalizedData);
                                                         setIsLoadingScaffold(false);
                                                     }).catch(e => {
                                                         console.error('[LabPage] Scaffold fetch error:', e);
@@ -1374,7 +1391,7 @@ const LabPage = () => {
                                             )}
 
                                             <div
-                                                className="prose prose-xl prose-indigo dark:prose-invert max-w-none text-gray-700 dark:text-gray-300 leading-relaxed font-serif cursor-text select-text"
+                                                className="prose prose-xl prose-indigo dark:prose-invert max-w-none text-gray-700 dark:text-gray-300 leading-relaxed font-sans text-[21px] cursor-text select-text"
                                                 onClick={handleTextClick}
                                             >
                                                 {(() => {
@@ -1399,11 +1416,10 @@ const LabPage = () => {
                                                                         language={language}
                                                                     />
                                                                 )}
-
                                                                 <div className="flex gap-4 items-start">
-                                                                    {/* Paragraph Tag (Level 2) */}
+                                                                    {/* Paragraph Tag (Level 2) - X-Ray View */}
                                                                     {scaffoldSettings.structure && pTag && (
-                                                                        <div className="flex-shrink-0 mt-1.5 w-56">
+                                                                        <div className="flex-shrink-0 mt-1.5 w-48 md:w-56 lg:w-64 min-w-[180px]">
                                                                             <ParagraphInsight
                                                                                 tag={pTag.tag}
                                                                                 summary={pTag.summary}
@@ -1414,8 +1430,8 @@ const LabPage = () => {
                                                                             />
                                                                         </div>
                                                                     )}
-
-                                                                    <div className={`flex-grow ${scaffoldSettings.structure ? 'pl-2' : ''}`}>
+ 
+                                                                    <div className={`flex-grow min-w-0 ${scaffoldSettings.structure ? 'pl-4' : ''}`}>
                                                                         {scaffoldSettings.vocab && scaffoldData?.vocab ? (
                                                                             <VocabSpotlight
                                                                                 text={paraText}
@@ -1423,7 +1439,7 @@ const LabPage = () => {
                                                                                 onWordClick={(word) => console.log('Word clicked:', word)}
                                                                             />
                                                                         ) : (
-                                                                            <p className="m-0 italic hover:text-gray-900 dark:hover:text-gray-100 transition-colors">
+                                                                            <p className="m-0 hover:text-gray-900 dark:hover:text-gray-100 transition-colors">
                                                                                 {paraText}
                                                                             </p>
                                                                         )}
@@ -1554,7 +1570,7 @@ const LabPage = () => {
                                                         : 'bg-red-50 dark:bg-red-900/20 border-red-100 dark:border-red-800 text-red-700 dark:text-red-400'
                                                         }`}>
                                                         <div className="mt-1 shrink-0">
-                                                            {feedbacks[task.id].correct ? <CheckCircle2 size={24} /> : <div className="text-2xl">💡</div>}
+                                                            {feedbacks[task.id].correct ? <CheckCircle2 size={24} /> : <span>HINT</span>}
                                                         </div>
                                                         <div className="space-y-1">
                                                             <p className="font-black uppercase tracking-widest text-[10px]">

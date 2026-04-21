@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Book, Pi, Languages, Copy, Check, ChevronLeft, Sparkles, MessageSquare } from 'lucide-react';
+import { Book, Pi, Copy, Check, ChevronLeft, Sparkles, MessageSquare, Trophy, Target, LineChart, Zap } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 const PromptTipsPage = () => {
@@ -11,41 +11,41 @@ const PromptTipsPage = () => {
     const categories = [
         {
             id: 'english',
-            title: 'English',
+            title: t('prompts.categories.english.title'),
             icon: <Book className="w-6 h-6 text-blue-400" />,
             bg: 'bg-blue-500/10',
             border: 'border-blue-500/20',
             prompts: [
-                { id: 'e1', text: "Analyze this essay for grammatical accuracy and cohesion." },
-                { id: 'e2', text: "Suggest 5 advanced vocabulary words to replace common ones in this paragraph." },
-                { id: 'e3', text: "Explain the tone of this reading passage and provide evidence from the text." },
-                { id: 'e4', text: "Help me restructure this sentence to sound more formal for a DSE Writing task." }
+                { id: 'e1', text: t('prompts.categories.english.p1') },
+                { id: 'e2', text: t('prompts.categories.english.p2') },
+                { id: 'e3', text: t('prompts.categories.english.p3') },
+                { id: 'e4', text: t('prompts.categories.english.p4') }
             ]
         },
         {
             id: 'maths',
-            title: 'Maths',
+            title: t('prompts.categories.maths.title'),
             icon: <Pi className="w-6 h-6 text-emerald-400" />,
             bg: 'bg-emerald-500/10',
             border: 'border-emerald-500/20',
             prompts: [
-                { id: 'm1', text: "Walk me through the step-by-step logic to solve this geometry problem." },
-                { id: 'm2', text: "Provide a practice question similar to this HKDSE quadratic equation past paper." },
-                { id: 'm3', text: "Check my logic for this calculus proof and point out any potential errors." },
-                { id: 'm4', text: "Explain the concept of standard deviation using a real-world example." }
+                { id: 'm1', text: t('prompts.categories.maths.p1') },
+                { id: 'm2', text: t('prompts.categories.maths.p2') },
+                { id: 'm3', text: t('prompts.categories.maths.p3') },
+                { id: 'm4', text: t('prompts.categories.maths.p4') }
             ]
         },
         {
-            id: 'chinese',
-            title: 'Chinese',
-            icon: <Languages className="w-6 h-6 text-amber-400" />,
+            id: 'ace',
+            title: t('prompts.categories.ace.title'),
+            icon: <Trophy className="w-6 h-6 text-amber-500" />,
             bg: 'bg-amber-500/10',
             border: 'border-amber-500/20',
             prompts: [
-                { id: 'c1', text: "解釋這篇古文的重點及其運用的修辭手法。" },
-                { id: 'c2', text: "如何改善這段描寫文的感官描寫，使其更有感染力？" },
-                { id: 'c3', text: "提供 3 個關於『毅力』或『夢想』主題的寫作素材和金句。" },
-                { id: 'c4', text: "分析這篇議論文的論證結構是否嚴謹。" }
+                { id: 'c1', text: t('prompts.categories.ace.p1') },
+                { id: 'c2', text: t('prompts.categories.ace.p2') },
+                { id: 'c3', text: t('prompts.categories.ace.p3') },
+                { id: 'c4', text: t('prompts.categories.ace.p4') }
             ]
         }
     ];
@@ -69,15 +69,15 @@ const PromptTipsPage = () => {
                         onClick={() => navigate(-1)}
                         className="flex items-center gap-2 text-gray-500 hover:text-primary transition-colors font-bold uppercase tracking-wider text-xs"
                     >
-                        <ChevronLeft className="w-4 h-4" /> Back
+                        <ChevronLeft className="w-4 h-4" /> {t('prompts.back')}
                     </button>
                     <div className="text-center flex-1">
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-[10px] font-bold uppercase tracking-widest mb-3">
-                            <Sparkles className="w-3 h-3" /> Master the AI
+                            <Sparkles className="w-3 h-3" /> {t('prompts.master_ai')}
                         </div>
-                        <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-2 font-display italic">Prompt Tips</h1>
+                        <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-2 font-display italic">{t('prompts.title')}</h1>
                         <p className="text-gray-500 dark:text-gray-400 max-w-lg mx-auto leading-relaxed">
-                            Use these proven prompt structures to get the highest quality feedback from your AI mentors. Click any prompt to copy and start chatting.
+                            {t('prompts.subtitle')}
                         </p>
                     </div>
                     <div className="w-20" /> {/* Spacer */}
@@ -117,7 +117,7 @@ const PromptTipsPage = () => {
 
                                         {/* Hover Indicator */}
                                         <div className="mt-4 flex items-center justify-between opacity-0 group-hover:opacity-100 transition-opacity">
-                                            <span className="text-[10px] font-bold uppercase tracking-widest text-primary">Click to Copy</span>
+                                            <span className="text-[10px] font-bold uppercase tracking-widest text-primary">{t('prompts.click_to_copy')}</span>
                                             <MessageSquare className="w-3 h-3 text-primary" />
                                         </div>
                                     </div>
@@ -130,9 +130,9 @@ const PromptTipsPage = () => {
                 {/* Footer Insight */}
                 <div className="mt-20 text-center">
                     <div className="inline-block p-8 bg-white/50 dark:bg-white/5 backdrop-blur-md rounded-[3rem] border border-white dark:border-white/10 max-w-2xl">
-                        <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">💡 Pro Tip for HKDSE</h3>
+                        <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">{t('prompts.pro_tip_title')}</h3>
                         <p className="text-sm text-gray-600 dark:text-gray-400 italic">
-                            "The more context you provide (e.g., attaching your essay or specifying the score you're aiming for), the more tailored the tutor's feedback will be. Don't be afraid to ask 'Why?' after they give you an answer."
+                            {t('prompts.pro_tip_content')}
                         </p>
                     </div>
                 </div>

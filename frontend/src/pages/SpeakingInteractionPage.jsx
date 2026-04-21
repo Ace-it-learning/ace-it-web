@@ -14,18 +14,44 @@ const SpeakingInteractionPage = () => {
     // const questLevel = searchParams.get('level'); // Unused
     const questTaskId = searchParams.get('taskId');
     const questTopic = searchParams.get('topic');
-    const roadmapTopic = React.useMemo(() => {
-        const name = location.state?.topic || questTopic || 'speaking_interaction_general';
-        if (name === 'speaking_interaction_general') {
-            return "How AI will disrupt education in school";
-        }
-        // v10.1: Add Split for CamelCase and underscores
-        return name.replace(/([a-z])([A-Z])/g, '$1 $2') // Split CamelCase
-            .replace(/_/g, ' ') // Split underscores
-            .split(' ')
-            .map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase())
-            .join(' ');
-    }, [location.state?.topic, questTopic]); // Dependency update
+    const [displayTopic, setDisplayTopic] = useState("");
+    const [isTopicLoading, setIsTopicLoading] = useState(true);
+
+    useEffect(() => {
+        const fetchTheme = async () => {
+            const rawTopic = location.state?.topic || questTopic || 'speaking_interaction_general';
+            if (rawTopic === 'speaking_weekly' || location.state?.isWeeklyQuest) {
+                try {
+                    const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+                    const res = await fetch(`${API_URL}/api/lab/weekly/speaking`);
+                    if (res.ok) {
+                        const data = await res.json();
+                        setDisplayTopic(data.universalTopicLong || data.title || "Weekly Special Discussion");
+                        setIsTopicLoading(false);
+                        return;
+                    }
+                } catch (e) { 
+                    console.error("Failed to fetch weekly theme", e); 
+                }
+            }
+            
+            if (rawTopic === 'speaking_interaction_general') {
+                setDisplayTopic("How AI will disrupt education in school");
+            } else {
+                const formatted = rawTopic.replace(/([a-z])([A-Z])/g, '$1 $2')
+                    .replace(/_/g, ' ')
+                    .split(' ')
+                    .map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase())
+                    .join(' ');
+                setDisplayTopic(formatted);
+            }
+            setIsTopicLoading(false);
+        };
+        fetchTheme();
+    }, [location.state?.topic, questTopic]);
+
+    // Derived value for legacy compatibility if needed
+    const roadmapTopic = displayTopic;
 
     const taskId = location.state?.taskId || questTaskId;
     const isQuest = !!taskId;
@@ -138,19 +164,19 @@ const SpeakingInteractionPage = () => {
 
     // Initialize Quest Data
     useEffect(() => {
-        console.log("[SpeakingInteraction] Initializing with topic:", roadmapTopic);
-        // In a real app, you might fetch specific details from an API, but for Quest/Roadmap check if we need to mock
-        // or if we just construct it.
+        if (isTopicLoading || !displayTopic) return;
+        console.log("[SpeakingInteraction] Initializing with topic:", displayTopic);
+        
         const questData = {
             id: `quest_${taskId || Date.now()}`,
             title: roadmapTopic,
-            topic_description: `You are participating in a group discussion about how artificial intelligence will disrupt education in schools. Consider the impact on teaching methods, student learning, and future skills. Share your views, listen to others, and engage in meaningful conversation.`,
+            topic_description: `You are participating in a group discussion about ${roadmapTopic}. Sharing your views, listen to others, and engage in meaningful conversation.`,
             discussion_points: [
-                "Personalized learning and adaptive technologies",
-                "Teacher roles and job displacement concerns",
-                "Ethical considerations (data privacy, algorithmic bias)",
-                "Digital divide and accessibility",
-                "Future skills needed in an AI‑driven world"
+                "Primary social and economic impacts",
+                "Challenges and potential solutions",
+                "Community and individual responsibilities",
+                "Future outlook and recommendations",
+                "Ethical and practical considerations"
             ],
             individual_response_questions: [
                 `Based on the discussion, what is your personal view on ${roadmapTopic}?`,
@@ -160,7 +186,22 @@ const SpeakingInteractionPage = () => {
         };
         setExamData(questData);
         setStatus('PREP');
-        setTimeLeft(isQuest ? 180 : 600); // Phase 35: 3 mins for Quest, 10 mins for Practice (DSE Standard)
+
+        // Dynamic Timer based on Level (HKEAA Aligned)
+        const levelCode = searchParams.get('level') || location.state?.level || '3';
+        let discussionTime = 300; // Default 5 mins (DSE Standard)
+        
+        if (levelCode === 'Easy' || levelCode === '3' || parseInt(levelCode) <= 3) {
+            discussionTime = 180; // 3 mins
+        } else if (levelCode === 'Medium' || levelCode === '4') {
+            discussionTime = 240; // 4 mins
+        } else if (levelCode === 'DSE Standard' || levelCode === '5') {
+            discussionTime = 300; // 5 mins
+        } else if (levelCode === 'Elite' || levelCode === '6' || levelCode === '7') {
+            discussionTime = 360; // 6 mins
+        }
+
+        setTimeLeft(isQuest ? discussionTime : 600); 
 
         // Reset airtime
         setAirtime({ 'You': 0, 'Candidate_A': 0, 'Candidate_B': 0, 'Candidate_C': 0 });
@@ -168,6 +209,7 @@ const SpeakingInteractionPage = () => {
         // Phase 46: Instant Annie - Pre-fetch immediately on page load
         setTimeout(() => fetchBatch("Candidate_A"), 100);
     }, [roadmapTopic, taskId]);
+
 
     // Airtime Ticker
     useEffect(() => {
@@ -528,13 +570,13 @@ const SpeakingInteractionPage = () => {
 
             if (role === 'Candidate_A') {
                 u.pitch = 1.1; 
-                u.rate = 1.15;
+                u.rate = 1.0; // Standardized to 1.0
             } else if (role === 'Candidate_B') {
                 u.pitch = 1.0; 
-                u.rate = 1.05;
+                u.rate = 1.0; // Standardized to 1.0
             } else if (role === 'Candidate_C') {
                 u.pitch = 0.9; 
-                u.rate = 0.98;
+                u.rate = 1.0; // Standardized to 1.0
             } else {
                 u.pitch = 1.0;
                 u.rate = 1.0;
@@ -634,7 +676,15 @@ const SpeakingInteractionPage = () => {
             }
 
             if (status === 'INDIVIDUAL') {
-                playSpeech("Examiner", "Thank you. That is the end of the individual response.", () => setStatus('FINISHED'));
+                const concludes = [
+                    "Thank you for those insights. I see your point regarding the importance of collaboration.",
+                    "Thank you. You've raised some interesting arguments about the social impact.",
+                    "I see, that's a very valid thought about the future of education."
+                ];
+                const c = concludes[Math.floor(Math.random() * concludes.length)];
+                playSpeech("Examiner", c, () => {
+                    concludeSession(); // Move to formal wrap-up
+                });
                 return;
             }
 
@@ -1054,23 +1104,35 @@ const SpeakingInteractionPage = () => {
             setIsSubmitting(true);
             try {
                 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+                
+                addLog(`🌐 Submitting to: ${API_URL}/api/speaking/quest/submit`);
                 const res = await fetch(`${API_URL}/api/speaking/quest/submit`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
                         module: 'interaction',
-                        taskId,
+                        quest_id: taskId,
+                        missionName: examData?.title || roadmapTopic || 'Group Discussion Quest',
+                        paper: 'Speaking',
                         messages: chatHistory.current,
                         uid: user?.uid,
                         level: location.state?.userLevel || "3",
-                        quest_id: examData.id
+                        master_script: examData?.title || roadmapTopic 
                     })
                 });
+
+                if (!res.ok) {
+                    const errText = await res.text();
+                    throw new Error(`Server responded with ${res.status}: ${errText}`);
+                }
+
                 const result = await res.json();
                 setGradingResult(result);
+                addLog("✅ Grading complete!");
             } catch (e) {
-                console.error(e);
-                alert("Submission failed");
+                console.error("Submission error:", e);
+                addLog(`❌ Submission failed: ${e.message}`);
+                alert(`Submission failed: ${e.message}`);
             } finally {
                 setIsSubmitting(false);
             }

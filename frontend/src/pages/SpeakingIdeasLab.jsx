@@ -13,11 +13,14 @@ import SpeakingWaveform from '../components/speaking/SpeakingWaveform';
 import IdeasMindMap from '../components/speaking/IdeasMindMap';
 
 const FILLERS = [
-    "That's a very logical point. Looking at the mind map, how would you expand on that?",
-    "I see your point. Which specific branch of our brainstorm does that connect to?",
-    "Interesting perspective! Can you provide some evidence to support that idea?",
-    "Right. Thinking about the overall structure, how does this point link back to your main argument?",
-    "Good start! Let's try to add more depth to that explanation using the mind map."
+    "That's a solid point. How do you think we can connect that to the other branch of our brainstorm?",
+    "I see where you're coming from. Shall we look at the potential challenges branch in the mind map next?",
+    "Building on that idea, I think we could elaborate more on the impact... what do you think?",
+    "Interesting perspective. If we relate that back to the main topic, how does it change our outlook?",
+    "I agree with that direction. Looking at our mind map, which other area should we link this to?",
+    "Right! Expanding on that, maybe we can also consider the long-term consequences?",
+    "That makes sense. Shall we try to brainstorm some more specific examples for that branch?",
+    "I like how you structured that. Does it remind you of any other points we've discussed today?"
 ];
 
 const SpeakingIdeasLab = () => {
@@ -202,11 +205,18 @@ const SpeakingIdeasLab = () => {
 
     const runIntro = () => {
         setIsAITurn(true);
-        const introText = `Hello! I'm ${activeAgent.name}. Today we're working on Ideas and Organisation. Your topic is "${questData?.title || 'this discussion'}". Use the Mind Map on the left to brainstorm points before you speak. Let's start!`;
+        const topicName = questData?.scenario || questData?.title || 'this topic';
+        const introText = `Hello! I'm Miss Janie. Today we're working on Ideas and Organisation. Our focus is ${topicName}. Use the Mind Map on the left to brainstorm points before you speak. Let's start!`;
+        
         playAudio(introText, 'Tutor', () => {
             setPhase('DISCUSSION');
-            setChatHistory([{ speaker: 'Annie', text: questData?.starting_question || "What are your initial thoughts on this topic?" }]);
-            setIsAITurn(false);
+            const startingQuestion = questData?.starting_question || "What are your initial thoughts on this topic?";
+            setChatHistory([{ speaker: 'Annie', text: startingQuestion }]);
+            
+            // Annie speaks her starting question before handing turn to student
+            playAudio(startingQuestion, 'Annie', () => {
+                setIsAITurn(false);
+            });
         });
     };
 
@@ -313,6 +323,8 @@ const SpeakingIdeasLab = () => {
                 body: JSON.stringify({
                     module: 'ideas_organisation',
                     level,
+                    missionName: questData?.scenario || 'Ideas & Organisation Lab',
+                    paper: 'Speaking',
                     messages: chatHistory,
                     organisation_data: JSON.stringify({ 
                         mind_map: questData.mind_map, 
@@ -336,6 +348,112 @@ const SpeakingIdeasLab = () => {
             <div className="min-h-screen bg-slate-900 flex flex-col items-center justify-center text-white">
                 <Loader2 className="w-12 h-12 text-emerald-500 animate-spin mb-4" />
                 <p className="font-black uppercase tracking-widest animate-pulse">Synchronizing Ideas Lab...</p>
+            </div>
+        );
+    }
+
+    if (phase === 'REVIEW' && gradingResult) {
+        const { scores, feedback } = gradingResult;
+        const totalScore = scores?.total || 0;
+
+        const getLevel = (s) => {
+            if (s >= 26) return "5**";
+            if (s >= 23) return "5*";
+            if (s >= 20) return "5";
+            if (s >= 16) return "4";
+            if (s >= 12) return "3";
+            if (s >= 8) return "2";
+            return "1";
+        };
+
+        return (
+            <div className="min-h-screen bg-slate-50 font-sans pb-20 overflow-y-auto">
+                <div className="bg-white border-b border-slate-200 pt-16 pb-12 px-6">
+                    <div className="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+                        <div className="space-y-4">
+                            <div className="flex gap-3">
+                                <span className="px-4 py-1.5 bg-emerald-600 text-white rounded-full text-[10px] font-black uppercase tracking-widest shadow-sm text-center">Idea Generation Performance</span>
+                                <span className="px-4 py-1.5 bg-emerald-50 text-emerald-700 rounded-full text-[10px] font-black uppercase tracking-widest border border-emerald-100 italic">Quest Module: Ideas & Org</span>
+                            </div>
+                            <h1 className="text-5xl font-black text-slate-900 tracking-tight leading-none">Session Mastery Report</h1>
+                            <p className="text-slate-500 font-bold text-lg max-w-2xl leading-relaxed">
+                                {feedback?.summary || "Great effort! Here is your logical structure analysis."}
+                            </p>
+                        </div>
+
+                        <div className="bg-white p-8 rounded-[3rem] border border-slate-100 shadow-xl flex flex-col items-center justify-center min-w-[220px] relative overflow-hidden group">
+                           <div className="absolute top-0 left-0 w-full h-2 bg-emerald-600" />
+                            <div className="text-7xl font-black text-emerald-600 mb-1 group-hover:scale-110 transition-transform duration-500">{getLevel(totalScore)}</div>
+                            <div className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">Predicted DSE Grade ({totalScore}/28)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="max-w-5xl mx-auto px-6 mt-12 space-y-12">
+                    <section>
+                        <h2 className="text-sm font-black uppercase tracking-[0.2em] text-slate-400 mb-6 flex items-center gap-3">
+                            <Target className="w-5 h-5 text-emerald-500" /> Domain Mastery Analysis
+                        </h2>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                            {[
+                                { label: 'Development', score: scores?.development || scores?.development_elaboration, desc: 'Adding depth to points' },
+                                { label: 'Relevance', score: scores?.relevance, desc: 'Staying on topic' },
+                                { label: 'Signposting', score: scores?.signposting || scores?.organisation, desc: 'Cohesive devices' },
+                                { label: 'Organisation', score: scores?.organisation || scores?.logical_structure, desc: 'Logical flow' }
+                            ].map((stat, i) => (
+                                <div key={i} className="bg-white rounded-3xl p-6 border border-slate-100 shadow-sm hover:border-emerald-200 transition-all group">
+                                    <div className="flex justify-between items-end mb-4">
+                                        <div className="text-3xl font-black text-slate-800 group-hover:text-emerald-600 transition-colors">{stat.score}<span className="text-sm text-slate-300">/7</span></div>
+                                        <div className="text-[10px] font-black uppercase tracking-widest text-slate-500 mb-1">{stat.label}</div>
+                                    </div>
+                                    <div className="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+                                        <motion.div 
+                                            initial={{ width: 0 }}
+                                            animate={{ width: `${(stat.score / 7) * 100}%` }}
+                                            transition={{ delay: 0.2, duration: 1 }}
+                                            className="h-full bg-emerald-500 rounded-full" 
+                                        />
+                                    </div>
+                                    <p className="mt-3 text-[10px] text-slate-400 font-bold uppercase">{stat.desc}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </section>
+
+                    <section className="bg-slate-900 rounded-[3rem] p-10 md:p-16 text-white overflow-hidden relative shadow-2xl">
+                        <Sparkles className="absolute top-0 right-0 p-10 w-40 h-40 opacity-10" />
+                        <div className="relative z-10 max-w-3xl">
+                            <h2 className="text-[10px] font-black uppercase tracking-[0.3em] text-emerald-400 mb-6 flex items-center gap-2">
+                                <Brain className="w-4 h-4" /> Strategic PEEL Analysis
+                            </h2>
+                            <h3 className="text-4xl font-black mb-8 leading-tight italic opacity-95 text-slate-100">
+                                "{feedback?.peel_analysis || feedback?.improvement_advice || "Focus on linking your explanation back to the main point more consistently."}"
+                            </h3>
+                            <div className="flex gap-4 items-center">
+                                <div className="px-5 py-2 bg-emerald-600/20 border border-emerald-500/30 rounded-xl text-emerald-400 text-xs font-black uppercase tracking-widest">
+                                    Target Level: 5**
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <div className="flex flex-col md:flex-row gap-4 pt-8">
+                        <button 
+                            onClick={() => window.location.reload()} 
+                            className="flex-1 py-6 bg-white text-slate-600 border border-slate-200 rounded-[2.5rem] font-black text-lg hover:bg-slate-50 transition-all active:scale-95 shadow-sm flex items-center justify-center gap-3"
+                        >
+                            <RotateCcw className="w-5 h-5" />
+                            Restart Drill
+                        </button>
+                        <button 
+                            onClick={() => navigate('/speaking/menu')} 
+                            className="flex-1 py-6 bg-emerald-600 text-white rounded-[2.5rem] font-black text-lg hover:bg-emerald-700 transition-all shadow-xl shadow-emerald-100 flex items-center justify-center gap-3 active:scale-95 group"
+                        >
+                            Return to Hub
+                            <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
+                        </button>
+                    </div>
+                </div>
             </div>
         );
     }
@@ -550,74 +668,6 @@ const SpeakingIdeasLab = () => {
                         </div>
                     </div>
                 )}
-
-                {/* Final Review Page */}
-                <AnimatePresence>
-                    {phase === 'REVIEW' && gradingResult && (
-                        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="fixed inset-0 z-[60] bg-slate-900/60 backdrop-blur-md p-6 flex items-center justify-center">
-                            <div className="bg-white rounded-[3rem] w-full max-w-4xl max-h-[90vh] overflow-y-auto shadow-2xl relative">
-                                <div className="p-8 md:p-12">
-                                    <div className="flex flex-col md:flex-row items-start justify-between gap-8 mb-12 text-slate-800">
-                                        <div className="flex-1">
-                                            <div className="flex items-center gap-3 mb-4 text-[10px] font-black uppercase tracking-widest">
-                                                <div className="px-4 py-1.5 bg-emerald-600 text-white rounded-full shadow-lg shadow-emerald-100">Criterion D Mastery</div>
-                                                <div className="px-4 py-1.5 bg-indigo-100 text-indigo-700 rounded-full">Grade 5** Target</div>
-                                            </div>
-                                            <h2 className="text-4xl font-black text-slate-800 tracking-tight leading-tight mb-4">Ideas & Organisation Report</h2>
-                                            <p className="text-slate-500 font-bold text-lg leading-relaxed max-w-xl">
-                                                {gradingResult.feedback?.summary}
-                                            </p>
-                                        </div>
-                                        <div className="bg-white p-8 rounded-[3rem] border border-slate-100 shadow-xl flex flex-col items-center justify-center min-w-[220px] relative overflow-hidden group">
-                                            <div className="absolute top-0 left-0 w-full h-2 bg-emerald-600" />
-                                            <div className="text-7xl font-black text-emerald-600 mb-1 group-hover:scale-110 transition-transform duration-500">{gradingResult.scores?.total || 0}</div>
-                                            <div className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">Total Marks / 28</div>
-                                        </div>
-                                    </div>
-
-                                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
-                                        {[
-                                            { label: 'Development', score: gradingResult.scores?.development },
-                                            { label: 'Relevance', score: gradingResult.scores?.relevance },
-                                            { label: 'Signposting', score: gradingResult.scores?.signposting },
-                                            { label: 'Organisation', score: gradingResult.scores?.organisation }
-                                        ].map((stat, i) => (
-                                            <div key={i} className="bg-white border-2 border-slate-100 rounded-[2.5rem] p-6 flex flex-col hover:border-emerald-300 hover:shadow-xl hover:shadow-emerald-50 transition-all group">
-                                                <div className="flex justify-between items-end mb-4">
-                                                    <div className="text-3xl font-black text-slate-800 group-hover:text-emerald-600 transition-colors">{stat.score}<span className="text-sm text-slate-300">/7</span></div>
-                                                    <div className="text-[10px] font-black uppercase tracking-widest text-slate-500 mb-1">{stat.label}</div>
-                                                </div>
-                                                <div className="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
-                                                    <motion.div initial={{ width: 0 }} animate={{ width: `${(stat.score / 7) * 100}%` }} transition={{ duration: 1 }} className="h-full bg-emerald-500 rounded-full" />
-                                                </div>
-                                            </div>
-                                        ))}
-                                    </div>
-
-                                    <div className="bg-slate-900 text-white p-12 rounded-[3.5rem] mb-12 relative overflow-hidden shadow-2xl">
-                                        <Sparkles className="absolute top-0 right-0 p-10 w-40 h-40 opacity-10" />
-                                        <h4 className="font-black uppercase tracking-[0.3em] text-[10px] text-emerald-400 mb-6 flex items-center gap-2">
-                                            <Target className="w-4 h-4" /> Strategic PEEL Analysis
-                                        </h4>
-                                        <p className="text-2xl font-black leading-tight italic opacity-95 text-slate-100 max-w-2xl">
-                                            "{gradingResult.feedback?.peel_analysis || "Focus on linking your explanation back to the main point more consistently."}"
-                                        </p>
-                                    </div>
-
-                                    <div className="flex gap-4">
-                                        <button onClick={() => window.location.reload()} className="flex-1 py-6 bg-slate-100 text-slate-600 rounded-[2rem] font-black text-lg hover:bg-slate-200 transition-all active:scale-95 shadow-sm">
-                                            Restart Drill
-                                        </button>
-                                        <button onClick={() => navigate('/speaking/menu')} className="flex-1 py-6 bg-emerald-600 text-white rounded-[2rem] font-black text-lg hover:bg-emerald-700 transition-all shadow-xl shadow-emerald-100 flex items-center justify-center gap-3 active:scale-95 group">
-                                            Return to Hub
-                                            <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </motion.div>
-                    )}
-                </AnimatePresence>
             </main>
         </div>
     );

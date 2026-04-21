@@ -164,25 +164,46 @@ router.post('/grade', async (req, res) => {
             if (result.examiner_summary.zh) result.examiner_summary.zh = result.examiner_summary.zh.replace(/{{agentName}}/g, persona.name);
         }
 
-        // --- PERSIST MASTERY DATA ---
-        if (uid && uid !== 'guest' && result.pillar_scores) {
-            const pillars = ['content', 'language', 'organization'];
-            const updatePromises = pillars.map(p => {
-                const pillarData = result.pillar_scores[p];
-                if (pillarData && pillarData.score) {
-                    // Update micro-skills: writing_content, writing_language, writing_organization
-                    return UserProfileService.updateMicroSkillLevel(uid, 'english', `writing_${p}`, (pillarData.score / 7) * 100, {
-                        type: 'Quest',
-                        difficulty: 5 // Writing quests are generally DSE standard
-                    });
-                }
-                return Promise.resolve();
+        // --- PERSIST RESULT FOR HISTORICAL REVIEW ---
+        let resultId = null;
+        if (uid && uid !== 'guest') {
+            resultId = await UserProfileService.saveQuestResult(uid, {
+                topic: finalTopic,
+                textType: finalTextType,
+                content: finalContent,
+                scores: result.pillar_scores || {},
+                pillar_scores: result.pillar_scores || {},
+                predicted_level: result.predicted_level || "4",
+                overall_score: result.overall_score || 4,
+                feedback: result, // Full feedback object
+                subject: 'english',
+                paper: 'Writing',
+                missionName: finalTopic
             });
-            await Promise.all(updatePromises);
-            console.log(`[WritingRoutes] Persisted mastery data for ${uid}`);
         }
 
-        res.json(result);
+        // --- AWARD XP ---
+        let xpAwarded = 0;
+        if (uid && uid !== 'guest' && result.predicted_level) {
+            const GamificationService = require('../services/GamificationService');
+            // Assuming 250 XP for writing as per WritingResultPage mention of +250 XP
+            const xpAmount = 250; 
+            const xpResult = await GamificationService.awardXP(uid, xpAmount, 'writing', {
+                title: `Writing: ${finalTopic}`,
+                score: `${result.predicted_level} / 5**`,
+                subject: 'english',
+                paper: 'Writing',
+                questName: finalTopic,
+                resultId: resultId
+            }) || { earned: 0 };
+            xpAwarded = xpResult.earned || 0;
+        }
+
+        res.json({
+            ...result,
+            resultId,
+            xp_awarded: xpAwarded
+        });
     } catch (err) {
         console.error(err);
         res.status(500).json({ error: "Grading failed" });

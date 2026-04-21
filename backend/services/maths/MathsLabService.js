@@ -669,12 +669,18 @@ Return as a JSON array of strings.`;
                 
                 let query = db.collection(collectionName);
                 
+                let stringLevel = '';
+                if (numericLevel === 3) stringLevel = 'HKDSE Level 3 (Adequate)';
+                else if (numericLevel === 4) stringLevel = 'HKDSE Level 4 (Good)';
+                else if (numericLevel === 5) stringLevel = 'HKDSE Level 5 (Strong)';
+                else if (numericLevel > 5) stringLevel = 'HKDSE Level 5** (Mastery)';
+
                 if (isIntegrated) {
                     // Quest missions use 'status' instead of 'is_approved' as per schema
                     query = query.where('status', '==', 'approved');
                 } else {
                     query = query.where('topic_id', '==', topic)
-                                 .where('level', '==', numericLevel)
+                                 .where('level', 'in', [numericLevel, stringLevel])
                                  .where('is_approved', '==', true);
                 }
 
@@ -685,7 +691,7 @@ Return as a JSON array of strings.`;
                     console.log(`[MathsLabService] Bank empty for Level ${numericLevel}. Falling back to Level 3 starter questions.`);
                     bankSnapshot = await db.collection('question_bank')
                         .where('topic_id', '==', topic)
-                        .where('level', '==', 3)
+                        .where('level', 'in', [3, 'HKDSE Level 3 (Adequate)'])
                         .where('is_approved', '==', true)
                         .limit(50)
                         .get();
@@ -787,20 +793,6 @@ Return as a JSON array of strings.`;
                 }
             }
 
-            // 2.5 LOCKDOWN: If not in factory mode and bank is truly empty (0 approved questions),
-            // or if the pooled results were somehow 0 despite non-isFactory mode,
-            // then we refuse slow AI generation for standard students.
-            if (!isFactory) {
-                console.log(`[MathsLabService] LOCKDOWN: No approved/released questions for ${topic}. Refusing slow generation for student.`);
-                return {
-                    type: "MATHS",
-                    topic: topic,
-                    level: numericLevel,
-                    interactive_tasks: [],
-                    error: "BANK_EMPTY",
-                    message: "Our AI tutors are still preparing questions for this specific topic and level. Please try another topic or check back later!"
-                };
-            }
 
             console.log(`[MathsLabService] Bank empty. User is admin/factory: Proceeding to AI Generation...`);
         } catch (bankErr) {

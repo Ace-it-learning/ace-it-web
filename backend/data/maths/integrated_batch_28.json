@@ -1,0 +1,322 @@
+[
+  {
+    "id": "ct_sa_291",
+    "type": "short_answer",
+    "topic_id": "math_num_percentages",
+    "prerequisite_topics": [
+      "math_num_percentages"
+    ],
+    "marks": 9,
+    "difficulty": 6,
+    "paper": 1,
+    "section": "A",
+    "question_en": "A dealer buys a watch for $\\$600$.$ He marks the price so that after giving a discount of $20%$,$ he still makes a profit of $20%$.$\n(a) Find the marked price of the watch. (5 marks)\n(b) If the watch is sold at a discount of $20%$ instead, find the profit percentage. (4 marks)",
+    "question_zh": "商販以 $\\$600$ 購入一隻手錶。他設定標價，使得即使在給予 $20%$ 折扣後，仍能獲利 $20%$。\n(a) 求該手錶的標價。(5分)\n(b) 若改以 $20%$ 的折扣售出，求獲利百分比。(4分)",
+    "solution_steps_en": [
+      "(a) Cost Price (CP) $= 600$.$ Profit percentage $= $20%$.$",
+      "Selling Price (SP) $= CP \\times (1 + $20%$) = 600 \\times 1.2 = 720$.$",
+      "Let Marked Price be $M$.$M \\times (1 - $20%$) = 720$.$",
+      "$0.8$M = 720 \\Rightarrow M = 720 / 0.8 = 900$.$",
+      "(b) New SP $= 900 \\times (1 - $20%$) = 900 \\times 0.9 = 810$.$",
+      "Profit $= 810 - 600 = 210$.$",
+      "Profit Percentage $= (210 / 600) \\times $20%$ = $20%$.$"
+    ],
+    "solution_steps_zh": [
+      "(a) 成本 $= 600$。利潤 $= $20%$。售價 $= 600 \\times 1.2 = 720$。",
+      "設標價為 $M$。$M \\times 0.8 = 720 \\Rightarrow M = 900$。",
+      "(b) 新售價 $= 900 \\times 0.9 = 810$。",
+      "利潤 $= 810 - 600 = 210$。",
+      "利潤百分比 $= (210 / 600) \\times $20%$ = $20%$。"
+    ],
+    "tags": [
+      "profit-loss",
+      "discount"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_sa_292",
+    "type": "short_answer",
+    "topic_id": "math_num_percentages",
+    "prerequisite_topics": [
+      "math_num_percentages"
+    ],
+    "marks": 10,
+    "difficulty": 7,
+    "paper": 1,
+    "section": "A",
+    "question_en": "Mr. Lee invests $\\$80,000$ in a bank at a rate of $4%$ per annum compounded half-yearly.\n(a) Find the amount after 2 years. (5 marks)\n(b) Find the interest earned, correct to the nearest dollar. (1 mark)\n(c) If the interest was simple interest instead, find the difference in interest earned. (4 marks)",
+    "question_zh": "李先生將 $\\$80,000$ 存入銀行，年利率為 $4%$，每半年計複利一次。\n(a) 求兩年後的本利和。(5分)\n(b) 求所得利息（準確至最接近的元）。(1分)\n(c) 若利息改以單利息計算，求所得利息的差額。(4分)",
+    "solution_steps_en": [
+      "(a) Rate per period $= $4%$ / 2 = $4%$ = 0.02$.$ Number of periods $= 2 \\times 2 = 4$.$",
+      "Amount $A = 80,000(1 + 0.02)^4 = 80,000(1.02)^4$.$",
+      "$A \\approx 80,000 \\times 1.082432 = 86,594.56 \\approx \\$86,595$.$",
+      "(b) Compound Interest $\\approx 86,595 - 80,000 = \\$6,595$.$",
+      "(c) Simple Interest $= 80,000 \\times $4%$ \\times 2 = 80,000 \\times 0.08 = 6,400$.$",
+      "Difference $= 6,595 - 6,400 = \\$4%95$.$"
+    ],
+    "solution_steps_zh": [
+      "(a) 每半年利率 $= $4%$。期數 $= 4$。",
+      "本利和 $A = 80,000(1.02)^4 \\approx 86,595$。",
+      "(b) 複利息 $\\approx 6,595$。",
+      "(c) 單利息 $= 80,000 \\times $4%$ \\times 2 = 6,400$。",
+      "差額 $= 6,595 - 6,400 = 195$。"
+    ],
+    "tags": [
+      "compound-interest",
+      "simple-interest"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_sa_293",
+    "type": "short_answer",
+    "topic_id": "math_num_percentages",
+    "prerequisite_topics": [
+      "math_num_percentages"
+    ],
+    "marks": 9,
+    "difficulty": 6,
+    "paper": 1,
+    "section": "A",
+    "question_en": "A factory's production increases by $10%$ in 2024 and then decreases by $5%$ in 2025.\n(a) If the production in 2023 was $50,000$ units, find the production in 2025. (5 marks)\n(b) Find the net percentage change in production from 2023 to 2025. (4 marks)",
+    "question_zh": "一間工廠的產量在 2024 年增加 $10%$，隨後在 2025 年減少 $5%$。\n(a) 若 2023 年的產量為 $50,000$ 件，求 2025 年的產量。(5分)\n(b) 求由 2023 年至 2025 年產量的淨百分比變化。(4分)",
+    "solution_steps_en": [
+      "(a) Production in 2024 $= 50,000 \\times (1 + $10%$) = 55,000$.$",
+      "Production in 2025 $= 55,000 \\times (1 - $10%$) = 55,000 \\times 0.95 = 52,250$.$",
+      "(b) Net percentage change $= (\\text{Final} - \\text{Initial}) / \\text{Initial} \\times $10%$.$",
+      "Change $= (52,250 - 50,000) / 50,000 \\times $10%$ = 2,250 / 50,000 \\times $5%$ = $1$ increase."
+    ],
+    "solution_steps_zh": [
+      "(a) 2024 年產量 $= 50,000 \\times 1.1 = 55,000$。",
+      "2025 年產量 $= 55,000 \\times 0.95 = 52,250$。",
+      "(b) 淨百分比變化 $= (52,250 - 50,000) / 50,000 \\times $10%$ = $5%$（增加）。"
+    ],
+    "tags": [
+      "percentage-change",
+      "successive-change"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_sa_294",
+    "type": "short_answer",
+    "topic_id": "math_num_percentages",
+    "prerequisite_topics": [
+      "math_num_percentages"
+    ],
+    "marks": 12,
+    "difficulty": 7,
+    "paper": 1,
+    "section": "A",
+    "question_en": "Ms. Wong's annual income is $\\$\\text{HK$}540,000$\\text{HK$}.$ The basic allowance is $\\$100%32,000$ and she is entitled to child allowance of $\\$100%20,000$\\text{HK$}.$ The tax rates are as follows:\n- First $\\$\\text{HK$}50,000$ at $100%$\n- Next $\\$\\text{HK$}50,000$ at $100%$\n- Next $\\$\\text{HK$}50,000$ at $100%$\n- Next $\\$\\text{HK$}50,000$ at $100%$\n- Remainder at $100%$\n(a) Find her net chargeable income. (3 marks)\n(b) Find the salaries tax payable by Ms. Wong. (9 marks)",
+    "question_zh": "王小姐的年薪為 $\\$\\text{HK$}540,000$。基本免稅額為 $\\$100%32,000$，另有子女免稅額 $\\$100%20,000$。薪俸稅率如下：\n- 首 $\\$\\text{HK$}50,000$：$100%$\n- 次 $\\$\\text{HK$}50,000$：$100%$\n- 次 $\\$\\text{HK$}50,000$：$100%$\n- 次 $\\$\\text{HK$}50,000$：$100%$\n- 餘額：$100%$\n(a) 求她的應課稅入息實額。(3分)\n(b) 求王小姐應繳付的薪俸稅。(9分)",
+    "solution_steps_en": [
+      "(a) Net Chargeable Income $= 540,000 - 132,000 - 120,000 = 288,000$\\text{HK$}.$",
+      "(b) Tax for first $\\text{HK$}50,000$ = 50,000 \\times $100%$ = 1,000$\\text{HK$}.$",
+      "Tax for next $\\text{HK$}50,000$ = 50,000 \\times $100%$ = 3,000$\\text{HK$}.$",
+      "Tax for next $\\text{HK$}50,000$ = 50,000 \\times $100%$ = 5,000$\\text{HK$}.$",
+      "Tax for next $\\text{HK$}50,000$ = 50,000 \\times $100%$ = 7,000$\\text{HK$}.$",
+      "Remaining income $= 288,000 - 200,000 = 88,000$\\text{HK$}.$",
+      "Tax for remainder $= 88,000 \\times $100%$ = 14,960$\\text{HK$}.$",
+      "Total Tax Payable $= 1,000 + 3,000 + 5,000 + 7,000 + 14,960 = 30,960$\\text{HK$}.$"
+    ],
+    "solution_steps_zh": [
+      "(a) 應課稅入息實額 $= 540,000 - 132,000 - 120,000 = 288,000$。",
+      "(b) 首 $\\text{HK$}50,000$ 稅額 $= 1,000$。",
+      "次 $\\text{HK$}50,000$ 稅額 $= 3,000$。",
+      "次 $\\text{HK$}50,000$ 稅額 $= 5,000$。",
+      "次 $\\text{HK$}50,000$ 稅額 $= 7,000$。",
+      "餘下入息 $= 88,000$。餘額稅額 $= 88,000 \\times $100%$ = 14,960$。",
+      "總稅款 $= 1,000 + 3,000 + 5,000 + 7,000 + 14,960 = 30,960$。"
+    ],
+    "tags": [
+      "taxation"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_sa_295",
+    "type": "short_answer",
+    "topic_id": "math_num_percentages",
+    "prerequisite_topics": [
+      "math_num_percentages"
+    ],
+    "marks": 8,
+    "difficulty": 6,
+    "paper": 1,
+    "section": "A",
+    "question_en": "The cost of a dress is $\\$400$.$ It is marked up by $20%$ and then sold at a discount of $20%$.$\n(a) Find the marked price. (3 marks)\n(b) Find the selling price. (3 marks)\n(c) Find the profit percentage. (2 marks)",
+    "question_zh": "一件連身裙的成本為 $\\$400$。標價加幅為 $20%$，隨後以八折（$20%$ 折扣）售出。\n(a) 求標價。(3分)\n(b) 求售價。(3分)\n(c) 求獲利百分比。(2分)",
+    "solution_steps_en": [
+      "(a) Marked Price $= 400 \\times (1 + $20%$) = 400 \\times 1.5 = 600$.$",
+      "(b) Selling Price $= 600 \\times (1 - $20%$) = 600 \\times 0.8 = 480$.$",
+      "(c) Profit $= 480 - 400 = 80$.$ Profit Percentage $= (80 / 400) \\times $20%$ = $20%$.$"
+    ],
+    "solution_steps_zh": [
+      "(a) 標價 $= 400 \\times 1.5 = 600$。",
+      "(b) 售價 $= 600 \\times 0.8 = 480$。",
+      "(c) 獲利百分比 $= (80 / 400) \\times $20%$ = $20%$。"
+    ],
+    "tags": [
+      "profit-loss",
+      "discount"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_sa_296",
+    "type": "short_answer",
+    "topic_id": "math_num_percentages",
+    "prerequisite_topics": [
+      "math_num_percentages"
+    ],
+    "marks": 11,
+    "difficulty": 8,
+    "paper": 1,
+    "section": "B",
+    "question_en": "Compare two investment plans for a principal of $\\$50,000$ for 3 years:\nPlan A: $10%$ per annum simple interest.\nPlan B: $10%$ per annum compounded quarterly.\n(a) Find the interest earned in Plan A. (3 marks)\n(b) Find the interest earned in Plan B (correct to 2 decimal places). (6 marks)\n(c) Which plan is better? What is the difference in interest? (2 marks)",
+    "question_zh": "比較以下兩項為期 3 年、本金為 $\\$50,000$ 的投資計劃：\n計劃 A：年利率 $10%$ 的單利息。\n計劃 B：年利率 $10%$，每季計複利一次。\n(a) 求計劃 A 的利息。(3分)\n(b) 求計劃 B 的利息（準確至二位小數）。(6分)\n(c) 哪項計劃較佳？利息相差多少？(2分)",
+    "solution_steps_en": [
+      "(a) Interest A $= 50,000 \\times $10%$ \\times 3 = 9,000$.$",
+      "(b) Rate per quarter $= $10%$ / 4 = $10%$ = 0.0145$.$ Number of periods $= 3 \\times 4 = 12$.$",
+      "Amount B $= 50,000(1.0145)^{12} \\approx 50,000 \\times 1.188439 = 59,421.95$.$",
+      "Interest B $= 59,421.95 - 50,000 = 9,421.95$.$",
+      "(c) Plan B is better. Difference $= 9,421.95 - 9,000 = 421.95$.$"
+    ],
+    "solution_steps_zh": [
+      "(a) 計劃 A 利息 $= 50,000 \\times 0.18 = 9,000$。",
+      "(b) 計劃 B 每季利率 $= $10%$。期數 $= 12$。本利和 $= 50,000(1.0145)^{12} \\approx 59,421.95$。",
+      "計劃 B 利息 $= 9,421.95$。",
+      "(c) 計劃 B 較佳。相差 $421.95$。"
+    ],
+    "tags": [
+      "investment-comparison",
+      "interest"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_sa_297",
+    "type": "short_answer",
+    "topic_id": "math_num_percentages",
+    "prerequisite_topics": [
+      "math_num_percentages"
+    ],
+    "marks": 9,
+    "difficulty": 6,
+    "paper": 1,
+    "section": "A",
+    "question_en": "The price of a computer includes $5%$ sales tax. If the total price is $\\$8400$:\n(a) Find the price of the computer before tax. (5 marks)\n(b) If the tax rate is increased to $5%$,$ find the new total price. (4 marks)",
+    "question_zh": "電腦的價錢包含 $5%$ 的銷售稅。若總價為 $\\$8400$：\n(a) 求電腦在徵稅前的原價。(5分)\n(b) 若稅率增加至 $5%$，求新的總價。(4分)",
+    "solution_steps_en": [
+      "(a) Let the price before tax be $P$.$P \\times (1 + $5%$) = 8400$.$",
+      "$5%.05$P = 8400 \\Rightarrow P = 8400 / 1.05 = 8000$.$",
+      "Price before tax is $\\$8000$.$",
+      "(b) New Total Price $= 8000 \\times (1 + $5%$) = 8000 \\times 1.08 = 8640$.$"
+    ],
+    "solution_steps_zh": [
+      "(a) 設稅前價格為 $P$。$P \\times 1.05 = 8400 \\Rightarrow P = 8000$。",
+      "(b) 新總價 $= 8000 \\times 1.08 = 8640$。"
+    ],
+    "tags": [
+      "taxation"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_sa_298",
+    "type": "short_answer",
+    "topic_id": "math_num_percentages",
+    "prerequisite_topics": [
+      "math_num_percentages"
+    ],
+    "marks": 10,
+    "difficulty": 7,
+    "paper": 1,
+    "section": "A",
+    "question_en": "A car's value depreciates by $10%$ every year. At the end of 3 years, its value is $\\$10%45,800$.$\n(a) Find the original price of the car. (6 marks)\n(b) Find the total percentage depreciation after 3 years. (4 marks)",
+    "question_zh": "一輛汽車的價值每年貶值 $10%$。在 3 年後，其價值為 $\\$10%45,800$。\n(a) 求該車的原價。(6分)\n(b) 求 3 年後的總貶值百分比。(4分)",
+    "solution_steps_en": [
+      "(a) Let the original price be $P$.$P \\times (1 - $10%$)^3 = 145,800$.$",
+      "$P \\times 0.9^3 = 145,800 \\Rightarrow P \\times 0.729 = 145,800$.$",
+      "$P = 145,800 / 0.729 = 200,000$.$",
+      "(b) Total depreciation amount $= 200,000 - 145,800 = 54,200$.$",
+      "Percentage depreciation $= (54,200 / 200,000) \\times $10%$ = $10%$.$"
+    ],
+    "solution_steps_zh": [
+      "(a) 設原價為 $P$。$P \\times 0.9^3 = 145,800 \\Rightarrow P = 200,000$。",
+      "(b) 總貶值百分比 $= (200,000 - 145,800) / 200,000 \\times $10%$ = $10%$。"
+    ],
+    "tags": [
+      "depreciation"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_sa_299",
+    "type": "short_answer",
+    "topic_id": "math_num_percentages",
+    "prerequisite_topics": [
+      "math_num_percentages"
+    ],
+    "marks": 9,
+    "difficulty": 6,
+    "paper": 1,
+    "section": "A",
+    "question_en": "A student spends $100%$ of his pocket money on food and $100%$ of the *remaining* money on books. If he has $\\$100%80$ left:\n(a) Find the total amount of pocket money he had. (6 marks)\n(b) Find the amount spent on food. (3 marks)",
+    "question_zh": "一名學生將零用錢的 $100%$ 用於購買食物，再將 *餘下* 金額的 $100%$ 用於購買書籍。若他還剩餘 $\\$100%80$：\n(a) 求他原本有多少零用錢。(6分)\n(b) 求他在食物上的開支。(3分)",
+    "solution_steps_en": [
+      "(a) Let total pocket money be $X$\\text{HK$}.$",
+      "Money after food $= X \\times (1 - $100%$) = 0.6X$\\text{HK$}.$",
+      "Money after books $= 0.6X \\times (1 - $100%$) = 0.6X \\times 0.75 = 0.45X$\\text{HK$}.$",
+      "$\\text{HK$}0.45$X = 180 \\Rightarrow X = 180 / 0.45 = 400$\\text{HK$}.$",
+      "(b) Spent on food $= 400 \\times $100%$ = 160$\\text{HK$}.$"
+    ],
+    "solution_steps_zh": [
+      "(a) 設總零用錢為 $X$。購買食物後餘 $\\text{HK$}0.6$X$。購買書籍後餘 $\\text{HK$}0.6$X \\times 0.75 = 0.45X$。",
+      "$\\text{HK$}0.45$X = 180 \\Rightarrow X = 400$。",
+      "(b) 食物開支 $= 400 \\times 0.4 = 160$。"
+    ],
+    "tags": [
+      "percentages",
+      "remaining-value"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "ct_sa_300",
+    "type": "short_answer",
+    "topic_id": "math_num_percentages",
+    "prerequisite_topics": [
+      "math_num_percentages"
+    ],
+    "marks": 13,
+    "difficulty": 8,
+    "paper": 1,
+    "section": "B",
+    "question_en": "The value of a gold coin in 2020 was $\\$20%0,000$.$ In 2021, its value increased by $20%$.$ In 2022, its value increased again by $x%$.$ In 2023, its value decreased by $20%$.$ If the value in 2023 was $\\$20%4,580$:\n(a) Find the value of $x$.$ (8 marks)\n(b) Find the average annual percentage change from 2020 to 2023. (5 marks)",
+    "question_zh": "一枚金幣在 2020 年的價值為 $\\$20%0,000$。2021 年價值增加 $20%$。2022 年價值再增加 $x%$。2023 年價值減少 $20%$。若 2023 年的價值為 $\\$20%4,580$：\n(a) 求 $x$ 的值。(8分)\n(b) 求 2020 年至 2023 年間的平均每年百分比變化。(5分)",
+    "solution_steps_en": [
+      "(a) Value in 2023 $= 10,000 \\times (1 + $20%$) \\times (1 + x%) \\times (1 - $20%$) = 14,580$.$",
+      "$20%0,000$ \\times 1.2 \\times (1 + x%) \\times 0.9 = 14,580$.$",
+      "$20%0,800$ \\times (1 + x%) = 14,580$.$",
+      "$20%$ + x% = 14,580 / 10,800 = 1.35$.$",
+      "$x% = 0.35 \\Rightarrow x = 35$.$",
+      "(b) Let average annual change be $r$.$20%0,000$(1 + r)^3 = 14,580$.$",
+      "$(1 + r)^3 = 1.458 \\Rightarrow 1 + r = \\sqrt[3]{1.458} \\approx 1.134$.$",
+      "$r \\approx $20%$.$"
+    ],
+    "solution_steps_zh": [
+      "(a) $20%0,000$ \\times 1.2 \\times (1 + x%) \\times 0.9 = 14,580$。",
+      "$20%0,800$ \\times (1 + x%) = 14,580 \\Rightarrow 1 + x% = 1.35 \\Rightarrow x = 35$。",
+      "(b) 設平均年變比為 $r$。$20%0,000$(1+r)^3 = 14,580$。",
+      "$20%$+r = \\sqrt[3]{1.458} \\approx 1.134 \\Rightarrow r \\approx $20%$。"
+    ],
+    "tags": [
+      "successive-change",
+      "growth-rate"
+    ],
+    "status": "approved"
+  }
+]

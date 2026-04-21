@@ -166,6 +166,13 @@ const Sidebar = () => {
                                 alt="Student"
                                 className="w-full h-full object-cover scale-[1.35] translate-y-[5%]"
                             />
+                            {equipment.frame && (
+                                <img 
+                                    src={equipment.frame.image} 
+                                    alt="Frame" 
+                                    className="absolute inset-0 w-full h-full object-contain pointer-events-none scale-110 avatar-frame-mask z-10" 
+                                />
+                            )}
                         </div>
                         <p className="text-[10px] mt-1 font-bold text-orange-600 truncate w-20 mx-auto">{nickname}</p>
 
@@ -231,36 +238,38 @@ const Sidebar = () => {
             {/* --- AGENT SELECTION --- */}
             <div className="space-y-3">
                 <p className="text-xs font-bold text-[#a16b45] uppercase tracking-wider ml-2 opacity-60">{t('sidebar.your_mentors')}</p>
-                {Object.values(AGENTS).map((agentDef) => {
-                    const agent = getAgentIdentity(agentDef.id);
-                    return (
-                        <div
-                            key={agent.id}
-                            onClick={() => setActiveAgentId(agent.id)}
-                            className={cn(
-                                "flex items-center gap-3 p-3 rounded-2xl shadow-sm transition-all cursor-pointer border group",
-                                activeAgentId === agent.id
-                                    ? "bg-white dark:bg-white/10 border-primary shadow-md"
-                                    : "bg-white/40 dark:bg-white/5 border-transparent hover:bg-white dark:hover:bg-white/20 hover:border-primary/20"
-                            )}
-                        >
-                            <div className="size-10 rounded-full flex items-center justify-center overflow-hidden bg-white border border-black/5">
-                                <img
-                                    src={agent.avatar}
-                                    alt={agent.name}
-                                    className={cn("w-full h-full object-cover object-top transition-all", activeAgentId !== agent.id && "grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100")}
-                                />
+                {Object.values(AGENTS)
+                    .filter(agentDef => agentDef.id !== 'chinese')
+                    .map((agentDef) => {
+                        const agent = getAgentIdentity(agentDef.id);
+                        return (
+                            <div
+                                key={agent.id}
+                                onClick={() => setActiveAgentId(agent.id)}
+                                className={cn(
+                                    "flex items-center gap-3 p-3 rounded-2xl shadow-sm transition-all cursor-pointer border group",
+                                    activeAgentId === agent.id
+                                        ? "bg-white dark:bg-white/10 border-primary shadow-md"
+                                        : "bg-white/40 dark:bg-white/5 border-transparent hover:bg-white dark:hover:bg-white/20 hover:border-primary/20"
+                                )}
+                            >
+                                <div className="size-10 rounded-full flex items-center justify-center overflow-hidden bg-white border border-black/5">
+                                    <img
+                                        src={agent.avatar}
+                                        alt={agent.name}
+                                        className={cn("w-full h-full object-cover object-top transition-all", activeAgentId !== agent.id && "grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100")}
+                                    />
+                                </div>
+                                <div className="flex-1">
+                                    <p className="font-bold text-sm text-[#1d130c] dark:text-white leading-none">{agent.name}</p>
+                                    <p className="text-[10px] text-[#a16b45] mt-1">{t(`agents.${agent.id}.description`)}</p>
+                                </div>
+                                {activeAgentId === agent.id && (
+                                    <div className="size-2 bg-primary rounded-full animate-pulse shadow-[0_0_8px_rgba(var(--primary-rgb),0.5)]"></div>
+                                )}
                             </div>
-                            <div className="flex-1">
-                                <p className="font-bold text-sm text-[#1d130c] dark:text-white leading-none">{agent.name}</p>
-                                <p className="text-[10px] text-[#a16b45] mt-1">{t(`agents.${agent.id}.description`)}</p>
-                            </div>
-                            {activeAgentId === agent.id && (
-                                <div className="size-2 bg-primary rounded-full animate-pulse shadow-[0_0_8px_rgba(var(--primary-rgb),0.5)]"></div>
-                            )}
-                        </div>
-                    );
-                })}
+                        );
+                    })}
             </div>
 
 

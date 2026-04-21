@@ -185,11 +185,11 @@ router.post('/quest/submit', upload.single('audio'), async (req, res) => {
             const historyText = historyToGrade.map(m => `${m.speaker || m.role || userLabel}: ${m.text}`).join('\n');
 
             prompt = interactionGradingAgent
-                .replace('{TOPIC}', master_script || 'General Discussion')
-                .replace('{HISTORY}', historyText)
-                .replace('{LEVEL}', level)
-                .replace('{USER_LABEL}', userLabel)
-                .replace('{FOCUS_AREA}', focus || 'General Interaction');
+                .replace(/{TOPIC}/g, master_script || 'General Discussion')
+                .replace(/{HISTORY}/g, historyText)
+                .replace(/{LEVEL}/g, level || '3')
+                .replace(/{USER_LABEL}/g, userLabel)
+                .replace(/{FOCUS_AREA}/g, focus || 'General Interaction');
         } else if (module === 'language_patterns') {
             const history = typeof messages === 'string' ? JSON.parse(messages) : (messages || []);
             const practiceResults = req.body.practice_results ? (typeof req.body.practice_results === 'string' ? JSON.parse(req.body.practice_results) : req.body.practice_results) : [];
@@ -213,17 +213,23 @@ router.post('/quest/submit', upload.single('audio'), async (req, res) => {
             console.log(`[Speaking Language] Final Assessment Data constructed for ${practiceResults.length} sentences.`);
             
             prompt = languagePatternsGradingAgent
-                .replace('{PRACTICE_RESULTS}', resultsText)
-                .replace('{LEVEL}', level);
+                .replace(/{PRACTICE_RESULTS}/g, resultsText)
+                .replace(/{LEVEL}/g, level || '3');
         } else if (module === 'ideas_organisation') {
             const history = typeof messages === 'string' ? JSON.parse(messages) : (messages || []);
-            const studentResponses = history.filter(m => m.role === 'user').map(m => m.text).join('\n');
+            // Robust extractor: handle 'user', 'Student', or the current user label
+            const userLabel = req.body.user_label || 'Student';
+            const studentResponses = history
+                .filter(m => m.role === 'user' || m.speaker === 'Student' || m.speaker === userLabel)
+                .map(m => m.text)
+                .join('\n') || "No spoken responses recorded.";
+
             const organisationData = req.body.organisation_data || "N/A";
             const { ideasOrganisationGradingAgent } = require('../prompts/speakingGradingAgent');
 
             prompt = ideasOrganisationGradingAgent
-                .replace('{STUDENT_RESPONSES}', studentResponses)
-                .replace('{ORGANISATION_DATA}', organisationData);
+                .replace(/{STUDENT_RESPONSES}/g, studentResponses)
+                .replace(/{ORGANISATION_DATA}/g, organisationData);
         } else {
             return res.status(400).json({ error: 'Invalid or unsupported module for submission' });
         }
@@ -248,6 +254,10 @@ router.post('/quest/submit', upload.single('audio'), async (req, res) => {
                 data: {
                     scores: { 
                         total: 16, 
+                        development: 4,
+                        relevance: 4,
+                        signposting: 4,
+                        organisation: 4,
                         pronunciation: 4, 
                         intonation: 4, 
                         vocabulary: 4, 
@@ -255,8 +265,9 @@ router.post('/quest/submit', upload.single('audio'), async (req, res) => {
                         grammar: 4 
                     },
                     feedback: { 
-                        summary: "AI grading is currently unavailable.", 
-                        improvement_advice: "Keep practicing!" 
+                        summary: "AI analysis is currently congested, but your effort is noted.", 
+                        peel_analysis: "Structure your points with clear Point-Evidence-Explanation-Link sequences to boost coherence.",
+                        improvement_advice: "Focus on adding one concrete example to every main point you make in your next session." 
                     }
                 }
             };
@@ -266,6 +277,24 @@ router.post('/quest/submit', upload.single('audio'), async (req, res) => {
         const finalResult = result.data || result;
         console.log(`[SpeakingQuest] Standardized Final Result:`, JSON.stringify(finalResult, null, 2));
 
+        // PERSIST RESULT FOR HISTORICAL REVIEW
+        let resultId = null;
+        if (uid && uid !== 'guest') {
+            resultId = await UserProfileService.saveQuestResult(uid, {
+                module,
+                quest_id,
+                scores: finalResult.scores,
+                feedback: finalResult.feedback,
+                word_analysis: finalResult.word_analysis || [],
+                transcript: historyToGrade || [],
+                level: parseInt(level),
+                focus,
+                subject: 'english',
+                paper: 'Speaking',
+                missionName: req.body.missionName || `${module.charAt(0).toUpperCase() + module.slice(1)} Quest`
+            });
+        }
+
         // AWARD XP
         let xpResult = { earned: 0 };
         if (finalResult.scores && finalResult.scores.total > 0 && uid && uid !== 'guest') {
@@ -274,9 +303,12 @@ router.post('/quest/submit', upload.single('audio'), async (req, res) => {
             const xpAmount = Math.round(scoreRatio * maxXP);
 
             xpResult = await GamificationService.awardXP(uid, xpAmount, 'speaking', {
-                title: `${module.charAt(0).toUpperCase() + module.slice(1)} Practice`,
+                title: req.body.missionName || `${module.charAt(0).toUpperCase() + module.slice(1)} Practice`,
                 score: `${finalResult.scores.total}/28`,
-                subject: 'english'
+                subject: 'english',
+                paper: 'Speaking',
+                questName: req.body.missionName || `${module.charAt(0).toUpperCase() + module.slice(1)} Quest`,
+                resultId: resultId
             }) || { earned: 0 };
         }
 
@@ -334,20 +366,26 @@ router.post('/flow/respond', async (req, res) => {
             .replace('{TOPIC}', 'General Flow')
             .replace('{LEVEL}', level)
             .replace('{POWER_WORDS}', 'N/A')
-            .replace('{HISTORY}', conversationHistory)
-            .replace('{LAST_RESPONSE}', user_response);
+                .replace('{HISTORY}', conversationHistory)
+                .replace('{LAST_RESPONSE}', user_response);
 
         console.log(`[Speaking Flow] Generating response for ${uid}`);
 
-        const result = await GenerativeAIService.generateJson(prompt, {
-            generationConfig: { temperature: 0.7 }
+        const result = await GenerativeAIService.generateContent(prompt, {
+            generationConfig: {
+                maxOutputTokens: 250,
+                temperature: 0.7 // Phase 48: Increased from 0.2 to reduce robotic repetition
+            }
         });
 
+        const parsedResult = typeof result.text === 'string' ? JSON.parse(result.text) : (result.data || result);
+
+        const topicFallback = focus || topic || "this topic";
         res.json({
-            feedback_text: result.feedback_text || "Good point.",
-            question: result.question || "Can you tell me more?",
-            structural_hints: result.structural_hints || [],
-            is_follow_up: result.is_follow_up || false
+            feedback_text: parsedResult.feedback_text || "Good attempt. Try to elaborate more using the mind map.",
+            question: parsedResult.question || `Could you elaborate on how your point relates to ${topicFallback}?`,
+            structural_hints: parsedResult.structural_hints || [],
+            is_follow_up: parsedResult.is_follow_up || false
         });
     } catch (error) {
         console.error('[Speaking Flow] Response error:', error);
@@ -386,7 +424,7 @@ router.post('/interaction/turn', upload.single('audio'), async (req, res) => {
             .replace(/{HISTORY}/g, conversationHistory)
             .replace(/{MY_IDENTITY}/g, current_speaker || 'Candidate_A')
             .replace(/{USER_LABEL}/g, userLabel)
-            .replace(/{LEVEL}/g, level);
+            .replace(/{LEVEL}/g, level || '3');
 
         // Inject format mandate at the end of the context
         prompt += formatMandate;

@@ -3,7 +3,7 @@ import { Headphones, Timer, CheckCircle, AlertCircle, Send, Table as TableIcon, 
 import { useAuth } from '../../context/AuthContext';
 import AudioWaveform from '../utils/AudioWaveform';
 
-const DataSprintBoard = ({ questData, onComplete }) => {
+const DataSprintBoard = ({ questData, onComplete, userNotes }) => {
     const { user } = useAuth();
     const [answers, setAnswers] = useState({});
     const [isPlaying, setIsPlaying] = useState(false);
@@ -12,7 +12,7 @@ const DataSprintBoard = ({ questData, onComplete }) => {
     const [currentAudioSrc, setCurrentAudioSrc] = useState(null);
     const audioRef = React.useRef(null);
 
-    const sprintTasks = questData?.sprint_data?.tasks || questData?.sprint_data?.interactive_tasks || [];
+    const sprintTasks = questData?.sprint_data?.tasks || questData?.sprint_data?.interactive_tasks || questData?.tasks || [];
 
     // Cleanup audio on unmount
     useEffect(() => {
@@ -33,8 +33,10 @@ const DataSprintBoard = ({ questData, onComplete }) => {
                 (task.items || []).forEach((item, idx) => { cheatAnswers[`${task.id}_${idx}`] = item.answer; });
             } else if (task.type === 'MCQ_BATCH') {
                 (task.questions || []).forEach((q, idx) => { cheatAnswers[`${task.id}_${idx}`] = q.answer; });
+            } else if (task.type === 'FORM_FILLING') {
+                (task.fields || []).forEach((field, fIdx) => { cheatAnswers[`${task.id}_${fIdx}`] = field.answer; });
             } else {
-                cheatAnswers[task.id] = task.answer;
+                cheatAnswers[task.id] = task.correct_answer || task.answer;
             }
         });
         setAnswers(cheatAnswers);
@@ -63,6 +65,7 @@ const DataSprintBoard = ({ questData, onComplete }) => {
         if (t.type === 'TABLE') return acc + (t.rows?.length || 0);
         if (t.type === 'LIST') return acc + (t.items?.length || 0);
         if (t.type === 'MCQ_BATCH') return acc + (t.questions?.length || 0);
+        if (t.type === 'FORM_FILLING') return acc + (t.fields?.length || 0);
         return acc + 1;
     }, 0);
     const completedCount = Object.values(answers).filter(v => v && String(v).trim()).length;
@@ -153,10 +156,10 @@ const DataSprintBoard = ({ questData, onComplete }) => {
                     <div key={task.id} className={`${cardStyle} p-8 rounded-[2rem] border-2 transition-all duration-500`}>
                         <div className="flex items-center justify-between mb-8">
                             <div className="flex items-center gap-4">
-                                <span className={`w-10 h-10 rounded-xl flex items-center justify-center font-black transition-colors ${isCompleted ? 'bg-indigo-600 text-white' : 'bg-slate-100 text-slate-400'}`}>
+                                <span className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center font-black text-slate-400 text-sm">
                                     {idx + 1}
                                 </span>
-                                <h3 className="text-xl font-extrabold text-slate-800 tracking-tight">{task.label}</h3>
+                                <h3 className="text-xl font-extrabold text-slate-800 tracking-tight">{task.label || "Table Completion"}</h3>
                             </div>
                             {isCompleted && <CheckCircle size={24} className="text-emerald-500 animate-in zoom-in duration-300" />}
                         </div>
@@ -175,7 +178,7 @@ const DataSprintBoard = ({ questData, onComplete }) => {
                                             <td className="p-3">
                                                 <input 
                                                     type="text"
-                                                    placeholder={row.placeholder}
+                                                    placeholder={row.placeholder || "..."}
                                                     className="w-full bg-white border-2 border-slate-100 rounded-xl px-4 py-3 text-sm font-bold text-slate-900 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10 outline-none transition-all placeholder:text-slate-300"
                                                     value={answers[`${task.id}_${rIdx}`] || ""}
                                                     onChange={(e) => handleAnswer(`${task.id}_${rIdx}`, e.target.value)}
@@ -193,10 +196,10 @@ const DataSprintBoard = ({ questData, onComplete }) => {
                     <div key={task.id} className={`${cardStyle} p-8 rounded-[2rem] border-2 transition-all duration-500`}>
                         <div className="flex items-center justify-between mb-8">
                             <div className="flex items-center gap-4">
-                                <span className={`w-10 h-10 rounded-xl flex items-center justify-center font-black transition-colors ${isCompleted ? 'bg-indigo-600 text-white' : 'bg-slate-100 text-slate-400'}`}>
+                                <span className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center font-black text-slate-400 text-sm">
                                     {idx + 1}
                                 </span>
-                                <h3 className="text-xl font-extrabold text-slate-800 tracking-tight">{task.label}</h3>
+                                <h3 className="text-xl font-extrabold text-slate-800 tracking-tight">{task.label || "Key Point Extraction"}</h3>
                             </div>
                             {isCompleted && <CheckCircle size={24} className="text-emerald-500 animate-in zoom-in duration-300" />}
                         </div>
@@ -216,6 +219,114 @@ const DataSprintBoard = ({ questData, onComplete }) => {
                         </div>
                     </div>
                 );
+            case 'FORM_FILLING':
+                return (
+                    <div key={task.id} className={`${cardStyle} p-8 rounded-[2rem] border-2 transition-all duration-500`}>
+                        <div className="flex items-center justify-between mb-8">
+                            <div className="flex items-center gap-4">
+                                <span className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center font-black text-slate-400 text-sm">
+                                    {idx + 1}
+                                </span>
+                                <h3 className="text-xl font-extrabold text-slate-800 tracking-tight">{task.label || task.question || "Form Filing"}</h3>
+                            </div>
+                            {isCompleted && <CheckCircle size={24} className="text-emerald-500 animate-in zoom-in duration-300" />}
+                        </div>
+                        <div className="bg-slate-50 rounded-2xl p-8 border-2 border-slate-100/50">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
+                                {(task.fields || []).map((field, fIdx) => (
+                                    <div key={fIdx} className="space-y-2 group">
+                                        <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest block transition-colors group-focus-within:text-indigo-600">
+                                            {field.label}
+                                        </label>
+                                        <input 
+                                            type="text"
+                                            placeholder={field.placeholder || "..."}
+                                            className="w-full bg-white border-2 border-slate-100 rounded-xl px-4 py-3 text-sm font-bold text-slate-900 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/5 outline-none transition-all placeholder:text-slate-200"
+                                            value={answers[`${task.id}_${fIdx}`] || ""}
+                                            onChange={(e) => handleAnswer(`${task.id}_${fIdx}`, e.target.value)}
+                                        />
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                );
+            case 'MCQ':
+            case 'mc':
+                return (
+                    <div key={task.id} className={`${cardStyle} p-8 rounded-[3rem] border-2 transition-all duration-500 group`}>
+                        <div className="flex items-center justify-between mb-8">
+                            <div className="flex items-center gap-5">
+                                <span className="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center font-black text-slate-400">
+                                    {idx + 1}
+                                </span>
+                                <h3 className="text-xl font-black text-slate-800 leading-tight tracking-tight max-w-xl group-hover:text-indigo-600 transition-colors">
+                                    {task.question}
+                                </h3>
+                            </div>
+                            {isCompleted && <CheckCircle size={28} className="text-emerald-500 shrink-0" />}
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 ml-0 sm:ml-16">
+                            {(task.options || []).map((opt, oIdx) => {
+                                const optionLabel = typeof opt === 'string' ? (opt.includes(':') ? opt.split(':')[0].trim() : (opt.includes('.') && opt.length < 5 ? opt.split('.')[0].trim() : String.fromCharCode(65 + oIdx))) : String.fromCharCode(65 + oIdx);
+                                const optionText = typeof opt === 'string' ? (opt.includes(':') ? opt.split(':')[1].trim() : (opt.includes('.') && opt.length < 5 ? opt.split('.').slice(1).join('.').trim() : opt)) : opt;
+                                
+                                return (
+                                    <button
+                                        key={oIdx}
+                                        onClick={() => handleAnswer(task.id, optionLabel)}
+                                        className={`p-5 rounded-2xl border-2 text-left transition-all font-bold text-sm relative overflow-hidden group/btn
+                                            ${answers[task.id] === optionLabel
+                                                ? 'bg-indigo-600 border-indigo-600 text-white shadow-xl shadow-indigo-100 ring-4 ring-indigo-50' 
+                                                : 'bg-white border-slate-100 text-slate-600 hover:border-indigo-200 hover:bg-white'}
+                                        `}
+                                    >
+                                        <div className="flex items-center gap-4 relative z-10">
+                                            <span className={`w-8 h-8 rounded-xl flex items-center justify-center text-xs font-black transition-colors ${answers[task.id] === optionLabel ? 'bg-white/20' : 'bg-slate-50 text-slate-400 group-hover/btn:bg-indigo-50 group-hover/btn:text-indigo-600'}`}>
+                                                {optionLabel}
+                                            </span>
+                                            <span className="flex-1">{optionText}</span>
+                                        </div>
+                                        {answers[task.id] === optionLabel && (
+                                            <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/5 to-white/0 animate-shimmer" />
+                                        )}
+                                    </button>
+                                );
+                            })}
+                        </div>
+                    </div>
+                );
+            case 'GAP_FILL':
+            case 'SHORT_RESPONSE':
+                return (
+                    <div key={task.id} className={`${cardStyle} p-8 rounded-[3rem] border-2 transition-all duration-500`}>
+                        <div className="flex flex-col md:flex-row items-center gap-6">
+                            <div className="flex items-center gap-5 shrink-0">
+                                <span className={`w-12 h-12 rounded-2xl flex items-center justify-center font-black text-lg transition-all duration-500 shadow-xl ${isCompleted ? 'bg-indigo-600 text-white shadow-indigo-200' : 'bg-slate-50 text-slate-400'}`}>
+                                    {idx + 1}
+                                </span>
+                            </div>
+                            <div className="flex-1 space-y-4">
+                                <h3 className="text-xl font-black text-slate-800 leading-tight tracking-tight">
+                                    {task.question}
+                                </h3>
+                                <div className="relative group">
+                                    <input
+                                        type="text"
+                                        placeholder={task.type === 'GAP_FILL' ? "Complete the sentence..." : "Provide precise answer..."}
+                                        className="w-full bg-slate-50 border-2 border-slate-100 rounded-2xl p-5 text-slate-900 font-bold text-lg focus:outline-none focus:bg-white focus:border-indigo-500 focus:ring-8 focus:ring-indigo-500/5 transition-all placeholder:text-slate-200"
+                                        value={answers[task.id] || ''}
+                                        onChange={(e) => handleAnswer(task.id, e.target.value)}
+                                    />
+                                    <div className="absolute right-5 top-1/2 -translate-y-1/2 opacity-0 group-focus-within:opacity-100 transition-opacity">
+                                        <Zap size={20} className="text-indigo-200 fill-indigo-200" />
+                                    </div>
+                                </div>
+                            </div>
+                            {isCompleted && <CheckCircle size={28} className="text-emerald-500 shrink-0 hidden md:block" />}
+                        </div>
+                    </div>
+                );
             case 'MCQ_BATCH':
                 return (
                     <div key={task.id} className={`${cardStyle} p-8 rounded-[2rem] border-2 transition-all duration-500`}>
@@ -224,7 +335,7 @@ const DataSprintBoard = ({ questData, onComplete }) => {
                                 <span className={`w-10 h-10 rounded-xl flex items-center justify-center font-black transition-colors ${isCompleted ? 'bg-indigo-600 text-white' : 'bg-slate-100 text-slate-400'}`}>
                                     {idx + 1}
                                 </span>
-                                <h3 className="text-xl font-extrabold text-slate-800 tracking-tight">{task.label}</h3>
+                                <h3 className="text-xl font-extrabold text-slate-800 tracking-tight">{task.label || "Multiple Choice"}</h3>
                             </div>
                             {isCompleted && <CheckCircle size={24} className="text-emerald-500 animate-in zoom-in duration-300" />}
                         </div>
@@ -232,28 +343,31 @@ const DataSprintBoard = ({ questData, onComplete }) => {
                             {(task.questions || []).map((q, qIdx) => (
                                 <div key={qIdx} className="space-y-5">
                                     <p className="font-extrabold text-slate-800 flex gap-3 leading-snug">
-                                        <span className="text-indigo-400 shrink-0">Q{qIdx + 11}.</span> 
+                                        <span className="text-indigo-400 shrink-0">Q{qIdx + 1}.</span> 
                                         {q.question}
                                     </p>
                                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                        {(q.options || []).map((opt, oIdx) => (
-                                            <button
-                                                key={oIdx}
-                                                onClick={() => handleAnswer(`${task.id}_${qIdx}`, opt[0])}
-                                                className={`p-5 rounded-2xl border-2 text-left transition-all font-bold text-sm group
-                                                    ${answers[`${task.id}_${qIdx}`] === opt[0]
-                                                        ? 'bg-indigo-600 border-indigo-600 text-white shadow-lg shadow-indigo-900/20' 
-                                                        : 'bg-white border-slate-100 text-slate-600 hover:border-indigo-200 hover:bg-indigo-50/30'}
-                                                `}
-                                            >
-                                                <div className="flex items-center gap-3">
-                                                    <span className={`w-6 h-6 rounded-lg flex items-center justify-center text-[10px] font-black shadow-sm ${answers[`${task.id}_${qIdx}`] === opt[0] ? 'bg-white/20' : 'bg-slate-100 text-slate-400 group-hover:bg-indigo-100 group-hover:text-indigo-600'}`}>
-                                                        {opt[0]}
-                                                    </span>
-                                                    {opt.substring(3)}
-                                                </div>
-                                            </button>
-                                        ))}
+                                        {(q.options || []).map((opt, oIdx) => {
+                                            const label = opt[0];
+                                            return (
+                                                <button
+                                                    key={oIdx}
+                                                    onClick={() => handleAnswer(`${task.id}_${qIdx}`, label)}
+                                                    className={`p-5 rounded-2xl border-2 text-left transition-all font-bold text-sm group
+                                                        ${answers[`${task.id}_${qIdx}`] === label
+                                                            ? 'bg-indigo-600 border-indigo-600 text-white shadow-lg shadow-indigo-900/20' 
+                                                            : 'bg-white border-slate-100 text-slate-600 hover:border-indigo-200 hover:bg-indigo-50/30'}
+                                                    `}
+                                                >
+                                                    <div className="flex items-center gap-3">
+                                                        <span className={`w-6 h-6 rounded-lg flex items-center justify-center text-[10px] font-black shadow-sm ${answers[`${task.id}_${qIdx}`] === label ? 'bg-white/20' : 'bg-slate-100 text-slate-400 group-hover:bg-indigo-100 group-hover:text-indigo-600'}`}>
+                                                            {label}
+                                                        </span>
+                                                        {opt.substring(3)}
+                                                    </div>
+                                                </button>
+                                            );
+                                        })}
                                     </div>
                                 </div>
                             ))}
@@ -262,21 +376,21 @@ const DataSprintBoard = ({ questData, onComplete }) => {
                 );
             default:
                 return (
-                    <div key={task.id} className={`${cardStyle} p-8 rounded-[2rem] border-2 transition-all duration-500`}>
-                        <div className="flex items-start gap-4 mb-8">
-                            <span className={`flex-shrink-0 w-10 h-10 flex items-center justify-center font-black rounded-xl text-sm transition-colors ${isCompleted ? 'bg-indigo-600 text-white' : 'bg-slate-900 text-white'}`}>
+                    <div key={task.id} className={`${cardStyle} p-8 rounded-[3rem] border-2 transition-all duration-500`}>
+                        <div className="flex items-start gap-5">
+                            <span className={`flex-shrink-0 w-12 h-12 flex items-center justify-center font-black rounded-2xl text-xl transition-all duration-500 shadow-xl ${isCompleted ? 'bg-indigo-600 text-white shadow-indigo-200' : 'bg-slate-50 text-slate-400'}`}>
                                 {idx + 1}
                             </span>
-                            <h3 className="text-xl font-extrabold text-slate-800 leading-tight tracking-tight">{task.question}</h3>
-                        </div>
-                        <div className="ml-14">
-                            <input
-                                type="text"
-                                placeholder="Capture details precisely..."
-                                className="w-full bg-slate-50 border-2 border-slate-100 rounded-2xl p-5 text-slate-900 font-bold text-lg focus:outline-none focus:bg-white focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10 transition-all placeholder:text-slate-300"
-                                value={answers[task.id] || ''}
-                                onChange={(e) => handleAnswer(task.id, e.target.value)}
-                            />
+                            <div className="flex-1">
+                                <h3 className="text-xl font-black text-slate-800 leading-tight tracking-tight mb-6">{task.question}</h3>
+                                <input
+                                    type="text"
+                                    placeholder="Enter response..."
+                                    className="w-full bg-slate-50 border-2 border-slate-100 rounded-2xl p-5 text-slate-900 font-bold text-lg focus:outline-none focus:bg-white focus:border-indigo-500 focus:ring-8 focus:ring-indigo-500/5 transition-all placeholder:text-slate-200"
+                                    value={answers[task.id] || ''}
+                                    onChange={(e) => handleAnswer(task.id, e.target.value)}
+                                />
+                            </div>
                         </div>
                     </div>
                 );
@@ -356,10 +470,10 @@ const DataSprintBoard = ({ questData, onComplete }) => {
                                 <Clock size={22} className="text-indigo-400" />
                                 <span className="text-[10px] font-black text-slate-400 uppercase tracking-[0.3em]">Exam Remaining</span>
                             </div>
-                            <div className={`text-6xl font-black tabular-nums tracking-tighter mb-6 relative z-10 transition-colors duration-500 ${timeLeft < 60 ? 'text-rose-500 animate-pulse' : 'text-white'}`}>
+                            <div className={`text-7xl font-black tabular-nums tracking-tighter mb-4 relative z-10 transition-colors duration-500 ${timeLeft < 60 ? 'text-rose-500 animate-pulse' : 'text-white'}`}>
                                 {formatTime(timeLeft)}
                             </div>
-                            <div className="h-2 bg-white/10 rounded-full overflow-hidden relative z-10">
+                            <div className="h-1.5 bg-white/10 rounded-full overflow-hidden relative z-10">
                                 <div 
                                     className="h-full bg-indigo-500 transition-all duration-1000 shadow-[0_0_20px_rgba(99,102,241,0.5)]" 
                                     style={{ width: `${(timeLeft / 600) * 100}%` }}
@@ -372,11 +486,11 @@ const DataSprintBoard = ({ questData, onComplete }) => {
                             <div className="flex items-center justify-between mb-8">
                                 <div>
                                     <h3 className="font-black text-slate-900 uppercase tracking-widest text-xs mb-1">Audit Status</h3>
-                                    <p className="text-[10px] font-bold text-slate-400 uppercase tracking-tight">Real-time Task Completion</p>
+                                    <p className="text-[9px] font-black text-slate-300 uppercase tracking-widest">Real-time Task Completion</p>
                                 </div>
                                 <div className="text-right">
-                                    <span className="text-3xl font-black text-indigo-600 leading-none">
-                                        {completedCount}<span className="text-slate-200 text-sm mx-1">/</span>{totalFields}
+                                    <span className="text-4xl font-black text-indigo-600 leading-none flex items-center gap-2">
+                                        {completedCount} <span className="text-slate-200 text-lg font-bold">/</span> <span className="text-slate-400 text-3xl font-black">{totalFields}</span>
                                     </span>
                                 </div>
                             </div>
@@ -390,13 +504,26 @@ const DataSprintBoard = ({ questData, onComplete }) => {
                                 </div>
                             </div>
 
+                            {/* Rough Notes Display (From Step 2) */}
+                            {userNotes && (
+                                <div className="mb-10 animate-in fade-in slide-in-from-bottom-4 duration-700">
+                                    <div className="flex items-center gap-2 mb-3">
+                                        <ListChecks size={14} className="text-indigo-600" />
+                                        <h4 className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Phase 1: Your Notes</h4>
+                                    </div>
+                                    <div className="bg-amber-50/50 border border-amber-100/50 rounded-2xl p-5 font-mono text-xs text-slate-600 leading-relaxed max-h-[300px] overflow-y-auto whitespace-pre-wrap shadow-inner">
+                                        {userNotes}
+                                    </div>
+                                </div>
+                            )}
+
                             <button 
                                 onClick={handleSubmit}
                                 disabled={isSubmitting || completionRate < 50}
-                                className={`w-full py-6 rounded-[2rem] font-black text-xl transition-all flex items-center justify-center gap-3 shadow-2xl relative z-10
+                                className={`w-full py-6 rounded-[2.5rem] font-black text-xl transition-all flex items-center justify-center gap-3 shadow-2xl relative z-10
                                     ${completionRate >= 50 && !isSubmitting
-                                        ? 'bg-slate-900 text-white hover:bg-black hover:scale-[1.02] active:scale-95 shadow-slate-300' 
-                                        : 'bg-slate-100 text-slate-300 cursor-not-allowed shadow-none'}
+                                        ? 'bg-indigo-600 text-white hover:bg-indigo-500 hover:scale-[1.02] active:scale-95 shadow-indigo-200' 
+                                        : 'bg-slate-50 text-slate-200 cursor-not-allowed shadow-none border border-slate-100'}
                                 `}
                             >
                                 {isSubmitting ? (
@@ -405,11 +532,11 @@ const DataSprintBoard = ({ questData, onComplete }) => {
                                         Analyzing Patterns...
                                     </>
                                 ) : (
-                                    <><Send size={20} /> Finish Part A</>
+                                    <><Send size={20} className={completionRate >= 50 ? "fill-current" : ""} /> Finish Part A</>
                                 )}
                             </button>
                             
-                            <p className="mt-6 text-[10px] text-slate-400 text-center uppercase tracking-[0.2em] font-black italic opacity-60">
+                            <p className="mt-8 text-[9px] text-slate-300 text-center uppercase tracking-[0.2em] font-black opacity-60">
                                 Verify all fields before submission
                             </p>
                         </div>

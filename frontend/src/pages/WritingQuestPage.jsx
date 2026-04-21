@@ -101,6 +101,18 @@ const WritingQuestPage = () => {
                     }
                 }
 
+                // Priority 1.5: Weekly Quests
+                if (location.state?.isWeeklyQuest) {
+                    console.log("[WritingQuest] Loading Weekly Quest");
+                    const res = await fetch(`${API_URL}/api/lab/weekly/writing`);
+                    if (res.ok) {
+                        const data = await res.json();
+                        setQuestData(data);
+                        setStep('studio');
+                        return;
+                    }
+                }
+
                 // Priority 2: Direct Menu Navigation (Topic Factory)
                 if (menuTopic) {
                     const factoryData = {
@@ -112,20 +124,71 @@ const WritingQuestPage = () => {
                     };
                     setQuestData(factoryData);
                     setStep('studio');
+                    return;
                 } 
                 // Priority 3: Roadmap Data
                 else if (roadmapData) {
                     setQuestData(roadmapData);
                     if (roadmapData.id) localStorage.setItem('active_writing_quest_id', roadmapData.id);
                     setStep('studio');
+                    return;
                 }
-                // Priority 4: Refresh/Direct URL with ID
+                // Priority 4: Auto-Load for Roadmap/Micro-skills (Direct Landing)
+                const isAutoLoad = location.state?.isAutoLoad;
+                const autoGenre = location.state?.genre;
+                const taskId = location.state?.taskId;
+
+                if (isAutoLoad && autoGenre) {
+                    console.log(`[WritingQuest] Auto-loading random prompt for genre: ${autoGenre}`);
+                    
+                    const fetchWithFallback = async (genre) => {
+                        try {
+                            const res = await fetch(`${API_URL}/api/writing/format/${encodeURIComponent(genre)}`);
+                            if (res.ok) {
+                                const topics = await res.json();
+                                if (topics.length > 0) return topics;
+                            }
+                        } catch (e) { console.error(`Fetch failed for ${genre}`, e); }
+                        return null;
+                    };
+
+                    // Try requested genre, then fallback to canonical genres
+                    let topics = await fetchWithFallback(autoGenre);
+                    if (!topics && autoGenre !== 'Argumentative Essay') {
+                        console.log(`[WritingQuest] ${autoGenre} failed, trying fallback: Argumentative Essay`);
+                        topics = await fetchWithFallback('Argumentative Essay');
+                    }
+                    if (!topics && autoGenre !== 'Letter to the Editor') {
+                        console.log("[WritingQuest] Fallback failed, trying: Letter to the Editor");
+                        topics = await fetchWithFallback('Letter to the Editor');
+                    }
+
+                    if (topics && topics.length > 0) {
+                        const randomTopic = topics[Math.floor(Math.random() * topics.length)];
+                        const factoryData = {
+                            id: taskId || ('auto_' + Date.now()),
+                            title: randomTopic.title || `${autoGenre} Mission`,
+                            prompt: randomTopic.prompt,
+                            genre: autoGenre,
+                            isFactory: true
+                        };
+                        setQuestData(factoryData);
+                        localStorage.setItem('active_writing_quest_id', factoryData.id);
+                        setStep('studio');
+                        return;
+                    } else {
+                        throw new Error(`Could not find any topics for ${autoGenre} or fallback category.`);
+                    }
+                }
+
+                // Priority 5: Refresh/Direct URL with ID
                 else if (persistentId) {
                     const res = await fetch(`${API_URL}/api/writing/quest/${persistentId}`);
                     if (res.ok) {
                         const data = await res.json();
                         setQuestData(data);
                         setStep('studio');
+                        return;
                     } else {
                         // If ID fetch fails, we can't do much
                         throw new Error("Quest ID invalid on refresh");
@@ -227,40 +290,85 @@ const WritingQuestPage = () => {
         }
     };
 
-    const handleCheatInject = (level) => {
-        // 1. Try quest-specific hardcoded library
+    const handleCheatInject = async (level) => {
+        console.log(`[Cheat] Triggered Level ${level} injection.`, { questData, title });
+        
+        // 1. Immediate visual feedback
+        const targetTitle = questData?.title || title || 'Writing Challenge';
+        setTitle(`[Generating ${level}...] ${targetTitle}`);
+        setContent(`[Admin Intel: Contacting Ace-it AI to generate a Level ${level} masterpiece for "${targetTitle}"...\n\nPlease wait about 15-20 seconds for the magic to happen.]`);
+
+        // 2. Try quest-specific hardcoded library first
         if (cheatLibrary) {
-            // Attempt A: Direct ID match (Scenarios/Roadmap)
             let libEntry = questData?.id ? cheatLibrary[questData.id] : null;
 
-            // Attempt B: Title-based search (Factory Topics/Menu)
-            if (!libEntry && questData?.title) {
-                // Fuzzy match: Find key in library that matches the title
+            if (!libEntry && targetTitle) {
                 const scenarioTitlesMap = {
                     "The Rise of Deepfakes": "lte_001",
                     "Luxury vs. Living Space": "lte_002",
                     "'Mega-Event' Fatigue": "art_001",
                     "The Silver Economy": "art_002",
                     "AI Tutors in DSE Prep": "deb_001"
-                    // Add more if needed, but these are primary test cases
                 };
                 
-                const matchedId = scenarioTitlesMap[questData.title];
+                const matchedId = scenarioTitlesMap[targetTitle];
                 if (matchedId) libEntry = cheatLibrary[matchedId];
             }
 
             if (libEntry) {
                 const libContent = libEntry[level];
                 if (libContent && !libContent.startsWith('Error:')) {
-                    setTitle(`[Cheat ${level}] ${questData.title}`);
+                    setTitle(`[Cheat ${level}] ${targetTitle}`);
                     setContent(libContent);
-                    console.log(`[Cheat] Injected hardcoded Level ${level} for ${questData.id} via title/ID match.`);
+                    console.log(`[Cheat] Injected hardcoded Level ${level}`);
                     return;
                 }
             }
         }
+
+        // 3. Dynamic AI Generation
+        try {
+            console.log(`[Cheat] Fetching AI essay from backend...`);
+            const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+            
+            // Get Auth Token for completeness (though generate route is currently public)
+            let headers = { 'Content-Type': 'application/json' };
+            try {
+                const token = await user?.getIdToken();
+                if (token) headers['Authorization'] = `Bearer ${token}`;
+            } catch (authErr) {
+                console.warn("[Cheat] Failed to get auth token, proceeding as guest:", authErr);
+            }
+
+            const res = await fetch(`${API_URL}/api/writing/draft/generate`, {
+                method: 'POST',
+                headers: headers,
+                body: JSON.stringify({
+                    topic: targetTitle,
+                    textType: questData?.genre || 'Essay',
+                    level: level,
+                    points: [] 
+                })
+            });
+
+            if (res.ok) {
+                const data = await res.json();
+                if (data.essay_content && !data.essay_content.startsWith('Error:')) {
+                    setTitle(`[AI ${level}] ${targetTitle}`);
+                    setContent(data.essay_content);
+                    console.log(`[Cheat] Successfully generated Level ${level}`);
+                    return;
+                }
+                console.warn("[Cheat] Backend returned empty or error essay_content:", data);
+            } else {
+                const errorText = await res.text();
+                console.error("[Cheat] Backend error:", res.status, errorText);
+            }
+        } catch (err) {
+            console.error("[Cheat] AI Generation API call failed:", err);
+        }
         
-        // 2. Fallback to default simulations if library not loaded or scenario missing
+        // 4. Final Fallback to default simulations
         const simulations = {
             '5**': `In the silicon-scented corridors of the 21st century, the debate surrounding Artificial Intelligence (AI) has transitioned from science fiction to pedagogical reality...`,
             '5': `Artificial intelligence has become a major part of our world today, especially in the area of education...`,
@@ -268,9 +376,9 @@ const WritingQuestPage = () => {
         };
 
         const chosenContent = simulations[level] || simulations['5**'];
-        setTitle(`Simulated ${level} Draft: ${questData?.title || 'Untitled'}`);
+        setTitle(`[Sim ${level}] ${targetTitle}`);
         setContent(chosenContent);
-        console.warn(`[Cheat] Used fallback simulation for ${questData?.id || 'unknown'}`);
+        console.warn(`[Cheat] Reverted to simulation fallback.`);
     };
 
     if (step === 'loading') {

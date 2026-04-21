@@ -13,6 +13,22 @@ class UserProfileService {
         return admin.firestore();
     }
 
+    /**
+     * Deeply removes 'undefined' values from an object to prevent Firestore crashes.
+     */
+    cleanData(obj) {
+        if (!obj || typeof obj !== 'object') return obj;
+        const result = { ...obj };
+        Object.keys(result).forEach(key => {
+            if (result[key] === undefined) {
+                delete result[key];
+            } else if (result[key] !== null && typeof result[key] === 'object' && !Array.isArray(result[key])) {
+                result[key] = this.cleanData(result[key]);
+            }
+        });
+        return result;
+    }
+
     get usersCollection() {
         return this.db.collection('users');
     }
@@ -62,10 +78,10 @@ class UserProfileService {
                     equipped_student_avatar: 's_bookworm'
                 };
                 await this.usersCollection.doc(uid).set(defaultProfile);
-                
+
                 const stats = { xp: 0, level: 1, learningTime: 0 };
                 await this.usersCollection.doc(uid).collection('stats').doc('main').set(stats);
-                
+
                 const result = { ...defaultProfile, ...stats, uid };
                 CacheService.setDbCache(cacheKey, result);
                 return result;
@@ -74,9 +90,9 @@ class UserProfileService {
             const userData = userDoc.data();
             const stats = statsDoc.exists ? statsDoc.data() : { xp: 0, level: 1, learningTime: 0 };
 
-            const result = { 
-                ...userData, 
-                ...stats, 
+            const result = {
+                ...userData,
+                ...stats,
                 uid,
                 equipped_tutor: userData.equipped_tutor || 'default_janie',
                 equipped_student_avatar: userData.equipped_student_avatar || 's_bookworm',
@@ -129,13 +145,13 @@ class UserProfileService {
         // Initialize these if they don't exist
         const defaultTier = 'free';
         const defaultSubjects = ['english', 'maths'];
-        
+
         // We use set with merge: true, but for arrays/objects we might want to be careful.
         // If the user already has a tier, don't overwrite it with 'free' unless explicitly requested.
         // For a new profile, these will be set.
         profileUpdate.subscription_tier = data.subscription_tier || defaultTier;
         profileUpdate.subscribed_subjects = data.subscribed_subjects || defaultSubjects;
-        
+
         if (!data.active_devices) {
             profileUpdate.active_devices = []; // Array of {fingerprint, name, lastSeen}
         }
@@ -154,7 +170,7 @@ class UserProfileService {
 
         if (data.parent_email !== undefined) profileUpdate.parent_email = data.parent_email;
         if (data.parent_report_enabled !== undefined) profileUpdate.parent_report_enabled = data.parent_report_enabled;
-        
+
         // Only set default if not already present in payload AND not already in DB
         if (!data.hasOwnProperty('parent_report_enabled') && userData.parent_report_enabled === undefined) {
             profileUpdate.parent_report_enabled = false;
@@ -168,7 +184,8 @@ class UserProfileService {
         }
 
         try {
-            await this.usersCollection.doc(uid).set(profileUpdate, { merge: true });
+            const cleanProfile = this.cleanData(profileUpdate);
+            await this.usersCollection.doc(uid).set(cleanProfile, { merge: true });
 
             // Ensure stats doc exists
             const statsRef = this.usersCollection.doc(uid).collection('stats').doc('main');
@@ -206,9 +223,9 @@ class UserProfileService {
      */
     async awardXP(uid, amount, source = 'Activity') {
         if (!uid || uid === 'guest') return 0;
-        
+
         CacheService.invalidateUserDbCache(uid);
-        
+
         try {
             const statsRef = this.usersCollection.doc(uid).collection('stats').doc('main');
 
@@ -490,7 +507,7 @@ class UserProfileService {
      */
     async updateMathSkills(uid, skillUpdates, source = 'diagnostic', metadata = {}) {
         if (!uid || uid === 'guest') return;
-        
+
         CacheService.invalidateUserDbCache(uid);
 
         try {
@@ -677,12 +694,12 @@ class UserProfileService {
         if (!uid || uid === 'guest') return [];
         try {
             const normalizedSubject = subject.toLowerCase();
-            
+
             // Handle different history collection structures
             if (normalizedSubject === 'maths' || normalizedSubject === 'math') {
                 return this.getMathSkillHistory(uid, limit);
             }
-            
+
             // Default English/Other history structure
             const snapshot = await this.usersCollection.doc(uid)
                 .collection('progress').doc(normalizedSubject)
@@ -716,13 +733,22 @@ class UserProfileService {
     async saveChatMessage(uid, agentId, message) {
         if (!uid || uid === 'guest') return;
         try {
-            await this.usersCollection.doc(uid).collection('chat_history').add({
-                ...message,
+            console.log(`[UserProfileService] Attempting to save chat for UID: ${uid}, Agent: ${agentId}, Role: ${message.role}`);
+            const cleanMessage = this.cleanData(message);
+
+            // Ensure role is mapped correctly for Gemini compatibility
+            const dbRole = (cleanMessage.role === 'assistant' || cleanMessage.role === 'model') ? 'model' : 'user';
+
+            const docRef = await this.usersCollection.doc(uid).collection('chat_history').add({
+                ...cleanMessage,
+                role: dbRole,
                 agentId,
                 timestamp: admin.firestore.FieldValue.serverTimestamp()
             });
+            console.log(`[UserProfileService] ✅ Chat saved successfully with ID: ${docRef.id}`);
         } catch (error) {
-            console.error(`[UserProfileService] Error saving chat for ${uid}:`, error);
+            console.error(`[UserProfileService] ❌ Error saving chat for ${uid}:`, error);
+            throw error; // Propagate to router
         }
     }
 
@@ -743,24 +769,27 @@ class UserProfileService {
     }
 
     /**
-     * Get chat history for an agent (last 7 days).
+     * Get chat history for an agent.
      */
     async getChatHistory(uid, agentId) {
         if (!uid || uid === 'guest') return [];
 
+        console.log(`[UserProfileService] Fetching history for UID: ${uid}, Agent: ${agentId}`);
         try {
-            const sevenDaysAgo = new Date();
-            sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
-
+            // NOTE: Sorting by timestamp requires a composite index in Firestore for the where clause.
+            // If the index is missing, this query will throw an error.
+            // We fetch and then sort manually if needed to avoid index errors in dev.
             const snapshot = await this.usersCollection.doc(uid).collection('chat_history')
                 .where('agentId', '==', agentId)
                 .get();
+
+            console.log(`[UserProfileService] Found ${snapshot.size} history documents.`);
 
             const history = [];
             snapshot.docs.forEach(doc => {
                 const d = doc.data();
                 const ts = d.timestamp?.toDate() || new Date(0);
-                
+
                 // Legacy Fallback: combined document format { message, response }
                 if (d.message && d.response) {
                     history.push({
@@ -774,21 +803,20 @@ class UserProfileService {
                         content: d.response,
                         timestamp: new Date(ts.getTime() + 100)
                     });
-                } 
+                }
                 // Standard format: individual document per role { role, content }
-                else if (d.role && d.content) {
+                else if (d.role && (d.content !== undefined)) {
                     history.push({
-                        role: d.role === 'assistant' ? 'model' : d.role,
-                        content: d.content,
+                        role: (d.role === 'assistant' || d.role === 'model') ? 'model' : d.role,
+                        content: d.content || "",
                         timestamp: ts
                     });
                 }
             });
 
+            console.log(`[UserProfileService] Total processed history length: ${history.length}`);
             // Filter and Sort in Memory to avoid Index requirements
-            return history
-                .filter(m => m.timestamp >= sevenDaysAgo)
-                .sort((a, b) => a.timestamp - b.timestamp);
+            return history.sort((a, b) => a.timestamp - b.timestamp);
         } catch (error) {
             console.error(`[UserProfileService] Error fetching chat history for ${uid}:`, error);
             return [];
@@ -997,7 +1025,7 @@ class UserProfileService {
 
             const microSkills = data.microSkills || {};
             const existing = microSkills[skillId] || {};
-            
+
             // Initialization: Create skill structure if missing
             const skillData = {
                 level: typeof existing.level === 'number' ? existing.level : 1,
@@ -1014,14 +1042,14 @@ class UserProfileService {
             // 1. Calculate Session Result (1-7 scale for display)
             const sessionGrade = Math.round(accuracyToLevel(masteryScore / 100));
             const activityType = sessionDetails.type || 'Quest'; // 'Quest', 'Weekly', 'Mock'
-            
+
             // 2. Update History (Max 10)
             const historyEntry = {
                 grade: sessionGrade,
                 type: activityType,
                 date: new Date().toISOString()
             };
-            
+
             skillData.history.push(historyEntry);
             if (skillData.history.length > 10) {
                 skillData.history.shift(); // Remove oldest
@@ -1036,12 +1064,12 @@ class UserProfileService {
 
             // 4. Calculate Window Accuracy (based on history grades)
             const avgGrade = skillData.history.reduce((a, b) => a + b.grade, 0) / skillData.history.length;
-            const candidateLevel = Math.round(avgGrade); 
+            const candidateLevel = Math.round(avgGrade);
 
             // 5. Apply Difficulty Cap
-            const sessionDifficulty = sessionDetails.difficulty || 4; 
+            const sessionDifficulty = sessionDetails.difficulty || 4;
             const skillRules = DSE_SCORING.SUBJECT_RULES[subject]?.[skillId] || {};
-            
+
             // Writing and Speaking ignore difficulty caps (performance based)
             const isSkillBased = subject === 'english' && (skillId.startsWith('writing_') || skillId.startsWith('speaking_'));
             const useCap = isSkillBased ? false : (skillRules.useDifficultyCap ?? true);
@@ -1067,11 +1095,11 @@ class UserProfileService {
 
             // 7. OVERALL LEVEL CALCULATION (HKEAA WEIGHTED)
             let overallLevel = data.overall_level || 1;
-            
+
             if (subject === 'english') {
                 const { MICRO_SKILLS } = require('../constants/microSkills');
                 const paperAvgs = { reading: [], writing: [], listening: [], speaking: [] };
-                
+
                 // Group micro-skills by paper and calculate paper-wide averages
                 Object.keys(microSkills).forEach(sid => {
                     const paper = MICRO_SKILLS[sid]?.paper;
@@ -1083,8 +1111,8 @@ class UserProfileService {
                 const paperFinalLevels = {};
                 Object.entries(paperAvgs).forEach(([paper, levels]) => {
                     // Normalize: if a paper has NO data, it is treated as Level 1
-                    paperFinalLevels[paper] = levels.length > 0 
-                        ? (levels.reduce((a, b) => a + b, 0) / levels.length) 
+                    paperFinalLevels[paper] = levels.length > 0
+                        ? (levels.reduce((a, b) => a + b, 0) / levels.length)
                         : 1;
                 });
 
@@ -1092,7 +1120,7 @@ class UserProfileService {
                 console.log(`[UserProfileService] Recalculated English Grade: ${overallLevel} (R=${paperFinalLevels.reading.toFixed(1)}, W=${paperFinalLevels.writing.toFixed(1)}, L=${paperFinalLevels.listening.toFixed(1)}, S=${paperFinalLevels.speaking.toFixed(1)})`);
             } else if (subject === 'maths') {
                 const strandAvgs = { algebra: [], geometry: [], data: [] };
-                
+
                 Object.keys(microSkills).forEach(sid => {
                     const skillConfig = MATHS_MICRO_SKILLS[sid];
                     if (skillConfig) {
@@ -1271,9 +1299,9 @@ class UserProfileService {
 
         const profile = await this.getProfile(uid);
         const equippedTutorId = profile.equipped_tutor;
-        
+
         const cardPool = require('../data/card_pool.json');
-        
+
         // Subject normalization mapping
         const subjectMap = {
             'english': ['english'],
@@ -1339,9 +1367,17 @@ ${tutor.tone ? `**TONE & MANNER**: ${tutor.tone}` : ''}
      * Equip an item (tutor, avatar, or frame).
      */
     async equipItem(uid, itemId, slot) {
+        console.log(`[UserProfileService] equipItem Attempt: uid=${uid}, itemId=${itemId}, slot=${slot}`);
         if (!uid || !itemId || !slot) throw new Error("Missing parameters");
-        
-        const validSlots = ['equipped_tutor', 'equipped_student_avatar', 'equipped_frame'];
+
+        const validSlots = [
+            'equipped_tutor',
+            'equipped_tutor_english',
+            'equipped_tutor_maths',
+            'equipped_tutor_ace',
+            'equipped_student_avatar',
+            'equipped_frame'
+        ];
         if (!validSlots.includes(slot)) throw new Error("Invalid equipment slot");
 
         CacheService.invalidateUserDbCache(uid);
@@ -1351,6 +1387,93 @@ ${tutor.tone ? `**TONE & MANNER**: ${tutor.tone}` : ''}
         }, { merge: true });
 
         return { success: true };
+    }
+
+    /**
+     * Persist full Quest results for historical review.
+     */
+    async saveQuestResult(uid, resultData) {
+        if (!uid || uid === 'guest') return null;
+        try {
+            const resultRef = this.usersCollection.doc(uid).collection('quest_results').doc();
+            const resultId = resultRef.id;
+            await resultRef.set({
+                ...resultData,
+                resultId,
+                completedAt: admin.firestore.FieldValue.serverTimestamp()
+            });
+            console.log(`[UserProfileService] Quest result saved for ${uid}: ${resultId}`);
+            return resultId;
+        } catch (error) {
+            console.error(`[UserProfileService] Error saving quest result for ${uid}:`, error);
+            return null;
+        }
+    }
+
+    /**
+     * Retrieve a specific quest result.
+     */
+    async getQuestResult(uid, resultId) {
+        if (!uid || uid === 'guest' || !resultId) return null;
+        try {
+            const doc = await this.usersCollection.doc(uid).collection('quest_results').doc(resultId).get();
+            return doc.exists ? doc.data() : null;
+        } catch (error) {
+            console.error(`[UserProfileService] Error fetching quest result ${resultId}:`, error);
+            return null;
+        }
+    }
+
+    /**
+     * Cancel a user's subscription.
+     * Marks the account as cancelled but preserves the expiry date for access.
+     */
+    async cancelSubscription(uid) {
+        if (!uid || uid === 'guest') return;
+        CacheService.invalidateUserDbCache(uid);
+
+        await this.usersCollection.doc(uid).update({
+            subscription_status: 'cancelled',
+            updatedAt: admin.firestore.FieldValue.serverTimestamp()
+        });
+        return { success: true };
+    }
+
+    /**
+     * Delete a full user profile and all associated data.
+     * Complies with data deletion regulations.
+     */
+    async deleteUserProfile(uid) {
+        if (!uid || uid === 'guest') return;
+        CacheService.invalidateUserDbCache(uid);
+
+        const userRef = this.usersCollection.doc(uid);
+
+        // List of sub-collections to delete
+        const subCollections = [
+            'stats', 'progress', 'timeline', 'notebook',
+            'chat_history', 'inventory', 'quest_results'
+        ];
+
+        try {
+            // Delete sub-collections recursively
+            for (const collName of subCollections) {
+                const subCollRef = userRef.collection(collName);
+                const snapshot = await subCollRef.get();
+                if (snapshot.empty) continue;
+
+                const batch = this.db.batch();
+                snapshot.docs.forEach(doc => batch.delete(doc.ref));
+                await batch.commit();
+            }
+
+            // Finally delete the main user document
+            await userRef.delete();
+            return { success: true };
+        } catch (error) {
+            console.error(`[UserProfileService] Error deleting user profile for ${uid}:`, error);
+            throw error;
+        }
     }
 }
 

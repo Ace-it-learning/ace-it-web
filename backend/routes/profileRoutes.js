@@ -174,9 +174,18 @@ router.get('/redemption/collection', async (req, res) => {
 
         const userDoc = await admin.firestore().collection('users').doc(uid).get();
         const userData = userDoc.exists ? userDoc.data() : {};
-        const equippedTutor = userData.equipped_tutor || 'default_janie';
-        const equippedStudent = userData.equipped_student_avatar || 's_bookworm';
+        
+        // Load all possible equipment slots
+        const equippedStudent = userData.equipped_student_avatar || 's_aiden_v2';
         const equippedFrame = userData.equipped_frame || null;
+        
+        // Tutor slots per subject
+        const equippedTutors = {
+            english: userData.equipped_tutor_english || userData.equipped_tutor || 'default_janie',
+            maths: userData.equipped_tutor_maths || userData.equipped_tutor || 'default_matt',
+            ace: userData.equipped_tutor_ace || userData.equipped_tutor || 'default_ace',
+            general: userData.equipped_tutor_ace || userData.equipped_tutor || 'default_ace'
+        };
 
         const cardPool = require('../data/card_pool.json');
 
@@ -184,12 +193,17 @@ router.get('/redemption/collection', async (req, res) => {
             ...c, type: 'student', owned: !!ownedCards[c.id], equipped: equippedStudent === c.id, acquiredAt: ownedCards[c.id]?.acquiredAt || null
         }));
 
+        const isEquippedTutor = (card) => {
+            const slotValue = equippedTutors[card.subject] || equippedTutors.ace;
+            return slotValue === card.id;
+        };
+
         const tutorCards = cardPool.tutor_cards.map(c => ({
-            ...c, type: 'tutor', owned: !!ownedCards[c.id], equipped: equippedTutor === c.id, acquiredAt: ownedCards[c.id]?.acquiredAt || null
+            ...c, type: 'tutor', owned: !!ownedCards[c.id], equipped: isEquippedTutor(c), acquiredAt: ownedCards[c.id]?.acquiredAt || null
         }));
 
         const defaultTutors = cardPool.default_tutors.map(c => ({
-            ...c, type: 'tutor', owned: true, equipped: equippedTutor === c.id
+            ...c, type: 'tutor', owned: true, equipped: isEquippedTutor(c)
         }));
 
         const avatarFrames = cardPool.avatar_frames.map(c => ({
@@ -201,15 +215,12 @@ router.get('/redemption/collection', async (req, res) => {
         const seenTutors = new Set();
         
         allTutorCards.forEach(card => {
-            // Deduplicate by name + subject to avoid "Miss Janie" appearing twice
-            // but allow different mentors with different names.
-            const key = `${card.name}-${card.subject}`;
+            const key = `${card.id}`; // Simple ID based unique check
             if (!seenTutors.has(key)) {
                 uniqueTutors.push(card);
                 seenTutors.add(key);
             } else if (card.equipped) {
-                // If this specific instance is equipped, ensure the one in the list marks it as equipped
-                const existing = uniqueTutors.find(t => `${t.name}-${t.subject}` === key);
+                const existing = uniqueTutors.find(t => t.id === key);
                 if (existing) existing.equipped = true;
             }
         });

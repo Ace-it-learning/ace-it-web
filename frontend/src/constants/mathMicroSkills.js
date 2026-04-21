@@ -192,14 +192,16 @@ export const getSkillsByCategory = (category) => {
             'math_num_percentages', 'math_num_num_systems', 'math_num_ratio', 'math_num_inequalities',
             'math_alg_formulas', 'math_alg_polynomials', 'math_alg_quadratics', 'math_alg_functions',
             'math_alg_variations', 'math_alg_apgp', 'math_alg_log_exp', 'math_alg_complex_numbers',
-            'math_alg_indices'
+            'math_alg_indices', 'math_int_algebra'
         ],
         geometry: [
             'math_geo_rectilinear', 'math_geo_circles', 'math_geo_coord', 'math_geo_circle_eq',
-            'math_trig_ratios', 'math_trig_applications', 'math_geo_trig_func', 'math_mensuration'
+            'math_trig_ratios', 'math_trig_applications', 'math_geo_trig_func', 'math_mensuration',
+            'math_int_geometry', 'math_int_trig'
         ],
         data: [
-            'math_stat_probability', 'math_stat_counting', 'math_stat_measures', 'math_stat_charts'
+            'math_stat_probability', 'math_stat_counting', 'math_stat_measures', 'math_stat_charts',
+            'math_int_data'
         ]
     };
     return categories[category] || [];

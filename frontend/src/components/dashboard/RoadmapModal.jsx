@@ -2,14 +2,14 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import { useLanguage } from '../../context/LanguageContext';
-import { Lock, CheckCircle, Play, Map, Star, Clock, X, Trophy, Search, Sparkles, Zap, BookOpen, PenTool, Mic, MessageSquare, Layers, RefreshCcw, GraduationCap, Ear, ArrowRight, Calculator } from 'lucide-react';
+import { Lock, Compass, CheckCircle, Play, Map, Star, Clock, X, Trophy, Search, Sparkles, Zap, BookOpen, PenTool, Mic, MessageSquare, Layers, RefreshCcw, GraduationCap, Ear, ArrowRight, Calculator, Headphones } from 'lucide-react';
 import { useAvatar } from '../../context/AvatarContext';
-import { MICRO_SKILLS, getSkillName, getSkillDesc, getSkillOutcome } from '../../constants/microSkills';
-import { getMathSkillName } from '../../constants/mathMicroSkills';
+import { MICRO_SKILLS, getSkillName, getSkillDesc, getSkillOutcome, getPaperBySkill, getSkillsByPaper } from '../../constants/microSkills';
+import { getMathSkillName, getSkillsByCategory } from '../../constants/mathMicroSkills';
 import { calculateTier, getTierMetadata, getMasteryStats } from '../../utils/masteryUtils';
 
 const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
-    const { user } = useAuth();
+    const { user, profile } = useAuth();
     const { language, t } = useLanguage();
     const { activeAgentId } = useAvatar();
     const navigate = useNavigate();
@@ -26,6 +26,7 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
     const [listeningMissions, setListeningMissions] = useState([]);
     const [writingMissions, setWritingMissions] = useState([]);
     const [isWritingLoading, setIsWritingLoading] = useState(false);
+    const [weeklyTheme, setWeeklyTheme] = useState(null);
 
     // Fetch Listening/Writing Missions when filter is active
     useEffect(() => {
@@ -131,10 +132,24 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
         }
     };
 
+    const fetchWeeklyTheme = async () => {
+        try {
+            const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+            const res = await fetch(`${API_URL}/api/lab/weekly-theme`);
+            if (res.ok) {
+                const data = await res.json();
+                setWeeklyTheme(data);
+            }
+        } catch (error) {
+            console.warn("Failed to load weekly theme", error);
+        }
+    };
+
     useEffect(() => {
         if (user?.uid && isOpen) {
             fetchRoadmap();
             fetchUserSkills();
+            fetchWeeklyTheme();
         }
     }, [user, isOpen]);
 
@@ -172,6 +187,7 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
     const handleTaskClick = (task) => {
         console.log("RoadmapModal: Clicked Task", task);
         if (task.locked) return;
+        onClose(); // Close modal before processing navigation
 
         // Smart Navigation based on Task Type
         // 0. Specialized Challenge Check (Force redirect to dedicated pages)
@@ -182,14 +198,43 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
             return;
         }
 
-        if (task.type === 'LEARN' || task.type === 'PRACTICE' || task.type === 'WEEKLY_QUEST') {
+        if (task.type === 'LEARN' || task.type === 'PRACTICE' || task.type === 'WEEKLY_QUEST' || task.type === 'SPEAKING_CHALLENGE') {
             const topic = task.topic?.toLowerCase() || '';
             const skillId = task.id;
             const skillData = MICRO_SKILLS[skillId];
             const cluster = skillData?.cluster;
 
+            // REDIRECTION LOGIC FOR WEEKLY QUESTS
+            if (task.type === 'WEEKLY_QUEST' || topic.includes('weekly')) {
+                const targetLevel = task.level || '3';
+                const baseState = { isWeeklyQuest: true, level: targetLevel, topic: task.topic, taskId: task.id };
+                
+                if (topic.includes('reading')) {
+                    navigate(`/lab?topic=${task.topic}&level=${targetLevel}&taskId=${task.id}`, { state: baseState });
+                    return;
+                }
+                if (topic.includes('writing')) {
+                    navigate('/writing/quest', { state: { ...baseState, isAutoLoad: true } });
+                    return;
+                }
+                if (topic.includes('listening')) {
+                    navigate(`/listening/briefing/${task.id || 'weekly_listening'}`, { 
+                        state: { 
+                            ...baseState, 
+                            targetLevel: targetLevel,
+                            isNewSession: true 
+                        } 
+                    });
+                    return;
+                }
+                if (topic.includes('speaking')) {
+                    navigate('/speaking/quest/interaction', { state: { ...baseState } });
+                    return;
+                }
+            }
+
             // REDIRECTION LOGIC FOR SPEAKING
-            if (topic.includes('speaking') || skillId.startsWith('speaking_')) {
+            if (topic.includes('speaking') || (skillId && skillId.startsWith('speaking_'))) {
                 // Phase 26: Redirect foundation criteria to the Pillar Menu
                 const pillarMap = {
                     'speaking_delivery': 'criterion_a',
@@ -205,39 +250,71 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                     return;
                 }
 
-                // Handle Integrated simulation (direct route)
+                // Handle Integrated simulation (menu route)
                 if (skillId === 'speaking_groupDiscussion') {
-                    navigate('/speaking/quest/interaction?module=interaction&level=3&taskId=speaking_groupDiscussion', {
-                        state: { 
-                            topic: 'Group Discussion', 
-                            taskId: 'speaking_groupDiscussion',
-                            taskTitle: 'Part A Simulation: Group Discussion'
-                        }
+                    navigate('/speaking/menu', {
+                        state: { activePillar: 'discussion' }
                     });
                     return;
                 }
 
                 // Fallback for labs
-                navigate(`/lab?module=speaking&level=${task.level || '3'}&taskId=${task.id}`, {
+                navigate(`/lab?topic=${task.topic}&level=${task.level || '3'}&taskId=${task.id}`, {
                     state: { topic: task.topic, taskId: task.id }
                 });
                 return;
             }
 
-            // REDIRECTION LOGIC FOR WRITING (Genre Factory)
-            if (skillId.startsWith('writing_genre_')) {
-                // Navigate to Writing Briefing Page
-                const genreName = skillData?.en?.name || 'General Writing';
-                navigate(`/writing/briefing/${encodeURIComponent(genreName)}`, {
-                    state: {
-                        initialGenre: genreName,
-                        taskId: task.id
-                    }
+            // REDIRECTION LOGIC FOR WRITING (Excluding Weekly which uses /lab)
+            if ((skillId.startsWith('writing_') || topic.includes('writing')) && skillId !== 'weekly_writing' && topic !== 'writing_weekly') {
+                const targetLevel = task.level || currentLevel || '3';
+                
+                // Map Pillar skills to a valid scenario category (Genre keys from genre_prompts.json)
+                let genreName = skillData?.en?.name || 'Argumentative Essay';
+                
+                // Skill-to-Genre Logic Mapping
+                const genreMap = {
+                    'writing_content': 'Argumentative Essay',
+                    'writing_language': 'Feature Article',
+                    'writing_organization': 'Argumentative Essay',
+                    'weekly_writing': 'Argumentative Essay'
+                };
+                
+                if (genreMap[skillId]) {
+                    genreName = genreMap[skillId];
+                } else if (['Content', 'Language', 'Organization'].includes(genreName)) {
+                    genreName = 'Argumentative Essay';
+                }
+
+                navigate('/writing/quest', { 
+                    state: { 
+                        taskId: skillId, 
+                        level: targetLevel, 
+                        genre: genreName,
+                        xp: task.xp,
+                        isAutoLoad: true 
+                    } 
                 });
                 return;
             }
 
-            const targetLevel = task.level || '5';
+            // REDIRECTION LOGIC FOR LISTENING
+            if (skillId.startsWith('listening_')) {
+                const targetLevel = task.level || '3';
+                navigate(`/listening/briefing/${skillId}`, { 
+                    state: { 
+                        questId: skillId, 
+                        targetLevel: targetLevel,
+                        xp: task.xp,
+                        isNewSession: true
+                    } 
+                });
+                return;
+            }
+
+            const userGoalStr = localStorage.getItem('user_goal') || 'Level 4';
+            const userGoalNum = userGoalStr.match(/\d+/) ? userGoalStr.match(/\d+/)[0] : '4';
+            const targetLevel = task.level || userGoalNum;
             const params = new URLSearchParams({
                 topic: task.topic,
                 level: targetLevel,
@@ -312,27 +389,87 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
     // Helper: Calculate Aggregated Level for General Skills
     const getAggregatedLevel = (skillId) => {
         if (!skillId.endsWith('_general') && !skillId.startsWith('writing_genre_')) return userSkills[skillId]?.level || 0;
-
+        
         // If it's a genre or has its own level, use it
         if (userSkills[skillId]?.level) return userSkills[skillId].level;
 
         // Aggregate Writing Genres logic? Not needed for now as they are individual.
         if (skillId.startsWith('writing_genre_')) return userSkills[skillId]?.level || 0;
-
+        
         // Otherwise, aggregate from children (Speking logic)
         const cluster = MICRO_SKILLS[skillId]?.cluster;
         if (!cluster) return 0;
-
+        
         const children = Object.keys(MICRO_SKILLS).filter(k => MICRO_SKILLS[k].cluster === cluster && k !== skillId);
         if (children.length === 0) return 0;
-
+        
         const levels = children.map(k => userSkills[k]?.level || 0).filter(l => l > 0);
         if (levels.length === 0) return 0;
-
+        
         // Return average level
         return levels.reduce((a, b) => a + b, 0) / levels.length;
     };
 
+    const getMissionTitle = (skillId) => {
+        const MISSION_TITLES = {
+            'reading_inference': 'Decoding Hidden Meanings',
+            'listening_noteTaking': 'Strategic Note-Taking',
+            'speaking_pronunciationClarity': 'The Eloquent Voice',
+            'reading_vocabularyContext': 'Contextual Detective',
+            'speaking_activeListening': 'The Attentive Listener',
+            'speaking_interaction': 'Dynamic Discussion',
+            'reading_mainIdea': 'The Big Picture',
+            'writing_organization': 'Structural Masterclass',
+            'listening_factExtraction': 'The Precision Hunter'
+        };
+        
+        if (MISSION_TITLES[skillId]) return `Quest: ${MISSION_TITLES[skillId]}`;
+        
+        // Fallback: Clean up the skill name
+        return `Quest: ${getSkillName(skillId)}`;
+    };
+
+    const getPaperLevel = (paper) => {
+        const skills = getSkillsByPaper(paper.toLowerCase());
+        if (skills.length === 0) return 1;
+        const levels = skills.map(sid => userSkills[sid]?.level || 1);
+        return levels.reduce((a, b) => a + b, 0) / levels.length;
+    };
+
+    const getMathAreaLevel = (category) => {
+        const skills = getSkillsByCategory(category.toLowerCase());
+        if (skills.length === 0) return 1;
+        const levels = skills.map(sid => userSkills[sid]?.level || 1);
+        return levels.reduce((a, b) => a + b, 0) / levels.length;
+    };
+
+    const getWeakestSkillInCategory = (category, isMath = false) => {
+        const skills = isMath ? getSkillsByCategory(category.toLowerCase()) : getSkillsByPaper(category.toLowerCase());
+        if (skills.length === 0) return null;
+        
+        let weakest = skills[0];
+        let minLevel = userSkills[weakest]?.level || 1;
+        
+        skills.forEach(sid => {
+            const lvl = userSkills[sid]?.level || 1;
+            if (lvl < minLevel) {
+                minLevel = lvl;
+                weakest = sid;
+            }
+        });
+        
+        return { id: weakest, level: minLevel };
+    };
+
+    const handleOpenMastery = () => {
+        onClose();
+        if (!user) return;
+        if (activeAgentId === 'math') {
+            navigate('/maths/ability');
+        } else {
+            navigate('/english/mastery');
+        }
+    };
     const getSubjectInfo = () => {
         switch (activeAgentId) {
             case 'chinese':
@@ -422,92 +559,33 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                     <div className="flex-1 flex flex-col min-h-0 bg-slate-50/50">
                         {activeTab === 'WEEKLY' ? (
                             <div className="p-6 flex-1 overflow-y-auto custom-scrollbar">
-                                {/* Top 3 Radar Bottlenecks - Targeted Growth */}
-                                <div className="mb-6">
-                                    <div className="flex items-center gap-2 mb-4">
-                                        <Sparkles className="w-5 h-5 text-indigo-600" />
-                                        <h3 className="text-sm font-black text-slate-800 uppercase tracking-wider">Top 3 Radar Bottlenecks</h3>
-                                    </div>
-                                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                                        {(Object.entries(userSkills).filter(([id]) => id.includes('_') && 
-                                            ((activeAgentId === 'math' || activeAgentId === 'maths') ? id.startsWith('math_') : (!id.startsWith('writing_') && !id.startsWith('listening_')))
-                                        ).length > 0 
-                                            ? Object.entries(userSkills)
-                                                .filter(([id]) => id.includes('_') && 
-                                                    ((activeAgentId === 'math' || activeAgentId === 'maths') ? id.startsWith('math_') : (!id.startsWith('writing_') && !id.startsWith('listening_')))
-                                                )
-                                                .sort((a, b) => (a[1].level || 0) - (b[1].level || 0))
-                                                .slice(0, 3)
-                                            : ((activeAgentId === 'math' || activeAgentId === 'maths') 
-                                                ? [
-                                                    ['math_num_percentages', { level: 1 }],
-                                                    ['math_alg_quadratics', { level: 1 }],
-                                                    ['math_geo_circles', { level: 1 }]
-                                                  ]
-                                                : [
-                                                    ['reading_inference', { level: 1 }],
-                                                    ['reading_vocabularyContext', { level: 1 }],
-                                                    ['speaking_pronunciationClarity', { level: 1 }]
-                                                  ]
-                                              )
-                                        ).map(([id, skillData]) => {
-                                                const name = (activeAgentId === 'math' || activeAgentId === 'maths') ? (Math.getMathSkillName ? Math.getMathSkillName(id, language) : id) : getSkillName(id);
-                                                // Note: I need the math labels. I'll import getMathSkillName if not available or just use id.
-                                                // Actually getMathSkillName is imported above from mathMicroSkills.
-                                                const finalName = (activeAgentId === 'math' || activeAgentId === 'maths') 
-                                                    ? (typeof getMathSkillName === 'function' ? getMathSkillName(id, language) : id.replace('math_', '').replace('_', ' '))
-                                                    : getSkillName(id);
-                                                
-                                                const level = skillData.level || 1;
-                                                const isFallback = Object.keys(userSkills).length === 0;
-                                                return (
-                                                    <div
-                                                        key={`weak_${id}`}
-                                                        onClick={() => {
-                                                            if (activeAgentId === 'math' || activeAgentId === 'maths') {
-                                                                onClose();
-                                                                navigate(`/maths/learn/${id}`, {
-                                                                    state: { topic: id, level: '3', xp: 250 }
-                                                                });
-                                                            } else {
-                                                                handleTaskClick({ id: id, title: `Practice: ${finalName}`, topic: id, type: 'PRACTICE', xp: 200, level: String(Math.max(3, Math.min(5, Math.ceil(level)))) });
-                                                            }
-                                                        }}
-                                                        className="bg-white border-2 border-slate-100 hover:border-red-200 hover:shadow-lg p-5 rounded-2xl transition-all cursor-pointer relative overflow-hidden group"
-                                                    >
-                                                        <div className="absolute top-0 right-0 p-3 opacity-5 group-hover:opacity-10 transition-opacity">
-                                                            <Zap className="w-12 h-12 text-red-600" />
-                                                        </div>
-                                                        <div className="flex items-center gap-2 mb-2">
-                                                            <div className={`px-2 py-0.5 rounded text-[9px] font-black uppercase ${isFallback ? 'bg-indigo-50 text-indigo-600' : 'bg-red-50 text-red-600'}`}>
-                                                                {isFallback ? 'Recommended Start' : 'Urgent Mastery'}
-                                                            </div>
-                                                            <div className="px-2 py-0.5 bg-slate-100 text-slate-500 rounded text-[9px] font-bold">Level {level}</div>
-                                                        </div>
-                                                        <h4 className="font-bold text-slate-900 group-hover:text-red-600 transition-colors">{finalName}</h4>
-                                                        <p className="text-[10px] text-slate-500 mt-1">Practice this to eliminate the "dent" in your Radar chart.</p>
-                                                        <div className="mt-4 flex items-center justify-between">
-                                                            <span className="text-xs font-bold text-red-500">+250 XP</span>
-                                                            <Play className="w-4 h-4 text-slate-300 group-hover:text-red-500 transition-colors" />
-                                                        </div>
-                                                    </div>
-                                                );
-                                            })}
-                                    </div>
-                                </div>
-
                                 {/* Weekly Adaptive Quest Card */}
-                                <div className="mt-8 flex items-center gap-2 mb-4">
-                                    <Clock className="w-5 h-5 text-indigo-600" />
-                                    <h3 className="text-sm font-black text-slate-800 uppercase tracking-wider">Weekly Adaptive Quests</h3>
+                                <div className="flex items-center justify-between mb-4">
+                                    <div className="flex items-center gap-2">
+                                        <Clock className="w-5 h-5 text-indigo-600" />
+                                        <h3 className="text-sm font-black text-slate-800 uppercase tracking-wider">Weekly Challenge Quests</h3>
+                                    </div>
+                                    {weeklyTheme && (
+                                        <div className="px-3 py-1 bg-indigo-50 border border-indigo-100 rounded-full flex items-center gap-2 animate-in slide-in-from-right-4 duration-500">
+                                            <Sparkles className="w-3.5 h-3.5 text-indigo-600 animate-pulse" />
+                                            <span className="text-[11px] font-black text-indigo-700 uppercase tracking-tight">Theme: {weeklyTheme.theme}</span>
+                                        </div>
+                                    )}
                                 </div>
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-                                    {((activeAgentId === 'math' || activeAgentId === 'maths') 
+                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
+                                    {(activeAgentId === 'math' || activeAgentId === 'maths' 
                                         ? [
-                                            { id: 'weekly_math', topic: 'integrated_challenge', title: 'Weekly Integrated Challenge', icon: Calculator, color: 'from-orange-600 to-red-700', desc: 'Section B Integrated Mastery', type: 'MATH_CHALLENGE' },
-                                            { id: 'mock_teaser', topic: 'Maths Paper 2 (MCQ)', title: 'Mock Speed Drill', icon: Zap, color: 'from-blue-600 to-indigo-700', desc: 'Full-length Paper 2 Simulation', type: 'MOCK' }
+                                            { id: 'math_foundation', topic: 'math_alg_formulas', title: 'Section A1 Foundation', icon: Zap, color: 'from-emerald-600 to-teal-700', desc: 'Must-Win Core Basics', type: 'MATH_CHALLENGE', xp: 250 },
+                                            { id: 'math_standard', topic: 'math_alg_quadratics', title: 'Section A2 Mastery', icon: Layers, color: 'from-blue-600 to-indigo-700', desc: 'Standard Core Topics', type: 'MATH_CHALLENGE', xp: 250 },
+                                            { id: 'weekly_math', topic: 'integrated_challenge', title: 'Section B challenge', icon: Trophy, color: 'from-orange-600 to-red-700', desc: 'Integrated Level 5+ Mastery', type: 'MATH_CHALLENGE', xp: 250 },
+                                            { id: 'mock_teaser', topic: 'Maths Paper 2 (MCQ)', title: 'MCQ Speed Drill', icon: Clock, color: 'from-purple-600 to-indigo-700', desc: 'Paper 2 Speed & Tactics', type: 'MOCK', xp: 250 }
                                           ]
-                                        : []
+                                        : [
+                                            { id: 'weekly_reading', topic: 'reading_weekly', title: 'Reading Challenge', icon: BookOpen, color: 'from-indigo-600 to-blue-700', desc: weeklyTheme ? `Theme: ${weeklyTheme.theme}` : 'Paper 1 Comprehensive', type: 'WEEKLY_QUEST' },
+                                            { id: 'weekly_writing', topic: 'writing_weekly', title: 'Writing Challenge', icon: PenTool, color: 'from-emerald-600 to-teal-700', desc: weeklyTheme ? `Theme: ${weeklyTheme.theme}` : 'Paper 2 Opinion Piece', type: 'WEEKLY_QUEST' },
+                                            { id: 'weekly_listening', topic: 'listening_weekly', title: 'Listening Challenge', icon: Headphones, color: 'from-amber-600 to-orange-700', desc: weeklyTheme ? `Theme: ${weeklyTheme.theme}` : 'Paper 3 Strategic Capture', type: 'WEEKLY_QUEST' },
+                                            { id: 'weekly_speaking', topic: 'speaking_weekly', title: 'Speaking Challenge', icon: Mic, color: 'from-rose-600 to-pink-700', desc: weeklyTheme ? `Theme: ${weeklyTheme.theme}` : 'Paper 4 Group Discussion', type: 'SPEAKING_CHALLENGE', isDiscussion: true }
+                                          ]
                                     ).map((quest) => {
                                         return (
                                             <div
@@ -515,35 +593,172 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                                                 onClick={() => {
                                                     if (quest.type === 'MATH_CHALLENGE') {
                                                         onClose();
-                                                        navigate('/maths/lab', { state: { topic: 'integrated_challenge' } });
+                                                        navigate('/maths/lab', { state: { topic: quest.topic } });
+                                                    } else if (quest.isDiscussion) {
+                                                        onClose();
+                                                        navigate('/speaking/quest/interaction', { 
+                                                            state: { 
+                                                                topic: 'speaking_weekly',
+                                                                challengeType: 'weekly',
+                                                                level: '5'
+                                                            } 
+                                                        });
                                                     } else {
+                                                        const currentLevel = Math.max(3, Math.min(5, Math.ceil(getAggregatedLevel(quest.topic === 'writing_weekly' ? 'writing_genre_opinion' : quest.topic.replace('_weekly', '_general')) || 3)));
                                                         handleTaskClick({
                                                             id: quest.id,
                                                             type: quest.type,
                                                             topic: quest.topic,
                                                             title: quest.title,
-                                                            xp: 300,
-                                                            level: '5'
+                                                            xp: 250,
+                                                            level: String(currentLevel),
+                                                            isWriting: quest.id === 'weekly_writing' || quest.topic?.includes('writing'),
+                                                            isWeekly: true
                                                         });
                                                     }
                                                 }}
-                                                className={`p-5 rounded-2xl shadow-lg relative overflow-hidden cursor-pointer hover:scale-[1.02] active:scale-[0.98] transition-all group bg-gradient-to-br ${quest.color}`}
+                                                className={`p-5 h-[120px] rounded-2xl shadow-lg relative overflow-hidden cursor-pointer hover:scale-[1.02] active:scale-[0.98] transition-all group bg-gradient-to-br ${quest.color}`}
                                             >
                                                 <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2 group-hover:bg-white/10 transition-colors" />
-                                                <div className="relative z-10 flex items-center justify-between">
+                                                <div className="relative z-10 h-full flex flex-col justify-between">
                                                     <div className="flex items-center gap-4">
                                                         <div className="p-3 bg-white/15 backdrop-blur-sm rounded-xl border border-white/20">
                                                             <quest.icon className="w-6 h-6 text-white" />
                                                         </div>
                                                         <div>
                                                             <h4 className="font-bold text-white text-sm">{quest.title}</h4>
-                                                            <p className="text-[10px] text-white/70 italic">{quest.desc}</p>
+                                                            <p className="text-[10px] text-white/70 italic opacity-80">{quest.desc}</p>
                                                         </div>
+                                                    </div>
+                                                    <div className="flex items-center justify-between mt-auto">
+                                                        <span className="text-[10px] font-black text-white/90 bg-white/20 px-2 py-0.5 rounded-lg border border-white/20">
+                                                            +250 XP
+                                                        </span>
+                                                        <Play className="w-3 h-3 text-white/60 group-hover:text-white transition-colors" />
                                                     </div>
                                                 </div>
                                             </div>
                                         );
                                     })}
+                                </div>
+
+                                {/* Targeted Growth Strategy - Paper/Area Mastery Tracks */}
+                                <div className="mb-10">
+                                    <div className="flex items-center justify-between mb-6">
+                                        <div className="flex items-center gap-2">
+                                            <Sparkles className="w-6 h-6 text-indigo-600" />
+                                            <h3 className="line-clamp-1 font-black text-slate-800 uppercase tracking-widest">
+                                                Target Growth Strategy
+                                            </h3>
+                                        </div>
+                                        <button 
+                                            onClick={handleOpenMastery}
+                                            className="px-4 py-1.5 bg-cyan-50 text-[#00aeef] border border-cyan-100 rounded-full text-[10px] font-black uppercase tracking-wider flex items-center gap-2 hover:bg-[#00aeef] hover:text-white transition-all shadow-sm"
+                                        >
+                                            <Compass className="w-3 h-3" />
+                                            Detailed Ability Radar
+                                        </button>
+                                    </div>
+
+                                    <div className={`grid grid-cols-1 md:grid-cols-${(activeAgentId === 'math' || activeAgentId === 'maths') ? '3' : '2'} gap-4`}>
+                                        {(activeAgentId === 'math' || activeAgentId === 'maths' 
+                                            ? [
+                                                { id: 'algebra', label: 'Algebra Mastery', icon: Calculator, color: 'indigo' },
+                                                { id: 'geometry', label: 'Geometry & Trig', icon: Map, color: 'blue' },
+                                                { id: 'data', label: 'Data & Statistics', icon: Layers, color: 'emerald' }
+                                              ]
+                                            : [
+                                                { id: 'Reading', label: 'Reading (Paper 1)', icon: BookOpen, color: 'blue' },
+                                                { id: 'Writing', label: 'Writing (Paper 2)', icon: PenTool, color: 'emerald' },
+                                                { id: 'Listening', label: 'Listening (Paper 3)', icon: Headphones, color: 'amber' },
+                                                { id: 'Speaking', label: 'Speaking (Paper 4)', icon: Mic, color: 'rose' }
+                                              ]
+                                        ).map((track) => {
+                                            const level = (activeAgentId === 'math' || activeAgentId === 'maths') 
+                                                ? getMathAreaLevel(track.id) 
+                                                : getPaperLevel(track.id);
+                                            
+                                            // 0-7 scale to 0-100%
+                                            const progress = (level / 7) * 100;
+                                            const priority = getWeakestSkillInCategory(track.id, (activeAgentId === 'math' || activeAgentId === 'maths'));
+                                            const missionName = (activeAgentId === 'math' || activeAgentId === 'maths')
+                                                ? (priority ? (typeof getMathSkillName === 'function' ? getMathSkillName(priority.id, language) : priority.id) : 'All General Skills')
+                                                : (priority ? getSkillName(priority.id, language) : 'Foundations');
+
+                                            return (
+                                                <div key={track.id} className="bg-white rounded-3xl border border-slate-100 p-6 shadow-sm hover:shadow-md transition-shadow">
+                                                    <div className="flex items-center justify-between mb-4">
+                                                        <div className="flex items-center gap-3">
+                                                            <div className={`p-2 bg-${track.color}-50 rounded-xl`}>
+                                                                 <track.icon className={`w-5 h-5 text-${track.color}-600`} />
+                                                            </div>
+                                                            <span className="font-black text-slate-800 text-sm tracking-tight">{track.label}</span>
+                                                        </div>
+                                                        <span className={`text-xs font-black text-${track.color}-600 bg-${track.color}-50 px-2 py-0.5 rounded-lg border border-${track.color}-100`}>
+                                                            Level {level.toFixed(1)}
+                                                        </span>
+                                                    </div>
+
+                                                    {/* Progress Gauge */}
+                                                    <div className="w-full h-2 bg-slate-100 rounded-full overflow-hidden mb-5">
+                                                        <div 
+                                                            className={`h-full bg-gradient-to-r from-${track.color}-400 to-${track.color}-600 transition-all duration-1000`} 
+                                                            style={{ width: `${Math.max(10, progress)}%` }}
+                                                        />
+                                                    </div>
+
+                                                    {/* Priority Mission Action */}
+                                                    {priority && (() => {
+                                                        const targetLevel = String(Math.max(3, Math.min(5, Math.ceil(priority.level))));
+                                                        const stats = getMasteryStats(targetLevel);
+                                                        
+                                                        return (
+                                                            <div 
+                                                                onClick={(e) => {
+                                                                    e.stopPropagation();
+                                                                    onClose();
+                                                                    if (activeAgentId === 'math' || activeAgentId === 'maths') {
+                                                                        navigate(`/maths/learn/${priority.id}`, { 
+                                                                            state: { 
+                                                                                topic: priority.id, 
+                                                                                level: '3', 
+                                                                                xp: stats.xp,
+                                                                                isFactoryQuest: true
+                                                                            } 
+                                                                        });
+                                                                    } else {
+                                                                        handleTaskClick({ 
+                                                                            id: priority.id, 
+                                                                            title: `Boost: ${missionName}`, 
+                                                                            topic: priority.id, 
+                                                                            type: 'PRACTICE', 
+                                                                            xp: stats.xp, 
+                                                                            level: targetLevel
+                                                                        });
+                                                                    }
+                                                                }}
+                                                                className="flex items-center justify-between p-3 bg-slate-50 border border-slate-100 rounded-2xl group cursor-pointer hover:border-indigo-200 hover:bg-indigo-50/30 transition-all"
+                                                            >
+                                                                <div className="flex items-center gap-3">
+                                                                    <div className="p-2 bg-white rounded-lg shadow-xs group-hover:scale-110 transition-transform">
+                                                                        <Zap className="w-3 h-3 text-amber-500 fill-amber-500" />
+                                                                    </div>
+                                                                    <div>
+                                                                        <div className="text-[9px] font-black text-slate-400 uppercase tracking-widest mb-0.5">Priority Boost</div>
+                                                                        <div className="text-[11px] font-black text-slate-700 italic group-hover:text-indigo-600 transition-colors line-clamp-1">{missionName}</div>
+                                                                    </div>
+                                                                </div>
+                                                                <div className="flex items-center gap-2">
+                                                                    <span className="text-[9px] font-black text-indigo-600">+{stats.xp} XP</span>
+                                                                    <Play className="w-3 h-3 text-slate-300 group-hover:text-indigo-600 transition-colors" />
+                                                                </div>
+                                                            </div>
+                                                        );
+                                                    })()}
+                                                </div>
+                                            );
+                                        })}
+                                    </div>
                                 </div>
 
                                 {/* Tasks Grid */}
@@ -804,23 +1019,18 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                                                     const currentLevel = getAggregatedLevel(id);
                                                     const paper = id.split('_')[0];
 
-                                                    let targetLevel;
-                                                    if (currentLevel < 3) targetLevel = 3;
-                                                    else targetLevel = 5;
-
                                                     const outcome = getSkillOutcome(id, language);
                                                     const isPracticed = practicedSkills.includes(id) || practicedSkills.includes(name);
-
                                                     const isIntegrated = MICRO_SKILLS[id]?.isIntegrated;
+
+                                                    const skillLevel = getAggregatedLevel(id);
+                                                    const levelToUse = (paper === 'reading' && selectedLevels[id]) ? selectedLevels[id] : (paper === 'listening' ? '5' : (activeTab === 'CHALLENGE' ? '7' : (skillLevel < 3.5 ? '3' : skillLevel < 5.0 ? '4' : '5')));
+                                                    const stats = getMasteryStats(Number(levelToUse), false, false);
 
                                                     return (
                                                         <div
                                                             key={id}
                                                             onClick={() => {
-                                                                const skillLevel = getAggregatedLevel(id);
-                                                                const levelToUse = paper === 'listening' ? '5' : (selectedLevels[id] || (activeTab === 'CHALLENGE' ? '7' : (skillLevel < 3.5 ? '3' : skillLevel < 5.0 ? '4' : '5')));
-                                                                const stats = getMasteryStats(Number(levelToUse), false, false);
-
                                                                 handleTaskClick({
                                                                     id: id,
                                                                     title: `${activeTab === 'CHALLENGE' ? 'Integrated' : 'Practice'}: ${name}`,
@@ -861,18 +1071,36 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                                                                 {desc || "Master this skill to excel in HKDSE English."}
                                                             </p>
 
-                                                            <div className={`pt-3 border-t mt-auto ${isIntegrated ? 'border-white/10' : 'border-slate-50'}`}>
-                                                                <div className="flex items-center justify-between mb-2">
-                                                                    <div className="flex items-center gap-2">
-                                                                            <div className={`px-2 py-0.5 rounded text-[10px] font-bold flex items-center gap-1.5 ${isIntegrated ? 'bg-white/20 text-white' : 'bg-slate-100 text-slate-500 uppercase tracking-wide'}`}>
-                                                                                {isPracticed ? <RefreshCcw className="w-2.5 h-2.5" /> : <Play className="w-2.5 h-2.5" />}
-                                                                                {isIntegrated ? 'Simulate exam' : isPracticed ? 'Continue Training' : 'Start Training'}
+                                                                <div className={`pt-3 border-t mt-auto ${isIntegrated ? 'border-white/10' : 'border-slate-50'}`}>
+                                                                    <div className="flex items-center justify-between mb-2">
+                                                                        <div className="flex items-center gap-2">
+                                                                                <div className={`px-2 py-0.5 rounded text-[10px] font-bold flex items-center gap-1.5 ${isIntegrated ? 'bg-white/20 text-white' : 'bg-slate-100 text-slate-500 uppercase tracking-wide'}`}>
+                                                                                    {isPracticed ? <RefreshCcw className="w-2.5 h-2.5" /> : <Play className="w-2.5 h-2.5" />}
+                                                                                    {isIntegrated ? 'Simulate exam' : isPracticed ? 'Continue Training' : 'Start Training'}
+                                                                                </div>
+                                                                        </div>
+                                                                        <div className="flex flex-col items-end gap-1">
+                                                                            <div className="text-[10px] font-bold text-amber-600">
+                                                                                +{getMasteryStats(Number(levelToUse), false, false).xp} XP
                                                                             </div>
+                                                                            {paper === 'reading' && !isIntegrated && (
+                                                                                <select
+                                                                                    value={levelToUse}
+                                                                                    onClick={(e) => e.stopPropagation()}
+                                                                                    onChange={(e) => {
+                                                                                        e.stopPropagation();
+                                                                                        setSelectedLevels(prev => ({ ...prev, [id]: e.target.value }));
+                                                                                    }}
+                                                                                    className="text-[9px] font-bold bg-slate-50 border border-slate-200 rounded px-1 py-0.5 outline-none focus:ring-1 focus:ring-amber-500/30 transition-all cursor-pointer hover:bg-white"
+                                                                                >
+                                                                                    <option value="3">Easy</option>
+                                                                                    <option value="4">Medium</option>
+                                                                                    <option value="5">DSE Standard</option>
+                                                                                    <option value="7">Elite</option>
+                                                                                </select>
+                                                                            )}
+                                                                        </div>
                                                                     </div>
-                                                                    <div className="text-[10px] font-bold text-amber-600">
-                                                                        +{getMasteryStats(Number(selectedLevels[id] || targetLevel), false, false).xp} XP
-                                                                    </div>
-                                                                </div>
 
                                                                 <div className="flex items-center justify-between">
                                                                     <div className="flex items-center gap-1.5 text-[10px] text-slate-400 italic">

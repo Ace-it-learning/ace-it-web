@@ -46,6 +46,7 @@ const ListeningQuestMenu = () => {
 
     const [missions, setMissions] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [selectedLevel, setSelectedLevel] = useState('all');
 
     useEffect(() => {
         const fetchMissions = async () => {
@@ -96,10 +97,28 @@ const ListeningQuestMenu = () => {
             </header>
 
             <div className="max-w-5xl mx-auto mb-12">
-                <h2 className="text-xl font-bold text-slate-800 mb-4 flex items-center gap-2">
-                    <Target size={20} className="text-indigo-600" />
-                    Available Missions
-                </h2>
+                <div className="flex items-center justify-between mb-4">
+                    <h2 className="text-xl font-bold text-slate-800 flex items-center gap-2">
+                        <Target size={20} className="text-indigo-600" />
+                        Available Missions
+                    </h2>
+                    
+                    <div className="flex items-center gap-3">
+                        <span className="text-xs font-bold text-slate-400 uppercase tracking-widest hidden sm:inline">Difficulty:</span>
+                        <select 
+                            value={selectedLevel}
+                            onChange={(e) => setSelectedLevel(e.target.value)}
+                            className="bg-white border border-slate-200 rounded-lg px-3 py-1.5 text-xs font-bold text-slate-700 outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all cursor-pointer"
+                        >
+                            <option value="all">ALL LEVELS</option>
+                            <option value="3">Level 3</option>
+                            <option value="4">Level 4</option>
+                            <option value="5">Level 5</option>
+                            <option value="6">Level 5*</option>
+                            <option value="7">Level 5**</option>
+                        </select>
+                    </div>
+                </div>
                 {missions.length === 0 ? (
                     <div className="bg-white p-6 rounded-xl border border-dashed border-slate-300 text-center text-slate-500">
                         {loading ? (
@@ -113,7 +132,9 @@ const ListeningQuestMenu = () => {
                     </div>
                 ) : (
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                        {missions.map(mission => (
+                        {missions
+                            .filter(m => selectedLevel === 'all' || String(m.level) === selectedLevel)
+                            .map(mission => (
                             <div
                                 key={mission.id}
                                 onClick={() => handleStartMission(mission)}

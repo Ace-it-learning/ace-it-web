@@ -68,3 +68,17 @@
 * **Functional Components:** Use const `Component = () => {}`.
 * **Error Boundaries:** Every major module (Speaking, Writing) must be wrapped in a specific Error Boundary so a crash doesn't kill the whole app.
 * **Comments:** When writing complex logic (especially the "Intent Router"), add JSDoc comments explaining *why*, not just *what*.
+
+## 6. BILLING & API SAFETY
+* **Vertex AI Prohibited in DEV:** You are STRICTLY FORBIDDEN from initializing or using Vertex AI (Google Cloud billing) for any development, testing, or batch generation tasks.
+* **Mandatory AI Studio Usage:** All AI features must be routed through the Google AI Studio (API Key) path in the development environment.
+* **Environment Safeguard:** Ensure `USE_AI_STUDIO_IN_PROD=true` is set in the local `.env` whenever performing heavy generation tasks to prevent accidental SKU switches.
+* **Model ID Hygiene:** Never use experimental model IDs (e.g., 2.5, 3.1) unless they have been explicitly verified against the project's AI Studio "Available Models" list. Use stable aliases like `gemini-pro-latest` or `gemini-flash-latest` by default.
+
+## 7. TOKEN OPTIMIZATION (THE "SKIP_TOKEN_TAX" PROTOCOL)
+* **Knowledge Index First**: Before deep browsing the project, I will refer to `PROJECT_INDEX.md` and my internal Knowledge Items to understand the architecture.
+* **Direct File Access**: I will use `grep_search` and `view_file` with specific line ranges to minimize context window bloat.
+* **Forbidden Discovery**: I will NEVER search or index the following directories unless explicitly instructed:
+    * `backend/backups/`, `backend/scratch/`, `backend/scripts/`.
+    * Root scripts matching `fix_*.js`, `test_*.js`, `check_*.js`.
+* **Structural Prompts**: I will rely on the `prompt_map` (located in Knowledge Items) rather than reading large prompt config files in every turn.

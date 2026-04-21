@@ -4,10 +4,10 @@
 
 export const MASTERY_TIERS = {
     0: { id: 'mixed', label: 'Adaptive Blending', zh: '自適應練習', color: 'bg-indigo-500 text-white border-indigo-600 shadow-lg shadow-indigo-500/20', xp: 150, desc: 'Scientifically scaffolded progression' },
-    1: { id: 'easy', label: 'Easy', zh: '基礎', color: 'bg-emerald-100 text-emerald-700 border-emerald-200', xp: 50, desc: 'DSE Level 2-3 · Foundation & Core Concepts' },
-    2: { id: 'medium', label: 'Medium', zh: '進階', color: 'bg-amber-100 text-amber-700 border-amber-200', xp: 75, desc: 'DSE Level 4 · Exam Readiness & Application' },
-    3: { id: 'dse', label: 'DSE Standard', zh: 'DSE 水平', color: 'bg-indigo-100 text-indigo-700 border-indigo-200', xp: 100, desc: 'DSE Level 5 · Full HKDSE Exam Standard' },
-    4: { id: 'elite', label: 'Elite Challenge', zh: '精英挑戰', color: 'bg-rose-100 text-rose-700 border-rose-200 shadow-sm shadow-rose-100', xp: 150, desc: 'DSE Level 5*/5** · Elite Performance' }
+    1: { id: 'easy', label: 'Easy', zh: '基礎', color: 'bg-emerald-100 text-emerald-700 border-emerald-200', xp: 80, desc: 'DSE Level 2-3 · Foundation & Core Concepts' },
+    2: { id: 'medium', label: 'Medium', zh: '進階', color: 'bg-amber-100 text-amber-700 border-amber-200', xp: 110, desc: 'DSE Level 4 · Exam Readiness & Application' },
+    3: { id: 'dse', label: 'DSE Standard', zh: 'DSE 水平', color: 'bg-indigo-100 text-indigo-700 border-indigo-200', xp: 140, desc: 'DSE Level 5 · Full HKDSE Exam Standard' },
+    4: { id: 'elite', label: 'Elite Challenge', zh: '精英挑戰', color: 'bg-rose-100 text-rose-700 border-rose-200 shadow-sm shadow-rose-100', xp: 200, desc: 'DSE Level 5*/5** · Elite Performance' }
 };
 
 /**

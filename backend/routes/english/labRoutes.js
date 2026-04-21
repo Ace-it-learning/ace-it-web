@@ -2,7 +2,45 @@ const express = require('express');
 const router = express.Router();
 const LabService = require('../../services/LabService');
 const GamificationService = require('../../services/GamificationService');
+const fs = require('fs');
+const path = require('path');
 const UserProfileService = require('../../services/UserProfileService');
+
+// GET /api/lab/weekly-theme
+router.get('/weekly-theme', async (req, res) => {
+    try {
+        const d = new Date();
+        d.setHours(0, 0, 0, 0);
+        d.setDate(d.getDate() + 4 - (d.getDay() || 7));
+        const weekNum = Math.ceil((((d - new Date(d.getFullYear(), 0, 1)) / 8.64e7) + 1) / 7);
+        const weekKey = `2026_${weekNum}`;
+
+        const metaPath = path.join(__dirname, '..', '..', 'data', 'weekly_quests', 'weekly_meta.json');
+        if (fs.existsSync(metaPath)) {
+            const meta = JSON.parse(fs.readFileSync(metaPath, 'utf8'));
+            if (meta[weekKey]) {
+                return res.json(meta[weekKey]);
+            }
+        }
+        res.status(404).json({ error: "Weekly theme not found" });
+    } catch (e) {
+        console.error("Weekly Theme Fetch Error:", e);
+        res.status(500).json({ error: "Failed to fetch weekly theme" });
+    }
+});
+
+// GET /api/lab/weekly/:paper
+router.get('/weekly/:paper', async (req, res) => {
+    const { paper } = req.params;
+    try {
+        const quest = await LabService.resolveWeeklyQuest(paper);
+        if (!quest) return res.status(404).json({ error: "Weekly quest not found for " + paper });
+        res.json(quest);
+    } catch (e) {
+        console.error("Weekly Quest Fetch Error:", e);
+        res.status(500).json({ error: "Failed to fetch weekly quest" });
+    }
+});
 
 // GET /api/lab/listening
 router.get('/listening', async (req, res) => {
@@ -75,8 +113,8 @@ router.post('/submit', async (req, res) => {
 
         // 3. Factory Model Quest Completion (Phase 5)
         if (req.body.isFactoryQuest) {
-            const ENGLISH_XP_MAPPING = { "3": 50, "4": 75, "5": 100, "7": 150 };
-            const baseXP = ENGLISH_XP_MAPPING[String(req.body.level)] || 100;
+            const ENGLISH_XP_MAPPING = { "3": 80, "4": 110, "5": 140, "7": 200 };
+            const baseXP = ENGLISH_XP_MAPPING[String(req.body.level)] || 120;
             const factoryResult = await GamificationService.awardFactoryQuestCompletion(uid, req.body.taskId || questionIds[0], 'english', baseXP);
             if (factoryResult.success) {
                 questXP = factoryResult.totalEarned || factoryResult.earned;
@@ -112,14 +150,35 @@ router.post('/submit', async (req, res) => {
             if (req.body.isChallenge) sourceType = 'challenge';
 
             const displayName = UserProfileService.getSkillName(req.body.topic, 'english');
+            const questName = req.body.title || `Lab: ${displayName || 'Practice'}`;
+            const paper = req.body.paper || ((req.body.topic || '').includes('listening') ? 'Listening' : 'Reading');
+
+            // PERSIST RESULT
+            let resultId = null;
+            if (uid !== 'placeholder') {
+                try {
+                    resultId = await UserProfileService.saveQuestResult(uid, {
+                        module: paper,
+                        questName: questName,
+                        score: req.body.masteryScore || 0,
+                        xpAwarded: xp,
+                        content: req.body.results,
+                        feedback: req.body.feedback || { summary: "Great practice session." },
+                        timestamp: new Date()
+                    });
+                } catch (e) { console.warn("Result save failed", e.message); }
+            }
 
             const xpResult = await GamificationService.awardXP(uid, parseInt(xp), sourceType, {
                 duration: req.body.duration || 0,
                 expectedDuration: 600,
-                title: req.body.title || `Completed Lab: ${displayName || 'Practice'}`, // Use specific title if sent
+                title: questName,
                 subject: 'english',
                 topic: displayName,
-                score: req.body.masteryScore ? `${req.body.masteryScore}%` : undefined
+                score: req.body.masteryScore ? `${req.body.masteryScore}%` : undefined,
+                paper: paper,
+                questName: questName,
+                resultId: resultId
             });
             practiceXP = xpResult.earned;
         }
@@ -268,20 +327,8 @@ router.post('/tts', async (req, res) => {
 
         if (!text) return res.status(400).json({ error: "Missing text" });
 
-        // PREMIUM/MULTIPODAL FLOW (Highly Stable)
-        // Default to premium for English pedagogically critical lines
-        const isEnglish = (languageCode || '').startsWith('en');
-        if (premium || (isEnglish && text.length > 20)) {
-            try {
-                console.log(`[TTS] Using Premium Multimodal Generation for stability...`);
-                // Note: gender mapping is now handled inside TTSService.generateMultimodalSpeech
-                const audioBase64 = await TTSService.generateMultimodalSpeech(text, gender || 'FEMALE');
-                return res.json({ audio: audioBase64, mode: 'premium' });
-            } catch (premiumError) {
-                console.warn(`[TTS] Premium generation failed, falling back to standard:`, premiumError.message);
-                // Fall through to standard flow
-            }
-        }
+        // Use the unified TTSService which handles logic branching (Standard vs Multimodal) internally.
+        // This avoids redundant timeouts in the route layer.
 
         // Standard Flow
         if (includeTimepoints) {

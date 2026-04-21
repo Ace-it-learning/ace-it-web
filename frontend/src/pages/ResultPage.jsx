@@ -64,7 +64,7 @@ function ResultPage() {
     if (!result) {
         return (
             <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center gap-6">
-                <div className="text-gray-400 text-6xl">🔍</div>
+                <div className="text-gray-400 text-6xl">?</div>
                 <div className="text-xl font-medium text-gray-600">{t('result.no_result')}</div>
                 <button
                     onClick={() => navigate('/mock-exam')}
@@ -181,7 +181,7 @@ function ResultPage() {
                             }}
                             className="mt-8 w-full bg-orange-500 text-white py-3 rounded-xl font-bold shadow-lg hover:scale-105 transition-transform flex items-center justify-center gap-2 hover:bg-orange-600 ring-2 ring-orange-200"
                         >
-                            <span>📖</span> {t('result.review_full_exam')}
+                            {t('result.review_full_exam')}
                         </button>
                     </div>
                 </div>
@@ -190,7 +190,7 @@ function ResultPage() {
                 <div className="col-span-1 lg:col-span-4">
                     <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 h-full flex flex-col">
                         <h2 className="text-lg font-semibold text-gray-700 mb-6 flex items-center gap-2">
-                            📊 {t('result.breakdown')}
+                            {t('result.breakdown')}
                         </h2>
 
                         <div className="flex-1 space-y-6">
@@ -229,7 +229,7 @@ function ResultPage() {
                         </div>
 
                         <div className="mt-8 bg-blue-50 p-4 rounded-xl border border-blue-100">
-                            <h4 className="text-blue-800 font-semibold mb-2 text-sm">💡 {t('result.suggestion')}</h4>
+                            <h4 className="text-blue-800 font-semibold mb-2 text-sm">{t('result.suggestion')}</h4>
                             <p className="text-blue-700 text-sm leading-relaxed">
                                 {getRecommendation()}
                             </p>
@@ -241,14 +241,13 @@ function ResultPage() {
                 <div className="col-span-1 lg:col-span-5">
                     <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 h-full flex flex-col max-h-[calc(100vh-100px)]">
                         <h2 className="text-lg font-semibold text-gray-700 mb-4 flex justify-between items-center">
-                            <span>🧐 {t('result.deep_dive')}</span>
+                            <span>{t('result.deep_dive')}</span>
                             <span className="text-xs bg-red-100 text-red-600 px-2 py-1 rounded-full">{t('result.mistakes').replace('{{count}}', incorrectQuestions.length)}</span>
                         </h2>
 
                         <div className="flex-1 overflow-y-auto pr-2 space-y-4 custom-scrollbar">
                             {incorrectQuestions.length === 0 ? (
                                 <div className="text-center py-10 opacity-50">
-                                    <div className="text-4xl mb-2">🎉</div>
                                     <p>{t('result.perfect_score')}</p>
                                 </div>
                             ) : (

@@ -148,7 +148,9 @@ const SpeakingFlowPage = () => {
                 module: 'flow',
                 level,
                 messages: chatHistory,
-                uid: user?.uid || 'guest'
+                uid: user?.uid || 'guest',
+                missionName: quest?.scenario || 'Fluency & Spontaneity Lab',
+                paper: 'Speaking'
             });
             setGradingResult(res.data);
             setPhase('REVIEW');

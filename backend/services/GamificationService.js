@@ -224,7 +224,10 @@ class GamificationService {
                     xp: finalAmount,
                     score: actionMetadata.score || `${Math.floor((finalAmount / (actionMetadata.maxXP || 50)) * 100)}%`,
                     subject: actionMetadata.subject || source,
-                    topic: actionMetadata.topic || null
+                    topic: actionMetadata.topic || null,
+                    paper: actionMetadata.paper || null,
+                    questName: actionMetadata.questName || null,
+                    resultId: actionMetadata.resultId || null
                 }
             };
 
@@ -354,8 +357,8 @@ class GamificationService {
                     return { success: true, earned: 0, alreadyCompleted: true };
                 }
 
-                // Award 200 XP for completion
-                const xpToAward = 200;
+                // Award 250 XP for completion (Increased for 15-question rigor)
+                const xpToAward = 250;
                 const result = await this.awardXP(uid, xpToAward, 'weekly_quest', {
                     title: `Weekly Quest Completed: ${weekId}`,
                     subject: 'reading'

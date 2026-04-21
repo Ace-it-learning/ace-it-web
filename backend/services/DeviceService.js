@@ -1,8 +1,9 @@
 const admin = require('firebase-admin');
+const { getFirestore, FieldValue } = require('firebase-admin/firestore');
 
 class DeviceService {
     get db() {
-        return admin.firestore();
+        return getFirestore();
     }
 
     get usersCollection() {
@@ -55,20 +56,118 @@ class DeviceService {
     async registerDevice(uid, fingerprint, metadata = {}) {
         if (!uid || uid === 'guest') return;
 
-        const device = {
-            fingerprint,
-            name: metadata.name || 'Unknown Device',
-            os: metadata.os || 'Unknown OS',
-            browser: metadata.browser || 'Unknown Browser',
-            lastSeen: admin.firestore.FieldValue.serverTimestamp(),
-            addedAt: admin.firestore.FieldValue.serverTimestamp()
-        };
+        try {
+            const userDoc = await this.usersCollection.doc(uid).get();
+            let activeDevices = [];
+            let tier = 'free';
 
-        await this.usersCollection.doc(uid).update({
-            active_devices: admin.firestore.FieldValue.arrayUnion(device)
-        });
+            if (userDoc.exists) {
+                const userData = userDoc.data();
+                activeDevices = userData.active_devices || [];
+                tier = userData.subscription_tier || 'free';
 
-        console.log(`[DeviceService] Registered new device for ${uid}: ${device.name}`);
+                if (!Array.isArray(activeDevices)) activeDevices = [];
+            }
+
+            const deviceName = metadata.name || 'Unknown Device';
+            const deviceBrowser = metadata.browser || 'Unknown Browser';
+            const deviceOS = metadata.os || 'Unknown OS';
+
+            // RANKING: Chrome/Edge/Firefox (10) > Safari/Other (1)
+            // This prevents automated Safari ghosts from hijacking a real user's Chrome session.
+            const getRank = (b) => /chrome|edge|firefox/i.test(b) ? 10 : 1;
+            const incomingRank = getRank(deviceBrowser);
+
+            // 1. DEDUPLICATION & CLEANUP
+            // Merge sessions that share the same fingerprint
+            const filteredDevices = [];
+            const seenFingerprints = new Set();
+            
+            // We process from newest to oldest to keep the most recent info
+            const sortedDevices = [...activeDevices].sort((a, b) => {
+                const dateA = a.lastSeen?.toDate ? a.lastSeen.toDate() : new Date(a.lastSeen || 0);
+                const dateB = b.lastSeen?.toDate ? b.lastSeen.toDate() : new Date(b.lastSeen || 0);
+                return dateB - dateA;
+            });
+
+            for (const d of sortedDevices) {
+                if (!d.fingerprint) continue; // Skip malformed
+                
+                if (!seenFingerprints.has(d.fingerprint)) {
+                    seenFingerprints.add(d.fingerprint);
+                    filteredDevices.push(d);
+                }
+            }
+            
+            // SPECIAL CLEANUP: If we STILL have more than 3 identical names, merge them (they are likely ghosts)
+            const cleanedDevices = [];
+            const nameCounts = {};
+            for (const d of filteredDevices) {
+                const key = `${d.browser}-${d.os}`;
+                nameCounts[key] = (nameCounts[key] || 0) + 1;
+                
+                // If we see too many "identical" entries, we merge them into the most recent one
+                if (nameCounts[key] <= 3 || d.fingerprint === fingerprint) {
+                    cleanedDevices.push(d);
+                }
+            }
+
+            activeDevices = cleanedDevices;
+
+            // 2. REGISTRATION / UPDATE
+            const existingIndex = activeDevices.findIndex(d => d.fingerprint === fingerprint);
+
+            if (existingIndex !== -1) {
+                // Update existing: STRICT PRIORITY LOGIC
+                const existing = activeDevices[existingIndex];
+                const existingRank = getRank(existing.browser);
+
+                if (incomingRank >= existingRank) {
+                    // Upgrade or Maintain High Quality info
+                    activeDevices[existingIndex] = {
+                        ...existing,
+                        lastSeen: new Date(),
+                        browser: deviceBrowser,
+                        os: deviceOS,
+                        name: deviceName
+                    };
+                    console.log(`[DeviceService] Applied metadata for ${uid} (Rank ${incomingRank})`);
+                } else {
+                    // IGNORE LOW QUALITY OVERWRITE: Only update timestamp
+                    activeDevices[existingIndex] = {
+                        ...existing,
+                        lastSeen: new Date()
+                    };
+                    console.log(`[DeviceService] Ignored lower-rank metadata for ${uid} (Incoming: ${incomingRank}, Existing: ${existingRank})`);
+                }
+            } else {
+                // New device
+                const limit = tier === 'premium' ? 5 : 3;
+                if (activeDevices.length >= limit) {
+                    console.warn(`[DeviceService] Limit reached for ${uid}: ${activeDevices.length}/${limit}`);
+                    // We'll still allow the update of the list (cleanup) but won't add the new one
+                    // OR we could drop the oldest one? Standard says "Blocked".
+                } else {
+                    activeDevices.push({
+                        fingerprint,
+                        name: deviceName,
+                        os: deviceOS,
+                        browser: deviceBrowser,
+                        lastSeen: new Date(),
+                        addedAt: new Date()
+                    });
+                    console.log(`[DeviceService] Registered new device for ${uid}: ${deviceName}`);
+                }
+            }
+
+            // Save
+            await this.usersCollection.doc(uid).set({
+                active_devices: activeDevices
+            }, { merge: true });
+
+        } catch (error) {
+            console.error(`[DeviceService] ERROR in registerDevice:`, error);
+        }
     }
 
     /**
@@ -104,7 +203,7 @@ class DeviceService {
         const deviceIndex = activeDevices.findIndex(d => d.fingerprint === fingerprint);
 
         if (deviceIndex !== -1) {
-            activeDevices[deviceIndex].lastSeen = admin.firestore.FieldValue.serverTimestamp();
+            activeDevices[deviceIndex].lastSeen = new Date();
             await this.usersCollection.doc(uid).update({ active_devices: activeDevices });
         }
     }

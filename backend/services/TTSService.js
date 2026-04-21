@@ -12,12 +12,12 @@ const isProduction = process.env.NODE_ENV === 'production';
 const hasKey = fs.existsSync(keyPath);
 
 const apiKey = process.env.GOOGLE_API_KEY || process.env.GEMINI_API_KEY;
-const clientOptions = isProduction && hasKey 
+const clientOptions = hasKey 
     ? { keyFilename: keyPath } 
     : null;
 
-console.log(`[TTSService] Init - Key Check: ${hasKey ? 'Found local key' : 'Using default env/API Key'}`);
-console.log(`[TTSService] Mode: ${isProduction ? 'PRODUCTION (GCloud preferred)' : 'DEVELOPMENT (API Key REST fallback)'}`);
+console.log(`[TTSService] Init - Key Check: ${hasKey ? `Found local key at ${saFilename}` : 'Using default env/API Key'}`);
+console.log(`[TTSService] Mode: ${isProduction ? 'PRODUCTION' : 'DEVELOPMENT'} (${hasKey ? 'JSON Key' : 'API Key REST fallback'})`);
 
 const client = clientOptions ? new textToSpeech.TextToSpeechClient(clientOptions) : null;
 
@@ -39,15 +39,20 @@ function escapeSSML(text) {
         .replace(/'/g, '&apos;');
 }
 
-/**
- * Helper to wrap English fragments in <lang xml:lang="en-US"> for better pronunciation
- */
-function convertToSSML(text) {
+function convertToSSML(text, gender = 'FEMALE') {
     const escaped = escapeSSML(text);
-    const mixed = escaped.replace(/([a-zA-Z][a-zA-Z0-9\s\-_'.]*[a-zA-Z0-9])|([a-zA-Z])/g, (match) => {
-        return `<lang xml:lang="en-US">${match.trim()}</lang> `;
-    });
-    return `<speak>${mixed}</speak>`;
+    const hasChinese = /[\u4e00-\u9fa5]/.test(text);
+
+    if (hasChinese) {
+        // For Cantonese/Mixed strings, use the native Hong Kong voice for everything.
+        // yue-HK is the dedicated code for authentic Cantonese.
+        const hkVoice = gender === 'MALE' ? 'yue-HK-Standard-B' : 'yue-HK-Standard-A';
+        return `<speak><voice name="${hkVoice}"><lang xml:lang="yue-HK">${escaped}</lang></voice></speak>`;
+    } else {
+        // Standard English-only cleanup
+        const enVoice = gender === 'MALE' ? 'en-US-Wavenet-D' : 'en-US-Wavenet-F';
+        return `<speak><voice name="${enVoice}"><lang xml:lang="en-US">${escaped}</lang></voice></speak>`;
+    }
 }
 
 // --- Dynamic Voice Pools for Variety ---
@@ -62,7 +67,7 @@ const VOICE_POOL = {
     }
 };
 
-const TTS_VERSION = "2.1"; // Increment this to invalidate old caches if logic changes
+const TTS_VERSION = "2.9"; // Increment to invalidate caches
 
 function getSpeakerProfile(name) {
     const n = name.toLowerCase();
@@ -82,30 +87,49 @@ function getSpeakerProfile(name) {
  * Now supports character/word level timepoints for UI synchronization.
  */
 async function generateSpeech(text, languageCode = 'en-US', gender = 'FEMALE', speakingRate = 1.0, forcedVoice = null, includeTimepoints = false) {
+    // GLOBAL BYPASS: AI Voice features can be toggled via env if needed. 
+    // Defaulting to ENABLED for UX unless explicitly disabled.
+    const isGlobalDisabled = process.env.DISABLE_AI_VOICE === 'true'; 
+    if (isGlobalDisabled) {
+        return includeTimepoints ? { audio: null, timepoints: [] } : null;
+    }
+
     try {
-        const isMixedCantonese = languageCode === 'zh-HK';
+        const hasChinese = /[\u4e00-\u9fa5]/.test(text);
+        const isHK = (languageCode === 'zh-HK' || languageCode === 'yue-HK' || hasChinese);
+        const effectiveLang = isHK ? 'zh-HK' : (languageCode || 'en-US');
+
         let isSSML = text.trim().startsWith('<speak>');
 
+        // [2026 REFACTOR] Establish Voice early
+        const voiceName = forcedVoice || (isHK 
+            ? (gender === 'MALE' ? 'yue-HK-Standard-B' : 'yue-HK-Standard-A')
+            : (gender === 'MALE' ? 'en-US-Wavenet-D' : 'en-US-Wavenet-F'));
+
+        // TRACK 1: SSML with marks for Timepoints
         let input;
         if (includeTimepoints && !isSSML) {
-            // Convert to SSML with word-level marks
             const words = text.split(/(\s+)/);
             let wordCounter = 0;
-            const ssmlText = words.map(w => {
+            const ssmlContent = words.map(w => {
                 if (/^\s+$/.test(w)) return w;
                 const mark = `<mark name="w${wordCounter}"/>${escapeSSML(w)}`;
                 wordCounter++;
                 return mark;
             }).join('');
-            input = { ssml: `<speak>${ssmlText}</speak>` };
+            
+            const langCode = isHK ? 'yue-HK' : 'en-US';
+            input = { ssml: `<speak><lang xml:lang="${langCode}">${ssmlContent}</lang></speak>` };
             isSSML = true;
         } else {
-            input = isSSML ? { ssml: text } : (isMixedCantonese ? { ssml: convertToSSML(text) } : { text: text });
+            // Use character-aware SSML for mixed language strings
+            input = isSSML ? { ssml: text } : { ssml: convertToSSML(text, gender) };
+            isSSML = true; // Mark as SSML since we wrapped it
         }
 
         const request = {
             input: input,
-            voice: { languageCode: languageCode, ssmlGender: gender },
+            voice: { languageCode: effectiveLang, name: voiceName },
             audioConfig: { audioEncoding: 'MP3', speakingRate: speakingRate },
         };
 
@@ -114,9 +138,10 @@ async function generateSpeech(text, languageCode = 'en-US', gender = 'FEMALE', s
             request.enableTimepoints = ['SSML_MARK'];
         }
 
-        // Selection Strategy: In DEV, we prefer Multimodal (Gemini AI Studio) for cost efficiency.
-        // In PROD, we prefer Standard TTS for English and Multimodal for Cantonese/Mixed.
-        const preferMultimodal = (isMixedCantonese || languageCode === 'yue-HK' || !hasKey || !isProduction);
+        // Selection Strategy: Ensure Native HK Cantonese always uses high-quality Standard TTS.
+        // For English in DEV, we prefer Multimodal (Gemini AI Studio) for cost efficiency,
+        // EXCEPT when timepoints are needed (Gemini doesn't support them yet).
+        const preferMultimodal = !isHK && (!isProduction || !hasKey) && !includeTimepoints;
 
         if (preferMultimodal) {
             try {
@@ -133,16 +158,17 @@ async function generateSpeech(text, languageCode = 'en-US', gender = 'FEMALE', s
         }
 
         // Standard TTS Path (Google Cloud)
-        console.log(`[TTSService] ${preferMultimodal ? 'Fallback' : 'Primary'} Path: Standard TTS (${languageCode})...`);
+        const useSDK = hasKey; // Always use SDK if we have a JSON key
+        console.log(`[TTSService] ${preferMultimodal ? 'Fallback' : 'Primary'} Path: Standard TTS (${effectiveLang}) via ${useSDK ? 'SDK' : 'REST'}...`);
         
-        // DEV / API KEY Path (REST)
-        if (!isProduction || !hasKey) {
+        // DEV / API KEY Path (REST fallback only if no JSON key)
+        if (!useSDK) {
             const axios = require('axios');
             const url = `https://texttospeech.googleapis.com/v1/text:synthesize?key=${apiKey}`;
             
             const restRequest = {
                 input: input,
-                voice: { languageCode: languageCode, ssmlGender: gender },
+                voice: { languageCode: effectiveLang, ssmlGender: gender },
                 audioConfig: { audioEncoding: 'MP3', speakingRate: speakingRate },
             };
 
@@ -173,12 +199,12 @@ async function generateSpeech(text, languageCode = 'en-US', gender = 'FEMALE', s
         // Final Emergency Fallback: If both paths failed, try one more time with a very simple multimodal call
         try {
             console.warn('[TTSService] Attempting final emergency simple synthesis...');
-            const audioData = await multimodalTTS.generateAudio(text.replace(/<[^>]*>/g, '').substring(0, 500));
+            const audioData = await multimodalTTS.generateAudio(text.replace(/<[^>]*>/g, '').substring(0, 300));
             return includeTimepoints ? { audio: audioData, timepoints: [] } : audioData;
         } catch (finalError) {
             console.error('[TTSService] All synthesis paths exhausted. Using silence fallback to prevent UI hang.');
-            // 1-second silence base64 (MP3)
-            const silence = "SUQzBAAAAAAAF1RTU0UAAAANAAADTGFtZTMuOThyA1IAAAAAAAAAAAA//uQZAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWGluZwAAAA8AAAACAAACAAAfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx9fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX///8AAAA5TEFNRTMuOThyYf8AAAAAAAAAAAAAAAAAAAAA//uQZAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWGluZwAAAA8AAAACAAACAAAfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx9fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX///8AAAA5TEFNRTMuOThyYf8AAAAAAAAAAAAAAAAAAAAA";
+            // Reliable 0.5s silence base64 (MP3)
+            const silence = "SUQzBAAAAAAAF1RTU0UAAAANAAADTGFtZTMuOThyA1IAAAAAAAAAAAA//uQZAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWGluZwAAAA8AAAACAAACAAAfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx9fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX///8AAAA5TEFNRTMuOThyYf8AAAAAAAAAAAAAAAAAAAAA";
             return includeTimepoints ? { audio: silence, timepoints: [] } : silence;
         }
     }
@@ -188,6 +214,9 @@ async function generateSpeech(text, languageCode = 'en-US', gender = 'FEMALE', s
  * Optimized Multi-Speaker Dialogue with File-based Caching
  */
 async function generateMultiSpeakerSpeech(transcript) {
+    // GLOBAL BYPASS: AI Voice features can be toggled via env if needed.
+    if (process.env.DISABLE_AI_VOICE === 'true') return null;
+
     const cacheKey = crypto.createHash('md5').update(`${transcript}_v${TTS_VERSION}`).digest('hex');
     const cachePath = path.join(CACHE_DIR, `${cacheKey}.base64`);
 

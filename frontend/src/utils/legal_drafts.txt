@@ -1,0 +1,159 @@
+# Ace It! Education - Professional Legal Documents (Expanded Draft)
+
+## 1. Terms and Conditions (T&C)
+
+### [EN]
+**TERMS AND CONDITIONS**
+
+Last Updated: April 17, 2026
+
+Welcome to Ace It! Education ("Ace It", "we", "us", or "our"). These Terms and Conditions ("Terms") constitute a legally binding agreement between you and Ace It! Education regarding your access to and use of our website and AI-powered educational services (the "Services").
+
+**1. DEFINITIONS**
+* "User" or "you" refers to any individual who accesses or uses the Services.
+* "Content" includes text, graphics, images, software, audio, video, and AI-generated outputs.
+* "Subscription" refers to the paid access to specific features of the Services.
+
+**2. ACCOUNT REGISTRATION**
+* **Eligibility**: You must be at least 13 years old. If you are under 18, you must have the consent of a parent or legal guardian.
+* **Accuracy**: You agree to provide true, accurate, and current information during registration.
+* **Security**: You are responsible for safeguarding your password and account activity. Notify us immediately of any unauthorized access.
+
+**3. USE OF SERVICES & ACCEPTABLE CONDUCT**
+* **License**: We grant you a limited, non-exclusive, non-transferable license to access the Services for personal, non-commercial educational purposes only.
+* **Prohibited Conduct**: You agree NOT to:
+    * Use the Services for any illegal purpose or in breach of HK laws.
+    * Reverse engineer, decompile, or attempt to extract the source code of our AI models.
+    * Use automated systems (robots, scrapers) to access or monitor the Services.
+    * Upload viruses or malicious code.
+    * Use the Services to cheat or bypass official academic integrity policies of any institution.
+
+**4. SUBSCRIPTIONS, PAYMENTS & AUTO-RENEWAL**
+* **Fees**: Subscription fees are as stated on our pricing page. We reserve the right to change fees upon 30 days' notice.
+* **Payment**: Payments are processed via third-party providers (e.g., Stripe). You authorize us to charge your chosen payment method.
+* **Auto-renewal**: Subscriptions may automatically renew unless cancelled at least 24 hours before the end of the current period.
+
+**5. NO REFUND POLICY**
+* **Sales Final**: All payments made to Ace It! Education are non-refundable. 
+* **No Credits**: We do not provide refunds or credits for any partial subscription months or unused features. This policy applies strictly regardless of the reason for cancellation or dissatisfaction.
+
+**6. INTELLECTUAL PROPERTY RIGHTS**
+* **Our Ownership**: Ace It owns all rights to the platform design, tutors' personas, proprietary databases, and software.
+* **AI Output**: While you may use AI-generated feedback for your personal study, the underlying technology and intellectual property remain with us or our licensors.
+* **User Content**: You retain ownership of the text or images you upload. You grant us a worldwide, royalty-free license to use your content solely to provide and improve the Services.
+
+**7. LIMITATION OF LIABILITY & INDEMNIFICATION**
+* **Liability Cap**: To the maximum extent permitted by law, Ace It shall not be liable for any indirect, incidental, or consequential damages. Our total liability for any claim shall not exceed the amount paid by you for the Services in the past 6 months.
+* **Indemnity**: You agree to indemnify and hold Ace It harmless from any claims arising from your breach of these Terms or misuse of the Services.
+
+**8. SERVICE AVAILABILITY**
+* We aim for high availability but do not guarantee that the Services will be uninterrupted or error-free. Maintenance may occur periodically.
+
+**9. TERMINATION**
+* We may suspend or terminate your account without notice if you violate these Terms, engage in fraudulent activity, or if required by legal authorities.
+
+**10. GOVERNING LAW & JURISDICTION**
+* These Terms are governed by the laws of the Hong Kong Special Administrative Region (HKSAR). Any disputes shall be subject to the exclusive jurisdiction of the courts of Hong Kong.
+
+**11. LANGUAGE**
+* In the case of any discrepancy between the English and Chinese versions of these Terms, the English version shall prevail.
+
+---
+
+### [ZH-HK]
+**條款及細則**
+
+最後更新日期：2026年4月17日
+
+歡迎使用 Ace It! Education（下稱「Ace It」、「我們」或「我們的」）。本條款及細則（「本條款」）構成您與 Ace It! Education 之間關於您訪問及使用本網站與 AI 驅動教育服務（「本服務」）的具法律約束力的協議。
+
+**1. 定義**
+* 「用戶」或「您」指任何訪問或使用本服務的人士。
+* 「內容」包括文本、圖形、圖像、軟件、音訊、視頻及 AI 生成之輸出內容。
+* 「訂閱」指對本服務特定功能的付費訪問權限。
+
+**2. 帳戶註冊**
+* **資格**：您必須年滿 13 歲。若您未滿 18 歲，必須取得父母或法定監護人同意。
+* **準確性**：您同意在註冊時提供真實、準確且最新的資訊。
+* **安全性**：您有責任保障您的密碼及帳戶活動安全。如發現未經授權之訪問，請立即通知我們。
+
+**3. 服務使用及行為準則**
+* **許可**：我們授予您有限的、非排他性的、不可轉讓的許可，僅供個人非商業性教育用途使用本服務。
+* **禁止行為**：您同意不進行以下行為：
+    * 將本服務用於任何非法目的或違反任何香港法律。
+    * 對我們的 AI 模型進行反向工程、反編譯或試圖提取原始碼。
+    * 使用自動化系統（機器人、抓取工具）訪問或監控本服務。
+    * 上傳病毒或惡意代碼。
+    * 利用本服務進行作弊或違反任何機構的學術誠信政策。
+
+**4. 訂閱、付款及自動續訂**
+* **費用**：訂閱費用如定價頁面所述。我們保留在 30 天前通知後更改費用的權利。
+* **付款**：付款經由第三方供應商（如 Stripe）處理。您授權我們從您選擇的付款方式中扣費。
+* **自動續訂**：除非在當前週期結束前至少 24 小時取消，否則訂閱可能會自動續訂。
+
+**5. 不設退款政策**
+* **款項不設退換**：所有向 Ace It! Education 支付的款項均不設退款。
+* **不設積分回充**：我們不為任何部分訂閱月份或未使用的功能提供退款或積分。無論出於何種取消原因或不滿意，本政策均嚴格執行。
+
+**6. 知識產權**
+* **我們的所有權**：Ace It 擁有平台設計、導師形象、專有數據庫及軟件的一切權利。
+* **AI 輸出內容**：雖然您可以將 AI 生成的反饋用於個人學習，但底層技術及知識產權仍屬於我們或我們的許可人。
+* **用戶內容**：您保留上傳內容的所有權。您授予我們全球性、免版稅的許可，僅用於提供及改進本服務。
+
+**7. 責任限制與過失賠償**
+* **責任上限**：在法律允許的最大範圍內，Ace It 不對任何間接、附帶或衍生性損害負責。我們對任何索賠的總責任不應超過您在過去 6 個月內支付的服務費用。
+* **賠償**：您同意賠償並使 Ace It 免受因您違反本條款或濫用本服務而產生的任何索賠損害。
+
+**8. 服務可用性**
+* 我們致力於維持高可用性，但不保證服務不會中斷或完全無誤。我們會定期進行維護。
+
+**9. 終止服務**
+* 若您違反本條款、從事欺詐活動或應法律機構要求，我們可能會在不另行通知的情況下暫停或終止您的帳戶。
+
+**10. 管轄法律與司法管轄權**
+* 本條款受香港特別行政區（香港特區）法律管轄。任何爭議應提交香港法院專屬管轄。
+
+**11. 語言版本**
+* 若本條款的英文版本與中文版本有任何歧異，悉以英文版本為準。
+
+---
+
+## 2. Disclaimer
+
+### [EN]
+**DISCLAIMER**
+
+**1. EDUCATIONAL REFERENCE ONLY**
+Ace It! Education provides supplemental AI-powered coaching for HKDSE preparation. Our AI tutors, grading feedbacks, and study recommendations are for reference only. 
+
+**2. NO GUARANTEE OF RESULTS**
+While our AI is calibrated with HKEAA standards, exam performance depends on numerous external factors. Ace It! Education does NOT guarantee that using the platform will result in a specific DSE grade or university admission.
+
+**3. AI ACCURACY & "HALLUCINATION"**
+Our AI models are advanced but may occasionally generate incorrect academic facts or inconsistent advice (known as hallucinations). Users must cross-reference critical information with official textbooks and past papers.
+
+**4. NO PROFESSIONAL ADVICE**
+The content on this platform does not constitute official legal, medical, or academic advice. We are not affiliated with the Hong Kong Examinations and Assessment Authority (HKEAA).
+
+**5. GENERAL DISCLAIMER**
+The Services are provided on an "as-is" and "as-available" basis. Ace It! Education disclaims all warranties, express or implied, to the fullest extent permitted by law.
+
+---
+
+### [ZH-HK]
+**免責聲明**
+
+**1. 僅供教育參考**
+Ace It! Education 提供輔助性質的 AI 驅動 HKDSE 備考輔導。我們的 AI 導師、評分反饋及學習建議僅供參考。
+
+**2. 不保證成績結果**
+雖然我們的 AI 參照考評局（HKEAA）標準進行校準，但考試表現取決於許多外部因素。Ace It! Education 不保證使用本平台能獲得特定 DSE 等級或大學錄取。
+
+**3. AI 準確性與「幻覺」風險**
+我們的 AI 模型雖然先進，但偶爾可能會生成錯誤的學術事實或不一致的建議（即「幻覺」）。用戶必須將關鍵資訊與官方教科書及歷屆試題進行對照。
+
+**4. 非專業建議**
+本平台上的內容不構成官方法律、醫療或學術建議。我們與香港考試及評核局（HKEAA）並無隸屬關係。
+
+**5. 一般免責聲明**
+本服務按「原樣」及「現有」狀態提供。在法律允許的最大範圍內，Ace It! Education 不承擔任何明示或暗示的保證責任。

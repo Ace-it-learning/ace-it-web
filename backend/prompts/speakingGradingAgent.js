@@ -93,10 +93,10 @@ INPUT:
 OUTPUT JSON:
 {
     "scores": { 
-        "facilitation": 0-7, 
-        "listening": 0-7, 
-        "turn_taking": 0-7, 
-        "bridging": 0-7, 
+        "delivery": 0-7, 
+        "strategies": 0-7, 
+        "language": 0-7, 
+        "organisation": 0-7, 
         "total": 0-28 
     },
     "feedback": { 

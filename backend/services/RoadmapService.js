@@ -139,9 +139,19 @@ class RoadmapService {
             tasks: generatedTasks
         };
 
-        // 4. Save to DB
-        const docId = subject === 'maths' ? 'current_maths' : 'current';
-        await this.db.collection('users').doc(uid).collection('roadmap').doc(docId).set(newPlan);
+        // 4. Save to DB (Graceful failure if permissions are missing)
+        try {
+            const docId = subject === 'maths' ? 'current_maths' : 'current';
+            await this.db.collection('users').doc(uid).collection('roadmap').doc(docId).set(newPlan);
+            console.log(`[Roadmap] ✅ Successfully saved new plan for ${uid}`);
+        } catch (error) {
+            if (error.code === 7 || error.message.includes('permissions')) {
+                console.error(`[Roadmap] ⚠️ FAILED TO SAVE PLAN for ${uid} due to insufficient backend permissions. Returning in-memory plan to prevent 500 error.`);
+            } else {
+                console.error(`[Roadmap] ❌ Error saving plan for ${uid}:`, error);
+            }
+            // We return the plan anyway so the app doesn't crash
+        }
         return newPlan;
     }
 

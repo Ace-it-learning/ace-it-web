@@ -28,14 +28,15 @@ import ListeningQuestPage from './pages/ListeningQuestPage'; // Phase 25
 import SpeakingResultPage from './pages/SpeakingResultPage';
 import SpeakingDeliveryPage from './pages/SpeakingDeliveryPage';
 import SpeakingFlowPage from './pages/SpeakingFlowPage';
-import ResultPage from './pages/ResultPage';
-import ReviewPage from './pages/ReviewPage';
+import AchievementTimeline from './pages/AchievementTimeline';
+import QuestLabReview from './pages/QuestLabReview'; 
+import RedemptionStore from './pages/RedemptionStore';
 import DiagnosticPage from './pages/DiagnosticPage';
 import MathsDiagnosticPage from './pages/MathsDiagnosticPage';
 import DiagnosticAnalysis from './components/diagnostic/DiagnosticAnalysis';
 import MathsDiagnosticAnalysis from './components/diagnostic/MathsDiagnosticAnalysis';
-import AchievementTimeline from './pages/AchievementTimeline';
-import RedemptionStore from './pages/RedemptionStore';
+import ResultPage from './pages/ResultPage';
+import ReviewPage from './pages/ReviewPage';
 import CardCollection from './pages/CardCollection';
 
 import PromptTipsPage from './pages/PromptTipsPage';
@@ -54,11 +55,13 @@ import SpeakingPillarMenu from './pages/SpeakingPillarMenu';
 import QuestFactoryPage from './pages/QuestFactoryPage';
 import MasteryPage from './pages/MasteryPage';
 import MathsAbilityPage from './pages/MathsAbilityPage';
+import AccountPage from './pages/AccountPage';
 import ErrorBoundary from './components/ErrorBoundary';
 
 import ScrollToTop from './components/utils/ScrollToTop';
 
 import SubscriptionPage from './pages/SubscriptionPage';
+import FeaturesPage from './pages/FeaturesPage.jsx';
 
 function App() {
   return (
@@ -113,6 +116,10 @@ function App() {
                   element={<LandingPage />}
                 />
                 <Route
+                  path="/features"
+                  element={<FeaturesPage />}
+                />
+                <Route
                   path="/verify-success"
                   element={<VerifyEmailSuccess />}
                 />
@@ -126,6 +133,16 @@ function App() {
                     <ProtectedRoute>
                       <MainLayout>
                         <Dashboard />
+                      </MainLayout>
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/account"
+                  element={
+                    <ProtectedRoute>
+                      <MainLayout>
+                        <AccountPage />
                       </MainLayout>
                     </ProtectedRoute>
                   }
@@ -201,6 +218,26 @@ function App() {
                   }
                 />
                 <Route
+                  path="/reading/result/:resultId"
+                  element={
+                    <ProtectedRoute>
+                      <MainLayout>
+                        <QuestLabReview />
+                      </MainLayout>
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/listening/result/:resultId"
+                  element={
+                    <ProtectedRoute>
+                      <MainLayout>
+                        <QuestLabReview />
+                      </MainLayout>
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
                   path="/listening/menu"
                   element={
                     <ProtectedRoute>
@@ -244,6 +281,16 @@ function App() {
                     <ProtectedRoute>
                       <MainLayout>
                         <ReviewPage />
+                      </MainLayout>
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/speaking/result/:resultId"
+                  element={
+                    <ProtectedRoute>
+                      <MainLayout>
+                        <SpeakingResultPage />
                       </MainLayout>
                     </ProtectedRoute>
                   }

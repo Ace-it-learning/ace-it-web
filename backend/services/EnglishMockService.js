@@ -3,7 +3,7 @@ const path = require('path');
 
 class EnglishMockService {
     constructor() {
-        this.baseDir = path.join(__dirname, '..', '..', 'generated_mocks');
+        this.baseDir = path.join(__dirname, '..', 'generated_mocks');
     }
 
     /**

@@ -1,0 +1,629 @@
+{
+  "meta": {
+    "title": "HKDSE Paper 3: The Staycation Revolution (Elite 2026 Edition)",
+    "topic": "Modern tourism trends; glamping vs. traditional hotels in NT.",
+    "difficulty": "Level 5** Authentic (High Stamina)",
+    "total_marks_part_a": 50,
+    "total_marks_part_b": 50
+  },
+  "Part_A": {
+    "tasks": [
+      {
+        "id": "Task_1",
+        "instructions": "You are at the check-in counter for the 'Future Tourism Expo'. Complete the exhibitor registration form.",
+        "questions": [
+          {
+            "id": "t1_q1",
+            "type": "Fill_in_Blanks",
+            "label": "Exhibitor Company Name:",
+            "answer": "Wilderness Retreats Ltd."
+          },
+          {
+            "id": "t1_q2",
+            "type": "Fill_in_Blanks",
+            "label": "Representative Name:",
+            "answer": "Marcus Thorpe"
+          },
+          {
+            "id": "t1_q3",
+            "type": "Fill_in_Blanks",
+            "label": "Contact Email:",
+            "answer": "m.thorpe@wilderness.com.hk"
+          },
+          {
+            "id": "t1_q4",
+            "type": "Fill_in_Blanks",
+            "label": "Booth Category:",
+            "answer": "Eco-Glamping Pavilion"
+          },
+          {
+            "id": "t1_q5",
+            "type": "Fill_in_Blanks",
+            "label": "Exhibition Floor:",
+            "answer": "Hall 3C"
+          },
+          {
+            "id": "t1_q6",
+            "type": "Fill_in_Blanks",
+            "label": "Number of Display Tents:",
+            "answer": "3"
+          },
+          {
+            "id": "t1_q7",
+            "type": "Fill_in_Blanks",
+            "label": "Equipment Rental (Laptops):",
+            "answer": "4"
+          },
+          {
+            "id": "t1_q8",
+            "type": "Fill_in_Blanks",
+            "label": "Special Power Supply Needed:",
+            "answer": "220V High Voltage"
+          },
+          {
+            "id": "t1_q9",
+            "type": "Fill_in_Blanks",
+            "label": "Media Interview Slot:",
+            "answer": "Friday 2:00 PM"
+          },
+          {
+            "id": "t1_q10",
+            "type": "Fill_in_Blanks",
+            "label": "Insurance Policy Number:",
+            "answer": "WR-9988-X"
+          },
+          {
+            "id": "t1_q11",
+            "type": "Fill_in_Blanks",
+            "label": "Early Bird Discount Applied:",
+            "answer": "15%"
+          },
+          {
+            "id": "t1_q12",
+            "type": "Fill_in_Blanks",
+            "label": "Payment Status:",
+            "answer": "Bank Transfer Pending"
+          }
+        ]
+      },
+      {
+        "id": "Task_2",
+        "instructions": "Listen to a podcast episode regarding 'The Glamping Boom in the New Territories'. Complete the notes below.",
+        "questions": [
+          {
+            "id": "t2_q1",
+            "type": "Fill_in_Blanks",
+            "label": "Current Number of Registered Sites:",
+            "answer": "42"
+          },
+          {
+            "id": "t2_q2",
+            "type": "Fill_in_Blanks",
+            "label": "Most Popular District:",
+            "answer": "Yuen Long"
+          },
+          {
+            "id": "t2_q3",
+            "type": "Fill_in_Blanks",
+            "label": "Average Nightly Rate ($):",
+            "answer": "1800"
+          },
+          {
+            "id": "t2_q4",
+            "type": "Fill_in_Blanks",
+            "label": "Primary Demographic:",
+            "answer": "Young families"
+          },
+          {
+            "id": "t2_q5",
+            "type": "Multiple_Choice",
+            "question": "What is the biggest challenge for glamping operators?",
+            "options": [
+              "Water supply",
+              "Waste management",
+              "Internet connectivity"
+            ],
+            "answer": "Waste management"
+          },
+          {
+            "id": "t2_q6",
+            "type": "Multiple_Choice",
+            "question": "Which season sees the highest booking rate?",
+            "options": [
+              "Summer",
+              "Autumn",
+              "Winter"
+            ],
+            "answer": "Autumn"
+          },
+          {
+            "id": "t2_q7",
+            "type": "Fill_in_Blanks",
+            "label": "Required Land Use Permit:",
+            "answer": "Short Term Tenancy"
+          },
+          {
+            "id": "t2_q8",
+            "type": "Fill_in_Blanks",
+            "label": "Safety Certificate Needed:",
+            "answer": "Fire Safety Type B"
+          },
+          {
+            "id": "t2_q9",
+            "type": "Fill_in_Blanks",
+            "label": "Main Attraction for Guests:",
+            "answer": "Star-gazing experience"
+          },
+          {
+            "id": "t2_q10",
+            "type": "Fill_in_Blanks",
+            "label": "Next Project Site Location:",
+            "answer": "Lantau South"
+          },
+          {
+            "id": "t2_q11",
+            "type": "Fill_in_Blanks",
+            "label": "Estimated Annual Growth (%):",
+            "answer": "22"
+          },
+          {
+            "id": "t2_q12",
+            "type": "Fill_in_Blanks",
+            "label": "Key Collaborator:",
+            "answer": "Eco-Travel Association"
+          }
+        ]
+      },
+      {
+        "id": "Task_3",
+        "instructions": "Three experts are debating 'Traditional Hotels vs. Glamping'. Listen to the discussion and complete the table.",
+        "questions": [
+          {
+            "id": "t3_q1",
+            "type": "Multiple_Choice",
+            "question": "Prof. Ng's view on hotel heritage:",
+            "options": [
+              "Indispensable",
+              "Declining",
+              "Easily replaced"
+            ],
+            "answer": "Indispensable"
+          },
+          {
+            "id": "t3_q2",
+            "type": "Multiple_Choice",
+            "question": "Mr. Lau's main concern with hotels:",
+            "options": [
+              "Lack of nature",
+              "High cost",
+              "Poor service"
+            ],
+            "answer": "Lack of nature"
+          },
+          {
+            "id": "t3_q3",
+            "type": "Multiple_Choice",
+            "question": "Ms. Cheung suggests a hybrid model using:",
+            "options": [
+              "Tented villas",
+              "Rooftop gardens",
+              "Virtual reality"
+            ],
+            "answer": "Tented villas"
+          },
+          {
+            "id": "t3_q4",
+            "type": "Fill_in_Blanks",
+            "label": "Proposed Subsidy for Eco-Tourism:",
+            "answer": "$500 Million"
+          },
+          {
+            "id": "t3_q5",
+            "type": "Fill_in_Blanks",
+            "label": "Minimum Guest Age Recommendation:",
+            "answer": "6 years old"
+          },
+          {
+            "id": "t3_q6",
+            "type": "Fill_in_Blanks",
+            "label": "Noise Limit for Glamping Sites:",
+            "answer": "55 Decibels"
+          },
+          {
+            "id": "t3_q7",
+            "type": "Fill_in_Blanks",
+            "label": "Traditional Hotel Occupancy Rate (%):",
+            "answer": "68"
+          },
+          {
+            "id": "t3_q8",
+            "type": "Fill_in_Blanks",
+            "label": "Glamping Occupancy Rate (%):",
+            "answer": "85"
+          },
+          {
+            "id": "t3_q9",
+            "type": "Fill_in_Blanks",
+            "label": "Certification for Green Hotels:",
+            "answer": "EarthCheck Gold"
+          },
+          {
+            "id": "t3_q10",
+            "type": "Fill_in_Blanks",
+            "label": "Main Revenue Source (Hotels):",
+            "answer": "Business travelers"
+          },
+          {
+            "id": "t3_q11",
+            "type": "Fill_in_Blanks",
+            "label": "Main Revenue Source (Glamping):",
+            "answer": "Leisure weekends"
+          },
+          {
+            "id": "t3_q12",
+            "type": "Fill_in_Blanks",
+            "label": "Future Meeting Date:",
+            "answer": "August 12"
+          }
+        ]
+      },
+      {
+        "id": "Task_4",
+        "instructions": "You will hear three stakeholders discussing the regulation of 'Wild Camping' in the New Territories. Complete the grid.",
+        "questions": [
+          {
+            "id": "t4_q1",
+            "type": "Fill_in_Blanks",
+            "label": "Environmentalist's Concern:",
+            "answer": "Soil erosion in protected zones"
+          },
+          {
+            "id": "t4_q2",
+            "type": "Fill_in_Blanks",
+            "label": "Local Resident's Grievance:",
+            "answer": "Trash left behind by tourists"
+          },
+          {
+            "id": "t4_q3",
+            "type": "Fill_in_Blanks",
+            "label": "Tour Operator's Suggestion:",
+            "answer": "Implement a digital permit system"
+          },
+          {
+            "id": "t4_q4",
+            "type": "Fill_in_Blanks",
+            "label": "Consensus on Max Group Size:",
+            "answer": "8 people"
+          },
+          {
+            "id": "t4_q5",
+            "type": "Fill_in_Blanks",
+            "label": "Proposed Penalty for Littering:",
+            "answer": "$3,000"
+          },
+          {
+            "id": "t4_q6",
+            "type": "Fill_in_Blanks",
+            "label": "New Monitoring Method:",
+            "answer": "Drone patrols on weekends"
+          },
+          {
+            "id": "t4_q7",
+            "type": "Fill_in_Blanks",
+            "label": "Resident's Parking Request:",
+            "answer": "Permit-only zones for villagers"
+          },
+          {
+            "id": "t4_q8",
+            "type": "Fill_in_Blanks",
+            "label": "Operator's Liability Requirement:",
+            "answer": "Third-party indemnity insurance"
+          },
+          {
+            "id": "t4_q9",
+            "type": "Fill_in_Blanks",
+            "label": "Environmentalist's Data Source:",
+            "answer": "2025 Biodiversity Audit"
+          },
+          {
+            "id": "t4_q10",
+            "type": "Fill_in_Blanks",
+            "label": "Next Step in Regulation:",
+            "answer": "Public consultation phase"
+          },
+          {
+            "id": "t4_q11",
+            "type": "Fill_in_Blanks",
+            "label": "Target Implementation Month:",
+            "answer": "January 2027"
+          },
+          {
+            "id": "t4_q12",
+            "type": "Fill_in_Blanks",
+            "label": "Official Hotline:",
+            "answer": "1823-CAMP"
+          }
+        ]
+      }
+    ],
+    "script": [
+      {
+        "speaker": "Announcer",
+        "text": "Hong Kong Diploma of Secondary Education Examination 2027. English Language Paper 3. Listening and Integrated Skills. The Staycation Revolution."
+      },
+      {
+        "speaker": "Announcer",
+        "text": "Part A. Task 1. You are at the check-in counter for the 'Future Tourism Expo'. You will hear a conversation between a registration clerk and an exhibitor. Complete the form. (120-second pause)"
+      },
+      {
+        "speaker": "Clerk",
+        "text": "Good morning, sir. Welcome to the Expo. We're expecting a massive turnout for the Eco-Tourism track this year. Can I have your company details for the badge?"
+      },
+      {
+        "speaker": "Marcus",
+        "text": "Morning. I'm Marcus Thorpe, T-H-O-R-P-E. I'm representing Wilderness Retreats Ltd. We're the ones setting up the glamping pods in the courtyard."
+      },
+      {
+        "speaker": "Clerk",
+        "text": "Wilderness Retreats... right. And for our records, your direct contact email? Is it still the info address?"
+      },
+      {
+        "speaker": "Marcus",
+        "text": "No, please use my personal work one. It's m.thorpe@wilderness.com.hk. That's M-dot-T-H-O-R-P-E at wilderness dot com dot hk."
+      },
+      {
+        "speaker": "Clerk",
+        "text": "Got it. Now, you're registered under the Eco-Glamping Pavilion, correct? I have you assigned to Hall 3C. That's on the third floor, just next to the escalators."
+      },
+      {
+        "speaker": "Marcus",
+        "text": "Perfect. Hall 3C. And about the display... we originally planned for five tents, but because of the space constraints in that hall, we've scaled it back to 3 display tents. One dome tent, one safari style, and a bell tent."
+      },
+      {
+        "speaker": "Clerk",
+        "text": "Noted. Three tents. Now, for the equipment rental, you requested some laptops for the interactive booking demo. Do you still need six?"
+      },
+      {
+        "speaker": "Marcus",
+        "text": "Actually, our tech team brought their own tablets, so we only need four laptops from you now. However, we do need a specific power supply. The standard 110V won't run our climate control demo. We need 220V High Voltage."
+      },
+      {
+        "speaker": "Clerk",
+        "text": "I'll make a note for the technicians. 220V. Also, you have a media interview slot booked for the weekend... Oh wait, it's been moved. It's now scheduled for Friday at 2:00 PM with the 'Urban Traveler' magazine."
+      },
+      {
+        "speaker": "Marcus",
+        "text": "Friday at 2:00. I'll be there. One more thing, here is my insurance policy number for the setup. It's WR-9988-X."
+      },
+      {
+        "speaker": "Clerk",
+        "text": "WR-9988-X. Perfect. I see you've already received the 15% Early Bird discount on your booth fee. However, the final payment status shows as 'Bank Transfer Pending'. You might want to check with your accounts department."
+      },
+      {
+        "speaker": "Marcus",
+        "text": "I'll do that right away. Thanks for the heads up."
+      },
+      {
+        "speaker": "Announcer",
+        "text": "Task 2. Listen to a podcast episode regarding 'The Glamping Boom in the New Territories'. (120-second pause)"
+      },
+      {
+        "speaker": "Host",
+        "text": "Welcome to 'Nature HK'. Today we're talking about staycations. Forget five-star hotels; it's all about glamping now. We currently have 42 registered sites across the New Territories. While Sai Kung was the pioneer, Yuen Long has overtaken it as the most popular district due to the availability of flat farmland. At an average nightly rate of $1800, it's not cheap, but young families are flocking there to give their kids a taste of the outdoors without the mud."
+      },
+      {
+        "speaker": "Expert",
+        "text": "That's right. But it's not all easy money. Operators tell me waste management is their biggest headache—getting garbage trucks into remote sites is tough. While bookings are steady, Autumn is definitely the peak season; the weather is just perfect for sitting outside. Legally, you can't just pitch a tent; you need a Short Term Tenancy permit from the Lands Department and a Fire Safety Type B certificate. People come for the star-gazing experience, which is why we are seeing a 22% annual growth. Next on the map? A huge new project in Lantau South in collaboration with the Eco-Travel Association."
+      },
+      {
+        "speaker": "Announcer",
+        "text": "Task 3. Three experts are debating 'Traditional Hotels vs. Glamping'. (120-second pause)"
+      },
+      {
+        "speaker": "Prof Ng",
+        "text": "I still maintain that for a city like Hong Kong, our heritage hotels are indispensable. You can't replace the Peninsula's history with a plastic dome. Look at the data: traditional hotel occupancy is still respectable at 68%."
+      },
+      {
+        "speaker": "Mr Lau",
+        "text": "But Professor, people are tired of concrete boxes. The main concern with hotels is the total lack of nature. Glamping occupancy is at 85%! People want to breathe. That's why I'm pushing for the $500 million subsidy for eco-tourism development."
+      },
+      {
+        "speaker": "Ms Cheung",
+        "text": "Why not a compromise? A hybrid model. Hotels could install tented villas on their balconies or grounds. We should have a minimum guest age of 6 years old for these to ensure safety, and a strict noise limit of 55 decibels. We should also encourage hotels to get the EarthCheck Gold certification to stay competitive. Our main revenue for hotels used to be business travelers, but the future is leisure weekends."
+      },
+      {
+        "speaker": "Announcer",
+        "text": "Task 4. Stakeholders discussing wild camping. (240-second pause)"
+      },
+      {
+        "speaker": "Environmentalist",
+        "text": "We are seeing severe soil erosion in protected zones. We need drones for patrols. The 2025 Biodiversity Audit proved the damage is real."
+      },
+      {
+        "speaker": "Resident",
+        "text": "And the trash! I'm tired of cleaning up after tourists. We want a $3,000 fine for littering and permit-only parking for us villagers. 1823-CAMP should be the line for complaints."
+      },
+      {
+        "speaker": "Operator",
+        "text": "I suggest a digital permit system to limit group sizes to 8 people. We're happy to carry third-party indemnity insurance if it means we can keep operating. We expect the full regulations by January 2027 after the public consultation."
+      },
+      {
+        "speaker": "Announcer",
+        "text": "Part B. Integrated Skills Recording. Listen to the briefing from the Director of the Staycation Bureau to the Senior Project Manager."
+      },
+      {
+        "speaker": "Director",
+        "text": "Alright, let's get moving on these tasks. We have some delicate issues to handle. First, Task 8—when you write to the 'Save Our Greenery' group, don't just talk about the economy. They are worried about the local fauna. Make sure you mention that our new glamping guidelines require the use of 'Invisible Fencing'. This is a special technology that keeps the site boundaries secure without blocking the natural migration of small animals. It's a huge environmental plus that isn't in the brochures yet."
+      },
+      {
+        "speaker": "Director",
+        "text": "For the internal memo in Task 9, we need to address the low uptake of the staycation vouchers in rural areas. I want you to propose a 'Midnight Discount Scheme'. If guests book between midnight and 6:00 AM for last-minute slots, they get an extra 20% off. It helps fill the tents during the week. Also, mention we are implementing a 'Quiet Hours' policy starting strictly at 10:00 PM across all sites to appease the villagers. This is vital for the memo."
+      },
+      {
+        "speaker": "Director",
+        "text": "Finally, for Task 10, the social media post needs to be punchy. I've come up with a slogan I want you to use: 'Wild Luxury, Local Heart'. It sums up the balance we're aiming for. Oh, and mention our new partnership with the 'Star-Seeker App'. It's an app that helps guests identify constellations from their tents. It adds value to the experience. Get those drafts to me by five. Thanks."
+      }
+    ]
+  },
+  "Part_B": {
+    "data_file": [
+      {
+        "id": "doc1",
+        "type": "minutes",
+        "title": "Minutes: Rural Tourism Development Meeting",
+        "content": "Date: May 12, 2027. Points: 1. Residents in Yuen Long complained about light pollution from glamping sites. 2. Need for 'Dark Sky' compliant lighting. 3. Promotion of Green Staycation Vouchers ($1000 subsidy)."
+      },
+      {
+        "id": "doc2",
+        "type": "brochure",
+        "title": "Starry Nights Glamping: Guest Guide",
+        "content": "Experience the NT like never before. 100% solar powered. Nightly stargazing tours. Please note: No loud music after 9 PM. All trash must be carried out. Nightly rate: $1950 (weekend)."
+      },
+      {
+        "id": "doc3",
+        "type": "email",
+        "title": "Email from Ms. Gladys Ho (Resident)",
+        "content": "To: Staycation Bureau. Subject: Light Pollution. The new glamping site near Kam Tin is like a football stadium at night. My children can't sleep. The floodlights are pointed right at the village. Do something!"
+      },
+      {
+        "id": "doc4",
+        "type": "newspaper",
+        "title": "The Daily Post: Hotels vs. Tents",
+        "content": "Traditional hotels in Tsim Sha Tsui are struggling with 60% occupancy, while New Territories glamping sites are fully booked months in advance. Experts suggest hotels must 'go green' or go bust."
+      },
+      {
+        "id": "doc5",
+        "type": "handwritten_note",
+        "title": "Note from Director",
+        "content": "PM: Re: Gladys Ho's email. Tell her we're mandating 'Down-Shield' lights by next month. Also, mention the 10 PM quiet rule from the briefing. We must keep the villagers happy."
+      },
+      {
+        "id": "doc6",
+        "type": "table",
+        "title": "Staycation Voucher Performance (Q1 2027)",
+        "content": "District | Vouchers Issued | Vouchers Redeemed\nSai Kung | 5,000 | 4,800\nYuen Long | 4,000 | 1,200 (LOW!)\nLantau | 3,000 | 2,500"
+      },
+      {
+        "id": "doc7",
+        "type": "social_media_post",
+        "title": "Post by 'Save Our Greenery' NGO",
+        "content": "Glamping is just 'gentrified destruction'. They are trampling the rare orchids in the NT and scaring away the fireflies. #SaveOurNT #NatureFirst"
+      },
+      {
+        "id": "doc8",
+        "type": "memo",
+        "title": "Internal Memo: Licensing Update",
+        "content": "New regulation: All sites must have a 1:10 staff-to-guest ratio. Must provide eco-friendly toiletries. Waste must be sorted into four categories."
+      },
+      {
+        "id": "doc9",
+        "type": "leafet",
+        "title": "The Heritage Inn: Traditional Charm",
+        "content": "Stay in a converted 1920s mansion. Full AC. Fine dining. No tents here! Discount for seniors available."
+      },
+      {
+        "id": "doc10",
+        "type": "policy_draft",
+        "title": "Draft: Green Staycation Vouchers",
+        "content": "Subsidy can only be used at certified 'Eco-Sites'. Sites must prove 20% reduction in plastic use within 6 months of joining the scheme."
+      }
+    ],
+    "Part_B1": {
+      "tasks": [
+        {
+          "id": "Task_5",
+          "type": "Formal Email",
+          "instructions": "Write an email to Ms. Gladys Ho (Doc 3) regarding her light pollution complaints. Refer to Doc 1, Doc 5, and the Brochure (Doc 2).",
+          "wordCount": 150,
+          "grading_rubric": {
+            "content_points": [
+              "Acknowledge light pollution concern (Doc 3)",
+              "Mention mandate for 'Down-Shield' lights (Doc 5)",
+              "Explain 'Dark Sky' compliance (Doc 1)",
+              "Mention 10:00 PM quiet hours (Audio/Doc 5)"
+            ],
+            "tone": "Apologetic and Reassuring"
+          }
+        },
+        {
+          "id": "Task_6",
+          "type": "Notice",
+          "instructions": "Draft a notice for glamping operators about the new waste and staffing rules. Refer to Doc 8.",
+          "wordCount": 100,
+          "grading_rubric": {
+            "content_points": [
+              "Staff-to-guest ratio 1:10 (Doc 8)",
+              "Four-category waste sorting (Doc 8)",
+              "Mandatory eco-friendly toiletries (Doc 8)"
+            ],
+            "tone": "Formal and Instructive"
+          }
+        },
+        {
+          "id": "Task_7",
+          "type": "Summary Report",
+          "instructions": "Summarize voucher redemption rates for the Yuen Long district. Refer to Doc 6 and Doc 10.",
+          "wordCount": 100,
+          "grading_rubric": {
+            "content_points": [
+              "Only 1,200 of 4,000 vouchers redeemed in Yuen Long (Doc 6)",
+              "Vouchers only valid at certified 'Eco-Sites' (Doc 10)",
+              "Need for increased promotion in rural areas (Doc 6)"
+            ],
+            "tone": "Analytical"
+          }
+        }
+      ]
+    },
+    "Part_B2": {
+      "tasks": [
+        {
+          "id": "Task_8",
+          "type": "Formal Letter",
+          "instructions": "Write a letter to 'Save Our Greenery' (Doc 7) defending the glamping policy. Refer to Doc 2, Doc 10, and the Audio Briefing.",
+          "wordCount": 250,
+          "grading_rubric": {
+            "content_points": [
+              "Sites are 100% solar powered (Doc 2)",
+              "20% reduction in plastic required (Doc 10)",
+              "Trash must be carried out (Doc 2)",
+              "MUST MENTION: 'Invisible Fencing' for animal migration (Audio)",
+              "Address the concern about scaring fireflies/wildlife (Doc 7)"
+            ],
+            "tone": "Diplomatic and Persuasive"
+          }
+        },
+        {
+          "id": "Task_9",
+          "type": "Internal Memo",
+          "instructions": "Write a memo to staff proposing ways to fix the low voucher uptake in Yuen Long. Refer to Doc 6 and the Audio Briefing.",
+          "wordCount": 150,
+          "grading_rubric": {
+            "content_points": [
+              "Highlight the 'Low' redemption rate in Yuen Long (Doc 6)",
+              "Propose 'Midnight Discount Scheme' (Audio)",
+              "Extra 20% off for bookings 12AM-6AM (Audio)",
+              "Strict 10:00 PM Quiet Hours policy for harmony (Audio/Doc 5)"
+            ],
+            "tone": "Professional and Innovative"
+          }
+        },
+        {
+          "id": "Task_10",
+          "type": "Social Media Post",
+          "instructions": "Draft a social media post to launch the 'Revolution' campaign. Refer to Doc 2 and the Audio Briefing.",
+          "wordCount": 80,
+          "grading_rubric": {
+            "content_points": [
+              "Mention stargazing tours (Doc 2)",
+              "MUST USE SLOGAN: 'Wild Luxury, Local Heart' (Audio)",
+              "MUST MENTION: Partnership with 'Star-Seeker App' (Audio)",
+              "Use emojis to attract young families (Task 2/Context)"
+            ],
+            "tone": "Enthusiastic and Trendy"
+          }
+        }
+      ]
+    }
+  }
+}

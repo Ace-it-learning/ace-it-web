@@ -1,0 +1,106 @@
+{
+  "meta": {
+    "title": "The Loneliness Epidemic & Digital Connection",
+    "topic": "The Loneliness Epidemic & Digital Connection",
+    "generated_at": "2026-04-23T14:02:00.000Z",
+    "blueprint_version": "2026_V1"
+  },
+  "Part_A": {
+    "part": "Part A",
+    "genre": "Formal Letter",
+    "title": "Proposing 'No-Phone Lunch Fridays'",
+    "instructions": "Write a formal letter in about 200 words.",
+    "situation": "The Student Welfare Committee is concerned that students are becoming increasingly isolated as they spend their lunch breaks on their phones instead of interacting with peers. You want to propose a weekly 'No-Phone Lunch Friday' initiative.",
+    "requirements": [
+      "Provide two reasons why excessive phone use during breaks is detrimental to student well-being.",
+      "Explain how the 'No-Phone Lunch Friday' initiative would work in practice.",
+      "Suggest one alternative group activity (e.g., board games, discussion circles) to encourage interaction."
+    ],
+    "format_guides": [
+      "Address it to 'The Chairperson of the Student Welfare Committee'.",
+      "Maintain a professional and persuasive tone."
+    ]
+  },
+  "Part_B": [
+    {
+      "elective": "Sports Communication",
+      "type": "Article",
+      "question": "The rise of 'E-sports' vs. Traditional Team Sports: Do digital games provide the same social bond?",
+      "requirements": [
+        "Compare the 'camaraderie' built in an online gaming team versus a traditional football or basketball team.",
+        "Discuss the physical health risks of 'socializing' exclusively through a screen.",
+        "Conclude with your opinion on whether E-sports can truly replace the 'locker room' experience."
+      ]
+    },
+    {
+      "elective": "Drama",
+      "type": "Dramatic Script",
+      "question": "A scene between a grandchild trying to teach their lonely grandparent how to use a video-calling app.",
+      "requirements": [
+        "Use dialogue to show the grandparent's initial fear of technology and their underlying desire for company.",
+        "Include a moment of 'connection' when the grandparent finally sees a relative's face on the screen.",
+        "Provide stage directions that contrast the 'cold' digital device with the 'warm' human interaction."
+      ]
+    },
+    {
+      "elective": "Short Stories",
+      "type": "Short Story",
+      "question": "A story about a person who lives in a crowded city but feels invisible until a chance encounter in an 'Urban Void' (an empty, quiet space).",
+      "requirements": [
+        "Describe the sensory experience of being 'lonely in a crowd'.",
+        "Detail the specific 'Urban Void' where the encounter happens and why it feels different from the rest of the city.",
+        "Show how a simple, non-digital interaction changes the protagonist's outlook."
+      ]
+    },
+    {
+      "elective": "Popular Culture",
+      "type": "Blog Post",
+      "question": "The paradox of 'Social Media Loneliness': Why having 1,000 friends can feel like having zero.",
+      "requirements": [
+        "Identify the difference between 'digital reach' and 'emotional intimacy'.",
+        "Discuss the 'Highlight Reel' effect—how seeing others' perfect lives makes us feel more alone.",
+        "Provide advice on how to use social media as a tool for real-world connection rather than a replacement."
+      ]
+    },
+    {
+      "elective": "Social Issues",
+      "type": "Article",
+      "question": "Why digital 'connection' does not equal 'intimacy': The mental health impact of the 21st-century loneliness epidemic.",
+      "requirements": [
+        "Identify one major psychological reason why online chats feel 'thinner' than face-to-face conversations.",
+        "Discuss how the lack of physical presence (body language, touch) leads to misunderstandings and isolation.",
+        "Suggest one community-based solution (e.g., 'Third Places') to bring people back together."
+      ]
+    },
+    {
+      "elective": "Debating",
+      "type": "Formal Debate Speech",
+      "question": "'That technology is the primary cause of modern loneliness.'",
+      "requirements": [
+        "Argue that social media has 'optimized' interaction at the cost of authentic connection.",
+        "Provide a rebuttal to the claim that technology actually helps marginalized groups find community.",
+        "Conclude with a call to 'unplug' and rediscover the value of physical presence."
+      ]
+    },
+    {
+      "elective": "Workplace Communication",
+      "type": "Formal Proposal",
+      "question": "A proposal for a company to introduce 'Social Coffee Hubs' and reduce 'Remote Work Isolation'.",
+      "requirements": [
+        "Identify the decline in employee morale due to long-term remote working.",
+        "Propose the creation of physical or digital 'Hubs' where employees can talk about non-work topics.",
+        "Explain how improved social connection leads to better productivity and staff retention."
+      ]
+    },
+    {
+      "elective": "Songs and Poems",
+      "type": "Review",
+      "question": "A review of a song or poem that captures the feeling of 'Modern Isolation'.",
+      "requirements": [
+        "Identify the specific imagery used to represent loneliness (e.g., glass walls, static, empty echoes).",
+        "Discuss how the music or poetic structure reinforces the theme (e.g., slow tempo, disjointed rhythm).",
+        "Explain why this work resonates with the 'connected but alone' generation."
+      ]
+    }
+  ]
+}

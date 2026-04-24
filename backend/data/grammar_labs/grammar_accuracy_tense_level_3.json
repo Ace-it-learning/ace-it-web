@@ -1,0 +1,215 @@
+{
+  "type": "GRAMMAR",
+  "topic_id": "grammar_accuracy_tense",
+  "level": "HKDSE Level 3",
+  "conceptual_explanation": "Tense Consistency means using the right verb form based on when an action happened. In HKDSE, you must look for 'Time Markers' (like yesterday, since, always) to decide the tense. Consistency also means if you are telling a story in the past, you should generally stay in the past unless there is a specific reason to change.",
+  "rule_cards": [
+    {
+      "name": "The 'Yesterday' Rule (Simple Past)",
+      "formula": "Finished Time Marker (yesterday, in 2022, last week) + Past Tense (V-ed)",
+      "correct": "I visited the M+ Museum last Saturday.",
+      "incorrect": "I have visited the M+ Museum last Saturday."
+    },
+    {
+      "name": "The 'Since' Rule (Present Perfect)",
+      "formula": "Since/For + Time Duration + Present Perfect (has/have + V-pp)",
+      "correct": "He has lived in Sham Shui Po since he was a child.",
+      "incorrect": "He lives in Sham Shui Po since he was a child."
+    },
+    {
+      "name": "The 'Next' Rule (Future)",
+      "formula": "Future Time Marker (tomorrow, next year) + Future Tense (will + Verb)",
+      "correct": "The government will build a new sports park next year.",
+      "incorrect": "The government builds a new sports park next year."
+    },
+    {
+      "name": "The 'Always' Rule (Simple Present)",
+      "formula": "Habits/Facts (always, usually, every day) + Simple Present (V/V-s)",
+      "correct": "The Star Ferry travels between Central and Tsim Sha Tsui every day.",
+      "incorrect": "The Star Ferry is travelling between Central and Tsim Sha Tsui every day."
+    }
+  ],
+  "head_noun_tasks": [
+    {
+      "sentence_tokens": [
+        "Many",
+        "tourists",
+        "visited",
+        "the",
+        "Big",
+        "Buddha",
+        "last",
+        "weekend",
+        "."
+      ],
+      "head_noun_indices": [
+        6,
+        7
+      ],
+      "explanation": "The time marker 'last weekend' indicates a finished action in the past, so the Simple Past tense 'visited' must be used."
+    },
+    {
+      "sentence_tokens": [
+        "She",
+        "has",
+        "worked",
+        "as",
+        "a",
+        "volunteer",
+        "since",
+        "2015",
+        "."
+      ],
+      "head_noun_indices": [
+        6,
+        7
+      ],
+      "explanation": "The marker 'since 2015' shows an action that started in the past and continues to the present, requiring the Present Perfect tense 'has worked'."
+    },
+    {
+      "sentence_tokens": [
+        "We",
+        "will",
+        "join",
+        "the",
+        "school",
+        "picnic",
+        "next",
+        "Friday",
+        "."
+      ],
+      "head_noun_indices": [
+        6,
+        7
+      ],
+      "explanation": "The marker 'next Friday' refers to a future event, requiring the future tense 'will join'."
+    },
+    {
+      "sentence_tokens": [
+        "My",
+        "brother",
+        "usually",
+        "goes",
+        "to",
+        "the",
+        "library",
+        "after",
+        "school",
+        "."
+      ],
+      "head_noun_indices": [
+        2
+      ],
+      "explanation": "The frequency adverb 'usually' indicates a habit, which requires the Simple Present tense 'goes'."
+    },
+    {
+      "sentence_tokens": [
+        "They",
+        "were",
+        "watching",
+        "a",
+        "movie",
+        "when",
+        "the",
+        "phone",
+        "rang",
+        "."
+      ],
+      "head_noun_indices": [
+        5
+      ],
+      "explanation": "The conjunction 'when' introduces a specific point in time in the past when another action was in progress, requiring the Past Continuous 'were watching'."
+    }
+  ],
+  "drill_tasks": [
+    {
+      "type": "MCQ",
+      "question": "The students ________ their homework two hours ago.",
+      "options": [
+        "finish",
+        "finished",
+        "have finished",
+        "will finish"
+      ],
+      "answer": "finished",
+      "explanation": "'Two hours ago' is a finished past time marker, so Simple Past is correct."
+    },
+    {
+      "type": "MCQ",
+      "question": "Mr. Chan ________ English at this school for ten years.",
+      "options": [
+        "teaches",
+        "is teaching",
+        "has taught",
+        "taught"
+      ],
+      "answer": "has taught",
+      "explanation": "'For ten years' indicates a duration leading up to the present, requiring Present Perfect."
+    },
+    {
+      "type": "MCQ",
+      "question": "Look! The sun ________ brightly today.",
+      "options": [
+        "shines",
+        "is shining",
+        "shone",
+        "has shone"
+      ],
+      "answer": "is shining",
+      "explanation": "'Look!' and 'today' in this context suggest an action happening right now, requiring Present Continuous."
+    },
+    {
+      "type": "MCQ",
+      "question": "I ________ you a souvenir from Japan next week.",
+      "options": [
+        "bring",
+        "brought",
+        "will bring",
+        "have brought"
+      ],
+      "answer": "will bring",
+      "explanation": "'Next week' is a future time marker."
+    },
+    {
+      "type": "MCQ",
+      "question": "When I was young, I ________ swimming every morning.",
+      "options": [
+        "go",
+        "went",
+        "have gone",
+        "am going"
+      ],
+      "answer": "went",
+      "explanation": "'When I was young' sets the context in the past, so a past habit uses Simple Past."
+    }
+  ],
+  "boss_fight": {
+    "paragraph": "Yesterday, I go to the Ocean Park with my family. We have seen many amazing sea animals since we arrived. My sister will say that it was the best day of her life.",
+    "errors": [
+      {
+        "original": "go",
+        "correction": "went",
+        "explanation": "'Yesterday' requires the Simple Past tense."
+      },
+      {
+        "original": "have seen",
+        "correction": "saw",
+        "explanation": "The sentence describes a completed action during the visit yesterday, not an action continuing from the past to now."
+      },
+      {
+        "original": "will say",
+        "correction": "said",
+        "explanation": "To keep tense consistency with the rest of the story about 'yesterday', the past tense 'said' should be used."
+      }
+    ]
+  },
+  "success_feedback": "Great job! You have mastered the basic time markers and tense consistency rules for HKDSE Level 3.",
+  "suggested_next_steps": [
+    "Practice using Present Perfect with 'just', 'already', and 'yet'.",
+    "Learn how to use Past Continuous for actions in progress in the past.",
+    "Try Level 4 to learn about conditional sentences!"
+  ],
+  "interactive_tasks": [],
+  "examples": [],
+  "key_points": []
+}

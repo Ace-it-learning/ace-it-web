@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useSearchParams, useNavigate, useLocation } from 'react-router-dom';
-import { ArrowRight, Award, Book, BookOpen, CheckCircle2, ChevronRight, GraduationCap, Layout, Layers, Loader2, MessageSquare, Mic, MousePointerClick, Play, RefreshCcw, Save, Sparkles, Square, Star, Trophy, Volume2, X } from 'lucide-react';
+import { AlertTriangle, ArrowLeft, ArrowRight, Award, Book, BookOpen, CheckCircle2, ChevronLeft, ChevronRight, GraduationCap, Layout, Layers, Loader2, MessageSquare, Mic, MousePointerClick, Play, RefreshCcw, Save, Sparkles, Square, Star, Target, Trophy, Volume2, X } from 'lucide-react';
+import { LoadingPage, GradingOverlay } from '../components/shared';
 import NextPathRecommendations from '../components/lab/NextPathRecommendations';
 import { useAuth } from '../context/AuthContext';
 import { MICRO_SKILLS, getSkillName, getSkillDesc } from '../constants/microSkills';
@@ -15,6 +16,7 @@ import ParagraphInsight from '../components/reading/ParagraphInsight';
 import ArgumentMap from '../components/reading/ArgumentMap';
 import MockCountdownTimer from '../components/utils/MockCountdownTimer';
 import { useLanguage } from '../context/LanguageContext';
+import { useAvatar } from '../context/AvatarContext';
 import { motion, Reorder } from 'framer-motion';
 
 // --- Dictionary Popover Component ---
@@ -80,6 +82,197 @@ const DictionaryPopover = ({ data, position, onClose, onAddToNotebook, loading }
     );
 };
 
+// --- Rule Card Component ---
+const RuleCard = ({ rule, onNext, isLast }) => {
+    return (
+        <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="bg-white dark:bg-gray-900 p-8 md:p-12 rounded-[3.5rem] shadow-xl border-2 border-indigo-100 dark:border-indigo-900/40 max-w-5xl mx-auto"
+        >
+            <div className="flex items-center gap-4 mb-10">
+                <div className="p-3 bg-indigo-600 rounded-2xl text-white shadow-lg shadow-indigo-200">
+                    <Sparkles size={24} />
+                </div>
+                <h3 className="text-3xl font-black dark:text-white uppercase tracking-tight">{rule.name}</h3>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch mb-10">
+                {/* Left Side: Formula */}
+                <div className="p-10 bg-gray-50 dark:bg-gray-800/40 rounded-[2.5rem] border-2 border-dashed border-indigo-200 dark:border-indigo-800 flex flex-col justify-center">
+                    <h4 className="text-[10px] font-black text-indigo-600 dark:text-indigo-400 uppercase tracking-widest mb-4">Core Formula</h4>
+                    <p className="text-3xl md:text-4xl font-black text-gray-900 dark:text-white leading-[1.1]">{rule.formula}</p>
+                </div>
+
+                {/* Right Side: Examples */}
+                <div className="flex flex-col gap-4">
+                    <div className="p-8 bg-red-50 dark:bg-red-900/10 rounded-3xl border border-red-100 dark:border-red-900/30 flex-1">
+                        <div className="flex items-center gap-2 mb-3">
+                            <div className="w-5 h-5 rounded-full bg-red-500 flex items-center justify-center">
+                                <X className="text-white" size={12} />
+                            </div>
+                            <span className="text-[10px] font-black text-red-600 uppercase tracking-widest">Incorrect</span>
+                        </div>
+                        <p className="text-xl font-bold text-red-900 dark:text-red-200 italic leading-relaxed">"{rule.incorrect}"</p>
+                    </div>
+
+                    <div className="p-8 bg-green-50 dark:bg-green-900/10 rounded-3xl border border-green-100 dark:border-green-900/30 flex-1">
+                        <div className="flex items-center gap-2 mb-3">
+                            <div className="w-5 h-5 rounded-full bg-green-500 flex items-center justify-center">
+                                <CheckCircle2 className="text-white" size={12} />
+                            </div>
+                            <span className="text-[10px] font-black text-green-600 uppercase tracking-widest">Correct</span>
+                        </div>
+                        <p className="text-xl font-bold text-green-900 dark:text-green-200 leading-relaxed">"{rule.correct}"</p>
+                    </div>
+                </div>
+            </div>
+
+            <button
+                onClick={onNext}
+                className="w-full py-6 bg-indigo-600 hover:bg-indigo-700 text-white rounded-3xl font-black text-2xl transition-all shadow-xl shadow-indigo-200/50 active:scale-95 flex items-center justify-center gap-3"
+            >
+                {isLast ? "Begin Mission Training" : "Next Mission Rule"}
+                <ArrowRight size={24} />
+            </button>
+        </motion.div>
+    );
+};
+
+// --- Head Noun Selector Component ---
+const HeadNounSelector = ({ task, onComplete, topic }) => {
+    const [selectedIndices, setSelectedIndices] = useState([]);
+    const [isCorrect, setIsCorrect] = useState(null);
+    const [showExplanation, setShowExplanation] = useState(false);
+
+    const isTenseLab = topic?.includes('tense');
+    const isCountableLab = topic?.includes('countable');
+    
+    let phaseTitle = "Phase 2: Head Noun Identification";
+    let mainInstruction = "Click the 'Head Noun' in the sentence below.";
+    let subInstruction = "Identify the real subject that controls the verb.";
+
+    if (isTenseLab) {
+        phaseTitle = "Phase 2: Context Identification";
+        mainInstruction = "Click the 'Time Marker' or 'Key Verb' that sets the tense context.";
+        subInstruction = "Identify the cue that dictates the correct tense.";
+    } else if (isCountableLab) {
+        phaseTitle = "Phase 2: Noun Type Identification";
+        mainInstruction = "Click the 'Uncountable Noun' or 'Quantifier' in the sentence below.";
+        subInstruction = "Spot the words that often cause confusion in pluralization or quantity.";
+    } else if (topic?.includes('wordform')) {
+        phaseTitle = "Phase 2: Word Form Identification";
+        mainInstruction = task.target_type 
+            ? `Click the '${task.target_type}' in the sentence below.`
+            : "Click the 'Target Word' (Adjective/Adverb/Noun) in the sentence below.";
+        subInstruction = "Identify the word whose form must be correctly chosen based on its grammatical role.";
+    } else if (topic?.includes('pronoun')) {
+        phaseTitle = "Phase 2: Pronoun Reference Identification";
+        mainInstruction = "Click the 'Pronoun' and its 'Antecedent' (the noun it refers to).";
+        subInstruction = "Identify the relationship between the pronoun and the noun it replaces.";
+    } else if (topic?.includes('inversion')) {
+        phaseTitle = "Phase 2: Inversion Trigger Identification";
+        mainInstruction = "Click the 'Negative Adverbial' or 'Condition' that triggers the inversion.";
+        subInstruction = "Identify the word or phrase that forces the auxiliary verb to move before the subject.";
+    }
+
+    // Reset state when task changes to fix "stuck" selections between questions
+    useEffect(() => {
+        setSelectedIndices([]);
+        setIsCorrect(null);
+        setShowExplanation(false);
+    }, [task]);
+
+    const handleTokenClick = (idx) => {
+        if (showExplanation) return;
+        
+        let newSelection;
+        if (selectedIndices.includes(idx)) {
+            newSelection = selectedIndices.filter(i => i !== idx);
+        } else {
+            newSelection = [...selectedIndices, idx];
+        }
+        setSelectedIndices(newSelection);
+    };
+
+    const handleCheck = () => {
+        // Sort both for comparison
+        const sortedSelected = [...selectedIndices].sort((a, b) => a - b);
+        const sortedTarget = [...task.head_noun_indices].sort((a, b) => a - b);
+        
+        const correct = JSON.stringify(sortedSelected) === JSON.stringify(sortedTarget);
+        setIsCorrect(correct);
+        setShowExplanation(true);
+        onComplete(correct);
+    };
+
+    return (
+        <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="space-y-8"
+        >
+            <div className="text-center space-y-4">
+                <span className="inline-block px-4 py-1.5 bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-300 text-xs font-black uppercase tracking-widest rounded-full">
+                    {phaseTitle}
+                </span>
+                <h3 className="text-2xl md:text-3xl font-black dark:text-white">{mainInstruction}</h3>
+                <p className="text-gray-500 font-medium italic">{subInstruction}</p>
+            </div>
+
+            <div className="bg-white dark:bg-gray-900 p-8 md:p-10 rounded-[2.5rem] shadow-xl border border-gray-100 dark:border-gray-800">
+                <div className="flex flex-wrap justify-center gap-2 md:gap-3">
+                    {task.sentence_tokens.map((token, idx) => (
+                        <button
+                            key={idx}
+                            onClick={() => handleTokenClick(idx)}
+                            className={`px-4 py-3 rounded-xl text-xl md:text-2xl font-bold transition-all ${
+                                selectedIndices.includes(idx)
+                                    ? 'bg-indigo-600 text-white shadow-lg scale-105'
+                                    : 'bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'
+                            } ${showExplanation && task.head_noun_indices.includes(idx) ? 'ring-4 ring-green-400' : ''}`}
+                            disabled={showExplanation}
+                        >
+                            {token}
+                        </button>
+                    ))}
+                </div>
+
+                {!showExplanation && (
+                    <div className="mt-12 flex justify-center">
+                        <button
+                            onClick={handleCheck}
+                            disabled={selectedIndices.length === 0}
+                            className="px-12 py-5 bg-indigo-600 hover:bg-indigo-700 disabled:opacity-50 text-white rounded-full font-black text-xl transition-all shadow-xl active:scale-95"
+                        >
+                            Confirm Selection
+                        </button>
+                    </div>
+                )}
+
+                {showExplanation && (
+                    <motion.div 
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        className={`mt-10 p-8 rounded-3xl border-2 flex items-start gap-6 ${
+                            isCorrect ? 'bg-green-50 border-green-200 text-green-800' : 'bg-red-50 border-red-200 text-red-800'
+                        }`}
+                    >
+                        <div className="size-12 rounded-2xl bg-white flex items-center justify-center shrink-0 shadow-sm">
+                            {isCorrect ? <CheckCircle2 className="text-green-600" /> : <X className="text-red-600" />}
+                        </div>
+                        <div className="space-y-2">
+                            <p className="text-sm font-black uppercase tracking-widest">{isCorrect ? "Masterful!" : "Not quite..."}</p>
+                            <p className="text-lg font-bold leading-relaxed">{task.explanation}</p>
+                        </div>
+                    </motion.div>
+                )}
+            </div>
+        </motion.div>
+    );
+};
+
+
 // --- Ordering Task Component ---
 const OrderingTask = ({ task, value, onChange, disabled }) => {
     const [items, setItems] = React.useState(() => {
@@ -143,7 +336,7 @@ const OrderingTask = ({ task, value, onChange, disabled }) => {
 };
 
 const LabPage = () => {
-    const [searchParams] = useSearchParams();
+    const [searchParams, setSearchParams] = useSearchParams();
     const navigate = useNavigate();
     const { user } = useAuth();
     const { t, language } = useLanguage();
@@ -186,7 +379,35 @@ const LabPage = () => {
 
     const [loading, setLoading] = useState(true);
     const [lessonData, setLessonData] = useState(null);
-    const [step, setStep] = useState('EXPLORE'); // EXPLORE, PRACTICE, SUCCESS
+    const [step, setStep] = useState(searchParams.get('step') || 'EXPLORE'); // EXPLORE, PRACTICE, SUCCESS
+    const [grammarSubStep, setGrammarSubStep] = useState('LEARN'); 
+    const [currentRuleIdx, setCurrentRuleIdx] = useState(0);
+    const [currentHeadNounIdx, setCurrentHeadNounIdx] = useState(0);
+    const [currentDrillIdx, setCurrentDrillIdx] = useState(0);
+    const [drillAnswers, setDrillAnswers] = useState({});
+    const [identifyResults, setIdentifyResults] = useState({}); // idx -> bool
+    const [comboCount, setComboCount] = useState(0);
+    const [maxCombo, setMaxCombo] = useState(0);
+    const [grammarMistakes, setGrammarMistakes] = useState([]);
+    const [bossChecked, setBossChecked] = useState(false);
+
+    // Focus Mode to hide global navbar and show custom mission header
+    const { setIsFocusMode } = useAvatar();
+    useEffect(() => {
+        setIsFocusMode(true);
+        return () => setIsFocusMode(false);
+    }, [setIsFocusMode]);
+
+    // Sync step with URL
+
+    // Helper to update step and URL
+    const updateStep = (newStep) => {
+        setStep(newStep);
+        const newParams = new URLSearchParams(searchParams);
+        newParams.set('step', newStep);
+        setSearchParams(newParams);
+    };
+
     const [userAnswers, setUserAnswers] = useState({}); // id -> string
     const [feedbacks, setFeedbacks] = useState({}); // id -> { correct: bool, logic: string }
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -196,6 +417,7 @@ const LabPage = () => {
     const [evalError, setEvalError] = useState(null); // Capture evaluation errors
     const [hasErrors, setHasErrors] = useState(false); // Track if current attempt has errors
     const [earnedXp, setEarnedXp] = useState(0);
+    const [xpBreakdown, setXpBreakdown] = useState(null);
     const [masteryScore, setMasteryScore] = useState(0);
     const [qBatch, setQBatch] = useState(0); // 0 or 1 for Easy level question sets
     const isFactoryQuest = location.state?.isFactoryQuest || false;
@@ -275,14 +497,13 @@ const LabPage = () => {
             const lvlStr = String(urlLevel);
             // Standardized Normalization: Support both 1-4 Tiers AND 3-7 Semantic Levels
             if (lvlStr === '7' || lvlStr.includes('5**')) normalized = '7';
-            else if (lvlStr === '6' || lvlStr.includes('5*')) normalized = '6';
-            else if (lvlStr === '5' || (lvlStr.startsWith('5') && lvlStr !== '5*')) normalized = '5';
+            else if (lvlStr === '5' || lvlStr.includes('5*')) normalized = '5'; // Treat 5* as 5 or 7 depending on user preference, but here we'll map to 5 for now
             else if (lvlStr === '4' || lvlStr === '2') normalized = '4'; // Level 4 or Tier 2
             else if (lvlStr === '3' || lvlStr === '1') normalized = '3'; // Level 3 or Tier 1
 
             if (normalized !== currentLevel) {
                 setCurrentLevel(normalized);
-                setStep('EXPLORE'); // Force back to briefing
+                updateStep('EXPLORE'); // Force back to briefing
                 setLessonData(null); // Clear old data to show loading properly
                 setUserAnswers({}); // Clear answers
                 setFeedbacks({}); // Clear feedbacks
@@ -432,6 +653,13 @@ const LabPage = () => {
                     // Phase 24 & 25: Limit questions for Easy level (CurrentLevel '3')
                     // DEPRECATED: We now allow the full targetCount (8) as per user feedback
 
+                    setDrillAnswers({});
+                    setCurrentRuleIdx(0);
+                    setCurrentHeadNounIdx(0);
+                    setCurrentDrillIdx(0);
+                    setGrammarSubStep('LEARN');
+                    setComboCount(0);
+                    setGrammarMistakes([]);
                     setLessonData(data); // Writing API returns { mode, theme, ... }
 
                     // Initialize answers
@@ -584,6 +812,9 @@ const LabPage = () => {
             const params = new URLSearchParams();
             params.set('quest_completed', 'true');
             if (topic) params.set('topic', topic);
+            params.set('score', masteryScore !== undefined ? masteryScore : 0);
+            params.set('xp', earnedXp || 0);
+            
             // Use window.location.href to ensure a clean break/mount for ChatInterface greeting
             window.location.href = `/dashboard?${params.toString()}`;
             return;
@@ -643,12 +874,12 @@ const LabPage = () => {
             setEarnedXp(0);
 
             // Jump back to briefing first to allow fetchLesson to finish
-            setStep('EXPLORE');
+            updateStep('EXPLORE');
             setLoading(true);
             setLessonData(null);
         } else {
             // For other levels, standard retry (re-fetch)
-            setStep('EXPLORE');
+            updateStep('EXPLORE');
             setLessonData(null);
             setUserAnswers({});
             setFeedbacks({});
@@ -695,25 +926,65 @@ const LabPage = () => {
             // Calculate Performance
             const results = {};
             let correctCount = 0;
-            const totalCount = lessonData.interactive_tasks.length;
+            let totalCount = 0;
 
-            lessonData.interactive_tasks.forEach(t => {
-                const f = aiFeedbacks[t.id];
-                const isCorrect = f && f.correct === true;
-                results[t.id] = isCorrect;
-                if (isCorrect) correctCount++;
-            });
+             if (lessonData?.type === 'GRAMMAR' || location.state?.isGrammarLab) {
+                // Grammar Lab Logic: Explicitly count correct answers
+                const idTotal = lessonData.head_noun_tasks?.length || 0;
+                const drillTotal = lessonData.drill_tasks?.length || 0;
+                const bossTotal = lessonData.boss_fight?.errors?.length || 0;
+                totalCount = idTotal + drillTotal + bossTotal;
 
-            const taskXp = location.state?.taskXp || 50;
-            const calculatedXp = Math.floor((correctCount / totalCount) * taskXp);
+                let idCorrect = 0;
+                Object.values(identifyResults).forEach(v => { if (v === true) idCorrect++; });
+
+                let drillCorrect = 0;
+                lessonData.drill_tasks?.forEach((t, idx) => {
+                    if (drillAnswers[idx] === t.answer) drillCorrect++;
+                });
+
+                let bossCorrect = 0;
+                lessonData.boss_fight?.errors?.forEach((err, idx) => {
+                    const isOriginalCorrect = userAnswers[`boss_${idx}_orig`]?.trim().toLowerCase() === err.original.toLowerCase();
+                    const isCorrectionCorrect = userAnswers[`boss_${idx}_corr`]?.trim().toLowerCase() === err.correction.toLowerCase();
+                    if (isOriginalCorrect && isCorrectionCorrect) {
+                        bossCorrect += 1;
+                    }
+                });
+
+                correctCount = idCorrect + drillCorrect + bossCorrect;
+            } else {
+                // Standard Lab Logic
+                totalCount = lessonData.interactive_tasks?.length || 1;
+                lessonData.interactive_tasks?.forEach(t => {
+                    const f = aiFeedbacks[t.id];
+                    const isCorrect = f && (f.status === 'correct' || f.correct === true);
+                    const isPartial = f && f.status === 'partial';
+                    
+                    results[t.id] = isCorrect ? 'correct' : (isPartial ? 'partial' : 'incorrect');
+                    if (isCorrect) {
+                        correctCount += 1;
+                    } else if (isPartial) {
+                        correctCount += 0.5;
+                    }
+                });
+            }
+
+            // XP Calculation: Fixed at 50 for Grammar Lab, proportional to score
+            let taskXp = location.state?.taskXp || 50;
+            if (lessonData?.type === 'GRAMMAR' || location.state?.isGrammarLab) {
+                taskXp = 50; 
+            }
+
+            const calculatedXp = Math.floor((correctCount / Math.max(1, totalCount)) * taskXp);
             setEarnedXp(calculatedXp);
 
-            const calculatedMasteryScore = Math.floor((correctCount / totalCount) * 100);
+            const calculatedMasteryScore = Math.floor((correctCount / Math.max(1, totalCount)) * 100);
             setMasteryScore(calculatedMasteryScore);
 
             // Collect Mistakes
             const mistakes = lessonData.interactive_tasks
-                .filter(t => results[t.id] === false)
+                .filter(t => results[t.id] === 'incorrect' || results[t.id] === 'partial' || results[t.id] === false)
                 .map(t => ({
                     question: t.question,
                     userAnswer: userAnswers[t.id],
@@ -735,13 +1006,22 @@ const LabPage = () => {
                     masteryScore: calculatedMasteryScore,
                     topic: lessonData.topic || topic || 'Learning Lab',
                     title: displayTopic, // NEW: Mission Name
-                    paper: (lessonData.type || 'READING').charAt(0).toUpperCase() + (lessonData.type || 'READING').slice(1).toLowerCase(), // NEW: Normalized Paper Name
+                    paper: location.state?.isGrammarLab ? 'Grammar' : ((lessonData.type || 'READING').charAt(0).toUpperCase() + (lessonData.type || 'READING').slice(1).toLowerCase()), // NEW: Normalized Paper Name
                     mistakes, // Send detected mistakes
                     isFactoryQuest,
-                    isWeeklyQuest
+                    isWeeklyQuest,
+                    isGrammarLab: location.state?.isGrammarLab
                 })
             });
             if (!submitRes.ok) throw new Error("Failed to save mission progress");
+            
+            const submitData = await submitRes.json();
+            if (submitData.breakdown) {
+                setXpBreakdown(submitData.breakdown);
+            }
+            if (submitData.earnedTotal !== undefined) {
+                setEarnedXp(submitData.earnedTotal);
+            }
 
             // Mark Roadmap Task as Completed (if launched from Roadmap)
             if (location.state?.taskId) {
@@ -759,7 +1039,7 @@ const LabPage = () => {
                 }
             }
 
-            setStep('SUCCESS');
+            updateStep('SUCCESS');
         } catch (e) {
             console.error("Evaluation Error:", e);
             setEvalError(e.message);
@@ -843,7 +1123,7 @@ const LabPage = () => {
                 body: JSON.stringify(submitPayload)
             });
 
-            setStep('SUCCESS');
+            updateStep('SUCCESS');
         } catch (e) {
             console.error("Writing Eval Error:", e);
             setEvalError(e.message);
@@ -902,7 +1182,7 @@ const LabPage = () => {
                         level={currentLevel}
                         lessonMode={lessonData?.mode}
                         onTryAgain={() => {
-                            setStep('EXPLORE');
+                            updateStep('EXPLORE');
                             setLessonData(null);
                             // Could trigger re-fetch if useEffect depends on lessonData being null? 
                             // Actually fetchLesson depends on topic/level. 
@@ -919,12 +1199,10 @@ const LabPage = () => {
     // --- LOADING STATE ---
     if (loading) {
         return (
-            <div className="min-h-screen bg-white dark:bg-gray-950 flex items-center justify-center">
-                <div className="flex flex-col items-center gap-4">
-                    <Loader2 className="animate-spin text-indigo-600" size={48} />
-                    <p className="text-gray-500 font-medium animate-pulse">{t('lab.designing_lesson')}</p>
-                </div>
-            </div>
+            <LoadingPage 
+                title="Synthesizing Laboratory Material..." 
+                subtext="Crafting an optimized HKDSE environment for your proficiency level."
+            />
         );
     }
 
@@ -973,26 +1251,85 @@ const LabPage = () => {
 
     return (
         <div className="min-h-screen bg-white dark:bg-gray-950 flex flex-col animate-in fade-in duration-300">
-            <header className="fixed top-0 inset-x-0 h-16 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-100 dark:border-gray-800 z-50 px-6 flex items-center justify-between">
+            <header className="fixed top-0 inset-x-0 h-16 bg-white dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800 z-50 px-6 flex items-center justify-between shadow-sm">
                 <div className="flex items-center gap-4">
-                    <button onClick={handleClose} className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-xl transition-colors">
-                        <X className="w-5 h-5 text-gray-500" />
+                    <button 
+                        onClick={() => navigate('/dashboard', { state: { openRoadmap: true } })} 
+                        className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-xl transition-all group flex items-center"
+                        title="Back to Roadmap"
+                    >
+                        <ChevronLeft className="w-6 h-6 text-gray-500 group-hover:text-indigo-600 transition-colors" />
                     </button>
-                    <div>
-                        <h1 className="text-base font-black text-gray-900 dark:text-gray-100 tracking-tight leading-tight">{displayTopic}</h1>
+                    <div className="h-8 w-px bg-gray-100 dark:bg-gray-800 hidden md:block"></div>
+                    <div className="flex flex-col justify-center">
+                        <h1 className="text-sm font-black text-gray-900 dark:text-gray-100 tracking-tight leading-tight">{displayTopic}</h1>
                         <div className="flex items-center gap-2">
-                            <span className="px-2 py-0.5 bg-indigo-50 dark:bg-indigo-900/40 text-indigo-600 dark:text-indigo-400 rounded-[4px] text-[8px] font-black uppercase tracking-widest border border-indigo-100 dark:border-indigo-800">
+                            <span className="px-1.5 py-0.5 bg-indigo-50 dark:bg-indigo-900/40 text-indigo-600 dark:text-indigo-400 rounded text-[8px] font-black uppercase tracking-widest border border-indigo-100 dark:border-indigo-800">
                                 Level {currentLevel === '7' ? '5**' : currentLevel === '6' ? '5*' : currentLevel}
                             </span>
-                            <span className={`px-2 py-0.5 rounded-[4px] text-[8px] font-bold uppercase tracking-wider border ${getMasteryStats(Number(currentLevel)).color}`}>
-                                {getMasteryStats(Number(currentLevel)).displayName}
-                            </span>
                             <span className="text-[8px] font-bold text-gray-400 uppercase tracking-widest flex items-center gap-1">
-                                <Sparkles size={10} className="text-amber-500" />
-                                MISSION XP: +{missionXp}
+                                <Sparkles size={8} className="text-amber-500" />
+                                XP: +{missionXp}
                             </span>
                         </div>
                     </div>
+                </div>
+
+                {/* Centered Progress Bar */}
+                {lessonData?.type === 'GRAMMAR' && step === 'PRACTICE' && (
+                    <div className="absolute left-1/2 -translate-x-1/2 flex items-center gap-3">
+                        <div className="flex gap-1.5">
+                            {['LEARN', 'IDENTIFY', 'DRILL', 'BOSS_FIGHT'].map((s) => (
+                                <div 
+                                    key={s} 
+                                    className={`h-1.5 w-8 md:w-12 rounded-full transition-all duration-500 ${
+                                        grammarSubStep === s ? 'bg-indigo-600' : 
+                                        (['LEARN', 'IDENTIFY', 'DRILL', 'BOSS_FIGHT'].indexOf(grammarSubStep) > ['LEARN', 'IDENTIFY', 'DRILL', 'BOSS_FIGHT'].indexOf(s) ? 'bg-green-500' : 'bg-gray-200 dark:bg-gray-800')
+                                    }`}
+                                />
+                            ))}
+                        </div>
+                        <div className="hidden md:block px-2 py-0.5 bg-indigo-50 dark:bg-indigo-900/30 rounded border border-indigo-100 dark:border-indigo-800">
+                            <span className="text-[9px] font-black text-indigo-600 dark:text-indigo-400 uppercase tracking-widest whitespace-nowrap">
+                                {grammarSubStep === 'LEARN' ? 'Rule' :
+                                 grammarSubStep === 'IDENTIFY' ? 'Spotter' :
+                                 grammarSubStep === 'DRILL' ? 'Drill' : 'Boss'}
+                            </span>
+                        </div>
+                    </div>
+                )}
+
+                <div className="flex items-center gap-3">
+                    {/* Debug Cheat Tools - Only for fungtam@gmail.com */}
+                    {user?.email === 'fungtam@gmail.com' && !isMock && (
+                        <div className="flex items-center gap-1 bg-amber-50 dark:bg-amber-900/20 p-1 rounded-lg border border-amber-200">
+                            <span className="text-[10px] font-black text-amber-600 px-1 hidden sm:block">DEBUG:</span>
+                            {['3', '4', '5', '5*', '5**'].map(lvl => (
+                                <button
+                                    key={lvl}
+                                    onClick={() => handleCheat(lvl)}
+                                    disabled={isSubmitting}
+                                    className={`text-[10px] font-bold px-2 py-0.5 rounded transition-colors ${
+                                        currentLevel === (lvl === '5**' ? '7' : lvl === '5*' ? '6' : lvl)
+                                        ? 'bg-amber-500 text-white'
+                                        : 'hover:bg-amber-200 dark:hover:bg-amber-800 dark:text-amber-400'
+                                    }`}
+                                >
+                                    {lvl}
+                                </button>
+                            ))}
+                        </div>
+                    )}
+
+                    {isMock && duration > 0 && step === 'PRACTICE' && (
+                        <MockCountdownTimer 
+                            initialSeconds={duration} 
+                            onTimeUp={() => {
+                                alert("Time is up! Submitting your mission...");
+                                handleSubmitMission();
+                            }} 
+                        />
+                    )}
                 </div>
             </header>
 
@@ -1019,90 +1356,12 @@ const LabPage = () => {
                 onRetry={null} // Retry logic can be passed if needed
             />
 
-            {/* Immersive Standalone Header */}
-            <header className="sticky top-0 w-full flex justify-between items-center px-8 md:px-12 py-4 border-b border-gray-100 dark:border-gray-800 bg-white/80 dark:bg-gray-950/80 backdrop-blur-md z-20">
-                <div className="flex items-center gap-4">
-                    <div className="p-2 bg-indigo-600 rounded-lg text-white">
-                        <Layers size={18} />
-                    </div>
-                            <div>
-                                <div className="flex items-center gap-2">
-                                    <h2 className="text-sm md:text-base font-black dark:text-white tracking-wider">
-                                        {lessonData?.type ? `${lessonData.type.charAt(0) + lessonData.type.slice(1).toLowerCase()} - ` : ''}{displayTopic}
-                                    </h2>
-                                    {currentLevel && (
-                                        <div className="flex items-center gap-2">
-                                            <span className="px-2 py-0.5 bg-indigo-50 dark:bg-indigo-900/40 text-indigo-600 dark:text-indigo-400 rounded-md text-[10px] font-black uppercase tracking-widest border border-indigo-100 dark:border-indigo-800">
-                                                Level {currentLevel === '7' ? '5**' : currentLevel === '6' ? '5*' : currentLevel}
-                                            </span>
-                                            <span className="hidden sm:inline-block px-2 py-0.5 bg-amber-50 dark:bg-amber-900/40 text-amber-600 dark:text-amber-400 rounded-md text-[10px] font-black uppercase tracking-widest border border-amber-100 dark:border-amber-800">
-                                                {(() => {
-                                                    const stats = typeof getMasteryStats === 'function' ? getMasteryStats(Number(currentLevel)) : null;
-                                                    return (language === 'zh-HK' || language === 'zh-TW') ? stats?.zh : stats?.displayName;
-                                                })()}
-                                            </span>
-                                        </div>
-                                    )}
-                                </div>
-                                <div className="flex items-center gap-2">
-                                    <span className="text-[10px] font-bold text-gray-400">{t('lab.mission_type')}</span>
-                                    <span className="text-[10px] font-black text-indigo-600 dark:text-indigo-400 uppercase tracking-widest">
-                                        {isWeeklyQuest ? "Weekly Challenge" : t('lab.comprehensive_practice')}
-                                    </span>
-                                </div>
-                            </div>
-                </div>
+            {/* The sticky header was removed to allow the Global Navbar to show instead */}
 
-                <div className="flex items-center gap-3">
-                    {user?.email === 'fungtam@gmail.com' && !isMock && (
-                        <div className="flex items-center gap-1 bg-amber-50 dark:bg-amber-900/20 p-1 rounded-lg border border-amber-200">
-                            <span className="text-[10px] font-black text-amber-600 px-1">DEBUG CHEAT:</span>
-                            {['3', '4', '5', '5*', '5**'].map(lvl => (
-                                <button
-                                    key={lvl}
-                                    onClick={() => handleCheat(lvl)}
-                                    disabled={isSubmitting}
-                                    className="text-[10px] font-bold px-2 py-0.5 hover:bg-amber-200 dark:hover:bg-amber-800 rounded transition-colors dark:text-amber-400"
-                                >
-                                    {lvl}
-                                </button>
-                            ))}
-                        </div>
-                    )}
-                    
-                    {isMock && duration > 0 && step === 'PRACTICE' && (
-                        <MockCountdownTimer 
-                            initialSeconds={duration} 
-                            onTimeUp={() => {
-                                alert("Time is up! Submitting your mission...");
-                                handleSubmitMission();
-                            }} 
-                        />
-                    )}
-
-                    {isMock ? (
-                        <div className="px-3 py-1 bg-rose-600 text-white rounded-lg text-[10px] font-black uppercase tracking-widest animate-pulse shadow-lg shadow-rose-600/20">
-                            Mock Active
-                        </div>
-                    ) : (
-                        <span className="text-[10px] font-bold text-gray-400 dark:text-gray-500 uppercase tracking-widest hidden md:inline">
-                            {t('lab.live_training')}
-                        </span>
-                    )}
-
-                    <button
-                        onClick={handleClose}
-                        className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-all group"
-                        title={t('lab.exit_lab')}
-                    >
-                        <X size={20} className="text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" />
-                    </button>
-                </div>
-            </header>
 
             {/* Immersive Scroll Content */}
-            <main className="flex-1 bg-gray-50/50 dark:bg-transparent select-none">
-                <div className="w-full px-8 md:px-12 py-6 md:py-12 font-sans">
+            <main className="flex-1 bg-gray-50/50 dark:bg-transparent select-none pt-16">
+                <div className="w-full px-8 md:px-12 pt-4 pb-12 font-sans">
 
                     {step === 'EXPLORE' && (
                         <div className="space-y-16 animate-in slide-in-from-bottom-8 duration-700">
@@ -1112,9 +1371,26 @@ const LabPage = () => {
                                     {t('lab.briefing')}
                                 </span>
                                 <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
-                                    <h1 className="text-4xl md:text-6xl font-black tracking-tight text-gray-900 dark:text-white max-w-4xl leading-[1.1]">
-                                        {t('lab.mastering').replace('{{topic}}', displayTopic)}
-                                    </h1>
+                                    <div className="flex flex-col gap-2">
+                                        <h1 className="text-4xl md:text-6xl font-black tracking-tight text-gray-900 dark:text-white max-w-4xl leading-[1.1]">
+                                            {t('lab.mastering').replace('{{topic}}', displayTopic)}
+                                        </h1>
+                                        {topic?.startsWith('grammar_') && (
+                                            <div className="flex items-center gap-3 mt-2">
+                                                <div className="flex items-center gap-2">
+                                                    <div className="flex items-center gap-2 px-3 py-1 bg-indigo-50 dark:bg-indigo-900/40 text-indigo-600 dark:text-indigo-400 rounded-lg text-[11px] font-black uppercase tracking-widest border border-indigo-100 dark:border-indigo-800">
+                                                        Level {currentLevel === '7' ? '5**' : currentLevel === '6' ? '5*' : currentLevel}
+                                                    </div>
+                                                    <div className="px-3 py-1 bg-amber-50 dark:bg-amber-900/40 text-amber-600 dark:text-amber-400 rounded-lg text-[11px] font-black uppercase tracking-widest border border-amber-100 dark:border-amber-800">
+                                                        {(() => {
+                                                            const stats = typeof getMasteryStats === 'function' ? getMasteryStats(Number(currentLevel)) : null;
+                                                            return (language === 'zh-HK' || language === 'zh-TW') ? stats?.zh : stats?.displayName;
+                                                        })()}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        )}
+                                    </div>
                                     <div className="flex flex-col items-center justify-center p-6 bg-amber-50 dark:bg-amber-900/20 border-2 border-amber-200 dark:border-amber-800 rounded-[2.5rem] shadow-sm transform hover:rotate-3 transition-transform">
                                         <div className="flex items-center gap-2 text-amber-600 dark:text-amber-400">
                                             <Award size={32} className="fill-current" />
@@ -1232,7 +1508,7 @@ const LabPage = () => {
                                     ) : (
                                         <section className="bg-white dark:bg-gray-900 p-8 md:p-14 rounded-[3rem] shadow-sm border border-gray-100 dark:border-gray-800">
                                             <div className="prose prose-xl prose-indigo dark:prose-invert max-w-none text-gray-600 dark:text-gray-300 leading-relaxed font-medium">
-                                                {lessonData.conceptual_explanation}
+                                                {lessonData?.conceptual_explanation}
                                             </div>
 
                                             {(lessonData.key_points || []).length > 0 && (
@@ -1311,7 +1587,7 @@ const LabPage = () => {
 
                             <div className="pt-10 flex justify-center sticky bottom-10 z-10">
                                 <button
-                                    onClick={() => setStep('PRACTICE')}
+                                    onClick={() => updateStep('PRACTICE')}
                                     className="group flex items-center gap-4 px-12 py-6 bg-gray-900 dark:bg-white text-white dark:text-black rounded-full font-black text-2xl shadow-[0_20px_50px_rgba(0,0,0,0.2)] dark:shadow-[0_20px_50px_rgba(255,255,255,0.05)] hover:scale-105 transition-all active:scale-95"
                                 >
                                     {t('lab.proceed_to_quest')}
@@ -1324,9 +1600,300 @@ const LabPage = () => {
                     )}
 
                     {step === 'PRACTICE' && (
-                        <div className={`w-full mx-auto px-0 animate-in slide-in-from-right-16 duration-700`}>
-                            {/* Minimal Section Spacer instead of bulky header */}
-                            <div className="mb-10"></div>
+                        <div className="w-full mx-auto px-0 animate-in slide-in-from-right-16 duration-700">
+                            {lessonData?.type === 'GRAMMAR' ? (
+                                <div className="max-w-7xl mx-auto py-10 px-4">
+                                    <div className="relative flex items-center justify-center gap-6 group/nav">
+                                        {/* Side Navigation: Previous */}
+                                        <button
+                                            onClick={() => {
+                                                if (grammarSubStep === 'LEARN') {
+                                                    if (currentRuleIdx > 0) setCurrentRuleIdx(currentRuleIdx - 1);
+                                                } else if (grammarSubStep === 'IDENTIFY') {
+                                                    if (currentHeadNounIdx > 0) setCurrentHeadNounIdx(currentHeadNounIdx - 1);
+                                                    else {
+                                                        setGrammarSubStep('LEARN');
+                                                        setCurrentRuleIdx(lessonData.rule_cards.length - 1);
+                                                    }
+                                                } else if (grammarSubStep === 'DRILL') {
+                                                    if (currentDrillIdx > 0) setCurrentDrillIdx(currentDrillIdx - 1);
+                                                    else {
+                                                        setGrammarSubStep('IDENTIFY');
+                                                        setCurrentHeadNounIdx(lessonData.head_noun_tasks.length - 1);
+                                                    }
+                                                } else if (grammarSubStep === 'BOSS_FIGHT') {
+                                                    setGrammarSubStep('DRILL');
+                                                    setCurrentDrillIdx(lessonData.drill_tasks.length - 1);
+                                                }
+                                            }}
+                                            disabled={grammarSubStep === 'LEARN' && currentRuleIdx === 0}
+                                            className="flex items-center justify-center size-12 md:size-16 rounded-full bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 shadow-xl text-gray-400 hover:text-indigo-600 disabled:opacity-0 transition-all hover:scale-110 active:scale-95 shrink-0"
+                                            title="Previous Task"
+                                        >
+                                            <ChevronLeft size={36} strokeWidth={2.5} />
+                                        </button>
+
+
+                                        <div className="flex-1 max-w-5xl overflow-visible">
+                                    {grammarSubStep === 'LEARN' && lessonData.rule_cards && lessonData.rule_cards[currentRuleIdx] && (
+                                        <RuleCard 
+                                            rule={lessonData.rule_cards[currentRuleIdx]}
+                                            isLast={currentRuleIdx === (lessonData.rule_cards?.length || 0) - 1}
+                                            onNext={() => {
+                                                if (currentRuleIdx < (lessonData.rule_cards?.length || 0) - 1) {
+                                                    setCurrentRuleIdx(currentRuleIdx + 1);
+                                                } else {
+                                                    setGrammarSubStep('IDENTIFY');
+                                                }
+                                            }}
+                                        />
+                                    )}
+
+                                            {grammarSubStep === 'IDENTIFY' && lessonData.head_noun_tasks && lessonData.head_noun_tasks[currentHeadNounIdx] && (
+                                                <HeadNounSelector 
+                                                    task={lessonData.head_noun_tasks[currentHeadNounIdx]}
+                                                    topic={topic}
+                                                    onComplete={(correct) => {
+                                                        setIdentifyResults(prev => ({ ...prev, [currentHeadNounIdx]: correct }));
+                                                        if (correct) {
+                                                            setComboCount(c => c + 1);
+                                                            setMaxCombo(m => Math.max(m, comboCount + 1));
+                                                        } else {
+                                                            setComboCount(0);
+                                                            setGrammarMistakes(m => [...m, { 
+                                                                task: lessonData.head_noun_tasks[currentHeadNounIdx],
+                                                                type: 'IDENTIFY' 
+                                                            }]);
+                                                        }
+                                                    }}
+                                                />
+                                            )}
+
+
+                                            {grammarSubStep === 'DRILL' && lessonData.drill_tasks && (
+                                                <div className="space-y-8 animate-in slide-in-from-right-8">
+                                                    <div className="text-center space-y-4">
+                                                        <span className="inline-block px-4 py-1.5 bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300 text-xs font-black uppercase tracking-widest rounded-full">
+                                                            Phase 3: Rapid-Fire Drills
+                                                        </span>
+                                                        <h3 className="text-2xl md:text-3xl font-black dark:text-white">Complete the sentence accurately.</h3>
+                                                        <div className="text-sm font-bold text-gray-400">Task {currentDrillIdx + 1} of {lessonData.drill_tasks?.length || 0}</div>
+                                                    </div>
+
+                                                    <div className="bg-white dark:bg-gray-900 p-8 md:p-10 rounded-[2.5rem] shadow-xl border border-gray-100 dark:border-gray-800">
+                                                        <p className="text-3xl font-black text-center mb-12 dark:text-white leading-tight">
+                                                            {lessonData.drill_tasks[currentDrillIdx]?.question}
+                                                        </p>
+                                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                                            {lessonData.drill_tasks[currentDrillIdx]?.options?.map((opt, idx) => {
+                                                                const isSelected = drillAnswers[currentDrillIdx] === opt;
+                                                                const isAnswered = drillAnswers[currentDrillIdx] !== undefined;
+                                                                const isCorrect = opt === lessonData.drill_tasks[currentDrillIdx].answer;
+
+                                                                return (
+                                                                    <button
+                                                                        key={idx}
+                                                                        onClick={() => {
+                                                                            if (isAnswered) return;
+                                                                            const correct = opt === lessonData.drill_tasks[currentDrillIdx].answer;
+                                                                            setDrillAnswers(prev => ({ ...prev, [currentDrillIdx]: opt }));
+                                                                            
+                                                                            if (correct) {
+                                                                                setComboCount(c => c + 1);
+                                                                                setMaxCombo(m => Math.max(m, comboCount + 1));
+                                                                            } else {
+                                                                                setComboCount(0);
+                                                                                setGrammarMistakes(m => [...m, {
+                                                                                    task: lessonData.drill_tasks[currentDrillIdx],
+                                                                                    type: 'DRILL',
+                                                                                    userAnswer: opt
+                                                                                }]);
+                                                                            }
+                                                                        }}
+                                                                        disabled={isAnswered}
+                                                                        className={`p-6 rounded-3xl text-xl font-black transition-all transform hover:scale-105 active:scale-95 shadow-sm border-2 ${
+                                                                            !isAnswered ? 'bg-gray-50 dark:bg-gray-800 border-transparent hover:bg-indigo-600 hover:text-white' :
+                                                                            (isCorrect ? 'bg-green-500 text-white border-green-600' : 
+                                                                             (isSelected ? 'bg-red-500 text-white border-red-600' : 'bg-gray-50 dark:bg-gray-800 border-transparent opacity-50'))
+                                                                        }`}
+                                                                    >
+                                                                        {opt}
+                                                                    </button>
+                                                                );
+                                                            })}
+                                                        </div>
+                                                    </div>
+
+                                                    {drillAnswers[currentDrillIdx] !== undefined && (
+                                                        <motion.div 
+                                                            initial={{ opacity: 0, y: 10 }}
+                                                            animate={{ opacity: 1, y: 0 }}
+                                                            className={`p-8 rounded-3xl border-2 flex items-start gap-6 ${
+                                                                drillAnswers[currentDrillIdx] === lessonData.drill_tasks[currentDrillIdx].answer 
+                                                                    ? 'bg-green-50 border-green-200 text-green-800' 
+                                                                    : 'bg-red-50 border-red-200 text-red-800'
+                                                            }`}
+                                                        >
+                                                            <div className="size-12 rounded-2xl bg-white flex items-center justify-center shrink-0 shadow-sm">
+                                                                {drillAnswers[currentDrillIdx] === lessonData.drill_tasks[currentDrillIdx].answer 
+                                                                    ? <CheckCircle2 className="text-green-600" /> 
+                                                                    : <X className="text-red-600" />
+                                                                }
+                                                            </div>
+                                                            <div className="space-y-2">
+                                                                <p className="text-sm font-black uppercase tracking-widest">
+                                                                    {drillAnswers[currentDrillIdx] === lessonData.drill_tasks[currentDrillIdx].answer ? "Masterful!" : "Not quite..."}
+                                                                </p>
+                                                                <p className="text-lg font-bold leading-relaxed">
+                                                                    {lessonData.drill_tasks[currentDrillIdx].explanation}
+                                                                </p>
+                                                            </div>
+                                                        </motion.div>
+                                                    )}
+                                                </div>
+                                            )}
+
+                                    {grammarSubStep === 'BOSS_FIGHT' && (
+                                        <div className="space-y-12 animate-in zoom-in-95">
+                                            <div className="text-center space-y-4">
+                                                <div className="inline-flex items-center gap-3 px-6 py-2 bg-red-600 text-white rounded-full text-sm font-black uppercase tracking-widest shadow-lg shadow-red-600/20">
+                                                    <AlertTriangle size={20} />
+                                                    Boss Fight: The Proofreader
+                                                </div>
+                                                <h3 className="text-4xl font-black dark:text-white">Find 3 errors in this report.</h3>
+                                            </div>
+
+                                            <div className="bg-white dark:bg-gray-900 p-8 md:p-10 rounded-[3rem] shadow-2xl border-2 border-red-100 dark:border-red-900/20 relative overflow-hidden">
+                                                <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-red-600 via-orange-500 to-red-600"></div>
+                                                
+                                                <div className="prose prose-2xl prose-red dark:prose-invert max-w-none font-medium leading-relaxed italic text-gray-700 dark:text-gray-300">
+                                                    {lessonData.boss_fight.paragraph}
+                                                </div>
+
+                                                <div className="mt-16 space-y-4">
+                                                    <h4 className="text-xs font-black text-gray-400 uppercase tracking-widest">Correction Console</h4>
+                                                    <div className="grid grid-cols-1 gap-3">
+                                                        {lessonData.boss_fight.errors.map((err, idx) => {
+                                                            const isOriginalCorrect = userAnswers[`boss_${idx}_orig`]?.trim().toLowerCase() === err.original.toLowerCase();
+                                                            const isCorrectionCorrect = userAnswers[`boss_${idx}_corr`]?.trim().toLowerCase() === err.correction.toLowerCase();
+                                                            const rowCorrect = isOriginalCorrect && isCorrectionCorrect;
+
+                                                            return (
+                                                                <div key={idx} className="space-y-4">
+                                                                    <div className="flex flex-col md:flex-row gap-4">
+                                                                        <div className="flex-1 relative">
+                                                                            <input 
+                                                                                placeholder="Original Error..."
+                                                                                disabled={bossChecked}
+                                                                                className={`w-full p-5 bg-gray-50 dark:bg-gray-800 rounded-2xl border-2 outline-none font-bold transition-all ${
+                                                                                    bossChecked 
+                                                                                        ? (isOriginalCorrect ? 'border-green-500 bg-green-50/50' : 'border-red-500 bg-red-50/50')
+                                                                                        : 'border-transparent focus:border-red-500'
+                                                                                }`}
+                                                                                value={userAnswers[`boss_${idx}_orig`] || ''}
+                                                                                onChange={(e) => handleAnswerChange(`boss_${idx}_orig`, e.target.value)}
+                                                                            />
+                                                                            {bossChecked && (
+                                                                                <div className="absolute right-4 top-1/2 -translate-y-1/2">
+                                                                                    {isOriginalCorrect ? <CheckCircle2 className="text-green-600" size={20} /> : <X className="text-red-600" size={20} />}
+                                                                                </div>
+                                                                            )}
+                                                                        </div>
+                                                                        <div className="flex-1 relative">
+                                                                            <input 
+                                                                                placeholder="Your Correction..."
+                                                                                disabled={bossChecked}
+                                                                                className={`w-full p-5 bg-gray-50 dark:bg-gray-800 rounded-2xl border-2 outline-none font-bold transition-all ${
+                                                                                    bossChecked 
+                                                                                        ? (isCorrectionCorrect ? 'border-green-500 bg-green-50/50' : 'border-red-500 bg-red-50/50')
+                                                                                        : 'border-transparent focus:border-green-500'
+                                                                                }`}
+                                                                                value={userAnswers[`boss_${idx}_corr`] || ''}
+                                                                                onChange={(e) => handleAnswerChange(`boss_${idx}_corr`, e.target.value)}
+                                                                            />
+                                                                            {bossChecked && (
+                                                                                <div className="absolute right-4 top-1/2 -translate-y-1/2">
+                                                                                    {isCorrectionCorrect ? <CheckCircle2 className="text-green-600" size={20} /> : <X className="text-red-600" size={20} />}
+                                                                                </div>
+                                                                            )}
+                                                                        </div>
+                                                                    </div>
+                                                                    
+                                                                    {bossChecked && (
+                                                                        <motion.div 
+                                                                            initial={{ opacity: 0, height: 0 }}
+                                                                            animate={{ opacity: 1, height: 'auto' }}
+                                                                            className={`p-6 rounded-2xl border-2 flex items-start gap-4 ${
+                                                                                rowCorrect ? 'bg-green-50 border-green-100 text-green-800' : 'bg-red-50 border-red-100 text-red-800'
+                                                                            }`}
+                                                                        >
+                                                                            <div className="size-8 rounded-xl bg-white flex items-center justify-center shrink-0 shadow-sm">
+                                                                                {rowCorrect ? <CheckCircle2 size={18} className="text-green-600" /> : <X size={18} className="text-red-600" />}
+                                                                            </div>
+                                                                            <div className="space-y-1">
+                                                                                <p className="text-[10px] font-black uppercase tracking-widest">{rowCorrect ? "Spot On!" : "Correction Needed"}</p>
+                                                                                <p className="text-sm font-bold leading-relaxed">{err.explanation}</p>
+                                                                            </div>
+                                                                        </motion.div>
+                                                                    )}
+                                                                </div>
+                                                            );
+                                                        })}
+                                                    </div>
+                                                </div>
+
+                                                {!bossChecked ? (
+                                                    <button
+                                                        onClick={() => setBossChecked(true)}
+                                                        disabled={lessonData.boss_fight.errors.some((_, i) => !userAnswers[`boss_${i}_orig`] || !userAnswers[`boss_${i}_corr`])}
+                                                        className="mt-12 w-full py-8 bg-indigo-600 hover:bg-indigo-700 disabled:opacity-50 text-white rounded-[2.5rem] font-black text-3xl shadow-xl shadow-indigo-600/20 transition-all active:scale-95 flex items-center justify-center gap-4"
+                                                    >
+                                                        CHECK ANSWERS
+                                                        <ChevronRight size={40} />
+                                                    </button>
+                                                ) : (
+                                                    <button
+                                                        onClick={handleSubmitMission}
+                                                        disabled={isSubmitting}
+                                                        className="mt-12 w-full py-8 bg-red-600 hover:bg-red-700 text-white rounded-[2.5rem] font-black text-3xl shadow-xl shadow-red-600/20 transition-all active:scale-95 flex items-center justify-center gap-4"
+                                                    >
+                                                        {isSubmitting ? <Loader2 className="animate-spin" size={40} /> : (
+                                                            <>
+                                                                DEFEAT THE BOSS
+                                                                <ChevronRight size={40} />
+                                                            </>
+                                                        )}
+                                                    </button>
+                                                )}
+                                            </div>
+                                        </div>
+                                    )}
+                                        </div>
+
+                                        {/* Side Navigation: Next */}
+                                        <button
+                                            onClick={() => {
+                                                if (grammarSubStep === 'LEARN') {
+                                                    if (currentRuleIdx < lessonData.rule_cards.length - 1) setCurrentRuleIdx(currentRuleIdx + 1);
+                                                    else setGrammarSubStep('IDENTIFY');
+                                                } else if (grammarSubStep === 'IDENTIFY') {
+                                                    if (currentHeadNounIdx < lessonData.head_noun_tasks.length - 1) setCurrentHeadNounIdx(currentHeadNounIdx + 1);
+                                                    else setGrammarSubStep('DRILL');
+                                                } else if (grammarSubStep === 'DRILL') {
+                                                    if (currentDrillIdx < lessonData.drill_tasks.length - 1) setCurrentDrillIdx(currentDrillIdx + 1);
+                                                    else setGrammarSubStep('BOSS_FIGHT');
+                                                }
+                                            }}
+                                            disabled={grammarSubStep === 'BOSS_FIGHT'}
+                                            className="flex items-center justify-center size-12 md:size-16 rounded-full bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 shadow-xl text-gray-400 hover:text-indigo-600 disabled:opacity-0 transition-all hover:scale-110 active:scale-95 shrink-0"
+                                            title="Next Task"
+                                        >
+                                            <ChevronRight size={36} strokeWidth={2.5} />
+                                        </button>
+
+                                    </div>
+                                </div>
+                            ) : (<>
 
                             <div className={`flex flex-col ${lessonData.reading_passage ? 'lg:flex-row' : ''} gap-8 items-start`}>
                                 {/* Reading Passage Context - Left Panel */}
@@ -1596,7 +2163,7 @@ const LabPage = () => {
                                 )}
                                 <div className="flex flex-col md:flex-row gap-4 w-full">
                                     <button
-                                        onClick={() => setStep('EXPLORE')}
+                                        onClick={() => updateStep('EXPLORE')}
                                         className="flex-1 px-10 py-6 border-2 border-gray-200 dark:border-gray-800 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md rounded-full font-black text-xl dark:text-white hover:bg-white dark:hover:bg-gray-800 transition-all shadow-xl active:scale-95"
                                     >
                                         {t('lab.review_briefing')}
@@ -1621,8 +2188,10 @@ const LabPage = () => {
                                     </button>
                                 </div>
                             </div>
-                        </div>
-                    )}
+                            </>
+                        )}
+                    </div>
+                )}
 
                     {step === 'SUCCESS' && (
                         <div className={`max-w-[1400px] mx-auto animate-in zoom-in-95 duration-1000 ${lessonData.reading_passage ? 'w-full' : 'max-w-4xl'}`}>
@@ -1640,7 +2209,13 @@ const LabPage = () => {
 
                                 <h1 className="text-6xl md:text-7xl font-black dark:text-white mb-8 tracking-tighter">{t('lab.mission_accomplished')}</h1>
                                 <p className="text-2xl md:text-3xl text-gray-500 dark:text-gray-400 mb-16 leading-relaxed font-bold max-w-xl mx-auto">
-                                    {lessonData.success_feedback}
+                                    {masteryScore >= 90 ? (
+                                        lessonData.success_feedback || "Outstanding! You have demonstrated exceptional mastery of these concepts."
+                                    ) : masteryScore >= 70 ? (
+                                        "Solid work! You've grasped the core concepts, but there's still room to sharpen your accuracy for a perfect score."
+                                    ) : (
+                                        "Mission Complete! You've identified several key areas for improvement. Keep practicing to solidify your understanding."
+                                    )}
                                 </p>
                             </div>
 
@@ -1663,12 +2238,56 @@ const LabPage = () => {
                                 {/* Results & Review - Right Panel */}
                                 <div className={`w-full ${lessonData.reading_passage ? 'lg:w-1/2' : 'max-w-4xl mx-auto'} pb-20`}>
                                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-16">
-                                        <div className="bg-green-50 dark:bg-green-900/10 p-10 rounded-[3.5rem] border-2 border-green-100 dark:border-green-900/50 transform hover:scale-105 transition-all">
+                                        <div className="bg-green-50 dark:bg-green-900/10 p-10 rounded-[3.5rem] border-2 border-green-100 dark:border-green-900/50 transform hover:scale-105 transition-all flex flex-col items-center">
                                             <div className="flex items-center justify-center gap-4 mb-3">
                                                 <Sparkles className="text-green-600" size={32} />
                                                 <span className="text-4xl font-black text-green-700 dark:text-green-400">+{earnedXp} XP</span>
                                             </div>
-                                            <p className="text-green-600 dark:text-green-500 font-bold uppercase tracking-widest text-[10px]">{t('lab.performance_points')}</p>
+                                            <p className="text-green-600 dark:text-green-500 font-bold uppercase tracking-widest text-[10px] mb-4">{t('lab.performance_points')}</p>
+
+                                            {/* XP BREAKDOWN TOOLTIP/LIST */}
+                                            {xpBreakdown && (
+                                                <div className="w-full bg-white/50 dark:bg-black/20 p-4 rounded-2xl border border-green-100 dark:border-green-900/50 space-y-2">
+                                                    {xpBreakdown.milestoneBonus > 0 && (
+                                                        <motion.div 
+                                                            initial={{ scale: 0.8, opacity: 0 }}
+                                                            animate={{ scale: 1, opacity: 1 }}
+                                                            className="mb-4 p-4 bg-gradient-to-r from-pink-500 to-rose-600 rounded-xl text-white shadow-lg relative overflow-hidden"
+                                                        >
+                                                            <div className="absolute top-0 right-0 p-2 opacity-20">
+                                                                <Trophy size={40} />
+                                                            </div>
+                                                            <div className="relative z-10">
+                                                                <div className="text-[10px] font-black uppercase tracking-widest opacity-80 mb-1">New Milestone!</div>
+                                                                <div className="text-sm font-black italic">Level {results?.newSkillLevel || results?.milestoneAchieved} Unlocked</div>
+                                                                <div className="text-[10px] font-bold mt-1 opacity-90">Bonus +200 XP Awarded</div>
+                                                            </div>
+                                                        </motion.div>
+                                                    )}
+                                                    <div className="flex justify-between text-[11px] font-bold">
+                                                        <span className="text-gray-400 uppercase tracking-widest">Base Reward</span>
+                                                        <span className="text-green-600">{xpBreakdown.base} XP</span>
+                                                    </div>
+                                                    {xpBreakdown.tierMultiplier > 1 && (
+                                                        <div className="flex justify-between text-[11px] font-bold">
+                                                            <span className="text-indigo-400 uppercase tracking-widest">Premium Multiplier</span>
+                                                            <span className="text-indigo-600">x{xpBreakdown.tierMultiplier}</span>
+                                                        </div>
+                                                    )}
+                                                    {xpBreakdown.masteryMultiplier > 1 && (
+                                                        <div className="flex justify-between text-[11px] font-bold">
+                                                            <span className="text-emerald-400 uppercase tracking-widest">Mastery Multiplier</span>
+                                                            <span className="text-emerald-600">x{xpBreakdown.masteryMultiplier}</span>
+                                                        </div>
+                                                    )}
+                                                    {xpBreakdown.milestoneBonus > 0 && (
+                                                        <div className="flex justify-between text-[11px] font-bold">
+                                                            <span className="text-pink-400 uppercase tracking-widest">Milestone Bonus</span>
+                                                            <span className="text-pink-600">+{xpBreakdown.milestoneBonus} XP</span>
+                                                        </div>
+                                                    )}
+                                                </div>
+                                            )}
                                         </div>
 
                                         <div className="bg-orange-50 dark:bg-orange-900/10 p-10 rounded-[3.5rem] border-2 border-orange-100 dark:border-orange-900/50 transform hover:scale-105 transition-all">
@@ -1701,11 +2320,13 @@ const LabPage = () => {
                                                         </div>
                                                         <h4 className="font-bold dark:text-white leading-snug text-lg">{task.question}</h4>
                                                     </div>
-                                                    {feedbacks[task.id]?.correct ? (
-                                                        <span className="px-4 py-1 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 text-xs font-black rounded-full uppercase">{t('lab.mastered')}</span>
-                                                    ) : (
-                                                        <span className="px-4 py-1 bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 text-xs font-black rounded-full uppercase">{t('lab.review_mistake')}</span>
-                                                    )}
+                                                    {(() => {
+                                                        const isCorrect = feedbacks[task.id]?.correct || feedbacks[task.id]?.status === 'correct';
+                                                        const isPartial = feedbacks[task.id]?.status === 'partial';
+                                                        if (isCorrect) return <span className="px-4 py-1 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 text-xs font-black rounded-full uppercase">{t('lab.mastered')}</span>;
+                                                        if (isPartial) return <span className="px-4 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-600 dark:text-yellow-400 text-xs font-black rounded-full uppercase">PARTIAL MARKS</span>;
+                                                        return <span className="px-4 py-1 bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 text-xs font-black rounded-full uppercase">{t('lab.review_mistake')}</span>;
+                                                    })()}
                                                 </div>
 
                                                 <div className="space-y-6">
@@ -1811,6 +2432,12 @@ const LabPage = () => {
                     )}
                 </div>
             </main >
+            {/* AI Grading Overlay */}
+            <GradingOverlay 
+                isOpen={isSubmitting} 
+                title="Synchronizing Lab Data"
+                status="Evaluating your logic and mastery of micro-skills..."
+            />
         </div >
     );
 };
@@ -1960,4 +2587,3 @@ function CategorizationTask({ task, value, onChange, disabled }) {
 }
 
 export default LabPage;
-

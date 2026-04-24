@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import { useLanguage } from '../../context/LanguageContext';
-import { Lock, Compass, CheckCircle, Play, Map, Star, Clock, X, Trophy, Search, Sparkles, Zap, BookOpen, PenTool, Mic, MessageSquare, Layers, RefreshCcw, GraduationCap, Ear, ArrowRight, Calculator, Headphones } from 'lucide-react';
+import { Lock, Compass, CheckCircle, Play, Map, Star, Clock, X, Trophy, Search, Sparkles, Zap, BookOpen, PenTool, Mic, MessageSquare, Layers, RefreshCcw, GraduationCap, Ear, ArrowRight, Calculator, Headphones, Target } from 'lucide-react';
 import { useAvatar } from '../../context/AvatarContext';
 import { MICRO_SKILLS, getSkillName, getSkillDesc, getSkillOutcome, getPaperBySkill, getSkillsByPaper } from '../../constants/microSkills';
 import { getMathSkillName, getSkillsByCategory } from '../../constants/mathMicroSkills';
@@ -28,56 +28,43 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
     const [isWritingLoading, setIsWritingLoading] = useState(false);
     const [weeklyTheme, setWeeklyTheme] = useState(null);
 
-    // Fetch Listening/Writing Missions when filter is active
+    // Fetch Listening/Writing Missions on open
     useEffect(() => {
         if (!isOpen) return;
 
         // Use relative path for local proxy support
         const API_BASE = '/api';
 
-        if (paperFilter === 'LISTENING') {
-            // Reset other list to prevent contamination
-            setWritingMissions([]);
-            
-            const fetchListening = async () => {
-                try {
-                    const res = await fetch(`${API_BASE}/lab/listening`);
-                    if (res.ok) {
-                        const data = await res.json();
-                        setListeningMissions(data);
-                    }
-                } catch (e) {
-                    console.error("Failed to fetch listening missions", e);
+        const fetchListening = async () => {
+            try {
+                const res = await fetch(`${API_BASE}/lab/listening`);
+                if (res.ok) {
+                    const data = await res.json();
+                    setListeningMissions(data);
                 }
-            };
-            fetchListening();
-        }
+            } catch (e) {
+                console.error("Failed to fetch listening missions", e);
+            }
+        };
 
-        if (paperFilter === 'WRITING') {
-            // Reset other list to prevent contamination
-            setListeningMissions([]);
-            
-            const fetchWriting = async () => {
-                try {
-                    setIsWritingLoading(true);
-                    console.log("[Roadmap] Fetching writing missions...");
-                    const res = await fetch(`${API_BASE}/writing/scenarios`);
-                    if (res.ok) {
-                        const data = await res.json();
-                        console.log(`[Roadmap] Received ${data.length} writing missions`);
-                        setWritingMissions(data);
-                    } else {
-                        console.error("[Roadmap] Failed to fetch scenarios:", res.status);
-                    }
-                } catch (e) {
-                    console.error("Failed to fetch writing missions", e);
-                } finally {
-                    setIsWritingLoading(false);
+        const fetchWriting = async () => {
+            try {
+                setIsWritingLoading(true);
+                const res = await fetch(`${API_BASE}/writing/scenarios`);
+                if (res.ok) {
+                    const data = await res.json();
+                    setWritingMissions(data);
                 }
-            };
-            fetchWriting();
-        }
-    }, [paperFilter, isOpen]);
+            } catch (e) {
+                console.error("Failed to fetch writing missions", e);
+            } finally {
+                setIsWritingLoading(false);
+            }
+        };
+
+        fetchListening();
+        fetchWriting();
+    }, [isOpen]);
 
     const fetchUserSkills = async () => {
         try {
@@ -198,7 +185,7 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
             return;
         }
 
-        if (task.type === 'LEARN' || task.type === 'PRACTICE' || task.type === 'WEEKLY_QUEST' || task.type === 'SPEAKING_CHALLENGE') {
+        if (task.type === 'LEARN' || task.type === 'PRACTICE' || task.type === 'WEEKLY_QUEST' || task.type === 'SPEAKING_CHALLENGE' || task.type === 'GRAMMAR_LAB') {
             const topic = task.topic?.toLowerCase() || '';
             const skillId = task.id;
             const skillData = MICRO_SKILLS[skillId];
@@ -307,6 +294,25 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                         targetLevel: targetLevel,
                         xp: task.xp,
                         isNewSession: true
+                    } 
+                });
+                return;
+            }
+
+            // REDIRECTION LOGIC FOR GRAMMAR LAB
+            if (task.type === 'GRAMMAR_LAB') {
+                const targetLevel = task.level || '5';
+                navigate(`/lab?topic=${task.topic}&level=${targetLevel}&taskId=${task.id}`, { 
+                    state: { 
+                        topic: task.topic, 
+                        taskId: task.id,
+                        xp: 50,
+                        isGrammarLab: true,
+                        autoStart: {
+                            topic: task.topic,
+                            level: targetLevel,
+                            focus: ["grammar"]
+                        }
                     } 
                 });
                 return;
@@ -523,6 +529,7 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                             <div className="flex p-1.5 bg-white/20 backdrop-blur-md rounded-xl border border-white/30 shadow-inner">
                                 {[
                                     { id: 'WEEKLY', label: t('roadmap.targeted_growth'), icon: Clock },
+                                    { id: 'GRAMMAR', label: t('roadmap.grammar_lab'), icon: Layers },
                                     { id: 'GENERAL', label: t('roadmap.quests_lab'), icon: Search }
                                 ].map(tab => (
                                     <button
@@ -626,12 +633,12 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                                                             <quest.icon className="w-6 h-6 text-white" />
                                                         </div>
                                                         <div>
-                                                            <h4 className="font-bold text-white text-sm">{quest.title}</h4>
-                                                            <p className="text-[10px] text-white/70 italic opacity-80">{quest.desc}</p>
+                                                            <h4 className="font-bold text-white text-[15px]">{quest.title}</h4>
+                                                            <p className="text-[11px] text-white/70 italic opacity-80">{quest.desc}</p>
                                                         </div>
                                                     </div>
                                                     <div className="flex items-center justify-between mt-auto">
-                                                        <span className="text-[10px] font-black text-white/90 bg-white/20 px-2 py-0.5 rounded-lg border border-white/20">
+                                                        <span className="text-xs font-black text-white/90 bg-white/20 px-2 py-0.5 rounded-lg border border-white/20">
                                                             +250 XP
                                                         </span>
                                                         <Play className="w-3 h-3 text-white/60 group-hover:text-white transition-colors" />
@@ -744,12 +751,12 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                                                                         <Zap className="w-3 h-3 text-amber-500 fill-amber-500" />
                                                                     </div>
                                                                     <div>
-                                                                        <div className="text-[9px] font-black text-slate-400 uppercase tracking-widest mb-0.5">Priority Boost</div>
-                                                                        <div className="text-[11px] font-black text-slate-700 italic group-hover:text-indigo-600 transition-colors line-clamp-1">{missionName}</div>
+                                                                        <div className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-0.5">Priority Boost</div>
+                                                                        <div className="text-[12px] font-black text-slate-700 italic group-hover:text-indigo-600 transition-colors line-clamp-1">{missionName}</div>
                                                                     </div>
                                                                 </div>
                                                                 <div className="flex items-center gap-2">
-                                                                    <span className="text-[9px] font-black text-indigo-600">+{stats.xp} XP</span>
+                                                                    <span className="text-[11px] font-black text-indigo-600">+{stats.xp} XP</span>
                                                                     <Play className="w-3 h-3 text-slate-300 group-hover:text-indigo-600 transition-colors" />
                                                                 </div>
                                                             </div>
@@ -811,6 +818,82 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                                     ))}
                                 </div>
                             </div>
+                        ) : activeTab === 'GRAMMAR' ? (
+                            <div className="p-6 flex-1 overflow-y-auto custom-scrollbar bg-slate-50/50">
+                                <div className="flex items-center gap-2 mb-6">
+                                    <Layers className="w-5 h-5 text-amber-600" />
+                                    <h3 className="text-sm font-black text-slate-800 uppercase tracking-wider">
+                                        Grammar Lab Modules
+                                    </h3>
+                                </div>
+
+                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pb-12">
+                                    {Object.keys(MICRO_SKILLS)
+                                        .filter(id => id.startsWith('grammar_'))
+                                        .map(id => {
+                                            const skill = MICRO_SKILLS[id];
+                                            const isElite = id.includes('_elite_');
+                                            const trackLabel = isElite ? t('roadmap.elite_track') : t('roadmap.accuracy_track');
+                                            const trackColor = isElite ? "bg-purple-100 text-purple-700" : "bg-blue-100 text-blue-700";
+                                            
+                                            return (
+                                                <div 
+                                                    key={id}
+                                                    onClick={() => {
+                                                        handleTaskClick({
+                                                            id: id,
+                                                            topic: id,
+                                                            title: skill[language]?.name || id,
+                                                            type: 'GRAMMAR_LAB',
+                                                            xp: 50,
+                                                            level: selectedLevels[id] || (id.includes('_elite_') ? '7' : '5')
+                                                        });
+                                                    }}
+                                                    className="group bg-white p-5 rounded-2xl border-2 border-slate-100 hover:border-amber-300 hover:shadow-xl transition-all cursor-pointer flex flex-col"
+                                                >
+                                                    <div className="flex justify-between items-start mb-4">
+                                                        <span className={`px-2.5 py-1 rounded-lg text-[10px] font-black uppercase tracking-wider ${trackColor}`}>
+                                                            {trackLabel}
+                                                        </span>
+                                                        <div className="flex items-center gap-2 px-3 py-1 bg-white border border-amber-200 rounded-lg shadow-sm" onClick={(e) => e.stopPropagation()}>
+                                                            <Target size={12} className="text-amber-600" />
+                                                            <select
+                                                                value={selectedLevels[id] || (isElite ? '7' : '5')}
+                                                                onChange={(e) => setSelectedLevels({ ...selectedLevels, [id]: e.target.value })}
+                                                                className="bg-transparent text-[10px] font-black text-amber-600 focus:outline-none cursor-pointer uppercase"
+                                                            >
+                                                                <option value="3">Level 3</option>
+                                                                <option value="4">Level 4</option>
+                                                                <option value="5">Level 5</option>
+                                                                <option value="7">Level 7</option>
+                                                            </select>
+                                                        </div>
+                                                        <div className="text-[11px] font-black text-amber-600 bg-amber-50 px-2 py-1 rounded-lg">
+                                                            +50 XP
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <h4 className="text-lg font-black text-slate-800 group-hover:text-amber-600 transition-colors mb-2">
+                                                        {skill[language]?.name || id}
+                                                    </h4>
+                                                    <p className="text-[12px] text-slate-500 leading-relaxed mb-6 line-clamp-2 min-h-[3em]">
+                                                        {skill[language]?.desc}
+                                                    </p>
+                                                    
+                                                    <div className="mt-auto pt-4 border-t border-slate-50 flex items-center justify-between">
+                                                        <div className="flex items-center gap-2 text-[10px] font-bold text-slate-400">
+                                                            <Sparkles className="w-3.5 h-3.5 text-amber-400" />
+                                                            <span className="line-clamp-1">Outcome: {skill[language]?.outcome}</span>
+                                                        </div>
+                                                        <div className="p-2 bg-slate-50 rounded-xl group-hover:bg-amber-100 transition-colors shrink-0">
+                                                            <Play className="w-4 h-4 text-slate-400 group-hover:text-amber-600" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            );
+                                        })}
+                                </div>
+                            </div>
                         ) : (
                             <div className="flex-1 flex flex-col min-h-0">
                                 {/* Search & Difficulty */}
@@ -829,7 +912,14 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
 
                                         <div className="text-xs font-bold text-slate-400 flex items-center gap-2">
                                             <span className="w-2 h-2 rounded-full bg-green-500"></span>
-                                            {filteredSkills.length} skills available
+                                            {(() => {
+                                                const lCount = listeningMissions.filter(m => m.title?.toLowerCase().includes(searchQuery.toLowerCase())).length;
+                                                const wCount = writingMissions.filter(m => m.title?.toLowerCase().includes(searchQuery.toLowerCase())).length;
+                                                if (paperFilter === 'LISTENING') return lCount;
+                                                if (paperFilter === 'WRITING') return wCount;
+                                                if (paperFilter === 'ALL') return lCount + wCount + filteredSkills.length;
+                                                return filteredSkills.length;
+                                            })()} skills available
                                         </div>
                                     </div>
 
@@ -870,7 +960,9 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                                             </h3>
                                         </div>
                                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pb-12">
-                                            {listeningMissions.map((mission) => {
+                                            {listeningMissions
+                                                .filter(m => m.title?.toLowerCase().includes(searchQuery.toLowerCase()))
+                                                .map((mission) => {
                                                 const currentSelected = (() => {
                                                     const lvl = mission.level;
                                                     if (lvl === 'Elite (5**)') return '7';
@@ -914,7 +1006,7 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                                                         <div className="pt-3 border-t border-slate-50 mt-auto">
                                                             <div className="flex items-center justify-between mb-2">
                                                                 <div className="text-[10px] font-bold text-rose-600">
-                                                                    +{stats.xp} XP
+                                                                    +200 XP
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -958,7 +1050,9 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                                             </div>
                                         ) : (
                                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pb-12">
-                                                {writingMissions.map((mission) => {
+                                                {writingMissions
+                                                    .filter(m => m.title?.toLowerCase().includes(searchQuery.toLowerCase()))
+                                                    .map((mission) => {
                                                     const stats = getMasteryStats(5, false, false); // Default to DSE Standard
 
                                                     return (
@@ -992,7 +1086,7 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                                                             <div className="pt-3 border-t border-slate-50 mt-auto">
                                                                 <div className="flex items-center justify-between mb-2">
                                                                     <div className="text-[10px] font-bold text-purple-600 px-2 py-0.5 bg-purple-50 rounded-lg">
-                                                                        +{stats.xp + 100} XP
+                                                                        +150 XP
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -1004,15 +1098,107 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                                     </div>
                                 ) : (
                                     <div className="p-6 flex-1 overflow-y-auto custom-scrollbar">
-                                        {filteredSkills.length === 0 ? (
-                                            <div className="text-center py-20 opacity-50">
-                                                <div className="bg-slate-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                                                    <Search className="w-8 h-8 text-slate-400" />
-                                                </div>
-                                                <p className="font-bold text-slate-500">No skills found matching your filters.</p>
-                                            </div>
-                                        ) : (
+                                        {(() => {
+                                            const lCount = listeningMissions.filter(m => m.title?.toLowerCase().includes(searchQuery.toLowerCase())).length;
+                                            const wCount = writingMissions.filter(m => m.title?.toLowerCase().includes(searchQuery.toLowerCase())).length;
+                                            const totalVisible = filteredSkills.length + (paperFilter === 'ALL' ? (lCount + wCount) : 0);
+                                            
+                                            if (totalVisible === 0) {
+                                                return (
+                                                    <div className="text-center py-20 opacity-50">
+                                                        <div className="bg-slate-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                                            <Search className="w-8 h-8 text-slate-400" />
+                                                        </div>
+                                                        <p className="font-bold text-slate-500">No skills found matching your filters.</p>
+                                                    </div>
+                                                );
+                                            }
+                                            return null;
+                                        })()}
+                                        {(filteredSkills.length + (paperFilter === 'ALL' ? (listeningMissions.length + writingMissions.length) : 0)) > 0 && (
                                             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 pb-4">
+                                                {/* Listening Missions in ALL view */}
+                                                {paperFilter === 'ALL' && listeningMissions
+                                                    .filter(m => m.title?.toLowerCase().includes(searchQuery.toLowerCase()))
+                                                    .map((mission) => {
+                                                        const currentSelected = '5'; // Default to DSE Standard
+                                                        return (
+                                                            <div
+                                                                key={mission.id}
+                                                                onClick={() => {
+                                                                    onClose();
+                                                                    navigate(`/listening/briefing/${mission.id}`, {
+                                                                        state: {
+                                                                            questData: mission,
+                                                                            targetLevel: currentSelected,
+                                                                            targetXp: 200
+                                                                        }
+                                                                    });
+                                                                }}
+                                                                className="group relative p-4 rounded-xl border-2 transition-all flex flex-col cursor-pointer bg-white border-slate-100 hover:border-rose-300 hover:shadow-md"
+                                                            >
+                                                                <div className="flex justify-between items-start mb-2">
+                                                                    <span className="px-2 py-0.5 rounded text-[9px] font-black uppercase tracking-wider bg-rose-50 text-rose-600">
+                                                                        LISTENING
+                                                                    </span>
+                                                                </div>
+                                                                <h4 className="text-[15px] font-bold mb-1 transition-colors text-slate-800 line-clamp-1 group-hover:text-rose-600">
+                                                                    {mission.title}
+                                                                </h4>
+                                                                <p className="text-[12px] text-slate-500 mb-3 line-clamp-2 leading-tight min-h-[2.4em]">
+                                                                    {mission.description || "Synthesizing data files and auditory clues for Paper 3 proficiency."}
+                                                                </p>
+                                                                <div className="pt-3 border-t border-slate-50 mt-auto">
+                                                                    <div className="flex items-center justify-between mb-2">
+                                                                        <div className="text-xs font-bold text-rose-600">
+                                                                            +200 XP
+                                                                        </div>
+                                                                        <Play className="w-3.5 h-3.5 text-rose-500 opacity-0 group-hover:opacity-100 transition-opacity" />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        );
+                                                    })
+                                                }
+
+                                                {/* Writing Missions in ALL view */}
+                                                {paperFilter === 'ALL' && writingMissions
+                                                    .filter(m => m.title?.toLowerCase().includes(searchQuery.toLowerCase()))
+                                                    .map((mission) => (
+                                                        <div
+                                                            key={mission.id}
+                                                            onClick={() => {
+                                                                onClose();
+                                                                navigate(`/writing/quest`, {
+                                                                    state: {
+                                                                        questData: mission
+                                                                    }
+                                                                });
+                                                            }}
+                                                            className="group relative p-4 rounded-xl border-2 transition-all flex flex-col cursor-pointer bg-white border-slate-100 hover:border-purple-300 hover:shadow-md"
+                                                        >
+                                                            <div className="flex justify-between items-start mb-2">
+                                                                <span className="px-2 py-0.5 rounded text-[9px] font-black uppercase tracking-wider bg-purple-50 text-purple-600">
+                                                                    {mission.genre || 'QUEST'}
+                                                                </span>
+                                                            </div>
+                                                            <h4 className="text-[15px] font-bold mb-1 transition-colors text-slate-800 line-clamp-1 group-hover:text-purple-600">
+                                                                {mission.title}
+                                                            </h4>
+                                                            <p className="text-[12px] text-slate-500 mb-3 line-clamp-2 leading-tight min-h-[2.4em]">
+                                                                {mission.prompt || "Advancing DSE linguistic proficiency through high-fidelity mission simulation."}
+                                                            </p>
+                                                            <div className="pt-3 border-t border-slate-50 mt-auto">
+                                                                <div className="flex items-center justify-between mb-2">
+                                                                    <div className="text-xs font-bold text-purple-600 px-2 py-0.5 bg-purple-50 rounded-lg">
+                                                                        +150 XP
+                                                                    </div>
+                                                                    <Play className="w-3.5 h-3.5 text-purple-500 opacity-0 group-hover:opacity-100 transition-opacity" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    ))
+                                                }
                                                 {filteredSkills.map(([id]) => {
                                                     const name = getSkillName(id);
                                                     const desc = getSkillDesc(id);
@@ -1024,8 +1210,11 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                                                     const isIntegrated = MICRO_SKILLS[id]?.isIntegrated;
 
                                                     const skillLevel = getAggregatedLevel(id);
+                                                    const isWriting = id.startsWith('writing_');
+                                                    const isListening = id.startsWith('listening_');
                                                     const levelToUse = (paper === 'reading' && selectedLevels[id]) ? selectedLevels[id] : (paper === 'listening' ? '5' : (activeTab === 'CHALLENGE' ? '7' : (skillLevel < 3.5 ? '3' : skillLevel < 5.0 ? '4' : '5')));
                                                     const stats = getMasteryStats(Number(levelToUse), false, false);
+                                                    const displayXp = isWriting ? 150 : (isListening ? 200 : stats.xp);
 
                                                     return (
                                                         <div
@@ -1036,7 +1225,7 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                                                                     title: `${activeTab === 'CHALLENGE' ? 'Integrated' : 'Practice'}: ${name}`,
                                                                     topic: id,
                                                                     type: isIntegrated ? 'SPEAKING_CHALLENGE' : 'PRACTICE',
-                                                                    xp: stats.xp,
+                                                                    xp: displayXp,
                                                                     level: levelToUse
                                                                 });
                                                             }}
@@ -1057,17 +1246,17 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                                                                     {isIntegrated ? 'DSE Simulation' : paper}
                                                                 </span>
                                                                 {isIntegrated && (
-                                                                    <div className="flex items-center gap-1 px-2 py-0.5 bg-yellow-400/90 text-yellow-950 rounded text-[8px] font-black tracking-tight">
+                                                                    <div className="flex items-center gap-1 px-2 py-0.5 bg-yellow-400/90 text-yellow-950 rounded text-[9px] font-black tracking-tight">
                                                                         <Sparkles className="w-2 h-2" />
                                                                         Integrated Skill
                                                                     </div>
                                                                 )}
                                                             </div>
 
-                                                            <h4 className={`text-sm font-bold mb-1 transition-colors ${isIntegrated ? 'text-white' : 'text-slate-800 group-hover:text-amber-600'}`}>
+                                                            <h4 className={`text-[15px] font-bold mb-1 transition-colors ${isIntegrated ? 'text-white' : 'text-slate-800 group-hover:text-amber-600'}`}>
                                                                 {name}
                                                             </h4>
-                                                            <p className={`text-[11px] mb-3 line-clamp-2 leading-tight min-h-[2.4em] ${isIntegrated ? 'text-indigo-100' : 'text-slate-500'}`}>
+                                                            <p className={`text-[12px] mb-3 line-clamp-2 leading-tight min-h-[2.4em] ${isIntegrated ? 'text-indigo-100' : 'text-slate-500'}`}>
                                                                 {desc || "Master this skill to excel in HKDSE English."}
                                                             </p>
 
@@ -1080,8 +1269,8 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                                                                                 </div>
                                                                         </div>
                                                                         <div className="flex flex-col items-end gap-1">
-                                                                            <div className="text-[10px] font-bold text-amber-600">
-                                                                                +{getMasteryStats(Number(levelToUse), false, false).xp} XP
+                                                                            <div className="text-xs font-bold text-amber-600">
+                                                                                +{displayXp} XP
                                                                             </div>
                                                                             {paper === 'reading' && !isIntegrated && (
                                                                                 <select
@@ -1103,7 +1292,7 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                                                                     </div>
 
                                                                 <div className="flex items-center justify-between">
-                                                                    <div className="flex items-center gap-1.5 text-[10px] text-slate-400 italic">
+                                                                    <div className="flex items-center gap-1.5 text-[11px] text-slate-400 italic">
                                                                         <Sparkles className="w-3 h-3 text-amber-400" />
                                                                         <span>Outcome: {outcome}</span>
                                                                     </div>

@@ -8,7 +8,7 @@
   },
   "scripts": {
     "start": "node server.js",
-    "dev": "npx kill-port 3001 && nodemon server.js",
+    "dev": "npx kill-port 3001 && npx nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "wipe-user": "node wipe_user.js",
     "deploy-dev": "gcloud run deploy ace-it-backend-dev --project ace-it-learning --region asia-east1 --set-env-vars NODE_ENV=development --source . --allow-unauthenticated",

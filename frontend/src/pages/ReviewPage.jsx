@@ -8,6 +8,7 @@ import { db } from '../firebase';
 import { useAuth } from '../context/AuthContext';
 import { addToNotebook } from '../services/notebookService';
 import AlertModal from '../components/shared/AlertModal';
+import { LoadingPage } from '../components/shared';
 
 // --- Dictionary Popover Component ---
 const DictionaryPopover = ({ data, position, onClose, onAddToNotebook, loading }) => {
@@ -130,7 +131,14 @@ const ReviewPage = () => {
     // Close popover logic is now handled by the Backdrop overlay
     // No useEffect needed for window click
 
-    if (loading) return <div className="h-screen flex items-center justify-center">Loading Review...</div>;
+    if (loading) {
+        return (
+            <LoadingPage 
+                title="Loading Review Protocol" 
+                subtext={`Retrieving your performance data for ${examData?.title || 'this assessment'}...`}
+            />
+        );
+    }
     if (!examData) return <div className="h-screen flex items-center justify-center">Exam data not found.</div>;
     if (!answers || !feedback) return <div className="h-screen flex items-center justify-center">
         <div className="text-center">

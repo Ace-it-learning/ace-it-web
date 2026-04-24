@@ -43,7 +43,7 @@ const WritingStudioEditor = ({
                     <div className="flex items-center gap-3 px-5 py-2.5 bg-indigo-50 border border-indigo-100 rounded-2xl">
                         <PenTool size={16} className="text-indigo-500" />
                         <div className="flex flex-col items-start leading-none">
-                            <span className="text-[8px] font-black text-indigo-400 uppercase tracking-widest mb-1">Current Word Count</span>
+                            <span className="text-xs font-black text-indigo-400 uppercase tracking-widest mb-1">Current Word Count</span>
                             <span className="text-sm font-black text-indigo-700 tabular-nums">
                                 {wordCount} words
                             </span>

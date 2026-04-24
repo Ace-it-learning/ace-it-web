@@ -16,7 +16,8 @@ const WritingStudioHeader = ({
     onCheatInject,
     isMock = false,
     duration = 0,
-    onTimeUp
+    onTimeUp,
+    onBack // Added for custom back behavior (e.g. Save & Quit modal)
 }) => {
     const navigate = useNavigate();
     const [showCheatDropdown, setShowCheatDropdown] = React.useState(false);
@@ -25,9 +26,15 @@ const WritingStudioHeader = ({
         <header className="bg-white border-b border-slate-200 px-6 py-3 flex items-center justify-between z-50 sticky top-0 shadow-sm shrink-0">
             <div className="flex items-center gap-4">
                 <button
-                    onClick={() => navigate('/dashboard', { state: { openRoadmap: 'ENGLISH', roadmapFilter: 'WRITING' } })}
+                    onClick={() => {
+                        if (onBack) {
+                            onBack();
+                        } else {
+                            navigate('/dashboard', { state: { openRoadmap: 'ENGLISH', roadmapFilter: 'WRITING' } });
+                        }
+                    }}
                     className="p-2.5 hover:bg-slate-100 rounded-full transition-colors text-slate-500"
-                    title="Back to Roadmap"
+                    title="Back"
                 >
                     <ArrowLeft size={22} />
                 </button>
@@ -42,7 +49,7 @@ const WritingStudioHeader = ({
                     title={isLeftSidebarOpen ? "Hide Briefing" : "Show Briefing"}
                 >
                     <PenTool size={16} />
-                    <span className="text-[9px] font-black uppercase tracking-widest hidden lg:block">
+                    <span className="text-xs font-black uppercase tracking-widest hidden lg:block">
                         Briefing
                     </span>
                 </button>
@@ -52,11 +59,11 @@ const WritingStudioHeader = ({
                 <div>
                     <div className="flex items-center gap-2 mb-0.5">
                         <h1 className="font-black text-slate-900 tracking-tight text-base sm:text-lg truncate max-w-[120px] sm:max-w-none">{title || "Writing Studio"}</h1>
-                        <span className={`px-2 py-0.5 rounded text-[8px] font-black uppercase tracking-widest flex-shrink-0 ${isMock ? 'bg-indigo-600 text-white' : 'bg-slate-900 text-white'}`}>
+                        <span className={`px-2 py-0.5 rounded text-xs font-black uppercase tracking-widest flex-shrink-0 ${isMock ? 'bg-indigo-600 text-white' : 'bg-slate-900 text-white'}`}>
                             {isMock ? 'MOCK EXAM' : 'PROCESS'}
                         </span>
                     </div>
-                    <div className="text-[9px] font-black text-slate-400 uppercase tracking-[0.11em] items-center gap-2 hidden sm:flex">
+                    <div className="text-xs font-black text-slate-400 uppercase tracking-[0.11em] items-center gap-2 hidden sm:flex">
                         HKDSE Paper 2
                         <span className="text-slate-200">|</span>
                         <span className={`flex items-center gap-1 ${status === 'Drafting' ? 'text-green-600' : 'text-slate-400'}`}>
@@ -69,22 +76,21 @@ const WritingStudioHeader = ({
 
             {/* Core Stats / Status Badges */}
             <div className="flex items-center gap-4">
-                {/* Timer in Mock Mode */}
                 {isMock && duration > 0 && (
                     <div className="scale-90 origin-right">
-                        <MockCountdownTimer initialSeconds={duration} onTimeUp={onTimeUp} />
+                        <MockCountdownTimer seconds={duration} onTimeUp={onTimeUp} />
                     </div>
                 )}
 
                 {/* Admin Cheat Button - Hidden in Mock Mode */}
-                {(isCheatMode && !isMock) && (
+                {isCheatMode && (
                     <div className="relative">
                         <button
                             onClick={() => setShowCheatDropdown(!showCheatDropdown)}
                             className="flex items-center gap-2 px-3 py-1.5 bg-slate-900 text-white rounded-lg hover:bg-slate-800 transition-all shadow-lg"
                         >
                             <BarChart3 size={14} className="text-amber-400" />
-                            <span className="text-[9px] font-black uppercase tracking-widest">Admin Intel</span>
+                            <span className="text-xs font-black uppercase tracking-widest">Admin Intel</span>
                         </button>
 
                         <AnimatePresence>
@@ -96,13 +102,14 @@ const WritingStudioHeader = ({
                                     className="absolute top-full right-0 mt-2 w-56 bg-white border border-slate-200 rounded-2xl shadow-2xl overflow-hidden z-[100]"
                                 >
                                     <div className="p-3 bg-slate-50 border-b border-slate-100">
-                                        <p className="text-[8px] font-black text-slate-400 uppercase tracking-[0.2em]">Testing Tools: Injection</p>
+                                        <p className="text-xs font-black text-slate-400 uppercase tracking-[0.2em]">Testing Tools: Injection</p>
                                     </div>
                                     <div className="p-1">
                                         {[
                                             { label: 'Inject 5** Excellence', level: '5**', color: 'bg-slate-900' },
                                             { label: 'Inject Level 5 Quality', level: '5', color: 'bg-indigo-600' },
-                                            { label: 'Inject Level 4 Standard', level: '4', color: 'bg-emerald-600' }
+                                            { label: 'Inject Level 4 Standard', level: '4', color: 'bg-emerald-600' },
+                                            { label: 'Inject Level 2 Failure', level: '2', color: 'bg-rose-600' }
                                         ].map((option) => (
                                             <button
                                                 key={option.level}
@@ -118,7 +125,7 @@ const WritingStudioHeader = ({
                                         ))}
                                     </div>
                                     <div className="p-3 border-t border-slate-100 bg-amber-50/50">
-                                        <p className="text-[8px] font-bold text-amber-700 italic leading-tight">
+                                        <p className="text-xs font-bold text-amber-700 italic leading-tight">
                                             ⚠️ Warning: This will overwrite current draft content.
                                         </p>
                                     </div>
@@ -135,7 +142,7 @@ const WritingStudioHeader = ({
                         <div className="flex gap-2">
                             {['C', 'L', 'O'].map((metric, idx) => (
                                 <div key={metric} className="flex flex-col items-center">
-                                    <span className="text-[9px] font-black text-slate-500 mb-0.5" title={metric === 'C' ? 'Content' : metric === 'L' ? 'Language' : 'Organization'}>
+                                    <span className="text-xs font-black text-slate-500 mb-0.5" title={metric === 'C' ? 'Content' : metric === 'L' ? 'Language' : 'Organization'}>
                                         {metric}
                                     </span>
                                     <div className="w-10 h-1.5 bg-slate-200 rounded-full overflow-hidden">
@@ -148,7 +155,7 @@ const WritingStudioHeader = ({
                             ))}
                         </div>
                         {/* Tooltip for CLO meaning */}
-                        <div className="absolute top-full right-0 mt-2 p-2 bg-slate-800 text-white text-[9px] rounded shadow-xl opacity-0 group-hover:opacity-100 transition-opacity z-[100] w-48 pointer-events-none">
+                        <div className="absolute top-full right-0 mt-2 p-2 bg-slate-800 text-white text-xs rounded shadow-xl opacity-0 group-hover:opacity-100 transition-opacity z-[100] w-48 pointer-events-none">
                             <p className="font-bold mb-1 uppercase tracking-widest border-b border-slate-700 pb-1">Mastery Metrics</p>
                             <ul className="space-y-1 mt-1 font-medium italic">
                                 <li><span className="text-indigo-400 font-bold">C:</span> Content (Relevance & Depth)</li>
@@ -162,7 +169,7 @@ const WritingStudioHeader = ({
                 {/* Auto-save Marker (Relocated from Editor) */}
                 <div className="hidden md:flex items-center gap-2 px-3 py-1.5 bg-slate-50 rounded-lg border border-slate-100">
                      <div className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse" />
-                     <span className="text-[9px] font-black text-slate-500 uppercase tracking-widest">Auto-save Active</span>
+                     <span className="text-xs font-black text-slate-500 uppercase tracking-widest">Auto-save Active</span>
                 </div>
 
                 <div className="w-px h-6 bg-slate-200 mx-1" />
@@ -178,10 +185,11 @@ const WritingStudioHeader = ({
                     title={isSidebarOpen ? "Enter Focus Mode" : "Exit Focus Mode"}
                 >
                     {isSidebarOpen ? <Maximize2 size={16} /> : <Minimize2 size={16} />}
-                    <span className="text-[9px] font-black uppercase tracking-widest hidden md:block">
+                    <span className="text-xs font-black uppercase tracking-widest hidden md:block">
                         {isSidebarOpen ? "Focus Mode" : "Show Sidebars"}
                     </span>
                 </button>
+
             </div>
 
         </header>

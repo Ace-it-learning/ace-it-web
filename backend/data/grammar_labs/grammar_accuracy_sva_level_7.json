@@ -1,0 +1,307 @@
+{
+  "type": "GRAMMAR",
+  "topic_id": "grammar_accuracy_sva",
+  "level": "HKDSE Level 5** (Mastery)",
+  "conceptual_explanation": "At the HKDSE Level 5** tier, Subject-Verb Agreement (SVA) tests your ability to identify the true grammatical subject amid heavy modification. Examiners intentionally obscure the head noun using complex prepositional phrases, deceptive quantifiers, intervening 'along with' clauses, and tricky relative clauses. Mastery requires surgical precision to pair the correct subject with its corresponding verb, regardless of the words between them.",
+  "rule_cards": [
+    {
+      "name": "The Prepositional Phrase Trap",
+      "formula": "Head Noun + [Prepositional Phrase / Distractor Noun] -> Verb agrees with Head Noun",
+      "correct": "The construction of multiple public housing estates has finished.",
+      "incorrect": "The construction of multiple public housing estates have finished."
+    },
+    {
+      "name": "The 'Along With' Trap",
+      "formula": "Noun 1 + [as well as / together with / including + Noun 2] -> Verb agrees with Noun 1",
+      "correct": "The principal, as well as the teachers, is attending the assembly.",
+      "incorrect": "The principal, as well as the teachers, are attending the assembly."
+    },
+    {
+      "name": "The Proximity Rule",
+      "formula": "Either/Neither/Not only + Noun 1 + or/nor/but also + Noun 2 -> Verb agrees with Noun 2 (the closest noun)",
+      "correct": "Neither the students nor the teacher knows the answer.",
+      "incorrect": "Neither the students nor the teacher know the answer."
+    },
+    {
+      "name": "The 'Number' Flip",
+      "formula": "'A number of' + Plural Noun -> Plural Verb | 'The number of' + Plural Noun -> Singular Verb",
+      "correct": "A number of MTR trains were delayed. / The number of delayed trains was high.",
+      "incorrect": "A number of MTR trains was delayed. / The number of delayed trains were high."
+    },
+    {
+      "name": "Relative Clause Antecedents",
+      "formula": "Noun + who/which/that + Verb -> Verb agrees with the preceding Noun (Antecedent)",
+      "correct": "She is one of the applicants who possess outstanding DSE results.",
+      "incorrect": "She is one of the applicants who possesses outstanding DSE results."
+    }
+  ],
+  "head_noun_tasks": [
+    {
+      "sentence_tokens": [
+        "The",
+        "influx",
+        "of",
+        "tourists",
+        "into",
+        "the",
+        "revitalized",
+        "Sham",
+        "Shui",
+        "Po",
+        "streets",
+        "has",
+        "caused",
+        "traffic",
+        "jams",
+        "."
+      ],
+      "head_noun_indices": [
+        1
+      ],
+      "explanation": "The true subject is 'influx' (singular), which governs the singular verb 'has'. The prepositional phrase 'of tourists into the revitalized Sham Shui Po streets' contains plural nouns designed to trick you into using 'have'."
+    },
+    {
+      "sentence_tokens": [
+        "The",
+        "principal",
+        ",",
+        "as",
+        "well",
+        "as",
+        "several",
+        "teachers",
+        "from",
+        "the",
+        "local",
+        "secondary",
+        "school",
+        ",",
+        "is",
+        "attending",
+        "the",
+        "seminar",
+        "."
+      ],
+      "head_noun_indices": [
+        1
+      ],
+      "explanation": "The head noun is 'principal'. Phrases beginning with 'as well as', 'along with', or 'including' are parenthetical and do not turn a singular subject into a plural one. Therefore, the singular verb 'is' is correct."
+    },
+    {
+      "sentence_tokens": [
+        "Neither",
+        "the",
+        "commuters",
+        "nor",
+        "the",
+        "manager",
+        "is",
+        "aware",
+        "of",
+        "the",
+        "sudden",
+        "MTR",
+        "delay",
+        "."
+      ],
+      "head_noun_indices": [
+        5
+      ],
+      "explanation": "According to the Proximity Rule, when using 'neither/nor', the verb must agree with the subject closest to it. Because 'manager' is singular and adjacent to the verb, the verb must be 'is'."
+    },
+    {
+      "sentence_tokens": [
+        "The",
+        "number",
+        "of",
+        "newly",
+        "built",
+        "flats",
+        "in",
+        "the",
+        "Kai",
+        "Tak",
+        "development",
+        "area",
+        "remains",
+        "insufficient",
+        "."
+      ],
+      "head_noun_indices": [
+        1
+      ],
+      "explanation": "The phrase 'The number' refers to a singular mathematical figure, thus functioning as a singular head noun. This requires the singular verb 'remains', despite the presence of the plural noun 'flats'."
+    },
+    {
+      "sentence_tokens": [
+        "It",
+        "is",
+        "one",
+        "of",
+        "the",
+        "restaurants",
+        "that",
+        "serve",
+        "authentic",
+        "pineapple",
+        "buns",
+        "."
+      ],
+      "head_noun_indices": [
+        5
+      ],
+      "explanation": "In relative clauses, the verb following 'that' must agree with its immediate antecedent. Here, the antecedent is 'restaurants' (plural), so the plural verb 'serve' is correct. A common mistake is to match the verb to 'one'."
+    }
+  ],
+  "drill_tasks": [
+    {
+      "type": "MCQ",
+      "question": "The complex network of underground tunnels linking Admiralty and Central __________ many first-time MTR passengers.",
+      "options": [
+        "confuse",
+        "confuses",
+        "are confusing",
+        "have confused"
+      ],
+      "answer": "confuses",
+      "explanation": "The head noun is 'network', which is singular. The prepositional phrase 'of underground tunnels linking Admiralty and Central' is a distractor. Therefore, the singular verb 'confuses' is required."
+    },
+    {
+      "type": "MCQ",
+      "question": "The Chief Executive, accompanied by various bureau chiefs, __________ scheduled to address the media concerning the new housing policy.",
+      "options": [
+        "is",
+        "are",
+        "have been",
+        "were"
+      ],
+      "answer": "is",
+      "explanation": "The true subject is 'The Chief Executive' (singular). The phrase 'accompanied by various bureau chiefs' acts as an interrupter and does not compound the subject. Thus, the singular verb 'is' is correct."
+    },
+    {
+      "type": "MCQ",
+      "question": "Either the property developers or the government __________ the responsibility of subsidizing these micro-apartments.",
+      "options": [
+        "hold",
+        "holds",
+        "are holding",
+        "have held"
+      ],
+      "answer": "holds",
+      "explanation": "Under the Proximity Rule for 'either/or', the verb must agree with the closest subject. 'The government' is singular and closest to the verb, requiring the singular 'holds'."
+    },
+    {
+      "type": "MCQ",
+      "question": "A number of complaints regarding the new municipal solid waste charging scheme __________ received by the Environmental Protection Department yesterday.",
+      "options": [
+        "was",
+        "were",
+        "has been",
+        "is"
+      ],
+      "answer": "were",
+      "explanation": "'A number of' acts as a plural quantifier meaning 'several' or 'many'. Because the sentence context refers to 'yesterday' (past tense) and the subject is plural, 'were' is the correct verb."
+    },
+    {
+      "type": "MCQ",
+      "question": "The Sir Edward Youde Memorial Scholarship is awarded strictly to students who __________ exemplary academic and leadership qualities.",
+      "options": [
+        "demonstrate",
+        "demonstrates",
+        "is demonstrating",
+        "has demonstrated"
+      ],
+      "answer": "demonstrate",
+      "explanation": "The relative pronoun 'who' refers back to its antecedent 'students' (plural). Therefore, the verb inside the relative clause must be the plural 'demonstrate'."
+    },
+    {
+      "type": "MCQ",
+      "question": "The number of applicants for the competitive administrative officer position __________ decreased slightly this year.",
+      "options": [
+        "has",
+        "have",
+        "were",
+        "are"
+      ],
+      "answer": "has",
+      "explanation": "'The number of' signifies a singular specific quantity or figure. Even though 'applicants' is plural, the head noun phrase requires the singular verb 'has'."
+    },
+    {
+      "type": "MCQ",
+      "question": "Not only the waiters but also the manager of the cha chaan teng __________ trained to handle hygiene protocols.",
+      "options": [
+        "are",
+        "is",
+        "were",
+        "have been"
+      ],
+      "answer": "is",
+      "explanation": "Using the 'not only... but also' structure, the verb follows the Proximity Rule. 'The manager' is singular and is the closest noun to the verb slot, dictating the singular verb 'is'."
+    },
+    {
+      "type": "MCQ",
+      "question": "The intricate craftsmanship of bamboo scaffoldings __________ a dying art in modern Hong Kong.",
+      "options": [
+        "remain",
+        "remains",
+        "are remaining",
+        "have remained"
+      ],
+      "answer": "remains",
+      "explanation": "The head noun is 'craftsmanship' (singular). The plural noun 'scaffoldings' is safely tucked inside a prepositional phrase, so the main verb must be the singular 'remains'."
+    },
+    {
+      "type": "MCQ",
+      "question": "He is the only one of the local athletes who __________ qualified for the finals in Paris.",
+      "options": [
+        "has",
+        "have",
+        "are",
+        "were"
+      ],
+      "answer": "has",
+      "explanation": "This is a Level 5** trap. While 'one of the [plural noun] who' takes a plural verb, the addition of 'the ONLY one' shifts the antecedent of 'who' directly to 'the only one' (singular). Therefore, 'has' is correct."
+    },
+    {
+      "type": "MCQ",
+      "question": "The proposed syllabus, including the new core subjects and extracurricular requirements, __________ highly controversial among educators.",
+      "options": [
+        "prove",
+        "proves",
+        "are proving",
+        "have proven"
+      ],
+      "answer": "proves",
+      "explanation": "The head noun is 'syllabus' (singular). The phrase 'including...' is an interrupter. The verb must agree with the singular head noun, hence 'proves'."
+    }
+  ],
+  "boss_fight": {
+    "paragraph": "The highly anticipated opening of the new stadiums in the Kai Tak Sports Park are expected to attract massive crowds. A number of local residents, as well as the district councillor, has expressed concerns about potential noise. Neither the event organizers nor the government want a logistical nightmare on the inaugural night.",
+    "errors": [
+      {
+        "original": "are",
+        "correction": "is",
+        "explanation": "The subject is 'opening' (singular), not the plural distractors 'stadiums' or 'crowds'. The verb must be singular."
+      },
+      {
+        "original": "has",
+        "correction": "have",
+        "explanation": "The phrase 'A number of local residents' acts as a plural subject. The interrupter 'as well as the district councillor' does not change this, so the plural verb 'have' is required."
+      },
+      {
+        "original": "want",
+        "correction": "wants",
+        "explanation": "In a 'neither/nor' structure, the verb agrees with the closest subject. The closest subject is 'the government' (singular), so the verb should be 'wants'."
+      }
+    ]
+  },
+  "success_feedback": "Outstanding! You have successfully navigated the most deceptive Subject-Verb Agreement traps the HKDSE can throw at you. You accurately distinguished true head nouns from tricky interrupters and prepositional modifiers.",
+  "suggested_next_steps": [
+    "Review 'Inversion' (e.g., Hardly had I...) to master advanced sentence structures.",
+    "Practice 'Participle Clauses' to enhance the sophistication of your writing in Part B2.",
+    "Try a timed drill spotting SVA errors within full essays to build endurance."
+  ],
+  "interactive_tasks": [],
+  "examples": [],
+  "key_points": []
+}

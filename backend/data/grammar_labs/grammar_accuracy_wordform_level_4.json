@@ -1,0 +1,216 @@
+{
+  "type": "GRAMMAR",
+  "topic_id": "grammar_accuracy_wordform",
+  "level": "HKDSE Level 4",
+  "conceptual_explanation": "Level 4 Word Form focuses on common traps: the difference between feelings (-ed) and causes (-ing), and the confusing spelling shifts between nouns and verbs (e.g., Advice vs Advise). You must also recognize adjectives that look like adverbs (ending in -ly).",
+  "rule_cards": [
+    {
+      "name": "Feeling vs Cause (-ed/-ing)",
+      "formula": "-ed (Person feels) / -ing (Thing causes)",
+      "correct": "I am interested in history. / This history book is interesting.",
+      "incorrect": "I am interesting in history."
+    },
+    {
+      "name": "The 'C' vs 'S' Rule",
+      "formula": "-ce (Noun) / -se (Verb)",
+      "correct": "Please give me some advice. / I advise you to study hard.",
+      "incorrect": "I advice you to study hard."
+    },
+    {
+      "name": "The '-ly' Adjective Trap",
+      "formula": "Friendly, Lovely, Silly, Lonely = Adjectives (NOT Adverbs)",
+      "correct": "She gave me a friendly smile. / He spoke in a friendly way.",
+      "incorrect": "She smiled me friendly."
+    },
+    {
+      "name": "Belief vs Believe",
+      "formula": "Belief (Noun) / Believe (Verb)",
+      "correct": "It is my belief that he is honest. / I believe he is honest.",
+      "incorrect": "I belief he is honest."
+    }
+  ],
+  "head_noun_tasks": [
+    {
+      "sentence_tokens": [
+        "The",
+        "results",
+        "of",
+        "the",
+        "exam",
+        "were",
+        "very",
+        "disappointing",
+        "."
+      ],
+      "head_noun_indices": [
+        7
+      ],
+      "target_type": "Adjective",
+      "explanation": "'Disappointing' is an adjective describing the cause ('the results')."
+    },
+    {
+      "sentence_tokens": [
+        "You",
+        "should",
+        "always",
+        "follow",
+        "the",
+        "doctor",
+        "'s",
+        "advice",
+        "."
+      ],
+      "head_noun_indices": [
+        7
+      ],
+      "target_type": "Noun",
+      "explanation": "'Advice' with a 'c' is the noun form."
+    },
+    {
+      "sentence_tokens": [
+        "We",
+        "had",
+        "a",
+        "lovely",
+        "time",
+        "at",
+        "the",
+        "beach",
+        "."
+      ],
+      "head_noun_indices": [
+        3
+      ],
+      "target_type": "Adjective",
+      "explanation": "'Lovely' is an adjective modifying the noun 'time'."
+    },
+    {
+      "sentence_tokens": [
+        "The",
+        "manager",
+        "advised",
+        "the",
+        "staff",
+        "to",
+        "be",
+        "more",
+        "punctual",
+        "."
+      ],
+      "head_noun_indices": [
+        2
+      ],
+      "target_type": "Verb",
+      "explanation": "'Advised' with an 's' is the verb form."
+    },
+    {
+      "sentence_tokens": [
+        "I",
+        "was",
+        "amazed",
+        "by",
+        "the",
+        "magician",
+        "'s",
+        "performance",
+        "."
+      ],
+      "head_noun_indices": [
+        2
+      ],
+      "target_type": "Adjective",
+      "explanation": "'Amazed' is an adjective describing the person's feeling."
+    }
+  ],
+  "drill_tasks": [
+    {
+      "type": "MCQ",
+      "question": "The news about the earthquake was ________.",
+      "options": [
+        "shocked",
+        "shocking",
+        "shock",
+        "shockingly"
+      ],
+      "answer": "shocking",
+      "explanation": "The news is the 'cause' of the feeling, so we use -ing."
+    },
+    {
+      "type": "MCQ",
+      "question": "Can you ________ me on which laptop to buy?",
+      "options": [
+        "advice",
+        "advise",
+        "advisory",
+        "advised"
+      ],
+      "answer": "advise",
+      "explanation": "We need a verb here (after 'can you')."
+    },
+    {
+      "type": "MCQ",
+      "question": "She is a very ________ person who loves helping others.",
+      "options": [
+        "friend",
+        "friendly",
+        "friendliness",
+        "friendship"
+      ],
+      "answer": "friendly",
+      "explanation": "We need an adjective to describe 'person'."
+    },
+    {
+      "type": "MCQ",
+      "question": "I don't ________ that he stole the money.",
+      "options": [
+        "belief",
+        "believe",
+        "believable",
+        "believed"
+      ],
+      "answer": "believe",
+      "explanation": "We need a verb form here."
+    },
+    {
+      "type": "MCQ",
+      "question": "The students felt ________ after the long hike.",
+      "options": [
+        "exhausting",
+        "exhausted",
+        "exhaust",
+        "exhaustion"
+      ],
+      "answer": "exhausted",
+      "explanation": "The students are the ones 'feeling' the state, so we use -ed."
+    }
+  ],
+  "boss_fight": {
+    "paragraph": "I am very interesting in science. My teacher often advice me to read more journals. She is a lovely teacher who has a strong believe in my potential.",
+    "errors": [
+      {
+        "original": "interesting",
+        "correction": "interested",
+        "explanation": "When describing a person's feeling, use -ed."
+      },
+      {
+        "original": "advice",
+        "correction": "advises",
+        "explanation": "We need the verb form 'advise' here (and singular 'advises' for 'teacher')."
+      },
+      {
+        "original": "believe",
+        "correction": "belief",
+        "explanation": "After 'a strong', we need the noun form 'belief'."
+      }
+    ]
+  },
+  "success_feedback": "Excellent work! You've avoided the most common participial adjective and spelling traps.",
+  "suggested_next_steps": [
+    "Learn about negative prefixes (e.g., irregular ones like 'illogical', 'impatient').",
+    "Study nouns and adjectives with similar endings like -ance and -ant.",
+    "Try Level 5 for more sophisticated word form transitions!"
+  ],
+  "interactive_tasks": [],
+  "examples": [],
+  "key_points": []
+}

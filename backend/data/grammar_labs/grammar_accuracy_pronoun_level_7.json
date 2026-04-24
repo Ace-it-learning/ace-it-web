@@ -1,0 +1,223 @@
+{
+  "type": "GRAMMAR",
+  "topic_id": "grammar_accuracy_pronoun",
+  "level": "HKDSE Level 5**",
+  "conceptual_explanation": "The 5** summit of Pronoun Accuracy involves technical mastery of case and comparison. You must understand why 'Than I' is often more formal than 'Than me', handle possessives before gerunds (My leaving), and use advanced substitution phrases like 'That of' to compare abstract nouns precisely.",
+  "rule_cards": [
+    {
+      "name": "The 'Than' Case",
+      "formula": "Than + Subjective (Formal - implies hidden verb) | Than + Objective (Informal)",
+      "correct": "He is taller than I (am).",
+      "incorrect": "He is taller than me. (Acceptable in speech, but less formal for 5** writing)"
+    },
+    {
+      "name": "Possessive with Gerunds",
+      "formula": "Possessive Pronoun + Gerund (-ing noun)",
+      "correct": "I was surprised by his leaving so early.",
+      "incorrect": "I was surprised by him leaving so early."
+    },
+    {
+      "name": "Substitution: That of / Those of",
+      "formula": "Avoid repeating the noun by using 'That of' (Sing) or 'Those of' (Plural)",
+      "correct": "The population of HK is smaller than that of Tokyo.",
+      "incorrect": "The population of HK is smaller than Tokyo. (You are comparing population to a city, not another population)"
+    },
+    {
+      "name": "It as Empty Subject",
+      "formula": "It + Verb + Noun/Adj (Preparatory It)",
+      "correct": "It is necessary to complete the task. / I find it difficult to speak French.",
+      "incorrect": "To complete the task is necessary. (Less natural in formal DSE)"
+    }
+  ],
+  "head_noun_tasks": [
+    {
+      "sentence_tokens": [
+        "The",
+        "climate",
+        "of",
+        "Hong",
+        "Kong",
+        "is",
+        "similar",
+        "to",
+        "that",
+        "of",
+        "Taiwan",
+        "."
+      ],
+      "head_noun_indices": [
+        8,
+        1
+      ],
+      "explanation": "'That' is a substitution pronoun referring back to 'the climate'."
+    },
+    {
+      "sentence_tokens": [
+        "She",
+        "is",
+        "far",
+        "more",
+        "experienced",
+        "than",
+        "he",
+        "."
+      ],
+      "head_noun_indices": [
+        7
+      ],
+      "explanation": "In formal comparison, 'he' is preferred as it implies 'than he is'."
+    },
+    {
+      "sentence_tokens": [
+        "My",
+        "parents",
+        "do",
+        "not",
+        "approve",
+        "of",
+        "my",
+        "studying",
+        "abroad",
+        "."
+      ],
+      "head_noun_indices": [
+        6,
+        7
+      ],
+      "explanation": "Use the possessive 'my' before the gerund 'studying'."
+    },
+    {
+      "sentence_tokens": [
+        "The",
+        "wages",
+        "in",
+        "the",
+        "UK",
+        "are",
+        "higher",
+        "than",
+        "those",
+        "of",
+        "India",
+        "."
+      ],
+      "head_noun_indices": [
+        8,
+        1
+      ],
+      "explanation": "'Those' refers back to the plural noun 'wages'."
+    },
+    {
+      "sentence_tokens": [
+        "I",
+        "find",
+        "it",
+        "shocking",
+        "that",
+        "they",
+        "would",
+        "act",
+        "in",
+        "such",
+        "a",
+        "manner",
+        "."
+      ],
+      "head_noun_indices": [
+        2
+      ],
+      "explanation": "'It' is a dummy object (preparatory it) pointing to the 'that' clause."
+    }
+  ],
+  "drill_tasks": [
+    {
+      "type": "MCQ",
+      "question": "The GDP of China is growing faster than ________ of most European nations.",
+      "options": [
+        "this",
+        "that",
+        "those",
+        "it"
+      ],
+      "answer": "that",
+      "explanation": "'That' substitutes for the singular 'GDP'."
+    },
+    {
+      "type": "MCQ",
+      "question": "I am much older than ________.",
+      "options": [
+        "he",
+        "him",
+        "his",
+        "himself"
+      ],
+      "answer": "he",
+      "explanation": "'He' is the formal choice (implies 'than he is')."
+    },
+    {
+      "type": "MCQ",
+      "question": "What did you think of ________ winning the award?",
+      "options": [
+        "him",
+        "his",
+        "he",
+        "himself"
+      ],
+      "answer": "his",
+      "explanation": "Use the possessive before a gerund ('winning')."
+    },
+    {
+      "type": "MCQ",
+      "question": "The skills required for this job are different from ________ needed for the previous one.",
+      "options": [
+        "that",
+        "those",
+        "these",
+        "them"
+      ],
+      "answer": "those",
+      "explanation": "'Those' substitutes for the plural 'skills'."
+    },
+    {
+      "type": "MCQ",
+      "question": "________ is essential that you follow the safety protocols.",
+      "options": [
+        "This",
+        "It",
+        "That",
+        "There"
+      ],
+      "answer": "It",
+      "explanation": "'It' acts as the preparatory subject for the noun clause."
+    }
+  ],
+  "boss_fight": {
+    "paragraph": "The history of the city is more fascinating than the one of the neighboring town. I was annoyed by him arriving late. She is much smarter than me.",
+    "errors": [
+      {
+        "original": "the one of",
+        "correction": "that of",
+        "explanation": "'That of' is the formal substitution for singular abstract nouns like 'history'."
+      },
+      {
+        "original": "by him arriving",
+        "correction": "by his arriving",
+        "explanation": "Use the possessive pronoun before a gerund."
+      },
+      {
+        "original": "than me",
+        "correction": "than I",
+        "explanation": "In formal comparison, the subjective case 'I' is preferred."
+      }
+    ]
+  },
+  "success_feedback": "Spectacular! You have conquered the most sophisticated pronoun traps in the English language. Your precision is truly 5** level.",
+  "suggested_next_steps": [
+    "Review other substitution forms like 'the former' and 'the latter'.",
+    "Practice using 'one another' vs 'each other'.",
+    "Teach these elite tips to your classmates!"
+  ],
+  "interactive_tasks": [],
+  "examples": [],
+  "key_points": []
+}

@@ -186,9 +186,21 @@ router.post('/grade', async (req, res) => {
         let xpAwarded = 0;
         if (uid && uid !== 'guest' && result.predicted_level) {
             const GamificationService = require('../services/GamificationService');
-            // Assuming 250 XP for writing as per WritingResultPage mention of +250 XP
-            const xpAmount = 250; 
-            const xpResult = await GamificationService.awardXP(uid, xpAmount, 'writing', {
+            
+            // New standardized XP: 150 for general writing quest
+            let baseAmount = 150;
+            let questBonus = 0;
+
+            // Handle Weekly Quest award
+            if (req.body.isWeeklyQuest) {
+                const weeklyResult = await GamificationService.awardWeeklyQuestCompletion(uid);
+                if (weeklyResult.success) {
+                    questBonus = weeklyResult.earned;
+                    baseAmount = 250; // Weekly quest base
+                }
+            }
+
+            const xpResult = await GamificationService.awardXP(uid, baseAmount, 'writing', {
                 title: `Writing: ${finalTopic}`,
                 score: `${result.predicted_level} / 5**`,
                 subject: 'english',
@@ -196,13 +208,20 @@ router.post('/grade', async (req, res) => {
                 questName: finalTopic,
                 resultId: resultId
             }) || { earned: 0 };
-            xpAwarded = xpResult.earned || 0;
+            
+            res.json({
+                ...result,
+                resultId,
+                xp_awarded: (xpResult.earned || 0) + questBonus,
+                xp_breakdown: xpResult.breakdown
+            });
+            return;
         }
 
         res.json({
             ...result,
-            resultId,
-            xp_awarded: xpAwarded
+            resultId: null,
+            xp_awarded: 0
         });
     } catch (err) {
         console.error(err);

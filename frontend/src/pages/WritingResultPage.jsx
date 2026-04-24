@@ -5,12 +5,13 @@ import {
     Trophy, ArrowLeft, Star, BarChart3, 
     BookOpen, Sparkles, MessageSquare, 
     ChevronRight, Target, Info, Zap, 
-    CheckCircle2, AlertCircle, X, Layers
+    CheckCircle2, AlertCircle, X, Layers, GraduationCap, Play
 } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import { useLanguage } from '../context/LanguageContext';
 import WritingHighlighter from '../components/writing/WritingHighlighter';
 import { getLocalizedValue } from '../utils/writingUtils';
+import { GRAMMAR_MAPPING } from '../constants/grammarMapping';
 
 const WritingResultPage = () => {
     const { state } = useLocation();
@@ -70,7 +71,8 @@ const WritingResultPage = () => {
             improvement_goal: getCI(data, 'improvement_goal') || getCI(data, 'improvementGoal') || "",
             exemplar_comparison: getCI(data, 'exemplar_comparison') || getCI(data, 'exemplarComparison') || null,
             model_answer_5_star: getCI(data, 'model_answer_5_star') || getCI(data, 'modelAnswer5Star') || getCI(data, 'modelAnswer') || "",
-            high_score_tips: getCI(data, 'high_score_tips') || getCI(data, 'highScoreTips') || []
+            high_score_tips: getCI(data, 'high_score_tips') || getCI(data, 'highScoreTips') || [],
+            grammar_diagnostics: getCI(data, 'grammar_diagnostics') || getCI(data, 'grammarDiagnostics') || []
         };
     }, [results]);
 
@@ -163,7 +165,7 @@ const WritingResultPage = () => {
                     <div>
                         <div className="flex items-center gap-2 mb-0.5">
                             <h1 className="font-black text-slate-900 tracking-tight text-lg">{t('writing_result.dashboard_title')}</h1>
-                            <span className="px-2 py-0.5 bg-rose-600 text-white rounded text-[8px] font-black uppercase tracking-widest">
+                            <span className="px-2 py-0.5 bg-rose-600 text-white rounded text-[9px] font-black uppercase tracking-widest">
                                 {t('writing_result.mission_completed')}
                             </span>
                         </div>
@@ -217,8 +219,35 @@ const WritingResultPage = () => {
                             <div className={`text-9xl font-black italic tracking-tighter ${predictedLevel.includes('5') ? 'text-slate-900' : 'text-slate-600'}`}>
                                 {predictedLevel}
                             </div>
-                            <div className="absolute -bottom-2 -right-4 px-3 py-1 bg-amber-500 text-white rounded-xl shadow-lg rotate-12 scale-110">
-                                <span className="text-[10px] font-black uppercase tracking-widest">+250 XP</span>
+                            <div className="absolute -bottom-2 -right-4 px-4 py-2 bg-slate-900 text-white rounded-2xl shadow-2xl flex flex-col items-center min-w-[100px] border border-slate-700">
+                                <span className="text-[10px] font-black uppercase tracking-widest text-orange-400 mb-0.5">+{normalizedResults.xp_awarded || results.xp_awarded || 0} XP</span>
+                                
+                                {(normalizedResults.xp_breakdown || results.xp_breakdown) && (
+                                    <div className="w-full pt-1.5 border-t border-slate-700 mt-1.5 space-y-0.5 text-left">
+                                        <div className="flex justify-between text-[9px] text-slate-400 font-bold uppercase tracking-widest">
+                                            <span>Base:</span>
+                                            <span>{(normalizedResults.xp_breakdown || results.xp_breakdown).base}</span>
+                                        </div>
+                                        {(normalizedResults.xp_breakdown || results.xp_breakdown).tierMultiplier > 1 && (
+                                            <div className="flex justify-between text-[9px] text-indigo-400 font-bold uppercase tracking-widest">
+                                                <span>Premium:</span>
+                                                <span>x{(normalizedResults.xp_breakdown || results.xp_breakdown).tierMultiplier}</span>
+                                            </div>
+                                        )}
+                                        {(normalizedResults.xp_breakdown || results.xp_breakdown).masteryMultiplier > 1 && (
+                                            <div className="flex justify-between text-[9px] text-emerald-400 font-bold uppercase tracking-widest">
+                                                <span>Mastery:</span>
+                                                <span>x{(normalizedResults.xp_breakdown || results.xp_breakdown).masteryMultiplier}</span>
+                                            </div>
+                                        )}
+                                        {(normalizedResults.xp_breakdown || results.xp_breakdown).milestoneBonus > 0 && (
+                                            <div className="flex justify-between text-[9px] text-pink-400 font-bold uppercase tracking-widest">
+                                                <span>Bonus:</span>
+                                                <span>+{(normalizedResults.xp_breakdown || results.xp_breakdown).milestoneBonus}</span>
+                                            </div>
+                                        )}
+                                    </div>
+                                )}
                             </div>
                         </div>
 
@@ -346,6 +375,66 @@ const WritingResultPage = () => {
                             </div>
                         </div>
                     )}
+
+                    {/* Miss Janie's Grammar Diagnostic Loop */}
+                    {normalizedResults.grammar_diagnostics && normalizedResults.grammar_diagnostics.length > 0 && (
+                        <div className="lg:col-span-12 bg-amber-50 rounded-[2.5rem] p-10 border-2 border-amber-200 shadow-sm relative overflow-hidden group">
+                             {/* Decorative Background Elements */}
+                             <div className="absolute -top-12 -right-12 w-64 h-64 bg-amber-200/20 rounded-full blur-3xl pointer-events-none group-hover:bg-amber-300/20 transition-all duration-700" />
+                             
+                             <div className="flex items-center gap-4 mb-10 relative z-10">
+                                <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center shadow-sm border border-amber-100 group-hover:scale-110 transition-transform">
+                                    <GraduationCap size={32} className="text-amber-600" />
+                                </div>
+                                <div>
+                                    <h3 className="text-2xl font-black uppercase tracking-tight text-amber-900">
+                                        {isChinese ? 'Miss Janie 的語法診斷' : "Miss Janie's Grammar Diagnostic"}
+                                    </h3>
+                                    <p className="text-xs font-bold text-amber-700 uppercase tracking-widest flex items-center gap-2">
+                                        <Sparkles size={12} className="animate-pulse" />
+                                        {isChinese ? '針對你的寫作漏洞，推薦以下微技能練習' : 'Targeted Micro-Labs to fix your mark-leaks'}
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 relative z-10">
+                                {normalizedResults.grammar_diagnostics.slice(0, 2).map(tag => {
+                                    const info = GRAMMAR_MAPPING[tag];
+                                    if (!info) return null;
+                                    return (
+                                        <div 
+                                            key={tag}
+                                            onClick={() => navigate(`/lab?topic=${info.lab_id}&level=5`, { 
+                                                state: { 
+                                                    topic: info.lab_id,
+                                                    isGrammarLab: true,
+                                                    xp: 50
+                                                } 
+                                            })}
+                                            className="bg-white p-7 rounded-[2rem] border border-amber-100 hover:border-amber-400 hover:shadow-xl transition-all cursor-pointer flex items-center justify-between group/card"
+                                        >
+                                            <div className="flex flex-col flex-1 pr-6">
+                                                <div className="flex items-center gap-2 mb-2">
+                                                    <span className={`px-2 py-0.5 rounded-lg text-[9px] font-black uppercase tracking-wider ${info.track === 'Elite' ? 'bg-purple-100 text-purple-700' : 'bg-blue-100 text-blue-700'}`}>
+                                                        {info.track} Track
+                                                    </span>
+                                                </div>
+                                                <h4 className="text-xl font-black text-slate-800 group-hover/card:text-amber-600 transition-colors leading-tight">
+                                                    {isChinese ? info.title_zh : info.title}
+                                                </h4>
+                                                <p className="text-sm font-bold text-slate-400 mt-3 italic leading-relaxed">
+                                                    "{isChinese ? info.janie_message_zh : info.janie_message}"
+                                                </p>
+                                            </div>
+                                            <div className="w-14 h-14 bg-amber-50 rounded-2xl group-hover/card:bg-amber-600 group-hover/card:text-white transition-all text-amber-600 flex items-center justify-center shrink-0 shadow-inner">
+                                                <Play size={24} fill="currentColor" />
+                                            </div>
+                                        </div>
+                                    );
+                                })}
+                            </div>
+                        </div>
+                    )}
                 </div>
 
                 {/* Row 3: Elite Analysis Comparison Center (Full Width) */}
@@ -440,7 +529,7 @@ const WritingResultPage = () => {
                                                     </div>
                                                     <div>
                                                         <h5 className="text-xs font-black uppercase tracking-[0.15em] text-indigo-400">{t('writing_result.insight_title')}</h5>
-                                                        <p className="text-[8px] font-black text-slate-500 uppercase tracking-widest mt-0.5">{t('writing_result.expert_recommendation')}</p>
+                                                        <p className="text-[9px] font-black text-slate-500 uppercase tracking-widest mt-0.5">{t('writing_result.expert_recommendation')}</p>
                                                     </div>
                                                 </div>
                                                 <div className="flex items-center gap-3">

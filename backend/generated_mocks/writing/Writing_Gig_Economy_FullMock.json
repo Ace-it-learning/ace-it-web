@@ -1,0 +1,106 @@
+{
+  "meta": {
+    "title": "The Slash Generation (The Gig Economy)",
+    "topic": "The Slash Generation (The Gig Economy)",
+    "generated_at": "2026-04-23T14:07:00.000Z",
+    "blueprint_version": "2026_V1"
+  },
+  "Part_A": {
+    "part": "Part A",
+    "genre": "Formal Letter",
+    "title": "Inviting 'Slashies' to the Annual Career Fair",
+    "instructions": "Write a formal letter to the Careers Guidance Office in about 200 words.",
+    "situation": "The annual school Career Fair currently focuses exclusively on traditional corporate roles (doctors, lawyers, bankers). You believe it should also represent the 'Slash Generation'—individuals who have multiple 'freelance' careers (e.g., Writer/Designer/Yoga Instructor).",
+    "requirements": [
+      "Define the 'Slashie' lifestyle and explain why it is becoming popular among Hong Kong youth.",
+      "Argue that traditional career advice is becoming 'outdated' for the 21st-century economy.",
+      "Suggest two ways the Career Fair could accommodate freelancers (e.g., a panel discussion, a 'portfolio review' booth)."
+    ],
+    "format_guides": [
+      "Use formal letter conventions.",
+      "Address it to 'The Careers Guidance Officer'."
+    ]
+  },
+  "Part_B": [
+    {
+      "elective": "Sports Communication",
+      "type": "Feature Article",
+      "question": "The 'Semi-Pro' Struggle: Athletes who are also 'Full-time' workers/students.",
+      "requirements": [
+        "Discuss the 'dual-career' challenge for athletes in Hong Kong who cannot survive on sports alone.",
+        "Explain how the discipline of sports training helps these 'Slashies' succeed in their other careers.",
+        "Propose how the government or private sector can better support these 'multi-talented' athletes."
+      ]
+    },
+    {
+      "elective": "Drama",
+      "type": "Dramatic Script",
+      "question": "A scene where a young person tries to explain to their traditional, 'stable-job' parents that they are now a 'Full-time Freelancer'.",
+      "requirements": [
+        "Establish the 'clash of generations' through dialogue about 'pension vs. passion' and 'stability vs. freedom'.",
+        "Include a moment of 'financial panic' (e.g., an unpaid bill) that tests the young person's resolve.",
+        "Provide stage directions that reflect the high-stakes, emotional nature of the conversation."
+      ]
+    },
+    {
+      "elective": "Short Stories",
+      "type": "Short Story",
+      "question": "A story about a 'Protean' worker who has so many 'slashes' that they begin to lose track of which 'self' is the real one.",
+      "requirements": [
+        "Describe a day in the life of the protagonist as they switch between 4 different 'roles' (e.g., Barista, Coder, Artist, Tutor).",
+        "Show a moment of 'identity crisis' where they mix up the 'scripts' for two different jobs.",
+        "End the story with a reflection on whether 'freedom' from a 9-to-5 is worth the loss of a 'unified' self."
+      ]
+    },
+    {
+      "elective": "Popular Culture",
+      "type": "Blog Post",
+      "question": "The 'Glamorization' of the Gig Economy: Is it 'Freedom' or just 'Precarious Labor'?",
+      "requirements": [
+        "Critique the social media 'aesthetic' of the digital nomad (laptop at the beach) vs. the reality of zero benefits.",
+        "Discuss how the 'Gig Economy' apps often treat workers as 'algorithms' rather than 'human beings'.",
+        "Provide advice to your readers on how to 'Gig Responsibly' (e.g., insurance, savings)."
+      ]
+    },
+    {
+      "elective": "Social Issues",
+      "type": "Article",
+      "question": "The 'End of the Lifetime Job': What the 'Gig Economy' means for the future of the 'Hong Kong Dream'.",
+      "requirements": [
+        "Discuss the 'decline of stability' and its impact on young people's ability to buy homes or start families.",
+        "Explain how the 'Gig Economy' can lead to 'chronic burnout' due to the lack of boundaries between work and life.",
+        "Suggest one government reform (e.g., 'Portable Benefits') to protect freelance workers."
+      ]
+    },
+    {
+      "elective": "Debating",
+      "type": "Formal Debate Speech",
+      "question": "'That 'Freelancing' is a more fulfilling way to live than a 'Traditional Career'.'",
+      "requirements": [
+        "Argue that 'specialization' is a 20th-century trap and 'multi-hyphenate' living is the 21st-century ideal.",
+        "Provide a rebuttal to the idea that freelancing is just 'unemployment with a fancy name'.",
+        "Conclude with a powerful vision of a world where 'passion projects' are the new 'stable income'."
+      ]
+    },
+    {
+      "elective": "Workplace Communication",
+      "type": "Formal Proposal",
+      "question": "A proposal for a 'Co-working Space' designed specifically for 'Slashie' youth in an underused industrial building.",
+      "requirements": [
+        "Explain why 'traditional' offices are unsuitable for the 'Slash Generation'.",
+        "Propose 'flexible' features (e.g., a photo studio, a quiet coding room, a meeting space) in one location.",
+        "Outline a 'membership model' that is affordable for young freelancers starting out."
+      ]
+    },
+    {
+      "elective": "Songs and Poems",
+      "type": "Review",
+      "question": "A review of a song or poem that addresses 'The Hustle' or the 'Many Faces' of a modern worker.",
+      "requirements": [
+        "Identify the central image of 'multiplicity' or 'fragmentation' in the work.",
+        "Discuss how the artist uses rhythm (e.g., frantic, shifting) to convey the 'gig' lifestyle.",
+        "Explain why this work is a 'modern anthem' for the 'Slashie' generation."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "meta": {
+    "title": "Influencer Culture & Authenticity",
+    "topic": "Influencer Culture & Authenticity",
+    "generated_at": "2026-04-23T14:06:00.000Z",
+    "blueprint_version": "2026_V1"
+  },
+  "Part_A": {
+    "part": "Part A",
+    "genre": "Opinion Piece",
+    "title": "Labels for 'Filtered' Lives: Regulating Social Media Images",
+    "instructions": "Write an opinion piece for a local newspaper in about 200 words.",
+    "situation": "Some countries are introducing laws requiring social media influencers to label images that have been 'filtered' or 'AI-enhanced'. You have been asked to write an opinion piece on whether Hong Kong should follow suit.",
+    "requirements": [
+      "Discuss the impact of 'perfect' (but fake) images on the mental health and body image of young people.",
+      "Argue for or against the mandatory labeling of edited photos.",
+      "Explain how 'transparency' could lead to a more 'authentic' online culture."
+    ],
+    "format_guides": [
+      "Use an attention-grabbing headline.",
+      "Use a persuasive and reflective tone."
+    ]
+  },
+  "Part_B": [
+    {
+      "elective": "Sports Communication",
+      "type": "Article",
+      "question": "The 'Athlete-Influencer': When personal branding becomes more important than sports performance.",
+      "requirements": [
+        "Explain how social media following now affects an athlete's 'market value' and sponsorship deals.",
+        "Discuss the distraction caused by 'creating content' during major competitions.",
+        "Give your opinion on whether we should judge athletes by their medals or their 'reach'."
+      ]
+    },
+    {
+      "elective": "Drama",
+      "type": "Dramatic Script",
+      "question": "A scene where a famous 'Life-Style' influencer accidentally leaves their camera 'live' after their 'perfect' morning routine ends.",
+      "requirements": [
+        "Contrast the 'polished' persona on camera with the 'messy' reality once the stream (is supposed to) end.",
+        "Include a moment where the influencer's real-life assistant or family member calls them out on the fakery.",
+        "Provide stage directions that emphasize the frantic attempt to 'save' their reputation."
+      ]
+    },
+    {
+      "elective": "Short Stories",
+      "type": "Short Story",
+      "question": "A story about a 'Ghost-Writer' for a famous influencer who realizes they are literally 'writing' another person's personality.",
+      "requirements": [
+        "Describe the 'behind-the-scenes' work of crafting 'authentic' captions and 'spontaneous' thoughts.",
+        "Show the ghost-writer's internal conflict as they see the influencer getting praise for their (the ghost-writer's) wisdom.",
+        "End the story with the ghost-writer deciding whether to stay in the shadows or reclaim their voice."
+      ]
+    },
+    {
+      "elective": "Popular Culture",
+      "type": "Blog Post",
+      "question": "The rise of the 'De-Influencing' trend: Is it real authenticity or just another marketing gimmick?",
+      "requirements": [
+        "Define 'De-Influencing' (telling followers what NOT to buy) and why it's trending.",
+        "Discuss whether 'telling the truth' is just a way for influencers to build 'trust-capital' for future ads.",
+        "Provide advice to your readers on how to develop 'Digital Skepticism'."
+      ]
+    },
+    {
+      "elective": "Social Issues",
+      "type": "Article",
+      "question": "The 'Commodification of Privacy': What happens to a child's right to 'authenticity' when their parents are 'sharenting' influencers?",
+      "requirements": [
+        "Define 'sharenting' and discuss the ethical concerns of 'monetizing' a child's childhood.",
+        "Discuss the potential long-term psychological impact on a child who grows up 'on-camera'.",
+        "Suggest one regulation to protect the privacy of 'influencer children'."
+      ]
+    },
+    {
+      "elective": "Debating",
+      "type": "Formal Debate Speech",
+      "question": "'That parasocial bonds (one-sided digital friendships) are a valid form of 21st-century connection.'",
+      "requirements": [
+        "Argue that influencers can provide real comfort and community to those who are isolated.",
+        "Rebut the idea that these bonds are 'delusional' or 'unhealthy'.",
+        "Conclude by explaining how digital 'presence' can be just as impactful as physical 'presence'."
+      ]
+    },
+    {
+      "elective": "Workplace Communication",
+      "type": "Formal Proposal",
+      "question": "A proposal for a 'Brand Authenticity' audit for a fashion company that is losing the trust of Gen Z customers.",
+      "requirements": [
+        "Identify the 'mismatch' between the brand's 'sustainable' marketing and its 'fast-fashion' reality.",
+        "Propose a 'Radical Transparency' campaign (e.g., showing real factories, unfiltered photos).",
+        "Explain how 'admitting mistakes' can actually increase customer loyalty in the long run."
+      ]
+    },
+    {
+      "elective": "Songs and Poems",
+      "type": "Review",
+      "question": "A review of a song or poem that addresses the 'Mask' we wear online vs. our 'True Self'.",
+      "requirements": [
+        "Identify the central image of the 'Mask' or 'Mirror' in the work.",
+        "Discuss how the artist uses contrast (e.g., light vs. shadow, silence vs. noise) to show the 'inner' struggle.",
+        "Explain why this work is a 'timely critique' of our obsession with digital image."
+      ]
+    }
+  ]
+}

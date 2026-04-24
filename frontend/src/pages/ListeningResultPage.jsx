@@ -128,7 +128,18 @@ const ListeningResultPage = () => {
 
     return (
         <div className="min-h-screen bg-gray-50 font-sans">
-            <ExamHeader title="Listening Assessment Report" timeLeft={0} onExit={() => navigate('/', { state: { examCompleted: true, examId } })} />
+            <ExamHeader 
+                title="Listening Assessment Report" 
+                timeLeft={0} 
+                onExit={() => navigate('/dashboard', { 
+                    state: { 
+                        mockCompleted: true, 
+                        type: 'Listening', 
+                        level: getDSELevel(percentage), 
+                        score: `${percentage}%` 
+                    } 
+                })} 
+            />
 
             <div className="max-w-7xl mx-auto p-6">
                 {/* Score Summary */}

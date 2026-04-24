@@ -1,0 +1,443 @@
+import React, { useState, useEffect, useRef, useImperativeHandle, forwardRef } from 'react';
+import { Play, Loader2, Headphones, Volume2, Timer, Clock } from 'lucide-react';
+
+import { motion } from 'framer-motion';
+import { useAuth } from '../../context/AuthContext';
+
+
+
+const Paper3AudioEngine = forwardRef(({ script, phase, onPhaseChange, onTaskChange, onSectionChange, onTidyingStart, onTidyingEnd, onComplete, onRequireSelection, onCountdownTick, onStatusChange, initialIndex = 0, initialPause = null, onIndexChange }, ref) => {
+    const { user } = useAuth();
+
+    const [currentIndex, setCurrentIndex] = useState(initialIndex);
+    const [isPlaying, setIsPlaying] = useState(initialIndex > 0 || ['PART_A', 'PART_B_AUDIO', 'TRANSITION'].includes(phase));
+    const [isWaitingForSelection, setIsWaitingForSelection] = useState(phase === 'B1B2_GATE');
+    
+    // Developer Shortcut: Skip to end of Part A
+    useImperativeHandle(ref, () => ({
+        fastForwardToPartAEnd: () => {
+            const targetIndex = script.findIndex(item => item.text?.toLowerCase().includes("end of part a"));
+            if (targetIndex !== -1) {
+                // STOP current audio immediately
+                if (audioRef.current) {
+                    audioRef.current.pause();
+                    audioRef.current.src = "";
+                }
+                setPauseCountdown(null);
+                setIsWaitingForSelection(false);
+                setCurrentIndex(targetIndex);
+                setIsPlaying(true);
+            }
+        },
+        resumeAfterSelection: () => {
+            // STOP current audio immediately
+            if (audioRef.current) {
+                audioRef.current.pause();
+                audioRef.current.src = "";
+                audioRef.current = null;
+            }
+            setIsWaitingForSelection(false);
+            setIsPlaying(true);
+            let nextIndex = currentIndex + 1;
+            // Skip any immediately following pauses if they are just study/tidying pauses
+            while (nextIndex < script.length && script[nextIndex].text?.match(/\(\d+-(second|minute) pause\)/)) {
+                nextIndex++;
+            }
+            setCurrentIndex(nextIndex);
+            onIndexChange?.(nextIndex);
+        }
+    }));
+    const [isBuffering, setIsBuffering] = useState(false);
+    const [pauseCountdown, setPauseCountdown] = useState(['PART_A', 'PART_B_AUDIO', 'INDEPENDENT'].includes(phase) ? initialPause : null);
+    const [prepCountdown, setPrepCountdown] = useState(phase === 'PREPARATION' ? initialPause : null);
+    const audioRef = useRef(null);
+    const prefetchQueue = useRef(new Map()); // Map: index -> audioBase64
+    const hasPlayedPrep = useRef(false);
+    const lastScriptRef = useRef(null);
+    const isInitialResume = useRef(initialPause > 0);
+
+    // Cleanup on unmount
+    useEffect(() => {
+        return () => {
+            if (audioRef.current) {
+                audioRef.current.pause();
+                audioRef.current.src = "";
+                audioRef.current = null;
+            }
+        };
+    }, []);
+
+    // Initial Resume Logic (if starting from a pause)
+    useEffect(() => {
+        if (initialPause && initialPause > 0 && isPlaying) {
+            setPauseCountdown(initialPause);
+        }
+    }, [initialPause]);
+
+    // Reset on script change
+    useEffect(() => {
+        if (script && script.length > 0 && script !== lastScriptRef.current) {
+            setCurrentIndex(initialIndex);
+            prefetchQueue.current.clear();
+            lastScriptRef.current = script;
+        }
+    }, [script, initialIndex]);
+
+    // Preparation Countdown Management
+    useEffect(() => {
+        let timer;
+        if (!isPlaying && phase === 'PREPARATION' && prepCountdown === null && !hasPlayedPrep.current) {
+            hasPlayedPrep.current = true;
+            // Only set 5 mins if we don't have a restored timer
+            const startSecs = initialPause && initialPause > 0 ? initialPause : 300;
+            setPrepCountdown(startSecs);
+            playSpeech("You now have 5 minutes to study the Question-Answer Book. You will hear a signal to start Part A.", true);
+        }
+
+        if (!isPlaying && phase === 'PREPARATION' && prepCountdown > 0) {
+            timer = setInterval(() => {
+                setPrepCountdown(prev => {
+                    const next = prev > 0 ? prev - 1 : 0;
+                    onCountdownTick?.(next);
+                    if (next === 0) handleStart();
+                    return next;
+                });
+            }, 1000);
+        }
+        return () => clearInterval(timer);
+    }, [isPlaying, phase, prepCountdown === null, onCountdownTick]);
+
+    // PRE-FETCHING LOGIC
+    useEffect(() => {
+        if (!isPlaying || currentIndex >= script.length) return;
+
+        const prefetchNext = async (index) => {
+            if (index >= script.length || prefetchQueue.current.has(index)) return;
+            const item = script[index];
+            if (!item.text || item.text.match(/\(\d+-second pause\)/)) return; // Don't prefetch pauses
+
+            try {
+                const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+                const res = await fetch(`${API_URL}/api/lab/tts`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ text: item.text.replace(/\(\d+-second pause\)/g, ''), accent: 'UK', gender: 'FEMALE' })
+                });
+                const data = await res.json();
+                if (data.audio) prefetchQueue.current.set(index, data.audio);
+            } catch (e) { console.error("Prefetch failed for index", index); }
+        };
+
+        // Prefetch next 3 items
+        for (let i = 1; i <= 3; i++) prefetchNext(currentIndex + i);
+    }, [currentIndex, isPlaying, script]);
+
+    // MAIN EXECUTION LOOP
+    useEffect(() => {
+        if (!isPlaying || isWaitingForSelection) return;
+        
+        if (currentIndex >= script.length) {
+            onComplete?.();
+            return;
+        }
+
+        const processItem = async () => {
+            const myIndex = currentIndex;
+            const item = script[currentIndex];
+            
+            // Clean text (remove pause marker from spoken text)
+            const spokenText = item.text.replace(/\(\d+-(second|minute) pause\)/g, '').trim();
+            const pauseMatch = item.text.match(/\((\d+)-second pause/);
+            const minutePauseMatch = item.text.match(/\((\d+)-minute pause/);
+            const pauseSeconds = pauseMatch ? parseInt(pauseMatch[1]) : (minutePauseMatch ? parseInt(minutePauseMatch[1]) * 60 : 0);
+            const isTidying = item.text.toLowerCase().includes('tidy up');
+
+            // Detect Task Changes
+            let currentTask = 1;
+            if (item.text.toLowerCase().includes('task')) {
+                const taskMatch = item.text.match(/task\s+(\d+)/i);
+                if (taskMatch) {
+                    currentTask = parseInt(taskMatch[1]);
+                    onTaskChange?.(currentTask);
+                }
+            }
+
+            // Detect Section Changes (Part A -> Part B transition)
+            if (phase === 'PART_B_AUDIO' && (item.text.toLowerCase().includes('integrated skills') || item.text.toLowerCase().includes('part b'))) {
+                onSectionChange?.('B');
+            }
+
+            // Phase 1: Play Speech (if text exists)
+            if (spokenText && spokenText.length > 1) {
+                await playSpeech(spokenText);
+                isInitialResume.current = false;
+                // IF INDEX CHANGED DURING SPEECH, ABORT THIS LOOP
+                if (currentIndex !== myIndex) return;
+            }
+
+            // Phase 2: Handle Pause (if exists)
+            if (pauseSeconds > 0) {
+                if (isTidying) {
+                    // Find the last mentioned task to tidy
+                    const taskMatch = script.slice(0, currentIndex + 1)
+                        .reverse()
+                        .find(s => s.text.toLowerCase().includes('task'))
+                        ?.text.match(/task\s+(\d+)/i);
+                    const tidyingTaskNum = taskMatch ? parseInt(taskMatch[1]) : 1;
+                    onTidyingStart?.(pauseSeconds, tidyingTaskNum);
+                }
+
+                // If we are resuming, use the initialPause for the first pause we encounter
+                const actualPause = isInitialResume.current ? initialPause : pauseSeconds;
+                isInitialResume.current = false;
+                setPauseCountdown(actualPause);
+                
+                const timer = setInterval(() => {
+                    // IF INDEX CHANGED DURING PAUSE, ABORT TIMER
+                    if (currentIndex !== myIndex) {
+                        clearInterval(timer);
+                        return;
+                    }
+
+                    // AUTO-SKIP "Tidy Up" pauses if they are at the transition point
+                    const isTidyUpTransition = item.text.toLowerCase().includes('tidy up') && phase === 'PART_A';
+                    if (isTidyUpTransition) {
+                        clearInterval(timer);
+                        const nextIdx = currentIndex + 1;
+                        setCurrentIndex(nextIdx);
+                        onIndexChange?.(nextIdx);
+                        return;
+                    }
+
+                    setPauseCountdown(prev => {
+                        const next = prev > 0 ? prev - 1 : 0;
+                        onCountdownTick?.(next);
+                        if (next === 0) {
+                            clearInterval(timer);
+                            if (isTidying) onTidyingEnd?.();
+                            
+                            // CHECK IF THIS WAS THE PART B PREP PAUSE
+                            const isPartBPrep = item.text.toLowerCase().includes('study the part b');
+                            if (isPartBPrep) {
+                                setIsWaitingForSelection(true);
+                                onRequireSelection?.();
+                            } else {
+                                const nextIdx = currentIndex + 1;
+                                setCurrentIndex(nextIdx);
+                                onIndexChange?.(nextIdx);
+                            }
+                            return null;
+                        }
+                        return next;
+                    });
+                }, 1000);
+            } else {
+                // No pause, move to next immediately if index hasn't changed
+                if (currentIndex === myIndex) {
+                    const nextIdx = currentIndex + 1;
+                    setCurrentIndex(nextIdx);
+                    onIndexChange?.(nextIdx);
+                }
+            }
+        };
+
+        processItem();
+    }, [currentIndex, isPlaying]);
+
+    useEffect(() => {
+        onStatusChange?.({ isBuffering, isPlaying, pauseCountdown });
+    }, [isBuffering, isPlaying, pauseCountdown, onStatusChange]);
+
+    const currentRequestIdRef = useRef(0);
+
+    const playSpeech = (text, isInternal = false) => {
+        return new Promise(async (resolve) => {
+            const requestId = ++currentRequestIdRef.current;
+            
+            // Cancel any existing audio immediately
+            if (audioRef.current) {
+                audioRef.current.pause();
+                audioRef.current.src = "";
+                audioRef.current = null;
+            }
+
+            const myIndex = currentIndex;
+
+            // Check cache
+            if (prefetchQueue.current.has(currentIndex) && !isInternal) {
+                const cachedAudio = prefetchQueue.current.get(currentIndex);
+                if (requestId !== currentRequestIdRef.current) return resolve();
+
+                const audio = new Audio(`data:audio/mp3;base64,${cachedAudio}`);
+                audioRef.current = audio;
+                audio.play().catch(e => console.error("Playback failed", e));
+                audio.onended = () => {
+                    if (audioRef.current === audio) audioRef.current = null;
+                    resolve();
+                };
+                return;
+            }
+
+            setIsBuffering(true);
+            try {
+                const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+                const res = await fetch(`${API_URL}/api/lab/tts`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ text, accent: 'UK', gender: 'FEMALE' })
+                });
+                
+                if (!res.ok) throw new Error('TTS failed');
+                
+                const data = await res.json();
+                
+                // ABORT if a newer request has started or index changed
+                if (requestId !== currentRequestIdRef.current || (currentIndex !== myIndex && !isInternal)) {
+                    setIsBuffering(false);
+                    resolve();
+                    return;
+                }
+
+                setIsBuffering(false);
+                if (data.audio) {
+                    const audio = new Audio(`data:audio/mp3;base64,${data.audio}`);
+                    audioRef.current = audio;
+                    audio.play().catch(e => console.error("Playback failed", e));
+                    audio.onended = () => {
+                        if (audioRef.current === audio) audioRef.current = null;
+                        resolve();
+                    };
+                } else {
+                    throw new Error("No audio data");
+                }
+            } catch (err) {
+                console.error("Audio Engine Error:", err);
+                setIsBuffering(false);
+                setTimeout(resolve, 1500); // Fail gracefully
+            }
+        });
+    };
+
+    const handleStart = () => {
+        setIsPlaying(true);
+        setPrepCountdown(null);
+        onPhaseChange?.('PART_A');
+        onSectionChange?.('A');
+        onIndexChange?.(0);
+    };
+
+
+    return (
+        <div className="bg-slate-900 rounded-[2.5rem] p-10 text-white shadow-2xl border-b-[8px] border-indigo-500 relative overflow-hidden group">
+            {/* Background Animation for Live State */}
+            {isPlaying && !pauseCountdown && (
+                <div className="absolute inset-0 bg-indigo-600/5 animate-pulse" />
+            )}
+
+            <div className="relative z-10">
+                <div className="flex items-center justify-between mb-8">
+                    <div className="flex items-center gap-4">
+                        <div className={`p-4 rounded-2xl ${isPlaying ? 'bg-indigo-600 text-white' : 'bg-slate-800 text-slate-500'}`}>
+                            <Headphones size={24} />
+                        </div>
+                        <div>
+                            <p className="text-[10px] font-black text-slate-400 uppercase tracking-[0.3em] mb-1">Status</p>
+                            <h4 className="text-xl font-black uppercase tracking-tight">
+                                {isBuffering ? 'Receiving Signal...' : 
+                                 pauseCountdown ? 'Station Silence' : 
+                                 isPlaying ? 'Live Broadcast' : 'System Ready'}
+                            </h4>
+                        </div>
+                    </div>
+                    {isPlaying && (
+                        <div className={`flex items-center gap-2 px-4 py-2 rounded-full border transition-colors duration-500 ${pauseCountdown ? 'bg-rose-500/20 text-rose-500 border-rose-500/30' : 'bg-emerald-500/20 text-emerald-500 border-emerald-500/30'}`}>
+                            <div className={`w-2 h-2 rounded-full animate-pulse ${pauseCountdown ? 'bg-rose-500' : 'bg-emerald-500'}`} />
+                            <span className="text-[10px] font-black uppercase tracking-widest">{pauseCountdown ? 'Pause' : 'On Air'}</span>
+                        </div>
+                    )}
+                </div>
+
+                {prepCountdown !== null && !isPlaying ? (
+                    <div className="flex flex-col items-center justify-center py-6 bg-slate-800/50 rounded-3xl border border-indigo-500/30 mb-6">
+                        <div className="flex items-center gap-3 mb-2">
+                            <Clock size={20} className="text-indigo-400" />
+                            <span className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">Preparation Time</span>
+                        </div>
+                        <div className="text-6xl font-black tabular-nums text-white tracking-tighter">
+                            {Math.floor(prepCountdown / 60)}:{(prepCountdown % 60).toString().padStart(2, '0')}
+                        </div>
+
+                        {/* Developer Fast-Forward (Hidden for general users) */}
+                        {user?.email === 'fungtam@gmail.com' && (
+                            <button 
+                                onClick={() => setPrepCountdown(3)}
+                                className="mt-4 px-4 py-2 bg-indigo-600/20 hover:bg-indigo-600/40 text-indigo-400 text-[10px] font-black uppercase tracking-widest rounded-xl transition-all border border-indigo-500/20"
+                            >
+                                Fast Forward (3s)
+                            </button>
+                        )}
+                    </div>
+                ) : pauseCountdown ? (
+                    <div className="flex flex-col items-center justify-center py-6 bg-slate-800/50 rounded-3xl border border-slate-700">
+                        <div className="flex items-center gap-3 mb-2">
+                            <Timer size={20} className="text-indigo-400" />
+                            <span className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">Silent Reading / Tidying</span>
+                        </div>
+                        <div className="text-6xl font-black tabular-nums text-indigo-400 tracking-tighter">
+                            {Math.floor(pauseCountdown / 60)}:{(pauseCountdown % 60).toString().padStart(2, '0')}
+                        </div>
+
+                        {/* Developer Fast-Forward */}
+                        {user?.email === 'fungtam@gmail.com' && (
+                            <button 
+                                onClick={() => setPauseCountdown(3)}
+                                className="mt-4 px-4 py-2 bg-indigo-600/20 hover:bg-indigo-600/40 text-indigo-400 text-[10px] font-black uppercase tracking-widest rounded-xl transition-all border border-indigo-500/20"
+                            >
+                                Fast Forward (3s)
+                            </button>
+                        )}
+                    </div>
+                ) : !isPlaying ? (
+
+                    <button 
+                        onClick={handleStart}
+                        className="w-full py-6 bg-indigo-600 hover:bg-indigo-500 text-white rounded-[2rem] font-black uppercase tracking-[0.2em] shadow-xl shadow-indigo-900/40 transition-all active:scale-95 flex items-center justify-center gap-4"
+                    >
+                        <Play size={24} fill="currentColor" /> Start Broadcast
+                    </button>
+                ) : (
+                    <div className="flex flex-col gap-6">
+                        <div className="flex items-center gap-6 py-8 px-10 bg-white/5 rounded-[2rem] border border-white/5">
+                            <Volume2 size={32} className="text-indigo-400 shrink-0" />
+                            <div className="flex-1">
+                                <p className="text-[9px] font-black text-slate-500 uppercase tracking-widest mb-2">Now Playing</p>
+                                <p className="text-sm font-medium text-slate-300 italic leading-relaxed line-clamp-2">
+                                    "{script[currentIndex]?.text}"
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div className="flex items-center justify-between px-4">
+                            <span className="text-[10px] font-black text-slate-600 uppercase tracking-widest">Progress</span>
+                            <span className="text-[10px] font-black text-slate-600 uppercase tracking-widest">{currentIndex + 1} / {script.length}</span>
+                        </div>
+                        <div className="h-2 bg-slate-800 rounded-full overflow-hidden p-0.5">
+                            <motion.div 
+                                className="h-full bg-indigo-500 rounded-full" 
+                                initial={{ width: 0 }}
+                                animate={{ width: `${((currentIndex + 1) / script.length) * 100}%` }}
+                            />
+                        </div>
+                    </div>
+                )}
+            </div>
+
+            <div className="mt-8 pt-8 border-t border-white/5 flex items-center justify-between text-[9px] font-black text-slate-600 uppercase tracking-widest">
+                <span>HKEAA 2026 Simulation</span>
+                <span>One-Play Protocol Enabled</span>
+            </div>
+        </div>
+    );
+});
+
+export default Paper3AudioEngine;

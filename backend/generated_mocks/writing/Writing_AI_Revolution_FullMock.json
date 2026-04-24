@@ -1,0 +1,106 @@
+{
+  "meta": {
+    "title": "The AI Revolution",
+    "topic": "The AI Revolution",
+    "generated_at": "2026-04-23T13:54:00.000Z",
+    "blueprint_version": "2026_V1"
+  },
+  "Part_A": {
+    "part": "Part A",
+    "genre": "Formal Letter",
+    "title": "Ethical Use of Generative AI in Schools",
+    "instructions": "Write a formal letter in about 200 words. Pay attention to the appropriate format and tone.",
+    "situation": "Your school is drafting a new policy regarding the use of Generative AI (e.g., ChatGPT) for homework and assignments. The Principal has invited students to share their views on how to balance innovation with academic integrity.",
+    "requirements": [
+      "State your stance on whether students should be allowed to use AI for schoolwork.",
+      "Suggest two specific guidelines for the 'ethical use' of AI in the classroom.",
+      "Propose a workshop for teachers to help them understand how students are using these tools."
+    ],
+    "format_guides": [
+      "Use formal letter conventions.",
+      "Address it to 'The Principal, [Your School Name]'."
+    ]
+  },
+  "Part_B": [
+    {
+      "elective": "Sports Communication",
+      "type": "Feature Article",
+      "question": "The use of AI-driven 'Predictive Analytics' in professional football (soccer) scouting.",
+      "requirements": [
+        "Explain how AI can help scouts identify hidden talent that humans might miss.",
+        "Discuss the concern that 'data-driven football' removes the intuition and magic from the sport.",
+        "Give your opinion on whether AI will eventually replace human scouts entirely."
+      ]
+    },
+    {
+      "elective": "Drama",
+      "type": "Dramatic Script",
+      "question": "A student discovers that their 'perfect' best friend, who they met online, is actually an AI companion bot.",
+      "requirements": [
+        "Establish a deep emotional connection between the two characters in the opening lines.",
+        "Include a 'revealing' moment where the AI's true nature is exposed through a glitch or confession.",
+        "Provide stage directions that emphasize the student's sense of betrayal and confusion."
+      ]
+    },
+    {
+      "elective": "Short Stories",
+      "type": "Short Story",
+      "question": "A human artist in a future world where AI-generated art has become the only form of 'acceptable' creativity.",
+      "requirements": [
+        "Describe the protagonist's secret workspace where they create 'forbidden' handmade art.",
+        "Include an encounter with a 'Quality Control' officer who cannot understand the beauty of human imperfection.",
+        "End the story with a symbolic act that represents the survival of human spirit."
+      ]
+    },
+    {
+      "elective": "Popular Culture",
+      "type": "Blog Post",
+      "question": "The rise of 'AI Influencers' on Instagram and TikTok.",
+      "requirements": [
+        "Explain the appeal of AI influencers to brands (e.g., control, 24/7 availability).",
+        "Discuss the impact on real-life influencers and their livelihoods.",
+        "Warn followers about the potential for unrealistic beauty standards set by 'perfect' AI models."
+      ]
+    },
+    {
+      "elective": "Social Issues",
+      "type": "Article",
+      "question": "The 'Digital Divide': How AI could worsen inequality between rich and poor students.",
+      "requirements": [
+        "Identify one way that wealthy students might gain an unfair advantage using premium AI tools.",
+        "Discuss the long-term impact on social mobility if some students are 'AI-literate' and others are not.",
+        "Suggest a government policy to ensure equitable access to AI education."
+      ]
+    },
+    {
+      "elective": "Debating",
+      "type": "Formal Debate Speech",
+      "question": "'That AI-generated content should be clearly labeled by law.'",
+      "requirements": [
+        "Define the term 'AI-generated content' for the purpose of the debate.",
+        "Provide two arguments for how labeling protects the public from misinformation.",
+        "Address the opposition's claim that labeling stifles creative freedom."
+      ]
+    },
+    {
+      "elective": "Workplace Communication",
+      "type": "Formal Proposal",
+      "question": "A proposal for a company to replace its first-line customer service staff with AI-powered chatbots.",
+      "requirements": [
+        "Outline the cost-saving benefits and efficiency gains for the company.",
+        "Detail a 'transition plan' for existing employees (e.g., retraining, redeployment).",
+        "Explain how the company will maintain a 'human touch' for complex customer issues."
+      ]
+    },
+    {
+      "elective": "Songs and Poems",
+      "type": "Review",
+      "question": "A review of a song or poem that explores the theme of 'Man vs. Machine'.",
+      "requirements": [
+        "Briefly summarize the plot or message of the chosen work.",
+        "Analyze how the artist uses sound (rhythm/rhyme) or imagery to convey the coldness of technology.",
+        "Discuss whether the work offers a hopeful or pessimistic view of our digital future."
+      ]
+    }
+  ]
+}

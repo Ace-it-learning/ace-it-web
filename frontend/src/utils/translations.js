@@ -279,12 +279,16 @@ export const translations = {
             title_math: "Mathematics Practice Library",
             title_chinese: "Chinese Practice Library",
             targeted_growth: "Targeted Growth",
+            grammar_lab: "Grammar Lab",
             quests_lab: "Quests Lab",
+            accuracy_track: "Accuracy Track",
+            elite_track: "Elite Track",
             complete_quest_xp: "Complete Quest to earn XP Bonus!"
         },
         chat: {
             start_mock: "Start Mock Exam",
             what_is_ace_it: "What is Ace It?",
+            check_grammar: "Check Grammar",
             review_mistake: "Review my last mistake",
             clear_history: "Clear conversation history",
             practice_vocab: "Practice Vocabulary",
@@ -423,22 +427,23 @@ export const translations = {
             total_xp: "Total XP",
             current_tier: "Current Tier",
             active_days: "Active Days",
-            history: "History",
-            no_activity: "No activity yet. Complete your first practice lab to see your first milestone!",
-            events: {
-                onboarding: "Joined Ace It!",
-                onboarding_fallback: "Joined Ace It!",
-                diagnostic: "Diagnostic Test"
-            },
+            history: "Achievement History",
+            newest_first: "Newest first",
+            no_activity: "No activity recorded yet. Start your first quest!",
             just_now: "Just now",
             hours_ago: "{{count}} hour{{s}} ago",
             yesterday: "Yesterday",
             days_ago: "{{count}} days ago",
-            view_achievements: "View Achievements",
             redeem: "Redeem",
+            topic: "Topic",
+            review_performance: "Review Performance",
+            view_achievements: "View Achievements",
             soon: "Soon",
-            newest_first: "(Newest First)",
-            topic: "Topic"
+            events: {
+                onboarding: "Joined Ace It!",
+                onboarding_fallback: "Joined Ace It!",
+                diagnostic: "Diagnostic Test"
+            }
         },
         redemption: {
             title: "Redemption Hub",
@@ -456,8 +461,9 @@ export const translations = {
             digital_certs: "Digital Certificates",
             cert_subtitle: "Achieve Level 4+ in Mock Exams to unlock",
             english: "English",
-            maths: "Maths",
+            maths: "Mathematics",
             chinese: "Chinese",
+            ace: "Ace Sir",
             cert_reading: "Reading",
             cert_writing: "Writing",
             cert_listening: "Listening",
@@ -478,11 +484,7 @@ export const translations = {
             awesome: "Awesome!",
             check_collection: "Check your collection to equip it."
         },
-        redemption: {
-            english: "English",
-            maths: "Mathematics",
-            ace: "Ace Sir"
-        },
+
         collection: {
             title: "My Collection",
             subtitle: "View and manage your unlocked avatars.",
@@ -552,6 +554,7 @@ export const translations = {
             writing: "Writing",
             listening: "Listening",
             speaking: "Speaking",
+            to_level: "to level",
             top_growth: "Top Growth Skill",
             peak_performance: "Peak Performance",
             improvement_plan: "Priority Improvement Plan",
@@ -638,26 +641,8 @@ export const translations = {
             pro_tip: "{{agentName}}'s Pro-Tip",
             close: "Got it!"
         },
-        timeline: {
-            title: "Achievements & Quests",
-            subtitle: "Track your progress and celebrate your DSE milestones.",
-            history: "Achievement History",
-            newest_first: "Newest first",
-            no_activity: "No activity recorded yet. Start your first quest!",
-            just_now: "Just now",
-            hours_ago: "{{count}} hour{{s}} ago",
-            yesterday: "Yesterday",
-            days_ago: "{{count}} days ago",
-            redeem: "Redeem",
-            total_xp: "Total XP",
-            current_tier: "Current Tier",
-            active_days: "Active Days",
-            topic: "Topic",
-            review_performance: "Review Performance"
-        },
-        mastery: {
-            to_level: "to level"
-        },
+
+
         prompts: {
             title: "Prompt Tips",
             subtitle: "Use these proven prompt structures to get the highest quality feedback from your AI mentors. Click any prompt to copy and start chatting.",
@@ -761,7 +746,15 @@ export const translations = {
             quest: "任務",
             view_daily_quest: "查看每日任務",
             complete_diagnostic_first: "請先完成模擬考試",
-            mock_exam: "模擬試場"
+            mock_exam: "模擬試場",
+            back_to_roadmap: "返回發展導覽"
+        },
+        exam: {
+            reading: "閱讀",
+            writing: "寫作",
+            listening: "聆聽",
+            speaking: "說話",
+            integrated_skills: "綜合技能"
         },
         footer: {
             copyright: "© 2026 Ace It! 教育。版權所有。",
@@ -963,7 +956,10 @@ export const translations = {
             title_math: "數學練習寶庫",
             title_chinese: "中文練習寶庫",
             targeted_growth: "個人化成長",
+            grammar_lab: "語法實驗室",
             quests_lab: "任務研發室",
+            accuracy_track: "基礎準確度訓練",
+            elite_track: "精英升級訓練",
             complete_quest_xp: "完成任務以獲取 XP 獎勵！"
         },
         chat: {
@@ -1108,22 +1104,23 @@ export const translations = {
             total_xp: "總 XP",
             current_tier: "當前等級",
             active_days: "活躍天數",
-            history: "歷史紀錄",
-            no_activity: "暫時未有活動。完成你的第一個練習，即刻開啟你嘅第一章！",
-            events: {
-                onboarding: "加入 Ace It! (建立檔案)",
-                onboarding_fallback: "加入 Ace It!",
-                diagnostic: "能力診斷 (Diagnostic)"
-            },
+            history: "成就紀錄",
+            newest_first: "由新至舊",
+            no_activity: "暫無活動紀錄。開始你的第一個任務吧！",
             just_now: "剛才",
             hours_ago: "{{count}} 小時前",
             yesterday: "昨天",
             days_ago: "{{count}} 天前",
-            view_achievements: "查看成就",
             redeem: "兌換獎勵",
+            topic: "單元",
+            review_performance: "回顧表現",
+            view_achievements: "查看成就",
             soon: "敬請期待",
-            newest_first: "(由新到舊)",
-            topic: "單元"
+            events: {
+                onboarding: "加入 Ace It! (建立檔案)",
+                onboarding_fallback: "加入 Ace It!",
+                diagnostic: "能力診斷 (Diagnostic)"
+            }
         },
         redemption: {
             title: "兌換中心",
@@ -1143,6 +1140,7 @@ export const translations = {
             english: "英文",
             maths: "數學",
             chinese: "中文",
+            ace: "Ace Sir",
             cert_reading: "閱讀",
             cert_writing: "寫作",
             cert_listening: "聆聽",
@@ -1153,7 +1151,6 @@ export const translations = {
             cert_chi_writing: "寫作",
             cert_locked: "需要 Level 4+",
             cert_hint: "完成模擬考試並獲得 Level 4 或以上即可獲取證書。",
-            back_to_roadmap: "返回發展導覽",
             standard_box: "標準盲盒",
             standard_box_desc: "包含普通及稀有學生頭像/邊框",
             tutor_box: "名師星鑽盒",
@@ -1164,11 +1161,7 @@ export const translations = {
             awesome: "太棒了！",
             check_collection: "前往「我的收藏」進行裝備。"
         },
-        redemption: {
-            english: "英文",
-            maths: "數學",
-            ace: "Ace Sir"
-        },
+
         collection: {
             title: "我的收藏",
             subtitle: "管理你已解鎖的頭像和導師。",
@@ -1238,6 +1231,7 @@ export const translations = {
             writing: "寫作",
             listening: "聆聽",
             speaking: "說話",
+            to_level: "升級至等級",
             top_growth: "進步最快技能",
             peak_performance: "巔峰表現",
             improvement_plan: "優先改進計劃",
@@ -1310,7 +1304,6 @@ export const translations = {
                 0: "未有資料"
             },
             estimated_grade: "預計文憑試等級",
-            level_prefix: "等級：",
             unlock_warning: "完成卷一及卷二模擬試後即可解鎖預計等級。",
             mock_exam_tab: "模擬試評分",
             practice_analysis_tab: "日常練習分析",
@@ -1325,26 +1318,8 @@ export const translations = {
             pro_tip: "{{tutorName}} 應試心得",
             close: "明白！"
         },
-        timeline: {
-            title: "成就與任務",
-            subtitle: "追蹤你的進度，慶祝文憑試里程碑。",
-            history: "成就紀錄",
-            newest_first: "由新至舊",
-            no_activity: "暫無活動紀錄。開始你的第一個任務吧！",
-            just_now: "剛剛",
-            hours_ago: "{{count}} 小時前",
-            yesterday: "昨天",
-            days_ago: "{{count}} 天前",
-            redeem: "兌換",
-            total_xp: "總經驗值",
-            current_tier: "當前等級",
-            active_days: "活躍天數",
-            topic: "課題",
-            review_performance: "回顧表現"
-        },
-        mastery: {
-            to_level: "升級至等級"
-        },
+
+
         prompts: {
             title: "提問技巧",
             subtitle: "使用這些經過驗證的提示語結構，從 AI 導師獲取最高質量的反饋。點擊任何提示語即可複製並開始對話。",

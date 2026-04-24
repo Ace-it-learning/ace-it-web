@@ -154,13 +154,13 @@ const ListeningResultsStep = ({ results, audioSrc, mode, level, marginalXP, prev
                                     <span className="text-xl font-black">+{marginalXP} XP</span>
                                     {marginalXP === 0 ? (
                                         <div className="flex flex-col">
-                                            <span className="text-[8px] font-bold uppercase tracking-tighter opacity-70">Best: {prevBestScore}% matched</span>
-                                            <span className="text-[7px] font-black text-amber-500/80 uppercase mt-0.5">Surpass {prevBestScore}% for next XP reward</span>
+                                            <span className="text-[9px] font-bold uppercase tracking-tighter opacity-70">Best: {prevBestScore}% matched</span>
+                                            <span className="text-[9px] font-black text-amber-500/80 uppercase mt-0.5">Surpass {prevBestScore}% for next XP reward</span>
                                         </div>
                                     ) : (
                                         <div className="flex flex-col">
-                                            <span className="text-[8px] font-bold uppercase tracking-tighter opacity-70">New High Score!</span>
-                                            <span className="text-[7px] font-black text-green-400 uppercase mt-0.5">Record Smashed</span>
+                                            <span className="text-[9px] font-bold uppercase tracking-tighter opacity-70">New High Score!</span>
+                                            <span className="text-[9px] font-black text-green-400 uppercase mt-0.5">Record Smashed</span>
                                         </div>
                                     )}
                                 </div>
@@ -225,13 +225,13 @@ const ListeningResultsStep = ({ results, audioSrc, mode, level, marginalXP, prev
                                         
                                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                             <div className="bg-slate-50 p-4 rounded-2xl border border-slate-100">
-                                                <span className="text-[8px] font-black text-slate-400 uppercase block mb-1">Your Entry</span>
+                                                <span className="text-[9px] font-black text-slate-400 uppercase block mb-1">Your Entry</span>
                                                 <p className={`font-bold text-sm ${item.isCorrect ? 'text-slate-700' : 'text-rose-600 line-through opacity-60'}`}>
                                                     {item.studentAnswer || "(Blank)"}
                                                 </p>
                                             </div>
                                             <div className="bg-indigo-50 p-4 rounded-2xl border border-indigo-100">
-                                                <span className="text-[8px] font-black text-indigo-400 uppercase block mb-1">Correct Answer</span>
+                                                <span className="text-[9px] font-black text-indigo-400 uppercase block mb-1">Correct Answer</span>
                                                 <p className="text-indigo-900 font-black text-sm">{item.correctAnswer}</p>
                                             </div>
                                         </div>
@@ -288,7 +288,7 @@ const ListeningResultsStep = ({ results, audioSrc, mode, level, marginalXP, prev
                                         <div className="flex-1">
                                             <p className={`text-xs font-black mb-1 ${point.met ? 'text-green-900' : 'text-slate-500'}`}>{point.point}</p>
                                             <div className="flex items-center gap-3">
-                                                <span className="text-[8px] font-bold italic text-slate-400 uppercase">
+                                                <span className="text-[9px] font-bold italic text-slate-400 uppercase">
                                                     Source: {point.documentSource || 'Official Data File'}
                                                 </span>
                                                 {point.documentSource?.toLowerCase().includes('audio') && (
@@ -298,7 +298,7 @@ const ListeningResultsStep = ({ results, audioSrc, mode, level, marginalXP, prev
                                                             playReference(point.rationale || point.point, `pt-${idx}`);
                                                         }}
                                                         disabled={loadingSegment !== null && loadingSegment !== `pt-${idx}`}
-                                                        className={`flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[8px] font-black uppercase transition-all 
+                                                        className={`flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[9px] font-black uppercase transition-all 
                                                             ${playingSegment === `pt-${idx}` ? 'bg-amber-400 text-amber-900 scale-105' : 
                                                               loadingSegment === `pt-${idx}` ? 'bg-indigo-100 text-indigo-600 animate-pulse' : 
                                                               'bg-slate-200 text-slate-500 hover:bg-indigo-600 hover:text-white'}`}

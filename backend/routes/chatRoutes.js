@@ -309,11 +309,10 @@ router.get('/history/:agentId', async (req, res) => {
         console.log(`[chatRoutes] Fetching history for UID: ${uid}, Agent: ${agentId}`);
         const history = await UserProfileService.getChatHistory(uid, agentId);
 
-        // Final filter to ensure no empty content or system internal tags leak to UI
+        // Final filter to ensure no internal internal tags leak to UI
         const filteredHistory = history.filter(m =>
             m.content &&
-            !(m.content && m.content.includes('[SYSTEM:')) &&
-            !(m.content && m.content.includes('[trigger_greeting]'))
+            !m.content.includes('[trigger_greeting]')
         );
 
         console.log(`[chatRoutes] Returning ${filteredHistory.length} messages for ${uid} / ${agentId}`);

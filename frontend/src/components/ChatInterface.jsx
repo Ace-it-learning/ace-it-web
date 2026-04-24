@@ -72,15 +72,9 @@ const formatMessageContent = (content) => {
     const { text: cleanForDisplay } = parseSuggestions(content);
     const cleanContent = cleanForDisplay.replace(/\n{3,}/g, '\n\n');
 
-    // Unified regex to split by ALL math delimiter types + bold + headers
+    // Unified regex to split by ALL math delimiter types + bold + headers + system tags
     // Order matters: longest/most-specific patterns first
-    // 1. $$...$$ (block math)
-    // 2. \[...\] (block math, escaped)
-    // 3. \(...\) (inline math, escaped)
-    // 4. $...$ (inline math, non-greedy, must not match $$)
-    // 5. **...** (bold)
-    // 6. ### (header lines)
-    const UNIFIED_REGEX = /(\$\$[\s\S]*?\$\$|\\?\\\[[\s\S]*?\\?\\\]|\\?\\\([\s\S]*?\\?\\\)|(?<!\$)\$(?!\$)(?:[^$\\]|\\.)*?\$(?!\$)|\*\*(?:.*?)\*\*|^###\s+(?:.+)$)/gm;
+    const UNIFIED_REGEX = /(\$\$[\s\S]*?\$\$|\\?\\\[[\s\S]*?\\?\\\]|\\?\\\([\s\S]*?\\?\\\)|(?<!\$)\$(?!\$)(?:[^$\\]|\\.)*?\$(?!\$)|\*\*(?:.*?)\*\*|^###\s+(?:.+)$|\[SYSTEM:[^\]]+\])/gm;
 
     const parts = cleanContent.split(UNIFIED_REGEX);
 
@@ -88,6 +82,11 @@ const formatMessageContent = (content) => {
         if (!part && part !== '') return null;
         if (part === undefined) return null;
         const key = `fmt-${idx}`;
+
+        // System Tags: [SYSTEM: ...] - Hide from display
+        if (part.startsWith('[SYSTEM:') && part.endsWith(']')) {
+            return null;
+        }
 
         // Block Math: $$...$$
         if (part.startsWith('$$') && part.endsWith('$$') && part.length > 4) {
@@ -460,11 +459,19 @@ const ChatInterface = ({ onOpenQuest }) => {
                         const searchParams = new URLSearchParams(location.search);
                         const questCompleted = searchParams.get('quest_completed');
                         const questTopic = searchParams.get('topic');
+                        const questScore = searchParams.get('score');
+                        const questXp = searchParams.get('xp');
 
                         if (questCompleted === 'true' || location.state?.questCompleted) {
                             isProcessedRef.current = true;
                             const topicToReport = questTopic || location.state?.topic || 'Activity';
-                            handleSendMessage(`[SYSTEM: QUEST_COMPLETED: ${topicToReport}]`, true);
+                            
+                            // Use detailed LAB_COMPLETED if score is available, otherwise generic QUEST_COMPLETED
+                            const systemMsg = (questScore !== null)
+                                ? `[SYSTEM: LAB_COMPLETED: ${topicToReport} | XP: ${questXp || 0} | Mastery: ${questScore}%]`
+                                : `[SYSTEM: QUEST_COMPLETED: ${topicToReport}]`;
+                                
+                            handleSendMessage(systemMsg, true);
                             navigate('/dashboard', { replace: true, state: {} });
                             window.history.replaceState({}, document.title);
                         } else if (location.state?.diagnosticCompleted) {
@@ -667,14 +674,14 @@ const ChatInterface = ({ onOpenQuest }) => {
         const userMsg = {
             role: 'user',
             content: finalMessage,
-            image: selectedImage ? { preview: selectedImage.preview } : null
+            image: selectedImage ? { preview: selectedImage.preview } : null,
+            isHidden: isHidden
         };
 
-        // Only add to UI if NOT hidden
-        if (!isHidden) {
-            setMessages(prev => [...prev, userMsg]);
-            // Attempt to save user message to backend immediately
-            // We don't await this so it doesn't block the AI response
+        setMessages(prev => [...prev, userMsg]);
+        
+        // Save user message immediately for persistence in case of crash/refresh
+        if (user && user.uid !== 'guest') {
             saveMessageToBackend(userMsg);
         }
 
@@ -852,9 +859,8 @@ const ChatInterface = ({ onOpenQuest }) => {
                 setMessages(prev => [...prev, aiMsg]);
             }
 
-            // NEW: Also save AI's message to backend for immediate consistency
-            // Use a small delay for AI message to ensure it appears after the user message in Firestore (timestamp resolution)
-            setTimeout(() => saveMessageToBackend(aiMsg), 200);
+            // AI Message is already auto-saved by the backend's /api/chat route.
+            // No need to manually save it here to avoid double-writes.
 
             // Check for Diagnostic Completion Signal (XP Award Trigger)
             if (data.reply && data.reply.includes('[SYSTEM: DIAGNOSTIC_JUST_COMPLETED]')) {
@@ -1244,6 +1250,10 @@ const ChatInterface = ({ onOpenQuest }) => {
 
                 {messages.map((msg, idx) => {
                     const isLastUserMsg = msg.role === 'user' && idx === messages.findLastIndex(m => m.role === 'user');
+                    
+                    // Hide messages that are purely system triggers
+                    const isPureSystem = msg.content && msg.content.includes('[SYSTEM:') && !msg.content.replace(/\[SYSTEM:[^\]]+\]/g, '').trim();
+                    if (isPureSystem || msg.isHidden) return null;
 
                     return (
                         <div

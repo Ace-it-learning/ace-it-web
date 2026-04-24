@@ -4,6 +4,7 @@ import { useAuth } from '../context/AuthContext';
 import { useLanguage } from '../context/LanguageContext';
 import { useAvatar } from '../context/AvatarContext';
 import { ChevronLeft, CheckCircle, XCircle, Trophy, Home, Maximize2, Minimize2, User, Cpu, RefreshCw } from 'lucide-react';
+import { GradingOverlay } from '../components/shared';
 import { SafeInlineMath, SafeBlockMath } from '../components/maths/SafeMath';
 import 'katex/dist/katex.min.css';
 import { getMathSkillName } from '../constants/mathMicroSkills';
@@ -34,6 +35,7 @@ const MathsLabReview = () => {
     const [score, setScore] = useState(0);
     const [totalPossible, setTotalPossible] = useState(0);
     const [isGrading, setIsGrading] = useState(true);
+    const [xpBreakdown, setXpBreakdown] = useState(null);
 
     const currentTier = getMasteryStats(level, language === 'zh');
 
@@ -221,11 +223,18 @@ const MathsLabReview = () => {
                 questionIds: questions.map(q => q.id)
             };
 
-            await fetch(`${API_URL}/api/maths/diagnostic/practice/submit`, {
+            const res = await fetch(`${API_URL}/api/maths/diagnostic/practice/submit`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(submissionData)
             });
+
+            if (res.ok) {
+                const data = await res.json();
+                if (data.breakdown) {
+                    setXpBreakdown(data.breakdown);
+                }
+            }
 
             console.log(`[Review v4] Successfully recorded practice completion for ${currentUid}`);
             setIsSubmitted(true);
@@ -291,14 +300,12 @@ const MathsLabReview = () => {
 
     if (submitting || isGrading) {
         return (
-            <div className="min-h-screen bg-slate-50 flex flex-col items-center justify-center">
-                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-600 mb-4"></div>
-                <h2 className="text-xl font-bold text-slate-700">
-                    {isGrading ? 'AI Examiner is Grading...' : 'Saving Results...'}
-                </h2>
-                <p className="text-slate-500">
-                    {isGrading ? 'Analyzing your steps and final answer' : 'Please wait while we record your progress'}
-                </p>
+            <div className="min-h-screen bg-slate-50">
+                <GradingOverlay 
+                    isOpen={true}
+                    title={isGrading ? 'AI Examiner is Grading...' : 'Saving Results...'}
+                    status={isGrading ? 'Analyzing your steps and final answer' : 'Please wait while we record your progress'}
+                />
             </div>
         );
     }
@@ -309,7 +316,14 @@ const MathsLabReview = () => {
                 <div className="text-center bg-white p-12 rounded-3xl shadow-xl border border-slate-200">
                     <h2 className="text-2xl font-black text-slate-800 mb-4">No Results Found</h2>
                     <p className="text-slate-500 mb-8">We couldn't find your practice results.</p>
-                    <button onClick={() => navigate('/dashboard')} className="bg-purple-600 px-8 py-3 rounded-2xl text-white font-black hover:bg-purple-700 transition-all">Back to Dashboard</button>
+                    <button onClick={() => navigate('/dashboard', { 
+                        state: { 
+                            labCompleted: true, 
+                            topic: title || topic || "Maths Lab", 
+                            earnedXp: Math.floor((score / (totalPossible || 1)) * (xp || 50)), 
+                            masteryScore: Math.round((score / (totalPossible || 1)) * 100) 
+                        } 
+                    })} className="bg-purple-600 px-8 py-3 rounded-2xl text-white font-black hover:bg-purple-700 transition-all">Back to Dashboard</button>
                 </div>
             </div>
         );
@@ -321,7 +335,14 @@ const MathsLabReview = () => {
         <div className="min-h-screen bg-slate-50">
             <header className="fixed top-0 left-0 right-0 h-20 bg-white/80 backdrop-blur-xl border-b border-slate-200 z-50 px-6 flex items-center justify-between">
                 <div className="flex items-center gap-6">
-                    <button onClick={() => navigate('/dashboard')} className="w-12 h-12 rounded-2xl bg-slate-100 hover:bg-slate-200 flex items-center justify-center transition-all group">
+                    <button onClick={() => navigate('/dashboard', { 
+                        state: { 
+                            labCompleted: true, 
+                            topic: title || topic || "Maths Lab", 
+                            earnedXp: Math.floor((score / (totalPossible || 1)) * (xp || 50)), 
+                            masteryScore: Math.round((score / (totalPossible || 1)) * 100) 
+                        } 
+                    })} className="w-12 h-12 rounded-2xl bg-slate-100 hover:bg-slate-200 flex items-center justify-center transition-all group">
                         <ChevronLeft className="w-6 h-6 text-slate-600 group-hover:-translate-x-1 transition-transform" />
                     </button>
                     <div>
@@ -354,6 +375,34 @@ const MathsLabReview = () => {
                             <div className="text-purple-200 text-sm">out of {totalPossible}</div>
                         </div>
                     </div>
+
+                    {/* XP BREAKDOWN (New) */}
+                    {xpBreakdown && (
+                        <div className="mt-8 pt-8 border-t border-white/10 grid grid-cols-2 md:grid-cols-4 gap-4 text-left">
+                            <div className="bg-white/10 p-4 rounded-2xl border border-white/10">
+                                <div className="text-[10px] font-black uppercase tracking-widest text-purple-200 mb-1">Base Reward</div>
+                                <div className="text-xl font-black">{xpBreakdown.base} XP</div>
+                            </div>
+                            {xpBreakdown.tierMultiplier > 1 && (
+                                <div className="bg-white/10 p-4 rounded-2xl border border-white/10">
+                                    <div className="text-[10px] font-black uppercase tracking-widest text-purple-200 mb-1">Premium Bonus</div>
+                                    <div className="text-xl font-black">x{xpBreakdown.tierMultiplier}</div>
+                                </div>
+                            )}
+                            {xpBreakdown.masteryMultiplier > 1 && (
+                                <div className="bg-white/10 p-4 rounded-2xl border border-white/10">
+                                    <div className="text-[10px] font-black uppercase tracking-widest text-purple-200 mb-1">Mastery Bonus</div>
+                                    <div className="text-xl font-black">x{xpBreakdown.masteryMultiplier}</div>
+                                </div>
+                            )}
+                            {xpBreakdown.milestoneBonus > 0 && (
+                                <div className="bg-white/10 p-4 rounded-2xl border border-white/10">
+                                    <div className="text-[10px] font-black uppercase tracking-widest text-purple-200 mb-1">Milestone</div>
+                                    <div className="text-xl font-black">+{xpBreakdown.milestoneBonus} XP</div>
+                                </div>
+                            )}
+                        </div>
+                    )}
                 </div>
 
                 <div className="space-y-12">

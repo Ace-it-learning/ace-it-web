@@ -1,0 +1,106 @@
+{
+  "meta": {
+    "title": "Heritage Conservation",
+    "topic": "Heritage Conservation",
+    "generated_at": "2026-04-23T14:04:00.000Z",
+    "blueprint_version": "2026_V1"
+  },
+  "Part_A": {
+    "part": "Part A",
+    "genre": "Letter to the Editor",
+    "title": "Loss of Collective Memory: The Case of the Old 'Tong Lau'",
+    "instructions": "Write a letter to the editor of the Hong Kong Daily in about 200 words.",
+    "situation": "A historic 'Tong Lau' (tenement house) in your district, which has stood for over 80 years, is scheduled to be demolished to make way for a luxury shopping mall. You feel strongly that this heritage should be preserved.",
+    "requirements": [
+      "Explain the significance of the 'Tong Lau' to the district's 'collective memory' and identity.",
+      "Argue why a luxury mall is a poor replacement for a historic landmark.",
+      "Suggest an 'Adaptive Reuse' alternative (e.g., turning it into a community arts center or museum)."
+    ],
+    "format_guides": [
+      "Use appropriate letter-to-editor conventions (e.g., 'Dear Editor').",
+      "Use a passionate but logical tone."
+    ]
+  },
+  "Part_B": [
+    {
+      "elective": "Sports Communication",
+      "type": "Feature Article",
+      "question": "The preservation of 'Traditional Chinese Martial Arts' (Kung Fu) as a 'living heritage' in modern Hong Kong.",
+      "requirements": [
+        "Explain why traditional martial arts are more than just a sport—they are a cultural legacy.",
+        "Discuss the challenges of attracting the 'digital generation' to a discipline that requires years of patience.",
+        "Propose how modern media (e.g., cinema, E-sports) can help revitalize interest in traditional Kung Fu."
+      ]
+    },
+    {
+      "elective": "Drama",
+      "type": "Dramatic Script",
+      "question": "A scene where an elderly shopkeeper refuses to leave their 'Heritage Shop' (e.g., a traditional seal carver or herbalist) despite an eviction notice.",
+      "requirements": [
+        "Establish the deep emotional bond between the shopkeeper and their tools/craft.",
+        "Include a dialogue with a 'Property Developer' who sees the shop only as 'inefficient space'.",
+        "Provide stage directions that emphasize the contrast between the 'old soul' of the shop and the 'cold' outside world."
+      ]
+    },
+    {
+      "elective": "Short Stories",
+      "type": "Short Story",
+      "question": "A story about a 'Time Capsule' buried 100 years ago that is finally unearthed in a futuristic, ultra-modern city.",
+      "requirements": [
+        "Describe the protagonist's reaction to finding 'primitive' objects (e.g., a physical book, a handwritten letter).",
+        "Show how these objects provide a 'missing link' to the city's forgotten past.",
+        "End the story with a decision to preserve these items despite them having no 'functional value' in the future."
+      ]
+    },
+    {
+      "elective": "Popular Culture",
+      "type": "Blog Post",
+      "question": "The 'Vintage Revival': Why Gen Z is obsessed with 'Old' things (Vinyl, Film Cameras, Retro Fashion).",
+      "requirements": [
+        "Identify the psychological reasons for the 'nostalgia' for eras students never lived through.",
+        "Discuss whether this 'retro' trend is genuine appreciation or just another shallow fashion cycle.",
+        "Give advice on how to support authentic heritage rather than just 'aesthetic' copies."
+      ]
+    },
+    {
+      "elective": "Social Issues",
+      "type": "Article",
+      "question": "The 'Disneyfication' of Heritage: Is turning old buildings into tourist 'theme parks' really conservation?",
+      "requirements": [
+        "Define the concept of 'Disneyfication' and how it strips away the real life of a neighborhood.",
+        "Compare 'Museum-style' conservation with 'Living' conservation where residents can still stay.",
+        "Argue for a balance between tourism and the rights of the original local community."
+      ]
+    },
+    {
+      "elective": "Debating",
+      "type": "Formal Debate Speech",
+      "question": "'That economic development should always take precedence over heritage conservation.'",
+      "requirements": [
+        "Argue the 'pro-development' side: that a city must evolve to provide jobs and housing for the living.",
+        "Provide a strong rebuttal to the idea that 'old buildings' are a city's soul.",
+        "Conclude by defining what 'true progress' means in a 21st-century global city."
+      ]
+    },
+    {
+      "elective": "Workplace Communication",
+      "type": "Formal Proposal",
+      "question": "A proposal for a 'Digital Heritage Archive' for a local neighborhood using VR and AR technology.",
+      "requirements": [
+        "Explain how VR (Virtual Reality) can allow people to 'walk through' demolished streets.",
+        "Outline a plan to interview elderly residents to record their 'oral histories' for the archive.",
+        "Discuss the budget and technical expertise needed for a long-term digital project."
+      ]
+    },
+    {
+      "elective": "Songs and Poems",
+      "type": "Review",
+      "question": "A review of a song or poem that mourns the 'Fading Lights' (e.g., the neon signs or street hawkers) of Old Hong Kong.",
+      "requirements": [
+        "Identify the 'symbol of loss' the artist focuses on and what it represents (e.g., warmth, grit, home).",
+        "Discuss how the work's atmosphere (e.g., melancholic, gritty, nostalgic) is created through language.",
+        "Explain why this work is an important 'act of preservation' in itself."
+      ]
+    }
+  ]
+}

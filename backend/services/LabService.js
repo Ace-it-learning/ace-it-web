@@ -231,6 +231,109 @@ JSON SCHEMA:
 }
 - CRITICAL: Generate exactly 4 tasks (one for each level: 4, 5, 5*, 5**).`;
 
+
+
+const GRAMMAR_LAB_PROMPT_V2 = `Expert HKDSE Grammar Specialist. Generate a high-speed Grammar Lab JSON for '{{TOPIC_NAME}}' (ID: {{TOPIC_ID}}) at Level {{LEVEL}}.
+
+### THE 5 HKDSE TRAPS (CORE FOCUS):
+{{TOPIC_TRAPS}}
+
+### JSON STRUCTURE (MANDATORY):
+{
+  "type": "GRAMMAR",
+  "topic_id": "{{TOPIC_ID}}",
+  "level": "{{LEVEL}}",
+  "conceptual_explanation": "A high-level summary of the topic.",
+  "rule_cards": [
+    { "name": string, "formula": string, "correct": string, "incorrect": string }
+  ], // Generate 3-5 formula cards.
+  "head_noun_tasks": [
+    { 
+      "sentence_tokens": string[], // The sentence split into words/tokens.
+      "head_noun_indices": number[], // The indices of the tokens that form the Head Noun.
+      "explanation": string 
+    }
+  ], // Generate 5 tasks.
+  "drill_tasks": [
+    { 
+      "type": "MCQ",
+      "question": string, 
+      "options": string[], 
+      "answer": string, 
+      "explanation": string 
+    }
+  ], // Generate 10 isolated sentences.
+  "boss_fight": {
+    "paragraph": string, // Max 60 words.
+    "errors": [
+      { "original": string, "correction": string, "explanation": string }
+    ] // Exactly 3 errors.
+  },
+  "success_feedback": string,
+  "suggested_next_steps": string[]
+}
+
+### STYLE RULES:
+- **PRIORITIZE HONG KONG CONTEXTS**: Use examples involving local schools, MTR, housing estates, or cultural events.
+- **NO LONG PASSAGES**: The only paragraph is in the 'boss_fight'.
+- **STRICT SCHEMAS**: Ensure 'head_noun_indices' are accurate based on the 'sentence_tokens' array.`;
+
+const GRAMMAR_TRAPS_MAP = {
+  "grammar_accuracy_sva": `1. **The Prepositional Phrase**: Distractors inside 'of/in/between'.
+2. **The "Along With" Trap**: 'as well as', 'including' do NOT make subjects plural.
+3. **The Proximity Rule**: 'neither/nor', 'either/or' agree with the CLOSEST subject.
+4. **The "Number" Flip**: 'A number of' (Plural) vs 'The number of' (Singular).
+5. **Relative Clauses**: Verbs inside who/which/that must agree with the antecedent.`,
+
+  "grammar_accuracy_tense": `1. **Sequence of Tenses**: Mixing past and present in complex sentences (e.g., 'He said that he is...').
+2. **Time Marker Clashes**: Using 'already' or 'just' with simple past instead of present perfect.
+3. **Conditional Mix-ups**: Incorrect combinations in Type 1, 2, or 3 conditionals.
+4. **Stative Verbs**: Incorrectly using continuous forms for verbs like 'know', 'believe', 'own'.
+5. **Future in Past**: Confusing 'will' vs 'would' in reported thoughts.`,
+
+  "grammar_accuracy_countable": `1. **Uncountable Traps**: 'Advice', 'Information', 'Furniture', 'Equipment' treated as plural.
+2. **Collective Nouns**: 'Staff', 'Committee', 'Police' - singular vs plural usage.
+3. **Quantity Quantifiers**: 'Few/A few' vs 'Little/A little' with the wrong noun type.
+4. **Irregular Plurals**: Nouns that change form or stay the same (e.g., 'Phenomena', 'Criteria').
+5. **Compound Noun Plurals**: Pluralizing the wrong part (e.g., 'Passers-by' vs 'Passer-bys').`,
+
+  "grammar_accuracy_wordform": `1. **Adverb vs Adjective**: Using '-ly' words to modify nouns or adjectives to modify verbs.
+2. **Noun vs Verb form**: Confusing 'Advice' (N) vs 'Advise' (V), 'Effect' (N) vs 'Affect' (V).
+3. **Participial Adjectives**: '-ing' (causing feeling) vs '-ed' (receiving feeling) mix-ups.
+4. **Suffix Confusion**: '-ance' vs '-ancy', '-ment' vs '-ness' in formal contexts.
+5. **Negative Prefixes**: Choosing the wrong prefix (e.g., 'un-', 'in-', 'im-', 'dis-').`,
+
+  "grammar_elite_inversion": `1. **Negative Adverbials**: Forgetting the auxiliary-subject swap after 'Seldom', 'Hardly', 'Never'.
+2. **'Not only... but also'**: Incorrect inversion in the second clause or missing auxiliary.
+3. **Conditionals (Had/Were/Should)**: Omitting 'if' and failing to invert (e.g., 'Had I known' vs 'If I had known').
+4. **'So/Neither' responses**: Subject-verb order in short responses.
+5. **Only after/Only when**: Inverting the wrong clause (main vs subordinate).`,
+
+  "grammar_elite_subjunctive": `1. **Mandative Subjunctive**: Forgetting the base form after 'suggest', 'recommend', 'insist' (e.g., 'suggest he go').
+2. **'If I were'**: Incorrect use of 'was' in formal hypothetical scenarios.
+3. **'It is essential that'**: Missing base form in noun clauses of necessity.
+4. **'Wish' structures**: Confusing 'wish' + past (present regret) vs 'wish' + past perfect (past regret).
+5. **'As if/As though'**: Incorrect tense for unreal comparisons.`,
+
+  "grammar_elite_participle": `1. **Dangling Participles**: The implied subject of the phrase doesn't match the main subject.
+2. **Perfect Participles**: Failing to use 'Having + pp' for actions completed before the main verb.
+3. **Passive Participles**: Confusing 'Written by...' vs 'Writing...'.
+4. **Conjunction + Participle**: Incorrectly omitting or including 'While', 'When', 'After'.
+5. **Resultative Phrases**: Using participles to show consequence (e.g., '..., thus causing...').`,
+
+  "grammar_elite_cohesion": `1. **Reference Ambiguity**: 'This' or 'That' pointing to the wrong antecedent.
+2. **Transition Overuse**: 'Moreover/Furthermore' used where no addition exists.
+3. **Contrast Misplacement**: Using 'However' vs 'On the contrary' incorrectly.
+4. **Lexical Chains**: Failing to use synonyms or related terms to link ideas.
+5. **Substitution**: Incorrect use of 'so', 'do so', or 'one/ones' to avoid repetition.`,
+
+  "grammar_accuracy_pronoun": `1. **Ambiguous Antecedents**: 'It' or 'They' could refer to more than one preceding noun.
+2. **Number Agreement**: Using 'They' for singular subjects or 'It' for plural ones.
+3. **Relative Pronouns**: Using 'Which' for people or 'Who' for things.
+4. **Subject vs Object Form**: Using 'I' vs 'Me' or 'We' vs 'Us' in complex structures (e.g., 'Between you and I').
+5. **Reflexive Pronouns**: Incorrect use of 'Myself' or 'Themselves' where a simple object pronoun is needed.`
+};
+
 const SIMULATOR_SCENARIO_PROMPT = `HKDSE Paper 3 (Listening and Integrated Skills) Examiner.
 Generate a high-fidelity exam scenario for topic '{{TITLE}}' ({{DESCRIPTION}}).
 
@@ -587,6 +690,22 @@ class LabService {
         console.error("[LabService] Pre-generated loading error:", err);
       }
     }
+    
+    // --- GRAMMAR LAB: PRE-GENERATED CONTENT CHECK ---
+    if (topic?.startsWith('grammar_')) {
+      try {
+        const filename = `${topic}_level_${level}.json`;
+        const filepath = path.join(__dirname, '..', 'data', 'grammar_labs', filename);
+        if (fs.existsSync(filepath)) {
+          console.log(`[LabService] SUCCESS: Loading pre-generated grammar lab: ${filename}`);
+          const content = JSON.parse(fs.readFileSync(filepath, 'utf8'));
+          content.level = level;
+          return content;
+        }
+      } catch (err) {
+        console.error("[LabService] Grammar pre-gen lookup error:", err);
+      }
+    }
 
     // Scaling question counts to optimize learning density:
     // General Quest: Level 3 (8) | Level 4 (10) | Level 5+ (12)
@@ -806,6 +925,8 @@ class LabService {
         Use the "Three Pillars" framework: Ear, Pen, Brain.`;
       } else if (isSpeaking) {
         prompt = SPEAKING_LAB_PROMPT;
+      } else if (topic?.startsWith('grammar_')) {
+        prompt = GRAMMAR_LAB_PROMPT_V2;
       } else {
         prompt = LAB_GENERATION_PROMPT;
       }
@@ -958,8 +1079,14 @@ class LabService {
         }
       }
 
+      // Resolve Grammar Traps
+      let topicTraps = GRAMMAR_TRAPS_MAP[topic] || GRAMMAR_TRAPS_MAP["grammar_accuracy_sva"];
+      
       prompt = prompt
         .replace('{{TOPIC}}', resolvedTopic)
+        .replace('{{TOPIC_NAME}}', resolvedTopic)
+        .replace('{{TOPIC_ID}}', topic)
+        .replace('{{TOPIC_TRAPS}}', topicTraps)
         .replace('{{FOCUS}}', JSON.stringify(focus) || 'Fundamentals')
         .replace('{{LEVEL}}', levelName)
         .replace('{{AVAILABLE_SKILLS}}', availableSkills)
@@ -1005,6 +1132,12 @@ ${params.existingPassage}
 6. **FULL SET**: Generate exactly ${generationTarget} PROFESSIONAL, FULL-SENTENCE questions based on this passage.
 7. **NO FRAGMENTS**: Strictly forbid completion-style questions like "The writer feels...". Use "How does the writer feel about...?" instead.`;
         }
+      } else if (topic?.startsWith('grammar_')) {
+        prompt += `\n\n### GRAMMAR LAB CONSTRAINTS:
+1. **NO READING PASSAGE**: Do not generate a 'reading_passage'. Use 'boss_fight.paragraph' for context.
+2. **AUTHENTIC TRAPS**: Ensure every drill and head-noun task tests one of the 5 HKDSE traps.
+3. **ACCURATE INDICES**: The 'head_noun_indices' in 'head_noun_tasks' must be 0-indexed relative to the 'sentence_tokens' array.
+4. **DETAILED LOGIC**: In 'explanation', explain WHY the Head Noun is correct and WHY the distractor is wrong.`;
       } else {
         prompt += `\n\n### FINAL EXAMINER CONSTRAINTS:
 1. **FULL SET**: Generate exactly ${generationTarget} professional, full-sentence interactive tasks.
@@ -1113,6 +1246,12 @@ STRICT RULE: Do NOT use the same hooks, starting sentences, or specific scenario
 
         // Key Normalization
         data.interactive_tasks = data.interactive_tasks || data.tasks || data.interactiveTasks || [];
+
+        // --- GRAMMAR V2 BYPASS ---
+        if (topic?.startsWith('grammar_')) {
+          console.log("[LabService] Grammar V2 detected. Bypassing Firestore question_bank save.");
+          return this.normalizeLessonContent(data);
+        }
 
         // Deduplicate & Save
         if (data.interactive_tasks && Array.isArray(data.interactive_tasks)) {

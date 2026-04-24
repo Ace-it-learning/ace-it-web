@@ -17,6 +17,11 @@
         "penalty_multiplier": 0.1
     },
     "multipliers": {
+        "tier": {
+            "free": 1.0,
+            "pro": 1.0,
+            "premium": 1.2
+        },
         "skill_jump_boost": 1.5,
         "overall_milestone_grant": 2000
     },
@@ -28,8 +33,8 @@
         "mock_exam_completion": {
             "reading": 500,
             "writing": 500,
-            "listening": 400,
-            "speaking": 300
+            "listening": 500,
+            "speaking": 500
         },
         "mock_exam_bonus": {
             "level_3_plus": 100,
@@ -40,14 +45,17 @@
             "diagnostic_test": 200
         },
         "adaptive_practice_tiers": {
-            "1": 50,
-            "2": 75,
-            "3": 100,
-            "4": 150
+            "3": 120,
+            "4": 140,
+            "5": 160,
+            "7": 180
         },
         "factory_quest": {
-            "completion": 200,
+            "completion": 150,
             "set_bonus": 200
+        },
+        "weekly_quest": {
+            "completion": 250
         }
     }
 }

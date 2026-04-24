@@ -1,0 +1,222 @@
+{
+  "type": "GRAMMAR",
+  "topic_id": "grammar_elite_inversion",
+  "level": "HKDSE Level 5**",
+  "conceptual_explanation": "The 5** summit of Inversion Mastery involves complex structures like 'Not until', where the inversion happens in the main clause, not the subordinate one. You must also distinguish between 'No sooner... than' and 'Scarcely... when' and handle intricate prepositional triggers like 'Only through' or 'Only once'.",
+  "rule_cards": [
+    {
+      "name": "The 'Not Until' Shift",
+      "formula": "Not until [Clause/Time], + Aux + Subject + Verb",
+      "correct": "Not until he spoke did I realize who he was.",
+      "incorrect": "Not until did he speak I realized..."
+    },
+    {
+      "name": "Scarcely / Barely ... When",
+      "formula": "Scarcely + had + Subject + PP + when + Past Simple",
+      "correct": "Scarcely had the game begun when it started to rain.",
+      "incorrect": "Scarcely had the game begun than it started to rain."
+    },
+    {
+      "name": "Only Once / Only Through",
+      "formula": "Only once [Clause], + Aux + Subject + Verb",
+      "correct": "Only through hard work can one achieve greatness.",
+      "incorrect": "Only through hard work one can achieve..."
+    },
+    {
+      "name": "Nor Inversion",
+      "formula": "Sentence, nor + Aux + Subject + Verb",
+      "correct": "He didn't call, nor did he send an email.",
+      "incorrect": "He didn't call, nor he sent an email."
+    }
+  ],
+  "head_noun_tasks": [
+    {
+      "sentence_tokens": [
+        "Not",
+        "until",
+        "the",
+        "final",
+        "whistle",
+        "did",
+        "the",
+        "fans",
+        "stop",
+        "cheering",
+        "."
+      ],
+      "head_noun_indices": [
+        0,
+        1
+      ],
+      "explanation": "'Not until' triggers inversion in the main clause ('did the fans stop')."
+    },
+    {
+      "sentence_tokens": [
+        "Scarcely",
+        "had",
+        "the",
+        "witness",
+        "begun",
+        "her",
+        "testimony",
+        "when",
+        "the",
+        "defense",
+        "interrupted",
+        "."
+      ],
+      "head_noun_indices": [
+        0
+      ],
+      "explanation": "'Scarcely' requires past perfect inversion and is paired with 'when'."
+    },
+    {
+      "sentence_tokens": [
+        "Only",
+        "once",
+        "every",
+        "decade",
+        "does",
+        "this",
+        "rare",
+        "flower",
+        "bloom",
+        "."
+      ],
+      "head_noun_indices": [
+        0,
+        1
+      ],
+      "explanation": "'Only once' triggers 'does' before 'this rare flower'."
+    },
+    {
+      "sentence_tokens": [
+        "Only",
+        "through",
+        "extensive",
+        "research",
+        "can",
+        "we",
+        "hope",
+        "to",
+        "find",
+        "a",
+        "cure",
+        "."
+      ],
+      "head_noun_indices": [
+        0,
+        1
+      ],
+      "explanation": "'Only through' requires the modal 'can' before the subject 'we'."
+    },
+    {
+      "sentence_tokens": [
+        "I",
+        "cannot",
+        "attend",
+        ",",
+        "nor",
+        "can",
+        "my",
+        "colleague",
+        "."
+      ],
+      "head_noun_indices": [
+        4
+      ],
+      "explanation": "'Nor' at the start of a clause triggers inversion of 'can my colleague'."
+    }
+  ],
+  "drill_tasks": [
+    {
+      "type": "MCQ",
+      "question": "Not until the sun came out ________ to dry our clothes.",
+      "options": [
+        "did we able",
+        "were we able",
+        "we were able",
+        "was we able"
+      ],
+      "answer": "were we able",
+      "explanation": "'Not until' requires inversion. 'We were' becomes 'were we'."
+    },
+    {
+      "type": "MCQ",
+      "question": "Scarcely ________ the speech when the audience erupted in applause.",
+      "options": [
+        "the president finished",
+        "had the president finished",
+        "the president had finished",
+        "did the president finish"
+      ],
+      "answer": "had the president finished",
+      "explanation": "'Scarcely' uses past perfect inversion."
+    },
+    {
+      "type": "MCQ",
+      "question": "Only through your help ________ to finish the project on time.",
+      "options": [
+        "we were managed",
+        "did we manage",
+        "we managed",
+        "managed we"
+      ],
+      "answer": "did we manage",
+      "explanation": "'Only through' requires auxiliary 'did' before 'we'."
+    },
+    {
+      "type": "MCQ",
+      "question": "He has no interest in politics, ________.",
+      "options": [
+        "nor has his brother",
+        "nor his brother has",
+        "neither has his brother",
+        "neither his brother has"
+      ],
+      "answer": "nor has his brother",
+      "explanation": "'Nor' + Aux + Subject is the correct formal structure here."
+    },
+    {
+      "type": "MCQ",
+      "question": "Barely had she entered the room ________ the lights went out.",
+      "options": [
+        "than",
+        "when",
+        "then",
+        "after"
+      ],
+      "answer": "when",
+      "explanation": "'Barely' and 'Scarcely' are paired with 'when'."
+    }
+  ],
+  "boss_fight": {
+    "paragraph": "Not until I reached home I did realize I'd lost my wallet. Scarcely had I entered the room than the phone rang. I don't like coffee, nor my sister does.",
+    "errors": [
+      {
+        "original": "Not until I reached home I did realize",
+        "correction": "Not until I reached home did I realize",
+        "explanation": "'Not until' requires inversion in the main clause, not the subordinate one."
+      },
+      {
+        "original": "Scarcely had I entered the room than",
+        "correction": "Scarcely had I entered the room when",
+        "explanation": "'Scarcely' must be paired with 'when', not 'than'."
+      },
+      {
+        "original": "nor my sister does",
+        "correction": "nor does my sister",
+        "explanation": "'Nor' requires inversion (Aux 'does' before subject 'my sister')."
+      }
+    ]
+  },
+  "success_feedback": "Phenomenal! You have mastered the most intricate inversion patterns in English. Your 5** precision is undeniable.",
+  "suggested_next_steps": [
+    "Write a formal letter using at least three different inversion types.",
+    "Practice using inversion in the introduction of your DSE Paper 2 essays.",
+    "Challenge yourself with archaic or poetic inversion in classic literature."
+  ],
+  "interactive_tasks": [],
+  "examples": [],
+  "key_points": []
+}

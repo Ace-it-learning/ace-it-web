@@ -7,6 +7,7 @@ import { SafeInlineMath, SafeBlockMath } from '../components/maths/SafeMath';
 import 'katex/dist/katex.min.css';
 import { formatNumbers, sanitizeMath, prepareMathText, splitContentByDelimiters } from '../utils/mathFormattingUtils';
 import GeometryRenderer from '../components/maths/GeometryRenderer';
+import { LoadingPage } from '../components/shared';
 
 const MathsLearningPage = () => {
     const { topicId } = useParams();
@@ -133,11 +134,10 @@ const MathsLearningPage = () => {
 
     if (loading) {
         return (
-            <div className="min-h-screen bg-white flex flex-col items-center justify-center p-6 text-center">
-                <Loader2 className="w-12 h-12 text-indigo-600 animate-spin mb-4" />
-                <h2 className="text-xl font-black text-slate-800 uppercase tracking-tight">Preparing Learning Brief...</h2>
-                <p className="text-slate-500">Retrieving latest DSE syllabus requirements</p>
-            </div>
+            <LoadingPage 
+                title="Preparing Learning Brief..." 
+                subtext="Retrieving latest DSE syllabus requirements and calibrating your mastery path."
+            />
         );
     }
 

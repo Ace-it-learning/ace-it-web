@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { ArrowLeft, Clock, CheckCircle } from 'lucide-react';
+import { LoadingPage } from '../components/shared';
 
 // Sub-components (will be created next)
 import DiagnosticLanding from '../components/diagnostic/DiagnosticLanding';
@@ -172,7 +173,14 @@ const DiagnosticPage = () => {
         }
     }, [step, results, finalizing]);
 
-    if (loading) return <div className="flex items-center justify-center h-screen bg-white text-gray-900">Loading Calibration...</div>;
+    if (loading) {
+        return (
+            <LoadingPage 
+                title="Loading Calibration Assets" 
+                subtext="Preparing your personalized study calibration diagnostic..."
+            />
+        );
+    }
 
     const renderStep = () => {
         switch (step) {

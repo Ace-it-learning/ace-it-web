@@ -7,7 +7,7 @@ import { Loader2, Zap, ShieldCheck, Target, AlertTriangle, MessageSquare, Rotate
 import MockCountdownTimer from '../components/utils/MockCountdownTimer';
 
 const SpeakingInteractionPage = () => {
-    const [searchParams] = useSearchParams();
+    const [searchParams, setSearchParams] = useSearchParams();
     const location = useLocation();
 
     // Quest Mode parsing
@@ -74,7 +74,23 @@ const SpeakingInteractionPage = () => {
     };
 
     const [examData, setExamData] = useState(null);
-    const [status, setStatus] = useState('PREP'); // PREP, DISCUSSION, INDIVIDUAL, FINISHED
+    const [status, setStatus] = useState(searchParams.get('phase') || 'PREP'); // PREP, DISCUSSION, INDIVIDUAL, FINISHED
+
+    // Sync status with URL
+    useEffect(() => {
+        const urlPhase = searchParams.get('phase');
+        if (urlPhase && urlPhase !== status) {
+            setStatus(urlPhase);
+        }
+    }, [searchParams]);
+
+    // Helper to update status and URL
+    const updateStatus = (newStatus) => {
+        setStatus(newStatus);
+        const newParams = new URLSearchParams(searchParams);
+        newParams.set('phase', newStatus);
+        setSearchParams(newParams);
+    };
     const [timeLeft, setTimeLeft] = useState(600); // 10 min prep
     const [transcript, setTranscript] = useState([]);
     const [currentSpeaker, setCurrentSpeaker] = useState(null);
@@ -185,7 +201,7 @@ const SpeakingInteractionPage = () => {
             ]
         };
         setExamData(questData);
-        setStatus('PREP');
+        updateStatus('PREP');
 
         // Dynamic Timer based on Level (HKEAA Aligned)
         const levelCode = searchParams.get('level') || location.state?.level || '3';
@@ -998,7 +1014,7 @@ const SpeakingInteractionPage = () => {
     const startDiscussion = () => {
         if (hasStartedRef.current) return;
         hasStartedRef.current = true;
-        setStatus('DISCUSSION');
+        updateStatus('DISCUSSION');
         statusRef.current = 'DISCUSSION';
         const practiceDuration = 2.5 * 60; // Temporarily 2.5 minutes for testing
         setTimeLeft(practiceDuration);
@@ -1068,7 +1084,7 @@ const SpeakingInteractionPage = () => {
     };
 
     const endDiscussion = () => {
-        setStatus('INDIVIDUAL');
+        updateStatus('INDIVIDUAL');
         statusRef.current = 'INDIVIDUAL';
         setTimeLeft(30); // Temporarily 30s for testing
         playSpeech("Examiner", "Thank you. Candidate D, I have a question for you.", () => {
@@ -1095,7 +1111,7 @@ const SpeakingInteractionPage = () => {
         if (isGrading) return;
         setIsGrading(true);
         addLog("🗳️ Submitting discussion for HKDSE Grading...");
-        setStatus('FINISHED');
+        updateStatus('FINISHED');
         statusRef.current = 'FINISHED';
         if (synth.current) synth.current.cancel();
 

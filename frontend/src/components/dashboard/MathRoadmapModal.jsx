@@ -187,13 +187,17 @@ const MathRoadmapModal = ({ isOpen, onClose }) => {
         // This ensures the backend mapping (!isFactory flow) works correctly.
         const tier = calculateTier(task.level || 3);
 
+        // Standardized Math Quest XP: 150 for General, 250 for Weekly
+        const isWeekly = task.id === 'weekly_math' || task.id.startsWith('weekly_') || task.type === 'WEEKLY_QUEST';
+        const xpReward = isWeekly ? 250 : 150;
+
         // For Math Factory Model quests, navigate to the specialized learn page
         navigate(`/maths/learn/${task.meta?.topic || task.topic}`, {
             state: {
                 topic: task.meta?.topic || task.topic,
                 taskId: task.id,
                 title: task.meta?.topic || task.topic,
-                xp: task.xp || 200, // Factory Quest standard fallback
+                xp: xpReward,
                 isFactoryQuest: true,
                 level: 0 // ADAPTIVE (Uses Scaffolded sequence: Easy -> Medium -> DSE)
             }
@@ -384,7 +388,7 @@ const MathRoadmapModal = ({ isOpen, onClose }) => {
                                                             {practicedSkills.length >= 3 && (
                                                                 <div className="flex items-center gap-1 text-yellow-300 font-bold text-xs">
                                                                     <Sparkles className="w-3.5 h-3.5 fill-current" />
-                                                                    <span>+300 XP</span>
+                                                                    <span>+250 XP</span>
                                                                 </div>
                                                             )}
                                                         </div>
@@ -515,12 +519,12 @@ const MathRoadmapModal = ({ isOpen, onClose }) => {
                                                                                 <Zap className="w-3 h-3 text-amber-500 fill-amber-500" />
                                                                             </div>
                                                                             <div className="min-w-0">
-                                                                                <div className="text-[9px] font-black text-slate-400 uppercase tracking-widest mb-0.5">Priority Boost</div>
-                                                                                <div className="text-[11px] font-black text-slate-700 italic group-hover:text-indigo-600 transition-colors truncate">{missionName}</div>
+                                                                                <div className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-0.5">Priority Boost</div>
+                                                                                <div className="text-[12px] font-black text-slate-700 italic group-hover:text-indigo-600 transition-colors truncate">{missionName}</div>
                                                                             </div>
                                                                         </div>
                                                                         <div className="flex items-center gap-2 flex-shrink-0">
-                                                                            <span className="text-[9px] font-black text-indigo-600">+{stats.xp} XP</span>
+                                                                            <span className="text-[11px] font-black text-indigo-600">+150 XP</span>
                                                                             <Play className="w-3 h-3 text-slate-300 group-hover:text-indigo-600 transition-colors" />
                                                                         </div>
                                                                     </div>
@@ -561,13 +565,13 @@ const MathRoadmapModal = ({ isOpen, onClose }) => {
                                                                     <quest.icon className="w-6 h-6 text-white" />
                                                                 </div>
                                                                 <div>
-                                                                    <h4 className="font-bold text-white text-sm">{quest.title}</h4>
-                                                                    <p className="text-[10px] text-white/70 italic opacity-80">{quest.desc}</p>
+                                                                    <h4 className="font-bold text-white text-[15px]">{quest.title}</h4>
+                                                                    <p className="text-[11px] text-white/70 italic opacity-80">{quest.desc}</p>
                                                                 </div>
                                                             </div>
                                                             <div className="flex items-center justify-between mt-auto">
-                                                                <span className="text-[10px] font-black text-white/90 bg-white/20 px-2 py-0.5 rounded-lg border border-white/20">
-                                                                    +{stats.xp} XP
+                                                                <span className="text-xs font-black text-white/90 bg-white/20 px-2 py-0.5 rounded-lg border border-white/20">
+                                                                    +250 XP
                                                                 </span>
                                                                 <Play className="w-3 h-3 text-white/60 group-hover:text-white transition-colors" />
                                                             </div>
@@ -607,7 +611,7 @@ const MathRoadmapModal = ({ isOpen, onClose }) => {
 
                                                         <div className="mt-4 flex items-center justify-between">
                                                             <span className="text-xs font-bold text-indigo-600 flex items-center gap-1">
-                                                                <Star className="w-3 h-3 fill-current" /> +{task.xp || 200} XP
+                                                                <Star className="w-3 h-3 fill-current" /> +150 XP
                                                             </span>
                                                             <Play className="w-4 h-4 text-slate-300 group-hover:text-indigo-600 transition-colors" />
                                                         </div>
@@ -740,7 +744,7 @@ const MathRoadmapModal = ({ isOpen, onClose }) => {
                                                                 {level >= 5 && <Trophy className="w-4 h-4 text-amber-500" />}
                                                             </div>
                                                         </div>
-                                                        <h4 className="text-sm font-bold text-slate-800 mb-1 group-hover:text-violet-600 transition-colors">
+                                                        <h4 className="text-[15px] font-bold text-slate-800 mb-1 group-hover:text-violet-600 transition-colors">
                                                             {name}
                                                         </h4>
                                                         
@@ -749,7 +753,7 @@ const MathRoadmapModal = ({ isOpen, onClose }) => {
                                                             const masteryPct = getMathMasteryPercentage(level);
                                                             return (
                                                                 <div className="mt-3 space-y-1">
-                                                                    <div className="flex justify-between text-[8px] font-black text-slate-400 uppercase tracking-widest">
+                                                                    <div className="flex justify-between text-[9px] font-black text-slate-400 uppercase tracking-widest">
                                                                         <span>{t.mastery}</span>
                                                                         <span>{masteryPct}%</span>
                                                                     </div>
@@ -763,7 +767,7 @@ const MathRoadmapModal = ({ isOpen, onClose }) => {
                                                             );
                                                         })()}
 
-                                                        <p className="text-[10px] text-slate-500 mt-3 line-clamp-1 leading-tight opacity-70">
+                                                        <p className="text-[11px] text-slate-500 mt-3 line-clamp-1 leading-tight opacity-70">
                                                             {desc}
                                                         </p>
                                                     </div>
@@ -775,8 +779,8 @@ const MathRoadmapModal = ({ isOpen, onClose }) => {
                                                                 {language === 'zh' ? '重複練習' : 'Repeat Quest'}
                                                             </div>
                                                         ) : (
-                                                            <span className="text-[10px] font-bold text-violet-500 flex items-center gap-1">
-                                                                <Star className="w-3 h-3 fill-current" /> +{getDifficultyTierDetails(selectedLevels[id] !== undefined ? selectedLevels[id] : calculateTier(userSkills[id]?.level || 0, activeTab !== 'CHALLENGE'), language === 'zh').xp} XP
+                                                            <span className="text-xs font-bold text-violet-500 flex items-center gap-1">
+                                                                <Star className="w-3 h-3 fill-current" /> +150 XP
                                                             </span>
                                                         )}
                                                         <div className={`opacity-0 group-hover:opacity-100 transition-opacity bg-violet-100 text-violet-700 p-1 rounded-full ${isPracticed ? 'border border-violet-200' : ''}`}>

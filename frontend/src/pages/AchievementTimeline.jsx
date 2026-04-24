@@ -247,12 +247,40 @@ const AchievementTimeline = () => {
 
                                             {/* XP Badge */}
                                             <div className="text-right shrink-0">
-                                                <span className="block font-black text-orange-500 text-2xl mb-1">
+                                                <span className="block font-black text-orange-500 text-2xl mb-0.5">
                                                     +{event.xp}
                                                 </span>
-                                                <span className="text-xs font-bold px-3 py-1 bg-gray-100 text-gray-600 rounded-full">
+                                                <span className="block text-[10px] font-bold px-2 py-0.5 bg-gray-100 text-gray-500 rounded-lg mb-2">
                                                     {event.score}
                                                 </span>
+
+                                                {/* BREAKDOWN DISPLAY (New) */}
+                                                {event.breakdown && (
+                                                    <div className="text-left bg-orange-50/50 p-2 rounded-lg border border-orange-100/50 space-y-0.5">
+                                                        <div className="flex justify-between items-center gap-4 text-[9px] text-orange-700">
+                                                            <span className="font-medium opacity-70">Base:</span>
+                                                            <span className="font-black">{event.breakdown.base}</span>
+                                                        </div>
+                                                        {event.breakdown.tierMultiplier > 1 && (
+                                                            <div className="flex justify-between items-center gap-4 text-[9px] text-indigo-700">
+                                                                <span className="font-medium opacity-70">Premium:</span>
+                                                                <span className="font-black">x{event.breakdown.tierMultiplier}</span>
+                                                            </div>
+                                                        )}
+                                                        {event.breakdown.masteryMultiplier > 1 && (
+                                                            <div className="flex justify-between items-center gap-4 text-[9px] text-emerald-700">
+                                                                <span className="font-medium opacity-70">Mastery:</span>
+                                                                <span className="font-black">x{event.breakdown.masteryMultiplier}</span>
+                                                            </div>
+                                                        )}
+                                                        {event.breakdown.milestoneBonus > 0 && (
+                                                            <div className="flex justify-between items-center gap-4 text-[9px] text-pink-700">
+                                                                <span className="font-medium opacity-70">Milestone:</span>
+                                                                <span className="font-black">+{event.breakdown.milestoneBonus}</span>
+                                                            </div>
+                                                        )}
+                                                    </div>
+                                                )}
                                             </div>
                                         </div>
                                     ))}

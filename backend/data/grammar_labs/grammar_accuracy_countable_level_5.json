@@ -1,0 +1,220 @@
+{
+  "type": "GRAMMAR",
+  "topic_id": "grammar_accuracy_countable",
+  "level": "HKDSE Level 5",
+  "conceptual_explanation": "Level 5 Countable Accuracy involves nouns that change meaning based on their type (e.g., 'Work' as labor vs 'Works' as art). You must also master compound noun plurals ('Sisters-in-law') and Latin/Greek irregulars ('Criteria', 'Phenomena') which are common in DSE reading and writing tasks.",
+  "rule_cards": [
+    {
+      "name": "Meaning Shifters",
+      "formula": "Uncountable (Abstract concept) vs Countable (Specific instance)",
+      "correct": "I have much experience in teaching. / I had many exciting experiences in Japan.",
+      "incorrect": "I have many experiences in teaching. (When referring to general skill)"
+    },
+    {
+      "name": "Compound Noun Plurals",
+      "formula": "Add 's' to the HEAD noun, not the end",
+      "correct": "My brothers-in-law are coming for dinner.",
+      "incorrect": "My brother-in-laws are coming for dinner."
+    },
+    {
+      "name": "The Latin/Greek Trap",
+      "formula": "Criterion (Singular) -> Criteria (Plural) / Phenomenon (Singular) -> Phenomena (Plural)",
+      "correct": "The criteria for the scholarship are very strict.",
+      "incorrect": "The criterias for the scholarship are very strict."
+    },
+    {
+      "name": "Zero Plural Nouns",
+      "formula": "Species, Series, Means = Same form for Singular and Plural",
+      "correct": "This species of bird is rare. / These species of birds are rare.",
+      "incorrect": "These specieses of birds are rare."
+    }
+  ],
+  "head_noun_tasks": [
+    {
+      "sentence_tokens": [
+        "The",
+        "scientific",
+        "phenomena",
+        "observed",
+        "by",
+        "the",
+        "team",
+        "were",
+        "truly",
+        "extraordinary",
+        "."
+      ],
+      "head_noun_indices": [
+        2,
+        7
+      ],
+      "explanation": "'Phenomena' is the plural of 'phenomenon', so it requires the plural verb 'were'."
+    },
+    {
+      "sentence_tokens": [
+        "Several",
+        "passers-by",
+        "stopped",
+        "to",
+        "help",
+        " the",
+        "injured",
+        "pedestrian",
+        "."
+      ],
+      "head_noun_indices": [
+        1
+      ],
+      "explanation": "In compound nouns like 'passer-by', the plural 's' is added to the head noun 'passer'."
+    },
+    {
+      "sentence_tokens": [
+        "Is",
+        "there",
+        "any",
+        "means",
+        "of",
+        "communication",
+        "that",
+        "is",
+        "faster",
+        "than",
+        "email",
+        "?"
+      ],
+      "head_noun_indices": [
+        3
+      ],
+      "explanation": "'Means' is a noun that ends in 's' but can be singular or plural. Here it is singular ('any means')."
+    },
+    {
+      "sentence_tokens": [
+        "She",
+        "bought",
+        "three",
+        "papers",
+        "to",
+        "read",
+        "on",
+        "the",
+        "train",
+        "."
+      ],
+      "head_noun_indices": [
+        3
+      ],
+      "explanation": "When 'paper' refers to a newspaper, it is countable ('papers'). When it refers to the material, it is uncountable."
+    },
+    {
+      "sentence_tokens": [
+        "The",
+        "criteria",
+        "for",
+        "admission",
+        "have",
+        "not",
+        "changed",
+        "since",
+        "last",
+        "year",
+        "."
+      ],
+      "head_noun_indices": [
+        1,
+        4
+      ],
+      "explanation": "'Criteria' is plural; the singular is 'criterion'. Thus, it uses 'have'."
+    }
+  ],
+  "drill_tasks": [
+    {
+      "type": "MCQ",
+      "question": "The social ________ of online influencers has grown significantly over the last decade.",
+      "options": [
+        "media",
+        "medias",
+        "mediums",
+        "medium"
+      ],
+      "answer": "media",
+      "explanation": "'Media' is the plural of 'medium'. While 'media' is often used as a collective singular now, in formal contexts, it is the plural form."
+    },
+    {
+      "type": "MCQ",
+      "question": "We are studying two different ________ of mammals in this forest.",
+      "options": [
+        "specie",
+        "species",
+        "specieses",
+        "speciess"
+      ],
+      "answer": "species",
+      "explanation": "'Species' is the same in singular and plural."
+    },
+    {
+      "type": "MCQ",
+      "question": "Most of the ________ at the conference were experts in renewable energy.",
+      "options": [
+        "editor-in-chiefs",
+        "editors-in-chiefs",
+        "editors-in-chief",
+        "editor-in-chief"
+      ],
+      "answer": "editors-in-chief",
+      "explanation": "Pluralize the head noun 'editor'."
+    },
+    {
+      "type": "MCQ",
+      "question": "The painter's latest ________ are currently on display at the M+ Museum.",
+      "options": [
+        "work",
+        "works",
+        "working",
+        "workings"
+      ],
+      "answer": "works",
+      "explanation": "When referring to artistic creations, 'work' becomes the countable 'works'."
+    },
+    {
+      "type": "MCQ",
+      "question": "Which ________ should we use to evaluate the success of this project?",
+      "options": [
+        "criterion",
+        "criteria",
+        "criterions",
+        "criterias"
+      ],
+      "answer": "criteria",
+      "explanation": "'Criteria' (plural) is needed because 'which' implies choosing from a set."
+    }
+  ],
+  "boss_fight": {
+    "paragraph": "The primary criteria for this award is your academic performance. We have seen many interesting phenomenon in your research. Your sisters-in-laws also mentioned that you have a lot of works to do this weekend.",
+    "errors": [
+      {
+        "original": "criteria for this award is",
+        "correction": "criteria for this award are",
+        "explanation": "'Criteria' is plural and requires 'are'. Alternatively, use 'criterion' if only one exists."
+      },
+      {
+        "original": "interesting phenomenon",
+        "correction": "interesting phenomena",
+        "explanation": "'Many' requires the plural form 'phenomena'."
+      },
+      {
+        "original": "sisters-in-laws",
+        "correction": "sisters-in-law",
+        "explanation": "Only the head noun 'sisters' should be pluralized."
+      }
+    ]
+  },
+  "success_feedback": "Excellent! Your understanding of advanced plural forms and meaning-shifters is truly impressive.",
+  "suggested_next_steps": [
+    "Explore archaic plurals (e.g., 'Alumni', 'Stimuli').",
+    "Study nouns that are always plural (e.g., 'Trousers', 'Goods', 'Remains').",
+    "Try Level 7 for the ultimate 5** challenge!"
+  ],
+  "interactive_tasks": [],
+  "examples": [],
+  "key_points": []
+}

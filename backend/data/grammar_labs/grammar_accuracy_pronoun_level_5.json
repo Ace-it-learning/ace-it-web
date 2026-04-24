@@ -1,0 +1,224 @@
+{
+  "type": "GRAMMAR",
+  "topic_id": "grammar_accuracy_pronoun",
+  "level": "HKDSE Level 5",
+  "conceptual_explanation": "Level 5 Pronoun Accuracy demands formal precision. You must distinguish between 'Who' (Subject) and 'Whom' (Object), and maintain strict consistency in indefinite pronouns ('One'). You will also practice formal relative structures like 'in which' or 'to whom' common in Paper 2 writing.",
+  "rule_cards": [
+    {
+      "name": "Who vs Whom",
+      "formula": "Who = Subject (He) | Whom = Object (Him)",
+      "correct": "Who is calling? / To whom are you speaking?",
+      "incorrect": "Who are you speaking to? (Common but less formal than 'To whom')"
+    },
+    {
+      "name": "The 'Between You and Me' Rule",
+      "formula": "Between + Object Pronouns (Me, Us, Him, Them)",
+      "correct": "This is a secret between you and me.",
+      "incorrect": "This is a secret between you and I."
+    },
+    {
+      "name": "Pronoun Consistency",
+      "formula": "Don't shift from 'One' to 'You' in the same sentence",
+      "correct": "One must do one's best. / You must do your best.",
+      "incorrect": "One must do your best."
+    },
+    {
+      "name": "Formal Relative Structures",
+      "formula": "Preposition + Which / Whom",
+      "correct": "This is the room in which I work.",
+      "incorrect": "This is the room which I work in. (Less formal)"
+    }
+  ],
+  "head_noun_tasks": [
+    {
+      "sentence_tokens": [
+        "The",
+        "person",
+        "to",
+        "whom",
+        "I",
+        "gave",
+        "the",
+        "letter",
+        "was",
+        "the",
+        "manager",
+        "."
+      ],
+      "head_noun_indices": [
+        3,
+        10
+      ],
+      "explanation": "'Whom' is used after a preposition as the object of 'gave'."
+    },
+    {
+      "sentence_tokens": [
+        "Between",
+        "you",
+        "and",
+        "me",
+        ",",
+        "I",
+        "think",
+        "the",
+        "plan",
+        "will",
+        "fail",
+        "."
+      ],
+      "head_noun_indices": [
+        3
+      ],
+      "explanation": "After 'between', we must use the object pronoun 'me'."
+    },
+    {
+      "sentence_tokens": [
+        "One",
+        "cannot",
+        "expect",
+        "to",
+        "succeed",
+        "if",
+        "one",
+        "does",
+        "not",
+        "work",
+        "hard",
+        "."
+      ],
+      "head_noun_indices": [
+        0,
+        6
+      ],
+      "explanation": "Consistency: 'One' is followed by 'one' in the subordinate clause."
+    },
+    {
+      "sentence_tokens": [
+        "The",
+        "climate",
+        "in",
+        "which",
+        "we",
+        "live",
+        "is",
+        "changing",
+        "rapidly",
+        "."
+      ],
+      "head_noun_indices": [
+        3,
+        1
+      ],
+      "explanation": "'In which' refers to the environment or setting ('climate')."
+    },
+    {
+      "sentence_tokens": [
+        "Who",
+        "did",
+        "you",
+        "say",
+        "was",
+        "responsible",
+        "for",
+        "this",
+        "mess",
+        "?"
+      ],
+      "head_noun_indices": [
+        0
+      ],
+      "explanation": "'Who' is the subject of 'was responsible'."
+    }
+  ],
+  "drill_tasks": [
+    {
+      "type": "MCQ",
+      "question": "To ________ should I address this complaint?",
+      "options": [
+        "who",
+        "whom",
+        "whose",
+        "which"
+      ],
+      "answer": "whom",
+      "explanation": "After a preposition ('To'), use the object form 'whom'."
+    },
+    {
+      "type": "MCQ",
+      "question": "There is a strong bond between my brother and ________.",
+      "options": [
+        "I",
+        "me",
+        "mine",
+        "myself"
+      ],
+      "answer": "me",
+      "explanation": "After 'between', use the object pronoun."
+    },
+    {
+      "type": "MCQ",
+      "question": "If ________ wants to succeed in life, one must work hard.",
+      "options": [
+        "you",
+        "he",
+        "one",
+        "they"
+      ],
+      "answer": "one",
+      "explanation": "Matches 'one' later in the sentence for formal consistency."
+    },
+    {
+      "type": "MCQ",
+      "question": "The company for ________ I work is moving to a new office.",
+      "options": [
+        "which",
+        "who",
+        "whom",
+        "that"
+      ],
+      "answer": "which",
+      "explanation": "'Company' is a thing, so use 'which' after the preposition 'for'."
+    },
+    {
+      "type": "MCQ",
+      "question": "________ is the student that won the competition?",
+      "options": [
+        "Whom",
+        "Who",
+        "Which",
+        "Whose"
+      ],
+      "answer": "Who",
+      "explanation": "Subject form 'Who' is needed."
+    }
+  ],
+  "boss_fight": {
+    "paragraph": "The man who I saw at the station was the one to who I had spoken. Between you and I, I think he is the best candidate. One must always be true to yourself.",
+    "errors": [
+      {
+        "original": "who I saw",
+        "correction": "whom I saw",
+        "explanation": "'Whom' is the object of the verb 'saw'."
+      },
+      {
+        "original": "to who",
+        "correction": "to whom",
+        "explanation": "After the preposition 'to', you must use 'whom'."
+      },
+      {
+        "original": "between you and I",
+        "correction": "between you and me",
+        "explanation": "'Between' requires object pronouns."
+      }
+    ]
+  },
+  "success_feedback": "Stellar! Your command of formal pronoun cases and relative structures is perfectly aligned with Level 5 expectations.",
+  "suggested_next_steps": [
+    "Explore complex pronoun substitution (e.g., 'so', 'did so').",
+    "Practice using 'whose' for both people and objects.",
+    "Try Level 7 for the ultimate 5** pronoun challenge!"
+  ],
+  "interactive_tasks": [],
+  "examples": [],
+  "key_points": []
+}

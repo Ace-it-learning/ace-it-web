@@ -1,0 +1,232 @@
+{
+  "type": "GRAMMAR",
+  "topic_id": "grammar_elite_inversion",
+  "level": "HKDSE Level 5",
+  "conceptual_explanation": "Level 5 Inversion Mastery focuses on formal academic and legal phrases like 'Under no circumstances' and 'Little did I know'. We also introduce 'Conditional Inversion', where we remove 'if' and swap the verb and subject (e.g., 'Had I known' instead of 'If I had known').",
+  "rule_cards": [
+    {
+      "name": "The 'Little' Trap",
+      "formula": "Little + did + Subject + Verb",
+      "correct": "Little did he know that a surprise was waiting for him.",
+      "incorrect": "Little he knew that..."
+    },
+    {
+      "name": "Absolute Prohibitions",
+      "formula": "Under no circumstances / At no time + Aux + Subject + Verb",
+      "correct": "Under no circumstances should you leave the building.",
+      "incorrect": "Under no circumstances you should leave..."
+    },
+    {
+      "name": "Conditional Inversion (Type 2 & 3)",
+      "formula": "Were / Had + Subject + ... (Replaces 'If')",
+      "correct": "Had I realized the cost, I wouldn't have bought it.",
+      "incorrect": "If had I realized..."
+    },
+    {
+      "name": "Rarely & Scarcely",
+      "formula": "Rarely / Scarcely + Aux + Subject + Verb",
+      "correct": "Rarely have we seen such dedication in a student.",
+      "incorrect": "Rarely we have seen..."
+    }
+  ],
+  "head_noun_tasks": [
+    {
+      "sentence_tokens": [
+        "Little",
+        "did",
+        "the",
+        "detective",
+        "suspect",
+        "that",
+        "the",
+        "butler",
+        "was",
+        "the",
+        "culprit",
+        "."
+      ],
+      "head_noun_indices": [
+        0
+      ],
+      "explanation": "'Little' at the start triggers the auxiliary 'did' before the subject 'the detective'."
+    },
+    {
+      "sentence_tokens": [
+        "Under",
+        "no",
+        "circumstances",
+        "are",
+        "students",
+        "permitted",
+        "to",
+        "enter",
+        "the",
+        "lab",
+        "alone",
+        "."
+      ],
+      "head_noun_indices": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "This formal negative phrase requires the verb 'are' before 'students'."
+    },
+    {
+      "sentence_tokens": [
+        "Had",
+        "the",
+        "company",
+        "invested",
+        "more",
+        "in",
+        "R&D",
+        ",",
+        "it",
+        "would",
+        "be",
+        "leading",
+        "the",
+        "market",
+        "."
+      ],
+      "head_noun_indices": [
+        0
+      ],
+      "explanation": "'Had' at the start replaces 'If the company had' and requires inversion."
+    },
+    {
+      "sentence_tokens": [
+        "Rarely",
+        "does",
+        "the",
+        "opportunity",
+        "arise",
+        "to",
+        "study",
+        "with",
+        "such",
+        "a",
+        "famous",
+        "professor",
+        "."
+      ],
+      "head_noun_indices": [
+        0
+      ],
+      "explanation": "'Rarely' is the inversion trigger here."
+    },
+    {
+      "sentence_tokens": [
+        "At",
+        "no",
+        "time",
+        "did",
+        "she",
+        "mention",
+        "her",
+        "intention",
+        "to",
+        "resign",
+        "."
+      ],
+      "head_noun_indices": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "'At no time' triggers the past tense inversion 'did she'."
+    }
+  ],
+  "drill_tasks": [
+    {
+      "type": "MCQ",
+      "question": "Little ________ that the company was about to go bankrupt.",
+      "options": [
+        "the employees knew",
+        "did the employees know",
+        "knew the employees",
+        "had the employees known"
+      ],
+      "answer": "did the employees know",
+      "explanation": "'Little' requires 'did' + subject + base verb."
+    },
+    {
+      "type": "MCQ",
+      "question": "Under no circumstances ________ the emergency exit unless there is a fire.",
+      "options": [
+        "you should use",
+        "should you use",
+        "must you to use",
+        "use you"
+      ],
+      "answer": "should you use",
+      "explanation": "Requires auxiliary before subject."
+    },
+    {
+      "type": "MCQ",
+      "question": "________ I known about the traffic, I would have left earlier.",
+      "options": [
+        "If had",
+        "Had",
+        "If I would have",
+        "Were"
+      ],
+      "answer": "Had",
+      "explanation": "Inverted conditional replaces 'If I had'."
+    },
+    {
+      "type": "MCQ",
+      "question": "Rarely ________ such a talented musician at such a young age.",
+      "options": [
+        "we see",
+        "do we see",
+        "we have seen",
+        "have we see"
+      ],
+      "answer": "do we see",
+      "explanation": "'Rarely' triggers 'do/does' inversion for present habits."
+    },
+    {
+      "type": "MCQ",
+      "question": "At no time ________ the truth during the entire trial.",
+      "options": [
+        "he told",
+        "did he tell",
+        "was he told",
+        "he had told"
+      ],
+      "answer": "did he tell",
+      "explanation": "'At no time' requires 'did' + subject."
+    }
+  ],
+  "boss_fight": {
+    "paragraph": "Little I suspected that the plan was a trick. Under no circumstances you are allowed to share this secret. Had I known the truth, I would never help him.",
+    "errors": [
+      {
+        "original": "Little I suspected",
+        "correction": "Little did I suspect",
+        "explanation": "'Little' requires 'did' + subject + base verb."
+      },
+      {
+        "original": "Under no circumstances you are",
+        "correction": "Under no circumstances are you",
+        "explanation": "Requires inversion (Verb 'are' before subject 'you')."
+      },
+      {
+        "original": "I would never help",
+        "correction": "I would never have helped",
+        "explanation": "In Type 3 conditionals (Had I known), the main clause must use 'would have + past participle'."
+      }
+    ]
+  },
+  "success_feedback": "Outstanding! You're using some of the most sophisticated formal structures in English. Your range is impressive.",
+  "suggested_next_steps": [
+    "Master 'No sooner... than' and 'In no way' triggers.",
+    "Study how 'So' and 'Neither' can trigger inversion in short responses.",
+    "Try Level 5* for elite-level complexity!"
+  ],
+  "interactive_tasks": [],
+  "examples": [],
+  "key_points": []
+}

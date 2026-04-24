@@ -1,0 +1,213 @@
+{
+  "type": "GRAMMAR",
+  "topic_id": "grammar_accuracy_countable",
+  "level": "HKDSE Level 3",
+  "conceptual_explanation": "Countable nouns are things we can count (1 book, 2 books). Uncountable nouns are things we cannot count as individual units (water, air, music). In HKDSE, the most important thing is to remember that Uncountable nouns are ALWAYS singular and use 'Much', while Countable nouns can be plural and use 'Many'.",
+  "rule_cards": [
+    {
+      "name": "The 'Many' vs 'Much' Rule",
+      "formula": "Many + Countable (Plural) / Much + Uncountable (Singular)",
+      "correct": "There are many students in the classroom.",
+      "incorrect": "There are much students in the classroom."
+    },
+    {
+      "name": "The 'Advice' Trap",
+      "formula": "Advice, Information, Homework = ALWAYS Uncountable (No 's')",
+      "correct": "The teacher gave me some useful advice.",
+      "incorrect": "The teacher gave me some useful advices."
+    },
+    {
+      "name": "Quantifiers: A few vs A little",
+      "formula": "A few + Countable / A little + Uncountable",
+      "correct": "I have a few coins in my pocket.",
+      "incorrect": "I have a little coins in my pocket."
+    },
+    {
+      "name": "The 'Water' Rule",
+      "formula": "Liquids, powders, and abstract ideas = Uncountable",
+      "correct": "The bottle is full of orange juice.",
+      "incorrect": "The bottle is full of orange juices."
+    }
+  ],
+  "head_noun_tasks": [
+    {
+      "sentence_tokens": [
+        "I",
+        "need",
+        "some",
+        "information",
+        "about",
+        "the",
+        "new",
+        "course",
+        "."
+      ],
+      "head_noun_indices": [
+        3
+      ],
+      "explanation": "'Information' is uncountable. It cannot be pluralized even if you are talking about multiple pieces of data."
+    },
+    {
+      "sentence_tokens": [
+        "There",
+        "is",
+        "too",
+        "much",
+        "sugar",
+        "in",
+        "this",
+        "cup",
+        "of",
+        "tea",
+        "."
+      ],
+      "head_noun_indices": [
+        4
+      ],
+      "explanation": "'Sugar' is uncountable (it's a powder/substance), so we use 'much' instead of 'many'."
+    },
+    {
+      "sentence_tokens": [
+        "He",
+        "has",
+        "finished",
+        "all",
+        "his",
+        "homework",
+        "already",
+        "."
+      ],
+      "head_noun_indices": [
+        5
+      ],
+      "explanation": "'Homework' is an uncountable concept. You cannot say 'homeworks'."
+    },
+    {
+      "sentence_tokens": [
+        "Can",
+        "you",
+        "give",
+        "me",
+        "a",
+        "few",
+        "suggestions",
+        "for",
+        "the",
+        "party",
+        "?"
+      ],
+      "head_noun_indices": [
+        5,
+        6
+      ],
+      "explanation": "'Suggestion' is countable, so it can be plural ('suggestions') and used with 'a few'."
+    },
+    {
+      "sentence_tokens": [
+        "The",
+        "music",
+        "was",
+        "too",
+        "loud",
+        "last",
+        "night",
+        "."
+      ],
+      "head_noun_indices": [
+        1
+      ],
+      "explanation": "'Music' is an uncountable abstract noun. It always takes a singular verb."
+    }
+  ],
+  "drill_tasks": [
+    {
+      "type": "MCQ",
+      "question": "How ________ luggage are you carrying today?",
+      "options": [
+        "many",
+        "much",
+        "few",
+        "a few"
+      ],
+      "answer": "much",
+      "explanation": "'Luggage' is uncountable (the individual items are bags, but the concept is uncountable)."
+    },
+    {
+      "type": "MCQ",
+      "question": "We don't have ________ furniture in our new flat yet.",
+      "options": [
+        "many",
+        "much",
+        "a few",
+        "any"
+      ],
+      "answer": "much",
+      "explanation": "'Furniture' is uncountable. 'Any' is also grammatically possible, but 'much' is the specific quantifier for quantity here."
+    },
+    {
+      "type": "MCQ",
+      "question": "The manager provided us with a lot of ________.",
+      "options": [
+        "useful informations",
+        "useful information",
+        "usefully information",
+        "usefuls information"
+      ],
+      "answer": "useful information",
+      "explanation": "'Information' is uncountable and never takes an 's'."
+    },
+    {
+      "type": "MCQ",
+      "question": "There are ________ people waiting at the bus stop.",
+      "options": [
+        "a little",
+        "much",
+        "a few",
+        "any"
+      ],
+      "answer": "a few",
+      "explanation": "'People' is the plural of 'person' (countable), so we use 'a few'."
+    },
+    {
+      "type": "MCQ",
+      "question": "I would like ________ milk in my coffee, please.",
+      "options": [
+        "a few",
+        "a little",
+        "many",
+        "few"
+      ],
+      "answer": "a little",
+      "explanation": "'Milk' is a liquid (uncountable), so we use 'a little'."
+    }
+  ],
+  "boss_fight": {
+    "paragraph": "I visited the library today to find many informations for my project. The librarian gave me many advices on how to search the database. I also found a few book that were very helpful.",
+    "errors": [
+      {
+        "original": "many informations",
+        "correction": "much information",
+        "explanation": "'Information' is uncountable and should not have an 's' or be used with 'many'."
+      },
+      {
+        "original": "many advices",
+        "correction": "some advice",
+        "explanation": "'Advice' is uncountable. Use 'some' or 'a lot of' instead of 'many'."
+      },
+      {
+        "original": "a few book",
+        "correction": "a few books",
+        "explanation": "'A few' must be followed by a plural countable noun."
+      }
+    ]
+  },
+  "success_feedback": "Well done! You've mastered the basic distinctions between countable and uncountable nouns.",
+  "suggested_next_steps": [
+    "Learn about collective nouns like 'staff' and 'police'.",
+    "Practice using 'little' vs 'a little' to express meaning.",
+    "Try Level 4 for more advanced quantifiers!"
+  ],
+  "interactive_tasks": [],
+  "examples": [],
+  "key_points": []
+}

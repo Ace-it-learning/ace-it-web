@@ -399,7 +399,7 @@ const SpeakingLanguageLab = () => {
                                 <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-xl border border-white/10">
                                     <Clock className="w-4 h-4 text-violet-200" />
                                     <div className="flex flex-col">
-                                        <span className="text-[8px] font-black uppercase tracking-widest text-violet-200">TTS Speed</span>
+                                        <span className="text-[9px] font-black uppercase tracking-widest text-violet-200">TTS Speed</span>
                                         <select 
                                             value={ttsSpeed} 
                                             onChange={(e) => setTtsSpeed(e.target.value)}

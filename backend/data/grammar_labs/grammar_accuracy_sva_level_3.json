@@ -1,0 +1,307 @@
+{
+  "type": "GRAMMAR",
+  "topic_id": "grammar_accuracy_sva",
+  "level": "HKDSE Level 5 (Strong)",
+  "conceptual_explanation": "In HKDSE English Paper 2 and Paper 3, mastering Subject-Verb Agreement (SVA) is a hallmark of Level 5+ writing. At this level, examiners actively look for complex sentences where the subject and verb are separated by distractors. You must be able to instantly identify the 'True Head Noun' and ignore prepositional phrases, parenthetical elements, and misleading quantifiers.",
+  "rule_cards": [
+    {
+      "name": "The Prepositional Phrase Trap",
+      "formula": "Subject + [Prepositional Phrase / Distractor] + Verb",
+      "correct": "The array of dim sum dishes on the trolley looks appetizing.",
+      "incorrect": "The array of dim sum dishes on the trolley look appetizing."
+    },
+    {
+      "name": "The 'Along With' Illusion",
+      "formula": "Subject 1 + [as well as / together with / including + Subject 2] + Verb (Agrees with Subject 1)",
+      "correct": "The principal, as well as the senior teachers, is attending the briefing.",
+      "incorrect": "The principal, as well as the senior teachers, are attending the briefing."
+    },
+    {
+      "name": "The Proximity Rule",
+      "formula": "Neither/Either + Noun 1 + Nor/Or + Noun 2 + Verb (Agrees with Noun 2)",
+      "correct": "Neither the passengers nor the driver was injured.",
+      "incorrect": "Neither the passengers nor the driver were injured."
+    },
+    {
+      "name": "The 'Number' Flip",
+      "formula": "'A number of' = Plural Verb | 'The number of' = Singular Verb",
+      "correct": "The number of DSE candidates is decreasing. / A number of candidates are anxious.",
+      "incorrect": "The number of DSE candidates are decreasing. / A number of candidates is anxious."
+    },
+    {
+      "name": "Relative Clause Antecedent Match",
+      "formula": "Noun + who/which/that + Verb (Agrees with Noun)",
+      "correct": "He is one of the students who study late at the library.",
+      "incorrect": "He is one of the students who studies late at the library."
+    }
+  ],
+  "head_noun_tasks": [
+    {
+      "sentence_tokens": [
+        "The",
+        "quality",
+        "of",
+        "the",
+        "newly",
+        "built",
+        "public",
+        "housing",
+        "estates",
+        "has",
+        "improved",
+        "."
+      ],
+      "head_noun_indices": [
+        1
+      ],
+      "explanation": "The head noun is 'quality' (Singular). The phrase 'of the newly built public housing estates' is a prepositional distractor. Therefore, the singular verb 'has' is correct."
+    },
+    {
+      "sentence_tokens": [
+        "The",
+        "chief",
+        "engineer",
+        ",",
+        "along",
+        "with",
+        "his",
+        "team",
+        "members",
+        ",",
+        "inspects",
+        "the",
+        "MTR",
+        "tracks",
+        "."
+      ],
+      "head_noun_indices": [
+        1,
+        2
+      ],
+      "explanation": "The head noun phrase is 'chief engineer' (Singular). Phrases starting with 'along with' do not make the subject plural. Therefore, the verb 'inspects' must be singular."
+    },
+    {
+      "sentence_tokens": [
+        "Neither",
+        "the",
+        "frustrated",
+        "commuters",
+        "nor",
+        "the",
+        "station",
+        "manager",
+        "knows",
+        "when",
+        "the",
+        "train",
+        "will",
+        "arrive",
+        "."
+      ],
+      "head_noun_indices": [
+        6,
+        7
+      ],
+      "explanation": "For correlative conjunctions 'Neither...nor', the verb agrees with the closest subject. The closest subject is 'station manager' (Singular), so the verb 'knows' must be singular."
+    },
+    {
+      "sentence_tokens": [
+        "The",
+        "number",
+        "of",
+        "tourists",
+        "visiting",
+        "the",
+        "Tsim",
+        "Sha",
+        "Tsui",
+        "promenade",
+        "is",
+        "increasing",
+        "."
+      ],
+      "head_noun_indices": [
+        1
+      ],
+      "explanation": "The phrase 'The number' refers to a singular mathematical figure or statistic, regardless of the plural noun 'tourists' that follows it. Therefore, the verb 'is' is singular."
+    },
+    {
+      "sentence_tokens": [
+        "This",
+        "cha",
+        "chaan",
+        "teng",
+        "is",
+        "the",
+        "only",
+        "one",
+        "of",
+        "the",
+        "local",
+        "restaurants",
+        "that",
+        "serves",
+        "traditional",
+        "silk-stocking",
+        "milk",
+        "tea",
+        "."
+      ],
+      "head_noun_indices": [
+        7
+      ],
+      "explanation": "The antecedent of 'that' is modified by 'the only one'. While 'the local restaurants' is plural, 'the only one' forces a singular verb 'serves'."
+    }
+  ],
+  "drill_tasks": [
+    {
+      "type": "MCQ",
+      "question": "The construction of the three new artificial islands ______ expected to alleviate Hong Kong's housing shortage.",
+      "options": [
+        "is",
+        "are",
+        "have been",
+        "were"
+      ],
+      "answer": "is",
+      "explanation": "Trap 1 (Prepositional Phrase). The true subject is 'The construction' (singular). The phrase 'of the three new artificial islands' is a distractor. Therefore, 'is' is correct."
+    },
+    {
+      "type": "MCQ",
+      "question": "The newly elected chairperson, as well as the committee members, ______ attending the press conference regarding the new curriculum.",
+      "options": [
+        "are",
+        "is",
+        "were",
+        "have been"
+      ],
+      "answer": "is",
+      "explanation": "Trap 2 (Along With). 'as well as the committee members' is a parenthetical phrase. The verb must agree with the singular subject 'chairperson'."
+    },
+    {
+      "type": "MCQ",
+      "question": "Neither the government officials nor the spokesperson ______ willing to comment on the sudden policy change during yesterday's briefing.",
+      "options": [
+        "were",
+        "was",
+        "are",
+        "have been"
+      ],
+      "answer": "was",
+      "explanation": "Trap 3 (Proximity Rule). When using 'neither/nor', the verb agrees with the closest noun. 'spokesperson' is singular, and the context is past tense ('yesterday'), so 'was' is correct."
+    },
+    {
+      "type": "MCQ",
+      "question": "______ number of complaints regarding the delayed MTR services have been filed by furious passengers.",
+      "options": [
+        "The",
+        "A",
+        "Any",
+        "Every"
+      ],
+      "answer": "A",
+      "explanation": "Trap 4 (The vs. A Number). The verb 'have been' is plural. 'A number of' takes a plural verb, whereas 'The number of' takes a singular verb."
+    },
+    {
+      "type": "MCQ",
+      "question": "Mr. Chan is one of those traditional tailors in Sham Shui Po who ______ completely by hand.",
+      "options": [
+        "stitches",
+        "stitch",
+        "is stitching",
+        "has stitched"
+      ],
+      "answer": "stitch",
+      "explanation": "Trap 5 (Relative Clause). The relative pronoun 'who' refers back to 'traditional tailors' (plural). Therefore, the verb must be the plural form 'stitch'."
+    },
+    {
+      "type": "MCQ",
+      "question": "The extensive network of underground tunnels in Hong Kong ______ maintenance on a rigorous schedule.",
+      "options": [
+        "requires",
+        "require",
+        "are requiring",
+        "have required"
+      ],
+      "answer": "requires",
+      "explanation": "Trap 1 (Prepositional Phrase). The core subject is 'The extensive network' (singular). The plural noun 'tunnels' is part of the prepositional phrase."
+    },
+    {
+      "type": "MCQ",
+      "question": "A massive typhoon, together with widespread blackouts, ______ caused severe disruptions across the New Territories.",
+      "options": [
+        "have",
+        "has",
+        "are",
+        "were"
+      ],
+      "answer": "has",
+      "explanation": "Trap 2 (Along With). The phrase 'together with widespread blackouts' does not compound the subject. The singular subject 'A massive typhoon' requires the singular verb 'has'."
+    },
+    {
+      "type": "MCQ",
+      "question": "Either the DSE students or the invigilator ______ responsible for reporting the malfunctioning audio equipment.",
+      "options": [
+        "is",
+        "are",
+        "have been",
+        "were"
+      ],
+      "answer": "is",
+      "explanation": "Trap 3 (Proximity Rule). For 'either/or', the verb matches the closest noun. The closest noun is 'invigilator' (singular), making 'is' the correct choice."
+    },
+    {
+      "type": "MCQ",
+      "question": "The number of independent bookstores in Mong Kok ______ dwindled significantly over the past decade.",
+      "options": [
+        "has",
+        "have",
+        "are",
+        "were"
+      ],
+      "answer": "has",
+      "explanation": "Trap 4 (The vs A Number). 'The number of' is always treated as a singular subject, regardless of the plural noun 'bookstores'. Hence, 'has dwindled' is correct."
+    },
+    {
+      "type": "MCQ",
+      "question": "The heritage conservation board recently evaluated several historical sites which ______ to be transformed into creative hubs.",
+      "options": [
+        "is",
+        "are",
+        "was",
+        "has been"
+      ],
+      "answer": "are",
+      "explanation": "Trap 5 (Relative Clause). The relative pronoun 'which' refers to 'several historical sites' (plural). Thus, the plural verb 'are' is required."
+    }
+  ],
+  "boss_fight": {
+    "paragraph": "The revitalization of the historical structures inside Central Market have sparked immense public interest. The number of visitors flocking to the newly opened stalls are exceeding initial expectations. The project manager, along with several local historians, believe that this initiative successfully preserves Hong Kong’s collective memory while fostering modern urban development.",
+    "errors": [
+      {
+        "original": "have",
+        "correction": "has",
+        "explanation": "The subject is 'The revitalization' (singular). 'of the historical structures inside Central Market' is a prepositional distractor."
+      },
+      {
+        "original": "are",
+        "correction": "is",
+        "explanation": "The subject 'The number of' always takes a singular verb, referring to the statistical figure, not the individual visitors."
+      },
+      {
+        "original": "believe",
+        "correction": "believes",
+        "explanation": "The subject is 'The project manager' (singular). The phrase 'along with several local historians' does not make the subject plural."
+      }
+    ]
+  },
+  "success_feedback": "Outstanding! You've successfully navigated the 5 trickiest Subject-Verb Agreement traps in the HKDSE. Your ability to isolate the true head noun amidst complex modifiers is exactly what Level 5** examiners are looking for in Paper 2 and Paper 3.",
+  "suggested_next_steps": [
+    "Review Advanced Relative Clauses (e.g., distinguishing 'one of the...' vs 'the ONLY one of the...').",
+    "Practice writing complex sentences in your Part B writing tasks incorporating 'A number of' vs 'The number of'.",
+    "Complete the Grammar Lab on 'Inversion' to further elevate your sentence variety."
+  ],
+  "interactive_tasks": [],
+  "examples": [],
+  "key_points": []
+}

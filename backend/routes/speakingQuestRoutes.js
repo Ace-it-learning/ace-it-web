@@ -298,11 +298,29 @@ router.post('/quest/submit', upload.single('audio'), async (req, res) => {
         // AWARD XP
         let xpResult = { earned: 0 };
         if (finalResult.scores && finalResult.scores.total > 0 && uid && uid !== 'guest') {
-            const maxXP = 200;
-            const scoreRatio = Math.min(finalResult.scores.total / 28, 1);
-            const xpAmount = Math.round(scoreRatio * maxXP);
+            // New standardized XP logic
+            let baseXP = 150; // Default (Interaction/Group Discussion)
+            
+            // Scaled Criteria (everything except interaction)
+            if (module !== 'interaction') {
+                const GamificationService = require('../services/GamificationService');
+                baseXP = GamificationService.getTieredXP(level || '4');
+            }
 
-            xpResult = await GamificationService.awardXP(uid, xpAmount, 'speaking', {
+            let questBonus = 0;
+            // Handle Weekly Quest award
+            if (req.body.isWeeklyQuest) {
+                const weeklyResult = await GamificationService.awardWeeklyQuestCompletion(uid);
+                if (weeklyResult.success) {
+                    questBonus = weeklyResult.earned;
+                    baseXP = 250; // Set base to weekly standard
+                }
+            }
+
+            const scoreRatio = Math.min(finalResult.scores.total / 28, 1);
+            const rewardAmount = Math.round(scoreRatio * baseXP);
+
+            xpResult = await GamificationService.awardXP(uid, rewardAmount, 'speaking', {
                 title: req.body.missionName || `${module.charAt(0).toUpperCase() + module.slice(1)} Practice`,
                 score: `${finalResult.scores.total}/28`,
                 subject: 'english',
@@ -310,6 +328,8 @@ router.post('/quest/submit', upload.single('audio'), async (req, res) => {
                 questName: req.body.missionName || `${module.charAt(0).toUpperCase() + module.slice(1)} Quest`,
                 resultId: resultId
             }) || { earned: 0 };
+            
+            xpResult.earned += questBonus;
         }
 
         // UPDATE MICRO-SKILL MASTERY
@@ -339,7 +359,8 @@ router.post('/quest/submit', upload.single('audio'), async (req, res) => {
             feedback: finalResult.feedback,
             word_analysis: finalResult.word_analysis || [],
             transcript: historyToGrade || [],
-            xp_awarded: xpResult.earned || 0
+            xp_awarded: xpResult?.earned || 0,
+            xp_breakdown: xpResult?.breakdown
         });
     } catch (error) {
         console.error('[Speaking Quest] Submission error:', error);

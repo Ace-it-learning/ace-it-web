@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { Loader2 } from 'lucide-react';
+import { LoadingPage, GradingOverlay } from '../components/shared';
 import { useAuth } from '../context/AuthContext';
 
 // Studio Components
@@ -383,11 +383,10 @@ const WritingQuestPage = () => {
 
     if (step === 'loading') {
         return (
-            <div className="min-h-screen bg-slate-50 flex flex-col items-center justify-center text-slate-400">
-                <Loader2 size={64} className="animate-spin mb-6 text-indigo-500" />
-                <h3 className="text-2xl font-black text-slate-800 tracking-tight">Initializing Writing Studio...</h3>
-                <p className="text-sm mt-2 font-bold text-slate-400 uppercase tracking-widest">Applying HKDSE Constraints</p>
-            </div>
+            <LoadingPage 
+                title="Initializing Writing Studio..." 
+                subtext="Applying HKDSE Constraints and calibrating the environment."
+            />
         );
     }
 
@@ -447,7 +446,14 @@ const WritingQuestPage = () => {
             onToggleSidebar={() => setIsSidebarOpen(!isSidebarOpen)}
             isLeftSidebarOpen={isLeftSidebarOpen}
             onToggleLeftSidebar={() => setIsLeftSidebarOpen(!isLeftSidebarOpen)}
-        />
+        >
+            {/* Grading & Review Overlay */}
+            <GradingOverlay 
+                isOpen={isReviewing || isSubmitting} 
+                title={isSubmitting ? "Finalizing Submission" : "Evaluating Writing"}
+                status={isSubmitting ? "Transmitting your response to AI examiners..." : "Miss Janie is reviewing your work..."}
+            />
+        </WritingStudioLayout>
     );
 };
 

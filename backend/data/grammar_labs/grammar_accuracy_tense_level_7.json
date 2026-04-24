@@ -1,0 +1,245 @@
+{
+  "type": "GRAMMAR",
+  "topic_id": "grammar_accuracy_tense",
+  "level": "HKDSE Level 5**",
+  "conceptual_explanation": "The 5** plateau requires mastery of 'Past Unreal' scenarios (Type 3) and the even more treacherous 'Mixed Conditionals' (e.g., past cause, present effect). You must also handle sophisticated structures like Inversion for emphasis and the Subjunctive mood in archaic or highly formal contexts, ensuring that tense remains logically consistent even when the syntax is inverted.",
+  "rule_cards": [
+    {
+      "name": "Type 3 Conditional (Past Unreal)",
+      "formula": "If + Past Perfect (had + V-pp), Subject + would have + V-pp",
+      "correct": "If we had invested in Bitcoin in 2010, we would have been millionaires now.",
+      "incorrect": "If we invested in Bitcoin in 2010, we would have been millionaires now."
+    },
+    {
+      "name": "The Inversion Trap",
+      "formula": "Hardly / No sooner + Had + Subject + V-pp ... When / Than ...",
+      "correct": "Hardly had the meeting started when the fire alarm rang.",
+      "incorrect": "Hardly the meeting had started when the fire alarm rang."
+    },
+    {
+      "name": "Mixed Conditionals",
+      "formula": "If + Past Perfect (Past cause) + Subject + Would + Verb (Present effect)",
+      "correct": "If I had taken the medicine yesterday, I would feel better today.",
+      "incorrect": "If I had taken the medicine yesterday, I would have felt better today. (Unless you mean you felt better yesterday)"
+    },
+    {
+      "name": "The 'Lest' Subjunctive",
+      "formula": "Lest + Subject + (should) + Base Verb",
+      "correct": "He checked the documents again lest there (should) be any errors.",
+      "incorrect": "He checked the documents again lest there are any errors."
+    }
+  ],
+  "head_noun_tasks": [
+    {
+      "sentence_tokens": [
+        "Had",
+        "I",
+        "known",
+        "about",
+        "the",
+        "traffic",
+        "jam",
+        ",",
+        "I",
+        "would",
+        "have",
+        "taken",
+        "the",
+        "MTR",
+        "."
+      ],
+      "head_noun_indices": [
+        0,
+        2
+      ],
+      "explanation": "This is an inverted Type 3 conditional ('Had I known' = 'If I had known'), expressing a past unreal situation."
+    },
+    {
+      "sentence_tokens": [
+        "No",
+        "sooner",
+        "had",
+        "the",
+        "star",
+        "appeared",
+        "than",
+        "the",
+        "crowd",
+        "began",
+        "to",
+        "cheer",
+        "."
+      ],
+      "head_noun_indices": [
+        0,
+        1,
+        2,
+        6
+      ],
+      "explanation": "'No sooner... than' is a sophisticated structure for immediate sequence, requiring 'had' + subject + V-pp."
+    },
+    {
+      "sentence_tokens": [
+        "If",
+        "he",
+        "were",
+        "not",
+        "so",
+        "lazy",
+        ",",
+        "he",
+        "would",
+        "have",
+        "finished",
+        "the",
+        "report",
+        "by",
+        "now",
+        "."
+      ],
+      "head_noun_indices": [
+        2,
+        8,
+        9,
+        10
+      ],
+      "explanation": "Mixed conditional: Present state ('If he were not so lazy') leading to a past unrealized result ('would have finished')."
+    },
+    {
+      "sentence_tokens": [
+        "It",
+        "is",
+        "imperative",
+        "that",
+        "the",
+        "witness",
+        "remain",
+        "silent",
+        "during",
+        " the",
+        "trial",
+        "."
+      ],
+      "head_noun_indices": [
+        6
+      ],
+      "explanation": "The subjunctive 'remain' (base form) is used after verbs/adjectives of urgency like 'imperative'."
+    },
+    {
+      "sentence_tokens": [
+        "Supposing",
+        "you",
+        "had",
+        "won",
+        "the",
+        "lottery",
+        ",",
+        "how",
+        "would",
+        "you",
+        "have",
+        "spent",
+        "the",
+        "money",
+        "?"
+      ],
+      "head_noun_indices": [
+        0,
+        2,
+        3
+      ],
+      "explanation": "'Supposing' acts as a conditional conjunction for hypothetical past scenarios (Type 3)."
+    }
+  ],
+  "drill_tasks": [
+    {
+      "type": "MCQ",
+      "question": "If you ________ more attention in class last semester, you would find this module much easier now.",
+      "options": [
+        "paid",
+        "pay",
+        "had paid",
+        "have paid"
+      ],
+      "answer": "had paid",
+      "explanation": "Mixed conditional: Past unreal cause ('had paid') + Present effect ('would find')."
+    },
+    {
+      "type": "MCQ",
+      "question": "No sooner ________ the plane landed than the passengers unbuckled their seatbelts.",
+      "options": [
+        "did",
+        "has",
+        "had",
+        "was"
+      ],
+      "answer": "had",
+      "explanation": "'No sooner' requires inversion with Past Perfect."
+    },
+    {
+      "type": "MCQ",
+      "question": "The principal suggested that the student ________ the exam next month.",
+      "options": [
+        "retake",
+        "retakes",
+        "retook",
+        "will retake"
+      ],
+      "answer": "retake",
+      "explanation": "Subjunctive mood after 'suggested': Base form 'retake'."
+    },
+    {
+      "type": "MCQ",
+      "question": "If the fire department ________ so quickly, the entire building would have been destroyed.",
+      "options": [
+        "didn't react",
+        "wouldn't react",
+        "hadn't reacted",
+        "hasn't reacted"
+      ],
+      "answer": "hadn't reacted",
+      "explanation": "Type 3 conditional: 'If' + Past Perfect for a past unreal event."
+    },
+    {
+      "type": "MCQ",
+      "question": "I would rather you ________ tell her the truth when you saw her yesterday.",
+      "options": [
+        "did",
+        "had",
+        "had told",
+        "told"
+      ],
+      "answer": "had told",
+      "explanation": "'I would rather' + Subject + Past Perfect for a past regret/preference."
+    }
+  ],
+  "boss_fight": {
+    "paragraph": "If the government has listened to the experts earlier, the pandemic would not have spread so rapidly. Hardly the lockdown had been announced when panic buying began. We must act now lest the situation worsens any further.",
+    "errors": [
+      {
+        "original": "has listened",
+        "correction": "had listened",
+        "explanation": "Type 3 conditional (past unreal) requires 'had' + V-pp."
+      },
+      {
+        "original": "Hardly the lockdown had been announced",
+        "correction": "Hardly had the lockdown been announced",
+        "explanation": "Inversion is required after 'Hardly'."
+      },
+      {
+        "original": "worsens",
+        "correction": "worsen",
+        "explanation": "The subjunctive after 'lest' requires the base form of the verb."
+      }
+    ]
+  },
+  "success_feedback": "Incredible! You have conquered the most sophisticated tense structures in the English language. Your mastery of 5** nuances is truly exceptional.",
+  "suggested_next_steps": [
+    "Read academic journals or classic literature to see these advanced structures in use.",
+    "Practice 'Inverted Conditionals' (e.g., 'Should you need any help...') in formal letters.",
+    "Teach these concepts to a peer to solidify your own understanding!"
+  ],
+  "interactive_tasks": [],
+  "examples": [],
+  "key_points": []
+}

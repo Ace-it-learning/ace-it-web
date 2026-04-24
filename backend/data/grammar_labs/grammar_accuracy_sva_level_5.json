@@ -1,0 +1,297 @@
+{
+  "type": "GRAMMAR",
+  "topic_id": "grammar_accuracy_sva",
+  "level": "HKDSE Level 5",
+  "conceptual_explanation": "Subject-Verb Agreement (SVA) at Level 5 requires looking past immediate neighbors to find the true grammatical subject. Advanced HKDSE traps use syntactic camouflage—such as prepositional phrases, relative clauses, and additive modifiers ('along with')—to separate the head noun from its verb, tricking candidates into matching the verb with the nearest noun instead of the actual subject.",
+  "rule_cards": [
+    {
+      "name": "The Prepositional Phrase Trap",
+      "formula": "Head Noun + [of/in/on/between + Distractor Noun] + Verb (Agrees with Head Noun)",
+      "correct": "The array of dim sum dishes takes hours to prepare.",
+      "incorrect": "The array of dim sum dishes take hours to prepare."
+    },
+    {
+      "name": "The 'Along With' Illusion",
+      "formula": "Subject 1 + [as well as / together with / including + Subject 2] + Verb (Agrees with Subject 1 only)",
+      "correct": "The principal, as well as the teachers, is attending the assembly.",
+      "incorrect": "The principal, as well as the teachers, are attending the assembly."
+    },
+    {
+      "name": "The 'Number' Flip",
+      "formula": "'A number of' + Plural Noun = Plural Verb. 'The number of' + Plural Noun = Singular Verb.",
+      "correct": "A number of students are late. The number of absences is alarming.",
+      "incorrect": "A number of students is late. The number of absences are alarming."
+    },
+    {
+      "name": "The Proximity Rule",
+      "formula": "Neither A nor B / Either A or B + Verb (Agrees with B, the closest subject)",
+      "correct": "Neither the manager nor the clerks know the password.",
+      "incorrect": "Neither the manager nor the clerks knows the password."
+    }
+  ],
+  "head_noun_tasks": [
+    {
+      "sentence_tokens": [
+        "The",
+        "construction",
+        "of",
+        "several",
+        "new",
+        "housing",
+        "estates",
+        "in",
+        "Kai",
+        "Tak",
+        "requires",
+        "careful",
+        "planning",
+        "."
+      ],
+      "head_noun_indices": [
+        1
+      ],
+      "explanation": "The true subject is 'construction' (singular). The plural nouns 'estates' and 'Tak' are trapped inside prepositional phrases ('of several new housing estates', 'in Kai Tak') and do not dictate the verb form."
+    },
+    {
+      "sentence_tokens": [
+        "The",
+        "Chief",
+        "Executive",
+        ",",
+        "along",
+        "with",
+        "several",
+        "government",
+        "officials",
+        ",",
+        "attends",
+        "the",
+        "flag-raising",
+        "ceremony",
+        "."
+      ],
+      "head_noun_indices": [
+        1,
+        2
+      ],
+      "explanation": "The subject is 'Chief Executive' (singular). The phrase 'along with several government officials' is additive, not a conjunction like 'and', so it does not make the subject plural."
+    },
+    {
+      "sentence_tokens": [
+        "He",
+        "is",
+        "one",
+        "of",
+        "the",
+        "candidates",
+        "who",
+        "aim",
+        "for",
+        "a",
+        "Level",
+        "5**",
+        "in",
+        "English",
+        "."
+      ],
+      "head_noun_indices": [
+        5
+      ],
+      "explanation": "In the relative clause 'who aim', the pronoun 'who' refers back to 'candidates' (plural). Therefore, the verb 'aim' must be plural to agree with 'candidates', not 'one'."
+    },
+    {
+      "sentence_tokens": [
+        "A",
+        "number",
+        "of",
+        "local",
+        "cafes",
+        "are",
+        "updating",
+        "their",
+        "menus",
+        "to",
+        "include",
+        "oat",
+        "milk",
+        "."
+      ],
+      "head_noun_indices": [
+        4
+      ],
+      "explanation": "Grammatically, 'A number of' functions as a plural quantifier (like 'many'), making 'cafes' the plural head noun that governs the plural verb 'are'."
+    },
+    {
+      "sentence_tokens": [
+        "Neither",
+        "the",
+        "principal",
+        "nor",
+        "the",
+        "teachers",
+        "agree",
+        "with",
+        "the",
+        "revised",
+        "homework",
+        "policy",
+        "."
+      ],
+      "head_noun_indices": [
+        5
+      ],
+      "explanation": "Under the Proximity Rule for correlative conjunctions (neither...nor), the verb 'agree' must match the noun closest to it, which is the plural noun 'teachers'."
+    }
+  ],
+  "drill_tasks": [
+    {
+      "type": "MCQ",
+      "question": "The stringent regulations regarding the importation of foreign poultry ________ currently under review by the Food and Environmental Hygiene Department.",
+      "options": [
+        "is",
+        "are",
+        "has been",
+        "was"
+      ],
+      "answer": "are",
+      "explanation": "The head noun is 'regulations' (plural). 'regarding the importation of foreign poultry' is a modifying phrase. Therefore, the plural verb 'are' is required."
+    },
+    {
+      "type": "MCQ",
+      "question": "The station manager, as well as several platform assistants at Admiralty, ________ highly praised for handling the morning rush hour efficiently.",
+      "options": [
+        "was",
+        "were",
+        "have been",
+        "are"
+      ],
+      "answer": "was",
+      "explanation": "The subject is 'station manager' (singular). The phrase 'as well as several platform assistants' does not create a plural subject."
+    },
+    {
+      "type": "MCQ",
+      "question": "________ the number of daily commuters crossing the border returned to pre-pandemic levels yet?",
+      "options": [
+        "Has",
+        "Have",
+        "Is",
+        "Are"
+      ],
+      "answer": "Has",
+      "explanation": "'The number of' always takes a singular verb, unlike 'A number of'. Thus, the singular auxiliary 'Has' is correct."
+    },
+    {
+      "type": "MCQ",
+      "question": "Neither the bus driver nor the passengers ________ aware that the Cross-Harbour Tunnel was entirely blocked.",
+      "options": [
+        "was",
+        "were",
+        "has been",
+        "is"
+      ],
+      "answer": "were",
+      "explanation": "According to the Proximity Rule, the verb agrees with the closest subject. 'passengers' is plural, so 'were' is correct."
+    },
+    {
+      "type": "MCQ",
+      "question": "It is one of the heritage buildings in Tai Kwun that ________ been extensively revitalized over the past decade.",
+      "options": [
+        "has",
+        "have",
+        "is",
+        "are"
+      ],
+      "answer": "have",
+      "explanation": "The relative pronoun 'that' refers back to 'buildings' (plural), not 'one'. Therefore, the plural verb 'have' must be used."
+    },
+    {
+      "type": "MCQ",
+      "question": "A growing number of secondary school graduates in Hong Kong ________ to pursue vocational training instead of traditional university degrees.",
+      "options": [
+        "chooses",
+        "choose",
+        "is choosing",
+        "has chosen"
+      ],
+      "answer": "choose",
+      "explanation": "'A number of' acts as a plural quantifier, meaning 'many'. Therefore, the subject 'graduates' requires the plural verb 'choose'."
+    },
+    {
+      "type": "MCQ",
+      "question": "The discrepancy between the company's reported profits and the actual revenue ________ raised concerns among local investors.",
+      "options": [
+        "have",
+        "has",
+        "are",
+        "were"
+      ],
+      "answer": "has",
+      "explanation": "The head noun is 'discrepancy' (singular). 'between the company's reported profits and the actual revenue' is a prepositional phrase trap. Use the singular 'has'."
+    },
+    {
+      "type": "MCQ",
+      "question": "The newly elected committee chairman, accompanied by his vice-chairpersons, ________ scheduled to address the press outside the Legislative Council.",
+      "options": [
+        "is",
+        "are",
+        "have",
+        "has"
+      ],
+      "answer": "is",
+      "explanation": "The subject 'chairman' is singular. The 'accompanied by...' phrase is parenthetical and does not alter the verb agreement. 'is' is the correct singular copula."
+    },
+    {
+      "type": "MCQ",
+      "question": "Either the severe typhoons or the recent black rainstorm ________ responsible for the severe flooding in Wong Tai Sin.",
+      "options": [
+        "is",
+        "are",
+        "were",
+        "have been"
+      ],
+      "answer": "is",
+      "explanation": "In 'Either A or B' structures, the verb agrees with B. 'black rainstorm' is singular, so the singular verb 'is' is correct."
+    },
+    {
+      "type": "MCQ",
+      "question": "She is the only one of the applicants who ________ fluent Cantonese and Hakka.",
+      "options": [
+        "speak",
+        "speaks",
+        "are speaking",
+        "have spoken"
+      ],
+      "answer": "speaks",
+      "explanation": "While 'one of the [plural noun] who' usually takes a plural verb, the phrase 'the ONLY one of the [plural noun] who' takes a singular verb because the antecedent logic restricts the action to just her. Thus, 'speaks' is correct."
+    }
+  ],
+  "boss_fight": {
+    "paragraph": "The implementation of the new waste charging regulations in various housing estates have sparked intense debate. A significant number of residents feels confused by the designated garbage bags. Moreover, the property manager, along with the cleaning staff, are struggling to enforce the complex guidelines across all residential blocks.",
+    "errors": [
+      {
+        "original": "have sparked",
+        "correction": "has sparked",
+        "explanation": "The head noun is 'implementation' (singular). The phrase 'of the new waste charging regulations in various housing estates' is a prepositional distractor."
+      },
+      {
+        "original": "feels",
+        "correction": "feel",
+        "explanation": "The phrase 'A significant number of' functions as a plural quantifier for 'residents'. Therefore, it requires the plural verb 'feel'."
+      },
+      {
+        "original": "are struggling",
+        "correction": "is struggling",
+        "explanation": "The subject is 'property manager' (singular). The parenthetical phrase 'along with the cleaning staff' does not make the subject plural."
+      }
+    ]
+  },
+  "success_feedback": "Excellent work! You have successfully navigated the highest-level HKDSE Subject-Verb Agreement traps. You proved you can identify the true head noun amidst heavy syntactic camouflage.",
+  "suggested_next_steps": [
+    "Review 'Relative Clause Agreement' specifically focusing on 'one of the...' vs 'the only one of the...'",
+    "Practice identifying Head Nouns in inverted sentences (e.g., 'Behind the school stand two tall trees').",
+    "Complete a full HKDSE Paper 2 writing task and manually proofread your draft solely for Subject-Verb Agreement."
+  ],
+  "interactive_tasks": [],
+  "examples": [],
+  "key_points": []
+}

@@ -1,0 +1,106 @@
+{
+  "meta": {
+    "title": "Global Food Security",
+    "topic": "Global Food Security",
+    "generated_at": "2026-04-23T14:03:00.000Z",
+    "blueprint_version": "2026_V1"
+  },
+  "Part_A": {
+    "part": "Part A",
+    "genre": "Feedback Report",
+    "title": "Feedback on 'Meatless Mondays' and Lab-Grown Protein",
+    "instructions": "Write a feedback report in about 200 words.",
+    "situation": "The school cafeteria is planning to introduce 'Meatless Mondays' and is even considering serving lab-grown protein options in the future to promote sustainability. The School Council has asked for a report summarizing student opinions.",
+    "requirements": [
+      "Summarize the potential health and environmental benefits of reducing meat consumption in schools.",
+      "Identify one major concern students might have (e.g., taste, cost, 'unnatural' food) and suggest a way to address it.",
+      "State your final recommendation on whether the school should proceed with these plans."
+    ],
+    "format_guides": [
+      "Use clear headings.",
+      "Address the report to 'The School Council'."
+    ]
+  },
+  "Part_B": [
+    {
+      "elective": "Sports Communication",
+      "type": "Article",
+      "question": "The impact of a 'Plant-Based Diet' on elite athlete performance.",
+      "requirements": [
+        "Discuss the growing trend of top athletes (e.g., in tennis, F1) switching to vegan or vegetarian diets.",
+        "Address the myth that you 'need meat' for strength and endurance.",
+        "Evaluate whether sports organizations should promote plant-based eating to their fans for environmental reasons."
+      ]
+    },
+    {
+      "elective": "Drama",
+      "type": "Dramatic Script",
+      "question": "A scene between a traditional farmer and a biotech scientist arguing over the 'soul' of food and lab-grown meat.",
+      "requirements": [
+        "Contrast the farmer's 'connection to the land' with the scientist's 'efficiency and logic'.",
+        "Include a moment where they find common ground (e.g., the desire to end world hunger).",
+        "Provide stage directions that reflect the tension and the setting (a laboratory vs. a field)."
+      ]
+    },
+    {
+      "elective": "Short Stories",
+      "type": "Short Story",
+      "question": "A story about a 'Community Fridge' in a high-rise city and the people who use it.",
+      "requirements": [
+        "Describe the diverse range of characters who visit the fridge (e.g., a struggling student, a wasteful restaurateur).",
+        "Focus on an interaction between two people from different social backgrounds at the fridge.",
+        "Show how the fridge becomes a symbol of hope and shared responsibility in a cold city."
+      ]
+    },
+    {
+      "elective": "Popular Culture",
+      "type": "Blog Post",
+      "question": "The 'Foodie' Paradox: How social media 'Mukbangs' and food waste coexist with global hunger.",
+      "requirements": [
+        "Critique the culture of 'over-consumption' and 'visual waste' on platforms like YouTube and Instagram.",
+        "Discuss how influencers can use their platform to promote 'ugly fruit' and zero-waste cooking instead.",
+        "Provide advice on how to be a 'responsible foodie' in the digital age."
+      ]
+    },
+    {
+      "elective": "Social Issues",
+      "type": "Article",
+      "question": "The 'Hidden Hunger' in Developed Cities: Why food security is a problem even in Hong Kong.",
+      "requirements": [
+        "Explain how the high cost of living in HK leads to 'nutritional poverty' for low-income families.",
+        "Discuss the role of NGOs and 'Food Banks' in bridging the gap between waste and want.",
+        "Propose one long-term solution (e.g., urban farming, government subsidies) for HK's food security."
+      ]
+    },
+    {
+      "elective": "Debating",
+      "type": "Formal Debate Speech",
+      "question": "'That lab-grown meat is the only ethical solution to the climate crisis.'",
+      "requirements": [
+        "Argue that traditional livestock farming is mathematically unsustainable for a population of 10 billion.",
+        "Address the 'unnatural' argument by comparing lab-grown meat to other processed foods we already accept.",
+        "Conclude with a vision of a future where 'meat without slaughter' is the moral norm."
+      ]
+    },
+    {
+      "elective": "Workplace Communication",
+      "type": "Formal Proposal",
+      "question": "A proposal for a startup to build 'Vertical Farms' in abandoned industrial buildings in Kwun Tong.",
+      "requirements": [
+        "Explain the 'Farm-to-Table' benefits of growing food in the heart of the city (e.g., zero transport emissions).",
+        "Outline the technology needed (e.g., hydroponics, LED lighting) and the estimated resources.",
+        "Describe how this project will create 'Green Jobs' for local youth."
+      ]
+    },
+    {
+      "elective": "Songs and Poems",
+      "type": "Review",
+      "question": "A review of a song or poem that addresses the 'Sacredness of the Harvest' or the 'Scarcity of Food'.",
+      "requirements": [
+        "Identify the central metaphor used to represent food (e.g., gold, blood, the earth's gift).",
+        "Discuss how the work's tone shifts from 'gratitude' to 'warning' regarding our future.",
+        "Explain why this work is a powerful 'call to action' for global sustainability."
+      ]
+    }
+  ]
+}

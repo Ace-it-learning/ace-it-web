@@ -4,6 +4,7 @@ import { useAuth } from '../context/AuthContext';
 import { useLanguage } from '../context/LanguageContext';
 import { useAvatar } from '../context/AvatarContext';
 import { X, ArrowRight, ArrowLeft, CheckCircle, AlertCircle, RotateCcw, ChevronDown, Lightbulb, Maximize2, Minimize2 } from 'lucide-react';
+import { LoadingPage } from '../components/shared';
 import { SafeInlineMath, SafeBlockMath } from '../components/maths/SafeMath';
 import 'katex/dist/katex.min.css';
 import MathInput from '../components/maths/MathInput';
@@ -37,7 +38,24 @@ const MathsLabPage = () => {
     const [answers, setAnswers] = useState({}); // Map: { qId: answerVal }
     const [imageAnswers, setImageAnswers] = useState({}); // Map: { qId: imageUrl }
     const [showCheatMenu, setShowCheatMenu] = useState(false);
-    const [step, setStep] = useState('PRACTICE'); // EXPLORE, PRACTICE
+    const [step, setStep] = useState(searchParams.get('step') || 'PRACTICE'); // EXPLORE, PRACTICE
+    
+    // Sync step with URL
+    useEffect(() => {
+        const urlStep = searchParams.get('step');
+        if (urlStep && urlStep !== step) {
+            setStep(urlStep);
+        }
+    }, [searchParams]);
+
+    // Helper to update step and URL
+    const updateStep = (newStep) => {
+        setStep(newStep);
+        const newParams = new URLSearchParams(searchParams);
+        newParams.set('step', newStep);
+        setSearchParams(newParams);
+    };
+
     const [hints, setHints] = useState([]); // Array of progressive hints
     const [hintIndex, setHintIndex] = useState(-1);
     const [loadingHint, setLoadingHint] = useState(false);
@@ -790,7 +808,14 @@ const MathsLabPage = () => {
         );
     };
 
-    if (loading) return <div className="min-h-screen bg-slate-50 flex flex-col items-center justify-center"><div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-600 mb-4"></div><h2 className="text-xl font-bold text-slate-700">Generating Practice Set...</h2><p className="text-slate-500">Preparing questions for {getMathSkillName(topic, language)}</p></div>;
+    if (loading) {
+        return (
+            <LoadingPage 
+                title="Synthesizing Mathematical Lab..." 
+                subtext={`Preparing HKDSE practice set for ${getMathSkillName(topic, language)}.`}
+            />
+        );
+    }
 
     // Explicitly handle empty state to prevent infinite blank screen
     if (!loading && !error && questions.length === 0) {

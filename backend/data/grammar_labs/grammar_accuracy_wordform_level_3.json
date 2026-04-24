@@ -1,0 +1,210 @@
+{
+  "type": "GRAMMAR",
+  "topic_id": "grammar_accuracy_wordform",
+  "level": "HKDSE Level 3",
+  "conceptual_explanation": "Word Form means choosing the right version of a word (Noun, Verb, Adjective, or Adverb) to fit in a sentence. In HKDSE, you must check what the word is doing: Is it describing a person (Adjective)? Is it an action (Verb)? Or is it describing how an action is done (Adverb)?",
+  "rule_cards": [
+    {
+      "name": "Adjective vs Adverb",
+      "formula": "Adjective + Noun / Verb + Adverb (-ly)",
+      "correct": "He is a careful driver. / He drives carefully.",
+      "incorrect": "He drives careful."
+    },
+    {
+      "name": "The 'Success' Rule",
+      "formula": "Succeed (Verb) -> Success (Noun) -> Successful (Adjective)",
+      "correct": "She is a successful athlete.",
+      "incorrect": "She is a success athlete."
+    },
+    {
+      "name": "Noun suffixes (-ness, -ity)",
+      "formula": "Adjective + suffix = Noun",
+      "correct": "Her kindness touched everyone's heart.",
+      "incorrect": "Her kind touched everyone's heart."
+    },
+    {
+      "name": "The '-ful' vs '-less' Rule",
+      "formula": "-ful (with) vs -less (without)",
+      "correct": "This map is very useful. / This broken umbrella is useless.",
+      "incorrect": "This map is very usefully."
+    }
+  ],
+  "head_noun_tasks": [
+    {
+      "sentence_tokens": [
+        "The",
+        "students",
+        "listened",
+        "attentively",
+        "to",
+        "the",
+        "teacher",
+        "."
+      ],
+      "head_noun_indices": [
+        3
+      ],
+      "target_type": "Adverb",
+      "explanation": "'Attentively' is an adverb describing the action 'listened'."
+    },
+    {
+      "sentence_tokens": [
+        "Health",
+        "is",
+        "more",
+        "important",
+        "than",
+        "wealth",
+        "."
+      ],
+      "head_noun_indices": [
+        3
+      ],
+      "target_type": "Adjective",
+      "explanation": "'Important' is an adjective describing the noun 'Health'."
+    },
+    {
+      "sentence_tokens": [
+        "He",
+        "successfully",
+        "completed",
+        "the",
+        "marathon",
+        "."
+      ],
+      "head_noun_indices": [
+        1
+      ],
+      "target_type": "Adverb",
+      "explanation": "'Successfully' is an adverb describing how the marathon was 'completed'."
+    },
+    {
+      "sentence_tokens": [
+        "The",
+        "darkness",
+        "made",
+        "it",
+        "hard",
+        "to",
+        "see",
+        "the",
+        "path",
+        "."
+      ],
+      "head_noun_indices": [
+        1
+      ],
+      "target_type": "Noun",
+      "explanation": "'Darkness' is the noun form of the adjective 'dark', acting as the subject."
+    },
+    {
+      "sentence_tokens": [
+        "She",
+        "wore",
+        "a",
+        "beautiful",
+        "dress",
+        "to",
+        "the",
+        "party",
+        "."
+      ],
+      "head_noun_indices": [
+        3
+      ],
+      "target_type": "Adjective",
+      "explanation": "'Beautiful' is an adjective modifying the noun 'dress'."
+    }
+  ],
+  "drill_tasks": [
+    {
+      "type": "MCQ",
+      "question": "The athlete ran ________ to win the gold medal.",
+      "options": [
+        "quick",
+        "quickly",
+        "quickness",
+        "quicken"
+      ],
+      "answer": "quickly",
+      "explanation": "We need an adverb to describe the action 'ran'."
+    },
+    {
+      "type": "MCQ",
+      "question": "His ________ to the team was invaluable.",
+      "options": [
+        "contribute",
+        "contribution",
+        "contributory",
+        "contributed"
+      ],
+      "answer": "contribution",
+      "explanation": "We need a noun to act as the subject of the sentence."
+    },
+    {
+      "type": "MCQ",
+      "question": "The movie was so ________ that I cried.",
+      "options": [
+        "sad",
+        "sadly",
+        "sadness",
+        "sadden"
+      ],
+      "answer": "sad",
+      "explanation": "We need an adjective after the linking verb 'was' to describe 'the movie'."
+    },
+    {
+      "type": "MCQ",
+      "question": "You should ________ regularly to stay fit.",
+      "options": [
+        "exercise",
+        "exercises",
+        "exercising",
+        "exercised"
+      ],
+      "answer": "exercise",
+      "explanation": "After the modal verb 'should', we use the base form of the verb."
+    },
+    {
+      "type": "MCQ",
+      "question": "The project was a huge ________.",
+      "options": [
+        "succeed",
+        "success",
+        "successful",
+        "successfully"
+      ],
+      "answer": "success",
+      "explanation": "After 'a huge', we need a noun."
+    }
+  ],
+  "boss_fight": {
+    "paragraph": "The performance was very impress. The dancers moved graceful across the stage. Their hard work and dedicate led to a great success.",
+    "errors": [
+      {
+        "original": "impress",
+        "correction": "impressive",
+        "explanation": "We need an adjective to describe the performance."
+      },
+      {
+        "original": "graceful",
+        "correction": "gracefully",
+        "explanation": "We need an adverb to describe the action 'moved'."
+      },
+      {
+        "original": "dedicate",
+        "correction": "dedication",
+        "explanation": "After 'hard work and', we need a noun to match the structure."
+      }
+    ]
+  },
+  "success_feedback": "Great job! You've mastered the basic word forms and suffixes.",
+  "suggested_next_steps": [
+    "Practice using -ing and -ed adjectives (e.g., interesting vs interested).",
+    "Learn about common prefixes like un-, in-, and dis-.",
+    "Try Level 4 for more advanced word form challenges!"
+  ],
+  "interactive_tasks": [],
+  "examples": [],
+  "key_points": []
+}

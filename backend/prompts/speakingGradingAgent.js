@@ -44,8 +44,10 @@ OUTPUT JSON FORMAT:
         "phoneme_issues": ["List of specific sounds to practice, e.g., /r/ vs /l/"],
         "rhythm_score": "Evaluation of 'sense group' pausing.",
         "improvement_advice": "DSE target-specific advice (e.g., 'Work on your -ed endings to push for Level 5')."
-    }
-}`;
+    },
+    "grammar_diagnostics": ["error_tag1", "error_tag2"]
+}
+Note: GRAMMAR DIAGNOSTICS: Identify 1-2 recurring grammar or style gaps. Select from: ["error_sva", "error_tense", "error_countable", "error_wordform", "error_inversion", "error_subjunctive", "error_participle", "error_cohesion"]. If none, return [].`;
 
 const flowGradingAgent = `HKDSE Speaking Examiner - Module 2: Flow & Spontaneity.
 
@@ -75,8 +77,10 @@ OUTPUT JSON:
         "filler_usage": "Analysis of discourse markers used",
         "vocabulary_highlights": ["Successful use of strategic words"],
         "improvement_advice": "Advice on how to reduce mental processing time"
-    }
-}`;
+    },
+    "grammar_diagnostics": ["error_tag1", "error_tag2"]
+}
+Note: GRAMMAR DIAGNOSTICS: Identify 1-2 recurring grammar or style gaps. Select from: ["error_sva", "error_tense", "error_countable", "error_wordform", "error_inversion", "error_subjunctive", "error_participle", "error_cohesion"]. If none, return [].`;
 
 const interactionGradingAgent = `HKDSE Speaking Examiner - Module 3: Dynamic Interaction.
 
@@ -105,8 +109,10 @@ OUTPUT JSON:
         "pros": ["Detailed strength 1", "Detailed strength 2"],
         "cons": ["Specific area for concern 1", "Missed opportunity for bridging"],
         "roadmap_tips": ["Strategy to aim for higher score", "Practical tip for next discussion"]
-    }
-}`;
+    },
+    "grammar_diagnostics": ["error_tag1", "error_tag2"]
+}
+Note: GRAMMAR DIAGNOSTICS: Identify 1-2 recurring grammar or style gaps. Select from: ["error_sva", "error_tense", "error_countable", "error_wordform", "error_inversion", "error_subjunctive", "error_participle", "error_cohesion"]. If none, return [].`;
 
 const languagePatternsGradingAgent = `HKDSE Speaking Examiner - Module 4: Vocabulary (Sentence Mastery Focus).
 
@@ -141,8 +147,10 @@ OUTPUT JSON FORMAT:
         "summary": "Assess the student's mastery of the specific vocab set provided.",
         "vocabulary_highlights": ["The target words student handled best"],
         "improvement_advice": "Advice on using these words in a real discussion (range boosting)."
-    }
-}`;
+    },
+    "grammar_diagnostics": ["error_tag1", "error_tag2"]
+}
+Note: GRAMMAR DIAGNOSTICS: Identify 1-2 recurring grammar or style gaps. Select from: ["error_sva", "error_tense", "error_countable", "error_wordform", "error_inversion", "error_subjunctive", "error_participle", "error_cohesion"]. If none, return [].`;
 
 const ideasOrganisationGradingAgent = `HKDSE Speaking Examiner - Module 5: Ideas & Organisation.
 
@@ -169,8 +177,10 @@ OUTPUT JSON:
         "peel_analysis": "How well the student followed the PEEL structure",
         "cohesion_tips": ["Specific advice on better transitions"],
         "improvement_advice": "Advice on strengthening logical arguments"
-    }
-}`;
+    },
+    "grammar_diagnostics": ["error_tag1", "error_tag2"]
+}
+Note: GRAMMAR DIAGNOSTICS: Identify 1-2 recurring grammar or style gaps. Select from: ["error_sva", "error_tense", "error_countable", "error_wordform", "error_inversion", "error_subjunctive", "error_participle", "error_cohesion"]. If none, return [].`;
 
 const speakingGradingAgent = interactionGradingAgent;
 

@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { Navigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import { Sparkles } from 'lucide-react';
+import { LoadingPage } from './shared';
 
 const ProtectedRoute = ({ children }) => {
     const { user, loading, initialized } = useAuth();
@@ -124,17 +124,10 @@ const ProtectedRoute = ({ children }) => {
     // 1. Wait for initialization before making any redirection decisions
     if (!initialized || (user && checkedUid !== user.uid)) {
         return (
-            <div className="fixed inset-0 flex flex-col items-center justify-center bg-slate-50 z-[9999] p-6 text-center">
-                <div className="relative mb-8">
-                    <div className="w-20 h-20 border-4 border-slate-200 border-t-orange-600 rounded-full animate-spin"></div>
-                    <div className="absolute inset-0 flex items-center justify-center">
-                        <Sparkles className="w-8 h-8 text-orange-600/20 animate-pulse" />
-                    </div>
-                </div>
-                
-                <h2 className="text-2xl font-black text-slate-900 mb-2 tracking-tight">Preparing your <span className="text-orange-600">Ace-it</span> experience...</h2>
-                <p className="text-slate-500 font-medium max-w-xs mx-auto">Syncing your progress and personalizing your dashboard.</p>
-                
+            <LoadingPage 
+                title="Preparing your Ace-it experience..." 
+                subtext="Syncing your progress and personalizing your dashboard."
+            >
                 {showFallback && (
                     <div className="mt-12 p-8 bg-white rounded-[2rem] border border-slate-100 shadow-2xl shadow-slate-200/50 max-w-sm w-full animate-in fade-in slide-in-from-bottom-4 duration-700">
                         <p className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-4">Connection Notice</p>
@@ -156,7 +149,7 @@ const ProtectedRoute = ({ children }) => {
                         </div>
                     </div>
                 )}
-            </div>
+            </LoadingPage>
         );
     }
 
@@ -173,12 +166,10 @@ const ProtectedRoute = ({ children }) => {
     // 3. Handle Authenticated Users but loading onboarding status
     if (isOnboarded === null) {
         return (
-            <div className="fixed inset-0 flex flex-col items-center justify-center bg-slate-50 z-[9999] p-6 text-center">
-                <div className="relative mb-8">
-                    <div className="w-20 h-20 border-4 border-slate-200 border-t-orange-600 rounded-full animate-spin"></div>
-                </div>
-                <h2 className="text-2xl font-black text-slate-900 mb-2 tracking-tight">Verifying profile...</h2>
-            </div>
+            <LoadingPage 
+                title="Verifying profile..." 
+                subtext="Checking your enrollment status."
+            />
         );
     }
 

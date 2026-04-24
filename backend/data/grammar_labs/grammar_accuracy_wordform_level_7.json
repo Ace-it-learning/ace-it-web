@@ -1,0 +1,220 @@
+{
+  "type": "GRAMMAR",
+  "topic_id": "grammar_accuracy_wordform",
+  "level": "HKDSE Level 5**",
+  "conceptual_explanation": "The 5** summit of Word Form Accuracy requires distinguishing between near-identical word pairs (Sensible vs Sensitive) and mastering academic nuances (Economic vs Economical). You must also handle rare prefixes and sophisticated suffix shifts that change the intensity or scope of a word's meaning.",
+  "rule_cards": [
+    {
+      "name": "The 'Sens' Duo",
+      "formula": "Sensible (Logical/Wise) vs Sensitive (Emotional/Reacts to stimuli)",
+      "correct": "It is a sensible decision to save money. / He is sensitive to cold weather.",
+      "incorrect": "It is a sensitive decision to save money."
+    },
+    {
+      "name": "Economic vs Economical",
+      "formula": "Economic (Related to the economy) vs Economical (Saving money/Cheap to run)",
+      "correct": "The country is facing an economic crisis. / This car is very economical on fuel.",
+      "incorrect": "The country is facing an economical crisis."
+    },
+    {
+      "name": "Compliment vs Complement",
+      "formula": "Complimentary (Praise/Free) vs Complementary (Completing/Matching)",
+      "correct": "We received complimentary tickets. / Their skills are complementary.",
+      "incorrect": "Their skills are complimentary. (Unless they praise each other)"
+    },
+    {
+      "name": "Noun Nuance: Confidence vs Confidentiality",
+      "formula": "Confidence (Self-belief) vs Confidentiality (Privacy)",
+      "correct": "She spoke with great confidence. / We must respect the confidentiality of the records.",
+      "incorrect": "We must respect the confidence of the records."
+    }
+  ],
+  "head_noun_tasks": [
+    {
+      "sentence_tokens": [
+        "The",
+        "new",
+        "software",
+        "is",
+        "complementary",
+        "to",
+        "our",
+        "existing",
+        "systems",
+        "."
+      ],
+      "head_noun_indices": [
+        4
+      ],
+      "target_type": "Adjective",
+      "explanation": "'Complementary' (with an 'e') means it completes or works well with the existing systems."
+    },
+    {
+      "sentence_tokens": [
+        "Given",
+        "the",
+        "current",
+        "economic",
+        "climate",
+        ",",
+        "we",
+        "must",
+        "be",
+        "more",
+        "frugal",
+        "."
+      ],
+      "head_noun_indices": [
+        4
+      ],
+      "target_type": "Adjective",
+      "explanation": "'Economic' refers to the general state of the economy."
+    },
+    {
+      "sentence_tokens": [
+        "She",
+        "is",
+        "very",
+        "sensitive",
+        "to",
+        "criticism",
+        "from",
+        "her",
+        "peers",
+        "."
+      ],
+      "head_noun_indices": [
+        3
+      ],
+      "target_type": "Adjective",
+      "explanation": "'Sensitive' here refers to being easily affected emotionally."
+    },
+    {
+      "sentence_tokens": [
+        "The",
+        "hotel",
+        "offered",
+        "us",
+        "complimentary",
+        "breakfast",
+        "during",
+        "our",
+        "stay",
+        "."
+      ],
+      "head_noun_indices": [
+        4
+      ],
+      "target_type": "Adjective",
+      "explanation": "'Complimentary' means provided free of charge."
+    },
+    {
+      "sentence_tokens": [
+        "Maintaining",
+        "patient",
+        "confidentiality",
+        "is",
+        "a",
+        "legal",
+        "requirement",
+        "."
+      ],
+      "head_noun_indices": [
+        2
+      ],
+      "target_type": "Noun",
+      "explanation": "'Confidentiality' refers to the state of keeping information private."
+    }
+  ],
+  "drill_tasks": [
+    {
+      "type": "MCQ",
+      "question": "It would be ________ to bring an umbrella, as the forecast predicts rain.",
+      "options": [
+        "sensible",
+        "sensitive",
+        "senseless",
+        "sensibly"
+      ],
+      "answer": "sensible",
+      "explanation": "'Sensible' means showing good judgment."
+    },
+    {
+      "type": "MCQ",
+      "question": "The government is implementing new ________ policies to curb inflation.",
+      "options": [
+        "economical",
+        "economic",
+        "economy",
+        "economize"
+      ],
+      "answer": "economic",
+      "explanation": "Refers to policies related to the national economy."
+    },
+    {
+      "type": "MCQ",
+      "question": "The two colors ________ each other perfectly in this design.",
+      "options": [
+        "compliment",
+        "complement",
+        "complimentary",
+        "complementary"
+      ],
+      "answer": "complement",
+      "explanation": "Verb meaning to match or complete (with 'e')."
+    },
+    {
+      "type": "MCQ",
+      "question": "He has a lot of ________ in his ability to lead the team.",
+      "options": [
+        "confidence",
+        "confidentiality",
+        "confident",
+        "confidential"
+      ],
+      "answer": "confidence",
+      "explanation": "Refers to self-belief."
+    },
+    {
+      "type": "MCQ",
+      "question": "This energy-saving light bulb is very ________.",
+      "options": [
+        "economic",
+        "economical",
+        "economize",
+        "economy"
+      ],
+      "answer": "economical",
+      "explanation": "Means avoiding waste or being cheap to run."
+    }
+  ],
+  "boss_fight": {
+    "paragraph": "It was a sensitive decision to invest in this economical project during the current financial crisis. The manager gave us complement tickets to the theater to boost our confidentiality in the company.",
+    "errors": [
+      {
+        "original": "sensitive decision",
+        "correction": "sensible decision",
+        "explanation": "'Sensible' (wise) is the intended meaning here."
+      },
+      {
+        "original": "economical project",
+        "correction": "economic project",
+        "explanation": "Refers to a project related to the economy, or perhaps just a 'sensible' one, but 'economic' fits the crisis context."
+      },
+      {
+        "original": "complement tickets",
+        "correction": "complimentary tickets",
+        "explanation": "Tickets given for free are 'complimentary'."
+      }
+    ]
+  },
+  "success_feedback": "Incredible! You have mastered the most treacherous word form pairs in the English language. Your 5** precision is outstanding.",
+  "suggested_next_steps": [
+    "Read legal or economic reports to see these nuances in practice.",
+    "Study how prefixes like 'Counter-' and 'Anti-' are used in academic debates.",
+    "Create your own 'Confusing Pairs' list to test your friends!"
+  ],
+  "interactive_tasks": [],
+  "examples": [],
+  "key_points": []
+}

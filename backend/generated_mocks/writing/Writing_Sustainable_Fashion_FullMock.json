@@ -1,0 +1,106 @@
+{
+  "meta": {
+    "title": "Sustainable Fashion & Consumerism",
+    "topic": "Sustainable Fashion & Consumerism",
+    "generated_at": "2026-04-23T14:00:00.000Z",
+    "blueprint_version": "2026_V1"
+  },
+  "Part_A": {
+    "part": "Part A",
+    "genre": "Opinion Piece",
+    "title": "Should Our School Host a 'Uniform Swap' Day?",
+    "instructions": "Write an opinion piece for your school magazine in about 200 words.",
+    "situation": "The Eco-Club has proposed a 'Uniform Swap' day to reduce textile waste. The school magazine has asked for students to submit articles discussing the merits and potential challenges of this initiative.",
+    "requirements": [
+      "Discuss the environmental benefits of swapping uniforms instead of buying new ones.",
+      "Explain how this event could foster a stronger sense of community and social responsibility.",
+      "Address one practical concern (e.g., sizing, hygiene) and suggest a solution."
+    ],
+    "format_guides": [
+      "Use an engaging title.",
+      "Use a semi-formal, persuasive tone suitable for a school magazine."
+    ]
+  },
+  "Part_B": [
+    {
+      "elective": "Sports Communication",
+      "type": "Article",
+      "question": "The trend of 'Eco-Friendly Sportswear' made from recycled ocean plastics.",
+      "requirements": [
+        "Explain the technology behind turning plastic waste into high-performance athletic gear.",
+        "Discuss whether sports brands are truly committed to the environment or just 'Greenwashing'.",
+        "Explain how elite athletes can use their influence to promote sustainable consumption."
+      ]
+    },
+    {
+      "elective": "Drama",
+      "type": "Dramatic Script",
+      "question": "A confrontation between a daughter who wants the latest 'Ultra-Fast Fashion' trends and a mother who remembers making her own clothes.",
+      "requirements": [
+        "Create a tension-filled opening that highlights the generational gap in 'consumption values'.",
+        "Include a monologue from the mother about the 'hidden cost' of cheap labor and waste.",
+        "Provide stage directions that reflect the daughter's initial defensive attitude and eventual reflection."
+      ]
+    },
+    {
+      "elective": "Short Stories",
+      "type": "Short Story",
+      "question": "A story about a jacket that is passed down through three different owners, each with a different relationship to it.",
+      "requirements": [
+        "Describe the jacket in a way that makes it feel like a 'character' in its own right.",
+        "Show how the jacket's meaning changes (e.g., from a status symbol to a cherished memory).",
+        "End the story with the jacket being found in a thrift store by someone who sees its hidden beauty."
+      ]
+    },
+    {
+      "elective": "Popular Culture",
+      "type": "Blog Post",
+      "question": "Critiquing the 'Haul Culture' on social media platforms like TikTok and YouTube.",
+      "requirements": [
+        "Identify two negative psychological effects of watching 'ultra-fast fashion' hauls.",
+        "Compare the 'sugar rush' of cheap shopping with the long-term satisfaction of 'slow fashion'.",
+        "Provide three tips for followers to build a 'capsule wardrobe' that lasts."
+      ]
+    },
+    {
+      "elective": "Social Issues",
+      "type": "Article",
+      "question": "The 'Ethics of Thrift Shopping': Is the rise of 'Resale Culture' making clothes too expensive for the poor?",
+      "requirements": [
+        "Discuss the positive environmental impact of the growing second-hand market.",
+        "Explain the concept of 'gentrification' in thrift stores and how it affects low-income families.",
+        "Suggest how we can balance the need for sustainability with the need for affordability."
+      ]
+    },
+    {
+      "elective": "Debating",
+      "type": "Formal Debate Speech",
+      "question": "'That consumer responsibility is more important than corporate regulation in ending fast fashion.'",
+      "requirements": [
+        "Argue that 'voting with your wallet' is the most effective way to change company behavior.",
+        "Provide a counter-argument to the idea that individuals cannot compete with billion-dollar marketing budgets.",
+        "Conclude with a powerful appeal for the audience to choose 'ethics over aesthetics'."
+      ]
+    },
+    {
+      "elective": "Workplace Communication",
+      "type": "Formal Proposal",
+      "question": "A proposal for a local clothing brand to implement a 'Repair and Recycle' program in their retail stores.",
+      "requirements": [
+        "Propose a 'free repair' service for the brand's own products to increase customer loyalty.",
+        "Describe a 'take-back' scheme where customers get store credit for returning old clothes for recycling.",
+        "Outline how this program will benefit the brand's reputation as a 'socially responsible' leader."
+      ]
+    },
+    {
+      "elective": "Songs and Poems",
+      "type": "Review",
+      "question": "A review of a song or poem that critiques modern 'throwaway' culture.",
+      "requirements": [
+        "Identify the 'target' of the artist's critique (e.g., materialism, greed, waste).",
+        "Discuss how the choice of words or rhythm creates a sense of urgency or sadness.",
+        "Explain how the work encourages the audience to value 'quality over quantity'."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,224 @@
+{
+  "type": "GRAMMAR",
+  "topic_id": "grammar_accuracy_tense",
+  "level": "HKDSE Level 4",
+  "conceptual_explanation": "At Level 4, you must handle 'Sequence of Tenses'. This means understanding which action happened first (Past Perfect) and how tenses change in conditional sentences (If-clauses). Consistency is not just about staying in one tense, but correctly transitioning between them when the timeline shifts.",
+  "rule_cards": [
+    {
+      "name": "The 'Before' Rule (Past Perfect)",
+      "formula": "Action 1 (Had + V-pp) happened BEFORE Action 2 (Simple Past)",
+      "correct": "When the police arrived, the thief had already escaped.",
+      "incorrect": "When the police arrived, the thief already escaped."
+    },
+    {
+      "name": "Type 1 Conditional",
+      "formula": "If + Simple Present, Subject + Will + Verb",
+      "correct": "If it rains tomorrow, the outdoor concert will be cancelled.",
+      "incorrect": "If it will rain tomorrow, the outdoor concert will be cancelled."
+    },
+    {
+      "name": "The Reporting Rule (Backshifting)",
+      "formula": "Past Reporting Verb (said, told) + Backshifted Tense",
+      "correct": "She said that she was busy with her project.",
+      "incorrect": "She said that she is busy with her project."
+    },
+    {
+      "name": "Past Habits (Used to)",
+      "formula": "Used to + Verb (Describes a past state that is no longer true)",
+      "correct": "Hong Kong used to be a small fishing village.",
+      "incorrect": "Hong Kong used to being a small fishing village."
+    }
+  ],
+  "head_noun_tasks": [
+    {
+      "sentence_tokens": [
+        "By",
+        "the",
+        "time",
+        "I",
+        "finished",
+        "my",
+        "essay",
+        ",",
+        "everyone",
+        "had",
+        "left",
+        "."
+      ],
+      "head_noun_indices": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "'By the time' indicates a sequence where one action (leaving) was completed before another past action (finishing)."
+    },
+    {
+      "sentence_tokens": [
+        "If",
+        "you",
+        "study",
+        "harder",
+        ",",
+        "you",
+        "will",
+        "pass",
+        "the",
+        "DSE",
+        "."
+      ],
+      "head_noun_indices": [
+        0
+      ],
+      "explanation": "In a Type 1 conditional, 'If' sets a real possibility, requiring Simple Present in the if-clause."
+    },
+    {
+      "sentence_tokens": [
+        "The",
+        "manager",
+        "explained",
+        "that",
+        "the",
+        "system",
+        "had",
+        "crashed",
+        "earlier",
+        "."
+      ],
+      "head_noun_indices": [
+        2,
+        8
+      ],
+      "explanation": "'Explained' is a past reporting verb, and 'earlier' confirms the crash happened before the explanation."
+    },
+    {
+      "sentence_tokens": [
+        "I",
+        "didn't",
+        "know",
+        "that",
+        "you",
+        "were",
+        "coming",
+        "to",
+        "the",
+        "party",
+        "."
+      ],
+      "head_noun_indices": [
+        1,
+        2
+      ],
+      "explanation": "The main verb 'didn't know' is in the past, so the subordinate clause 'were coming' must also be in the past (Sequence of Tenses)."
+    },
+    {
+      "sentence_tokens": [
+        "While",
+        "I",
+        "was",
+        "walking",
+        "home",
+        ",",
+        "it",
+        "started",
+        "to",
+        "rain",
+        "."
+      ],
+      "head_noun_indices": [
+        0
+      ],
+      "explanation": "'While' indicates a continuous background action in the past."
+    }
+  ],
+  "drill_tasks": [
+    {
+      "type": "MCQ",
+      "question": "If the government ________ more subsidies, the recycling industry will thrive.",
+      "options": [
+        "provide",
+        "provides",
+        "will provide",
+        "provided"
+      ],
+      "answer": "provides",
+      "explanation": "Type 1 conditional: 'If' + Simple Present."
+    },
+    {
+      "type": "MCQ",
+      "question": "By the end of last year, the company ________ over 500 new staff members.",
+      "options": [
+        "recruits",
+        "has recruited",
+        "had recruited",
+        "will recruit"
+      ],
+      "answer": "had recruited",
+      "explanation": "'By the end of last year' indicates completion before a point in the past, requiring Past Perfect."
+    },
+    {
+      "type": "MCQ",
+      "question": "The witness claimed that he ________ the suspect near the bank.",
+      "options": [
+        "sees",
+        "is seeing",
+        "saw",
+        "has seen"
+      ],
+      "answer": "saw",
+      "explanation": "Reporting a past event: Simple Past or Past Perfect (had seen) is appropriate. Here, 'saw' is the best match."
+    },
+    {
+      "type": "MCQ",
+      "question": "I ________ eat a lot of junk food, but now I prefer healthy salads.",
+      "options": [
+        "was used to",
+        "used to",
+        "am used to",
+        "use to"
+      ],
+      "answer": "used to",
+      "explanation": "'Used to' describes a past habit that no longer happens."
+    },
+    {
+      "type": "MCQ",
+      "question": "As soon as the bell ________, the students rushed out of the classroom.",
+      "options": [
+        "rings",
+        "rang",
+        "will ring",
+        "is ringing"
+      ],
+      "answer": "rang",
+      "explanation": "Sequence of past events: 'rushed' is past, so the preceding action 'rang' must also be past."
+    }
+  ],
+  "boss_fight": {
+    "paragraph": "Before I joined this school, I have never studied abroad. My teacher told me that I will improve my English quickly if I practice every day. I really hope that I can achieved my goals by next year.",
+    "errors": [
+      {
+        "original": "have never studied",
+        "correction": "had never studied",
+        "explanation": "Past Perfect is needed to show an action happened before another past action ('joined')."
+      },
+      {
+        "original": "will improve",
+        "correction": "would improve",
+        "explanation": "After the past reporting verb 'told', 'will' must be backshifted to 'would'."
+      },
+      {
+        "original": "can achieved",
+        "correction": "can achieve",
+        "explanation": "The modal verb 'can' must be followed by the base form of the verb."
+      }
+    ]
+  },
+  "success_feedback": "Excellent work! You are now handling more complex sequences of tenses and conditionals with confidence.",
+  "suggested_next_steps": [
+    "Study Type 2 Conditionals for hypothetical situations.",
+    "Practice using Past Perfect Continuous for longer past actions.",
+    "Try Level 5 for advanced tense consistency in complex paragraphs!"
+  ],
+  "interactive_tasks": [],
+  "examples": [],
+  "key_points": []
+}

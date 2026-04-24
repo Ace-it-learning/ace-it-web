@@ -104,7 +104,15 @@ const MathsResultPage = () => {
 
                     <div className="flex gap-4">
                         <button
-                            onClick={() => navigate('/dashboard', { state: { openRoadmap: 'MATHS' } })}
+                        onClick={() => navigate('/dashboard', { 
+                            state: { 
+                                openRoadmap: 'MATHS',
+                                mockCompleted: true,
+                                type: 'Mathematics',
+                                level: percentage >= 90 ? '5**' : (percentage >= 85 ? '5*' : (percentage >= 75 ? '5' : (percentage >= 65 ? '4' : (percentage >= 55 ? '3' : '2')))),
+                                score: `${percentage}%`
+                            } 
+                        })}
                             className="flex-1 py-3 bg-slate-100 text-slate-600 font-bold rounded-xl hover:bg-slate-200 transition-colors flex items-center justify-center gap-2"
                         >
                             <RotateCcw className="w-4 h-4" /> Back to Roadmap

@@ -1,0 +1,106 @@
+{
+  "meta": {
+    "title": "Urban Spaces & The Right to the City",
+    "topic": "Urban Spaces & The Right to the City",
+    "generated_at": "2026-04-23T14:10:00.000Z",
+    "blueprint_version": "2026_V1"
+  },
+  "Part_A": {
+    "part": "Part A",
+    "genre": "Formal Letter",
+    "title": "Demanding 'Third Places': Reclaiming Public Space for Youth",
+    "instructions": "Write a formal letter to the District Council in about 200 words.",
+    "situation": "You have noticed that in your district, there are almost no 'Third Places' (free, non-commercial public spaces like parks, community centers, or open plazas) where young people can gather without being asked to 'move on' or 'buy something'.",
+    "requirements": [
+      "Explain the importance of 'Third Places' for the social and mental well-being of teenagers.",
+      "Identify one underused or neglected site in your district that could be redeveloped into a public space.",
+      "Suggest two specific features (e.g., free Wi-Fi, shaded seating, a 'skateable' area) that would make the space 'youth-friendly'."
+    ],
+    "format_guides": [
+      "Use formal letter conventions.",
+      "Address it to 'The Chairperson of the District Council'."
+    ]
+  },
+  "Part_B": [
+    {
+      "elective": "Sports Communication",
+      "type": "Article",
+      "question": "The 'Skateboarding' Struggle: Is a city's design an 'obstacle' or a 'playground'?",
+      "requirements": [
+        "Explain how street sports like skateboarding 'repurpose' urban architecture (e.g., stairs, railings).",
+        "Discuss the 'Hostile Architecture' (e.g., anti-skate studs) that cities use to exclude certain groups.",
+        "Propose how cities can better 'integrate' street sports into public plazas rather than 'banning' them."
+      ]
+    },
+    {
+      "elective": "Drama",
+      "type": "Dramatic Script",
+      "question": "A scene where a group of teenagers are being 'asked to leave' a shopping mall for simply 'hanging out' without spending money.",
+      "requirements": [
+        "Contrast the 'commercial logic' of the Security Guard with the 'social needs' of the teenagers.",
+        "Include a monologue from one teenager about the 'death of free space' in the city.",
+        "Provide stage directions that emphasize the 'clean but cold' environment of the luxury mall."
+      ]
+    },
+    {
+      "elective": "Short Stories",
+      "type": "Short Story",
+      "question": "A story about a 'Secret Garden' found on the rooftop of a high-rise building that provides the only 'quiet' space in a noisy city.",
+      "requirements": [
+        "Describe the 'sensory contrast' between the noisy, smoggy street below and the quiet, green garden above.",
+        "Detail an interaction between the protagonist and another person they meet in the garden (e.g., a 'modern hermit').",
+        "Show how this 'Urban Oasis' becomes a 'sanctuary' that keeps the protagonist's spirit alive."
+      ]
+    },
+    {
+      "elective": "Popular Culture",
+      "type": "Blog Post",
+      "question": "The 'Instagrammable City': Are we building cities for 'Living' or for 'Photos'?",
+      "requirements": [
+        "Critique how certain neighborhoods (e.g., Choi Hung Estate, Monster Building) have become 'backdrops' for influencers rather than 'homes' for residents.",
+        "Discuss the 'Tourist-Gaze'—how social media turns real communities into shallow 'theme parks'.",
+        "Provide advice on how to 'visit' these spaces respectfully and authentically."
+      ]
+    },
+    {
+      "elective": "Social Issues",
+      "type": "Article",
+      "question": "The 'Disneyfication' of Neighborhoods: How tourism turns real life into a 'fake' theme park.",
+      "requirements": [
+        "Explain the concept of 'Disneyfication' and its impact on local culture and rent prices.",
+        "Compare a 'Living Neighborhood' with a 'Sanitized Tourist Zone'.",
+        "Suggest one policy (e.g., 'Local-First' commerce) to protect the soul of a city's neighborhoods."
+      ]
+    },
+    {
+      "elective": "Debating",
+      "type": "Formal Debate Speech",
+      "question": "'That access to the city is a fundamental human right, not a consumer privilege.'",
+      "requirements": [
+        "Define the 'Right to the City' (the right of all residents to inhabit and change their environment).",
+        "Argue that 'privatizing' public space (e.g., gated communities, malls) is an act of 'social exclusion'.",
+        "Conclude with a powerful 'call to action' for the audience to reclaim their urban environment."
+      ]
+    },
+    {
+      "elective": "Workplace Communication",
+      "type": "Formal Proposal",
+      "question": "A proposal for a 'Mobile Community Hub' (using a repurposed bus or container) to bring services to 'Urban Deserts'.",
+      "requirements": [
+        "Identify an 'Urban Desert' (an area with no parks or libraries) in your city.",
+        "Explain the 'Mobile Hub' concept and how it can be 'deployed' flexibly across different districts.",
+        "Detail the resources (e.g., solar power, staff) and the 'programming' (e.g., workshops, clinics) needed."
+      ]
+    },
+    {
+      "elective": "Songs and Poems",
+      "type": "Review",
+      "question": "A review of a song or poem that addresses the 'Concrete Jungle' or the 'Beauty of the Urban Void'.",
+      "requirements": [
+        "Identify the central image used for the 'Concrete Jungle' (e.g., a cage, a labyrinth, a heart of stone).",
+        "Discuss how the artist uses contrast (e.g., a single flower in a sidewalk crack) to find 'urban hope'.",
+        "Explain why this work is a 'timely reflection' on our relationship with the cities we build."
+      ]
+    }
+  ]
+}

@@ -126,7 +126,16 @@ function ResultPage() {
                         else if (category?.includes('LISTENING')) filter = 'LISTENING';
                         else if (category?.includes('SPEAKING')) filter = 'SPEAKING';
                         
-                        navigate('/dashboard', { state: { openRoadmap: subject === 'MATHS' ? 'MATHS' : 'ENGLISH', roadmapFilter: filter } });
+                        navigate('/dashboard', { 
+                            state: { 
+                                openRoadmap: subject === 'MATHS' ? 'MATHS' : 'ENGLISH', 
+                                roadmapFilter: filter,
+                                mockCompleted: true,
+                                type: category || (filter !== 'ALL' ? filter : 'Reading'),
+                                level: dseGrade,
+                                score: `${percentage}%`
+                            } 
+                        });
                     }}
                     className="text-gray-600 hover:text-gray-900 font-medium flex items-center gap-2 px-4 py-2 bg-white rounded-lg shadow-sm border border-gray-200"
                 >

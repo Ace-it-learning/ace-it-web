@@ -1,0 +1,221 @@
+{
+  "type": "GRAMMAR",
+  "topic_id": "grammar_accuracy_wordform",
+  "level": "HKDSE Level 5",
+  "conceptual_explanation": "Level 5 Word Form Accuracy requires precision in formal vocabulary. You must distinguish between 'Affect' (Verb) and 'Effect' (Noun), and choose the correct negative prefixes for adjectives. Consistency in using academic suffixes (-ance, -ence, -ity) is also crucial for high-level writing.",
+  "rule_cards": [
+    {
+      "name": "Affect vs Effect",
+      "formula": "Affect (Verb - to influence) / Effect (Noun - the result)",
+      "correct": "The weather affects my mood. / The weather has a negative effect on my mood.",
+      "incorrect": "The weather effects my mood."
+    },
+    {
+      "name": "Negative Prefix Precision",
+      "formula": "In- (formal), Un- (common), Im- (before p/m), Ir- (before r), Il- (before l)",
+      "correct": "Inconvenient, Unnecessary, Impossible, Irresponsible, Illegal",
+      "incorrect": "Unconvenient, Imresponsible"
+    },
+    {
+      "name": "Noun suffixes: -ance vs -ence",
+      "formula": "Appearance, Maintenance (ance) / Intelligence, Independence (ence)",
+      "correct": "The maintenance of the building is expensive.",
+      "incorrect": "The maintenence of the building is expensive."
+    },
+    {
+      "name": "Verb vs Adjective: -en",
+      "formula": "Dark (Adj) -> Darken (Verb) / Short (Adj) -> Shorten (Verb)",
+      "correct": "We need to shorten the presentation.",
+      "incorrect": "We need to short the presentation."
+    }
+  ],
+  "head_noun_tasks": [
+    {
+      "sentence_tokens": [
+        "The",
+        "new",
+        "policy",
+        "will",
+        "positively",
+        "affect",
+        "the",
+        "environment",
+        "."
+      ],
+      "head_noun_indices": [
+        5
+      ],
+      "target_type": "Verb",
+      "explanation": "'Affect' is the verb meaning 'to influence'."
+    },
+    {
+      "sentence_tokens": [
+        "It",
+        "is",
+        "irresponsible",
+        "to",
+        "leave",
+        "the",
+        "lights",
+        "on",
+        "all",
+        "night",
+        "."
+      ],
+      "head_noun_indices": [
+        2
+      ],
+      "target_type": "Adjective",
+      "explanation": "'Irresponsible' uses the prefix 'ir-' because it starts with 'r'."
+    },
+    {
+      "sentence_tokens": [
+        "Her",
+        "intelligence",
+        "is",
+        "evident",
+        "in",
+        "the",
+        "way",
+        "she",
+        "solves",
+        "problems",
+        "."
+      ],
+      "head_noun_indices": [
+        1
+      ],
+      "target_type": "Noun",
+      "explanation": "'Intelligence' is the noun form ending in -ence."
+    },
+    {
+      "sentence_tokens": [
+        "The",
+        "side",
+        "effects",
+        "of",
+        "the",
+        "medication",
+        "were",
+        "quite",
+        "severe",
+        "."
+      ],
+      "head_noun_indices": [
+        2
+      ],
+      "target_type": "Noun",
+      "explanation": "'Effects' is the plural noun meaning 'results'."
+    },
+    {
+      "sentence_tokens": [
+        "The",
+        "sudden",
+        "appearance",
+        "of",
+        "the",
+        "ghost",
+        "scared",
+        "the",
+        "children",
+        "."
+      ],
+      "head_noun_indices": [
+        2
+      ],
+      "target_type": "Noun",
+      "explanation": "'Appearance' is the noun form ending in -ance."
+    }
+  ],
+  "drill_tasks": [
+    {
+      "type": "MCQ",
+      "question": "The rise in sea levels will have a significant ________ on coastal cities.",
+      "options": [
+        "affect",
+        "effect",
+        "effective",
+        "effectively"
+      ],
+      "answer": "effect",
+      "explanation": "We need a noun here (after 'significant')."
+    },
+    {
+      "type": "MCQ",
+      "question": "It is ________ to park your car in front of a fire hydrant.",
+      "options": [
+        "unlegal",
+        "inlegal",
+        "illegal",
+        "dislegal"
+      ],
+      "answer": "illegal",
+      "explanation": "The prefix for 'legal' is 'il-'."
+    },
+    {
+      "type": "MCQ",
+      "question": "The technician is responsible for the ________ of the server.",
+      "options": [
+        "maintaining",
+        "maintenance",
+        "maintenence",
+        "maintain"
+      ],
+      "answer": "maintenance",
+      "explanation": "Correct spelling of the noun form is 'maintenance'."
+    },
+    {
+      "type": "MCQ",
+      "question": "Smoking can ________ your health in the long run.",
+      "options": [
+        "affect",
+        "effect",
+        "effective",
+        "affection"
+      ],
+      "answer": "affect",
+      "explanation": "We need a verb form here (after 'can')."
+    },
+    {
+      "type": "MCQ",
+      "question": "His behavior was completely ________ and caused a lot of trouble.",
+      "options": [
+        "unrational",
+        "irrational",
+        "disrational",
+        "inrational"
+      ],
+      "answer": "irrational",
+      "explanation": "The negative prefix for 'rational' is 'ir-'."
+    }
+  ],
+  "boss_fight": {
+    "paragraph": "Climate change will effect every part of our lives. It is unresponsible to ignore the scientific data. We must ensure the maintainence of our natural resources for future generations.",
+    "errors": [
+      {
+        "original": "effect",
+        "correction": "affect",
+        "explanation": "'Affect' is the verb form meaning 'to influence'."
+      },
+      {
+        "original": "unresponsible",
+        "correction": "irresponsible",
+        "explanation": "The correct negative prefix for 'responsible' is 'ir-'."
+      },
+      {
+        "original": "maintainence",
+        "correction": "maintenance",
+        "explanation": "The correct spelling of the noun is 'maintenance'."
+      }
+    ]
+  },
+  "success_feedback": "Stellar performance! You've mastered the tricky 'Affect/Effect' distinction and formal suffixes.",
+  "suggested_next_steps": [
+    "Explore sophisticated noun-verb pairs (e.g., 'Compliment' vs 'Complement').",
+    "Study adjectives with multiple possible suffixes (e.g., 'comparable' vs 'comparative').",
+    "Try Level 7 for the ultimate word form challenge!"
+  ],
+  "interactive_tasks": [],
+  "examples": [],
+  "key_points": []
+}

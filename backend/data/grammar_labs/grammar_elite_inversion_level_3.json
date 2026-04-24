@@ -1,0 +1,216 @@
+{
+  "type": "GRAMMAR",
+  "topic_id": "grammar_elite_inversion",
+  "level": "HKDSE Level 4",
+  "conceptual_explanation": "Inversion means putting the auxiliary verb (do, does, did, have, can, etc.) before the subject, just like in a question. This is used for emphasis when we start a sentence with negative words like 'Never', 'Seldom', or 'Hardly'.",
+  "rule_cards": [
+    {
+      "name": "The Negative Start",
+      "formula": "Negative Word + Aux + Subject + Verb",
+      "correct": "Never have I seen such a beautiful view.",
+      "incorrect": "Never I have seen such a beautiful view."
+    },
+    {
+      "name": "Not Only... But Also",
+      "formula": "Not only + Aux + Subject + Verb..., but also...",
+      "correct": "Not only did he arrive late, but he also forgot his notes.",
+      "incorrect": "Not only he arrived late, but also..."
+    },
+    {
+      "name": "Seldom & Hardly",
+      "formula": "Seldom / Hardly + Aux + Subject + Verb",
+      "correct": "Seldom does she complain about her work.",
+      "incorrect": "Seldom she complains about her work."
+    },
+    {
+      "name": "The 'Only' Rule",
+      "formula": "Only after/when [Clause], + Aux + Subject + Verb",
+      "correct": "Only when the rain stopped did we go outside.",
+      "incorrect": "Only when the rain stopped we went outside."
+    }
+  ],
+  "head_noun_tasks": [
+    {
+      "sentence_tokens": [
+        "Never",
+        "have",
+        "I",
+        "witnessed",
+        "such",
+        "bravery",
+        "."
+      ],
+      "head_noun_indices": [
+        0
+      ],
+      "explanation": "'Never' is the negative adverbial that triggers the inversion of 'have I'."
+    },
+    {
+      "sentence_tokens": [
+        "Not",
+        "only",
+        "was",
+        "it",
+        "cold",
+        ",",
+        "but",
+        "it",
+        "was",
+        "also",
+        "raining",
+        "."
+      ],
+      "head_noun_indices": [
+        0,
+        1
+      ],
+      "explanation": "'Not only' at the start forces 'was' to move before 'it'."
+    },
+    {
+      "sentence_tokens": [
+        "Seldom",
+        "do",
+        "we",
+        "see",
+        "eagles",
+        "in",
+        "this",
+        "area",
+        "."
+      ],
+      "head_noun_indices": [
+        0
+      ],
+      "explanation": "'Seldom' is the trigger word here."
+    },
+    {
+      "sentence_tokens": [
+        "Only",
+        "after",
+        "the",
+        "meeting",
+        "did",
+        "he",
+        "realize",
+        "his",
+        "mistake",
+        "."
+      ],
+      "head_noun_indices": [
+        0,
+        1
+      ],
+      "explanation": "'Only after' requires inversion in the main clause ('did he realize')."
+    },
+    {
+      "sentence_tokens": [
+        "Hardly",
+        "had",
+        "the",
+        "movie",
+        "started",
+        "when",
+        "the",
+        "power",
+        "went",
+        "out",
+        "."
+      ],
+      "head_noun_indices": [
+        0
+      ],
+      "explanation": "'Hardly' triggers the past perfect inversion 'had the movie started'."
+    }
+  ],
+  "drill_tasks": [
+    {
+      "type": "MCQ",
+      "question": "Never ________ such a rude person in my life.",
+      "options": [
+        "I have met",
+        "have I met",
+        "I met",
+        "had I meet"
+      ],
+      "answer": "have I met",
+      "explanation": "Starting with 'Never' requires auxiliary before subject."
+    },
+    {
+      "type": "MCQ",
+      "question": "Not only ________ the prize, but he also set a new record.",
+      "options": [
+        "he won",
+        "did he win",
+        "he wins",
+        "does he win"
+      ],
+      "answer": "did he win",
+      "explanation": "'Not only' requires inversion. Since it's past tense ('set'), use 'did'."
+    },
+    {
+      "type": "MCQ",
+      "question": "Seldom ________ out on weekdays.",
+      "options": [
+        "she goes",
+        "does she go",
+        "she go",
+        "goes she"
+      ],
+      "answer": "does she go",
+      "explanation": "'Seldom' triggers inversion with 'do/does'."
+    },
+    {
+      "type": "MCQ",
+      "question": "Only after he finished his work ________ to bed.",
+      "options": [
+        "he went",
+        "did he go",
+        "he go",
+        "went he"
+      ],
+      "answer": "did he go",
+      "explanation": "The second part of an 'Only after' structure must be inverted."
+    },
+    {
+      "type": "MCQ",
+      "question": "Hardly ________ the station when the train left.",
+      "options": [
+        "I reached",
+        "had I reached",
+        "I had reached",
+        "did I reach"
+      ],
+      "answer": "had I reached",
+      "explanation": "'Hardly... when' typically uses past perfect inversion."
+    }
+  ],
+  "boss_fight": {
+    "paragraph": "Never I have felt so tired. Not only the project was difficult, but it was also long. Seldom we get a chance to rest like this.",
+    "errors": [
+      {
+        "original": "Never I have felt",
+        "correction": "Never have I felt",
+        "explanation": "'Never' requires inversion (Aux + Sub)."
+      },
+      {
+        "original": "Not only the project was",
+        "correction": "Not only was the project",
+        "explanation": "'Not only' at the start requires the verb 'was' before the subject."
+      },
+      {
+        "original": "Seldom we get",
+        "correction": "Seldom do we get",
+        "explanation": "'Seldom' requires the auxiliary verb 'do' before the subject."
+      }
+    ]
+  },
+  "success_feedback": "Excellent! You've mastered the basic inversion triggers. Your writing is becoming much more sophisticated.",
+  "suggested_next_steps": [
+    "Learn about 'Little' and 'Rarely' as inversion triggers.",
+    "Practice using inversion with conditional sentences (e.g., 'Had I known').",
+    "Try Level 5 for more complex negative adverbials!"
+  ],
+  "interactive_tasks": [],
+  "examples": [],
+  "key_points": []
+}

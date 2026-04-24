@@ -1,0 +1,223 @@
+{
+  "type": "GRAMMAR",
+  "topic_id": "grammar_elite_inversion",
+  "level": "HKDSE Level 5*",
+  "conceptual_explanation": "Level 5* Inversion mastery introduces 'Literary Inversion' (So beautiful was the day...) and precise correlative pairs like 'No sooner... than'. You must also handle prepositional triggers like 'Only by' and 'In no way', which are common in elite-level argumentative essays.",
+  "rule_cards": [
+    {
+      "name": "No Sooner... Than",
+      "formula": "No sooner + had + Subject + PP + than + Past Simple",
+      "correct": "No sooner had he sat down than the phone rang.",
+      "incorrect": "No sooner had he sat down when the phone rang."
+    },
+    {
+      "name": "Literary 'So' Inversion",
+      "formula": "So + Adjective + be + Subject + that...",
+      "correct": "So intense was the heat that the pavement melted.",
+      "incorrect": "The heat was so intense that..."
+    },
+    {
+      "name": "Only by / Only in this way",
+      "formula": "Only by [Gerund/Noun] + Aux + Subject + Verb",
+      "correct": "Only by working together can we solve this crisis.",
+      "incorrect": "Only by working together we can solve..."
+    },
+    {
+      "name": "In no way / In no case",
+      "formula": "In no way + Aux + Subject + Verb",
+      "correct": "In no way does this result reflect our true potential.",
+      "incorrect": "In no way this result reflects..."
+    }
+  ],
+  "head_noun_tasks": [
+    {
+      "sentence_tokens": [
+        "No",
+        "sooner",
+        "had",
+        "they",
+        "arrived",
+        "than",
+        "the",
+        "party",
+        "ended",
+        "."
+      ],
+      "head_noun_indices": [
+        0,
+        1
+      ],
+      "explanation": "'No sooner' requires the correlative 'than' and inversion in the first clause."
+    },
+    {
+      "sentence_tokens": [
+        "So",
+        "sudden",
+        "was",
+        "the",
+        "attack",
+        "that",
+        "they",
+        "had",
+        "no",
+        "time",
+        "to",
+        "react",
+        "."
+      ],
+      "head_noun_indices": [
+        0,
+        1
+      ],
+      "explanation": "'So' + Adjective ('sudden') at the start triggers inversion of the verb 'was'."
+    },
+    {
+      "sentence_tokens": [
+        "Only",
+        "by",
+        "diligent",
+        "practice",
+        "will",
+        "you",
+        "achieve",
+        "mastery",
+        "."
+      ],
+      "head_noun_indices": [
+        0,
+        1
+      ],
+      "explanation": "'Only by' followed by a noun phrase requires inversion 'will you'."
+    },
+    {
+      "sentence_tokens": [
+        "In",
+        "no",
+        "way",
+        "can",
+        "the",
+        "government",
+        "justify",
+        "these",
+        "budget",
+        "cuts",
+        "."
+      ],
+      "head_noun_indices": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "'In no way' is a negative trigger for the modal 'can'."
+    },
+    {
+      "sentence_tokens": [
+        "Such",
+        "was",
+        "his",
+        "pride",
+        "that",
+        "he",
+        "refused",
+        "to",
+        "apologize",
+        "."
+      ],
+      "head_noun_indices": [
+        0
+      ],
+      "explanation": "'Such' at the start functions like 'So' to trigger inversion."
+    }
+  ],
+  "drill_tasks": [
+    {
+      "type": "MCQ",
+      "question": "No sooner ________ the office than he realized he'd forgotten his keys.",
+      "options": [
+        "he had left",
+        "had he left",
+        "did he left",
+        "he left"
+      ],
+      "answer": "had he left",
+      "explanation": "'No sooner' requires past perfect inversion."
+    },
+    {
+      "type": "MCQ",
+      "question": "So ________ was the noise that I couldn't hear myself think.",
+      "options": [
+        "loudly",
+        "loud",
+        "loudness",
+        "louded"
+      ],
+      "answer": "loud",
+      "explanation": "We need an adjective here. 'So loud was the noise...'."
+    },
+    {
+      "type": "MCQ",
+      "question": "Only by reducing carbon emissions ________ slow down global warming.",
+      "options": [
+        "we can",
+        "can we",
+        "will we to",
+        "could we to"
+      ],
+      "answer": "can we",
+      "explanation": "'Only by' requires inversion."
+    },
+    {
+      "type": "MCQ",
+      "question": "In no way ________ responsible for the actions of my subordinates.",
+      "options": [
+        "I am",
+        "am I",
+        "do I am",
+        "I will be"
+      ],
+      "answer": "am I",
+      "explanation": "'In no way' requires inversion of 'am I'."
+    },
+    {
+      "type": "MCQ",
+      "question": "No sooner had the news been announced ________ the stock market crashed.",
+      "options": [
+        "when",
+        "than",
+        "then",
+        "after"
+      ],
+      "answer": "than",
+      "explanation": "'No sooner' must be paired with 'than'."
+    }
+  ],
+  "boss_fight": {
+    "paragraph": "No sooner I had finished my dinner when the guests arrived. So great the pressure was that he decided to quit. Only by saving money you will be able to buy a house.",
+    "errors": [
+      {
+        "original": "No sooner I had",
+        "correction": "No sooner had I",
+        "explanation": "'No sooner' requires inversion."
+      },
+      {
+        "original": "dinner when",
+        "correction": "dinner than",
+        "explanation": "'No sooner' must be paired with 'than', not 'when'."
+      },
+      {
+        "original": "So great the pressure was",
+        "correction": "So great was the pressure",
+        "explanation": "Literary 'So' inversion requires the verb 'was' before the subject."
+      }
+    ]
+  },
+  "success_feedback": "Magnificent! You've unlocked the secrets of literary and correlative inversion. Your writing style is now truly distinguished.",
+  "suggested_next_steps": [
+    "Learn about inversion with 'Not until' (Inverting the second clause).",
+    "Study how 'Only then' and 'Only later' function.",
+    "Try Level 7 for the ultimate 5** inversion challenge!"
+  ],
+  "interactive_tasks": [],
+  "examples": [],
+  "key_points": []
+}

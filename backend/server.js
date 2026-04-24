@@ -78,12 +78,19 @@ app.use((req, res, next) => {
     next();
 });
 
+const chatRoutes = require('./routes/chatRoutes');
+const examRoutes = require('./routes/examRoutes');
+const profileRoutes = require('./routes/profileRoutes');
+const statsRoutes = require('./routes/statsRoutes');
+const englishMockRoutes = require('./routes/englishMockRoutes');
+
 // Rate Limiting (Cost Control)
 const limiter = rateLimit({
     windowMs: 15 * 60 * 1000,
     max: isProduction ? 150 : 10000,
     message: { error: "Too many requests. Please try again later." }
 });
+app.use('/api/english/mock', englishMockRoutes);
 app.use('/api/', limiter);
 
 // Request Tracing
@@ -95,13 +102,6 @@ app.use((req, res, next) => {
 // Static Asset Serving
 app.use('/output', express.static(path.join(__dirname, 'output')));
 
-// --- MODULAR ROUTE REGISTRY (BASE /api) ---
-// Each router owns its sub-paths (e.g. /chat, /history, /stats)
-const chatRoutes = require('./routes/chatRoutes');
-const examRoutes = require('./routes/examRoutes');
-const profileRoutes = require('./routes/profileRoutes');
-const statsRoutes = require('./routes/statsRoutes');
-
 // Re-register Specialized Legacy Routers
 app.use('/api/reading', require('./routes/readingScaffoldRoutes'));
 app.use('/api/speaking', require('./routes/speakingQuestRoutes'));
@@ -111,7 +111,6 @@ app.use('/api/lab/writing', require('./routes/english/writingLabRoutes'));
 app.use('/api/maths/lab', require('./routes/maths/mathsLabRoutes'));
 app.use('/api/maths/exam', require('./routes/maths/mathsExamRoutes'));
 app.use('/api/maths/diagnostic', require('./routes/maths/mathsDiagnosticRoutes'));
-app.use('/api/english/mock', require('./routes/englishMockRoutes'));
 app.use('/api/dictionary', require('./routes/dictionaryRoutes'));
 app.use('/api/results', require('./routes/resultRoutes'));
 

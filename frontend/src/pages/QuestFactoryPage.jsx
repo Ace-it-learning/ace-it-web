@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import GeometryRenderer from '../components/maths/GeometryRenderer';
 import {
     ArrowLeft,
@@ -30,6 +30,7 @@ import {
     Eye,
     Trash2
 } from 'lucide-react';
+import { LoadingPage } from '../components/shared';
 import { MICRO_SKILLS, getSkillsByPaper } from '../constants/microSkills';
 import { MATH_MICRO_SKILLS } from '../constants/mathMicroSkills';
 import { SafeInlineMath, SafeBlockMath } from '../components/maths/SafeMath';
@@ -37,6 +38,7 @@ import { formatNumbers, sanitizeMath, prepareMathText, splitContentByDelimiters,
 
 const QuestFactoryPage = () => {
     const navigate = useNavigate();
+    const [searchParams, setSearchParams] = useSearchParams();
 
     // Factory Configuration
     const [subject, setSubject] = useState('English');
@@ -114,7 +116,22 @@ const QuestFactoryPage = () => {
         localStorage.setItem('quest_factory_config', JSON.stringify(config));
     }, [subject, paper, topic, selectedTiers, totalCount, selectedClusterIds]);
 
-    const [activeMode, setActiveMode] = useState('generator'); // 'generator' | 'audit'
+    const [activeMode, setActiveMode] = useState(searchParams.get('mode') || 'generator'); // 'generator' | 'audit'
+
+    // Sync activeMode with URL
+    useEffect(() => {
+        const urlMode = searchParams.get('mode');
+        if (urlMode && urlMode !== activeMode) {
+            setActiveMode(urlMode);
+        }
+    }, [searchParams]);
+
+    // Helper to update activeMode and URL
+    const updateActiveMode = (newMode) => {
+        setActiveMode(newMode);
+        setSearchParams({ mode: newMode });
+    };
+
     const [pendingQuests, setPendingQuests] = useState([]);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isGenerating, setIsGenerating] = useState(false);
@@ -771,7 +788,7 @@ const QuestFactoryPage = () => {
                 {/* Master Mode Toggle */}
                 <div className="flex items-center gap-4 mb-8">
                     <button
-                        onClick={() => setActiveMode('generator')}
+                        onClick={() => updateActiveMode('generator')}
                         className={`flex items-center gap-2 px-6 py-3 rounded-2xl font-black text-xs uppercase tracking-widest transition-all ${activeMode === 'generator'
                             ? 'bg-primary text-black shadow-lg shadow-primary/20 scale-105'
                             : 'bg-white/5 text-gray-400 hover:bg-white/10 hover:text-white border border-white/5'
@@ -782,7 +799,7 @@ const QuestFactoryPage = () => {
                     </button>
                     <button
                         onClick={() => {
-                            setActiveMode('audit');
+                            updateActiveMode('audit');
                             if (auditResults.length === 0) handleAuditSearch();
                         }}
                         className={`flex items-center gap-2 px-6 py-3 rounded-2xl font-black text-xs uppercase tracking-widest transition-all ${activeMode === 'audit'
@@ -1202,16 +1219,10 @@ const QuestFactoryPage = () => {
                                     </p>
                                 </div>
                             ) : isLoading ? (
-                                <div className="bg-white/5 border border-white/10 rounded-[32px] h-[700px] flex flex-col items-center justify-center">
-                                    <Loader2 className="w-10 h-10 text-primary animate-spin mb-4" />
-                                    <p className="text-gray-500 font-bold uppercase tracking-widest text-xs mb-6">Syncing Queue...</p>
-                                    <button
-                                        onClick={fetchPending}
-                                        className="px-6 py-3 bg-white/5 hover:bg-white/10 border border-white/10 rounded-2xl text-[10px] font-black text-gray-400 uppercase tracking-widest transition-all"
-                                    >
-                                        Force Refresh
-                                    </button>
-                                </div>
+                                <LoadingPage 
+                                    title="Syncing Manufacturing Queue"
+                                    subtext="Retrieving pending quests from the factory database..."
+                                />
                             ) : (
                                 <div className="bg-white/5 border border-white/10 rounded-[40px] overflow-hidden flex flex-col min-h-[750px] shadow-2xl">
                                     {/* Workstation Header */}
@@ -1253,7 +1264,7 @@ const QuestFactoryPage = () => {
                                                 </button>
                                                 <div className="flex flex-col items-center w-24">
                                                     <span className="text-xs font-black text-white">{currentIndex + 1} / {pendingQuests.length}</span>
-                                                    <span className="text-[8px] text-gray-500 uppercase font-bold tracking-tighter">
+                                                    <span className="text-[9px] text-gray-500 uppercase font-bold tracking-tighter">
                                                         {baseQuest.type === 'listening_mission' ? 'MISSION BATCH' : 'QUESTION POSITION'}
                                                     </span>
                                                 </div>
@@ -1414,12 +1425,12 @@ const QuestFactoryPage = () => {
                                                                 <BarChart3 className="w-4 h-4 text-primary" />
                                                                 <h4 className="text-[10px] text-gray-500 font-black uppercase tracking-[0.2em]">Questions</h4>
                                                                 {currentQuest.standard_version === '3.1-Elite' && (
-                                                                    <div className="px-2 py-0.5 rounded-md bg-gradient-to-r from-indigo-500 to-purple-600 text-[8px] font-black text-white uppercase tracking-widest shadow-lg shadow-purple-500/20">
+                                                                    <div className="px-2 py-0.5 rounded-md bg-gradient-to-r from-indigo-500 to-purple-600 text-[9px] font-black text-white uppercase tracking-widest shadow-lg shadow-purple-500/20">
                                                                         3.1 Elite
                                                                     </div>
                                                                 )}
                                                                 {currentQuest.standard_version === '3.0' && (
-                                                                    <div className="px-2 py-0.5 rounded-md bg-gradient-to-r from-amber-400 to-orange-500 text-[8px] font-black text-black uppercase tracking-widest shadow-lg shadow-amber-500/20">
+                                                                    <div className="px-2 py-0.5 rounded-md bg-gradient-to-r from-amber-400 to-orange-500 text-[9px] font-black text-black uppercase tracking-widest shadow-lg shadow-amber-500/20">
                                                                         3.0 Premium
                                                                     </div>
                                                                 )}
@@ -1608,7 +1619,7 @@ const QuestFactoryPage = () => {
 
                                                         {(currentQuest.explanation || currentQuest.content?.explanation) && (
                                                             <div className="pt-4 border-t border-green-500/20">
-                                                                <h4 className="text-[8px] text-gray-500 font-black uppercase tracking-widest mb-2 px-1">Explanation</h4>
+                                                                <h4 className="text-[9px] text-gray-500 font-black uppercase tracking-widest mb-2 px-1">Explanation</h4>
                                                                 <div className={`text-[11px] text-gray-300 leading-relaxed italic`}>
                                                                     {renderMath(showChinese && (currentQuest.explanation_zh || currentQuest.content?.explanation_zh)
                                                                         ? (currentQuest.explanation_zh || currentQuest.content?.explanation_zh)
@@ -1862,13 +1873,13 @@ const QuestFactoryPage = () => {
                                                             {quest.standard_version === '3.1-Elite' && (
                                                                 <>
                                                                     <div className="w-1 h-1 rounded-full bg-purple-500/50" />
-                                                                    <span className="text-[8px] text-purple-400 font-black uppercase tracking-widest">3.1 Elite</span>
+                                                                    <span className="text-[9px] text-purple-400 font-black uppercase tracking-widest">3.1 Elite</span>
                                                                 </>
                                                             )}
                                                             {quest.standard_version === '3.0' && (
                                                                 <>
                                                                     <div className="w-1 h-1 rounded-full bg-amber-500/50" />
-                                                                    <span className="text-[8px] text-amber-500 font-black uppercase tracking-widest">3.0 Premium</span>
+                                                                    <span className="text-[9px] text-amber-500 font-black uppercase tracking-widest">3.0 Premium</span>
                                                                 </>
                                                             )}
                                                         </div>
@@ -1925,11 +1936,11 @@ const QuestFactoryPage = () => {
                                                                     <span className="text-[10px] font-black text-amber-500/50 uppercase tracking-widest block mb-2">Question Text (EN / ZH)</span>
                                                                     <div className="bg-white/5 p-4 rounded-2xl border border-white/5 space-y-4">
                                                                         <div className="text-xs text-gray-200 leading-relaxed font-sans pb-4 border-b border-white/5">
-                                                                            <span className="text-[8px] font-black text-primary/50 uppercase tracking-widest block mb-1">English</span>
+                                                                            <span className="text-[9px] font-black text-primary/50 uppercase tracking-widest block mb-1">English</span>
                                                                             {renderMath(quest.text || quest.question_en || quest.question || "No English text available.")}
                                                                         </div>
                                                                         <div className="text-xs text-gray-300 leading-relaxed font-sans">
-                                                                            <span className="text-[8px] font-black text-primary/50 uppercase tracking-widest block mb-1">Chinese</span>
+                                                                            <span className="text-[9px] font-black text-primary/50 uppercase tracking-widest block mb-1">Chinese</span>
                                                                             {renderMath(quest.text_zh || quest.question_zh || "No Chinese text available.")}
                                                                         </div>
                                                                     </div>

@@ -111,40 +111,42 @@ router.post('/submit', async (req, res) => {
         let questXP = 0;
         let practiceXP = 0;
 
-        // 3. Factory Model Quest Completion (Phase 5)
+        // Determine Base XP based on standardized rules
+        let baseXP = 150; // Default flat reward
+
+        // 1. Grammar Lab (50 XP flat)
+        if (req.body.isGrammarLab || (req.body.topic && req.body.topic.toLowerCase().includes('grammar'))) {
+            baseXP = 50;
+        } else {
+            // Scaled Rewards for Reading
+            const isReading = req.body.paper === 'Reading' || (req.body.topic || '').includes('reading');
+            if (isReading) {
+                baseXP = GamificationService.getTieredXP(req.body.level || '4');
+            }
+        }
+
+        // 3. Factory Model Quest Completion
         if (req.body.isFactoryQuest) {
-            const ENGLISH_XP_MAPPING = { "3": 80, "4": 110, "5": 140, "7": 200 };
-            const baseXP = ENGLISH_XP_MAPPING[String(req.body.level)] || 120;
             const factoryResult = await GamificationService.awardFactoryQuestCompletion(uid, req.body.taskId || questionIds[0], 'english', baseXP);
             if (factoryResult.success) {
                 questXP = factoryResult.totalEarned || factoryResult.earned;
-                console.log(`[Lab] Factory Quest Awarded: ${questXP} XP (Bonus: ${factoryResult.bonusAwarded})`);
             }
         } else if (req.body.isWeeklyQuest || req.body.topic === 'reading_weekly') {
-            // 4. Weekly Quest Completion (Phase 6b)
-            console.log(`[Lab] Attempting Weekly Quest Award for user: ${uid} (Topic: ${req.body.topic})`);
+            // 4. Weekly Quest Completion
             const weeklyResult = await GamificationService.awardWeeklyQuestCompletion(uid);
             if (weeklyResult.success) {
                 questXP = weeklyResult.earned;
-                console.log(`[Lab] Weekly Quest Awarded: ${questXP} XP. WeekId: ${weeklyResult.weekId}`);
-            } else {
-                console.warn(`[Lab] Weekly Quest Award Failed: ${weeklyResult.error}`);
             }
         } else if (req.body.taskId) {
-            // 1. Legacy Quest Completion (Roadmap Bonus)
+            // Legacy/Roadmap award
             const questResult = await GamificationService.awardQuestCompletion(uid, req.body.taskId, 'english');
             if (questResult.success && questResult.fresh) {
                 questXP = questResult.earned;
-                console.log(`[Lab] Quest Bonus Awarded: ${questXP} XP`);
             }
         }
 
         // 2. Practice XP (Always awarded)
-        if (xp) {
-            // Determine Source Type for Multipliers
-            // Default: 'practice_lab'
-            // If personalised: 'personalised_recommendation'
-            // If challenge: 'challenge'
+        if (xp || baseXP) {
             let sourceType = 'practice_lab';
             if (req.body.isPersonalised) sourceType = 'personalised_recommendation';
             if (req.body.isChallenge) sourceType = 'challenge';
@@ -152,6 +154,10 @@ router.post('/submit', async (req, res) => {
             const displayName = UserProfileService.getSkillName(req.body.topic, 'english');
             const questName = req.body.title || `Lab: ${displayName || 'Practice'}`;
             const paper = req.body.paper || ((req.body.topic || '').includes('listening') ? 'Listening' : 'Reading');
+
+            // Listening logic: If it's listening, XP is awarded during evaluation steps (80/120)
+            // But if called via /submit (legacy), we award the flat 150.
+            const rewardAmount = (xp !== undefined && xp !== null) ? parseInt(xp) : baseXP;
 
             // PERSIST RESULT
             let resultId = null;
@@ -161,7 +167,7 @@ router.post('/submit', async (req, res) => {
                         module: paper,
                         questName: questName,
                         score: req.body.masteryScore || 0,
-                        xpAwarded: xp,
+                        xpAwarded: rewardAmount,
                         content: req.body.results,
                         feedback: req.body.feedback || { summary: "Great practice session." },
                         timestamp: new Date()
@@ -169,7 +175,7 @@ router.post('/submit', async (req, res) => {
                 } catch (e) { console.warn("Result save failed", e.message); }
             }
 
-            const xpResult = await GamificationService.awardXP(uid, parseInt(xp), sourceType, {
+            const xpResult = await GamificationService.awardXP(uid, rewardAmount, sourceType, {
                 duration: req.body.duration || 0,
                 expectedDuration: 600,
                 title: questName,
@@ -180,11 +186,18 @@ router.post('/submit', async (req, res) => {
                 questName: questName,
                 resultId: resultId
             });
-            practiceXP = xpResult.earned;
+
+            return res.json({ 
+                success: true, 
+                earnedTotal: questXP + xpResult.earned, 
+                questBonus: questXP, 
+                practiceXP: xpResult.earned, 
+                breakdown: xpResult.breakdown,
+                isFactoryQuest: req.body.isFactoryQuest 
+            });
         }
 
-        // Return the total XP earned in this session so frontend can show " +150 XP "
-        res.json({ success: true, earnedTotal: questXP + practiceXP, questBonus: questXP, practiceXP, isFactoryQuest: req.body.isFactoryQuest });
+        res.json({ success: true, earnedTotal: 0 });
         return;
 
         res.json({ success: true });
@@ -212,19 +225,22 @@ router.post('/evaluate_batch', async (req, res) => {
             target_sentence: t.target_sentence
         }));
 
-        const prompt = `You are an expert HKDSE English Examiner. Grade these student answers for a ${category || 'general'} proficiency lab. 
+        const prompt = `You are a strict but fair HKDSE Senior English Examiner. Grade these student answers for a ${category || 'general'} proficiency lab. 
 Tasks to Grade: ${JSON.stringify(gradingRequests)}
 
 For each task:
-1. Compare "answer" (student) against "logic" and "keywords".
-2. If the student captures the core semantic meaning, mark "correct": true.
-3. For MCQ, "correct" is true ONLY if the student's letter matches the correct option exactly.
-4. Provide a "feedback" string:
-   - If correct: Confirm why it's right and offer a tiny extension tip.
-   - If incorrect: Explain the error clearly AND provide the correct answer/solution.
+1. MANDATORY SEMANTIC GRADING: For open-ended questions (Short Answer, TFNG justifications), grade based on SEMANTIC MEANING, not literal keyword matching. If the student uses different words to express the identical logical concept found in the 'logic' or 'keywords', they must be awarded the mark.
+2. If the student's answer captures the core semantic meaning completely, mark "status": "correct", and "correct": true.
+3. If the answer is partially correct (captures some but not all of the required meaning), mark "status": "partial", and "correct": false.
+4. If the answer is wrong, irrelevant, or misses the core meaning, mark "status": "incorrect", and "correct": false.
+5. For MCQ tasks, "status" is "correct" ONLY if the student's letter matches the correct option exactly.
+6. Provide a "feedback" string:
+   - If correct: Confirm why it's right.
+   - If partial: Explain what was correct and what crucial detail was missing.
+   - If incorrect: Explain the error clearly AND provide the correct solution.
    
 Return a SINGLE JSON OBJECT where keys are the task IDs. 
-Format: { "id": { "correct": boolean, "feedback": "..." } }`;
+Format: { "id": { "status": "correct"|"partial"|"incorrect", "correct": boolean, "feedback": "..." } }`;
 
         const result = await GenerativeAIService.generateContent(prompt, {
             model: "ace-it-pro",
@@ -349,26 +365,50 @@ router.post('/tts', async (req, res) => {
     }
 });
 
-// POST /api/lab/evaluate_integrated
+// POST /api/lab/evaluate_integrated (Listening Part B)
 router.post('/evaluate_integrated', async (req, res) => {
     const { questId, studentNotes, studentDraft, targetLevel, uid } = req.body;
-    console.log(`[LabRoute] Evaluating Integrated Simulation for Quest: ${questId}, User: ${uid}`);
+    console.log(`[LabRoute] Evaluating Integrated Simulation (Part B) for Quest: ${questId}, User: ${uid}`);
     try {
         const evaluation = await LabService.evaluateIntegratedSimulation(questId, studentNotes, studentDraft, targetLevel);
-        res.json(evaluation);
+        
+        // Award 120 XP for Part B completion
+        let xpResult = null;
+        if (uid && uid !== 'placeholder') {
+            xpResult = await GamificationService.awardXP(uid, 120, 'listening', {
+                title: `Listening Part B: ${questId}`,
+                subject: 'english',
+                paper: 'Listening',
+                score: `${evaluation.overallScore}%`
+            });
+        }
+        
+        res.json({ ...evaluation, xpResult });
     } catch (e) {
         console.error("Integrated Evaluation API Error:", e);
         res.status(500).json({ error: e.message || "Evaluation failed" });
     }
 });
 
-// POST /api/lab/evaluate_sprint
+// POST /api/lab/evaluate_sprint (Listening Part A)
 router.post('/evaluate_sprint', async (req, res) => {
     const { questId, answers, uid } = req.body;
-    console.log(`[LabRoute] Evaluating Data Sprint for Quest: ${questId}, User: ${uid}`);
+    console.log(`[LabRoute] Evaluating Data Sprint (Part A) for Quest: ${questId}, User: ${uid}`);
     try {
         const evaluation = await LabService.evaluateDataSprint(questId, answers);
-        res.json(evaluation);
+        
+        // Award 80 XP for Part A completion
+        let xpResult = null;
+        if (uid && uid !== 'placeholder') {
+            xpResult = await GamificationService.awardXP(uid, 80, 'listening', {
+                title: `Listening Part A: ${questId}`,
+                subject: 'english',
+                paper: 'Listening',
+                score: `${evaluation.score}%`
+            });
+        }
+        
+        res.json({ ...evaluation, xpResult });
     } catch (e) {
         console.error("Sprint Evaluation API Error:", e);
         res.status(500).json({ error: e.message || "Evaluation failed" });

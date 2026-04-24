@@ -2,6 +2,7 @@ const GenerativeAIService = require('../GenerativeAIService');
 const writingSyllabus = require('../../data/writing_quest_syllabus.json');
 const genrePrompts = require('../../data/genre_prompts.json');
 const admin = require('firebase-admin');
+const axios = require('axios');
 
 class WritingQuestService {
     constructor() {
@@ -551,17 +552,38 @@ class WritingQuestService {
     /**
      * Final Grading: Assess all 3 pillars (Content, Language, Organization) + Predicted Level
      */
-    async gradeFinalPiece(topic, textType, content) {
-        const prompt = `
+    async gradeFinalPiece(topic, textType, content, imageUrls = []) {
+        const imageParts = [];
+        if (imageUrls && imageUrls.length > 0) {
+            console.log(`[WritingQuestService] Fetching ${imageUrls.length} images for multimodal grading...`);
+            for (const url of imageUrls) {
+                const base64 = await this.fetchImageAsBase64(url);
+                if (base64) {
+                    imageParts.push({
+                        inlineData: {
+                            data: base64,
+                            mimeType: "image/jpeg"
+                        }
+                    });
+                }
+            }
+        }
+
+        const promptText = `
             You are a Senior HKDSE English Marker (Level 5** Expert) named {{agentName}}.
             Task: Provide a PROFESSIONAL and DETAILED assessment of the student's work based on 2025 Level Descriptors.
             
             Topic: "${topic}"
             Text Type: "${textType}"
-            Student Content: "${content}"
+            
+            ${imageParts.length > 0 
+                ? "The student has provided photos of their handwritten work. Please transcribe the handwriting carefully and grade the content based on the images. If text content is also provided below, consider it as part of the response."
+                : ""}
+            
+            Student Text Content: "${content}"
 
             Grading Criteria (HKDSE 1-7 Scale for Content, Language, Organization):
-            - **Content (C)**: Addressing prompt, idea development, depth.
+            - **Content (C)**: Addressing prompt, idea development, depth. (STERN RULE: If the essay is significantly under-length—e.g. < 160 words for Part A or < 320 for Part B—do NOT award a 7 for Content as it lacks sustained development).
             - **Language (L)**: Vocabulary range, grammar accuracy, complexity.
             - **Organization (O)**: Structure, cohesion, transitions.
 
@@ -578,6 +600,7 @@ class WritingQuestService {
             - ALL qualitative fields MUST contain both "en" and "zh" objects.
             - LANGUAGE: EXCLUSIVELY use Traditional Chinese (繁體中文) for all "zh" fields.
             - Ensure every feedback field is fully translated into Traditional Chinese.
+            - **STERN CALIBRATION**: Distinguish clearly between "Competence" (Level 4) and "Sophistication" (Level 5**). A Level 4 response is clear and accurate but uses standard vocabulary. A Level 5** response MUST demonstrate "flair," "nuance," and "sophisticated control" of language. If a response is merely "good" but not "impressive," do NOT award a 7 for Content or Language.
             - No preamble. No meta-commentary.
 
             Output JSON Format (Strict):
@@ -605,8 +628,12 @@ class WritingQuestService {
             }
         `;
 
+        const prompt = imageParts.length > 0 
+            ? [{ text: promptText }, ...imageParts]
+            : promptText;
+
         try {
-            const result = await this.aiService.generateJson(prompt);
+            const result = await this.aiService.generateJson(prompt, { model: 'ace-it-pro' });
             const data = result.data;
 
             // Normalize internal pillar keys to lowercase for deterministic frontend mapping
@@ -628,26 +655,128 @@ class WritingQuestService {
                 }
             };
         } catch (error) {
-            console.error("[WritingQuest] Grading Error:", error);
-            return {
-                predicted_level: "4",
-                overall_score: 4,
-                pillar_scores: {
-                    content: { score: 4, feedback: { en: "Solid attempt. Ensure all prompt requirements are fully addressed with deeper analysis.", zh: "表現尚可。請確保充分回應題目要求，並進行更深入的分析。" } },
-                    language: { score: 4, feedback: { en: "Generally clear but could benefit from more sophisticated vocabulary and grammatical structures.", zh: "表達基本清晰，但若能使用更豐富的詞彙和語法結構會更好。" } },
-                    organization: { score: 4, feedback: { en: "Coherent structure, but transitions could be smoother between complex ideas.", zh: "結構連貫，但在處理複雜觀點時，段落間的過渡可以更流暢。" } }
+            console.warn("[WritingQuestService] Final Grade with Pro failed, falling back to Flash:", error.message);
+            try {
+                const result = await this.aiService.generateJson(prompt, { model: 'ace-it-flash' });
+                const data = result.data;
+                const rawPillars = data.pillar_scores || data.pillarScores || {};
+                const normalizedPillars = {};
+                Object.keys(rawPillars).forEach(key => {
+                    normalizedPillars[key.toLowerCase()] = rawPillars[key];
+                });
+
+                return {
+                    ...data,
+                    predicted_level: data.predicted_level || data.predictedLevel || "4",
+                    overall_score: data.overall_score || data.overallScore || 4,
+                    pillar_scores: Object.keys(normalizedPillars).length > 0 ? normalizedPillars : {
+                        content: { score: 4, feedback: { en: "Feedback loading...", zh: "正在載入評語..." } },
+                        language: { score: 4, feedback: { en: "Feedback loading...", zh: "正在載入評語..." } },
+                        organization: { score: 4, feedback: { en: "Feedback loading...", zh: "正在載入評語..." } }
+                    }
+                };
+            } catch (fallbackError) {
+                console.error("[WritingQuestService] Both Pro and Flash failed:", fallbackError);
+                return {
+                    predicted_level: "4",
+                    overall_score: 4,
+                    pillar_scores: {
+                        content: { score: 4, feedback: { en: "Error evaluating content.", zh: "評核內容時發生錯誤。" } },
+                        language: { score: 4, feedback: { en: "Error evaluating language.", zh: "評核語言時發生錯誤。" } },
+                        organization: { score: 4, feedback: { en: "Error evaluating organization.", zh: "評核組織時發生錯誤。" } }
+                    }
+                };
+            }
+        }
+    }
+
+    async fetchImageAsBase64(url) {
+        try {
+            const response = await axios.get(url, { responseType: 'arraybuffer' });
+            return Buffer.from(response.data, 'binary').toString('base64');
+        } catch (e) {
+            console.error(`[WritingQuestService] Failed to fetch image: ${url}`, e.message);
+            return null;
+        }
+    }
+
+    /**
+     * HKDSE Paper 2 Mock Grading: Grades Part A and Part B together
+     */
+    async gradeMockPaper(topic, responses) {
+        const imageParts = [];
+        const responsesSummary = responses.map(r => {
+            return `Part ${r.part} (${r.elective || 'Compulsory'}): ${r.title}\nContent: ${r.text || 'Handwritten (see photos)'}`;
+        }).join('\n\n---\n\n');
+
+        for (const res of responses) {
+            if (res.images && res.images.length > 0) {
+                for (const url of res.images) {
+                    const base64 = await this.fetchImageAsBase64(url);
+                    if (base64) {
+                        imageParts.push({
+                            inlineData: {
+                                data: base64,
+                                mimeType: "image/jpeg"
+                            }
+                        });
+                    }
+                }
+            }
+        }
+
+        const promptText = `
+            You are a Senior HKDSE English Marker (Paper 2 Specialist).
+            Task: Grade a full Paper 2 Mock Exam (Part A & Part B).
+            
+            Exam Topic: "${topic}"
+            
+            ${imageParts.length > 0 ? "Photos of handwritten work are provided. Transcribe and include them in your evaluation." : ""}
+
+            Student Work Summary:
+            ${responsesSummary}
+
+            ### GRADING MANDATE:
+            1. **Holistic Level**: Assign an overall HKDSE Level (1 to 5**).
+            2. **Word Count Check**: 
+               - Part A requires ~200 words. Part B requires ~400 words.
+               - STERN RULE: If a response is significantly under-length (e.g., Part A < 160 words, Part B < 320 words), you MUST NOT award a 7 for Content. 
+               - A Level 5/5*/5** response MUST demonstrate "sustained development" and "depth of thought," which is physically impossible in very short responses. Penalize Content and Organization for lack of elaboration if the work is too brief.
+            3. **Part A Breakdown**: Brief comment on Content, Language, and Organization for the compulsory task.
+            4. **Part B Breakdown**: Detailed analysis for the elective task.
+            5. **Overall C-L-O**: Final scores (1-7) for each domain across both parts.
+
+            Output JSON Format:
+            {
+                "predicted_level": "5**",
+                "overall_score": float,
+                "pillar_scores": {
+                    "content": { "score": 7, "feedback": { "en": "...", "zh": "..." } },
+                    "language": { "score": 7, "feedback": { "en": "...", "zh": "..." } },
+                    "organization": { "score": 7, "feedback": { "en": "...", "zh": "..." } }
                 },
-                examiner_summary: {
-                    en: "A satisfactory performance overall. Focus on elevating the sophistication of your arguments and linguistic range to reach higher DSE tiers.",
-                    zh: "整體表現令人滿意。建議專注於提升論點的深度以及語言運用的變化，以達到 DSE 更高等級。"
-                },
-                improvement_goal: {
-                    en: "Refine linguistic precision and depth.",
-                    zh: "應致力於優化語言的精確度及內容深度。"
-                },
-                exemplar_comparison: null,
-                model_answer_5_star: "High-level exemplars are available in the gallery. / 請參考範文清單以獲取 5** 範本。"
-            };
+                "part_a_feedback": { "en": "...", "zh": "..." },
+                "part_b_feedback": { "en": "...", "zh": "..." },
+                "examiner_summary": { "en": "...", "zh": "..." },
+                "high_score_tips": [
+                    { "title": { "en": "...", "zh": "..." }, "description": { "en": "...", "zh": "..." } }
+                ]
+            }
+
+            Language: Use Traditional Chinese (繁體中文) for all "zh" fields.
+        `;
+
+        const prompt = imageParts.length > 0 
+            ? [{ text: promptText }, ...imageParts]
+            : promptText;
+
+        try {
+            const result = await this.aiService.generateJson(prompt, { model: 'ace-it-pro' });
+            return result.data;
+        } catch (error) {
+            console.warn("[WritingQuestService] Mock Grading with Pro failed, falling back to Flash:", error.message);
+            const result = await this.aiService.generateJson(prompt, { model: 'ace-it-flash' });
+            return result.data;
         }
     }
 }

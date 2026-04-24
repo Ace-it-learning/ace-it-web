@@ -1,0 +1,231 @@
+{
+  "type": "GRAMMAR",
+  "topic_id": "grammar_accuracy_tense",
+  "level": "HKDSE Level 5",
+  "conceptual_explanation": "Level 5 Tense Consistency focuses on subtle nuances: distinguishing between permanent states and temporary actions (Stative Verbs), and managing 'Future in the Past' when discussing intentions that were formed in the past. You must also master hypothetical tenses (Type 2 Conditionals) and ensure they don't clash with factual statements in the same paragraph.",
+  "rule_cards": [
+    {
+      "name": "The Stative Verb Trap",
+      "formula": "Mental states/ownership (know, believe, belong, own) = Simple Tense (NOT Continuous)",
+      "correct": "I have known him for years. (NOT: I have been knowing)",
+      "incorrect": "I am knowing the answer now."
+    },
+    {
+      "name": "Type 2 Conditional (Hypothetical)",
+      "formula": "If + Simple Past, Subject + Would + Verb (Imaginary/Unlikely)",
+      "correct": "If I were the CEO, I would implement a four-day work week.",
+      "incorrect": "If I was the CEO, I will implement a four-day work week."
+    },
+    {
+      "name": "Future in the Past",
+      "formula": "Past Context + Would/Was going to (Action intended in the past)",
+      "correct": "He promised he would call me later that day.",
+      "incorrect": "He promised he will call me later that day."
+    },
+    {
+      "name": "The 'Until' Trap",
+      "formula": "Until + Simple Present (Future meaning) / Until + Simple Past (Past meaning)",
+      "correct": "I will wait here until she arrives. (NOT: until she will arrive)",
+      "incorrect": "I stayed there until she will arrive."
+    }
+  ],
+  "head_noun_tasks": [
+    {
+      "sentence_tokens": [
+        "Even",
+        "though",
+        "he",
+        "is",
+        "rich",
+        ",",
+        "he",
+        "wishes",
+        "he",
+        "were",
+        "happier",
+        "."
+      ],
+      "head_noun_indices": [
+        7,
+        9
+      ],
+      "explanation": "'Wishes' introduces a hypothetical state, which requires the subjunctive 'were' regardless of the subject."
+    },
+    {
+      "sentence_tokens": [
+        "I",
+        "was",
+        "about",
+        "to",
+        "leave",
+        "when",
+        "I",
+        "remembered",
+        "I",
+        "had",
+        "forgotten",
+        "my",
+        "keys",
+        "."
+      ],
+      "head_noun_indices": [
+        1,
+        2,
+        4
+      ],
+      "explanation": "'Was about to leave' expresses a future intention relative to a past point in time."
+    },
+    {
+      "sentence_tokens": [
+        "They",
+        "had",
+        "been",
+        "arguing",
+        "for",
+        "hours",
+        "before",
+        "they",
+        "finally",
+        "reached",
+        "a",
+        "compromise",
+        "."
+      ],
+      "head_noun_indices": [
+        6
+      ],
+      "explanation": "'Before' sets the timeline for the Past Perfect Continuous action that preceded the compromise."
+    },
+    {
+      "sentence_tokens": [
+        "It",
+        "is",
+        "vital",
+        "that",
+        "every",
+        "citizen",
+        "understands",
+        "the",
+        "new",
+        "law",
+        "."
+      ],
+      "head_noun_indices": [
+        1
+      ],
+      "explanation": "'It is vital that...' usually triggers a subjunctive or base form, but in modern English, 'understands' (present) is common for facts."
+    },
+    {
+      "sentence_tokens": [
+        "If",
+        "technology",
+        "did",
+        "not",
+        "exist",
+        ",",
+        "life",
+        "would",
+        "be",
+        "much",
+        "harder",
+        "."
+      ],
+      "head_noun_indices": [
+        0,
+        7
+      ],
+      "explanation": "'If' + Simple Past ('did not exist') creates the Type 2 hypothetical context for 'would be'."
+    }
+  ],
+  "drill_tasks": [
+    {
+      "type": "MCQ",
+      "question": "Since the new policy was implemented, many citizens ________ their dissatisfaction through social media.",
+      "options": [
+        "expressed",
+        "have expressed",
+        "are expressing",
+        "had expressed"
+      ],
+      "answer": "have expressed",
+      "explanation": "'Since [past event]' requires Present Perfect to show the action continues from then until now."
+    },
+    {
+      "type": "MCQ",
+      "question": "If I ________ you, I would think twice before signing that contract.",
+      "options": [
+        "was",
+        "am",
+        "were",
+        "will be"
+      ],
+      "answer": "were",
+      "explanation": "Type 2 conditional (hypothetical): 'were' is used for all subjects in formal English."
+    },
+    {
+      "type": "MCQ",
+      "question": "The archaeologist believed that the ruins ________ to a previously unknown civilization.",
+      "options": [
+        "belong",
+        "are belonging",
+        "belonged",
+        "have belonged"
+      ],
+      "answer": "belonged",
+      "explanation": "'Belong' is a stative verb. After 'believed' (past), it should be Simple Past 'belonged'."
+    },
+    {
+      "type": "MCQ",
+      "question": "He told the interviewer that he ________ looking for a new challenge for some time.",
+      "options": [
+        "is",
+        "was",
+        "has been",
+        "had been"
+      ],
+      "answer": "had been",
+      "explanation": "Reporting an action that was happening before the interview: Past Perfect Continuous is most precise."
+    },
+    {
+      "type": "MCQ",
+      "question": "By the time the rescue team arrives tomorrow, the survivors ________ without food for three days.",
+      "options": [
+        "are",
+        "will be",
+        "will have been",
+        "have been"
+      ],
+      "answer": "will have been",
+      "explanation": "Future completion: 'By the time [future]' + Future Perfect."
+    }
+  ],
+  "boss_fight": {
+    "paragraph": "The CEO announced yesterday that the company is expanding its operations to Southeast Asia. He claimed that the board of directors owns several properties in Vietnam already. Furthermore, he suggested that if the market stayed stable, we will see record profits by the end of the year.",
+    "errors": [
+      {
+        "original": "is expanding",
+        "correction": "was expanding",
+        "explanation": "After the past reporting verb 'announced', the present continuous should be backshifted to past continuous."
+      },
+      {
+        "original": "owns",
+        "correction": "owned",
+        "explanation": "Consistency with the past context 'claimed' requires 'owned', even though ownership might still be true."
+      },
+      {
+        "original": "will see",
+        "correction": "would see",
+        "explanation": "This is a Type 2 conditional (if ... stayed). The result clause must use 'would', not 'will'."
+      }
+    ]
+  },
+  "success_feedback": "Stellar performance! You have a keen eye for the subtle 'Sequence of Tense' and 'Stative Verb' traps that separate top-tier candidates.",
+  "suggested_next_steps": [
+    "Master Type 3 Conditionals for past regrets/hypotheticals.",
+    "Explore the 'Subjunctive Mood' in formal recommendations (e.g., 'It is essential that he be...').",
+    "Analyze professional news articles to see how they handle complex tense transitions."
+  ],
+  "interactive_tasks": [],
+  "examples": [],
+  "key_points": []
+}

@@ -1,0 +1,228 @@
+{
+  "type": "GRAMMAR",
+  "topic_id": "grammar_accuracy_pronoun",
+  "level": "HKDSE Level 4",
+  "conceptual_explanation": "Level 4 Pronoun Accuracy focuses on clarity. You must avoid 'Ambiguous Antecedents' where it's unclear who a pronoun refers to. You will also practice using Reflexive Pronouns (myself, himself) correctly and handling collective or indefinite subjects like 'Each' or 'Someone'.",
+  "rule_cards": [
+    {
+      "name": "The Ambiguity Trap",
+      "formula": "Ensure one pronoun = ONE clear noun",
+      "correct": "When the teacher met the student, the teacher was happy.",
+      "incorrect": "When the teacher met the student, he was happy. (Who is 'he'?)"
+    },
+    {
+      "name": "Reflexive Pronouns",
+      "formula": "Subject and Object are the same person -> -self / -selves",
+      "correct": "I hurt myself while cooking. / They helped themselves to the food.",
+      "incorrect": "I hurt me while cooking."
+    },
+    {
+      "name": "Singular 'They'",
+      "formula": "Indefinite person (Someone, Anybody) -> They / Their (Gender-neutral)",
+      "correct": "If someone calls, tell them I am busy.",
+      "incorrect": "If someone calls, tell him or her I am busy. (Less common in modern DSE)"
+    },
+    {
+      "name": "The 'Each of' Rule",
+      "formula": "Each / Neither / Either of + Plural Noun + Singular Pronoun (usually)",
+      "correct": "Each of the boys has his own locker.",
+      "incorrect": "Each of the boys has their own locker. (Though 'their' is becoming accepted, 'his/her' is more formal)"
+    }
+  ],
+  "head_noun_tasks": [
+    {
+      "sentence_tokens": [
+        "The",
+        "manager",
+        "told",
+        "the",
+        "employee",
+        "that",
+        "the",
+        "manager",
+        "would",
+        "be",
+        "away",
+        "."
+      ],
+      "head_noun_indices": [
+        1,
+        7
+      ],
+      "explanation": "To avoid ambiguity, we repeat the noun 'manager' or use a specific name instead of just 'he'."
+    },
+    {
+      "sentence_tokens": [
+        "If",
+        "anyone",
+        "has",
+        "a",
+        "question",
+        ",",
+        "they",
+        "should",
+        "raise",
+        "their",
+        "hand",
+        "."
+      ],
+      "head_noun_indices": [
+        1,
+        6,
+        9
+      ],
+      "explanation": "'They' and 'their' are used as gender-neutral singular pronouns for 'anyone'."
+    },
+    {
+      "sentence_tokens": [
+        "The",
+        "children",
+        "were",
+        "behaving",
+        "well",
+        "and",
+        "playing",
+        "by",
+        "themselves",
+        "."
+      ],
+      "head_noun_indices": [
+        1,
+        8
+      ],
+      "explanation": "'Themselves' is the reflexive pronoun for 'children'."
+    },
+    {
+      "sentence_tokens": [
+        "Each",
+        "of",
+        "the",
+        "contestants",
+        "was",
+        "given",
+        "his",
+        "or",
+        "her",
+        "own",
+        "number",
+        "."
+      ],
+      "head_noun_indices": [
+        0,
+        6,
+        8
+      ],
+      "explanation": "'Each' is singular, so it technically requires 'his or her' in formal writing."
+    },
+    {
+      "sentence_tokens": [
+        "I",
+        "will",
+        "handle",
+        "the",
+        "matter",
+        "myself",
+        ",",
+        "thank",
+        "you",
+        "."
+      ],
+      "head_noun_indices": [
+        0,
+        5
+      ],
+      "explanation": "'Myself' is used for emphasis or when the subject and object are the same."
+    }
+  ],
+  "drill_tasks": [
+    {
+      "type": "MCQ",
+      "question": "The boy and his father went to the shop, where ________ bought a new bike.",
+      "options": [
+        "he",
+        "the boy",
+        "him",
+        "his father"
+      ],
+      "answer": "the boy",
+      "explanation": "To avoid ambiguity between the boy and his father, use a specific noun."
+    },
+    {
+      "type": "MCQ",
+      "question": "The students taught ________ how to code using online tutorials.",
+      "options": [
+        "them",
+        "theirselves",
+        "themselves",
+        "they"
+      ],
+      "answer": "themselves",
+      "explanation": "'Themselves' is the correct reflexive form for 'students'."
+    },
+    {
+      "type": "MCQ",
+      "question": "Neither of the candidates has submitted ________ application yet.",
+      "options": [
+        "their",
+        "his or her",
+        "them",
+        "its"
+      ],
+      "answer": "his or her",
+      "explanation": "'Neither' is singular in formal grammar."
+    },
+    {
+      "type": "MCQ",
+      "question": "When you finish the book, please return ________ to the library.",
+      "options": [
+        "the book",
+        "it",
+        "them",
+        "its"
+      ],
+      "answer": "it",
+      "explanation": "'It' clearly refers to the singular 'book'."
+    },
+    {
+      "type": "MCQ",
+      "question": "One must be careful when ________ is driving in the rain.",
+      "options": [
+        "you",
+        "he",
+        "one",
+        "they"
+      ],
+      "answer": "one",
+      "explanation": "Maintain consistency with the indefinite pronoun 'one'."
+    }
+  ],
+  "boss_fight": {
+    "paragraph": "The scientist told the assistant that he had made a breakthrough. I am so happy for him! We should all reward ourselves for our hard work. If anyone wants to celebrate, he should let me know.",
+    "errors": [
+      {
+        "original": "he had made",
+        "correction": "the scientist had made",
+        "explanation": "Ambiguity: It is unclear whether 'he' refers to the scientist or the assistant."
+      },
+      {
+        "original": "ourselves",
+        "correction": "them",
+        "explanation": "Context: The speaker is talking about the scientist and assistant (them), not 'we'."
+      },
+      {
+        "original": "he should let",
+        "correction": "they should let",
+        "explanation": "'Anyone' is better matched with the gender-neutral 'they' in modern usage."
+      }
+    ]
+  },
+  "success_feedback": "Excellent! You're resolving pronoun ambiguity and handling reflexive forms with precision.",
+  "suggested_next_steps": [
+    "Study relative pronouns in complex clauses (Who vs Whom).",
+    "Practice using 'One/Ones' and 'So' as substitution pronouns.",
+    "Try Level 5 for formal academic pronoun usage!"
+  ],
+  "interactive_tasks": [],
+  "examples": [],
+  "key_points": []
+}

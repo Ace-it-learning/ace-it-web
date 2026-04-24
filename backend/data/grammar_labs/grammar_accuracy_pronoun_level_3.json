@@ -1,0 +1,231 @@
+{
+  "type": "GRAMMAR",
+  "topic_id": "grammar_accuracy_pronoun",
+  "level": "HKDSE Level 3",
+  "conceptual_explanation": "Pronoun Reference means using words like 'he', 'she', 'it', or 'they' to replace a noun that was already mentioned. In HKDSE, you must ensure the pronoun matches the noun in number (Singular vs Plural) and gender, and that it's clear who or what you are talking about.",
+  "rule_cards": [
+    {
+      "name": "The Number Match Rule",
+      "formula": "Singular Noun -> It / He / She | Plural Noun -> They / Them",
+      "correct": "The students finished their homework. They were very happy.",
+      "incorrect": "The students finished their homework. It was very happy."
+    },
+    {
+      "name": "Subject vs Object Pronouns",
+      "formula": "Subject (Before Verb) -> I, We, He | Object (After Verb/Prep) -> Me, Us, Him",
+      "correct": "Peter gave the book to me.",
+      "incorrect": "Peter gave the book to I."
+    },
+    {
+      "name": "Who vs Which",
+      "formula": "People -> Who | Things -> Which / That",
+      "correct": "The boy who lives next door is my friend.",
+      "incorrect": "The boy which lives next door is my friend."
+    },
+    {
+      "name": "Possessive: My vs Mine",
+      "formula": "My + Noun | Mine (No Noun)",
+      "correct": "This is my pen. This pen is mine.",
+      "incorrect": "This is mine pen."
+    }
+  ],
+  "head_noun_tasks": [
+    {
+      "sentence_tokens": [
+        "Sarah",
+        "lost",
+        "her",
+        "keys",
+        ",",
+        "but",
+        "she",
+        "found",
+        "them",
+        "later",
+        "."
+      ],
+      "head_noun_indices": [
+        0,
+        3,
+        6,
+        8
+      ],
+      "explanation": "'She' refers to 'Sarah' (singular person), and 'them' refers to 'keys' (plural things)."
+    },
+    {
+      "sentence_tokens": [
+        "The",
+        "dog",
+        "wagged",
+        "its",
+        "tail",
+        "when",
+        "it",
+        "saw",
+        "the",
+        "owner",
+        "."
+      ],
+      "head_noun_indices": [
+        1,
+        6
+      ],
+      "explanation": "'It' refers back to 'the dog'."
+    },
+    {
+      "sentence_tokens": [
+        "John",
+        "and",
+        "I",
+        "went",
+        "to",
+        "the",
+        "cinema",
+        "because",
+        "we",
+        "wanted",
+        "to",
+        "see",
+        "the",
+        "movie",
+        "."
+      ],
+      "head_noun_indices": [
+        0,
+        2,
+        8
+      ],
+      "explanation": "'We' refers to 'John and I' (plural including self)."
+    },
+    {
+      "sentence_tokens": [
+        "The",
+        "teacher",
+        "asked",
+        "me",
+        "to",
+        "help",
+        "him",
+        "with",
+        "the",
+        "books",
+        "."
+      ],
+      "head_noun_indices": [
+        1,
+        6
+      ],
+      "explanation": "'Him' refers to 'the teacher' (object form)."
+    },
+    {
+      "sentence_tokens": [
+        "My",
+        "parents",
+        "are",
+        "kind",
+        ";",
+        "they",
+        "always",
+        "support",
+        "me",
+        "."
+      ],
+      "head_noun_indices": [
+        1,
+        5
+      ],
+      "explanation": "'They' refers to 'parents' (plural)."
+    }
+  ],
+  "drill_tasks": [
+    {
+      "type": "MCQ",
+      "question": "The computer is broken, so I need to fix ________.",
+      "options": [
+        "them",
+        "it",
+        "its",
+        "they"
+      ],
+      "answer": "it",
+      "explanation": "'The computer' is singular and a thing."
+    },
+    {
+      "type": "MCQ",
+      "question": "My sister and ________ went shopping yesterday.",
+      "options": [
+        "me",
+        "I",
+        "mine",
+        "myself"
+      ],
+      "answer": "I",
+      "explanation": "We need a subject pronoun for the compound subject 'My sister and I'."
+    },
+    {
+      "type": "MCQ",
+      "question": "The people ________ live in that house are very friendly.",
+      "options": [
+        "who",
+        "which",
+        "whose",
+        "whom"
+      ],
+      "answer": "who",
+      "explanation": "Use 'who' for people."
+    },
+    {
+      "type": "MCQ",
+      "question": "I saw your brother, but I didn't speak to ________.",
+      "options": [
+        "he",
+        "him",
+        "his",
+        "himself"
+      ],
+      "answer": "him",
+      "explanation": "We need an object pronoun after the preposition 'to'."
+    },
+    {
+      "type": "MCQ",
+      "question": "This book belongs to Mary; it is ________.",
+      "options": [
+        "her",
+        "hers",
+        "she",
+        "herself"
+      ],
+      "answer": "hers",
+      "explanation": "'Hers' is the possessive pronoun meaning 'her book'."
+    }
+  ],
+  "boss_fight": {
+    "paragraph": "Yesterday, I met my friends at the park. It were playing basketball. One of my friends asked I to join the game. I told which I was too tired.",
+    "errors": [
+      {
+        "original": "It",
+        "correction": "They",
+        "explanation": "'Friends' is plural, so it should be 'They'."
+      },
+      {
+        "original": "asked I",
+        "correction": "asked me",
+        "explanation": "After the verb 'asked', we need the object pronoun 'me'."
+      },
+      {
+        "original": "told which",
+        "correction": "told them",
+        "explanation": "'Which' is a relative pronoun; we need an object pronoun 'them' to refer to the friends."
+      }
+    ]
+  },
+  "success_feedback": "Well done! You've mastered the basic pronoun-noun agreement and subject/object forms.",
+  "suggested_next_steps": [
+    "Learn about 'Ambiguous Antecedents' where one pronoun could refer to two different nouns.",
+    "Practice using reflexive pronouns like 'myself' and 'themselves'.",
+    "Try Level 4 for more complex sentence structures!"
+  ],
+  "interactive_tasks": [],
+  "examples": [],
+  "key_points": []
+}

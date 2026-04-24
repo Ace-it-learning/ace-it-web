@@ -6,6 +6,7 @@ import {
     Zap, Headphones, BookOpen
 } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
+import { LoadingPage } from '../components/shared';
 
 const QuestLabReview = () => {
     const { resultId } = useParams();
@@ -39,12 +40,14 @@ const QuestLabReview = () => {
         fetchResult();
     }, [resultId, user, navigate]);
 
-    if (isFetching) return (
-        <div className="min-h-screen flex flex-col items-center justify-center bg-slate-50 space-y-4">
-            <div className="animate-spin rounded-full h-12 w-12 border-4 border-indigo-600 border-t-transparent"></div>
-            <p className="font-black text-slate-400 animate-pulse uppercase tracking-[0.2em] text-xs">Retrieving Mission Data...</p>
-        </div>
-    );
+    if (isFetching) {
+        return (
+            <LoadingPage 
+                title="Retrieving Mission Data..." 
+                subtext="Syncing with historical records for detailed mission analysis."
+            />
+        );
+    }
 
     if (!result) return null;
 

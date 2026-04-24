@@ -269,7 +269,7 @@ const ConventionalAnalysis = ({ results, language }) => {
                             {/* Deep Analysis & Micro-skills */}
                             <div className="space-y-3">
                                 <label className="text-[10px] font-black text-purple-600 uppercase tracking-widest ml-1 flex items-center gap-2">
-                                    <div className="w-4 h-4 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center text-[8px] animate-pulse">✨</div>
+                                    <div className="w-4 h-4 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center text-[9px] animate-pulse">✨</div>
                                     DSE Expert Analysis
                                 </label>
                                 <div className="p-8 bg-purple-50/50 rounded-2xl border border-purple-100 text-slate-800 leading-relaxed font-medium">

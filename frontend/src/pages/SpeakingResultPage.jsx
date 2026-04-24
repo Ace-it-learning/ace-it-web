@@ -1,7 +1,9 @@
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import { Languages, Sparkles, MessageSquare, ArrowLeft, Trophy, Calendar, Eye } from 'lucide-react';
+import { Languages, Sparkles, MessageSquare, ArrowLeft, Trophy, Calendar, Eye, GraduationCap, Play } from 'lucide-react';
 import ExamHeader from '../components/exam/ExamHeader';
+import { GRAMMAR_MAPPING } from '../constants/grammarMapping';
+import { useState, useEffect } from 'react';
 
 const SpeakingResultPage = () => {
     const { state } = useLocation();
@@ -86,7 +88,14 @@ const SpeakingResultPage = () => {
             <ExamHeader
                 title="Speaking Assessment Report"
                 timeLeft={0}
-                onExit={() => navigate('/', { state: { examCompleted: true, examId: state?.examId || 'speaking_mock' } })}
+                onExit={() => navigate('/dashboard', { 
+                    state: { 
+                        mockCompleted: true, 
+                        type: 'Speaking', 
+                        level: getLevel(totalScore), 
+                        score: `${totalScore}/28` 
+                    } 
+                })}
             />
 
             <div className="max-w-7xl mx-auto p-6 grid grid-cols-1 lg:grid-cols-12 gap-8">
@@ -100,7 +109,45 @@ const SpeakingResultPage = () => {
                         <div className="text-7xl font-black text-transparent bg-clip-text bg-gradient-to-br from-green-400 to-emerald-600 mb-2">
                             {getLevel(totalScore)}
                         </div>
-                        <div className="text-gray-500 font-mono">Total Validated Score: {totalScore} / 28</div>
+                        <div className="text-gray-500 font-mono mb-6">Total Validated Score: {totalScore} / 28</div>
+
+                        {/* XP AWARDED & BREAKDOWN (New) */}
+                        <div className="bg-gray-900/50 p-4 rounded-xl border border-gray-700 text-left space-y-3">
+                            <div className="flex justify-between items-center">
+                                <span className="text-[10px] font-black text-gray-500 uppercase tracking-widest">XP Awarded</span>
+                                <span className="text-2xl font-black text-orange-500 flex items-center gap-1.5">
+                                    <Trophy size={20} className="text-orange-400" />
+                                    +{result.xp_awarded || 0}
+                                </span>
+                            </div>
+
+                            {result.xp_breakdown && (
+                                <div className="pt-3 border-t border-gray-700 space-y-1.5">
+                                    <div className="flex justify-between text-[9px] font-bold">
+                                        <span className="text-gray-400 uppercase tracking-widest">Base Reward</span>
+                                        <span className="text-gray-200">{result.xp_breakdown.base} XP</span>
+                                    </div>
+                                    {result.xp_breakdown.tierMultiplier > 1 && (
+                                        <div className="flex justify-between text-[9px] font-bold">
+                                            <span className="text-indigo-400 uppercase tracking-widest">Premium x{result.xp_breakdown.tierMultiplier}</span>
+                                            <span className="text-indigo-300">+{Math.round(result.xp_breakdown.base * (result.xp_breakdown.tierMultiplier - 1))} XP</span>
+                                        </div>
+                                    )}
+                                    {result.xp_breakdown.masteryMultiplier > 1 && (
+                                        <div className="flex justify-between text-[9px] font-bold">
+                                            <span className="text-emerald-400 uppercase tracking-widest">Mastery x{result.xp_breakdown.masteryMultiplier}</span>
+                                            <span className="text-emerald-300">+{Math.round(result.xp_breakdown.base * (result.xp_breakdown.masteryMultiplier - 1))} XP</span>
+                                        </div>
+                                    )}
+                                    {result.xp_breakdown.milestoneBonus > 0 && (
+                                        <div className="flex justify-between text-[9px] font-bold">
+                                            <span className="text-pink-400 uppercase tracking-widest">Milestone Bonus</span>
+                                            <span className="text-pink-300">+{result.xp_breakdown.milestoneBonus} XP</span>
+                                        </div>
+                                    )}
+                                </div>
+                            )}
+                        </div>
                     </div>
 
                     {/* RADAR / DOMAIN SCORES */}
@@ -162,6 +209,65 @@ const SpeakingResultPage = () => {
                             <p className="text-sm text-gray-300">{feedback.improvement_advice}</p>
                         </div>
                     </div>
+
+                    {/* Miss Janie's Grammar Diagnostic Loop */}
+                    {result.grammar_diagnostics && result.grammar_diagnostics.length > 0 && (
+                        <div className="bg-amber-900/10 rounded-2xl p-6 border border-amber-500/30 relative overflow-hidden group">
+                             <div className="absolute -top-12 -right-12 w-48 h-48 bg-amber-500/10 rounded-full blur-3xl pointer-events-none group-hover:bg-amber-500/20 transition-all duration-700" />
+                             
+                             <div className="flex items-center gap-4 mb-6 relative z-10">
+                                <div className="w-12 h-12 bg-amber-500/20 rounded-xl flex items-center justify-center border border-amber-500/30">
+                                    <GraduationCap size={24} className="text-amber-500" />
+                                </div>
+                                <div>
+                                    <h3 className="text-lg font-black uppercase tracking-tight text-amber-200">
+                                        Miss Janie's Grammar Diagnostic
+                                    </h3>
+                                    <p className="text-[10px] font-bold text-amber-500/80 uppercase tracking-widest flex items-center gap-2">
+                                        <Sparkles size={10} className="animate-pulse" />
+                                        Targeted Micro-Labs to fix your mark-leaks
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 relative z-10">
+                                {result.grammar_diagnostics.slice(0, 2).map(tag => {
+                                    const info = GRAMMAR_MAPPING[tag];
+                                    if (!info) return null;
+                                    return (
+                                        <div 
+                                            key={tag}
+                                            onClick={() => navigate(`/lab?topic=${info.lab_id}&level=5`, { 
+                                                state: { 
+                                                    topic: info.lab_id,
+                                                    isGrammarLab: true,
+                                                    xp: 50
+                                                } 
+                                            })}
+                                            className="bg-gray-800/80 p-5 rounded-2xl border border-gray-700 hover:border-amber-500/50 hover:bg-gray-800 transition-all cursor-pointer flex items-center justify-between group/card"
+                                        >
+                                            <div className="flex flex-col flex-1 pr-4">
+                                                <div className="flex items-center gap-2 mb-1.5">
+                                                    <span className={`px-1.5 py-0.5 rounded text-[8px] font-black uppercase tracking-wider ${info.track === 'Elite' ? 'bg-purple-500/20 text-purple-400' : 'bg-blue-500/20 text-blue-400'}`}>
+                                                        {info.track} Track
+                                                    </span>
+                                                </div>
+                                                <h4 className="text-sm font-black text-gray-100 group-hover/card:text-amber-400 transition-colors">
+                                                    {info.title}
+                                                </h4>
+                                                <p className="text-[10px] font-medium text-gray-400 mt-2 italic leading-relaxed line-clamp-2">
+                                                    "{info.janie_message}"
+                                                </p>
+                                            </div>
+                                            <div className="w-10 h-10 bg-amber-500/10 rounded-xl group-hover/card:bg-amber-500 group-hover/card:text-white transition-all text-amber-500 flex items-center justify-center shrink-0">
+                                                <Play size={16} fill="currentColor" />
+                                            </div>
+                                        </div>
+                                    );
+                                })}
+                            </div>
+                        </div>
+                    )}
 
                     {/* MODEL RESPONSE */}
                     <div className="bg-gray-800 rounded-2xl border border-gray-700 overflow-hidden">

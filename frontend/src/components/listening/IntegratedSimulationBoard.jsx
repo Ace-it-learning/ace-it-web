@@ -7,6 +7,7 @@ import {
     Timer
 } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
+import { GradingOverlay } from '../shared';
 import AudioWaveform from '../utils/AudioWaveform';
 
 const IntegratedSimulationBoard = ({ questData, level, onComplete }) => {
@@ -712,11 +713,18 @@ const IntegratedSimulationBoard = ({ questData, level, onComplete }) => {
                                </p>
                             </div>
                         </div>
-                    </div>
                 </div>
+            </div>
+            {/* AI Grading Overlay */}
+                <GradingOverlay 
+                    isOpen={isSubmitting} 
+                    title="Digitizing & Evaluating"
+                    status="Synthesizing your notes and data file evidence..."
+                />
             </div>
         );
     }
+
 };
 
 export default IntegratedSimulationBoard;

@@ -95,7 +95,7 @@ const WritingHighlighter = ({
                                         >
                                             <div className="flex items-center gap-2 mb-2">
                                                 <Zap size={12} className="text-amber-400 fill-current" />
-                                                <span className="text-[8px] font-black uppercase tracking-widest text-indigo-400">
+                                                <span className="text-[9px] font-black uppercase tracking-widest text-indigo-400">
                                                     {t ? t('writing_result.expert_recommendation') : (isChinese ? '專家建議' : 'EXPERT RECOMMENDATION')}
                                                 </span>
                                             </div>

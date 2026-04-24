@@ -1,0 +1,106 @@
+{
+  "meta": {
+    "title": "Hustle Culture & Burnout",
+    "topic": "Hustle Culture & Burnout",
+    "generated_at": "2026-04-23T14:05:00.000Z",
+    "blueprint_version": "2026_V1"
+  },
+  "Part_A": {
+    "part": "Part A",
+    "genre": "Formal Letter",
+    "title": "Addressing S6 Stress: A Proposal for 'Wellness Week'",
+    "instructions": "Write a formal letter in about 200 words.",
+    "situation": "You have noticed that many S6 students are suffering from extreme stress and 'burnout' as the public exams approach. You want to write to the Head of Year proposing a 'Wellness Week' to help students rebalance.",
+    "requirements": [
+      "Describe the physical and mental symptoms of 'burnout' you have observed among your peers.",
+      "Explain how a 'Wellness Week' (e.g., workshops, no-homework days) would benefit student performance in the long run.",
+      "Suggest one specific session that focuses on 'valuing rest' over 'constant achievement'."
+    ],
+    "format_guides": [
+      "Address it to 'The Head of Year 12/S6'.",
+      "Use a respectful and concerned tone."
+    ]
+  },
+  "Part_B": [
+    {
+      "elective": "Sports Communication",
+      "type": "Feature Article",
+      "question": "The 'Overtraining' Epidemic: When the pursuit of 'Faster, Higher, Stronger' leads to career-ending burnout.",
+      "requirements": [
+        "Explain the science behind 'overtraining syndrome' and how it differs from normal fatigue.",
+        "Discuss the 'Winner-Takes-All' pressure in professional sports that makes athletes ignore pain.",
+        "Give advice to young athletes on how to 'listen to their body' while still being competitive."
+      ]
+    },
+    {
+      "elective": "Drama",
+      "type": "Dramatic Script",
+      "question": "A scene where a 'Type A' perfectionist student is confronted by their 'Chill' best friend after staying up for 72 hours straight.",
+      "requirements": [
+        "Use dialogue to show the 'Type A' character's frantic, disjointed thought process.",
+        "Include a 'breaking point' where the perfectionist realizes they can't sustain this pace.",
+        "Provide stage directions that reflect the claustrophobic, intense atmosphere of a late-night study session."
+      ]
+    },
+    {
+      "elective": "Short Stories",
+      "type": "Short Story",
+      "question": "A story about a person who suddenly loses the ability to 'do' anything—their body simply refuses to move until they learn how to rest.",
+      "requirements": [
+        "Describe the 'Great Pause': the moment the protagonist's body 'shuts down'.",
+        "Show the protagonist's initial frustration and their slow transition to appreciating silence and stillness.",
+        "End the story with the protagonist 'restarting' their life with a completely different set of priorities."
+      ]
+    },
+    {
+      "elective": "Popular Culture",
+      "type": "Blog Post",
+      "question": "The 'Glorification of Busyness' on Social Media: Why 'Hustle Porn' is a dangerous lie.",
+      "requirements": [
+        "Identify the 'Hustle Culture' tropes (e.g., 'Rise and Grind', 'sleep is for the weak') and why they are toxic.",
+        "Discuss how influencers hide the 'unseen support' (money, staff) that allows them to appear constantly productive.",
+        "Provide three 'Authentic Rest' challenges for your followers (e.g., a digital detox)."
+      ]
+    },
+    {
+      "elective": "Social Issues",
+      "type": "Article",
+      "question": "The '996' and 'Burnout' Culture: Why East Asian cities are facing a mental health crisis.",
+      "requirements": [
+        "Define 'Hustle Culture' in the context of high-pressure cities like Hong Kong or Tokyo.",
+        "Discuss the impact on birth rates and family life when 'work is everything'.",
+        "Suggest one systemic change (e.g., 'Right to Disconnect' laws) to protect worker well-to-being."
+      ]
+    },
+    {
+      "elective": "Debating",
+      "type": "Formal Debate Speech",
+      "question": "'That 'Quiet Quitting' is a healthy response to an exploitative work culture.'",
+      "requirements": [
+        "Define 'Quiet Quitting' (doing only what is in the job description) for the debate.",
+        "Argue that it is an act of 'self-preservation' against 'unpaid overwork'.",
+        "Rebut the claim that 'Quiet Quitting' shows a lack of ambition or character."
+      ]
+    },
+    {
+      "elective": "Workplace Communication",
+      "type": "Report",
+      "question": "A report on the 'Quiet Quitting' phenomenon in your local office and its impact on team morale.",
+      "requirements": [
+        "Identify the 'root causes' of why employees are disengaging (e.g., lack of recognition, stagnant wages).",
+        "Discuss the difference between 'lazy' workers and those who are 'reclaiming their boundaries'.",
+        "Recommend three ways management can 're-engage' staff without resorting to pressure."
+      ]
+    },
+    {
+      "elective": "Songs and Poems",
+      "type": "Review",
+      "question": "A review of a song or poem that addresses the 'Rat Race' or the 'Weight of Expectation'.",
+      "requirements": [
+        "Identify the central metaphor used for the 'Rat Race' (e.g., a wheel, a tide, a heavy stone).",
+        "Discuss how the work's rhythm (e.g., fast and repetitive vs. slow and weary) reflects the theme.",
+        "Explain why this work is an 'anthem' for anyone feeling overwhelmed by modern life."
+      ]
+    }
+  ]
+}

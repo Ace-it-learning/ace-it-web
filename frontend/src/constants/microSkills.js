@@ -124,6 +124,44 @@ export const MICRO_SKILLS = {
         zh: { name: '小組討論', desc: '全 DSE 模式小組互動，模擬真實考試環境', outcome: '透過高擬真 DSE 模擬掌握小組互動技巧' },
         isIntegrated: true,
         cluster: 'interaction'
+    },
+
+    // GRAMMAR LAB (8 modules)
+    grammar_accuracy_sva: {
+        en: { name: 'Subject-Verb Agreement', desc: 'Ensuring subjects and verbs match in number.', outcome: 'Master core SVA rules to eliminate fossilized errors.' },
+        zh: { name: '主謂一致性', desc: '確保主語與謂語動詞在單複數上保持一致。', outcome: '掌握核心 SVA 規則，消除根深蒂固的語法錯誤。' }
+    },
+    grammar_accuracy_tense: {
+        en: { name: 'Tense Consistency', desc: 'Maintaining logical tense sequences in writing.', outcome: 'Maintain flawless tense sequences throughout complex narratives.' },
+        zh: { name: '時態一致性', desc: '在寫作中保持邏輯連貫的時態序列。', outcome: '在複雜敘述中保持完美無瑕的時態連貫性。' }
+    },
+    grammar_accuracy_countable: {
+        en: { name: 'Countable/Uncountable', desc: 'Correct usage of plurals and quantifiers.', outcome: 'Precisely navigate the complexities of noun usage.' },
+        zh: { name: '可數與不可數名詞', desc: '正確使用名詞複數與數量詞。', outcome: '精確處理複雜的名詞使用規則。' }
+    },
+    grammar_accuracy_wordform: {
+        en: { name: 'Word Form', desc: 'Selecting the correct noun, verb, adjective, or adverb.', outcome: 'Achieve 100% accuracy in morphological word transformations.' },
+        zh: { name: '詞性與詞形', desc: '根據語境選擇正確的名詞、動詞、形容詞或副詞。', outcome: '在詞形變化任務中達到百分百準確率。' }
+    },
+    grammar_accuracy_pronoun: {
+        en: { name: 'Pronoun Reference', desc: 'Ensuring pronouns clearly refer to the correct nouns.', outcome: 'Master pronoun consistency and resolve ambiguous references.' },
+        zh: { name: '代詞指代', desc: '確保代詞清晰地指代正確的名詞。', outcome: '掌握代詞一致性並解決歧義指代。' }
+    },
+    grammar_elite_inversion: {
+        en: { name: 'Inversion Mastery', desc: 'Using advanced inverted structures for emphasis.', outcome: 'Wield powerful inverted structures to wow examiners.' },
+        zh: { name: '倒裝句大師', desc: '使用高級倒裝句式以增強語氣。', outcome: '熟練運用強而有力的倒裝結構令考官眼前一亮。' }
+    },
+    grammar_elite_subjunctive: {
+        en: { name: 'Subjunctive Mood', desc: 'Expressing hypothetical or contrary-to-fact situations.', outcome: 'Sophisticatedly express hypothetical scenarios with total control.' },
+        zh: { name: '虛擬語氣', desc: '表達假設性或與事實相反的情況。', outcome: '以完全掌控力細膩表達假設場景。' }
+    },
+    grammar_elite_participle: {
+        en: { name: 'Participle Phrases', desc: 'Using participles to create concise, elegant sentences.', outcome: 'Elevate writing style with complex participle structures.' },
+        zh: { name: '分詞短語', desc: '使用分詞結構構建簡潔且優雅的句子。', outcome: '運用複雜的分詞結構提升寫作風格。' }
+    },
+    grammar_elite_cohesion: {
+        en: { name: 'Advanced Cohesion', desc: 'Sophisticated linking of complex arguments.', outcome: 'Forge unbreakable logical links between high-level concepts.' },
+        zh: { name: '高級銜接技巧', desc: '在複雜論點之間建立高層次的邏輯銜接。', outcome: '在高深概念之間建立牢不可破的邏輯連結。' }
     }
 };
 
@@ -136,6 +174,7 @@ export const getPaperBySkill = (skillId) => {
     if (skillId.startsWith('writing_')) return 'writing';
     if (skillId.startsWith('listening_')) return 'listening';
     if (skillId.startsWith('speaking_')) return 'speaking';
+    if (skillId.startsWith('grammar_')) return 'grammar';
     return null;
 };
 
@@ -167,7 +206,8 @@ export const getSkillsByPaper = (paper) => {
     const targetPrefix = prefix === 'reading' ? 'reading_' : 
                          prefix === 'writing' ? 'writing_' : 
                          prefix === 'listening' ? 'listening_' : 
-                         prefix === 'speaking' ? 'speaking_' : prefix;
+                         prefix === 'speaking' ? 'speaking_' :
+                         prefix === 'grammar' ? 'grammar_' : prefix;
                          
     return Object.keys(MICRO_SKILLS).filter(id => id.startsWith(targetPrefix));
 };

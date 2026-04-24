@@ -62,35 +62,39 @@ router.post('/submit', async (req, res) => {
         // Award XP & Quest Completion
         let questXP = 0;
         let practiceXP = 0;
+        let baseXP = 150; // Standardized Math Flat Reward
 
-        // 3. Factory Model Quest Completion (Phase 5)
+        // 3. Factory Model Quest Completion
         if (req.body.isFactoryQuest) {
-            const MATHS_XP_MAPPING = { 1: 50, 2: 75, 3: 100, 4: 150 };
-            const baseXP = MATHS_XP_MAPPING[req.body.level] || 50;
-
             const factoryResult = await GamificationService.awardFactoryQuestCompletion(uid, req.body.taskId || topic, 'maths', baseXP);
             if (factoryResult.success) {
                 questXP = factoryResult.totalEarned || factoryResult.earned;
-                console.log(`[MathsLab] Factory Quest Awarded: ${questXP} XP (Bonus: ${factoryResult.bonusAwarded})`);
+            }
+        } else if (req.body.isWeeklyQuest) {
+            // Weekly Quest Completion
+            const weeklyResult = await GamificationService.awardWeeklyQuestCompletion(uid);
+            if (weeklyResult.success) {
+                questXP = weeklyResult.earned;
+                baseXP = 250; 
             }
         } else if (req.body.taskId) {
-            // 1. Legacy Quest Completion
+            // Legacy Quest Completion 
             const questResult = await GamificationService.awardQuestCompletion(uid, req.body.taskId, 'maths');
             if (questResult.success && questResult.fresh) {
                 questXP = questResult.earned;
-                console.log(`[MathsLab] Quest Bonus Awarded: ${questXP} XP`);
             }
         }
 
         // 2. Practice XP
-        if (xp) {
+        if (xp || baseXP) {
             let sourceType = 'maths_practice';
             if (req.body.isPersonalised) sourceType = 'maths_personalised';
             if (req.body.isChallenge) sourceType = 'maths_challenge';
 
             const displayName = UserProfileService.getSkillName(topic, 'maths');
+            const rewardAmount = (xp && parseInt(xp) > 0) ? parseInt(xp) : baseXP;
 
-            const xpResult = await GamificationService.awardXP(uid, parseInt(xp), sourceType, {
+            const xpResult = await GamificationService.awardXP(uid, rewardAmount, sourceType, {
                 duration: req.body.duration || 0,
                 expectedDuration: 300,
                 title: req.body.title || `Maths Lab: ${displayName || 'Practice'}`,
@@ -98,10 +102,17 @@ router.post('/submit', async (req, res) => {
                 topic: displayName,
                 score: req.body.masteryScore ? `${req.body.masteryScore}%` : undefined
             });
-            practiceXP = xpResult.earned;
+            
+            return res.json({ 
+                success: true, 
+                earnedTotal: questXP + xpResult.earned, 
+                questBonus: questXP, 
+                practiceXP: xpResult.earned,
+                breakdown: xpResult.breakdown
+            });
         }
 
-        res.json({ success: true, earnedTotal: questXP + practiceXP, questBonus: questXP, practiceXP });
+        res.json({ success: true, earnedTotal: 0 });
 
     } catch (e) {
         console.error("Maths Lab Submit Error:", e);

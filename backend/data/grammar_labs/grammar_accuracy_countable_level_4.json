@@ -1,0 +1,220 @@
+{
+  "type": "GRAMMAR",
+  "topic_id": "grammar_accuracy_countable",
+  "level": "HKDSE Level 4",
+  "conceptual_explanation": "At Level 4, you must understand the 'Nuance of Quantifiers'. For example, 'a few' (some) vs 'few' (hardly any). You also need to master specific uncountable items common in DSE like 'Equipment', 'Luggage', and 'Staff' (collective nouns).",
+  "rule_cards": [
+    {
+      "name": "The 'A' Matters (Few vs A few)",
+      "formula": "A few = Some (Positive) / Few = Almost none (Negative)",
+      "correct": "He has a few friends, so he is happy. / He has few friends, so he is lonely.",
+      "incorrect": "He has few friends, so he is happy."
+    },
+    {
+      "name": "The 'Equipment' Rule",
+      "formula": "Equipment, Machinery, Jewelry = ALWAYS Uncountable",
+      "correct": "The laboratory needs new equipment.",
+      "incorrect": "The laboratory needs new equipments."
+    },
+    {
+      "name": "Collective Nouns: Staff & Police",
+      "formula": "Police (Always Plural) / Staff (Usually Plural/Group)",
+      "correct": "The police are investigating the case.",
+      "incorrect": "The police is investigating the case."
+    },
+    {
+      "name": "Quantifiers: A piece of",
+      "formula": "A piece of + Uncountable (To make it countable)",
+      "correct": "Let me give you a piece of advice.",
+      "incorrect": "Let me give you an advice."
+    }
+  ],
+  "head_noun_tasks": [
+    {
+      "sentence_tokens": [
+        "The",
+        "police",
+        "are",
+        "searching",
+        "for",
+        "the",
+        "stolen",
+        "jewelry",
+        "."
+      ],
+      "head_noun_indices": [
+        1,
+        7
+      ],
+      "explanation": "'Police' is always plural, while 'jewelry' is always uncountable."
+    },
+    {
+      "sentence_tokens": [
+        "Unfortunately",
+        ",",
+        "very",
+        "few",
+        "students",
+        "passed",
+        "the",
+        "difficult",
+        "test",
+        "."
+      ],
+      "head_noun_indices": [
+        3,
+        4
+      ],
+      "explanation": "'Few' (without 'a') emphasizes the small number in a negative sense."
+    },
+    {
+      "sentence_tokens": [
+        "The",
+        "new",
+        "machinery",
+        "has",
+        "improved",
+        "our",
+        "production",
+        "speed",
+        "."
+      ],
+      "head_noun_indices": [
+        2
+      ],
+      "explanation": "'Machinery' is uncountable, so it takes a singular verb 'has'."
+    },
+    {
+      "sentence_tokens": [
+        "Could",
+        "you",
+        "lend",
+        "me",
+        "a",
+        "couple",
+        "of",
+        "tools",
+        "to",
+        "fix",
+        "the",
+        "bike",
+        "?"
+      ],
+      "head_noun_indices": [
+        5,
+        7
+      ],
+      "explanation": "'Tools' is countable. 'A couple of' is used for countable items."
+    },
+    {
+      "sentence_tokens": [
+        "I",
+        "drank",
+        "a",
+        "little",
+        "water",
+        "to",
+        "quench",
+        "my",
+        "thirst",
+        "."
+      ],
+      "head_noun_indices": [
+        3,
+        4
+      ],
+      "explanation": "'A little' is the quantifier for uncountable 'water'."
+    }
+  ],
+  "drill_tasks": [
+    {
+      "type": "MCQ",
+      "question": "The gym has state-of-the-art ________ for all members to use.",
+      "options": [
+        "equipments",
+        "equipment",
+        "piece of equipment",
+        "many equipment"
+      ],
+      "answer": "equipment",
+      "explanation": "'Equipment' is uncountable and does not take 's'."
+    },
+    {
+      "type": "MCQ",
+      "question": "I'm sorry, I have ________ time to talk to you right now.",
+      "options": [
+        "a little",
+        "little",
+        "a few",
+        "few"
+      ],
+      "answer": "little",
+      "explanation": "'Little' (without 'a') indicates almost no time, which fits the apology."
+    },
+    {
+      "type": "MCQ",
+      "question": "The company ________ going to hire more interns this summer.",
+      "options": [
+        "are",
+        "is",
+        "were",
+        "have been"
+      ],
+      "answer": "is",
+      "explanation": "Collective nouns like 'company' are usually treated as a singular unit in formal HKDSE contexts."
+    },
+    {
+      "type": "MCQ",
+      "question": "We need to buy two ________ of bread for the picnic.",
+      "options": [
+        "loafs",
+        "loaves",
+        "loaf",
+        "loave"
+      ],
+      "answer": "loaves",
+      "explanation": "Irregular plural of 'loaf' is 'loaves'."
+    },
+    {
+      "type": "MCQ",
+      "question": "She has ________ patience for people who are always late.",
+      "options": [
+        "few",
+        "a few",
+        "little",
+        "a little"
+      ],
+      "answer": "little",
+      "explanation": "'Patience' is uncountable. 'Little' indicates a lack of it."
+    }
+  ],
+  "boss_fight": {
+    "paragraph": "The police is currently investigating the scene. They found some new equipments that might be relevant to the crime. However, they have a little clues about the suspect's identity.",
+    "errors": [
+      {
+        "original": "is",
+        "correction": "are",
+        "explanation": "'Police' is a plural noun and requires 'are'."
+      },
+      {
+        "original": "equipments",
+        "correction": "equipment",
+        "explanation": "'Equipment' is always uncountable."
+      },
+      {
+        "original": "a little clues",
+        "correction": "few clues",
+        "explanation": "'Clues' is countable, so 'a little' is wrong. Use 'few' to show they don't have much information."
+      }
+    ]
+  },
+  "success_feedback": "Fantastic! You're navigating the trickier collective nouns and quantifier nuances like a pro.",
+  "suggested_next_steps": [
+    "Learn about nouns that can be both countable and uncountable (e.g., 'experience', 'paper').",
+    "Study irregular plurals of Greek and Latin origin.",
+    "Try Level 5 for high-level noun traps!"
+  ],
+  "interactive_tasks": [],
+  "examples": [],
+  "key_points": []
+}

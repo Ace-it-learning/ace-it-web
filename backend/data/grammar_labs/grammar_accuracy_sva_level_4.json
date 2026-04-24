@@ -1,0 +1,289 @@
+{
+  "type": "GRAMMAR",
+  "topic_id": "grammar_accuracy_sva",
+  "level": "HKDSE Level 5** (Mastery)",
+  "conceptual_explanation": "At HKDSE Level 5**, Subject-Verb Agreement transcends basic singular/plural matching. You must accurately deconstruct complex sentences, strip away multi-layered prepositional distractors, and master the proximity rule, 'number' flips, and relative clause antecedents to secure top-tier grammar accuracy in Part B writing and Part A MCQs.",
+  "rule_cards": [
+    {
+      "name": "The Prepositional Phrase Illusion",
+      "formula": "[Head Noun] + [Prepositional Phrases] + [Verb]",
+      "correct": "The revitalization of the industrial buildings in Kwun Tong requires massive funding.",
+      "incorrect": "The revitalization of the industrial buildings in Kwun Tong require massive funding."
+    },
+    {
+      "name": "The 'Along With' Trap",
+      "formula": "[Subject 1] + (along with/as well as/including) + [Subject 2] + [Verb matching Subject 1]",
+      "correct": "The Chief Executive, as well as multiple key ministers, supports the Lantau Tomorrow Vision.",
+      "incorrect": "The Chief Executive, as well as multiple key ministers, support the Lantau Tomorrow Vision."
+    },
+    {
+      "name": "The Proximity Rule",
+      "formula": "Neither [Noun 1] nor [Noun 2] + [Verb matching Noun 2]",
+      "correct": "Neither the MTR officials nor the frontline engineer denies the signal fault.",
+      "incorrect": "Neither the MTR officials nor the frontline engineer deny the signal fault."
+    },
+    {
+      "name": "The 'Number' Flip",
+      "formula": "'A number of' = Plural Verb | 'The number of' = Singular Verb",
+      "correct": "The number of unlicensed hawkers has dropped, but a number of them are still operating.",
+      "incorrect": "The number of unlicensed hawkers have dropped, but a number of them is still operating."
+    },
+    {
+      "name": "Relative Clause Antecedents",
+      "formula": "[Noun] + who/which/that + [Verb matching the Noun]",
+      "correct": "He is one of the DSE candidates who excel in both mathematics and physics.",
+      "incorrect": "He is one of the DSE candidates who excels in both mathematics and physics."
+    }
+  ],
+  "head_noun_tasks": [
+    {
+      "sentence_tokens": [
+        "The",
+        "influx",
+        "of",
+        "tourists",
+        "in",
+        "Tsim",
+        "Sha",
+        "Tsui",
+        "causes",
+        "congestion",
+        "."
+      ],
+      "head_noun_indices": [
+        1
+      ],
+      "explanation": "Trap 1: Prepositional Phrase. The prepositional phrases 'of tourists' and 'in Tsim Sha Tsui' are descriptors. The true subject dictating the singular verb 'causes' is the singular noun 'influx'."
+    },
+    {
+      "sentence_tokens": [
+        "The",
+        "manager",
+        ",",
+        "along",
+        "with",
+        "two",
+        "clerks",
+        ",",
+        "is",
+        "handling",
+        "the",
+        "dispute",
+        "."
+      ],
+      "head_noun_indices": [
+        1
+      ],
+      "explanation": "Trap 2: 'Along With'. Phrases separated by commas like 'along with two clerks' act as interrupters, not conjunctions. They do not compound the subject. The sole head noun is 'manager', requiring the singular 'is'."
+    },
+    {
+      "sentence_tokens": [
+        "Neither",
+        "the",
+        "directors",
+        "nor",
+        "the",
+        "chairman",
+        "approves",
+        "the",
+        "budget",
+        "."
+      ],
+      "head_noun_indices": [
+        5
+      ],
+      "explanation": "Trap 3: Proximity Rule. In 'neither... nor' structures, the verb must agree with the subject closest to it. Here, the singular 'chairman' is closer to the verb than the plural 'directors', dictating the singular verb 'approves'."
+    },
+    {
+      "sentence_tokens": [
+        "The",
+        "number",
+        "of",
+        "vacant",
+        "shops",
+        "in",
+        "Mong",
+        "Kok",
+        "has",
+        "risen",
+        "."
+      ],
+      "head_noun_indices": [
+        1
+      ],
+      "explanation": "Trap 4: 'Number' Flip. 'The number of' treats the quantity as a single, collective mathematical unit. Thus, the head noun is 'number', which demands a singular verb ('has risen'), unlike 'A number of' which means 'many'."
+    },
+    {
+      "sentence_tokens": [
+        "This",
+        "is",
+        "one",
+        "of",
+        "the",
+        "trams",
+        "that",
+        "operate",
+        "on",
+        "Hong",
+        "Kong",
+        "Island",
+        "."
+      ],
+      "head_noun_indices": [
+        5
+      ],
+      "explanation": "Trap 5: Relative Clause. The relative pronoun 'that' refers back to its immediate antecedent. Here, it refers to the plural 'trams', not 'one', meaning the verb inside the clause must be the plural 'operate'."
+    }
+  ],
+  "drill_tasks": [
+    {
+      "type": "MCQ",
+      "question": "The recent surge in prices of tiny subdivided flats in Sham Shui Po ______ sparked renewed calls for rent control.",
+      "options": [
+        "has",
+        "have",
+        "having",
+        "are"
+      ],
+      "answer": "has",
+      "explanation": "Trap 1: The core subject is 'surge' (singular). The phrases 'in prices', 'of tiny subdivided flats', and 'in Sham Shui Po' are prepositional distractors. Therefore, the singular verb 'has' is required."
+    },
+    {
+      "type": "MCQ",
+      "question": "The iconic Star Ferry, alongside the traditional trams and double-decker buses, ______ a vital link to Hong Kong’s colonial past.",
+      "options": [
+        "remain",
+        "remains",
+        "remaining",
+        "is remained"
+      ],
+      "answer": "remains",
+      "explanation": "Trap 2: 'alongside' (like 'along with') does not make the subject plural. The verb must agree with the singular subject 'Star Ferry', making 'remains' the correct answer."
+    },
+    {
+      "type": "MCQ",
+      "question": "According to the consultation paper, neither the developers nor the local district councilor ______ with the proposed land reclamation project.",
+      "options": [
+        "agrees",
+        "agree",
+        "agreeing",
+        "is agreed"
+      ],
+      "answer": "agrees",
+      "explanation": "Trap 3: Proximity Rule. For 'neither... nor', the verb agrees with the noun closest to it. 'councilor' is singular and closer to the verb than the plural 'developers'."
+    },
+    {
+      "type": "MCQ",
+      "question": "A number of indigenous villagers in the New Territories ______ protesting against the resumption of their ancestral lands.",
+      "options": [
+        "is",
+        "are",
+        "has",
+        "was"
+      ],
+      "answer": "are",
+      "explanation": "Trap 4: 'A number of' functions as a quantifier meaning 'several' or 'many', which takes a plural verb. Therefore, 'are' is correct."
+    },
+    {
+      "type": "MCQ",
+      "question": "Victoria Harbour is one of the spectacular landmarks that ______ millions of tourists to the city annually.",
+      "options": [
+        "draws",
+        "draw",
+        "drawing",
+        "is drawing"
+      ],
+      "answer": "draw",
+      "explanation": "Trap 5: The relative pronoun 'that' modifies the plural antecedent 'landmarks'. The phrase is literally about the group of landmarks that draw tourists, not just Victoria Harbour alone."
+    },
+    {
+      "type": "MCQ",
+      "question": "The sheer variety of local street food stalls, including those situated in Temple Street, ______ the city a true culinary paradise.",
+      "options": [
+        "make",
+        "makes",
+        "making",
+        "are making"
+      ],
+      "answer": "makes",
+      "explanation": "Trap 1 & 2: The core noun is 'variety' (singular). The phrase 'of local street food stalls' is a prepositional phrase, and 'including those...' acts as an interrupter. The correct verb is 'makes'."
+    },
+    {
+      "type": "MCQ",
+      "question": "Either the MTR Corporation or the outsourced contractors ______ liable for the recent signalling system failure.",
+      "options": [
+        "is",
+        "are",
+        "has",
+        "have"
+      ],
+      "answer": "are",
+      "explanation": "Trap 3: In an 'either... or' construct, the verb matches the closest noun. 'contractors' is plural, so 'are' is the required verb."
+    },
+    {
+      "type": "MCQ",
+      "question": "The number of students applying for local universities ______ plateaued due to demographic shifts in Hong Kong.",
+      "options": [
+        "have",
+        "has",
+        "are",
+        "were"
+      ],
+      "answer": "has",
+      "explanation": "Trap 4: 'The number of' isolates the mathematical figure as a singular subject, demanding the singular verb 'has'."
+    },
+    {
+      "type": "MCQ",
+      "question": "The Chief Secretary is one of the government officials who ______ frequently featured in international press briefings.",
+      "options": [
+        "is",
+        "are",
+        "has",
+        "have"
+      ],
+      "answer": "are",
+      "explanation": "Trap 5: The antecedent for 'who' is the plural 'officials'. Out of all the officials *who are* featured, the Chief Secretary is one. Therefore, the plural verb 'are' is necessary."
+    },
+    {
+      "type": "MCQ",
+      "question": "The steady erosion of traditional values in modern, fast-paced societies ______ deeply alarming to cultural historians.",
+      "options": [
+        "is",
+        "are",
+        "were",
+        "have been"
+      ],
+      "answer": "is",
+      "explanation": "Trap 1: The grammatical subject is the singular noun 'erosion', not the plural nouns 'values' or 'societies' trapped inside prepositional phrases. Thus, 'is' is correct."
+    }
+  ],
+  "boss_fight": {
+    "paragraph": "The expansion of modern art galleries in the West Kowloon Cultural District have sparked intense debate. The lead architect, along with several urban planners, argue for a localized aesthetic. Interestingly, neither the critics nor the conservative committee denies that a number of logistical challenges remains unresolved.",
+    "errors": [
+      {
+        "original": "have",
+        "correction": "has",
+        "explanation": "Trap 1: The subject is the singular 'expansion', not the plural 'galleries'. The prepositional phrase 'of modern art galleries in the West Kowloon Cultural District' is a distractor."
+      },
+      {
+        "original": "argue",
+        "correction": "argues",
+        "explanation": "Trap 2: The phrase 'along with several urban planners' is an interrupter. The core subject is the singular 'lead architect', necessitating the singular verb 'argues'."
+      },
+      {
+        "original": "remains",
+        "correction": "remain",
+        "explanation": "Trap 4: The phrase 'a number of' means 'many', making the subject 'challenges' take the plural verb 'remain'."
+      }
+    ]
+  },
+  "success_feedback": "Outstanding! You have successfully mastered Level 5** Subject-Verb Agreement. You can now reliably navigate complex sentence structures, identify disguised head nouns, and outsmart the most notoriously tricky examiner traps.",
+  "suggested_next_steps": [
+    "Review advanced Participles and Dangling Modifiers to perfect sentence beginnings.",
+    "Practice using Inversion structures (e.g., 'Seldom do we see...') to enhance sentence variety in Part B Writing.",
+    "Attempt full Part A multiple-choice cloze passages, specifically hunting for SVA and tense harmony issues."
+  ],
+  "interactive_tasks": [],
+  "examples": [],
+  "key_points": []
+}

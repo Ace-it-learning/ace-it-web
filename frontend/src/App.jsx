@@ -51,6 +51,12 @@ import MathsResultPage from './pages/MathsResultPage';
 import MathsDeepDivePage from './pages/MathsDeepDivePage';
 import MathsLearningPage from './pages/MathsLearningPage'; 
 import MockExamLibrary from './pages/MockExamLibrary';
+import MockLibraryEngPage from './pages/mock-eng/MockLibraryEngPage';
+import ReadingMockStudio from './pages/mock-eng/ReadingMockStudio';
+import WritingMockStudio from './pages/mock-eng/WritingMockStudio';
+import ListeningMockStudio from './pages/mock-eng/ListeningMockStudio';
+import SpeakingMockStudio from './pages/mock-eng/SpeakingMockStudio';
+import MockLibraryMathPage from './pages/mock-math/MockLibraryMathPage';
 import SpeakingPillarMenu from './pages/SpeakingPillarMenu';
 import QuestFactoryPage from './pages/QuestFactoryPage';
 import MasteryPage from './pages/MasteryPage';
@@ -361,7 +367,7 @@ function App() {
                   path="/lab"
                   element={
                     <ProtectedRoute>
-                      <MainLayout fullWidth={true}>
+                      <MainLayout fullWidth={true} noPadding={true}>
                         <LabPage />
                       </MainLayout>
                     </ProtectedRoute>
@@ -387,10 +393,56 @@ function App() {
                 />
                 <Route
                   path="/mock-exam"
+                  element={<Navigate to="/mock-exam-eng" replace />}
+                />
+                <Route
+                  path="/mock-exam-eng"
                   element={
                     <ProtectedRoute>
                       <MainLayout>
-                        <MockExamLibrary />
+                        <MockLibraryEngPage />
+                      </MainLayout>
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/mock-exam-eng/reading/:paperId"
+                  element={
+                    <ProtectedRoute>
+                      <ReadingMockStudio />
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/mock-exam-eng/writing/:paperId"
+                  element={
+                    <ProtectedRoute>
+                      <WritingMockStudio />
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/mock-exam-eng/listening/:paperId"
+                  element={
+                    <ProtectedRoute>
+                      <ListeningMockStudio />
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/mock-exam-eng/speaking/:paperId"
+                  element={
+                    <ProtectedRoute>
+                      <SpeakingMockStudio />
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/mock-exam-math"
+                  element={
+                    <ProtectedRoute>
+                      <MainLayout>
+                        <MockLibraryMathPage />
                       </MainLayout>
                     </ProtectedRoute>
                   }

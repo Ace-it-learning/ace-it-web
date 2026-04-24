@@ -1,0 +1,219 @@
+{
+  "type": "GRAMMAR",
+  "topic_id": "grammar_accuracy_countable",
+  "level": "HKDSE Level 5**",
+  "conceptual_explanation": "The 5** summit requires distinguishing between nouns that look plural but are singular (Economics, Measles) and nouns whose meaning changes entirely with an 's' (Customs, Manners). You must also be precise with 'Partitives' for abstract concepts (A glimmer of hope) and master the most complex Latin/Greek plural shifts used in academic and formal English.",
+  "rule_cards": [
+    {
+      "name": "The '-ics' Singulars",
+      "formula": "Subjects (Economics, Physics, Statistics) = ALWAYS Singular",
+      "correct": "Economics is a challenging subject for many students.",
+      "incorrect": "Economics are a challenging subject for many students."
+    },
+    {
+      "name": "Meaning Morphers",
+      "formula": "Plural form = Totally different definition",
+      "correct": "We cleared customs at the airport. (NOT: we cleared custom) / Good manners are essential.",
+      "incorrect": "The custom of the local people are interesting. (When meaning 'tradition')"
+    },
+    {
+      "name": "Abstract Partitives",
+      "formula": "A [Noun] of [Uncountable Abstract]",
+      "correct": "A fit of rage / A glimmer of hope / A stroke of luck",
+      "incorrect": "A rage / A luck"
+    },
+    {
+      "name": "The Elite Latin/Greek Shifts",
+      "formula": "Alumnus -> Alumni / Basis -> Bases / Appendix -> Appendices",
+      "correct": "The stimuli used in the experiment were varied.",
+      "incorrect": "The stimuluses used in the experiment were varied."
+    }
+  ],
+  "head_noun_tasks": [
+    {
+      "sentence_tokens": [
+        "Statistics",
+        "is",
+        "often",
+        "misinterpreted",
+        "by",
+        "the",
+        "general",
+        "public",
+        "."
+      ],
+      "head_noun_indices": [
+        0,
+        1
+      ],
+      "explanation": "Names of academic subjects ending in 's' are singular and take a singular verb 'is'."
+    },
+    {
+      "sentence_tokens": [
+        "He",
+        "showed",
+        "a",
+        "spark",
+        "of",
+        "genius",
+        "during",
+        "the",
+        "final",
+        "presentation",
+        "."
+      ],
+      "head_noun_indices": [
+        3,
+        5
+      ],
+      "explanation": "'Genius' (the quality) is uncountable; 'spark' is the partitive quantifier used to make it countable."
+    },
+    {
+      "sentence_tokens": [
+        "The",
+        "alumni",
+        "of",
+        "the",
+        "university",
+        "have",
+        "donated",
+        "millions",
+        "to",
+        "the",
+        "new",
+        "library",
+        "."
+      ],
+      "head_noun_indices": [
+        1,
+        5
+      ],
+      "explanation": "'Alumni' is the plural of 'alumnus', thus requiring the plural verb 'have'."
+    },
+    {
+      "sentence_tokens": [
+        "We",
+        "must",
+        "examine",
+        "the",
+        "bases",
+        "of",
+        "their",
+        "arguments",
+        "carefully",
+        "."
+      ],
+      "head_noun_indices": [
+        4
+      ],
+      "explanation": "'Bases' (pronounced 'bay-seez') is the plural of 'basis'."
+    },
+    {
+      "sentence_tokens": [
+        "Good",
+        "manners",
+        "cost",
+        "nothing",
+        "but",
+        "buy",
+        "everything",
+        "."
+      ],
+      "head_noun_indices": [
+        1
+      ],
+      "explanation": "'Manners' (polite behavior) is always plural and takes a plural verb ('cost')."
+    }
+  ],
+  "drill_tasks": [
+    {
+      "type": "MCQ",
+      "question": "The ________ of the book contain additional charts and data.",
+      "options": [
+        "appendixs",
+        "appendices",
+        "appendixes",
+        "appendice"
+      ],
+      "answer": "appendices",
+      "explanation": "Formal plural of 'appendix' is 'appendices'."
+    },
+    {
+      "type": "MCQ",
+      "question": "A ________ of hope remained even after the rescue mission was called off.",
+      "options": [
+        "spark",
+        "glimmer",
+        "stroke",
+        "fit"
+      ],
+      "answer": "glimmer",
+      "explanation": "The idiomatic partitive for 'hope' is 'glimmer'."
+    },
+    {
+      "type": "MCQ",
+      "question": "The airport ________ was crowded with passengers from the delayed flight.",
+      "options": [
+        "custom",
+        "customs",
+        "customes",
+        "custom's"
+      ],
+      "answer": "customs",
+      "explanation": "When referring to the area for checking goods at a border, it is always 'customs'."
+    },
+    {
+      "type": "MCQ",
+      "question": "These external ________ were essential for the plants to grow in the dark.",
+      "options": [
+        "stimulus",
+        "stimuli",
+        "stimuluses",
+        "stimulies"
+      ],
+      "answer": "stimuli",
+      "explanation": "'Stimuli' is the plural of 'stimulus'."
+    },
+    {
+      "type": "MCQ",
+      "question": "Politics ________ a topic that many people prefer to avoid at dinner parties.",
+      "options": [
+        "is",
+        "are",
+        "being",
+        "were"
+      ],
+      "answer": "is",
+      "explanation": "'Politics' (the subject) is singular."
+    }
+  ],
+  "boss_fight": {
+    "paragraph": "Statistics are my favorite subject at school. I once had a stroke of geniuses when solving a complex problem. The alumnus of our school often share their success stories during the assembly.",
+    "errors": [
+      {
+        "original": "Statistics are",
+        "correction": "Statistics is",
+        "explanation": "'Statistics' as a subject of study is singular."
+      },
+      {
+        "original": "stroke of geniuses",
+        "correction": "stroke of genius",
+        "explanation": "'Genius' as a quality is uncountable in this idiom."
+      },
+      {
+        "original": "alumnus of our school often share",
+        "correction": "alumni of our school often share",
+        "explanation": "Either use 'alumni' (plural) with 'share', or 'alumnus' (singular) with 'shares'. 'Alumni' is better for 'often share'."
+      }
+    ]
+  },
+  "success_feedback": "Incredible! You have reached the pinnacle of noun accuracy. Your command over irregular plurals and semantic shifts is truly 5** level.",
+  "suggested_next_steps": [
+    "Read academic papers to see these Latin/Greek plurals in professional contexts.",
+    "Practice using advanced partitives in your own writing (e.g., 'a grain of truth').",
+    "Teach these elite traps to someone else to master them forever!"
+  ],
+  "interactive_tasks": [],
+  "examples": [],
+  "key_points": []
+}

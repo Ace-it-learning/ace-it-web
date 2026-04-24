@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "title": "Mandatory Voluntary Work",
+    "topic": "Mandatory Voluntary Work",
+    "generated_at": "2026-04-23T13:45:00.000Z",
+    "blueprint_version": "2026_V1"
+  },
+  "Part_A": {
+    "part": "Part A",
+    "genre": "Formal Letter",
+    "title": "Opinion on Mandatory Community Service",
+    "instructions": "Write a formal letter in about 200 words. Pay attention to the appropriate format and tone.",
+    "situation": "Your school is considering making 40 hours of community service a graduation requirement for all S4-S6 students. The School Board has requested feedback from the Student Union.",
+    "requirements": [
+      "Briefly state whether you support or oppose the new requirement.",
+      "Provide two reasons for your stance.",
+      "Suggest one way the school could help students find suitable volunteer opportunities."
+    ],
+    "format_guides": [
+      "Use formal letter conventions.",
+      "Address it to 'The Chairperson of the School Board'."
+    ]
+  },
+  "Part_B": [
+    {
+      "elective": "Sports Communication",
+      "type": "Feature Article",
+      "question": "A reflection on the 'Run for Hope' charity marathon.",
+      "target_audience": "School Magazine readers",
+      "requirements": [
+        "Explain why you decided to join the charity run.",
+        "Describe the most challenging part of the race and how you overcame it.",
+        "Discuss how sports can be a powerful tool for raising money and awareness."
+      ]
+    },
+    {
+      "elective": "Drama",
+      "type": "Dramatic Script",
+      "question": "An interaction between two student volunteers and an elderly resident.",
+      "requirements": [
+        "Establish a clear contrast in the motivations of the two students.",
+        "Include a 'turning point' where a character’s perspective shifts.",
+        "Provide stage directions that describe the atmosphere and non-verbal cues."
+      ]
+    },
+    {
+      "elective": "Short Stories",
+      "type": "Short Story",
+      "question": "A student finds a mysterious letter in a donation box.",
+      "requirements": [
+        "Describe the setting where the letter was found.",
+        "Explain the secret request for help contained within the letter.",
+        "End the story with a reflection on how this experience changed your view of 'help'."
+      ]
+    },
+    {
+      "elective": "Popular Culture",
+      "type": "Blog Post",
+      "question": "The rise of 'Performative Philanthropy' on social media.",
+      "requirements": [
+        "Identify two ways influencers use charity to boost their image.",
+        "Compare 'fake' charity for views with 'genuine' anonymous acts of service.",
+        "Give advice to followers on how to spot authentic charitable causes."
+      ]
+    },
+    {
+      "elective": "Social Issues",
+      "type": "Letter to the Editor",
+      "question": "Should community service be a prerequisite for university admission?",
+      "target_audience": "Hong Kong Daily readers",
+      "requirements": [
+        "Discuss the benefits of making service mandatory for all teens.",
+        "Address the counter-argument that 'forced service' is not genuine.",
+        "Suggest one alternative way to encourage a culture of giving in Hong Kong."
+      ]
+    },
+    {
+      "elective": "Debating",
+      "type": "Formal Debate Speech",
+      "question": "'That local NGOs are more effective than international charities.'",
+      "requirements": [
+        "Define what makes an NGO 'effective'.",
+        "Provide two arguments supporting the impact of local, community-based help.",
+        "Conclude with a powerful 'call to action' for the audience."
+      ]
+    },
+    {
+      "elective": "Workplace Communication",
+      "type": "Formal Proposal",
+      "question": "A Corporate Social Responsibility (CSR) plan for a local tech company.",
+      "requirements": [
+        "Propose two specific volunteer activities for the employees.",
+        "Explain how these activities will benefit the company's public image.",
+        "Outline the resources and time needed to implement the program."
+      ]
+    },
+    {
+      "elective": "Songs and Poems",
+      "type": "Review",
+      "question": "A review of a song or poem that addresses social inequality.",
+      "target_audience": "School Newsletter readers",
+      "requirements": [
+        "Identify the main theme or message of the chosen work.",
+        "Discuss how specific literary devices (e.g., metaphors, rhythm) convey emotion.",
+        "Explain why this specific work would inspire students to take social action."
+      ]
+    }
+  ]
+}

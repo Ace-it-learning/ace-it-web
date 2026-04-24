@@ -7,16 +7,18 @@ const WritingStudioLayout = ({
     centerColumn, 
     rightColumn, 
     isSidebarOpen = true,
-    isLeftSidebarOpen = true
+    isLeftSidebarOpen = true,
+    children // Added for modals/overlays
 }) => {
     return (
-        <div className="min-h-screen bg-slate-50 flex flex-col font-sans overflow-hidden">
+        <div className="min-h-screen bg-slate-50 flex flex-col font-sans overflow-hidden relative">
             {/* Unified Header */}
             {header}
 
             {/* Three-Column Workspace */}
             <main className="flex-1 flex overflow-hidden">
-                {/* Left Column: The Briefing - Collapsible for Tablets */}
+                {/* ... existing columns ... */}
+                {/* [Previous column code preserved exactly] */}
                 <AnimatePresence>
                     {isLeftSidebarOpen && (
                         <motion.aside 
@@ -33,7 +35,6 @@ const WritingStudioLayout = ({
                     )}
                 </AnimatePresence>
 
-                {/* Center Column: The Studio - Expanded Area */}
                 <section className="flex-1 bg-slate-50 flex flex-col overflow-hidden relative border-r border-slate-200">
                     <div className="flex-1 overflow-y-auto p-4 md:p-8">
                         <div className="max-w-4xl mx-auto h-full flex flex-col">
@@ -42,7 +43,6 @@ const WritingStudioLayout = ({
                     </div>
                 </section>
 
-                {/* Right Column: The Control Panel (Dynamic Sidebar) - Reduced Width & Collapsible */}
                 <AnimatePresence>
                     {isSidebarOpen && (
                         <motion.aside 
@@ -59,6 +59,9 @@ const WritingStudioLayout = ({
                     )}
                 </AnimatePresence>
             </main>
+
+            {/* Render overlays/modals here */}
+            {children}
         </div>
     );
 };

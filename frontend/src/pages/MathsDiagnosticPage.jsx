@@ -1,83 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import MathsDiagnosticLanding from '../components/diagnostic/MathsDiagnosticLanding';
+import { LoadingPage, GradingOverlay } from '../components/shared';
 import { ArrowRight, CheckCircle, Clock } from 'lucide-react';
 import { SafeInlineMath, SafeBlockMath } from '../components/maths/SafeMath';
 import 'katex/dist/katex.min.css';
 import MathInput from '../components/maths/MathInput';
 import MathsDiagnosticResult from '../components/diagnostic/MathsDiagnosticResult';
-import MathsDiagnosticLanding from '../components/diagnostic/MathsDiagnosticLanding';
 import { formatNumbers, sanitizeMath, prepareMathText, splitContentByDelimiters, looksLikeMath } from '../utils/mathFormattingUtils';
 
-const MathsAnalysisLoading = () => {
-    const [progress, setProgress] = useState(0);
-    const [statusIndex, setStatusIndex] = useState(0);
-
-    const statuses = [
-        "Analyzing your step-by-step logic...",
-        "Evaluating algebraic fluency...",
-        "Checking geometric intuition...",
-        "Mapping DSE proficiency levels...",
-        "Synthesizing personalized roadmap...",
-        "Finalizing your math profile..."
-    ];
-
-    useEffect(() => {
-        const timer = setInterval(() => {
-            setProgress(prev => {
-                if (prev >= 98) return prev;
-                // Roughly 30 seconds to get to ~95%
-                // 30000ms / 500ms = 60 updates. 95 / 60 = 1.58
-                const inc = prev > 85 ? 0.2 : prev > 60 ? 0.8 : 1.6;
-                return Math.min(prev + inc, 98);
-            });
-        }, 500);
-
-        const statusTimer = setInterval(() => {
-            setStatusIndex(prev => (prev < statuses.length - 1 ? prev + 1 : prev));
-        }, 5000);
-
-        return () => {
-            clearInterval(timer);
-            clearInterval(statusTimer);
-        };
-    }, []);
-
-    return (
-        <div className="h-screen flex flex-col items-center justify-center bg-slate-50 p-8 text-center animate-in fade-in duration-700">
-            <div className="w-24 h-24 mb-10 relative">
-                <div className="absolute inset-0 rounded-3xl border-4 border-purple-500/10" />
-                <div className="absolute inset-0 rounded-3xl border-4 border-t-purple-600 animate-spin" style={{ animationDuration: '2s' }} />
-                <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="text-3xl animate-pulse">∑</span>
-                </div>
-            </div>
-
-            <div className="w-full max-w-md bg-white p-8 rounded-3xl shadow-xl border border-purple-100 mb-8">
-                <div className="flex justify-between items-end mb-4">
-                    <div className="text-left">
-                        <p className="text-xs font-black text-purple-400 uppercase tracking-widest mb-1">Deep Logic Analysis</p>
-                        <h2 className="text-xl font-bold text-gray-900 leading-tight">
-                            {statuses[statusIndex]}
-                        </h2>
-                    </div>
-                    <span className="text-3xl font-black text-purple-600 font-mono">{Math.round(progress)}%</span>
-                </div>
-
-                <div className="h-4 bg-purple-50 rounded-full overflow-hidden border border-purple-100 shadow-inner p-1">
-                    <div
-                        className="h-full bg-gradient-to-r from-purple-500 to-indigo-600 rounded-full transition-all duration-500 ease-out shadow-lg"
-                        style={{ width: `${progress}%` }}
-                    />
-                </div>
-            </div>
-
-            <p className="text-slate-400 text-sm max-w-xs leading-relaxed italic">
-                Your mentor is evaluating your mathematical steps to map your DSE potential. This usually takes about 30 seconds.
-            </p>
-        </div>
-    );
-};
 
 const MathsDiagnosticPage = () => {
     const { user } = useAuth();
@@ -95,6 +27,42 @@ const MathsDiagnosticPage = () => {
     const [answers, setAnswers] = useState({});
     const [showCheat, setShowCheat] = useState(false);
     const [results, setResults] = useState(location.state?.results || null);
+
+    // Progress Simulation for Grading
+    const [gradingProgress, setGradingProgress] = useState(0);
+    const [gradingStatusIndex, setGradingStatusIndex] = useState(0);
+    const gradingStatuses = [
+        "Analyzing your step-by-step logic...",
+        "Evaluating algebraic fluency...",
+        "Checking geometric intuition...",
+        "Mapping DSE proficiency levels...",
+        "Synthesizing personalized roadmap...",
+        "Finalizing your math profile..."
+    ];
+
+    useEffect(() => {
+        if (stage === 'submitting') {
+            const timer = setInterval(() => {
+                setGradingProgress(prev => {
+                    if (prev >= 98) return prev;
+                    const inc = prev > 85 ? 0.2 : prev > 60 ? 0.8 : 1.6;
+                    return Math.min(prev + inc, 98);
+                });
+            }, 500);
+
+            const statusTimer = setInterval(() => {
+                setGradingStatusIndex(prev => (prev < gradingStatuses.length - 1 ? prev + 1 : prev));
+            }, 5000);
+
+            return () => {
+                clearInterval(timer);
+                clearInterval(statusTimer);
+            };
+        } else {
+            setGradingProgress(0);
+            setGradingStatusIndex(0);
+        }
+    }, [stage]);
 
     const handleCheat = async (level) => {
         try {
@@ -252,7 +220,14 @@ const MathsDiagnosticPage = () => {
         }
     };
 
-    if (loading) return <div className="h-screen flex items-center justify-center">Loading Calibration...</div>;
+    if (loading) {
+        return (
+            <LoadingPage 
+                title="Loading Math Calibration" 
+                subtext="Preparing your personalized mathematical diagnostic suite..."
+            />
+        );
+    }
 
     const renderQuestionText = (text) => {
         if (!text) return null;
@@ -383,7 +358,14 @@ const MathsDiagnosticPage = () => {
 
 
     if (stage === 'submitting') {
-        return <MathsAnalysisLoading />;
+        return (
+            <GradingOverlay 
+                isOpen={true}
+                title="Deep Logic Analysis"
+                status={gradingStatuses[gradingStatusIndex]}
+                progress={gradingProgress}
+            />
+        );
     }
 
     if (stage === 'result') {

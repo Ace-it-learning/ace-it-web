@@ -14,7 +14,8 @@ const PAPERS = {
     READING: 'reading',
     WRITING: 'writing',
     LISTENING: 'listening',
-    SPEAKING: 'speaking'
+    SPEAKING: 'speaking',
+    GRAMMAR: 'grammar'
 };
 
 // All 47 micro-skills with metadata
@@ -663,6 +664,90 @@ const MICRO_SKILLS = {
         group: SKILL_GROUPS.ADVANCED,
         description: 'Inviting others to contribute (Diplomacy)',
         description_zh: '邀請他人參與對話（外交手腕）'
+    },
+
+    // GRAMMAR LAB (8 modules)
+    // Accuracy Track
+    grammar_accuracy_sva: {
+        id: 'grammar_accuracy_sva',
+        name: 'Subject-Verb Agreement',
+        name_zh: '主謂一致性 (SVA)',
+        paper: PAPERS.GRAMMAR,
+        category: 'Accuracy Track',
+        group: SKILL_GROUPS.CORE,
+        description: 'Ensuring subjects and verbs match in number.',
+        description_zh: '確保主語與謂語動詞在單複數上保持一致。'
+    },
+    grammar_accuracy_tense: {
+        id: 'grammar_accuracy_tense',
+        name: 'Tense Consistency',
+        name_zh: '時態一致性',
+        paper: PAPERS.GRAMMAR,
+        category: 'Accuracy Track',
+        group: SKILL_GROUPS.CORE,
+        description: 'Maintaining logical tense sequences in writing.',
+        description_zh: '在寫作中保持邏輯連貫的時態序列。'
+    },
+    grammar_accuracy_countable: {
+        id: 'grammar_accuracy_countable',
+        name: 'Countable/Uncountable',
+        name_zh: '可數與不可數名詞',
+        paper: PAPERS.GRAMMAR,
+        category: 'Accuracy Track',
+        group: SKILL_GROUPS.CORE,
+        description: 'Correct usage of plurals and quantifiers.',
+        description_zh: '正確使用名詞複數與數量詞。'
+    },
+    grammar_accuracy_wordform: {
+        id: 'grammar_accuracy_wordform',
+        name: 'Word Form (Parts of Speech)',
+        name_zh: '詞性與詞形',
+        paper: PAPERS.GRAMMAR,
+        category: 'Accuracy Track',
+        group: SKILL_GROUPS.CORE,
+        description: 'Selecting the correct noun, verb, adjective, or adverb.',
+        description_zh: '根據語境選擇正確的名詞、動詞、形容詞或副詞。'
+    },
+    // Elite Track
+    grammar_elite_inversion: {
+        id: 'grammar_elite_inversion',
+        name: 'Inversion Mastery',
+        name_zh: '倒裝句 (Inversion)',
+        paper: PAPERS.GRAMMAR,
+        category: 'Elite Track',
+        group: SKILL_GROUPS.ADVANCED,
+        description: 'Using advanced inverted structures for emphasis.',
+        description_zh: '使用高級倒裝句式以增強語氣。'
+    },
+    grammar_elite_subjunctive: {
+        id: 'grammar_elite_subjunctive',
+        name: 'Subjunctive Mood',
+        name_zh: '虛擬語氣',
+        paper: PAPERS.GRAMMAR,
+        category: 'Elite Track',
+        group: SKILL_GROUPS.ADVANCED,
+        description: 'Expressing hypothetical or contrary-to-fact situations.',
+        description_zh: '表達假設性或與事實相反的情況。'
+    },
+    grammar_elite_participle: {
+        id: 'grammar_elite_participle',
+        name: 'Participle Phrases',
+        name_zh: '分詞短語',
+        paper: PAPERS.GRAMMAR,
+        category: 'Elite Track',
+        group: SKILL_GROUPS.ADVANCED,
+        description: 'Using participles to create concise, elegant sentences.',
+        description_zh: '使用分詞結構構建簡潔且優雅的句子。'
+    },
+    grammar_elite_cohesion: {
+        id: 'grammar_elite_cohesion',
+        name: 'Advanced Cohesion',
+        name_zh: '高級銜接技巧',
+        paper: PAPERS.GRAMMAR,
+        category: 'Elite Track',
+        group: SKILL_GROUPS.ADVANCED,
+        description: 'Sophisticated linking of complex arguments.',
+        description_zh: '在複雜論點之間建立高層次的邏輯銜接。'
     },
 };
 

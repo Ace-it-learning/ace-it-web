@@ -138,10 +138,11 @@ async function generateSpeech(text, languageCode = 'en-US', gender = 'FEMALE', s
             request.enableTimepoints = ['SSML_MARK'];
         }
 
-        // Selection Strategy: Ensure Native HK Cantonese always uses high-quality Standard TTS.
-        // For English in DEV, we prefer Multimodal (Gemini AI Studio) for cost efficiency,
-        // EXCEPT when timepoints are needed (Gemini doesn't support them yet).
-        const preferMultimodal = !isHK && (!isProduction || !hasKey) && !includeTimepoints;
+        // Standard Flow: Default to Wavenet/Neural Standard TTS to save costs and reduce latency.
+        // Multimodal is ONLY used if explicitly requested or for specific premium features.
+        // [2026] DEV HARDENING: Use Gemini Multimodal in DEV to stay within AI Studio (Free Tier).
+        // Standard TTS (Google Cloud) is reserved for Production to save Gemini tokens/latency.
+        const preferMultimodal = NODE_ENV === 'development'; 
 
         if (preferMultimodal) {
             try {

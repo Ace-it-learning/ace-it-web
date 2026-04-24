@@ -70,5 +70,37 @@ export const GRAMMAR_MAPPING = {
     "title_zh": "高級銜接技巧",
     "janie_message": "Don't just use 'Moreover'. Let's explore advanced ways to link your complex arguments.",
     "janie_message_zh": "別只會用 'Moreover'。讓我們探索更多高級的銜接技巧，連結你的複雜論點。"
+  },
+  "error_nominal": {
+    "lab_id": "grammar_elite_nominal",
+    "track": "Elite",
+    "title": "Nominal Clauses",
+    "title_zh": "名詞性從句",
+    "janie_message": "Using a whole clause as a subject is the ultimate Level 5** power move.",
+    "janie_message_zh": "將整個從句用作主語是 Level 5** 的終極技巧。"
+  },
+  "error_relative": {
+    "lab_id": "grammar_elite_relative",
+    "track": "Elite",
+    "title": "Advanced Relative Clauses",
+    "title_zh": "高級關係從句",
+    "janie_message": "'Of whom' and 'whereby' are the tools of a linguistic architect. Let's build your sentences.",
+    "janie_message_zh": "『Of whom』和『whereby』是語言建築師的工具。讓我們開始構建你的句子。"
+  },
+  "error_modals": {
+    "lab_id": "grammar_elite_modals",
+    "track": "Elite",
+    "title": "Modal Nuance",
+    "title_zh": "情態動詞辨析",
+    "janie_message": "Is it 'should' or 'ought to'? The right modal can make your recommendation much more persuasive.",
+    "janie_message_zh": "是『Should』還是『Ought to』？正確的情態動詞能讓你的建議更具說服力。"
+  },
+  "error_passive": {
+    "lab_id": "grammar_elite_passive",
+    "track": "Elite",
+    "title": "Passive Variations",
+    "title_zh": "被動語態變體",
+    "janie_message": "Impersonal passive structures like 'It is thought that...' will instantly elevate the objectivity of your report.",
+    "janie_message_zh": "像『It is thought that...』這樣的無人稱被動結構能瞬間提升報告的客觀性。"
   }
 };

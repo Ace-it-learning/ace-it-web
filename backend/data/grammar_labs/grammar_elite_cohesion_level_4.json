@@ -1,0 +1,217 @@
+{
+  "type": "GRAMMAR",
+  "topic_id": "grammar_elite_cohesion",
+  "level": "HKDSE Level 5",
+  "conceptual_explanation": "Level 5 Advanced Cohesion introduces formal academic connectors like 'Notwithstanding' and 'Albeit'. These words allow you to acknowledge opposing views or add nuance while maintaining a professional and sophisticated tone.",
+  "rule_cards": [
+    {
+      "name": "The Concession Pair",
+      "formula": "Notwithstanding + Noun / Albeit + Adjective",
+      "correct": "Notwithstanding the challenges, we succeeded.",
+      "incorrect": "Notwithstanding of the challenges..."
+    },
+    {
+      "name": "Showing Specificity",
+      "formula": "Idea. Specifically, / Notably, Detail.",
+      "correct": "The system has flaws. Notably, the security is weak.",
+      "incorrect": "The system has flaws notably the security is weak."
+    },
+    {
+      "name": "Sequence of Events",
+      "formula": "Action A. Subsequently, Action B.",
+      "correct": "He resigned. Subsequently, a new manager was hired.",
+      "incorrect": "He resigned, subsequently a new manager..."
+    },
+    {
+      "name": "Strong Emphasis",
+      "formula": "Idea. Indeed, / In fact, Reinforcement.",
+      "correct": "The movie was great. Indeed, it won five awards.",
+      "incorrect": "The movie was great indeed it won..."
+    }
+  ],
+  "head_noun_tasks": [
+    {
+      "sentence_tokens": [
+        "Notwithstanding",
+        "the",
+        "delay",
+        ",",
+        "the",
+        "project",
+        "was",
+        "completed",
+        "on",
+        "time",
+        "."
+      ],
+      "head_noun_indices": [
+        0
+      ],
+      "explanation": "'Notwithstanding' is a formal way to say 'despite'."
+    },
+    {
+      "sentence_tokens": [
+        "The",
+        "task",
+        "was",
+        "difficult",
+        ",",
+        "albeit",
+        "rewarding",
+        "."
+      ],
+      "head_noun_indices": [
+        5
+      ],
+      "explanation": "'Albeit' is used to introduce a concession or contrast with an adjective."
+    },
+    {
+      "sentence_tokens": [
+        "He",
+        "was",
+        "offered",
+        "a",
+        "job",
+        ";",
+        "subsequently",
+        ",",
+        "he",
+        "moved",
+        " to",
+        "London",
+        "."
+      ],
+      "head_noun_indices": [
+        6
+      ],
+      "explanation": "'Subsequently' indicates that the move happened after the job offer."
+    },
+    {
+      "sentence_tokens": [
+        "Notably",
+        ",",
+        "the",
+        "report",
+        "omits",
+        "the",
+        "most",
+        "critical",
+        "data",
+        "."
+      ],
+      "head_noun_indices": [
+        0
+      ],
+      "explanation": "'Notably' draws attention to a specific important point."
+    },
+    {
+      "sentence_tokens": [
+        "Indeed",
+        ",",
+        "the",
+        "implications",
+        "of",
+        "this",
+        "discovery",
+        "are",
+        "vast",
+        "."
+      ],
+      "head_noun_indices": [
+        0
+      ],
+      "explanation": "'Indeed' is used to emphasize a previous point or a new assertion."
+    }
+  ],
+  "drill_tasks": [
+    {
+      "type": "MCQ",
+      "question": "The candidate was qualified, ________ inexperienced.",
+      "options": [
+        "notwithstanding",
+        "albeit",
+        "subsequently",
+        "indeed"
+      ],
+      "answer": "albeit",
+      "explanation": "'Albeit' is perfectly suited for contrast with a single adjective."
+    },
+    {
+      "type": "MCQ",
+      "question": "________ the lack of funds, the charity managed to build a school.",
+      "options": [
+        "Notwithstanding",
+        "Albeit",
+        "Notably",
+        "Subsequently"
+      ],
+      "answer": "Notwithstanding",
+      "explanation": "'Notwithstanding' means 'in spite of' and is followed by a noun phrase."
+    },
+    {
+      "type": "MCQ",
+      "question": "The company went public; ________, its share price tripled.",
+      "options": [
+        "indeed",
+        "subsequently",
+        "albeit",
+        "notwithstanding"
+      ],
+      "answer": "subsequently",
+      "explanation": "The price tripled *after* going public."
+    },
+    {
+      "type": "MCQ",
+      "question": "The economy is growing. ________, the tech sector is booming.",
+      "options": [
+        "Notably",
+        "Albeit",
+        "Notwithstanding",
+        "Subsequently"
+      ],
+      "answer": "Notably",
+      "explanation": "This specifies *where* the growth is most evident."
+    },
+    {
+      "type": "MCQ",
+      "question": "The performance was flawless. ________, it was the best show of the season.",
+      "options": [
+        "Indeed",
+        "Albeit",
+        "Subsequently",
+        "Notably"
+      ],
+      "answer": "Indeed",
+      "explanation": "This reinforces and emphasizes the previous sentence."
+    }
+  ],
+  "boss_fight": {
+    "paragraph": "Notwithstanding of the rain, we played. The soup was cold albeit delicious. He was promoted, subsequently he got a raise.",
+    "errors": [
+      {
+        "original": "Notwithstanding of",
+        "correction": "Notwithstanding",
+        "explanation": "Do not use 'of' after 'notwithstanding'. It is a preposition on its own."
+      },
+      {
+        "original": "cold albeit",
+        "correction": "cold, albeit",
+        "explanation": "'Albeit' should generally be preceded by a comma when it introduces a contrasting phrase."
+      },
+      {
+        "original": "promoted, subsequently",
+        "correction": "promoted; subsequently,",
+        "explanation": "Use a semicolon and a comma with 'subsequently' when it connects two independent thoughts."
+      }
+    ]
+  },
+  "success_feedback": "Impressive! You're using some of the most powerful formal connectors in English. Your writing has a truly professional sheen.",
+  "suggested_next_steps": [
+    "Learn the difference between 'Conversely' and 'On the other hand'.",
+    "Study how 'In light of' can be used to provide context.",
+    "Try Level 5* for elite-level complexity!"
+  ],
+  "interactive_tasks": [],
+  "examples": [],
+  "key_points": []
+}

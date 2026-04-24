@@ -1,0 +1,711 @@
+{
+  "meta": {
+    "title": "HKDSE Paper 3: Micro-Living and Wellbeing (Elite 2026 Edition)",
+    "topic": "Designing human-scale spaces in tiny apartments; mental health.",
+    "difficulty": "Level 5** Authentic (High Stamina)",
+    "total_marks_part_a": 50,
+    "total_marks_part_b": 50
+  },
+  "Part_A": {
+    "tasks": [
+      {
+        "id": "Task_1",
+        "instructions": "You are at the registration desk for the Micro-Living & Human-Scale Design Expo 2026. Complete the registration form below.",
+        "questions": [
+          {
+            "id": "t1_q1",
+            "type": "Fill_in_Blanks",
+            "label": "Full Name of Organization:",
+            "answer": "Space-Optimized Solutions (SOS)"
+          },
+          {
+            "id": "t1_q2",
+            "type": "Fill_in_Blanks",
+            "label": "Primary Contact Person:",
+            "answer": "Marco Chen"
+          },
+          {
+            "id": "t1_q3",
+            "type": "Fill_in_Blanks",
+            "label": "Contact Number:",
+            "answer": "6221 8890"
+          },
+          {
+            "id": "t1_q4",
+            "type": "Fill_in_Blanks",
+            "label": "Membership Tier:",
+            "answer": "Premium Institutional"
+          },
+          {
+            "id": "t1_q5",
+            "type": "Fill_in_Blanks",
+            "label": "Number of Delegates:",
+            "answer": "4"
+          },
+          {
+            "id": "t1_q6",
+            "type": "Fill_in_Blanks",
+            "label": "Special Access Pass:",
+            "answer": "Prototype Lab & VR Suite"
+          },
+          {
+            "id": "t1_q7",
+            "type": "Fill_in_Blanks",
+            "label": "Exhibition Booth Number:",
+            "answer": "C-14"
+          },
+          {
+            "id": "t1_q8",
+            "type": "Fill_in_Blanks",
+            "label": "Catering Requirements:",
+            "answer": "Strictly Nut-free"
+          },
+          {
+            "id": "t1_q9",
+            "type": "Fill_in_Blanks",
+            "label": "Keynote Attendance:",
+            "answer": "Yes (Morning Session)"
+          },
+          {
+            "id": "t1_q10",
+            "type": "Fill_in_Blanks",
+            "label": "Requested Arrival Time:",
+            "answer": "9:15 AM"
+          },
+          {
+            "id": "t1_q11",
+            "type": "Fill_in_Blanks",
+            "label": "Workshop Selection:",
+            "answer": "Furniture Ergonomics"
+          },
+          {
+            "id": "t1_q12",
+            "type": "Fill_in_Blanks",
+            "label": "Payment Reference:",
+            "answer": "SOS-2026-INV-88"
+          }
+        ]
+      },
+      {
+        "id": "Task_2",
+        "instructions": "Listen to a presentation about the 'Wellness Modular Unit' (WMU) project. Complete the notes and answer the questions.",
+        "questions": [
+          {
+            "id": "t2_q1",
+            "type": "Fill_in_Blanks",
+            "label": "Project Start Year:",
+            "answer": "2023"
+          },
+          {
+            "id": "t2_q2",
+            "type": "Fill_in_Blanks",
+            "label": "Core Design Philosophy:",
+            "answer": "Vertical Zoning"
+          },
+          {
+            "id": "t2_q3",
+            "type": "Fill_in_Blanks",
+            "label": "Target Ceiling Height (m):",
+            "answer": "3.5"
+          },
+          {
+            "id": "t2_q4",
+            "type": "Fill_in_Blanks",
+            "label": "Improvement in Air Circulation (%):",
+            "answer": "22"
+          },
+          {
+            "id": "t2_q5",
+            "type": "Multiple_Choice",
+            "question": "What is the biggest psychological challenge identified in the study?",
+            "options": [
+              "Social Isolation",
+              "Lack of Storage",
+              "Visual Clutter"
+            ],
+            "answer": "Visual Clutter"
+          },
+          {
+            "id": "t2_q6",
+            "type": "Multiple_Choice",
+            "question": "How many test subjects lived in the prototype?",
+            "options": [
+              "50",
+              "75",
+              "100"
+            ],
+            "answer": "75"
+          },
+          {
+            "id": "t2_q7",
+            "type": "Fill_in_Blanks",
+            "label": "Data Submission Deadline:",
+            "answer": "October 15"
+          },
+          {
+            "id": "t2_q8",
+            "type": "Fill_in_Blanks",
+            "label": "Total R&D Funding:",
+            "answer": "$450 Million"
+          },
+          {
+            "id": "t2_q9",
+            "type": "Fill_in_Blanks",
+            "label": "Primary Material Used:",
+            "answer": "Recycled Aluminum Composite"
+          },
+          {
+            "id": "t2_q10",
+            "type": "Fill_in_Blanks",
+            "label": "Next Pilot District:",
+            "answer": "Sham Shui Po"
+          },
+          {
+            "id": "t2_q11",
+            "type": "Fill_in_Blanks",
+            "label": "Project Website:",
+            "answer": "www.wmu-hk.com"
+          },
+          {
+            "id": "t2_q12",
+            "type": "Fill_in_Blanks",
+            "label": "Lead Designer:",
+            "answer": "Elena Vance"
+          }
+        ]
+      },
+      {
+        "id": "Task_3",
+        "instructions": "Three experts are discussing 'Mental Health in Tiny Spaces'. Complete the summary table.",
+        "questions": [
+          {
+            "id": "t3_q1",
+            "type": "Multiple_Choice",
+            "question": "Dr. Tan argues the main stressor is:",
+            "options": [
+              "Noise pollution",
+              "Lack of sunlight",
+              "Low ceilings"
+            ],
+            "answer": "Lack of sunlight"
+          },
+          {
+            "id": "t3_q2",
+            "type": "Multiple_Choice",
+            "question": "Ms. Ho suggests using:",
+            "options": [
+              "Folding tables",
+              "Translucent partitions",
+              "Mirrored walls"
+            ],
+            "answer": "Translucent partitions"
+          },
+          {
+            "id": "t3_q3",
+            "type": "Multiple_Choice",
+            "question": "Mr. Ng highlights the need for:",
+            "options": [
+              "Shared balconies",
+              "Bigger kitchens",
+              "Public park access"
+            ],
+            "answer": "Shared balconies"
+          },
+          {
+            "id": "t3_q4",
+            "type": "Fill_in_Blanks",
+            "label": "Policy Completion Target Year:",
+            "answer": "2029"
+          },
+          {
+            "id": "t3_q5",
+            "type": "Fill_in_Blanks",
+            "label": "Max Occupancy per 15sqm:",
+            "answer": "1 Adult"
+          },
+          {
+            "id": "t3_q6",
+            "type": "Fill_in_Blanks",
+            "label": "Number of Counseling Hubs:",
+            "answer": "12"
+          },
+          {
+            "id": "t3_q7",
+            "type": "Fill_in_Blanks",
+            "label": "Mental Health App Name:",
+            "answer": "InnerSpace HK"
+          },
+          {
+            "id": "t3_q8",
+            "type": "Fill_in_Blanks",
+            "label": "Monthly Subscription Fee:",
+            "answer": "Free for residents"
+          },
+          {
+            "id": "t3_q9",
+            "type": "Fill_in_Blanks",
+            "label": "Primary Vulnerable Group:",
+            "answer": "Gig workers under 30"
+          },
+          {
+            "id": "t3_q10",
+            "type": "Fill_in_Blanks",
+            "label": "Tutorial Video Language:",
+            "answer": "Trilingual (Cantonese, English, Mandarin)"
+          },
+          {
+            "id": "t3_q11",
+            "type": "Fill_in_Blanks",
+            "label": "Lighting Partner:",
+            "answer": "Lumina Systems"
+          },
+          {
+            "id": "t3_q12",
+            "type": "Fill_in_Blanks",
+            "label": "Inquiry Email:",
+            "answer": "wellness@housing.gov.hk"
+          }
+        ]
+      },
+      {
+        "id": "Task_4",
+        "instructions": "Stakeholders are debating the 'Living Dignity Act'. Complete the matrix with their views.",
+        "questions": [
+          {
+            "id": "t4_q1",
+            "type": "Fill_in_Blanks",
+            "label": "Architect - View on Space:",
+            "answer": "Quality of volume over floor area"
+          },
+          {
+            "id": "t4_q2",
+            "type": "Fill_in_Blanks",
+            "label": "Architect - View on Regulation:",
+            "answer": "Mandatory window-to-wall ratios"
+          },
+          {
+            "id": "t4_q3",
+            "type": "Fill_in_Blanks",
+            "label": "Architect - Recommendation:",
+            "answer": "Incentivize multi-functional communal hubs"
+          },
+          {
+            "id": "t4_q4",
+            "type": "Fill_in_Blanks",
+            "label": "Social Worker - View on Space:",
+            "answer": "Tiny spaces lead to higher cortisol levels"
+          },
+          {
+            "id": "t4_q5",
+            "type": "Fill_in_Blanks",
+            "label": "Social Worker - View on Regulation:",
+            "answer": "Rent caps on nano-flats"
+          },
+          {
+            "id": "t4_q6",
+            "type": "Fill_in_Blanks",
+            "label": "Social Worker - Recommendation:",
+            "answer": "Mandatory mental health impact assessments"
+          },
+          {
+            "id": "t4_q7",
+            "type": "Fill_in_Blanks",
+            "label": "Developer - View on Space:",
+            "answer": "Micro-living is an entry-level market necessity"
+          },
+          {
+            "id": "t4_q8",
+            "type": "Fill_in_Blanks",
+            "label": "Developer - View on Regulation:",
+            "answer": "Over-regulation will stop new supply"
+          },
+          {
+            "id": "t4_q9",
+            "type": "Fill_in_Blanks",
+            "label": "Developer - Recommendation:",
+            "answer": "Government land grants for 'Wellness' housing"
+          },
+          {
+            "id": "t4_q10",
+            "type": "Final Consensus Date:",
+            "answer": "January 1, 2027"
+          },
+          {
+            "id": "t4_q11",
+            "type": "Main Priority:",
+            "answer": "Human-scale ergonomics"
+          },
+          {
+            "id": "t4_q12",
+            "type": "Next Phase:",
+            "answer": "Public focus group trials"
+          }
+        ]
+      }
+    ],
+    "script": [
+      {
+        "speaker": "Announcer",
+        "text": "Hong Kong Diploma of Secondary Education Examination 2026. English Language Paper 3. Listening and Integrated Skills."
+      },
+      {
+        "speaker": "Announcer",
+        "text": "Micro-Living and Wellbeing. You will hear several recordings. You will have time to read the instructions and the questions. You will also have time to check your work."
+      },
+      {
+        "speaker": "Announcer",
+        "text": "Part A. Task 1. You are at the registration desk for the Micro-Living & Human-Scale Design Expo 2026. Listen to the conversation and complete the form. (120-second pause)"
+      },
+      {
+        "speaker": "Staff",
+        "text": "Good morning! Busy start to the morning. We've got over two hundred exhibitors setting up today. Can I help you with your registration?"
+      },
+      {
+        "speaker": "Marco",
+        "text": "Yes, please. I'm here to collect badges for my company. I'm Marco Chen, and I'm with SOS—that stands for Space-Optimized Solutions."
+      },
+      {
+        "speaker": "Staff",
+        "text": "Let me look that up. S-O-S... Ah, yes, Space-Optimized Solutions. You're the ones doing the modular furniture for those tiny flats in Kowloon, right?"
+      },
+      {
+        "speaker": "Marco",
+        "text": "That's us! We're really excited to show off our new prototypes. Oh, and can you check if my contact number is right? It should be 6221 8890."
+      },
+      {
+        "speaker": "Staff",
+        "text": "6-2-2-1, 8-8-9-0. Perfect. I see your company has updated its status since the last expo. You're now on the Premium Institutional tier."
+      },
+      {
+        "speaker": "Marco",
+        "text": "Great. That's the one we wanted. How many delegate badges does that give us? We brought our lead engineer and two junior designers today."
+      },
+      {
+        "speaker": "Staff",
+        "text": "The Premium tier allows for six, but I have a note here that you only requested four for this specific event."
+      },
+      {
+        "speaker": "Marco",
+        "text": "Four is plenty. We have a small booth this year. And does this badge give us access to the VR Suite? Our team needs to test some 3D renders."
+      },
+      {
+        "speaker": "Staff",
+        "text": "Yes, you have full access to both the Prototype Lab and the VR Suite. Your booth is actually right next to the lab—it's booth C-14 in the West Wing."
+      },
+      {
+        "speaker": "Marco",
+        "text": "C-14. Noted. Now, for the catering... we have a team member who is extremely allergic to nuts. Is the lunch buffet safe?"
+      },
+      {
+        "speaker": "Staff",
+        "text": "I will flag that with the chef. We'll make sure your group's meals are strictly nut-free. Are you all planning to attend the morning keynote session on 'The Future of Urban Density'?"
+      },
+      {
+        "speaker": "Marco",
+        "text": "Yes, all four of us will be there. What time does that start?"
+      },
+      {
+        "speaker": "Staff",
+        "text": "It starts at 9:30, but we suggest a requested arrival time of 9:15 AM to ensure you get a seat near the front. The hall fills up quickly."
+      },
+      {
+        "speaker": "Marco",
+        "text": "9:15 it is. And we also signed up for a workshop. Is it the 'Living Lighting' one?"
+      },
+      {
+        "speaker": "Staff",
+        "text": "Actually, our records show you switched. You're now in 'Furniture Ergonomics' at 3:00 PM. 'Living Lighting' was full."
+      },
+      {
+        "speaker": "Marco",
+        "text": "Ah, that's fine. Ergonomics is more relevant to our desks anyway. Finally, I have the payment reference here for the balance: SOS-2026-INV-88."
+      },
+      {
+        "speaker": "Staff",
+        "text": "Checking... SOS-2026-INV-88. Yes, that matches. You're all set. Here are your badges!"
+      },
+      {
+        "speaker": "Announcer",
+        "text": "(60-second pause to tidy up answers)"
+      },
+      {
+        "speaker": "Announcer",
+        "text": "Task 2. You will hear a presentation about the 'Wellness Modular Unit' project. Listen and complete the notes. (120-second pause)"
+      },
+      {
+        "speaker": "Elena Vance",
+        "text": "Good morning. I am Elena Vance, lead designer for the WMU Project. We began our journey back in 2023 with a simple question: Can a 15-square-meter flat actually be a place of healing?"
+      },
+      {
+        "speaker": "Elena Vance",
+        "text": "Our core design philosophy isn't about horizontal space; it's what we call 'Vertical Zoning'. By utilizing the cubic volume of a room, we can separate sleep, work, and relaxation without walls. This requires a target ceiling height of 3.5 meters—significantly higher than the standard 2.8 meters found in most nano-flats today."
+      },
+      {
+        "speaker": "Elena Vance",
+        "text": "The results of our year-long study are promising. By repositioning windows and using breathable materials, we've seen an improvement in air circulation of 22%. But physical health is only half the battle. When we interviewed residents, they didn't complain about the small floor area as much as you'd think. The biggest psychological challenge was actually visual clutter—the feeling of being buried by one's own possessions."
+      },
+      {
+        "speaker": "Elena Vance",
+        "text": "To test our theories, we had 75 test subjects living in our prototypes for six months. We monitored their stress levels and sleep quality. If you are an architect or researcher with similar data, please note the data submission deadline for our white paper is October 15."
+      },
+      {
+        "speaker": "Elena Vance",
+        "text": "The project has been supported by a substantial R&D funding pool of $450 Million dollars. This allowed us to experiment with Recycled Aluminum Composite, which is light, durable, and highly reflective to increase natural light. Our next pilot district will be Sham Shui Po, where density is highest. For those interested in the technical specs, visit www.wmu-hk.com. Thank you."
+      },
+      {
+        "speaker": "Announcer",
+        "text": "(60-second pause to tidy up answers)"
+      },
+      {
+        "speaker": "Announcer",
+        "text": "Task 3. You will hear three experts discussing 'Mental Health in Tiny Spaces'. (120-second pause)"
+      },
+      {
+        "speaker": "Host",
+        "text": "Welcome to our panel. Dr. Tan, as a psychiatrist, what's your take on these tiny 'nano-flats'?"
+      },
+      {
+        "speaker": "Dr Tan",
+        "text": "It's a crisis, frankly. While noise and low ceilings are bad, the main stressor I see in my patients is the lack of sunlight. Being in a room with a tiny window for 12 hours a day disrupts the circadian rhythm, leading to chronic depression. We need bigger windows, even in small rooms."
+      },
+      {
+        "speaker": "Ms Ho",
+        "text": "I agree, Dr. Tan. As a designer, I try to fix this with 'translucent partitions'. Instead of solid walls or even mirrors—which can feel a bit clinical—translucent materials allow light to travel through the whole unit while still giving residents a sense of privacy."
+      },
+      {
+        "speaker": "Mr Ng",
+        "text": "Privacy is key, but so is the 'outside'. I represent the youth view, and most of us feel trapped. We don't need a bigger kitchen—we eat out anyway. What we need are shared balconies. A space to step outside and breathe, even if it's shared with neighbors. That's the missing link in micro-living."
+      },
+      {
+        "speaker": "Dr Tan",
+        "text": "The government's 'Living Dignity' policy target for 2029 is a start, but we need rules now. For instance, we should cap occupancy at a maximum of 1 adult per 15 square meters. Anything more is a health hazard."
+      },
+      {
+        "speaker": "Ms Ho",
+        "text": "And for those already living in these spaces, we're opening 12 counseling hubs across the city. We've also launched an app called 'InnerSpace HK'. It’s free for all residents of registered micro-apartments and offers trilingual tutorials in Cantonese, English, and Mandarin on how to organize small spaces to reduce stress."
+      },
+      {
+        "speaker": "Mr Ng",
+        "text": "We also need to focus on gig workers under 30. They spend the most time at home working. We've partnered with Lumina Systems to provide smart lighting that mimics natural daylight for these workers. If you have questions, email wellness@housing.gov.hk."
+      },
+      {
+        "speaker": "Announcer",
+        "text": "(60-second pause to tidy up answers)"
+      },
+      {
+        "speaker": "Announcer",
+        "text": "Task 4. Debate on the 'Living Dignity Act'. (240-second pause)"
+      },
+      {
+        "speaker": "Host",
+        "text": "Let's hear from our final three stakeholders on the upcoming Living Dignity Act."
+      },
+      {
+        "speaker": "Architect",
+        "text": "Our view is simple: we must value quality of volume over floor area. Regulation shouldn't just be about square footage; it must include mandatory window-to-wall ratios to ensure light. We recommend the government incentivize developers to build multi-functional communal hubs—shared libraries or gyms—to offset the small private units."
+      },
+      {
+        "speaker": "Social Worker",
+        "text": "The data is clear: tiny spaces lead to higher cortisol levels and long-term anxiety. We want the Act to include rent caps on nano-flats to stop people being exploited for 'shoeboxes'. Our main recommendation is that every new development must pass a mandatory mental health impact assessment before being approved."
+      },
+      {
+        "speaker": "Developer",
+        "text": "Look, we understand the concerns, but micro-living is an entry-level market necessity. Without these units, young people have zero chance of home ownership. If you over-regulate, you will simply stop new supply. Instead of caps, we suggest the government give land grants specifically for 'Wellness-certified' housing to lower our costs."
+      },
+      {
+        "speaker": "Host",
+        "text": "It sounds like we've reached a consensus on the date: January 1, 2027, for the full rollout. The priority will remain human-scale ergonomics, and the next phase will involve public focus group trials to test these new designs in the real world."
+      },
+      {
+        "speaker": "Announcer",
+        "text": "(60-second pause)"
+      },
+      {
+        "speaker": "Announcer",
+        "text": "That is the end of Part A. You now have five minutes to study the Part B Data File. (300-second pause)"
+      },
+      {
+        "speaker": "Announcer",
+        "text": "Integrated Skills Recording. Listen to the briefing from the Bureau Chief to the Project Manager."
+      },
+      {
+        "speaker": "Bureau Chief",
+        "text": "Good morning. We need to finalize our response to the 'Space for All' protest group for Task 8. Don't just use the policy draft. Mention that we are introducing a 'Blue-Light Reduction' subsidy for all new windows in micro-flats. This isn't in the documents yet, but it's a huge selling point for mental health. It helps residents sleep better."
+      },
+      {
+        "speaker": "Bureau Chief",
+        "text": "For the internal memo in Task 9, we need a concrete way to show we care. I want you to propose a 'Pop-up Wellness Clinic' specifically for the Sham Shui Po district in November. We need to reach the residents where they live. Also, tell the staff we're doing 'Virtual Reality Tours' of the new units to help people visualize the 3.5-meter ceilings. People can't imagine volume; they need to see it."
+      },
+      {
+        "speaker": "Bureau Chief",
+        "text": "Lastly, for the social media post in Task 10, keep it punchy. Use the slogan 'Room to Breathe' and make sure to mention our new 'Ergonomic Cushioning' technology for the built-in furniture. And use the hashtag #BreathableHongKong. It needs to sound modern and supportive. I want these drafts by 5 PM. Get to it."
+      },
+      {
+        "speaker": "Announcer",
+        "text": "That is the end of the Integrated Skills recording. You now have 1 hour and 10 minutes to complete your tasks."
+      }
+    ]
+  },
+  "Part_B": {
+    "data_file": [
+      {
+        "id": "doc1",
+        "type": "minutes",
+        "title": "Minutes of the Urban Wellbeing Council (UWC) Planning Session",
+        "content": "Date: May 12, 2026. Attendees: Dr. Vance, Mr. K. Lam. \nKey Points: \n1. Public dissatisfaction with 'nano-flats' (units under 20sqm) has reached 72%.\n2. The 'Living Dignity Act' aims to set a minimum ceiling height of 3.5m.\n3. We must address the 'Space for All' group's claim that micro-living is 'inhumane'.\n4. New 'Wellness Interior' certification to be launched in Q3."
+      },
+      {
+        "id": "doc2",
+        "type": "brochure",
+        "title": "The Zen-Pod: A New Standard in Living",
+        "content": "Features of the Zen-Pod Modular Unit:\n- Smart Storage: 40% more efficient than standard shelving.\n- Lighting: Circadian-tuned LED systems included.\n- Air: Integrated HEPA-filtration units.\n- Price: 15% lower than traditional studios."
+      },
+      {
+        "id": "doc3",
+        "type": "email",
+        "title": "Email from a Resident (Ms. Clara Yip)",
+        "content": "To: Feedback@uwc.gov.hk\nSubject: Trapped in my own home\nI moved into a 16sqm 'nano-flat' last year. The ceiling is so low I feel like I'm in a coffin. My sleep has vanished because there is no air flow. Your 'Wellbeing' talk sounds like a joke while people are living like this. Do something."
+      },
+      {
+        "id": "doc4",
+        "type": "newspaper",
+        "title": "The Hidden Cost of Small Spaces",
+        "content": "HK Daily News: Recent studies show that residents in units under 18sqm have 30% higher stress hormones. Dr. Tan notes that 'Visual Clutter' is the main culprit. Shared balconies and vertical height are the only way to mitigate the psychological damage of high-density living."
+      },
+      {
+        "id": "doc5",
+        "type": "handwritten_note",
+        "title": "Urgent Note from Bureau Chief",
+        "content": "To Project Manager: Reply to Ms. Yip (Doc 3) immediately. Tell her about the new 3.5m height mandate for future projects. Mention the HEPA filters in the Zen-Pod (Doc 2) will solve the air flow issue. We need her to see we are listening."
+      },
+      {
+        "id": "doc6",
+        "type": "table",
+        "title": "Resident Satisfaction Survey (2025-2026)",
+        "content": "Unit Type | Avg. Stress Level (1-10) | Air Quality Rating | Satisfaction\n------------------------------------------------------------------------\nStandard Nano | 8.2 | Poor | 12%\nZen-Pod Pilot | 4.5 | Excellent | 68%\nTraditional Studio | 5.1 | Fair | 55%\n\nNote: The Zen-Pod's 3.5m ceiling is the primary factor in high satisfaction."
+      },
+      {
+        "id": "doc7",
+        "type": "social_media_post",
+        "title": "Space for All - Campaign Post",
+        "content": "8,000 Likes: 'The government calls it \"Micro-Living.\" We call it \"Dignity-Free Living.\" No more shoeboxes! We demand a minimum of 20sqm and actual windows! Join the rally on June 10th. #SpaceForAll #LivingDignity'"
+      },
+      {
+        "id": "doc8",
+        "type": "memo",
+        "title": "Internal Memo: Wellness Interior Certification",
+        "content": "To: All Staff. We are hiring 50 'Wellness Inspectors' to audit existing nano-flats. They will check for 'Visual Clutter' and light levels. This shows we aren't just building new units; we are fixing the old ones."
+      },
+      {
+        "id": "doc9",
+        "type": "news_clip",
+        "title": "Tech Innovations: The Translucent Partition",
+        "content": "Local startup SOS has won the 'Design for Life' award. Their translucent partitions allow 80% of natural light to pass through while providing acoustic privacy. These will be mandatory in all 'Wellness-certified' units from 2027."
+      },
+      {
+        "id": "doc10",
+        "type": "policy_draft",
+        "title": "Living Dignity Act: Section 5 (Draft)",
+        "content": "5.1 Window Ratio: Every unit must have a window area totaling at least 15% of the floor area.\n5.2 Shared Space: Every 10 units must have access to a communal balcony of at least 25sqm."
+      }
+    ],
+    "Part_B1": {
+      "tasks": [
+        {
+          "id": "Task_5",
+          "type": "Formal Email",
+          "instructions": "Write an email to Ms. Clara Yip (Doc 3) to address her concerns. Use info from Doc 2, 5, and 10.",
+          "wordCount": 150,
+          "grading_rubric": {
+            "content_points": [
+              "Acknowledge the 'coffin' feeling/low ceiling (Doc 3)",
+              "Mention the 3.5m height mandate in future (Doc 5)",
+              "Explain HEPA-filtration for air flow (Doc 2, 5)",
+              "Mention mandatory window ratios (Doc 10)"
+            ],
+            "tone": "Empathetic and Informative"
+          }
+        },
+        {
+          "id": "Task_6",
+          "type": "Short Notice",
+          "instructions": "Write a notice for the new 'Wellness Inspectors' program. Refer to Doc 8.",
+          "wordCount": 100,
+          "grading_rubric": {
+            "content_points": [
+              "Announce 50 new Wellness Inspector roles (Doc 8)",
+              "State purpose: auditing 'Visual Clutter' and light (Doc 8)",
+              "Explain goal: fixing existing nano-flats (Doc 8)"
+            ],
+            "tone": "Professional"
+          }
+        },
+        {
+          "id": "Task_7",
+          "type": "Summary Report",
+          "instructions": "Summarize the Zen-Pod survey results for the Council. Refer to Doc 2 and 6.",
+          "wordCount": 120,
+          "grading_rubric": {
+            "content_points": [
+              "Zen-Pod has 68% satisfaction vs 12% for standard (Doc 6)",
+              "Stress level is lower (4.5 vs 8.2) (Doc 6)",
+              "Highlight features like smart storage and circadian LEDs (Doc 2)"
+            ],
+            "tone": "Objective"
+          }
+        }
+      ]
+    },
+    "Part_B2": {
+      "tasks": [
+        {
+          "id": "Task_8",
+          "type": "Formal Letter",
+          "instructions": "Write a letter to the 'Space for All' campaign (Doc 7). Address their demand for 20sqm and windows. Use Doc 1, 9, 10 and the Audio.",
+          "wordCount": 250,
+          "grading_rubric": {
+            "content_points": [
+              "Address 'inhumane' claim (Doc 1)",
+              "Explain 15% window-to-floor ratio (Doc 10)",
+              "Mention translucent partitions for light (Doc 9)",
+              "Mention communal balcony requirement (Doc 10)",
+              "MUST MENTION: Blue-Light Reduction subsidy for windows (Audio)"
+            ],
+            "tone": "Persuasive and Reassuring"
+          }
+        },
+        {
+          "id": "Task_9",
+          "type": "Internal Memo",
+          "instructions": "Write a memo to UWC staff about the rollout. Refer to Doc 1, 8 and Audio.",
+          "wordCount": 150,
+          "grading_rubric": {
+            "content_points": [
+              "Wellness Interior Certification rollout in Q3 (Doc 1)",
+              "Inspectors to be hired (Doc 8)",
+              "MUST PROPOSE: Pop-up Wellness Clinic in Sham Shui Po in Nov (Audio)",
+              "MUST PROPOSE: Virtual Reality Tours for residents (Audio)"
+            ],
+            "tone": "Urgent and Action-oriented"
+          }
+        },
+        {
+          "id": "Task_10",
+          "type": "Social Media Post",
+          "instructions": "Draft a post for the #BreathableHongKong campaign. Use Doc 2, 9 and Audio.",
+          "wordCount": 100,
+          "grading_rubric": {
+            "content_points": [
+              "Mention 15% lower price point (Doc 2)",
+              "Mention translucent partitions (Doc 9)",
+              "MUST USE SLOGAN: 'Room to Breathe' (Audio)",
+              "MUST USE HASHTAG: #BreathableHongKong (Audio)",
+              "MUST MENTION: Ergonomic Cushioning technology (Audio)"
+            ],
+            "tone": "Modern and Supportive"
+          }
+        }
+      ]
+    }
+  }
+}

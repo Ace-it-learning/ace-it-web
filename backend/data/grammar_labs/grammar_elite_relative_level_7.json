@@ -1,0 +1,234 @@
+{
+  "type": "GRAMMAR",
+  "topic_id": "grammar_elite_relative",
+  "level": "HKDSE Level 5**",
+  "conceptual_explanation": "The 5** summit of Relative mastery involves 'Negative Relatives' (There is no one but...), 'Double Relatives', and the absolute precision required when using 'Reason why' and 'Place where' in formal settings. These structures are the hallmark of a master of complex English prose.",
+  "rule_cards": [
+    {
+      "name": "The 'But' Relative (Negative)",
+      "formula": "There is no [Noun] + but + Clause",
+      "correct": "There is no one but has felt this way. (Meaning: Everyone has felt this way)",
+      "incorrect": "There is no one but he has felt this way. (Redundant)"
+    },
+    {
+      "name": "Double Relative Clauses",
+      "formula": "Noun + Relative Clause 1 + Relative Clause 2",
+      "correct": "He is the only man I know who can do this.",
+      "incorrect": "He is the only man who I know who can do this."
+    },
+    {
+      "name": "The Reason / The Way",
+      "formula": "The reason [why/that] / The way [in which/that]",
+      "correct": "The reason why he left is unknown.",
+      "incorrect": "The reason because he left is..."
+    },
+    {
+      "name": "Prepositional 'Which' for Events",
+      "formula": "Action + , + in which case + Clause",
+      "correct": "It might rain, in which case we will stay home.",
+      "incorrect": "It might rain, in that case we..."
+    }
+  ],
+  "head_noun_tasks": [
+    {
+      "sentence_tokens": [
+        "There",
+        "is",
+        "no",
+        "rule",
+        "but",
+        "has",
+        "some",
+        "exceptions",
+        "."
+      ],
+      "head_noun_indices": [
+        3,
+        4
+      ],
+      "explanation": "'But' here acts as a negative relative pronoun meaning 'that... not'."
+    },
+    {
+      "sentence_tokens": [
+        "He",
+        "is",
+        "the",
+        "only",
+        "person",
+        "I",
+        "have",
+        "met",
+        "who",
+        "understands",
+        "me",
+        "."
+      ],
+      "head_noun_indices": [
+        4,
+        8
+      ],
+      "explanation": "A double relative structure: the first is a reduced 'whom I have met', and the second starts with 'who'."
+    },
+    {
+      "sentence_tokens": [
+        "We",
+        "must",
+        "find",
+        "a",
+        "way",
+        "whereby",
+        "this",
+        "goal",
+        "can",
+        "be",
+        "achieved",
+        "."
+      ],
+      "head_noun_indices": [
+        4,
+        5
+      ],
+      "explanation": "'Whereby' modifies 'way' to describe the method."
+    },
+    {
+      "sentence_tokens": [
+        "The",
+        "situation",
+        "is",
+        "grave",
+        ",",
+        "in",
+        "which",
+        "case",
+        "we",
+        "should",
+        "inform",
+        "the",
+        "public",
+        "."
+      ],
+      "head_noun_indices": [
+        1,
+        6,
+        7
+      ],
+      "explanation": "'In which case' refers back to the entire preceding clause."
+    },
+    {
+      "sentence_tokens": [
+        "Scarcely",
+        "had",
+        "he",
+        "arrived",
+        "when",
+        "the",
+        "meeting",
+        ",",
+        "for",
+        "which",
+        "he",
+        "was",
+        "late",
+        ",",
+        "ended",
+        "."
+      ],
+      "head_noun_indices": [
+        6,
+        9
+      ],
+      "explanation": "A complex sentence with an inverted opener and a prepositional relative clause."
+    }
+  ],
+  "drill_tasks": [
+    {
+      "type": "MCQ",
+      "question": "There is no mother ________ loves her child.",
+      "options": [
+        "but",
+        "that",
+        "who",
+        "whom"
+      ],
+      "answer": "but",
+      "explanation": "Literary structure: 'There is no [Noun] but [Verb]' means 'Every [Noun] [Verb]s'."
+    },
+    {
+      "type": "MCQ",
+      "question": "This is the only evidence ________ we have ________ points to his guilt.",
+      "options": [
+        "which / which",
+        "that / that",
+        "that / which",
+        "which / that"
+      ],
+      "answer": "that / that",
+      "explanation": "After 'only', 'that' is preferred for both relative clauses."
+    },
+    {
+      "type": "MCQ",
+      "question": "The reason ________ I am late is ________ I missed the bus.",
+      "options": [
+        "why / because",
+        "why / that",
+        "that / because",
+        "because / that"
+      ],
+      "answer": "why / that",
+      "explanation": "Standard formal English: 'The reason why... is that...'."
+    },
+    {
+      "type": "MCQ",
+      "question": "He might refuse, ________ we will need a backup plan.",
+      "options": [
+        "in which case",
+        "in that case",
+        "which case",
+        "in such case"
+      ],
+      "answer": "in which case",
+      "explanation": "Formal connective relative referring to a potential scenario."
+    },
+    {
+      "type": "MCQ",
+      "question": "There is no student ________ can solve this problem.",
+      "options": [
+        "but",
+        "that",
+        "who",
+        "whom"
+      ],
+      "answer": "but",
+      "explanation": "Meaning: 'Every student cannot solve this' (if negative context) or 'There is no student who can't'."
+    }
+  ],
+  "boss_fight": {
+    "paragraph": "There is no one but he loves music. The reason why I am here is because I want to help. In which case we should leave.",
+    "errors": [
+      {
+        "original": "but he loves",
+        "correction": "but loves",
+        "explanation": "In the 'There is no... but' structure, 'but' acts as the subject relative pronoun. Do not add 'he'."
+      },
+      {
+        "original": "is because",
+        "correction": "is that",
+        "explanation": "In formal writing, 'The reason why... is that' is the correct pairing."
+      },
+      {
+        "original": "In which case we should leave",
+        "correction": ", in which case we should leave.",
+        "explanation": "'In which case' is a relative clause and cannot stand alone as a sentence. It must be attached to the previous clause with a comma."
+      }
+    ]
+  },
+  "success_feedback": "Stunning! You have reached the absolute summit of relative clause mastery. Your ability to manipulate complex, literary structures is truly 5** level.",
+  "suggested_next_steps": [
+    "Identify 'but' as a relative pronoun in 19th-century literature.",
+    "Practice using 'in which case' to link scenarios in your writing.",
+    "Keep maintaining this 5** standard in your own writing!"
+  ],
+  "interactive_tasks": [],
+  "examples": [],
+  "key_points": []
+}

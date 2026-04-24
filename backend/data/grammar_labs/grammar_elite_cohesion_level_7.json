@@ -1,0 +1,233 @@
+{
+  "type": "GRAMMAR",
+  "topic_id": "grammar_elite_cohesion",
+  "level": "HKDSE Level 5**",
+  "conceptual_explanation": "The 5** peak of Advanced Cohesion involves 'Referential Cohesion' (The former... the latter) and 'Logical Necessity' (Ipso facto). You will also learn 'Exclusionary Cohesion' using 'Save for', which allows you to define precise boundaries for your arguments.",
+  "rule_cards": [
+    {
+      "name": "The Former & The Latter",
+      "formula": "Option A and Option B. The former... the latter...",
+      "correct": "I like tea and coffee. The former is relaxing, the latter is energizing.",
+      "incorrect": "I like tea and coffee. Former is relaxing, latter is..."
+    },
+    {
+      "name": "Save for",
+      "formula": "Save for + Noun, Main Clause",
+      "correct": "The room was empty, save for a single chair.",
+      "incorrect": "The room was empty save a single chair."
+    },
+    {
+      "name": "Ipso Facto",
+      "formula": "Idea. Ipso facto, Conclusion. (Latin: By the fact itself)",
+      "correct": "He is a citizen. Ipso facto, he has the right to vote.",
+      "incorrect": "He is a citizen ipso facto he has..."
+    },
+    {
+      "name": "By Extension",
+      "formula": "Idea 1. By extension, Idea 2.",
+      "correct": "She loves animals. By extension, she supports wildlife conservation.",
+      "incorrect": "She loves animals, by extension she..."
+    }
+  ],
+  "head_noun_tasks": [
+    {
+      "sentence_tokens": [
+        "The",
+        "former",
+        "proposal",
+        "is",
+        "cheaper",
+        ",",
+        "while",
+        "the",
+        "latter",
+        "is",
+        "more",
+        "sustainable",
+        "."
+      ],
+      "head_noun_indices": [
+        1,
+        8
+      ],
+      "explanation": "'The former' refers to the first item mentioned, and 'the latter' refers to the second."
+    },
+    {
+      "sentence_tokens": [
+        "Save",
+        "for",
+        "a",
+        "few",
+        "minor",
+        "errors",
+        ",",
+        "the",
+        "report",
+        "is",
+        "perfect",
+        "."
+      ],
+      "head_noun_indices": [
+        0,
+        1
+      ],
+      "explanation": "'Save for' is a formal way to say 'except for'."
+    },
+    {
+      "sentence_tokens": [
+        "He",
+        "has",
+        "no",
+        "alibi",
+        ";",
+        "ipso",
+        "facto",
+        ",",
+        "he",
+        "is",
+        "a",
+        "prime",
+        "suspect",
+        "."
+      ],
+      "head_noun_indices": [
+        5,
+        6
+      ],
+      "explanation": "'Ipso facto' indicates a direct, necessary logical consequence."
+    },
+    {
+      "sentence_tokens": [
+        "By",
+        "extension",
+        ",",
+        "the",
+        "failure",
+        "of",
+        "the",
+        "bank",
+        "affects",
+        "the",
+        "entire",
+        "economy",
+        "."
+      ],
+      "head_noun_indices": [
+        0,
+        1
+      ],
+      "explanation": "'By extension' shows how a consequence spreads to a wider context."
+    },
+    {
+      "sentence_tokens": [
+        "The",
+        "evidence",
+        "is",
+        "conclusive",
+        ";",
+        "accordingly",
+        ",",
+        "we",
+        "must",
+        "take",
+        "action",
+        "."
+      ],
+      "head_noun_indices": [
+        5
+      ],
+      "explanation": "'Accordingly' is a formal synonym for 'therefore' or 'consequently'."
+    }
+  ],
+  "drill_tasks": [
+    {
+      "type": "MCQ",
+      "question": "We discussed both the budget and the timeline. ________ was approved, but the ________ needs work.",
+      "options": [
+        "Former / latter",
+        "The former / the latter",
+        "The first / the second",
+        "That / this"
+      ],
+      "answer": "The former / the latter",
+      "explanation": "Always use 'the' with 'former' and 'latter'."
+    },
+    {
+      "type": "MCQ",
+      "question": "The garden was silent, ________ the chirping of a single bird.",
+      "options": [
+        "save for",
+        "notwithstanding",
+        "albeit",
+        "ipso facto"
+      ],
+      "answer": "save for",
+      "explanation": "'Save for' is the most literary and formal way to indicate an exception."
+    },
+    {
+      "type": "MCQ",
+      "question": "He has broken the law. ________, he must face the consequences.",
+      "options": [
+        "Ipso facto",
+        "Save for",
+        "Albeit",
+        "The former"
+      ],
+      "answer": "Ipso facto",
+      "explanation": "The consequence follows directly and necessarily from the fact."
+    },
+    {
+      "type": "MCQ",
+      "question": "If you support the policy, ________ you support its funding.",
+      "options": [
+        "save for",
+        "by extension",
+        "the latter",
+        "albeit"
+      ],
+      "answer": "by extension",
+      "explanation": "Supporting the policy implies supporting its funding as a logical extension."
+    },
+    {
+      "type": "MCQ",
+      "question": "Both plans are good, but I prefer the ________ because it is more efficient.",
+      "options": [
+        "latter",
+        "the latter",
+        "last",
+        "following"
+      ],
+      "answer": "the latter",
+      "explanation": "Requires 'the' before 'latter'."
+    }
+  ],
+  "boss_fight": {
+    "paragraph": "I saw John and Mary. Former is tall, latter is short. The room was dark, save a lamp. He is guilty, ipso facto he goes to jail.",
+    "errors": [
+      {
+        "original": "Former is tall, latter is",
+        "correction": "The former is tall; the latter is",
+        "explanation": "Always use 'the' with former/latter, and use a semicolon to separate the two independent clauses."
+      },
+      {
+        "original": "save a lamp",
+        "correction": "save for a lamp",
+        "explanation": "'Save' in this context needs the preposition 'for'."
+      },
+      {
+        "original": "guilty, ipso facto he",
+        "correction": "guilty; ipso facto, he",
+        "explanation": "'Ipso facto' requires a semicolon before it and a comma after it when connecting clauses."
+      }
+    ]
+  },
+  "success_feedback": "Phenomenal! You have mastered the absolute peak of cohesive devices. Your command of logical flow and reference is native-level elite.",
+  "suggested_next_steps": [
+    "Write a paragraph using 'The former... the latter' to compare two theories.",
+    "Challenge yourself to use 'Ipso facto' in your next debate.",
+    "Look for 'By extension' in sophisticated journalistic pieces like The Economist!"
+  ],
+  "interactive_tasks": [],
+  "examples": [],
+  "key_points": []
+}

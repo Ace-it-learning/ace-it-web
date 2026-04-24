@@ -1,0 +1,228 @@
+{
+  "type": "GRAMMAR",
+  "topic_id": "grammar_elite_participle",
+  "level": "HKDSE Level 5",
+  "conceptual_explanation": "Level 5 Participle Mastery focuses on 'The Dangling Participle'—a common error where the phrase doesn't match the subject. We also introduce 'Perfect Participles' (Having finished...), which emphasize that one action happened before another.",
+  "rule_cards": [
+    {
+      "name": "The Dangling Danger",
+      "formula": "Participle..., [Correct Subject] + Verb",
+      "correct": "Running for the bus, I dropped my keys.",
+      "incorrect": "Running for the bus, my keys were dropped."
+    },
+    {
+      "name": "Perfect Participles",
+      "formula": "Having + Past Participle..., Subject + Verb",
+      "correct": "Having finished the report, he went to sleep.",
+      "incorrect": "Finishing the report, he went to sleep. (Implies simultaneous)"
+    },
+    {
+      "name": "Reduced Relative Clauses",
+      "formula": "Noun + Participle Phrase",
+      "correct": "The people waiting outside are getting impatient.",
+      "incorrect": "The people who waiting outside are getting impatient."
+    },
+    {
+      "name": "Passive Perfect Participle",
+      "formula": "Having been + Past Participle..., Subject + Verb",
+      "correct": "Having been warned twice, the student was suspended.",
+      "incorrect": "Having warned twice, the student..."
+    }
+  ],
+  "head_noun_tasks": [
+    {
+      "sentence_tokens": [
+        "Having",
+        "saved",
+        "enough",
+        "money",
+        ",",
+        "she",
+        "bought",
+        "a",
+        "new",
+        "laptop",
+        "."
+      ],
+      "head_noun_indices": [
+        0,
+        1,
+        5
+      ],
+      "explanation": "The perfect participle 'Having saved' emphasizes the action was completed before she bought the laptop."
+    },
+    {
+      "sentence_tokens": [
+        "Surrounded",
+        "by",
+        "his",
+        "family",
+        ",",
+        "the",
+        "old",
+        "man",
+        "smiled",
+        "weakly",
+        "."
+      ],
+      "head_noun_indices": [
+        0,
+        7
+      ],
+      "explanation": "The passive participle 'Surrounded' modifies 'the old man'."
+    },
+    {
+      "sentence_tokens": [
+        "Looking",
+        "through",
+        " the",
+        "window",
+        ",",
+        "I",
+        "saw",
+        "the",
+        "snow",
+        "falling",
+        "."
+      ],
+      "head_noun_indices": [
+        0,
+        5
+      ],
+      "explanation": "'Looking' is an active participle correctly modifying the subject 'I' (not the snow!)."
+    },
+    {
+      "sentence_tokens": [
+        "Having",
+        "been",
+        "elected",
+        "president",
+        ",",
+        "he",
+        "vowed",
+        "to",
+        "change",
+        "the",
+        "system",
+        "."
+      ],
+      "head_noun_indices": [
+        0,
+        1,
+        2,
+        5
+      ],
+      "explanation": "A passive perfect participle describing the subject 'he'."
+    },
+    {
+      "sentence_tokens": [
+        "The",
+        "man",
+        "accused",
+        "of",
+        "the",
+        "crime",
+        "maintained",
+        "his",
+        "innocence",
+        "."
+      ],
+      "head_noun_indices": [
+        2,
+        1
+      ],
+      "explanation": "'Accused' is a reduced relative clause modifying 'The man'."
+    }
+  ],
+  "drill_tasks": [
+    {
+      "type": "MCQ",
+      "question": "________ for hours, the travelers were exhausted.",
+      "options": [
+        "Walking",
+        "Walked",
+        "Having walked",
+        "To walk"
+      ],
+      "answer": "Having walked",
+      "explanation": "Use the perfect participle to show that the walking happened *before* they became exhausted."
+    },
+    {
+      "type": "MCQ",
+      "question": "________ the truth, the decision was much easier to make.",
+      "options": [
+        "Knowing",
+        "Known",
+        "As I knew",
+        "By knowing"
+      ],
+      "answer": "As I knew",
+      "explanation": "'Knowing' would be a dangling participle because 'the decision' cannot know the truth. 'As I knew' or 'Now that I knew' is better."
+    },
+    {
+      "type": "MCQ",
+      "question": "The evidence ________ during the trial was quite convincing.",
+      "options": [
+        "presenting",
+        "presented",
+        "having presented",
+        "was presented"
+      ],
+      "answer": "presented",
+      "explanation": "The evidence was presented (passive). This is a reduced relative clause."
+    },
+    {
+      "type": "MCQ",
+      "question": "________ twice before, the thief was more cautious this time.",
+      "options": [
+        "Caught",
+        "Having been caught",
+        "Catching",
+        "Been caught"
+      ],
+      "answer": "Having been caught",
+      "explanation": "Passive perfect participle shows a past experience affecting the current state."
+    },
+    {
+      "type": "MCQ",
+      "question": "________ from the top of the hill, the city looks like a toy set.",
+      "options": [
+        "Viewing",
+        "Viewed",
+        "Having viewed",
+        "To view"
+      ],
+      "answer": "Viewed",
+      "explanation": "The city is viewed (passive). 'Viewing' would imply the city is looking at something."
+    }
+  ],
+  "boss_fight": {
+    "paragraph": "Having finish my dinner, I went out. Walking into the room, a beautiful painting was noticed. The boy bit by the dog cried.",
+    "errors": [
+      {
+        "original": "Having finish",
+        "correction": "Having finished",
+        "explanation": "Perfect participles always use the 'Past Participle' (V3) form."
+      },
+      {
+        "original": "Walking into the room, a beautiful painting was noticed",
+        "correction": "Walking into the room, I noticed a beautiful painting",
+        "explanation": "Dangling participle! The painting wasn't walking into the room; 'I' was."
+      },
+      {
+        "original": "boy bit by the dog",
+        "correction": "boy bitten by the dog",
+        "explanation": "Use the past participle 'bitten' for a passive descriptive phrase."
+      }
+    ]
+  },
+  "success_feedback": "Outstanding! You've navigated the tricky waters of dangling participles and perfect forms. Your precision is impressive.",
+  "suggested_next_steps": [
+    "Practice correcting dangling participles in your own writing.",
+    "Learn about 'Absolute Phrases' (where the participle has its own subject).",
+    "Try Level 5* for elite-level complexity!"
+  ],
+  "interactive_tasks": [],
+  "examples": [],
+  "key_points": []
+}

@@ -1,0 +1,233 @@
+{
+  "type": "GRAMMAR",
+  "topic_id": "grammar_elite_participle",
+  "level": "HKDSE Level 5*",
+  "conceptual_explanation": "Level 5* Participle mastery introduces the 'Absolute Phrase'. Unlike standard participle phrases, an absolute phrase has its *own* subject (e.g., 'The sun having set'). We also look at reducing adverbial clauses (e.g., 'While waiting') to create more concise and academic prose.",
+  "rule_cards": [
+    {
+      "name": "The Absolute Phrase",
+      "formula": "Noun + Participle..., Main Clause",
+      "correct": "The weather being fine, we decided to have a picnic.",
+      "incorrect": "The weather was fine, we decided..."
+    },
+    {
+      "name": "Negative Participle Phrases",
+      "formula": "Not + Participle..., Subject + Verb",
+      "correct": "Not knowing the answer, I kept silent.",
+      "incorrect": "Knowing not the answer..."
+    },
+    {
+      "name": "Reduced Adverbial Clauses",
+      "formula": "While / When / After + Participle..., Subject + Verb",
+      "correct": "While waiting for the train, I read a book.",
+      "incorrect": "While I waiting for the train..."
+    },
+    {
+      "name": "The 'With' Absolute",
+      "formula": "With + Noun + Participle..., Main Clause",
+      "correct": "With the rain pouring down, we stayed indoors.",
+      "incorrect": "With the rain poured down..."
+    }
+  ],
+  "head_noun_tasks": [
+    {
+      "sentence_tokens": [
+        "The",
+        "sun",
+        "having",
+        "set",
+        ",",
+        "the",
+        "temperature",
+        "began",
+        "to",
+        "drop",
+        "rapidly",
+        "."
+      ],
+      "head_noun_indices": [
+        1,
+        2,
+        3
+      ],
+      "explanation": "This is an 'Absolute Phrase' where 'The sun' is the subject of the participle 'having set'."
+    },
+    {
+      "sentence_tokens": [
+        "Not",
+        "wishing",
+        "to",
+        "offend",
+        "anyone",
+        ",",
+        "she",
+        "remained",
+        "neutral",
+        "during",
+        "the",
+        "debate",
+        "."
+      ],
+      "head_noun_indices": [
+        1,
+        6
+      ],
+      "explanation": "A negative present participle phrase modifying the subject 'she'."
+    },
+    {
+      "sentence_tokens": [
+        "With",
+        "the",
+        "deadline",
+        "approaching",
+        ",",
+        "the",
+        "team",
+        "worked",
+        "throughout",
+        "the",
+        "night",
+        "."
+      ],
+      "head_noun_indices": [
+        2,
+        3
+      ],
+      "explanation": "A 'With-Absolute' phrase where 'the deadline' is approaching (active)."
+    },
+    {
+      "sentence_tokens": [
+        "Exhausted",
+        "yet",
+        "determined",
+        ",",
+        "the",
+        "runner",
+        "crossed",
+        "the",
+        "finish",
+        "line",
+        "."
+      ],
+      "head_noun_indices": [
+        0,
+        2,
+        5
+      ],
+      "explanation": "Multiple past participles describing the subject 'the runner'."
+    },
+    {
+      "sentence_tokens": [
+        "After",
+        "completing",
+        "the",
+        "marathon",
+        ",",
+        "he",
+        "felt",
+        "a",
+        "sense",
+        "of",
+        "immense",
+        "pride",
+        "."
+      ],
+      "head_noun_indices": [
+        1,
+        5
+      ],
+      "explanation": "A reduced adverbial clause using 'After' + present participle."
+    }
+  ],
+  "drill_tasks": [
+    {
+      "type": "MCQ",
+      "question": "The meeting ________ over, we all went home.",
+      "options": [
+        "is",
+        "was",
+        "being",
+        "been"
+      ],
+      "answer": "being",
+      "explanation": "This is an absolute phrase. 'The meeting being over' describes the situation."
+    },
+    {
+      "type": "MCQ",
+      "question": "________ what to say, he just stared at the floor.",
+      "options": [
+        "Not to know",
+        "Not knowing",
+        "Knowing not",
+        "Don't knowing"
+      ],
+      "answer": "Not knowing",
+      "explanation": "Negative participle: 'Not' + -ing."
+    },
+    {
+      "type": "MCQ",
+      "question": "________ the room, I found my lost keys.",
+      "options": [
+        "When cleaning",
+        "Cleaned",
+        "Having clean",
+        "Cleaning"
+      ],
+      "answer": "When cleaning",
+      "explanation": "'When cleaning' is a reduced form of 'When I was cleaning'."
+    },
+    {
+      "type": "MCQ",
+      "question": "With the work ________, they finally had some free time.",
+      "options": [
+        "completing",
+        "completed",
+        "been completed",
+        "having completed"
+      ],
+      "answer": "completed",
+      "explanation": "The work was completed (passive). 'With the work completed' is a passive absolute."
+    },
+    {
+      "type": "MCQ",
+      "question": "________ by many as a genius, he remained humble.",
+      "options": [
+        "Consider",
+        "Considering",
+        "Considered",
+        "To consider"
+      ],
+      "answer": "Considered",
+      "explanation": "He was considered (passive) by many."
+    }
+  ],
+  "boss_fight": {
+    "paragraph": "The weather was bad, we stayed home. Not know the answer, he cried. With his eyes closing, he fell asleep.",
+    "errors": [
+      {
+        "original": "The weather was bad, we stayed home",
+        "correction": "The weather being bad, we stayed home",
+        "explanation": "This is a comma splice. Use an absolute phrase ('weather being bad') to connect them."
+      },
+      {
+        "original": "Not know",
+        "correction": "Not knowing",
+        "explanation": "Negative phrases need the participle form (-ing)."
+      },
+      {
+        "original": "With his eyes closing",
+        "correction": "With his eyes closed",
+        "explanation": "The eyes were in a state of being closed (passive/state), so use 'closed'."
+      }
+    ]
+  },
+  "success_feedback": "Magnificent! You've mastered the absolute phrase and complex reductions. Your writing style is now truly distinguished.",
+  "suggested_next_steps": [
+    "Identify absolute phrases in high-level academic papers.",
+    "Use a 'With-Absolute' in your next argumentative essay.",
+    "Try Level 7 for the ultimate 5** participle challenge!"
+  ],
+  "interactive_tasks": [],
+  "examples": [],
+  "key_points": []
+}

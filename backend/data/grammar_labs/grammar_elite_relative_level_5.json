@@ -1,0 +1,233 @@
+{
+  "type": "GRAMMAR",
+  "topic_id": "grammar_elite_relative",
+  "level": "HKDSE Level 5*",
+  "conceptual_explanation": "Level 5* Relative mastery involves literary connectors like 'Whereby' and 'Wherein'. These words allow you to describe mechanisms and internal contexts with extreme precision. We also look at the 'The only thing that' structure which often trips up even strong students.",
+  "rule_cards": [
+    {
+      "name": "The Mechanism 'Whereby'",
+      "formula": "System/Method + whereby + Clause",
+      "correct": "This is the process whereby oxygen enters the blood.",
+      "incorrect": "This is the process which oxygen enters the blood through."
+    },
+    {
+      "name": "Internal Context 'Wherein'",
+      "formula": "Context/Book/Era + wherein + Clause",
+      "correct": "This is a situation wherein both parties must compromise.",
+      "incorrect": "This is a situation where in..."
+    },
+    {
+      "name": "The 'Only/Very' Constraint",
+      "formula": "The [only/very/all] + Noun + THAT (not which)",
+      "correct": "This is the only book that I have read twice.",
+      "incorrect": "This is the only book which I have read twice. (Less precise)"
+    },
+    {
+      "name": "Relative with 'Than'",
+      "formula": "Noun + , + than whom/which + comparison",
+      "correct": "He is a giant, than whom no one is taller.",
+      "incorrect": "He is a giant, that no one is taller than him."
+    }
+  ],
+  "head_noun_tasks": [
+    {
+      "sentence_tokens": [
+        "The",
+        "legislation",
+        "provides",
+        "a",
+        "mechanism",
+        "whereby",
+        "disputes",
+        "can",
+        "be",
+        "resolved",
+        "."
+      ],
+      "head_noun_indices": [
+        4,
+        5
+      ],
+      "explanation": "'Whereby' is a formal relative meaning 'by which' or 'through which'."
+    },
+    {
+      "sentence_tokens": [
+        "It",
+        "was",
+        "a",
+        "treaty",
+        "wherein",
+        "the",
+        "boundaries",
+        "were",
+        "clearly",
+        "defined",
+        "."
+      ],
+      "head_noun_indices": [
+        3,
+        4
+      ],
+      "explanation": "'Wherein' is a formal way to say 'in which'."
+    },
+    {
+      "sentence_tokens": [
+        "This",
+        "is",
+        "the",
+        "very",
+        "man",
+        "that",
+        "I",
+        "was",
+        "telling",
+        "you",
+        "about",
+        "."
+      ],
+      "head_noun_indices": [
+        4,
+        5
+      ],
+      "explanation": "After 'very', 'that' is the preferred relative pronoun."
+    },
+    {
+      "sentence_tokens": [
+        "The",
+        "theory",
+        ",",
+        "the",
+        "truth",
+        "of",
+        "which",
+        "is",
+        "not",
+        "in",
+        "doubt",
+        ",",
+        "changed",
+        "science",
+        "."
+      ],
+      "head_noun_indices": [
+        1,
+        6
+      ],
+      "explanation": "'The truth of which' is a formal alternative to 'whose truth'."
+    },
+    {
+      "sentence_tokens": [
+        "Shakespeare",
+        ",",
+        "than",
+        "whom",
+        "few",
+        "writers",
+        "are",
+        "more",
+        "famous",
+        ",",
+        "lived",
+        "in",
+        "Stratford",
+        "."
+      ],
+      "head_noun_indices": [
+        0,
+        3
+      ],
+      "explanation": "A highly formal 'than whom' structure used for comparisons in relative clauses."
+    }
+  ],
+  "drill_tasks": [
+    {
+      "type": "MCQ",
+      "question": "This is the means ________ he achieved his goal.",
+      "options": [
+        "whereby",
+        "which",
+        "whom",
+        "whose"
+      ],
+      "answer": "whereby",
+      "explanation": "'Whereby' means 'by which' and is used to describe a method or means."
+    },
+    {
+      "type": "MCQ",
+      "question": "The only thing ________ matters is your health.",
+      "options": [
+        "which",
+        "that",
+        "whom",
+        "what"
+      ],
+      "answer": "that",
+      "explanation": "After 'only', 'that' is the grammatically preferred relative pronoun."
+    },
+    {
+      "type": "MCQ",
+      "question": "He entered a state ________ he forgot his own name.",
+      "options": [
+        "whereby",
+        "wherein",
+        "whom",
+        "whose"
+      ],
+      "answer": "wherein",
+      "explanation": "'Wherein' describes the internal condition or context of the 'state'."
+    },
+    {
+      "type": "MCQ",
+      "question": "The problem, the solution ________ remains elusive, is complex.",
+      "options": [
+        "to which",
+        "of which",
+        "which",
+        "whose"
+      ],
+      "answer": "to which",
+      "explanation": "We say 'solution to a problem', so 'solution to which' is correct."
+    },
+    {
+      "type": "MCQ",
+      "question": "Newton was a genius, ________ few have ever equaled.",
+      "options": [
+        "than whom",
+        "who",
+        "whom",
+        "than which"
+      ],
+      "answer": "than whom",
+      "explanation": "Formal comparison within a relative clause."
+    }
+  ],
+  "boss_fight": {
+    "paragraph": "The method whereby which he escaped is a secret. Everything which he said was true. He is the person than who I am taller.",
+    "errors": [
+      {
+        "original": "whereby which",
+        "correction": "whereby",
+        "explanation": "'Whereby' already means 'by which'. Adding 'which' is redundant."
+      },
+      {
+        "original": "Everything which",
+        "correction": "Everything that",
+        "explanation": "After indefinite pronouns like 'everything', 'anything', and 'nothing', use 'that'."
+      },
+      {
+        "original": "than who",
+        "correction": "than whom",
+        "explanation": "After a preposition like 'than', the object form 'whom' must be used."
+      }
+    ]
+  },
+  "success_feedback": "Phenomenal! You've mastered 'whereby', 'wherein', and complex formal comparisons. Your linguistic architectural skills are stunning.",
+  "suggested_next_steps": [
+    "Look for 'whereby' in legal documents or scientific papers.",
+    "Practice using 'than whom' in a formal speech or essay.",
+    "Try Level 7 for the ultimate 5** relative challenge!"
+  ],
+  "interactive_tasks": [],
+  "examples": [],
+  "key_points": []
+}

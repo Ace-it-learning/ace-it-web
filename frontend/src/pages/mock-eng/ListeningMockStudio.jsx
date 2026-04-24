@@ -49,7 +49,7 @@ const ListeningMockStudio = () => {
     const [tidyingTask, setTidyingTask] = useState(1);
     const [currentSection, setCurrentSection] = useState('A'); // 'A' or 'B'
     const [broadcastTimer, setBroadcastTimer] = useState(null);
-    const [broadcastStatus, setBroadcastStatus] = useState({ isPlaying: false, isBuffering: false, pauseCountdown: null });
+    const [broadcastStatus, setBroadcastStatus] = useState({ isPlaying: false, isEngineBuffering: false, pauseCountdown: null });
     const [audioIndex, setAudioIndex] = useState(0);
     const [showQuitModal, setShowQuitModal] = useState(false);
     const [independentTimeLeft, setIndependentTimeLeft] = useState(75 * 60);
@@ -104,7 +104,7 @@ const ListeningMockStudio = () => {
                 timestamp: Date.now()
             }));
         }
-    }, [paperId, mockData, userAnswers, drafts, phase, selectedSection, audioIndex, broadcastTimer]);
+    }, [paperId, mockData, userAnswers, drafts, phase, selectedSection, audioIndex, broadcastTimer, independentTimeLeft]);
 
     // Sync phase with URL
     useEffect(() => {
@@ -112,7 +112,7 @@ const ListeningMockStudio = () => {
         if (urlPhase && urlPhase !== phase) {
             setPhase(urlPhase);
         }
-    }, [searchParams]);
+    }, [searchParams, phase]);
 
     // Independent Writing Timer
     useEffect(() => {
@@ -199,7 +199,7 @@ const ListeningMockStudio = () => {
             }
         };
         fetchMock();
-    }, [paperId]);
+    }, [paperId, navigate, searchParams]);
 
     // Handle B1/B2 Switching with Warning
     const handleSwitchSection = (newSection) => {
@@ -498,7 +498,7 @@ const ListeningMockStudio = () => {
                                 onPhaseChange={updatePhase}
                                 onRequireSelection={() => updatePhase('B1B2_GATE')}
                                 onCountdownTick={setBroadcastTimer}
-                                onStatusChange={setBroadcastStatus}
+                                onStatusChange={(status) => setBroadcastStatus(prev => ({ ...prev, ...status }))}
                                 onComplete={handleAudioComplete}
                             />
                             
@@ -527,7 +527,7 @@ const ListeningMockStudio = () => {
                                     <div className="flex items-center gap-3">
                                         <div className={`w-2 h-2 rounded-full ${broadcastStatus.isPlaying ? (broadcastStatus.pauseCountdown ? 'bg-rose-500' : 'bg-emerald-500 animate-pulse') : 'bg-slate-700'}`} />
                                         <span className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">
-                                            {broadcastStatus.isBuffering ? 'Buffering...' : (broadcastStatus.pauseCountdown ? 'Station Silence' : 'On Air')}
+                                            {broadcastStatus.isEngineBuffering ? 'Buffering...' : (broadcastStatus.pauseCountdown ? 'Station Silence' : 'On Air')}
                                         </span>
                                     </div>
                                     <div className="h-4 w-[1px] bg-white/10" />

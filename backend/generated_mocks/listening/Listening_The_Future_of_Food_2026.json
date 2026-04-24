@@ -1,0 +1,460 @@
+{
+  "meta": {
+    "title": "HKDSE Paper 3: The Future of Food (2026 Edition)",
+    "topic": "Vertical farming, lab-grown meat, and food security in HK.",
+    "difficulty": "Level 5** Authentic (High Stamina)",
+    "total_marks_part_a": 50,
+    "total_marks_part_b": 50
+  },
+  "Part_A": {
+    "tasks": [
+      {
+        "id": "Task_1",
+        "instructions": "You are attending the 'Food Tech Asia 2024' registration. Listen to the conversation and complete the registration form below.",
+        "questions": [
+          {
+            "id": "t1_q1",
+            "type": "Fill_in_Blanks",
+            "label": "Exhibitor Name:",
+            "answer": "Green Horizon Agri-Tech"
+          },
+          {
+            "id": "t1_q2",
+            "type": "Fill_in_Blanks",
+            "label": "Booth Number:",
+            "answer": "B14-C"
+          },
+          {
+            "id": "t1_q3",
+            "type": "Fill_in_Blanks",
+            "label": "Representative Name:",
+            "answer": "Marcus Thornton"
+          },
+          {
+            "id": "t1_q4",
+            "type": "Fill_in_Blanks",
+            "label": "Designation:",
+            "answer": "Senior Logistics Manager"
+          },
+          {
+            "id": "t1_q5",
+            "type": "Fill_in_Blanks",
+            "label": "Primary Contact Email:",
+            "answer": "thornton.m@greenhorizon.hk"
+          },
+          {
+            "id": "t1_q6",
+            "type": "Fill_in_Blanks",
+            "label": "Display Equipment Weight (kg):",
+            "answer": "450"
+          },
+          {
+            "id": "t1_q7",
+            "type": "Fill_in_Blanks",
+            "label": "Electricity Load Needed:",
+            "answer": "3000 Watts"
+          },
+          {
+            "id": "t1_q8",
+            "type": "Fill_in_Blanks",
+            "label": "Sample Distribution Type:",
+            "answer": "Micro-greens and Hydroponic lettuce"
+          },
+          {
+            "id": "t1_q9",
+            "type": "Fill_in_Blanks",
+            "label": "Health Permit Ref No.:",
+            "answer": "FEHD-8821-X"
+          },
+          {
+            "id": "t1_q10",
+            "type": "Fill_in_Blanks",
+            "label": "Booth Set-up Date:",
+            "answer": "November 14"
+          },
+          {
+            "id": "t1_q11",
+            "type": "Fill_in_Blanks",
+            "label": "Teardown Time:",
+            "answer": "9:00 PM onwards"
+          },
+          {
+            "id": "t1_q12",
+            "type": "Fill_in_Blanks",
+            "label": "Insurance Provider:",
+            "answer": "Global Shield Underwriters"
+          }
+        ]
+      },
+      {
+        "id": "Task_2",
+        "instructions": "Listen to a presentation about 'SkyFarms Hong Kong' and complete the project briefing notes below.",
+        "questions": [
+          {
+            "id": "t2_q1",
+            "type": "Fill_in_Blanks",
+            "label": "Facility Location:",
+            "answer": "Former Industrial Block, Kwun Tong"
+          },
+          {
+            "id": "t2_q2",
+            "type": "Fill_in_Blanks",
+            "label": "Total Growing Surface Area:",
+            "answer": "15,000 square meters"
+          },
+          {
+            "id": "t2_q3",
+            "type": "Fill_in_Blanks",
+            "label": "Water Recycling Efficiency:",
+            "answer": "98%"
+          },
+          {
+            "id": "t2_q4",
+            "type": "Multiple_Choice",
+            "question": "Why is this facility considered carbon neutral?",
+            "options": [
+              "It uses solar energy and LED technology",
+              "It offsets carbon through tree planting",
+              "It captures CO2 from the nearby highway"
+            ],
+            "answer": "It captures CO2 from the nearby highway"
+          },
+          {
+            "id": "t2_q5",
+            "type": "Fill_in_Blanks",
+            "label": "Number of Crop Cycles per Year:",
+            "answer": "22"
+          },
+          {
+            "id": "t2_q6",
+            "type": "Fill_in_Blanks",
+            "label": "Main Pest Control Method:",
+            "answer": "UV-C light sterilization"
+          },
+          {
+            "id": "t2_q7",
+            "type": "Fill_in_Blanks",
+            "label": "Daily Output Capacity:",
+            "answer": "1.2 tons of leafy greens"
+          },
+          {
+            "id": "t2_q8",
+            "type": "Fill_in_Blanks",
+            "label": "Retail Partner:",
+            "answer": "Pure-Life Supermarkets"
+          },
+          {
+            "id": "t2_q9",
+            "type": "Multiple_Choice",
+            "question": "What is the biggest operational cost?",
+            "options": [
+              "Electricity for lighting",
+              "Nutrient solutions",
+              "Logistics and delivery"
+            ],
+            "answer": "Electricity for lighting"
+          },
+          {
+            "id": "t2_q10",
+            "type": "Fill_in_Blanks",
+            "label": "Public Tour Frequency:",
+            "answer": "Every second Saturday"
+          },
+          {
+            "id": "t2_q11",
+            "type": "Fill_in_Blanks",
+            "label": "Government Grant Name:",
+            "answer": "Agri-Tech Innovation Fund"
+          },
+          {
+            "id": "t2_q12",
+            "type": "Fill_in_Blanks",
+            "label": "Lead Scientist:",
+            "answer": "Dr. Beatrice Lam"
+          }
+        ]
+      },
+      {
+        "id": "Task_3",
+        "instructions": "Three experts are debating the ethics and future of Lab-Grown (Cultured) Meat. Listen to their discussion and fill in the comparison table.",
+        "questions": [
+          {
+            "id": "t3_q1",
+            "type": "Multiple_Choice",
+            "question": "Dr. Alan Smith's primary concern is:",
+            "options": [
+              "Regulatory approval",
+              "Production scalability",
+              "Nutritional equivalence"
+            ],
+            "answer": "Production scalability"
+          },
+          {
+            "id": "t3_q2",
+            "type": "Multiple_Choice",
+            "question": "Ms. Sarah Chen focuses her argument on:",
+            "options": [
+              "Animal welfare ethics",
+              "Religious certification (Halal/Kosher)",
+              "Methane reduction"
+            ],
+            "answer": "Animal welfare ethics"
+          },
+          {
+            "id": "t3_q3",
+            "type": "Multiple_Choice",
+            "question": "Mr. David Ho believes the key to public adoption is:",
+            "options": [
+              "Celebrity endorsement",
+              "Price parity with traditional meat",
+              "Blind taste testing"
+            ],
+            "answer": "Price parity with traditional meat"
+          },
+          {
+            "id": "t3_q4",
+            "type": "Fill_in_Blanks",
+            "label": "Projected Market Share by 2040:",
+            "answer": "35%"
+          },
+          {
+            "id": "t3_q5",
+            "type": "Fill_in_Blanks",
+            "label": "Main ingredient for 'Growth Medium':",
+            "answer": "Synthetic amino acids"
+          },
+          {
+            "id": "t3_q6",
+            "type": "Fill_in_Blanks",
+            "label": "Current Lab-Meat price per kg:",
+            "answer": "$450 HKD"
+          },
+          {
+            "id": "t3_q7",
+            "type": "Fill_in_Blanks",
+            "label": "Flavor Enhancement Tech:",
+            "answer": "Aromatic fat scaffolding"
+          },
+          {
+            "id": "t3_q8",
+            "type": "Fill_in_Blanks",
+            "label": "Labeling Requirement Recommendation:",
+            "answer": "Clear 'Cultivated' prefix"
+          },
+          {
+            "id": "t3_q9",
+            "type": "Fill_in_Blanks",
+            "label": "Sample Tasting Location:",
+            "answer": "Science Park Bistro"
+          }
+        ]
+      },
+      {
+        "id": "Task_4",
+        "instructions": "A radio host is interviewing the Secretary for Food and Environmental Hygiene about Hong Kong's 2050 Food Security Strategy. Complete the notes.",
+        "questions": [
+          {
+            "id": "t4_q1",
+            "type": "Fill_in_Blanks",
+            "label": "Current Food Import Dependency (%):",
+            "answer": "92"
+          },
+          {
+            "id": "t4_q2",
+            "type": "Fill_in_Blanks",
+            "label": "Target Local Production Share:",
+            "answer": "15% by 2040"
+          },
+          {
+            "id": "t4_q3",
+            "type": "Fill_in_Blanks",
+            "label": "Priority Crop Category:",
+            "answer": "High-yield tubers and brassicas"
+          },
+          {
+            "id": "t4_q4",
+            "type": "Fill_in_Blanks",
+            "label": "New Land Zoning Category:",
+            "answer": "Multi-storey Agri-hub"
+          },
+          {
+            "id": "t4_q5",
+            "type": "Fill_in_Blanks",
+            "label": "Education Initiative Name:",
+            "answer": "Edible Schools Hong Kong"
+          },
+          {
+            "id": "t4_q6",
+            "type": "Fill_in_Blanks",
+            "label": "Storage Buffer (Rice Reserves):",
+            "answer": "15 days additional supply"
+          },
+          {
+            "id": "t4_q7",
+            "type": "Fill_in_Blanks",
+            "label": "Strategy Funding (Initial):",
+            "answer": "$12 Billion"
+          },
+          {
+            "id": "t4_q8",
+            "type": "Fill_in_Blanks",
+            "label": "Key Challenge Mentioned:",
+            "answer": "Limited fresh water for irrigation"
+          },
+          {
+            "id": "t4_q9",
+            "type": "Fill_in_Blanks",
+            "label": "Youth Incentive Scheme:",
+            "answer": "Young Agri-Entrepreneur Loan"
+          },
+          {
+            "id": "t4_q10",
+            "type": "Fill_in_Blanks",
+            "label": "Public Consultation Deadline:",
+            "answer": "January 20"
+          }
+        ]
+      }
+    ]
+  },
+  "Part_B": {
+    "Section_B1": {
+      "tasks": [
+        {
+          "id": "Task_5",
+          "type": "Public Open Day Information Leaflet",
+          "instructions": "Create a leaflet for the 'Urban Nutrients' Open Day. Include dates, location, highlights of vertical farming tech, and a section addressing 'Why Local?'",
+          "marks": 15
+        },
+        {
+          "id": "Task_6",
+          "type": "Letter of Inquiry to the Environmental Bureau",
+          "instructions": "Write a formal letter inquiring about the 'Agri-Tech Energy Subsidy'. Mention current cost pressures and the environmental benefits of the Kwun Tong facility.",
+          "marks": 15
+        },
+        {
+          "id": "Task_7",
+          "type": "Investor Email Summary",
+          "instructions": "Write a short email to potential investors summarizing the market potential for cultured meat in HK, citing the survey data and land use benefits.",
+          "marks": 20
+        }
+      ]
+    },
+    "Section_B2": {
+      "tasks": [
+        {
+          "id": "Task_8",
+          "type": "Proposal: Northern Metropolis Food Security Zone",
+          "instructions": "Write a formal proposal to the government. Detail the integration of vertical farming and lab-grown meat labs. Address land use, employment of local graduates, and food import reduction targets.",
+          "marks": 18
+        },
+        {
+          "id": "Task_9",
+          "type": "Op-Ed: The Ethics and Reality of Future Food",
+          "instructions": "Write an opinion piece for the Hong Kong Post. Counter the arguments made by traditional farmers and address the public's health concerns using scientific data.",
+          "marks": 16
+        },
+        {
+          "id": "Task_10",
+          "type": "Quarterly Impact Report",
+          "instructions": "Complete the report for the Board. Focus on the Kwun Tong site's output, the impact of electricity costs, and strategic recommendations for the upcoming year.",
+          "marks": 16
+        }
+      ]
+    },
+    "data_files": [
+      {
+        "id": "DF1",
+        "type": "Email from CEO of Urban Nutrients (Janice Wong)",
+        "content": "Hi Team, We need to prepare for the 'Future Food HK' summit. I need Task 5 to focus on our new vertical farm open day for the public. For Task 6, write to the Environmental Bureau inquiring about the new energy subsidies for LED farming. Task 7 is a summary for our investors on why lab-grown meat is a safer bet for HK. For the senior team (B2), Task 8 is a formal proposal for the 'Northern Metropolis Food Security Zone'. Task 9 is an Op-Ed regarding the ethical backlash against synthetic beef, and Task 10 is the quarterly impact report. Please check the survey data and the recent article on the 'Brownfield Farm' project. Janice.",
+        "sender": "",
+        "recipient": ""
+      },
+      {
+        "id": "DF2",
+        "type": "Newspaper Clipping: The Hong Kong Post",
+        "content": "The controversy surrounding lab-grown meat grows as traditional farmers protest at the Legislative Council. Critics argue that 'cell-based' protein lacks the soul of traditional farming. However, data shows HK imports 98% of its beef. Dr. Simon Ng claims cultured meat uses 90% less land and 70% less water. Public concern remains high regarding the 'chemical' nature of the growth serum, despite FDA-style assurances from local labs.",
+        "sender": "",
+        "recipient": ""
+      },
+      {
+        "id": "DF3",
+        "type": "Fact Sheet: Vertical Farming vs. Traditional Farming",
+        "content": "Vertical Farming: 365-day harvest, zero pesticides, 95% water reduction, high initial capital (CAPEX), low transport emissions. Traditional: Weather dependent, high land use, high water waste, seasonal crops. Note: HK has over 1,000 hectares of abandoned farmland in the New Territories that could be converted to high-tech hubs.",
+        "sender": "",
+        "recipient": ""
+      },
+      {
+        "id": "DF4",
+        "type": "Survey Results: HK Citizens' Attitudes toward Food Tech",
+        "content": "65% of respondents (n=1200) are willing to try lab-grown meat if priced under $60/lb. 80% prefer locally grown vertical farm vegetables over imports. 45% expressed concern over 'long-term health effects' of synthetic food. 90% believe food security is a 'critical' issue for HK's future.",
+        "sender": "",
+        "recipient": ""
+      },
+      {
+        "id": "DF5",
+        "type": "Internal Memo: Logistics & Energy Costs",
+        "content": "Recent electricity price hikes by HK Electric have increased our vertical farm operating costs by 12%. We must emphasize our 'Smart Grid' integration in the next proposal. Our Kwun Tong site has achieved a record harvest of 5,000 bags of kale per week. Demand from luxury hotel chains is up 40%.",
+        "sender": "",
+        "recipient": ""
+      },
+      {
+        "id": "DF6",
+        "type": "Webpage: Northern Metropolis Agri-Development Plan",
+        "content": "Vision: To create a 500-hectare food belt. Focus: High-density fish farming and hydroponics. Incentives: 5-year tax holiday for tech startups. Requirement: Must employ at least 20% local agricultural graduates.",
+        "sender": "",
+        "recipient": ""
+      }
+    ]
+  },
+  "Script": {
+    "announcer": "Hong Kong Diploma of Secondary Education. English Language Paper 3. Integrated Listening and Skills. Copyright 2024 HKEAA. Please open your Question-Answer Book. (5-second pause) You will hear a variety of recordings regarding 'The Future of Food'.",
+    "content": "[Task 1 Script]\nMarcus: Good morning, I'm here to register for the booth. I'm Marcus Thornton from Green Horizon Agri-Tech. / Officer: Welcome, Marcus. Let me pull up your file. You're at booth B14-C, is that right? / Marcus: Correct. I'm the Senior Logistics Manager. You can reach me at thornton.m@greenhorizon.hk. / Officer: Great. Now, about your display. We have a note here about weight. / Marcus: Yes, the vertical rack is heavy, about 450 kilograms. We'll need a reinforced floor tile. And our LEDs are power-hungry—3000 Watts minimum. / Officer: Noted. Will you be giving away food? / Marcus: Yes, samples of our micro-greens and hydroponic lettuce. I have our FEHD health permit here, number FEHD-8821-X. / Officer: Perfect. Setup is November 14th, and you must teardown after 9:00 PM on the final day. Who is your insurer? / Marcus: Global Shield Underwriters. / Officer: Thank you. (120-second pause) This is the end of Task 1.\n\n[Task 2 Script]\nDr. Beatrice Lam: Welcome to SkyFarms. We are located right here in this old industrial block in Kwun Tong. By using 15,000 square meters of vertical space, we save immense land. Our system is closed-loop, meaning 98% water recycling. People ask why we are carbon neutral. Well, we don't just use green energy; we've installed a system that captures CO2 from the heavy traffic on the nearby highway and pumps it into the grow-rooms to boost plant growth. We get 22 crop cycles a year, far more than a traditional farm's 3 or 4. No pesticides—just UV-C light sterilization. We produce 1.2 tons of greens daily for Pure-Life Supermarkets. Our main cost? Electricity for the lights. Join our public tours every second Saturday. We are funded by the Agri-Tech Innovation Fund. (120-second pause) This is the end of Task 2.\n\n[Task 3 Script]\nHost: Today we discuss lab-grown meat. Dr. Smith, your thoughts? / Dr. Smith: It's a miracle, but production scalability is the wall. We can make a burger, but can we make a million tons? / Sarah Chen: My focus is ethics. We remove the animal from the equation. No slaughter. It's the ultimate animal welfare win. / David Ho: True, but Sarah, it won't matter if it's expensive. We need price parity with traditional meat before HKers buy in. / Dr. Smith: Market share could hit 35% by 2040. We use synthetic amino acids as a growth medium now, no more fetal bovine serum. / Sarah Chen: And current prices in HK are $450 per kilo. Too high. / David Ho: We're working on 'aromatic fat scaffolding' to make it taste like real steak. / Sarah Chen: The government must require 'Cultivated' as a prefix on labels. / Dr. Smith: Come try it at the Science Park Bistro next week. (120-second pause) This is the end of Task 3.\n\n[Task 4 Script]\nHost: Secretary, how secure is our food? / Secretary: Not very. We import 92% of everything. Our 2050 strategy targets 15% local production by 2040. We are prioritizing tubers and brassicas—filling foods. We'll zone new 'Multi-storey Agri-hubs' in the Northern Metropolis. We also have 'Edible Schools' to teach kids to grow food. We've added a 15-day buffer to our rice reserves. It's a $12 Billion plan. Our hurdle? Fresh water. But we're launching the Young Agri-Entrepreneur Loan to get youth involved. Consultations end January 20th. (120-second pause) This is the end of Part A.",
+    "end_instruction": "This is the end of Part A. Now turn to Part B."
+  },
+  "Grading_Rubric": {
+    "Task_5": [
+      "Location: Urban Nutrients Vertical Farm (Kwun Tong)",
+      "Highlights: 95% water saving, zero pesticides, 22 harvest cycles",
+      "Why Local: Reduces transport emissions, 365-day freshness, food security"
+    ],
+    "Task_6": [
+      "Address to: Environmental Bureau",
+      "Core request: Information on Agri-Tech Energy Subsidy",
+      "Justification: Rising electricity costs (12% hike), carbon capture tech in use"
+    ],
+    "Task_7": [
+      "Market potential: 65% of HKers willing to try if price drops",
+      "Sustainability: Uses 90% less land, 70% less water than traditional beef",
+      "Safety: FDA-style lab standards (cleaner than industrial slaughterhouses)"
+    ],
+    "Task_8": {
+      "Content_Points": [
+        "Propose 500-hectare food belt in Northern Metropolis",
+        "Integrate cell-based meat labs with hydroponic hubs",
+        "Target: Reach 15% local production by 2040",
+        "Requirement: 20% staff must be local ag-graduates",
+        "Incentive: Mention 5-year tax holiday"
+      ],
+      "Notes": "Deduct 0.5 marks for each piece of irrelevant information copied from Data Files. Relevance_Penalty applies."
+    },
+    "Task_9": {
+      "Content_Points": [
+        "Address 'chemical' concerns: explain synthetic amino acids",
+        "Counter traditional farmers: HK imports 98% beef, no 'threat' to local tiny farms",
+        "Environmental necessity: Methane reduction and land efficiency",
+        "Price parity: Mention goal of $60/lb for adoption"
+      ],
+      "Notes": "Deduct 0.5 marks for each piece of irrelevant information copied from Data Files. Relevance_Penalty applies."
+    },
+    "Task_10": {
+      "Content_Points": [
+        "Kwun Tong Output: 5,000 bags of kale per week",
+        "Financial: 12% increase in electricity costs impacting margins",
+        "Demand: 40% increase from luxury hotel sector",
+        "Recommendation: Shift to Smart Grid and apply for government energy subsidies"
+      ],
+      "Notes": "Deduct 0.5 marks for each piece of irrelevant information copied from Data Files. Relevance_Penalty applies."
+    }
+  }
+}

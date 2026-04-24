@@ -1,0 +1,224 @@
+{
+  "type": "GRAMMAR",
+  "topic_id": "grammar_elite_modals",
+  "level": "HKDSE Level 5**",
+  "conceptual_explanation": "The 5** summit of Modal mastery involves 'Probability Boosters' (May well), 'Unexpected Should', and using 'Will' for characteristic behavior. These structures allow you to write with the authority and nuance of a native scholar.",
+  "rule_cards": [
+    {
+      "name": "Probability Boosters",
+      "formula": "May / Might / Could + well + Base Verb",
+      "correct": "This discovery may well change the world. (Very likely)",
+      "incorrect": "This discovery will well change... (Use 'well' with may/might/could)"
+    },
+    {
+      "name": "The 'Unexpected' Should",
+      "formula": "If + Subject + should + Verb... (Highly unlikely)",
+      "correct": "If you should see him, give him my regards. (I don't expect you to see him)",
+      "incorrect": "If you will should see him..."
+    },
+    {
+      "name": "Characteristic 'Will'",
+      "formula": "Subject + will + Base Verb (Typical behavior)",
+      "correct": "She will sit for hours reading books. (That's what she usually does)",
+      "incorrect": "She is will sit... (Don't confuse with future tense)"
+    },
+    {
+      "name": "The 'Supposed' Should",
+      "formula": "Should + Subject + Verb... (Formal replacement for 'If')",
+      "correct": "Should you require assistance, please call us.",
+      "incorrect": "Should you will require..."
+    }
+  ],
+  "head_noun_tasks": [
+    {
+      "sentence_tokens": [
+        "This",
+        "new",
+        "technology",
+        "may",
+        "well",
+        "revolutionize",
+        "the",
+        "industry",
+        "."
+      ],
+      "head_noun_indices": [
+        3,
+        4,
+        5
+      ],
+      "explanation": "'May well' expresses a strong possibility, almost a probability."
+    },
+    {
+      "sentence_tokens": [
+        "If",
+        "you",
+        "should",
+        "encounter",
+        "any",
+        "problems",
+        ",",
+        "contact",
+        "us",
+        "immediately",
+        "."
+      ],
+      "head_noun_indices": [
+        2,
+        3
+      ],
+      "explanation": "'Should' here expresses a very low or unexpected possibility."
+    },
+    {
+      "sentence_tokens": [
+        "He",
+        "will",
+        "often",
+        "talk",
+        "to",
+        "himself",
+        "when",
+        "he",
+        "is",
+        "concentrating",
+        "."
+      ],
+      "head_noun_indices": [
+        1,
+        3
+      ],
+      "explanation": "'Will' is used here to describe a characteristic habit or behavior."
+    },
+    {
+      "sentence_tokens": [
+        "Should",
+        "it",
+        "rain",
+        ",",
+        "the",
+        "event",
+        "will",
+        "be",
+        "held",
+        "indoors",
+        "."
+      ],
+      "head_noun_indices": [
+        0,
+        2
+      ],
+      "explanation": "'Should' at the start is a formal inversion replacing 'If it should rain'."
+    },
+    {
+      "sentence_tokens": [
+        "The",
+        "results",
+        "might",
+        "well",
+        "be",
+        "different",
+        "under",
+        "other",
+        "circumstances",
+        "."
+      ],
+      "head_noun_indices": [
+        2,
+        3,
+        4
+      ],
+      "explanation": "'Might well' emphasizes a strong likelihood of a different outcome."
+    }
+  ],
+  "drill_tasks": [
+    {
+      "type": "MCQ",
+      "question": "The stock market ________ crash if the inflation continues.",
+      "options": [
+        "may well",
+        "will well",
+        "should well",
+        "can well"
+      ],
+      "answer": "may well",
+      "explanation": "'May well' is the standard way to express high probability with a modal."
+    },
+    {
+      "type": "MCQ",
+      "question": "________ you need further information, do not hesitate to ask.",
+      "options": [
+        "Should",
+        "Would",
+        "If",
+        "Could"
+      ],
+      "answer": "Should",
+      "explanation": "This is a formal inversion: 'Should you need' = 'If you should need'."
+    },
+    {
+      "type": "MCQ",
+      "question": "A cat ________ often sleep for up to sixteen hours a day.",
+      "options": [
+        "will",
+        "shall",
+        "should",
+        "might"
+      ],
+      "answer": "will",
+      "explanation": "'Will' describes typical, characteristic behavior."
+    },
+    {
+      "type": "MCQ",
+      "question": "If anyone ________ call, tell them I'm out.",
+      "options": [
+        "will",
+        "should",
+        "must",
+        "can"
+      ],
+      "answer": "should",
+      "explanation": "'Should' expresses an unlikely but possible condition."
+    },
+    {
+      "type": "MCQ",
+      "question": "This decision ________ lead to serious complications.",
+      "options": [
+        "might well",
+        "might will",
+        "might should",
+        "might could"
+      ],
+      "answer": "might well",
+      "explanation": "Strong possibility."
+    }
+  ],
+  "boss_fight": {
+    "paragraph": "It will well rain. If you will should see him, tell me. He is will walk in the park every day.",
+    "errors": [
+      {
+        "original": "will well rain",
+        "correction": "may well rain",
+        "explanation": "Use 'well' with 'may', 'might', or 'could', not 'will'."
+      },
+      {
+        "original": "If you will should see him",
+        "correction": "If you should see him",
+        "explanation": "'Should' here already expresses the condition; do not add 'will'."
+      },
+      {
+        "original": "He is will walk",
+        "correction": "He will walk",
+        "explanation": "When using 'will' for habitual behavior, it functions as a modal verb alone, not with 'is'."
+      }
+    ]
+  },
+  "success_feedback": "Stunning! You have reached the absolute summit of modal nuance. Your ability to express probability and habit with such precision is truly 5** level.",
+  "suggested_next_steps": [
+    "Identify 'may well' in academic journals or high-level journalism.",
+    "Practice using 'Should you...' for formal emails or letters.",
+    "Keep maintaining this 5** standard in your own writing!"
+  ],
+  "interactive_tasks": [],
+  "examples": [],
+  "key_points": []
+}

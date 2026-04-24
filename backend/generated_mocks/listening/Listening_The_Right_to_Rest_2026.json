@@ -1,0 +1,665 @@
+{
+  "meta": {
+    "title": "HKDSE Paper 3: The Right to Rest (Elite 2026 Edition)",
+    "topic": "Slow Living movement in a high-speed city; Third Places.",
+    "difficulty": "Level 5** Authentic (High Stamina)",
+    "total_marks_part_a": 50,
+    "total_marks_part_b": 50
+  },
+  "Part_A": {
+    "tasks": [
+      {
+        "id": "Task_1",
+        "instructions": "You are at the reception desk for the 'RestFest Urban Summit'. Complete the registration form for the speaker.",
+        "questions": [
+          {
+            "id": "t1_q1",
+            "type": "Fill_in_Blanks",
+            "label": "Full Name of Speaker:",
+            "answer": "Julianne Kwok"
+          },
+          {
+            "id": "t1_q2",
+            "type": "Fill_in_Blanks",
+            "label": "Affiliated Organization:",
+            "answer": "Urban Harmony Institute"
+          },
+          {
+            "id": "t1_q3",
+            "type": "Fill_in_Blanks",
+            "label": "Mobile Contact:",
+            "answer": "6288 1992"
+          },
+          {
+            "id": "t1_q4",
+            "type": "Fill_in_Blanks",
+            "label": "Keynote Topic:",
+            "answer": "Reclaiming Third Places"
+          },
+          {
+            "id": "t1_q5",
+            "type": "Fill_in_Blanks",
+            "label": "Total Group Size:",
+            "answer": "8 members"
+          },
+          {
+            "id": "t1_q6",
+            "type": "Fill_in_Blanks",
+            "label": "Requested Technical Aid:",
+            "answer": "Holographic Projector"
+          },
+          {
+            "id": "t1_q7",
+            "type": "Fill_in_Blanks",
+            "label": "Lunch Preference (Dietary):",
+            "answer": "Nut-free and Vegan"
+          },
+          {
+            "id": "t1_q8",
+            "type": "Fill_in_Blanks",
+            "label": "Workshop Room Assigned:",
+            "answer": "Zen Studio 4"
+          },
+          {
+            "id": "t1_q9",
+            "type": "Fill_in_Blanks",
+            "label": "Post-event Networking:",
+            "answer": "Yes"
+          },
+          {
+            "id": "t1_q10",
+            "type": "Fill_in_Blanks",
+            "label": "Transportation Mode:",
+            "answer": "Electric Shuttle"
+          },
+          {
+            "id": "t1_q11",
+            "type": "Fill_in_Blanks",
+            "label": "Payment Reference:",
+            "answer": "UH-REF-902"
+          },
+          {
+            "id": "t1_q12",
+            "type": "Fill_in_Blanks",
+            "label": "Emergency Contact Name:",
+            "answer": "Marcus Teo"
+          }
+        ]
+      },
+      {
+        "id": "Task_2",
+        "instructions": "Listen to a talk by a sociologist regarding 'Third Places' in Hong Kong. Complete the notes.",
+        "questions": [
+          {
+            "id": "t2_q1",
+            "type": "Fill_in_Blanks",
+            "label": "Term 'Third Place' Coined By:",
+            "answer": "Ray Oldenburg"
+          },
+          {
+            "id": "t2_q2",
+            "type": "Fill_in_Blanks",
+            "label": "First Place Definition:",
+            "answer": "Home/Domestic Space"
+          },
+          {
+            "id": "t2_q3",
+            "type": "Fill_in_Blanks",
+            "label": "Second Place Definition:",
+            "answer": "Workplace/Office"
+          },
+          {
+            "id": "t2_q4",
+            "type": "Fill_in_Blanks",
+            "label": "Key Characteristic of Third Place:",
+            "answer": "Social Equality"
+          },
+          {
+            "id": "t2_q5",
+            "type": "Multiple_Choice",
+            "question": "What is the biggest threat to HK's third places?",
+            "options": [
+              "High rent",
+              "Digital distractions",
+              "Lack of public interest"
+            ],
+            "answer": "High rent"
+          },
+          {
+            "id": "t2_q6",
+            "type": "Multiple_Choice",
+            "question": "Which location is cited as a 'pseudo-third place'?",
+            "options": [
+              "Libraries",
+              "Shopping malls",
+              "Traditional tea houses"
+            ],
+            "answer": "Shopping malls"
+          },
+          {
+            "id": "t2_q7",
+            "type": "Fill_in_Blanks",
+            "label": "Percentage of Public Wanting Parks:",
+            "answer": "78%"
+          },
+          {
+            "id": "t2_q8",
+            "type": "Fill_in_Blanks",
+            "label": "Example of Traditional Third Place:",
+            "answer": "Dai Pai Dong"
+          },
+          {
+            "id": "t2_q9",
+            "type": "Fill_in_Blanks",
+            "label": "Recommended Policy Change:",
+            "answer": "Community Land Trusts"
+          },
+          {
+            "id": "t2_q10",
+            "type": "Fill_in_Blanks",
+            "label": "Proposed Pilot District:",
+            "answer": "Sham Shui Po"
+          },
+          {
+            "id": "t2_q11",
+            "type": "Fill_in_Blanks",
+            "label": "Number of New Benches Needed:",
+            "answer": "2,400"
+          },
+          {
+            "id": "t2_q12",
+            "type": "Fill_in_Blanks",
+            "label": "Next Research Publication Date:",
+            "answer": "October 12"
+          }
+        ]
+      },
+      {
+        "id": "Task_3",
+        "instructions": "Three experts are debating the 'Right to Disconnect' law. Tick the correct boxes to indicate their opinions.",
+        "questions": [
+          {
+            "id": "t3_q1",
+            "type": "Multiple_Choice",
+            "question": "Dr. Wong argues the law should apply to:",
+            "options": [
+              "All companies",
+              "Only SMEs",
+              "Only tech giants"
+            ],
+            "answer": "All companies"
+          },
+          {
+            "id": "t3_q2",
+            "type": "Multiple_Choice",
+            "question": "Ms. Beatrice Lam is concerned about:",
+            "options": [
+              "Productivity loss",
+              "Implementation cost",
+              "Employee pushback"
+            ],
+            "answer": "Productivity loss"
+          },
+          {
+            "id": "t3_q3",
+            "type": "Multiple_Choice",
+            "question": "Mr. Felix Ho suggests a grace period of:",
+            "options": [
+              "6 months",
+              "12 months",
+              "18 months"
+            ],
+            "answer": "12 months"
+          },
+          {
+            "id": "t3_q4",
+            "type": "Fill_in_Blanks",
+            "label": "Current Avg Overtime (Weekly):",
+            "answer": "14 hours"
+          },
+          {
+            "id": "t3_q5",
+            "type": "Fill_in_Blanks",
+            "label": "Penalty for After-hours Emails:",
+            "answer": "$5,000 fine"
+          },
+          {
+            "id": "t3_q6",
+            "type": "Fill_in_Blanks",
+            "label": "French Model Reference Year:",
+            "answer": "2017"
+          },
+          {
+            "id": "t3_q7",
+            "type": "Fill_in_Blanks",
+            "label": "Public Support Level (%):",
+            "answer": "62%"
+          },
+          {
+            "id": "t3_q8",
+            "type": "Fill_in_Blanks",
+            "label": "Proposed Exception Clause:",
+            "answer": "Emergency Services"
+          },
+          {
+            "id": "t3_q9",
+            "type": "Fill_in_Blanks",
+            "label": "Wellness App Name:",
+            "answer": "RestEasy HK"
+          },
+          {
+            "id": "t3_q10",
+            "type": "Fill_in_Blanks",
+            "label": "Contact for Labor Union:",
+            "answer": "rights@hkwu.org"
+          },
+          {
+            "id": "t3_q11",
+            "type": "Fill_in_Blanks",
+            "label": "Seminar Venue:",
+            "answer": "Exhibition Hall A"
+          },
+          {
+            "id": "t3_q12",
+            "type": "Fill_in_Blanks",
+            "label": "Official Hashtag:",
+            "answer": "#UnplugHK"
+          }
+        ]
+      },
+      {
+        "id": "Task_4",
+        "instructions": "Stakeholders are discussing the 'Slow Living District' proposal for North Point. Complete the matrix.",
+        "questions": [
+          {
+            "id": "t4_q1",
+            "type": "Fill_in_Blanks",
+            "label": "Local Shop Owner - Main Concern:",
+            "answer": "Lost foot traffic due to pedestrianization"
+          },
+          {
+            "id": "t4_q2",
+            "type": "Fill_in_Blanks",
+            "label": "Local Shop Owner - Desired Benefit:",
+            "answer": "Subsidized rent for artisanal shops"
+          },
+          {
+            "id": "t4_q3",
+            "type": "Fill_in_Blanks",
+            "label": "Local Shop Owner - Suggestion:",
+            "answer": "Weekend-only slow zone"
+          },
+          {
+            "id": "t4_q4",
+            "type": "Fill_in_Blanks",
+            "label": "Young Professional - Main Concern:",
+            "answer": "Lack of high-speed Wi-Fi in 'Slow Zones'"
+          },
+          {
+            "id": "t4_q5",
+            "type": "Fill_in_Blanks",
+            "label": "Young Professional - Desired Benefit:",
+            "answer": "Outdoor co-working spaces"
+          },
+          {
+            "id": "t4_q6",
+            "type": "Fill_in_Blanks",
+            "label": "Young Professional - Suggestion:",
+            "answer": "Quiet booths in public parks"
+          },
+          {
+            "id": "t4_q7",
+            "type": "Fill_in_Blanks",
+            "label": "Urban Planner - Main Concern:",
+            "answer": "Integration with existing MTR lines"
+          },
+          {
+            "id": "t4_q8",
+            "type": "Fill_in_Blanks",
+            "label": "Urban Planner - Desired Benefit:",
+            "answer": "Reduced urban heat island effect"
+          },
+          {
+            "id": "t4_q9",
+            "type": "Fill_in_Blanks",
+            "label": "Urban Planner - Suggestion:",
+            "answer": "Vertical greening on highway pillars"
+          },
+          {
+            "id": "t4_q10",
+            "type": "Consensus on Speed Limit:",
+            "answer": "15 km/h for all vehicles"
+          },
+          {
+            "id": "t4_q11",
+            "type": "Launch Date (Pilot):",
+            "answer": "January 2027"
+          },
+          {
+            "id": "t4_q12",
+            "type": "Next Public Hearing:",
+            "answer": "Community Center, August 5"
+          }
+        ]
+      }
+    ],
+    "script": [
+      {
+        "speaker": "Announcer",
+        "text": "Hong Kong Diploma of Secondary Education 2026. English Language Paper 3. Listening and Integrated Skills. The Right to Rest."
+      },
+      {
+        "speaker": "Announcer",
+        "text": "Part A. Task 1. You are at the reception desk for the RestFest Urban Summit. Listen to the conversation between the receptionist and a guest speaker. Complete the registration form. You have two minutes to read the task. (120-second pause)"
+      },
+      {
+        "speaker": "Receptionist",
+        "text": "Welcome to RestFest 2026! We're so glad to have such a vibrant turnout for our 'Slow Living' opening. May I have your name and organization, please?"
+      },
+      {
+        "speaker": "Julianne",
+        "text": "Good morning. I'm Julianne Kwok. I'm with the Urban Harmony Institute. I believe I'm on the VIP speaker list?"
+      },
+      {
+        "speaker": "Receptionist",
+        "text": "Let me check... Kwok... J. Ah, yes. Julianne Kwok. I have you here. And just to confirm, is your mobile number still 6-2-8-8, 1-9-9-2?"
+      },
+      {
+        "speaker": "Julianne",
+        "text": "That's the one. My assistant mentioned I'm the morning keynote. Is the topic correctly listed?"
+      },
+      {
+        "speaker": "Receptionist",
+        "text": "Yes, 'Reclaiming Third Places'. A very popular topic this year! We have about 500 people registered for your session."
+      },
+      {
+        "speaker": "Julianne",
+        "text": "Excellent. I'm actually traveling with my research team today. There are eight of us in total, including myself. I'll need badges for all of them."
+      },
+      {
+        "speaker": "Receptionist",
+        "text": "Eight members. Noted. I'll print those now. Regarding your technical needs, you requested a 4K LED screen originally, but sent an update last night?"
+      },
+      {
+        "speaker": "Julianne",
+        "text": "Yes, sorry for the last-minute change. My presentation actually uses 3D models of urban parks, so I'll definitely need a holographic projector. The standard screen just won't do."
+      },
+      {
+        "speaker": "Receptionist",
+        "text": "We've secured one for you. Now, for the lunch catering. Our records show a request for nut-free meals, but anything else?"
+      },
+      {
+        "speaker": "Julianne",
+        "text": "Yes, the whole team is strictly vegan this week as part of our sustainability pledge. So, nut-free and vegan, please."
+      },
+      {
+        "speaker": "Receptionist",
+        "text": "Understood. Your workshop after the keynote will be in Zen Studio 4. It's the quietest room in the building. Will you be staying for the post-event networking drinks at 6:00 PM?"
+      },
+      {
+        "speaker": "Julianne",
+        "text": "Yes, I'd like to meet some of the planners. Oh, and about my travel—the institute is paying for an electric shuttle for the group. Is there a dedicated drop-off point?"
+      },
+      {
+        "speaker": "Receptionist",
+        "text": "There is. Just follow the green signs to the E-shuttle zone. I'll need your payment reference for the admin fee as well."
+      },
+      {
+        "speaker": "Julianne",
+        "text": "It's UH-REF-902. And just in case I lose my voice from all the talking, my emergency contact is Marcus Teo, our lead researcher."
+      },
+      {
+        "speaker": "Receptionist",
+        "text": "Thank you, Ms. Kwok. Here are your badges. Enjoy the summit!"
+      },
+      {
+        "speaker": "Announcer",
+        "text": "Task 2. You will hear a talk by a sociologist regarding 'Third Places'. Complete the notes below. (120-second pause)"
+      },
+      {
+        "speaker": "Sociologist",
+        "text": "Good morning. When we talk about the 'Right to Rest' in a hyper-capitalist city like Hong Kong, we must discuss the 'Third Place'. This term was first coined by the famous sociologist Ray Oldenburg. In his view, a healthy life requires three distinct spaces. The 'First Place' is our home, our domestic sanctuary. The 'Second Place' is the office or the workplace where we produce and earn."
+      },
+      {
+        "speaker": "Sociologist",
+        "text": "The 'Third Place' is where we find community. It is neither home nor work. A key characteristic of a true third place is social equality. In a library or a park, it doesn't matter if you're a CEO or a student; you are all equal citizens. Unfortunately, in Hong Kong, these spaces are vanishing. While some say digital distractions are the cause, our study shows the biggest threat is sky-high rent. It's killing the small bookstores and cafes that once served this purpose."
+      },
+      {
+        "speaker": "Sociologist",
+        "text": "Look at our shopping malls. People think they are third places, but they are actually 'pseudo-third places'. You are only welcome if you are spending money. You can't just sit and rest without buying a latte. In our recent survey, 78% of the public said they want more public parks, not more malls. We need to reclaim the spirit of the 'Dai Pai Dong'—the traditional open-air stalls that were once the heartbeat of our neighborhoods."
+      },
+      {
+        "speaker": "Sociologist",
+        "text": "To fix this, we recommend moving toward 'Community Land Trusts' where the land is owned by the neighborhood, not developers. We're proposing a pilot district in Sham Shui Po to test this. We've also identified a 'bench crisis'—we need 2,400 new public benches across the city just to meet the global average for rest-space. We'll be publishing our full data set on October 12. Thank you."
+      },
+      {
+        "speaker": "Announcer",
+        "text": "Task 3. Three experts are debating the 'Right to Disconnect' law. (120-second pause)"
+      },
+      {
+        "speaker": "Host",
+        "text": "Today we discuss the controversial 'Right to Disconnect' law proposed for Hong Kong. Dr. Wong, should this apply to everyone?"
+      },
+      {
+        "speaker": "Dr Wong",
+        "text": "Absolutely. If we only target tech giants or SMEs, we create a two-tier workforce. The law must apply to all companies. We have people working an average of 14 hours of overtime every week, much of it unpaid via WhatsApp. It has to stop."
+      },
+      {
+        "speaker": "Ms Beatrice Lam",
+        "text": "I agree with the sentiment, Dr. Wong, but I worry about productivity loss. If a client in New York emails at 10 PM and we can't reply until 9 AM, we lose the deal. We are a global financial hub. We can't just 'turn off'."
+      },
+      {
+        "speaker": "Mr Felix Ho",
+        "text": "Ms. Lam, people said the same thing in France when they passed their law in 2017, and their economy didn't collapse. However, I think we need a soft rollout. A 12-month grace period for businesses to adjust their internal policies would be fair. We've proposed a $5,000 fine for companies that consistently harass employees with after-hours emails."
+      },
+      {
+        "speaker": "Dr Wong",
+        "text": "Our polls show 62% of the public support this. We would include an exception clause for emergency services, of course. To help people, we're even launching an app called 'RestEasy HK' that automatically silences work notifications. If you want more info, email the labor union at rights@hkwu.org. We're holding a seminar in Exhibition Hall A later today under the hashtag #UnplugHK."
+      },
+      {
+        "speaker": "Announcer",
+        "text": "Task 4. Stakeholders are discussing the 'Slow Living District' proposal for North Point. (240-second pause)"
+      },
+      {
+        "speaker": "Planner",
+        "text": "Let's hear from our community stakeholders on the North Point Slow Zone. Mr. Tan, as a shop owner, what's your take?"
+      },
+      {
+        "speaker": "Shop Owner",
+        "text": "I'm worried about lost foot traffic. If cars can't get in, will people still visit? However, I'd support it if the government offered subsidized rent for artisanal shops like mine. Maybe we could try a weekend-only slow zone first? That would be my suggestion."
+      },
+      {
+        "speaker": "Young Pro",
+        "text": "I love the idea, but as a freelancer, I'm worried about the lack of high-speed Wi-Fi in these so-called 'Slow Zones'. Can we have outdoor co-working spaces with good connectivity? My main suggestion is to build quiet booths in the public parks so we can take calls without the noise of the city."
+      },
+      {
+        "speaker": "Planner",
+        "text": "From a planning perspective, the main concern is the integration with existing MTR lines—we can't block the exits. But the benefit would be a massive reduction in the urban heat island effect. I suggest vertical greening on all the highway pillars in the area. We've reached a consensus that if we proceed, the speed limit for all vehicles in the zone will be 15 km/h. We'll launch the pilot in January 2027. The next public hearing is at the Community Center on August 5."
+      },
+      {
+        "speaker": "Announcer",
+        "text": "Integrated Skills Recording. Listen to the briefing from the Director of the Urban Rest Bureau to the Senior Project Manager."
+      },
+      {
+        "speaker": "Director",
+        "text": "Good morning. We need to finalize the 'Slow HK' campaign. For Task 8, when you write to the CEO of the Finance Hub, emphasize that 'rest is a performance enhancer'. Don't make it sound like we're being lazy. Tell them that for Task 8, we want them to trial a 'Mandatory Micro-break' policy—that's a 5-minute break every hour. This isn't in the Data Files yet, so make sure it's in your letter."
+      },
+      {
+        "speaker": "Director",
+        "text": "For the Task 9 internal report, please note that we've secured a special $50,000 prize for the 'Urban Oasis' design competition. We need to mention this to get the staff excited. Also, add that the deadline for all project proposals is June 15th. That's a hard deadline."
+      },
+      {
+        "speaker": "Director",
+        "text": "Finally, for the Task 10 social media post, we need to appeal to the 'Sandwich Generation'—those looking after both kids and parents. Use the phrase 'Peace of Mind' and mention that we're installing 500 'Digital Sabbath' lockers in public libraries where people can lock their phones away for an hour for free. Oh, and call it the 'Phone-Free Hour' initiative. Get to it!"
+      },
+      {
+        "speaker": "Announcer",
+        "text": "That is the end of the Integrated Skills recording. You have 1 hour and 10 minutes to complete Part B."
+      }
+    ]
+  },
+  "Part_B": {
+    "data_file": [
+      {
+        "id": "doc1",
+        "type": "minutes",
+        "title": "Minutes of the Urban Rest Bureau Planning Meeting",
+        "content": "Date: May 12, 2026. Attendees: Director Lo, PM Sarah Ho.\nDiscussion: Public dissatisfaction with 'always-on' work culture. Data shows 70% of workers feel burned out. \nAction: Proposal for a 'Slow Living' certification for offices. \nNote: Need to highlight that rest improves long-term productivity (Doc 9)."
+      },
+      {
+        "id": "doc2",
+        "type": "brochure",
+        "title": "RestFest 2026: Official Program",
+        "content": "Theme: The Right to Rest. \nKey Events: \n- 'Unplugged' Yoga in Victoria Park. \n- 'Digital Sabbath' workshop. \n- Launch of 'Third Place' community cafes. \nSlogan: 'Slow Down to Go Fast'."
+      },
+      {
+        "id": "doc3",
+        "type": "email",
+        "title": "Email from Clara Chan (Exhausted Citizen)",
+        "content": "To: Urban Rest Bureau. \nI am a junior accountant. I get WhatsApp messages from my boss at 11 PM every night. I feel I have no 'Third Place' to go to. Even the local park is too loud with traffic. Please, we need laws to protect our rest time!"
+      },
+      {
+        "id": "doc4",
+        "type": "newspaper",
+        "title": "Editorial: The Vanishing Bench",
+        "content": "HK Daily News: Public seating has decreased by 30% in the last decade. Why are we removing benches? To prevent 'loitering'? We are turning our city into a corridor, not a home. We need more 'Third Places' that are free to use."
+      },
+      {
+        "id": "doc5",
+        "type": "handwritten_note",
+        "title": "Note from Director Lo",
+        "content": "PM: In your letter to the Finance CEO (Task 8), be sure to mention that rest is NOT just 'doing nothing'. It's 'active recovery'. Also, mention the 'RestEasy HK' app features from the audio briefing. We need their corporate buy-in!"
+      },
+      {
+        "id": "doc6",
+        "type": "table",
+        "title": "Table 2: Urban Stress Indices by District",
+        "content": "District | Avg Working Hours | Public Space per Capita (sq m) | Happiness Score\n--------------------------------------------------------------------------\nCentral | 52 | 1.2 | 4.1\nNorth Point | 48 | 2.5 | 5.8\nSha Tin | 44 | 6.5 | 7.2\n\nGoal: Increase Public Space in Central/North Point by 20%."
+      },
+      {
+        "id": "doc7",
+        "type": "social_media_post",
+        "title": "Viral Post from #SlowHK",
+        "content": "Why is it that in HK, 'resting' is seen as 'laziness'? In Europe, they have the right to disconnect. We just have the right to more coffee and more work. #RightToRest #ThirdPlaceHK"
+      },
+      {
+        "id": "doc8",
+        "type": "memo",
+        "title": "Internal Memo: 'Right to Disconnect' Pilot",
+        "content": "To all staff: From June 1st, we are trialing 'No-Email Weekends'. Unless it's a Grade-1 Emergency, staff are not expected to check servers or reply to messages until Monday 9 AM."
+      },
+      {
+        "id": "doc9",
+        "type": "fact_sheet",
+        "title": "Research: The Science of Rest",
+        "content": "A 10-minute micro-break increases focus by 25%. Access to 'Third Places' reduces cortisol levels by 15%. Overworking leads to a 40% increase in errors in financial reporting."
+      },
+      {
+        "id": "doc10",
+        "type": "survey_result",
+        "title": "Public Survey: What is a Third Place?",
+        "content": "Respondents (N=2000):\n- 45% want more libraries with comfortable seating.\n- 30% want community gardens.\n- 15% want more tea houses.\n- 10% want street-side benches."
+      }
+    ],
+    "Part_B1": {
+      "tasks": [
+        {
+          "id": "Task_5",
+          "type": "Formal Email",
+          "instructions": "Write an email to Clara Chan (Doc 3) to address her concerns. Mention the upcoming 'Slow Living' district and the 'Right to Disconnect' pilot. Use info from Doc 1, Doc 3, and Doc 8.",
+          "wordCount": 150,
+          "grading_rubric": {
+            "content_points": [
+              "Acknowledge the burnout and late-night messages (Doc 3)",
+              "Mention the 'Slow Living' certification for offices (Doc 1)",
+              "Introduce the 'No-Email Weekends' pilot (Doc 8)",
+              "Explain the goal to increase happiness scores in districts (Doc 6)"
+            ],
+            "tone": "Empathetic and Reassuring"
+          }
+        },
+        {
+          "id": "Task_6",
+          "type": "Notice",
+          "instructions": "Create a notice for the 'RestFest' (Doc 2) to be posted in public libraries. Highlight the 'Third Place' cafe launch and the Yoga event. Use Doc 2 and Doc 10.",
+          "wordCount": 100,
+          "grading_rubric": {
+            "content_points": [
+              "Include the slogan 'Slow Down to Go Fast' (Doc 2)",
+              "Mention the Yoga in Victoria Park (Doc 2)",
+              "Announce new community cafes as 'Third Places' (Doc 2)",
+              "Note that 45% of people want more comfortable library seating (Doc 10)"
+            ],
+            "tone": "Inviting and Peaceful"
+          }
+        },
+        {
+          "id": "Task_7",
+          "type": "Summary Report",
+          "instructions": "Summarize the district stress data for the Director's briefing. Refer to Doc 6 and Doc 4.",
+          "wordCount": 120,
+          "grading_rubric": {
+            "content_points": [
+              "Central has the highest working hours (52) and lowest happiness (4.1) (Doc 6)",
+              "Sha Tin has the most public space and highest happiness (Doc 6)",
+              "Mention the 30% decrease in public seating (Doc 4)",
+              "State the goal of 20% more public space in urban areas (Doc 6)"
+            ],
+            "tone": "Analytical and Objective"
+          }
+        }
+      ]
+    },
+    "Part_B2": {
+      "tasks": [
+        {
+          "id": "Task_8",
+          "type": "Formal Letter",
+          "instructions": "As the Senior PM, write a formal letter to the CEO of 'Mega Finance Group' to persuade them to join the 'Slow Living' movement. Use Doc 1, Doc 5, Doc 9, and the Audio Briefing.",
+          "wordCount": 250,
+          "grading_rubric": {
+            "content_points": [
+              "Argue that rest is a performance enhancer/active recovery (Doc 5/Audio)",
+              "Cite the 25% focus increase from micro-breaks (Doc 9)",
+              "Mention the 40% error increase from overworking (Doc 9)",
+              "PROPOSE: Mandatory 5-minute Micro-breaks every hour (Audio)",
+              "Suggest 'RestEasy HK' app features for employees (Audio/Task 3)"
+            ],
+            "tone": "Professional and Persuasive"
+          }
+        },
+        {
+          "id": "Task_9",
+          "type": "Internal Report",
+          "instructions": "Write an internal progress report for the Bureau staff regarding the 'Urban Oasis' competition and upcoming deadlines. Use Doc 10 and the Audio Briefing.",
+          "wordCount": 180,
+          "grading_rubric": {
+            "content_points": [
+              "Identify libraries and gardens as top public preferences (Doc 10)",
+              "ANNOUNCE: $50,000 prize for 'Urban Oasis' design competition (Audio)",
+              "ANNOUNCE: Hard deadline of June 15th for all proposals (Audio)",
+              "Mention the goal of 'Slow Living' certification for pilot offices (Doc 1)"
+            ],
+            "tone": "Motivating and Informative"
+          }
+        },
+        {
+          "id": "Task_10",
+          "type": "Campaign Social Media Post",
+          "instructions": "Draft a social media post for the 'Slow HK' campaign targeting the 'Sandwich Generation'. Use Doc 2, Doc 7, and the Audio Briefing. Include relevant hashtags.",
+          "wordCount": 120,
+          "grading_rubric": {
+            "content_points": [
+              "Target 'Sandwich Generation' with 'Peace of Mind' phrase (Audio)",
+              "Announce 'Phone-Free Hour' initiative (Audio)",
+              "Mention 500 'Digital Sabbath' lockers in libraries (Audio)",
+              "Include slogan 'Slow Down to Go Fast' (Doc 2)",
+              "Use hashtags #RightToRest and #ThirdPlaceHK (Doc 7)"
+            ],
+            "tone": "Heartwarming and Community-focused"
+          }
+        }
+      ]
+    }
+  }
+}

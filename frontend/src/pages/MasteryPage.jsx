@@ -63,8 +63,8 @@ const MasteryPage = () => {
 
             Object.entries(skillsObj).forEach(([sid, data]) => {
                 const paper = getPaperBySkill(sid);
-                if (paper) {
-                    const level = typeof data === 'object' ? (data.level || 1) : (data || 1);
+                if (paper && paperSum.hasOwnProperty(paper)) {
+                    const level = (typeof data === 'object' ? (data.level || 1) : (data || 1)) || 1;
                     paperSum[paper] += level;
                     paperCount[paper] += 1;
                 }

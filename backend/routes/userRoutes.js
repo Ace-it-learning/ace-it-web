@@ -7,7 +7,7 @@ const UserProfileService = require('../services/UserProfileService');
 const GamificationService = require('../services/GamificationService');
 const DeviceService = require('../services/DeviceService');
 const { checkVoiceQuota } = require('../services/VoiceQuotaService');
-const db = admin.firestore();
+// Use admin.firestore() directly in routes or services
 const cardPool = require('../data/card_pool.json');
 
 // --- UTILS ---
@@ -177,7 +177,7 @@ router.delete('/', async (req, res) => {
             return res.status(400).json({ 
                 error: "Subscription active", 
                 message: "Please cancel your active subscription before deleting your account." 
-            });
+                });
         }
         await UserProfileService.deleteUserProfile(uid);
         res.json({ success: true });

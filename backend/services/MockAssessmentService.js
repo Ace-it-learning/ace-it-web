@@ -349,18 +349,78 @@ class MockAssessmentService {
                 return this.evaluateExtraction(q, answer);
             case 'vocab_match':
                 return this.evaluateVocabMatch(q, answer);
+            case 'Fill_in_Blanks':
             default:
-                return { score: 0, feedback: "Calculation Error", status: 'incorrect' };
+                // Handle various string-based types or defaults as short answers
+                return this.evaluateShortAnswer(q, answer);
         }
     }
 
-    evaluateMC(question, answer) {
-        const correct = question.marking_scheme?.trim().charAt(0).toUpperCase();
-        const userChoice = typeof answer === 'string' ? answer.trim().charAt(0).toUpperCase() : '';
-        if (userChoice === correct) {
-            return { score: question.marks, status: 'correct', feedback: "Excellent. You identified the correct option." };
+    /**
+     * Evaluate string-based short answers with normalization
+     */
+    evaluateShortAnswer(question, answer) {
+        const correctRaw = question.answer || question.marking_scheme || "";
+        const userAnswer = (answer || "").toString().trim().toLowerCase();
+        const correctAnswer = correctRaw.toString().trim().toLowerCase();
+
+        // Basic normalization: remove punctuation at the end and extra spaces
+        const normalize = (s) => s.replace(/[.,!?]$/, "").replace(/\s+/g, " ");
+        
+        if (normalize(userAnswer) === normalize(correctAnswer)) {
+            return { 
+                score: question.marks || 1, 
+                status: 'correct', 
+                feedback: "Correct. Your answer matches the required information." 
+            };
         }
-        return { score: 0, status: 'incorrect', feedback: `The correct answer was ${correct}.` };
+
+        // Partial match check (e.g. if the answer is contained within)
+        if (userAnswer.length > 3 && correctAnswer.includes(userAnswer)) {
+            return { 
+                score: Math.max(0, (question.marks || 1) - 1), 
+                status: 'partial', 
+                feedback: "Partially correct. You have the right idea but missed some detail." 
+            };
+        }
+
+        return { 
+            score: 0, 
+            status: 'incorrect', 
+            feedback: `The correct answer was: ${correctRaw}` 
+        };
+    }
+
+    evaluateMC(question, answer) {
+        const correctRaw = (question.marking_scheme || question.answer || "").toString().trim();
+        const userAnswer = (answer || "").toString().trim();
+
+        // 1. Exact string match (best for modern JSON mocks)
+        if (userAnswer.toLowerCase() === correctRaw.toLowerCase()) {
+            return { 
+                score: question.marks || 1, 
+                status: 'correct', 
+                feedback: "Excellent. You identified the correct option." 
+            };
+        }
+
+        // 2. Character-based match (fallback for A, B, C marking schemes)
+        const correctChar = correctRaw.charAt(0).toUpperCase();
+        const userChar = userAnswer.charAt(0).toUpperCase();
+        
+        if (userChar === correctChar && userChar.match(/[A-Z]/)) {
+            return { 
+                score: question.marks || 1, 
+                status: 'correct', 
+                feedback: "Correct. Option identified." 
+            };
+        }
+
+        return { 
+            score: 0, 
+            status: 'incorrect', 
+            feedback: `The correct answer was: ${correctRaw}` 
+        };
     }
 
     evaluateExtraction(question, answer) {
@@ -674,12 +734,13 @@ class MockAssessmentService {
         const results = {};
         const sectionalScores = { 
             A: { score: 0, possible: 0 }, 
-            B: { score: 0, possible: 21, domains: {} } 
+            B: { score: 0, possible: 36, domains: {} } 
         };
         const skillScores = {};
         
         const selectedPart = analytics.selectedSection || 'B2';
         const partBDrafts = userAnswers.drafts || {};
+
 
         // 1. Evaluate Part A (Objective)
         const partATasks = mockData.Part_A?.tasks || [];
@@ -692,7 +753,8 @@ class MockAssessmentService {
                 sectionalScores.A.score += assessment.score;
                 sectionalScores.A.possible += q.marks || 1;
 
-                const skill = q.type || 'General Listening';
+                // Consolidate all Part A question types into "Listening Accuracy" for a cleaner UI
+                const skill = 'Listening Accuracy';
                 if (!skillScores[skill]) skillScores[skill] = { score: 0, possible: 0 };
                 skillScores[skill].score += assessment.score;
                 skillScores[skill].possible += q.marks || 1;
@@ -730,19 +792,22 @@ class MockAssessmentService {
         sectionalScores.B.domains = aiWritingResults.domains || {
             content: { score: 0, feedback: "No content data returned." },
             language: { score: 0, feedback: "No language data returned." },
-            organization: { score: 0, feedback: "No organization data returned." }
+            organization: { score: 0, feedback: "No organization data returned." },
+            appropriacy: { score: 0, feedback: "No appropriacy data returned." }
         };
         sectionalScores.B.score = aiWritingResults.total_score || 0;
+        sectionalScores.B.possible = 36; // 9 Content + 9 Lang + 9 Org + 9 App
         sectionalScores.B.overallFeedback = aiWritingResults.overall_feedback || "Integrated skills evaluated.";
 
         const totalScore = sectionalScores.A.score + sectionalScores.B.score;
         const totalPossible = sectionalScores.A.possible + sectionalScores.B.possible;
         const percentage = (totalScore / totalPossible) * 100;
 
-        // Skill scores for Part B
+        // Skill scores for Part B (Standard HKEAA Domains)
         skillScores['Content Synthesis'] = { score: sectionalScores.B.domains.content?.score || 0, possible: 9 };
-        skillScores['Integrated Language'] = { score: sectionalScores.B.domains.language?.score || 0, possible: 6 };
-        skillScores['Register & Tone'] = { score: sectionalScores.B.domains.organization?.score || 0, possible: 6 };
+        skillScores['Integrated Language'] = { score: sectionalScores.B.domains.language?.score || 0, possible: 9 };
+        skillScores['Logical Organization'] = { score: sectionalScores.B.domains.organization?.score || 0, possible: 9 };
+        skillScores['Register & Tone'] = { score: sectionalScores.B.domains.appropriacy?.score || 0, possible: 9 };
 
         return {
             totalScore,
@@ -751,8 +816,13 @@ class MockAssessmentService {
             level: this.calculateListeningLevel(percentage, selectedPart),
             sectionalScores,
             skillScores,
+            xpAwarded: Math.floor(percentage * 10),
             analytics,
-            results: { ...results, writingEvaluation: aiWritingResults }
+            results: { ...results, writingEvaluation: aiWritingResults },
+            userAnswers: {
+                answers: userAnswers,
+                drafts: partBDrafts
+            }
         };
     }
 
@@ -787,25 +857,43 @@ class MockAssessmentService {
             Rubric & Mandatory Points: ${JSON.stringify(t.grading_rubric || {})}
             Requirements: ${t.requirements?.join(', ')}`).join('\n\n')}
             
+            ### MARKING CRITERIA (HKEAA 2026 STANDARDS):
+            1. CONTENT (9 Marks):
+               - Award points for correct identification and synthesis of relevant Data File points.
+               - IMPORTANT: Apply a RELEVANCE PENALTY. Deduct 0.5 marks (up to 2.0 total) for each piece of information included that is IRRELEVANT to the task instructions (e.g. including internal budget details in a customer-facing social media post).
+            2. LANGUAGE (9 Marks): Evaluation of sentence structure, vocabulary, and grammar.
+            3. ORGANIZATION (9 Marks): Evaluation of coherence, layout, and logical flow.
+            4. APPROPRIACY (9 Marks): Evaluation of tone, register, and audience awareness.
+
             ### EVALUATION MANDATE (STRICT HKEAA STANDARDS):
+            SECTION-SPECIFIC RIGOR:
+            ${selectedPart === 'B1' ? `
+            - This is Section B1 (Level 4 Capped). 
+            - Grading should be more lenient regarding linguistic sophistication. 
+            - Focus on clarity, directness, and accurate data extraction.
+            - Do NOT penalize for lack of "Level 5 flair".
+            ` : `
+            - This is Section B2 (Full Level 5** potential). 
+            - Expect high linguistic complexity, nuanced tone, and perfect synthesis.
+            `}
+
             1. **Content (0-9 marks)**: 
-               - Award marks for points found in the Data File AND specific 'Oral Information' mentioned in the Rubric.
-               - ORAL DATA SENSITIVITY: If a task's rubric says "MUST MENTION [X] (Audio)", check the draft for that point. If missing, subtract 1 Content mark.
-               - Be pedantic about evidence. If the Data File says "City Hall" and they write "Town Hall", no mark.
-            2. **Language & Style (0-6 marks)**: 
-               - Check for register (formal/informal) consistency.
-               - Accuracy of complex structures and vocabulary.
-            3. **Organization (0-6 marks)**: 
-               - Adherence to the specified format (email vs report vs social post).
-               - Logical flow and use of cohesive devices.
+               - Award marks for inclusion of relevant Data File points and Audio information.
+            2. **Language (0-9 marks)**: 
+               - Accuracy, variety of structures, and complexity of vocabulary.
+            3. **Organization (0-9 marks)**: 
+               - Logical flow, paragraphing, and structural integrity.
+            4. **Appropriacy & Register (0-9 marks)**:
+               - Consistency of tone (formal/informal) and adherence to the specified genre.
 
             ### OUTPUT FORMAT (JSON ONLY):
             {
-                "total_score": 0-21,
+                "total_score": 0-36,
                 "domains": {
-                    "content": { "score": 0-9, "feedback": "Specify which Content Points they missed from the Data File." },
-                    "language": { "score": 0-6, "feedback": "Comment on register and grammatical control." },
-                    "organization": { "score": 0-6, "feedback": "Comment on formatting and coherence." }
+                    "content": { "score": 0-9, "feedback": "..." },
+                    "language": { "score": 0-9, "feedback": "..." },
+                    "organization": { "score": 0-9, "feedback": "..." },
+                    "appropriacy": { "score": 0-9, "feedback": "..." }
                 },
                 "task_breakdown": {
                     "TASK_ID": { "comments": "...", "missed_points": ["..."] }

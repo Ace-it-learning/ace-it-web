@@ -1,0 +1,221 @@
+{
+  "type": "GRAMMAR",
+  "topic_id": "grammar_elite_modals",
+  "level": "HKDSE Level 5",
+  "conceptual_explanation": "Level 5 Modal Mastery focuses on 'Past Deductions' (guessing what happened in the past) and the subtle differences between words like 'should' and 'ought to'. These are vital for analysis and evaluation in DSE writing.",
+  "rule_cards": [
+    {
+      "name": "Degrees of Advice",
+      "formula": "Should < Ought to < Had better",
+      "correct": "You ought to finish this today. You had better leave now (or there's trouble).",
+      "incorrect": "You had better have a nice day. ('Had better' implies a threat or consequence)"
+    },
+    {
+      "name": "Past Deductions (Certainty)",
+      "formula": "Must have + PP (Strong Yes) / Can't have + PP (Strong No)",
+      "correct": "He must have forgotten (I'm sure he did). He can't have seen me (It was dark).",
+      "incorrect": "He must forget yesterday. (Modals for past deductions need 'have + PP')"
+    },
+    {
+      "name": "Past Deductions (Possibility)",
+      "formula": "Might have / Could have + PP",
+      "correct": "She might have missed the bus.",
+      "incorrect": "She could maybe have missed..."
+    },
+    {
+      "name": "Habitual 'Would'",
+      "formula": "Would + Base Verb (Repeated past actions)",
+      "correct": "Every summer, we would go to the beach.",
+      "incorrect": "I would have a dog. (Use 'used to' for past states, 'would' for actions)"
+    }
+  ],
+  "head_noun_tasks": [
+    {
+      "sentence_tokens": [
+        "You",
+        "ought",
+        "to",
+        "consult",
+        "your",
+        "lawyer",
+        "before",
+        "signing",
+        "."
+      ],
+      "head_noun_indices": [
+        1,
+        2,
+        3
+      ],
+      "explanation": "'Ought to' is a slightly more formal version of 'should'."
+    },
+    {
+      "sentence_tokens": [
+        "He",
+        "must",
+        "have",
+        "misunderstood",
+        "the",
+        "instructions",
+        "."
+      ],
+      "head_noun_indices": [
+        1,
+        2,
+        3
+      ],
+      "explanation": "'Must have' indicates a strong deduction about a past event."
+    },
+    {
+      "sentence_tokens": [
+        "They",
+        "can't",
+        "have",
+        "arrived",
+        "already",
+        ";",
+        "it's",
+        "only",
+        "nine",
+        "o'clock",
+        "."
+      ],
+      "head_noun_indices": [
+        1,
+        2,
+        3
+      ],
+      "explanation": "'Can't have' expresses a strong negative deduction."
+    },
+    {
+      "sentence_tokens": [
+        "We",
+        "had",
+        "better",
+        "leave",
+        "immediately",
+        "to",
+        "avoid",
+        "the",
+        "storm",
+        "."
+      ],
+      "head_noun_indices": [
+        1,
+        2,
+        3
+      ],
+      "explanation": "'Had better' is a strong recommendation with a sense of urgency."
+    },
+    {
+      "sentence_tokens": [
+        "Whenever",
+        "it",
+        "snowed",
+        ",",
+        "we",
+        "would",
+        "build",
+        "a",
+        "snowman",
+        "."
+      ],
+      "head_noun_indices": [
+        5,
+        6
+      ],
+      "explanation": "'Would' describes a repeated past action."
+    }
+  ],
+  "drill_tasks": [
+    {
+      "type": "MCQ",
+      "question": "The lights are off. They ________ already.",
+      "options": [
+        "must leave",
+        "must have left",
+        "can't leave",
+        "should have left"
+      ],
+      "answer": "must have left",
+      "explanation": "This is a logical deduction about the past based on current evidence."
+    },
+    {
+      "type": "MCQ",
+      "question": "You ________ pay attention, or you will fail the test.",
+      "options": [
+        "ought to",
+        "should",
+        "had better",
+        "may"
+      ],
+      "answer": "had better",
+      "explanation": "'Had better' is used when there is a negative consequence for not following the advice."
+    },
+    {
+      "type": "MCQ",
+      "question": "I'm not sure where she is. She ________ the meeting.",
+      "options": [
+        "might have forgotten",
+        "can't have forgotten",
+        "must forget",
+        "should have forgotten"
+      ],
+      "answer": "might have forgotten",
+      "explanation": "This expresses a possibility about the past."
+    },
+    {
+      "type": "MCQ",
+      "question": "When I lived in Paris, I ________ to the bakery every morning.",
+      "options": [
+        "would go",
+        "will go",
+        "must go",
+        "should go"
+      ],
+      "answer": "would go",
+      "explanation": "'Would' is used for repeated actions in the past."
+    },
+    {
+      "type": "MCQ",
+      "question": "She ________ finished already; she only started ten minutes ago!",
+      "options": [
+        "must have",
+        "can't have",
+        "should have",
+        "might have"
+      ],
+      "answer": "can't have",
+      "explanation": "Strong negative deduction based on the time taken."
+    }
+  ],
+  "boss_fight": {
+    "paragraph": "He must leave early yesterday. You had better have a great birthday! I would be very shy when I was a child.",
+    "errors": [
+      {
+        "original": "must leave early yesterday",
+        "correction": "must have left early yesterday",
+        "explanation": "For a past deduction, use 'must have' + past participle."
+      },
+      {
+        "original": "had better have a great birthday",
+        "correction": "should have a great birthday",
+        "explanation": "'Had better' implies a threat or negative consequence; it's not for well-wishing."
+      },
+      {
+        "original": "I would be very shy",
+        "correction": "I used to be very shy",
+        "explanation": "'Would' is for actions; for past states (like being shy), use 'used to'."
+      }
+    ]
+  },
+  "success_feedback": "Impressive! You've navigated the nuances of 'Had better' and mastered past deductions. Your analytical writing will benefit greatly from this.",
+  "suggested_next_steps": [
+    "Learn about 'Needn't have' vs 'Didn't need to'.",
+    "Practice using 'May well' for high probability.",
+    "Try Level 5* for elite-level modal complexity!"
+  ],
+  "interactive_tasks": [],
+  "examples": [],
+  "key_points": []
+}

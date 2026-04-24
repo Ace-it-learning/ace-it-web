@@ -1,0 +1,235 @@
+{
+  "type": "GRAMMAR",
+  "topic_id": "grammar_elite_cohesion",
+  "level": "HKDSE Level 5*",
+  "conceptual_explanation": "Level 5* Advanced Cohesion focuses on 'Balanced Argumentation'. We use devices like 'Conversely' and 'By the same token' to weigh different sides of a point. We also introduce context-setting phrases like 'In light of', which are essential for high-scoring Paper 3 tasks.",
+  "rule_cards": [
+    {
+      "name": "Balanced Comparison",
+      "formula": "Point A. Conversely, Point B. / By the same token, Point B.",
+      "correct": "Taxes may rise. Conversely, services might improve.",
+      "incorrect": "Taxes may rise, conversely services..."
+    },
+    {
+      "name": "Setting the Scene",
+      "formula": "In light of + Noun phrase, Main Clause",
+      "correct": "In light of recent events, we must act now.",
+      "incorrect": "In light for recent events..."
+    },
+    {
+      "name": "Degree of Truth",
+      "formula": "Insofar as / To the extent that + Clause",
+      "correct": "The plan is good insofar as it addresses the cost.",
+      "incorrect": "The plan is good in so far as..."
+    },
+    {
+      "name": "The 'Token' Rule",
+      "formula": "Idea 1. By the same token, Idea 2.",
+      "correct": "He is a great leader. By the same token, he is a kind friend.",
+      "incorrect": "He is a great leader, by the same token he..."
+    }
+  ],
+  "head_noun_tasks": [
+    {
+      "sentence_tokens": [
+        "In",
+        "light",
+        "of",
+        "the",
+        "new",
+        "evidence",
+        ",",
+        "the",
+        "trial",
+        "must",
+        "be",
+        "reopened",
+        "."
+      ],
+      "head_noun_indices": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "'In light of' provides the reason or context for the following action."
+    },
+    {
+      "sentence_tokens": [
+        "Conversely",
+        ",",
+        "some",
+        "argue",
+        "that",
+        "the",
+        "policy",
+        "will",
+        "stifle",
+        "innovation",
+        "."
+      ],
+      "head_noun_indices": [
+        0
+      ],
+      "explanation": "'Conversely' introduces an opposite or contrasting viewpoint."
+    },
+    {
+      "sentence_tokens": [
+        "The",
+        "law",
+        "is",
+        "effective",
+        "insofar",
+        "as",
+        "it",
+        "reduces",
+        "crime",
+        "."
+      ],
+      "head_noun_indices": [
+        4,
+        5
+      ],
+      "explanation": "'Insofar as' limits the scope of the effectiveness to a specific condition."
+    },
+    {
+      "sentence_tokens": [
+        "By",
+        "the",
+        "same",
+        "token",
+        ",",
+        "we",
+        "must",
+        "protect",
+        "the",
+        "rights",
+        "of",
+        "the",
+        "minority",
+        "."
+      ],
+      "head_noun_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "'By the same token' adds a parallel or similarly important point."
+    },
+    {
+      "sentence_tokens": [
+        "To",
+        "the",
+        "extent",
+        "that",
+        "it",
+        "is",
+        "possible",
+        ",",
+        "we",
+        "should",
+        "remain",
+        "transparent",
+        "."
+      ],
+      "head_noun_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "This phrase specifies the degree or limit of the action."
+    }
+  ],
+  "drill_tasks": [
+    {
+      "type": "MCQ",
+      "question": "The city is safe. ________, it is very expensive to live there.",
+      "options": [
+        "Conversely",
+        "By the same token",
+        "In light of",
+        "Insofar as"
+      ],
+      "answer": "Conversely",
+      "explanation": "Safety and high cost are contrasting aspects of the city."
+    },
+    {
+      "type": "MCQ",
+      "question": "________ the rising costs, we have decided to cancel the trip.",
+      "options": [
+        "Insofar as",
+        "In light of",
+        "By the same token",
+        "Conversely"
+      ],
+      "answer": "In light of",
+      "explanation": "The rising costs are the reason/context for the decision."
+    },
+    {
+      "type": "MCQ",
+      "question": "She is a talented singer. ________, she is an excellent pianist.",
+      "options": [
+        "In light of",
+        "By the same token",
+        "Conversely",
+        "Insofar as"
+      ],
+      "answer": "By the same token",
+      "explanation": "This adds a parallel positive attribute."
+    },
+    {
+      "type": "MCQ",
+      "question": "The project is a success ________ it met its deadline.",
+      "options": [
+        "in light of",
+        "by the same token",
+        "insofar as",
+        "conversely"
+      ],
+      "answer": "insofar as",
+      "explanation": "Success is measured specifically by meeting the deadline."
+    },
+    {
+      "type": "MCQ",
+      "question": "We should help him. ________, he helped us when we were in trouble.",
+      "options": [
+        "By the same token",
+        "Conversely",
+        "In light of",
+        "Insofar as"
+      ],
+      "answer": "By the same token",
+      "explanation": "This provides a parallel reason for the action."
+    }
+  ],
+  "boss_fight": {
+    "paragraph": "In light for the news, we stayed. The car is fast, conversely it uses a lot of gas. He is kind in so far as he helps people.",
+    "errors": [
+      {
+        "original": "In light for",
+        "correction": "In light of",
+        "explanation": "The correct idiom is 'In light of'."
+      },
+      {
+        "original": "fast, conversely it",
+        "correction": "fast; conversely, it",
+        "explanation": "'Conversely' requires a semicolon and a comma when linking independent sentences."
+      },
+      {
+        "original": "in so far as",
+        "correction": "insofar as",
+        "explanation": "In modern formal English, 'insofar' is usually written as one word."
+      }
+    ]
+  },
+  "success_feedback": "Magnificent! You've mastered the nuances of balanced cohesion and context-setting. Your argumentation is becoming much more persuasive.",
+  "suggested_next_steps": [
+    "Identify 'Insofar as' in legal or philosophical texts.",
+    "Practice using 'Conversely' in your next debate or argumentative essay.",
+    "Try Level 7 for the ultimate 5** cohesion challenge!"
+  ],
+  "interactive_tasks": [],
+  "examples": [],
+  "key_points": []
+}

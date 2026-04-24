@@ -35,6 +35,7 @@ const Paper3AudioEngine = forwardRef(({ script, phase, onPhaseChange, onTaskChan
                 audioRef.current.pause();
                 audioRef.current.src = "";
                 audioRef.current = null;
+                audioRef.current = null;
             }
             setIsWaitingForSelection(false);
             setIsPlaying(true);
@@ -47,7 +48,7 @@ const Paper3AudioEngine = forwardRef(({ script, phase, onPhaseChange, onTaskChan
             onIndexChange?.(nextIndex);
         }
     }));
-    const [isBuffering, setIsBuffering] = useState(false);
+    const [isEngineBuffering, setIsEngineBuffering] = useState(false);
     const [pauseCountdown, setPauseCountdown] = useState(['PART_A', 'PART_B_AUDIO', 'INDEPENDENT'].includes(phase) ? initialPause : null);
     const [prepCountdown, setPrepCountdown] = useState(phase === 'PREPARATION' ? initialPause : null);
     const audioRef = useRef(null);
@@ -114,7 +115,7 @@ const Paper3AudioEngine = forwardRef(({ script, phase, onPhaseChange, onTaskChan
         const prefetchNext = async (index) => {
             if (index >= script.length || prefetchQueue.current.has(index)) return;
             const item = script[index];
-            if (!item.text || item.text.match(/\(\d+-second pause\)/)) return; // Don't prefetch pauses
+            if (!item?.text || item.text.match(/\(\d+-(second|minute) pause\)/)) return;
 
             try {
                 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
@@ -123,13 +124,17 @@ const Paper3AudioEngine = forwardRef(({ script, phase, onPhaseChange, onTaskChan
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ text: item.text.replace(/\(\d+-second pause\)/g, ''), accent: 'UK', gender: 'FEMALE' })
                 });
-                const data = await res.json();
-                if (data.audio) prefetchQueue.current.set(index, data.audio);
+                if (res.ok) {
+                    const data = await res.json();
+                    if (data.audio) prefetchQueue.current.set(index, data.audio);
+                }
             } catch (e) { console.error("Prefetch failed for index", index); }
         };
 
-        // Prefetch next 3 items
-        for (let i = 1; i <= 3; i++) prefetchNext(currentIndex + i);
+        // Prefetch next 4 items for maximum performance
+        for (let i = 1; i <= 4; i++) {
+            prefetchNext(currentIndex + i);
+        }
     }, [currentIndex, isPlaying, script]);
 
     // MAIN EXECUTION LOOP
@@ -245,8 +250,12 @@ const Paper3AudioEngine = forwardRef(({ script, phase, onPhaseChange, onTaskChan
     }, [currentIndex, isPlaying]);
 
     useEffect(() => {
-        onStatusChange?.({ isBuffering, isPlaying, pauseCountdown });
-    }, [isBuffering, isPlaying, pauseCountdown, onStatusChange]);
+        onStatusChange?.({ 
+            isEngineBuffering: Boolean(isEngineBuffering), 
+            isPlaying: Boolean(isPlaying), 
+            pauseCountdown 
+        });
+    }, [isEngineBuffering, isPlaying, pauseCountdown, onStatusChange]);
 
     const currentRequestIdRef = useRef(0);
 
@@ -278,7 +287,7 @@ const Paper3AudioEngine = forwardRef(({ script, phase, onPhaseChange, onTaskChan
                 return;
             }
 
-            setIsBuffering(true);
+            setIsEngineBuffering(true);
             try {
                 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
                 const res = await fetch(`${API_URL}/api/lab/tts`, {
@@ -293,12 +302,12 @@ const Paper3AudioEngine = forwardRef(({ script, phase, onPhaseChange, onTaskChan
                 
                 // ABORT if a newer request has started or index changed
                 if (requestId !== currentRequestIdRef.current || (currentIndex !== myIndex && !isInternal)) {
-                    setIsBuffering(false);
+                    setIsEngineBuffering(false);
                     resolve();
                     return;
                 }
 
-                setIsBuffering(false);
+                setIsEngineBuffering(false);
                 if (data.audio) {
                     const audio = new Audio(`data:audio/mp3;base64,${data.audio}`);
                     audioRef.current = audio;
@@ -312,7 +321,7 @@ const Paper3AudioEngine = forwardRef(({ script, phase, onPhaseChange, onTaskChan
                 }
             } catch (err) {
                 console.error("Audio Engine Error:", err);
-                setIsBuffering(false);
+                setIsEngineBuffering(false);
                 setTimeout(resolve, 1500); // Fail gracefully
             }
         });
@@ -343,7 +352,7 @@ const Paper3AudioEngine = forwardRef(({ script, phase, onPhaseChange, onTaskChan
                         <div>
                             <p className="text-[10px] font-black text-slate-400 uppercase tracking-[0.3em] mb-1">Status</p>
                             <h4 className="text-xl font-black uppercase tracking-tight">
-                                {isBuffering ? 'Receiving Signal...' : 
+                                {isEngineBuffering ? 'Receiving Signal...' : 
                                  pauseCountdown ? 'Station Silence' : 
                                  isPlaying ? 'Live Broadcast' : 'System Ready'}
                             </h4>

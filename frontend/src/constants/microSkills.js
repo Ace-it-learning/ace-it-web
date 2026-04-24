@@ -162,6 +162,22 @@ export const MICRO_SKILLS = {
     grammar_elite_cohesion: {
         en: { name: 'Advanced Cohesion', desc: 'Sophisticated linking of complex arguments.', outcome: 'Forge unbreakable logical links between high-level concepts.' },
         zh: { name: '高級銜接技巧', desc: '在複雜論點之間建立高層次的邏輯銜接。', outcome: '在高深概念之間建立牢不可破的邏輯連結。' }
+    },
+    grammar_elite_nominal: {
+        en: { name: 'Nominal Clauses', desc: 'Using entire clauses as subjects or objects.', outcome: 'Master complex sentence structures using noun clauses.' },
+        zh: { name: '名詞性從句', desc: '將整個從句用作主語或賓語。', outcome: '掌握使用名詞性從句的複雜句子結構。' }
+    },
+    grammar_elite_relative: {
+        en: { name: 'Advanced Relative Clauses', desc: 'Sophisticated noun modification using prepositions and quantity.', outcome: 'Master elite relative structures like "of whom" and "whereby".' },
+        zh: { name: '高級關係從句', desc: '使用介詞與數量詞進行高層次的名詞修飾。', outcome: '掌握「of whom」及「whereby」等精英級關係結構。' }
+    },
+    grammar_elite_modals: {
+        en: { name: 'Modal Nuance', desc: 'Expressing precise degrees of certainty, obligation, and advice.', outcome: 'Wield modals with surgical precision for persuasive writing.' },
+        zh: { name: '情態動詞辨析', desc: '表達精確的確定性、義務及建議程度。', outcome: '在說服性寫作中精確運用情態動詞。' }
+    },
+    grammar_elite_passive: {
+        en: { name: 'Passive Variations', desc: 'Using advanced passive structures for objectivity and emphasis.', outcome: 'Master impersonal and complex passive forms for academic excellence.' },
+        zh: { name: '被動語態變體', desc: '使用高級被動結構以增強客觀性與強調。', outcome: '掌握無人稱及複雜被動形式，追求學術卓越。' }
     }
 };
 

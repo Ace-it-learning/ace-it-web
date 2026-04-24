@@ -1,0 +1,245 @@
+{
+  "type": "GRAMMAR",
+  "topic_id": "grammar_elite_nominal",
+  "level": "HKDSE Level 5*",
+  "conceptual_explanation": "Level 5* Nominal mastery involves 'Extraposition'—using 'It' as a placeholder for a heavy noun clause—and 'Cleft Sentences' to create focus and emphasis. These are the tools of a sophisticated rhetorician.",
+  "rule_cards": [
+    {
+      "name": "Extraposition with 'It'",
+      "formula": "It + be + Adjective + [that-clause]",
+      "correct": "It is undeniable that climate change is real.",
+      "incorrect": "That climate change is real is undeniable. (Clunky)"
+    },
+    {
+      "name": "The Appositive Clause",
+      "formula": "The [Noun] that + Clause",
+      "correct": "The fact that he survived is a miracle.",
+      "incorrect": "The fact he survived is a miracle."
+    },
+    {
+      "name": "Prep + Nominal Clause",
+      "formula": "Preposition + [whether / how / what + Clause]",
+      "correct": "He is curious about how the machine works.",
+      "incorrect": "He is curious about that the machine works."
+    },
+    {
+      "name": "The Cleft Sentence",
+      "formula": "What + Clause + be + Noun/Phrase",
+      "correct": "What we need most is leadership.",
+      "incorrect": "We need most leadership."
+    }
+  ],
+  "head_noun_tasks": [
+    {
+      "sentence_tokens": [
+        "It",
+        "is",
+        "extremely",
+        "important",
+        "that",
+        "we",
+        "understand",
+        "the",
+        "consequences",
+        "."
+      ],
+      "head_noun_indices": [
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "explanation": "This is an extraposed nominal clause where 'It' acts as a placeholder for the 'that-clause'."
+    },
+    {
+      "sentence_tokens": [
+        "The",
+        "possibility",
+        "that",
+        "the",
+        "deal",
+        "might",
+        "fail",
+        "worries",
+        "the",
+        "investors",
+        "."
+      ],
+      "head_noun_indices": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "explanation": "A nominal clause in apposition to 'The possibility'."
+    },
+    {
+      "sentence_tokens": [
+        "They",
+        "are",
+        "arguing",
+        "over",
+        "whether",
+        "the",
+        "rules",
+        "should",
+        "be",
+        "changed",
+        "."
+      ],
+      "head_noun_indices": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "explanation": "A nominal clause acting as the object of the preposition 'over'."
+    },
+    {
+      "sentence_tokens": [
+        "What",
+        "struck",
+        "me",
+        "was",
+        "how",
+        "quickly",
+        "he",
+        "reacted",
+        "to",
+        "the",
+        "danger",
+        "."
+      ],
+      "head_noun_indices": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "explanation": "This sentence contains two nominal clauses: a 'What-clause' as subject and a 'How-clause' as complement."
+    },
+    {
+      "sentence_tokens": [
+        "It",
+        "was",
+        "her",
+        "courage",
+        "that",
+        "ultimately",
+        "saved",
+        "the",
+        "day",
+        "."
+      ],
+      "head_noun_indices": [
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "explanation": "A 'Cleft Sentence' structure where the 'that-clause' emphasizes 'her courage'."
+    }
+  ],
+  "drill_tasks": [
+    {
+      "type": "MCQ",
+      "question": "________ is obvious that he is not telling the truth.",
+      "options": [
+        "That",
+        "What",
+        "It",
+        "There"
+      ],
+      "answer": "It",
+      "explanation": "'It' is used as a placeholder subject for the nominal clause at the end."
+    },
+    {
+      "type": "MCQ",
+      "question": "The assumption ________ he is innocent may be wrong.",
+      "options": [
+        "which",
+        "that",
+        "whether",
+        "of"
+      ],
+      "answer": "that",
+      "explanation": "This is an appositive noun clause clarifying the 'assumption'."
+    },
+    {
+      "type": "MCQ",
+      "question": "We are concerned ________ the impact will be on the economy.",
+      "options": [
+        "about what",
+        "about that",
+        "what",
+        "about"
+      ],
+      "answer": "about what",
+      "explanation": "Prepositions cannot take 'that-clauses' directly, but they can take 'what-clauses'."
+    },
+    {
+      "type": "MCQ",
+      "question": "It ________ the manager who made the final decision.",
+      "options": [
+        "is",
+        "was",
+        "has been",
+        "was being"
+      ],
+      "answer": "was",
+      "explanation": "Cleft sentence structure: 'It was [Subject] who/that...'."
+    },
+    {
+      "type": "MCQ",
+      "question": "________ I need to know is your final decision.",
+      "options": [
+        "That",
+        "What",
+        "It",
+        "Which"
+      ],
+      "answer": "What",
+      "explanation": "Pseudo-cleft sentence starting with 'What'."
+    }
+  ],
+  "boss_fight": {
+    "paragraph": "That is true that he failed. The idea which he could win was absurd. I am thinking about that I should go.",
+    "errors": [
+      {
+        "original": "That is true that",
+        "correction": "It is true that",
+        "explanation": "Use 'It' as the placeholder subject for extraposed clauses, not 'That'."
+      },
+      {
+        "original": "idea which he could win",
+        "correction": "idea that he could win",
+        "explanation": "Use an appositive 'that-clause' to explain a noun, not a relative 'which-clause' (unless 'win' had an object)."
+      },
+      {
+        "original": "thinking about that I",
+        "correction": "thinking about whether I",
+        "explanation": "Prepositions like 'about' cannot be followed by 'that-clauses'. Use 'whether' or 'the fact that'."
+      }
+    ]
+  },
+  "success_feedback": "Phenomenal! You've mastered extraposition, apposition, and cleft sentences. Your sentence structure is now truly elite.",
+  "suggested_next_steps": [
+    "Practice using 'It is said that...' and other impersonal passives.",
+    "Try using cleft sentences for emphasis in your writing.",
+    "Try Level 7 for the ultimate 5** nominal challenge!"
+  ],
+  "interactive_tasks": [],
+  "examples": [],
+  "key_points": []
+}

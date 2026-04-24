@@ -1,0 +1,222 @@
+{
+  "type": "GRAMMAR",
+  "topic_id": "grammar_elite_passive",
+  "level": "HKDSE Level 5*",
+  "conceptual_explanation": "Level 5* Passive mastery introduces 'Passive Infinitives' and 'Passive Gerunds'. These allow you to use the passive voice within other structures (e.g., 'I want to be told' or 'She enjoys being noticed'). We also look at the efficient 'Needs doing' structure.",
+  "rule_cards": [
+    {
+      "name": "Passive Infinitives",
+      "formula": "to + be + Past Participle",
+      "correct": "There is a lot of work to be done.",
+      "incorrect": "There is a lot of work to do. (This is active, but less precise for the work itself)"
+    },
+    {
+      "name": "Passive Gerunds",
+      "formula": "Verb-ing + being + Past Participle",
+      "correct": "She hates being interrupted while she is working.",
+      "incorrect": "She hates to be interrupt..."
+    },
+    {
+      "name": "The 'Needs Doing' Shortcut",
+      "formula": "Subject + needs + Verb-ing",
+      "correct": "The grass needs cutting. (Means: needs to be cut)",
+      "incorrect": "The grass needs cut."
+    },
+    {
+      "name": "Passive Reporting of the Past",
+      "formula": "It was [believed/said] that + Clause",
+      "correct": "In the past, it was believed that the earth was flat.",
+      "incorrect": "In the past, it is believed..."
+    }
+  ],
+  "head_noun_tasks": [
+    {
+      "sentence_tokens": [
+        "These",
+        "old",
+        "documents",
+        "need",
+        "preserving",
+        "carefully",
+        "."
+      ],
+      "head_noun_indices": [
+        3,
+        4
+      ],
+      "explanation": "'Need preserving' is a concise way to say 'need to be preserved'."
+    },
+    {
+      "sentence_tokens": [
+        "He",
+        "is",
+        "unlikely",
+        "to",
+        "be",
+        "promoted",
+        "any",
+        "time",
+        "soon",
+        "."
+      ],
+      "head_noun_indices": [
+        4,
+        5
+      ],
+      "explanation": "A passive infinitive ('to be promoted') following an adjective."
+    },
+    {
+      "sentence_tokens": [
+        "The",
+        "experience",
+        "of",
+        "being",
+        "rewarded",
+        "for",
+        "hard",
+        "work",
+        "is",
+        "very",
+        "satisfying",
+        "."
+      ],
+      "head_noun_indices": [
+        3,
+        4
+      ],
+      "explanation": "'Being rewarded' is a passive gerund acting as the object of a preposition."
+    },
+    {
+      "sentence_tokens": [
+        "It",
+        "was",
+        "thought",
+        "that",
+        "the",
+        "problem",
+        "had",
+        "been",
+        "solved",
+        "permanently",
+        "."
+      ],
+      "head_noun_indices": [
+        1,
+        2,
+        6,
+        7,
+        8
+      ],
+      "explanation": "A past impersonal passive ('was thought') combined with a past perfect passive ('had been solved')."
+    },
+    {
+      "sentence_tokens": [
+        "I",
+        "don't",
+        "like",
+        "being",
+        "told",
+        "what",
+        "to",
+        "do",
+        "."
+      ],
+      "head_noun_indices": [
+        3,
+        4
+      ],
+      "explanation": "A passive gerund ('being told') acting as the object of the verb 'like'."
+    }
+  ],
+  "drill_tasks": [
+    {
+      "type": "MCQ",
+      "question": "The car ________ as soon as possible.",
+      "options": [
+        "needs cleaning",
+        "needs clean",
+        "needs to cleaning",
+        "needs cleaned"
+      ],
+      "answer": "needs cleaning",
+      "explanation": "'Needs' + -ing is a passive structure meaning 'needs to be [Verb]ed'."
+    },
+    {
+      "type": "MCQ",
+      "question": "He expects ________ about any changes to the schedule.",
+      "options": [
+        "to inform",
+        "to be informed",
+        "being informed",
+        "informing"
+      ],
+      "answer": "to be informed",
+      "explanation": "Expects + passive infinitive."
+    },
+    {
+      "type": "MCQ",
+      "question": "Most people enjoy ________ for their efforts.",
+      "options": [
+        "praising",
+        "being praised",
+        "to be praised",
+        "be praised"
+      ],
+      "answer": "being praised",
+      "explanation": "Enjoy + passive gerund."
+    },
+    {
+      "type": "MCQ",
+      "question": "Long ago, it ________ that the stars were gods.",
+      "options": [
+        "is believed",
+        "was believed",
+        "believed",
+        "has been believed"
+      ],
+      "answer": "was believed",
+      "explanation": "Reporting a past belief requires the past passive 'was believed'."
+    },
+    {
+      "type": "MCQ",
+      "question": "The window seems ________ by a stone.",
+      "options": [
+        "to be broken",
+        "to have been broken",
+        "being broken",
+        "to break"
+      ],
+      "answer": "to have been broken",
+      "explanation": "Use a perfect passive infinitive ('to have been [PP]') for an action that already happened."
+    }
+  ],
+  "boss_fight": {
+    "paragraph": "The floor needs to wash. I don't mind to be told the truth. It is believed that the war ended fifty years ago.",
+    "errors": [
+      {
+        "original": "needs to wash",
+        "correction": "needs washing",
+        "explanation": "Use 'needs washing' (or 'needs to be washed'), not 'needs to wash'."
+      },
+      {
+        "original": "mind to be told",
+        "correction": "mind being told",
+        "explanation": "The verb 'mind' is followed by a gerund (-ing), so use 'being told' (passive gerund)."
+      },
+      {
+        "original": "It is believed that the war ended fifty years ago",
+        "correction": "The war is believed to have ended fifty years ago",
+        "explanation": "While 'It is believed that' is correct, using 'The war is believed to have ended' is more sophisticated for Level 5*."
+      }
+    ]
+  },
+  "success_feedback": "Magnificent! You've mastered passive infinitives, gerunds, and the 'needs doing' shortcut. Your command of varied sentence structures is truly distinguished.",
+  "suggested_next_steps": [
+    "Practice using passive gerunds after verbs like 'enjoy', 'mind', and 'hate'.",
+    "Try using 'needs + -ing' in a descriptive essay.",
+    "Try Level 7 for the ultimate 5** passive challenge!"
+  ],
+  "interactive_tasks": [],
+  "examples": [],
+  "key_points": []
+}

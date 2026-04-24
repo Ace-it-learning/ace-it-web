@@ -171,6 +171,11 @@ router.post('/chat', async (req, res) => {
                 }
 
                 let systemPrompt = `${GLOBAL_BASE_RULES}\n\n${persona.prompt}\n\n${AGENT_PROMPTS[agentId] || AGENT_PROMPTS.ace}`;
+                systemPrompt = systemPrompt
+                    .replace(/{{userName}}/g, (user?.displayName || "Student"))
+                    .replace(/{{agentName}}/g, persona.name)
+                    .replace(/{{DREAM_SUBJECT}}/g, (user?.dreamSubject || "University"))
+                    .replace(/{{INSIGHT_PACKAGE}}/g, UserProfileService.formatInsightsForPrompt(pContext));
                 if (promptOverride) systemPrompt += `\n\n${promptOverride}`;
 
                 const result = await GenerativeAIService.generateContent("Hello!", {
@@ -231,7 +236,8 @@ router.post('/chat', async (req, res) => {
         systemPrompt = systemPrompt
             .replace(/{{userName}}/g, (user?.displayName || "Student"))
             .replace(/{{agentName}}/g, persona.name)
-            .replace(/{{DREAM_SUBJECT}}/g, (user?.dreamSubject || "University"));
+            .replace(/{{DREAM_SUBJECT}}/g, (user?.dreamSubject || "University"))
+            .replace(/{{INSIGHT_PACKAGE}}/g, UserProfileService.formatInsightsForPrompt(pContext));
 
         const ragSnippets = effectiveMessage ? KnowledgeService.retrieveKnowledge(effectiveMessage) : null;
         if (ragSnippets) systemPrompt += `\nReference (RAG):\n${ragSnippets}`;
@@ -246,12 +252,71 @@ router.post('/chat', async (req, res) => {
             systemPrompt += "\nNATIVE HK SPEAKER MODE: Proactively skip topics already completed by the student: " + (pContext?.completedTopics?.join(', ') || "None");
         }
 
-        const result = await GenerativeAIService.generateContent(effectiveMessage, {
-            model: "ace-it-flash",
+        // Support for history-aware conversation
+        // The frontend already includes the latest message in the history array
+        const formattedHistory = (clientHistory || []).map(m => {
+            const role = (m.role === 'user') ? 'user' : 'model';
+            const text = m.parts?.[0]?.text || m.content || "";
+            return { role, parts: [{ text }] };
+        }).filter(m => m.parts[0].text.length > 0 || image); // Keep if has text or image
+
+        // If history is provided, we use it as the content array.
+        // If an image is present, we ensure the last user message includes the image data.
+        let finalContent;
+        if (formattedHistory.length > 0) {
+            finalContent = JSON.parse(JSON.stringify(formattedHistory)); // Deep copy to avoid ref issues
+            if (image) {
+                // Attach image to the last user message in the history
+                const lastUserIndex = [...finalContent].reverse().findIndex(m => m.role === 'user');
+                if (lastUserIndex !== -1) {
+                    const actualIndex = finalContent.length - 1 - lastUserIndex;
+                    if (!finalContent[actualIndex].parts) finalContent[actualIndex].parts = [];
+                    finalContent[actualIndex].parts.push({
+                        inlineData: { data: image.data, mimeType: image.mimeType || 'image/jpeg' }
+                    });
+                }
+            }
+        } else {
+            finalContent = image ? [
+                {
+                    role: 'user',
+                    parts: [
+                        { text: effectiveMessage || "Analyze this image." },
+                        { inlineData: { data: image.data, mimeType: image.mimeType || 'image/jpeg' } }
+                    ]
+                }
+            ] : [
+                { role: 'user', parts: [{ text: effectiveMessage || "Hello" }] }
+            ];
+        }
+
+        console.log(`[chatRoutes] 🤖 Calling AI Service with ${finalContent.length} messages...`);
+        const result = await GenerativeAIService.generateContent(finalContent, {
+            model: selectedModelName,
             systemInstruction: systemPrompt
+        }).catch(aiErr => {
+            console.error("[chatRoutes] AI Generation CRASHED:", aiErr);
+            throw aiErr;
         });
 
-        const replyText = result.response.text();
+        let replyText = "";
+        try {
+            if (result && result.response) {
+                replyText = result.response.text();
+            } else {
+                throw new Error("No response from AI Service");
+            }
+        } catch (textErr) {
+            console.error("[chatRoutes] Failed to extract text from AI response:", textErr);
+            // Check if it was blocked
+            const candidates = result?.response?.candidates || [];
+            if (candidates.length > 0 && candidates[0].finishReason === 'SAFETY') {
+                replyText = "I'm sorry, but I can't respond to that as it triggers my safety filters. Let's try talking about something else!";
+            } else {
+                throw new Error(`AI Service Error: ${textErr.message}`);
+            }
+        }
+
         selectedModelName = result.usedModel;
 
         if (uid !== 'guest') {
@@ -285,8 +350,9 @@ router.post('/chat', async (req, res) => {
         // Ensure we ALWAYS return JSON
         if (!res.headersSent) {
             res.status(500).json({
-                text: getMockResponse(agentId || 'ace'),
-                diag_info: `failed: ${selectedModelName || 'initialization'} (platform error)`,
+                error: e.message || "Internal AI Error",
+                text: "I'm having a little trouble connecting to my brain right now, but I'm still here for you! Why don't we try your last question again in a moment?",
+                diag_info: `failed: ${selectedModelName || 'initialization'} - ${e.message}`,
                 error_details: e.message,
                 handled: true
             });
@@ -319,7 +385,7 @@ router.get('/history/:agentId', async (req, res) => {
         res.json(filteredHistory);
     } catch (e) {
         console.error("History Fetch Error:", e);
-        res.status(500).json([]);
+        res.status(500).json({ error: "Failed to fetch history" });
     }
 });
 

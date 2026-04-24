@@ -1,0 +1,227 @@
+{
+  "type": "GRAMMAR",
+  "topic_id": "grammar_elite_modals",
+  "level": "HKDSE Level 5*",
+  "conceptual_explanation": "Level 5* Modal mastery focuses on complex timeframes like 'Must have been working' and the subtle difference between 'Needn't have' and 'Didn't need to'. These distinctions show a profound grasp of English logic.",
+  "rule_cards": [
+    {
+      "name": "The 'Waste of Time' Distinction",
+      "formula": "Needn't have + PP (Did it, but unnecessary) vs. Didn't need to (Didn't do it because unnecessary)",
+      "correct": "I needn't have brought my umbrella (it didn't rain). I didn't need to bring it (so I left it at home).",
+      "incorrect": "I didn't need to bring my umbrella, but I did anyway. (Use 'needn't have' for this)"
+    },
+    {
+      "name": "Modal Perfect Continuous",
+      "formula": "Modal + have been + Verb-ing",
+      "correct": "He must have been sleeping (I'm sure he was at that moment).",
+      "incorrect": "He must have slept when I called. (Continuous is better for an ongoing past action)"
+    },
+    {
+      "name": "Dare as a Modal",
+      "formula": "Dare (not) + Base Verb (Usually negative or questions)",
+      "correct": "I dare not ask him for a favor.",
+      "incorrect": "I don't dare ask... (This is also correct, but 'dare not' is the modal form)"
+    },
+    {
+      "name": "Hypothetical Modals",
+      "formula": "Could/Might have + PP (Ability/Possibility that wasn't used)",
+      "correct": "You could have told me! (But you didn't).",
+      "incorrect": "You should told me."
+    }
+  ],
+  "head_noun_tasks": [
+    {
+      "sentence_tokens": [
+        "I",
+        "needn't",
+        "have",
+        "worried",
+        "about",
+        "the",
+        "test",
+        "results",
+        "."
+      ],
+      "head_noun_indices": [
+        1,
+        2,
+        3
+      ],
+      "explanation": "'Needn't have' indicates that the speaker worried, but it turned out to be unnecessary."
+    },
+    {
+      "sentence_tokens": [
+        "He",
+        "must",
+        "have",
+        "been",
+        "waiting",
+        "for",
+        "hours",
+        "in",
+        "the",
+        "rain",
+        "."
+      ],
+      "head_noun_indices": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "explanation": "A modal perfect continuous used for a strong deduction about an ongoing past action."
+    },
+    {
+      "sentence_tokens": [
+        "We",
+        "didn't",
+        "need",
+        "to",
+        "buy",
+        "extra",
+        "food",
+        "as",
+        "there",
+        "was",
+        "plenty",
+        "."
+      ],
+      "head_noun_indices": [
+        1,
+        2,
+        4
+      ],
+      "explanation": "'Didn't need to' implies the action wasn't performed because it wasn't necessary."
+    },
+    {
+      "sentence_tokens": [
+        "How",
+        "dare",
+        "you",
+        "speak",
+        "to",
+        "me",
+        "in",
+        "that",
+        "tone",
+        "!"
+      ],
+      "head_noun_indices": [
+        1,
+        3
+      ],
+      "explanation": "'Dare' functions as a modal here in a challenge or question."
+    },
+    {
+      "sentence_tokens": [
+        "You",
+        "might",
+        "have",
+        "mentioned",
+        "that",
+        "the",
+        "meeting",
+        "was",
+        "canceled",
+        "."
+      ],
+      "head_noun_indices": [
+        1,
+        2,
+        3
+      ],
+      "explanation": "'Might have' is used here to express a mild criticism or a missed opportunity."
+    }
+  ],
+  "drill_tasks": [
+    {
+      "type": "MCQ",
+      "question": "I ________ the report, but I did anyway just in case.",
+      "options": [
+        "didn't need to write",
+        "needn't have written",
+        "mustn't have written",
+        "shouldn't write"
+      ],
+      "answer": "needn't have written",
+      "explanation": "Use 'needn't have' when the action was performed but was actually unnecessary."
+    },
+    {
+      "type": "MCQ",
+      "question": "He was very tired. He ________ all night.",
+      "options": [
+        "must have been working",
+        "must work",
+        "should have worked",
+        "can't have been working"
+      ],
+      "answer": "must have been working",
+      "explanation": "This describes a strong deduction about an ongoing action in the past."
+    },
+    {
+      "type": "MCQ",
+      "question": "Since the museum was free, we ________ for tickets.",
+      "options": [
+        "didn't need to pay",
+        "needn't have paid",
+        "mustn't pay",
+        "shouldn't have paid"
+      ],
+      "answer": "didn't need to pay",
+      "explanation": "Since it was free, you presumably didn't pay (or knew not to)."
+    },
+    {
+      "type": "MCQ",
+      "question": "I ________ tell her the truth; she will be so upset.",
+      "options": [
+        "dare not",
+        "dare not to",
+        "not dare",
+        "don't dare to"
+      ],
+      "answer": "dare not",
+      "explanation": "The modal form 'dare not' is followed by a base verb without 'to'."
+    },
+    {
+      "type": "MCQ",
+      "question": "You ________ me you were coming; I would have prepared dinner.",
+      "options": [
+        "could have told",
+        "might tell",
+        "should tell",
+        "must have told"
+      ],
+      "answer": "could have told",
+      "explanation": "This expresses a missed opportunity in the past."
+    }
+  ],
+  "boss_fight": {
+    "paragraph": "I didn't need to bring the gift, but I did. He must have worked when I saw him. How dare you to tell me that!",
+    "errors": [
+      {
+        "original": "didn't need to bring the gift, but I did",
+        "correction": "needn't have brought the gift",
+        "explanation": "Use 'needn't have' when an unnecessary action was actually performed."
+      },
+      {
+        "original": "must have worked",
+        "correction": "must have been working",
+        "explanation": "Use the continuous form for a deduction about an action that was in progress."
+      },
+      {
+        "original": "dare you to tell",
+        "correction": "dare you tell",
+        "explanation": "As a modal, 'dare' is followed by the base verb without 'to'."
+      }
+    ]
+  },
+  "success_feedback": "Phenomenal! You've mastered the 'Waste of Time' distinction and complex modal timeframes. Your control over logic and tone is outstanding.",
+  "suggested_next_steps": [
+    "Practice using 'Needn't have' in your writing.",
+    "Look for 'dare' used as a modal in formal literature.",
+    "Try Level 7 for the ultimate 5** modal challenge!"
+  ],
+  "interactive_tasks": [],
+  "examples": [],
+  "key_points": []
+}

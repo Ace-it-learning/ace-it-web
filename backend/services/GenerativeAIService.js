@@ -25,16 +25,26 @@ class GenerativeAIService {
         const forceAIStudio = process.env.USE_AI_STUDIO_IN_PROD === 'true';
         const forceVertexInDev = process.env.FORCE_VERTEX_IN_DEV === 'true';
 
-        // SAFE ISOLATION: Use Vertex ONLY in Production or if Force-Enabled in Dev (Emergency only)
-        if ((isProduction || (NODE_ENV === 'development' && forceVertexInDev)) && !forceAIStudio) {
+        // 🛡️ HARD ISOLATION (2026 Cost Control)
+        // In Development, we EXCLUSIVELY use AI Studio (Free Tier).
+        // Vertex AI is physically blocked here to prevent accidental charges from the DEV service account.
+        const isDev = NODE_ENV === 'development' || !process.env.K_SERVICE; // K_SERVICE is only present in Cloud Run
+        const isHardBlocked = isDev && process.env.I_KNOW_THIS_COSTS_MONEY !== 'true';
+
+        if (isHardBlocked || forceAIStudio) {
+            if (isDev) {
+                console.log(`[AIService] 🛡️  HARD COST GUARD: Blocking Vertex AI in DEV. Routing to Google AI Studio (Free).`);
+            }
+            this.initAIStudio();
+            this.initialized = true;
+            return;
+        }
+
+        // Only reach this if we are in PRODUCTION (Cloud Run) or the user has explicitly bypassed the guard.
+        if (isProduction || (isDev && !isHardBlocked)) {
             try {
                 const { VertexAI } = require('@google-cloud/vertexai');
                 const fs = require('fs');
-                
-                // 2026 ARCHITECTURAL REQUIREMENTS:
-                // 1. Project ID: Dynamically retrieved from SA JSON
-                // 2. Location: asia-southeast1 (Singapore)
-                // 3. Auth: Explicitly load antigravity-tutor-prod-key.json
                 
                 const saPath = path.join(__dirname, '../config/antigravity-tutor-prod-key.json');
 
@@ -77,14 +87,8 @@ class GenerativeAIService {
                 console.warn("[AIService] ⚠️ Falling back to AI Studio...");
                 this.initAIStudio();
             }
-        } else {
-            // Development environment or forced AI Studio
-            if (NODE_ENV === 'development') {
-                console.log(`[AIService] 🛠️  DEV MODE DETECTED: Forcing Google AI Studio (Free Tier)`);
-            }
-            this.initAIStudio();
         }
-
+        
         this.initialized = true;
     }
 
@@ -110,6 +114,10 @@ class GenerativeAIService {
 
     initAIStudio() {
         const apiKey = process.env.GOOGLE_API_KEY || process.env.GEMINI_API_KEY;
+        if (!apiKey) {
+            console.error("[AIService] ❌ CRITICAL: GOOGLE_API_KEY or GEMINI_API_KEY is missing from environment variables.");
+            throw new Error("AI service is not configured (missing API key)");
+        }
         this.genAI = new GoogleGenerativeAI(apiKey);
         this.isVertex = false;
         this.currentRegion = 'global/api_key';
@@ -245,7 +253,10 @@ class GenerativeAIService {
      */
     async generateContent(prompt, config = {}, retries = 3) {
         const result = await this.executeWithRetry(async (model) => {
-            return await model.generateContent(prompt);
+            const contents = Array.isArray(prompt) 
+                ? prompt 
+                : [{ role: 'user', parts: [{ text: prompt.toString() }] }];
+            return await model.generateContent({ contents });
         }, prompt, config, retries);
 
         // Standardize the response structure (Ensuring .text() is ALWAYS a function)
@@ -437,10 +448,10 @@ class GenerativeAIService {
     async sendMessage(chatSession, message, config = {}, retries = 6) {
         return this.executeWithRetry(async (retryModel, isRetry) => {
             if (isRetry) {
-                // If a retry is triggered with a different model, the original chatSession 
-                // is no longer compatible. We fall back to standard stateless generation 
-                // for the retry attempt to ensure the user gets a response.
-                return await retryModel.generateContent(message);
+                const contents = Array.isArray(message) 
+                    ? message 
+                    : [{ role: 'user', parts: [{ text: message.toString() }] }];
+                return await retryModel.generateContent({ contents });
             }
             return await chatSession.sendMessage(message);
         }, message, config, retries);

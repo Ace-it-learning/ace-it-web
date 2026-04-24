@@ -82,6 +82,84 @@ const DictionaryPopover = ({ data, position, onClose, onAddToNotebook, loading }
     );
 };
 
+// --- Formula Visualizer Component (Option 1: Semantic Pill Map) ---
+const FormulaVisualizer = ({ formula }) => {
+    if (!formula) return null;
+
+    // Split into segments but keep brackets and parentheses
+    // Example: "[Subject 1] + (along with/as well as) + [Subject 2] + [Verb]"
+    // Also handle simple text separated by " + " or " | "
+    const parts = formula.split(/(\[.*?\]|\(.*?\)| \+ | \| )/g)
+        .map(p => p.trim())
+        .filter(p => p && p !== '+' && p !== '|');
+
+    return (
+        <div className="flex flex-wrap items-center justify-center gap-4 py-8 relative">
+            {parts.map((part, idx) => {
+                const isPill = part.startsWith('[') && part.endsWith(']');
+                const isNoise = part.startsWith('(') && part.endsWith(')');
+                const cleanPart = part.replace(/[\[\]\(\)]/g, '');
+
+                if (isPill || (!isNoise && cleanPart.length > 0)) {
+                    const isVerb = cleanPart.toLowerCase().includes('verb');
+                    const isPrimary = cleanPart.toLowerCase().includes('subject 1') || cleanPart.toLowerCase().includes('target');
+                    const isSecondary = cleanPart.toLowerCase().includes('subject 2');
+
+                    return (
+                        <motion.div
+                            key={idx}
+                            initial={{ scale: 0.9, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            transition={{ delay: idx * 0.1 }}
+                            className={`px-6 py-4 rounded-3xl font-black text-sm md:text-lg border-2 shadow-sm relative group ${
+                                isVerb ? 'bg-green-50 border-green-500 text-green-700' :
+                                isPrimary ? 'bg-indigo-50 border-indigo-500 text-indigo-700' :
+                                isSecondary ? 'bg-gray-50 border-gray-200 text-gray-400 opacity-50 grayscale' :
+                                'bg-white border-gray-200 text-gray-800'
+                            }`}
+                        >
+                            {cleanPart}
+                            {isPrimary && (
+                                <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-2 py-0.5 bg-indigo-600 text-[10px] text-white rounded-full uppercase tracking-widest whitespace-nowrap">
+                                    Primary
+                                </div>
+                            )}
+                            {isVerb && (
+                                <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-2 py-0.5 bg-green-600 text-[10px] text-white rounded-full uppercase tracking-widest whitespace-nowrap">
+                                    Matches
+                                </div>
+                            )}
+                        </motion.div>
+                    );
+                }
+
+                if (isNoise) {
+                    return (
+                        <motion.div
+                            key={idx}
+                            initial={{ scale: 0.9, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            transition={{ delay: idx * 0.1 }}
+                            className="flex flex-col items-center"
+                        >
+                            <div className="px-4 py-3 rounded-2xl bg-gray-100/50 border border-gray-200 text-gray-400 text-xs md:text-sm font-bold italic opacity-40">
+                                {cleanPart}
+                            </div>
+                            <span className="text-[10px] font-black text-gray-300 uppercase tracking-widest mt-1">Ignore</span>
+                        </motion.div>
+                    );
+                }
+
+                return (
+                    <span key={idx} className="text-gray-300 text-2xl font-bold">
+                        {part === '|' ? '|' : '+'}
+                    </span>
+                );
+            })}
+        </div>
+    );
+};
+
 // --- Rule Card Component ---
 const RuleCard = ({ rule, onNext, isLast }) => {
     return (
@@ -99,9 +177,9 @@ const RuleCard = ({ rule, onNext, isLast }) => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch mb-10">
                 {/* Left Side: Formula */}
-                <div className="p-10 bg-gray-50 dark:bg-gray-800/40 rounded-[2.5rem] border-2 border-dashed border-indigo-200 dark:border-indigo-800 flex flex-col justify-center">
-                    <h4 className="text-[10px] font-black text-indigo-600 dark:text-indigo-400 uppercase tracking-widest mb-4">Core Formula</h4>
-                    <p className="text-3xl md:text-4xl font-black text-gray-900 dark:text-white leading-[1.1]">{rule.formula}</p>
+                <div className="p-8 bg-gray-50 dark:bg-gray-800/40 rounded-[2.5rem] border-2 border-dashed border-indigo-200 dark:border-indigo-800 flex flex-col justify-center min-h-[250px]">
+                    <h4 className="text-[10px] font-black text-indigo-600 dark:text-indigo-400 uppercase tracking-widest mb-2 text-center">Core Formula Breakdown</h4>
+                    <FormulaVisualizer formula={rule.formula} />
                 </div>
 
                 {/* Right Side: Examples */}
@@ -174,6 +252,34 @@ const HeadNounSelector = ({ task, onComplete, topic }) => {
         phaseTitle = "Phase 2: Inversion Trigger Identification";
         mainInstruction = "Click the 'Negative Adverbial' or 'Condition' that triggers the inversion.";
         subInstruction = "Identify the word or phrase that forces the auxiliary verb to move before the subject.";
+    } else if (topic?.includes('subjunctive')) {
+        phaseTitle = "Phase 2: Subjunctive Mood Identification";
+        mainInstruction = "Click the 'Mandatory Phrase' or the 'Subjunctive Verb' in the sentence below.";
+        subInstruction = "Identify the structure that requires the base form of the verb (e.g., 'It is essential that he be...').";
+    } else if (topic?.includes('participle')) {
+        phaseTitle = "Phase 2: Participle Phrase Identification";
+        mainInstruction = "Click the 'Participle' (Present/Past) and the 'Subject' it modifies.";
+        subInstruction = "Identify the relationship between the descriptive phrase and the noun it describes.";
+    } else if (topic?.includes('cohesion')) {
+        phaseTitle = "Phase 2: Cohesive Device Identification";
+        mainInstruction = "Click the 'Cohesive Device' or 'Transition' in the sentence below.";
+        subInstruction = "Identify the word or phrase that links ideas together (e.g., 'Nonetheless', 'In light of').";
+    } else if (topic?.includes('nominal')) {
+        phaseTitle = "Phase 2: Nominal Clause Identification";
+        mainInstruction = "Click the 'Noun Clause' (including the marker like 'What' or 'Whether').";
+        subInstruction = "Identify the entire clause that acts as the subject or object of the main verb.";
+    } else if (topic?.includes('relative')) {
+        phaseTitle = "Phase 2: Advanced Relative Clause Identification";
+        mainInstruction = "Click the 'Relative Pronoun' (e.g., 'whom', 'whereby') and the 'Noun' it describes.";
+        subInstruction = "Identify the complex structure used to modify the noun (e.g., 'in which', 'of whom').";
+    } else if (topic?.includes('modals')) {
+        phaseTitle = "Phase 2: Modal Nuance Identification";
+        mainInstruction = "Click the 'Modal Verb' and the 'Primary Verb' it modifies.";
+        subInstruction = "Identify the word that expresses certainty, obligation, or possibility.";
+    } else if (topic?.includes('passive')) {
+        phaseTitle = "Phase 2: Passive Variation Identification";
+        mainInstruction = "Click the 'Passive Verb' (be + past participle) or the 'Dummy Subject'.";
+        subInstruction = "Identify the structures used to shift focus away from the doer of the action.";
     }
 
     // Reset state when task changes to fix "stuck" selections between questions
@@ -352,7 +458,6 @@ const LabPage = () => {
     const focus = searchParams.getAll('focus');
     const initialLevel = searchParams.get('level') || '3'; // Default to 3 if not specified
     const location = useLocation(); // Add useLocation for state access
-    const missionXp = location.state?.taskXp || location.state?.xp || 80;
     console.log("LabPage: Location State", location.state);
 
     const [currentLevel, setCurrentLevel] = useState(() => {
@@ -376,6 +481,13 @@ const LabPage = () => {
         // If it's '3' or '4' and we reached here, treat it as a level first.
         return lvlStr || '3';
     });
+
+    const missionXp = location.state?.taskXp || location.state?.xp || (
+        currentLevel === '7' ? 350 : 
+        currentLevel === '6' ? 250 : 
+        currentLevel === '5' ? 200 : 
+        currentLevel === '4' ? 150 : 100
+    );
 
     const [loading, setLoading] = useState(true);
     const [lessonData, setLessonData] = useState(null);
@@ -970,10 +1082,17 @@ const LabPage = () => {
                 });
             }
 
-            // XP Calculation: Fixed at 50 for Grammar Lab, proportional to score
-            let taskXp = location.state?.taskXp || 50;
+            // XP Calculation: Proportional to score and level difficulty
+            const baseLevelXp = (
+                currentLevel === '7' ? 350 : 
+                currentLevel === '6' ? 250 : 
+                currentLevel === '5' ? 200 : 
+                currentLevel === '4' ? 150 : 100
+            );
+            
+            let taskXp = location.state?.taskXp || baseLevelXp;
             if (lessonData?.type === 'GRAMMAR' || location.state?.isGrammarLab) {
-                taskXp = 50; 
+                taskXp = baseLevelXp; 
             }
 
             const calculatedXp = Math.floor((correctCount / Math.max(1, totalCount)) * taskXp);
@@ -1097,9 +1216,14 @@ const LabPage = () => {
                 else if (lessonData.mode === 'MINI_ESSAY') skillId = 'writing_development';
             }
 
-            const baseXp = 50;
-            const levelMultiplier = numericScore >= 80 ? 1.5 : 1;
-            const finalXp = Math.floor(baseXp * levelMultiplier);
+            const baseLevelXp = (
+                currentLevel === '7' ? 350 : 
+                currentLevel === '6' ? 250 : 
+                currentLevel === '5' ? 200 : 
+                currentLevel === '4' ? 150 : 100
+            );
+            const levelMultiplier = numericScore >= 80 ? 1.2 : (numericScore >= 60 ? 1.0 : 0.5);
+            const finalXp = Math.floor(baseLevelXp * levelMultiplier);
             setEarnedXp(finalXp);
             setMasteryScore(numericScore);
 
@@ -1307,7 +1431,12 @@ const LabPage = () => {
                             {['3', '4', '5', '5*', '5**'].map(lvl => (
                                 <button
                                     key={lvl}
-                                    onClick={() => handleCheat(lvl)}
+                                    onClick={() => {
+                                        const norm = lvl === '5**' ? '7' : lvl === '5*' ? '6' : lvl;
+                                        const newParams = new URLSearchParams(searchParams);
+                                        newParams.set('level', norm);
+                                        setSearchParams(newParams);
+                                    }}
                                     disabled={isSubmitting}
                                     className={`text-[10px] font-bold px-2 py-0.5 rounded transition-colors ${
                                         currentLevel === (lvl === '5**' ? '7' : lvl === '5*' ? '6' : lvl)
@@ -1394,7 +1523,7 @@ const LabPage = () => {
                                     <div className="flex flex-col items-center justify-center p-6 bg-amber-50 dark:bg-amber-900/20 border-2 border-amber-200 dark:border-amber-800 rounded-[2.5rem] shadow-sm transform hover:rotate-3 transition-transform">
                                         <div className="flex items-center gap-2 text-amber-600 dark:text-amber-400">
                                             <Award size={32} className="fill-current" />
-                                            <span className="text-4xl font-black">+{location.state?.taskXp || 100}</span>
+                                            <span className="text-4xl font-black">+{missionXp}</span>
                                         </div>
                                         <span className="text-[10px] font-black uppercase tracking-widest text-amber-500 mt-1">{t('lab.xp_points')}</span>
                                     </div>

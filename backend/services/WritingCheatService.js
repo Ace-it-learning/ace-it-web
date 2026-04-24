@@ -29,7 +29,7 @@ class WritingCheatService {
         };
     }
 
-    async generateCheatResponse(level, part, questionType, situation) {
+    async generateCheatResponse(level, part, questionType, situation, wordLimit = null, dataContext = "") {
         // 0. Check for Golden Fallback first for instant results during testing
         const keywords = ["mandatory", "voluntary", "community service", "graduation requirement"];
         const isTargetMock = keywords.some(k => situation.toLowerCase().includes(k)) || 
@@ -69,8 +69,11 @@ class WritingCheatService {
             styleInstructions = `
             - Vocabulary: Use highly sophisticated, precise, and academic terminology (e.g. "detrimental", "imperative", "transformative").
             - Structure: Use a wide range of complex and varied sentence structures (inversions, participial phrases, cleft sentences).
-            - Tone: Sophisticated, nuanced, and demonstrates native-like flair.`;
+            - AUDIENCE AWARENESS: While sophisticated, the tone must be APPROPRIATE for the task. If writing a notice for seniors, be extremely clear. If writing a formal report, be academic. 
+            - DO NOT use "purple prose" (overly flowery language that hinders communication). Focus on sophisticated clarity.`;
         }
+
+        const targetLength = wordLimit ? `${wordLimit} words (+/- 10%)` : (part === 'A' ? "200-250 words" : "450-550 words");
 
         const prompt = `
             SYSTEM ROLE: You are an actor playing the role of an HKDSE student.
@@ -80,13 +83,17 @@ class WritingCheatService {
             PART: ${part}
             TASK TYPE: ${questionType}
             SITUATION: ${situation}
+            TARGET LENGTH: ${targetLength}
+
+            ### DATA FILE CONTEXT (Source of Truth):
+            ${dataContext}
 
             STRICT ADHERENCE TO LEVEL ${level} DESCRIPTORS:
             ${styleInstructions}
 
             GENERAL REQUIREMENTS:
             - Title: Genre-appropriate.
-            - Content: 200-250 words (Part A) or 450-550 words (Part B).
+            - Content: MUST adhere to the TARGET LENGTH of ${targetLength}.
             - Strictly follow HKDSE 0-7 marking descriptors for Level ${level}.
 
             You MUST return a JSON object with this EXACT structure:
@@ -101,8 +108,9 @@ class WritingCheatService {
             
             // Attempt 1: Centralized JSON Generation (High Rigor)
             const response = await GenerativeAIService.generateJson(prompt, {
-                model: "ace-it-flash",
-                temperature: (isLevel2 || isLevel4) ? 0.8 : 0.3,
+                model: level === '5**' ? "ace-it-pro" : "ace-it-flash",
+                temperature: (level === '2' || level === '4') ? 0.8 : 0.3,
+                highQuality: level === '5**',
                 retries: 5
             });
 

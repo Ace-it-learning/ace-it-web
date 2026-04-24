@@ -6,9 +6,13 @@ const keyPath = path.join(__dirname, '../serviceAccountKey.json');
 const hasKey = require('fs').existsSync(keyPath);
 const isProduction = process.env.NODE_ENV === 'production';
 
-const client = hasKey ? new speech.SpeechClient({
+const client = (hasKey && !isProduction) ? null : (hasKey ? new speech.SpeechClient({
     keyFilename: keyPath
-}) : null;
+}) : null);
+
+if (!isProduction && hasKey) {
+    console.log(`[PronunciationService] 🛡️ DEV HARDENING: SDK key found but bypassing for Gemini (AI Studio) Free Tier.`);
+}
 
 class PronunciationService {
     /**
@@ -21,10 +25,10 @@ class PronunciationService {
         try {
             console.log(`[PronunciationService] Audio received: ${audioBase64.length} bytes (Mime: ${audioType})`);
 
-            // Use the Professional SDK whenever a client (Key) is available
-            if (!client) {
-                console.log(`[PronunciationService] No SDK Client detected. Using Gemini fallback.`);
-                throw new Error("No GCloud SDK Client available");
+            // [2026] DEV HARDENING: Bypass Cloud SDK in development to use AI Studio Gemini
+            if (!client || !isProduction) {
+                console.log(`[PronunciationService] ${!isProduction ? 'DEV HARDENING' : 'No SDK Client'}: Using Gemini fallback.`);
+                throw new Error("Using Gemini fallback");
             }
 
             const audio = {

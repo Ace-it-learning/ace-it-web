@@ -478,6 +478,25 @@ class UserProfileService {
             const RoadmapService = require('./RoadmapService');
             const completedTopics = await RoadmapService.getCompletedTopics(uid, subject === 'math' ? 'maths' : subject);
 
+            // RECOMMENDED NEXT STEPS
+            let recommendedNextSteps = [];
+            if (skillMap?.level >= 4 && skippedPapers.length > 0) {
+                recommendedNextSteps.push(`Take a ${skippedPapers[0]} Mock Exam`);
+            } else if (topWeaknesses.length > 0) {
+                recommendedNextSteps.push(`Practice ${topWeaknesses[0].split(' (')[0]}`);
+            }
+
+            if (!weeklyStatus.completed) {
+                recommendedNextSteps.push("Finish Weekly Challenge");
+            }
+
+            // Get Available Quests for the subject
+            let availableQuests = [];
+            const skills = subject === 'maths' || subject === 'math' ? MATHS_MICRO_SKILLS : MICRO_SKILLS;
+            availableQuests = Object.values(skills)
+                .filter(s => s.paper !== 'mock' && s.paper !== 'assessment') // Filter out full mocks
+                .map(s => s.name);
+
             return {
                 nickname: profile?.nickname || profile?.displayName || "Student",
                 grade: profile?.grade || "F4",
@@ -486,16 +505,36 @@ class UserProfileService {
                 recentMistakes: mistakes.map(m => m.term).filter(Boolean),
                 skippedPapers,
                 completedTopics,
+                recommendedNextSteps,
                 weeklyQuest: {
                     weekId: weeklyStatus.weekId,
                     completed: weeklyStatus.completed,
                     daysRemaining: daysToSunday
-                }
+                },
+                availableQuests: availableQuests.slice(0, 30) // Limit to avoid token bloat
             };
         } catch (err) {
             console.error(`[UserProfileService] Error creating personalized context for ${uid}:`, err);
             return null;
         }
+    }
+
+    /**
+     * High-Density Insight Formatter (Token Optimization)
+     */
+    formatInsightsForPrompt(pContext) {
+        if (!pContext) return "No data available.";
+        
+        const parts = [
+            `LVL:${pContext?.level || '?'}`,
+            `W:${pContext?.topWeaknesses?.map(w => w.split(' (')[0]).join(',') || 'None'}`,
+            `DONE:${pContext?.completedTopics?.length || 0}`,
+            `WEEKLY:${pContext?.weeklyQuest?.completed ? 'DONE' : (pContext?.weeklyQuest?.daysRemaining ? pContext.weeklyQuest.daysRemaining + 'd' : '?')}`,
+            `NEXT:${pContext?.recommendedNextSteps?.join(';') || 'None'}`,
+            `QUESTS:${pContext?.availableQuests?.join(';') || 'None'}`
+        ];
+        
+        return `[STUDENT_INSIGHTS] ${parts.filter(Boolean).join(' | ')}`;
     }
 
     /**
@@ -1007,16 +1046,34 @@ class UserProfileService {
     }
 
     /**
-     * Incrementally update a specific micro-skill level.
-     * Logic: Uses a "Sliding Window" of last 10 attempts for English to allow redemption.
+     * Update Micro-Skill level for a user (Subject Proficiency).
+     * This updates the persistent Ability Radar chart data.
+     * @param {string} uid - User ID
+     * @param {string} subject - 'english' | 'maths'
+     * @param {string} skillId - Technical ID (e.g., 'reading_inference')
+     * @param {number} masteryScore - 0-100 (percentage)
+     * @param {Object} sessionDetails - { type: 'Quest'|'Mock', difficulty: 1-7, ... }
      */
-    async updateMicroSkillLevel(uid, subject, skillId, masteryScore, sessionDetails = {}) {
-        if (!uid || uid === 'guest' || !skillId) return;
+    async updateMicroSkillLevel(uid, subject, rawSkillId, masteryScore, sessionDetails = {}) {
+        if (!uid || uid === 'guest') return;
+
+        const skillId = this.normalizeSkillId(rawSkillId, subject);
+        if (!skillId) return;
+
+        const cacheKey = `skillmap_${subject}_${uid}`;
+        CacheService.invalidateDbCache(cacheKey);
+
         try {
-            const progressRef = this.db.collection('users').doc(uid).collection('progress').doc(subject);
+            const progressRef = this.usersCollection.doc(uid).collection('progress').doc(subject);
             const doc = await progressRef.get();
 
-            let data = {};
+            let data = {
+                subject: subject === 'maths' ? 'Mathematics' : 'English',
+                overall_level: 1,
+                microSkills: {},
+                practicedSkills: [],
+                lastUpdated: admin.firestore.FieldValue.serverTimestamp()
+            };
             if (doc.exists) {
                 data = doc.data();
             } else {
@@ -1473,6 +1530,91 @@ ${tutor.tone ? `**TONE & MANNER**: ${tutor.tone}` : ''}
         } catch (error) {
             console.error(`[UserProfileService] Error deleting user profile for ${uid}:`, error);
             throw error;
+        }
+    }
+    /**
+     * Normalizes a skill ID or display name into a technical ID.
+     */
+    normalizeSkillId(id, subject = 'english') {
+        if (!id) return null;
+        
+        const pool = subject === 'math' || subject === 'maths' ? MATHS_MICRO_SKILLS : MICRO_SKILLS;
+        
+        // 1. Direct Match
+        if (pool[id]) return id;
+
+        // 2. Case-Insensitive/Display Name Match
+        const normalizedInput = id.toLowerCase().trim();
+        const byName = Object.values(pool).find(s => s.name.toLowerCase() === normalizedInput);
+        if (byName) return byName.id;
+
+        // 3. Fuzzy/Shorthand Mappings for English
+        if (subject === 'english') {
+            const mappings = {
+                'inference': 'reading_inference',
+                'main idea': 'reading_mainIdea',
+                'main idea identification': 'reading_mainIdea',
+                'detail recognition': 'reading_detailRecognition',
+                'literal comprehension': 'reading_literalComprehension',
+                'sequencing': 'reading_sequencing',
+                'synthesis': 'reading_synthesis',
+                'fact vs opinion': 'reading_factVsOpinion',
+                'author\'s purpose': 'reading_authorPurpose',
+                'tone & attitude': 'reading_toneAttitude',
+                'register & style': 'reading_registerStyle',
+                'metaphorical language': 'reading_metaphoricalLanguage',
+                'text organisation': 'reading_textOrganization',
+                'skimming & scanning': 'reading_skimmingScanning',
+                'paraphrasing': 'reading_paraphrasing',
+                'cohesion & reference': 'reading_cohesionReference',
+                // Mock Specific Tags
+                'content': 'writing_relevance',
+                'language': 'writing_grammaticalAccuracy',
+                'organization': 'writing_paragraphStructure',
+                'appropriacy': 'writing_registerAppropriate'
+            };
+            if (mappings[normalizedInput]) return mappings[normalizedInput];
+            
+            // Try prefix search (e.g. "inference" -> "reading_inference")
+            const prefixMatch = Object.keys(pool).find(key => key.endsWith('_' + normalizedInput) || key.includes(normalizedInput.replace(/\s/g, '')));
+            if (prefixMatch) return prefixMatch;
+        }
+
+        return id;
+    }
+
+    /**
+     * Syncs Mock Exam results to the User Mastery Radar.
+     * @param {string} uid - User ID
+     * @param {string} subject - 'english' | 'maths'
+     * @param {Object} assessment - Evaluation results from MockService
+     */
+    async syncMockResultsToMastery(uid, subject, assessment) {
+        if (!uid || uid === 'guest' || !assessment) return;
+
+        console.log(`[UserProfileService] Syncing Mock Results to Mastery for ${uid} (${subject})`);
+        
+        try {
+            const skillScores = assessment.skillScores || {};
+            const promises = Object.entries(skillScores).map(([skillName, data]) => {
+                const skillId = this.normalizeSkillId(skillName, subject);
+                if (!skillId) return Promise.resolve();
+
+                const score = typeof data === 'number' ? data : (data.score || 0);
+                const total = data.possible || (typeof data === 'number' ? 100 : 1);
+                const masteryScore = Math.min(100, Math.max(0, Math.round((score / total) * 100)));
+
+                return this.updateMicroSkillLevel(uid, subject, skillId, masteryScore, {
+                    type: 'Mock',
+                    difficulty: assessment.difficulty || 5,
+                    totalQuestions: assessment.totalQuestions || 10
+                });
+            });
+
+            await Promise.all(promises);
+            console.log(`[UserProfileService] Successfully synced ${promises.length} skills from Mock.`);
+        } catch (err) {
+            console.error(`[UserProfileService] Failed to sync Mock results:`, err);
         }
     }
 }

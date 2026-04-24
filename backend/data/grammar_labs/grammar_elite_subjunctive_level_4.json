@@ -1,0 +1,227 @@
+{
+  "type": "GRAMMAR",
+  "topic_id": "grammar_elite_subjunctive",
+  "level": "HKDSE Level 5",
+  "conceptual_explanation": "Level 5 Subjunctive Mastery focuses on 'Hypothetical' or 'Unreal' situations. This includes the famous 'If I were' (instead of 'If I was') and the 'High Time' structure which uses a past tense verb to talk about the present.",
+  "rule_cards": [
+    {
+      "name": "Hypothetical 'Were'",
+      "formula": "If + Subject + were... (Used for all persons)",
+      "correct": "If I were you, I would take the job.",
+      "incorrect": "If I was you, I would take the job."
+    },
+    {
+      "name": "It is High Time",
+      "formula": "It is [High/About] Time + Subject + Past Tense",
+      "correct": "It is high time we started working.",
+      "incorrect": "It is high time we start working."
+    },
+    {
+      "name": "The 'Wish' Clause",
+      "formula": "Subject + wish + Subject + Past Tense (Present Unreal)",
+      "correct": "I wish I had more time.",
+      "incorrect": "I wish I have more time."
+    },
+    {
+      "name": "Suppose & Imagine",
+      "formula": "Suppose + Subject + Past Tense",
+      "correct": "Suppose you won the lottery, what would you do?",
+      "incorrect": "Suppose you win the lottery..."
+    }
+  ],
+  "head_noun_tasks": [
+    {
+      "sentence_tokens": [
+        "If",
+        "she",
+        "were",
+        "the",
+        "CEO",
+        ",",
+        "things",
+        "would",
+        "be",
+        "different",
+        "."
+      ],
+      "head_noun_indices": [
+        0,
+        2
+      ],
+      "explanation": "'If' + 'were' is the standard subjunctive for hypothetical conditions."
+    },
+    {
+      "sentence_tokens": [
+        "It",
+        "is",
+        "high",
+        "time",
+        "the",
+        "government",
+        "addressed",
+        "this",
+        "issue",
+        "."
+      ],
+      "head_noun_indices": [
+        2,
+        3,
+        6
+      ],
+      "explanation": "'High time' triggers the past subjunctive 'addressed' for a present need."
+    },
+    {
+      "sentence_tokens": [
+        "I",
+        "wish",
+        "he",
+        "knew",
+        "the",
+        "truth",
+        "about",
+        "the",
+        "situation",
+        "."
+      ],
+      "head_noun_indices": [
+        1,
+        3
+      ],
+      "explanation": "'Wish' for the present requires the past subjunctive 'knew'."
+    },
+    {
+      "sentence_tokens": [
+        "Suppose",
+        "we",
+        "decided",
+        "to",
+        "cancel",
+        "the",
+        "event",
+        ",",
+        "what",
+        "would",
+        "happen",
+        "?"
+      ],
+      "head_noun_indices": [
+        0,
+        2
+      ],
+      "explanation": "'Suppose' starts a hypothetical scenario, requiring 'decided'."
+    },
+    {
+      "sentence_tokens": [
+        "He",
+        "talks",
+        "as",
+        "if",
+        "he",
+        "were",
+        "an",
+        "expert",
+        "on",
+        "the",
+        "subject",
+        "."
+      ],
+      "head_noun_indices": [
+        2,
+        3,
+        5
+      ],
+      "explanation": "'As if' triggers 'were' for an unreal comparison."
+    }
+  ],
+  "drill_tasks": [
+    {
+      "type": "MCQ",
+      "question": "If I ________ rich, I would travel the world.",
+      "options": [
+        "was",
+        "were",
+        "am",
+        "would be"
+      ],
+      "answer": "were",
+      "explanation": "In hypothetical 'if' clauses, 'were' is used for all subjects in formal English."
+    },
+    {
+      "type": "MCQ",
+      "question": "It's about time you ________ for your own actions.",
+      "options": [
+        "take responsibility",
+        "took responsibility",
+        "will take responsibility",
+        "are taking responsibility"
+      ],
+      "answer": "took responsibility",
+      "explanation": "'It is about time' requires the past subjunctive."
+    },
+    {
+      "type": "MCQ",
+      "question": "I wish she ________ here with us right now.",
+      "options": [
+        "is",
+        "was",
+        "were",
+        "will be"
+      ],
+      "answer": "were",
+      "explanation": "Hypothetical 'wish' in the present uses 'were'."
+    },
+    {
+      "type": "MCQ",
+      "question": "Imagine you ________ in space; how would you feel?",
+      "options": [
+        "are",
+        "were",
+        "will be",
+        "would be"
+      ],
+      "answer": "were",
+      "explanation": "'Imagine' triggers the subjunctive 'were' for hypothetical states."
+    },
+    {
+      "type": "MCQ",
+      "question": "He acts as though he ________ the owner of the company.",
+      "options": [
+        "is",
+        "be",
+        "were",
+        "was"
+      ],
+      "answer": "were",
+      "explanation": "'As though' (like 'as if') uses 'were' for unreal comparisons."
+    }
+  ],
+  "boss_fight": {
+    "paragraph": "If he was a bit taller, he could reach the shelf. It is high time we leave the party. I wish I can speak French fluently.",
+    "errors": [
+      {
+        "original": "he was",
+        "correction": "he were",
+        "explanation": "Use 'were' for hypothetical conditions in formal writing."
+      },
+      {
+        "original": "we leave",
+        "correction": "we left",
+        "explanation": "'It is high time' must be followed by a past subjunctive verb."
+      },
+      {
+        "original": "I can",
+        "correction": "I could",
+        "explanation": "'Wish' for an unreal present ability requires the past subjunctive 'could'."
+      }
+    ]
+  },
+  "success_feedback": "Impressive! You've mastered hypothetical and unreal subjunctive structures. You're sounding like a high-level candidate.",
+  "suggested_next_steps": [
+    "Learn the difference between 'It is time' and 'It is time for us to...'.",
+    "Study the 'Lest' and 'So be it' fixed expressions.",
+    "Try Level 5* for elite-level complexity!"
+  ],
+  "interactive_tasks": [],
+  "examples": [],
+  "key_points": []
+}

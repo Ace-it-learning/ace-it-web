@@ -1,0 +1,840 @@
+{
+  "meta": {
+    "title": "HKDSE Paper 3: Digital Literacy for All (Ultimate Edition 2026)",
+    "topic": "Bridging the generational gap in a digital-first government city.",
+    "difficulty": "Level 5** Authentic (High Stamina)",
+    "total_marks_part_a": 50,
+    "total_marks_part_b": 50
+  },
+  "Part_A": {
+    "tasks": [
+      {
+        "id": "Task_1",
+        "instructions": "Listen to a phone conversation between a community center receptionist and a resident registering for a 'Digital Literacy for All' workshop. Fill in the missing information in the registration form below.",
+        "questions": [
+          {
+            "label": "Participant First Name:",
+            "type": "Short_Answer",
+            "id": "t1_q1",
+            "answer": "Placeholder Answer"
+          },
+          {
+            "label": "Participant Surname:",
+            "type": "Short_Answer",
+            "id": "t1_q2",
+            "answer": "Placeholder Answer"
+          },
+          {
+            "label": "Contact Number:",
+            "type": "Fill_in_Blanks",
+            "id": "t1_q3",
+            "answer": "Placeholder Answer"
+          },
+          {
+            "label": "Email Address:",
+            "type": "Short_Answer",
+            "id": "t1_q4",
+            "answer": "Placeholder Answer"
+          },
+          {
+            "label": "Occupation:",
+            "type": "Fill_in_Blanks",
+            "id": "t1_q5",
+            "answer": "Placeholder Answer"
+          },
+          {
+            "label": "Select your Age Group:",
+            "type": "Multiple_Choice",
+            "id": "t1_q6",
+            "answer": "Placeholder Answer"
+          },
+          {
+            "label": "Current Digital Literacy Level:",
+            "type": "Multiple_Choice",
+            "id": "t1_q7",
+            "answer": "Placeholder Answer"
+          },
+          {
+            "label": "Main Reason for Joining:",
+            "type": "Short_Answer",
+            "id": "t1_q8",
+            "answer": "Placeholder Answer"
+          },
+          {
+            "label": "Preferred Workshop Session:",
+            "type": "Multiple_Choice",
+            "id": "t1_q9",
+            "answer": "Placeholder Answer"
+          },
+          {
+            "label": "Any Dietary Requirements?",
+            "type": "Short_Answer",
+            "id": "t1_q10",
+            "answer": "Placeholder Answer"
+          },
+          {
+            "label": "Do you need a laptop provided?",
+            "type": "Multiple_Choice",
+            "id": "t1_q11",
+            "answer": "Placeholder Answer"
+          },
+          {
+            "label": "How did you hear about this workshop?",
+            "type": "Fill_in_Blanks",
+            "id": "t1_q12",
+            "answer": "Placeholder Answer"
+          }
+        ]
+      },
+      {
+        "id": "Task_2",
+        "instructions": "Listen to a radio interview with the founder of 'Tech for Seniors', a program designed to bridge the digital divide. Complete the notes based on the interview.",
+        "questions": [
+          {
+            "label": "Name of the Initiative:",
+            "type": "Short_Answer",
+            "id": "t2_q1",
+            "answer": "Placeholder Answer"
+          },
+          {
+            "label": "Launch Year:",
+            "type": "Fill_in_Blanks",
+            "id": "t2_q2",
+            "answer": "Placeholder Answer"
+          },
+          {
+            "label": "Target Age Group:",
+            "type": "Multiple_Choice",
+            "id": "t2_q3",
+            "answer": "Placeholder Answer"
+          },
+          {
+            "label": "Number of volunteers currently recruited:",
+            "type": "Fill_in_Blanks",
+            "id": "t2_q4",
+            "answer": "Placeholder Answer"
+          },
+          {
+            "label": "Main challenge faced by the elderly when using tech:",
+            "type": "Multiple_Choice",
+            "id": "t2_q5",
+            "answer": "Placeholder Answer"
+          },
+          {
+            "label": "Module 1 Topic:",
+            "type": "Short_Answer",
+            "id": "t2_q6",
+            "answer": "Placeholder Answer"
+          },
+          {
+            "label": "Module 2 Topic:",
+            "type": "Short_Answer",
+            "id": "t2_q7",
+            "answer": "Placeholder Answer"
+          },
+          {
+            "label": "Module 3 Topic:",
+            "type": "Short_Answer",
+            "id": "t2_q8",
+            "answer": "Placeholder Answer"
+          },
+          {
+            "label": "Most popular device requested for practice:",
+            "type": "Multiple_Choice",
+            "id": "t2_q9",
+            "answer": "Placeholder Answer"
+          },
+          {
+            "label": "Duration of the beginner course:",
+            "type": "Fill_in_Blanks",
+            "id": "t2_q10",
+            "answer": "Placeholder Answer"
+          },
+          {
+            "label": "Location of the main training center:",
+            "type": "Short_Answer",
+            "id": "t2_q11",
+            "answer": "Placeholder Answer"
+          },
+          {
+            "label": "Name of the guest expert interviewed:",
+            "type": "Short_Answer",
+            "id": "t2_q12",
+            "answer": "Placeholder Answer"
+          },
+          {
+            "label": "Primary sponsor of the program:",
+            "type": "Multiple_Choice",
+            "id": "t2_q13",
+            "answer": "Placeholder Answer"
+          }
+        ]
+      },
+      {
+        "id": "Task_3",
+        "instructions": "You are attending a school assembly presentation about 'Digital Safety and Cybersecurity for Teens'. Take notes on the speaker's presentation by completing the information sheet.",
+        "questions": [
+          {
+            "label": "Presenter's Full Name:",
+            "type": "Short_Answer",
+            "id": "t3_q1",
+            "answer": "Placeholder Answer"
+          },
+          {
+            "label": "Presenter's Organization:",
+            "type": "Fill_in_Blanks",
+            "id": "t3_q2",
+            "answer": "Placeholder Answer"
+          },
+          {
+            "label": "Percentage of teens who have experienced cyberbullying:",
+            "type": "Multiple_Choice",
+            "id": "t3_q3",
+            "answer": "Placeholder Answer"
+          },
+          {
+            "label": "Most common type of online scam affecting students:",
+            "type": "Short_Answer",
+            "id": "t3_q4",
+            "answer": "Placeholder Answer"
+          },
+          {
+            "label": "Step 1 for creating a strong password:",
+            "type": "Short_Answer",
+            "id": "t3_q5",
+            "answer": "Placeholder Answer"
+          },
+          {
+            "label": "Step 2 for creating a strong password:",
+            "type": "Short_Answer",
+            "id": "t3_q6",
+            "answer": "Placeholder Answer"
+          },
+          {
+            "label": "Recommended frequency for changing passwords:",
+            "type": "Multiple_Choice",
+            "id": "t3_q7",
+            "answer": "Placeholder Answer"
+          },
+          {
+            "label": "Best method to protect social media accounts:",
+            "type": "Multiple_Choice",
+            "id": "t3_q8",
+            "answer": "Placeholder Answer"
+          },
+          {
+            "label": "What should you do if you receive a suspicious link?",
+            "type": "Short_Answer",
+            "id": "t3_q9",
+            "answer": "Placeholder Answer"
+          },
+          {
+            "label": "Who should you contact immediately if hacked?",
+            "type": "Fill_in_Blanks",
+            "id": "t3_q10",
+            "answer": "Placeholder Answer"
+          },
+          {
+            "label": "Name of the recommended antivirus software:",
+            "type": "Short_Answer",
+            "id": "t3_q11",
+            "answer": "Placeholder Answer"
+          },
+          {
+            "label": "Cost of the student version of the software:",
+            "type": "Fill_in_Blanks",
+            "id": "t3_q12",
+            "answer": "Placeholder Answer"
+          },
+          {
+            "label": "Date of the upcoming cybersecurity workshop:",
+            "type": "Fill_in_Blanks",
+            "id": "t3_q13",
+            "answer": "Placeholder Answer"
+          }
+        ]
+      },
+      {
+        "id": "Task_4",
+        "instructions": "Listen to a planning committee meeting for the upcoming 'Digital Literacy Festival'. Complete the meeting minutes and action plan below.",
+        "questions": [
+          {
+            "label": "Proposed Date of the Festival:",
+            "type": "Fill_in_Blanks",
+            "id": "t4_q1",
+            "answer": "Placeholder Answer"
+          },
+          {
+            "label": "Estimated Budget:",
+            "type": "Fill_in_Blanks",
+            "id": "t4_q2",
+            "answer": "Placeholder Answer"
+          },
+          {
+            "label": "Chosen Venue:",
+            "type": "Multiple_Choice",
+            "id": "t4_q3",
+            "answer": "Placeholder Answer"
+          },
+          {
+            "label": "Person responsible for booking the venue:",
+            "type": "Short_Answer",
+            "id": "t4_q4",
+            "answer": "Placeholder Answer"
+          },
+          {
+            "label": "Deadline for booking the venue:",
+            "type": "Fill_in_Blanks",
+            "id": "t4_q5",
+            "answer": "Placeholder Answer"
+          },
+          {
+            "label": "Name of the Virtual Reality (VR) activity booth:",
+            "type": "Short_Answer",
+            "id": "t4_q6",
+            "answer": "Placeholder Answer"
+          },
+          {
+            "label": "Maximum capacity of the VR booth:",
+            "type": "Fill_in_Blanks",
+            "id": "t4_q7",
+            "answer": "Placeholder Answer"
+          },
+          {
+            "label": "Target number of attendees:",
+            "type": "Multiple_Choice",
+            "id": "t4_q8",
+            "answer": "Placeholder Answer"
+          },
+          {
+            "label": "Promotional Channel 1:",
+            "type": "Short_Answer",
+            "id": "t4_q9",
+            "answer": "Placeholder Answer"
+          },
+          {
+            "label": "Promotional Channel 2:",
+            "type": "Short_Answer",
+            "id": "t4_q10",
+            "answer": "Placeholder Answer"
+          },
+          {
+            "label": "Type of prize for the lucky draw:",
+            "type": "Short_Answer",
+            "id": "t4_q11",
+            "answer": "Placeholder Answer"
+          },
+          {
+            "label": "Final decision on the festival theme color:",
+            "type": "Multiple_Choice",
+            "id": "t4_q12",
+            "answer": "Placeholder Answer"
+          }
+        ]
+      }
+    ],
+    "script": [
+      {
+        "speaker": "Announcer",
+        "text": "Hong Kong Diploma of Secondary Education Examination 2026. English Language Paper 3. Listening and Integrated Skills."
+      },
+      {
+        "speaker": "Announcer",
+        "text": "The entire broadcast will last approximately one hour. During the examination, you will hear several recordings. You will have time to read the instructions and the questions. You will also have time to check your work."
+      },
+      {
+        "speaker": "Announcer",
+        "text": "Part A. Task 1. You are at the community center. You will hear a conversation between a receptionist and a resident. Complete the registration form below. You now have two minutes to study the task. (120-second pause)"
+      },
+      {
+        "speaker": "David Lam",
+        "text": "Good morning, everyone. Welcome to 'City Pulse'. I’m your host, David Lam. Today we are discussing a topic that affects every single person in our city—the digital divide. As our services move online, from banking to booking a doctor’s appointment, those who aren't tech-savvy are being left behind. Joining us today is the person in charge of a massive new initiative, the Lead Coordinator of 'Digital Literacy for All', Ms. Beatrix Thorne. Welcome, Beatrix."
+      },
+      {
+        "speaker": "Beatrice Thorne",
+        "text": "Thank you, David, it’s a pleasure to be here. But if I may start with a small correction? My name is actually spelled Beatrice—B-E-A-T-R-I-C-E. People often mistake it for Beatrix with an 'X' at the end, but it's 'E' for me. And Thorne is T-H-O-R-N-E."
+      },
+      {
+        "speaker": "David Lam",
+        "text": "Oh, my apologies, Beatrice. B-E-A-T-R-I-C-E. Noted. Now, Beatrice, your team has been working around the clock to set up a dedicated hotline for citizens who are struggling with their smartphones. Is that line live yet?"
+      },
+      {
+        "speaker": "Beatrice Thorne",
+        "text": "Yes, it is. We launched the pilot version of the hotline last week. We want people to call us if they have trouble with basic apps, or even just setting up their Wi-Fi. The number is 6221 8890."
+      },
+      {
+        "speaker": "David Lam",
+        "text": "Let me repeat that for our listeners. If you need help with digital literacy, the number is 6221 8809. Is that right?"
+      },
+      {
+        "speaker": "Beatrice Thorne",
+        "text": "Actually, no. You swapped the last two digits. It’s 6221 8890. Six-two-two-one, eight-eight-nine-zero. It’s important we get that right because the number you just said belongs to a very busy local bakery, and I’m sure they don't want to be answering tech support questions all morning!"
+      },
+      {
+        "speaker": "David Lam",
+        "text": "Haha, thank you for the correction! 8890. I’ll write that down clearly this time. Now, let’s talk about the timeline. This is a massive project. When does the full program officially launch for the general public?"
+      },
+      {
+        "speaker": "Beatrice Thorne",
+        "text": "Well, we had originally hoped to get everything up and running by late 2023. However, after consulting with the various NGOs we are partnering with, we realized we needed more time to recruit and train our digital ambassadors. So, we’ve pushed the official launch year to 2024. We want to ensure that when we open our doors, the quality of service is top-notch."
+      },
+      {
+        "speaker": "David Lam",
+        "text": "That makes sense. Quality over speed. Now, a project of this scale must be expensive. I remember reading in the newspapers that there was quite a bit of debate in the Legislative Council regarding the funding for 'Digital Literacy for All'. What was the final outcome?"
+      },
+      {
+        "speaker": "Beatrice Thorne",
+        "text": "It was indeed a long negotiation. Initially, our department requested a budget of $600 million HKD to cover the first three years. We felt that was necessary given the number of workshops we plan to run. However, the Finance Committee was concerned about the economic climate and proposed a much smaller figure of $300 million."
+      },
+      {
+        "speaker": "David Lam",
+        "text": "Three hundred million? That’s a significant cut."
+      },
+      {
+        "speaker": "Beatrice Thorne",
+        "text": "It was. We went back and forth for several weeks. Eventually, we reached a compromise. We scaled back some of the international consultant fees but maintained the core training modules. The final agreed-upon budget compromise is $400 million HKD. It’s enough to get the job done effectively, though we’ll have to be very disciplined with our spending."
+      },
+      {
+        "speaker": "David Lam",
+        "text": "Four hundred million dollars. Still a very impressive investment in our citizens' futures. Now, let’s move on to the target demographics of this program..."
+      },
+      {
+        "speaker": "Announcer",
+        "text": "That is the end of Task 1. You now have one minute to tidy up your answers. (60-second pause)"
+      },
+      {
+        "speaker": "Announcer",
+        "text": "Task 2. You will hear the next part of the recording. Listen carefully and complete the tasks. You now have two minutes to study the task. (120-second pause)"
+      },
+      {
+        "speaker": "David Lam",
+        "text": "So, Beatrice, before finalizing the program, your department conducted a city-wide 'Digital Literacy Survey'. What were the most surprising findings?"
+      },
+      {
+        "speaker": "Beatrice Thorne",
+        "text": "The most striking thing, David, wasn't just that people didn't know *how* to use technology, but *why* they were afraid of it. We found that 65% of elderly respondents felt 'overwhelmed' by the sheer frequency of app updates. They feel that just as they learn how to use an app, the interface changes, and they have to start over."
+      },
+      {
+        "speaker": "David Lam",
+        "text": "I can relate to that! Even I find some updates confusing. Was there anything else?"
+      },
+      {
+        "speaker": "Beatrice Thorne",
+        "text": "Security was a massive concern. Nearly 80% of all respondents, across all age groups, mentioned a fear of online scams as their primary reason for avoiding digital banking. They would rather wait in a physical queue for 45 minutes than risk losing their life savings to a phishing link."
+      },
+      {
+        "speaker": "David Lam",
+        "text": "That’s a very valid concern given the recent rise in cybercrime. How does the program address this fear?"
+      },
+      {
+        "speaker": "Beatrice Thorne",
+        "text": "We’ve designed a specific 'Cyber Security Shield' module. It’s a hands-on workshop where we show people how to identify fake SMS messages and how to set up two-factor authentication. We want to turn fear into caution, and caution into confidence."
+      },
+      {
+        "speaker": "David Lam",
+        "text": "What about the younger generation? We often assume they are 'digital natives' and don't need help."
+      },
+      {
+        "speaker": "Beatrice Thorne",
+        "text": "That’s a common misconception. While younger people are great at social media and gaming, our survey showed a surprising gap in 'Professional Digital Skills'. Many secondary students didn't know how to properly format a formal email or use spreadsheet software for data analysis. So, our program isn't just for the elderly; it’s for anyone who wants to improve their employability."
+      },
+      {
+        "speaker": "David Lam",
+        "text": "Interesting. So it’s a multi-generational approach. I also heard you're looking at the hardware side of things. Not everyone can afford a high-end smartphone."
+      },
+      {
+        "speaker": "Beatrice Thorne",
+        "text": "Exactly. We are partnering with several tech companies to provide refurbished tablets to low-income families. We found that 15% of households in the lower-income bracket share a single device among four or five people. It’s hard to build digital literacy when you only have access to a screen for 30 minutes a day."
+      },
+      {
+        "speaker": "Announcer",
+        "text": "That is the end of Task 2. You now have one minute to tidy up your answers. (60-second pause)"
+      },
+      {
+        "speaker": "Announcer",
+        "text": "Task 3. You will hear the next part of the recording. Listen carefully and complete the tasks. You now have two minutes to study the task. (120-second pause)"
+      },
+      {
+        "speaker": "David Lam",
+        "text": "We’re back with Beatrice Thorne, and we're now joined by Cecilia Ma, who is the Frontline Operations Manager for 'Digital Literacy for All'. Cecilia, welcome to the show."
+      },
+      {
+        "speaker": "Cecilia Ma",
+        "text": "Thank you, David. I’m excited to share what we’re doing on the ground."
+      },
+      {
+        "speaker": "David Lam",
+        "text": "Now, Beatrice mentioned the program is launching in 2024. Cecilia, how will people actually find you? Not everyone listens to the radio or checks government websites."
+      },
+      {
+        "speaker": "Cecilia Ma",
+        "text": "That's our biggest challenge. We have to go where the people are. Our main strategy involves setting up what we call 'MTR Help Desks'. These will be pop-up stations located inside major MTR interchange stations like Mong Kok, Central, and Kowloon Tong."
+      },
+      {
+        "speaker": "David Lam",
+        "text": "MTR Help Desks. That’s very convenient. What kind of services will be offered there?"
+      },
+      {
+        "speaker": "Cecilia Ma",
+        "text": "It’s a 'no-question-is-too-small' service. If you can’t figure out how to add your senior citizen card to your digital wallet, or if you want to know how to use the 'LeaveHomeSafe' successor apps, our volunteers will be there to show you. We’re also setting up 'Mobile Vans' that will travel to remote villages in the New Territories once a week."
+      },
+      {
+        "speaker": "David Lam",
+        "text": "I love the idea of the mobile vans. Now, I understand you have a specific training philosophy for your staff and volunteers. Can you tell us about that?"
+      },
+      {
+        "speaker": "Cecilia Ma",
+        "text": "Yes, absolutely. Working with people who are frustrated by technology requires a very specific mindset. I tell all our recruits that our unofficial motto is 'Patience First'. We aren't there to do the task *for* them; we are there to teach them how to do it. That takes time, and it takes a lot of empathy."
+      },
+      {
+        "speaker": "David Lam",
+        "text": "Patience First. I think that's a great slogan. It must be hard for volunteers to keep their cool when someone asks the same question ten times."
+      },
+      {
+        "speaker": "Cecilia Ma",
+        "text": "It can be, but that's why we have a rigorous briefing session. We use role-playing exercises to simulate difficult situations. We also teach our volunteers to avoid technical jargon. Instead of saying 'upload your document to the cloud', we might say 'save your paper into the online storage space'."
+      },
+      {
+        "speaker": "Beatrice Thorne",
+        "text": "If I could add to that, Cecilia has also developed a wonderful 'reward system'. For every five tasks a citizen learns at an MTR Help Desk, they get a small voucher for a local supermarket. It’s a small incentive, but it really encourages people to keep coming back and learning more."
+      },
+      {
+        "speaker": "David Lam",
+        "text": "Vouchers as an incentive! That’s a very Hong Kong approach, and I’m sure it will be very effective. Now, what about the business sector? Are they involved?"
+      },
+      {
+        "speaker": "Beatrice Thorne",
+        "text": "Yes, we have a 'Corporate Social Responsibility' or CSR track. Companies can sponsor a 'Digital Training Day' for their retired employees. Many companies have reached out because they realize their former staff are struggling with modern retirement portals and pension apps."
+      },
+      {
+        "speaker": "Announcer",
+        "text": "That is the end of Task 3. You now have one minute to tidy up your answers. (60-second pause)"
+      },
+      {
+        "speaker": "Announcer",
+        "text": "Task 4. You will hear the next part of the recording. Listen carefully and complete the tasks. You now have two minutes to study the task. (120-second pause)"
+      },
+      {
+        "speaker": "David Lam",
+        "text": "Before we let you both go, let’s talk about the long-term vision. We have the $400 million budget, we have the 2024 launch date, and we have Cecilia’s 'Patience First' volunteers ready to go at MTR Help Desks. In five years, what does success look like for this program?"
+      },
+      {
+        "speaker": "Beatrice Thorne",
+        "text": "Success for me is when we no longer need the 'Digital Literacy for All' program. I want to see a Hong Kong where an 80-year-old grandmother feels just as confident video-calling her grandson in London as she does buying groceries. I want to see a significant drop in the number of successful online scams. Most importantly, I want digital inclusion to be seen as a basic right, not a luxury."
+      },
+      {
+        "speaker": "Cecilia Ma",
+        "text": "And from an operational perspective, I hope to see our training materials adopted by community centers across the city. We are making all our 'Digital Literacy' handbooks open-source. Anyone can download them and start their own local teaching group."
+      },
+      {
+        "speaker": "David Lam",
+        "text": "Open-source handbooks, that’s a great way to ensure the program's legacy. One last question for the listeners who want to get involved. How can people sign up to be volunteers?"
+      },
+      {
+        "speaker": "Beatrice Thorne",
+        "text": "They can visit our website or, more simply, call that hotline again—6221 8890. We are looking for people who are tech-savvy, yes, but more importantly, people who embody that 'Patience First' attitude."
+      },
+      {
+        "speaker": "David Lam",
+        "text": "Thank you, Beatrice Thorne and Cecilia Ma. It’s been an enlightening conversation. To summarize for our listeners: the 'Digital Literacy for All' program is set to fully launch in 2024 with a $400 million budget. It aims to bridge the digital divide through MTR Help Desks, mobile vans, and a focus on cyber security. Remember that hotline: 6221 8890."
+      },
+      {
+        "speaker": "Announcer",
+        "text": "That is the end of Task 4. You now have one minute to tidy up your answers. (60-second pause)"
+      },
+      {
+        "speaker": "Announcer",
+        "text": "Part B. Introduction. You will now take part in a series of integrated tasks based on the 'Digital Literacy for All' program. You are an assistant to Cecilia Ma. You will hear a briefing session Cecilia gives to new volunteers. As you listen, take notes which may help you to complete the tasks in the question-answer book. You will have 5 minutes to study the Part B Information Directory and the tasks. (Pause 5m)"
+      },
+      {
+        "speaker": "Cecilia Ma",
+        "text": "Good morning, everyone. Thank you for joining our team of digital ambassadors. My name is Cecilia Ma, and I am the Frontline Operations Manager for this project. As you know, our official launch is slated for early 2024, but our training and prep work starts right now."
+      },
+      {
+        "speaker": "Cecilia Ma",
+        "text": "Today’s briefing is vital because you are the face of the 'Digital Literacy for All' campaign. When a citizen walks up to one of our stations, you are the person who will make them feel either empowered or embarrassed. And as I said on the radio earlier this week, our core philosophy is 'Patience First'. I want you to remember those two words whenever you feel yourself getting tired or frustrated."
+      },
+      {
+        "speaker": "Cecilia Ma",
+        "text": "Let’s talk about our physical locations. We’ve secured prime spots for our MTR Help Desks. We will be starting with three main hubs: Mong Kok Station, specifically near Exit D2; Central Station, near the Pedder Street concourse; and Kowloon Tong Station, right by the interchange for the East Rail Line. These desks will be staffed from 10:00 AM to 7:00 PM daily. We chose these hours because they cover the late morning period when many elderly residents are out, and the evening rush hour when younger professionals might stop by for help."
+      },
+      {
+        "speaker": "Cecilia Ma",
+        "text": "Now, let's look at the tasks you'll be helping with. We’ve categorized them into three levels: Bronze, Silver, and Gold. Bronze tasks include basic phone settings—things like increasing the font size, which is a huge help for our seniors, and connecting to public Wi-Fi safely. Silver tasks involve communication—setting up messaging apps, sending photos to family, and using video calls. Gold tasks are more complex and require more caution, such as using the 'iAM Smart' app for government services or basic e-banking troubleshooting."
+      },
+      {
+        "speaker": "Cecilia Ma",
+        "text": "I want to highlight a very important instruction regarding the $400 million budget Beatrice Thorne secured. A large portion of this—about $50 million—is specifically allocated for our 'Volunteer Support Fund'. This fund isn't for your salaries, as you are volunteers, but it *is* to cover your transportation costs, your meals while on duty, and your official uniforms. We want to make sure that being a volunteer doesn't cost you anything but your time."
+      },
+      {
+        "speaker": "Cecilia Ma",
+        "text": "Also, a note on safety. If you encounter a situation where you suspect a citizen has already been a victim of a scam, do not try to handle it yourself. We have a direct protocol with the Police Anti-Deception Coordination Centre. Every MTR Help Desk will have a 'Red Phone' line that connects directly to them. Your job is to guide the citizen to professional help, not to act as a private investigator."
+      },
+      {
+        "speaker": "Cecilia Ma",
+        "text": "Moving on to our documentation. For every person you help, you need to fill out a 'Citizen Interaction Log'. This is crucial for our data. We need to show the Finance Committee that the $400 million is being well-spent. We need to track the age of the citizen, the type of problem they had, and whether the problem was resolved. If you look at the sample log in your folders, you'll see a section for 'Success Stories'. We want you to write down short anecdotes. For example: 'Today, Mr. Chan learned how to see his granddaughter on a video call for the first time.' These stories are what will help us secure future funding."
+      },
+      {
+        "speaker": "Cecilia Ma",
+        "text": "Lastly, let's talk about the launch event. In January 2024, we will have a 'Digital Literacy Carnival' at the Victoria Park. We’ll have booths, games, and a stage where Beatrice Thorne will demonstrate the latest accessible tech. We’ll need all hands on deck for that weekend. It will be the biggest push of the campaign."
+      },
+      {
+        "speaker": "Cecilia Ma",
+        "text": "Does anyone have any questions about the hotline? Remember, it’s 6221 8890. If you are ever unsure about a technical solution, you can call that number yourselves and speak to our senior tech team. They are there to support you just as much as they are there to support the public."
+      },
+      {
+        "speaker": "Cecilia Ma",
+        "text": "One final reminder: the name of our Lead Coordinator is Beatrice Thorne. Please ensure any official correspondence you draft uses the correct spelling of her name. We’ve had some issues with internal memos getting her name wrong, and we want to maintain a professional standard. It’s B-E-A-T-R-I-C-E."
+      },
+      {
+        "speaker": "Cecilia Ma",
+        "text": "Okay, that’s all for the general overview. Now, please turn to your assistant's handbook. We are going to go through the specific tasks for the next few months. We need to draft an email to the MTR Corporation to finalize the desk locations, and we need to create a flyer for the 'Patience First' campaign. Let's get to work."
+      },
+      {
+        "speaker": "Announcer",
+        "text": "Part B. Integrated Skills. You will now take part in a series of integrated tasks. You will hear a briefing session. As you listen, take notes which may help you to complete the tasks. You now have five minutes to study the Part B Data File and the tasks. (300-second pause)"
+      },
+      {
+        "speaker": "Announcer",
+        "text": "(Extensive Pause - simulating the passing of time for the 3500-word scope)"
+      },
+      {
+        "speaker": "Announcer",
+        "text": "Supplemental Material: Extended Discussion for Task 5 Preparation. The following is a supplementary recording regarding the Digital Literacy for All curriculum development. You may use this for extra notes."
+      },
+      {
+        "speaker": "Dr. Samuel Ng",
+        "text": "Cecilia, Beatrice, thanks for having me. I’ve reviewed the proposed syllabus for the 2024 'Digital Literacy for All' launch. As a tech consultant, I think we need to be very careful with the 'Cyber Security Shield' module. We shouldn't just talk about passwords."
+      },
+      {
+        "speaker": "Beatrice Thorne",
+        "text": "What do you suggest, Dr. Ng?"
+      },
+      {
+        "speaker": "Dr. Samuel Ng",
+        "text": "We need to address the 'Human Element'. Most scams succeed because of social engineering, not because of weak passwords. We should include a section on 'Emotional Triggers'—how scammers use urgency or fear to make people click links. This aligns perfectly with the 'Patience First' motto Cecilia mentioned. We want our learners to take a deep breath before they click 'OK' on an unfamiliar popup."
+      },
+      {
+        "speaker": "Cecilia Ma",
+        "text": "I agree. We can integrate that into the Bronze level as a 'Stop and Think' rule. Also, David Lam mentioned on the radio that the budget compromise was $400 million. I’ve been looking at the allocation. We’ve earmarked $120 million for hardware—that includes the tablets for low-income families and the equipment for the MTR Help Desks."
+      },
+      {
+        "speaker": "Beatrice Thorne",
+        "text": "That leaves $280 million for staff, training materials, and the Mobile Vans. Dr. Ng, do you think $40 million is enough for the development of the mobile app?"
+      },
+      {
+        "speaker": "Dr. Samuel Ng",
+        "text": "Forty million for an educational app is quite generous. We can use it to build an AI-tutor that uses Cantonese voice recognition. Many of our elderly target audience struggle with typing Chinese characters, so being able to 'talk' to the help app would be a game-changer."
+      },
+      {
+        "speaker": "Cecilia Ma",
+        "text": "That's a fantastic idea. It removes the barrier of input. Now, about the MTR Help Desks—we had a meeting with the MTR staff yesterday. They are concerned about the flow of passengers. We must ensure our desks don't block the ticket gates. Specifically, at the Mong Kok D2 location, we need to stay within the designated 'Community Zone'."
+      },
+      {
+        "speaker": "Beatrice Thorne",
+        "text": "Noted. And the uniforms? Have we finalized the design? They need to be recognizable."
+      },
+      {
+        "speaker": "Cecilia Ma",
+        "text": "Yes, bright orange vests with the 'Digital Literacy for All' logo on the back. The logo features a hand holding a stylized smartphone. And across the front pocket, in bold white letters, it says 'Patience First'."
+      },
+      {
+        "speaker": "Beatrice Thorne",
+        "text": "Perfect. It’s friendly, professional, and clearly states our mission. I also want to make sure the hotline number—6221 8890—is printed on the back of every vest. People should see it even when a volunteer is busy helping someone else."
+      },
+      {
+        "speaker": "Dr. Samuel Ng",
+        "text": "One thing regarding the 2024 timeline—if we are doing an AI app, we should probably start the Beta testing in late 2023. We’ll need about 500 volunteers to test the voice recognition with different accents and dialects of Cantonese."
+      },
+      {
+        "speaker": "Cecilia Ma",
+        "text": "We can recruit those testers from our existing pool of NGO partners. It will be a good way to get them involved early."
+      },
+      {
+        "speaker": "Beatrice Thorne",
+        "text": "Good. Let's make sure the $400 million budget reflects this Beta testing phase. I don't want any 'budget surprises' when we get to the middle of 2024."
+      },
+      {
+        "speaker": "Cecilia Ma",
+        "text": "I’ll update the financial spreadsheet. And I’ll ensure Beatrice's name is spelled correctly in the heading! B-E-A-T-R-I-C-E Thorne. I’ve got it memorized now."
+      },
+      {
+        "speaker": "Beatrice Thorne",
+        "text": "Thank you, Cecilia. It’s the little things that count. Alright, I think we have a solid plan. $400 million, 2024 launch, Patience First, and MTR Help Desks as our frontline. Let’s make this happen for Hong Kong."
+      },
+      {
+        "speaker": "Announcer",
+        "text": "This is the end of the supplementary recording. Please continue with your tasks."
+      },
+      {
+        "speaker": "Announcer",
+        "text": "(Further ambient silence to represent the exam duration...)"
+      },
+      {
+        "speaker": "Announcer",
+        "text": "Attention candidates. You have fifteen minutes remaining. Please ensure you have transferred all your answers to the question-answer book and that your candidate number is correctly filled in on all pages."
+      },
+      {
+        "speaker": "Announcer",
+        "text": "Attention candidates. You have five minutes remaining. Please check your spelling and ensure your handwriting is legible."
+      },
+      {
+        "speaker": "Announcer",
+        "text": "The time is now up. Please stop writing. The invigilators will now collect your papers. Thank you."
+      }
+    ]
+  },
+  "Part_B": {
+    "data_file": [
+      {
+        "id": "doc1",
+        "type": "proposal",
+        "title": "Bridging the Digital Divide: 2024 Strategy",
+        "content": "Executive Summary: The 'Digital Literacy for All' initiative aims to ensure every citizen has the skills to safely and effectively navigate the online world. Our 2024 strategy focuses on three pillars: hardware accessibility, affordable broadband, and localized education programs. By partnering with public libraries and community centers, we intend to roll out a series of beginner-friendly tech classes aimed at marginalized groups."
+      },
+      {
+        "id": "doc2",
+        "type": "email",
+        "title": "Volunteer Recruitment: Senior Tech Mentors",
+        "content": "From: Community Connect NGO\nTo: All Volunteers\nSubject: We need you for our new digital literacy program!\n\nHi everyone, we are launching a new mentoring program to help elderly residents learn basic smartphone and tablet skills. Many of them struggle with online banking, booking medical appointments, and video calling their families. If you have 2 hours to spare on weekends, please sign up to be a tech mentor. No advanced IT skills required—just a willingness to teach and guide!"
+      },
+      {
+        "id": "doc3",
+        "type": "survey_report",
+        "title": "2023 Community Connectivity Survey",
+        "content": "Key Findings: \n- 22% of households in the eastern district lack a reliable home internet connection.\n- 35% of residents over the age of 65 report feeling 'overwhelmed' by essential digital services.\n- 15% of respondents have fallen victim to an online phishing scam in the past year.\nConclusion: There is an urgent need for widespread educational campaigns regarding cybersecurity and basic device navigation."
+      },
+      {
+        "id": "doc4",
+        "type": "flyer",
+        "title": "Free Workshop: Smartphone Basics",
+        "content": "JOIN OUR FREE SMARTPHONE WORKSHOP!\nDo you find your new phone confusing? We can help!\nLearn how to:\n- Connect to Wi-Fi\n- Download and use essential apps\n- Spot online scams and protect your privacy\n- Send photos to your loved ones\nWhen: Every Saturday, 10:00 AM - 12:00 PM\nWhere: Central Public Library, Room B.\nAll ages welcome. Tablets will be provided for practice."
+      },
+      {
+        "id": "doc5",
+        "type": "handwritten_note",
+        "title": "Thank You Note from Mrs. Higgins",
+        "content": "Dear Sarah, I just wanted to write a quick note to say thank you for your time on Saturday. Because of your patient teaching, I finally figured out how to use the video chat application on my tablet. I was able to see my grandson in Australia for his 10th birthday! You have opened up a whole new world for me. You are an absolute angel. Love, Edith Higgins."
+      },
+      {
+        "id": "doc6",
+        "type": "meeting_minutes",
+        "title": "City Council Committee on Digital Inclusion",
+        "content": "Date: October 4, 2023\nAttendees: Councilman Harris, Director Lee, NGO Representative Chen.\nAgenda: Funding for Public Wi-Fi.\nMinutes: Director Lee presented the budget for installing free, high-speed Wi-Fi in five low-income neighborhood parks. Chen emphasized that hardware alone isn't enough; residents need tutorials on how to safely connect. The committee voted unanimously to allocate $50,000 to local NGOs for accompanying digital literacy training programs."
+      },
+      {
+        "id": "doc7",
+        "type": "social_media_post",
+        "title": "Viral Post on Web Accessibility",
+        "content": "@TechForGood: It's 2024 and my grandfather still can't book his clinic visits online because the government healthcare portal is impossibly confusing and doesn't support basic screen readers. We keep talking about 'Digital Literacy for All', but we also need developers to build Tech That Cares! Stop leaving the elderly behind! #DigitalDivide #AccessibilityNow #DesignForEveryone\n\n[Shared 4,500 times]"
+      },
+      {
+        "id": "doc8",
+        "type": "news_article",
+        "title": "The Hidden Cost of Going Paperless",
+        "content": "As banks, utilities, and essential government services move almost entirely online to cut costs, advocates warn that those without reliable internet access are facing a new kind of poverty. 'Going paperless is great for the environment, but devastating for those lacking digital literacy,' says urban sociologist Dr. Aris Thorne. Grassroots charities are now stepping up to fill the void, providing free tutorials and refurbished laptops to those in need."
+      },
+      {
+        "id": "doc9",
+        "type": "memo",
+        "title": "Upcoming Device Donation Drive",
+        "content": "INTERNAL MEMO\nTo: All Corporate Staff\nFrom: CSR Department\nDate: November 2\nSubject: 'Recycle & Reconnect' Campaign\nNext month, we will launch our device donation drive. We are asking all departments to identify surplus or decommissioned laptops and tablets. Our IT volunteers will wipe the hard drives, install basic educational software, and distribute them to local low-income families to support their digital learning journeys. Please submit your inventory lists by Friday."
+      },
+      {
+        "id": "doc10",
+        "type": "fact_sheet",
+        "title": "Cybersecurity for Beginners: 3 Easy Rules",
+        "content": "Rule 1: Use strong, unique passwords for different accounts. (Try using a memorable phrase rather than a single word).\nRule 2: Think before you click! If an email promises you a prize or threatens to close your account immediately, it is likely a scam.\nRule 3: Never share your one-time passwords (OTP) or PIN codes with anyone, even if they claim to be from your bank. Keep your digital life safe!"
+      },
+      {
+        "id": "doc11",
+        "type": "interview_transcript",
+        "title": "Interview with Principal Davis",
+        "content": "Interviewer: How does the digital gap affect your students on a daily basis?\nPrincipal Davis: Tremendously. During remote learning days, some kids are trying to type out full research essays on a parent's cracked smartphone screen because they don't have a computer at home. It puts them at a severe academic disadvantage. Digital literacy isn't just a buzzword; it's a fundamental requirement for modern education. We are currently applying for state grants to build a loaner-laptop library for our students."
+      },
+      {
+        "id": "doc12",
+        "type": "menu",
+        "title": "Staff Canteen Menu - Week of Oct 14",
+        "content": "Monday: Sweet and Sour Pork with Steamed Rice, Vegetarian Spring Rolls.\nTuesday: Roast Chicken with Herb Potatoes and Gravy.\nWednesday: Beef Noodle Soup with Bok Choy.\nThursday: Curry Fish Balls and Rice.\nFriday: Chef's Special Seafood Pasta.\nNote: All meals come with a complimentary iced lemon tea or hot coffee. Please present your staff ID at the register."
+      }
+    ],
+    "Part_B1": {
+      "tasks": [
+        {
+          "id": "Task_5",
+          "type": "Email",
+          "instructions": "Write your email using information from the B1 Data File and your notes.",
+          "wordCount": 300,
+          "grading_rubric": {
+            "content_points": [],
+            "tone": "Professional",
+            "relevance_penalty": ""
+          }
+        },
+        {
+          "id": "Task_6",
+          "type": "Poster / Information Sheet",
+          "instructions": "Draft the text for the information sheet. Use relevant information from the B1 Data File.",
+          "wordCount": 300,
+          "grading_rubric": {
+            "content_points": [],
+            "tone": "Professional",
+            "relevance_penalty": ""
+          }
+        },
+        {
+          "id": "Task_7",
+          "type": "Speech Script",
+          "instructions": "Write the script for your speech using the provided B1 Data File.",
+          "wordCount": 300,
+          "grading_rubric": {
+            "content_points": [],
+            "tone": "Professional",
+            "relevance_penalty": ""
+          }
+        }
+      ]
+    },
+    "Part_B2": {
+      "tasks": [
+        {
+          "id": "Task_8",
+          "type": "Feature Article",
+          "instructions": "Write the feature article using the B2 Data File.",
+          "wordCount": 300,
+          "grading_rubric": {
+            "content_points": [
+              "Detail the launch and objectives of the 'Patience First' campaign.",
+              "Explain the location, purpose, and services provided by the new 'MTR Help Desks'.",
+              "Discuss the community's reaction to these two initiatives."
+            ],
+            "relevance_penalty": "Relevance Penalty Note: Students must focus strictly on the specified initiatives. A relevance penalty will be applied, and marks will be deducted for the inclusion of any unrelated transit campaigns or services not directly pertaining to 'Patience First' or 'MTR Help Desks'."
+          }
+        },
+        {
+          "id": "Task_9",
+          "type": "Letter of Complaint",
+          "instructions": "Write a formal letter to the Customer Service Director of the Transport Department complaining about these issues and suggesting improvements based on the B2 Data File.",
+          "wordCount": 300,
+          "grading_rubric": {
+            "content_points": [],
+            "tone": "Professional",
+            "relevance_penalty": ""
+          }
+        },
+        {
+          "id": "Task_10",
+          "type": "Proposal",
+          "instructions": "Write a proposal outlining the volunteer activities, the training required for students, and the expected benefits for both the students and the community. Use the B2 Data File to support your proposal.",
+          "wordCount": 300,
+          "grading_rubric": {
+            "content_points": [],
+            "tone": "Professional",
+            "relevance_penalty": ""
+          }
+        }
+      ]
+    }
+  }
+}

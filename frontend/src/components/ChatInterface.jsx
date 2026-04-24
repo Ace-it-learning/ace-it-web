@@ -4,7 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { useAvatar } from '../context/AvatarContext';
 import { useAuth } from '../context/AuthContext';
 import { useLanguage } from '../context/LanguageContext';
-import { ArrowRight, Paperclip, Send, Volume2, VolumeX, Edit3, Type, Maximize2, Minimize2, X, MessageSquare, CircleX, Trophy, Lock, Zap, Target, BookOpen, Plus, Settings2, ChevronDown, ChevronUp } from 'lucide-react';
+import { ArrowRight, Paperclip, Send, Volume2, VolumeX, Edit3, Type, Maximize2, Minimize2, X, MessageSquare, CircleX, Trophy, Lock, Zap, Target, BookOpen, Plus, Settings2, ChevronDown, ChevronUp, Sparkles } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { cn } from '../utils/cn'; // Reusing cn utility
 import EssayUploader from './EssayUploader';
@@ -421,13 +421,28 @@ const ChatInterface = ({ onOpenQuest }) => {
                     if (historyRes.ok) {
                         const history = await historyRes.json();
                         console.log(`[ChatInterface] Received ${history.length} messages from history API`);
-                        visibleHistory = history;
+                        // Normalize roles ('model' -> 'assistant') for frontend compatibility
+                        visibleHistory = history.map(m => ({
+                            ...m,
+                            role: m.role === 'model' ? 'assistant' : m.role
+                        }));
                     } else {
                         console.error(`[ChatInterface] History API failed with status: ${historyRes.status}`);
                     }
 
                     if (visibleHistory.length > 0) {
                         setMessages(visibleHistory);
+
+                        // Restore dynamic chips from the last assistant message
+                        const lastAssistantMsg = [...visibleHistory].reverse().find(m => m.role === 'assistant');
+                        if (lastAssistantMsg) {
+                            const parsed = parseSuggestions(lastAssistantMsg.content);
+                            if (parsed.suggestions && parsed.suggestions.length > 0) {
+                                console.log(`[ChatInterface] Restored ${parsed.suggestions.length} dynamic chips from history`);
+                                setDynamicChips(parsed.suggestions);
+                            }
+                        }
+
                         setShowChips(true);
                     } else {
                         let initialContent;
@@ -688,6 +703,7 @@ const ChatInterface = ({ onOpenQuest }) => {
         const currentInput = finalMessage;
 
         if (showChips) setShowChips(false);
+        setDynamicChips([]); // Clean slate for next AI response
         const currentImage = selectedImage;
 
         setInputValue('');
@@ -730,7 +746,9 @@ const ChatInterface = ({ onOpenQuest }) => {
 
             if (!response.ok) {
                 const errorData = await response.json().catch(() => ({ error: 'Unknown server error' }));
-                throw new Error(errorData.error || `Server Error (${response.status}): ${response.statusText}`);
+                const error = new Error(errorData.error || `Server Error (${response.status}): ${response.statusText}`);
+                error.diag_info = errorData.diag_info;
+                throw error;
             }
 
             const data = await response.json();
@@ -914,12 +932,14 @@ const ChatInterface = ({ onOpenQuest }) => {
 
         } catch (error) {
             console.error('Chat error:', error);
-            setAvatarState('UPSET'); // Error state
+            setAvatarState('UPSET'); 
+            const diagInfo = error.diag_info ? ` [${error.diag_info}]` : "";
             setMessages(prev => [...prev, {
                 role: 'assistant',
-                content: `Error: ${error.message}. Please try again.`
+                content: `Error: ${error.message}${diagInfo}. Please try again.`
             }]);
-        } finally {
+        }
+ finally {
             console.log(`[ChatInterface] Finally reached. Resetting states...`);
             setIsAnalyzingImage(false);
             // Safety valve: Unconditionally reset to IDLE if we are stuck in THINKING
@@ -1326,7 +1346,7 @@ const ChatInterface = ({ onOpenQuest }) => {
                                 {msg.customComponent === 'launch_card' && (
                                     <LaunchCard
                                         payload={msg.payload}
-                                        onConfirm={() => {
+                                        onLaunch={() => {
                                             const payload = msg.payload;
                                             if (payload.module === 'EXAM_ROUTER') {
                                                 handleSendMessage(`[ACTIVATING_EXAM_MODE] I want to study ${payload.params.type}`);
@@ -1417,6 +1437,24 @@ const ChatInterface = ({ onOpenQuest }) => {
                 )}
                 <div ref={messagesEndRef} />
             </div>
+
+            {/* Dynamic Suggestion Chips */}
+            {showChips && (dynamicChips.length > 0 || (messages.length <= 1 && suggestionChips && suggestionChips.length > 0)) && (
+                <div className="max-w-4xl mx-auto px-4 mb-4 flex justify-start">
+                    <div className="flex flex-nowrap gap-2 overflow-x-auto pb-1 no-scrollbar animate-in fade-in slide-in-from-bottom-1 duration-300">
+                        {(dynamicChips.length > 0 ? dynamicChips : (messages.length <= 1 ? suggestionChips : [])).map((chip, idx) => (
+                            <button
+                                key={idx}
+                                onClick={() => handleSendMessage(chip.value || chip)}
+                                className="flex items-center gap-1.5 px-3 py-1.5 bg-white dark:bg-white/10 border border-black/10 dark:border-white/10 rounded-xl shadow-sm hover:bg-gray-50 dark:hover:bg-white/20 transition-all text-xs font-semibold text-gray-700 dark:text-gray-200 whitespace-nowrap"
+                            >
+                                {chip.emoji && <span className="text-sm">{chip.emoji}</span>}
+                                {chip.label || chip}
+                            </button>
+                        ))}
+                    </div>
+                </div>
+            )}
 
             {/* Input Area - Gemini Redesign */}
             <div className="p-4 bg-white/60 dark:bg-white/5 transition-all duration-300">

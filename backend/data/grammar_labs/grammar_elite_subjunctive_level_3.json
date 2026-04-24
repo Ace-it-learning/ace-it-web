@@ -1,0 +1,220 @@
+{
+  "type": "GRAMMAR",
+  "topic_id": "grammar_elite_subjunctive",
+  "level": "HKDSE Level 4",
+  "conceptual_explanation": "The Subjunctive Mood is used to express things like importance, necessity, or suggestions. When we use words like 'essential' or 'suggest', the verb that follows must be in its 'Base Form' (no -s, no -ed, no -ing), even if the subject is 'he', 'she', or 'it'.",
+  "rule_cards": [
+    {
+      "name": "Mandative Subjunctive",
+      "formula": "It is [Adjective] that + Subject + Base Verb",
+      "correct": "It is essential that he arrive on time.",
+      "incorrect": "It is essential that he arrives on time."
+    },
+    {
+      "name": "Negative Subjunctive",
+      "formula": "that + Subject + not + Base Verb",
+      "correct": "I suggest that she not leave yet.",
+      "incorrect": "I suggest that she doesn't leave yet."
+    },
+    {
+      "name": "The 'Be' Rule",
+      "formula": "that + Subject + be + Adjective/PP",
+      "correct": "The manager asked that the room be ready by 9 AM.",
+      "incorrect": "The manager asked that the room is ready..."
+    },
+    {
+      "name": "Verbs of Suggestion",
+      "formula": "Suggest/Recommend that + Subject + Base Verb",
+      "correct": "We recommend that the applicant wait for the results.",
+      "incorrect": "We recommend that the applicant waits..."
+    }
+  ],
+  "head_noun_tasks": [
+    {
+      "sentence_tokens": [
+        "It",
+        "is",
+        "essential",
+        "that",
+        "every",
+        "student",
+        "be",
+        "present",
+        "."
+      ],
+      "head_noun_indices": [
+        2,
+        6
+      ],
+      "explanation": "'Essential' is the trigger word, and 'be' is the subjunctive verb."
+    },
+    {
+      "sentence_tokens": [
+        "The",
+        "doctor",
+        "suggested",
+        "that",
+        "he",
+        "not",
+        "smoke",
+        "anymore",
+        "."
+      ],
+      "head_noun_indices": [
+        2,
+        5,
+        6
+      ],
+      "explanation": "'Suggested' triggers the subjunctive 'not smoke' (no 'doesn't')."
+    },
+    {
+      "sentence_tokens": [
+        "It",
+        "is",
+        "important",
+        "that",
+        "she",
+        "finish",
+        "the",
+        "report",
+        "today",
+        "."
+      ],
+      "head_noun_indices": [
+        2,
+        5
+      ],
+      "explanation": "'Important' forces 'finish' to stay in the base form despite the subject 'she'."
+    },
+    {
+      "sentence_tokens": [
+        "We",
+        "recommend",
+        "that",
+        "the",
+        "meeting",
+        "be",
+        "postponed",
+        "until",
+        "Friday",
+        "."
+      ],
+      "head_noun_indices": [
+        1,
+        5
+      ],
+      "explanation": "'Recommend' triggers the passive subjunctive 'be postponed'."
+    },
+    {
+      "sentence_tokens": [
+        "The",
+        "judge",
+        "ordered",
+        "that",
+        "the",
+        "prisoner",
+        "remain",
+        "in",
+        "his",
+        "cell",
+        "."
+      ],
+      "head_noun_indices": [
+        2,
+        6
+      ],
+      "explanation": "'Ordered' is a mandative verb that triggers the base form 'remain'."
+    }
+  ],
+  "drill_tasks": [
+    {
+      "type": "MCQ",
+      "question": "The principal insisted that the teacher ________ the rules.",
+      "options": [
+        "follows",
+        "follow",
+        "followed",
+        "is following"
+      ],
+      "answer": "follow",
+      "explanation": "'Insisted' is a mandative verb requiring the base form."
+    },
+    {
+      "type": "MCQ",
+      "question": "It is vital that she ________ late for the exam.",
+      "options": [
+        "isn't",
+        "not be",
+        "not is",
+        "doesn't be"
+      ],
+      "answer": "not be",
+      "explanation": "The subjunctive negative is 'not' + base form ('be')."
+    },
+    {
+      "type": "MCQ",
+      "question": "I suggest that he ________ us as soon as possible.",
+      "options": [
+        "calls",
+        "call",
+        "to call",
+        "is calling"
+      ],
+      "answer": "call",
+      "explanation": "'Suggest' triggers the base form 'call'."
+    },
+    {
+      "type": "MCQ",
+      "question": "It is necessary that every candidate ________ an ID card.",
+      "options": [
+        "bring",
+        "brings",
+        "to bring",
+        "bringing"
+      ],
+      "answer": "bring",
+      "explanation": "'Necessary' requires the subjunctive base form 'bring'."
+    },
+    {
+      "type": "MCQ",
+      "question": "The committee requested that the proposal ________ reconsidered.",
+      "options": [
+        "is",
+        "be",
+        "to be",
+        "being"
+      ],
+      "answer": "be",
+      "explanation": "Passive subjunctive uses 'be' + past participle."
+    }
+  ],
+  "boss_fight": {
+    "paragraph": "It is essential that he arrives on time. I suggest that he doesn't bring his luggage. We recommend that the project is finished by tomorrow.",
+    "errors": [
+      {
+        "original": "he arrives",
+        "correction": "he arrive",
+        "explanation": "'Essential' requires the base form of the verb."
+      },
+      {
+        "original": "he doesn't bring",
+        "correction": "he not bring",
+        "explanation": "The negative subjunctive uses 'not' + base verb, not 'doesn't'."
+      },
+      {
+        "original": "project is finished",
+        "correction": "project be finished",
+        "explanation": "'Recommend' requires the subjunctive 'be' for the passive voice."
+      }
+    ]
+  },
+  "success_feedback": "Great start! You've mastered the basic mandative subjunctive. You're ready for more complex structures.",
+  "suggested_next_steps": [
+    "Learn about 'Lest' and other formal triggers.",
+    "Practice using 'be' in complex subjunctive sentences.",
+    "Try Level 5 for more advanced subjunctive phrases!"
+  ],
+  "interactive_tasks": [],
+  "examples": [],
+  "key_points": []
+}

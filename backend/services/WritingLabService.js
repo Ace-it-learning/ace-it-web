@@ -3,7 +3,14 @@ const admin = require('firebase-admin');
 
 class WritingLabService {
     constructor() {
-        this.db = admin.firestore();
+        this._db = null;
+    }
+
+    get db() {
+        if (!this._db) {
+            this._db = admin.firestore();
+        }
+        return this._db;
     }
 
     /**

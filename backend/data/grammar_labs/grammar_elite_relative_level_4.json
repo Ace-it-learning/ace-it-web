@@ -1,0 +1,224 @@
+{
+  "type": "GRAMMAR",
+  "topic_id": "grammar_elite_relative",
+  "level": "HKDSE Level 5",
+  "conceptual_explanation": "Level 5 Relative Mastery focuses on 'Relative Clauses of Quantity' and using 'Which' to describe an entire situation. These structures are extremely common in academic writing and high-level reports.",
+  "rule_cards": [
+    {
+      "name": "Relative Clauses of Quantity",
+      "formula": "Noun + , + [Number/Many/Some] + of + which/whom",
+      "correct": "There were 20 guests, ten of whom were students.",
+      "incorrect": "There were 20 guests, ten of them were students. (Comma Splice)"
+    },
+    {
+      "name": "The Clause-Modifying 'Which'",
+      "formula": "Main Clause + , + which + Verb",
+      "correct": "He arrived late, which annoyed the teacher.",
+      "incorrect": "He arrived late, that annoyed the teacher."
+    },
+    {
+      "name": "Prepositional Formalism",
+      "formula": "Preposition + Whom/Which",
+      "correct": "The conditions under which they worked were harsh.",
+      "incorrect": "The conditions which they worked under..."
+    },
+    {
+      "name": "Object-Subject Trap",
+      "formula": "The man whom [I thought] was... (Error check)",
+      "correct": "The man who I thought was the thief turned out to be innocent.",
+      "incorrect": "The man whom I thought was the thief... (If 'who' is the subject of 'was')"
+    }
+  ],
+  "head_noun_tasks": [
+    {
+      "sentence_tokens": [
+        "The",
+        "company",
+        "has",
+        "five",
+        "directors",
+        ",",
+        "three",
+        "of",
+        "whom",
+        "are",
+        "from",
+        "abroad",
+        "."
+      ],
+      "head_noun_indices": [
+        4,
+        8
+      ],
+      "explanation": "'Three of whom' is a relative clause of quantity modifying 'directors'."
+    },
+    {
+      "sentence_tokens": [
+        "She",
+        "failed",
+        "the",
+        "test",
+        ",",
+        "which",
+        "was",
+        "completely",
+        "unexpected",
+        "."
+      ],
+      "head_noun_indices": [
+        5
+      ],
+      "explanation": "'Which' refers back to the entire situation of her failing the test."
+    },
+    {
+      "sentence_tokens": [
+        "The",
+        "manner",
+        "in",
+        "which",
+        "he",
+        "conducted",
+        "himself",
+        "was",
+        "exemplary",
+        "."
+      ],
+      "head_noun_indices": [
+        1,
+        3
+      ],
+      "explanation": "'In which' modifies 'manner' in a formal prepositional structure."
+    },
+    {
+      "sentence_tokens": [
+        "I",
+        "received",
+        "many",
+        "gifts",
+        ",",
+        "most",
+        "of",
+        "which",
+        "were",
+        "handmade",
+        "."
+      ],
+      "head_noun_indices": [
+        3,
+        7
+      ],
+      "explanation": "'Most of which' is a relative clause of quantity modifying 'gifts'."
+    },
+    {
+      "sentence_tokens": [
+        "The",
+        "extent",
+        "to",
+        "which",
+        "the",
+        "damage",
+        "was",
+        "prevented",
+        "remains",
+        "unknown",
+        "."
+      ],
+      "head_noun_indices": [
+        1,
+        3
+      ],
+      "explanation": "'To which' is a formal prepositional structure modifying 'extent'."
+    }
+  ],
+  "drill_tasks": [
+    {
+      "type": "MCQ",
+      "question": "He presented three options, ________ were feasible.",
+      "options": [
+        "none of them",
+        "none of which",
+        "which none",
+        "that none"
+      ],
+      "answer": "none of which",
+      "explanation": "Use a relative pronoun (which) to connect the clause; 'none of them' would cause a comma splice."
+    },
+    {
+      "type": "MCQ",
+      "question": "The speed ________ the car was traveling was dangerous.",
+      "options": [
+        "at which",
+        "which",
+        "in which",
+        "to which"
+      ],
+      "answer": "at which",
+      "explanation": "We say 'at a speed', so the formal relative is 'at which'."
+    },
+    {
+      "type": "MCQ",
+      "question": "The witness, ________ I believed was telling the truth, suddenly became nervous.",
+      "options": [
+        "who",
+        "whom",
+        "whose",
+        "which"
+      ],
+      "answer": "who",
+      "explanation": "'Who' is the subject of 'was telling the truth'; 'I believed' is a parenthetical insertion."
+    },
+    {
+      "type": "MCQ",
+      "question": "He lost his job, ________ came as a shock to his family.",
+      "options": [
+        "that",
+        "which",
+        "who",
+        "it"
+      ],
+      "answer": "which",
+      "explanation": "'Which' can refer to the entire preceding clause."
+    },
+    {
+      "type": "MCQ",
+      "question": "We have fifty employees, ________ are under thirty.",
+      "options": [
+        "twenty of them",
+        "twenty of whom",
+        "twenty who",
+        "of whom twenty"
+      ],
+      "answer": "twenty of whom",
+      "explanation": "Relative clause of quantity for people."
+    }
+  ],
+  "boss_fight": {
+    "paragraph": "I have two sisters, both of them are doctors. He broke the window, that was very careless. The way how he speaks is annoying.",
+    "errors": [
+      {
+        "original": "both of them are",
+        "correction": "both of whom are",
+        "explanation": "To connect two clauses with a comma, you must use a relative pronoun ('whom'), not a personal pronoun ('them')."
+      },
+      {
+        "original": "the window, that was",
+        "correction": "the window, which was",
+        "explanation": "'That' cannot be used in non-defining clauses or to refer to a whole clause; use 'which'."
+      },
+      {
+        "original": "way how",
+        "correction": "way in which",
+        "explanation": "Never use 'way how'. Use 'the way' alone, or 'the way in which'."
+      }
+    ]
+  },
+  "success_feedback": "Impressive! You've navigated the complexities of quantitative and clause-modifying relatives. Your precision is truly high-level.",
+  "suggested_next_steps": [
+    "Practice using 'at which', 'to which', and 'in which' in formal writing.",
+    "Try using 'some of whom' to describe a group of people.",
+    "Try Level 5* for elite-level formal relative structures!"
+  ],
+  "interactive_tasks": [],
+  "examples": [],
+  "key_points": []
+}

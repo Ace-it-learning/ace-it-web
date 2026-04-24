@@ -55,9 +55,62 @@ router.post('/submit', async (req, res) => {
             assessment.xpAwarded = awardedXP;
         }
 
+        // 3. Sync to Mastery Radar
+        if (req.user?.uid) {
+            const UserProfileService = require('../services/UserProfileService');
+            await UserProfileService.syncMockResultsToMastery(req.user.uid, 'english', assessment);
+        }
+
         res.json(assessment);
     } catch (e) {
-        console.error("Assessment error:", e);
+        res.status(500).json({ error: e.message });
+    }
+});
+
+/**
+ * POST /api/english/mock/submit-listening
+ * Dedicated endpoint for Paper 3 (Listening & Integrated Skills)
+ */
+router.post('/submit-listening', async (req, res) => {
+    try {
+        const { paperId, userAnswers, analytics } = req.body;
+        const MockAssessmentService = require('../services/MockAssessmentService');
+        const EnglishMockService = require('../services/EnglishMockService');
+        
+        const mockData = await EnglishMockService.getMockPaper(paperId);
+        if (!mockData) return res.status(404).json({ error: "Paper not found" });
+
+        const assessment = await MockAssessmentService.evaluatePaper(mockData, userAnswers, {
+            ...analytics,
+            paperType: 'LISTENING'
+        });
+        
+        // Award XP (Standard: 500 XP max for Paper 3)
+        const baseMaxXP = 500;
+        const awardedXP = Math.round(baseMaxXP * (assessment.percentage / 100));
+        
+        if (req.user?.uid) {
+            try {
+                const GamificationService = require('../services/GamificationService');
+                await GamificationService.awardXP(req.user.uid, awardedXP, 'listening', {
+                    title: `Mock Exam: ${mockData.meta?.topic || 'Paper 3'}`,
+                    score: `${Math.round(assessment.percentage)}%`,
+                    topic: mockData.meta?.topic,
+                    paper: 'Paper 3'
+                });
+            } catch (e) { console.error("XP Award failed:", e); }
+        }
+        assessment.xpAwarded = awardedXP;
+
+        // 3. Sync to Mastery Radar
+        if (req.user?.uid) {
+            const UserProfileService = require('../services/UserProfileService');
+            await UserProfileService.syncMockResultsToMastery(req.user.uid, 'english', assessment);
+        }
+
+        res.json(assessment);
+    } catch (e) {
+        console.error("Listening Assessment error:", e);
         res.status(500).json({ error: e.message });
     }
 });
@@ -87,6 +140,12 @@ router.post('/writing/submit', async (req, res) => {
             paperType: 'WRITING',
             selectedPartB: userAnswers.selectedPartB
         });
+
+        // 4. Sync to Mastery Radar
+        if (uid || req.user?.uid) {
+            const UserProfileService = require('../services/UserProfileService');
+            await UserProfileService.syncMockResultsToMastery(uid || req.user.uid, 'english', results);
+        }
         
         res.json(results);
     } catch (e) {
@@ -101,9 +160,9 @@ router.post('/writing/submit', async (req, res) => {
  */
 router.post('/cheat/writing', async (req, res) => {
     try {
-        const { level, part, type, situation } = req.body;
+        const { level, part, type, situation, wordLimit, dataContext } = req.body;
         const WritingCheatService = require('../services/WritingCheatService');
-        const response = await WritingCheatService.generateCheatResponse(level, part, type, situation);
+        const response = await WritingCheatService.generateCheatResponse(level, part, type, situation, wordLimit, dataContext);
         res.json(response);
     } catch (e) {
         res.status(500).json({ error: e.message });

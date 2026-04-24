@@ -1,0 +1,233 @@
+{
+  "type": "GRAMMAR",
+  "topic_id": "grammar_elite_participle",
+  "level": "HKDSE Level 5**",
+  "conceptual_explanation": "The 5** summit of Participle Mastery involves 'Inverted Participle Phrases' (Standing in the corner was...) and 'Clause-Modifying Participles' (He spoke loudly, making everyone look up). We also look at how to use participles to create the perfect flow in complex academic arguments.",
+  "rule_cards": [
+    {
+      "name": "The Clause-Modifying Participle",
+      "formula": "Main Clause + Comma + Verb-ing...",
+      "correct": "He arrived late, causing a delay in the meeting.",
+      "incorrect": "He arrived late and it caused..."
+    },
+    {
+      "name": "Inverted Participle Phrases",
+      "formula": "Participle Phrase + Verb + Subject",
+      "correct": "Hidden in the bushes was a tiny kitten.",
+      "incorrect": "Hidden in the bushes, a tiny kitten was."
+    },
+    {
+      "name": "The 'Bare' Absolute",
+      "formula": "Noun + Past Participle..., Main Clause",
+      "correct": "His work finished, he left the office.",
+      "incorrect": "His work was finished, he left..."
+    },
+    {
+      "name": "Present Participle of 'Be' (Being)",
+      "formula": "Being + Adjective..., Subject + Verb",
+      "correct": "Being a perfectionist, she checked the report twice.",
+      "incorrect": "As she being a perfectionist..."
+    }
+  ],
+  "head_noun_tasks": [
+    {
+      "sentence_tokens": [
+        "Standing",
+        "next",
+        "to",
+        "the",
+        "window",
+        "was",
+        "a",
+        "tall",
+        "man",
+        "in",
+        "a",
+        "dark",
+        "suit",
+        "."
+      ],
+      "head_noun_indices": [
+        0,
+        8
+      ],
+      "explanation": "An inverted participle phrase 'Standing next to the window' modifies the subject 'a tall man'."
+    },
+    {
+      "sentence_tokens": [
+        "The",
+        "agreement",
+        "signed",
+        ",",
+        "both",
+        "parties",
+        "left",
+        "the",
+        "room",
+        "feeling",
+        "satisfied",
+        "."
+      ],
+      "head_noun_indices": [
+        1,
+        2,
+        9
+      ],
+      "explanation": "'The agreement signed' is a 'Bare' absolute phrase. 'Feeling satisfied' modifies 'both parties'."
+    },
+    {
+      "sentence_tokens": [
+        "She",
+        "argued",
+        "persuasively",
+        ",",
+        "convincing",
+        "the",
+        "judges",
+        "of",
+        "her",
+        "innocence",
+        "."
+      ],
+      "head_noun_indices": [
+        0,
+        4
+      ],
+      "explanation": "'Convincing' is a participle modifying the entire previous clause 'She argued persuasively'."
+    },
+    {
+      "sentence_tokens": [
+        "Hidden",
+        "beneath",
+        "the",
+        "floorboards",
+        "was",
+        "a",
+        "box",
+        "filled",
+        "with",
+        "gold",
+        "."
+      ],
+      "head_noun_indices": [
+        0,
+        6,
+        7
+      ],
+      "explanation": "'Hidden' is an inverted past participle modifying 'a box'. 'Filled' is a reduced relative clause modifying 'a box'."
+    },
+    {
+      "sentence_tokens": [
+        "Being",
+        "the",
+        "only",
+        "survivor",
+        ",",
+        "he",
+        "felt",
+        "a",
+        "deep",
+        "burden",
+        "of",
+        "responsibility",
+        "."
+      ],
+      "head_noun_indices": [
+        0,
+        5
+      ],
+      "explanation": "'Being' is a participle phrase modifying 'he'."
+    }
+  ],
+  "drill_tasks": [
+    {
+      "type": "MCQ",
+      "question": "________ on the table was a letter from his father.",
+      "options": [
+        "Lying",
+        "Lied",
+        "Lain",
+        "To lie"
+      ],
+      "answer": "Lying",
+      "explanation": "Inverted participle phrase: 'Lying on the table was...' (Active)."
+    },
+    {
+      "type": "MCQ",
+      "question": "He failed the test, ________ everyone who knew how hard he'd studied.",
+      "options": [
+        "surprise",
+        "surprising",
+        "surprised",
+        "to surprise"
+      ],
+      "answer": "surprising",
+      "explanation": "Clause-modifying participle: ', surprising everyone...'."
+    },
+    {
+      "type": "MCQ",
+      "question": "________ by the lack of progress, the manager called for a meeting.",
+      "options": [
+        "Frustrate",
+        "Frustrating",
+        "Frustrated",
+        "Being frustrated"
+      ],
+      "answer": "Frustrated",
+      "explanation": "Past participle used to describe the manager's state."
+    },
+    {
+      "type": "MCQ",
+      "question": "The chores ________, the children went out to play.",
+      "options": [
+        "are done",
+        "were done",
+        "done",
+        "doing"
+      ],
+      "answer": "done",
+      "explanation": "'Bare' absolute phrase: 'The chores done' (meaning 'After the chores were done')."
+    },
+    {
+      "type": "MCQ",
+      "question": "________ a doctor, she knew exactly what to do.",
+      "options": [
+        "Is",
+        "Been",
+        "Being",
+        "Having been"
+      ],
+      "answer": "Being",
+      "explanation": "Participial phrase giving a reason for the main action."
+    }
+  ],
+  "boss_fight": {
+    "paragraph": "Sit in the corner was a spider. He cried, made me feel sad. The lunch finished, they returned to work.",
+    "errors": [
+      {
+        "original": "Sit in the corner",
+        "correction": "Sitting in the corner",
+        "explanation": "Inverted phrases use the participle (-ing) form."
+      },
+      {
+        "original": "He cried, made me feel sad",
+        "correction": "He cried, making me feel sad",
+        "explanation": "Use a participle phrase (-ing) to show the result of a previous clause."
+      },
+      {
+        "original": "The lunch finished",
+        "correction": "Lunch finished",
+        "explanation": "In absolute phrases, we often omit the article ('The') for a more literary effect, but 'Lunch finished' is the standard 'Bare' absolute."
+      }
+    ]
+  },
+  "success_feedback": "Phenomenal! You have mastered the most intricate uses of participle phrases. Your command of sentence variety and flow is truly 5**.",
+  "suggested_next_steps": [
+    "Write a paragraph using an inverted participle phrase and an absolute phrase.",
+    "Look for clause-modifying participles in newspaper editorials.",
+    "Practice using 'Bare' absolutes in your creative writing!"
+  ],
+  "interactive_tasks": [],
+  "examples": [],
+  "key_points": []
+}

@@ -5,7 +5,14 @@ const GenerativeAIService = require('./GenerativeAIService');
 
 class SpeakingQuestService {
     constructor() {
-        this.db = admin.firestore();
+        this._db = null;
+    }
+
+    get db() {
+        if (!this._db) {
+            this._db = admin.firestore();
+        }
+        return this._db;
     }
 
     /**

@@ -1,0 +1,235 @@
+{
+  "type": "GRAMMAR",
+  "topic_id": "grammar_elite_subjunctive",
+  "level": "HKDSE Level 5**",
+  "conceptual_explanation": "The 5** peak of Subjunctive mastery involves 'Conditional Inversion' (Were he to...), 'Exclusionary Conditionals' (But for...), and the complex 'Past Perfect Subjunctive' for regrets and counter-factual history. These structures are the hallmarks of a master of the English language.",
+  "rule_cards": [
+    {
+      "name": "Conditional Inversion",
+      "formula": "Were + Subject + to + Verb (Future Hypothetical)",
+      "correct": "Were he to resign, the company would collapse.",
+      "incorrect": "If he would resign..."
+    },
+    {
+      "name": "But for (Subjunctive)",
+      "formula": "But for + Noun, Subject + would have + PP",
+      "correct": "But for your help, I would have failed.",
+      "incorrect": "Except for your help..."
+    },
+    {
+      "name": "If it were not for",
+      "formula": "If it were not for + Noun (Present Unreal)",
+      "correct": "If it were not for his ego, he would be a great leader.",
+      "incorrect": "If it was not for..."
+    },
+    {
+      "name": "Mandative Proposals",
+      "formula": "Propose/Move/Resolve that + Subject + Base Verb",
+      "correct": "I move that the meeting be adjourned.",
+      "incorrect": "I move that the meeting is adjourned."
+    }
+  ],
+  "head_noun_tasks": [
+    {
+      "sentence_tokens": [
+        "Were",
+        "they",
+        "to",
+        "discover",
+        "the",
+        "truth",
+        ",",
+        "the",
+        "scandal",
+        "would",
+        "be",
+        "immense",
+        "."
+      ],
+      "head_noun_indices": [
+        0,
+        3
+      ],
+      "explanation": "'Were' + 'to discover' is a highly formal future hypothetical subjunctive."
+    },
+    {
+      "sentence_tokens": [
+        "But",
+        "for",
+        "the",
+        "heroic",
+        "actions",
+        "of",
+        "the",
+        "firefighters",
+        ",",
+        "the",
+        "building",
+        "would",
+        "have",
+        "burned",
+        "down",
+        "."
+      ],
+      "head_noun_indices": [
+        0,
+        1
+      ],
+      "explanation": "'But for' introduces a counter-factual condition."
+    },
+    {
+      "sentence_tokens": [
+        "If",
+        "it",
+        "had",
+        "not",
+        "been",
+        "for",
+        "the",
+        "heavy",
+        "traffic",
+        ",",
+        "we",
+        "would",
+        "have",
+        "arrived",
+        "early",
+        "."
+      ],
+      "head_noun_indices": [
+        0,
+        2,
+        4
+      ],
+      "explanation": "'If it had not been for' is the past perfect subjunctive structure for unreal past conditions."
+    },
+    {
+      "sentence_tokens": [
+        "I",
+        "propose",
+        "that",
+        "the",
+        "candidate",
+        "be",
+        "interviewed",
+        "immediately",
+        "."
+      ],
+      "head_noun_indices": [
+        1,
+        5
+      ],
+      "explanation": "'Propose' is a mandative verb that requires the subjunctive 'be'."
+    },
+    {
+      "sentence_tokens": [
+        "Should",
+        "anyone",
+        "enquire",
+        ",",
+        "tell",
+        "them",
+        "I",
+        "am",
+        "unavailable",
+        "."
+      ],
+      "head_noun_indices": [
+        0,
+        2
+      ],
+      "explanation": "Inverted 'should' functions as a subjunctive 'if anyone should'."
+    }
+  ],
+  "drill_tasks": [
+    {
+      "type": "MCQ",
+      "question": "________ he to win the election, he would implement radical changes.",
+      "options": [
+        "If",
+        "Were",
+        "Had",
+        "Should"
+      ],
+      "answer": "Were",
+      "explanation": "'Were' + subject + to-infinitive is a formal future hypothetical."
+    },
+    {
+      "type": "MCQ",
+      "question": "But ________ his intervention, the peace talks would have collapsed.",
+      "options": [
+        "with",
+        "for",
+        "to",
+        "of"
+      ],
+      "answer": "for",
+      "explanation": "'But for' means 'if it hadn't been for'."
+    },
+    {
+      "type": "MCQ",
+      "question": "I move that the motion ________ put to a vote.",
+      "options": [
+        "is",
+        "was",
+        "be",
+        "should"
+      ],
+      "answer": "be",
+      "explanation": "In formal meetings, 'move' triggers the subjunctive 'be'."
+    },
+    {
+      "type": "MCQ",
+      "question": "If it ________ not for the rain, we would have finished the game.",
+      "options": [
+        "was",
+        "had been",
+        "were",
+        "has been"
+      ],
+      "answer": "had been",
+      "explanation": "Past unreal condition: 'If it had not been for...'."
+    },
+    {
+      "type": "MCQ",
+      "question": "________ he been more careful, the accident wouldn't have happened.",
+      "options": [
+        "If",
+        "Were",
+        "Had",
+        "Should"
+      ],
+      "answer": "Had",
+      "explanation": "Inverted past perfect conditional: 'Had he been' = 'If he had been'."
+    }
+  ],
+  "boss_fight": {
+    "paragraph": "Were he to arrives now, we would be ready. But for your help, I would fail. I move that the chairman is replaced.",
+    "errors": [
+      {
+        "original": "Were he to arrives",
+        "correction": "Were he to arrive",
+        "explanation": "'Were to' must be followed by the base form of the verb."
+      },
+      {
+        "original": "I would fail",
+        "correction": "I would have failed",
+        "explanation": "'But for' for a past situation requires 'would have + past participle'."
+      },
+      {
+        "original": "chairman is replaced",
+        "correction": "chairman be replaced",
+        "explanation": "'Move' is a mandative verb that requires the subjunctive 'be'."
+      }
+    ]
+  },
+  "success_feedback": "Stunning! You have reached the absolute summit of English grammar. Your command of the subjunctive mood is at a native-speaker elite level.",
+  "suggested_next_steps": [
+    "Use these structures in the introduction and conclusion of your Paper 2 writing tasks.",
+    "Challenge yourself to find 'But for' in legal or academic texts.",
+    "Keep practicing and maintain this 5** standard!"
+  ],
+  "interactive_tasks": [],
+  "examples": [],
+  "key_points": []
+}

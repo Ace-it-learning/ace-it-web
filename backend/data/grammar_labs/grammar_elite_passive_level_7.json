@@ -1,0 +1,245 @@
+{
+  "type": "GRAMMAR",
+  "topic_id": "grammar_elite_passive",
+  "level": "HKDSE Level 5**",
+  "conceptual_explanation": "The 5** summit of Passive Mastery involves 'Future Perfect' passive forms and the 'Get-Passive' for informal/unfortunate events. We also look at how to use passive reporting for sensory verbs (e.g., 'He was seen to enter'), which is the peak of formal description.",
+  "rule_cards": [
+    {
+      "name": "Future Perfect Passive",
+      "formula": "will + have + been + Past Participle",
+      "correct": "The bridge will have been completed by 2026.",
+      "incorrect": "The bridge will be completed by 2026. (Less precise for a deadline)"
+    },
+    {
+      "name": "Sensory Passives",
+      "formula": "Subject + be + [seen/heard/felt] + to + Verb",
+      "correct": "He was seen to enter the building late at night.",
+      "incorrect": "He was seen enter the building."
+    },
+    {
+      "name": "The 'Get' Passive",
+      "formula": "Subject + [get] + Past Participle (Informal/Unfortunate)",
+      "correct": "He got fired for being late every day.",
+      "incorrect": "He was got fired."
+    },
+    {
+      "name": "Complex Passive Infinitives",
+      "formula": "to + have + been + Past Participle",
+      "correct": "The document appears to have been altered.",
+      "incorrect": "The document appears to be altered. (Implies a current state, not a past action)"
+    }
+  ],
+  "head_noun_tasks": [
+    {
+      "sentence_tokens": [
+        "By",
+        "the",
+        "end",
+        "of",
+        "next",
+        "year",
+        ",",
+        "the",
+        "new",
+        "facility",
+        "will",
+        "have",
+        "been",
+        "commissioned",
+        "."
+      ],
+      "head_noun_indices": [
+        10,
+        11,
+        12,
+        13
+      ],
+      "explanation": "A future perfect passive indicating a completed action by a future point in time."
+    },
+    {
+      "sentence_tokens": [
+        "The",
+        "suspect",
+        "was",
+        "observed",
+        "to",
+        "leave",
+        "the",
+        "premises",
+        "shortly",
+        "after",
+        "midnight",
+        "."
+      ],
+      "head_noun_indices": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "explanation": "A formal sensory passive with a to-infinitive."
+    },
+    {
+      "sentence_tokens": [
+        "Unfortunately",
+        ",",
+        "several",
+        "valuable",
+        "items",
+        "got",
+        "damaged",
+        "during",
+        "the",
+        "move",
+        "."
+      ],
+      "head_noun_indices": [
+        5,
+        6
+      ],
+      "explanation": "A 'get-passive' often used for accidents or unfortunate events."
+    },
+    {
+      "sentence_tokens": [
+        "The",
+        "ancient",
+        "artifact",
+        "is",
+        "rumored",
+        "to",
+        "have",
+        "been",
+        "found",
+        "in",
+        "a",
+        "remote",
+        "cave",
+        "."
+      ],
+      "head_noun_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "explanation": "A complex passive reporting a past discovery."
+    },
+    {
+      "sentence_tokens": [
+        "Plans",
+        "are",
+        "understood",
+        "to",
+        "be",
+        "being",
+        "drafted",
+        "as",
+        "we",
+        "speak",
+        "."
+      ],
+      "head_noun_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "explanation": "A rare but highly sophisticated 'Double Passive' involving an ongoing action ('to be being drafted')."
+    }
+  ],
+  "drill_tasks": [
+    {
+      "type": "MCQ",
+      "question": "The report ________ by the time the meeting starts.",
+      "options": [
+        "will have been finished",
+        "will be finished",
+        "is finished",
+        "has been finished"
+      ],
+      "answer": "will have been finished",
+      "explanation": "Future perfect passive for an action completed by a future deadline."
+    },
+    {
+      "type": "MCQ",
+      "question": "He was heard ________ the secret to his friend.",
+      "options": [
+        "to whisper",
+        "whisper",
+        "whispering",
+        "to be whispered"
+      ],
+      "answer": "to whisper",
+      "explanation": "Formal sensory passive: 'be heard to [Verb]'."
+    },
+    {
+      "type": "MCQ",
+      "question": "They ________ caught in the rain without an umbrella.",
+      "options": [
+        "were got",
+        "got",
+        "have got",
+        "did get"
+      ],
+      "answer": "got",
+      "explanation": "The 'get-passive' is common for unfortunate incidents."
+    },
+    {
+      "type": "MCQ",
+      "question": "The painting is believed ________ by a student of Leonardo.",
+      "options": [
+        "to have been painted",
+        "to be painted",
+        "being painted",
+        "having been painted"
+      ],
+      "answer": "to have been painted",
+      "explanation": "Past action reported in the present passive."
+    },
+    {
+      "type": "MCQ",
+      "question": "I don't like ________ kept waiting.",
+      "options": [
+        "being",
+        "to be",
+        "having been",
+        "get"
+      ],
+      "answer": "being",
+      "explanation": "Common gerundive passive after 'like/don't like'."
+    }
+  ],
+  "boss_fight": {
+    "paragraph": "The bridge will finished by next year. He was heard shout at the crowd. I got my leg break during the game.",
+    "errors": [
+      {
+        "original": "will finished",
+        "correction": "will have been finished",
+        "explanation": "For a future deadline, the future perfect passive is the most precise form."
+      },
+      {
+        "original": "heard shout",
+        "correction": "heard to shout",
+        "explanation": "When using sensory verbs in the passive, the following verb must be a 'to-infinitive'."
+      },
+      {
+        "original": "got my leg break",
+        "correction": "got my leg broken",
+        "explanation": "Even in the 'get-passive' with a body part, you must use the past participle (V3)."
+      }
+    ]
+  },
+  "success_feedback": "Stunning! You have reached the absolute summit of passive voice mastery. Your ability to manipulate objectivity and emphasis is truly 5** level.",
+  "suggested_next_steps": [
+    "Identify 'will have been [PP]' in economic or technical forecasts.",
+    "Practice using formal sensory passives in your narrative writing.",
+    "Keep maintaining this 5** standard in all your writing!"
+  ],
+  "interactive_tasks": [],
+  "examples": [],
+  "key_points": []
+}

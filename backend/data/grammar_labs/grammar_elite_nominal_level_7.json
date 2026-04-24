@@ -1,0 +1,251 @@
+{
+  "type": "GRAMMAR",
+  "topic_id": "grammar_elite_nominal",
+  "level": "HKDSE Level 5**",
+  "conceptual_explanation": "The 5** summit of Nominal mastery involves 'Infinitival' subjects, 'Dummy-It' objects, and complex nested clauses. These structures allow you to express extremely abstract and nuanced ideas with grammatical precision.",
+  "rule_cards": [
+    {
+      "name": "Infinitival Subjects",
+      "formula": "To + Verb... + be + Complement",
+      "correct": "To provide quality education for all is our goal.",
+      "incorrect": "Provide quality education for all is our goal."
+    },
+    {
+      "name": "The Dummy 'It' Object",
+      "formula": "Subject + Verb + it + Adjective + [that-clause]",
+      "correct": "I find it surprising that he left so early.",
+      "incorrect": "I find surprising that he left so early."
+    },
+    {
+      "name": "Gerundive Nominal Clauses",
+      "formula": "Verb-ing... + be + Complement",
+      "correct": "Implementing these changes will be difficult.",
+      "incorrect": "Implement these changes will be difficult."
+    },
+    {
+      "name": "Nested Nominal Clauses",
+      "formula": "Clause inside a Clause",
+      "correct": "That he knows how to solve the problem is evident.",
+      "incorrect": "He knows how to solve the problem is evident."
+    }
+  ],
+  "head_noun_tasks": [
+    {
+      "sentence_tokens": [
+        "To",
+        "overcome",
+        "such",
+        "a",
+        "challenge",
+        "requires",
+        "immense",
+        "perseverance",
+        "."
+      ],
+      "head_noun_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "explanation": "The infinitival phrase 'To overcome such a challenge' acts as the nominal subject."
+    },
+    {
+      "sentence_tokens": [
+        "She",
+        "made",
+        "it",
+        "clear",
+        "that",
+        "she",
+        "would",
+        "not",
+        "tolerate",
+        "any",
+        "disrespect",
+        "."
+      ],
+      "head_noun_indices": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "explanation": "A nominal clause acting as the real object, with 'it' as the dummy object."
+    },
+    {
+      "sentence_tokens": [
+        "Maintaining",
+        "a",
+        "healthy",
+        "work-life",
+        "balance",
+        "is",
+        "essential",
+        "for",
+        "well-being",
+        "."
+      ],
+      "head_noun_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "explanation": "A gerundive nominal clause acting as the subject."
+    },
+    {
+      "sentence_tokens": [
+        "What",
+        "is",
+        "most",
+        "concerning",
+        "is",
+        "the",
+        "fact",
+        "that",
+        "nobody",
+        "seems",
+        "to",
+        "care",
+        "."
+      ],
+      "head_noun_indices": [
+        0,
+        1,
+        2,
+        3,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "explanation": "This sentence contains a 'What-clause' subject and an appositive 'that-clause'."
+    },
+    {
+      "sentence_tokens": [
+        "How",
+        "he",
+        "managed",
+        "to",
+        "escape",
+        "without",
+        "being",
+        "seen",
+        "is",
+        "still",
+        "a",
+        "mystery",
+        "."
+      ],
+      "head_noun_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "explanation": "A complex nominal clause acting as the subject of 'is'."
+    }
+  ],
+  "drill_tasks": [
+    {
+      "type": "MCQ",
+      "question": "________ to find a solution to this problem is our top priority.",
+      "options": [
+        "To find",
+        "Find",
+        "For finding",
+        "Found"
+      ],
+      "answer": "To find",
+      "explanation": "An infinitival nominal clause can function as the subject."
+    },
+    {
+      "type": "MCQ",
+      "question": "I consider ________ my duty to inform you of the risks.",
+      "options": [
+        "it",
+        "that",
+        "this",
+        "what"
+      ],
+      "answer": "it",
+      "explanation": "Verbs like 'consider', 'find', 'make' use 'it' as a dummy object for following infinitives or clauses."
+    },
+    {
+      "type": "MCQ",
+      "question": "________ these data will take several weeks.",
+      "options": [
+        "Analyze",
+        "Analyzing",
+        "To analyzing",
+        "For analyze"
+      ],
+      "answer": "Analyzing",
+      "explanation": "A gerundive nominal clause is a common and formal way to create a subject."
+    },
+    {
+      "type": "MCQ",
+      "question": "The question of ________ we should proceed is still under debate.",
+      "options": [
+        "that",
+        "whether",
+        "if",
+        "how"
+      ],
+      "answer": "whether",
+      "explanation": "Prepositions take 'whether' clauses, not 'that' or 'if' clauses."
+    },
+    {
+      "type": "MCQ",
+      "question": "________ he is capable of leading the team is undeniable.",
+      "options": [
+        "That",
+        "What",
+        "It",
+        "Which"
+      ],
+      "answer": "That",
+      "explanation": "The 'that-clause' acts as the full nominal subject."
+    }
+  ],
+  "boss_fight": {
+    "paragraph": "Provide free health care is a right. I find strange that he failed. That how he did it is amazing.",
+    "errors": [
+      {
+        "original": "Provide free health care",
+        "correction": "Providing free health care",
+        "explanation": "Use a gerund (Providing) or an infinitive (To provide) to turn a verb phrase into a subject."
+      },
+      {
+        "original": "find strange that",
+        "correction": "find it strange that",
+        "explanation": "You must use the dummy 'it' object before the adjective when a nominal clause follows."
+      },
+      {
+        "original": "That how he did it",
+        "correction": "How he did it",
+        "explanation": "'How he did it' is already a nominal clause. Adding 'That' before it is redundant and incorrect."
+      }
+    ]
+  },
+  "success_feedback": "Stunning! You have reached the absolute summit of nominal clause mastery. Your ability to manipulate sentence subjects and objects is truly 5** level.",
+  "suggested_next_steps": [
+    "Identify 'it' as a dummy object in complex academic texts.",
+    "Practice using infinitival subjects for a more literary tone.",
+    "Keep maintaining this 5** standard in your own writing!"
+  ],
+  "interactive_tasks": [],
+  "examples": [],
+  "key_points": []
+}

@@ -114,6 +114,14 @@ router.get('/test-ai', async (req, res) => {
 
 // POST /api/debug/test-ai-advanced (Direct Vertex AI with explicit credentials)
 router.post('/test-ai-advanced', async (req, res) => {
+    // [2026] DEV HARDENING: Block direct Vertex AI tests in Dev
+    if (process.env.NODE_ENV === 'development' && process.env.I_KNOW_THIS_COSTS_MONEY !== 'true') {
+        return res.status(403).json({ 
+            error: "ENDPOINT BLOCKED IN DEV", 
+            message: "Direct Vertex AI testing is blocked to prevent accidental billing. Use AI Studio instead." 
+        });
+    }
+
     try {
         console.log('[DEBUG] Testing Vertex AI with explicit credentials...');
 

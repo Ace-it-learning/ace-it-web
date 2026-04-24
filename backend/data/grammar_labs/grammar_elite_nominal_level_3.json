@@ -1,0 +1,236 @@
+{
+  "type": "GRAMMAR",
+  "topic_id": "grammar_elite_nominal",
+  "level": "HKDSE Level 4",
+  "conceptual_explanation": "A 'Nominal Clause' is a whole clause that works like a single noun. It can be the subject of a sentence or the object of a verb. Using words like 'that', 'whether', and 'what' to start these clauses makes your writing much more sophisticated.",
+  "rule_cards": [
+    {
+      "name": "The 'That' Clause",
+      "formula": "Subject + Verb + [that + Subject + Verb]",
+      "correct": "I believe that education is important.",
+      "incorrect": "I believe education is important. (Less formal)"
+    },
+    {
+      "name": "Whether/If Clauses",
+      "formula": "Subject + Verb + [whether/if + Subject + Verb]",
+      "correct": "I wonder whether the plan will work.",
+      "incorrect": "I wonder the plan will work."
+    },
+    {
+      "name": "Question Word Clauses",
+      "formula": "Subject + Verb + [Where/How/Why + Subject + Verb]",
+      "correct": "She explained how the system works.",
+      "incorrect": "She explained how does the system work."
+    },
+    {
+      "name": "Subject Clauses",
+      "formula": "[That + Subject + Verb] + Main Verb",
+      "correct": "That he passed the exam is a miracle.",
+      "incorrect": "He passed the exam is a miracle."
+    }
+  ],
+  "head_noun_tasks": [
+    {
+      "sentence_tokens": [
+        "I",
+        "believe",
+        "that",
+        "technology",
+        "can",
+        "improve",
+        "our",
+        "lives",
+        "."
+      ],
+      "head_noun_indices": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "explanation": "The nominal clause 'that technology can improve our lives' is the object of 'believe'."
+    },
+    {
+      "sentence_tokens": [
+        "Whether",
+        "we",
+        "succeed",
+        "or",
+        "not",
+        "depends",
+        "on",
+        "our",
+        "effort",
+        "."
+      ],
+      "head_noun_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "explanation": "The clause 'Whether we succeed or not' acts as the subject of the sentence."
+    },
+    {
+      "sentence_tokens": [
+        "She",
+        "asked",
+        "where",
+        "the",
+        "nearest",
+        "station",
+        "was",
+        "."
+      ],
+      "head_noun_indices": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "explanation": "The nominal clause 'where the nearest station was' is the object of 'asked'."
+    },
+    {
+      "sentence_tokens": [
+        "That",
+        "she",
+        "is",
+        "only",
+        "ten",
+        "years",
+        "old",
+        "is",
+        "truly",
+        "surprising",
+        "."
+      ],
+      "head_noun_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "explanation": "'That she is only ten years old' is a nominal clause acting as the subject."
+    },
+    {
+      "sentence_tokens": [
+        "He",
+        "demonstrated",
+        "how",
+        "to",
+        "solve",
+        "the",
+        "complex",
+        "equation",
+        "."
+      ],
+      "head_noun_indices": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "explanation": "The clause 'how to solve the complex equation' is the nominal object."
+    }
+  ],
+  "drill_tasks": [
+    {
+      "type": "MCQ",
+      "question": "________ he said was not true.",
+      "options": [
+        "What",
+        "That",
+        "Which",
+        "How"
+      ],
+      "answer": "What",
+      "explanation": "'What' acts as the subject of the clause and the whole clause 'What he said' is the subject of the sentence."
+    },
+    {
+      "type": "MCQ",
+      "question": "I don't know ________ the package will arrive today.",
+      "options": [
+        "if",
+        "whether",
+        "that",
+        "both if and whether"
+      ],
+      "answer": "both if and whether",
+      "explanation": "In informal English 'if' is okay, but 'whether' is more formal for objects."
+    },
+    {
+      "type": "MCQ",
+      "question": "Can you explain ________ you fixed the computer?",
+      "options": [
+        "how",
+        "how did",
+        "how you did",
+        "how you"
+      ],
+      "answer": "how",
+      "explanation": "Nominal clauses use statement word order (Subject + Verb), not question order."
+    },
+    {
+      "type": "MCQ",
+      "question": "________ the earth is round is a well-known fact.",
+      "options": [
+        "What",
+        "That",
+        "Which",
+        "How"
+      ],
+      "answer": "That",
+      "explanation": "'That' introduces a noun clause that functions as the subject."
+    },
+    {
+      "type": "MCQ",
+      "question": "I am not sure ________ he is coming to the party.",
+      "options": [
+        "that",
+        "whether",
+        "where",
+        "what"
+      ],
+      "answer": "whether",
+      "explanation": "'Whether' is used to express doubt or uncertainty."
+    }
+  ],
+  "boss_fight": {
+    "paragraph": "He passed the test is a surprise. I want to know where is the park. That he is late, it makes me angry.",
+    "errors": [
+      {
+        "original": "He passed the test is",
+        "correction": "That he passed the test is",
+        "explanation": "You need 'That' to turn a sentence into a noun clause that can act as a subject."
+      },
+      {
+        "original": "where is the park",
+        "correction": "where the park is",
+        "explanation": "Inside a nominal clause, use statement order (Subject + Verb), not question order."
+      },
+      {
+        "original": "That he is late, it makes",
+        "correction": "That he is late makes",
+        "explanation": "The whole clause 'That he is late' is already the subject. Don't add an extra 'it'."
+      }
+    ]
+  },
+  "success_feedback": "Great start! You've mastered the basics of turning whole ideas into nouns. This is a big step toward elite writing.",
+  "suggested_next_steps": [
+    "Learn about 'What-Clauses' as subjects.",
+    "Practice using 'Whoever' and 'Whichever'.",
+    "Try Level 5 for more complex nominal structures!"
+  ],
+  "interactive_tasks": [],
+  "examples": [],
+  "key_points": []
+}

@@ -1,0 +1,220 @@
+{
+  "type": "GRAMMAR",
+  "topic_id": "grammar_elite_participle",
+  "level": "HKDSE Level 4",
+  "conceptual_explanation": "Participle phrases are like long adjectives that describe a noun (usually the subject). A 'Present Participle' (-ing) is used for active actions, while a 'Past Participle' (-ed/PP) is used for passive states or completed actions.",
+  "rule_cards": [
+    {
+      "name": "The Active Opener (-ing)",
+      "formula": "Verb-ing..., Subject + Verb",
+      "correct": "Walking home, I saw a cat.",
+      "incorrect": "Walking home, a cat was seen by me."
+    },
+    {
+      "name": "The Passive Opener (-ed)",
+      "formula": "Past Participle..., Subject + Verb",
+      "correct": "Surprised by the news, she dropped her phone.",
+      "incorrect": "Surprised by the news, her phone dropped."
+    },
+    {
+      "name": "The 'Comma' Rule",
+      "formula": "Participle Phrase + Comma + Main Clause",
+      "correct": "Knowing the truth, he decided to stay.",
+      "incorrect": "Knowing the truth he decided to stay."
+    },
+    {
+      "name": "The Mid-Sentence Phrase",
+      "formula": "Subject, [Participle Phrase], Verb",
+      "correct": "The man, tired from his journey, fell asleep.",
+      "incorrect": "The man tired from his journey he fell asleep."
+    }
+  ],
+  "head_noun_tasks": [
+    {
+      "sentence_tokens": [
+        "Waiting",
+        "for",
+        "the",
+        "bus",
+        ",",
+        "she",
+        "listened",
+        "to",
+        "music",
+        "."
+      ],
+      "head_noun_indices": [
+        0,
+        5
+      ],
+      "explanation": "'Waiting' is the present participle describing the subject 'she'."
+    },
+    {
+      "sentence_tokens": [
+        "Excited",
+        "by",
+        "the",
+        "gift",
+        ",",
+        "the",
+        "child",
+        "danced",
+        "around",
+        "."
+      ],
+      "head_noun_indices": [
+        0,
+        6
+      ],
+      "explanation": "'Excited' is the past participle describing 'the child'."
+    },
+    {
+      "sentence_tokens": [
+        "Realizing",
+        "his",
+        "mistake",
+        ",",
+        "he",
+        "apologized",
+        "immediately",
+        "."
+      ],
+      "head_noun_indices": [
+        0,
+        4
+      ],
+      "explanation": "'Realizing' modifies the subject 'he'."
+    },
+    {
+      "sentence_tokens": [
+        "Seen",
+        "from",
+        "a",
+        "distance",
+        ",",
+        "the",
+        "mountain",
+        "looked",
+        "magnificent",
+        "."
+      ],
+      "head_noun_indices": [
+        0,
+        6
+      ],
+      "explanation": "'Seen' is a passive participle describing 'the mountain'."
+    },
+    {
+      "sentence_tokens": [
+        "The",
+        "student",
+        ",",
+        "hoping",
+        "for",
+        "an",
+        "A",
+        ",",
+        "studied",
+        "very",
+        "hard",
+        "."
+      ],
+      "head_noun_indices": [
+        1,
+        3
+      ],
+      "explanation": "'Hoping' is a present participle modifying 'The student'."
+    }
+  ],
+  "drill_tasks": [
+    {
+      "type": "MCQ",
+      "question": "________ the room, I noticed a strange smell.",
+      "options": [
+        "Enter",
+        "Entered",
+        "Entering",
+        "To enter"
+      ],
+      "answer": "Entering",
+      "explanation": "Active action at the start of the sentence requires a present participle (-ing)."
+    },
+    {
+      "type": "MCQ",
+      "question": "________ by the loud noise, the dog hid under the bed.",
+      "options": [
+        "Frighten",
+        "Frightened",
+        "Frightening",
+        "Was frightened"
+      ],
+      "answer": "Frightened",
+      "explanation": "Passive state (being frightened) requires a past participle."
+    },
+    {
+      "type": "MCQ",
+      "question": "________ no money, he had to walk home.",
+      "options": [
+        "Have",
+        "Had",
+        "Having",
+        "Having had"
+      ],
+      "answer": "Having",
+      "explanation": "Giving a reason for the main action often uses an -ing phrase."
+    },
+    {
+      "type": "MCQ",
+      "question": "The book, ________ by a famous author, was a bestseller.",
+      "options": [
+        "wrote",
+        "written",
+        "writing",
+        "was written"
+      ],
+      "answer": "written",
+      "explanation": "Describing the book (passive) requires the past participle 'written'."
+    },
+    {
+      "type": "MCQ",
+      "question": "________ the movie was over, we left the theater.",
+      "options": [
+        "Seeing",
+        "Seen",
+        "To see",
+        "Saw"
+      ],
+      "answer": "Seeing",
+      "explanation": "Active participle indicating a sequence of events."
+    }
+  ],
+  "boss_fight": {
+    "paragraph": "Wait for the bus, she saw a bird. Surprising by the news, she cried. The car driven by the man, it crashed.",
+    "errors": [
+      {
+        "original": "Wait for the bus",
+        "correction": "Waiting for the bus",
+        "explanation": "An introductory phrase needs a participle (-ing) to describe the subject."
+      },
+      {
+        "original": "Surprising by the news",
+        "correction": "Surprised by the news",
+        "explanation": "She didn't cause the surprise (active); she felt it (passive)."
+      },
+      {
+        "original": "car driven by the man, it crashed",
+        "correction": "car driven by the man crashed",
+        "explanation": "Avoid using 'it' after a noun that is already the subject; the participle phrase is just descriptive."
+      }
+    ]
+  },
+  "success_feedback": "Great job! You've mastered the basics of using participle phrases to combine ideas. Your writing is becoming more fluent.",
+  "suggested_next_steps": [
+    "Learn about 'Dangling Participles' (when the subject is wrong).",
+    "Practice using Perfect Participles (Having + PP).",
+    "Try Level 5 for more complex sentence structures!"
+  ],
+  "interactive_tasks": [],
+  "examples": [],
+  "key_points": []
+}

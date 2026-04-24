@@ -1,0 +1,218 @@
+{
+  "type": "GRAMMAR",
+  "topic_id": "grammar_elite_cohesion",
+  "level": "HKDSE Level 4",
+  "conceptual_explanation": "Cohesion is the glue that sticks your ideas together. In Level 4, we focus on using transition words like 'Furthermore' and 'Nevertheless' with the correct punctuation to ensure your writing flows logically.",
+  "rule_cards": [
+    {
+      "name": "Adding Information",
+      "formula": "Idea 1. Furthermore, / Moreover, Idea 2.",
+      "correct": "The library is quiet. Moreover, it has a vast collection.",
+      "incorrect": "The library is quiet, moreover it has a vast collection."
+    },
+    {
+      "name": "Showing Contrast",
+      "formula": "Idea 1. However, / Nevertheless, Idea 2.",
+      "correct": "It was raining. Nevertheless, the match continued.",
+      "incorrect": "It was raining, nevertheless the match continued."
+    },
+    {
+      "name": "Cause and Effect",
+      "formula": "Cause. Therefore, / Consequently, Effect.",
+      "correct": "He failed to study. Consequently, he failed the exam.",
+      "incorrect": "He failed to study, consequently he failed the exam."
+    },
+    {
+      "name": "The Semicolon Trick",
+      "formula": "Idea 1; Transition, Idea 2.",
+      "correct": "She was tired; however, she finished the project.",
+      "incorrect": "She was tired, however, she finished the project."
+    }
+  ],
+  "head_noun_tasks": [
+    {
+      "sentence_tokens": [
+        "Furthermore",
+        ",",
+        "the",
+        "new",
+        "policy",
+        "will",
+        "benefit",
+        "local",
+        "businesses",
+        "."
+      ],
+      "head_noun_indices": [
+        0
+      ],
+      "explanation": "'Furthermore' is an additive cohesive device."
+    },
+    {
+      "sentence_tokens": [
+        "The",
+        "results",
+        "were",
+        "poor",
+        ";",
+        "consequently",
+        ",",
+        "the",
+        "funding",
+        "was",
+        "cut",
+        "."
+      ],
+      "head_noun_indices": [
+        5
+      ],
+      "explanation": "'Consequently' links the poor results to the cut in funding."
+    },
+    {
+      "sentence_tokens": [
+        "Nevertheless",
+        ",",
+        "we",
+        "must",
+        "proceed",
+        "with",
+        "caution",
+        "."
+      ],
+      "head_noun_indices": [
+        0
+      ],
+      "explanation": "'Nevertheless' is a contrastive device used for emphasis at the start."
+    },
+    {
+      "sentence_tokens": [
+        "The",
+        "team",
+        "is",
+        "well-trained",
+        ".",
+        "Moreover",
+        ",",
+        "they",
+        "have",
+        "ample",
+        "experience",
+        "."
+      ],
+      "head_noun_indices": [
+        5
+      ],
+      "explanation": "'Moreover' adds more positive information about the team."
+    },
+    {
+      "sentence_tokens": [
+        "She",
+        "did",
+        "not",
+        "win",
+        ";",
+        "however",
+        ",",
+        "she",
+        "remained",
+        "optimistic",
+        "."
+      ],
+      "head_noun_indices": [
+        5
+      ],
+      "explanation": "'However' provides a contrast to the previous clause."
+    }
+  ],
+  "drill_tasks": [
+    {
+      "type": "MCQ",
+      "question": "The weather was terrible. ________, the flight was delayed.",
+      "options": [
+        "Moreover",
+        "Consequently",
+        "Nevertheless",
+        "However"
+      ],
+      "answer": "Consequently",
+      "explanation": "The delay is a result of the bad weather."
+    },
+    {
+      "type": "MCQ",
+      "question": "He is very talented. ________, he is a hard worker.",
+      "options": [
+        "Therefore",
+        "Furthermore",
+        "Nonetheless",
+        "In contrast"
+      ],
+      "answer": "Furthermore",
+      "explanation": "This adds another positive trait."
+    },
+    {
+      "type": "MCQ",
+      "question": "The plan was risky; ________, it was worth trying.",
+      "options": [
+        "moreover",
+        "nevertheless",
+        "consequently",
+        "so"
+      ],
+      "answer": "nevertheless",
+      "explanation": "This shows contrast between the risk and the value."
+    },
+    {
+      "type": "MCQ",
+      "question": "She missed the bus. ________, she was late for work.",
+      "options": [
+        "Therefore",
+        "However",
+        "Nonetheless",
+        "On the contrary"
+      ],
+      "answer": "Therefore",
+      "explanation": "This indicates a cause-and-effect relationship."
+    },
+    {
+      "type": "MCQ",
+      "question": "The building is old. ________, it is structurally sound.",
+      "options": [
+        "Additionally",
+        "However",
+        "As a result",
+        "In addition"
+      ],
+      "answer": "However",
+      "explanation": "This contrasts the age with the structural strength."
+    }
+  ],
+  "boss_fight": {
+    "paragraph": "The report was long, furthermore it was boring. He arrived late, however he finished the work. It was cold, nevertheless we went out.",
+    "errors": [
+      {
+        "original": "long, furthermore it",
+        "correction": "long; furthermore, it",
+        "explanation": "A comma is not enough to connect two independent clauses with 'furthermore'. Use a semicolon and a comma."
+      },
+      {
+        "original": "late, however he",
+        "correction": "late; however, he",
+        "explanation": "'However' needs a semicolon before it and a comma after it when connecting two sentences."
+      },
+      {
+        "original": "cold, nevertheless we",
+        "correction": "cold. Nevertheless, we",
+        "explanation": "You can also use a full stop and start a new sentence with the transition word."
+      }
+    ]
+  },
+  "success_feedback": "Excellent! You've mastered the basic cohesive devices and their punctuation. Your paragraphs are much easier to follow.",
+  "suggested_next_steps": [
+    "Learn about 'In light of' and 'Notwithstanding'.",
+    "Practice using 'Conversely' for balanced arguments.",
+    "Try Level 5 for more sophisticated connectors!"
+  ],
+  "interactive_tasks": [],
+  "examples": [],
+  "key_points": []
+}

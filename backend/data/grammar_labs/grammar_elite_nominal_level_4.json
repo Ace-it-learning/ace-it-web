@@ -1,0 +1,240 @@
+{
+  "type": "GRAMMAR",
+  "topic_id": "grammar_elite_nominal",
+  "level": "HKDSE Level 5",
+  "conceptual_explanation": "Level 5 Nominal Mastery focuses on 'What-Clauses' and 'Whoever/Whichever' structures. Using these allows you to emphasize specific parts of your sentence (e.g., 'What we need is...') or create broad, inclusive statements.",
+  "rule_cards": [
+    {
+      "name": "The 'What' Subject",
+      "formula": "What + Subject + Verb + is + Complement",
+      "correct": "What I need is a holiday.",
+      "incorrect": "The thing what I need is a holiday."
+    },
+    {
+      "name": "Universal Nominal Clauses",
+      "formula": "Whoever / Whichever / Whatever + Clause",
+      "correct": "Whoever wins the race will get a prize.",
+      "incorrect": "The person who whoever wins..."
+    },
+    {
+      "name": "The Complement Clause",
+      "formula": "Subject + be + [that + Clause]",
+      "correct": "The problem is that we lack funding.",
+      "incorrect": "The problem is because we lack funding."
+    },
+    {
+      "name": "Whether as a Subject",
+      "formula": "[Whether + Clause + or not] + Verb",
+      "correct": "Whether he likes it or not is irrelevant.",
+      "incorrect": "If he likes it or not is irrelevant. (Less formal)"
+    }
+  ],
+  "head_noun_tasks": [
+    {
+      "sentence_tokens": [
+        "What",
+        "the",
+        "company",
+        "requires",
+        "is",
+        "a",
+        "new",
+        "marketing",
+        "strategy",
+        "."
+      ],
+      "head_noun_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "The 'What-clause' is the subject of the sentence."
+    },
+    {
+      "sentence_tokens": [
+        "Whoever",
+        "left",
+        "the",
+        "door",
+        "open",
+        "should",
+        "close",
+        "it",
+        "now",
+        "."
+      ],
+      "head_noun_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "explanation": "The whole clause starting with 'Whoever' acts as the subject."
+    },
+    {
+      "sentence_tokens": [
+        "The",
+        "most",
+        "important",
+        "fact",
+        "is",
+        "that",
+        "the",
+        "climate",
+        "is",
+        "changing",
+        "."
+      ],
+      "head_noun_indices": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "explanation": "The 'that-clause' is a subject complement following 'is'."
+    },
+    {
+      "sentence_tokens": [
+        "Whatever",
+        "you",
+        "decide",
+        "to",
+        "do",
+        "will",
+        "be",
+        "supported",
+        "by",
+        "the",
+        "team",
+        "."
+      ],
+      "head_noun_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "explanation": "The 'Whatever-clause' is the subject."
+    },
+    {
+      "sentence_tokens": [
+        "Whether",
+        "he",
+        "joins",
+        "us",
+        "or",
+        "not",
+        "will",
+        "not",
+        "affect",
+        "the",
+        "outcome",
+        "."
+      ],
+      "head_noun_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "explanation": "The 'Whether-clause' is a complex nominal subject."
+    }
+  ],
+  "drill_tasks": [
+    {
+      "type": "MCQ",
+      "question": "________ we should prioritize is the safety of the citizens.",
+      "options": [
+        "That",
+        "What",
+        "Which",
+        "Whether"
+      ],
+      "answer": "What",
+      "explanation": "'What' introduces a free relative clause acting as the subject."
+    },
+    {
+      "type": "MCQ",
+      "question": "________ takes this seat will be asked to move later.",
+      "options": [
+        "Who",
+        "Whoever",
+        "Anyone who",
+        "Both Whoever and Anyone who"
+      ],
+      "answer": "Both Whoever and Anyone who",
+      "explanation": "'Whoever' is a concise nominal clause marker; 'Anyone who' is a relative clause equivalent."
+    },
+    {
+      "type": "MCQ",
+      "question": "The reason for the delay is ________ we missed the train.",
+      "options": [
+        "because",
+        "that",
+        "why",
+        "since"
+      ],
+      "answer": "that",
+      "explanation": "In formal English, use 'is that' rather than 'is because' for subject complements."
+    },
+    {
+      "type": "MCQ",
+      "question": "________ he can finish the project in time remains to be seen.",
+      "options": [
+        "If",
+        "Whether",
+        "That",
+        "How"
+      ],
+      "answer": "Whether",
+      "explanation": "'Whether' is the standard formal choice for nominal clauses acting as subjects."
+    },
+    {
+      "type": "MCQ",
+      "question": "I will buy ________ car you recommend.",
+      "options": [
+        "whichever",
+        "whatever",
+        "that",
+        "which"
+      ],
+      "answer": "whichever",
+      "explanation": "'Whichever' is used when choosing from a limited set of options."
+    }
+  ],
+  "boss_fight": {
+    "paragraph": "The truth is because he lied. Who wins the prize will be happy. What I want it is to be rich.",
+    "errors": [
+      {
+        "original": "truth is because",
+        "correction": "truth is that",
+        "explanation": "Use 'is that' to introduce a noun clause complement, not 'is because'."
+      },
+      {
+        "original": "Who wins the prize",
+        "correction": "Whoever wins the prize",
+        "explanation": "'Who' is for questions; 'Whoever' is for noun clauses meaning 'the person who'."
+      },
+      {
+        "original": "What I want it is",
+        "correction": "What I want is",
+        "explanation": "Don't add 'it' after a 'What-clause' subject. The clause itself is the subject."
+      }
+    ]
+  },
+  "success_feedback": "Impressive! You've navigated the complex world of 'What-clauses' and complement structures. Your sentences are gaining elite weight.",
+  "suggested_next_steps": [
+    "Practice using 'Whether... or not' at the start of sentences.",
+    "Try using 'Whatever' and 'Whichever' in your writing.",
+    "Try Level 5* for elite-level nominal complexity!"
+  ],
+  "interactive_tasks": [],
+  "examples": [],
+  "key_points": []
+}

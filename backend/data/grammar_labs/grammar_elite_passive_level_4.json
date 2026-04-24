@@ -1,0 +1,225 @@
+{
+  "type": "GRAMMAR",
+  "topic_id": "grammar_elite_passive",
+  "level": "HKDSE Level 5",
+  "conceptual_explanation": "Level 5 Passive Mastery focuses on 'Impersonal Structures'. Instead of saying 'People think...', we say 'It is thought that...' or 'He is thought to be...'. These structures are essential for maintaining objectivity in high-level reports and formal essays.",
+  "rule_cards": [
+    {
+      "name": "The Impersonal 'It'",
+      "formula": "It is [believed/thought/said] that + Clause",
+      "correct": "It is believed that the company is expanding.",
+      "incorrect": "The people believe that the company is expanding. (Less formal)"
+    },
+    {
+      "name": "The Subjective Passive",
+      "formula": "Subject + is + [believed/thought/said] + to + Verb",
+      "correct": "He is said to be the best in his field.",
+      "incorrect": "He says to be the best in his field."
+    },
+    {
+      "name": "Continuous Passive",
+      "formula": "is/are + being + Past Participle",
+      "correct": "The house is being painted at the moment.",
+      "incorrect": "The house is painting at the moment."
+    },
+    {
+      "name": "Perfect Passive",
+      "formula": "has/have + been + Past Participle",
+      "correct": "The problem has been resolved.",
+      "incorrect": "The problem has resolved. (Active implies the problem did the resolving)"
+    }
+  ],
+  "head_noun_tasks": [
+    {
+      "sentence_tokens": [
+        "It",
+        "is",
+        "widely",
+        "reported",
+        "that",
+        "the",
+        "two",
+        "companies",
+        "will",
+        "merge",
+        "."
+      ],
+      "head_noun_indices": [
+        1,
+        3
+      ],
+      "explanation": "'It is... reported' is an impersonal passive structure."
+    },
+    {
+      "sentence_tokens": [
+        "The",
+        "suspect",
+        "is",
+        "thought",
+        "to",
+        "have",
+        "fled",
+        "the",
+        "country",
+        "."
+      ],
+      "head_noun_indices": [
+        2,
+        3,
+        5,
+        6
+      ],
+      "explanation": "A complex passive structure referring to a past action ('to have fled')."
+    },
+    {
+      "sentence_tokens": [
+        "New",
+        "regulations",
+        "are",
+        "being",
+        "introduced",
+        "to",
+        "protect",
+        "consumers",
+        "."
+      ],
+      "head_noun_indices": [
+        2,
+        3,
+        4
+      ],
+      "explanation": "A present continuous passive for an ongoing change."
+    },
+    {
+      "sentence_tokens": [
+        "It",
+        "is",
+        "estimated",
+        "that",
+        "the",
+        "damage",
+        "will",
+        "cost",
+        "millions",
+        "."
+      ],
+      "head_noun_indices": [
+        1,
+        2
+      ],
+      "explanation": "Impersonal passive used for providing estimates or data."
+    },
+    {
+      "sentence_tokens": [
+        "They",
+        "are",
+        "believed",
+        "to",
+        "be",
+        "negotiating",
+        "a",
+        "new",
+        "deal",
+        "."
+      ],
+      "head_noun_indices": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "explanation": "A passive structure combined with a continuous infinitive ('to be negotiating')."
+    }
+  ],
+  "drill_tasks": [
+    {
+      "type": "MCQ",
+      "question": "________ that the treasure was buried under the old oak tree.",
+      "options": [
+        "It is said",
+        "They are said",
+        "It was saying",
+        "People said"
+      ],
+      "answer": "It is said",
+      "explanation": "Impersonal passive structure for general beliefs."
+    },
+    {
+      "type": "MCQ",
+      "question": "The new stadium ________ next month.",
+      "options": [
+        "is opening",
+        "is being opened",
+        "will be open",
+        "is opened"
+      ],
+      "answer": "is being opened",
+      "explanation": "Present continuous passive for a scheduled future event or ongoing process."
+    },
+    {
+      "type": "MCQ",
+      "question": "The president ________ to have signed the agreement yesterday.",
+      "options": [
+        "believes",
+        "is believed",
+        "thought",
+        "is thinking"
+      ],
+      "answer": "is believed",
+      "explanation": "'Is believed to have [PP]' is the formal way to report a past action."
+    },
+    {
+      "type": "MCQ",
+      "question": "A lot of progress ________ since the beginning of the year.",
+      "options": [
+        "has made",
+        "has been made",
+        "was made",
+        "is made"
+      ],
+      "answer": "has been made",
+      "explanation": "Present perfect passive for an action that started in the past and continues to the present."
+    },
+    {
+      "type": "MCQ",
+      "question": "It ________ that the experiment will be a success.",
+      "options": [
+        "is expected",
+        "expects",
+        "is expecting",
+        "has expected"
+      ],
+      "answer": "is expected",
+      "explanation": "Impersonal passive for future predictions or expectations."
+    }
+  ],
+  "boss_fight": {
+    "paragraph": "People are said that he is a genius. The bridge is building right now. It is thought he to be very rich.",
+    "errors": [
+      {
+        "original": "People are said that",
+        "correction": "It is said that",
+        "explanation": "Use 'It is said that' for general reports, or 'He is said to be...'. 'People are said that' is incorrect."
+      },
+      {
+        "original": "bridge is building",
+        "correction": "bridge is being built",
+        "explanation": "The bridge cannot build itself; use the present continuous passive."
+      },
+      {
+        "original": "It is thought he to be",
+        "correction": "He is thought to be",
+        "explanation": "If you use 'It is thought', use a 'that-clause'. If you use 'to be', the subject must be the person (He is thought to be...)."
+      }
+    ]
+  },
+  "success_feedback": "Impressive! You've navigated the complexities of impersonal and subjective passive forms. Your writing is gaining a truly academic and professional tone.",
+  "suggested_next_steps": [
+    "Learn about 'Passive Infinitives' (to be done).",
+    "Practice using 'It is claimed that...' for balanced arguments.",
+    "Try Level 5* for elite-level passive variations!"
+  ],
+  "interactive_tasks": [],
+  "examples": [],
+  "key_points": []
+}

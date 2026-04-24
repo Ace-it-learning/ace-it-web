@@ -1,0 +1,218 @@
+{
+  "type": "GRAMMAR",
+  "topic_id": "grammar_elite_passive",
+  "level": "HKDSE Level 4",
+  "conceptual_explanation": "The passive voice shifts focus from 'who did it' to 'what happened'. In Level 4, we focus on standard passive structures and the 'Causative Passive' (having something done for you).",
+  "rule_cards": [
+    {
+      "name": "The Core Passive",
+      "formula": "Object + [be] + Past Participle",
+      "correct": "The window was broken by the ball.",
+      "incorrect": "The window was broke by the ball."
+    },
+    {
+      "name": "Modal Passive",
+      "formula": "Modal + be + Past Participle",
+      "correct": "The rules should be followed strictly.",
+      "incorrect": "The rules should be follow strictly."
+    },
+    {
+      "name": "Causative Passive",
+      "formula": "Have/Get + Object + Past Participle",
+      "correct": "I had my hair cut yesterday.",
+      "incorrect": "I had my hair cutted yesterday."
+    },
+    {
+      "name": "Passive with 'By'",
+      "formula": "Subject + be + PP + by + Agent",
+      "correct": "The portrait was painted by a local artist.",
+      "incorrect": "The portrait was painted from a local artist."
+    }
+  ],
+  "head_noun_tasks": [
+    {
+      "sentence_tokens": [
+        "The",
+        "new",
+        "bridge",
+        "was",
+        "completed",
+        "ahead",
+        "of",
+        "schedule",
+        "."
+      ],
+      "head_noun_indices": [
+        3,
+        4
+      ],
+      "explanation": "'Was completed' is the passive verb phrase."
+    },
+    {
+      "sentence_tokens": [
+        "Your",
+        "request",
+        "will",
+        "be",
+        "processed",
+        "within",
+        "three",
+        "days",
+        "."
+      ],
+      "head_noun_indices": [
+        2,
+        3,
+        4
+      ],
+      "explanation": "A future passive using the modal 'will'."
+    },
+    {
+      "sentence_tokens": [
+        "She",
+        "had",
+        "her",
+        "passport",
+        "renewed",
+        "at",
+        "the",
+        "embassy",
+        "."
+      ],
+      "head_noun_indices": [
+        1,
+        4
+      ],
+      "explanation": "'Had... renewed' is the causative passive structure."
+    },
+    {
+      "sentence_tokens": [
+        "All",
+        "the",
+        "data",
+        "must",
+        "be",
+        "verified",
+        "before",
+        "publication",
+        "."
+      ],
+      "head_noun_indices": [
+        3,
+        4,
+        5
+      ],
+      "explanation": "A modal passive expressing obligation."
+    },
+    {
+      "sentence_tokens": [
+        "The",
+        "results",
+        "were",
+        "announced",
+        "by",
+        "the",
+        "committee",
+        "last",
+        "night",
+        "."
+      ],
+      "head_noun_indices": [
+        2,
+        3
+      ],
+      "explanation": "A simple past passive with an agent ('the committee')."
+    }
+  ],
+  "drill_tasks": [
+    {
+      "type": "MCQ",
+      "question": "The lost keys ________ found in the garden.",
+      "options": [
+        "was",
+        "were",
+        "have",
+        "been"
+      ],
+      "answer": "were",
+      "explanation": "Plural subject 'keys' requires the plural passive auxiliary 'were'."
+    },
+    {
+      "type": "MCQ",
+      "question": "This book ________ by thousands of people every year.",
+      "options": [
+        "is read",
+        "is reading",
+        "reads",
+        "is red"
+      ],
+      "answer": "is read",
+      "explanation": "Present simple passive: 'is' + past participle ('read')."
+    },
+    {
+      "type": "MCQ",
+      "question": "You should ________ your car serviced regularly.",
+      "options": [
+        "make",
+        "have",
+        "do",
+        "let"
+      ],
+      "answer": "have",
+      "explanation": "Causative passive: 'have something done'."
+    },
+    {
+      "type": "MCQ",
+      "question": "The problem ________ easily solved.",
+      "options": [
+        "can be",
+        "can",
+        "is be",
+        "be"
+      ],
+      "answer": "can be",
+      "explanation": "Modal passive: 'can be' + past participle."
+    },
+    {
+      "type": "MCQ",
+      "question": "The letter ________ by my assistant yesterday.",
+      "options": [
+        "posted",
+        "was posted",
+        "is posted",
+        "was posting"
+      ],
+      "answer": "was posted",
+      "explanation": "Past passive for a specific time in the past."
+    }
+  ],
+  "boss_fight": {
+    "paragraph": "The cake was bake by my mom. I had my car repair yesterday. The rules must follow by everyone.",
+    "errors": [
+      {
+        "original": "was bake",
+        "correction": "was baked",
+        "explanation": "Passive voice always uses the past participle (V3) form."
+      },
+      {
+        "original": "had my car repair",
+        "correction": "had my car repaired",
+        "explanation": "In the causative 'have something done', the verb must be a past participle."
+      },
+      {
+        "original": "must follow by",
+        "correction": "must be followed by",
+        "explanation": "A modal passive requires 'be' + past participle."
+      }
+    ]
+  },
+  "success_feedback": "Great start! You've mastered the basic passive and causative forms. You're ready to move into more professional, impersonal structures.",
+  "suggested_next_steps": [
+    "Learn about 'It is believed that...' impersonal passive.",
+    "Practice using passive forms for scientific reports.",
+    "Try Level 5 for more advanced passive variations!"
+  ],
+  "interactive_tasks": [],
+  "examples": [],
+  "key_points": []
+}

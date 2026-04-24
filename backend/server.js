@@ -11,12 +11,6 @@ const helmet = require('helmet');
 const rateLimit = require('express-rate-limit');
 require('dotenv').config({ path: path.join(__dirname, '.env') });
 
-const app = express();
-const isProduction = process.env.NODE_ENV === 'production';
-
-// Trust Cloud Run Proxy
-app.set('trust proxy', 1);
-
 // --- INITIALIZE FIREBASE ADMIN ---
 const NODE_ENV = process.env.NODE_ENV || 'development';
 const saFilename = NODE_ENV === 'production' ? 'config/antigravity-tutor-prod-key.json' : 'config/antigravity-tutor-dev-key.json';
@@ -55,6 +49,10 @@ if (forceProduction || NODE_ENV === 'production') {
 } else {
     console.warn(`⚠️ No Firebase Service Account found at ${saFilename}. Firestore features disabled.`);
 }
+
+const app = express();
+const isProduction = process.env.NODE_ENV === 'production';
+app.set('trust proxy', 1);
 
 // --- MIDDLEWARE ---
 app.use(helmet({ contentSecurityPolicy: false }));

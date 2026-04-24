@@ -1,0 +1,223 @@
+{
+  "type": "GRAMMAR",
+  "topic_id": "grammar_elite_subjunctive",
+  "level": "HKDSE Level 5*",
+  "conceptual_explanation": "Level 5* Subjunctive mastery involves 'Literary' and 'Formulaic' expressions. These are fixed phrases like 'Be that as it may' and the rare but powerful conjunction 'Lest'. We also look at the 'Whether he be' structure used in formal debates.",
+  "rule_cards": [
+    {
+      "name": "The 'Lest' Clause",
+      "formula": "Lest + Subject + (should) + Base Verb",
+      "correct": "We must act now, lest we lose our chance.",
+      "incorrect": "Lest we will lose our chance."
+    },
+    {
+      "name": "Be that as it may",
+      "formula": "Fixed Phrase (Subjunctive)",
+      "correct": "Be that as it may, I still cannot agree with you.",
+      "incorrect": "Is that as it may..."
+    },
+    {
+      "name": "Suffice it to say",
+      "formula": "Fixed Phrase (Subjunctive)",
+      "correct": "Suffice it to say, the project was a failure.",
+      "incorrect": "It suffices to say..."
+    },
+    {
+      "name": "Whether it be...",
+      "formula": "Whether + Subject + be...",
+      "correct": "Whether it be true or not, we must consider the risk.",
+      "incorrect": "Whether it is true or not..."
+    }
+  ],
+  "head_noun_tasks": [
+    {
+      "sentence_tokens": [
+        "We",
+        "spoke",
+        "in",
+        "whispers",
+        "lest",
+        "we",
+        "wake",
+        "the",
+        "baby",
+        "."
+      ],
+      "head_noun_indices": [
+        4,
+        6
+      ],
+      "explanation": "'Lest' triggers the base form 'wake'."
+    },
+    {
+      "sentence_tokens": [
+        "Be",
+        "that",
+        "as",
+        "it",
+        "may",
+        ",",
+        "the",
+        "decision",
+        "is",
+        "final",
+        "."
+      ],
+      "head_noun_indices": [
+        0
+      ],
+      "explanation": "This is a formulaic subjunctive phrase meaning 'even if that is true'."
+    },
+    {
+      "sentence_tokens": [
+        "Suffice",
+        "it",
+        "to",
+        "say",
+        "that",
+        "further",
+        "investigation",
+        "is",
+        "needed",
+        "."
+      ],
+      "head_noun_indices": [
+        0
+      ],
+      "explanation": "A formal way to say 'it is enough to say'."
+    },
+    {
+      "sentence_tokens": [
+        "Whether",
+        "the",
+        "news",
+        "be",
+        "good",
+        "or",
+        "bad",
+        ",",
+        "we",
+        "must",
+        "remain",
+        "calm",
+        "."
+      ],
+      "head_noun_indices": [
+        0,
+        3
+      ],
+      "explanation": "Formal 'whether' triggers the subjunctive 'be'."
+    },
+    {
+      "sentence_tokens": [
+        "Heaven",
+        "forbid",
+        "that",
+        "such",
+        "a",
+        "thing",
+        "should",
+        "ever",
+        "happen",
+        "again",
+        "."
+      ],
+      "head_noun_indices": [
+        0,
+        1
+      ],
+      "explanation": "An idiomatic subjunctive expression of hope or fear."
+    }
+  ],
+  "drill_tasks": [
+    {
+      "type": "MCQ",
+      "question": "He took a map ________ he should get lost.",
+      "options": [
+        "so that",
+        "lest",
+        "in case of",
+        "if"
+      ],
+      "answer": "lest",
+      "explanation": "'Lest' is followed by a base verb or 'should' + base verb to mean 'to avoid the risk of'."
+    },
+    {
+      "type": "MCQ",
+      "question": "________ it to say, the results were disappointing.",
+      "options": [
+        "Sufficed",
+        "Suffice",
+        "Sufficing",
+        "Is suffice"
+      ],
+      "answer": "Suffice",
+      "explanation": "Fixed expression: 'Suffice it to say'."
+    },
+    {
+      "type": "MCQ",
+      "question": "________ that as it may, we still have to finish the work.",
+      "options": [
+        "Being",
+        "Be",
+        "Is",
+        "Was"
+      ],
+      "answer": "Be",
+      "explanation": "Fixed expression: 'Be that as it may'."
+    },
+    {
+      "type": "MCQ",
+      "question": "Whether he ________ found guilty or not, his career is over.",
+      "options": [
+        "is",
+        "was",
+        "be",
+        "is being"
+      ],
+      "answer": "be",
+      "explanation": "In formal contexts, 'whether' can trigger the subjunctive 'be'."
+    },
+    {
+      "type": "MCQ",
+      "question": "God ________ the Queen!",
+      "options": [
+        "saves",
+        "save",
+        "saved",
+        "is saving"
+      ],
+      "answer": "save",
+      "explanation": "A classic example of the optative subjunctive used for blessings."
+    }
+  ],
+  "boss_fight": {
+    "paragraph": "He worked hard lest he fails the exam. Suffices it to say, he was successful. Whether it is rain or shine, we will go.",
+    "errors": [
+      {
+        "original": "lest he fails",
+        "correction": "lest he fail",
+        "explanation": "'Lest' requires the base form of the verb."
+      },
+      {
+        "original": "Suffices it to say",
+        "correction": "Suffice it to say",
+        "explanation": "This is a fixed subjunctive phrase; the verb must be in its base form."
+      },
+      {
+        "original": "Whether it is rain",
+        "correction": "Whether it be rain",
+        "explanation": "In formal, literary English, 'whether' is followed by the subjunctive 'be'."
+      }
+    ]
+  },
+  "success_feedback": "Phenomenal! You're using literary structures that only the top 1% of candidates master. Your sophistication is truly showing.",
+  "suggested_next_steps": [
+    "Identify these structures in classic literature or high-level academic journals.",
+    "Practice using one formulaic subjunctive in your next formal essay.",
+    "Try Level 7 for the ultimate 5** subjunctive challenge!"
+  ],
+  "interactive_tasks": [],
+  "examples": [],
+  "key_points": []
+}

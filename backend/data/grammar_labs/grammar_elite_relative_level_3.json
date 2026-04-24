@@ -1,0 +1,226 @@
+{
+  "type": "GRAMMAR",
+  "topic_id": "grammar_elite_relative",
+  "level": "HKDSE Level 4",
+  "conceptual_explanation": "Advanced Relative Clauses allow you to provide detailed information about a noun without starting a new sentence. In Level 4, we focus on 'Whose' for possession and the formal use of 'Whom' for people, as well as the difference between defining and non-defining clauses.",
+  "rule_cards": [
+    {
+      "name": "Possession with 'Whose'",
+      "formula": "Noun + whose + Noun",
+      "correct": "The author whose book I read is famous.",
+      "incorrect": "The author who his book I read..."
+    },
+    {
+      "name": "Formal Object 'Whom'",
+      "formula": "Person + whom + Subject + Verb",
+      "correct": "The candidate whom we interviewed was excellent.",
+      "incorrect": "The candidate who we interviewed... (Less formal)"
+    },
+    {
+      "name": "The 'In Which' Structure",
+      "formula": "Place/Time + in which + Clause",
+      "correct": "The era in which they lived was difficult.",
+      "incorrect": "The era which they lived in was... (Less formal)"
+    },
+    {
+      "name": "Non-defining Clauses",
+      "formula": "Noun + , + relative clause + , + Verb",
+      "correct": "My brother, who lives in London, is a doctor.",
+      "incorrect": "My brother who lives in London is a doctor. (If you only have one brother)"
+    }
+  ],
+  "head_noun_tasks": [
+    {
+      "sentence_tokens": [
+        "The",
+        "scientist",
+        "whose",
+        "research",
+        "was",
+        "published",
+        "won",
+        "an",
+        "award",
+        "."
+      ],
+      "head_noun_indices": [
+        1,
+        2
+      ],
+      "explanation": "'Whose' indicates that the research belongs to the scientist."
+    },
+    {
+      "sentence_tokens": [
+        "The",
+        "client",
+        "whom",
+        "you",
+        "met",
+        "yesterday",
+        "is",
+        "very",
+        "satisfied",
+        "."
+      ],
+      "head_noun_indices": [
+        1,
+        2
+      ],
+      "explanation": "'Whom' is the formal object relative pronoun referring to the client."
+    },
+    {
+      "sentence_tokens": [
+        "This",
+        "is",
+        "the",
+        "building",
+        "in",
+        "which",
+        "the",
+        "treaty",
+        "was",
+        "signed",
+        "."
+      ],
+      "head_noun_indices": [
+        3,
+        5
+      ],
+      "explanation": "'In which' is a formal alternative to 'where' for modifying the building."
+    },
+    {
+      "sentence_tokens": [
+        "Professor",
+        "Lee",
+        ",",
+        "who",
+        "is",
+        "an",
+        "expert",
+        "on",
+        "AI",
+        ",",
+        "will",
+        "give",
+        " a",
+        "talk",
+        "."
+      ],
+      "head_noun_indices": [
+        0,
+        1,
+        3
+      ],
+      "explanation": "A non-defining relative clause providing extra information about Professor Lee."
+    },
+    {
+      "sentence_tokens": [
+        "The",
+        "car",
+        "whose",
+        "engine",
+        "failed",
+        "has",
+        "been",
+        "repaired",
+        "."
+      ],
+      "head_noun_indices": [
+        1,
+        2
+      ],
+      "explanation": "'Whose' can be used for both people and things to show possession/parts."
+    }
+  ],
+  "drill_tasks": [
+    {
+      "type": "MCQ",
+      "question": "The man ________ phone is ringing should answer it.",
+      "options": [
+        "who",
+        "whom",
+        "whose",
+        "which"
+      ],
+      "answer": "whose",
+      "explanation": "Use 'whose' to show that the phone belongs to the man."
+    },
+    {
+      "type": "MCQ",
+      "question": "The manager ________ I spoke to was very helpful.",
+      "options": [
+        "who",
+        "whom",
+        "which",
+        "whose"
+      ],
+      "answer": "whom",
+      "explanation": "In formal English, use 'whom' when the pronoun is the object of the verb or preposition."
+    },
+    {
+      "type": "MCQ",
+      "question": "The year ________ the war ended was 1945.",
+      "options": [
+        "which",
+        "in which",
+        "whom",
+        "where"
+      ],
+      "answer": "in which",
+      "explanation": "'In which' is a formal way to modify a time period."
+    },
+    {
+      "type": "MCQ",
+      "question": "Dr. Smith ________ is a leading surgeon, performed the operation.",
+      "options": [
+        ", who",
+        "who",
+        ", whom",
+        "whom"
+      ],
+      "answer": ", who",
+      "explanation": "A non-defining clause requires commas."
+    },
+    {
+      "type": "MCQ",
+      "question": "I saw a boy ________ father is a pilot.",
+      "options": [
+        "who's",
+        "whose",
+        "who",
+        "whom"
+      ],
+      "answer": "whose",
+      "explanation": "'Whose' is the possessive form; 'who's' means 'who is' or 'who has'."
+    }
+  ],
+  "boss_fight": {
+    "paragraph": "The man who's car was stolen called the police. The woman who I gave the book to was happy. Paris which is the capital of France is beautiful.",
+    "errors": [
+      {
+        "original": "who's car",
+        "correction": "whose car",
+        "explanation": "'Who's' is 'who is'. Use 'whose' for possession."
+      },
+      {
+        "original": "who I gave the book to",
+        "correction": "to whom I gave the book",
+        "explanation": "In formal English, move the preposition to the front and use 'whom'."
+      },
+      {
+        "original": "Paris which is",
+        "correction": "Paris, which is the capital of France,",
+        "explanation": "Proper nouns like Paris always take non-defining clauses, which must have commas."
+      }
+    ]
+  },
+  "success_feedback": "Great start! You've mastered the essential formal relative structures. You're ready to add more complexity.",
+  "suggested_next_steps": [
+    "Learn about 'Relative clauses of quantity' (Some of which).",
+    "Practice using 'Whereby' and 'Wherein'.",
+    "Try Level 5 for more advanced prepositional relatives!"
+  ],
+  "interactive_tasks": [],
+  "examples": [],
+  "key_points": []
+}

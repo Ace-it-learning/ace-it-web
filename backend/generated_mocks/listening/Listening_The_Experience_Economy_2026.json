@@ -1,0 +1,655 @@
+{
+  "meta": {
+    "title": "HKDSE Paper 3: The Experience Economy (Elite 2026 Edition)",
+    "topic": "Malls adding art and sports instead of just retail.",
+    "difficulty": "Level 5** Authentic (Stamina Stretch)",
+    "total_marks_part_a": 50,
+    "total_marks_part_b": 50
+  },
+  "Part_A": {
+    "tasks": [
+      {
+        "id": "Task_1",
+        "instructions": "You are at the registration desk for 'The Retail Renaissance Expo'. Complete the registration form below.",
+        "questions": [
+          {
+            "id": "t1_q1",
+            "type": "Fill_in_Blanks",
+            "label": "Full Name of Organization:",
+            "answer": "Global Mall Solutions"
+          },
+          {
+            "id": "t1_q2",
+            "type": "Fill_in_Blanks",
+            "label": "Primary Contact Person:",
+            "answer": "Marcus Yeung"
+          },
+          {
+            "id": "t1_q3",
+            "type": "Fill_in_Blanks",
+            "label": "Contact Number:",
+            "answer": "9876 1234"
+          },
+          {
+            "id": "t1_q4",
+            "type": "Fill_in_Blanks",
+            "label": "Membership Tier:",
+            "answer": "Diamond Executive"
+          },
+          {
+            "id": "t1_q5",
+            "type": "Fill_in_Blanks",
+            "label": "Number of Attendees:",
+            "answer": "14"
+          },
+          {
+            "id": "t1_q6",
+            "type": "Fill_in_Blanks",
+            "label": "Preferred Seminar Room:",
+            "answer": "Grand Atrium Hall"
+          },
+          {
+            "id": "t1_q7",
+            "type": "Fill_in_Blanks",
+            "label": "Equipment Rental:",
+            "answer": "3 VR Headsets"
+          },
+          {
+            "id": "t1_q8",
+            "type": "Fill_in_Blanks",
+            "label": "Catering Preference:",
+            "answer": "Nut-free only"
+          },
+          {
+            "id": "t1_q9",
+            "type": "Fill_in_Blanks",
+            "label": "Keynote Speaker Interest:",
+            "answer": "Yes"
+          },
+          {
+            "id": "t1_q10",
+            "type": "Fill_in_Blanks",
+            "label": "Check-in Time:",
+            "answer": "9:15 AM"
+          },
+          {
+            "id": "t1_q11",
+            "type": "Fill_in_Blanks",
+            "label": "Afternoon Workshop:",
+            "answer": "Sports Hub Design"
+          },
+          {
+            "id": "t1_q12",
+            "type": "Fill_in_Blanks",
+            "label": "Billing Address:",
+            "answer": "Central Plaza Tower 2"
+          }
+        ]
+      },
+      {
+        "id": "Task_2",
+        "instructions": "Listen to a presentation about 'Project Playground'. Complete the notes and answer the questions.",
+        "questions": [
+          {
+            "id": "t2_q1",
+            "type": "Fill_in_Blanks",
+            "label": "Project Concept Year:",
+            "answer": "2022"
+          },
+          {
+            "id": "t2_q2",
+            "type": "Fill_in_Blanks",
+            "label": "Mall Name (Pilot):",
+            "answer": "The Sky-Hub Mall"
+          },
+          {
+            "id": "t2_q3",
+            "type": "Fill_in_Blanks",
+            "label": "Key Sport Installed:",
+            "answer": "Indoor Bouldering"
+          },
+          {
+            "id": "t2_q4",
+            "type": "Fill_in_Blanks",
+            "label": "Footfall Increase (%):",
+            "answer": "22"
+          },
+          {
+            "id": "t2_q5",
+            "type": "Multiple_Choice",
+            "question": "What is the primary demographic targeted?",
+            "options": [
+              "Elderly residents",
+              "Gen-Z professionals",
+              "Primary students"
+            ],
+            "answer": "Gen-Z professionals"
+          },
+          {
+            "id": "t2_q6",
+            "type": "Multiple_Choice",
+            "question": "Total floor area for sports?",
+            "options": [
+              "5,000 sq ft",
+              "10,000 sq ft",
+              "15,000 sq ft"
+            ],
+            "answer": "10,000 sq ft"
+          },
+          {
+            "id": "t2_q7",
+            "type": "Fill_in_Blanks",
+            "label": "Member Launch Date:",
+            "answer": "August 15"
+          },
+          {
+            "id": "t2_q8",
+            "type": "Fill_in_Blanks",
+            "label": "Annual Insurance Cost:",
+            "answer": "$1.2 Million"
+          },
+          {
+            "id": "t2_q9",
+            "type": "Fill_in_Blanks",
+            "label": "Construction Firm:",
+            "answer": "Apex Build Corp"
+          },
+          {
+            "id": "t2_q10",
+            "type": "Fill_in_Blanks",
+            "label": "Next Project Feature:",
+            "answer": "Digital Skate Park"
+          },
+          {
+            "id": "t2_q11",
+            "type": "Fill_in_Blanks",
+            "label": "Inquiry Email:",
+            "answer": "info@project-p.hk"
+          },
+          {
+            "id": "t2_q12",
+            "type": "Fill_in_Blanks",
+            "label": "Venue for Tour:",
+            "answer": "Kwun Tong Annex"
+          }
+        ]
+      },
+      {
+        "id": "Task_3",
+        "instructions": "A panel of three experts are discussing the 'Retail-to-Art Shift'. Tick the correct boxes.",
+        "questions": [
+          {
+            "id": "t3_q1",
+            "type": "Multiple_Choice",
+            "question": "Dr. Lam says the main driver is:",
+            "options": [
+              "High rent",
+              "Online shopping",
+              "Lack of museums"
+            ],
+            "answer": "Online shopping"
+          },
+          {
+            "id": "t3_q2",
+            "type": "Multiple_Choice",
+            "question": "Ms. Gomez suggests malls should hire:",
+            "options": [
+              "Full-time curators",
+              "Social media influencers",
+              "Security guards"
+            ],
+            "answer": "Full-time curators"
+          },
+          {
+            "id": "t3_q3",
+            "type": "Multiple_Choice",
+            "question": "Mr. Tan argues for:",
+            "options": [
+              "Zero admission fees",
+              "Hourly artist rent",
+              "Government subsidies"
+            ],
+            "answer": "Zero admission fees"
+          },
+          {
+            "id": "t3_q4",
+            "type": "Fill_in_Blanks",
+            "label": "Grant Application Deadline:",
+            "answer": "October 31"
+          },
+          {
+            "id": "t3_q5",
+            "type": "Fill_in_Blanks",
+            "label": "Subsidy Cap per Artist:",
+            "answer": "$45,000"
+          },
+          {
+            "id": "t3_q6",
+            "type": "Fill_in_Blanks",
+            "label": "Participating Mall Count:",
+            "answer": "25 Locations"
+          },
+          {
+            "id": "t3_q7",
+            "type": "Fill_in_Blanks",
+            "label": "Exhibition App Name:",
+            "answer": "Art-Walk-HK"
+          },
+          {
+            "id": "t3_q8",
+            "type": "Fill_in_Blanks",
+            "label": "Commission Rate:",
+            "answer": "10%"
+          },
+          {
+            "id": "t3_q9",
+            "type": "Fill_in_Blanks",
+            "label": "Primary Art Medium:",
+            "answer": "Digital Installations"
+          },
+          {
+            "id": "t3_q10",
+            "type": "Fill_in_Blanks",
+            "label": "Guide Language:",
+            "answer": "Trilingual"
+          },
+          {
+            "id": "t3_q11",
+            "type": "Fill_in_Blanks",
+            "label": "Lead Sponsor:",
+            "answer": "Heritage Bank"
+          },
+          {
+            "id": "t3_q12",
+            "type": "Fill_in_Blanks",
+            "label": "Feedback Hotline:",
+            "answer": "2100 3300"
+          }
+        ]
+      },
+      {
+        "id": "Task_4",
+        "instructions": "Three stakeholders are discussing mall sports policies. Complete the matrix with their views.",
+        "questions": [
+          {
+            "id": "t4_q1",
+            "type": "Fill_in_Blanks",
+            "label": "Tenant A (Shop Owner) - View on Noise:",
+            "answer": "Too disruptive for retail"
+          },
+          {
+            "id": "t4_q2",
+            "type": "Fill_in_Blanks",
+            "label": "Tenant A - View on Rent:",
+            "answer": "Should be lowered to compensate"
+          },
+          {
+            "id": "t4_q3",
+            "type": "Fill_in_Blanks",
+            "label": "Tenant A - Recommendation:",
+            "answer": "Restrict sports to roof level"
+          },
+          {
+            "id": "t4_q4",
+            "type": "Fill_in_Blanks",
+            "label": "Athlete B (Coach) - View on Noise:",
+            "answer": "Creates an energetic atmosphere"
+          },
+          {
+            "id": "t4_q5",
+            "type": "Fill_in_Blanks",
+            "label": "Athlete B - View on Rent:",
+            "answer": "Fair given the facilities"
+          },
+          {
+            "id": "t4_q6",
+            "type": "Fill_in_Blanks",
+            "label": "Athlete B - Recommendation:",
+            "answer": "Expand to group classes"
+          },
+          {
+            "id": "t4_q7",
+            "type": "Fill_in_Blanks",
+            "label": "Mall Manager C - View on Noise:",
+            "answer": "Needs acoustic paneling"
+          },
+          {
+            "id": "t4_q8",
+            "type": "Fill_in_Blanks",
+            "label": "Mall Manager C - View on Rent:",
+            "answer": "Variable based on peak hours"
+          },
+          {
+            "id": "t4_q9",
+            "type": "Fill_in_Blanks",
+            "label": "Mall Manager C - Recommendation:",
+            "answer": "Hybrid shopping-sport passes"
+          },
+          {
+            "id": "t4_q10",
+            "type": "Consensus on Safety:",
+            "answer": "Mandatory medical clearance"
+          },
+          {
+            "id": "t4_q11",
+            "type": "Operating Hours Agreement:",
+            "answer": "Until 11 PM daily"
+          },
+          {
+            "id": "t4_q12",
+            "type": "Next Review Date:",
+            "answer": "January 2027"
+          }
+        ]
+      }
+    ],
+    "script": [
+      {
+        "speaker": "Announcer",
+        "text": "Hong Kong Diploma of Secondary Education Examination 2026. English Language Paper 3. Listening and Integrated Skills."
+      },
+      {
+        "speaker": "Announcer",
+        "text": "The entire broadcast will last approximately one hour. Part A. Task 1. You are at the registration desk for 'The Retail Renaissance Expo'. Listen and complete the form. You have two minutes. (120-second pause)"
+      },
+      {
+        "speaker": "Staff",
+        "text": "Good morning. Are you here for the Expo? It's wonderful to see so many professionals interested in the future of malls."
+      },
+      {
+        "speaker": "Marcus",
+        "text": "Hello, yes. I'm Marcus Yeung. I'm checking in for my team. We are from Global Mall Solutions."
+      },
+      {
+        "speaker": "Staff",
+        "text": "Let me look that up... Global... Global Mall Solutions. Ah, found it. You're the ones doing the big redevelopment in West Kowloon, right?"
+      },
+      {
+        "speaker": "Marcus",
+        "text": "That's a different branch. We're the main office based in Central Plaza Tower 2. That's our billing address too, by the way."
+      },
+      {
+        "speaker": "Staff",
+        "text": "Got it. Marcus Yeung, Central Plaza. And your phone number?"
+      },
+      {
+        "speaker": "Marcus",
+        "text": "It's 9876 1234. I'm the primary contact for any scheduling changes."
+      },
+      {
+        "speaker": "Staff",
+        "text": "Thank you. Now, your membership status... Oh, wow. You're on the Diamond Executive tier. That gives you first priority for all the breakout sessions."
+      },
+      {
+        "speaker": "Marcus",
+        "text": "Yes, we upgraded last month. I have fourteen attendees coming today. I know the original invite said ten, but we brought the whole design department."
+      },
+      {
+        "speaker": "Staff",
+        "text": "Fourteen. Let me adjust the badges... Done. And since you're Diamond, you've been assigned the Grand Atrium Hall for your private consultation. It's much larger than the standard meeting pods."
+      },
+      {
+        "speaker": "Marcus",
+        "text": "Perfect. We'll need some tech too. Can we rent those new VR headsets? The ones for the 'Virtual Store' walkthrough?"
+      },
+      {
+        "speaker": "Staff",
+        "text": "We have a few left. How many do you need? Four?"
+      },
+      {
+        "speaker": "Marcus",
+        "text": "Actually, three VR headsets should be enough. We can rotate. Also, regarding the lunch—one of our designers is highly allergic to peanuts. So, nut-free only for the catering, please."
+      },
+      {
+        "speaker": "Staff",
+        "text": "Nut-free only. I'll flag that for the chefs. Now, will you be staying for the keynote speaker? It's the CEO of 'Trend-Setters Global'."
+      },
+      {
+        "speaker": "Marcus",
+        "text": "Yes, definitely. Wouldn't miss it. What time is the check-in officially recorded?"
+      },
+      {
+        "speaker": "Staff",
+        "text": "It's 9:15 AM right now. You're early! The workshops don't start until 10:30. Which afternoon session did you pick?"
+      },
+      {
+        "speaker": "Marcus",
+        "text": "We're doing the 'Sports Hub Design' session. We were torn between that and 'Gourmet Food Courts', but the sports focus is more urgent for our current project."
+      },
+      {
+        "speaker": "Staff",
+        "text": "A wise choice. Here are your badges, Marcus. Enjoy the Expo!"
+      },
+      {
+        "speaker": "Announcer",
+        "text": "Task 2. Listen to a presentation about 'Project Playground'. Complete the notes. You have two minutes. (120-second pause)"
+      },
+      {
+        "speaker": "Presenter",
+        "text": "Good morning. My name is Elena Rossi. I'm here to talk about 'Project Playground'. We first brainstormed the concept back in 2022 when we realized that retail alone was no longer a draw for younger crowds. Our pilot mall, 'The Sky-Hub Mall' in East Kowloon, was the first to undergo a total transformation."
+      },
+      {
+        "speaker": "Presenter",
+        "text": "Instead of another department store, we installed a massive Indoor Bouldering wall right in the center of the mall. It sounds crazy, but the results were undeniable. In the first quarter alone, we saw a footfall increase of 22%. It wasn't just shoppers; it was people coming to climb and then staying for a smoothie or a coffee. Our primary target demographic is Gen-Z professionals—those who want to fit a workout into their social life."
+      },
+      {
+        "speaker": "Presenter",
+        "text": "The scale is quite significant. We dedicated 10,000 square feet to the sports facilities. While the initial build was expensive, the main recurring cost is the annual insurance, which comes to $1.2 Million due to the high-risk nature of climbing. Our partner for this, the construction firm Apex Build Corp, handled the structural reinforcement perfectly. We are now preparing for a member-only launch on August 15."
+      },
+      {
+        "speaker": "Presenter",
+        "text": "Looking forward, we're not stopping at bouldering. Our next project feature is a Digital Skate Park, using motion-tracking sensors. If you have questions, email us at info@project-p.hk. We'll also be hosting a site tour at our Kwun Tong Annex next Friday. Please sign up at the booth."
+      },
+      {
+        "speaker": "Announcer",
+        "text": "Task 3. Listen to three experts discuss the 'Retail-to-Art Shift'. You have two minutes. (120-second pause)"
+      },
+      {
+        "speaker": "Host",
+        "text": "Welcome. Dr. Lam, you've studied urban trends for years. Why are malls becoming art galleries?"
+      },
+      {
+        "speaker": "Dr Lam",
+        "text": "It's simple: online shopping. People buy things on their phones now. Malls have to offer what the internet can't—a physical, emotional experience. Art provides that 'Instagrammable' moment that drives foot traffic."
+      },
+      {
+        "speaker": "Ms Gomez",
+        "text": "I agree, but malls often treat art like wallpaper. To do it right, they should hire full-time curators. You wouldn't let a marketing manager run a museum, so why let them run a mall gallery? We need professional storytelling."
+      },
+      {
+        "speaker": "Mr Tan",
+        "text": "The cost is the issue for artists. I believe we should have zero admission fees for these mall galleries. If you charge people to enter, they'll just stay in the food court. The mall makes money from the increased coffee and fashion sales, so the art should be a free magnet. We've set a grant application deadline of October 31 for artists who want to participate. We're offering a subsidy cap of $45,000 per artist to cover materials. Currently, we have 25 locations signed up."
+      },
+      {
+        "speaker": "Dr Lam",
+        "text": "And the tech is vital. There's a new exhibition app called 'Art-Walk-HK' that guides you through the mall. It's trilingual—Cantonese, English, and Mandarin—which is great for tourists. Most of the pieces are Digital Installations, as they take up less physical space but have high impact. Our lead sponsor, Heritage Bank, has even agreed to keep the commission rate at a low 10% for any art sold. For feedback, please call 2100 3300."
+      },
+      {
+        "speaker": "Announcer",
+        "text": "Task 4. Listen to stakeholders discuss mall sports policies. You have four minutes. (240-second pause)"
+      },
+      {
+        "speaker": "Tenant A",
+        "text": "I own a high-end boutique. Honestly, the noise from the basketball court next door is too disruptive for retail. My customers expect a quiet, luxury environment. If the mall keeps these sports, my rent should be lowered to compensate for the lost atmosphere. At the very least, they should restrict sports to the roof level, far away from the shops."
+      },
+      {
+        "speaker": "Athlete B",
+        "text": "As a coach, I see it differently. The noise creates an energetic atmosphere. It makes the mall feel alive! The rent we pay for the facility is fair given the quality of the equipment. I actually think we should expand to group classes like HIIT or Yoga in the common areas."
+      },
+      {
+        "speaker": "Manager C",
+        "text": "We need to balance both. I've looked into acoustic paneling to dampen the sound near the luxury shops. As for rent, we might move to a variable model based on peak hours. But one thing we all agree on is safety—we must have mandatory medical clearance for anyone using the high-intensity zones. We'll also extend operating hours until 11 PM daily to accommodate after-work crowds. We'll have our next review in January 2027."
+      },
+      {
+        "speaker": "Announcer",
+        "text": "Part B. Integrated Skills Recording. Listen to the briefing from the Bureau Chief."
+      },
+      {
+        "speaker": "Bureau Chief",
+        "text": "Project Manager, we need to move fast on the 'Experience Economy' rollout. For Task 8, when you write to the complaining tenant, don't just mention the rent. Explain that we are offering 'Heritage preservation credits' to shops that integrate art into their storefronts. This is a huge tax break that isn't in the brochure yet. Also, for the internal memo in Task 9, I want you to propose a 'Summer Skate Jam' event in August to boost the footfall gap. It'll be a great way to use the new facility. Finally, for the social media post, use the catchphrase 'Retail Therapy 2.0'. And very importantly, mention that we've installed 'Anti-Slip Flooring' throughout the sports zones to address the safety concerns of the elderly. This is a key safety feature only the board knows about for now. Get to work."
+      }
+    ]
+  },
+  "Part_B": {
+    "data_file": [
+      {
+        "id": "doc1",
+        "type": "minutes",
+        "title": "Minutes of the Experience Economy Steering Committee",
+        "content": "Date: May 12, 2026. Participants: Sarah Wong (Retail), Leo Chen (Sports Dept). Points: 1. Public approval of mall-based sports is high (68%). 2. However, traditional tenants are complaining about noise. 3. Action: Create a 'Community Ambassador' role to mediate between athletes and shoppers. 4. Goal: Transition 30% of floor space to non-retail by 2028."
+      },
+      {
+        "id": "doc2",
+        "type": "brochure",
+        "title": "The Sky-Hub: More Than a Mall",
+        "content": "Features: - 15m Bouldering Wall. - Digital Art Gallery. - 22% increase in foot traffic. - Coming soon: Rooftop Running Track. - Join our 'Active Life' membership for $200/month."
+      },
+      {
+        "id": "doc3",
+        "type": "email",
+        "title": "Complaint from Boutique Owner (Mrs. Clara Li)",
+        "content": "Subject: Unacceptable Noise Levels. The new 'Sports Zone' is right next to my jewelry shop. The shouting and music are scaring off my VIP clients. I am losing money every day. I want a rent reduction or I am moving out."
+      },
+      {
+        "id": "doc4",
+        "type": "newspaper",
+        "title": "Editorial: The End of the Storefront?",
+        "content": "SCMP News: Hong Kong malls are evolving. Experts say 'The Experience Economy' is the only way to survive the e-commerce wave. Integrating art and sports isn't just a trend; it's a necessity for survival."
+      },
+      {
+        "id": "doc5",
+        "type": "handwritten_note",
+        "title": "Urgent Note from CEO",
+        "content": "To PM: Mrs. Li is influential. We can't lose her shop. Mention the new Curated Window Program. We give them $20,000 to turn their window into an art piece. Also, tell staff we're hiring 50 'Experience Ambassadors' to help with the crowds."
+      },
+      {
+        "id": "doc6",
+        "type": "table",
+        "title": "Table: Spending Habits by Mall Zone (Q1 2026)",
+        "content": "Zone | Traffic | Avg Spend | Status. Retail | -10% | $800 | Declining. Sports | +22% | $150 | High Volume. Art | +15% | $300 | Growing. Food | +5% | $200 | Stable. Note: The 'Publicity' for the Art zone is currently underfunded."
+      },
+      {
+        "id": "doc7",
+        "type": "social_media_post",
+        "title": "Viral Post: #SaveOurShops",
+        "content": "1.2k Likes: 'Malls should be for shopping, not for gym rats. I can't even walk through the atrium without getting hit by a basketball. Who is in charge?'"
+      },
+      {
+        "id": "doc8",
+        "type": "memo",
+        "title": "Internal Memo: Experience Ambassador Roles",
+        "content": "We are hiring 50 staff to act as 'Experience Ambassadors'. They will manage the flow between the sports zones and retail stores, ensuring noise is kept at reasonable levels and directing traffic."
+      },
+      {
+        "id": "doc9",
+        "type": "news_clip",
+        "title": "Insurance Weekly: Mall Liability",
+        "content": "Apex Build Corp has secured a new safety certification for mall-based climbing walls. This includes high-impact foam flooring and mandatory harness checks for all participants."
+      },
+      {
+        "id": "doc10",
+        "type": "policy_draft",
+        "title": "Draft Section: Zoning for Experience",
+        "content": "Clause 8.1: No high-decibel activities (e.g., basketball, HIIT) allowed within 20 meters of 'Luxury Tier' retail outlets. Clause 8.2: All art galleries must provide trilingual descriptions."
+      }
+    ],
+    "Part_B1": {
+      "tasks": [
+        {
+          "id": "Task_5",
+          "type": "Formal Email",
+          "instructions": "Write an email to Mrs. Clara Li (Doc 3) regarding her noise complaints. Use Doc 5 and Doc 10 to provide solutions.",
+          "wordCount": 150,
+          "grading_rubric": {
+            "content_points": [
+              "Acknowledge noise issue (Doc 3)",
+              "Mention Clause 8.1: 20m buffer zone (Doc 10)",
+              "Propose Curated Window Program with $20k grant (Doc 5)",
+              "Highlight overall foot traffic increase of 22% (Doc 2)"
+            ],
+            "tone": "Polite and Reassuring"
+          }
+        },
+        {
+          "id": "Task_6",
+          "type": "Information Sheet",
+          "instructions": "Create an info sheet for potential 'Experience Ambassadors'. Use Doc 1 and Doc 8.",
+          "wordCount": 100,
+          "grading_rubric": {
+            "content_points": [
+              "Define role: Mediate between athletes and shoppers (Doc 1)",
+              "Mention hiring of 50 new staff (Doc 8)",
+              "Focus on managing crowd flow and noise (Doc 8)"
+            ],
+            "tone": "Clear and Professional"
+          }
+        },
+        {
+          "id": "Task_7",
+          "type": "Meeting Summary",
+          "instructions": "Summarize the spending trends for the board of directors. Refer to Doc 6.",
+          "wordCount": 120,
+          "grading_rubric": {
+            "content_points": [
+              "Retail traffic down 10% (Doc 6)",
+              "Sports traffic up 22% but lower spend per person (Doc 6)",
+              "Art zone shows 15% growth (Doc 6)",
+              "Note underfunding of Art zone publicity (Doc 6)"
+            ],
+            "tone": "Objective and Analytical"
+          }
+        }
+      ]
+    },
+    "Part_B2": {
+      "tasks": [
+        {
+          "id": "Task_8",
+          "type": "Formal Letter",
+          "instructions": "Write a persuasive letter to the 'Save Our Shops' group (Doc 7) defending the mall's new strategy. Use Doc 1, Doc 4, and Audio information.",
+          "wordCount": 250,
+          "grading_rubric": {
+            "content_points": [
+              "Address 'Gym Rat' concerns and space management (Doc 7)",
+              "Explain transition to 30% non-retail for survival (Doc 1)",
+              "Mention necessity due to e-commerce (Doc 4)",
+              "MUST MENTION: Heritage preservation credits for shops (Audio)",
+              "Highlight trilingual art descriptions (Doc 10)"
+            ],
+            "tone": "Persuasive and Strategic"
+          }
+        },
+        {
+          "id": "Task_9",
+          "type": "Internal Memo",
+          "instructions": "Write an internal memo to the Marketing Department proposing new initiatives. Refer to Doc 2, Doc 6, and Audio.",
+          "wordCount": 150,
+          "grading_rubric": {
+            "content_points": [
+              "Address the publicity gap in Art zone (Doc 6)",
+              "Mention Rooftop Running Track (Doc 2)",
+              "MUST PROPOSE: 'Summer Skate Jam' in August (Audio)",
+              "Note safety certification from Apex Build Corp (Doc 9)"
+            ],
+            "tone": "Professional and Energetic"
+          }
+        },
+        {
+          "id": "Task_10",
+          "type": "Public Social Media Post",
+          "instructions": "Draft a post for the 'Active Life' campaign. Reassure elderly citizens and shoppers. Use Doc 2, Doc 9, and Audio.",
+          "wordCount": 100,
+          "grading_rubric": {
+            "content_points": [
+              "Promote 'Active Life' membership (Doc 2)",
+              "Mention mandatory harness checks and foam flooring (Doc 9)",
+              "MUST USE PHRASE: 'Retail Therapy 2.0' (Audio)",
+              "MUST MENTION: Installation of 'Anti-Slip Flooring' (Audio)"
+            ],
+            "tone": "Friendly and Safety-oriented"
+          }
+        }
+      ]
+    }
+  }
+}

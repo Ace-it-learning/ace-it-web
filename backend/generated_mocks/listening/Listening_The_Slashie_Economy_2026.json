@@ -1,0 +1,697 @@
+{
+  "meta": {
+    "title": "HKDSE Paper 3: The Slashie Economy (Elite 2026 Edition)",
+    "topic": "Youth pursuing multiple careers; freedom vs. stability in HK.",
+    "difficulty": "Level 5** Authentic (High Stamina)",
+    "total_marks_part_a": 50,
+    "total_marks_part_b": 50
+  },
+  "Part_A": {
+    "tasks": [
+      {
+        "id": "Task_1",
+        "instructions": "You are at the registration desk for the Hong Kong Youth Career Summit. Complete the registration form for the delegate.",
+        "questions": [
+          {
+            "id": "t1_q1",
+            "type": "Fill_in_Blanks",
+            "label": "Full Name of Delegate:",
+            "answer": "Marcus Chui"
+          },
+          {
+            "id": "t1_q2",
+            "type": "Fill_in_Blanks",
+            "label": "Current Primary Role:",
+            "answer": "Freelance Graphic Designer"
+          },
+          {
+            "id": "t1_q3",
+            "type": "Fill_in_Blanks",
+            "label": "Secondary Occupation:",
+            "answer": "Coffee Roaster"
+          },
+          {
+            "id": "t1_q4",
+            "type": "Fill_in_Blanks",
+            "label": "Registration Category:",
+            "answer": "Young Professional"
+          },
+          {
+            "id": "t1_q5",
+            "type": "Fill_in_Blanks",
+            "label": "Years of Experience (Total):",
+            "answer": "4 Years"
+          },
+          {
+            "id": "t1_q6",
+            "type": "Fill_in_Blanks",
+            "label": "Contact Phone Number:",
+            "answer": "6288 3491"
+          },
+          {
+            "id": "t1_q7",
+            "type": "Fill_in_Blanks",
+            "label": "Email Address:",
+            "answer": "marcus.chui@slashiehk.com"
+          },
+          {
+            "id": "t1_q8",
+            "type": "Fill_in_Blanks",
+            "label": "Preferred Language for Seminars:",
+            "answer": "Cantonese and English"
+          },
+          {
+            "id": "t1_q9",
+            "type": "Fill_in_Blanks",
+            "label": "Attending Networking Dinner:",
+            "answer": "Yes"
+          },
+          {
+            "id": "t1_q10",
+            "type": "Fill_in_Blanks",
+            "label": "Dietary Restrictions:",
+            "answer": "Nut Allergy"
+          },
+          {
+            "id": "t1_q11",
+            "type": "Fill_in_Blanks",
+            "label": "Morning Workshop Choice:",
+            "answer": "Financial Planning for Freelancers"
+          },
+          {
+            "id": "t1_q12",
+            "type": "Fill_in_Blanks",
+            "label": "How did you hear about us:",
+            "answer": "Instagram Ad"
+          }
+        ]
+      },
+      {
+        "id": "Task_2",
+        "instructions": "Listen to a keynote speech about the 'State of the Slashie Economy'. Complete the summary and answer the questions.",
+        "questions": [
+          {
+            "id": "t2_q1",
+            "type": "Fill_in_Blanks",
+            "label": "Est. Number of Slashies in HK:",
+            "answer": "250,000"
+          },
+          {
+            "id": "t2_q2",
+            "type": "Fill_in_Blanks",
+            "label": "Average Monthly Income (HKD):",
+            "answer": "$22,500"
+          },
+          {
+            "id": "t2_q3",
+            "type": "Fill_in_Blanks",
+            "label": "Main Motivation for Pursuing Slashie Life:",
+            "answer": "Personal Autonomy"
+          },
+          {
+            "id": "t2_q4",
+            "type": "Multiple_Choice",
+            "question": "What is the biggest challenge cited by speakers?",
+            "options": [
+              "Lack of sleep",
+              "Social stigma",
+              "Irregular income"
+            ],
+            "answer": "Irregular income"
+          },
+          {
+            "id": "t2_q5",
+            "type": "Fill_in_Blanks",
+            "label": "Fastest Growing Industry for Slashies:",
+            "answer": "Content Creation"
+          },
+          {
+            "id": "t2_q6",
+            "type": "Multiple_Choice",
+            "question": "The speaker suggests which age group is most active?",
+            "options": [
+              "18-24",
+              "25-34",
+              "35-44"
+            ],
+            "answer": "25-34"
+          },
+          {
+            "id": "t2_q7",
+            "type": "Fill_in_Blanks",
+            "label": "Suggested MPF Policy Reform Name:",
+            "answer": "Portable Pension Fund"
+          },
+          {
+            "id": "t2_q8",
+            "type": "Fill_in_Blanks",
+            "label": "New Tax Category Code:",
+            "answer": "S-2026"
+          },
+          {
+            "id": "t2_q9",
+            "type": "Fill_in_Blanks",
+            "label": "Grant Application Deadline:",
+            "answer": "August 15"
+          },
+          {
+            "id": "t2_q10",
+            "type": "Fill_in_Blanks",
+            "label": "Target Growth Rate by 2030 (%):",
+            "answer": "12"
+          },
+          {
+            "id": "t2_q11",
+            "type": "Fill_in_Blanks",
+            "label": "Official Website for Grants:",
+            "answer": "www.ydc-slash.hk"
+          },
+          {
+            "id": "t2_q12",
+            "type": "Fill_in_Blanks",
+            "label": "Keynote Sponsor:",
+            "answer": "FutureWork Solutions"
+          }
+        ]
+      },
+      {
+        "id": "Task_3",
+        "instructions": "You will hear a radio interview with three guests. Complete the table with their views on the Slashie lifestyle.",
+        "questions": [
+          {
+            "id": "t3_q1",
+            "type": "Multiple_Choice",
+            "question": "Professor Li thinks the main risk is:",
+            "options": [
+              "Physical exhaustion",
+              "Lack of social safety net",
+              "Skills becoming outdated"
+            ],
+            "answer": "Lack of social safety net"
+          },
+          {
+            "id": "t3_q2",
+            "type": "Multiple_Choice",
+            "question": "Chloe (a Slashie) values:",
+            "options": [
+              "Work-life balance",
+              "High salary",
+              "Variety of tasks"
+            ],
+            "answer": "Variety of tasks"
+          },
+          {
+            "id": "t3_q3",
+            "type": "Multiple_Choice",
+            "question": "Mr. Ng (HR Director) believes companies should:",
+            "options": [
+              "Ban side-hustles",
+              "Offer flexible contracts",
+              "Increase full-time wages"
+            ],
+            "answer": "Offer flexible contracts"
+          },
+          {
+            "id": "t3_q4",
+            "type": "Fill_in_Blanks",
+            "label": "Proposed Co-working Space Subsidy:",
+            "answer": "40% of rent"
+          },
+          {
+            "id": "t3_q5",
+            "type": "Fill_in_Blanks",
+            "label": "Number of Districts involved in the Pilot:",
+            "answer": "6 Districts"
+          },
+          {
+            "id": "t3_q6",
+            "type": "Fill_in_Blanks",
+            "label": "Primary Mentorship Focus:",
+            "answer": "Tax Filing Compliance"
+          },
+          {
+            "id": "t3_q7",
+            "type": "Fill_in_Blanks",
+            "label": "Insurance Coverage Limit per Incident:",
+            "answer": "$15,000"
+          },
+          {
+            "id": "t3_q8",
+            "type": "Fill_in_Blanks",
+            "label": "Duration of Government Support (Months):",
+            "answer": "18"
+          },
+          {
+            "id": "t3_q9",
+            "type": "Fill_in_Blanks",
+            "label": "Mental Health Support Hotline:",
+            "answer": "2711 9988"
+          },
+          {
+            "id": "t3_q10",
+            "type": "Fill_in_Blanks",
+            "label": "Language of Training Manual:",
+            "answer": "Trilingual"
+          },
+          {
+            "id": "t3_q11",
+            "type": "Fill_in_Blanks",
+            "label": "App for Logging Slashie Hours:",
+            "answer": "SlashTrack HK"
+          },
+          {
+            "id": "t3_q12",
+            "type": "Fill_in_Blanks",
+            "label": "Next Round of Funding (Month):",
+            "answer": "January"
+          }
+        ]
+      },
+      {
+        "id": "Task_4",
+        "instructions": "Three stakeholders are discussing the 'Flexible Mortgage' policy for slashies. Complete the matrix.",
+        "questions": [
+          {
+            "id": "t4_q1",
+            "type": "Fill_in_Blanks",
+            "label": "Stakeholder A (Bank Rep) - Eligibility Criteria:",
+            "answer": "2 years of stable average income"
+          },
+          {
+            "id": "t4_q2",
+            "type": "Fill_in_Blanks",
+            "label": "Stakeholder A - Required Documents:",
+            "answer": "Verified digital invoices and tax returns"
+          },
+          {
+            "id": "t4_q3",
+            "type": "Fill_in_Blanks",
+            "label": "Stakeholder A - Interest Rate Adjustment:",
+            "answer": "+0.5% premium for risk"
+          },
+          {
+            "id": "t4_q4",
+            "type": "Fill_in_Blanks",
+            "label": "Stakeholder B (Youth Advocate) - Main Criticism:",
+            "answer": "The risk premium is too high for beginners"
+          },
+          {
+            "id": "t4_q5",
+            "type": "Fill_in_Blanks",
+            "label": "Stakeholder B - View on Down Payment:",
+            "answer": "Should be reduced for first-time buyers"
+          },
+          {
+            "id": "t4_q6",
+            "type": "Fill_in_Blanks",
+            "label": "Stakeholder B - Proposed Solution:",
+            "answer": "Government-backed loan guarantees"
+          },
+          {
+            "id": "t4_q7",
+            "type": "Fill_in_Blanks",
+            "label": "Stakeholder C (Policy Maker) - Implementation Plan:",
+            "answer": "Phased rollout starting in Q3 2026"
+          },
+          {
+            "id": "t4_q8",
+            "type": "Fill_in_Blanks",
+            "label": "Stakeholder C - View on Stability:",
+            "answer": "Stability is measured by diverse income streams"
+          },
+          {
+            "id": "t4_q9",
+            "type": "Fill_in_Blanks",
+            "label": "Stakeholder C - Priority for 2026:",
+            "answer": "Digital verification system integration"
+          },
+          {
+            "id": "t4_q10",
+            "type": "Consensus on Audit Frequency:",
+            "answer": "Every six months"
+          },
+          {
+            "id": "t4_q11",
+            "type": "Key Communication Channel:",
+            "answer": "Community Town Halls"
+          },
+          {
+            "id": "t4_q12",
+            "type": "Future Task:",
+            "answer": "Reviewing self-employed MPF contributions"
+          }
+        ]
+      }
+    ],
+    "script": [
+      {
+        "speaker": "Announcer",
+        "text": "Hong Kong Diploma of Secondary Education Examination 2026. English Language Paper 3. Listening and Integrated Skills."
+      },
+      {
+        "speaker": "Announcer",
+        "text": "The entire broadcast will last approximately one hour. You will hear several recordings. You now have two minutes to study the Part A instructions and the questions for Task 1. (120-second pause)"
+      },
+      {
+        "speaker": "Staff",
+        "text": "Good morning and welcome to the 2026 Hong Kong Youth Career Summit. It's buzzing today! Are you here to register?"
+      },
+      {
+        "speaker": "Marcus",
+        "text": "Hi, yes. I'm Marcus Chui. I registered online last week, but I haven't received my QR code yet. I'm part of the 'Slashie' delegation."
+      },
+      {
+        "speaker": "Staff",
+        "text": "No problem, Marcus. Let me find you in the system. M-A-R-C-U-S... C-H-U-I. Found it. Oh, it says here you have a quite a varied profile. What's your main gig at the moment?"
+      },
+      {
+        "speaker": "Marcus",
+        "text": "I'd say my primary role is a Freelance Graphic Designer. I do a lot of branding for local startups. But I also spend about twenty hours a week as a Coffee Roaster for a small boutique in Sheung Wan. It keeps me grounded."
+      },
+      {
+        "speaker": "Staff",
+        "text": "Graphic designer and coffee roaster. That's a classic slashie combo! Now, for the registration category, since you're under 35, you're listed as a Young Professional. And how many years have you been doing this multi-career thing?"
+      },
+      {
+        "speaker": "Marcus",
+        "text": "I started right after university. So, it's been four years now. I haven't looked back at the 9-to-5 life once."
+      },
+      {
+        "speaker": "Staff",
+        "text": "Four years. Great. Just checking your contact details. I have your phone number as 6288 3491. Is that correct?"
+      },
+      {
+        "speaker": "Marcus",
+        "text": "Yes, 6-2-8-8, 3-4-9-1. And my email is marcus.chui@slashiehk.com. I use that for all my freelance inquiries."
+      },
+      {
+        "speaker": "Staff",
+        "text": "Got it. Regarding the seminars today, we have some in Cantonese and some in English. Which is your preference?"
+      },
+      {
+        "speaker": "Marcus",
+        "text": "I'm comfortable with both. I work with international clients, so Cantonese and English would be perfect for me."
+      },
+      {
+        "speaker": "Staff",
+        "text": "Excellent. We've got a networking dinner tonight at the Grand Hall. Are you planning to join? It's a great place to pick up new clients."
+      },
+      {
+        "speaker": "Marcus",
+        "text": "Yes, I'll be there. Oh, one thing—I have a severe nut allergy. Will the catering team be able to accommodate that?"
+      },
+      {
+        "speaker": "Staff",
+        "text": "I'll make a note of it. Nut allergy. We'll ensure your meal is prepared separately. Now, we have two parallel workshops in the morning. 'Digital Marketing Trends' or 'Financial Planning for Freelancers'?"
+      },
+      {
+        "speaker": "Marcus",
+        "text": "Definitely the Financial Planning one. Managing taxes and savings as a slashie is a nightmare. And just out of curiosity, how did you find out about the summit?"
+      },
+      {
+        "speaker": "Staff",
+        "text": "Well, we ran a few campaigns. Was it the radio?"
+      },
+      {
+        "speaker": "Marcus",
+        "text": "Actually, it was an Instagram Ad that popped up on my feed while I was looking at design inspiration."
+      },
+      {
+        "speaker": "Staff",
+        "text": "Social media works! Here is your badge, Marcus. Enjoy the summit."
+      },
+      {
+        "speaker": "Announcer",
+        "text": "(60-second pause to tidy up answers)"
+      },
+      {
+        "speaker": "Announcer",
+        "text": "Task 2. You will hear a keynote speech from Dr. Fiona Lam. Listen to the speech and complete the notes. You now have two minutes to study the task. (120-second pause)"
+      },
+      {
+        "speaker": "Fiona Lam",
+        "text": "Good morning. When we talk about the Hong Kong economy, we used to focus on the four pillars—finance, trade, tourism, and services. But there is a fifth pillar rising: the Slashie Economy. Today, our estimates show that nearly 250,000 individuals in this city identify as multi-career professionals. This isn't just about 'side-hustles' for extra pocket money. For many, it's a full-time commitment. Our research indicates that the average monthly income for a dedicated slashie is now roughly $22,500 HKD. While that might be slightly lower than a senior corporate role, the motivation isn't money. It's personal autonomy—the freedom to choose when, where, and for whom you work."
+      },
+      {
+        "speaker": "Fiona Lam",
+        "text": "However, it's not all rainbows and sunshine. When we surveyed our participants, the number one challenge wasn't a lack of sleep or social stigma from older generations. It was irregular income. The 'feast or famine' cycle is real. Despite this, we see explosive growth in specific sectors. Content creation—including YouTubers, podcasters, and digital illustrators—is currently the fastest growing industry for slashies. Demographic-wise, the most active group is the 25 to 34-year-olds. These are digital natives who value experience over job titles."
+      },
+      {
+        "speaker": "Fiona Lam",
+        "text": "To support this, the government is looking at policy reform. We are proposing a 'Portable Pension Fund' that follows the worker, not the employer. This would be categorized under a new tax code, S-2026, making it easier for freelancers to file their returns. There is also a new grant for those looking to upgrade their equipment. The application deadline is August 15, so don't miss out. We aim for a growth rate of 12% in this sector by 2030. For more details, go to our hub at www.ydc-slash.hk. We are proud to have FutureWork Solutions as our sponsor for this research. Thank you."
+      },
+      {
+        "speaker": "Announcer",
+        "text": "(60-second pause to tidy up answers)"
+      },
+      {
+        "speaker": "Announcer",
+        "text": "Task 3. Listen to the radio interview about the challenges and solutions for slashies. Complete the table. (120-second pause)"
+      },
+      {
+        "speaker": "Host",
+        "text": "Welcome to 'Money Matters'. Today we have Professor Li, a sociologist; Chloe, a full-time slashie; and Mr. Ng, an HR Director at a major bank. Professor, what's your take on the risks?"
+      },
+      {
+        "speaker": "Prof Li",
+        "text": "People worry about skills becoming outdated, but slashies are actually very good at upskilling. The real risk is the lack of a social safety net. If a slashie gets sick or injured, they have no paid leave, no medical insurance provided by a firm. This is what we need to address."
+      },
+      {
+        "speaker": "Chloe",
+        "text": "I agree, but the benefits outweigh the risks for me. I'm a yoga instructor / translator / copywriter. Some people think I do it for the work-life balance, but honestly, I work more hours now than I did in my 9-to-5! I do it for the variety of tasks. I never get bored."
+      },
+      {
+        "speaker": "Mr Ng",
+        "text": "From a corporate perspective, we can't ignore this. We are losing talent to the slashie life. Instead of banning side-hustles, we are starting to offer flexible contracts—hiring specialists for projects rather than full-time roles. It's a win-win."
+      },
+      {
+        "speaker": "Host",
+        "text": "And what about government support?"
+      },
+      {
+        "speaker": "Prof Li",
+        "text": "Well, the new pilot scheme is promising. It offers a co-working space subsidy where the government covers 40% of the rent for registered freelancers. It's currently being trialed in 6 Districts across the city."
+      },
+      {
+        "speaker": "Chloe",
+        "text": "The mentorship program is also great. They don't just talk about 'following your dreams'; the focus is on practical things like Tax Filing Compliance. That's what we really need help with."
+      },
+      {
+        "speaker": "Mr Ng",
+        "text": "We've also seen the rise of specific 'Slashie Insurance'. It has a coverage limit of $15,000 per incident for work-related accidents. The government provides support for the first 18 months of the policy to encourage take-up. If any listeners are feeling the pressure, there is a mental health support hotline at 2711 9988. They even have a trilingual training manual for those who want to learn how to manage their time better. I also recommend using the 'SlashTrack HK' app to log your hours. The next round of funding for these initiatives opens in January. Don't miss it."
+      },
+      {
+        "speaker": "Announcer",
+        "text": "(60-second pause to tidy up answers)"
+      },
+      {
+        "speaker": "Announcer",
+        "text": "Task 4. Listen to the stakeholder discussion on mortgages for slashies. (120-second pause)"
+      },
+      {
+        "speaker": "Bank Rep",
+        "text": "We are willing to offer 'Flexible Mortgages' to slashies. Our eligibility criteria would require at least 2 years of stable average income. We won't just look at one payslip; we need verified digital invoices and tax returns. Because the income is less predictable, there will be a +0.5% premium for risk compared to standard corporate employees."
+      },
+      {
+        "speaker": "Advocate",
+        "text": "A 0.5% risk premium? That's the main criticism we have. It's too high for beginners who are just starting to build their portfolio. And what about the down payment? It's already impossible in Hong Kong. We believe the down payment should be reduced for first-time buyers who are self-employed. The real solution is government-backed loan guarantees to lower the bank's risk."
+      },
+      {
+        "speaker": "Policy Maker",
+        "text": "We are listening. We have a phased rollout starting in Q3 2026. We believe stability shouldn't just be measured by a single employer, but by diverse income streams—if one client leaves, a slashie still has four others. That's actually quite stable. Our priority for 2026 is the digital verification system integration. We want banks to be able to see a slashie's tax data instantly. We've reached a consensus that we'll perform an audit every six months to check the system's fairness. We'll be hosting Community Town Halls to explain this, and our next big future task is reviewing self-employed MPF contributions."
+      },
+      {
+        "speaker": "Announcer",
+        "text": "That is the end of Part A. You now have five minutes to study the Part B Question-Answer Book and the Data File. (300-second pause)"
+      },
+      {
+        "speaker": "Announcer",
+        "text": "Integrated Skills Recording. You will now hear a briefing from the Director of the Youth Development Council (YDC), Ms. Elena Kwok, to her Project Manager. Listen carefully and take notes."
+      },
+      {
+        "speaker": "Elena Kwok",
+        "text": "Okay, team, we need to get these tasks for the Slashie Support Scheme finalized. The public is still a bit wary, especially after that 'HK Parents' social media group started complaining about the lack of job security for their kids."
+      },
+      {
+        "speaker": "Elena Kwok",
+        "text": "For Task 8, when you write that letter to Mrs. Cheng—the parent who emailed us—don't just use the brochure points about 'freedom'. Address the security issue head-on. Mention that we are introducing 'Mentorship Vouchers'. These aren't in the data file yet, but they allow slashies to get one-on-one sessions with senior industry veterans for free. This adds a layer of professional security that traditional jobs don't have."
+      },
+      {
+        "speaker": "Elena Kwok",
+        "text": "Now, for the internal memo in Task 9... our biggest issue is that the 'Micro-credentials' campaign is lagging. I want you to propose a 'Certification Blitz' in September. We'll offer free 48-hour certifications for digital skills. This will help slashies prove their worth to clients. Make sure to emphasize that this will close the budget gap in the 'Public Awareness' category."
+      },
+      {
+        "speaker": "Elena Kwok",
+        "text": "Lastly, for the public Instagram post in Task 10, keep it punchy. Use the slogan 'Freedom with a Safety Net'. We need to make sure they know that being a slashie doesn't mean being alone. Oh, and mention the 'Mental Health Stipend'—it's a new $2,000 yearly allowance for counseling or wellness apps that we just approved this morning. That's a huge selling point. Okay, get to work!"
+      },
+      {
+        "speaker": "Announcer",
+        "text": "That is the end of the Integrated Skills recording. You now have 1 hour and 10 minutes to complete your tasks. (4200-second pause)"
+      }
+    ]
+  },
+  "Part_B": {
+    "data_file": [
+      {
+        "id": "doc1",
+        "type": "minutes",
+        "title": "Minutes of the Slashie Support Scheme (SSS) Planning Meeting",
+        "content": "Date: May 12, 2026\nParticipants: Elena Kwok (YDC), Sam Tsang (Policy), Dr. Fiona Lam.\n\nKey Discussion:\n- Public perception is that 'Slashie' equals 'Unemployed'. We must change this.\n- SSS will launch in Q3 2026.\n- 'Portable MPF' is a priority to ensure long-term savings.\n- Action: Create a 'Safety Net' package including insurance and tax help."
+      },
+      {
+        "id": "doc2",
+        "type": "brochure",
+        "title": "Slashie Support Scheme 2026: Freedom with Stability",
+        "content": "Core Benefits:\n- $15,000 Insurance Coverage for work accidents.\n- 40% Co-working Space Subsidy in 6 pilot districts.\n- 'S-2026' Tax Code for simplified filing.\n- Government-backed mortgage guarantees for those with 2+ years of records."
+      },
+      {
+        "id": "doc3",
+        "type": "email",
+        "title": "Email from a Concerned Parent (Mrs. Cheng)",
+        "content": "To: YDC Feedback\nSubject: My son's future\n\nMy son wants to be a 'Slashie'. He says he will do photography and pet sitting. I am worried. What happens if he gets sick? What happens when he wants to buy a flat? This 'Slashie' thing seems like a recipe for poverty. The government should encourage stable 9-to-5 jobs instead."
+      },
+      {
+        "id": "doc4",
+        "type": "newspaper",
+        "title": "Editorial: The Gig Economy's Hidden Costs",
+        "content": "South China Morning Post - June 2, 2026\n\nWhile youth crave freedom, the 'Gig Economy' offers no pension, no medical, and no promotion ladder. The YDC's new scheme is a start, but without real 'Portability' of benefits, these young workers will face a crisis in thirty years."
+      },
+      {
+        "id": "doc5",
+        "type": "handwritten_note",
+        "title": "Note from Elena Kwok",
+        "content": "To PM: Please handle Task 8 (Mrs. Cheng) carefully. Parents are our biggest hurdle. Be sure to mention the 'Mental Health Stipend' (from the audio) to show we care about their well-being. Also, remind her about the Mortgage Guarantee from Doc 2."
+      },
+      {
+        "id": "doc6",
+        "type": "table",
+        "title": "Table 1: SSS Budget Allocation (2026)",
+        "content": "Category | Allocated | Spent | Status\n--------------------------------------------\nInsurance | $40M | $38M | On Track\nCo-working | $25M | $20M | On Track\nPublic Awareness | $15M | $5M | UNDERSPENT\nTraining | $20M | $18M | On Track\n\nNote: The 'Public Awareness' gap is leading to parents' misunderstandings."
+      },
+      {
+        "id": "doc7",
+        "type": "social_media_post",
+        "title": "Post on 'HK Parents Connect' (Viral)",
+        "content": "500 Shares: 'Don't let your kids become slashies! No MPF, no insurance, no future. The YDC scheme is just a fancy name for gig work! #SaveOurKids #StableJobsOnly'"
+      },
+      {
+        "id": "doc8",
+        "type": "memo",
+        "title": "Internal Memo: Insurance Pilot Details",
+        "content": "To all staff: The 'Slashie Insurance' pilot covers outpatient care and equipment theft (up to $5,000). This is in addition to the $15,000 accident cover. We need to broadcast this to the public."
+      },
+      {
+        "id": "doc9",
+        "type": "news_clip",
+        "title": "Tech News: Bank of HK's Flexible Mortgage",
+        "content": "Bank of HK has announced they will accept the new 'S-2026' tax filings as valid proof of income for home loans. This removes a major barrier for the self-employed."
+      },
+      {
+        "id": "doc10",
+        "type": "policy_draft",
+        "title": "Draft: The Portability Act 2026",
+        "content": "Section 1.1: All MPF contributions from multiple 'gigs' can now be consolidated into a single 'Global Portfolio'. Section 1.2: Employers of part-time staff must contribute 5% to this portfolio if the worker provides more than 15 hours of service per month."
+      }
+    ],
+    "Part_B1": {
+      "tasks": [
+        {
+          "id": "Task_5",
+          "type": "Formal Email",
+          "instructions": "Write an email to a potential co-working space partner. Explain the 40% subsidy and the goals of the SSS. Refer to Doc 2 and Doc 6.",
+          "wordCount": 120,
+          "grading_rubric": {
+            "content_points": [
+              "Explain the 40% co-working space subsidy (Doc 2)",
+              "Mention the goal of the Slashie Support Scheme (Doc 1)",
+              "Note the budget allocation for co-working ($25M) (Doc 6)",
+              "Identify the 6 pilot districts for the trial (Task 3 / Doc 2)"
+            ],
+            "tone": "Professional"
+          }
+        },
+        {
+          "id": "Task_6",
+          "type": "Short Notice",
+          "instructions": "Draft a notice for the YDC website about the 'S-2026' Tax Code and simplified filing. Refer to Doc 2 and Doc 9.",
+          "wordCount": 100,
+          "grading_rubric": {
+            "content_points": [
+              "Announce the S-2026 Tax Code for freelancers (Doc 2)",
+              "Explain that it simplifies filing (Doc 2)",
+              "Mention that Bank of HK accepts this for mortgages (Doc 9)"
+            ],
+            "tone": "Informative"
+          }
+        },
+        {
+          "id": "Task_7",
+          "type": "Internal Briefing Note",
+          "instructions": "Summarize the current insurance coverage for slashies for our customer service team. Refer to Doc 2 and Doc 8.",
+          "wordCount": 120,
+          "grading_rubric": {
+            "content_points": [
+              "$15,000 coverage for work accidents (Doc 2)",
+              "Outpatient care coverage (Doc 8)",
+              "Equipment theft coverage up to $5,000 (Doc 8)",
+              "Insurance budget status is on track (Doc 6)"
+            ],
+            "tone": "Clear and Direct"
+          }
+        }
+      ]
+    },
+    "Part_B2": {
+      "tasks": [
+        {
+          "id": "Task_8",
+          "type": "Formal Letter",
+          "instructions": "Write a letter to Mrs. Cheng (Doc 3) to address her concerns about her son's future as a slashie. Use information from Docs 1, 2, 9, 10 and the audio briefing.",
+          "wordCount": 250,
+          "grading_rubric": {
+            "content_points": [
+              "Acknowledge parent concerns about stability (Doc 3)",
+              "Explain the 'Portability Act' and consolidated MPF (Doc 10)",
+              "Mention Bank of HK's flexible mortgages (Doc 9)",
+              "MUST MENTION: Free Mentorship Vouchers for industry sessions (Audio)",
+              "MUST MENTION: $2,000 Mental Health Stipend for wellness (Audio)",
+              "Insurance for accidents and equipment (Doc 2, 8)"
+            ],
+            "tone": "Empathetic and Persuasive"
+          }
+        },
+        {
+          "id": "Task_9",
+          "type": "Internal Memo",
+          "instructions": "Write a memo to the YDC staff regarding the 'Publicity Gap' and the new training initiatives. Refer to Doc 6 and the audio briefing.",
+          "wordCount": 180,
+          "grading_rubric": {
+            "content_points": [
+              "Publicity spending is only at $5M vs $15M budget (Doc 6)",
+              "Address the 'unemployed' social stigma (Doc 1, 7)",
+              "MUST PROPOSE: 'Certification Blitz' in September for digital skills (Audio)",
+              "Explain how 48-hour certifications help slashies prove worth (Audio)"
+            ],
+            "tone": "Professional and Urgent"
+          }
+        },
+        {
+          "id": "Task_10",
+          "type": "Public Instagram Post",
+          "instructions": "Draft an Instagram post for the YDC account to attract new slashies to the scheme. Use the slogans and points from the audio and data files.",
+          "wordCount": 100,
+          "grading_rubric": {
+            "content_points": [
+              "Use slogan: 'Freedom with a Safety Net' (Audio)",
+              "Mention the $2,000 Mental Health Stipend (Audio)",
+              "Highlight the 40% co-working subsidy (Doc 2)",
+              "Refer to simplified S-2026 tax filing (Doc 2)",
+              "Friendly/Youth-oriented tone"
+            ],
+            "tone": "Engaging and Supportive"
+          }
+        }
+      ]
+    }
+  }
+}

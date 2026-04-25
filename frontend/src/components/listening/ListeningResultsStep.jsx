@@ -48,59 +48,38 @@ const ListeningResultsStep = ({ results, audioSrc, mode, level, marginalXP, prev
     const isCapped = isB1 && levelRank[dseGrade] > 4;
     const dseLevel = isCapped ? "4" : dseGrade;
 
-    const playReference = async (text, id) => {
+    const playReference = (text, id) => {
         if (!text) return;
         
         console.log(`[ResultsStep] Snippet playback requested for ID: ${id}`);
         
         // Stop any current playback
+        if (window.speechSynthesis) window.speechSynthesis.cancel();
         if (audioRef.current) {
             audioRef.current.pause();
             audioRef.current = null;
         }
 
-        setLoadingSegment(id);
-        setPlayingSegment(null);
+        setLoadingSegment(null);
+        setPlayingSegment(id);
 
         try {
-            const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
-            const res = await fetch(`${API_URL}/api/lab/tts`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    text: text,
-                    accent: 'UK',
-                    gender: 'FEMALE'
-                })
-            });
-
-            if (!res.ok) throw new Error("TTS generation failed");
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = 'en-GB';
+            utterance.rate = 1.0;
             
-            const data = await res.json();
-            if (data.audio) {
-                const audioBase64 = `data:audio/mp3;base64,${data.audio}`;
-                const audio = new Audio(audioBase64);
-                audioRef.current = audio;
-                
-                audio.onplay = () => {
-                    setLoadingSegment(null);
-                    setPlayingSegment(id);
-                };
+            utterance.onend = () => {
+                setPlayingSegment(null);
+            };
 
-                audio.onended = () => {
-                    setPlayingSegment(null);
-                };
+            utterance.onerror = (e) => {
+                console.error("Browser TTS Error:", e);
+                setPlayingSegment(null);
+            };
 
-                audio.onerror = () => {
-                    setLoadingSegment(null);
-                    setPlayingSegment(null);
-                };
-
-                audio.play();
-            }
+            window.speechSynthesis.speak(utterance);
         } catch (err) {
             console.error("[ResultsStep] Snippet Playback Error:", err);
-            setLoadingSegment(null);
             setPlayingSegment(null);
         }
     };

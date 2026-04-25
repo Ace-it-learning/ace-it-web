@@ -28,6 +28,15 @@ import MockCountdownTimer from '../../components/utils/MockCountdownTimer';
 import DataFileViewer from '../../components/listening/DataFileViewer';
 import Paper3AudioEngine from '../../components/listening/Paper3AudioEngine';
 
+const SMART_CITY_GOLDEN_ANSWERS = {
+    Task_5: `Subject: Response to Your Concerns Regarding Smart Lampposts in Kowloon East\n\nDear Mr. Wong,\n\nThank you for contacting the IT Bureau. We value your feedback regarding the smart lampposts in your neighborhood.\n\nI would like to reassure you that your privacy is our top priority. All data collected by the 5G Sensor Array is fully anonymized and, as mandated by our strict policy, is never sold to third parties or advertisers. To further ensure your digital safety, we have partnered with CyberGuard HK to provide free antivirus and anti-phishing software to all participating households.\n\nThe Smart Mobility initiative aims to reduce urban stress for all residents. Our data shows that this system has already saved commuters in Kowloon East approximately 20 minutes per day by optimizing traffic flow.\n\nWe hope this clarifies our position. Please feel free to reach out if you have further questions.\n\nYours sincerely,\n\nProject Assistant, IT Bureau`,
+    Task_6: `[NOTICE] New AI Field Trainers Program\n\nBridging the digital divide is a core mission of the Smart City 2026 initiative. We are excited to announce the launch of our 'AI Field Trainers' program, creating 200 new roles dedicated to supporting our senior community.\n\nThese trainers will be deployed directly to elderly centers across the district. Their primary goal is to provide hands-on digital literacy training, helping you navigate new technologies with confidence. We encourage all seniors to participate and enjoy the benefits of a connected city.\n\nDon't let the technology gap hold you back—join us in building a smarter, more inclusive Hong Kong.`,
+    Task_7: `Smart City 2026: Budget and Rollout Update\n\nThe Government has allocated a total investment of $2.5 Billion HKD to transform Hong Kong into a world-class smart city. As we move towards our target rollout in Q4 2026, we are closely monitoring our progress.\n\nRecent audits show that while our hardware and staffing goals are on track, there is currently a 'Critical Gap' in our publicity spending. We recognize that this has led to some public skepticism, and we are committed to increasing our transparency and outreach efforts in the coming months. \n\nOur goal remains 'Innovation for All,' ensuring that our smart infrastructure benefits every citizen through improved mobility and efficiency.`,
+    Task_8: `Dear Union Leader,\n\nI am writing to you regarding the 'HK Workers Union' concerns about our upcoming AI Policy. At the IT Bureau, we firmly believe in 'Innovation for All,' and we want to reassure you that our goal is not to replace workers, but to empower them.\n\nWe understand the fear of job displacement. However, our strategy focuses on job creation. We are currently recruiting 200 'AI Field Trainers' to support our digital inclusion efforts. Furthermore, our recruitment policy specifically emphasizes hiring individuals with strong 'soft skills' and 'community empathy'—human qualities that AI cannot replicate. These roles will be critical in bridging the gap between technology and the public.\n\nTo ensure ethical implementation, the AI Ethics Committee will provide rigorous oversight of all rollouts. We are committed to a future where technology enhances efficiency without compromising worker security.\n\nYours sincerely,\n\nProject Manager, IT Bureau`,
+    Task_9: `Internal Memo: Budget Status and Publicity Strategy\n\nTo: All IT Bureau Staff\nSubject: Q1 Budget Update and 'Social Media Week' Proposal\n\nA recent review of our Q1 2026 spending shows that while our hardware initiatives are slightly over-budget ($550M vs $500M), there is a 'Critical Gap' in our publicity allocation, with only $40M of the $100M budget spent. This lack of communication has contributed to recent public skepticism.\n\nTo address this, we will launch a 'Social Media Week' in July. This initiative will involve local influencers to build trust and explain our 'Human-First AI' vision. It is vital that we communicate that all data is anonymized and never sold.\n\nWe must act with urgency to bridge this publicity gap before the Q4 rollout.`,
+    Task_10: `🚀 Hong Kong is moving faster with #SmartMobility! \n\nDid you know our smart lampposts are already saving commuters in Kowloon East 20 minutes a day? 🕒\n\nWe hear your privacy concerns. That’s why we use **Military Grade** anonymization to keep your data safe, and all info stays right here in HK! 🛡️ Plus, we’ve teamed up with CyberGuard HK to give you FREE security software!\n\nJoin our **Human-First AI** revolution. Because technology should work for you, not the other way around. 🇭🇰💡\n\n#InnovationForAll #SmartCityHK #HumanFirstAI`
+};
+
 const ListeningMockStudio = () => {
     const { user } = useAuth();
     const { paperId } = useParams();
@@ -52,6 +61,7 @@ const ListeningMockStudio = () => {
     const [broadcastStatus, setBroadcastStatus] = useState({ isPlaying: false, isEngineBuffering: false, pauseCountdown: null });
     const [audioIndex, setAudioIndex] = useState(0);
     const [showQuitModal, setShowQuitModal] = useState(false);
+    const [isBroadcastComplete, setIsBroadcastComplete] = useState(false);
     const [independentTimeLeft, setIndependentTimeLeft] = useState(75 * 60);
     
     const rightPanelRef = useRef(null);
@@ -77,6 +87,7 @@ const ListeningMockStudio = () => {
                 setSelectedSection(data.selectedSection);
                 setAudioIndex(data.audioIndex || 0);
                 setBroadcastTimer(data.broadcastTimer);
+                setIsBroadcastComplete(data.isBroadcastComplete || false);
                 if (data.independentTimeLeft) setIndependentTimeLeft(data.independentTimeLeft);
             } catch (e) { console.error("Session recovery failed", e); }
         }
@@ -92,6 +103,7 @@ const ListeningMockStudio = () => {
                 selectedSection,
                 audioIndex,
                 broadcastTimer,
+                isBroadcastComplete,
                 independentTimeLeft
             };
             localStorage.setItem(`ace-it-listening-${paperId}`, JSON.stringify(state));
@@ -100,24 +112,24 @@ const ListeningMockStudio = () => {
             localStorage.setItem(`last_mock_inprogress_listening`, JSON.stringify({
                 paperId,
                 type: 'listening',
-                topic: mockData.name,
+                topic: mockData.meta?.title || 'Listening Mock',
                 timestamp: Date.now()
             }));
         }
     }, [paperId, mockData, userAnswers, drafts, phase, selectedSection, audioIndex, broadcastTimer, independentTimeLeft]);
 
-    // Sync phase with URL
+    // Sync phase with URL (Source of Truth)
     useEffect(() => {
         const urlPhase = searchParams.get('phase');
         if (urlPhase && urlPhase !== phase) {
+            console.log(`[ListeningMock] Syncing phase from URL: ${urlPhase}`);
             setPhase(urlPhase);
         }
-    }, [searchParams, phase]);
+    }, [searchParams]); // Only depend on searchParams to avoid revert-loop with local state updates
 
-    // Independent Writing Timer
     useEffect(() => {
         let timer;
-        if (phase === 'INDEPENDENT' && independentTimeLeft > 0) {
+        if (phase === 'INDEPENDENT' && isBroadcastComplete && independentTimeLeft > 0) {
             timer = setInterval(() => {
                 setIndependentTimeLeft(prev => {
                     const next = prev - 1;
@@ -127,15 +139,19 @@ const ListeningMockStudio = () => {
             }, 1000);
         }
         return () => clearInterval(timer);
-    }, [phase, independentTimeLeft]);
+    }, [phase, isBroadcastComplete, independentTimeLeft]);
 
     const updatePhase = (newPhase) => {
+        console.log(`[ListeningMock] Phase Transition: ${phase} -> ${newPhase}`);
         setPhase(newPhase);
-        setSearchParams({ phase: newPhase });
+        setSearchParams(params => {
+            params.set('phase', newPhase);
+            return params;
+        }, { replace: true });
         
         // Enforce section visibility based on phase
         if (newPhase === 'PART_A') setCurrentSection('A');
-        if (newPhase === 'PART_B_AUDIO') setCurrentSection('B');
+        if (newPhase === 'PART_B_AUDIO' || newPhase === 'INDEPENDENT') setCurrentSection('B');
     };
 
     const handleAudioComplete = () => {
@@ -145,6 +161,10 @@ const ListeningMockStudio = () => {
         } else if (phase === 'PART_B_AUDIO') {
             // Part B audio finished, enter the 75-minute independent writing phase
             updatePhase('B1B2_GATE');
+        } else if (phase === 'INDEPENDENT') {
+            // Broadcast completely finished after the briefing
+            console.log("[ListeningMock] Broadcast Complete. Starting Independent Timer.");
+            setIsBroadcastComplete(true);
         }
     };
 
@@ -203,6 +223,7 @@ const ListeningMockStudio = () => {
 
     // Handle B1/B2 Switching with Warning
     const handleSwitchSection = (newSection) => {
+        console.log(`[ListeningMock] Section Selection: ${newSection}`);
         if (phase === 'INDEPENDENT' && selectedSection && selectedSection !== newSection) {
             if (window.confirm(`Switching to ${newSection} will erase your current writing for Tasks ${selectedSection === 'B1' ? '5-7' : '8-10'}. Continue?`)) {
                 setSelectedSection(newSection);
@@ -217,7 +238,11 @@ const ListeningMockStudio = () => {
             if (phase === 'B1B2_GATE') {
                 setCurrentSection('B'); // Force redirect to Part B tasks
                 updatePhase('INDEPENDENT');
-                audioEngineRef.current?.resumeAfterSelection();
+                
+                // Use a slight delay to ensure state has propagated before resuming audio
+                setTimeout(() => {
+                    audioEngineRef.current?.resumeAfterSelection();
+                }, 100);
             }
         }
     };
@@ -233,7 +258,33 @@ const ListeningMockStudio = () => {
                 el.scrollIntoView({ behavior: 'smooth', block: 'center' });
             }
         }
-    }, [activeTaskNumber, isIndependent, phase, currentSection]);
+    }, [activeTaskNumber, isIndependent, phase, currentSection, isTidying, !!broadcastStatus.pauseCountdown]);
+
+    const handleSaveAndQuit = () => {
+        try {
+            window.speechSynthesis.cancel();
+        } catch (err) {}
+
+        try {
+            if (paperId && mockData) {
+                const state = {
+                    userAnswers,
+                    drafts,
+                    phase,
+                    selectedSection,
+                    audioIndex,
+                    broadcastTimer,
+                    independentTimeLeft
+                };
+                localStorage.setItem(`ace-it-listening-${paperId}`, JSON.stringify(state));
+            }
+        } catch (err) {
+            console.warn("Save state failed:", err);
+        }
+        
+        // Use direct location change for maximum reliability on exit
+        window.location.href = '/mock-exam-eng';
+    };
 
     const handleSubmit = async () => {
         if (!window.confirm("Are you sure you want to submit your paper? This will end your examination session.")) return;
@@ -407,38 +458,76 @@ const ListeningMockStudio = () => {
                                 <button className="w-10 h-10 flex items-center justify-center bg-amber-50 hover:bg-amber-100 text-amber-600 rounded-xl border border-amber-200 transition-all shadow-sm">
                                     <Zap size={16} fill="currentColor" />
                                 </button>
-                                <div className="absolute top-full right-0 mt-2 w-48 bg-white rounded-2xl shadow-2xl border border-slate-100 p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-[60]">
+                                <div className="absolute top-full right-0 mt-2 w-56 bg-white rounded-2xl shadow-2xl border border-slate-100 p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-[60]">
+                                    <div className="px-3 py-2 border-b border-slate-50 mb-1">
+                                        <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Cheat Console</p>
+                                    </div>
+                                    
+                                    {/* Option A + B1 */}
                                     <button 
                                         onClick={() => {
                                             const answers = {};
                                             mockData?.Part_A?.tasks.forEach(t => t.questions.forEach(q => answers[q.id] = q.answer));
                                             setUserAnswers(answers);
+                                            
                                             const bDrafts = {};
                                             if (mockData?.Part_B) {
-                                                const tasks = selectedSection === 'B1' ? mockData.Part_B.Part_B1?.tasks : mockData.Part_B.Part_B2?.tasks;
-                                                tasks?.forEach(t => bDrafts[t.id] = "Level 5** Perfect response using all Data File points...");
+                                                const b1Tasks = ['Task_5', 'Task_6', 'Task_7'];
+                                                b1Tasks.forEach(tid => {
+                                                    bDrafts[tid] = SMART_CITY_GOLDEN_ANSWERS[tid] || "Level 5** Perfect response using all Data File points...";
+                                                });
+                                                setSelectedSection('B1');
                                             }
                                             setDrafts(bDrafts);
                                         }}
                                         className="w-full text-left p-3 hover:bg-indigo-50 rounded-xl flex items-center gap-3 group transition-all"
                                     >
-                                        <div className="w-8 h-8 bg-indigo-100 text-indigo-600 rounded-lg flex items-center justify-center font-black">5*</div>
+                                        <div className="w-8 h-8 bg-indigo-100 text-indigo-600 rounded-lg flex items-center justify-center font-black text-xs">B1</div>
                                         <div>
-                                            <p className="text-[10px] font-black text-slate-900">Auto-fill 5**</p>
-                                            <p className="text-[8px] text-slate-400">All points included</p>
+                                            <p className="text-[10px] font-black text-slate-900">Fill A + B1 (5**)</p>
+                                            <p className="text-[8px] text-slate-400">Tasks 1-7 complete</p>
                                         </div>
                                     </button>
+
+                                    {/* Option A + B2 */}
+                                    <button 
+                                        onClick={() => {
+                                            const answers = {};
+                                            mockData?.Part_A?.tasks.forEach(t => t.questions.forEach(q => answers[q.id] = q.answer));
+                                            setUserAnswers(answers);
+                                            
+                                            const bDrafts = {};
+                                            if (mockData?.Part_B) {
+                                                const b2Tasks = ['Task_8', 'Task_9', 'Task_10'];
+                                                b2Tasks.forEach(tid => {
+                                                    bDrafts[tid] = SMART_CITY_GOLDEN_ANSWERS[tid] || "Level 5** Perfect response using all Data File points...";
+                                                });
+                                                setSelectedSection('B2');
+                                            }
+                                            setDrafts(bDrafts);
+                                        }}
+                                        className="w-full text-left p-3 hover:bg-rose-50 rounded-xl flex items-center gap-3 group transition-all"
+                                    >
+                                        <div className="w-8 h-8 bg-rose-100 text-rose-600 rounded-lg flex items-center justify-center font-black text-xs">B2</div>
+                                        <div>
+                                            <p className="text-[10px] font-black text-slate-900">Fill A + B2 (5**)</p>
+                                            <p className="text-[8px] text-slate-400">Tasks 1-4 & 8-10 complete</p>
+                                        </div>
+                                    </button>
+
+                                    <div className="h-[1px] bg-slate-50 my-1" />
+
                                     <button 
                                         onClick={() => {
                                             const answers = {};
                                             mockData?.Part_A?.tasks.forEach(t => t.questions.forEach((q, idx) => answers[q.id] = idx % 2 === 0 ? q.answer : 'Wrong answer'));
                                             setUserAnswers(answers);
                                         }}
-                                        className="w-full text-left p-3 hover:bg-rose-50 rounded-xl flex items-center gap-3 group transition-all"
+                                        className="w-full text-left p-3 hover:bg-slate-50 rounded-xl flex items-center gap-3 group transition-all opacity-50"
                                     >
-                                        <div className="w-8 h-8 bg-rose-100 text-rose-600 rounded-lg flex items-center justify-center font-black">L2</div>
+                                        <div className="w-8 h-8 bg-slate-100 text-slate-600 rounded-lg flex items-center justify-center font-black">L2</div>
                                         <div>
-                                            <p className="text-[10px] font-black text-slate-900">Auto-fill Level 2</p>
+                                            <p className="text-[10px] font-black text-slate-900">Level 2 (Part A Only)</p>
                                             <p className="text-[8px] text-slate-400">50% error rate</p>
                                         </div>
                                     </button>
@@ -492,9 +581,15 @@ const ListeningMockStudio = () => {
                                 onTidyingStart={(secs, taskNum) => { 
                                     setIsTidying(true); 
                                     setTidyingTime(secs); 
-                                    if (taskNum) setTidyingTask(taskNum);
+                                    if (taskNum) {
+                                        setTidyingTask(taskNum);
+                                        setActiveTaskNumber(taskNum);
+                                    }
                                 }}
                                 onTidyingEnd={() => setIsTidying(false)}
+                                onStudyStart={(secs, taskNum) => {
+                                    if (taskNum) setActiveTaskNumber(taskNum);
+                                }}
                                 onPhaseChange={updatePhase}
                                 onRequireSelection={() => updatePhase('B1B2_GATE')}
                                 onCountdownTick={setBroadcastTimer}
@@ -534,11 +629,11 @@ const ListeningMockStudio = () => {
                                     <div className="flex items-center gap-3">
                                         <Clock size={14} className="text-indigo-400" />
                                         <span className="text-[11px] font-black tabular-nums tracking-wider text-indigo-100">
-                                            {phase === 'INDEPENDENT' 
+                                            {isBroadcastComplete && phase === 'INDEPENDENT' 
                                                 ? `${Math.floor(independentTimeLeft / 60)}:${(independentTimeLeft % 60).toString().padStart(2, '0')}`
                                                 : (broadcastTimer !== null ? `${Math.floor(broadcastTimer / 60)}:${(broadcastTimer % 60).toString().padStart(2, '0')}` : '--:--')}
                                         </span>
-                                        {phase === 'INDEPENDENT' && <span className="text-[9px] font-black text-slate-500 uppercase tracking-widest ml-2">Session Remaining</span>}
+                                        {isBroadcastComplete && phase === 'INDEPENDENT' && <span className="text-[9px] font-black text-slate-500 uppercase tracking-widest ml-2">Session Remaining</span>}
                                     </div>
                                 </div>
                                 <div className="flex items-center gap-4">
@@ -586,7 +681,7 @@ const ListeningMockStudio = () => {
                                                             <Edit3 size={18} />
                                                             <div className="flex-1">
                                                                 <p className="text-[8px] font-black uppercase tracking-widest opacity-80">Tidying Mode Activated</p>
-                                                                <p className="text-[11px] font-bold">You have <span className="text-amber-300 font-black">{tidyingTime}s</span> to check your answers for <span className="underline decoration-2">Task {tidyingTask}</span></p>
+                                                                <p className="text-[11px] font-bold">You have <span className="text-amber-300 font-black">{broadcastTimer || tidyingTime}s</span> to check your answers for <span className="underline decoration-2">Task {tidyingTask}</span></p>
                                                             </div>
                                                         </motion.div>
                                                     )}
@@ -759,7 +854,8 @@ const ListeningMockStudio = () => {
                                 initial={{ opacity: 0, scale: 0.9, y: 20 }}
                                 animate={{ opacity: 1, scale: 1, y: 0 }}
                                 exit={{ opacity: 0, scale: 0.9, y: 20 }}
-                                className="bg-white w-full max-w-md p-10 rounded-[3rem] shadow-2xl relative text-center"
+                                onClick={(e) => e.stopPropagation()}
+                                className="bg-white w-full max-w-md p-10 rounded-[3rem] shadow-2xl relative z-[210] text-center"
                             >
                                 <div className="size-16 bg-amber-50 text-amber-500 rounded-2xl flex items-center justify-center mx-auto mb-8 shadow-sm">
                                     <Clock size={32} />
@@ -770,16 +866,18 @@ const ListeningMockStudio = () => {
                                 </p>
                                 <div className="space-y-3">
                                     <button 
-                                        onClick={() => navigate('/mock-exam-eng')}
-                                        className="w-full py-5 bg-slate-900 text-white rounded-2xl font-black uppercase text-xs tracking-widest hover:bg-black transition-all shadow-xl shadow-slate-900/10 active:scale-95"
-                                    >
-                                        Save & Quit
-                                    </button>
-                                    <button 
+                                        type="button"
                                         onClick={() => setShowQuitModal(false)}
-                                        className="w-full py-5 bg-slate-50 text-slate-400 rounded-2xl font-black uppercase text-xs tracking-widest hover:bg-slate-100 transition-all active:scale-95"
+                                        className="w-full py-5 bg-slate-50 text-slate-400 rounded-2xl font-black uppercase text-xs tracking-widest hover:bg-slate-100 transition-all active:scale-95 cursor-pointer"
                                     >
                                         Keep Working
+                                    </button>
+                                    <button 
+                                        type="button"
+                                        onClick={handleSaveAndQuit}
+                                        className="w-full py-5 bg-slate-900 text-white rounded-2xl font-black uppercase text-xs tracking-widest hover:bg-black transition-all shadow-xl shadow-slate-900/10 active:scale-95 cursor-pointer relative z-[220]"
+                                    >
+                                        Save & Quit
                                     </button>
                                 </div>
                             </motion.div>

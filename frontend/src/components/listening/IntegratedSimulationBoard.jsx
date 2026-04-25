@@ -129,34 +129,30 @@ const IntegratedSimulationBoard = ({ questData, level, onComplete }) => {
         return "2";
     };
 
-    // TTS Logic
-    const handlePlayAudio = async () => {
+    // TTS Logic (Forced Browser TTS)
+    const handlePlayAudio = () => {
         setHasStarted(true); // START TIMER
         setIsPlaying(true);
         try {
-            const res = await fetch(`${import.meta.env.VITE_API_URL || 'http://localhost:3001'}/api/lab/tts`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    text: integratedData.audio_transcript || questData.audio_transcript || questData.listeningTranscript || "Starting Part B planning meeting audio briefing.",
-                    accent: 'UK',
-                    gender: 'FEMALE'
-                })
-            });
-            const data = await res.json();
-            if (data.audio) {
-                const audioBase64 = `data:audio/mp3;base64,${data.audio}`;
-                setCurrentAudioSrc(audioBase64);
-                const audio = new Audio(audioBase64);
-                audioRef.current = audio;
-                audio.play();
-                audio.onended = () => {
-                    setIsPlaying(false);
-                    audioRef.current = null;
-                };
-            } else {
-                throw new Error("TTS generation failed");
-            }
+            const text = integratedData.audio_transcript || questData.audio_transcript || questData.listeningTranscript || "Starting Part B planning meeting audio briefing.";
+            
+            // Cleanup current
+            if (window.speechSynthesis) window.speechSynthesis.cancel();
+            
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = 'en-GB';
+            utterance.rate = 1.0;
+            
+            utterance.onend = () => {
+                setIsPlaying(false);
+            };
+
+            utterance.onerror = (e) => {
+                console.error("Browser TTS Error:", e);
+                setIsPlaying(false);
+            };
+
+            window.speechSynthesis.speak(utterance);
         } catch (e) {
             console.error("Audio Playback Error:", e);
             setIsPlaying(false);
@@ -187,29 +183,8 @@ const IntegratedSimulationBoard = ({ questData, level, onComplete }) => {
     const handleSubmit = async () => {
         setIsSubmitting(true);
         try {
-            // Ensure audio is available even if student didn't click "Play"
-            let finalAudioSrc = currentAudioSrc;
-            if (!finalAudioSrc) {
-                console.log("[IntegratedBoard] Pre-fetching audio for results page...");
-                try {
-                    const ttsRes = await fetch(`${import.meta.env.VITE_API_URL || 'http://localhost:3001'}/api/lab/tts`, {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({
-                            text: questData?.integrated_data?.audio_transcript || "Starting Part B planning meeting audio briefing.",
-                            accent: 'UK',
-                            gender: 'FEMALE'
-                        })
-                    });
-                    const ttsData = await ttsRes.json();
-                    if (ttsData.audio) {
-                        finalAudioSrc = `data:audio/mp3;base64,${ttsData.audio}`;
-                        setCurrentAudioSrc(finalAudioSrc);
-                    }
-                } catch (e) {
-                    console.error("Failed to pre-fetch audio", e);
-                }
-            }
+            // [COST HARDENED] Pre-fetching backend audio removed as it is now redundant with Browser TTS
+            let finalAudioSrc = currentAudioSrc || "browser_tts";
 
             const res = await fetch(`${import.meta.env.VITE_API_URL || 'http://localhost:3001'}/api/lab/evaluate_integrated`, {
                 method: 'POST',

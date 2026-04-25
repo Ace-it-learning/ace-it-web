@@ -81,30 +81,15 @@ const SpeakingDeliveryPage = () => {
     const wavesurferRecorder = useRef(null);
     const audioRef = useRef(null);
 
-    // Audio Playback for Spotlight
-    const handlePlayWord = async (word) => {
+    // Audio Playback for Spotlight (Forced Browser TTS)
+    const handlePlayWord = (word) => {
         try {
-            const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
-            const res = await fetch(`${API_URL}/api/lab/tts`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    text: word,
-                    languageCode: 'en-GB',
-                    gender: 'FEMALE'
-                })
-            });
-
-            if (!res.ok) throw new Error('TTS failed');
-            const { audio } = await res.json();
-            const audioUrl = `data:audio/mp3;base64,${audio}`;
-            const audioObj = new Audio(audioUrl);
-            audioObj.play();
-        } catch (err) {
-            console.error('Word playback error:', err);
+            window.speechSynthesis.cancel();
             const utterance = new SpeechSynthesisUtterance(word);
             utterance.lang = 'en-GB';
             window.speechSynthesis.speak(utterance);
+        } catch (err) {
+            console.error('Word playback error:', err);
         }
     };
 
@@ -176,109 +161,111 @@ const SpeakingDeliveryPage = () => {
     // 2. Play Master Audio with Word Highlighting
     const [activeWordIndex, setActiveWordIndex] = useState(-1);
 
-    const playMasterAudio = async () => {
+    const playMasterAudio = () => {
         stopAllAudio();
-        setIsMasterLoading(true);
+        setIsPlayingMaster(true);
 
         try {
-            const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
-            const res = await fetch(`${API_URL}/api/lab/tts`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    text: currentSegment.master_script,
-                    languageCode: 'en-GB',
-                    includeTimepoints: true 
-                })
+            const rawText = currentSegment.master_script || "";
+            const utter = new SpeechSynthesisUtterance(rawText);
+            
+            // Persistent reference to prevent GC (Garbage Collection) freeze
+            window._currentUtterance = utter;
+            
+            const voices = window.speechSynthesis.getVoices();
+            const preferredVoice = voices.find(v => v.lang.includes('en-GB') && v.name.includes('Google')) || 
+                                   voices.find(v => v.lang.includes('en-GB')) || 
+                                   voices.find(v => v.lang.includes('en-US'));
+            if (preferredVoice) utter.voice = preferredVoice;
+            
+            utter.lang = 'en-GB';
+            utter.rate = 0.9; 
+            utter.pitch = 1.0;
+
+            const tokens = rawText.split(/(\s+)/).filter(t => t !== "");
+            const wordIndices = []; 
+            let charCursor = 0;
+            tokens.forEach(token => {
+                if (!/^\s+$/.test(token)) wordIndices.push(charCursor);
+                charCursor += token.length;
             });
 
-            if (!res.ok) throw new Error('Offline');
+            // TRACKING STATE
+            let lastEventWordIdx = -1;
+            let tickerWordIdx = 0;
 
-            const { audio, timepoints } = await res.json();
-            if (!audio) throw new Error('No audio data received');
-
-            const audioUrl = `data:audio/mp3;base64,${audio}`;
-            const audioObj = new Audio(audioUrl);
-            audioRef.current = audioObj;
-
-            // TRACK 1: Server-Side Sync with Word Highlighting
-            const words = (currentSegment.master_script || "").trim().split(/\s+/);
-            const wordCount = words.length;
-
-            audioObj.ontimeupdate = () => {
-                const currentTime = audioObj.currentTime;
-                if (timepoints && timepoints.length > 0) {
-                    const currentTimeMs = currentTime * 1000;
-                    let newWordIndex = -1;
-
-                    for (let i = 0; i < timepoints.length; i++) {
-                        const tp = timepoints[i];
-                        const timepointTime = (tp.timeSeconds || tp.time_seconds || tp.time || 0) * 1000;
-                        if (timepointTime <= currentTimeMs) {
-                            const markLabel = tp.markName || tp.name || tp.mark_name || tp.label;
-                            if (markLabel && markLabel.startsWith('w')) {
-                                const wordIdx = parseInt(markLabel.substring(1), 10);
-                                if (!isNaN(wordIdx)) newWordIndex = wordIdx;
-                            }
-                        } else break;
-                    }
-
-                    if (newWordIndex !== -1) setActiveWordIndex(newWordIndex);
-                } else {
-                    const duration = audioObj.duration;
-                    if (duration > 0) {
-                        const progress = currentTime / duration;
-                        const estimatedWordIdx = Math.floor(progress * wordCount);
-                        if (estimatedWordIdx < wordCount) setActiveWordIndex(estimatedWordIdx);
-                    }
+            const updateHighlight = (idx) => {
+                if (idx >= 0 && idx < wordIndices.length) {
+                    setActiveWordIndex(idx);
                 }
             };
 
-            audioObj.onended = () => {
-                setIsPlayingMaster(false);
-                setActiveWordIndex(-1);
+            // SYNC EVENTS
+            utter.onstart = () => {
+                setIsPlayingMaster(true);
+                updateHighlight(0);
             };
 
-            setIsMasterLoading(false);
-            setIsPlayingMaster(true);
-            audioObj.play();
-
-        } catch (err) {
-            console.warn('[SpeakingQuest] Falling back to Browser TTS');
-            setIsMasterLoading(false);
-            setIsPlayingMaster(true);
-
-            // BROWSER FALLBACK (Track 2)
-            const normalizedText = (currentSegment.master_script || "").replace(/\s+/g, ' ');
-            const utterance = new SpeechSynthesisUtterance(normalizedText);
-            utterance.lang = 'en-GB';
-            utterance.rate = 0.9;
-
-            const charToWordMap = new Array(normalizedText.length).fill(-1);
-            let currentWordIdx = 0;
-            let inWord = false;
-            for (let i = 0; i < normalizedText.length; i++) {
-                if (/\w/.test(normalizedText[i])) {
-                    if (!inWord) inWord = true;
-                    charToWordMap[i] = currentWordIdx;
-                } else if (inWord) {
-                    currentWordIdx++;
-                    inWord = false;
-                }
-            }
-
-            utterance.onboundary = (event) => {
+            utter.onboundary = (event) => {
                 if (event.name === 'word') {
-                    const targetIdx = charToWordMap[event.charIndex];
-                    if (targetIdx !== -1 && targetIdx !== undefined) setActiveWordIndex(targetIdx);
+                    // Find which word this charIndex belongs to
+                    let targetIdx = -1;
+                    for (let i = 0; i < wordIndices.length; i++) {
+                        if (wordIndices[i] <= event.charIndex) targetIdx = i;
+                        else break;
+                    }
+                    if (targetIdx !== -1) {
+                        lastEventWordIdx = targetIdx;
+                        updateHighlight(targetIdx);
+                    }
                 }
             };
 
-            utterance.onend = () => {
+            // CALIBRATED PULSE TICKER (Fallback)
+            // 0.9 rate at 165 WPM for natural DSE delivery
+            const msPerWord = (60000 / 165); 
+            const pulse = setInterval(() => {
+                if (!window.speechSynthesis.speaking) {
+                    clearInterval(pulse);
+                    return;
+                }
+                
+                tickerWordIdx++;
+                
+                // If native events are dead, let ticker take over
+                if (tickerWordIdx > lastEventWordIdx) {
+                    updateHighlight(tickerWordIdx);
+                }
+            }, msPerWord);
+
+            utter.onend = () => {
+                clearInterval(pulse);
                 setIsPlayingMaster(false);
                 setActiveWordIndex(-1);
+                window._currentUtterance = null;
             };
-            window.speechSynthesis.speak(utterance);
+
+            utter.onerror = () => {
+                clearInterval(pulse);
+                setIsPlayingMaster(false);
+                window._currentUtterance = null;
+            };
+
+            window.speechSynthesis.cancel();
+            window.speechSynthesis.speak(utter);
+
+            // Keep-Alive
+            const keepAlive = setInterval(() => {
+                if (window.speechSynthesis.speaking) {
+                    window.speechSynthesis.pause();
+                    window.speechSynthesis.resume();
+                } else {
+                    clearInterval(keepAlive);
+                }
+            }, 5000);
+        } catch (err) {
+            console.error('[SpeakingQuest] Browser TTS failed:', err);
+            setIsPlayingMaster(false);
         }
     };
 

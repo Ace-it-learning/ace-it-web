@@ -12,131 +12,558 @@
         "id": "Task_1",
         "instructions": "You are at the registration desk for the Smart City Expo. Complete the registration form below.",
         "questions": [
-          { "id": "t1_q1", "type": "Fill_in_Blanks", "label": "Full Name of Organization:", "answer": "Apex Innovation Group" },
-          { "id": "t1_q2", "type": "Fill_in_Blanks", "label": "Primary Contact Person:", "answer": "Regina Lam" },
-          { "id": "t1_q3", "type": "Fill_in_Blanks", "label": "Contact Number:", "answer": "9123 4567" },
-          { "id": "t1_q4", "type": "Fill_in_Blanks", "label": "Membership Type:", "answer": "Corporate Platinum" },
-          { "id": "t1_q5", "type": "Fill_in_Blanks", "label": "Number of Staff Badges:", "answer": "12" },
-          { "id": "t1_q6", "type": "Fill_in_Blanks", "label": "Special Access Area:", "answer": "VIP Tech Lounge" },
-          { "id": "t1_q7", "type": "Fill_in_Blanks", "label": "Parking Permit Needed:", "answer": "2 Permits" },
-          { "id": "t1_q8", "type": "Fill_in_Blanks", "label": "Lunch Requirements (Allergies):", "answer": "Gluten-free" },
-          { "id": "t1_q9", "type": "Fill_in_Blanks", "label": "Keynote Attendance:", "answer": "Yes" },
-          { "id": "t1_q10", "type": "Fill_in_Blanks", "label": "Estimated Arrival Time:", "answer": "8:30 AM" },
-          { "id": "t1_q11", "type": "Fill_in_Blanks", "label": "Workshop Selection:", "answer": "AI Ethics 101" },
-          { "id": "t1_q12", "type": "Fill_in_Blanks", "label": "Payment Method:", "answer": "Company Credit Card" }
+          {
+            "id": "t1_q1",
+            "type": "Fill_in_Blanks",
+            "label": "Full Name of Organization:",
+            "answer": "Apex Innovation Group"
+          },
+          {
+            "id": "t1_q2",
+            "type": "Fill_in_Blanks",
+            "label": "Primary Contact Person:",
+            "answer": "Regina Lam"
+          },
+          {
+            "id": "t1_q3",
+            "type": "Fill_in_Blanks",
+            "label": "Contact Number:",
+            "answer": "9123 4567"
+          },
+          {
+            "id": "t1_q4",
+            "type": "Fill_in_Blanks",
+            "label": "Membership Type:",
+            "answer": "Corporate Platinum"
+          },
+          {
+            "id": "t1_q5",
+            "type": "Fill_in_Blanks",
+            "label": "Number of Staff Badges:",
+            "answer": "12"
+          },
+          {
+            "id": "t1_q6",
+            "type": "Fill_in_Blanks",
+            "label": "Special Access Area:",
+            "answer": "VIP Tech Lounge"
+          },
+          {
+            "id": "t1_q7",
+            "type": "Fill_in_Blanks",
+            "label": "Parking Permit Needed:",
+            "answer": "2 Permits"
+          },
+          {
+            "id": "t1_q8",
+            "type": "Fill_in_Blanks",
+            "label": "Lunch Requirements (Allergies):",
+            "answer": "Gluten-free"
+          },
+          {
+            "id": "t1_q9",
+            "type": "Fill_in_Blanks",
+            "label": "Keynote Attendance:",
+            "answer": "Yes"
+          },
+          {
+            "id": "t1_q10",
+            "type": "Fill_in_Blanks",
+            "label": "Estimated Arrival Time:",
+            "answer": "8:30 AM"
+          },
+          {
+            "id": "t1_q11",
+            "type": "Fill_in_Blanks",
+            "label": "Workshop Selection:",
+            "answer": "AI Ethics 101"
+          },
+          {
+            "id": "t1_q12",
+            "type": "Fill_in_Blanks",
+            "label": "Payment Method:",
+            "answer": "Company Credit Card"
+          }
         ]
       },
       {
         "id": "Task_2",
         "instructions": "Listen to a presentation about the 'Smart Mobility' initiative. Complete the notes and answer the questions.",
         "questions": [
-          { "id": "t2_q1", "type": "Fill_in_Blanks", "label": "Project Launch Year:", "answer": "2021" },
-          { "id": "t2_q2", "type": "Fill_in_Blanks", "label": "Main Tech Used:", "answer": "5G Sensor Array" },
-          { "id": "t2_q3", "type": "Fill_in_Blanks", "label": "Test Location (District):", "answer": "Kowloon East" },
-          { "id": "t2_q4", "type": "Fill_in_Blanks", "label": "Reduction in Congestion (%):", "answer": "15" },
-          { "id": "t2_q5", "type": "Multiple_Choice", "question": "What is the primary concern for residents?", "options": ["Data privacy", "Initial cost", "System reliability"], "answer": "Data privacy" },
-          { "id": "t2_q6", "type": "Multiple_Choice", "question": "How many smart lampposts were installed?", "options": ["400", "500", "600"], "answer": "500" },
-          { "id": "t2_q7", "type": "Fill_in_Blanks", "label": "Feedback Deadline:", "answer": "November 30" },
-          { "id": "t2_q8", "type": "Fill_in_Blanks", "label": "Government Budget Alloc:", "answer": "$2.5 Billion" },
-          { "id": "t2_q9", "type": "Fill_in_Blanks", "label": "Consulting Firm:", "answer": "TechGrid Global" },
-          { "id": "t2_q10", "type": "Fill_in_Blanks", "label": "Future Plan Expansion:", "answer": "Island West" },
-          { "id": "t2_q11", "type": "Fill_in_Blanks", "label": "Website for Updates:", "answer": "www.smart-hk.org" },
-          { "id": "t2_q12", "type": "Fill_in_Blanks", "label": "Next Meeting Venue:", "answer": "Innovation Tower" }
+          {
+            "id": "t2_q1",
+            "type": "Fill_in_Blanks",
+            "label": "Project Launch Year:",
+            "answer": "2021"
+          },
+          {
+            "id": "t2_q2",
+            "type": "Fill_in_Blanks",
+            "label": "Main Tech Used:",
+            "answer": "5G Sensor Array"
+          },
+          {
+            "id": "t2_q3",
+            "type": "Fill_in_Blanks",
+            "label": "Test Location (District):",
+            "answer": "Kowloon East"
+          },
+          {
+            "id": "t2_q4",
+            "type": "Fill_in_Blanks",
+            "label": "Reduction in Congestion (%):",
+            "answer": "15"
+          },
+          {
+            "id": "t2_q5",
+            "type": "Multiple_Choice",
+            "question": "What is the primary concern for residents?",
+            "options": [
+              "Data privacy",
+              "Initial cost",
+              "System reliability"
+            ],
+            "answer": "Data privacy"
+          },
+          {
+            "id": "t2_q6",
+            "type": "Multiple_Choice",
+            "question": "How many smart lampposts were installed?",
+            "options": [
+              "400",
+              "500",
+              "600"
+            ],
+            "answer": "500"
+          },
+          {
+            "id": "t2_q7",
+            "type": "Fill_in_Blanks",
+            "label": "Feedback Deadline:",
+            "answer": "November 30"
+          },
+          {
+            "id": "t2_q8",
+            "type": "Fill_in_Blanks",
+            "label": "Government Budget Alloc:",
+            "answer": "$2.5 Billion"
+          },
+          {
+            "id": "t2_q9",
+            "type": "Fill_in_Blanks",
+            "label": "Consulting Firm:",
+            "answer": "TechGrid Global"
+          },
+          {
+            "id": "t2_q10",
+            "type": "Fill_in_Blanks",
+            "label": "Future Plan Expansion:",
+            "answer": "Island West"
+          },
+          {
+            "id": "t2_q11",
+            "type": "Fill_in_Blanks",
+            "label": "Website for Updates:",
+            "answer": "www.smart-hk.org"
+          },
+          {
+            "id": "t2_q12",
+            "type": "Fill_in_Blanks",
+            "label": "Next Meeting Venue:",
+            "answer": "Innovation Tower"
+          }
         ]
       },
       {
         "id": "Task_3",
         "instructions": "A panel of three experts are discussing the 'Digital Divide'. Tick the correct boxes.",
         "questions": [
-          { "id": "t3_q1", "type": "Multiple_Choice", "question": "Dr. Wong believes the main issue is:", "options": ["Education", "Hardware cost", "Internet speed"], "answer": "Hardware cost" },
-          { "id": "t3_q2", "type": "Multiple_Choice", "question": "Ms. Lee emphasizes the role of:", "options": ["Local NGOs", "International banks", "Tech giants"], "answer": "Local NGOs" },
-          { "id": "t3_q3", "type": "Multiple_Choice", "question": "Mr. Chan suggests a tax on:", "options": ["Data usage", "Smartphones", "E-commerce"], "answer": "E-commerce" },
-          { "id": "t3_q4", "type": "Fill_in_Blanks", "label": "Target Completion Year:", "answer": "2030" },
-          { "id": "t3_q5", "type": "Fill_in_Blanks", "label": "Subsidy Amount per Household:", "answer": "$3,000" },
-          { "id": "t3_q6", "type": "Fill_in_Blanks", "label": "Number of Training Centers:", "answer": "18 Districts" },
-          { "id": "t3_q7", "type": "Fill_in_Blanks", "label": "Free Wi-Fi Name:", "answer": "HK-Connect-Free" },
-          { "id": "t3_q8", "type": "Fill_in_Blanks", "label": "Device Rental Fee:", "answer": "$50 per month" },
-          { "id": "t3_q9", "type": "Fill_in_Blanks", "label": "Age Group Focus:", "answer": "Seniors over 65" },
-          { "id": "t3_q10", "type": "Fill_in_Blanks", "label": "Language of Tutorials:", "answer": "Cantonese and English" },
-          { "id": "t3_q11", "type": "Fill_in_Blanks", "label": "Security Software Provider:", "answer": "CyberGuard HK" },
-          { "id": "t3_q12", "type": "Fill_in_Blanks", "label": "Contact Email for NGOs:", "answer": "support@digitaldivide.hk" }
+          {
+            "id": "t3_q1",
+            "type": "Multiple_Choice",
+            "question": "Dr. Wong believes the main issue is:",
+            "options": [
+              "Education",
+              "Hardware cost",
+              "Internet speed"
+            ],
+            "answer": "Hardware cost"
+          },
+          {
+            "id": "t3_q2",
+            "type": "Multiple_Choice",
+            "question": "Ms. Lee emphasizes the role of:",
+            "options": [
+              "Local NGOs",
+              "International banks",
+              "Tech giants"
+            ],
+            "answer": "Local NGOs"
+          },
+          {
+            "id": "t3_q3",
+            "type": "Multiple_Choice",
+            "question": "Mr. Chan suggests a tax on:",
+            "options": [
+              "Data usage",
+              "Smartphones",
+              "E-commerce"
+            ],
+            "answer": "E-commerce"
+          },
+          {
+            "id": "t3_q4",
+            "type": "Fill_in_Blanks",
+            "label": "Target Completion Year:",
+            "answer": "2030"
+          },
+          {
+            "id": "t3_q5",
+            "type": "Fill_in_Blanks",
+            "label": "Subsidy Amount per Household:",
+            "answer": "$3,000"
+          },
+          {
+            "id": "t3_q6",
+            "type": "Fill_in_Blanks",
+            "label": "Number of Training Centers:",
+            "answer": "18 Districts"
+          },
+          {
+            "id": "t3_q7",
+            "type": "Fill_in_Blanks",
+            "label": "Free Wi-Fi Name:",
+            "answer": "HK-Connect-Free"
+          },
+          {
+            "id": "t3_q8",
+            "type": "Fill_in_Blanks",
+            "label": "Device Rental Fee:",
+            "answer": "$50 per month"
+          },
+          {
+            "id": "t3_q9",
+            "type": "Fill_in_Blanks",
+            "label": "Age Group Focus:",
+            "answer": "Seniors over 65"
+          },
+          {
+            "id": "t3_q10",
+            "type": "Fill_in_Blanks",
+            "label": "Language of Tutorials:",
+            "answer": "Cantonese and English"
+          },
+          {
+            "id": "t3_q11",
+            "type": "Fill_in_Blanks",
+            "label": "Security Software Provider:",
+            "answer": "CyberGuard HK"
+          },
+          {
+            "id": "t3_q12",
+            "type": "Fill_in_Blanks",
+            "label": "Contact Email for NGOs:",
+            "answer": "support@digitaldivide.hk"
+          }
         ]
       },
       {
         "id": "Task_4",
         "instructions": "Three stakeholders are discussing future AI policy. Complete the matrix with their specific views.",
         "questions": [
-          { "id": "t4_q1", "type": "Fill_in_Blanks", "label": "Stakeholder A (Business Owner) - View on Jobs:", "answer": "AI will increase overall efficiency" },
-          { "id": "t4_q2", "type": "Fill_in_Blanks", "label": "Stakeholder A - View on Regulation:", "answer": "Needs to be minimal to avoid blocking innovation" },
-          { "id": "t4_q3", "type": "Fill_in_Blanks", "label": "Stakeholder A - Recommendation:", "answer": "Incentivize local startups" },
-          { "id": "t4_q4", "type": "Fill_in_Blanks", "label": "Stakeholder B (Union Leader) - View on Jobs:", "answer": "Risk of mass displacement in retail" },
-          { "id": "t4_q5", "type": "Fill_in_Blanks", "label": "Stakeholder B - View on Regulation:", "answer": "Strong legal protection for workers" },
-          { "id": "t4_q6", "type": "Fill_in_Blanks", "label": "Stakeholder B - Recommendation:", "answer": "Universal Basic Income trial" },
-          { "id": "t4_q7", "type": "Fill_in_Blanks", "label": "Stakeholder C (Gov Official) - View on Jobs:", "answer": "Shift towards high-value tech roles" },
-          { "id": "t4_q8", "type": "Fill_in_Blanks", "label": "Stakeholder C - View on Regulation:", "answer": "Strict data residency laws" },
-          { "id": "t4_q9", "type": "Fill_in_Blanks", "label": "Stakeholder C - Recommendation:", "answer": "Establish an AI Ethics Committee" },
-          { "id": "t4_q10", "type": "Consensus on Timeline:", "answer": "Policy implementation by Q4 2026" },
-          { "id": "t4_q11", "type": "Key Priority:", "answer": "Public awareness campaign" },
-          { "id": "t4_q12", "type": "Next Step:", "answer": "Consultation with legal experts" }
+          {
+            "id": "t4_q1",
+            "type": "Fill_in_Blanks",
+            "label": "Stakeholder A (Business Owner) - View on Jobs:",
+            "answer": "AI will increase overall efficiency"
+          },
+          {
+            "id": "t4_q2",
+            "type": "Fill_in_Blanks",
+            "label": "Stakeholder A - View on Regulation:",
+            "answer": "Needs to be minimal to avoid blocking innovation"
+          },
+          {
+            "id": "t4_q3",
+            "type": "Fill_in_Blanks",
+            "label": "Stakeholder A - Recommendation:",
+            "answer": "Incentivize local startups"
+          },
+          {
+            "id": "t4_q4",
+            "type": "Fill_in_Blanks",
+            "label": "Stakeholder B (Union Leader) - View on Jobs:",
+            "answer": "Risk of mass displacement in retail"
+          },
+          {
+            "id": "t4_q5",
+            "type": "Fill_in_Blanks",
+            "label": "Stakeholder B - View on Regulation:",
+            "answer": "Strong legal protection for workers"
+          },
+          {
+            "id": "t4_q6",
+            "type": "Fill_in_Blanks",
+            "label": "Stakeholder B - Recommendation:",
+            "answer": "Universal Basic Income trial"
+          },
+          {
+            "id": "t4_q7",
+            "type": "Fill_in_Blanks",
+            "label": "Stakeholder C (Gov Official) - View on Jobs:",
+            "answer": "Shift towards high-value tech roles"
+          },
+          {
+            "id": "t4_q8",
+            "type": "Fill_in_Blanks",
+            "label": "Stakeholder C - View on Regulation:",
+            "answer": "Strict data residency laws"
+          },
+          {
+            "id": "t4_q9",
+            "type": "Fill_in_Blanks",
+            "label": "Stakeholder C - Recommendation:",
+            "answer": "Establish an AI Ethics Committee"
+          },
+          {
+            "id": "t4_q10",
+            "type": "Consensus on Timeline:",
+            "answer": "Policy implementation by Q4 2026"
+          },
+          {
+            "id": "t4_q11",
+            "type": "Key Priority:",
+            "answer": "Public awareness campaign"
+          },
+          {
+            "id": "t4_q12",
+            "type": "Next Step:",
+            "answer": "Consultation with legal experts"
+          }
         ]
       }
     ],
     "script": [
-      { "speaker": "Announcer", "text": "Hong Kong Diploma of Secondary Education Examination 2026. English Language Paper 3. Listening and Integrated Skills." },
-      { "speaker": "Announcer", "text": "The entire broadcast will last approximately one hour. During the examination, you will hear several recordings. You will have time to read the instructions and the questions. You will also have time to check your work." },
-      { "speaker": "Announcer", "text": "Part A. Task 1. You are at the registration desk for the Smart City Expo. You will hear a conversation between a staff member and a visitor. Complete the registration form below. You now have two minutes to study the task. (120-second pause)" },
-      { "speaker": "Staff", "text": "Good morning! Welcome to the Smart City Expo 2026. We are expecting a huge crowd today—nearly five thousand attendees from across the globe. How can I help you with your registration today?" },
-      { "speaker": "Regina", "text": "Hello! I'm here to pick up the badges for my team. My name is Regina Lam. I'm with... well, I was previously with the Tech Hub, but I've recently moved to the Apex Innovation Group. Have you got us on your list?" },
-      { "speaker": "Staff", "text": "Let me see... Apex... Ah, yes, here it is. Apex Innovation Group. You're based in the Science Park, right? No, wait, that's your sister company. You guys are in the Cyberport wing." },
-      { "speaker": "Regina", "text": "That's correct. And just checking the contact details—is my mobile number correctly listed? It's Regina Lam, 9123 4567." },
-      { "speaker": "Staff", "text": "Yes, Regina. I see 9-1-2-3, 4-5-6-7. Everything seems in order. Now, regarding your membership, our system shows you were a Gold member last year, but you've been upgraded. You're now on the Corporate Platinum tier, which gives you access to all the premium seminars." },
-      { "speaker": "Regina", "text": "Wonderful! We really wanted that upgrade for the networking opportunities. How many staff badges does that include? I think we requested fifteen originally?" },
-      { "speaker": "Staff", "text": "Well, usually the Platinum tier allows for twenty, but your company specifically requested only twelve badges for this event to keep the team focused. I have them all printed right here." },
-      { "speaker": "Regina", "text": "Twelve. Right. That makes sense since the marketing team couldn't make it. And do we still get the special lounge access?" },
-      { "speaker": "Staff", "text": "You certainly do. You have unlimited access to the VIP Tech Lounge on the fourth floor. It's much quieter than the general Science Hall or the Media Center." },
-      { "speaker": "Regina", "text": "That's a relief. We'll need a quiet place for some meetings. Oh, and parking! We brought a fleet of four vehicles originally, but we've parked two of them off-site to save costs. So, we only need two parking permits for the Expo basement." },
-      { "speaker": "Staff", "text": "Two permits. Understood. I'll code those onto your badges. Now, about the catering... I see a note here about some dietary requirements for the lunch buffet. One of your members requested a vegan meal?" },
-      { "speaker": "Regina", "text": "No, that was for our last conference. This time, we have a senior developer who is strictly gluten-free. Everyone else is fine with the standard menu." },
-      { "speaker": "Staff", "text": "Gluten-free. I've updated the kitchen. Now, will your group be attending the main keynote address this morning? It's the one titled 'The Future of Urban AI' at 8:30 AM." },
-      { "speaker": "Regina", "text": "Yes, definitely. We wouldn't miss it. Actually, I was worried it started at 9:00, but 8:30 is even better. It gives us more time for the afternoon workshops." },
-      { "speaker": "Staff", "text": "Great. Speaking of workshops, which one have you selected for the 2:00 PM slot? We have 'Smart Grids' or 'AI Ethics 101'." },
-      { "speaker": "Regina", "text": "We've decided on 'AI Ethics 101'. I think it's more relevant to our current projects than the 'Digital Security' session we looked at earlier." },
-      { "speaker": "Staff", "text": "An excellent choice. Now, for the final processing fee of five hundred dollars... how would you like to settle that? Personal cash or debit card?" },
-      { "speaker": "Regina", "text": "I'll put it on the Company Credit Card. It's much easier for our accounting department to track than using my personal account and filing for reimbursement later." },
-      { "speaker": "Staff", "text": "Perfect. Just tap here. You're all set, Regina. Enjoy the Expo!" },
-      { "speaker": "Announcer", "text": "(60-second pause to tidy up answers)" },
-      { "speaker": "Announcer", "text": "Task 2. You will hear a presentation about the 'Smart Mobility' initiative in Hong Kong. Listen to the presentation and complete the notes below. You now have two minutes to study the task. (120-second pause)" },
-      { "speaker": "Presenter", "text": "Good morning, everyone. It's a pleasure to be here at the Smart City Expo. My name is Julian Vane, and I'm the lead coordinator for the Smart Mobility Project. We've come a long way since the brainstorming phase back in 2018. It took us several years to secure the initial round of funding and clear the regulatory hurdles, but I'm proud to say we finally reached the official project launch year in 2021." },
-      { "speaker": "Presenter", "text": "People often ask me what the 'secret sauce' of our system is. Is it the software? The satellites? Actually, the foundation of the entire network is our 5G Sensor Array. While many cities are still relying on 4G or even older CCTV technology, our 5G infrastructure allows for millisecond-level data processing. This is currently being tested in a specific pilot area. While we considered Central and Tsim Sha Tsui, we eventually settled on Kowloon East due to its unique mix of residential and industrial traffic." },
-      { "speaker": "Presenter", "text": "The results have been quite staggering. Our initial projections suggested a modest 5% improvement in traffic flow. However, our latest data shows a reduction in congestion of 15%. That might not sound like much to a layman, but for a delivery driver or a commuter, it saves nearly twenty minutes a day. Of course, it hasn't all been smooth sailing. While some residents were worried about the initial cost or the reliability of the sensors, the primary concern raised in our town hall meetings was data privacy—specifically, who has access to the license plate data." },
-      { "speaker": "Presenter", "text": "To address this, we've increased transparency. Last month alone, we successfully installed 500 smart lampposts across the district. We had a goal of 600, but we've pushed the remaining hundred to the next phase to ensure the first batch is fully calibrated. If you'd like to share your thoughts, the feedback deadline for the current phase is November 30. Don't wait until December, as the portal will be closed for maintenance then." },
-      { "speaker": "Presenter", "text": "In terms of financing, the Government Budget Allocation has been substantial. We've received a total of $2.5 Billion dollars to fund the expansion over the next five years. To ensure this money is spent wisely, we've hired TechGrid Global as our lead consulting firm. We did look at 'Urban Dynamics' and 'Future Systems', but TechGrid had the most experience with high-density urban environments. Looking ahead, we plan to move the expansion to Island West by the start of 2027. For more information, please visit our official website at www.smart-hk.org. Finally, our next public meeting will be held at the Innovation Tower, not the City Hall as previously advertised. Thank you for your time." },
-      { "speaker": "Announcer", "text": "(60-second pause to tidy up answers)" },
-      { "speaker": "Announcer", "text": "Task 3. You will hear a panel of three experts discussing the 'Digital Divide'—the gap between those who have access to technology and those who do not. Listen to the discussion and tick the correct boxes in the table. You now have two minutes to study the task. (120-second pause)" },
-      { "speaker": "Host", "text": "Welcome to our weekly 'Tech Talk' panel. Today we are discussing the Digital Divide. Joining us are Dr. Wong, Ms. Lee, and Mr. Chan. Dr. Wong, let's start with you. What is the root cause of this divide?" },
-      { "speaker": "Dr Wong", "text": "Thank you. Many people point to a lack of education or slow internet speeds in rural areas. But in a city as developed as Hong Kong, the real barrier is simply the hardware cost. Even a basic laptop for a student costs several thousand dollars. If a family has three children, it's simply unaffordable. That's the main issue we need to tackle." },
-      { "speaker": "Ms Lee", "text": "If I could just interject there, Dr. Wong. While I agree that cost is a factor, I don't think the government should be the only one providing hardware. In my experience, the real heavy lifting is done by local NGOs. They are the ones on the ground, teaching seniors how to use smartphones and distributing refurbished tablets. Without these non-governmental organizations, the hardware would just sit in boxes." },
-      { "speaker": "Mr Chan", "text": "That's a fair point, Ms. Lee. But where does the funding come from? We can't rely on charity forever. I've been advocating for a specific digital inclusion tax. Not on smartphones or data usage—that would hurt the poor—but a small 0.5% tax on e-commerce transactions. This would create a permanent fund to help us hit our target completion year of 2030. We want every single household in Hong Kong to be digitally active by then." },
-      { "speaker": "Dr Wong", "text": "2030 is ambitious, Mr. Chan. To get there, we need a massive subsidy. I've calculated that a subsidy amount of $3,000 per household would be enough to provide a high-quality tablet and a year of basic internet access. This needs to be rolled out across all 18 Districts, not just the lower-income ones like Sham Shui Po or Kwun Tong." },
-      { "speaker": "Ms Lee", "text": "And it's not just about the home. We already have the 'HK-Connect-Free' Wi-Fi network in public parks and libraries. But the problem is the equipment. Many elderly residents can't afford a device. We currently have a rental scheme, but the device rental fee is $50 per month. For a retiree on a fixed income, that's significant. We should aim to halve that." },
-      { "speaker": "Mr Chan", "text": "Exactly. And we need better training. It's no use having a tablet if you can't read the manual. We need tutorials in both Cantonese and English to reflect our city's diversity. Luckily, we've just signed a deal with CyberGuard HK to provide free security software for all these devices so our seniors don't fall victim to online scams. If any NGOs want to join our pilot program, please send an email to support@digitaldivide.hk. We'll be reviewing applications next month." },
-      { "speaker": "Announcer", "text": "(60-second pause to tidy up answers)" },
-      { "speaker": "Announcer", "text": "Task 4. You will hear three stakeholders discussing the future of AI policy in Hong Kong. Listen to their conversation and complete the matrix below. You now have four minutes to study the task. (240-second pause)" },
-      { "speaker": "Host", "text": "Today we're joined by a Business Owner, a Union Leader, and a Government Official to discuss the upcoming AI Policy Roadmap. Let's start with our Business Owner. How do you see AI affecting our workforce?" },
-      { "speaker": "Business Owner", "text": "To be blunt, AI is the only way forward. Many people fear job losses, but I believe AI will increase overall efficiency across the board. It will take over the repetitive, boring tasks and allow my employees to focus on creative strategy. However, for this to work, the government needs to stay out of the way. We need minimal regulation. If we have too many rules, we'll just block innovation and lose out to Singapore or Shenzhen. My main recommendation is for the government to incentivize local startups through tax breaks." },
-      { "speaker": "Union Leader", "text": "I have to strongly disagree with the idea of 'minimal regulation.' From where I'm standing, there is a massive risk of mass displacement, especially in sectors like retail and logistics. We've already seen automated warehouses replacing hundreds of workers. We need more than just 'efficiency'; we need strong legal protection for workers. My members are scared, and rightfully so. I'm actually calling for a Universal Basic Income trial. If AI is going to take the jobs, then the wealth it generates must be shared back with the workers who were displaced." },
-      { "speaker": "Gov Official", "text": "I hear both of your concerns. The government's view is that we will inevitably see a shift towards high-value tech roles. We can't stop the tide of technology, but we can manage it. Our priority is security and stability. That's why we will be implementing strict data residency laws—all AI data generated in Hong Kong must stay in Hong Kong. To balance innovation and ethics, we will establish an AI Ethics Committee to oversee the rollout. We've actually reached a consensus on the timeline: we want the full policy implementation by Q4 2026." },
-      { "speaker": "Host", "text": "Q4 2026. That's quite soon. What's the immediate next step?" },
-      { "speaker": "Gov Official", "text": "Well, before the law changes, our key priority is a massive public awareness campaign to explain the changes. After that, we'll move into a deep consultation with legal experts to finalize the wording of the new AI Act. It's a complex process, but we're committed to getting it right." },
-      { "speaker": "Announcer", "text": "(60-second pause to tidy up answers)" },
-      { "speaker": "Announcer", "text": "That is the end of Part A. You now have five minutes to study the Part B Question-Answer Book and the Data File. (300-second pause)" },
-      { "speaker": "Announcer", "text": "Integrated Skills Recording. You will now hear a briefing from the IT Bureau Chief to the Project Manager regarding the upcoming tasks. Listen carefully and take notes as you will need this information to complete the tasks in Part B." },
-      { "speaker": "Bureau Chief", "text": "Good morning. I'm glad we're finally getting started on these tasks. We have a lot of fires to put out before the Q4 rollout. As you know, the Union's viral post has really stirred things up. When you write that letter to the Union Leader for Task 8, please don't just repeat the brochure points. Emphasize that we aren't just creating 'tech' jobs for specialists. Mention that we are specifically looking to hire people with 'soft skills' and 'community empathy' to bridge the gap between AI and human users. That's a key detail that isn't in the Data File yet." },
-      { "speaker": "Bureau Chief", "text": "Moving on to the internal memo for Task 9—don't just list the budget gap. I want you to propose a specific 'Social Media Week' in July to fix that publicity issue. We need to get local influencers involved to build trust. Oh, and for the public social media post in Task 10, make sure to use a friendly, non-corporate tone. Use the phrase 'Human-First AI' and make it sound like a neighbor talking to a neighbor, not a machine talking to a taxpayer." },
-      { "speaker": "Bureau Chief", "text": "One last thing—I just heard from the AI Ethics Committee. They are very insistent that we describe our data anonymization process as 'Military Grade'. That's the specific term they want us to use in our responses to citizens like Mr. David Wong. 'Military Grade'. Got it? Good. I expect those drafts on my desk by the end of the day. Good luck." },
-      { "speaker": "Announcer", "text": "That is the end of the Integrated Skills recording. You now have 1 hour and 10 minutes to complete your tasks. Stop writing when you hear the signal at the end of the examination." },
-      { "speaker": "Announcer", "text": "(4200-second pause)" },
-      { "speaker": "Announcer", "text": "Stop writing now. The examination is over. Please stay in your seats until your scripts have been collected." }
+      {
+        "speaker": "Announcer",
+        "text": "Hong Kong Diploma of Secondary Education Examination 2026. English Language Paper 3. Listening and Integrated Skills."
+      },
+      {
+        "speaker": "Announcer",
+        "text": "The entire broadcast will last approximately one hour. During the examination, you will hear several recordings. You will have time to read the instructions and the questions. You will also have time to check your work."
+      },
+      {
+        "speaker": "Announcer",
+        "text": "Part A. Task 1. You are at the registration desk for the Smart City Expo. You will hear a conversation between a staff member and a visitor. Complete the registration form below. You now have two minutes to study the task. (120-second pause)"
+      },
+      {
+        "speaker": "Staff",
+        "text": "Good morning! Welcome to the Smart City Expo 2026. We are expecting a huge crowd today—nearly five thousand attendees from across the globe. How can I help you with your registration today?"
+      },
+      {
+        "speaker": "Regina",
+        "text": "Hello! I'm here to pick up the badges for my team. My name is Regina Lam. I'm with... well, I was previously with the Tech Hub, but I've recently moved to the Apex Innovation Group. Have you got us on your list?"
+      },
+      {
+        "speaker": "Staff",
+        "text": "Let me see... Apex... Ah, yes, here it is. Apex Innovation Group. You're based in the Science Park, right? No, wait, that's your sister company. You guys are in the Cyberport wing."
+      },
+      {
+        "speaker": "Regina",
+        "text": "That's correct. And just checking the contact details—is my mobile number correctly listed? It's Regina Lam, 9123 4567."
+      },
+      {
+        "speaker": "Staff",
+        "text": "Yes, Regina. I see 9-1-2-3, 4-5-6-7. Everything seems in order. Now, regarding your membership, our system shows you were a Gold member last year, but you've been upgraded. You're now on the Corporate Platinum tier, which gives you access to all the premium seminars."
+      },
+      {
+        "speaker": "Regina",
+        "text": "Wonderful! We really wanted that upgrade for the networking opportunities. How many staff badges does that include? I think we requested fifteen originally?"
+      },
+      {
+        "speaker": "Staff",
+        "text": "Well, usually the Platinum tier allows for twenty, but your company specifically requested only twelve badges for this event to keep the team focused. I have them all printed right here."
+      },
+      {
+        "speaker": "Regina",
+        "text": "Twelve. Right. That makes sense since the marketing team couldn't make it. And do we still get the special lounge access?"
+      },
+      {
+        "speaker": "Staff",
+        "text": "You certainly do. You have unlimited access to the VIP Tech Lounge on the fourth floor. It's much quieter than the general Science Hall or the Media Center."
+      },
+      {
+        "speaker": "Regina",
+        "text": "That's a relief. We'll need a quiet place for some meetings. Oh, and parking! We brought a fleet of four vehicles originally, but we've parked two of them off-site to save costs. So, we only need two parking permits for the Expo basement."
+      },
+      {
+        "speaker": "Staff",
+        "text": "Two permits. Understood. I'll code those onto your badges. Now, about the catering... I see a note here about some dietary requirements for the lunch buffet. One of your members requested a vegan meal?"
+      },
+      {
+        "speaker": "Regina",
+        "text": "No, that was for our last conference. This time, we have a senior developer who is strictly gluten-free. Everyone else is fine with the standard menu."
+      },
+      {
+        "speaker": "Staff",
+        "text": "Gluten-free. I've updated the kitchen. Now, will your group be attending the main keynote address this morning? It's the one titled 'The Future of Urban AI' at 8:30 AM."
+      },
+      {
+        "speaker": "Regina",
+        "text": "Yes, definitely. We wouldn't miss it. Actually, I was worried it started at 9:00, but 8:30 is even better. It gives us more time for the afternoon workshops."
+      },
+      {
+        "speaker": "Staff",
+        "text": "Great. Speaking of workshops, which one have you selected for the 2:00 PM slot? We have 'Smart Grids' or 'AI Ethics 101'."
+      },
+      {
+        "speaker": "Regina",
+        "text": "We've decided on 'AI Ethics 101'. I think it's more relevant to our current projects than the 'Digital Security' session we looked at earlier."
+      },
+      {
+        "speaker": "Staff",
+        "text": "An excellent choice. Now, for the final processing fee of five hundred dollars... how would you like to settle that? Personal cash or debit card?"
+      },
+      {
+        "speaker": "Regina",
+        "text": "I'll put it on the Company Credit Card. It's much easier for our accounting department to track than using my personal account and filing for reimbursement later."
+      },
+      {
+        "speaker": "Staff",
+        "text": "Perfect. Just tap here. You're all set, Regina. Enjoy the Expo!"
+      },
+      {
+        "speaker": "Announcer",
+        "text": "(60-second pause to tidy up answers)"
+      },
+      {
+        "speaker": "Announcer",
+        "text": "Task 2. You will hear a presentation about the 'Smart Mobility' initiative in Hong Kong. Listen to the presentation and complete the notes below. You now have two minutes to study the task. (120-second pause)"
+      },
+      {
+        "speaker": "Presenter",
+        "text": "Good morning, everyone. It's a pleasure to be here at the Smart City Expo. My name is Julian Vane, and I'm the lead coordinator for the Smart Mobility Project. We've come a long way since the brainstorming phase back in 2018. It took us several years to secure the initial round of funding and clear the regulatory hurdles, but I'm proud to say we finally reached the official project launch year in 2021."
+      },
+      {
+        "speaker": "Presenter",
+        "text": "People often ask me what the 'secret sauce' of our system is. Is it the software? The satellites? Actually, the foundation of the entire network is our 5G Sensor Array. While many cities are still relying on 4G or even older CCTV technology, our 5G infrastructure allows for millisecond-level data processing. This is currently being tested in a specific pilot area. While we considered Central and Tsim Sha Tsui, we eventually settled on Kowloon East due to its unique mix of residential and industrial traffic."
+      },
+      {
+        "speaker": "Presenter",
+        "text": "The results have been quite staggering. Our initial projections suggested a modest 5% improvement in traffic flow. However, our latest data shows a reduction in congestion of 15%. That might not sound like much to a layman, but for a delivery driver or a commuter, it saves nearly twenty minutes a day. Of course, it hasn't all been smooth sailing. While some residents were worried about the initial cost or the reliability of the sensors, the primary concern raised in our town hall meetings was data privacy—specifically, who has access to the license plate data."
+      },
+      {
+        "speaker": "Presenter",
+        "text": "To address this, we've increased transparency. Last month alone, we successfully installed 500 smart lampposts across the district. We had a goal of 600, but we've pushed the remaining hundred to the next phase to ensure the first batch is fully calibrated. If you'd like to share your thoughts, the feedback deadline for the current phase is November 30. Don't wait until December, as the portal will be closed for maintenance then."
+      },
+      {
+        "speaker": "Presenter",
+        "text": "In terms of financing, the Government Budget Allocation has been substantial. We've received a total of $2.5 Billion dollars to fund the expansion over the next five years. To ensure this money is spent wisely, we've hired TechGrid Global as our lead consulting firm. We did look at 'Urban Dynamics' and 'Future Systems', but TechGrid had the most experience with high-density urban environments. Looking ahead, we plan to move the expansion to Island West by the start of 2027. For more information, please visit our official website at www.smart-hk.org. Finally, our next public meeting will be held at the Innovation Tower, not the City Hall as previously advertised. Thank you for your time."
+      },
+      {
+        "speaker": "Announcer",
+        "text": "(60-second pause to tidy up answers)"
+      },
+      {
+        "speaker": "Announcer",
+        "text": "Task 3. You will hear a panel of three experts discussing the 'Digital Divide'—the gap between those who have access to technology and those who do not. Listen to the discussion and tick the correct boxes in the table. You now have two minutes to study the task. (120-second pause)"
+      },
+      {
+        "speaker": "Host",
+        "text": "Welcome to our weekly 'Tech Talk' panel. Today we are discussing the Digital Divide. Joining us are Dr. Wong, Ms. Lee, and Mr. Chan. Dr. Wong, let's start with you. What is the root cause of this divide?"
+      },
+      {
+        "speaker": "Dr Wong",
+        "text": "Thank you. Many people point to a lack of education or slow internet speeds in rural areas. But in a city as developed as Hong Kong, the real barrier is simply the hardware cost. Even a basic laptop for a student costs several thousand dollars. If a family has three children, it's simply unaffordable. That's the main issue we need to tackle."
+      },
+      {
+        "speaker": "Ms Lee",
+        "text": "If I could just interject there, Dr. Wong. While I agree that cost is a factor, I don't think the government should be the only one providing hardware. In my experience, the real heavy lifting is done by local NGOs. They are the ones on the ground, teaching seniors how to use smartphones and distributing refurbished tablets. Without these non-governmental organizations, the hardware would just sit in boxes."
+      },
+      {
+        "speaker": "Mr Chan",
+        "text": "That's a fair point, Ms. Lee. But where does the funding come from? We can't rely on charity forever. I've been advocating for a specific digital inclusion tax. Not on smartphones or data usage—that would hurt the poor—but a small 0.5% tax on e-commerce transactions. This would create a permanent fund to help us hit our target completion year of 2030. We want every single household in Hong Kong to be digitally active by then."
+      },
+      {
+        "speaker": "Dr Wong",
+        "text": "2030 is ambitious, Mr. Chan. To get there, we need a massive subsidy. I've calculated that a subsidy amount of $3,000 per household would be enough to provide a high-quality tablet and a year of basic internet access. This needs to be rolled out across all 18 Districts, not just the lower-income ones like Sham Shui Po or Kwun Tong."
+      },
+      {
+        "speaker": "Ms Lee",
+        "text": "And it's not just about the home. We already have the 'HK-Connect-Free' Wi-Fi network in public parks and libraries. But the problem is the equipment. Many elderly residents can't afford a device. We currently have a rental scheme, but the device rental fee is $50 per month. For a retiree on a fixed income, that's significant. We should aim to halve that."
+      },
+      {
+        "speaker": "Mr Chan",
+        "text": "Exactly. And we need better training. It's no use having a tablet if you can't read the manual. We need tutorials in both Cantonese and English to reflect our city's diversity. Luckily, we've just signed a deal with CyberGuard HK to provide free security software for all these devices so our seniors don't fall victim to online scams. If any NGOs want to join our pilot program, please send an email to support@digitaldivide.hk. We'll be reviewing applications next month."
+      },
+      {
+        "speaker": "Announcer",
+        "text": "(60-second pause to tidy up answers)"
+      },
+      {
+        "speaker": "Announcer",
+        "text": "Task 4. You will hear three stakeholders discussing the future of AI policy in Hong Kong. Listen to their conversation and complete the matrix below. You now have two minutes to study the task. (120-second pause)"
+      },
+      {
+        "speaker": "Host",
+        "text": "Today we're joined by a Business Owner, a Union Leader, and a Government Official to discuss the upcoming AI Policy Roadmap. Let's start with our Business Owner. How do you see AI affecting our workforce?"
+      },
+      {
+        "speaker": "Business Owner",
+        "text": "To be blunt, AI is the only way forward. Many people fear job losses, but I believe AI will increase overall efficiency across the board. It will take over the repetitive, boring tasks and allow my employees to focus on creative strategy. However, for this to work, the government needs to stay out of the way. We need minimal regulation. If we have too many rules, we'll just block innovation and lose out to Singapore or Shenzhen. My main recommendation is for the government to incentivize local startups through tax breaks."
+      },
+      {
+        "speaker": "Union Leader",
+        "text": "I have to strongly disagree with the idea of 'minimal regulation.' From where I'm standing, there is a massive risk of mass displacement, especially in sectors like retail and logistics. We've already seen automated warehouses replacing hundreds of workers. We need more than just 'efficiency'; we need strong legal protection for workers. My members are scared, and rightfully so. I'm actually calling for a Universal Basic Income trial. If AI is going to take the jobs, then the wealth it generates must be shared back with the workers who were displaced."
+      },
+      {
+        "speaker": "Gov Official",
+        "text": "I hear both of your concerns. The government's view is that we will inevitably see a shift towards high-value tech roles. We can't stop the tide of technology, but we can manage it. Our priority is security and stability. That's why we will be implementing strict data residency laws—all AI data generated in Hong Kong must stay in Hong Kong. To balance innovation and ethics, we will establish an AI Ethics Committee to oversee the rollout. We've actually reached a consensus on the timeline: we want the full policy implementation by Q4 2026."
+      },
+      {
+        "speaker": "Host",
+        "text": "Q4 2026. That's quite soon. What's the immediate next step?"
+      },
+      {
+        "speaker": "Gov Official",
+        "text": "Well, before the law changes, our key priority is a massive public awareness campaign to explain the changes. After that, we'll move into a deep consultation with legal experts to finalize the wording of the new AI Act. It's a complex process, but we're committed to getting it right."
+      },
+      {
+        "speaker": "Announcer",
+        "text": "(60-second pause to tidy up answers)"
+      },
+      {
+        "speaker": "Announcer",
+        "text": "That is the end of Part A. You now have five minutes to study the Part B Question-Answer Book and the Data File. (300-second pause)"
+      },
+      {
+        "speaker": "Announcer",
+        "text": "Integrated Skills Recording. You will now hear a briefing from the IT Bureau Chief to the Project Manager regarding the upcoming tasks. Listen carefully and take notes as you will need this information to complete the tasks in Part B."
+      },
+      {
+        "speaker": "Bureau Chief",
+        "text": "Good morning. I'm glad we're finally getting started on these tasks. We have a lot of fires to put out before the Q4 rollout. As you know, the Union's viral post has really stirred things up. When you write that letter to the Union Leader for Task 8, please don't just repeat the brochure points. Emphasize that we aren't just creating 'tech' jobs for specialists. Mention that we are specifically looking to hire people with 'soft skills' and 'community empathy' to bridge the gap between AI and human users. That's a key detail that isn't in the Data File yet."
+      },
+      {
+        "speaker": "Bureau Chief",
+        "text": "Moving on to the internal memo for Task 9—don't just list the budget gap. I want you to propose a specific 'Social Media Week' in July to fix that publicity issue. We need to get local influencers involved to build trust. Oh, and for the public social media post in Task 10, make sure to use a friendly, non-corporate tone. Use the phrase 'Human-First AI' and make it sound like a neighbor talking to a neighbor, not a machine talking to a taxpayer."
+      },
+      {
+        "speaker": "Bureau Chief",
+        "text": "One last thing—I just heard from the AI Ethics Committee. They are very insistent that we describe our data anonymization process as 'Military Grade'. That's the specific term they want us to use in our responses to citizens like Mr. David Wong. 'Military Grade'. Got it? Good. I expect those drafts on my desk by the end of the day. Good luck."
+      },
+      {
+        "speaker": "Announcer",
+        "text": "That is the end of the Integrated Skills recording. You now have 1 hour and 10 minutes to complete your tasks. Stop writing when you hear the signal at the end of the examination."
+      },
+      {
+        "speaker": "Announcer",
+        "text": "(4200-second pause)"
+      },
+      {
+        "speaker": "Announcer",
+        "text": "Stop writing now. The examination is over. Please stay in your seats until your scripts have been collected."
+      }
     ]
   },
   "Part_B": {

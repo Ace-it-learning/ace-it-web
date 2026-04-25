@@ -6,7 +6,7 @@ import { useAuth } from '../../context/AuthContext';
 
 
 
-const Paper3AudioEngine = forwardRef(({ script, phase, onPhaseChange, onTaskChange, onSectionChange, onTidyingStart, onTidyingEnd, onComplete, onRequireSelection, onCountdownTick, onStatusChange, initialIndex = 0, initialPause = null, onIndexChange }, ref) => {
+const Paper3AudioEngine = forwardRef(({ script, phase, onPhaseChange, onTaskChange, onSectionChange, onTidyingStart, onTidyingEnd, onStudyStart, onComplete, onRequireSelection, onCountdownTick, onStatusChange, initialIndex = 0, initialPause = null, onIndexChange }, ref) => {
     const { user } = useAuth();
 
     const [currentIndex, setCurrentIndex] = useState(initialIndex);
@@ -18,14 +18,28 @@ const Paper3AudioEngine = forwardRef(({ script, phase, onPhaseChange, onTaskChan
         fastForwardToPartAEnd: () => {
             const targetIndex = script.findIndex(item => item.text?.toLowerCase().includes("end of part a"));
             if (targetIndex !== -1) {
-                // STOP current audio immediately
-                if (audioRef.current) {
-                    audioRef.current.pause();
-                    audioRef.current.src = "";
-                }
+                console.log(`[AudioEngine] Fast-forwarding to Part A end (Index ${targetIndex})`);
+                
+                // 1. STOP all current audio/speech immediately
+                try {
+                    window.speechSynthesis.cancel();
+                    if (audioRef.current) {
+                        audioRef.current.pause();
+                        audioRef.current.src = "";
+                    }
+                } catch (e) {}
+
+                // 2. CLEAR all countdowns/wait states
                 setPauseCountdown(null);
+                setPrepCountdown(null);
                 setIsWaitingForSelection(false);
+                
+                // 3. JUMP to index and SYNC with parent
+                lastProcessedIndex.current = -1; // Force re-process of this index
                 setCurrentIndex(targetIndex);
+                onIndexChange?.(targetIndex);
+                
+                // 4. ENSURE we are in playback mode
                 setIsPlaying(true);
             }
         },
@@ -55,6 +69,8 @@ const Paper3AudioEngine = forwardRef(({ script, phase, onPhaseChange, onTaskChan
     const prefetchQueue = useRef(new Map()); // Map: index -> audioBase64
     const hasPlayedPrep = useRef(false);
     const lastScriptRef = useRef(null);
+    const lastProcessedIndex = useRef(-1);
+    const lastTaskNumber = useRef(1);
     const isInitialResume = useRef(initialPause > 0);
 
     // Cleanup on unmount
@@ -65,6 +81,7 @@ const Paper3AudioEngine = forwardRef(({ script, phase, onPhaseChange, onTaskChan
                 audioRef.current.src = "";
                 audioRef.current = null;
             }
+            window.speechSynthesis.cancel();
         };
     }, []);
 
@@ -108,44 +125,24 @@ const Paper3AudioEngine = forwardRef(({ script, phase, onPhaseChange, onTaskChan
         return () => clearInterval(timer);
     }, [isPlaying, phase, prepCountdown === null, onCountdownTick]);
 
-    // PRE-FETCHING LOGIC
-    useEffect(() => {
-        if (!isPlaying || currentIndex >= script.length) return;
-
-        const prefetchNext = async (index) => {
-            if (index >= script.length || prefetchQueue.current.has(index)) return;
-            const item = script[index];
-            if (!item?.text || item.text.match(/\(\d+-(second|minute) pause\)/)) return;
-
-            try {
-                const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
-                const res = await fetch(`${API_URL}/api/lab/tts`, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ text: item.text.replace(/\(\d+-second pause\)/g, ''), accent: 'UK', gender: 'FEMALE' })
-                });
-                if (res.ok) {
-                    const data = await res.json();
-                    if (data.audio) prefetchQueue.current.set(index, data.audio);
-                }
-            } catch (e) { console.error("Prefetch failed for index", index); }
-        };
-
-        // Prefetch next 4 items for maximum performance
-        for (let i = 1; i <= 4; i++) {
-            prefetchNext(currentIndex + i);
-        }
-    }, [currentIndex, isPlaying, script]);
+    // PRE-FETCHING REMOVED (Ensuring Zero API Cost)
 
     // MAIN EXECUTION LOOP
     useEffect(() => {
-        if (!isPlaying || isWaitingForSelection) return;
+        if (!isPlaying || isWaitingForSelection) {
+            lastProcessedIndex.current = -1; // Reset so it can re-trigger on resume
+            return;
+        }
         
         if (currentIndex >= script.length) {
             onComplete?.();
             return;
         }
 
+        // Prevent multiple simultaneous processing loops for the same index
+        if (lastProcessedIndex.current === currentIndex) return;
+        lastProcessedIndex.current = currentIndex;
+        
         const processItem = async () => {
             const myIndex = currentIndex;
             const item = script[currentIndex];
@@ -158,14 +155,14 @@ const Paper3AudioEngine = forwardRef(({ script, phase, onPhaseChange, onTaskChan
             const isTidying = item.text.toLowerCase().includes('tidy up');
 
             // Detect Task Changes
-            let currentTask = 1;
             if (item.text.toLowerCase().includes('task')) {
                 const taskMatch = item.text.match(/task\s+(\d+)/i);
                 if (taskMatch) {
-                    currentTask = parseInt(taskMatch[1]);
-                    onTaskChange?.(currentTask);
+                    lastTaskNumber.current = parseInt(taskMatch[1]);
+                    onTaskChange?.(lastTaskNumber.current);
                 }
             }
+            const currentTask = lastTaskNumber.current;
 
             // Detect Section Changes (Part A -> Part B transition)
             if (phase === 'PART_B_AUDIO' && (item.text.toLowerCase().includes('integrated skills') || item.text.toLowerCase().includes('part b'))) {
@@ -190,6 +187,8 @@ const Paper3AudioEngine = forwardRef(({ script, phase, onPhaseChange, onTaskChan
                         ?.text.match(/task\s+(\d+)/i);
                     const tidyingTaskNum = taskMatch ? parseInt(taskMatch[1]) : 1;
                     onTidyingStart?.(pauseSeconds, tidyingTaskNum);
+                } else if (item.text.toLowerCase().includes('study')) {
+                    onStudyStart?.(pauseSeconds, currentTask);
                 }
 
                 // If we are resuming, use the initialPause for the first pause we encounter
@@ -204,15 +203,7 @@ const Paper3AudioEngine = forwardRef(({ script, phase, onPhaseChange, onTaskChan
                         return;
                     }
 
-                    // AUTO-SKIP "Tidy Up" pauses if they are at the transition point
-                    const isTidyUpTransition = item.text.toLowerCase().includes('tidy up') && phase === 'PART_A';
-                    if (isTidyUpTransition) {
-                        clearInterval(timer);
-                        const nextIdx = currentIndex + 1;
-                        setCurrentIndex(nextIdx);
-                        onIndexChange?.(nextIdx);
-                        return;
-                    }
+
 
                     setPauseCountdown(prev => {
                         const next = prev > 0 ? prev - 1 : 0;
@@ -259,72 +250,29 @@ const Paper3AudioEngine = forwardRef(({ script, phase, onPhaseChange, onTaskChan
 
     const currentRequestIdRef = useRef(0);
 
-    const playSpeech = (text, isInternal = false) => {
-        return new Promise(async (resolve) => {
-            const requestId = ++currentRequestIdRef.current;
-            
-            // Cancel any existing audio immediately
-            if (audioRef.current) {
-                audioRef.current.pause();
-                audioRef.current.src = "";
-                audioRef.current = null;
-            }
-
-            const myIndex = currentIndex;
-
-            // Check cache
-            if (prefetchQueue.current.has(currentIndex) && !isInternal) {
-                const cachedAudio = prefetchQueue.current.get(currentIndex);
-                if (requestId !== currentRequestIdRef.current) return resolve();
-
-                const audio = new Audio(`data:audio/mp3;base64,${cachedAudio}`);
-                audioRef.current = audio;
-                audio.play().catch(e => console.error("Playback failed", e));
-                audio.onended = () => {
-                    if (audioRef.current === audio) audioRef.current = null;
-                    resolve();
-                };
-                return;
-            }
-
-            setIsEngineBuffering(true);
-            try {
-                const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
-                const res = await fetch(`${API_URL}/api/lab/tts`, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ text, accent: 'UK', gender: 'FEMALE' })
-                });
-                
-                if (!res.ok) throw new Error('TTS failed');
-                
-                const data = await res.json();
-                
-                // ABORT if a newer request has started or index changed
-                if (requestId !== currentRequestIdRef.current || (currentIndex !== myIndex && !isInternal)) {
-                    setIsEngineBuffering(false);
-                    resolve();
-                    return;
-                }
-
-                setIsEngineBuffering(false);
-                if (data.audio) {
-                    const audio = new Audio(`data:audio/mp3;base64,${data.audio}`);
-                    audioRef.current = audio;
-                    audio.play().catch(e => console.error("Playback failed", e));
-                    audio.onended = () => {
-                        if (audioRef.current === audio) audioRef.current = null;
-                        resolve();
-                    };
-                } else {
-                    throw new Error("No audio data");
-                }
-            } catch (err) {
-                console.error("Audio Engine Error:", err);
-                setIsEngineBuffering(false);
-                setTimeout(resolve, 1500); // Fail gracefully
-            }
+    const playSpeech = (text) => {
+        return new Promise((resolve) => {
+            // FORCED BROWSER TTS (Ensuring Zero API Cost)
+            playBrowserSpeech(text, resolve);
         });
+    };
+
+    const playBrowserSpeech = (text, resolve) => {
+        try {
+            window.speechSynthesis.cancel();
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = 'en-GB';
+            utterance.rate = 0.95;
+            utterance.onend = () => resolve();
+            utterance.onerror = () => resolve();
+            window.speechSynthesis.speak(utterance);
+            
+            // Failsafe for stuck speech
+            setTimeout(() => { if (window.speechSynthesis.speaking) resolve(); }, 60000);
+        } catch (e) {
+            console.error("SpeechSynthesis error", e);
+            resolve();
+        }
     };
 
     const handleStart = () => {

@@ -340,64 +340,33 @@ const QuestFactoryPage = () => {
 
     const [loadingAudioId, setLoadingAudioId] = useState(null);
 
-    const playAudioSegment = async (segmentId, segmentData) => {
-        // If already playing this segment, stop it
-        if (currentlyPlayingAudioId === segmentId) {
-            if (audioElement) {
-                audioElement.pause();
-                audioElement.currentTime = 0;
-            }
-            setCurrentlyPlayingAudioId(null);
-            return;
-        }
-
+    const playAudioSegment = (segmentId, segmentData) => {
         // Stop any other playing audio
+        if (window.speechSynthesis) window.speechSynthesis.cancel();
         if (audioElement) {
             audioElement.pause();
             audioElement.currentTime = 0;
         }
 
-        let audioSource = segmentData.audio;
+        const text = segmentData.text;
+        if (!text) return;
 
-        // Lazy Fetch Logic
-        if (!audioSource && segmentData.lazy) {
-            try {
-                setLoadingAudioId(segmentId);
-                const res = await fetch(`${import.meta.env.VITE_API_URL}/api/lab/tts`, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        text: segmentData.text,
-                        gender: segmentData.gender,
-                        accent: segmentData.lang === 'en-GB' ? 'UK' : 'US'
-                    })
-                });
-                const data = await res.json();
-                if (data.audio) {
-                    audioSource = data.audio;
-                    // Cache it locally so we don't fetch again
-                    segmentData.audio = data.audio;
-                }
-            } catch (err) {
-                console.error("Failed to fetch lazy audio:", err);
-                alert("Audio fetch failed.");
-                return;
-            } finally {
-                setLoadingAudioId(null);
-            }
+        try {
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = 'en-GB'; // Default to UK for audit consistency
+            
+            utterance.onstart = () => {
+                setCurrentlyPlayingAudioId(segmentId);
+            };
+            
+            utterance.onend = () => {
+                setCurrentlyPlayingAudioId(null);
+            };
+
+            window.speechSynthesis.speak(utterance);
+        } catch (e) {
+            console.error("Browser TTS failed during audit:", e);
         }
-
-        if (!audioSource) return;
-
-        const audio = new Audio(`data:audio/mp3;base64,${audioSource}`);
-        audio.onended = () => {
-            setCurrentlyPlayingAudioId(null);
-            setAudioElement(null);
-        };
-
-        setAudioElement(audio);
-        setCurrentlyPlayingAudioId(segmentId);
-        audio.play().catch(e => console.error("Play failed:", e));
     };
 
     const handleApprove = async () => {

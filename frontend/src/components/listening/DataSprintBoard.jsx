@@ -107,32 +107,28 @@ const DataSprintBoard = ({ questData, onComplete, userNotes }) => {
         }
     };
 
-    const handlePlayAudio = async () => {
+    // TTS Logic (Forced Browser TTS)
+    const handlePlayAudio = () => {
         setIsPlaying(true);
         try {
-            const res = await fetch(`${import.meta.env.VITE_API_URL || 'http://localhost:3001'}/api/lab/tts`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    text: questData?.sprint_data?.audio_transcript || questData?.audio_transcript || "Starting Part A exam recording.",
-                    accent: 'UK',
-                    gender: 'FEMALE'
-                })
-            });
-            const data = await res.json();
-            if (data.audio) {
-                const audioBase64 = `data:audio/mp3;base64,${data.audio}`;
-                setCurrentAudioSrc(audioBase64);
-                const audio = new Audio(audioBase64);
-                audioRef.current = audio;
-                audio.play();
-                audio.onended = () => {
-                    setIsPlaying(false);
-                    audioRef.current = null;
-                };
-            } else {
-                throw new Error("TTS generation failed");
-            }
+            const text = questData?.sprint_data?.audio_transcript || questData?.audio_transcript || "Starting Part A exam recording.";
+            
+            if (window.speechSynthesis) window.speechSynthesis.cancel();
+            
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = 'en-GB';
+            utterance.rate = 1.0;
+
+            utterance.onend = () => {
+                setIsPlaying(false);
+            };
+
+            utterance.onerror = (e) => {
+                console.error("Browser TTS Error:", e);
+                setIsPlaying(false);
+            };
+
+            window.speechSynthesis.speak(utterance);
         } catch (e) {
             console.error("Audio Playback Error:", e);
             setIsPlaying(false);

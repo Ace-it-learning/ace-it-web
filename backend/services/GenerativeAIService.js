@@ -169,12 +169,7 @@ class GenerativeAIService {
                 model: modelName,
                 generationConfig: {
                     ...(config.generationConfig || {}),
-                    ...(config.audioOutput ? { 
-                        responseModalities: ["text", "audio"],
-                        speechConfig: config.speechConfig || {
-                            voiceConfig: { prebuiltVoiceConfig: { voiceName: "Achird" } }
-                        }
-                    } : {})
+                    ...(config.generationConfig || {})
                 },
                 safetySettings: vSafetySettings
             };
@@ -233,16 +228,7 @@ class GenerativeAIService {
                 console.log(`[AIService] ⚡ Using Studio Context Cache: ${config.cachedContent.substring(0, 40)}...`);
             }
 
-            // [2026] Multimodal Audio Config - ONLY available in v1beta
-            if (config.audioOutput) {
-                modelOptions.generationConfig = {
-                    ...modelOptions.generationConfig,
-                    responseModalities: ["text", "audio"],
-                    speechConfig: config.speechConfig || {
-                        voiceConfig: { prebuiltVoiceConfig: { voiceName: "Achird" } }
-                    }
-                };
-            }
+            // [2026] Multimodal Audio Config - REMOVED
 
             return this.genAI.getGenerativeModel(modelOptions, { apiVersion });
         }
@@ -269,16 +255,7 @@ class GenerativeAIService {
                 result.response.text = () => rawText;
             }
 
-            // [2026] Extract Multimodal Audio Content
-            const parts = result.response?.candidates?.[0]?.content?.parts || [];
-            const audioPart = parts.find(p => p.inlineData || p.fileData);
-            if (audioPart && audioPart.inlineData) {
-                result.audio = audioPart.inlineData.data; // Base64
-                console.log(`[AIService] 🎙️ Multimodal Audio Extracted (${result.audio.length} bytes)`);
-            } else if (config.audioOutput) {
-                console.warn(`[AIService] ⚠️ Audio Output requested but no audio part found in response.`);
-                console.warn(`[AIService] Response Parts:`, JSON.stringify(parts, null, 2));
-            }
+            // [2026] Multimodal Audio Extraction - REMOVED
         }
 
         return result;

@@ -1,0 +1,63 @@
+{
+  "meta": {
+    "subject": "English Language",
+    "paper_id": "Paper 3 (Listening & Integrated Skills)",
+    "topic": "Career Discovery Week",
+    "version": "2026_V1",
+    "description": "Mock Exam: Career Discovery Week & Industry Mentorship"
+  },
+  "Part_A": {
+    "name": "Compulsory Section (Listening Tasks)",
+    "audio_script": {
+      "Task_1": {
+        "title": "Mentorship Programme Enquiry",
+        "type": "Dialogue",
+        "speakers": ["Student", "Coordinator"],
+        "content": [
+          { "speaker": "Student", "line": "Hi, I'm interested in the Career Discovery Week. Can you tell me when it starts?" },
+          { "speaker": "Coordinator", "line": "Of course! It runs from July 15th to July 19th." }
+        ],
+        "questions": [
+          { "type": "Fill_in_Blanks", "number": 1, "text": "Career Discovery Week starts on July _________." }
+        ]
+      }
+    }
+  },
+  "Part_B": {
+    "situation": "You are a member of the Student Union. You are helping to organize the 'Career Discovery Week' where alumni return to share industry insights. You need to complete tasks based on a staff meeting and several documents.",
+    "data_file": [
+      {
+        "type": "email",
+        "title": "Instruction from Principal",
+        "content": "To: Student Union\nFrom: Principal\nSubject: Career Discovery Week\n\nPlease ensure we have a good mix of industries, particularly STEM and Creative Arts. We need mentors for the workshop on July 17th."
+      },
+      {
+        "type": "note",
+        "title": "Alumni Availability Note",
+        "content": "Mr. Wong (Engineer) - Available all week.\nMs. Lee (Designer) - Only available Wed/Fri."
+      }
+    ],
+    "Part_B1": {
+        "difficulty": "Easier",
+        "tasks": [
+            {
+                "id": "Task_5",
+                "type": "Email",
+                "instructions": "Write a short email to Mr. Wong (100 words) inviting him to the July 17th workshop.",
+                "tone": "Formal"
+            }
+        ]
+    },
+    "Part_B2": {
+        "difficulty": "Harder",
+        "tasks": [
+            {
+                "id": "Task_8",
+                "type": "Proposal",
+                "instructions": "Write a proposal (250 words) to the Principal suggesting how to improve industry engagement for next year, using info from the meeting.",
+                "tone": "Formal"
+            }
+        ]
+    }
+  }
+}

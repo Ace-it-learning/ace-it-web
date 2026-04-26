@@ -383,6 +383,15 @@ router.post('/evaluate_integrated', async (req, res) => {
             });
         }
         
+        // Update Mastery
+        if (uid && uid !== 'placeholder') {
+            const masteryScore = evaluation.overallScore || 0;
+            await UserProfileService.updateMicroSkillLevel(uid, 'english', 'Listening Part B', masteryScore, {
+                type: 'Quest',
+                difficulty: targetLevel || 4
+            });
+        }
+        
         res.json({ ...evaluation, xpResult });
     } catch (e) {
         console.error("Integrated Evaluation API Error:", e);
@@ -405,6 +414,15 @@ router.post('/evaluate_sprint', async (req, res) => {
                 subject: 'english',
                 paper: 'Listening',
                 score: `${evaluation.score}%`
+            });
+        }
+        
+        // Update Mastery
+        if (uid && uid !== 'placeholder') {
+            const masteryScore = evaluation.score || 0;
+            await UserProfileService.updateMicroSkillLevel(uid, 'english', 'Listening Part A', masteryScore, {
+                type: 'Quest',
+                difficulty: 4 // Part A is generally standard difficulty
             });
         }
         

@@ -181,6 +181,20 @@ router.post('/grade', async (req, res) => {
                 missionName: finalTopic
             });
         }
+        
+        // --- UPDATE MASTERY ---
+        if (uid && uid !== 'guest' && result.pillar_scores) {
+            const masteryScore = (result.overall_score || 4) / 7 * 100;
+            const writingSkills = ['writing_content', 'writing_language', 'writing_organization'];
+            
+            const masteryPromises = writingSkills.map(skillId => 
+                UserProfileService.updateMicroSkillLevel(uid, 'english', skillId, masteryScore, {
+                    type: 'Quest',
+                    difficulty: 4
+                })
+            );
+            await Promise.all(masteryPromises);
+        }
 
         // --- AWARD XP ---
         let xpAwarded = 0;

@@ -25,7 +25,7 @@ import ListeningResultPage from './pages/ListeningResultPage';
 import ListeningQuestMenu from './pages/ListeningQuestMenu'; // Phase 25 (Legacy)
 import ListeningBriefing from './components/listening/ListeningBriefing'; // Phase 25 (Refactor)
 import ListeningQuestPage from './pages/ListeningQuestPage'; // Phase 25
-import SpeakingResultPage from './pages/SpeakingResultPage';
+import SpeakingResultPage from './pages/mock-eng/SpeakingResultPage';
 import SpeakingDeliveryPage from './pages/SpeakingDeliveryPage';
 import SpeakingFlowPage from './pages/SpeakingFlowPage';
 import AchievementTimeline from './pages/AchievementTimeline';
@@ -434,6 +434,14 @@ function App() {
                   element={
                     <ProtectedRoute>
                       <SpeakingMockStudio />
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/mock-exam-eng/speaking/results/:examId"
+                  element={
+                    <ProtectedRoute>
+                      <SpeakingResultPage />
                     </ProtectedRoute>
                   }
                 />

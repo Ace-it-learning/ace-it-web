@@ -509,9 +509,24 @@ const ChatInterface = ({ onOpenQuest }) => {
                         } else if (location.state?.mockCompleted) {
                             isProcessedRef.current = true;
                             const { type, level, score, improvements } = location.state;
-                            let msg = `[SYSTEM: MOCK_COMPLETED: ${type.toUpperCase()} | Level: ${level} | Score: ${score}]`;
-                            if (improvements) msg += `\nImprovement Advice: ${improvements}`;
-                            handleSendMessage(msg, true);
+                            
+                            // 1. Send hidden system trigger to sync state with AI
+                            const systemMsg = `[SYSTEM: MOCK_COMPLETED: ${type.toUpperCase()} | Level: ${level} | Score: ${score}]`;
+                            handleSendMessage(systemMsg, true);
+
+                            // 2. Add improvement advice as a proper ASSISTANT message
+                            if (improvements) {
+                                const aiMsg = {
+                                    role: 'assistant',
+                                    content: improvements,
+                                    agentId: activeAgentId,
+                                    isSystemResponse: true
+                                };
+                                setMessages(prev => [...prev, aiMsg]);
+                                // Manually save to backend history so it persists with correctly mapped 'model' role
+                                saveMessageToBackend(aiMsg);
+                            }
+                            
                             window.history.replaceState({}, document.title);
                         } else if (location.state?.examCompleted) {
                             isProcessedRef.current = true;

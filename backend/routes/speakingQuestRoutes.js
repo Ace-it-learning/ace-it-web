@@ -8,6 +8,7 @@ const GenerativeAIService = require('../services/GenerativeAIService');
 const multer = require('multer');
 const upload = multer({ storage: multer.memoryStorage() });
 const UserProfileService = require('../services/UserProfileService');
+const SpeakingMockGradingService = require('../services/SpeakingMockGradingService');
 
 // Each router owns its sub-paths (e.g. /chat, /history, /stats)
 
@@ -540,6 +541,28 @@ router.post('/interaction/turn', upload.single('audio'), async (req, res) => {
     } catch (error) {
         console.error('[Speaking Interaction] Turn error:', error);
         res.status(500).json({ error: 'Failed to generate turn', details: error.message });
+    }
+});
+
+/**
+ * @route   POST /api/speaking/mock/submit
+ * @desc    Submit full Speaking Mock (Discussion + Individual) for grading
+ */
+router.post('/mock/submit', async (req, res) => {
+    try {
+        const { uid, mockData, chatHistory, individualQuestion, individualResponse } = req.body;
+
+        if (!uid || !mockData || !chatHistory) {
+            return res.status(400).json({ error: 'Missing required data for grading' });
+        }
+
+        console.log(`[SpeakingMock] Submitting full mock for user: ${uid}`);
+        const result = await SpeakingMockGradingService.gradeFullMock(uid, mockData, chatHistory, individualQuestion, individualResponse);
+
+        res.json(result);
+    } catch (error) {
+        console.error('[SpeakingMock] Submission error:', error);
+        res.status(500).json({ error: 'Failed to process Speaking Mock result', details: error.message });
     }
 });
 

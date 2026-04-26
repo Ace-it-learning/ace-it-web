@@ -143,8 +143,8 @@ const AchievementTimeline = () => {
                                     {t('timeline.active_days')}
                                 </p>
                                 <p className="text-4xl font-black text-gray-800 flex items-center gap-2">
-                                    {stats?.streakDays || 1}
-                                    <span className="text-xl">🔥</span>
+                                    {stats?.totalActiveDays || stats?.streakDays || 1}
+                                    <span className="text-xl" title={`Streak: ${stats?.streakDays || 0} days`}>🔥</span>
                                 </p>
                             </div>
 

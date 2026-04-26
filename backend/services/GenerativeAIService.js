@@ -122,13 +122,16 @@ class GenerativeAIService {
         this.isVertex = false;
         this.currentRegion = 'global/api_key';
 
+        // 2026 COST SAVER: In DEV, we map PRO requests to FLASH by default to prevent accidental Tier 1 billing.
+        const isDev = process.env.NODE_ENV === 'development' || !process.env.K_SERVICE;
+        
         this.studioModelMap = {
-            "ace-it-flash": "gemini-flash-latest",
-            "ace-it-pro": "gemini-pro-latest",
-            "gemini-1.5-flash": "gemini-flash-latest",
-            "gemini-1.5-pro": "gemini-pro-latest",
-            "gemini-flash-latest": "gemini-flash-latest",
-            "gemini-pro-latest": "gemini-pro-latest"
+            "ace-it-flash": "gemini-1.5-flash-latest",
+            "ace-it-pro": isDev ? "gemini-1.5-flash-latest" : "gemini-1.5-pro-latest",
+            "gemini-1.5-flash": "gemini-1.5-flash-latest",
+            "gemini-1.5-pro": isDev ? "gemini-1.5-flash-latest" : "gemini-1.5-pro-latest",
+            "gemini-flash-latest": "gemini-1.5-flash-latest",
+            "gemini-pro-latest": isDev ? "gemini-1.5-flash-latest" : "gemini-1.5-pro-latest"
         };
 
         console.log("[AIService] Initialized Google AI Studio (Local Mode)");

@@ -118,11 +118,16 @@ class GamificationService {
                     console.log(`[Gamification] Streak Reset/Start: ${uid} reset to 1 day.`);
                 }
 
+                // Cumulative Active Days Logic (NEW)
+                // Initialize from streak if totalActiveDays is missing
+                stats.totalActiveDays = (stats.totalActiveDays || stats.streakDays || 0) + 1;
+
                 stats.daily_xp = 0; // Reset for new day
                 stats.last_xp_date = today;
             } else if (!stats.streakDays) {
                 // Ensure at least 1 if they have activity today
                 stats.streakDays = 1;
+                if (!stats.totalActiveDays) stats.totalActiveDays = 1;
             }
 
             if (stats.daily_xp >= this.config.anti_cheating.daily_xp_cap) {
@@ -423,6 +428,36 @@ class GamificationService {
             const totalXP = data.total_xp || data.xp || 0;
             const levelData = this.calculateLevelFromXP(totalXP);
             const inventory = inventorySnap.docs.map(d => d.data());
+
+            // --- BACKFILL: totalActiveDays ---
+            // If the field is missing, we calculate it from the timeline to provide an accurate historical count.
+            if (data.totalActiveDays === undefined) {
+                try {
+                    console.log(`[GamificationService] Backfilling totalActiveDays for ${uid}...`);
+                    const timelineSnap = await this.db.collection('users').doc(uid).collection('timeline').get();
+                    const uniqueDays = new Set();
+                    
+                    timelineSnap.forEach(tDoc => {
+                        const tData = tDoc.data();
+                        const ts = tData.timestamp || tData.date;
+                        if (ts) {
+                            const dateStr = (ts.toDate ? ts.toDate() : new Date(ts)).toDateString();
+                            uniqueDays.add(dateStr);
+                        }
+                    });
+
+                    data.totalActiveDays = Math.max(uniqueDays.size, data.streakDays || 1);
+                    
+                    // Save back to DB so we don't have to re-calculate next time
+                    await this.db.collection('users').doc(uid).collection('stats').doc('main').update({
+                        totalActiveDays: data.totalActiveDays
+                    });
+                    console.log(`[GamificationService] Backfill complete: ${data.totalActiveDays} days.`);
+                } catch (backfillError) {
+                    console.error(`[GamificationService] Backfill failed for ${uid}:`, backfillError);
+                    data.totalActiveDays = data.streakDays || 1;
+                }
+            }
 
             return {
                 ...data,

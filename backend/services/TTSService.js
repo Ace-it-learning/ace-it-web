@@ -150,8 +150,13 @@ async function generateSpeech(text, languageCode = 'en-US', gender = 'FEMALE', s
 
         console.log(`[TTSService] 🎙️ Primary Path: Standard TTS (${effectiveLang}) via ${useSDK ? 'SDK' : 'REST'}...`);
         
-        // DEV / API KEY Path (REST fallback only if no JSON key)
+        // DEV / API KEY Path - HARD BLOCKED to prevent charges
         if (!useSDK) {
+            if (isDev) {
+                console.warn(`[TTSService] 🛡️  DEV HARDENING: Blocking REST fallback to prevent billing.`);
+                throw new Error("Paid TTS REST API is disabled in DEV. Using Browser TTS fallback.");
+            }
+            
             const axios = require('axios');
             const url = `https://texttospeech.googleapis.com/v1/text:synthesize?key=${apiKey}`;
             

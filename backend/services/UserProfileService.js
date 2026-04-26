@@ -228,13 +228,37 @@ class UserProfileService {
 
         try {
             const statsRef = this.usersCollection.doc(uid).collection('stats').doc('main');
+            const today = new Date().toDateString();
+            const yesterday = new Date(Date.now() - 86400000).toDateString();
 
-            await statsRef.set({
-                xp: admin.firestore.FieldValue.increment(amount),
-                lastActivity: admin.firestore.FieldValue.serverTimestamp()
-            }, { merge: true });
+            await this.db.runTransaction(async (t) => {
+                const statsDoc = await t.get(statsRef);
+                let stats = statsDoc.exists ? statsDoc.data() : { xp: 0, level: 1, streakDays: 0, last_xp_date: null };
 
-            console.log(`[UserProfileService] Awarded ${amount} XP to ${uid} for ${source}`);
+                // Handle Streak and Active Days (Sync with GamificationService)
+                if (stats.last_xp_date !== today) {
+                    if (stats.last_xp_date === yesterday) {
+                        stats.streakDays = (stats.streakDays || 0) + 1;
+                    } else {
+                        stats.streakDays = 1;
+                    }
+                    stats.totalActiveDays = (stats.totalActiveDays || stats.streakDays || 0) + 1;
+                    stats.last_xp_date = today;
+                } else if (!stats.streakDays) {
+                    stats.streakDays = 1;
+                    if (!stats.totalActiveDays) stats.totalActiveDays = 1;
+                }
+
+                // Update XP
+                stats.xp = (stats.xp || 0) + amount;
+                stats.total_xp = (stats.total_xp || stats.xp || 0) + amount;
+                stats.lastActivity = admin.firestore.FieldValue.serverTimestamp();
+                stats.lastStudyDate = admin.firestore.FieldValue.serverTimestamp(); // For legacy compatibility
+
+                t.set(statsRef, stats, { merge: true });
+            });
+
+            console.log(`[UserProfileService] Awarded ${amount} XP to ${uid} for ${source} (Streak: updated)`);
 
             // Record timeline event
             await this.recordTimelineEvent(uid, {
@@ -361,6 +385,30 @@ class UserProfileService {
 
             const doc = await this.usersCollection.doc(uid).collection('progress').doc(subject).get();
             const result = doc.exists ? doc.data() : null;
+
+            // --- PILLAR AGGREGATION FOR RADAR CHART (English Only) ---
+            if (result && subject === 'english' && result.microSkills) {
+                const skills = result.microSkills;
+                const avg = (list) => {
+                    const valid = list.map(s => skills[s]?.level || 0).filter(l => l > 0);
+                    return valid.length > 0 ? valid.reduce((a, b) => a + b, 0) / valid.length : 1;
+                };
+
+                // Speaking Pillars - Recalculated for Radar
+                skills.speaking_delivery = { level: avg(['speaking_pronunciationClarity', 'speaking_intonation', 'speaking_paceRhythm', 'speaking_grammaticalAccuracy', 'speaking_delivery']) };
+                skills.speaking_strategies = { level: avg(['speaking_turnTaking', 'speaking_activeListening', 'speaking_facilitation', 'speaking_strategies']) };
+                skills.speaking_language = { level: avg(['speaking_spontaneity', 'speaking_confidence', 'speaking_vocabularyInSpeech', 'speaking_language']) };
+                skills.speaking_organization = { level: avg(['speaking_logicalDevelopment', 'speaking_relevance', 'speaking_organisation', 'speaking_organization']) };
+
+                // Writing Pillars - Recalculated for Radar
+                skills.writing_content = { level: avg(['writing_relevance', 'writing_development', 'writing_originality', 'writing_content']) };
+                skills.writing_language = { level: avg(['writing_vocabularyRange', 'writing_collocations', 'writing_idiomaticExpressions', 'writing_registerAppropriate', 'writing_wordChoicePrecision', 'writing_sentenceVariety', 'writing_advancedStructures', 'writing_grammaticalAccuracy', 'writing_punctuation', 'writing_language']) };
+                skills.writing_organization = { level: avg(['writing_paragraphStructure', 'writing_transitions', 'writing_overallCoherence', 'writing_organization']) };
+
+                // Listening Pillars (Part A is usually granular, Part B is Pillar)
+                if (!skills.listening_part_a) skills.listening_part_a = { level: avg(['listening_mainIdea', 'listening_detailListening', 'listening_noteTaking', 'listening_prediction', 'listening_gist', 'listening_accentRecognition', 'listening_speedProcessing', 'listening_speakerAttitude', 'listening_ambiguityHandling', 'listening_part_a']) };
+            }
+
             if (result) CacheService.setDbCache(cacheKey, result);
             return result;
         } catch (err) {
@@ -1061,7 +1109,7 @@ class UserProfileService {
         if (!skillId) return;
 
         const cacheKey = `skillmap_${subject}_${uid}`;
-        CacheService.invalidateDbCache(cacheKey);
+        CacheService.invalidateUserDbCache(uid);
 
         try {
             const progressRef = this.usersCollection.doc(uid).collection('progress').doc(subject);
@@ -1138,12 +1186,27 @@ class UserProfileService {
             }
 
             // 6. Gate check & Redemption
-            const minCorrect = DSE_SCORING.MIN_CORRECT_FOR_LEVEL[cappedCandidateLevel] || 0;
-            if (skillData.totalCorrect >= minCorrect) {
-                // Redemption: High accuracy in recent window allows level to match candidate.
-                // We don't use Math.max here necessarily because if a student truly gets worse, 
-                // the history will eventually reflect it, but it's harder to drop than to rise.
-                skillData.level = cappedCandidateLevel;
+            // We find the highest level that the student qualifies for based on totalCorrect,
+            // up to the cappedCandidateLevel (which is their current potential).
+            let qualifiedLevel = 1;
+            for (let l = 1; l <= cappedCandidateLevel; l++) {
+                const threshold = DSE_SCORING.MIN_CORRECT_FOR_LEVEL[l] || 0;
+                if (skillData.totalCorrect >= threshold) {
+                    qualifiedLevel = l;
+                } else {
+                    break;
+                }
+            }
+            
+            // Apply promotion. 
+            // We allow promotion to the highest qualified level.
+            // If they are performing poorly, history will eventually drag avgGrade down.
+            skillData.level = Math.max(existing.level || 1, qualifiedLevel);
+            
+            // Special Case: If their window performance is significantly LOWER than their current level, 
+            // we let the level drop to match the performance (demotion).
+            if (candidateLevel < skillData.level) {
+                skillData.level = candidateLevel;
             }
 
             skillData.accuracy = Math.round((avgGrade / 7) * 100) / 100;
@@ -1567,10 +1630,25 @@ ${tutor.tone ? `**TONE & MANNER**: ${tutor.tone}` : ''}
                 'skimming & scanning': 'reading_skimmingScanning',
                 'paraphrasing': 'reading_paraphrasing',
                 'cohesion & reference': 'reading_cohesionReference',
+                // Lab/Quest Specific Tags
+                'writing weekly': 'writing_organization',
+                'listening weekly': 'listening_part_a',
+                'reading weekly': 'reading_mainIdea',
+                'listening part a': 'listening_part_a',
+                'listening part b': 'listening_content',
+                // Speaking Normalization
+                'speaking_organisation': 'speaking_organization',
+                'speaking_vocabularyInSpeech': 'speaking_language',
+                'pronunciation': 'speaking_pronunciationClarity',
+                'language': 'speaking_language',
+                'ideas': 'speaking_logicalDevelopment',
+                'strategies': 'speaking_strategies',
+                'delivery': 'speaking_delivery',
                 // Mock Specific Tags
                 'content': 'writing_relevance',
-                'language': 'writing_grammaticalAccuracy',
-                'organization': 'writing_paragraphStructure',
+                'writing_content': 'writing_relevance',
+                'writing_language': 'writing_grammaticalAccuracy',
+                'writing_organization': 'writing_paragraphStructure',
                 'appropriacy': 'writing_registerAppropriate'
             };
             if (mappings[normalizedInput]) return mappings[normalizedInput];
@@ -1615,6 +1693,36 @@ ${tutor.tone ? `**TONE & MANNER**: ${tutor.tone}` : ''}
             console.log(`[UserProfileService] Successfully synced ${promises.length} skills from Mock.`);
         } catch (err) {
             console.error(`[UserProfileService] Failed to sync Mock results:`, err);
+        }
+    }
+
+    /**
+     * Compatibility wrapper for legacy saveSkillMap calls.
+     * Maps bulk updates to individual updateMicroSkillLevel calls to maintain history/stats.
+     */
+    async saveSkillMap(uid, subject, mapData) {
+        if (!uid || uid === 'guest' || !mapData) return;
+        console.log(`[UserProfileService] saveSkillMap (compat) called for ${uid} / ${subject}`);
+        
+        try {
+            const microSkills = mapData.microSkills || {};
+            const promises = Object.entries(microSkills).map(([skillId, data]) => {
+                // If the data already has history/stats, we might be restoring a backup.
+                // But usually it's from assessAllSkills which only has level.
+                const level = data.level || 1;
+                const masteryScore = (level / 7) * 100;
+                
+                return this.updateMicroSkillLevel(uid, subject, skillId, masteryScore, {
+                    type: 'Assessment',
+                    difficulty: 4
+                });
+            });
+            
+            await Promise.all(promises);
+            return { success: true };
+        } catch (error) {
+            console.error(`[UserProfileService] saveSkillMap failed:`, error);
+            throw error;
         }
     }
 }

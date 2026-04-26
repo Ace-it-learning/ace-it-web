@@ -139,7 +139,6 @@ const RedemptionStore = () => {
                     {[
                         { id: 'standard', name: t('redemption.standard_box'), cost: 500, icon: '📦', color: 'from-blue-600 to-indigo-700', desc: t('redemption.standard_box_desc') },
                         { id: 'tutor', name: t('redemption.tutor_box'), cost: 1500, icon: '⭐', color: 'from-amber-500 to-orange-600', desc: t('redemption.tutor_box_desc') },
-                        { id: 'aesthetics', name: t('redemption.frames_box'), cost: 800, icon: '✨', color: 'from-emerald-500 to-teal-600', desc: t('redemption.frames_box_desc') },
                     ].map(box => (
                         <div key={box.id} className={`bg-gradient-to-r ${box.color} rounded-3xl p-6 text-white shadow-xl flex items-center justify-between group overflow-hidden relative`}>
                             <div className="flex items-center gap-5 relative z-10">

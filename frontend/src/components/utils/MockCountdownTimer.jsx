@@ -6,17 +6,28 @@ const MockCountdownTimer = ({ seconds: initialSeconds, onTimeUp, isCritical = 30
     const [timeLeft, setTimeLeft] = useState(initialSeconds);
 
     useEffect(() => {
-        if (timeLeft <= 0) {
+        setTimeLeft(initialSeconds);
+    }, [initialSeconds]);
+
+    useEffect(() => {
+        if (initialSeconds <= 0) {
             onTimeUp?.();
             return;
         }
 
         const timer = setInterval(() => {
-            setTimeLeft(prev => prev - 1);
+            setTimeLeft(prev => {
+                if (prev <= 1) {
+                    clearInterval(timer);
+                    onTimeUp?.();
+                    return 0;
+                }
+                return prev - 1;
+            });
         }, 1000);
 
         return () => clearInterval(timer);
-    }, [timeLeft, onTimeUp]);
+    }, [initialSeconds, onTimeUp]);
 
     const formatTime = (totalSeconds) => {
         if (typeof totalSeconds !== 'number' || isNaN(totalSeconds)) return "00:00";

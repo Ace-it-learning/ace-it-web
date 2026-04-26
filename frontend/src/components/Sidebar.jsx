@@ -210,19 +210,10 @@ const Sidebar = () => {
 
                     {/* English Tutor Special Buttons */}
                     {activeAgentId === 'english' && (
-                        <div className="w-full flex flex-row gap-2">
-                            <button
-                                onClick={() => navigate('/dashboard', { state: { openRoadmap: 'ENGLISH', roadmapFilter: 'WRITING' } })}
-                                className="flex-1 flex items-center gap-2 px-3 py-2 bg-indigo-50/50 hover:bg-indigo-100/50 border border-indigo-100 hover:border-indigo-200 rounded-xl shadow-sm transition-all group"
-                            >
-                                <div className="size-7 rounded-lg bg-indigo-100 text-indigo-600 flex items-center justify-center group-hover:scale-110 transition-transform shadow-sm">
-                                    <Sparkles className="w-3.5 h-3.5" />
-                                </div>
-                                <p className="text-[10px] font-bold text-indigo-950 uppercase tracking-tight">Writing Quests</p>
-                            </button>
+                        <div className="w-full">
                             <button
                                 onClick={() => window.location.href = '/vocabulary'}
-                                className="flex-1 flex items-center gap-2 px-3 py-2 bg-emerald-50/50 hover:bg-emerald-100/50 border border-emerald-100 hover:border-emerald-200 rounded-xl shadow-sm transition-all group"
+                                className="w-full flex items-center gap-2 px-3 py-2 bg-emerald-50/50 hover:bg-emerald-100/50 border border-emerald-100 hover:border-emerald-200 rounded-xl shadow-sm transition-all group"
                             >
                                 <div className="size-7 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center group-hover:scale-110 transition-transform shadow-sm">
                                     <BookOpen className="w-3.5 h-3.5" />

@@ -124,7 +124,6 @@ const CardCollection = () => {
                 {[
                     { id: 'student', label: t('collection.students'), icon: GraduationCap, count: stats.ownedStudentCards, total: stats.totalStudentCards },
                     { id: 'tutor', label: t('collection.tutors'), icon: User, count: stats.ownedTutorCards, total: stats.totalTutorCards },
-                    { id: 'frame', label: t('collection.frames'), icon: Sparkles, count: stats.ownedFrames, total: stats.avatarFramesCount || avatarFrames.length },
                 ].map(item => (
                     <button
                         key={item.id}

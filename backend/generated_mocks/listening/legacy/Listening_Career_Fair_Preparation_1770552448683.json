@@ -1,0 +1,388 @@
+{
+  "meta": {
+    "subject": "English Language",
+    "paper_id": "Paper 3 (Listening & Integrated Skills)",
+    "version": "2026_V1",
+    "description": "Mock Exam on Career Fair Preparation"
+  },
+  "Part_A": {
+    "name": "Compulsory Section (Listening Tasks)",
+    "audio_script": {
+      "Task_1": {
+        "title": "Career Fair Booking",
+        "type": "Dialogue",
+        "speakers": [
+          "Clerk",
+          "Student"
+        ],
+        "script": [
+          {
+            "speaker": "Clerk",
+            "dialogue": "Good morning, Career Services. How can I help you?"
+          },
+          {
+            "speaker": "Student",
+            "dialogue": "Hi, I'm calling to book a booth for our student society at the upcoming Career Fair."
+          },
+          {
+            "speaker": "Clerk",
+            "dialogue": "Certainly. Which society are you representing?"
+          },
+          {
+            "speaker": "Student",
+            "dialogue": "The Engineering Innovation Society."
+          },
+          {
+            "speaker": "Clerk",
+            "dialogue": "Okay. And what's your preferred date? The fair runs from November 15th to the 17th."
+          },
+          {
+            "speaker": "Student",
+            "dialogue": "We'd like to book for the 16th, please."
+          },
+          {
+            "speaker": "Clerk",
+            "dialogue": "Let me check availability... Alright, the 16th is available. What size booth would you require?"
+          },
+          {
+            "speaker": "Student",
+            "dialogue": "A standard booth, please. That's 3 meters by 2 meters, right?"
+          },
+          {
+            "speaker": "Clerk",
+            "dialogue": "That's correct. And do you need any additional equipment, such as a table or chairs?"
+          },
+          {
+            "speaker": "Student",
+            "dialogue": "Yes, please. We'll need one table and two chairs."
+          },
+          {
+            "speaker": "Clerk",
+            "dialogue": "Okay, I've noted that down. Can I have your name and contact number, please?"
+          },
+          {
+            "speaker": "Student",
+            "dialogue": "It's Emily Chan, and my number is 9123 4567."
+          },
+          {
+            "speaker": "Clerk",
+            "dialogue": "Thank you, Emily. The total cost will be $500 for the booth and equipment. You can pay online through our website. I'll send you the link. Please pay before November 1st."
+          },
+          {
+            "speaker": "Student",
+            "dialogue": "Great, thanks! One last thing, is there parking available for exhibitors?"
+          },
+          {
+            "speaker": "Clerk",
+            "dialogue": "Yes, there's limited parking. You'll need to register your car online beforehand. The link will also be in the email."
+          },
+          {
+            "speaker": "Student",
+            "dialogue": "Perfect, thanks so much for your help!"
+          },
+          {
+            "speaker": "Clerk",
+            "dialogue": "You're welcome! We look forward to seeing you at the Career Fair."
+          }
+        ],
+        "questions": [
+          {
+            "type": "Fill_in_Blanks",
+            "text": "Society Name: _________"
+          },
+          {
+            "type": "Fill_in_Blanks",
+            "text": "Date of Booking: November _________"
+          },
+          {
+            "type": "Fill_in_Blanks",
+            "text": "Booth Size: _________ meters by 2 meters"
+          },
+          {
+            "type": "Fill_in_Blanks",
+            "text": "Number of Chairs: _________"
+          },
+          {
+            "type": "Fill_in_Blanks",
+            "text": "Payment Deadline: November _________"
+          }
+        ]
+      },
+      "Task_2": {
+        "title": "Career Fair Preparation Tips",
+        "type": "Dialogue",
+        "speakers": [
+          "Host",
+          "Expert1",
+          "Expert2"
+        ],
+        "script": [
+          {
+            "speaker": "Host",
+            "dialogue": "Welcome back to Career Talk! Today, we have two career experts, Ms. Lee and Mr. Wong, to share tips on preparing for the upcoming Career Fair. Welcome!"
+          },
+          {
+            "speaker": "Expert1",
+            "dialogue": "Thank you for having us."
+          },
+          {
+            "speaker": "Expert2",
+            "dialogue": "Glad to be here."
+          },
+          {
+            "speaker": "Host",
+            "dialogue": "So, what's the first thing students should do?"
+          },
+          {
+            "speaker": "Expert1",
+            "dialogue": "Research! Before you even step foot in the fair, research the companies attending. Identify those that align with your interests and skills. Look at their websites, understand their mission, and see what kind of roles they offer."
+          },
+          {
+            "speaker": "Expert2",
+            "dialogue": "I agree. And tailor your resume accordingly. Highlight the skills and experiences that are relevant to the companies you're targeting. A generic resume won't cut it."
+          },
+          {
+            "speaker": "Host",
+            "dialogue": "That makes sense. What about attire?"
+          },
+          {
+            "speaker": "Expert1",
+            "dialogue": "First impressions are crucial. Dress professionally. A suit or smart business attire is always a safe bet. Avoid casual wear like jeans or t-shirts."
+          },
+          {
+            "speaker": "Expert2",
+            "dialogue": "And don't forget about your elevator pitch. Prepare a concise and compelling summary of who you are, what you're looking for, and why you're a good fit for the company. Practice it so you can deliver it confidently."
+          },
+          {
+            "speaker": "Host",
+            "dialogue": "Any tips on networking at the fair itself?"
+          },
+          {
+            "speaker": "Expert1",
+            "dialogue": "Be proactive! Don't just stand around waiting to be approached. Approach the recruiters, introduce yourself, and ask thoughtful questions. Show genuine interest in the company."
+          },
+          {
+            "speaker": "Expert2",
+            "dialogue": "Collect business cards and follow up after the fair. Send a thank-you note or email to the recruiters you spoke with, reiterating your interest and referencing something specific you discussed."
+          },
+          {
+            "speaker": "Host",
+            "dialogue": "Great advice! What are some common mistakes students make?"
+          },
+          {
+            "speaker": "Expert1",
+            "dialogue": "Not being prepared is a big one. Also, being too shy to approach recruiters or not having specific questions to ask. Remember, they're there to meet potential candidates."
+          },
+          {
+            "speaker": "Expert2",
+            "dialogue": "Another mistake is focusing solely on large, well-known companies and overlooking smaller or lesser-known ones. Sometimes, the best opportunities are found in unexpected places."
+          },
+          {
+            "speaker": "Host",
+            "dialogue": "Excellent points! Any final words of wisdom?"
+          },
+          {
+            "speaker": "Expert1",
+            "dialogue": "Be confident, be yourself, and remember that the Career Fair is a great opportunity to network and learn about different career paths."
+          },
+          {
+            "speaker": "Expert2",
+            "dialogue": "Exactly. And don't be discouraged if you don't get a job offer right away. The fair is a stepping stone, and every interaction is a learning experience."
+          },
+          {
+            "speaker": "Host",
+            "dialogue": "Thank you both for your invaluable insights! That's all the time we have for today. Join us next week for more Career Talk."
+          }
+        ],
+        "questions": [
+          {
+            "type": "Table_Completion",
+            "table_header": [
+              "Preparation Step",
+              "Expert 1 (Ms. Lee)",
+              "Expert 2 (Mr. Wong)"
+            ],
+            "rows": [
+              {
+                "Preparation Step": "Before the Fair",
+                "Expert 1 (Ms. Lee)": "_________ companies.",
+                "Expert 2 (Mr. Wong)": "Tailor your _________."
+              },
+              {
+                "Preparation Step": "Attire",
+                "Expert 1 (Ms. Lee)": "Dress _________",
+                "Expert 2 (Mr. Wong)": "Prepare your _________ pitch."
+              },
+              {
+                "Preparation Step": "At the Fair",
+                "Expert 1 (Ms. Lee)": "Be _________.",
+                "Expert 2 (Mr. Wong)": "_________ recruiters."
+              },
+              {
+                "Preparation Step": "After the Fair",
+                "Expert 1 (Ms. Lee)": "",
+                "Expert 2 (Mr. Wong)": "Send a _________."
+              }
+            ]
+          }
+        ]
+      },
+      "Task_3": {
+        "title": "Creating a Career Fair Strategy",
+        "type": "Monologue",
+        "speaker": "CareerAdvisor",
+        "script": [
+          {
+            "speaker": "CareerAdvisor",
+            "dialogue": "Hello everyone, welcome to the Career Fair Strategy Workshop. Today, we'll outline a step-by-step approach to maximize your Career Fair experience. First, **(1) start by setting clear goals**. What do you hope to achieve? Are you looking for an internship, a graduate job, or simply to network and learn about different industries? Defining your objectives will help you focus your efforts. Next, **(2) research attending companies**. Utilize the Career Fair website or brochure to identify companies that align with your interests and career goals. Make a list of your top 5-10 target companies. Then, **(3) prepare your resume and elevator pitch**. Tailor your resume to highlight the skills and experiences that are relevant to your target companies. Craft a concise and compelling elevator pitch that summarizes who you are, what you're looking for, and why you're a good fit. After this, **(4) plan your route**. Before the fair, study the floor plan and map out your route. Prioritize your target companies and plan to visit them first. Allocate enough time for each company, but be flexible and adjust your route as needed. Once you have the route, **(5) practice professional etiquette**. Remember to dress professionally, make eye contact, offer a firm handshake, and listen attentively. Be polite and respectful to recruiters, even if they're busy. Finally, **(6) follow up strategically**. After the fair, send thank-you notes or emails to the recruiters you spoke with. Reiterate your interest in the company and reference something specific you discussed. Stay connected on LinkedIn and continue networking with industry professionals."
+          }
+        ],
+        "questions": [
+          {
+            "type": "Flow_Chart",
+            "steps": [
+              "1. Set clear _______.",
+              "2. _______ attending companies.",
+              "3. Prepare resume and _______ pitch.",
+              "4. _______ your route.",
+              "5. Practice professional _______.",
+              "6. _______ up strategically."
+            ]
+          }
+        ]
+      },
+      "Task_4": {
+        "title": "The Future of Work",
+        "type": "Monologue",
+        "speaker": "Professor",
+        "script": [
+          {
+            "speaker": "Professor",
+            "dialogue": "Good morning, everyone. Today, we'll be discussing the future of work and how to prepare for the evolving job market. The world of work is undergoing rapid transformation, driven by technological advancements, globalization, and changing demographics. One of the key trends is the **(1) rise of automation and artificial intelligence**. Many routine and repetitive tasks are being automated, leading to job displacement in some sectors. However, this also creates new opportunities in areas such as AI development, data analysis, and robotics. Another important trend is the **(2) increasing importance of soft skills**. While technical skills are still essential, employers are increasingly valuing soft skills such as communication, collaboration, problem-solving, and critical thinking. These skills are difficult to automate and are crucial for success in a dynamic and complex work environment. Furthermore, we're seeing a **(3) shift towards a more flexible and agile workforce**. The traditional 9-to-5 job is becoming less common, as more companies embrace remote work, freelancing, and contract-based employment. This requires individuals to be adaptable, self-motivated, and able to manage their own time and workload effectively. Finally, continuous learning is more critical than ever. The skills and knowledge that are in demand today may not be relevant in the future, so it's important to **(4) embrace lifelong learning and stay up-to-date with the latest developments in your field**. Take online courses, attend workshops, and read industry publications to continuously enhance your skills and knowledge. In conclusion, preparing for the future of work requires a combination of technical skills, soft skills, adaptability, and a commitment to lifelong learning. By embracing these principles, you can position yourself for success in the evolving job market."
+          }
+        ],
+        "questions": [
+          {
+            "type": "Multiple_Choice",
+            "question": "According to the professor, what is a key driver of the changing world of work?",
+            "options": [
+              "A) Decreasing globalization",
+              "B) Technological advancements",
+              "C) Stable demographics",
+              "D) Reduced competition"
+            ],
+            "answer": "B"
+          },
+          {
+            "type": "Multiple_Choice",
+            "question": "What skill is becoming increasingly important, according to the professor?",
+            "options": [
+              "A) Data entry",
+              "B) Repetitive tasks",
+              "C) Critical thinking",
+              "D) Physical labor"
+            ],
+            "answer": "C"
+          },
+          {
+            "type": "Multiple_Choice",
+            "question": "What is the professor's opinion on the traditional 9-to-5 job?",
+            "options": [
+              "A) It is becoming more common.",
+              "B) It is the only viable option.",
+              "C) It is becoming less common.",
+              "D) It is essential for job security."
+            ],
+            "answer": "C"
+          },
+          {
+            "type": "Multiple_Choice",
+            "question": "What does the professor recommend for continuous learning?",
+            "options": [
+              "A) Ignoring industry publications",
+              "B) Relying solely on past knowledge",
+              "C) Avoiding online courses",
+              "D) Taking online courses"
+            ],
+            "answer": "D"
+          }
+        ]
+      }
+    }
+  },
+  "Part_B": {
+    "name": "Integrated Skills (Data File + Audio)",
+    "data_file": [
+      {
+        "type": "email",
+        "title": "Career Fair Invitation",
+        "content": "Dear Students,\n\nYou are cordially invited to attend the Annual University Career Fair on November 16th and 17th, from 10:00 AM to 4:00 PM in the University Sports Complex. This year's fair features over 100 leading companies from various industries, offering internship and graduate job opportunities. Prepare to network with recruiters, learn about different career paths, and explore your future potential.\n\nWe strongly encourage you to register for the Career Fair on our website. Registered attendees will receive a free Career Fair Guide and access to exclusive workshops and seminars. Remember to bring multiple copies of your resume and dress professionally.\n\nWe look forward to seeing you there!\n\nSincerely,\nThe Career Services Team"
+      },
+      {
+        "type": "minutes",
+        "title": "Career Fair Planning Meeting",
+        "content": "Minutes of Career Fair Planning Meeting\nDate: October 20th, 2024\nAttendees: John Smith (Chair), Emily Chan, David Lee, Sarah Wong\n\nAgenda:\n1. Review of Exhibitor List: The list of confirmed exhibitors was reviewed. Marketing and Finance companies were lacking. Action: David Lee will contact additional firms.\n2. Workshop Schedule: The workshop schedule was finalized. Topics include Resume Writing, Interview Skills, and Networking Strategies. Action: Sarah Wong to confirm speaker availability.\n3. Volunteer Recruitment: Additional volunteers are needed to assist with registration and logistics. Action: Emily Chan to recruit volunteers from student societies.\n4. Marketing and Promotion: The Career Fair will be promoted through social media, email, and posters. Action: John Smith to oversee marketing efforts."
+      },
+      {
+        "type": "poster",
+        "title": "Career Fair Poster",
+        "content": "(Image of a Career Fair Poster) Headline: Launch Your Future! Join the Annual University Career Fair. November 16-17, University Sports Complex. Featuring 100+ Leading Companies. Workshops, Networking Opportunities, Free Career Fair Guide. Register Online! [University Website]"
+      },
+      {
+        "type": "webpage",
+        "title": "Career Fair Website Excerpt",
+        "content": "Welcome to the University Career Fair Website!\n\nHere you can find all the information you need about the upcoming Career Fair. Explore the list of participating companies, view the workshop schedule, register for the fair, and download our Career Fair Guide. Don't miss this opportunity to connect with top employers and take the first step towards your dream career!\n\nFeatured Companies: [List of company logos].\nWorkshop Schedule: [Table of workshop titles, times, and locations]."
+      },
+      {
+        "type": "note",
+        "title": "Emily's Notes",
+        "content": "Career Fair To-Do List:\n- Book booth for Engineering Society (Paid)\n- Recruit Volunteers (Ask Peter, Mary, Tom)\n- Design Booth Display (Showcase projects)\n- Prepare Society Introduction\n- Update my resume (Add recent projects)"
+      }
+    ],
+    "audio_script": {
+      "Task_5_6_7": {
+        "type": "Audio Note",
+        "speaker": "Professor Davis",
+        "script": [
+          {
+            "speaker": "Professor Davis",
+            "dialogue": "Alright students, listen up. I've reviewed your initial plans for the Career Fair, and I have some feedback. Firstly, the proposed workshop on 'Negotiating Your Salary' is excellent and highly relevant. Please ensure the speaker has real-world experience and can provide practical tips. Secondly, I saw the planned marketing campaign. Very creative, but I am afraid the budget is a bit tight, can we think of other methods that would save our budget? Emily, the volunteer recruitment is going well, but can you focus on getting some senior students involved? Their experience would be invaluable. Lastly, David, I noticed that we're lacking representation from technology companies. Can you prioritize reaching out to some local tech startups? They are very eager to join. One of my recommendations would be to send personalized emails to the companies. I will send a template to you guys, just replace the company names and specific reasons to invite them. Remember, the Career Fair is a crucial opportunity for our students. Let's make it a success!"
+          }
+        ]
+      }
+    },
+    "tasks": [
+      {
+        "id": "Task_5",
+        "type": "Email / Short Report",
+        "prompt": "Write an email to David Lee, summarizing Professor Davis's feedback on the Career Fair plan, focusing on the need to attract more technology companies and the suggestion to use personalized emails. (150-200 words)",
+        "tone": "Semi-formal",
+        "word_count": "150-200"
+      },
+      {
+        "id": "Task_6",
+        "type": "Article / Speech",
+        "prompt": "Write a short article for the university newspaper, promoting the Career Fair to students. Highlight the benefits of attending and address the importance of preparing effectively. (200-250 words)",
+        "tone": "Persuasive/Public",
+        "word_count": "200-250"
+      },
+      {
+        "id": "Task_7",
+        "type": "Proposal",
+        "prompt": "Write a proposal to the Career Services Department, suggesting ways to improve the Career Fair in the future, based on the challenges and successes of this year's event. Consider aspects such as marketing, exhibitor recruitment, and student engagement. (250-300 words)",
+        "tone": "Formal",
+        "word_count": "250-300"
+      }
+    ]
+  },
+  "audio_strategy": {
+    "format": "JSON_Script",
+    "playback": "Browser_TTS",
+    "voices": [
+      "Male_1",
+      "Female_1",
+      "Male_2"
+    ],
+    "instructions": "Tracks are played once only. 5 minutes prep time at start."
+  }
+}

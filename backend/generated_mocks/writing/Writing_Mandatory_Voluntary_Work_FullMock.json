@@ -1,0 +1,66 @@
+{
+  "meta": {
+    "title": "Writing Mock: Mandatory Voluntary Work",
+    "topic": "Mandatory Voluntary Work",
+    "generated_at": "2026-04-21T15:00:00.000Z",
+    "blueprint_version": "2026_V1"
+  },
+  "Part_A": {
+    "part": "Part A",
+    "genre": "Formal Letter",
+    "title": "Opinion on Mandatory Community Service",
+    "instructions": "Write a formal letter in about 200 words. Pay attention to the appropriate format and tone.",
+    "situation": "Your school is considering making 40 hours of community service a graduation requirement for all S4-S6 students. The School Board has requested feedback from the Student Union.",
+    "requirements": [
+      "Briefly state whether you support or oppose the new requirement.",
+      "Provide two reasons for your stance.",
+      "Suggest one way the school could help students find suitable volunteer opportunities."
+    ],
+    "format_guides": [
+      "Use formal letter conventions.",
+      "Address it to 'The Chairperson of the School Board'."
+    ]
+  },
+  "Part_B": [
+    {
+      "elective": "Sports Communication",
+      "question": "Write an article for a sports magazine discussing whether professional athletes have a moral obligation to engage in charity work. Use examples to support your view.",
+      "type": "Article"
+    },
+    {
+      "elective": "Drama",
+      "question": "Write a scene for a play where two students argue about being forced to volunteer at an elderly home. Focus on their different motivations and final realization.",
+      "type": "Script"
+    },
+    {
+      "elective": "Poems/Songs",
+      "question": "Write a poem reflecting the feelings of a student who discovers the joy of volunteering after initially being forced to do so.",
+      "type": "Poem"
+    },
+    {
+      "elective": "Debating",
+      "question": " 'Motion: This House believes that mandatory community service in schools does more harm than good.' Write a debate speech for the AGAINST side.",
+      "type": "Speech"
+    },
+    {
+      "elective": "Social Issues",
+      "question": "Write a feature article for a local newspaper exploring the impact of student volunteerism on Hong Kong's aging population.",
+      "type": "Feature Article"
+    },
+    {
+      "elective": "Workplace Comms",
+      "question": "You work for an NGO. Write a proposal to a local secondary school suggesting a partnership for a long-term student volunteer program.",
+      "type": "Proposal"
+    },
+    {
+      "elective": "Pop Culture",
+      "question": "Write a blog post reviewing a documentary about billionaire philanthropists. Discuss whether their 'voluntary' work is truly altruistic.",
+      "type": "Blog Post"
+    },
+    {
+      "elective": "Short Stories",
+      "question": "Write a story about a student who, while doing mandatory service at a library, finds a mysterious letter that changes their life.",
+      "type": "Short Story"
+    }
+  ]
+}

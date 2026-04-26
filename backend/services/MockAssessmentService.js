@@ -1,0 +1,639 @@
+const GenerativeAIService = require('./GenerativeAIService');
+
+class MockAssessmentService {
+    /**
+     * Evaluate a full paper submission
+     * @param {Object} mockData - The full mock JSON data
+     * @param {Object} userAnswers - Student's answers keyed by question ID
+     * @returns {Object} Assessment result with scores and feedback
+     */
+    async evaluatePaper(mockData, userAnswers, analytics = {}) {
+        // Route to specific evaluator based on paper type
+        if (mockData.Part_A && (mockData.Part_A.situation || mockData.Part_A.genre)) {
+            return this.evaluateWritingPaper(mockData, userAnswers, analytics);
+        }
+        return this.evaluateReadingPaper(mockData, userAnswers, analytics);
+    }
+
+    /**
+     * Evaluate a Paper 1 (Reading) submission
+     */
+    async evaluateReadingPaper(mockData, userAnswers, analytics = {}) {
+        const results = {};
+        const sectionalScores = { A: { score: 0, possible: 0 }, B: { score: 0, possible: 0 } };
+        const skillScores = {};
+        
+        const selectedPart = analytics.selectedSection || 'B2';
+
+        const allQuestions = [
+            ...(mockData.Part_A?.questions || []),
+            ...(mockData.Part_B1?.questions || []),
+            ...(mockData.Part_B2?.questions || [])
+        ];
+
+        // 1. Identify subjective questions for AI evaluation (ONLY for relevant path)
+        const subjectiveQuestions = [];
+        allQuestions.forEach(q => {
+            const userAnswer = userAnswers[q.id];
+            if (!userAnswer) return; // Skip if no answer
+
+            const isPartA = q.id.startsWith('q') && !q.id.startsWith('qb');
+            const isSelectedPartB = (selectedPart === 'B1' && q.id.startsWith('qb1_')) || 
+                                    (selectedPart === 'B2' && q.id.startsWith('qb2_'));
+            
+            if ((isPartA || isSelectedPartB) && (q.type === 'Open_Ended' || q.type === 'tf_ng')) {
+                subjectiveQuestions.push({ q, userAnswer, highRigor: q.high_rigor || false });
+            }
+        });
+
+        // 2. Perform AI Evaluation in one batch
+        let aiResults = {};
+        if (subjectiveQuestions.length > 0) {
+            aiResults = await this.evaluateSubjectiveBatch(subjectiveQuestions, mockData.meta?.topic);
+        }
+
+        // 3. Process all questions
+        allQuestions.forEach(q => {
+            const userAnswer = userAnswers[q.id];
+            
+            // Only count questions in the selected path for the final score
+            const isPartA = q.id.startsWith('q') && !q.id.startsWith('qb');
+            const isSelectedPartB = (selectedPart === 'B1' && q.id.startsWith('qb1_')) || 
+                                    (selectedPart === 'B2' && q.id.startsWith('qb2_'));
+            
+            const isRelevant = isPartA || isSelectedPartB;
+
+            let assessment;
+            if (q.type === 'Open_Ended' || q.type === 'tf_ng') {
+                // Try AI result first
+                assessment = aiResults[q.id];
+                
+                // --- LITERAL FALLBACK (Critical Safety Net) ---
+                if (!assessment || assessment.status === 'incorrect' || assessment.feedback?.includes('Error')) {
+                    const literalResult = this.evaluateLiteralSubjective(q, userAnswer);
+                    // If literal match is better than AI (or AI failed), use it
+                    if (literalResult.score > (assessment?.score || 0)) {
+                        assessment = literalResult;
+                    }
+                }
+                
+                if (!assessment) {
+                    assessment = { 
+                        score: 0, 
+                        feedback: "We couldn't determine a match for this answer. Please refer to the model answer for the intended meaning.", 
+                        status: 'incorrect',
+                        professionalAdvice: "Focus on identifying the specific keywords or phrases used in the question prompt within the source text."
+                    };
+                }
+            } else {
+                assessment = this.evaluateDeterministicQuestion(q, userAnswer);
+            }
+            
+            results[q.id] = assessment;
+
+            if (isRelevant) {
+                const sectionKey = isPartA ? 'A' : 'B';
+                sectionalScores[sectionKey].score += assessment.score;
+                sectionalScores[sectionKey].possible += q.marks || 0;
+
+                const skills = (q.skill_tag || 'General').split('/');
+                skills.forEach(skill => {
+                    const trimmedSkill = skill.trim();
+                    if (!skillScores[trimmedSkill]) skillScores[trimmedSkill] = { score: 0, possible: 0 };
+                    skillScores[trimmedSkill].score += assessment.score;
+                    skillScores[trimmedSkill].possible += q.marks || 0;
+                });
+            }
+        });
+
+        const totalScore = sectionalScores.A.score + sectionalScores.B.score;
+        const totalPossible = sectionalScores.A.possible + sectionalScores.B.possible;
+        const percentage = totalPossible > 0 ? (totalScore / totalPossible) * 100 : 0;
+
+        // DSE Grade Calculation
+        const getDSELevel = (pct, part) => {
+            let level = '1';
+            if (pct >= 90) level = '5**';
+            else if (pct >= 82) level = '5*';
+            else if (pct >= 75) level = '5';
+            else if (pct >= 65) level = '4';
+            else if (pct >= 55) level = '3';
+            else if (pct >= 45) level = '2';
+
+            if (part === 'B1' && ['5', '5*', '5**'].includes(level)) return '4';
+            return level;
+        };
+
+        return {
+            totalScore,
+            possibleScore: totalPossible,
+            percentage,
+            level: getDSELevel(percentage, selectedPart),
+            sectionalScores,
+            skillScores,
+            analytics,
+            results
+        };
+    }
+
+    /**
+     * Evaluate subjective questions using AI
+     */
+    async evaluateSubjectiveBatch(items, topic) {
+        try {
+            // Split questions into smaller batches (Atomized Evaluation) to prevent AI Laziness
+            const BATCH_SIZE = 10;
+            const batches = [];
+            for (let i = 0; i < items.length; i += BATCH_SIZE) {
+                batches.push(items.slice(i, i + BATCH_SIZE));
+            }
+
+            console.log(`[MockAssessment] Processing ${items.length} subjective questions in ${batches.length} batches...`);
+
+            // Use semi-parallel processing with a concurrency limit of 2 to avoid 429 rate limits
+            const results = [];
+            const concurrencyLimit = 2;
+            
+            for (let i = 0; i < batches.length; i += concurrencyLimit) {
+                const currentBatchChunk = batches.slice(i, i + concurrencyLimit);
+                const chunkPromises = currentBatchChunk.map(async (batch, chunkIdx) => {
+                    const idx = i + chunkIdx;
+                    const batchIds = batch.map(it => it.q.id);
+                    try {
+                        return await new Promise(async (resolve, reject) => {
+                            const timeout = setTimeout(() => reject(new Error("BATCH_TIMEOUT")), 180000);
+                            
+                            const attemptBatch = async (temp = 0.2) => {
+                                try {
+                                    const batchPrompt = this.createBatchPrompt(batch, topic);
+                                    const hasHighRigor = batch.some(it => it.highRigor);
+                                    
+                                    let response;
+                                    try {
+                                        response = await GenerativeAIService.generateJson(batchPrompt, { 
+                                            model: 'ace-it-pro',
+                                            temperature: temp,
+                                            strictModel: hasHighRigor
+                                        });
+                                    } catch (proErr) {
+                                        console.warn("[MockAssessment] Reading batch evaluation with Pro failed, falling back to Flash:", proErr.message);
+                                        response = await GenerativeAIService.generateJson(batchPrompt, { 
+                                            model: 'ace-it-flash',
+                                            temperature: temp + 0.1,
+                                            strictModel: false
+                                        });
+                                    }
+                                    
+                                    const data = response.data || {};
+                                    const normalizedData = {};
+                                    
+                                    // Recursive function to find question data in any nested structure
+                                    const findInObject = (obj) => {
+                                        if (!obj || typeof obj !== 'object') return;
+                                        
+                                        // 1. Explicit ID Check (Handles objects with an ID property, common in arrays)
+                                        const idProps = ['id', 'question_id', 'questionId', 'q_id'];
+                                        for (const prop of idProps) {
+                                            if (obj[prop]) {
+                                                const idVal = String(obj[prop]).toLowerCase().replace(/^(question|q)_?/, '');
+                                                const matchedId = batchIds.find(id => {
+                                                    const cleanId = String(id).toLowerCase().replace(/^(question|q)_?/, '');
+                                                    return idVal === cleanId;
+                                                });
+                                                if (matchedId) {
+                                                    normalizedData[matchedId] = obj;
+                                                }
+                                            }
+                                        }
+
+                                        for (const key in obj) {
+                                            const val = obj[key];
+                                            // 2. Key-based Check (Handles objects where the key IS THE ID)
+                                            const matchedId = batchIds.find(id => {
+                                                const cleanKey = String(key).toLowerCase().replace(/^(question|q)_?/, '');
+                                                const cleanId = String(id).toLowerCase().replace(/^(question|q)_?/, '');
+                                                return cleanKey === cleanId || key === id;
+                                            });
+
+                                            if (matchedId && typeof val === 'object' && !Array.isArray(val)) {
+                                                // Normalize internal keys from AI
+                                                const normalizedVal = { ...val };
+                                                if (val.professional_advice && !val.professionalAdvice) {
+                                                    normalizedVal.professionalAdvice = val.professional_advice;
+                                                }
+                                                normalizedData[matchedId] = normalizedVal;
+                                            } else if (typeof val === 'object' && val !== null) {
+                                                findInObject(val);
+                                            }
+                                        }
+                                    };
+
+                                    findInObject(data);
+
+                                    const missingKeys = batch.filter(it => !normalizedData[it.q.id]);
+                                    if (missingKeys.length > 0 && temp === 0.2) {
+                                        console.warn(`[MockAssessment] Batch ${idx} missing ${missingKeys.length} keys, retrying with high-temp...`);
+                                        return await attemptBatch(0.4);
+                                    }
+
+                                    return normalizedData;
+                                } catch (err) {
+                                    throw err;
+                                }
+                            };
+
+                            try {
+                                const data = await attemptBatch();
+                                clearTimeout(timeout);
+                                resolve(data);
+                            } catch (err) {
+                                clearTimeout(timeout);
+                                reject(err);
+                            }
+                        });
+                    } catch (err) {
+                        console.error(`[MockAssessment] Batch ${idx} failed:`, err.message);
+                        return {};
+                    }
+                });
+
+                const chunkResults = await Promise.all(chunkPromises);
+                results.push(...chunkResults);
+                
+                // Delay between chunks to prevent quota exhaustion
+                if (i + concurrencyLimit < batches.length) {
+                    await new Promise(r => setTimeout(r, 2000));
+                }
+            }
+
+            // Merge all batch results
+            return results.reduce((acc, res) => ({ ...acc, ...res }), {});
+        } catch (e) {
+            console.error("[MockAssessment] AI Evaluation failed:", e);
+            return {}; 
+        }
+    }
+
+    createBatchPrompt(items, topic) {
+        // Create a structured input for the AI to ensure high-fidelity JSON output
+        const questionsInput = items.reduce((acc, it) => {
+            acc[it.q.id] = {
+                type: it.q.type,
+                question: it.q.question,
+                user_answer: it.userAnswer,
+                marking_scheme: it.q.marking_scheme,
+                marking_logic: it.q.marking_logic, // Contains full_marks_criteria, reject_criteria etc.
+                max_marks: it.q.marks
+            };
+            return acc;
+        }, {});
+
+        return `
+            You are a Senior HKEAA (Hong Kong) English Reading Examiner. 
+            Grade these student answers for the mock: "${topic}".
+
+            ### 🎯 RUBRIC-BASED SEMANTIC EVALUATION RULES:
+            1. **Atomized Scoring**:
+               - **Full Marks**: Student captures the core meaning of ALL required criteria in \`marking_logic.full_marks_criteria\` or \`marking_logic.key_phrases\`.
+               - **Partial Marks**: Award ~50% (0.5/1 or 1.0/2) if they capture the 'Main Idea' but miss the 'Supporting Detail' or a technical term. Use \`marking_logic.partial_marks_logic\` as a guide.
+               - **Reject List**: If the answer contains concepts from \`marking_logic.reject_criteria\`, award 0 marks immediately for that question.
+            
+            2. **Semantic Equivalence (DSE Standard)**:
+               - Reward logic and meaning over exact wording. "The brain's front part stops fear" is equivalent to "The PFC inhibits the amygdala."
+               - Be lenient with introductory phrases like "According to the passage" or "The author suggests".
+            
+            3. **Strict TFNG Logic**:
+               - If the student's Choice (T/F/NG) is INCORRECT, the score is **0**. Do not evaluate justification.
+               - If the Choice is CORRECT:
+                 - For TRUE/NOT_GIVEN: Award full marks (usually 1).
+                 - For FALSE: Justification must be a semantic match to the scheme. If justification is missing or semantically unrelated, award **0**.
+
+            ### 📝 FEEDBACK MANDATE:
+            Provide specific, expert feedback as "Miss Janie". 
+            - **Feedback**: 
+                - If the answer is Partial or Incorrect, you MUST specify exactly which concept or phrase from the marking scheme was missing or misunderstood. 
+                - Do NOT say "you missed some details" without naming them. Say "You identified the metaphor but missed the specific connection to [concept]".
+            - **Professional Advice**: Provide a separate piece of advice on how to reach Level 5** or improve their DSE exam technique for this specific question type.
+
+            ### INPUT (JSON):
+            ${JSON.stringify(questionsInput, null, 2)}
+
+            ### OUTPUT FORMAT (JSON OBJECT ONLY):
+            {
+                "QUESTION_ID": {
+                    "score": number,
+                    "status": "correct" | "partial" | "incorrect",
+                    "feedback": "...",
+                    "professional_advice": "..."
+                }
+            }
+        `;
+    }
+
+    /**
+     * Evaluate deterministic questions (MCQ, Vocab, etc)
+     */
+    evaluateDeterministicQuestion(q, answer) {
+        if (!answer) return { score: 0, feedback: "No answer provided.", status: 'incorrect' };
+
+        switch (q.type) {
+            case 'Multiple_Choice':
+            case 'mc_main_idea':
+                return this.evaluateMC(q, answer);
+            case 'summary_cloze':
+            case 'flow_chart':
+                return this.evaluateExtraction(q, answer);
+            case 'vocab_match':
+                return this.evaluateVocabMatch(q, answer);
+            default:
+                return { score: 0, feedback: "Calculation Error", status: 'incorrect' };
+        }
+    }
+
+    evaluateMC(question, answer) {
+        const correct = question.marking_scheme?.trim().charAt(0).toUpperCase();
+        const userChoice = typeof answer === 'string' ? answer.trim().charAt(0).toUpperCase() : '';
+        if (userChoice === correct) {
+            return { score: question.marks, status: 'correct', feedback: "Excellent. You identified the correct option." };
+        }
+        return { score: 0, status: 'incorrect', feedback: `The correct answer was ${correct}.` };
+    }
+
+    evaluateExtraction(question, answer) {
+        let score = 0;
+        const correctAnswers = question.answers || {};
+        const subResults = {};
+        Object.entries(correctAnswers).forEach(([id, correct]) => {
+            const userWord = (answer[id] || "").trim().toLowerCase();
+            if (userWord === correct.toLowerCase()) {
+                score += 1;
+                subResults[id] = { status: 'correct' };
+            } else {
+                subResults[id] = { status: 'incorrect', correct };
+            }
+        });
+        return { 
+            score, 
+            status: score === Object.keys(correctAnswers).length ? 'correct' : (score > 0 ? 'partial' : 'incorrect'),
+            feedback: score === Object.keys(correctAnswers).length ? "Perfect extraction." : `You got ${score} out of ${Object.keys(correctAnswers).length} correct.`,
+            subResults 
+        };
+    }
+
+    evaluateVocabMatch(question, answer) {
+        let score = 0;
+        const pairs = question.pairs || {};
+        Object.entries(pairs).forEach(([word, meaning]) => {
+            if (answer[word] === meaning) score += 1;
+        });
+        return { 
+            score, 
+            status: score === Object.keys(pairs).length ? 'correct' : 'partial',
+            feedback: `You correctly matched ${score} words.`
+        };
+    }
+
+    /**
+     * Fallback evaluation using literal string matching and keyword heuristics
+     */
+    evaluateLiteralSubjective(q, answer) {
+        if (!answer) return { score: 0, status: 'incorrect', feedback: "No answer provided." };
+
+        const normalizedUser = (typeof answer === 'string' ? answer : JSON.stringify(answer)).toLowerCase().trim();
+
+        // 1. Exact or Containment Match (Handles introductory phrases)
+        const normalizedScheme = (q.marking_scheme || "").toLowerCase().trim();
+        if (normalizedScheme.length > 0) {
+            if (normalizedUser === normalizedScheme || normalizedUser.includes(normalizedScheme) || normalizedScheme.includes(normalizedUser)) {
+                return { 
+                    score: q.marks, 
+                    status: 'correct', 
+                    feedback: "Perfect. Your answer matches the required marking criteria.",
+                    professionalAdvice: "To maintain this precision, continue focusing on identifying the relationship between key entities in the text."
+                };
+            }
+        }
+
+        // 2. Keyword Heuristic (Improved with fuzzy/word-level matching)
+        const phrases = q.marking_logic?.key_phrases || [];
+        if (phrases.length > 0) {
+            const matches = phrases.filter(p => {
+                const lp = p.toLowerCase();
+                // A. Strict Substring match
+                if (normalizedUser.includes(lp)) return true;
+                
+                // B. Word-level match (handles cases like "who is TRULY in control")
+                const words = lp.split(/\s+/).filter(w => w.length > 2); // Only significant words
+                if (words.length > 0 && words.every(w => {
+                    // Simple Stemming: check if 80% of the keyword exists in any word of the user answer
+                    // or if the user answer contains the keyword minus common suffixes
+                    const stem = w.replace(/(ing|ed|es|s|e)$/, '');
+                    return normalizedUser.includes(stem);
+                })) return true;
+                
+                return false;
+            });
+            const matchRatio = matches.length / phrases.length;
+            
+            if (matchRatio >= 0.8) {
+                const advice = q.skill_tag?.toLowerCase().includes('metaphor') 
+                    ? "Your interpretation of the figurative language is spot on. Keep identifying the underlying literal meaning."
+                    : "To maintain this precision, continue focusing on identifying the relationship between key entities in the text.";
+                return { 
+                    score: q.marks, 
+                    status: 'correct', 
+                    feedback: "Excellent. Your answer accurately captures the core requirements of the marking scheme.",
+                    professionalAdvice: advice
+                };
+            } else if (matchRatio >= 0.4) {
+                const advice = q.skill_tag?.toLowerCase().includes('metaphor')
+                    ? "When explaining metaphors, ensure you explicitly bridge the 'figurative' image to the 'literal' consequence in the text."
+                    : "Try to incorporate more specific terminology from the passage to secure full marks.";
+                return { 
+                    score: Math.round(q.marks * 0.5 * 2) / 2, 
+                    status: 'partial', 
+                    feedback: "You identified some key elements but missed others. Compare your answer with the model answer to see the missing details.",
+                    professionalAdvice: advice
+                };
+            }
+        }
+
+        // 3. TFNG Specific Fallback (Literal Checking)
+        if (q.type === 'tf_ng' && typeof answer === 'object') {
+            let totalScore = 0;
+            const subResults = {};
+            
+            const qItems = q.items || [];
+            qItems.forEach((item, idx) => {
+                const userItem = answer[idx] || {};
+                const isChoiceCorrect = userItem.choice === item.answer;
+                
+                if (isChoiceCorrect) {
+                    if (item.answer === 'FALSE') {
+                        // Check justification
+                        const userJust = (userItem.justification || "").toLowerCase().trim();
+                        const schemeJust = (item.justification || "").toLowerCase().trim();
+                        if (userJust === schemeJust && schemeJust.length > 0) {
+                            totalScore += 1;
+                            subResults[idx] = { score: 1, status: 'correct' };
+                        } else {
+                            subResults[idx] = { score: 0, status: 'incorrect', feedback: "Justification missing or incorrect." };
+                        }
+                    } else {
+                        totalScore += 1;
+                        subResults[idx] = { score: 1, status: 'correct' };
+                    }
+                } else {
+                    subResults[idx] = { score: 0, status: 'incorrect' };
+                }
+            });
+
+            return { 
+                score: totalScore, 
+                status: totalScore === qItems.length ? 'correct' : (totalScore > 0 ? 'partial' : 'incorrect'),
+                feedback: "TF/NG evaluated using literal match. (Auto-verified)",
+                subResults
+            };
+        }
+
+        return { score: 0, status: 'incorrect', feedback: "Your answer does not match the required criteria in the marking scheme. Please check the model answer for key terminology.", professionalAdvice: "Focus on identifying the specific keywords or phrases used in the question prompt within the source text." };
+    }
+    /**
+     * Evaluate a Paper 2 (Writing) submission
+     */
+    async evaluateWritingPaper(mockData, userAnswers, analytics = {}) {
+        const results = {};
+        const sectionalScores = { 
+            A: { score: 0, possible: 21, domains: {} }, 
+            B: { score: 0, possible: 21, domains: {} } 
+        };
+        const skillScores = {
+            'Content': { score: 0, possible: 0 },
+            'Language': { score: 0, possible: 0 },
+            'Organization': { score: 0, possible: 0 }
+        };
+
+        const partA_Draft = userAnswers.partA_draft;
+        const partB_Draft = userAnswers.partB_draft;
+        const selectedPartB = analytics.selectedPartB;
+
+        // 1. Prepare AI prompt for Paper 2
+        const prompt = this.createWritingBatchPrompt(mockData, partA_Draft, partB_Draft, selectedPartB);
+        
+        let data = {};
+        try {
+            const response = await GenerativeAIService.generateJson(prompt, { 
+                model: 'ace-it-pro',
+                temperature: 0.2,
+                strictModel: true
+            });
+            data = response.data || {};
+        } catch (e) {
+            console.warn("[MockAssessment] Writing evaluation with Pro failed, falling back to Flash:", e.message);
+            try {
+                const response = await GenerativeAIService.generateJson(prompt, { 
+                    model: 'ace-it-flash',
+                    temperature: 0.3,
+                    strictModel: false
+                });
+                data = response.data || {};
+            } catch (fallbackError) {
+                console.error("[MockAssessment] Both Pro and Flash failed for writing:", fallbackError);
+                throw fallbackError;
+            }
+        }
+
+        // 2. Map scores to domains
+            ['A', 'B'].forEach(part => {
+                const partData = data[`Part_${part}`] || {};
+                const scores = partData.scores || { content: 0, language: 0, organization: 0 };
+                
+                sectionalScores[part].domains = {
+                    content: { score: scores.content, feedback: partData.feedback?.content },
+                    language: { score: scores.language, feedback: partData.feedback?.language },
+                    organization: { score: scores.organization, feedback: partData.feedback?.organization }
+                };
+                
+                sectionalScores[part].score = scores.content + scores.language + scores.organization;
+                sectionalScores[part].overallFeedback = partData.overall_feedback;
+
+                // Update skill scores
+                skillScores.Content.score += scores.content;
+                skillScores.Content.possible += 7;
+                skillScores.Language.score += scores.language;
+                skillScores.Language.possible += 7;
+                skillScores.Organization.score += scores.organization;
+                skillScores.Organization.possible += 7;
+            });
+
+            const totalScore = sectionalScores.A.score + sectionalScores.B.score;
+            const totalPossible = sectionalScores.A.possible + sectionalScores.B.possible;
+            const percentage = (totalScore / totalPossible) * 100;
+
+            // DSE Level Mapping for Writing
+            const getWritingLevel = (pct) => {
+                if (pct >= 88) return '5**';
+                if (pct >= 80) return '5*';
+                if (pct >= 72) return '5';
+                if (pct >= 62) return '4';
+                if (pct >= 50) return '3';
+                if (pct >= 38) return '2';
+                return '1';
+            };
+
+            return {
+                totalScore,
+                possibleScore: totalPossible,
+                percentage,
+                level: getWritingLevel(percentage),
+                sectionalScores,
+                skillScores,
+                analytics,
+                results: data // Detailed feedback for review
+            };
+
+    }
+
+    createWritingBatchPrompt(mockData, partA, partB, selectedPartB) {
+        return `
+            You are a Senior HKEAA HKDSE English Language Paper 2 (Writing) Examiner.
+            Evaluate the following submission based on the official 0-7 scale for Content, Language, and Organization.
+
+            ### EXAM DATA:
+            Part A (Compulsory):
+            - Genre: ${mockData.Part_A.genre}
+            - Situation: ${mockData.Part_A.situation}
+            - Student Draft: "${partA}"
+
+            Part B (Elective):
+            - Elective: ${selectedPartB?.elective}
+            - Question: ${selectedPartB?.question}
+            - Student Draft: "${partB}"
+
+            ### EVALUATION MANDATE:
+            1. Assign scores (0-7) for Content (C), Language (L), and Organization (O) for BOTH parts.
+            2. Provide granular feedback for each domain.
+            3. Provide an overall summary for each part as "Miss Janie".
+            4. **STERN CALIBRATION**: Distinguish clearly between "Competence" (Level 4) and "Sophistication" (Level 5**). 
+               - A Level 4 response is clear and accurate but uses standard vocabulary and simple/compound sentences. 
+               - A Level 5** response MUST demonstrate "flair," "nuance," and "sophisticated control" of language and structure. 
+               - If a response is merely "good" but not "impressive," do NOT award a 7 for Content or Language. Be highly critical of register and tone.
+
+            ### OUTPUT FORMAT (JSON ONLY):
+            {
+                "Part_A": {
+                    "scores": { "content": 0-7, "language": 0-7, "organization": 0-7 },
+                    "feedback": { "content": "...", "language": "...", "organization": "..." },
+                    "overall_feedback": "..."
+                },
+                "Part_B": {
+                    "scores": { "content": 0-7, "language": 0-7, "organization": 0-7 },
+                    "feedback": { "content": "...", "language": "...", "organization": "..." },
+                    "overall_feedback": "..."
+                }
+            }
+        `;
+    }
+}
+
+module.exports = new MockAssessmentService();

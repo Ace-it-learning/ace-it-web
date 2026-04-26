@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "title": "Writing Mock: Climate Action Plan 2050",
+    "topic": "Climate Action Plan 2050",
+    "generated_at": "2026-01-31T06:24:52.346Z",
+    "blueprint_version": "2026_V1"
+  },
+  "Part_A": {
+    "part": "Part A",
+    "genre": "Letter of Advice",
+    "title": "Climate Action Plan 2050: Advice on Community Engagement",
+    "instructions": "Write a letter of advice in about 200 words. Pay attention to the appropriate format and tone.",
+    "situation": "The Environmental Protection Department (EPD) is developing strategies to enhance community engagement in support of the Climate Action Plan 2050. They have requested advice from youth leaders on how to effectively involve local residents in reducing carbon emissions and promoting sustainable practices.",
+    "requirements": [
+      "Identify two specific strategies to encourage community participation.",
+      "Explain how each strategy would contribute to achieving the goals of the Climate Action Plan 2050.",
+      "Suggest how the EPD could measure the success of these community engagement efforts."
+    ],
+    "format_guides": [
+      "Use a formal letter format, including salutation and closing.",
+      "Maintain a polite and professional tone throughout.",
+      "Address the letter to the 'Environmental Protection Department'."
+    ]
+  },
+  "Part_B": [
+    {
+      "elective": "Sports Communication",
+      "question": "Your school newspaper is launching a new sports section and you have been asked to write an article analyzing the impact of social media on young athletes. Consider both the positive and negative aspects, and suggest strategies for athletes to manage their online presence effectively. Include specific examples of athletes who have successfully (or unsuccessfully) navigated social media. Write an article for the school newspaper.",
+      "type": "Article"
+    },
+    {
+      "elective": "Drama",
+      "question": "Your school's drama club is planning to stage a play that addresses a relevant social issue affecting teenagers. You have been tasked with writing a proposal to the school principal outlining your chosen issue, justifying its suitability for a dramatic performance, and explaining how the play will engage the audience and promote meaningful discussion. Include details about potential scenes, character development, and the overall message you hope to convey. Write a proposal to the school principal.",
+      "type": "Proposal"
+    },
+    {
+      "elective": "Poems/Songs",
+      "question": "Write a song or a poem exploring the theme of 'Resilience in the Face of Adversity'. Your piece should convey a sense of hope and determination, and should make use of vivid imagery and figurative language to evoke emotion and create a lasting impact on the listener/reader. Include a brief explanation of the inspiration behind your work and the message you hope to communicate.",
+      "type": "Poem/Song"
+    },
+    {
+      "elective": "Debating",
+      "question": "Your school debating society is holding a competition on the motion: 'This house believes that artificial intelligence will ultimately benefit humanity'. Prepare a speech, either for or against the motion, presenting well-reasoned arguments, supporting evidence, and effective rhetorical devices to persuade your audience. Anticipate potential counter-arguments and address them effectively.",
+      "type": "Speech"
+    },
+    {
+      "elective": "Social Issues",
+      "question": "You are a youth representative on a panel discussing solutions to address the growing problem of youth mental health in Hong Kong. Write a report outlining the key challenges faced by young people in accessing mental health support, propose concrete recommendations for improving services, and suggest ways to raise awareness and reduce stigma surrounding mental health issues. Support your arguments with relevant data and examples. Write a report for the panel.",
+      "type": "Report"
+    },
+    {
+      "elective": "Workplace Comms",
+      "question": "You are interning at a local charity. Your supervisor has asked you to create a training manual for new volunteers on effective communication strategies when interacting with beneficiaries from diverse cultural backgrounds. The manual should cover topics such as active listening, non-verbal communication, and cultural sensitivity. Include practical examples and scenarios to illustrate your points. Write a training manual for new volunteers.",
+      "type": "Training Manual"
+    },
+    {
+      "elective": "Pop Culture",
+      "question": "You are a blogger writing a review of a newly released film, TV series, or video game. Analyze the work's strengths and weaknesses, discussing its cultural impact, its representation of social issues, and its overall artistic merit. Consider the target audience and explain why they would (or would not) enjoy the work. Provide specific examples from the work to support your claims. Write a blog post reviewing the pop culture work.",
+      "type": "Blog Post"
+    },
+    {
+      "elective": "Short Stories",
+      "question": "Write a short story that explores the theme of 'Identity and Belonging' in a multicultural society. Your story should feature compelling characters, a well-developed plot, and vivid descriptions that bring the setting to life. Consider the challenges and opportunities that arise when individuals from different cultural backgrounds interact with one another. Aim to create a story that is both engaging and thought-provoking.",
+      "type": "Short Story"
+    }
+  ]
+}

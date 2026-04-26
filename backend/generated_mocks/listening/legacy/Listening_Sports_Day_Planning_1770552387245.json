@@ -1,0 +1,119 @@
+{
+  "meta": {
+    "subject": "English Language",
+    "paper_id": "Paper 3 (Listening & Integrated Skills)",
+    "version": "2026_V1",
+    "description": "Mock Exam: Sports Day Planning"
+  },
+  "sections": {
+    "Part_A": {
+      "name": "Compulsory Section (Listening Tasks)",
+      "target_level": "Level 3-4 Benchmark",
+      "constraints": {
+        "duration_minutes": 60,
+        "task_count": 4,
+        "input_type": "Audio Script (Dialogue/Monologue)",
+        "question_types": [
+          "Fill_in_Blanks",
+          "Multiple_Choice",
+          "Table_Completion"
+        ]
+      },
+      "tasks": [
+        {
+          "id": "Task_1",
+          "type": "Form/Note-taking",
+          "context": "Sports Day Volunteer Sign-up",
+          "interaction": "Dialogue (2 speakers)"
+        },
+        {
+          "id": "Task_2",
+          "type": "Table Completion",
+          "context": "Comparing Sports Day Event Proposals",
+          "interaction": "Dialogue (3 speakers)"
+        },
+        {
+          "id": "Task_3",
+          "type": "Flow Chart / Diagram",
+          "context": "Opening Ceremony Procedure",
+          "interaction": "Monologue"
+        },
+        {
+          "id": "Task_4",
+          "type": "Extended Response",
+          "context": "Sports Day Safety Briefing",
+          "interaction": "Monologue (Formal)"
+        }
+      ]
+    },
+    "Part_B": {
+      "name": "Integrated Skills (Data File + Audio)",
+      "target_level": "Level 4-5 Benchmark",
+      "constraints": {
+        "duration_minutes": 75,
+        "task_count": 3,
+        "input_type": "Data File (Reading) + Audio Note-taking",
+        "question_types": [
+          "Extended_Writing"
+        ]
+      },
+      "tasks": [
+        {
+          "id": "Task_5",
+          "type": "Email",
+          "tone": "Formal",
+          "word_count": "180"
+        },
+        {
+          "id": "Task_6",
+          "type": "Speech",
+          "tone": "Persuasive",
+          "word_count": "230"
+        },
+        {
+          "id": "Task_7",
+          "type": "Proposal",
+          "tone": "Formal",
+          "word_count": "280"
+        }
+      ],
+      "data_file": [
+        {
+          "type": "Email",
+          "title": "Email from Principal regarding Sports Day feedback",
+          "content": "Subject: Sports Day Feedback and Suggestions\n\nDear Students and Teachers,\n\nFollowing the recent Sports Day, I would like to thank everyone for their participation and hard work. The event was a great success, and your enthusiasm was truly appreciated. \n\nTo further improve future Sports Days, we are seeking feedback on various aspects of the event, including event selection, scheduling, volunteer roles, and facilities. Please submit your suggestions to the Student Council by next Friday. \n\nSincerely,\nMr. Chan\nPrincipal"
+        },
+        {
+          "type": "Minutes",
+          "title": "Student Council Meeting Minutes - Sports Day Initial Planning",
+          "content": "Minutes of Student Council Meeting\nDate: 2024-03-15\nTopic: Initial Sports Day Planning\nAttendees: [List of names]\n\n*   Brainstorming of potential sports events.\n*   Discussion of possible dates and venue.\n*   Allocation of initial responsibilities (publicity, logistics, volunteer recruitment).\n*   Budget discussion and fundraising ideas.\n*   Next meeting scheduled for 2024-03-22 to finalize event details."
+        },
+        {
+          "type": "Poster",
+          "title": "Sports Day Volunteer Recruitment Poster",
+          "content": "CALLING ALL VOLUNTEERS! Sports Day Needs You!\n\nWe need enthusiastic students to help make Sports Day a success! Various roles available, including:\n*   Event marshals\n*   First aid assistants\n*   Registration staff\n*   Refreshment providers\n\nSign up at the Student Council office by [date]!  Your help is invaluable!"
+        },
+        {
+          "type": "Webpage",
+          "title": "School Website - Sports Day Announcement",
+          "content": "SPORTS DAY 2024!\nGet ready for our annual Sports Day on [Date] at [Venue]! \nEvents include: [List of events, e.g., 100m, 200m, Relay, Long Jump, High Jump, etc.].\nCome and support your house! \nMore details to follow. Check back regularly for updates!"
+        },
+        {
+          "type": "Memo",
+          "title": "Memo to Teachers Regarding Sports Day Duties",
+          "content": "MEMORANDUM\nTo: All Teachers\nFrom: Sports Day Organizing Committee\nDate: [Date]\nSubject: Sports Day Duties\n\nDear Colleagues,\n\nAs Sports Day approaches, we would like to assign duties to ensure the smooth running of the event. A detailed schedule will be circulated shortly. Your cooperation is greatly appreciated.\n\nThank you.\n"
+        }
+      ]
+    }
+  },
+  "audio_strategy": {
+    "format": "JSON_Script",
+    "playback": "Browser_TTS",
+    "voices": [
+      "Male_1",
+      "Female_1",
+      "Male_2"
+    ],
+    "instructions": "Tracks are played once only. 5 minutes prep time at start."
+  }
+}

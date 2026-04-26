@@ -1,0 +1,874 @@
+{
+  "meta": {
+    "topic": "The AI Classroom Revolution",
+    "generated_at": "2026-01-27T15:09:39.263Z",
+    "module": "Module 3 (Reading Pipeline)",
+    "blueprint_version": "2026_V1",
+    "paper_type": "Reading"
+  },
+  "Part_A": {
+    "resources": {
+      "Text_1": {
+        "title": "AI Tutors: A Game Changer for Hong Kong Classrooms?",
+        "subheading": "EdTech start-ups are vying to provide tailored learning experiences, but can they truly replace human educators?",
+        "content": {
+          "p1": "Hong Kong's education sector is on the cusp of a technological revolution, with artificial intelligence (AI) poised to transform the way students learn. A surge in EdTech start-ups is introducing AI-powered tutoring systems, promising personalised learning pathways and adaptive assessments. These systems analyse student performance in real-time, adjusting the difficulty level and content to match individual needs. Advocates argue that this tailored approach can address learning gaps more effectively than traditional classroom settings, where teachers must cater to a diverse range of abilities.",
+          "p2": "However, the integration of AI in education is not without its challenges. Concerns have been raised about data privacy, algorithmic bias, and the potential deskilling of teachers. Experts caution that relying solely on AI tutors could stifle creativity, critical thinking, and the development of essential social-emotional skills. Moreover, the digital divide remains a significant hurdle, as not all students have equal access to the technology and internet connectivity required to benefit from these innovations. As Hong Kong navigates this rapidly evolving landscape, a balanced approach is crucial, one that harnesses the power of AI while preserving the invaluable role of human educators."
+        },
+        "metadata": {
+          "word_count": 200,
+          "genre": "News Article"
+        }
+      },
+      "Text_2": {
+        "title": "The Algorithmic Academy: Examining the Long-Term Impact of AI on Learning",
+        "subheading": "A comprehensive analysis of the potential benefits and pitfalls of integrating artificial intelligence into the educational ecosystem.",
+        "content": {
+          "p1": "The burgeoning field of artificial intelligence presents both unprecedented opportunities and potential pitfalls for the future of education. While proponents tout the benefits of personalised learning and automated assessment, critics voice concerns about the erosion of human interaction and the exacerbation of existing inequalities. This report delves into the multifaceted implications of AI in the classroom, examining its impact on pedagogy, student development, and the role of educators.",
+          "p2": "One of the most compelling arguments for AI in education is its capacity to provide truly personalised learning experiences. Traditional classroom settings often struggle to cater to the diverse learning styles and paces of individual students. AI-powered tutoring systems, on the other hand, can adapt in real-time to a student's strengths and weaknesses, providing targeted support and scaffolding. This adaptive approach has the potential to accelerate learning and improve student outcomes, particularly for those who may be struggling in a conventional classroom environment. Furthermore, AI can automate many of the administrative tasks that currently burden teachers, such as grading assignments and tracking student progress, freeing up valuable time for more personalised instruction and mentoring.",
+          "p3": "However, the integration of AI in education also raises a number of significant ethical and pedagogical concerns. One of the most pressing is the issue of algorithmic bias. AI algorithms are trained on vast datasets, and if these datasets reflect existing societal biases, the algorithms will inevitably perpetuate those biases. This could lead to AI tutors that unfairly disadvantage certain groups of students, undermining the goal of equitable education. Moreover, there are concerns that over-reliance on AI tutors could stifle creativity and critical thinking skills. Learning is not simply about acquiring knowledge; it is also about developing the ability to think independently, solve problems creatively, and collaborate effectively with others. These skills are best fostered through human interaction and mentorship, which may be diminished in an AI-dominated learning environment.",
+          "p4": "Another critical consideration is the impact of AI on the role of teachers. While AI can automate certain tasks, it cannot replace the human element of teaching. Teachers provide emotional support, guidance, and inspiration, fostering a sense of community and belonging in the classroom. These qualities are essential for student well-being and academic success. The challenge, therefore, is to find ways to integrate AI into the classroom in a way that complements and enhances the role of teachers, rather than replacing them. This requires a shift in focus from using AI to automate tasks to using it to empower teachers and provide them with better tools to support their students.",
+          "p5": "Furthermore, the digital divide poses a significant obstacle to the equitable implementation of AI in education. Students from disadvantaged backgrounds may lack access to the technology and internet connectivity required to benefit from AI-powered learning tools. This could exacerbate existing inequalities in education, creating a two-tiered system where some students have access to cutting-edge technology while others are left behind. Addressing this challenge requires a concerted effort to bridge the digital divide and ensure that all students have equal access to the resources they need to succeed.",
+          "p6": "Looking ahead, the successful integration of AI in education will require a collaborative effort involving educators, policymakers, technologists, and researchers. It is crucial to develop ethical guidelines and regulatory frameworks that address the potential risks of AI, while also fostering innovation and experimentation. Teacher training programmes must be updated to equip educators with the skills and knowledge they need to effectively use AI tools in the classroom. And ongoing research is needed to evaluate the impact of AI on student learning and development, ensuring that these technologies are used in ways that promote equitable and effective education for all. The future of education is inextricably linked to the advancement of artificial intelligence. Navigating this complex landscape requires careful planning, thoughtful implementation, and a commitment to ensuring that AI serves the best interests of students and society as a whole."
+        },
+        "metadata": {
+          "word_count": 750,
+          "genre": "Feature Article"
+        }
+      }
+    },
+    "questions": [
+      {
+        "id": "q1",
+        "part": "A",
+        "type": "mc_main_idea",
+        "question": "Which of the following best describes the main idea of Text 1?",
+        "options": [
+          "The rise of AI tutors in Hong Kong and their potential impact on education.",
+          "The challenges of integrating AI into traditional classroom settings.",
+          "The importance of data privacy in the age of AI.",
+          "The deskilling of teachers due to the introduction of AI."
+        ],
+        "answer": "A",
+        "marks": 2,
+        "logic": "Text 1 primarily discusses the emergence of AI tutors and their possible effects on the Hong Kong education system.",
+        "segment_ref": "Text_1:p1"
+      },
+      {
+        "id": "q2",
+        "part": "A",
+        "type": "short_answer",
+        "question": "According to Text 1, what is one advantage offered by AI-powered tutoring systems?",
+        "options": [],
+        "answer": "Personalised learning pathways and adaptive assessments.",
+        "marks": 2,
+        "logic": "The text states that AI-powered tutoring systems provide personalised learning pathways and adaptive assessments.",
+        "segment_ref": "Text_1:p1"
+      },
+      {
+        "id": "q3",
+        "part": "A",
+        "type": "true_false_not_given",
+        "question": "Text 1 suggests that AI tutors are universally considered the best way to teach in Hong Kong.",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "False",
+        "marks": 3,
+        "logic": "Text 1 presents concerns and challenges related to AI tutors, indicating that they are not universally accepted as superior.",
+        "segment_ref": "Text_1:p2"
+      },
+      {
+        "id": "q4",
+        "part": "A",
+        "type": "short_answer",
+        "question": "Based on Text 1, what is one potential negative consequence of over-relying on AI tutors?",
+        "options": [],
+        "answer": "Stifling creativity, critical thinking, and the development of essential social-emotional skills.",
+        "marks": 2,
+        "logic": "The text explicitly mentions these as possible drawbacks of relying solely on AI tutors.",
+        "segment_ref": "Text_1:p2"
+      },
+      {
+        "id": "q5",
+        "part": "A",
+        "type": "reference",
+        "question": "In Text 1, paragraph 2, to what does the word 'this' refer?",
+        "options": [],
+        "answer": "The integration of AI in education.",
+        "marks": 2,
+        "logic": "'This' in paragraph 2 refers to the integration of AI in education, which is the main topic being discussed.",
+        "segment_ref": "Text_1:p2"
+      },
+      {
+        "id": "q6",
+        "part": "A",
+        "type": "mc_main_idea",
+        "question": "Which statement best captures the main idea of Text 2?",
+        "options": [
+          "A comprehensive analysis of the potential benefits and pitfalls of integrating AI into the educational ecosystem.",
+          "The ethical considerations surrounding the use of AI in education.",
+          "The impact of AI on the role of teachers in the classroom.",
+          "The digital divide and its effect on equitable access to AI-powered learning tools."
+        ],
+        "answer": "A",
+        "marks": 2,
+        "logic": "Text 2 offers a detailed examination of both the advantages and disadvantages of incorporating AI in education.",
+        "segment_ref": "Text_2:p1"
+      },
+      {
+        "id": "q7",
+        "part": "A",
+        "type": "short_answer",
+        "question": "According to Text 2, what is one administrative task that AI can help teachers with?",
+        "options": [],
+        "answer": "Grading assignments and tracking student progress.",
+        "marks": 2,
+        "logic": "The text specifically mentions that AI can automate the grading of assignments and the monitoring of student progress.",
+        "segment_ref": "Text_2:p2"
+      },
+      {
+        "id": "q8",
+        "part": "A",
+        "type": "short_answer",
+        "question": "According to Text 2, what is one potential adverse effect of algorithmic bias in AI tutoring systems?",
+        "options": [],
+        "answer": "Unfairly disadvantaging certain groups of students.",
+        "marks": 2,
+        "logic": "The text mentions that algorithmic bias could result in AI tutors that unfairly disadvantage certain groups of students.",
+        "segment_ref": "Text_2:p3"
+      },
+      {
+        "id": "q9",
+        "part": "A",
+        "type": "true_false_not_given",
+        "question": "Text 2 implies that AI can completely replace the emotional support provided by human teachers.",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "False",
+        "marks": 3,
+        "logic": "The text explicitly states that AI cannot substitute for the human element of teaching, which includes emotional support.",
+        "segment_ref": "Text_2:p4"
+      },
+      {
+        "id": "q10",
+        "part": "A",
+        "type": "reference",
+        "question": "In Text 2, paragraph 5, to what does 'this challenge' refer?",
+        "options": [],
+        "answer": "Addressing the digital divide and ensuring equal access to resources.",
+        "marks": 2,
+        "logic": "'This challenge' refers to the digital divide that is discussed in paragraph 5.",
+        "segment_ref": "Text_2:p5"
+      },
+      {
+        "id": "q11",
+        "part": "A",
+        "type": "short_answer",
+        "question": "According to Text 2, what is one area in which teacher training programs should be updated?",
+        "options": [],
+        "answer": "Equip educators with the skills and knowledge they need to effectively use AI tools in the classroom.",
+        "marks": 2,
+        "logic": "The text explicitly states the need to update teacher training programs to equip educators with AI skills.",
+        "segment_ref": "Text_2:p6"
+      },
+      {
+        "id": "q12",
+        "part": "A",
+        "type": "true_false_not_given",
+        "question": "Text 2 asserts that the future of education has no connection to the development of artificial intelligence.",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "False",
+        "marks": 3,
+        "logic": "The text explicitly states that the future of education is inextricably linked to the advancement of artificial intelligence.",
+        "segment_ref": "Text_2:p6"
+      },
+      {
+        "id": "q13",
+        "part": "A",
+        "type": "summary_cloze",
+        "question": "Complete the summary of Text 2 using the words provided. AI in education offers (1) ______ learning but raises concerns about (2) _______ bias. While AI can assist teachers, it cannot replace their (3) _______ support. Addressing the (4) _______ divide is crucial for equitable implementation.",
+        "options": [],
+        "answer": "1: personalised; 2: algorithmic; 3: emotional; 4: digital",
+        "marks": 4,
+        "logic": "This summary encapsulates the main points of Text 2.",
+        "segment_ref": "Text_2:p1, Text_2:p3, Text_2:p4, Text_2:p5"
+      },
+      {
+        "id": "q14",
+        "part": "A",
+        "type": "short_answer",
+        "question": "Based on the provided information, what is the genre of Text 1?",
+        "options": [],
+        "answer": "News Article",
+        "marks": 1,
+        "logic": "The metadata indicates that Text 1 is a news article.",
+        "segment_ref": "Text_1:metadata"
+      },
+      {
+        "id": "q15",
+        "part": "A",
+        "type": "short_answer",
+        "question": "Based on the provided information, what is the genre of Text 2?",
+        "options": [],
+        "answer": "Feature Article",
+        "marks": 1,
+        "logic": "The metadata indicates that Text 2 is a feature article.",
+        "segment_ref": "Text_2:metadata"
+      },
+      {
+        "id": "q16",
+        "part": "A",
+        "type": "short_answer",
+        "question": "According to Text 1, what benefits do EdTech start-ups promise with their AI-powered tutoring systems?",
+        "options": [],
+        "answer": "Personalised learning pathways and adaptive assessments.",
+        "marks": 2,
+        "logic": "This is stated directly in Text 1, paragraph 1.",
+        "segment_ref": "Text_1:p1"
+      },
+      {
+        "id": "q17",
+        "part": "A",
+        "type": "short_answer",
+        "question": "According to Text 2, paragraph 6, which groups should be involved in the collaborative effort to successfully integrate AI in education?",
+        "options": [],
+        "answer": "Educators, policymakers, technologists, and researchers.",
+        "marks": 2,
+        "logic": "This list is provided explicitly in the text.",
+        "segment_ref": "Text_2:p6"
+      },
+      {
+        "id": "q18",
+        "part": "A",
+        "type": "true_false_not_given",
+        "question": "Text 1 states that all students in Hong Kong have the same level of access to technology and internet.",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "False",
+        "marks": 3,
+        "logic": "Text 1 mentions the digital divide as a significant hurdle, implying unequal access.",
+        "segment_ref": "Text_1:p2"
+      },
+      {
+        "id": "q19",
+        "part": "A",
+        "type": "short_answer",
+        "question": "As per Text 2, what abilities are fostered through human interaction and mentorship?",
+        "options": [],
+        "answer": "The ability to think independently, solve problems creatively, and collaborate effectively with others.",
+        "marks": 2,
+        "logic": "These skills are explicitly mentioned as benefits of human interaction.",
+        "segment_ref": "Text_2:p3"
+      },
+      {
+        "id": "q20",
+        "part": "A",
+        "type": "short_answer",
+        "question": "What solution does Text 2 offer to address the digital divide?",
+        "options": [],
+        "answer": "A concerted effort to bridge the digital divide and ensure that all students have equal access to the resources they need to succeed.",
+        "marks": 2,
+        "logic": "This is the solution offered in Text 2, paragraph 5.",
+        "segment_ref": "Text_2:p5"
+      },
+      {
+        "id": "q21",
+        "part": "A",
+        "type": "short_answer",
+        "question": "According to Text 1, what is the outcome when AI systems analyze student performance in real-time?",
+        "options": [],
+        "answer": "They adjust the difficulty level and content to match individual needs.",
+        "marks": 1,
+        "logic": "This is stated directly in paragraph 1 of Text 1.",
+        "segment_ref": "Text_1:p1"
+      },
+      {
+        "id": "q22",
+        "part": "A",
+        "type": "short_answer",
+        "question": "How many paragraphs are there in Text 2?",
+        "options": [],
+        "answer": "6",
+        "marks": 1,
+        "logic": "Text 2 has 6 paragraphs (p1 to p6).",
+        "segment_ref": "Text_2"
+      }
+    ],
+    "meta": {
+      "topics": [
+        "Text_1",
+        "Text_2"
+      ]
+    }
+  },
+  "Part_B1": {
+    "resources": {
+      "Text_1": {
+        "title": "AI Tutors: A New Era for Hong Kong Classrooms?",
+        "subheading": "Could artificial intelligence bridge the learning gap and personalise education for every student?",
+        "content": {
+          "p1": "Hong Kong's education system is on the cusp of a potential paradigm shift as artificial intelligence (AI) increasingly infiltrates classrooms. The debate centres on whether AI-powered tutoring systems can genuinely enhance learning outcomes and address the diverse needs of students. Proponents argue that AI tutors offer personalised learning experiences, adapting to each student's pace and learning style, thereby potentially mitigating the achievement gap. These systems can provide instant feedback, identify areas where students struggle, and offer tailored support – something often challenging for teachers in large classes.",
+          "p2": "However, concerns linger. Critics worry about the over-reliance on technology, the potential erosion of human interaction, and the ethical implications of data privacy. Questions arise about the ability of AI to foster critical thinking, creativity, and collaboration – skills deemed essential for success in the 21st century. Moreover, ensuring equitable access to these technological resources remains a significant hurdle. While some schools embrace AI with open arms, others remain cautiously optimistic, acknowledging the potential benefits but wary of the pitfalls. The integration of AI in Hong Kong's classrooms is a complex issue with no easy answers, demanding careful consideration and thoughtful implementation to ensure that technology serves to empower, not hinder, the holistic development of students."
+        },
+        "metadata": {
+          "word_count": 200,
+          "genre": "News Article"
+        }
+      },
+      "Text_2": {
+        "title": "The Algorithmic Classroom: Unpacking the Promises and Perils of AI in Education",
+        "subheading": "A comprehensive analysis of the transformative potential and inherent challenges of integrating artificial intelligence into Hong Kong's educational landscape.",
+        "content": {
+          "p1": "The advent of artificial intelligence (AI) is poised to revolutionise education, and Hong Kong is no exception. The allure of personalised learning, automated assessment, and data-driven insights has captured the attention of educators and policymakers alike. But beneath the surface of this technological promise lie complex challenges that demand careful consideration. This report delves into the multifaceted implications of the 'algorithmic classroom', examining both its potential benefits and inherent risks.",
+          "p2": "One of the primary arguments in favour of AI in education is its capacity to individualise learning. Traditional classrooms often struggle to cater to the diverse needs of students, leaving some behind while others are unchallenged. AI-powered tutoring systems can adapt to each student's unique learning style, pace, and preferences, providing targeted support and feedback. These systems can analyse vast amounts of data to identify patterns in student performance, predict potential difficulties, and offer personalised interventions. Furthermore, AI can automate mundane tasks such as grading and administrative duties, freeing up teachers to focus on more meaningful interactions with students.",
+          "p3": "However, the integration of AI also raises significant concerns. One major challenge is the 'black box' problem – the opacity of AI algorithms that makes it difficult to understand how they arrive at their conclusions. This lack of transparency can erode trust in the system and make it difficult to identify and correct biases. Furthermore, there are concerns about data privacy and security. AI systems collect and process vast amounts of student data, raising questions about how this data is stored, used, and protected. It is crucial to ensure that appropriate safeguards are in place to prevent data breaches and misuse.",
+          "p4": "Another critical consideration is the potential impact on the role of teachers. While AI can automate some tasks, it is unlikely to replace teachers entirely. The human element of teaching – the ability to inspire, motivate, and build relationships with students – remains essential. The challenge lies in redefining the role of teachers in the age of AI, empowering them to use technology to enhance their teaching practices and provide more personalised support to students. Teacher training is paramount to ensuring effective integration and use of AI technologies. Teachers need to be equipped with the skills and knowledge to critically evaluate AI tools, understand their limitations, and use them in a way that complements their own expertise.",
+          "p5": "The ethical implications of AI in education also warrant careful attention. Bias in algorithms can perpetuate and exacerbate existing inequalities, disadvantaging certain groups of students. It is crucial to ensure that AI systems are designed and implemented in a way that promotes fairness and equity. Moreover, there are concerns about the potential for AI to deskill teachers, reducing them to mere facilitators of technology. The focus should be on using AI to augment human capabilities, not to replace them entirely.",
+          "p6": "Furthermore, over-reliance on technology can stifle creativity, critical thinking, and social skills. Students need opportunities to engage in collaborative projects, discussions, and hands-on activities that foster these essential skills. It is important to strike a balance between technology-driven learning and traditional pedagogical approaches. The ultimate goal is to create a learning environment that nurtures the holistic development of students, preparing them for success in a rapidly changing world.",
+          "p7": "In conclusion, the integration of AI into Hong Kong's education system presents both unprecedented opportunities and significant challenges. To harness the full potential of AI while mitigating its risks, it is essential to adopt a thoughtful and strategic approach. This requires careful planning, ongoing evaluation, and a commitment to equity, transparency, and ethical considerations. By working collaboratively, educators, policymakers, and technology developers can create a future where AI empowers students and teachers alike, transforming education for the better."
+        },
+        "metadata": {
+          "word_count": 500,
+          "genre": "Feature Article"
+        }
+      }
+    },
+    "questions": [
+      {
+        "id": "q1",
+        "part": "Text_1",
+        "type": "mc_main_idea",
+        "question": "What is the main topic of Text_1?",
+        "options": [
+          "The increasing use of AI tutors in Hong Kong classrooms.",
+          "The challenges of large class sizes in Hong Kong.",
+          "The debate over personalized learning experiences.",
+          "The importance of technology in education."
+        ],
+        "answer": "A",
+        "marks": 2,
+        "logic": "Text_1 primarily discusses the introduction of AI tutors and the associated debate.",
+        "segment_ref": "Text_1:p1"
+      },
+      {
+        "id": "q2",
+        "part": "Text_1",
+        "type": "short_answer",
+        "question": "According to Text_1, what is one potential benefit of AI tutors for students?",
+        "options": [],
+        "answer": "AI tutors offer personalized learning experiences, adapting to each student's pace and learning style.",
+        "marks": 2,
+        "logic": "The text states that AI tutors adapt to each student's pace and learning style.",
+        "segment_ref": "Text_1:p1"
+      },
+      {
+        "id": "q3",
+        "part": "Text_1",
+        "type": "true_false_not_given",
+        "question": "Text_1 indicates that all schools in Hong Kong are equally eager to adopt AI tutors. Is this true, false, or not mentioned in the text?",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "False",
+        "marks": 1,
+        "logic": "The text indicates that some schools are cautiously optimistic, not all.",
+        "segment_ref": "Text_1:p2"
+      },
+      {
+        "id": "q4",
+        "part": "Text_1",
+        "type": "short_answer",
+        "question": "According to Text_1, what is one concern critics have about the over-reliance on AI in classrooms?",
+        "options": [],
+        "answer": "The potential erosion of human interaction.",
+        "marks": 2,
+        "logic": "The text explicitly mentions the erosion of human interaction as a concern.",
+        "segment_ref": "Text_1:p2"
+      },
+      {
+        "id": "q5",
+        "part": "Text_1",
+        "type": "reference",
+        "question": "In paragraph 2 of Text_1, what does 'these technological resources' refer to?",
+        "options": [],
+        "answer": "AI tutors",
+        "marks": 1,
+        "logic": "The context of the paragraph indicates that 'these technological resources' refers to AI tutors.",
+        "segment_ref": "Text_1:p2"
+      },
+      {
+        "id": "q6",
+        "part": "Text_2",
+        "type": "mc_main_idea",
+        "question": "What is the primary focus of Text_2?",
+        "options": [
+          "The history of AI development.",
+          "The potential and challenges of AI in education.",
+          "The cost of implementing AI in schools.",
+          "The benefits of traditional teaching methods."
+        ],
+        "answer": "B",
+        "marks": 2,
+        "logic": "Text_2 explores both the positive and negative aspects of using AI in education.",
+        "segment_ref": "Text_2:p1"
+      },
+      {
+        "id": "q7",
+        "part": "Text_2",
+        "type": "short_answer",
+        "question": "According to Text_2, what is one way AI can benefit teachers?",
+        "options": [],
+        "answer": "AI can automate mundane tasks such as grading and administrative duties.",
+        "marks": 2,
+        "logic": "The text states that AI can automate grading and administrative tasks.",
+        "segment_ref": "Text_2:p2"
+      },
+      {
+        "id": "q8",
+        "part": "Text_2",
+        "type": "true_false_not_given",
+        "question": "Text_2 suggests that AI will completely replace teachers in the future. Is this true, false or not given in the text?",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "False",
+        "marks": 1,
+        "logic": "The text states that AI is unlikely to replace teachers entirely.",
+        "segment_ref": "Text_2:p4"
+      },
+      {
+        "id": "q9",
+        "part": "Text_2",
+        "type": "short_answer",
+        "question": "According to Text_2, what is the 'black box' problem in the context of AI?",
+        "options": [],
+        "answer": "The opacity of AI algorithms that makes it difficult to understand how they arrive at their conclusions.",
+        "marks": 2,
+        "logic": "The text explicitly defines the 'black box' problem as the opacity of AI algorithms.",
+        "segment_ref": "Text_2:p3"
+      },
+      {
+        "id": "q10",
+        "part": "Text_2",
+        "type": "gap_fill",
+        "question": "AI systems collect and process vast amounts of student ______, raising questions about how this data is ________, ________, and ________.",
+        "options": [],
+        "answer": "data, stored, used, protected",
+        "marks": 4,
+        "logic": "This fill-in-the-blanks question is based on data privacy concerns in paragraph 3 of Text_2.",
+        "segment_ref": "Text_2:p3"
+      },
+      {
+        "id": "q11",
+        "part": "Text_2",
+        "type": "reference",
+        "question": "In paragraph 5 of Text_2, what does 'them' refer to?",
+        "options": [],
+        "answer": "teachers",
+        "marks": 1,
+        "logic": "The context shows 'them' refers to teachers in the discussion of deskilling teachers.",
+        "segment_ref": "Text_2:p5"
+      },
+      {
+        "id": "q12",
+        "part": "Text_2",
+        "type": "short_answer",
+        "question": "According to Text_2, what is one skill that students need to develop, which might be stifled by over-reliance on technology?",
+        "options": [],
+        "answer": "Creativity.",
+        "marks": 2,
+        "logic": "The text explicitly mentions creativity as a skill that can be stifled.",
+        "segment_ref": "Text_2:p6"
+      },
+      {
+        "id": "q13",
+        "part": "Text_2",
+        "type": "true_false_not_given",
+        "question": "Text 2 indicates that teacher training is not necessary for effective AI integration. Is this true, false, or not given in the text?",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "False",
+        "marks": 1,
+        "logic": "Text 2 indicates that teacher training is paramount.",
+        "segment_ref": "Text_2:p4"
+      },
+      {
+        "id": "q14",
+        "part": "Text_2",
+        "type": "matching",
+        "question": "Match the concern with the paragraph where it is discussed:\n1. Data Privacy \n2. Role of Teachers\n3. Ethical implications",
+        "options": [],
+        "answer": "1-p3, 2-p4, 3-p5",
+        "marks": 3,
+        "logic": "Each concern is explicitly addressed in the specified paragraph.",
+        "segment_ref": "Text_2:p3, Text_2:p4, Text_2:p5"
+      },
+      {
+        "id": "q15",
+        "part": "Text_1 & Text_2",
+        "type": "short_answer",
+        "question": "Based on BOTH texts, what is the main goal of using AI in education?",
+        "options": [],
+        "answer": "To empower students and personalize learning.",
+        "marks": 3,
+        "logic": "Both texts emphasize the potential of AI to personalize learning and enhance student outcomes.",
+        "segment_ref": "Text_1:p1, Text_2:p2"
+      },
+      {
+        "id": "q16",
+        "part": "Text_1 & Text_2",
+        "type": "mc_main_idea",
+        "question": "Which of the following is a shared concern in both Text 1 and Text 2?",
+        "options": [
+          "The cost of AI technology.",
+          "The potential for decreased human interaction.",
+          "The lack of teacher training.",
+          "The speed of AI implementation."
+        ],
+        "answer": "B",
+        "marks": 2,
+        "logic": "Both texts raise concerns about the reduction in human interaction due to AI.",
+        "segment_ref": "Text_1:p2, Text_2:p6"
+      },
+      {
+        "id": "q17",
+        "part": "Text_2",
+        "type": "flowchart",
+        "question": "Complete the flow chart of Personalized Interventions:\nStudent Performance Data Analysis --> ______ --> Personalized Support",
+        "options": [],
+        "answer": "Predict Potential Difficulties",
+        "marks": 3,
+        "logic": "Text 2 describes the process of AI to identify patterns and potential difficulties of student's performance.",
+        "segment_ref": "Text_2:p2"
+      },
+      {
+        "id": "q18",
+        "part": "Text_2",
+        "type": "short_answer",
+        "question": "According to Text 2, what three things are required to harness the full potential of AI while mitigating its risks?",
+        "options": [],
+        "answer": "Careful planning, ongoing evaluation, and a commitment to equity, transparency, and ethical considerations.",
+        "marks": 3,
+        "logic": "These are the core requirements identified in the conclusion paragraph.",
+        "segment_ref": "Text_2:p7"
+      }
+    ],
+    "meta": {
+      "topics": [
+        "Text_1",
+        "Text_2"
+      ]
+    }
+  },
+  "Part_B2": {
+    "resources": {
+      "Text_1": {
+        "title": "AI Tutors: A New Dawn for Education or a Passing Fad?",
+        "subheading": "As AI rapidly evolves, Hong Kong schools grapple with integrating personalised learning technologies, raising questions about their true impact.",
+        "content": {
+          "p1": "The advent of sophisticated artificial intelligence has sparked a revolution across numerous sectors, and education is no exception. In Hong Kong, a growing number of schools are experimenting with AI-powered tutoring systems, promising personalised learning experiences tailored to each student's needs. These systems analyse student performance data, identify knowledge gaps, and provide targeted instruction, ostensibly leading to improved academic outcomes. The allure of AI tutors lies in their ability to offer 24/7 support, adapting to individual learning styles and pacing, something often impossible within the constraints of a traditional classroom.",
+          "p2": "However, the integration of AI into education is not without its challenges. Concerns have been raised regarding data privacy, algorithmic bias, and the potential for over-reliance on technology. Critics argue that the human element of teaching, the ability to foster critical thinking and creativity, cannot be replicated by machines. Furthermore, the digital divide in Hong Kong could exacerbate existing inequalities, as access to these AI-powered tools may be limited for students from underprivileged backgrounds. As Hong Kong schools navigate this new frontier, a careful balance must be struck between embracing technological advancements and preserving the core values of education.",
+          "p3": "Preliminary data suggests that while students using AI tutors demonstrate improvements in specific subject areas, their overall performance remains comparable to that of students receiving traditional instruction. More rigorous research is needed to ascertain the long-term efficacy of these systems and their impact on student well-being. The Hong Kong Education Bureau is currently developing guidelines to ensure the ethical and responsible implementation of AI in schools, focusing on data security, teacher training, and equitable access for all students."
+        },
+        "metadata": {
+          "word_count": 305,
+          "genre": "News Article"
+        }
+      },
+      "Text_2": {
+        "title": "The Algorithmic Classroom: Deconstructing the Promise and Peril of AI in Education",
+        "subheading": "An in-depth analysis of the transformative potential and inherent limitations of artificial intelligence in reshaping the educational landscape of Hong Kong and beyond.",
+        "content": {
+          "p1": "The integration of Artificial Intelligence (AI) into educational settings is no longer a futuristic fantasy but a rapidly unfolding reality. From AI-powered tutoring systems that offer personalised learning pathways to automated grading tools designed to streamline administrative tasks, the promises of AI in education are manifold. Proponents envision a future where technology eliminates the bottlenecks of traditional pedagogy, allowing educators to focus on fostering creativity, critical thinking, and social-emotional development. However, a closer examination reveals a more nuanced picture, fraught with both opportunities and potential pitfalls.",
+          "p2": "One of the most touted benefits of AI in education is its capacity to provide personalised learning experiences. AI algorithms can analyse vast datasets of student performance, identifying individual strengths and weaknesses, and tailoring instruction accordingly. This adaptive learning approach promises to address the diverse needs of students in a way that traditional one-size-fits-all teaching methods cannot. Yet, the effectiveness of these systems hinges on the quality and completeness of the data they are trained on. Algorithmic bias, a pervasive issue in AI development, can inadvertently perpetuate existing inequalities if the data reflects societal biases related to gender, race, or socioeconomic status. Ensuring fairness and equity in AI-driven learning requires careful attention to data curation and algorithmic transparency.",
+          "p3": "Furthermore, the reliance on AI-powered assessment tools raises questions about the validity and reliability of grading. While automated grading systems can efficiently evaluate objective assessments such as multiple-choice quizzes, they struggle to assess more complex skills such as critical thinking, creative writing, and problem-solving. The over-reliance on automated grading could lead to a narrowing of the curriculum, with teachers focusing on easily measurable outcomes at the expense of more nuanced and subjective forms of learning. This 'teaching to the algorithm' phenomenon could ultimately stifle creativity and critical inquiry, undermining the very goals of education.",
+          "p4": "Beyond the technical challenges, the ethical implications of AI in education demand careful consideration. The collection and analysis of student data raise concerns about privacy and security. It is imperative that robust data protection measures are in place to safeguard student information from unauthorised access and misuse. Moreover, the use of AI in education should not come at the expense of human interaction and mentorship. The role of teachers as facilitators of learning, mentors, and role models remains crucial for fostering students' social-emotional development and preparing them for the complexities of the real world.",
+          "p5": "The Hong Kong context presents unique challenges and opportunities for the integration of AI in education. The city's dense urban environment, coupled with its highly competitive academic culture, creates a fertile ground for the adoption of innovative technologies. However, the digital divide in Hong Kong, with disparities in access to technology and internet connectivity, could exacerbate existing inequalities if AI-powered learning tools are not implemented equitably. The Hong Kong Education Bureau has a critical role to play in ensuring that all students have access to the resources and support they need to thrive in the age of AI. This includes investing in teacher training, promoting digital literacy, and developing ethical guidelines for the use of AI in education.",
+          "p6": "Moreover, it is crucial to foster a critical and informed perspective on the potential benefits and limitations of AI in education. Students need to develop the skills to evaluate the information they encounter online, to discern credible sources from misinformation, and to understand the biases that may be embedded in algorithms. Educators, policymakers, and parents must engage in an open and ongoing dialogue about the role of AI in shaping the future of education. The 'AI classroom revolution' should not be driven by technological determinism but by a thoughtful and deliberate approach that prioritises the well-being and holistic development of all students. The successful integration of AI in education requires a commitment to equity, transparency, and human-centred design, ensuring that technology serves as a tool to empower learners and enhance the quality of education for all.",
+          "p7": "In conclusion, the integration of AI into education holds immense promise, but also poses significant challenges. Navigating this complex landscape requires a nuanced understanding of the technology's capabilities and limitations, as well as a commitment to ethical principles and equitable access. Only through careful planning, robust oversight, and ongoing dialogue can we harness the power of AI to transform education for the better, creating a future where all students have the opportunity to reach their full potential. The future of education is not about replacing teachers with machines, but about empowering educators and learners with the tools they need to thrive in an increasingly complex and interconnected world."
+        },
+        "metadata": {
+          "word_count": 703,
+          "genre": "Feature Article"
+        }
+      }
+    },
+    "questions": [
+      {
+        "id": "q1",
+        "part": "Text_1",
+        "type": "mc_main_idea",
+        "question": "What is the main idea of Text_1?",
+        "options": [
+          "The rise of AI tutors in Hong Kong schools and their potential impact.",
+          "The history of education in Hong Kong.",
+          "The benefits of traditional teaching methods.",
+          "A comparison of different AI technologies."
+        ],
+        "answer": "A",
+        "marks": 2,
+        "logic": "Text_1 discusses the introduction of AI tutors in Hong Kong and their potential effects on personalized learning and academic outcomes.",
+        "segment_ref": "Text_1"
+      },
+      {
+        "id": "q2",
+        "part": "Text_1",
+        "type": "true_false_not_given",
+        "question": "AI tutors are currently used in all Hong Kong schools.",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "False",
+        "marks": 1,
+        "logic": "Text_1 states that a growing number of schools are experimenting with AI, implying not all schools are using them.",
+        "segment_ref": "Text_1:p1"
+      },
+      {
+        "id": "q3",
+        "part": "Text_1",
+        "type": "short_answer",
+        "question": "According to Text_1, what is one potential negative consequence of using AI tutors that could worsen existing societal problems?",
+        "answer": "The digital divide may exacerbate existing inequalities.",
+        "marks": 2,
+        "logic": "The text mentions that students from underprivileged backgrounds may have limited access to AI-powered tools, thus widening the digital divide.",
+        "segment_ref": "Text_1:p2"
+      },
+      {
+        "id": "q4",
+        "part": "Text_1",
+        "type": "reference",
+        "question": "In the sentence, 'The allure of AI tutors lies in their ability to offer 24/7 support, adapting to individual learning styles and pacing, something often impossible within the constraints of a traditional classroom,' what does 'something' refer to?",
+        "answer": "The ability of AI tutors to offer 24/7 support, adapt to individual learning styles, and pace instruction.",
+        "marks": 1,
+        "logic": "'Something' refers to the previously mentioned characteristics of AI tutors: 24/7 support, adaptation to learning styles, and flexible pacing.",
+        "segment_ref": "Text_1:p1"
+      },
+      {
+        "id": "q5",
+        "part": "Text_1",
+        "type": "true_false_not_given",
+        "question": "The Hong Kong Education Bureau has already implemented strict regulations regarding the use of AI in schools.",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "False",
+        "marks": 1,
+        "logic": "The text states the Bureau is developing guidelines, indicating that regulations are not yet fully implemented.",
+        "segment_ref": "Text_1:p3"
+      },
+      {
+        "id": "q6",
+        "part": "Text_2",
+        "type": "mc_main_idea",
+        "question": "What is the central theme explored in Text_2?",
+        "options": [
+          "The practical benefits and potential dangers of AI in education.",
+          "The history of AI development.",
+          "The future of traditional classrooms.",
+          "The cost-effectiveness of AI technologies."
+        ],
+        "answer": "A",
+        "marks": 2,
+        "logic": "Text_2 delves into the advantages and disadvantages of implementing AI in educational settings.",
+        "segment_ref": "Text_2"
+      },
+      {
+        "id": "q7",
+        "part": "Text_2",
+        "type": "short_answer",
+        "question": "According to Text_2, what is one potential negative effect of over-relying on AI-powered assessment tools in education?",
+        "answer": "Over-reliance could lead to a narrowing of the curriculum.",
+        "marks": 2,
+        "logic": "The text states the over-reliance on automated grading could lead to teachers focusing on easily measurable outcomes at the expense of more nuanced and subjective forms of learning, thus narrowing the curriculum.",
+        "segment_ref": "Text_2:p3"
+      },
+      {
+        "id": "q8",
+        "part": "Text_2",
+        "type": "true_false_not_given",
+        "question": "AI can perfectly assess complex skills such as creative writing.",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "False",
+        "marks": 1,
+        "logic": "The text indicates that AI systems struggle to accurately and comprehensively evaluate complex skills such as creative writing.",
+        "segment_ref": "Text_2:p3"
+      },
+      {
+        "id": "q9",
+        "part": "Text_2",
+        "type": "reference",
+        "question": "In Text_2, what does 'This' refer to in the sentence 'This 'teaching to the algorithm' phenomenon could ultimately stifle creativity and critical inquiry, undermining the very goals of education.'?",
+        "answer": "Teaching to the algorithm.",
+        "marks": 1,
+        "logic": "'This' refers to the previously mentioned practice of 'teaching to the algorithm'.",
+        "segment_ref": "Text_2:p3"
+      },
+      {
+        "id": "q10",
+        "part": "Text_2",
+        "type": "short_answer",
+        "question": "According to Text_2, what is one step the Hong Kong Education Bureau can take to promote equitable implementation of AI in education?",
+        "answer": "Investing in teacher training.",
+        "marks": 2,
+        "logic": "The text explicitly mentions the importance of investing in teacher training to ensure the responsible and equitable integration of AI in education.",
+        "segment_ref": "Text_2:p5"
+      },
+      {
+        "id": "q11",
+        "part": "Text_2",
+        "type": "gap_fill",
+        "question": "Complete the sentence with information from Text_2: AI algorithms analyse student _________ to identify strengths and weaknesses, leading to a more _________ learning approach.",
+        "answer": "performance, personalized",
+        "marks": 2,
+        "logic": "The missing words 'performance' and 'personalized' accurately complete the sentence based on the information in the text.",
+        "segment_ref": "Text_2:p2"
+      },
+      {
+        "id": "q12",
+        "part": "Text_1",
+        "type": "short_answer",
+        "question": "Besides fostering critical thinking, what other human element of teaching is mentioned as potentially irreplaceable by AI in Text 1?",
+        "answer": "Creativity",
+        "marks": 2,
+        "logic": "The text explicitly mentions fostering creativity as a human element of teaching that AI may struggle to replicate.",
+        "segment_ref": "Text_1:p2"
+      },
+      {
+        "id": "q13",
+        "part": "Text_2",
+        "type": "true_false_not_given",
+        "question": "Text 2 argues that AI should completely replace teachers in the classroom.",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "False",
+        "marks": 1,
+        "logic": "Text 2 suggests that AI should empower educators and learners, not replace them entirely.",
+        "segment_ref": "Text_2:p7"
+      },
+      {
+        "id": "q14",
+        "part": "Text_1",
+        "type": "gap_fill",
+        "question": "Complete the sentence with information from Text_1: Preliminary data suggests that students using AI tutors show improvements in ________ subject areas, but their overall performance is ________ to students receiving traditional instruction.",
+        "answer": "specific, comparable",
+        "marks": 2,
+        "logic": "The words 'specific' and 'comparable' complete the sentence and accurately reflect the findings presented in the text.",
+        "segment_ref": "Text_1:p3"
+      },
+      {
+        "id": "q15",
+        "part": "Text_2",
+        "type": "mc_main_idea",
+        "question": "What is the author's overall tone towards the integration of AI in education in Text 2?",
+        "options": [
+          "Enthusiastically optimistic",
+          "Cautiously optimistic",
+          "Pessimistic and skeptical",
+          "Completely indifferent"
+        ],
+        "answer": "B",
+        "marks": 2,
+        "logic": "The author acknowledges the potential benefits of AI but also highlights several concerns and challenges, indicating a cautiously optimistic stance.",
+        "segment_ref": "Text_2"
+      },
+      {
+        "id": "q16",
+        "part": "Text_2",
+        "type": "short_answer",
+        "question": "According to Text_2, what is one crucial skill students need to develop in order to effectively navigate the age of AI and avoid misinformation?",
+        "answer": "The ability to evaluate information online.",
+        "marks": 2,
+        "logic": "The text emphasizes the importance of students being able to critically evaluate online sources and distinguish credible information from misinformation in the age of AI.",
+        "segment_ref": "Text_2:p6"
+      },
+      {
+        "id": "q17",
+        "part": "Text_1",
+        "type": "true_false_not_given",
+        "question": "Text 1 suggests that AI tutors are definitively more effective than traditional teaching methods.",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "Not Given",
+        "marks": 1,
+        "logic": "Text 1 presents preliminary data indicating comparable results between AI tutors and traditional methods, suggesting that further research is needed.",
+        "segment_ref": "Text_1:p3"
+      },
+      {
+        "id": "q18",
+        "part": "Text_2",
+        "type": "gap_fill",
+        "question": "Complete the sentence with information from Text_2: The successful integration of AI in education requires a commitment to _________, transparency, and human-centered ________.",
+        "answer": "equity, design",
+        "marks": 2,
+        "logic": "These words accurately complete the sentence, emphasizing the importance of fairness, openness, and a focus on human needs in AI implementation.",
+        "segment_ref": "Text_2:p6"
+      },
+      {
+        "id": "q19",
+        "part": "Text_2",
+        "type": "mc_main_idea",
+        "question": "According to Text 2, which of the following is MOST crucial for ensuring the responsible adoption of AI in Education?",
+        "options": [
+          "Increased funding for technological development",
+          "Ethical considerations and equitable access",
+          "Complete automation of administrative tasks",
+          "Ignoring the potential biases in algorithms"
+        ],
+        "answer": "B",
+        "marks": 2,
+        "logic": "The text strongly emphasizes the need to prioritize ethical considerations and ensure equitable access to AI-powered educational tools.",
+        "segment_ref": "Text_2"
+      },
+      {
+        "id": "q20",
+        "part": "Text_2",
+        "type": "short_answer",
+        "question": "According to Text_2, what is one concern regarding data security and privacy related to the use of AI in education?",
+        "answer": "Student information needs to be safeguarded from unauthorized access and misuse.",
+        "marks": 2,
+        "logic": "The text highlights the importance of protecting student data from unauthorized access and misuse when using AI in educational settings.",
+        "segment_ref": "Text_2:p4"
+      }
+    ],
+    "meta": {
+      "topics": [
+        "Text_1",
+        "Text_2"
+      ]
+    }
+  }
+}

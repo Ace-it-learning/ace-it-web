@@ -1,0 +1,205 @@
+{
+  "meta": {
+    "subject": "English Language",
+    "paper_id": "Paper 3 (Listening & Integrated Skills)",
+    "version": "2026_V1",
+    "description": "Mock Exam: Environmental Conservation Campaign"
+  },
+  "sections": {
+    "Part_A": {
+      "name": "Compulsory Section (Listening Tasks)",
+      "target_level": "Level 3-4 Benchmark",
+      "constraints": {
+        "duration_minutes": 60,
+        "task_count": 4,
+        "input_type": "Audio Script (Dialogue/Monologue)",
+        "question_types": [
+          "Fill_in_Blanks",
+          "Multiple_Choice",
+          "Table_Completion"
+        ]
+      },
+      "tasks": [
+        {
+          "id": "Task_1",
+          "type": "Form/Note-taking",
+          "context": "Booking a community hall for a workshop",
+          "interaction": "Dialogue (2 speakers)"
+        },
+        {
+          "id": "Task_2",
+          "type": "Table Completion",
+          "context": "Comparing recycling programs in different districts",
+          "interaction": "Dialogue (2 speakers)"
+        },
+        {
+          "id": "Task_3",
+          "type": "Flow Chart",
+          "context": "Steps to organize a beach cleanup",
+          "interaction": "Monologue (Environmental Officer)"
+        },
+        {
+          "id": "Task_4",
+          "type": "Extended Response",
+          "context": "Lecture on the impact of plastic pollution",
+          "interaction": "Monologue (Professor)"
+        }
+      ]
+    },
+    "Part_B": {
+      "name": "Integrated Skills (Data File + Audio)",
+      "target_level": "Level 4-5 Benchmark",
+      "constraints": {
+        "duration_minutes": 75,
+        "task_count": 3,
+        "input_type": "Data File (Reading) + Audio Note-taking",
+        "question_types": [
+          "Extended_Writing"
+        ]
+      },
+      "tasks": [
+        {
+          "id": "Task_5",
+          "type": "Email",
+          "tone": "Formal",
+          "word_count": "180-200",
+          "prompt": "Write an email to the Environmental Protection Department suggesting improvements to the district's recycling program, based on the data file and audio recording."
+        },
+        {
+          "id": "Task_6",
+          "type": "Speech",
+          "tone": "Persuasive",
+          "word_count": "220-250",
+          "prompt": "Prepare a speech for your school assembly to persuade students to reduce their carbon footprint, using information from the data file and audio recording."
+        },
+        {
+          "id": "Task_7",
+          "type": "Proposal",
+          "tone": "Formal",
+          "word_count": "270-300",
+          "prompt": "Write a proposal to the school principal suggesting ways to make the school more environmentally friendly, drawing on information from the data file and the audio recording."
+        }
+      ],
+      "data_file": [
+        {
+          "type": "email",
+          "filename": "email_to_epd.txt",
+          "content": "Subject: Feedback on District Recycling Program\n\nDear Environmental Protection Department,\n\nI am writing to provide feedback on the current recycling program in our district. While I appreciate the efforts made, I believe there are areas for improvement. Collection points are often overflowing, and public awareness campaigns could be more effective. I would like to propose [details about improvements].\n\nSincerely,\n[Your Name]"
+        },
+        {
+          "type": "minutes",
+          "filename": "meeting_minutes.txt",
+          "content": "Meeting Minutes: Green Team Meeting\nDate: 2026-05-03\nAttendees: [Names]\nDiscussion Points:\n- Review of current school recycling initiatives\n- Analysis of waste audit results\n- Brainstorming new strategies for waste reduction\nAction Items:\n- Conduct student survey on environmental awareness\n- Research potential partnerships with local environmental organizations."
+        },
+        {
+          "type": "poster",
+          "filename": "recycling_poster.jpg",
+          "content": "(Image of a colorful poster promoting recycling, with key messages like 'Reduce, Reuse, Recycle' and information about what materials can be recycled in Hong Kong.)"
+        },
+        {
+          "type": "webpage",
+          "filename": "environmental_ngo_website.html",
+          "content": "<html><body><h1>Save Our Planet</h1><p>Welcome to our website dedicated to environmental conservation. Learn about the challenges we face and how you can make a difference.  We have information on local initiatives, volunteering opportunities, and tips for sustainable living.  Check out our 'Carbon Footprint Calculator' to see your impact!</p></body></html>"
+        }
+      ]
+    }
+  },
+  "audio_strategy": {
+    "format": "JSON_Script",
+    "playback": "Browser_TTS",
+    "voices": [
+      "Male_1",
+      "Female_1",
+      "Male_2"
+    ],
+    "instructions": "Tracks are played once only. 5 minutes prep time at start."
+  },
+  "audio_scripts": {
+    "Part_A": {
+      "Task_1": {
+        "script": [
+          {
+            "speaker": "Female_1",
+            "dialogue": "Hello, I'd like to book the community hall for an environmental workshop."
+          },
+          {
+            "speaker": "Male_1",
+            "dialogue": "Certainly. Which date were you thinking of?"
+          },
+          {
+            "speaker": "Female_1",
+            "dialogue": "Ideally, the 15th of June, but I'm flexible."
+          },
+          {
+            "speaker": "Male_1",
+            "dialogue": "Let me check... the 15th is available. What time would you need it?"
+          },
+          {
+            "speaker": "Female_1",
+            "dialogue": "From 2 PM to 5 PM."
+          },
+          {
+            "speaker": "Male_1",
+            "dialogue": "Okay, that's three hours. Can I have your name and contact number, please?"
+          },
+          {
+            "speaker": "Female_1",
+            "dialogue": "My name is Sarah Chan, and my number is 9123 4567."
+          }
+        ]
+      },
+      "Task_2": {
+        "script": [
+          {
+            "speaker": "Male_1",
+            "dialogue": "So, we need to compare the recycling programs in different districts for our report."
+          },
+          {
+            "speaker": "Female_1",
+            "dialogue": "Right. I've got some data here. Kwun Tong seems to have the highest participation rate, at around 60%."
+          },
+          {
+            "speaker": "Male_1",
+            "dialogue": "That's impressive. What about the types of materials they recycle?"
+          },
+          {
+            "speaker": "Female_1",
+            "dialogue": "They focus on paper, plastic, and metal. Shatin, on the other hand, includes glass but their participation is lower, about 45%."
+          },
+          {
+            "speaker": "Male_1",
+            "dialogue": "Interesting. And what about the frequency of collection?"
+          },
+          {
+            "speaker": "Female_1",
+            "dialogue": "Kwun Tong has weekly collection, while Shatin is bi-weekly. Maybe that explains the difference in participation."
+          }
+        ]
+      },
+      "Task_3": {
+        "script": [
+          {
+            "speaker": "Male_2",
+            "dialogue": "Organizing a beach cleanup is easier than you think! First, you need to get permission from the relevant authorities, usually the Leisure and Cultural Services Department. Then, recruit volunteers. Publicize the event through social media and local community groups. Next, gather supplies: gloves, trash bags, and maybe some water. On the day, start with a safety briefing. Explain what to do if volunteers find hazardous waste. Divide the beach into sections, assigning a team to each section. Finally, collect all the trash bags and dispose of them properly, coordinating with the waste management department."
+          }
+        ]
+      },
+      "Task_4": {
+        "script": [
+          {
+            "speaker": "Female_1",
+            "dialogue": "Good morning, everyone. Today's lecture is on the devastating impact of plastic pollution. Annually, millions of tons of plastic enter our oceans, harming marine life and ecosystems. Plastic doesn't biodegrade; it breaks down into microplastics, which contaminate our food chain. Studies show that these microplastics are now found in seafood and even drinking water. Furthermore, plastic production relies heavily on fossil fuels, contributing to climate change. We need to reduce our plastic consumption, promote reusable alternatives, and improve recycling infrastructure to mitigate this growing crisis. Individual action, combined with government policies and corporate responsibility, is crucial to tackling plastic pollution effectively."
+          }
+        ]
+      }
+    },
+    "Part_B": {
+      "audio_note": [
+        {
+          "speaker": "Female_1",
+          "dialogue": "Hello everyone, this is a recording for the Green Team regarding our school's environmental initiatives. After reviewing the data and the recent meeting minutes, I have a few points to add. Firstly, the student survey revealed that many students are unaware of the school's recycling policies. We need to increase awareness through more informative posters and presentations. Secondly, I contacted several local environmental organizations, and 'EcoAction Hong Kong' is willing to partner with us to provide workshops and resources. Finally, I suggest we consider implementing a composting program to reduce food waste. I believe these measures will significantly improve our school's environmental performance. Please consider these points when drafting your reports and proposals. Thank you."
+        }
+      ]
+    }
+  }
+}

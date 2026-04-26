@@ -1,0 +1,440 @@
+{
+  "meta": {
+    "subject": "English Language",
+    "paper_id": "Paper 3 (Listening & Integrated Skills)",
+    "version": "2026_V1",
+    "description": "Mock Exam: School Open Day"
+  },
+  "Part_A": {
+    "name": "Compulsory Section (Listening Tasks)",
+    "audio_script": {
+      "Task_1": {
+        "title": "Open Day Enquiry",
+        "type": "Dialogue",
+        "speakers": [
+          "Receptionist",
+          "Caller"
+        ],
+        "content": [
+          {
+            "speaker": "Receptionist",
+            "line": "Good morning, Happy Valley Secondary School, how can I help you?"
+          },
+          {
+            "speaker": "Caller",
+            "line": "Good morning, I'm calling to enquire about your upcoming Open Day. I saw a poster about it."
+          },
+          {
+            "speaker": "Receptionist",
+            "line": "Certainly! Our Open Day is on Saturday, November 18th, from 10 am to 4 pm."
+          },
+          {
+            "speaker": "Caller",
+            "line": "Great! Is there a specific address I should go to?"
+          },
+          {
+            "speaker": "Receptionist",
+            "line": "Yes, it's at 23 Blue Pool Road, Happy Valley. That's our main campus."
+          },
+          {
+            "speaker": "Caller",
+            "line": "Okay, 23 Blue Pool Road. Will there be any presentations about the school curriculum?"
+          },
+          {
+            "speaker": "Receptionist",
+            "line": "Yes, there will be curriculum talks in the school hall at 11 am, 1 pm, and 3 pm. Each session lasts about 45 minutes."
+          },
+          {
+            "speaker": "Caller",
+            "line": "Perfect. And what about activities for children? I have a young son."
+          },
+          {
+            "speaker": "Receptionist",
+            "line": "We have a dedicated Kids Zone in the playground with face painting, balloon twisting, and storytelling. It’s open from 10:30 am to 3:30 pm."
+          },
+          {
+            "speaker": "Caller",
+            "line": "That sounds wonderful. Is there parking available?"
+          },
+          {
+            "speaker": "Receptionist",
+            "line": "Unfortunately, parking is very limited. We recommend taking public transport. The number 5 bus stops right outside the school."
+          },
+          {
+            "speaker": "Caller",
+            "line": "Okay, that's good to know. Finally, is there a contact number if I have any further questions?"
+          },
+          {
+            "speaker": "Receptionist",
+            "line": "Yes, you can call us on 2576 5432. That's 2576 5432."
+          },
+          {
+            "speaker": "Caller",
+            "line": "Thank you so much for your help!"
+          },
+          {
+            "speaker": "Receptionist",
+            "line": "You're welcome! We look forward to seeing you on Open Day."
+          }
+        ],
+        "questions": [
+          {
+            "type": "Fill_in_Blanks",
+            "number": 1,
+            "text": "The Open Day is on Saturday, _________ _________."
+          },
+          {
+            "type": "Fill_in_Blanks",
+            "number": 2,
+            "text": "The school address is _________ Blue Pool Road, _________ _________."
+          },
+          {
+            "type": "Multiple_Choice",
+            "number": 3,
+            "text": "Curriculum talks will be held at:",
+            "options": [
+              "10 am, 12 pm, 2 pm",
+              "11 am, 1 pm, 3 pm",
+              "12 pm, 2 pm, 4 pm"
+            ]
+          },
+          {
+            "type": "Fill_in_Blanks",
+            "number": 4,
+            "text": "The Kids Zone is open from _________ to _________."
+          },
+          {
+            "type": "Fill_in_Blanks",
+            "number": 5,
+            "text": "The recommended transport is the number _________ bus."
+          },
+          {
+            "type": "Fill_in_Blanks",
+            "number": 6,
+            "text": "The school's contact number is _________ _________ _________."
+          }
+        ]
+      },
+      "Task_2": {
+        "title": "Student Feedback on Open Day Activities",
+        "type": "Dialogue",
+        "speakers": [
+          "Student A",
+          "Student B",
+          "Student C"
+        ],
+        "content": [
+          {
+            "speaker": "Student A",
+            "line": "So, guys, we need to finalize the feedback report on the Open Day activities. Let's start with the subject booths. What did people think?"
+          },
+          {
+            "speaker": "Student B",
+            "line": "Well, the Science booth was definitely a hit. Everyone loved the interactive experiments. I'd rate it Excellent. The English booth was pretty good too, especially the drama performances. Let's say Good."
+          },
+          {
+            "speaker": "Student C",
+            "line": "I agree about Science. The experiments were really engaging. The Math booth, though… it was okay, but a bit dry. I'd say Average. And the History booth? I barely saw anyone there. Probably Poor."
+          },
+          {
+            "speaker": "Student A",
+            "line": "Right, so Science: Excellent, English: Good, Math: Average, History: Poor. What about the performance events?"
+          },
+          {
+            "speaker": "Student B",
+            "line": "The school choir was fantastic, as always. Excellent! The dance club was pretty energetic, I'd give them Good."
+          },
+          {
+            "speaker": "Student C",
+            "line": "The Chinese orchestra was alright, but not as captivating as the choir. Average. And the drama club performance? I missed it, but I heard it was... not great. Let's go with Poor based on what I heard."
+          },
+          {
+            "speaker": "Student A",
+            "line": "Okay, choir: Excellent, dance: Good, Chinese orchestra: Average, drama club: Poor. Finally, what about the food stalls?"
+          },
+          {
+            "speaker": "Student B",
+            "line": "The snack stall was super popular, especially with the younger kids. Excellent! The drinks stall was also good; they had a wide variety."
+          },
+          {
+            "speaker": "Student C",
+            "line": "The hot dog stall was just okay, nothing special. Average. And the cake stall? They ran out of everything by lunchtime. Poor planning, I'd say Poor rating."
+          },
+          {
+            "speaker": "Student A",
+            "line": "Alright, snack stall: Excellent, drinks stall: Good, hot dog stall: Average, cake stall: Poor. Great, I think we have everything we need for the report."
+          }
+        ],
+        "questions": [
+          {
+            "type": "Table_Completion",
+            "columns": [
+              "Activity",
+              "Rating"
+            ],
+            "rows": [
+              {
+                "Activity": "Science Booth",
+                "answer": ""
+              },
+              {
+                "Activity": "English Booth",
+                "answer": ""
+              },
+              {
+                "Activity": "Math Booth",
+                "answer": ""
+              },
+              {
+                "Activity": "History Booth",
+                "answer": ""
+              },
+              {
+                "Activity": "School Choir",
+                "answer": ""
+              },
+              {
+                "Activity": "Dance Club",
+                "answer": ""
+              },
+              {
+                "Activity": "Chinese Orchestra",
+                "answer": ""
+              },
+              {
+                "Activity": "Drama Club",
+                "answer": ""
+              },
+              {
+                "Activity": "Snack Stall",
+                "answer": ""
+              },
+              {
+                "Activity": "Drinks Stall",
+                "answer": ""
+              },
+              {
+                "Activity": "Hot Dog Stall",
+                "answer": ""
+              },
+              {
+                "Activity": "Cake Stall",
+                "answer": ""
+              }
+            ]
+          }
+        ]
+      },
+      "Task_3": {
+        "title": "Tour Guide Instructions",
+        "type": "Monologue",
+        "speaker": [
+          "Tour Guide"
+        ],
+        "content": [
+          {
+            "speaker": "Tour Guide",
+            "line": "Welcome everyone to the Happy Valley Secondary School Open Day tour! We'll start our tour right here in the main hall. First, walk straight ahead towards the information desk, where you can pick up a school map. Next, turn left and you’ll see the school history exhibition room. After viewing the exhibition, exit the room and take the first right. You'll pass by the student union office on your left. Continue straight until you reach the staircase. Climb up to the second floor. At the top of the stairs, turn right again. The library will be the second door on your left. Feel free to browse the books. After the library, exit and turn left. Walk down the corridor until you reach the end. You will find the art room there. Finally, come back down the stairs and turn right into the playground. Have fun!"
+          }
+        ],
+        "questions": [
+          {
+            "type": "Flow Chart / Diagram",
+            "instructions": "Complete the flow chart showing the tour route.",
+            "steps": [
+              "Main Hall",
+              "Information Desk",
+              "",
+              "School History Exhibition",
+              "Exit & Turn Right",
+              "Student Union Office (Left)",
+              "Staircase (2nd Floor)",
+              "Turn Right",
+              "",
+              "Library (Left)",
+              "Exit & Turn Left",
+              "End of Corridor",
+              "Art Room",
+              "",
+              "Playground"
+            ]
+          }
+        ]
+      },
+      "Task_4": {
+        "title": "Headmaster's Speech",
+        "type": "Monologue",
+        "speaker": [
+          "Headmaster"
+        ],
+        "content": [
+          {
+            "speaker": "Headmaster",
+            "line": "Good morning, esteemed guests, parents, students, and friends. It is my distinct pleasure to welcome you to our annual Open Day at Happy Valley Secondary School. Today offers a glimpse into the vibrant academic and extracurricular life we cultivate within these walls. Our mission has always been to nurture well-rounded individuals equipped to excel in a rapidly changing world. We emphasize critical thinking, creativity, and collaboration. This year, we are particularly proud to announce the launch of our new STEM program, integrating Science, Technology, Engineering, and Mathematics into a holistic learning experience. Furthermore, we've expanded our international exchange programs, providing students with invaluable opportunities to broaden their horizons and develop intercultural competence. However, academic excellence is not our sole focus. We believe in fostering a strong sense of community and social responsibility. Our students actively participate in various volunteer initiatives, contributing to the betterment of society. We are also committed to providing a supportive and inclusive environment where every student feels valued and empowered. Our dedicated teaching staff employs innovative pedagogical approaches to cater to diverse learning styles. We encourage students to explore their passions, embrace challenges, and strive for excellence in all their endeavors. As you tour our campus today, I invite you to engage with our students and teachers, witness their achievements, and experience the spirit of Happy Valley Secondary School. Thank you for your presence, and I hope you have a rewarding Open Day experience."
+          }
+        ],
+        "questions": [
+          {
+            "type": "Multiple_Choice",
+            "number": 1,
+            "text": "What is the primary purpose of the Open Day?",
+            "options": [
+              "To raise funds for the school",
+              "To showcase the school's achievements and environment",
+              "To recruit new teachers",
+              "To celebrate the end of the academic year"
+            ]
+          },
+          {
+            "type": "Multiple_Choice",
+            "number": 2,
+            "text": "What is the main focus of the school's mission?",
+            "options": [
+              "To achieve the highest exam scores",
+              "To nurture well-rounded individuals",
+              "To promote sports and athletics",
+              "To prepare students for university entrance only"
+            ]
+          },
+          {
+            "type": "Multiple_Choice",
+            "number": 3,
+            "text": "What new program was announced this year?",
+            "options": [
+              "A new sports program",
+              "A new arts program",
+              "A new STEM program",
+              "A new language program"
+            ]
+          },
+          {
+            "type": "Multiple_Choice",
+            "number": 4,
+            "text": "What is one aspect the school emphasizes besides academic excellence?",
+            "options": [
+              "Community and social responsibility",
+              "Strict discipline",
+              "Competitive sports",
+              "A focus on individual achievement"
+            ]
+          },
+          {
+            "type": "Multiple_Choice",
+            "number": 5,
+            "text": "What is the school committed to providing?",
+            "options": [
+              "A highly competitive environment",
+              "A free lunch program",
+              "A supportive and inclusive environment",
+              "A large number of scholarships"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "Part_B": {
+    "name": "Integrated Skills (Data File + Audio)",
+    "data_file": [
+      {
+        "type": "email",
+        "title": "Email Invitation to Alumni",
+        "content": "Subject: Invitation to Happy Valley Secondary School Open Day\n\nDear Alumni,\n\nWe are delighted to invite you to our annual Open Day on Saturday, November 18th, from 10:00 am to 4:00 pm. This is a wonderful opportunity to reconnect with your alma mater, meet current students and teachers, and witness the exciting developments at Happy Valley Secondary School.\n\nThis year's Open Day will feature curriculum talks, student performances, interactive exhibits, and a special alumni networking session from 2:00 pm to 3:00 pm in the school library. We would be honored to have you share your experiences and insights with our current students. There will also be a display showcasing alumni achievements.\n\nPlease RSVP by November 10th by replying to this email. We look forward to welcoming you back to Happy Valley Secondary School!\n\nSincerely,\nThe Alumni Affairs Office\nHappy Valley Secondary School"
+      },
+      {
+        "type": "minutes",
+        "title": "Minutes of Open Day Planning Meeting",
+        "content": "Minutes of Open Day Planning Meeting\nDate: October 20, 2026\nAttendees: Mr. Chan (Principal), Ms. Wong (Event Coordinator), Mr. Lee (Student Representative), Ms. Cheung (PTA Representative)\n\nAgenda:\n1. Review of last year's Open Day\n2. Theme and Activities for this year\n3. Logistics and Budget\n\nKey Decisions:\n* Theme: \"Celebrating Innovation and Community\"\n* Activities: Curriculum talks, student performances, subject booths, alumni networking session, kids' zone.\n* Marketing: Posters, social media campaign, email invitations to alumni.\n* Volunteers: Recruit student volunteers for guiding tours and assisting at booths.\n* Budget: Allocate funds for decorations, materials, and refreshments.\n* Risk Assessment: First aid station, crowd control measures, emergency contact list.\n\nAction Items:\n* Ms. Wong to coordinate activities and logistics.\n* Mr. Lee to recruit student volunteers.\n* Ms. Cheung to organize PTA support for refreshments.\n* All attendees to review and provide feedback on the draft program by October 27th.\n\nNext Meeting: November 3, 2026"
+      },
+      {
+        "type": "poster",
+        "title": "Open Day Poster",
+        "content": "Image: [Visually appealing poster with school logo, date, time, and key activities. Include images of students participating in activities. Add QR code linking to school website.]\nText:\nHappy Valley Secondary School Open Day\nSaturday, November 18th, 10:00 am - 4:00 pm\nTheme: Celebrating Innovation and Community\nCurriculum Talks | Student Performances | Interactive Exhibits | Alumni Networking | Kids' Zone\n23 Blue Pool Road, Happy Valley\nwww.hvss.edu.hk"
+      },
+      {
+        "type": "webpage",
+        "title": "School Website - Open Day Information",
+        "content": "<h1>Happy Valley Secondary School Open Day</h1>\n<p>Join us for our annual Open Day on Saturday, November 18th, from 10:00 am to 4:00 pm!</p>\n<h2>Event Highlights:</h2>\n<ul>\n<li>Curriculum Talks: Learn about our innovative curriculum and teaching methods.</li>\n<li>Student Performances: Enjoy captivating performances by our talented students.</li>\n<li>Interactive Exhibits: Explore subject booths with hands-on activities.</li>\n<li>Alumni Networking: Reconnect with former classmates and mentors.</li>\n<li>Kids' Zone: Fun-filled activities for younger children.</li>\n</ul>\n<h2>Schedule:</h2>\n<p>[Detailed schedule of events with times and locations]</p>\n<h2>Location:</h2>\n<p>23 Blue Pool Road, Happy Valley</p>\n<h2>Transportation:</h2>\n<p>Bus: Number 5 stops directly outside the school.</p>\n<h2>RSVP:</h2>\n<p>Please RSVP by November 10th by contacting the Alumni Affairs Office at alumni@hvss.edu.hk</p>"
+      }
+    ],
+    "audio_script": {
+      "Task_5_6_7": {
+        "title": "Staff Meeting about Open Day Feedback and Improvements",
+        "type": "Dialogue",
+        "speakers": [
+          "Ms. Wong",
+          "Mr. Chan",
+          "Mr. Lee"
+        ],
+        "content": [
+          {
+            "speaker": "Ms. Wong",
+            "line": "Good morning, everyone. Thanks for attending this follow-up meeting on our Open Day. Overall, I think it was a success, but let's discuss areas for improvement based on the feedback we've gathered."
+          },
+          {
+            "speaker": "Mr. Chan",
+            "line": "Yes, Ms. Wong. I agree. Attendance was higher than last year, which is positive. However, I did hear some concerns about the long queues at the food stalls and some of the curriculum talks being too crowded."
+          },
+          {
+            "speaker": "Mr. Lee",
+            "line": "From the student perspective, the interactive exhibits were a big hit, but we could have used more volunteers to manage the crowds. Also, some students felt the alumni networking session could have been better organized to facilitate more meaningful interactions."
+          },
+          {
+            "speaker": "Ms. Wong",
+            "line": "Okay, that's valuable feedback. So, for next year, we need to address the food stall issue. Perhaps more stalls or a pre-ordering system would help. And for the curriculum talks, we could offer multiple sessions or move them to larger venues."
+          },
+          {
+            "speaker": "Mr. Chan",
+            "line": "Excellent suggestions, Ms. Wong. Regarding the alumni networking, Mr. Lee, what specific improvements would you suggest?"
+          },
+          {
+            "speaker": "Mr. Lee",
+            "line": "Maybe having designated tables for different professions or fields of study would help students connect with alumni who have relevant experience. Also, a structured Q&A session could encourage more participation."
+          },
+          {
+            "speaker": "Ms. Wong",
+            "line": "That's a great idea, Mr. Lee. We could also create a digital platform where students can submit questions in advance. Another point I wanted to address is the marketing. While the posters and website were effective, we could explore using social media more strategically to target younger audiences."
+          },
+          {
+            "speaker": "Mr. Chan",
+            "line": "Agreed. A social media campaign with student testimonials and behind-the-scenes content could generate more interest. Let's also consider sending personalized invitations to prospective students. Finally, we need to ensure we have sufficient first aid personnel and clear emergency procedures in place."
+          },
+          {
+            "speaker": "Ms. Wong",
+            "line": "Okay, so to summarize, we'll focus on improving the food stall situation, offering more curriculum talk sessions, enhancing the alumni networking experience, strengthening our social media presence, and ensuring adequate safety measures. I'll draft a report outlining these recommendations and circulate it for your feedback. Thank you for your contributions."
+          }
+        ]
+      }
+    },
+    "tasks": [
+      {
+        "id": "Task_5",
+        "type": "Email",
+        "instructions": "Write an email (150-200 words) to Ms. Wong, the event coordinator, summarizing the key areas for improvement for next year's Open Day based on the staff meeting discussion and the data file. Suggest specific and actionable solutions for each area.",
+        "tone": "Formal"
+      },
+      {
+        "id": "Task_6",
+        "type": "Speech",
+        "instructions": "Prepare a short speech (200-250 words) for the next Open Day, aimed at parents of prospective students. Highlight the school's strengths, new initiatives, and commitment to student well-being. Incorporate information from the data file and the staff meeting discussion to address potential concerns about overcrowding or logistics.",
+        "tone": "Persuasive"
+      },
+      {
+        "id": "Task_7",
+        "type": "Proposal",
+        "instructions": "Write a proposal (250-300 words) to the Principal, Mr. Chan, outlining a detailed plan to improve the alumni networking session at next year's Open Day. Include specific strategies to facilitate meaningful interactions between students and alumni, such as designated tables, structured Q&A sessions, and a digital platform for pre-submitted questions. Justify your recommendations with evidence from the student feedback and the staff meeting discussion.",
+        "tone": "Formal"
+      }
+    ]
+  },
+  "audio_strategy": {
+    "format": "JSON_Script",
+    "playback": "Browser_TTS",
+    "voices": [
+      "Male_1",
+      "Female_1",
+      "Male_2"
+    ],
+    "instructions": "Tracks are played once only. 5 minutes prep time at start."
+  }
+}

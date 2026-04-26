@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "title": "Writing Mock: International Education Hub",
+    "topic": "International Education Hub",
+    "generated_at": "2026-01-31T06:23:51.298Z",
+    "blueprint_version": "2026_V1"
+  },
+  "Part_A": [
+    {
+      "part": "Part A",
+      "genre": "Letter of Complaint",
+      "title": "Short Writing Task",
+      "instructions": "Write about 200 words. Pay attention to format and tone.",
+      "situation": "You recently purchased a 'SmartLearn X' tablet from 'Tech Solutions Hong Kong' online store, advertised as the perfect educational tool for secondary students. However, upon receiving the tablet, you discovered several issues: the battery life is significantly shorter than advertised (lasting only 2 hours instead of the promised 8), the pre-installed educational apps frequently crash, and the customer service has been unresponsive to your inquiries.",
+      "requirements": [
+        "Clearly state the product you purchased and when you purchased it.",
+        "Describe the specific problems you encountered with the tablet.",
+        "Explain the inconvenience and frustration caused by these issues.",
+        "Request a specific course of action (e.g., a full refund, a replacement tablet, or a repair).",
+        "Maintain a formal and polite tone throughout the letter."
+      ],
+      "format_guides": [
+        "Formal letter format with sender's address, date, recipient's address, salutation, body, and closing.",
+        "Formal Tone"
+      ]
+    }
+  ],
+  "Part_B": [
+    {
+      "elective": "Sports Communication",
+      "question": "A renowned sports magazine is launching a new section focusing on the mental health of athletes. As a freelance journalist, you have been commissioned to write an article discussing the pressures faced by young athletes in Hong Kong and propose strategies for promoting their well-being. Consider the specific challenges they encounter, such as academic expectations, parental pressure, and intense competition. Write an article for the magazine.",
+      "type": "Article"
+    },
+    {
+      "elective": "Drama",
+      "question": "Your school is hosting a drama festival with the theme 'Identity and Belonging'. You are part of a student theatre group and have been tasked with writing a proposal for a short play that explores the experiences of young people in Hong Kong who are struggling to find their place in a rapidly changing society. In your proposal, outline the play's storyline, key characters, and intended message. Include specific examples of dramatic techniques you would use to engage the audience. Write a proposal to the drama society.",
+      "type": "Proposal"
+    },
+    {
+      "elective": "Poems/Songs",
+      "question": "A local music producer is creating an album featuring songs inspired by Hong Kong's urban landscape. You have been invited to contribute a song exploring the theme of 'Nostalgia and Change' in the city. Write the lyrics for your song, using imagery and metaphors to evoke emotions related to the past and present. Consider the use of rhyme, rhythm, and other poetic devices to create a memorable and impactful piece. Include annotations explaining the meaning and intention behind specific lyrical choices.",
+      "type": "Song Lyrics"
+    },
+    {
+      "elective": "Debating",
+      "question": "Your school's debating society is organizing a public forum on the topic: 'Social media has a net positive impact on youth political engagement in Hong Kong.' You have been selected to deliver the opening speech for the proposition team. Prepare a persuasive speech that presents strong arguments supported by evidence and examples. Address potential counter-arguments and conclude with a compelling call to action. Write the opening speech.",
+      "type": "Speech"
+    },
+    {
+      "elective": "Social Issues",
+      "question": "A non-governmental organization (NGO) is launching a campaign to raise awareness about the issue of food waste in Hong Kong. You have been asked to design a brochure that informs the public about the scale of the problem, its environmental and social consequences, and practical steps individuals can take to reduce food waste. Include statistics, visuals, and persuasive language to encourage action. Write a brochure for the NGO.",
+      "type": "Brochure"
+    },
+    {
+      "elective": "Workplace Comms",
+      "question": "You are working as an intern at a marketing firm. Your supervisor has asked you to prepare a training manual for new employees on effective email communication. The manual should cover topics such as email etiquette, writing clear and concise messages, managing email overload, and using email for professional networking. Include examples of good and bad email practices. Write the training manual.",
+      "type": "Training Manual"
+    },
+    {
+      "elective": "Pop Culture",
+      "question": "A popular online magazine is running a series of articles analyzing the influence of Korean dramas (K-dramas) on youth culture in Hong Kong. You have been invited to write a review of a specific K-drama that you believe has had a significant impact on local trends, values, or social attitudes. Provide a summary of the drama's plot, characters, and themes, and then analyze its cultural significance in the Hong Kong context. Write a review for the online magazine.",
+      "type": "Review"
+    },
+    {
+      "elective": "Short Stories",
+      "question": "A literary magazine is holding a competition for short stories with the theme 'Crossroads'. Write a short story set in Hong Kong that explores a moment of decision or turning point in the life of a young character. Consider the challenges and opportunities they face, and how their choices shape their future. Your story should evoke a sense of place and capture the unique atmosphere of Hong Kong.",
+      "type": "Short Story"
+    }
+  ]
+}

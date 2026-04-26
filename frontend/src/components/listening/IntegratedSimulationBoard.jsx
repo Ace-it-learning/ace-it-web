@@ -4,7 +4,7 @@ import {
     Clock, Image, Globe, ChevronRight, PenTool, 
     BookOpen, CheckCircle, Sidebar, AlertCircle, 
     MessageSquare, Send, X, Layers, Zap, Loader2,
-    Timer
+    Timer, Trash2, Palette, Edit3
 } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 import { GradingOverlay } from '../shared';
@@ -22,6 +22,18 @@ const IntegratedSimulationBoard = ({ questData, level, onComplete }) => {
     const [currentAudioSrc, setCurrentAudioSrc] = useState(null);
     const audioRef = React.useRef(null);
     const [hasStarted, setHasStarted] = useState(false);
+    
+    // Highlighting State
+    const [localDocs, setLocalDocs] = useState({}); // i -> html string
+    const [isHighlightMode, setIsHighlightMode] = useState(true);
+    const [activeColor, setActiveColor] = useState('rgba(254, 240, 212, 0.6)');
+    
+    const colors = [
+        'rgba(254, 240, 212, 0.6)', // Yellow
+        'rgba(219, 234, 254, 0.6)', // Blue
+        'rgba(220, 252, 231, 0.6)', // Green
+        'rgba(254, 226, 226, 0.6)', // Red
+    ];
 
     // Global Timer: Unified 60-minute Integrated Simulation (HKEAA Standard)
     const totalTime = 60 * 60;
@@ -43,6 +55,98 @@ const IntegratedSimulationBoard = ({ questData, level, onComplete }) => {
     useEffect(() => {
         window.scrollTo({ top: 0, behavior: 'instant' });
     }, []);
+
+    // Initialize localDocs from dataFile
+    useEffect(() => {
+        if (dataFile && dataFile.length > 0 && Object.keys(localDocs).length === 0) {
+            const initial = {};
+            dataFile.forEach((doc, i) => {
+                initial[i] = doc.content?.replace(/\n/g, '<br />') || '';
+            });
+            setLocalDocs(initial);
+        }
+    }, [dataFile]);
+
+    // Highlighting Logic
+    useEffect(() => {
+        const handleGlobalMouseUp = (e) => {
+            if (!isHighlightMode) return;
+            
+            const selection = window.getSelection();
+            if (!selection || selection.isCollapsed || selection.rangeCount === 0) return;
+
+            const range = selection.getRangeAt(0);
+            const container = document.getElementById(`doc-content-${activeDoc}`);
+            
+            if (container && container.contains(range.commonAncestorContainer)) {
+                try {
+                    const selectedText = selection.toString().trim();
+                    if (selectedText.length === 0) return;
+
+                    const span = document.createElement('span');
+                    span.className = 'highlight-span transition-colors duration-200';
+                    span.style.backgroundColor = activeColor;
+                    span.dataset.color = activeColor;
+                    
+                    try {
+                        range.surroundContents(span);
+                    } catch (surroundErr) {
+                        const fragment = range.extractContents();
+                        span.appendChild(fragment);
+                        range.insertNode(span);
+                    }
+
+                    setTimeout(() => {
+                        const updatedHTML = container.innerHTML;
+                        setLocalDocs(prev => ({
+                            ...prev,
+                            [activeDoc]: updatedHTML
+                        }));
+                        selection.removeAllRanges();
+                    }, 50);
+                    
+                } catch (err) {
+                    console.error("Highlighting process failed:", err);
+                }
+            }
+        };
+
+        document.addEventListener('mouseup', handleGlobalMouseUp);
+        return () => document.removeEventListener('mouseup', handleGlobalMouseUp);
+    }, [isHighlightMode, activeDoc, activeColor, localDocs]);
+
+    const clearHighlights = () => {
+        const container = document.getElementById(`doc-content-${activeDoc}`);
+        if (container) {
+            const highlights = container.querySelectorAll('.highlight-span');
+            highlights.forEach(h => {
+                const parent = h.parentNode;
+                if (parent) {
+                    while (h.firstChild) {
+                        parent.insertBefore(h.firstChild, h);
+                    }
+                    parent.removeChild(h);
+                }
+            });
+
+            const allSpans = container.querySelectorAll('span[style*="background-color"]');
+            allSpans.forEach(s => {
+                const parent = s.parentNode;
+                if (parent) {
+                    while (s.firstChild) {
+                        parent.insertBefore(s.firstChild, s);
+                    }
+                    parent.removeChild(s);
+                }
+            });
+            
+            const cleanedHTML = container.innerHTML;
+            setLocalDocs(prev => ({
+                ...prev,
+                [activeDoc]: cleanedHTML
+            }));
+        }
+    };
 
     const formatTime = (seconds) => {
         const mins = Math.floor(seconds / 60);
@@ -549,7 +653,7 @@ const IntegratedSimulationBoard = ({ questData, level, onComplete }) => {
 
                         {/* Document Surface */}
                         <div className="bg-white rounded-[3rem] shadow-2xl border border-slate-200/60 flex flex-col h-[750px] overflow-hidden relative group">
-                            <div className="p-8 border-b border-slate-50 bg-slate-50/50 flex items-center justify-between shrink-0">
+                             <div className="p-8 border-b border-slate-50 bg-slate-50/50 flex items-center justify-between shrink-0">
                                <div className="flex items-center gap-4">
                                     <div className="w-10 h-10 bg-white shadow-sm rounded-xl flex items-center justify-center text-indigo-600">
                                         {React.createElement(getDocIcon(dataFile[activeDoc]?.type), { size: 20 })}
@@ -558,6 +662,43 @@ const IntegratedSimulationBoard = ({ questData, level, onComplete }) => {
                                         <h3 className="text-lg font-extrabold text-slate-900 tracking-tight leading-none mb-1">{dataFile[activeDoc]?.title || `Document ${activeDoc + 1}`}</h3>
                                         <span className="text-[9px] font-black text-slate-400 uppercase tracking-widest opacity-80">Reference Unit #{activeDoc + 101}</span>
                                     </div>
+                               </div>
+
+                               {/* Highlighter Toolbar */}
+                               <div className="flex items-center gap-3 bg-white/50 p-1.5 rounded-2xl border border-slate-100 shadow-inner">
+                                   <button 
+                                       onClick={() => setIsHighlightMode(!isHighlightMode)}
+                                       className={`p-2.5 rounded-xl transition-all ${isHighlightMode ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-200' : 'bg-slate-50 text-slate-400 hover:text-slate-600'}`}
+                                       title={isHighlightMode ? "Disable Highlighter" : "Enable Highlighter"}
+                                   >
+                                       {isHighlightMode ? <Zap size={16} fill="currentColor" /> : <Edit3 size={16} />}
+                                   </button>
+                                   
+                                   <div className="w-[1px] h-4 bg-slate-200 mx-1" />
+
+                                   <div className="flex items-center gap-1.5">
+                                       {colors.map(color => (
+                                           <button 
+                                               key={color}
+                                               onClick={() => {
+                                                   setActiveColor(color);
+                                                   setIsHighlightMode(true);
+                                               }}
+                                               className={`w-6 h-6 rounded-lg border-2 transition-all hover:scale-110 active:scale-95 ${activeColor === color ? 'border-indigo-500 ring-4 ring-indigo-50' : 'border-white shadow-sm'}`}
+                                               style={{ backgroundColor: color }}
+                                           />
+                                       ))}
+                                   </div>
+
+                                   <div className="w-[1px] h-4 bg-slate-200 mx-1" />
+
+                                   <button 
+                                       onClick={clearHighlights}
+                                       className="p-2.5 bg-slate-50 text-slate-400 hover:bg-rose-50 hover:text-rose-500 rounded-xl transition-all"
+                                       title="Clear all highlights"
+                                   >
+                                       <Trash2 size={16} />
+                                   </button>
                                </div>
                             </div>
 
@@ -568,9 +709,11 @@ const IntegratedSimulationBoard = ({ questData, level, onComplete }) => {
                                         <Zap size={14} className="text-indigo-400" />
                                         <span className="text-[10px] font-black text-indigo-900 uppercase tracking-widest">Digital Archive Active</span>
                                     </div>
-                                    <div className="text-slate-700 leading-relaxed font-bold text-base whitespace-pre-wrap">
-                                        {dataFile[activeDoc]?.content}
-                                    </div>
+                                    <div 
+                                        id={`doc-content-${activeDoc}`}
+                                        className="text-slate-700 leading-relaxed font-bold text-base select-text"
+                                        dangerouslySetInnerHTML={{ __html: localDocs[activeDoc] || "" }}
+                                    />
                                     {dataFile[activeDoc]?.type === 'INFOGRAPHIC' && (dataFile[activeDoc]?.imageUrl || dataFile[activeDoc]?.items) && (
                                         <div className="mt-12 p-8 bg-slate-50 rounded-[2.5rem] border-2 border-slate-100 border-dashed">
                                             <div className="flex items-center gap-3 mb-6">

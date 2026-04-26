@@ -57,3 +57,6 @@ build/
 # System
 .DS_Store
 Thumbs.db
+
+# Backup Archives
+*.zip

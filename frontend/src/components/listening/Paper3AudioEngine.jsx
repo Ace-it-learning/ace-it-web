@@ -60,6 +60,17 @@ const Paper3AudioEngine = forwardRef(({ script, phase, onPhaseChange, onTaskChan
             }
             setCurrentIndex(nextIndex);
             onIndexChange?.(nextIndex);
+        },
+        stop: () => {
+            console.log("[AudioEngine] Stopping all audio and clearing queues.");
+            setIsPlaying(false);
+            try {
+                window.speechSynthesis.cancel();
+                if (audioRef.current) {
+                    audioRef.current.pause();
+                    audioRef.current.src = "";
+                }
+            } catch (e) {}
         }
     }));
     const [isEngineBuffering, setIsEngineBuffering] = useState(false);
@@ -103,13 +114,24 @@ const Paper3AudioEngine = forwardRef(({ script, phase, onPhaseChange, onTaskChan
 
     // Preparation Countdown Management
     useEffect(() => {
+        if (phase !== 'PREPARATION' && hasPlayedPrep.current) {
+            hasPlayedPrep.current = false;
+        }
+
         let timer;
         if (!isPlaying && phase === 'PREPARATION' && prepCountdown === null && !hasPlayedPrep.current) {
             hasPlayedPrep.current = true;
             // Only set 5 mins if we don't have a restored timer
-            const startSecs = initialPause && initialPause > 0 ? initialPause : 300;
+            const isFreshStart = !initialPause || initialPause >= 300;
+            const startSecs = (initialPause && initialPause > 0) ? initialPause : 300;
             setPrepCountdown(startSecs);
-            playSpeech("You now have 5 minutes to study the Question-Answer Book. You will hear a signal to start Part A.", true);
+            
+            if (isFreshStart) {
+                // Small delay to ensure audio context is ready after user click
+                setTimeout(() => {
+                    playSpeech("You now have 5 minutes to study the Question-Answer Book. You will hear a signal to start Part A.");
+                }, 1000);
+            }
         }
 
         if (!isPlaying && phase === 'PREPARATION' && prepCountdown > 0) {
@@ -123,7 +145,7 @@ const Paper3AudioEngine = forwardRef(({ script, phase, onPhaseChange, onTaskChan
             }, 1000);
         }
         return () => clearInterval(timer);
-    }, [isPlaying, phase, prepCountdown === null, onCountdownTick]);
+    }, [isPlaying, phase, prepCountdown === null, onCountdownTick, initialPause]);
 
     // PRE-FETCHING REMOVED (Ensuring Zero API Cost)
 
@@ -169,10 +191,9 @@ const Paper3AudioEngine = forwardRef(({ script, phase, onPhaseChange, onTaskChan
                 onSectionChange?.('B');
             }
 
-            // Phase 1: Play Speech (if text exists)
-            if (spokenText && spokenText.length > 1) {
+            // Phase 1: Play Speech (if text exists and NOT resuming from a mid-item pause)
+            if (spokenText && spokenText.length > 1 && !isInitialResume.current) {
                 await playSpeech(spokenText);
-                isInitialResume.current = false;
                 // IF INDEX CHANGED DURING SPEECH, ABORT THIS LOOP
                 if (currentIndex !== myIndex) return;
             }
@@ -265,10 +286,17 @@ const Paper3AudioEngine = forwardRef(({ script, phase, onPhaseChange, onTaskChan
             utterance.rate = 0.95;
             utterance.onend = () => resolve();
             utterance.onerror = () => resolve();
-            window.speechSynthesis.speak(utterance);
+            // Wait for voices to be loaded if not already
+            if (window.speechSynthesis.getVoices().length === 0) {
+                window.speechSynthesis.onvoiceschanged = () => {
+                    window.speechSynthesis.speak(utterance);
+                };
+            } else {
+                window.speechSynthesis.speak(utterance);
+            }
             
             // Failsafe for stuck speech
-            setTimeout(() => { if (window.speechSynthesis.speaking) resolve(); }, 60000);
+            setTimeout(() => { if (window.speechSynthesis.speaking) resolve(); }, 30000);
         } catch (e) {
             console.error("SpeechSynthesis error", e);
             resolve();

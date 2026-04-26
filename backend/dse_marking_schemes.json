@@ -77,5 +77,38 @@
                 "1": "Limited interaction, passive."
             }
         }
+    },
+    "paper3_listening": {
+        "structure": "Part A (Short Tasks), Part B (Integrated Tasks - B1/B2)",
+        "marking_domains_part_b": [
+            "Content",
+            "Language",
+            "Organization",
+            "Appropriacy"
+        ],
+        "scoring_part_b": {
+            "content": "Cumulative points based on evidence library (Max 18)",
+            "language": "0-9 holistic scale",
+            "organization": "0-9 holistic scale",
+            "appropriacy": "0-6 holistic scale"
+        },
+        "total_marks_part_b": 42,
+        "descriptors_part_b": {
+            "language": {
+                "9": "Sophisticated range of sentence structures, extremely high accuracy, wide range of vocabulary.",
+                "5": "Satisfactory accuracy, standard sentence structures, adequate vocabulary for the task.",
+                "1": "Fragmented, simple vocabulary only, many errors."
+            },
+            "organization": {
+                "9": "Perfectly coherent, sophisticated use of cohesive ties, layout entirely appropriate.",
+                "5": "Generally coherent, some use of linking words, layout is clear.",
+                "1": "Lacks coherence, poor paragraphing."
+            },
+            "appropriacy": {
+                "6": "Excellent audience awareness, tone and register entirely appropriate throughout.",
+                "3": "Tone is generally appropriate but inconsistent in parts.",
+                "1": "Inappropriate tone for the genre or audience."
+            }
+        }
     }
 }

@@ -734,7 +734,7 @@ class MockAssessmentService {
         const results = {};
         const sectionalScores = { 
             A: { score: 0, possible: 0 }, 
-            B: { score: 0, possible: 36, domains: {} } 
+            B: { score: 0, possible: 42, domains: {} } 
         };
         const skillScores = {};
         
@@ -796,7 +796,7 @@ class MockAssessmentService {
             appropriacy: { score: 0, feedback: "No appropriacy data returned." }
         };
         sectionalScores.B.score = aiWritingResults.total_score || 0;
-        sectionalScores.B.possible = 36; // 9 Content + 9 Lang + 9 Org + 9 App
+        sectionalScores.B.possible = 42; // 18 Content + 9 Lang + 9 Org + 6 App
         sectionalScores.B.overallFeedback = aiWritingResults.overall_feedback || "Integrated skills evaluated.";
 
         const totalScore = sectionalScores.A.score + sectionalScores.B.score;
@@ -804,10 +804,10 @@ class MockAssessmentService {
         const percentage = (totalScore / totalPossible) * 100;
 
         // Skill scores for Part B (Standard HKEAA Domains)
-        skillScores['Content Synthesis'] = { score: sectionalScores.B.domains.content?.score || 0, possible: 9 };
+        skillScores['Content Synthesis'] = { score: sectionalScores.B.domains.content?.score || 0, possible: 18 };
         skillScores['Integrated Language'] = { score: sectionalScores.B.domains.language?.score || 0, possible: 9 };
         skillScores['Logical Organization'] = { score: sectionalScores.B.domains.organization?.score || 0, possible: 9 };
-        skillScores['Register & Tone'] = { score: sectionalScores.B.domains.appropriacy?.score || 0, possible: 9 };
+        skillScores['Register & Tone'] = { score: sectionalScores.B.domains.appropriacy?.score || 0, possible: 6 };
 
         return {
             totalScore,
@@ -858,12 +858,12 @@ class MockAssessmentService {
             Requirements: ${t.requirements?.join(', ')}`).join('\n\n')}
             
             ### MARKING CRITERIA (HKEAA 2026 STANDARDS):
-            1. CONTENT (9 Marks):
-               - Award points for correct identification and synthesis of relevant Data File points.
-               - IMPORTANT: Apply a RELEVANCE PENALTY. Deduct 0.5 marks (up to 2.0 total) for each piece of information included that is IRRELEVANT to the task instructions (e.g. including internal budget details in a customer-facing social media post).
+            1. CONTENT (18 Marks):
+               - Award points for correct identification and synthesis of relevant Data File points and Audio information.
+               - IMPORTANT: Apply a RELEVANCE PENALTY. Deduct 0.5 marks (up to 2.0 total) for each piece of information included that is IRRELEVANT to the task instructions.
             2. LANGUAGE (9 Marks): Evaluation of sentence structure, vocabulary, and grammar.
             3. ORGANIZATION (9 Marks): Evaluation of coherence, layout, and logical flow.
-            4. APPROPRIACY (9 Marks): Evaluation of tone, register, and audience awareness.
+            4. APPROPRIACY (6 Marks): Evaluation of tone, register, and audience awareness.
 
             ### EVALUATION MANDATE (STRICT HKEAA STANDARDS):
             SECTION-SPECIFIC RIGOR:
@@ -877,26 +877,30 @@ class MockAssessmentService {
             - Expect high linguistic complexity, nuanced tone, and perfect synthesis.
             `}
 
-            1. **Content (0-9 marks)**: 
+            1. **Content (0-18 marks)**: 
                - Award marks for inclusion of relevant Data File points and Audio information.
             2. **Language (0-9 marks)**: 
                - Accuracy, variety of structures, and complexity of vocabulary.
             3. **Organization (0-9 marks)**: 
                - Logical flow, paragraphing, and structural integrity.
-            4. **Appropriacy & Register (0-9 marks)**:
+            4. **Appropriacy & Register (0-6 marks)**:
                - Consistency of tone (formal/informal) and adherence to the specified genre.
 
             ### OUTPUT FORMAT (JSON ONLY):
             {
-                "total_score": 0-36,
+                "total_score": 0-42,
                 "domains": {
-                    "content": { "score": 0-9, "feedback": "..." },
+                    "content": { "score": 0-18, "feedback": "..." },
                     "language": { "score": 0-9, "feedback": "..." },
                     "organization": { "score": 0-9, "feedback": "..." },
-                    "appropriacy": { "score": 0-9, "feedback": "..." }
+                    "appropriacy": { "score": 0-6, "feedback": "..." }
                 },
                 "task_breakdown": {
-                    "TASK_ID": { "comments": "...", "missed_points": ["..."] }
+                    "TASK_ID": { 
+                        "comments": "...", 
+                        "missed_points": ["..."],
+                        "model_answer": "Provide a high-fidelity Level 5** model answer for this specific task based on the Data File and Audio context."
+                    }
                 },
                 "overall_feedback": "Provide expert advice as 'Miss Janie'."
             }

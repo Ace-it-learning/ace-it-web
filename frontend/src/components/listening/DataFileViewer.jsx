@@ -16,18 +16,80 @@ const DataFileViewer = ({ dataFiles }) => {
         { name: 'Green', value: '#bbf7d0' },
     ];
 
-    // Initialize local docs with formatted content
+    // Helper to generate HTML for tables
+    const renderTableToHTML = (content) => {
+        const rows = content.split('\n');
+        if (rows.length < 3) return `<p>${content}</p>`;
+        
+        const headers = rows[0].split('|').map(h => h.trim());
+        const bodyRows = rows.slice(2).map(row => row.split('|').map(c => c.trim()));
+
+        return `
+            <div class="overflow-x-auto my-8">
+                <table class="w-full border-collapse border-2 border-slate-900 font-mono text-sm">
+                    <thead>
+                        <tr class="bg-slate-900 text-white">
+                            ${headers.map(h => `<th class="p-4 border border-slate-700 text-left uppercase tracking-widest">${h}</th>`).join('')}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        ${bodyRows.map((row, ri) => `
+                            <tr class="${ri % 2 === 0 ? 'bg-slate-50' : 'bg-white'}">
+                                ${row.map(cell => `
+                                    <td class="p-4 border border-slate-200 ${cell.includes('Critical') || cell.includes('Over') ? 'text-rose-600 font-black' : ''}">
+                                        ${cell}
+                                    </td>
+                                `).join('')}
+                            </tr>
+                        `).join('')}
+                    </tbody>
+                </table>
+            </div>
+        `;
+    };
+
+    // Helper to generate HTML for social media posts
+    const renderSocialPostToHTML = (content) => {
+        const sharedMatch = content.match(/Shared ([\d,]+) times/);
+        const sharedCount = sharedMatch ? sharedMatch[1] : '4,500';
+        const cleanContent = content.replace(/Shared [\d,]+ times:\n/, '').trim();
+
+        return `
+            <div class="bg-slate-50 rounded-3xl p-8 border border-slate-200 relative mb-8">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-12 h-12 bg-indigo-600 rounded-full flex items-center justify-center text-white font-black text-xl">U</div>
+                    <div>
+                        <p class="text-sm font-black text-slate-900">HK Workers Union</p>
+                        <p class="text-[10px] text-slate-400">@hk_union • 2h ago</p>
+                    </div>
+                    <div class="ml-auto px-4 py-2 bg-rose-500 text-white rounded-full text-[10px] font-black flex items-center gap-2 shadow-lg shadow-rose-200">
+                        <span class="w-2 h-2 bg-white rounded-full animate-pulse"></span>
+                        SHARED ${sharedCount} TIMES
+                    </div>
+                </div>
+                <div class="text-2xl font-bold text-slate-800 leading-snug">
+                    ${cleanContent}
+                </div>
+            </div>
+        `;
+    };
+
+    // Initialize local docs with formatted content - Only if not already initialized
     useEffect(() => {
-        if (dataFiles) {
+        if (dataFiles && Object.keys(localDocs).length === 0) {
             const initial = {};
             dataFiles.forEach((df, i) => {
-                // If it's a social media post or table, we handle it specially, 
-                // but for standard docs, we want to persist the HTML
-                initial[i] = df.content?.replace(/\n/g, '<br />') || '';
+                if (df.type === 'table') {
+                    initial[i] = renderTableToHTML(df.content || "");
+                } else if (df.type === 'social_media_post') {
+                    initial[i] = renderSocialPostToHTML(df.content || "");
+                } else {
+                    initial[i] = df.content?.replace(/\n/g, '<br />') || '';
+                }
             });
             setLocalDocs(initial);
         }
-    }, [dataFiles]);
+    }, [dataFiles]); // We only re-init if dataFiles themselves change (rare during session)
 
     // Prevent copy-paste
     useEffect(() => {
@@ -52,41 +114,61 @@ const DataFileViewer = ({ dataFiles }) => {
         };
     }, [activeTab]);
 
-    const handleMouseUp = () => {
-        if (!isHighlightMode) return;
-        
-        const selection = window.getSelection();
-        if (selection.rangeCount > 0) {
-            const range = selection.getRangeAt(0);
-            const text = range.toString().trim();
+    useEffect(() => {
+        const handleGlobalMouseUp = (e) => {
+            if (!isHighlightMode) return;
             
-            if (text.length > 0) {
-                const container = document.getElementById(`doc-content-${activeTab}`);
-                if (container && container.contains(range.commonAncestorContainer)) {
+            const selection = window.getSelection();
+            if (!selection || selection.isCollapsed || selection.rangeCount === 0) return;
+
+            const range = selection.getRangeAt(0);
+            const container = document.getElementById(`doc-content-${activeTab}`);
+            
+            if (container && container.contains(range.commonAncestorContainer)) {
+                try {
+                    const selectedText = selection.toString().trim();
+                    if (selectedText.length === 0) return;
+
+                    // Create the highlight span
                     const span = document.createElement('span');
                     span.style.backgroundColor = activeColor;
-                    span.className = 'highlight-span transition-colors duration-200 cursor-default';
+                    span.className = 'highlight-span transition-colors duration-200';
                     span.dataset.color = activeColor;
-                    
+
+                    // Try surgical surroundContents first (most precise for phrases)
                     try {
-                        const content = range.extractContents();
-                        span.appendChild(content);
-                        range.insertNode(span);
+                        range.surroundContents(span);
+                    } catch (err) {
+                        // Fallback for complex/overlapping selections using designMode
+                        document.designMode = 'on';
+                        document.execCommand('backColor', false, activeColor);
+                        document.designMode = 'off';
                         
-                        // PERSIST: Save the modified HTML back to state
-                        setLocalDocs(prev => ({
-                            ...prev,
-                            [activeTab]: container.innerHTML
-                        }));
-                    } catch (e) {
-                        console.warn("Highlight error:", e);
+                        // Tag the new spans generated by execCommand
+                        const spans = container.getElementsByTagName('span');
+                        for (let s of spans) {
+                            if (s.style.backgroundColor && !s.classList.contains('highlight-span')) {
+                                s.classList.add('highlight-span', 'transition-colors', 'duration-200');
+                            }
+                        }
                     }
+
+                    // PERSIST: Save the modified HTML back to state
+                    setLocalDocs(prev => ({
+                        ...prev,
+                        [activeTab]: container.innerHTML
+                    }));
                     
                     selection.removeAllRanges();
+                } catch (err) {
+                    console.error("Highlighting failed:", err);
                 }
             }
-        }
-    };
+        };
+
+        document.addEventListener('mouseup', handleGlobalMouseUp);
+        return () => document.removeEventListener('mouseup', handleGlobalMouseUp);
+    }, [isHighlightMode, activeTab, activeColor]);
 
     const clearHighlights = () => {
         const container = document.getElementById(`doc-content-${activeTab}`);
@@ -203,7 +285,6 @@ const DataFileViewer = ({ dataFiles }) => {
                 <div 
                     id="data-file-content"
                     className="flex-1 overflow-y-auto p-8 custom-scrollbar bg-slate-50/50 select-text"
-                    onMouseUp={handleMouseUp}
                 >
                 <AnimatePresence mode="wait">
                     <motion.div 
@@ -233,57 +314,11 @@ const DataFileViewer = ({ dataFiles }) => {
 
                             <div 
                                 id={`doc-content-${activeTab}`}
-                                className={`text-slate-700 text-xl leading-relaxed max-w-none ${
+                                className={`prose prose-slate max-w-none text-slate-700 text-xl leading-relaxed select-text ${
                                     dataFiles[activeTab]?.type === 'handwritten_note' ? 'font-handwritten' : 'font-sans'
                                 }`}
-                            >
-                                {dataFiles[activeTab]?.type === 'table' ? (
-                                    <div className="overflow-x-auto my-8">
-                                        <table className="w-full border-collapse border-2 border-slate-900 font-mono text-sm">
-                                            <thead>
-                                                <tr className="bg-slate-900 text-white">
-                                                    {(dataFiles[activeTab]?.content || "").split('\n')[0]?.split('|').map((h, i) => (
-                                                        <th key={i} className="p-4 border border-slate-700 text-left uppercase tracking-widest">{h.trim()}</th>
-                                                    ))}
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                {(dataFiles[activeTab]?.content || "").split('\n').slice(2).map((row, ri) => (
-                                                    <tr key={ri} className={ri % 2 === 0 ? 'bg-slate-50' : 'bg-white'}>
-                                                        {row.split('|').map((cell, ci) => (
-                                                            <td key={ci} className={`p-4 border border-slate-200 ${cell.includes('Critical') || cell.includes('Over') ? 'text-rose-600 font-black' : ''}`}>
-                                                                {cell.trim()}
-                                                            </td>
-                                                        ))}
-                                                    </tr>
-                                                ))}
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                ) : dataFiles[activeTab]?.type === 'social_media_post' ? (
-                                    <div className="bg-slate-50 rounded-3xl p-8 border border-slate-200 relative">
-                                        <div className="flex items-center gap-4 mb-6">
-                                            <div className="w-12 h-12 bg-indigo-600 rounded-full flex items-center justify-center text-white font-black text-xl">U</div>
-                                            <div>
-                                                <p className="text-sm font-black text-slate-900">HK Workers Union</p>
-                                                <p className="text-[10px] text-slate-400">@hk_union • 2h ago</p>
-                                            </div>
-                                            <div className="ml-auto px-4 py-2 bg-rose-500 text-white rounded-full text-[10px] font-black flex items-center gap-2 shadow-lg shadow-rose-200">
-                                                <span className="w-2 h-2 bg-white rounded-full animate-pulse" />
-                                                SHARED {dataFiles[activeTab]?.content?.match(/Shared ([\d,]+) times/)?.[1] || '4,500'} TIMES
-                                            </div>
-                                        </div>
-                                        <div className="text-2xl font-bold text-slate-800 leading-snug">
-                                            {(dataFiles[activeTab]?.content || "").replace(/Shared [\d,]+ times:\n/, '').trim()}
-                                        </div>
-                                    </div>
-                                ) : (
-                                    <div 
-                                        className="prose prose-slate max-w-none text-inherit"
-                                        dangerouslySetInnerHTML={{ __html: localDocs[activeTab] || "" }}
-                                    />
-                                )}
-                            </div>
+                                dangerouslySetInnerHTML={{ __html: localDocs[activeTab] || "" }}
+                            />
                         </div>
 
                         {/* Footer Citation */}

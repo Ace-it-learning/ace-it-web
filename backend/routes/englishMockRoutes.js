@@ -102,10 +102,22 @@ router.post('/submit-listening', async (req, res) => {
         }
         assessment.xpAwarded = awardedXP;
 
-        // 3. Sync to Mastery Radar
+        // 3. Sync to Mastery Radar & Persistent Storage
         if (req.user?.uid) {
-            const UserProfileService = require('../services/UserProfileService');
-            await UserProfileService.syncMockResultsToMastery(req.user.uid, 'english', assessment);
+            try {
+                const UserProfileService = require('../services/UserProfileService');
+                await UserProfileService.syncMockResultsToMastery(req.user.uid, 'english', assessment);
+                
+                // Save for persistent review
+                await UserProfileService.saveQuestResult(req.user.uid, {
+                    ...assessment,
+                    paperId,
+                    type: 'LISTENING',
+                    topic: mockData.meta?.topic || 'Listening Mock'
+                });
+            } catch (err) {
+                console.error("Mastery sync/Save failed:", err);
+            }
         }
 
         res.json(assessment);

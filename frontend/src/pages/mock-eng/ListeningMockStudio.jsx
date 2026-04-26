@@ -63,6 +63,9 @@ const ListeningMockStudio = () => {
     const [showQuitModal, setShowQuitModal] = useState(false);
     const [isBroadcastComplete, setIsBroadcastComplete] = useState(false);
     const [independentTimeLeft, setIndependentTimeLeft] = useState(75 * 60);
+    const [showSubmitModal, setShowSubmitModal] = useState(false);
+    const [showSwitchModal, setShowSwitchModal] = useState(false);
+    const [pendingSection, setPendingSection] = useState(null);
     
     const rightPanelRef = useRef(null);
     const audioEngineRef = useRef(null);
@@ -225,14 +228,8 @@ const ListeningMockStudio = () => {
     const handleSwitchSection = (newSection) => {
         console.log(`[ListeningMock] Section Selection: ${newSection}`);
         if (phase === 'INDEPENDENT' && selectedSection && selectedSection !== newSection) {
-            if (window.confirm(`Switching to ${newSection} will erase your current writing for Tasks ${selectedSection === 'B1' ? '5-7' : '8-10'}. Continue?`)) {
-                setSelectedSection(newSection);
-                // Clear irrelevant drafts
-                const updatedDrafts = { ...drafts };
-                const tasksToClear = selectedSection === 'B1' ? ['Task_5', 'Task_6', 'Task_7'] : ['Task_8', 'Task_9', 'Task_10'];
-                tasksToClear.forEach(t => delete updatedDrafts[t]);
-                setDrafts(updatedDrafts);
-            }
+            setPendingSection(newSection);
+            setShowSwitchModal(true);
         } else {
             setSelectedSection(newSection);
             if (phase === 'B1B2_GATE') {
@@ -245,6 +242,19 @@ const ListeningMockStudio = () => {
                 }, 100);
             }
         }
+    };
+
+    const executeSwitch = () => {
+        if (!pendingSection) return;
+        const newSection = pendingSection;
+        setSelectedSection(newSection);
+        // Clear irrelevant drafts
+        const updatedDrafts = { ...drafts };
+        const tasksToClear = selectedSection === 'B1' ? ['Task_5', 'Task_6', 'Task_7'] : ['Task_8', 'Task_9', 'Task_10'];
+        tasksToClear.forEach(t => delete updatedDrafts[t]);
+        setDrafts(updatedDrafts);
+        setShowSwitchModal(false);
+        setPendingSection(null);
     };
 
     // Auto-scroll management
@@ -262,7 +272,10 @@ const ListeningMockStudio = () => {
 
     const handleSaveAndQuit = () => {
         try {
+            audioEngineRef.current?.stop();
             window.speechSynthesis.cancel();
+            // Double-tap cancel for stubborn browser TTS implementations
+            setTimeout(() => window.speechSynthesis.cancel(), 50);
         } catch (err) {}
 
         try {
@@ -286,10 +299,18 @@ const ListeningMockStudio = () => {
         window.location.href = '/mock-exam-eng';
     };
 
-    const handleSubmit = async () => {
-        if (!window.confirm("Are you sure you want to submit your paper? This will end your examination session.")) return;
+    const handleSubmit = async (isAutoSubmit = false) => {
+        // Handle case where it's called as an event handler (e.g. onClick)
+        const autoMode = isAutoSubmit === true;
+
+        if (!autoMode && !showSubmitModal) {
+            setShowSubmitModal(true);
+            return;
+        }
         
+        setShowSubmitModal(false);
         setIsSubmitting(true);
+        let submissionSuccessful = false;
         try {
             const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
             
@@ -314,14 +335,37 @@ const ListeningMockStudio = () => {
             });
 
             if (res.ok) {
+                const assessment = await res.json();
                 localStorage.removeItem(`ace-it-listening-${paperId}`); // Clear session on success
-                updatePhase('RESULTS');
+                localStorage.removeItem('last_mock_inprogress_listening'); // Clear global hub flag
+                console.log("[ListeningMock] Navigating to results for paper:", paperId, assessment);
+                
+                // Signal success to keep overlay visible during transition
+                submissionSuccessful = true;
+                
+                navigate(`/listening-result/${paperId}`, { 
+                    state: { 
+                        results: assessment,
+                        mockData: mockData,
+                        selectedSection: selectedSection
+                    } 
+                });
+
+                // Clear submitting state after a delay to ensure transition starts
+                // but prevent "stuck" overlay if component stays mounted
+                setTimeout(() => setIsSubmitting(false), 5000);
+            } else {
+                const errorData = await res.json().catch(() => ({}));
+                console.error("Submission failed with status:", res.status, errorData);
+                alert(`Submission failed (${res.status}). Please check your connection and try again.`);
             }
         } catch (err) {
             console.error("Submission Error:", err);
             alert("Digital Examination Protocol Error: Your submission could not be processed. Please check your connection.");
         } finally {
-            setIsSubmitting(false);
+            if (!submissionSuccessful) {
+                setIsSubmitting(false);
+            }
         }
     };
 
@@ -551,7 +595,7 @@ const ListeningMockStudio = () => {
                         </div>
 
                         <button 
-                            onClick={handleSubmit} 
+                            onClick={() => handleSubmit(false)} 
                             disabled={isSubmitting || !selectedSection}
                             className={`px-8 py-4 rounded-2xl font-black uppercase text-xs tracking-widest transition-all
                                 ${selectedSection 
@@ -839,7 +883,95 @@ const ListeningMockStudio = () => {
                     status="Finalizing your listening scripts and integrated tasks..."
                 />
 
-                {/* B1/B2 CHOICE MODAL PROMPT */}
+                <AnimatePresence>
+                    {showSubmitModal && (
+                        <div className="fixed inset-0 z-[200] flex items-center justify-center p-8">
+                            <motion.div 
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                exit={{ opacity: 0 }}
+                                onClick={() => setShowSubmitModal(false)}
+                                className="absolute inset-0 bg-slate-900/60 backdrop-blur-md"
+                            />
+                            <motion.div 
+                                initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                                animate={{ opacity: 1, scale: 1, y: 0 }}
+                                exit={{ opacity: 0, scale: 0.9, y: 20 }}
+                                onClick={(e) => e.stopPropagation()}
+                                className="bg-white w-full max-w-md p-10 rounded-[3rem] shadow-2xl relative z-[210] text-center"
+                            >
+                                <div className="size-16 bg-indigo-50 text-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-8 shadow-sm">
+                                    <CheckCircle2 size={32} />
+                                </div>
+                                <h2 className="text-2xl font-black text-slate-900 mb-4 uppercase tracking-tight">Submit Examination?</h2>
+                                <p className="text-slate-500 font-medium mb-10 leading-relaxed text-sm">
+                                    Are you sure you want to submit your paper? This will finalize your answers and <span className="text-slate-900 font-bold">end your examination session</span>.
+                                </p>
+                                <div className="space-y-3">
+                                    <button 
+                                        type="button"
+                                        onClick={() => setShowSubmitModal(false)}
+                                        className="w-full py-5 bg-slate-50 text-slate-400 rounded-2xl font-black uppercase text-xs tracking-widest hover:bg-slate-100 transition-all active:scale-95 cursor-pointer"
+                                    >
+                                        Review Answers
+                                    </button>
+                                    <button 
+                                        type="button"
+                                        onClick={() => handleSubmit(true)}
+                                        className="w-full py-5 bg-indigo-600 text-white rounded-2xl font-black uppercase text-xs tracking-widest hover:bg-indigo-700 transition-all shadow-xl shadow-indigo-900/20 active:scale-95 cursor-pointer relative z-[220]"
+                                    >
+                                        Finalize & Submit
+                                    </button>
+                                </div>
+                            </motion.div>
+                        </div>
+                    )}
+                </AnimatePresence>
+                <AnimatePresence>
+                    {showSwitchModal && (
+                        <div className="fixed inset-0 z-[200] flex items-center justify-center p-8">
+                            <motion.div 
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                exit={{ opacity: 0 }}
+                                onClick={() => setShowSwitchModal(false)}
+                                className="absolute inset-0 bg-slate-900/60 backdrop-blur-md"
+                            />
+                            <motion.div 
+                                initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                                animate={{ opacity: 1, scale: 1, y: 0 }}
+                                exit={{ opacity: 0, scale: 0.9, y: 20 }}
+                                onClick={(e) => e.stopPropagation()}
+                                className="bg-white w-full max-w-md p-10 rounded-[3rem] shadow-2xl relative z-[210] text-center"
+                            >
+                                <div className="size-16 bg-rose-50 text-rose-500 rounded-2xl flex items-center justify-center mx-auto mb-8 shadow-sm">
+                                    <AlertTriangle size={32} />
+                                </div>
+                                <h2 className="text-2xl font-black text-slate-900 mb-4 uppercase tracking-tight">Switch Section?</h2>
+                                <p className="text-slate-500 font-medium mb-10 leading-relaxed text-sm">
+                                    Switching to <span className="text-rose-500 font-bold">{pendingSection}</span> will <span className="text-slate-900 font-bold underline decoration-rose-500 decoration-2">erase your current writing</span> for Tasks {selectedSection === 'B1' ? '5-7' : '8-10'}. This action cannot be undone.
+                                </p>
+                                <div className="space-y-3">
+                                    <button 
+                                        type="button"
+                                        onClick={() => setShowSwitchModal(false)}
+                                        className="w-full py-5 bg-slate-50 text-slate-400 rounded-2xl font-black uppercase text-xs tracking-widest hover:bg-slate-100 transition-all active:scale-95 cursor-pointer"
+                                    >
+                                        Cancel Switch
+                                    </button>
+                                    <button 
+                                        type="button"
+                                        onClick={executeSwitch}
+                                        className="w-full py-5 bg-rose-600 text-white rounded-2xl font-black uppercase text-xs tracking-widest hover:bg-rose-700 transition-all shadow-xl shadow-rose-900/20 active:scale-95 cursor-pointer relative z-[220]"
+                                    >
+                                        Confirm & Erase
+                                    </button>
+                                </div>
+                            </motion.div>
+                        </div>
+                    )}
+                </AnimatePresence>
+
                 <AnimatePresence>
                     {showQuitModal && (
                         <div className="fixed inset-0 z-[200] flex items-center justify-center p-8">

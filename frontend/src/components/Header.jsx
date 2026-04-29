@@ -200,6 +200,15 @@ const Header = () => {
                                                     <div className="w-8 h-8 rounded-lg bg-orange-50 flex items-center justify-center text-[#F1783B] group-hover:bg-[#F1783B] group-hover:text-white transition-colors">
                                                         <User size={16} />
                                                     </div>
+                                                    {t('nav.parent_report')}
+                                                </button>
+                                                <button
+                                                    onClick={() => { navigate('/account?tab=general'); setIsMenuOpen(false); }}
+                                                    className="w-full flex items-center gap-3 px-4 py-3 rounded-2xl text-sm font-medium text-slate-600 hover:bg-slate-50 transition-colors group"
+                                                >
+                                                    <div className="w-8 h-8 rounded-lg bg-orange-50 flex items-center justify-center text-[#F1783B] group-hover:bg-[#F1783B] group-hover:text-white transition-colors">
+                                                        <User size={16} />
+                                                    </div>
                                                     Update Profile
                                                 </button>
                                                 <button

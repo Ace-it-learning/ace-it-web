@@ -353,7 +353,6 @@ const SpeakingLanguageLab = () => {
                                 <h1 className="text-xl font-black text-slate-800 tracking-tight">
                                     {phase === 'PRACTICE' ? quest?.scenario : 'Vocabulary Lab'}
                                 </h1>
-                                <span className="px-3 py-1 bg-violet-50 text-violet-600 rounded-lg text-[10px] font-black uppercase tracking-widest border border-violet-100">Criterion C</span>
                             </div>
                             <p className="text-[10px] font-black uppercase text-slate-400 tracking-[0.2em]">Linguistic Range • Mission Phase: {phase}</p>
                         </div>
@@ -363,10 +362,10 @@ const SpeakingLanguageLab = () => {
                         {phase === 'PRACTICE' && (
                             <div className="flex items-center gap-3 bg-indigo-50 px-5 py-2.5 rounded-[1.25rem] border border-indigo-100 shadow-sm font-black text-indigo-600">
                                 <Target className="w-4 h-4" />
-                                <span className="text-sm">Step {currentSentenceIndex + 1} of {quest?.practice_sentences?.length || 5}</span>
+                                <span className="text-sm whitespace-nowrap">Step {currentSentenceIndex + 1} of {quest?.practice_sentences?.length || 5}</span>
                             </div>
                         )}
-                        <div className="px-4 py-2 bg-slate-800 text-white rounded-xl text-[10px] font-black tracking-widest uppercase">
+                        <div className="px-4 py-2 bg-slate-800 text-white rounded-xl text-[10px] font-black tracking-widest uppercase whitespace-nowrap">
                            Level {level}
                         </div>
                     </div>

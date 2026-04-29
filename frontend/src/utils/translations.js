@@ -70,7 +70,8 @@ export const translations = {
             view_daily_quest: "View Daily Quest",
             complete_diagnostic_first: "Complete Mock Exam first",
             mock_exam: "Mock Exam",
-            back_to_roadmap: "Back to Roadmap"
+            back_to_roadmap: "Back to Roadmap",
+            parent_report: "Parental Report"
         },
         exam: {
             reading: "Reading",
@@ -145,20 +146,27 @@ export const translations = {
             subtitle: "Invest in your future. Choose the plan that fits your study pace and academic goals.",
             most_popular: "Most Popular",
             free_name: "Free Trial",
-            free_f1: "1st Quest of each category",
-            free_f2: "Personalized Roadmap",
-            free_f3: "Earn base XP",
-            free_f4: "Avatar browsing",
+            free_f1: "Chat with English AI tutor",
+            free_f2: "1st Quest of English Reading, Writing, Listening & Speaking",
+            free_f3: "1 practice on Grammar Lab",
+            free_f4: "Mock exam preview",
+            free_f5: "Earn base XP",
+            free_f6: "Redeem avatar using XP",
+            free_f7: "Achievement timeline",
             pro_name: "Pro Plan",
-            pro_f1: "English & Math Full Access",
-            pro_f2: "10 Questions/Quest/Month",
-            pro_f3: "4 Mock Exams/Subject",
+            pro_f1: "English Reading, Writing, Listening and Speaking full access",
+            pro_f2: "Unlimited Quest access",
+            pro_f3: "4 Mock Exams per month",
             pro_f4: "1.2x XP Multiplier",
+            pro_f5: "Weekly Challenge Quest",
+            pro_f6: "Recommended Quests & Skill map",
+            pro_f7: "3 devices limit",
+            pro_f8: "Chat with Ace Sir (Academic & University advisor)",
             premium_name: "Premium Plan",
-            premium_f1: "Unlimited Questions",
-            premium_f2: "Unlimited Mock Exams",
-            premium_f3: "All current & future subjects",
-            premium_f4: "1.5x XP & 5 Device Limit",
+            premium_f1: "Unlimited Mock exam access",
+            premium_f2: "1.5x XP Multiplier",
+            premium_f3: "5 Device Limit",
+            premium_f4: "Parental monthly progress report",
             tiers: {
                 free: {
                     name: "Free Trial",
@@ -166,7 +174,7 @@ export const translations = {
                     period: "Indefinite",
                     desc: "Perfect for exploring the AI-powered DSE experience.",
                     cta: "Start Learning",
-                    features: ["1st Quest of each category", "Diagnostic Test", "Base XP rewards", "Avatar library"]
+                    features: ["Chat with English AI tutor", "1st Quest of English Reading, Writing, Listening & Speaking", "1 practice on Grammar Lab", "Mock exam preview", "Earn base XP", "Redeem avatar using XP", "Achievement timeline"]
                 },
                 pro: {
                     name: "Pro Plan",
@@ -174,7 +182,7 @@ export const translations = {
                     period: "/month",
                     desc: "Comprehensive toolkit for steady DSE success.",
                     cta: "Go Pro",
-                    features: ["Full English & Math access", "10 Questions/Quest/Month", "4 Mock Exams per subject", "1.2x XP Multiplier"]
+                    features: ["English Reading, Writing, Listening and Speaking full access", "Unlimited Quest access", "4 Mock Exams per month", "1.2x XP Multiplier", "Weekly Challenge Quest", "Recommended Quests & Skill map", "3 devices limit", "Chat with Ace Sir (Academic & University advisor)"]
                 },
                 premium: {
                     name: "Premium Plan",
@@ -182,7 +190,7 @@ export const translations = {
                     period: "/month",
                     desc: "Unlimited power for top-tier academic mastery.",
                     cta: "Go Premium",
-                    features: ["Unlimited everything", "All current & future subjects", "1.5x XP Multiplier", "5 Device Limit"]
+                    features: ["Unlimited Mock exam access", "1.5x XP Multiplier", "5 Device Limit", "Parental monthly progress report"]
                 }
             }
         },
@@ -747,7 +755,8 @@ export const translations = {
             view_daily_quest: "查看每日任務",
             complete_diagnostic_first: "請先完成模擬考試",
             mock_exam: "模擬試場",
-            back_to_roadmap: "返回發展導覽"
+            back_to_roadmap: "返回發展導覽",
+            parent_report: "家長監督"
         },
         exam: {
             reading: "閱讀",
@@ -822,20 +831,27 @@ export const translations = {
             subtitle: "投資您的未來。選擇適合您學習進度和目標的計劃。",
             most_popular: "最受歡迎",
             free_name: "免費試用",
-            free_f1: "每個類別的第一個任務",
-            free_f2: "能力診斷測試",
-            free_f3: "賺取基礎 XP",
-            free_f4: "瀏覽頭像收藏",
+            free_f1: "與英文 AI 導師對話",
+            free_f2: "英文閱讀、寫作、聆聽及說話首個任務",
+            free_f3: "1 次 Grammar Lab 練習",
+            free_f4: "模擬考試預覽",
+            free_f5: "賺取基礎 XP",
+            free_f6: "使用 XP 兌換頭像",
+            free_f7: "成就時間線",
             pro_name: "專業計劃 (Pro)",
-            pro_f1: "英文及數學完整使用權",
-            pro_f2: "每個微技能任務每月 10 題",
-            pro_f3: "每科 4 次模擬考試",
+            pro_f1: "英文閱讀、寫作、聆聽及說話完整使用權",
+            pro_f2: "無限任務存取",
+            pro_f3: "每月 4 次模擬考試",
             pro_f4: "1.2x XP 經驗值加成",
+            pro_f5: "每週挑戰任務",
+            pro_f6: "推薦任務與能力圖譜",
+            pro_f7: "3 台裝置上限",
+            pro_f8: "與 Ace Sir (學術及大學顧問) 對話",
             premium_name: "至尊計劃 (Premium)",
-            premium_f1: "無限題目練習",
-            premium_f2: "無限次模擬考試",
-            premium_f3: "包含所有現有及未來科目",
-            premium_f4: "1.5x XP 加成 & 5 台裝置上限",
+            premium_f1: "無限模擬考試存取",
+            premium_f2: "1.5x XP 經驗值加成",
+            premium_f3: "5 台裝置上限",
+            premium_f4: "家長每月進度報告",
             tiers: {
                 free: {
                     name: "免費試用",
@@ -843,7 +859,7 @@ export const translations = {
                     period: "無限期",
                     desc: "體驗 AI 驅動的 DSE 學習旅程。",
                     cta: "開始學習",
-                    features: ["每個類別的首個任務", "能力診斷測試", "基礎 XP 獎勵", "頭像收藏館"]
+                    features: ["與英文 AI 導師對話", "英文閱讀、寫作、聆聽及說話首個任務", "1 次 Grammar Lab 練習", "模擬考試預覽", "賺取基礎 XP", "使用 XP 兌換頭像", "成就時間線"]
                 },
                 pro: {
                     name: "專業計劃 (Pro)",
@@ -851,7 +867,7 @@ export const translations = {
                     period: "/月",
                     desc: "為穩步晉升 DSE 等級而設的核心工具。",
                     cta: "立即升級 Pro",
-                    features: ["英文及數學完整存取", "每月每任務 10 題限制", "每科 4 次模擬試紀錄", "1.2x XP 經驗值加速"]
+                    features: ["英文閱讀、寫作、聆聽及說話完整使用權", "無限任務存取", "每月 4 次模擬考試", "1.2x XP 經驗值加速", "每週挑戰任務", "推薦任務與能力圖譜", "3 台裝置上限", "與 Ace Sir (學術及大學顧問) 對話"]
                 },
                 premium: {
                     name: "至尊計劃 (Premium)",
@@ -859,7 +875,7 @@ export const translations = {
                     period: "/月",
                     desc: "解鎖最強 AI 戰力，追求頂尖奪星目標。",
                     cta: "立即升級 Premium",
-                    features: ["所有功能無限制", "包含現有及未來所有科目", "1.5x XP 經驗值加速", "5 台裝置上限"]
+                    features: ["無限模擬考試存取", "1.5x XP 經驗值加速", "5 台裝置上限", "家長每月進度報告"]
                 }
             }
         },

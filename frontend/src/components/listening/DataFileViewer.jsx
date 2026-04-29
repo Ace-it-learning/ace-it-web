@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import { Mail, Globe, FileText, Highlighter, Eraser, AlertTriangle, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Mail, Globe, FileText, Highlighter, Eraser, AlertTriangle, ChevronLeft, ChevronRight, Zap, Edit3, Trash2 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const DataFileViewer = ({ dataFiles, localDocs, setLocalDocs }) => {
     const [activeTab, setActiveTab] = useState(0);
     const [isHighlightMode, setIsHighlightMode] = useState(true);
     const [isCollapsed, setIsCollapsed] = useState(false);
-    const [activeColor, setActiveColor] = useState('#fef08a');
+    const [activeColor, setActiveColor] = useState('rgba(254, 240, 212, 0.6)');
 
     const colors = [
-        { name: 'Yellow', value: '#fef08a' },
-        { name: 'Pink', value: '#fecdd3' },
-        { name: 'Blue', value: '#bfdbfe' },
-        { name: 'Green', value: '#bbf7d0' },
+        { name: 'Yellow', value: 'rgba(254, 240, 212, 0.6)' },
+        { name: 'Blue', value: 'rgba(219, 234, 254, 0.6)' },
+        { name: 'Green', value: 'rgba(220, 252, 231, 0.6)' },
+        { name: 'Red', value: 'rgba(254, 226, 226, 0.6)' },
     ];
 
     // Helper to generate HTML for tables
@@ -207,33 +207,41 @@ const DataFileViewer = ({ dataFiles, localDocs, setLocalDocs }) => {
             {/* Toolbar */}
             <div className="bg-white border-b border-slate-200 px-6 py-3 flex items-center justify-between z-10 shadow-sm select-none">
                 <div className="flex items-center gap-4">
-                    <div className="flex bg-slate-100 p-1 rounded-xl">
+                    <div className="flex bg-slate-50 p-1.5 rounded-2xl border border-slate-100 shadow-inner items-center gap-2">
                         <button 
-                            onClick={() => setIsHighlightMode(true)}
-                            className={`p-2 rounded-lg flex items-center gap-2 text-[10px] font-black uppercase tracking-widest transition-all ${isHighlightMode ? 'bg-white text-indigo-600 shadow-sm' : 'text-slate-400 hover:text-slate-600'}`}
+                            onClick={() => setIsHighlightMode(!isHighlightMode)}
+                            className={`p-2.5 rounded-xl transition-all ${isHighlightMode ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-200' : 'bg-white text-slate-400 hover:text-slate-600'}`}
+                            title={isHighlightMode ? "Disable Highlighter" : "Enable Highlighter"}
                         >
-                            <Highlighter size={14} /> Highlight
+                            {isHighlightMode ? <Zap size={16} fill="currentColor" /> : <Edit3 size={16} />}
                         </button>
+                        
+                        <div className="w-[1px] h-4 bg-slate-200 mx-1" />
+
+                        <div className="flex items-center gap-1.5">
+                            {colors.map(color => (
+                                <button 
+                                    key={color.name}
+                                    onClick={() => {
+                                        setActiveColor(color.value);
+                                        setIsHighlightMode(true);
+                                    }}
+                                    className={`w-6 h-6 rounded-lg border-2 transition-all hover:scale-110 active:scale-95 ${activeColor === color.value ? 'border-indigo-500 ring-4 ring-indigo-50' : 'border-white shadow-sm'}`}
+                                    style={{ backgroundColor: color.value }}
+                                    title={color.name}
+                                />
+                            ))}
+                        </div>
+
+                        <div className="w-[1px] h-4 bg-slate-200 mx-1" />
+
                         <button 
                             onClick={clearHighlights}
-                            className="p-2 rounded-lg flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-slate-400 hover:text-rose-500 transition-all"
+                            className="p-2.5 bg-white text-slate-400 hover:bg-rose-50 hover:text-rose-500 rounded-xl transition-all"
+                            title="Clear all highlights"
                         >
-                            <Eraser size={14} /> Clear
+                            <Trash2 size={16} />
                         </button>
-                    </div>
-
-                    <div className="h-6 w-px bg-slate-200" />
-
-                    <div className="flex gap-2">
-                        {colors.map(color => (
-                            <button 
-                                key={color.name}
-                                onClick={() => setActiveColor(color.value)}
-                                className={`w-6 h-6 rounded-full border-2 transition-all ${activeColor === color.value ? 'border-indigo-500 scale-110 shadow-md' : 'border-transparent hover:scale-105'}`}
-                                style={{ backgroundColor: color.value }}
-                                title={color.name}
-                            />
-                        ))}
                     </div>
                 </div>
 

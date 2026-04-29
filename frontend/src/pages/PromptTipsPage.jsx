@@ -23,19 +23,6 @@ const PromptTipsPage = () => {
             ]
         },
         {
-            id: 'maths',
-            title: t('prompts.categories.maths.title'),
-            icon: <Pi className="w-6 h-6 text-emerald-400" />,
-            bg: 'bg-emerald-500/10',
-            border: 'border-emerald-500/20',
-            prompts: [
-                { id: 'm1', text: t('prompts.categories.maths.p1') },
-                { id: 'm2', text: t('prompts.categories.maths.p2') },
-                { id: 'm3', text: t('prompts.categories.maths.p3') },
-                { id: 'm4', text: t('prompts.categories.maths.p4') }
-            ]
-        },
-        {
             id: 'ace',
             title: t('prompts.categories.ace.title'),
             icon: <Trophy className="w-6 h-6 text-amber-500" />,
@@ -84,7 +71,7 @@ const PromptTipsPage = () => {
                 </div>
 
                 {/* Categories Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                     {categories.map((cat) => (
                         <div key={cat.id} className="space-y-6">
                             {/* Category Header */}

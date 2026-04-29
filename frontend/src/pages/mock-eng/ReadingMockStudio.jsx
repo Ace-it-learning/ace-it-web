@@ -29,6 +29,7 @@ import {
 } from 'lucide-react';
 import { LoadingPage, GradingOverlay } from '../../components/shared';
 import { useAuth } from '../../context/AuthContext';
+import UpgradeModal from '../../components/common/UpgradeModal';
 import MockCountdownTimer from '../../components/utils/MockCountdownTimer';
 /* eslint-disable no-unused-vars */
 import { motion, AnimatePresence } from 'framer-motion';
@@ -394,7 +395,7 @@ const ReadingMockStudio = () => {
 
     const { paperId } = useParams();
     const navigate = useNavigate();
-    const { user } = useAuth();
+    const { user, profile } = useAuth();
     const [searchParams, setSearchParams] = useSearchParams();
 
     const [phase, setPhase] = useState(searchParams.get('phase') || 'LOADING'); // LOADING, BRIEFING, SELECTOR, EXAM, RESULTS
@@ -422,8 +423,11 @@ const ReadingMockStudio = () => {
     const [showForkWarning, setShowForkWarning] = useState(false);
     const [pendingSection, setPendingSection] = useState(null);
 
-    const [leftWidth, setLeftWidth] = useState(55); // Percentage
+    const [leftWidth, setLeftWidth] = useState(50);
     const [isResizing, setIsResizing] = useState(false);
+    const [showUpgradeModal, setShowUpgradeModal] = useState(false);
+    const tier = profile?.subscription_tier || 'free';
+
     const [activePart, setActivePart] = useState('A'); // 'A' or 'B'
     const [isMarkingSchemeOpen, setIsMarkingSchemeOpen] = useState(false);
     const [showQuitModal, setShowQuitModal] = useState(false);
@@ -438,6 +442,10 @@ const ReadingMockStudio = () => {
     // Fetch Mock Data
     useEffect(() => {
         const fetchMock = async () => {
+            // Fetch Lock: Prevent double-fetches from StrictMode
+            if (window._isFetchingMockReading === paperId) return;
+            window._isFetchingMockReading = paperId;
+
             try {
                 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
                 const res = await fetch(`${API_URL}/api/english/mock/${paperId}`);
@@ -488,6 +496,9 @@ const ReadingMockStudio = () => {
             } catch (err) {
                 console.error("Error fetching mock:", err);
                 navigate('/mock-exam-eng');
+            } finally {
+                // Keep the lock for 2 seconds to bridge the StrictMode gap
+                setTimeout(() => { window._isFetchingMockReading = null; }, 2000);
             }
         };
         fetchMock();
@@ -560,6 +571,10 @@ const ReadingMockStudio = () => {
     const [submissionProgress, setSubmissionProgress] = useState(0);
 
     const handleSubmit = async () => {
+        if (tier === 'free') {
+            setShowUpgradeModal(true);
+            return;
+        }
         if (isSubmitting) return;
         setIsSubmitting(true);
         setSubmissionProgress(0);
@@ -968,7 +983,7 @@ const ReadingMockStudio = () => {
                             </div>
                         ) : (
                             <div className="bg-slate-900 rounded-[1.25rem] px-6 py-3 border border-white/10 shadow-xl flex items-center gap-4">
-                                {(user?.email === 'fungtam@gmail.com' || isDev) && (
+                                {user?.email === 'fungtam@gmail.com' && (
                                     <div className="flex items-center gap-2 pr-4 border-r border-white/10">
                                         <span className="text-[11px] font-black text-rose-400 uppercase tracking-tighter">Cheat:</span>
                                         {['3', '4', '5', '5*', '5**', '5** (P)'].map(lvl => (
@@ -2084,6 +2099,12 @@ const ReadingMockStudio = () => {
                     title="Analyzing Reading Performance"
                     status="Cross-referencing your answers with HKEAA marking logic..."
                     progress={submissionProgress}
+                />
+                <UpgradeModal 
+                    isOpen={showUpgradeModal} 
+                    onClose={() => setShowUpgradeModal(false)}
+                    title="Unlock Evaluation"
+                    message="Free tier users can preview the mock paper, but AI evaluation and grade prediction are Pro features. Upgrade now to get your results!"
                 />
             </div>
         );

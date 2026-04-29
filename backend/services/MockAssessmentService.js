@@ -423,7 +423,6 @@ class MockAssessmentService {
             feedback: `The correct answer was: ${correctRaw}` 
         };
     }
-    }
 
     evaluateExtraction(question, answer) {
         let score = 0;
@@ -729,7 +728,6 @@ class MockAssessmentService {
             }
         `;
     }
-<<<<<<< HEAD
     /**
      * Evaluate a Paper 3 (Listening & Integrated Skills) submission
      */
@@ -913,8 +911,3 @@ class MockAssessmentService {
 
 module.exports = new MockAssessmentService();
 
-=======
-}
-
-module.exports = new MockAssessmentService();
->>>>>>> mock-exam-writing-platform-20260423

@@ -230,7 +230,7 @@ const Sidebar = () => {
             <div className="space-y-3">
                 <p className="text-xs font-bold text-[#a16b45] uppercase tracking-wider ml-2 opacity-60">{t('sidebar.your_mentors')}</p>
                 {Object.values(AGENTS)
-                    .filter(agentDef => agentDef.id !== 'chinese')
+                    .filter(agentDef => agentDef.id !== 'chinese' && agentDef.id !== 'math')
                     .map((agentDef) => {
                         const agent = getAgentIdentity(agentDef.id);
                         return (

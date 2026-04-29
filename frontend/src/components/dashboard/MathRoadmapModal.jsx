@@ -41,7 +41,8 @@ const calculateCurrentForm = (baseGrade, joinedDateTimestamp) => {
 };
 
 const MathRoadmapModal = ({ isOpen, onClose }) => {
-    const { user } = useAuth();
+    const { user, profile } = useAuth();
+    const tier = profile?.subscription_tier || 'free';
     const { language, t: globalT } = useLanguage();
     const navigate = useNavigate();
     const [plan, setPlan] = useState(null);
@@ -179,7 +180,11 @@ const MathRoadmapModal = ({ isOpen, onClose }) => {
     }, [user, isOpen]);
 
     const handleTaskClick = (task) => {
-        if (task.locked) return;
+        if (task.locked) {
+            onClose();
+            navigate('/subscription');
+            return;
+        }
 
         onClose(); // Close modal
 
@@ -422,7 +427,20 @@ const MathRoadmapModal = ({ isOpen, onClose }) => {
                                         </div>
 
                                         {/* Targeted Growth Strategy - Math Mastery Tracks */}
-                                        <div className="mb-10">
+                                        <div className="mb-10 relative">
+                                            {tier === 'free' && (
+                                                <div className="absolute inset-0 bg-slate-50/60 backdrop-blur-[4px] z-[25] flex flex-col items-center justify-center rounded-3xl border-2 border-dashed border-slate-200">
+                                                    <Lock className="w-12 h-12 text-slate-400 mb-4" />
+                                                    <h4 className="text-lg font-black text-slate-800 mb-2">Pro Mastery Strategy</h4>
+                                                    <p className="text-slate-500 text-sm mb-6 max-w-xs text-center">Unlock personalized growth paths and deep ability analytics.</p>
+                                                    <button 
+                                                        onClick={() => { onClose(); navigate('/subscription'); }}
+                                                        className="px-6 py-2 bg-indigo-600 text-white rounded-full font-bold text-sm hover:scale-105 transition-all shadow-lg"
+                                                    >
+                                                        Upgrade to Pro
+                                                    </button>
+                                                </div>
+                                            )}
                                             <div className="flex items-center justify-between mb-6">
                                                 <div className="flex items-center gap-2">
                                                     <Sparkles className="w-6 h-6 text-indigo-600" />
@@ -553,11 +571,22 @@ const MathRoadmapModal = ({ isOpen, onClose }) => {
                                                     <div
                                                         key={quest.id}
                                                         onClick={() => {
+                                                            if (tier === 'free') {
+                                                                onClose();
+                                                                navigate('/subscription');
+                                                                return;
+                                                            }
                                                             onClose();
                                                             navigate('/maths/lab', { state: { topic: quest.topic, xp: stats.xp, level: quest.level } });
                                                         }}
                                                         className={`p-5 h-[120px] rounded-2xl shadow-lg relative overflow-hidden cursor-pointer hover:scale-[1.02] active:scale-[0.98] transition-all group bg-gradient-to-br ${quest.color}`}
                                                     >
+                                                        {tier === 'free' && (
+                                                            <div className="absolute inset-0 bg-slate-900/40 backdrop-blur-[2px] z-20 flex flex-col items-center justify-center rounded-2xl">
+                                                                <Lock className="w-8 h-8 text-white/90 mb-2 drop-shadow-md" />
+                                                                <span className="text-white text-xs font-bold drop-shadow-md px-3 py-1 bg-white/20 rounded-full border border-white/30">Pro Feature</span>
+                                                            </div>
+                                                        )}
                                                         <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2 group-hover:bg-white/10 transition-colors" />
                                                         <div className="relative z-10 h-full flex flex-col justify-between">
                                                             <div className="flex items-center gap-4">
@@ -584,9 +613,23 @@ const MathRoadmapModal = ({ isOpen, onClose }) => {
                                         {/* Factory Tasks Grid (Hidden if empty or redundant) */}
                                         {(plan?.tasks || []).length > 0 && (
                                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pb-12">
-                                                {(plan?.tasks || [])
-                                                    .filter(t => !['MOCK', 'DIAGNOSTIC'].includes(t.type))
-                                                    .map((task) => (
+                                                {(() => {
+                                                    const unlockedCategories = new Set();
+                                                    return (plan?.tasks || [])
+                                                        .filter(t => !['MOCK', 'DIAGNOSTIC'].includes(t.type))
+                                                        .map(task => {
+                                                            let cat = 'OTHER';
+                                                            const topic = (task.meta?.topic || task.topic || '').toLowerCase();
+                                                            if (topic.startsWith('math_num') || topic.startsWith('math_alg')) cat = 'ALGEBRA';
+                                                            else if (topic.startsWith('math_geo') || topic.startsWith('math_trig') || topic.startsWith('math_mensuration')) cat = 'GEOMETRY';
+                                                            else if (topic.startsWith('math_stat') || topic.startsWith('math_prob')) cat = 'DATA';
+                                                            
+                                                            const isFirst = !unlockedCategories.has(cat);
+                                                            if (isFirst) unlockedCategories.add(cat);
+                                                            
+                                                            return { ...task, locked: tier === 'free' && !isFirst };
+                                                        })
+                                                        .map((task) => (
                                                     <div
                                                         key={task.id}
                                                         onClick={() => handleTaskClick(task)}
@@ -599,12 +642,15 @@ const MathRoadmapModal = ({ isOpen, onClose }) => {
                                                             <div className="p-2 bg-indigo-50 text-indigo-600 rounded-lg">
                                                                 <Calculator size={18} />
                                                             </div>
-                                                            <div className="text-[10px] font-bold px-2 py-0.5 bg-slate-100 text-slate-500 rounded-full">
-                                                                FACTORY
+                                                            <div className="flex items-center gap-2">
+                                                                {task.locked && <Lock size={14} className="text-slate-400" />}
+                                                                <div className="text-[10px] font-bold px-2 py-0.5 bg-slate-100 text-slate-500 rounded-full">
+                                                                    FACTORY
+                                                                </div>
                                                             </div>
                                                         </div>
 
-                                                        <h4 className="font-bold text-slate-900 mb-1 line-clamp-1">{task.meta?.topic || task.topic}</h4>
+                                                        <h4 className={`font-bold mb-1 line-clamp-1 ${task.locked ? 'text-slate-500' : 'text-slate-900'}`}>{task.meta?.topic || task.topic}</h4>
                                                         <p className="text-[11px] text-slate-500 mb-4 line-clamp-2 leading-tight">
                                                             Advanced DSE practice targeting your current form.
                                                         </p>
@@ -616,7 +662,8 @@ const MathRoadmapModal = ({ isOpen, onClose }) => {
                                                             <Play className="w-4 h-4 text-slate-300 group-hover:text-indigo-600 transition-colors" />
                                                         </div>
                                                     </div>
-                                                ))}
+                                                ))
+                                                })()}
                                             </div>
                                         )}
                                     </>
@@ -672,11 +719,23 @@ const MathRoadmapModal = ({ isOpen, onClose }) => {
                                 {/* Skills List */}
                                 <div className="p-6 flex-1 overflow-y-auto custom-scrollbar">
                                     <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-                                        {filteredSkills.map(([id, data]) => {
-                                            const name = getMathSkillName(id, language);
-                                            const desc = getMathSkillDesc(id, language);
-                                            const minForm = getMathSkillMinForm(id);
-                                            const level = userSkills[id]?.level || 0;
+                                        {(() => {
+                                            const unlockedCategories = new Set();
+                                            return filteredSkills.map(([id, data]) => {
+                                                const name = getMathSkillName(id, language);
+                                                const desc = getMathSkillDesc(id, language);
+                                                const minForm = getMathSkillMinForm(id);
+                                                const level = userSkills[id]?.level || 0;
+
+                                                let cat = 'OTHER';
+                                                if (id.startsWith('math_num') || id.startsWith('math_alg')) cat = 'ALGEBRA';
+                                                else if (id.startsWith('math_geo') || id.startsWith('math_trig') || id.startsWith('math_mensuration')) cat = 'GEOMETRY';
+                                                else if (id.startsWith('math_stat') || id.startsWith('math_prob')) cat = 'DATA';
+                                                
+                                                const isFirst = !unlockedCategories.has(cat);
+                                                if (isFirst) unlockedCategories.add(cat);
+                                                
+                                                const isLocked = tier === 'free' && !isFirst;
 
                                             const isFutureTopic = minForm > currentForm;
 
@@ -704,12 +763,14 @@ const MathRoadmapModal = ({ isOpen, onClose }) => {
                                                             topic: id,
                                                             type: 'PRACTICE',
                                                             xp: xpReward,
-                                                            level: activeTier
+                                                            level: activeTier,
+                                                            locked: isLocked
                                                         });
                                                     }}
                                                     className={`
-                                                                group p-4 rounded-xl border transition-all flex flex-col justify-between cursor-pointer
-                                                                ${isPracticed
+                                                                group relative p-4 rounded-xl border transition-all flex flex-col justify-between cursor-pointer
+                                                                ${isLocked ? 'bg-slate-50 border-slate-100' :
+                                                                isPracticed
                                                             ? 'bg-violet-100 border-violet-500 shadow-[0_4px_12px_rgba(139,92,246,0.2)] ring-1 ring-violet-200'
                                                             : isFutureTopic
                                                                 ? 'bg-slate-50 border-slate-100 opacity-60 hover:opacity-100 grayscale hover:grayscale-0'
@@ -717,7 +778,12 @@ const MathRoadmapModal = ({ isOpen, onClose }) => {
                                                         }
                                                             `}
                                                 >
-                                                    <div>
+                                                    {isLocked && (
+                                                        <div className="absolute inset-0 bg-slate-100/50 backdrop-blur-[1px] z-10 flex items-center justify-center rounded-xl">
+                                                            <Lock className="w-6 h-6 text-slate-400" />
+                                                        </div>
+                                                    )}
+                                                    <div className={isLocked ? 'opacity-50 pointer-events-none' : ''}>
                                                         <div className="flex justify-between items-start mb-2">
                                                             <div className="flex gap-2">
                                                                 <span className={`px-2 py-0.5 rounded text-[9px] font-black uppercase tracking-wider ${catColor}`}>
@@ -772,7 +838,7 @@ const MathRoadmapModal = ({ isOpen, onClose }) => {
                                                         </p>
                                                     </div>
 
-                                                    <div className="mt-3 pt-3 border-t border-slate-50 flex justify-between items-center">
+                                                    <div className={`mt-3 pt-3 border-t border-slate-50 flex justify-between items-center ${isLocked ? 'opacity-50' : ''}`}>
                                                         {isPracticed ? (
                                                             <div className="px-2 py-0.5 bg-violet-100 rounded text-[10px] font-bold text-violet-700 uppercase tracking-wide flex items-center gap-1.5 border border-violet-200">
                                                                 <RefreshCcw className="w-3 h-3" />
@@ -789,7 +855,8 @@ const MathRoadmapModal = ({ isOpen, onClose }) => {
                                                     </div>
                                                 </div>
                                             );
-                                        })}
+                                        })
+                                        })()}
                                         {filteredSkills.length === 0 && (
                                             <div className="text-center py-20 text-slate-400 col-span-full">
                                                 {t.noSkills}

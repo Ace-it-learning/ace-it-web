@@ -108,6 +108,16 @@ const WritingQuestPage = () => {
                     if (res.ok) {
                         const data = await res.json();
                         setQuestData(data);
+
+                        // RESTORE DRAFT
+                        const saved = localStorage.getItem(`writing_draft_${data.id}`);
+                        if (saved) {
+                            try {
+                                const { title: savedTitle, content: savedContent } = JSON.parse(saved);
+                                if (savedTitle) setTitle(savedTitle);
+                                if (savedContent) setContent(savedContent);
+                            } catch (e) { console.error("Restore Error:", e); }
+                        }
                         setStep('studio');
                         return;
                     }
@@ -123,13 +133,35 @@ const WritingQuestPage = () => {
                         isFactory: true
                     };
                     setQuestData(factoryData);
+                    
+                    // RESTORE DRAFT
+                    const saved = localStorage.getItem(`writing_draft_${factoryData.id}`);
+                    if (saved) {
+                        try {
+                            const { title: savedTitle, content: savedContent } = JSON.parse(saved);
+                            if (savedTitle) setTitle(savedTitle);
+                            if (savedContent) setContent(savedContent);
+                        } catch (e) { console.error("Restore Error:", e); }
+                    }
                     setStep('studio');
                     return;
                 } 
                 // Priority 3: Roadmap Data
                 else if (roadmapData) {
                     setQuestData(roadmapData);
-                    if (roadmapData.id) localStorage.setItem('active_writing_quest_id', roadmapData.id);
+                    if (roadmapData.id) {
+                        localStorage.setItem('active_writing_quest_id', roadmapData.id);
+                        
+                        // RESTORE DRAFT
+                        const saved = localStorage.getItem(`writing_draft_${roadmapData.id}`);
+                        if (saved) {
+                            try {
+                                const { title: savedTitle, content: savedContent } = JSON.parse(saved);
+                                if (savedTitle) setTitle(savedTitle);
+                                if (savedContent) setContent(savedContent);
+                            } catch (e) { console.error("Restore Error:", e); }
+                        }
+                    }
                     setStep('studio');
                     return;
                 }
@@ -174,6 +206,16 @@ const WritingQuestPage = () => {
                         };
                         setQuestData(factoryData);
                         localStorage.setItem('active_writing_quest_id', factoryData.id);
+                        
+                        // RESTORE DRAFT
+                        const saved = localStorage.getItem(`writing_draft_${factoryData.id}`);
+                        if (saved) {
+                            try {
+                                const { title: savedTitle, content: savedContent } = JSON.parse(saved);
+                                if (savedTitle) setTitle(savedTitle);
+                                if (savedContent) setContent(savedContent);
+                            } catch (e) { console.error("Restore Error:", e); }
+                        }
                         setStep('studio');
                         return;
                     } else {
@@ -187,6 +229,16 @@ const WritingQuestPage = () => {
                     if (res.ok) {
                         const data = await res.json();
                         setQuestData(data);
+
+                        // RESTORE DRAFT
+                        const saved = localStorage.getItem(`writing_draft_${data.id}`);
+                        if (saved) {
+                            try {
+                                const { title: savedTitle, content: savedContent } = JSON.parse(saved);
+                                if (savedTitle) setTitle(savedTitle);
+                                if (savedContent) setContent(savedContent);
+                            } catch (e) { console.error("Restore Error:", e); }
+                        }
                         setStep('studio');
                         return;
                     } else {
@@ -221,6 +273,18 @@ const WritingQuestPage = () => {
 
         loadQuest();
     }, [location.state, navigate, user?.email]);
+
+    // AUTO-SAVE EFFECT
+    useEffect(() => {
+        if (questData?.id && (title || content)) {
+            const saveKey = `writing_draft_${questData.id}`;
+            localStorage.setItem(saveKey, JSON.stringify({
+                title,
+                content,
+                timestamp: Date.now()
+            }));
+        }
+    }, [title, content, questData?.id]);
 
     // Actions
     const handleToggleChecklist = (idx) => {
@@ -275,6 +339,12 @@ const WritingQuestPage = () => {
             });
             const results = await res.json();
             
+            // Clean up auto-save
+            if (questData?.id) {
+                localStorage.removeItem(`writing_draft_${questData.id}`);
+                localStorage.removeItem('active_writing_quest_id');
+            }
+
             // Navigate to results page with detailed feedback
             navigate('/writing/result', { 
                 state: { 

@@ -130,7 +130,8 @@ export const speak = async (options) => {
     if (window.speechSynthesis) {
         window.speechSynthesis.cancel(); // Stop current speech
         
-        const utterance = new SpeechSynthesisUtterance(normalizeText(text));
+        const normalizedStr = normalizeText(text);
+        const utterance = new SpeechSynthesisUtterance(normalizedStr);
         utterance.lang = languageCode;
         utterance.rate = rate;
         utterance.pitch = pitch;
@@ -143,12 +144,12 @@ export const speak = async (options) => {
 
         if (onEnd) utterance.onend = onEnd;
         if (onBoundary) {
-            // Browser native onboundary
+            // Browser native onboundary – use normalizedStr (what the utterance actually speaks)
+            // so charIndex maps correctly to word positions
             utterance.onboundary = (event) => {
                 if (event.name === 'word') {
-                    // Estimate word index from charIndex
-                    const textBefore = text.substring(0, event.charIndex);
-                    const wordIndex = textBefore.split(/\s+/).length - 1;
+                    const textBefore = normalizedStr.substring(0, event.charIndex);
+                    const wordIndex = textBefore.split(/\s+/).filter(s => s.length > 0).length;
                     onBoundary({ ...event, wordIndex });
                 }
             };

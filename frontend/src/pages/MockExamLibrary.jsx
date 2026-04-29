@@ -200,7 +200,7 @@ const MockExamLibrary = () => {
                             </p>
                         </div>
                         <div className="flex bg-slate-100 p-1.5 rounded-2xl shadow-inner">
-                            {['english', 'maths'].map(tab => (
+                            {['english'].map(tab => (
                                 <button
                                     key={tab}
                                     onClick={() => setActiveTab(tab)}

@@ -969,7 +969,7 @@ const MathsLabPage = () => {
                         </button>
                     )}
                     <span className="text-sm font-bold text-slate-600 hidden md:inline">Question {isBatchMode ? (currentIndex % 10 + 1) : (currentIndex + 1)} of {visibleQuestions.length}</span>
-                    {!isMock && (
+                    {!isMock && user?.email === 'fungtam@gmail.com' && (
                         <div className="relative cheat-menu-container">
                             <button onClick={() => setShowCheatMenu(!showCheatMenu)} className="px-4 py-2 rounded-lg bg-amber-100 text-amber-700 text-xs font-bold flex items-center gap-1">Cheat <ChevronDown className="w-3 h-3" /></button>
                             {showCheatMenu && <div className="absolute right-0 mt-2 w-48 bg-white rounded-xl shadow-2xl border py-2 z-50">{[3, 4, 5, '5*', '5**'].map((lvl) => <button key={lvl} onClick={() => handleCheat(lvl)} className="w-full px-4 py-2 text-left text-sm hover:bg-slate-50 transition-colors">Level {lvl}</button>)}</div>}

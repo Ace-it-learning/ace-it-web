@@ -892,11 +892,11 @@ class LabService {
     const isBypassUser = params.isFactory || uid === 'FACTORY_ADMIN' || uid === 'fungtam@gmail.com';
     let needsGeneration = mixedQuestions.length < TARGET_COUNT || isWeeklyQuest;
 
-    // --- INDUSTRIAL LOCKDOWN: Never generate in real-time for students for Reading ---
+    // --- INDUSTRIAL LOCKDOWN: Never generate in real-time for Reading ---
     // Reading MUST come from the high-fidelity premium library.
-    if (isReadingTopic && needsGeneration && !isBypassUser && !isWeeklyQuest) {
-      console.log(`[LabService] LOCKDOWN: Reading Bank is empty for ${resolvedTopic}. Refusing real-time AI generation.`);
-      throw new Error(`QUEST_BANK_EMPTY: No approved Reading quests found for ${resolvedTopic}. Please notify administrator.`);
+    if (isReadingTopic && needsGeneration) {
+      console.log(`[LabService] STRICT LOCKDOWN: Reading Bank is empty for ${resolvedTopic}. Real-time generation is disabled.`);
+      throw new Error(`QUEST_BANK_EMPTY: No approved Reading quests found for ${resolvedTopic}.`);
     }
 
     if (!needsGeneration && mixedQuestions.length > 0) {
@@ -907,6 +907,9 @@ class LabService {
         lessonContent.reading_passage = selectedPassage;
       }
     } else {
+      if (isReadingTopic) {
+        throw new Error(`QUEST_BANK_EMPTY: Failed to fetch clustered Reading session for ${resolvedTopic}.`);
+      }
       console.log(`[LabService] Generating FRESH session.`);
 
       // Build Contextual Prompt
@@ -1504,6 +1507,12 @@ STRICT RULE: Do NOT use the same hooks, starting sentences, or specific scenario
     }
 
     // 2. Fallback to AI Generation
+    const isReadingTopic = (topic || '').toLowerCase().includes('reading') || (topic || '').toLowerCase().includes('comprehension');
+    if (isReadingTopic) {
+      console.warn(`[LabService] Briefing missing for Reading topic: ${topic}. Generation blocked.`);
+      throw new Error(`EXPLANATION_MISSING: No specialized briefing found for Reading topic '${topic}'.`);
+    }
+
     const prompt = `Generate a JSON object with 'conceptual_explanation', 'key_points', 'examples', 'success_feedback', 'suggested_next_steps' for the topic '${resolvedTopic}' at '${levelName}'. NO interactive_tasks needed.
     
     IMPORTANT: Provide 3 distinct 'examples' in the array. Each example must have 'text' (the example passage/sentence) and 'explanation' (analysis). Do NOT use placeholders.

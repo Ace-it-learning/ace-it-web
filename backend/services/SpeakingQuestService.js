@@ -172,7 +172,7 @@ CRITICAL:
         console.log(`[SpeakingQuest] Generating Dynamic Delivery Passage (Lv ${level})...`);
 
         try {
-            const aiGenerated = await GenerativeAIService.generateJson(prompt, {
+            const { data: aiGenerated } = await GenerativeAIService.generateJson(prompt, {
                 model: "ace-it-flash",
                 generationConfig: { temperature: 0.8 }
             });
@@ -286,7 +286,7 @@ OUTPUT JSON FORMAT:
 CRITICAL: The hints should help students who get stuck on the LOGICAL THINKING or STRUCTURE of the answer. Provide useful sentence starters tailored to the question.`;
 
         try {
-            const aiGenerated = await GenerativeAIService.generateJson(prompt, {
+            const { data: aiGenerated } = await GenerativeAIService.generateJson(prompt, {
                 model: "ace-it-flash",
                 generationConfig: { temperature: 0.7 }
             });
@@ -417,7 +417,7 @@ CRITICAL:
 3. LANGUAGE: Always include "explanation_cn" for every practice sentence.`;
 
         try {
-            const aiGenerated = await GenerativeAIService.generateJson(prompt, { model: "ace-it-flash" });
+            const { data: aiGenerated } = await GenerativeAIService.generateJson(prompt, { model: "ace-it-flash" });
             return {
                 template_id: `LANG_DYNAMIC_${Date.now()}`,
                 title: aiGenerated.scenario, // Standardized Title
@@ -469,7 +469,7 @@ OUTPUT JSON FORMAT:
 CRITICAL: The mind_map should provide a clear logical framework for the student to follow.`;
 
         try {
-            const aiGenerated = await GenerativeAIService.generateJson(prompt, { model: "ace-it-flash" });
+            const { data: aiGenerated } = await GenerativeAIService.generateJson(prompt, { model: "ace-it-flash" });
             return {
                 template_id: `IDEAS_DYNAMIC_${Date.now()}`,
                 title: aiGenerated.scenario, // Standardized Title

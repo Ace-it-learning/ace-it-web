@@ -33,7 +33,7 @@ class EraserChallengeService {
         Return ONLY the JSON.`;
 
         try {
-            const parsed = await GenerativeAIService.generateJson(prompt, {
+            const { data: parsed } = await GenerativeAIService.generateJson(prompt, {
                 uid: uid,
                 service: 'eraser_gen'
             });

@@ -144,7 +144,15 @@ const SpeakingDeliveryPage = () => {
             window.speechSynthesis.cancel();
         }
         setIsPlayingMaster(false);
-        setActiveWordIndex(-1);
+        // Clear all DOM-driven highlights
+        const root = document.getElementById('scaffold-passage-root');
+        if (root) {
+            root.querySelectorAll('[id^="word-"]').forEach(el => {
+                el.style.color = '';
+                el.style.opacity = '';
+                el.style.fontWeight = '';
+            });
+        }
     };
 
     const stopAllAudio = () => {
@@ -182,79 +190,172 @@ const SpeakingDeliveryPage = () => {
             utter.rate = 0.9; 
             utter.pitch = 1.0;
 
+            // ──────────────────────────────────────────────────────
+            // BUILD CHAR-OFFSET → WORD-INDEX MAP
+            // Must exactly match the tokenizer in DeliveryScaffoldPassage:
+            //   rawText.split(/(\s+)/).filter(t => t !== "")
+            // Word tokens get sequential indices; whitespace is skipped.
+            // ──────────────────────────────────────────────────────
             const tokens = rawText.split(/(\s+)/).filter(t => t !== "");
-            const wordIndices = []; 
+            const wordCharStarts = [];   // wordCharStarts[wordIdx] = char offset of that word
+            const wordCharEnds = [];     // wordCharEnds[wordIdx]   = char offset after last char
             let charCursor = 0;
+            let wordCount = 0;
             tokens.forEach(token => {
-                if (!/^\s+$/.test(token)) wordIndices.push(charCursor);
+                const isWhitespace = /^\s+$/.test(token);
+                if (!isWhitespace) {
+                    wordCharStarts.push(charCursor);
+                    wordCharEnds.push(charCursor + token.length);
+                    wordCount++;
+                }
                 charCursor += token.length;
             });
 
-            // TRACKING STATE
-            let lastEventWordIdx = -1;
-            let tickerWordIdx = 0;
-
-            const updateHighlight = (idx) => {
-                if (idx >= 0 && idx < wordIndices.length) {
-                    setActiveWordIndex(idx);
+            /**
+             * Map a charIndex from onboundary → display word index.
+             * Uses binary search for precision.
+             */
+            const charIndexToWordIndex = (charIdx) => {
+                let lo = 0, hi = wordCharStarts.length - 1, best = -1;
+                while (lo <= hi) {
+                    const mid = (lo + hi) >>> 1;
+                    if (wordCharStarts[mid] <= charIdx) {
+                        best = mid;
+                        lo = mid + 1;
+                    } else {
+                        hi = mid - 1;
+                    }
                 }
+                return best;
             };
 
-            // SYNC EVENTS
-            utter.onstart = () => {
-                setIsPlayingMaster(true);
-                updateHighlight(0);
+            // ──────────────────────────────────────────────────────
+            // SYNC STATE
+            // ──────────────────────────────────────────────────────
+            let boundaryFired = false;      // Has ANY onboundary event fired?
+            let lastBoundaryWordIdx = -1;   // Last word index from onboundary
+            let fallbackTimer = null;       // Fallback interval (only used when onboundary is absent)
+            let fallbackWordIdx = 0;        // Ticker position for fallback
+            let speechStartTime = 0;        // When speech actually started (for fallback calibration)
+            let prevHighlightIdx = -1;      // Track previous word for DOM cleanup
+
+            /**
+             * DIRECT DOM MANIPULATION — bypasses React's render cycle entirely.
+             * Sets color on the word span element the instant onboundary fires.
+             */
+            const updateHighlight = (idx) => {
+                if (idx < 0 || idx >= wordCount) return;
+
+                // Mark previous word as "past" (faded orange)
+                if (prevHighlightIdx >= 0 && prevHighlightIdx !== idx) {
+                    const prevEl = document.getElementById(`word-${prevHighlightIdx}`);
+                    if (prevEl) {
+                        prevEl.style.color = '#f97316';     // orange-500 (past)
+                        prevEl.style.opacity = '0.65';
+                    }
+                }
+
+                // Mark current word as "active" (bold orange)
+                const el = document.getElementById(`word-${idx}`);
+                if (el) {
+                    el.style.color = '#ea580c';             // orange-600 (active)
+                    el.style.opacity = '1';
+                    el.style.fontWeight = '900';             // font-black
+                }
+
+                prevHighlightIdx = idx;
             };
 
+            /**
+             * Clear all DOM-applied styles in one sweep (on speech end/error).
+             */
+            const clearAllHighlights = () => {
+                for (let i = 0; i < wordCount; i++) {
+                    const el = document.getElementById(`word-${i}`);
+                    if (el) {
+                        el.style.color = '';
+                        el.style.opacity = '';
+                        el.style.fontWeight = '';
+                    }
+                }
+                prevHighlightIdx = -1;
+            };
+
+            // ──────────────────────────────────────────────────────
+            // PRIMARY SYNC: onboundary events
+            // ──────────────────────────────────────────────────────
             utter.onboundary = (event) => {
                 if (event.name === 'word') {
-                    // Find which word this charIndex belongs to
-                    let targetIdx = -1;
-                    for (let i = 0; i < wordIndices.length; i++) {
-                        if (wordIndices[i] <= event.charIndex) targetIdx = i;
-                        else break;
-                    }
-                    if (targetIdx !== -1) {
-                        lastEventWordIdx = targetIdx;
-                        updateHighlight(targetIdx);
+                    boundaryFired = true;
+                    const wordIdx = charIndexToWordIndex(event.charIndex);
+                    if (wordIdx !== -1) {
+                        lastBoundaryWordIdx = wordIdx;
+                        updateHighlight(wordIdx);
+                        // Kill fallback if it was running – boundary events are authoritative
+                        if (fallbackTimer) {
+                            clearInterval(fallbackTimer);
+                            fallbackTimer = null;
+                        }
                     }
                 }
             };
 
-            // CALIBRATED PULSE TICKER (Fallback)
-            // 0.9 rate at 165 WPM for natural DSE delivery
-            const msPerWord = (60000 / 165); 
-            const pulse = setInterval(() => {
-                if (!window.speechSynthesis.speaking) {
-                    clearInterval(pulse);
-                    return;
-                }
+            // ──────────────────────────────────────────────────────
+            // FALLBACK SYNC: timer-based (only if onboundary never fires)
+            // Some browser/voice combos (e.g. certain Edge voices) never
+            // fire boundary events. We detect this ~400ms after speech
+            // starts and activate a calibrated ticker.
+            // ──────────────────────────────────────────────────────
+            const startFallbackIfNeeded = () => {
+                if (boundaryFired || fallbackTimer) return; // Boundary is working, no need
                 
-                tickerWordIdx++;
+                // Estimate speech duration from word count and rate
+                // Typical English: ~150-170 WPM at rate=1.0; at 0.9 rate ≈ 140 WPM
+                const effectiveWPM = 150 * utter.rate;
+                const msPerWord = 60000 / effectiveWPM;
+                fallbackWordIdx = 0;
                 
-                // If native events are dead, let ticker take over
-                if (tickerWordIdx > lastEventWordIdx) {
-                    updateHighlight(tickerWordIdx);
-                }
-            }, msPerWord);
+                console.log(`[SpeakingQuest] onboundary not supported by this voice – using ${Math.round(effectiveWPM)} WPM fallback ticker`);
+                
+                fallbackTimer = setInterval(() => {
+                    if (!window.speechSynthesis.speaking) {
+                        clearInterval(fallbackTimer);
+                        fallbackTimer = null;
+                        return;
+                    }
+                    fallbackWordIdx++;
+                    if (fallbackWordIdx < wordCount) {
+                        updateHighlight(fallbackWordIdx);
+                    }
+                }, msPerWord);
+            };
+
+            utter.onstart = () => {
+                setIsPlayingMaster(true);
+                speechStartTime = performance.now();
+                updateHighlight(0);
+                // Check after 400ms whether onboundary is firing
+                setTimeout(startFallbackIfNeeded, 400);
+            };
 
             utter.onend = () => {
-                clearInterval(pulse);
+                if (fallbackTimer) { clearInterval(fallbackTimer); fallbackTimer = null; }
                 setIsPlayingMaster(false);
-                setActiveWordIndex(-1);
+                clearAllHighlights();
                 window._currentUtterance = null;
             };
 
             utter.onerror = () => {
-                clearInterval(pulse);
+                if (fallbackTimer) { clearInterval(fallbackTimer); fallbackTimer = null; }
                 setIsPlayingMaster(false);
+                clearAllHighlights();
                 window._currentUtterance = null;
             };
 
             window.speechSynthesis.cancel();
             window.speechSynthesis.speak(utter);
 
-            // Keep-Alive
+            // Keep-Alive: Chrome stops long utterances after ~15s without this
             const keepAlive = setInterval(() => {
                 if (window.speechSynthesis.speaking) {
                     window.speechSynthesis.pause();

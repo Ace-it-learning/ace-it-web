@@ -40,6 +40,12 @@ const IntegratedSimulationBoard = ({ questData, level, onComplete }) => {
     const [timeLeft, setTimeLeft] = useState(totalTime);
     const [showCheatMenu, setShowCheatMenu] = useState(false);
     const [isCheating, setIsCheating] = useState(false);
+    
+    // Derived Data (Moved up to avoid TDZ errors in useEffect)
+    const integratedData = questData?.integrated_data || {};
+    const notetakingFields = integratedData.notetaking_fields || [];
+    const dataFile = integratedData.data_file || [];
+    const writingTask = integratedData.writing_task || {};
 
     useEffect(() => {
         if (!hasStarted) return; // Only start countdown once student starts audio
@@ -154,10 +160,6 @@ const IntegratedSimulationBoard = ({ questData, level, onComplete }) => {
         return `${mins}:${secs.toString().padStart(2, '0')}`;
     };
 
-    const integratedData = questData?.integrated_data || {};
-    const notetakingFields = integratedData.notetaking_fields || [];
-    const dataFile = integratedData.data_file || [];
-    const writingTask = integratedData.writing_task || {};
 
     // Cleanup audio on unmount
     useEffect(() => {
@@ -415,22 +417,7 @@ const IntegratedSimulationBoard = ({ questData, level, onComplete }) => {
                         </div>
                     </div>
 
-                    {/* Integrated Waveform */}
-                    <div className={`transition-all duration-1000 overflow-hidden relative z-10 ${isPlaying ? 'max-h-[160px] opacity-100 mt-4' : 'max-h-0 opacity-0'}`}>
-                        <div className="bg-white/5 backdrop-blur-sm rounded-[2.5rem] p-8 border border-white/10 shadow-inner">
-                            <AudioWaveform 
-                                audioSrc={currentAudioSrc} 
-                                isPlaying={isPlaying} 
-                                height={80}
-                                waveColor="#475569"
-                                progressColor="#f43f5e"
-                            />
-                        </div>
-                        <div className="mt-4 flex items-center gap-3 text-rose-400 px-6">
-                            <div className="w-1.5 h-1.5 rounded-full bg-rose-500 animate-ping" />
-                            <span className="text-[10px] font-black uppercase tracking-[0.3em] opacity-80">Listening Mode: Simulation Buffer Engaged</span>
-                        </div>
-                    </div>
+
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">

@@ -220,19 +220,8 @@ const ListeningBriefing = () => {
                     </div>
 
 
-                    <div className="p-6 flex flex-col md:flex-row items-center justify-between gap-6 bg-slate-50/50">
-                        <div className="flex items-center gap-4">
-                            <div className="w-16 h-16 bg-white rounded-full shadow-lg flex items-center justify-center relative border border-slate-100">
-                                <Shield size={28} className="text-indigo-600" />
-                                <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-green-500 rounded-full flex items-center justify-center border-2 border-white">
-                                    <CheckCircle size={10} className="text-white" />
-                                </div>
-                            </div>
-                            <div>
-                                <h3 className="font-bold text-slate-800">Exam Atmosphere: ON</h3>
-                                <p className="text-slate-500 text-xs uppercase tracking-widest font-black mt-1">High-Fidelity Paper 3 Simulation</p>
-                            </div>
-                        </div>
+                    <div className="p-6 flex flex-col md:flex-row items-center justify-center gap-6 bg-slate-50/50">
+
 
                         <div className="flex flex-col items-center md:items-end">
                             <div className="text-xs font-black text-slate-400 uppercase tracking-widest mb-4">

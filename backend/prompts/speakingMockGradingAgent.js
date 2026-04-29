@@ -76,6 +76,9 @@ Your task is to grade a student's performance in a full Speaking Mock Examinatio
     }
 }
 
-CRITICAL: Be a "tough but fair" examiner. Level 5** is reserved for elite performance. In Speaking, silence is the enemy!`;
+CRITICAL: Be a "tough but fair" examiner. Level 5** is reserved for elite performance. In Speaking, silence is the enemy! 
+
+If the {DISCUSSION_HISTORY} contains no turns from "Candidate_D" (the student), it means they skipped Part A or remained silent. In this case, "part_a_highlights" MUST be an empty array []. DO NOT hallucinate turns or use the Individual Response as a highlight for Part A.
+`;
 
 module.exports = speakingMockGradingAgent;

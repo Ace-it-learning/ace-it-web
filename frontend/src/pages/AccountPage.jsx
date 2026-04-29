@@ -157,6 +157,7 @@ const AccountPage = () => {
     };
 
     const [isSaving, setIsSaving] = useState(false);
+    const [isTesting, setIsTesting] = useState(false);
     const [message, setMessage] = useState(null);
     const [schools, setSchools] = useState({ HK: [], KLN: [], NT: [], Other: [] });
     const [isLoadingSchools, setIsLoadingSchools] = useState(true);
@@ -248,6 +249,54 @@ const AccountPage = () => {
             setMessage({ type: 'error', text: err.message });
         } finally {
             setIsSaving(false);
+        }
+    };
+
+    const handleSaveParentSettings = async (updates) => {
+        if (!user?.uid) return;
+        setIsSaving(true);
+        try {
+            const res = await fetch(`${API_URL}/api/user/parent-settings`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ uid: user.uid, ...updates })
+            });
+
+            if (res.ok) {
+                refreshProfile();
+            } else {
+                const err = await res.json();
+                setMessage({ type: 'error', text: err.error || "Failed to save settings" });
+            }
+        } catch (error) {
+            console.error("Save Error:", error);
+            setMessage({ type: 'error', text: "Network error. Please try again." });
+        } finally {
+            setIsSaving(false);
+        }
+    };
+
+    const handleSendTestReport = async () => {
+        if (!user?.uid || !profile?.parent_email) return;
+        setIsTesting(true);
+        try {
+            const res = await fetch(`${API_URL}/api/user/parent-test-report`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ uid: user.uid, parent_email: profile.parent_email })
+            });
+
+            if (res.ok) {
+                setMessage({ type: 'success', text: t('subscription.report_sent') || "Test report sent!" });
+            } else {
+                const err = await res.json();
+                setMessage({ type: 'error', text: err.error || "Failed to send test report" });
+            }
+        } catch (error) {
+            console.error("Test Report Error:", error);
+            setMessage({ type: 'error', text: "Network error." });
+        } finally {
+            setIsTesting(false);
         }
     };
 
@@ -679,6 +728,114 @@ const AccountPage = () => {
                                             {isSaving && <Loader2 size={18} className="animate-spin" />}
                                             Save Changes
                                         </button>
+                                    </div>
+
+                                    {/* Parental Oversight Section */}
+                                    <div className="mt-12 pt-12 border-t border-slate-100 space-y-8">
+                                        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+                                            <div className="space-y-1">
+                                                <h2 className="text-xl font-bold text-slate-900 flex items-center gap-2">
+                                                    <Shield className="text-purple-600 w-5 h-5" />
+                                                    {t('subscription.parent_report_title')}
+                                                </h2>
+                                                <p className="text-sm text-slate-500">{t('subscription.parent_report_subtitle')}</p>
+                                            </div>
+                                            {profile?.subscription_tier !== 'premium' && (
+                                                <span className="bg-purple-100 text-purple-700 px-4 py-2 rounded-xl text-xs font-bold border border-purple-200 flex items-center gap-2">
+                                                    <Crown className="w-4 h-4" /> {t('subscription.parent_report_locked')}
+                                                </span>
+                                            )}
+                                        </div>
+
+                                        <div className={cn(
+                                            "grid grid-cols-1 lg:grid-cols-2 gap-8 transition-all duration-500",
+                                            profile?.subscription_tier !== 'premium' && "opacity-40 pointer-events-none blur-[2px]"
+                                        )}>
+                                            <div className="space-y-6">
+                                                <div className="space-y-2">
+                                                    <label className="text-xs font-bold text-slate-400 uppercase tracking-widest px-1">{t('subscription.parent_report_email')}</label>
+                                                    <div className="relative">
+                                                        <input 
+                                                            type="email"
+                                                            defaultValue={profile?.parent_email || ''}
+                                                            onBlur={(e) => handleSaveParentSettings({ parent_email: e.target.value })}
+                                                            disabled={isSaving}
+                                                            placeholder="parent@example.com"
+                                                            className={cn(
+                                                                "w-full bg-slate-50 border border-slate-200 rounded-2xl px-5 py-3.5 text-sm focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none transition-all",
+                                                                isSaving && "opacity-50 cursor-not-allowed"
+                                                            )}
+                                                        />
+                                                        {isSaving && (
+                                                            <div className="absolute right-4 top-1/2 -translate-y-1/2">
+                                                                <div className="w-5 h-5 border-2 border-purple-600 border-t-transparent rounded-full animate-spin" />
+                                                            </div>
+                                                        )}
+                                                    </div>
+                                                </div>
+
+                                                <div className="flex items-center justify-between p-6 bg-slate-50 rounded-2xl border border-slate-100">
+                                                    <div className="space-y-1">
+                                                        <p className="text-sm font-bold text-slate-900">{t('subscription.parent_report_toggle')}</p>
+                                                        <p className="text-[10px] text-slate-500 leading-relaxed max-w-[200px]">{t('subscription.parent_report_desc')}</p>
+                                                    </div>
+                                                    <button 
+                                                        type="button"
+                                                        onClick={() => handleSaveParentSettings({ parent_report_enabled: !profile?.parent_report_enabled })}
+                                                        disabled={isSaving}
+                                                        className={cn(
+                                                            "w-12 h-7 rounded-full transition-all relative",
+                                                            profile?.parent_report_enabled ? "bg-purple-600 shadow-inner" : "bg-slate-300",
+                                                            isSaving && "opacity-50 cursor-not-allowed"
+                                                        )}
+                                                    >
+                                                        <div className={cn(
+                                                            "w-5 h-5 bg-white rounded-full shadow-md absolute top-1 transition-all",
+                                                            profile?.parent_report_enabled ? "left-6" : "left-1"
+                                                        )} />
+                                                    </button>
+                                                </div>
+                                            </div>
+
+                                            <div className="bg-purple-50 rounded-3xl p-6 border border-purple-100 flex flex-col justify-center items-center text-center space-y-4">
+                                                <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center shadow-sm text-purple-600">
+                                                    {isTesting ? <Loader2 className="w-6 h-6 animate-spin" /> : <Zap className="w-6 h-6" />}
+                                                </div>
+                                                <h3 className="text-sm font-bold text-purple-900">{t('subscription.test_report')}</h3>
+                                                <p className="text-[10px] text-purple-700 max-w-[200px] mx-auto">
+                                                    Verify the connection immediately by sending a sample progress report to the registered email.
+                                                </p>
+                                                <button 
+                                                    type="button"
+                                                    onClick={handleSendTestReport}
+                                                    disabled={!profile?.parent_email || isTesting}
+                                                    className="px-6 py-2.5 bg-white text-purple-700 text-xs font-bold rounded-xl shadow-sm hover:shadow-md transition-all active:scale-95 disabled:opacity-50"
+                                                >
+                                                    {isTesting ? t('common.sending') || 'Sending...' : t('subscription.test_report')}
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        {profile?.subscription_tier !== 'premium' && (
+                                            <div className="bg-purple-600 rounded-2xl p-6 text-white flex flex-col md:flex-row items-center justify-between gap-4">
+                                                <div className="flex items-center gap-4">
+                                                    <div className="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center">
+                                                        <Crown size={20} />
+                                                    </div>
+                                                    <div>
+                                                        <p className="font-bold">Unlock Parental Oversight</p>
+                                                        <p className="text-xs opacity-80">Requires a Premium Plan subscription.</p>
+                                                    </div>
+                                                </div>
+                                                <button 
+                                                    type="button"
+                                                    onClick={() => window.location.href = '/subscription'}
+                                                    className="px-6 py-3 bg-white text-purple-600 rounded-xl font-bold text-sm shadow-lg hover:scale-105 transition-all"
+                                                >
+                                                    Upgrade Now
+                                                </button>
+                                            </div>
+                                        )}
                                     </div>
                                 </form>
                             )}

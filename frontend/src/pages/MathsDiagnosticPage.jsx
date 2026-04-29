@@ -533,27 +533,29 @@ const MathsDiagnosticPage = () => {
                 </div>
             </main>
             {/* Cheat UI */}
-            <div className="fixed bottom-4 left-4 z-50">
-                <button
-                    onClick={() => setShowCheat(!showCheat)}
-                    className="bg-gray-800 text-white p-2 rounded-full opacity-50 hover:opacity-100 text-xs"
-                >
-                    Cheat 🛠️
-                </button>
-                {showCheat && (
-                    <div className="bg-white border shadow-xl rounded-lg p-2 mt-2 flex gap-1">
-                        {['5**', '5*', '5', '4', '2', '1'].map(lvl => (
-                            <button
-                                key={lvl}
-                                onClick={() => handleCheat(lvl)}
-                                className="px-3 py-1 bg-purple-100 hover:bg-purple-200 text-purple-700 rounded text-xs font-bold"
-                            >
-                                {lvl}
-                            </button>
-                        ))}
-                    </div>
-                )}
-            </div>
+            {user?.email === 'fungtam@gmail.com' && (
+                <div className="fixed bottom-4 left-4 z-50">
+                    <button
+                        onClick={() => setShowCheat(!showCheat)}
+                        className="bg-gray-800 text-white p-2 rounded-full opacity-50 hover:opacity-100 text-xs"
+                    >
+                        Cheat 🛠️
+                    </button>
+                    {showCheat && (
+                        <div className="bg-white border shadow-xl rounded-lg p-2 mt-2 flex gap-1">
+                            {['5**', '5*', '5', '4', '2', '1'].map(lvl => (
+                                <button
+                                    key={lvl}
+                                    onClick={() => handleCheat(lvl)}
+                                    className="px-3 py-1 bg-purple-100 hover:bg-purple-200 text-purple-700 rounded text-xs font-bold"
+                                >
+                                    {lvl}
+                                </button>
+                            ))}
+                        </div>
+                    )}
+                </div>
+            )}
         </div>
     );
 };

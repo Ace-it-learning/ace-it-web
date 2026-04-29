@@ -147,7 +147,6 @@ const CardCollection = () => {
                 <div className="flex gap-3 mb-8 overflow-x-auto pb-2 custom-scrollbar animate-in slide-in-from-left duration-500">
                     {[
                         { id: 'english', label: t('redemption.english'), color: 'bg-blue-50 text-blue-600' },
-                        { id: 'maths', label: t('redemption.maths'), color: 'bg-violet-50 text-violet-600' },
                         { id: 'ace', label: 'Ace Sir', color: 'bg-amber-50 text-amber-600' },
                     ].map(st => (
                         <button

@@ -37,6 +37,7 @@ import {
 } from 'lucide-react';
 import { LoadingPage, GradingOverlay } from '../../components/shared';
 import { useAuth } from '../../context/AuthContext';
+import UpgradeModal from '../../components/common/UpgradeModal';
 import { useAvatar } from '../../context/AvatarContext';
 import { motion, AnimatePresence } from 'framer-motion';
 import MockCountdownTimer from '../../components/utils/MockCountdownTimer';
@@ -53,10 +54,12 @@ const SMART_CITY_GOLDEN_ANSWERS = {
 };
 
 const ListeningMockStudio = () => {
-    const { user } = useAuth();
+    const { user, profile } = useAuth();
     const { paperId } = useParams();
     const navigate = useNavigate();
     const [searchParams, setSearchParams] = useSearchParams();
+    const [showUpgradeModal, setShowUpgradeModal] = useState(false);
+    const tier = profile?.subscription_tier || 'free';
 
     // EXAM PHASES: LOADING, BRIEFING, PREPARATION, PART_A, TRANSITION, PART_B_AUDIO, B1B2_GATE, INDEPENDENT, RESULTS
     const [phase, setPhase] = useState(searchParams.get('phase') || 'LOADING');
@@ -198,6 +201,10 @@ const ListeningMockStudio = () => {
     // Load Mock Data
     useEffect(() => {
         const fetchMock = async () => {
+            // Fetch Lock: Prevent double-fetches from StrictMode
+            if (window._isFetchingMockListening === paperId) return;
+            window._isFetchingMockListening = paperId;
+
             try {
                 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
                 const res = await fetch(`${API_URL}/api/english/mock/${paperId}`);
@@ -252,6 +259,9 @@ const ListeningMockStudio = () => {
             } catch (err) {
                 console.error("Error fetching mock:", err);
                 navigate('/mock-exam-eng');
+            } finally {
+                // Keep the lock for 2 seconds to bridge the StrictMode gap
+                setTimeout(() => { window._isFetchingMockListening = null; }, 2000);
             }
         };
         if (paperId) fetchMock();
@@ -335,6 +345,11 @@ const ListeningMockStudio = () => {
     const handleSubmit = async (isAutoSubmit = false) => {
         // Handle case where it's called as an event handler (e.g. onClick)
         const autoMode = isAutoSubmit === true;
+
+        if (tier === 'free') {
+            setShowUpgradeModal(true);
+            return;
+        }
 
         if (!autoMode && !showSubmitModal) {
             setShowSubmitModal(true);
@@ -528,85 +543,87 @@ const ListeningMockStudio = () => {
                             )}
 
                             {/* Cheat Menu */}
-                            <div className="relative group">
-                                <button className="w-10 h-10 flex items-center justify-center bg-amber-50 hover:bg-amber-100 text-amber-600 rounded-xl border border-amber-200 transition-all shadow-sm">
-                                    <Zap size={16} fill="currentColor" />
-                                </button>
-                                <div className="absolute top-full right-0 mt-2 w-56 bg-white rounded-2xl shadow-2xl border border-slate-100 p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-[60]">
-                                    <div className="px-3 py-2 border-b border-slate-50 mb-1">
-                                        <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Cheat Console</p>
+                            {user?.email === 'fungtam@gmail.com' && (
+                                <div className="relative group">
+                                    <button className="w-10 h-10 flex items-center justify-center bg-amber-50 hover:bg-amber-100 text-amber-600 rounded-xl border border-amber-200 transition-all shadow-sm">
+                                        <Zap size={16} fill="currentColor" />
+                                    </button>
+                                    <div className="absolute top-full right-0 mt-2 w-56 bg-white rounded-2xl shadow-2xl border border-slate-100 p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-[60]">
+                                        <div className="px-3 py-2 border-b border-slate-50 mb-1">
+                                            <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Cheat Console</p>
+                                        </div>
+                                        
+                                        {/* Option A + B1 */}
+                                        <button 
+                                            onClick={() => {
+                                                const answers = {};
+                                                mockData?.Part_A?.tasks.forEach(t => t.questions.forEach(q => answers[q.id] = q.answer));
+                                                setUserAnswers(answers);
+                                                
+                                                const bDrafts = {};
+                                                if (mockData?.Part_B) {
+                                                    const b1Tasks = ['Task_5', 'Task_6', 'Task_7'];
+                                                    b1Tasks.forEach(tid => {
+                                                        bDrafts[tid] = SMART_CITY_GOLDEN_ANSWERS[tid] || "Level 5** Perfect response using all Data File points...";
+                                                    });
+                                                    setSelectedSection('B1');
+                                                }
+                                                setDrafts(bDrafts);
+                                            }}
+                                            className="w-full text-left p-3 hover:bg-indigo-50 rounded-xl flex items-center gap-3 group transition-all"
+                                        >
+                                            <div className="w-8 h-8 bg-indigo-100 text-indigo-600 rounded-lg flex items-center justify-center font-black text-xs">B1</div>
+                                            <div>
+                                                <p className="text-[10px] font-black text-slate-900">Fill A + B1 (5**)</p>
+                                                <p className="text-[8px] text-slate-400">Tasks 1-7 complete</p>
+                                            </div>
+                                        </button>
+
+                                        {/* Option A + B2 */}
+                                        <button 
+                                            onClick={() => {
+                                                const answers = {};
+                                                mockData?.Part_A?.tasks.forEach(t => t.questions.forEach(q => answers[q.id] = q.answer));
+                                                setUserAnswers(answers);
+                                                
+                                                const bDrafts = {};
+                                                if (mockData?.Part_B) {
+                                                    const b2Tasks = ['Task_8', 'Task_9', 'Task_10'];
+                                                    b2Tasks.forEach(tid => {
+                                                        bDrafts[tid] = SMART_CITY_GOLDEN_ANSWERS[tid] || "Level 5** Perfect response using all Data File points...";
+                                                    });
+                                                    setSelectedSection('B2');
+                                                }
+                                                setDrafts(bDrafts);
+                                            }}
+                                            className="w-full text-left p-3 hover:bg-rose-50 rounded-xl flex items-center gap-3 group transition-all"
+                                        >
+                                            <div className="w-8 h-8 bg-rose-100 text-rose-600 rounded-lg flex items-center justify-center font-black text-xs">B2</div>
+                                            <div>
+                                                <p className="text-[10px] font-black text-slate-900">Fill A + B2 (5**)</p>
+                                                <p className="text-[8px] text-slate-400">Tasks 1-4 & 8-10 complete</p>
+                                            </div>
+                                        </button>
+
+                                        <div className="h-[1px] bg-slate-50 my-1" />
+
+                                        <button 
+                                            onClick={() => {
+                                                const answers = {};
+                                                mockData?.Part_A?.tasks.forEach(t => t.questions.forEach((q, idx) => answers[q.id] = idx % 2 === 0 ? q.answer : 'Wrong answer'));
+                                                setUserAnswers(answers);
+                                            }}
+                                            className="w-full text-left p-3 hover:bg-slate-50 rounded-xl flex items-center gap-3 group transition-all opacity-50"
+                                        >
+                                            <div className="w-8 h-8 bg-slate-100 text-slate-600 rounded-lg flex items-center justify-center font-black">L2</div>
+                                            <div>
+                                                <p className="text-[10px] font-black text-slate-900">Level 2 (Part A Only)</p>
+                                                <p className="text-[8px] text-slate-400">50% error rate</p>
+                                            </div>
+                                        </button>
                                     </div>
-                                    
-                                    {/* Option A + B1 */}
-                                    <button 
-                                        onClick={() => {
-                                            const answers = {};
-                                            mockData?.Part_A?.tasks.forEach(t => t.questions.forEach(q => answers[q.id] = q.answer));
-                                            setUserAnswers(answers);
-                                            
-                                            const bDrafts = {};
-                                            if (mockData?.Part_B) {
-                                                const b1Tasks = ['Task_5', 'Task_6', 'Task_7'];
-                                                b1Tasks.forEach(tid => {
-                                                    bDrafts[tid] = SMART_CITY_GOLDEN_ANSWERS[tid] || "Level 5** Perfect response using all Data File points...";
-                                                });
-                                                setSelectedSection('B1');
-                                            }
-                                            setDrafts(bDrafts);
-                                        }}
-                                        className="w-full text-left p-3 hover:bg-indigo-50 rounded-xl flex items-center gap-3 group transition-all"
-                                    >
-                                        <div className="w-8 h-8 bg-indigo-100 text-indigo-600 rounded-lg flex items-center justify-center font-black text-xs">B1</div>
-                                        <div>
-                                            <p className="text-[10px] font-black text-slate-900">Fill A + B1 (5**)</p>
-                                            <p className="text-[8px] text-slate-400">Tasks 1-7 complete</p>
-                                        </div>
-                                    </button>
-
-                                    {/* Option A + B2 */}
-                                    <button 
-                                        onClick={() => {
-                                            const answers = {};
-                                            mockData?.Part_A?.tasks.forEach(t => t.questions.forEach(q => answers[q.id] = q.answer));
-                                            setUserAnswers(answers);
-                                            
-                                            const bDrafts = {};
-                                            if (mockData?.Part_B) {
-                                                const b2Tasks = ['Task_8', 'Task_9', 'Task_10'];
-                                                b2Tasks.forEach(tid => {
-                                                    bDrafts[tid] = SMART_CITY_GOLDEN_ANSWERS[tid] || "Level 5** Perfect response using all Data File points...";
-                                                });
-                                                setSelectedSection('B2');
-                                            }
-                                            setDrafts(bDrafts);
-                                        }}
-                                        className="w-full text-left p-3 hover:bg-rose-50 rounded-xl flex items-center gap-3 group transition-all"
-                                    >
-                                        <div className="w-8 h-8 bg-rose-100 text-rose-600 rounded-lg flex items-center justify-center font-black text-xs">B2</div>
-                                        <div>
-                                            <p className="text-[10px] font-black text-slate-900">Fill A + B2 (5**)</p>
-                                            <p className="text-[8px] text-slate-400">Tasks 1-4 & 8-10 complete</p>
-                                        </div>
-                                    </button>
-
-                                    <div className="h-[1px] bg-slate-50 my-1" />
-
-                                    <button 
-                                        onClick={() => {
-                                            const answers = {};
-                                            mockData?.Part_A?.tasks.forEach(t => t.questions.forEach((q, idx) => answers[q.id] = idx % 2 === 0 ? q.answer : 'Wrong answer'));
-                                            setUserAnswers(answers);
-                                        }}
-                                        className="w-full text-left p-3 hover:bg-slate-50 rounded-xl flex items-center gap-3 group transition-all opacity-50"
-                                    >
-                                        <div className="w-8 h-8 bg-slate-100 text-slate-600 rounded-lg flex items-center justify-center font-black">L2</div>
-                                        <div>
-                                            <p className="text-[10px] font-black text-slate-900">Level 2 (Part A Only)</p>
-                                            <p className="text-[8px] text-slate-400">50% error rate</p>
-                                        </div>
-                                    </button>
                                 </div>
-                            </div>
+                            )}
 
                             <div className="flex bg-slate-900/5 p-1 rounded-xl border border-slate-200">
                                 <button 
@@ -916,6 +933,25 @@ const ListeningMockStudio = () => {
                     isOpen={isSubmitting}
                     title="Transmitting Paper 3"
                     status="Finalizing your listening scripts and integrated tasks..."
+                />
+
+                <AnimatePresence>
+                    {isSubmitting && (
+                        <div className="fixed inset-0 z-[200] bg-slate-900/90 backdrop-blur-xl flex items-center justify-center text-center p-8">
+                            <div className="flex flex-col items-center">
+                                <div className="size-24 border-4 border-white/10 border-t-indigo-500 rounded-full animate-spin mb-8" />
+                                <h2 className="text-2xl font-black text-white uppercase tracking-widest">Evaluating Performance</h2>
+                                <p className="text-slate-400 font-bold mt-2">Miss Janie is reviewing your Integrated Tasks...</p>
+                            </div>
+                        </div>
+                    )}
+                </AnimatePresence>
+
+                <UpgradeModal 
+                    isOpen={showUpgradeModal} 
+                    onClose={() => setShowUpgradeModal(false)}
+                    title="Unlock Evaluation"
+                    message="Free trial users can attempt the Listening Mock paper, but AI evaluation and grade prediction are Pro features. Upgrade now to get your results!"
                 />
 
                 <AnimatePresence>

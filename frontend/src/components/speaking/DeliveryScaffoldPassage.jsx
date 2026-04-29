@@ -64,21 +64,16 @@ const DeliveryScaffoldPassage = ({
                 const isCorrect = tk.result && tk.result.status === 'correct';
                 const isIncorrect = tk.result && tk.result.status === 'incorrect';
 
-                // Base Styles
-                let classes = "transition-all duration-200 "; 
+                // Base Styles — no transitions; live karaoke is DOM-driven for zero latency
+                let classes = "inline "; 
                 
                 if (resultsMode) {
-                    if (isCorrect) classes += "text-emerald-700 font-extrabold inline ";
-                    else if (isIncorrect) classes += "text-rose-600 font-extrabold underline decoration-rose-300 decoration-4 inline ";
-                    else classes += "text-slate-200 opacity-40 inline ";
+                    if (isCorrect) classes += "text-emerald-700 font-extrabold ";
+                    else if (isIncorrect) classes += "text-rose-600 font-extrabold underline decoration-rose-300 decoration-4 ";
+                    else classes += "text-slate-200 opacity-40 ";
                 } else {
-                    if (isActive) {
-                        classes += "bg-orange-500 text-white shadow-[0_4px_25px_rgba(249,115,22,0.6)] rounded-lg px-1.5 py-0.5 z-20 relative scale-110 inline-block font-black ";
-                    } else if (isPast) {
-                        classes += "text-orange-500 font-semibold inline ";
-                    } else {
-                        classes += "text-black inline ";
-                    }
+                    // Default state: black text. Active/past styling applied via direct DOM manipulation.
+                    classes += "text-black font-bold ";
                 }
 
                 if (tk.isWhitespace) {

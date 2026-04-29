@@ -27,6 +27,7 @@ import { LoadingPage, GradingOverlay } from '../../components/shared';
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import { storage } from '../../firebase';
 import { useAuth } from '../../context/AuthContext';
+import UpgradeModal from '../../components/common/UpgradeModal';
 
 // Studio Components
 import WritingStudioLayout from '../../components/writing/WritingStudioLayout';
@@ -36,10 +37,12 @@ import WritingStudioEditor from '../../components/writing/WritingStudioEditor';
 import WritingStudioControlPanel from '../../components/writing/WritingStudioControlPanel';
 
 const WritingMockStudio = () => {
+    const { user, profile } = useAuth();
     const { paperId } = useParams();
-    const { user } = useAuth();
     const navigate = useNavigate();
     const [searchParams, setSearchParams] = useSearchParams();
+    const [showUpgradeModal, setShowUpgradeModal] = useState(false);
+    const tier = profile?.subscription_tier || 'free';
 
     // Core State
     const [isInitialized, setIsInitialized] = useState(false);
@@ -94,6 +97,10 @@ const WritingMockStudio = () => {
             setIsDev(true);
         }
         const fetchMock = async () => {
+            // Fetch Lock: Prevent double-fetches from StrictMode
+            if (window._isFetchingMockWriting === paperId) return;
+            window._isFetchingMockWriting = paperId;
+
             try {
                 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
                 const res = await fetch(`${API_URL}/api/english/mock/${paperId}`);
@@ -154,6 +161,9 @@ const WritingMockStudio = () => {
             } catch (err) {
                 console.error("Error fetching mock:", err);
                 navigate('/mock-exam-eng');
+            } finally {
+                // Keep the lock for 2 seconds to bridge the StrictMode gap
+                setTimeout(() => { window._isFetchingMockWriting = null; }, 2000);
             }
         };
         fetchMock();
@@ -312,6 +322,10 @@ const WritingMockStudio = () => {
     };
 
     const handleSubmit = async () => {
+        if (tier === 'free') {
+            setShowUpgradeModal(true);
+            return;
+        }
         setIsSubmitting(true);
         setSubmissionProgress(20);
         try {
@@ -488,7 +502,7 @@ const WritingMockStudio = () => {
                         isLeftSidebarOpen={isLeftSidebarOpen}
                         onToggleLeftSidebar={() => setIsLeftSidebarOpen(!isLeftSidebarOpen)}
                         onBack={() => setShowQuitModal(true)}
-                        isCheatMode={isDev}
+                        isCheatMode={user?.email === 'fungtam@gmail.com'}
                         onCheatInject={handleCheatMode}
                     />
                 }
@@ -590,6 +604,12 @@ const WritingMockStudio = () => {
                     title={isInjecting ? "Injecting AI Drafts" : "Evaluating Writing"}
                     status={isInjecting ? "Synthesizing Level-Specific Content..." : "Miss Janie is reviewing your work..."}
                     progress={submissionProgress}
+                />
+                <UpgradeModal 
+                    isOpen={showUpgradeModal} 
+                    onClose={() => setShowUpgradeModal(false)}
+                    title="Unlock Evaluation"
+                    message="Free trial users can draft their Part A and Part B responses, but AI evaluation and grade prediction are Pro features. Upgrade now to get your results!"
                 />
             </WritingStudioLayout>
         );

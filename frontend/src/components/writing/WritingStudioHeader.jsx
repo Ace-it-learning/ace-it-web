@@ -135,36 +135,7 @@ const WritingStudioHeader = ({
                     </div>
                 )}
 
-                {/* C-L-O Quick Progress - Hidden in Mock Mode */}
-                {!isMock && (
-                    <div className="hidden sm:flex items-center gap-2 px-3 py-1.5 bg-slate-50 border border-slate-200 rounded-lg group relative">
-                        <BarChart3 size={14} className="text-slate-500" />
-                        <div className="flex gap-2">
-                            {['C', 'L', 'O'].map((metric, idx) => (
-                                <div key={metric} className="flex flex-col items-center">
-                                    <span className="text-xs font-black text-slate-500 mb-0.5" title={metric === 'C' ? 'Content' : metric === 'L' ? 'Language' : 'Organization'}>
-                                        {metric}
-                                    </span>
-                                    <div className="w-10 h-1.5 bg-slate-200 rounded-full overflow-hidden">
-                                        <div 
-                                            className={`h-full ${cloProgress[idx] > 70 ? 'bg-emerald-500' : 'bg-slate-900'}`}
-                                            style={{ width: `${cloProgress[idx]}%` }}
-                                        />
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                        {/* Tooltip for CLO meaning */}
-                        <div className="absolute top-full right-0 mt-2 p-2 bg-slate-800 text-white text-xs rounded shadow-xl opacity-0 group-hover:opacity-100 transition-opacity z-[100] w-48 pointer-events-none">
-                            <p className="font-bold mb-1 uppercase tracking-widest border-b border-slate-700 pb-1">Mastery Metrics</p>
-                            <ul className="space-y-1 mt-1 font-medium italic">
-                                <li><span className="text-indigo-400 font-bold">C:</span> Content (Relevance & Depth)</li>
-                                <li><span className="text-indigo-400 font-bold">L:</span> Language (Vocab & Grammar)</li>
-                                <li><span className="text-indigo-400 font-bold">O:</span> Organization (Structure)</li>
-                            </ul>
-                        </div>
-                    </div>
-                )}
+
 
                 {/* Auto-save Marker (Relocated from Editor) */}
                 <div className="hidden md:flex items-center gap-2 px-3 py-1.5 bg-slate-50 rounded-lg border border-slate-100">
@@ -177,7 +148,7 @@ const WritingStudioHeader = ({
                 {/* Sidebar Toggle (Focus Mode) */}
                 <button
                     onClick={onToggleSidebar}
-                    className={`p-2 rounded-lg transition-all flex items-center gap-2 border ${
+                    className={`p-2.5 rounded-lg transition-all flex items-center justify-center border ${
                         !isSidebarOpen 
                             ? 'bg-indigo-600 border-indigo-600 text-white shadow-md' 
                             : 'bg-white border-slate-200 text-slate-500 hover:bg-slate-50'
@@ -185,9 +156,7 @@ const WritingStudioHeader = ({
                     title={isSidebarOpen ? "Enter Focus Mode" : "Exit Focus Mode"}
                 >
                     {isSidebarOpen ? <Maximize2 size={16} /> : <Minimize2 size={16} />}
-                    <span className="text-xs font-black uppercase tracking-widest hidden md:block">
-                        {isSidebarOpen ? "Focus Mode" : "Show Sidebars"}
-                    </span>
+
                 </button>
 
             </div>

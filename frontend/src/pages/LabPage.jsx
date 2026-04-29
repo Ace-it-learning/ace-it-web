@@ -631,6 +631,13 @@ const LabPage = () => {
                 return;
             }
 
+            // --- FETCH LOCK (PREVENT DOUBLE-FETCH IN DEV) ---
+            if (window._isFetchingLab === `${topic}-${currentLevel}-${qBatch}`) {
+                console.log("[LabPage] Fetch already in progress for this topic/level. Skipping duplicate.");
+                return;
+            }
+            window._isFetchingLab = `${topic}-${currentLevel}-${qBatch}`;
+
             setGenError(null);
             setLoading(true);
 
@@ -644,172 +651,160 @@ const LabPage = () => {
                 console.log(`[LabPage] Intercepted legacy ${isLegacyWriting ? 'writing' : 'listening'} request. Redirecting to Quests Lab.`);
                 setLoading(false);
                 setGenError(`This ${isLegacyWriting ? 'writing' : 'listening'} activity has moved to the Quests Lab. Please access the latest Quests via the 'Quests Lab' tab in the Roadmap.`);
+                window._isFetchingLab = null;
                 return;
             }
 
-
-            // Retry Logic for Frontend
-            let attempts = 0;
-            const maxAttempts = 3;
             const endpoint = isWritingLab ? `${API_URL}/api/lab/writing/generate` : `${API_URL}/api/lab/generate`;
 
-            while (attempts < maxAttempts) {
-                try {
-                    attempts++;
-                    // Construct payload based on lab type
-                    const payload = {
-                        level: currentLevel,
-                        uid: user?.uid || 'placeholder'
-                    };
+            try {
+                // Construct payload based on lab type
+                const payload = {
+                    level: currentLevel,
+                    uid: user?.uid || 'placeholder'
+                };
 
-                    if (isWritingLab) {
-                        payload.topic = topic; // Pass the specific skill ID (e.g. 'writing_relevance') or 'writing'
+                if (isWritingLab) {
+                    payload.topic = topic; // Pass the specific skill ID (e.g. 'writing_relevance') or 'writing'
 
-                        // Map Skill ID to Mode (Heuristics)
-                        // If logic isn't specific, default to PARAGRAPH_PLANNER
-                        let derivedMode = 'PARAGRAPH_PLANNER';
-                        if (focus && focus.length > 0 && ['SENTENCE_BUILDER', 'PARAGRAPH_PLANNER', 'MINI_ESSAY'].includes(focus[0])) {
-                            derivedMode = focus[0];
-                        } else if (topic.includes('sentence')) {
-                            derivedMode = 'SENTENCE_BUILDER';
-                        } else if (topic.includes('development') || topic.includes('organization') || topic.includes('coherence')) {
-                            derivedMode = 'MINI_ESSAY';
-                        }
-
-                        payload.mode = derivedMode;
-                        console.log(`[LabPage] Writing Lab Detected. Topic: ${topic}, Mode: ${derivedMode}`);
-                    } else {
-                        payload.topic = topic;
-                        payload.focus = focus;
-                        if (location.state?.isWeeklyQuest || topic === 'reading_weekly') {
-                            payload.isWeeklyQuest = true;
-                        }
+                    // Map Skill ID to Mode (Heuristics)
+                    // If logic isn't specific, default to PARAGRAPH_PLANNER
+                    let derivedMode = 'PARAGRAPH_PLANNER';
+                    if (focus && focus.length > 0 && ['SENTENCE_BUILDER', 'PARAGRAPH_PLANNER', 'MINI_ESSAY'].includes(focus[0])) {
+                        derivedMode = focus[0];
+                    } else if (topic.includes('sentence')) {
+                        derivedMode = 'SENTENCE_BUILDER';
+                    } else if (topic.includes('development') || topic.includes('organization') || topic.includes('coherence')) {
+                        derivedMode = 'MINI_ESSAY';
                     }
 
-                    // AbortController: Kill fetch after 90 seconds to prevent infinite spinner
-                    const controller = new AbortController();
-                    const timeoutId = setTimeout(() => controller.abort(), 90000);
-
-                    const response = await fetch(endpoint, {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify(payload),
-                        signal: controller.signal
-                    });
-                    clearTimeout(timeoutId);
-
-                    if (!response.ok) {
-                        const errorData = await response.json();
-                        throw new Error(errorData.error || `Server error: ${response.status}`);
-                    }
-
-                    // Writing Competencies Map (Fallback if AI doesn't generate them)
-                    const WRITING_COMPETENCIES = {
-                        'writing_development': [
-                            "Elaboration of Arguments: Expanding ideas with depth",
-                            "Use of Evidence: Supporting claims with concrete examples",
-                            "Relevance: Maintaining strict focus on the prompt",
-                            "Clarity of Thought: Expressing complex ideas simply"
-                        ],
-                        'writing_organization': [
-                            "Paragraph Structure: Topic sentences and supporting details",
-                            "Logical Flow: Smooth transitions between ideas",
-                            "Coherence: Linking sentences effectively",
-                            "Structural Unity: Beginning, middle, and end alignment"
-                        ],
-                        'writing_coherence': [
-                            "Transition Signals: Using 'However', 'Therefore', etc.",
-                            "Reference Words: Using pronouns to link ideas",
-                            "Logical Sequencing: Ordering points for maximum impact",
-                            "Idea Connection: Bridging concepts smoothly"
-                        ],
-                        'writing_sentenceVariety': [
-                            "Sentence Length: Mixing short and long sentences",
-                            "Structure Types: Using compound and complex sentences",
-                            "Openers: Varying how sentences begin",
-                            "Rhythm: Creating a natural flow of text"
-                        ],
-                        'PARAGRAPH_PLANNER': [
-                            "Topic Sentence: Clearly stating the main idea",
-                            "Supporting Details: Providing evidence and analysis",
-                            "Concluding Sentence: Wrapping up the argument",
-                            "Unity: Ensuring all sentences relate to the topic"
-                        ],
-                        'SENTENCE_BUILDER': [
-                            "Grammar Accuracy: Avoiding common pitfalls",
-                            "Vocabulary Selection: Choosing precise words",
-                            "Sentence Structure: Mastering syntax",
-                            "Punctuation Control: Using commas and periods correctly"
-                        ],
-                        'MINI_ESSAY': [
-                            "Thesis Statement: clear and arguable position",
-                            "Argument structuring: Logic and persuasion",
-                            "Counter-arguments: Addressing opposing views",
-                            "Conclusion: Synthesizing main points"
-                        ]
-                    };
-
-                    const data = await response.json();
-
-                    // Inject Fallback Competencies for Writing
-                    if (isWritingLab && (!data.key_points || data.key_points.length === 0)) {
-                        // Try specific topic match first, then mode match
-                        data.key_points = WRITING_COMPETENCIES[topic] || WRITING_COMPETENCIES[payload.mode] || [
-                            "Clear Expression: Communicating ideas effectively",
-                            "Task Fulfilment: Meeting all prompt requirements",
-                            "Language Accuracy: minimizing grammatical errors",
-                            "Organization: Structuring text logically"
-                        ];
-                    }
-
-                    // Phase 24 & 25: Limit questions for Easy level (CurrentLevel '3')
-                    // DEPRECATED: We now allow the full targetCount (8) as per user feedback
-
-                    setDrillAnswers({});
-                    setCurrentRuleIdx(0);
-                    setCurrentHeadNounIdx(0);
-                    setCurrentDrillIdx(0);
-                    setGrammarSubStep('LEARN');
-                    setComboCount(0);
-                    setGrammarMistakes([]);
-                    setLessonData(data); // Writing API returns { mode, theme, ... }
-
-                    // Initialize answers
-                    const initialAnswers = {};
-                    if (!isWritingLab) {
-                        // Standard Lab Initialization
-                        if (data.interactive_tasks && data.interactive_tasks.length > 0) {
-                            data.interactive_tasks.forEach(t => {
-                                if (t.type === 'CATEGORIZATION') {
-                                    initialAnswers[t.id] = {};
-                                } else if (t.type === 'ORDERING') {
-                                    // Default sequence: index-index-index
-                                    initialAnswers[t.id] = (t.options || []).map((_, i) => i).join('-');
-                                } else {
-                                    initialAnswers[t.id] = '';
-                                }
-                            });
-                        } else if (data.interactive_task) {
-                            const taskId = 'q1';
-                            initialAnswers[taskId] = '';
-                            data.interactive_tasks = [{ ...data.interactive_task, id: taskId }];
-                        }
-                    }
-
-                    setUserAnswers(initialAnswers);
-                    setLoading(false);
-                    return; // Success!
-
-                } catch (err) {
-                    console.warn(`Attempt ${attempts} failed:`, err);
-                    if (attempts >= maxAttempts) {
-                        console.error("Lab Error (Final):", err);
-                        setGenError(err.message || "Failed to generate lesson content.");
-                        setLoading(false);
-                    } else {
-                        await new Promise(r => setTimeout(r, 2000 * attempts));
+                    payload.mode = derivedMode;
+                    console.log(`[LabPage] Writing Lab Detected. Topic: ${topic}, Mode: ${derivedMode}`);
+                } else {
+                    payload.topic = topic;
+                    payload.focus = focus;
+                    if (location.state?.isWeeklyQuest || topic === 'reading_weekly') {
+                        payload.isWeeklyQuest = true;
                     }
                 }
+
+                // AbortController: Kill fetch after 90 seconds to prevent infinite spinner
+                const controller = new AbortController();
+                const timeoutId = setTimeout(() => controller.abort(), 90000);
+
+                const response = await fetch(endpoint, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload),
+                    signal: controller.signal
+                });
+                clearTimeout(timeoutId);
+
+                if (!response.ok) {
+                    const errorData = await response.json();
+                    throw new Error(errorData.error || `Server error: ${response.status}`);
+                }
+
+                // Writing Competencies Map (Fallback if AI doesn't generate them)
+                const WRITING_COMPETENCIES = {
+                    'writing_development': [
+                        "Elaboration of Arguments: Expanding ideas with depth",
+                        "Use of Evidence: Supporting claims with concrete examples",
+                        "Relevance: Maintaining strict focus on the prompt",
+                        "Clarity of Thought: Expressing complex ideas simply"
+                    ],
+                    'writing_organization': [
+                        "Paragraph Structure: Topic sentences and supporting details",
+                        "Logical Flow: Smooth transitions between ideas",
+                        "Coherence: Linking sentences effectively",
+                        "Structural Unity: Beginning, middle, and end alignment"
+                    ],
+                    'writing_coherence': [
+                        "Transition Signals: Using 'However', 'Therefore', etc.",
+                        "Reference Words: Using pronouns to link ideas",
+                        "Logical Sequencing: Ordering points for maximum impact",
+                        "Idea Connection: Bridging concepts smoothly"
+                    ],
+                    'writing_sentenceVariety': [
+                        "Sentence Length: Mixing short and long sentences",
+                        "Structure Types: Using compound and complex sentences",
+                        "Openers: Varying how sentences begin",
+                        "Rhythm: Creating a natural flow of text"
+                    ],
+                    'PARAGRAPH_PLANNER': [
+                        "Topic Sentence: Clearly stating the main idea",
+                        "Supporting Details: Providing evidence and analysis",
+                        "Concluding Sentence: Wrapping up the argument",
+                        "Unity: Ensuring all sentences relate to the topic"
+                    ],
+                    'SENTENCE_BUILDER': [
+                        "Grammar Accuracy: Avoiding common pitfalls",
+                        "Vocabulary Selection: Choosing precise words",
+                        "Sentence Structure: Mastering syntax",
+                        "Punctuation Control: Using commas and periods correctly"
+                    ],
+                    'MINI_ESSAY': [
+                        "Thesis Statement: clear and arguable position",
+                        "Argument structuring: Logic and persuasion",
+                        "Counter-arguments: Addressing opposing views",
+                        "Conclusion: Synthesizing main points"
+                    ]
+                };
+
+                const data = await response.json();
+
+                // Inject Fallback Competencies for Writing
+                if (isWritingLab && (!data.key_points || data.key_points.length === 0)) {
+                    // Try specific topic match first, then mode match
+                    data.key_points = WRITING_COMPETENCIES[topic] || WRITING_COMPETENCIES[payload.mode] || [
+                        "Clear Expression: Communicating ideas effectively",
+                        "Task Fulfilment: Meeting all prompt requirements",
+                        "Language Accuracy: minimizing grammatical errors",
+                        "Organization: Structuring text logically"
+                    ];
+                }
+
+                setDrillAnswers({});
+                setCurrentRuleIdx(0);
+                setCurrentHeadNounIdx(0);
+                setCurrentDrillIdx(0);
+                setGrammarSubStep('LEARN');
+                setComboCount(0);
+                setGrammarMistakes([]);
+                setLessonData(data); // Writing API returns { mode, theme, ... }
+
+                // Initialize answers
+                const initialAnswers = {};
+                if (!isWritingLab) {
+                    // Standard Lab Initialization
+                    if (data.interactive_tasks && data.interactive_tasks.length > 0) {
+                        data.interactive_tasks.forEach(t => {
+                            if (t.type === 'CATEGORIZATION') {
+                                initialAnswers[t.id] = {};
+                            } else if (t.type === 'ORDERING') {
+                                // Default sequence: index-index-index
+                                initialAnswers[t.id] = (t.options || []).map((_, i) => i).join('-');
+                            } else {
+                                initialAnswers[t.id] = '';
+                            }
+                        });
+                    } else if (data.interactive_task) {
+                        const taskId = 'q1';
+                        initialAnswers[taskId] = '';
+                        data.interactive_tasks = [{ ...data.interactive_task, id: taskId }];
+                    }
+                }
+
+                setUserAnswers(initialAnswers);
+                setLoading(false);
+                window._isFetchingLab = null; // Release lock
+                return; // Success!
+
+            } catch (err) {
+                console.error("Lab Error (Final):", err);
+                setGenError(err.message || "Failed to generate lesson content.");
+                setLoading(false);
+                window._isFetchingLab = null; // Release lock
             }
         };
 
@@ -1433,9 +1428,13 @@ const LabPage = () => {
                                     key={lvl}
                                     onClick={() => {
                                         const norm = lvl === '5**' ? '7' : lvl === '5*' ? '6' : lvl;
-                                        const newParams = new URLSearchParams(searchParams);
-                                        newParams.set('level', norm);
-                                        setSearchParams(newParams);
+                                        if (step === 'PRACTICE') {
+                                            handleCheat(norm);
+                                        } else {
+                                            const newParams = new URLSearchParams(searchParams);
+                                            newParams.set('level', norm);
+                                            setSearchParams(newParams);
+                                        }
                                     }}
                                     disabled={isSubmitting}
                                     className={`text-[10px] font-bold px-2 py-0.5 rounded transition-colors ${

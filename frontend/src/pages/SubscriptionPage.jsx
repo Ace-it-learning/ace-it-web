@@ -37,60 +37,6 @@ const SubscriptionPage = () => {
         return <Smartphone className="w-5 h-5" />;
     };
 
-    const handleSaveParentSettings = async (updates) => {
-        if (!user?.uid) return;
-        setIsSaving(true);
-        try {
-            const res = await fetch(`${API_URL}/api/user/parent-settings`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ uid: user.uid, ...updates })
-            });
-
-            if (res.ok) {
-                refreshProfile();
-            } else {
-                const err = await res.json();
-                alert(err.error || "Failed to save settings");
-            }
-        } catch (error) {
-            console.error("Save Error:", error);
-            alert("Network error. Please try again.");
-        } finally {
-            setIsSaving(false);
-        }
-    };
-
-    const handleSendTestReport = async () => {
-        if (!user?.uid || !profile?.parent_email) return;
-        setIsTesting(true);
-        try {
-            const res = await fetch(`${API_URL}/api/user/parent-test-report`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ uid: user.uid, parent_email: profile.parent_email })
-            });
-
-            if (res.ok) {
-                alert(t('subscription.report_sent') || "Test report sent!");
-            } else {
-                const err = await res.json();
-                alert(err.error || "Failed to send test report");
-            }
-        } catch (error) {
-            console.error("Test Report Error:", error);
-            alert("Network error.");
-        } finally {
-            setIsTesting(false);
-        }
-    };
-
-    const handleForgetDevice = async (fingerprint) => {
-        if (!window.confirm(t('subscription.confirm_forget_device'))) return;
-        // Implementation will call DeviceService via API
-        alert('FORGET DEVICE: ' + fingerprint);
-    };
-
     const handleUpgrade = (selectedTier) => {
         // Implementation will link to payment or activation
         alert('UPGRADE TO: ' + selectedTier);
@@ -103,10 +49,13 @@ const SubscriptionPage = () => {
             price: '$0',
             icon: <Shield className="w-6 h-6 text-gray-500" />,
             features: [
-                t('pricing.free_f1') || '1st Quest of each category',
-                t('pricing.free_f2') || 'Diagnostic Test access',
-                t('pricing.free_f3') || 'Earn base XP',
-                t('pricing.free_f4') || 'Avatar browsing'
+                t('pricing.free_f1') || 'Chat with English AI tutor',
+                t('pricing.free_f2') || '1st Quest of English Reading, Writing, Listening & Speaking',
+                t('pricing.free_f3') || '1 practice on Grammar Lab',
+                t('pricing.free_f4') || 'Mock exam preview',
+                t('pricing.free_f5') || 'Earn base XP',
+                t('pricing.free_f6') || 'Redeem avatar using XP',
+                t('pricing.free_f7') || 'Achievement timeline'
             ],
             color: 'gray'
         },
@@ -117,10 +66,14 @@ const SubscriptionPage = () => {
             period: '/mo',
             icon: <Zap className="w-6 h-6 text-amber-500" />,
             features: [
-                t('pricing.pro_f1') || 'English & Math Full Access',
-                t('pricing.pro_f2') || '10 Questions/Quest/Month',
-                t('pricing.pro_f3') || '4 Mock Exams/Subject',
-                t('pricing.pro_f4') || '1.2x XP Multiplier'
+                t('pricing.pro_f1') || 'English Reading, Writing, Listening and Speaking full access',
+                t('pricing.pro_f2') || 'Unlimited Quest access',
+                t('pricing.pro_f3') || '4 Mock Exams per month',
+                t('pricing.pro_f4') || '1.2x XP Multiplier',
+                t('pricing.pro_f5') || 'Weekly Challenge Quest',
+                t('pricing.pro_f6') || 'Recommended Quests & Skill map',
+                t('pricing.pro_f7') || '3 devices limit',
+                t('pricing.pro_f8') || 'Chat with Ace Sir (Academic & University advisor)'
             ],
             color: 'amber',
             popular: true
@@ -132,10 +85,10 @@ const SubscriptionPage = () => {
             period: '/mo',
             icon: <Crown className="w-6 h-6 text-purple-500" />,
             features: [
-                t('pricing.premium_f1') || 'Unlimited Questions',
-                t('pricing.premium_f2') || 'Unlimited Mock Exams',
-                t('pricing.premium_f3') || 'All current & future subjects',
-                t('pricing.premium_f4') || '1.5x XP & 5 Device Limit'
+                t('pricing.premium_f1') || 'Unlimited Mock exam access',
+                t('pricing.premium_f2') || '1.5x XP Multiplier',
+                t('pricing.premium_f3') || '5 Device Limit',
+                t('pricing.premium_f4') || 'Parental monthly progress report'
             ],
             color: 'purple'
         }
@@ -224,193 +177,50 @@ const SubscriptionPage = () => {
                     ))}
                 </div>
 
-                {/* 3. DEVICE MANAGEMENT & PROMO SECTION */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                    
-                    {/* DEVICE LIST CTA */}
-                    <div className="bg-white rounded-3xl p-8 shadow-sm border border-slate-200 flex flex-col items-center justify-center text-center space-y-6">
-                        <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center text-primary">
-                            <Smartphone className="w-8 h-8" />
-                        </div>
-                        <div className="space-y-2">
-                            <h2 className="text-2xl font-bold text-slate-900">
-                                {t('subscription.devices_title') || 'Active Devices'}
-                            </h2>
-                            <p className="text-slate-500 max-w-sm">
-                                {t('subscription.device_cta_desc') || 'Monitor and manage the devices authorized to access your Ace It! account.'}
-                            </p>
-                        </div>
+                {/* 3. PROMO SECTION */}
+                <div className="max-w-4xl mx-auto space-y-8">
+                    <div className="bg-white rounded-3xl p-8 shadow-sm border border-slate-200 space-y-6">
+                        <h2 className="text-xl font-bold text-slate-900 flex items-center gap-2">
+                            <Zap className="text-amber-500" />
+                            {t('subscription.promo_title') || 'Promo Codes'}
+                        </h2>
+                        <p className="text-sm text-slate-500 leading-relaxed">
+                            {t('subscription.promo_subtitle') || 'Enter a referral or promotional code to unlock special discounts.'}
+                        </p>
                         
-                        <div className="flex items-center gap-4 px-6 py-3 bg-slate-50 rounded-2xl border border-slate-100">
-                            <span className="text-xs font-bold text-slate-400 uppercase tracking-widest">Currently Active</span>
-                            <span className="text-lg font-bold text-slate-900">
-                                {activeDevices.length} / {tier === 'premium' ? 5 : 3}
-                            </span>
-                        </div>
-
-                        <button 
-                            onClick={() => window.location.href = '/account?tab=subscription'}
-                            className="px-8 py-4 bg-primary text-white font-bold rounded-2xl shadow-lg shadow-primary/20 hover:bg-primary/90 transition-all active:scale-95 flex items-center gap-2"
-                        >
-                            {t('subscription.manage_devices') || 'Manage Active Devices'} <ArrowRight className="w-5 h-5" />
-                        </button>
-
-                        <div className="flex gap-4 p-4 bg-amber-50 rounded-2xl border border-amber-100 max-w-md">
-                            <AlertCircle className="w-5 h-5 text-amber-600 shrink-0" />
-                            <p className="text-[10px] text-amber-800 text-left leading-relaxed">
-                                {t('subscription.device_warning') || 'You can register up to 3 devices on Free/Pro. If you reach the limit, please remove a device from your account settings before signing in on a new machine.'}
-                            </p>
-                        </div>
-                    </div>
-
-                    {/* PROMO CODES */}
-                    <div className="space-y-8">
-                        <div className="bg-white rounded-3xl p-8 shadow-sm border border-slate-200 space-y-6">
-                            <h2 className="text-xl font-bold text-slate-900 flex items-center gap-2">
-                                <Zap className="text-amber-500" />
-                                {t('subscription.promo_title') || 'Promo Codes'}
-                            </h2>
-                            <p className="text-sm text-slate-500 leading-relaxed">
-                                {t('subscription.promo_subtitle') || 'Enter a referral or promotional code to unlock special discounts.'}
-                            </p>
-                            
-                            <div className="flex gap-2">
-                                <input 
-                                    type="text"
-                                    value={promoCode}
-                                    onChange={(e) => setPromoCode(e.target.value.toUpperCase())}
-                                    placeholder={t('subscription.promo_placeholder') || 'E.G. ACEIT2025'}
-                                    className="flex-1 bg-slate-50 border border-slate-200 rounded-2xl px-6 py-4 focus:ring-2 focus:ring-primary focus:border-transparent outline-none font-mono tracking-widest transition-all"
-                                />
-                                <button 
-                                    className="px-8 py-4 bg-slate-900 text-white font-bold rounded-2xl hover:bg-black transition-all active:scale-95 disabled:opacity-50"
-                                    disabled={!promoCode || isApplying}
-                                >
-                                    {isApplying ? <Search className="w-5 h-5 animate-spin" /> : t('common.apply') || 'Apply'}
-                                </button>
-                            </div>
-                        </div>
-
-                        <div className="bg-gradient-to-br from-primary to-amber-500 rounded-3xl p-8 text-white shadow-xl shadow-primary/20 relative overflow-hidden group">
-                            <div className="relative z-10 space-y-4">
-                                <span className="bg-white/20 px-3 py-1 rounded-full text-xs font-bold tracking-widest uppercase">
-                                    {t('subscription.limited_offer') || 'Limited Time'}
-                                </span>
-                                <h3 className="text-2xl font-bold leading-tight">
-                                    {t('subscription.referral_title') || 'Refer a friend, get 1 month Pro for free!'}
-                                </h3>
-                                <button className="flex items-center gap-2 text-sm font-bold hover:gap-4 transition-all">
-                                    {t('subscription.learn_more') || 'Learn More'} <ArrowRight className="w-4 h-4" />
-                                </button>
-                            </div>
-                            {/* Decorative Blur Circles */}
-                            <div className="absolute -right-10 -bottom-10 w-40 h-40 bg-white/10 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700" />
-                            <div className="absolute -right-4 -top-4 w-20 h-20 bg-amber-400/20 rounded-full blur-2xl" />
-                        </div>
-                    </div>
-
-                </div>
-
-                {/* 4. PARENT OVERSIGHT SECTION (Premium Exclusive) */}
-                <div className="bg-white rounded-3xl p-8 shadow-sm border border-slate-200 relative overflow-hidden">
-                    <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-8">
-                        <div className="space-y-1">
-                            <h2 className="text-2xl font-bold text-slate-900 flex items-center gap-2">
-                                <Shield className="text-purple-600" />
-                                {t('subscription.parent_report_title')}
-                            </h2>
-                            <p className="text-slate-500">{t('subscription.parent_report_subtitle')}</p>
-                        </div>
-                        {tier !== 'premium' && (
-                            <span className="bg-purple-100 text-purple-700 px-4 py-2 rounded-xl text-sm font-bold border border-purple-200 flex items-center gap-2">
-                                <Crown className="w-4 h-4" /> {t('subscription.parent_report_locked')}
-                            </span>
-                        )}
-                    </div>
-
-                    <div className={cn(
-                        "grid grid-cols-1 lg:grid-cols-2 gap-12 transition-all duration-500",
-                        tier !== 'premium' && "opacity-40 pointer-events-none blur-[2px]"
-                    )}>
-                        <div className="space-y-6">
-                            <div className="space-y-2">
-                                <label className="text-sm font-bold text-slate-700 px-1">{t('subscription.parent_report_email')}</label>
-                                <div className="relative">
-                                    <input 
-                                        type="email"
-                                        defaultValue={profile?.parent_email || ''}
-                                        onBlur={(e) => handleSaveParentSettings({ parent_email: e.target.value })}
-                                        disabled={isSaving}
-                                        placeholder="parent@example.com"
-                                        className={cn(
-                                            "w-full bg-slate-50 border border-slate-200 rounded-2xl px-6 py-4 focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none transition-all",
-                                            isSaving && "opacity-50 cursor-not-allowed"
-                                        )}
-                                    />
-                                    {isSaving && (
-                                        <div className="absolute right-4 top-1/2 -translate-y-1/2">
-                                            <div className="w-5 h-5 border-2 border-purple-600 border-t-transparent rounded-full animate-spin" />
-                                        </div>
-                                    )}
-                                </div>
-                            </div>
-
-                            <div className="flex items-center justify-between p-6 bg-slate-50 rounded-2xl border border-slate-100">
-                                <div className="space-y-1">
-                                    <p className="font-bold text-slate-900">{t('subscription.parent_report_toggle')}</p>
-                                    <p className="text-xs text-slate-500">{t('subscription.parent_report_desc')}</p>
-                                </div>
-                                <button 
-                                    onClick={() => handleSaveParentSettings({ parent_report_enabled: !profile?.parent_report_enabled })}
-                                    disabled={isSaving}
-                                    className={cn(
-                                        "w-14 h-8 rounded-full transition-all relative",
-                                        profile?.parent_report_enabled ? "bg-purple-600 shadow-inner" : "bg-slate-300",
-                                        isSaving && "opacity-50 cursor-not-allowed"
-                                    )}
-                                >
-                                    <div className={cn(
-                                        "w-6 h-6 bg-white rounded-full shadow-md absolute top-1 transition-all",
-                                        profile?.parent_report_enabled ? "left-7" : "left-1"
-                                    )} />
-                                </button>
-                            </div>
-                        </div>
-
-                        <div className="bg-purple-50 rounded-3xl p-8 border border-purple-100 flex flex-col justify-center items-center text-center space-y-4">
-                            <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-sm text-purple-600 mb-2">
-                                {isTesting ? <Loader2 className="w-8 h-8 animate-spin" /> : <Zap className="w-8 h-8" />}
-                            </div>
-                            <h3 className="text-lg font-bold text-purple-900">{t('subscription.test_report')}</h3>
-                            <p className="text-sm text-purple-700 max-w-xs mx-auto">
-                                Verify the connection immediately by sending a sample progress report to the registered email.
-                            </p>
+                        <div className="flex gap-2">
+                            <input 
+                                type="text"
+                                value={promoCode}
+                                onChange={(e) => setPromoCode(e.target.value.toUpperCase())}
+                                placeholder={t('subscription.promo_placeholder') || 'E.G. ACEIT2025'}
+                                className="flex-1 bg-slate-50 border border-slate-200 rounded-2xl px-6 py-4 focus:ring-2 focus:ring-primary focus:border-transparent outline-none font-mono tracking-widest transition-all"
+                            />
                             <button 
-                                onClick={handleSendTestReport}
-                                disabled={!profile?.parent_email || isTesting}
-                                className="px-8 py-3 bg-white text-purple-700 font-bold rounded-xl shadow-sm hover:shadow-md transition-all active:scale-95 disabled:opacity-50 min-w-[160px]"
+                                className="px-8 py-4 bg-slate-900 text-white font-bold rounded-2xl hover:bg-black transition-all active:scale-95 disabled:opacity-50"
+                                disabled={!promoCode || isApplying}
                             >
-                                {isTesting ? (
-                                    <div className="flex items-center gap-2">
-                                        <div className="w-4 h-4 border-2 border-purple-700 border-t-transparent rounded-full animate-spin" />
-                                        {t('common.sending') || 'Sending...'}
-                                    </div>
-                                ) : t('subscription.test_report')}
+                                {isApplying ? <Search className="w-5 h-5 animate-spin" /> : t('common.apply') || 'Apply'}
                             </button>
                         </div>
                     </div>
 
-                    {tier !== 'premium' && (
-                        <div className="absolute inset-0 z-20 flex items-center justify-center">
-                            <button 
-                                onClick={() => handleUpgrade('premium')}
-                                className="bg-purple-600 text-white px-8 py-4 rounded-2xl font-bold shadow-2xl shadow-purple-200 hover:bg-purple-700 transition-all flex items-center gap-3"
-                            >
-                                <Crown className="w-5 h-5" />
-                                {t('pricing.tiers.premium.cta')}
+                    <div className="bg-gradient-to-br from-primary to-amber-500 rounded-3xl p-8 text-white shadow-xl shadow-primary/20 relative overflow-hidden group">
+                        <div className="relative z-10 space-y-4">
+                            <span className="bg-white/20 px-3 py-1 rounded-full text-xs font-bold tracking-widest uppercase">
+                                {t('subscription.limited_offer') || 'Limited Time'}
+                            </span>
+                            <h3 className="text-2xl font-bold leading-tight">
+                                {t('subscription.referral_title') || 'Refer a friend, get 1 month Pro for free!'}
+                            </h3>
+                            <button className="flex items-center gap-2 text-sm font-bold hover:gap-4 transition-all">
+                                {t('subscription.learn_more') || 'Learn More'} <ArrowRight className="w-4 h-4" />
                             </button>
                         </div>
-                    )}
+                        {/* Decorative Blur Circles */}
+                        <div className="absolute -right-10 -bottom-10 w-40 h-40 bg-white/10 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700" />
+                        <div className="absolute -right-4 -top-4 w-20 h-20 bg-amber-400/20 rounded-full blur-2xl" />
+                    </div>
                 </div>
 
         </div>

@@ -14,12 +14,13 @@ async function listModels() {
         // We can try to just test a few names.
 
         const models = [
+            "gemini-flash-latest",
+            "gemini-pro-latest",
+            "gemini-2.5-flash",
+            "gemini-2.5-pro",
+            "gemini-2.0-flash",
             "gemini-1.5-flash",
-            "gemini-1.5-flash-latest",
-            "gemini-1.5-pro",
-            "gemini-1.5-pro-latest",
-            "gemini-2.0-flash-exp",
-            "gemini-1.0-pro"
+            "gemini-1.5-pro"
         ];
 
         for (const modelName of models) {

@@ -104,8 +104,7 @@ class WritingLabService {
             `;
         }
 
-        const result = await GenerativeAIService.generateJson(prompt, { model: "ace-it-flash" });
-        const data = result.data;
+        const { data } = await GenerativeAIService.generateJson(prompt, { model: "ace-it-flash" });
         CacheService.setDbCache(cacheKey, data, 3600); // Cache for 1 hour
         return data;
     }
@@ -159,8 +158,8 @@ class WritingLabService {
         `;
 
         try {
-            const result = await GenerativeAIService.generateJson(prompt, { model: "ace-it-flash" });
-            return result.data;
+            const { data } = await GenerativeAIService.generateJson(prompt, { model: "ace-it-flash" });
+            return data;
         } catch (e) {
             console.error("[WritingLabService] Evaluation Error:", e);
             throw e;

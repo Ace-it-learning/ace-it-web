@@ -126,15 +126,15 @@ class GenerativeAIService {
         const isDev = process.env.NODE_ENV === 'development' || !process.env.K_SERVICE;
         
         this.studioModelMap = {
-            "ace-it-flash": "gemini-1.5-flash-latest",
-            "ace-it-pro": isDev ? "gemini-1.5-flash-latest" : "gemini-1.5-pro-latest",
-            "gemini-1.5-flash": "gemini-1.5-flash-latest",
-            "gemini-1.5-pro": isDev ? "gemini-1.5-flash-latest" : "gemini-1.5-pro-latest",
-            "gemini-flash-latest": "gemini-1.5-flash-latest",
-            "gemini-pro-latest": isDev ? "gemini-1.5-flash-latest" : "gemini-1.5-pro-latest"
+            "ace-it-flash": "gemini-flash-latest",
+            "ace-it-pro": isDev ? "gemini-flash-latest" : "gemini-pro-latest",
+            "gemini-1.5-flash": "gemini-flash-latest",
+            "gemini-1.5-pro": isDev ? "gemini-flash-latest" : "gemini-pro-latest",
+            "gemini-flash-latest": "gemini-flash-latest",
+            "gemini-pro-latest": isDev ? "gemini-flash-latest" : "gemini-pro-latest"
         };
 
-        console.log("[AIService] Initialized Google AI Studio (Local Mode)");
+        console.log(`[AIService] Initialized Google AI Studio (Local Mode) | Dev Mode: ${isDev}`);
     }
 
     getModel(config = {}) {
@@ -441,6 +441,10 @@ class GenerativeAIService {
      * Core retry/failover logic - SHARPENED for higher reliability
      */
     async executeWithRetry(action, input, config = {}, retries = 6) {
+        // [COST GUARD]: Reduce retries in DEV to prevent "Retry Storms" that burn quota/tokens
+        const isDev = process.env.NODE_ENV === 'development' || !process.env.K_SERVICE;
+        const effectiveRetries = isDev ? Math.min(retries, 2) : retries;
+        
         await this.init();
 
         const requestedModel = config.model || "ace-it-flash";
@@ -507,7 +511,7 @@ class GenerativeAIService {
         const unavailableModels = new Set();
 
         // If isProModel is true, we increase retries specifically for the Pro models
-        const totalRetries = isProModel ? Math.min(retries, 3) : retries;
+        const totalRetries = isProModel ? Math.min(effectiveRetries, 3) : effectiveRetries;
 
         for (let i = 0; i < totalRetries; i++) {
             let currentModelName;
@@ -531,8 +535,12 @@ class GenerativeAIService {
             // [Removed forced -001 mapping to support environment-agnostic model resolution]
 
             try {
-                console.log(`[AIService] Attempt ${i + 1}/${totalRetries}: Using model '${currentModelName}'${isProModel ? ' (High Quality Mode)' : ''}`);
-                const model = this.getModel({ ...config, model: currentModelName });
+                const modelConfig = { ...config, model: currentModelName };
+                const model = this.getModel(modelConfig);
+                const actualModelName = model.model || model._modelName || currentModelName;
+
+                console.log(`[AIService] Attempt ${i + 1}/${totalRetries}: Using model '${currentModelName}'${isProModel ? ' (High Quality Mode)' : ''}${currentModelName !== actualModelName ? ` -> Redirected to: ${actualModelName}` : ''}`);
+                
                 const result = await action(model, i > 0, currentModelName);
                 // Return the raw result (with .response) but also include diagnostic metadata
                 if (typeof result === 'object' && result !== null) {

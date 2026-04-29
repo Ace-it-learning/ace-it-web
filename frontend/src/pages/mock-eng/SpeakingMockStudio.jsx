@@ -7,6 +7,7 @@ import {
     CheckCircle2, Mic, MicOff, Play, Users, User, Info, AlertCircle, Award, PenTool
 } from 'lucide-react';
 import { LoadingPage, GradingOverlay } from '../../components/shared';
+import UpgradeModal from '../../components/common/UpgradeModal';
 import MockCountdownTimer from '../../components/utils/MockCountdownTimer';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -14,9 +15,11 @@ const SpeakingMockStudio = () => {
     const { paperId } = useParams();
     const navigate = useNavigate();
     const location = useLocation();
-    const { user } = useAuth();
+    const { user, profile } = useAuth();
     const { equipment } = useAvatar();
     const [searchParams, setSearchParams] = useSearchParams();
+    const [showUpgradeModal, setShowUpgradeModal] = useState(false);
+    const tier = profile?.subscription_tier || 'free';
 
     const [phase, setPhase] = useState(searchParams.get('phase') || 'LOADING'); 
     const [mockData, setMockData] = useState(null);
@@ -44,6 +47,7 @@ const SpeakingMockStudio = () => {
     const collectedTranscript = useRef("");
     const lastSpeakerRef = useRef(null);
     const isTurnInProgressRef = useRef(false);
+    const isCheatMode = user?.email === 'fungtam@gmail.com';
     const activeTurnLoopId = useRef(0);
     const interactionIndexRef = useRef(0);
     const isTransitioning = useRef(false);
@@ -75,6 +79,10 @@ const SpeakingMockStudio = () => {
     // Initial Fetch
     useEffect(() => {
         const fetchMock = async () => {
+            // Fetch Lock: Prevent double-fetches from StrictMode
+            if (window._isFetchingMockSpeaking === paperId) return;
+            window._isFetchingMockSpeaking = paperId;
+
             try {
                 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
                 const res = await fetch(`${API_URL}/api/english/mock/${paperId}`);
@@ -88,6 +96,9 @@ const SpeakingMockStudio = () => {
             } catch (err) {
                 console.error("Error fetching mock:", err);
                 navigate('/mock-exam-eng');
+            } finally {
+                // Keep the lock for 2 seconds to bridge the StrictMode gap
+                setTimeout(() => { window._isFetchingMockSpeaking = null; }, 2000);
             }
         };
         fetchMock();
@@ -208,13 +219,10 @@ const SpeakingMockStudio = () => {
         setIsUserTurn(false);
         isTransitioning.current = false;
         activeUtterance.current = null;
-        isTurnInProgressRef.current = false;
-        
         const cleaned = (text || "").trim();
         if (cleaned) {
             setActiveSpeechText(cleaned);
             setTranscript(prev => [...prev, { role: "You", text: cleaned }]);
-            chatHistory.current.push({ role: "Candidate_D", content: cleaned });
             
             if (statusRef.current === 'INDIVIDUAL') {
                 setIndividualResponse(cleaned);
@@ -223,6 +231,8 @@ const SpeakingMockStudio = () => {
                 });
                 return;
             }
+
+            chatHistory.current.push({ role: "Candidate_D", content: cleaned });
             
             localTurnQueue.current = []; // Clear queue to get fresh AI response
             triggerAITurn();
@@ -285,6 +295,7 @@ const SpeakingMockStudio = () => {
     };
 
     const triggerAITurn = async (forceSpeaker, onComplete, loopId = null) => {
+        if (loopId !== null && loopId !== activeTurnLoopId.current) return;
         if (isTurnInProgressRef.current && !onComplete) return;
         if (statusRef.current !== 'DISCUSSION') return;
 
@@ -308,6 +319,13 @@ const SpeakingMockStudio = () => {
             setCurrentSpeaker(target);
             setActiveSpeechText(`${target.replace('_', ' ')} is thinking...`);
             await fetchBatch(target);
+            
+            if (statusRef.current !== 'DISCUSSION' || (loopId !== null && loopId !== activeTurnLoopId.current)) {
+                isTurnInProgressRef.current = false;
+                setCurrentSpeaker(null);
+                return;
+            }
+
             if (localTurnQueue.current.length > 0) {
                 turnToPlay = localTurnQueue.current.shift();
             }
@@ -316,7 +334,7 @@ const SpeakingMockStudio = () => {
         if (turnToPlay) {
             setCurrentSpeaker(turnToPlay.speaker);
             lastSpeakerRef.current = turnToPlay.speaker;
-            chatHistory.current.push({ role: turnToPlay.speaker, text: turnToPlay.content });
+            chatHistory.current.push({ role: turnToPlay.speaker, content: turnToPlay.content });
             
             // Background pre-fetch next speaker
             const turnOrder = ["Candidate_A", "Candidate_B", "Candidate_C"];
@@ -364,6 +382,8 @@ const SpeakingMockStudio = () => {
         updatePhase('DISCUSSION');
         setCurrentSpeaker('Examiner');
         
+        chatHistory.current.push({ role: "Examiner", content: `Good afternoon. We are here to discuss ${mockData?.title}. Candidate A, would you like to start?` });
+        
         playSpeech("Examiner", `Good afternoon. We are here to discuss ${mockData?.title}. Candidate A, would you like to start?`, () => {
             setCurrentSpeaker(null);
             triggerAITurn("Candidate_A", () => {
@@ -381,6 +401,10 @@ const SpeakingMockStudio = () => {
     };
 
     const startIndividualResponse = () => {
+        activeTurnLoopId.current += 1; // Invalidate all pending discussion loops
+        isTurnInProgressRef.current = false;
+        localTurnQueue.current = [];
+        
         updatePhase('INDIVIDUAL');
         if (window.speechSynthesis) window.speechSynthesis.cancel();
         if (recognition.current) try { recognition.current.stop(); } catch(e){}
@@ -390,6 +414,7 @@ const SpeakingMockStudio = () => {
             const qs = mockData?.individual_response_questions || [];
             const q = qs[0] || "What is your view?";
             setIndividualQuestion(q);
+            // chatHistory.current.push({ role: "Examiner", content: q }); // Keep Part B out of Part A history
             playSpeech("Examiner", q, () => {
                 setCurrentSpeaker(null);
                 startUserTurn();
@@ -398,6 +423,10 @@ const SpeakingMockStudio = () => {
     };
 
     const handleSubmit = async (finalResponse) => {
+        if (tier === 'free') {
+            setShowUpgradeModal(true);
+            return;
+        }
         setIsSubmitting(true);
         if (window.speechSynthesis) window.speechSynthesis.cancel();
         if (recognition.current) try { recognition.current.stop(); } catch(e){}
@@ -562,9 +591,11 @@ const SpeakingMockStudio = () => {
                             <MockCountdownTimer seconds={isDiscussion ? 8 * 60 : 60} onTimeUp={isDiscussion ? startIndividualResponse : handleSubmit} />
                         </div>
                         {isDiscussion ? (
-                            <button onClick={startIndividualResponse} className="bg-white/10 hover:bg-white/20 px-6 py-3.5 rounded-2xl font-black uppercase text-xs tracking-widest transition-all">
-                                Skip to Part B
-                            </button>
+                            isCheatMode && (
+                                <button onClick={startIndividualResponse} className="bg-white/10 hover:bg-white/20 px-6 py-3.5 rounded-2xl font-black uppercase text-xs tracking-widest transition-all">
+                                    Skip to Part B
+                                </button>
+                            )
                         ) : (
                             <button onClick={handleSubmit} className="bg-emerald-600 hover:bg-emerald-700 px-6 py-3.5 rounded-2xl font-black uppercase text-xs tracking-widest transition-all">
                                 Final Submission
@@ -677,6 +708,12 @@ const SpeakingMockStudio = () => {
                     title="Analyzing Performance"
                     status="Evaluating fluency, pronunciation, and group interaction..."
                 />
+                <UpgradeModal 
+                    isOpen={showUpgradeModal} 
+                    onClose={() => setShowUpgradeModal(false)}
+                    title="Unlock Evaluation"
+                    message="Free tier users can practice speaking with AI candidates, but AI evaluation and grade prediction are Pro features. Upgrade now to get your results!"
+                />
             </div>
         );
     }
@@ -690,6 +727,15 @@ const SpeakingMockStudio = () => {
                 <h1 className="text-4xl font-black text-slate-900 mb-4 tracking-tight">Processing Assessment</h1>
                 <p className="text-slate-500 mb-10 font-medium text-lg leading-relaxed px-8">We are redirecting you to your detailed performance report. Please wait a moment...</p>
                 <div className="w-12 h-12 border-4 border-emerald-600 border-t-transparent rounded-full animate-spin mx-auto"></div>
+                
+                <div className="mt-12">
+                    <button 
+                        onClick={() => navigate('/mock-exam-eng')}
+                        className="text-sm font-bold text-slate-400 hover:text-slate-600 transition-colors uppercase tracking-widest"
+                    >
+                        Return to Library
+                    </button>
+                </div>
             </motion.div>
         </div>
     );

@@ -42,7 +42,7 @@ class SpeakingMockGradingService {
 
         try {
             // 3. Call AI for grading
-            const evaluation = await GenerativeAIService.generateJson(prompt, {
+            const { data: evaluation } = await GenerativeAIService.generateJson(prompt, {
                 model: "ace-it-pro", // Use Pro for grading integrity
                 generationConfig: { temperature: 0.2 } // Keep it deterministic
             });
@@ -80,16 +80,17 @@ class SpeakingMockGradingService {
             await this.updateUserStats(uid, totalScore, xpAwarded);
 
             // --- UPDATE MASTERY ---
-            if (evaluation.scores) {
+            if (evaluation.domains) {
                 const skillMappings = {
-                    'pronunciation': 'speaking_pronunciationClarity',
-                    'language': 'speaking_language',
-                    'organization': 'speaking_organization',
-                    'ideas': 'speaking_logicalDevelopment'
+                    'pronunciation_delivery': 'speaking_pronunciationClarity',
+                    'vocabulary_language': 'speaking_language',
+                    'ideas_organisation': 'speaking_organization',
+                    'communication_strategies': 'speaking_logicalDevelopment'
                 };
                 
                 const masteryPromises = Object.entries(skillMappings).map(([key, skillId]) => {
-                    const score = evaluation.scores[key] || 0;
+                    const domainData = evaluation.domains[key] || {};
+                    const score = domainData.score || 0;
                     const masteryScore = (score / 7) * 100;
                     return UserProfileService.updateMicroSkillLevel(uid, 'english', skillId, masteryScore, {
                         type: 'Mock',

@@ -28,20 +28,10 @@ const RedemptionStore = () => {
             { id: 'eng_p3', label: t('redemption.cert_listening'), paper: 'Paper 3 Listening' },
             { id: 'eng_p4', label: t('redemption.cert_speaking'), paper: 'Paper 4 Speaking' },
         ],
-        maths: [
-            { id: 'math_p1', label: t('redemption.cert_math_p1'), paper: 'Paper 1' },
-            { id: 'math_p2', label: t('redemption.cert_math_p2'), paper: 'Paper 2' },
-        ],
-        chinese: [
-            { id: 'chi_p1', label: t('redemption.cert_chi_reading'), paper: 'Paper 1 Reading' },
-            { id: 'chi_p2', label: t('redemption.cert_chi_writing'), paper: 'Paper 2 Writing' },
-        ],
     };
 
     const subjectTabs = [
         { key: 'english', label: t('redemption.english'), icon: BookOpen, color: 'blue' },
-        { key: 'maths', label: t('redemption.maths'), icon: Calculator, color: 'violet' },
-        { key: 'chinese', label: t('redemption.chinese'), icon: Languages, color: 'rose' },
     ];
 
     useEffect(() => {

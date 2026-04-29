@@ -436,18 +436,7 @@ const DataSprintBoard = ({ questData, onComplete, userNotes }) => {
                     </div>
                 </div>
 
-                {/* Integrated Waveform Component */}
-                <div className={`transition-all duration-700 overflow-hidden ${isPlaying ? 'max-h-[150px] opacity-100' : 'max-h-0 opacity-0'}`}>
-                    <div className="bg-slate-50 rounded-[2rem] p-6 border-2 border-indigo-50 border-dashed">
-                        <AudioWaveform 
-                            audioSrc={currentAudioSrc} 
-                            isPlaying={isPlaying} 
-                            height={80}
-                            waveColor="#cbd5e1"
-                            progressColor="#6366f1"
-                        />
-                    </div>
-                </div>
+
             </div>
 
             {/* Task Grid */}

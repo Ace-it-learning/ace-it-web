@@ -198,16 +198,68 @@ const ListeningMockStudio = () => {
         }
     };
 
+    // Data File HTML Initialization logic
+    const renderTableToHTML = (content) => {
+        const rows = content.split('\n');
+        if (rows.length < 3) return `<p>${content}</p>`;
+        const headers = rows[0].split('|').map(h => h.trim());
+        const bodyRows = rows.slice(2).map(row => row.split('|').map(c => c.trim()));
+        return `
+            <div class="overflow-x-auto my-8">
+                <table class="w-full border-collapse border-2 border-slate-900 font-mono text-sm">
+                    <thead>
+                        <tr class="bg-slate-900 text-white">
+                            ${headers.map(h => `<th class="p-4 border border-slate-700 text-left uppercase tracking-widest">${h}</th>`).join('')}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        ${bodyRows.map((row, ri) => `
+                            <tr class="${ri % 2 === 0 ? 'bg-slate-50' : 'bg-white'}">
+                                ${row.map(cell => `
+                                    <td class="p-4 border border-slate-200 ${cell.includes('Critical') || cell.includes('Over') ? 'text-rose-600 font-black' : ''}">
+                                        ${cell}
+                                    </td>
+                                `).join('')}
+                            </tr>
+                        `).join('')}
+                    </tbody>
+                </table>
+            </div>
+        `;
+    };
+
+    const renderSocialPostToHTML = (content) => {
+        const sharedMatch = content.match(/Shared ([\d,]+) times/);
+        const sharedCount = sharedMatch ? sharedMatch[1] : '4,500';
+        const cleanContent = content.replace(/Shared [\d,]+ times:\n/, '').trim();
+        return `
+            <div class="bg-slate-50 rounded-3xl p-8 border border-slate-200 relative mb-8">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-12 h-12 bg-indigo-600 rounded-full flex items-center justify-center text-white font-black text-xl">U</div>
+                    <div>
+                        <p class="text-sm font-black text-slate-900">HK Workers Union</p>
+                        <p class="text-[10px] text-slate-400">@hk_union • 2h ago</p>
+                    </div>
+                    <div class="ml-auto px-4 py-2 bg-rose-500 text-white rounded-full text-[10px] font-black flex items-center gap-2 shadow-lg shadow-rose-200">
+                        <span class="w-2 h-2 bg-white rounded-full animate-pulse"></span>
+                        SHARED ${sharedCount} TIMES
+                    </div>
+                </div>
+                <div class="text-2xl font-bold text-slate-800 leading-snug">
+                    ${cleanContent}
+                </div>
+            </div>
+        `;
+    };
+
     // Load Mock Data
     useEffect(() => {
         const fetchMock = async () => {
-            // Fetch Lock: Prevent double-fetches from StrictMode
             if (window._isFetchingMockListening === paperId) return;
             window._isFetchingMockListening = paperId;
-
             try {
                 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
-                const res = await fetch(`${API_URL}/api/english/mock/${paperId}`);
+                const res = await fetch(`${API_URL}/api/english/mock/${paperId}?uid=${user?.uid || 'guest'}`);
                 if (res.ok) {
                     const data = await res.json();
                     
@@ -215,20 +267,13 @@ const ListeningMockStudio = () => {
                     if (data.Part_A && !data.Part_A.tasks) {
                         if (data.Part_A.audio_script) {
                                 data.Part_A.tasks = Object.entries(data.Part_A.audio_script).map(([key, val]) => ({
-                                    id: key,
-                                    ...val,
-                                    questions: (val.questions || []).map((q, idx) => ({
-                                        ...q,
-                                        id: q.id || `${key}_q${idx + 1}`
-                                    }))
+                                    id: key, ...val,
+                                    questions: (val.questions || []).map((q, idx) => ({ ...q, id: q.id || `${key}_q${idx + 1}` }))
                                 }));
                         } else if (data.Part_A.Task_1) {
-                            data.Part_A.tasks = Object.keys(data.Part_A)
-                                .filter(key => key.startsWith('Task_'))
-                                .map(key => ({ id: key, ...data.Part_A[key] }));
+                            data.Part_A.tasks = Object.keys(data.Part_A).filter(key => key.startsWith('Task_')).map(key => ({ id: key, ...data.Part_A[key] }));
                         }
                     }
-
                     setMockData(data);
                     
                     const urlPhase = searchParams.get('phase');
@@ -240,32 +285,35 @@ const ListeningMockStudio = () => {
                                 setSubmissionResults(parsedResults);
                                 setXpAwarded(parsedResults.xpAwarded || 750);
                                 setPhase('RESULTS');
-                            } catch (e) {
-                                console.error("Failed to load saved results:", e);
-                                updatePhase('BRIEFING');
-                            }
-                        } else {
-                            updatePhase('BRIEFING');
-                        }
+                            } catch (e) { updatePhase('BRIEFING'); }
+                        } else { updatePhase('BRIEFING'); }
                     } else {
-                        // Initialize phase only if not already set by hydration
-                        setPhase(prev => {
-                            if (prev === 'LOADING') return 'BRIEFING';
-                            return prev;
-                        });
+                        setPhase(prev => (prev === 'LOADING' ? 'BRIEFING' : prev));
                     }
-
                 } else { navigate('/mock-exam-eng'); }
-            } catch (err) {
-                console.error("Error fetching mock:", err);
-                navigate('/mock-exam-eng');
-            } finally {
-                // Keep the lock for 2 seconds to bridge the StrictMode gap
+            } catch (err) { navigate('/mock-exam-eng'); } finally {
                 setTimeout(() => { window._isFetchingMockListening = null; }, 2000);
             }
         };
         if (paperId) fetchMock();
-    }, [paperId, navigate]);
+    }, [paperId]); // Removed navigate to stabilize
+
+    // Separate effect for Data File Initialization to prevent loops
+    const hasInitializedDocs = useRef(false);
+    useEffect(() => {
+        if (mockData && mockData.Part_B?.data_file && Object.keys(localDocs).length === 0 && !hasInitializedDocs.current) {
+            console.log("[ListeningMock] Initializing Data File HTML...");
+            hasInitializedDocs.current = true;
+            const dataFiles = mockData.Part_B.data_file;
+            const initial = {};
+            dataFiles.forEach((df, i) => {
+                if (df.type === 'table') initial[i] = renderTableToHTML(df.content || "");
+                else if (df.type === 'social_media_post') initial[i] = renderSocialPostToHTML(df.content || "");
+                else initial[i] = df.content?.replace(/\n/g, '<br />') || '';
+            });
+            setLocalDocs(initial);
+        }
+    }, [mockData, localDocs]);
 
     // Handle B1/B2 Switching with Warning
     const handleSwitchSection = (newSection) => {
@@ -684,7 +732,18 @@ const ListeningMockStudio = () => {
                                 onPhaseChange={updatePhase}
                                 onRequireSelection={() => updatePhase('B1B2_GATE')}
                                 onCountdownTick={setBroadcastTimer}
-                                onStatusChange={(status) => setBroadcastStatus(prev => ({ ...prev, ...status }))}
+                                onStatusChange={status => {
+                                    // Use functional update to avoid dependency on broadcastStatus
+                                    setBroadcastStatus(prev => {
+                                        // Only update if values actually changed to prevent infinite loops
+                                        if (prev.isPlaying === status.isPlaying && 
+                                            prev.isEngineBuffering === status.isEngineBuffering && 
+                                            prev.pauseCountdown === status.pauseCountdown) {
+                                            return prev;
+                                        }
+                                        return { ...prev, ...status };
+                                    });
+                                }}
                                 onComplete={handleAudioComplete}
                             />
                             

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Mail, Globe, FileText, Highlighter, Eraser, AlertTriangle, ChevronLeft, ChevronRight, Zap, Edit3, Trash2 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -15,87 +15,11 @@ const DataFileViewer = ({ dataFiles, localDocs, setLocalDocs }) => {
         { name: 'Red', value: 'rgba(254, 226, 226, 0.6)' },
     ];
 
-    // Helper to generate HTML for tables
-    const renderTableToHTML = (content) => {
-        const rows = content.split('\n');
-        if (rows.length < 3) return `<p>${content}</p>`;
-        
-        const headers = rows[0].split('|').map(h => h.trim());
-        const bodyRows = rows.slice(2).map(row => row.split('|').map(c => c.trim()));
-
-        return `
-            <div class="overflow-x-auto my-8">
-                <table class="w-full border-collapse border-2 border-slate-900 font-mono text-sm">
-                    <thead>
-                        <tr class="bg-slate-900 text-white">
-                            ${headers.map(h => `<th class="p-4 border border-slate-700 text-left uppercase tracking-widest">${h}</th>`).join('')}
-                        </tr>
-                    </thead>
-                    <tbody>
-                        ${bodyRows.map((row, ri) => `
-                            <tr class="${ri % 2 === 0 ? 'bg-slate-50' : 'bg-white'}">
-                                ${row.map(cell => `
-                                    <td class="p-4 border border-slate-200 ${cell.includes('Critical') || cell.includes('Over') ? 'text-rose-600 font-black' : ''}">
-                                        ${cell}
-                                    </td>
-                                `).join('')}
-                            </tr>
-                        `).join('')}
-                    </tbody>
-                </table>
-            </div>
-        `;
-    };
-
-    // Helper to generate HTML for social media posts
-    const renderSocialPostToHTML = (content) => {
-        const sharedMatch = content.match(/Shared ([\d,]+) times/);
-        const sharedCount = sharedMatch ? sharedMatch[1] : '4,500';
-        const cleanContent = content.replace(/Shared [\d,]+ times:\n/, '').trim();
-
-        return `
-            <div class="bg-slate-50 rounded-3xl p-8 border border-slate-200 relative mb-8">
-                <div class="flex items-center gap-4 mb-6">
-                    <div class="w-12 h-12 bg-indigo-600 rounded-full flex items-center justify-center text-white font-black text-xl">U</div>
-                    <div>
-                        <p class="text-sm font-black text-slate-900">HK Workers Union</p>
-                        <p class="text-[10px] text-slate-400">@hk_union • 2h ago</p>
-                    </div>
-                    <div class="ml-auto px-4 py-2 bg-rose-500 text-white rounded-full text-[10px] font-black flex items-center gap-2 shadow-lg shadow-rose-200">
-                        <span class="w-2 h-2 bg-white rounded-full animate-pulse"></span>
-                        SHARED ${sharedCount} TIMES
-                    </div>
-                </div>
-                <div class="text-2xl font-bold text-slate-800 leading-snug">
-                    ${cleanContent}
-                </div>
-            </div>
-        `;
-    };
-
-    // Initialize local docs with formatted content - Only if not already initialized
-    useEffect(() => {
-        if (dataFiles && dataFiles.length > 0 && (!localDocs || Object.keys(localDocs).length === 0)) {
-            console.log("[DataFileViewer] Initializing content formatting...");
-            const initial = {};
-            dataFiles.forEach((df, i) => {
-                if (df.type === 'table') {
-                    initial[i] = renderTableToHTML(df.content || "");
-                } else if (df.type === 'social_media_post') {
-                    initial[i] = renderSocialPostToHTML(df.content || "");
-                } else {
-                    initial[i] = df.content?.replace(/\n/g, '<br />') || '';
-                }
-            });
-            setLocalDocs(initial);
-        }
-    }, [dataFiles, localDocs]); // Only run when files change or docs are empty
-
-    // Prevent copy-paste
+    // Prevent copy-paste - REMOVED to align with General Quest behavior and resolve selection issues
+    /* 
     useEffect(() => {
         const preventDefault = (e) => {
             e.preventDefault();
-            alert("Integrity Guard: Copy-pasting from the Data File is prohibited in this simulation. Please re-type your findings to ensure proper language processing.");
         };
 
         const container = document.getElementById('data-file-content');
@@ -113,6 +37,7 @@ const DataFileViewer = ({ dataFiles, localDocs, setLocalDocs }) => {
             }
         };
     }, [activeTab]);
+    */
 
     useEffect(() => {
         const handleGlobalMouseUp = (e) => {
@@ -122,9 +47,16 @@ const DataFileViewer = ({ dataFiles, localDocs, setLocalDocs }) => {
             if (!selection || selection.isCollapsed || selection.rangeCount === 0) return;
 
             const range = selection.getRangeAt(0);
-            const container = document.getElementById(`doc-content-${activeTab}`);
             
-            if (container && container.contains(range.commonAncestorContainer)) {
+            // Search for the specific document content container
+            // We use a more robust check by looking up the DOM tree from the selection's ancestor
+            let container = range.commonAncestorContainer;
+            if (container.nodeType === 3) container = container.parentNode;
+            
+            const targetId = `doc-content-${activeTab}`;
+            const docContainer = document.getElementById(targetId);
+            
+            if (docContainer && docContainer.contains(container)) {
                 try {
                     const selectedText = selection.toString().trim();
                     if (selectedText.length === 0) return;
@@ -146,15 +78,14 @@ const DataFileViewer = ({ dataFiles, localDocs, setLocalDocs }) => {
                     }
 
                     // CRITICAL: Sync DOM changes back to the shared localDocs state
-                    // Use a slightly larger timeout to ensure the DOM is ready for capture
                     setTimeout(() => {
-                        const updatedHTML = container.innerHTML;
+                        const updatedHTML = docContainer.innerHTML;
                         setLocalDocs(prev => ({
                             ...prev,
                             [activeTab]: updatedHTML
                         }));
                         selection.removeAllRanges();
-                    }, 50);
+                    }, 20);
                     
                 } catch (err) {
                     console.error("Highlighting process failed:", err);
@@ -373,6 +304,10 @@ const DataFileViewer = ({ dataFiles, localDocs, setLocalDocs }) => {
                 .no-scrollbar {
                     -ms-overflow-style: none;
                     scrollbar-width: none;
+                }
+                .select-text {
+                    user-select: text !important;
+                    -webkit-user-select: text !important;
                 }
             ` }} />
         </div>

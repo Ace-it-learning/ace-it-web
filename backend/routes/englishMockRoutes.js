@@ -181,13 +181,32 @@ router.post('/cheat/writing', async (req, res) => {
     }
 });
 
-/**
- * GET /api/english/mock/:paperId
- * Get full paper data (JSON)
- */
 router.get('/:paperId', async (req, res) => {
+    const { uid } = req.query;
+    const { paperId } = req.params;
+
+    // 1. Quota Check for Pro users
+    if (uid && uid !== 'guest') {
+        try {
+            const UserProfileService = require('../services/UserProfileService');
+            const quota = await UserProfileService.checkMockQuota(uid, paperId);
+            if (!quota.allowed) {
+                return res.status(403).json({ 
+                    error: quota.message, 
+                    code: 'QUOTA_REACHED' 
+                });
+            }
+            
+            // 2. Record Attempt (Counts as starting the exam)
+            await UserProfileService.recordMockAttempt(uid, paperId);
+        } catch (err) {
+            console.error("Quota check failed:", err);
+            // Fail open but log it
+        }
+    }
+
     try {
-        const paper = await EnglishMockService.getMockPaper(req.params.paperId);
+        const paper = await EnglishMockService.getMockPaper(paperId);
         if (!paper) return res.status(404).json({ error: "Paper not found" });
         res.json(paper);
     } catch (e) {

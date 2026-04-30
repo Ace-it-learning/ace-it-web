@@ -448,7 +448,7 @@ const ReadingMockStudio = () => {
 
             try {
                 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
-                const res = await fetch(`${API_URL}/api/english/mock/${paperId}`);
+                const res = await fetch(`${API_URL}/api/english/mock/${paperId}?uid=${user?.uid || 'guest'}`);
                 if (res.ok) {
                     const data = await res.json();
                     

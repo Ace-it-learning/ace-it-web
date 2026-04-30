@@ -114,7 +114,7 @@ class UserProfileService {
 
         CacheService.invalidateUserDbCache(uid);
 
-        const { nickname, grade, school, preferredLanguage, photoURL, email, displayName } = data;
+        const { nickname, grade, school, preferredLanguage, photoURL, email, displayName, subscription_tier } = data;
 
         // Fields to update in the main document
         const profileUpdate = {
@@ -128,6 +128,7 @@ class UserProfileService {
         if (preferredLanguage) profileUpdate.preferredLanguage = preferredLanguage;
         if (photoURL) profileUpdate.photoURL = photoURL;
         if (email) profileUpdate.email = email;
+        if (subscription_tier) profileUpdate.subscription_tier = subscription_tier;
         if (displayName) profileUpdate.displayName = displayName;
         if (data.gender) profileUpdate.gender = data.gender;
         if (data.targetGradeEng) profileUpdate.targetGradeEng = data.targetGradeEng;
@@ -160,7 +161,7 @@ class UserProfileService {
             profileUpdate.usage_stats = {
                 month: new Date().toISOString().substring(0, 7), // YYYY-MM
                 quests: {}, // { [questId]: { questions: number } }
-                mocks: {}   // { [subject]: count }
+                mock_exams: { count: 0, attempts: [] }
             };
         }
 
@@ -216,6 +217,79 @@ class UserProfileService {
             console.error(`[UserProfileService] Error updating profile for ${uid}:`, error);
             throw error;
         }
+    }
+    
+    /**
+     * Check if a user has remaining quota for mock exams.
+     */
+    async checkMockQuota(uid, paperId) {
+        if (!uid || uid === 'guest') return { allowed: false, message: "Guest users cannot access mocks." };
+
+        const profile = await this.getProfile(uid);
+        const tier = (profile?.subscription_tier || 'free').toLowerCase();
+        
+        if (tier === 'premium') return { allowed: true };
+
+        if (tier === 'pro') {
+            const currentMonth = new Date().toISOString().substring(0, 7);
+            const usage = profile.usage_stats || {};
+            
+            // Auto-reset if month changed
+            if (usage.month !== currentMonth) {
+                return { allowed: true, resetNeeded: true };
+            }
+
+            const mockExams = usage.mock_exams || { count: 0, attempts: [] };
+            
+            // Allow if already attempted this month
+            if (mockExams.attempts && mockExams.attempts.includes(paperId)) {
+                return { allowed: true };
+            }
+
+            if ((mockExams.count || 0) < 4) {
+                return { allowed: true };
+            }
+
+            return { allowed: false, message: "Monthly quota of 4 mock exams reached. Upgrade to Premium for unlimited access!" };
+        }
+
+        // For Free tier: handled by paper index gating (1st paper free)
+        return { allowed: true }; 
+    }
+
+    /**
+     * Record a mock exam attempt to the user's quota.
+     */
+    async recordMockAttempt(uid, paperId) {
+        if (!uid || uid === 'guest') return;
+
+        const profile = await this.getProfile(uid);
+        const tier = (profile?.subscription_tier || 'free').toLowerCase();
+        
+        if (tier !== 'pro') return;
+
+        const currentMonth = new Date().toISOString().substring(0, 7);
+        let usage = profile.usage_stats || {};
+        
+        CacheService.invalidateUserDbCache(uid);
+
+        // Reset logic
+        if (usage.month !== currentMonth) {
+            usage = {
+                month: currentMonth,
+                quests: usage.quests || {},
+                mock_exams: { count: 1, attempts: [paperId] }
+            };
+        } else {
+            const mockExams = usage.mock_exams || { count: 0, attempts: [] };
+            if (!mockExams.attempts.includes(paperId)) {
+                mockExams.count = (mockExams.count || 0) + 1;
+                mockExams.attempts.push(paperId || 'unknown');
+                usage.mock_exams = mockExams;
+            }
+        }
+
+        await this.usersCollection.doc(uid).update({ usage_stats: usage });
     }
 
     /**

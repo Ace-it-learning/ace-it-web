@@ -37,9 +37,34 @@ const SubscriptionPage = () => {
         return <Smartphone className="w-5 h-5" />;
     };
 
-    const handleUpgrade = (selectedTier) => {
-        // Implementation will link to payment or activation
-        alert('UPGRADE TO: ' + selectedTier);
+    const handleUpgrade = async (selectedTier) => {
+        if (profile?.email === 'fungtam@gmail.com') {
+            setIsSaving(true);
+            try {
+                const response = await fetch(`${API_URL}/api/profile`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        uid: user.uid,
+                        subscription_tier: selectedTier
+                    })
+                });
+                if (response.ok) {
+                    await refreshProfile();
+                    alert(`Debug: Plan successfully updated to ${selectedTier}!`);
+                } else {
+                    alert('Failed to update plan.');
+                }
+            } catch (e) {
+                console.error(e);
+                alert('Error updating plan.');
+            } finally {
+                setIsSaving(false);
+            }
+        } else {
+            // Implementation will link to payment or activation
+            alert('UPGRADE TO: ' + selectedTier + ' (Coming soon)');
+        }
     };
 
     const tiers = [
@@ -162,7 +187,7 @@ const SubscriptionPage = () => {
 
                             <button
                                 onClick={() => handleUpgrade(tData.id)}
-                                disabled={tier === tData.id || (tier === 'premium' && tData.id === 'pro')}
+                                disabled={profile?.email !== 'fungtam@gmail.com' && (tier === tData.id || (tier === 'premium' && tData.id === 'pro'))}
                                 className={cn(
                                     "w-full py-4 rounded-2xl font-bold transition-all shadow-lg active:scale-95",
                                     tier === tData.id ? "bg-slate-200 text-slate-500 cursor-not-allowed shadow-none" :
@@ -171,7 +196,11 @@ const SubscriptionPage = () => {
                                     "bg-amber-400 text-white hover:bg-amber-500 shadow-amber-200"
                                 )}
                             >
-                                {tier === tData.id ? (t('subscription.active') || 'Active') : (t('subscription.select_plan') || 'Get Started')}
+                                 {isSaving ? (
+                                    <Loader2 className="w-5 h-5 animate-spin mx-auto" />
+                                ) : (
+                                    tier === tData.id ? (t('subscription.active') || 'Active') : (t('subscription.select_plan') || 'Get Started')
+                                )}
                             </button>
                         </div>
                     ))}

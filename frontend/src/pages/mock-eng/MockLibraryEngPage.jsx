@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
+import { useAuth } from '../../context/AuthContext';
 /* eslint-disable no-unused-vars */
 import { motion, AnimatePresence } from 'framer-motion';
 /* eslint-enable no-unused-vars */
@@ -14,12 +15,17 @@ import {
     ShieldCheck,
     AlertCircle,
     Info,
-    ArrowLeft
+    ArrowLeft,
+    Crown,
+    Zap
 } from 'lucide-react';
 
 const MockLibraryEngPage = () => {
     const navigate = useNavigate();
     const location = useLocation();
+    const { profile } = useAuth();
+    const tier = (profile?.subscription_tier || 'free').toLowerCase();
+    const isPaid = tier === 'pro' || tier === 'premium';
     const [subTab, setSubTab] = useState(() => {
         const tab = location.state?.activeTab || 'reading';
         return ['reading', 'writing', 'listening', 'speaking'].includes(tab) ? tab : 'reading';
@@ -27,6 +33,7 @@ const MockLibraryEngPage = () => {
     const [papers, setPapers] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
     const [showBriefing, setShowBriefing] = useState(null);
+    const [showQuotaConfirm, setShowQuotaConfirm] = useState(null);
     const [inProgressMock, setInProgressMock] = useState(null);
 
     // Initial Tab Sync
@@ -234,11 +241,30 @@ const MockLibraryEngPage = () => {
             {/* Content Area */}
             <div className="max-w-7xl mx-auto px-8 py-12">
                 <div className="flex items-center justify-between mb-8">
-                    <h2 className="text-xl font-extrabold text-slate-800 flex items-center gap-3">
-                        English {subTab === 'reading' ? 'Reading (Paper 1)' : 
-                                 subTab === 'writing' ? 'Writing (Paper 2)' : 
-                                 subTab === 'listening' ? 'Listening (Paper 3)' : 'Speaking (Paper 4)'}
-                    </h2>
+                    <div className="flex flex-col gap-1">
+                        <h2 className="text-xl font-extrabold text-slate-800 flex items-center gap-3">
+                            English {subTab === 'reading' ? 'Reading (Paper 1)' : 
+                                     subTab === 'writing' ? 'Writing (Paper 2)' : 
+                                     subTab === 'listening' ? 'Listening (Paper 3)' : 'Speaking (Paper 4)'}
+                        </h2>
+                        {tier === 'pro' && (
+                            <div className="flex items-center gap-4">
+                                <div className="flex items-center gap-2 bg-amber-50 border border-amber-200 px-3 py-1 rounded-xl w-fit">
+                                    <Crown className="text-amber-600 fill-amber-600" size={12} />
+                                    <span className="text-[10px] font-black text-amber-900 uppercase tracking-widest">
+                                        Monthly Quota: {Math.max(0, 4 - (profile?.usage_stats?.mock_exams?.count || 0))} / 4 Papers Left
+                                    </span>
+                                </div>
+                                <button 
+                                    onClick={() => navigate('/subscription')}
+                                    className="px-3 py-1 bg-indigo-50 border border-indigo-100 rounded-xl text-[9px] font-black text-indigo-600 hover:bg-indigo-100 uppercase tracking-widest transition-all flex items-center gap-2 shadow-sm"
+                                >
+                                    <Zap size={10} fill="currentColor" />
+                                    Upgrade to Unlimited <ChevronRight size={10} />
+                                </button>
+                            </div>
+                        )}
+                    </div>
                     <div className="flex items-center gap-2 text-[11px] font-black text-slate-400 uppercase tracking-widest">
                         <Info size={12} />
                         Showing {papers.length} mock sets
@@ -253,15 +279,37 @@ const MockLibraryEngPage = () => {
                     </div>
                 ) : (
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {papers.map((paper, idx) => (
-                            <motion.div
-                                key={idx}
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ delay: idx * 0.1 }}
-                                className="group bg-white rounded-[2rem] border border-slate-200 p-8 hover:border-indigo-300 hover:shadow-2xl hover:shadow-indigo-100 transition-all cursor-pointer relative overflow-hidden"
-                                onClick={() => setShowBriefing(paper)}
-                            >
+                        {papers.map((paper, idx) => {
+                            const mockExams = profile?.usage_stats?.mock_exams || { count: 0, attempts: [] };
+                            const hasAttempted = mockExams.attempts?.includes(paper.id);
+                            const isQuotaReached = tier === 'pro' && (mockExams.count >= 4) && !hasAttempted;
+                            const isLocked = (!isPaid && idx > 0) || isQuotaReached;
+                            
+                            return (
+                                <motion.div
+                                    key={idx}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ delay: idx * 0.1 }}
+                                    className={`group bg-white rounded-[2rem] border border-slate-200 p-8 transition-all relative overflow-hidden ${
+                                        isLocked ? 'cursor-not-allowed grayscale-[0.5] opacity-80' : 'hover:border-indigo-300 hover:shadow-2xl hover:shadow-indigo-100 cursor-pointer'
+                                    }`}
+                                    onClick={() => {
+                                        if (isLocked) {
+                                            if (isQuotaReached) {
+                                                alert("You have reached your monthly quota of 4 mock exams. Upgrade to Premium for unlimited access!");
+                                            }
+                                            navigate('/subscription');
+                                            return;
+                                        }
+                                        
+                                        if (tier === 'pro' && !hasAttempted) {
+                                            setShowQuotaConfirm(paper);
+                                        } else {
+                                            setShowBriefing(paper);
+                                        }
+                                    }}
+                                >
                                 <div className="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-10 transition-opacity">
                                     {React.createElement(papersMeta[subTab].icon, { size: 120 })}
                                 </div>
@@ -270,8 +318,9 @@ const MockLibraryEngPage = () => {
                                     <div className="inline-flex items-center gap-2 px-3 py-1 bg-slate-100 rounded-full text-[11px] font-black text-slate-500 uppercase tracking-widest mb-6">
                                         Paper {subTab === 'reading' ? '1' : subTab === 'writing' ? '2' : subTab === 'listening' ? '3' : '4'}
                                     </div>
-                                    <h3 className="text-2xl font-black text-slate-900 leading-tight mb-2 group-hover:text-indigo-600 transition-colors">
+                                    <h3 className="text-2xl font-black text-slate-900 leading-tight mb-2 group-hover:text-indigo-600 transition-colors flex items-center gap-2">
                                         {paper.name}
+                                        {isLocked && <Crown className="text-amber-500 fill-amber-500 shrink-0" size={20} />}
                                     </h3>
                                     <p className="text-sm text-slate-500 font-medium mb-8">
                                         {paper.description}
@@ -295,7 +344,7 @@ const MockLibraryEngPage = () => {
                                     </div>
                                 </div>
                             </motion.div>
-                        ))}
+                        );})}
                     </div>
                 )}
             </div>
@@ -356,6 +405,60 @@ const MockLibraryEngPage = () => {
                                         Enter Exam Arena
                                     </button>
                                 </div>
+                            </div>
+                        </motion.div>
+                    </div>
+                )}
+            </AnimatePresence>
+
+            {/* Quota Confirmation Modal */}
+            <AnimatePresence>
+                {showQuotaConfirm && (
+                    <div className="fixed inset-0 z-[110] flex items-center justify-center p-6 bg-slate-900/60 backdrop-blur-md">
+                        <motion.div 
+                            initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                            animate={{ opacity: 1, scale: 1, y: 0 }}
+                            exit={{ opacity: 0, scale: 0.9, y: 20 }}
+                            className="bg-white rounded-[2.5rem] w-full max-w-md overflow-hidden shadow-2xl"
+                        >
+                            <div className="p-10 text-center">
+                                <div className="size-20 bg-amber-50 rounded-[2rem] flex items-center justify-center text-amber-600 mx-auto mb-6 shadow-xl shadow-amber-900/5">
+                                    <Crown size={40} fill="currentColor" />
+                                </div>
+                                <h3 className="text-2xl font-black text-slate-900 mb-4 tracking-tight">Confirm Credit Use</h3>
+                                <p className="text-slate-500 font-medium leading-relaxed mb-8">
+                                    You are about to start <span className="text-slate-900 font-bold">"{showQuotaConfirm.name}"</span>. 
+                                    This will deduct <span className="text-indigo-600 font-black">1 Credit</span> from your monthly quota of 4 papers.
+                                </p>
+                                
+                                <div className="flex flex-col gap-3">
+                                    <button 
+                                        onClick={() => {
+                                            const paper = showQuotaConfirm;
+                                            setShowQuotaConfirm(null);
+                                            setShowBriefing(paper);
+                                        }}
+                                        className="w-full py-4 bg-slate-900 hover:bg-black text-white rounded-2xl font-black uppercase text-xs tracking-widest transition-all shadow-xl active:scale-95"
+                                    >
+                                        Deduct Credit & Proceed
+                                    </button>
+                                    <button 
+                                        onClick={() => setShowQuotaConfirm(null)}
+                                        className="w-full py-4 bg-slate-100 hover:bg-slate-200 text-slate-600 rounded-2xl font-black uppercase text-xs tracking-widest transition-all"
+                                    >
+                                        Not Now
+                                    </button>
+                                </div>
+                                
+                                <button 
+                                    onClick={() => {
+                                        setShowQuotaConfirm(null);
+                                        navigate('/subscription');
+                                    }}
+                                    className="mt-6 text-[10px] font-black text-indigo-600 hover:text-indigo-700 uppercase tracking-widest border-b border-indigo-200"
+                                >
+                                    Get Unlimited Access with Premium
+                                </button>
                             </div>
                         </motion.div>
                     </div>

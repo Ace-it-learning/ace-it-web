@@ -5,7 +5,7 @@ import { useAuth } from '../context/AuthContext';
 import { useLanguage } from '../context/LanguageContext';
 import { clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
-import { BookOpen, Sparkles, Mic, Activity, Lightbulb, Ear, Zap } from 'lucide-react';
+import { BookOpen, Sparkles, Mic, Activity, Lightbulb, Ear, Zap, Crown } from 'lucide-react';
 import ExamTipsModal from './ace/ExamTipsModal';
 import CardPreviewModal from './CardPreviewModal';
 import { cn } from '../utils/cn';
@@ -23,7 +23,9 @@ const rarityRingStyles = {
 const Sidebar = () => {
     const navigate = useNavigate();
     const { activeAgentId, setActiveAgentId, activeAgent, avatarState, studentState, equipment, getAgentIdentity } = useAvatar();
-    const { user, loginWithGoogle } = useAuth();
+    const { user, profile, loginWithGoogle } = useAuth();
+    const tier = (profile?.subscription_tier || 'free').toLowerCase();
+    const isPaid = tier === 'pro' || tier === 'premium';
     const { t } = useLanguage();
     const [nickname, setNickname] = useState('Student');
     const [gender, setGender] = useState(null);
@@ -236,7 +238,13 @@ const Sidebar = () => {
                         return (
                             <div
                                 key={agent.id}
-                                onClick={() => setActiveAgentId(agent.id)}
+                                onClick={() => {
+                                    if (agent.id === 'ace' && !isPaid) {
+                                        navigate('/subscription');
+                                        return;
+                                    }
+                                    setActiveAgentId(agent.id);
+                                }}
                                 className={cn(
                                     "flex items-center gap-3 p-3 rounded-2xl shadow-sm transition-all cursor-pointer border group",
                                     activeAgentId === agent.id
@@ -252,7 +260,10 @@ const Sidebar = () => {
                                     />
                                 </div>
                                 <div className="flex-1">
-                                    <p className="font-bold text-sm text-[#1d130c] dark:text-white leading-none">{agent.name}</p>
+                                    <p className="font-bold text-sm text-[#1d130c] dark:text-white leading-none flex items-center gap-2">
+                                        {agent.name}
+                                        {(agent.id === 'ace' && !isPaid) && <Crown className="w-3 h-3 text-amber-500 fill-amber-500 shrink-0" />}
+                                    </p>
                                     <p className="text-[10px] text-[#a16b45] mt-1">{t(`agents.${agent.id}.description`)}</p>
                                 </div>
                                 {activeAgentId === agent.id && (

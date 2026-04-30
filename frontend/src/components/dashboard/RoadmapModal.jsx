@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import { useLanguage } from '../../context/LanguageContext';
-import { Lock, Compass, CheckCircle, Play, Map, Star, Clock, X, Trophy, Search, Sparkles, Zap, BookOpen, PenTool, Mic, MessageSquare, Layers, RefreshCcw, GraduationCap, Ear, ArrowRight, Calculator, Headphones, Target } from 'lucide-react';
+import { Lock, Compass, CheckCircle, Play, Map, Star, Clock, X, Trophy, Search, Sparkles, Zap, BookOpen, PenTool, Mic, MessageSquare, Layers, RefreshCcw, GraduationCap, Ear, ArrowRight, Calculator, Headphones, Target, Crown } from 'lucide-react';
 import { useAvatar } from '../../context/AvatarContext';
 import { MICRO_SKILLS, getSkillName, getSkillDesc, getSkillOutcome, getPaperBySkill, getSkillsByPaper } from '../../constants/microSkills';
 import { getMathSkillName, getSkillsByCategory } from '../../constants/mathMicroSkills';
@@ -11,6 +11,8 @@ import { calculateTier, getTierMetadata, getMasteryStats } from '../../utils/mas
 const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
     const { user, profile } = useAuth();
     const { language, t } = useLanguage();
+    const tier = (profile?.subscription_tier || 'free').toLowerCase();
+    const isPaid = tier === 'pro' || tier === 'premium';
     const { activeAgentId } = useAvatar();
     const navigate = useNavigate();
     const [plan, setPlan] = useState(null);
@@ -171,7 +173,54 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
         }
     };
 
+    // --- ROBUST GATING CALCULATION (PRE-FILTER) ---
+    const questLabGating = (() => {
+        const lockedIds = new Set();
+        if (isPaid) return { lockedIds };
+
+        // 1. Listening Missions - First one is free
+        listeningMissions.forEach((m, idx) => {
+            if (idx > 0) lockedIds.add(m.id);
+        });
+
+        // 2. Writing Missions - First one is free
+        writingMissions.forEach((m, idx) => {
+            if (idx > 0) lockedIds.add(m.id);
+        });
+
+        // 3. General Skills - First of each category is free
+        // Reading
+        Object.keys(MICRO_SKILLS).filter(k => k.startsWith('reading_')).forEach((id, idx) => { if (idx > 0) lockedIds.add(id); });
+        // Speaking
+        Object.keys(MICRO_SKILLS).filter(k => k.startsWith('speaking_') && !MICRO_SKILLS[k].isGranular).forEach((id, idx) => { if (idx > 0) lockedIds.add(id); });
+        // Writing Genres
+        Object.keys(MICRO_SKILLS).filter(k => k.startsWith('writing_genre_')).forEach((id, idx) => { if (idx > 0) lockedIds.add(id); });
+
+        return { lockedIds };
+    })();
+
+    const grammarGating = (() => {
+        const lockedIds = new Set();
+        if (isPaid) return { lockedIds };
+        const grammarIds = Object.keys(MICRO_SKILLS).filter(id => id.startsWith('grammar_'));
+        grammarIds.forEach((id, idx) => { if (idx > 0) lockedIds.add(id); });
+        return { lockedIds };
+    })();
+
     const handleTaskClick = (task) => {
+        // Targeted Growth (Summary Cards) are all locked for free users
+        if (!isPaid && task.isTargetedGrowth) {
+            onClose();
+            navigate('/subscription');
+            return;
+        }
+
+        // Individual Tasks (Weekly/Grammar/Quest Lab) gating
+        if (!isPaid && task.locked) {
+            onClose();
+            navigate('/subscription');
+            return;
+        }
         console.log("RoadmapModal: Clicked Task", task);
         if (task.locked) return;
         onClose(); // Close modal before processing navigation
@@ -633,7 +682,10 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                                                             <quest.icon className="w-6 h-6 text-white" />
                                                         </div>
                                                         <div>
-                                                            <h4 className="font-bold text-white text-[15px]">{quest.title}</h4>
+                                                            <h4 className="font-bold text-white text-[15px] flex items-center gap-2">
+                                                                {quest.title}
+                                                                {!isPaid && <Crown className="w-4 h-4 text-amber-300 fill-amber-300 shrink-0" />}
+                                                            </h4>
                                                             <p className="text-[11px] text-white/70 italic opacity-80">{quest.desc}</p>
                                                         </div>
                                                     </div>
@@ -699,7 +751,10 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                                                             <div className={`p-2 bg-${track.color}-50 rounded-xl`}>
                                                                  <track.icon className={`w-5 h-5 text-${track.color}-600`} />
                                                             </div>
-                                                            <span className="font-black text-slate-800 text-sm tracking-tight">{track.label}</span>
+                                                             <span className="font-black text-slate-800 text-sm tracking-tight flex items-center gap-2">
+                                                                 {track.label}
+                                                                 {!isPaid && <Crown className="w-4 h-4 text-amber-500 fill-amber-500 shrink-0" />}
+                                                             </span>
                                                         </div>
                                                         <span className={`text-xs font-black text-${track.color}-600 bg-${track.color}-50 px-2 py-0.5 rounded-lg border border-${track.color}-100`}>
                                                             Level {level.toFixed(1)}
@@ -723,6 +778,11 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                                                             <div 
                                                                 onClick={(e) => {
                                                                     e.stopPropagation();
+                                                                    if (questLabGating.lockedIds.has(priority.id)) {
+                                                                        onClose();
+                                                                        navigate('/subscription');
+                                                                        return;
+                                                                    }
                                                                     onClose();
                                                                     if (activeAgentId === 'math' || activeAgentId === 'maths') {
                                                                         navigate(`/maths/learn/${priority.id}`, { 
@@ -752,7 +812,10 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                                                                     </div>
                                                                     <div>
                                                                         <div className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-0.5">Priority Boost</div>
-                                                                        <div className="text-[12px] font-black text-slate-700 italic group-hover:text-indigo-600 transition-colors line-clamp-1">{missionName}</div>
+                                                                        <div className="text-[12px] font-black text-slate-700 italic group-hover:text-indigo-600 transition-colors line-clamp-1 flex items-center gap-2">
+                                                                             {missionName}
+                                                                             {!isPaid && <Crown className="w-3.5 h-3.5 text-amber-500 fill-amber-500 shrink-0" />}
+                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div className="flex items-center gap-2">
@@ -840,6 +903,11 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                                                 <div 
                                                     key={id}
                                                     onClick={() => {
+                                                        if (grammarGating.lockedIds.has(id)) {
+                                                            onClose();
+                                                            navigate('/subscription');
+                                                            return;
+                                                        }
                                                         handleTaskClick({
                                                             id: id,
                                                             topic: id,
@@ -873,8 +941,9 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                                                         </div>
                                                     </div>
                                                     
-                                                    <h4 className="text-lg font-black text-slate-800 group-hover:text-amber-600 transition-colors mb-2">
+                                                    <h4 className="text-lg font-black text-slate-800 group-hover:text-amber-600 transition-colors mb-2 flex items-center gap-2">
                                                         {skill[language]?.name || id}
+                                                        {grammarGating.lockedIds.has(id) && <Crown className="w-4 h-4 text-amber-500 fill-amber-500 shrink-0" />}
                                                     </h4>
                                                     <p className="text-[12px] text-slate-500 leading-relaxed mb-6 line-clamp-2 min-h-[3em]">
                                                         {skill[language]?.desc}
@@ -979,6 +1048,11 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                                                     <div
                                                         key={mission.id}
                                                         onClick={() => {
+                                                            if (questLabGating.lockedIds.has(mission.id)) {
+                                                                onClose();
+                                                                navigate('/subscription');
+                                                                return;
+                                                            }
                                                             onClose();
                                                             navigate(`/listening/briefing/${mission.id}`, {
                                                                 state: {
@@ -996,8 +1070,9 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                                                             </span>
                                                         </div>
 
-                                                        <h4 className="text-sm font-bold mb-1 transition-colors text-slate-800 line-clamp-1 group-hover:text-rose-600">
+                                                        <h4 className="text-[15px] font-bold mb-1 transition-colors text-slate-800 line-clamp-1 group-hover:text-rose-600 flex items-center gap-2">
                                                             {mission.title}
+                                                            {questLabGating.lockedIds.has(mission.id) && <Crown className="w-3.5 h-3.5 text-amber-500 fill-amber-500 shrink-0" />}
                                                         </h4>
                                                         <p className="text-[11px] text-slate-500 mb-3 line-clamp-2 leading-tight min-h-[2.4em]">
                                                             {mission.description || "Synthesizing data files and auditory clues for Paper 3 proficiency."}
@@ -1059,6 +1134,11 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                                                         <div
                                                             key={mission.id}
                                                             onClick={() => {
+                                                                if (questLabGating.lockedIds.has(mission.id)) {
+                                                                    onClose();
+                                                                    navigate('/subscription');
+                                                                    return;
+                                                                }
                                                                 onClose();
                                                                 navigate(`/writing/quest`, {
                                                                     state: {
@@ -1076,9 +1156,10 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                                                                 </div>
                                                             </div>
 
-                                                            <h4 className="text-sm font-bold mb-1 transition-colors text-slate-800 line-clamp-1 group-hover:text-purple-600">
-                                                                {mission.title}
-                                                            </h4>
+                                                            <h4 className="text-[15px] font-bold mb-1 transition-colors text-slate-800 line-clamp-1 group-hover:text-purple-600 flex items-center gap-2">
+                                                                 {mission.title}
+                                                                 {questLabGating.lockedIds.has(mission.id) && <Crown className="w-3.5 h-3.5 text-amber-500 fill-amber-500 shrink-0" />}
+                                                             </h4>
                                                             <p className="text-[11px] text-slate-500 mb-3 line-clamp-2 leading-tight min-h-[2.4em]">
                                                                 {mission.prompt || "Advancing DSE linguistic proficiency through high-fidelity mission simulation."}
                                                             </p>
@@ -1126,6 +1207,11 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                                                             <div
                                                                 key={mission.id}
                                                                 onClick={() => {
+                                                                    if (questLabGating.lockedIds.has(mission.id)) {
+                                                                        onClose();
+                                                                        navigate('/subscription');
+                                                                        return;
+                                                                    }
                                                                     onClose();
                                                                     navigate(`/listening/briefing/${mission.id}`, {
                                                                         state: {
@@ -1142,9 +1228,10 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                                                                         LISTENING
                                                                     </span>
                                                                 </div>
-                                                                <h4 className="text-[15px] font-bold mb-1 transition-colors text-slate-800 line-clamp-1 group-hover:text-rose-600">
-                                                                    {mission.title}
-                                                                </h4>
+                                                                <h4 className="text-[15px] font-bold mb-1 transition-colors text-slate-800 line-clamp-1 group-hover:text-rose-600 flex items-center gap-2">
+                                                                     {mission.title}
+                                                                     {questLabGating.lockedIds.has(mission.id) && <Crown className="w-3.5 h-3.5 text-amber-500 fill-amber-500 shrink-0" />}
+                                                                 </h4>
                                                                 <p className="text-[12px] text-slate-500 mb-3 line-clamp-2 leading-tight min-h-[2.4em]">
                                                                     {mission.description || "Synthesizing data files and auditory clues for Paper 3 proficiency."}
                                                                 </p>
@@ -1168,6 +1255,11 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                                                         <div
                                                             key={mission.id}
                                                             onClick={() => {
+                                                                if (questLabGating.lockedIds.has(mission.id)) {
+                                                                    onClose();
+                                                                    navigate('/subscription');
+                                                                    return;
+                                                                }
                                                                 onClose();
                                                                 navigate(`/writing/quest`, {
                                                                     state: {
@@ -1182,9 +1274,10 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                                                                     {mission.genre || 'QUEST'}
                                                                 </span>
                                                             </div>
-                                                            <h4 className="text-[15px] font-bold mb-1 transition-colors text-slate-800 line-clamp-1 group-hover:text-purple-600">
-                                                                {mission.title}
-                                                            </h4>
+                                                            <h4 className="text-[15px] font-bold mb-1 transition-colors text-slate-800 line-clamp-1 group-hover:text-purple-600 flex items-center gap-2">
+                                                                 {mission.title}
+                                                                 {questLabGating.lockedIds.has(mission.id) && <Crown className="w-3.5 h-3.5 text-amber-500 fill-amber-500 shrink-0" />}
+                                                             </h4>
                                                             <p className="text-[12px] text-slate-500 mb-3 line-clamp-2 leading-tight min-h-[2.4em]">
                                                                 {mission.prompt || "Advancing DSE linguistic proficiency through high-fidelity mission simulation."}
                                                             </p>
@@ -1220,6 +1313,12 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                                                         <div
                                                             key={id}
                                                             onClick={() => {
+                                                                if (questLabGating.lockedIds.has(id)) {
+                                                                    onClose();
+                                                                    navigate('/subscription');
+                                                                    return;
+                                                                }
+                                                                onClose();
                                                                 handleTaskClick({
                                                                     id: id,
                                                                     title: `${activeTab === 'CHALLENGE' ? 'Integrated' : 'Practice'}: ${name}`,
@@ -1253,8 +1352,9 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                                                                 )}
                                                             </div>
 
-                                                            <h4 className={`text-[15px] font-bold mb-1 transition-colors ${isIntegrated ? 'text-white' : 'text-slate-800 group-hover:text-amber-600'}`}>
+                                                            <h4 className={`text-[15px] font-bold mb-1 transition-colors flex items-center gap-2 ${isIntegrated ? 'text-white' : 'text-slate-800 group-hover:text-amber-600'}`}>
                                                                 {name}
+                                                                {questLabGating.lockedIds.has(id) && <Crown className="w-3.5 h-3.5 text-amber-500 fill-amber-500 shrink-0" />}
                                                             </h4>
                                                             <p className={`text-[12px] mb-3 line-clamp-2 leading-tight min-h-[2.4em] ${isIntegrated ? 'text-indigo-100' : 'text-slate-500'}`}>
                                                                 {desc || "Master this skill to excel in HKDSE English."}

@@ -853,7 +853,7 @@ Return as a JSON array of strings.`;
                         .replace('{{ SEED }}', seed)
                         .replace('{{RECENT_QUESTIONS_CONTEXT}}', recentQuestionsContext);
 
-                    console.log(`[MathsLabService] 🔬 Generating question ${i + 1}/${TARGET_COUNT} with gemini-1.5-pro...`);
+                    console.log(`[MathsLabService] 🔬 Generating question ${i + 1}/${TARGET_COUNT} with cost-guarded engine...`);
                     const { data: qResult } = await GenerativeAIService.generateJson(prompt, { model: "ace-it-flash" });
 
                     if (qResult && qResult.question) {

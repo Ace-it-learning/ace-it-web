@@ -268,6 +268,7 @@ const DataFileViewer = ({ dataFiles, localDocs, setLocalDocs }) => {
                             <div 
                                 id={`doc-content-${activeTab}`}
                                 className={`prose prose-slate max-w-none text-slate-700 text-xl leading-relaxed select-text ${
+                                    dataFiles[activeTab]?.visual_style === 'scrawled_handwriting' ? 'font-scrawled' :
                                     dataFiles[activeTab]?.type === 'handwritten_note' ? 'font-handwritten' : 'font-sans'
                                 }`}
                                 dangerouslySetInnerHTML={{ __html: localDocs[activeTab] || "" }}
@@ -285,13 +286,20 @@ const DataFileViewer = ({ dataFiles, localDocs, setLocalDocs }) => {
         </div>
             
             <style dangerouslySetInnerHTML={{ __html: `
-                @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap');
+                @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Permanent+Marker&display=swap');
                 
                 .font-handwritten {
                     font-family: 'Caveat', cursive;
                     font-size: 1.8rem;
                     color: #1e3a8a;
                     transform: rotate(-1deg);
+                }
+                .font-scrawled {
+                    font-family: 'Permanent Marker', cursive;
+                    font-size: 1.5rem;
+                    color: #0f172a;
+                    transform: rotate(1deg);
+                    line-height: 1.4;
                 }
                 .highlight-span {
                     border-radius: 4px;

@@ -2,8 +2,8 @@
   "meta": {
     "title": "HKDSE Paper 3: The Staycation Revolution (Elite 2026 Edition)",
     "topic": "Modern tourism trends; glamping vs. traditional hotels in NT.",
-    "difficulty": "Level 5** Authentic (High Stamina)",
-    "total_marks_part_a": 50,
+    "difficulty": "Level 5** Authentic (High Stamina / 2026 Edition)",
+    "total_marks_part_a": 55,
     "total_marks_part_b": 50
   },
   "Part_A": {
@@ -51,8 +51,8 @@
           {
             "id": "t1_q7",
             "type": "Fill_in_Blanks",
-            "label": "Equipment Rental (Laptops):",
-            "answer": "4"
+            "label": "Equipment Rental (Tablets):",
+            "answer": "8"
           },
           {
             "id": "t1_q8",
@@ -81,8 +81,20 @@
           {
             "id": "t1_q12",
             "type": "Fill_in_Blanks",
-            "label": "Payment Status:",
-            "answer": "Bank Transfer Pending"
+            "label": "Biometric Entry Code:",
+            "answer": "ECO-2026-GL"
+          },
+          {
+            "id": "t1_q13",
+            "type": "Fill_in_Blanks",
+            "label": "Catering Preference:",
+            "answer": "Vegan Box"
+          },
+          {
+            "id": "t1_q14",
+            "type": "Fill_in_Blanks",
+            "label": "Staff Badge Count:",
+            "answer": "12"
           }
         ]
       },
@@ -164,13 +176,37 @@
             "id": "t2_q11",
             "type": "Fill_in_Blanks",
             "label": "Estimated Annual Growth (%):",
-            "answer": "22"
+            "answer": "22%"
           },
           {
             "id": "t2_q12",
             "type": "Fill_in_Blanks",
             "label": "Key Collaborator:",
             "answer": "Eco-Travel Association"
+          },
+          {
+            "id": "t2_q13",
+            "type": "Fill_in_Blanks",
+            "label": "Soil pH Level Requirement:",
+            "answer": "6.5 to 7.0"
+          },
+          {
+            "id": "t2_q14",
+            "type": "Fill_in_Blanks",
+            "label": "Drone Monitoring Frequency:",
+            "answer": "Daily"
+          },
+          {
+            "id": "t2_q15",
+            "type": "Fill_in_Blanks",
+            "label": "Water Recycling Goal (%):",
+            "answer": "40%"
+          },
+          {
+            "id": "t2_q16",
+            "type": "Fill_in_Blanks",
+            "label": "Publicity Budget ($):",
+            "answer": "4.5 Million"
           }
         ]
       },
@@ -214,8 +250,8 @@
           {
             "id": "t3_q4",
             "type": "Fill_in_Blanks",
-            "label": "Proposed Subsidy for Eco-Tourism:",
-            "answer": "$500 Million"
+            "label": "Proposed Subsidy for Eco-Tourism ($):",
+            "answer": "500 Million"
           },
           {
             "id": "t3_q5",
@@ -226,20 +262,20 @@
           {
             "id": "t3_q6",
             "type": "Fill_in_Blanks",
-            "label": "Noise Limit for Glamping Sites:",
+            "label": "Noise Limit for Glamping Sites (dB):",
             "answer": "55 Decibels"
           },
           {
             "id": "t3_q7",
             "type": "Fill_in_Blanks",
             "label": "Traditional Hotel Occupancy Rate (%):",
-            "answer": "68"
+            "answer": "68%"
           },
           {
             "id": "t3_q8",
             "type": "Fill_in_Blanks",
             "label": "Glamping Occupancy Rate (%):",
-            "answer": "85"
+            "answer": "85%"
           },
           {
             "id": "t3_q9",
@@ -298,8 +334,8 @@
           {
             "id": "t4_q5",
             "type": "Fill_in_Blanks",
-            "label": "Proposed Penalty for Littering:",
-            "answer": "$3,000"
+            "label": "Proposed Penalty for Littering ($):",
+            "answer": "3,000"
           },
           {
             "id": "t4_q6",
@@ -342,126 +378,14 @@
             "type": "Fill_in_Blanks",
             "label": "Official Hotline:",
             "answer": "1823-CAMP"
+          },
+          {
+            "id": "t4_q13",
+            "type": "Fill_in_Blanks",
+            "label": "Security Protocol Code:",
+            "answer": "STAY-SAFE-2026"
           }
         ]
-      }
-    ],
-    "script": [
-      {
-        "speaker": "Announcer",
-        "text": "Hong Kong Diploma of Secondary Education Examination 2027. English Language Paper 3. Listening and Integrated Skills. The Staycation Revolution."
-      },
-      {
-        "speaker": "Announcer",
-        "text": "Part A. Task 1. You are at the check-in counter for the 'Future Tourism Expo'. You will hear a conversation between a registration clerk and an exhibitor. Complete the form. (120-second pause)"
-      },
-      {
-        "speaker": "Clerk",
-        "text": "Good morning, sir. Welcome to the Expo. We're expecting a massive turnout for the Eco-Tourism track this year. Can I have your company details for the badge?"
-      },
-      {
-        "speaker": "Marcus",
-        "text": "Morning. I'm Marcus Thorpe, T-H-O-R-P-E. I'm representing Wilderness Retreats Ltd. We're the ones setting up the glamping pods in the courtyard."
-      },
-      {
-        "speaker": "Clerk",
-        "text": "Wilderness Retreats... right. And for our records, your direct contact email? Is it still the info address?"
-      },
-      {
-        "speaker": "Marcus",
-        "text": "No, please use my personal work one. It's m.thorpe@wilderness.com.hk. That's M-dot-T-H-O-R-P-E at wilderness dot com dot hk."
-      },
-      {
-        "speaker": "Clerk",
-        "text": "Got it. Now, you're registered under the Eco-Glamping Pavilion, correct? I have you assigned to Hall 3C. That's on the third floor, just next to the escalators."
-      },
-      {
-        "speaker": "Marcus",
-        "text": "Perfect. Hall 3C. And about the display... we originally planned for five tents, but because of the space constraints in that hall, we've scaled it back to 3 display tents. One dome tent, one safari style, and a bell tent."
-      },
-      {
-        "speaker": "Clerk",
-        "text": "Noted. Three tents. Now, for the equipment rental, you requested some laptops for the interactive booking demo. Do you still need six?"
-      },
-      {
-        "speaker": "Marcus",
-        "text": "Actually, our tech team brought their own tablets, so we only need four laptops from you now. However, we do need a specific power supply. The standard 110V won't run our climate control demo. We need 220V High Voltage."
-      },
-      {
-        "speaker": "Clerk",
-        "text": "I'll make a note for the technicians. 220V. Also, you have a media interview slot booked for the weekend... Oh wait, it's been moved. It's now scheduled for Friday at 2:00 PM with the 'Urban Traveler' magazine."
-      },
-      {
-        "speaker": "Marcus",
-        "text": "Friday at 2:00. I'll be there. One more thing, here is my insurance policy number for the setup. It's WR-9988-X."
-      },
-      {
-        "speaker": "Clerk",
-        "text": "WR-9988-X. Perfect. I see you've already received the 15% Early Bird discount on your booth fee. However, the final payment status shows as 'Bank Transfer Pending'. You might want to check with your accounts department."
-      },
-      {
-        "speaker": "Marcus",
-        "text": "I'll do that right away. Thanks for the heads up."
-      },
-      {
-        "speaker": "Announcer",
-        "text": "Task 2. Listen to a podcast episode regarding 'The Glamping Boom in the New Territories'. (120-second pause)"
-      },
-      {
-        "speaker": "Host",
-        "text": "Welcome to 'Nature HK'. Today we're talking about staycations. Forget five-star hotels; it's all about glamping now. We currently have 42 registered sites across the New Territories. While Sai Kung was the pioneer, Yuen Long has overtaken it as the most popular district due to the availability of flat farmland. At an average nightly rate of $1800, it's not cheap, but young families are flocking there to give their kids a taste of the outdoors without the mud."
-      },
-      {
-        "speaker": "Expert",
-        "text": "That's right. But it's not all easy money. Operators tell me waste management is their biggest headache—getting garbage trucks into remote sites is tough. While bookings are steady, Autumn is definitely the peak season; the weather is just perfect for sitting outside. Legally, you can't just pitch a tent; you need a Short Term Tenancy permit from the Lands Department and a Fire Safety Type B certificate. People come for the star-gazing experience, which is why we are seeing a 22% annual growth. Next on the map? A huge new project in Lantau South in collaboration with the Eco-Travel Association."
-      },
-      {
-        "speaker": "Announcer",
-        "text": "Task 3. Three experts are debating 'Traditional Hotels vs. Glamping'. (120-second pause)"
-      },
-      {
-        "speaker": "Prof Ng",
-        "text": "I still maintain that for a city like Hong Kong, our heritage hotels are indispensable. You can't replace the Peninsula's history with a plastic dome. Look at the data: traditional hotel occupancy is still respectable at 68%."
-      },
-      {
-        "speaker": "Mr Lau",
-        "text": "But Professor, people are tired of concrete boxes. The main concern with hotels is the total lack of nature. Glamping occupancy is at 85%! People want to breathe. That's why I'm pushing for the $500 million subsidy for eco-tourism development."
-      },
-      {
-        "speaker": "Ms Cheung",
-        "text": "Why not a compromise? A hybrid model. Hotels could install tented villas on their balconies or grounds. We should have a minimum guest age of 6 years old for these to ensure safety, and a strict noise limit of 55 decibels. We should also encourage hotels to get the EarthCheck Gold certification to stay competitive. Our main revenue for hotels used to be business travelers, but the future is leisure weekends."
-      },
-      {
-        "speaker": "Announcer",
-        "text": "Task 4. Stakeholders discussing wild camping. (240-second pause)"
-      },
-      {
-        "speaker": "Environmentalist",
-        "text": "We are seeing severe soil erosion in protected zones. We need drones for patrols. The 2025 Biodiversity Audit proved the damage is real."
-      },
-      {
-        "speaker": "Resident",
-        "text": "And the trash! I'm tired of cleaning up after tourists. We want a $3,000 fine for littering and permit-only parking for us villagers. 1823-CAMP should be the line for complaints."
-      },
-      {
-        "speaker": "Operator",
-        "text": "I suggest a digital permit system to limit group sizes to 8 people. We're happy to carry third-party indemnity insurance if it means we can keep operating. We expect the full regulations by January 2027 after the public consultation."
-      },
-      {
-        "speaker": "Announcer",
-        "text": "Part B. Integrated Skills Recording. Listen to the briefing from the Director of the Staycation Bureau to the Senior Project Manager."
-      },
-      {
-        "speaker": "Director",
-        "text": "Alright, let's get moving on these tasks. We have some delicate issues to handle. First, Task 8—when you write to the 'Save Our Greenery' group, don't just talk about the economy. They are worried about the local fauna. Make sure you mention that our new glamping guidelines require the use of 'Invisible Fencing'. This is a special technology that keeps the site boundaries secure without blocking the natural migration of small animals. It's a huge environmental plus that isn't in the brochures yet."
-      },
-      {
-        "speaker": "Director",
-        "text": "For the internal memo in Task 9, we need to address the low uptake of the staycation vouchers in rural areas. I want you to propose a 'Midnight Discount Scheme'. If guests book between midnight and 6:00 AM for last-minute slots, they get an extra 20% off. It helps fill the tents during the week. Also, mention we are implementing a 'Quiet Hours' policy starting strictly at 10:00 PM across all sites to appease the villagers. This is vital for the memo."
-      },
-      {
-        "speaker": "Director",
-        "text": "Finally, for Task 10, the social media post needs to be punchy. I've come up with a slogan I want you to use: 'Wild Luxury, Local Heart'. It sums up the balance we're aiming for. Oh, and mention our new partnership with the 'Star-Seeker App'. It's an app that helps guests identify constellations from their tents. It adds value to the experience. Get those drafts to me by five. Thanks."
       }
     ]
   },
@@ -471,61 +395,68 @@
         "id": "doc1",
         "type": "minutes",
         "title": "Minutes: Rural Tourism Development Meeting",
-        "content": "Date: May 12, 2027. Points: 1. Residents in Yuen Long complained about light pollution from glamping sites. 2. Need for 'Dark Sky' compliant lighting. 3. Promotion of Green Staycation Vouchers ($1000 subsidy)."
+        "content": "Date: May 12, 2026. Points: 1. Residents in Yuen Long complained about light pollution. 2. Need for 'Down-Shield' lighting. 3. Promotion of Green Staycation Vouchers ($1000 subsidy)."
       },
       {
         "id": "doc2",
         "type": "brochure",
         "title": "Starry Nights Glamping: Guest Guide",
-        "content": "Experience the NT like never before. 100% solar powered. Nightly stargazing tours. Please note: No loud music after 9 PM. All trash must be carried out. Nightly rate: $1950 (weekend)."
+        "content": "Experience the NT like never before. 100% solar powered. Nightly stargazing tours. No loud music after 10 PM. All trash must be carried out."
       },
       {
         "id": "doc3",
         "type": "email",
         "title": "Email from Ms. Gladys Ho (Resident)",
-        "content": "To: Staycation Bureau. Subject: Light Pollution. The new glamping site near Kam Tin is like a football stadium at night. My children can't sleep. The floodlights are pointed right at the village. Do something!"
+        "content": "Subject: Light Pollution. The new glamping site near Kam Tin is like a football stadium at night. My children can't sleep. The floodlights are pointed right at the village."
       },
       {
         "id": "doc4",
         "type": "newspaper",
         "title": "The Daily Post: Hotels vs. Tents",
-        "content": "Traditional hotels in Tsim Sha Tsui are struggling with 60% occupancy, while New Territories glamping sites are fully booked months in advance. Experts suggest hotels must 'go green' or go bust."
+        "content": "Traditional hotels in urban areas are struggling with 60% occupancy, while NT glamping sites are fully booked. Experts suggest hotels must 'go green'."
       },
       {
         "id": "doc5",
         "type": "handwritten_note",
-        "title": "Note from Director",
-        "content": "PM: Re: Gladys Ho's email. Tell her we're mandating 'Down-Shield' lights by next month. Also, mention the 10 PM quiet rule from the briefing. We must keep the villagers happy."
+        "title": "Director's Note (Handwritten)",
+        "visual_style": "scrawled_handwriting",
+        "content": "Chris: Re Gladys Ho. Tell her 'Down-Shield' lights are mandatory from next month. Also, emphasize the 10 PM quiet rule. We need villager buy-in for the 2026 expansion."
       },
       {
         "id": "doc6",
         "type": "table",
-        "title": "Staycation Voucher Performance (Q1 2027)",
-        "content": "District | Vouchers Issued | Vouchers Redeemed\nSai Kung | 5,000 | 4,800\nYuen Long | 4,000 | 1,200 (LOW!)\nLantau | 3,000 | 2,500"
+        "title": "Staycation Voucher Performance (Q1 2026)",
+        "content": "District | Vouchers Issued | Vouchers Redeemed\nSai Kung | 5,000 | 4,800\nYuen Long | 4,000 | 1,200 (CRITICALLY LOW!)\nLantau | 3,000 | 2,500"
       },
       {
         "id": "doc7",
-        "type": "social_media_post",
-        "title": "Post by 'Save Our Greenery' NGO",
-        "content": "Glamping is just 'gentrified destruction'. They are trampling the rare orchids in the NT and scaring away the fireflies. #SaveOurNT #NatureFirst"
+        "type": "archive",
+        "title": "RED HERRING: Kowloon Urban Hotel Construction Report (2015)",
+        "content": "NOTE: ARCHIVED. Focus: High-rise hotel construction in Tsim Sha Tsui. Metric: 60% occupancy for business travelers in 2015. (Irrelevant to 2026 NT Glamping)."
       },
       {
         "id": "doc8",
+        "type": "social_media_post",
+        "title": "Post by 'Save Our Greenery' NGO",
+        "content": "Glamping is just 'gentrified destruction'. They are trampling the rare orchids and scaring fireflies. #SaveOurNT #NatureFirst"
+      },
+      {
+        "id": "doc9",
         "type": "memo",
         "title": "Internal Memo: Licensing Update",
         "content": "New regulation: All sites must have a 1:10 staff-to-guest ratio. Must provide eco-friendly toiletries. Waste must be sorted into four categories."
       },
       {
-        "id": "doc9",
-        "type": "leafet",
-        "title": "The Heritage Inn: Traditional Charm",
-        "content": "Stay in a converted 1920s mansion. Full AC. Fine dining. No tents here! Discount for seniors available."
-      },
-      {
         "id": "doc10",
         "type": "policy_draft",
         "title": "Draft: Green Staycation Vouchers",
-        "content": "Subsidy can only be used at certified 'Eco-Sites'. Sites must prove 20% reduction in plastic use within 6 months of joining the scheme."
+        "content": "Subsidy only for certified 'Eco-Sites'. Must prove 20% reduction in plastic. Vouchers worth $1000."
+      },
+      {
+        "id": "doc11",
+        "type": "memo",
+        "title": "Office Stationery Inventory",
+        "content": "Paper Clips: 5000. Toner: 20. (Noise)."
       }
     ],
     "Part_B1": {
@@ -542,7 +473,10 @@
               "Explain 'Dark Sky' compliance (Doc 1)",
               "Mention 10:00 PM quiet hours (Audio/Doc 5)"
             ],
-            "tone": "Apologetic and Reassuring"
+            "tone": "Apologetic and Reassuring",
+            "deductions": [
+              "Penalty -0.5 for citing 2015 Kowloon high-rise hotel occupancy or 2015 business traveler data (Doc 7)"
+            ]
           }
         },
         {
@@ -585,12 +519,15 @@
           "grading_rubric": {
             "content_points": [
               "Sites are 100% solar powered (Doc 2)",
-              "20% reduction in plastic required (Doc 10)",
-              "Trash must be carried out (Doc 2)",
-              "MUST MENTION: 'Invisible Fencing' for animal migration (Audio)",
-              "Address the concern about scaring fireflies/wildlife (Doc 7)"
+              "Mandatory 'Down-Shield' lighting to prevent light pollution (Doc 5, Audio)",
+              "MUST MENTION: 'Invisible Fencing' technology for animal migration (Audio)",
+              "Trash must be carried out to prevent soil erosion (Doc 2, Task 4)",
+              "Strict 10:00 PM quiet hours to appease villagers (Doc 5, Audio)"
             ],
-            "tone": "Diplomatic and Persuasive"
+            "tone": "Diplomatic and Persuasive",
+            "deductions": [
+              "Penalty -0.5 for citing 2015 Kowloon high-rise hotel occupancy or 2015 business traveler data (Doc 7)"
+            ]
           }
         },
         {
@@ -600,12 +537,15 @@
           "wordCount": 150,
           "grading_rubric": {
             "content_points": [
-              "Highlight the 'Low' redemption rate in Yuen Long (Doc 6)",
-              "Propose 'Midnight Discount Scheme' (Audio)",
-              "Extra 20% off for bookings 12AM-6AM (Audio)",
-              "Strict 10:00 PM Quiet Hours policy for harmony (Audio/Doc 5)"
+              "Identify critically low 1,200/4,000 voucher uptake in Yuen Long (Doc 6)",
+              "Propose 'Midnight Discount Scheme' for weekday slots (Audio)",
+              "Extra 20% off for bookings made 12AM-6AM via Stay-Safe app (Audio)",
+              "Implementation of 10:00 PM quiet hours policy across all sites (Audio, Doc 5)"
             ],
-            "tone": "Professional and Innovative"
+            "tone": "Professional and Innovative",
+            "deductions": [
+              "Penalty -0.5 for citing 2015 urban hotel metrics (Doc 7)"
+            ]
           }
         },
         {
@@ -615,15 +555,23 @@
           "wordCount": 80,
           "grading_rubric": {
             "content_points": [
-              "Mention stargazing tours (Doc 2)",
-              "MUST USE SLOGAN: 'Wild Luxury, Local Heart' (Audio)",
-              "MUST MENTION: Partnership with 'Star-Seeker App' (Audio)",
-              "Use emojis to attract young families (Task 2/Context)"
+              "Target families with stargazing tours (Doc 2, Task 2)",
+              "MUST USE SLOGAN: 'Wild Luxury, Local Heart' (Audio-exclusive)",
+              "MUST MENTION: Partnership with 'Star-Seeker App' for AR constellation mapping (Audio-exclusive)",
+              "Highlight 100% solar power and eco-credentials (Doc 2, Doc 10)"
             ],
             "tone": "Enthusiastic and Trendy"
           }
         }
       ]
     }
+  },
+  "Script": {
+    "Announcer": "Good morning, candidates. Before we begin the 2026 English Language Paper 3 examination, I wish to address the profound, multi-dimensional, and structurally significant metamorphosis of our city's tourism landscape. Today's theme, 'The Staycation Revolution', is not merely a superficial reflection of a post-pandemic lifestyle shift; it is a fundamental and irreversible structural realignment of the Hong Kong economic, ecological, and sociological relationship with its own hinterland. In the high-velocity, hyper-connected, and increasingly decentralized urban sprawl of our metropolis, the quest for silence, nature, and what we now term 'Wild Luxury' has evolved from a niche preference into a multi-billion dollar strategic industry. To understand the Staycation Revolution, we must first look at the history of travel in this city. For decades, the Hong Kong tourist was an outbound traveler—seeking the mountains of Japan, the cultural depth of Europe, or the beaches of Thailand. But by 2026, the paradigm has shifted. We have realized that our own backyard—the verdant hills of the New Territories and the pristine waters of Lantau—holds a competitive advantage that no international flight can match. This is the essence of the Staycation Revolution. This examination is meticulously designed to test your ability to navigate this new, technically demanding, and ecologically complex terrain with absolute precision and sustained auditory stamina. You will be asked to synthesize complex data regarding land use permits, the biometric architecture of 'STAY-SAFE' registration protocols, and the profound sociological tension between the 'Peninsula Heritage' model and the 'Glamping Frontier'. This is a high-stamina mock, modeled after the Golden Standard of the HKDSE. You will be expected to maintain cognitive focus as you filter through dense technical jargon—from the soil pH requirements for 'Invisible Fencing' installations in protected wetlands to the exact decibel limits of village noise ordinances in the Yuen Long and Lantau South districts. The 2026 labor and tourism markets demand absolute precision. As you listen to the registration dialogue between Marcus Thorpe and the exhibition clerk, pay close attention to the specific alphanumeric strings—including biometric entry codes, insurance policy numbers, and equipment manifests. These are the data points of our new professional reality. The podcast keynote on the 'Glamping Boom' will further challenge your ability to synthesize metrics regarding the forty-two registered sites, the twenty-two percent annual growth rate, and the four-point-five million dollar publicity budget allocated by the Staycation Bureau. This is not just an English test; it is a test of your professional readiness in an age where information is dense and the signal is often buried in noise. You must also consider the mental health implications of this newfound proximity to nature. While our research shows a seventy-eight percent increase in weekend well-being among glampers, it also highlights the logistical complexities of waste management and light pollution in ecologically sensitive zones. This is a simulation of the Level 5** standard. You will hear voices of innovation, technical debates on water recycling goals, and the regulatory framework of the 'Midnight Discount Scheme'. Your task is not just to listen, but to identify the signal within the noise. In a city where digital connectivity is constant, your ability to identify the precise figures—like the three-thousand dollar littering fines, the fifty-five decibel noise limits, or the ten-thousand applicant targets—is what will separate a Level 5** candidate from the rest. This recording will be played once only. There will be no pauses for you to rest your ears. You must maintain a high level of cognitive processing for the entire seventy-minute duration. We will now begin with a five-minute silence to allow you to study the Information Directory and the tasks ahead. Ensure your concentration is absolute. Hong Kong Diploma of Secondary Education Examination 2026. English Language Paper 3. Listening and Integrated Skills. The Staycation Revolution - High Stamina Mock Exam. This recording contains no pauses other than those officially stated in the instructions. Candidates are reminded that accuracy in capturing technical details, including spelling, specific figures, and complex nomenclature, is vital for success. Part A. Task 1. You now have two minutes to study the task. (120-second pause)",
+    "Task_1_Script": "Good morning! Welcome to the 2026 Future Tourism Expo. It is an incredibly high-energy morning here at the Hong Kong Convention and Exhibition Centre in Wan Chai. We have over one thousand tourism delegates, eco-architects, and sustainability consultants arriving from across the Greater Bay Area—from boutique operators in Macau to tech-glamping pioneers in Shenzhen and the Northern Metropolis. Everyone is carrying multiple devices, networking in the holographic zones, and debating the latest Lands Department Short Term Tenancy updates before the first session even begins. The Convention Centre has actually had to increase the density of its local 6G network by fifty percent just to accommodate the live VR property tours and the biometric check-in systems we’re using this year. May I have your name and organization, please? I need to verify your exhibitor credentials and ensure your biometric 'STAY-SAFE' code is correctly synced with our main exhibitor portal and the courtyard security gates. Good morning. Yes, the energy is quite something—almost overwhelming. I’ve been trying to get through the biometric gate at the North Entrance for the last twenty minutes, but the crowd for the 'Holographic Tent' demo was blocking the entire corridor. My name is Marcus Thorpe. That's T-H-O-R-P-E. I'm representing Wilderness Retreats Ltd. We are one of the lead sponsors for the 'Eco-Tourism' pavilion this year. I believe my team should have uploaded our logistics, equipment manifests, and insurance certificates via the Expo’s secure cloud portal last night, but I wanted to confirm everything in person. We have a lot of sensitive climate-control equipment and a prototype VR safari experience that needs a very stable and dedicated 220V power connection to run correctly. We actually had a minor issue with the 110V circuit in our warehouse last week, so we’re very cautious about the voltage specs. Ah, Mr. Thorpe. Yes, Wilderness Retreats Ltd. I saw the domes being craned in this morning—spectacular! Common mistake in our records, but I see your contact email is still listed as the general 'info' address. Can I update that to your direct work one for the real-time floorplan alerts and security notifications? Sure, please use my personal work address: m-dot-thorpe at wilderness dot com dot H-K. That's M-dot-T-H-O-R-P-E at wilderness dot com dot H-K. We’ve officially retired the old 'info' address to ensure better data security and audit trails for our client booking data. Updated and logged. Now, regarding your booth location. You're assigned to the Eco-Glamping Pavilion in Hall 3C. That’s on the third floor, right next to the main escalator and the 'Nature-Link' bridge. It’s a high-traffic zone. Hall 3C. Perfect location. Now, about the display layout... we originally planned for five tents, but because of the specific fire safety constraints in that hall—something about the sprinkler coverage and the density of the flame-retardant materials—we've scaled it back to 3 display tents. One dome tent, one safari-style, and a bell tent. Noted. Three tents. Now, for the equipment rental, you requested tablets? Actually, our marketing team brought their own iPads with biometric sensors, so we only need eight laptops from you now. However, we do need a very specific power supply. The standard 110V output won't run our climate control demo—we’re showing how we can maintain a constant 22 degrees inside a tent even in the HK summer heat. We need 220V High Voltage for that unit. I'll make a note for the technicians. 220V High Voltage secured. Also, your media interview is set for Friday at 2:00 PM with 'The Urban Traveler' magazine. They want to focus on your 'Invisible Fencing' technology and how it protects animal migration paths. Friday at 2:00. I'll be there. One more thing, my insurance policy number is W-R-dash-9-9-8-8-dash-X. W-R-dash-9-9-8-8-dash-X. Perfect. I see your final payment status is 'Bank Transfer Pending'. I'll check on that immediately. And for the registration, your Biometric Entry Code is ECO-2026-GL. E-C-O-2026-G-L. Got it. And the catering? I see a 'Vegan Box' listed for the staff lunch on Friday. Correct. We have twelve staff members on-site for the duration of the Expo, so that’s twelve badges in total. Noted. Twelve badges and twelve vegan boxes. Thank you, Mr. Thorpe. (120-second pause)",
+    "Task_2_Script": "Task 2. Listen to a podcast episode regarding 'The Glamping Boom in the New Territories'. Complete the notes. (120-second pause) Welcome to 'Nature HK'. Today we are talking about staycations. In 2026, Hong Kong is fundamentally redefining the meaning of a weekend getaway. Forget the five-star hotels in Tsim Sha Tsui; it's all about the glamping frontier now. Our recent 'Rural Tourism Audit' shows that we currently have forty-two registered sites across the New Territories. While Sai Kung was the pioneer, Yuen Long has now overtaken it as the most popular district due to the availability of flat farmland relatively easy to convert. At an average nightly rate of one thousand eight hundred dollars, it's not cheap. Young families are flocking there to give their kids a taste of the outdoors without the mud. But waste management is the biggest headache. Autumn is the peak season; the weather is perfect. Legally, you need a Short Term Tenancy permit from the Lands Department and a Fire Safety Type B certificate. People come for the star-gazing experience, causing twenty-two percent annual growth. Technical environmental standards are strict: soil pH must be maintained between 6.5 and 7.0 to protect the sensitive flora and prevent erosion. Operators must also implement daily drone monitoring to check for unauthorized wild camping. The goal for 2027 is a forty percent water recycling rate. To support this, the government has allocated a four-point-five million dollar publicity budget for the 'Staycation Revolution'. Next? A huge project in Lantau South using 'Invisible Fencing' technology. (120-second pause)",
+    "Task_3_Script": "Task 3. Three experts are debating 'Traditional Hotels vs. Glamping'. Complete the table. (120-second pause) Welcome to 'The Future of Hospitality'. I'm Dr. Felix Ho. I'm joined by Prof. Ng, a specialist in heritage; Mr. Lau, an advocate for Eco-Glamping; and Ms. Cheung, a consultant for the Green Hotel Initiative. Prof. Ng, you seem skeptical? I still maintain that for a world-class city like Hong Kong, our heritage hotels are indispensable. You cannot replace the Peninsula's history with a dome in a field in Yuen Long. Traditional hotel occupancy is still respectable at sixty-eight percent. But Professor, people are tired of concrete boxes. The main concern with hotels is the total lack of nature. Glamping occupancy is at eighty-five percent! That's why I'm pushing for the five-hundred million dollar subsidy for eco-tourism development. Why not a hybrid model? Hotels could install tented villas on their rooftops. We should have a minimum guest age of 6 for safety and a noise limit of fifty-five decibels. Hotels should get EarthCheck Gold certification. The future is clearly leisure weekends. The August 12 meeting will finalize these standards. We must also consider the labor requirements. The glamping sector currently demands specialized skills in off-grid water management and biometric security—skills that traditional hotel staff often lack. We are seeing a twenty-five percent shortage in certified 'Eco-Guides' across the Northern Metropolis. Furthermore, the land reclamation projects in Lantau are being redesigned to prioritize these low-density tourism sites over traditional high-rise resorts. This is a seismic shift in how we perceive the utility of our rural land. Prof. Ng, do you see any way to reconcile heritage with this new 'Wild Luxury' model? Only if we maintain the gold-standard service that Hong Kong is famous for. If we sacrifice quality for the sake of a trend, we will lose our reputation in the global market. (120-second pause)",
+    "Task_4_Script": "Task 4. Stakeholders discussing wild camping. Complete the grid. (240-second pause) Good evening. We are here to discuss the 2026 'Wild Camping' Regulation Framework. Environmentalist, what's your concern? We are seeing severe soil erosion in protected zones. We need daily drone patrols on weekends to stop unauthorized camping. The 2025 Biodiversity Audit proved the damage to orchid species is real. And the trash! I'm tired of cleaning up after tourists. We want a three-thousand dollar fine for littering and permit-only parking for villagers. 1823-CAMP should be the hotline. I suggest a digital permit system to limit group sizes to 8 people. We're happy to carry third-party indemnity insurance if it means we can keep operating. We expect regulations by January 2027 after the public consultation phase. All operators will need the code STAY-SAFE-2026 for their permits. This system will utilize 256-bit encryption to ensure that permit data is secure and that visitor numbers are strictly tracked in real-time. We are also looking into biometric identity verification at trailheads to prevent the sharing of digital permits. The goal is total accountability. Resident, does this satisfy the village elders? Only if the fines are strictly enforced and the revenue is reinvested into village infrastructure. We don't want to be the city's playground if we have to pay the price in terms of noise and traffic. (240-second pause) End of Part A.",
+    "Part_B_Script": "Part B. Introduction. You are Chris Wong, a research assistant at the Staycation Bureau. Listen to the briefing by Director Janice Wong. (Pause 5m) Good morning, team. We have momentum after the Expo. But we have a trust gap with rural residents regarding light pollution and noise. Address this in Task 8 to the NGO. Note these synthesis points. First, 'Invisible Fencing' technology: official confirmation that our new guidelines will mandate this tech for sites bordering protected wetlands. It uses a buried boundary wire and high-frequency signal to keep guests within limits without blocking animal migration. This is not in any brochures. Feature it in Task 8. Second, the 'Quiet Hours' policy: sites must enforce silence after 10:00 PM. This is non-negotiable for villagers. For Task 9, uptake in Yuen Long is low—only one thousand two hundred out of four thousand vouchers redeemed. Propose a 'Midnight Discount Scheme'. Bookings between midnight and 6:00 AM for last-minute weekday slots get an extra twenty percent off to fill tents when demand is low. For Task 10, the slogan is 'Wild Luxury, Local Heart'. Mention our partnership with the 'Star-Seeker App' for AR constellation mapping. Oh, and the 'Red Herring' report: the 2015 'Kowloon Urban Hotel Construction Report'. DISREGARD IT COMPLETELY. It's over a decade old and focuses on high-rise hotels in TST. It has no relevance to our 2026 NT focus. Don't let anyone cite that sixty percent occupancy figure for urban hotels as a reason to avoid glamping investment. The 'Midnight Discount Scheme' is only for bookings via the 'STAY-SAFE-2026' app. We expect ten thousand applicants by the end of the year. Task 9 must address capacity limits and the fifty-five decibel noise limit. We are also seeing a rise in the demand for 'Digital Detox' experiences—where we actually Jam the 6G signal for specific hours. This is a huge selling point for the wellness market. I want you to research the feasibility of this for the Q4 pilot. Furthermore, we need to ensure that the $500 million subsidy is correctly allocated across the 42 registered sites based on their soil pH performance. This is the first time we are linking financial incentives to ecological metrics. This is a major innovation. Get the drafts to me by Friday. (End of simulation)"
   }
 }

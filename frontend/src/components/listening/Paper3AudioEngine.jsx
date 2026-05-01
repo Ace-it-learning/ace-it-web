@@ -1,10 +1,8 @@
 import React, { useState, useEffect, useRef, useImperativeHandle, forwardRef } from 'react';
 import { Play, Loader2, Headphones, Volume2, Timer, Clock } from 'lucide-react';
-
 import { motion } from 'framer-motion';
 import { useAuth } from '../../context/AuthContext';
-
-
+import { speak, stopAll } from '../../utils/ttsService';
 
 const Paper3AudioEngine = forwardRef(({ script, phase, onPhaseChange, onTaskChange, onSectionChange, onTidyingStart, onTidyingEnd, onStudyStart, onComplete, onRequireSelection, onCountdownTick, onStatusChange, initialIndex = 0, initialPause = null, onIndexChange }, ref) => {
     const { user } = useAuth();
@@ -22,7 +20,7 @@ const Paper3AudioEngine = forwardRef(({ script, phase, onPhaseChange, onTaskChan
                 
                 // 1. STOP all current audio/speech immediately
                 try {
-                    window.speechSynthesis.cancel();
+                    stopAll();
                     if (audioRef.current) {
                         audioRef.current.pause();
                         audioRef.current.src = "";
@@ -65,7 +63,7 @@ const Paper3AudioEngine = forwardRef(({ script, phase, onPhaseChange, onTaskChan
             console.log("[AudioEngine] Stopping all audio and clearing queues.");
             setIsPlaying(false);
             try {
-                window.speechSynthesis.cancel();
+                stopAll();
                 if (audioRef.current) {
                     audioRef.current.pause();
                     audioRef.current.src = "";
@@ -95,9 +93,7 @@ const Paper3AudioEngine = forwardRef(({ script, phase, onPhaseChange, onTaskChan
                 audioRef.current.load();
                 audioRef.current = null;
             }
-            if (window.speechSynthesis) {
-                window.speechSynthesis.cancel();
-            }
+            stopAll();
         };
     }, []);
 
@@ -199,7 +195,7 @@ const Paper3AudioEngine = forwardRef(({ script, phase, onPhaseChange, onTaskChan
 
             // Phase 1: Play Speech (if text exists and NOT resuming from a mid-item pause)
             if (spokenText && spokenText.length > 1 && !isInitialResume.current) {
-                await playSpeech(spokenText);
+                await playSpeech(spokenText, item.speaker);
                 // IF INDEX CHANGED DURING SPEECH, ABORT THIS LOOP
                 if (currentIndex !== myIndex) return;
             }
@@ -277,36 +273,16 @@ const Paper3AudioEngine = forwardRef(({ script, phase, onPhaseChange, onTaskChan
 
     const currentRequestIdRef = useRef(0);
 
-    const playSpeech = (text) => {
+    const playSpeech = (text, speakerName) => {
         return new Promise((resolve) => {
-            // FORCED BROWSER TTS (Ensuring Zero API Cost)
-            playBrowserSpeech(text, resolve);
+            speak({
+                text,
+                speakerName,
+                onEnd: resolve,
+                rate: 0.95,
+                useBrowserOnly: true // Ensure local browser TTS for Paper 3
+            });
         });
-    };
-
-    const playBrowserSpeech = (text, resolve) => {
-        try {
-            window.speechSynthesis.cancel();
-            const utterance = new SpeechSynthesisUtterance(text);
-            utterance.lang = 'en-GB';
-            utterance.rate = 0.95;
-            utterance.onend = () => resolve();
-            utterance.onerror = () => resolve();
-            // Wait for voices to be loaded if not already
-            if (window.speechSynthesis.getVoices().length === 0) {
-                window.speechSynthesis.onvoiceschanged = () => {
-                    window.speechSynthesis.speak(utterance);
-                };
-            } else {
-                window.speechSynthesis.speak(utterance);
-            }
-            
-            // Failsafe for stuck speech
-            setTimeout(() => { if (window.speechSynthesis.speaking) resolve(); }, 30000);
-        } catch (e) {
-            console.error("SpeechSynthesis error", e);
-            resolve();
-        }
     };
 
     const handleStart = () => {

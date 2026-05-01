@@ -1412,7 +1412,7 @@ const LabPage = () => {
                             <span className="text-[9px] font-black text-indigo-600 dark:text-indigo-400 uppercase tracking-widest whitespace-nowrap">
                                 {grammarSubStep === 'LEARN' ? 'Rule' :
                                  grammarSubStep === 'IDENTIFY' ? 'Spotter' :
-                                 grammarSubStep === 'DRILL' ? 'Drill' : 'Boss'}
+                                 grammarSubStep === 'DRILL' ? 'Drill' : 'Final'}
                             </span>
                         </div>
                     </div>
@@ -1886,7 +1886,7 @@ const LabPage = () => {
                                             <div className="text-center space-y-4">
                                                 <div className="inline-flex items-center gap-3 px-6 py-2 bg-red-600 text-white rounded-full text-sm font-black uppercase tracking-widest shadow-lg shadow-red-600/20">
                                                     <AlertTriangle size={20} />
-                                                    Boss Fight: The Proofreader
+                                                    Final Submission: The Proofreader
                                                 </div>
                                                 <h3 className="text-4xl font-black dark:text-white">Find 3 errors in this report.</h3>
                                             </div>
@@ -1987,7 +1987,7 @@ const LabPage = () => {
                                                     >
                                                         {isSubmitting ? <Loader2 className="animate-spin" size={40} /> : (
                                                             <>
-                                                                DEFEAT THE BOSS
+                                                                FINAL SUBMISSION
                                                                 <ChevronRight size={40} />
                                                             </>
                                                         )}

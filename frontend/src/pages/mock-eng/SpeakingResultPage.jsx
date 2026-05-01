@@ -71,7 +71,7 @@ const SpeakingResultPage = () => {
     }
 
     const assessment = results.results || {};
-    const { domains = {}, overall_level = "U", total_score = 0, trigger_analysis = {}, miss_janie_verdict = {}, part_a_highlights = [], part_b_analysis = {} } = assessment;
+    const { domains = {}, overall_level = "U", total_score = 0, trigger_analysis = {}, miss_janie_verdict: examiner_verdict = {}, part_a_highlights = [], part_b_analysis = {} } = assessment;
 
     const domainScores = [
         { key: 'pronunciation_delivery', label: 'Pronunciation & Delivery', icon: Mic, color: 'bg-indigo-500', score: domains.pronunciation_delivery?.score || 0, feedback: domains.pronunciation_delivery?.feedback },
@@ -214,7 +214,7 @@ const SpeakingResultPage = () => {
                     </motion.div>
                 </div>
 
-                {/* Miss Janie's Verdict */}
+                {/* Examiner's Verdict */}
                 <motion.div 
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -224,25 +224,25 @@ const SpeakingResultPage = () => {
                     <div className="relative z-10 flex flex-col md:flex-row gap-12 items-start">
                         <div className="shrink-0 flex flex-col items-center gap-4">
                             <div className="w-24 h-24 bg-emerald-600 rounded-3xl border-4 border-white/10 flex items-center justify-center overflow-hidden">
-                                <img src="/avatars/Miss_Janie.jpg" alt="Miss Janie" className="w-full h-full object-cover" />
+                                <img src={englishTutor?.avatar || "/avatars/Miss_Janie.jpg"} alt={englishTutor?.name || "Miss Janie"} className="w-full h-full object-cover" />
                             </div>
                             <div className="text-center">
                                 <p className="text-[10px] font-black uppercase tracking-widest text-emerald-400">Examiner</p>
-                                <p className="text-lg font-black tracking-tight">Miss Janie</p>
+                                <p className="text-lg font-black tracking-tight">{englishTutor?.name || "Miss Janie"}</p>
                             </div>
                         </div>
                         <div className="space-y-6 flex-1">
                             <div>
                                 <h3 className="text-xs font-black text-emerald-400 uppercase tracking-[0.2em] mb-3">Overall Verdict</h3>
                                 <p className="text-2xl font-medium leading-relaxed italic opacity-95">
-                                    "{miss_janie_verdict.summary || "Your interaction was constructive. Focus on more sophisticated transitions to reach Level 5**."}"
+                                    "{examiner_verdict.summary || "Your interaction was constructive. Focus on more sophisticated transitions to reach Level 5**."}"
                                 </p>
                             </div>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-6 border-t border-white/10">
                                 <div>
                                     <h5 className="text-[10px] font-black text-emerald-400 uppercase tracking-widest mb-4">Key Strengths</h5>
                                     <ul className="space-y-3">
-                                        {(miss_janie_verdict.pros || []).map((pro, i) => (
+                                        {(examiner_verdict.pros || []).map((pro, i) => (
                                             <li key={i} className="flex items-start gap-3 text-sm text-slate-300">
                                                 <div className="size-5 bg-emerald-500/20 text-emerald-400 rounded flex items-center justify-center shrink-0 mt-0.5">
                                                     <CheckCircle2 size={12} />
@@ -255,7 +255,7 @@ const SpeakingResultPage = () => {
                                 <div>
                                     <h5 className="text-[10px] font-black text-rose-400 uppercase tracking-widest mb-4">Target for Improvement</h5>
                                     <p className="text-sm text-slate-300 leading-relaxed bg-white/5 p-4 rounded-2xl border border-white/5">
-                                        {miss_janie_verdict.advice}
+                                        {examiner_verdict.advice}
                                     </p>
                                 </div>
                             </div>

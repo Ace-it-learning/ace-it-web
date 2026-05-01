@@ -1,4 +1,5 @@
 import React from 'react';
+import { useAvatar } from '../../context/AvatarContext';
 import { BrainCircuit } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '../../utils/cn';
@@ -13,9 +14,12 @@ import { cn } from '../../utils/cn';
 const GradingOverlay = ({ 
     isOpen, 
     title = "Evaluating Writing", 
-    status = "Miss Janie is reviewing your work...", 
+    status, 
     progress 
 }) => {
+    const { englishTutor } = useAvatar();
+    const defaultStatus = `${englishTutor?.name || 'Your tutor'} is reviewing your work...`;
+    const finalStatus = status === "Miss Janie is reviewing your work..." || !status ? defaultStatus : status;
     return (
         <AnimatePresence>
             {isOpen && (
@@ -44,7 +48,7 @@ const GradingOverlay = ({
                         </h3>
                         
                         <p className="text-slate-400 text-[10px] font-bold uppercase tracking-widest mb-8 leading-relaxed">
-                            {status}
+                            {finalStatus}
                         </p>
                         
                         {/* Progress Bar (if provided) */}

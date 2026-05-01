@@ -20,7 +20,7 @@ const SpeakingLanguageLab = () => {
     const navigate = useNavigate();
     const [searchParams] = useSearchParams();
     const { user } = useAuth();
-    const { activeAgent, equipment } = useAvatar();
+    const { activeAgent, englishTutor, equipment } = useAvatar();
     const level = searchParams.get('level') || '3';
     const topic = searchParams.get('topic') || 'language_patterns';
 
@@ -79,7 +79,8 @@ const SpeakingLanguageLab = () => {
     };
 
     const runIntro = () => {
-        const introText = `Welcome to the Vocab Lab. Today we are focusing on "${quest?.scenario}". Annie will read the target sentences, and you practice repeating them with the correct emphasis. Annie, are you ready?`;
+        const tutorName = englishTutor?.name || activeAgent?.name || "Miss Janie";
+        const introText = `Welcome to the Vocab Lab. Today we are focusing on "${quest?.scenario}". ${tutorName} will guide you, and Annie will read the target sentences. Use the correct emphasis. Let's start!`;
         
         playAudio(introText, 'Tutor', () => {
             setPhase('PRACTICE');
@@ -454,7 +455,7 @@ const SpeakingLanguageLab = () => {
                                 <img src={activeAgent.avatar} alt="T" className="size-full object-cover" />
                             </div>
                             <div className="flex-1">
-                                <h4 className="text-sm font-black text-indigo-400 uppercase tracking-widest">{activeAgent.name}</h4>
+                                <h4 className="text-sm font-black text-indigo-400 uppercase tracking-widest">{englishTutor?.name || activeAgent?.name}</h4>
                                 <p className="text-lg font-bold leading-tight">{speechState.text}</p>
                             </div>
                         </motion.div>

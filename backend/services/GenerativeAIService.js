@@ -121,9 +121,10 @@ class GenerativeAIService {
         this.genAI = new GoogleGenerativeAI(apiKey);
         this.isVertex = false;
         this.currentRegion = 'global/api_key';
+        this.requestHistory = []; // Track RPM for free-tier protection
 
         // 2026 COST SAVER: In DEV, we map PRO requests to FLASH by default to prevent accidental Tier 1 billing.
-        const isDev = process.env.NODE_ENV === 'development' || !process.env.K_SERVICE;
+        const isDev = process.env.NODE_ENV === 'development' || !process.env.NODE_ENV || !process.env.K_SERVICE;
         
         this.studioModelMap = {
             "ace-it-flash": "gemini-flash-latest",
@@ -134,7 +135,37 @@ class GenerativeAIService {
             "gemini-pro-latest": isDev ? "gemini-flash-latest" : "gemini-pro-latest"
         };
 
+        if (isDev) {
+            console.log(`[AIService] 🛡️  FREE TIER PRIORITY: Standardizing on Gemini 1.5 Flash for development.`);
+        }
+
         console.log(`[AIService] Initialized Google AI Studio (Local Mode) | Dev Mode: ${isDev}`);
+    }
+
+    /**
+     * Rate Limiter for Free Tier Protection (Local Dev Only)
+     * Ensures we don't exceed the 15 RPM limit for Gemini 1.5 Flash
+     */
+    async enforceFreeTierLimits() {
+        const isDev = process.env.NODE_ENV === 'development' || !process.env.NODE_ENV || !process.env.K_SERVICE;
+        if (!isDev || this.isVertex) return;
+
+        const now = Date.now();
+        // Remove requests older than 1 minute
+        this.requestHistory = (this.requestHistory || []).filter(ts => now - ts < 60000);
+
+        // 15 RPM is the hard limit for Gemini 1.5 Flash Free Tier
+        // We use 14 for a safety margin
+        if (this.requestHistory.length >= 14) {
+            const oldestRequest = this.requestHistory[0];
+            const waitTime = 60000 - (now - oldestRequest) + 1000; // Wait until the oldest request clears + 1s buffer
+            
+            console.warn(`[AIService] 🐢 FREE TIER LIMIT: Approaching 15 RPM. Throttling for ${Math.ceil(waitTime / 1000)}s to stay in Free Tier...`);
+            await new Promise(resolve => setTimeout(resolve, waitTime));
+            return this.enforceFreeTierLimits(); // Re-check after waiting
+        }
+
+        this.requestHistory.push(now);
     }
 
     getModel(config = {}) {
@@ -442,14 +473,19 @@ class GenerativeAIService {
      */
     async executeWithRetry(action, input, config = {}, retries = 6) {
         // [COST GUARD]: Reduce retries in DEV to prevent "Retry Storms" that burn quota/tokens
-        const isDev = process.env.NODE_ENV === 'development' || !process.env.K_SERVICE;
+        const isDev = process.env.NODE_ENV === 'development' || !process.env.NODE_ENV || !process.env.K_SERVICE;
         const effectiveRetries = isDev ? Math.min(retries, 2) : retries;
         
         await this.init();
 
+        // 🛡️ FREE TIER PROTECTION: Wait if we are hitting the 15 RPM limit in DEV
+        if (isDev) {
+            await this.enforceFreeTierLimits();
+        }
+
         const requestedModel = config.model || "ace-it-flash";
         const isProModel = requestedModel.includes("pro") || (typeof config.highQuality === 'boolean' && config.highQuality);
-        const isDevelopment = process.env.NODE_ENV === 'development' && process.env.FORCE_VERTEX_IN_DEV !== 'true';
+        const isDevelopment = (process.env.NODE_ENV === 'development' || !process.env.NODE_ENV) && process.env.FORCE_VERTEX_IN_DEV !== 'true';
 
         // --- COST GUARD RATE LIMITER (DEV ONLY) ---
         if (isDevelopment && isProModel) {

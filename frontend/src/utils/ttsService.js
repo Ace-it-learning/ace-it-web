@@ -21,9 +21,12 @@ const normalizeText = (text) => {
  */
 const detectGender = (name = "") => {
     const n = name.toLowerCase();
-    if (n.includes("ms.") || n.includes("mrs.") || n.includes("miss") || n.includes("annie") || n.includes("beatrice")) return "FEMALE";
-    if (n.includes("mr.") || n.includes("dr.") || n.includes("david") || n.includes("samuel") || n.includes("ben")) return "MALE";
-    return "FEMALE"; // Default
+    // Titles & Common Names
+    if (n.includes("ms.") || n.includes("mrs.") || n.includes("miss") || n.includes("madam") || n.includes("annie") || n.includes("beatrice") || n.includes("brenda") || n.includes("sarah") || n.includes("judy") || n.includes("cecilia") || n.includes("choi") || n.includes("elena") || n.includes("linda") || n.includes("goudie") || n.includes("moss") || n.includes("clara") || n.includes("janice") || n.includes("julianne")) return "FEMALE";
+    if (n.includes("mr.") || n.includes("dr.") || n.includes("sir") || n.includes("david") || n.includes("samuel") || n.includes("ben") || n.includes("justin") || n.includes("lawrence") || n.includes("vincent") || n.includes("cheng") || n.includes("tan") || n.includes("ho") || n.includes("adrian") || n.includes("jonathan") || n.includes("aris") || n.includes("marco") || n.includes("ng") || n.includes("marcus") || n.includes("benny") || n.includes("alex") || n.includes("vance") || n.includes("thorne") || n.includes("alan")) return "MALE";
+    
+    // Default fallback
+    return "FEMALE";
 };
 
 /**
@@ -38,8 +41,8 @@ const getSystemVoice = (lang = 'en-GB', gender = 'FEMALE') => {
 
     // Try to match gender by name heuristics (not perfect but better than nothing)
     const targetGender = gender.toUpperCase();
-    const femaleKeywords = ['female', 'zira', 'samantha', 'victoria', 'hazel', 'google uk english female'];
-    const maleKeywords = ['male', 'david', 'james', 'google uk english male'];
+    const femaleKeywords = ['female', 'zira', 'samantha', 'victoria', 'hazel', 'google uk english female', 'catherine', 'alice', 'susan'];
+    const maleKeywords = ['male', 'david', 'james', 'google uk english male', 'alex', 'daniel', 'arthur', 'mark', 'george'];
 
     let matched = filtered.filter(v => {
         const vName = v.name.toLowerCase();

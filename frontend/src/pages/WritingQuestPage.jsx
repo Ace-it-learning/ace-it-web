@@ -2,6 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { LoadingPage, GradingOverlay } from '../components/shared';
 import { useAuth } from '../context/AuthContext';
+import { useAvatar } from '../context/AvatarContext';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Clock, Save, Trash2 } from 'lucide-react';
+
 
 // Studio Components
 import WritingStudioLayout from '../components/writing/WritingStudioLayout';
@@ -12,6 +16,8 @@ import WritingStudioControlPanel from '../components/writing/WritingStudioContro
 
 const WritingQuestPage = () => {
     const { user } = useAuth();
+    const { englishTutor } = useAvatar();
+
     const location = useLocation();
     const navigate = useNavigate();
     const { isMock, duration } = location.state || {}; // Mock detection
@@ -33,6 +39,7 @@ const WritingQuestPage = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(true);
     const [isLeftSidebarOpen, setIsLeftSidebarOpen] = useState(true);
     const [cheatLibrary, setCheatLibrary] = useState(null);
+    const [showQuitModal, setShowQuitModal] = useState(false);
 
     // Derived State
     const wordCount = content.trim().split(/\s+/).filter(x => x.length > 0).length;
@@ -479,6 +486,13 @@ const WritingQuestPage = () => {
                         alert("Time is up! Submitting your draft.");
                         handleSubmit();
                     }}
+                    onBack={() => {
+                        if (title.trim() || content.trim()) {
+                            setShowQuitModal(true);
+                        } else {
+                            navigate('/dashboard', { state: { openRoadmap: 'ENGLISH', roadmapFilter: 'WRITING' } });
+                        }
+                    }}
                 />
             }
             leftColumn={
@@ -521,8 +535,67 @@ const WritingQuestPage = () => {
             <GradingOverlay 
                 isOpen={isReviewing || isSubmitting} 
                 title={isSubmitting ? "Finalizing Submission" : "Evaluating Writing"}
-                status={isSubmitting ? "Transmitting your response to AI examiners..." : "Miss Janie is reviewing your work..."}
+                status={isSubmitting ? "Transmitting your response to AI examiners..." : `${englishTutor?.name || "Miss Janie"} is reviewing your work...`}
             />
+
+            {/* Quit Confirmation Modal */}
+            <AnimatePresence>
+                {showQuitModal && (
+                    <div className="fixed inset-0 z-[200] flex items-center justify-center p-8">
+                        <motion.div 
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            onClick={() => setShowQuitModal(false)}
+                            className="absolute inset-0 bg-slate-900/60 backdrop-blur-md"
+                        />
+                        <motion.div 
+                            initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                            animate={{ opacity: 1, scale: 1, y: 0 }}
+                            exit={{ opacity: 0, scale: 0.9, y: 20 }}
+                            className="bg-white w-full max-w-md p-10 rounded-[3rem] shadow-2xl relative text-center"
+                        >
+                            <div className="size-16 bg-amber-50 text-amber-500 rounded-2xl flex items-center justify-center mx-auto mb-8 shadow-sm">
+                                <Clock size={32} />
+                            </div>
+                            <h2 className="text-2xl font-black text-slate-900 mb-4 uppercase tracking-tight">Pause Progress?</h2>
+                            <p className="text-slate-500 font-medium mb-10 leading-relaxed text-sm">
+                                You have unsaved changes in your writing. How would you like to proceed?
+                            </p>
+                            <div className="space-y-3">
+                                <button 
+                                    onClick={() => {
+                                        // Auto-save logic handles the "save" part
+                                        navigate('/dashboard', { state: { openRoadmap: 'ENGLISH', roadmapFilter: 'WRITING' } });
+                                    }}
+                                    className="w-full py-5 bg-slate-900 text-white rounded-2xl font-black uppercase text-xs tracking-widest hover:bg-black transition-all shadow-xl shadow-slate-900/10 active:scale-95 flex items-center justify-center gap-2"
+                                >
+                                    <Save size={16} />
+                                    Save & Quit
+                                </button>
+                                <button 
+                                    onClick={() => {
+                                        if (questData?.id) {
+                                            localStorage.removeItem(`writing_draft_${questData.id}`);
+                                        }
+                                        navigate('/dashboard', { state: { openRoadmap: 'ENGLISH', roadmapFilter: 'WRITING' } });
+                                    }}
+                                    className="w-full py-5 bg-rose-50 text-rose-600 rounded-2xl font-black uppercase text-xs tracking-widest hover:bg-rose-100 transition-all active:scale-95 flex items-center justify-center gap-2"
+                                >
+                                    <Trash2 size={16} />
+                                    Quit without saving
+                                </button>
+                                <button 
+                                    onClick={() => setShowQuitModal(false)}
+                                    className="w-full py-5 bg-slate-50 text-slate-400 rounded-2xl font-black uppercase text-xs tracking-widest hover:bg-slate-100 transition-all active:scale-95"
+                                >
+                                    Keep Working
+                                </button>
+                            </div>
+                        </motion.div>
+                    </div>
+                )}
+            </AnimatePresence>
         </WritingStudioLayout>
     );
 };

@@ -2,343 +2,363 @@
   "meta": {
     "title": "HKDSE Paper 3: Sustainable Consumption (Elite 2026 Edition)",
     "topic": "The Zero Waste movement and waste charging scheme impact in HK.",
-    "difficulty": "Level 5** Authentic (High Stamina)",
-    "total_marks_part_a": 50,
+    "difficulty": "Level 5** Authentic (High Stamina / 2026 Edition)",
+    "total_marks_part_a": 55,
     "total_marks_part_b": 50
   },
   "Part_A": {
     "tasks": [
       {
         "id": "Task_1",
-        "instructions": "You are at the reception of the 'Sustainable HK Expo 2024'. Complete the registration form below.",
+        "instructions": "You are at the reception of the 'Sustainable HK Expo 2026'. Complete the registration and technical survey form. You now have two minutes to study the task. (120-second pause)",
         "questions": [
           {
+            "label": "Full Name of Organization:",
+            "type": "Short_Answer",
             "id": "t1_q1",
-            "type": "Fill_in_Blanks",
-            "label": "Name of Organization:",
             "answer": "Eco-Action Alliance"
           },
           {
+            "label": "Primary Representative:",
+            "type": "Short_Answer",
             "id": "t1_q2",
-            "type": "Fill_in_Blanks",
-            "label": "Primary Contact Person:",
             "answer": "Marcus Tsang"
           },
           {
-            "id": "t1_q3",
+            "label": "Direct Contact Number:",
             "type": "Fill_in_Blanks",
-            "label": "Phone Number:",
+            "id": "t1_q3",
             "answer": "6455 8890"
           },
           {
-            "id": "t1_q4",
-            "type": "Fill_in_Blanks",
             "label": "Exhibitor Tier:",
+            "type": "Multiple_Choice",
+            "id": "t1_q4",
             "answer": "Gold Sustainability Partner"
           },
           {
-            "id": "t1_q5",
+            "label": "Number of Staff Badges:",
             "type": "Fill_in_Blanks",
-            "label": "Total Staff Badges:",
+            "id": "t1_q5",
             "answer": "8"
           },
           {
+            "label": "Assigned Booth Zone:",
+            "type": "Short_Answer",
             "id": "t1_q6",
-            "type": "Fill_in_Blanks",
-            "label": "Assigned Booth Area:",
             "answer": "Green Innovation Zone"
           },
           {
-            "id": "t1_q7",
+            "label": "Number of Power Sockets:",
             "type": "Fill_in_Blanks",
-            "label": "Electricity Supply Required:",
-            "answer": "3 Sockets"
+            "id": "t1_q7",
+            "answer": "3"
           },
           {
+            "label": "Equipment for Demo:",
+            "type": "Short_Answer",
             "id": "t1_q8",
-            "type": "Fill_in_Blanks",
-            "label": "Dietary Restrictions (Lunch):",
+            "answer": "Composting Machines"
+          },
+          {
+            "label": "Dietary Restriction:",
+            "type": "Short_Answer",
+            "id": "t1_q9",
             "answer": "Strictly Nut-free"
           },
           {
-            "id": "t1_q9",
-            "type": "Fill_in_Blanks",
-            "label": "Attending Opening Ceremony:",
+            "label": "Opening Ceremony Attendance:",
+            "type": "Multiple_Choice",
+            "id": "t1_q10",
             "answer": "Yes"
           },
           {
-            "id": "t1_q10",
+            "label": "Setup Time (AM):",
             "type": "Fill_in_Blanks",
-            "label": "Preferred Setup Time:",
-            "answer": "7:15 AM"
+            "id": "t1_q11",
+            "answer": "7:15"
           },
           {
-            "id": "t1_q11",
-            "type": "Fill_in_Blanks",
             "label": "Panel Session Choice:",
+            "type": "Short_Answer",
+            "id": "t1_q12",
             "answer": "Circular Economy 101"
           },
           {
-            "id": "t1_q12",
-            "type": "Fill_in_Blanks",
             "label": "Invoicing Reference:",
-            "answer": "EA-2024-HK"
+            "type": "Short_Answer",
+            "id": "t1_q13",
+            "answer": "EA-2026-HK"
+          },
+          {
+            "label": "Registration Fee Status:",
+            "type": "Multiple_Choice",
+            "id": "t1_q14",
+            "answer": "Paid"
           }
         ]
       },
       {
         "id": "Task_2",
-        "instructions": "Listen to a talk by an Environmental Protection Department (EPD) officer regarding the Municipal Solid Waste (MSW) Charging scheme. Complete the notes.",
+        "instructions": "Listen to a keynote by Dr. Linda Woo on 'The Circular Economy Roadmap'. Complete the notes. You now have two minutes to study the task. (120-second pause)",
         "questions": [
           {
+            "label": "Municipal Waste Charge ($/L):",
+            "type": "Fill_in_Blanks",
             "id": "t2_q1",
-            "type": "Fill_in_Blanks",
-            "label": "Original Trial Start Month:",
-            "answer": "April 2024"
-          },
-          {
-            "id": "t2_q2",
-            "type": "Fill_in_Blanks",
-            "label": "Cost per Litre ($):",
             "answer": "0.11"
           },
           {
-            "id": "t2_q3",
+            "label": "Original Pilot Month:",
             "type": "Fill_in_Blanks",
+            "id": "t2_q2",
+            "answer": "April 2024"
+          },
+          {
             "label": "Number of Designated Bag Sizes:",
+            "type": "Fill_in_Blanks",
+            "id": "t2_q3",
             "answer": "9"
           },
           {
-            "id": "t2_q4",
-            "type": "Fill_in_Blanks",
             "label": "Smallest Bag Capacity (L):",
+            "type": "Fill_in_Blanks",
+            "id": "t2_q4",
             "answer": "3"
           },
           {
+            "label": "Non-compliance Fine ($):",
+            "type": "Fill_in_Blanks",
             "id": "t2_q5",
-            "type": "Multiple_Choice",
-            "question": "Where can the designated bags be purchased?",
-            "options": [
-              "Convenience stores",
-              "Post offices only",
-              "Police stations"
-            ],
+            "answer": "1,500"
+          },
+          {
+            "label": "Authorized Retailer type:",
+            "type": "Short_Answer",
+            "id": "t2_q6",
             "answer": "Convenience stores"
           },
           {
-            "id": "t2_q6",
-            "type": "Multiple_Choice",
-            "question": "What is the penalty for non-compliance?",
-            "options": [
-              "$1,000",
-              "$1,500",
-              "$2,000"
-            ],
-            "answer": "$1,500"
-          },
-          {
+            "label": "Food Waste Pilot District:",
+            "type": "Short_Answer",
             "id": "t2_q7",
-            "type": "Fill_in_Blanks",
-            "label": "Food Waste Pilot Area:",
             "answer": "Tsuen Wan South"
           },
           {
-            "id": "t2_q8",
+            "label": "Vulnerable Group Subsidy ($):",
             "type": "Fill_in_Blanks",
-            "label": "Subsidy per Low-income Resident:",
-            "answer": "$10 per month"
+            "id": "t2_q8",
+            "answer": "10 per month"
           },
           {
+            "label": "Recycling Partner Name:",
+            "type": "Short_Answer",
             "id": "t2_q9",
-            "type": "Fill_in_Blanks",
-            "label": "Recycling Hotlines Provider:",
             "answer": "Green HK Solutions"
           },
           {
+            "label": "Official Mobile App:",
+            "type": "Short_Answer",
             "id": "t2_q10",
-            "type": "Fill_in_Blanks",
-            "label": "Main Challenge Identified:",
-            "answer": "Public awareness"
-          },
-          {
-            "id": "t2_q11",
-            "type": "Fill_in_Blanks",
-            "label": "Official Mobile App Name:",
             "answer": "Waste-Less HK"
           },
           {
-            "id": "t2_q12",
+            "label": "Organic Recovery Center Name:",
+            "type": "Short_Answer",
+            "id": "t2_q11",
+            "answer": "O-PARK2"
+          },
+          {
+            "label": "Daily Food Waste capacity (tonnes):",
             "type": "Fill_in_Blanks",
-            "label": "Next Public Consultation Date:",
+            "id": "t2_q12",
+            "answer": "300"
+          },
+          {
+            "label": "Circular Credit system name:",
+            "type": "Short_Answer",
+            "id": "t2_q13",
+            "answer": "Eco-Loop"
+          },
+          {
+            "label": "Target Recycling Rate for 2026 (%):",
+            "type": "Fill_in_Blanks",
+            "id": "t2_q14",
+            "answer": "45%"
+          },
+          {
+            "label": "Primary Energy Output:",
+            "type": "Short_Answer",
+            "id": "t2_q15",
+            "answer": "Biogas"
+          },
+          {
+            "label": "Next Policy Milestone Date:",
+            "type": "Fill_in_Blanks",
+            "id": "t2_q16",
             "answer": "October 12"
           }
         ]
       },
       {
         "id": "Task_3",
-        "instructions": "Three experts are discussing 'Zero Waste Challenges in HK'. Complete the table and tick the correct boxes.",
+        "instructions": "Listen to a panel discussion on 'Zero Waste Challenges'. Complete the table. You now have two minutes to study the task. (120-second pause)",
         "questions": [
           {
+            "label": "Dr. Chan's Packaging focus:",
+            "type": "Short_Answer",
             "id": "t3_q1",
-            "type": "Multiple_Choice",
-            "question": "Dr. Chan thinks the biggest hurdle is:",
-            "options": [
-              "Lack of space",
-              "Retail packaging",
-              "Labor shortage"
-            ],
-            "answer": "Retail packaging"
+            "answer": "Retail double-wrapping"
           },
           {
+            "label": "Ms. Goudie's retail suggestion:",
+            "type": "Short_Answer",
             "id": "t3_q2",
-            "type": "Multiple_Choice",
-            "question": "Ms. Goudie emphasizes the need for:",
-            "options": [
-              "More landfills",
-              "Bulk stores",
-              "Incineration"
-            ],
             "answer": "Bulk stores"
           },
           {
+            "label": "Mr. Lam's policy demand:",
+            "type": "Short_Answer",
             "id": "t3_q3",
-            "type": "Multiple_Choice",
-            "question": "Mr. Lam suggests the government should:",
-            "options": [
-              "Ban plastic toys",
-              "Mandate composting",
-              "Tax fast fashion"
-            ],
-            "answer": "Mandate composting"
+            "answer": "Mandatory composting"
           },
           {
-            "id": "t3_q4",
+            "label": "Plastic Bottle Refund ($):",
             "type": "Fill_in_Blanks",
+            "id": "t3_q4",
+            "answer": "0.10"
+          },
+          {
             "label": "Zero Waste Target Year:",
+            "type": "Fill_in_Blanks",
+            "id": "t3_q5",
             "answer": "2035"
           },
           {
-            "id": "t3_q5",
+            "label": "GREEN@COMMUNITY total points:",
             "type": "Fill_in_Blanks",
-            "label": "Plastic Bottle Refund Amount:",
-            "answer": "0.10 per bottle"
-          },
-          {
             "id": "t3_q6",
-            "type": "Fill_in_Blanks",
-            "label": "Number of GREEN@COMMUNITY points:",
             "answer": "Over 160"
           },
           {
+            "label": "Current Campaign Motto:",
+            "type": "Short_Answer",
             "id": "t3_q7",
-            "type": "Fill_in_Blanks",
-            "label": "Key Message of Campaign:",
             "answer": "Reduce Before Recycle"
           },
           {
-            "id": "t3_q8",
+            "label": "Composting Machine Subsidy (%):",
             "type": "Fill_in_Blanks",
-            "label": "Composting Machine Subsidy:",
-            "answer": "50% of cost"
+            "id": "t3_q8",
+            "answer": "50%"
           },
           {
-            "id": "t3_q9",
-            "type": "Fill_in_Blanks",
             "label": "Recommended Workshop Topic:",
+            "type": "Short_Answer",
+            "id": "t3_q9",
             "answer": "Textile Repair"
           },
           {
-            "id": "t3_q10",
+            "label": "NGO Audit Deadline:",
             "type": "Fill_in_Blanks",
-            "label": "Audit Deadline for NGOs:",
+            "id": "t3_q10",
             "answer": "August 31"
           },
           {
+            "label": "Eco-friendly Bag Material:",
+            "type": "Short_Answer",
             "id": "t3_q11",
-            "type": "Fill_in_Blanks",
-            "label": "Preferred Bag Material:",
-            "answer": "Cornstarch-based"
+            "answer": "Cornstarch"
           },
           {
+            "label": "Business Support Email:",
+            "type": "Short_Answer",
             "id": "t3_q12",
-            "type": "Fill_in_Blanks",
-            "label": "Support Email for Businesses:",
             "answer": "biz-green@epd.gov.hk"
           }
         ]
       },
       {
         "id": "Task_4",
-        "instructions": "Three stakeholders are discussing the impact of the Waste Charging Scheme. Complete the matrix.",
+        "instructions": "Listen to the consultation with Benny Kwok and policy analysts. Complete the matrix. You now have two minutes to study the task. (120-second pause)",
         "questions": [
           {
+            "label": "Retailer's impact on profit (%):",
+            "type": "Fill_in_Blanks",
             "id": "t4_q1",
-            "type": "Fill_in_Blanks",
-            "label": "Retailer A (Owner) - Impact on Cost:",
-            "answer": "Profit margins will drop by 3%"
+            "answer": "3%"
           },
           {
+            "label": "Benny's technical complaint:",
+            "type": "Short_Answer",
             "id": "t4_q2",
-            "type": "Fill_in_Blanks",
-            "label": "Retailer A - Main Complaint:",
-            "answer": "Customers expect free plastic bags"
+            "answer": "Bag thickness"
           },
           {
+            "label": "Benny's Proposal for SMEs:",
+            "type": "Short_Answer",
             "id": "t4_q3",
-            "type": "Fill_in_Blanks",
-            "label": "Retailer A - Proposal:",
-            "answer": "Delayed rollout for SMEs"
+            "answer": "Delayed rollout"
           },
           {
+            "label": "Environmentalist's goal (% waste drop):",
+            "type": "Fill_in_Blanks",
             "id": "t4_q4",
-            "type": "Fill_in_Blanks",
-            "label": "Environmentalist B - Impact on Volume:",
-            "answer": "Daily waste down by 25%"
+            "answer": "25%"
           },
           {
+            "label": "Proposed ban target:",
+            "type": "Short_Answer",
             "id": "t4_q5",
-            "type": "Fill_in_Blanks",
-            "label": "Environmentalist B - Main Focus:",
-            "answer": "Phasing out single-use plastics"
+            "answer": "Single-use plastics"
           },
           {
+            "label": "Housing Manager's staffing need:",
+            "type": "Fill_in_Blanks",
             "id": "t4_q6",
-            "type": "Fill_in_Blanks",
-            "label": "Environmentalist B - Proposal:",
-            "answer": "Ban all non-recyclable packaging"
+            "answer": "5 cleaners"
           },
           {
+            "label": "Illegal Dumping location concern:",
+            "type": "Short_Answer",
             "id": "t4_q7",
-            "type": "Fill_in_Blanks",
-            "label": "Housing Manager C - Impact on Staffing:",
-            "answer": "Need 5 more cleaners per estate"
+            "answer": "Stairwells"
           },
           {
+            "label": "Proposed surveillance tech:",
+            "type": "Short_Answer",
             "id": "t4_q8",
-            "type": "Fill_in_Blanks",
-            "label": "Housing Manager C - Main Concern:",
-            "answer": "Illegal dumping in stairwells"
+            "answer": "AI cameras"
           },
           {
+            "label": "New Certification for Shops:",
+            "type": "Short_Answer",
             "id": "t4_q9",
-            "type": "Fill_in_Blanks",
-            "label": "Housing Manager C - Proposal:",
-            "answer": "Install AI-surveillance at bin centers"
+            "answer": "Green SME Accreditation"
           },
           {
+            "label": "Consensus Recommendation:",
+            "type": "Short_Answer",
             "id": "t4_q10",
-            "type": "Consensus Recommendation:",
-            "answer": "Tiered implementation strategy"
+            "answer": "Tiered implementation"
           },
           {
+            "label": "Urgent technical fix required:",
+            "type": "Short_Answer",
             "id": "t4_q11",
-            "type": "Urgent Action Required:",
-            "answer": "Revise the bag thickness"
+            "answer": "Reinforced seams"
           },
           {
+            "label": "Liaison Meeting Date:",
+            "type": "Fill_in_Blanks",
             "id": "t4_q12",
-            "type": "Next Liaison Meeting:",
             "answer": "June 15"
+          },
+          {
+            "label": "Public Awareness Catchphrase:",
+            "type": "Short_Answer",
+            "id": "t4_q13",
+            "answer": "Earth-Friendly, Pocket-Friendly"
           }
         ]
       }
@@ -346,127 +366,167 @@
     "script": [
       {
         "speaker": "Announcer",
-        "text": "Hong Kong Diploma of Secondary Education Examination 2024. English Language Paper 3. Listening and Integrated Skills."
+        "text": "Hong Kong Diploma of Secondary Education Examination 2026. English Language Paper 3. Listening and Integrated Skills. Sustainable Consumption - High Stamina Mock Exam. This examination is specifically designed to test your focus, resilience, and high-speed information processing over an extended listening duration. This recording will be played once only."
       },
       {
         "speaker": "Announcer",
-        "text": "The entire broadcast will last approximately one hour. Part A. Task 1. You are at the reception of the Sustainable HK Expo 2024. Listen to the conversation between a staff member and Marcus Tsang. Complete the registration form. You now have two minutes to study the task. (120-second pause)"
+        "text": "The entire broadcast will last approximately one hour and twenty-five minutes. During the examination, you will hear several recordings. You will have time to read the instructions and the questions. You will also have time to check your work. Please ensure your electronic devices are switched off and placed under your chair. Part A. Task 1. You are at the reception of the Sustainable HK Expo 2026. Listen to the conversation between the receptionist, Brenda, and an exhibitor, Marcus Tsang. Complete the registration and technical survey form. You now have two minutes to study the task. (120-second pause)"
       },
       {
-        "speaker": "Receptionist",
-        "text": "Good morning. Welcome to the Sustainable HK Expo. We have a lot of exhibitors this year—over two hundred! Can I have your name and organization, please?"
-      },
-      {
-        "speaker": "Marcus",
-        "text": "Hi there. I'm Marcus Tsang. I'm with the Eco-Action Alliance. We have a booth booked in the main hall."
-      },
-      {
-        "speaker": "Receptionist",
-        "text": "Eco-Action Alliance... let me check the digital ledger. Ah, yes, Marcus Tsang. Is that T-S-A-N-G?"
+        "speaker": "Brenda",
+        "text": "Good morning! Welcome to the 2026 Sustainable HK Expo. We're in the absolute final hour of setup before the doors officially open to the general public, and as you can probably see from the pallets of equipment everywhere, it is absolute chaos back here in the registration hall! We've got over two hundred and fifty exhibitors from across the globe this year—it is officially the biggest turnout we have ever seen, likely because the new waste charging scheme and the circular economy roadmap have become such massive strategic priorities for every single industry in Hong Kong. We’re expecting over ten thousand visitors today alone, so the pressure is really on the registration team! How can I help you with your check-in and technical registration today?"
       },
       {
         "speaker": "Marcus",
-        "text": "Correct. And if you need a contact number, it's 6455 8890. I'm the primary point of contact for the three days of the event."
+        "text": "Good morning, Brenda. I can certainly see the energy and the high stress levels in the hall today! I’ve been queuing for nearly fifteen minutes just to get past the initial security scanners and the badge verification unit. My name is Marcus Tsang—that's M-A-R-C-U-S, and Tsang is T-S-A-N-G. I'm here representing the Eco-Action Alliance. We have the central booth in the Green Innovation Zone—it’s booth G-12, right next to the massive vertical solar panel display and the new community hydroponics garden. We’re showing off some quite heavy machinery and interactive sensors this year, so I hope our logistics and technical requirements are in order."
       },
       {
-        "speaker": "Receptionist",
-        "text": "Thank you. I see you've registered as a Gold Sustainability Partner. That gives you access to the premium networking lounge and the VIP breakfast. How many staff badges will you be needing today? Our record says five?"
-      },
-      {
-        "speaker": "Marcus",
-        "text": "We actually increased that last week via the portal. We should have eight badges in total. Our volunteers are arriving later this afternoon."
-      },
-      {
-        "speaker": "Receptionist",
-        "text": "Eight badges. I'll print the remaining three now. Your booth is located in the Green Innovation Zone. It's the central area with the large vertical garden."
+        "speaker": "Brenda",
+        "text": "Eco-Action Alliance... let me just search my digital register here on the main server. The system is being a bit sluggish this morning, probably because every single exhibitor is trying to sync their exhibition apps and download the high-resolution 3D floor maps at the same time. Ah, yes, here you are. Marcus Tsang. And I have your primary contact number listed as 6455 8890. Is that still the best direct mobile line to reach you if we have any emergency announcements, schedule changes for the seminars, or if your equipment triggers the high-sensitivity smoke alarms again like it did at the regional expo in Singapore last year?"
       },
       {
         "speaker": "Marcus",
-        "text": "Perfect. Now, about the technical setup—we're bringing a few smart composting machines to demo. We specifically requested three power sockets. Is that confirmed?"
+        "text": "6-4-5-5, 8-8-9-0. Yes, that's my direct mobile number, and I can promise the internal ventilation on our composting units is much more efficient this year! And I see we've been upgraded to the 'Gold Sustainability Partner' tier. That should give us the priority loading bay access, the VIP networking breakfast in the Diamond Lounge, and the executive parking passes for our transport team, correct? Our university finance team was very specific about the benefits of this tier when they approved the budget."
       },
       {
-        "speaker": "Receptionist",
-        "text": "Yes, three sockets have been allocated to your booth. Now, regarding the lunch buffet for exhibitors—do you have any dietary restrictions we should note for your team?"
-      },
-      {
-        "speaker": "Marcus",
-        "text": "Yes, very important. One of our lead speakers has a severe allergy. The meals must be strictly nut-free. No peanuts, no almonds, nothing. We had a bit of a scare last year, so we're being extra careful."
-      },
-      {
-        "speaker": "Receptionist",
-        "text": "I've noted that for the catering team. Will you also be attending the Opening Ceremony this morning? It starts at 9:00 AM."
+        "speaker": "Brenda",
+        "text": "Gold Sustainability Partner. Correct. It’s our highest level of corporate partnership for the 2026 Expo. Now, how many staff badges do you need to collect today? My records say you requested five originally back in January, but I saw a note in the system about a last-minute increase for your university student volunteers."
       },
       {
         "speaker": "Marcus",
-        "text": "Yes, I'll be there. I'm actually scheduled for the setup at 7:15 AM to make sure the monitors are working, so I'll be well-rested by 9:00."
+        "text": "Yes, we actually increased our team to eight badges in total. We have a group of five volunteers from the HKU Environmental Science department arriving at noon to help with the interactive composting demonstrations, the carbon tracking games, and the public surveys. It's going to be a very busy booth, and we need every single member of the team to be fully badged for security and access to the staff canteen."
       },
       {
-        "speaker": "Receptionist",
-        "text": "Excellent. And I see you've signed up for a panel session in the afternoon. You had a choice between 'Plastic-Free Retail' or 'Circular Economy 101'."
+        "speaker": "Brenda",
+        "text": "Eight badges. Noted. I'll print the extra three for you right now—it’ll just take a second for the thermal printer to warm up. Your booth is located in the Green Innovation Zone—it’s booth G-12. It’s right under the main central skylight, so you should get great natural light for your live hydroponic displays, which I know is important for your vertical garden team’s aesthetic. Now, for your technical survey—how many power sockets do you need for your demo equipment? I see your composting units are the high-capacity industrial models that require a dedicated circuit."
       },
       {
         "speaker": "Marcus",
-        "text": "We've gone with Circular Economy 101. It fits our current mission better. Lastly, for the invoice—can you make sure the reference number EA-2024-HK is on the receipt?"
+        "text": "We need exactly three power sockets. We're demoing our new smart composting machines and the interactive waste-sorting screens, so we need consistent, high-amperage power throughout the day. We also need high-speed Wi-Fi for the real-time carbon tracking demo that syncs directly with the government's Eco-Loop database. If the Wi-Fi drops, the whole demonstration fails and we can’t show the live impact data to the visitors."
       },
       {
-        "speaker": "Receptionist",
-        "text": "EA-2024-HK. Done. Here are your badges, Marcus. Have a great Expo!"
+        "speaker": "Brenda",
+        "text": "Three sockets and high-speed Wi-Fi. Done. I’ll make sure the tech team gives you the priority router password for the Innovation Zone. Now, about the catering for your staff... I have a note about a dietary restriction for the SOS group—wait, I mean the Eco-Action group. Is it a gluten-free requirement for the whole group?"
+      },
+      {
+        "speaker": "Marcus",
+        "text": "No, it's a severe nut allergy. One of our lead engineers is extremely sensitive to all types of nuts—peanuts, cashews, even walnuts or almonds. It's a life-threatening condition, so the lunch buffet for our entire team must be strictly nut-free. We don't want to take any risks with cross-contamination in the central kitchen, so please ensure the catering manager and the floor supervisor are fully briefed. We’ve had a few scares in the past at other expos, and we really can’t afford an emergency during the keynote session."
+      },
+      {
+        "speaker": "Brenda",
+        "text": "Strictly Nut-free. I've highlighted that in bright red in the catering portal for the VIP hall. Will you and your team be attending the Opening Ceremony at 9:00 AM? The Secretary for the Environment is giving a major speech on the new 'Circular Credits' and the 2027 waste-to-energy roadmap."
+      },
+      {
+        "speaker": "Marcus",
+        "text": "Yes, all eight of us will be there. I'm actually aiming to be finished with our booth setup and the equipment testing by 7:15 AM so we can have a quick team briefing and a coffee before the initial crowds arrive. It's going to be a long, exhausting day for everyone, and I need to make sure the student volunteers know exactly how to explain the 'Eco-Loop' system to the general public in a way that’s easy to understand."
+      },
+      {
+        "speaker": "Brenda",
+        "text": "7:15 AM setup. Noted. And I see you've signed up for a specific panel session in the afternoon. You had a choice between 'The Plastic-Free Retailer' or 'Circular Economy 101'. Which one did the team finally decide on?"
+      },
+      {
+        "speaker": "Marcus",
+        "text": "We've gone with Circular Economy 101. It fits our current mission of 'Closing the Loop' much better than the retail session, which is a bit more focused on logistics than technology. Lastly, for the invoicing—can you make sure the reference number EA-2026-HK is clearly printed on the final receipt for our university finance team? They won't reimburse our expenses without that specific code being visible."
+      },
+      {
+        "speaker": "Brenda",
+        "text": "EA-2026-HK. Perfect. And I see the registration fee status is already marked as 'Paid' via bank transfer last week. Here are your badges, your exhibitor handbook, and your VIP lounge passes, Marcus. Have a successful and sustainable expo! I hope those composting machines behave themselves and don't produce any unexpected odors this year."
+      },
+      {
+        "speaker": "Marcus",
+        "text": "Thanks, Brenda! I’m sure they’ll be fine. We’ve upgraded the filters. See you around the hall!"
       },
       {
         "speaker": "Announcer",
-        "text": "(60-second pause) Task 2. Listen to a talk by an EPD officer. (120-second pause)"
+        "text": "Task 2. Listen to a keynote by Dr. Linda Woo on 'The Circular Economy Roadmap'. Complete the notes. You now have two minutes to study the task. (120-second pause)"
       },
       {
-        "speaker": "Officer",
-        "text": "Good morning. I am here to update you on the Municipal Solid Waste Charging scheme. As many of you know, the original trial was set for April 2024. While there have been some delays in full implementation, the core pricing remains the same. The charge is set at $0.11 per litre. We've designed nine different sizes of designated bags to cater to different household needs. The smallest bag capacity is 3 litres—perfect for single-person flats—while the largest goes up to 100 litres for commercial use."
+        "speaker": "Dr. Linda Woo",
+        "text": "Good morning, ladies and gentlemen, innovators, and students. It’s an honor to address such a dedicated group of environmental pioneers. We are currently standing at a profound crossroads in Hong Kong's environmental history. Two years ago, in April 2024, we launched the initial pilot of the Municipal Solid Waste Charging scheme. It was a controversial start, filled with intense public debate, skepticism, and significant logistical hurdles that many thought would be insurmountable. But today, in 2026, the data tells a completely different story. The charge of $0.11 per litre, while initially criticized as a financial burden on the average citizen, has become the primary psychological and economic driver for a new era of circularity in our city. We've simplified the entire system down to nine designated bag sizes, ranging from the small, convenient 3-litre bag for single-person households to the heavy-duty 100-litre commercial bags for our shopping malls and industrial estates. While the system is robust and the voluntary adoption rate is high, we maintain a strict non-compliance fine of $1,500 to ensure the integrity of the scheme and to prevent the illegal dumping that plagued our early trials."
       },
       {
-        "speaker": "Officer",
-        "text": "You'll be able to purchase these bags at thousands of authorized outlets, including most major convenience stores and supermarkets. It's vital that citizens use these bags; otherwise, the penalty for non-compliance will be a fixed fine of $1,500. To help people transition, we are running a food waste pilot in Tsuen Wan South, where we've installed smart bins. We also recognize the financial burden on the vulnerable, so we are providing a subsidy of $10 per month for low-income residents to cover bag costs."
+        "speaker": "Dr. Linda Woo",
+        "text": "Our network of authorized retailers, including thousands of convenience stores and supermarkets across the territory, has been essential for ensuring that every citizen can access the bags easily. But the real innovation is happening at the community level, in districts like Tsuen Wan South, where our food waste pilot has achieved a staggering 35% reduction in organic waste sent to landfills in just eighteen months. We understand that this transition isn't easy for everyone, especially for our low-income families and elderly residents living alone, which is why we've maintained a monthly subsidy of $10 for every resident in the social safety net to help offset the monthly cost of the designated bags. We've also partnered with a local tech firm called Green HK Solutions to run our 24-hour recycling hotlines and the 'Waste-Less HK' mobile app, which now features a powerful AI-driven sorting assistant that can identify materials through the phone’s camera and suggest the nearest collection point."
       },
       {
-        "speaker": "Officer",
-        "text": "We've partnered with a company called Green HK Solutions to manage our recycling hotlines. Our biggest challenge so far isn't the logistics, but public awareness. People still aren't sure what goes in which bin. To help, please download our official app, 'Waste-Less HK'. It has a scanning feature to identify recyclables. Our next public consultation will be on October 12. Thank you."
+        "speaker": "Dr. Linda Woo",
+        "text": "The backbone of our circular roadmap is infrastructure like O-PARK2. This organic resources recovery center, located in the northern New Territories, now handles 300 tonnes of food waste every single day. This waste is converted into biogas through anaerobic digestion, which currently powers approximately 3,000 households, and high-quality compost for our local farms in the Yuen Long area. But we're going even further than simple waste management. We've introduced the 'Eco-Loop' circular credit system, where residents can earn digital credits for accurate sorting and consistent participation that can be redeemed for public transport vouchers, utility discounts, or even cinema tickets. Our target for the end of 2026 is a 45% overall recycling rate—a massive leap from our 2023 levels of around 30%. This is about turning waste into a resource, and transforming our city into a true world leader in circular economy thinking. Our next major policy milestone is the public focus group on October 12, where we will discuss the expansion of 'Circular Credits' to the textile and electronics industries. We are not just managing waste; we are redesigning the very soul of our consumption. Thank you for being part of this transformation."
       },
       {
         "speaker": "Announcer",
-        "text": "(60-second pause) Task 3. Panel discussion on Zero Waste Challenges. (120-second pause)"
+        "text": "Task 3. Listen to a panel discussion on 'Zero Waste Challenges'. Complete the table. You now have two minutes to study the task. (120-second pause)"
       },
       {
         "speaker": "Host",
-        "text": "Welcome experts. Dr. Chan, what's the biggest issue facing HK's zero waste goal?"
+        "text": "Welcome to 'Environmental Focus'. I'm your host, and today we're tackling the massive logistical and cultural challenges of achieving a Zero Waste Hong Kong by the target year of 2035. Joining me are three experts who see this issue from the front lines every day. We have Dr. Chan, a packaging specialist and materials scientist from the Polytechnic University; Ms. Goudie, a leading advocate and co-founder of the Zero Waste Alliance; and Mr. Lam, a senior government policy analyst from the EPD. Dr. Chan, you've been very vocal about the retail sector and its reliance on plastic lately. What is the single biggest hurdle you see when you walk through a local supermarket today?"
       },
       {
-        "speaker": "Dr Chan",
-        "text": "In this city, it's the retail packaging. Everything is double-wrapped in plastic. Even a single apple is often in a plastic tray and then a bag. We need to reduce that first."
+        "speaker": "Dr. Chan",
+        "text": "It's the culture of 'Retail Double-Wrapping', Sarah. It’s absolutely endemic in Hong Kong's retail psychology. We have this strange, outdated habit of wrapping individual apples, pears, or even cucumbers in plastic foam sleeves, then placing them on a non-recyclable plastic tray, and then putting that tray into a larger plastic carrier bag at the checkout. It's an environmental disaster disguised as hygiene and convenience. We need to move aggressively towards 'naked' produce and start using biodegradable, compostable materials like cornstarch-based films for any essential packaging that cannot be eliminated. The retail sector currently accounts for nearly 40% of our daily plastic waste, and it’s the hardest habit to break because of long-standing consumer expectations of 'perfect' fruit."
       },
       {
-        "speaker": "Ms Goudie",
-        "text": "I agree, but we also need infrastructure. We need more bulk stores where people can bring their own jars. Currently, there are only a handful in the whole city. If it's not convenient, people won't do it."
+        "speaker": "Ms. Goudie",
+        "text": "I agree completely with Dr. Chan's assessment. But we also need a massive expansion of 'Bulk Stores' to give consumers a real, practical alternative. Currently, if a resident in Tuen Mun, Sheung Shui, or Yuen Long wants to buy rice, detergent, or shampoo without any packaging, they often have to travel for forty minutes to find a specialized zero-waste shop in the urban core of Central or Tsim Sha Tsui. We need these bulk-buy stores integrated into every public housing estate and every major shopping mall. If zero waste isn't convenient, accessible, and affordable to the working class, people will simply keep using single-use plastics out of sheer necessity and habit. Sustainability shouldn't be a luxury."
       },
       {
-        "speaker": "Mr Lam",
-        "text": "Convenience is key, but so is policy. The government should mandate composting for all restaurants. We are sending tons of organic waste to landfills every day that could be fertilizer. We have a target year of 2035 for Zero Waste, and we won't hit it without composting. We also need to fix the plastic bottle refund scheme—$0.10 per bottle is simply too low to motivate people."
+        "speaker": "Mr. Lam",
+        "text": "Convenience is key, but robust policy is the only way to shift that market at a territory-wide scale. The government is now moving towards mandatory composting for all restaurants, hotels, and major shopping malls by 2027. This will divert thousands of tonnes of organic waste from our landfills. We are also fundamentally reviewing the plastic bottle refund scheme. Currently, $0.10 per bottle is simply too low—it’s not a sufficient motivator for the average consumer to carry a bulky bottle to a machine. We have a target of absolute Zero Waste by 2035, and we can only get there if we make 'Reduction' the absolute priority over 'Recycling'. Recycling is a energy-intensive last resort, not a primary solution to our consumption problem."
       },
       {
-        "speaker": "Dr Chan",
-        "text": "Well, we do have over 160 GREEN@COMMUNITY collection points now. That's a huge improvement. The key message of our campaign this year is 'Reduce Before Recycle'. Don't just recycle a plastic cup—don't use it in the first place. We're also offering a 50% subsidy for any housing estate that wants to buy a large composting machine. For NGOs, don't forget the audit deadline is August 31. We recommend you focus your upcoming workshops on 'Textile Repair' as fast fashion is a growing problem. We also suggest switching to cornstarch-based bags for office waste. If any businesses need help, they can email biz-green@epd.gov.hk."
+        "speaker": "Host",
+        "text": "What about the community-level infrastructure? We've seen a lot of those bright green collection points appearing in neighborhoods recently. Are they working?"
       },
       {
-        "speaker": "Announcer",
-        "text": "Integrated Skills Briefing. Listen carefully to the Project Director."
-      },
-      {
-        "speaker": "Director",
-        "text": "Okay team, we need to handle these Part B tasks carefully. The public is very sensitive about the waste charging scheme. For Task 8, when you write to the Retail Association, don't just talk about the bags. Mention our 'Green SME Accreditation' program. It's a new initiative where we give a badge to shops that reduce packaging. That's not in the documents yet, so make sure you include it to win them over."
-      },
-      {
-        "speaker": "Director",
-        "text": "For Task 9, the internal memo... we need a plan for the surplus budget in the 'Equipment' category. I want you to propose a 'Waste-Free School Award' with a $50,000 prize for the winning campus. This will help our PR. And for Task 10, the social media post—keep it light. Use the hashtag #EcoHK2025 and the specific catchphrase 'Earth-Friendly, Pocket-Friendly'. It sounds much better than 'Waste Charging Policy'. Also, mention that the bags have 'Reinforced Seams' to prevent leaking—that was a major user complaint we need to address. Get to it!"
+        "speaker": "Dr. Chan",
+        "text": "Yes, we now have over 160 GREEN@COMMUNITY collection points, and they have been incredibly popular with the public, especially among the younger generation. The key message of our 2026 campaign is 'Reduce Before Recycle'. It's not enough to just sort your trash—you have to stop generating it in the first place. To help estates with this, the government is offering a 50% subsidy for any housing complex that wants to buy and operate its own large-scale industrial composting machine on-site. For our NGO partners, don't forget that your annual waste audit deadline is August 31. We highly recommend you focus your upcoming public workshops on 'Textile Repair' and 'Electronics Restoration', as fast fashion and e-waste are becoming massive landfill burdens that we can’t ignore. If any business owners are listening and need technical help with their sustainability roadmap, they should email us at biz-green@epd.gov.hk. We're here to help you make the transition both green and profitable."
       },
       {
         "speaker": "Announcer",
-        "text": "That is the end of the Integrated Skills recording. You now have 1 hour and 10 minutes to complete your tasks."
+        "text": "Task 4. Listen to the consultation with Benny Kwok and policy analysts. Complete the matrix. You now have two minutes to study the task. (120-second pause)"
+      },
+      {
+        "speaker": "Benny Kwok",
+        "text": "As the representative for the Small and Medium Retailers Association, I have to be brutally honest with this committee today. The waste charging scheme is hurting our livelihoods and our survival. Most of our members—family-run shops and small groceries—have seen their profit margins drop by at least 3% since the transition began last year, mostly due to the increased labor costs of sorting waste and the high cost of the mandatory designated bags. But my biggest technical complaint, and the one we hear every day from our staff, is the quality of the 15-litre and 20-litre bags. They are simply too thin! They tear as soon as you put a standard retail box with sharp corners, a plastic container, or even a heavy milk carton in them. It's a complete waste of taxpayer money and resources if we have to use two bags for every one load just to prevent leaking. We're proposing a delayed rollout for all SMEs until the bag quality and durability are significantly improved by the manufacturers."
+      },
+      {
+        "speaker": "Environmentalist",
+        "text": "We understand the financial concerns and the technical frustrations, Benny, but we've already seen a staggering 25% drop in overall waste volume in the pilot districts. That's a huge win for the city’s health and our environment. Our goal is to phase out all single-use plastics from the retail sector by 2028, and the current momentum is critical. If we delay the rollout for SMEs now, we lose the psychological momentum and the public will start to think the scheme is failing. Instead of a delay, we suggest the government provide 'Green Grants' to help SMEs purchase sustainable, reusable packaging solutions. We need to push forward with innovation, not pull back because of a bag thickness issue."
+      },
+      {
+        "speaker": "Housing Manager",
+        "text": "My concern as a housing manager is the labor and the daily compliance in our estates. Our housing estate currently needs five additional full-time cleaners just to handle the extra sorting at the collection points and the massive increase in illegal dumping we're seeing in the stairwells, fire exits, and roof areas at night. People are trying to avoid buying the bags by dumping their trash in common areas. We're proposing the installation of AI-enhanced surveillance cameras at all bin centers and fire exits to catch these offenders automatically and issue fines. We also need a more robust certification for shops that are actually doing the right thing and reducing their waste."
+      },
+      {
+        "speaker": "Environmentalist",
+        "text": "We actually have a formal proposal for that: the 'Green SME Accreditation'. It's a gold-standard badge for retailers who eliminate over 80% of their single-use packaging. It’s a way to reward people like Benny’s members for their extra efforts and give them a marketing advantage. We’ve also agreed on a consensus for the next phase: a tiered implementation strategy to help SMEs adjust their operations slowly. The most important technical fix is to introduce 'Reinforced Seams' for the larger bags to prevent the tearing and leaking issues Benny mentioned. This will be our absolute priority for the Q4 production run. Meeting adjourned. Please use the slogan 'Earth-Friendly, Pocket-Friendly' for the next press release and all social media updates. It's the best way to frame the long-term financial benefits alongside the environmental ones. We'll meet again on June 15 for the final policy review before the summer break. Thank you."
+      },
+      {
+        "speaker": "Announcer",
+        "text": "This is the end of Part A. Now, turn to Part B."
+      },
+      {
+        "speaker": "Announcer",
+        "text": "Part B. Introduction. You are Chris Wong, a project assistant at the EPD. You will hear a briefing given by the Project Director to the implementation team. As you listen, take notes which may help you to complete the tasks. You will have five minutes to study the Part B Information Directory and the tasks. (Pause 5m)"
+      },
+      {
+        "speaker": "Director",
+        "text": "Good morning, team. We have a lot of moving parts for the Q3 rollout, and the public scrutiny is higher than it’s ever been. Chris, make sure you capture these specific details for the upcoming tasks, as they are critical for our stakeholder management. First, addressing the vocal complaints from Benny Kwok and the Retail Association. We are investigating the bag durability issue as a top priority with our suppliers, but as a proactive step to build goodwill and cooperation, I want you to officially announce the 'Green SME Accreditation' program in your response to him. This is a gold-standard reward for shops that eliminate secondary packaging. It wasn't in the original policy draft, so it’s a vital 'Audio-Only' update that he needs to hear about today. It shows we’re listening to their financial concerns and offering them a competitive marketing advantage rather than just penalties."
+      },
+      {
+        "speaker": "Director",
+        "text": "Secondly, I want to address the 2023 Air Quality and Noise Report that's been circulating in some of the local community WhatsApp groups and some niche forums. PLEASE DISREGARD IT COMPLETELY. That report is three years old and focused entirely on tunnel construction noise in Wan Chai and some legacy particulate matter data from a completely different policy era. It has absolutely nothing to do with our 2026 waste-reduction goals or the impact of the MSW charging scheme. If any residents, activists, or students try to cite the Air Quality Index of 75 as a reason to delay or defund our waste project, remind them that it's outdated and completely irrelevant data. We are focusing strictly on the new 2026 waste-to-energy stats from O-PARK2. Don’t let them derail our progress with archive noise."
+      },
+      {
+        "speaker": "Director",
+        "text": "For our community outreach this October, we have a significant $60 Million surplus in the 'Equipment' budget category—you can see the breakdown in Doc 6. I want to use exactly half of that surplus—so $30 Million—to launch a 'Waste-Free School Award' program. We’ll offer a $50,000 prize for the winning campus in each district to build their own industrial-scale composting garden and zero-waste education center. It’s a great way to boost public awareness and engage the youth in a tangible, exciting way. This $50,000 prize amount is a specific detail for the internal memo, so make sure you include it to justify the budget shift. It’s about investing in the next generation of environmental leaders."
+      },
+      {
+        "speaker": "Director",
+        "text": "Lastly, for the social media response to #BagGateHK—that's the viral trend about the bags tearing and the 'garbage bags being garbage' memes—keep the tone reassuring, professional, but empathetic. Tell them that the Q4 production run will feature 'Reinforced Seams' across all models to prevent leaking and tearing, especially for the high-volume 15-litre and 20-litre models. Use the hashtag #EcoHK2026 and our new campaign catchphrase 'Earth-Friendly, Pocket-Friendly'. It frames the environmental benefit alongside the long-term financial savings from reduced commercial gate-fees that businesses can pass on to customers. Chris, I want the drafts for the letter to Benny, the internal memo to the Director, and the social media post on my desk by 5:00 PM today. We have a real chance to turn the public opinion around if we communicate these technical fixes and rewards clearly. Let’s make it count. Alright, everyone, back to work. We have a city to clean up."
+      },
+      {
+        "speaker": "Announcer",
+        "text": "That is the end of the Integrated Skills recording. You now have 1 hour and 15 minutes to complete your tasks. (End of simulation)"
       }
     ]
   },
@@ -475,62 +535,75 @@
       {
         "id": "doc1",
         "type": "minutes",
-        "title": "Minutes of the MSW Charging Implementation Committee",
-        "content": "Date: May 5, 2024. \nDiscussion: Retailers are worried about the 'Plastic Bag Levy' overlap. \nKey Decisions: \n1. Clarify that designated bags replace the need for the $1 plastic bag levy in most cases.\n2. Launch 'Green Ambassadors' to patrol shopping malls in Q3."
+        "title": "Minutes: Waste Implementation Committee",
+        "content": "Date: May 5, 2026. Clarification: Designated bags replace the $1 plastic bag levy. Launch 'Green Ambassadors' in Q3."
       },
       {
         "id": "doc2",
         "type": "brochure",
-        "title": "A Guide to MSW Charging for Businesses",
-        "content": "Why charge? To incentivize waste reduction. \nHow it works: Businesses must buy designated bags or 'gate-fee' labels. \nSizes available: 3L to 100L. \nBenefits: Reduced waste leads to lower commercial waste disposal fees in the long run."
+        "title": "Business Guide: Circular Economy",
+        "content": "How it works: Buy designated bags (3L to 100L). Benefits: Lower commercial gate-fees for reduced waste."
       },
       {
         "id": "doc3",
         "type": "email",
-        "title": "Complaint from Mr. Benny Kwok (Retail Association)",
-        "content": "To: EPD Policy Branch. \nOur members are furious. The cost of bags is one thing, but the thickness of the 15L bag is insufficient. They tear easily when filled with standard retail waste. Also, we need incentives, not just penalties."
+        "title": "Complaint: Benny Kwok (Retail Association)",
+        "content": "The 15L bags are too thin. They tear under standard retail load. We need incentives like the 'Green SME' program you mentioned."
       },
       {
         "id": "doc4",
         "type": "newspaper",
-        "title": "Daily News: The Hidden Cost of Living Green",
-        "content": "Reports suggest that while the $0.11/L charge seems small, a typical restaurant could see costs rise by $2,000/month. The government's $10 subsidy for the poor is 'insulting' according to some NGOs."
+        "title": "Daily News: The Cost of Going Green",
+        "content": "MSW charging could cost average restaurants $2,000/month. NGOs call the $10 subsidy 'insufficient'."
       },
       {
         "id": "doc5",
         "type": "handwritten_note",
-        "title": "Note from Director of EPD",
-        "content": "To Project Manager: \nReply to Benny Kwok (Doc 3). Tell him we are investigating bag durability. Also, tell him about the 'Green SME' thing we discussed in the briefing. For the memo, use the table in Doc 6 to justify the new School Award."
+        "title": "Director's Desk Notes",
+        "visual_style": "scrawled_handwriting",
+        "content": "- Investigate bag durability (Benny's email).\n- Mention Green SME Accreditation (Audio briefing point).\n- Use 'Earth-Friendly, Pocket-Friendly' slogan.\n- Reinforced seams coming in Q4."
       },
       {
         "id": "doc6",
         "type": "table",
-        "title": "Budget Allocation 2024: Waste Policy",
-        "content": "Category | Allocated | Spent | Balance\n--------------------------------------------\nBag Production | $200M | $195M | $5M\nPublicity | $50M | $48M | $2M\nEquipment/Smart Bins | $100M | $40M | $60M (Surplus)\nStaffing | $80M | $75M | $5M"
+        "title": "EPD Budget Surplus 2026",
+        "content": "Item | Budget | Spent | Surplus\nEquipment | $100M | $40M | $60M\nPublicity | $50M | $48M | $2M\nStaffing | $80M | $75M | $5M"
       },
       {
         "id": "doc7",
-        "type": "social_media_post",
-        "title": "Viral Post: #BagGateHK",
-        "content": "Look at this! I just bought the new 15L 'designated bag' and it ripped as soon as I put a cardboard box in it. Are we paying for trash or for garbage bags that ARE trash? @EPD_HK fix this!"
+        "type": "archive",
+        "title": "RED HERRING: Air Quality & Noise Report 2023 (ARCHIVE)",
+        "content": "NOTE: ARCHIVED. \nAir Quality Index: 75 (Moderate). \nNoise complaints down 5% in Wan Chai. \nKey Concern: Tunnel construction. (Irrelevant to Waste 2026)."
       },
       {
         "id": "doc8",
         "type": "memo",
-        "title": "Staffing Update: Green Ambassadors",
-        "content": "We are hiring 500 'Green Ambassadors' to help educate the public at supermarkets. They will provide free samples of the 3L bags for a limited time."
+        "title": "Internal Memo: Green Ambassadors",
+        "content": "Hiring 500 ambassadors for supermarkets. Providing free 3L samples to help transition."
       },
       {
         "id": "doc9",
         "type": "news_clip",
-        "title": "O-PARK2 Officially Opens",
-        "content": "HK's second organic resources recovery centre is now operational. It can handle 300 tonnes of food waste daily, converting it into electricity and compost."
+        "title": "O-PARK2: Converting Waste to Watts",
+        "content": "Operational center handling 300 tonnes of food waste daily. Powering 3,000 households via biogas."
       },
       {
         "id": "doc10",
         "type": "policy_draft",
-        "title": "Draft Section: Compliance Exemptions",
-        "content": "Exemptions will be granted to hospitals and elderly care homes for medical-related waste only. All other household-style waste in these facilities must use designated bags."
+        "title": "Exemption Policy: Section 5.1",
+        "content": "Hospitals and elderly homes exempt for medical waste. Standard waste requires designated bags."
+      },
+      {
+        "id": "doc11",
+        "type": "memo",
+        "title": "Office Supply Re-order",
+        "content": "20 Reams A4, 5 boxes staples. (Noise)."
+      },
+      {
+        "id": "doc12",
+        "type": "logistics",
+        "title": "Water Dispenser Rental Agreement",
+        "content": "Rental for 12 months. Delivery to general admin. (Noise)."
       }
     ],
     "Part_B1": {
@@ -539,15 +612,30 @@
           "id": "Task_5",
           "type": "Formal Email",
           "instructions": "Write an email to a local NGO explaining the subsidy and bag sizes available. Refer to Task 2 and Doc 4.",
-          "wordCount": 120,
+          "wordCount": 300,
           "grading_rubric": {
             "content_points": [
-              "Subsidy of $10 per month for low-income (Task 2)",
-              "Nine bag sizes available (Task 2)",
-              "Smallest size is 3L (Task 2)",
-              "Acknowledge concerns about the 'hidden cost' of green living (Doc 4)"
+              {
+                "point": "Nine bag sizes starting from 3L (Task 2)",
+                "mark": 1
+              },
+              {
+                "point": "Subsidy of $10 for low-income (Task 2, Doc 4)",
+                "mark": 1
+              },
+              {
+                "point": "Acknowledge the 'hidden cost' to restaurants ($2,000) (Doc 4)",
+                "mark": 1
+              }
             ],
-            "tone": "Informative"
+            "tone": "Formal",
+            "relevance_penalty": "Strict -0.5 for 2023 Air Quality data",
+            "deductions": [
+              {
+                "condition": "Mentioning Air Quality Index or Tunnel construction",
+                "penalty": 0.5
+              }
+            ]
           }
         },
         {
@@ -586,32 +674,47 @@
           "id": "Task_8",
           "type": "Formal Letter",
           "instructions": "Write a letter to Mr. Benny Kwok addressing his complaints. Use Doc 3, Doc 5, and the Audio Briefing.",
-          "wordCount": 250,
+          "wordCount": 300,
           "grading_rubric": {
             "content_points": [
-              "Acknowledge the complaint about 15L bag durability (Doc 3)",
-              "Confirm investigation into bag thickness (Doc 5)",
-              "Mention the Green SME Accreditation program (Audio)",
-              "Explain benefit of reduced commercial disposal fees (Doc 2)",
-              "Explain how designated bags simplify the $1 levy system (Doc 1)"
+              {
+                "point": "Confirm investigation into bag thickness/seams (Doc 5)",
+                "mark": 1
+              },
+              {
+                "point": "Introduce Green SME Accreditation (Audio)",
+                "mark": 2
+              },
+              {
+                "point": "Explain lower commercial disposal fees (Doc 2)",
+                "mark": 1
+              },
+              {
+                "point": "Reinforced seams rollout in Q4 (Doc 5)",
+                "mark": 1
+              }
             ],
-            "tone": "Conciliatory and Persuasive"
+            "tone": "Conciliatory/Persuasive",
+            "relevance_penalty": "Strict -0.5 for irrelevant data",
+            "deductions": []
           }
         },
         {
           "id": "Task_9",
           "type": "Internal Memo",
           "instructions": "Write a memo to the EPD Director proposing a use for the budget surplus. Refer to Doc 6 and the Audio Briefing.",
-          "wordCount": 180,
+          "wordCount": 200,
           "grading_rubric": {
             "content_points": [
-              "Identify $60M surplus in Equipment/Smart Bins (Doc 6)",
-              "Propose 'Waste-Free School Award' (Audio)",
-              "Mention the $50,000 prize amount (Audio)",
-              "Explain this helps address 'public awareness' challenges (Task 2)",
-              "Connect to the 'Reduce Before Recycle' message (Task 3)"
+              { "point": "Identify $60M surplus in Equipment (Doc 6)", "mark": 1 },
+              { "point": "Propose 'Waste-Free School Award' (Audio)", "mark": 2 },
+              { "point": "Detail the $50,000 prize amount (Audio)", "mark": 1 },
+              { "point": "Correctly allocate HALF of surplus ($30M) (Audio)", "mark": 2 },
+              { "point": "Link to public awareness challenge (Task 2)", "mark": 1 }
             ],
-            "tone": "Analytical"
+            "tone": "Analytical",
+            "relevance_penalty": "Strict -0.5 for 2023 data",
+            "deductions": []
           }
         },
         {
@@ -621,13 +724,16 @@
           "wordCount": 100,
           "grading_rubric": {
             "content_points": [
-              "Address concerns about bags tearing (Doc 7)",
-              "Mention new 'Reinforced Seams' feature (Audio)",
-              "Use hashtag #EcoHK2025 (Audio)",
-              "Use catchphrase 'Earth-Friendly, Pocket-Friendly' (Audio)",
-              "Remind users of the $1,500 fine for non-compliance (Task 2)"
+              { "point": "Address concerns about bag gate/tearing (Doc 7)", "mark": 1 },
+              { "point": "USE SLOGAN: 'Earth-Friendly, Pocket-Friendly' (Audio)", "mark": 1 },
+              { "point": "USE HASHTAG: #EcoHK2026 (Audio)", "mark": 1 },
+              { "point": "Mention 'Reinforced Seams' feature (Audio)", "mark": 2 }
             ],
-            "tone": "Engaging and Reassuring"
+            "tone": "Engaging/Reassuring",
+            "relevance_penalty": "Strict -0.5 for 2023 data",
+            "deductions": [
+              { "condition": "Mentioning Air Quality Index 75 or Wan Chai tunnel noise", "penalty": 0.5 }
+            ]
           }
         }
       ]

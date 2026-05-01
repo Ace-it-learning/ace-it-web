@@ -83,6 +83,18 @@
             "type": "Fill_in_Blanks",
             "label": "Emergency Contact Name:",
             "answer": "Marcus Teo"
+          },
+          {
+            "id": "t1_q13",
+            "type": "Fill_in_Blanks",
+            "label": "Registration Counter Number:",
+            "answer": "B-12"
+          },
+          {
+            "id": "t1_q14",
+            "type": "Fill_in_Blanks",
+            "label": "Speaker Badge ID:",
+            "answer": "GH-772"
           }
         ]
       },
@@ -221,7 +233,7 @@
             "id": "t3_q5",
             "type": "Fill_in_Blanks",
             "label": "Penalty for After-hours Emails:",
-            "answer": "$5,000 fine"
+            "answer": "$50,000 fine"
           },
           {
             "id": "t3_q6",
@@ -342,160 +354,6 @@
           }
         ]
       }
-    ],
-    "script": [
-      {
-        "speaker": "Announcer",
-        "text": "Hong Kong Diploma of Secondary Education 2026. English Language Paper 3. Listening and Integrated Skills. The Right to Rest."
-      },
-      {
-        "speaker": "Announcer",
-        "text": "Part A. Task 1. You are at the reception desk for the RestFest Urban Summit. Listen to the conversation between the receptionist and a guest speaker. Complete the registration form. You have two minutes to read the task. (120-second pause)"
-      },
-      {
-        "speaker": "Receptionist",
-        "text": "Welcome to RestFest 2026! We're so glad to have such a vibrant turnout for our 'Slow Living' opening. May I have your name and organization, please?"
-      },
-      {
-        "speaker": "Julianne",
-        "text": "Good morning. I'm Julianne Kwok. I'm with the Urban Harmony Institute. I believe I'm on the VIP speaker list?"
-      },
-      {
-        "speaker": "Receptionist",
-        "text": "Let me check... Kwok... J. Ah, yes. Julianne Kwok. I have you here. And just to confirm, is your mobile number still 6-2-8-8, 1-9-9-2?"
-      },
-      {
-        "speaker": "Julianne",
-        "text": "That's the one. My assistant mentioned I'm the morning keynote. Is the topic correctly listed?"
-      },
-      {
-        "speaker": "Receptionist",
-        "text": "Yes, 'Reclaiming Third Places'. A very popular topic this year! We have about 500 people registered for your session."
-      },
-      {
-        "speaker": "Julianne",
-        "text": "Excellent. I'm actually traveling with my research team today. There are eight of us in total, including myself. I'll need badges for all of them."
-      },
-      {
-        "speaker": "Receptionist",
-        "text": "Eight members. Noted. I'll print those now. Regarding your technical needs, you requested a 4K LED screen originally, but sent an update last night?"
-      },
-      {
-        "speaker": "Julianne",
-        "text": "Yes, sorry for the last-minute change. My presentation actually uses 3D models of urban parks, so I'll definitely need a holographic projector. The standard screen just won't do."
-      },
-      {
-        "speaker": "Receptionist",
-        "text": "We've secured one for you. Now, for the lunch catering. Our records show a request for nut-free meals, but anything else?"
-      },
-      {
-        "speaker": "Julianne",
-        "text": "Yes, the whole team is strictly vegan this week as part of our sustainability pledge. So, nut-free and vegan, please."
-      },
-      {
-        "speaker": "Receptionist",
-        "text": "Understood. Your workshop after the keynote will be in Zen Studio 4. It's the quietest room in the building. Will you be staying for the post-event networking drinks at 6:00 PM?"
-      },
-      {
-        "speaker": "Julianne",
-        "text": "Yes, I'd like to meet some of the planners. Oh, and about my travel—the institute is paying for an electric shuttle for the group. Is there a dedicated drop-off point?"
-      },
-      {
-        "speaker": "Receptionist",
-        "text": "There is. Just follow the green signs to the E-shuttle zone. I'll need your payment reference for the admin fee as well."
-      },
-      {
-        "speaker": "Julianne",
-        "text": "It's UH-REF-902. And just in case I lose my voice from all the talking, my emergency contact is Marcus Teo, our lead researcher."
-      },
-      {
-        "speaker": "Receptionist",
-        "text": "Thank you, Ms. Kwok. Here are your badges. Enjoy the summit!"
-      },
-      {
-        "speaker": "Announcer",
-        "text": "Task 2. You will hear a talk by a sociologist regarding 'Third Places'. Complete the notes below. (120-second pause)"
-      },
-      {
-        "speaker": "Sociologist",
-        "text": "Good morning. When we talk about the 'Right to Rest' in a hyper-capitalist city like Hong Kong, we must discuss the 'Third Place'. This term was first coined by the famous sociologist Ray Oldenburg. In his view, a healthy life requires three distinct spaces. The 'First Place' is our home, our domestic sanctuary. The 'Second Place' is the office or the workplace where we produce and earn."
-      },
-      {
-        "speaker": "Sociologist",
-        "text": "The 'Third Place' is where we find community. It is neither home nor work. A key characteristic of a true third place is social equality. In a library or a park, it doesn't matter if you're a CEO or a student; you are all equal citizens. Unfortunately, in Hong Kong, these spaces are vanishing. While some say digital distractions are the cause, our study shows the biggest threat is sky-high rent. It's killing the small bookstores and cafes that once served this purpose."
-      },
-      {
-        "speaker": "Sociologist",
-        "text": "Look at our shopping malls. People think they are third places, but they are actually 'pseudo-third places'. You are only welcome if you are spending money. You can't just sit and rest without buying a latte. In our recent survey, 78% of the public said they want more public parks, not more malls. We need to reclaim the spirit of the 'Dai Pai Dong'—the traditional open-air stalls that were once the heartbeat of our neighborhoods."
-      },
-      {
-        "speaker": "Sociologist",
-        "text": "To fix this, we recommend moving toward 'Community Land Trusts' where the land is owned by the neighborhood, not developers. We're proposing a pilot district in Sham Shui Po to test this. We've also identified a 'bench crisis'—we need 2,400 new public benches across the city just to meet the global average for rest-space. We'll be publishing our full data set on October 12. Thank you."
-      },
-      {
-        "speaker": "Announcer",
-        "text": "Task 3. Three experts are debating the 'Right to Disconnect' law. (120-second pause)"
-      },
-      {
-        "speaker": "Host",
-        "text": "Today we discuss the controversial 'Right to Disconnect' law proposed for Hong Kong. Dr. Wong, should this apply to everyone?"
-      },
-      {
-        "speaker": "Dr Wong",
-        "text": "Absolutely. If we only target tech giants or SMEs, we create a two-tier workforce. The law must apply to all companies. We have people working an average of 14 hours of overtime every week, much of it unpaid via WhatsApp. It has to stop."
-      },
-      {
-        "speaker": "Ms Beatrice Lam",
-        "text": "I agree with the sentiment, Dr. Wong, but I worry about productivity loss. If a client in New York emails at 10 PM and we can't reply until 9 AM, we lose the deal. We are a global financial hub. We can't just 'turn off'."
-      },
-      {
-        "speaker": "Mr Felix Ho",
-        "text": "Ms. Lam, people said the same thing in France when they passed their law in 2017, and their economy didn't collapse. However, I think we need a soft rollout. A 12-month grace period for businesses to adjust their internal policies would be fair. We've proposed a $5,000 fine for companies that consistently harass employees with after-hours emails."
-      },
-      {
-        "speaker": "Dr Wong",
-        "text": "Our polls show 62% of the public support this. We would include an exception clause for emergency services, of course. To help people, we're even launching an app called 'RestEasy HK' that automatically silences work notifications. If you want more info, email the labor union at rights@hkwu.org. We're holding a seminar in Exhibition Hall A later today under the hashtag #UnplugHK."
-      },
-      {
-        "speaker": "Announcer",
-        "text": "Task 4. Stakeholders are discussing the 'Slow Living District' proposal for North Point. (240-second pause)"
-      },
-      {
-        "speaker": "Planner",
-        "text": "Let's hear from our community stakeholders on the North Point Slow Zone. Mr. Tan, as a shop owner, what's your take?"
-      },
-      {
-        "speaker": "Shop Owner",
-        "text": "I'm worried about lost foot traffic. If cars can't get in, will people still visit? However, I'd support it if the government offered subsidized rent for artisanal shops like mine. Maybe we could try a weekend-only slow zone first? That would be my suggestion."
-      },
-      {
-        "speaker": "Young Pro",
-        "text": "I love the idea, but as a freelancer, I'm worried about the lack of high-speed Wi-Fi in these so-called 'Slow Zones'. Can we have outdoor co-working spaces with good connectivity? My main suggestion is to build quiet booths in the public parks so we can take calls without the noise of the city."
-      },
-      {
-        "speaker": "Planner",
-        "text": "From a planning perspective, the main concern is the integration with existing MTR lines—we can't block the exits. But the benefit would be a massive reduction in the urban heat island effect. I suggest vertical greening on all the highway pillars in the area. We've reached a consensus that if we proceed, the speed limit for all vehicles in the zone will be 15 km/h. We'll launch the pilot in January 2027. The next public hearing is at the Community Center on August 5."
-      },
-      {
-        "speaker": "Announcer",
-        "text": "Integrated Skills Recording. Listen to the briefing from the Director of the Urban Rest Bureau to the Senior Project Manager."
-      },
-      {
-        "speaker": "Director",
-        "text": "Good morning. We need to finalize the 'Slow HK' campaign. For Task 8, when you write to the CEO of the Finance Hub, emphasize that 'rest is a performance enhancer'. Don't make it sound like we're being lazy. Tell them that for Task 8, we want them to trial a 'Mandatory Micro-break' policy—that's a 5-minute break every hour. This isn't in the Data Files yet, so make sure it's in your letter."
-      },
-      {
-        "speaker": "Director",
-        "text": "For the Task 9 internal report, please note that we've secured a special $50,000 prize for the 'Urban Oasis' design competition. We need to mention this to get the staff excited. Also, add that the deadline for all project proposals is June 15th. That's a hard deadline."
-      },
-      {
-        "speaker": "Director",
-        "text": "Finally, for the Task 10 social media post, we need to appeal to the 'Sandwich Generation'—those looking after both kids and parents. Use the phrase 'Peace of Mind' and mention that we're installing 500 'Digital Sabbath' lockers in public libraries where people can lock their phones away for an hour for free. Oh, and call it the 'Phone-Free Hour' initiative. Get to it!"
-      },
-      {
-        "speaker": "Announcer",
-        "text": "That is the end of the Integrated Skills recording. You have 1 hour and 10 minutes to complete Part B."
-      }
     ]
   },
   "Part_B": {
@@ -527,8 +385,9 @@
       {
         "id": "doc5",
         "type": "handwritten_note",
-        "title": "Note from Director Lo",
-        "content": "PM: In your letter to the Finance CEO (Task 8), be sure to mention that rest is NOT just 'doing nothing'. It's 'active recovery'. Also, mention the 'RestEasy HK' app features from the audio briefing. We need their corporate buy-in!"
+        "visual_style": "scrawled_handwriting",
+        "title": "Note from Janice Wong",
+        "content": "PM: Janice here. In your letter to the Finance CEO (Task 8), be sure to mention that rest is NOT just 'doing nothing'. It's 'active recovery'. Also, mention the 'RestEasy HK' app features from the audio briefing. We need their corporate buy-in!"
       },
       {
         "id": "doc6",
@@ -559,6 +418,12 @@
         "type": "survey_result",
         "title": "Public Survey: What is a Third Place?",
         "content": "Respondents (N=2000):\n- 45% want more libraries with comfortable seating.\n- 30% want community gardens.\n- 15% want more tea houses.\n- 10% want street-side benches."
+      },
+      {
+        "id": "doc11",
+        "type": "archive",
+        "title": "2023 Air Quality and Noise Report (Archive)",
+        "content": "NOTE: ARCHIVED. Location: Wan Chai Tunnel Construction. Noise Index: 75. Air Quality: Moderate. Recommendation: Increase ventilation shaft frequency. (This data is irrelevant to the 2026 Right to Rest initiative)."
       }
     ],
     "Part_B1": {
@@ -623,7 +488,9 @@
               "Cite the 25% focus increase from micro-breaks (Doc 9)",
               "Mention the 40% error increase from overworking (Doc 9)",
               "PROPOSE: Mandatory 5-minute Micro-breaks every hour (Audio)",
-              "Suggest 'RestEasy HK' app features for employees (Audio/Task 3)"
+              "Suggest 'RestEasy HK' app features for employees (Audio/Task 3)",
+              "Mention mandatory 'Silence Certification' Level 3 for tax breaks (Audio)",
+              "Specify requirement for eighty-five decibel reduction in common areas (Audio)"
             ],
             "tone": "Professional and Persuasive"
           }
@@ -661,5 +528,13 @@
         }
       ]
     }
+  },
+  "Script": {
+    "Announcer": "Good morning, candidates. Before we begin the 2026 English Language Paper 3 examination, I wish to address the importance of today's theme: The Right to Rest. In the high-velocity urban environment of Hong Kong, the concept of rest has often been sidelined in favor of efficiency, productivity, and the relentless pursuit of growth. However, as we move into 2026, we are witnessing a paradigm shift. This examination is designed to test your ability to navigate this shifting landscape. You will be asked to synthesize complex data regarding labor reform, hostile architecture, and the 'commodification of silence.' This is a high-stamina mock, modeled after the Golden Standard of the HKDSE. You will hear voices of dissent, technical specifications for urban pods, and the legal framework of the Right to Disconnect. Your task is not just to listen, but to filter. In a city where information is as loud as the traffic, your ability to identify the precise figures—like the eighty-five decibel reduction targets or the Article 24B fine structures—is what will separate a Level 5** candidate from the rest. We must also consider the historical context. Since the industrial revolution, the boundaries between work and home have been contested. In the early 20th century, the fight was for the eight-hour day. In 2026, the fight is for the 'Right to Disconnect'. We are moving into an era where digital presence is constant, and therefore, the legal right to be 'offline' is becoming a fundamental human right. You will hear from architects who are designing 'Third Places' to combat the isolation of high-density living. You will hear from psychologists who are studying the impact of 24/7 digital connectivity on the human nervous system. We are also looking at the economic impact of burnout, which costs the Hong Kong economy an estimated forty-five billion dollars a year in lost productivity and healthcare expenses. The 'Slow Living' movement is not just a lifestyle choice; it is an economic necessity. As you listen to Julianne Kwok’s keynote, pay close attention to the specific metrics she provides regarding the loss of public benches and the rise of hostile design. These are not just anecdotes; they are the data points of our urban decay. You will also hear a panel discussion on the 'Quiet Pod Initiative'—a controversial project that aims to sell silence by the minute. This raises profound questions about the nature of public space in a hyper-capitalist city. Is silence a right or a privilege? Is rest a commodity or a necessity? These are the themes of your Part B tasks. All of this information will be presented at a natural, professional pace, and you must maintain focus for the entire duration of this sixty-minute recording. We will now begin with a five-minute silence to allow you to study the Information Directory and the tasks ahead. Ensure your focus is absolute. This recording will be played once only. Prepare your scripts and your minds for the challenge. Hong Kong Diploma of Secondary Education Examination 2026. English Language Paper 3. Listening and Integrated Skills. The Right to Rest - High Stamina Mock Exam. This examination is specifically designed to test your absolute focus, long-term resilience, and high-speed information processing over an extended listening duration. This recording will be played once only and contains no pauses other than those officially stated in the instructions. Candidates are reminded that accuracy in capturing technical details, including spelling, specific figures, and complex nomenclature, is vital for success. Please ensure you have the correct Question-Answer book and the Data File booklet. Part A. Task 1. You are at the reception desk for the 'RestFest Urban Summit'. Listen to the conversation between the receptionist and a guest speaker, Julianne Kwok. Complete the registration and logistics form. You now have two minutes to study the task. (120-second pause)",
+    "Task_1_Script": "Good morning! Welcome to the 2026 RestFest Urban Summit. It is an incredibly busy and high-energy morning here at the West Kowloon Cultural District. We have over five hundred delegates arriving from across the globe—from sustainable architects in Scandinavia to urban planners in Tokyo—all here to discuss the philosophy of slowing down in a fast-paced world. It’s quite ironic, isn’t it? Everyone rushing through the biometric gates and the security scanners just to talk about the importance of rest! May I have your name and organization, please? I need to check you into our VIP speaker portal and ensure your holographic credentials are ready for the morning keynote. We’re expecting a massive audience today, including several bureau heads and international press representatives, so we want to make sure every detail is perfect for our speakers. Good morning. Yes, the irony isn’t lost on me. It took us nearly twenty-five minutes just to get through the electric shuttle drop-off zone because the crowd for the 'Mindfulness VR' exhibit was blocking the main entrance. My name is Julianne Kwok. I'm with the Urban Harmony Institute. We’re representing the sustainable urbanism and social wellness sector here today. I believe my research team should have uploaded our primary logistics file last night via the summit’s secure portal, but I wanted to confirm everything in person just to be safe. We have a lot of sensitive acoustic sensor equipment that needs careful handling. I can certainly imagine the pressure, Ms. Kwok. Let me look you up on our main exhibitor server. Is that 'Kwok' with a K at the beginning? K-W-O-K? I see a few entries for that spelling in the system, one from a landscaping firm specializing in Zen gardens and another from a catering group specializing in organic, artisanal teas for corporate retreats. Common mistake, but it's K-W-O-K. Julianne. And the organization is the Urban Harmony Institute. We’re lead sponsors for the 'Silence and Sovereignty' track this year. I hope our credentials have been properly processed through the Science Park gateway, as we’re collaborating with their acoustics lab on several projects. Ah, Urban Harmony Institute. Yes, here you are in the A-wing. Booth A24. That's in the 'Sustainable Innovation' zone, right next to the central water feature and the primary networking lounge. Is that location correct for your current setup plan, or have there been any changes since the August briefing? Some speakers moved to the B-wing to be closer to the natural light for their plant-based exhibits. Yes, A24. That’s the spot we requested. It’s centrally located and should have the best acoustics for our sensor demonstrations. And I need to confirm that my primary mobile contact is listed correctly in your database. It should be 6-2-8-8, 1-9-9-2. We’ve been having some connectivity issues with our secondary line in the Kwun Tong facility, so that mobile number is the best way to reach me directly for the holographic sync-check later this morning. We can't afford any technical glitches during the opening session. 6-2-8-8, 1-9-9-2. Updated and logged as your primary contact. Now, regarding your keynote topic. Our system has a note about a title change that came in late yesterday. It was originally listed as 'Reclaiming Third Places', but I see an update here. Could you confirm the final title for the digital program? Yes, we updated it to 'The Architecture of Silence'. We changed it last week to focus more on the technical aspects of noise reduction and the psychology of acoustic sanctuary in high-density environments. It better reflects our latest research on the 15-minute city. We’ll be demonstrating some complex 3D models of urban canyons during the talk, so it's a bit more tech-heavy than the previous title suggested. The Architecture of Silence. Noted and changed in the program. And for your booth dimensions, you have the standard 2.5 meters by 2.5 meters footprint? Some of the other institutes have requested the 4-meter double-booth to accommodate their full-scale 'Quiet Pod' prototypes and their immersive soundboards. No, the 2.5 by 2.5 is perfect for our sensor demonstrations. We’re focusing on the data this year, not the physical hardware prototypes. And I believe we’ve processed the Platinum sponsorship tier. My finance department said they sent over the eight thousand five hundred dollar fee via corporate transfer last Tuesday. The reference number should be UH-REF-902. Could you verify if that’s been received? We want to ensure we have the Platinum logo placement on the main stage screen. Platinum tier, eight thousand five hundred dollars. Corporate transfer UH-REF-902. Yes, I see the transaction here, it was cleared by our accounting team on Wednesday morning. Everything is confirmed and your logo is in the rotation. Now, for the staff catering—we provide daily premium lunch boxes for the exhibitor teams in the VIP hall. You have five staff members listed for passes, including yourself, correct? Yes, five passes in total. And for the catering, we have a very firm and non-negotiable institute policy for all public events in 2026. All our staff catering must be the 'Zen Garden Platter'. It’s our strictly vegan and nut-free option. We align our food choices with our sustainability and inclusion mission, so no animal products and no nuts at all, please. Cross-contamination is a major concern for one of our senior researchers who has a severe allergy, so we need the kitchen to be very careful. Zen Garden Platter for five. Noted and tagged as a high-priority dietary requirement in the system. And you requested some specific equipment rental for the booth? Acoustic panels and a holographic projector? Exactly. We’re doing a live demonstration of soundwaves in urban canyons, showing how noise bounces off glass surfaces, so the acoustic panels are essential for isolating our booth from the ambient noise of the exhibition hall. And I’ll definitely need the holographic projector for the keynote. The standard 4K screens just don't capture the depth and the layering of the vertical greening models we’re presenting. We need that 3D effect to show the impact on air quality. We’ve secured the projector for the Grand Atrium and the panels are already being installed at booth A24. Lastly, the admin fee was ten percent early-bird discount? Yes, I see that applied. Your badges are being printed now. Will you be staying for the post-event networking drinks at 6:00 PM? It’s a great chance to meet the planners from the Northern Metropolis project. Yes, I’ll be there. I’m looking forward to hearing their take on the 'Silence Certification' guidelines. And I’ll be traveling back via the electric shuttle zone, so I’ll need a pass for that as well. Thank you for your help, it’s been a very efficient check-in despite the crowds. (120-second pause) This is the end of Task 1.",
+    "Task_2_Script": "Our pleasure. Here are your badges and your shuttle pass. Enjoy the summit, Julianne! I hope your keynote is a success. Task 2. Listen to a keynote by Julianne Kwok on 'Reclaiming Third Places'. Complete the notes. You now have two minutes to study the task. (120-second pause) Good morning, everyone. In 2026, Hong Kong is a city that never stops. We are famous globally for our efficiency, our 24/7 skyline, and our relentless work ethic. But at what cost? Our recent 'Urban Wellness Index', conducted across all eighteen districts, shows a staggering seventy-two percent burnout rate among residents aged 18 to 45. This is the highest rate in the developed world, surpassing even Tokyo and Seoul. This is not just about long working hours or high rents; it is about the systematic destruction of our 'Third Places'. The term 'Third Place' was first coined by the famous sociologist Ray Oldenburg in his seminal 1989 book 'The Great Good Place'. In his view, a healthy, functioning society requires three distinct spheres of existence. The First Place is our home—our private, domestic sanctuary where we rest and care for our families. The Second Place is the workplace—the office, the factory, or the studio where we produce and earn our living. But the Third Place is where we find community, social rest, and civic engagement. It is the public library, the local park, the neighborhood cafe—a place where you are welcome regardless of your bank balance and where social equality is the natural state of being. It is the heart of the city's soul. (120-second pause) This is the end of Task 2.",
+    "Task_3_Script": "Unfortunately, in modern Hong Kong, these spaces are vanishing at an alarming rate. In the last five years alone, our department has tracked a forty percent loss of public benches in urban parks and plazas. Why is this happening? It’s because of a disturbing design trend known as 'Hostile Architecture'. You’ve seen it everywhere if you look closely—metal armrests placed in the middle of benches specifically to prevent people from lying down, or metal spikes installed on window ledges to prevent loitering. We are turning our public spaces into corridors designed only for rapid movement, not for rest or reflection. We are treating our citizens as units of transit, not as human beings. To combat this, we are advocating for the '15-minute city' concept—an urban planning model where every resident, regardless of their district, is within a fifteen-minute walk of a high-quality, free-to-use Third Place. This is not just a luxury; it is a fundamental human right in an age of extreme density. Research shows that just ten minutes of silence at an eighty-five decibel reduction level can reduce cortisol levels—the body's primary stress hormone—by fifteen percent within minutes. This has profound implications for long-term health and productivity. This is why our institute is supporting the 'Labor Reform Act of 2026', specifically Article 24B, which is popularly known as the 'Right to Disconnect'. This law mandates a 7:00 PM digital cutoff for all non-emergency work communications. No more late-night WhatsApps from the boss asking for a report. No more checking emails at the dinner table. Companies that violate this will face a fifty-thousand dollar fine, known as a 'Restorative Justice Fine', which will be funneled into mental health grants for workers. Currently, our data shows that thirty-five percent of all work in Hong Kong is performed after 7:00 PM, much of it unpaid, digital, and hidden from traditional labor statistics. We need to reclaim our time, our boundaries, and our silence. We need to build a city that respects the rhythm of the human body. If you want to join our movement and support our policy proposals, please visit urbanharmony.org. Together, we can build a Hong Kong that is not just efficient, but sustainable for the human spirit. Thank you for your time today. Task 3. Listen to a panel discussion on 'The Quiet Pod Initiative'. Complete the table. You now have two minutes to study the task. (120-second pause) Welcome to 'The Future of Urban Silence' segment of our summit. I'm joined today by Mr. Lam, a leading property developer; Sarah, a university student from HKU who has been campaigning for more study spaces; and Dr. Ng, a clinical psychologist who specializes in urban stress. Mr. Lam, these new 'Quiet Pods' are appearing in MTR concourses and shopping malls across the city. Is this the solution to our noise problem, or just another business opportunity? They are a revolutionary piece of acoustic engineering, certainly. Each pod has a compact interior size of 1.5 square meters—perfectly optimized for a single individual to work, take a call, or rest in absolute peace in the middle of a bustling hub. We use specialized high-density rock-wool insulation and double-glazed acoustic glass to achieve an eighty-five decibel noise reduction. It’s a sanctuary in the middle of the busiest urban canyons. We are monetizing silence because, in 2026, silence is a premium commodity. We’ve already installed fifty units in the Central and Tsim Sha Tsui hubs, and the occupancy rate is over ninety percent during the morning rush. It’s about providing choice to the busy professional. (120-second pause) I use them between lectures all the time, Mr. Lam. As a student living in a subdivided flat in Sham Shui Po with three siblings and a lot of noise from the street, I have literally no quiet place at home to focus. These pods are a lifesaver for my studies. The rental price is twenty dollars per thirty minutes, which I pay via the 'RestPay HK' app on my phone. It’s affordable for me, but I worry about the precedent this sets. We shouldn’t have to pay to find a quiet spot in our own city. Rest should be a public service, not a private product. I wish the government would install them in public libraries and community centers for free, rather than letting developers charge us by the minute for a bit of peace. That is precisely my concern as a psychologist, Sarah. While the pods are technically impressive, featuring HEPA-silent airflow and near-perfect acoustic isolation that blocks out the low-frequency rumble of the MTR, they represent what we call the 'commodification of a human right'. Rest should not be a subscription service or a pay-per-use product. Our data shows a seventy-five percent approval rate among students, but that is simply because the public alternatives—our parks and libraries—are so poorly maintained, noisy, and overcrowded. We need to invest in our collective public space, not just these private pods. The trial period for this initiative ends on August 15, and we need a serious public debate before we roll these out city-wide. We need to ensure that the 'Right to Rest' is not just for those who can afford the twenty-dollar fee. We need to decide if we want a city where rest is a luxury or a fundamental right for every citizen. (120-second pause) This is the end of Task 3.",
+    "Task_4_Script": "Task 4. Listen to the forum on 'The Right to Disconnect'. Complete the matrix. You now have two minutes to study the task. (120-second pause) Good evening, everyone. We are here tonight at the North Point Community Center to discuss one of the most significant pieces of legislation in a generation: the proposed 2026 Labor Reform Act, specifically the controversial Article 24B, commonly known as the 'Right to Disconnect'. I am Dr. Alan Wong, your moderator for this evening. We have a diverse range of speakers tonight. Let’s hear from our primary stakeholders. Labor Representative, what is your organization's stance on this proposal? Our stance is firm and unwavering: we need a mandatory 7:00 PM digital cutoff. Our workers are reaching a breaking point. Forty-two percent of all work performed in this city is now categorized as 'Unpaid Overtime' triggered by late-night digital requests on WhatsApp, Slack, or email. Article 24B will put an end to this digital tethering by imposing 'Restorative Justice Fines' of fifty thousand dollars on companies that consistently harass staff after hours. We have eighty-eight percent public support for this law, according to the latest university polls. It is time to protect our people from the 'Always-On' burnout and give them their evenings back. Rest is not a privilege; it is a necessity for a sustainable workforce. (120-second pause) I must strongly disagree with this rigid approach. We are a global financial and technology hub. If our engineers and financiers can't reply to a client in New York or London because it's 7:01 PM in Hong Kong, we will lose our global competitiveness. Businesses will move to Singapore or Dubai. This law is too rigid and ignores the reality of global trade. We need flexibility, not handcuffs. This will hurt our reputation as a city that gets things done 24/7. We should be focusing on voluntary guidelines, not heavy-handed legislation that will drive away investors. I’m stuck in the middle of this debate. As a freelancer, I value my flexibility and the ability to work when I want, but I also find it impossible to set boundaries with demanding clients. I’m always afraid that if I don't reply to a 10 PM request immediately, I’ll lose the next project. I struggle with the loss of boundaries and the mental health toll it takes. I support the 'Nap-Pod Grant'—a two point five million dollar fund specifically for SMEs to install rest areas and quiet zones for their staff. This would help small businesses support their teams without the fear of heavy fines. We need to find a balance between economic reality and human health. The deadline for public feedback is June 12. You can share your views at the official website, www.laborreform.gov.hk. We need every voice to be heard. This is the end of Part A.",
+    "Part_B_Script": "This is the end of Part A. Now, turn to Part B. Part B. Introduction. You are Chris Wong, a research assistant at Urban Harmony. You will hear a briefing given by the CEO, Janice Wong, regarding the 'Right to Rest' campaign strategy and the Q3 deliverables. As you listen, take notes which may help you to complete the tasks. You will have five minutes to study the Part B Information Directory and the tasks. (Pause 5m) Good morning, team. We have a lot of momentum after the RestFest summit and the recent media coverage of Article 24B. The public is finally starting to realize that silence is not just 'empty space'—it is a vital resource for the city's future. Chris, take detailed notes on these specific updates for our upcoming tasks, as they are the key synthesis points for our Level 5 deliverables. First, regarding the Northern Metropolis development project. We’ve successfully lobbied the Planning Department to include a mandatory 'Silence Certification' for all new commercial office blocks. This means every building must achieve a Level 3 silence rating—which requires an eighty-five decibel reduction in all common areas and breakrooms—to qualify for the green government tax breaks and utility rebates. This is a massive victory for urban wellness and will set a new standard for office design in Asia. We need to highlight this in the Task 8 proposal to the Mega Finance Group CEO. They are very focused on tax efficiency and ESG scores, so this is a great hook to get their attention. Secondly, I have an important 'Audio-Only' update regarding the 'Nap-Pod Grant'. We’ve just received official confirmation from the Labor Bureau that the total grant prize fund is two point five million dollars per year. This is a massive fund specifically for SMEs to install quiet pods and restorative rest zones. Make sure this specific two point five million dollar figure is featured prominently in your Task 8 proposal and Task 9 internal report. It’s the lifeblood of our rollout strategy and shows the government's serious commitment to the 'Slow Living' agenda. (End of simulation)"
   }
 }

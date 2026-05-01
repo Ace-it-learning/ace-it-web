@@ -16,7 +16,7 @@ const SpeakingMockStudio = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const { user, profile } = useAuth();
-    const { equipment } = useAvatar();
+    const { equipment, englishTutor } = useAvatar();
     const [searchParams, setSearchParams] = useSearchParams();
     const [showUpgradeModal, setShowUpgradeModal] = useState(false);
     const tier = profile?.subscription_tier || 'free';
@@ -646,14 +646,14 @@ const SpeakingMockStudio = () => {
                                 return (
                                     <div key={pos} className="flex flex-col items-center gap-4 group">
                                         <div className={`size-40 rounded-[3rem] bg-slate-800 border-4 transition-all flex items-center justify-center relative ${isActive ? 'border-emerald-500 scale-110 shadow-[0_0_40px_rgba(16,185,129,0.4)]' : 'border-slate-700'}`}>
-                                            {pos === 'You' ? <img src={equipment?.student?.image || user?.photoURL || '/avatars/male_student_avatar_1774534573731.png'} alt="You" className="w-full h-full object-cover rounded-[2.5rem]" /> : <img src="/avatars/Miss_Janie.jpg" className="w-full h-full object-cover rounded-[2.5rem]" alt="Janie" />}
+                                            {pos === 'You' ? <img src={equipment?.student?.image || user?.photoURL || '/avatars/male_student_avatar_1774534573731.png'} alt="You" className="w-full h-full object-cover rounded-[2.5rem]" /> : <img src={englishTutor?.avatar || "/avatars/Miss_Janie.jpg"} className="w-full h-full object-cover rounded-[2.5rem]" alt={englishTutor?.name || "Janie"} />}
                                             {isActive && (
                                                 <div className="absolute -top-4 -right-4 size-10 bg-emerald-500 rounded-2xl flex items-center justify-center border-4 border-slate-900 animate-bounce">
                                                     <Mic size={18} />
                                                 </div>
                                             )}
                                         </div>
-                                        <span className="text-[11px] font-black uppercase tracking-widest text-slate-400 bg-black/40 px-3 py-1 rounded-full">{pos === 'You' ? 'Candidate D (You)' : 'Miss Janie (Examiner)'}</span>
+                                        <span className="text-[11px] font-black uppercase tracking-widest text-slate-400 bg-black/40 px-3 py-1 rounded-full">{pos === 'You' ? 'Candidate D (You)' : `${englishTutor?.name || "Miss Janie"} (Examiner)`}</span>
                                     </div>
                                 );
                             })}

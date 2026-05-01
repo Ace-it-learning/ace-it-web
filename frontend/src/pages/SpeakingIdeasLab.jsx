@@ -27,7 +27,7 @@ const SpeakingIdeasLab = () => {
     const [searchParams] = useSearchParams();
     const navigate = useNavigate();
     const { user } = useAuth();
-    const { activeAgent, equipment } = useAvatar();
+    const { activeAgent, englishTutor, equipment } = useAvatar();
 
     // 1. Module & Content Selection
     const topicId = searchParams.get('topic') || 'd_1';
@@ -206,7 +206,8 @@ const SpeakingIdeasLab = () => {
     const runIntro = () => {
         setIsAITurn(true);
         const topicName = questData?.scenario || questData?.title || 'this topic';
-        const introText = `Hello! I'm Miss Janie. Today we're working on Ideas and Organisation. Our focus is ${topicName}. Use the Mind Map on the left to brainstorm points before you speak. Let's start!`;
+        const tutorName = englishTutor?.name || activeAgent?.name || "Miss Janie";
+        const introText = `Hello! I'm ${tutorName}. Today we're working on Ideas and Organisation. Our focus is ${topicName}. Use the Mind Map on the left to brainstorm points before you speak. Let's start!`;
         
         playAudio(introText, 'Tutor', () => {
             setPhase('DISCUSSION');
@@ -537,10 +538,10 @@ const SpeakingIdeasLab = () => {
                             className="bg-slate-900 text-white rounded-[2rem] p-6 shadow-2xl flex items-center gap-6"
                         >
                             <div className="size-16 rounded-2xl bg-indigo-600 flex items-center justify-center border-2 border-indigo-400 overflow-hidden shadow-xl">
-                                <img src={activeAgent.avatar} alt="T" className="size-full object-cover" />
+                                <img src={englishTutor?.avatar || activeAgent?.avatar} alt="T" className="size-full object-cover" />
                             </div>
                             <div className="flex-1">
-                                <h4 className="text-sm font-black text-indigo-400 uppercase tracking-widest">{activeAgent.name}</h4>
+                                <h4 className="text-sm font-black text-indigo-400 uppercase tracking-widest">{englishTutor?.name || activeAgent?.name}</h4>
                                 <p className="text-lg font-bold leading-tight">{speechState.text}</p>
                             </div>
                         </motion.div>

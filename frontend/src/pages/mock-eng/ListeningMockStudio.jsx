@@ -1000,7 +1000,7 @@ const ListeningMockStudio = () => {
                             <div className="flex flex-col items-center">
                                 <div className="size-24 border-4 border-white/10 border-t-indigo-500 rounded-full animate-spin mb-8" />
                                 <h2 className="text-2xl font-black text-white uppercase tracking-widest">Evaluating Performance</h2>
-                                <p className="text-slate-400 font-bold mt-2">Miss Janie is reviewing your Integrated Tasks...</p>
+                                <p className="text-slate-400 font-bold mt-2">{englishTutor?.name || "Miss Janie"} is reviewing your Integrated Tasks...</p>
                             </div>
                         </div>
                     )}

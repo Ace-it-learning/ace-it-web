@@ -29,6 +29,7 @@ import {
 } from 'lucide-react';
 import { LoadingPage, GradingOverlay } from '../../components/shared';
 import { useAuth } from '../../context/AuthContext';
+import { useAvatar } from '../../context/AvatarContext';
 import UpgradeModal from '../../components/common/UpgradeModal';
 import MockCountdownTimer from '../../components/utils/MockCountdownTimer';
 /* eslint-disable no-unused-vars */
@@ -396,6 +397,7 @@ const ReadingMockStudio = () => {
     const { paperId } = useParams();
     const navigate = useNavigate();
     const { user, profile } = useAuth();
+    const { englishTutor } = useAvatar();
     const [searchParams, setSearchParams] = useSearchParams();
 
     const [phase, setPhase] = useState(searchParams.get('phase') || 'LOADING'); // LOADING, BRIEFING, SELECTOR, EXAM, RESULTS
@@ -1041,7 +1043,7 @@ const ReadingMockStudio = () => {
                             </div>
                             <h2 className="text-3xl font-black text-white uppercase tracking-tighter mb-4">Pedagogical Analysis in Progress</h2>
                             <p className="text-indigo-200 text-sm font-medium max-w-md leading-relaxed">
-                                Miss Janie is evaluating your responses against the <span className="text-white font-bold">HKEAA Marking Rubric</span> and cross-referencing textual evidence...
+                                {englishTutor?.name || "Miss Janie"} is evaluating your responses against the <span className="text-white font-bold">HKEAA Marking Rubric</span> and cross-referencing textual evidence...
                             </p>
                             <div className="mt-8 w-full max-w-sm space-y-4">
                                 <div className="h-1.5 w-full bg-white/10 rounded-full overflow-hidden border border-white/5">
@@ -1374,7 +1376,7 @@ const ReadingMockStudio = () => {
                                                 }`}>
                                                     <div className="flex gap-4">
                                                         <div className="size-10 rounded-full overflow-hidden shrink-0 border-2 border-white shadow-md">
-                                                            <img src="/avatars/Miss_Janie.jpg" alt="Janie" className="w-full h-full object-cover" />
+                                                            <img src={englishTutor?.avatar || "/avatars/Miss_Janie.jpg"} alt={englishTutor?.name || "Janie"} className="w-full h-full object-cover" />
                                                         </div>
                                                         <div className="flex-1 space-y-2">
                                                             <div className="flex items-center justify-between">
@@ -1438,7 +1440,7 @@ const ReadingMockStudio = () => {
                                                                     <div className="mt-4 p-4 bg-indigo-50/80 rounded-2xl border border-indigo-100 shadow-sm">
                                                                         <p className="text-[10px] font-black text-indigo-600 uppercase tracking-widest mb-1.5 flex items-center gap-1.5">
                                                                             <Sparkles size={12} className="fill-indigo-500" />
-                                                                            Miss Janie's Learning Moment
+                                                                            {englishTutor?.name || "Miss Janie"}'s Learning Moment
                                                                         </p>
                                                                         <p className="text-xs font-bold text-slate-700 leading-relaxed italic">
                                                                             {q.learning_note}
@@ -1786,10 +1788,10 @@ const ReadingMockStudio = () => {
                         >
                             <div className="flex items-center gap-3 mb-6 relative z-10">
                                 <div className="size-12 rounded-full overflow-hidden border-2 border-white shadow-md">
-                                    <img src="/avatars/Miss_Janie.jpg" alt="Janie" className="w-full h-full object-cover" />
+                                    <img src={englishTutor?.avatar || "/avatars/Miss_Janie.jpg"} alt={englishTutor?.name || "Janie"} className="w-full h-full object-cover" />
                                 </div>
                                 <div>
-                                    <h3 className="text-sm font-black text-slate-900">Miss Janie's Analysis</h3>
+                                    <h3 className="text-sm font-black text-slate-900">{englishTutor?.name || "Miss Janie"}'s Analysis</h3>
                                     <p className="text-[11px] font-black text-indigo-400 uppercase tracking-widest italic-none">Pedagogical Specialist</p>
                                 </div>
                             </div>

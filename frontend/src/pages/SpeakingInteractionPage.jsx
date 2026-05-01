@@ -58,11 +58,11 @@ const SpeakingInteractionPage = () => {
 
     const navigate = useNavigate();
     const { user } = useAuth();
-    const { activeAgent } = useAvatar();
+    const { activeAgent, englishTutor } = useAvatar();
 
     // Examiner Identity: Use equipped/active agent
-    const agentName = activeAgent.name;
-    const examinerAvatar = activeAgent.avatar || AGENTS.english.avatar;
+    const agentName = englishTutor?.name || activeAgent?.name || "Miss Janie";
+    const examinerAvatar = englishTutor?.avatar || activeAgent?.avatar || AGENTS.english.avatar;
 
     // Safety check for broken images
     const [examinerImg, setExaminerImg] = useState(examinerAvatar);

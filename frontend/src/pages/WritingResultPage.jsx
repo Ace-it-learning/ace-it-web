@@ -9,6 +9,7 @@ import {
 } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import { useLanguage } from '../context/LanguageContext';
+import { useAvatar } from '../context/AvatarContext';
 import WritingHighlighter from '../components/writing/WritingHighlighter';
 import { getLocalizedValue } from '../utils/writingUtils';
 import { GRAMMAR_MAPPING } from '../constants/grammarMapping';
@@ -18,6 +19,7 @@ const WritingResultPage = () => {
     const navigate = useNavigate();
     const { user } = useAuth();
     const { language, t } = useLanguage();
+    const { activeAgent, englishTutor } = useAvatar();
     const isChinese = language?.startsWith('zh');
     
     // Diagnostic version tag for verification
@@ -388,7 +390,7 @@ const WritingResultPage = () => {
                                 </div>
                                 <div>
                                     <h3 className="text-2xl font-black uppercase tracking-tight text-amber-900">
-                                        {isChinese ? 'Miss Janie 的語法診斷' : "Miss Janie's Grammar Diagnostic"}
+                                        {isChinese ? `${englishTutor?.name || activeAgent?.name || "Miss Janie"} 的語法診斷` : `${englishTutor?.name || activeAgent?.name || "Miss Janie"}'s Grammar Diagnostic`}
                                     </h3>
                                     <p className="text-xs font-bold text-amber-700 uppercase tracking-widest flex items-center gap-2">
                                         <Sparkles size={12} className="animate-pulse" />

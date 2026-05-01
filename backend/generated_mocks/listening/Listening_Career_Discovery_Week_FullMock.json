@@ -1,63 +1,833 @@
 {
   "meta": {
-    "subject": "English Language",
-    "paper_id": "Paper 3 (Listening & Integrated Skills)",
-    "topic": "Career Discovery Week",
-    "version": "2026_V1",
-    "description": "Mock Exam: Career Discovery Week & Industry Mentorship"
+    "title": "HKDSE Paper 3: Career Discovery Week 2026 (Stamina Stretch Edition)",
+    "topic": "Career Planning & Future Work Skills",
+    "difficulty": "Level 5** Authentic (High Stamina)",
+    "total_marks_part_a": 54,
+    "total_marks_part_b": 50
   },
   "Part_A": {
-    "name": "Compulsory Section (Listening Tasks)",
-    "audio_script": {
-      "Task_1": {
-        "title": "Mentorship Programme Enquiry",
-        "type": "Dialogue",
-        "speakers": ["Student", "Coordinator"],
-        "content": [
-          { "speaker": "Student", "line": "Hi, I'm interested in the Career Discovery Week. Can you tell me when it starts?" },
-          { "speaker": "Coordinator", "line": "Of course! It runs from July 15th to July 19th." }
-        ],
-        "questions": [
-          { "type": "Fill_in_Blanks", "number": 1, "text": "Career Discovery Week starts on July _________." }
-        ]
-      }
-    }
-  },
-  "Part_B": {
-    "situation": "You are a member of the Student Union. You are helping to organize the 'Career Discovery Week' where alumni return to share industry insights. You need to complete tasks based on a staff meeting and several documents.",
-    "data_file": [
+    "tasks": [
       {
-        "type": "email",
-        "title": "Instruction from Principal",
-        "content": "To: Student Union\nFrom: Principal\nSubject: Career Discovery Week\n\nPlease ensure we have a good mix of industries, particularly STEM and Creative Arts. We need mentors for the workshop on July 17th."
+        "id": "Task_1",
+        "instructions": "You are a student assistant helping with the registration for Career Discovery Week. Complete the registration form below.",
+        "questions": [
+          {
+            "id": "t1_q1",
+            "type": "Fill_in_Blanks",
+            "label": "Full Name of Student:",
+            "answer": "Justin Cheng"
+          },
+          {
+            "id": "t1_q2",
+            "type": "Fill_in_Blanks",
+            "label": "Student ID Number:",
+            "answer": "SJ2021-445"
+          },
+          {
+            "id": "t1_q3",
+            "type": "Fill_in_Blanks",
+            "label": "Year Group:",
+            "answer": "Secondary 5"
+          },
+          {
+            "id": "t1_q4",
+            "type": "Fill_in_Blanks",
+            "label": "Previous Work Experience:",
+            "answer": "Volunteer Library Assistant"
+          },
+          {
+            "id": "t1_q5",
+            "type": "Fill_in_Blanks",
+            "label": "Career Interest Area 1:",
+            "answer": "Sustainable Architecture"
+          },
+          {
+            "id": "t1_q6",
+            "type": "Fill_in_Blanks",
+            "label": "Career Interest Area 2:",
+            "answer": "Digital Marketing"
+          },
+          {
+            "id": "t1_q7",
+            "type": "Fill_in_Blanks",
+            "label": "Preferred Workshop Time:",
+            "answer": "Tuesday Afternoon"
+          },
+          {
+            "id": "t1_q8",
+            "type": "Fill_in_Blanks",
+            "label": "Workshop Selection:",
+            "answer": "Creative Design Thinking"
+          },
+          {
+            "id": "t1_q9",
+            "type": "Fill_in_Blanks",
+            "label": "Mock Interview Choice:",
+            "answer": "Media and Communications"
+          },
+          {
+            "id": "t1_q10",
+            "type": "Fill_in_Blanks",
+            "label": "Emergency Contact Name:",
+            "answer": "Mrs. Linda Cheng"
+          },
+          {
+            "id": "t1_q11",
+            "type": "Fill_in_Blanks",
+            "label": "Emergency Contact Number:",
+            "answer": "9876 5432"
+          },
+          {
+            "id": "t1_q12",
+            "type": "Fill_in_Blanks",
+            "label": "Dietary Requirements:",
+            "answer": "Nut-free"
+          },
+          {
+            "id": "t1_q13",
+            "type": "Fill_in_Blanks",
+            "label": "Allergy Severity:",
+            "answer": "High (Anaphylaxis)"
+          },
+          {
+            "id": "t1_q14",
+            "type": "Fill_in_Blanks",
+            "label": "Uniform Size (T-shirt):",
+            "answer": "Extra Large (XL)"
+          }
+        ]
       },
       {
-        "type": "note",
-        "title": "Alumni Availability Note",
-        "content": "Mr. Wong (Engineer) - Available all week.\nMs. Lee (Designer) - Only available Wed/Fri."
+        "id": "Task_2",
+        "instructions": "Listen to a keynote presentation about 'The Evolution of Careers in the 2030s'. Complete the notes and answer the questions.",
+        "questions": [
+          {
+            "id": "t2_q1",
+            "type": "Fill_in_Blanks",
+            "label": "Keynote Speaker Name:",
+            "answer": "Dr. Adrian Ho"
+          },
+          {
+            "id": "t2_q2",
+            "type": "Fill_in_Blanks",
+            "label": "Current Profession:",
+            "answer": "Strategic Futurist"
+          },
+          {
+            "id": "t2_q3",
+            "type": "Fill_in_Blanks",
+            "label": "Year of Graduation from St. Jude's:",
+            "answer": "2005"
+          },
+          {
+            "id": "t2_q4",
+            "type": "Fill_in_Blanks",
+            "label": "Percentage of Jobs at Risk from AI:",
+            "answer": "45%"
+          },
+          {
+            "id": "t2_q5",
+            "type": "Fill_in_Blanks",
+            "label": "Growth Sector mentioned:",
+            "answer": "Green Technology Services"
+          },
+          {
+            "id": "t2_q6",
+            "type": "Multiple_Choice",
+            "question": "What is the most important skill for the 2030s?",
+            "options": [
+              "Coding",
+              "Adaptability",
+              "Data Analysis"
+            ],
+            "answer": "Adaptability"
+          },
+          {
+            "id": "t2_q7",
+            "type": "Multiple_Choice",
+            "question": "How many career changes does the speaker predict per lifetime?",
+            "options": [
+              "3-4",
+              "5-7",
+              "More than 10"
+            ],
+            "answer": "5-7"
+          },
+          {
+            "id": "t2_q8",
+            "type": "Fill_in_Blanks",
+            "label": "New Job Title 1:",
+            "answer": "Human-AI Integration Specialist"
+          },
+          {
+            "id": "t2_q9",
+            "type": "Fill_in_Blanks",
+            "label": "New Job Title 2:",
+            "answer": "Virtual World Architect"
+          },
+          {
+            "id": "t2_q10",
+            "type": "Fill_in_Blanks",
+            "label": "Industry being 'redefined' (Traditional):",
+            "answer": "Logistics and Warehousing"
+          },
+          {
+            "id": "t2_q11",
+            "type": "Fill_in_Blanks",
+            "label": "Annual Growth Rate of Freelancing:",
+            "answer": "12%"
+          },
+          {
+            "id": "t2_q12",
+            "type": "Fill_in_Blanks",
+            "label": "Speaker's Recommendation for Students:",
+            "answer": "Build a multi-disciplinary portfolio"
+          },
+          {
+            "id": "t2_q13",
+            "type": "Fill_in_Blanks",
+            "label": "Website for Skill Assessment:",
+            "answer": "www.future-path-hk.com"
+          },
+          {
+            "id": "t2_q14",
+            "type": "Fill_in_Blanks",
+            "label": "Deadline for Scholarship Application:",
+            "answer": "August 15"
+          },
+          {
+            "id": "t2_q15",
+            "type": "Multiple_Choice",
+            "question": "Where is the post-keynote networking session?",
+            "options": [
+              "Main Hall",
+              "Conference Room A",
+              "School Courtyard"
+            ],
+            "answer": "School Courtyard"
+          },
+          {
+            "id": "t2_q16",
+            "type": "Fill_in_Blanks",
+            "label": "Keynote Sponsor:",
+            "answer": "Global Reach Consulting"
+          }
+        ]
+      },
+      {
+        "id": "Task_3",
+        "instructions": "Three alumni mentors are discussing their career paths in different sectors. Tick the correct boxes.",
+        "questions": [
+          {
+            "id": "t3_q1",
+            "type": "Multiple_Choice",
+            "question": "Mr. Lam (Engineer) thinks the biggest challenge is:",
+            "options": [
+              "Project Funding",
+              "Public Safety",
+              "Technological Lag"
+            ],
+            "answer": "Public Safety"
+          },
+          {
+            "id": "t3_q2",
+            "type": "Multiple_Choice",
+            "question": "Ms. Choi (Artist) emphasizes the importance of:",
+            "options": [
+              "Commercial viability",
+              "Social media presence",
+              "Authentic expression"
+            ],
+            "answer": "Social media presence"
+          },
+          {
+            "id": "t3_q3",
+            "type": "Multiple_Choice",
+            "question": "Mr. Tan (Finance) predicts a rise in:",
+            "options": [
+              "Crypto-banking",
+              "ESG Investing",
+              "Retail stock trading"
+            ],
+            "answer": "ESG Investing"
+          },
+          {
+            "id": "t3_q4",
+            "type": "Fill_in_Blanks",
+            "label": "Mentor A's First Job Title:",
+            "answer": "Junior Site Supervisor"
+          },
+          {
+            "id": "t3_q5",
+            "type": "Fill_in_Blanks",
+            "label": "Mentor B's Gallery Location:",
+            "answer": "West Kowloon Cultural District"
+          },
+          {
+            "id": "t3_q6",
+            "type": "Fill_in_Blanks",
+            "label": "Mentor C's University Degree:",
+            "answer": "Applied Mathematics"
+          },
+          {
+            "id": "t3_q7",
+            "type": "Fill_in_Blanks",
+            "label": "Mentorship Program Duration:",
+            "answer": "6 Months"
+          },
+          {
+            "id": "t3_q8",
+            "type": "Fill_in_Blanks",
+            "label": "Frequency of Meetings:",
+            "answer": "Once every two weeks"
+          },
+          {
+            "id": "t3_q9",
+            "type": "Fill_in_Blanks",
+            "label": "Venue for the Final Gala:",
+            "answer": "Metropolitan Hotel"
+          },
+          {
+            "id": "t3_q10",
+            "type": "Fill_in_Blanks",
+            "label": "Gala Ticket Price (Students):",
+            "answer": "Free"
+          },
+          {
+            "id": "t3_q11",
+            "type": "Fill_in_Blanks",
+            "label": "Gala Ticket Price (Parents):",
+            "answer": "$150"
+          },
+          {
+            "id": "t3_q12",
+            "type": "Fill_in_Blanks",
+            "label": "Contact Phone for Mentorship:",
+            "answer": "2345 6789"
+          }
+        ]
+      },
+      {
+        "id": "Task_4",
+        "instructions": "Stakeholders are discussing the 'New Internship Policy'. Complete the matrix with their specific views.",
+        "questions": [
+          {
+            "id": "t4_q1",
+            "type": "Fill_in_Blanks",
+            "label": "Principal's View on Insurance:",
+            "answer": "School will cover standard liability"
+          },
+          {
+            "id": "t4_q2",
+            "type": "Fill_in_Blanks",
+            "label": "Principal's View on Grading:",
+            "answer": "Internships should be Pass/Fail only"
+          },
+          {
+            "id": "t4_q3",
+            "type": "Fill_in_Blanks",
+            "label": "Principal's Suggestion:",
+            "answer": "Prioritize S5 students for Summer slots"
+          },
+          {
+            "id": "t4_q4",
+            "type": "Fill_in_Blanks",
+            "label": "Career Master's View on Insurance:",
+            "answer": "Companies must provide supplementary cover"
+          },
+          {
+            "id": "t4_q5",
+            "type": "Fill_in_Blanks",
+            "label": "Career Master's View on Grading:",
+            "answer": "Requires a reflective journal for credit"
+          },
+          {
+            "id": "t4_q6",
+            "type": "Fill_in_Blanks",
+            "label": "Career Master's Suggestion:",
+            "answer": "Limit each student to 80 hours total"
+          },
+          {
+            "id": "t4_q7",
+            "type": "Fill_in_Blanks",
+            "label": "Student Rep's View on Insurance:",
+            "answer": "Needs to include travel to/from workplace"
+          },
+          {
+            "id": "t4_q8",
+            "type": "Fill_in_Blanks",
+            "label": "Student Rep's View on Grading:",
+            "answer": "Should contribute to GPA for top performers"
+          },
+          {
+            "id": "t4_q9",
+            "type": "Fill_in_Blanks",
+            "label": "Student Rep's Suggestion:",
+            "answer": "Allow remote-work internships"
+          },
+          {
+            "id": "t4_q10",
+            "type": "Consensus on Supervision:",
+            "answer": "Weekly check-ins via video call"
+          },
+          {
+            "id": "t4_q11",
+            "type": "Agreed Start Date:",
+            "answer": "July 1, 2026"
+          },
+          {
+            "id": "t4_q12",
+            "type": "Next Step:",
+            "answer": "Submit proposal to School Board"
+          }
+        ]
+      }
+    ],
+    "script": [
+      {
+        "speaker": "Announcer",
+        "text": "Hong Kong Diploma of Secondary Education Examination 2026. English Language Paper 3. Listening and Integrated Skills. Career Discovery Week Mock Exam. This examination is designed to test your stamina and ability to filter information in a high-density audio environment."
+      },
+      {
+        "speaker": "Announcer",
+        "text": "The entire broadcast will last approximately one hour and ten minutes. During the examination, you will hear several recordings. You will have time to read the instructions and the questions. You will also have time to check your work. Please ensure your electronic devices are switched off and placed under your chair."
+      },
+      {
+        "speaker": "Announcer",
+        "text": "Part A. Task 1. You are a student assistant helping with the registration for Career Discovery Week at St. Jude's College. You will hear a conversation between a staff member, Ms. Brenda Chan, and a student, Justin Cheng. Complete the registration form below. You now have two minutes to study the task. (120-second pause)"
+      },
+      {
+        "speaker": "Brenda",
+        "text": "Good morning, Justin! Or should I say 'Future Professional' Justin? You're bright and early today. I've been here since 7:30 AM setting up these tables, and I must say, the energy in the hall is already electric. We've already had about fifty students sign up this morning—mostly from the S6 cohort who are panic-buying their way into every workshop—so it's going to be a busy one. How can I help you today?"
+      },
+      {
+        "speaker": "Justin",
+        "text": "Good morning, Ms. Chan. Yes, I saw the queue when I arrived and I didn't want to miss out on the good workshops, especially the ones with the limited-edition T-shirts. My name is Justin Cheng. That's C-H-E-N-G. I think I'm already in your system from last year's sports day, but I'd better give you my student ID just in case it's changed. It's... let me find my card in this messy bag... here it is... it's SJ2021-445."
+      },
+      {
+        "speaker": "Brenda",
+        "text": "C-H-E-N-G... SJ2021-445. Let me just type that into our new database. It's a bit slow today. Ah, yes, here you are. Justin Cheng. Oh, it says here you were in 4C last year? So that makes you... let me see... Secondary 5 this year. You're in 5B, right?"
+      },
+      {
+        "speaker": "Justin",
+        "text": "That's right, Secondary 5, class B. It's a big year for us. I'm starting to get nervous about university applications already, even though it's still a year away. My parents keep showing me brochures for accounting and law, but I really want to find something I'm passionate about. I thought Career Discovery Week would be a good way to build my profile and see what's actually out there. I've already done some volunteer work as a Library Assistant last summer at the public library in Shatin—which was great for organizational skills, I guess—but I want something more industry-focused now."
+      },
+      {
+        "speaker": "Brenda",
+        "text": "Volunteer Library Assistant. That's excellent for demonstrating responsibility and attention to detail. Now, for Career Discovery Week, you need to pick two primary interest areas. We use these to match you with a mentor for the one-on-one sessions later in the term. Think carefully, as we can't change these once the system locks at 5:00 PM today."
+      },
+      {
+        "speaker": "Justin",
+        "text": "I've thought a lot about this. Well, my top choice is Sustainable Architecture. I've always been interested in how we can make high-rise buildings in Hong Kong more eco-friendly, especially with vertical gardens and solar panels. I spent my whole weekend reading about the new green building in East Kowloon. For my second choice... I want something that complements that but is a bit more on the business side? I was thinking about Digital Marketing. My cousin does that for a tech startup and it sounds quite dynamic and fast-paced."
+      },
+      {
+        "speaker": "Brenda",
+        "text": "Sustainable Architecture and Digital Marketing. That's a very modern and strategic mix! One designs the space, the other tells the story. Now, we have workshops running all week from Monday to Friday. Is there a specific time that works best for you? We have morning slots from 9:00 to 12:00 on Monday and Wednesday, or afternoon slots from 2:00 to 5:00 on Tuesday and Thursday. The Friday slots are reserved for the mock interviews."
+      },
+      {
+        "speaker": "Justin",
+        "text": "I have basketball practice on Monday and Wednesday mornings—coach is very strict about attendance—so I'd definitely prefer Tuesday Afternoon if possible. I'm free from 1:30 PM until about 6:00 PM then, so a 2:00 to 5:00 slot is perfect."
+      },
+      {
+        "speaker": "Brenda",
+        "text": "Tuesday Afternoon it is. I've put you in Group G. Based on your interest in architecture, I'd highly recommend the 'Creative Design Thinking' workshop. It's led by an award-winning designer from the PolyU Design school. It's much more hands-on than the 'Business Ethics' or 'Public Speaking' sessions, which can be a bit... well, dry. You'll actually get to build models and present them."
+      },
+      {
+        "speaker": "Justin",
+        "text": "Creative Design Thinking. That sounds exactly like what I'm looking for. Put me down for that. Oh, and I saw something about Mock Interviews on the poster in the cafeteria? Is that included in the basic registration fee?"
+      },
+      {
+        "speaker": "Brenda",
+        "text": "Yes, it is! It's one of the most popular parts of the week. We have three tracks on Friday: 'Science and Engineering', 'Finance and Law', or 'Media and Communications'. Each interview lasts twenty minutes and you get instant feedback from a professional recruiter. Which one would you like to try?"
+      },
+      {
+        "speaker": "Justin",
+        "text": "Since I'm interested in marketing as my second choice, I'll go with Media and Communications. I think I need to work on my presentation skills and how to handle 'curveball' questions from interviewers. My last interview for a summer job was a bit of a disaster, honestly."
+      },
+      {
+        "speaker": "Brenda",
+        "text": "Don't worry, that's what we're here for. It's better to make mistakes now than in a real job interview. Now, I just need some emergency contact details for our health and safety file. Who should we contact if there's an issue?"
+      },
+      {
+        "speaker": "Justin",
+        "text": "That would be my mother, Mrs. Linda Cheng. I'll give you her work number first, then her mobile. Her mobile is usually faster: it's 9876 5432."
+      },
+      {
+        "speaker": "Brenda",
+        "text": "Mrs. Linda Cheng, 9-8-7-6, 5-4-3-2. Got it. Now, Justin, this is very important. We'll be providing a buffet lunch during the workshop days. Do you have any dietary requirements? We have options for Vegetarian, Halal, and Gluten-free, but we need to know about any severe allergies."
+      },
+      {
+        "speaker": "Justin",
+        "text": "I'm actually quite severely nut-free. I have a high severity allergy—anaphylaxis, actually—so I need to be really careful with cross-contamination. Even a small trace of peanuts or walnuts can be very dangerous for me. I usually bring my own EpiPen, but I'd appreciate it if the kitchen knew."
+      },
+      {
+        "speaker": "Brenda",
+        "text": "High severity nut-free. I've typed that in bold caps on your profile. I'll make sure the catering team is alerted and your registration badge is marked with a red 'Allergy Alert' sticker. Safety is our priority. Finally, every participant gets a commemorative Career Discovery Week T-shirt. We have Small, Medium, Large, and Extra Large. They run a bit small this year, just so you know."
+      },
+      {
+        "speaker": "Justin",
+        "text": "Oh, in that case, I'd better go big. I like a baggy fit anyway, so I'll take the Extra Large, or XL. Thank you so much for all your help, Ms. Chan. You've made this very easy."
+      },
+      {
+        "speaker": "Brenda",
+        "text": "You're very welcome, Justin. It's my pleasure to see students so motivated. You'll receive a full confirmation email with your schedule and a map of the venues by the end of the week. Good luck with your S5 studies!"
+      },
+      {
+        "speaker": "Announcer",
+        "text": "(60-second pause to tidy up answers)"
+      },
+      {
+        "speaker": "Announcer",
+        "text": "Task 2. You will hear a keynote presentation by Dr. Adrian Ho about 'The Evolution of Careers in the 2030s'. Listen to the presentation and complete the notes below. You now have two minutes to study the task. (120-second pause)"
+      },
+      {
+        "speaker": "Dr Ho",
+        "text": "Good morning, staff, parents, and most importantly, students of St. Jude's College. It's a surreal and deeply humbling feeling to be standing here on this stage today. Looking out at you, I see a sea of faces that reminds me exactly of myself twenty-one years ago. I sat in that very third row, worrying about my DSE results—or HKCEE as it was back then—and wondering if I would ever find a 'proper' job. I graduated from this very school in 2005. Back then, we were worried about the internet 'taking over' our social lives. Today, we are facing an even bigger, more fundamental shift. My name is Dr. Adrian Ho, and I've spent the last decade working as a Strategic Futurist for the Global Reach Consulting group. My job is to look at data, analyze social trends, and predict how the world—and specifically the world of work—will look in the years to come."
+      },
+      {
+        "speaker": "Dr Ho",
+        "text": "Let's talk numbers, and I'll try not to make them too boring. Many of you have seen the scary headlines in the newspapers or on your social media feeds. 'Robots are taking our jobs!' 'AI will replace human workers by 2030!' Well, I'm here to give you the reality check. Our latest comprehensive research at Global Reach indicates that approximately 45% of current job roles—tasks that people are paid to do today—are at high risk of significant automation or total replacement by AI within the next decade. That sounds terrifying, doesn't it? It means nearly half of the jobs your parents have might look completely different by the time you're thirty. But—and this is a very big 'but'—for every door that technology closes, it opens a dozen more. We are seeing massive, unprecedented growth in sectors that didn't even have a name when I was sitting where you are. Green Technology Services, for instance, is currently the fastest-growing sector globally. As every major corporation scrambles to meet net-zero targets and combat climate change, they need thousands of people to design, implement, and audit these green systems."
+      },
+      {
+        "speaker": "Dr Ho",
+        "text": "So, what should you be studying? What should your focus be? Should you all drop everything and learn to code in Python or Java? Not necessarily. While technical skills are undoubtedly valuable, they have a remarkably short shelf life in the modern era. The code you learn today will likely be obsolete or written by an AI in five years. The most critical skill for the 2030s isn't a technical one—it's Adaptability. I call it 'LQ' or Learning Quotient. The ability to unlearn old habits and relearn new ones is what will keep you employed and relevant. In fact, our models predict that the average worker in your generation will undergo between five and seven major career changes in their lifetime. Not just job changes, moving from one office to another, but entirely different industries and skill sets. You might start in marketing, move into environmental policy, and end up in digital ethics."
+      },
+      {
+        "speaker": "Dr Ho",
+        "text": "What kind of jobs am I talking about? Let me give you some concrete examples from our 'Jobs of the Future' report. Imagine a 'Human-AI Integration Specialist'—this isn't a programmer, but someone who understands human psychology and AI capabilities, managing the workflow between automated systems and human creative teams to ensure the final product has a 'human touch'. Or consider the role of a 'Virtual World Architect', designing the complex digital spaces where we will soon conduct most of our professional meetings, our shopping, and our social interactions. These aren't just video games; they are the new infrastructure of society. Meanwhile, traditional, labor-intensive industries like Logistics and Warehousing are being completely redefined by robotics and autonomous delivery vehicles. This isn't science fiction; it's happening right here in the container terminals of Kwai Chung and the logistics hubs of the Science Park. If you want to survive, you need to understand how to work alongside these machines."
+      },
+      {
+        "speaker": "Dr Ho",
+        "text": "We are also witnessing the gradual 'death' of the traditional 9-to-5 office job. The freelance or 'gig' economy is no longer just for food delivery or ride-sharing; it's moving into high-end professional services. The sector is growing at an annual rate of 12%. More and more designers, engineers, and consultants are choosing to work for multiple clients across the globe from the comfort of their own homes. My primary recommendation for you all today is to stop thinking about a single, linear 'career path'. That concept is dead. Instead, focus on building a multi-disciplinary portfolio of skills. Be a biologist who understands data science, or a lawyer who understands AI ethics. Be a 'T-shaped' professional—deep expertise in one area, but broad knowledge across many others. For those of you who want to dive deeper into your own potential, I've set up a free skill assessment tool for St. Jude's students at www.future-path-hk.com. It's a bit like a personality test, but for your future career. I've also personally sponsored a scholarship for the most innovative career portfolio—the deadline for applications is August 15, so don't leave it until the last minute! I'll be in the School Courtyard after this talk for a more informal networking session, kindly sponsored by Global Reach Consulting. They've even brought some high-tech gadgets for you to try out. Thank you for your time, stay curious, and remember: the future isn't something that happens to you, it's something you build with your own hands. Good luck!"
+      },
+      {
+        "speaker": "Announcer",
+        "text": "(60-second pause to tidy up answers)"
+      },
+      {
+        "speaker": "Announcer",
+        "text": "Task 3. You will hear a panel discussion with three alumni mentors: Mr. Lam, Ms. Choi, and Mr. Tan. Listen to the discussion and complete the table below. You now have two minutes to study the task. (120-second pause)"
+      },
+      {
+        "speaker": "Host",
+        "text": "Welcome back, everyone. Following that inspiring keynote, we are now joined by three more of our successful alumni who have generously returned to St. Jude's to mentor the next generation. Mr. Lam is a Senior Structural Engineer with twenty years of experience, Ms. Choi is a Professional Digital Artist and Gallery Owner, and Mr. Tan works in the fast-paced world of International Finance and ESG. Mr. Lam, let's start with you. Engineering is often seen as the 'safe' career choice, but I'm sure it has its own unique pressures. What's the biggest challenge in your field today?"
+      },
+      {
+        "speaker": "Mr Lam",
+        "text": "Thank you. It's great to be back. You're right, everyone thinks engineering is just about math, physics, and wearing a yellow hard hat. But when you're responsible for building massive bridges, deep-sea tunnels, or the skyscrapers that define our skyline, the technical part is actually the easiest. Project funding is always a headache—budgets are tight and every cent is scrutinized—and technological lag can be frustrating when you want to use the latest materials but the regulations haven't caught up yet. However, the absolute biggest, most pressing challenge we face is Public Safety. One small error in a stress calculation, one slight oversight in a material choice, or one mistake by a subcontractor can have catastrophic, life-changing consequences. That's the weight we carry every day. It's a profession of immense responsibility, and you have to be comfortable with that pressure."
+      },
+      {
+        "speaker": "Ms Choi",
+        "text": "If I could just interject there, Mr. Lam. I'd like to add a completely different perspective from the world of arts. In the creative sector, we don't have those life-and-death stakes, which I'm very grateful for, but the pressure is still intense in a different way. Many young artists I meet are brilliant at their craft, but they focus solely on 'authentic expression' and 'staying true to their vision'. While that's beautiful and necessary, if you actually want to make a living and not just be a 'starving artist', you simply cannot ignore the business side of the industry. In today's saturated market, having a strong, consistent social media presence is the single most important factor for commercial success. It's not just for vanity; it's how you find your audience, how you attract international collectors, and how you secure gallery space. Without a digital footprint, even the most talented artist remains effectively invisible to the people who can help them grow. You have to be your own marketing manager, your own PR agent, and your own curator."
+      },
+      {
+        "speaker": "Mr Tan",
+        "text": "Ms. Choi is absolutely right about the digital shift, though we see it in a much more analytical way in Finance. We're seeing a similar fundamental change in how we value companies. People talk a lot about crypto-banking, NFTs, and retail stock trading apps, and while they are very trendy and make for great headlines, they are also incredibly volatile and, frankly, quite risky for the average person. The real, sustainable, and massive rise we're seeing in the professional finance world is in ESG Investing—that stands for Environmental, Social, and Governance. Global investors, from pension funds to tech billionaires, now care more about a company's carbon footprint, their diversity policies, and their labor practices than they do about just their quarterly profit margins. It's a complete, fundamental shift in how global capital is allocated. If a company isn't 'green' or 'ethical', it simply won't get the funding it needs to survive. For students interested in finance, I'd say don't just study economics; study environmental science or sociology too."
+      },
+      {
+        "speaker": "Host",
+        "text": "That's such a modern take on finance, Mr. Tan. Thank you. Now, let's look back for a moment. Most students see you as you are now—successful and confident. But what were your first steps after graduation? Mr. Lam, did you walk straight into a senior role?"
+      },
+      {
+        "speaker": "Mr Lam",
+        "text": "Far from it! I didn't start in a fancy office with a view of the harbor. My very first job title was Junior Site Supervisor. I spent two long, hot years wearing a hard hat and heavy boots on construction sites in the remote parts of the New Territories. I was the one checking the concrete mixes and making sure the workers were following the blueprints. It was physically exhausting and often quite muddy, but it was invaluable experience. I learned how things actually get built on the ground, with all the mess and the human errors, not just how they look as perfect 3D models on a computer screen. I wouldn't trade those two years for anything."
+      },
+      {
+        "speaker": "Ms Choi",
+        "text": "I suppose I was luckier in terms of my workspace. I managed to secure a small, shared studio space in the West Kowloon Cultural District right after I finished my master's degree. It was tiny—barely enough room for my canvases—but being in that specific environment, surrounded by other ambitious creatives and world-class museums like M+, really accelerated my career. I was able to network with curators and critics just by grabbing a coffee in the neighborhood. I've been there for five years now, and even though my studio has grown, the inspiration from the location remains the same. Environment is everything for an artist."
+      },
+      {
+        "speaker": "Mr Tan",
+        "text": "And I'm probably the odd one out on this panel. Many people assume I have a degree in Finance or Accounting from a top business school. But the truth is, my university degree was actually in Applied Mathematics. When I graduated, I didn't even know what an 'ESG index' was. But I found that the rigorous analytical and logical skills I learned in math were perfectly suited for the complex, data-heavy algorithms we use to manage global markets. I learned the finance part on the job. It just goes to show that your specific degree doesn't always dictate your final destination. It's about the 'transferable skills' Dr. Ho mentioned earlier. Don't feel boxed in by your choice of major."
+      },
+      {
+        "speaker": "Host",
+        "text": "That's a fantastic and reassuring message for our students. Now, for any of you who have been inspired today, the official St. Jude's Mentorship Program is now open for applications. It's a 6-month commitment, starting in October. You'll be paired with an alum—perhaps even one of our guests today—for one-on-one guidance. We expect a frequency of meetings of at least once every two weeks, which can be done in person or via video call. The program concludes with a Final Gala Celebration at the Metropolitan Hotel in April next year. We've managed to secure funding so that tickets are free for all participating students, while parents and other guests can attend for a subsidized price of $150. If you have any questions or want to pick up an application form, please call the Career Office at 2345 6789. Thank you so much to our mentors, and we'll see you at the gala!"
+      },
+      {
+        "speaker": "Announcer",
+        "text": "(60-second pause to tidy up answers)"
+      },
+      {
+        "speaker": "Announcer",
+        "text": "Task 4. You will hear a meeting between the School Principal, the Career Master, and a Student Representative regarding the 'New Internship Policy' for St. Jude's College. Listen to the discussion and complete the matrix below. You now have two minutes to study the task. (120-second pause)"
+      },
+      {
+        "speaker": "Principal",
+        "text": "Good afternoon, Mr. Ma, and thank you for joining us, Sarah, as our student representative. We need to finalize the new internship policy before the school board meeting next week. There's been a lot of healthy debate in the staff room, but we need to reach a consensus on the key pillars. From my perspective as Principal, the priority is student safety and school liability. I've spent the morning with our legal team, and I've confirmed that the school will cover standard liability insurance for all students, provided they are on 'officially approved' placements. We don't want parents worrying about the costs of basic accidents or equipment damage. However, regarding the academic side, I'm quite firm that these internships should be Pass/Fail only on the official transcript. I don't want to create a situation where students are competing for an 'A' grade in an internship when the working environments are so vastly different—it wouldn't be a level playing field. Finally, since our partnership slots are limited, I suggest we prioritize S5 students for the summer slots. They are closer to their graduation and need the experience more. S4 students can wait until the shorter Easter break next year."
+      },
+      {
+        "speaker": "Career Master",
+        "text": "I certainly see your point about the S5 priority, Principal, and I agree with the Pass/Fail approach—it takes the unnecessary pressure off. But I have some concerns about the insurance. While the standard school policy is a good baseline, I don't think it's sufficient for students going into high-risk environments like chemical labs, engineering workshops, or even busy hospital wards. I believe our partner companies must be required to provide supplementary insurance cover for those specific, industry-related risks. It shouldn't all fall on the school's budget. As for the grading, even if it's Pass/Fail, we need to ensure the students are actually learning something. I'll require every participating student to submit a weekly reflective journal, detailing their tasks and what they've learned, to receive their 'Pass' credit at the end. We need to see evidence of growth. Finally, for their own mental and physical wellbeing, I strongly suggest we limit each student to a maximum of 80 hours total for the entire summer. We want them to gain experience, not be treated as free full-time labor. They still need time to rest before the new term starts in September."
+      },
+      {
+        "speaker": "Student Rep",
+        "text": "If I could speak on behalf of the student body... thank you for including me in this. We appreciate the insurance cover, but we'd like to ask if it could be extended slightly. It needs to include the commute—travel to and from the workplace—not just the time spent in the building. Many students will be traveling to industrial areas like Fanling or Tuen Mun that they aren't familiar with, often quite early in the morning. Regarding the grading, I've talked to my classmates and while Pass/Fail is okay for the majority, some students are working incredibly hard at top-tier law firms or tech giants. We believe the internship should contribute to the GPA, at least for those who receive an 'Excellent' rating from their supervisors. Maybe it could count as a bonus credit? It would provide a real incentive for students to excel. And one last thing—for students who live very far away, have family responsibilities, or perhaps have mobility issues, could we allow remote-work internships? A lot of coding, digital marketing, and graphic design roles are done entirely from home these days anyway. It would make the program much more inclusive."
+      },
+      {
+        "speaker": "Principal",
+        "text": "Remote work is an interesting idea, Sarah, and I'm open to it, but only if we have a very robust way to ensure the student is actually being mentored and not just left to their own devices. I think we can reach a consensus on supervision: we'll require mandatory weekly check-ins via video call between the student, their workplace supervisor, and a designated teacher mentor from St. Jude's. It ensures everyone is on the same page and any issues are caught early. Let's set the agreed start date for this new policy as July 1, 2026. This gives the administrative staff enough time to process all the forms and vet the companies. The immediate next step is for me to take this finalized list of points and submit the full proposal to the School Board for their final approval at the meeting next Tuesday. If they sign off, we can start the student briefing sessions on Wednesday. Thank you both for your constructive input. I think this will be a great step forward for our students' careers."
+      },
+      {
+        "speaker": "Announcer",
+        "text": "(60-second pause to tidy up answers)"
+      },
+      {
+        "speaker": "Announcer",
+        "text": "That is the end of Part A. You now have five minutes to study the Part B Question-Answer Book and the Data File. (300-second pause)"
+      },
+      {
+        "speaker": "Announcer",
+        "text": "Integrated Skills Recording. You will now hear a briefing from the Career Guidance Master, Mr. Lawrence Ma, to his assistant, Chris Wong, regarding the post-event tasks for Career Discovery Week. This briefing contains critical instructions that are not found in your Data File. Listen carefully and take notes as you will need this information to complete the tasks in Part B."
+      },
+      {
+        "speaker": "Mr Ma",
+        "text": "Good morning, Chris. Pull up a chair. I'm so glad we've finally made it through the main event. Career Discovery Week 2026 was a whirlwind, wasn't it? My feet are still sore from walking between the Science Park venues. While it was a huge success overall—I heard the Principal was particularly impressed with the turnout for the futurist keynote—we have a lot of administrative loose ends to tie up before the end of the month. I've spent the last hour going through the feedback forms and the budget sheets, and I've put together a few priority tasks for you to handle today. We need to maintain our momentum while the event is still fresh in everyone's minds."
+      },
+      {
+        "speaker": "Brenda",
+        "text": "(Entering the room) Sorry to interrupt, Lawrence! I've just finished auditing the registration logs from the S5 workshops. We had quite a few no-shows on the Tuesday afternoon sessions. Oh, hello Chris, you look busy already."
+      },
+      {
+        "speaker": "Mr Ma",
+        "text": "Not at all, Brenda. Chris and I were just starting the post-event briefing. Actually, stay a moment. I was just about to tell Chris about Vincent Ho's email. He was quite upset about the Science Park maps."
+      },
+      {
+        "speaker": "Brenda",
+        "text": "Oh, Vincent... yes, he mentioned that to me on Friday. He said the signage for the 'Sustainable Architecture' lab was practically invisible from the main entrance. I tried to explain that the Science Park management changed the hall numbers at the last minute, but he wasn't having it. He's very meticulous about punctuality too. He said three of his students missed the entire first segment of his talk."
+      },
+      {
+        "speaker": "Mr Ma",
+        "text": "Exactly. So Chris, when you write to him, please be extra polite—borderline apologetic. Apologize profusely for the students' lack of punctuality and explain that we've already started a major project to redesign all the Science Park maps for next year, with much better color-coding and digital integration. And Brenda, the Finance Office is being very difficult about his travel reimbursement. He's asking for $350, but I've been told there's a new flat-rate cap of $300 for all local alumni travel. Chris, you'll need to explain this carefully in the email. Make it clear it's a new policy that applies to every mentor, so he doesn't feel singled out. It's a bit awkward, but we have to stick to the budget."
+      },
+      {
+        "speaker": "Brenda",
+        "text": "Speaking of budgets, did you see the latest from the Finance Office? They are not happy about the AV rentals for the Gala Dinner. That $10,000 overspend is going to haunt us."
+      },
+      {
+        "speaker": "Mr Ma",
+        "text": "I know. Chris is going to draft a memo to them with some recovery proposals. Chris, beyond the photo sales and the corporate sponsorships Brenda mentioned in her notes, I want you to add a new initiative. I'm calling it the 'Career Book' charity sale. We'll ask our graduating S6 students to donate their old textbooks and university guides before they leave in July. We'll set up a booth in the Covered Playground—not the courtyard, as it's too windy in July—and sell them to the S4 and S5 students at a fraction of the original price. Every cent will go back into the Career Discovery Fund. It's a great way to bridge that gap and it shows the Finance Office we are being proactive. Brenda, do you think the Student Union would support that?"
+      },
+      {
+        "speaker": "Brenda",
+        "text": "I'm sure they would. It's much better than just asking for more money. Oh, and Lawrence, did you see that editorial in the St. Jude's Chronicle? 'The Preparation Gap'. It was quite a stinging piece. They used a survey that says 60% of our students felt 'lost' during the mock interviews."
+      },
+      {
+        "speaker": "Mr Ma",
+        "text": "I saw it. It's a bit of a red herring, honestly—they only surveyed one small class of S4 students who hadn't even attended the prep sessions yet—but the parents will take it as gospel if we don't respond firmly. We need to counter it in our next newsletter with hard facts. Chris, don't just defend the week; announce our next big step. We're launching a year-round 'Interview Masterclass' starting in September. Use the term 'Future-Proofing' as the core theme. Tell them it's not just about traditional face-to-face interviews, but about mastering digital portfolios, handling AI-integrated screening processes, and learning the ethical use of generative AI tools in their job applications. We want to position St. Jude's as the school that prepares students for the 2030s, not the 1990s. Make it sound sophisticated, forward-thinking, and above all, reassuring. We are not just following the trend; we are setting the pace for all secondary schools in the district."
+      },
+      {
+        "speaker": "Brenda",
+        "text": "That's a strong angle, Lawrence. I'll help Chris with some of the technical details for that—I've got a list of the specific AI tools we want to introduce. One more thing before I go—the thank-you letters for the mentors. I've finished auditing the participation list. We really struggled with the 'Creative Arts' sector this year, which is a shame given the high interest. We only had five mentors for nearly forty students. Those five people worked incredibly hard, often taking on double sessions and staying late for one-on-one reviews without a single complaint."
+      },
+      {
+        "speaker": "Mr Ma",
+        "text": "Good point. Chris, for those five mentors in the arts sector, please add a personal note of special appreciation in their letters. Mention how their contribution was 'vital for sector diversity' and how they've inspired students who often feel overlooked by traditional career advice. On a more administrative note, remind ALL the mentors—this is a hard requirement for our quality control—that if they don't upload their final student evaluation reports to our secure portal by the May 15th deadline, we won't be able to issue their 'Official Mentor' certificates or include their names in the annual gala program. No reports, no certificates. It's a hard deadline because the auditing team from the Education Bureau is coming in on the 16th, and we need our records to be spotless."
+      },
+      {
+        "speaker": "Brenda",
+        "text": "May 15th. I'll put it in bold red on the mentor portal home page. Well, I'd better get back to the registration logs. Good luck with the drafts, Chris. I'll see you both at the staff meeting later."
+      },
+      {
+        "speaker": "Mr Ma",
+        "text": "Thanks, Brenda. Chris, you heard all that. It's a lot to synthesize, but I trust your judgment. I'll be in the Principal's office discussing the internship policy for most of the afternoon. Just leave the drafts on my desk when you're finished. Oh, and for the social media post, keep it light and engaging. Use some photos of the futurist talk—the one where everyone was holding up those AR headsets. Mention the 'Future-Proofing' theme too. We want to build some hype for the next academic year. I'm looking forward to seeing what you come up with!"
+      },
+      {
+        "speaker": "Announcer",
+        "text": "That is the end of the Integrated Skills recording. You now have 1 hour and 10 minutes to complete your tasks. Stop writing when you hear the signal at the end of the examination."
+      },
+      {
+        "speaker": "Announcer",
+        "text": "(4200-second pause)"
+      },
+      {
+        "speaker": "Announcer",
+        "text": "Stop writing now. The examination is over. Please stay in your seats until your scripts have been collected."
+      }
+    ]
+  },
+  "Part_B": {
+    "situation": "You are Chris Wong, the Vice-President of the Student Union at St. Jude's College. You are assisting the Career Guidance Master, Mr. Lawrence Ma, in organizing the post-event activities for Career Discovery Week. You need to complete several tasks based on a briefing from Mr. Ma and the documents in the Data File.",
+    "data_file": [
+      {
+        "id": "doc1",
+        "type": "minutes",
+        "title": "Minutes of the Career Discovery Week Review Meeting",
+        "content": "Date: April 25, 2026\nLocation: Staff Room, St. Jude's College\n\nAttendees: Mr. Lawrence Ma (Career Master), Ms. Brenda Chan (Admin), Chris Wong (Student Union).\n\nMain Points:\n1. Participation: 250 students attended, exceeding the target of 200. However, mentor recruitment in the 'Creative Arts' sector was disappointing (only 5 mentors for 40 interested students).\n2. Budget: The 'Gala Dinner' cost was $45,000, which is $10,000 over budget. We need to find ways to reduce costs for next year.\n3. Feedback: Students loved the design thinking workshop but found the 'Business Ethics' lecture too long (90 minutes).\n4. Action Item: Chris to draft a thank-you letter to all alumni mentors. Ensure we mention the 'Mentor of the Year' award ceremony in October.\n5. Note: Mr. Ma mentioned we should use the slogan 'Your Future, Our Mission' in all future communications."
+      },
+      {
+        "id": "doc2",
+        "type": "email",
+        "title": "Email from an Alumnus (Mr. Vincent Ho)",
+        "content": "To: Career Guidance Office\nFrom: Vincent Ho (Class of 1998)\nSubject: Feedback on Mentorship Session\n\nDear Mr. Ma,\n\nI enjoyed meeting the students last Tuesday. However, I noticed that several students arrived late for the 2:00 PM session. It would be helpful if the school could provide clearer maps of the Science Park campus for next year. Also, I am still waiting for the reimbursement form for my travel expenses ($350). Please send it over as soon as possible.\n\nBest regards,\nVincent"
+      },
+      {
+        "id": "doc3",
+        "type": "newspaper",
+        "title": "Editorial: Is Career Discovery Week Enough?",
+        "content": "St. Jude's Chronicle - April 28, 2026\n\nWhile the recent Career Discovery Week was a logistical success, one has to wonder if a single week is enough to prepare our youth for the AI-driven economy. A survey of S5 students showed that 60% still feel 'unprepared' for university interviews. The school needs a year-round 'Career Coaching' system, not just a one-off event. Furthermore, the exclusion of S4 students from the primary workshops seems like a missed opportunity for early intervention."
+      },
+      {
+        "id": "doc4",
+        "type": "email",
+        "title": "Email from a Frustrated Parent (Mrs. Lam)",
+        "content": "To: Principal's Office\nSubject: Complaint regarding Workshop Selection\n\nMy son, Kevin Lam (S4), was told he couldn't join the Sustainable Architecture workshop because he isn't in S5. This is highly unfair as he already has a portfolio and is planning to study architecture in the UK. Why are S4 students being penalized for being proactive? I expect a better explanation than 'policy'."
+      },
+      {
+        "id": "doc5",
+        "type": "brochure",
+        "title": "Career Discovery Week: Official Program Summary",
+        "content": "- Workshops: 12 different industries covered.\n- Keynote: Dr. Adrian Ho (Futurist).\n- Highlight: Mock Interviews with industry leaders.\n- Sponsor: Global Reach Consulting.\n- Slogan: 'Navigating the New Normal'.\n- Note: All participants are eligible for the 'Future Leader' certificate if they attend 80% of sessions."
+      },
+      {
+        "id": "doc6",
+        "type": "handwritten_note",
+        "visual_style": "scrawled_handwriting",
+        "title": "Urgent Note from Mr. Ma (Scrawled on a napkin)",
+        "content": "Chris,\n\nJust saw the editorial in the Chronicle (Doc 3). We need to address the 'unprepared' comment in the next newsletter. Mention that we ARE launching a year-round 'Interview Masterclass' starting in September. Also, re: Mrs. Lam's complaint (Doc 4)—tell her S4s will have their own 'Mini-Discovery' day in December. We haven't announced it yet, so keep it a secret for now, but tell her it's coming. Oh, and for the Mentor thank-you letters, remind them to upload their final reports by May 15th!"
+      },
+      {
+        "id": "doc7",
+        "type": "table",
+        "title": "Table 1: Student Feedback Ratings (Out of 5)",
+        "content": "Workshop | Content | Duration | Speaker\n--------------------------------------------\nDesign Thinking | 4.8 | 4.5 | 4.9\nBusiness Ethics | 3.2 | 1.5 | 3.0\nDigital Marketing | 4.5 | 4.2 | 4.4\nAI Ethics | 4.6 | 4.0 | 4.7\n\nNote: The 'Duration' score for Business Ethics is very low. Students clearly found it too long."
+      },
+      {
+        "id": "doc8",
+        "type": "memo",
+        "title": "Internal Memo: Budget Realignment",
+        "content": "To: All Department Heads\nFrom: Finance Office\n\nDue to the $10,000 overspend on the Gala Dinner, all remaining career-related budgets for Q3 will be cut by 15%. This includes the 'Career Library' upgrade. We must prioritize essential services only. For Task 9, please propose a way to generate revenue (e.g., selling event photos or corporate sponsorships) to offset these losses."
+      },
+      {
+        "id": "doc9",
+        "type": "email",
+        "title": "Internal Email: Career Fair 2024 Archive",
+        "content": "To: Staff\nFrom: Admin (Sent: May 2024)\nSubject: Final Report for 2024 Event\n\nExcellent work everyone. The 2024 Career Fair was our best yet. We had 150 students and 20 mentors. Please note the new parking rules for the 2024 venue (City Hall). These do NOT apply to any future events at the Science Park."
+      },
+      {
+        "id": "doc10",
+        "type": "social_media_post",
+        "title": "Instagram Post by @SJ_StudentUnion",
+        "content": "Liked by 342 others\n@SJ_StudentUnion: What an amazing week! 🚀 From futuristic keynotes to hands-on design. Special thanks to Global Reach Consulting for the support! Should we do it again next year? Drop a comment below! #CDW2026 #FutureReady #StJudes"
+      },
+      {
+        "id": "doc11",
+        "type": "news_clip",
+        "title": "Tech News: Global Reach Consulting's New Initiative",
+        "content": "Global Reach Consulting has announced a $1M fund to support school-based career programs across Hong Kong. Schools that partner with them for more than three years are eligible for 'Platinum Status', which includes free access to their proprietary AI-career-coaching app."
       }
     ],
     "Part_B1": {
-        "difficulty": "Easier",
-        "tasks": [
-            {
-                "id": "Task_5",
-                "type": "Email",
-                "instructions": "Write a short email to Mr. Wong (100 words) inviting him to the July 17th workshop.",
-                "tone": "Formal"
-            }
-        ]
+      "tasks": [
+        {
+          "id": "Task_5",
+          "type": "Formal Email",
+          "instructions": "You are Chris Wong. Write a formal email to Vincent Ho (Doc 2) to apologize for the issues he raised and provide the information he requested. Mention the maps and the reimbursement. Use a polite and professional tone.",
+          "wordCount": 150,
+          "grading_rubric": {
+            "content_points": [
+              "Acknowledge the map issue (Doc 2)",
+              "Apologize for the students' lateness (Doc 2)",
+              "Mention the $350 reimbursement process (Doc 2)",
+              "Explain that a reimbursement form is attached (Doc 2)",
+              "Use 'Your Future, Our Mission' slogan (Doc 1)"
+            ],
+            "tone": "Polite and Professional",
+            "deductions": "Deduct 0.5 marks for inclusion of irrelevant information (e.g., referencing 2024 parking rules)."
+          }
+        },
+        {
+          "id": "Task_6",
+          "type": "Notice",
+          "instructions": "Write a notice for the S4 students regarding the 'Mini-Discovery' day. Refer to Doc 6 and Doc 4. Explain why they were excluded from the main event and what they can look forward to.",
+          "wordCount": 120,
+          "grading_rubric": {
+            "content_points": [
+              "Explain policy regarding S5 priority for CDW (Doc 4)",
+              "Announce 'Mini-Discovery' day for S4 (Doc 6)",
+              "Mention it will take place in December (Doc 6)",
+              "Encourage early portfolio building (Doc 4)"
+            ],
+            "tone": "Informative and Encouraging",
+            "deductions": "Deduct 0.5 marks for inclusion of irrelevant information (e.g., referencing 2024 parking rules)."
+          }
+        },
+        {
+          "id": "Task_7",
+          "type": "Feedback Summary",
+          "instructions": "Summarize the student feedback for the Business Ethics workshop for the steering committee. Use information from Doc 1 and Doc 7.",
+          "wordCount": 100,
+          "grading_rubric": {
+            "content_points": [
+              "Mention low duration rating of 1.5/5 (Doc 7)",
+              "Note that the lecture was 90 minutes long (Doc 1)",
+              "State that students found it too long (Doc 1)",
+              "Report the low speaker rating of 3.0/5 (Doc 7)"
+            ],
+            "tone": "Objective and Concise",
+            "deductions": "Deduct 0.5 marks for inclusion of irrelevant information (e.g., referencing 2024 parking rules)."
+          }
+        }
+      ]
     },
     "Part_B2": {
-        "difficulty": "Harder",
-        "tasks": [
-            {
-                "id": "Task_8",
-                "type": "Proposal",
-                "instructions": "Write a proposal (250 words) to the Principal suggesting how to improve industry engagement for next year, using info from the meeting.",
-                "tone": "Formal"
-            }
-        ]
+      "tasks": [
+        {
+          "id": "Task_8",
+          "type": "Formal Letter",
+          "instructions": "Write a thank-you letter to all alumni mentors who participated in Career Discovery Week. Use information from Doc 1, Doc 5, and Doc 6. Mention the success of the week and upcoming requirements for mentors.",
+          "wordCount": 250,
+          "grading_rubric": {
+            "content_points": [
+              "Thank them for participating in CDW (Doc 5)",
+              "Mention record attendance of 250 students (Doc 1)",
+              "Announce the 'Mentor of the Year' award in October (Doc 1)",
+              "Remind mentors to upload final reports by May 15th (Doc 6)",
+              "MUST MENTION: The new 'Interview Masterclass' launching in September (Doc 6)",
+              "MUST MENTION: Special appreciation for mentors in 'Creative Arts' due to high demand (Doc 1)"
+            ],
+            "tone": "Grateful and Formal",
+            "deductions": "Deduct 0.5 marks for inclusion of irrelevant information (e.g., referencing 2024 parking rules)."
+          }
+        },
+        {
+          "id": "Task_9",
+          "type": "Internal Memo",
+          "instructions": "Write a memo to the Finance Office proposing ways to offset the budget deficit from the Gala Dinner. Use info from Doc 1 and Doc 8. Propose at least two specific revenue-generating ideas.",
+          "wordCount": 200,
+          "grading_rubric": {
+            "content_points": [
+              "Acknowledge the $10,000 overspend on the Gala (Doc 1)",
+              "Mention the 15% budget cut for career services (Doc 8)",
+              "Propose selling event photos to parents (Doc 8)",
+              "Propose seeking corporate sponsorships (Doc 8)",
+              "MUST MENTION: The potential 'Platinum Status' partnership with Global Reach (Doc 11)",
+              "MUST PROPOSE: A 'Career Book' charity sale in July (Audio)"
+            ],
+            "tone": "Professional and Solution-oriented",
+            "deductions": "Deduct 0.5 marks for inclusion of irrelevant information (e.g., referencing 2024 parking rules)."
+          }
+        },
+        {
+          "id": "Task_10",
+          "type": "Newsletter Article",
+          "instructions": "Write a short article (max 150 words) for the school newsletter titled 'The Future is Now: CDW 2026'. Reassure students who feel 'unprepared' and highlight the benefits of the week. Refer to Doc 3, Doc 5, and Doc 10.",
+          "wordCount": 150,
+          "grading_rubric": {
+            "content_points": [
+              "Mention students loved the Design Thinking workshop (Doc 1)",
+              "Address the concern that 60% of students feel unprepared (Doc 3)",
+              "Highlight the 'Future Leader' certificate eligibility (Doc 5)",
+              "Mention the success on social media with 342 likes (Doc 10)",
+              "MUST MENTION: The specific term 'Future-Proofing' as the theme for the new Interview Masterclass (Audio)",
+              "MUST USE SLOGAN: 'Your Future, Our Mission' (Doc 1)"
+            ],
+            "tone": "Inspiring and Reassuring",
+            "deductions": "Deduct 0.5 marks for inclusion of irrelevant information (e.g., referencing 2024 parking rules)."
+          }
+        }
+      ]
     }
   }
 }

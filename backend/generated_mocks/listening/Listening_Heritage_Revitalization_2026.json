@@ -2,625 +2,555 @@
   "meta": {
     "title": "HKDSE Paper 3: Heritage Revitalization (Ultimate Edition 2026)",
     "topic": "Transforming historic industrial buildings into vibrant creative hubs while preserving local identity.",
-    "difficulty": "Level 5** Authentic (High Stamina)",
-    "total_marks_part_a": 50,
+    "difficulty": "Level 5** Authentic (High Stamina / 2026 Edition)",
+    "total_marks_part_a": 55,
     "total_marks_part_b": 50
   },
   "Part_A": {
     "tasks": [
       {
         "id": "Task_1",
-        "instructions": "You are listening to an introductory presentation about the 'Old Central Market Revitalization Project'. Listen to the presentation and complete the fact sheet below. Write ONE word or a short phrase for each answer.",
+        "instructions": "You are a student volunteer helping at the Heritage Council. Listen to the interview between Emily Cheung and an applicant, Adrian Ho, and complete the volunteer registration form. You now have two minutes to study the task. (120-second pause)",
         "questions": [
           {
+            "label": "Applicant First Name:",
+            "type": "Short_Answer",
             "id": "t1_q1",
-            "type": "Fill_in_Blanks",
-            "label": "Original Year of Construction:",
-            "answer": "1939"
+            "answer": "Adrian"
           },
           {
+            "label": "Applicant Surname:",
+            "type": "Short_Answer",
             "id": "t1_q2",
-            "type": "Fill_in_Blanks",
-            "label": "Primary Architectural Style:",
-            "answer": "Bauhaus"
+            "answer": "Ho"
           },
           {
+            "label": "Contact Number:",
+            "type": "Fill_in_Blanks",
             "id": "t1_q3",
-            "type": "Fill_in_Blanks",
-            "label": "Previous Function of the Building:",
-            "answer": "Wet market"
+            "answer": "6221 8890"
           },
           {
+            "label": "Current Occupation / Study:",
+            "type": "Short_Answer",
             "id": "t1_q4",
-            "type": "Fill_in_Blanks",
-            "label": "Year of Official Closure:",
-            "answer": "2003"
+            "answer": "Architecture Student"
           },
           {
+            "label": "Language Proficiency (Fluent):",
+            "type": "Short_Answer",
             "id": "t1_q5",
-            "type": "Fill_in_Blanks",
-            "label": "Name of Revitalization Initiator:",
-            "answer": "Urban Renewal Authority"
+            "answer": "English and Cantonese"
           },
           {
+            "label": "Previous Volunteering Site:",
+            "type": "Short_Answer",
             "id": "t1_q6",
-            "type": "Fill_in_Blanks",
-            "label": "Core Design Concept / Theme:",
-            "answer": "Oasis for All"
+            "answer": "Tai Kwun"
           },
           {
+            "label": "Preferred Project Area:",
+            "type": "Multiple_Choice",
             "id": "t1_q7",
-            "type": "Fill_in_Blanks",
-            "label": "Retained Heritage Element 1:",
-            "answer": "Main staircase"
+            "answer": "Industrial Heritage"
           },
           {
+            "label": "Motivation for joining:",
+            "type": "Short_Answer",
             "id": "t1_q8",
-            "type": "Fill_in_Blanks",
-            "label": "Retained Heritage Element 2:",
-            "answer": "Market stalls"
+            "answer": "Career networking"
           },
           {
+            "label": "Availability (Weekend):",
+            "type": "Multiple_Choice",
             "id": "t1_q9",
-            "type": "Fill_in_Blanks",
-            "label": "Total Floor Area (sq. ft.):",
-            "answer": "120,000"
+            "answer": "Sunday Afternoon"
           },
           {
+            "label": "Transportation Preference:",
+            "type": "Short_Answer",
             "id": "t1_q10",
-            "type": "Fill_in_Blanks",
-            "label": "Total Project Budget (HKD):",
-            "answer": "500 million"
+            "answer": "MTR"
           },
           {
+            "label": "Special Skill offered:",
+            "type": "Short_Answer",
             "id": "t1_q11",
-            "type": "Fill_in_Blanks",
-            "label": "Percentage of Greenery Space:",
-            "answer": "30 percent"
+            "answer": "Photography"
           },
           {
+            "label": "Medical Condition to Note:",
+            "type": "Short_Answer",
             "id": "t1_q12",
-            "type": "Fill_in_Blanks",
-            "label": "Expected Reopening Date:",
-            "answer": "August 2021"
+            "answer": "Pollen allergy"
+          },
+          {
+            "label": "Uniform Size:",
+            "type": "Multiple_Choice",
+            "id": "t1_q13",
+            "answer": "Medium"
+          },
+          {
+            "label": "Registration Fee Status:",
+            "type": "Multiple_Choice",
+            "id": "t1_q14",
+            "answer": "Exempt"
           }
         ]
       },
       {
         "id": "Task_2",
-        "instructions": "You are listening to an interview with the Chief Architect of the revitalization project. Complete the notes about the structural and design challenges faced. Write ONE word or a short phrase for each answer.",
+        "instructions": "Listen to a presentation by Marcus Thorne, Architectural Director, on 'Adaptive Reuse: The Invisible Engineering of 2026'. Complete the notes. You now have two minutes to study the task. (120-second pause)",
         "questions": [
           {
+            "label": "Presentation Focus:",
+            "type": "Short_Answer",
             "id": "t2_q1",
-            "type": "Fill_in_Blanks",
-            "label": "Architect's Full Name:",
-            "answer": "Dr. Jonathan Leung"
+            "answer": "Adaptive Reuse"
           },
           {
+            "label": "Historical Consultant Name:",
+            "type": "Short_Answer",
             "id": "t2_q2",
-            "type": "Fill_in_Blanks",
-            "label": "Main Structural Challenge Faced:",
-            "answer": "Concrete degradation"
+            "answer": "Alistair Montgomery"
           },
           {
+            "label": "Project Start Year (Proposal):",
+            "type": "Fill_in_Blanks",
             "id": "t2_q3",
-            "type": "Fill_in_Blanks",
-            "label": "Preservation Method Used for Foundation:",
-            "answer": "Structural reinforcement"
+            "answer": "2015"
           },
           {
+            "label": "Initial Community Concession (%):",
+            "type": "Fill_in_Blanks",
             "id": "t2_q4",
-            "type": "Fill_in_Blanks",
-            "label": "Most Difficult Material to Source:",
-            "answer": "Vintage floor tiles"
+            "answer": "30%"
           },
           {
+            "label": "Construction Start Date:",
+            "type": "Fill_in_Blanks",
             "id": "t2_q5",
-            "type": "Fill_in_Blanks",
-            "label": "Country Materials Were Imported From:",
-            "answer": "Portugal"
+            "answer": "Spring 2017"
           },
           {
+            "label": "Specific Building Code followed:",
+            "type": "Short_Answer",
             "id": "t2_q6",
-            "type": "Fill_in_Blanks",
-            "label": "Environmental Upgrade 1:",
-            "answer": "Solar panels"
+            "answer": "REV-772-B"
           },
           {
+            "label": "Invisible Engineering Method:",
+            "type": "Short_Answer",
             "id": "t2_q7",
-            "type": "Fill_in_Blanks",
-            "label": "Environmental Upgrade 2:",
-            "answer": "Rainwater harvesting system"
+            "answer": "Core-drilling"
           },
           {
+            "label": "Material for Facade Protection:",
+            "type": "Short_Answer",
             "id": "t2_q8",
-            "type": "Fill_in_Blanks",
-            "label": "Target Green Building Certification Level:",
-            "answer": "Platinum"
+            "answer": "Epoxy resin"
           },
           {
+            "label": "Opening Year (Grand Reveal):",
+            "type": "Fill_in_Blanks",
             "id": "t2_q9",
-            "type": "Fill_in_Blanks",
-            "label": "Accessibility Improvement 1:",
-            "answer": "Glass elevators"
+            "answer": "2019"
           },
           {
+            "label": "Key Internal Feature kept:",
+            "type": "Short_Answer",
             "id": "t2_q10",
-            "type": "Fill_in_Blanks",
-            "label": "Accessibility Improvement 2:",
-            "answer": "Tactile guide paths"
+            "answer": "Iron gantries"
           },
           {
+            "label": "Current Expansion Year:",
+            "type": "Fill_in_Blanks",
             "id": "t2_q11",
-            "type": "Fill_in_Blanks",
-            "label": "Main Community Concern Raised:",
-            "answer": "Gentrification"
+            "answer": "2024"
           },
           {
+            "label": "Modern Annex Material:",
+            "type": "Short_Answer",
             "id": "t2_q12",
-            "type": "Fill_in_Blanks",
-            "label": "Proposed Solution to Support Locals:",
-            "answer": "Subsidized rent"
+            "answer": "Corten steel"
           },
           {
+            "label": "Sustainability Goal:",
+            "type": "Short_Answer",
             "id": "t2_q13",
+            "answer": "LEED Platinum"
+          },
+          {
+            "label": "Green Power Source (%):",
             "type": "Fill_in_Blanks",
-            "label": "Total Number of Public Consultations Held:",
-            "answer": "24"
+            "id": "t2_q14",
+            "answer": "40%"
+          },
+          {
+            "label": "New HVAC System type:",
+            "type": "Short_Answer",
+            "id": "t2_q15",
+            "answer": "Geothermal"
+          },
+          {
+            "label": "Closing Philosophy:",
+            "type": "Short_Answer",
+            "id": "t2_q16",
+            "answer": "Dialogue with the past"
           }
         ]
       },
       {
         "id": "Task_3",
-        "instructions": "You are listening to a radio call-in show called 'City Voices: Heritage or Hype?'. Complete the table summarizing the opinions of the host, the expert guest, and the callers.",
+        "instructions": "Listen to a radio debate between Sarah Jenkins, Marcus Thorne, and Elena Rostova. Complete the comparison table below. You now have two minutes to study the task. (120-second pause)",
         "questions": [
           {
+            "label": "Target Site Name:",
+            "type": "Short_Answer",
             "id": "t3_q1",
-            "type": "Fill_in_Blanks",
-            "label": "Radio Host's Name:",
-            "answer": "Sarah Kwan"
+            "answer": "Old Harbour District"
           },
           {
+            "label": "Marcus's Preferred Budget:",
+            "type": "Fill_in_Blanks",
             "id": "t3_q2",
-            "type": "Fill_in_Blanks",
-            "label": "Guest Speaker's Profession:",
-            "answer": "Urban historian"
+            "answer": "$200 Million"
           },
           {
+            "label": "Sarah's Initial Budget:",
+            "type": "Fill_in_Blanks",
             "id": "t3_q3",
-            "type": "Fill_in_Blanks",
-            "label": "First Caller's Name:",
-            "answer": "Mr. Thompson"
+            "answer": "$400 Million"
           },
           {
+            "label": "Compromise Budget agreed:",
+            "type": "Fill_in_Blanks",
             "id": "t3_q4",
-            "type": "Fill_in_Blanks",
-            "label": "First Caller's Opinion on the Project:",
-            "answer": "Too commercialized"
+            "answer": "$350 Million"
           },
           {
+            "label": "Amount for Structural Work:",
+            "type": "Fill_in_Blanks",
             "id": "t3_q5",
-            "type": "Fill_in_Blanks",
-            "label": "First Caller's Suggested Addition:",
-            "answer": "Free museum space"
+            "answer": "$280 Million"
           },
           {
+            "label": "Amount for Community Support:",
+            "type": "Fill_in_Blanks",
             "id": "t3_q6",
-            "type": "Fill_in_Blanks",
-            "label": "Second Caller's Background:",
-            "answer": "Former stall owner"
+            "answer": "$70 Million"
           },
           {
+            "label": "Status of Customs House:",
+            "type": "Multiple_Choice",
             "id": "t3_q7",
-            "type": "Fill_in_Blanks",
-            "label": "Second Caller's Main Emotion Expressed:",
-            "answer": "Nostalgic"
+            "answer": "Remain Public"
           },
           {
+            "label": "Elena's main fear:",
+            "type": "Short_Answer",
             "id": "t3_q8",
-            "type": "Fill_in_Blanks",
-            "label": "Percentage of Public Space Demanded by Activists:",
-            "answer": "At least 40%"
+            "answer": "Gentrification"
           },
           {
+            "label": "Proposed Social Protection:",
+            "type": "Short_Answer",
             "id": "t3_q9",
-            "type": "Fill_in_Blanks",
-            "label": "Expert's Recommended Funding Model:",
-            "answer": "Public-private partnership"
+            "answer": "Rent control"
           },
           {
+            "label": "Number of Apartments protected:",
+            "type": "Fill_in_Blanks",
             "id": "t3_q10",
-            "type": "Fill_in_Blanks",
-            "label": "Successful Overseas Example Mentioned:",
-            "answer": "Covent Garden"
+            "answer": "400"
           },
           {
+            "label": "Bond Duration for debt:",
+            "type": "Fill_in_Blanks",
             "id": "t3_q11",
-            "type": "Fill_in_Blanks",
-            "label": "Main Benefit of the Overseas Example:",
-            "answer": "Boosts local tourism"
+            "answer": "30 years"
           },
           {
+            "label": "Name for the new model:",
+            "type": "Short_Answer",
             "id": "t3_q12",
-            "type": "Fill_in_Blanks",
-            "label": "Key Lesson for Hong Kong to Learn:",
-            "answer": "Balance profit and heritage"
-          },
-          {
-            "id": "t3_q13",
-            "type": "Fill_in_Blanks",
-            "label": "Date of the Next Public Forum:",
-            "answer": "15th November"
+            "answer": "Integrated Revitalization"
           }
         ]
       },
       {
         "id": "Task_4",
-        "instructions": "You are attending a briefing session for volunteer tour guides at the newly revitalized heritage site. Listen and complete the briefing notes.",
+        "instructions": "Listen to the emergency briefing for tour guides at the Old Harbour site. Complete the emergency matrix and task list. You now have two minutes to study the task. (120-second pause)",
         "questions": [
           {
+            "label": "Protocol for sensitive materials:",
+            "type": "Short_Answer",
             "id": "t4_q1",
-            "type": "Fill_in_Blanks",
-            "label": "Volunteer Coordinator's Name:",
-            "answer": "Emily Cheung"
+            "answer": "Heritage Harmony"
           },
           {
+            "label": "Requirement for contractors:",
+            "type": "Short_Answer",
             "id": "t4_q2",
-            "type": "Fill_in_Blanks",
-            "label": "Designated Meeting Point for Tours:",
-            "answer": "East Atrium"
+            "answer": "Thermal imaging"
           },
           {
+            "label": "Lighting temperature requirement:",
+            "type": "Short_Answer",
             "id": "t4_q3",
-            "type": "Fill_in_Blanks",
-            "label": "Standard Tour Duration (Minutes):",
-            "answer": "45"
+            "answer": "Gas lamp mimicry"
           },
           {
+            "label": "Acoustic isolator material:",
+            "type": "Short_Answer",
             "id": "t4_q4",
-            "type": "Fill_in_Blanks",
-            "label": "Maximum Group Size Allowed:",
-            "answer": "15 people"
+            "answer": "Bio-resin"
           },
           {
+            "label": "New Tourist Incentive Name:",
+            "type": "Short_Answer",
             "id": "t4_q5",
-            "type": "Fill_in_Blanks",
-            "label": "Required Dress Code / Uniform:",
-            "answer": "Green polo shirt"
+            "answer": "Local Artisan Vouchers"
           },
           {
+            "label": "Qualification for Merchants:",
+            "type": "Short_Answer",
             "id": "t4_q6",
-            "type": "Fill_in_Blanks",
-            "label": "Equipment Provided to All Volunteers:",
-            "answer": "Audio amplifier"
+            "answer": "10-year history"
           },
           {
+            "label": "Redemption Limit per Pass:",
+            "type": "Fill_in_Blanks",
             "id": "t4_q7",
-            "type": "Fill_in_Blanks",
-            "label": "Emergency Procedure - First Step:",
-            "answer": "Alert security staff"
+            "answer": "$500"
           },
           {
+            "label": "Emergency Phone Keyword:",
+            "type": "Short_Answer",
             "id": "t4_q8",
-            "type": "Fill_in_Blanks",
-            "label": "Forbidden Action for Visitors During Tour:",
-            "answer": "Touching the exhibits"
+            "answer": "Blue Shield"
           },
           {
+            "label": "Evacuation Route:",
+            "type": "Short_Answer",
             "id": "t4_q9",
-            "type": "Fill_in_Blanks",
-            "label": "Key Talking Point Topic 1:",
-            "answer": "Evolution of architecture"
+            "answer": "Customs Alley"
           },
           {
+            "label": "Primary Contact Person:",
+            "type": "Short_Answer",
             "id": "t4_q10",
-            "type": "Fill_in_Blanks",
-            "label": "Key Talking Point Topic 2:",
-            "answer": "Stories of everyday people"
+            "answer": "Elena Rostova"
           },
           {
+            "label": "Next Drill Date:",
+            "type": "Fill_in_Blanks",
             "id": "t4_q11",
-            "type": "Fill_in_Blanks",
-            "label": "Required Activity at the End of the Tour:",
-            "answer": "Collect feedback forms"
+            "answer": "November 12"
           },
           {
+            "label": "Briefing Note Classification:",
+            "type": "Multiple_Choice",
             "id": "t4_q12",
+            "answer": "Classified"
+          },
+          {
+            "label": "Expected Attendee Count (Weekend):",
             "type": "Fill_in_Blanks",
-            "label": "Reward for Completing 10 Tours:",
-            "answer": "Certificate of appreciation"
+            "id": "t4_q13",
+            "answer": "5,000"
           }
         ]
       }
     ],
     "script": [
       {
-        "speaker": "Sarah",
-        "text": "Welcome back to 'Urban Footprints,' the podcast where we dive deep into the architectural transformations shaping our modern cities while honoring their past. Today, we are focusing on a theme that has dominated urban planning discussions over the last decade: Heritage Revitalization. Joining me in the studio is Marcus Thorne, the Lead Architectural Director at Cornerstone Design, and the mastermind behind the widely celebrated Blackwood Foundry project. Welcome, Marcus."
+        "speaker": "Announcer",
+        "text": "Hong Kong Diploma of Secondary Education Examination 2026. English Language Paper 3. Listening and Integrated Skills. Heritage Revitalization - High Stamina Mock Exam. This recording will be played once only."
       },
       {
-        "speaker": "Marcus",
-        "text": "Thank you for having me, Sarah. It is a real pleasure to be here. Heritage revitalization is an incredibly passionate subject for me, and the Blackwood Foundry project has been a monumental part of my life for the better part of a decade now. It is fascinating how we can take a derelict industrial shell and breathe entirely new life into it, all while respecting the historical narrative of the community."
+        "speaker": "Announcer",
+        "text": "The entire broadcast will last approximately one hour and fifteen minutes. Part A. Task 1. You are a student volunteer helping at the Heritage Council. You will hear an interview between the volunteer coordinator, Emily Cheung, and an applicant, Adrian Ho. Complete the registration form. You now have two minutes to study the task. (120-second pause)"
       },
       {
-        "speaker": "Sarah",
-        "text": "It truly is. For our listeners who might not be familiar with the exact terminology, could you start by defining what heritage revitalization actually entails? How does it differ from a standard renovation or a total demolition and rebuild?"
+        "speaker": "Emily",
+        "text": "Good afternoon! You must be Adrian. Come in, have a seat. I'm Emily Cheung, the lead coordinator for our Heritage Revitalization volunteer core. We're very excited to have some new blood in the team, especially with the Old Harbour project launching soon."
       },
       {
-        "speaker": "Marcus",
-        "text": "Certainly. Heritage revitalization, often referred to as adaptive reuse, is fundamentally about finding the delicate balance between preservation and modernization. Unlike a simple renovation, which might just update the aesthetics of a building, or a demolition, which erases history completely, revitalization seeks to retain the core historical and architectural integrity of a site. We are essentially preserving the embodied energy of the original structure—the materials, the craftsmanship, the historical footprint—while seamlessly integrating modern technologies, safety standards, and new purposeful functionalities. We want people to walk into a space and feel the weight of the nineteenth century, but experience the comfort, accessibility, and environmental efficiency of the twenty-first century. It is a highly complex, deeply rewarding puzzle."
+        "speaker": "Adrian",
+        "text": "Thank you, Emily. It's great to be here. I've been following the project in the architectural journals for months. My name is Adrian Ho—that's H-O, just two letters! Short and simple."
       },
       {
-        "speaker": "Sarah",
-        "text": "That sounds like a massive undertaking, especially with a site as large and historically significant as the Blackwood Foundry. Now, I understand a project of this magnitude requires a massive team of specialists. Before we dive into the timeline, I want to make sure I credit the primary historical consultant you worked with. My notes say it was Alister Montgomery. Is that correct?"
+        "speaker": "Emily",
+        "text": "H-O. Got it. And I have your contact number from your initial web form as 6221 8890. Is that still the best way to reach you? We do a lot of our coordination via SMS and WhatsApp."
       },
       {
-        "speaker": "Marcus",
-        "text": "Ah, you have the right person, but the spelling is a bit of a trap that catches everyone off guard. It is not spelled the conventional way. It’s Alistair. Let me spell that out for the official record so your listeners and any students taking notes get it right. It is A-L-I-S-T-A-I-R. Alistair Montgomery. He was absolutely instrumental in navigating the complex historical archives and ensuring our material choices matched the 1892 origins of the foundry."
+        "speaker": "Adrian",
+        "text": "Yes, that's my main mobile. And yes, I'm very active on WhatsApp. For my current status, I'm a final-year architecture student over at HKU. I'm specializing in urban conservation, so this project is basically my dream internship, even if it's 'just' volunteering."
       },
       {
-        "speaker": "Sarah",
-        "text": "A-L-I-S-T-A-I-R. Got it. Thank you for the correction! It’s always the vowels that get lost in transcription. So, let’s talk about the timeline. This project wasn't built overnight. When did the actual journey of the Blackwood Foundry revitalization begin?"
+        "speaker": "Emily",
+        "text": "An architecture student! That's perfect. We always need people who can actually read the blueprints. Now, since we deal with a lot of international tourists and local residents, what's your language proficiency like? Are you comfortable giving tours in multiple languages?"
       },
       {
-        "speaker": "Marcus",
-        "text": "The genesis of the whole endeavor dates back to the 2015 Proposal. That was a defining year for us. In 2015, the city council announced they were looking for bids to either demolish the site to make way for a high-rise condominium or find a developer willing to salvage the crumbling masonry. We submitted our comprehensive 2015 Proposal in late October of that year. It was a massive document, easily over eight hundred pages, detailing feasibility studies, economic impact forecasts, and preliminary environmental assessments. The site was heavily contaminated with industrial byproducts, so the 2015 Proposal had to rigorously outline our remediation strategies before we even touched on the architectural aesthetics."
+        "speaker": "Adrian",
+        "text": "I'm fluent in both English and Cantonese. My Mandarin is okay for basic directions, but for the complex historical stuff, I'd prefer to stick to English and Cantonese if possible."
       },
       {
-        "speaker": "Sarah",
-        "text": "I can imagine the bureaucracy involved in 2015 was staggering. Community pushback is also very common in these scenarios. Did you face any resistance when the proposal was first made public?"
+        "speaker": "Emily",
+        "text": "That's exactly what we need. Most of our Heritage Walks are conducted in those two languages. Have you done any volunteering like this before? Any sites we might know?"
       },
       {
-        "speaker": "Marcus",
-        "text": "Oh, absolutely. When the 2015 Proposal went to the town hall meetings, we faced a barrage of skepticism. The local residents were understandably worried about gentrification, traffic congestion, and the potential loss of the neighborhood's working-class character. We spent countless hours conducting community workshops, listening to the descendants of the original foundry workers, and adjusting our designs. We committed to dedicating thirty percent of the floor space to a community arts center and a public industrial museum. That concession was the turning point that allowed the 2015 Proposal to finally get the green light from the municipal planning board."
+        "speaker": "Adrian",
+        "text": "I spent six months at Tai Kwun last year. I was part of the heritage education team there. It taught me a lot about the 'Adaptive Reuse' model and how to handle large crowds in narrow historical corridors."
       },
       {
-        "speaker": "Sarah",
-        "text": "So, with the proposal approved, how long did it take to actually break ground? Was it an immediate transition into construction?"
+        "speaker": "Emily",
+        "text": "Tai Kwun is a gold standard. If you can handle the crowds there on a Saturday afternoon, you can handle anything! Which specific area of the Old Harbour project interests you most? We have the maritime history section, the residential blocks, and the industrial quarter."
       },
       {
-        "speaker": "Marcus",
-        "text": "Not at all. The planning, securing of funds, and the tedious permitting process took another year and a half. We finally marked the 2017 Start of construction. The spring of 2017 was when the heavy machinery rolled in, and the true reality of what we had signed up for set in. The 2017 Start was characterized by incredibly delicate demolition work. We had to strip away decades of hazardous materials, including extensive asbestos insulation and lead-based paints, without compromising the fragile load-bearing brick walls. We basically spent the entirety of 2017 just stabilizing the structure. We had to underpin the foundations, which had sunk nearly four inches on the southern elevation due to poor drainage over the last century."
+        "speaker": "Adrian",
+        "text": "The Industrial Heritage quarter, definitely. I'm fascinated by the old Textile Mills and the way they've been converted. I'd love to focus on that. Honestly, my main motivation for joining is career networking. I hope to work for a firm like Marcus Thorne's one day, and I've heard he's often at the site meetings."
       },
       {
-        "speaker": "Sarah",
-        "text": "Stabilizing a building that old must be an engineering nightmare. You are dealing with materials and building techniques that simply aren't used anymore. What kind of modern regulations did you have to adhere to while preserving those 1890s brick walls?"
+        "speaker": "Emily",
+        "text": "Marcus is there almost every Tuesday! You'll definitely see him. Now, for availability, our peak times are the weekends. When are you most free?"
       },
       {
-        "speaker": "Marcus",
-        "text": "That was arguably the steepest mountain we had to climb. Integrating modern safety standards into an antiquated shell requires absolute precision. To get our structural permits cleared, we were strictly bound by Building Code REV-727-A... Wait, hold on a second. Let me look at my engineering logs. Ah, my apologies, I misspoke. REV-727-A was the fire and egress standard we used on a completely different residential tower last year. Please scratch that. The specific heritage structural code we had to comply with for the foundry's load-bearing walls was Building Code REV-772-B. Yes, that's correct, Building Code REV-772-B."
+        "speaker": "Adrian",
+        "text": "I have studio classes on Saturdays, but I'm completely free on Sunday afternoons. I can commit to a four-hour block every week. And since I live in Pok Fu Lam, I usually take the MTR to the site—it's very convenient."
       },
       {
-        "speaker": "Sarah",
-        "text": "Let me just make sure I have that correctly noted. It is Building Code REV-772-B, not 727-A?"
+        "speaker": "Emily",
+        "text": "Sunday afternoon, MTR. Noted. Do you have any special skills you'd like to offer? Aside from the tour guiding?"
       },
       {
-        "speaker": "Marcus",
-        "text": "Exactly. Building Code REV-772-B. That specific code dictates the acceptable methods for seismic retrofitting in historical structures within a designated heritage overlay. It mandated that we could not simply reinforce the exterior walls with visible steel beams, as that would ruin the historical facade. Instead, we had to use a complex method involving core-drilling down the center of the existing masonry and inserting high-tensile steel rods, which were then secured with a specialized epoxy resin. It was incredibly tedious and expensive, but compliance with Building Code REV-772-B ensured that the building could withstand a major seismic event without altering its iconic nineteenth-century silhouette."
+        "speaker": "Adrian",
+        "text": "I'm a keen amateur photographer. I have a professional-grade DSLR and I'd be happy to take high-quality photos for the project's social media pages or the volunteer newsletter."
       },
       {
-        "speaker": "Sarah",
-        "text": "That level of invisible engineering is mind-blowing. It really highlights the hidden costs and invisible labor that goes into heritage revitalization. Moving forward on the timeline, you stabilized the structure in 2017, completed the interior fit-outs, and then came the grand reveal. Tell me about the 2019 Opening."
+        "speaker": "Emily",
+        "text": "That would be incredible! Our current newsletter photos are... well, they're a bit blurry. One more thing, Adrian. We need to be aware of any health conditions for our site-safety protocols. Any allergies or issues with being outdoors for long periods?"
       },
       {
-        "speaker": "Marcus",
-        "text": "The 2019 Opening was a truly magical culmination of all that blood, sweat, and regulatory paperwork. We held the grand 2019 Opening in September, intentionally timing it to coincide with the city's annual heritage week. The transformation was breathtaking, if I do say so myself. We had successfully converted the massive, cavernous main casting floor of the foundry into a stunning, multi-tiered public atrium. We kept the original iron gantries and the massive overhead crane, permanently locking them in place as sculptural focal points. During the 2019 Opening, it was incredibly moving to see former foundry workers, some in their eighties and nineties, walking through the space with their grandchildren, pointing out where they used to stand."
+        "speaker": "Adrian",
+        "text": "I have a bit of a pollen allergy in the spring, but as long as we're not doing the garden tours for three hours straight, I'm usually fine with my inhaler."
       },
       {
-        "speaker": "Sarah",
-        "text": "That emotional connection is exactly why preserving these spaces is so vital. It is not just about brick and mortar; it is about memory and identity. How was the commercial integration received during the 2019 Opening? Did you have trouble finding tenants for the newly revitalized spaces?"
+        "speaker": "Emily",
+        "text": "Pollen allergy. Noted. We'll keep you away from the botanical section in April! For your uniform, I'll need your size. We provide the green polo shirts."
       },
       {
-        "speaker": "Marcus",
-        "text": "Surprisingly, no. By the time of the 2019 Opening, we were completely fully leased. The upper floors, which used to be drafting rooms and administrative offices for the foundry, were converted into boutique office spaces for tech startups and creative agencies. They absolutely loved the aesthetic—the exposed brick, the original Douglas fir timber beams, the massive arched fenestrations that let in an abundance of natural light. On the ground floor, alongside the community arts center we promised in the 2015 Proposal, we curated a selection of artisanal cafes, an independent bookstore, and a microbrewery that actually utilizes some of the restored industrial pipework for their brewing process. The 2019 Opening proved that heritage spaces can be highly lucrative and economically viable if they are designed with community integration in mind."
+        "speaker": "Adrian",
+        "text": "Medium, please. And I assume there's no registration fee since I'm a student?"
       },
       {
-        "speaker": "Sarah",
-        "text": "It sounds like a resounding success, and I know it won several architectural awards shortly after the 2019 Opening. But a city is a living, breathing thing, and developments rarely just stop. Which brings us to the present day and the newest phase of the project. Can you walk us through the 2024 Expansion?"
+        "speaker": "Emily",
+        "text": "Exactly. The $100 processing fee is completely exempt for students and seniors. Well, Adrian, you're all set. We'll see you at the orientation next month!"
       },
       {
-        "speaker": "Marcus",
-        "text": "I would love to. The 2024 Expansion is our most ambitious pivot yet. Because the original foundry revitalization was so successful, the foot traffic far exceeded our initial projections. The community arts center was bursting at the seams, and the commercial tenants needed more collaborative spaces. So, the board approved the 2024 Expansion, which we are currently in the thick of completing. This phase is quite different from the original project. Instead of restoring an old building, the 2024 Expansion involves constructing a brand-new, ultra-modern annex on the adjacent vacant lot, which used to be the foundry's coal storage yard."
+        "speaker": "Adrian",
+        "text": "Thanks, Emily! Really looking forward to it."
       },
       {
-        "speaker": "Sarah",
-        "text": "Adding a modern building right next to a meticulously restored 1890s structure sounds risky. How do you ensure the 2024 Expansion doesn't visually overpower or clash with the historical charm of the original foundry?"
+        "speaker": "Announcer",
+        "text": "Task 2. Listen to a presentation by Marcus Thorne, Architectural Director, on 'Adaptive Reuse: The Invisible Engineering of 2026'. Complete the notes. You now have two minutes to study the task. (120-second pause)"
       },
       {
-        "speaker": "Marcus",
-        "text": "That is the ultimate architectural challenge—creating a dialogue between the past and the future without letting one shout over the other. For the 2024 Expansion, we decided against trying to build a fake, historic-looking building. Faux-heritage often just ends up looking like a theme park. Instead, we went with a design that is unapologetically contemporary but highly respectful in its massing and material choices. The 2024 Expansion features a highly transparent, low-iron glass facade framed in oxidized Corten steel. The rust-colored patina of the Corten steel directly echoes the rich, weathered tones of the original 1892 brickwork. Furthermore, the two buildings are connected by a floating glass skybridge, allowing the original exterior wall of the foundry to remain completely untouched and fully visible from the street."
+        "speaker": "Marcus Thorne",
+        "text": "Good morning. When people think of heritage, they think of dusty museums. But in 2026, heritage is alive. It's functional. It's 'Adaptive Reuse'. I want to walk you through the journey of the Old Harbour project. Our journey began with a massive team effort, and I have to credit our lead historical consultant, Alistair Montgomery. He's the one who dug through the 19th-century archives to find the original blueprints for the Customs House."
       },
       {
-        "speaker": "Sarah",
-        "text": "That sounds visually stunning. The juxtaposition of the sleek glass against the rugged brick. I imagine the 2024 Expansion also incorporates some advanced sustainability features?"
+        "speaker": "Marcus Thorne",
+        "text": "The project itself dates back to the 2015 Proposal. That was when the city first realized that these industrial shells weren't just decay—they were opportunity. But it wasn't an easy sell. To get the local community on board, we had to make a significant concession: thirty percent of the total floor space was dedicated to non-profit community arts and a public museum. This was the 'Social Contract' that allowed the 2015 Proposal to proceed."
       },
       {
-        "speaker": "Marcus",
-        "text": "Absolutely. The 2024 Expansion is targeting a LEED Platinum certification. While we did everything we could to make the historical building energy-efficient, you are still inherently limited by nineteenth-century masonry. The new annex, however, gave us a blank slate. The 2024 Expansion includes a massive green roof that aids in stormwater management and provides a habitat for local pollinators. We've also integrated photovoltaic glass panels into the southern facade, which will generate roughly forty percent of the annex's electrical needs. Furthermore, we are implementing a state-of-the-art geothermal heating and cooling system that will actually run under the courtyard connecting the two buildings, serving both the new annex and supplementing the HVAC system of the original foundry."
+        "speaker": "Marcus Thorne",
+        "text": "We finally broke ground in the Spring of 2017. If you remember that year, it was a particularly wet spring, which made the stabilization work incredibly difficult. The foundation of the main pier was literally sinking into the silt. To save it, we had to adhere to a very specific, and quite frankly, very annoying regulation: Building Code REV-772-B. This code is the 'Bible' for seismic retrofitting in historical zones. It forbids any visible steel supports on the exterior."
       },
       {
-        "speaker": "Sarah",
-        "text": "It is incredible to hear how a timeline that started with a fraught 2015 Proposal has evolved into a thriving 2019 Opening, and is now pushing the boundaries of sustainable urban design with the 2024 Expansion. It is a true testament to the value of patience and vision in urban planning."
+        "speaker": "Marcus Thorne",
+        "text": "So, how do you reinforce a 150-year-old wall without showing the steel? We used a method called 'core-drilling'. We drilled vertically through the center of the masonry—sometimes thirty feet deep—and inserted high-tensile rods. We then secured them with a specialized epoxy resin. This is what I call 'Invisible Engineering'. It allows the building to withstand a magnitude 7 earthquake while looking exactly as it did in 1892. The grand reveal, or what we called the '2019 Opening', was a watershed moment. We managed to keep the original iron gantries in the atrium, which now serve as the framework for our digital art installations."
       },
       {
-        "speaker": "Marcus",
-        "text": "Patience is definitely the operative word. Heritage revitalization is not for the faint of heart. When you are dealing with meticulous codes like Building Code REV-772-B, managing the expectations of local historical societies, and uncovering literal centuries of hidden decay, it requires a profound level of dedication. But when you stand in that courtyard today, looking at the seamless blend of 1892 brickwork and the gleaming 2024 glass annex, knowing that you've saved a piece of the city's soul from the wrecking ball... there is simply no better feeling in the world."
+        "speaker": "Marcus Thorne",
+        "text": "Now, we are in the 2024 Expansion phase. We're adding a modern annex to the north side. We've chosen Corten steel for the facade because its natural rust-colored patina perfectly matches the weathered brick of the original buildings. But we aren't just looking back; we're looking up. The expansion is targeting LEED Platinum certification. We've integrated photovoltaic glass that will provide forty percent of the annex's total electrical needs. And most impressively, we've installed a geothermal HVAC system that uses the stable temperature of the earth to heat and cool the entire district. It is a true dialogue with the past, powered by the technology of the future."
       },
       {
-        "speaker": "Sarah",
-        "text": "I think that is a beautifully profound note to end on. Marcus, thank you so much for walking us through the incredible journey of the Blackwood Foundry, from the initial hurdles with Alistair Montgomery's historical archiving, through the strict regulatory compliance, all the way to the stunning green architecture of today."
+        "speaker": "Announcer",
+        "text": "Task 3. Listen to a radio debate between Sarah Jenkins, Marcus Thorne, and Elena Rostova. Complete the comparison table. You now have two minutes to study the task. (120-second pause)"
       },
       {
-        "speaker": "Marcus",
-        "text": "The pleasure was entirely mine, Sarah. Thank you for shedding light on the vital importance of heritage revitalization."
+        "speaker": "Sarah Jenkins",
+        "text": "Welcome to 'City voices'. Today we're debating the $350 Million budget for the Old Harbour District revitalization. Marcus, you've been a proponent of a much leaner, $200 Million 'market-led' approach. Why?"
       },
       {
-        "speaker": "Sarah",
-        "text": "That was Marcus Thorne, Lead Architectural Director at Cornerstone Design. For our listeners who want to learn more, we will be posting photos of the foundry, including the original 2015 blueprints and the latest renders of the 2024 Expansion, on our website. Join us next week on 'Urban Footprints' as we explore the hidden underground aqueducts of major metropolitan centers. Until then, keep looking up, and keep looking back."
+        "speaker": "Marcus Thorne",
+        "text": "Sarah, $200 Million is responsible. It focuses on the essentials—safety, infrastructure, and basic repair. If we spend $400 Million, as you initially proposed, we are essentially building a luxury bubble that the city's debt can't sustain. We need to let private developers take some of the weight."
       },
       {
-        "speaker": "Alex",
-        "text": "Good morning, everyone. Thank you for joining this emergency session of the Heritage Oversight Committee. As we all know, we are at a critical crossroads regarding the 'Old Harbour District Revitalization Project.' Today's objective is simple but monumental: we must finalize our budget proposal for the city council. We have two very different visions on the table—one calling for a conservative $200 million investment and another pushing for a comprehensive $400 million overhaul. We need to leave this room with a unified figure and a clear philosophical stance on what we are actually doing to this community."
+        "speaker": "Elena Rostova",
+        "text": "But Marcus, 'letting private developers take the weight' is just code for gentrification! I represent the residents of the Harbour. Their biggest fear is that they'll be priced out of their own homes. If you don't invest in social protections, the 'revitalization' is just a eviction notice in a pretty envelope."
       },
       {
-        "speaker": "Sarah",
-        "text": "Thank you, Alex. I’ll start by saying that I am the proponent of the $400 million plan. We aren't just talking about repainting old buildings or fixing some potholes. This is the historic heart of our city. The 'Old Harbour' contains structures dating back two centuries that are currently at risk of literal collapse. If we go with Marcus’s proposed $200 million, we are essentially putting a band-aid on a gunshot wound. We need to invest in seismic retrofitting, authentic masonry restoration, and a complete modernization of the underground utility grid. Anything less is a disservice to our history."
+        "speaker": "Sarah Jenkins",
+        "text": "This is why we've landed on the compromise budget of $350 Million. It's the 'Integrated Revitalization' model. Let's break it down. $280 Million is earmarked strictly for core structural and heritage restoration—including keeping the Customs House in public hands. Marcus, I know you wanted to sell it to a hotel group, but this committee has decided it must remain a public library and museum."
       },
       {
-        "speaker": "Marcus",
-        "text": "Sarah, I appreciate the passion, but we have to live in the realm of fiscal reality. I am proposing $200 million because that is what the current tax base can support without triggering a massive deficit. My concern isn't just the money; it’s the optics and the eventual outcome. When you spend $400 million on a single district, you aren't 'revitalizing' it in the sense of helping the current residents. You are essentially subsidizing high-end developers to come in and flip the script. You're talking about heritage, but I see a fast track to extreme gentrification."
+        "speaker": "Marcus Thorne",
+        "text": "$280 Million for bricks and mortar. It's a lot, but I'll concede it's necessary for the Customs House. That leaves $70 Million."
       },
       {
-        "speaker": "Elena",
-        "text": "Marcus brings up a point that the community board has been screaming about for months. I represent the people who currently live in those 'dilapidated' buildings. To them, Sarah’s $400 million looks like a colonial-style takeover. If you spend that much, the property values will skyrocket, the local grocery stores will become artisan candle shops, and the families who have been there for four generations will be priced out in eighteen months. How is it 'revitalization' if the original people aren't there to see it?"
+        "speaker": "Elena Rostova",
+        "text": "That $70 Million is the 'Community Stabilization Fund'. It's what pays for the rent control measures for the 400 apartments in the district. It ensures that the families who have been there for generations aren't hit by a 30% rent hike the day the ribbon is cut. To pay for this, we're looking at a 30-year bond duration instead of the standard 20. It spreads the cost, but it secures the soul of the district. We are calling it 'Integrated Revitalization' because you cannot separate the buildings from the people."
       },
       {
-        "speaker": "Sarah",
-        "text": "Elena, I hear you, but that’s exactly why the higher budget is necessary. My $400 million proposal includes $100 million specifically earmarked for social housing subsidies and small business grants for existing tenants. Marcus’s $200 million plan doesn't have room for social equity. With $200 million, the only way the project survives is by inviting private developers to take over the profitable parts of the district to cover the costs. *That* is what leads to the 'gentrification' you fear. A well-funded public project keeps the control in our hands, not the developers'."
+        "speaker": "Sarah Jenkins",
+        "text": "Integrated Revitalization. It's a silver standard that actually protects. Marcus, are you on board?"
       },
       {
-        "speaker": "Marcus",
-        "text": "That sounds good on a brochure, Sarah, but it’s a circular argument. You want to spend more public money to prevent the private sector from doing what the market naturally does. The reality is that $400 million is an astronomical burden on the taxpayers. If we stick to $200 million, we focus on essential infrastructure—safety, lighting, and basic repair. We let the market breathe. 'Gentrification' is often just a scary word for 'economic growth.' We need new tax revenue. We need people with disposable income to move back into the city center to support the local economy."
+        "speaker": "Marcus Thorne",
+        "text": "If the metrics for success include resident retention, and not just property value, then yes. $350 Million it is."
       },
       {
-        "speaker": "Elena",
-        "text": "Marcus, calling it 'economic growth' is an insult to the people being displaced. When you say 'market-led revitalization,' you’re talking about the erasure of cultural identity. The Old Harbour isn't just bricks and mortar; it’s the stories of the dockworkers, the immigrant families, and the jazz clubs. If Sarah’s plan truly protects those people through subsidies, then I’m inclined to support a higher number. But $400 million still feels like it’s inviting a level of luxury that the neighborhood doesn't want or need."
+        "speaker": "Announcer",
+        "text": "Task 4. Listen to the emergency briefing for tour guides at the Old Harbour site. Complete the matrix. You now have two minutes to study the task. (120-second pause)"
       },
       {
-        "speaker": "Alex",
-        "text": "Let’s look at the breakdown. Marcus, you mentioned that $200 million covers 'essentials.' Does that include the restoration of the Customs House? That building alone is the crown jewel of the heritage site, but it’s riddled with asbestos and structural rot."
+        "speaker": "Emily",
+        "text": "Alright team, listen up. With the $350 Million budget finalized, we are moving into the high-security phase of construction. You need to be aware of the 'Heritage Harmony' protocol. This is our internal framework for protecting sensitive historical materials. If you see contractors using heavy power tools near the 1840s masonry, check if they've done their mandatory thermal imaging. We use it to detect moisture pockets that could cause the walls to shatter under vibration."
       },
       {
-        "speaker": "Marcus",
-        "text": "The Customs House is a money pit, Alex. Under my $200 million plan, we would likely have to sell that specific property to a private hotel group. They would have the capital to restore it, and the city would be off the hook for the $60 million restoration cost. Yes, it becomes a luxury hotel, but the exterior is saved, and the city gets the tax revenue. That’s a win-win."
+        "speaker": "Emily",
+        "text": "For the aesthetics, all lighting must use the 2700K gas lamp mimicry bulbs. We don't want any harsh blue LEDs ruining the 19th-century vibe. And for any structural repairs, we only use bio-resin acoustic dampeners to isolate the mechanical hum. Now, for the visitors, we have a new incentive: the 'Local Artisan Vouchers'. Every tourist pass comes with a $500 credit that can ONLY be used at our certified legacy merchants. To qualify, a business must prove a ten-year history in the district. It's how we keep the traditional glassblowers and bakers in business."
       },
       {
-        "speaker": "Sarah",
-        "text": "It’s a win for the hotel group, Marcus! It’s a loss for the public. The Customs House should be a community museum or a public library. If we sell it, we lose the 'Heritage' in Heritage Revitalization. This is exactly the divide we are facing. One side wants to preserve the soul of the city by investing in it, and the other wants to pawn off our history to the highest bidder because they are afraid of a budget line item."
+        "speaker": "Emily",
+        "text": "Lastly, emergency safety. If you encounter a medical or structural emergency, use the keyword 'Blue Shield' over the radio. It alerts the heritage police without causing a panic among the tourists. Our primary evacuation route for the industrial quarter is through 'Customs Alley'—do NOT use the main gate as it will be blocked by emergency vehicles. If you have any issues, your primary contact is Elena Rostova. Our next full-scale emergency drill is scheduled for November 12th. We're expecting a massive weekend attendee count of at least 5,000 people once the new pier opens, so we need to be sharp. This briefing is classified, so keep your notes secure. Let's get to work."
       },
       {
-        "speaker": "Marcus",
-        "text": "I’m not 'afraid,' Sarah. I’m being responsible. We have other districts in this city that need schools and hospitals. To dump nearly half a billion dollars into one historic district is politically tone-deaf. We will be accused of creating an elitist bubble while the rest of the city struggles. The 'gentrification' argument works both ways—it’s not just about the residents in the district, it’s about the resentment of the residents outside of it."
+        "speaker": "Announcer",
+        "text": "This is the end of Part A. Now, turn to Part B."
       },
       {
-        "speaker": "Elena",
-        "text": "What if we find a middle ground? Sarah, you say $400 million is needed to include social protections. Marcus, you say $200 million is the limit of fiscal safety. If we can guarantee that the project stays 'revitalization'—meaning the current community thrives—without turning it into a playground for the wealthy, what is the absolute minimum we need for the structural work?"
+        "speaker": "Announcer",
+        "text": "Part B. Introduction. You are Chris Wong, an assistant to Elena Rostova. You will hear a briefing Elena gives to the community liaison team. As you listen, take notes which may help you to complete the tasks. You will have five minutes to study the Part B Information Directory and the tasks. (Pause 5m)"
       },
       {
-        "speaker": "Sarah",
-        "text": "The structural 'must-haves'—the Customs House, the old pier, and the seismic work—come to about $280 million. That doesn't include the community grants or the new public transit links I wanted to add."
+        "speaker": "Elena Rostova",
+        "text": "Good morning, everyone. As we move into the final phase of the Old Harbour Revitalization, my office is being flooded with questions. Chris, I need you to be my primary filter for these. First, the budget. There's an old 2022 proposal floating around the internet for a 'Sha Tin Cultural Hub' with a budget of $150 Million. PLEASE DISREGARD THIS. That was a completely different project on the Shing Mun Riverfront that never left the planning stage. Our budget for the Old Harbour is $350 Million. If you see any reports mentioning $150 Million or the $200 Million 'market-led' plan, correct them immediately. Our model is the 'Integrated' model."
       },
       {
-        "speaker": "Marcus",
-        "text": "And my $200 million was based on skipping the pier restoration and selling the Customs House. If we keep the Customs House in public hands, I admit the cost jumps significantly. But I cannot, in good conscience, agree to $400 million. It’s too much debt."
+        "speaker": "Elena Rostova",
+        "text": "I want to emphasize the 'Heritage Harmony' protocol. It's not just for the architects; it's for the community's peace of mind. It mandates the use of bio-resin dampeners for all HVAC units. If residents complain about noise, you can tell them that we are using the highest acoustic isolation standards in the city. Also, the 'Local Artisan Vouchers' are our secret weapon against gentrification. Each tourist gets a $500 digital credit. Chris, make sure the merchants know they must have at least ten years of history in the district to be eligible for the city's reimbursement. We already have the fourth-generation glassblower signed up, but we need to reach out to the traditional bakery on Elm Street."
       },
       {
-        "speaker": "Alex",
-        "text": "We are starting to see the edges of a compromise here. Sarah, if we trimmed the fat from your proposal—perhaps scaled back the new transit links and focused on existing bus routes—where does that leave us? And Marcus, if we agreed that selling the Customs House is a non-starter for this committee, how much higher can you go?"
+        "speaker": "Elena Rostova",
+        "text": "Finally, the Customs House. It will NOT be a hotel. It will be a public heritage center. This is a non-negotiable part of our $280 Million structural allocation. If anyone asks about the 'Blue Shield' keyword, tell them it's our internal safety signal for rapid response. Our goal is to maintain a weekend capacity of 5,000 visitors without losing the neighborhood feel. Chris, I'll need you to draft a formal letter to the contractors by Friday, reminding them that any deviation from the Heritage Harmony lighting or masonry standards will result in an immediate work stoppage. We are preserving a soul here, not just building a facade. Alright, let's look at the community feedback cards..."
       },
       {
-        "speaker": "Marcus",
-        "text": "If the Customs House stays public, and we can prove that the 'revitalization' will actually generate long-term leases for local vendors rather than just big-box retailers, I might be able to push the finance department to $300 million. But that’s a hard ceiling."
-      },
-      {
-        "speaker": "Sarah",
-        "text": "$300 million isn't enough. We would be cutting corners on the materials. If we use cheap masonry or shortcut the environmental remediation on the waterfront, we’ll be doing this all over again in twenty years. To do this right—to ensure it’s a 'heritage' project that lasts a century—we need more."
-      },
-      {
-        "speaker": "Elena",
-        "text": "I’m looking at the social housing component. Sarah, if we secured $350 million, could you keep the rent-control protections for the existing shops and the 400 apartments in the district? Because for $350 million, I can convince the community board that this isn't just gentrification. I can show them that the city is finally investing in *them*, not just in pretty buildings."
-      },
-      {
-        "speaker": "Sarah",
-        "text": "At $350 million, yes. I would have to compromise on the high-end landscaping and the underground parking facilities, but the core 'revitalization'—the social equity and the structural integrity—would remain intact. We could save the Customs House and the pier."
-      },
-      {
-        "speaker": "Marcus",
-        "text": "$350 million is a massive stretch, Alex. We would need to look at a 30-year bond instead of a 20-year. But... if it prevents the total displacement of the district and saves us from the PR nightmare of selling off historic landmarks, I might be able to sell it to the mayor. It sits right in that uncomfortable middle ground where nobody is perfectly happy, which usually means it’s a fair deal."
-      },
-      {
-        "speaker": "Alex",
-        "text": "So, we are looking at a $350 million budget. Let’s be clear on the terminology for the final report. We are calling this 'Integrated Heritage Revitalization.' We are explicitly moving away from 'market-driven gentrification.' The $350 million will cover the $280 million in core structural and heritage restoration, with $70 million dedicated to community stabilization, social housing, and local business support."
-      },
-      {
-        "speaker": "Sarah",
-        "text": "I can work with that. It’s not the gold standard I wanted, but it’s a silver standard that actually protects the people. It’s a far cry from the $200 million 'fix-it-and-flip-it' approach."
-      },
-      {
-        "speaker": "Marcus",
-        "text": "And it’s a far cry from the $400 million 'blank check' approach. I’ll need a detailed audit of every dollar of that $70 million for community stabilization. If we’re spending that much, I want to see metrics. I want to see how many original residents are still there in five years."
-      },
-      {
-        "speaker": "Elena",
-        "text": "We will give you those metrics, Marcus. In fact, the community board will help track them. This is the first time I feel like 'revitalization' isn't just a code word for 'kick the poor people out.' $350 million is a serious commitment to our neighborhood's future and its past."
-      },
-      {
-        "speaker": "Alex",
-        "text": "It’s settled then. The Heritage Oversight Committee will propose a $350 million budget for the Old Harbour District. We have addressed the concerns regarding gentrification by baking social equity into the funding model, and we have found a middle path through our fiscal constraints. Sarah, please begin drafting the revised architectural scope. Marcus, I need the debt service projections for the $350 million bond by Friday. Elena, please tell your constituents that we heard them."
-      },
-      {
-        "speaker": "Sarah",
-        "text": "I’ll get right on it. We’ve got a lot of work to do to make $350 million look like $400 million, but the integrity of the heritage sites will be our priority."
-      },
-      {
-        "speaker": "Marcus",
-        "text": "And I’ll make sure the numbers hold up under council scrutiny. This was a tough debate, but I think the result is more robust because of it."
-      },
-      {
-        "speaker": "Alex",
-        "text": "Thank you all. This concludes our session. Let's build something the whole city can be proud of."
-      },
-      {
-        "speaker": "Sarah",
-        "text": "Before we go, I just want to emphasize the importance of the masonry work on the East Wing. With the $350 million, we can afford the lime mortar that was original to the 1840s construction. It’s a small detail, but it’s what separates a 'revitalization' from a cheap remodel."
-      },
-      {
-        "speaker": "Marcus",
-        "text": "As long as that lime mortar doesn't cost us the playground budget, Sarah, you have my support. Let’s stick to the $350 million cap."
-      },
-      {
-        "speaker": "Elena",
-        "text": "Agreed. Let’s get to work."
-      },
-      {
-        "speaker": "Sarah",
-        "text": "Welcome back, stakeholders and community leaders, to Part B of our Heritage Revitalization Briefing. In Part A, we covered the overarching vision for the historic district—preserving our past while preparing for the future. Today, we dive into the granular, operational specifics. As a reminder, this audio briefing contains classified operational details that are not yet available in the public press releases. Joining me to unpack these exclusive strategies are our Chief Urban Strategist, David Vance, and our Director of Community Integration, Elena Rostova. David, let’s start with you. The physical restoration of the district is a monumental task. How do we ensure that modern structural upgrades don't destroy the historical soul of the area?"
-      },
-      {
-        "speaker": "David",
-        "text": "Thank you, Sarah. It is the core challenge of any revitalization project. You want to bring in modern plumbing, high-speed fiber-optics, and efficient HVAC systems, but you absolutely cannot compromise a 150-year-old facade or the original cobblestone foundations. To manage this delicate balance, we’ve developed a highly specific, internal framework. And this brings us to our first audio-exclusive secret for this briefing: the 'Heritage Harmony' architectural protocol. This is a proprietary set of engineering guidelines we’ve established specifically for this district, dictating exactly how contractors are allowed to interface with historic materials."
-      },
-      {
-        "speaker": "Sarah",
-        "text": "The 'Heritage Harmony' protocol sounds like a very strict rulebook. Can you give our listeners an example of how this actually plays out on the ground during construction?"
-      },
-      {
-        "speaker": "David",
-        "text": "Absolutely. Under the Heritage Harmony architectural protocol, any modern technological addition must be completely invisible from the pedestrian eye-line and acoustically isolated. Before a single hammer is swung, contractors must use non-invasive thermal imaging to map moisture pockets in the ancient masonry. For instance, when installing the new eco-friendly climate control units, the protocol mandates the use of bio-resin acoustic dampeners that absorb vibrations, ensuring the mechanical hum doesn't degrade the ancient brickwork over time. Furthermore, regarding illumination, any exterior lighting must mimic the exact color temperature of traditional gas lamps. The Heritage Harmony protocol also requires a strict 'like-for-like' visual matching system. If a modern load-bearing beam needs to be inserted into a 19th-century tavern, it must be completely encased in reclaimed timber sourced from within a fifty-mile radius. It’s an incredibly rigorous standard that forces modern engineering to bow entirely to historical aesthetics. We are currently rolling this out to all our Tier 1 contractors."
-      },
-      {
-        "speaker": "Sarah",
-        "text": "That incredible level of detail is exactly why this project is groundbreaking. But as we know, a heritage district isn't just about the buildings; it's about the people who give it life. Elena, bringing new foot traffic and modern amenities often leads to gentrification, pushing out the very people who created the local culture. How are we addressing the human element?"
-      },
-      {
-        "speaker": "Elena",
-        "text": "That is our primary socio-economic concern, Sarah. We’ve seen it happen globally: a historic neighborhood gets a facelift, commercial rents skyrocket, and the traditional bakers, tailors, and craftspeople are replaced by generic, high-end retail chains. Our revitalization model flips that script. We are implementing a commercial zoning system that heavily subsidizes legacy businesses, but we are also actively driving consumer capital directly to their cash registers. This is where our second audio-exclusive initiative comes into play: a program we are calling the 'Local Artisan Vouchers'."
-      },
-      {
-        "speaker": "Sarah",
-        "text": "The 'Local Artisan Vouchers'—that certainly hasn't been mentioned in any of the city council summaries. How exactly will this voucher system function, and who gets access to it?"
-      },
-      {
-        "speaker": "Elena",
-        "text": "It’s a closed-loop economic stimulus designed entirely for legacy crafts. Here is the secret to how it works: the Local Artisan Vouchers are digital tokens embedded directly into the smart-city tourism passes that visitors will purchase. When a visitor takes a guided heritage walk or stays in a local historic boutique hotel, their digital wallet is automatically credited with these Local Artisan Vouchers. These vouchers can only be redeemed at certified, pre-existing traditional businesses—the fourth-generation cobbler, the family-owned glassblower, or the historic bakeries. To ensure fairness, we have set up an artisan registry. Small business owners simply have to prove a minimum ten-year operational history in the district to qualify to receive these funds. The tourist gets a subsidized price on an authentic piece of local culture, while the city reimburses the artisan for the full market value of the voucher. It guarantees that the influx of new tourist wealth flows directly into the pockets of the people maintaining the district's living history, bulletproofing them against gentrification."
-      },
-      {
-        "speaker": "David",
-        "text": "If I can add to that, Elena’s Local Artisan Vouchers actually synergize beautifully with the Heritage Harmony architectural protocol. Because the protocol ensures the physical shops retain their centuries-old atmosphere, the tourist experience is incredibly authentic. They are walking into a visually untouched 19th-century workshop, guided by the modern convenience of the digital voucher. We are seamlessly blending physical preservation with modern economic engines to create a sustainable ecosystem."
-      },
-      {
-        "speaker": "Sarah",
-        "text": "It is a truly holistic approach. You are using the Heritage Harmony protocol to protect the physical shell of the district, and the Local Artisan Vouchers to protect the cultural soul inside it. These audio-exclusive details provide a massive tactical advantage for our community leaders listening today, allowing you to prepare your respective teams for the upcoming rollout. David, Elena, thank you for sharing these classified insights. To our listeners, please review the attached encrypted dossiers for the full technical schematics of the protocol and the financial models for the vouchers. This concludes Part B of the Heritage Revitalization Briefing. Thank you for tuning in."
+        "speaker": "Announcer",
+        "text": "This is the end of the Integrated Skills recording. You now have 1 hour and 15 minutes to complete your tasks. (End of simulation)"
       }
     ]
   },
@@ -628,121 +558,129 @@
     "data_file": [
       {
         "id": "doc1",
-        "type": "official_memo",
-        "title": "Project Launch: Cobblestone Quarter Renewal",
-        "content": "MEMORANDUM\nTO: All City Planning Staff\nFROM: Director of Urban Development\nDATE: March 4\nSUBJECT: Initiation of the Cobblestone Quarter Renewal Project\n\nWe are officially launching the revitalization of the historic Cobblestone Quarter. The objective is to restore the 19th-century architecture while upgrading the infrastructure to support modern utilities. Phase 1 will focus on the repaving of Main Street with historically accurate brickwork and the installation of era-appropriate street lighting. Please ensure all contractors adhere strictly to the Historic Preservation Board's guidelines."
+        "type": "memo",
+        "title": "Strategic Launch: Old Harbour 2026",
+        "content": "Official Phase 1 Focus: Customs House Restoration and Pier stabilization. Budget: $350 Million total allocation."
       },
       {
         "id": "doc2",
-        "type": "email_thread",
-        "title": "Re: Masonry Restoration Delays",
-        "content": "From: Sarah Jenkins, Lead Architect\nTo: Marcus Thorne, Project Manager\nDate: April 12\n\nMarcus,\nWe are hitting a roadblock with the Old Mill facade. The preservation committee rejected the red brick we sourced because the firing technique doesn't match the 1880s aesthetic. We now have to order custom-fired bricks from a specialty kiln in the next state over. This is going to delay the exterior completion by at least six weeks and will likely push us $45,000 over the masonry budget. Let me know how you want to handle the adjusted timeline."
+        "type": "email",
+        "title": "Technical Issues at Customs House",
+        "content": "From: David Vance\nTo: Marcus Thorne\nSubject: Asbestos Discovery\nWe've found significant asbestos in the East Wing. This requires a specialized cleanup team. Cost estimate: $45,000. Please adjust the Q4 budget."
       },
       {
         "id": "doc3",
-        "type": "meeting_minutes",
-        "title": "Minutes: Historic Planning Commission",
-        "content": "MEETING MINUTES - May 2\nAttendees: Mayor Lin, City Council Members, Local Business Coalition.\n\nAgenda Item 1: Parking in the Renewed District.\nDiscussion: Several legacy businesses have complained that the newly expanded pedestrian walkways have removed 40% of the street parking. \nResolution: The council voted to allocate funds for a new multi-level parking garage three blocks east of the district, which will be styled to blend in with the historic skyline."
+        "type": "minutes",
+        "title": "Minutes of the Heritage Oversight Committee",
+        "content": "Date: Oct 15, 2025. Attendees: Alex (Chair), Sarah, Marcus, Elena. Consensus: Proceed with the $350M Integrated model. Reject the $200M market-led proposal."
       },
       {
         "id": "doc4",
-        "type": "financial_report",
-        "title": "Q2 Budget Summary: Legacy District Initiative",
-        "content": "FINANCIAL OVERSIGHT REPORT\nPeriod: Q2\nProject: Legacy District Initiative\n\n- Infrastructure Upgrades: $1.2M (On track)\n- Facade Restorations: $850,000 (Over budget by $65,000 due to custom material sourcing)\n- Public Amenities: $300,000 (On track)\n- Marketing & Tourism Promotion: $150,000\n\nNotes: The contingency fund has been tapped to cover the unexpected costs associated with the historically accurate streetlamps. We recommend freezing the marketing budget until the construction delays are resolved."
+        "type": "poster",
+        "title": "Old Harbour Artisan Fair",
+        "content": "Join us Jan 15-17. Showcasing the Local Artisan Voucher system. Supporting 4th generation businesses only."
       },
       {
         "id": "doc5",
         "type": "handwritten_note",
-        "title": "Resident's Feedback Card",
-        "content": "To whoever is in charge,\nI've lived in this neighborhood for 42 years. Yes, the new sidewalks look very pretty, and it's nice to see the old clocktower working again. But my property taxes are skyrocketing, and my landlord just told me rent is going up 30% next year. I used to buy my groceries down the street, but that store was pushed out and replaced by a boutique selling imported olive oil. Who are you fixing this neighborhood up for? Because it doesn't feel like it's for us.\n- Martha G., 4th Ave."
+        "title": "Elena's Scrawled Notes from Town Hall",
+        "visual_style": "scrawled_handwriting",
+        "content": "- Residents scared of 'Craft Coffee' takeover.\n- 400 apartments MUST stay rent-controlled.\n- Marcus's $200M plan is a NO-GO.\n- Demand lime mortar for East Wing."
       },
       {
         "id": "doc6",
-        "type": "news_article",
-        "title": "Old Mill Reopens as Mixed-Use Hub",
-        "content": "THE DAILY TRIBUNE - June 15\nThe highly anticipated reopening of the historic Textile Mill took place yesterday, marking a major milestone in the city's revitalization efforts. The 120-year-old building now houses a co-working space, a gallery, and several high-end retail shops. Mayor Lin cut the ribbon, stating, 'We are breathing new life into our past to secure our economic future.' However, some protests were visible across the street, with locals holding signs asking for affordable commercial rents for legacy businesses."
+        "type": "table",
+        "title": "Budget Breakdown (Final Approval)",
+        "content": "Item | Cost | Source\nStructural | $280M | Public Bond\nCommunity | $70M | Social Fund\nTransit | $5M | Dept of Transport"
       },
       {
         "id": "doc7",
-        "type": "social_media_post",
-        "title": "@LocalFoodie Rant",
-        "content": "User: @LocalFoodie_99\nDate: July 8\nJust visited the 'revitalized' district everyone is raving about. Stopped at the new cafe in the old bank building. NINE DOLLARS. $9 for a plain, small black coffee?! Are you actually kidding me? This used to be a working-class neighborhood. Now it's just overpriced aesthetics for tourists. I miss Joe's Diner. #Gentrification #Overpriced #BringBackJoes"
+        "type": "archive",
+        "title": "RED HERRING: Sha Tin Cultural Hub Proposal 2022 (ARCHIVE)",
+        "content": "NOTE: ARCHIVED DOCUMENT. \nBudget: $150 Million. \nLocation: Shing Mun Riverfront. \nLead Architect: Benjamin Choi. (Not relevant to Old Harbour 2026)."
       },
       {
         "id": "doc8",
-        "type": "survey_results",
-        "title": "Quarter Renewal Impact Survey",
-        "content": "DEMOGRAPHIC FEEDBACK SUMMARY\nTotal Respondents: 1,500\n\nTourist Feedback:\n- 88% rated the area's aesthetic appeal as 'Excellent'.\n- 75% said they plan to return for holiday shopping.\n\nLocal Resident Feedback:\n- 62% reported a negative impact on daily convenience.\n- 81% expressed concern over the rising cost of living and loss of essential neighborhood services.\n- 45% complained about ongoing construction noise occurring before 7:00 AM."
+        "type": "checklist",
+        "title": "Heritage Harmony Protocol Checklist",
+        "content": "- Bio-resin dampeners installed?\n- Lighting at 2700K (Gas mimicry)?\n- Reclaimed timber for exposed beams?\n- Thermal imaging completed?"
       },
       {
         "id": "doc9",
-        "type": "policy_document",
-        "title": "Historic Preservation Guidelines",
-        "content": "SECTION 4: BUILDING ALTERATIONS\nAll properties located within the designated preservation zone must adhere to the following standards:\n4.1 Paint Colors: Only colors from the approved '19th Century Palette' may be used on exterior facades.\n4.2 Signage: Neon, LED, and internally illuminated signs are strictly prohibited. All commercial signs must be carved wood or painted metal, hung from wrought-iron brackets.\n4.3 Windows: Modern vinyl windows are not permitted. Replacements must be wood-framed double-hung windows matching the original architectural style."
+        "type": "news_article",
+        "title": "The Soul of the Harbour: A New Era",
+        "content": "The move to keep the Customs House in public hands is seen as a major victory for conservationists over developers."
       },
       {
         "id": "doc10",
         "type": "email",
-        "title": "Lease Renewal Concerns",
-        "content": "From: David Vance <vance_books@email.com>\nTo: Commercial Zoning Board\nDate: August 21\n\nTo the Board,\nI am the owner of Vance Antiquarian Books. We have operated on Elm Street for three generations. Our current lease expires in six months, and the building's new management company has informed us that the rent will double. The 'revitalization' was supposed to help small businesses, but we are being priced out by national retail chains that can afford these exorbitant rates. Is the city planning to introduce any commercial rent stabilization measures? If not, we will be forced to close by December."
+        "title": "Logistics: Voucher Rollout",
+        "content": "From: Elena Rostova\nTo: All Merchants\nSubject: Digital Wallet Integration\nMerchants must have a 10-year district history to qualify for the voucher reimbursement."
       },
       {
         "id": "doc11",
-        "type": "press_release",
-        "title": "New Community Subsidy Program Announced",
-        "content": "FOR IMMEDIATE RELEASE\nSeptember 5\nIn response to feedback from long-term residents and business owners, the City Council has passed the Legacy Merchant Protection Act. This program offers tax rebates to landlords who sign multi-year leases with local businesses that have operated in the district for over 15 years. Additionally, a new community discount program will provide verified local residents with a 15% reduction on goods and services at participating newly established retailers in the district."
+        "type": "policy",
+        "title": "Legacy Merchant Protection Act",
+        "content": "Tax rebates for landlords maintaining 15-year business leases. 15% discount for verified residents."
       },
       {
         "id": "doc12",
-        "type": "purchase_order",
-        "title": "Purchase Order #8832 - Admin Supplies",
-        "content": "VENDOR: Apex Office Solutions\nDATE: September 12\nDEPARTMENT: General Administration, 4th Floor\n\nITEMS ORDERED:\n- 20x Reams of A4 Printer Paper (White, 20lb)\n- 5x Boxes of Standard Paperclips (1000ct)\n- 10x Packs of Sticky Notes (Yellow, 3x3)\n- 4x Boxes of Ballpoint Pens (Blue ink, medium point)\n- 2x Whiteboard Erasers\n\nTOTAL COST: $142.50\nNOTES: Please deliver directly to the receptionist desk on the 4th floor. Do not leave boxes in the loading dock."
+        "type": "memo",
+        "title": "Office Supply Re-order",
+        "content": "20 Reams A4 paper, 5 boxes paperclips. Deliver to general admin. (Administrative noise)."
       }
     ],
     "Part_B1": {
       "tasks": [
         {
           "id": "Task_5",
-          "type": "Email Writing",
-          "instructions": "Write an email to the City Historical Society requesting information about volunteering for the upcoming cultural preservation week.",
-          "wordCount": 150,
+          "type": "Email",
+          "instructions": "Write an email to the MTR Logistics team regarding the voucher integration at station kiosks. Use info from Doc 10.",
+          "wordCount": 300,
           "grading_rubric": {
             "content_points": [
-              "Clear subject line and polite greeting.",
-              "Expression of interest in volunteering for cultural preservation week.",
-              "Request for specific details regarding available roles and schedules."
+              {
+                "point": "Correct budget reference ($350M)",
+                "mark": 1
+              },
+              {
+                "point": "Explain 10-year history requirement",
+                "mark": 1
+              }
             ],
-            "tone": "Professional",
-            "relevance_penalty": ""
+            "tone": "Formal",
+            "relevance_penalty": "Deduct 0.5 for 2022 Sha Tin references",
+            "deductions": [
+              {
+                "condition": "Citing $150M budget from Sha Tin",
+                "penalty": 0.5
+              },
+              {
+                "condition": "Mentioning Shing Mun Riverfront",
+                "penalty": 0.5
+              }
+            ]
           }
         },
         {
           "id": "Task_6",
           "type": "Response Letter",
-          "instructions": "You received an email from a local tour guide asking for suggestions on which historical landmarks to include in a new walking tour. Write a response suggesting two landmarks and why they are significant.",
-          "wordCount": 150,
+          "instructions": "Respond to a resident's concern about rent using Doc 5 and Doc 11.",
+          "wordCount": 300,
           "grading_rubric": {
-            "content_points": [
-              "Acknowledgment of the tour guide's email.",
-              "Suggestion of two specific local historical landmarks.",
-              "Brief explanation of the historical or cultural significance of each landmark."
-            ],
-            "tone": "Professional",
+            "content_points": [],
+            "tone": "Formal",
             "relevance_penalty": ""
           }
         },
         {
           "id": "Task_7",
-          "type": "Public Notice",
-          "instructions": "Write a short notice to be posted in the community center announcing a town hall meeting regarding the renovation of the old central library.",
-          "wordCount": 150,
+          "type": "Feature Article",
+          "instructions": "Write a feature article for 'Urban Weekly' about the Old Harbour project.",
+          "wordCount": 300,
           "grading_rubric": {
-            "content_points": [
-              "Clear announcement of the town hall meeting.",
-              "Mention of the central library renovation as the main topic.",
-              "Details of the meeting (date, time, location) and an invitation for residents to share their opinions."
-            ],
-            "tone": "Professional",
+            "content_points": [],
+            "tone": "Engaging",
             "relevance_penalty": ""
           }
         }
@@ -752,19 +690,63 @@
       "tasks": [
         {
           "id": "Task_8",
-          "type": "Proposal Writing",
-          "instructions": "Based on the reading materials and the audio recording provided, write a formal proposal for the 'Heritage Harmony' project to be presented to the City Council. Detail the project's goals, funding allocation, and community impact.",
-          "wordCount": 250,
+          "type": "Formal Letter",
+          "instructions": "Write a formal letter to Tier 1 Contractors regarding the East Wing restoration. You must instruct them on the Heritage Harmony protocol (Doc 8) while specifically addressing the recent asbestos discovery (Doc 2). Maintain a firm, instructional tone.",
+          "wordCount": 225,
           "grading_rubric": {
             "content_points": [
-              "Formal introduction stating the purpose of the 'Heritage Harmony' project proposal.",
-              "Summary of the primary objectives of the project (community integration and historical preservation).",
-              "AUDIO-EXCLUSIVE SECRET 1: Must explicitly mention the anonymous $250,000 grant specifically earmarked for the restoration of the 18th-century clock tower (detail only revealed in the audio).",
-              "AUDIO-EXCLUSIVE SECRET 2: Must reference the partnership with the local indigenous elders to co-host the summer storytelling workshops (detail only revealed in the audio).",
-              "Conclusion summarizing the expected long-term benefits to the local community's cultural landscape."
+              { "point": "Mandatory thermal imaging before drilling", "mark": 1 },
+              { "point": "Use of bio-resin acoustic dampeners", "mark": 1 },
+              { "point": "Acknowledge Asbestos Discovery in East Wing (Doc 2)", "mark": 1 },
+              { "point": "Instruct on safe asbestos removal following Heritage Harmony standards", "mark": 1 },
+              { "point": "2700K gas lamp mimicry lighting requirement", "mark": 1 }
             ],
-            "tone": "Professional",
-            "relevance_penalty": ""
+            "tone": "Formal/Instructional/Firm",
+            "relevance_penalty": "Strict -0.5 for 2022 Sha Tin data",
+            "deductions": [
+              { "condition": "Mentioning $150M budget from Sha Tin", "penalty": 0.5 },
+              { "condition": "Citing Shing Mun Riverfront location", "penalty": 0.5 }
+            ]
+          }
+        },
+        {
+          "id": "Task_9",
+          "type": "Feature Article",
+          "instructions": "Write a feature article for 'Urban Weekly' about the success of the $350M Integrated Revitalization model and the new 'Local Artisan Voucher' system.",
+          "wordCount": 300,
+          "grading_rubric": {
+            "content_points": [
+              { "point": "Explain the Integrated Revitalization model ($350M)", "mark": 1 },
+              { "point": "Detail the 'Local Artisan Vouchers' for legacy businesses", "mark": 2 },
+              { "point": "Mention the rent-control for 400 apartments", "mark": 1 },
+              { "point": "Highlight the decision to keep the Customs House public", "mark": 1 }
+            ],
+            "tone": "Engaging/Informative",
+            "relevance_penalty": "Strict -0.5 for 2022 data",
+            "deductions": [
+              { "condition": "Mentioning $150M budget", "penalty": 0.5 },
+              { "condition": "Citing Sha Tin location", "penalty": 0.5 }
+            ]
+          }
+        },
+        {
+          "id": "Task_10",
+          "type": "Internal Proposal",
+          "instructions": "Draft an internal proposal for the Heritage Oversight Committee regarding the 30-year bond financing and final budget split.",
+          "wordCount": 175,
+          "grading_rubric": {
+            "content_points": [
+              { "point": "Total $350M budget allocation", "mark": 1 },
+              { "point": "The $280M (Structural) / $70M (Community) split (Doc 6)", "mark": 1 },
+              { "point": "30-year bond duration (Audio-Only 'Killer Point')", "mark": 2 },
+              { "point": "Commitment to resident retention metrics", "mark": 1 }
+            ],
+            "tone": "Formal/Analytical",
+            "relevance_penalty": "Strict -0.5 for 2022 data",
+            "deductions": [
+              { "condition": "Mentioning $150M or $200M budgets", "penalty": 0.5 },
+              { "condition": "Citing Sha Tin location", "penalty": 0.5 }
+            ]
           }
         }
       ]

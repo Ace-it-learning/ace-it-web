@@ -229,7 +229,7 @@ const ListeningResultPage = () => {
                     </motion.div>
                 </div>
 
-                {/* Miss Janie's Verdict */}
+                {/* Examiner's Verdict */}
                 <motion.div 
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -443,7 +443,7 @@ const ListeningResultPage = () => {
                                                 </div>
                                             </div>
 
-                                            {/* Miss Janie's Professional Feedback Section */}
+                                            {/* Professional Feedback Section */}
                                             <div className="bg-slate-50 p-12 border-t border-slate-200">
                                                 <div className="flex flex-col md:flex-row items-start gap-10">
                                                     <div className="shrink-0 flex flex-col items-center gap-3">

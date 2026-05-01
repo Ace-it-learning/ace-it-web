@@ -27,6 +27,7 @@ import { LoadingPage, GradingOverlay } from '../../components/shared';
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import { storage } from '../../firebase';
 import { useAuth } from '../../context/AuthContext';
+import { useAvatar } from '../../context/AvatarContext';
 import UpgradeModal from '../../components/common/UpgradeModal';
 
 // Studio Components
@@ -38,6 +39,7 @@ import WritingStudioControlPanel from '../../components/writing/WritingStudioCon
 
 const WritingMockStudio = () => {
     const { user, profile } = useAuth();
+    const { englishTutor } = useAvatar();
     const { paperId } = useParams();
     const navigate = useNavigate();
     const [searchParams, setSearchParams] = useSearchParams();
@@ -602,7 +604,7 @@ const WritingMockStudio = () => {
                 <GradingOverlay 
                     isOpen={isInjecting || isSubmitting}
                     title={isInjecting ? "Injecting AI Drafts" : "Evaluating Writing"}
-                    status={isInjecting ? "Synthesizing Level-Specific Content..." : "Miss Janie is reviewing your work..."}
+                    status={isInjecting ? "Synthesizing Level-Specific Content..." : `${englishTutor?.name || "Miss Janie"} is reviewing your work...`}
                     progress={submissionProgress}
                 />
                 <UpgradeModal 
@@ -800,11 +802,11 @@ const WritingMockStudio = () => {
                                             ))}
                                         </div>
 
-                                        {/* Miss Janie Overall */}
+                                        {/* Dynamic Tutor Feedback */}
                                         <div className="mt-8 p-6 bg-slate-900 rounded-[2rem] relative overflow-hidden">
                                             <div className="relative z-10 flex gap-4">
                                                 <div className="size-12 rounded-full overflow-hidden shrink-0 border-2 border-white shadow-lg">
-                                                    <img src="/avatars/Miss_Janie.jpg" alt="Janie" className="w-full h-full object-cover" />
+                                                    <img src={englishTutor?.avatar || "/avatars/Miss_Janie.jpg"} alt={englishTutor?.name || "Janie"} className="w-full h-full object-cover" />
                                                 </div>
                                                 <div className="space-y-2">
                                                     <div className="flex items-center gap-2">

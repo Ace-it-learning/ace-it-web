@@ -4,12 +4,14 @@ import { Languages, Sparkles, MessageSquare, ArrowLeft, Trophy, Calendar, Eye, G
 import ExamHeader from '../components/exam/ExamHeader';
 import { GRAMMAR_MAPPING } from '../constants/grammarMapping';
 import { useState, useEffect } from 'react';
+import { useAvatar } from '../context/AvatarContext';
 
 const SpeakingResultPage = () => {
     const { state } = useLocation();
     const { resultId } = useParams();
     const navigate = useNavigate();
     const { user } = useAuth();
+    const { activeAgent, englishTutor } = useAvatar();
     
     const [result, setResult] = useState(state?.result || null);
     const [isFetching, setIsFetching] = useState(false);
@@ -221,7 +223,7 @@ const SpeakingResultPage = () => {
                                 </div>
                                 <div>
                                     <h3 className="text-lg font-black uppercase tracking-tight text-amber-200">
-                                        Miss Janie's Grammar Diagnostic
+                                        {englishTutor?.name || activeAgent?.name || "Miss Janie"}'s Grammar Diagnostic
                                     </h3>
                                     <p className="text-[10px] font-bold text-amber-500/80 uppercase tracking-widest flex items-center gap-2">
                                         <Sparkles size={10} className="animate-pulse" />

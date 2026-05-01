@@ -87,6 +87,7 @@ export const AvatarProvider = ({ children }) => {
     };
 
     const activeAgent = getAgentIdentity(activeAgentId);
+    const englishTutor = getAgentIdentity('english');
 
     return (
         <AvatarContext.Provider value={{
@@ -101,7 +102,8 @@ export const AvatarProvider = ({ children }) => {
             setIsFocusMode,
             equipment,
             syncEquipment,
-            getAgentIdentity
+            getAgentIdentity,
+            englishTutor
         }}>
             {children}
         </AvatarContext.Provider>

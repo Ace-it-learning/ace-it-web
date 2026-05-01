@@ -129,9 +129,15 @@ const SpeakingDeliveryPage = () => {
             }
         };
 
+
         fetchDrill();
-        return () => stopAllAudio();
-    }, [topicId, level, user?.uid]);
+        return () => {
+            stopAllAudio();
+            // Final cleanup of blob URLs on unmount
+            if (recordedBlobUrl) URL.revokeObjectURL(recordedBlobUrl);
+        };
+    }, [topicId, level, user?.uid, recordedBlobUrl]);
+
 
     // Cleanup audio
     const stopMasterAudio = () => {
@@ -139,9 +145,18 @@ const SpeakingDeliveryPage = () => {
             audioRef.current.pause();
             audioRef.current.onended = null;
             audioRef.current.ontimeupdate = null;
+            audioRef.current.src = "";
+            audioRef.current.load();
         }
         if (window.speechSynthesis) {
             window.speechSynthesis.cancel();
+        }
+        // Clear global keep-alive reference
+        if (window._currentUtterance) {
+            window._currentUtterance.onend = null;
+            window._currentUtterance.onboundary = null;
+            window._currentUtterance.onerror = null;
+            window._currentUtterance = null;
         }
         setIsPlayingMaster(false);
         // Clear all DOM-driven highlights
@@ -160,9 +175,12 @@ const SpeakingDeliveryPage = () => {
         if (studentAudio.current) {
             studentAudio.current.pause();
             studentAudio.current.onended = null;
+            studentAudio.current.src = "";
+            studentAudio.current.load();
         }
         setIsPlayingStudent(false);
     };
+
 
     // --- Audio Control Functions ---
 
@@ -452,13 +470,22 @@ const SpeakingDeliveryPage = () => {
     // 4. Play Student Recording
     const playStudentRecording = () => {
         if (!recordedBlob) return;
+        
+        // Revoke previous URL to free memory
+        if (recordedBlobUrl) {
+            URL.revokeObjectURL(recordedBlobUrl);
+        }
+        
         const url = URL.createObjectURL(recordedBlob);
+        setRecordedBlobUrl(url);
+        
         const audio = new Audio(url);
         setIsPlayingStudent(true);
         audio.play();
         audio.onended = () => setIsPlayingStudent(false);
         studentAudio.current = audio;
     };
+
 
     const stopStudentRecording = () => {
         if (studentAudio.current) {

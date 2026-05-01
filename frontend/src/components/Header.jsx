@@ -84,7 +84,7 @@ const Header = () => {
                     <h1 className="text-xl font-bold tracking-tight flex items-center">
                         <span className="text-[#F1783B] font-brand">A</span>
                         <span className="text-[#4A5568] font-brand">ce</span>
-                        <span className="mx-1.5"></span>
+                        <span className="mx-0.5"></span>
                         <span className="text-[#F1783B] font-brand">I</span>
                         <span className="text-[#4A5568] font-brand">t!</span>
                         <span className="ml-2 text-2xl font-signature text-[#4A5568] italic">DSE</span>

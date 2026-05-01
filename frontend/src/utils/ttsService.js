@@ -163,6 +163,42 @@ export const speak = async (options) => {
     return null;
 };
 
-export const stopAll = () => {
-    if (window.speechSynthesis) window.speechSynthesis.cancel();
+/**
+ * Explicitly destroys a TTS controller (Audio or Utterance) to free memory
+ */
+export const destroyController = (result) => {
+    if (!result || !result.controller) return;
+
+    const { type, controller } = result;
+
+    if (type === 'audio' && controller instanceof Audio) {
+        try {
+            controller.pause();
+            controller.onended = null;
+            controller.ontimeupdate = null;
+            controller.onerror = null;
+            controller.src = "";
+            controller.load(); // Forces clearing of buffer
+        } catch (e) {
+            console.warn('[TTSService] Failed to destroy audio controller:', e);
+        }
+    } else if (type === 'speechSynthesis' && controller instanceof SpeechSynthesisUtterance) {
+        try {
+            controller.onend = null;
+            controller.onboundary = null;
+            controller.onerror = null;
+            controller.onstart = null;
+            // Note: We don't cancel here because it's a global singleton, 
+            // but we clear the listeners to allow GC of closures.
+        } catch (e) {
+            console.warn('[TTSService] Failed to destroy utterance controller:', e);
+        }
+    }
 };
+
+export const stopAll = () => {
+    if (window.speechSynthesis) {
+        window.speechSynthesis.cancel();
+    }
+};
+

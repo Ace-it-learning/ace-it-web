@@ -89,12 +89,18 @@ const Paper3AudioEngine = forwardRef(({ script, phase, onPhaseChange, onTaskChan
         return () => {
             if (audioRef.current) {
                 audioRef.current.pause();
+                audioRef.current.onended = null;
+                audioRef.current.onerror = null;
                 audioRef.current.src = "";
+                audioRef.current.load();
                 audioRef.current = null;
             }
-            window.speechSynthesis.cancel();
+            if (window.speechSynthesis) {
+                window.speechSynthesis.cancel();
+            }
         };
     }, []);
+
 
     // Initial Resume Logic (if starting from a pause)
     useEffect(() => {

@@ -191,8 +191,8 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
         // 3. General Skills - First of each category is free
         // Reading
         Object.keys(MICRO_SKILLS).filter(k => k.startsWith('reading_')).forEach((id, idx) => { if (idx > 0) lockedIds.add(id); });
-        // Speaking
-        Object.keys(MICRO_SKILLS).filter(k => k.startsWith('speaking_') && !MICRO_SKILLS[k].isGranular).forEach((id, idx) => { if (idx > 0) lockedIds.add(id); });
+        // Speaking (Phase 26: All pillars are unlocked for entry to access free quests inside)
+        // Object.keys(MICRO_SKILLS).filter(k => k.startsWith('speaking_') && !MICRO_SKILLS[k].isGranular).forEach((id, idx) => { if (idx > 0) lockedIds.add(id); });
         // Writing Genres
         Object.keys(MICRO_SKILLS).filter(k => k.startsWith('writing_genre_')).forEach((id, idx) => { if (idx > 0) lockedIds.add(id); });
 

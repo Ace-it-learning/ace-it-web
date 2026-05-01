@@ -19,10 +19,18 @@ const DataSprintBoard = ({ questData, onComplete, userNotes }) => {
         return () => {
             if (audioRef.current) {
                 audioRef.current.pause();
+                audioRef.current.onended = null;
+                audioRef.current.onerror = null;
+                audioRef.current.src = "";
+                audioRef.current.load();
                 audioRef.current = null;
+            }
+            if (window.speechSynthesis) {
+                window.speechSynthesis.cancel();
             }
         };
     }, []);
+
 
     const handleCheat = () => {
         const cheatAnswers = {};

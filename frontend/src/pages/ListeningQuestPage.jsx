@@ -211,6 +211,11 @@ const ListeningQuestPage = () => {
         // Clear Part A session when moving to B
         localStorage.removeItem(getSessionKey(questData?.id, 'A'));
         
+        // Revoke URL if it's a blob
+        if (userAudioSrc && userAudioSrc.startsWith('blob:')) {
+            URL.revokeObjectURL(userAudioSrc);
+        }
+
         setCurrentMode('B');
         setStep('simulator');
         setUserResults(null);
@@ -220,8 +225,15 @@ const ListeningQuestPage = () => {
         window.scrollTo(0, 0);
     };
 
+
     const handleRetry = () => {
         localStorage.removeItem(getSessionKey(questData?.id, currentMode));
+        
+        // Revoke URL if it's a blob
+        if (userAudioSrc && userAudioSrc.startsWith('blob:')) {
+            URL.revokeObjectURL(userAudioSrc);
+        }
+
         setStep('simulator');
         setUserResults(null);
         setUserAudioSrc(null);
@@ -229,6 +241,16 @@ const ListeningQuestPage = () => {
         setPrevBestScore(0);
         window.scrollTo(0, 0);
     };
+
+    // Cleanup on unmount
+    useEffect(() => {
+        return () => {
+            if (userAudioSrc && userAudioSrc.startsWith('blob:')) {
+                URL.revokeObjectURL(userAudioSrc);
+            }
+        };
+    }, [userAudioSrc]);
+
 
     return (
         <div className="min-h-screen bg-slate-50 flex flex-col font-sans selection:bg-rose-100 italic-none">

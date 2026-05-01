@@ -92,7 +92,7 @@ const CardCollection = () => {
 
     const cardsMap = {
         student: studentCards,
-        tutor: tutorCards.filter(c => c.subject !== 'chinese').filter(c => c.subject === subTab || (subTab === 'ace' && c.subject === 'general')),
+        tutor: tutorCards.filter(c => c.subject !== 'chinese' && c.subject !== 'maths').filter(c => c.subject === subTab || (subTab === 'ace' && c.subject === 'general')),
         frame: avatarFrames
     };
     const activeCards = cardsMap[tab] || [];

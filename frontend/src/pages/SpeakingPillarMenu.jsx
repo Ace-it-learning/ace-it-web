@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { Mic, MessageSquare, Languages, Sparkles, Layout, ChevronRight, Loader2, Zap, Play, Activity } from 'lucide-react';
+import { useAuth } from '../context/AuthContext';
+import { Mic, MessageSquare, Languages, Sparkles, Layout, ChevronRight, Loader2, Zap, Play, Activity, Crown } from 'lucide-react';
 
 const SpeakingPillarMenu = () => {
     const navigate = useNavigate();
     const location = useLocation();
+    const { profile } = useAuth();
+    const tier = (profile?.subscription_tier || 'free').toLowerCase();
 
     // Mapping of internal keys to display names
     const PILLARS = [
@@ -165,12 +168,25 @@ const SpeakingPillarMenu = () => {
                     </div>
                 ) : (
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-in fade-in slide-in-from-bottom-4 duration-700">
-                        {filteredDrills.map((drill, idx) => (
-                            <button
-                                key={drill.id}
-                                onClick={() => handleStartDrill(drill)}
-                                className="group bg-white p-6 rounded-[2rem] border border-slate-100 hover:border-indigo-400 hover:shadow-2xl hover:shadow-indigo-100 transition-all duration-300 text-left relative overflow-hidden"
-                            >
+                        {filteredDrills.map((drill) => {
+                            const isPaid = tier === 'pro' || tier === 'premium';
+                            // Lock based on the original global drills index to maintain consistency when filtering
+                            const globalIdx = drills.findIndex(d => d.id === drill.id);
+                            const isLocked = !isPaid && globalIdx > 0;
+                            return (
+                                <button
+                                    key={drill.id}
+                                    onClick={() => {
+                                        if (isLocked) {
+                                            navigate('/subscription');
+                                        } else {
+                                            handleStartDrill(drill);
+                                        }
+                                    }}
+                                    className={`group bg-white p-6 rounded-[2rem] border border-slate-100 transition-all duration-300 text-left relative overflow-hidden ${
+                                        isLocked ? 'cursor-not-allowed opacity-80' : 'hover:border-indigo-400 hover:shadow-2xl hover:shadow-indigo-100 cursor-pointer'
+                                    }`}
+                                >
                                 {/* Level Badge */}
                                 <div className={`absolute top-6 right-6 px-3 py-1.5 text-[10px] font-black rounded-xl uppercase tracking-widest border transition-all ${
                                     drill.level_label === 'Elite' ? 'bg-amber-50 text-amber-600 border-amber-200' : 
@@ -186,8 +202,9 @@ const SpeakingPillarMenu = () => {
                                         <div className={`w-10 h-10 rounded-xl bg-${activePillar?.color || 'indigo'}-50 text-${activePillar?.color || 'indigo'}-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
                                             <Play size={20} fill="currentColor" />
                                         </div>
-                                        <h3 className="text-lg font-black text-slate-800 leading-tight mb-2 group-hover:text-indigo-600 transition-colors">
-                                            {drill.title}
+                                        <h3 className="text-lg font-black text-slate-800 leading-tight mb-2 group-hover:text-indigo-600 transition-colors flex items-center gap-2">
+                                             {drill.title}
+                                             {isLocked && <Crown className="text-amber-500 fill-amber-500 shrink-0" size={18} />}
                                         </h3>
                                         <p className="text-sm text-slate-500 line-clamp-2 leading-relaxed font-medium">
                                             {drill.scenario}
@@ -204,7 +221,8 @@ const SpeakingPillarMenu = () => {
                                     </div>
                                 </div>
                             </button>
-                        ))}
+                        );
+                    })}
 
                         {filteredDrills.length === 0 && !loading && (
                             <div className="col-span-full py-20 text-center bg-white rounded-3xl border border-dashed border-slate-200">

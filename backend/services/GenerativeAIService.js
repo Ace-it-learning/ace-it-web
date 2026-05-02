@@ -71,14 +71,16 @@ class GenerativeAIService {
                 this.currentRegion = region;
                 this.vertexConfig = vertexConfig; 
 
-                // 2026 Model Mapping
+                const isDev = process.env.NODE_ENV === 'development' || !process.env.NODE_ENV || !process.env.K_SERVICE;
+
+                // 2026 Model Mapping - Tier-Based Lockdown for DEV
                 this.vertexModelMap = {
                     "ace-it-flash": "gemini-1.5-flash",
-                    "ace-it-pro": "gemini-1.5-pro",
+                    "ace-it-pro": isDev ? "gemini-1.5-flash" : "gemini-1.5-pro",
                     "gemini-flash-latest": "gemini-1.5-flash",
-                    "gemini-pro-latest": "gemini-1.5-pro",
+                    "gemini-pro-latest": isDev ? "gemini-1.5-flash" : "gemini-1.5-pro",
                     "gemini-1.5-flash": "gemini-1.5-flash",
-                    "gemini-1.5-pro": "gemini-1.5-pro"
+                    "gemini-1.5-pro": isDev ? "gemini-1.5-flash" : "gemini-1.5-pro"
                 };
 
                 console.log(`[AIService] 🚀 Vertex AI Production Online (${region})`);

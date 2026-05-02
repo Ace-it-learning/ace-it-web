@@ -164,9 +164,10 @@ export const translations = {
             pro_f8: "Chat with Ace Sir (Academic & University advisor)",
             premium_name: "Premium Plan",
             premium_f1: "Unlimited Mock exam access",
-            premium_f2: "1.5x XP Multiplier",
-            premium_f3: "5 Device Limit",
-            premium_f4: "Parental monthly progress report",
+            premium_f2: "Pro AI model for Mock exam grading",
+            premium_f3: "1.5x XP Multiplier",
+            premium_f4: "5 Device Limit",
+            premium_f5: "Parental monthly progress report",
             tiers: {
                 free: {
                     name: "Free Trial",
@@ -190,7 +191,7 @@ export const translations = {
                     period: "/month",
                     desc: "Unlimited power for top-tier academic mastery.",
                     cta: "Go Premium",
-                    features: ["Unlimited Mock exam access", "1.5x XP Multiplier", "5 Device Limit", "Parental monthly progress report"]
+                    features: ["Unlimited Mock exam access", "Pro AI model for Mock exam grading", "1.5x XP Multiplier", "5 Device Limit", "Parental monthly progress report"]
                 }
             }
         },
@@ -849,9 +850,10 @@ export const translations = {
             pro_f8: "與 Ace Sir (學術及大學顧問) 對話",
             premium_name: "至尊計劃 (Premium)",
             premium_f1: "無限模擬考試存取",
-            premium_f2: "1.5x XP 經驗值加成",
-            premium_f3: "5 台裝置上限",
-            premium_f4: "家長每月進度報告",
+            premium_f2: "Pro 級 AI 模擬試卷評分",
+            premium_f3: "1.5x XP 經驗值加成",
+            premium_f4: "5 台裝置上限",
+            premium_f5: "家長每月進度報告",
             tiers: {
                 free: {
                     name: "免費試用",
@@ -875,7 +877,7 @@ export const translations = {
                     period: "/月",
                     desc: "解鎖最強 AI 戰力，追求頂尖奪星目標。",
                     cta: "立即升級 Premium",
-                    features: ["無限模擬考試存取", "1.5x XP 經驗值加速", "5 台裝置上限", "家長每月進度報告"]
+                    features: ["無限模擬考試存取", "Pro 級 AI 模擬試卷評分", "1.5x XP 經驗值加速", "5 台裝置上限", "家長每月進度報告"]
                 }
             }
         },

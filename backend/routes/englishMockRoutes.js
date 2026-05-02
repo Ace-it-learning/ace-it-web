@@ -30,7 +30,15 @@ router.post('/submit', async (req, res) => {
         const mockData = await EnglishMockService.getMockPaper(paperId);
         if (!mockData) return res.status(404).json({ error: "Paper not found" });
 
-        const assessment = await MockAssessmentService.evaluatePaper(mockData, userAnswers, analytics);
+        // FETCH USER TIER
+        let tier = 'free';
+        if (req.user?.uid) {
+            const UserProfileService = require('../services/UserProfileService');
+            const profile = await UserProfileService.getProfile(req.user.uid);
+            tier = profile?.subscription_tier || 'free';
+        }
+
+        const assessment = await MockAssessmentService.evaluatePaper(mockData, userAnswers, analytics, tier);
         
         // Award XP based on marks result (Standard: 250 XP max for Reading Mock)
         const baseMaxXP = 250;
@@ -80,10 +88,18 @@ router.post('/submit-listening', async (req, res) => {
         const mockData = await EnglishMockService.getMockPaper(paperId);
         if (!mockData) return res.status(404).json({ error: "Paper not found" });
 
+        // FETCH USER TIER
+        let tier = 'free';
+        if (req.user?.uid) {
+            const UserProfileService = require('../services/UserProfileService');
+            const profile = await UserProfileService.getProfile(req.user.uid);
+            tier = profile?.subscription_tier || 'free';
+        }
+
         const assessment = await MockAssessmentService.evaluatePaper(mockData, userAnswers, {
             ...analytics,
             paperType: 'LISTENING'
-        });
+        }, tier);
         
         // Award XP (Standard: 500 XP max for Paper 3)
         const baseMaxXP = 500;
@@ -147,11 +163,20 @@ router.post('/writing/submit', async (req, res) => {
             selectedPartB: responses.find(r => r.part === 'B')
         };
         
+        // FETCH USER TIER
+        let tier = 'free';
+        const targetUid = uid || req.user?.uid;
+        if (targetUid) {
+            const UserProfileService = require('../services/UserProfileService');
+            const profile = await UserProfileService.getProfile(targetUid);
+            tier = profile?.subscription_tier || 'free';
+        }
+
         // 3. Evaluate
         const results = await MockAssessmentService.evaluatePaper(mockData, userAnswers, {
             paperType: 'WRITING',
             selectedPartB: userAnswers.selectedPartB
-        });
+        }, tier);
 
         // 4. Sync to Mastery Radar
         if (uid || req.user?.uid) {

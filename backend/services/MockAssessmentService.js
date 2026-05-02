@@ -7,15 +7,15 @@ class MockAssessmentService {
      * @param {Object} userAnswers - Student's answers keyed by question ID
      * @returns {Object} Assessment result with scores and feedback
      */
-    async evaluatePaper(mockData, userAnswers, analytics = {}) {
+    async evaluatePaper(mockData, userAnswers, analytics = {}, tier = 'free') {
         // Route to specific evaluator based on paper type
         if (mockData.Part_B && mockData.Part_B.data_file) {
-            return this.evaluateListeningPaper(mockData, userAnswers, analytics);
+            return this.evaluateListeningPaper(mockData, userAnswers, analytics, tier);
         }
         if (mockData.Part_A && (mockData.Part_A.situation || mockData.Part_A.genre)) {
-            return this.evaluateWritingPaper(mockData, userAnswers, analytics);
+            return this.evaluateWritingPaper(mockData, userAnswers, analytics, tier);
         }
-        return this.evaluateReadingPaper(mockData, userAnswers, analytics);
+        return this.evaluateReadingPaper(mockData, userAnswers, analytics, tier);
     }
 
 
@@ -173,12 +173,14 @@ class MockAssessmentService {
                                     const batchPrompt = this.createBatchPrompt(batch, topic);
                                     const hasHighRigor = batch.some(it => it.highRigor);
                                     
-                                    let response;
                                     try {
+                                        // TIER-BASED MODEL SELECTION
+                                        const model = (tier && tier.toLowerCase() === 'premium') ? 'ace-it-pro' : 'ace-it-flash';
+                                        
                                         response = await GenerativeAIService.generateJson(batchPrompt, { 
-                                            model: 'ace-it-pro',
+                                            model: model,
                                             temperature: temp,
-                                            strictModel: hasHighRigor
+                                            strictModel: hasHighRigor && model === 'ace-it-pro'
                                         });
                                     } catch (proErr) {
                                         console.warn("[MockAssessment] Reading batch evaluation with Pro failed, falling back to Flash:", proErr.message);
@@ -601,10 +603,13 @@ class MockAssessmentService {
         
         let data = {};
         try {
+            // TIER-BASED MODEL SELECTION
+            const model = (tier && tier.toLowerCase() === 'premium') ? 'ace-it-pro' : 'ace-it-flash';
+
             const response = await GenerativeAIService.generateJson(prompt, { 
-                model: 'ace-it-pro',
-                temperature: 0.1, // Lower temperature for more consistent grading
-                strictModel: true
+                model: model,
+                temperature: 0.1, 
+                strictModel: model === 'ace-it-pro'
             });
             data = response.data || {};
         } catch (e) {

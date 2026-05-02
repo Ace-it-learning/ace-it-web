@@ -18,11 +18,10 @@ class SpeakingMockGradingService {
     /**
      * MAIN ENTRY: Grade a full Speaking Mock
      */
-    async gradeFullMock(uid, mockData, chatHistory, individualQuestion, individualResponse) {
-        console.log(`[SpeakingMockGrading] Grading session for ${uid}...`);
+    async gradeFullMock(uid, mockData, chatHistory, individualQuestion, individualResponse, tier = 'free') {
+        console.log(`[SpeakingMockGrading] Grading session for ${uid} (Tier: ${tier})...`);
 
-        // 1. Prepare transcripts
-        // We filter for 'Candidate_D' or 'You' which is the student
+        // ... (Transcripts omitted for brevity in replace call, but I will include them)
         const studentDiscussionHistory = chatHistory
             .filter(msg => msg.role === 'Candidate_D' || msg.role === 'user' || msg.name === 'Candidate_D')
             .map(msg => msg.content)
@@ -41,9 +40,12 @@ class SpeakingMockGradingService {
             .replace("{INDIVIDUAL_RESPONSE}", individualResponse || "No response recorded.");
 
         try {
+            // TIER-BASED MODEL SELECTION
+            const model = (tier && tier.toLowerCase() === 'premium') ? 'ace-it-pro' : 'ace-it-flash';
+
             // 3. Call AI for grading
             const { data: evaluation } = await GenerativeAIService.generateJson(prompt, {
-                model: "ace-it-pro", // Use Pro for grading integrity
+                model: model, 
                 generationConfig: { temperature: 0.2 } // Keep it deterministic
             });
 

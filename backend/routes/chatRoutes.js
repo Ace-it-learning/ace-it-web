@@ -36,30 +36,9 @@ const ACE_SIR_INJECTION = "";
  * AI Model Routing Strategy
  */
 function routeRequest(message, hasImage) {
-    if (message && message.includes('[SYSTEM:')) {
-        return { model: TIER_PRO_MODEL, useAceSir: false };
-    }
-    if (message) {
-        const lower = message.toLowerCase();
-        if (
-            lower.includes('recap') ||
-            lower.includes('grade') ||
-            lower.includes('score') ||
-            lower.includes('mock')
-        ) {
-            return { model: TIER_PRO_MODEL, useAceSir: false };
-        }
-    }
-    let model = TIER_1_MODEL;
-    if (hasImage) {
-        model = TIER_2_MODEL;
-    } else if (message) {
-        const lower = message.toLowerCase();
-        if (lower.includes('check') || lower.includes('explain')) {
-            model = TIER_2_MODEL;
-        }
-    }
-    return { model, useAceSir: false };
+    // 2026 COST SAVER: Default to Flash for ALL chat interactions to keep costs low.
+    // Pro is reserved for high-stakes Mock Exam grading (Premium Tier).
+    return { model: TIER_1_MODEL, useAceSir: false };
 }
 
 /**

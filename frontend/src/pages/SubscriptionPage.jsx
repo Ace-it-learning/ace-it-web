@@ -111,9 +111,10 @@ const SubscriptionPage = () => {
             icon: <Crown className="w-6 h-6 text-purple-500" />,
             features: [
                 t('pricing.premium_f1') || 'Unlimited Mock exam access',
-                t('pricing.premium_f2') || '1.5x XP Multiplier',
-                t('pricing.premium_f3') || '5 Device Limit',
-                t('pricing.premium_f4') || 'Parental monthly progress report'
+                t('pricing.premium_f2') || 'Pro AI model for Mock exam grading',
+                t('pricing.premium_f3') || '1.5x XP Multiplier',
+                t('pricing.premium_f4') || '5 Device Limit',
+                t('pricing.premium_f5') || 'Parental monthly progress report'
             ],
             color: 'purple'
         }

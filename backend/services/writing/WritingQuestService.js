@@ -703,7 +703,7 @@ class WritingQuestService {
     /**
      * HKDSE Paper 2 Mock Grading: Grades Part A and Part B together
      */
-    async gradeMockPaper(topic, responses) {
+    async gradeMockPaper(topic, responses, tier = 'free') {
         const imageParts = [];
         const responsesSummary = responses.map(r => {
             return `Part ${r.part} (${r.elective || 'Compulsory'}): ${r.title}\nContent: ${r.text || 'Handwritten (see photos)'}`;
@@ -771,10 +771,13 @@ class WritingQuestService {
             : promptText;
 
         try {
-            const result = await this.aiService.generateJson(prompt, { model: 'ace-it-pro' });
+            // TIER-BASED MODEL SELECTION
+            const model = (tier && tier.toLowerCase() === 'premium') ? 'ace-it-pro' : 'ace-it-flash';
+
+            const result = await this.aiService.generateJson(prompt, { model: model });
             return result.data;
         } catch (error) {
-            console.warn("[WritingQuestService] Mock Grading with Pro failed, falling back to Flash:", error.message);
+            console.warn("[WritingQuestService] Mock Grading failed, falling back:", error.message);
             const result = await this.aiService.generateJson(prompt, { model: 'ace-it-flash' });
             return result.data;
         }

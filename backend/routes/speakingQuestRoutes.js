@@ -556,8 +556,16 @@ router.post('/mock/submit', async (req, res) => {
             return res.status(400).json({ error: 'Missing required data for grading' });
         }
 
-        console.log(`[SpeakingMock] Submitting full mock for user: ${uid}`);
-        const result = await SpeakingMockGradingService.gradeFullMock(uid, mockData, chatHistory, individualQuestion, individualResponse);
+        // FETCH USER TIER
+        let tier = 'free';
+        if (uid) {
+            const UserProfileService = require('../services/UserProfileService');
+            const profile = await UserProfileService.getProfile(uid);
+            tier = profile?.subscription_tier || 'free';
+        }
+
+        console.log(`[SpeakingMock] Submitting full mock for user: ${uid} (Tier: ${tier})`);
+        const result = await SpeakingMockGradingService.gradeFullMock(uid, mockData, chatHistory, individualQuestion, individualResponse, tier);
 
         res.json(result);
     } catch (error) {

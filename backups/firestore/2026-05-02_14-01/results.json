@@ -1,0 +1,75 @@
+{
+  "FhSPIF4FkztnmNZnCLTm": {
+    "uid": "EDZNtvh1RIXSpboSkcBE3Y6D8c12",
+    "type": "speaking",
+    "paperId": "eng_p4_02",
+    "title": "The 'Right to Disconnect'",
+    "score": 4,
+    "possibleScore": 28,
+    "percentage": 14.285714285714285,
+    "level": "U",
+    "xpAwarded": 180,
+    "results": {
+      "overall_level": "U",
+      "total_score": 4,
+      "domains": {
+        "pronunciation_delivery": {
+          "score": 1,
+          "feedback": "The candidate's delivery was extremely brief and fragmented. There was insufficient language produced to assess rhythm, intonation, or vowel distinction."
+        },
+        "communication_strategies": {
+          "score": 1,
+          "feedback": "Minimal participation. The candidate did not use any linking phrases, failed to acknowledge other candidates, and did not contribute to the flow of the discussion."
+        },
+        "vocabulary_language": {
+          "score": 1,
+          "feedback": "The language used was grammatically incomplete ('notes prevent chat students from because'). While 'data privacy' was used, the lack of sentence structure prevents a higher score."
+        },
+        "ideas_organisation": {
+          "score": 1,
+          "feedback": "Ideas were shallow and lacked any logical development or supporting examples. The response was too short to demonstrate any organizational skills."
+        }
+      },
+      "trigger_analysis": {
+        "transition_phrases": false,
+        "counter_arguments": false,
+        "sophisticated_vocab": [
+          "data privacy"
+        ],
+        "individual_response_length": "5 seconds"
+      },
+      "miss_janie_verdict": {
+        "summary": "A very weak performance that fails to meet the basic requirements of the HKDSE Paper 4. The candidate provided only a single fragmented sentence, showing a significant struggle with basic sentence construction and interaction.",
+        "pros": [
+          "Attempted to address the concept of privacy."
+        ],
+        "cons": [
+          "Extremely limited output in both Part A and Part B.",
+          "Grammatically incoherent sentence structure.",
+          "Complete lack of interaction with peers."
+        ],
+        "advice": "You must produce more language to be graded. Practice forming full 'Subject-Verb-Object' sentences and use simple connectors like 'I agree because' to start participating."
+      },
+      "part_a_highlights": [
+        {
+          "turn": "notes prevent chat students from because that is their data privacy",
+          "critique": "The utterance is a fragment and lacks a clear main verb or logical connection between 'notes' and 'data privacy'.",
+          "impact": "Resulted in a score of 1 for all domains due to lack of sustained communication."
+        }
+      ],
+      "part_b_analysis": {
+        "fluency": "Very poor; the response was a single short burst with no flow.",
+        "relevance": "The mention of 'data privacy' is tangentially related to checking phones, but the answer was not fully formed.",
+        "elaboration": "None. The candidate failed the 'Extend' rule entirely, speaking for less than 10% of the allotted time."
+      }
+    },
+    "metadata": {
+      "discussion_length": 3,
+      "has_individual_response": true
+    },
+    "timestamp": {
+      "_seconds": 1777368617,
+      "_nanoseconds": 688000000
+    }
+  }
+}

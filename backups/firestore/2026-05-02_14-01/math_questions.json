@@ -1,0 +1,948 @@
+{
+  "math_alg_quadratics_q01": {
+    "question": "Solve the quadratic equation $x^2 - 5x + 6 = 0$.",
+    "solution_steps_zh": [
+      "將二次式因式分解：$(x - 2)(x - 3) = 0$。",
+      "將每個因式設為零：$x - 2 = 0$ 或 $x - 3 = 0$。",
+      "解為：$x = 2$ 或 $x = 3$。"
+    ],
+    "level": 3,
+    "subject": "maths",
+    "correct_answer": "x = 2 or x = 3",
+    "marks": 2,
+    "type": "short_answer",
+    "createdAt": {
+      "_seconds": 1775200824,
+      "_nanoseconds": 514000000
+    },
+    "topicId": "math_alg_quadratics",
+    "answer": "x = 2 or x = 3",
+    "solution_steps": [
+      "Factorize the quadratic expression: $(x - 2)(x - 3) = 0$.",
+      "Set each factor to zero: $x - 2 = 0$ or $x - 3 = 0$.",
+      "Solutions: $x = 2$ or $x = 3$."
+    ],
+    "id": "quad_eq_01",
+    "question_zh": "解二次方程 $x^2 - 5x + 6 = 0$。",
+    "updatedAt": {
+      "_seconds": 1775200824,
+      "_nanoseconds": 514000000
+    }
+  },
+  "math_alg_quadratics_q02": {
+    "question": "Find the discriminant of $x^2 - 4x + 4 = 0$ and state the nature of its roots.",
+    "solution_steps_zh": [
+      "辨識 $a=1, b=-4, c=4$。",
+      "判別式 $\\Delta = b^2 - 4ac = (-4)^2 - 4(1)(4) = 16 - 16 = 0$。",
+      "由於 $\\Delta = 0$，該方程有一個實根（等實根）。"
+    ],
+    "level": 3,
+    "subject": "maths",
+    "correct_answer": "$\\Delta = 0$, equal real roots",
+    "marks": 2,
+    "type": "short_answer",
+    "createdAt": {
+      "_seconds": 1775200824,
+      "_nanoseconds": 514000000
+    },
+    "topicId": "math_alg_quadratics",
+    "answer": "$\\Delta = 0$, equal real roots",
+    "solution_steps": [
+      "Identify $a=1, b=-4, c=4$.",
+      "Discriminant $\\Delta = b^2 - 4ac = (-4)^2 - 4(1)(4) = 16 - 16 = 0$.",
+      "Since $\\Delta = 0$, the equation has one real root (equal real roots)."
+    ],
+    "id": "quad_eq_02",
+    "question_zh": "求 $x^2 - 4x + 4 = 0$ 的判別式，並寫出其根的性質。",
+    "updatedAt": {
+      "_seconds": 1775200824,
+      "_nanoseconds": 514000000
+    }
+  },
+  "math_alg_quadratics_q03": {
+    "question": "Use the quadratic formula to solve $x^2 + 2x - 1 = 0$. (Leave answer in surd form)",
+    "solution_steps_zh": [
+      "二次公式：$x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}$。",
+      "$x = \\frac{-2 \\pm \\sqrt{2^2 - 4(1)(-1)}}{2(1)} = \\frac{-2 \\pm \\sqrt{4 + 4}}{2}$。",
+      "$x = \\frac{-2 \\pm \\sqrt{8}}{2} = \\frac{-2 \\pm 2\\sqrt{2}}{2} = -1 \\pm \\sqrt{2}$。"
+    ],
+    "level": 3,
+    "subject": "maths",
+    "correct_answer": "x = -1 \\pm \\sqrt{2}",
+    "marks": 2,
+    "type": "short_answer",
+    "createdAt": {
+      "_seconds": 1775200824,
+      "_nanoseconds": 514000000
+    },
+    "topicId": "math_alg_quadratics",
+    "answer": "x = -1 \\pm \\sqrt{2}",
+    "solution_steps": [
+      "Quadratic formula: $x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}$.",
+      "$x = \\frac{-2 \\pm \\sqrt{2^2 - 4(1)(-1)}}{2(1)} = \\frac{-2 \\pm \\sqrt{4 + 4}}{2}$.",
+      "$x = \\frac{-2 \\pm \\sqrt{8}}{2} = \\frac{-2 \\pm 2\\sqrt{2}}{2} = -1 \\pm \\sqrt{2}$."
+    ],
+    "id": "quad_eq_03",
+    "question_zh": "利用二次公式解 $x^2 + 2x - 1 = 0$。（答案以根式表示）",
+    "updatedAt": {
+      "_seconds": 1775200824,
+      "_nanoseconds": 514000000
+    }
+  },
+  "math_alg_quadratics_q04": {
+    "question": "For the equation $2x^2 + 7x - 4 = 0$, find the sum of roots and product of roots.",
+    "solution_steps_zh": [
+      "兩根之和 $\\alpha + \\beta = -b/a = -7/2 = -3.5$。",
+      "兩根之積 $\\alpha\\beta = c/a = -4/2 = -2$。"
+    ],
+    "level": 3,
+    "subject": "maths",
+    "correct_answer": "Sum = -3.5, Product = -2",
+    "marks": 2,
+    "type": "short_answer",
+    "createdAt": {
+      "_seconds": 1775200824,
+      "_nanoseconds": 514000000
+    },
+    "topicId": "math_alg_quadratics",
+    "answer": "Sum = -3.5, Product = -2",
+    "solution_steps": [
+      "Sum of roots $\\alpha + \\beta = -b/a = -7/2 = -3.5$.",
+      "Product of roots $\\alpha\\beta = c/a = -4/2 = -2$."
+    ],
+    "id": "quad_eq_04",
+    "question_zh": "對於方程 $2x^2 + 7x - 4 = 0$，求其兩根之和及兩根之積。",
+    "updatedAt": {
+      "_seconds": 1775200824,
+      "_nanoseconds": 514000000
+    }
+  },
+  "math_alg_quadratics_q05": {
+    "question": "Rearrange $x(x - 3) = 10$ into the form $ax^2 + bx + c = 0$ and solve for $x$.",
+    "solution_steps_zh": [
+      "展開左方：$x^2 - 3x = 10$。",
+      "重整：$x^2 - 3x - 10 = 0$。",
+      "因式分解：$(x - 5)(x + 2) = 0$。",
+      "解為：$x = 5$ 或 $x = -2$。"
+    ],
+    "level": 3,
+    "subject": "maths",
+    "correct_answer": "x = 5 or x = -2",
+    "marks": 2,
+    "type": "short_answer",
+    "createdAt": {
+      "_seconds": 1775200824,
+      "_nanoseconds": 514000000
+    },
+    "topicId": "math_alg_quadratics",
+    "answer": "x = 5 or x = -2",
+    "solution_steps": [
+      "Expand LHS: $x^2 - 3x = 10$.",
+      "Rearrange: $x^2 - 3x - 10 = 0$.",
+      "Factorize: $(x - 5)(x + 2) = 0$.",
+      "Solutions: $x = 5$ or $x = -2$."
+    ],
+    "id": "quad_eq_05",
+    "question_zh": "將 $x(x - 3) = 10$ 重整為 $ax^2 + bx + c = 0$ 的形式，並求 $x$。",
+    "updatedAt": {
+      "_seconds": 1775200824,
+      "_nanoseconds": 514000000
+    }
+  },
+  "math_alg_quadratics_q06": {
+    "question": "Express $y = x^2 - 6x + 5$ in vertex form $y = (x - h)^2 + k$.",
+    "solution_steps_zh": [
+      "$y = (x^2 - 6x + 9) - 9 + 5$。",
+      "$y = (x - 3)^2 - 4$。"
+    ],
+    "level": 4,
+    "subject": "maths",
+    "correct_answer": "y = (x - 3)^2 - 4",
+    "marks": 3,
+    "type": "short_answer",
+    "createdAt": {
+      "_seconds": 1775200824,
+      "_nanoseconds": 514000000
+    },
+    "topicId": "math_alg_quadratics",
+    "answer": "y = (x - 3)^2 - 4",
+    "solution_steps": [
+      "$y = (x^2 - 6x + 9) - 9 + 5$.",
+      "$y = (x - 3)^2 - 4$."
+    ],
+    "id": "quad_eq_06",
+    "question_zh": "將 $y = x^2 - 6x + 5$ 表示成頂點式 $y = (x - h)^2 + k$。",
+    "updatedAt": {
+      "_seconds": 1775200824,
+      "_nanoseconds": 514000000
+    }
+  },
+  "math_alg_quadratics_q07": {
+    "question": "The equation $x^2 + kx + 9 = 0$ has equal real roots. Find the possible values of $k$.",
+    "solution_steps_zh": [
+      "對於等實根，$\\Delta = 0$。",
+      "$k^2 - 4(1)(9) = 0$。",
+      "$k^2 - 36 = 0 \\Rightarrow k^2 = 36$。",
+      "$k = 6$ 或 $k = -6$。"
+    ],
+    "level": 4,
+    "subject": "maths",
+    "correct_answer": "k = 6 or k = -6",
+    "marks": 3,
+    "type": "short_answer",
+    "createdAt": {
+      "_seconds": 1775200824,
+      "_nanoseconds": 514000000
+    },
+    "topicId": "math_alg_quadratics",
+    "answer": "k = 6 or k = -6",
+    "solution_steps": [
+      "For equal roots, $\\Delta = 0$.",
+      "$k^2 - 4(1)(9) = 0$.",
+      "$k^2 - 36 = 0 \\Rightarrow k^2 = 36$.",
+      "$k = 6$ or $k = -6$."
+    ],
+    "id": "quad_eq_07",
+    "question_zh": "方程 $x^2 + kx + 9 = 0$ 有等實根。求 $k$ 的可能值。",
+    "updatedAt": {
+      "_seconds": 1775200824,
+      "_nanoseconds": 514000000
+    }
+  },
+  "math_alg_quadratics_q08": {
+    "question": "Find the maximum value of the function $f(x) = -2(x + 1)^2 + 7$.",
+    "solution_steps_zh": [
+      "該函數為頂點式 $a(x-h)^2 + k$，其中 $a = -2 < 0$。",
+      "極大值發生在頂點 $(h, k) = (-1, 7)$ 處。",
+      "極大值為 7。"
+    ],
+    "level": 4,
+    "subject": "maths",
+    "correct_answer": "7",
+    "marks": 3,
+    "type": "short_answer",
+    "createdAt": {
+      "_seconds": 1775200824,
+      "_nanoseconds": 514000000
+    },
+    "topicId": "math_alg_quadratics",
+    "answer": "7",
+    "solution_steps": [
+      "The function is in vertex form $a(x-h)^2 + k$ with $a = -2 < 0$.",
+      "The maximum value occurs at the vertex $(h, k) = (-1, 7)$.",
+      "Maximum value is 7."
+    ],
+    "id": "quad_eq_08",
+    "question_zh": "求函數 $f(x) = -2(x + 1)^2 + 7$ 的極大值。",
+    "updatedAt": {
+      "_seconds": 1775200824,
+      "_nanoseconds": 514000000
+    }
+  },
+  "math_alg_quadratics_q09": {
+    "question": "Form a quadratic equation with integer coefficients whose roots are $1/2$ and $-3$.",
+    "solution_steps_zh": [
+      "兩根之和 $= 1/2 + (-3) = -2.5$。",
+      "兩根之積 $= (1/2)(-3) = -1.5$。",
+      "方程：$x^2 - (和)x + (積) = 0$。",
+      "$x^2 + 2.5x - 1.5 = 0$。",
+      "乘以 2 以獲得整數係數：$2x^2 + 5x - 3 = 0$。"
+    ],
+    "level": 4,
+    "subject": "maths",
+    "correct_answer": "2x^2 + 5x - 3 = 0",
+    "marks": 3,
+    "type": "short_answer",
+    "createdAt": {
+      "_seconds": 1775200824,
+      "_nanoseconds": 514000000
+    },
+    "topicId": "math_alg_quadratics",
+    "answer": "2x^2 + 5x - 3 = 0",
+    "solution_steps": [
+      "Sum of roots $= 1/2 + (-3) = -2.5$.",
+      "Product of roots $= (1/2)(-3) = -1.5$.",
+      "Equation: $x^2 - (sum)x + (product) = 0$.",
+      "$x^2 + 2.5x - 1.5 = 0$.",
+      "Multiply by 2 for integer coefficients: $2x^2 + 5x - 3 = 0$."
+    ],
+    "id": "quad_eq_09",
+    "question_zh": "建立一個以 $1/2$ 及 $-3$ 為根且係數為整數的二次方程。",
+    "updatedAt": {
+      "_seconds": 1775200824,
+      "_nanoseconds": 514000000
+    }
+  },
+  "math_alg_quadratics_q10": {
+    "question": "The graph of $y = x^2$ is shifted 2 units to the right and 3 units downwards. Find the new equation.",
+    "solution_steps_zh": [
+      "向右平移 2 單位：將 $x$ 替換為 $x - 2$。結果：$y = (x - 2)^2$。",
+      "向下平移 3 單位：從表達式中減去 3。結果：$y = (x - 2)^2 - 3$。"
+    ],
+    "level": 4,
+    "subject": "maths",
+    "correct_answer": "y = (x - 2)^2 - 3",
+    "marks": 3,
+    "type": "short_answer",
+    "createdAt": {
+      "_seconds": 1775200824,
+      "_nanoseconds": 514000000
+    },
+    "topicId": "math_alg_quadratics",
+    "answer": "y = (x - 2)^2 - 3",
+    "solution_steps": [
+      "Shift right by 2: replace $x$ with $x - 2$. Result: $y = (x - 2)^2$.",
+      "Shift down by 3: subtract 3 from the expression. Result: $y = (x - 2)^2 - 3$."
+    ],
+    "id": "quad_eq_10",
+    "question_zh": "將 $y = x^2$ 的圖像向右平移 2 單位，再向下平移 3 單位。求新方程。",
+    "updatedAt": {
+      "_seconds": 1775200824,
+      "_nanoseconds": 514000000
+    }
+  },
+  "math_alg_quadratics_q11": {
+    "question": "Find the range of values of $k$ such that $x^2 + 6x + k = 0$ has two distinct real roots.",
+    "solution_steps_zh": [
+      "對於兩個不相等的實根，$\\Delta > 0$。",
+      "$6^2 - 4(1)(k) > 0$。",
+      "$36 - 4k > 0 \\Rightarrow 36 > 4k$。",
+      "$k < 9$。"
+    ],
+    "level": 5,
+    "subject": "maths",
+    "correct_answer": "k < 9",
+    "marks": 4,
+    "type": "short_answer",
+    "createdAt": {
+      "_seconds": 1775200824,
+      "_nanoseconds": 514000000
+    },
+    "topicId": "math_alg_quadratics",
+    "answer": "k < 9",
+    "solution_steps": [
+      "For two distinct real roots, $\\Delta > 0$.",
+      "$6^2 - 4(1)(k) > 0$.",
+      "$36 - 4k > 0 \\Rightarrow 36 > 4k$.",
+      "$k < 9$."
+    ],
+    "id": "quad_eq_11",
+    "question_zh": "求 $k$ 的取值範圍，使得 $x^2 + 6x + k = 0$ 有兩個不相等的實根。",
+    "updatedAt": {
+      "_seconds": 1775200824,
+      "_nanoseconds": 514000000
+    }
+  },
+  "math_alg_quadratics_q12": {
+    "question": "Find the coordinates of the points of intersection of the line $y = x + 1$ and the curve $y = x^2 - x - 2$.",
+    "solution_steps_zh": [
+      "設表達式相等：$x^2 - x - 2 = x + 1$。",
+      "重整為二次方程：$x^2 - 2x - 3 = 0$。",
+      "因式分解：$(x - 3)(x + 1) = 0 \\Rightarrow x = 3$ 或 $x = -1$。",
+      "利用直線 $y = x + 1$ 求相應的 $y$ 值：",
+      "當 $x=3$ 時，$y=4$。交點為 $(3, 4)$。",
+      "當 $x=-1$ 時，$y=0$。交點為 $(-1, 0)$。"
+    ],
+    "level": 5,
+    "subject": "maths",
+    "correct_answer": "(-1, 0) and (3, 4)",
+    "marks": 4,
+    "type": "short_answer",
+    "createdAt": {
+      "_seconds": 1775200824,
+      "_nanoseconds": 514000000
+    },
+    "topicId": "math_alg_quadratics",
+    "answer": "(-1, 0) and (3, 4)",
+    "solution_steps": [
+      "Equate the expressions: $x^2 - x - 2 = x + 1$.",
+      "Rearrange to quadratic: $x^2 - 2x - 3 = 0$.",
+      "Factorize: $(x - 3)(x + 1) = 0 \\Rightarrow x = 3$ or $x = -1$.",
+      "Find corresponding $y$ values using line $y = x + 1$:",
+      "For $x=3$, $y=4$. Intersection $(3, 4)$.",
+      "For $x=-1$, $y=0$. Intersection $(-1, 0)$."
+    ],
+    "id": "quad_eq_12",
+    "question_zh": "求直線 $y = x + 1$ 與曲線 $y = x^2 - x - 2$ 的交點坐標。",
+    "updatedAt": {
+      "_seconds": 1775200824,
+      "_nanoseconds": 514000000
+    }
+  },
+  "math_alg_quadratics_q13": {
+    "question": "Find the vertex and the axis of symmetry of $y = 2x^2 + 8x + 3$.",
+    "solution_steps_zh": [
+      "頂點的 x 坐標 $h = -b/(2a) = -8/(2 \times 2) = -2$。",
+      "y 坐標 $k = 2(-2)^2 + 8(-2) + 3 = 8 - 16 + 3 = -5$。",
+      "頂點為 $(-2, -5)$。",
+      "對稱軸為 $x = h$，即 $x = -2$。"
+    ],
+    "level": 5,
+    "subject": "maths",
+    "correct_answer": "Vertex: (-2, -5), Axis: x = -2",
+    "marks": 4,
+    "type": "short_answer",
+    "createdAt": {
+      "_seconds": 1775200824,
+      "_nanoseconds": 514000000
+    },
+    "topicId": "math_alg_quadratics",
+    "answer": "Vertex: (-2, -5), Axis: x = -2",
+    "solution_steps": [
+      "x-coordinate of vertex $h = -b/(2a) = -8/(2 \times 2) = -2$.",
+      "y-coordinate $k = 2(-2)^2 + 8(-2) + 3 = 8 - 16 + 3 = -5$.",
+      "Vertex is $(-2, -5)$.",
+      "Axis of symmetry is $x = h$, so $x = -2$."
+    ],
+    "id": "quad_eq_13",
+    "question_zh": "求 $y = 2x^2 + 8x + 3$ 的頂點及對稱軸。",
+    "updatedAt": {
+      "_seconds": 1775200824,
+      "_nanoseconds": 514000000
+    }
+  },
+  "math_alg_quadratics_q14": {
+    "question": "If $\\alpha$ and $\\beta$ are the roots of $x^2 - 4x + 1 = 0$, evaluate $\\alpha^2 + \\beta^2$.",
+    "solution_steps_zh": [
+      "根據方程，$\\alpha + \\beta = 4$ 且 $\\alpha\\beta = 1$。",
+      "$\\alpha^2 + \\beta^2 = (\\alpha + \\beta)^2 - 2\\alpha\\beta$。",
+      "$\\alpha^2 + \\beta^2 = 4^2 - 2(1) = 16 - 2 = 14$。"
+    ],
+    "level": 5,
+    "subject": "maths",
+    "correct_answer": "14",
+    "marks": 4,
+    "type": "short_answer",
+    "createdAt": {
+      "_seconds": 1775200824,
+      "_nanoseconds": 514000000
+    },
+    "topicId": "math_alg_quadratics",
+    "answer": "14",
+    "solution_steps": [
+      "From equation, $\\alpha + \\beta = 4$ and $\\alpha\\beta = 1$.",
+      "$\\alpha^2 + \\beta^2 = (\\alpha + \\beta)^2 - 2\\alpha\\beta$.",
+      "$\\alpha^2 + \\beta^2 = 4^2 - 2(1) = 16 - 2 = 14$."
+    ],
+    "id": "quad_eq_14",
+    "question_zh": "若 $\\alpha$ 及 $\\beta$ 為 $x^2 - 4x + 1 = 0$ 的根，求 $\\alpha^2 + \\beta^2$ 的值。",
+    "updatedAt": {
+      "_seconds": 1775200824,
+      "_nanoseconds": 514000000
+    }
+  },
+  "math_alg_quadratics_q15": {
+    "question": "The roots of $x^2 - 2x - 2 = 0$ are $\\alpha$ and $\\beta$. Find a quadratic equation whose roots are $\\alpha+1$ and $\\beta+1$.",
+    "solution_steps_zh": [
+      "原方程：$\\alpha + \\beta = 2, \\alpha\\beta = -2$。",
+      "新和 $S = (\\alpha+1) + (\\beta+1) = (\\alpha + \\beta) + 2 = 2 + 2 = 4$。",
+      "新積 $P = (\\alpha+1)(\\beta+1) = \\alpha\\beta + (\\alpha + \\beta) + 1 = -2 + 2 + 1 = 1$。",
+      "新方程：$x^2 - Sx + P = 0 \\Rightarrow x^2 - 4x + 1 = 0$。"
+    ],
+    "level": 5,
+    "subject": "maths",
+    "correct_answer": "x^2 - 4x + 1 = 0",
+    "marks": 4,
+    "type": "short_answer",
+    "createdAt": {
+      "_seconds": 1775200824,
+      "_nanoseconds": 514000000
+    },
+    "topicId": "math_alg_quadratics",
+    "answer": "x^2 - 4x + 1 = 0",
+    "solution_steps": [
+      "Original: $\\alpha + \\beta = 2, \\alpha\\beta = -2$.",
+      "New sum $S = (\\alpha+1) + (\\beta+1) = (\\alpha + \\beta) + 2 = 2 + 2 = 4$.",
+      "New product $P = (\\alpha+1)(\\beta+1) = \\alpha\\beta + (\\alpha + \\beta) + 1 = -2 + 2 + 1 = 1$.",
+      "New equation: $x^2 - Sx + P = 0 \\Rightarrow x^2 - 4x + 1 = 0$."
+    ],
+    "id": "quad_eq_15",
+    "question_zh": "$x^2 - 2x - 2 = 0$ 的根為 $\\alpha$ 及 $\\beta$。求一個以 $\\alpha+1$ 及 $\\beta+1$ 為根的二次方程。",
+    "updatedAt": {
+      "_seconds": 1775200824,
+      "_nanoseconds": 514000000
+    }
+  },
+  "math_alg_quadratics_q16": {
+    "question": "Find the range of $k$ such that the line $y = kx$ does not intersect the curve $y = x^2 + 1$.",
+    "solution_steps_zh": [
+      "設相等：$x^2 + 1 = kx \\Rightarrow x^2 - kx + 1 = 0$。",
+      "對於不相交狀況，$\\Delta < 0$。",
+      "$(-k)^2 - 4(1)(1) < 0 \\Rightarrow k^2 - 4 < 0$。",
+      "$k^2 < 4 \\Rightarrow -2 < k < 2$。"
+    ],
+    "level": 5,
+    "subject": "maths",
+    "correct_answer": "-2 < k < 2",
+    "marks": 4,
+    "type": "short_answer",
+    "createdAt": {
+      "_seconds": 1775200824,
+      "_nanoseconds": 514000000
+    },
+    "topicId": "math_alg_quadratics",
+    "answer": "-2 < k < 2",
+    "solution_steps": [
+      "Equate: $x^2 + 1 = kx \\Rightarrow x^2 - kx + 1 = 0$.",
+      "For no intersection, $\\Delta < 0$.",
+      "$(-k)^2 - 4(1)(1) < 0 \\Rightarrow k^2 - 4 < 0$.",
+      "$k^2 < 4 \\Rightarrow -2 < k < 2$."
+    ],
+    "id": "quad_eq_16",
+    "question_zh": "求 $k$ 的取值範圍，使得直線 $y = kx$ 與曲線 $y = x^2 + 1$ 不相交。",
+    "updatedAt": {
+      "_seconds": 1775200824,
+      "_nanoseconds": 514000000
+    }
+  },
+  "math_alg_quadratics_q17": {
+    "question": "The line $y = 2x + k$ is tangent to the curve $y = x^2 - 4x$. Find the value of $k$.",
+    "solution_steps_zh": [
+      "設表達式相等：$x^2 - 4x = 2x + k \\Rightarrow x^2 - 6x - k = 0$。",
+      "由於是相切，$\\Delta = 0$。",
+      "$(-6)^2 - 4(1)(-k) = 0$。",
+      "$36 + 4k = 0 \\Rightarrow 4k = -36 \\Rightarrow k = -9$。"
+    ],
+    "level": 5,
+    "subject": "maths",
+    "correct_answer": "-9",
+    "marks": 4,
+    "type": "short_answer",
+    "createdAt": {
+      "_seconds": 1775200824,
+      "_nanoseconds": 514000000
+    },
+    "topicId": "math_alg_quadratics",
+    "answer": "-9",
+    "solution_steps": [
+      "Equate expressions: $x^2 - 4x = 2x + k \\Rightarrow x^2 - 6x - k = 0$.",
+      "Since it is tangent, $\\Delta = 0$.",
+      "$(-6)^2 - 4(1)(-k) = 0$.",
+      "$36 + 4k = 0 \\Rightarrow 4k = -36 \\Rightarrow k = -9$."
+    ],
+    "id": "quad_eq_17",
+    "question_zh": "直線 $y = 2x + k$ 是曲線 $y = x^2 - 4x$ 的切線。求 $k$ 的值。",
+    "updatedAt": {
+      "_seconds": 1775200824,
+      "_nanoseconds": 514000000
+    }
+  },
+  "math_alg_quadratics_q18": {
+    "question": "Find the range of the function $f(x) = 2x^2 - 4x + 5$ for all real values of $x$.",
+    "solution_steps_zh": [
+      "求頂點：$x = -(-4)/(2 \times 2) = 1$。",
+      "極小值 $= f(1) = 2(1)^2 - 4(1) + 5 = 2 - 4 + 5 = 3$。",
+      "由於 $a = 2 > 0$，拋物線向上開口。",
+      "值域：$f(x) \\ge 3$。"
+    ],
+    "level": 5,
+    "subject": "maths",
+    "correct_answer": "f(x) \\ge 3",
+    "marks": 4,
+    "type": "short_answer",
+    "createdAt": {
+      "_seconds": 1775200824,
+      "_nanoseconds": 514000000
+    },
+    "topicId": "math_alg_quadratics",
+    "answer": "f(x) \\ge 3",
+    "solution_steps": [
+      "Find the vertex: $x = -(-4)/(2 \times 2) = 1$.",
+      "Minimum value $= f(1) = 2(1)^2 - 4(1) + 5 = 2 - 4 + 5 = 3$.",
+      "Since $a = 2 > 0$, the parabola opens upwards.",
+      "Range: $f(x) \\ge 3$."
+    ],
+    "id": "quad_eq_18",
+    "question_zh": "求函數 $f(x) = 2x^2 - 4x + 5$ 對於所有 $x$ 實數值的對應值範圍（值域）。",
+    "updatedAt": {
+      "_seconds": 1775200824,
+      "_nanoseconds": 514000000
+    }
+  },
+  "math_alg_quadratics_q19": {
+    "question": "Find the x-intercepts and y-intercept of the curve $y = x^2 - 2x - 8$.",
+    "solution_steps_zh": [
+      "y 軸截距：設 $x=0$，$y = -8 \\Rightarrow (0, -8)$。",
+      "x 軸截距：設 $y=0$，$x^2 - 2x - 8 = 0$。",
+      "因式分解：$(x - 4)(x + 2) = 0 \\Rightarrow x = 4$ 或 $x = -2$。",
+      "截距為 $(4, 0)$ 及 $(-2, 0)$。"
+    ],
+    "level": 5,
+    "subject": "maths",
+    "correct_answer": "x: (4,0), (-2,0); y: (0,-8)",
+    "marks": 4,
+    "type": "short_answer",
+    "createdAt": {
+      "_seconds": 1775200824,
+      "_nanoseconds": 514000000
+    },
+    "topicId": "math_alg_quadratics",
+    "answer": "x: (4,0), (-2,0); y: (0,-8)",
+    "solution_steps": [
+      "y-intercept: set $x=0$, $y = -8 \\Rightarrow (0, -8)$.",
+      "x-intercepts: set $y=0$, $x^2 - 2x - 8 = 0$.",
+      "Factorize: $(x - 4)(x + 2) = 0 \\Rightarrow x = 4$ or $x = -2$.",
+      "Intercepts are $(4, 0)$ and $(-2, 0)$."
+    ],
+    "id": "quad_eq_19",
+    "question_zh": "求曲線 $y = x^2 - 2x - 8$ 的 x 軸截距及 y 軸截距。",
+    "updatedAt": {
+      "_seconds": 1775200824,
+      "_nanoseconds": 514000000
+    }
+  },
+  "math_alg_quadratics_q20": {
+    "question": "The length of a rectangle is 3 cm more than its width. If the area is 40 cm$^2$, find its dimensions.",
+    "solution_steps_zh": [
+      "設寬為 $w$，則長為 $w + 3$。",
+      "面積 $= w(w + 3) = 40$。",
+      "$w^2 + 3w - 40 = 0$。",
+      "因式分解：$(w + 8)(w - 5) = 0 \\Rightarrow w = 5$ (取正值)。",
+      "寬為 5 cm，長為 $5 + 3 = 8$ cm。"
+    ],
+    "level": 5,
+    "subject": "maths",
+    "correct_answer": "Length = 8 cm, Width = 5 cm",
+    "marks": 4,
+    "type": "short_answer",
+    "createdAt": {
+      "_seconds": 1775200824,
+      "_nanoseconds": 514000000
+    },
+    "topicId": "math_alg_quadratics",
+    "answer": "Length = 8 cm, Width = 5 cm",
+    "solution_steps": [
+      "Let width be $w$, then length is $w + 3$.",
+      "Area $= w(w + 3) = 40$.",
+      "$w^2 + 3w - 40 = 0$.",
+      "Factorize: $(w + 8)(w - 5) = 0 \\Rightarrow w = 5$ ($w > 0$).",
+      "Width $= 5$ cm, Length $= 5 + 3 = 8$ cm."
+    ],
+    "id": "quad_eq_20",
+    "question_zh": "長方形的長比寬多 3 cm。若面積為 40 cm$^2$，求其長寬。",
+    "updatedAt": {
+      "_seconds": 1775200824,
+      "_nanoseconds": 514000000
+    }
+  },
+  "math_alg_quadratics_q21": {
+    "question": "If $\\alpha$ and $\\beta$ are the roots of $2x^2 - 5x + 1 = 0$, evaluate $\\frac{1}{\\alpha^2} + \\frac{1}{\\beta^2}$.",
+    "solution_steps_zh": [
+      "$\\alpha + \\beta = 2.5$，$\\alpha\\beta = 0.5$。",
+      "$\\frac{1}{\\alpha^2} + \\frac{1}{\\beta^2} = \\frac{\\alpha^2 + \\beta^2}{(\\alpha\\beta)^2}$。",
+      "$\\alpha^2 + \\beta^2 = (2.5)^2 - 2(0.5) = 6.25 - 1 = 5.25$。",
+      "結果 $= \\frac{5.25}{0.5^2} = \\frac{5.25}{0.25} = 21$。"
+    ],
+    "level": 7,
+    "subject": "maths",
+    "correct_answer": "21",
+    "marks": 4,
+    "type": "short_answer",
+    "createdAt": {
+      "_seconds": 1775200824,
+      "_nanoseconds": 514000000
+    },
+    "topicId": "math_alg_quadratics",
+    "answer": "21",
+    "solution_steps": [
+      "$\\alpha + \\beta = 2.5$, $\\alpha\\beta = 0.5$.",
+      "$\\frac{1}{\\alpha^2} + \\frac{1}{\\beta^2} = \\frac{\\alpha^2 + \\beta^2}{(\\alpha\\beta)^2}$.",
+      "$\\alpha^2 + \\beta^2 = (2.5)^2 - 2(0.5) = 6.25 - 1 = 5.25$.",
+      "Result $= \\frac{5.25}{0.5^2} = \\frac{5.25}{0.25} = 21$."
+    ],
+    "id": "quad_eq_21",
+    "question_zh": "若 $\\alpha$ 及 $\\beta$ 為 $2x^2 - 5x + 1 = 0$ 的根，求 $\\frac{1}{\\alpha^2} + \\frac{1}{\\beta^2}$ 的值。",
+    "updatedAt": {
+      "_seconds": 1775200824,
+      "_nanoseconds": 514000000
+    }
+  },
+  "math_alg_quadratics_q22": {
+    "question": "Given that $\\alpha$ is a root of $x^2 - 4x - 7 = 0$, find the value of $\\alpha^2 - 4\\alpha + 10$.",
+    "solution_steps_zh": [
+      "由於 $\\alpha$ 是根，它滿足方程：$\\alpha^2 - 4\\alpha - 7 = 0$。",
+      "重整得 $\\alpha^2 - 4\\alpha = 7$。",
+      "將此代入表達式中：$7 + 10 = 17$。"
+    ],
+    "level": 7,
+    "subject": "maths",
+    "correct_answer": "17",
+    "marks": 4,
+    "type": "short_answer",
+    "createdAt": {
+      "_seconds": 1775200824,
+      "_nanoseconds": 514000000
+    },
+    "topicId": "math_alg_quadratics",
+    "answer": "17",
+    "solution_steps": [
+      "Since $\\alpha$ is a root, it satisfies the equation: $\\alpha^2 - 4\\alpha - 7 = 0$.",
+      "Rearranging gives $\\alpha^2 - 4\\alpha = 7$.",
+      "Substitute this into the expression: $7 + 10 = 17$."
+    ],
+    "id": "quad_eq_22",
+    "question_zh": "已知 $\\alpha$ 為 $x^2 - 4x - 7 = 0$ 的根，求 $\\alpha^2 - 4\\alpha + 10$ 的值。",
+    "updatedAt": {
+      "_seconds": 1775200824,
+      "_nanoseconds": 514000000
+    }
+  },
+  "math_alg_quadratics_q23": {
+    "question": "The line $y = x + k$ intersects the parabola $y = x^2 - 3x + 5$ at two distinct points. Find the range of $k$.",
+    "solution_steps_zh": [
+      "設相等：$x^2 - 3x + 5 = x + k \\Rightarrow x^2 - 4x + (5 - k) = 0$。",
+      "對於兩個不相等的點，$\\Delta > 0$。",
+      "$(-4)^2 - 4(1)(5 - k) > 0$。",
+      "$16 - 20 + 4k > 0$。",
+      "$4k - 4 > 0 \\Rightarrow 4k > 4 \\Rightarrow k > 1$。"
+    ],
+    "level": 7,
+    "subject": "maths",
+    "correct_answer": "k > 1",
+    "marks": 4,
+    "type": "short_answer",
+    "createdAt": {
+      "_seconds": 1775200824,
+      "_nanoseconds": 514000000
+    },
+    "topicId": "math_alg_quadratics",
+    "answer": "k > 1",
+    "solution_steps": [
+      "Equate: $x^2 - 3x + 5 = x + k \\Rightarrow x^2 - 4x + (5 - k) = 0$.",
+      "For two distinct points, $\\Delta > 0$.",
+      "$(-4)^2 - 4(1)(5 - k) > 0$.",
+      "$16 - 20 + 4k > 0$.",
+      "$4k - 4 > 0 \\Rightarrow 4k > 4 \\Rightarrow k > 1$."
+    ],
+    "id": "quad_eq_23",
+    "question_zh": "直線 $y = x + k$ 與拋物線 $y = x^2 - 3x + 5$ 相交於兩個不相等的點。求 $k$ 的範圍。",
+    "updatedAt": {
+      "_seconds": 1775200824,
+      "_nanoseconds": 514000000
+    }
+  },
+  "math_alg_quadratics_q24": {
+    "question": "The roots of $x^2 - 4x + 2 = 0$ are $\\alpha$ and $\\beta$. Form a quadratic equation whose roots are $\\alpha^2$ and $\\beta^2$.",
+    "solution_steps_zh": [
+      "$\\alpha + \\beta = 4, \\alpha\\beta = 2$。",
+      "新和 $S = \\alpha^2 + \\beta^2 = (\\alpha + \\beta)^2 - 2\\alpha\\beta = 4^2 - 2(2) = 12$。",
+      "新積 $P = \\alpha^2\\beta^2 = (\\alpha\\beta)^2 = 2^2 = 4$。",
+      "新方程：$x^2 - Sx + P = 0 \\Rightarrow x^2 - 12x + 4 = 0$。"
+    ],
+    "level": 7,
+    "subject": "maths",
+    "correct_answer": "x^2 - 12x + 4 = 0",
+    "marks": 4,
+    "type": "short_answer",
+    "createdAt": {
+      "_seconds": 1775200824,
+      "_nanoseconds": 514000000
+    },
+    "topicId": "math_alg_quadratics",
+    "answer": "x^2 - 12x + 4 = 0",
+    "solution_steps": [
+      "$\\alpha + \\beta = 4, \\alpha\\beta = 2$.",
+      "New sum $S = \\alpha^2 + \\beta^2 = (\\alpha + \\beta)^2 - 2\\alpha\\beta = 4^2 - 2(2) = 12$.",
+      "New product $P = \\alpha^2\\beta^2 = (\\alpha\\beta)^2 = 2^2 = 4$.",
+      "New equation: $x^2 - Sx + P = 0 \\Rightarrow x^2 - 12x + 4 = 0$."
+    ],
+    "id": "quad_eq_24",
+    "question_zh": "$x^2 - 4x + 2 = 0$ 的根為 $\\alpha$ 及 $\\beta$。求一個以 $\\alpha^2$ 及 $\\beta^2$ 為根的二次方程。",
+    "updatedAt": {
+      "_seconds": 1775200824,
+      "_nanoseconds": 514000000
+    }
+  },
+  "math_alg_quadratics_q25": {
+    "question": "If $\\alpha$ is a root of $x^2 - 3x + 1 = 0$, evaluate $\\alpha^3 - 3\\alpha^2 + \\alpha + 5$.",
+    "solution_steps_zh": [
+      "將表達式分組因式分解：$\\alpha^3 - 3\\alpha^2 + \\alpha = \\alpha(\\alpha^2 - 3\\alpha + 1)$。",
+      "由於 $\\alpha$ 是根，$\\alpha^2 - 3\\alpha + 1 = 0$。",
+      "因此，$\\alpha(\\alpha^2 - 3\\alpha + 1) = \\alpha(0) = 0$。",
+      "該表達式簡化為 $0 + 5 = 5$。"
+    ],
+    "level": 7,
+    "subject": "maths",
+    "correct_answer": "5",
+    "marks": 4,
+    "type": "short_answer",
+    "createdAt": {
+      "_seconds": 1775200824,
+      "_nanoseconds": 514000000
+    },
+    "topicId": "math_alg_quadratics",
+    "answer": "5",
+    "solution_steps": [
+      "Factor the expression by grouping: $\\alpha^3 - 3\\alpha^2 + \\alpha = \\alpha(\\alpha^2 - 3\\alpha + 1)$.",
+      "Since $\\alpha$ is a root, $\\alpha^2 - 3\\alpha + 1 = 0$.",
+      "Thus, $\\alpha(\\alpha^2 - 3\\alpha + 1) = \\alpha(0) = 0$.",
+      "The expression simplifies to $0 + 5 = 5$."
+    ],
+    "id": "quad_eq_25",
+    "question_zh": "若 $\\alpha$ 為 $x^2 - 3x + 1 = 0$ 的根，求 $\\alpha^3 - 3\\alpha^2 + \\alpha + 5$ 的值。",
+    "updatedAt": {
+      "_seconds": 1775200824,
+      "_nanoseconds": 514000000
+    }
+  },
+  "math_alg_quadratics_q26": {
+    "question": "Find the range of $m$ such that the line $y = mx - 1$ is tangent to the curve $y = x^2$.",
+    "solution_steps_zh": [
+      "設相等：$x^2 = mx - 1 \\Rightarrow x^2 - mx + 1 = 0$。",
+      "對於相切狀況，$\\Delta = 0$。",
+      "$(-m)^2 - 4(1)(1) = 0 \\Rightarrow m^2 = 4$。",
+      "$m = \\pm 2$。"
+    ],
+    "level": 7,
+    "subject": "maths",
+    "correct_answer": "m = 2 or m = -2",
+    "marks": 4,
+    "type": "short_answer",
+    "createdAt": {
+      "_seconds": 1775200824,
+      "_nanoseconds": 514000000
+    },
+    "topicId": "math_alg_quadratics",
+    "answer": "m = 2 or m = -2",
+    "solution_steps": [
+      "Equate: $x^2 = mx - 1 \\Rightarrow x^2 - mx + 1 = 0$.",
+      "For tangency, $\\Delta = 0$.",
+      "$(-m)^2 - 4(1)(1) = 0 \\Rightarrow m^2 = 4$.",
+      "$m = \\pm 2$."
+    ],
+    "id": "quad_eq_26",
+    "question_zh": "求 $m$ 的取值範圍，使得直線 $y = mx - 1$ 正好與曲線 $y = x^2$ 相切。",
+    "updatedAt": {
+      "_seconds": 1775200824,
+      "_nanoseconds": 514000000
+    }
+  },
+  "math_alg_quadratics_q27": {
+    "question": "The graph of $y = x^2 + ax + b$ has its vertex at $(1, 2)$. Find $a$ and $b$.",
+    "solution_steps_zh": [
+      "頂點式：$y = (x - 1)^2 + 2$。",
+      "展開：$y = x^2 - 2x + 1 + 2 = x^2 - 2x + 3$。",
+      "與 $y = x^2 + ax + b$ 比較：$a = -2, b = 3$。"
+    ],
+    "level": 7,
+    "subject": "maths",
+    "correct_answer": "a = -2, b = 3",
+    "marks": 4,
+    "type": "short_answer",
+    "createdAt": {
+      "_seconds": 1775200824,
+      "_nanoseconds": 514000000
+    },
+    "topicId": "math_alg_quadratics",
+    "answer": "a = -2, b = 3",
+    "solution_steps": [
+      "Vertex form: $y = (x - 1)^2 + 2$.",
+      "Expand: $y = x^2 - 2x + 1 + 2 = x^2 - 2x + 3$.",
+      "Compare with $y = x^2 + ax + b$: $a = -2, b = 3$."
+    ],
+    "id": "quad_eq_27",
+    "question_zh": "已知 $y = x^2 + ax + b$ 的頂點在 $(1, 2)$。求 $a$ 及 $b$ 的值。",
+    "updatedAt": {
+      "_seconds": 1775200824,
+      "_nanoseconds": 514000000
+    }
+  },
+  "math_alg_quadratics_q28": {
+    "question": "The roots of $ax^2 + bx + c = 0$ are $\\alpha$ and $\\beta$. Show that the equation whose roots are $1/\\alpha$ and $1/\\beta$ is $cx^2 + bx + a = 0$.",
+    "solution_steps_zh": [
+      "新和 $S = 1/\\alpha + 1/\\beta = (\\alpha + \\beta)/(\\alpha\\beta) = (-b/a)/(c/a) = -b/c$。",
+      "新積 $P = (1/\\alpha)(1/\\beta) = 1/(\\alpha\\beta) = 1/(c/a) = a/c$。",
+      "方程：$x^2 - (-b/c)x + (a/c) = 0 \\Rightarrow x^2 + (b/c)x + (a/c) = 0$。",
+      "乘以 $c$：$cx^2 + bx + a = 0$。"
+    ],
+    "level": 7,
+    "subject": "maths",
+    "correct_answer": "Proved (cx^2 + bx + a = 0)",
+    "marks": 4,
+    "type": "short_answer",
+    "createdAt": {
+      "_seconds": 1775200824,
+      "_nanoseconds": 514000000
+    },
+    "topicId": "math_alg_quadratics",
+    "answer": "Proved (cx^2 + bx + a = 0)",
+    "solution_steps": [
+      "New sum $S = 1/\\alpha + 1/\\beta = (\\alpha + \\beta)/(\\alpha\\beta) = (-b/a)/(c/a) = -b/c$.",
+      "New product $P = (1/\\alpha)(1/\\beta) = 1/(\\alpha\\beta) = 1/(c/a) = a/c$.",
+      "Equation: $x^2 - (-b/c)x + (a/c) = 0 \\Rightarrow x^2 + (b/c)x + (a/c) = 0$.",
+      "Multiply by $c$: $cx^2 + bx + a = 0$."
+    ],
+    "id": "quad_eq_28",
+    "question_zh": "已知 $ax^2 + bx + c = 0$ 的根為 $\\alpha$ 及 $\\beta$。證明以 $1/\\alpha$ 及 $1/\\beta$ 為根的方程是 $cx^2 + bx + a = 0$。",
+    "updatedAt": {
+      "_seconds": 1775200824,
+      "_nanoseconds": 514000000
+    }
+  },
+  "math_alg_quadratics_q29": {
+    "question": "A gardener has 40 m of fencing to enclose a rectangular garden. What is the maximum area possible?",
+    "solution_steps_zh": [
+      "設邊長為 $x$ 及 $y$。周界 $2(x + y) = 40 \\Rightarrow x + y = 20 \\Rightarrow y = 20 - x$。",
+      "面積 $A = x(20 - x) = 20x - x^2$。",
+      "這是一個開口向下的拋物線，頂點在 $x = -20/(2 \\times -1) = 10$ 處。",
+      "最大面積 $= 20(10) - 10^2 = 200 - 100 = 100$ m$^2$。"
+    ],
+    "level": 7,
+    "subject": "maths",
+    "correct_answer": "100 m^2",
+    "marks": 4,
+    "type": "short_answer",
+    "createdAt": {
+      "_seconds": 1775200824,
+      "_nanoseconds": 514000000
+    },
+    "topicId": "math_alg_quadratics",
+    "answer": "100 m^2",
+    "solution_steps": [
+      "Let side lengths be $x$ and $y$. Perimeter $2(x + y) = 40 \\Rightarrow x + y = 20 \\Rightarrow y = 20 - x$.",
+      "Area $A = x(20 - x) = 20x - x^2$.",
+      "This is a downward parabola with vertex at $x = -20/(2 \\times -1) = 10$.",
+      "Maximum Area $= 20(10) - 10^2 = 200 - 100 = 100$ m$^2$."
+    ],
+    "id": "quad_eq_29",
+    "question_zh": "一名園丁有 40 m 的圍欄來圍合一個長方形花園。所能圍合的最大面積是多少？",
+    "updatedAt": {
+      "_seconds": 1775200824,
+      "_nanoseconds": 514000000
+    }
+  },
+  "math_alg_quadratics_q30": {
+    "question": "For what values of $k$ does the equation $x^2 + (k-2)x + (k+1) = 0$ have real roots?",
+    "solution_steps_zh": [
+      "對於實根，$\\Delta \\ge 0$。",
+      "$(k-2)^2 - 4(1)(k+1) \\ge 0$。",
+      "$k^2 - 4k + 4 - 4k - 4 \\ge 0$。",
+      "$k^2 - 8k \\ge 0 \\Rightarrow k(k - 8) \\ge 0$。",
+      "$k \\le 0$ 或 $k \\ge 8$。"
+    ],
+    "level": 7,
+    "subject": "maths",
+    "correct_answer": "k \\le 0 or k \\ge 8",
+    "marks": 4,
+    "type": "short_answer",
+    "createdAt": {
+      "_seconds": 1775200824,
+      "_nanoseconds": 514000000
+    },
+    "topicId": "math_alg_quadratics",
+    "answer": "k \\le 0 or k \\ge 8",
+    "solution_steps": [
+      "For real roots, $\\Delta \\ge 0$.",
+      "$(k-2)^2 - 4(1)(k+1) \\ge 0$.",
+      "$k^2 - 4k + 4 - 4k - 4 \\ge 0$.",
+      "$k^2 - 8k \\ge 0 \\Rightarrow k(k - 8) \\ge 0$.",
+      "$k \\le 0$ or $k \\ge 8$."
+    ],
+    "id": "quad_eq_30",
+    "question_zh": "當 $k$ 取何值時，方程 $x^2 + (k-2)x + (k+1) = 0$ 有實根？",
+    "updatedAt": {
+      "_seconds": 1775200824,
+      "_nanoseconds": 514000000
+    }
+  }
+}

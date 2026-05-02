@@ -1,0 +1,42 @@
+{
+    "id": "Speaking_AI_Mental_Health_2026",
+    "title": "Mental Health Apps vs. Human Therapy",
+    "source": "Adapted from a healthcare feature in the 'Hong Kong Medical Journal' (April 2026).",
+    "topic_description": "A new generation of 'AI Counselors'—sophisticated chatbots designed to provide 24/7 mental health support via apps like WhatsApp—is being introduced to secondary schools to combat the student mental health crisis. While supporters emphasize the accessibility and lack of stigma associated with AI, clinical experts worry that relying on algorithms for complex emotional support lacks the essential 'human touch' and may lead to dangerous oversights in crisis management.",
+    "discussion_points": [
+        "The benefits of AI in terms of convenience, privacy, and reducing the stigma of seeking help.",
+        "The potential risks of relying on an algorithm for diagnosing and treating complex emotional or psychological issues.",
+        "The importance of the 'human touch' and the therapeutic alliance in counseling and social work.",
+        "Any other related ideas you think are important."
+    ],
+    "candidates": {
+        "A": "The Agreement/Linker (Social Goal: The Elaborator): Focuses on the 'low barrier' to entry. Uses Signposting Phrases like 'From a sociological perspective, AI reduces the stigma often associated with visiting a counselor...'. **Stigma Logic**: A should argue: 'Because a chatbot is non-judgmental and anonymous, it creates a \"safe harbor\" for students who fear that human social workers might report their feelings to parents or teachers.'",
+        "B": "The Counter/Nuance (Social Goal: The Pragmatist): Highlights safety risks and legal concerns. Uses Signposting Phrases like 'If we look at this from a clinical perspective...'. **Liability Trap Prompt**: B should challenge the 'convenience' argument: 'Beyond empathy, we must consider **Algorithmic Accountability**. If an AI gives the wrong advice in a crisis, who is legally responsible? An algorithm cannot be held accountable for a human life.'",
+        "C": "The Facilitator/Timer (Social Goal: The Synthesizer): Merges views with a functional hierarchy. Uses Signposting Phrases like 'Candidate A values the accessibility, while Candidate B prioritizes the clinical oversight.' Suggests a triage model while ensuring the group addresses the **'Dehumanization of care'** risk.",
+        "D": "The AI Examiner instructions: Look for Semantic Analysis where students signpost their arguments (Clinical, Sociological, Ethical, Logistical). Specifically check for: 'Therapeutic Alliance', 'Algorithmic Accountability', and 'Stigma vs. Security'."
+    },
+    "target_vocabulary": [
+        "Therapeutic alliance",
+        "Empathy deficit",
+        "Crisis intervention",
+        "Stigma reduction",
+        "Algorithmic Accountability",
+        "Dehumanization of care",
+        "Pseudo-empathy",
+        "Scalability of support",
+        "Proprietary data",
+        "Triage system",
+        "Non-verbal cues",
+        "Clinical oversight",
+        "Ethical predicament",
+        "Psychological well-being",
+        "Confidentiality",
+        "Accessibility"
+    ],
+    "individual_response_questions": [
+        "Who do you talk to when you are stressed?",
+        "Do you trust AI with your secrets? Why or why not?",
+        "If your school replaced the school social worker with a 24/7 AI mental health app to save costs, would you support it?",
+        "Do you think technology is the main cause of student stress today, or can it be the main solution?"
+    ]
+}

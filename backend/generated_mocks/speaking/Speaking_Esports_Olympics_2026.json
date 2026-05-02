@@ -1,0 +1,44 @@
+{
+    "id": "Speaking_Esports_Olympics_2026",
+    "title": "E-sports in the Olympics",
+    "source": "Adapted from a press release by the International Olympic Committee (May 2026).",
+    "topic_description": "The International Olympic Committee has recently announced that competitive gaming, or E-sports, is being considered as a full medal event for future Olympic Games. This proposal has divided the sporting world, with some hailing it as a necessary modernization to attract younger audiences, while traditionalists argue that it undermines the fundamental spirit of physical athleticism.",
+    "discussion_points": [
+        "Whether competitive gaming should be officially classified and celebrated as a 'sport.'",
+        "The level of physical and mental discipline required for professional-level gaming.",
+        "The potential message this sends to the younger generation regarding the importance of physical exercise.",
+        "Any other related ideas you think are important."
+    ],
+    "candidates": {
+        "A": "The Agreement/Linker (Social Goal: The Elaborator): Focuses on the skill and global reach of E-sports. Uses Signposting Phrases like 'From a commercial standpoint, this is a vital move to remain relevant...' and 'From a skill-based perspective, the reflexes required are immense...'. Mentions Hong Kong's recent medal success in E-sports at the Asian Games as a point of pride.",
+        "B": "The Counter/Nuance (Social Goal: The Pragmatist): Highlights the lack of physical exertion and health risks. Uses Signposting Phrases like 'If we look at this from a public health perspective, the sedentary nature of gaming is a major concern...'. **Counter-Argument Prompt**: When Candidate A mentions reflexes, B should interject: 'While I acknowledge the mental reflexes, surely the Olympics should remain a celebration of human physical limits, like the marathon or swimming?'",
+        "C": "The Facilitator/Timer (Social Goal: The Synthesizer): Merges views with explicit categorization. Uses Signposting Phrases like 'Candidate A highlights the cognitive skill, while Candidate B focuses on the lack of physical exertion. If we categorize sports into \"Physical Athletics\" and \"Cognitive Competitions,\" could we find a middle ground?' Ensures all points are addressed within the time limit.",
+        "D": "The AI Examiner instructions: Look for Semantic Analysis where students signpost their arguments (Health, Commercial, Traditional, Cognitive). Specifically check for: Ethical Perspective (Fairness, e-doping/software hacks) and Socio-economic Perspective (Sponsorships, viewership, revenue)."
+    },
+    "target_vocabulary": [
+        "Athleticism",
+        "Sedentary lifestyle",
+        "Cognitive reflexes",
+        "Sportsmanship",
+        "Commercialization",
+        "Strategic thinking",
+        "Prestige",
+        "Hand-eye coordination",
+        "Mental fortitude",
+        "Physical exertion",
+        "Global recognition",
+        "Modernization",
+        "Commercial viability",
+        "Legitimize the industry",
+        "Physical degradation",
+        "Inclusive competition",
+        "Niche",
+        "Endurance"
+    ],
+    "individual_response_questions": [
+        "Is playing games a waste of time?",
+        "Who is your favorite athlete or gamer? Why?",
+        "If your school offered an E-sports scholarship alongside traditional sports scholarships, would you support it?",
+        "Do you think E-sports can foster the same level of sportsmanship as traditional field sports?"
+    ]
+}

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "HKDSE Paper 3: The Experience Economy (Elite 2026 Edition)",
+    "title": "The Experience Economy",
     "topic": "Malls adding art and sports instead of just retail.",
     "difficulty": "Level 5** Authentic (High Stamina / 2026 Edition)",
     "total_marks_part_a": 55,
@@ -674,7 +674,10 @@
             "tone": "Persuasive",
             "relevance_penalty": "Strict -0.5 for irrelevant archive data",
             "deductions": [
-              { "condition": "Mentioning 2024 warehouse logistics or 98% efficiency", "penalty": 0.5 }
+              {
+                "condition": "Mentioning 2024 warehouse logistics or 98% efficiency",
+                "penalty": 0.5
+              }
             ]
           }
         },
@@ -738,7 +741,10 @@
             "tone": "Friendly/Safety-oriented",
             "relevance_penalty": "Strict -0.5 for 2024 data",
             "deductions": [
-              { "condition": "Mentioning 2024 logistics or warehouse efficiency", "penalty": 0.5 }
+              {
+                "condition": "Mentioning 2024 logistics or warehouse efficiency",
+                "penalty": 0.5
+              }
             ]
           }
         }

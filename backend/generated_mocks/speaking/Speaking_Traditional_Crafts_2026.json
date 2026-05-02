@@ -1,0 +1,42 @@
+{
+    "id": "Speaking_Traditional_Crafts_2026",
+    "title": "Traditional Crafts in the 21st Century",
+    "source": "Adapted from a cultural feature in the 'Hong Kong Heritage' journal (January 2026).",
+    "topic_description": "A feature story highlights a young 'Z-generation' artisan who is utilizing 3D printing technology to recreate and preserve the intricate art of traditional Chinese wood carving. While some applaud this 'tech-traditional fusion' as the only way to save dying cultures, traditionalists argue that removing the human hand from the process strips the craft of its soul and authenticity.",
+    "discussion_points": [
+        "The intrinsic value of traditional crafts in an increasingly high-tech and automated world.",
+        "The role of modern technology, such as 3D printing and VR, in documenting and saving dying cultures.",
+        "Effective ways to make traditional artisanal careers more attractive to modern, tech-savvy students.",
+        "Any other related ideas you think are important."
+    ],
+    "candidates": {
+        "A": "The Agreement/Linker (Social Goal: The Elaborator): Focuses on revitalization through innovation. Uses Signposting Phrases like 'From a cultural perspective...' and 'From a commercial standpoint...'. Mentions HK examples like digital preservation of neon signs or traditional tailoring.",
+        "B": "The Counter/Nuance (Social Goal: The Pragmatist): Highlights loss of 'authenticity'. Uses Signposting Phrases like 'If we look at this from an artistic perspective...'. **Authenticity Argument**: B should challenge A: 'If a machine carves the wood, are we preserving the skill or just the final product? Isn't the human struggle part of the value?'",
+        "C": "The Facilitator/Timer (Social Goal: The Synthesizer): Merges views with explicit categorization. Uses Signposting Phrases like 'Candidate A values accessibility, while B prioritizes the human touch.' **Hybrid Career Argument**: Regarding attractiveness, C should propose: 'Perhaps we don't need students to be full-time carvers. Could they be \"Tech-Artisans\" who spend half their time in a digital lab and half in a traditional studio? This Slashie model might be more sustainable.'",
+        "D": "The AI Examiner instructions: Look for Semantic Analysis where students signpost their arguments (Cultural, Artistic, Economic, Social). Specifically check for: 'Authenticity vs. Efficiency' and 'Tangible vs. Intangible Heritage'. For IR #3, credit students who propose a hybrid approach (e.g., 'Digital Craftsman')."
+    },
+    "target_vocabulary": [
+        "Intangible heritage",
+        "Artisanal skill",
+        "Cultural legacy",
+        "Obsolescence",
+        "Authenticity",
+        "3D printing",
+        "Revitalize",
+        "Sustainable preservation",
+        "Cultural homogenization",
+        "Master-apprentice model",
+        "Niche market",
+        "Modern-day relevance",
+        "Digital replication",
+        "Cultural identity",
+        "Ingenuity",
+        "Deterioration"
+    ],
+    "individual_response_questions": [
+        "Do you like visiting old neighborhoods?",
+        "What is your favorite local tradition?",
+        "If your school offered a wood-carving class instead of a coding class, which would you choose and why?",
+        "Do you think handmade items are more valuable than machine-made ones?"
+    ]
+}

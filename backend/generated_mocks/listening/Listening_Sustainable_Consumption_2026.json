@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "HKDSE Paper 3: Sustainable Consumption (Elite 2026 Edition)",
+    "title": "Sustainable Consumption",
     "topic": "The Zero Waste movement and waste charging scheme impact in HK.",
     "difficulty": "Level 5** Authentic (High Stamina / 2026 Edition)",
     "total_marks_part_a": 55,
@@ -706,11 +706,26 @@
           "wordCount": 200,
           "grading_rubric": {
             "content_points": [
-              { "point": "Identify $60M surplus in Equipment (Doc 6)", "mark": 1 },
-              { "point": "Propose 'Waste-Free School Award' (Audio)", "mark": 2 },
-              { "point": "Detail the $50,000 prize amount (Audio)", "mark": 1 },
-              { "point": "Correctly allocate HALF of surplus ($30M) (Audio)", "mark": 2 },
-              { "point": "Link to public awareness challenge (Task 2)", "mark": 1 }
+              {
+                "point": "Identify $60M surplus in Equipment (Doc 6)",
+                "mark": 1
+              },
+              {
+                "point": "Propose 'Waste-Free School Award' (Audio)",
+                "mark": 2
+              },
+              {
+                "point": "Detail the $50,000 prize amount (Audio)",
+                "mark": 1
+              },
+              {
+                "point": "Correctly allocate HALF of surplus ($30M) (Audio)",
+                "mark": 2
+              },
+              {
+                "point": "Link to public awareness challenge (Task 2)",
+                "mark": 1
+              }
             ],
             "tone": "Analytical",
             "relevance_penalty": "Strict -0.5 for 2023 data",
@@ -724,15 +739,30 @@
           "wordCount": 100,
           "grading_rubric": {
             "content_points": [
-              { "point": "Address concerns about bag gate/tearing (Doc 7)", "mark": 1 },
-              { "point": "USE SLOGAN: 'Earth-Friendly, Pocket-Friendly' (Audio)", "mark": 1 },
-              { "point": "USE HASHTAG: #EcoHK2026 (Audio)", "mark": 1 },
-              { "point": "Mention 'Reinforced Seams' feature (Audio)", "mark": 2 }
+              {
+                "point": "Address concerns about bag gate/tearing (Doc 7)",
+                "mark": 1
+              },
+              {
+                "point": "USE SLOGAN: 'Earth-Friendly, Pocket-Friendly' (Audio)",
+                "mark": 1
+              },
+              {
+                "point": "USE HASHTAG: #EcoHK2026 (Audio)",
+                "mark": 1
+              },
+              {
+                "point": "Mention 'Reinforced Seams' feature (Audio)",
+                "mark": 2
+              }
             ],
             "tone": "Engaging/Reassuring",
             "relevance_penalty": "Strict -0.5 for 2023 data",
             "deductions": [
-              { "condition": "Mentioning Air Quality Index 75 or Wan Chai tunnel noise", "penalty": 0.5 }
+              {
+                "condition": "Mentioning Air Quality Index 75 or Wan Chai tunnel noise",
+                "penalty": 0.5
+              }
             ]
           }
         }

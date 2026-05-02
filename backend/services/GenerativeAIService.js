@@ -14,6 +14,7 @@ class GenerativeAIService {
         this.initialized = false;
         this.proRequestCount = 0; // Cost Guard: Track Pro requests
         this.lastResetTime = Date.now();
+        this.isDevMode = false; // Centralized Dev State
     }
 
     async init() {
@@ -124,7 +125,8 @@ class GenerativeAIService {
         this.requestHistory = []; // Track RPM for free-tier protection
 
         // 2026 COST SAVER: In DEV, we map PRO requests to FLASH by default to prevent accidental Tier 1 billing.
-        const isDev = process.env.NODE_ENV === 'development' || !process.env.NODE_ENV || !process.env.K_SERVICE;
+        this.isDevMode = process.env.NODE_ENV === 'development' || !process.env.NODE_ENV || !process.env.K_SERVICE;
+        const isDev = this.isDevMode;
         
         this.studioModelMap = {
             "ace-it-flash": "gemini-flash-latest",
@@ -174,7 +176,7 @@ class GenerativeAIService {
         let modelName = requested;
 
         // SAFE ALIASING: In Development, we strictly map known aliases to prevent raw model ID billing.
-        const isDevelopment = process.env.NODE_ENV === 'development' && process.env.FORCE_VERTEX_IN_DEV !== 'true';
+        const isDevelopment = this.isDevMode;
 
         if (this.isVertex && this.vertexModelMap?.[requested]) {
             modelName = this.vertexModelMap[requested];
@@ -489,16 +491,23 @@ class GenerativeAIService {
 
         // --- COST GUARD RATE LIMITER (DEV ONLY) ---
         if (isDevelopment && isProModel) {
-            const now = Date.now();
-            if (now - this.lastResetTime > 60000) { // Reset hourly window (using 1 min for demo/safety)
-                this.proRequestCount = 0;
-                this.lastResetTime = now;
-            }
+            // [STRICT FREE MODE]: If in DEV and trying to use a Pro model without explicit bypass
+            if (process.env.ALLOW_PAID_PRO !== 'true') {
+                console.warn(`[AIService] 🛡️  SAFETY BREAKER: Blocked a 'Pro' request to protect your balance. Redirecting to Flash...`);
+                // Force it to be a Flash model instead of throwing to keep the app working
+                config.model = "ace-it-flash";
+            } else {
+                const now = Date.now();
+                if (now - this.lastResetTime > 60000) { // Reset hourly window (using 1 min for demo/safety)
+                    this.proRequestCount = 0;
+                    this.lastResetTime = now;
+                }
 
-            this.proRequestCount++;
-            if (this.proRequestCount > 20) { // Threshold: 20 Pro requests per minute in Dev
-                console.error(`[AIService] 🛑 COST GUARD: High volume of Pro requests detected in DEV (${this.proRequestCount}). Blocking to prevent token leak.`);
-                throw new Error("⚠️ DEV COST GUARD: Too many Pro requests. Please check your loops or wait 1 minute.");
+                this.proRequestCount++;
+                if (this.proRequestCount > 20) { // Threshold: 20 Pro requests per minute in Dev
+                    console.error(`[AIService] 🛑 COST GUARD: High volume of Pro requests detected in DEV (${this.proRequestCount}). Blocking to prevent token leak.`);
+                    throw new Error("⚠️ DEV COST GUARD: Too many Pro requests. Please check your loops or wait 1 minute.");
+                }
             }
         }
 

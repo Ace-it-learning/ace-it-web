@@ -1,0 +1,43 @@
+{
+    "id": "Speaking_Short_form_Education_2026",
+    "title": "The 'Short-form' Education",
+    "source": "Adapted from a feature article in the 'Education Today' magazine (March 2026).",
+    "topic_description": "A recent survey reveals that 60% of secondary school students prefer learning complex subjects like history or science through 60-second TikTok or Instagram Reel videos rather than traditional textbooks. This shift toward 'micro-learning' has sparked a debate among educators about the future of academic depth and the long-term impact on students' cognitive development and attention spans.",
+    "discussion_points": [
+        "The effectiveness and limitations of 'micro-learning' via short-form video content.",
+        "The potential impact of high-speed digital content on a student's attention span and focus.",
+        "How teachers and schools can adapt to this trend without sacrificing academic rigor and depth.",
+        "Any other related ideas you think are important."
+    ],
+    "candidates": {
+        "A": "The Agreement/Linker (Social Goal: The Elaborator): Focuses on high engagement. Uses Signposting Phrases like 'From a pedagogical perspective, these videos serve as excellent hooks...' and 'From a psychological standpoint, visual learning can boost retention...'. Mentions local HK educational YouTubers as examples.",
+        "B": "The Counter/Nuance (Social Goal: The Pragmatist): Highlights risks of superficiality. Uses Signposting Phrases like 'If we look at this from a cognitive perspective, fragmentation is a major concern...' and 'From an academic standpoint...'. Questions if complex theories can survive the 60-second format.",
+        "C": "The Facilitator/Timer (Social Goal: The Synthesizer): Merges views with explicit categorization. Uses Signposting Phrases like 'Candidate A values the engagement, while Candidate B worries about the academic rigor. If we categorize our approach into classroom tools and homework aids, perhaps we can find a middle ground?' ensures all points are covered within time.",
+        "D": "The AI Examiner instructions: Look for Semantic Analysis where students signpost their arguments (Cognitive, Pedagogical, Social, Academic)."
+    },
+    "target_vocabulary": [
+        "Micro-learning",
+        "Cognitive overload",
+        "Pedagogical shift",
+        "Fragmentation",
+        "Superficial understanding",
+        "Attention economy",
+        "Retention",
+        "Ephemeral content",
+        "Consolidate",
+        "Academic rigor",
+        "Oversimplification of concepts",
+        "Dopamine-driven feedback loops",
+        "Critical thinking skills",
+        "Cohesive narrative",
+        "Cognitive endurance",
+        "Synthesize",
+        "Detrimental"
+    ],
+    "individual_response_questions": [
+        "Do you find long books boring?",
+        "Tell us about a useful thing you learned online.",
+        "If your school wanted to replace all printed textbooks with a video-based digital curriculum, would you support it?",
+        "Do you think social media algorithms are helping or hindering our ability to learn complex topics?"
+    ]
+}

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "HKDSE Paper 3: Heritage Revitalization (Ultimate Edition 2026)",
+    "title": "Heritage Revitalization",
     "topic": "Transforming historic industrial buildings into vibrant creative hubs while preserving local identity.",
     "difficulty": "Level 5** Authentic (High Stamina / 2026 Edition)",
     "total_marks_part_a": 55,
@@ -695,17 +695,38 @@
           "wordCount": 225,
           "grading_rubric": {
             "content_points": [
-              { "point": "Mandatory thermal imaging before drilling", "mark": 1 },
-              { "point": "Use of bio-resin acoustic dampeners", "mark": 1 },
-              { "point": "Acknowledge Asbestos Discovery in East Wing (Doc 2)", "mark": 1 },
-              { "point": "Instruct on safe asbestos removal following Heritage Harmony standards", "mark": 1 },
-              { "point": "2700K gas lamp mimicry lighting requirement", "mark": 1 }
+              {
+                "point": "Mandatory thermal imaging before drilling",
+                "mark": 1
+              },
+              {
+                "point": "Use of bio-resin acoustic dampeners",
+                "mark": 1
+              },
+              {
+                "point": "Acknowledge Asbestos Discovery in East Wing (Doc 2)",
+                "mark": 1
+              },
+              {
+                "point": "Instruct on safe asbestos removal following Heritage Harmony standards",
+                "mark": 1
+              },
+              {
+                "point": "2700K gas lamp mimicry lighting requirement",
+                "mark": 1
+              }
             ],
             "tone": "Formal/Instructional/Firm",
             "relevance_penalty": "Strict -0.5 for 2022 Sha Tin data",
             "deductions": [
-              { "condition": "Mentioning $150M budget from Sha Tin", "penalty": 0.5 },
-              { "condition": "Citing Shing Mun Riverfront location", "penalty": 0.5 }
+              {
+                "condition": "Mentioning $150M budget from Sha Tin",
+                "penalty": 0.5
+              },
+              {
+                "condition": "Citing Shing Mun Riverfront location",
+                "penalty": 0.5
+              }
             ]
           }
         },
@@ -716,16 +737,34 @@
           "wordCount": 300,
           "grading_rubric": {
             "content_points": [
-              { "point": "Explain the Integrated Revitalization model ($350M)", "mark": 1 },
-              { "point": "Detail the 'Local Artisan Vouchers' for legacy businesses", "mark": 2 },
-              { "point": "Mention the rent-control for 400 apartments", "mark": 1 },
-              { "point": "Highlight the decision to keep the Customs House public", "mark": 1 }
+              {
+                "point": "Explain the Integrated Revitalization model ($350M)",
+                "mark": 1
+              },
+              {
+                "point": "Detail the 'Local Artisan Vouchers' for legacy businesses",
+                "mark": 2
+              },
+              {
+                "point": "Mention the rent-control for 400 apartments",
+                "mark": 1
+              },
+              {
+                "point": "Highlight the decision to keep the Customs House public",
+                "mark": 1
+              }
             ],
             "tone": "Engaging/Informative",
             "relevance_penalty": "Strict -0.5 for 2022 data",
             "deductions": [
-              { "condition": "Mentioning $150M budget", "penalty": 0.5 },
-              { "condition": "Citing Sha Tin location", "penalty": 0.5 }
+              {
+                "condition": "Mentioning $150M budget",
+                "penalty": 0.5
+              },
+              {
+                "condition": "Citing Sha Tin location",
+                "penalty": 0.5
+              }
             ]
           }
         },
@@ -736,16 +775,34 @@
           "wordCount": 175,
           "grading_rubric": {
             "content_points": [
-              { "point": "Total $350M budget allocation", "mark": 1 },
-              { "point": "The $280M (Structural) / $70M (Community) split (Doc 6)", "mark": 1 },
-              { "point": "30-year bond duration (Audio-Only 'Killer Point')", "mark": 2 },
-              { "point": "Commitment to resident retention metrics", "mark": 1 }
+              {
+                "point": "Total $350M budget allocation",
+                "mark": 1
+              },
+              {
+                "point": "The $280M (Structural) / $70M (Community) split (Doc 6)",
+                "mark": 1
+              },
+              {
+                "point": "30-year bond duration (Audio-Only 'Killer Point')",
+                "mark": 2
+              },
+              {
+                "point": "Commitment to resident retention metrics",
+                "mark": 1
+              }
             ],
             "tone": "Formal/Analytical",
             "relevance_penalty": "Strict -0.5 for 2022 data",
             "deductions": [
-              { "condition": "Mentioning $150M or $200M budgets", "penalty": 0.5 },
-              { "condition": "Citing Sha Tin location", "penalty": 0.5 }
+              {
+                "condition": "Mentioning $150M or $200M budgets",
+                "penalty": 0.5
+              },
+              {
+                "condition": "Citing Sha Tin location",
+                "penalty": 0.5
+              }
             ]
           }
         }

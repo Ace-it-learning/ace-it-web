@@ -13,14 +13,14 @@ import SpeakingWaveform from '../components/speaking/SpeakingWaveform';
 import IdeasMindMap from '../components/speaking/IdeasMindMap';
 
 const FILLERS = [
-    "That's a solid point. How do you think we can connect that to the other branch of our brainstorm?",
-    "I see where you're coming from. Shall we look at the potential challenges branch in the mind map next?",
-    "Building on that idea, I think we could elaborate more on the impact... what do you think?",
-    "Interesting perspective. If we relate that back to the main topic, how does it change our outlook?",
-    "I agree with that direction. Looking at our mind map, which other area should we link this to?",
-    "Right! Expanding on that, maybe we can also consider the long-term consequences?",
-    "That makes sense. Shall we try to brainstorm some more specific examples for that branch?",
-    "I like how you structured that. Does it remind you of any other points we've discussed today?"
+    "That's a really good point! Actually, I was also thinking about how this might affect us as students. What do you think?",
+    "I see what you mean. It's quite a complex issue, isn't it? I'm curious about your take on the other side of this...",
+    "Right, that makes a lot of sense. Speaking of which, have you considered how this links to the broader community?",
+    "That's an interesting way to look at it. I personally feel like there's more to explore regarding the practical side. Any thoughts?",
+    "I totally agree with that direction. It actually reminds me of something I read recently about the social impact. What's your view?",
+    "Spot on! Building on that, I wonder if we should also consider the long-term effects. Do you think that's a priority?",
+    "I like that idea. It's definitely something we should mention in the group. Should we dive a bit deeper into the examples?",
+    "That's a solid observation. It really ties everything together. How do you feel about the other points we have on the map?"
 ];
 
 const SpeakingIdeasLab = () => {

@@ -1,0 +1,41 @@
+{
+    "id": "Speaking_AI_Creative_Arts_2026",
+    "title": "AI in the Creative Arts",
+    "topic_description": "An article reports on a major controversy where an AI-generated song won a local music award, sparking intense protests from human musicians who claim it undermines their craft. The incident has ignited a global debate on whether artificial intelligence is a tool for inspiration or a threat to the authenticity of human creativity and the future of the artistic soul.",
+    "discussion_points": [
+        "The potential benefits of using AI as a tool for creative inspiration.",
+        "Whether AI-generated art and music should be permitted in school or professional competitions.",
+        "Practical ways to protect the 'soul' and 'authenticity' of human creativity in a digital age.",
+        "Any other related ideas you think are important."
+    ],
+    "candidates": {
+        "A": "The Agreement/Linker (Social Goal: The Elaborator): Focuses on how AI can democratize art. Uses 'HKEAA Marker Language' like 'I see your point, and building on that...' and employs Categorization Phrases such as 'If we look at this from a cultural perspective...'. Mentions local examples like HK digital artists revitalizing traditional ink painting.",
+        "B": "The Counter/Nuance (Social Goal: The Pragmatist): Highlights concerns over copyright and the devaluation of human labor. Uses 'HKEAA Marker Language' like 'That's true, but we must also consider the flip side...' and Categorization Phrases like 'From an economic standpoint, the IP issue is paramount...'. Questions the fairness of AI training on human work.",
+        "C": "The Facilitator/Timer (Social Goal: The Synthesizer): Merges views and proposes multi-faceted solutions. Uses Categorization Phrases like 'We can divide our consensus into two categories: policy-based and ethical...' to structure the group's conclusion. Ensures all points are covered within the time limit.",
+        "D": "The AI Examiner instructions: Look for Semantic Analysis where students categorize their arguments (Economic, Cultural, Social, Technical)."
+    },
+    "target_vocabulary": [
+        "Algorithmic generation",
+        "Intellectual property (IP)",
+        "Human ingenuity",
+        "Artistic integrity",
+        "Aesthetic value",
+        "Democratization of art",
+        "Plagiarism",
+        "Authenticity",
+        "Exacerbate",
+        "Undermine",
+        "Augment",
+        "Infringe",
+        "Inimitable",
+        "Derivative",
+        "Synthetic",
+        "Revolutionary"
+    ],
+    "individual_response_questions": [
+        "Can a robot ever be truly creative?",
+        "Do you prefer hand-drawn art or digital art? Why?",
+        "If you discovered your favorite song was written by an AI, would you still like it as much?",
+        "If your school wanted to replace a human music teacher with an AI program to save money, would you support it?"
+    ]
+}

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "HKDSE Paper 3: Digital Literacy for All (Ultimate Edition 2026)",
+    "title": "Digital Literacy for All",
     "topic": "Bridging the generational gap in a digital-first government city.",
     "difficulty": "Level 5** Authentic (High Stamina / 2026 Edition)",
     "total_marks_part_a": 55,
@@ -665,11 +665,26 @@
           "wordCount": 300,
           "grading_rubric": {
             "content_points": [
-              { "point": "Correct launch date (Jan 2026)", "mark": 1 },
-              { "point": "Correct budget ($400M)", "mark": 1 },
-              { "point": "Correct MTR locations (MK, Central, KT)", "mark": 1 },
-              { "point": "Mention 'Patience First' motto", "mark": 1 },
-              { "point": "Identify Red Phone protocol for scams", "mark": 1 }
+              {
+                "point": "Correct launch date (Jan 2026)",
+                "mark": 1
+              },
+              {
+                "point": "Correct budget ($400M)",
+                "mark": 1
+              },
+              {
+                "point": "Correct MTR locations (MK, Central, KT)",
+                "mark": 1
+              },
+              {
+                "point": "Mention 'Patience First' motto",
+                "mark": 1
+              },
+              {
+                "point": "Identify Red Phone protocol for scams",
+                "mark": 1
+              }
             ],
             "tone": "Professional",
             "relevance_penalty": "Deduct 0.5 per irrelevant item from 2023 archive",
@@ -778,16 +793,34 @@
           "wordCount": 225,
           "grading_rubric": {
             "content_points": [
-              { "point": "Acknowledge 2-meter desk width limit", "mark": 1 },
-              { "point": "Confirm use of wireless tablets to avoid trip hazards", "mark": 1 },
-              { "point": "Explain high-traffic needs (10am-7pm)", "mark": 1 },
-              { "point": "Confirm desks stay in 'Community Zone'", "mark": 1 }
+              {
+                "point": "Acknowledge 2-meter desk width limit",
+                "mark": 1
+              },
+              {
+                "point": "Confirm use of wireless tablets to avoid trip hazards",
+                "mark": 1
+              },
+              {
+                "point": "Explain high-traffic needs (10am-7pm)",
+                "mark": 1
+              },
+              {
+                "point": "Confirm desks stay in 'Community Zone'",
+                "mark": 1
+              }
             ],
             "tone": "Formal/Professional",
             "relevance_penalty": "Strict -0.5 penalty for 2023 data",
             "deductions": [
-              { "condition": "Mentioning 2023 budget ($200M)", "penalty": 0.5 },
-              { "condition": "Citing Sha Tin as a launch site", "penalty": 0.5 }
+              {
+                "condition": "Mentioning 2023 budget ($200M)",
+                "penalty": 0.5
+              },
+              {
+                "condition": "Citing Sha Tin as a launch site",
+                "penalty": 0.5
+              }
             ]
           }
         },
@@ -798,16 +831,34 @@
           "wordCount": 175,
           "grading_rubric": {
             "content_points": [
-              { "point": "Mandatory 'Red Phone' protocol (Audio Only Info)", "mark": 2 },
-              { "point": "Contact Police Anti-Deception (18222)", "mark": 1 },
-              { "point": "Second volunteer witness requirement for Gold tasks", "mark": 1 },
-              { "point": "Marking logs as 'S-Tier'", "mark": 1 }
+              {
+                "point": "Mandatory 'Red Phone' protocol (Audio Only Info)",
+                "mark": 2
+              },
+              {
+                "point": "Contact Police Anti-Deception (18222)",
+                "mark": 1
+              },
+              {
+                "point": "Second volunteer witness requirement for Gold tasks",
+                "mark": 1
+              },
+              {
+                "point": "Marking logs as 'S-Tier'",
+                "mark": 1
+              }
             ],
             "tone": "Formal",
             "relevance_penalty": "Strict -0.5 penalty for 2023 data",
             "deductions": [
-              { "condition": "Mentioning 2023 budget ($200M)", "penalty": 0.5 },
-              { "condition": "Citing Sha Tin as a launch site", "penalty": 0.5 }
+              {
+                "condition": "Mentioning 2023 budget ($200M)",
+                "penalty": 0.5
+              },
+              {
+                "condition": "Citing Sha Tin as a launch site",
+                "penalty": 0.5
+              }
             ]
           }
         }

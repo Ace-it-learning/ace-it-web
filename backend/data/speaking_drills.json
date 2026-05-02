@@ -555,6 +555,230 @@
       "guidance": "Use P.E.E.L: State your Point (e.g., social connection), provide Evidence (e.g., keeping in touch with parents), Explain why it matters, and Link back to wait reason."
     },
     { 
+      "id": "d_2", 
+      "title": "Chatbots in Classrooms", 
+      "level": "4", 
+      "level_label": "Medium", 
+      "scenario": "A school board meeting discussing the official integration of AI chatbots for student homework assistance.",
+      "starting_question": "Do you think schools should encourage the use of AI chatbots for homework, or does it pose too great a risk to academic integrity?",
+      "mind_map": {
+        "center_issue": "AI Chatbots in Schools",
+        "branches": [
+          { "title": "Educational Benefits", "sub_points": ["Personalized tutoring", "24/7 support", "Instant feedback"] },
+          { "title": "Academic Risks", "sub_points": ["Plagiarism concerns", "Loss of critical thinking", "Over-reliance on tech"] }
+        ]
+      },
+      "guidance": "Use P.E.E.L to explain how personalized tutoring could benefit slower learners, then link it to the risk of students skipping the 'thinking' process."
+    },
+    { 
+      "id": "d_3", 
+      "title": "Northward Consumption Trend", 
+      "level": "4", 
+      "level_label": "Medium", 
+      "scenario": "A business talk show discussing why more Hong Kongers are choosing to spend their weekends in Shenzhen.",
+      "starting_question": "In your opinion, what are the main reasons for the 'Northward Consumption' trend, and how should local Hong Kong businesses respond?",
+      "mind_map": {
+        "center_issue": "Spending in Shenzhen",
+        "branches": [
+          { "title": "Drivers", "sub_points": ["Lower prices", "Greater variety", "High-quality service"] },
+          { "title": "Local Impact", "sub_points": ["Retail sales decline", "Need for innovation", "Better unique HK experiences"] }
+        ]
+      },
+      "guidance": "Try to categorize your points into 'Economic factors' and 'Customer experience'. Link the service quality in Shenzhen to the need for HK staff training."
+    },
+    { 
+      "id": "d_4", 
+      "title": "Plastic-Free Dining", 
+      "level": "3", 
+      "level_label": "Easy", 
+      "scenario": "A group of students sharing their experiences with paper and wood straws after the plastic ban.",
+      "starting_question": "Has the ban on single-use plastic tableware made a positive difference in your habits, or is it mostly just an inconvenience?",
+      "mind_map": {
+        "center_issue": "Plastic-Free Policy",
+        "branches": [
+          { "title": "Positive Outcomes", "sub_points": ["Environmental awareness", "Reduced ocean waste", "Eco-friendly mindset"] },
+          { "title": "Practical Issues", "sub_points": ["Soggy paper straws", "Higher costs for shops", "Durability of alternatives"] }
+        ]
+      },
+      "guidance": "Focus on the practical aspect. Mention the durability of paper straws as 'Evidence' for your point about user experience."
+    },
+    { 
+      "id": "d_5", 
+      "title": "Youth Mental Health", 
+      "level": "5", 
+      "level_label": "DSE Standard", 
+      "scenario": "A youth forum discussing the rising stress levels among secondary school students.",
+      "starting_question": "What systemic changes in the education system would most effectively alleviate the mental health crisis among students?",
+      "mind_map": {
+        "center_issue": "Student Well-being",
+        "branches": [
+          { "title": "Academic Factors", "sub_points": ["Exam-oriented culture", "Heavy workload", "High parental expectations"] },
+          { "title": "Support Systems", "sub_points": ["More school counselors", "Mental health curriculum", "Peer support groups"] }
+        ]
+      },
+      "guidance": "Elaborate on 'Exam-oriented culture'. Explain how it leads to a 'burnout' cycle, and link it back to the need for a holistic curriculum."
+    },
+    { 
+      "id": "d_6", 
+      "title": "Revitalizing Temple Street", 
+      "level": "4", 
+      "level_label": "Medium", 
+      "scenario": "A tourism committee reviewing the 'Night Vibes Hong Kong' campaign.",
+      "starting_question": "Is the introduction of street food and night markets enough to revitalize traditional spots like Temple Street for the long term?",
+      "mind_map": {
+        "center_issue": "Night Economy",
+        "branches": [
+          { "title": "Success Factors", "sub_points": ["Authentic atmosphere", "Diverse food options", "Attracting young locals"] },
+          { "title": "Challenges", "sub_points": ["Noise complaints", "Hygiene concerns", "Lack of unique identity"] }
+        ]
+      },
+      "guidance": "Connect the 'Authentic atmosphere' to the emotional value of heritage. Link it to the challenge of balancing tourism with local residents' peace."
+    },
+    { 
+      "id": "d_7", 
+      "title": "E-sports as a Profession", 
+      "level": "3", 
+      "level_label": "Easy", 
+      "scenario": "A career planning session where a student expresses interest in becoming a pro gamer.",
+      "starting_question": "Should professional gaming be treated with the same respect and funding as traditional physical sports?",
+      "mind_map": {
+        "center_issue": "E-sports Career",
+        "branches": [
+          { "title": "Arguments For", "sub_points": ["High skill required", "Massive global audience", "Sponsorship revenue"] },
+          { "title": "Arguments Against", "sub_points": ["Short career span", "Health concerns", "Lack of physical activity"] }
+        ]
+      },
+      "guidance": "Use evidence like 'reflex speed' and 'strategy' to support the 'High skill' point. Link the 'short career span' to the need for education fallback."
+    },
+    { 
+      "id": "d_8", 
+      "title": "The 'Slashie' Lifestyle", 
+      "level": "5", 
+      "level_label": "DSE Standard", 
+      "scenario": "A seminar on the future of work and the rise of multi-hyphenate (Slashie) workers.",
+      "starting_question": "Is the 'Slashie' lifestyle a sign of true professional freedom, or is it a symptom of an unstable job market?",
+      "mind_map": {
+        "center_issue": "Slashie Career Path",
+        "branches": [
+          { "title": "Benefits", "sub_points": ["Work-life balance", "Diverse income streams", "Passion fulfillment"] },
+          { "title": "Drawbacks", "sub_points": ["No stable benefits", "Financial uncertainty", "Burnout from multitasking"] }
+        ]
+      },
+      "guidance": "Analyze the term 'freedom'. Contrast it with 'financial uncertainty'. Link the passion factor to the long-term career satisfaction."
+    },
+    { 
+      "id": "d_9", 
+      "title": "Heritage vs. Urban Renewal", 
+      "level": "5", 
+      "level_label": "DSE Standard", 
+      "scenario": "A community meeting regarding the demolition of a 1950s tenement building in Sham Shui Po.",
+      "starting_question": "How should we resolve the conflict between the need for modern housing and the preservation of Hong Kong's cultural landmarks?",
+      "mind_map": {
+        "center_issue": "Old Buildings vs. Growth",
+        "branches": [
+          { "title": "Preservation", "sub_points": ["Cultural identity", "Tourism value", "Community memory"] },
+          { "title": "Urban Growth", "sub_points": ["Housing supply", "Modern safety standards", "Land use efficiency"] }
+        ]
+      },
+      "guidance": "Explain the concept of 'Cultural identity'. Link it to the 'Tourism value' as a reason for adaptive reuse instead of demolition."
+    },
+    { 
+      "id": "d_10", 
+      "title": "Future of Physical Libraries", 
+      "level": "4", 
+      "level_label": "Medium", 
+      "scenario": "A public consultation on whether to convert under-utilized public libraries into community study centers.",
+      "starting_question": "With the rise of e-books and internet research, are physical libraries still a necessary part of our community?",
+      "mind_map": {
+        "center_issue": "Physical Libraries",
+        "branches": [
+          { "title": "Changing Roles", "sub_points": ["Quiet study space", "Community hub", "Digital equity/access"] },
+          { "title": "Obsolescence", "sub_points": ["E-book convenience", "High maintenance costs", "Information immediacy online"] }
+        ]
+      },
+      "guidance": "Focus on 'Digital equity'. Explain why libraries are still essential for students who don't have a quiet or high-tech home environment."
+    },
+    { 
+      "id": "d_11", 
+      "title": "Pet-Friendly Public Transport", 
+      "level": "4", 
+      "level_label": "Medium", 
+      "scenario": "A debate in a transportation forum on allowing small pets in carriers on all public transport during non-peak hours.",
+      "starting_question": "Should Hong Kong's public transport system be more inclusive of pets, or would it cause too much disruption for other passengers?",
+      "mind_map": {
+        "center_issue": "Pets on Transit",
+        "branches": [
+          { "title": "Benefits", "sub_points": ["Convenience for owners", "Reduced private car use", "Social inclusivity"] },
+          { "title": "Concerns", "sub_points": ["Hygiene issues", "Allergies of passengers", "Space during rush hours"] }
+        ]
+      },
+      "guidance": "Categorize your points by 'Passenger Comfort' vs 'Pet Owner Rights'. Link the 'Reduced private car use' to environmental goals."
+    },
+    { 
+      "id": "d_12", 
+      "title": "The 'Right to Disconnect'", 
+      "level": "5", 
+      "level_label": "DSE Standard", 
+      "scenario": "A labor rights seminar discussing the implementation of legislation to prevent after-hours work communication.",
+      "starting_question": "Should employees have a legal 'Right to Disconnect' after work hours, or is constant availability necessary in today's global economy?",
+      "mind_map": {
+        "center_issue": "After-Hours Work",
+        "branches": [
+          { "title": "Employee Health", "sub_points": ["Preventing burnout", "Better family time", "Mental health recovery"] },
+          { "title": "Business Needs", "sub_points": ["Global client demands", "Urgent emergencies", "Competitiveness concerns"] }
+        ]
+      },
+      "guidance": "Synthesize the need for 'Mental health recovery' with the reality of 'Global client demands'. Propose a compromise like 'emergency-only' protocols."
+    },
+    { 
+      "id": "d_13", 
+      "title": "Vertical Farming in HK", 
+      "level": "5", 
+      "level_label": "DSE Standard", 
+      "scenario": "A town hall meeting discussing the use of abandoned industrial buildings for high-tech vertical agriculture.",
+      "starting_question": "Can vertical farming truly solve Hong Kong's food security issues, or is it an expensive and impractical high-tech fantasy?",
+      "mind_map": {
+        "center_issue": "Vertical Farming",
+        "branches": [
+          { "title": "Feasibility", "sub_points": ["Year-round production", "Minimal land required", "Reduced transport waste"] },
+          { "title": "Barriers", "sub_points": ["High energy consumption", "Limited crop variety", "Technical expertise needed"] }
+        ]
+      },
+      "guidance": "Use 'Land use efficiency' as a major point for HK. Link 'High energy consumption' to the need for renewable energy integration."
+    },
+    { 
+      "id": "d_14", 
+      "title": "E-sports in the Olympics", 
+      "level": "5", 
+      "level_label": "DSE Standard", 
+      "scenario": "A sports committee meeting debating the inclusion of competitive gaming in future Olympic Games.",
+      "starting_question": "Does including E-sports in the Olympics uphold the traditional spirit of sportsmanship, or does it diminish the prestige of physical athletics?",
+      "mind_map": {
+        "center_issue": "E-sports at Olympics",
+        "branches": [
+          { "title": "Modernization", "sub_points": ["Engaging youth", "Reflex/Strategic skill", "Commercial viability"] },
+          { "title": "Traditionalism", "sub_points": ["Physical exertion gap", "Commercial vs Spirit", "Fragmentation of games"] }
+        ]
+      },
+      "guidance": "Define the 'Olympic Spirit'. Link 'Engaging youth' as a survival strategy for the Games in the digital age."
+    },
+    { 
+      "id": "d_15", 
+      "title": "The Cashless Society", 
+      "level": "5", 
+      "level_label": "DSE Standard", 
+      "scenario": "A financial forum discussing the gradual phasing out of physical cash in favor of digital wallets and cards.",
+      "starting_question": "Is a completely cashless society an inevitable and beneficial evolution for Hong Kong, or does it threaten the privacy and inclusion of the elderly?",
+      "mind_map": {
+        "center_issue": "Cashless HK",
+        "branches": [
+          { "title": "Efficiency", "sub_points": ["Lower crime (theft)", "Transaction speed", "Data-driven budgeting"] },
+          { "title": "Social Risks", "sub_points": ["Elderly exclusion", "Data privacy risks", "System failure dependency"] }
+        ]
+      },
+      "guidance": "Analyze the 'Elderly exclusion' point deeply. Link it to the 'Digital divide' and propose transitional measures like 'dual systems'."
+    },
+    { 
       "id": "d_16", 
       "title": "Autonomous Transport", 
       "level": "5**", 
@@ -569,6 +793,70 @@
         ]
       },
       "guidance": "Focus on the 'Synthesis' part of DSE Criterion D. Link logical points between job security and social stability."
+    },
+    { 
+      "id": "d_17", 
+      "title": "AI in Creative Arts", 
+      "level": "5**", 
+      "level_label": "Elite", 
+      "scenario": "An arts council debate on whether to allow AI-generated works in prestigious national competitions.",
+      "starting_question": "To what extent does the use of AI in creative fields redefine our understanding of 'authorship' and the unique value of human inspiration?",
+      "mind_map": {
+        "center_issue": "AI-Generated Art",
+        "branches": [
+          { "title": "Philosophical", "sub_points": ["Definition of creativity", "Human soul vs Algorithm", "Democratization of art"] },
+          { "title": "Pragmatic", "sub_points": ["Copyright ownership", "Impact on professions", "Mass-produced quality"] }
+        ]
+      },
+      "guidance": "Challenge the assumption that 'Creativity' is uniquely human. Synthesize the 'Democratization' benefit with the 'Devaluation' of professional skills."
+    },
+    { 
+      "id": "d_18", 
+      "title": "Digital Detox Mandates", 
+      "level": "5**", 
+      "level_label": "Elite", 
+      "scenario": "A policy review on mandating 'No-Screen' days in secondary schools and corporations to combat social media fatigue.",
+      "starting_question": "Are mandated digital detoxes an essential intervention for public mental health, or an overreach into personal freedom and modern productivity?",
+      "mind_map": {
+        "center_issue": "Mandated Tech-Free Time",
+        "branches": [
+          { "title": "Psychological", "sub_points": ["Attention span recovery", "Reduced social anxiety", "Restoring real interaction"] },
+          { "title": "Logistical/Ethical", "sub_points": ["Freedom of choice", "Workplace efficiency", "Emergency communication"] }
+        ]
+      },
+      "guidance": "Focus on the 'Erosion of autonomy' right. Link 'Attention span' to long-term cognitive health as a justification for systemic intervention."
+    },
+    { 
+      "id": "d_19", 
+      "title": "Universal Basic Income (UBI)", 
+      "level": "5**", 
+      "level_label": "Elite", 
+      "scenario": "An economic summit discussing UBI as a response to the potential loss of 40% of jobs to AI and automation.",
+      "starting_question": "Evaluate Universal Basic Income as a viable solution to the existential threat posed by automation to traditional labor markets.",
+      "mind_map": {
+        "center_issue": "UBI & Automation",
+        "branches": [
+          { "title": "Economic", "sub_points": ["Funding (Robot Tax)", "Inflation risks", "Consumer spending stability"] },
+          { "title": "Sociological", "sub_points": ["Incentive to work", "Dignity beyond labor", "Social security floor"] }
+        ]
+      },
+      "guidance": "Synthesize the 'Robot Tax' concept with 'Social security floor'. Link the 'Dignity' point to the psychological value of work."
+    },
+    { 
+      "id": "d_20", 
+      "title": "Philosophy of 'Slow Living'", 
+      "level": "5**", 
+      "level_label": "Elite", 
+      "scenario": "A cultural symposium exploring the feasibility of 'Slow Living' in the context of Hong Kong's hyper-capitalist urban environment.",
+      "starting_question": "Is the 'Slow Living' movement a realistic alternative for Hong Kongers, or is it an unattainable luxury reserved for the affluent?",
+      "mind_map": {
+        "center_issue": "Slow Living in HK",
+        "branches": [
+          { "title": "Cultural Shift", "sub_points": ["Mindful consumption", "Reduced competitiveness", "Mental wellness priority"] },
+          { "title": "Pragmatic Hurdles", "sub_points": ["High cost of living", "Systemic hustle culture", "Space constraints"] }
+        ]
+      },
+      "guidance": "Analyze the 'Hustle culture' of HK. Link it to the 'Mental wellness' crisis as a driver for change, but synthesize it with the 'High cost of living' barrier."
     }
   ],
   "discussion": [

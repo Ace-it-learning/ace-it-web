@@ -249,11 +249,11 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                     navigate(`/lab?topic=${task.topic}&level=${targetLevel}&taskId=${task.id}`, { state: baseState });
                     return;
                 }
-                if (topic.includes('writing')) {
+                if (topic.includes('writing') || skillId === 'writing_quest') {
                     navigate('/writing/quest', { state: { ...baseState, isAutoLoad: true } });
                     return;
                 }
-                if (topic.includes('listening')) {
+                if (topic.includes('listening') || skillId === 'listening_quest') {
                     navigate(`/listening/briefing/${task.id || 'weekly_listening'}`, { 
                         state: { 
                             ...baseState, 
@@ -291,6 +291,16 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                     navigate('/speaking/menu', {
                         state: { activePillar: 'discussion' }
                     });
+                    return;
+                }
+
+                if (skillId === 'listening_quest') {
+                    navigate('/lab', { state: { paper: 'listening' } }); // Or a better landing page
+                    return;
+                }
+
+                if (skillId === 'writing_quest') {
+                    navigate('/writing/quest');
                     return;
                 }
 
@@ -432,7 +442,8 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                 return false;
             }
             // Hide old writing/listening skills, only show Genres in English Writing
-            if ((id.startsWith('writing_') && !id.startsWith('writing_genre_')) || id.startsWith('listening_')) return false;
+            // EXEMPT: writing_quest and listening_quest entry points
+            if ((id.startsWith('writing_') && !id.startsWith('writing_genre_') && id !== 'writing_quest') || (id.startsWith('listening_') && id !== 'listening_quest')) return false;
         }
 
         // Hide Granular Speaking Skills (Consolidated into General)

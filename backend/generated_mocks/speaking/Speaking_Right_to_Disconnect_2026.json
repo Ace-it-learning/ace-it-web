@@ -9,10 +9,19 @@
         "Any other related ideas you think are important."
     ],
     "candidates": {
-        "A": "The Pragmatist: Agrees with the 'competitive' argument. Argues that in a fast-paced city like HK, being unreachable is a disadvantage.",
-        "B": "The Empath: Focuses on sleep deprivation and the 'fear of missing out' (FOMO). Strongly supports the law.",
-        "C": "The Sceptic: Believes a law is too much 'red tape.' Thinks self-discipline is the only real solution."
+        "A": "The Pragmatist (Social Goal: The Realist): Agrees with the 'competitive' argument. Argues that in a fast-paced city like HK, being unreachable is a disadvantage. Uses 'HKEAA Marker Language' and provides specific examples of HK's high-pressure environment.",
+        "B": "The Empath (Social Goal: The Advocate): Focuses on sleep deprivation and the 'fear of missing out' (FOMO). Strongly supports the law to protect students' mental health. Uses 'HKEAA Marker Language' to link points about digital well-being.",
+        "C": "The Sceptic (Social Goal: The Synthesizer): Believes a law is too much 'red tape' and thinks self-discipline is the real solution. Uses 'HKEAA Marker Language' to facilitate the discussion and summarize conflicting views on personal responsibility."
     },
+    "target_vocabulary": [
+        "Occupational burnout",
+        "Blurred boundaries",
+        "Hyper-connectivity",
+        "Mental fatigue",
+        "Intrusion into personal time",
+        "Psychological detachment",
+        "Work-life balance"
+    ],
     "individual_response_questions": [
         "Do you think parents should have the right to check their children's phones?",
         "Tell us about one app you couldn't live without and why.",

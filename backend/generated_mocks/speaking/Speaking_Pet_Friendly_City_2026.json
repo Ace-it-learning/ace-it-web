@@ -1,0 +1,43 @@
+{
+    "id": "Speaking_Pet_Friendly_City_2026",
+    "title": "The Pet-Friendly City",
+    "topic_description": "A new proposal suggests allowing well-behaved pets on MTR trains and inside certain shopping mall food courts in Hong Kong. While pet owners welcome the move as a sign of a more inclusive and compassionate society, others raise serious concerns regarding hygiene, public safety, and the rights of citizens who may be allergic to or fearful of animals in confined spaces.",
+    "discussion_points": [
+        "The social and emotional advantages of transforming Hong Kong into a pet-friendly city.",
+        "Potential hygiene and safety concerns for non-pet owners and the general public.",
+        "Effective ways to balance the rights of pet owners with those of allergic or fearful citizens.",
+        "Any other related ideas you think are important."
+    ],
+    "candidates": {
+        "A": "The Agreement/Linker (Social Goal: The Elaborator): Focuses on the mental health benefits of pet companionship. Uses 'HKEAA Marker Language' and Signposting Phrases like 'From a sociological perspective, this move fosters community...' and 'From a commercial standpoint, retailers might see a significant boost in footfall...'. Mentions local examples like pet-friendly malls in Tseung Kwan O.",
+        "B": "The Counter/Nuance (Social Goal: The Pragmatist): Highlights practical hurdles and statutory constraints. Uses 'HKEAA Marker Language' and Signposting Phrases like 'If we look at this from a public health perspective...' and 'From a logistical standpoint...'. Specifically mentions the 'Food Business Regulation (Cap 132X)' as a major legal hurdle for food courts.",
+        "C": "The Facilitator/Timer (Social Goal: The Synthesizer): Merges views and proposes nuanced regulatory frameworks. Uses Signposting Phrases like 'We can analyze the solutions through two lenses: statutory regulation and public education.' Proposes a 'Traffic Light System' for malls (Green hours = pets allowed, Red hours = no pets) to provide a fair compromise.",
+        "D": "The AI Examiner instructions: Look for Semantic Analysis where students signpost their arguments (Economic, Public Health, Logistical, Ethical)."
+    },
+    "target_vocabulary": [
+        "Inclusivity",
+        "Sanitation protocols",
+        "Confined spaces",
+        "Allergic reaction",
+        "Pet-friendly infrastructure",
+        "Social harmony",
+        "Accommodate",
+        "Alleviate",
+        "Compromise",
+        "Exclude",
+        "Inclusive",
+        "Hygienic",
+        "Controversial",
+        "Stringent enforcement",
+        "Nuisance / Disturbance",
+        "Statutory requirements",
+        "Civic responsibility",
+        "Coexistence"
+    ],
+    "individual_response_questions": [
+        "Should pets be allowed in offices?",
+        "Tell us about a time you saw an animal in public.",
+        "If your school wanted to allow students to bring their pets to class on 'Pet Fridays', would you support it?",
+        "Do you think owning a pet is a responsibility or a luxury?"
+    ]
+}

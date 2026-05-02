@@ -1,0 +1,41 @@
+{
+    "id": "Speaking_Future_of_Libraries_2026",
+    "title": "The Future of Public Libraries",
+    "source": "Adapted from an urban planning report on 'Hong Kong's Smart Libraries' (February 2026).",
+    "topic_description": "A controversial proposal suggests replacing 50% of traditional bookshelves in public libraries with 'Gaming Zones' and 'Podcast Studios' to better attract the younger generation. While supporters argue that libraries must evolve into multifaceted community hubs to remain relevant in the digital age, critics fear that introducing 'noise-friendly' zones will destroy the library's core identity as a sanctuary of silence and deep study.",
+    "discussion_points": [
+        "The changing role and identity of the public library in an increasingly digital and connected society.",
+        "Whether 'noise-friendly' social zones truly belong in a space traditionally dedicated to quiet reflection.",
+        "Effective strategies to encourage reading and literacy in an environment filled with digital distractions.",
+        "Any other related ideas you think are important."
+    ],
+    "candidates": {
+        "A": "The Agreement/Linker (Social Goal: The Elaborator): Focuses on the library as a social anchor. Uses the specific term **'Third Place'** to argue that libraries must evolve to combat urban loneliness and foster social cohesion. Mentions modern HK facilities like the Yuen Long Public Library as models for this transition.",
+        "B": "The Counter/Nuance (Social Goal: The Pragmatist): Defends the core mission of silence and academic rigor. **Serious Gaming Argument**: B should challenge the proposal by stating: 'If we introduce gaming, it must be \"serious gaming\"—such as simulations or coding labs—otherwise, we risk turning a public treasure into an arcade at the taxpayer's expense.'",
+        "C": "The Facilitator/Timer (Social Goal: The Synthesizer): Merges views with explicit categorization. Proposes solutions through two lenses: **'Acoustic Isolation'** (using soundproof pods or zoned architecture) and **'Intergenerational Connectivity'**. Suggests that the library should act as an **'Intergenerational Hub'** where youth and the elderly can interact through both digital and physical mediums.",
+        "D": "The AI Examiner instructions: Look for Semantic Analysis where students signpost their arguments (Sociological, Academic, Logistical, Ethical). Specifically check for: 'Core Mission vs. Modern Relevance', 'The Digital Divide', and 'Commodification of Public Space'."
+    },
+    "target_vocabulary": [
+        "Community hub",
+        "Digital literacy",
+        "Sanctuary of silence",
+        "Multifaceted space",
+        "Knowledge repository",
+        "Acoustic isolation",
+        "Commodification of space",
+        "Digital divide",
+        "Intellectual curiosity",
+        "Intergenerational hub",
+        "Social inclusion",
+        "Equitable access",
+        "Multipurpose facility",
+        "Prerequisite",
+        "Diminish"
+    ],
+    "individual_response_questions": [
+        "When was the last time you went to a library?",
+        "Do you prefer E-books or physical books? Why?",
+        "If your school library decided to sell all its physical books and become a 100% digital resource center, would you support it?",
+        "Do you think libraries are still essential for promoting social equality in our city?"
+    ]
+}

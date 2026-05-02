@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "HKDSE Paper 3: Micro-Living and Wellbeing (Elite 2026 Edition)",
+    "title": "Micro-Living and Wellbeing",
     "topic": "Designing human-scale spaces in tiny apartments; mental health.",
     "difficulty": "Level 5** Authentic (High Stamina / 2026 Edition)",
     "total_marks_part_a": 55,
@@ -627,17 +627,38 @@
           "wordCount": 300,
           "grading_rubric": {
             "content_points": [
-              { "point": "Acknowledge the 'coffin' feeling/low ceiling (Doc 3)", "mark": 1 },
-              { "point": "Mention the 3.5m height mandate in future (Doc 5, 6)", "mark": 1 },
-              { "point": "Explain HEPA-filtration for air flow (Doc 2, 5)", "mark": 1 },
-              { "point": "Mention mandatory window ratios (Doc 10)", "mark": 1 },
-              { "point": "Free and Trilingual InnerSpace HK app (Audio)", "mark": 1 }
+              {
+                "point": "Acknowledge the 'coffin' feeling/low ceiling (Doc 3)",
+                "mark": 1
+              },
+              {
+                "point": "Mention the 3.5m height mandate in future (Doc 5, 6)",
+                "mark": 1
+              },
+              {
+                "point": "Explain HEPA-filtration for air flow (Doc 2, 5)",
+                "mark": 1
+              },
+              {
+                "point": "Mention mandatory window ratios (Doc 10)",
+                "mark": 1
+              },
+              {
+                "point": "Free and Trilingual InnerSpace HK app (Audio)",
+                "mark": 1
+              }
             ],
             "tone": "Empathetic and Informative",
             "relevance_penalty": "Deduct 0.5 for 2024 archive data",
             "deductions": [
-              { "condition": "Citing 35sqm size or 75% satisfaction from 2024 Archive", "penalty": 0.5 },
-              { "condition": "Mentioning lift waiting times (Doc 7)", "penalty": 0.5 }
+              {
+                "condition": "Citing 35sqm size or 75% satisfaction from 2024 Archive",
+                "penalty": 0.5
+              },
+              {
+                "condition": "Mentioning lift waiting times (Doc 7)",
+                "penalty": 0.5
+              }
             ]
           }
         },
@@ -743,15 +764,30 @@
           "wordCount": 175,
           "grading_rubric": {
             "content_points": [
-              { "point": "Zen-Pod price advantage (15% below market) (Doc 2)", "mark": 1 },
-              { "point": "USE SLOGAN: 'Room to Breathe' (Audio)", "mark": 1 },
-              { "point": "USE HASHTAG: #BreathableHongKong (Audio)", "mark": 1 },
-              { "point": "MENTION: High-density memory foam / Ergonomic Cushioning (Audio)", "mark": 2 }
+              {
+                "point": "Zen-Pod price advantage (15% below market) (Doc 2)",
+                "mark": 1
+              },
+              {
+                "point": "USE SLOGAN: 'Room to Breathe' (Audio)",
+                "mark": 1
+              },
+              {
+                "point": "USE HASHTAG: #BreathableHongKong (Audio)",
+                "mark": 1
+              },
+              {
+                "point": "MENTION: High-density memory foam / Ergonomic Cushioning (Audio)",
+                "mark": 2
+              }
             ],
             "tone": "Modern/Supportive",
             "relevance_penalty": "Strict -0.5 for 2024 data",
             "deductions": [
-              { "condition": "Citing 75% satisfaction from 2024", "penalty": 0.5 }
+              {
+                "condition": "Citing 75% satisfaction from 2024",
+                "penalty": 0.5
+              }
             ]
           }
         }

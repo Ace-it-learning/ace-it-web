@@ -1,0 +1,42 @@
+{
+    "id": "Speaking_Digital_Detox_2026",
+    "title": "The 'Digital Detox' Holiday",
+    "source": "Adapted from a lifestyle column in the 'South China Morning Post' (April 2026).",
+    "topic_description": "A travel agency has introduced a series of 'No-Wi-Fi' retreats where guests are required to surrender their smartphones and other electronic devices upon check-in. These holidays, aimed at combating digital burnout, have seen a surprising surge in popularity, despite—or perhaps because of—the high cost and the mandatory disconnection from the digital world.",
+    "discussion_points": [
+        "The reasons why people are increasingly willing to pay a premium to be disconnected from the internet.",
+        "The psychological and logistical difficulties of surviving 48 hours without a smartphone in the modern world.",
+        "Whether a 'Digital Detox' should be integrated as a mandatory part of the secondary school curriculum.",
+        "Any other related ideas you think are important."
+    ],
+    "candidates": {
+        "A": "The Agreement/Linker (Social Goal: The Elaborator): Focuses on the mental health benefits. Uses Signposting Phrases like 'From a psychological perspective, this is a necessary escape from information overload...'. Mentions 'tech-free glamping' in HK country parks. **Safety Distractor Prompt**: A should raise the question: 'While the disconnection is great, what happens if there is an emergency during a remote tech-free hike? How do we ensure guest safety?'",
+        "B": "The Counter/Nuance (Social Goal: The Pragmatist): Highlights anxiety and impracticality. Uses Signposting Phrases like 'If we look at this from a logistical perspective...'. **Digital Literacy Argument**: Regarding the school curriculum, B should argue: 'Shouldn't schools focus on digital literacy and teaching us to manage notifications responsibly rather than just banning phones for 48 hours? A detox is a temporary fix, but education should provide a long-term solution.'",
+        "C": "The Facilitator/Timer (Social Goal: The Synthesizer): Merges views with explicit categorization. Uses Signposting Phrases like 'Candidate A values the serenity, while Candidate B worries about the logistical tether. If we categorize our approach into \"total disconnection\" and \"managed usage,\" could we find a sustainable model?' Ensures the group addresses the safety concerns raised by A.",
+        "D": "The AI Examiner instructions: Look for Semantic Analysis where students signpost their arguments (Psychological, Logistical, Educational, Social). Specifically check for concepts like 'Digital Literacy vs. Escapism' and 'Safety vs. Serenity'."
+    },
+    "target_vocabulary": [
+        "Digital dependency",
+        "Nomophobia",
+        "Information overload",
+        "Mental rejuvenation",
+        "Constant connectivity",
+        "Reclaim focus",
+        "Paradox of choice",
+        "Serenity",
+        "Unplug and unwind",
+        "Digital tether",
+        "Sensory overload",
+        "Psychological withdrawal",
+        "Digital literacy",
+        "Long-term sustainability",
+        "Emergency protocols",
+        "Escapism"
+    ],
+    "individual_response_questions": [
+        "Could you survive a day without your phone?",
+        "What do you do to relax?",
+        "If your school organized a 3-day 'Screen-Free' camp in a remote area, would you participate?",
+        "Do you think society has become too dependent on digital validation like 'likes' and comments?"
+    ]
+}

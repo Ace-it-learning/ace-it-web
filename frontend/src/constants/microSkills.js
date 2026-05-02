@@ -79,6 +79,11 @@ export const MICRO_SKILLS = {
         en: { name: 'Organization', desc: 'Coherence, paragraph structure, and transitions', outcome: 'Craft perfectly structured and cohesive essays' },
         zh: { name: '結構與銜接', desc: '連貫性、段落結構及過渡銜接', outcome: '打造結構嚴謹且邏輯連貫的專業文章' }
     },
+    writing_quest: {
+        en: { name: 'Writing Quest', desc: 'Master diverse writing genres through high-fidelity mission simulation.', outcome: 'Achieve Level 5** proficiency across all DSE writing formats.' },
+        zh: { name: '寫作任務', desc: '透過高擬真任務模擬，精通多種寫作文體。', outcome: '在所有 DSE 寫作格式中達到 5** 水準。' },
+        isIntegrated: true
+    },
 
     // LISTENING (HKEAA Target Pillars)
     listening_part_a: {
@@ -96,6 +101,11 @@ export const MICRO_SKILLS = {
     listening_organization: {
         en: { name: 'Organization', desc: 'Coherence and professional text formatting', outcome: 'Structure integrated tasks with elite formatting' },
         zh: { name: '文章結構', desc: '連貫性與專業文本格式編排', outcome: '以頂級排版和結構完成綜合任務' }
+    },
+    listening_quest: {
+        en: { name: 'Listening Quest', desc: 'Synthesize data file info and auditory clues for Paper 3 excellence.', outcome: 'Master integrated tasks with precision and speed.' },
+        zh: { name: '聆聽任務', desc: '綜合處理數據文件資訊與聽力重點，追求卷三卓越表現。', outcome: '以精確度和速度掌握綜合處理任務。' },
+        isIntegrated: true
     },
 
     // SPEAKING (HKEAA Target Pillars + Master Quest)

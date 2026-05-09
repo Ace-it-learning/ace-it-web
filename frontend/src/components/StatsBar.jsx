@@ -1,12 +1,16 @@
 import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Trophy, Clock } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
+import { useLanguage } from '../context/LanguageContext';
 import { useUserStats } from '../hooks/useUserStats';
 import { cn } from '../utils/cn';
 
 const StatsBar = () => {
     const { user } = useAuth();
     const { stats, mutate } = useUserStats();
+    const { t } = useLanguage();
+    const navigate = useNavigate();
 
     useEffect(() => {
         if (!user || !user.uid) return;
@@ -30,7 +34,7 @@ const StatsBar = () => {
                 {/* XP Bar Section */}
                 <div className="flex items-center gap-4 flex-1 w-full max-w-xl">
                     <div className="flex flex-col items-start gap-1">
-                        <span className="text-xs font-black text-gray-400 uppercase tracking-widest">XP Progress</span>
+                        <span className="text-xs font-black text-gray-400 uppercase tracking-widest">{t('stats.xp_progress')}</span>
                         <span className="text-lg font-bold text-gray-800">{stats?.currentStepXP || 0} <span className="text-xs text-gray-400 font-medium">/ {stats?.nextLevelXP || 100}</span></span>
                     </div>
 
@@ -50,7 +54,7 @@ const StatsBar = () => {
                         <Trophy className="w-5 h-5 text-yellow-500" />
                     </div>
                     <div className="flex flex-col">
-                        <span className="text-[10px] text-gray-400 uppercase tracking-widest font-bold">Current Tier</span>
+                        <span className="text-[10px] text-gray-400 uppercase tracking-widest font-bold">{t('stats.current_tier')}</span>
                         <span className="text-lg font-extrabold text-gray-800">LVL {stats?.level || 1}</span>
                     </div>
                 </div>
@@ -58,17 +62,17 @@ const StatsBar = () => {
                 {/* Action Buttons */}
                 <div className="flex items-center gap-3">
                     <button
-                        onClick={() => window.location.href = '/redemption'}
+                        onClick={() => navigate('/redemption')}
                         className="px-6 py-2.5 rounded-xl bg-electric-orange text-white text-xs font-bold hover:bg-orange-600 hover:shadow-[0_0_20px_rgba(255,102,0,0.4)] hover:scale-105 transition-all flex items-center gap-2 shadow-md"
                     >
-                        <span>🎁</span> Redeem
+                        <span>🎁</span> {t('stats.redeem')}
                     </button>
 
                     <button
-                        onClick={() => window.location.href = '/achievements'}
+                        onClick={() => navigate('/achievements')}
                         className="px-4 py-2.5 rounded-xl bg-white border border-gray-200 text-gray-600 text-xs font-bold hover:bg-gray-50 hover:text-gray-900 transition-all shadow-sm"
                     >
-                        Timeline
+                        {t('stats.timeline')}
                     </button>
                 </div>
             </div>

@@ -1,20 +1,9 @@
-const admin = require('firebase-admin');
 const UserProfileService = require('./UserProfileService');
 const GenerativeAIService = require('./GenerativeAIService');
 const speakingMockGradingAgent = require('../prompts/speakingMockGradingAgent');
+const CosmosStore = require('./CosmosStore');
 
 class SpeakingMockGradingService {
-    constructor() {
-        this._db = null;
-    }
-
-    get db() {
-        if (!this._db) {
-            this._db = admin.firestore();
-        }
-        return this._db;
-    }
-
     /**
      * MAIN ENTRY: Grade a full Speaking Mock
      */
@@ -63,7 +52,7 @@ class SpeakingMockGradingService {
                 type: 'speaking',
                 paperId: mockData.id,
                 title: mockData.title,
-                timestamp: admin.firestore.FieldValue.serverTimestamp(),
+                timestamp: new Date().toISOString(),
                 score: totalScore,
                 possibleScore: 28,
                 percentage: (totalScore / 28) * 100,
@@ -76,7 +65,7 @@ class SpeakingMockGradingService {
                 }
             };
 
-            const docRef = await this.db.collection('results').add(resultDoc);
+            const saved = await CosmosStore.addResult(uid, 'speaking', resultDoc);
             
             // Update user stats
             await this.updateUserStats(uid, totalScore, xpAwarded);
@@ -104,7 +93,7 @@ class SpeakingMockGradingService {
             }
 
             return {
-                id: docRef.id,
+                id: saved.id,
                 ...resultDoc
             };
 
@@ -135,20 +124,17 @@ class SpeakingMockGradingService {
     async updateUserStats(uid, score, xp) {
         if (!uid || uid === 'guest') return;
         try {
-            const userRef = this.db.collection('users').doc(uid);
-            await this.db.runTransaction(async (t) => {
-                const doc = await t.get(userRef);
-                if (!doc.exists) return;
-                
-                const data = doc.data();
-                const newXP = (data.xp || 0) + xp;
-                const newSpeakingPoints = (data.stats?.speaking_points || 0) + score;
-                
-                t.update(userRef, {
-                    xp: newXP,
-                    "stats.speaking_points": newSpeakingPoints,
-                    "stats.last_speaking_level": this.mapScoreToLevel(score)
-                });
+            const profile = await UserProfileService.getProfile(uid);
+            if (!profile) return;
+            const newXP = Number(profile.xp || 0) + xp;
+            const newSpeakingPoints = Number(profile.stats?.speaking_points || 0) + score;
+            await UserProfileService.createOrUpdateProfile(uid, {
+                xp: newXP,
+                stats: {
+                    ...(profile.stats || {}),
+                    speaking_points: newSpeakingPoints,
+                    last_speaking_level: this.mapScoreToLevel(score)
+                }
             });
         } catch (e) {
             console.warn("[SpeakingMockGrading] Failed to update user stats:", e.message);

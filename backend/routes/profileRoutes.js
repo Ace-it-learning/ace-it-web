@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
 const UserProfileService = require('../services/UserProfileService');
-const admin = require('firebase-admin');
 
 // GET /api/profile
 router.get('/profile', async (req, res) => {
@@ -165,15 +164,15 @@ router.get('/redemption/collection', async (req, res) => {
     const { uid } = req.query;
     if (!uid) return res.status(400).json({ error: "Missing uid" });
     try {
-        const inventorySnap = await admin.firestore().collection('users').doc(uid).collection('inventory').get();
+        const GamificationService = require('../services/GamificationService');
+        const progress = await GamificationService.getProgress(uid);
+        const inventory = progress?.inventory || [];
         const ownedCards = {};
-        inventorySnap.docs.forEach(d => {
-            const data = d.data();
-            ownedCards[data.itemId] = { ...data, docId: d.id };
+        inventory.forEach((item, idx) => {
+            if (item?.itemId) ownedCards[item.itemId] = { ...item, docId: item.id || `inv_${idx}` };
         });
 
-        const userDoc = await admin.firestore().collection('users').doc(uid).get();
-        const userData = userDoc.exists ? userDoc.data() : {};
+        const userData = await UserProfileService.getProfile(uid) || {};
         
         // Load all possible equipment slots
         const equippedStudent = userData.equipped_student_avatar || 's_aiden_v2';

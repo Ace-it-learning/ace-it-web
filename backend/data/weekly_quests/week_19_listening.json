@@ -1,0 +1,119 @@
+{
+  "id": "listening_weekly_19",
+  "title": "Sustainable Schools",
+  "description": "District sustainability sprint briefing; integrated planning for public dashboard launch.",
+  "topic": "Environment",
+  "type": "listening_mission",
+  "paper": "Listening",
+  "subject": "English",
+  "level": "5",
+  "is_approved": true,
+  "factory_template": false,
+  "created_at": { "_seconds": 1715760000, "_nanoseconds": 0 },
+  "prediction_metadata": {
+    "topic_name": "Week 19: Sustainable Schools",
+    "sub_topics": [
+      { "id": "st1", "name": "Standby loads", "category": "Key detail", "is_distractor": false, "hint": "Quantified projector waste." },
+      { "id": "st2", "name": "Dashboard embargo", "category": "Strategic capture", "is_distractor": false, "hint": "Who may share figures before launch." },
+      { "id": "st3", "name": "Grid solar export revenue", "category": "Distractor", "is_distractor": true, "hint": "Not confirmed in this briefing." },
+      { "id": "st4", "name": "Cooking oil litres", "category": "Key detail", "is_distractor": false, "hint": "Monthly recovery figure." }
+    ]
+  },
+  "sprint_data": {
+    "audio_transcript": "[SCENE START]\n[Quiet HVAC hum, chairs scrape]\nCoordinator: Thanks everyone—we’re locking the Green Audit Sprint for Term 2 before the EDB site visit. Update your briefing sheets now.\nCoordinator: First, baseline electricity—Building B averaged 68 kilowatt-hours last week per school day, not 72—please correct all slides.\nFacilities: Overnight standby is still brutal: 14 projectors left on standby last Tuesday alone; that’s equivalent to printing roughly 9,000 worksheets annually at our tariff assumption.\nCoordinator: Next, canteen—used cooking oil recycling is 220 litres this month, target 240 by month end.\nSustainability Rep: Paperless pilot—Form 5 English has moved 85 percent of worksheets to the LMS; Form 4 is only 40 percent, so we prioritise Form 4 training Wednesday after school.\nCoordinator: Dashboard—public board goes live Friday 4:30 p.m.; until then data is embargoed except to committee leads.\nParent Liaison: PTA wants alumni solar film for Block C, but Facilities says waterproofing must finish first—handover is now 21 October, not 14 October.\nCoordinator: Volunteers—we need twelve student auditors; training runs 4:10 p.m. to 5:40 p.m.; capacity 18 seats, 20 have signed—please confirm overflow handling.\nCoordinator: Escalation—if standby repeat offenders exceed 8 devices in a week, log Priority S to estates before Friday noon.\n[SCENE END]",
+    "tasks": [
+      {
+        "id": "t1_table",
+        "type": "TABLE",
+        "label": "Audit Sprint Facts",
+        "rows": [
+          { "label": "Corrected kWh (Building B, last week)", "answer": "68", "placeholder": "Number" },
+          { "label": "Used cooking oil this month (litres)", "answer": "220", "placeholder": "Number" },
+          { "label": "Paperless pilot (Form 5 English)", "answer": "85 percent", "placeholder": "Percent" },
+          { "label": "Public dashboard live", "answer": "Friday 4:30 p.m.", "placeholder": "Time" }
+        ]
+      },
+      {
+        "id": "t2_form",
+        "type": "FORM_FILLING",
+        "question": "Facilities and training details",
+        "fields": [
+          { "label": "Block C waterproofing handover", "answer": "21 October", "placeholder": "Date" },
+          { "label": "Auditor training window", "answer": "4:10 p.m. to 5:40 p.m.", "placeholder": "Time" },
+          { "label": "Max seats", "answer": "18", "placeholder": "Number" },
+          { "label": "Students signed", "answer": "20", "placeholder": "Number" }
+        ]
+      },
+      {
+        "id": "t3_mcq",
+        "type": "MCQ_BATCH",
+        "label": "Compliance Check",
+        "questions": [
+          {
+            "question": "Embargoed dashboard data means:",
+            "options": [
+              "A. Only committee leads may circulate figures before Friday 4:30 p.m.",
+              "B. Parents receive PDFs immediately.",
+              "C. Social posts are mandatory.",
+              "D. EPD bans sustainability."
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "Priority S logs when:",
+            "options": [
+              "A. PTA fundraises",
+              "B. more than eight standby repeat offenders in a week",
+              "C. paperless hits 40%",
+              "D. cooking oil hits target early"
+            ],
+            "answer": "B"
+          }
+        ]
+      }
+    ]
+  },
+  "integrated_data": {
+    "audio_transcript": "[INTEGRATED BRIEFING START]\nChair: Cross-school meeting on audit transparency—focus on uneven campuses.\nEPD Liaison: Correction: district average standby waste is 11 devices per week, not 8—update KPI language.\nPrincipal A: Small campuses need template dashboards even without sub-metering—proxy indicators are acceptable.\nPrincipal B: Parents confuse paperless with ‘no homework’—communications must stress workload is unchanged.\nStudent Rep: Use student narrators at Friday launch—not only numbers.\nChair: Measurable outcomes: (1) reduce standby counts by 20% in six weeks; (2) publish bilingual toolkits by week 8.\n[INTEGRATED BRIEFING END]",
+    "notetaking_fields": [
+      { "id": "nt1", "label": "KPI corrections", "placeholder": "Revised figures..." },
+      { "id": "nt2", "label": "Equity / small schools", "placeholder": "Proxy metrics..." },
+      { "id": "nt3", "label": "Communication risk", "placeholder": "Parent misconceptions..." }
+    ],
+    "data_file": [
+      {
+        "id": "df_em",
+        "title": "Internal Email: Dashboard Launch",
+        "type": "email",
+        "content": "From: Sustainability Office <so@school.hk>\\nTo: Committee Leads\\nSubject: embargo\\n\\nStaff-drive figures remain embargoed until Friday 4:30 p.m. Use corrected Building B kWh (68) in bilingual drafts.\\n\\nSustainability Office"
+      },
+      {
+        "id": "df_min",
+        "title": "Minutes Excerpt",
+        "type": "minutes",
+        "content": "District KPI: standby average 11 devices/week (corrected). Action: adopt Priority S after eight weekly repeat offenders before escalation to estates."
+      },
+      {
+        "id": "df_poster",
+        "title": "Staffroom Poster",
+        "type": "poster",
+        "content": "STANDBY CHECK\\nSwitch off projectors after use.\\nTarget: -20% standby incidents in six weeks."
+      }
+    ],
+    "writing_task": {
+      "instruction": "You are Student Sustainability Secretary. Write a memo to class teachers about Friday’s dashboard launch, corrected kWh, embargo rules, and how to reassure parents that paperless does not mean reduced homework.",
+      "format": "Formal memo",
+      "role_profile": "Student officer; formal institutional register.",
+      "word_count": "200-250",
+      "marking_criteria": "Content (figures/embargo), Language (accuracy, tone), Organisation (clear directives), Appropriacy (teacher audience)"
+    },
+    "marking_key": [
+      "State Friday 4:30 p.m. public launch and embargo until then.",
+      "Include corrected kWh 68 and standby district KPI 11 devices/week where relevant.",
+      "Explain Priority S threshold: >8 repeat standby offenders weekly before Friday noon.",
+      "Reassure parents: homework load unchanged; paperless = distribution mode.",
+      "Mention bilingual toolkits by week 8 / 20% standby reduction as outcomes.",
+      "Memo layout: identifiable context, concise actions."
+    ]
+  }
+}

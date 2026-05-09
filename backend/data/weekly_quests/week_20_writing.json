@@ -1,0 +1,31 @@
+{
+  "type": "WRITING",
+  "topic": "writing_weekly",
+  "title": "How households and school communities adapt behaviour after waste-disposal charging and stronger recycling expectations",
+  "reading_passage": "Role: Senior student editor.\nAudience: Readers of the school sustainability bulletin (students, parents).\nPurpose: Argue whether schools should mandate family practice logs for waste sorting to support municipal charging, or trust voluntary participation.\n\nStimulus: Estates report uneven compliance; some parents call logs intrusive. The EPD stresses education first.",
+  "conceptual_explanation": "Paper 2: balanced argument, audience sensitivity, HK policy literacy, cohesive devices.",
+  "key_points": ["Define mandate vs voluntary clearly.", "Address privacy and workload.", "Reference fair support for subdivided housing.", "Propose school-home communication that educates rather than polices."],
+  "marking_logic": {
+    "hkeaa_paper2_dimensions": {
+      "content": "Relevance and development of ideas; understanding of rhetorical context.",
+      "language": "Accuracy and range; appropriacy for mixed-age school audience.",
+      "organisation": "Coherence; paragraphing; introduction–conclusion alignment."
+    },
+    "full_marks_criteria": [
+      "Content: evaluates compulsory logs vs voluntary schemes with HK housing reality.",
+      "Language: controlled modal verbs; evaluative lexis (intrusive, proportionate, stigma).",
+      "Organisation: clear thesis; counterargument; evaluative close without repetition.",
+      "Audience: addresses parents and students without alienating either."
+    ],
+    "key_phrases": ["proportionate intervention", "stigma-free support", "upstream behaviour", "transparent metrics"],
+    "genre_requirements": { "format": "Opinion editorial / bulletin article", "essential_elements": ["Title", "Context hook", "Weighed argument", "Actionable recommendation"], "tone": "Measured persuasive" }
+  },
+  "interactive_tasks": [
+    { "id": "lvl_4", "type": "MODEL_ANSWER", "question": "Model Answer (Level 4)", "answer": "Waste Logs: Good or Bad?\n\nMany estates now have waste charging. Our school thinks about asking families to write logs about sorting. Some parents say this is too much work.\n\nI think logs can help us learn habits, but they may make tired families angry. If we do logs, they should be simple and not every day.\n\nSchools should encourage sorting by education, not by forcing parents. Maybe we can have workshops instead of strict logs.\n\nIn conclusion, I prefer voluntary participation first and see the results.", "explanation": "Clear position; basic linking; Limited range—Level 4." },
+    { "id": "lvl_5", "type": "MODEL_ANSWER", "question": "Model Answer (Level 5)", "answer": "Logs That Teach, Not Shame\n\nMunicipal charging has turned our rubbish bags into receipts of civic behaviour. Mandating family waste logs could deepen habits—or breed resentment if treated as surveillance homework.\n\nVoluntary pilots with anonymised cohort data already show promise: students compare diversion trends without publishing which flat forgot labels. Compulsion should wait until estates distribute subsidised bag bundles and multilingual pictorial cards.\n\nIf logs arrive, anonymise, digitise lightly, and pair every tick-box with a one-page ‘why this bin’ rationale. Schools educate upstream; estates supply logistics. Anything else risks blaming cramped kitchens for policy designed for detached houses.", "explanation": "Structured; HK specifics; hedging—Level 5." },
+    { "id": "lvl_5s", "type": "MODEL_ANSWER", "question": "Model Answer (Level 5*)", "answer": "Measurement Without Moral Panic\n\nAccountability matters, but dignity matters too. Logs can scaffold reflection if framed as collective science—how our estate’s curve shifts—not as a parent report card.\n\nThe school’s role is translation: turn EPD guidelines into doable scripts for subdivided flats—rinse, drain, compress—rather than pristine Pinterest kitchens.\n\nRecommend a staged mandate: first term voluntary dashboards; second term opt-in mentoring; only then consider light-touch household attestations for senior forms with consent protocols.", "explanation": "Ethical nuance; staged policy—high 5*." },
+    { "id": "lvl_5ss", "type": "MODEL_ANSWER", "question": "Model Answer (Level 5**)", "answer": "The Ledger We Choose to Keep\n\nPolicy asks households to weigh wrappers; schools must weigh ethics. A log is not intrinsically coercive—paperwork becomes punitive only when we forget why we asked for it: to make waste legible, not families transparent.\n\nI defend optional, anonymised logging tethered to tangible support: compost demos at kai-tak pop-ups, mobile bag dispensers, peer translators in Nepali and Bahasa. Pair every quantitative field with narrative space—‘what blocked you today?’—so stress surfaces as data, not discipline referrals.\n\nIf compulsion ever arrives, let it be collective: block-level goals co-signed by MCs and parent reps, not student homework. Otherwise schools risk exporting municipal failure into family shame—and calling it education.", "explanation": "Dense metaphor; systemic ethics; policy choreography—5**." }
+  ],
+  "success_feedback": "Use the models to calibrate Content/Language/Organisation trade-offs.",
+  "suggested_next_steps": ["Highlight three cohesive devices in the Level 5** sample.", "Draft your own counterargument paragraph."]
+}

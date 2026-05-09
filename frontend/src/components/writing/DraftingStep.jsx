@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useAuth } from '../../context/AuthContext';
 import { Wand2, AlertTriangle, ArrowRight, BookOpen, Zap, Loader2, MousePointerClick } from 'lucide-react';
+import { isCheatEnabled } from '../../utils/devAccess';
 
 const DraftingStep = ({ topic, textType, brainstormPoints, initialContent, onUpdate, onNext, pillarData }) => {
     const [content, setContent] = useState(initialContent || "");
@@ -42,8 +43,8 @@ const DraftingStep = ({ topic, textType, brainstormPoints, initialContent, onUpd
     };
 
     // Admin Cheat Feature
-    const { user } = useAuth();
-    const isAdmin = user?.email === 'fungtam@gmail.com';
+    const { user, profile } = useAuth();
+    const isAdmin = isCheatEnabled(user, profile);
     const [cheatLevel, setCheatLevel] = useState("5**");
 
     const handleCheatGenerate = async () => {

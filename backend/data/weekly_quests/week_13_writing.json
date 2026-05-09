@@ -11,6 +11,27 @@
     "Demonstrate a deep understanding of Hong Kong youth culture and its connection to Canto-pop.",
     "Use sophisticated language and a compelling writing style to engage your audience."
   ],
+  "marking_logic": {
+    "full_marks_criteria": [
+      "Mentions specific contemporary artists (e.g., Mirror, MC Cheung, Panther Chan)",
+      "Discusses the link between Canto-pop and local cultural identity/pride",
+      "Addresses counterarguments (e.g., commercialization or superficiality)",
+      "Uses a persuasive, journalistic tone appropriate for a school magazine"
+    ],
+    "key_phrases": [
+      "cultural resonance",
+      "sense of belonging",
+      "socio-political undertones",
+      "localism",
+      "commercialization",
+      "superficiality"
+    ],
+    "genre_requirements": {
+      "format": "Opinion Piece / Feature Article",
+      "essential_elements": ["Catchy Title", "Lead-in/Hook", "Stance", "Conclusion"],
+      "tone": "Persuasive and engaging"
+    }
+  },
   "interactive_tasks": [
     {
       "id": "lvl_4",

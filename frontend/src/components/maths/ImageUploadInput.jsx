@@ -1,7 +1,5 @@
 import React, { useState, useRef } from 'react';
 import { Camera, X, Loader2, ImageIcon } from 'lucide-react';
-import { storage } from '../../firebase';
-import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 
 const MAX_FILE_SIZE = 10 * 1024 * 1024; // 10MB
 const ACCEPTED_TYPES = ['image/jpeg', 'image/png', 'image/heic', 'image/heif', 'image/webp'];

@@ -1,0 +1,212 @@
+[
+  {
+    "file": "grammar_accuracy_pronoun_level_7.json",
+    "task_idx": 1,
+    "sentence": "She is far more experienced than he .",
+    "picked": [
+      "."
+    ],
+    "issues": [
+      "Picked punctuation: '.'"
+    ],
+    "explanation": "In formal comparison, 'he' is preferred as it implies 'than he is'."
+  },
+  {
+    "file": "grammar_elite_nominal_level_3.json",
+    "task_idx": 0,
+    "sentence": "I believe that technology can improve our lives .",
+    "picked": [
+      "that",
+      "technology",
+      "can",
+      "improve",
+      "our",
+      "lives"
+    ],
+    "issues": [
+      "High number of picked tokens (6) - check if intentional"
+    ],
+    "explanation": "The nominal clause 'that technology can improve our lives' is the object of 'believe'."
+  },
+  {
+    "file": "grammar_elite_nominal_level_3.json",
+    "task_idx": 3,
+    "sentence": "That she is only ten years old is truly surprising .",
+    "picked": [
+      "That",
+      "she",
+      "is",
+      "only",
+      "ten",
+      "years",
+      "old"
+    ],
+    "issues": [
+      "High number of picked tokens (7) - check if intentional"
+    ],
+    "explanation": "'That she is only ten years old' is a nominal clause acting as the subject."
+  },
+  {
+    "file": "grammar_elite_nominal_level_3.json",
+    "task_idx": 4,
+    "sentence": "He demonstrated how to solve the complex equation .",
+    "picked": [
+      "how",
+      "to",
+      "solve",
+      "the",
+      "complex",
+      "equation"
+    ],
+    "issues": [
+      "High number of picked tokens (6) - check if intentional"
+    ],
+    "explanation": "The clause 'how to solve the complex equation' is the nominal object."
+  },
+  {
+    "file": "grammar_elite_nominal_level_4.json",
+    "task_idx": 4,
+    "sentence": "Whether he joins us or not will not affect the outcome .",
+    "picked": [
+      "Whether",
+      "he",
+      "joins",
+      "us",
+      "or",
+      "not"
+    ],
+    "issues": [
+      "High number of picked tokens (6) - check if intentional"
+    ],
+    "explanation": "The 'Whether-clause' is a complex nominal subject."
+  },
+  {
+    "file": "grammar_elite_nominal_level_5.json",
+    "task_idx": 2,
+    "sentence": "They are arguing over whether the rules should be changed .",
+    "picked": [
+      "whether",
+      "the",
+      "rules",
+      "should",
+      "be",
+      "changed"
+    ],
+    "issues": [
+      "High number of picked tokens (6) - check if intentional"
+    ],
+    "explanation": "A nominal clause acting as the object of the preposition 'over'."
+  },
+  {
+    "file": "grammar_elite_nominal_level_5.json",
+    "task_idx": 3,
+    "sentence": "What struck me was how quickly he reacted to the danger .",
+    "picked": [
+      "What",
+      "struck",
+      "me",
+      "how",
+      "quickly",
+      "he",
+      "reacted",
+      "to",
+      "the",
+      "danger"
+    ],
+    "issues": [
+      "High number of picked tokens (10) - check if intentional"
+    ],
+    "explanation": "This sentence contains two nominal clauses: a 'What-clause' as subject and a 'How-clause' as complement."
+  },
+  {
+    "file": "grammar_elite_nominal_level_7.json",
+    "task_idx": 1,
+    "sentence": "She made it clear that she would not tolerate any disrespect .",
+    "picked": [
+      "that",
+      "she",
+      "would",
+      "not",
+      "tolerate",
+      "any",
+      "disrespect"
+    ],
+    "issues": [
+      "High number of picked tokens (7) - check if intentional"
+    ],
+    "explanation": "A nominal clause acting as the real object, with 'it' as the dummy object."
+  },
+  {
+    "file": "grammar_elite_nominal_level_7.json",
+    "task_idx": 3,
+    "sentence": "What is most concerning is the fact that nobody seems to care .",
+    "picked": [
+      "What",
+      "is",
+      "most",
+      "concerning",
+      "that",
+      "nobody",
+      "seems",
+      "to",
+      "care"
+    ],
+    "issues": [
+      "High number of picked tokens (9) - check if intentional"
+    ],
+    "explanation": "This sentence contains a 'What-clause' subject and an appositive 'that-clause'."
+  },
+  {
+    "file": "grammar_elite_nominal_level_7.json",
+    "task_idx": 4,
+    "sentence": "How he managed to escape without being seen is still a mystery .",
+    "picked": [
+      "How",
+      "he",
+      "managed",
+      "to",
+      "escape",
+      "without",
+      "being",
+      "seen"
+    ],
+    "issues": [
+      "High number of picked tokens (8) - check if intentional"
+    ],
+    "explanation": "A complex nominal clause acting as the subject of 'is'."
+  },
+  {
+    "file": "grammar_elite_passive_level_7.json",
+    "task_idx": 3,
+    "sentence": "The ancient artifact is rumored to have been found in a remote cave .",
+    "picked": [
+      "is",
+      "rumored",
+      "to",
+      "have",
+      "been",
+      "found"
+    ],
+    "issues": [
+      "High number of picked tokens (6) - check if intentional"
+    ],
+    "explanation": "A complex passive reporting a past discovery."
+  },
+  {
+    "file": "grammar_elite_passive_level_7.json",
+    "task_idx": 4,
+    "sentence": "Plans are understood to be being drafted as we speak .",
+    "picked": [
+      "are",
+      "understood",
+      "to",
+      "be",
+      "being",
+      "drafted"
+    ],
+    "issues": [
+      "High number of picked tokens (6) - check if intentional"
+    ],
+    "explanation": "A rare but highly sophisticated 'Double Passive' involving an ongoing action ('to be being drafted')."
+  }
+]

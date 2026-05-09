@@ -4,7 +4,7 @@ import { X, FileText, ShieldAlert } from 'lucide-react';
 import { useLanguage } from '../../context/LanguageContext';
 
 const LegalModal = ({ isOpen, onClose, type }) => {
-    const { t } = useLanguage();
+    const { t, language } = useLanguage();
     
     // type can be 'terms' or 'disclaimer'
     const title = type === 'terms' ? t('legal.terms_title') : t('legal.disclaimer_title');
@@ -38,26 +38,34 @@ const LegalModal = ({ isOpen, onClose, type }) => {
                         </div>
 
                         {/* Scrollable Body */}
-                        <div className="p-8 md:p-12 overflow-y-auto custom-scrollbar bg-white dark:bg-[#1a110a] flex-1">
-                            <div className="space-y-10 max-w-3xl mx-auto">
-                                {Array.isArray(content) && content.map((section, index) => (
-                                    <div key={index} className="space-y-4 group">
-                                        <h4 className="text-xs font-black uppercase tracking-[0.2em] text-primary dark:text-electric-orange/80 group-hover:text-electric-orange transition-colors">
-                                            {section.title}
-                                        </h4>
-                                        <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-[15px] md:text-base text-justify subpixel-antialiased">
-                                            {section.content}
+                        <div className={`overflow-y-auto custom-scrollbar bg-white dark:bg-[#1a110a] flex-1 ${type === 'terms' ? 'p-0' : 'p-8 md:p-12'}`}>
+                            {type === 'terms' ? (
+                                <iframe 
+                                    src={`/terms_${language}.html`} 
+                                    className="w-full h-full border-none min-h-[60vh]"
+                                    title="Terms and Conditions"
+                                />
+                            ) : (
+                                <div className="space-y-10 max-w-3xl mx-auto">
+                                    {Array.isArray(content) && content.map((section, index) => (
+                                        <div key={index} className="space-y-4 group">
+                                            <h4 className="text-xs font-black uppercase tracking-[0.2em] text-primary dark:text-electric-orange/80 group-hover:text-electric-orange transition-colors">
+                                                {section.title}
+                                            </h4>
+                                            <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-[15px] md:text-base text-justify subpixel-antialiased">
+                                                {section.content}
+                                            </p>
+                                        </div>
+                                    ))}
+
+                                    {/* Additional standard footer-in-modal text if needed */}
+                                    <div className="mt-16 pt-8 border-t border-gray-100 dark:border-white/5 text-center">
+                                        <p className="text-[10px] uppercase tracking-widest text-gray-400 font-bold">
+                                            {t('footer.copyright')}
                                         </p>
                                     </div>
-                                ))}
-                            </div>
-
-                            {/* Additional standard footer-in-modal text if needed */}
-                            <div className="mt-16 pt-8 border-t border-gray-100 dark:border-white/5 text-center">
-                                <p className="text-[10px] uppercase tracking-widest text-gray-400 font-bold">
-                                    {t('footer.copyright')}
-                                </p>
-                            </div>
+                                </div>
+                            )}
                         </div>
 
                         {/* Action Area */}

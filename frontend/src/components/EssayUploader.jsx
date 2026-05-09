@@ -72,7 +72,9 @@ const EssayUploader = ({ onConfirm, onCancel }) => {
 
                         if (!response.ok) {
                             const errorData = await response.json().catch(() => ({}));
-                            throw new Error(errorData.details || errorData.error || "Upload failed");
+                            throw new Error(
+                                errorData.details || errorData.error || `Upload failed (${response.status})`
+                            );
                         }
                         const data = await response.json();
                         setTranscription(data.transcription);

@@ -7,6 +7,7 @@ import { useAvatar } from '../../context/AvatarContext';
 import { MICRO_SKILLS, getSkillName, getSkillDesc, getSkillOutcome, getPaperBySkill, getSkillsByPaper } from '../../constants/microSkills';
 import { getMathSkillName, getSkillsByCategory } from '../../constants/mathMicroSkills';
 import { calculateTier, getTierMetadata, getMasteryStats } from '../../utils/masteryUtils';
+import { LISTENING_MISSION_SHELLS } from '../../data/listeningMissionShells';
 
 const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
     const { user, profile } = useAuth();
@@ -25,7 +26,7 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
     const [paperFilter, setPaperFilter] = useState(initialFilter); // 'ALL' | 'READING' | 'WRITING' | 'LISTENING' | 'SPEAKING'
     const [selectedLevels, setSelectedLevels] = useState({}); // skillId -> level
     const [weeklyQuestStatus, setWeeklyQuestStatus] = useState({ completed: false });
-    const [listeningMissions, setListeningMissions] = useState([]);
+    const [listeningMissions, setListeningMissions] = useState(LISTENING_MISSION_SHELLS);
     const [writingMissions, setWritingMissions] = useState([]);
     const [isWritingLoading, setIsWritingLoading] = useState(false);
     const [weeklyTheme, setWeeklyTheme] = useState(null);
@@ -42,10 +43,20 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                 const res = await fetch(`${API_BASE}/lab/listening`);
                 if (res.ok) {
                     const data = await res.json();
-                    setListeningMissions(data);
+                    const byId = new Map((data || []).map((m) => [m.id, m]));
+                    // Canonical roadmap uses 20 shells; merge backend fields when IDs match.
+                    const merged = LISTENING_MISSION_SHELLS.map((shell) => ({
+                        ...shell,
+                        ...(byId.get(shell.id) || {})
+                    }));
+                    setListeningMissions(merged);
+                } else {
+                    // If API fails (emulator/service hiccup), still render canonical shells.
+                    setListeningMissions(LISTENING_MISSION_SHELLS);
                 }
             } catch (e) {
                 console.error("Failed to fetch listening missions", e);
+                setListeningMissions(LISTENING_MISSION_SHELLS);
             }
         };
 
@@ -142,6 +153,13 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
         }
     }, [user, isOpen]);
 
+    // When opening from navigation (e.g. Back from Listening briefing), apply the requested paper tab.
+    useEffect(() => {
+        if (isOpen && initialFilter) {
+            setPaperFilter(initialFilter);
+        }
+    }, [isOpen, initialFilter]);
+
     // formatDSELevel is defined but never used - fixing by using it or removing it.
     // Actually it's a helper that might be useful so I'll keep it but ensure it doesn't cause errors.
 
@@ -171,6 +189,64 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
         } finally {
             setRegenerating(false);
         }
+    };
+
+    const normalizeMissionLevel = (lvl) => {
+        if (lvl === undefined || lvl === null) return '5';
+        const s = String(lvl).trim();
+        if (s.includes('5**') || s === '7' || s.toLowerCase().includes('elite')) return '7';
+        if (s.includes('5*') || s === '6') return '6';
+        if (s === '5' || s.toLowerCase().includes('dse')) return '5';
+        if (s === '4' || s.toLowerCase().includes('medium')) return '4';
+        if (s === '3' || s.toLowerCase().includes('easy')) return '3';
+        return '5';
+    };
+
+    const getDifficultyMeta = (lvl) => {
+        const normalized = normalizeMissionLevel(lvl);
+        if (normalized === '7') return { label: 'Elite / Advanced (Level 5**)', className: 'bg-fuchsia-50 text-fuchsia-700 border-fuchsia-100' };
+        if (normalized === '5') return { label: 'DSE Standard (Level 5)', className: 'bg-blue-50 text-blue-700 border-blue-100' };
+        if (normalized === '4') return { label: 'Medium (Level 4)', className: 'bg-amber-50 text-amber-700 border-amber-100' };
+        return { label: 'Easy (Level 3)', className: 'bg-emerald-50 text-emerald-700 border-emerald-100' };
+    };
+
+    /** When a mission has no `outcome` / `learningOutcome`, derive text from title (and genre for writing). */
+    const listeningQuestOutcome = (mission) => {
+        const explicit = mission?.outcome || mission?.learningOutcome;
+        if (explicit) return explicit;
+        const title = (mission?.title || 'this listening scenario').trim();
+        const desc = (mission?.description || '').replace(/\s+/g, ' ').trim();
+        const lead = desc ? `${desc.split(/[.!?]/)[0]?.trim().slice(0, 90) || desc.slice(0, 90)}.` : '';
+        const flavours = [
+            (t, l) =>
+                `For “${t}”, sharpen strategic capture from the recording, control distractors, and integrate findings with the Paper 3 data file${l ? ` (${l.slice(0, 70)}…)` : ''}.`,
+            (t, l) =>
+                `Target “${t}”: disciplined note-taking under time pressure, then accurate synthesis of audio and visual/text inserts${l ? ` — ${l.slice(0, 65)}…` : ''}.`,
+            (t) =>
+                `Build listening stamina and selective attention on “${t}”, aligning marked details with integrated-task expectations for Paper 3.`,
+        ];
+        const i = title.length % flavours.length;
+        return flavours[i](title, lead);
+    };
+
+    const writingQuestOutcome = (mission) => {
+        const explicit = mission?.outcome || mission?.learningOutcome;
+        if (explicit) return explicit;
+        const title = (mission?.title || 'this writing prompt').trim();
+        const genre = (mission?.genre || '').trim();
+        const prompt = (mission?.prompt || '').replace(/\s+/g, ' ').trim();
+        const angle = prompt ? prompt.split(/[.!?\n]/)[0]?.trim().slice(0, 85) : '';
+        const genreTag = genre ? ` (${genre})` : '';
+        const flavours = [
+            (t, g, a) =>
+                `Answer “${t}”${g}: thesis-led development, audience-appropriate tone, and language range matched to the HKDSE Paper 2 task${a ? ` — ${a}…` : ''}.`,
+            (t, g, a) =>
+                `Craft a controlled Paper 2 response on “${t}”${g}: cohesive organisation, purposeful paragraphs, and examiner-readable argumentation${a ? `; context: ${a}…` : '.'}`,
+            (t, g) =>
+                `Demonstrate genre control for “${t}”${g}: register, cohesion, and evaluative language suited to the specified form and reader.`,
+        ];
+        const i = (title.length + genre.length) % flavours.length;
+        return flavours[i](title, genreTag, angle);
     };
 
     // --- ROBUST GATING CALCULATION (PRE-FILTER) ---
@@ -576,17 +652,17 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                         <X className="w-7 h-7" />
                     </button>
 
-                    <div className="relative z-10 text-white grid grid-cols-1 md:grid-cols-3 items-center gap-6">
-                        <div className="text-center md:text-left">
-                            <h2 className="text-3xl font-black leading-tight tracking-tight mb-1">{subjectInfo.title}</h2>
-                            <p className="text-white/90 text-sm font-medium opacity-90">
-                                {t('roadmap.complete_quest_xp')}
-                            </p>
-                        </div>
+                    <div className="relative z-10 text-white flex flex-col gap-5 pr-12 sm:pr-14">
+                        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-5 w-full min-w-0">
+                            <div className="text-left min-w-0 lg:max-w-[min(100%,28rem)]">
+                                <h2 className="text-xl md:text-2xl font-black leading-tight tracking-tight mb-0.5">{subjectInfo.title}</h2>
+                                <p className="text-white/85 text-[10px] md:text-xs font-medium">
+                                    {t('roadmap.complete_quest_xp')}
+                                </p>
+                            </div>
 
-                        {/* Tab Switcher - Centered & Larger & Energetic Blue */}
-                        <div className="flex justify-center">
-                            <div className="flex p-1.5 bg-white/20 backdrop-blur-md rounded-xl border border-white/30 shadow-inner">
+                            {/* Tab buttons: spaced from title; no outer “pill” ring; inactive = dark tint (not peach-on-orange) */}
+                            <div className="flex flex-wrap gap-2 lg:justify-end lg:flex-shrink-0">
                                 {[
                                     { id: 'WEEKLY', label: t('roadmap.targeted_growth'), icon: Clock },
                                     { id: 'GRAMMAR', label: t('roadmap.grammar_lab'), icon: Layers },
@@ -595,23 +671,21 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                                     <button
                                         key={tab.id}
                                         onClick={() => setActiveTab(tab.id)}
+                                        type="button"
                                         className={`
-                                            flex items-center gap-2 px-6 py-2.5 rounded-lg text-sm font-black transition-all duration-300
+                                            flex items-center gap-2 px-6 sm:px-8 py-2.5 rounded-xl text-sm font-black transition-all duration-300 whitespace-nowrap border-0
                                             ${activeTab === tab.id
-                                                ? 'bg-[#007AFF] text-white shadow-lg scale-105'
-                                                : 'text-white hover:bg-white/10'
+                                                ? 'bg-[#007AFF] text-white shadow-lg ring-2 ring-white/30'
+                                                : 'bg-black/35 text-white hover:bg-black/45 hover:text-white'
                                             }
                                         `}
                                     >
-                                        <tab.icon className="w-4 h-4" />
+                                        <tab.icon className="w-4 h-4 shrink-0" />
                                         {tab.label}
                                     </button>
                                 ))}
                             </div>
                         </div>
-
-                        {/* Empty spacer for balancing the grid and avoiding close button overlap */}
-                        <div className="hidden md:block w-full h-px" />
                     </div>
                 </div>
 
@@ -671,14 +745,13 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                                                             } 
                                                         });
                                                     } else {
-                                                        const currentLevel = Math.max(3, Math.min(5, Math.ceil(getAggregatedLevel(quest.topic === 'writing_weekly' ? 'writing_genre_opinion' : quest.topic.replace('_weekly', '_general')) || 3)));
                                                         handleTaskClick({
                                                             id: quest.id,
                                                             type: quest.type,
                                                             topic: quest.topic,
                                                             title: quest.title,
                                                             xp: 250,
-                                                            level: String(currentLevel),
+                                                            level: '5',
                                                             isWriting: quest.id === 'weekly_writing' || quest.topic?.includes('writing'),
                                                             isWeekly: true
                                                         });
@@ -714,19 +787,18 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
 
                                 {/* Targeted Growth Strategy - Paper/Area Mastery Tracks */}
                                 <div className="mb-10">
-                                    <div className="flex items-center justify-between mb-6">
-                                        <div className="flex items-center gap-2">
-                                            <Sparkles className="w-6 h-6 text-indigo-600" />
-                                            <h3 className="line-clamp-1 font-black text-slate-800 uppercase tracking-widest">
-                                                Target Growth Strategy
-                                            </h3>
-                                        </div>
+                                    <div className="flex flex-wrap items-center gap-3 sm:gap-4 mb-6">
+                                        <Sparkles className="w-6 h-6 text-indigo-600 shrink-0" />
+                                        <h3 className="font-black text-slate-800 uppercase tracking-widest text-sm sm:text-base">
+                                            {t('roadmap.target_growth_for_you')}
+                                        </h3>
                                         <button 
                                             onClick={handleOpenMastery}
-                                            className="px-4 py-1.5 bg-cyan-50 text-[#00aeef] border border-cyan-100 rounded-full text-[10px] font-black uppercase tracking-wider flex items-center gap-2 hover:bg-[#00aeef] hover:text-white transition-all shadow-sm"
+                                            type="button"
+                                            className="px-5 sm:px-6 py-2.5 sm:py-3 bg-cyan-50 text-[#00aeef] border border-cyan-100 rounded-full text-xs sm:text-sm font-black uppercase tracking-wider flex items-center gap-2 hover:bg-[#00aeef] hover:text-white transition-all shadow-sm"
                                         >
-                                            <Compass className="w-3 h-3" />
-                                            Detailed Ability Radar
+                                            <Compass className="w-4 h-4 shrink-0" />
+                                            {t('roadmap.detailed_ability_radar')}
                                         </button>
                                     </div>
 
@@ -1009,7 +1081,7 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                                             { id: 'ALL', label: 'All Papers', icon: Layers },
                                             { id: 'READING', label: 'Reading', icon: BookOpen },
                                             { id: 'WRITING', label: 'Writing', icon: PenTool },
-                                            { id: 'LISTENING', label: 'Listening', icon: Mic },
+                                            { id: 'LISTENING', label: 'Listening', icon: Headphones },
                                             { id: 'SPEAKING', label: 'Speaking', icon: MessageSquare }
                                         ].map(filter => (
                                             <button
@@ -1043,15 +1115,8 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                                             {listeningMissions
                                                 .filter(m => m.title?.toLowerCase().includes(searchQuery.toLowerCase()))
                                                 .map((mission) => {
-                                                const currentSelected = (() => {
-                                                    const lvl = mission.level;
-                                                    if (lvl === 'Elite (5**)') return '7';
-                                                    if (lvl === 'Elite (5*)') return '6';
-                                                    if (lvl === 'DSE Standard' || lvl === '5') return '5';
-                                                    if (lvl === 'Medium' || lvl === '4') return '4';
-                                                    if (lvl === 'Easy' || lvl === '3' || lvl === 'HKDSE Level 3') return '3';
-                                                    return '5'; // Default to DSE Standard
-                                                })();
+                                                const currentSelected = normalizeMissionLevel(mission.level);
+                                                const difficulty = getDifficultyMeta(mission.level);
                                                 
                                                 const stats = getMasteryStats(currentSelected, false, false);
 
@@ -1075,26 +1140,30 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                                                         }}
                                                         className="group relative p-4 rounded-xl border-2 transition-all flex flex-col cursor-pointer bg-white border-slate-100 hover:border-rose-300 hover:shadow-md"
                                                     >
-                                                        <div className="flex justify-between items-start mb-2">
-                                                            <span className="px-2 py-0.5 rounded text-[9px] font-black uppercase tracking-wider bg-rose-50 text-rose-600">
+                                                        <div className="flex justify-between items-center gap-2 mb-2">
+                                                            <span className="px-2 py-0.5 rounded text-[9px] font-black uppercase tracking-wider bg-rose-50 text-rose-600 shrink-0">
                                                                 LISTENING
+                                                            </span>
+                                                            <span className={`px-2 py-0.5 rounded border text-[9px] font-black uppercase tracking-tight text-right max-w-[65%] leading-tight ${difficulty.className}`}>
+                                                                {difficulty.label}
                                                             </span>
                                                         </div>
 
-                                                        <h4 className="text-[15px] font-bold mb-1 transition-colors text-slate-800 line-clamp-1 group-hover:text-rose-600 flex items-center gap-2">
-                                                            {mission.title}
-                                                            {questLabGating.lockedIds.has(mission.id) && <Crown className="w-3.5 h-3.5 text-amber-500 fill-amber-500 shrink-0" />}
-                                                        </h4>
-                                                        <p className="text-[11px] text-slate-500 mb-3 line-clamp-2 leading-tight min-h-[2.4em]">
-                                                            {mission.description || "Synthesizing data files and auditory clues for Paper 3 proficiency."}
+                                                        <div className="flex justify-between items-start gap-2 mb-1">
+                                                            <h4 className="text-[15px] font-bold transition-colors text-slate-800 line-clamp-2 group-hover:text-rose-600 flex items-center gap-2 min-w-0 flex-1">
+                                                                {mission.title}
+                                                                {questLabGating.lockedIds.has(mission.id) && <Crown className="w-3.5 h-3.5 text-amber-500 fill-amber-500 shrink-0" />}
+                                                            </h4>
+                                                            <span className="text-xs font-bold text-rose-600 shrink-0">+{stats.xp} XP</span>
+                                                        </div>
+                                                        <p className="text-[13px] text-slate-600 mb-4 line-clamp-2 leading-snug">
+                                                            {mission.description || 'Synthesizing data files and auditory clues for Paper 3 proficiency.'}
                                                         </p>
-
-                                                        <div className="pt-3 border-t border-slate-50 mt-auto">
-                                                            <div className="flex items-center justify-between mb-2">
-                                                                <div className="text-[10px] font-bold text-rose-600">
-                                                                    +200 XP
-                                                                </div>
-                                                            </div>
+                                                        <div className="flex items-start gap-1.5 text-[13px] text-slate-600 italic mt-auto pt-2 leading-snug">
+                                                            <Target className="w-3.5 h-3.5 text-rose-400 shrink-0 mt-0.5" />
+                                                            <span>
+                                                                Outcome: {listeningQuestOutcome(mission)}
+                                                            </span>
                                                         </div>
                                                     </div>
                                                 );
@@ -1159,28 +1228,34 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                                                             }}
                                                             className="group relative p-4 rounded-xl border-2 transition-all flex flex-col cursor-pointer bg-white border-slate-100 hover:border-purple-300 hover:shadow-md"
                                                         >
-                                                            <div className="flex justify-between items-start mb-2">
-                                                                <div className="flex flex-col">
-                                                                    <span className="px-2 py-0.5 rounded text-[9px] font-black uppercase tracking-wider bg-purple-50 text-purple-600 inline-block w-fit mb-1">
-                                                                        {mission.genre || 'QUEST'}
+                                                            <div className="flex justify-between items-center gap-2 mb-2">
+                                                                <span className="px-2 py-0.5 rounded text-[9px] font-black uppercase tracking-wider bg-purple-50 text-purple-600 shrink-0">
+                                                                    WRITING
+                                                                </span>
+                                                                {mission.genre ? (
+                                                                    <span className="text-[9px] font-bold uppercase tracking-tight text-purple-500 truncate max-w-[50%]">
+                                                                        {mission.genre}
                                                                     </span>
-                                                                </div>
+                                                                ) : (
+                                                                    <span className="text-[9px] font-black uppercase text-slate-300"> </span>
+                                                                )}
                                                             </div>
 
-                                                            <h4 className="text-[15px] font-bold mb-1 transition-colors text-slate-800 line-clamp-1 group-hover:text-purple-600 flex items-center gap-2">
-                                                                 {mission.title}
-                                                                 {questLabGating.lockedIds.has(mission.id) && <Crown className="w-3.5 h-3.5 text-amber-500 fill-amber-500 shrink-0" />}
-                                                             </h4>
-                                                            <p className="text-[11px] text-slate-500 mb-3 line-clamp-2 leading-tight min-h-[2.4em]">
-                                                                {mission.prompt || "Advancing DSE linguistic proficiency through high-fidelity mission simulation."}
+                                                            <div className="flex justify-between items-start gap-2 mb-1">
+                                                                <h4 className="text-[15px] font-bold transition-colors text-slate-800 line-clamp-2 group-hover:text-purple-600 flex items-center gap-2 min-w-0 flex-1">
+                                                                    {mission.title}
+                                                                    {questLabGating.lockedIds.has(mission.id) && <Crown className="w-3.5 h-3.5 text-amber-500 fill-amber-500 shrink-0" />}
+                                                                </h4>
+                                                                <span className="text-xs font-bold text-purple-600 shrink-0">+{stats.xp} XP</span>
+                                                            </div>
+                                                            <p className="text-[13px] text-slate-600 mb-4 line-clamp-2 leading-snug">
+                                                                {mission.prompt || 'Advancing DSE linguistic proficiency through high-fidelity mission simulation.'}
                                                             </p>
-
-                                                            <div className="pt-3 border-t border-slate-50 mt-auto">
-                                                                <div className="flex items-center justify-between mb-2">
-                                                                    <div className="text-[10px] font-bold text-purple-600 px-2 py-0.5 bg-purple-50 rounded-lg">
-                                                                        +150 XP
-                                                                    </div>
-                                                                </div>
+                                                            <div className="flex items-start gap-1.5 text-[13px] text-slate-600 italic mt-auto pt-2 leading-snug">
+                                                                <Target className="w-3.5 h-3.5 text-purple-400 shrink-0 mt-0.5" />
+                                                                <span>
+                                                                    Outcome: {writingQuestOutcome(mission)}
+                                                                </span>
                                                             </div>
                                                         </div>
                                                     );
@@ -1213,7 +1288,9 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                                                 {paperFilter === 'ALL' && listeningMissions
                                                     .filter(m => m.title?.toLowerCase().includes(searchQuery.toLowerCase()))
                                                     .map((mission) => {
-                                                        const currentSelected = '5'; // Default to DSE Standard
+                                                        const currentSelected = normalizeMissionLevel(mission.level);
+                                                        const difficulty = getDifficultyMeta(mission.level);
+                                                        const missionStats = getMasteryStats(Number(currentSelected), false, false);
                                                         return (
                                                             <div
                                                                 key={mission.id}
@@ -1228,31 +1305,35 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                                                                         state: {
                                                                             questData: mission,
                                                                             targetLevel: currentSelected,
-                                                                            targetXp: 200
+                                                                            targetXp: missionStats.xp
                                                                         }
                                                                     });
                                                                 }}
                                                                 className="group relative p-4 rounded-xl border-2 transition-all flex flex-col cursor-pointer bg-white border-slate-100 hover:border-rose-300 hover:shadow-md"
                                                             >
-                                                                <div className="flex justify-between items-start mb-2">
-                                                                    <span className="px-2 py-0.5 rounded text-[9px] font-black uppercase tracking-wider bg-rose-50 text-rose-600">
+                                                                <div className="flex justify-between items-center gap-2 mb-2">
+                                                                    <span className="px-2 py-0.5 rounded text-[9px] font-black uppercase tracking-wider bg-rose-50 text-rose-600 shrink-0">
                                                                         LISTENING
                                                                     </span>
+                                                                    <span className={`px-2 py-0.5 rounded border text-[9px] font-black uppercase tracking-tight text-right max-w-[65%] leading-tight ${difficulty.className}`}>
+                                                                        {difficulty.label}
+                                                                    </span>
                                                                 </div>
-                                                                <h4 className="text-[15px] font-bold mb-1 transition-colors text-slate-800 line-clamp-1 group-hover:text-rose-600 flex items-center gap-2">
-                                                                     {mission.title}
-                                                                     {questLabGating.lockedIds.has(mission.id) && <Crown className="w-3.5 h-3.5 text-amber-500 fill-amber-500 shrink-0" />}
-                                                                 </h4>
-                                                                <p className="text-[12px] text-slate-500 mb-3 line-clamp-2 leading-tight min-h-[2.4em]">
-                                                                    {mission.description || "Synthesizing data files and auditory clues for Paper 3 proficiency."}
+                                                                <div className="flex justify-between items-start gap-2 mb-1">
+                                                                    <h4 className="text-[15px] font-bold transition-colors text-slate-800 line-clamp-2 group-hover:text-rose-600 flex items-center gap-2 min-w-0 flex-1">
+                                                                        {mission.title}
+                                                                        {questLabGating.lockedIds.has(mission.id) && <Crown className="w-3.5 h-3.5 text-amber-500 fill-amber-500 shrink-0" />}
+                                                                    </h4>
+                                                                    <span className="text-xs font-bold text-rose-600 shrink-0">+{missionStats.xp} XP</span>
+                                                                </div>
+                                                                <p className="text-[14px] text-slate-600 mb-4 line-clamp-2 leading-snug">
+                                                                    {mission.description || 'Synthesizing data files and auditory clues for Paper 3 proficiency.'}
                                                                 </p>
-                                                                <div className="pt-3 border-t border-slate-50 mt-auto">
-                                                                    <div className="flex items-center justify-between mb-2">
-                                                                        <div className="text-xs font-bold text-rose-600">
-                                                                            +200 XP
-                                                                        </div>
-                                                                        <Play className="w-3.5 h-3.5 text-rose-500 opacity-0 group-hover:opacity-100 transition-opacity" />
-                                                                    </div>
+                                                                <div className="flex items-start gap-1.5 text-[14px] text-slate-600 italic mt-auto pt-2 leading-snug">
+                                                                    <Target className="w-3.5 h-3.5 text-rose-400 shrink-0 mt-0.5" />
+                                                                    <span>
+                                                                        Outcome: {listeningQuestOutcome(mission)}
+                                                                    </span>
                                                                 </div>
                                                             </div>
                                                         );
@@ -1262,7 +1343,9 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                                                 {/* Writing Missions in ALL view */}
                                                 {paperFilter === 'ALL' && writingMissions
                                                     .filter(m => m.title?.toLowerCase().includes(searchQuery.toLowerCase()))
-                                                    .map((mission) => (
+                                                    .map((mission) => {
+                                                        const wStats = getMasteryStats(5, false, false);
+                                                        return (
                                                         <div
                                                             key={mission.id}
                                                             onClick={() => {
@@ -1280,37 +1363,42 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                                                             }}
                                                             className="group relative p-4 rounded-xl border-2 transition-all flex flex-col cursor-pointer bg-white border-slate-100 hover:border-purple-300 hover:shadow-md"
                                                         >
-                                                            <div className="flex justify-between items-start mb-2">
-                                                                <span className="px-2 py-0.5 rounded text-[9px] font-black uppercase tracking-wider bg-purple-50 text-purple-600">
-                                                                    {mission.genre || 'QUEST'}
+                                                            <div className="flex justify-between items-center gap-2 mb-2">
+                                                                <span className="px-2 py-0.5 rounded text-[9px] font-black uppercase tracking-wider bg-purple-50 text-purple-600 shrink-0">
+                                                                    WRITING
+                                                                </span>
+                                                                {mission.genre ? (
+                                                                    <span className="text-[9px] font-bold uppercase tracking-tight text-purple-500 truncate max-w-[50%]">{mission.genre}</span>
+                                                                ) : (
+                                                                    <span className="text-[9px] font-black uppercase text-slate-300"> </span>
+                                                                )}
+                                                            </div>
+                                                            <div className="flex justify-between items-start gap-2 mb-1">
+                                                                <h4 className="text-[15px] font-bold transition-colors text-slate-800 line-clamp-2 group-hover:text-purple-600 flex items-center gap-2 min-w-0 flex-1">
+                                                                    {mission.title}
+                                                                    {questLabGating.lockedIds.has(mission.id) && <Crown className="w-3.5 h-3.5 text-amber-500 fill-amber-500 shrink-0" />}
+                                                                </h4>
+                                                                <span className="text-xs font-bold text-purple-600 shrink-0">+{wStats.xp} XP</span>
+                                                            </div>
+                                                            <p className="text-[14px] text-slate-600 mb-4 line-clamp-2 leading-snug">
+                                                                {mission.prompt || 'Advancing DSE linguistic proficiency through high-fidelity mission simulation.'}
+                                                            </p>
+                                                            <div className="flex items-start gap-1.5 text-[14px] text-slate-600 italic mt-auto pt-2 leading-snug">
+                                                                <Target className="w-3.5 h-3.5 text-purple-400 shrink-0 mt-0.5" />
+                                                                <span>
+                                                                    Outcome: {writingQuestOutcome(mission)}
                                                                 </span>
                                                             </div>
-                                                            <h4 className="text-[15px] font-bold mb-1 transition-colors text-slate-800 line-clamp-1 group-hover:text-purple-600 flex items-center gap-2">
-                                                                 {mission.title}
-                                                                 {questLabGating.lockedIds.has(mission.id) && <Crown className="w-3.5 h-3.5 text-amber-500 fill-amber-500 shrink-0" />}
-                                                             </h4>
-                                                            <p className="text-[12px] text-slate-500 mb-3 line-clamp-2 leading-tight min-h-[2.4em]">
-                                                                {mission.prompt || "Advancing DSE linguistic proficiency through high-fidelity mission simulation."}
-                                                            </p>
-                                                            <div className="pt-3 border-t border-slate-50 mt-auto">
-                                                                <div className="flex items-center justify-between mb-2">
-                                                                    <div className="text-xs font-bold text-purple-600 px-2 py-0.5 bg-purple-50 rounded-lg">
-                                                                        +150 XP
-                                                                    </div>
-                                                                    <Play className="w-3.5 h-3.5 text-purple-500 opacity-0 group-hover:opacity-100 transition-opacity" />
-                                                                </div>
-                                                            </div>
                                                         </div>
-                                                    ))
+                                                        );
+                                                    })
                                                 }
                                                 {filteredSkills.map(([id]) => {
                                                     const name = getSkillName(id);
                                                     const desc = getSkillDesc(id);
-                                                    const currentLevel = getAggregatedLevel(id);
                                                     const paper = id.split('_')[0];
 
                                                     const outcome = getSkillOutcome(id, language);
-                                                    const isPracticed = practicedSkills.includes(id) || practicedSkills.includes(name);
                                                     const isIntegrated = MICRO_SKILLS[id]?.isIntegrated;
 
                                                     const skillLevel = getAggregatedLevel(id);
@@ -1319,6 +1407,8 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                                                     const levelToUse = (paper === 'reading' && selectedLevels[id]) ? selectedLevels[id] : (paper === 'listening' ? '5' : (activeTab === 'CHALLENGE' ? '7' : (skillLevel < 3.5 ? '3' : skillLevel < 5.0 ? '4' : '5')));
                                                     const stats = getMasteryStats(Number(levelToUse), false, false);
                                                     const displayXp = isWriting ? 150 : (isListening ? 200 : stats.xp);
+                                                    const paperUpper = paper === 'reading' ? 'READING' : paper === 'writing' ? 'WRITING' : paper === 'listening' ? 'LISTENING' : 'SPEAKING';
+                                                    const listeningDiff = getDifficultyMeta(levelToUse);
 
                                                     return (
                                                         <div
@@ -1347,72 +1437,64 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                                                                         : 'bg-white border-slate-100 hover:border-amber-300 hover:shadow-md'
                                                                 }`}
                                                         >
-                                                            <div className="flex justify-between items-start mb-2">
-                                                                <span className={`px-2 py-0.5 rounded text-[9px] font-black uppercase tracking-wider ${isIntegrated ? 'bg-white/20 text-white' : paper === 'reading' ? 'bg-blue-50 text-blue-600' :
+                                                            <div className="flex justify-between items-center gap-2 mb-2 min-h-[1.5rem]">
+                                                                <span className={`px-2 py-0.5 rounded text-[9px] font-black uppercase tracking-wider shrink-0 ${isIntegrated ? 'bg-white/20 text-white' : paper === 'reading' ? 'bg-blue-50 text-blue-600' :
                                                                     paper === 'writing' ? 'bg-purple-50 text-purple-600' :
                                                                         paper === 'listening' ? 'bg-orange-50 text-orange-600' :
                                                                             'bg-green-50 text-green-600'
                                                                     }`}>
-                                                                    {isIntegrated ? 'DSE Simulation' : paper}
+                                                                    {isIntegrated ? 'DSE SIMULATION' : paperUpper}
                                                                 </span>
-                                                                {isIntegrated && (
-                                                                    <div className="flex items-center gap-1 px-2 py-0.5 bg-yellow-400/90 text-yellow-950 rounded text-[9px] font-black tracking-tight">
-                                                                        <Sparkles className="w-2 h-2" />
-                                                                        Integrated Skill
-                                                                    </div>
-                                                                )}
-                                                            </div>
-
-                                                            <h4 className={`text-[15px] font-bold mb-1 transition-colors flex items-center gap-2 ${isIntegrated ? 'text-white' : 'text-slate-800 group-hover:text-amber-600'}`}>
-                                                                {name}
-                                                                {questLabGating.lockedIds.has(id) && <Crown className="w-3.5 h-3.5 text-amber-500 fill-amber-500 shrink-0" />}
-                                                            </h4>
-                                                            <p className={`text-[12px] mb-3 line-clamp-2 leading-tight min-h-[2.4em] ${isIntegrated ? 'text-indigo-100' : 'text-slate-500'}`}>
-                                                                {desc || "Master this skill to excel in HKDSE English."}
-                                                            </p>
-
-                                                                <div className={`pt-3 border-t mt-auto ${isIntegrated ? 'border-white/10' : 'border-slate-50'}`}>
-                                                                    <div className="flex items-center justify-between mb-2">
-                                                                        <div className="flex items-center gap-2">
-                                                                                <div className={`px-2 py-0.5 rounded text-[10px] font-bold flex items-center gap-1.5 ${isIntegrated ? 'bg-white/20 text-white' : 'bg-slate-100 text-slate-500 uppercase tracking-wide'}`}>
-                                                                                    {isPracticed ? <RefreshCcw className="w-2.5 h-2.5" /> : <Play className="w-2.5 h-2.5" />}
-                                                                                    {isIntegrated ? 'Simulate exam' : isPracticed ? 'Continue Training' : 'Start Training'}
-                                                                                </div>
-                                                                        </div>
-                                                                        <div className="flex flex-col items-end gap-1">
-                                                                            <div className="text-xs font-bold text-amber-600">
-                                                                                +{displayXp} XP
-                                                                            </div>
-                                                                            {paper === 'reading' && !isIntegrated && (
-                                                                                <select
-                                                                                    value={levelToUse}
-                                                                                    onClick={(e) => e.stopPropagation()}
-                                                                                    onChange={(e) => {
-                                                                                        e.stopPropagation();
-                                                                                        setSelectedLevels(prev => ({ ...prev, [id]: e.target.value }));
-                                                                                    }}
-                                                                                    className="text-[9px] font-bold bg-slate-50 border border-slate-200 rounded px-1 py-0.5 outline-none focus:ring-1 focus:ring-amber-500/30 transition-all cursor-pointer hover:bg-white"
-                                                                                >
-                                                                                    <option value="3">Easy</option>
-                                                                                    <option value="4">Medium</option>
-                                                                                    <option value="5">DSE Standard</option>
-                                                                                    <option value="7">Elite</option>
-                                                                                </select>
-                                                                            )}
-                                                                        </div>
-                                                                    </div>
-
-                                                                <div className="flex items-center justify-between">
-                                                                    <div className="flex items-center gap-1.5 text-[11px] text-slate-400 italic">
-                                                                        <Sparkles className="w-3 h-3 text-amber-400" />
-                                                                        <span>Outcome: {outcome}</span>
-                                                                    </div>
-                                                                    {isPracticed && (
-                                                                        <div className="opacity-0 group-hover:opacity-100 transition-opacity">
-                                                                            <Play className="w-3.5 h-3.5 text-amber-500" />
+                                                                <div className="flex justify-end items-center gap-1 min-w-0 max-w-[72%]">
+                                                                    {isIntegrated && (
+                                                                        <div className="flex items-center gap-1 px-2 py-0.5 bg-yellow-400/90 text-yellow-950 rounded text-[9px] font-black tracking-tight shrink-0">
+                                                                            <Sparkles className="w-2 h-2" />
+                                                                            Integrated Skill
                                                                         </div>
                                                                     )}
+                                                                    {!isIntegrated && paper === 'reading' && (
+                                                                        <select
+                                                                            value={levelToUse}
+                                                                            onClick={(e) => e.stopPropagation()}
+                                                                            onChange={(e) => {
+                                                                                e.stopPropagation();
+                                                                                setSelectedLevels(prev => ({ ...prev, [id]: e.target.value }));
+                                                                            }}
+                                                                            className="text-[9px] font-bold bg-slate-50 border border-slate-200 rounded px-1.5 py-0.5 outline-none focus:ring-1 focus:ring-amber-500/30 transition-all cursor-pointer hover:bg-white max-w-full truncate"
+                                                                        >
+                                                                            <option value="3">Easy</option>
+                                                                            <option value="4">Medium</option>
+                                                                            <option value="5">DSE Standard</option>
+                                                                            <option value="7">Elite</option>
+                                                                        </select>
+                                                                    )}
+                                                                    {!isIntegrated && paper === 'listening' && (
+                                                                        <span className={`px-2 py-0.5 rounded border text-[9px] font-black uppercase tracking-tight text-right leading-tight ${listeningDiff.className}`}>
+                                                                            {listeningDiff.label}
+                                                                        </span>
+                                                                    )}
                                                                 </div>
+                                                            </div>
+
+                                                            <div className="flex justify-between items-start gap-2 mb-1">
+                                                                <h4 className={`text-[15px] font-bold transition-colors line-clamp-2 flex items-center gap-2 min-w-0 flex-1 ${isIntegrated ? 'text-white' : 'text-slate-800 group-hover:text-amber-600'}`}>
+                                                                    {name}
+                                                                    {questLabGating.lockedIds.has(id) && <Crown className="w-3.5 h-3.5 text-amber-500 fill-amber-500 shrink-0" />}
+                                                                </h4>
+                                                                <span className={`text-xs font-bold shrink-0 ${isIntegrated ? 'text-amber-200' : 'text-amber-600'}`}>
+                                                                    +{displayXp} XP
+                                                                </span>
+                                                            </div>
+                                                            <p className={`text-[14px] mb-4 line-clamp-2 leading-snug ${isIntegrated ? 'text-indigo-100' : 'text-slate-600'}`}>
+                                                                {desc || 'Master this skill to excel in HKDSE English.'}
+                                                            </p>
+                                                            <div className={`flex items-start gap-1.5 text-[14px] italic mt-auto pt-2 leading-snug ${isIntegrated ? 'text-indigo-100' : 'text-slate-600'}`}>
+                                                                {isIntegrated ? (
+                                                                    <Sparkles className="w-3.5 h-3.5 text-amber-300 shrink-0 mt-0.5" />
+                                                                ) : (
+                                                                    <Target className="w-3.5 h-3.5 text-amber-400 shrink-0 mt-0.5" />
+                                                                )}
+                                                                <span>Outcome: {outcome}</span>
                                                             </div>
                                                         </div>
                                                     );

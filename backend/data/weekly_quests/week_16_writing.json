@@ -10,6 +10,29 @@
     "Employing sophisticated vocabulary related to environmental science, urban planning, and economics (e.g., 'food miles', 'panacea', 'arable land')",
     "Structuring the article with a captivating title, a strong hook, cohesive body paragraphs, and a thought-provoking conclusion"
   ],
+  "marking_logic": {
+    "full_marks_criteria": [
+      "Defines vertical farming clearly for a student audience",
+      "Discusses the 'Energy Paradox' (high electrical cost vs. low transport emissions)",
+      "Highlights the benefit of 'Food Miles' reduction in the context of HK's 90% import reliance",
+      "Acknowledges limitations in crop variety (leafy greens vs. staple crops)",
+      "Uses a professional Columnist tone: authoritative, visionary, and persuasive"
+    ],
+    "key_phrases": [
+      "urban food security",
+      "hydroponic/aeroponic systems",
+      "derelict industrial buildings",
+      "energy-intensive",
+      "resilient future",
+      "technological ingenuity",
+      "metamorphose"
+    ],
+    "genre_requirements": {
+      "format": "Opinion Piece / Feature Article",
+      "essential_elements": ["Catchy Headline", "Engaging Hook", "Body Paragraphs with evidence", "Call to action"],
+      "tone": "Authoritative and environmentalist"
+    }
+  },
   "interactive_tasks": [
     {
       "id": "lvl_4",

@@ -4,39 +4,22 @@ import { Link, useLocation } from 'react-router-dom';
 import { useAvatar } from '../context/AvatarContext';
 import { useAuth } from '../context/AuthContext';
 import { useLanguage } from '../context/LanguageContext';
-import { ArrowRight, Paperclip, Send, Volume2, VolumeX, Edit3, Type, Maximize2, Minimize2, X, MessageSquare, CircleX, Trophy, Lock, Zap, Target, BookOpen, Plus, Settings2, ChevronDown, ChevronUp, Sparkles } from 'lucide-react';
+import { ArrowRight, Paperclip, Send, Volume2, VolumeX, Edit3, Type, Maximize2, Minimize2, X, MessageSquare, CircleX, Trophy, Lock, Zap, Target, BookOpen, Plus, Settings2, ChevronDown, ChevronUp, ChevronLeft, ChevronRight, Sparkles } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { cn } from '../utils/cn'; // Reusing cn utility
 import EssayUploader from './EssayUploader';
 import FingerprintJS from '@fingerprintjs/fingerprintjs';
-import { doc, getDoc, setDoc, updateDoc, arrayUnion, increment } from 'firebase/firestore';
-import { getAdditionalUserInfo, deleteUser } from 'firebase/auth'; // Import for Google Sign-In handling
-import { db } from '../firebase';
 import LaunchCard from './LaunchCard';
 import AuthForm from './AuthForm';
 // Mastery modals removed - now dedicated pages
 import DreamProgramsModal from './dashboard/DreamProgramsModal'; // Ace Sir - Dream University List
-import { getUserMastery, getMasteryHistory } from '../services/masteryService';
 import { Compass } from 'lucide-react';
 import { MathsLab, MathsDiagnostic } from './maths';
 import { SafeInlineMath, SafeBlockMath } from './maths/SafeMath';
-import { splitContentByDelimiters } from '../utils/mathFormattingUtils';
 import PolisherCard from './tutor/PolisherCard';
 import DecoderCard from './tutor/DecoderCard';
 import VocabCard from './tutor/VocabCard';
 // RoadmapModal import removed - hoisted to Dashboard
-
-// Suggestions chips logic moved inside component
-const getSuggestionChips = (t) => ({
-    guest: [
-        { label: t('chat.what_is_ace_it'), value: "What is Ace It?", emoji: "🤔" },
-        { label: t('chat.start_diagnostic'), value: "I want to start the diagnostic test", emoji: "📋" },
-    ],
-    member: [
-        { label: t('chat.review_mistake'), value: "Review my last mistake", emoji: "🔄" },
-        { label: t('chat.practice_vocab'), value: "Practice Vocabulary", emoji: "📖" },
-    ]
-});
 
 const DISPOSABLE_DOMAINS = [
     "yopmail.com", "temp-mail.org", "guerrillamail.com", "10minutemail.com",
@@ -58,23 +41,150 @@ const parseSuggestions = (content) => {
     if (typeof content !== 'string') return { text: content, suggestions: [] };
     const suggestionsMatch = content.match(/\[SUGGESTIONS:\s*([^\]]+)\]/);
     if (suggestionsMatch) {
-        const suggestions = suggestionsMatch[1].split(',').map(s => s.trim());
+        const suggestions = splitSuggestionText(suggestionsMatch[1]);
         const cleanedText = content.replace(suggestionsMatch[0], '').trim();
         return { text: cleanedText, suggestions };
     }
     return { text: content, suggestions: [] };
 };
 
-const formatMessageContent = (content) => {
+const splitSuggestionText = (value) => String(value || '')
+    .split(/\s*(?:,|，|;|；|\||\n)\s*/g)
+    .map(s => s.replace(/^\s*(?:[-*]|\d+[.)、])\s*/, '').trim())
+    .filter(Boolean)
+    .filter((item, index, arr) => arr.indexOf(item) === index);
+
+const normalizeChips = (chips) => {
+    const source = Array.isArray(chips) ? chips : (chips ? [chips] : []);
+    return source.flatMap((chip) => {
+        if (!chip) return [];
+        if (typeof chip === 'string') {
+            return splitSuggestionText(chip).map(label => ({ label, value: label }));
+        }
+        if (typeof chip === 'object') {
+            const label = chip.label || chip.text || chip.value;
+            if (!label) return [];
+            return [{ ...chip, label, value: chip.value || label }];
+        }
+        return [];
+    }).slice(0, 4);
+};
+
+const looksLikeSeparatorRow = (line) => {
+    const normalized = line.replace(/\s/g, '');
+    return /^[:|\-]+$/.test(normalized) && normalized.includes('-');
+};
+
+const parseMarkdownTableRows = (lines) => {
+    const parseRow = (line) =>
+        line
+            .trim()
+            .replace(/^\|/, '')
+            .replace(/\|$/, '')
+            .split('|')
+            .map((cell) => cell.trim());
+
+    if (lines.length < 2 || !looksLikeSeparatorRow(lines[1])) {
+        return null;
+    }
+
+    const headers = parseRow(lines[0]);
+    const rows = lines.slice(2)
+        .map(parseRow)
+        .filter((row) => row.some(Boolean));
+
+    if (!headers.length || !rows.length) return null;
+    return { headers, rows };
+};
+
+const renderTextWithTables = (part, keyPrefix) => {
+    if (!part || !part.includes('|') || !part.includes('\n')) {
+        return <span key={keyPrefix}>{part}</span>;
+    }
+
+    const lines = part.split('\n');
+    const nodes = [];
+    let textBuffer = [];
+
+    const flushTextBuffer = (idx) => {
+        if (textBuffer.length === 0) return;
+        nodes.push(
+            <span key={`${keyPrefix}-text-${idx}`} className="whitespace-pre-wrap">
+                {textBuffer.join('\n')}
+            </span>
+        );
+        textBuffer = [];
+    };
+
+    for (let i = 0; i < lines.length; i += 1) {
+        const line = lines[i];
+        const next = lines[i + 1];
+        const isTableStart = line?.includes('|') && typeof next === 'string' && looksLikeSeparatorRow(next);
+
+        if (!isTableStart) {
+            textBuffer.push(line);
+            continue;
+        }
+
+        flushTextBuffer(i);
+
+        const tableLines = [line, next];
+        let cursor = i + 2;
+        while (cursor < lines.length && lines[cursor].includes('|')) {
+            tableLines.push(lines[cursor]);
+            cursor += 1;
+        }
+
+        const parsedTable = parseMarkdownTableRows(tableLines);
+        if (!parsedTable) {
+            textBuffer.push(...tableLines);
+            i = cursor - 1;
+            continue;
+        }
+
+        nodes.push(
+            <div key={`${keyPrefix}-table-${i}`} className="my-3 overflow-x-auto rounded-xl border border-black/10 dark:border-white/10">
+                <table className="min-w-full text-sm">
+                    <thead className="bg-black/5 dark:bg-white/10">
+                        <tr>
+                            {parsedTable.headers.map((header, index) => (
+                                <th key={`${keyPrefix}-th-${i}-${index}`} className="px-3 py-2 text-left font-semibold">
+                                    {header}
+                                </th>
+                            ))}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {parsedTable.rows.map((row, rowIndex) => (
+                            <tr key={`${keyPrefix}-row-${i}-${rowIndex}`} className="border-t border-black/10 dark:border-white/10">
+                                {row.map((cell, cellIndex) => (
+                                    <td key={`${keyPrefix}-cell-${i}-${rowIndex}-${cellIndex}`} className="px-3 py-2 align-top">
+                                        {cell}
+                                    </td>
+                                ))}
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            </div>
+        );
+
+        i = cursor - 1;
+    }
+
+    flushTextBuffer('end');
+    return nodes.length > 0 ? <>{nodes}</> : <span key={keyPrefix}>{part}</span>;
+};
+
+const formatMessageContent = (content, handleTutorAction) => {
     if (typeof content !== 'string') return content;
 
     // Auto-strip suggestions if present (for history/legacy support)
     const { text: cleanForDisplay } = parseSuggestions(content);
     const cleanContent = cleanForDisplay.replace(/\n{3,}/g, '\n\n');
 
-    // Unified regex to split by ALL math delimiter types + bold + headers + system tags
-    // Order matters: longest/most-specific patterns first
-    const UNIFIED_REGEX = /(\$\$[\s\S]*?\$\$|\\?\\\[[\s\S]*?\\?\\\]|\\?\\\([\s\S]*?\\?\\\)|(?<!\$)\$(?!\$)(?:[^$\\]|\\.)*?\$(?!\$)|\*\*(?:.*?)\*\*|^###\s+(?:.+)$|\[SYSTEM:[^\]]+\])/gm;
+    // Unified regex to split by ALL math delimiter types + bold + headers + system tags + CTA tags
+    const UNIFIED_REGEX = /(\$\$[\s\S]*?\$\$|\\?\\\[[\s\S]*?\\?\\\]|\\?\\\([\s\S]*?\\?\\\)|(?<!\$)\$(?!\$)(?:[^$\\]|\\.)*?\$(?!\$)|\*\*(?:.*?)\*\*|^###\s+(?:.+)$|\[SYSTEM:[^\]]+\]|\[CTA:[^\]]+\])/gm;
 
     const parts = cleanContent.split(UNIFIED_REGEX);
 
@@ -86,6 +196,30 @@ const formatMessageContent = (content) => {
         // System Tags: [SYSTEM: ...] - Hide from display
         if (part.startsWith('[SYSTEM:') && part.endsWith(']')) {
             return null;
+        }
+
+        // CTA Tags: [CTA: Label | Value]
+        if (part.startsWith('[CTA:') && part.endsWith(']')) {
+            const ctaContent = part.slice(5, -1).split('|');
+            const label = ctaContent[0]?.trim() || "Start Now";
+            const value = ctaContent[1]?.trim() || label;
+            const legacyIntent = `${label} ${value}`.toLowerCase();
+            const actionType = value.toLowerCase().startsWith('open_quest') || legacyIntent.includes('start practice') || legacyIntent.includes('quest')
+                ? 'open_quest'
+                : (value.toLowerCase().startsWith('open_mock') ? 'open_mock' : 'send_text');
+            
+            return (
+                <div key={key} className="my-4">
+                    <button
+                        onClick={() => handleTutorAction({ type: actionType, label, payload: { value } })}
+                        className="group flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-orange-500 to-amber-600 hover:from-orange-600 hover:to-amber-700 text-white rounded-2xl font-bold text-sm shadow-lg shadow-orange-500/20 transition-all hover:scale-[1.02] active:scale-[0.98]"
+                    >
+                        <Sparkles className="w-4 h-4 animate-pulse" />
+                        {label}
+                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    </button>
+                </div>
+            );
         }
 
         // Block Math: $$...$$
@@ -126,8 +260,8 @@ const formatMessageContent = (content) => {
             return <div key={key} className="font-bold text-base mt-3 mb-1">{part.slice(4)}</div>;
         }
 
-        // Regular Text
-        return <span key={key}>{part}</span>;
+        // Regular Text (includes markdown pipe-table rendering)
+        return <React.Fragment key={key}>{renderTextWithTables(part, key)}</React.Fragment>;
     }).filter(Boolean);
 };
 
@@ -141,8 +275,10 @@ const ChatInterface = ({ onOpenQuest }) => {
         isFocusMode, setIsFocusMode,
         equipment, syncEquipment
     } = useAvatar();
-    const { user, loginWithGoogle, logout, verifyEmail } = useAuth(); // Destructure all needed methods
+    const { user, loginWithGoogle, logout, verifyEmail, reloadUser } = useAuth(); // Destructure all needed methods
     const { t, toggleLanguage, language } = useLanguage();
+
+    console.log("[ChatInterface] Render triggered. User:", user?.email, "Verified:", user?.emailVerified);
 
     // State definitions moved to top
     const [hasDiagnostic, setHasDiagnostic] = useState(false);
@@ -188,15 +324,52 @@ const ChatInterface = ({ onOpenQuest }) => {
         }
     }, [user, activeAgentId]);
 
+    const saveChipsToBackend = React.useCallback(async (chips) => {
+        if (!user || user.uid === 'guest') return;
+        try {
+            const token = await user.getIdToken();
+            const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+            await fetch(`${API_URL}/api/history/${activeAgentId}/chips`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${token}`
+                },
+                body: JSON.stringify({
+                    uid: user.uid,
+                    chips: Array.isArray(chips) ? chips : []
+                })
+            });
+        } catch (error) {
+            console.warn("[ChatInterface] Failed to save chips cache:", error?.message || error);
+        }
+    }, [user, activeAgentId]);
+
+    const clearChipsCacheOnBackend = React.useCallback(async () => {
+        if (!user || user.uid === 'guest') return;
+        try {
+            const token = await user.getIdToken();
+            const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+            await fetch(`${API_URL}/api/history/${activeAgentId}/chips?uid=${user.uid}`, {
+                method: 'DELETE',
+                headers: {
+                    'Authorization': `Bearer ${token}`
+                }
+            });
+        } catch (error) {
+            console.warn("[ChatInterface] Failed to clear chips cache:", error?.message || error);
+        }
+    }, [user, activeAgentId]);
+
 
     // Dynamic Chips Logic based on User State
     const suggestionChips = (() => {
         if (activeAgentId === 'ace') {
             const subject = user?.dreamSubject || "夢想學科";
             return [
-                { label: "幫我分析 Best 5", value: "我想要分析我嘅 Best 5 成績估計", emoji: "📊" },
-                { label: `分析 ${subject} 收生要求`, value: `我想知 ${subject} 嘅收生要求同 Career Path`, emoji: "🎓" },
-                { label: "有咩奪星策略？", value: "話俾我聽點樣可以攞到 5* 甚至 5**？", emoji: "💡" }
+                { label: "精算我的 Best 5 目標", value: "我想要精算我嘅 Best 5 成績估計同目標差距", emoji: "📊" },
+                { label: `解構 ${subject} 加權比重`, value: `我想知 ${subject} 嘅收生加權比重 (Weighting) 同 Career Path`, emoji: "🎓" },
+                { label: "5** 奪星攻勢策略", value: "話俾我聽點樣可以攞到 5* 甚至 5** 嘅攻勢策略？", emoji: "💡" }
             ];
         }
         if (!hasDiagnostic) {
@@ -211,6 +384,7 @@ const ChatInterface = ({ onOpenQuest }) => {
         }
     })();
 
+    const [dynamicChips, setDynamicChips] = useState([]);
     const [messages, setMessages] = useState([]);
     const [inputValue, setInputValue] = useState('');
     const [selectedImage, setSelectedImage] = useState(null); // { data: base64, type: mimeType, preview: url }
@@ -218,9 +392,38 @@ const ChatInterface = ({ onOpenQuest }) => {
     const fileInputRef = useRef(null);
     const textareaRef = useRef(null);
     const messagesEndRef = useRef(null);
+    const chipScrollRef = useRef(null);
+    const [isAtLeft, setIsAtLeft] = useState(true);
+    const [isAtRight, setIsAtRight] = useState(false);
     const chatContainerRef = useRef(null);
     const lastUserMessageRef = useRef(null);
     const isHistoryScrolledRef = useRef(false);
+
+    const handleChipScroll = (direction) => {
+        if (!chipScrollRef.current) return;
+        const scrollAmount = 200;
+        chipScrollRef.current.scrollBy({
+            left: direction === 'left' ? -scrollAmount : scrollAmount,
+            behavior: 'smooth'
+        });
+    };
+
+    const updateScrollState = () => {
+        if (!chipScrollRef.current) return;
+        const { scrollLeft, scrollWidth, clientWidth } = chipScrollRef.current;
+        setIsAtLeft(scrollLeft <= 5);
+        setIsAtRight(scrollLeft + clientWidth >= scrollWidth - 5);
+    };
+
+    useEffect(() => {
+        const el = chipScrollRef.current;
+        if (el) {
+            el.addEventListener('scroll', updateScrollState);
+            // Initial check after content loads
+            setTimeout(updateScrollState, 500);
+            return () => el.removeEventListener('scroll', updateScrollState);
+        }
+    }, [dynamicChips, messages.length]);
     const sectionRef = useRef(null);
     const [showChips, setShowChips] = useState(false);
     const [isUploaderOpen, setIsUploaderOpen] = useState(false);
@@ -236,7 +439,6 @@ const ChatInterface = ({ onOpenQuest }) => {
         paperMetadata: null
     });
     const [isEnlarged, setIsEnlarged] = useState(false);
-    const [dynamicChips, setDynamicChips] = useState([]);
     const [isClearConfirmOpen, setIsClearConfirmOpen] = useState(false);
     const [isAnalyzingImage, setIsAnalyzingImage] = useState(false);
     const [isImageConfirmOpen, setIsImageConfirmOpen] = useState(false);
@@ -247,6 +449,68 @@ const ChatInterface = ({ onOpenQuest }) => {
     const [gender, setGender] = useState(null);
     const [isToolsOpen, setIsToolsOpen] = useState(false);
     const toolsRef = useRef(null);
+    const verbifyChip = (chip) => {
+        const text = typeof chip === 'string' ? chip : (chip.label || chip.value || "");
+        if (!text) return chip;
+
+        // Skip if already verbified or system command or too long
+        if (text.startsWith('[') || 
+            text.includes(t('chat.practice_verb')) || 
+            text.includes(t('chat.start_verb')) ||
+            text.includes(t('chat.improve_verb')) ||
+            text.includes(t('chat.analyze_verb')) ||
+            text.includes(t('chat.learn_verb')) ||
+            text.includes(t('chat.discuss_verb')) ||
+            text.length > 40) {
+            return chip;
+        }
+
+        let verb = t('chat.practice_verb');
+        let subject = '';
+
+        const lowerText = text.toLowerCase();
+        
+        // Determine verb based on content type
+        if (lowerText.includes('strategy') || lowerText.includes('logic') || lowerText.includes('jupas') || lowerText.includes('tip') || lowerText.includes('策略') ||
+            lowerText.includes('time') || lowerText.includes('management') || lowerText.includes('career') || lowerText.includes('advice') || lowerText.includes('前途') || lowerText.includes('時間')) {
+            verb = t('chat.learn_verb');
+        } else if (lowerText.includes('quest') || lowerText.includes('mock') || lowerText.includes('exam') || lowerText.includes('practice') || lowerText.includes('練習') || lowerText.includes('考試')) {
+            verb = t('chat.practice_verb');
+        } else if (lowerText.includes('report') || lowerText.includes('performance') || lowerText.includes('analysis') || lowerText.includes('分析')) {
+            verb = t('chat.analyze_verb');
+        }
+
+        // Determine subject
+        if (lowerText.includes('reading') || lowerText.includes('inference') || lowerText.includes('literal') || lowerText.includes('main idea')) {
+            subject = t('chat.reading');
+        } else if (lowerText.includes('writing') || lowerText.includes('email') || lowerText.includes('essay') || lowerText.includes('formal')) {
+            subject = t('chat.writing');
+        } else if (lowerText.includes('listening') || lowerText.includes('data file') || lowerText.includes('integrated')) {
+            subject = t('chat.listening');
+        } else if (lowerText.includes('speaking') || lowerText.includes('discussion') || lowerText.includes('delivery')) {
+            subject = t('chat.speaking');
+        }
+
+        // Fallback to agent subject if no paper-specific match
+        if (!subject && activeAgentId !== 'ace') {
+            if (activeAgentId === 'math') subject = language === 'zh' ? '數學' : 'Maths';
+            if (activeAgentId === 'english') subject = language === 'zh' ? '英文' : 'English';
+        }
+
+        let verbifiedText = text;
+        if (subject) {
+            verbifiedText = `${verb} ${subject} - ${text}`;
+        } else {
+            verbifiedText = `${verb} ${text}`;
+        }
+
+        if (typeof chip === 'string') return verbifiedText;
+        
+        // Only overwrite value if it was the same as the label (meaning it's not a special system value)
+        const newValue = (chip.value === chip.label) ? verbifiedText : chip.value;
+        return { ...chip, label: verbifiedText, value: newValue };
+    };
+
 
 
     // Close tools menu when clicking outside
@@ -390,13 +654,17 @@ const ChatInterface = ({ onOpenQuest }) => {
                     console.log(`[ChatInterface] Fetching history for UID: ${user.uid}, Agent: ${activeAgentId}`);
 
                     // 1 & 2. Parallelize Fetches
-                    const [statsRes, historyRes] = await Promise.all([
+                    const [statsRes, historyRes, chipsRes] = await Promise.all([
                         fetch(`${API_URL}/api/stats?uid=${user.uid}`).catch(err => {
                             console.warn("Stats fetch failed", err);
                             return { ok: false };
                         }),
                         fetch(`${API_URL}/api/history/${activeAgentId}?uid=${user.uid}`).catch(err => {
                             console.warn("History fetch failed", err);
+                            return { ok: false };
+                        }),
+                        fetch(`${API_URL}/api/history/${activeAgentId}/chips?uid=${user.uid}`).catch(err => {
+                            console.warn("Chips cache fetch failed", err);
                             return { ok: false };
                         })
                     ]);
@@ -414,8 +682,11 @@ const ChatInterface = ({ onOpenQuest }) => {
 
                     setHasDiagnostic(currentHasDiagnostic);
 
-                    // Sync equipment before greeting
-                    await syncEquipment();
+                    // Do not block chat history rendering on equipment sync.
+                    // If this request is slow/intermittent, history should still appear immediately.
+                    Promise.resolve(syncEquipment()).catch((e) => {
+                        console.warn("[ChatInterface] syncEquipment failed during history restore:", e?.message || e);
+                    });
 
                     let visibleHistory = [];
                     if (historyRes.ok) {
@@ -430,16 +701,34 @@ const ChatInterface = ({ onOpenQuest }) => {
                         console.error(`[ChatInterface] History API failed with status: ${historyRes.status}`);
                     }
 
-                    if (visibleHistory.length > 0) {
-                        setMessages(visibleHistory);
+                    // Guard against empty/invalid legacy rows to avoid rendering blank chat bubbles.
+                    const cleanHistory = visibleHistory.filter((m) => {
+                        if (!m) return false;
+                        if (typeof m.content !== 'string') return false;
+                        return m.content.trim().length > 0;
+                    });
+
+                    if (cleanHistory.length > 0) {
+                        setMessages(cleanHistory);
+                        let restoredFromHistory = false;
 
                         // Restore dynamic chips from the last assistant message
-                        const lastAssistantMsg = [...visibleHistory].reverse().find(m => m.role === 'assistant');
+                        const lastAssistantMsg = [...cleanHistory].reverse().find(m => m.role === 'assistant');
                         if (lastAssistantMsg) {
                             const parsed = parseSuggestions(lastAssistantMsg.content);
                             if (parsed.suggestions && parsed.suggestions.length > 0) {
                                 console.log(`[ChatInterface] Restored ${parsed.suggestions.length} dynamic chips from history`);
-                                setDynamicChips(parsed.suggestions);
+                                setDynamicChips(normalizeChips(parsed.suggestions));
+                                restoredFromHistory = true;
+                            }
+                        }
+
+                        if (!restoredFromHistory && chipsRes.ok) {
+                            const chipsData = await chipsRes.json();
+                            const cachedChips = normalizeChips(chipsData?.chips || []);
+                            if (cachedChips.length > 0) {
+                                console.log(`[ChatInterface] Restored ${cachedChips.length} dynamic chips from cache`);
+                                setDynamicChips(cachedChips);
                             }
                         }
 
@@ -471,6 +760,44 @@ const ChatInterface = ({ onOpenQuest }) => {
 
                     // 3. Process Post-Activity State SEQUENTIALLY after history is loaded
                     if (!isProcessedRef.current) {
+                        const token = await user.getIdToken().catch(() => null);
+                        const pendingEventsRes = await fetch(`${API_URL}/api/user/tutor-events/pending-summary?uid=${user.uid}&limit=10`, {
+                            headers: token ? { Authorization: `Bearer ${token}` } : {}
+                        }).catch(err => {
+                            console.warn("Pending tutor events fetch failed", err);
+                            return { ok: false };
+                        });
+                        if (pendingEventsRes.ok) {
+                            const pendingData = await pendingEventsRes.json();
+                            const pendingEvents = Array.isArray(pendingData.events) ? pendingData.events : [];
+                            if (pendingEvents.length > 0) {
+                                isProcessedRef.current = true;
+                                const eventSummary = pendingEvents.map(event => ({
+                                    id: event.id,
+                                    type: event.type,
+                                    completedAt: event.completedAt,
+                                    payload: event.payload || {}
+                                }));
+                                const result = await handleSendMessage(`[SYSTEM: PENDING_COMPLETION_SUMMARY]\n${JSON.stringify(eventSummary)}`, true);
+                                if (result?.success) {
+                                    await fetch(`${API_URL}/api/user/tutor-events/mark-summarized`, {
+                                        method: 'POST',
+                                        headers: {
+                                            'Content-Type': 'application/json',
+                                            ...(token ? { Authorization: `Bearer ${token}` } : {})
+                                        },
+                                        body: JSON.stringify({
+                                            uid: user.uid,
+                                            eventIds: pendingEvents.map(event => event.id)
+                                        })
+                                    }).catch(err => console.warn("Tutor event ack failed", err));
+                                }
+                                navigate('/dashboard', { replace: true, state: {} });
+                                window.history.replaceState({}, document.title);
+                                return;
+                            }
+                        }
+
                         const searchParams = new URLSearchParams(location.search);
                         const questCompleted = searchParams.get('quest_completed');
                         const questTopic = searchParams.get('topic');
@@ -717,6 +1044,9 @@ const ChatInterface = ({ onOpenQuest }) => {
 
         const currentInput = finalMessage;
 
+        if (!isHidden) {
+            clearChipsCacheOnBackend();
+        }
         if (showChips) setShowChips(false);
         setDynamicChips([]); // Clean slate for next AI response
         const currentImage = selectedImage;
@@ -735,15 +1065,21 @@ const ChatInterface = ({ onOpenQuest }) => {
 
             const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
 
-            // Prepare history (start from index 0 to include greeting context)
-            // Ensure that if the current user message was added, it's included in history for context
-            const historyForAPI = [
+            // Prepare history (start from index 0 to include greeting context).
+            // The backend applies an authoritative window (MAX_TURNS = 12) and
+            // truncation. We mirror a generous slice (last 24) here purely to
+            // shrink the JSON payload over the wire when threads get long.
+            const MAX_PAYLOAD_TURNS = 24;
+            const fullThread = [
                 ...(messages.length > 0 ? messages : []),
                 ...(isHidden ? [] : [userMsg])
-            ].map(m => ({
-                role: m.role === 'user' ? 'user' : 'model', // Gemini uses 'model'
-                parts: [{ text: m.content }]
-            }));
+            ];
+            const historyForAPI = fullThread
+                .slice(-MAX_PAYLOAD_TURNS)
+                .map(m => ({
+                    role: m.role === 'user' ? 'user' : 'model', // Gemini uses 'model'
+                    parts: [{ text: m.content }]
+                }));
 
             const response = await fetch(`${API_URL}/api/chat`, {
                 method: 'POST',
@@ -778,11 +1114,12 @@ const ChatInterface = ({ onOpenQuest }) => {
             // Type Safety: Ensure replyText is a string even if backend returns an object
             let replyText = '';
             let parsedReply = null;
+            let nextChips = normalizeChips(data.suggested_chips);
 
             if (typeof rawReply === 'string' && (rawReply.trim().startsWith('{') || rawReply.trim().startsWith('['))) {
                 try {
                     parsedReply = JSON.parse(rawReply);
-                } catch (e) {
+                } catch {
                     // Not valid JSON, treat as string
                 }
             } else if (typeof rawReply === 'object') {
@@ -791,9 +1128,7 @@ const ChatInterface = ({ onOpenQuest }) => {
 
             if (parsedReply) {
                 replyText = parsedReply.text || parsedReply.reply || (typeof rawReply === 'string' ? rawReply : JSON.stringify(parsedReply));
-                if (parsedReply.suggested_chips && Array.isArray(parsedReply.suggested_chips)) {
-                    setDynamicChips(parsedReply.suggested_chips);
-                }
+                nextChips = normalizeChips(parsedReply.suggested_chips || nextChips);
             } else {
                 replyText = String(rawReply);
             }
@@ -821,8 +1156,13 @@ const ChatInterface = ({ onOpenQuest }) => {
             // Check for dynamic suggestions tag
             const { suggestions: chips } = parseSuggestions(replyText);
             if (chips.length > 0) {
-                setDynamicChips(chips);
+                nextChips = normalizeChips(chips);
                 // The display text will be cleaned by formatMessageContent and render logic
+            }
+            if (nextChips.length > 0) {
+                setDynamicChips(nextChips);
+                setShowChips(true);
+                saveChipsToBackend(nextChips);
             }
 
             // --- MOCK EXAM LISTING TAG ---
@@ -880,6 +1220,7 @@ const ChatInterface = ({ onOpenQuest }) => {
                 agentId: activeAgentId,
                 customComponent: data.customComponent || null,
                 payload: data.payload || null,
+                actions: Array.isArray(data.actions) ? data.actions : [],
                 examType: data.examType || null,
                 isSystemResponse: data.isSystemResponse || isHidden // Mark as system if backend says so or if it was a hidden trigger
             };
@@ -940,10 +1281,11 @@ const ChatInterface = ({ onOpenQuest }) => {
                 setAvatarState('IDLE');
                 if (aiSetStudentState === 'LISTENING') setStudentState('IDLE');
 
-                if (messages.length > 0) {
+                if (nextChips.length > 0 || messages.length > 0) {
                     setShowChips(true);
                 }
             }, 3000);
+            return { success: true, data, message: aiMsg };
 
         } catch (error) {
             console.error('Chat error:', error);
@@ -953,6 +1295,7 @@ const ChatInterface = ({ onOpenQuest }) => {
                 role: 'assistant',
                 content: `Error: ${error.message}${diagInfo}. Please try again.`
             }]);
+            return { success: false, error };
         }
  finally {
             console.log(`[ChatInterface] Finally reached. Resetting states...`);
@@ -961,6 +1304,41 @@ const ChatInterface = ({ onOpenQuest }) => {
             // Use functional update to avoid stale closure issues
             setAvatarState(prev => prev === 'THINKING' ? 'IDLE' : prev);
         }
+    };
+
+    const handleTutorAction = (action) => {
+        const type = action?.type || 'send_text';
+        const payload = action?.payload || {};
+        const value = payload.value || action?.value || action?.label || '';
+
+        if (type === 'open_quest') {
+            if (onOpenQuest) {
+                onOpenQuest(payload.agentId || activeAgentId);
+                return;
+            }
+            navigate('/lab');
+            return;
+        }
+
+        if (type === 'open_mock') {
+            if (value.includes('[ACTIVATING_EXAM_MODE]')) {
+                handleSendMessage(value);
+                return;
+            }
+            navigate('/mock-exam');
+            return;
+        }
+
+        if (type === 'open_lab') {
+            const params = payload.params || {};
+            const searchParams = new URLSearchParams();
+            if (params.topic) searchParams.set('topic', params.topic);
+            if (params.level) searchParams.set('level', params.level);
+            navigate(`/lab?${searchParams.toString()}`);
+            return;
+        }
+
+        handleSendMessage(value);
     };
 
     // --- STABILIZED VOICE RECORDING LOGIC (MEDIA RECORDER + BACKEND STT) ---
@@ -1007,6 +1385,7 @@ const ChatInterface = ({ onOpenQuest }) => {
             if (res.ok) {
                 setMessages([]); // Clear locally
                 setDynamicChips([]); // Reset dynamic chips to empty so default suggestionChips are used
+                clearChipsCacheOnBackend();
                 setShowChips(true);
                 // Trigger Smart Greeting (Local Translation)
                 setMessages([{
@@ -1067,54 +1446,7 @@ const ChatInterface = ({ onOpenQuest }) => {
                     ? "!fixed !top-0 !left-0 !m-0 inset-0 z-[999] rounded-none shadow-none h-screen w-screen flex flex-col overflow-hidden"
                     : "lg:col-span-9 h-[80vh] min-h-[600px] w-full"
             )}>
-            {(!user || (user && !user.emailVerified)) && (
-                <div className="absolute inset-0 z-[200] bg-white/50 dark:bg-black/50 backdrop-blur-sm flex flex-col items-center justify-center p-8 text-center">
-                    <div className="bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-2xl max-w-md w-full border border-gray-200 dark:border-gray-700 animate-in fade-in zoom-in-95 duration-300">
-                        <div className="size-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <span className="text-3xl text-primary font-bold">🔒</span>
-                        </div>
-
-                        {!user ? (
-                            <AuthForm />
-                        ) : (
-                            <div className="space-y-4">
-                                <h2 className="text-xl font-bold text-gray-900 dark:text-white">Verify Your Email</h2>
-                                <p className="text-sm text-gray-600 dark:text-gray-300">
-                                    We've sent a verification link to <span className="font-bold text-primary">{user.email}</span>.
-                                    Please check your inbox (and spam folder) and click the link to activate your free trial.
-                                </p>
-
-                                <div className="p-3 bg-yellow-50 border border-yellow-100 rounded-lg text-xs text-yellow-700 text-left">
-                                    <strong>Note:</strong> Strict verification is required to prevent trial abuse. Disposable emails are not accepted.
-                                </div>
-
-                                <button
-                                    onClick={() => window.location.reload()}
-                                    className="w-full py-3 bg-primary hover:bg-primary/90 text-white rounded-xl font-bold text-sm transition-all shadow-lg hover:shadow-primary/20 active:scale-95"
-                                >
-                                    I've Verified My Email
-                                </button>
-
-                                <button
-                                    onClick={() => verifyEmail(user)}
-                                    className="text-xs text-primary font-bold hover:underline"
-                                >
-                                    Resend Verification Email
-                                </button>
-
-                                <div className="border-t pt-4 mt-4">
-                                    <button
-                                        onClick={() => logout()}
-                                        className="text-xs text-gray-400 hover:text-gray-600"
-                                    >
-                                        Sign out and use a different account
-                                    </button>
-                                </div>
-                            </div>
-                        )}
-                    </div>
-                </div>
-            )}
+            {/* Verification Overlay Removed */}
             {/* Verify-Then-Grade Modal */}
             {isUploaderOpen && (
                 <EssayUploader
@@ -1325,8 +1657,24 @@ const ChatInterface = ({ onOpenQuest }) => {
                                     "text-[#1d130c] dark:text-white whitespace-pre-wrap transition-all",
                                     isEnlarged ? "text-[16px] leading-relaxed" : "text-[14px] leading-snug"
                                 )}>
-                                    {formatMessageContent(msg.content)}
+                                    {formatMessageContent(msg.content, handleTutorAction)}
                                 </div>
+
+                                {Array.isArray(msg.actions) && msg.actions.length > 0 && (
+                                    <div className="mt-1 flex flex-wrap gap-2">
+                                        {msg.actions.slice(0, 3).map((action, actionIdx) => (
+                                            <button
+                                                key={`${action.type || 'action'}-${actionIdx}`}
+                                                onClick={() => handleTutorAction(action)}
+                                                className="group flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-orange-500 to-amber-600 hover:from-orange-600 hover:to-amber-700 text-white rounded-xl font-bold text-sm shadow-md shadow-orange-500/20 transition-all hover:scale-[1.02] active:scale-[0.98]"
+                                            >
+                                                <Sparkles className="w-4 h-4" />
+                                                {action.label || 'Start Practice'}
+                                                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                                            </button>
+                                        ))}
+                                    </div>
+                                )}
 
                                 {/* Custom Component: Active Mock List */}
                                 {msg.customComponent === 'active_mock_list' && (
@@ -1453,23 +1801,61 @@ const ChatInterface = ({ onOpenQuest }) => {
                 <div ref={messagesEndRef} />
             </div>
 
-            {/* Dynamic Suggestion Chips */}
+            {/* Dynamic Suggestion Chips Carousel */}
             {showChips && (dynamicChips.length > 0 || (messages.length <= 1 && suggestionChips && suggestionChips.length > 0)) && (
-                <div className="max-w-4xl mx-auto px-4 mb-4 flex justify-start">
-                    <div className="flex flex-nowrap gap-2 overflow-x-auto pb-1 no-scrollbar animate-in fade-in slide-in-from-bottom-1 duration-300">
-                        {(dynamicChips.length > 0 ? dynamicChips : (messages.length <= 1 ? suggestionChips : [])).map((chip, idx) => (
-                            <button
-                                key={idx}
-                                onClick={() => handleSendMessage(chip.value || chip)}
-                                className="flex items-center gap-1.5 px-3 py-1.5 bg-white dark:bg-white/10 border border-black/10 dark:border-white/10 rounded-xl shadow-sm hover:bg-gray-50 dark:hover:bg-white/20 transition-all text-xs font-semibold text-gray-700 dark:text-gray-200 whitespace-nowrap"
+                <div className="max-w-4xl mx-auto px-4 mb-2 relative group">
+                    <div className="relative flex items-center">
+                        {/* Left Arrow */}
+                        {!isAtLeft && (
+                            <button 
+                                onClick={() => handleChipScroll('left')}
+                                className="absolute left-0 z-10 p-2 bg-white/90 dark:bg-black/60 backdrop-blur-sm rounded-full shadow-md border border-black/5 dark:border-white/10 text-gray-600 dark:text-gray-300 -ml-2 active:scale-90 transition-transform"
                             >
-                                {chip.emoji && <span className="text-sm">{chip.emoji}</span>}
-                                {chip.label || chip}
+                                <ChevronLeft size={20} />
                             </button>
-                        ))}
+                        )}
+
+                        <div 
+                            ref={chipScrollRef}
+                            className="flex gap-2 overflow-x-auto no-scrollbar scroll-smooth items-center py-2 w-full touch-pan-x overscroll-contain"
+                        >
+                            {(() => {
+                                const rawChips = normalizeChips(dynamicChips.length > 0 ? dynamicChips : (messages.length <= 1 ? suggestionChips : []));
+                                // Limit to maximum 4 chips as requested
+                                const chipsToDisplay = rawChips.slice(0, 4);
+                                
+                                return chipsToDisplay.map((rawChip, idx) => {
+                                    const chip = verbifyChip(rawChip);
+                                    return (
+                                        <button
+                                            key={idx}
+                                            onClick={() => chip.action ? handleTutorAction(chip.action) : handleSendMessage(chip.value || chip.label || chip)}
+                                            className="flex items-center gap-1.5 px-4 py-2 bg-white dark:bg-white/10 border border-black/10 dark:border-white/10 rounded-xl shadow-sm hover:bg-gray-50 dark:hover:bg-white/20 transition-all text-[13px] font-semibold text-gray-700 dark:text-gray-200 whitespace-nowrap shrink-0 active:scale-95"
+                                        >
+                                            {chip.emoji && <span className="text-base">{chip.emoji}</span>}
+                                            {chip.label || chip}
+                                        </button>
+                                    );
+                                });
+                            })()}
+                        </div>
+
+                        {/* Right Arrow */}
+                        {(() => {
+                            const rawChips = normalizeChips(dynamicChips.length > 0 ? dynamicChips : (messages.length <= 1 ? suggestionChips : []));
+                            return !isAtRight && rawChips.length > 1 && (
+                                <button 
+                                    onClick={() => handleChipScroll('right')}
+                                    className="absolute right-0 z-10 p-2 bg-white/90 dark:bg-black/60 backdrop-blur-sm rounded-full shadow-md border border-black/5 dark:border-white/10 text-gray-600 dark:text-gray-300 -mr-2 active:scale-90 transition-transform"
+                                >
+                                    <ChevronRight size={20} />
+                                </button>
+                            );
+                        })()}
                     </div>
                 </div>
             )}
+
 
             {/* Input Area - Gemini Redesign */}
             <div className="p-4 bg-white/60 dark:bg-white/5 transition-all duration-300">
@@ -1506,21 +1892,21 @@ const ChatInterface = ({ onOpenQuest }) => {
                             <button
                                 onClick={() => setIsToolsOpen(!isToolsOpen)}
                                 className={cn(
-                                    "flex items-center gap-2 px-4 py-2 rounded-full transition-all border shadow-sm",
+                                    "flex items-center gap-2 px-5 py-2.5 rounded-full transition-all border shadow-sm active:scale-95",
                                     isToolsOpen
                                         ? "bg-primary text-white border-primary"
                                         : "bg-white/50 dark:bg-white/5 text-[#a16b45] dark:text-gray-300 border-black/5 dark:border-white/10 hover:bg-white dark:hover:bg-white/10"
                                 )}
                             >
-                                <Plus className={cn("w-4 h-4 transition-transform", isToolsOpen && "rotate-45")} />
-                                <Settings2 className="w-4 h-4" />
-                                <span className="text-xs font-black uppercase tracking-wider">Tools</span>
+                                <Plus className={cn("w-5 h-5 transition-transform", isToolsOpen && "rotate-45")} />
+                                <Settings2 className="w-5 h-5" />
+                                <span className="text-sm font-black uppercase tracking-wider">{t('chat.tools')}</span>
                             </button>
 
                             {/* Tools Context Menu (Popover) */}
                             {isToolsOpen && (
                                 <div className="absolute bottom-full left-0 mb-3 bg-white dark:bg-[#1a110a] rounded-2xl shadow-2xl border border-black/5 dark:border-white/10 p-2 min-w-[280px] animate-in slide-in-from-bottom-2 fade-in duration-200 z-[100]">
-                                    <h4 className="px-3 py-2 text-[10px] font-black uppercase tracking-wider text-primary opacity-60 text-left">AI Features</h4>
+                                    <h4 className="px-3 py-2 text-[10px] font-black uppercase tracking-wider text-primary opacity-60 text-left">{t('chat.ai_features')}</h4>
 
                                     <button
                                         onClick={() => {
@@ -1532,7 +1918,7 @@ const ChatInterface = ({ onOpenQuest }) => {
                                         <div className="p-1.5 bg-blue-50 dark:bg-blue-900/20 rounded-lg text-blue-500 group-hover:bg-blue-100 transition-colors">
                                             <Paperclip size={16} />
                                         </div>
-                                        Attach Photo
+                                        {t('chat.attach_photo')}
                                     </button>
 
                                     {activeAgentId !== 'math' && activeAgentId !== 'ace' && (
@@ -1547,7 +1933,7 @@ const ChatInterface = ({ onOpenQuest }) => {
                                                 <div className="p-1.5 bg-amber-50 dark:bg-amber-900/20 rounded-lg text-amber-500 group-hover:bg-amber-100 transition-colors">
                                                     <Edit3 size={16} />
                                                 </div>
-                                                Grade My Essay
+                                                {t('chat.grade_essay')}
                                             </button>
                                         </>
                                     )}
@@ -1587,22 +1973,22 @@ const ChatInterface = ({ onOpenQuest }) => {
             {isClearConfirmOpen && (
                 <div className="fixed inset-0 z-[300] flex items-center justify-center bg-black/50 backdrop-blur-sm p-4 animate-in fade-in duration-200">
                     <div className="bg-white dark:bg-[#1a110a] rounded-2xl shadow-2xl p-6 max-w-sm w-full border border-gray-200 dark:border-white/10 scale-100 animate-in zoom-in-95 duration-200">
-                        <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">Clear History?</h3>
+                        <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">{t('chat.clear_history_title')}</h3>
                         <p className="text-sm text-gray-500 dark:text-gray-400 mb-6">
-                            This will permanently delete your conversation history with this agent. This action cannot be undone.
+                            {t('chat.clear_history_confirm')}
                         </p>
                         <div className="flex gap-3">
                             <button
                                 onClick={() => setIsClearConfirmOpen(false)}
                                 className="flex-1 py-2.5 bg-gray-100 hover:bg-gray-200 dark:bg-white/5 dark:hover:bg-white/10 text-gray-700 dark:text-gray-300 rounded-xl font-bold text-sm transition-colors"
                             >
-                                Cancel
+                                {t('chat.cancel')}
                             </button>
                             <button
                                 onClick={confirmClearHistory}
                                 className="flex-1 py-2.5 bg-red-500 hover:bg-red-600 text-white rounded-xl font-bold text-sm shadow-lg shadow-red-500/20 transition-all active:scale-95"
                             >
-                                Delete Forever
+                                {t('chat.delete_forever')}
                             </button>
                         </div>
                     </div>

@@ -22,7 +22,7 @@
         "The solution is widely accepted as the only way to save the planet.",
         "The solution is too traditional to be considered a modern innovation."
       ],
-      "answer": "B",
+      "answer": "The solution appears revolutionary, though it may have underlying complexities.",
       "explanation": "'Ostensibly' suggests something that seems to be the case on the surface, but implies there might be more to consider (such as the challenges mentioned later)."
     },
     {
@@ -31,6 +31,12 @@
       "instruction": "Identify a phrase from the text.",
       "question": "Which phrase in paragraph 2 suggests that traditional farming is at the mercy of the weather?",
       "answer": "beholden to the whims of the elements",
+      "marking_logic": {
+        "full_marks_criteria": [
+          "Exact match: 'beholden to the whims of the elements'"
+        ],
+        "key_phrases": ["beholden", "whims", "elements"]
+      },
       "explanation": "This idiomatic expression indicates a state of being controlled by unpredictable natural forces."
     },
     {
@@ -44,7 +50,7 @@
         "By using sensors and CEA technology to optimize growth conditions.",
         "By increasing the amount of horizontal land used for cultivation."
       ],
-      "answer": "C",
+      "answer": "By using sensors and CEA technology to optimize growth conditions.",
       "explanation": "The text states that sensors monitor humidity, temperature, and CO2 with 'surgical precision' within the CEA framework."
     },
     {
@@ -53,6 +59,13 @@
       "instruction": "Answer in your own words based on paragraph 3.",
       "question": "Why is vertical farming considered a 'strategic imperative' for cities like Hong Kong?",
       "answer": "Because they have very little available land for traditional farming and need to protect themselves against global supply chain issues.",
+      "marking_logic": {
+        "full_marks_criteria": [
+          "Mentions lack of arable land / high land costs",
+          "Mentions resilience against supply chain disruptions"
+        ],
+        "key_phrases": ["arable land", "land scarcity", "supply chain", "resilience"]
+      },
       "explanation": "The text mentions 'arable land is a vanishing luxury' and the need for 'resilience against global supply chain disruptions'."
     },
     {
@@ -67,8 +80,8 @@
         "Discussion of logistical benefits and 'food miles'.",
         "A final assessment of the industry's future trajectory."
       ],
-      "answer": "2, 1, 4, 3, 5",
-      "explanation": "The passage moves from the problem (10 billion people) to the technology, then benefits, then drawbacks, and finally the future outlook."
+      "answer": "1-0-3-2-4",
+      "explanation": "The passage moves from the problem (1) to the technology (0), then benefits (3), then drawbacks (2), and finally the future outlook (4)."
     },
     {
       "id": "q6",
@@ -82,7 +95,10 @@
         "Zero use of chemical pesticides",
         "High energy consumption for LED lighting"
       ],
-      "answer": "Benefits: [1, 4]; Challenges: [2, 3, 5]",
+      "answer": {
+        "Benefits": [0, 3],
+        "Challenges": [1, 2, 4]
+      },
       "explanation": "Logistics and lack of pesticides are benefits; CAPEX, energy, and crop limits are challenges."
     },
     {
@@ -96,7 +112,7 @@
         "Its energy use may result in a higher carbon footprint than traditional methods.",
         "It relies too heavily on chemical fertilizers."
       ],
-      "answer": "C",
+      "answer": "Its energy use may result in a higher carbon footprint than traditional methods.",
       "explanation": "Paragraph 4 notes that the power required for 24/7 artificial climates might lead to a carbon footprint exceeding traditional farming."
     },
     {
@@ -105,6 +121,9 @@
       "instruction": "Find a word in paragraph 5.",
       "question": "Which word in the final paragraph is used to mean 'a solution or remedy for all difficulties or diseases'?",
       "answer": "panacea",
+      "marking_logic": {
+        "full_marks_criteria": ["Exact word: panacea"]
+      },
       "explanation": "The text states vertical farming is 'not a panacea,' meaning it's not a single solution for all agricultural problems."
     },
     {
@@ -118,7 +137,7 @@
         "Measured and analytical",
         "Hostile and aggressive"
       ],
-      "answer": "C",
+      "answer": "Measured and analytical",
       "explanation": "The author presents both significant benefits and serious challenges, reaching a balanced conclusion."
     },
     {
@@ -127,6 +146,12 @@
       "instruction": "Identify the metaphor.",
       "question": "What metaphor does the author use in the final paragraph to describe vertical farms in cities?",
       "answer": "concrete jungles turned emerald",
+      "marking_logic": {
+        "full_marks_criteria": [
+          "Exact metaphor: 'concrete jungles turned emerald'"
+        ],
+        "key_phrases": ["concrete jungles", "emerald"]
+      },
       "explanation": "This metaphor contrasts the gray 'concrete' of the city with the 'emerald' green of the plants growing within it."
     }
   ],

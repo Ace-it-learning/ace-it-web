@@ -13,7 +13,7 @@ router.get('/weekly-theme', async (req, res) => {
         d.setHours(0, 0, 0, 0);
         d.setDate(d.getDate() + 4 - (d.getDay() || 7));
         const weekNum = Math.ceil((((d - new Date(d.getFullYear(), 0, 1)) / 8.64e7) + 1) / 7);
-        const weekKey = `2026_${weekNum}`;
+        const weekKey = `${d.getFullYear()}_${weekNum}`;
 
         const metaPath = path.join(__dirname, '..', '..', 'data', 'weekly_quests', 'weekly_meta.json');
         if (fs.existsSync(metaPath)) {
@@ -85,8 +85,10 @@ router.post('/generate', async (req, res) => {
 
 // POST /api/lab/submit
 router.post('/submit', async (req, res) => {
-    const { uid, results, xp } = req.body;
-    if (!uid || !results) return res.status(400).json({ error: "Missing data" });
+    const { results, xp } = req.body;
+    const uid = req.body.uid || req.uid || req.query?.uid || 'guest';
+    if (!results) return res.status(400).json({ error: "Missing data" });
+    if (!uid || uid === 'guest') return res.status(401).json({ error: "Missing resolved uid" });
 
     try {
         const questionIds = Object.keys(results);
@@ -214,7 +216,13 @@ router.post('/evaluate_batch', async (req, res) => {
     const fs = require('fs');
 
     try {
-        const { tasks, answers, uid, category } = req.body;
+        let { tasks, answers, uid, category } = req.body;
+        const taskList = Array.isArray(tasks) ? tasks : [];
+        if (taskList.length === 0) {
+            return res.json({});
+        }
+        tasks = taskList;
+
         const gradingRequests = tasks.map(t => ({
             id: t.id,
             type: t.type,
@@ -243,7 +251,7 @@ Return a SINGLE JSON OBJECT where keys are the task IDs.
 Format: { "id": { "status": "correct"|"partial"|"incorrect", "correct": boolean, "feedback": "..." } }`;
 
         const result = await GenerativeAIService.generateContent(prompt, {
-            model: "ace-it-pro",
+            model: "ace-it-flash",
             generationConfig: { responseMimeType: "application/json" }
         });
 

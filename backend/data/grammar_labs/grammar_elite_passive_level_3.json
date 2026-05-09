@@ -65,7 +65,7 @@
         3,
         4
       ],
-      "explanation": "A future passive using the modal 'will'."
+      "explanation": "The future passive is formed using the modal 'will' + 'be' + 'processed' (past participle)."
     },
     {
       "sentence_tokens": [
@@ -83,7 +83,7 @@
         1,
         4
       ],
-      "explanation": "'Had... renewed' is the causative passive structure."
+      "explanation": "'Had... renewed' is the causative passive structure where 'had' is the causative verb and 'renewed' is the past participle."
     },
     {
       "sentence_tokens": [
@@ -102,7 +102,7 @@
         4,
         5
       ],
-      "explanation": "A modal passive expressing obligation."
+      "explanation": "The modal passive 'must be verified' expresses a strong obligation using 'must' + 'be' + past participle."
     },
     {
       "sentence_tokens": [
@@ -121,7 +121,7 @@
         2,
         3
       ],
-      "explanation": "A simple past passive with an agent ('the committee')."
+      "explanation": "A simple past passive formed with the auxiliary 'were' and the past participle 'announced'."
     }
   ],
   "drill_tasks": [

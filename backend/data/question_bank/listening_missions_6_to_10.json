@@ -1,0 +1,796 @@
+{
+  "listening_mission_6": {
+    "id": "listening_mission_6",
+    "title": "Smart City Innovation",
+    "description": "Coordinating an IoT pilot for neighbourhood parking guidance and resident communications.",
+    "topic": "Technology",
+    "type": "listening_mission",
+    "paper": "Listening",
+    "subject": "English",
+    "level": "7",
+    "is_approved": true,
+    "factory_template": false,
+    "created_at": {
+      "_seconds": 1704067700,
+      "_nanoseconds": 0
+    },
+    "prediction_metadata": {
+      "topic_name": "Neighborhood Parking IoT Pilot",
+      "sub_topics": [
+        {
+          "id": "st1",
+          "name": "Sensor deployment",
+          "category": "Hardware",
+          "is_distractor": false,
+          "hint": "Listen for corrected total versus draft deck figures."
+        },
+        {
+          "id": "st2",
+          "name": "Budget line",
+          "category": "Finance",
+          "is_distractor": false,
+          "hint": "Reject the early business-case amount."
+        },
+        {
+          "id": "st3",
+          "name": "Legacy camera retrofit",
+          "category": "Optional scope",
+          "is_distractor": true,
+          "hint": "Mentioned as a future phase, not in this pilot."
+        }
+      ]
+    },
+    "sprint_data": {
+      "audio_transcript": "[SCENE START]\n[Low hum of server room fans]\nSmart City PM: Morning. We are locking the Yau Ma Tei neighbourhood parking IoT pilot before the Easter traffic spike.\nSmart City PM: First correction: internal decks listed two hundred forty sensor nodes. Final procurement is two hundred eighty after we added lamp-post edge units.\nSmart City PM: Second correction: the early business case showed three point two million dollars, but LegCo approved two point nine million only.\nSmart City PM: Third correction on timing. Internal slides still say the pilot runs through March. Contractor mobilization slipped, so we now start first April and end thirtieth April.\nTraffic Engineer: Queue policy update. Rerouting signage switches on when more than fifteen vehicles are queuing at any zone entrance. Twelve was too sensitive in testing.\nData Officer: The operations dashboard now refreshes every thirty seconds, not every sixty.\nSmart City PM: If bay occupancy stays above ninety-five percent for more than eight consecutive minutes, flag Priority S to the control room.\nSupport Lead: Resident helpdesk acknowledgement SLA is twenty minutes during business hours, Monday to Friday.\nSmart City PM: Public enquiry hotline for this pilot is two one zero three eight double nine. Save that everywhere.\nSmart City PM: Send final deployment map overlays by six forty-five p.m. today. Thanks.\n[SCENE END]",
+      "tasks": [
+        {
+          "id": "a1_iot_table",
+          "type": "TABLE",
+          "label": "IoT Pilot Facts",
+          "rows": [
+            {
+              "label": "Final sensor nodes deployed",
+              "answer": "280",
+              "placeholder": "Number"
+            },
+            {
+              "label": "Approved pilot budget",
+              "answer": "2.9 million",
+              "placeholder": "Amount"
+            },
+            {
+              "label": "Pilot end date",
+              "answer": "30 April",
+              "placeholder": "Date"
+            },
+            {
+              "label": "Public hotline",
+              "answer": "2103 8899",
+              "placeholder": "Number"
+            }
+          ]
+        },
+        {
+          "id": "a2_iot_form",
+          "type": "FORM_FILLING",
+          "question": "Traffic control and reporting",
+          "fields": [
+            {
+              "label": "Queue reroute trigger",
+              "answer": "more than 15 vehicles",
+              "placeholder": "Threshold"
+            },
+            {
+              "label": "Dashboard refresh interval",
+              "answer": "30 seconds",
+              "placeholder": "Interval"
+            },
+            {
+              "label": "Sustained high-occupancy alert",
+              "answer": "Priority S",
+              "placeholder": "Code"
+            },
+            {
+              "label": "Helpdesk acknowledgement SLA",
+              "answer": "20 minutes",
+              "placeholder": "Duration"
+            }
+          ]
+        },
+        {
+          "id": "a3_iot_mcq",
+          "type": "MCQ_BATCH",
+          "label": "Pilot Compliance",
+          "questions": [
+            {
+              "question": "What is the approved funding figure for this pilot?",
+              "options": [
+                "A. 3.2 million",
+                "B. 2.9 million",
+                "C. 3.5 million",
+                "D. 2.6 million"
+              ],
+              "answer": "B"
+            },
+            {
+              "question": "How long must high occupancy persist before Priority S fires?",
+              "options": [
+                "A. 5 minutes",
+                "B. 8 minutes",
+                "C. 10 minutes",
+                "D. 12 minutes"
+              ],
+              "answer": "B"
+            }
+          ]
+        }
+      ]
+    },
+    "integrated_data": {
+      "audio_transcript": "[INTEGRATED BRIEFING START]\nChair: Transport Department wants one consolidated brief for the neighbourhood pilot memo.\nTraffic Engineer: Corrections first: reroute gates activate when the queue is over fifteen vehicles, not twelve.\nPrivacy Officer: Residents must actively opt in through the app. The default is off; no auto-enrolment.\nLegal: Plate-image retention is ninety days for hashed records—not one eighty as in the prototype.\nFinance Officer: Only publish the two point nine million cap. The three point two million line is obsolete.\nData Analyst: KPI headline is average search-to-bay time under four minutes after guidance is applied.\nOperations Lead: If wind-down happens early, archive telemetry packs by ninth May.\nChair: Ensure the memo lists two resident-facing contact paths: app chat and the pilot hotline.\n[INTEGRATED BRIEFING END]",
+      "notetaking_fields": [
+        {
+          "id": "nt_ops",
+          "label": "Pilot constraints and corrections",
+          "placeholder": "Capture queue logic, occupancy alerts, and budget facts..."
+        },
+        {
+          "id": "nt_privacy",
+          "label": "Privacy and data rules",
+          "placeholder": "Note opt-in defaults, retention, and contact channels..."
+        },
+        {
+          "id": "nt_kpi",
+          "label": "Performance targets",
+          "placeholder": "Record KPI wording and archive/handover dates..."
+        }
+      ],
+      "data_file": [
+        {
+          "id": "df_scope_email",
+          "title": "Internal Email: Pilot Scope",
+          "type": "email",
+          "content": "From: Smart City Office <pilot@smartcity.hk>\\nTo: Transport Liaison Desk\\nCC: Privacy Unit\\nDate: 28 March\\nSubject: Yau Ma Tei IoT Pilot - Locked Scope\\n\\nPlease align all external language to the final scope: lamp-post and deck sensors (280 nodes), April-only active pilot window, and resident opt-in only through the official app channel.\\n\\nApproved capital envelope remains 2.9 million HKD. Older slides showing 3.2 million must be withdrawn.\\nPublic hotline: 2103 8899\\n\\nRegards,\\nSmart City PMO"
+        },
+        {
+          "id": "df_tech_brief",
+          "title": "Control Room Operating Brief",
+          "type": "brief",
+          "content": "Reroute trigger: queue length greater than 15 vehicles per entrance zone.\\nOccupancy surge rule: bay occupancy above 95% for 8+ continuous minutes -> Priority S.\\nDashboard polling: 30 seconds.\\nHelpdesk acknowledgement: within 20 minutes (business hours)."
+        },
+        {
+          "id": "df_resident_notice",
+          "title": "Estate Notice Board",
+          "type": "notice",
+          "content": "SMART PARKING PILOT (APRIL)\\nNeed help locating a bay?\\nDownload the pilot app and opt in to guidance alerts.\\nHotline: 2103 8899\\nWe use hashed plate data retained for 90 days only."
+        }
+      ],
+      "writing_task": {
+        "instruction": "You are the Smart City Liaison Officer. Write a formal memo to the Transport Department contact desk summarizing the final pilot parameters, corrected threshold logic, privacy safeguards, and headline KPI expectations.",
+        "format": "Formal memo",
+        "role_profile": "Smart City Liaison Officer writing to a government transport desk in formal public-sector register.",
+        "word_count": "200-250",
+        "marking_criteria": "Content, Language, Organization, Appropriacy"
+      },
+      "marking_key": [
+        "Confirm 280 sensor nodes and April pilot window ending 30 April.",
+        "State approved budget 2.9 million and reject the obsolete 3.2 million figure.",
+        "Specify rerouting when queue is over fifteen vehicles (not twelve)—threshold comparator precision.",
+        "State plate-hash retention as ninety days, not one eighty.",
+        "State opt-in default off with no auto-enrolment.",
+        "Include KPI wording: average search-to-bay time under four minutes.",
+        "Mention resident-facing contacts: pilot hotline 2103 8899 and the official app channel."
+      ]
+    }
+  },
+  "listening_mission_7": {
+    "id": "listening_mission_7",
+    "title": "Social Media Ethics",
+    "description": "School seminar on cyberbullying, screenshots, and managing a responsible digital footprint.",
+    "topic": "Technology",
+    "type": "listening_mission",
+    "paper": "Listening",
+    "subject": "English",
+    "level": "3",
+    "is_approved": true,
+    "factory_template": false,
+    "created_at": {
+      "_seconds": 1704067800,
+      "_nanoseconds": 0
+    },
+    "sprint_data": {
+      "audio_transcript": "[SCENE START]\n[Classroom chatter fading]\nIT Teacher: Quick prep for Social Media Ethics Week. Everyone update your one-page factsheet.\nIT Teacher: Workshop date is fourteenth March. Session runs three forty-five p.m. to five fifteen p.m. An old poster still says three thirty; that is wrong.\nCounsellor: We booked the lecture theatre. Capacity is two hundred seats. We expect around one hundred eighty participants.\nIT Teacher: Reporting pathway is the Digital-Safe Code D for serious harassment screenshots that need immediate review.\nCounsellor: Class poster entries are due by noon Friday. Late boards cannot join the assembly display.\nIT Teacher: School Wi-Fi guest passes for parents are capped at fifty codes, not eighty.\nCounsellor: Remind students: forwarding private chats without consent is off-limits.\nIT Teacher: That's it—send the corridor slide to monitors by four p.m.\n[SCENE END]",
+      "tasks": [
+        {
+          "id": "a1_ethics_table",
+          "type": "TABLE",
+          "label": "Seminar Basics",
+          "rows": [
+            {
+              "label": "Workshop date",
+              "answer": "14 March",
+              "placeholder": "Date"
+            },
+            {
+              "label": "Session time",
+              "answer": "3:45 p.m. to 5:15 p.m.",
+              "placeholder": "Time range"
+            },
+            {
+              "label": "Expected attendance",
+              "answer": "180",
+              "placeholder": "Number"
+            },
+            {
+              "label": "Harassment escalation code",
+              "answer": "Code D",
+              "placeholder": "Code"
+            }
+          ]
+        },
+        {
+          "id": "a2_ethics_form",
+          "type": "FORM_FILLING",
+          "question": "Logistics and limits",
+          "fields": [
+            {
+              "label": "Venue capacity",
+              "answer": "200",
+              "placeholder": "Number"
+            },
+            {
+              "label": "Parent Wi-Fi guest codes (max)",
+              "answer": "50",
+              "placeholder": "Number"
+            },
+            {
+              "label": "Poster entry deadline",
+              "answer": "noon Friday",
+              "placeholder": "Deadline"
+            },
+            {
+              "label": "Slide to monitors due",
+              "answer": "4:00 p.m.",
+              "placeholder": "Time"
+            }
+          ]
+        },
+        {
+          "id": "a3_ethics_mcq",
+          "type": "MCQ_BATCH",
+          "label": "Quick Check",
+          "questions": [
+            {
+              "question": "Which start time is incorrect on outdated posters?",
+              "options": [
+                "A. 3:30 p.m.",
+                "B. 3:45 p.m.",
+                "C. 4:00 p.m.",
+                "D. 5:15 p.m."
+              ],
+              "answer": "A"
+            },
+            {
+              "question": "What is the correct reporting pathway label for urgent screenshot cases?",
+              "options": [
+                "A. Code A",
+                "B. Code B",
+                "C. Code D",
+                "D. Code X"
+              ],
+              "answer": "C"
+            }
+          ]
+        }
+      ]
+    },
+    "integrated_data": {
+      "audio_transcript": "[INTEGRATED BRIEFING START]\nLead Teacher: We need a homeroom notice blurb for parents.\nSchool Counsellor: Emphasize respect in comment threads—no tagging someone's appearance.\nIT Tech: Correction: if students see serious targeted harassment, they press Digital-Safe Code D immediately.\nLEAD Teacher: Parent hotline for workshop transport questions is two eight nine one double three double two.\nStudent Rep: Ask homeroom teachers to mention that students should not circulate screen recordings of fights.\nLead Teacher: Simple KPI: at least seventy percent of Form three and Form four students sign the pledge board.\n[INTEGRATED BRIEFING END]",
+      "notetaking_fields": [
+        {
+          "id": "nt_parents",
+          "label": "Parent and student messaging",
+          "placeholder": "Write key lines for families..."
+        },
+        {
+          "id": "nt_safety",
+          "label": "Reporting and escalation",
+          "placeholder": "Note codes, hotline, and prohibited behaviours..."
+        }
+      ],
+      "data_file": [
+        {
+          "id": "df_internal_email",
+          "title": "Staff Circular Snippet",
+          "type": "email",
+          "content": "From: IT & Counselling Team <wellbeing@harboursec.edu.hk>\\nTo: All Class Teachers\\nDate: 10 March\\nSubject: Digital Footprint Week - Final Facts\\n\\nWorkshop: 14 March, 3:45-5:15 p.m., Lecture Theatre.\\nEscalation label for serious cases: Digital-Safe Code D.\\nParent enquiries (transport): 2891 3322\\n\\nPlease delete any handout showing a 3:30 start.\\n\\nRegards,\\nWellbeing Team"
+        },
+        {
+          "id": "df_checklist",
+          "title": "Homeroom Checklist",
+          "type": "brief",
+          "content": "Before 14 March:\\n- Pledge board signed by target cohort (70%+)\\n- No circulation of fight recordings\\n- Respectful-comment reminder in assembly script\\n- Poster entries: noon Friday deadline"
+        },
+        {
+          "id": "df_corridor_poster",
+          "title": "Corridor Poster Draft",
+          "type": "poster",
+          "content": "THINK BEFORE YOU POST\\n\\nWorkshop: 14 Mar 3:45-5:15 pm\\nYour footprints are public.\\nHarassment? Use Digital-Safe Code D."
+        }
+      ],
+      "writing_task": {
+        "instruction": "You are the ICT Student Ambassador. Write a concise memo to all class teachers summarizing the workshop schedule, the correct escalation pathway, and the pledge KPI for Forms 3–4.",
+        "format": "School memo",
+        "role_profile": "ICT Student Ambassador writing to class teachers in a clear, courteous school register.",
+        "word_count": "160-210",
+        "marking_criteria": "Content, Language, Organization, Appropriacy"
+      },
+      "marking_key": [
+        "Give corrected workshop timing 3:45-5:15 p.m. and reject the old 3:30 start.",
+        "Name Digital-Safe Code D for serious harassment escalation.",
+        "Include parent hotline 2891 3322 for transport questions.",
+        "Mention pledge-board KPI at least 70% for Form 3–4 students.",
+        "Warn against circulating screen recordings of fights or similar harmful shares."
+      ]
+    }
+  },
+  "listening_mission_8": {
+    "id": "listening_mission_8",
+    "title": "E-Sports Tournament",
+    "description": "Organising an inter-school competitive gaming event with broadcasting and safety controls.",
+    "topic": "Recreation",
+    "type": "listening_mission",
+    "paper": "Listening",
+    "subject": "English",
+    "level": "4",
+    "is_approved": true,
+    "factory_template": false,
+    "created_at": {
+      "_seconds": 1704067900,
+      "_nanoseconds": 0
+    },
+    "sprint_data": {
+      "audio_transcript": "[SCENE START]\n[Controller clicks and hall echo]\nTournament Director: Final lock for the Harbour Schools E-Sports Cup.\nTournament Director: Team slots: the brochure still says twenty schools. Registration actually closed at sixteen teams because stage power budgets tightened.\nStage Manager: Venue doors open eight a.m. First bracket match begins nine thirty a.m., not nine.\nFinance Officer: Prize pool is fifteen thousand dollars now. Please remove the eighteen thousand draft line from sponsor slides.\nTech Lead: Streams run on a five-minute delay for fairness. Coaches cannot call out live map positions.\nSafety Officer: Noise test for main speakers must finish by five p.m. Sunday because the estate has a quiet-hours agreement.\nTournament Director: Age rule: Form three to Form five players only. Junior form entries were rejected.\nOperations: If any match exceeds ninety minutes including pauses, switch to tie-break map four immediately.\nTournament Director: Medical desk extension two one four six seven seven one stays active until trophy photos end.\n[SCENE END]",
+      "tasks": [
+        {
+          "id": "a1_esports_table",
+          "type": "TABLE",
+          "label": "Tournament Core Facts",
+          "rows": [
+            {
+              "label": "Registered teams",
+              "answer": "16",
+              "placeholder": "Number"
+            },
+            {
+              "label": "First match start",
+              "answer": "9:30 a.m.",
+              "placeholder": "Time"
+            },
+            {
+              "label": "Prize pool",
+              "answer": "15,000",
+              "placeholder": "Amount"
+            },
+            {
+              "label": "Stream delay",
+              "answer": "5 minutes",
+              "placeholder": "Duration"
+            }
+          ]
+        },
+        {
+          "id": "a2_esports_form",
+          "type": "FORM_FILLING",
+          "question": "Venue rules and limits",
+          "fields": [
+            {
+              "label": "Venue opens",
+              "answer": "8:00 a.m.",
+              "placeholder": "Time"
+            },
+            {
+              "label": "Speaker test noise curfew",
+              "answer": "5:00 p.m.",
+              "placeholder": "Time"
+            },
+            {
+              "label": "Eligible player forms",
+              "answer": "Form 3 to Form 5",
+              "placeholder": "Range"
+            },
+            {
+              "label": "Long-match tie-break rule",
+              "answer": "map 4",
+              "placeholder": "Rule"
+            }
+          ]
+        },
+        {
+          "id": "a3_esports_mcq",
+          "type": "MCQ_BATCH",
+          "label": "Compliance Check",
+          "questions": [
+            {
+              "question": "Which figure is the outdated promotional trap?",
+              "options": [
+                "A. 16 teams",
+                "B. 18 teams",
+                "C. 20 teams",
+                "D. 12 teams"
+              ],
+              "answer": "C"
+            },
+            {
+              "question": "What is the medical desk extension number?",
+              "options": [
+                "A. 2146 771",
+                "B. 2146 772",
+                "C. 2145 771",
+                "D. 2136 771"
+              ],
+              "answer": "A"
+            }
+          ]
+        }
+      ]
+    },
+    "integrated_data": {
+      "audio_transcript": "[INTEGRATED BRIEFING START]\nEvent Chair: We need a principal-facing safety and consent memo ahead of Sunday.\nLegal Advisor: Parents must return signed streaming consent by Friday five p.m. No walk-in verbal OK.\nOperations Lead: Correction: speaker calibration must finish by five p.m., not six, because residents complained last year.\nStudent Welfare: Mental-health pause policy—any player who requests a ten-minute break between maps gets it once per series.\nSponsor Rep: Keep prize pool messaging at fifteen thousand; the eighteen thousand deck is obsolete.\nEvent Chair: KPI: zero tolerated unsportsmanlike chat on official broadcast overlays—moderators escalate strike codes three and above.\nAccessibility: Wheelchair viewing zone holds twelve supporters near Row C.\n[INTEGRATED BRIEFING END]",
+      "notetaking_fields": [
+        {
+          "id": "nt_safety",
+          "label": "Safety, noise, and consent",
+          "placeholder": "Capture deadlines, curfew, welfare rules..."
+        },
+        {
+          "id": "nt_broadcast",
+          "label": "Broadcast and conduct",
+          "placeholder": "Note stream delay, moderation, and prize wording..."
+        }
+      ],
+      "data_file": [
+        {
+          "id": "df_run_schedule",
+          "title": "Sunday Run Sheet",
+          "type": "schedule",
+          "content": "08:00 Doors\\n08:30 Coach check-in\\n09:30 Match block A\\n12:00 Break\\n14:15 Match block B\\n17:30 Finals\\nSpeaker tests end by 17:00 Sunday"
+        },
+        {
+          "id": "df_rules_brief",
+          "title": "Player Rules Extract",
+          "type": "brief",
+          "content": "Eligibility: Form 3-5 only.\\nStream delay: 5 minutes.\\nMatch cap: if total runtime exceeds 90 minutes, activate tie-break Map 4.\\nOne mental-health pause (10 min) per series on request."
+        },
+        {
+          "id": "df_sponsor_email",
+          "title": "Sponsor Acknowledgement",
+          "type": "email",
+          "content": "From: Partnerships <partners@harbouresports.hk>\\nTo: Tournament Comms\\nSubject: Approved Prize Line\\n\\nPlease publish verified prize pool HK$15,000 only. Earlier mock-ups at 18,000 must be deleted from QR-linked PDFs.\\n\\nThank you.\\nPartnerships"
+        }
+      ],
+      "writing_task": {
+        "instruction": "You are the Tournament Executive Secretary. Write a formal memo to participating school principals summarising consent deadlines, corrected noise and timing rules, and broadcast conduct expectations.",
+        "format": "Formal memo",
+        "role_profile": "Tournament Executive Secretary writing to school principals in formal inter-school competition register.",
+        "word_count": "190-240",
+        "marking_criteria": "Content, Language, Organization, Appropriacy"
+      },
+      "marking_key": [
+        "State streaming consent deadline Friday 5:00 p.m. with no informal verbal approval.",
+        "State speaker calibration / speaker tests must end by 5:00 p.m., not 6:00 p.m.",
+        "HKEAA-style reasoning: explain why the 5:00 p.m. curfew applies—because residents complained last year about noise (award this reasoning point only if the cause is stated; mentioning 5:00 p.m. alone is not enough).",
+        "Include mental-health pause rule: one ten-minute break per series on request.",
+        "Keep prize pool at 15,000 HKD and reject the obsolete 18,000 line.",
+        "Reference stream delay of five minutes and tie-break Map 4 after ninety minutes if needed.",
+        "Mention moderation/KPI focus on unsportsmanlike chat on overlays (strike escalation)."
+      ]
+    }
+  },
+  "listening_mission_9": {
+    "id": "listening_mission_9",
+    "title": "Eco-Tourism in Sai Kung",
+    "description": "Coordinating low-impact GeoPark visits with boat caps, reef protection, and visitor education targets.",
+    "topic": "Tourism",
+    "type": "listening_mission",
+    "paper": "Listening",
+    "subject": "English",
+    "level": "5",
+    "is_approved": true,
+    "factory_template": false,
+    "created_at": {
+      "_seconds": 1704068000,
+      "_nanoseconds": 0
+    },
+    "sprint_data": {
+      "audio_transcript": "[SCENE START]\n[Waves and gulls]\nEco-Tour Lead: Briefing for April GeoPark eco-runs—listen for updates because some handouts are wrong.\nEco-Tour Lead: Licensed boat passenger cap is twelve people including guide. Older brochures wrongly say fifteen.\nMarine Warden: For the coral observation zone, grouped snorkel visits are limited to eight participants in the water at once.\nEco-Tour Lead: Ticketing was misprinted. Adult day pass is one hundred twenty dollars; student pass eighty dollars. Ignore slips that say one hundred dollars flat.\nMarine Warden: If sustained wind speed exceeds twenty-five knots, we cancel departures entirely—no partial trips.\nEco-Tour Lead: Each vessel carries two reusable bottle refill stations. Single-use plastic drinks are banned onboard.\nSafety Officer: Tide-gate departure from Pak Sha Chau pier is eleven ten a.m., not eleven thirty.\nEco-Tour Lead: Volunteer coral nursery orientation is three forty-five p.m. on Saturdays.\nEco-Tour Lead: Submit guide roster names by five twenty p.m. tonight.\n[SCENE END]",
+      "tasks": [
+        {
+          "id": "a1_geo_table",
+          "type": "TABLE",
+          "label": "GeoPark Tour Facts",
+          "rows": [
+            {
+              "label": "Maximum passengers per boat (incl. guide)",
+              "answer": "12",
+              "placeholder": "Number"
+            },
+            {
+              "label": "Coral zone in-water cap",
+              "answer": "8",
+              "placeholder": "Number"
+            },
+            {
+              "label": "Adult day pass",
+              "answer": "$120",
+              "placeholder": "Price"
+            },
+            {
+              "label": "Student day pass",
+              "answer": "$80",
+              "placeholder": "Price"
+            }
+          ]
+        },
+        {
+          "id": "a2_geo_form",
+          "type": "FORM_FILLING",
+          "question": "Weather and schedule",
+          "fields": [
+            {
+              "label": "Cancellation wind threshold",
+              "answer": "over 25 knots",
+              "placeholder": "Condition"
+            },
+            {
+              "label": "Pak Sha Chau departure",
+              "answer": "11:10 a.m.",
+              "placeholder": "Time"
+            },
+            {
+              "label": "Volunteer orientation (Saturdays)",
+              "answer": "3:45 p.m.",
+              "placeholder": "Time"
+            },
+            {
+              "label": "Roster deadline",
+              "answer": "5:20 p.m.",
+              "placeholder": "Time"
+            }
+          ]
+        },
+        {
+          "id": "a3_geo_mcq",
+          "type": "MCQ_BATCH",
+          "label": "Sustainability Check",
+          "questions": [
+            {
+              "question": "Which brochure figure is the passenger-cap trap?",
+              "options": [
+                "A. 12",
+                "B. 15",
+                "C. 10",
+                "D. 8"
+              ],
+              "answer": "B"
+            },
+            {
+              "question": "What is prohibited on boats under the plastic policy?",
+              "options": [
+                "A. Reusable bottles",
+                "B. Snorkel masks",
+                "C. Single-use plastic drink containers",
+                "D. Life jackets"
+              ],
+              "answer": "C"
+            }
+          ]
+        }
+      ]
+    },
+    "integrated_data": {
+      "audio_transcript": "[INTEGRATED BRIEFING START]\nParks Coordinator: We need a district council summary emphasising conservation wins.\nMarine Biologist: Coral touch pool is display-only. Visitors must not handle living coral; fines apply.\nEducation Officer: Correction: KPI targets at least five hundred visitors receiving the bilingual reef-care briefing, not three hundred.\nHarbour Master: Vessels must log each boarding with QR manifests. Paper lists are backup-only.\nCommunity Liaison: Kayak add-on trips launch May fourth if weather permits—do not promise earlier dates.\nFinance Desk: Concession revenue share to the village fund stays at twelve percent of net ticket sales, not fifteen as rumoured.\nParks Coordinator: Highlight reef-safe sunscreen requirement—oxybenzone products may not enter the water.\n[INTEGRATED BRIEFING END]",
+      "notetaking_fields": [
+        {
+          "id": "nt_ecology",
+          "label": "Ecology and visitor rules",
+          "placeholder": "Note coral rules, sunscreen, and plastics..."
+        },
+        {
+          "id": "nt_ops",
+          "label": "Operations and KPIs",
+          "placeholder": "Record ticketing, manifests, KPI numbers..."
+        }
+      ],
+      "data_file": [
+        {
+          "id": "df_itinerary",
+          "title": "Sample Day Itinerary",
+          "type": "itinerary",
+          "content": "08:30 Meet pier\\n09:00 Safety + reef briefing (bilingual)\\n09:40 Boat to coral zone (max 8 in-water)\\n12:10 Lunch (BYO or eco-catered)\\n15:45 Volunteer orientation slot\\n17:30 Return"
+        },
+        {
+          "id": "df_visitor_notice",
+          "title": "Visitor Guidelines",
+          "type": "notice",
+          "content": "Protect the GeoPark:\\n- No touching live coral\\n- Reef-safe sunscreen only (no oxybenzone)\\n- No single-use plastic drinks\\n- Winds over 25 knots = cancelled departures\\nAdult $120 / Student $80"
+        },
+        {
+          "id": "df_fee_table",
+          "title": "Approved Fare Table",
+          "type": "budget_table",
+          "content": "Adult day pass: HK$120\\nStudent day pass: HK$80\\nVillage fund share: 12% of net sales (verified)\\nReject drafts showing flat $100 fares.\\nBoarding record: QR manifest logging is the primary method; paper lists are for backup only."
+        }
+      ],
+      "writing_task": {
+        "instruction": "You are the GeoPark Education Officer. Write a formal memo to the District Council summarising visitor safeguards, corrected KPI targets, and revenue-sharing facts for the eco-tourism programme.",
+        "format": "Formal memo",
+        "role_profile": "GeoPark Education Officer writing to district councillors in formal civic and environmental register.",
+        "word_count": "200-250",
+        "marking_criteria": "Content, Language, Organization, Appropriacy"
+      },
+      "marking_key": [
+        "State boat cap twelve passengers (not fifteen) and coral zone in-water cap eight.",
+        "Use correct fares adult $120 and student $80; reject flat $100 misprints.",
+        "Specify cancellation when sustained wind is over twenty-five knots (not merely windy).",
+        "KPI: at least five hundred visitors receiving bilingual reef-care briefing (not three hundred).",
+        "Mention reef-safe sunscreen rule excluding oxybenzone products in the water.",
+        "State village fund share twelve percent of net ticket sales, not fifteen.",
+        "Boarding records: state that each boarding must be logged via QR manifests as the primary method; paper lists are backup-only (do not award full credit if the student treats paper as equally primary or omits that QR is primary)."
+      ]
+    }
+  },
+  "listening_mission_10": {
+    "id": "listening_mission_10",
+    "title": "Redefining the Canteen",
+    "description": "Rolling out a healthier menu pilot with equipment funding, nutrition talks, and allergen controls.",
+    "topic": "Campus Life",
+    "type": "listening_mission",
+    "paper": "Listening",
+    "subject": "English",
+    "level": "3",
+    "is_approved": true,
+    "factory_template": false,
+    "created_at": {
+      "_seconds": 1704068100,
+      "_nanoseconds": 0
+    },
+    "sprint_data": {
+      "audio_transcript": "[SCENE START]\n[Clatter of trays]\nCanteen Manager: Final numbers for the Healthy Plate pilot before the SU posts go live.\nCanteen Manager: Salad bar pilot opens eleventh April. Some posters still say first April; fix that tonight.\nNutritionist: We target a thirty percent reduction in deep-fried mains compared with March—not twenty-five as on the old slide.\nSU President: Survey says sixty-two percent of students want a daily vegetarian set, not fifty-eight like the leaked infographic.\nCanteen Manager: Equipment grant for chilled display units is forty-five thousand dollars. Remove the fifty-two thousand draft.\nKitchen Lead: Cold-chain delivery arrives Tuesdays seven thirty a.m.\nCanteen Manager: Nutritionist drop-in sessions are every Tuesday one p.m. at the wellness corner.\nFacilities: Feedback cards move to the east exit rack so queues do not block the tills.\nCanteen Manager: Submit allergen label proofs to me by four forty-five p.m. tomorrow.\n[SCENE END]",
+      "tasks": [
+        {
+          "id": "a1_canteen_table",
+          "type": "TABLE",
+          "label": "Healthy Plate Pilot",
+          "rows": [
+            {
+              "label": "Salad bar launch date",
+              "answer": "11 April",
+              "placeholder": "Date"
+            },
+            {
+              "label": "Target reduction in fried mains",
+              "answer": "30%",
+              "placeholder": "Percentage"
+            },
+            {
+              "label": "Students wanting daily vegetarian set",
+              "answer": "62%",
+              "placeholder": "Percentage"
+            },
+            {
+              "label": "Equipment grant",
+              "answer": "45,000",
+              "placeholder": "Amount"
+            }
+          ]
+        },
+        {
+          "id": "a2_canteen_form",
+          "type": "FORM_FILLING",
+          "question": "Operations timetable",
+          "fields": [
+            {
+              "label": "Cold-chain delivery",
+              "answer": "7:30 a.m. Tuesdays",
+              "placeholder": "Schedule"
+            },
+            {
+              "label": "Nutritionist drop-ins",
+              "answer": "1:00 p.m. Tuesdays",
+              "placeholder": "Schedule"
+            },
+            {
+              "label": "Feedback card location",
+              "answer": "east exit",
+              "placeholder": "Location"
+            },
+            {
+              "label": "Allergen proof deadline",
+              "answer": "4:45 p.m. tomorrow",
+              "placeholder": "Deadline"
+            }
+          ]
+        },
+        {
+          "id": "a3_canteen_mcq",
+          "type": "MCQ_BATCH",
+          "label": "Pilot Snapshot",
+          "questions": [
+            {
+              "question": "Which launch date appears on outdated posters?",
+              "options": [
+                "A. 1 April",
+                "B. 11 April",
+                "C. 15 April",
+                "D. 4 April"
+              ],
+              "answer": "A"
+            },
+            {
+              "question": "Which budget line is the draft overstatement?",
+              "options": [
+                "A. 45,000",
+                "B. 40,000",
+                "C. 52,000",
+                "D. 38,000"
+              ],
+              "answer": "C"
+            }
+          ]
+        }
+      ]
+    },
+    "integrated_data": {
+      "audio_transcript": "[INTEGRATED BRIEFING START]\nVice Principal: Student bulletin needs one paragraph on the pilot plus allergy diligence.\nNurse: Any peanut or crustacean ingredients must print bold on menu cards—no icons-only labels.\nSU Rep: Correction: student committee sign-off meeting moves to Wednesday period three, not Tuesday.\nFacilities: Compost bins arrive week two; until then use existing food-waste bins only.\nCanteen Manager: KPI: at least eighty percent uptake of colour-coded allergy stickers by stall vendors within April.\nFinance: Pilot stays within forty-five thousand capital; running costs tracked weekly.\nVice Principal: Encourage students to flag misleading posts about the old fifty-eight percent meme—official figure is sixty-two.\n[INTEGRATED BRIEFING END]",
+      "notetaking_fields": [
+        {
+          "id": "nt_nutrition",
+          "label": "Menu and nutrition messaging",
+          "placeholder": "Note targets, survey figure, and SU logistics..."
+        },
+        {
+          "id": "nt_safety",
+          "label": "Allergens and KPIs",
+          "placeholder": "Capture bold-text rule, sticker KPI, finance cap..."
+        }
+      ],
+      "data_file": [
+        {
+          "id": "df_menu_brief",
+          "title": "Menu Pilot Outline",
+          "type": "brief",
+          "content": "Goals:\\n- Cut fried mains by 30% vs March baseline\\n- Offer daily vegetarian set (survey: 62% demand)\\n- Salad bar live 11 April\\nCapital: HK$45,000 chilled displays\\nNutritionist Tuesdays 13:00 @ wellness corner"
+        },
+        {
+          "id": "df_minutes",
+          "title": "SU Catering Committee Minutes",
+          "type": "minutes",
+          "content": "Meeting: Healthy Plate Rollout\\nDate: 5 April\\nItem 1: Vendor allergen cards must use BOLD text for peanut and crustacean.\\nItem 2: Student sign-off meeting rescheduled to Wednesday Period 3.\\nItem 3: Feedback cards relocated to east exit rack."
+        },
+        {
+          "id": "df_faq",
+          "title": "Student FAQ",
+          "type": "faq",
+          "content": "Q: Is the 58% figure real?\\nA: No. Official survey shows 62% want a vegetarian daily set.\\nQ: When does the salad bar open?\\nA: 11 April (ignore posters showing 1 April).\\nQ: Where do I leave suggestions?\\nA: East exit feedback cards."
+        }
+      ],
+      "writing_task": {
+        "instruction": "You are the Student Union Catering Officer. Write a memo to the Vice Principal summarising the pilot launch date, corrected survey headline, allergen labelling rules, and the vendor sticker KPI.",
+        "format": "Formal memo",
+        "role_profile": "Student Union Catering Officer writing to the Vice Principal in respectful student leadership register.",
+        "word_count": "170-220",
+        "marking_criteria": "Content, Language, Organization, Appropriacy"
+      },
+      "marking_key": [
+        "Give salad bar date 11 April and reject outdated 1 April messaging.",
+        "State thirty percent fried-food reduction target (not twenty-five).",
+        "Use official sixty-two percent demand for a daily vegetarian set (reject fifty-eight percent).",
+        "Confirm equipment capital forty-five thousand and reject fifty-two thousand draft.",
+        "Require bold allergen text for peanut and crustacean, not icons-only.",
+        "Include KPI: eighty percent vendor uptake of colour-coded allergy stickers in April.",
+        "Mention student sign-off meeting on Wednesday Period 3 (not Tuesday)."
+      ]
+    }
+  }
+}

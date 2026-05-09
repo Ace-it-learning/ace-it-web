@@ -1,0 +1,196 @@
+{
+  "type": "READING",
+  "topic": "reading_weekly",
+  "title": "Implementing low-carbon operations, waste separation, and student-led green audits in Hong Kong secondary schools",
+  "reading_passage": "Across Hong Kong, secondary schools are no longer treating sustainability as a decorative club activity but as an operational priority that touches electricity use, procurement, and student agency. The Environmental Protection Department’s public benchmarks for municipal solid waste, coupled with visible climate volatility, have forced principals to move beyond poster campaigns toward measurable carbon accountability. In this context, “green audits”—structured reviews led by students and facilities staff—have gained traction because they translate abstract targets into line-item changes: LED retrofits, chilled-water set-points, canteen oil recycling, and paperless workflows.\n\nYet the transition is uneven. Band 1 schools with active alumni networks may install solar film and sub-metering within a single term, whereas many DSS and aided schools juggle tight IT replacement cycles and ageing air-handling units. Some parent associations enthusiastically fund “green weeks,” while others question why finite PTA budgets should underwrite infrastructure rather than tutorial subsidies. The tension exposes a fundamental design problem: sustainability savings often materialise slowly, while academic pressure spikes predictably before the HKDSE calendar.\n\nPedagogically, leading schools embed sustainability as inquiry rather than compliance. Geography and Liberal Studies teachers align data-logging projects with Science investigations; English teachers treat environmental reports as authentic genres for summarising, evaluating, and hedging claims—skills explicitly rewarded by the HKEAA’s reading and writing constructs. Student-led audits are formative assessments in disguise: negotiating with the janitorial contractor requires register control; presenting to the School Improvement Committee demands coherent paragraphing and evidence selection. When students discover that a single overnight projector left on standby duplicates a class’s annual worksheet printing cost, the argument lands with ethical force.\n\nCritics warn of volunteer fatigue and “audit theatre,” where glossy checklists disguise stagnant performance. Proponents reply that transparency—public dashboards, termly board briefings—makes backsliding visible and embarrassing. The city’s young people will inherit both higher energy tariffs and denser heat-island summers; schools that rehearse collective problem-solving today are rehearsing the civic stamina Hong Kong will need tomorrow. The measure of success is not a perfect LEED mimic but a durable habit: measure, adjust, report, iterate—embedded in daily timetables rather than bolted on for award season.",
+  "conceptual_explanation": "HKDSE English Language Paper 1 conventions: global meaning, inference, writer’s stance/attitude, vocabulary in context, and text organisation. Tasks map to typical Part A skills (locating, interpreting, evaluating).",
+  "marking_rubric_note": "Short responses: accept precise quotation where required, or clear paraphrase that preserves propositional content. Extended items: reward justified inference anchored in the text (public examination construct).",
+  "key_points": [
+    "Sustainability is framed as operational (utilities, procurement), not cosmetic.",
+    "Resource inequality shapes how fast schools can decarbonise.",
+    "Cross-curricular work links sustainability to assessable English skills.",
+    "Transparency counters ‘audit theatre’ but requires governance stamina."
+  ],
+  "interactive_tasks": [
+    {
+      "id": "q1",
+      "type": "MCQ",
+      "instruction": "Choose the best option based on Paragraph 1.",
+      "question": "The phrase 'operational priority' suggests sustainability is mainly treated as:",
+      "options": [
+        "A peripheral club decoration",
+        "A core management responsibility with measurable outcomes",
+        "A Liberal Studies-only syllabus add-on",
+        "An optional branding slogan"
+      ],
+      "answer": "A core management responsibility with measurable outcomes",
+      "explanation": "Paragraph 1 contrasts ‘decorative club activity’ with priorities touching electricity, procurement, and student agency."
+    },
+    {
+      "id": "q2",
+      "type": "SHORT_ANSWER",
+      "instruction": "In your own words (max 25 words).",
+      "question": "According to Paragraph 2, which two pressures create unequal progress between schools?",
+      "answer": "Stronger alumni funding versus tighter budgets, old buildings, and parents who prefer tutorials or doubt green spending.",
+      "marking_logic": { "full_marks_criteria": ["References inequality of resources/parent priorities AND time pressure from HKDSE or infrastructure"] },
+      "explanation": "Band 1 fast retrofit vs aided/DSS constraints; PTA conflict with tutorial expectations."
+    },
+    {
+      "id": "q3",
+      "type": "MCQ",
+      "instruction": "Choose the best option.",
+      "question": "‘Audit theatre’ (Paragraph 4) refers to:",
+      "options": [
+        "Stage performances about recycling",
+        "Glossy compliance without real performance improvement",
+        "Mandatory oral-exam rehearsals",
+        "Drama-club inspections"
+      ],
+      "answer": "Glossy compliance without real performance improvement",
+      "explanation": "Paired with ‘stagnant performance’ behind checklists."
+    },
+    {
+      "id": "q4",
+      "type": "MCQ",
+      "instruction": "Choose the best option.",
+      "question": "The writer’s stance toward student-led audits is best described as:",
+      "options": ["Hostile", "Cautiously supportive", "Indifferent", "Satirical"],
+      "answer": "Cautiously supportive",
+      "explanation": "Volunteer fatigue acknowledged; still argues for transparency and civic rehearsal."
+    },
+    {
+      "id": "q5",
+      "type": "SHORT_ANSWER",
+      "instruction": "Quote a three-word phrase from Paragraph 3 showing pedagogy is framed as discovery.",
+      "question": "Provide the phrase.",
+      "answer": "inquiry rather than compliance",
+      "marking_logic": { "full_marks_criteria": ["Exact phrase inquiry rather than compliance"] },
+      "explanation": "Located in Paragraph 3."
+    },
+    {
+      "id": "q6",
+      "type": "MCQ",
+      "instruction": "Choose the best option.",
+      "question": "Paragraph 3 links environmental reports to English teaching because they develop:",
+      "options": [
+        "Only scientific graph-drawing",
+        "Summarising, evaluating, and hedging—skills valued in public assessment",
+        "Mandatory fieldwork excursions",
+        "Replacement of past papers"
+      ],
+      "answer": "Summarising, evaluating, and hedging—skills valued in public assessment",
+      "explanation": "Explicit tie to HKEAA reading and writing constructs."
+    },
+    {
+      "id": "q7",
+      "type": "CATEGORIZATION",
+      "instruction": "Sort each item as Structural barrier or Parental debate.",
+      "question": "Items: (0) Ageing AHUs delay retrofits. (1) PTA debates funding priorities.",
+      "options": ["Ageing AHUs", "PTA debate"],
+      "answer": { "Structural barrier": [0], "Parental debate": [1] },
+      "explanation": "Infrastructure vs contested funding choices."
+    },
+    {
+      "id": "q8",
+      "type": "ORDERING",
+      "instruction": "Order paragraph purposes as they appear (use indices 0–3 for the list below).",
+      "question": "Match order of paragraphs 1–4.",
+      "options": [
+        "Audit rationale & tools",
+        "Uneven school transitions",
+        "Pedagogical embedding",
+        "Critics vs proponents / conclusion"
+      ],
+      "answer": "0-1-2-3",
+      "explanation": "Paragraph sequence follows the four options in order."
+    },
+    {
+      "id": "q9",
+      "type": "MCQ",
+      "instruction": "Choose the best option.",
+      "question": "Success is ultimately measured by:",
+      "options": [
+        "Winning LEED certification",
+        "Embedding measure-adjust-report habits in daily routines",
+        "Cancelling all clubs",
+        "Removing the HKDSE"
+      ],
+      "answer": "Embedding measure-adjust-report habits in daily routines",
+      "explanation": "Final paragraph privileges durable habits in timetables."
+    },
+    {
+      "id": "q10",
+      "type": "MCQ",
+      "instruction": "Infer from the passage.",
+      "question": "The writer believes today’s sustainability work in schools:",
+      "options": [
+        "Is irrelevant to public exams",
+        "Prepares students for civic and economic pressures ahead",
+        "Requires solar panels or it is worthless",
+        "Should replace English lessons"
+      ],
+      "answer": "Prepares students for civic and economic pressures ahead",
+      "explanation": "Tariffs, heat islands, collective problem-solving as rehearsal."
+    },
+    {
+      "id": "q11",
+      "type": "SHORT_ANSWER",
+      "instruction": "Max 25 words.",
+      "question": "Contrast ‘green weeks’ (Paragraph 2) with continuous sub-metering implied in Paragraph 1.",
+      "answer": "Green weeks are episodic events; audits and sub-metering imply ongoing measurable tracking.",
+      "marking_logic": { "full_marks_criteria": ["Episodic vs continuous / measurable"] },
+      "explanation": "Semantic contrast across paragraphs."
+    },
+    {
+      "id": "q12",
+      "type": "MCQ",
+      "instruction": "Paragraph 1 vocabulary.",
+      "question": "'Visible climate volatility' emphasises:",
+      "options": [
+        "Weather as abstract metaphor only",
+        "Observable extremes that pressure concrete institutional action",
+        "Student mood swings",
+        "TV weather charts"
+      ],
+      "answer": "Observable extremes that pressure concrete institutional action",
+      "explanation": "Forces principals beyond posters toward accountability."
+    },
+    {
+      "id": "q13",
+      "type": "MCQ",
+      "instruction": "Choose the best option.",
+      "question": "Which is NOT named as something audits may examine?",
+      "options": ["LED retrofits", "Paper 4 seating plans", "Paperless workflows", "Canteen oil recycling"],
+      "answer": "Paper 4 seating plans",
+      "explanation": "Listed examples exclude examination logistics."
+    },
+    {
+      "id": "q14",
+      "type": "SHORT_ANSWER",
+      "instruction": "Quote exactly five consecutive words from Paragraph 4 supporting proponents.",
+      "question": "Provide the quotation.",
+      "answer": "transparency—public dashboards, termly board briefings—makes",
+      "marking_logic": { "full_marks_criteria": ["Any exact five-word span from proponents’ transparency clause"] },
+      "explanation": "Proponents’ remedy language."
+    },
+    {
+      "id": "q15",
+      "type": "MCQ",
+      "instruction": "Choose the best title.",
+      "question": "Which title best summarises the passage?",
+      "options": [
+        "Why Schools Should Ignore Sustainability",
+        "From Posters to Accountability: Sustainability as Institutional Practice",
+        "How to Cancel the HKDSE",
+        "LEED Certification for Beginners"
+      ],
+      "answer": "From Posters to Accountability: Sustainability as Institutional Practice",
+      "explanation": "Arc: operations, inequality, pedagogy, governance/measurement."
+    }
+  ],
+  "success_feedback": "You demonstrated Paper 1 reading skills across literal, inferential, and evaluative levels.",
+  "suggested_next_steps": [
+    "Timed summary: compress paragraph 3 to 40 words.",
+    "Cross-task: draft one persuasive paragraph for Paper 2 using hedging language."
+  ]
+}

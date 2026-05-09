@@ -70,6 +70,7 @@ router.get('/quest/generate', async (req, res) => {
 router.post('/quest/submit', upload.single('audio'), async (req, res) => {
     try {
         const { module, quest_id, master_script, level, uid, focus, messages, power_words } = req.body;
+        const resolvedUid = uid || req.uid || req.query?.uid || 'guest';
         const audioFile = req.file;
 
         let prompt = "";
@@ -185,12 +186,19 @@ router.post('/quest/submit', upload.single('audio'), async (req, res) => {
 
             const historyText = historyToGrade.map(m => `${m.speaker || m.role || userLabel}: ${m.text}`).join('\n');
 
+            const prosodyData = req.body.prosody_metrics ? (typeof req.body.prosody_metrics === 'string' ? JSON.parse(req.body.prosody_metrics) : req.body.prosody_metrics) : [];
+            const prosodyText = prosodyData.length > 0 
+                ? prosodyData.map((p, i) => `Turn ${i+1}: Pacing=${p.pacing}, Intonation=${p.intonation}, Confidence=${p.confidence}, Clarity=${p.clarity}, Vibe="${p.vibe}"`).join('\n')
+                : "No granular prosody data available for this session.";
+
             prompt = interactionGradingAgent
                 .replace(/{TOPIC}/g, master_script || 'General Discussion')
                 .replace(/{HISTORY}/g, historyText)
                 .replace(/{LEVEL}/g, level || '3')
                 .replace(/{USER_LABEL}/g, userLabel)
-                .replace(/{FOCUS_AREA}/g, focus || 'General Interaction');
+                .replace(/{FOCUS_AREA}/g, focus || 'General Interaction')
+                .replace(/{PROSODY_METRICS}/g, prosodyText);
+
         } else if (module === 'language_patterns') {
             const history = typeof messages === 'string' ? JSON.parse(messages) : (messages || []);
             const practiceResults = req.body.practice_results ? (typeof req.body.practice_results === 'string' ? JSON.parse(req.body.practice_results) : req.body.practice_results) : [];
@@ -280,8 +288,8 @@ router.post('/quest/submit', upload.single('audio'), async (req, res) => {
 
         // PERSIST RESULT FOR HISTORICAL REVIEW
         let resultId = null;
-        if (uid && uid !== 'guest') {
-            resultId = await UserProfileService.saveQuestResult(uid, {
+        if (resolvedUid && resolvedUid !== 'guest') {
+            resultId = await UserProfileService.saveQuestResult(resolvedUid, {
                 module,
                 quest_id,
                 scores: finalResult.scores,
@@ -298,7 +306,7 @@ router.post('/quest/submit', upload.single('audio'), async (req, res) => {
 
         // AWARD XP
         let xpResult = { earned: 0 };
-        if (finalResult.scores && finalResult.scores.total > 0 && uid && uid !== 'guest') {
+        if (finalResult.scores && finalResult.scores.total > 0 && resolvedUid && resolvedUid !== 'guest') {
             // New standardized XP logic
             let baseXP = 150; // Default (Interaction/Group Discussion)
             
@@ -311,7 +319,7 @@ router.post('/quest/submit', upload.single('audio'), async (req, res) => {
             let questBonus = 0;
             // Handle Weekly Quest award
             if (req.body.isWeeklyQuest) {
-                const weeklyResult = await GamificationService.awardWeeklyQuestCompletion(uid);
+                const weeklyResult = await GamificationService.awardWeeklyQuestCompletion(resolvedUid);
                 if (weeklyResult.success) {
                     questBonus = weeklyResult.earned;
                     baseXP = 250; // Set base to weekly standard
@@ -321,7 +329,7 @@ router.post('/quest/submit', upload.single('audio'), async (req, res) => {
             const scoreRatio = Math.min(finalResult.scores.total / 28, 1);
             const rewardAmount = Math.round(scoreRatio * baseXP);
 
-            xpResult = await GamificationService.awardXP(uid, rewardAmount, 'speaking', {
+            xpResult = await GamificationService.awardXP(resolvedUid, rewardAmount, 'speaking', {
                 title: req.body.missionName || `${module.charAt(0).toUpperCase() + module.slice(1)} Practice`,
                 score: `${finalResult.scores.total}/28`,
                 subject: 'english',
@@ -334,7 +342,7 @@ router.post('/quest/submit', upload.single('audio'), async (req, res) => {
         }
 
         // UPDATE MICRO-SKILL MASTERY
-        if (finalResult.scores && uid && uid !== 'guest') {
+        if (finalResult.scores && resolvedUid && resolvedUid !== 'guest') {
             const masteryScore = (finalResult.scores.total / 28) * 100;
             const skillMappings = {
                 'delivery': ['speaking_delivery'],
@@ -346,7 +354,7 @@ router.post('/quest/submit', upload.single('audio'), async (req, res) => {
 
             const targetSkills = skillMappings[module] || [];
             const skillPromises = targetSkills.map(skillId =>
-                UserProfileService.updateMicroSkillLevel(uid, 'english', skillId, masteryScore, {
+                UserProfileService.updateMicroSkillLevel(resolvedUid, 'english', skillId, masteryScore, {
                     type: 'Quest',
                     difficulty: parseInt(level) || 3
                 })
@@ -524,20 +532,23 @@ router.post('/interaction/turn', upload.single('audio'), async (req, res) => {
 
         const aiContent = result?.data?.content || null;
         const transcribedUserText = clientTranscript || result?.data?.user_transcript || "";
+        const prosodyMetrics = result?.data?.prosody_metrics || null;
         const aiAudio = result?.audio;
 
         if (!aiContent && !aiAudio) {
             console.error(`[Speaking Interaction] CRITICAL: AI returned null content and audio. Result Info:`, JSON.stringify({ model: result?.usedModel, data: result?.data }));
         }
 
-        console.log(`[Speaking Interaction] AI Respond: "${aiContent ? aiContent.substring(0, 50) : 'NULL'}..." | Audio: ${aiAudio ? 'YES' : 'NO'}`);
+        console.log(`[Speaking Interaction] AI Respond: "${aiContent ? aiContent.substring(0, 50) : 'NULL'}..." | Audio: ${aiAudio ? 'YES' : 'NO'} | Prosody: ${prosodyMetrics ? 'YES' : 'NO'}`);
 
         res.json({
             content: aiContent || "I see what you mean. However, we should also consider the broader implications of this issue, particularly how it affects students' long-term development in a changing environment.",
             speaker: current_speaker,
             user_transcript: transcribedUserText,
+            prosody_metrics: prosodyMetrics,
             audio: aiAudio
         });
+
     } catch (error) {
         console.error('[Speaking Interaction] Turn error:', error);
         res.status(500).json({ error: 'Failed to generate turn', details: error.message });

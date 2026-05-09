@@ -1,0 +1,109 @@
+{
+  "id": "listening_weekly_20",
+  "title": "Waste Charging & Daily Habits",
+  "description": "Estate–school coordination on refuse bag distribution, contamination penalties, and parent workshop dates.",
+  "topic": "Social Issues",
+  "type": "listening_mission",
+  "paper": "Listening",
+  "subject": "English",
+  "level": "5",
+  "is_approved": true,
+  "factory_template": false,
+  "created_at": { "_seconds": 1715760000, "_nanoseconds": 0 },
+  "prediction_metadata": {
+    "topic_name": "Week 20: Waste Charging & Daily Habits",
+    "sub_topics": [
+      { "id": "st1", "name": "Bag subsidy cap", "category": "Key detail", "is_distractor": false, "hint": "Monthly household allocation number." },
+      { "id": "st2", "name": "Contamination fine phase-in", "category": "Strategic capture", "is_distractor": false, "hint": "Starts only after workshop cycle ends." },
+      { "id": "st3", "name": "Landfill ban on textiles", "category": "Distractor", "is_distractor": true, "hint": "Mentioned nationally but not effective here this month." },
+      { "id": "st4", "name": "Workshop language lines", "category": "Key detail", "is_distractor": false, "hint": "Urdu queue length." }
+    ]
+  },
+  "sprint_data": {
+    "audio_transcript": "[SCENE START]\n[Echoey estate lobby]\nEstate Manager: Evening—finalising the charging support desk before Monday.\nEstate Manager: Bag subsidy: each household may collect 40 designated bags monthly, not 35—please amend notices.\nProperty Officer: Contamination fines begin 1 May only—until then we issue orange advisory slips without dollar penalties.\nSchool Liaison: Our school hosts sorting workshops—Session 1 Tuesday 5:15 p.m., Session 2 Thursday 6:00 p.m.; each caps at 45 parents; 52 registered so overflow sends clip links.\nEstate Manager: Recycling bay hours extend to 10:30 p.m. on weekdays—previously 9:45 p.m.\nProperty Officer: Food waste smart-bin pilot logs error code E3 if lids slam—call hotline 2123-8899; not the old 2123-8800.\nEstate Manager: Volunteers—8 shifts still open Saturday morning 8:40 a.m. to noon.\n[SCENE END]",
+    "tasks": [
+      {
+        "id": "t1_table",
+        "type": "TABLE",
+        "label": "Estate Waste Desk",
+        "rows": [
+          { "label": "Monthly subsidised bags per household", "answer": "40", "placeholder": "Number" },
+          { "label": "Contamination fines begin", "answer": "1 May", "placeholder": "Date" },
+          { "label": "Weekday recycling bay closes", "answer": "10:30 p.m.", "placeholder": "Time" },
+          { "label": "Parents registered for workshops", "answer": "52", "placeholder": "Number" }
+        ]
+      },
+      {
+        "id": "t2_form",
+        "type": "FORM_FILLING",
+        "question": "Sessions and hotlines",
+        "fields": [
+          { "label": "Session 2 start time", "answer": "Thursday 6:00 p.m.", "placeholder": "Time" },
+          { "label": "Capacity per session", "answer": "45", "placeholder": "Number" },
+          { "label": "Smart-bin error hotline", "answer": "2123-8899", "placeholder": "Phone" },
+          { "label": "Volunteer shift window (Saturday)", "answer": "8:40 a.m. to noon", "placeholder": "Time" }
+        ]
+      },
+      {
+        "id": "t3_mcq",
+        "type": "MCQ_BATCH",
+        "label": "Checks",
+        "questions": [
+          {
+            "question": "Advisory slips before May are:",
+            "options": ["A. HK$500 fines immediately", "B. orange slips without dollar fines", "C. criminal referrals", "D. school suspensions"],
+            "answer": "B"
+          },
+          {
+            "question": "Overflow parents receive:",
+            "options": ["A. cash", "B. clip links", "C. extra bags unlimited", "D. estate fee waivers"],
+            "answer": "B"
+          }
+        ]
+      }
+    ]
+  },
+  "integrated_data": {
+    "audio_transcript": "[INTEGRATED BRIEFING START]\nDistrict Officer: Cross-estate alignment—HKWC Estate raised contamination 11% last fortnight; correction: baseline was 9%, not 14%—adjust comparisons.\nSchool Principal: Need Urdu line—queue capped 20 tickets; Nepali line opens if demand exceeds 15 vouchers.\nNGO: Audit trail—digital sign-in replaces paper for residents born after 1970 only; seniors keep paper option.\nDistrict Officer: KPI: cut residual sack weight per floor 6% within eight weeks—publish anonymised heatmaps.\n[INTEGRATED BRIEFING END]",
+    "notetaking_fields": [
+      { "id": "nt1", "label": "Data corrections", "placeholder": "Baseline %..." },
+      { "id": "nt2", "label": "Multilingual access", "placeholder": "Queues caps..." },
+      { "id": "nt3", "label": "KPI & publishing", "placeholder": "Targets, privacy..." }
+    ],
+    "data_file": [
+      {
+        "id": "df1",
+        "title": "Notice Draft",
+        "type": "poster",
+        "content": "BAG SUBSIDY 40/MONTH\\nWORKSHOPS TUE 5:15 & THU 6:00\\nFINES ACTIVE 1 MAY"
+      },
+      {
+        "id": "df2",
+        "title": "Email",
+        "type": "email",
+        "content": "From: District Coord\\nSubject: baseline fix\\nUse 9% contamination baseline when reporting HKWC Estate trends.\\nHeatmaps remain anonymised by floor block."
+      },
+      {
+        "id": "df3",
+        "title": "Minutes",
+        "type": "minutes",
+        "content": "Decision: seniors keep paper sign-in; others digital. Target −6% residual weight per floor in eight weeks."
+      }
+    ],
+    "writing_task": {
+      "instruction": "You are the Student Community Liaison. Write a speech script (spoken register) introducing the revised bag subsidy, workshop cap, and fine timeline to parent volunteers. Maintain accuracy and tact.",
+      "format": "Speech / talk script",
+      "role_profile": "Student addressing adult volunteers politely.",
+      "word_count": "200-250",
+      "marking_criteria": "Content accuracy, Language appropriacy, Organisation, Delivery cues in bracketed stage directions optional"
+    },
+    "marking_key": [
+      "State 40 bags per household monthly (corrected from obsolete 35).",
+      "Clarify contamination fines commence 1 May; advisory slips only before that.",
+      "Include both workshop times and cap 45 with overflow clip links.",
+      "Mention extended recycling hours 10:30 p.m. weekdays.",
+      "Include smart-bin hotline 2123-8899 and error context.",
+      "KPI optional: 6% residual reduction / anonymised heatmaps from integrated briefing."
+    ]
+  }
+}

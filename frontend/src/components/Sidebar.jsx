@@ -205,7 +205,7 @@ const Sidebar = () => {
                                 {activeAgentId === 'ace' ? <Lightbulb className="w-3.5 h-3.5" /> : <BookOpen className="w-3.5 h-3.5" />}
                             </div>
                             <p className="text-[10px] font-bold text-indigo-950 uppercase tracking-tight">
-                                {activeAgentId === 'ace' ? t('sidebar.exam_tips') : t('sidebar.notebook')}
+                                {activeAgentId === 'ace' ? t('sidebar.dse_strategy') : t('sidebar.notebook')}
                             </p>
                         </button>
                     )}
@@ -246,7 +246,7 @@ const Sidebar = () => {
                                     setActiveAgentId(agent.id);
                                 }}
                                 className={cn(
-                                    "flex items-center gap-3 p-3 rounded-2xl shadow-sm transition-all cursor-pointer border group",
+                                    "flex items-center gap-4 p-4 rounded-2xl shadow-sm transition-all cursor-pointer border group active:scale-[0.98]",
                                     activeAgentId === agent.id
                                         ? "bg-white dark:bg-white/10 border-primary shadow-md"
                                         : "bg-white/40 dark:bg-white/5 border-transparent hover:bg-white dark:hover:bg-white/20 hover:border-primary/20"
@@ -260,11 +260,11 @@ const Sidebar = () => {
                                     />
                                 </div>
                                 <div className="flex-1">
-                                    <p className="font-bold text-sm text-[#1d130c] dark:text-white leading-none flex items-center gap-2">
+                                    <p className="font-bold text-base text-[#1d130c] dark:text-white leading-none flex items-center gap-2">
                                         {agent.name}
-                                        {(agent.id === 'ace' && !isPaid) && <Crown className="w-3 h-3 text-amber-500 fill-amber-500 shrink-0" />}
+                                        {(agent.id === 'ace' && !isPaid) && <Crown className="w-3.5 h-3.5 text-amber-500 fill-amber-500 shrink-0" />}
                                     </p>
-                                    <p className="text-[10px] text-[#a16b45] mt-1">{t(`agents.${agent.id}.description`)}</p>
+                                    <p className="text-xs text-[#a16b45] mt-1.5">{t(`agents.${agent.id}.description`)}</p>
                                 </div>
                                 {activeAgentId === agent.id && (
                                     <div className="size-2 bg-primary rounded-full animate-pulse shadow-[0_0_8px_rgba(var(--primary-rgb),0.5)]"></div>

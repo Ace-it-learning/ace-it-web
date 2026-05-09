@@ -1,0 +1,27 @@
+{
+  "type": "WRITING",
+  "topic": "writing_weekly",
+  "title": "Hong Kong students navigating cross-boundary internships, exchange, and identity when studying or working in the Greater Bay Area",
+  "reading_passage": "Role: Debate columnist.\nAudience: Senior readers of your school journal.\nPurpose: Argue whether Hong Kong schools and universities should require GBA internships for certain programmes, or keep them optional, given identity strain and labour rights concerns.\n\nYou may critique marketing narratives; support claims with reasoning, not stereotypes.",
+  "conceptual_explanation": "Paper 2: discursive writing with ethical and cultural sensitivity; avoids simplistic national narratives; stresses labour literacy.",
+  "key_points": ["Define internship purpose clearly.", "Address identity complexity without caricature.", "Integrate labour rights and contracts.", "Balanced recommendation."],
+  "marking_logic": {
+    "hkeaa_paper2_dimensions": { "content": "Depth and relevance", "language": "Tone and precision", "organisation": "Stages of argument" },
+    "full_marks_criteria": [
+      "Content: weighs educational benefit of GBA exposure vs voluntariness and student wellbeing.",
+      "Language: avoids stereotypes; uses precise terms (precarity, register, consent, contract).",
+      "Organisation: dialectical structure; qualified conclusion.",
+      "Honours non-binary student experiences."
+    ],
+    "key_phrases": ["mobility literacy", "labour rights literacy", "consent", "microaggression awareness", "non-binary belonging"],
+    "genre_requirements": { "format": "Journal opinion / discursive article", "essential_elements": ["Hook", "Weighed analysis", "Ethical close"], "tone": "Critical but empathetic" }
+  },
+  "interactive_tasks": [
+    { "id": "lvl_4", "type": "MODEL_ANSWER", "question": "Model Answer (Level 4)", "answer": "GBA Internships\n\nMany programmes want students to work in Mainland because they can learn culture and language. Some students feel happy but some feel stress.\n\nI think optional is better because students should choose. If they are forced, they may feel angry.\n\nSchools should teach labour rights before they go.\n\nSo I support optional internships with good preparation.", "explanation": "Simple stance; limited depth—Level 4." },
+    { "id": "lvl_5", "type": "MODEL_ANSWER", "question": "Model Answer (Level 5)", "answer": "Optional Mobility, Mandatory Literacy\n\nMandating GBA internships risks trading pedagogical intent for marketing optics. Exposure matters, yet coercion weaponises geography against students already navigating identity stress.\n\nPolicy compromise: credit-bearing options with vetted hosts, contracts bilingual and annotated, pre-placement modules on labour hotlines and Putonghua presentation pragmatics—not cosmetic 'integration' lectures.\n\nMeasure satisfaction and rights incidents anonymously; suspend hosts with unclear overtime clauses. Mobility without fine print is just mobility theatre.", "explanation": "Structured policy argument—Level 5." },
+    { "id": "lvl_5s", "type": "MODEL_ANSWER", "question": "Model Answer (Level 5*)", "answer": "Consent Over Slogans\n\nI refuse the binary where loving Hong Kong means refusing the Bay, or loving the Bay means erasing Cantonese registers. Programmes should recruit interns with informed consent decks—hours, harassment protocols, exit pathways—like clinical placements.\n\nIf integration is a public good, fund supervision, translation support, and return-ship bridges—not just skyline posters.", "explanation": "Identity nuance + consent frame—5*." },
+    { "id": "lvl_5ss", "type": "MODEL_ANSWER", "question": "Model Answer (Level 5**)", "answer": "Where the Fine Print Lives\n\nA bay without contract literacy is a bay that ports prestige and exports burnout. Schools should not stamp passports into internships; they should stamp protocols—who answers when a student texts after midnight from a dormitory three borders from their Cantonese-speaking grandmother.\n\nOptional programmes can be rigorous: competitively selected, ethically audited, linguistically scaffolded. Mandatory ones become demographic sorting machines dressed as cosmopolitanism.\n\nLet integration be evidenced by red-lined clauses students understand, not ribbon lines they photograph.", "explanation": "Sustained metaphor; policy–poetry balance—5**." }
+  ],
+  "success_feedback": "Review models for how ethical complexity lifts Content marks.",
+  "suggested_next_steps": ["Add one paragraph citing a realistic host safeguard.", "Cut any stereotype sentence by substitution test."]
+}

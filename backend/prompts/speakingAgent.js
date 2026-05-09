@@ -33,7 +33,22 @@ History: {HISTORY}
 OUTPUT JSON ONLY:
 {
     "user_transcript": "Precisely what {USER_LABEL} just said (transcription/summary)",
+    "prosody_metrics": {
+        "pacing": "slow | natural | rapid",
+        "intonation": "monotonous | varied | exaggerated",
+        "confidence": "high | medium | low",
+        "clarity": "clear | muffled | hesitant",
+        "vibe": "a 1-sentence analytical description of the student's delivery style based on the audio"
+    },
     "content": "Your elaborative, reasoning-based response as {MY_IDENTITY}"
-}`;
+}
+
+CRITICAL FOR AUDIO ANALYSIS:
+If audio is provided, you MUST evaluate the student's physical delivery.
+- If they speak too fast without pausing, mark pacing as 'rapid'.
+- If their tone is flat, mark intonation as 'monotonous'.
+- If they sound confident and clear, reward them in the 'vibe' and 'clarity' fields.
+- This feedback will be used for their final HKEAA pronunciation grade.
+`;
 
 module.exports = speakingAgent;

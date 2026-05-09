@@ -1,17 +1,18 @@
 const express = require('express');
 const router = express.Router();
-const admin = require('firebase-admin');
 const GamificationService = require('../services/GamificationService');
 const UserProfileService = require('../services/UserProfileService');
 const ServiceMonitor = require('../services/ServiceMonitor');
+const CosmosStore = require('../services/CosmosStore');
+const { requireResolvedUid } = require('../middleware/requireResolvedUid');
 
 /**
  * GET /api/stats
  * Main endpoint for user onboarding status and progress.
  * Hardened with timeouts and safe fallbacks.
  */
-router.get('/', statsHandler);
-router.get('/user-stats', statsHandler);
+router.get('/', requireResolvedUid, statsHandler);
+router.get('/user-stats', requireResolvedUid, statsHandler);
 
 async function statsHandler(req, res) {
     const { uid } = req.query;
@@ -60,15 +61,15 @@ async function statsHandler(req, res) {
         // 2. Identify Top 3 Bottlenecks for "Target Growth"
         // Hardened with timeouts to prevent dashboard hangs
         const [engResult, mathResult] = await Promise.allSettled([
-            ServiceMonitor.withTimeout(admin.firestore().collection('users').doc(uid).collection('progress').doc('english').get(), 3000, null),
-            ServiceMonitor.withTimeout(admin.firestore().collection('users').doc(uid).collection('progress').doc('maths').get(), 3000, null)
+            ServiceMonitor.withTimeout(UserProfileService.getSkillMap(uid, 'english'), 3000, null),
+            ServiceMonitor.withTimeout(UserProfileService.getSkillMap(uid, 'maths'), 3000, null)
         ]);
 
         const englishProgress = engResult.status === 'fulfilled' ? engResult.value : null;
         const mathsProgress = mathResult.status === 'fulfilled' ? mathResult.value : null;
 
-        const engWeaknesses = (englishProgress && englishProgress.exists) ? (englishProgress.data().weaknessPriority || []) : [];
-        const mathWeaknesses = (mathsProgress && mathsProgress.exists) ? (mathsProgress.data().weaknessPriority || []) : [];
+        const engWeaknesses = englishProgress?.weaknessPriority || [];
+        const mathWeaknesses = mathsProgress?.weaknessPriority || [];
         
         // Combine and prioritize (could be more complex, but simple join works for now)
         const combinedBottlenecks = [...mathWeaknesses, ...engWeaknesses].slice(0, 3);
@@ -109,18 +110,23 @@ async function statsHandler(req, res) {
  * GET /api/stats/unlocks
  * Ability Radar Gating Logic.
  */
-router.get('/unlocks', async (req, res) => {
+router.get('/unlocks', requireResolvedUid, async (req, res) => {
     const { uid } = req.query;
     if (!uid) return res.status(400).json({ error: "Missing uid" });
 
     try {
         console.log(`[statsRoutes] Checking unlocks for UID ${uid}`);
         
-        const snapPromise = admin.firestore().collection('exam_submissions')
-            .where('uid', '==', uid)
-            .get();
-            
-        const snap = await ServiceMonitor.withTimeout(snapPromise, 4000, { empty: true, docs: [] });
+        const submissions = await ServiceMonitor.withTimeout(
+            CosmosStore.container('exam_submissions')
+                .then((c) => c.items.query({
+                    query: "SELECT * FROM c WHERE c.pk = @uid",
+                    parameters: [{ name: "@uid", value: uid }]
+                }).fetchAll())
+                .then((r) => r.resources || []),
+            4000,
+            []
+        );
 
         const ENGLISH_PAPER_TYPES = ['reading', 'writing', 'listening', 'speaking'];
         const MATHS_PAPER_TYPES = ['maths_p1', 'maths_p2'];
@@ -147,9 +153,9 @@ router.get('/unlocks', async (req, res) => {
         };
 
         const completedTypes = new Set();
-        if (snap && snap.forEach) {
-            snap.forEach(doc => {
-                completedTypes.add(classify(doc.data()));
+        if (Array.isArray(submissions)) {
+            submissions.forEach((sub) => {
+                completedTypes.add(classify(sub));
             });
         }
 
@@ -168,20 +174,19 @@ router.get('/unlocks', async (req, res) => {
  * GET /api/microskills/:uid
  * Fetch all micro-skill data for a user
  */
-router.get('/microskills/:uid', async (req, res) => {
+router.get('/microskills/:uid', requireResolvedUid, async (req, res) => {
     const { uid } = req.params;
     const { subject = 'english' } = req.query; // Support subject filtering
     try {
-        const progressDoc = await admin.firestore().collection('users').doc(uid).collection('progress').doc(subject).get();
+        const progress = await UserProfileService.getSkillMap(uid, subject);
         let data = { microSkills: {}, weaknessPriority: [], practicedSkills: [], version: 1 };
-        if (progressDoc.exists) {
-            const d = progressDoc.data();
+        if (progress) {
             data = {
-                microSkills: d.microSkills || {},
-                weaknessPriority: d.weaknessPriority || [],
-                practicedSkills: d.practicedSkills || [],
-                version: d.version || 1,
-                timestamp: d.lastUpdated
+                microSkills: progress.microSkills || {},
+                weaknessPriority: progress.weaknessPriority || [],
+                practicedSkills: progress.practicedSkills || [],
+                version: progress.version || 1,
+                timestamp: progress.lastUpdated
             };
         }
         const weeklyStatus = await GamificationService.getWeeklyQuestStatus(uid);
@@ -196,12 +201,12 @@ router.get('/microskills/:uid', async (req, res) => {
  * GET /api/microskills/:uid/paper/:paper
  * Fetch skills filtered by paper (reading/writing/etc)
  */
-router.get('/microskills/:uid/paper/:paper', async (req, res) => {
+router.get('/microskills/:uid/paper/:paper', requireResolvedUid, async (req, res) => {
     const { uid, paper } = req.params;
     try {
-        const progressDoc = await admin.firestore().collection('users').doc(uid).collection('progress').doc('english').get();
-        if (!progressDoc.exists) return res.json({ skills: {} });
-        const allSkills = progressDoc.data().microSkills || {};
+        const progress = await UserProfileService.getSkillMap(uid, 'english');
+        if (!progress) return res.json({ skills: {} });
+        const allSkills = progress.microSkills || {};
         const filtered = Object.fromEntries(Object.entries(allSkills).filter(([k]) => k.startsWith(paper.toLowerCase())));
         res.json({ skills: filtered });
     } catch (e) {
@@ -213,14 +218,14 @@ router.get('/microskills/:uid/paper/:paper', async (req, res) => {
  * POST /api/microskills/:uid/update
  * Manual update for micro-skills
  */
-router.post('/microskills/:uid/update', async (req, res) => {
+router.post('/microskills/:uid/update', requireResolvedUid, async (req, res) => {
     const { uid } = req.params;
     const { skills, subject = 'english' } = req.body;
     try {
-        await admin.firestore().collection('users').doc(uid).collection('progress').doc(subject).set({
+        await UserProfileService.saveSkillMap(uid, subject, {
             microSkills: skills,
-            lastUpdated: admin.firestore.FieldValue.serverTimestamp()
-        }, { merge: true });
+            lastUpdated: new Date().toISOString()
+        });
         res.json({ success: true });
     } catch (e) {
         res.status(500).json({ error: 'Update failed' });

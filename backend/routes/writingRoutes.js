@@ -146,6 +146,7 @@ router.post('/draft/structure', async (req, res) => {
 // Final assessment of the piece
 router.post('/grade', async (req, res) => {
     let { topic, textType, content, question, answer, uid } = req.body;
+    uid = uid || req.uid || req.query?.uid || 'guest';
 
     // Normalize inputs to support both Quest (topic/content) and Exam (question/answer) formats
     const finalContent = content || answer;
@@ -153,6 +154,7 @@ router.post('/grade', async (req, res) => {
     const finalTextType = textType || "Essay";
 
     if (!finalContent) return res.status(400).json({ error: "Content/Answer required" });
+    if (!uid || uid === 'guest') return res.status(401).json({ error: "Missing resolved uid" });
 
     try {
         const persona = await UserProfileService.getPersona(uid, 'english');

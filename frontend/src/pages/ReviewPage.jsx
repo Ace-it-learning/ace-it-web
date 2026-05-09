@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate, useLocation } from 'react-router-dom';
 import ReadingPanel from '../components/exam/ReadingPanel';
 import QuestionList from '../components/exam/QuestionList';
-import { doc, getDoc, collection, getDocs } from 'firebase/firestore';
-import { db } from '../firebase';
 
 import { useAuth } from '../context/AuthContext';
 import { addToNotebook } from '../services/notebookService';
@@ -66,6 +64,7 @@ const ReviewPage = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const { user } = useAuth();
+    const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
 
     // State
     const [examData, setExamData] = useState(null);
@@ -100,23 +99,16 @@ const ReviewPage = () => {
         const fetchExamData = async () => {
             if (!examId) return;
             try {
-                // 1. Fetch Exam Metadata
-                const examRef = doc(db, "mock_exams", examId);
-                const examSnap = await getDoc(examRef);
-
-                if (examSnap.exists()) {
-                    setExamData(examSnap.data());
-
-                    // 2. Fetch Questions from Sub-collection
-                    const qRef = collection(db, "mock_exams", examId, "questions");
-                    const qSnap = await getDocs(qRef);
-                    if (!qSnap.empty) {
-                        const qList = qSnap.docs.map(d => ({ id: d.id, ...d.data() }))
-                            .sort((a, b) => (a.order_index || 0) - (b.order_index || 0));
-                        setQuestionsFromSub(qList);
-                    }
-                } else {
+                const token = await user?.getIdToken?.();
+                const res = await fetch(`${API_URL}/api/data/review/${encodeURIComponent(examId)}`, {
+                    headers: token ? { Authorization: `Bearer ${token}` } : {}
+                });
+                if (!res.ok) {
                     console.error("Exam not found");
+                } else {
+                    const payload = await res.json();
+                    setExamData(payload.examData || null);
+                    setQuestionsFromSub(Array.isArray(payload.questions) ? payload.questions : []);
                 }
             } catch (error) {
                 console.error("Error fetching review data:", error);
@@ -126,7 +118,7 @@ const ReviewPage = () => {
         };
 
         fetchExamData();
-    }, [examId]);
+    }, [examId, user]);
 
     // Close popover logic is now handled by the Backdrop overlay
     // No useEffect needed for window click

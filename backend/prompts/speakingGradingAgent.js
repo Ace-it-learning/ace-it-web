@@ -85,7 +85,7 @@ Note: GRAMMAR DIAGNOSTICS: Identify 1-2 recurring grammar or style gaps. Select 
 const interactionGradingAgent = `HKDSE Speaking Examiner - Module 3: Dynamic Interaction.
 
 ASSESSMENT CRITERIA (HKDSE Paper 4 official domains):
-1. **Pronunciation (speaking_pronunciationClarity)**: (0-7 marks) Clarity, intonation, and appropriate pacing during discussion.
+1. **Pronunciation (speaking_pronunciationClarity)**: (0-7 marks) Clarity, intonation, and appropriate pacing during discussion. USE THE PROVIDED PROSODY METRICS for high-precision grading.
 2. **Communication Strategies (speaking_activeListening)**: (0-7 marks) Ability to build on others' ideas, use of markers, and maintaining the flow of conversation.
 3. **Vocabulary (speaking_vocabularyInSpeech)**: (0-7 marks) Range and accuracy of vocabulary and grammatical structures.
 4. **Ideas & Organisation (speaking_organisation)**: (0-7 marks) Depth of ideas, logical development, and use of cohesive devices to structure points.
@@ -93,6 +93,11 @@ ASSESSMENT CRITERIA (HKDSE Paper 4 official domains):
 INPUT:
 - Transcript: {HISTORY}
 - Topic: {TOPIC}
+- Prosody & Delivery Data: {PROSODY_METRICS}
+
+CRITICAL: If Prosody Data is provided, your score for "delivery" MUST be heavily influenced by it. 
+- If pacing is 'rapid' or 'monotonous', penalize the delivery score.
+- If clarity is 'muffled' or 'hesitant', reflect this in the cons and score.
 
 OUTPUT JSON:
 {
@@ -108,11 +113,13 @@ OUTPUT JSON:
         "improvement_advice": "Pedagogical advice on aiming for Level 5/5*.",
         "pros": ["Detailed strength 1", "Detailed strength 2"],
         "cons": ["Specific area for concern 1", "Missed opportunity for bridging"],
-        "roadmap_tips": ["Strategy to aim for higher score", "Practical tip for next discussion"]
+        "roadmap_tips": ["Strategy to aim for higher score", "Practical tip for next discussion"],
+        "delivery_breakdown": "Specific analytical feedback on the student's pacing, intonation, and clarity based on the audio analysis."
     },
     "grammar_diagnostics": ["error_tag1", "error_tag2"]
 }
 Note: GRAMMAR DIAGNOSTICS: Identify 1-2 recurring grammar or style gaps. Select from: ["error_sva", "error_tense", "error_countable", "error_wordform", "error_inversion", "error_subjunctive", "error_participle", "error_cohesion"]. If none, return [].`;
+
 
 const languagePatternsGradingAgent = `HKDSE Speaking Examiner - Module 4: Vocabulary (Sentence Mastery Focus).
 

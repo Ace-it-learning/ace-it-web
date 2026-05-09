@@ -1,6 +1,5 @@
 const express = require('express');
 const router = express.Router();
-const admin = require('firebase-admin');
 const MathsDiagnosticService = require('../../services/maths/MathsDiagnosticService');
 
 // POST /start - Retrieve diagnostic test questions
@@ -44,10 +43,10 @@ router.post('/submit', async (req, res) => {
         // Grade the submission
         const results = await MathsDiagnosticService.gradeMaths(submission, uid);
 
-        // Save to Firestore (Additional triggers if needed)
+        // Save to active data provider (Cosmos/Azure repos)
         if (uid) {
-            // 1. Update main user document (Atomic fields only)
-            await admin.firestore().collection('users').doc(uid).set({
+            // 1. Update main user profile document
+            await UserProfileService.createOrUpdateProfile(uid, {
                 maths_diagnostic: {
                     totalScore: results.totalScore,
                     maxScore: results.maxScore,
@@ -60,7 +59,7 @@ router.post('/submit', async (req, res) => {
                 has_maths_diagnostic: true,
                 is_new_student: false,
                 status: 'active'
-            }, { merge: true });
+            });
 
             // 2. Award XP
             const GamificationService = require('../../services/GamificationService');
@@ -163,28 +162,22 @@ router.post('/practice/submit', async (req, res) => {
         // 1. Mark questions as seen & Quality-Gated Auto-Approval
         if (questionIds && Array.isArray(questionIds)) {
             await MathsLabService.markQuestionsSeen(uid, questionIds);
-            
-            const db = admin.firestore();
-            const batch = db.batch();
+
+            const QuestionBankStore = require('../../services/QuestionBankStore');
             const graphTopics = ['math_geo_coord', 'math_geo_circle', 'math_geo_trig', 'math_geo_mensuration'];
 
             for (const qid of questionIds) {
-                const qRef = db.collection('question_bank').doc(qid);
-                const qDoc = await qRef.get();
-                if (qDoc.exists) {
-                    const data = qDoc.data();
-                    const isVisualTopic = graphTopics.includes(data.topic_id);
-                    const hasVisual = !!(data.diagram_svg || data.diagram_url || (data.content && data.content.diagram_svg));
-                    
-                    // Only approve if it's not a visual topic OR if it successfully generated a visual
-                    if (!isVisualTopic || hasVisual) {
-                        batch.set(qRef, { is_approved: true }, { merge: true });
-                    } else {
-                        console.log(`[MathsPractice] Skipping auto-approval for ${qid} due to missing diagram in visual topic.`);
-                    }
+                const data = await QuestionBankStore.getById(qid);
+                if (!data) continue;
+                const isVisualTopic = graphTopics.includes(data.topic_id);
+                const hasVisual = !!(data.diagram_svg || data.diagram_url || (data.content && data.content.diagram_svg));
+
+                if (!isVisualTopic || hasVisual) {
+                    await QuestionBankStore.upsertById(qid, { is_approved: true }, { merge: true });
+                } else {
+                    console.log(`[MathsPractice] Skipping auto-approval for ${qid} due to missing diagram in visual topic.`);
                 }
             }
-            await batch.commit();
             console.log(`[MathsPractice] ${questionIds.length} questions processed for uid: ${uid}`);
         }
 

@@ -4,6 +4,7 @@ import { useLanguage } from '../../context/LanguageContext';
 import { useAuth } from '../../context/AuthContext';
 import { EXAM_TIPS, TIP_CATEGORIES } from '../../data/exam_tips';
 import { cn } from '../../utils/cn';
+import ReactMarkdown from 'react-markdown';
 
 const CATEGORY_ICONS = {
     study_stage: Brain,
@@ -55,7 +56,7 @@ const ExamTipsModal = ({ isOpen, onClose }) => {
             <div className="bg-white dark:bg-gray-900 w-full max-w-4xl max-h-[90vh] rounded-3xl shadow-2xl overflow-hidden flex flex-col animate-in zoom-in-95 duration-200 border border-white/10">
 
                 {/* Header */}
-                <div className="p-6 bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 text-white shrink-0 relative overflow-hidden">
+                <div className="p-6 bg-gradient-to-r from-orange-600 via-amber-600 to-orange-700 text-white shrink-0 relative overflow-hidden">
                     <div className="absolute top-0 right-0 p-4 opacity-10">
                         <Trophy className="w-64 h-64 rotate-12" />
                     </div>
@@ -64,11 +65,11 @@ const ExamTipsModal = ({ isOpen, onClose }) => {
                         <div>
                             <div className="flex items-center gap-3 mb-2">
                                 <span className="px-3 py-1 rounded-full bg-yellow-400/20 text-yellow-300 text-xs font-bold border border-yellow-400/30">
-                                    Ace Sir's Secret Archive
+                                    Ace Sir's Strategy Library
                                 </span>
                             </div>
                             <h2 className="text-3xl font-bold mb-2">
-                                {language === 'zh' ? '應試錦囊' : 'Exam Strategy Tips'}
+                                {language === 'zh' ? 'DSE 應試策略' : 'DSE Strategy'}
                             </h2>
                             <button className="text-white/60 text-sm hover:text-white flex items-center gap-2 transition-colors">
                                 <Award className="w-4 h-4 text-yellow-400" />
@@ -101,7 +102,7 @@ const ExamTipsModal = ({ isOpen, onClose }) => {
                                         className={cn(
                                             "w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-all text-left",
                                             activeCategory === cat.id
-                                                ? "bg-purple-600 text-white shadow-md shadow-purple-500/20"
+                                                ? "bg-orange-500 text-white shadow-md shadow-orange-500/20"
                                                 : "text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700"
                                         )}
                                     >
@@ -139,15 +140,32 @@ const ExamTipsModal = ({ isOpen, onClose }) => {
                                         </div>
                                     </div>
 
-                                    <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2 group-hover:text-purple-600 transition-colors">
+                                    <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2 group-hover:text-orange-600 transition-colors">
                                         {language === 'zh' ? tip.title.zh : tip.title.en}
                                     </h3>
 
-                                    <div className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed whitespace-pre-line">
-                                        {language === 'zh' ? tip.content.zh : tip.content.en}
+                                    <div className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed prose prose-sm dark:prose-invert max-w-none">
+                                        <ReactMarkdown>
+                                            {language === 'zh' ? tip.content.zh : tip.content.en}
+                                        </ReactMarkdown>
                                     </div>
 
-                                    {/* Footer / Relevancy */}
+                                    {/* CTA Button */}
+                                    <div className="mt-4 pt-4 border-t border-gray-100 dark:border-gray-700">
+                                        <button
+                                            onClick={() => {
+                                                onClose();
+                                                const event = new CustomEvent('start-ai-chat', {
+                                                    detail: { message: `Can you elaborate more on this strategy: "${language === 'zh' ? tip.title.zh : tip.title.en}"?` }
+                                                });
+                                                window.dispatchEvent(event);
+                                            }}
+                                            className="w-full flex items-center justify-center gap-2 py-2.5 bg-orange-50 hover:bg-orange-100 dark:bg-orange-900/20 dark:hover:bg-orange-900/40 text-orange-600 dark:text-orange-400 font-bold rounded-xl transition-colors"
+                                        >
+                                            <Brain className="w-4 h-4" />
+                                            {language === 'zh' ? '要求 Ace Sir 深入解說' : 'Ask Ace Sir to Elaborate'}
+                                        </button>
+                                    </div>
                                     {tip.relevantDreams.some(d => userDream.includes(d)) && (
                                         <div className="mt-4 pt-3 border-t border-gray-100 dark:border-gray-700 flex items-center gap-2 text-xs text-purple-600 font-medium">
                                             <Target className="w-3.5 h-3.5" />

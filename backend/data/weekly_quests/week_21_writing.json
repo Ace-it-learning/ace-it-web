@@ -1,0 +1,27 @@
+{
+  "type": "WRITING",
+  "topic": "writing_weekly",
+  "title": "Balancing Northern Metropolis development opportunities with housing pressure and career pathways for Hong Kong diploma graduates",
+  "reading_passage": "Role: Form 6 student contributor.\nAudience: Student careers magazine.\nPurpose: Discuss whether Hong Kong diploma graduates should prioritise GBA opportunities, local JUPAS pathways, or overseas study—given housing costs and Northern Metropolis narratives.\n\nNote: Reference realistic trade-offs; avoid slogan answers.",
+  "conceptual_explanation": "Paper 2: discursive development; audience awareness; HK policy + personal stake integration.",
+  "key_points": ["Define terms (Northern Metropolis, GBA).", "Balance aspiration vs housing timelines.", "Acknowledge commute/lifestyle costs.", "Offer reasoned personal stance, not cliché."],
+  "marking_logic": {
+    "hkeaa_paper2_dimensions": { "content": "Insight and relevance", "language": "Range and accuracy", "organisation": "Coherence and cohesion" },
+    "full_marks_criteria": [
+      "Content: integrates macro development with individual pathways and constraints.",
+      "Language: precise lexis (articulation, credential, commute, stigma).",
+      "Organisation: dialectical structure; evaluative conclusion.",
+      "Avoids both boosterism and blanket rejection of cross-boundary careers."
+    ],
+    "key_phrases": ["portfolio nimbleness", "timeline accountability", "commute premium", "offer letter as proof"],
+    "genre_requirements": { "format": "Magazine discursive article", "essential_elements": ["Hook", "Weighed analysis", "Reflective conclusion"], "tone": "Mature student voice" }
+  },
+  "interactive_tasks": [
+    { "id": "lvl_4", "type": "MODEL_ANSWER", "question": "Model Answer (Level 4)", "answer": "My Career Path in the Future\n\nNorthern Metropolis is a big plan in the New Territories. Many students want good jobs in I&T. Some will study in Hong Kong and some in Mainland.\n\nI think GBA jobs can give more chances but travelling takes time. Housing is expensive everywhere so young people feel worried.\n\nI will try JUPAS first because it is safer. If I fail, I may think about other places.\n\nIn conclusion, we need to work hard and choose carefully.", "explanation": "Simple sequencing; limited development; basic accuracy—Level 4." },
+    { "id": "lvl_5", "type": "MODEL_ANSWER", "question": "Model Answer (Level 5)", "answer": "North on the Map, Offer Letter in Hand\n\nNorthern Metropolis is not a geography quiz; it is a question about whether macro slogans translate into micro security. I will not glorify cross-boundary mobility as automatic success, nor will I pretend local degrees guarantee flats.\n\nGBA roles may reward bilingual registers and faster industry cycles; they also extract commute premiums and blur labour protections across jurisdictions. Local articulation remains credible if programmes build micro-credentials and workplace writing that employers recognise.\n\nMy interim strategy: pursue JUPAS tracks that expose me to data literacy and basic Putonghua business register—skills portable north or lateral overseas—while tracking actual occupation dates for new towns, not just billboard renders. Proof is an offer letter, not a pamphlet.", "explanation": "Balanced; policy vocabulary; conditional planning—Level 5." },
+    { "id": "lvl_5s", "type": "MODEL_ANSWER", "question": "Model Answer (Level 5*)", "answer": "Choosing Without Shame\n\nThe shame the passage names is political—internalised failure for mobility. I reject that frame. A diploma is portable capital; where it lands first says more about land policy than individual worth.\n\nI will benchmark employers who document rest policies for cross-border staff and interrogate marketing housing figures with timelines. If Northern Metropolis delivers inclusive rentals near stations, opportunistic northward moves become rational; if not, local deep-skilling plus regional consulting beats romantic slogans.\n\nStance: hybrid portfolio—intern in Shenzhen summers while defending HK-based thesis writing where intellectual property rules favour my field.", "explanation": "Ethical + strategic depth—5*." },
+    { "id": "lvl_5ss", "type": "MODEL_ANSWER", "question": "Model Answer (Level 5**)", "answer": "Ribbon-Cuttings and Rent Receipts\n\nA metropolis sold on aerial renderings insults the tenant calculating MTR minutes against sleep. I write, therefore, as a skeptic who still boards the train—because stasis is also a choice with costs.\n\nThe Northern Metropolis can be more than a runway for elite I&T if policy binds ribbon-cuttings to occupancy clocks: when keys turn, not when podiums glitter. For graduates, that means demanding articulation pathways that accredit what we already do—code reviews, bilingual client calls—not forcing us to collect redundant badges.\n\nMy north star is neither patriotic slogan nor lazy localism; it is contractual literacy. Read the labour clause, map the commute, model rent as percentage of starting pay, decide. Shame should attach to opaque marketing, not to young people chasing receipts they can audit.", "explanation": "Rhetorical sophistication; systemic critique—5**." }
+  ],
+  "success_feedback": "Compare how each band handles evidence vs feeling.",
+  "suggested_next_steps": ["Peer review using Paper 2 levels table.", "Add one counterargument paragraph to your draft."]
+}

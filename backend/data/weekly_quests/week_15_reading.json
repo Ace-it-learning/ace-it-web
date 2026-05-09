@@ -22,7 +22,7 @@
         "They eliminate the need for traditional textbooks.",
         "They guarantee higher exam scores."
       ],
-      "answer": "B",
+      "answer": "They allow students to learn at their own pace.",
       "explanation": "Adaptive learning platforms tailor the curriculum to the student's current knowledge level and learning preferences, enabling them to learn at their own pace."
     },
     {
@@ -31,6 +31,14 @@
       "instruction": "Answer in no more than 15 words.",
       "question": "According to the article, what is one concern about using AI in education?",
       "answer": "Potential data privacy violations or algorithmic bias.",
+      "marking_logic": {
+        "full_marks_criteria": [
+          "Mentions data privacy or security concerns",
+          "Mentions algorithmic bias or lack of fairness"
+        ],
+        "key_phrases": ["data privacy", "algorithmic bias", "security"],
+        "reject_criteria": ["Lack of internet", "High cost of devices"]
+      },
       "explanation": "The article highlights concerns about data privacy and the possibility of AI algorithms being biased."
     },
     {
@@ -44,7 +52,7 @@
         "To facilitate learning using AI tools.",
         "To focus only on advanced students."
       ],
-      "answer": "C",
+      "answer": "To facilitate learning using AI tools.",
       "explanation": "The article states that teachers will become facilitators of learning, using AI tools to gain deeper insights into their students' needs."
     },
     {
@@ -58,13 +66,8 @@
         "Learning preferences are identified.",
         "Additional resources provided if needed."
       ],
-      "answer": [
-        "Student's knowledge is assessed.",
-        "Learning preferences are identified.",
-        "Curriculum is tailored.",
-        "Additional resources provided if needed."
-      ],
-      "explanation": "The AI system first assesses knowledge, identifies preferences, then adapts the curriculum accordingly and offers support where needed."
+      "answer": "1-2-0-3",
+      "explanation": "The AI system first assesses knowledge (1), identifies preferences (2), then adapts the curriculum accordingly (0) and offers support where needed (3)."
     },
     {
       "id": "q5",
@@ -72,6 +75,14 @@
       "instruction": "Answer in no more than 15 words.",
       "question": "What can intelligent tutoring systems provide besides answers?",
       "answer": "Personalized guidance and feedback.",
+      "marking_logic": {
+        "full_marks_criteria": [
+          "Mentions personalized guidance",
+          "Mentions feedback to students"
+        ],
+        "key_phrases": ["personalized guidance", "feedback"],
+        "reject_criteria": ["Direct answers only", "Free tablets"]
+      },
       "explanation": "Intelligent tutoring systems offer personalized guidance and feedback to students, beyond simply providing answers."
     },
     {
@@ -85,7 +96,7 @@
         "Ensuring equitable access for all students.",
         "Replacing all teachers with AI."
       ],
-      "answer": "C",
+      "answer": "Ensuring equitable access for all students.",
       "explanation": "The article emphasizes the importance of ensuring equitable access to AI-powered education for all students."
     },
     {
@@ -100,10 +111,8 @@
         "Improved Student Engagement"
       ],
       "answer": {
-        "Data Privacy Concerns": "Challenge",
-        "Personalized Learning Paths": "Benefit",
-        "Algorithmic Bias": "Challenge",
-        "Improved Student Engagement": "Benefit"
+        "Challenge": [0, 2],
+        "Benefit": [1, 3]
       },
       "explanation": "Data privacy and algorithmic bias are potential challenges. Personalized learning and student engagement are benefits."
     },
@@ -118,7 +127,7 @@
         "Coding",
         "Robotics"
       ],
-      "answer": "B",
+      "answer": "AI tool usage",
       "explanation": "Teachers need to learn to use the AI tools correctly."
     },
     {
@@ -127,6 +136,13 @@
       "instruction": "Answer in no more than 15 words.",
       "question": "What is the ultimate aim for AI in learning?",
       "answer": "To enhance human elements in learning.",
+      "marking_logic": {
+        "full_marks_criteria": [
+          "Mentions enhancing or supporting the human element of education",
+          "Mentions that AI should not replace humans"
+        ],
+        "key_phrases": ["enhance", "human element", "not replace"]
+      },
       "explanation": "AI is a tool to help develop human elements."
     },
     {
@@ -140,7 +156,7 @@
         "Replacing exams.",
         "Decreasing class sizes."
       ],
-      "answer": "A",
+      "answer": "Making learning more equitable.",
       "explanation": "AI can help provide a more level playing field for every student."
     }
   ],

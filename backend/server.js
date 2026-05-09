@@ -50,6 +50,9 @@ if (forceProduction || NODE_ENV === 'production') {
     console.warn(`⚠️ No Firebase Service Account found at ${saFilename}. Firestore features disabled.`);
 }
 
+// --- INITIALIZE STRIPE ---
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY || 'sk_test_placeholder');
+
 const app = express();
 const isProduction = process.env.NODE_ENV === 'production';
 app.set('trust proxy', 1);
@@ -58,6 +61,7 @@ app.set('trust proxy', 1);
 app.use(helmet({ contentSecurityPolicy: false }));
 app.use(bodyParser.json({ limit: '50mb' }));
 app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
+app.use(require('./middleware/Auth0IdentityMiddleware').enrichIdentity);
 
 // CORS Implementation
 app.use((req, res, next) => {
@@ -129,7 +133,10 @@ app.post(/^\/api\/tutors\/(.*)/, (req, res) => res.redirect(307, req.url.replace
 
 app.use('/api/debug', require('./routes/debugRoutes'));
 app.use('/api/admin', require('./routes/adminRoutes'));
+app.use('/api/promo', require('./routes/promoRoutes'));
 app.use('/api', require('./routes/ttsRoutes'));
+app.use('/api/payment', require('./routes/paymentRoutes'));
+app.use('/api', require('./routes/dataRoutes'));
 
 // --- COMPATIBILITY ALIASES (Frontend Support) ---
 app.get('/api/microskills/:uid', (req, res) => res.redirect(307, '/api/stats/microskills/' + req.params.uid));

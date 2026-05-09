@@ -11,6 +11,29 @@
     "Acknowledging and systematically refuting counterarguments.",
     "Showcasing a wide lexical repertoire and complex syntactic structures."
   ],
+  "marking_logic": {
+    "full_marks_criteria": [
+      "Explicitly addresses the HKDSE context (SBA, pressure-cooker environment, exam hall constraints)",
+      "Discusses the concept of 'AI Literacy' or ethical boundaries (ideation vs. execution)",
+      "Addresses the risk of 'Cognitive Offloading' or the atrophy of critical thinking skills",
+      "Proposes a forward-looking, balanced solution rather than a binary (ban vs. allow) approach",
+      "Employs sophisticated metaphors (e.g., co-pilot, servant, Promethean fire)"
+    ],
+    "key_phrases": [
+      "pedagogical debate",
+      "algorithmic age",
+      "cognitive offloading",
+      "intellectual integrity",
+      "democratized support",
+      "double-edged sword",
+      "nuanced perspective"
+    ],
+    "genre_requirements": {
+      "format": "Opinion Piece / School Magazine Feature",
+      "essential_elements": ["Creative Title", "Hook", "Socratic questioning/Rhetorical devices", "Inspirational Conclusion"],
+      "tone": "Thoughtful, balanced, and persuasive"
+    }
+  },
   "interactive_tasks": [
     {
       "id": "lvl_4",

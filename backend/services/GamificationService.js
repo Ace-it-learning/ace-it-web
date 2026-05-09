@@ -1,8 +1,8 @@
-const admin = require('firebase-admin');
 const fs = require('fs');
 const path = require('path');
 const UserProfileService = require('./UserProfileService');
 const moment = require('moment');
+const CosmosStore = require('./CosmosStore');
 
 // Load Configuration Source of Truth
 const GAMIFICATION_CONFIG = JSON.parse(fs.readFileSync(path.join(__dirname, '../gamification.json'), 'utf8'));
@@ -26,10 +26,8 @@ class GamificationService {
         if (!uid || uid === 'guest') return { weekId: null, completed: false };
         try {
             const weekId = this.getCurrentWeekId();
-            const statsDoc = await this.db.collection('users').doc(uid).collection('stats').doc('main').get();
-            if (!statsDoc.exists) return { weekId, completed: false };
-
-            const data = statsDoc.data();
+            const data = await CosmosStore.getUserStats(uid);
+            if (!data) return { weekId, completed: false };
             const completedQuests = data.weekly_quests_completed || [];
             return {
                 weekId,
@@ -42,14 +40,40 @@ class GamificationService {
     }
 
     /**
+     * Compact summary of the last N completed quests / mocks for use in the
+     * tutor system prompt. Reads from `users/{uid}/quest_results` which is
+     * populated by `UserProfileService.saveQuestResult` and the mock submit
+     * routes.
+     */
+    async getRecentQuestSummary(uid, limit = 3) {
+        if (!uid || uid === 'guest') return [];
+        try {
+            const rows = await CosmosStore.listQuestResults(uid, limit);
+            if (!rows.length) return [];
+            return rows.map((data) => {
+                const topic = data.topic || data.title || data.paper || 'Quest';
+                const score = data.predicted_level
+                    || data.level
+                    || (typeof data.percentage === 'number' ? `${Math.round(data.percentage)}%` : null)
+                    || data.score
+                    || null;
+                return {
+                    topic: String(topic).slice(0, 40),
+                    score: score ? String(score).slice(0, 12) : null,
+                    type: data.type || data.paper || null
+                };
+            }).filter(q => q.topic);
+        } catch (e) {
+            console.warn(`[Gamification] getRecentQuestSummary error for ${uid}:`, e.message);
+            return [];
+        }
+    }
+
+    /**
      * Get standardized XP for an adaptive tier (1-4).
      */
     getTieredXP(tier) {
         return this.config.xp_table.adaptive_practice_tiers?.[tier] || 50;
-    }
-
-    get db() {
-        return admin.firestore();
     }
 
     /**
@@ -94,14 +118,9 @@ class GamificationService {
      */
     async awardXP(uid, baseAmount, source = 'general', actionMetadata = {}, existingTx = null) {
         if (!uid || uid === 'guest') return null;
-
-        const userRef = this.db.collection('users').doc(uid);
-        const statsRef = userRef.collection('stats').doc('main');
-
-        const logic = async (t) => {
-            const [statsDoc, userDoc] = await Promise.all([t.get(statsRef), t.get(userRef)]);
-            let stats = statsDoc.exists ? statsDoc.data() : { xp: 0, level: 1, daily_xp: 0, last_xp_date: null };
-            const userData = userDoc.exists ? userDoc.data() : {};
+        const logic = async () => {
+            let stats = (await CosmosStore.getUserStats(uid)) || { xp: 0, level: 1, daily_xp: 0, last_xp_date: null };
+            const userData = await UserProfileService.getProfile(uid) || {};
             const tier = userData.subscription_tier || 'free';
 
             // 1. Check Daily Cap & Streak
@@ -211,7 +230,7 @@ class GamificationService {
                 }
             }
 
-            t.set(statsRef, stats, { merge: true });
+            await CosmosStore.upsertUserStats(uid, stats, true);
 
             const title = actionMetadata.title || this.deriveTitleFromSource(source);
 
@@ -242,12 +261,7 @@ class GamificationService {
 
             return result;
         };
-
-        if (existingTx) {
-            return logic(existingTx);
-        } else {
-            return this.db.runTransaction(logic);
-        }
+        return logic();
     }
 
     /**
@@ -288,14 +302,10 @@ class GamificationService {
         if (!uid || !questId) return { success: false };
 
         try {
-            const statsRef = this.db.collection('users').doc(uid).collection('stats').doc('main');
             const today = new Date().toDateString();
+            let statsData = (await CosmosStore.getUserStats(uid)) || {};
 
-            return await this.db.runTransaction(async (t) => {
-                const statsDoc = await t.get(statsRef);
-                let statsData = statsDoc.exists ? statsDoc.data() : {};
-
-                let factorySet = statsData.factory_set || { date: today, completed: [] };
+            let factorySet = statsData.factory_set || { date: today, completed: [] };
 
                 // Handle date rollover
                 if (factorySet.date !== today) {
@@ -308,10 +318,10 @@ class GamificationService {
 
                 // Award XP for completion (standardize to tier XP if provided)
                 const xpToAward = baseXP || this.config.xp_table.factory_quest.completion || 200;
-                const xpResult = await this.awardXP(uid, xpToAward, 'factory_quest', {
-                    title: `Quest Completed: ${subject}`,
-                    subject: subject
-                }, t);
+            const xpResult = await this.awardXP(uid, xpToAward, 'factory_quest', {
+                title: `Quest Completed: ${subject}`,
+                subject: subject
+            });
 
                 factorySet.completed.push(questId);
                 let bonusAwarded = false;
@@ -320,23 +330,22 @@ class GamificationService {
                 // Check for Set Bonus (All 6 cards done)
                 if (factorySet.completed.length === 6) {
                     bonusAmount = this.config.xp_table.factory_quest.set_bonus || 200;
-                    await this.awardXP(uid, bonusAmount, 'factory_bonus', {
-                        title: `Full Set Bonus! 🏆`,
-                        subject: 'bonus'
-                    }, t);
+                await this.awardXP(uid, bonusAmount, 'factory_bonus', {
+                    title: `Full Set Bonus! 🏆`,
+                    subject: 'bonus'
+                });
                     bonusAwarded = true;
                 }
 
-                t.set(statsRef, { factory_set: factorySet }, { merge: true });
+            await CosmosStore.upsertUserStats(uid, { factory_set: factorySet }, true);
 
-                return {
-                    success: true,
-                    earned: xpResult.earned,
-                    bonusAwarded,
-                    bonusAmount,
-                    totalEarned: xpResult.earned + bonusAmount
-                };
-            });
+            return {
+                success: true,
+                earned: xpResult.earned,
+                bonusAwarded,
+                bonusAmount,
+                totalEarned: xpResult.earned + bonusAmount
+            };
         } catch (e) {
             console.error("[Gamification] Factory Quest Error:", e);
             return { success: false, error: e.message };
@@ -350,34 +359,30 @@ class GamificationService {
         if (!uid || uid === 'guest') return { success: false };
 
         const weekId = this.getCurrentWeekId();
-        const statsRef = this.db.collection('users').doc(uid).collection('stats').doc('main');
 
         try {
-            return await this.db.runTransaction(async (t) => {
-                const statsDoc = await t.get(statsRef);
-                const stats = statsDoc.exists ? statsDoc.data() : {};
-                const completed = stats.weekly_quests_completed || [];
+            const stats = (await CosmosStore.getUserStats(uid)) || {};
+            const completed = stats.weekly_quests_completed || [];
 
-                if (completed.includes(weekId)) {
-                    return { success: true, earned: 0, alreadyCompleted: true };
-                }
+            if (completed.includes(weekId)) {
+                return { success: true, earned: 0, alreadyCompleted: true };
+            }
 
-                // Award 250 XP for completion (Increased for 15-question rigor)
-                const xpToAward = 250;
-                const result = await this.awardXP(uid, xpToAward, 'weekly_quest', {
-                    title: `Weekly Quest Completed: ${weekId}`,
-                    subject: 'reading'
-                }, t);
-
-                completed.push(weekId);
-                t.set(statsRef, { weekly_quests_completed: completed }, { merge: true });
-
-                return {
-                    success: true,
-                    earned: result.earned,
-                    weekId
-                };
+            // Award 250 XP for completion (Increased for 15-question rigor)
+            const xpToAward = 250;
+            const result = await this.awardXP(uid, xpToAward, 'weekly_quest', {
+                title: `Weekly Quest Completed: ${weekId}`,
+                subject: 'reading'
             });
+
+            completed.push(weekId);
+            await CosmosStore.upsertUserStats(uid, { weekly_quests_completed: completed }, true);
+
+            return {
+                success: true,
+                earned: result.earned,
+                weekId
+            };
         } catch (e) {
             console.error("[Gamification] Weekly Quest Award Error:", e);
             return { success: false, error: e.message };
@@ -404,41 +409,34 @@ class GamificationService {
 
         try {
             console.log(`[GamificationService] getProgress: Fetching stats doc for ${uid}`);
-            const statsDocPromise = this.db.collection('users').doc(uid).collection('stats').doc('main').get();
+            const statsPromise = CosmosStore.getUserStats(uid);
             
             console.log(`[GamificationService] getProgress: Fetching inventory for ${uid}`);
-            let inventorySnap;
+            let inventory = [];
             try {
-                inventorySnap = await this.db.collection('users').doc(uid).collection('inventory')
-                    .orderBy('acquiredAt', 'desc')
-                    .limit(50)
-                    .get();
+                inventory = await CosmosStore.listInventory(uid, 50);
             } catch (inventoryError) {
                 console.warn(`[GamificationService] Inventory fetch failed (possibly missing index):`, inventoryError.message);
-                // Fallback: Fetch without ordering or just return empty
-                inventorySnap = { docs: [] };
+                inventory = [];
             }
 
-            const doc = await statsDocPromise;
+            const data = await statsPromise;
             console.log(`[GamificationService] getProgress: Stats doc received.`);
 
-            if (!doc.exists) return null;
-
-            const data = doc.data();
-            const totalXP = data.total_xp || data.xp || 0;
-            const levelData = this.calculateLevelFromXP(totalXP);
-            const inventory = inventorySnap.docs.map(d => d.data());
+            if (!data) return null;
+            const spendableXP = Number(data.xp || 0);
+            const lifetimeXP = Number(data.total_xp || spendableXP);
+            const levelData = this.calculateLevelFromXP(lifetimeXP);
 
             // --- BACKFILL: totalActiveDays ---
             // If the field is missing, we calculate it from the timeline to provide an accurate historical count.
             if (data.totalActiveDays === undefined) {
                 try {
                     console.log(`[GamificationService] Backfilling totalActiveDays for ${uid}...`);
-                    const timelineSnap = await this.db.collection('users').doc(uid).collection('timeline').get();
+                    const timeline = await CosmosStore.listTimeline(uid, 3000);
                     const uniqueDays = new Set();
                     
-                    timelineSnap.forEach(tDoc => {
-                        const tData = tDoc.data();
+                    timeline.forEach((tData) => {
                         const ts = tData.timestamp || tData.date;
                         if (ts) {
                             const dateStr = (ts.toDate ? ts.toDate() : new Date(ts)).toDateString();
@@ -449,9 +447,7 @@ class GamificationService {
                     data.totalActiveDays = Math.max(uniqueDays.size, data.streakDays || 1);
                     
                     // Save back to DB so we don't have to re-calculate next time
-                    await this.db.collection('users').doc(uid).collection('stats').doc('main').update({
-                        totalActiveDays: data.totalActiveDays
-                    });
+                    await CosmosStore.upsertUserStats(uid, { totalActiveDays: data.totalActiveDays }, true);
                     console.log(`[GamificationService] Backfill complete: ${data.totalActiveDays} days.`);
                 } catch (backfillError) {
                     console.error(`[GamificationService] Backfill failed for ${uid}:`, backfillError);
@@ -461,8 +457,9 @@ class GamificationService {
 
             return {
                 ...data,
-                xp: totalXP,          // Explicit: use the resolved total XP
-                level: levelData.level, // Explicit: use the FRESHLY CALCULATED level (not stale DB value)
+                xp: spendableXP,        // Spendable XP balance (used by redemption)
+                total_xp: lifetimeXP,   // Lifetime earned XP (used for leveling)
+                level: levelData.level,
                 nextLevelXP: levelData.nextLevelXP,
                 currentStepXP: levelData.currentStepXP,
                 progressPercent: levelData.nextLevelXP > 0
@@ -481,16 +478,8 @@ class GamificationService {
      */
     async redeemItem(uid, itemId, cost, itemMetadata) {
         if (!uid || uid === 'guest') return { success: false, error: "Guest cannot redeem" };
-
-        const userRef = this.db.collection('users').doc(uid);
-        const statsRef = userRef.collection('stats').doc('main');
-        const inventoryRef = userRef.collection('inventory');
-
-        return this.db.runTransaction(async (t) => {
-            const statsDoc = await t.get(statsRef);
-            if (!statsDoc.exists) return { success: false, error: "User stats not found" };
-
-            const stats = statsDoc.data();
+        const stats = await CosmosStore.getUserStats(uid);
+        if (!stats) return { success: false, error: "User stats not found" };
             const currentXP = stats.xp || 0;
 
             if (currentXP < cost) {
@@ -499,18 +488,27 @@ class GamificationService {
 
             // Deduct XP
             stats.xp = currentXP - cost;
-            t.set(statsRef, stats, { merge: true });
+            await CosmosStore.upsertUserStats(uid, stats, true);
 
             // Add Item
-            const newItemRef = inventoryRef.doc(); // Auto ID
-            t.set(newItemRef, {
+            await CosmosStore.addInventoryItem(uid, {
                 itemId: itemId,
                 ...itemMetadata,
-                acquiredAt: admin.firestore.FieldValue.serverTimestamp()
+                cost: Number(cost || 0),
+                acquiredAt: new Date().toISOString()
             });
 
+            // Persist a spend event for auditable XP burn history.
+            UserProfileService.recordTimelineEvent(uid, {
+                type: 'redemption',
+                title: `Redeemed: ${itemMetadata?.name || itemId}`,
+                xp: -Number(cost || 0),
+                score: 'XP Spent',
+                subject: 'reward',
+                topic: itemId
+            }).catch(() => null);
+
             return { success: true, newBalance: stats.xp };
-        });
     }
 }
 

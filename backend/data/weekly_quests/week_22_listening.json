@@ -1,0 +1,95 @@
+{
+  "id": "listening_weekly_22",
+  "title": "Youth Mental Health at School",
+  "description": "Wellbeing taskforce: helpline hours, peer roster corrections, crisis banner text embargo.",
+  "topic": "Health / Social Issues",
+  "type": "listening_mission",
+  "paper": "Listening",
+  "subject": "English",
+  "level": "5",
+  "is_approved": true,
+  "factory_template": false,
+  "created_at": { "_seconds": 1715760000, "_nanoseconds": 0 },
+  "prediction_metadata": {
+    "topic_name": "Week 22: Youth Mental Health at School",
+    "sub_topics": [
+      { "id": "st1", "name": "Hotline extension", "category": "Key detail", "is_distractor": false, "hint": "New night hours." },
+      { "id": "st2", "name": "Peer roster cap", "category": "Strategic capture", "is_distractor": false, "hint": "Max listening hours weekly." },
+      { "id": "st3", "name": "New antidepressant brand", "category": "Distractor", "is_distractor": true, "hint": "Clinical detail outside this operational briefing." },
+      { "id": "st4", "name": "Debrief session length", "category": "Key detail", "is_distractor": false, "hint": "Minutes for supervisors." }
+    ]
+  },
+  "sprint_data": {
+    "audio_transcript": "[SCENE START]\n[Soft carpeted room]\nLead Counsellor: Locking wellbeing SOP updates—listen carefully.\nLead Counsellor: 24-hour hotline now extends to 1:15 a.m. nightly—not midnight—sync posters.\nPeer Coordinator: Each peer supporter caps 6 listening hours weekly, revised down from 8; rest logs mandatory.\nClinical Psych: Debrief blocks are 25 minutes minimum, not 15—update Outlook invites.\nIT: Chatbot triage must display crisis banner after keyword hits; banner text embargoed until Monday 8:00 a.m.—no screenshots on socials.\nLead Counsellor: Parent seminar Wednesday 7:10 p.m., not 7:00—MTR delay buffer.\nAdmin: Referral fax line deprecates Friday; use encrypted portal only.\n[SCENE END]",
+    "tasks": [
+      {
+        "id": "t1_table",
+        "type": "TABLE",
+        "label": "SOP Numbers",
+        "rows": [
+          { "label": "Hotline extends nightly until", "answer": "1:15 a.m.", "placeholder": "Time" },
+          { "label": "Weekly peer hours cap", "answer": "6", "placeholder": "Number" },
+          { "label": "Minimum debrief length", "answer": "25 minutes", "placeholder": "Duration" },
+          { "label": "Crisis banner live", "answer": "Monday 8:00 a.m.", "placeholder": "Time/Date" }
+        ]
+      },
+      {
+        "id": "t2_form",
+        "type": "FORM_FILLING",
+        "question": "Events / channels",
+        "fields": [
+          { "label": "Parent seminar start", "answer": "Wednesday 7:10 p.m.", "placeholder": "Time" },
+          { "label": "Deprecated referral channel", "answer": "fax line", "placeholder": "Channel" },
+          { "label": "Replacement channel", "answer": "encrypted portal", "placeholder": "Channel" },
+          { "label": "Social media rule on banner", "answer": "embargo—no screenshots", "placeholder": "Rule" }
+        ]
+      },
+      {
+        "id": "t3_mcq",
+        "type": "MCQ_BATCH",
+        "label": "Checks",
+        "questions": [
+          {
+            "question": "Peer hours were reduced from:",
+            "options": ["A. 6 to 4", "B. 8 to 6", "C. 10 to 8", "D. 8 to 4"],
+            "answer": "B"
+          },
+          {
+            "question": "Debrief length increased from 15 to:",
+            "options": ["A. 20", "B. 25", "C. 30", "D. 35"],
+            "answer": "B"
+          }
+        ]
+      }
+    ]
+  },
+  "integrated_data": {
+    "audio_transcript": "[INTEGRATED BRIEFING START]\nNGO Partner: KPI: reduce average queue minutes before human counsellor from 27 to 20 in six weeks—per district cluster.\nTeacher Rep: Safeguarding—any peer session exceeding emotional intensity uses code TANGO—two staff escalate within 4 minutes.\nPolicy: Aggregate wellbeing survey uses 7-point Likert; raw open-ended quotes scrubbed for identifiers before research use.\n[INTEGRATED BRIEFING END]",
+    "notetaking_fields": [
+      { "id": "n1", "label": "KPI & queue", "placeholder": "Targets..." },
+      { "id": "n2", "label": "Escalation codes", "placeholder": "TANGO rule..." },
+      { "id": "n3", "label": "Data ethics", "placeholder": "Anonymisation..." }
+    ],
+    "data_file": [
+      { "id": "m1", "type": "minutes", "title": "Safeguarding", "content": "Code TANGO: dual staff escalation within 4 minutes when session exceeds intensity threshold." },
+      { "id": "m2", "type": "email", "title": "Research", "content": "Open-ended survey quotes must be scrubbed identifiers before reuse." },
+      { "id": "m3", "type": "poster", "title": "Hotline", "content": "OPEN TILL 1:15 A.M.\nPRIVATE · FREE" }
+    ],
+    "writing_task": {
+      "instruction": "Draft a chair’s announcement for assembly: new hotline hours, peer hour limits, embargo on banner leaks, emphasising help-seeking as courage. 200–250 words; spoken register acceptable in script form.",
+      "format": "Speech script",
+      "role_profile": "Student welfare chair; supportive, non-alarmist.",
+      "word_count": "200-250",
+      "marking_criteria": "Content accuracy, Language appropriacy, Organisation, Sensitivity (Appropriacy)"
+    },
+    "marking_key": [
+      "State hotline extension 1:15 a.m. (not midnight).",
+      "Peer cap 6 hours weekly; mandatory rest logs implied.",
+      "Debrief minimum 25 minutes (supervisors).",
+      "Crisis banner embargo Monday 8:00 a.m.; no social screenshots before.",
+      "Parent seminar Wednesday 7:10 p.m.",
+      "Fax deprecated; encrypted portal only.",
+      "Optional integrated: queue KPI 27→20 min; TANGO escalation; survey anonymisation."
+    ]
+  }
+}

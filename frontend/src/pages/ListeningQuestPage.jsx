@@ -226,22 +226,6 @@ const ListeningQuestPage = () => {
     };
 
 
-    const handleRetry = () => {
-        localStorage.removeItem(getSessionKey(questData?.id, currentMode));
-        
-        // Revoke URL if it's a blob
-        if (userAudioSrc && userAudioSrc.startsWith('blob:')) {
-            URL.revokeObjectURL(userAudioSrc);
-        }
-
-        setStep('simulator');
-        setUserResults(null);
-        setUserAudioSrc(null);
-        setMarginalXP(0);
-        setPrevBestScore(0);
-        window.scrollTo(0, 0);
-    };
-
     // Cleanup on unmount
     useEffect(() => {
         return () => {
@@ -283,7 +267,7 @@ const ListeningQuestPage = () => {
                                {currentMode === 'A' ? (
                                    <><div className="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse" /> Part A: Data Sprint (Level {targetLevel})</>
                                ) : (
-                                   <><div className="w-1.5 h-1.5 rounded-full bg-rose-500 animate-pulse" /> Part B: Integrated Simulation ({level})</>
+                                   <><div className="w-1.5 h-1.5 rounded-full bg-rose-500 animate-pulse" /> Part B: Integrated Skills ({level})</>
                                )}
                            </div>
                            <span className="text-slate-200">|</span>
@@ -318,8 +302,8 @@ const ListeningQuestPage = () => {
                 </div>
             </header>
 
-            {/* Main Content Area - Full width for Part B, centered for Part A */}
-            <main className={`flex-1 flex flex-col w-full ${currentMode === 'A' ? 'p-6 md:p-12 max-w-7xl mx-auto' : 'p-0 overflow-hidden'}`}>
+            {/* Main: same max-width + padding for Part A & B (Part B was full-bleed + overflow-hidden, which clipped the cheat dropdown) */}
+            <main className="flex-1 flex flex-col w-full p-6 md:p-12 max-w-7xl mx-auto min-h-0">
                 {step === 'loading' && (
                     <LoadingPage 
                         title="Calibrating Simulator High Fidelity..." 
@@ -328,7 +312,7 @@ const ListeningQuestPage = () => {
                 )}
 
                 {step === 'simulator' && (
-                    <div className="flex-1 flex flex-col min-h-0 bg-white rounded-3xl shadow-2xl border border-slate-100 overflow-hidden">
+                    <div className={`flex-1 flex flex-col min-h-0 bg-white rounded-3xl shadow-2xl border border-slate-100 ${currentMode === 'A' ? 'overflow-hidden' : 'overflow-visible'}`}>
                         {currentMode === 'A' ? (
                             <DataSprintBoard 
                                 questData={questData} 
@@ -352,7 +336,6 @@ const ListeningQuestPage = () => {
                         level={level}
                         marginalXP={marginalXP}
                         prevBestScore={prevBestScore}
-                        onRetry={handleRetry}
                         onMoveToPartB={handleMoveToPartB}
                     />
                 )}

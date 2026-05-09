@@ -1,8 +1,8 @@
 {
   "type": "GRAMMAR",
   "topic_id": "grammar_elite_participle",
-  "level": "HKDSE Level 5",
-  "conceptual_explanation": "Level 5 Participle Mastery focuses on 'The Dangling Participle'—a common error where the phrase doesn't match the subject. We also introduce 'Perfect Participles' (Having finished...), which emphasize that one action happened before another.",
+  "level": "HKDSE Level 4",
+  "conceptual_explanation": "Level 5 Participle Mastery focuses on 'The Dangling Participle'\u2014a common error where the phrase doesn't match the subject. We also introduce 'Perfect Participles' (Having finished...), which emphasize that one action happened before another.",
   "rule_cards": [
     {
       "name": "The Dangling Danger",
@@ -75,7 +75,7 @@
       "sentence_tokens": [
         "Looking",
         "through",
-        " the",
+        "the",
         "window",
         ",",
         "I",

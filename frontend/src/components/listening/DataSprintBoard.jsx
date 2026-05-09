@@ -1,10 +1,53 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { Headphones, Timer, CheckCircle, AlertCircle, Send, Table as TableIcon, ListChecks, Zap, Clock, Play, Loader2 } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 import AudioWaveform from '../utils/AudioWaveform';
+import { isCheatEnabled } from '../../utils/devAccess';
+
+/** Rows per HKEAA-style table block when lab tasks are flat (GAP_FILL / MCQ / etc.). */
+const PART_A_TABLE_BATCH = 4;
+
+const truncLabel = (text, max = 140) => {
+    const s = (text || '').replace(/\s+/g, ' ').trim();
+    if (!s) return 'Item';
+    return s.length <= max ? s : `${s.slice(0, max - 1)}…`;
+};
+
+/**
+ * Firestore / weekly listening exports often use flat `interactive_tasks` (GAP_FILL, MCQ, …).
+ * The classic Part A UI expects TABLE blocks with Section | Details. Bundle flat tasks into tables.
+ */
+const bundleFlatTasksIntoTables = (tasks) => {
+    if (!Array.isArray(tasks) || tasks.length === 0) return tasks;
+    if (tasks.some((t) => t.type === 'TABLE')) return tasks;
+    if (tasks.some((t) => t.type === 'MCQ_BATCH' || t.type === 'LIST')) return tasks;
+
+    const batches = [];
+    for (let i = 0; i < tasks.length; i += PART_A_TABLE_BATCH) {
+        batches.push(tasks.slice(i, i + PART_A_TABLE_BATCH));
+    }
+
+    return batches.map((batch, bi) => ({
+        id: `part_a_block_${bi}`,
+        type: 'TABLE',
+        label: batches.length > 1 ? `Data capture — Block ${bi + 1}` : 'Part A: Data capture',
+        rows: batch.map((t) => ({
+            label: truncLabel(t.question || t.label || ''),
+            placeholder:
+                t.type === 'MCQ' || t.type === 'mc'
+                    ? 'Choose A–D or type the letter'
+                    : t.type === 'GAP_FILL'
+                      ? 'Fill the gap…'
+                      : 'Your answer',
+            sourceTaskId: t.id,
+            refTask: t,
+            answer: t.answer ?? t.correct_answer,
+        })),
+    }));
+};
 
 const DataSprintBoard = ({ questData, onComplete, userNotes }) => {
-    const { user } = useAuth();
+    const { user, profile } = useAuth();
     const [answers, setAnswers] = useState({});
     const [isPlaying, setIsPlaying] = useState(false);
     const [timeLeft, setTimeLeft] = useState(600); // 10 minutes (HKEAA Standard)
@@ -12,7 +55,13 @@ const DataSprintBoard = ({ questData, onComplete, userNotes }) => {
     const [currentAudioSrc, setCurrentAudioSrc] = useState(null);
     const audioRef = React.useRef(null);
 
-    const sprintTasks = questData?.sprint_data?.tasks || questData?.sprint_data?.interactive_tasks || questData?.tasks || [];
+    const rawSprintTasks =
+        questData?.sprint_data?.tasks || questData?.sprint_data?.interactive_tasks || questData?.tasks || [];
+
+    const sprintTasks = useMemo(
+        () => bundleFlatTasksIntoTables(rawSprintTasks),
+        [rawSprintTasks, questData?.id]
+    );
 
     // Cleanup audio on unmount
     useEffect(() => {
@@ -36,7 +85,15 @@ const DataSprintBoard = ({ questData, onComplete, userNotes }) => {
         const cheatAnswers = {};
         sprintTasks.forEach(task => {
             if (task.type === 'TABLE') {
-                (task.rows || []).forEach((row, idx) => { cheatAnswers[`${task.id}_${idx}`] = row.answer; });
+                (task.rows || []).forEach((row, idx) => {
+                    if (row.sourceTaskId != null) {
+                        const t = row.refTask;
+                        cheatAnswers[row.sourceTaskId] =
+                            t?.correct_answer ?? t?.answer ?? row.answer ?? '';
+                    } else {
+                        cheatAnswers[`${task.id}_${idx}`] = row.answer;
+                    }
+                });
             } else if (task.type === 'LIST') {
                 (task.items || []).forEach((item, idx) => { cheatAnswers[`${task.id}_${idx}`] = item.answer; });
             } else if (task.type === 'MCQ_BATCH') {
@@ -69,14 +126,50 @@ const DataSprintBoard = ({ questData, onComplete, userNotes }) => {
         return `${mins}:${secs.toString().padStart(2, '0')}`;
     };
 
-    const totalFields = sprintTasks.reduce((acc, t) => {
-        if (t.type === 'TABLE') return acc + (t.rows?.length || 0);
-        if (t.type === 'LIST') return acc + (t.items?.length || 0);
-        if (t.type === 'MCQ_BATCH') return acc + (t.questions?.length || 0);
-        if (t.type === 'FORM_FILLING') return acc + (t.fields?.length || 0);
-        return acc + 1;
-    }, 0);
-    const completedCount = Object.values(answers).filter(v => v && String(v).trim()).length;
+    const { totalFields, completedCount } = useMemo(() => {
+        const filled = (v) => v != null && String(v).trim() !== '';
+        let total = 0;
+        let done = 0;
+
+        sprintTasks.forEach((t) => {
+            if (t.type === 'TABLE') {
+                (t.rows || []).forEach((row, rIdx) => {
+                    const rt = row.refTask;
+                    if (rt?.type === 'FORM_FILLING' && (rt.fields || []).length) {
+                        total += rt.fields.length;
+                        (rt.fields || []).forEach((_, fIdx) => {
+                            if (filled(answers[`${rt.id}_${fIdx}`])) done++;
+                        });
+                    } else {
+                        total += 1;
+                        const key = row.sourceTaskId != null ? row.sourceTaskId : `${t.id}_${rIdx}`;
+                        if (filled(answers[key])) done++;
+                    }
+                });
+            } else if (t.type === 'LIST') {
+                total += t.items?.length || 0;
+                (t.items || []).forEach((_, iIdx) => {
+                    if (filled(answers[`${t.id}_${iIdx}`])) done++;
+                });
+            } else if (t.type === 'MCQ_BATCH') {
+                total += t.questions?.length || 0;
+                (t.questions || []).forEach((_, qIdx) => {
+                    if (filled(answers[`${t.id}_${qIdx}`])) done++;
+                });
+            } else if (t.type === 'FORM_FILLING') {
+                total += t.fields?.length || 0;
+                (t.fields || []).forEach((_, fIdx) => {
+                    if (filled(answers[`${t.id}_${fIdx}`])) done++;
+                });
+            } else {
+                total += 1;
+                if (filled(answers[t.id])) done++;
+            }
+        });
+
+        return { totalFields: total, completedCount: done };
+    }, [sprintTasks, answers]);
+
     const completionRate = totalFields > 0 ? Math.floor((completedCount / totalFields) * 100) : 0;
 
     const handleSubmit = async () => {
@@ -144,15 +237,109 @@ const DataSprintBoard = ({ questData, onComplete, userNotes }) => {
     };
 
     const renderTask = (task, idx) => {
-        const isCompleted = task.type === 'TABLE' 
-            ? (task.rows || []).every((_, rIdx) => !!answers[`${task.id}_${rIdx}`])
-            : task.type === 'LIST'
-            ? (task.items || []).every((_, iIdx) => !!answers[`${task.id}_${iIdx}`])
-            : !!answers[task.id];
+        const rowAnswerReady = (row, rIdx) => {
+            if (row.sourceTaskId != null && row.refTask) {
+                const rt = row.refTask;
+                if ((rt.type === 'FORM_FILLING' || rt.type === 'form_filling') && (rt.fields || []).length) {
+                    return (rt.fields || []).every((_, fIdx) => {
+                        const v = answers[`${rt.id}_${fIdx}`];
+                        return v != null && String(v).trim() !== '';
+                    });
+                }
+                const key = row.sourceTaskId;
+                const v = answers[key];
+                return v != null && String(v).trim() !== '';
+            }
+            const v = answers[`${task.id}_${rIdx}`];
+            return v != null && String(v).trim() !== '';
+        };
+
+        const isCompleted =
+            task.type === 'TABLE'
+                ? (task.rows || []).every((row, rIdx) => rowAnswerReady(row, rIdx))
+                : task.type === 'LIST'
+                  ? (task.items || []).every((_, iIdx) => !!answers[`${task.id}_${iIdx}`])
+                  : !!answers[task.id];
 
         const cardStyle = isCompleted 
             ? 'bg-white border-indigo-100 shadow-md ring-1 ring-indigo-50' 
             : 'bg-white border-slate-100 shadow-sm opacity-90 hover:opacity-100 transition-opacity';
+
+        const renderBundledTableCell = (row, task, rIdx) => {
+            const rt = row.refTask;
+            const fallbackKey = `${task.id}_${rIdx}`;
+            const answerKey = row.sourceTaskId != null ? row.sourceTaskId : fallbackKey;
+
+            if (rt && (rt.type === 'MCQ' || rt.type === 'mc')) {
+                return (
+                    <div className="space-y-3">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                            {(rt.options || []).map((opt, oIdx) => {
+                                const optionLabel =
+                                    typeof opt === 'string'
+                                        ? opt.includes(':')
+                                            ? opt.split(':')[0].trim()
+                                            : opt.includes('.') && opt.length < 5
+                                              ? opt.split('.')[0].trim()
+                                              : String.fromCharCode(65 + oIdx)
+                                        : String.fromCharCode(65 + oIdx);
+                                const optionText =
+                                    typeof opt === 'string'
+                                        ? opt.includes(':')
+                                            ? opt.split(':')[1].trim()
+                                            : opt.includes('.') && opt.length < 5
+                                              ? opt.split('.').slice(1).join('.').trim()
+                                              : opt
+                                        : opt;
+                                return (
+                                    <button
+                                        key={oIdx}
+                                        type="button"
+                                        onClick={() => handleAnswer(answerKey, optionLabel)}
+                                        className={`p-3 rounded-xl border-2 text-left text-xs font-bold transition-all
+                                            ${answers[answerKey] === optionLabel
+                                                ? 'bg-indigo-600 border-indigo-600 text-white'
+                                                : 'bg-white border-slate-100 text-slate-600 hover:border-indigo-200'}`}
+                                    >
+                                        <span className="font-black mr-2">{optionLabel}</span>
+                                        {optionText}
+                                    </button>
+                                );
+                            })}
+                        </div>
+                    </div>
+                );
+            }
+
+            if (rt && rt.type === 'FORM_FILLING' && (rt.fields || []).length) {
+                return (
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        {(rt.fields || []).map((field, fIdx) => (
+                            <div key={fIdx} className="space-y-1">
+                                <label className="text-[9px] font-black text-slate-400 uppercase tracking-widest">{field.label}</label>
+                                <input
+                                    type="text"
+                                    placeholder={field.placeholder || '...'}
+                                    className="w-full bg-white border-2 border-slate-100 rounded-lg px-3 py-2 text-sm font-bold text-slate-900 focus:border-indigo-500 outline-none"
+                                    value={answers[`${rt.id}_${fIdx}`] || ''}
+                                    onChange={(e) => handleAnswer(`${rt.id}_${fIdx}`, e.target.value)}
+                                />
+                            </div>
+                        ))}
+                    </div>
+                );
+            }
+
+            return (
+                <input
+                    type="text"
+                    placeholder={row.placeholder || '...'}
+                    className="w-full bg-white border-2 border-slate-100 rounded-xl px-4 py-3 text-sm font-bold text-slate-900 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10 outline-none transition-all placeholder:text-slate-300"
+                    value={answers[answerKey] || ''}
+                    onChange={(e) => handleAnswer(answerKey, e.target.value)}
+                />
+            );
+        };
 
         switch (task.type) {
             case 'TABLE':
@@ -178,15 +365,19 @@ const DataSprintBoard = ({ questData, onComplete, userNotes }) => {
                                 <tbody>
                                     {(task.rows || []).map((row, rIdx) => (
                                         <tr key={rIdx} className="border-t border-slate-100/50 group">
-                                            <td className="p-4 text-xs font-black text-slate-500 bg-slate-50/50 w-1/3 italic">{row.label}</td>
-                                            <td className="p-3">
-                                                <input 
-                                                    type="text"
-                                                    placeholder={row.placeholder || "..."}
-                                                    className="w-full bg-white border-2 border-slate-100 rounded-xl px-4 py-3 text-sm font-bold text-slate-900 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10 outline-none transition-all placeholder:text-slate-300"
-                                                    value={answers[`${task.id}_${rIdx}`] || ""}
-                                                    onChange={(e) => handleAnswer(`${task.id}_${rIdx}`, e.target.value)}
-                                                />
+                                            <td className="p-4 text-xs font-black text-slate-500 bg-slate-50/50 w-1/3 align-top italic">{row.label}</td>
+                                            <td className="p-3 align-top">
+                                                {row.refTask
+                                                    ? renderBundledTableCell(row, task, rIdx)
+                                                    : (
+                                                        <input 
+                                                            type="text"
+                                                            placeholder={row.placeholder || "..."}
+                                                            className="w-full bg-white border-2 border-slate-100 rounded-xl px-4 py-3 text-sm font-bold text-slate-900 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10 outline-none transition-all placeholder:text-slate-300"
+                                                            value={answers[`${task.id}_${rIdx}`] || ""}
+                                                            onChange={(e) => handleAnswer(`${task.id}_${rIdx}`, e.target.value)}
+                                                        />
+                                                    )}
                                             </td>
                                         </tr>
                                     ))}
@@ -420,7 +611,7 @@ const DataSprintBoard = ({ questData, onComplete, userNotes }) => {
                     </div>
 
                     <div className="flex items-center gap-4">
-                        {user?.email === 'fungtam@gmail.com' && (
+                        {isCheatEnabled(user, profile) && (
                             <button 
                                 onClick={handleCheat}
                                 className="flex items-center gap-2 px-6 py-4 bg-slate-900 text-amber-400 rounded-2xl text-[10px] font-black uppercase tracking-widest hover:bg-black transition-all border border-amber-400/30 shadow-xl shadow-amber-900/20"
@@ -451,7 +642,19 @@ const DataSprintBoard = ({ questData, onComplete, userNotes }) => {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
                 {/* Left: Question-Answer Book */}
                 <div className="lg:col-span-8 flex flex-col gap-8">
-                    {sprintTasks.map((task, idx) => renderTask(task, idx))}
+                    {sprintTasks.length === 0 ? (
+                        <div className="rounded-[2rem] border-2 border-dashed border-slate-200 bg-slate-50/80 p-12 text-center">
+                            <TableIcon className="mx-auto mb-4 h-12 w-12 text-slate-300" />
+                            <p className="text-lg font-black text-slate-700">No Part A tasks loaded</p>
+                            <p className="mt-2 text-sm font-bold text-slate-500">
+                                This mission has no <code className="rounded bg-slate-200 px-1.5 py-0.5 text-xs">sprint_data.tasks</code> or{' '}
+                                <code className="rounded bg-slate-200 px-1.5 py-0.5 text-xs">interactive_tasks</code> in the database. Refresh after the quest is
+                                seeded, or open another listening mission from the roadmap.
+                            </p>
+                        </div>
+                    ) : (
+                        sprintTasks.map((task, idx) => renderTask(task, idx))
+                    )}
                 </div>
 
                 {/* Right: Summary & Control Panel */}

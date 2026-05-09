@@ -167,6 +167,11 @@ const SpeakingInteractionPage = () => {
     const interactionIndexRef = useRef(0); // [NEW] Track sequence (A, B, C, You) reliably
     const isTurnInProgressRef = useRef(false); // [NEW] Singleton turn guard
     const isFetchingRef = useRef({}); // [NEW] Track per-speaker fetching status
+    
+    // Phase 49: Multimodal Assessment Logic
+    const mediaRecorder = useRef(null);
+    const audioChunks = useRef([]);
+    const [prosodyLogs, setProsodyLogs] = useState([]);
 
     const isMock = location.state?.isMock || false;
     const duration = location.state?.duration || 0;
@@ -484,39 +489,39 @@ const SpeakingInteractionPage = () => {
         const pool = englishVoices.length > 0 ? englishVoices : voices;
 
         const find = (keywords, gender = "") => {
+            const prioritizedKeywords = [...keywords, "Premium", "Neural", "Google", "Natural"];
+            
             return pool.find(v => {
                 const nameLower = v.name.toLowerCase();
                 const matchesKeyword = keywords.some(k => nameLower.includes(k.toLowerCase()));
                 
-                if (gender === 'Female') {
-                    const femaleKeywords = /female|woman|girl|samantha|victoria|moira|veena|zira|susan|mary|aria/i;
-                    const maleKeywords = /male|man|boy|david|alex|guy/i;
-                    if (!femaleKeywords.test(nameLower) || maleKeywords.test(nameLower)) return false;
-                } else if (gender === 'Male') {
-                    const maleKeywords = /male|man|boy|david|alex|guy|daniel|james|oliver|harry/i;
-                    const femaleKeywords = /female|woman|girl|samantha/i;
-                    if (!maleKeywords.test(nameLower) || femaleKeywords.test(nameLower)) return false;
-                }
+                // Strict Gender Filtering
+                const isFemaleName = /female|woman|girl|samantha|victoria|moira|veena|zira|susan|mary|aria|lisa|serena|emma/i.test(nameLower);
+                const isMaleName = /male|man|boy|david|alex|guy|daniel|james|oliver|harry|mark|rick|peter/i.test(nameLower);
+
+                if (gender === 'Female' && isMaleName && !isFemaleName) return false;
+                if (gender === 'Male' && isFemaleName && !isMaleName) return false;
 
                 return matchesKeyword;
             });
         };
 
         if (role === 'Examiner') {
-            return find(['Google US English', 'Samantha', 'Aria'], 'Female') || pool[0];
+            return find(['Aria', 'Samantha', 'Google US English'], 'Female') || pool.find(v => /female/i.test(v.name)) || pool[0];
         }
-        if (role === 'Candidate_A') { // Annie: Confident Female
-            return find(['Google UK English Female', 'English United Kingdom', 'Victoria', 'Moira'], 'Female') || pool[0];
+        if (role === 'Candidate_A') { // Annie: Spirited British Female
+            return find(['Victoria', 'Moira', 'Google UK English Female', 'Hazel'], 'Female') || pool.find(v => /female|uk/i.test(v.name)) || pool[0];
         }
-        if (role === 'Candidate_B') { // Ben: Competent Male
-            return find(['Google US English Male', 'English United States', 'David', 'Guy', 'Alex'], 'Male') || pool[1] || pool[0];
+        if (role === 'Candidate_B') { // Ben: Neutral Male
+            return find(['David', 'Guy', 'Alex', 'Google US English Male'], 'Male') || pool.find(v => /male/i.test(v.name)) || pool[1] || pool[0];
         }
-        if (role === 'Candidate_C') { // Charlie: Hesitant Male
-            return find(['en-HK', 'Microsoft Daniel', 'Daniel', 'English Australia'], 'Male') || pool[2] || pool[0];
+        if (role === 'Candidate_C') { // Charlie: HK-accented or Hesitant Male
+            return find(['en-HK', 'Daniel', 'James', 'Oliver'], 'Male') || pool.find(v => /male/i.test(v.name)) || pool[2] || pool[0];
         }
 
         return pool[0];
     };
+
 
     const cleanText = (text) => {
         if (!text) return "";
@@ -679,11 +684,23 @@ const SpeakingInteractionPage = () => {
         
         const cleaned = (text || "").trim();
         if (cleaned) {
-            setActiveSpeechText(cleaned); // Show the final text the user said
+            setActiveSpeechText(cleaned);
             addLog(`🎙️ User said: "${cleaned.substring(0, 20)}..."`);
             setTranscript(prev => [...prev, { role: "You", text: cleaned }]);
             chatHistory.current.push({ role: "user", text: cleaned });
-            fetchBatchInBackground(); // Pre-fetch AI response to ensure queue has content
+
+            // Stop Recording and prepare multimodal fetch
+            if (mediaRecorder.current && mediaRecorder.current.state !== 'inactive') {
+                mediaRecorder.current.onstop = () => {
+                    const audioBlob = new Blob(audioChunks.current, { type: 'audio/webm' });
+                    addLog(`💾 Audio captured: ${audioBlob.size} bytes. Triggering multimodal fetch...`);
+                    fetchBatch("Candidate_A", audioBlob); // Target first AI with user audio
+                };
+                mediaRecorder.current.stop();
+            } else {
+                fetchBatchInBackground(); 
+            }
+
 
             // Substantial turns invalidate the pre-fetched queue
             if (cleaned.length > 20) {
@@ -738,9 +755,23 @@ const SpeakingInteractionPage = () => {
         fetchBatchInBackground();
 
         if (recognition.current) {
-            try { recognition.current.start(); } catch { /* Ignore start errors */ }
+            try { 
+                recognition.current.start(); 
+                
+                // Start Multimodal Recording
+                navigator.mediaDevices.getUserMedia({ audio: true }).then(stream => {
+                    audioChunks.current = [];
+                    const mr = new MediaRecorder(stream);
+                    mr.ondataavailable = (e) => audioChunks.current.push(e.data);
+                    mr.start();
+                    mediaRecorder.current = mr;
+                    addLog("🎙️ Multimodal recording started...");
+                }).catch(e => console.warn("Mic access failed for recording", e));
+
+            } catch { /* Ignore start errors */ }
         }
     };
+
 
     const handleChipIn = () => {
         if (currentSpeaker && currentSpeaker !== "You") {
@@ -863,21 +894,27 @@ const SpeakingInteractionPage = () => {
         isFetchingRef.current[hintSpeaker] = true;
         setIsThinkingAI(true);
         try {
-            const userLevel = location.state?.userLevel || "3"; // Defaults to Easy (3) if not found
+            const userLevel = location.state?.userLevel || "3";
             const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
             
+            const formData = new FormData();
+            formData.append('history', JSON.stringify(chatHistory.current.slice(-10)));
+            formData.append('current_speaker', hintSpeaker);
+            formData.append('topic', examData?.title || roadmapTopic);
+            formData.append('level', userLevel);
+            formData.append('uid', user?.uid);
+            formData.append('audioOutput', 'false');
+            
+            // Multimodal: Append audio if available
+            if (arguments[1] instanceof Blob) {
+                formData.append('audio', arguments[1], 'turn.webm');
+                addLog(`🎤 Multimodal pass: Sending ${arguments[1].size} bytes for prosody analysis...`);
+            }
+
             const res = await fetch(`${API_URL}/api/speaking/interaction/turn`, {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    history: chatHistory.current.slice(-10), // Truncated for faster roundtrip
-                    current_speaker: hintSpeaker,
-                    topic: examData?.title || roadmapTopic,
-                    level: userLevel,
-                    uid: user?.uid,
-                    audioOutput: false // Phase 47: DISABLE slow cloud audio for <2s turnaround
-                }),
-                signal: AbortSignal.timeout(15000) // Lowered to 15s - if it takes longer, it's not "live"
+                body: formData, // Using FormData instead of JSON for audio support
+                signal: AbortSignal.timeout(15000)
             });
             const data = await res.json();
             if (data.content) {
@@ -886,8 +923,16 @@ const SpeakingInteractionPage = () => {
                     content: data.content,
                     audio: data.audio
                 });
+                
+                // Track Prosody Metrics
+                if (data.prosody_metrics) {
+                    setProsodyLogs(prev => [...prev, data.prosody_metrics]);
+                    addLog(`📈 Prosody Analysis: ${data.prosody_metrics.vibe}`);
+                }
+                
                 addLog(`✅ Queued turn for ${data.speaker}`);
             }
+
         } catch (e) {
             addLog(`⚠️ Fetch for ${hintSpeaker} Failed: ${e.message}`);
             const fallbacks = {
@@ -1133,8 +1178,10 @@ const SpeakingInteractionPage = () => {
                         messages: chatHistory.current,
                         uid: user?.uid,
                         level: location.state?.userLevel || "3",
-                        master_script: examData?.title || roadmapTopic 
+                        master_script: examData?.title || roadmapTopic,
+                        prosody_metrics: prosodyLogs // PASS MULTIMODAL METRICS
                     })
+
                 });
 
                 if (!res.ok) {

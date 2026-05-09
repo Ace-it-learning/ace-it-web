@@ -71,6 +71,20 @@
     "Understanding the historical context of the food scene.",
     "Inferring the cultural significance of traditional foods."
   ],
+  "marking_logic": {
+    "full_marks_criteria": [
+      "Correctly identifies specific dish names (e.g., cheung fun, wonton noodles)",
+      "Correctly identifies specific restaurant names (e.g., Hop Yik Tai, Mak Man Kee)",
+      "Extracts speaker attitudes (optimistic, passionate)",
+      "Captures challenges (rising rents, changing tastes)"
+    ],
+    "phonetic_leniency": {
+      "cheung fun": ["chung fun", "cheung fan", "cheungfun"],
+      "wonton noodles": ["wanton noodles", "wonton noodle", "wontonndls"],
+      "laborers": ["labourers", "labors", "labourer"],
+      "community": ["comunity", "communitie"]
+    }
+  },
   "interactive_tasks": [
     {
       "type": "MCQ",

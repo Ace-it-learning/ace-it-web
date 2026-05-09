@@ -1,15 +1,6 @@
-const admin = require('firebase-admin');
-const { getFirestore, FieldValue } = require('firebase-admin/firestore');
+const UserProfileService = require('./UserProfileService');
 
 class DeviceService {
-    get db() {
-        return getFirestore();
-    }
-
-    get usersCollection() {
-        return this.db.collection('users');
-    }
-
     /**
      * Check if a device is allowed to access an account.
      * @param {string} uid 
@@ -19,10 +10,8 @@ class DeviceService {
         if (!uid || uid === 'guest') return { allowed: true };
         if (!fingerprint) return { allowed: false, error: 'No device fingerprint provided.' };
 
-        const userDoc = await this.usersCollection.doc(uid).get();
-        if (!userDoc.exists) return { allowed: false, error: 'User not found.' };
-
-        const userData = userDoc.data();
+        const userData = await UserProfileService.getProfile(uid);
+        if (!userData) return { allowed: false, error: 'User not found.' };
         const activeDevices = userData.active_devices || [];
         const tier = userData.subscription_tier || 'free';
 
@@ -57,12 +46,11 @@ class DeviceService {
         if (!uid || uid === 'guest') return;
 
         try {
-            const userDoc = await this.usersCollection.doc(uid).get();
+            const userData = await UserProfileService.getProfile(uid);
             let activeDevices = [];
             let tier = 'free';
 
-            if (userDoc.exists) {
-                const userData = userDoc.data();
+            if (userData) {
                 activeDevices = userData.active_devices || [];
                 tier = userData.subscription_tier || 'free';
 
@@ -161,9 +149,9 @@ class DeviceService {
             }
 
             // Save
-            await this.usersCollection.doc(uid).set({
+            await UserProfileService.createOrUpdateProfile(uid, {
                 active_devices: activeDevices
-            }, { merge: true });
+            });
 
         } catch (error) {
             console.error(`[DeviceService] ERROR in registerDevice:`, error);
@@ -178,14 +166,12 @@ class DeviceService {
     async forgetDevice(uid, fingerprint) {
         if (!uid || uid === 'guest') return;
 
-        const userDoc = await this.usersCollection.doc(uid).get();
-        if (!userDoc.exists) return;
-
-        const userData = userDoc.data();
+        const userData = await UserProfileService.getProfile(uid);
+        if (!userData) return;
         const activeDevices = userData.active_devices || [];
         const updatedDevices = activeDevices.filter(d => d.fingerprint !== fingerprint);
 
-        await this.usersCollection.doc(uid).update({
+        await UserProfileService.createOrUpdateProfile(uid, {
             active_devices: updatedDevices
         });
 
@@ -196,15 +182,14 @@ class DeviceService {
      * Update the last seen timestamp for a device.
      */
     async updateLastSeen(uid, fingerprint) {
-        const userDoc = await this.usersCollection.doc(uid).get();
-        if (!userDoc.exists) return;
-
-        const activeDevices = userDoc.data().active_devices || [];
+        const userData = await UserProfileService.getProfile(uid);
+        if (!userData) return;
+        const activeDevices = userData.active_devices || [];
         const deviceIndex = activeDevices.findIndex(d => d.fingerprint === fingerprint);
 
         if (deviceIndex !== -1) {
             activeDevices[deviceIndex].lastSeen = new Date();
-            await this.usersCollection.doc(uid).update({ active_devices: activeDevices });
+            await UserProfileService.createOrUpdateProfile(uid, { active_devices: activeDevices });
         }
     }
 }

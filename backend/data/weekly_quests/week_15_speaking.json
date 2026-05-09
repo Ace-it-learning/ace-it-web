@@ -1,20 +1,22 @@
-{
-  "type": "SPEAKING",
-  "topic": "speaking_weekly",
-  "title": "Reducing Single-use Plastics in School Canteens",
-  "topic_description": "Our school currently relies heavily on single-use plastics in the canteen, from cutlery and food containers to drink bottles. This contributes significantly to landfill waste and environmental pollution. Recent student surveys reveal growing concern about the environmental impact and a desire for more sustainable practices. The school administration is open to implementing changes but needs concrete proposals that are practical, cost-effective, and supported by the student body.",
-  "instructions": "In Part A, you will have 4 minutes to discuss the following three points with your group. Remember to listen carefully to each other and build upon each other's ideas. You should aim to reach a consensus on the best course of action for the school.",
-  "discussion_points": [
-    "Evaluate the feasibility and impact of replacing all single-use plastic cutlery and containers with biodegradable alternatives. Consider factors such as cost, availability, durability, and student acceptance. Propose specific types of biodegradable materials and address potential challenges.",
-    "Analyze the effectiveness of implementing a reusable container and cutlery system, potentially involving a deposit scheme or a student-led washing station. Explore methods to encourage student participation and ensure hygiene standards are maintained, taking into account the unique challenges of the Hong Kong school environment (e.g., limited space, busy schedules).",
-    "Develop a comprehensive action plan to reduce plastic bottle consumption in the canteen. This could involve installing water dispensers, promoting reusable water bottles, or partnering with beverage companies to offer sustainable packaging options. Propose specific initiatives and outline strategies for raising student awareness and fostering a culture of environmental responsibility."
-  ],
-  "individual_response_questions": [
-    "Beyond the canteen, what other areas of the school could benefit from similar sustainability initiatives, and what are the potential obstacles to implementing those initiatives?",
-    "Considering the global scale of plastic pollution, how effective do you believe localized efforts, such as those in our school, can be in making a tangible difference, and what larger-scale solutions should be prioritized?"
-  ],
-  "success_feedback": "Well done! You demonstrated excellent collaboration skills, insightful analysis, and a strong command of English. Your group effectively addressed the discussion points and proposed practical solutions. The individual responses were well-reasoned and reflected a deep understanding of the issue.",
-  "suggested_next_steps": [
-    "Try Writing challenge"
-  ]
-}
+[
+  {
+    "type": "SPEAKING",
+    "topic": "speaking_weekly",
+    "title": "Reducing Single-use Plastics in School Canteens",
+    "topic_description": "Our school currently relies heavily on single-use plastics in the canteen, from cutlery and food containers to drink bottles. This contributes significantly to landfill waste and environmental pollution. Recent student surveys reveal growing concern about the environmental impact and a desire for more sustainable practices. The school administration is open to implementing changes but needs concrete proposals that are practical, cost-effective, and supported by the student body.",
+    "instructions": "In Part A, you will have 4 minutes to discuss the following three points with your group. Remember to listen carefully to each other and build upon each other's ideas. You should aim to reach a consensus on the best course of action for the school.",
+    "discussion_points": [
+      "Evaluate the feasibility and impact of replacing all single-use plastic cutlery and containers with biodegradable alternatives. Consider factors such as cost, availability, durability, and student acceptance. Propose specific types of biodegradable materials and address potential challenges.",
+      "Analyze the effectiveness of implementing a reusable container and cutlery system, potentially involving a deposit scheme or a student-led washing station. Explore methods to encourage student participation and ensure hygiene standards are maintained, taking into account the unique challenges of the Hong Kong school environment (e.g., limited space, busy schedules).",
+      "Develop a comprehensive action plan to reduce plastic bottle consumption in the canteen. This could involve installing water dispensers, promoting reusable water bottles, or partnering with beverage companies to offer sustainable packaging options. Propose specific initiatives and outline strategies for raising student awareness and fostering a culture of environmental responsibility."
+    ],
+    "individual_response_questions": [
+      "Beyond the canteen, what other areas of the school could benefit from similar sustainability initiatives, and what are the potential obstacles to implementing those initiatives?",
+      "Considering the global scale of plastic pollution, how effective do you believe localized efforts, such as those in our school, can be in making a tangible difference, and what larger-scale solutions should be prioritized?"
+    ],
+    "success_feedback": "Well done! You demonstrated excellent collaboration skills, insightful analysis, and a strong command of English. Your group effectively addressed the discussion points and proposed practical solutions. The individual responses were well-reasoned and reflected a deep understanding of the issue.",
+    "suggested_next_steps": [
+      "Try Writing challenge: Draft a proposal to the school administration outlining the most effective strategies for eliminating single-use plastics from the canteen."
+    ]
+  }
+]

@@ -5,6 +5,7 @@ import { useAuth } from '../context/AuthContext';
 import { useAvatar } from '../context/AvatarContext';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Clock, Save, Trash2 } from 'lucide-react';
+import { isCheatEnabled } from '../utils/devAccess';
 
 
 // Studio Components
@@ -15,7 +16,7 @@ import WritingStudioEditor from '../components/writing/WritingStudioEditor';
 import WritingStudioControlPanel from '../components/writing/WritingStudioControlPanel';
 
 const WritingQuestPage = () => {
-    const { user } = useAuth();
+    const { user, profile } = useAuth();
     const { englishTutor } = useAvatar();
 
     const location = useLocation();
@@ -49,7 +50,7 @@ const WritingQuestPage = () => {
         reviewData.clo_status?.organization || 0
     ] : [0, 0, 0];
 
-    const isCheatMode = user?.email === 'fungtam@gmail.com';
+    const isCheatMode = isCheatEnabled(user, profile);
 
     // Helper: Dynamic Content Fallbacks
     const getGenreFallbacks = () => {
@@ -259,7 +260,7 @@ const WritingQuestPage = () => {
                 }
 
                 // Final Step: Fetch Cheat Library for authorized developers
-                if (user?.email === 'fungtam@gmail.com') {
+                if (isCheatMode) {
                     try {
                         const cheatRes = await fetch(`${API_URL}/api/writing/admin/cheat-library`);
                         if (cheatRes.ok) {

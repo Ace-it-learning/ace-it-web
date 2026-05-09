@@ -1,5 +1,5 @@
-const admin = require('firebase-admin');
-const db = admin.firestore();
+const QuestionBankStore = require('../QuestionBankStore');
+const UserProfileService = require('../UserProfileService');
 
 class PersonalizedQuestService {
     /**
@@ -9,10 +9,15 @@ class PersonalizedQuestService {
      */
     async getPersonalizedBatch(uid) {
         try {
-            // 1. Get Student Progress
-            const skillmapRef = db.collection('skillmap').doc(uid);
-            const doc = await skillmapRef.get();
-            const skillData = doc.exists ? doc.data() : { microSkills: {}, weaknesses: [] };
+            const english = await UserProfileService.getSkillMap(uid, 'english');
+            const maths = await UserProfileService.getSkillMap(uid, 'maths');
+            const skillData = {
+                microSkills: {
+                    ...(english?.microSkills || {}),
+                    ...(maths?.microSkills || {})
+                },
+                weaknesses: []
+            };
 
             // 2. Identify Target Topics (Simplistic for now: lowest levels)
             const englishTargets = this._getTargetTopics(skillData.microSkills, 'english', 4);
@@ -50,28 +55,17 @@ class PersonalizedQuestService {
     }
 
     async _fetchBestQuestion(subject, topic, level) {
-        // Simple adaptive level selection
         const syllabusLayer = level <= 3 ? 'Foundational' : 'DSE Level';
 
-        // Query question_bank
-        const snap = await db.collection('question_bank')
-            .where('subject', '==', subject)
-            .where('meta.topic', '==', topic)
-            .where('meta.syllabus_layer', '==', syllabusLayer)
-            .limit(1) // Placeholder for deduplication logic
-            .get();
-
-        if (snap.empty) {
-            // Fallback: any question in topic
-            const fallbackSnap = await db.collection('question_bank')
-                .where('subject', '==', subject)
-                .where('meta.topic', '==', topic)
-                .limit(1)
-                .get();
-            return fallbackSnap.empty ? null : { id: fallbackSnap.docs[0].id, ...fallbackSnap.docs[0].data() };
+        let row = await QuestionBankStore.queryPersonalizedByMetaTopic(subject, topic, syllabusLayer);
+        if (!row) {
+            row = await QuestionBankStore.queryPersonalizedByMetaTopicLoose(subject, topic);
         }
-
-        return { id: snap.docs[0].id, ...snap.docs[0].data() };
+        if (!row) {
+            row = await QuestionBankStore.queryPersonalizedByRootTopic(subject, topic);
+        }
+        if (!row) return null;
+        return { id: row.id, ...row };
     }
 }
 

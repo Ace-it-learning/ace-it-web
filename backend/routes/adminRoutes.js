@@ -7,6 +7,8 @@ const crypto = require('crypto');
 const LabService = require('../services/LabService');
 const MathsLabService = require('../services/maths/MathsLabService');
 const GenerativeAIService = require('../services/GenerativeAIService');
+const QuestionBankStore = require('../services/QuestionBankStore');
+const CosmosStore = require('../services/CosmosStore');
 const fs = require('fs');
 
 const MOCK_TOPICS = [
@@ -364,32 +366,36 @@ router.post('/quests/generate-batch', requireAdmin, async (req, res) => {
     }
 });
 
+function _adminQuestDate(q) {
+    const v = q.created_at;
+    if (v == null) return new Date(0);
+    if (typeof v.toDate === 'function') return v.toDate();
+    if (typeof v === 'string' || typeof v === 'number') return new Date(v);
+    return new Date(0);
+}
+
 // GET /api/admin/quests/search
 router.get('/quests/search', requireAdmin, async (req, res) => {
     const { subject, topic, status, level, limit = 200 } = req.query;
-    const db = admin.firestore();
     try {
-        let query = db.collection('question_bank');
-
-        if (subject) query = query.where('subject', '==', subject);
-
-        // Handle topic search by both ID and Label
+        let topic_id = null;
+        let topicParam = null;
         if (topic && topic !== 'All') {
             if (topic.includes('_')) {
-                // It looks like an ID (e.g., math_num_inequalities)
-                query = query.where('topic_id', '==', topic);
+                topic_id = topic;
             } else {
-                // It's a Label (legacy or manual search)
-                query = query.where('topic', '==', topic);
+                topicParam = topic;
             }
         }
 
-        if (level && level !== 'All') {
-            query = query.where('level', '==', Number(level));
-        }
-
-        const snapshot = await query.limit(Number(limit)).get();
-        let results = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+        let results = await QuestionBankStore.queryQuestSearch({
+            subject: subject || undefined,
+            topic: topicParam,
+            topic_id,
+            level,
+            limit: Number(limit)
+        });
+        results = results.map((q) => ({ id: q.id, ...q }));
 
         // Refine "Released" status and apply bilingual field mapping for math
         results = results.map(q => {
@@ -415,12 +421,7 @@ router.get('/quests/search', requireAdmin, async (req, res) => {
             results = results.filter(q => q.currentStatus === 'Pending');
         }
 
-        // Sort by date
-        results.sort((a, b) => {
-            const dateA = a.created_at?.toDate ? a.created_at.toDate() : new Date(a.created_at || 0);
-            const dateB = b.created_at?.toDate ? b.created_at.toDate() : new Date(b.created_at || 0);
-            return dateB - dateA;
-        });
+        results.sort((a, b) => _adminQuestDate(b) - _adminQuestDate(a));
 
         res.json(results);
     } catch (e) {
@@ -431,14 +432,9 @@ router.get('/quests/search', requireAdmin, async (req, res) => {
 
 // GET /api/admin/quests/pending
 router.get('/quests/pending', requireAdmin, async (req, res) => {
-    const db = admin.firestore();
     try {
-        const snapshot = await db.collection('question_bank')
-            .where('is_approved', '==', false)
-            .limit(50)
-            .get();
-
-        const pending = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+        const rows = await QuestionBankStore.queryPending(50);
+        const pending = rows.map((row) => ({ id: row.id, ...row }));
         res.json(pending);
     } catch (e) {
         res.status(500).json({ error: e.message });
@@ -450,17 +446,13 @@ router.post('/quests/approve', requireAdmin, async (req, res) => {
     const { questId } = req.body;
     if (!questId) return res.status(400).json({ error: "Quest ID required" });
 
-    const db = admin.firestore();
     try {
-        const docRef = db.collection('question_bank').doc(questId);
-        const doc = await docRef.get();
-        if (!doc.exists) return res.status(404).json({ error: "Quest not found" });
+        const data = await QuestionBankStore.getById(questId);
+        if (!data) return res.status(404).json({ error: "Quest not found" });
 
-        const data = doc.data();
         const levelStr = String(data.level);
 
-        // Find matching XP reward
-        let xpReward = 50; // Default
+        let xpReward = 50;
         for (const tier in DIFFICULTY_TIERS) {
             if (DIFFICULTY_TIERS[tier].levels.includes(levelStr)) {
                 xpReward = DIFFICULTY_TIERS[tier].xp;
@@ -468,11 +460,15 @@ router.post('/quests/approve', requireAdmin, async (req, res) => {
             }
         }
 
-        await docRef.update({
-            is_approved: true,
-            xp_reward: xpReward,
-            approved_at: admin.firestore.FieldValue.serverTimestamp()
-        });
+        await QuestionBankStore.upsertById(
+            questId,
+            {
+                is_approved: true,
+                xp_reward: xpReward,
+                approved_at: new Date().toISOString()
+            },
+            { merge: true }
+        );
         res.json({ success: true, xp_reward: xpReward });
     } catch (e) {
         res.status(500).json({ error: e.message });
@@ -484,9 +480,8 @@ router.delete('/quests/delete', requireAdmin, async (req, res) => {
     const { questId } = req.body;
     if (!questId) return res.status(400).json({ error: "Quest ID required" });
 
-    const db = admin.firestore();
     try {
-        await db.collection('question_bank').doc(questId).delete();
+        await QuestionBankStore.deleteById(questId);
         res.json({ success: true });
     } catch (e) {
         res.status(500).json({ error: e.message });
@@ -500,14 +495,9 @@ router.post('/quests/delete-batch', requireAdmin, async (req, res) => {
         return res.status(400).json({ error: "Array of questIds required" });
     }
 
-    const db = admin.firestore();
-    const batch = db.batch();
     try {
-        questIds.forEach(id => {
-            batch.delete(db.collection('question_bank').doc(id));
-        });
-        await batch.commit();
-        res.json({ success: true, count: questIds.length });
+        const count = await QuestionBankStore.deleteByIds(questIds);
+        res.json({ success: true, count });
     } catch (e) {
         res.status(500).json({ error: e.message });
     }
@@ -520,14 +510,9 @@ router.post('/quests/reject-batch', requireAdmin, async (req, res) => {
         return res.status(400).json({ error: "Array of questIds required" });
     }
 
-    const db = admin.firestore();
-    const batch = db.batch();
     try {
-        questIds.forEach(id => {
-            batch.delete(db.collection('question_bank').doc(id));
-        });
-        await batch.commit();
-        res.json({ success: true, count: questIds.length });
+        const count = await QuestionBankStore.deleteByIds(questIds);
+        res.json({ success: true, count });
     } catch (e) {
         res.status(500).json({ error: e.message });
     }
@@ -538,20 +523,15 @@ router.post('/quests/approve-batch', requireAdmin, async (req, res) => {
         return res.status(400).json({ error: "Array of questIds required" });
     }
 
-    const db = admin.firestore();
-    const batch = db.batch();
     const results = [];
 
     try {
         for (const questId of questIds) {
-            const docRef = db.collection('question_bank').doc(questId);
-            const doc = await docRef.get();
-            if (!doc.exists) continue;
+            const data = await QuestionBankStore.getById(questId);
+            if (!data) continue;
 
-            const data = doc.data();
             const levelStr = String(data.level);
 
-            // Find matching XP reward
             let xpReward = 50;
             for (const tier in DIFFICULTY_TIERS) {
                 if (DIFFICULTY_TIERS[tier].levels.includes(levelStr)) {
@@ -560,15 +540,18 @@ router.post('/quests/approve-batch', requireAdmin, async (req, res) => {
                 }
             }
 
-            batch.update(docRef, {
-                is_approved: true,
-                xp_reward: xpReward,
-                approved_at: admin.firestore.FieldValue.serverTimestamp()
-            });
+            await QuestionBankStore.upsertById(
+                questId,
+                {
+                    is_approved: true,
+                    xp_reward: xpReward,
+                    approved_at: new Date().toISOString()
+                },
+                { merge: true }
+            );
             results.push({ id: questId, xp_reward: xpReward });
         }
 
-        await batch.commit();
         res.json({ success: true, count: results.length, approved: results });
     } catch (e) {
         console.error("[AdminBatch] Approval Failed:", e);
@@ -578,28 +561,19 @@ router.post('/quests/approve-batch', requireAdmin, async (req, res) => {
 
 // DELETE /api/admin/quests/wipe-pending
 router.delete('/quests/wipe-pending', requireAdmin, async (req, res) => {
-    const db = admin.firestore();
     try {
-        const snapshot = await db.collection('question_bank')
-            .where('is_approved', '==', false)
-            .limit(500)
-            .get();
-
-        if (snapshot.empty) {
+        const pending = await QuestionBankStore.queryPending(500);
+        if (!pending.length) {
             return res.json({ success: true, count: 0, message: "No pending quests to wipe." });
         }
 
-        const batch = db.batch();
-        snapshot.docs.forEach((doc) => {
-            batch.delete(doc.ref);
-        });
-
-        await batch.commit();
+        const ids = pending.map((p) => p.id).filter(Boolean);
+        const count = await QuestionBankStore.deleteByIds(ids);
 
         res.json({
             success: true,
-            count: snapshot.size,
-            message: `Successfully wiped ${snapshot.size} pending quests.`
+            count,
+            message: `Successfully wiped ${count} pending quests.`
         });
     } catch (e) {
         console.error("[AdminBatch] Wipe Failed:", e);
@@ -612,38 +586,39 @@ router.get('/maths/topic-audit', requireAdmin, async (req, res) => {
     const { topicId } = req.query;
     if (!topicId) return res.status(400).json({ error: "Topic ID required" });
 
-    const db = admin.firestore();
     try {
         console.log(`[AdminAudit] Fetching all questions for topic: ${topicId}`);
         
-        // --- NEW: SPECIALIZED ROUTING FOR INTEGRATED QUESTS ---
-        let query;
+        let questions;
         if (topicId === 'integrated_challenge') {
-            query = db.collection('integrated_challenges');
+            const rows = await CosmosStore.getIntegratedChallenges(3000);
+            questions = rows.map((data) => {
+                let text = data.text || data.question || data.question_en || data.content_en;
+                let text_zh = data.text_zh || data.question_zh || data.content_zh;
+                return {
+                    id: data.id,
+                    ...data,
+                    text,
+                    text_zh
+                };
+            });
         } else {
-            query = db.collection('question_bank').where('topic_id', '==', topicId);
+            const rows = await QuestionBankStore.queryByTopicId(topicId, 2000);
+            questions = rows.map((data) => {
+                let text = data.text || data.question || data.question_en || data.content_en;
+                let text_zh = data.text_zh || data.question_zh || data.content_zh;
+                return {
+                    id: data.id,
+                    ...data,
+                    text,
+                    text_zh
+                };
+            });
         }
 
-        const snapshot = await query.get();
-
-        const questions = snapshot.docs.map(doc => {
-            const data = doc.data();
-            // Ensure visual consistency for audit
-            let text = data.text || data.question || data.question_en || data.content_en;
-            let text_zh = data.text_zh || data.question_zh || data.content_zh;
-            
-            return { 
-                id: doc.id, 
-                ...data,
-                text,
-                text_zh
-            };
-        });
-        
-        // Sort by level and date
         questions.sort((a, b) => {
-            if (a.level !== b.level) return a.level - b.level;
-            return (b.created_at || 0) - (a.created_at || 0);
+            if (a.level !== b.level) return (a.level || 0) - (b.level || 0);
+            return _adminQuestDate(b) - _adminQuestDate(a);
         });
 
         res.json(questions);

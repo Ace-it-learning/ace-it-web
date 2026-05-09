@@ -1,20 +1,9 @@
-const admin = require('firebase-admin');
 const UserProfileService = require('./UserProfileService');
 const EmailService = require('./EmailService');
 const moment = require('moment');
+const CosmosStore = require('./CosmosStore');
 
 class ParentReportService {
-    constructor() {
-        this._db = null;
-    }
-
-    get db() {
-        if (!this._db) {
-            this._db = admin.firestore();
-        }
-        return this._db;
-    }
-
     /**
      * Generate and send a weekly report for a specific user.
      * @param {string} uid User ID
@@ -26,15 +15,10 @@ class ParentReportService {
             const profile = await UserProfileService.getProfile(uid);
             if (!profile) throw new Error("User profile not found");
 
-            const sevenDaysAgo = admin.firestore.Timestamp.fromDate(moment().subtract(7, 'days').toDate());
+            const sevenDaysAgo = moment().subtract(7, 'days').toDate().toISOString();
 
             // 1. Fetch Timeline Events (Last 7 Days)
-            const timelineSnap = await this.db.collection('users').doc(uid).collection('timeline')
-                .where('date', '>=', sevenDaysAgo)
-                .orderBy('date', 'desc')
-                .get();
-
-            const events = timelineSnap.docs.map(d => d.data());
+            const events = await CosmosStore.getTimelineSince(uid, sevenDaysAgo);
 
             // 2. Aggregate Stats
             const stats = {
@@ -108,8 +92,8 @@ class ParentReportService {
             const result = await EmailService.sendWeeklyReport(parentEmail, reportData);
             
             if (result.success) {
-                await this.db.collection('users').doc(uid).update({
-                    parent_last_report_sent: admin.firestore.FieldValue.serverTimestamp()
+                await UserProfileService.createOrUpdateProfile(uid, {
+                    parent_last_report_sent: new Date().toISOString()
                 });
             }
 

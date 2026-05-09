@@ -1,10 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Bot, LogIn, LogOut, Menu, X, Languages, Pin, PinOff, Lightbulb, Zap, School, ChevronDown, User, Shield, CreditCard } from 'lucide-react';
+import { Bot, LogIn, LogOut, Menu, X, Languages, Pin, PinOff, Lightbulb, Zap, School, ChevronDown, User, Shield, CreditCard, Activity } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import { useAvatar } from '../context/AvatarContext';
 import { useLanguage } from '../context/LanguageContext';
 import { useHeader } from '../context/HeaderContext';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { cn } from '../utils/cn';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -17,9 +17,23 @@ const Header = () => {
     const { t, language, toggleLanguage } = useLanguage();
     const { isPinned, setIsPinned, isVisible, setIsVisible } = useHeader();
     const navigate = useNavigate();
+    const location = useLocation();
     const [showLogoutConfirm, setShowLogoutConfirm] = React.useState(false);
+
+    const handleFeaturesClick = () => {
+        if (location.pathname === '/') {
+            const element = document.getElementById('features');
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        } else {
+            navigate('/?section=features');
+        }
+    };
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const userMenuRef = useRef(null);
+    const mobileMenuRef = useRef(null);
     const hideTimeoutRef = useRef(null);
 
     // Close menu on click outside
@@ -27,6 +41,9 @@ const Header = () => {
         const handleClickOutside = (event) => {
             if (userMenuRef.current && !userMenuRef.current.contains(event.target)) {
                 setIsMenuOpen(false);
+            }
+            if (mobileMenuRef.current && !mobileMenuRef.current.contains(event.target)) {
+                setIsMobileMenuOpen(false);
             }
         };
         document.addEventListener('mousedown', handleClickOutside);
@@ -92,14 +109,14 @@ const Header = () => {
                 </div>
 
                 {/* Navigation Group */}
-                <nav className="hidden md:flex items-center gap-8">
+                <nav className="hidden lg:flex items-center gap-8">
                     {!user && (
                         <button
-                            onClick={() => navigate('/features')}
+                            onClick={handleFeaturesClick}
                             className="flex items-center gap-2 text-gray-700 hover:text-[#F1783B] transition-colors"
                         >
                             <Bot className="w-4 h-4 text-[#F1783B]" />
-                            <span className="text-sm font-semibold">Features</span>
+                            <span className="text-sm font-semibold">{t('nav.features')}</span>
                         </button>
                     )}
 
@@ -108,7 +125,7 @@ const Header = () => {
                         className="flex items-center gap-2 text-gray-700 hover:text-[#F1783B] transition-colors"
                     >
                         <Lightbulb className="w-4 h-4 text-[#F1783B]" />
-                        <span className="text-sm font-semibold">Prompt tips</span>
+                        <span className="text-sm font-semibold">{t('nav.prompt_tips')}</span>
                     </button>
 
                     <button
@@ -116,7 +133,7 @@ const Header = () => {
                         className="flex items-center gap-2 text-gray-700 hover:text-[#F1783B] transition-colors"
                     >
                         <Zap className="w-4 h-4 text-[#F1783B]" />
-                        <span className="text-sm font-semibold">Upgrade Plan</span>
+                        <span className="text-sm font-semibold">{t('nav.upgrade_plan')}</span>
                     </button>
 
                     <button
@@ -124,14 +141,14 @@ const Header = () => {
                         className="flex items-center gap-2 px-6 py-2 rounded-full bg-[#F1783B] text-white shadow-lg shadow-[#F1783B]/20 hover:bg-[#d96a32] transition-all transform hover:-translate-y-0.5"
                     >
                         <School className="w-4 h-4" />
-                        <span className="text-sm font-bold tracking-wide">Enter Classroom</span>
+                        <span className="text-sm font-bold tracking-wide">{t('nav.enter_classroom')}</span>
                     </button>
                 </nav>
 
-                <div className="flex items-center gap-6">
+                <div className="flex items-center gap-3 lg:gap-6">
                     <button
                         onClick={toggleLanguage}
-                        className="flex items-center gap-1.5 text-gray-700 hover:text-[#F1783B] transition-all"
+                        className="flex items-center gap-1.5 px-3 py-2 rounded-xl hover:bg-slate-100 text-gray-700 hover:text-[#F1783B] transition-all active:scale-95"
                     >
                         <Languages className="w-4 h-4 text-[#F1783B]" />
                         <span className="text-sm font-bold">{language === 'zh' ? '繁' : 'EN'}</span>
@@ -200,16 +217,7 @@ const Header = () => {
                                                     <div className="w-8 h-8 rounded-lg bg-orange-50 flex items-center justify-center text-[#F1783B] group-hover:bg-[#F1783B] group-hover:text-white transition-colors">
                                                         <User size={16} />
                                                     </div>
-                                                    {t('nav.parent_report')}
-                                                </button>
-                                                <button
-                                                    onClick={() => { navigate('/account?tab=general'); setIsMenuOpen(false); }}
-                                                    className="w-full flex items-center gap-3 px-4 py-3 rounded-2xl text-sm font-medium text-slate-600 hover:bg-slate-50 transition-colors group"
-                                                >
-                                                    <div className="w-8 h-8 rounded-lg bg-orange-50 flex items-center justify-center text-[#F1783B] group-hover:bg-[#F1783B] group-hover:text-white transition-colors">
-                                                        <User size={16} />
-                                                    </div>
-                                                    Update Profile
+                                                    {t('nav.update_profile')}
                                                 </button>
                                                 <button
                                                     onClick={() => { navigate('/account?tab=security'); setIsMenuOpen(false); }}
@@ -218,7 +226,7 @@ const Header = () => {
                                                     <div className="w-8 h-8 rounded-lg bg-blue-50 flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors">
                                                         <Shield size={16} />
                                                     </div>
-                                                    Change Password
+                                                    {t('nav.change_password')}
                                                 </button>
                                                 <button
                                                     onClick={() => { navigate('/account?tab=subscription'); setIsMenuOpen(false); }}
@@ -227,7 +235,16 @@ const Header = () => {
                                                     <div className="w-8 h-8 rounded-lg bg-purple-50 flex items-center justify-center text-purple-600 group-hover:bg-purple-600 group-hover:text-white transition-colors">
                                                         <CreditCard size={16} />
                                                     </div>
-                                                    Manage Subscription
+                                                    {t('nav.manage_subscription')}
+                                                </button>
+                                                <button
+                                                    onClick={() => { navigate('/account?tab=subscription'); setIsMenuOpen(false); }}
+                                                    className="w-full flex items-center gap-3 px-4 py-3 rounded-2xl text-sm font-medium text-slate-600 hover:bg-slate-50 transition-colors group"
+                                                >
+                                                    <div className="w-8 h-8 rounded-lg bg-orange-50 flex items-center justify-center text-[#F1783B] group-hover:bg-[#F1783B] group-hover:text-white transition-colors">
+                                                        <Activity size={16} />
+                                                    </div>
+                                                    {t('nav.parent_report')}
                                                 </button>
                                                 <div className="my-2 border-t border-slate-50" />
                                                 <button
@@ -237,7 +254,7 @@ const Header = () => {
                                                     <div className="w-8 h-8 rounded-lg bg-red-50 flex items-center justify-center text-red-600 group-hover:bg-red-600 group-hover:text-white transition-colors">
                                                         <LogOut size={16} />
                                                     </div>
-                                                    Sign out
+                                                    {t('nav.logout')}
                                                 </button>
                                             </div>
                                         </motion.div>
@@ -246,8 +263,83 @@ const Header = () => {
                             </div>
                         </>
                     )}
+
+                    {/* Mobile Menu Button */}
+                    <button
+                        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                        className="lg:hidden p-2 rounded-xl hover:bg-slate-100 text-slate-600 active:scale-95 transition-all"
+                    >
+                        {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                    </button>
                 </div>
             </div>
+
+            {/* Mobile Menu Drawer */}
+            <AnimatePresence>
+                {isMobileMenuOpen && (
+                    <>
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            className="fixed inset-0 z-[45] bg-black/20 backdrop-blur-sm lg:hidden"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                        />
+                        <motion.div
+                            initial={{ x: '100%' }}
+                            animate={{ x: 0 }}
+                            exit={{ x: '100%' }}
+                            transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+                            className="fixed top-0 right-0 bottom-0 w-[280px] z-[48] bg-white shadow-2xl lg:hidden flex flex-col p-6 pt-20 gap-4"
+                            ref={mobileMenuRef}
+                        >
+                            <button
+                                onClick={() => { navigate('/dashboard'); setIsMobileMenuOpen(false); }}
+                                className="flex items-center gap-3 p-4 rounded-2xl bg-orange-50 text-[#F1783B] font-bold shadow-sm"
+                            >
+                                <School size={20} />
+                                {t('nav.enter_classroom')}
+                            </button>
+
+                            <button
+                                onClick={() => { navigate('/prompts'); setIsMobileMenuOpen(false); }}
+                                className="flex items-center gap-3 p-4 rounded-2xl hover:bg-slate-50 text-slate-700 font-semibold transition-colors"
+                            >
+                                <Lightbulb size={20} className="text-[#F1783B]" />
+                                {t('nav.prompt_tips')}
+                            </button>
+
+                            <button
+                                onClick={() => { navigate('/subscription'); setIsMobileMenuOpen(false); }}
+                                className="flex items-center gap-3 p-4 rounded-2xl hover:bg-slate-50 text-slate-700 font-semibold transition-colors"
+                            >
+                                <Zap size={20} className="text-[#F1783B]" />
+                                {t('nav.upgrade_plan')}
+                            </button>
+
+                            {!user && (
+                                <button
+                                    onClick={() => { handleFeaturesClick(); setIsMobileMenuOpen(false); }}
+                                    className="flex items-center gap-3 p-4 rounded-2xl hover:bg-slate-50 text-slate-700 font-semibold transition-colors"
+                                >
+                                    <Bot size={20} className="text-[#F1783B]" />
+                                    {t('nav.features')}
+                                </button>
+                            )}
+
+                            <div className="mt-auto pt-6 border-t border-slate-100 flex flex-col gap-4">
+                                <button
+                                    onClick={() => { toggleLanguage(); setIsMobileMenuOpen(false); }}
+                                    className="flex items-center gap-3 p-4 rounded-2xl hover:bg-slate-50 text-slate-700 font-semibold transition-colors"
+                                >
+                                    <Languages size={20} className="text-[#F1783B]" />
+                                    {language === 'zh' ? 'Switch to English' : '切換至繁體中文'}
+                                </button>
+                            </div>
+                        </motion.div>
+                    </>
+                )}
+            </AnimatePresence>
 
             <ConfirmationModal
                 isOpen={showLogoutConfirm}

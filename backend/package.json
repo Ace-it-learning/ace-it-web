@@ -9,6 +9,10 @@
   "scripts": {
     "start": "node server.js",
     "dev": "npx kill-port 3001 && npx nodemon server.js",
+    "seed:listening": "node scripts/seed_listening_simulator.js",
+    "migrate:cosmos": "node scripts/migrate_firestore_json_to_postgres.js",
+    "verify:cosmos-parity": "node scripts/verify_postgres_parity.js",
+    "test:azure-migration": "node tests/azureMigrationSmoke.test.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "wipe-user": "node wipe_user.js",
     "deploy-dev": "gcloud run deploy ace-it-backend-dev --project ace-it-learning --region asia-east1 --set-env-vars NODE_ENV=development --source . --allow-unauthenticated",
@@ -19,6 +23,10 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+    "@azure/ai-form-recognizer": "^5.1.0",
+    "@azure/core-auth": "^1.10.1",
+    "@azure/cosmos": "^4.9.3",
+    "@azure/storage-blob": "^12.31.0",
     "@google-cloud/speech": "^7.2.1",
     "@google-cloud/storage": "^7.19.0",
     "@google-cloud/text-to-speech": "^6.4.0",
@@ -32,11 +40,17 @@
     "express-rate-limit": "^8.2.1",
     "firebase-admin": "^13.7.0",
     "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.3",
+    "jwks-rsa": "^4.0.1",
     "moment": "^2.30.1",
     "multer": "^2.0.2",
     "node-cache": "^5.1.2",
     "nodemailer": "^8.0.0",
-    "pdf-parse": "^1.1.1"
+    "pdf-parse": "^1.1.1",
+    "pg": "^8.20.0",
+    "sharp": "^0.34.5",
+    "stripe": "^22.1.0",
+    "tesseract.js": "^7.0.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.11"

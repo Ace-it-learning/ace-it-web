@@ -12,11 +12,18 @@ export const LanguageProvider = ({ children }) => {
     // Default to 'zh' as per existing header, or check localStorage
     const [language, setLanguage] = useState(() => {
         const saved = localStorage.getItem('app-language-v2');
+        console.log("[LanguageContext] Initializing. Saved language:", saved);
+        
         // Verify that the saved language actually exists in our translations
-        return (saved && translations[saved]) ? saved : 'zh'; // Default to Traditional Chinese
+        if (saved && translations[saved]) {
+            return saved;
+        }
+        
+        return 'zh'; // Default to Traditional Chinese
     });
 
     useEffect(() => {
+        console.log("[LanguageContext] Language changed to:", language);
         localStorage.setItem('app-language-v2', language);
     }, [language]);
 
@@ -28,10 +35,17 @@ export const LanguageProvider = ({ children }) => {
 
         for (const key of keys) {
             if (current[key] === undefined) {
+                if (path === 'stats.xp_progress') {
+                    console.log(`[LanguageContext] Key MISSING: ${path} in language: ${language}. Falling back.`);
+                }
                 console.warn(`Translation missing for key: ${path} in language: ${language}`);
                 return path;
             }
             current = current[key];
+        }
+
+        if (path === 'stats.xp_progress') {
+            console.log(`[LanguageContext] Translating: ${path} | Language: ${language} | Result: ${current}`);
         }
 
         // Handle string interpolation for {{key}}

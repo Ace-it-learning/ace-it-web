@@ -400,11 +400,11 @@ class DiagnosticService {
         1. Determine an "Archetype" name (e.g. "Theory Master", "Fearless Speaker", "Grammar Safe Player", "Rising Star").
         2. List 3 key Strengths and 3 Weaknesses.
         3. Create a **"Weekly Quest Plan"** (4 actionable targets for ONE WEEK). 
-           - **terminology**: Use "Practice" terminology exclusively (e.g., "Practice: Reading Inference", "Practice: Formal Email Tone").
+           - **terminology**: Use "Practice [Subject] - [Skill]" format (e.g., "Practice Reading - Inference", "Practice Writing - Formal Email Tone").
            - **Style**: Strictly SINGLE ACTION. Avoid counts (e.g. "Complete 3...") or durations.
-           - **Speaking**: NEVER specify "Part A" or "Part B". Just say "Speaking practice" or "Interactive speaking exercise".
+           - **Speaking**: NEVER specify "Part A" or "Part B". Just say "Practice Speaking - Discussion" or "Practice Speaking - Delivery".
            - Tasks should be extremely concise (max 5-6 words) to fit on one line.
-        4. Identify 2-4 "Critical Areas" for immediate improvement.
+        4. Identify 2-4 "Critical Areas" for immediate improvement. Use the same "Practice [Subject] - [Skill]" format.
         
         Return JSON STRICTLY:
         {

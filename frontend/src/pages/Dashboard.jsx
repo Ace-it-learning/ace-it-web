@@ -74,17 +74,17 @@ const Dashboard = () => {
         <>
             <div className={cn(
                 "grid grid-cols-1 gap-8 items-start h-full",
-                isFocusMode ? "grid-cols-1" : "lg:grid-cols-12"
+                isFocusMode ? "grid-cols-1" : "md:grid-cols-12"
             )}>
                 {/* Left Column: Header + Sidebar */}
                 {!isFocusMode && (
-                    <div className="lg:col-span-3 flex flex-col gap-6 h-full overflow-y-auto pr-2 custom-scrollbar animate-in slide-out-to-left-4 duration-300">
+                    <div className="md:col-span-3 flex flex-col gap-6 h-full overflow-y-auto pr-2 custom-scrollbar animate-in slide-out-to-left-4 duration-300">
                         <Sidebar />
                     </div>
                 )}
 
                 {/* Right Column: Chat Interface */}
-                <div className="lg:col-span-9 h-full flex flex-col gap-4">
+                <div className="md:col-span-9 h-full flex flex-col gap-4">
                     <ChatInterface onOpenQuest={handleOpenQuest} />
                     <StatsBar />
                 </div>

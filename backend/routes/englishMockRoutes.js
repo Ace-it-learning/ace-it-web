@@ -23,6 +23,7 @@ router.get('/headers/:paperCode', async (req, res) => {
 router.post('/submit', async (req, res) => {
     try {
         const { paperId, userAnswers, analytics } = req.body;
+        const resolvedUid = req.uid || req.body?.uid || req.query?.uid || null;
         if (!paperId || !userAnswers) {
             return res.status(400).json({ error: "Missing paperId or userAnswers" });
         }
@@ -32,9 +33,9 @@ router.post('/submit', async (req, res) => {
 
         // FETCH USER TIER
         let tier = 'free';
-        if (req.user?.uid) {
+        if (resolvedUid && resolvedUid !== 'guest') {
             const UserProfileService = require('../services/UserProfileService');
-            const profile = await UserProfileService.getProfile(req.user.uid);
+            const profile = await UserProfileService.getProfile(resolvedUid);
             tier = profile?.subscription_tier || 'free';
         }
 
@@ -45,10 +46,10 @@ router.post('/submit', async (req, res) => {
         const awardedXP = Math.round(baseMaxXP * (assessment.percentage / 100));
         
         // Attempt to award XP if user is logged in
-        if (req.user?.uid) {
+        if (resolvedUid && resolvedUid !== 'guest') {
             try {
                 const GamificationService = require('../services/GamificationService');
-                const xpResult = await GamificationService.awardXP(req.user.uid, awardedXP, 'reading', {
+                const xpResult = await GamificationService.awardXP(resolvedUid, awardedXP, 'reading', {
                     title: `Mock Exam: ${mockData.meta?.topic || 'Paper 1'}`,
                     score: `${Math.round(assessment.percentage)}%`,
                     topic: mockData.meta?.topic,
@@ -64,9 +65,23 @@ router.post('/submit', async (req, res) => {
         }
 
         // 3. Sync to Mastery Radar
-        if (req.user?.uid) {
+        if (resolvedUid && resolvedUid !== 'guest') {
             const UserProfileService = require('../services/UserProfileService');
-            await UserProfileService.syncMockResultsToMastery(req.user.uid, 'english', assessment);
+            await UserProfileService.syncMockResultsToMastery(resolvedUid, 'english', assessment);
+            try {
+                await UserProfileService.saveMockSummary(resolvedUid, {
+                    paper: 'Paper 1',
+                    topic: mockData.meta?.topic || 'Reading Mock',
+                    score: assessment.totalScore,
+                    total: assessment.possibleScore,
+                    percentage: assessment.percentage,
+                    level: assessment.level,
+                    topMistakes: extractTopMistakeSkills(assessment.skillScores),
+                    achievedSkills: extractAchievedSkills(assessment.skillScores)
+                });
+            } catch (e) {
+                console.warn("[Mock] saveMockSummary failed:", e.message);
+            }
         }
 
         res.json(assessment);
@@ -76,12 +91,51 @@ router.post('/submit', async (req, res) => {
 });
 
 /**
+ * Helper: pick up to 3 weakest skills from a skillScores object
+ * (skill -> { score, possible }). Used to populate the tutor's
+ * RECENT_ACTIVITY hint in `progress/mock_summary`.
+ */
+function extractTopMistakeSkills(skillScores) {
+    if (!skillScores || typeof skillScores !== 'object') return [];
+    return Object.entries(skillScores)
+        .map(([skill, data]) => {
+            const score = typeof data === 'number' ? data : (data?.score || 0);
+            const total = typeof data === 'number' ? 100 : Number(data?.possible || 0);
+            if (total <= 0) return null;
+            const pct = total > 0 ? score / total : 0;
+            return { skill, pct, score, total };
+        })
+        .filter(Boolean)
+        .filter(({ score, total, pct }) => score < total && pct < 0.85)
+        .sort((a, b) => a.pct - b.pct)
+        .slice(0, 3)
+        .map(s => s.skill);
+}
+
+function extractAchievedSkills(skillScores) {
+    if (!skillScores || typeof skillScores !== 'object') return [];
+    return Object.entries(skillScores)
+        .map(([skill, data]) => {
+            const score = typeof data === 'number' ? data : (data?.score || 0);
+            const total = typeof data === 'number' ? 100 : Number(data?.possible || 0);
+            if (total <= 0) return null;
+            return { skill, pct: score / total };
+        })
+        .filter(Boolean)
+        .filter(({ pct }) => pct >= 0.7)
+        .sort((a, b) => b.pct - a.pct)
+        .slice(0, 6)
+        .map((s) => s.skill);
+}
+
+/**
  * POST /api/english/mock/submit-listening
  * Dedicated endpoint for Paper 3 (Listening & Integrated Skills)
  */
 router.post('/submit-listening', async (req, res) => {
     try {
         const { paperId, userAnswers, analytics } = req.body;
+        const resolvedUid = req.uid || req.body?.uid || req.query?.uid || null;
         const MockAssessmentService = require('../services/MockAssessmentService');
         const EnglishMockService = require('../services/EnglishMockService');
         
@@ -90,9 +144,9 @@ router.post('/submit-listening', async (req, res) => {
 
         // FETCH USER TIER
         let tier = 'free';
-        if (req.user?.uid) {
+        if (resolvedUid && resolvedUid !== 'guest') {
             const UserProfileService = require('../services/UserProfileService');
-            const profile = await UserProfileService.getProfile(req.user.uid);
+            const profile = await UserProfileService.getProfile(resolvedUid);
             tier = profile?.subscription_tier || 'free';
         }
 
@@ -105,10 +159,10 @@ router.post('/submit-listening', async (req, res) => {
         const baseMaxXP = 500;
         const awardedXP = Math.round(baseMaxXP * (assessment.percentage / 100));
         
-        if (req.user?.uid) {
+        if (resolvedUid && resolvedUid !== 'guest') {
             try {
                 const GamificationService = require('../services/GamificationService');
-                await GamificationService.awardXP(req.user.uid, awardedXP, 'listening', {
+                await GamificationService.awardXP(resolvedUid, awardedXP, 'listening', {
                     title: `Mock Exam: ${mockData.meta?.topic || 'Paper 3'}`,
                     score: `${Math.round(assessment.percentage)}%`,
                     topic: mockData.meta?.topic,
@@ -119,17 +173,28 @@ router.post('/submit-listening', async (req, res) => {
         assessment.xpAwarded = awardedXP;
 
         // 3. Sync to Mastery Radar & Persistent Storage
-        if (req.user?.uid) {
+        if (resolvedUid && resolvedUid !== 'guest') {
             try {
                 const UserProfileService = require('../services/UserProfileService');
-                await UserProfileService.syncMockResultsToMastery(req.user.uid, 'english', assessment);
-                
+                await UserProfileService.syncMockResultsToMastery(resolvedUid, 'english', assessment);
+
                 // Save for persistent review
-                await UserProfileService.saveQuestResult(req.user.uid, {
+                await UserProfileService.saveQuestResult(resolvedUid, {
                     ...assessment,
                     paperId,
                     type: 'LISTENING',
                     topic: mockData.meta?.topic || 'Listening Mock'
+                });
+
+                await UserProfileService.saveMockSummary(resolvedUid, {
+                    paper: 'Paper 3',
+                    topic: mockData.meta?.topic || 'Listening Mock',
+                    score: assessment.totalScore,
+                    total: assessment.possibleScore,
+                    percentage: assessment.percentage,
+                    level: assessment.level,
+                    topMistakes: extractTopMistakeSkills(assessment.skillScores),
+                    achievedSkills: extractAchievedSkills(assessment.skillScores)
                 });
             } catch (err) {
                 console.error("Mastery sync/Save failed:", err);
@@ -165,7 +230,7 @@ router.post('/writing/submit', async (req, res) => {
         
         // FETCH USER TIER
         let tier = 'free';
-        const targetUid = uid || req.user?.uid;
+        const targetUid = uid || req.uid || req.body?.uid || req.query?.uid;
         if (targetUid) {
             const UserProfileService = require('../services/UserProfileService');
             const profile = await UserProfileService.getProfile(targetUid);
@@ -179,11 +244,26 @@ router.post('/writing/submit', async (req, res) => {
         }, tier);
 
         // 4. Sync to Mastery Radar
-        if (uid || req.user?.uid) {
+        if (targetUid && targetUid !== 'guest') {
             const UserProfileService = require('../services/UserProfileService');
-            await UserProfileService.syncMockResultsToMastery(uid || req.user.uid, 'english', results);
+            const targetWriteUid = targetUid;
+            await UserProfileService.syncMockResultsToMastery(targetWriteUid, 'english', results);
+            try {
+                await UserProfileService.saveMockSummary(targetWriteUid, {
+                    paper: 'Paper 2',
+                    topic: mockData.meta?.topic || 'Writing Mock',
+                    score: results.totalScore,
+                    total: results.possibleScore,
+                    percentage: results.percentage,
+                    level: results.level || results.predicted_level,
+                    topMistakes: extractTopMistakeSkills(results.skillScores),
+                    achievedSkills: extractAchievedSkills(results.skillScores)
+                });
+            } catch (e) {
+                console.warn("[Mock] saveMockSummary (writing) failed:", e.message);
+            }
         }
-        
+
         res.json(results);
     } catch (e) {
         console.error("Writing submission error:", e);
@@ -268,6 +348,24 @@ router.post('/writing/submit', async (req, res) => {
                 assessment.xpAwarded = awardedXP;
             } catch (e) {
                 console.error("XP Award failed:", e);
+            }
+
+            try {
+                const UserProfileService = require('../services/UserProfileService');
+                await UserProfileService.saveMockSummary(uid, {
+                    paper: 'Paper 2',
+                    topic: mockData.meta?.topic || 'Writing Mock',
+                    percentage: assessment.overall_score,
+                    level: assessment.predicted_level,
+                    topMistakes: Array.isArray(assessment.weaknesses)
+                        ? assessment.weaknesses.slice(0, 3)
+                        : [],
+                    achievedSkills: Array.isArray(assessment.strengths)
+                        ? assessment.strengths.slice(0, 6)
+                        : []
+                });
+            } catch (e) {
+                console.warn("[Mock] saveMockSummary (writing v2) failed:", e.message);
             }
         }
 

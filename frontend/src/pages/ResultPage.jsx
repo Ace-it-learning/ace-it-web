@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import { useAuth } from '../context/AuthContext';
-import { db } from '../firebase';
-import { collection, query, where, getDocs, orderBy, limit } from 'firebase/firestore';
 import VocabularySidekick from '../components/tutor/VocabularySidekick';
 import MathStepExplainer from '../components/maths/MathStepExplainer';
 
@@ -13,6 +11,7 @@ function ResultPage() {
     const { examId } = useParams();
     const { t } = useLanguage();
     const { user } = useAuth();
+    const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
 
     const [fetchedResult, setFetchedResult] = useState(null);
     const [loading, setLoading] = useState(!state || !state.result);
@@ -26,16 +25,13 @@ function ResultPage() {
 
             try {
                 setLoading(true);
-                const q = query(
-                    collection(db, 'exam_submissions'),
-                    where('examId', '==', examId),
-                    where('uid', '==', user.uid),
-                    orderBy('timestamp', 'desc'),
-                    limit(1)
-                );
-                const snap = await getDocs(q);
-                if (!snap.empty) {
-                    setFetchedResult(snap.docs[0].data());
+                const token = await user.getIdToken();
+                const res = await fetch(`${API_URL}/api/data/exam-submission/${encodeURIComponent(examId)}?uid=${encodeURIComponent(user.uid)}`, {
+                    headers: { Authorization: `Bearer ${token}` }
+                });
+                if (res.ok) {
+                    const data = await res.json();
+                    if (data) setFetchedResult(data);
                 }
             } catch (err) {
                 console.error("Error fetching exam result:", err);

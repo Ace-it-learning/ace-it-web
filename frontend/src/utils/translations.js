@@ -4,7 +4,7 @@ export const translations = {
             hero_title: "Empowering HKDSE Success",
             hero_ai_powered: "AI-Powered",
             hero_subtitle: "Personal Mentorship.",
-            hero_desc: "Ace It! combines elite HKDSE expertise with Gemini 1.5 Pro to give you 24/7 access to specialized tutors in English, Maths, and Chinese.",
+            hero_desc: "Ace It! combines elite HKDSE expertise with Gemini AI Model to give you 24/7 access to specialized tutors in English.",
             start_journey: "Start Your Journey",
             watch_demo: "Watch Demo",
             tutors_title: "Your Elite DSE Team",
@@ -33,7 +33,7 @@ export const translations = {
                 ace_sir: {
                     role: "Head of Strategy",
                     vision: "Winning the DSE is about logic, timing, and psychological readiness. I'm your tactical edge.",
-                    highlights: ["Exam Logic", "Time Management", "Paper Strategy"]
+                    highlights: ["Exam Logic", "Time Management", "Paper Strategy", "University Advisor", "Career Advisor"]
                 },
                 miss_janie: {
                     role: "English Language Specialist",
@@ -44,6 +44,26 @@ export const translations = {
                     role: "Mathematics Specialist",
                     vision: "Mathematics is a language. I help you master the syntax of logic to solve any problem.",
                     highlights: ["Sequence Mastery", "Geometry Proofs", "Speed Calculation"]
+                },
+                ben_sir: {
+                    role: "DSE English Strategist",
+                    vision: "Forget boring textbooks. I'll show you the secret hacks to snatch marks in Paper 2.",
+                    highlights: ["Exam Hacks", "Paper 2 Mastery", "15+ Years Exp"]
+                },
+                dr_jack: {
+                    role: "Listening & Integrated Skills",
+                    vision: "From an examiner's perspective, snatching marks is about meeting precise marking criteria.",
+                    highlights: ["Paper 3 Specialist", "Examiner Logic", "Data Optimization"]
+                },
+                miss_elara: {
+                    role: "Literature & Creative Writing",
+                    vision: "Refining your expression and exploring the literary nuances of the English language.",
+                    highlights: ["Vocabulary Depth", "Creative Writing", "Structural Elegance"]
+                },
+                miss_clara: {
+                    role: "Grammar & Sentence Mechanics",
+                    vision: "Hi there! Ready to master those tricky grammar points? Let's snap those sentences into shape!",
+                    highlights: ["Grammar Foundation", "Sentence Structure", "Logical Rules"]
                 },
                 miss_chen: {
                     role: "Chinese Language Master",
@@ -71,13 +91,17 @@ export const translations = {
             complete_diagnostic_first: "Complete Mock Exam first",
             mock_exam: "Mock Exam",
             back_to_roadmap: "Back to Roadmap",
-            parent_report: "Parental Report"
+            parent_report: "Parental Report",
+            features: "Features",
+            update_profile: "Update Profile",
+            change_password: "Change Password",
+            manage_subscription: "Manage Subscription"
         },
         exam: {
-            reading: "Reading",
-            writing: "Writing",
-            listening: "Listening",
-            speaking: "Speaking",
+            reading: "English Reading (Paper 1)",
+            writing: "English Writing (Paper 2)",
+            listening: "English Listening (Paper 3)",
+            speaking: "English Speaking (Paper 4)",
             integrated_skills: "Integrated Skills"
         },
         footer: {
@@ -88,36 +112,7 @@ export const translations = {
         legal: {
             terms_title: "Terms and Conditions",
             disclaimer_title: "General Disclaimer",
-            terms: [
-                { 
-                    title: "1. AGREEMENT TO TERMS", 
-                    content: "These Terms and Conditions constitute a legally binding agreement made between you, whether personally or on behalf of an entity (“you”) and Ace It! Education (“Company”, “we”, “us”, or “our”), concerning your access to and use of the Ace It! website as well as any other media form, media channel, mobile website or mobile application related, linked, or otherwise connected thereto (collectively, the “Services”). By accessing the Services, you acknowledge that you have read, understood, and agree to be bound by all of these Terms and Conditions. IF YOU DO NOT AGREE WITH ALL OF THESE TERMS AND CONDITIONS, THEN YOU ARE EXPRESSLY PROHIBITED FROM USING THE SERVICES AND YOU MUST DISCONTINUE USE IMMEDIATELY." 
-                },
-                { 
-                    title: "2. ELIGIBILITY AND USER REPRESENTATIONS", 
-                    content: "By using the Services, you represent and warrant that: (1) all registration information you submit will be true, accurate, current, and complete; (2) you will maintain the accuracy of such information and promptly update such registration information as necessary; (3) you have the legal capacity and you agree to comply with these Terms and Conditions; (4) you are not a minor in the jurisdiction in which you reside, or if a minor, you have received parental permission to use the Services; (5) you will not access the Services through automated or non-human means, whether through a bot, script or otherwise; (6) you will not use the Services for any illegal or unauthorized purpose; and (7) your use of the Services will not violate any applicable law or regulation of the Hong Kong Special Administrative Region (“HKSAR”)." 
-                },
-                { 
-                    title: "3. INTELLECTUAL PROPERTY RIGHTS", 
-                    content: "Unless otherwise indicated, the Services and all source code, databases, functionality, software, website designs, audio, video, text, photographs, and graphics on the Services (collectively, the “Content”) and the trademarks, service marks, and logos contained therein (the “Marks”) are owned or controlled by us or licensed to us, and are protected by copyright and trademark laws and various other intellectual property rights and unfair competition laws of Hong Kong, foreign jurisdictions, and international conventions. The Content and the Marks are provided on the Services “AS IS” for your information and personal use only. Except as expressly provided in these Terms and Conditions, no part of the Services and no Content or Marks may be copied, reproduced, aggregated, republished, uploaded, posted, publicly displayed, encoded, translated, transmitted, distributed, sold, licensed, or otherwise exploited for any commercial purpose whatsoever, without our express prior written permission." 
-                },
-                { 
-                    title: "4. SUBSCRIPTION, PAYMENTS, AND REFUND POLICY", 
-                    content: "We accept various forms of payment through our designated third-party payment processors (e.g., Stripe). You agree to provide current, complete, and accurate purchase and account information for all purchases made via the Services. ALL SALES ARE FINAL AND NO REFUND SHALL BE ISSUED. Ace It! Education operates a strict no-refund policy for all subscription tiers. Notwithstanding any dissatisfaction or non-usage of the Services, you acknowledge and agree that you shall not be entitled to any refund, credit, or partial reimbursement for any payments made to the Company." 
-                },
-                { 
-                    title: "5. PROHIBITED ACTIVITIES", 
-                    content: "You may not access or use the Services for any purpose other than that for which we make the Services available. Prohibited activities include, but are not limited to: (1) systematic retrieval of data or other content from the Services to create or compile, directly or indirectly, a collection, compilation, database, or directory without written permission from us; (2) circumventing, disabling, or otherwise interfering with security-related features of the Services; (3) disparaging, tarnishing, or otherwise harming, in our opinion, us and/or the Services; and (4) engaging in any automated use of the system, such as using scripts to send comments or messages, or using any data mining, robots, or similar data gathering and extraction tools." 
-                },
-                { 
-                    title: "6. LIMITATION OF LIABILITY", 
-                    content: "IN NO EVENT WILL WE OR OUR DIRECTORS, EMPLOYEES, OR AGENTS BE LIABLE TO YOU OR ANY THIRD PARTY FOR ANY DIRECT, INDIRECT, CONSEQUENTIAL, EXEMPLARY, INCIDENTAL, SPECIAL, OR PUNITIVE DAMAGES, INCLUDING LOST PROFIT, LOST REVENUE, LOSS OF DATA, OR OTHER DAMAGES ARISING FROM YOUR USE OF THE SERVICES, EVEN IF WE HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. OUR LIABILITY TO YOU FOR ANY CAUSE WHATSOEVER WILL AT ALL TIMES BE LIMITED TO THE AMOUNT PAID, IF ANY, BY YOU TO US DURING THE SIX (6) MONTH PERIOD PRIOR TO ANY CAUSE OF ACTION ARISING." 
-                },
-                { 
-                    title: "7. GOVERNING LAW AND JURISDICTION", 
-                    content: "These Terms and Conditions and your use of the Services are governed by and construed in accordance with the laws of the Hong Kong Special Administrative Region. Any legal action shall be commenced or prosecuted in the courts of Hong Kong, and the parties hereby consent to, and waive all defenses of lack of personal jurisdiction and forum non conveniens with respect to venue and jurisdiction in such courts." 
-                }
-            ],
+            terms: [],
             disclaimer: [
                 { 
                     title: "1. GENERAL INFORMATIONAL PURPOSES", 
@@ -180,7 +175,8 @@ export const translations = {
                 pro: {
                     name: "Pro Plan",
                     price: "HK$68",
-                    period: "/month",
+                    period: "/monthly",
+                    original_price: "HK$88",
                     desc: "Comprehensive toolkit for steady DSE success.",
                     cta: "Go Pro",
                     features: ["English Reading, Writing, Listening and Speaking full access", "Unlimited Quest access", "4 Mock Exams per month", "1.2x XP Multiplier", "Weekly Challenge Quest", "Recommended Quests & Skill map", "3 devices limit", "Chat with Ace Sir (Academic & University advisor)"]
@@ -188,7 +184,8 @@ export const translations = {
                 premium: {
                     name: "Premium Plan",
                     price: "HK$128",
-                    period: "/month",
+                    period: "/monthly",
+                    original_price: "HK$168",
                     desc: "Unlimited power for top-tier academic mastery.",
                     cta: "Go Premium",
                     features: ["Unlimited Mock exam access", "Pro AI model for Mock exam grading", "1.5x XP Multiplier", "5 Device Limit", "Parental monthly progress report"]
@@ -226,11 +223,16 @@ export const translations = {
             }
         },
         subscription: {
-            title: "Subscription & Devices",
-            subtitle: "Manage your plan and secure your account access.",
+            title: "Subscription",
+            subtitle: "Maximize your DSE potential and master every skill with our Pro and Premium plans.",
             current_plan: "Current Plan",
             active: "Active",
             select_plan: "Select Plan",
+            start_free_trial: "Start free trial",
+            promo_period_title: "Limited Time Promotion",
+            promo_period_subtitle: "Unlock elite DSE tools at special early-bird rates. Secure your spot now!",
+            promo_label: "Limited time offer",
+            period_monthly: "/monthly",
             devices_title: "Active Devices",
             no_devices: "No devices registered yet.",
             last_seen: "Last seen",
@@ -240,6 +242,9 @@ export const translations = {
             promo_title: "Promo Codes",
             promo_subtitle: "Enter a referral or promotional code to unlock special discounts.",
             promo_placeholder: "E.G. ACEIT2025",
+            redeem: "Redeem",
+            invalid_code: "Invalid promo code",
+            code_applied: "Promo code applied!",
             limited_offer: "Limited Time",
             referral_title: "Refer a friend, get 1 month Pro for free!",
             learn_more: "Learn More",
@@ -265,7 +270,7 @@ export const translations = {
             unlock_plan: "Unlock your personalized Study Plan & Mock Exams",
             register_now: "Register Now",
             notebook: "Notebook",
-            exam_tips: "Exam Tips",
+            dse_strategy: "DSE Strategy",
             vocab: "Vocab",
             ready_to_learn: "Ready to Learn!",
             asking_ace_it: "Asking Ace It!...",
@@ -292,7 +297,9 @@ export const translations = {
             quests_lab: "Quests Lab",
             accuracy_track: "Accuracy Track",
             elite_track: "Elite Track",
-            complete_quest_xp: "Complete Quest to earn XP Bonus!"
+            complete_quest_xp: "Complete Quest to earn XP Bonus!",
+            target_growth_for_you: "Target Growth For You",
+            detailed_ability_radar: "Detailed Ability Radar"
         },
         chat: {
             start_mock: "Start Mock Exam",
@@ -324,7 +331,26 @@ export const translations = {
             greeting_return: "Welcome back, {{userName}}! I'm your {{agentName}}. How can I help you with your studies today?",
             greeting_generic: "Hello! I'm your {{agentName}}. Log in to save your learning progress, or start chatting with me now!",
             sign_up: "Sign up",
-            agent_and_you: "{{agentName}} & You"
+            agent_and_you: "{{agentName}} & You",
+            tools: "Tools",
+            ai_features: "AI Features",
+            attach_photo: "Attach Photo",
+            grade_essay: "Grade My Essay",
+            clear_history_title: "Clear History?",
+            clear_history_confirm: "This will permanently delete your conversation history with this agent. This action cannot be undone.",
+            delete_forever: "Delete Forever",
+            cancel: "Cancel",
+            practice_verb: "Practice",
+            start_verb: "Start",
+            improve_verb: "Improve",
+            analyze_verb: "Analyze",
+            learn_verb: "Learn",
+            discuss_verb: "Discuss",
+            explain_verb: "Explain",
+            reading: "Reading",
+            writing: "Writing",
+            listening: "Listening",
+            speaking: "Speaking"
         },
         onboarding: {
             welcome: "Welcome, {{name}}!",
@@ -683,6 +709,12 @@ export const translations = {
                     p4: "Generate a 7-day 'Survival Plan' to help me bridge the gap to my target Level 5** in my weakest module."
                 }
             }
+        },
+        stats: {
+            xp_progress: "XP Progress",
+            current_tier: "Current Tier",
+            redeem: "Redeem",
+            timeline: "Timeline"
         }
     },
     zh: {
@@ -690,7 +722,7 @@ export const translations = {
             hero_title: "助你 DSE 奪佳績",
             hero_ai_powered: "AI 動態",
             hero_subtitle: "個人化導師。",
-            hero_desc: "Ace It! 結合頂尖 DSE 專家與 Gemini 1.5 Pro，為你提供 24/7 專科導師（英文、數學、中文）支援。",
+            hero_desc: "Ace It! 結合頂尖 DSE 專家與 Gemini AI Model，為你提供 24/7 英文專科導師支援。",
             start_journey: "開始你的學習旅程",
             watch_demo: "查看演示",
             tutors_title: "精英 DSE 團隊",
@@ -719,7 +751,7 @@ export const translations = {
                 ace_sir: {
                     role: "戰略主管",
                     vision: "DSE 制勝之道在於邏輯、時間管理和心理準備。我是你的戰術優勢。",
-                    highlights: ["考試邏輯", "時間管理", "應試策略"]
+                    highlights: ["考試邏輯", "時間管理", "應試策略", "升學顧問", "職業規劃"]
                 },
                 miss_janie: {
                     role: "英語專科導師",
@@ -730,6 +762,26 @@ export const translations = {
                     role: "數學專科導師",
                     vision: "數學是一門語言。我助你掌握邏輯語法，解決任何難題。",
                     highlights: ["數列大師", "幾何證明", "快速運算"]
+                },
+                ben_sir: {
+                    role: "DSE 英文應試專家",
+                    vision: "忘記枯燥的教科書，我會教你如何喺 Paper 2 奪取高分嘅秘密技巧。",
+                    highlights: ["應試技巧", "Paper 2 精通", "15年以上經驗"]
+                },
+                dr_jack: {
+                    role: "聆聽與綜合技能專家",
+                    vision: "從閱卷員的角度出發，奪分關鍵在於精準達成評分準則。",
+                    highlights: ["Paper 3 專家", "閱卷員邏輯", "數據優化"]
+                },
+                miss_elara: {
+                    role: "文學與創意寫作",
+                    vision: "精煉你的表達，探索英語文學的細微差別。",
+                    highlights: ["詞彙深度", "創意寫作", "結構美學"]
+                },
+                miss_clara: {
+                    role: "語法與句子機制",
+                    vision: "準備好掌握那些棘手的語法點了嗎？讓我們將句子變得完美！",
+                    highlights: ["語法基礎", "句子結構", "邏輯規則"]
                 },
                 miss_chen: {
                     role: "中文專科名師",
@@ -757,13 +809,17 @@ export const translations = {
             complete_diagnostic_first: "請先完成模擬考試",
             mock_exam: "模擬試場",
             back_to_roadmap: "返回發展導覽",
-            parent_report: "家長監督"
+            parent_report: "家長監督",
+            features: "功能介紹",
+            update_profile: "個人資料",
+            change_password: "更改密碼",
+            manage_subscription: "管理訂閱"
         },
         exam: {
-            reading: "閱讀",
-            writing: "寫作",
-            listening: "聆聽",
-            speaking: "說話",
+            reading: "英文閱讀 (卷一)",
+            writing: "英文寫作 (卷二)",
+            listening: "英文聆聽與綜合 (卷三)",
+            speaking: "英文說話 (卷四)",
             integrated_skills: "綜合技能"
         },
         footer: {
@@ -774,36 +830,7 @@ export const translations = {
         legal: {
             terms_title: "條款及細則",
             disclaimer_title: "一般免責聲明",
-            terms: [
-                { 
-                    title: "1. 協議之接受", 
-                    content: "本條款及細則構成您（無論是個人或代表實體，「您」）與 Ace It! Education（「公司」、「我們」或「我們的」）之間具有法律約束力的協議。訪問本服務即表示您承認已閱讀、理解並同意受所有這些條款及細則的約束。如果您不同意所有這些條款及細則，則明確禁止您使用本服務，並且您必須立即停止使用。" 
-                },
-                { 
-                    title: "2. 使用資格與用戶陳述", 
-                    content: "透過使用本服務，您陳述並保證：(1) 您提交的所有註冊信息均為真實、準確、最新且完整的；(2) 您將維護該等信息之準確性；(3) 您具有法律行為能力；(4) 您在所居住的司法管轄區不屬於未成年人，或者如果您是未成年人，您已獲得家長許可；(5) 您不會透過自動化手段訪問服務；(6) 您不會將服務用於任何非法目的；以及 (7) 您的使用不會違反香港特別行政區的所有適用法律。" 
-                },
-                { 
-                    title: "3. 知識產權", 
-                    content: "除非另有說明，本服務及其所有源代碼、數據庫、功能、軟件、網站設計及其包含的商標、標誌均由我們擁有或控制。內容和標誌在服務上按「原樣」提供，僅供您參考和個人使用。未經我們事先明確書面許可，不得出於任何商業目的複製、重製、傳輸、分發、出售、許可或以其他方式利用本服務的任何部分。" 
-                },
-                { 
-                    title: "4. 訂閱、付款及退款政策", 
-                    content: "我們透過指定的第三方付款處理商（如 Stripe）接受各種形式的付款。您同意為所有購買提供最新且準確的信息。所有銷售均為最終銷售，恕不退款。Ace It! Education 對所有訂閱級別均執行嚴格的不設退款政策。儘管有任何不滿意或未使用，您承認並同意無權獲得任何款項的退款或積分。" 
-                },
-                { 
-                    title: "5. 禁止行為", 
-                    content: "您不得出於我們提供本服務的目的以外的任何其他目的訪問或使用本服務。禁止活動包括但不限於：(1) 未經許可系統地檢索數據；(2) 規避或干擾安全相關功能；(3) 誹謗或損害我們和/或服務；(4) 骚扰或伤害他人；以及 (5) 參與系統的任何自動化使用，例如使用腳本或數據挖掘工具。" 
-                },
-                { 
-                    title: "6. 責任限制", 
-                    content: "在任何情況下，我們或我們的董事、員工均不對您或任何第三方因您使用服務而產生的任何直接、間接、衍生性、懲戒性、附帶性或特殊損害負責，包括利潤損失或數據丟失。我們對您因任何原因引起的責任，將始終限於您在訴訟原因產生前六(6)個月內支付給我們的金額。" 
-                },
-                { 
-                    title: "7. 管轄法律與司法管轄權", 
-                    content: "本條款及細則以及您對本服務的使用受香港特別行政區法律管轄並按其解釋。由您或我們提起的任何性質的法律訴訟均應在香港法院進行，各方特此同意並放棄對於該等法院司法管轄權的一切抗辯。" 
-                }
-            ],
+            terms: [],
             disclaimer: [
                 { 
                     title: "1. 一般資訊用途", 
@@ -866,7 +893,8 @@ export const translations = {
                 pro: {
                     name: "專業計劃 (Pro)",
                     price: "HK$68",
-                    period: "/月",
+                    period: "/每個月",
+                    original_price: "HK$88",
                     desc: "為穩步晉升 DSE 等級而設的核心工具。",
                     cta: "立即升級 Pro",
                     features: ["英文閱讀、寫作、聆聽及說話完整使用權", "無限任務存取", "每月 4 次模擬考試", "1.2x XP 經驗值加速", "每週挑戰任務", "推薦任務與能力圖譜", "3 台裝置上限", "與 Ace Sir (學術及大學顧問) 對話"]
@@ -874,7 +902,8 @@ export const translations = {
                 premium: {
                     name: "至尊計劃 (Premium)",
                     price: "HK$128",
-                    period: "/月",
+                    period: "/每個月",
+                    original_price: "HK$168",
                     desc: "解鎖最強 AI 戰力，追求頂尖奪星目標。",
                     cta: "立即升級 Premium",
                     features: ["無限模擬考試存取", "Pro 級 AI 模擬試卷評分", "1.5x XP 經驗值加速", "5 台裝置上限", "家長每月進度報告"]
@@ -912,11 +941,16 @@ export const translations = {
             }
         },
         subscription: {
-            title: "訂閱與裝置管理",
-            subtitle: "管理您的計劃並確保帳號安全存取。",
+            title: "訂閱管理",
+            subtitle: "升級 Pro 或 Premium 計劃，全面發揮您的 DSE 潛力並精通各項應試技巧。",
             current_plan: "當前計劃",
             active: "使用中",
             select_plan: "選擇計劃",
+            start_free_trial: "開始免費試用",
+            promo_period_title: "限時推廣優惠",
+            promo_period_subtitle: "以特別早鳥優惠解鎖頂尖 DSE 工具。立即行動，搶佔奪星先機！",
+            promo_label: "限時推廣優惠",
+            period_monthly: "/每個月",
             devices_title: "已登入裝置",
             no_devices: "暫未偵測到已登記裝置。",
             last_seen: "最後在線",
@@ -926,6 +960,9 @@ export const translations = {
             promo_title: "優惠碼",
             promo_subtitle: "輸入推薦碼或促銷號碼以獲得特別折扣。",
             promo_placeholder: "例如：ACEIT2025",
+            redeem: "兌換",
+            invalid_code: "無效的優惠碼",
+            code_applied: "已成功應用優惠碼！",
             limited_offer: "限時優惠",
             referral_title: "推薦朋友加入，即可免費獲得 1 個月專業版 (Pro)！",
             learn_more: "了解更多",
@@ -950,8 +987,8 @@ export const translations = {
             your_mentors: "選擇你的導師",
             unlock_plan: "解鎖你的個人學習計劃和模擬考試",
             notebook: "筆記本",
-            exam_tips: "應試錦囊",
-            vocab: "詞彙",
+            dse_strategy: "DSE 應試策略",
+            vocab: "詞彙庫",
             register_now: "立即註冊",
             ready_to_learn: "準備學習！",
             asking_ace_it: "正在詢問 Ace It!...",
@@ -978,7 +1015,9 @@ export const translations = {
             quests_lab: "任務研發室",
             accuracy_track: "基礎準確度訓練",
             elite_track: "精英升級訓練",
-            complete_quest_xp: "完成任務以獲取 XP 獎勵！"
+            complete_quest_xp: "完成任務以獲取 XP 獎勵！",
+            target_growth_for_you: "為你而設的目標成長",
+            detailed_ability_radar: "詳細能力雷達"
         },
         chat: {
             start_mock: "開始模擬考試",
@@ -1010,7 +1049,26 @@ export const translations = {
             greeting_return: "歡迎回來，{{userName}}！我是你的{{agentName}}。今天想學習甚麼？",
             greeting_generic: "你好！我是你的{{agentName}}。立即登入以保存學習進度，或直接開始對話！",
             sign_up: "註冊",
-            agent_and_you: "{{agentName}} 與你"
+            agent_and_you: "{{agentName}} 與你",
+            tools: "功能",
+            ai_features: "AI 功能",
+            attach_photo: "上傳圖片",
+            grade_essay: "批改作文",
+            clear_history_title: "清除紀錄？",
+            clear_history_confirm: "這將永久刪除您與此導師的對話紀錄。此操作無法撤銷。",
+            delete_forever: "永久刪除",
+            cancel: "取消",
+            practice_verb: "練習",
+            start_verb: "開始",
+            improve_verb: "提升",
+            analyze_verb: "分析",
+            learn_verb: "學習",
+            discuss_verb: "探討",
+            explain_verb: "解析",
+            reading: "閱讀",
+            writing: "寫作",
+            listening: "聆聽",
+            speaking: "說話"
         },
         onboarding: {
             welcome: "歡迎，{{name}}！",
@@ -1369,6 +1427,12 @@ export const translations = {
                     p4: "生成一個為期 7 天的「生存計劃」，幫助我在最弱的模組中縮小與目標 Level 5** 的差距。",
                 }
             }
+        },
+        stats: {
+            xp_progress: "經驗值進度",
+            current_tier: "目前等級",
+            redeem: "兌換中心",
+            timeline: "學習歷程"
         }
     }
 };

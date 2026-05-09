@@ -24,11 +24,10 @@ import {
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { LoadingPage, GradingOverlay } from '../../components/shared';
-import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
-import { storage } from '../../firebase';
 import { useAuth } from '../../context/AuthContext';
 import { useAvatar } from '../../context/AvatarContext';
 import UpgradeModal from '../../components/common/UpgradeModal';
+import { isCheatEnabled } from '../../utils/devAccess';
 
 // Studio Components
 import WritingStudioLayout from '../../components/writing/WritingStudioLayout';
@@ -226,9 +225,32 @@ const WritingMockStudio = () => {
         if (!user) return;
         setUploading(true);
         try {
-            const fileRef = ref(storage, `writing_mocks/${user.uid}/${paperId}/${part}/${Date.now()}_${file.name}`);
-            await uploadBytes(fileRef, file);
-            const url = await getDownloadURL(fileRef);
+            const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+            const token = await user.getIdToken();
+            const sasRes = await fetch(`${API_URL}/api/data/uploads/sas`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${token}`
+                },
+                body: JSON.stringify({
+                    folder: `writing_mocks/${user.uid}/${paperId}/${part}`,
+                    filename: file.name,
+                    contentType: file.type || 'application/octet-stream'
+                })
+            });
+            if (!sasRes.ok) throw new Error('Failed to get upload URL');
+            const { uploadUrl, publicUrl } = await sasRes.json();
+            const uploadRes = await fetch(uploadUrl, {
+                method: 'PUT',
+                headers: {
+                    'x-ms-blob-type': 'BlockBlob',
+                    'Content-Type': file.type || 'application/octet-stream'
+                },
+                body: file
+            });
+            if (!uploadRes.ok) throw new Error('Upload to Azure Blob failed');
+            const url = publicUrl;
             
             if (part === 'A') {
                 setImagesA(prev => [...prev, url]);
@@ -504,7 +526,7 @@ const WritingMockStudio = () => {
                         isLeftSidebarOpen={isLeftSidebarOpen}
                         onToggleLeftSidebar={() => setIsLeftSidebarOpen(!isLeftSidebarOpen)}
                         onBack={() => setShowQuitModal(true)}
-                        isCheatMode={user?.email === 'fungtam@gmail.com'}
+                        isCheatMode={isCheatEnabled(user, profile)}
                         onCheatInject={handleCheatMode}
                     />
                 }

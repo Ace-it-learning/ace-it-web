@@ -1,8 +1,8 @@
 {
   "type": "GRAMMAR",
   "topic_id": "grammar_accuracy_sva",
-  "level": "HKDSE Level 5 (Strong)",
-  "conceptual_explanation": "In HKDSE English Paper 2 and Paper 3, mastering Subject-Verb Agreement (SVA) is a hallmark of Level 5+ writing. At this level, examiners actively look for complex sentences where the subject and verb are separated by distractors. You must be able to instantly identify the 'True Head Noun' and ignore prepositional phrases, parenthetical elements, and misleading quantifiers.",
+  "level": "HKDSE Level 3",
+  "conceptual_explanation": "Subject-Verb Agreement (SVA) is the most fundamental rule in HKDSE English. At Level 3, you must ensure the verb always matches the singular or plural subject. Watch out for 'distractors' like prepositional phrases that try to trick you into matching the verb with the wrong noun.",
   "rule_cards": [
     {
       "name": "The Prepositional Phrase Trap",

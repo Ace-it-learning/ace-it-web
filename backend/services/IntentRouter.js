@@ -60,9 +60,12 @@ Image Attached: {{HAS_IMAGE}}
 [CONTEXT]:
 - Is New Student: {{IS_NEW}}
 - Active Exam: {{ACTIVE_EXAM}}
+- Available Quests: {{AVAILABLE_QUESTS}}
 - Already Completed Topics: {{COMPLETED_TOPICS}}
 
-[STRICT RULE]: NEVER suggest or route to a topic that is present in the "Already Completed Topics" list. If the user asks for more practice, pick a new topic not in the list.`;
+[STRICT RULE]: You MUST only pick a topic from the "Available Quests" list provided. 
+- If the student asks for a topic NOT in the list, or the instruction is vague, you MUST return intent: "CHAT".
+- NEVER suggest or route to a topic that is present in the "Already Completed Topics" list.`;
 
 class IntentRouter {
   static async classify(message, history = [], uid = null, context = {}) {
@@ -91,6 +94,7 @@ class IntentRouter {
         .replace('{{DIAG_COMPLETED}}', context.diagnostic_completed || false)
         .replace('{{IS_NEW}}', context.is_new_student || false)
         .replace('{{ACTIVE_EXAM}}', context.has_active_exam || false)
+        .replace('{{AVAILABLE_QUESTS}}', context.available_quests || "None")
         .replace('{{COMPLETED_TOPICS}}', context.completed_topics || "None");
 
       const finalResult = await GenerativeAIService.generateContent(prompt, {

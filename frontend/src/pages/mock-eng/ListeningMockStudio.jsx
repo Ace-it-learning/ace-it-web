@@ -43,6 +43,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import MockCountdownTimer from '../../components/utils/MockCountdownTimer';
 import DataFileViewer from '../../components/listening/DataFileViewer';
 import Paper3AudioEngine from '../../components/listening/Paper3AudioEngine';
+import { isCheatEnabled } from '../../utils/devAccess';
 
 const SMART_CITY_GOLDEN_ANSWERS = {
     Task_5: `Subject: Response to Your Concerns Regarding Smart Lampposts in Kowloon East\n\nDear Mr. Wong,\n\nThank you for contacting the IT Bureau. We value your feedback regarding the smart lampposts in your neighborhood.\n\nI would like to reassure you that your privacy is our top priority. All data collected by the 5G Sensor Array is fully anonymized and, as mandated by our strict policy, is never sold to third parties or advertisers. To further ensure your digital safety, we have partnered with CyberGuard HK to provide free antivirus and anti-phishing software to all participating households.\n\nThe Smart Mobility initiative aims to reduce urban stress for all residents. Our data shows that this system has already saved commuters in Kowloon East approximately 20 minutes per day by optimizing traffic flow.\n\nWe hope this clarifies our position. Please feel free to reach out if you have further questions.\n\nYours sincerely,\n\nProject Assistant, IT Bureau`,
@@ -580,7 +581,7 @@ const ListeningMockStudio = () => {
                     <div className="flex items-center gap-6">
                         <div className="flex items-center gap-4">
                             {/* Admin Skip Button */}
-                            {user?.email === 'fungtam@gmail.com' && (
+                            {isCheatEnabled(user, profile) && (
                                 <button 
                                     onClick={() => audioEngineRef.current?.fastForwardToPartAEnd()}
                                     className="w-10 h-10 flex items-center justify-center bg-indigo-50 hover:bg-indigo-100 text-indigo-600 rounded-xl border border-indigo-200 transition-all animate-pulse shadow-sm"
@@ -591,7 +592,7 @@ const ListeningMockStudio = () => {
                             )}
 
                             {/* Cheat Menu */}
-                            {user?.email === 'fungtam@gmail.com' && (
+                            {isCheatEnabled(user, profile) && (
                                 <div className="relative group">
                                     <button className="w-10 h-10 flex items-center justify-center bg-amber-50 hover:bg-amber-100 text-amber-600 rounded-xl border border-amber-200 transition-all shadow-sm">
                                         <Zap size={16} fill="currentColor" />

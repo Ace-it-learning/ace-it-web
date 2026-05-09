@@ -7,7 +7,7 @@ const UserProfileService = require('../services/UserProfileService');
 const GamificationService = require('../services/GamificationService');
 const DeviceService = require('../services/DeviceService');
 const { checkVoiceQuota } = require('../services/VoiceQuotaService');
-// Use admin.firestore() directly in routes or services
+const { requireResolvedUid } = require('../middleware/requireResolvedUid');
 const cardPool = require('../data/card_pool.json');
 
 // --- UTILS ---
@@ -28,7 +28,7 @@ function pickCardByRarity(cards) {
  */
 
 // POST /api/user/onboarding
-router.post('/onboarding', async (req, res) => {
+router.post('/onboarding', requireResolvedUid, async (req, res) => {
     const { uid } = req.body;
     if (!uid) return res.status(400).json({ error: "Missing uid" });
     try {
@@ -40,13 +40,73 @@ router.post('/onboarding', async (req, res) => {
 });
 
 // GET /api/user/profile/:uid
-router.get('/profile/:uid', async (req, res) => {
+router.get('/profile/:uid', requireResolvedUid, async (req, res) => {
     const { uid } = req.params;
     try {
         const profile = await UserProfileService.getProfile(uid);
         res.json(profile);
     } catch (e) {
         res.status(500).json({ error: "Failed to fetch profile" });
+    }
+});
+
+// GET /api/user/tutor-events/pending-summary
+router.get('/tutor-events/pending-summary', requireResolvedUid, async (req, res) => {
+    const { uid, limit } = req.query;
+    if (!uid) return res.status(400).json({ error: "Missing uid" });
+    try {
+        const events = await UserProfileService.getPendingTutorCompletionEvents(uid, limit || 10);
+        res.json({ events });
+    } catch (e) {
+        console.error("Pending tutor events error:", e);
+        res.status(500).json({ error: "Failed to fetch pending tutor events" });
+    }
+});
+
+// POST /api/user/tutor-events/mark-summarized
+router.post('/tutor-events/mark-summarized', requireResolvedUid, async (req, res) => {
+    const { uid, eventIds } = req.body || {};
+    if (!uid || !Array.isArray(eventIds)) {
+        return res.status(400).json({ error: "Missing uid or eventIds" });
+    }
+    try {
+        const result = await UserProfileService.markTutorCompletionEventsSummarized(uid, eventIds);
+        res.json({ success: true, ...result });
+    } catch (e) {
+        console.error("Mark tutor events summarized error:", e);
+        res.status(500).json({ error: "Failed to mark tutor events summarized" });
+    }
+});
+
+// GET /api/user/check-methods/:email
+router.get('/check-methods/:email', async (req, res) => {
+    const { email } = req.params;
+    try {
+        const userRecord = await admin.auth().getUserByEmail(email);
+        const providers = userRecord.providerData.map(p => p.providerId);
+        res.json({ providers });
+    } catch (e) {
+        if (e.code === 'auth/user-not-found') {
+            return res.json({ providers: [] });
+        }
+        console.error("Check Methods Error:", e);
+        res.status(500).json({ error: "Internal error" });
+    }
+});
+
+// GET /api/user/resolve-identity
+// Used by Auth0 frontend to map authenticated email -> app uid.
+router.get('/resolve-identity', async (req, res) => {
+    try {
+        const uid = req.uid || null;
+        const email = req.authUser?.email || null;
+        if (!uid || !email) {
+            return res.status(401).json({ error: "Identity not resolved" });
+        }
+        return res.json({ uid, email });
+    } catch (e) {
+        console.error("Resolve identity error:", e);
+        return res.status(500).json({ error: "Failed to resolve identity" });
     }
 });
 
@@ -59,15 +119,13 @@ router.get('/profile/:uid', async (req, res) => {
  */
 
 // GET /api/user/dream-programs
-router.get('/dream-programs', async (req, res) => {
+router.get('/dream-programs', requireResolvedUid, async (req, res) => {
     // ... (existing code for dream-programs)
     const { uid } = req.query;
     if (!uid) return res.status(400).json({ error: 'Missing uid' });
     try {
-        const db = admin.firestore();
-        const userDoc = await db.collection('users').doc(uid).get();
-        if (!userDoc.exists) return res.json({ programs: [] });
-        const userData = userDoc.data();
+        const userData = await UserProfileService.getProfile(uid);
+        if (!userData || userData.uid === 'guest') return res.json({ programs: [] });
         res.json({
             programs: userData.dreamPrograms || [],
             targets: {
@@ -88,7 +146,7 @@ router.get('/dream-programs', async (req, res) => {
 const ParentReportService = require('../services/ParentReportService');
 
 // POST /api/user/parent-settings
-router.post('/parent-settings', async (req, res) => {
+router.post('/parent-settings', requireResolvedUid, async (req, res) => {
     const { uid, parent_email, parent_report_enabled } = req.body;
     if (!uid) return res.status(400).json({ error: 'Missing uid' });
 
@@ -104,7 +162,7 @@ router.post('/parent-settings', async (req, res) => {
 });
 
 // POST /api/user/parent-test-report
-router.post('/parent-test-report', async (req, res) => {
+router.post('/parent-test-report', requireResolvedUid, async (req, res) => {
     const { uid, parent_email } = req.body;
     if (!uid || !parent_email) return res.status(400).json({ error: 'Missing parameters' });
 
@@ -118,7 +176,7 @@ router.post('/parent-test-report', async (req, res) => {
 });
 
 // POST /api/user/profile (Updates profile fields)
-router.post('/profile/update', async (req, res) => {
+router.post('/profile/update', requireResolvedUid, async (req, res) => {
     const { uid, ...profileData } = req.body;
     if (!uid) return res.status(400).json({ error: "Missing uid" });
     try {
@@ -130,7 +188,7 @@ router.post('/profile/update', async (req, res) => {
 });
 
 // POST /api/user/subscription/cancel
-router.post('/subscription/cancel', async (req, res) => {
+router.post('/subscription/cancel', requireResolvedUid, async (req, res) => {
     const { uid } = req.body;
     if (!uid) return res.status(400).json({ error: "Missing uid" });
     try {
@@ -142,7 +200,7 @@ router.post('/subscription/cancel', async (req, res) => {
 });
 
 // POST /api/user/device/forget
-router.post('/device/forget', async (req, res) => {
+router.post('/device/forget', requireResolvedUid, async (req, res) => {
     const { uid, fingerprint } = req.body;
     if (!uid || !fingerprint) return res.status(400).json({ error: "Missing parameters" });
     try {
@@ -154,7 +212,7 @@ router.post('/device/forget', async (req, res) => {
 });
 
 // POST /api/user/device/register
-router.post('/device/register', async (req, res) => {
+router.post('/device/register', requireResolvedUid, async (req, res) => {
     const { uid, fingerprint, metadata } = req.body;
     if (!uid || !fingerprint) return res.status(400).json({ error: "Missing parameters" });
     try {
@@ -168,7 +226,7 @@ router.post('/device/register', async (req, res) => {
 });
 
 // DELETE /api/user
-router.delete('/', async (req, res) => {
+router.delete('/', requireResolvedUid, async (req, res) => {
     const { uid } = req.body; // or req.query.uid
     if (!uid) return res.status(400).json({ error: "Missing uid" });
     try {

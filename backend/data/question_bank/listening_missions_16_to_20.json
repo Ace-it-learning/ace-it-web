@@ -1,0 +1,827 @@
+{
+  "listening_mission_16": {
+    "id": "listening_mission_16",
+    "title": "Homelessness Awareness",
+    "description": "Coordinating a Winter Warmth charity drive with donation logistics and dignity-first communications.",
+    "topic": "Social Issues",
+    "type": "listening_mission",
+    "paper": "Listening",
+    "subject": "English",
+    "level": "3",
+    "is_approved": true,
+    "factory_template": false,
+    "created_at": {
+      "_seconds": 1704068700,
+      "_nanoseconds": 0
+    },
+    "sprint_data": {
+      "audio_transcript": "[SCENE START]\n[Warehouse echo]\nCampaign Lead: Final lock for the Winter Warmth pack distribution weekend.\nCampaign Lead: Pack target correction—we aimed for five hundred completed packs, but procurement capped us at four hundred twenty until the next funding tranche.\nLogistics: Main drop-off and sorting hub is Mong Kok Community Hall Room two A. An old church leaflet still says Central—ignore it.\nCampaign Lead: Public donation hours are ten a.m. to four p.m. both days.\nVolunteer briefing Saturday at eight forty-five a.m. at the side entrance.\nSupplies Lead: Hygiene kit shipment is two hundred units, not two fifty on the intern spreadsheet.\nOutreach: Donor hotline remains two eight nine three double seven double two.\nSite Safety: Anyone lifting over twelve kilograms must use the back brace rack by the lifts.\nCampaign Lead: Roster names to me by seven forty-five p.m. tonight.\n[SCENE END]",
+      "tasks": [
+        {
+          "id": "a1_charity_table",
+          "type": "TABLE",
+          "label": "Drive Control Facts",
+          "rows": [
+            {
+              "label": "Final pack target (completed)",
+              "answer": "420",
+              "placeholder": "Number"
+            },
+            {
+              "label": "Main hub location",
+              "answer": "Mong Kok Community Hall Room 2A",
+              "placeholder": "Location"
+            },
+            {
+              "label": "Daily donation hours",
+              "answer": "10:00 a.m. to 4:00 p.m.",
+              "placeholder": "Time range"
+            },
+            {
+              "label": "Donor hotline",
+              "answer": "2893 7722",
+              "placeholder": "Number"
+            }
+          ]
+        },
+        {
+          "id": "a2_charity_form",
+          "type": "FORM_FILLING",
+          "question": "Volunteering and supplies",
+          "fields": [
+            {
+              "label": "Saturday volunteer briefing",
+              "answer": "8:45 a.m.",
+              "placeholder": "Time"
+            },
+            {
+              "label": "Hygiene kit units (confirmed)",
+              "answer": "200",
+              "placeholder": "Number"
+            },
+            {
+              "label": "Manual lift guidance threshold",
+              "answer": "12 kg",
+              "placeholder": "Weight"
+            },
+            {
+              "label": "Roster deadline",
+              "answer": "7:45 p.m.",
+              "placeholder": "Time"
+            }
+          ]
+        },
+        {
+          "id": "a3_charity_mcq",
+          "type": "MCQ_BATCH",
+          "label": "Logistics Check",
+          "questions": [
+            {
+              "question": "Which hub location appears on obsolete leaflets?",
+              "options": [
+                "A. Mong Kok Community Hall",
+                "B. Central",
+                "C. Sham Shui Po",
+                "D. Kwun Tong"
+              ],
+              "answer": "B"
+            },
+            {
+              "question": "Which pack target figure is the outdated aspiration?",
+              "options": [
+                "A. 420",
+                "B. 400",
+                "C. 500",
+                "D. 380"
+              ],
+              "answer": "C"
+            }
+          ]
+        }
+      ]
+    },
+    "integrated_data": {
+      "audio_transcript": "[INTEGRATED BRIEFING START]\nNGO Director: We need a schools circular that is respectful—no poverty-tourism tone.\nCommunications: All photography of beneficiaries requires signed consent; street candids are banned for minors.\nLegal: Corporate matching pledge stands at one point two dollars per dollar donated, not one-for-one as rumoured online.\nField Worker: Night outreach partner NGO will hand thermal blankets only after risk assessment forms are completed.\nNGO Director: KPI: at least ninety percent of delivered packs include a bilingual information card on housing rights.\nTeacher Rep: Please remind students to wear volunteer vests when off-site—not school PE kit.\n[INTEGRATED BRIEFING END]",
+      "notetaking_fields": [
+        {
+          "id": "nt_dignity",
+          "label": "Dignity and communications",
+          "placeholder": "Note consent rules, tone, and clothing..."
+        },
+        {
+          "id": "nt_ops",
+          "label": "Programme facts",
+          "placeholder": "Record matching pledge, KPI, and partner rules..."
+        }
+      ],
+      "data_file": [
+        {
+          "id": "df_coordinator_email",
+          "title": "NGO Circular (Excerpt)",
+          "type": "email",
+          "content": "From: StreetKind HK <ops@streetkind.hk>\\nTo: School Partners\\nSubject: Winter Warmth - Final Facts\\n\\nHub: Mong Kok Community Hall Room 2A\\nHours: 10:00-16:00\\nPack target this round: 420 (not 500).\\nHotline: 2893 7722\\n\\nDignity first: no identifiable photos of clients without consent.\\n\\nThanks,\\nCampaign Team"
+        },
+        {
+          "id": "df_donor_notice",
+          "title": "Donor Window Notice",
+          "type": "notice",
+          "content": "Winter Warmth Donations\\nSat-Sun 10:00-16:00\\nAccepted: sealed food, new socks, hygiene packs\\nNot accepted: used bedding without inspection tag"
+        },
+        {
+          "id": "df_vol_faq",
+          "title": "Volunteer FAQ",
+          "type": "faq",
+          "content": "Q: Wrong address on an old church flyer?\\nA: Use Mong Kok Hall 2A only.\\nQ: Matching gift rate?\\nA. $1.20 matched per $1 donated (verified).\\nQ: KPI on inserts?\\nA: 90%+ packs carry bilingual housing-rights card."
+        }
+      ],
+      "writing_task": {
+        "instruction": "You are the Student Social Service Prefect. Write a concise memo to all class teachers summarising the drive hub facts, dignity rules for publicity, and the matching-pledge headline for assemblies.",
+        "format": "School memo",
+        "role_profile": "Student Social Service Prefect writing to teachers in a respectful, welfare-aware school register.",
+        "word_count": "160-210",
+        "marking_criteria": "Content, Language, Organization, Appropriacy"
+      },
+      "marking_key": [
+        "State hub Mong Kok Community Hall Room 2A and hours 10:00 a.m.-4:00 p.m.; reject obsolete Central leaflets.",
+        "Confirm pack target 420 for this round (not 500).",
+        "Include photography consent rule—no street candids of minors; signed consent for identifiable images.",
+        "State corporate matching as HK$1.20 per HK$1 donated (not simple 1:1).",
+        "KPI: ninety percent or more of packs include bilingual housing-rights information card.",
+        "Mention volunteers wear official vests off-site, not school PE kit.",
+        "[Audio synthesis — Integrated Briefing only] Reject poverty-tourism tone; messaging must remain respectful and dignity-first for school circulars.",
+        "[Audio synthesis — Integrated Briefing only] Night outreach: partner NGO issues thermal blankets only after risk assessment forms are fully completed.",
+        "[Audio synthesis — Integrated Briefing only] Students on off-site duties must wear official volunteer vests, not ordinary school PE kit (Teacher Rep line)."
+      ]
+    }
+  },
+  "listening_mission_17": {
+    "id": "listening_mission_17",
+    "title": "Future of Public Transport",
+    "description": "Piloting an autonomous shuttle alongside plans for an MTR extension—public consultation, safety caps, and service triggers.",
+    "topic": "Transportation",
+    "type": "listening_mission",
+    "paper": "Listening",
+    "subject": "English",
+    "level": "5",
+    "is_approved": true,
+    "factory_template": false,
+    "created_at": {
+      "_seconds": 1704068800,
+      "_nanoseconds": 0
+    },
+    "sprint_data": {
+      "audio_transcript": "[SCENE START]\n[Traffic hum simulated in lab]\nProject Manager: Harbour Loop shuttle pilot briefing.\nProject Manager: Trial route length changed again—maps showing three point two kilometres are obsolete. Final fenced route is two point eight kilometres.\nSafety Lead: Autonomous shuttle speed cap in the pilot geofence is twenty-five kilometres per hour, not thirty.\nOperations: If average passenger wait at Stop B exceeds twelve minutes, we activate Priority T—replacement diesel buses, not at ten minutes like the draft playbook.\nFinance Desk: Approved pilot budget is forty-eight million dollars. Please shred slides that still read fifty-five million.\nProject Manager: Public consultation submissions close twenty-eighth March at eleven fifty-nine p.m., not twenty-first March.\nCommunications: Twenty-four-hour rider helpline two one two three double four double eight.\nEngineering: Platform gap fillers must be installed at interchange Gate D before passenger trials.\n[SCENE END]",
+      "tasks": [
+        {
+          "id": "a1_pt_table",
+          "type": "TABLE",
+          "label": "Pilot Parameters",
+          "rows": [
+            {
+              "label": "Final trial route length",
+              "answer": "2.8 km",
+              "placeholder": "Distance"
+            },
+            {
+              "label": "Shuttle speed cap (geofence)",
+              "answer": "25 km/h",
+              "placeholder": "Speed"
+            },
+            {
+              "label": "Approved pilot budget",
+              "answer": "48 million",
+              "placeholder": "Amount"
+            },
+            {
+              "label": "Consultation closing",
+              "answer": "28 March",
+              "placeholder": "Date"
+            }
+          ]
+        },
+        {
+          "id": "a2_pt_form",
+          "type": "FORM_FILLING",
+          "question": "Service triggers and access",
+          "fields": [
+            {
+              "label": "Wait-time trigger for Priority T",
+              "answer": "over 12 minutes",
+              "placeholder": "Threshold"
+            },
+            {
+              "label": "Rider helpline",
+              "answer": "2123 4488",
+              "placeholder": "Number"
+            },
+            {
+              "label": "Gate for gap filler works",
+              "answer": "Gate D",
+              "placeholder": "Location"
+            },
+            {
+              "label": "Northern interchange lifts (extension scenario)",
+              "answer": "3",
+              "placeholder": "Number"
+            }
+          ]
+        },
+        {
+          "id": "a3_pt_mcq",
+          "type": "MCQ_BATCH",
+          "label": "Fact vs Draft",
+          "questions": [
+            {
+              "question": "Which route length appears on outdated maps?",
+              "options": [
+                "A. 2.6 km",
+                "B. 2.8 km",
+                "C. 3.2 km",
+                "D. 3.0 km"
+              ],
+              "answer": "C"
+            },
+            {
+              "question": "Which budget figure is the withdrawn deck?",
+              "options": [
+                "A. 48 million",
+                "B. 45 million",
+                "C. 55 million",
+                "D. 42 million"
+              ],
+              "answer": "C"
+            }
+          ]
+        }
+      ]
+    },
+    "integrated_data": {
+      "audio_transcript": "[INTEGRATED BRIEFING START]\nTransport Commissioner: The LegCo paper must balance modal choice with air quality.\nEnvironmental Analyst: Correction: Priority T dispatches when average wait is over twelve minutes, not equal to twelve—boundary precision matters for auditors.\nAccessibility Advocate: The MTR extension option must budget for three new lifts at the northern interchange, not two as per last year's sketch.\nUrban Economist: Independent consultant Dr Marcus Thorpe signed off on the FTE comparison table—construction job estimates differ by eight thousand FTEs between scenarios; cite his name in LegCo footnotes.\nCommissioner: Live open-data feeds on shuttle punctuality must publish with at least a ninety-five percent uptime guarantee during trial months.\nCommunity Liaison: Night noise from overnight tunnelling studies cannot exceed fifty decibels at residential façades after ten p.m.\n[INTEGRATED BRIEFING END]",
+      "notetaking_fields": [
+        {
+          "id": "nt_service",
+          "label": "Service rules and thresholds",
+          "placeholder": "Capture Priority T, uptime, and boundary language..."
+        },
+        {
+          "id": "nt_infra",
+          "label": "Infrastructure and impacts",
+          "placeholder": "Note lifts, jobs data source, noise cap..."
+        },
+        {
+          "id": "nt_data",
+          "label": "Transparency and economics",
+          "placeholder": "Record open-data KPIs and consultant vs rumour figures..."
+        }
+      ],
+      "data_file": [
+        {
+          "id": "df_pt_email",
+          "title": "Internal Brief to LegCo",
+          "type": "email",
+          "content": "From: Transport Strategy Unit <strategy@td.gov.hk>\\nTo: LegCo Clerks\\nSubject: Harbour Loop Pilot + Extension Scenario\\n\\nPilot route: 2.8 km fenced corridor\\nShuttle cap: 25 km/h\\nBudget: HK$48M (withdraw HK$55M drafts)\\nConsultation closes 28 March 23:59\\nPriority T if average wait at Stop B >12 min (strictly over)."
+        },
+        {
+          "id": "df_trigger_brief",
+          "title": "Operations Trigger Sheet",
+          "type": "brief",
+          "content": "Priority T = diesel replacement buses when Stop B average wait over 12 minutes (not at exactly 12).\\nHelpline 2123 4488 (24h)\\nOpen-data feed uptime target >=95% during trial"
+        },
+        {
+          "id": "df_consult_schedule",
+          "title": "Consultation Window",
+          "type": "schedule",
+          "content": "Public forums: 6,14,22 March\\nOnline portal closes 28 Mar 23:59\\nNight noise limit: <=50 dB post-22:00 at residential façades during tunnelling studies"
+        }
+      ],
+      "writing_task": {
+        "instruction": "You are the Assistant Transport Analyst. Write a formal memo to the LegCo panel summarising pilot parameters, the corrected Priority T threshold language, open-data uptime expectations, and accessibility commitments at the interchange.",
+        "format": "Formal memo",
+        "role_profile": "Assistant government transport analyst writing to a legislative panel in formal public-sector register.",
+        "word_count": "200-250",
+        "marking_criteria": "Content, Language, Organization, Appropriacy"
+      },
+      "marking_key": [
+        "State pilot route 2.8 km, shuttle cap 25 km/h, budget HK$48 million (reject HK$55 million), consultation 28 March (reject 21 March).",
+        "Priority T threshold: replacement buses when average wait is over twelve minutes (not merely 'at twelve'—use strict comparator language).",
+        "Reference open-data punctuality feeds with at least ninety-five percent uptime during trial months.",
+        "Northern interchange accessibility: three new lifts in the MTR extension scenario (reject two-lift sketch).",
+        "Night noise: no more than fifty decibels at residential façades after 10:00 p.m. during tunnelling studies.",
+        "Use independent consultant figures for job FTE comparisons, not informal rumour estimates.",
+        "Name Dr Marcus Thorpe correctly as the independent consultant who signed off on the FTE comparison table (exact spelling required; this name is not in the Data Files).",
+        "[Audio synthesis — Integrated Briefing only] Report the eight thousand FTE construction jobs gap between the two modal scenarios as per Dr Thorpe's signed table.",
+        "[Audio synthesis — Integrated Briefing only] LegCo narrative must balance modal choice with air quality (Transport Commissioner framing).",
+        "[Audio synthesis — Integrated Briefing only] Community impact: night tunnelling study noise capped at fifty decibels at residential façades after 22:00 (stakeholder liaison line)."
+      ]
+    }
+  },
+  "listening_mission_18": {
+    "id": "listening_mission_18",
+    "title": "Wildlife Conservation",
+    "description": "Enforcing marine mammal protection rules for pink dolphins with distance, speed, and penalty clarity.",
+    "topic": "Environment",
+    "type": "listening_mission",
+    "paper": "Listening",
+    "subject": "English",
+    "level": "7",
+    "is_approved": true,
+    "factory_template": false,
+    "created_at": {
+      "_seconds": 1704068900,
+      "_nanoseconds": 0
+    },
+    "prediction_metadata": {
+      "topic_name": "North Lantau Marine Mammal Code",
+      "sub_topics": [
+        {
+          "id": "st1",
+          "name": "Approach distance",
+          "category": "Conservation",
+          "is_distractor": false,
+          "hint": "Older leaflets used a shorter metre line."
+        },
+        {
+          "id": "st2",
+          "name": "Speed through core zone",
+          "category": "Enforcement",
+          "is_distractor": false,
+          "hint": "Listen for under ten knots vs a faster cruising trap."
+        },
+        {
+          "id": "st3",
+          "name": "Aquaculture lease",
+          "category": "Adjacent policy",
+          "is_distractor": true,
+          "hint": "Mentioned as a separate consultation—not this code."
+        }
+      ]
+    },
+    "sprint_data": {
+      "audio_transcript": "[SCENE START]\n[Waves and engine throb]\nMarine Warden: Enforcement briefing for the North Lantau dolphin core zone.\nMarine Warden: Approach distance is one hundred metres for all powered vessels around dolphin clusters. Tourist leaflets from last year still say fifty—those are void.\nHarbour Pilot: Speed through the core polygon must stay under ten knots average. Fifteen was a rumour on a fishing forum—do not quote it.\nFleet Manager: Licensed tour boats carry maximum twenty-four passengers including guide. The thirty-person deck plan never received a permit.\nLegal Counsel: Repeat infringement fines can exceed twenty-five thousand dollars per incident after formal warning.\nMarine Warden: Mandatory reporting of harassment sightings to two double five five nine two six three.\nBiologist: Passive acoustic buoys rotate every fourteen days—volunteers must not tamper with housings.\nMarine Warden: Drone flights lower than one hundred twenty metres above water need AFCD waiver forms forty-eight hours ahead.\n[SCENE END]",
+      "tasks": [
+        {
+          "id": "a1_wild_table",
+          "type": "TABLE",
+          "label": "Marine Code Extract",
+          "rows": [
+            {
+              "label": "Minimum approach distance (powered craft)",
+              "answer": "100 metres",
+              "placeholder": "Distance"
+            },
+            {
+              "label": "Speed cap in core polygon",
+              "answer": "under 10 knots",
+              "placeholder": "Speed"
+            },
+            {
+              "label": "Licensed tour boat capacity (incl. guide)",
+              "answer": "24",
+              "placeholder": "Number"
+            },
+            {
+              "label": "Fine bracket (repeat infringement)",
+              "answer": "over HK$25,000",
+              "placeholder": "Amount"
+            }
+          ]
+        },
+        {
+          "id": "a2_wild_form",
+          "type": "FORM_FILLING",
+          "question": "Reporting and drones",
+          "fields": [
+            {
+              "label": "Harassment reporting hotline",
+              "answer": "2555 9263",
+              "placeholder": "Number"
+            },
+            {
+              "label": "Acoustic buoy swap cycle",
+              "answer": "14 days",
+              "placeholder": "Interval"
+            },
+            {
+              "label": "Drone altitude needing waiver (below)",
+              "answer": "120 metres",
+              "placeholder": "Altitude"
+            },
+            {
+              "label": "Waiver lead time",
+              "answer": "48 hours",
+              "placeholder": "Duration"
+            }
+          ]
+        },
+        {
+          "id": "a3_wild_mcq",
+          "type": "MCQ_BATCH",
+          "label": "Compliance",
+          "questions": [
+            {
+              "question": "Which approach distance is obsolete on old leaflets?",
+              "options": [
+                "A. 100 m",
+                "B. 75 m",
+                "C. 50 m",
+                "D. 150 m"
+              ],
+              "answer": "C"
+            },
+            {
+              "question": "Which vessel capacity was never permitted?",
+              "options": [
+                "A. 20 pax",
+                "B. 24 pax",
+                "C. 30 pax",
+                "D. 18 pax"
+              ],
+              "answer": "C"
+            }
+          ]
+        }
+      ]
+    },
+    "integrated_data": {
+      "audio_transcript": "[INTEGRATED BRIEFING START]\nAFCD Director: The international press kit must emphasise science-led management.\nResearch Lead: Corrections: a 'near miss' within fifty metres still counts as a violation even if engines were idling—intent does not excuse distance.\nLegal: Cross-boundary leisure craft must carry printed bilingual code cards; digital-only PDF on phone is supplementary, not replacement.\nCoast Guard Liaison: Night patrols use thermal imaging after eight p.m.; false flare reports trigger Code Violet lockdown of the jetty.\nEducation Officer: KPI: ninety-two percent of tour operators pass the refresher quiz before peak season permits renew.\nNGO Rep: Volunteer spotters must log GPS tracks on the official app—paper log sheets are backup-only.\n[INTEGRATED BRIEFING END]",
+      "notetaking_fields": [
+        {
+          "id": "nt_enforcement",
+          "label": "Distance and penalties",
+          "placeholder": "Capture violation definition, fines, and night ops..."
+        },
+        {
+          "id": "nt_ops",
+          "label": "Operators and reporting",
+          "placeholder": "Note quiz KPI, bilingual cards, app-primary logging..."
+        },
+        {
+          "id": "nt_incident",
+          "label": "Incident codes",
+          "placeholder": "Record Code Violet trigger context..."
+        }
+      ],
+      "data_file": [
+        {
+          "id": "df_code_email",
+          "title": "AFCD Code Summary",
+          "type": "email",
+          "content": "From: AFCD Marine Unit <marine@afcd.gov.hk>\\nTo: Licensed Operators\\nSubject: Pink Dolphin Core Zone 2026\\n\\nApproach: 100 m (powered).\\nSpeed: under 10 knots average in polygon.\\nPax cap: 24 incl. guide.\\nRepeat fines can exceed HK$25,000 after warning.\\nHotline 2555 9263."
+        },
+        {
+          "id": "df_notice_water",
+          "title": "On-Water Notice",
+          "type": "notice",
+          "content": "Protect pink dolphins\\nSlow down – core zone speed under 10 knots\\nKeep 100 m from clusters\\nHarassment? Call 2555 9263\\nTour boats max 24 pax"
+        },
+        {
+          "id": "df_drone_brief",
+          "title": "Drone & Patrol Brief",
+          "type": "brief",
+          "content": "Drones <120 m AGL need 48h AFCD waiver\\nThermal night patrols from 20:00\\nCode Violet: false flare -> jetty lockdown\\nOperator quiz pass: 92%+ KPI before permit renewals"
+        }
+      ],
+      "writing_task": {
+        "instruction": "You are the Marine Conservation Outreach Officer. Write a formal memo to the Port Management Board summarising enforcement parameters, operator compliance KPIs, and primary-versus-backup reporting channels for sightings.",
+        "format": "Formal memo",
+        "role_profile": "Government marine conservation outreach officer writing to port authorities in formal environmental compliance register.",
+        "word_count": "220-280",
+        "marking_criteria": "Content, Language, Organization, Appropriacy"
+      },
+      "marking_key": [
+        "State one-hundred-metre approach for powered craft (reject fifty-metre leaflets); speed under ten knots in core polygon (reject fifteen knots rumour).",
+        "Tour boat capacity twenty-four including guide (reject thirty-person plan).",
+        "Repeat infringement fines can exceed HK$25,000; include currency style (HK$ or dollars).",
+        "Clarify that proximity within fifty metres is still a violation without acceptable excuse from idling versus moving.",
+        "Bilingual printed code cards are required; phone PDF is supplementary only.",
+        "KPI: ninety-two percent of operators pass refresher quiz before permit renewal.",
+        "GPS logging on official app is primary; paper logs backup-only.",
+        "Mention Code Violet jetty lockdown when false flare reports occur (thermal patrol context).",
+        "[Audio synthesis — Integrated Briefing only] The international press kit must emphasise science-led management of marine mammals (AFCD Director).",
+        "[Audio synthesis — Integrated Briefing only] A \"near miss\" within fifty metres counts as a violation even if engines were only idling—intent does not excuse distance (Research Lead correction).",
+        "[Audio synthesis — Integrated Briefing only] Cross-boundary leisure craft must carry printed bilingual code cards; a digital PDF on a phone is supplementary, not a replacement (Legal)."
+      ]
+    }
+  },
+  "listening_mission_19": {
+    "id": "listening_mission_19",
+    "title": "Literature & Coffee",
+    "description": "Launching a Book Café pop-up at the community centre with seating limits, literacy programmes, and budget controls.",
+    "topic": "Culture",
+    "type": "listening_mission",
+    "paper": "Listening",
+    "subject": "English",
+    "level": "5",
+    "is_approved": true,
+    "factory_template": false,
+    "created_at": {
+      "_seconds": 1704069000,
+      "_nanoseconds": 0
+    },
+    "sprint_data": {
+      "audio_transcript": "[SCENE START]\n[Coffee grinder and shelving noise]\nCentre Manager: Book Café pilot one month out—lock these numbers.\nCentre Manager: Soft opening moves to fifteenth April, not first April, because fire-safety signage slips arrived late.\nFacilities: Licensed café seating is thirty-two chairs after the inspection, not forty on the architect render.\nProgramme Lead: Story-time for children runs ten thirty a.m. weekdays; teen reading lounge opens three p.m. to eight p.m.\nBarista Contractor: Bean deliveries Tuesday and Friday seven a.m.; cold-chain log mandatory.\nFinance: Seed grant confirmed at eighty-five thousand dollars—retire the one hundred thousand concept deck.\nVolunteer Lead: Literacy mentors: eighteen scheduled, we still need four more for Vietnamese new arrivals.\nCentre Manager: Complaints desk extension two six one eight double four one.\n[SCENE END]",
+      "tasks": [
+        {
+          "id": "a1_book_table",
+          "type": "TABLE",
+          "label": "Book Café Snapshot",
+          "rows": [
+            {
+              "label": "Soft opening date",
+              "answer": "15 April",
+              "placeholder": "Date"
+            },
+            {
+              "label": "Licensed seating capacity",
+              "answer": "32",
+              "placeholder": "Number"
+            },
+            {
+              "label": "Seed grant (confirmed)",
+              "answer": "85,000",
+              "placeholder": "Amount"
+            },
+            {
+              "label": "Teen lounge closes",
+              "answer": "8:00 p.m.",
+              "placeholder": "Time"
+            }
+          ]
+        },
+        {
+          "id": "a2_book_form",
+          "type": "FORM_FILLING",
+          "question": "Programme and supply",
+          "fields": [
+            {
+              "label": "Children's story-time (weekdays)",
+              "answer": "10:30 a.m.",
+              "placeholder": "Time"
+            },
+            {
+              "label": "Bean delivery mornings",
+              "answer": "Tuesday and Friday 7:00 a.m.",
+              "placeholder": "Schedule"
+            },
+            {
+              "label": "Literacy mentors confirmed",
+              "answer": "18",
+              "placeholder": "Number"
+            },
+            {
+              "label": "Mentor shortfall",
+              "answer": "4",
+              "placeholder": "Number"
+            }
+          ]
+        },
+        {
+          "id": "a3_book_mcq",
+          "type": "MCQ_BATCH",
+          "label": "Facts vs Concepts",
+          "questions": [
+            {
+              "question": "Which opening date is the obsolete render?",
+              "options": [
+                "A. 1 April",
+                "B. 15 April",
+                "C. 20 April",
+                "D. 8 April"
+              ],
+              "answer": "A"
+            },
+            {
+              "question": "Which seed figure belongs in the rejected deck?",
+              "options": [
+                "A. 85,000",
+                "B. 75,000",
+                "C. 100,000",
+                "D. 90,000"
+              ],
+              "answer": "C"
+            }
+          ]
+        }
+      ]
+    },
+    "integrated_data": {
+      "audio_transcript": "[INTEGRATED BRIEFING START]\nLibrary Director: We need a dignified line on elders' reading needs.\nFinance Lead Julianne Kwok has countersigned the HK$85,000 seed release—reference her by name in formal correspondence.\nAccessibility Officer: Large-print shelf must occupy the sunlit west bay, not the basement humid corner.\nYouth Worker: Peer 'read-aloud' pairs target eighty participant-hours in the first fortnight—tracked on the literacy app.\nGrants Desk: Any catering cross-subsidy from meal sales cannot exceed fifteen percent of book-merch revenue without board vote.\nDirector: Saturday multilingual poetry slam uses headset interpretation for Putonghua and Urdu channels simultaneously.\nVolunteer Rep: Child safeguarding refresher is mandatory for anyone story-leading under sixteens—no grandfathering.\n[INTEGRATED BRIEFING END]",
+      "notetaking_fields": [
+        {
+          "id": "nt_access",
+          "label": "Accessibility and safeguarding",
+          "placeholder": "Note large-print zone, child safety, interpretation..."
+        },
+        {
+          "id": "nt_impact",
+          "label": "Literacy impact and finance",
+          "placeholder": "Record participant-hours KPI and revenue guardrails..."
+        },
+        {
+          "id": "nt_events",
+          "label": "Public programme highlights",
+          "placeholder": "Capture poetry slam, story-time, and delivery slots..."
+        }
+      ],
+      "data_file": [
+        {
+          "id": "df_book_itin",
+          "title": "Week-One Programme Grid",
+          "type": "itinerary",
+          "content": "Mon-Fri 10:30 Story-time\\n15:00-20:00 Teen lounge\\nSat Poetry slam (headsets)\\nBean delivery Tue/Fri 07:00\\nLarge-print west bay priority"
+        },
+        {
+          "id": "df_budget_slice",
+          "title": "Seed Grant Use (Draft)",
+          "type": "budget_table",
+          "content": "Total seed: HK$85,000 (do not circulate HK$100,000 mock-up)\\nCatering cross-subsidy cap: <=15% of book-merch revenue unless board vote\\nLiteracy KPI: 80 participant-hours (app-tracked) in first fortnight"
+        },
+        {
+          "id": "df_patron_faq",
+          "title": "Patron FAQ",
+          "type": "faq",
+          "content": "Q: Seating count?\\nA: 32 chairs licensed post-inspection.\\nQ: Where is large print?\\nA: West bay (sunlit), not basement.\\nQ: Story leaders?\\nA: Child safeguarding refresher mandatory."
+        }
+      ],
+      "writing_task": {
+        "instruction": "You are the Community Programmes Secretary. Write a formal memo to the Centre Management Committee summarising launch facts, literacy impact targets, financial guardrails, and accessibility commitments.",
+        "format": "Formal memo",
+        "role_profile": "Community centre programmes secretary writing to a management committee in formal community-governance register.",
+        "word_count": "200-250",
+        "marking_criteria": "Content, Language, Organization, Appropriacy"
+      },
+      "marking_key": [
+        "State soft opening 15 April (reject 1 April) and licensed seating thirty-two (reject forty).",
+        "Seed grant HK$85,000 or 85,000 dollars (reject HK$100,000 concept deck)—include currency or unit wording.",
+        "Literacy KPI: eighty participant-hours in first fortnight on the literacy app.",
+        "Catering cross-subsidy from meals capped at fifteen percent of book-merch revenue unless board votes otherwise.",
+        "Large-print collection in west sunlit bay, not basement humid corner.",
+        "Saturday poetry slam with headset interpretation for Putonghua and Urdu.",
+        "Mandatory child-safeguarding refresher for story leaders working with under-sixteens.",
+        "Complaints line 2618 441 for operational issues.",
+        "Name Julianne Kwok correctly as Finance Lead who countersigned the HK$85,000 seed release (exact spelling; this name appears only in the Integrated Briefing).",
+        "[Audio synthesis — Integrated Briefing only] Library Director mandates respectful, dignified messaging on older adults' reading needs—not tokenistic or patronising copy.",
+        "[Audio synthesis — Integrated Briefing only] Safeguarding refresher has no grandfathering: anyone leading stories for under-sixteens must complete it (Volunteer Rep).",
+        "[Audio synthesis — Integrated Briefing only] Saturday multilingual poetry slam uses simultaneous headset interpretation for Putonghua and Urdu (Director)."
+      ]
+    }
+  },
+  "listening_mission_20": {
+    "id": "listening_mission_20",
+    "title": "Dim Sum Heritage",
+    "description": "Recording oral histories of tea-house culture with interview schedules, archive deposits, and respectful framing.",
+    "topic": "Culture",
+    "type": "listening_mission",
+    "paper": "Listening",
+    "subject": "English",
+    "level": "4",
+    "is_approved": true,
+    "factory_template": false,
+    "created_at": {
+      "_seconds": 1704069100,
+      "_nanoseconds": 0
+    },
+    "sprint_data": {
+      "audio_transcript": "[SCENE START]\n[Teacups clinking, soft Cantonese chatter]\nCurator: Dim Sum Living Archive field day—update your clip logs.\nCurator: Master Chan interview block starts two thirty p.m. at Old Tea House Lane, not three p.m. as circulated yesterday.\nSound Engineer: We record at forty-eight kilohertz with a twenty decibel noise floor ceiling in the dining hall.\nOral Historian: Each session allows maximum fifteen participants including translators to protect elders' energy.\nArchivist: Deposit deadline for uncompressed audio and transcripts is thirtieth June to the City Oral History Vault.\nFinance: Documentary stipend locked at eighteen thousand dollars—not twenty-two thousand on the student reel budget.\nVolunteer Lead: Dim sum trolley restoration demo runs Sunday eleven a.m.; steam safety gloves mandatory.\nCurator: Media accreditation tags must be visible after ten a.m.—security Policy B.\n[SCENE END]",
+      "tasks": [
+        {
+          "id": "a1_dim_table",
+          "type": "TABLE",
+          "label": "Field Day Facts",
+          "rows": [
+            {
+              "label": "Master Chan interview start",
+              "answer": "2:30 p.m.",
+              "placeholder": "Time"
+            },
+            {
+              "label": "Interview venue",
+              "answer": "Old Tea House Lane",
+              "placeholder": "Location"
+            },
+            {
+              "label": "Participants per session (max)",
+              "answer": "15",
+              "placeholder": "Number"
+            },
+            {
+              "label": "Archive deposit deadline",
+              "answer": "30 June",
+              "placeholder": "Date"
+            }
+          ]
+        },
+        {
+          "id": "a2_dim_form",
+          "type": "FORM_FILLING",
+          "question": "Technical and budget",
+          "fields": [
+            {
+              "label": "Recording sample rate",
+              "answer": "48 kHz",
+              "placeholder": "Spec"
+            },
+            {
+              "label": "Hall noise floor ceiling",
+              "answer": "20 dB",
+              "placeholder": "Level"
+            },
+            {
+              "label": "Documentary stipend (approved)",
+              "answer": "18,000",
+              "placeholder": "Amount"
+            },
+            {
+              "label": "Trolley demo (Sunday)",
+              "answer": "11:00 a.m.",
+              "placeholder": "Time"
+            }
+          ]
+        },
+        {
+          "id": "a3_dim_mcq",
+          "type": "MCQ_BATCH",
+          "label": "Heritage Literacy",
+          "questions": [
+            {
+              "question": "Which interview time was wrongly circulated?",
+              "options": [
+                "A. 2:15 p.m.",
+                "B. 2:30 p.m.",
+                "C. 3:00 p.m.",
+                "D. 3:30 p.m."
+              ],
+              "answer": "C"
+            },
+            {
+              "question": "Which stipend figure is obsolete?",
+              "options": [
+                "A. 18,000",
+                "B. 16,000",
+                "C. 22,000",
+                "D. 20,000"
+              ],
+              "answer": "C"
+            }
+          ]
+        }
+      ]
+    },
+    "integrated_data": {
+      "audio_transcript": "[INTEGRATED BRIEFING START]\nMuseum Director: UNESCO pathway language must be careful—we document craft, not claim inscription yet.\nLead Curator Janice Wong co-chairs the UNESCO language review panel with Master Chan; cite her name accurately in every committee memo.\nEthnographer: Obtain two independent elder consent signatures plus family witness for broadcast excerpts.\nLegal: Translation budget prioritises Hakka idiom glossaries for steam-basket terminology before English subtitles go live.\nDirector: Exhibited photographs blur chain-brand logos unless heritage release forms exist.\nOutreach: School matinee shuttle picks up at nine fifteen a.m. from Central Pier eight—not seven forty-five on the draft flyer.\nDirector: KPI: ninety-four percent of recorded minutes receive timestamp metadata within forty-eight hours of capture.\n[INTEGRATED BRIEFING END]",
+      "notetaking_fields": [
+        {
+          "id": "nt_ethics",
+          "label": "Consent and UNESCO framing",
+          "placeholder": "Note dual consent, trademark blurbs, craft vs claim..."
+        },
+        {
+          "id": "nt_logistics",
+          "label": "Outreach and metadata",
+          "placeholder": "Shuttle time, translation priority, KPI on timestamps..."
+        }
+      ],
+      "data_file": [
+        {
+          "id": "df_recording_schedule",
+          "title": "Recording Day Schedule",
+          "type": "schedule",
+          "content": "09:00 Setup\\n10:00 Media badges Policy B\\n14:30 Elder interview Chan\\n17:00 Archive backup\\nSun 11:00 Trolley steam demo (gloves)"
+        },
+        {
+          "id": "df_archive_minutes",
+          "title": "Archive Committee Snippet",
+          "type": "minutes",
+          "content": "Deposit: uncompressed WAV + transcript by 30 Jun to City Oral History Vault\\nStipend HK$18,000 locked (not HK$22k)\\nBroadcast excerpts need dual elder consent + family witness"
+        },
+        {
+          "id": "df_heritage_poster",
+          "title": "Public Poster",
+          "type": "poster",
+          "content": "DIM SUM LIVING MEMORY\\nListen. Record. Preserve.\\nSessions capped at 15 (incl. interpreters)\\nSchool shuttle Central Pier 8 departs 09:15 sharp"
+        }
+      ],
+      "writing_task": {
+        "instruction": "You are the Heritage Project Graduate Assistant. Write a formal memo to the Museum Director summarising consent rules, archive deposit facts, translation priorities, and the school shuttle correction for matinee visitors.",
+        "format": "Formal memo",
+        "role_profile": "Museum heritage graduate assistant writing to a museum director in formal cultural-sector register.",
+        "word_count": "190-240",
+        "marking_criteria": "Content, Language, Organization, Appropriacy"
+      },
+      "marking_key": [
+        "Frame UNESCO narrative as documentation of craft heritage, not claiming inscription (careful wording).",
+        "Broadcast excerpts require two independent elder consents plus family witness.",
+        "Translation budget prioritises Hakka idiom glossaries for steam-basket terms before English subtitles.",
+        "Exhibition photos blur modern chain logos unless release forms exist.",
+        "School matinee shuttle: 9:15 a.m. from Central Pier 8 (reject 7:45 a.m. draft).",
+        "KPI: ninety-four percent of audio minutes timestamped within forty-eight hours of capture.",
+        "State archive deposit 30 June with uncompressed audio and transcripts to City Oral History Vault.",
+        "Documentary stipend HK$18,000 or 18,000 dollars (reject HK$22,000 student reel).",
+        "Name Janice Wong correctly as Lead Curator co-chairing the UNESCO language review with Master Chan (exact spelling; stated only in the Integrated Briefing).",
+        "[Audio synthesis — Integrated Briefing only] UNESCO narrative documents intangible craft heritage without claiming World Heritage inscription yet (Museum Director).",
+        "[Audio synthesis — Integrated Briefing only] Translation priority: Hakka idiom glossaries for steam-basket terminology must precede English subtitle release (Legal).",
+        "[Audio synthesis — Integrated Briefing only] Brand ethics: blur modern chain logos in exhibition unless a heritage release form exists (Director)."
+      ]
+    }
+  }
+}

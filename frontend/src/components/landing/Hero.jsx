@@ -62,10 +62,12 @@ const Hero = () => {
                                 {t('landing.start_journey')}
                                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                             </button>
+                            {/* 
                             <button className="w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-4 bg-white dark:bg-white/5 text-gray-700 dark:text-white border border-gray-200 dark:border-white/10 rounded-full font-bold text-lg hover:bg-gray-50 dark:hover:bg-white/10 transition-all active:scale-95">
                                 <PlayCircle className="w-5 h-5" />
                                 {t('landing.watch_demo')}
                             </button>
+                            */}
                         </div>
                     </div>
 

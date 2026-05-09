@@ -1,5 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { loadStripe } from '@stripe/stripe-js';
+import { Elements } from '@stripe/react-stripe-js';
 import { AvatarProvider } from './context/AvatarContext';
 import { AuthProvider } from './context/AuthContext';
 import { LanguageProvider } from './context/LanguageContext';
@@ -65,19 +67,27 @@ import AccountPage from './pages/AccountPage';
 import ErrorBoundary from './components/ErrorBoundary';
 
 import ScrollToTop from './components/utils/ScrollToTop';
+import AnalyticsTracker from './components/utils/AnalyticsTracker';
+import OrientationGuard from './components/utils/OrientationGuard';
 
 import SubscriptionPage from './pages/SubscriptionPage';
 import FeaturesPage from './pages/FeaturesPage.jsx';
 
+// Initialize Stripe
+const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY || 'pk_test_placeholder');
+
 function App() {
   return (
     <ErrorBoundary>
-      <AuthProvider>
+      <Elements stripe={stripePromise}>
+        <AuthProvider>
         <LanguageProvider>
         <HeaderProvider>
           <AvatarProvider>
             <BrowserRouter>
               <ScrollToTop />
+              <AnalyticsTracker />
+              <OrientationGuard />
               <Routes>
                 <Route
                   path="/subscription"
@@ -115,7 +125,11 @@ function App() {
                 />
                 <Route
                   path="/login"
-                  element={<LoginPage />}
+                  element={
+                    <MainLayout fullWidth={true}>
+                      <LoginPage />
+                    </MainLayout>
+                  }
                 />
                 <Route
                   path="/"
@@ -123,7 +137,7 @@ function App() {
                 />
                 <Route
                   path="/features"
-                  element={<FeaturesPage />}
+                  element={<Navigate to="/?section=features" replace />}
                 />
                 <Route
                   path="/verify-success"
@@ -649,6 +663,7 @@ function App() {
         </HeaderProvider>
         </LanguageProvider>
       </AuthProvider>
+      </Elements>
     </ErrorBoundary>
   );
 }

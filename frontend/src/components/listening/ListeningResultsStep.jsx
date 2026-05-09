@@ -1,13 +1,13 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { 
-    Layers, Zap, Star, AlertCircle, MessageSquare, 
+    Layers, Zap, AlertCircle, MessageSquare, 
     ChevronRight, X, RefreshCw, Volume2, PlayCircle,
     CheckCircle, ListChecks, FileText, Layout,
     MinusCircle, PenTool, Award, Trophy, Home, RotateCcw
 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
-const ListeningResultsStep = ({ results, audioSrc, mode, level, marginalXP, prevBestScore, onRetry, onMoveToPartB }) => {
+const ListeningResultsStep = ({ results, audioSrc, mode, level, marginalXP, prevBestScore, onMoveToPartB }) => {
     const navigate = useNavigate();
     const [activeTab, setActiveTab] = useState('student'); // For Part B exemplars
     const [playingSegment, setPlayingSegment] = useState(null); // id of playing segment
@@ -119,7 +119,7 @@ const ListeningResultsStep = ({ results, audioSrc, mode, level, marginalXP, prev
                         </div>
                         <h2 className="text-4xl font-black mb-1 tracking-tight">MISSION ACCOMPLISHED</h2>
                         <p className="text-slate-400 font-bold mb-6 italic text-sm">
-                            {isPartA ? 'Part A: The Data Sprint' : 'Part B: Integrated Simulation'}
+                            {isPartA ? 'Part A: The Data Sprint' : 'Part B: Integrated Skills'}
                         </p>
 
                         <div className="flex flex-wrap items-center justify-center md:justify-start gap-3">
@@ -306,8 +306,7 @@ const ListeningResultsStep = ({ results, audioSrc, mode, level, marginalXP, prev
                             <div className="bg-white border-b border-white/5 flex p-2 gap-2">
                                 {[
                                     { id: 'student', label: 'Your Draft', icon: PenToolCustom },
-                                    { id: 'grade5', label: 'Grade 5 Exemplar', icon: Award },
-                                    { id: 'grade5SS', label: 'Grade 5** Elite', icon: Star }
+                                    { id: 'grade5', label: 'Grade 5 Exemplar', icon: Award }
                                 ].map(tab => (
                                     <button
                                         key={tab.id}
@@ -328,14 +327,12 @@ const ListeningResultsStep = ({ results, audioSrc, mode, level, marginalXP, prev
                                     <div className="prose prose-sm prose-invert max-w-none">
                                         <h3 className="text-amber-400 font-black uppercase text-xs mb-8 tracking-widest border-b border-white/10 pb-4">
                                             {activeTab === 'student' ? 'Mission Transcript: Student Submission' : 
-                                             activeTab === 'grade5' ? 'HKEAA Benchmark: Level 5 High Standard' : 
-                                             'Mission Masterclass: Level 5** Elite Integration'}
+                                             'HKEAA Benchmark: Level 5 High Standard'}
                                         </h3>
                                         
                                         <p className="text-slate-100 font-bold text-lg leading-[1.8] whitespace-pre-wrap">
                                             {activeTab === 'student' ? (results?.studentDraft || "No submission text found.") : 
-                                             activeTab === 'grade5' ? (results?.exemplar5 || "Model answer generating...") : 
-                                             (results?.exemplar5SS || "Grade 5** mission exemplar loading...")}
+                                             (results?.exemplar5 || "Model answer generating...")}
                                         </p>
                                     </div>
                                     
@@ -359,37 +356,32 @@ const ListeningResultsStep = ({ results, audioSrc, mode, level, marginalXP, prev
 
             {/* Mission Actions Footer */}
             <div className="mt-16 flex flex-col items-center gap-8 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-500 fill-mode-both">
-                <div className="flex flex-wrap justify-center gap-4 w-full max-w-2xl px-6">
-                    {isPartA && (
+                {isPartA && (
+                    <div className="flex flex-wrap justify-center gap-4 w-full max-w-2xl px-6">
                         <button 
                             onClick={onMoveToPartB}
                             className="flex-1 min-w-[200px] bg-slate-900 text-white rounded-2xl py-5 px-8 font-black text-sm uppercase tracking-widest hover:bg-black hover:scale-105 transition-all shadow-xl flex items-center justify-center gap-3"
                         >
                             <Layers size={18} /> Proceed to Part B
                         </button>
-                    )}
-                    
-                    <button 
-                        onClick={onRetry}
-                        className="flex-1 min-w-[200px] bg-white border-2 border-slate-100 text-slate-600 rounded-2xl py-5 px-8 font-black text-sm uppercase tracking-widest hover:bg-slate-50 transition-all shadow-sm flex items-center justify-center gap-3"
-                    >
-                        <RefreshCw size={18} /> Restart Simulation
-                    </button>
-                </div>
+                    </div>
+                )}
 
-                <div className="flex items-center gap-6">
+                <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
                     <button 
+                        type="button"
                         onClick={() => navigate('/dashboard')}
-                        className="text-xs font-black text-slate-400 uppercase tracking-widest hover:text-indigo-600 transition-colors flex items-center gap-2"
+                        className="text-sm font-black text-[#F1783B] uppercase tracking-widest hover:text-[#d96520] transition-colors flex items-center gap-2 underline-offset-4 hover:underline"
                     >
-                        <Home size={14} /> Back to Dashboard
+                        <Home size={16} className="text-[#F1783B]" strokeWidth={2.5} /> Back to Dashboard
                     </button>
-                    <div className="w-1.5 h-1.5 bg-slate-200 rounded-full"></div>
+                    <div className="w-1.5 h-1.5 bg-slate-300 rounded-full shrink-0" aria-hidden />
                     <button 
-                        onClick={() => navigate('/dashboard')} // In a real roadmap, this would trigger the RoadmapModal
-                        className="text-xs font-black text-slate-400 uppercase tracking-widest hover:text-indigo-600 transition-colors flex items-center gap-2"
+                        type="button"
+                        onClick={() => navigate('/dashboard')}
+                        className="text-sm font-black text-slate-800 uppercase tracking-widest hover:text-indigo-700 transition-colors flex items-center gap-2 underline-offset-4 hover:underline"
                     >
-                        <ChevronRight size={14} /> Try next Quest
+                        <ChevronRight size={16} className="text-indigo-600" strokeWidth={2.5} /> Try next Quest
                     </button>
                 </div>
 

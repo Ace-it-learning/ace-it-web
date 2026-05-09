@@ -18,6 +18,7 @@ import MockCountdownTimer from '../components/utils/MockCountdownTimer';
 import { useLanguage } from '../context/LanguageContext';
 import { useAvatar } from '../context/AvatarContext';
 import { motion, Reorder } from 'framer-motion';
+import { isCheatEnabled } from '../utils/devAccess';
 
 // --- Dictionary Popover Component ---
 const DictionaryPopover = ({ data, position, onClose, onAddToNotebook, loading }) => {
@@ -444,7 +445,7 @@ const OrderingTask = ({ task, value, onChange, disabled }) => {
 const LabPage = () => {
     const [searchParams, setSearchParams] = useSearchParams();
     const navigate = useNavigate();
-    const { user } = useAuth();
+    const { user, profile } = useAuth();
     const { t, language } = useLanguage();
 
     // Alert State
@@ -937,33 +938,82 @@ const LabPage = () => {
     const handleCheat = async (targetLevel) => {
         setIsSubmitting(true);
         try {
-            const res = await fetch(`${API_URL}/api/lab/cheat`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    tasks: lessonData.interactive_tasks,
-                    level: targetLevel,
-                    uid: user?.uid,
-                    passage: lessonData.reading_passage
-                })
+            // Local-only cheat mode: never call AI, use model answers embedded in task JSON.
+            const toOptionKey = (raw) => {
+                if (raw === null || raw === undefined) return '';
+                const text = String(raw).trim();
+                if (!text) return '';
+                const m = text.match(/^([A-D])(?:[\.\)]|\s|$)/i);
+                if (m) return m[1].toUpperCase();
+                if (/^[A-D]$/i.test(text)) return text.toUpperCase();
+                return text;
+            };
+
+            const toOrderingAnswer = (task) => {
+                const candidate = task?.answer_order || task?.correct_order || task?.answer || task?.correct_answer;
+                if (!candidate) return '';
+                if (Array.isArray(candidate)) {
+                    if (candidate.every(v => typeof v === 'number')) return candidate.join('-');
+                    const options = Array.isArray(task?.options) ? task.options : [];
+                    const indices = candidate.map(v => {
+                        const idx = options.findIndex(opt => String(opt).trim() === String(v).trim());
+                        return idx >= 0 ? idx : v;
+                    });
+                    return indices.join('-');
+                }
+                return String(candidate);
+            };
+
+            const toCategorizationAnswer = (task) => {
+                const candidate = task?.answer_map || task?.bucket_map || task?.correct_answer || task?.answer;
+                if (candidate && typeof candidate === 'object' && !Array.isArray(candidate)) return candidate;
+                return {};
+            };
+
+            const toTextAnswer = (task) => {
+                const candidate = task?.answer ?? task?.correct_answer ?? task?.model_answer;
+                if (Array.isArray(candidate)) return candidate.join('; ');
+                if (candidate !== undefined && candidate !== null && String(candidate).trim()) return String(candidate);
+                if (Array.isArray(task?.expected_keywords) && task.expected_keywords.length) return task.expected_keywords.join(', ');
+                return '';
+            };
+
+            const cheatedAnswers = {};
+            const tasks = Array.isArray(lessonData?.interactive_tasks) ? lessonData.interactive_tasks : [];
+
+            tasks.forEach((task) => {
+                if (!task?.id) return;
+                const type = String(task.type || '').toUpperCase();
+                if (type === 'MCQ') {
+                    cheatedAnswers[task.id] = toOptionKey(task?.answer ?? task?.correct_answer);
+                } else if (type === 'ORDERING') {
+                    cheatedAnswers[task.id] = toOrderingAnswer(task);
+                } else if (type === 'CATEGORIZATION') {
+                    cheatedAnswers[task.id] = toCategorizationAnswer(task);
+                } else {
+                    cheatedAnswers[task.id] = toTextAnswer(task);
+                }
             });
-            if (!res.ok) {
-                const errData = await res.json();
-                throw new Error(errData.error || "Cheat failed");
+
+            // Grammar Boss Fight compatibility
+            if (lessonData?.boss_fight?.errors && Array.isArray(lessonData.boss_fight.errors)) {
+                lessonData.boss_fight.errors.forEach((err, idx) => {
+                    cheatedAnswers[`boss_${idx}_orig`] = err?.original || '';
+                    cheatedAnswers[`boss_${idx}_corr`] = err?.correction || '';
+                });
             }
-            const cheatedAnswers = await res.json();
+
             if (Object.keys(cheatedAnswers).length === 0) {
-                showAlert('info', "Cheat generated no answers. This can happen if the AI times out. Please try again.");
+                showAlert('info', "No model answers found in local JSON for this quest.");
+            } else {
+                setUserAnswers(prev => ({ ...prev, ...cheatedAnswers }));
+                if (targetLevel === '7') {
+                    showAlert('success', "5** cheat applied from local model answers (no AI call).");
+                }
             }
-            setUserAnswers(prev => ({ ...prev, ...cheatedAnswers }));
         } catch (e) {
             console.error("Cheat Error:", e);
-            const isNetworkError = e.message === 'Failed to fetch' || e.message.includes('NetworkError');
-            if (isNetworkError) {
-                showAlert('network', "Failed to connect to the server. Please check your internet connection.");
-            } else {
-                showAlert('error', `Cheat failed: ${e.message}`);
-            }
+            showAlert('error', `Cheat failed: ${e.message}`);
         } finally {
             setIsSubmitting(false);
         }
@@ -1009,24 +1059,40 @@ const LabPage = () => {
         setHasErrors(false);
 
         try {
-            // AI Powered Evaluation
-            const res = await fetch(`${API_URL}/api/lab/evaluate_batch`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    tasks: lessonData.interactive_tasks,
-                    answers: userAnswers,
-                    uid: user?.uid || 'placeholder',
-                    category: lessonData.type,
-                    isFactoryQuest
-                })
-            });
+            const interactiveTasks = Array.isArray(lessonData?.interactive_tasks)
+                ? lessonData.interactive_tasks
+                : [];
 
-            if (!res.ok) {
-                const errData = await res.json();
-                throw new Error(errData.error || "Evaluation failed");
+            // Grammar labs score locally (identify/drill/boss); `interactive_tasks` is often [].
+            // Calling evaluate_batch with an empty task list still hits the model and may return invalid JSON → stuck on PRACTICE.
+            let aiFeedbacks = {};
+            if (interactiveTasks.length === 0) {
+                aiFeedbacks = {};
+            } else {
+                const res = await fetch(`${API_URL}/api/lab/evaluate_batch`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        tasks: interactiveTasks,
+                        answers: userAnswers,
+                        uid: user?.uid || 'placeholder',
+                        category: lessonData.type,
+                        isFactoryQuest
+                    })
+                });
+
+                if (!res.ok) {
+                    let errMsg = 'Evaluation failed';
+                    try {
+                        const errData = await res.json();
+                        errMsg = errData.error || errMsg;
+                    } catch {
+                        /* non-JSON error body */
+                    }
+                    throw new Error(errMsg);
+                }
+                aiFeedbacks = await res.json();
             }
-            const aiFeedbacks = await res.json();
 
             setFeedbacks(aiFeedbacks);
 
@@ -1062,8 +1128,8 @@ const LabPage = () => {
                 correctCount = idCorrect + drillCorrect + bossCorrect;
             } else {
                 // Standard Lab Logic
-                totalCount = lessonData.interactive_tasks?.length || 1;
-                lessonData.interactive_tasks?.forEach(t => {
+                totalCount = interactiveTasks.length || 1;
+                interactiveTasks.forEach(t => {
                     const f = aiFeedbacks[t.id];
                     const isCorrect = f && (f.status === 'correct' || f.correct === true);
                     const isPartial = f && f.status === 'partial';
@@ -1097,7 +1163,7 @@ const LabPage = () => {
             setMasteryScore(calculatedMasteryScore);
 
             // Collect Mistakes
-            const mistakes = lessonData.interactive_tasks
+            const mistakes = interactiveTasks
                 .filter(t => results[t.id] === 'incorrect' || results[t.id] === 'partial' || results[t.id] === false)
                 .map(t => ({
                     question: t.question,
@@ -1419,8 +1485,8 @@ const LabPage = () => {
                 )}
 
                 <div className="flex items-center gap-3">
-                    {/* Debug Cheat Tools - Only for fungtam@gmail.com */}
-                    {user?.email === 'fungtam@gmail.com' && !isMock && (
+                    {/* Debug Cheat Tools - Internal QA */}
+                    {isCheatEnabled(user, profile) && !isMock && (
                         <div className="flex items-center gap-1 bg-amber-50 dark:bg-amber-900/20 p-1 rounded-lg border border-amber-200">
                             <span className="text-[10px] font-black text-amber-600 px-1 hidden sm:block">DEBUG:</span>
                             {['3', '4', '5', '5*', '5**'].map(lvl => (
@@ -1969,6 +2035,13 @@ const LabPage = () => {
                                                         })}
                                                     </div>
                                                 </div>
+
+                                                {evalError && (
+                                                    <div className="mt-8 p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-2xl text-red-600 dark:text-red-400 text-sm font-bold flex items-center gap-3">
+                                                        <X size={20} className="shrink-0" />
+                                                        <span>{t('lab.evaluation_failed').replace('{{error}}', evalError)}</span>
+                                                    </div>
+                                                )}
 
                                                 {!bossChecked ? (
                                                     <button

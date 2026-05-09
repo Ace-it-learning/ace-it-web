@@ -1,7 +1,7 @@
 {
   "type": "GRAMMAR",
   "topic_id": "grammar_elite_modals",
-  "level": "HKDSE Level 5",
+  "level": "HKDSE Level 4",
   "conceptual_explanation": "Level 5 Modal Mastery focuses on 'Past Deductions' (guessing what happened in the past) and the subtle differences between words like 'should' and 'ought to'. These are vital for analysis and evaluation in DSE writing.",
   "rule_cards": [
     {
@@ -47,7 +47,7 @@
         2,
         3
       ],
-      "explanation": "'Ought to' is a slightly more formal version of 'should'."
+      "explanation": "The modal phrase 'ought to' modifies the verb 'consult' to express formal advice."
     },
     {
       "sentence_tokens": [
@@ -64,7 +64,7 @@
         2,
         3
       ],
-      "explanation": "'Must have' indicates a strong deduction about a past event."
+      "explanation": "The structure 'must have' + 'misunderstood' (past participle) indicates a strong deduction about a past event."
     },
     {
       "sentence_tokens": [
@@ -85,7 +85,7 @@
         2,
         3
       ],
-      "explanation": "'Can't have' expresses a strong negative deduction."
+      "explanation": "The negative past deduction 'can't have' combined with the past participle 'arrived' expresses a strong belief that something did not happen."
     },
     {
       "sentence_tokens": [
@@ -105,7 +105,7 @@
         2,
         3
       ],
-      "explanation": "'Had better' is a strong recommendation with a sense of urgency."
+      "explanation": "The phrase 'had better' is followed by the base verb 'leave' to give a strong recommendation with a sense of urgency."
     },
     {
       "sentence_tokens": [
@@ -124,7 +124,7 @@
         5,
         6
       ],
-      "explanation": "'Would' describes a repeated past action."
+      "explanation": "The modal 'would' is used with the base verb 'build' to describe a repeated past action."
     }
   ],
   "drill_tasks": [

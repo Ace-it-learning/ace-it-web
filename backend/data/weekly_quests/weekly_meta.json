@@ -1,22 +1,62 @@
 {
   "2026_13": {
     "theme": "Heritage Conservation",
-    "topic": "The Future of Heritage Conservation in Hong Kong"
+    "topic": "Promoting Local Heritage Sites to International Tourists"
   },
   "2026_14": {
-    "theme": "Sustainable Housing",
-    "topic": "Sustainable Housing and the Subdivided Flat Crisis in Hong Kong"
+    "theme": "AI Ethics",
+    "topic": "The Ethics of Using AI in Local Secondary Schools"
   },
   "2026_15": {
-    "theme": "AI in Education",
-    "topic": "The Impact of AI on Personalised Learning in Local HK Schools"
+    "theme": "Environmental Sustainability",
+    "topic": "Reducing Single-use Plastics in School Canteens"
   },
   "2026_16": {
-    "theme": "Vertical Farming",
+    "theme": "Urban Food Security",
     "topic": "The Rise of Vertical Farming as a Solution to Urban Food Security"
   },
   "2026_17": {
     "theme": "AI in Education",
     "topic": "Navigating the Ethics and Opportunities of AI in the HKDSE Classroom"
+  },
+  "2026_19": {
+    "theme": "Sustainable Schools",
+    "topic": "Implementing low-carbon operations, waste separation, and student-led green audits in Hong Kong secondary schools"
+  },
+  "2026_20": {
+    "theme": "Waste Charging & Daily Habits",
+    "topic": "How households and school communities adapt behaviour after waste-disposal charging and stronger recycling expectations"
+  },
+  "2026_21": {
+    "theme": "Northern Metropolis & Young Careers",
+    "topic": "Balancing Northern Metropolis development opportunities with housing pressure and career pathways for Hong Kong diploma graduates"
+  },
+  "2026_22": {
+    "theme": "Youth Mental Health at School",
+    "topic": "Scaling peer support, counselling access, and stigma-reduction campaigns in Hong Kong secondary schools"
+  },
+  "2026_23": {
+    "theme": "Greater Bay Study & Mobility",
+    "topic": "Hong Kong students navigating cross-boundary internships, exchange, and identity when studying or working in the Greater Bay Area"
+  },
+  "2026_24": {
+    "theme": "Ageing City, Active Aging",
+    "topic": "Volunteer schemes, intergenerational learning, and community care pressures as Hong Kong’s population ages"
+  },
+  "2026_25": {
+    "theme": "Extreme Weather Readiness",
+    "topic": "Schools and districts tightening heatwave, flooding, and typhoon contingency plans under a warmer climate"
+  },
+  "2026_26": {
+    "theme": "Hospitality & Brand HK English",
+    "topic": "Training young people in service English, inclusivity, and cultural etiquette as tourism and major events shape Hong Kong’s economy"
+  },
+  "2026_27": {
+    "theme": "Sports, Inclusion & District Facilities",
+    "topic": "Grassroots sports access, school leagues, and inclusive PE as district facilities and school athletics culture expand"
+  },
+  "2026_28": {
+    "theme": "Digital Citizenship & Scams 2.0",
+    "topic": "Teaching verification habits, privacy awareness, and peer alerts as phishing and AI-assisted fraud evolve in Hong Kong"
   }
 }

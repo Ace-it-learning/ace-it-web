@@ -72,6 +72,21 @@
     "Differentiating between facts and opinions",
     "Inferring implied meanings from context"
   ],
+  "marking_logic": {
+    "full_marks_criteria": [
+      "Defines specialty coffee via bean quality, roasting, and skill",
+      "Identifies status and belonging as social symbols",
+      "Notes high price as an accessibility barrier",
+      "Recognizes the importance of transparency and ethical consumption"
+    ],
+    "phonetic_leniency": {
+      "status": ["staus", "statas", "statos"],
+      "belonging": ["belunging", "belonging", "belongins"],
+      "transparency": ["transperancy", "transparancy", "transperency"],
+      "barista": ["baresta", "barister"],
+      "authenticity": ["authencity", "authentisity"]
+    }
+  },
   "interactive_tasks": [
     {
       "type": "MCQ",

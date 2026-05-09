@@ -16,12 +16,12 @@
       "instruction": "Choose the best option. Which of the following best describes the primary reason for the proliferation of subdivided flats in Hong Kong?",
       "question": "Which of the following best describes the primary reason for the proliferation of subdivided flats in Hong Kong?",
       "options": [
-        "A. A decline in the overall population of Hong Kong.",
-        "B. An overabundance of luxury housing options.",
-        "C. The scarcity of land coupled with a rapidly growing population.",
-        "D. Government policies that actively encourage the creation of subdivided flats."
+        "A decline in the overall population of Hong Kong.",
+        "An overabundance of luxury housing options.",
+        "The scarcity of land coupled with a rapidly growing population.",
+        "Government policies that actively encourage the creation of subdivided flats."
       ],
-      "answer": "C",
+      "answer": "The scarcity of land coupled with a rapidly growing population.",
       "explanation": "Option C accurately reflects the passage's explanation: limited land and a growing population are key drivers."
     },
     {
@@ -30,7 +30,14 @@
       "instruction": "Answer in no more than 10 words. According to the article, what is one common safety hazard found in subdivided flats?",
       "question": "According to the article, what is one common safety hazard found in subdivided flats?",
       "options": [],
-      "answer": "Overloaded electrical wiring (or similar).",
+      "answer": "Overloaded electrical wiring.",
+      "marking_logic": {
+        "full_marks_criteria": [
+          "Mentions overloaded electrical wiring",
+          "Mentions fire hazards related to electricity"
+        ],
+        "key_phrases": ["electrical wiring", "overloaded", "fire hazard"]
+      },
       "explanation": "The article explicitly mentions overloaded electrical wiring as a fire hazard."
     },
     {
@@ -39,12 +46,12 @@
       "instruction": "Choose the best option. According to the article, what is the long-term solution to the subdivided flat crisis?",
       "question": "According to the article, what is the long-term solution to the subdivided flat crisis?",
       "options": [
-        "A. Focusing solely on increasing the supply of luxury housing.",
-        "B. Promoting sustainable urban development and innovative housing designs.",
-        "C. Ignoring the issue and allowing market forces to resolve it.",
-        "D. Relocating residents of subdivided flats to other countries."
+        "Focusing solely on increasing the supply of luxury housing.",
+        "Promoting sustainable urban development and innovative housing designs.",
+        "Ignoring the issue and allowing market forces to resolve it.",
+        "Relocating residents of subdivided flats to other countries."
       ],
-      "answer": "B",
+      "answer": "Promoting sustainable urban development and innovative housing designs.",
       "explanation": "The article advocates for sustainable urban development as the long-term solution."
     },
     {
@@ -58,13 +65,8 @@
         "Promoting sustainable urban development.",
         "Subsidized rental schemes."
       ],
-      "answer": [
-        "Stricter regulations for subdivided flats.",
-        "Subsidized rental schemes.",
-        "Increased supply of affordable housing.",
-        "Promoting sustainable urban development."
-      ],
-      "explanation": "Regulations offer immediate relief, subsidies provide short-term support, increasing housing supply takes longer, and sustainable development is a long-term systemic solution."
+      "answer": "0-3-1-2",
+      "explanation": "Regulations offer immediate relief (0), subsidies provide short-term support (3), increasing housing supply takes longer (1), and sustainable development is a long-term systemic solution (2)."
     },
     {
       "id": "q5",
@@ -72,12 +74,12 @@
       "instruction": "Choose the best option. What is the implication of 'fostering a culture of corporate social responsibility' in the context of the article?",
       "question": "What is the implication of 'fostering a culture of corporate social responsibility' in the context of the article?",
       "options": [
-        "A. Encouraging property developers to prioritize profit maximization above all else.",
-        "B. Promoting the construction of exclusively luxury apartments.",
-        "C. Incentivizing developers to incorporate affordable housing units into their projects.",
-        "D. Reducing government oversight of the property development industry."
+        "Encouraging property developers to prioritize profit maximization above all else.",
+        "Promoting the construction of exclusively luxury apartments.",
+        "Incentivizing developers to incorporate affordable housing units into their projects.",
+        "Reducing government oversight of the property development industry."
       ],
-      "answer": "C",
+      "answer": "Incentivizing developers to incorporate affordable housing units into their projects.",
       "explanation": "Corporate social responsibility implies developers considering the social impact and contributing to affordable housing."
     },
     {
@@ -87,6 +89,14 @@
       "question": "According to the passage, what is one potential negative impact of living in overcrowded subdivided flats on a resident's well-being?",
       "options": [],
       "answer": "Detrimental impact on mental health due to lack of privacy and space.",
+      "marking_logic": {
+        "full_marks_criteria": [
+          "Mentions mental health or psychological well-being",
+          "Mentions lack of privacy or personal space"
+        ],
+        "key_phrases": ["mental health", "privacy", "personal space"],
+        "reject_criteria": ["Physical fitness", "Improved social skills"]
+      },
       "explanation": "The passage directly mentions the negative impact on mental health."
     },
     {
@@ -102,15 +112,8 @@
         "Prioritization of luxury developments"
       ],
       "answer": {
-        "CAUSE": [
-          "Scarcity of land in Hong Kong",
-          "Rapidly growing population",
-          "Prioritization of luxury developments"
-        ],
-        "CONSEQUENCE": [
-          "Overcrowding and poor air quality",
-          "Increased risk of respiratory illnesses"
-        ]
+        "CAUSE": [0, 2, 4],
+        "CONSEQUENCE": [1, 3]
       },
       "explanation": "Land scarcity, population growth, and development priorities contribute to the crisis. Overcrowding and health risks are the result."
     },
@@ -120,12 +123,12 @@
       "instruction": "Choose the best option. What does the phrase 'multi-pronged approach' suggest in the context of the article?",
       "question": "What does the phrase 'multi-pronged approach' suggest in the context of the article?",
       "options": [
-        "A. A single, unified solution to the problem.",
-        "B. A series of unrelated and independent actions.",
-        "C. A comprehensive strategy involving multiple interconnected solutions.",
-        "D. An approach that relies solely on government intervention."
+        "A single, unified solution to the problem.",
+        "A series of unrelated and independent actions.",
+        "A comprehensive strategy involving multiple interconnected solutions.",
+        "An approach that relies solely on government intervention."
       ],
-      "answer": "C",
+      "answer": "A comprehensive strategy involving multiple interconnected solutions.",
       "explanation": "A 'multi-pronged approach' implies a comprehensive strategy with multiple, interconnected solutions."
     },
     {
@@ -134,7 +137,13 @@
       "instruction": "Answer in no more than 8 words. Besides public housing, what other subsidized scheme is mentioned?",
       "question": "Besides public housing, what other subsidized scheme is mentioned?",
       "options": [],
-      "answer": "Subsidized rental schemes are also mentioned.",
+      "answer": "Subsidized rental schemes.",
+      "marking_logic": {
+        "full_marks_criteria": [
+          "Mentions subsidized rental schemes"
+        ],
+        "key_phrases": ["subsidized rental schemes"]
+      },
       "explanation": "The article mentions subsidized rental schemes as another form of assistance."
     },
     {
@@ -143,12 +152,12 @@
       "instruction": "Choose the best option. Which of the following is NOT directly mentioned as a benefit of sustainable housing design?",
       "question": "Which of the following is NOT directly mentioned as a benefit of sustainable housing design?",
       "options": [
-        "A. Maximizing efficient use of land resources.",
-        "B. Connecting residents to employment opportunities.",
-        "C. Reducing construction costs significantly.",
-        "D. Creating more inclusive communities."
+        "Maximizing efficient use of land resources.",
+        "Connecting residents to employment opportunities.",
+        "Reducing construction costs significantly.",
+        "Creating more inclusive communities."
       ],
-      "answer": "C",
+      "answer": "Reducing construction costs significantly.",
       "explanation": "While sustainable design might lead to cost savings, the article doesn't directly state it reduces construction costs *significantly*."
     }
   ],

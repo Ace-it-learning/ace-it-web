@@ -1,0 +1,43 @@
+---
+description: Conventions for the AI tutor chat frontend (message format, history payload, agent switching).
+globs:
+  - frontend/src/components/ChatInterface.jsx
+  - frontend/src/components/Chat*.jsx
+alwaysApply: false
+---
+
+# AI tutor chat frontend conventions
+
+## History payload to /api/chat
+
+- The frontend keeps the FULL thread in `messages` for rendering, but
+  sends only the last `MAX_PAYLOAD_TURNS = 24` items to the server.
+- Each item must be `{ role: 'user' | 'model', parts: [{ text }] }`
+  (Gemini-style). The legacy `{ role, content }` shape is not allowed
+  in the API call.
+- Hidden / system-trigger messages (`[trigger_greeting]`,
+  `[REDIRECT_DIAGNOSTIC]`) MUST stay out of the payload. The user
+  message you just appended is included unless `isHidden` is true.
+
+## Agent switching
+
+- Use `activeAgentId` everywhere. Do not concatenate it into URLs
+  except via the existing `${API_URL}/api/history/${activeAgentId}`
+  pattern.
+- After switching agents, reset `dynamicChips` and scroll state so
+  the previous agent's UI state does not bleed in.
+
+## Streaming / suggestions parsing
+
+- Replies may contain `[SUGGESTIONS: a, b, c]`, `[FORCE_TTS]`,
+  `[TRIGGER_CLEAR]`, `[STUDENT_STATE: ...]`, `[REDIRECT_DIAGNOSTIC]`.
+  Use `parseSuggestions` for chips and the existing regex blocks
+  for the others. Do not introduce new tags without updating the
+  backend tutor prompts AND `formatMessageContent`'s stripper.
+
+## Don't
+
+- Don't read or write `frontend/.env` from the agent's flow.
+- Don't bypass `saveMessageToBackend` for messages you want
+  persisted - the backend chat history is the source of truth on
+  reload.

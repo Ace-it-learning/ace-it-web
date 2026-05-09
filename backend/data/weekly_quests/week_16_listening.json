@@ -51,6 +51,21 @@
     "Synthesizing counter-arguments (understanding how one speaker refutes another's claim).",
     "Decoding advanced vocabulary from contextual clues (CapEx, HVAC, symbiotic architecture)."
   ],
+  "marking_logic": {
+    "full_marks_criteria": [
+      "Identifies the 95% water reduction statistic",
+      "Correctly defines CapEx (Capital Expenditure) and HVAC",
+      "Notes the limitation of staple crops (caloric density)",
+      "Captures the concept of symbiotic urban architecture"
+    ],
+    "phonetic_leniency": {
+      "closed-loop": ["closed loop", "close loop", "closedloop"],
+      "hydroponics": ["hidroponics", "hydropunics"],
+      "expenditure": ["expendature", "expendeture"],
+      "predictive": ["predictve", "predicative"],
+      "symbiotic": ["simbiotic", "symbeotic"]
+    }
+  },
   "interactive_tasks": [
     {
       "id": "task_1",

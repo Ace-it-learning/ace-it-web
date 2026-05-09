@@ -1,8 +1,8 @@
 {
   "type": "GRAMMAR",
   "topic_id": "grammar_accuracy_sva",
-  "level": "HKDSE Level 5** (Mastery)",
-  "conceptual_explanation": "At HKDSE Level 5**, Subject-Verb Agreement transcends basic singular/plural matching. You must accurately deconstruct complex sentences, strip away multi-layered prepositional distractors, and master the proximity rule, 'number' flips, and relative clause antecedents to secure top-tier grammar accuracy in Part B writing and Part A MCQs.",
+  "level": "HKDSE Level 4",
+  "conceptual_explanation": "At HKDSE Level 4, Subject-Verb Agreement requires more than just basic matching. You must accurately identify the head noun in sentences with complex modifiers, and handle tricky rules like 'Neither/Nor' proximity and the difference between 'A number of' and 'The number of'.",
   "rule_cards": [
     {
       "name": "The Prepositional Phrase Illusion",

@@ -1,0 +1,836 @@
+{
+  "listening_mission_11": {
+    "id": "listening_mission_11",
+    "title": "Street Art Festival",
+    "description": "Coordinating a weekend street-art and live-music fair with mural permits, noise controls, and resident liaison.",
+    "topic": "Arts",
+    "type": "listening_mission",
+    "paper": "Listening",
+    "subject": "English",
+    "level": "4",
+    "is_approved": true,
+    "factory_template": false,
+    "created_at": {
+      "_seconds": 1704068200,
+      "_nanoseconds": 0
+    },
+    "sprint_data": {
+      "audio_transcript": "[SCENE START]\n[Street ambience, distant bass]\nFestival Producer: Final run-through for the Sham Shui Po Lane Art Weekend.\nFestival Producer: Sponsor just added two mobile panels, so we now have ten approved mural zones. Delete any map that still shows only eight.\nFinance Lead: Grant figure correction—the pitch pack still prints two hundred eighty thousand dollars. The District Council confirmed two hundred fifty thousand only.\nStage Manager: Main Stage One opens at two p.m. Some posters wrongly say one thirty; please fix before midnight.\nNoise Officer: Monitoring rule: if average sound at the east boundary microphone stays above seventy decibels for more than ten minutes straight, we cut subwoofer gain by half immediately.\nOperations: Night mural painting curfew for aerosol work ends at nine p.m., not ten p.m., after talks with residents.\nSecurity: Crowd surge protocol—Code Orange activates if Lane B footfall exceeds five hundred people in one scan cycle.\nVolunteer Head: We have twenty-four marshals on Saturday and eighteen on Sunday.\nFestival Producer: Submit updated site map PDFs by six ten p.m. tonight.\n[SCENE END]",
+      "tasks": [
+        {
+          "id": "a1_art_table",
+          "type": "TABLE",
+          "label": "Festival Control Board",
+          "rows": [
+            {
+              "label": "Approved mural zones",
+              "answer": "10",
+              "placeholder": "Number"
+            },
+            {
+              "label": "Confirmed grant total",
+              "answer": "250,000",
+              "placeholder": "Amount"
+            },
+            {
+              "label": "Main Stage One opening",
+              "answer": "2:00 p.m.",
+              "placeholder": "Time"
+            },
+            {
+              "label": "Aerosol painting nightly curfew",
+              "answer": "9:00 p.m.",
+              "placeholder": "Time"
+            }
+          ]
+        },
+        {
+          "id": "a2_art_form",
+          "type": "FORM_FILLING",
+          "question": "Noise, crowd, and staffing",
+          "fields": [
+            {
+              "label": "East boundary dB alert threshold (sustained)",
+              "answer": "70 decibels",
+              "placeholder": "Level"
+            },
+            {
+              "label": "Sustained period before gain cut",
+              "answer": "10 minutes",
+              "placeholder": "Duration"
+            },
+            {
+              "label": "Lane B surge code",
+              "answer": "Code Orange",
+              "placeholder": "Code"
+            },
+            {
+              "label": "Saturday marshals",
+              "answer": "24",
+              "placeholder": "Number"
+            }
+          ]
+        },
+        {
+          "id": "a3_art_mcq",
+          "type": "MCQ_BATCH",
+          "label": "Site Readiness",
+          "questions": [
+            {
+              "question": "Which budget line is the obsolete trap figure?",
+              "options": [
+                "A. 250,000",
+                "B. 280,000",
+                "C. 300,000",
+                "D. 240,000"
+              ],
+              "answer": "B"
+            },
+            {
+              "question": "Which opening time appears on outdated posters?",
+              "options": [
+                "A. 1:30 p.m.",
+                "B. 2:00 p.m.",
+                "C. 2:30 p.m.",
+                "D. 1:00 p.m."
+              ],
+              "answer": "A"
+            }
+          ]
+        }
+      ]
+    },
+    "integrated_data": {
+      "audio_transcript": "[INTEGRATED BRIEFING START]\nProgramme Chair: We need the Residents' Association memo tonight.\nNoise Officer: Correction: action triggers only when levels are over seventy decibels sustained for ten minutes; a single spike to seventy-one for thirty seconds does not automatically force a cut—consistency matters here.\nLegal: Every participant at the live painting competition must sign a liability waiver; minors need guardians on-site.\nHeritage Advisor: No projections on the Grade II facade—static murals only on temporary boards there.\nResidents' Rep: Add one sentence acknowledging last year's late-night noise complaint cluster from Block C.\nAccessibility Lead: Quiet-viewing lane must stay wheelchair-passable until the fireworks cue at nine forty-five p.m.\nProgramme Chair: KPI: eighty-five percent of vendors pass the pre-event safety quiz.\n[INTEGRATED BRIEFING END]",
+      "notetaking_fields": [
+        {
+          "id": "nt_ops",
+          "label": "Sound, crowd, and compliance",
+          "placeholder": "Capture dB rules, surge codes, and waiver requirements..."
+        },
+        {
+          "id": "nt_site",
+          "label": "Heritage and access",
+          "placeholder": "Note facade limits, accessibility, and resident context..."
+        },
+        {
+          "id": "nt_kpi",
+          "label": "KPI and optics",
+          "placeholder": "Record quiz target and community acknowledgement..."
+        }
+      ],
+      "data_file": [
+        {
+          "id": "df_run_sheet",
+          "title": "Run Sheet Extract",
+          "type": "schedule",
+          "content": "Sat–Sun\\nStage One: 14:00 headline sets\\nSpray zone closes: 21:00\\nFinal crowd scan: 23:45\\nEast mic noise patrol: continuous"
+        },
+        {
+          "id": "df_safety_brief",
+          "title": "Noise & Crowd Brief",
+          "type": "brief",
+          "content": "Sustained >70 dB at east boundary mic for 10+ minutes -> reduce subwoofer gain 50%.\\nLane B footfall >500 in one cycle -> Code Orange.\\nLiability waiver required for live painting competitors."
+        },
+        {
+          "id": "df_street_poster",
+          "title": "Public Poster (Draft)",
+          "type": "poster",
+          "content": "LANE ART WEEKEND\\n10 mural zones across the district\\nMusic from 2:00 p.m.\\nBe kind to neighbours—quiet streets after midnight pickup."
+        }
+      ],
+      "writing_task": {
+        "instruction": "You are the Community Arts Liaison Officer. Write a formal memo to the Residents' Association summarising sound monitoring rules, corrected site restrictions, and how the festival addresses last year's concerns.",
+        "format": "Formal memo",
+        "role_profile": "Community Arts Liaison Officer writing to residents in a courteous but authoritative community-relations register.",
+        "word_count": "190-240",
+        "marking_criteria": "Content, Language, Organization, Appropriacy"
+      },
+      "marking_key": [
+        "State mural zone total 10 and grant HK$250,000 or 250,000 dollars (reject HK$280,000 / 280,000 preliminary figure).",
+        "Describe noise rule precisely: over 70 dB sustained for more than 10 minutes at the east boundary before mandatory gain reduction (not the same as a brief spike).",
+        "Security nomenclature (mandatory point): name Code Orange explicitly as the crowd-response protocol when Lane B footfall exceeds 500 people in one scan cycle; partial credit if the 500 threshold is correct but 'Code Orange' is omitted.",
+        "State aerosol curfew ends 9:00 p.m. and main stage opens 2:00 p.m.",
+        "Mention Grade II facade: no projections; temporary boards only for that frontage.",
+        "Acknowledge prior year late-night noise complaints from Block C and link festival controls to addressing them.",
+        "Include KPI: 85% vendor safety quiz pass rate."
+      ]
+    }
+  },
+  "listening_mission_12": {
+    "id": "listening_mission_12",
+    "title": "Startup Weekend",
+    "description": "Final coordination for a venture-pitch competition with judging rules, seed funding, and IP safeguards.",
+    "topic": "Career",
+    "type": "listening_mission",
+    "paper": "Listening",
+    "subject": "English",
+    "level": "7",
+    "is_approved": true,
+    "factory_template": false,
+    "created_at": {
+      "_seconds": 1704068300,
+      "_nanoseconds": 0
+    },
+    "prediction_metadata": {
+      "topic_name": "Harbour Bay Startup Weekend",
+      "sub_topics": [
+        {
+          "id": "st1",
+          "name": "Pitch timing",
+          "category": "Operations",
+          "is_distractor": false,
+          "hint": "Listen for extended Q&A versus old format."
+        },
+        {
+          "id": "st2",
+          "name": "Seed amount",
+          "category": "Finance",
+          "is_distractor": false,
+          "hint": "Reject the inflated deck figure."
+        },
+        {
+          "id": "st3",
+          "name": "Investor term sheet",
+          "category": "Future phase",
+          "is_distractor": true,
+          "hint": "Mentioned as post-event, not during pitches."
+        }
+      ]
+    },
+    "sprint_data": {
+      "audio_transcript": "[SCENE START]\n[Coworking hub bustle]\nEvent Lead: Locking the Harbour Bay Startup Weekend for the Innovation Commissioner visit.\nEvent Lead: Registration closed at forty-eight teams. Delete marketing that still advertises sixty slots.\nFinance Partner: Top prize is one hundred thousand dollars in seed funding. Old slide headers say one hundred twenty thousand—that is void.\nProgram Host: Each team now gets four minutes on stage plus five minutes for Q&A. Earlier rules showed three plus three; judges demanded deeper scrutiny.\nIP Advisor: Digital NDA signing is mandatory at desk seven before mentors review decks.\nRisk Officer: If a pitch runs over nine minutes wall-clock including handover, the buzzer cuts audio and score penalties apply.\nVenue Manager: Demo tables get power strips rated sixteen amps total; teams that need more must book the engineering bench.\nStartup Lead: Investor lounge opens on floor eighteen at eight thirty a.m.\nEvent Lead: Final coach roster upload is due eleven p.m. sharp.\n[SCENE END]",
+      "tasks": [
+        {
+          "id": "a1_startup_table",
+          "type": "TABLE",
+          "label": "Competition Facts",
+          "rows": [
+            {
+              "label": "Registered teams (final)",
+              "answer": "48",
+              "placeholder": "Number"
+            },
+            {
+              "label": "Grand prize (seed grant)",
+              "answer": "100,000",
+              "placeholder": "Amount"
+            },
+            {
+              "label": "Stage pitch length",
+              "answer": "4 minutes",
+              "placeholder": "Duration"
+            },
+            {
+              "label": "Q&A length per team",
+              "answer": "5 minutes",
+              "placeholder": "Duration"
+            }
+          ]
+        },
+        {
+          "id": "a2_startup_form",
+          "type": "FORM_FILLING",
+          "question": "Timing, power, and access",
+          "fields": [
+            {
+              "label": "Maximum total pitch block (hard cut)",
+              "answer": "9 minutes",
+              "placeholder": "Duration"
+            },
+            {
+              "label": "NDA signing location",
+              "answer": "desk 7",
+              "placeholder": "Location"
+            },
+            {
+              "label": "Standard demo table power cap",
+              "answer": "16 amps",
+              "placeholder": "Rating"
+            },
+            {
+              "label": "Investor lounge floor / time",
+              "answer": "18 / 8:30 a.m.",
+              "placeholder": "Detail"
+            }
+          ]
+        },
+        {
+          "id": "a3_startup_mcq",
+          "type": "MCQ_BATCH",
+          "label": "Rules Check",
+          "questions": [
+            {
+              "question": "Which advertised team capacity is outdated?",
+              "options": [
+                "A. 48 teams",
+                "B. 50 teams",
+                "C. 60 teams",
+                "D. 40 teams"
+              ],
+              "answer": "C"
+            },
+            {
+              "question": "Which prize headline is obsolete?",
+              "options": [
+                "A. $100,000",
+                "B. $90,000",
+                "C. $120,000",
+                "D. $80,000"
+              ],
+              "answer": "C"
+            }
+          ]
+        }
+      ]
+    },
+    "integrated_data": {
+      "audio_transcript": "[INTEGRATED BRIEFING START]\nCommissioner: I need a public ethics addendum before we green-light live streams.\nLegal Counsel: Teams must declare if generative AI drafted any slide text; undisclosed use violates fairness rules.\nMentor Lead: Judges score on problem-solution fit, traction evidence, and team credibility—no marks for hype language alone.\nFinance Partner: Seed grant is a prize, not an equity purchase. Any investment conversation happens only in separate closed sessions after winners are named.\nIP Advisor: Prototypes demonstrated on stage remain team property; accelerator sponsors receive view-only access until term sheets are signed next quarter.\nCommissioner: Livestream delay must stay at least twenty seconds for confidential figures that might slip during Q&A.\nAccessibility: Two sign-language slots for finalist announcements at seventeen hundred hours Sunday.\n[INTEGRATED BRIEFING END]",
+      "notetaking_fields": [
+        {
+          "id": "nt_ethics",
+          "label": "Fairness and disclosure",
+          "placeholder": "Capture AI disclosure, streaming, and IP boundaries..."
+        },
+        {
+          "id": "nt_funding",
+          "label": "Prize vs investment",
+          "placeholder": "Note grant nature, closed sessions, and timelines..."
+        },
+        {
+          "id": "nt_access",
+          "label": "Inclusion and moderation",
+          "placeholder": "List accessibility slots and stream delay rules..."
+        }
+      ],
+      "data_file": [
+        {
+          "id": "df_event_email",
+          "title": "Organiser Circular",
+          "type": "email",
+          "content": "From: Startup Weekend HK <ops@sbweekend.hk>\\nTo: Mentors, Judges, AV Crew\\nSubject: FINAL Rules - Harbour Bay\\n\\nTeams: 48 (final).\\nPitch: 4 min + 5 min Q&A. Hard stop wall-clock 9 min including changeover.\\nTop prize: HK$100,000 seed grant (update all decks; retire HK$120k mock-ups).\\nNDA before mentor reviews at Desk 7.\\n\\nRegards,\\nEvent Lead"
+        },
+        {
+          "id": "df_scoring_brief",
+          "title": "Judge Scoring Rubric (Excerpt)",
+          "type": "brief",
+          "content": "Weighted criteria: Problem clarity 25%, evidence/traction 30%, team execution 25%, ask/realism 20%.\\nHype-only language receives no criterion credit.\\nGenerative AI slide assistance must be declared on cover slide footer."
+        },
+        {
+          "id": "df_stream_schedule",
+          "title": "Broadcast Block",
+          "type": "schedule",
+          "content": "Sat-Sun pitches streamed with >=20s delay\\nConfidential figures discouraged in open Q&A\\nFinalist call 17:00 Sun - 2 BSL interpreters booked"
+        }
+      ],
+      "writing_task": {
+        "instruction": "You are the Startup Weekend Integrity Officer. Write a formal memo to the Innovation Commissioner summarising competition ethics, separation of prize money from equity talks, and livestream safeguards. When you state the seed grant amount, include the currency (e.g. HK$100,000 or 100,000 dollars) — not a bare number.",
+        "format": "Formal memo",
+        "role_profile": "Startup Weekend Integrity Officer writing to a senior commissioner in formal policy and governance register.",
+        "word_count": "210-260",
+        "marking_criteria": "Content, Language, Organization, Appropriacy"
+      },
+      "marking_key": [
+        "State team count 48 and the seed grant with currency: HK$100,000 or 100,000 dollars (reject HK$120,000 mock-ups); bare '100,000' without HK$, $, or 'dollars' is imprecise for HKDSE.",
+        "Clarify pitch format 4+5 minutes with nine-minute overall hard cap including changeover.",
+        "Require disclosure if generative AI drafted slide text.",
+        "Explain that the seed grant is a prize, not an automatic equity investment; separate closed sessions for investor talks after winners are named.",
+        "State livestream delay at least twenty seconds for sensitive Q&A content.",
+        "Reference rubric: scoring rewards evidence and execution, not hype-only language.",
+        "Include accessibility commitment for finalist announcements (e.g. sign-language coverage at 17:00 Sunday)."
+      ]
+    }
+  },
+  "listening_mission_13": {
+    "id": "listening_mission_13",
+    "title": "Ocean Cleanup Initiative",
+    "description": "Volunteer beach clean-up with tide windows, safety zones, and plastic sorting logistics.",
+    "topic": "Environment",
+    "type": "listening_mission",
+    "paper": "Listening",
+    "subject": "English",
+    "level": "3",
+    "is_approved": true,
+    "factory_template": false,
+    "created_at": {
+      "_seconds": 1704068400,
+      "_nanoseconds": 0
+    },
+    "sprint_data": {
+      "audio_transcript": "[SCENE START]\n[Seagulls and surf]\nSite Captain: Silver Bay beach clean, teams update your briefing cards.\nSite Captain: Meeting point is lifeguard Tower C, not Tower B.\nLogistics: We only issued two hundred volunteer slots, but a flyer still lists two hundred twenty — ignore the higher number.\nSafety Lead: High tide is three oh five p.m. Nobody enters the pebble strip west of the rocks after two thirty p.m.\nMarine Warden: Sorting rule: microplastic under five millimetres goes in the red drums only.\nSite Captain: Gloves and grabbers: two hundred sets ready.\nFirst aid tent opens eight a.m. by the east pavilion.\nSite Captain: Bus departure back to town leaves at four forty-five p.m. sharp—the four thirty line on the draft form is wrong.\n[SCENE END]",
+      "tasks": [
+        {
+          "id": "a1_beach_table",
+          "type": "TABLE",
+          "label": "Beach Day Facts",
+          "rows": [
+            {
+              "label": "Volunteer slots issued",
+              "answer": "200",
+              "placeholder": "Number"
+            },
+            {
+              "label": "Meeting point",
+              "answer": "Tower C",
+              "placeholder": "Location"
+            },
+            {
+              "label": "High tide time",
+              "answer": "3:05 p.m.",
+              "placeholder": "Time"
+            },
+            {
+              "label": "Microplastic sorting (max size)",
+              "answer": "5 millimetres",
+              "placeholder": "Measurement"
+            }
+          ]
+        },
+        {
+          "id": "a2_beach_form",
+          "type": "FORM_FILLING",
+          "question": "Access and departures",
+          "fields": [
+            {
+              "label": "West pebble strip closes after",
+              "answer": "2:30 p.m.",
+              "placeholder": "Time"
+            },
+            {
+              "label": "First aid opens",
+              "answer": "8:00 a.m.",
+              "placeholder": "Time"
+            },
+            {
+              "label": "Return bus leaves",
+              "answer": "4:45 p.m.",
+              "placeholder": "Time"
+            },
+            {
+              "label": "Equipment sets (gloves + grabbers)",
+              "answer": "200",
+              "placeholder": "Number"
+            }
+          ]
+        },
+        {
+          "id": "a3_beach_mcq",
+          "type": "MCQ_BATCH",
+          "label": "Safety Quiz",
+          "questions": [
+            {
+              "question": "Which volunteer count is the outdated trap?",
+              "options": [
+                "A. 200",
+                "B. 180",
+                "C. 220",
+                "D. 150"
+              ],
+              "answer": "C"
+            },
+            {
+              "question": "Which microplastic drum rule is correct?",
+              "options": [
+                "A. Under 5 mm to red drums",
+                "B. Over 5 mm to red drums",
+                "C. All plastic in blue bags",
+                "D. Glass in red drums"
+              ],
+              "answer": "A"
+            }
+          ]
+        }
+      ]
+    },
+    "integrated_data": {
+      "audio_transcript": "[INTEGRATED BRIEFING START]\nNGO Lead: School newsletter needs a teacher-facing recap.\nCoastal Officer: Remind students: no climbing on the algae-covered boulders—four sprains already this season.\nWaste Scientist: KPI target: collect at least three hundred kilograms of sorted recyclables for the weigh-in photo, not two hundred.\nNGO Lead: Sun safety: reapply sunscreen every two hours; first aid has spare SPF fifty for free.\nTeacher Rep: Teachers stay outside the wet zone unless roped to a buddy lifeguard.\nNGO Lead: Share the hotline for late arrivals: nine one eight two double six zero.\n[INTEGRATED BRIEFING END]",
+      "notetaking_fields": [
+        {
+          "id": "nt_safety",
+          "label": "Safety and KPI",
+          "placeholder": "Write hazards, targets, and helpline..."
+        },
+        {
+          "id": "nt_teacher",
+          "label": "Teacher responsibilities",
+          "placeholder": "Note supervision rules and sun safety..."
+        }
+      ],
+      "data_file": [
+        {
+          "id": "df_volunteer_email",
+          "title": "Volunteer Brief Email",
+          "type": "email",
+          "content": "From: Clean Shores HK <crew@cleanshores.hk>\\nTo: Registered Volunteers\\nSubject: Silver Bay Clean - Final\\n\\nMeet: Lifeguard Tower C, 07:45 for briefing.\\nOfficial slots: 200 only. Ignore old PDFs showing 220.\\nHigh tide 15:05 - no access west rocks after 14:30.\\nReturn coach 16:45 from east car park.\\nLate? Call 9182 2660.\\n\\nThanks,\\nSite Captain"
+        },
+        {
+          "id": "df_tide_notice",
+          "title": "Beach Hazard Notice",
+          "type": "notice",
+          "content": "Slippery boulders—no climbing\\nRed drums: microplastic <5mm\\nStay east of ropes after 14:30"
+        },
+        {
+          "id": "df_faq_parents",
+          "title": "Teacher FAQ",
+          "type": "faq",
+          "content": "Q: Minimum recyclable weight goal?\\nA: 300 kg sorted for photo weigh-in.\\nQ: Teacher wet zone?\\nA: Teachers paired with lifeguard only.\\nQ: Sunscreen?\\nA: Reapply every 2 hours; SPF50 free at tent."
+        }
+      ],
+      "writing_task": {
+        "instruction": "You are the Eco-Council Student Lead. Write a short memo to all class teachers summarising meeting points, tide cut-off, weight goal, and emergency contact arrangements.",
+        "format": "Practical memo",
+        "role_profile": "Student Eco-Council Lead writing to teachers in a clear and responsible school activity register.",
+        "word_count": "160-210",
+        "marking_criteria": "Content, Language, Organization, Appropriacy"
+      },
+      "marking_key": [
+        "State meeting point Tower C and official 200 volunteer slots (reject 220).",
+        "Include access rule: no west pebble strip after 2:30 p.m. before high tide 3:05 p.m.",
+        "State microplastic under 5mm goes to red drums.",
+        "Give return bus 4:45 p.m. (reject 4:30 draft).",
+        "Include KPI: at least 300 kg sorted recyclables for weigh-in.",
+        "Mention late hotline 9182 2660.",
+        "Reference teacher rule: stay out of wet zone unless paired with lifeguard."
+      ]
+    }
+  },
+  "listening_mission_14": {
+    "id": "listening_mission_14",
+    "title": "Heritage Walk (Tai Kwun)",
+    "description": "Guided heritage routing with timed entries, photography rules, and evening arts programming.",
+    "topic": "Culture",
+    "type": "listening_mission",
+    "paper": "Listening",
+    "subject": "English",
+    "level": "5",
+    "is_approved": true,
+    "factory_template": false,
+    "created_at": {
+      "_seconds": 1704068500,
+      "_nanoseconds": 0
+    },
+    "sprint_data": {
+      "audio_transcript": "[SCENE START]\n[Courtyard footsteps]\nSite Guide: Locking today's Tai Kwun cultural walk for visiting schools.\nSite Guide: Guided groups are capped at twelve visitors including the docent. Early handouts still say fifteen—that is obsolete.\nTickets: adult night programme is two hundred twenty dollars, not two hundred forty as on an old web banner.\nCollections Officer: Student concession stand at ninety-five dollars with a valid ID.\nAccess Control: Police Married Quarters galleries open ten a.m.; Bastion tunnel tours start every forty minutes on the hour.\nPhotography: no flash anywhere inside heritage rooms; tripod use needs a ten-minute prior booking tag.\nRetail Lead: Museum shop checkout closes nine thirty p.m. tonight—half an hour later than weekday close.\nSite Guide: Umbrella rental deposit is fifty dollars cash only at kiosk four.\nSite Guide: Final group list to security by five fifty p.m.\n[SCENE END]",
+      "tasks": [
+        {
+          "id": "a1_tw_table",
+          "type": "TABLE",
+          "label": "Visit Control Sheet",
+          "rows": [
+            {
+              "label": "Max group size (incl. docent)",
+              "answer": "12",
+              "placeholder": "Number"
+            },
+            {
+              "label": "Adult night programme ticket",
+              "answer": "$220",
+              "placeholder": "Price"
+            },
+            {
+              "label": "Student concession (with ID)",
+              "answer": "$95",
+              "placeholder": "Price"
+            },
+            {
+              "label": "Heritage galleries open",
+              "answer": "10:00 a.m.",
+              "placeholder": "Time"
+            }
+          ]
+        },
+        {
+          "id": "a2_tw_form",
+          "type": "FORM_FILLING",
+          "question": "Tour rhythm and retail",
+          "fields": [
+            {
+              "label": "Bastion tunnel tour interval",
+              "answer": "every 40 minutes",
+              "placeholder": "Frequency"
+            },
+            {
+              "label": "Museum shop close (tonight)",
+              "answer": "9:30 p.m.",
+              "placeholder": "Time"
+            },
+            {
+              "label": "Tripod use",
+              "answer": "booking tag required",
+              "placeholder": "Rule"
+            },
+            {
+              "label": "Umbrella deposit (cash)",
+              "answer": "$50",
+              "placeholder": "Amount"
+            }
+          ]
+        },
+        {
+          "id": "a3_tw_mcq",
+          "type": "MCQ_BATCH",
+          "label": "Policy Check",
+          "questions": [
+            {
+              "question": "Which group size appears on outdated handouts?",
+              "options": [
+                "A. 12",
+                "B. 10",
+                "C. 15",
+                "D. 14"
+              ],
+              "answer": "C"
+            },
+            {
+              "question": "Which adult ticket price is the obsolete banner?",
+              "options": [
+                "A. $200",
+                "B. $220",
+                "C. $240",
+                "D. $210"
+              ],
+              "answer": "C"
+            }
+          ]
+        }
+      ]
+    },
+    "integrated_data": {
+      "audio_transcript": "[INTEGRATED BRIEFING START]\nCultural Programmer: Press release for the Heritage Night x Jazz tie-in must be precise.\nConservator: Low-lumen exhibit lights protect textiles—remind visitors that photos without flash still need phones on silent.\nSecurity: Bag size over A3 must use the cloakroom east wing; no exceptions during evening capacity.\nMarketing: Do not promise backstage tours—they are lottery-only this season.\nEducation Lead: At least ninety percent of school groups must complete the five-minute risk acknowledgement clip before leaving the courtyard.\nBox Office: Online quota cap is sixty percent; walk-in holds forty percent so local residents can queue.\nAccessibility: Two tactile tours Saturday at thirteen thirty and sixteen hundred hours.\n[INTEGRATED BRIEFING END]",
+      "notetaking_fields": [
+        {
+          "id": "nt_visitor",
+          "label": "Visitor rules and access",
+          "placeholder": "Note photo, bag, and lottery limits..."
+        },
+        {
+          "id": "nt_programme",
+          "label": "Education and inclusion",
+          "placeholder": "Capture acknowledgement clip, quotas, tactile tours..."
+        },
+        {
+          "id": "nt_press",
+          "label": "Public messaging guardrails",
+          "placeholder": "Record what must not be promised in press lines..."
+        }
+      ],
+      "data_file": [
+        {
+          "id": "df_visitor_itin",
+          "title": "Sample Visit Flow",
+          "type": "itinerary",
+          "content": "10:00 Galleries\\n11:20 Bastion tunnel (40 min cadence)\\n12:30 Lunch courtyard\\n18:30 Heritage Night jazz (ticket scan)\\n21:30 Shop close (special late night)"
+        },
+        {
+          "id": "df_photo_notice",
+          "title": "Photography & Conduct",
+          "type": "notice",
+          "content": "No flash in heritage rooms\\nSilent phone\\nTripod + tag from desk\\nLarge bags -> east cloakroom"
+        },
+        {
+          "id": "df_press_brief",
+          "title": "Press Brief Extract",
+          "type": "brief",
+          "content": "Adult night HK$220 / Student HK$95 with ID\\nGroup cap 12 incl. guide\\nNo backstage tours advertised—lottery only\\nRisk clip completion target 90% school groups"
+        }
+      ],
+      "writing_task": {
+        "instruction": "You are the Tai Kwun Cultural Partnerships Writer. Write a formal memo to partner school principals summarising visitor integrity rules, ticketing facts, and completion requirements for student groups.",
+        "format": "Formal memo",
+        "role_profile": "Arts venue partnerships writer writing to school leaders in formal cultural-sector register.",
+        "word_count": "200-250",
+        "marking_criteria": "Content, Language, Organization, Appropriacy"
+      },
+      "marking_key": [
+        "State twelve-person group cap including docent (reject fifteen).",
+        "Correct ticket prices adult HK$220 and student HK$95; reject obsolete $240 adult banner.",
+        "Mention no-flash rule and silent phones for photography etiquette.",
+        "Include bag rule: oversize bags to east cloakroom during evening capacity.",
+        "State backstage tours are lottery-only—not guaranteed in publicity.",
+        "KPI: ninety percent of school groups complete five-minute risk acknowledgement clip before leaving courtyard.",
+        "Note online quota sixty percent / walk-in forty percent split.",
+        "Reference two tactile tour times Saturday (13:30 and 16:00)."
+      ]
+    }
+  },
+  "listening_mission_15": {
+    "id": "listening_mission_15",
+    "title": "AI in Education",
+    "description": "Implementing school-wide rules on generative AI, plagiarism thresholds, and parental transparency.",
+    "topic": "Education",
+    "type": "listening_mission",
+    "paper": "Listening",
+    "subject": "English",
+    "level": "7",
+    "is_approved": true,
+    "factory_template": false,
+    "created_at": {
+      "_seconds": 1704068600,
+      "_nanoseconds": 0
+    },
+    "prediction_metadata": {
+      "topic_name": "Responsible AI Use Policy Rollout",
+      "sub_topics": [
+        {
+          "id": "st1",
+          "name": "Similarity threshold",
+          "category": "Academic integrity",
+          "is_distractor": false,
+          "hint": "Listen for over vs at exactly the percentage."
+        },
+        {
+          "id": "st2",
+          "name": "Human final draft",
+          "category": "Pedagogy",
+          "is_distractor": false,
+          "hint": "AI may assist ideation but not final submission."
+        },
+        {
+          "id": "st3",
+          "name": "Laptop subsidy",
+          "category": "IT budget",
+          "is_distractor": true,
+          "hint": "Discussed as future IT fund, not in this policy memo."
+        }
+      ]
+    },
+    "sprint_data": {
+      "audio_transcript": "[SCENE START]\n[Staff room murmur]\nDeputy Principal: Policy launch day for generative AI across Harbour Secondary.\nDeputy Principal: Parent session moves to twenty-second March at seven p.m. in the hall. The old notice said twenty-first—delete it.\nIT Head: School-wide detector flags submissions when AI-generated similarity is over forty percent, not thirty-five; update your slide decks.\nAcademic Integrity Lead: Students may use chatbots for brainstorming only; the final submitted paragraph must be substantially rewritten in the student's own words.\nLibrarian: Citation bootcamp sessions run Wednesdays lunch at twelve forty-five p.m. in Lab Three.\nCounsellor: Anonymous wellbeing chatbot stays opt-in via the school app.\nDeputy Principal: Appeals board meets Fridays four p.m. if a student disputes a flag.\nICT Tech: Classroom Chromebooks refresh count is one hundred twenty units—ignore the one fifty draft circulating on Parents' Chat.\n[SCENE END]",
+      "tasks": [
+        {
+          "id": "a1_ai_table",
+          "type": "TABLE",
+          "label": "Policy Rollout Facts",
+          "rows": [
+            {
+              "label": "Parent information evening",
+              "answer": "22 March 7:00 p.m.",
+              "placeholder": "Date/time"
+            },
+            {
+              "label": "AI similarity review threshold",
+              "answer": "over 40%",
+              "placeholder": "Threshold"
+            },
+            {
+              "label": "Citation bootcamp (day / time / room)",
+              "answer": "Wednesday 12:45 p.m. Lab 3",
+              "placeholder": "Detail"
+            },
+            {
+              "label": "Appeals board time",
+              "answer": "4:00 p.m. Fridays",
+              "placeholder": "Time"
+            }
+          ]
+        },
+        {
+          "id": "a2_ai_form",
+          "type": "FORM_FILLING",
+          "question": "Supports and hardware",
+          "fields": [
+            {
+              "label": "Brainstorming vs final submission rule",
+              "answer": "brainstorming allowed; final must be student's own words",
+              "placeholder": "Rule"
+            },
+            {
+              "label": "Wellbeing chatbot access",
+              "answer": "opt-in via school app",
+              "placeholder": "Mode"
+            },
+            {
+              "label": "Chromebook refresh count (official)",
+              "answer": "120",
+              "placeholder": "Number"
+            },
+            {
+              "label": "Parent AI session venue",
+              "answer": "Main Hall",
+              "placeholder": "Venue"
+            }
+          ]
+        },
+        {
+          "id": "a3_ai_mcq",
+          "type": "MCQ_BATCH",
+          "label": "Policy literacy",
+          "questions": [
+            {
+              "question": "Which similarity threshold triggers mandatory review?",
+              "options": [
+                "A. over 35%",
+                "B. over 40%",
+                "C. exactly 40%",
+                "D. over 50%"
+              ],
+              "answer": "B"
+            },
+            {
+              "question": "Which parent evening date is obsolete?",
+              "options": [
+                "A. 21 March",
+                "B. 22 March",
+                "C. 23 March",
+                "D. 24 March"
+              ],
+              "answer": "A"
+            }
+          ]
+        }
+      ]
+    },
+    "integrated_data": {
+      "audio_transcript": "[INTEGRATED BRIEFING START]\nPrincipal: Governors want a student-facing FAQ that does not scare—but sets firm lines.\nAcademic Lead: Teachers must document prompts pasted from AI tools when they assist with drafting in class—transparency beats secrecy.\nLegal Advisor: For public assessment pieces, any AI assistance must be declared in the cover sheet footer; concealment may be misconduct.\nCounsellor: If mental-health stress arises from surveillance fears, refer to the human counsellor first, not the chatbot.\nIT Head: School VPN does not anonymise detector checks—students should not expect invisible bypasses.\nPrincipal: KPI: ninety-five percent of parents signed the acknowledgement form by April tenth or students lose optional device loan privileges.\nCurriculum Lead: Language teachers pilot peer oral verification for forty percent of extended tasks this term.\n[INTEGRATED BRIEFING END]",
+      "notetaking_fields": [
+        {
+          "id": "nt_integrity",
+          "label": "Integrity and disclosure",
+          "placeholder": "Capture declaration, documentation, and misconduct lines..."
+        },
+        {
+          "id": "nt_welfare",
+          "label": "Student welfare and KPIs",
+          "placeholder": "Note counselling priority, KPI dates, and pilots..."
+        }
+      ],
+      "data_file": [
+        {
+          "id": "df_policy_email",
+          "title": "Policy Launch Email (Excerpt)",
+          "type": "email",
+          "content": "From: School Office <office@harboursec.edu.hk>\\nTo: Parents & Guardians\\nSubject: AI Use Policy + Session 22 March 19:00\\n\\nThreshold: submission flagged when AI similarity is over 40% for review.\\nStudents may brainstorm with AI; final text must be substantially their own.\\nCover sheet footer declaration required for assessed work.\\nAcknowledgement due 10 April — link on portal.\\n\\nRegards,\\nLeadership Team"
+        },
+        {
+          "id": "df_faq_students",
+          "title": "Student FAQ",
+          "type": "faq",
+          "content": "Q: Can I submit ChatGPT paragraphs?\\nA: No—rewrite in your own words; declare any AI help on the footer.\\nQ: What if I'm stressed about monitoring?\\nA: Speak to a human counsellor first.\\nQ: Does VPN hide my draft?\\nA: No—school systems still run integrity checks."
+        },
+        {
+          "id": "df_bootcamp_brief",
+          "title": "Citation Bootcamp Notice",
+          "type": "brief",
+          "content": "Wed 12:45 Lab 3 - bring two printed sources\\nTeachers log AI prompts used in live demos\\nPeer oral verification pilot: 40% of extended language tasks this term"
+        }
+      ],
+      "writing_task": {
+        "instruction": "You are the Student Academic Integrity Prefect. Write a formal memo to the Principal summarising disclosure rules, similarity threshold implications, parental acknowledgement KPI, and support pathways for students worried about monitoring. When you address undeclared AI use on assessed work, use precise academic-integrity vocabulary (e.g. misconduct, concealment, integrity).",
+        "format": "Formal memo",
+        "role_profile": "Student Academic Integrity Prefect writing to the principal in respectful but firm academic-policy register.",
+        "word_count": "220-270",
+        "marking_criteria": "Content, Language, Organization, Appropriacy"
+      },
+      "marking_key": [
+        "State parent evening 22 March at 7:00 p.m. (reject 21 March).",
+        "Specify detector review when AI similarity is over forty percent (not merely 'at 40%'—threshold comparator).",
+        "Distinction: AI allowed for brainstorming; final submitted work must be substantially the student's own words.",
+        "Cover sheet / footer honesty: undisclosed AI assistance on assessed work may be misconduct or a breach of academic integrity; award this point if the memo uses at least one of misconduct, concealment, or integrity (or a clear synonym such as dishonesty) when explaining consequences.",
+        "If students fear surveillance, prioritise human counsellor over the wellbeing chatbot.",
+        "Note school VPN does not bypass integrity monitoring.",
+        "KPI: ninety-five percent parental acknowledgement by 10 April or optional device loans pause.",
+        "Mention peer oral verification pilot on forty percent of extended language tasks."
+      ]
+    }
+  }
+}

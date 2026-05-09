@@ -1,18 +1,10 @@
 const express = require('express');
 const router = express.Router();
 const RoadmapService = require('../services/RoadmapService');
-
-// Middleware to check for UID
-const requireAuth = (req, res, next) => {
-    const { uid } = req.body;
-    if (!uid) {
-        return res.status(401).json({ error: "Unauthorized: Missing UID" });
-    }
-    next();
-};
+const { requireResolvedUid } = require('../middleware/requireResolvedUid');
 
 // GET /api/roadmap
-router.get('/', async (req, res) => {
+router.get('/', requireResolvedUid, async (req, res) => {
     const { uid, subject } = req.query; // Support subject (english/maths)
     if (!uid) return res.status(400).json({ error: "Missing uid" });
     try {
@@ -25,7 +17,7 @@ router.get('/', async (req, res) => {
 });
 
 // POST /api/roadmap/complete
-router.post('/complete', async (req, res) => {
+router.post('/complete', requireResolvedUid, async (req, res) => {
     const { uid, taskId } = req.body;
     if (!uid || !taskId) return res.status(400).json({ error: "Missing data" });
     try {
@@ -38,7 +30,7 @@ router.post('/complete', async (req, res) => {
 });
 
 // POST /api/roadmap/regenerate
-router.post('/regenerate', requireAuth, async (req, res) => {
+router.post('/regenerate', requireResolvedUid, async (req, res) => {
     const { uid, subject } = req.body;
     try {
         const plan = await RoadmapService.generatePlan(uid, subject || 'english');

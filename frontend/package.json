@@ -11,8 +11,11 @@
     "test": "vitest"
   },
   "dependencies": {
+    "@azure/msal-browser": "^5.9.0",
     "@fingerprintjs/fingerprintjs": "^5.0.1",
     "@radix-ui/react-dialog": "^1.1.15",
+    "@stripe/react-stripe-js": "^6.3.0",
+    "@stripe/stripe-js": "^9.4.0",
     "@tiptap/extension-placeholder": "^3.20.5",
     "@tiptap/extension-underline": "^3.20.5",
     "@tiptap/pm": "^3.20.5",
@@ -30,6 +33,7 @@
     "react": "^19.2.0",
     "react-chartjs-2": "^5.3.1",
     "react-dom": "^19.2.0",
+    "react-ga4": "^3.0.1",
     "react-i18next": "^16.5.4",
     "react-katex": "^3.1.0",
     "react-markdown": "^10.1.0",

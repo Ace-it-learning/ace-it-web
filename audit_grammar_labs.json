@@ -1,0 +1,7429 @@
+[
+  {
+    "file": "grammar_accuracy_countable_level_3.json",
+    "topic": "grammar_accuracy_countable",
+    "level": "HKDSE Level 3",
+    "task_idx": 0,
+    "tokens": [
+      "I",
+      "need",
+      "some",
+      "information",
+      "about",
+      "the",
+      "new",
+      "course",
+      "."
+    ],
+    "indices": [
+      3
+    ],
+    "picked": [
+      "information"
+    ],
+    "explanation": "'Information' is uncountable. It cannot be pluralized even if you are talking about multiple pieces of data."
+  },
+  {
+    "file": "grammar_accuracy_countable_level_3.json",
+    "topic": "grammar_accuracy_countable",
+    "level": "HKDSE Level 3",
+    "task_idx": 1,
+    "tokens": [
+      "There",
+      "is",
+      "too",
+      "much",
+      "sugar",
+      "in",
+      "this",
+      "cup",
+      "of",
+      "tea",
+      "."
+    ],
+    "indices": [
+      4
+    ],
+    "picked": [
+      "sugar"
+    ],
+    "explanation": "'Sugar' is uncountable (it's a powder/substance), so we use 'much' instead of 'many'."
+  },
+  {
+    "file": "grammar_accuracy_countable_level_3.json",
+    "topic": "grammar_accuracy_countable",
+    "level": "HKDSE Level 3",
+    "task_idx": 2,
+    "tokens": [
+      "He",
+      "has",
+      "finished",
+      "all",
+      "his",
+      "homework",
+      "already",
+      "."
+    ],
+    "indices": [
+      5
+    ],
+    "picked": [
+      "homework"
+    ],
+    "explanation": "'Homework' is an uncountable concept. You cannot say 'homeworks'."
+  },
+  {
+    "file": "grammar_accuracy_countable_level_3.json",
+    "topic": "grammar_accuracy_countable",
+    "level": "HKDSE Level 3",
+    "task_idx": 3,
+    "tokens": [
+      "Can",
+      "you",
+      "give",
+      "me",
+      "a",
+      "few",
+      "suggestions",
+      "for",
+      "the",
+      "party",
+      "?"
+    ],
+    "indices": [
+      5,
+      6
+    ],
+    "picked": [
+      "few",
+      "suggestions"
+    ],
+    "explanation": "'Suggestion' is countable, so it can be plural ('suggestions') and used with 'a few'."
+  },
+  {
+    "file": "grammar_accuracy_countable_level_3.json",
+    "topic": "grammar_accuracy_countable",
+    "level": "HKDSE Level 3",
+    "task_idx": 4,
+    "tokens": [
+      "The",
+      "music",
+      "was",
+      "too",
+      "loud",
+      "last",
+      "night",
+      "."
+    ],
+    "indices": [
+      1
+    ],
+    "picked": [
+      "music"
+    ],
+    "explanation": "'Music' is an uncountable abstract noun. It always takes a singular verb."
+  },
+  {
+    "file": "grammar_accuracy_countable_level_4.json",
+    "topic": "grammar_accuracy_countable",
+    "level": "HKDSE Level 4",
+    "task_idx": 0,
+    "tokens": [
+      "The",
+      "police",
+      "are",
+      "searching",
+      "for",
+      "the",
+      "stolen",
+      "jewelry",
+      "."
+    ],
+    "indices": [
+      1,
+      7
+    ],
+    "picked": [
+      "police",
+      "jewelry"
+    ],
+    "explanation": "'Police' is always plural, while 'jewelry' is always uncountable."
+  },
+  {
+    "file": "grammar_accuracy_countable_level_4.json",
+    "topic": "grammar_accuracy_countable",
+    "level": "HKDSE Level 4",
+    "task_idx": 1,
+    "tokens": [
+      "Unfortunately",
+      ",",
+      "very",
+      "few",
+      "students",
+      "passed",
+      "the",
+      "difficult",
+      "test",
+      "."
+    ],
+    "indices": [
+      3,
+      4
+    ],
+    "picked": [
+      "few",
+      "students"
+    ],
+    "explanation": "'Few' (without 'a') emphasizes the small number in a negative sense."
+  },
+  {
+    "file": "grammar_accuracy_countable_level_4.json",
+    "topic": "grammar_accuracy_countable",
+    "level": "HKDSE Level 4",
+    "task_idx": 2,
+    "tokens": [
+      "The",
+      "new",
+      "machinery",
+      "has",
+      "improved",
+      "our",
+      "production",
+      "speed",
+      "."
+    ],
+    "indices": [
+      2
+    ],
+    "picked": [
+      "machinery"
+    ],
+    "explanation": "'Machinery' is uncountable, so it takes a singular verb 'has'."
+  },
+  {
+    "file": "grammar_accuracy_countable_level_4.json",
+    "topic": "grammar_accuracy_countable",
+    "level": "HKDSE Level 4",
+    "task_idx": 3,
+    "tokens": [
+      "Could",
+      "you",
+      "lend",
+      "me",
+      "a",
+      "couple",
+      "of",
+      "tools",
+      "to",
+      "fix",
+      "the",
+      "bike",
+      "?"
+    ],
+    "indices": [
+      5,
+      7
+    ],
+    "picked": [
+      "couple",
+      "tools"
+    ],
+    "explanation": "'Tools' is countable. 'A couple of' is used for countable items."
+  },
+  {
+    "file": "grammar_accuracy_countable_level_4.json",
+    "topic": "grammar_accuracy_countable",
+    "level": "HKDSE Level 4",
+    "task_idx": 4,
+    "tokens": [
+      "I",
+      "drank",
+      "a",
+      "little",
+      "water",
+      "to",
+      "quench",
+      "my",
+      "thirst",
+      "."
+    ],
+    "indices": [
+      3,
+      4
+    ],
+    "picked": [
+      "little",
+      "water"
+    ],
+    "explanation": "'A little' is the quantifier for uncountable 'water'."
+  },
+  {
+    "file": "grammar_accuracy_countable_level_5.json",
+    "topic": "grammar_accuracy_countable",
+    "level": "HKDSE Level 5",
+    "task_idx": 0,
+    "tokens": [
+      "The",
+      "scientific",
+      "phenomena",
+      "observed",
+      "by",
+      "the",
+      "team",
+      "were",
+      "truly",
+      "extraordinary",
+      "."
+    ],
+    "indices": [
+      2,
+      7
+    ],
+    "picked": [
+      "phenomena",
+      "were"
+    ],
+    "explanation": "'Phenomena' is the plural of 'phenomenon', so it requires the plural verb 'were'."
+  },
+  {
+    "file": "grammar_accuracy_countable_level_5.json",
+    "topic": "grammar_accuracy_countable",
+    "level": "HKDSE Level 5",
+    "task_idx": 1,
+    "tokens": [
+      "Several",
+      "passers-by",
+      "stopped",
+      "to",
+      "help",
+      " the",
+      "injured",
+      "pedestrian",
+      "."
+    ],
+    "indices": [
+      1
+    ],
+    "picked": [
+      "passers-by"
+    ],
+    "explanation": "In compound nouns like 'passer-by', the plural 's' is added to the head noun 'passer'."
+  },
+  {
+    "file": "grammar_accuracy_countable_level_5.json",
+    "topic": "grammar_accuracy_countable",
+    "level": "HKDSE Level 5",
+    "task_idx": 2,
+    "tokens": [
+      "Is",
+      "there",
+      "any",
+      "means",
+      "of",
+      "communication",
+      "that",
+      "is",
+      "faster",
+      "than",
+      "email",
+      "?"
+    ],
+    "indices": [
+      3
+    ],
+    "picked": [
+      "means"
+    ],
+    "explanation": "'Means' is a noun that ends in 's' but can be singular or plural. Here it is singular ('any means')."
+  },
+  {
+    "file": "grammar_accuracy_countable_level_5.json",
+    "topic": "grammar_accuracy_countable",
+    "level": "HKDSE Level 5",
+    "task_idx": 3,
+    "tokens": [
+      "She",
+      "bought",
+      "three",
+      "papers",
+      "to",
+      "read",
+      "on",
+      "the",
+      "train",
+      "."
+    ],
+    "indices": [
+      3
+    ],
+    "picked": [
+      "papers"
+    ],
+    "explanation": "When 'paper' refers to a newspaper, it is countable ('papers'). When it refers to the material, it is uncountable."
+  },
+  {
+    "file": "grammar_accuracy_countable_level_5.json",
+    "topic": "grammar_accuracy_countable",
+    "level": "HKDSE Level 5",
+    "task_idx": 4,
+    "tokens": [
+      "The",
+      "criteria",
+      "for",
+      "admission",
+      "have",
+      "not",
+      "changed",
+      "since",
+      "last",
+      "year",
+      "."
+    ],
+    "indices": [
+      1,
+      4
+    ],
+    "picked": [
+      "criteria",
+      "have"
+    ],
+    "explanation": "'Criteria' is plural; the singular is 'criterion'. Thus, it uses 'have'."
+  },
+  {
+    "file": "grammar_accuracy_countable_level_7.json",
+    "topic": "grammar_accuracy_countable",
+    "level": "HKDSE Level 5**",
+    "task_idx": 0,
+    "tokens": [
+      "Statistics",
+      "is",
+      "often",
+      "misinterpreted",
+      "by",
+      "the",
+      "general",
+      "public",
+      "."
+    ],
+    "indices": [
+      0,
+      1
+    ],
+    "picked": [
+      "Statistics",
+      "is"
+    ],
+    "explanation": "Names of academic subjects ending in 's' are singular and take a singular verb 'is'."
+  },
+  {
+    "file": "grammar_accuracy_countable_level_7.json",
+    "topic": "grammar_accuracy_countable",
+    "level": "HKDSE Level 5**",
+    "task_idx": 1,
+    "tokens": [
+      "He",
+      "showed",
+      "a",
+      "spark",
+      "of",
+      "genius",
+      "during",
+      "the",
+      "final",
+      "presentation",
+      "."
+    ],
+    "indices": [
+      3,
+      5
+    ],
+    "picked": [
+      "spark",
+      "genius"
+    ],
+    "explanation": "'Genius' (the quality) is uncountable; 'spark' is the partitive quantifier used to make it countable."
+  },
+  {
+    "file": "grammar_accuracy_countable_level_7.json",
+    "topic": "grammar_accuracy_countable",
+    "level": "HKDSE Level 5**",
+    "task_idx": 2,
+    "tokens": [
+      "The",
+      "alumni",
+      "of",
+      "the",
+      "university",
+      "have",
+      "donated",
+      "millions",
+      "to",
+      "the",
+      "new",
+      "library",
+      "."
+    ],
+    "indices": [
+      1,
+      5
+    ],
+    "picked": [
+      "alumni",
+      "have"
+    ],
+    "explanation": "'Alumni' is the plural of 'alumnus', thus requiring the plural verb 'have'."
+  },
+  {
+    "file": "grammar_accuracy_countable_level_7.json",
+    "topic": "grammar_accuracy_countable",
+    "level": "HKDSE Level 5**",
+    "task_idx": 3,
+    "tokens": [
+      "We",
+      "must",
+      "examine",
+      "the",
+      "bases",
+      "of",
+      "their",
+      "arguments",
+      "carefully",
+      "."
+    ],
+    "indices": [
+      4
+    ],
+    "picked": [
+      "bases"
+    ],
+    "explanation": "'Bases' (pronounced 'bay-seez') is the plural of 'basis'."
+  },
+  {
+    "file": "grammar_accuracy_countable_level_7.json",
+    "topic": "grammar_accuracy_countable",
+    "level": "HKDSE Level 5**",
+    "task_idx": 4,
+    "tokens": [
+      "Good",
+      "manners",
+      "cost",
+      "nothing",
+      "but",
+      "buy",
+      "everything",
+      "."
+    ],
+    "indices": [
+      1
+    ],
+    "picked": [
+      "manners"
+    ],
+    "explanation": "'Manners' (polite behavior) is always plural and takes a plural verb ('cost')."
+  },
+  {
+    "file": "grammar_accuracy_pronoun_level_3.json",
+    "topic": "grammar_accuracy_pronoun",
+    "level": "HKDSE Level 3",
+    "task_idx": 0,
+    "tokens": [
+      "Sarah",
+      "lost",
+      "her",
+      "keys",
+      ",",
+      "but",
+      "she",
+      "found",
+      "them",
+      "later",
+      "."
+    ],
+    "indices": [
+      0,
+      3,
+      6,
+      8
+    ],
+    "picked": [
+      "Sarah",
+      "keys",
+      "she",
+      "them"
+    ],
+    "explanation": "'She' refers to 'Sarah' (singular person), and 'them' refers to 'keys' (plural things)."
+  },
+  {
+    "file": "grammar_accuracy_pronoun_level_3.json",
+    "topic": "grammar_accuracy_pronoun",
+    "level": "HKDSE Level 3",
+    "task_idx": 1,
+    "tokens": [
+      "The",
+      "dog",
+      "wagged",
+      "its",
+      "tail",
+      "when",
+      "it",
+      "saw",
+      "the",
+      "owner",
+      "."
+    ],
+    "indices": [
+      1,
+      6
+    ],
+    "picked": [
+      "dog",
+      "it"
+    ],
+    "explanation": "'It' refers back to 'the dog'."
+  },
+  {
+    "file": "grammar_accuracy_pronoun_level_3.json",
+    "topic": "grammar_accuracy_pronoun",
+    "level": "HKDSE Level 3",
+    "task_idx": 2,
+    "tokens": [
+      "John",
+      "and",
+      "I",
+      "went",
+      "to",
+      "the",
+      "cinema",
+      "because",
+      "we",
+      "wanted",
+      "to",
+      "see",
+      "the",
+      "movie",
+      "."
+    ],
+    "indices": [
+      0,
+      2,
+      8
+    ],
+    "picked": [
+      "John",
+      "I",
+      "we"
+    ],
+    "explanation": "'We' refers to 'John and I' (plural including self)."
+  },
+  {
+    "file": "grammar_accuracy_pronoun_level_3.json",
+    "topic": "grammar_accuracy_pronoun",
+    "level": "HKDSE Level 3",
+    "task_idx": 3,
+    "tokens": [
+      "The",
+      "teacher",
+      "asked",
+      "me",
+      "to",
+      "help",
+      "him",
+      "with",
+      "the",
+      "books",
+      "."
+    ],
+    "indices": [
+      1,
+      6
+    ],
+    "picked": [
+      "teacher",
+      "him"
+    ],
+    "explanation": "'Him' refers to 'the teacher' (object form)."
+  },
+  {
+    "file": "grammar_accuracy_pronoun_level_3.json",
+    "topic": "grammar_accuracy_pronoun",
+    "level": "HKDSE Level 3",
+    "task_idx": 4,
+    "tokens": [
+      "My",
+      "parents",
+      "are",
+      "kind",
+      ";",
+      "they",
+      "always",
+      "support",
+      "me",
+      "."
+    ],
+    "indices": [
+      1,
+      5
+    ],
+    "picked": [
+      "parents",
+      "they"
+    ],
+    "explanation": "'They' refers to 'parents' (plural)."
+  },
+  {
+    "file": "grammar_accuracy_pronoun_level_4.json",
+    "topic": "grammar_accuracy_pronoun",
+    "level": "HKDSE Level 4",
+    "task_idx": 0,
+    "tokens": [
+      "The",
+      "manager",
+      "told",
+      "the",
+      "employee",
+      "that",
+      "the",
+      "manager",
+      "would",
+      "be",
+      "away",
+      "."
+    ],
+    "indices": [
+      1,
+      7
+    ],
+    "picked": [
+      "manager",
+      "manager"
+    ],
+    "explanation": "To avoid ambiguity, we repeat the noun 'manager' or use a specific name instead of just 'he'."
+  },
+  {
+    "file": "grammar_accuracy_pronoun_level_4.json",
+    "topic": "grammar_accuracy_pronoun",
+    "level": "HKDSE Level 4",
+    "task_idx": 1,
+    "tokens": [
+      "If",
+      "anyone",
+      "has",
+      "a",
+      "question",
+      ",",
+      "they",
+      "should",
+      "raise",
+      "their",
+      "hand",
+      "."
+    ],
+    "indices": [
+      1,
+      6,
+      9
+    ],
+    "picked": [
+      "anyone",
+      "they",
+      "their"
+    ],
+    "explanation": "'They' and 'their' are used as gender-neutral singular pronouns for 'anyone'."
+  },
+  {
+    "file": "grammar_accuracy_pronoun_level_4.json",
+    "topic": "grammar_accuracy_pronoun",
+    "level": "HKDSE Level 4",
+    "task_idx": 2,
+    "tokens": [
+      "The",
+      "children",
+      "were",
+      "behaving",
+      "well",
+      "and",
+      "playing",
+      "by",
+      "themselves",
+      "."
+    ],
+    "indices": [
+      1,
+      8
+    ],
+    "picked": [
+      "children",
+      "themselves"
+    ],
+    "explanation": "'Themselves' is the reflexive pronoun for 'children'."
+  },
+  {
+    "file": "grammar_accuracy_pronoun_level_4.json",
+    "topic": "grammar_accuracy_pronoun",
+    "level": "HKDSE Level 4",
+    "task_idx": 3,
+    "tokens": [
+      "Each",
+      "of",
+      "the",
+      "contestants",
+      "was",
+      "given",
+      "his",
+      "or",
+      "her",
+      "own",
+      "number",
+      "."
+    ],
+    "indices": [
+      0,
+      6,
+      8
+    ],
+    "picked": [
+      "Each",
+      "his",
+      "her"
+    ],
+    "explanation": "'Each' is singular, so it technically requires 'his or her' in formal writing."
+  },
+  {
+    "file": "grammar_accuracy_pronoun_level_4.json",
+    "topic": "grammar_accuracy_pronoun",
+    "level": "HKDSE Level 4",
+    "task_idx": 4,
+    "tokens": [
+      "I",
+      "will",
+      "handle",
+      "the",
+      "matter",
+      "myself",
+      ",",
+      "thank",
+      "you",
+      "."
+    ],
+    "indices": [
+      0,
+      5
+    ],
+    "picked": [
+      "I",
+      "myself"
+    ],
+    "explanation": "'Myself' is used for emphasis or when the subject and object are the same."
+  },
+  {
+    "file": "grammar_accuracy_pronoun_level_5.json",
+    "topic": "grammar_accuracy_pronoun",
+    "level": "HKDSE Level 5",
+    "task_idx": 0,
+    "tokens": [
+      "The",
+      "person",
+      "to",
+      "whom",
+      "I",
+      "gave",
+      "the",
+      "letter",
+      "was",
+      "the",
+      "manager",
+      "."
+    ],
+    "indices": [
+      3,
+      10
+    ],
+    "picked": [
+      "whom",
+      "manager"
+    ],
+    "explanation": "'Whom' is used after a preposition as the object of 'gave'."
+  },
+  {
+    "file": "grammar_accuracy_pronoun_level_5.json",
+    "topic": "grammar_accuracy_pronoun",
+    "level": "HKDSE Level 5",
+    "task_idx": 1,
+    "tokens": [
+      "Between",
+      "you",
+      "and",
+      "me",
+      ",",
+      "I",
+      "think",
+      "the",
+      "plan",
+      "will",
+      "fail",
+      "."
+    ],
+    "indices": [
+      3
+    ],
+    "picked": [
+      "me"
+    ],
+    "explanation": "After 'between', we must use the object pronoun 'me'."
+  },
+  {
+    "file": "grammar_accuracy_pronoun_level_5.json",
+    "topic": "grammar_accuracy_pronoun",
+    "level": "HKDSE Level 5",
+    "task_idx": 2,
+    "tokens": [
+      "One",
+      "cannot",
+      "expect",
+      "to",
+      "succeed",
+      "if",
+      "one",
+      "does",
+      "not",
+      "work",
+      "hard",
+      "."
+    ],
+    "indices": [
+      0,
+      6
+    ],
+    "picked": [
+      "One",
+      "one"
+    ],
+    "explanation": "Consistency: 'One' is followed by 'one' in the subordinate clause."
+  },
+  {
+    "file": "grammar_accuracy_pronoun_level_5.json",
+    "topic": "grammar_accuracy_pronoun",
+    "level": "HKDSE Level 5",
+    "task_idx": 3,
+    "tokens": [
+      "The",
+      "climate",
+      "in",
+      "which",
+      "we",
+      "live",
+      "is",
+      "changing",
+      "rapidly",
+      "."
+    ],
+    "indices": [
+      3,
+      1
+    ],
+    "picked": [
+      "which",
+      "climate"
+    ],
+    "explanation": "'In which' refers to the environment or setting ('climate')."
+  },
+  {
+    "file": "grammar_accuracy_pronoun_level_5.json",
+    "topic": "grammar_accuracy_pronoun",
+    "level": "HKDSE Level 5",
+    "task_idx": 4,
+    "tokens": [
+      "Who",
+      "did",
+      "you",
+      "say",
+      "was",
+      "responsible",
+      "for",
+      "this",
+      "mess",
+      "?"
+    ],
+    "indices": [
+      0
+    ],
+    "picked": [
+      "Who"
+    ],
+    "explanation": "'Who' is the subject of 'was responsible'."
+  },
+  {
+    "file": "grammar_accuracy_pronoun_level_7.json",
+    "topic": "grammar_accuracy_pronoun",
+    "level": "HKDSE Level 5**",
+    "task_idx": 0,
+    "tokens": [
+      "The",
+      "climate",
+      "of",
+      "Hong",
+      "Kong",
+      "is",
+      "similar",
+      "to",
+      "that",
+      "of",
+      "Taiwan",
+      "."
+    ],
+    "indices": [
+      8,
+      1
+    ],
+    "picked": [
+      "that",
+      "climate"
+    ],
+    "explanation": "'That' is a substitution pronoun referring back to 'the climate'."
+  },
+  {
+    "file": "grammar_accuracy_pronoun_level_7.json",
+    "topic": "grammar_accuracy_pronoun",
+    "level": "HKDSE Level 5**",
+    "task_idx": 1,
+    "tokens": [
+      "She",
+      "is",
+      "far",
+      "more",
+      "experienced",
+      "than",
+      "he",
+      "."
+    ],
+    "indices": [
+      7
+    ],
+    "picked": [
+      "."
+    ],
+    "explanation": "In formal comparison, 'he' is preferred as it implies 'than he is'."
+  },
+  {
+    "file": "grammar_accuracy_pronoun_level_7.json",
+    "topic": "grammar_accuracy_pronoun",
+    "level": "HKDSE Level 5**",
+    "task_idx": 2,
+    "tokens": [
+      "My",
+      "parents",
+      "do",
+      "not",
+      "approve",
+      "of",
+      "my",
+      "studying",
+      "abroad",
+      "."
+    ],
+    "indices": [
+      6,
+      7
+    ],
+    "picked": [
+      "my",
+      "studying"
+    ],
+    "explanation": "Use the possessive 'my' before the gerund 'studying'."
+  },
+  {
+    "file": "grammar_accuracy_pronoun_level_7.json",
+    "topic": "grammar_accuracy_pronoun",
+    "level": "HKDSE Level 5**",
+    "task_idx": 3,
+    "tokens": [
+      "The",
+      "wages",
+      "in",
+      "the",
+      "UK",
+      "are",
+      "higher",
+      "than",
+      "those",
+      "of",
+      "India",
+      "."
+    ],
+    "indices": [
+      8,
+      1
+    ],
+    "picked": [
+      "those",
+      "wages"
+    ],
+    "explanation": "'Those' refers back to the plural noun 'wages'."
+  },
+  {
+    "file": "grammar_accuracy_pronoun_level_7.json",
+    "topic": "grammar_accuracy_pronoun",
+    "level": "HKDSE Level 5**",
+    "task_idx": 4,
+    "tokens": [
+      "I",
+      "find",
+      "it",
+      "shocking",
+      "that",
+      "they",
+      "would",
+      "act",
+      "in",
+      "such",
+      "a",
+      "manner",
+      "."
+    ],
+    "indices": [
+      2
+    ],
+    "picked": [
+      "it"
+    ],
+    "explanation": "'It' is a dummy object (preparatory it) pointing to the 'that' clause."
+  },
+  {
+    "file": "grammar_accuracy_sva_level_3.json",
+    "topic": "grammar_accuracy_sva",
+    "level": "HKDSE Level 5 (Strong)",
+    "task_idx": 0,
+    "tokens": [
+      "The",
+      "quality",
+      "of",
+      "the",
+      "newly",
+      "built",
+      "public",
+      "housing",
+      "estates",
+      "has",
+      "improved",
+      "."
+    ],
+    "indices": [
+      1
+    ],
+    "picked": [
+      "quality"
+    ],
+    "explanation": "The head noun is 'quality' (Singular). The phrase 'of the newly built public housing estates' is a prepositional distractor. Therefore, the singular verb 'has' is correct."
+  },
+  {
+    "file": "grammar_accuracy_sva_level_3.json",
+    "topic": "grammar_accuracy_sva",
+    "level": "HKDSE Level 5 (Strong)",
+    "task_idx": 1,
+    "tokens": [
+      "The",
+      "chief",
+      "engineer",
+      ",",
+      "along",
+      "with",
+      "his",
+      "team",
+      "members",
+      ",",
+      "inspects",
+      "the",
+      "MTR",
+      "tracks",
+      "."
+    ],
+    "indices": [
+      1,
+      2
+    ],
+    "picked": [
+      "chief",
+      "engineer"
+    ],
+    "explanation": "The head noun phrase is 'chief engineer' (Singular). Phrases starting with 'along with' do not make the subject plural. Therefore, the verb 'inspects' must be singular."
+  },
+  {
+    "file": "grammar_accuracy_sva_level_3.json",
+    "topic": "grammar_accuracy_sva",
+    "level": "HKDSE Level 5 (Strong)",
+    "task_idx": 2,
+    "tokens": [
+      "Neither",
+      "the",
+      "frustrated",
+      "commuters",
+      "nor",
+      "the",
+      "station",
+      "manager",
+      "knows",
+      "when",
+      "the",
+      "train",
+      "will",
+      "arrive",
+      "."
+    ],
+    "indices": [
+      6,
+      7
+    ],
+    "picked": [
+      "station",
+      "manager"
+    ],
+    "explanation": "For correlative conjunctions 'Neither...nor', the verb agrees with the closest subject. The closest subject is 'station manager' (Singular), so the verb 'knows' must be singular."
+  },
+  {
+    "file": "grammar_accuracy_sva_level_3.json",
+    "topic": "grammar_accuracy_sva",
+    "level": "HKDSE Level 5 (Strong)",
+    "task_idx": 3,
+    "tokens": [
+      "The",
+      "number",
+      "of",
+      "tourists",
+      "visiting",
+      "the",
+      "Tsim",
+      "Sha",
+      "Tsui",
+      "promenade",
+      "is",
+      "increasing",
+      "."
+    ],
+    "indices": [
+      1
+    ],
+    "picked": [
+      "number"
+    ],
+    "explanation": "The phrase 'The number' refers to a singular mathematical figure or statistic, regardless of the plural noun 'tourists' that follows it. Therefore, the verb 'is' is singular."
+  },
+  {
+    "file": "grammar_accuracy_sva_level_3.json",
+    "topic": "grammar_accuracy_sva",
+    "level": "HKDSE Level 5 (Strong)",
+    "task_idx": 4,
+    "tokens": [
+      "This",
+      "cha",
+      "chaan",
+      "teng",
+      "is",
+      "the",
+      "only",
+      "one",
+      "of",
+      "the",
+      "local",
+      "restaurants",
+      "that",
+      "serves",
+      "traditional",
+      "silk-stocking",
+      "milk",
+      "tea",
+      "."
+    ],
+    "indices": [
+      7
+    ],
+    "picked": [
+      "one"
+    ],
+    "explanation": "The antecedent of 'that' is modified by 'the only one'. While 'the local restaurants' is plural, 'the only one' forces a singular verb 'serves'."
+  },
+  {
+    "file": "grammar_accuracy_sva_level_4.json",
+    "topic": "grammar_accuracy_sva",
+    "level": "HKDSE Level 5** (Mastery)",
+    "task_idx": 0,
+    "tokens": [
+      "The",
+      "influx",
+      "of",
+      "tourists",
+      "in",
+      "Tsim",
+      "Sha",
+      "Tsui",
+      "causes",
+      "congestion",
+      "."
+    ],
+    "indices": [
+      1
+    ],
+    "picked": [
+      "influx"
+    ],
+    "explanation": "Trap 1: Prepositional Phrase. The prepositional phrases 'of tourists' and 'in Tsim Sha Tsui' are descriptors. The true subject dictating the singular verb 'causes' is the singular noun 'influx'."
+  },
+  {
+    "file": "grammar_accuracy_sva_level_4.json",
+    "topic": "grammar_accuracy_sva",
+    "level": "HKDSE Level 5** (Mastery)",
+    "task_idx": 1,
+    "tokens": [
+      "The",
+      "manager",
+      ",",
+      "along",
+      "with",
+      "two",
+      "clerks",
+      ",",
+      "is",
+      "handling",
+      "the",
+      "dispute",
+      "."
+    ],
+    "indices": [
+      1
+    ],
+    "picked": [
+      "manager"
+    ],
+    "explanation": "Trap 2: 'Along With'. Phrases separated by commas like 'along with two clerks' act as interrupters, not conjunctions. They do not compound the subject. The sole head noun is 'manager', requiring the singular 'is'."
+  },
+  {
+    "file": "grammar_accuracy_sva_level_4.json",
+    "topic": "grammar_accuracy_sva",
+    "level": "HKDSE Level 5** (Mastery)",
+    "task_idx": 2,
+    "tokens": [
+      "Neither",
+      "the",
+      "directors",
+      "nor",
+      "the",
+      "chairman",
+      "approves",
+      "the",
+      "budget",
+      "."
+    ],
+    "indices": [
+      5
+    ],
+    "picked": [
+      "chairman"
+    ],
+    "explanation": "Trap 3: Proximity Rule. In 'neither... nor' structures, the verb must agree with the subject closest to it. Here, the singular 'chairman' is closer to the verb than the plural 'directors', dictating the singular verb 'approves'."
+  },
+  {
+    "file": "grammar_accuracy_sva_level_4.json",
+    "topic": "grammar_accuracy_sva",
+    "level": "HKDSE Level 5** (Mastery)",
+    "task_idx": 3,
+    "tokens": [
+      "The",
+      "number",
+      "of",
+      "vacant",
+      "shops",
+      "in",
+      "Mong",
+      "Kok",
+      "has",
+      "risen",
+      "."
+    ],
+    "indices": [
+      1
+    ],
+    "picked": [
+      "number"
+    ],
+    "explanation": "Trap 4: 'Number' Flip. 'The number of' treats the quantity as a single, collective mathematical unit. Thus, the head noun is 'number', which demands a singular verb ('has risen'), unlike 'A number of' which means 'many'."
+  },
+  {
+    "file": "grammar_accuracy_sva_level_4.json",
+    "topic": "grammar_accuracy_sva",
+    "level": "HKDSE Level 5** (Mastery)",
+    "task_idx": 4,
+    "tokens": [
+      "This",
+      "is",
+      "one",
+      "of",
+      "the",
+      "trams",
+      "that",
+      "operate",
+      "on",
+      "Hong",
+      "Kong",
+      "Island",
+      "."
+    ],
+    "indices": [
+      5
+    ],
+    "picked": [
+      "trams"
+    ],
+    "explanation": "Trap 5: Relative Clause. The relative pronoun 'that' refers back to its immediate antecedent. Here, it refers to the plural 'trams', not 'one', meaning the verb inside the clause must be the plural 'operate'."
+  },
+  {
+    "file": "grammar_accuracy_sva_level_5.json",
+    "topic": "grammar_accuracy_sva",
+    "level": "HKDSE Level 5",
+    "task_idx": 0,
+    "tokens": [
+      "The",
+      "construction",
+      "of",
+      "several",
+      "new",
+      "housing",
+      "estates",
+      "in",
+      "Kai",
+      "Tak",
+      "requires",
+      "careful",
+      "planning",
+      "."
+    ],
+    "indices": [
+      1
+    ],
+    "picked": [
+      "construction"
+    ],
+    "explanation": "The true subject is 'construction' (singular). The plural nouns 'estates' and 'Tak' are trapped inside prepositional phrases ('of several new housing estates', 'in Kai Tak') and do not dictate the verb form."
+  },
+  {
+    "file": "grammar_accuracy_sva_level_5.json",
+    "topic": "grammar_accuracy_sva",
+    "level": "HKDSE Level 5",
+    "task_idx": 1,
+    "tokens": [
+      "The",
+      "Chief",
+      "Executive",
+      ",",
+      "along",
+      "with",
+      "several",
+      "government",
+      "officials",
+      ",",
+      "attends",
+      "the",
+      "flag-raising",
+      "ceremony",
+      "."
+    ],
+    "indices": [
+      1,
+      2
+    ],
+    "picked": [
+      "Chief",
+      "Executive"
+    ],
+    "explanation": "The subject is 'Chief Executive' (singular). The phrase 'along with several government officials' is additive, not a conjunction like 'and', so it does not make the subject plural."
+  },
+  {
+    "file": "grammar_accuracy_sva_level_5.json",
+    "topic": "grammar_accuracy_sva",
+    "level": "HKDSE Level 5",
+    "task_idx": 2,
+    "tokens": [
+      "He",
+      "is",
+      "one",
+      "of",
+      "the",
+      "candidates",
+      "who",
+      "aim",
+      "for",
+      "a",
+      "Level",
+      "5**",
+      "in",
+      "English",
+      "."
+    ],
+    "indices": [
+      5
+    ],
+    "picked": [
+      "candidates"
+    ],
+    "explanation": "In the relative clause 'who aim', the pronoun 'who' refers back to 'candidates' (plural). Therefore, the verb 'aim' must be plural to agree with 'candidates', not 'one'."
+  },
+  {
+    "file": "grammar_accuracy_sva_level_5.json",
+    "topic": "grammar_accuracy_sva",
+    "level": "HKDSE Level 5",
+    "task_idx": 3,
+    "tokens": [
+      "A",
+      "number",
+      "of",
+      "local",
+      "cafes",
+      "are",
+      "updating",
+      "their",
+      "menus",
+      "to",
+      "include",
+      "oat",
+      "milk",
+      "."
+    ],
+    "indices": [
+      4
+    ],
+    "picked": [
+      "cafes"
+    ],
+    "explanation": "Grammatically, 'A number of' functions as a plural quantifier (like 'many'), making 'cafes' the plural head noun that governs the plural verb 'are'."
+  },
+  {
+    "file": "grammar_accuracy_sva_level_5.json",
+    "topic": "grammar_accuracy_sva",
+    "level": "HKDSE Level 5",
+    "task_idx": 4,
+    "tokens": [
+      "Neither",
+      "the",
+      "principal",
+      "nor",
+      "the",
+      "teachers",
+      "agree",
+      "with",
+      "the",
+      "revised",
+      "homework",
+      "policy",
+      "."
+    ],
+    "indices": [
+      5
+    ],
+    "picked": [
+      "teachers"
+    ],
+    "explanation": "Under the Proximity Rule for correlative conjunctions (neither...nor), the verb 'agree' must match the noun closest to it, which is the plural noun 'teachers'."
+  },
+  {
+    "file": "grammar_accuracy_sva_level_7.json",
+    "topic": "grammar_accuracy_sva",
+    "level": "HKDSE Level 5** (Mastery)",
+    "task_idx": 0,
+    "tokens": [
+      "The",
+      "influx",
+      "of",
+      "tourists",
+      "into",
+      "the",
+      "revitalized",
+      "Sham",
+      "Shui",
+      "Po",
+      "streets",
+      "has",
+      "caused",
+      "traffic",
+      "jams",
+      "."
+    ],
+    "indices": [
+      1
+    ],
+    "picked": [
+      "influx"
+    ],
+    "explanation": "The true subject is 'influx' (singular), which governs the singular verb 'has'. The prepositional phrase 'of tourists into the revitalized Sham Shui Po streets' contains plural nouns designed to trick you into using 'have'."
+  },
+  {
+    "file": "grammar_accuracy_sva_level_7.json",
+    "topic": "grammar_accuracy_sva",
+    "level": "HKDSE Level 5** (Mastery)",
+    "task_idx": 1,
+    "tokens": [
+      "The",
+      "principal",
+      ",",
+      "as",
+      "well",
+      "as",
+      "several",
+      "teachers",
+      "from",
+      "the",
+      "local",
+      "secondary",
+      "school",
+      ",",
+      "is",
+      "attending",
+      "the",
+      "seminar",
+      "."
+    ],
+    "indices": [
+      1
+    ],
+    "picked": [
+      "principal"
+    ],
+    "explanation": "The head noun is 'principal'. Phrases beginning with 'as well as', 'along with', or 'including' are parenthetical and do not turn a singular subject into a plural one. Therefore, the singular verb 'is' is correct."
+  },
+  {
+    "file": "grammar_accuracy_sva_level_7.json",
+    "topic": "grammar_accuracy_sva",
+    "level": "HKDSE Level 5** (Mastery)",
+    "task_idx": 2,
+    "tokens": [
+      "Neither",
+      "the",
+      "commuters",
+      "nor",
+      "the",
+      "manager",
+      "is",
+      "aware",
+      "of",
+      "the",
+      "sudden",
+      "MTR",
+      "delay",
+      "."
+    ],
+    "indices": [
+      5
+    ],
+    "picked": [
+      "manager"
+    ],
+    "explanation": "According to the Proximity Rule, when using 'neither/nor', the verb must agree with the subject closest to it. Because 'manager' is singular and adjacent to the verb, the verb must be 'is'."
+  },
+  {
+    "file": "grammar_accuracy_sva_level_7.json",
+    "topic": "grammar_accuracy_sva",
+    "level": "HKDSE Level 5** (Mastery)",
+    "task_idx": 3,
+    "tokens": [
+      "The",
+      "number",
+      "of",
+      "newly",
+      "built",
+      "flats",
+      "in",
+      "the",
+      "Kai",
+      "Tak",
+      "development",
+      "area",
+      "remains",
+      "insufficient",
+      "."
+    ],
+    "indices": [
+      1
+    ],
+    "picked": [
+      "number"
+    ],
+    "explanation": "The phrase 'The number' refers to a singular mathematical figure, thus functioning as a singular head noun. This requires the singular verb 'remains', despite the presence of the plural noun 'flats'."
+  },
+  {
+    "file": "grammar_accuracy_sva_level_7.json",
+    "topic": "grammar_accuracy_sva",
+    "level": "HKDSE Level 5** (Mastery)",
+    "task_idx": 4,
+    "tokens": [
+      "It",
+      "is",
+      "one",
+      "of",
+      "the",
+      "restaurants",
+      "that",
+      "serve",
+      "authentic",
+      "pineapple",
+      "buns",
+      "."
+    ],
+    "indices": [
+      5
+    ],
+    "picked": [
+      "restaurants"
+    ],
+    "explanation": "In relative clauses, the verb following 'that' must agree with its immediate antecedent. Here, the antecedent is 'restaurants' (plural), so the plural verb 'serve' is correct. A common mistake is to match the verb to 'one'."
+  },
+  {
+    "file": "grammar_accuracy_tense_level_3.json",
+    "topic": "grammar_accuracy_tense",
+    "level": "HKDSE Level 3",
+    "task_idx": 0,
+    "tokens": [
+      "Many",
+      "tourists",
+      "visited",
+      "the",
+      "Big",
+      "Buddha",
+      "last",
+      "weekend",
+      "."
+    ],
+    "indices": [
+      6,
+      7
+    ],
+    "picked": [
+      "last",
+      "weekend"
+    ],
+    "explanation": "The time marker 'last weekend' indicates a finished action in the past, so the Simple Past tense 'visited' must be used."
+  },
+  {
+    "file": "grammar_accuracy_tense_level_3.json",
+    "topic": "grammar_accuracy_tense",
+    "level": "HKDSE Level 3",
+    "task_idx": 1,
+    "tokens": [
+      "She",
+      "has",
+      "worked",
+      "as",
+      "a",
+      "volunteer",
+      "since",
+      "2015",
+      "."
+    ],
+    "indices": [
+      6,
+      7
+    ],
+    "picked": [
+      "since",
+      "2015"
+    ],
+    "explanation": "The marker 'since 2015' shows an action that started in the past and continues to the present, requiring the Present Perfect tense 'has worked'."
+  },
+  {
+    "file": "grammar_accuracy_tense_level_3.json",
+    "topic": "grammar_accuracy_tense",
+    "level": "HKDSE Level 3",
+    "task_idx": 2,
+    "tokens": [
+      "We",
+      "will",
+      "join",
+      "the",
+      "school",
+      "picnic",
+      "next",
+      "Friday",
+      "."
+    ],
+    "indices": [
+      6,
+      7
+    ],
+    "picked": [
+      "next",
+      "Friday"
+    ],
+    "explanation": "The marker 'next Friday' refers to a future event, requiring the future tense 'will join'."
+  },
+  {
+    "file": "grammar_accuracy_tense_level_3.json",
+    "topic": "grammar_accuracy_tense",
+    "level": "HKDSE Level 3",
+    "task_idx": 3,
+    "tokens": [
+      "My",
+      "brother",
+      "usually",
+      "goes",
+      "to",
+      "the",
+      "library",
+      "after",
+      "school",
+      "."
+    ],
+    "indices": [
+      2
+    ],
+    "picked": [
+      "usually"
+    ],
+    "explanation": "The frequency adverb 'usually' indicates a habit, which requires the Simple Present tense 'goes'."
+  },
+  {
+    "file": "grammar_accuracy_tense_level_3.json",
+    "topic": "grammar_accuracy_tense",
+    "level": "HKDSE Level 3",
+    "task_idx": 4,
+    "tokens": [
+      "They",
+      "were",
+      "watching",
+      "a",
+      "movie",
+      "when",
+      "the",
+      "phone",
+      "rang",
+      "."
+    ],
+    "indices": [
+      5
+    ],
+    "picked": [
+      "when"
+    ],
+    "explanation": "The conjunction 'when' introduces a specific point in time in the past when another action was in progress, requiring the Past Continuous 'were watching'."
+  },
+  {
+    "file": "grammar_accuracy_tense_level_4.json",
+    "topic": "grammar_accuracy_tense",
+    "level": "HKDSE Level 4",
+    "task_idx": 0,
+    "tokens": [
+      "By",
+      "the",
+      "time",
+      "I",
+      "finished",
+      "my",
+      "essay",
+      ",",
+      "everyone",
+      "had",
+      "left",
+      "."
+    ],
+    "indices": [
+      0,
+      1,
+      2
+    ],
+    "picked": [
+      "By",
+      "the",
+      "time"
+    ],
+    "explanation": "'By the time' indicates a sequence where one action (leaving) was completed before another past action (finishing)."
+  },
+  {
+    "file": "grammar_accuracy_tense_level_4.json",
+    "topic": "grammar_accuracy_tense",
+    "level": "HKDSE Level 4",
+    "task_idx": 1,
+    "tokens": [
+      "If",
+      "you",
+      "study",
+      "harder",
+      ",",
+      "you",
+      "will",
+      "pass",
+      "the",
+      "DSE",
+      "."
+    ],
+    "indices": [
+      0
+    ],
+    "picked": [
+      "If"
+    ],
+    "explanation": "In a Type 1 conditional, 'If' sets a real possibility, requiring Simple Present in the if-clause."
+  },
+  {
+    "file": "grammar_accuracy_tense_level_4.json",
+    "topic": "grammar_accuracy_tense",
+    "level": "HKDSE Level 4",
+    "task_idx": 2,
+    "tokens": [
+      "The",
+      "manager",
+      "explained",
+      "that",
+      "the",
+      "system",
+      "had",
+      "crashed",
+      "earlier",
+      "."
+    ],
+    "indices": [
+      2,
+      8
+    ],
+    "picked": [
+      "explained",
+      "earlier"
+    ],
+    "explanation": "'Explained' is a past reporting verb, and 'earlier' confirms the crash happened before the explanation."
+  },
+  {
+    "file": "grammar_accuracy_tense_level_4.json",
+    "topic": "grammar_accuracy_tense",
+    "level": "HKDSE Level 4",
+    "task_idx": 3,
+    "tokens": [
+      "I",
+      "didn't",
+      "know",
+      "that",
+      "you",
+      "were",
+      "coming",
+      "to",
+      "the",
+      "party",
+      "."
+    ],
+    "indices": [
+      1,
+      2
+    ],
+    "picked": [
+      "didn't",
+      "know"
+    ],
+    "explanation": "The main verb 'didn't know' is in the past, so the subordinate clause 'were coming' must also be in the past (Sequence of Tenses)."
+  },
+  {
+    "file": "grammar_accuracy_tense_level_4.json",
+    "topic": "grammar_accuracy_tense",
+    "level": "HKDSE Level 4",
+    "task_idx": 4,
+    "tokens": [
+      "While",
+      "I",
+      "was",
+      "walking",
+      "home",
+      ",",
+      "it",
+      "started",
+      "to",
+      "rain",
+      "."
+    ],
+    "indices": [
+      0
+    ],
+    "picked": [
+      "While"
+    ],
+    "explanation": "'While' indicates a continuous background action in the past."
+  },
+  {
+    "file": "grammar_accuracy_tense_level_5.json",
+    "topic": "grammar_accuracy_tense",
+    "level": "HKDSE Level 5",
+    "task_idx": 0,
+    "tokens": [
+      "Even",
+      "though",
+      "he",
+      "is",
+      "rich",
+      ",",
+      "he",
+      "wishes",
+      "he",
+      "were",
+      "happier",
+      "."
+    ],
+    "indices": [
+      7,
+      9
+    ],
+    "picked": [
+      "wishes",
+      "were"
+    ],
+    "explanation": "'Wishes' introduces a hypothetical state, which requires the subjunctive 'were' regardless of the subject."
+  },
+  {
+    "file": "grammar_accuracy_tense_level_5.json",
+    "topic": "grammar_accuracy_tense",
+    "level": "HKDSE Level 5",
+    "task_idx": 1,
+    "tokens": [
+      "I",
+      "was",
+      "about",
+      "to",
+      "leave",
+      "when",
+      "I",
+      "remembered",
+      "I",
+      "had",
+      "forgotten",
+      "my",
+      "keys",
+      "."
+    ],
+    "indices": [
+      1,
+      2,
+      4
+    ],
+    "picked": [
+      "was",
+      "about",
+      "leave"
+    ],
+    "explanation": "'Was about to leave' expresses a future intention relative to a past point in time."
+  },
+  {
+    "file": "grammar_accuracy_tense_level_5.json",
+    "topic": "grammar_accuracy_tense",
+    "level": "HKDSE Level 5",
+    "task_idx": 2,
+    "tokens": [
+      "They",
+      "had",
+      "been",
+      "arguing",
+      "for",
+      "hours",
+      "before",
+      "they",
+      "finally",
+      "reached",
+      "a",
+      "compromise",
+      "."
+    ],
+    "indices": [
+      6
+    ],
+    "picked": [
+      "before"
+    ],
+    "explanation": "'Before' sets the timeline for the Past Perfect Continuous action that preceded the compromise."
+  },
+  {
+    "file": "grammar_accuracy_tense_level_5.json",
+    "topic": "grammar_accuracy_tense",
+    "level": "HKDSE Level 5",
+    "task_idx": 3,
+    "tokens": [
+      "It",
+      "is",
+      "vital",
+      "that",
+      "every",
+      "citizen",
+      "understands",
+      "the",
+      "new",
+      "law",
+      "."
+    ],
+    "indices": [
+      1
+    ],
+    "picked": [
+      "is"
+    ],
+    "explanation": "'It is vital that...' usually triggers a subjunctive or base form, but in modern English, 'understands' (present) is common for facts."
+  },
+  {
+    "file": "grammar_accuracy_tense_level_5.json",
+    "topic": "grammar_accuracy_tense",
+    "level": "HKDSE Level 5",
+    "task_idx": 4,
+    "tokens": [
+      "If",
+      "technology",
+      "did",
+      "not",
+      "exist",
+      ",",
+      "life",
+      "would",
+      "be",
+      "much",
+      "harder",
+      "."
+    ],
+    "indices": [
+      0,
+      7
+    ],
+    "picked": [
+      "If",
+      "would"
+    ],
+    "explanation": "'If' + Simple Past ('did not exist') creates the Type 2 hypothetical context for 'would be'."
+  },
+  {
+    "file": "grammar_accuracy_tense_level_7.json",
+    "topic": "grammar_accuracy_tense",
+    "level": "HKDSE Level 5**",
+    "task_idx": 0,
+    "tokens": [
+      "Had",
+      "I",
+      "known",
+      "about",
+      "the",
+      "traffic",
+      "jam",
+      ",",
+      "I",
+      "would",
+      "have",
+      "taken",
+      "the",
+      "MTR",
+      "."
+    ],
+    "indices": [
+      0,
+      2
+    ],
+    "picked": [
+      "Had",
+      "known"
+    ],
+    "explanation": "This is an inverted Type 3 conditional ('Had I known' = 'If I had known'), expressing a past unreal situation."
+  },
+  {
+    "file": "grammar_accuracy_tense_level_7.json",
+    "topic": "grammar_accuracy_tense",
+    "level": "HKDSE Level 5**",
+    "task_idx": 1,
+    "tokens": [
+      "No",
+      "sooner",
+      "had",
+      "the",
+      "star",
+      "appeared",
+      "than",
+      "the",
+      "crowd",
+      "began",
+      "to",
+      "cheer",
+      "."
+    ],
+    "indices": [
+      0,
+      1,
+      2,
+      6
+    ],
+    "picked": [
+      "No",
+      "sooner",
+      "had",
+      "than"
+    ],
+    "explanation": "'No sooner... than' is a sophisticated structure for immediate sequence, requiring 'had' + subject + V-pp."
+  },
+  {
+    "file": "grammar_accuracy_tense_level_7.json",
+    "topic": "grammar_accuracy_tense",
+    "level": "HKDSE Level 5**",
+    "task_idx": 2,
+    "tokens": [
+      "If",
+      "he",
+      "were",
+      "not",
+      "so",
+      "lazy",
+      ",",
+      "he",
+      "would",
+      "have",
+      "finished",
+      "the",
+      "report",
+      "by",
+      "now",
+      "."
+    ],
+    "indices": [
+      2,
+      8,
+      9,
+      10
+    ],
+    "picked": [
+      "were",
+      "would",
+      "have",
+      "finished"
+    ],
+    "explanation": "Mixed conditional: Present state ('If he were not so lazy') leading to a past unrealized result ('would have finished')."
+  },
+  {
+    "file": "grammar_accuracy_tense_level_7.json",
+    "topic": "grammar_accuracy_tense",
+    "level": "HKDSE Level 5**",
+    "task_idx": 3,
+    "tokens": [
+      "It",
+      "is",
+      "imperative",
+      "that",
+      "the",
+      "witness",
+      "remain",
+      "silent",
+      "during",
+      " the",
+      "trial",
+      "."
+    ],
+    "indices": [
+      6
+    ],
+    "picked": [
+      "remain"
+    ],
+    "explanation": "The subjunctive 'remain' (base form) is used after verbs/adjectives of urgency like 'imperative'."
+  },
+  {
+    "file": "grammar_accuracy_tense_level_7.json",
+    "topic": "grammar_accuracy_tense",
+    "level": "HKDSE Level 5**",
+    "task_idx": 4,
+    "tokens": [
+      "Supposing",
+      "you",
+      "had",
+      "won",
+      "the",
+      "lottery",
+      ",",
+      "how",
+      "would",
+      "you",
+      "have",
+      "spent",
+      "the",
+      "money",
+      "?"
+    ],
+    "indices": [
+      0,
+      2,
+      3
+    ],
+    "picked": [
+      "Supposing",
+      "had",
+      "won"
+    ],
+    "explanation": "'Supposing' acts as a conditional conjunction for hypothetical past scenarios (Type 3)."
+  },
+  {
+    "file": "grammar_accuracy_wordform_level_3.json",
+    "topic": "grammar_accuracy_wordform",
+    "level": "HKDSE Level 3",
+    "task_idx": 0,
+    "tokens": [
+      "The",
+      "students",
+      "listened",
+      "attentively",
+      "to",
+      "the",
+      "teacher",
+      "."
+    ],
+    "indices": [
+      3
+    ],
+    "picked": [
+      "attentively"
+    ],
+    "explanation": "'Attentively' is an adverb describing the action 'listened'."
+  },
+  {
+    "file": "grammar_accuracy_wordform_level_3.json",
+    "topic": "grammar_accuracy_wordform",
+    "level": "HKDSE Level 3",
+    "task_idx": 1,
+    "tokens": [
+      "Health",
+      "is",
+      "more",
+      "important",
+      "than",
+      "wealth",
+      "."
+    ],
+    "indices": [
+      3
+    ],
+    "picked": [
+      "important"
+    ],
+    "explanation": "'Important' is an adjective describing the noun 'Health'."
+  },
+  {
+    "file": "grammar_accuracy_wordform_level_3.json",
+    "topic": "grammar_accuracy_wordform",
+    "level": "HKDSE Level 3",
+    "task_idx": 2,
+    "tokens": [
+      "He",
+      "successfully",
+      "completed",
+      "the",
+      "marathon",
+      "."
+    ],
+    "indices": [
+      1
+    ],
+    "picked": [
+      "successfully"
+    ],
+    "explanation": "'Successfully' is an adverb describing how the marathon was 'completed'."
+  },
+  {
+    "file": "grammar_accuracy_wordform_level_3.json",
+    "topic": "grammar_accuracy_wordform",
+    "level": "HKDSE Level 3",
+    "task_idx": 3,
+    "tokens": [
+      "The",
+      "darkness",
+      "made",
+      "it",
+      "hard",
+      "to",
+      "see",
+      "the",
+      "path",
+      "."
+    ],
+    "indices": [
+      1
+    ],
+    "picked": [
+      "darkness"
+    ],
+    "explanation": "'Darkness' is the noun form of the adjective 'dark', acting as the subject."
+  },
+  {
+    "file": "grammar_accuracy_wordform_level_3.json",
+    "topic": "grammar_accuracy_wordform",
+    "level": "HKDSE Level 3",
+    "task_idx": 4,
+    "tokens": [
+      "She",
+      "wore",
+      "a",
+      "beautiful",
+      "dress",
+      "to",
+      "the",
+      "party",
+      "."
+    ],
+    "indices": [
+      3
+    ],
+    "picked": [
+      "beautiful"
+    ],
+    "explanation": "'Beautiful' is an adjective modifying the noun 'dress'."
+  },
+  {
+    "file": "grammar_accuracy_wordform_level_4.json",
+    "topic": "grammar_accuracy_wordform",
+    "level": "HKDSE Level 4",
+    "task_idx": 0,
+    "tokens": [
+      "The",
+      "results",
+      "of",
+      "the",
+      "exam",
+      "were",
+      "very",
+      "disappointing",
+      "."
+    ],
+    "indices": [
+      7
+    ],
+    "picked": [
+      "disappointing"
+    ],
+    "explanation": "'Disappointing' is an adjective describing the cause ('the results')."
+  },
+  {
+    "file": "grammar_accuracy_wordform_level_4.json",
+    "topic": "grammar_accuracy_wordform",
+    "level": "HKDSE Level 4",
+    "task_idx": 1,
+    "tokens": [
+      "You",
+      "should",
+      "always",
+      "follow",
+      "the",
+      "doctor",
+      "'s",
+      "advice",
+      "."
+    ],
+    "indices": [
+      7
+    ],
+    "picked": [
+      "advice"
+    ],
+    "explanation": "'Advice' with a 'c' is the noun form."
+  },
+  {
+    "file": "grammar_accuracy_wordform_level_4.json",
+    "topic": "grammar_accuracy_wordform",
+    "level": "HKDSE Level 4",
+    "task_idx": 2,
+    "tokens": [
+      "We",
+      "had",
+      "a",
+      "lovely",
+      "time",
+      "at",
+      "the",
+      "beach",
+      "."
+    ],
+    "indices": [
+      3
+    ],
+    "picked": [
+      "lovely"
+    ],
+    "explanation": "'Lovely' is an adjective modifying the noun 'time'."
+  },
+  {
+    "file": "grammar_accuracy_wordform_level_4.json",
+    "topic": "grammar_accuracy_wordform",
+    "level": "HKDSE Level 4",
+    "task_idx": 3,
+    "tokens": [
+      "The",
+      "manager",
+      "advised",
+      "the",
+      "staff",
+      "to",
+      "be",
+      "more",
+      "punctual",
+      "."
+    ],
+    "indices": [
+      2
+    ],
+    "picked": [
+      "advised"
+    ],
+    "explanation": "'Advised' with an 's' is the verb form."
+  },
+  {
+    "file": "grammar_accuracy_wordform_level_4.json",
+    "topic": "grammar_accuracy_wordform",
+    "level": "HKDSE Level 4",
+    "task_idx": 4,
+    "tokens": [
+      "I",
+      "was",
+      "amazed",
+      "by",
+      "the",
+      "magician",
+      "'s",
+      "performance",
+      "."
+    ],
+    "indices": [
+      2
+    ],
+    "picked": [
+      "amazed"
+    ],
+    "explanation": "'Amazed' is an adjective describing the person's feeling."
+  },
+  {
+    "file": "grammar_accuracy_wordform_level_5.json",
+    "topic": "grammar_accuracy_wordform",
+    "level": "HKDSE Level 5",
+    "task_idx": 0,
+    "tokens": [
+      "The",
+      "new",
+      "policy",
+      "will",
+      "positively",
+      "affect",
+      "the",
+      "environment",
+      "."
+    ],
+    "indices": [
+      5
+    ],
+    "picked": [
+      "affect"
+    ],
+    "explanation": "'Affect' is the verb meaning 'to influence'."
+  },
+  {
+    "file": "grammar_accuracy_wordform_level_5.json",
+    "topic": "grammar_accuracy_wordform",
+    "level": "HKDSE Level 5",
+    "task_idx": 1,
+    "tokens": [
+      "It",
+      "is",
+      "irresponsible",
+      "to",
+      "leave",
+      "the",
+      "lights",
+      "on",
+      "all",
+      "night",
+      "."
+    ],
+    "indices": [
+      2
+    ],
+    "picked": [
+      "irresponsible"
+    ],
+    "explanation": "'Irresponsible' uses the prefix 'ir-' because it starts with 'r'."
+  },
+  {
+    "file": "grammar_accuracy_wordform_level_5.json",
+    "topic": "grammar_accuracy_wordform",
+    "level": "HKDSE Level 5",
+    "task_idx": 2,
+    "tokens": [
+      "Her",
+      "intelligence",
+      "is",
+      "evident",
+      "in",
+      "the",
+      "way",
+      "she",
+      "solves",
+      "problems",
+      "."
+    ],
+    "indices": [
+      1
+    ],
+    "picked": [
+      "intelligence"
+    ],
+    "explanation": "'Intelligence' is the noun form ending in -ence."
+  },
+  {
+    "file": "grammar_accuracy_wordform_level_5.json",
+    "topic": "grammar_accuracy_wordform",
+    "level": "HKDSE Level 5",
+    "task_idx": 3,
+    "tokens": [
+      "The",
+      "side",
+      "effects",
+      "of",
+      "the",
+      "medication",
+      "were",
+      "quite",
+      "severe",
+      "."
+    ],
+    "indices": [
+      2
+    ],
+    "picked": [
+      "effects"
+    ],
+    "explanation": "'Effects' is the plural noun meaning 'results'."
+  },
+  {
+    "file": "grammar_accuracy_wordform_level_5.json",
+    "topic": "grammar_accuracy_wordform",
+    "level": "HKDSE Level 5",
+    "task_idx": 4,
+    "tokens": [
+      "The",
+      "sudden",
+      "appearance",
+      "of",
+      "the",
+      "ghost",
+      "scared",
+      "the",
+      "children",
+      "."
+    ],
+    "indices": [
+      2
+    ],
+    "picked": [
+      "appearance"
+    ],
+    "explanation": "'Appearance' is the noun form ending in -ance."
+  },
+  {
+    "file": "grammar_accuracy_wordform_level_7.json",
+    "topic": "grammar_accuracy_wordform",
+    "level": "HKDSE Level 5**",
+    "task_idx": 0,
+    "tokens": [
+      "The",
+      "new",
+      "software",
+      "is",
+      "complementary",
+      "to",
+      "our",
+      "existing",
+      "systems",
+      "."
+    ],
+    "indices": [
+      4
+    ],
+    "picked": [
+      "complementary"
+    ],
+    "explanation": "'Complementary' (with an 'e') means it completes or works well with the existing systems."
+  },
+  {
+    "file": "grammar_accuracy_wordform_level_7.json",
+    "topic": "grammar_accuracy_wordform",
+    "level": "HKDSE Level 5**",
+    "task_idx": 1,
+    "tokens": [
+      "Given",
+      "the",
+      "current",
+      "economic",
+      "climate",
+      ",",
+      "we",
+      "must",
+      "be",
+      "more",
+      "frugal",
+      "."
+    ],
+    "indices": [
+      4
+    ],
+    "picked": [
+      "climate"
+    ],
+    "explanation": "'Economic' refers to the general state of the economy."
+  },
+  {
+    "file": "grammar_accuracy_wordform_level_7.json",
+    "topic": "grammar_accuracy_wordform",
+    "level": "HKDSE Level 5**",
+    "task_idx": 2,
+    "tokens": [
+      "She",
+      "is",
+      "very",
+      "sensitive",
+      "to",
+      "criticism",
+      "from",
+      "her",
+      "peers",
+      "."
+    ],
+    "indices": [
+      3
+    ],
+    "picked": [
+      "sensitive"
+    ],
+    "explanation": "'Sensitive' here refers to being easily affected emotionally."
+  },
+  {
+    "file": "grammar_accuracy_wordform_level_7.json",
+    "topic": "grammar_accuracy_wordform",
+    "level": "HKDSE Level 5**",
+    "task_idx": 3,
+    "tokens": [
+      "The",
+      "hotel",
+      "offered",
+      "us",
+      "complimentary",
+      "breakfast",
+      "during",
+      "our",
+      "stay",
+      "."
+    ],
+    "indices": [
+      4
+    ],
+    "picked": [
+      "complimentary"
+    ],
+    "explanation": "'Complimentary' means provided free of charge."
+  },
+  {
+    "file": "grammar_accuracy_wordform_level_7.json",
+    "topic": "grammar_accuracy_wordform",
+    "level": "HKDSE Level 5**",
+    "task_idx": 4,
+    "tokens": [
+      "Maintaining",
+      "patient",
+      "confidentiality",
+      "is",
+      "a",
+      "legal",
+      "requirement",
+      "."
+    ],
+    "indices": [
+      2
+    ],
+    "picked": [
+      "confidentiality"
+    ],
+    "explanation": "'Confidentiality' refers to the state of keeping information private."
+  },
+  {
+    "file": "grammar_elite_cohesion_level_3.json",
+    "topic": "grammar_elite_cohesion",
+    "level": "HKDSE Level 4",
+    "task_idx": 0,
+    "tokens": [
+      "Furthermore",
+      ",",
+      "the",
+      "new",
+      "policy",
+      "will",
+      "benefit",
+      "local",
+      "businesses",
+      "."
+    ],
+    "indices": [
+      0
+    ],
+    "picked": [
+      "Furthermore"
+    ],
+    "explanation": "'Furthermore' is an additive cohesive device."
+  },
+  {
+    "file": "grammar_elite_cohesion_level_3.json",
+    "topic": "grammar_elite_cohesion",
+    "level": "HKDSE Level 4",
+    "task_idx": 1,
+    "tokens": [
+      "The",
+      "results",
+      "were",
+      "poor",
+      ";",
+      "consequently",
+      ",",
+      "the",
+      "funding",
+      "was",
+      "cut",
+      "."
+    ],
+    "indices": [
+      5
+    ],
+    "picked": [
+      "consequently"
+    ],
+    "explanation": "'Consequently' links the poor results to the cut in funding."
+  },
+  {
+    "file": "grammar_elite_cohesion_level_3.json",
+    "topic": "grammar_elite_cohesion",
+    "level": "HKDSE Level 4",
+    "task_idx": 2,
+    "tokens": [
+      "Nevertheless",
+      ",",
+      "we",
+      "must",
+      "proceed",
+      "with",
+      "caution",
+      "."
+    ],
+    "indices": [
+      0
+    ],
+    "picked": [
+      "Nevertheless"
+    ],
+    "explanation": "'Nevertheless' is a contrastive device used for emphasis at the start."
+  },
+  {
+    "file": "grammar_elite_cohesion_level_3.json",
+    "topic": "grammar_elite_cohesion",
+    "level": "HKDSE Level 4",
+    "task_idx": 3,
+    "tokens": [
+      "The",
+      "team",
+      "is",
+      "well-trained",
+      ".",
+      "Moreover",
+      ",",
+      "they",
+      "have",
+      "ample",
+      "experience",
+      "."
+    ],
+    "indices": [
+      5
+    ],
+    "picked": [
+      "Moreover"
+    ],
+    "explanation": "'Moreover' adds more positive information about the team."
+  },
+  {
+    "file": "grammar_elite_cohesion_level_3.json",
+    "topic": "grammar_elite_cohesion",
+    "level": "HKDSE Level 4",
+    "task_idx": 4,
+    "tokens": [
+      "She",
+      "did",
+      "not",
+      "win",
+      ";",
+      "however",
+      ",",
+      "she",
+      "remained",
+      "optimistic",
+      "."
+    ],
+    "indices": [
+      5
+    ],
+    "picked": [
+      "however"
+    ],
+    "explanation": "'However' provides a contrast to the previous clause."
+  },
+  {
+    "file": "grammar_elite_cohesion_level_4.json",
+    "topic": "grammar_elite_cohesion",
+    "level": "HKDSE Level 5",
+    "task_idx": 0,
+    "tokens": [
+      "Notwithstanding",
+      "the",
+      "delay",
+      ",",
+      "the",
+      "project",
+      "was",
+      "completed",
+      "on",
+      "time",
+      "."
+    ],
+    "indices": [
+      0
+    ],
+    "picked": [
+      "Notwithstanding"
+    ],
+    "explanation": "'Notwithstanding' is a formal way to say 'despite'."
+  },
+  {
+    "file": "grammar_elite_cohesion_level_4.json",
+    "topic": "grammar_elite_cohesion",
+    "level": "HKDSE Level 5",
+    "task_idx": 1,
+    "tokens": [
+      "The",
+      "task",
+      "was",
+      "difficult",
+      ",",
+      "albeit",
+      "rewarding",
+      "."
+    ],
+    "indices": [
+      5
+    ],
+    "picked": [
+      "albeit"
+    ],
+    "explanation": "'Albeit' is used to introduce a concession or contrast with an adjective."
+  },
+  {
+    "file": "grammar_elite_cohesion_level_4.json",
+    "topic": "grammar_elite_cohesion",
+    "level": "HKDSE Level 5",
+    "task_idx": 2,
+    "tokens": [
+      "He",
+      "was",
+      "offered",
+      "a",
+      "job",
+      ";",
+      "subsequently",
+      ",",
+      "he",
+      "moved",
+      " to",
+      "London",
+      "."
+    ],
+    "indices": [
+      6
+    ],
+    "picked": [
+      "subsequently"
+    ],
+    "explanation": "'Subsequently' indicates that the move happened after the job offer."
+  },
+  {
+    "file": "grammar_elite_cohesion_level_4.json",
+    "topic": "grammar_elite_cohesion",
+    "level": "HKDSE Level 5",
+    "task_idx": 3,
+    "tokens": [
+      "Notably",
+      ",",
+      "the",
+      "report",
+      "omits",
+      "the",
+      "most",
+      "critical",
+      "data",
+      "."
+    ],
+    "indices": [
+      0
+    ],
+    "picked": [
+      "Notably"
+    ],
+    "explanation": "'Notably' draws attention to a specific important point."
+  },
+  {
+    "file": "grammar_elite_cohesion_level_4.json",
+    "topic": "grammar_elite_cohesion",
+    "level": "HKDSE Level 5",
+    "task_idx": 4,
+    "tokens": [
+      "Indeed",
+      ",",
+      "the",
+      "implications",
+      "of",
+      "this",
+      "discovery",
+      "are",
+      "vast",
+      "."
+    ],
+    "indices": [
+      0
+    ],
+    "picked": [
+      "Indeed"
+    ],
+    "explanation": "'Indeed' is used to emphasize a previous point or a new assertion."
+  },
+  {
+    "file": "grammar_elite_cohesion_level_5.json",
+    "topic": "grammar_elite_cohesion",
+    "level": "HKDSE Level 5*",
+    "task_idx": 0,
+    "tokens": [
+      "In",
+      "light",
+      "of",
+      "the",
+      "new",
+      "evidence",
+      ",",
+      "the",
+      "trial",
+      "must",
+      "be",
+      "reopened",
+      "."
+    ],
+    "indices": [
+      0,
+      1,
+      2
+    ],
+    "picked": [
+      "In",
+      "light",
+      "of"
+    ],
+    "explanation": "'In light of' provides the reason or context for the following action."
+  },
+  {
+    "file": "grammar_elite_cohesion_level_5.json",
+    "topic": "grammar_elite_cohesion",
+    "level": "HKDSE Level 5*",
+    "task_idx": 1,
+    "tokens": [
+      "Conversely",
+      ",",
+      "some",
+      "argue",
+      "that",
+      "the",
+      "policy",
+      "will",
+      "stifle",
+      "innovation",
+      "."
+    ],
+    "indices": [
+      0
+    ],
+    "picked": [
+      "Conversely"
+    ],
+    "explanation": "'Conversely' introduces an opposite or contrasting viewpoint."
+  },
+  {
+    "file": "grammar_elite_cohesion_level_5.json",
+    "topic": "grammar_elite_cohesion",
+    "level": "HKDSE Level 5*",
+    "task_idx": 2,
+    "tokens": [
+      "The",
+      "law",
+      "is",
+      "effective",
+      "insofar",
+      "as",
+      "it",
+      "reduces",
+      "crime",
+      "."
+    ],
+    "indices": [
+      4,
+      5
+    ],
+    "picked": [
+      "insofar",
+      "as"
+    ],
+    "explanation": "'Insofar as' limits the scope of the effectiveness to a specific condition."
+  },
+  {
+    "file": "grammar_elite_cohesion_level_5.json",
+    "topic": "grammar_elite_cohesion",
+    "level": "HKDSE Level 5*",
+    "task_idx": 3,
+    "tokens": [
+      "By",
+      "the",
+      "same",
+      "token",
+      ",",
+      "we",
+      "must",
+      "protect",
+      "the",
+      "rights",
+      "of",
+      "the",
+      "minority",
+      "."
+    ],
+    "indices": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "picked": [
+      "By",
+      "the",
+      "same",
+      "token"
+    ],
+    "explanation": "'By the same token' adds a parallel or similarly important point."
+  },
+  {
+    "file": "grammar_elite_cohesion_level_5.json",
+    "topic": "grammar_elite_cohesion",
+    "level": "HKDSE Level 5*",
+    "task_idx": 4,
+    "tokens": [
+      "To",
+      "the",
+      "extent",
+      "that",
+      "it",
+      "is",
+      "possible",
+      ",",
+      "we",
+      "should",
+      "remain",
+      "transparent",
+      "."
+    ],
+    "indices": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "picked": [
+      "To",
+      "the",
+      "extent",
+      "that"
+    ],
+    "explanation": "This phrase specifies the degree or limit of the action."
+  },
+  {
+    "file": "grammar_elite_cohesion_level_7.json",
+    "topic": "grammar_elite_cohesion",
+    "level": "HKDSE Level 5**",
+    "task_idx": 0,
+    "tokens": [
+      "The",
+      "former",
+      "proposal",
+      "is",
+      "cheaper",
+      ",",
+      "while",
+      "the",
+      "latter",
+      "is",
+      "more",
+      "sustainable",
+      "."
+    ],
+    "indices": [
+      1,
+      8
+    ],
+    "picked": [
+      "former",
+      "latter"
+    ],
+    "explanation": "'The former' refers to the first item mentioned, and 'the latter' refers to the second."
+  },
+  {
+    "file": "grammar_elite_cohesion_level_7.json",
+    "topic": "grammar_elite_cohesion",
+    "level": "HKDSE Level 5**",
+    "task_idx": 1,
+    "tokens": [
+      "Save",
+      "for",
+      "a",
+      "few",
+      "minor",
+      "errors",
+      ",",
+      "the",
+      "report",
+      "is",
+      "perfect",
+      "."
+    ],
+    "indices": [
+      0,
+      1
+    ],
+    "picked": [
+      "Save",
+      "for"
+    ],
+    "explanation": "'Save for' is a formal way to say 'except for'."
+  },
+  {
+    "file": "grammar_elite_cohesion_level_7.json",
+    "topic": "grammar_elite_cohesion",
+    "level": "HKDSE Level 5**",
+    "task_idx": 2,
+    "tokens": [
+      "He",
+      "has",
+      "no",
+      "alibi",
+      ";",
+      "ipso",
+      "facto",
+      ",",
+      "he",
+      "is",
+      "a",
+      "prime",
+      "suspect",
+      "."
+    ],
+    "indices": [
+      5,
+      6
+    ],
+    "picked": [
+      "ipso",
+      "facto"
+    ],
+    "explanation": "'Ipso facto' indicates a direct, necessary logical consequence."
+  },
+  {
+    "file": "grammar_elite_cohesion_level_7.json",
+    "topic": "grammar_elite_cohesion",
+    "level": "HKDSE Level 5**",
+    "task_idx": 3,
+    "tokens": [
+      "By",
+      "extension",
+      ",",
+      "the",
+      "failure",
+      "of",
+      "the",
+      "bank",
+      "affects",
+      "the",
+      "entire",
+      "economy",
+      "."
+    ],
+    "indices": [
+      0,
+      1
+    ],
+    "picked": [
+      "By",
+      "extension"
+    ],
+    "explanation": "'By extension' shows how a consequence spreads to a wider context."
+  },
+  {
+    "file": "grammar_elite_cohesion_level_7.json",
+    "topic": "grammar_elite_cohesion",
+    "level": "HKDSE Level 5**",
+    "task_idx": 4,
+    "tokens": [
+      "The",
+      "evidence",
+      "is",
+      "conclusive",
+      ";",
+      "accordingly",
+      ",",
+      "we",
+      "must",
+      "take",
+      "action",
+      "."
+    ],
+    "indices": [
+      5
+    ],
+    "picked": [
+      "accordingly"
+    ],
+    "explanation": "'Accordingly' is a formal synonym for 'therefore' or 'consequently'."
+  },
+  {
+    "file": "grammar_elite_inversion_level_3.json",
+    "topic": "grammar_elite_inversion",
+    "level": "HKDSE Level 4",
+    "task_idx": 0,
+    "tokens": [
+      "Never",
+      "have",
+      "I",
+      "witnessed",
+      "such",
+      "bravery",
+      "."
+    ],
+    "indices": [
+      0
+    ],
+    "picked": [
+      "Never"
+    ],
+    "explanation": "'Never' is the negative adverbial that triggers the inversion of 'have I'."
+  },
+  {
+    "file": "grammar_elite_inversion_level_3.json",
+    "topic": "grammar_elite_inversion",
+    "level": "HKDSE Level 4",
+    "task_idx": 1,
+    "tokens": [
+      "Not",
+      "only",
+      "was",
+      "it",
+      "cold",
+      ",",
+      "but",
+      "it",
+      "was",
+      "also",
+      "raining",
+      "."
+    ],
+    "indices": [
+      0,
+      1
+    ],
+    "picked": [
+      "Not",
+      "only"
+    ],
+    "explanation": "'Not only' at the start forces 'was' to move before 'it'."
+  },
+  {
+    "file": "grammar_elite_inversion_level_3.json",
+    "topic": "grammar_elite_inversion",
+    "level": "HKDSE Level 4",
+    "task_idx": 2,
+    "tokens": [
+      "Seldom",
+      "do",
+      "we",
+      "see",
+      "eagles",
+      "in",
+      "this",
+      "area",
+      "."
+    ],
+    "indices": [
+      0
+    ],
+    "picked": [
+      "Seldom"
+    ],
+    "explanation": "'Seldom' is the trigger word here."
+  },
+  {
+    "file": "grammar_elite_inversion_level_3.json",
+    "topic": "grammar_elite_inversion",
+    "level": "HKDSE Level 4",
+    "task_idx": 3,
+    "tokens": [
+      "Only",
+      "after",
+      "the",
+      "meeting",
+      "did",
+      "he",
+      "realize",
+      "his",
+      "mistake",
+      "."
+    ],
+    "indices": [
+      0,
+      1
+    ],
+    "picked": [
+      "Only",
+      "after"
+    ],
+    "explanation": "'Only after' requires inversion in the main clause ('did he realize')."
+  },
+  {
+    "file": "grammar_elite_inversion_level_3.json",
+    "topic": "grammar_elite_inversion",
+    "level": "HKDSE Level 4",
+    "task_idx": 4,
+    "tokens": [
+      "Hardly",
+      "had",
+      "the",
+      "movie",
+      "started",
+      "when",
+      "the",
+      "power",
+      "went",
+      "out",
+      "."
+    ],
+    "indices": [
+      0
+    ],
+    "picked": [
+      "Hardly"
+    ],
+    "explanation": "'Hardly' triggers the past perfect inversion 'had the movie started'."
+  },
+  {
+    "file": "grammar_elite_inversion_level_4.json",
+    "topic": "grammar_elite_inversion",
+    "level": "HKDSE Level 5",
+    "task_idx": 0,
+    "tokens": [
+      "Little",
+      "did",
+      "the",
+      "detective",
+      "suspect",
+      "that",
+      "the",
+      "butler",
+      "was",
+      "the",
+      "culprit",
+      "."
+    ],
+    "indices": [
+      0
+    ],
+    "picked": [
+      "Little"
+    ],
+    "explanation": "'Little' at the start triggers the auxiliary 'did' before the subject 'the detective'."
+  },
+  {
+    "file": "grammar_elite_inversion_level_4.json",
+    "topic": "grammar_elite_inversion",
+    "level": "HKDSE Level 5",
+    "task_idx": 1,
+    "tokens": [
+      "Under",
+      "no",
+      "circumstances",
+      "are",
+      "students",
+      "permitted",
+      "to",
+      "enter",
+      "the",
+      "lab",
+      "alone",
+      "."
+    ],
+    "indices": [
+      0,
+      1,
+      2
+    ],
+    "picked": [
+      "Under",
+      "no",
+      "circumstances"
+    ],
+    "explanation": "This formal negative phrase requires the verb 'are' before 'students'."
+  },
+  {
+    "file": "grammar_elite_inversion_level_4.json",
+    "topic": "grammar_elite_inversion",
+    "level": "HKDSE Level 5",
+    "task_idx": 2,
+    "tokens": [
+      "Had",
+      "the",
+      "company",
+      "invested",
+      "more",
+      "in",
+      "R&D",
+      ",",
+      "it",
+      "would",
+      "be",
+      "leading",
+      "the",
+      "market",
+      "."
+    ],
+    "indices": [
+      0
+    ],
+    "picked": [
+      "Had"
+    ],
+    "explanation": "'Had' at the start replaces 'If the company had' and requires inversion."
+  },
+  {
+    "file": "grammar_elite_inversion_level_4.json",
+    "topic": "grammar_elite_inversion",
+    "level": "HKDSE Level 5",
+    "task_idx": 3,
+    "tokens": [
+      "Rarely",
+      "does",
+      "the",
+      "opportunity",
+      "arise",
+      "to",
+      "study",
+      "with",
+      "such",
+      "a",
+      "famous",
+      "professor",
+      "."
+    ],
+    "indices": [
+      0
+    ],
+    "picked": [
+      "Rarely"
+    ],
+    "explanation": "'Rarely' is the inversion trigger here."
+  },
+  {
+    "file": "grammar_elite_inversion_level_4.json",
+    "topic": "grammar_elite_inversion",
+    "level": "HKDSE Level 5",
+    "task_idx": 4,
+    "tokens": [
+      "At",
+      "no",
+      "time",
+      "did",
+      "she",
+      "mention",
+      "her",
+      "intention",
+      "to",
+      "resign",
+      "."
+    ],
+    "indices": [
+      0,
+      1,
+      2
+    ],
+    "picked": [
+      "At",
+      "no",
+      "time"
+    ],
+    "explanation": "'At no time' triggers the past tense inversion 'did she'."
+  },
+  {
+    "file": "grammar_elite_inversion_level_5.json",
+    "topic": "grammar_elite_inversion",
+    "level": "HKDSE Level 5*",
+    "task_idx": 0,
+    "tokens": [
+      "No",
+      "sooner",
+      "had",
+      "they",
+      "arrived",
+      "than",
+      "the",
+      "party",
+      "ended",
+      "."
+    ],
+    "indices": [
+      0,
+      1
+    ],
+    "picked": [
+      "No",
+      "sooner"
+    ],
+    "explanation": "'No sooner' requires the correlative 'than' and inversion in the first clause."
+  },
+  {
+    "file": "grammar_elite_inversion_level_5.json",
+    "topic": "grammar_elite_inversion",
+    "level": "HKDSE Level 5*",
+    "task_idx": 1,
+    "tokens": [
+      "So",
+      "sudden",
+      "was",
+      "the",
+      "attack",
+      "that",
+      "they",
+      "had",
+      "no",
+      "time",
+      "to",
+      "react",
+      "."
+    ],
+    "indices": [
+      0,
+      1
+    ],
+    "picked": [
+      "So",
+      "sudden"
+    ],
+    "explanation": "'So' + Adjective ('sudden') at the start triggers inversion of the verb 'was'."
+  },
+  {
+    "file": "grammar_elite_inversion_level_5.json",
+    "topic": "grammar_elite_inversion",
+    "level": "HKDSE Level 5*",
+    "task_idx": 2,
+    "tokens": [
+      "Only",
+      "by",
+      "diligent",
+      "practice",
+      "will",
+      "you",
+      "achieve",
+      "mastery",
+      "."
+    ],
+    "indices": [
+      0,
+      1
+    ],
+    "picked": [
+      "Only",
+      "by"
+    ],
+    "explanation": "'Only by' followed by a noun phrase requires inversion 'will you'."
+  },
+  {
+    "file": "grammar_elite_inversion_level_5.json",
+    "topic": "grammar_elite_inversion",
+    "level": "HKDSE Level 5*",
+    "task_idx": 3,
+    "tokens": [
+      "In",
+      "no",
+      "way",
+      "can",
+      "the",
+      "government",
+      "justify",
+      "these",
+      "budget",
+      "cuts",
+      "."
+    ],
+    "indices": [
+      0,
+      1,
+      2
+    ],
+    "picked": [
+      "In",
+      "no",
+      "way"
+    ],
+    "explanation": "'In no way' is a negative trigger for the modal 'can'."
+  },
+  {
+    "file": "grammar_elite_inversion_level_5.json",
+    "topic": "grammar_elite_inversion",
+    "level": "HKDSE Level 5*",
+    "task_idx": 4,
+    "tokens": [
+      "Such",
+      "was",
+      "his",
+      "pride",
+      "that",
+      "he",
+      "refused",
+      "to",
+      "apologize",
+      "."
+    ],
+    "indices": [
+      0
+    ],
+    "picked": [
+      "Such"
+    ],
+    "explanation": "'Such' at the start functions like 'So' to trigger inversion."
+  },
+  {
+    "file": "grammar_elite_inversion_level_7.json",
+    "topic": "grammar_elite_inversion",
+    "level": "HKDSE Level 5**",
+    "task_idx": 0,
+    "tokens": [
+      "Not",
+      "until",
+      "the",
+      "final",
+      "whistle",
+      "did",
+      "the",
+      "fans",
+      "stop",
+      "cheering",
+      "."
+    ],
+    "indices": [
+      0,
+      1
+    ],
+    "picked": [
+      "Not",
+      "until"
+    ],
+    "explanation": "'Not until' triggers inversion in the main clause ('did the fans stop')."
+  },
+  {
+    "file": "grammar_elite_inversion_level_7.json",
+    "topic": "grammar_elite_inversion",
+    "level": "HKDSE Level 5**",
+    "task_idx": 1,
+    "tokens": [
+      "Scarcely",
+      "had",
+      "the",
+      "witness",
+      "begun",
+      "her",
+      "testimony",
+      "when",
+      "the",
+      "defense",
+      "interrupted",
+      "."
+    ],
+    "indices": [
+      0
+    ],
+    "picked": [
+      "Scarcely"
+    ],
+    "explanation": "'Scarcely' requires past perfect inversion and is paired with 'when'."
+  },
+  {
+    "file": "grammar_elite_inversion_level_7.json",
+    "topic": "grammar_elite_inversion",
+    "level": "HKDSE Level 5**",
+    "task_idx": 2,
+    "tokens": [
+      "Only",
+      "once",
+      "every",
+      "decade",
+      "does",
+      "this",
+      "rare",
+      "flower",
+      "bloom",
+      "."
+    ],
+    "indices": [
+      0,
+      1
+    ],
+    "picked": [
+      "Only",
+      "once"
+    ],
+    "explanation": "'Only once' triggers 'does' before 'this rare flower'."
+  },
+  {
+    "file": "grammar_elite_inversion_level_7.json",
+    "topic": "grammar_elite_inversion",
+    "level": "HKDSE Level 5**",
+    "task_idx": 3,
+    "tokens": [
+      "Only",
+      "through",
+      "extensive",
+      "research",
+      "can",
+      "we",
+      "hope",
+      "to",
+      "find",
+      "a",
+      "cure",
+      "."
+    ],
+    "indices": [
+      0,
+      1
+    ],
+    "picked": [
+      "Only",
+      "through"
+    ],
+    "explanation": "'Only through' requires the modal 'can' before the subject 'we'."
+  },
+  {
+    "file": "grammar_elite_inversion_level_7.json",
+    "topic": "grammar_elite_inversion",
+    "level": "HKDSE Level 5**",
+    "task_idx": 4,
+    "tokens": [
+      "I",
+      "cannot",
+      "attend",
+      ",",
+      "nor",
+      "can",
+      "my",
+      "colleague",
+      "."
+    ],
+    "indices": [
+      4
+    ],
+    "picked": [
+      "nor"
+    ],
+    "explanation": "'Nor' at the start of a clause triggers inversion of 'can my colleague'."
+  },
+  {
+    "file": "grammar_elite_modals_level_3.json",
+    "topic": "grammar_elite_modals",
+    "level": "HKDSE Level 4",
+    "task_idx": 0,
+    "tokens": [
+      "You",
+      "should",
+      "finish",
+      "your",
+      "homework",
+      "before",
+      "dinner",
+      "."
+    ],
+    "indices": [
+      1,
+      2
+    ],
+    "picked": [
+      "should",
+      "finish"
+    ],
+    "explanation": "'Should' modifies 'finish' to express advice."
+  },
+  {
+    "file": "grammar_elite_modals_level_3.json",
+    "topic": "grammar_elite_modals",
+    "level": "HKDSE Level 4",
+    "task_idx": 1,
+    "tokens": [
+      "They",
+      "might",
+      "arrive",
+      "late",
+      "due",
+      "to",
+      "the",
+      "heavy",
+      "traffic",
+      "."
+    ],
+    "indices": [
+      1,
+      2
+    ],
+    "picked": [
+      "might",
+      "arrive"
+    ],
+    "explanation": "'Might' expresses a possibility for the action 'arrive'."
+  },
+  {
+    "file": "grammar_elite_modals_level_3.json",
+    "topic": "grammar_elite_modals",
+    "level": "HKDSE Level 4",
+    "task_idx": 2,
+    "tokens": [
+      "Students",
+      "must",
+      "submit",
+      "their",
+      "assignments",
+      "by",
+      "Friday",
+      "."
+    ],
+    "indices": [
+      1,
+      2
+    ],
+    "picked": [
+      "must",
+      "submit"
+    ],
+    "explanation": "'Must' indicates a strong obligation to 'submit'."
+  },
+  {
+    "file": "grammar_elite_modals_level_3.json",
+    "topic": "grammar_elite_modals",
+    "level": "HKDSE Level 4",
+    "task_idx": 3,
+    "tokens": [
+      "He",
+      "could",
+      "play",
+      "the",
+      "piano",
+      "beautifully",
+      "when",
+      "he",
+      "was",
+      "a",
+      "child",
+      "."
+    ],
+    "indices": [
+      1,
+      2
+    ],
+    "picked": [
+      "could",
+      "play"
+    ],
+    "explanation": "'Could' expresses past ability to 'play'."
+  },
+  {
+    "file": "grammar_elite_modals_level_3.json",
+    "topic": "grammar_elite_modals",
+    "level": "HKDSE Level 4",
+    "task_idx": 4,
+    "tokens": [
+      "We",
+      "should",
+      "have",
+      "started",
+      "the",
+      "project",
+      "earlier",
+      "."
+    ],
+    "indices": [
+      1,
+      3
+    ],
+    "picked": [
+      "should",
+      "started"
+    ],
+    "explanation": "'Should have' expresses a past regret about the timing of 'started'."
+  },
+  {
+    "file": "grammar_elite_modals_level_4.json",
+    "topic": "grammar_elite_modals",
+    "level": "HKDSE Level 5",
+    "task_idx": 0,
+    "tokens": [
+      "You",
+      "ought",
+      "to",
+      "consult",
+      "your",
+      "lawyer",
+      "before",
+      "signing",
+      "."
+    ],
+    "indices": [
+      1,
+      2,
+      3
+    ],
+    "picked": [
+      "ought",
+      "to",
+      "consult"
+    ],
+    "explanation": "'Ought to' is a slightly more formal version of 'should'."
+  },
+  {
+    "file": "grammar_elite_modals_level_4.json",
+    "topic": "grammar_elite_modals",
+    "level": "HKDSE Level 5",
+    "task_idx": 1,
+    "tokens": [
+      "He",
+      "must",
+      "have",
+      "misunderstood",
+      "the",
+      "instructions",
+      "."
+    ],
+    "indices": [
+      1,
+      2,
+      3
+    ],
+    "picked": [
+      "must",
+      "have",
+      "misunderstood"
+    ],
+    "explanation": "'Must have' indicates a strong deduction about a past event."
+  },
+  {
+    "file": "grammar_elite_modals_level_4.json",
+    "topic": "grammar_elite_modals",
+    "level": "HKDSE Level 5",
+    "task_idx": 2,
+    "tokens": [
+      "They",
+      "can't",
+      "have",
+      "arrived",
+      "already",
+      ";",
+      "it's",
+      "only",
+      "nine",
+      "o'clock",
+      "."
+    ],
+    "indices": [
+      1,
+      2,
+      3
+    ],
+    "picked": [
+      "can't",
+      "have",
+      "arrived"
+    ],
+    "explanation": "'Can't have' expresses a strong negative deduction."
+  },
+  {
+    "file": "grammar_elite_modals_level_4.json",
+    "topic": "grammar_elite_modals",
+    "level": "HKDSE Level 5",
+    "task_idx": 3,
+    "tokens": [
+      "We",
+      "had",
+      "better",
+      "leave",
+      "immediately",
+      "to",
+      "avoid",
+      "the",
+      "storm",
+      "."
+    ],
+    "indices": [
+      1,
+      2,
+      3
+    ],
+    "picked": [
+      "had",
+      "better",
+      "leave"
+    ],
+    "explanation": "'Had better' is a strong recommendation with a sense of urgency."
+  },
+  {
+    "file": "grammar_elite_modals_level_4.json",
+    "topic": "grammar_elite_modals",
+    "level": "HKDSE Level 5",
+    "task_idx": 4,
+    "tokens": [
+      "Whenever",
+      "it",
+      "snowed",
+      ",",
+      "we",
+      "would",
+      "build",
+      "a",
+      "snowman",
+      "."
+    ],
+    "indices": [
+      5,
+      6
+    ],
+    "picked": [
+      "would",
+      "build"
+    ],
+    "explanation": "'Would' describes a repeated past action."
+  },
+  {
+    "file": "grammar_elite_modals_level_5.json",
+    "topic": "grammar_elite_modals",
+    "level": "HKDSE Level 5*",
+    "task_idx": 0,
+    "tokens": [
+      "I",
+      "needn't",
+      "have",
+      "worried",
+      "about",
+      "the",
+      "test",
+      "results",
+      "."
+    ],
+    "indices": [
+      1,
+      2,
+      3
+    ],
+    "picked": [
+      "needn't",
+      "have",
+      "worried"
+    ],
+    "explanation": "'Needn't have' indicates that the speaker worried, but it turned out to be unnecessary."
+  },
+  {
+    "file": "grammar_elite_modals_level_5.json",
+    "topic": "grammar_elite_modals",
+    "level": "HKDSE Level 5*",
+    "task_idx": 1,
+    "tokens": [
+      "He",
+      "must",
+      "have",
+      "been",
+      "waiting",
+      "for",
+      "hours",
+      "in",
+      "the",
+      "rain",
+      "."
+    ],
+    "indices": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "picked": [
+      "must",
+      "have",
+      "been",
+      "waiting"
+    ],
+    "explanation": "A modal perfect continuous used for a strong deduction about an ongoing past action."
+  },
+  {
+    "file": "grammar_elite_modals_level_5.json",
+    "topic": "grammar_elite_modals",
+    "level": "HKDSE Level 5*",
+    "task_idx": 2,
+    "tokens": [
+      "We",
+      "didn't",
+      "need",
+      "to",
+      "buy",
+      "extra",
+      "food",
+      "as",
+      "there",
+      "was",
+      "plenty",
+      "."
+    ],
+    "indices": [
+      1,
+      2,
+      4
+    ],
+    "picked": [
+      "didn't",
+      "need",
+      "buy"
+    ],
+    "explanation": "'Didn't need to' implies the action wasn't performed because it wasn't necessary."
+  },
+  {
+    "file": "grammar_elite_modals_level_5.json",
+    "topic": "grammar_elite_modals",
+    "level": "HKDSE Level 5*",
+    "task_idx": 3,
+    "tokens": [
+      "How",
+      "dare",
+      "you",
+      "speak",
+      "to",
+      "me",
+      "in",
+      "that",
+      "tone",
+      "!"
+    ],
+    "indices": [
+      1,
+      3
+    ],
+    "picked": [
+      "dare",
+      "speak"
+    ],
+    "explanation": "'Dare' functions as a modal here in a challenge or question."
+  },
+  {
+    "file": "grammar_elite_modals_level_5.json",
+    "topic": "grammar_elite_modals",
+    "level": "HKDSE Level 5*",
+    "task_idx": 4,
+    "tokens": [
+      "You",
+      "might",
+      "have",
+      "mentioned",
+      "that",
+      "the",
+      "meeting",
+      "was",
+      "canceled",
+      "."
+    ],
+    "indices": [
+      1,
+      2,
+      3
+    ],
+    "picked": [
+      "might",
+      "have",
+      "mentioned"
+    ],
+    "explanation": "'Might have' is used here to express a mild criticism or a missed opportunity."
+  },
+  {
+    "file": "grammar_elite_modals_level_7.json",
+    "topic": "grammar_elite_modals",
+    "level": "HKDSE Level 5**",
+    "task_idx": 0,
+    "tokens": [
+      "This",
+      "new",
+      "technology",
+      "may",
+      "well",
+      "revolutionize",
+      "the",
+      "industry",
+      "."
+    ],
+    "indices": [
+      3,
+      4,
+      5
+    ],
+    "picked": [
+      "may",
+      "well",
+      "revolutionize"
+    ],
+    "explanation": "'May well' expresses a strong possibility, almost a probability."
+  },
+  {
+    "file": "grammar_elite_modals_level_7.json",
+    "topic": "grammar_elite_modals",
+    "level": "HKDSE Level 5**",
+    "task_idx": 1,
+    "tokens": [
+      "If",
+      "you",
+      "should",
+      "encounter",
+      "any",
+      "problems",
+      ",",
+      "contact",
+      "us",
+      "immediately",
+      "."
+    ],
+    "indices": [
+      2,
+      3
+    ],
+    "picked": [
+      "should",
+      "encounter"
+    ],
+    "explanation": "'Should' here expresses a very low or unexpected possibility."
+  },
+  {
+    "file": "grammar_elite_modals_level_7.json",
+    "topic": "grammar_elite_modals",
+    "level": "HKDSE Level 5**",
+    "task_idx": 2,
+    "tokens": [
+      "He",
+      "will",
+      "often",
+      "talk",
+      "to",
+      "himself",
+      "when",
+      "he",
+      "is",
+      "concentrating",
+      "."
+    ],
+    "indices": [
+      1,
+      3
+    ],
+    "picked": [
+      "will",
+      "talk"
+    ],
+    "explanation": "'Will' is used here to describe a characteristic habit or behavior."
+  },
+  {
+    "file": "grammar_elite_modals_level_7.json",
+    "topic": "grammar_elite_modals",
+    "level": "HKDSE Level 5**",
+    "task_idx": 3,
+    "tokens": [
+      "Should",
+      "it",
+      "rain",
+      ",",
+      "the",
+      "event",
+      "will",
+      "be",
+      "held",
+      "indoors",
+      "."
+    ],
+    "indices": [
+      0,
+      2
+    ],
+    "picked": [
+      "Should",
+      "rain"
+    ],
+    "explanation": "'Should' at the start is a formal inversion replacing 'If it should rain'."
+  },
+  {
+    "file": "grammar_elite_modals_level_7.json",
+    "topic": "grammar_elite_modals",
+    "level": "HKDSE Level 5**",
+    "task_idx": 4,
+    "tokens": [
+      "The",
+      "results",
+      "might",
+      "well",
+      "be",
+      "different",
+      "under",
+      "other",
+      "circumstances",
+      "."
+    ],
+    "indices": [
+      2,
+      3,
+      4
+    ],
+    "picked": [
+      "might",
+      "well",
+      "be"
+    ],
+    "explanation": "'Might well' emphasizes a strong likelihood of a different outcome."
+  },
+  {
+    "file": "grammar_elite_nominal_level_3.json",
+    "topic": "grammar_elite_nominal",
+    "level": "HKDSE Level 4",
+    "task_idx": 0,
+    "tokens": [
+      "I",
+      "believe",
+      "that",
+      "technology",
+      "can",
+      "improve",
+      "our",
+      "lives",
+      "."
+    ],
+    "indices": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "picked": [
+      "that",
+      "technology",
+      "can",
+      "improve",
+      "our",
+      "lives"
+    ],
+    "explanation": "The nominal clause 'that technology can improve our lives' is the object of 'believe'."
+  },
+  {
+    "file": "grammar_elite_nominal_level_3.json",
+    "topic": "grammar_elite_nominal",
+    "level": "HKDSE Level 4",
+    "task_idx": 1,
+    "tokens": [
+      "Whether",
+      "we",
+      "succeed",
+      "or",
+      "not",
+      "depends",
+      "on",
+      "our",
+      "effort",
+      "."
+    ],
+    "indices": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "picked": [
+      "Whether",
+      "we",
+      "succeed",
+      "or",
+      "not"
+    ],
+    "explanation": "The clause 'Whether we succeed or not' acts as the subject of the sentence."
+  },
+  {
+    "file": "grammar_elite_nominal_level_3.json",
+    "topic": "grammar_elite_nominal",
+    "level": "HKDSE Level 4",
+    "task_idx": 2,
+    "tokens": [
+      "She",
+      "asked",
+      "where",
+      "the",
+      "nearest",
+      "station",
+      "was",
+      "."
+    ],
+    "indices": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "picked": [
+      "where",
+      "the",
+      "nearest",
+      "station",
+      "was"
+    ],
+    "explanation": "The nominal clause 'where the nearest station was' is the object of 'asked'."
+  },
+  {
+    "file": "grammar_elite_nominal_level_3.json",
+    "topic": "grammar_elite_nominal",
+    "level": "HKDSE Level 4",
+    "task_idx": 3,
+    "tokens": [
+      "That",
+      "she",
+      "is",
+      "only",
+      "ten",
+      "years",
+      "old",
+      "is",
+      "truly",
+      "surprising",
+      "."
+    ],
+    "indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "picked": [
+      "That",
+      "she",
+      "is",
+      "only",
+      "ten",
+      "years",
+      "old"
+    ],
+    "explanation": "'That she is only ten years old' is a nominal clause acting as the subject."
+  },
+  {
+    "file": "grammar_elite_nominal_level_3.json",
+    "topic": "grammar_elite_nominal",
+    "level": "HKDSE Level 4",
+    "task_idx": 4,
+    "tokens": [
+      "He",
+      "demonstrated",
+      "how",
+      "to",
+      "solve",
+      "the",
+      "complex",
+      "equation",
+      "."
+    ],
+    "indices": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "picked": [
+      "how",
+      "to",
+      "solve",
+      "the",
+      "complex",
+      "equation"
+    ],
+    "explanation": "The clause 'how to solve the complex equation' is the nominal object."
+  },
+  {
+    "file": "grammar_elite_nominal_level_4.json",
+    "topic": "grammar_elite_nominal",
+    "level": "HKDSE Level 5",
+    "task_idx": 0,
+    "tokens": [
+      "What",
+      "the",
+      "company",
+      "requires",
+      "is",
+      "a",
+      "new",
+      "marketing",
+      "strategy",
+      "."
+    ],
+    "indices": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "picked": [
+      "What",
+      "the",
+      "company",
+      "requires"
+    ],
+    "explanation": "The 'What-clause' is the subject of the sentence."
+  },
+  {
+    "file": "grammar_elite_nominal_level_4.json",
+    "topic": "grammar_elite_nominal",
+    "level": "HKDSE Level 5",
+    "task_idx": 1,
+    "tokens": [
+      "Whoever",
+      "left",
+      "the",
+      "door",
+      "open",
+      "should",
+      "close",
+      "it",
+      "now",
+      "."
+    ],
+    "indices": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "picked": [
+      "Whoever",
+      "left",
+      "the",
+      "door",
+      "open"
+    ],
+    "explanation": "The whole clause starting with 'Whoever' acts as the subject."
+  },
+  {
+    "file": "grammar_elite_nominal_level_4.json",
+    "topic": "grammar_elite_nominal",
+    "level": "HKDSE Level 5",
+    "task_idx": 2,
+    "tokens": [
+      "The",
+      "most",
+      "important",
+      "fact",
+      "is",
+      "that",
+      "the",
+      "climate",
+      "is",
+      "changing",
+      "."
+    ],
+    "indices": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "picked": [
+      "that",
+      "the",
+      "climate",
+      "is",
+      "changing"
+    ],
+    "explanation": "The 'that-clause' is a subject complement following 'is'."
+  },
+  {
+    "file": "grammar_elite_nominal_level_4.json",
+    "topic": "grammar_elite_nominal",
+    "level": "HKDSE Level 5",
+    "task_idx": 3,
+    "tokens": [
+      "Whatever",
+      "you",
+      "decide",
+      "to",
+      "do",
+      "will",
+      "be",
+      "supported",
+      "by",
+      "the",
+      "team",
+      "."
+    ],
+    "indices": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "picked": [
+      "Whatever",
+      "you",
+      "decide",
+      "to",
+      "do"
+    ],
+    "explanation": "The 'Whatever-clause' is the subject."
+  },
+  {
+    "file": "grammar_elite_nominal_level_4.json",
+    "topic": "grammar_elite_nominal",
+    "level": "HKDSE Level 5",
+    "task_idx": 4,
+    "tokens": [
+      "Whether",
+      "he",
+      "joins",
+      "us",
+      "or",
+      "not",
+      "will",
+      "not",
+      "affect",
+      "the",
+      "outcome",
+      "."
+    ],
+    "indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "picked": [
+      "Whether",
+      "he",
+      "joins",
+      "us",
+      "or",
+      "not"
+    ],
+    "explanation": "The 'Whether-clause' is a complex nominal subject."
+  },
+  {
+    "file": "grammar_elite_nominal_level_5.json",
+    "topic": "grammar_elite_nominal",
+    "level": "HKDSE Level 5*",
+    "task_idx": 0,
+    "tokens": [
+      "It",
+      "is",
+      "extremely",
+      "important",
+      "that",
+      "we",
+      "understand",
+      "the",
+      "consequences",
+      "."
+    ],
+    "indices": [
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "picked": [
+      "that",
+      "we",
+      "understand",
+      "the",
+      "consequences"
+    ],
+    "explanation": "This is an extraposed nominal clause where 'It' acts as a placeholder for the 'that-clause'."
+  },
+  {
+    "file": "grammar_elite_nominal_level_5.json",
+    "topic": "grammar_elite_nominal",
+    "level": "HKDSE Level 5*",
+    "task_idx": 1,
+    "tokens": [
+      "The",
+      "possibility",
+      "that",
+      "the",
+      "deal",
+      "might",
+      "fail",
+      "worries",
+      "the",
+      "investors",
+      "."
+    ],
+    "indices": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "picked": [
+      "that",
+      "the",
+      "deal",
+      "might",
+      "fail"
+    ],
+    "explanation": "A nominal clause in apposition to 'The possibility'."
+  },
+  {
+    "file": "grammar_elite_nominal_level_5.json",
+    "topic": "grammar_elite_nominal",
+    "level": "HKDSE Level 5*",
+    "task_idx": 2,
+    "tokens": [
+      "They",
+      "are",
+      "arguing",
+      "over",
+      "whether",
+      "the",
+      "rules",
+      "should",
+      "be",
+      "changed",
+      "."
+    ],
+    "indices": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "picked": [
+      "whether",
+      "the",
+      "rules",
+      "should",
+      "be",
+      "changed"
+    ],
+    "explanation": "A nominal clause acting as the object of the preposition 'over'."
+  },
+  {
+    "file": "grammar_elite_nominal_level_5.json",
+    "topic": "grammar_elite_nominal",
+    "level": "HKDSE Level 5*",
+    "task_idx": 3,
+    "tokens": [
+      "What",
+      "struck",
+      "me",
+      "was",
+      "how",
+      "quickly",
+      "he",
+      "reacted",
+      "to",
+      "the",
+      "danger",
+      "."
+    ],
+    "indices": [
+      0,
+      1,
+      2,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "picked": [
+      "What",
+      "struck",
+      "me",
+      "how",
+      "quickly",
+      "he",
+      "reacted",
+      "to",
+      "the",
+      "danger"
+    ],
+    "explanation": "This sentence contains two nominal clauses: a 'What-clause' as subject and a 'How-clause' as complement."
+  },
+  {
+    "file": "grammar_elite_nominal_level_5.json",
+    "topic": "grammar_elite_nominal",
+    "level": "HKDSE Level 5*",
+    "task_idx": 4,
+    "tokens": [
+      "It",
+      "was",
+      "her",
+      "courage",
+      "that",
+      "ultimately",
+      "saved",
+      "the",
+      "day",
+      "."
+    ],
+    "indices": [
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "picked": [
+      "that",
+      "ultimately",
+      "saved",
+      "the",
+      "day"
+    ],
+    "explanation": "A 'Cleft Sentence' structure where the 'that-clause' emphasizes 'her courage'."
+  },
+  {
+    "file": "grammar_elite_nominal_level_7.json",
+    "topic": "grammar_elite_nominal",
+    "level": "HKDSE Level 5**",
+    "task_idx": 0,
+    "tokens": [
+      "To",
+      "overcome",
+      "such",
+      "a",
+      "challenge",
+      "requires",
+      "immense",
+      "perseverance",
+      "."
+    ],
+    "indices": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "picked": [
+      "To",
+      "overcome",
+      "such",
+      "a",
+      "challenge"
+    ],
+    "explanation": "The infinitival phrase 'To overcome such a challenge' acts as the nominal subject."
+  },
+  {
+    "file": "grammar_elite_nominal_level_7.json",
+    "topic": "grammar_elite_nominal",
+    "level": "HKDSE Level 5**",
+    "task_idx": 1,
+    "tokens": [
+      "She",
+      "made",
+      "it",
+      "clear",
+      "that",
+      "she",
+      "would",
+      "not",
+      "tolerate",
+      "any",
+      "disrespect",
+      "."
+    ],
+    "indices": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "picked": [
+      "that",
+      "she",
+      "would",
+      "not",
+      "tolerate",
+      "any",
+      "disrespect"
+    ],
+    "explanation": "A nominal clause acting as the real object, with 'it' as the dummy object."
+  },
+  {
+    "file": "grammar_elite_nominal_level_7.json",
+    "topic": "grammar_elite_nominal",
+    "level": "HKDSE Level 5**",
+    "task_idx": 2,
+    "tokens": [
+      "Maintaining",
+      "a",
+      "healthy",
+      "work-life",
+      "balance",
+      "is",
+      "essential",
+      "for",
+      "well-being",
+      "."
+    ],
+    "indices": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "picked": [
+      "Maintaining",
+      "a",
+      "healthy",
+      "work-life",
+      "balance"
+    ],
+    "explanation": "A gerundive nominal clause acting as the subject."
+  },
+  {
+    "file": "grammar_elite_nominal_level_7.json",
+    "topic": "grammar_elite_nominal",
+    "level": "HKDSE Level 5**",
+    "task_idx": 3,
+    "tokens": [
+      "What",
+      "is",
+      "most",
+      "concerning",
+      "is",
+      "the",
+      "fact",
+      "that",
+      "nobody",
+      "seems",
+      "to",
+      "care",
+      "."
+    ],
+    "indices": [
+      0,
+      1,
+      2,
+      3,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "picked": [
+      "What",
+      "is",
+      "most",
+      "concerning",
+      "that",
+      "nobody",
+      "seems",
+      "to",
+      "care"
+    ],
+    "explanation": "This sentence contains a 'What-clause' subject and an appositive 'that-clause'."
+  },
+  {
+    "file": "grammar_elite_nominal_level_7.json",
+    "topic": "grammar_elite_nominal",
+    "level": "HKDSE Level 5**",
+    "task_idx": 4,
+    "tokens": [
+      "How",
+      "he",
+      "managed",
+      "to",
+      "escape",
+      "without",
+      "being",
+      "seen",
+      "is",
+      "still",
+      "a",
+      "mystery",
+      "."
+    ],
+    "indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "picked": [
+      "How",
+      "he",
+      "managed",
+      "to",
+      "escape",
+      "without",
+      "being",
+      "seen"
+    ],
+    "explanation": "A complex nominal clause acting as the subject of 'is'."
+  },
+  {
+    "file": "grammar_elite_participle_level_3.json",
+    "topic": "grammar_elite_participle",
+    "level": "HKDSE Level 4",
+    "task_idx": 0,
+    "tokens": [
+      "Waiting",
+      "for",
+      "the",
+      "bus",
+      ",",
+      "she",
+      "listened",
+      "to",
+      "music",
+      "."
+    ],
+    "indices": [
+      0,
+      5
+    ],
+    "picked": [
+      "Waiting",
+      "she"
+    ],
+    "explanation": "'Waiting' is the present participle describing the subject 'she'."
+  },
+  {
+    "file": "grammar_elite_participle_level_3.json",
+    "topic": "grammar_elite_participle",
+    "level": "HKDSE Level 4",
+    "task_idx": 1,
+    "tokens": [
+      "Excited",
+      "by",
+      "the",
+      "gift",
+      ",",
+      "the",
+      "child",
+      "danced",
+      "around",
+      "."
+    ],
+    "indices": [
+      0,
+      6
+    ],
+    "picked": [
+      "Excited",
+      "child"
+    ],
+    "explanation": "'Excited' is the past participle describing 'the child'."
+  },
+  {
+    "file": "grammar_elite_participle_level_3.json",
+    "topic": "grammar_elite_participle",
+    "level": "HKDSE Level 4",
+    "task_idx": 2,
+    "tokens": [
+      "Realizing",
+      "his",
+      "mistake",
+      ",",
+      "he",
+      "apologized",
+      "immediately",
+      "."
+    ],
+    "indices": [
+      0,
+      4
+    ],
+    "picked": [
+      "Realizing",
+      "he"
+    ],
+    "explanation": "'Realizing' modifies the subject 'he'."
+  },
+  {
+    "file": "grammar_elite_participle_level_3.json",
+    "topic": "grammar_elite_participle",
+    "level": "HKDSE Level 4",
+    "task_idx": 3,
+    "tokens": [
+      "Seen",
+      "from",
+      "a",
+      "distance",
+      ",",
+      "the",
+      "mountain",
+      "looked",
+      "magnificent",
+      "."
+    ],
+    "indices": [
+      0,
+      6
+    ],
+    "picked": [
+      "Seen",
+      "mountain"
+    ],
+    "explanation": "'Seen' is a passive participle describing 'the mountain'."
+  },
+  {
+    "file": "grammar_elite_participle_level_3.json",
+    "topic": "grammar_elite_participle",
+    "level": "HKDSE Level 4",
+    "task_idx": 4,
+    "tokens": [
+      "The",
+      "student",
+      ",",
+      "hoping",
+      "for",
+      "an",
+      "A",
+      ",",
+      "studied",
+      "very",
+      "hard",
+      "."
+    ],
+    "indices": [
+      1,
+      3
+    ],
+    "picked": [
+      "student",
+      "hoping"
+    ],
+    "explanation": "'Hoping' is a present participle modifying 'The student'."
+  },
+  {
+    "file": "grammar_elite_participle_level_4.json",
+    "topic": "grammar_elite_participle",
+    "level": "HKDSE Level 5",
+    "task_idx": 0,
+    "tokens": [
+      "Having",
+      "saved",
+      "enough",
+      "money",
+      ",",
+      "she",
+      "bought",
+      "a",
+      "new",
+      "laptop",
+      "."
+    ],
+    "indices": [
+      0,
+      1,
+      5
+    ],
+    "picked": [
+      "Having",
+      "saved",
+      "she"
+    ],
+    "explanation": "The perfect participle 'Having saved' emphasizes the action was completed before she bought the laptop."
+  },
+  {
+    "file": "grammar_elite_participle_level_4.json",
+    "topic": "grammar_elite_participle",
+    "level": "HKDSE Level 5",
+    "task_idx": 1,
+    "tokens": [
+      "Surrounded",
+      "by",
+      "his",
+      "family",
+      ",",
+      "the",
+      "old",
+      "man",
+      "smiled",
+      "weakly",
+      "."
+    ],
+    "indices": [
+      0,
+      7
+    ],
+    "picked": [
+      "Surrounded",
+      "man"
+    ],
+    "explanation": "The passive participle 'Surrounded' modifies 'the old man'."
+  },
+  {
+    "file": "grammar_elite_participle_level_4.json",
+    "topic": "grammar_elite_participle",
+    "level": "HKDSE Level 5",
+    "task_idx": 2,
+    "tokens": [
+      "Looking",
+      "through",
+      " the",
+      "window",
+      ",",
+      "I",
+      "saw",
+      "the",
+      "snow",
+      "falling",
+      "."
+    ],
+    "indices": [
+      0,
+      5
+    ],
+    "picked": [
+      "Looking",
+      "I"
+    ],
+    "explanation": "'Looking' is an active participle correctly modifying the subject 'I' (not the snow!)."
+  },
+  {
+    "file": "grammar_elite_participle_level_4.json",
+    "topic": "grammar_elite_participle",
+    "level": "HKDSE Level 5",
+    "task_idx": 3,
+    "tokens": [
+      "Having",
+      "been",
+      "elected",
+      "president",
+      ",",
+      "he",
+      "vowed",
+      "to",
+      "change",
+      "the",
+      "system",
+      "."
+    ],
+    "indices": [
+      0,
+      1,
+      2,
+      5
+    ],
+    "picked": [
+      "Having",
+      "been",
+      "elected",
+      "he"
+    ],
+    "explanation": "A passive perfect participle describing the subject 'he'."
+  },
+  {
+    "file": "grammar_elite_participle_level_4.json",
+    "topic": "grammar_elite_participle",
+    "level": "HKDSE Level 5",
+    "task_idx": 4,
+    "tokens": [
+      "The",
+      "man",
+      "accused",
+      "of",
+      "the",
+      "crime",
+      "maintained",
+      "his",
+      "innocence",
+      "."
+    ],
+    "indices": [
+      2,
+      1
+    ],
+    "picked": [
+      "accused",
+      "man"
+    ],
+    "explanation": "'Accused' is a reduced relative clause modifying 'The man'."
+  },
+  {
+    "file": "grammar_elite_participle_level_5.json",
+    "topic": "grammar_elite_participle",
+    "level": "HKDSE Level 5*",
+    "task_idx": 0,
+    "tokens": [
+      "The",
+      "sun",
+      "having",
+      "set",
+      ",",
+      "the",
+      "temperature",
+      "began",
+      "to",
+      "drop",
+      "rapidly",
+      "."
+    ],
+    "indices": [
+      1,
+      2,
+      3
+    ],
+    "picked": [
+      "sun",
+      "having",
+      "set"
+    ],
+    "explanation": "This is an 'Absolute Phrase' where 'The sun' is the subject of the participle 'having set'."
+  },
+  {
+    "file": "grammar_elite_participle_level_5.json",
+    "topic": "grammar_elite_participle",
+    "level": "HKDSE Level 5*",
+    "task_idx": 1,
+    "tokens": [
+      "Not",
+      "wishing",
+      "to",
+      "offend",
+      "anyone",
+      ",",
+      "she",
+      "remained",
+      "neutral",
+      "during",
+      "the",
+      "debate",
+      "."
+    ],
+    "indices": [
+      1,
+      6
+    ],
+    "picked": [
+      "wishing",
+      "she"
+    ],
+    "explanation": "A negative present participle phrase modifying the subject 'she'."
+  },
+  {
+    "file": "grammar_elite_participle_level_5.json",
+    "topic": "grammar_elite_participle",
+    "level": "HKDSE Level 5*",
+    "task_idx": 2,
+    "tokens": [
+      "With",
+      "the",
+      "deadline",
+      "approaching",
+      ",",
+      "the",
+      "team",
+      "worked",
+      "throughout",
+      "the",
+      "night",
+      "."
+    ],
+    "indices": [
+      2,
+      3
+    ],
+    "picked": [
+      "deadline",
+      "approaching"
+    ],
+    "explanation": "A 'With-Absolute' phrase where 'the deadline' is approaching (active)."
+  },
+  {
+    "file": "grammar_elite_participle_level_5.json",
+    "topic": "grammar_elite_participle",
+    "level": "HKDSE Level 5*",
+    "task_idx": 3,
+    "tokens": [
+      "Exhausted",
+      "yet",
+      "determined",
+      ",",
+      "the",
+      "runner",
+      "crossed",
+      "the",
+      "finish",
+      "line",
+      "."
+    ],
+    "indices": [
+      0,
+      2,
+      5
+    ],
+    "picked": [
+      "Exhausted",
+      "determined",
+      "runner"
+    ],
+    "explanation": "Multiple past participles describing the subject 'the runner'."
+  },
+  {
+    "file": "grammar_elite_participle_level_5.json",
+    "topic": "grammar_elite_participle",
+    "level": "HKDSE Level 5*",
+    "task_idx": 4,
+    "tokens": [
+      "After",
+      "completing",
+      "the",
+      "marathon",
+      ",",
+      "he",
+      "felt",
+      "a",
+      "sense",
+      "of",
+      "immense",
+      "pride",
+      "."
+    ],
+    "indices": [
+      1,
+      5
+    ],
+    "picked": [
+      "completing",
+      "he"
+    ],
+    "explanation": "A reduced adverbial clause using 'After' + present participle."
+  },
+  {
+    "file": "grammar_elite_participle_level_7.json",
+    "topic": "grammar_elite_participle",
+    "level": "HKDSE Level 5**",
+    "task_idx": 0,
+    "tokens": [
+      "Standing",
+      "next",
+      "to",
+      "the",
+      "window",
+      "was",
+      "a",
+      "tall",
+      "man",
+      "in",
+      "a",
+      "dark",
+      "suit",
+      "."
+    ],
+    "indices": [
+      0,
+      8
+    ],
+    "picked": [
+      "Standing",
+      "man"
+    ],
+    "explanation": "An inverted participle phrase 'Standing next to the window' modifies the subject 'a tall man'."
+  },
+  {
+    "file": "grammar_elite_participle_level_7.json",
+    "topic": "grammar_elite_participle",
+    "level": "HKDSE Level 5**",
+    "task_idx": 1,
+    "tokens": [
+      "The",
+      "agreement",
+      "signed",
+      ",",
+      "both",
+      "parties",
+      "left",
+      "the",
+      "room",
+      "feeling",
+      "satisfied",
+      "."
+    ],
+    "indices": [
+      1,
+      2,
+      9
+    ],
+    "picked": [
+      "agreement",
+      "signed",
+      "feeling"
+    ],
+    "explanation": "'The agreement signed' is a 'Bare' absolute phrase. 'Feeling satisfied' modifies 'both parties'."
+  },
+  {
+    "file": "grammar_elite_participle_level_7.json",
+    "topic": "grammar_elite_participle",
+    "level": "HKDSE Level 5**",
+    "task_idx": 2,
+    "tokens": [
+      "She",
+      "argued",
+      "persuasively",
+      ",",
+      "convincing",
+      "the",
+      "judges",
+      "of",
+      "her",
+      "innocence",
+      "."
+    ],
+    "indices": [
+      0,
+      4
+    ],
+    "picked": [
+      "She",
+      "convincing"
+    ],
+    "explanation": "'Convincing' is a participle modifying the entire previous clause 'She argued persuasively'."
+  },
+  {
+    "file": "grammar_elite_participle_level_7.json",
+    "topic": "grammar_elite_participle",
+    "level": "HKDSE Level 5**",
+    "task_idx": 3,
+    "tokens": [
+      "Hidden",
+      "beneath",
+      "the",
+      "floorboards",
+      "was",
+      "a",
+      "box",
+      "filled",
+      "with",
+      "gold",
+      "."
+    ],
+    "indices": [
+      0,
+      6,
+      7
+    ],
+    "picked": [
+      "Hidden",
+      "box",
+      "filled"
+    ],
+    "explanation": "'Hidden' is an inverted past participle modifying 'a box'. 'Filled' is a reduced relative clause modifying 'a box'."
+  },
+  {
+    "file": "grammar_elite_participle_level_7.json",
+    "topic": "grammar_elite_participle",
+    "level": "HKDSE Level 5**",
+    "task_idx": 4,
+    "tokens": [
+      "Being",
+      "the",
+      "only",
+      "survivor",
+      ",",
+      "he",
+      "felt",
+      "a",
+      "deep",
+      "burden",
+      "of",
+      "responsibility",
+      "."
+    ],
+    "indices": [
+      0,
+      5
+    ],
+    "picked": [
+      "Being",
+      "he"
+    ],
+    "explanation": "'Being' is a participle phrase modifying 'he'."
+  },
+  {
+    "file": "grammar_elite_passive_level_3.json",
+    "topic": "grammar_elite_passive",
+    "level": "HKDSE Level 4",
+    "task_idx": 0,
+    "tokens": [
+      "The",
+      "new",
+      "bridge",
+      "was",
+      "completed",
+      "ahead",
+      "of",
+      "schedule",
+      "."
+    ],
+    "indices": [
+      3,
+      4
+    ],
+    "picked": [
+      "was",
+      "completed"
+    ],
+    "explanation": "'Was completed' is the passive verb phrase."
+  },
+  {
+    "file": "grammar_elite_passive_level_3.json",
+    "topic": "grammar_elite_passive",
+    "level": "HKDSE Level 4",
+    "task_idx": 1,
+    "tokens": [
+      "Your",
+      "request",
+      "will",
+      "be",
+      "processed",
+      "within",
+      "three",
+      "days",
+      "."
+    ],
+    "indices": [
+      2,
+      3,
+      4
+    ],
+    "picked": [
+      "will",
+      "be",
+      "processed"
+    ],
+    "explanation": "A future passive using the modal 'will'."
+  },
+  {
+    "file": "grammar_elite_passive_level_3.json",
+    "topic": "grammar_elite_passive",
+    "level": "HKDSE Level 4",
+    "task_idx": 2,
+    "tokens": [
+      "She",
+      "had",
+      "her",
+      "passport",
+      "renewed",
+      "at",
+      "the",
+      "embassy",
+      "."
+    ],
+    "indices": [
+      1,
+      4
+    ],
+    "picked": [
+      "had",
+      "renewed"
+    ],
+    "explanation": "'Had... renewed' is the causative passive structure."
+  },
+  {
+    "file": "grammar_elite_passive_level_3.json",
+    "topic": "grammar_elite_passive",
+    "level": "HKDSE Level 4",
+    "task_idx": 3,
+    "tokens": [
+      "All",
+      "the",
+      "data",
+      "must",
+      "be",
+      "verified",
+      "before",
+      "publication",
+      "."
+    ],
+    "indices": [
+      3,
+      4,
+      5
+    ],
+    "picked": [
+      "must",
+      "be",
+      "verified"
+    ],
+    "explanation": "A modal passive expressing obligation."
+  },
+  {
+    "file": "grammar_elite_passive_level_3.json",
+    "topic": "grammar_elite_passive",
+    "level": "HKDSE Level 4",
+    "task_idx": 4,
+    "tokens": [
+      "The",
+      "results",
+      "were",
+      "announced",
+      "by",
+      "the",
+      "committee",
+      "last",
+      "night",
+      "."
+    ],
+    "indices": [
+      2,
+      3
+    ],
+    "picked": [
+      "were",
+      "announced"
+    ],
+    "explanation": "A simple past passive with an agent ('the committee')."
+  },
+  {
+    "file": "grammar_elite_passive_level_4.json",
+    "topic": "grammar_elite_passive",
+    "level": "HKDSE Level 5",
+    "task_idx": 0,
+    "tokens": [
+      "It",
+      "is",
+      "widely",
+      "reported",
+      "that",
+      "the",
+      "two",
+      "companies",
+      "will",
+      "merge",
+      "."
+    ],
+    "indices": [
+      1,
+      3
+    ],
+    "picked": [
+      "is",
+      "reported"
+    ],
+    "explanation": "'It is... reported' is an impersonal passive structure."
+  },
+  {
+    "file": "grammar_elite_passive_level_4.json",
+    "topic": "grammar_elite_passive",
+    "level": "HKDSE Level 5",
+    "task_idx": 1,
+    "tokens": [
+      "The",
+      "suspect",
+      "is",
+      "thought",
+      "to",
+      "have",
+      "fled",
+      "the",
+      "country",
+      "."
+    ],
+    "indices": [
+      2,
+      3,
+      5,
+      6
+    ],
+    "picked": [
+      "is",
+      "thought",
+      "have",
+      "fled"
+    ],
+    "explanation": "A complex passive structure referring to a past action ('to have fled')."
+  },
+  {
+    "file": "grammar_elite_passive_level_4.json",
+    "topic": "grammar_elite_passive",
+    "level": "HKDSE Level 5",
+    "task_idx": 2,
+    "tokens": [
+      "New",
+      "regulations",
+      "are",
+      "being",
+      "introduced",
+      "to",
+      "protect",
+      "consumers",
+      "."
+    ],
+    "indices": [
+      2,
+      3,
+      4
+    ],
+    "picked": [
+      "are",
+      "being",
+      "introduced"
+    ],
+    "explanation": "A present continuous passive for an ongoing change."
+  },
+  {
+    "file": "grammar_elite_passive_level_4.json",
+    "topic": "grammar_elite_passive",
+    "level": "HKDSE Level 5",
+    "task_idx": 3,
+    "tokens": [
+      "It",
+      "is",
+      "estimated",
+      "that",
+      "the",
+      "damage",
+      "will",
+      "cost",
+      "millions",
+      "."
+    ],
+    "indices": [
+      1,
+      2
+    ],
+    "picked": [
+      "is",
+      "estimated"
+    ],
+    "explanation": "Impersonal passive used for providing estimates or data."
+  },
+  {
+    "file": "grammar_elite_passive_level_4.json",
+    "topic": "grammar_elite_passive",
+    "level": "HKDSE Level 5",
+    "task_idx": 4,
+    "tokens": [
+      "They",
+      "are",
+      "believed",
+      "to",
+      "be",
+      "negotiating",
+      "a",
+      "new",
+      "deal",
+      "."
+    ],
+    "indices": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "picked": [
+      "believed",
+      "to",
+      "be",
+      "negotiating"
+    ],
+    "explanation": "A passive structure combined with a continuous infinitive ('to be negotiating')."
+  },
+  {
+    "file": "grammar_elite_passive_level_5.json",
+    "topic": "grammar_elite_passive",
+    "level": "HKDSE Level 5*",
+    "task_idx": 0,
+    "tokens": [
+      "These",
+      "old",
+      "documents",
+      "need",
+      "preserving",
+      "carefully",
+      "."
+    ],
+    "indices": [
+      3,
+      4
+    ],
+    "picked": [
+      "need",
+      "preserving"
+    ],
+    "explanation": "'Need preserving' is a concise way to say 'need to be preserved'."
+  },
+  {
+    "file": "grammar_elite_passive_level_5.json",
+    "topic": "grammar_elite_passive",
+    "level": "HKDSE Level 5*",
+    "task_idx": 1,
+    "tokens": [
+      "He",
+      "is",
+      "unlikely",
+      "to",
+      "be",
+      "promoted",
+      "any",
+      "time",
+      "soon",
+      "."
+    ],
+    "indices": [
+      4,
+      5
+    ],
+    "picked": [
+      "be",
+      "promoted"
+    ],
+    "explanation": "A passive infinitive ('to be promoted') following an adjective."
+  },
+  {
+    "file": "grammar_elite_passive_level_5.json",
+    "topic": "grammar_elite_passive",
+    "level": "HKDSE Level 5*",
+    "task_idx": 2,
+    "tokens": [
+      "The",
+      "experience",
+      "of",
+      "being",
+      "rewarded",
+      "for",
+      "hard",
+      "work",
+      "is",
+      "very",
+      "satisfying",
+      "."
+    ],
+    "indices": [
+      3,
+      4
+    ],
+    "picked": [
+      "being",
+      "rewarded"
+    ],
+    "explanation": "'Being rewarded' is a passive gerund acting as the object of a preposition."
+  },
+  {
+    "file": "grammar_elite_passive_level_5.json",
+    "topic": "grammar_elite_passive",
+    "level": "HKDSE Level 5*",
+    "task_idx": 3,
+    "tokens": [
+      "It",
+      "was",
+      "thought",
+      "that",
+      "the",
+      "problem",
+      "had",
+      "been",
+      "solved",
+      "permanently",
+      "."
+    ],
+    "indices": [
+      1,
+      2,
+      6,
+      7,
+      8
+    ],
+    "picked": [
+      "was",
+      "thought",
+      "had",
+      "been",
+      "solved"
+    ],
+    "explanation": "A past impersonal passive ('was thought') combined with a past perfect passive ('had been solved')."
+  },
+  {
+    "file": "grammar_elite_passive_level_5.json",
+    "topic": "grammar_elite_passive",
+    "level": "HKDSE Level 5*",
+    "task_idx": 4,
+    "tokens": [
+      "I",
+      "don't",
+      "like",
+      "being",
+      "told",
+      "what",
+      "to",
+      "do",
+      "."
+    ],
+    "indices": [
+      3,
+      4
+    ],
+    "picked": [
+      "being",
+      "told"
+    ],
+    "explanation": "A passive gerund ('being told') acting as the object of the verb 'like'."
+  },
+  {
+    "file": "grammar_elite_passive_level_7.json",
+    "topic": "grammar_elite_passive",
+    "level": "HKDSE Level 5**",
+    "task_idx": 0,
+    "tokens": [
+      "By",
+      "the",
+      "end",
+      "of",
+      "next",
+      "year",
+      ",",
+      "the",
+      "new",
+      "facility",
+      "will",
+      "have",
+      "been",
+      "commissioned",
+      "."
+    ],
+    "indices": [
+      10,
+      11,
+      12,
+      13
+    ],
+    "picked": [
+      "will",
+      "have",
+      "been",
+      "commissioned"
+    ],
+    "explanation": "A future perfect passive indicating a completed action by a future point in time."
+  },
+  {
+    "file": "grammar_elite_passive_level_7.json",
+    "topic": "grammar_elite_passive",
+    "level": "HKDSE Level 5**",
+    "task_idx": 1,
+    "tokens": [
+      "The",
+      "suspect",
+      "was",
+      "observed",
+      "to",
+      "leave",
+      "the",
+      "premises",
+      "shortly",
+      "after",
+      "midnight",
+      "."
+    ],
+    "indices": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "picked": [
+      "was",
+      "observed",
+      "to",
+      "leave"
+    ],
+    "explanation": "A formal sensory passive with a to-infinitive."
+  },
+  {
+    "file": "grammar_elite_passive_level_7.json",
+    "topic": "grammar_elite_passive",
+    "level": "HKDSE Level 5**",
+    "task_idx": 2,
+    "tokens": [
+      "Unfortunately",
+      ",",
+      "several",
+      "valuable",
+      "items",
+      "got",
+      "damaged",
+      "during",
+      "the",
+      "move",
+      "."
+    ],
+    "indices": [
+      5,
+      6
+    ],
+    "picked": [
+      "got",
+      "damaged"
+    ],
+    "explanation": "A 'get-passive' often used for accidents or unfortunate events."
+  },
+  {
+    "file": "grammar_elite_passive_level_7.json",
+    "topic": "grammar_elite_passive",
+    "level": "HKDSE Level 5**",
+    "task_idx": 3,
+    "tokens": [
+      "The",
+      "ancient",
+      "artifact",
+      "is",
+      "rumored",
+      "to",
+      "have",
+      "been",
+      "found",
+      "in",
+      "a",
+      "remote",
+      "cave",
+      "."
+    ],
+    "indices": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "picked": [
+      "is",
+      "rumored",
+      "to",
+      "have",
+      "been",
+      "found"
+    ],
+    "explanation": "A complex passive reporting a past discovery."
+  },
+  {
+    "file": "grammar_elite_passive_level_7.json",
+    "topic": "grammar_elite_passive",
+    "level": "HKDSE Level 5**",
+    "task_idx": 4,
+    "tokens": [
+      "Plans",
+      "are",
+      "understood",
+      "to",
+      "be",
+      "being",
+      "drafted",
+      "as",
+      "we",
+      "speak",
+      "."
+    ],
+    "indices": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "picked": [
+      "are",
+      "understood",
+      "to",
+      "be",
+      "being",
+      "drafted"
+    ],
+    "explanation": "A rare but highly sophisticated 'Double Passive' involving an ongoing action ('to be being drafted')."
+  },
+  {
+    "file": "grammar_elite_relative_level_3.json",
+    "topic": "grammar_elite_relative",
+    "level": "HKDSE Level 4",
+    "task_idx": 0,
+    "tokens": [
+      "The",
+      "scientist",
+      "whose",
+      "research",
+      "was",
+      "published",
+      "won",
+      "an",
+      "award",
+      "."
+    ],
+    "indices": [
+      1,
+      2
+    ],
+    "picked": [
+      "scientist",
+      "whose"
+    ],
+    "explanation": "'Whose' indicates that the research belongs to the scientist."
+  },
+  {
+    "file": "grammar_elite_relative_level_3.json",
+    "topic": "grammar_elite_relative",
+    "level": "HKDSE Level 4",
+    "task_idx": 1,
+    "tokens": [
+      "The",
+      "client",
+      "whom",
+      "you",
+      "met",
+      "yesterday",
+      "is",
+      "very",
+      "satisfied",
+      "."
+    ],
+    "indices": [
+      1,
+      2
+    ],
+    "picked": [
+      "client",
+      "whom"
+    ],
+    "explanation": "'Whom' is the formal object relative pronoun referring to the client."
+  },
+  {
+    "file": "grammar_elite_relative_level_3.json",
+    "topic": "grammar_elite_relative",
+    "level": "HKDSE Level 4",
+    "task_idx": 2,
+    "tokens": [
+      "This",
+      "is",
+      "the",
+      "building",
+      "in",
+      "which",
+      "the",
+      "treaty",
+      "was",
+      "signed",
+      "."
+    ],
+    "indices": [
+      3,
+      5
+    ],
+    "picked": [
+      "building",
+      "which"
+    ],
+    "explanation": "'In which' is a formal alternative to 'where' for modifying the building."
+  },
+  {
+    "file": "grammar_elite_relative_level_3.json",
+    "topic": "grammar_elite_relative",
+    "level": "HKDSE Level 4",
+    "task_idx": 3,
+    "tokens": [
+      "Professor",
+      "Lee",
+      ",",
+      "who",
+      "is",
+      "an",
+      "expert",
+      "on",
+      "AI",
+      ",",
+      "will",
+      "give",
+      " a",
+      "talk",
+      "."
+    ],
+    "indices": [
+      0,
+      1,
+      3
+    ],
+    "picked": [
+      "Professor",
+      "Lee",
+      "who"
+    ],
+    "explanation": "A non-defining relative clause providing extra information about Professor Lee."
+  },
+  {
+    "file": "grammar_elite_relative_level_3.json",
+    "topic": "grammar_elite_relative",
+    "level": "HKDSE Level 4",
+    "task_idx": 4,
+    "tokens": [
+      "The",
+      "car",
+      "whose",
+      "engine",
+      "failed",
+      "has",
+      "been",
+      "repaired",
+      "."
+    ],
+    "indices": [
+      1,
+      2
+    ],
+    "picked": [
+      "car",
+      "whose"
+    ],
+    "explanation": "'Whose' can be used for both people and things to show possession/parts."
+  },
+  {
+    "file": "grammar_elite_relative_level_4.json",
+    "topic": "grammar_elite_relative",
+    "level": "HKDSE Level 5",
+    "task_idx": 0,
+    "tokens": [
+      "The",
+      "company",
+      "has",
+      "five",
+      "directors",
+      ",",
+      "three",
+      "of",
+      "whom",
+      "are",
+      "from",
+      "abroad",
+      "."
+    ],
+    "indices": [
+      4,
+      8
+    ],
+    "picked": [
+      "directors",
+      "whom"
+    ],
+    "explanation": "'Three of whom' is a relative clause of quantity modifying 'directors'."
+  },
+  {
+    "file": "grammar_elite_relative_level_4.json",
+    "topic": "grammar_elite_relative",
+    "level": "HKDSE Level 5",
+    "task_idx": 1,
+    "tokens": [
+      "She",
+      "failed",
+      "the",
+      "test",
+      ",",
+      "which",
+      "was",
+      "completely",
+      "unexpected",
+      "."
+    ],
+    "indices": [
+      5
+    ],
+    "picked": [
+      "which"
+    ],
+    "explanation": "'Which' refers back to the entire situation of her failing the test."
+  },
+  {
+    "file": "grammar_elite_relative_level_4.json",
+    "topic": "grammar_elite_relative",
+    "level": "HKDSE Level 5",
+    "task_idx": 2,
+    "tokens": [
+      "The",
+      "manner",
+      "in",
+      "which",
+      "he",
+      "conducted",
+      "himself",
+      "was",
+      "exemplary",
+      "."
+    ],
+    "indices": [
+      1,
+      3
+    ],
+    "picked": [
+      "manner",
+      "which"
+    ],
+    "explanation": "'In which' modifies 'manner' in a formal prepositional structure."
+  },
+  {
+    "file": "grammar_elite_relative_level_4.json",
+    "topic": "grammar_elite_relative",
+    "level": "HKDSE Level 5",
+    "task_idx": 3,
+    "tokens": [
+      "I",
+      "received",
+      "many",
+      "gifts",
+      ",",
+      "most",
+      "of",
+      "which",
+      "were",
+      "handmade",
+      "."
+    ],
+    "indices": [
+      3,
+      7
+    ],
+    "picked": [
+      "gifts",
+      "which"
+    ],
+    "explanation": "'Most of which' is a relative clause of quantity modifying 'gifts'."
+  },
+  {
+    "file": "grammar_elite_relative_level_4.json",
+    "topic": "grammar_elite_relative",
+    "level": "HKDSE Level 5",
+    "task_idx": 4,
+    "tokens": [
+      "The",
+      "extent",
+      "to",
+      "which",
+      "the",
+      "damage",
+      "was",
+      "prevented",
+      "remains",
+      "unknown",
+      "."
+    ],
+    "indices": [
+      1,
+      3
+    ],
+    "picked": [
+      "extent",
+      "which"
+    ],
+    "explanation": "'To which' is a formal prepositional structure modifying 'extent'."
+  },
+  {
+    "file": "grammar_elite_relative_level_5.json",
+    "topic": "grammar_elite_relative",
+    "level": "HKDSE Level 5*",
+    "task_idx": 0,
+    "tokens": [
+      "The",
+      "legislation",
+      "provides",
+      "a",
+      "mechanism",
+      "whereby",
+      "disputes",
+      "can",
+      "be",
+      "resolved",
+      "."
+    ],
+    "indices": [
+      4,
+      5
+    ],
+    "picked": [
+      "mechanism",
+      "whereby"
+    ],
+    "explanation": "'Whereby' is a formal relative meaning 'by which' or 'through which'."
+  },
+  {
+    "file": "grammar_elite_relative_level_5.json",
+    "topic": "grammar_elite_relative",
+    "level": "HKDSE Level 5*",
+    "task_idx": 1,
+    "tokens": [
+      "It",
+      "was",
+      "a",
+      "treaty",
+      "wherein",
+      "the",
+      "boundaries",
+      "were",
+      "clearly",
+      "defined",
+      "."
+    ],
+    "indices": [
+      3,
+      4
+    ],
+    "picked": [
+      "treaty",
+      "wherein"
+    ],
+    "explanation": "'Wherein' is a formal way to say 'in which'."
+  },
+  {
+    "file": "grammar_elite_relative_level_5.json",
+    "topic": "grammar_elite_relative",
+    "level": "HKDSE Level 5*",
+    "task_idx": 2,
+    "tokens": [
+      "This",
+      "is",
+      "the",
+      "very",
+      "man",
+      "that",
+      "I",
+      "was",
+      "telling",
+      "you",
+      "about",
+      "."
+    ],
+    "indices": [
+      4,
+      5
+    ],
+    "picked": [
+      "man",
+      "that"
+    ],
+    "explanation": "After 'very', 'that' is the preferred relative pronoun."
+  },
+  {
+    "file": "grammar_elite_relative_level_5.json",
+    "topic": "grammar_elite_relative",
+    "level": "HKDSE Level 5*",
+    "task_idx": 3,
+    "tokens": [
+      "The",
+      "theory",
+      ",",
+      "the",
+      "truth",
+      "of",
+      "which",
+      "is",
+      "not",
+      "in",
+      "doubt",
+      ",",
+      "changed",
+      "science",
+      "."
+    ],
+    "indices": [
+      1,
+      6
+    ],
+    "picked": [
+      "theory",
+      "which"
+    ],
+    "explanation": "'The truth of which' is a formal alternative to 'whose truth'."
+  },
+  {
+    "file": "grammar_elite_relative_level_5.json",
+    "topic": "grammar_elite_relative",
+    "level": "HKDSE Level 5*",
+    "task_idx": 4,
+    "tokens": [
+      "Shakespeare",
+      ",",
+      "than",
+      "whom",
+      "few",
+      "writers",
+      "are",
+      "more",
+      "famous",
+      ",",
+      "lived",
+      "in",
+      "Stratford",
+      "."
+    ],
+    "indices": [
+      0,
+      3
+    ],
+    "picked": [
+      "Shakespeare",
+      "whom"
+    ],
+    "explanation": "A highly formal 'than whom' structure used for comparisons in relative clauses."
+  },
+  {
+    "file": "grammar_elite_relative_level_7.json",
+    "topic": "grammar_elite_relative",
+    "level": "HKDSE Level 5**",
+    "task_idx": 0,
+    "tokens": [
+      "There",
+      "is",
+      "no",
+      "rule",
+      "but",
+      "has",
+      "some",
+      "exceptions",
+      "."
+    ],
+    "indices": [
+      3,
+      4
+    ],
+    "picked": [
+      "rule",
+      "but"
+    ],
+    "explanation": "'But' here acts as a negative relative pronoun meaning 'that... not'."
+  },
+  {
+    "file": "grammar_elite_relative_level_7.json",
+    "topic": "grammar_elite_relative",
+    "level": "HKDSE Level 5**",
+    "task_idx": 1,
+    "tokens": [
+      "He",
+      "is",
+      "the",
+      "only",
+      "person",
+      "I",
+      "have",
+      "met",
+      "who",
+      "understands",
+      "me",
+      "."
+    ],
+    "indices": [
+      4,
+      8
+    ],
+    "picked": [
+      "person",
+      "who"
+    ],
+    "explanation": "A double relative structure: the first is a reduced 'whom I have met', and the second starts with 'who'."
+  },
+  {
+    "file": "grammar_elite_relative_level_7.json",
+    "topic": "grammar_elite_relative",
+    "level": "HKDSE Level 5**",
+    "task_idx": 2,
+    "tokens": [
+      "We",
+      "must",
+      "find",
+      "a",
+      "way",
+      "whereby",
+      "this",
+      "goal",
+      "can",
+      "be",
+      "achieved",
+      "."
+    ],
+    "indices": [
+      4,
+      5
+    ],
+    "picked": [
+      "way",
+      "whereby"
+    ],
+    "explanation": "'Whereby' modifies 'way' to describe the method."
+  },
+  {
+    "file": "grammar_elite_relative_level_7.json",
+    "topic": "grammar_elite_relative",
+    "level": "HKDSE Level 5**",
+    "task_idx": 3,
+    "tokens": [
+      "The",
+      "situation",
+      "is",
+      "grave",
+      ",",
+      "in",
+      "which",
+      "case",
+      "we",
+      "should",
+      "inform",
+      "the",
+      "public",
+      "."
+    ],
+    "indices": [
+      1,
+      6,
+      7
+    ],
+    "picked": [
+      "situation",
+      "which",
+      "case"
+    ],
+    "explanation": "'In which case' refers back to the entire preceding clause."
+  },
+  {
+    "file": "grammar_elite_relative_level_7.json",
+    "topic": "grammar_elite_relative",
+    "level": "HKDSE Level 5**",
+    "task_idx": 4,
+    "tokens": [
+      "Scarcely",
+      "had",
+      "he",
+      "arrived",
+      "when",
+      "the",
+      "meeting",
+      ",",
+      "for",
+      "which",
+      "he",
+      "was",
+      "late",
+      ",",
+      "ended",
+      "."
+    ],
+    "indices": [
+      6,
+      9
+    ],
+    "picked": [
+      "meeting",
+      "which"
+    ],
+    "explanation": "A complex sentence with an inverted opener and a prepositional relative clause."
+  },
+  {
+    "file": "grammar_elite_subjunctive_level_3.json",
+    "topic": "grammar_elite_subjunctive",
+    "level": "HKDSE Level 4",
+    "task_idx": 0,
+    "tokens": [
+      "It",
+      "is",
+      "essential",
+      "that",
+      "every",
+      "student",
+      "be",
+      "present",
+      "."
+    ],
+    "indices": [
+      2,
+      6
+    ],
+    "picked": [
+      "essential",
+      "be"
+    ],
+    "explanation": "'Essential' is the trigger word, and 'be' is the subjunctive verb."
+  },
+  {
+    "file": "grammar_elite_subjunctive_level_3.json",
+    "topic": "grammar_elite_subjunctive",
+    "level": "HKDSE Level 4",
+    "task_idx": 1,
+    "tokens": [
+      "The",
+      "doctor",
+      "suggested",
+      "that",
+      "he",
+      "not",
+      "smoke",
+      "anymore",
+      "."
+    ],
+    "indices": [
+      2,
+      5,
+      6
+    ],
+    "picked": [
+      "suggested",
+      "not",
+      "smoke"
+    ],
+    "explanation": "'Suggested' triggers the subjunctive 'not smoke' (no 'doesn't')."
+  },
+  {
+    "file": "grammar_elite_subjunctive_level_3.json",
+    "topic": "grammar_elite_subjunctive",
+    "level": "HKDSE Level 4",
+    "task_idx": 2,
+    "tokens": [
+      "It",
+      "is",
+      "important",
+      "that",
+      "she",
+      "finish",
+      "the",
+      "report",
+      "today",
+      "."
+    ],
+    "indices": [
+      2,
+      5
+    ],
+    "picked": [
+      "important",
+      "finish"
+    ],
+    "explanation": "'Important' forces 'finish' to stay in the base form despite the subject 'she'."
+  },
+  {
+    "file": "grammar_elite_subjunctive_level_3.json",
+    "topic": "grammar_elite_subjunctive",
+    "level": "HKDSE Level 4",
+    "task_idx": 3,
+    "tokens": [
+      "We",
+      "recommend",
+      "that",
+      "the",
+      "meeting",
+      "be",
+      "postponed",
+      "until",
+      "Friday",
+      "."
+    ],
+    "indices": [
+      1,
+      5
+    ],
+    "picked": [
+      "recommend",
+      "be"
+    ],
+    "explanation": "'Recommend' triggers the passive subjunctive 'be postponed'."
+  },
+  {
+    "file": "grammar_elite_subjunctive_level_3.json",
+    "topic": "grammar_elite_subjunctive",
+    "level": "HKDSE Level 4",
+    "task_idx": 4,
+    "tokens": [
+      "The",
+      "judge",
+      "ordered",
+      "that",
+      "the",
+      "prisoner",
+      "remain",
+      "in",
+      "his",
+      "cell",
+      "."
+    ],
+    "indices": [
+      2,
+      6
+    ],
+    "picked": [
+      "ordered",
+      "remain"
+    ],
+    "explanation": "'Ordered' is a mandative verb that triggers the base form 'remain'."
+  },
+  {
+    "file": "grammar_elite_subjunctive_level_4.json",
+    "topic": "grammar_elite_subjunctive",
+    "level": "HKDSE Level 5",
+    "task_idx": 0,
+    "tokens": [
+      "If",
+      "she",
+      "were",
+      "the",
+      "CEO",
+      ",",
+      "things",
+      "would",
+      "be",
+      "different",
+      "."
+    ],
+    "indices": [
+      0,
+      2
+    ],
+    "picked": [
+      "If",
+      "were"
+    ],
+    "explanation": "'If' + 'were' is the standard subjunctive for hypothetical conditions."
+  },
+  {
+    "file": "grammar_elite_subjunctive_level_4.json",
+    "topic": "grammar_elite_subjunctive",
+    "level": "HKDSE Level 5",
+    "task_idx": 1,
+    "tokens": [
+      "It",
+      "is",
+      "high",
+      "time",
+      "the",
+      "government",
+      "addressed",
+      "this",
+      "issue",
+      "."
+    ],
+    "indices": [
+      2,
+      3,
+      6
+    ],
+    "picked": [
+      "high",
+      "time",
+      "addressed"
+    ],
+    "explanation": "'High time' triggers the past subjunctive 'addressed' for a present need."
+  },
+  {
+    "file": "grammar_elite_subjunctive_level_4.json",
+    "topic": "grammar_elite_subjunctive",
+    "level": "HKDSE Level 5",
+    "task_idx": 2,
+    "tokens": [
+      "I",
+      "wish",
+      "he",
+      "knew",
+      "the",
+      "truth",
+      "about",
+      "the",
+      "situation",
+      "."
+    ],
+    "indices": [
+      1,
+      3
+    ],
+    "picked": [
+      "wish",
+      "knew"
+    ],
+    "explanation": "'Wish' for the present requires the past subjunctive 'knew'."
+  },
+  {
+    "file": "grammar_elite_subjunctive_level_4.json",
+    "topic": "grammar_elite_subjunctive",
+    "level": "HKDSE Level 5",
+    "task_idx": 3,
+    "tokens": [
+      "Suppose",
+      "we",
+      "decided",
+      "to",
+      "cancel",
+      "the",
+      "event",
+      ",",
+      "what",
+      "would",
+      "happen",
+      "?"
+    ],
+    "indices": [
+      0,
+      2
+    ],
+    "picked": [
+      "Suppose",
+      "decided"
+    ],
+    "explanation": "'Suppose' starts a hypothetical scenario, requiring 'decided'."
+  },
+  {
+    "file": "grammar_elite_subjunctive_level_4.json",
+    "topic": "grammar_elite_subjunctive",
+    "level": "HKDSE Level 5",
+    "task_idx": 4,
+    "tokens": [
+      "He",
+      "talks",
+      "as",
+      "if",
+      "he",
+      "were",
+      "an",
+      "expert",
+      "on",
+      "the",
+      "subject",
+      "."
+    ],
+    "indices": [
+      2,
+      3,
+      5
+    ],
+    "picked": [
+      "as",
+      "if",
+      "were"
+    ],
+    "explanation": "'As if' triggers 'were' for an unreal comparison."
+  },
+  {
+    "file": "grammar_elite_subjunctive_level_5.json",
+    "topic": "grammar_elite_subjunctive",
+    "level": "HKDSE Level 5*",
+    "task_idx": 0,
+    "tokens": [
+      "We",
+      "spoke",
+      "in",
+      "whispers",
+      "lest",
+      "we",
+      "wake",
+      "the",
+      "baby",
+      "."
+    ],
+    "indices": [
+      4,
+      6
+    ],
+    "picked": [
+      "lest",
+      "wake"
+    ],
+    "explanation": "'Lest' triggers the base form 'wake'."
+  },
+  {
+    "file": "grammar_elite_subjunctive_level_5.json",
+    "topic": "grammar_elite_subjunctive",
+    "level": "HKDSE Level 5*",
+    "task_idx": 1,
+    "tokens": [
+      "Be",
+      "that",
+      "as",
+      "it",
+      "may",
+      ",",
+      "the",
+      "decision",
+      "is",
+      "final",
+      "."
+    ],
+    "indices": [
+      0
+    ],
+    "picked": [
+      "Be"
+    ],
+    "explanation": "This is a formulaic subjunctive phrase meaning 'even if that is true'."
+  },
+  {
+    "file": "grammar_elite_subjunctive_level_5.json",
+    "topic": "grammar_elite_subjunctive",
+    "level": "HKDSE Level 5*",
+    "task_idx": 2,
+    "tokens": [
+      "Suffice",
+      "it",
+      "to",
+      "say",
+      "that",
+      "further",
+      "investigation",
+      "is",
+      "needed",
+      "."
+    ],
+    "indices": [
+      0
+    ],
+    "picked": [
+      "Suffice"
+    ],
+    "explanation": "A formal way to say 'it is enough to say'."
+  },
+  {
+    "file": "grammar_elite_subjunctive_level_5.json",
+    "topic": "grammar_elite_subjunctive",
+    "level": "HKDSE Level 5*",
+    "task_idx": 3,
+    "tokens": [
+      "Whether",
+      "the",
+      "news",
+      "be",
+      "good",
+      "or",
+      "bad",
+      ",",
+      "we",
+      "must",
+      "remain",
+      "calm",
+      "."
+    ],
+    "indices": [
+      0,
+      3
+    ],
+    "picked": [
+      "Whether",
+      "be"
+    ],
+    "explanation": "Formal 'whether' triggers the subjunctive 'be'."
+  },
+  {
+    "file": "grammar_elite_subjunctive_level_5.json",
+    "topic": "grammar_elite_subjunctive",
+    "level": "HKDSE Level 5*",
+    "task_idx": 4,
+    "tokens": [
+      "Heaven",
+      "forbid",
+      "that",
+      "such",
+      "a",
+      "thing",
+      "should",
+      "ever",
+      "happen",
+      "again",
+      "."
+    ],
+    "indices": [
+      0,
+      1
+    ],
+    "picked": [
+      "Heaven",
+      "forbid"
+    ],
+    "explanation": "An idiomatic subjunctive expression of hope or fear."
+  },
+  {
+    "file": "grammar_elite_subjunctive_level_7.json",
+    "topic": "grammar_elite_subjunctive",
+    "level": "HKDSE Level 5**",
+    "task_idx": 0,
+    "tokens": [
+      "Were",
+      "they",
+      "to",
+      "discover",
+      "the",
+      "truth",
+      ",",
+      "the",
+      "scandal",
+      "would",
+      "be",
+      "immense",
+      "."
+    ],
+    "indices": [
+      0,
+      3
+    ],
+    "picked": [
+      "Were",
+      "discover"
+    ],
+    "explanation": "'Were' + 'to discover' is a highly formal future hypothetical subjunctive."
+  },
+  {
+    "file": "grammar_elite_subjunctive_level_7.json",
+    "topic": "grammar_elite_subjunctive",
+    "level": "HKDSE Level 5**",
+    "task_idx": 1,
+    "tokens": [
+      "But",
+      "for",
+      "the",
+      "heroic",
+      "actions",
+      "of",
+      "the",
+      "firefighters",
+      ",",
+      "the",
+      "building",
+      "would",
+      "have",
+      "burned",
+      "down",
+      "."
+    ],
+    "indices": [
+      0,
+      1
+    ],
+    "picked": [
+      "But",
+      "for"
+    ],
+    "explanation": "'But for' introduces a counter-factual condition."
+  },
+  {
+    "file": "grammar_elite_subjunctive_level_7.json",
+    "topic": "grammar_elite_subjunctive",
+    "level": "HKDSE Level 5**",
+    "task_idx": 2,
+    "tokens": [
+      "If",
+      "it",
+      "had",
+      "not",
+      "been",
+      "for",
+      "the",
+      "heavy",
+      "traffic",
+      ",",
+      "we",
+      "would",
+      "have",
+      "arrived",
+      "early",
+      "."
+    ],
+    "indices": [
+      0,
+      2,
+      4
+    ],
+    "picked": [
+      "If",
+      "had",
+      "been"
+    ],
+    "explanation": "'If it had not been for' is the past perfect subjunctive structure for unreal past conditions."
+  },
+  {
+    "file": "grammar_elite_subjunctive_level_7.json",
+    "topic": "grammar_elite_subjunctive",
+    "level": "HKDSE Level 5**",
+    "task_idx": 3,
+    "tokens": [
+      "I",
+      "propose",
+      "that",
+      "the",
+      "candidate",
+      "be",
+      "interviewed",
+      "immediately",
+      "."
+    ],
+    "indices": [
+      1,
+      5
+    ],
+    "picked": [
+      "propose",
+      "be"
+    ],
+    "explanation": "'Propose' is a mandative verb that requires the subjunctive 'be'."
+  },
+  {
+    "file": "grammar_elite_subjunctive_level_7.json",
+    "topic": "grammar_elite_subjunctive",
+    "level": "HKDSE Level 5**",
+    "task_idx": 4,
+    "tokens": [
+      "Should",
+      "anyone",
+      "enquire",
+      ",",
+      "tell",
+      "them",
+      "I",
+      "am",
+      "unavailable",
+      "."
+    ],
+    "indices": [
+      0,
+      2
+    ],
+    "picked": [
+      "Should",
+      "enquire"
+    ],
+    "explanation": "Inverted 'should' functions as a subjunctive 'if anyone should'."
+  }
+]

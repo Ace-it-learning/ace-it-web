@@ -1,0 +1,94 @@
+{
+  "id": "listening_weekly_21",
+  "title": "Northern Metropolis & Young Careers",
+  "description": "Careers expo briefing: articulation quotas, intake dates for NT innovation hub, subsidy eligibility.",
+  "topic": "Careers / Society",
+  "type": "listening_mission",
+  "paper": "Listening",
+  "subject": "English",
+  "level": "5",
+  "is_approved": true,
+  "factory_template": false,
+  "created_at": { "_seconds": 1715760000, "_nanoseconds": 0 },
+  "prediction_metadata": {
+    "topic_name": "Week 21: Northern Metropolis & Young Careers",
+    "sub_topics": [
+      { "id": "st1", "name": "Articulation quota", "category": "Key detail", "is_distractor": false, "hint": "Places per cohort." },
+      { "id": "st2", "name": "Subsidy deadline", "category": "Strategic capture", "is_distractor": false, "hint": "Date to file commuting allowance." },
+      { "id": "st3", "name": "Esports arena opening", "category": "Distractor", "is_distractor": true, "hint": "Rumoured but not in this briefing pack." },
+      { "id": "st4", "name": "Lab safety intake", "category": "Key detail", "is_distractor": false, "hint": "Micro-credential session length." }
+    ]
+  },
+  "sprint_data": {
+    "audio_transcript": "[SCENE START]\n[Expo hall PA muffled]\nHost: Final briefing for Hong Kong student pavilion—listen for corrections.\nHost: Articulation quota into the Lo Wu hub bachelor top-up is 180 places, not 200—update slide 4.\nCareers Officer: Commuting allowance subsidy filing closes 30 June, 11:59 p.m.; portal was misprinted as July in earlier flyers.\nIndustry Rep: Lab safety micro-credential orientation runs 3 hours not 2.5; certificates issue next day only if attendance is 100%.\nHost: Internship stipend ceiling HK$9,500 monthly—do not quote legacy HK$8,800 figures.\nMTR Liaison: Last train north from Exhibition Centre on preview nights extends to 12:20 a.m., not 12:05 a.m.\nHost: Registration desk closes 6:30 p.m.—repeat, 6:30 p.m., because cleaning crews enter at 6:45 p.m.\n[SCENE END]",
+    "tasks": [
+      {
+        "id": "t1_table",
+        "type": "TABLE",
+        "label": "Expo Facts",
+        "rows": [
+          { "label": "Articulation top-up quota", "answer": "180", "placeholder": "Number" },
+          { "label": "Subsidy filing deadline", "answer": "30 June", "placeholder": "Date" },
+          { "label": "Lab orientation duration", "answer": "3 hours", "placeholder": "Duration" },
+          { "label": "Monthly stipend cap", "answer": "HK$9,500", "placeholder": "Amount" }
+        ]
+      },
+      {
+        "id": "t2_form",
+        "type": "FORM_FILLING",
+        "question": "Logistics",
+        "fields": [
+          { "label": "Last train north (preview nights)", "answer": "12:20 a.m.", "placeholder": "Time" },
+          { "label": "Registration desk closes", "answer": "6:30 p.m.", "placeholder": "Time" },
+          { "label": "Cleaner entry / hall clearance", "answer": "6:45 p.m.", "placeholder": "Time" },
+          { "label": "Certificate next-day condition", "answer": "100% attendance", "placeholder": "Rule" }
+        ]
+      },
+      {
+        "id": "t3_mcq",
+        "type": "MCQ_BATCH",
+        "label": "Checks",
+        "questions": [
+          {
+            "question": "The July date on flyers is:",
+            "options": ["A. Correct", "B. Wrong—deadline June", "C. Extended", "D. Optional"],
+            "answer": "B"
+          },
+          {
+            "question": "Legacy stipend figure incorrectly cited is:",
+            "options": ["A. 9500", "B. 8800", "C. 180", "D. 200"],
+            "answer": "B"
+          }
+        ]
+      }
+    ]
+  },
+  "integrated_data": {
+    "audio_transcript": "[INTEGRATED BRIEFING START]\nPolicy Lead: Cross-check: NT new town Phase 2 first occupancy Q4 2029, not 2028—press releases must align.\nEducator: Schools should tell students offer letters beat slogans; map skills to modules explicitly.\nUnion Rep: Challenge: unpaid overtime risk in cross-border startups—embed labour clinic QR on slide footer.\nPolicy Lead: KPI: 70% of attendees complete feedback form with postcode data anonymised to district only.\n[INTEGRATED BRIEFING END]",
+    "notetaking_fields": [
+      { "id": "n1", "label": "Timeline correction", "placeholder": "Occupancy year..." },
+      { "id": "n2", "label": "Student guidance focus", "placeholder": "Skills vs slogans..." },
+      { "id": "n3", "label": "Risk/compliance", "placeholder": "Labour rights..." }
+    ],
+    "data_file": [
+      { "id": "d1", "type": "email", "title": "Press correction", "content": "Subject: Phase 2 occupancy\nCorrect Q4 2029. Remove 2028 references." },
+      { "id": "d2", "type": "minutes", "title": "Booth Notes", "content": "Add labour clinic QR to footer of slide deck v3." },
+      { "id": "d3", "type": "poster", "title": "Stipend", "content": "MAX MONTHLY HK$9,500 — VERIFY CONTRACT" }
+    ],
+    "writing_task": {
+      "instruction": "Write a formal email from Student Careers Chair to classmates summarising corrected quota, subsidy deadline, stipend cap, and occupancy timeline, urging evidence-based pathway planning.",
+      "format": "Email",
+      "role_profile": "Student leader; informative neutral tone.",
+      "word_count": "200-250",
+      "marking_criteria": "Accuracy of figures (Content), Register (Language), Logical grouping (Organisation), BCC ethics (Appropriacy)"
+    },
+    "marking_key": [
+      "Articulation quota 180 (not 200).",
+      "Subsidy filing 30 June (correct flyer error).",
+      "Stipend cap HK$9,500; warn against HK$8,800 legacy.",
+      "Phase 2 first occupancy Q4 2029 (not 2028).",
+      "Optional: lab orientation 3h + 100% attendance rule; last train 12:20 a.m.; desk 6:30 p.m.",
+      "Tone: clear, actionable, no hype."
+    ]
+  }
+}

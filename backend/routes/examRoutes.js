@@ -1,6 +1,5 @@
 const express = require('express');
 const router = express.Router();
-const admin = require('firebase-admin');
 const fs = require('fs');
 const path = require('path');
 
@@ -10,6 +9,7 @@ const TokenService = require('../services/TokenService');
 const UserProfileService = require('../services/UserProfileService');
 const GamificationService = require('../services/GamificationService');
 const RoadmapService = require('../services/RoadmapService');
+const CosmosStore = require('../services/CosmosStore');
 
 // Prompts & Config
 const writingGradingAgent = require('../prompts/writingGradingAgent');
@@ -54,23 +54,19 @@ router.get('/reading/list', (req, res) => {
 // Submit Exam (Generic)
 router.post('/submit', async (req, res) => {
     const { uid, examId, type, answers } = req.body;
-    const db = admin.firestore();
 
     if (!uid || !examId) return res.status(400).json({ error: "Missing uid or examId" });
 
     try {
         console.log(`[Exam] Submission received for ${type} exam ${examId}`);
-        const attemptRef = db.collection('users').doc(uid).collection('exam_attempts').doc();
-        
-        await attemptRef.set({
+        const attempt = await CosmosStore.addExamAttempt(uid, {
             examId,
             type,
             answers,
-            timestamp: admin.firestore.FieldValue.serverTimestamp(),
             status: 'submitted'
         });
 
-        res.json({ success: true, attemptId: attemptRef.id });
+        res.json({ success: true, attemptId: attempt.id });
     } catch (e) {
         console.error("Exam submission failed:", e);
         res.status(500).json({ error: "Submission failed" });
@@ -399,16 +395,31 @@ router.post('/speaking/grade', async (req, res) => {
 // --- MAIN SUBMIT EXAM ENDPOINT ---
 router.post('/submit-exam', async (req, res) => {
     const { examId, uid, answers, duration } = req.body;
-    const db = admin.firestore();
 
     if (!examId || !uid) return res.status(400).json({ error: "Missing examId or uid" });
 
     try {
-        let keysSnap = await db.collection('mock_exams').doc(examId).collection('marking_keys').get();
         let markingKeys = {};
         let questionsMap = {};
 
-        if (keysSnap.empty) {
+        const questionsContainer = await require('../db/cosmos').getContainer('mock_exam_questions_cache', '/pk');
+        const qRes = await questionsContainer.items.query({
+            query: "SELECT c.payload FROM c WHERE c.exam_id = @examId",
+            parameters: [{ name: "@examId", value: examId }]
+        }).fetchAll();
+        const examQuestions = (qRes.resources || []).map((r) => r.payload).filter(Boolean);
+
+        if (examQuestions.length > 0) {
+            examQuestions.forEach((q, idx) => {
+                const qId = q.id || `q_${idx}`;
+                questionsMap[qId] = q;
+                markingKeys[qId] = {
+                    answer: q.answer || q.model_answer,
+                    logic: q.logic || q.explanation,
+                    type: q.type
+                };
+            });
+        } else {
             const folders = ['reading', 'writing', 'listening', 'speaking'];
             let localFile = null;
             for (const folder of folders) {
@@ -426,11 +437,9 @@ router.post('/submit-exam', async (req, res) => {
                         });
                     }
                 });
-            } else return res.status(404).json({ error: "Marking keys not found" });
-        } else {
-            const qSnap = await db.collection('mock_exams').doc(examId).collection('questions').get();
-            qSnap.forEach(doc => questionsMap[doc.id] = doc.data());
-            keysSnap.forEach(doc => markingKeys[doc.id] = doc.data());
+            } else {
+                return res.status(404).json({ error: "Marking keys not found" });
+            }
         }
 
         let totalScore = 0, totalMaxScore = 0;
@@ -450,7 +459,7 @@ router.post('/submit-exam', async (req, res) => {
             }
         });
 
-        const resultData = { examId, uid, timestamp: admin.firestore.FieldValue.serverTimestamp(), totalScore, totalMaxScore, percentage: Math.round((totalScore / totalMaxScore) * 100), partScores, feedback, answers };
+        const resultData = { examId, uid, timestamp: new Date().toISOString(), totalScore, totalMaxScore, percentage: Math.round((totalScore / totalMaxScore) * 100), partScores, feedback, answers };
 
         let xpEarned = 0;
         try {
@@ -459,7 +468,7 @@ router.post('/submit-exam', async (req, res) => {
             xpEarned = xpResult.earned; resultData.xpEarned = xpEarned;
         } catch (xpErr) { console.error("XP Award Failed:", xpErr); }
 
-        await db.collection('exam_submissions').add(resultData);
+        await CosmosStore.addExamSubmission(resultData);
 
         try {
             const MicroSkillAssessor = require('../services/MicroSkillAssessor');
@@ -468,7 +477,7 @@ router.post('/submit-exam', async (req, res) => {
             const currentSkillMap = await UserProfileService.getSkillMap(uid, 'english') || { microSkills: {} };
             const updatedMicroSkills = { ...(currentSkillMap.microSkills || {}), ...newSkills };
             const newWeaknesses = MicroSkillAssessor.prioritizeWeaknesses(updatedMicroSkills);
-            await UserProfileService.saveSkillMap(uid, 'english', { microSkills: updatedMicroSkills, weaknessPriority: newWeaknesses, lastUpdated: admin.firestore.FieldValue.serverTimestamp() });
+            await UserProfileService.saveSkillMap(uid, 'english', { microSkills: updatedMicroSkills, weaknessPriority: newWeaknesses, lastUpdated: new Date().toISOString() });
         } catch (mErr) { console.error("Mastery Update Failed:", mErr); }
 
         res.json({ success: true, result: { totalScore, totalMaxScore, percentage: resultData.percentage, partScores, feedback, xpEarned } });

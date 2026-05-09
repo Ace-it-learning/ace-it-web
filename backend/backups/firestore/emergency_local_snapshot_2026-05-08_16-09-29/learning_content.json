@@ -1,0 +1,2151 @@
+{
+  "math_alg_apgp": {
+    "is_modular": true,
+    "name": "Arithmetic & Geometric Progressions (AP & GP)",
+    "name_zh": "等差與等比數列 (AP & GP)",
+    "topic_id": "math_alg_apgp",
+    "created_at": {
+      "_seconds": 1772546707,
+      "_nanoseconds": 922000000
+    },
+    "learning_modules": [
+      {
+        "module_id": "MOD_01",
+        "title": "Arithmetic Progression (AP)",
+        "title_zh": "等差數列 (AP)",
+        "concepts": [
+          {
+            "concept_id": "C01_AP_BASIC",
+            "name": "General Term ($T_n$) & Sum ($S_n$)",
+            "name_zh": "通項 ($T_n$) 與求和 ($S_n$)",
+            "formula": "T_n = a + (n-1)d \\\\ S_n = \\frac{n}{2}[2a + (n-1)d]",
+            "key_takeaway": "An AP has a constant difference ($d$). The terms grow or shrink linearly. Always identify 'a' and 'd' first.",
+            "key_takeaway_zh": "AP 有固定的公差 ($d$)。各項呈線性增長或縮減。務必先找出 'a' 和 'd'。",
+            "visual_aid": "/images/math/apgp_ap_seq.png"
+          }
+        ]
+      },
+      {
+        "module_id": "MOD_02",
+        "title": "Geometric Progression (GP)",
+        "title_zh": "等比數列 (GP)",
+        "concepts": [
+          {
+            "concept_id": "C02_GP_BASIC",
+            "name": "General Term ($T_n$) & Sum ($S_n$)",
+            "name_zh": "通項 ($T_n$) 與求和 ($S_n$)",
+            "formula": "T_n = a r^{n-1} \\\\ S_n = \\frac{a(r^n - 1)}{r - 1}",
+            "key_takeaway": "A GP has a constant ratio ($r$). The terms grow or decay exponentially. Watch the exponent ($n-1$ for $T_n$, $n$ for $S_n$)!",
+            "key_takeaway_zh": "GP 有固定的公比 ($r$)。各項呈指數級增長或衰減。注意指數（$T_n$ 是 $n-1$，$S_n$ 是 $n$）！",
+            "visual_aid": "/images/math/apgp_gp_seq.png"
+          },
+          {
+            "concept_id": "C03_SUM_INF",
+            "name": "Sum to Infinity ($S_\\infty$)",
+            "name_zh": "無限項之和 ($S_\\infty$)",
+            "formula": "S_\\infty = \\frac{a}{1-r} \\quad (|r| < 1)",
+            "key_takeaway": "Convergent only if $|r| < 1$. The sum approaches a finite limit as n goes to infinity.",
+            "key_takeaway_zh": "僅當 $|r| < 1$ 時收斂。當 n 趨向無限時，總和趨向一個有限的極限。",
+            "visual_aid": "/images/math/apgp_sum_inf.png"
+          }
+        ]
+      },
+      {
+        "module_id": "MOD_03",
+        "title": "Applications & Section B",
+        "title_zh": "應用與乙部課題",
+        "concepts": [
+          {
+            "concept_id": "C04_FINANCE",
+            "name": "Financial Modeling",
+            "name_zh": "財務模型",
+            "formula": "A = P(1+r)^n",
+            "key_takeaway": "Compound interest and depreciation are basically GP problems. Use the multiplier method to find 'r'.",
+            "key_takeaway_zh": "複利息和折舊基本上是 GP 問題。使用乘數法來找出 'r'。",
+            "visual_aid": "/images/math/apgp_apps.png"
+          },
+          {
+            "concept_id": "C05_RELATIONSHIPS",
+            "name": "AP and GP Mixed Problems",
+            "name_zh": "AP 與 GP 混合題型",
+            "formula": "T_n \\text{ depends on both properties}",
+            "key_takeaway": "In Section B, you may be given three terms $a, b, c$ that form an AP, and $a, b+x, c+y$ that form a GP. Solve them simultaneously.",
+            "key_takeaway_zh": "在乙部中，題目可能會給出形成 AP 的三項 $a, b, c$，以及形成 GP 的 $a, b+x, c+y$。需要聯立求解。",
+            "visual_aid": null
+          }
+        ]
+      }
+    ],
+    "roadmap": "Start by mastering the general term and sum formulas for both AP and GP. Progress to understanding the sum to infinity for convergent geometric series. Finally, apply these concepts to real-world scenarios like financial modeling and recursive sequences often found in DSE Section B.",
+    "roadmap_zh": "從掌握 AP 和 GP 的通項與求和公式開始。進階到理解收斂等比級數的無限項之和。最後，將這些概念應用於 DSE 乙部常見的現實場景，如財務模型和遞歸數列。",
+    "last_updated": {
+      "_seconds": 1773146130,
+      "_nanoseconds": 284000000
+    }
+  },
+  "math_alg_complex_numbers": {
+    "name_zh": "複數",
+    "is_modular": true,
+    "name": "Complex Numbers",
+    "topic_id": "math_alg_complex_numbers",
+    "learning_modules": [
+      {
+        "module_id": "MOD_01",
+        "title": "Algebraic Foundation",
+        "title_zh": "代數基礎",
+        "concepts": [
+          {
+            "concept_id": "C01_STANDARD_FORM",
+            "name": "Standard Form & Cycle",
+            "name_zh": "標準形式與循環",
+            "formula": "z = a + bi \\\\ i^2 = -1, i^3 = -i, i^4 = 1",
+            "key_takeaway": "A complex number combines a real part (a) and an imaginary part (bi). Remember the cyclic powers of i!",
+            "key_takeaway_zh": "複數由實部 (a) 和虛部 (bi) 組成。記住 i 的冪是循環的！",
+            "visual_aid": "/images/math/complex_rotation_i.png"
+          },
+          {
+            "concept_id": "C02_CONJUGATE_PREMIUM",
+            "name": "The Conjugate Symmetry",
+            "name_zh": "共軛對稱",
+            "formula": "\\bar{z} = a - bi",
+            "key_takeaway": "Multiplying by the conjugate $(a-bi)$ removes the imaginary part, resulting in $a^2 + b^2$. This is key for division.",
+            "key_takeaway_zh": "乘與共軛 $(a-bi)$ 可以消去虛部，結果為 $a^2 + b^2$。這是除法的關鍵。",
+            "visual_aid": "/images/math/complex_argand_premium.png"
+          }
+        ]
+      },
+      {
+        "module_id": "MOD_02",
+        "title": "Geometric Interpretation",
+        "title_zh": "幾何詮釋",
+        "concepts": [
+          {
+            "concept_id": "C03_VEC_ADD",
+            "name": "Vector-like Addition",
+            "name_zh": "類向量加法",
+            "formula": "z_1 + z_2 = (a+c) + (b+d)i",
+            "key_takeaway": "Adding complex numbers is geometrically identical to adding vectors using the parallelogram law on the Argand plane.",
+            "key_takeaway_zh": "在阿干特圖上，複數加法在幾何上與使用平行四邊形法則的向量加法完全相同。",
+            "visual_aid": "/images/math/complex_vector_add.png"
+          },
+          {
+            "concept_id": "C04_I_ROTATE",
+            "name": "The i-Rotation Rule",
+            "name_zh": "i-旋轉規則",
+            "formula": "z \\times i \\implies 90^\\circ \\text{ rotation}",
+            "key_takeaway": "Multiplying a complex number by i results in a counter-clockwise rotation of 90 degrees about the origin.",
+            "key_takeaway_zh": "將複數乘以 i 會導致其繞原點逆時針旋轉 90 度。",
+            "visual_aid": "/images/math/complex_rotation_i.png"
+          }
+        ]
+      },
+      {
+        "module_id": "MOD_03",
+        "title": "Solving via Equality",
+        "title_zh": "透過相等求解",
+        "concepts": [
+          {
+            "concept_id": "C05_EQUALITY_SYS",
+            "name": "Real part = Real part",
+            "name_zh": "實部 = 實部",
+            "formula": "a+bi = c+di \\iff a=c, b=d",
+            "key_takeaway": "DSE problems often hide two equations in one complex statement. Equate real to real and imaginary to imaginary to solve for x and y.",
+            "key_takeaway_zh": "DSE 題目經常在一個複數陳述中隱藏兩個方程。將實部對實部、虛部對虛部相等，即可求解 x 和 y。",
+            "visual_aid": null
+          }
+        ],
+        "common_traps": [
+          {
+            "trap": "The i^2 Sign Flip",
+            "trap_zh": "i^2 正負號翻轉",
+            "description": "Forgetting that i squared is negative one.",
+            "description_zh": "忘記 i 的平方是負一。",
+            "fix": "Always replace i^2 with (-1) immediately in your working steps. (3i)(2i) = -6, not 6.",
+            "fix_zh": "務必在計算步驟中立即將 i^2 替換為 (-1)。(3i)(2i) = -6，而不是 6。"
+          }
+        ]
+      }
+    ],
+    "roadmap": "Learn the algebra of complex numbers first: standard form (a+bi), arithmetic, and conjugates. Then, bridge into geometry by visualizing complex numbers on the Argand plane. Master vector-like addition and the rotation effect of multiplying by i to excel in DSE Section A2.",
+    "roadmap_zh": "首先學習複數的代數：標準形式 (a+bi)、算術運算及共軛。接著，透過在阿干特圖 (Argand plane) 上將複數視覺化來進入幾何領域。掌握類向量加法以及乘以 i 的旋轉效果，以在 DSE 甲部 (2) 取得佳績。",
+    "last_updated": {
+      "_seconds": 1773146130,
+      "_nanoseconds": 537000000
+    }
+  },
+  "math_alg_formulas": {
+    "is_modular": true,
+    "name": "Formulas & Substitution",
+    "name_zh": "公式與代入",
+    "topic_id": "math_alg_formulas",
+    "created_at": {
+      "_seconds": 1772546708,
+      "_nanoseconds": 157000000
+    },
+    "learning_modules": [
+      {
+        "module_id": "MOD_01",
+        "title": "Substitution Mastery",
+        "title_zh": "代入精通",
+        "concepts": [
+          {
+            "concept_id": "C01_SUB_PREMIUM",
+            "name": "Evaluating Expressions",
+            "name_zh": "數式求值",
+            "formula": "y = 3x^2 - 5x + 2",
+            "key_takeaway": "When substituting negative values, brackets are mandatory to handle powers correctly. $(-2)^2 = 4$, but $-2^2 = -4$.",
+            "key_takeaway_zh": "代入負值時，必須使用括號以正確處理次方運算。$(-2)^2 = 4$，但 $-2^2 = -4$。",
+            "visual_aid": "/images/math/form_substitution_premium.png"
+          }
+        ]
+      },
+      {
+        "module_id": "MOD_02",
+        "title": "Subject Change Principles",
+        "title_zh": "主項變換原則",
+        "concepts": [
+          {
+            "concept_id": "C02_UNWRAP_PREMIUM",
+            "name": "The Unwrapping Method",
+            "name_zh": "拆解方法",
+            "formula": "y = \\frac{ax+b}{c} \\to x = \\frac{cy - b}{a}",
+            "key_takeaway": "Think of changing the subject as reversing the calculation order. Eliminate denominators first, then move additive constants.",
+            "key_takeaway_zh": "將主項變換視為逆轉運算順序。先消除分母，再移動加減常數。",
+            "visual_aid": "/images/math/form_subject_flow_premium.png"
+          }
+        ]
+      },
+      {
+        "module_id": "MOD_03",
+        "title": "Complex Subject Change",
+        "title_zh": "複雜主項變換",
+        "concepts": [
+          {
+            "concept_id": "C03_FACTOR_PREMIUM",
+            "name": "Grouping & Factorization",
+            "name_zh": "分組與因式分解",
+            "formula": "ax = bx + c \\to x(a-b) = c \\to x = \\frac{c}{a-b}",
+            "key_takeaway": "If the target variable appears in two distinct terms, you MUST group them on one side and factorize. This is the hallmark of Section B formula questions.",
+            "key_takeaway_zh": "如果目標變項出現在兩個不同的項中，你「必須」將它們歸到同一邊並進行因式分解。這是乙部公式題目的標誌。",
+            "visual_aid": null
+          }
+        ]
+      }
+    ],
+    "roadmap": "Master the substitution of negative numbers using brackets first. Then, learn the 'unwrapping' logic of changing the subject. For DSE Section B, focus on complex formulas where the target appears in multiple terms, requiring factorization.",
+    "roadmap_zh": "首先掌握使用括號代入負數的方法。接著學習變換主項時的「拆解」邏輯。針對 DSE 乙部，重點在於處理目標項出現在多個項中（需使用因式分解）的複雜公式。",
+    "last_updated": {
+      "_seconds": 1773146130,
+      "_nanoseconds": 830000000
+    }
+  },
+  "math_alg_functions": {
+    "is_modular": true,
+    "name": "Functions & Graphs",
+    "name_zh": "函數與圖像",
+    "topic_id": "math_alg_functions",
+    "created_at": {
+      "_seconds": 1772546708,
+      "_nanoseconds": 473000000
+    },
+    "learning_modules": [
+      {
+        "module_id": "MOD_01",
+        "title": "Domain, Range & Symmetry",
+        "title_zh": "定義域、值域與對稱性",
+        "concepts": [
+          {
+            "concept_id": "C01_DOMAIN_ADV",
+            "name": "Domain Restrictions",
+            "name_zh": "定義域限制",
+            "formula": "\\text{Denom } \\neq 0, \\quad \\sqrt{f(x)} \\implies f(x) \\geq 0",
+            "key_takeaway": "The domain is the set of all possible REAL x-inputs. Watch out for vertical asymptotes and square root boundaries.",
+            "key_takeaway_zh": "定義域是所有可能的實數輸入 (x) 之集合。注意垂直漸近線與根號邊界。",
+            "visual_aid": "/images/math/func_domain_range_premium.png"
+          },
+          {
+            "concept_id": "C02_SYMMETRY",
+            "name": "Even & Odd Functions",
+            "name_zh": "偶函數與奇函數",
+            "formula": "\\text{Even: } f(x)=f(-x), \\quad \\text{Odd: } f(-x)=-f(x)",
+            "key_takeaway": "Even functions are symmetric about the y-axis (e.g., $x^2$). Odd functions are symmetric about the origin (e.g., $x^3$).",
+            "key_takeaway_zh": "偶函數關於 y 軸對稱（如 $x^2$）。奇函數關於原點對稱（如 $x^3$）。",
+            "visual_aid": "/images/math/func_even_odd_premium.png"
+          }
+        ]
+      },
+      {
+        "module_id": "MOD_02",
+        "title": "Graph Transformations",
+        "title_zh": "圖像變換",
+        "concepts": [
+          {
+            "concept_id": "C03_TRANS_RIGID",
+            "name": "Translations & Reflections",
+            "name_zh": "平移與反射",
+            "formula": "y=f(x-h)+k, \\quad y=-f(x), \\quad y=f(-x)",
+            "key_takeaway": "Transformations inside brackets affect x (opposite direction). Transformations outside affect y (same direction).",
+            "key_takeaway_zh": "括號內的變換影響 x（反方向）。括號外的變換影響 y（同方向）。",
+            "visual_aid": "/images/math/func_transform_premium.png"
+          }
+        ]
+      },
+      {
+        "module_id": "MOD_03",
+        "title": "Composite & Advanced Mappings",
+        "title_zh": "複合函數與進階映射",
+        "concepts": [
+          {
+            "concept_id": "C04_COMPOSITE",
+            "name": "Composite Functions $g(f(x))$",
+            "name_zh": "複合函數 $g(f(x))$",
+            "formula": "(g \\circ f)(x) = g(f(x))",
+            "key_takeaway": "Apply the inner function first, then use the result as the input for the outer function. Order matters: $g(f(x)) \\neq f(g(x))$ in general.",
+            "key_takeaway_zh": "先應用內層函數，再將結果作為外層函數的輸入。順序很重要：通常 $g(f(x)) \\neq f(g(x))$。",
+            "visual_aid": null
+          }
+        ]
+      }
+    ],
+    "roadmap": "Understand function notation and domain restrictions first. Then master symmetry (Even/Odd) and composite functions. Finally, conquer graph transformations, which represent the most challenging part of the HKDSE coordinate geometry section.",
+    "roadmap_zh": "首先理解函數符號與定義域限制。然後掌握對稱性（偶函數/奇函數）與複合函數。最後，征服圖像變換，這是 DSE 坐標幾何部分最具挑戰性的課題。",
+    "last_updated": {
+      "_seconds": 1773146131,
+      "_nanoseconds": 0
+    }
+  },
+  "math_alg_inequalities": {
+    "name_zh": "一元一次及一元二次不等式",
+    "last_updated": {
+      "_seconds": 1772896893,
+      "_nanoseconds": 231000000
+    },
+    "is_modular": true,
+    "name": "Linear & Quadratic Inequalities",
+    "learning_modules": [
+      {
+        "module_id": "MOD_01",
+        "title": "Linear Inequalities",
+        "title_zh": "一元一次不等式",
+        "concepts": [
+          {
+            "concept_id": "C01_LINEAR_BASIC",
+            "name": "Solving Linear Inequalities",
+            "name_zh": "解一元一次不等式",
+            "formula": "ax + b > c \\iff ax > c - b \\\\ x > \\frac{c-b}{a} \\text{ (If } a > 0 \\text{)}",
+            "variables": {
+              "a, b, c": "Constants in the inequality.",
+              "x": "The unknown being solved for."
+            },
+            "variables_zh": {
+              "a, b, c": "不等式中的常數。",
+              "x": "待求解的未知數。"
+            },
+            "key_takeaway": "Solving a linear inequality is similar to solving an equation. However, when you multiply or divide both sides by a negative number, you MUST flip the inequality sign (e.g., from > to <).",
+            "key_takeaway_zh": "求解一元一次不等式與解方程類似。但是，當不等式兩邊同時乘以或除以一個負數時，「必須」改變不等號的方向（例如從 > 變為 <）。",
+            "visual_aid": "/images/math/ineq_linear_numberline.svg"
+          }
+        ],
+        "tips": [
+          "Always double-check the 'negative flip' rule! It's the most common mistake in DSE Section A."
+        ],
+        "tips_zh": [
+          "務必反覆檢查「負數翻轉」規則！這是 DSE 甲部最常見的錯誤。"
+        ],
+        "common_traps": [
+          {
+            "trap": "Forgetting to Flip",
+            "trap_zh": "忘記變號",
+            "description": "Dividing by a negative coefficient without changing the inequality direction.",
+            "description_zh": "除以負係數時沒有改變不等號方向。",
+            "example": "-2x > 6 \\implies x > -3",
+            "example_zh": "-2x > 6 \\implies x > -3",
+            "fix": "The correct answer should be x < -3.",
+            "fix_zh": "正確答案應為 x < -3。"
+          }
+        ]
+      },
+      {
+        "module_id": "MOD_02",
+        "title": "Compound Inequalities",
+        "title_zh": "複合不等式",
+        "concepts": [
+          {
+            "concept_id": "C02_AND_OR",
+            "name": "AND vs. OR Conditions",
+            "name_zh": "「且」與「或」條件",
+            "formula": "x > 2 \\text{ and } x < 5 \\implies 2 < x < 5 \\\\ x < 2 \\text{ or } x > 5 \\text{ (No overlap)}",
+            "variables": {
+              "and": "The solution must satisfy BOTH inequalities (intersection).",
+              "or": "The solution must satisfy EITHER inequality (union)."
+            },
+            "variables_zh": {
+              "and (且)": "解必須同時滿足兩個不等式（交集）。",
+              "or (或)": "解只需滿足其中一個不等式（聯集）。"
+            },
+            "key_takeaway": "For 'and' questions, look for the overlapping region on a number line. For 'or' questions, combine all regions together. If there is no overlap for 'and', the answer is 'no solution'.",
+            "key_takeaway_zh": "對於「且」的問題，尋找數線上的重疊區域。對於「或」的問題，將所有區域合併。若「且」問題中沒有重疊區域，則為「無解」。",
+            "visual_aid": "/images/math/ineq_compound_regions.svg"
+          }
+        ]
+      },
+      {
+        "module_id": "MOD_03",
+        "title": "Quadratic Inequalities",
+        "title_zh": "一元二次不等式",
+        "concepts": [
+          {
+            "concept_id": "C03_QUAD_GRAPH",
+            "name": "Graphical Method",
+            "name_zh": "圖像法",
+            "formula": "ax^2 + bx + c > 0 \\text{ where } a > 0",
+            "variables": {
+              "x_1, x_2": "Roots of the quadratic equation $ax^2 + bx + c = 0$.",
+              "y > 0": "The region above the x-axis."
+            },
+            "variables_zh": {
+              "x_1, x_2": "二次方程 $ax^2 + bx + c = 0$ 的根。",
+              "y > 0": "x 軸上方的區域。"
+            },
+            "key_takeaway": "To solve $f(x) > 0$, identify the roots and find where the parabola is above the x-axis. If $a > 0$ and the inequality is $f(x) < 0$, the solution is between the roots ($x_1 < x < x_2$).",
+            "key_takeaway_zh": "求解 $f(x) > 0$ 時，先找出根，然後看拋物線在哪裡位於 x 軸上方。若 $a > 0$ 且不等式為 $f(x) < 0$，則解位於兩根之間 ($x_1 < x < x_2$)。",
+            "visual_aid": "/images/math/ineq_quadratic_parabola.svg"
+          }
+        ],
+        "common_traps": [
+          {
+            "trap": "Misinterpreting the Graph",
+            "trap_zh": "圖像解讀錯誤",
+            "description": "Choosing the region between roots for $f(x) > 0$ when $a > 0$.",
+            "description_zh": "當 $a > 0$ 且 $f(x) > 0$ 時，誤選兩根之間的區域。",
+            "fix": "Sketch the graph! For $a > 0$, $f(x) > 0$ corresponds to the 'wings' ($x < x_1$ or $x > x_2$), while $f(x) < 0$ corresponds to the 'valley' ($x_1 < x < x_2$).",
+            "fix_zh": "畫草圖吧！當 $a > 0$ 時，$f(x) > 0$ 對應「兩翼」 ($x < x_1$ 或 $x > x_2$)，而 $f(x) < 0$ 則對應「低谷」 ($x_1 < x < x_2$)。"
+          }
+        ]
+      }
+    ],
+    "roadmap": "Start by mastering linear inequalities and their properties (especially when multiplying by negatives). Then, learn how to solve compound inequalities and represent solutions on a number line. Finally, move on to quadratic inequalities using algebraic and graphical methods.",
+    "topic_id": "math_alg_inequalities",
+    "roadmap_zh": "首先，掌握一元一次不等式及其性質（特別是乘以負數時）。接著，了解如何解複合不等式並在數線上表示解。最後，學習利用代數及圖像法求解一元二次不等式。"
+  },
+  "math_alg_log_exp": {
+    "name_zh": "對數與指數函數",
+    "is_modular": true,
+    "name": "Log & Exp Functions",
+    "roadmap": "Start by mastering the basic laws of indices and understanding exponential growth/decay. Then, learn the properties of logarithms (product, quotient, power rules) and how to change bases. Finally, apply these skills to solve complex exponential and logarithmic equations and understand their graphical representations.",
+    "topic_id": "math_alg_log_exp",
+    "roadmap_zh": "首先掌握基本的指數定律並理解指數的增長/衰退。然後，學習對數的性質（積、商、冪法則）及換底公式。最後，應用這些技巧來解複雜的指數與對數方程，並理解它們的圖形特徵。",
+    "learning_modules": [
+      {
+        "module_id": "MOD_01",
+        "title": "Laws of Indices & Exponents",
+        "title_zh": "指數定律",
+        "concepts": [
+          {
+            "concept_id": "C01_INDICES_BASIC",
+            "name": "Basic Laws of Indices",
+            "name_zh": "基本指數定律",
+            "formula": "a^m \\times a^n = a^{m+n} \\\\ \\frac{a^m}{a^n} = a^{m-n} \\\\ (a^m)^n = a^{mn}",
+            "variables": {
+              "a": "The base (must be non-zero for division and negative indices).",
+              "m, n": "The exponents (indices)."
+            },
+            "variables_zh": {
+              "a": "底數（對於除法和負指數，不能為零）。",
+              "m, n": "指數。"
+            },
+            "key_takeaway": "When multiplying terms with the same base, add their exponents. When dividing, subtract them. When raising a power to a power, multiply the exponents.",
+            "key_takeaway_zh": "當相乘同底數的項時，將指數相加。相除時，將指數相減。當一個乘方再自乘時，將指數相乘。",
+            "visual_aid": "/images/math/alg_indices.svg"
+          },
+          {
+            "concept_id": "C02_NEGATIVE_FRACTIONAL",
+            "name": "Negative & Fractional Indices",
+            "name_zh": "負指數與分數指數",
+            "formula": "a^{-n} = \\frac{1}{a^n} \\\\ a^{\\frac{1}{n}} = \\sqrt[n]{a} \\\\ a^{\\frac{m}{n}} = (\\sqrt[n]{a})^m = \\sqrt[n]{a^m}",
+            "variables": {
+              "n": "The root in a fractional index or the power in a negative index."
+            },
+            "variables_zh": {
+              "n": "分數指數的分母（根指數）或負指數的數值。"
+            },
+            "key_takeaway": "A negative index means 'reciprocal'. A fractional index represents a root, where the denominator is the root and the numerator is the power.",
+            "key_takeaway_zh": "負指數表示「倒數」。分數指數代表根，其中分母是根指數，分子是次方。",
+            "visual_aid": "/images/math/alg_fractional_indices.svg"
+          }
+        ],
+        "tips": [
+          "Always try to express numbers with the same prime base (e.g., $9^x$ and $27^y$ should both be converted to base 3) before applying the laws of indices."
+        ],
+        "tips_zh": [
+          "在應用指數定律之前，總是嘗試將數字化為相同的質因數底（例如，將 $9^x$ 和 $27^y$ 都轉換為以 3 為底）。"
+        ],
+        "common_traps": [
+          {
+            "trap": "Adding Bases that are Multiplied",
+            "trap_zh": "錯誤相加相乘的底數",
+            "description": "Thinking that $2^3 \\times 3^3 = 5^3$ or $2^x \\times 3^x = 5^x$.",
+            "description_zh": "誤以為 $2^3 \\times 3^3 = 5^3$ 或 $2^x \\times 3^x = 5^x$。",
+            "fix": "You can only combine the bases if the operations and exponents allow it. Specifically, $a^x \\times b^x = (ab)^x$. Thus $2^x \\times 3^x = 6^x$, not $5^x$.",
+            "fix_zh": "只有當運算和指數允許時才能組合底數。具體來說，$a^x \\times b^x = (ab)^x$。因此 $2^x \\times 3^x = 6^x$，而非 $5^x$。"
+          }
+        ]
+      },
+      {
+        "module_id": "MOD_02",
+        "title": "Properties of Logarithms",
+        "title_zh": "對數的性質",
+        "concepts": [
+          {
+            "concept_id": "C03_LOG_RULES",
+            "name": "Product, Quotient & Power Rules",
+            "name_zh": "對數的積、商與冪法則",
+            "formula": "\\log_a(xy) = \\log_a x + \\log_a y \\\\ \\log_a \\left(\\frac{x}{y}\\right) = \\log_a x - \\log_a y \\\\ \\log_a(x^n) = n \\log_a x",
+            "variables": {
+              "a": "The base of the logarithm ($a > 0, a \\neq 1$).",
+              "x, y": "The arguments of the logarithm (must be positive)."
+            },
+            "variables_zh": {
+              "a": "對數的底數 ($a > 0, a \\neq 1$)。",
+              "x, y": "對數的真數（必須為正數）。"
+            },
+            "key_takeaway": "Logarithms transform multiplication into addition, division into subtraction, and powers into multiplication. These rules are essential for solving equations where the unknown is an exponent.",
+            "key_takeaway_zh": "對數將乘法轉化為加法，將除法轉化為減法，將次方轉化為乘法。這些法則是解未知數在指數位置的方程的關鍵。",
+            "visual_aid": "/images/math/alg_log_rules.svg"
+          },
+          {
+            "concept_id": "C04_CHANGE_BASE",
+            "name": "Change of Base Formula",
+            "name_zh": "換底公式",
+            "formula": "\\log_a b = \\frac{\\log_c b}{\\log_c a} \\\\ \\log_a b = \\frac{1}{\\log_b a}",
+            "variables": {
+              "c": "A new base of your choice (usually 10 for calculators)."
+            },
+            "variables_zh": {
+              "c": "你選擇的新底數（通常在計算機中為 10）。"
+            },
+            "key_takeaway": "Use the change of base formula when you need to calculate a logarithm with a non-standard base, or when you need to match bases in a logarithmic equation.",
+            "key_takeaway_zh": "當需要計算非標準底數的對數，或需要在對數方程中使底數一致時，請使用換底公式。",
+            "visual_aid": null
+          }
+        ],
+        "tips": [
+          "Remember the fundamental definition: if $y = a^x$, then $x = \\log_a y$. The base of the exponent becomes the base of the logarithm."
+        ],
+        "tips_zh": [
+          "記住基本定義：如果 $y = a^x$，那麼 $x = \\log_a y$。指數的底數變成了對數的底數。"
+        ],
+        "common_traps": [
+          {
+            "trap": "Logarithm of a Sum",
+            "trap_zh": "和的對數錯誤",
+            "description": "Incorrectly stating that $\\log(x + y) = \\log x + \\log y$.",
+            "description_zh": "錯誤地認為 $\\log(x + y) = \\log x + \\log y$。",
+            "fix": "The sum rule applies to the *product* of arguments: $\\log(xy) = \\log x + \\log y$. There is no simple expansion for $\\log(x + y)$.",
+            "fix_zh": "加法則適用於真數的「乘積」：$\\log(xy) = \\log x + \\log y$。對於 $\\log(x + y)$ 沒有簡單的展開公式。"
+          }
+        ]
+      },
+      {
+        "module_id": "MOD_03",
+        "title": "Solving Exponential & Logarithmic Equations",
+        "title_zh": "解指數與對數方程",
+        "concepts": [
+          {
+            "concept_id": "C05_EXPONENTIAL_EQ",
+            "name": "Exponential Equations",
+            "name_zh": "指數方程",
+            "formula": "a^{f(x)} = a^{g(x)} \\implies f(x) = g(x) \\\\ a^x = b \\implies x = \\log_a b = \\frac{\\log b}{\\log a}",
+            "variables": {
+              "x": "The unknown exponent we are trying to find."
+            },
+            "variables_zh": {
+              "x": "我們要求解的未知指數。"
+            },
+            "key_takeaway": "If you can express both sides with the same base, simply equate the powers. If not, take the logarithm of both sides to bring the exponent down.",
+            "key_takeaway_zh": "如果你能將方程兩邊化為相同的底數，只需令次方相等即可。如果不行，則在兩邊取對數以將指數移下。",
+            "visual_aid": null
+          },
+          {
+            "concept_id": "C06_LOG_EQ",
+            "name": "Logarithmic Equations",
+            "name_zh": "對數方程",
+            "formula": "\\log_a f(x) = \\log_a g(x) \\implies f(x) = g(x) \\\\ \\log_a f(x) = c \\implies f(x) = a^c",
+            "variables": {
+              "f(x), g(x)": "Expressions containing the unknown variable. Both must be strictly > 0."
+            },
+            "variables_zh": {
+              "f(x), g(x)": "含有未知數的表達式。兩者都必須嚴格大於 0。"
+            },
+            "key_takeaway": "Combine multiple logarithms using log rules into a single logarithm, then rewrite in exponential form. Always check your final answers to ensure the argument of any logarithm is strictly positive.",
+            "key_takeaway_zh": "利用對數法則將多個對數合併成單一對數，然後重寫為指數形式。務必檢查最終答案，以確保任何對數的真數嚴格大於零。",
+            "visual_aid": null
+          }
+        ],
+        "tips": [
+          "For advanced DSE equations like $A(a^{2x}) + B(a^x) + C = 0$, substitute $u = a^x$ to turn it into a familiar quadratic equation $Au^2 + Bu + C = 0$. After solving for $u$, remember to solve for $x$ by $a^x = u$."
+        ],
+        "tips_zh": [
+          "對於進階的 DSE 方程（如 $A(a^{2x}) + B(a^x) + C = 0$），代入 $u = a^x$ 將其轉化為熟悉的二次方程 $Au^2 + Bu + C = 0$。求出 $u$ 後，記住要利用 $a^x = u$ 來求出 $x$。"
+        ],
+        "common_traps": [
+          {
+            "trap": "Ignoring the Domain of Logarithms",
+            "trap_zh": "忽略對數的定義域",
+            "description": "Accepting a solution that makes the argument of a logarithm negative or zero.",
+            "description_zh": "接受使對數的真數變為負數或零的解。",
+            "fix": "After solving a logarithmic equation, substitute the solutions back into the original equation. Reject any solutions that result in taking the logarithm of a non-positive number.",
+            "fix_zh": "解出對數方程後，把解代入原始方程。如果代入後會對非正數取對數，則必須捨去該解。"
+          }
+        ]
+      },
+      {
+        "module_id": "MOD_04",
+        "title": "Graphical Properties",
+        "title_zh": "圖像性質",
+        "concepts": [
+          {
+            "concept_id": "C07_EXP_GRAPH",
+            "name": "Exponential Graphs",
+            "name_zh": "指數函數圖像",
+            "formula": "y = a^x",
+            "key_takeaway": "Exponential graphs always pass through (0, 1) and have a horizontal asymptote at y=0. If a > 1, the graph grows; if 0 < a < 1, it decays.",
+            "key_takeaway_zh": "指數函數圖像恆過 (0, 1) 點，且以 y=0 為水平漸近線。若 a > 1，圖像增長；若 0 < a < 1，圖像衰減。",
+            "visual_aid": "/images/math/logexp_growth.png"
+          },
+          {
+            "concept_id": "C08_LOG_GRAPH",
+            "name": "Logarithmic Graphs",
+            "name_zh": "對數函數圖像",
+            "formula": "y = \\log_a x",
+            "key_takeaway": "Logarithmic graphs are the reflection of exponential graphs across y=x. They pass through (1, 0) and have a vertical asymptote at x=0.",
+            "key_takeaway_zh": "對數函數圖像與指數函數圖像關於 y=x 對稱。圖像恆過 (1, 0) 點，且以 x=0 為垂直漸近線。",
+            "visual_aid": "/images/math/logexp_log_graph.png"
+          }
+        ]
+      },
+      {
+        "module_id": "MOD_05",
+        "title": "Linearization (DSE Section B)",
+        "title_zh": "線性化 (DSE 乙部)",
+        "concepts": [
+          {
+            "concept_id": "C09_LINEAR_EXP",
+            "name": "Linearizing $y = Ab^x$",
+            "name_zh": "將 $y = Ab^x$ 線性化",
+            "formula": "\\log y = x \\log b + \\log A",
+            "key_takeaway": "A plot of log y against x results in a straight line with slope log b and vertical intercept log A. This is a common Section B topic.",
+            "key_takeaway_zh": "將 log y 對 x 作圖會得到一條直線，斜率為 log b，垂直截距為 log A。這是乙部的常考題目。",
+            "visual_aid": "/images/math/logexp_linear_exp.png"
+          },
+          {
+            "concept_id": "C10_LINEAR_POWER",
+            "name": "Linearizing $y = Ax^n$",
+            "name_zh": "將 $y = Ax^n$ 線性化",
+            "formula": "\\log y = n \\log x + \\log A",
+            "key_takeaway": "A plot of log y against log x results in a straight line with slope n and vertical intercept log A.",
+            "key_takeaway_zh": "將 log y 對 log x 作圖會得到一條直線，斜率為 n，垂直截距為 log A。",
+            "visual_aid": "/images/math/logexp_linear_power.png"
+          }
+        ]
+      }
+    ],
+    "last_updated": {
+      "_seconds": 1773146131,
+      "_nanoseconds": 247000000
+    }
+  },
+  "math_alg_polynomials": {
+    "is_modular": true,
+    "name": "Polynomials",
+    "name_zh": "多項式",
+    "topic_id": "math_alg_polynomials",
+    "created_at": {
+      "_seconds": 1772546708,
+      "_nanoseconds": 662000000
+    },
+    "learning_modules": [
+      {
+        "module_id": "MOD_01",
+        "title": "The Division Architecture",
+        "title_zh": "除法結構",
+        "concepts": [
+          {
+            "concept_id": "C01_DIV_ALGO",
+            "name": "The Division Identity",
+            "name_zh": "除法恆等式",
+            "formula": "f(x) \\equiv d(x)Q(x) + R",
+            "key_takeaway": "Every division can be written as an identity. Remember: the degree of the remainder (R) is always strictly less than the degree of the divisor d(x).",
+            "key_takeaway_zh": "每個除法都可以寫成恆等式。記住：餘式 (R) 的次數必定嚴格小於除式 d(x) 的次數。",
+            "visual_aid": "/images/math/poly_div_algorithm.png"
+          }
+        ]
+      },
+      {
+        "module_id": "MOD_02",
+        "title": "Theorems & Intercepts",
+        "title_zh": "定理與截距",
+        "concepts": [
+          {
+            "concept_id": "C02_REMAINDER_VISUAL",
+            "name": "Remainder Theorem Visualization",
+            "name_zh": "餘式定理視覺化",
+            "formula": "R = f(a) \\text{ when divided by } (x-a)",
+            "key_takeaway": "The remainder of $f(x) \\div (x-a)$ is simply the y-coordinate of the point on the curve where $x=a$.",
+            "key_takeaway_zh": "$f(x) \\div (x-a)$ 的餘式，純粹就是曲線上 $x=a$ 點的 y 坐標。",
+            "visual_aid": "/images/math/poly_remainder_point.png"
+          },
+          {
+            "concept_id": "C03_FACTOR_GEOM",
+            "name": "Factors & X-Intercepts",
+            "name_zh": "因式與 X 軸截距",
+            "formula": "f(a)=0 \\iff (x-a) \\text{ is a factor}",
+            "key_takeaway": "A linear factor $(x-a)$ corresponds to an x-intercept at $(a, 0)$ on the graph of $y=f(x)$. Complete factorization reveals all real roots.",
+            "key_takeaway_zh": "線性因式 $(x-a)$ 對應於 $y=f(x)$ 圖像上 $(a, 0)$ 的 x 軸截距。完全因式分解可揭示所有實根。",
+            "visual_aid": "/images/math/poly_cubic_roots.png"
+          }
+        ]
+      },
+      {
+        "module_id": "MOD_03",
+        "title": "Section B: Systems of Unknowns",
+        "title_zh": "乙部課題：未知數方程組",
+        "concepts": [
+          {
+            "concept_id": "C04_SIMULTANEOUS",
+            "name": "Finding Multiple Unknowns",
+            "name_zh": "求多個未知數",
+            "formula": "\\text{Given two remainders: } f(a)=R_1, \\, f(b)=R_2",
+            "key_takeaway": "Section B often gives two conditions (e.g., divisible by one factor and leaves a remainder with another). Use these to form and solve simultaneous equations for $p$ and $q$.",
+            "key_takeaway_zh": "乙部題目經常給出兩個條件（如：可被一個因式整除，而除以另一個式時有餘數）。利用這些條件建立聯立方程來求 $p$ 和 $q$。",
+            "visual_aid": null
+          }
+        ]
+      }
+    ],
+    "roadmap": "Master the division algorithm and the relationship between Dividend, Divisor, Quotient, and Remainder. Progress to the Remainder and Factor Theorems to solve for unknown coefficients. Finally, explore Section B topics like solving simultaneous equations for unknowns and visualizing factors as graph intercepts.",
+    "roadmap_zh": "掌握除法算式以及被除式、除式、商式與餘式之間的關係。進階到運用餘式定理與因式定理求解未知係數。最後，探討 DSE 乙部課題，如求解聯立方程以及將因式視為圖像的 x 軸截距。",
+    "last_updated": {
+      "_seconds": 1773146131,
+      "_nanoseconds": 465000000
+    }
+  },
+  "math_alg_quadratics": {
+    "is_modular": true,
+    "name": "Quadratic Equations",
+    "name_zh": "二次方程",
+    "topic_id": "math_alg_quadratics",
+    "created_at": {
+      "_seconds": 1772546708,
+      "_nanoseconds": 882000000
+    },
+    "learning_modules": [
+      {
+        "module_id": "MOD_01",
+        "title": "Solving & Nature of Roots",
+        "title_zh": "求解與根的性質",
+        "concepts": [
+          {
+            "concept_id": "C01_QUAD_SOLVE",
+            "name": "Universal Solving Methods",
+            "name_zh": "通用求解方法",
+            "formula": "x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}",
+            "key_takeaway": "Factorization is fast, but the Quadratic Formula works for everything. Rearrange to $ax^2 + bx + c = 0$ first.",
+            "key_takeaway_zh": "因式分解很快，但二次公式適用於所有情況。務必先重整為 $ax^2 + bx + c = 0$。",
+            "visual_aid": "/images/math/quad_formula.svg"
+          },
+          {
+            "concept_id": "C02_DISCRIMINANT_UP",
+            "name": "Discriminant ($\\Delta$) Analysis",
+            "name_zh": "判別式 ($\\Delta$) 分析",
+            "formula": "\\Delta = b^2 - 4ac",
+            "key_takeaway": "$\\Delta > 0 \\implies 2$ real roots; $\\Delta = 0 \\implies 1$ real root; $\\Delta < 0 \\implies 0$ real roots. In Section B, this is used for line-curve intersection.",
+            "key_takeaway_zh": "$\\Delta > 0$ 有 2 個實根；$\\Delta = 0$ 有 1 個實根；$\\Delta < 0$ 無實根。在乙部中，這常與直線及曲線及相交問題結合。",
+            "visual_aid": "/images/math/quad_delta_cases.png"
+          }
+        ]
+      },
+      {
+        "module_id": "MOD_02",
+        "title": "Roots and Geometry",
+        "title_zh": "根與幾何關係",
+        "concepts": [
+          {
+            "concept_id": "C03_ROOT_RELATE",
+            "name": "Relationships Between Roots",
+            "name_zh": "兩根關係",
+            "formula": "\\alpha + \\beta = -b/a, \\quad \\alpha \\beta = c/a",
+            "key_takeaway": "Find values of $\\alpha^2 + \\beta^2$ or $1/\\alpha + 1/\\beta$ without solving the equation. Essential for Section B algebra proofs.",
+            "key_takeaway_zh": "無需解方程即可求出 $\\alpha^2 + \\beta^2$ 或 $1/\\alpha + 1/\\beta$ 的值。這對乙部代數證明題至關重要。",
+            "visual_aid": "/images/math/quad_roots_relations.png"
+          },
+          {
+            "concept_id": "C04_VERTEX_SHIFTS",
+            "name": "Vertex Form & Transformations",
+            "name_zh": "頂點式與變換",
+            "formula": "y = a(x - h)^2 + k",
+            "key_takeaway": "Directly identifies the turning point $(h, k)$. Used to find max/min values and understand graph shifts.",
+            "key_takeaway_zh": "直接辨識轉向點 $(h, k)$。用於尋找極大/極小值並理解圖像平移。",
+            "visual_aid": "/images/math/quad_vertex_shift.png"
+          }
+        ]
+      }
+    ],
+    "roadmap": "Master solving methods first, then dive into the roots' nature using the discriminant. Finally, bridge algebra with geometry through vertex form and relationships between roots, which are core Section B requirements.",
+    "roadmap_zh": "首先掌握解方程方法，然後利用判別式深入探討根的性質。最後，透過頂點式及兩根關係（乙部核心要求）將代數與幾何聯結起來。",
+    "last_updated": {
+      "_seconds": 1773146131,
+      "_nanoseconds": 678000000
+    }
+  },
+  "math_alg_variations": {
+    "is_modular": true,
+    "name": "Variations",
+    "name_zh": "變分",
+    "topic_id": "math_alg_variations",
+    "created_at": {
+      "_seconds": 1772546709,
+      "_nanoseconds": 76000000
+    },
+    "learning_modules": [
+      {
+        "module_id": "MOD_01",
+        "title": "Variation Foundation",
+        "title_zh": "變分基礎",
+        "concepts": [
+          {
+            "concept_id": "C01_DIRECT_PREMIUM",
+            "name": "Direct Variation (Linear)",
+            "name_zh": "正變 (線性)",
+            "formula": "y = kx \\quad (k \\neq 0)",
+            "key_takeaway": "In direct variation, $y$ against $x$ is a straight line through $(0,0)$. The ratio $y/x$ is always constant.",
+            "key_takeaway_zh": "在正變中，$y$ 隨 $x$ 的圖像是一條穿過 $(0,0)$ 的直線。其比值 $y/x$ 恆為常數。",
+            "visual_aid": "/images/math/var_direct_premium.png"
+          },
+          {
+            "concept_id": "C02_INVERSE_PREMIUM",
+            "name": "Inverse Variation (Hyperbola)",
+            "name_zh": "反變 (雙曲線)",
+            "formula": "y = \\frac{k}{x} \\quad \\text{or} \\quad xy = k",
+            "key_takeaway": "In inverse variation, as $x$ increases, $y$ decreases. The area of the rectangle formed by $(x,y)$ and the axes is constant ($k$).",
+            "key_takeaway_zh": "在反變中，當 $x$ 增加時，$y$ 會減少。由 $(x,y)$ 與座標軸形成的矩形面積恆為 $k$。",
+            "visual_aid": "/images/math/var_inverse_premium.png"
+          }
+        ]
+      },
+      {
+        "module_id": "MOD_02",
+        "title": "Section B: Partial Variation",
+        "title_zh": "乙部課題：部分變",
+        "concepts": [
+          {
+            "concept_id": "C03_PARTIAL_PREMIUM",
+            "name": "Constant & Varying Parts",
+            "name_zh": "常數與變動部分",
+            "formula": "y = k_1 + k_2x^2",
+            "key_takeaway": "Partial variation sums different behaviors. Usually requires setting up simultaneous equations to find $k_1$ and $k_2$.",
+            "key_takeaway_zh": "部分變結合了不同的變化行為。通常需要建立聯立方程來求解 $k_1$ 及 $k_2$。",
+            "visual_aid": "/images/math/var_partial_premium.png"
+          }
+        ]
+      },
+      {
+        "module_id": "MOD_03",
+        "title": "Percentage Changes",
+        "title_zh": "百分比變化",
+        "concepts": [
+          {
+            "concept_id": "C04_VAR_PERCENT",
+            "name": "The Multiplier Method",
+            "name_zh": "乘數法",
+            "formula": "y \\propto x^2 \\implies y_{new} = k(1.1x)^2 = 1.21 y_{old}",
+            "key_takeaway": "If $x$ increases by $r\\%$, $y$ increases by $(1+r)^n - 1$ where $n$ is the power of $x$. Don't forget to cube/square the percentage multiplier!",
+            "key_takeaway_zh": "若 $x$ 增加 $r\\%$，則 $y$ 增加 $(1+r)^n - 1$，其中 $n$ 為 $x$ 的次方。務必記得對百分比乘數進行平方或立方運算！",
+            "visual_aid": null
+          }
+        ]
+      }
+    ],
+    "roadmap": "Variation describes how quantities change in relation to others. Start with Direct and Inverse variation graphs. Then, progress to the multi-step Partial variation (DSE Section A2/B). Mastering percentage changes in variation is critical for Section B success.",
+    "roadmap_zh": "變分是探討兩個或多個變量之間關係的。從正變與反變的圖像開始。接著進階至多步驟的部分變（DSE 甲部(2)/乙部）。掌握變分中的百分比變化，是乙部取得佳績的關鍵。",
+    "last_updated": {
+      "_seconds": 1773146131,
+      "_nanoseconds": 823000000
+    }
+  },
+  "math_geo_circles": {
+    "name_zh": "圓的性質",
+    "is_modular": true,
+    "name": "Circle Properties",
+    "roadmap": "Begin with basic angle properties (angles at center and circumference). Move on to chord properties and cyclic quadrilaterals. Finally, master the properties of tangents and the alternate segment theorem. This step-by-step approach ensures a solid foundation for complex geometric proofs in Section B.",
+    "topic_id": "math_geo_circles",
+    "roadmap_zh": "從基本的角性質（圓心角和圓周角）開始。接著學習弦的性質和圓內接四邊形。最後，掌握切線的性質和弦切角定理。這種循序漸進的方法為解決乙部（Section B）中的複雜幾何證明奠定了堅實的基礎。",
+    "last_updated": {
+      "_seconds": 1773146131,
+      "_nanoseconds": 992000000
+    },
+    "learning_modules": [
+      {
+        "module_id": "MOD_01",
+        "title": "Angles in a Circle",
+        "title_zh": "圓的角性質",
+        "concepts": [
+          {
+            "concept_id": "C01_CENTER_CIRCUM",
+            "name": "Angle at Center & Circumference",
+            "name_zh": "圓心角與圓周角",
+            "formula": "\\[ \\angle \\text{ at center} = 2 \\times \\angle \\text{ at circumference} \\]",
+            "key_takeaway": "The angle subtended by an arc at the center is twice the angle subtended by the same arc at the circumference. Notation: '∠ at center = 2∠ at circum.'.",
+            "key_takeaway_zh": "弧在圓心所對的角（圓心角）是該弧在圓周上所對的角（圓周角）的兩倍。簡寫：「圓心角 = 2圓周角」。",
+            "diagram_json": {
+              "center": [
+                0,
+                0
+              ],
+              "radius": 5,
+              "points": [
+                {
+                  "label": "O",
+                  "pos": [
+                    0,
+                    0
+                  ],
+                  "offset": [
+                    -1,
+                    -1
+                  ]
+                },
+                {
+                  "label": "A",
+                  "angle": 210,
+                  "offset": [
+                    -1,
+                    -1
+                  ]
+                },
+                {
+                  "label": "B",
+                  "angle": 330,
+                  "offset": [
+                    1,
+                    -1
+                  ]
+                },
+                {
+                  "label": "C",
+                  "angle": 90,
+                  "offset": [
+                    0,
+                    1
+                  ]
+                }
+              ],
+              "lines": [
+                {
+                  "pts": [
+                    "O",
+                    "A"
+                  ]
+                },
+                {
+                  "pts": [
+                    "O",
+                    "B"
+                  ]
+                },
+                {
+                  "pts": [
+                    "C",
+                    "A"
+                  ]
+                },
+                {
+                  "pts": [
+                    "C",
+                    "B"
+                  ]
+                }
+              ],
+              "angles": [
+                {
+                  "pts": [
+                    "A",
+                    "O",
+                    "B"
+                  ],
+                  "label": "2x",
+                  "radius": 1.2
+                },
+                {
+                  "pts": [
+                    "A",
+                    "C",
+                    "B"
+                  ],
+                  "label": "x",
+                  "radius": 1.2
+                }
+              ]
+            }
+          },
+          {
+            "concept_id": "C02_SAME_SEGMENT",
+            "name": "Angles in the Same Segment",
+            "name_zh": "同弓形內的圓周角",
+            "formula": "\\[ \\angle\\text{s in same segment are equal} \\]",
+            "key_takeaway": "Angles subtended by the same arc at the circumference are equal. This is commonly known as the 'butterfly' or 'bow-tie' property.",
+            "key_takeaway_zh": "由同一段弧在圓周上所對的所有圓周角都相等。這通常被稱為「蝴蝶」或「领结」性質。簡寫：「同弓形內的圓周角」。",
+            "diagram_json": {
+              "center": [
+                0,
+                0
+              ],
+              "radius": 5,
+              "points": [
+                {
+                  "label": "A",
+                  "angle": 210,
+                  "offset": [
+                    -1,
+                    -1
+                  ]
+                },
+                {
+                  "label": "B",
+                  "angle": 330,
+                  "offset": [
+                    1,
+                    -1
+                  ]
+                },
+                {
+                  "label": "C",
+                  "angle": 120,
+                  "offset": [
+                    -1,
+                    1
+                  ]
+                },
+                {
+                  "label": "D",
+                  "angle": 60,
+                  "offset": [
+                    1,
+                    1
+                  ]
+                }
+              ],
+              "lines": [
+                {
+                  "pts": [
+                    "C",
+                    "A"
+                  ]
+                },
+                {
+                  "pts": [
+                    "C",
+                    "B"
+                  ]
+                },
+                {
+                  "pts": [
+                    "D",
+                    "A"
+                  ]
+                },
+                {
+                  "pts": [
+                    "D",
+                    "B"
+                  ]
+                }
+              ],
+              "angles": [
+                {
+                  "pts": [
+                    "A",
+                    "C",
+                    "B"
+                  ],
+                  "label": "a",
+                  "radius": 1
+                },
+                {
+                  "pts": [
+                    "A",
+                    "D",
+                    "B"
+                  ],
+                  "label": "a",
+                  "radius": 1
+                }
+              ]
+            }
+          },
+          {
+            "concept_id": "C03_SEMI_CIRCLE",
+            "name": "Angle in a Semi-circle",
+            "name_zh": "半圓上的圓周角",
+            "formula": "\\[ \\angle \\text{ in semi-circle} = 90^\\circ \\]",
+            "key_takeaway": "The angle subtended by a diameter at the circumference is always a right angle (90°).",
+            "key_takeaway_zh": "直徑在圓周上所對的圓周角始終為直角（90度）。簡寫：「半圓上的圓周角」。",
+            "diagram_json": {
+              "center": [
+                0,
+                0
+              ],
+              "radius": 5,
+              "points": [
+                {
+                  "label": "O",
+                  "pos": [
+                    0,
+                    0
+                  ],
+                  "offset": [
+                    0,
+                    -1
+                  ]
+                },
+                {
+                  "label": "A",
+                  "angle": 180,
+                  "offset": [
+                    -1,
+                    0
+                  ]
+                },
+                {
+                  "label": "B",
+                  "angle": 0,
+                  "offset": [
+                    1,
+                    0
+                  ]
+                },
+                {
+                  "label": "C",
+                  "angle": 70,
+                  "offset": [
+                    1,
+                    1
+                  ]
+                }
+              ],
+              "lines": [
+                {
+                  "pts": [
+                    "A",
+                    "B"
+                  ],
+                  "style": "-"
+                },
+                {
+                  "pts": [
+                    "C",
+                    "A"
+                  ]
+                },
+                {
+                  "pts": [
+                    "C",
+                    "B"
+                  ]
+                }
+              ],
+              "angles": [
+                {
+                  "pts": [
+                    "A",
+                    "C",
+                    "B"
+                  ],
+                  "label": "90°",
+                  "radius": 0.8
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "module_id": "MOD_02",
+        "title": "Chords & Arc Properties",
+        "title_zh": "弦與弧的性質",
+        "concepts": [
+          {
+            "concept_id": "C04_CHORD_BISECTOR",
+            "name": "Perpendicular from Center",
+            "name_zh": "圓心至弦的垂線",
+            "formula": "\\[ \\text{line from center } \\perp \\text{ chord bisects chord} \\]",
+            "key_takeaway": "The perpendicular line from the center of a circle to a chord bisects the chord. Conversely, the line joining the center to the midpoint of a chord is perpendicular to the chord.",
+            "key_takeaway_zh": "從圓心到弦的垂線平分該弦。反之，圓心與弦中點的連線垂直於該弦。簡寫：「圓心至弦的垂線平分弦」。",
+            "diagram_json": {
+              "center": [
+                0,
+                0
+              ],
+              "radius": 5,
+              "points": [
+                {
+                  "label": "O",
+                  "pos": [
+                    0,
+                    0
+                  ],
+                  "offset": [
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "label": "A",
+                  "angle": 210,
+                  "offset": [
+                    -1,
+                    -1
+                  ]
+                },
+                {
+                  "label": "B",
+                  "angle": 330,
+                  "offset": [
+                    1,
+                    -1
+                  ]
+                },
+                {
+                  "label": "M",
+                  "pos": [
+                    0,
+                    -2.5
+                  ],
+                  "offset": [
+                    0,
+                    -1
+                  ]
+                }
+              ],
+              "lines": [
+                {
+                  "pts": [
+                    "A",
+                    "B"
+                  ]
+                },
+                {
+                  "pts": [
+                    "O",
+                    "M"
+                  ],
+                  "style": "--"
+                }
+              ],
+              "angles": [
+                {
+                  "pts": [
+                    "O",
+                    "M",
+                    "B"
+                  ],
+                  "label": "90°",
+                  "radius": 0.5
+                }
+              ]
+            }
+          },
+          {
+            "concept_id": "C05_EQUAL_CHORDS",
+            "name": "Equal Chords & Arcs",
+            "name_zh": "等弦與等弧",
+            "formula": "\\[ \\text{equal chords } \\leftrightarrow \\text{ equal arcs } \\leftrightarrow \\text{ equal angles} \\]",
+            "key_takeaway": "Equal chords subtend equal angles at the center and correspond to equal arc lengths.",
+            "key_takeaway_zh": "等弦對等角（圓心角或圓周角）且對等弧。簡寫：「等弦對等角」。",
+            "diagram_json": {
+              "center": [
+                0,
+                0
+              ],
+              "radius": 5,
+              "points": [
+                {
+                  "label": "O",
+                  "pos": [
+                    0,
+                    0
+                  ]
+                },
+                {
+                  "label": "A",
+                  "angle": 30
+                },
+                {
+                  "label": "B",
+                  "angle": 90
+                },
+                {
+                  "label": "C",
+                  "angle": 210
+                },
+                {
+                  "label": "D",
+                  "angle": 270
+                }
+              ],
+              "lines": [
+                {
+                  "pts": [
+                    "A",
+                    "B"
+                  ]
+                },
+                {
+                  "pts": [
+                    "C",
+                    "D"
+                  ]
+                },
+                {
+                  "pts": [
+                    "O",
+                    "A"
+                  ],
+                  "style": "--"
+                },
+                {
+                  "pts": [
+                    "O",
+                    "B"
+                  ],
+                  "style": "--"
+                },
+                {
+                  "pts": [
+                    "O",
+                    "C"
+                  ],
+                  "style": "--"
+                },
+                {
+                  "pts": [
+                    "O",
+                    "D"
+                  ],
+                  "style": "--"
+                }
+              ],
+              "angles": [
+                {
+                  "pts": [
+                    "A",
+                    "O",
+                    "B"
+                  ],
+                  "label": "x",
+                  "radius": 1.2
+                },
+                {
+                  "pts": [
+                    "C",
+                    "O",
+                    "D"
+                  ],
+                  "label": "x",
+                  "radius": 1.2
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "module_id": "MOD_03",
+        "title": "Cyclic Quadrilaterals",
+        "title_zh": "圓內接四邊形",
+        "concepts": [
+          {
+            "concept_id": "C06_OPP_ANGLES",
+            "name": "Opposite Angles of Cyclic Quad.",
+            "name_zh": "對角互補",
+            "formula": "\\[ \\angle A + \\angle C = 180^\\circ \\]",
+            "key_takeaway": "The opposite angles of a cyclic quadrilateral (a four-sided figure inside a circle) are supplementary (sum to 180°).",
+            "key_takeaway_zh": "圓內接四邊形的對角互補（和為 180 度）。簡寫：「圓內接四邊形對角」。",
+            "diagram_json": {
+              "center": [
+                0,
+                0
+              ],
+              "radius": 5,
+              "points": [
+                {
+                  "label": "A",
+                  "angle": 120
+                },
+                {
+                  "label": "B",
+                  "angle": 45
+                },
+                {
+                  "label": "C",
+                  "angle": 300
+                },
+                {
+                  "label": "D",
+                  "angle": 210
+                }
+              ],
+              "lines": [
+                {
+                  "pts": [
+                    "A",
+                    "B"
+                  ]
+                },
+                {
+                  "pts": [
+                    "B",
+                    "C"
+                  ]
+                },
+                {
+                  "pts": [
+                    "C",
+                    "D"
+                  ]
+                },
+                {
+                  "pts": [
+                    "D",
+                    "A"
+                  ]
+                }
+              ],
+              "angles": [
+                {
+                  "pts": [
+                    "D",
+                    "A",
+                    "B"
+                  ],
+                  "label": "a",
+                  "radius": 1
+                },
+                {
+                  "pts": [
+                    "B",
+                    "C",
+                    "D"
+                  ],
+                  "label": "180-a",
+                  "radius": 1
+                }
+              ]
+            }
+          },
+          {
+            "concept_id": "C07_EXT_ANGLE",
+            "name": "Exterior Angle of Cyclic Quad.",
+            "name_zh": "外角等於內對角",
+            "formula": "\\[ \\text{ext. } \\angle = \\text{ int. opp. } \\angle \\]",
+            "key_takeaway": "An exterior angle of a cyclic quadrilateral is equal to its interior opposite angle.",
+            "key_takeaway_zh": "圓內接四邊形的一個外角等於其內對角。簡寫：「圓內接四邊形外角」。",
+            "diagram_json": {
+              "center": [
+                0,
+                0
+              ],
+              "radius": 5,
+              "points": [
+                {
+                  "label": "A",
+                  "angle": 120
+                },
+                {
+                  "label": "B",
+                  "angle": 60
+                },
+                {
+                  "label": "C",
+                  "angle": 300
+                },
+                {
+                  "label": "D",
+                  "angle": 210
+                },
+                {
+                  "label": "E",
+                  "pos": [
+                    7,
+                    1.4
+                  ],
+                  "offset": [
+                    1,
+                    1
+                  ]
+                }
+              ],
+              "lines": [
+                {
+                  "pts": [
+                    "A",
+                    "B"
+                  ]
+                },
+                {
+                  "pts": [
+                    "B",
+                    "C"
+                  ]
+                },
+                {
+                  "pts": [
+                    "C",
+                    "D"
+                  ]
+                },
+                {
+                  "pts": [
+                    "D",
+                    "A"
+                  ]
+                },
+                {
+                  "pts": [
+                    "B",
+                    "E"
+                  ],
+                  "style": "--"
+                }
+              ],
+              "angles": [
+                {
+                  "pts": [
+                    "C",
+                    "B",
+                    "E"
+                  ],
+                  "label": "x",
+                  "radius": 1.2
+                },
+                {
+                  "pts": [
+                    "A",
+                    "D",
+                    "C"
+                  ],
+                  "label": "x",
+                  "radius": 1.2
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "module_id": "MOD_04",
+        "title": "Tangent Properties",
+        "title_zh": "切線性質",
+        "concepts": [
+          {
+            "concept_id": "C08_TANGENT_RADIUS",
+            "name": "Tangent Perpendicular to Radius",
+            "name_zh": "切線垂直於半徑",
+            "formula": "\\[ \\text{tangent } \\perp \\text{ radius} \\]",
+            "key_takeaway": "A tangent to a circle at any point is perpendicular to the radius through that point of contact.",
+            "key_takeaway_zh": "圓在任何一點的切線都垂直於過該切點的半徑。簡寫：「切線垂直於半徑」。",
+            "diagram_json": {
+              "center": [
+                0,
+                0
+              ],
+              "radius": 5,
+              "points": [
+                {
+                  "label": "O",
+                  "pos": [
+                    0,
+                    0
+                  ]
+                },
+                {
+                  "label": "P",
+                  "angle": 270
+                },
+                {
+                  "label": "T1",
+                  "pos": [
+                    -4,
+                    -5
+                  ],
+                  "offset": [
+                    -1,
+                    -1
+                  ]
+                },
+                {
+                  "label": "T2",
+                  "pos": [
+                    4,
+                    -5
+                  ],
+                  "offset": [
+                    1,
+                    -1
+                  ]
+                }
+              ],
+              "lines": [
+                {
+                  "pts": [
+                    "O",
+                    "P"
+                  ]
+                },
+                {
+                  "pts": [
+                    "T1",
+                    "T2"
+                  ]
+                }
+              ],
+              "angles": [
+                {
+                  "pts": [
+                    "O",
+                    "P",
+                    "T2"
+                  ],
+                  "label": "90°",
+                  "radius": 0.8
+                }
+              ]
+            }
+          },
+          {
+            "concept_id": "C09_TANGENT_EXT_POINT",
+            "name": "Tangents from External Point",
+            "name_zh": "外點到切線的性質",
+            "formula": "\\[ PA = PB \\]",
+            "key_takeaway": "Tangents drawn from an external point to a circle are equal in length and subtend equal angles at the point and the center.",
+            "key_takeaway_zh": "從圓外一點向圓引的兩條切線長度相等，且該點與圓心的連線平分兩切線的夾角。簡寫：「切線性質」。",
+            "diagram_json": {
+              "center": [
+                0,
+                0
+              ],
+              "radius": 5,
+              "points": [
+                {
+                  "label": "O",
+                  "pos": [
+                    0,
+                    0
+                  ]
+                },
+                {
+                  "label": "P",
+                  "pos": [
+                    10,
+                    0
+                  ]
+                },
+                {
+                  "label": "A",
+                  "angle": 60
+                },
+                {
+                  "label": "B",
+                  "angle": 300
+                }
+              ],
+              "lines": [
+                {
+                  "pts": [
+                    "P",
+                    "A"
+                  ]
+                },
+                {
+                  "pts": [
+                    "P",
+                    "B"
+                  ]
+                },
+                {
+                  "pts": [
+                    "O",
+                    "A"
+                  ]
+                },
+                {
+                  "pts": [
+                    "O",
+                    "B"
+                  ]
+                },
+                {
+                  "pts": [
+                    "O",
+                    "P"
+                  ],
+                  "style": "--"
+                }
+              ],
+              "angles": [
+                {
+                  "pts": [
+                    "A",
+                    "P",
+                    "O"
+                  ],
+                  "label": "y",
+                  "radius": 1.5
+                },
+                {
+                  "pts": [
+                    "B",
+                    "P",
+                    "O"
+                  ],
+                  "label": "y",
+                  "radius": 1.5
+                }
+              ]
+            }
+          },
+          {
+            "concept_id": "C10_ALT_SEGMENT",
+            "name": "Angles in Alternate Segment",
+            "name_zh": "弦切角定理",
+            "formula": "\\[ \\angle\\text{ (tangent, chord)} = \\angle\\text{ (alt. segment)} \\]",
+            "key_takeaway": "The angle between a tangent and a chord through the point of contact is equal to the angle subtended by the chord in the alternate segment.",
+            "key_takeaway_zh": "切線與過切點的弦之間的夾角（弦切角）等於該弦在交錯弓形內所對的圓周角。簡寫：「弦切角定理」。",
+            "diagram_json": {
+              "center": [
+                0,
+                0
+              ],
+              "radius": 5,
+              "points": [
+                {
+                  "label": "A",
+                  "angle": 270
+                },
+                {
+                  "label": "B",
+                  "angle": 30
+                },
+                {
+                  "label": "C",
+                  "angle": 150
+                },
+                {
+                  "label": "T1",
+                  "pos": [
+                    -4,
+                    -5
+                  ]
+                },
+                {
+                  "label": "T2",
+                  "pos": [
+                    4,
+                    -5
+                  ]
+                }
+              ],
+              "lines": [
+                {
+                  "pts": [
+                    "T1",
+                    "T2"
+                  ]
+                },
+                {
+                  "pts": [
+                    "A",
+                    "B"
+                  ]
+                },
+                {
+                  "pts": [
+                    "B",
+                    "C"
+                  ]
+                },
+                {
+                  "pts": [
+                    "C",
+                    "A"
+                  ]
+                }
+              ],
+              "angles": [
+                {
+                  "pts": [
+                    "B",
+                    "A",
+                    "T2"
+                  ],
+                  "label": "θ",
+                  "radius": 1
+                },
+                {
+                  "pts": [
+                    "B",
+                    "C",
+                    "A"
+                  ],
+                  "label": "θ",
+                  "radius": 1
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "math_geo_rectilinear": {
+    "name_zh": "直線圖形",
+    "is_modular": true,
+    "name": "Rectilinear Figures",
+    "roadmap": "Start with the basic properties of parallel lines and angles. Then, master the sum of interior and exterior angles of triangles and convex polygons. Progress to special quadrilaterals like parallelograms and trapeziums. Finally, apply Pythagoras' theorem and the concepts of congruence and similarity to solve complex geometric problems.",
+    "topic_id": "math_geo_rectilinear",
+    "roadmap_zh": "從平行線和角的基本性質開始。接著，掌握三角形和凸多邊形的內角和與外角和。進階到特殊四邊形，如平行四邊形和梯形。最後，應用勾股定理以及全等和相似的概念來解決複雜的幾何問題。",
+    "learning_modules": [
+      {
+        "module_id": "MOD_01",
+        "title": "Parallel Lines & Angles",
+        "title_zh": "平行線及角",
+        "concepts": [
+          {
+            "concept_id": "C01_PARALLEL_PROPS",
+            "name": "Angles of Parallel Lines",
+            "name_zh": "平行線的角",
+            "formula": "\\text{Corr. } \\angle, \\text{ Alt. } \\angle, \\text{ Int. } \\angle",
+            "key_takeaway": "When two parallel lines are cut by a transversal: Corresponding angles are equal, Alternate angles are equal, and Interior angles sum to 180 degrees.",
+            "key_takeaway_zh": "當兩條平行線被一條截線所截時：同位角相等，內錯角相等，同旁內角互補（和為 180 度）。",
+            "visual_aid": "/images/math/rectilinear_parallel_lines.png"
+          }
+        ]
+      },
+      {
+        "module_id": "MOD_02",
+        "title": "Triangle Properties",
+        "title_zh": "三角形性質",
+        "concepts": [
+          {
+            "concept_id": "C02_TRIANGLE_SUM",
+            "name": "Angle Sum of Triangle",
+            "name_zh": "三角形內角和",
+            "formula": "\\[ A + B + C = 180^\\circ \\]",
+            "key_takeaway": "The sum of the interior angles of any triangle is always 180 degrees. This is written as '∠ sum of △'.",
+            "key_takeaway_zh": "任何三角形的內角和始終為 180 度。簡寫為「三角形內角和」。",
+            "visual_aid": "/images/math/rectilinear_triangle_sum.png"
+          },
+          {
+            "concept_id": "C03_EXTERIOR_ANGLE",
+            "name": "Exterior Angle of Triangle",
+            "name_zh": "三角形外角",
+            "formula": "\\[ \\text{ext. } \\angle = \\text{ sum of opp. int. } \\angle s \\]",
+            "key_takeaway": "An exterior angle of a triangle is equal to the sum of the two opposite interior angles.",
+            "key_takeaway_zh": "三角形的一個外角等於另外兩個不相鄰內角的和。",
+            "visual_aid": "/images/math/rectilinear_exterior_angle.png"
+          }
+        ]
+      },
+      {
+        "module_id": "MOD_03",
+        "title": "Polygons",
+        "title_zh": "多邊形",
+        "concepts": [
+          {
+            "concept_id": "C04_POLYGON_INT_SUM",
+            "name": "Interior Angle Sum",
+            "name_zh": "內角和",
+            "formula": "\\[ (n - 2) \\times 180^\\circ \\]",
+            "variables": {
+              "n": "The number of sides of the polygon."
+            },
+            "key_takeaway": "An n-sided polygon can be divided into (n-2) triangles, leading to a sum of (n-2) * 180 degrees.",
+            "key_takeaway_zh": "一個 n 邊形可以被分割成 (n-2) 個三角形，因此內角和為 (n-2) * 180 度。",
+            "visual_aid": "/images/math/rectilinear_polygon_sum.png"
+          },
+          {
+            "concept_id": "C05_POLYGON_EXT_SUM",
+            "name": "Exterior Angle Sum",
+            "name_zh": "外角和",
+            "formula": "\\[ \\text{Sum} = 360^\\circ \\]",
+            "key_takeaway": "The sum of the exterior angles of any convex polygon is ALWAYS 360 degrees, regardless of the number of sides.",
+            "key_takeaway_zh": "任何凸多邊形的外角和始終為 360 度，與邊數無關。",
+            "visual_aid": "/images/math/rectilinear_polygon_exterior.png"
+          }
+        ]
+      },
+      {
+        "module_id": "MOD_04",
+        "title": "Pythagoras & Ratios",
+        "title_zh": "勾股定理與比例",
+        "concepts": [
+          {
+            "concept_id": "C06_PYTHAGORAS",
+            "name": "Pythagoras' Theorem",
+            "name_zh": "勾股定理",
+            "formula": "\\[ a^2 + b^2 = c^2 \\]",
+            "key_takeaway": "In a right-angled triangle, the sum of squares of the legs equals the square of the hypotenuse.",
+            "key_takeaway_zh": "在直角三角形中，兩條直角邊的平方和等於斜邊的平方。",
+            "visual_aid": "/images/math/rectilinear_pythagoras.png"
+          },
+          {
+            "concept_id": "C07_SIMILAR_RATIO",
+            "name": "Area Ratio",
+            "name_zh": "面積比",
+            "formula": "\\[ \\frac{A_1}{A_2} = \\left( \\frac{l_1}{l_2} \\right)^2 \\]",
+            "key_takeaway": "Area ratio is the SQUARE of the length ratio. Always check if figures are similar first!",
+            "key_takeaway_zh": "面積比是邊長比的「平方」。在使用前務必先確認圖形是否相似！",
+            "visual_aid": "/images/math/rectilinear_similar_ratio.png"
+          }
+        ]
+      },
+      {
+        "module_id": "MOD_05",
+        "title": "Congruence & Similarity Tests",
+        "title_zh": "全等及相似判定",
+        "concepts": [
+          {
+            "concept_id": "C08_CONGRUENCE",
+            "name": "Congruent Triangle Tests ($\\\\cong$)",
+            "name_zh": "全等三角形判定",
+            "formula": "\\\\text{SSS, SAS, ASA, AAS, RHS}",
+            "key_takeaway": "Five tests prove triangles are identical in shape AND size. AAA is NOT a test for congruence!",
+            "key_takeaway_zh": "五個判定法證明三角形形狀與大小完全相同。注意：AAA 「不是」全等判定法！",
+            "visual_aid": "/images/math/rectilinear_congruence.png"
+          },
+          {
+            "concept_id": "C09_SIMILARITY",
+            "name": "Similar Triangle Tests ($\\\\sim$)",
+            "name_zh": "相似三角形判定",
+            "formula": "\\\\text{AAA, 3 sides prop., ratio 2 sides inc. } \\\\angle",
+            "key_takeaway": "Similar triangles have the same shape but different sizes. All corresponding angles must be equal.",
+            "key_takeaway_zh": "相似三角形形狀相同但大小不同。所有對應角必須相等。",
+            "visual_aid": "/images/math/rectilinear_similarity.png"
+          }
+        ]
+      }
+    ],
+    "last_updated": {
+      "_seconds": 1773146132,
+      "_nanoseconds": 122000000
+    }
+  },
+  "math_num_inequalities": {
+    "name_zh": "一元一次及一元二次不等式",
+    "is_modular": true,
+    "name": "Linear & Quadratic Inequalities",
+    "topic_id": "math_num_inequalities",
+    "learning_modules": [
+      {
+        "module_id": "MOD_01",
+        "title": "One-Variable Inequalities",
+        "title_zh": "一元不等式",
+        "concepts": [
+          {
+            "concept_id": "C01_COMPOUND_VISUAL",
+            "name": "Compound Conditions on Number Line",
+            "name_zh": "數線上的複合條件",
+            "formula": "x > a \\text{ and } x \\leq b \\iff a < x \\leq b",
+            "key_takeaway": "AND (Intersection) requires overlap. OR (Union) combines all shaded regions. Hollow circles mean 'strictly greater/less', solid circles include the value.",
+            "key_takeaway_zh": "「且」（交集）要求重疊。「或」（聯集）則合併所有陰影區域。空心圓代表「嚴格大於/小於」，實心圓則包含該值。",
+            "visual_aid": "/images/math/ineq_number_line.png"
+          },
+          {
+            "concept_id": "C02_QUAD_GRAPH_PREMIUM",
+            "name": "Quadratic Parabolas",
+            "name_zh": "二次拋物線法",
+            "formula": "ax^2 + bx + c < 0 \\implies \\text{Region between roots (if } a > 0)",
+            "key_takeaway": "For $a > 0$, the inequality $< 0$ is the 'valley' between roots, and $> 0$ represents the 'wings' outside the roots.",
+            "key_takeaway_zh": "當 $a > 0$ 時，不等式 $< 0$ 對應兩根之間的「谷地」，而 $> 0$ 則對應兩根之外的「兩翼」。",
+            "visual_aid": "/images/math/ineq_quad_shading.png"
+          }
+        ]
+      },
+      {
+        "module_id": "MOD_02",
+        "title": "Two-Variable Inequalities",
+        "title_zh": "二元不等式",
+        "concepts": [
+          {
+            "concept_id": "C03_LINEAR_2V",
+            "name": "Shaded Regions in 2D",
+            "name_zh": "平面上的陰影區域",
+            "formula": "ax + by + c \\geq 0",
+            "key_takeaway": "A linear inequality in two variables represents a half-plane. Use a 'test point' like $(0,0)$ to determine which side of the boundary line to shade.",
+            "key_takeaway_zh": "二元一次不等式代表一個半平面。使用如 $(0,0)$ 的「測試點」來確定邊界線的哪一側應畫上陰影。",
+            "visual_aid": "/images/math/ineq_linear_2v.png"
+          }
+        ]
+      },
+      {
+        "module_id": "MOD_03",
+        "title": "Section B: Always Positive/Negative",
+        "title_zh": "乙部課題：恆正與恆負",
+        "concepts": [
+          {
+            "concept_id": "C04_DELTA_INEQ",
+            "name": "Inequalities with no roots ($\\Delta < 0$)",
+            "name_zh": "無根不等式 ($\\Delta < 0$)",
+            "formula": "ax^2 + bx + c > 0 \\text{ for all } x \\iff a > 0 \\text{ and } \\Delta < 0",
+            "key_takeaway": "If $\\Delta < 0$, the parabola never touches the x-axis. It is either 'always positive' or 'always negative' for all real $x$. This is a frequent Section B theory point.",
+            "key_takeaway_zh": "若 $\\Delta < 0$，拋物線永遠不會接觸 x 軸。對於所有實數 x，它不是「恆正」就是「恆負」。這是乙部常用的理論考點。",
+            "visual_aid": null
+          }
+        ]
+      }
+    ],
+    "roadmap": "Master the logic of compound inequalities (AND/OR) on a number line first. Progress to quadratic inequalities using parabolas. Finally, bridge into Section B with linear inequalities in two variables and the graphical interpretation of solutions.",
+    "roadmap_zh": "首先掌握數線上複合不等式（「且」與「或」）的邏輯。進階到運用拋物線求解一元二次不等式。最後，進入 DSE 乙部課題：二元一次不等式及其解的圖像詮釋。",
+    "last_updated": {
+      "_seconds": 1773146132,
+      "_nanoseconds": 276000000
+    }
+  },
+  "math_num_percentages": {
+    "is_modular": true,
+    "name": "Percentages & Interest",
+    "name_zh": "百分法與利息",
+    "topic_id": "math_num_percentages",
+    "created_at": {
+      "_seconds": 1772546709,
+      "_nanoseconds": 260000000
+    },
+    "learning_modules": [
+      {
+        "module_id": "MOD_01",
+        "title": "Growth, Decay & Multipliers",
+        "title_zh": "增長、衰減與乘數",
+        "concepts": [
+          {
+            "concept_id": "C01_MULTIPLIERS",
+            "name": "The Multiplier Method",
+            "name_zh": "乘數法",
+            "formula": "V_{new} = V_{old} \\times (1 \\pm r)^n",
+            "key_takeaway": "Using multipliers (e.g., 1.05 for 5% growth) is faster and less error-prone than calculating interest separately. It handles multiple periods (n) easily.",
+            "key_takeaway_zh": "使用乘數（如 5% 增長使用 1.05）比分開計算利息更快且更不易出錯。它能輕鬆處理多個週期 (n)。",
+            "visual_aid": "/images/math/pct_growth_decay_premium.png"
+          }
+        ]
+      },
+      {
+        "module_id": "MOD_02",
+        "title": "Advanced Compounding",
+        "title_zh": "進階複利計算",
+        "concepts": [
+          {
+            "concept_id": "C02_FREQ",
+            "name": "Compounding Frequency (k)",
+            "name_zh": "結算頻率 (k)",
+            "formula": "A = P(1 + \\frac{r}{k})^{nk}",
+            "key_takeaway": "The more frequent the compounding (higher k), the higher the final amount. Common DSE traps involve monthly (k=12) or quarterly (k=4) compounding.",
+            "key_takeaway_zh": "結算頻率越高 (k 越大)，最終本利和越高。DSE 常考陷阱包括按月 (k=12) 或按季 (k=4) 結算。",
+            "visual_aid": "/images/math/pct_compounding_premium.png"
+          }
+        ]
+      },
+      {
+        "module_id": "MOD_03",
+        "title": "Business & Profit Flow",
+        "title_zh": "商業與利潤流程",
+        "concepts": [
+          {
+            "concept_id": "C03_BUSINESS_FLOW",
+            "name": "The Price Flow",
+            "name_zh": "價格流程",
+            "formula": "\\text{Cost} \\xrightarrow{Markup} \\text{Marked Price} \\xrightarrow{Discount} \\text{Selling Price}",
+            "key_takeaway": "Profits are strictly based on COST PRICE, while discounts are based on MARKED PRICE. Confusing these two bases is the most common student error.",
+            "key_takeaway_zh": "利潤嚴格基於成本價，而折扣則基於標價。混淆這兩個基準是學生最常犯的錯誤。",
+            "visual_aid": "/images/math/pct_business_flow.png"
+          }
+        ]
+      }
+    ],
+    "roadmap": "Master the multiplier method (1+r) for growth and (1-r) for decay. Progress to compound interest with different compounding frequencies. Finally, handle business mathematics like profit/discount and tax calculations, which form the core of DSE Section A.",
+    "roadmap_zh": "掌握運用乘數法 (1+r) 計算增長及 (1-r) 計算衰減。進步到學習不同結算頻率的複利息。最後，處理利潤/折扣及稅務計算等商業數學，這構成了 DSE 甲部的核心。",
+    "last_updated": {
+      "_seconds": 1773146132,
+      "_nanoseconds": 414000000
+    }
+  },
+  "math_num_ratio": {
+    "name_zh": "比與比例",
+    "is_modular": true,
+    "name": "Ratio & Proportion",
+    "topic_id": "math_num_ratio",
+    "learning_modules": [
+      {
+        "module_id": "MOD_01",
+        "title": "Ratio Manipulation",
+        "title_zh": "比的運算",
+        "concepts": [
+          {
+            "concept_id": "C01_COMBINING_PREMIUM",
+            "name": "Combining Ratios (LCM Bridge)",
+            "name_zh": "合併比 (LCM 橋樑)",
+            "formula": "a:b=2:3, b:c=4:5 \\implies a:b:c = 8:12:15",
+            "key_takeaway": "To link a:b and b:c, find the LCM of the common term 'b'. Scaling everything correctly ensures the ratio remains consistent.",
+            "key_takeaway_zh": "要連結 a:b 與 b:c，先求共通項 'b' 的最小公倍數 (LCM)。正確地按比例縮放可確保比的一致性。",
+            "visual_aid": "/images/math/ratio_combining_premium.png"
+          }
+        ]
+      },
+      {
+        "module_id": "MOD_02",
+        "title": "Geometric Scaling",
+        "title_zh": "幾何縮放",
+        "concepts": [
+          {
+            "concept_id": "C02_SIMILARITY_PREMIUM",
+            "name": "Similar Figures ($k^2, k^3$)",
+            "name_zh": "相似圖形 ($k^2, k^3$)",
+            "formula": "l_1:l_2=k \\implies A_1:A_2=k^2, V_1:V_2=k^3",
+            "key_takeaway": "For similar figures, the area ratio is the SQUARE of the length ratio, and the volume ratio is the CUBE. This applies to any shape (circles, triangles, cones).",
+            "key_takeaway_zh": "對於相似圖形，面積比是長度比的「平方」，而體積比是長度比的「立方」。這適用於任何形狀（圓形、三角形、圓錐體）。",
+            "visual_aid": "/images/math/ratio_similar_premium.png"
+          },
+          {
+            "concept_id": "C03_MAP_SCALES_PREMIUM",
+            "name": "Map Scale Logic",
+            "name_zh": "地圖比例尺邏輯",
+            "formula": "1:n \\implies \\text{Area Ratio } 1:n^2",
+            "key_takeaway": "Map scales are linear. When converting map area to real area, you MUST square the scale. Always check your units (cm to km).",
+            "key_takeaway_zh": "地圖比例尺是線性的。將地圖面積轉換為實際面積時，「必須」將比例取平方。務必檢查單位換算（cm 到 km）。",
+            "visual_aid": "/images/math/ratio_map_scale_premium.png"
+          }
+        ]
+      },
+      {
+        "module_id": "MOD_03",
+        "title": "Algebraic Proportions",
+        "title_zh": "代數比例",
+        "concepts": [
+          {
+            "concept_id": "C04_K_METHOD",
+            "name": "The k-Method",
+            "name_zh": "k-方法",
+            "formula": "x:y = 2:3 \\implies x=2k, y=3k",
+            "key_takeaway": "When substituting ratios into expressions like $x^2 + y^2$, always use a constant $k$ to avoid degree errors.",
+            "key_takeaway_zh": "將比代入如 $x^2 + y^2$ 的算式時，務必使用常數 $k$，以避免次方錯誤。",
+            "visual_aid": null
+          }
+        ]
+      }
+    ],
+    "roadmap": "Master the algebraic manipulation of ratios and the 'LCM bridge' for combining them. Bridge into geometry by understanding how length ratios (k) transform into Area (k^2) and Volume (k^3) ratios. This is a high-frequency Section B topic.",
+    "roadmap_zh": "掌握比的代數運算以及合併比時使用的「LCM 橋樑」。透過理解長度比 (k) 如何轉化為面積 (k^2) 和體積 (k^3) 比，進入幾何領域。這是乙部的高頻考點。",
+    "last_updated": {
+      "_seconds": 1773146132,
+      "_nanoseconds": 556000000
+    }
+  }
+}

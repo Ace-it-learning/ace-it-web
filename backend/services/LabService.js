@@ -1,9 +1,10 @@
 const GenerativeAIService = require('./GenerativeAIService');
-const admin = require('firebase-admin');
 const fs = require('fs'); // For debugging logs
 const path = require('path');
 const crypto = require('crypto'); // For deterministic hashing
 const { MICRO_SKILLS } = require('../constants/microSkills');
+const QuestionBankStore = require('./QuestionBankStore');
+const CosmosStore = require('./CosmosStore');
 
 // Helper: Generate Hash for Deduplication
 const generateQuestionHash = (topic, type, questionText) => {
@@ -419,34 +420,95 @@ class LabService {
     return lvl && lvl.includes('HKDSE') ? lvl : `HKDSE Level ${lvl || '3'}`;
   }
 
-  static async getListeningQuests() {
-    const db = admin.firestore();
-    try {
-      const snapshot = await db.collection('question_bank')
-        .where('type', '==', 'listening_mission')
-        .where('is_approved', '==', true)
-        .limit(100)
-        .get();
+  /**
+   * Maps legacy / lab-export shapes to the Paper 3 simulator schema.
+   * Many Firestore docs store Part A as root `interactive_tasks` while the UI expects `sprint_data.tasks`.
+   */
+  static normalizeListeningMissionData(data) {
+    if (!data) return data;
+    const isMission =
+      data.type === 'listening_mission' ||
+      (String(data.paper || '').toLowerCase() === 'listening' &&
+        (Array.isArray(data.interactive_tasks) || data.topic === 'listening_weekly'));
+    if (!isMission) return data;
 
-      // PERFORMANCE OPTIMIZATION: Return only metadata to make menu load instantly
-      const quests = snapshot.docs.map(doc => {
-        const data = doc.data();
-        return {
-          id: doc.id,
-          title: data.title,
-          topic: data.topic,
-          level: data.level,
-          paper: data.paper,
-          subject: data.subject,
-          created_at: data.created_at,
-          hasAudio: data.audio_segments && data.audio_segments.length > 0
-        };
+    if (!data.sprint_data || typeof data.sprint_data !== 'object') data.sprint_data = {};
+    const sd = data.sprint_data;
+    const existing = sd.tasks;
+    if (!Array.isArray(existing) || existing.length === 0) {
+      const merged = sd.interactive_tasks || data.interactive_tasks || data.questions;
+      if (Array.isArray(merged) && merged.length > 0) {
+        sd.tasks = merged;
+      }
+    }
+    if (!sd.audio_transcript && data.reading_passage) {
+      sd.audio_transcript = data.reading_passage;
+    }
+
+    if (!data.integrated_data || typeof data.integrated_data !== 'object') data.integrated_data = {};
+    const idata = data.integrated_data;
+    if (!idata.audio_transcript && data.reading_passage) {
+      idata.audio_transcript = data.reading_passage;
+    }
+    if (!idata.notetaking_fields || !idata.notetaking_fields.length) {
+      idata.notetaking_fields = [
+        { id: 'nt1', label: 'Key Arguments', placeholder: 'Capture the main points mentioned...' },
+        { id: 'nt2', label: 'Proposed Actions', placeholder: 'What are the suggested next steps?' },
+        { id: 'nt3', label: 'Stakeholders / Context', placeholder: 'Who is affected and what is the situation?' }
+      ];
+    }
+    if (!idata.data_file || !idata.data_file.length) {
+      if (data.reading_passage) {
+        idata.data_file = [
+          { id: 'df_ctx', type: 'webpage', title: 'Contextual Briefing', content: data.reading_passage }
+        ];
+      }
+    }
+    if (!idata.writing_task || !idata.writing_task.instruction) {
+      idata.writing_task = {
+        instruction:
+          data.writing_instruction ||
+          data.instruction ||
+          idata.writing_task?.instruction ||
+          'Draft a formal response based on the discussion and the data file provided.',
+        format: idata.writing_task?.format || 'Formal Report',
+        word_count: idata.writing_task?.word_count || '200-250',
+        marking_criteria: idata.writing_task?.marking_criteria || 'Content, Language, Organization, Appropriacy'
+      };
+    }
+    if (!idata.marking_key || !idata.marking_key.length) {
+      if (Array.isArray(data.key_points) && data.key_points.length) {
+        idata.marking_key = data.key_points;
+      }
+    }
+
+    if (Array.isArray(sd.tasks)) {
+      sd.tasks.forEach((t) => {
+        if (t && t.correct_answer != null && t.answer == null) t.answer = t.correct_answer;
       });
+    }
+
+    return data;
+  }
+
+  static async getListeningQuests() {
+    try {
+      const rows = await QuestionBankStore.listListeningApproved(100);
+      const quests = rows.map((data) => ({
+        id: data.id,
+        title: data.title,
+        topic: data.topic,
+        level: data.level,
+        paper: data.paper,
+        subject: data.subject,
+        created_at: data.created_at,
+        hasAudio: Array.isArray(data.audio_segments) && data.audio_segments.length > 0
+      }));
 
       // Sort in-memory to avoid composite index requirements
       quests.sort((a, b) => {
-        const dateA = a.created_at?.toDate ? a.created_at.toDate() : new Date(a.created_at || 0);
-        const dateB = b.created_at?.toDate ? b.created_at.toDate() : new Date(b.created_at || 0);
+        const dateA = new Date(a.created_at || 0);
+        const dateB = new Date(b.created_at || 0);
         return dateB - dateA;
       });
 
@@ -458,11 +520,11 @@ class LabService {
   }
 
   static async getQuestById(id) {
-    const db = admin.firestore();
     try {
-      const doc = await db.collection('question_bank').doc(id).get();
-      if (!doc.exists) return null;
-      let data = doc.data();
+      let data = await QuestionBankStore.getById(id);
+      if (!data) return null;
+
+      LabService.normalizeListeningMissionData(data);
 
       // If this is a placeholder/factory quest, generate real content now
       const isPlaceholder = data.factory_template && (
@@ -474,12 +536,11 @@ class LabService {
         console.log(`[LabService] Triggering dynamic generation for mission: ${data.title}`);
         try {
           const generated = await this.generateSimulatorScenario(data.title, data.description);
-          // SAVE back to Firestore so we don't regenerate every time
-          await db.collection('question_bank').doc(id).update({
+          await QuestionBankStore.upsertById(id, {
             sprint_data: generated.sprint_data,
             integrated_data: generated.integrated_data,
             factory_template: false // Mark as generated
-          });
+          }, { merge: true });
           data = { ...data, ...generated };
         } catch (genErr) {
           console.error("[LabService] Content generation failed:", genErr);
@@ -487,7 +548,7 @@ class LabService {
         }
       }
 
-      return { id: doc.id, ...data };
+      return { id, ...data };
     } catch (err) {
       console.error("[LabService] Error fetching quest by ID:", err);
       throw err;
@@ -515,6 +576,7 @@ class LabService {
       d.setHours(0, 0, 0, 0);
       d.setDate(d.getDate() + 4 - (d.getDay() || 7));
       const weekNum = Math.ceil((((d - new Date(d.getFullYear(), 0, 1)) / 8.64e7) + 1) / 7);
+      const year = d.getFullYear();
 
       const filename = `week_${weekNum}_${paper}.json`;
       const filepath = path.join(__dirname, '..', 'data', 'weekly_quests', filename);
@@ -524,7 +586,7 @@ class LabService {
         const metaPath = path.join(__dirname, '..', 'data', 'weekly_quests', 'weekly_meta.json');
         if (fs.existsSync(metaPath)) {
           const meta = JSON.parse(fs.readFileSync(metaPath, 'utf8'));
-          const weekKey = `2026_${weekNum}`;
+          const weekKey = `${year}_${weekNum}`;
           universalMeta = meta[weekKey] || null;
         }
       } catch (mErr) { 
@@ -552,6 +614,11 @@ class LabService {
                  },
                  tasks: content.interactive_tasks || content.questions || []
              };
+          } else if (!content.sprint_data.tasks || content.sprint_data.tasks.length === 0) {
+              content.sprint_data.tasks = content.interactive_tasks || content.questions || [];
+              if (!content.sprint_data.audio_transcript) {
+                  content.sprint_data.audio_transcript = content.reading_passage || "Listen to the discussion.";
+              }
           }
           
           if (!content.integrated_data) {
@@ -575,6 +642,8 @@ class LabService {
 
           if (!content.id) content.id = `weekly_${paper}`;
           content.isWeeklyQuest = true;
+          content.type = content.type || 'listening_mission';
+          LabService.normalizeListeningMissionData(content);
         }
 
         if (paper === 'writing') {
@@ -614,7 +683,6 @@ class LabService {
 
   static async generateLesson(params) {
     console.log("[LabService] generateLesson START", JSON.stringify(params));
-    const db = admin.firestore();
     let { topic, focus, level, uid, targetCount, themeOverride, mcqRatio, forceHighQuality } = params;
     const isWeeklyQuest = params.isWeeklyQuest || false;
     const skillsKey = (topic || '').toLowerCase();
@@ -650,7 +718,7 @@ class LabService {
           const metaPath = path.join(__dirname, '..', 'data', 'weekly_quests', 'weekly_meta.json');
           if (fs.existsSync(metaPath)) {
             const meta = JSON.parse(fs.readFileSync(metaPath, 'utf8'));
-            const weekKey = `2026_${weekNum}`;
+            const weekKey = `${year}_${weekNum}`;
             universalMeta = meta[weekKey] || null;
           }
         } catch (mErr) { 
@@ -735,9 +803,9 @@ class LabService {
     // Fetch Landing Content (Learning Guide) if available
     let landingContent = null;
     try {
-      const landingDoc = await db.collection('micro_skill_landing').doc(topic).get();
-      if (landingDoc.exists) {
-        landingContent = landingDoc.data();
+      const landingData = await CosmosStore.getMicroSkillLanding(topic);
+      if (landingData) {
+        landingContent = landingData;
         console.log(`[LabService] Found learning guide for topic: ${topic}`);
       }
     } catch (err) {
@@ -748,8 +816,8 @@ class LabService {
     let seenQuestionIds = new Set();
     if (uid && uid !== 'placeholder') {
       try {
-        const historySnapshot = await db.collection('users').doc(uid).collection('practice_history').get();
-        historySnapshot.forEach(doc => seenQuestionIds.add(doc.id));
+        const seenIds = await CosmosStore.getPracticeHistoryIds(uid, 4000);
+        seenIds.forEach((id) => seenQuestionIds.add(id));
       } catch (err) {
         console.warn("Could not fetch user history:", err);
       }
@@ -764,20 +832,13 @@ class LabService {
     if (isReadingTopic && !params.isFactory) {
       console.log(`[LabService] Reading Topic Detected: Enforcing ATOMIC PASSAGE grouping.`);
       try {
-        // Fetch candidates
-        const strictSnapshot = await db.collection('question_bank')
-          .where('topic', '==', resolvedTopic)
-          .where('level', '==', levelName)
-          .where('is_approved', '==', true)
-          .limit(50) // Fetch more to find a cluster
-          .get();
+        const strictDocs = await QuestionBankStore.queryApprovedByTopicAndLevel(resolvedTopic, levelName, 50);
 
         const passageGroups = {}; // hash -> { passage, questions: [] }
 
-        strictSnapshot.forEach(doc => {
-          const data = doc.data();
+        strictDocs.forEach((data) => {
           if (!data.passage) return; // Skip broken ones
-          if (seenQuestionIds.has(doc.id)) return; // Skip seen
+          if (seenQuestionIds.has(data.id)) return; // Skip seen
 
           // Group by Passage Hash (simple content hash)
           const pHash = crypto.createHash('md5').update(data.passage.trim()).digest('hex');
@@ -785,7 +846,7 @@ class LabService {
           if (!passageGroups[pHash]) {
             passageGroups[pHash] = { passage: data.passage, questions: [] };
           }
-          passageGroups[pHash].questions.push({ ...data, id: doc.id });
+          passageGroups[pHash].questions.push({ ...data, id: data.id });
         });
 
         // Find the best cluster
@@ -818,17 +879,10 @@ class LabService {
     } else if (!params.isFactory) {
       // --- OLD LOGIC FOR NON-READING (GRAMMAR, VOCAB, ETC) ---
       try {
-        const strictSnapshot = await db.collection('question_bank')
-          .where('topic', '==', resolvedTopic)
-          .where('level', '==', levelName)
-          .where('is_approved', '==', true)
-          .limit(20)
-          .get();
-
-        strictSnapshot.forEach(doc => {
-          const data = doc.data();
-          if (mixedQuestions.length < TARGET_COUNT && !seenQuestionIds.has(doc.id)) {
-            mixedQuestions.push({ ...data, id: doc.id });
+        const strictDocs = await QuestionBankStore.queryApprovedByTopicAndLevel(resolvedTopic, levelName, 20);
+        strictDocs.forEach((data) => {
+          if (mixedQuestions.length < TARGET_COUNT && !seenQuestionIds.has(data.id)) {
+            mixedQuestions.push({ ...data, id: data.id });
           }
         });
       } catch (e) { console.warn("Strict fetch failed", e); }
@@ -843,13 +897,7 @@ class LabService {
     let forbiddenPrompts = [];
     if (params.isFactory) {
       try {
-        const factoryHistory = await db.collection('question_bank')
-          .where('topic', '==', resolvedTopic)
-          .limit(20)
-          .get();
-
-        const docs = [];
-        factoryHistory.forEach(doc => docs.push(doc.data()));
+        const docs = await QuestionBankStore.queryByTopic(resolvedTopic, 20);
 
         // Sort by created_at desc in-memory to avoid composite index requirement
         docs.sort((a, b) => {
@@ -1252,7 +1300,7 @@ STRICT RULE: Do NOT use the same hooks, starting sentences, or specific scenario
 
         // --- GRAMMAR V2 BYPASS ---
         if (topic?.startsWith('grammar_')) {
-          console.log("[LabService] Grammar V2 detected. Bypassing Firestore question_bank save.");
+          console.log("[LabService] Grammar V2 detected. Bypassing question_bank persistence.");
           return this.normalizeLessonContent(data);
         }
 
@@ -1265,7 +1313,6 @@ STRICT RULE: Do NOT use the same hooks, starting sentences, or specific scenario
             console.log("[LabService] 🎧 Unified Listening Mission Batch Detected.");
             // Save as a UNIFIED mission document for the Menu
             const qHash = generateQuestionHash(resolvedTopic, 'listening_mission', data.reading_passage || topic);
-            const docRef = db.collection('question_bank').doc(qHash);
 
             // --- AUDIO GENERATION UPGRADE ---
             // If this is a Listening Quest, generate audio segments
@@ -1386,8 +1433,9 @@ STRICT RULE: Do NOT use the same hooks, starting sentences, or specific scenario
             }
             // --------------------------------
 
-            await docRef.set({
+            await QuestionBankStore.upsertById(qHash, {
               id: qHash,
+              pk: "question_bank",
               type: 'listening_mission',
               title: data.prediction_metadata?.topic_name || resolvedTopic,
               topic: resolvedTopic,
@@ -1404,25 +1452,24 @@ STRICT RULE: Do NOT use the same hooks, starting sentences, or specific scenario
               interactive_tasks: data.interactive_tasks,
               is_approved: false,
               is_factory: true,
-              created_at: admin.firestore.FieldValue.serverTimestamp()
-            });
+              created_at: new Date().toISOString()
+            }, { merge: true });
 
             console.log(`[LabService] Saved unified Listening Mission: ${qHash}`);
             mixedQuestions = data.interactive_tasks;
           } else {
-            const batch = db.batch();
-            data.interactive_tasks.forEach(task => {
+            for (const task of data.interactive_tasks) {
               const qHash = generateQuestionHash(resolvedTopic, task.type || 'gen', task.question || task.instruction);
               const levelLabel = isWriting && task.id && task.id.startsWith('lvl_') ? task.id : null;
               task.id = qHash;
               if (levelLabel) task.levelLabel = levelLabel;
 
-              const docRef = db.collection('question_bank').doc(qHash);
-
               // For Reading/Writing, ensure we save the passage with EACH question so they can be clustered later
               const passageToSave = data.reading_passage || null;
 
-              batch.set(docRef, {
+              await QuestionBankStore.upsertById(qHash, {
+                id: qHash,
+                pk: "question_bank",
                 ...task,
                 topic: resolvedTopic,
                 level: levelName,
@@ -1437,14 +1484,13 @@ STRICT RULE: Do NOT use the same hooks, starting sentences, or specific scenario
                   week_id: params.weekId || null,
                   micro_skill: task.micro_skill || null
                 } : {}),
-                created_at: admin.firestore.FieldValue.serverTimestamp()
+                created_at: new Date().toISOString()
               }, { merge: true });
 
               if (params.isFactory || mixedQuestions.length < TARGET_COUNT) {
                 mixedQuestions.push(task);
               }
-            });
-            await batch.commit();
+            }
           }
         }
 
@@ -1478,16 +1524,14 @@ STRICT RULE: Do NOT use the same hooks, starting sentences, or specific scenario
 
   // Helper to generate just the explanation part if we have questions
   static async generateExplanationOnly(topic, level, uid = null) {
-    const db = admin.firestore();
     const levelName = this.formatLevelName(level);
     const skill = MICRO_SKILLS[topic];
     const resolvedTopic = skill ? skill.name : (topic || 'General English');
 
     // 1. Try to fetch from specialized landing content (NEW)
     try {
-      const landingDoc = await db.collection('micro_skill_landing').doc(topic).get();
-      if (landingDoc.exists) {
-        const landingData = landingDoc.data();
+      const landingData = await CosmosStore.getMicroSkillLanding(topic);
+      if (landingData) {
         console.log(`[LabService] Found specialized landing content for: ${topic}`);
         // Transform to match the schema expected by frontend
         return {
@@ -1588,32 +1632,22 @@ STRICT RULE: Do NOT use the same hooks, starting sentences, or specific scenario
 
   // New method to mark questions as complete
   static async markQuestionsSeen(uid, questionIds) {
-    const db = admin.firestore();
     if (!uid || !questionIds || questionIds.length === 0) return;
-
-    const batch = db.batch();
-    questionIds.forEach(qid => {
-      const ref = db.collection('users').doc(uid).collection('practice_history').doc(qid);
-      batch.set(ref, {
-        timestamp: admin.firestore.FieldValue.serverTimestamp(),
-        completed: true
-      });
-    });
-    await batch.commit();
+    await CosmosStore.markPracticeHistory(uid, questionIds);
   }
 
   // New method to evaluate Integrated Simulation (Part B)
   static async evaluateIntegratedSimulation(questId, studentNotes, studentDraft, targetLevel) {
-    const db = admin.firestore();
-    const questDoc = await db.collection('question_bank').doc(questId).get();
-    if (!questDoc.exists) throw new Error("Quest not found");
-    const quest = questDoc.data();
+    const quest = await QuestionBankStore.getById(questId);
+    if (!quest) throw new Error("Quest not found");
+    LabService.normalizeListeningMissionData(quest);
 
     const prompt = `You are a Senior HKEAA Examiner for Paper 3 (Listening and Integrated Skills).
     Task: Grade the student's submission for the mission: "${quest.title}".
     
     ### MISSION CONTEXT:
     - WRITING TASK: "${quest.integrated_data?.writing_task?.instruction || 'General integrated task'}"
+    - ROLE PROFILE: "${quest.integrated_data?.writing_task?.role_profile || 'Professional school/community coordinator writing to an official audience.'}"
     - TARGET DSE LEVEL: ${targetLevel}
     
     ### SOURCE DATA:
@@ -1630,9 +1664,19 @@ STRICT RULE: Do NOT use the same hooks, starting sentences, or specific scenario
        - Scale linearly based on the provided Marking Key. 
        - 100% points met = 5/5, 80%+ met = 4/5, 60%+ met = 3/5, etc.
        - Use "Positive Marking": Award points for semantic matches.
+       - Precision Rule for bounded KPIs: if a key point includes qualifiers like "under", "below", "maximum", or "at most", the student must preserve that boundary language. Writing only the bare number (e.g. just "five minutes") is NOT full-credit at Level 5 standard.
+       - Threshold Comparator Rule: if the key specifies "over/above/more than", do NOT accept equality-only wording. Example: if the required point is "over five litres", then "five litres" is imprecise and cannot receive full credit.
+       - Correction Trap Rule: when two conflicting values are mentioned (e.g., an earlier date later corrected), award credit only for the final consensus value and call out the correction explicitly in feedback.
+       - Reasoning / Causation: if a Marking Key bullet requires the student to link a rule or deadline to its stated justification in the briefing (e.g. prior complaints), award that bullet only when both the fact and the cause are present; restating the time/rule without the cause does not satisfy that bullet.
+       - Primary vs backup: if a Marking Key bullet states that method A is primary and method B is backup-only, reject answers that treat both as equally important or that present paper/legacy as the main channel when the key requires digital/QR as primary.
+       - Currency completeness (HKD): When a Marking Key bullet concerns Hong Kong dollar amounts, expect currency alongside the figure (HK$, $, HKD, or "dollars") unless the bullet is purely numerical by design; bare integers are imprecise for formal memos.
+       - Named security or operations codes: If the Marking Key names a protocol label (e.g. "Code Orange"), full credit for that bullet requires the student to use that label or explicitly equate their wording to it; correct numbers without the code earn partial credit only if the key allows.
+       - Proper-name spelling: If the Marking Key requires exact spelling of a named person (e.g. "Marcus Thorpe", "Julianne Kwok", "Janice Wong"), penalize serious misspellings or garbled names; minor typos one letter off may receive partial credit at examiner discretion.
+       - Integrated Briefing synthesis: Marking Key bullets that start with "[Audio synthesis — Integrated Briefing only]" (or clearly state they are from the stakeholder briefing only) must be satisfied using facts from the Integrated Briefing audio, not by copying the Data Files alone; if the student only paraphrases documents and misses those briefing-only facts, mark those bullets not met.
     2. **Language (0-5)**: Professionalism, grammar, and variety.
     3. **Organization (0-5)**: Logical flow and structure.
     4. **Appropriacy (0-3)**: Tone and register consistency.
+       - Penalize sign-offs or tone that conflict with the required professional role profile.
     
     ### JSON OUTPUT SCHEMA (STRICT):
     - **CRITICAL**: Escape all double quotes (\\") and newlines (\\n) within strings.
@@ -1654,15 +1698,18 @@ STRICT RULE: Do NOT use the same hooks, starting sentences, or specific scenario
           "documentSource": string
         }
       ],
-      "exemplar5": string, // FULL-PROSE model answer
-      "exemplar5SS": string // FULL-PROSE model answer
+      "exemplar5": string // Level 5 model answer only: ~150–220 words. No second exemplar (saves output tokens).
     }
     
     Return ONLY the JSON response.`;
 
     const result = await GenerativeAIService.generateContent(prompt, {
       model: "ace-it-flash",
-      generationConfig: { responseMimeType: "application/json" }
+      generationConfig: {
+        responseMimeType: "application/json",
+        // One bounded exemplar + checklist JSON (no 5** second exemplar).
+        maxOutputTokens: 4096
+      }
     });
 
     try {
@@ -1679,22 +1726,20 @@ STRICT RULE: Do NOT use the same hooks, starting sentences, or specific scenario
       return {
         content: 1, language: 2, organization: 2, appropriacy: 2,
         totalScore: 7, dseLevel: "3",
-        feedback: "The examiner was unable to process your request due to excessive text length or formatting errors. Please try again with a more concise response.",
+        feedback: "The grading service returned a response that could not be read (often the model output was cut off). Please use \"Restart simulation\" or submit again. If this keeps happening, try a slightly shorter draft or contact support.",
         contentBreakdown: [
-          { point: "Data Integration Engine Offline", met: false, rationale: "The system could not parse the detailed marking key for this mission.", quote: "N/A", documentSource: "System" }
+          { point: "Grading response parse failed", met: false, rationale: "The examiner JSON could not be parsed. This is usually truncated model output, not your draft length.", quote: "N/A", documentSource: "System" }
         ],
-        exemplar5: "Exemplar generation failed during parsing. Please refresh and try again.",
-        exemplar5SS: "Exemplar generation failed during parsing. Please refresh and try again."
+        exemplar5: "Exemplar generation failed during parsing. Please refresh and try again."
       };
     }
   }
 
   // New method to evaluate Data Sprint (Part A)
   static async evaluateDataSprint(questId, answers) {
-    const db = admin.firestore();
-    const questDoc = await db.collection('question_bank').doc(questId).get();
-    if (!questDoc.exists) throw new Error("Quest not found");
-    const quest = questDoc.data();
+    const quest = await QuestionBankStore.getById(questId);
+    if (!quest) throw new Error("Quest not found");
+    LabService.normalizeListeningMissionData(quest);
 
     const sprintTasks = quest.sprint_data?.tasks || [];
     
@@ -1702,9 +1747,9 @@ STRICT RULE: Do NOT use the same hooks, starting sentences, or specific scenario
     const gradingBasis = sprintTasks.map(t => {
         if (t.type === 'TABLE') return { id: t.id, type: t.type, questions: (t.rows || []).map((r, i) => ({ label: r.label, answer: r.answer, student: answers[`${t.id}_${i}`] })) };
         if (t.type === 'LIST' || t.type === 'GAP_FILL_LIST') return { id: t.id, type: t.type, questions: (t.items || []).map((it, i) => ({ label: it.label, answer: it.answer, student: answers[`${t.id}_${i}`] })) };
-        if (t.type === 'MCQ_BATCH') return { id: t.id, type: t.type, questions: (t.questions || []).map((q, i) => ({ question: q.question, answer: q.answer, student: answers[`${t.id}_${i}`] })) };
+        if (t.type === 'MCQ_BATCH') return { id: t.id, type: t.type, questions: (t.questions || []).map((q, i) => ({ question: q.question, answer: q.answer || q.correct_answer, student: answers[`${t.id}_${i}`] })) };
         if (t.type === 'FORM_FILLING') return { id: t.id, type: t.type, questions: (t.fields || []).map((f, i) => ({ label: f.label, answer: f.answer, student: answers[`${t.id}_${i}`] })) };
-        return { id: t.id, type: t.type, question: t.question, answer: t.answer, student: answers[t.id] };
+        return { id: t.id, type: t.type, question: t.question, answer: t.answer || t.correct_answer, student: answers[t.id] };
     });
 
     const prompt = `You are a professional HKDSE English Paper 3 Examiner.
@@ -1714,6 +1759,9 @@ STRICT RULE: Do NOT use the same hooks, starting sentences, or specific scenario
     1. Factual Accuracy: Be strict with numbers, dates, and names, but allow minor spelling errors if the phonetic meaning is clear (HKEAA "positive marking" principle).
     2. Format: "17th July" and "July 17" are equally correct.
     3. MCQ: Must match exactly.
+    4. Correction Trap Detection (Miss Janie mode): If the student uses an earlier value that was later corrected in the script (for example "12 booths" later corrected to "14 booths", or "16 June" corrected to "18 June"), mark it wrong and explain that the speaker issued a correction and the final consensus is required.
+    5. Threshold Comparator Strictness: For bounded thresholds (e.g. "over 20 mm/hour"), equality-only answers (e.g. "20mm" or "20") are wrong.
+    6. Unit Precision: For technical thresholds, missing unit/time basis (e.g. leaving out "per hour") is wrong.
 
     ### AUDIO TRANSCRIPT (SOURCE):
     ${quest.sprint_data?.audio_transcript || 'Audio transcript missing.'}
@@ -1733,7 +1781,7 @@ STRICT RULE: Do NOT use the same hooks, starting sentences, or specific scenario
           "studentAnswer": string,
           "correctAnswer": string,
           "isCorrect": boolean,
-          "rationale": string, // Direct quote from script explaining the answer
+          "rationale": string, // Direct quote from script explaining the answer; if wrong due to correction trap, include a specific caution tip
           "startTime": number // Estimated start time in seconds (e.g. 120)
         }
       ]
@@ -1743,7 +1791,10 @@ STRICT RULE: Do NOT use the same hooks, starting sentences, or specific scenario
 
     const result = await GenerativeAIService.generateContent(prompt, {
       model: "ace-it-flash",
-      generationConfig: { responseMimeType: "application/json" }
+      generationConfig: {
+        responseMimeType: "application/json",
+        maxOutputTokens: 4096
+      }
     });
 
     try {

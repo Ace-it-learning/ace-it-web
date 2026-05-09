@@ -86,7 +86,7 @@ const ListeningBriefing = () => {
         },
         {
             id: 'B',
-            title: 'Part B: Integrated Simulation',
+            title: 'Part B: Integrated Skills',
             icon: Layers,
             color: 'bg-rose-100 text-rose-700 border-rose-200',
             hoverColor: 'hover:border-rose-400 hover:shadow-rose-100',
@@ -139,25 +139,23 @@ const ListeningBriefing = () => {
 
                 <div className="max-w-5xl mx-auto relative z-10">
                     <button
-                        onClick={() => navigate('/dashboard')}
+                        onClick={() => navigate('/dashboard', {
+                            state: { openRoadmap: 'ENGLISH', roadmapFilter: 'LISTENING' }
+                        })}
                         className="mb-4 text-white/80 hover:text-white flex items-center gap-2 transition-colors font-bold text-sm"
                     >
                         ← Back to Roadmap
                     </button>
 
-                    <div className="flex items-center gap-4 mb-2">
-                        <span className="px-3 py-1 bg-white/10 backdrop-blur-md rounded-full text-[10px] font-black tracking-widest uppercase border border-white/20">
-                            HKDSE Simulator
-                        </span>
-                        <span className="px-3 py-1 bg-amber-500/20 text-amber-100 rounded-full text-[10px] font-black tracking-widest uppercase border border-amber-500/30 flex items-center gap-1">
+                    <div className="flex flex-wrap items-center gap-3 mb-2">
+                        <h1 className="text-3xl md:text-5xl font-black tracking-tight">
+                            {questData.title || "Listening Quest"}
+                        </h1>
+                        <span className="shrink-0 px-3 py-1 bg-amber-500/20 text-amber-100 rounded-full text-[10px] font-black tracking-widest uppercase border border-amber-500/30 inline-flex items-center gap-1">
                             <Star size={10} className="fill-current" /> Level {targetLevel}
                         </span>
                     </div>
-
-                    <h1 className="text-3xl md:text-5xl font-black tracking-tight mb-2">
-                        {questData.title || "Listening Quest"}
-                    </h1>
-                    <p className="text-lg text-white/80 max-w-2xl font-medium">
+                    <p className="text-lg text-white/80 font-medium whitespace-nowrap overflow-x-auto max-w-full [scrollbar-width:thin]">
                         {questData.description || "Master the raw skills of Information Retrieval and Data Integration."}
                     </p>
                 </div>
@@ -220,26 +218,20 @@ const ListeningBriefing = () => {
                     </div>
 
 
-                    <div className="p-6 flex flex-col md:flex-row items-center justify-center gap-6 bg-slate-50/50">
-
-
-                        <div className="flex flex-col items-center md:items-end">
-                            <div className="text-xs font-black text-slate-400 uppercase tracking-widest mb-4">
-                                Reward: <span className="text-indigo-600">+{targetXp} XP</span> &bull; Time: <span className="text-rose-600">{selectedMode === 'A' ? '~10 Mins' : '~60 Mins'}</span>
-                            </div>
-                            <button
-                                onClick={handleStart}
-                                disabled={!selectedMode}
-                                className={`
-                                    px-12 py-4 rounded-2xl font-black text-lg transition-all flex items-center justify-center gap-3 shadow-xl
-                                    ${selectedMode 
-                                        ? 'bg-slate-900 text-white hover:bg-black hover:scale-105 active:scale-95 shadow-slate-200' 
-                                        : 'bg-slate-200 text-slate-400 cursor-not-allowed shadow-none'}
-                                `}
-                            >
-                                Start Simulator <ArrowRight size={20} />
-                            </button>
-                        </div>
+                    <div className="p-6 flex items-center justify-center bg-slate-50/50">
+                        <button
+                            onClick={handleStart}
+                            disabled={!selectedMode}
+                            className={`
+                                px-12 py-4 rounded-2xl font-black text-lg transition-all flex items-center justify-center gap-3 shadow-xl
+                                ${selectedMode 
+                                    ? 'bg-slate-900 text-white hover:bg-black hover:scale-105 active:scale-95 shadow-slate-200' 
+                                    : 'bg-slate-200 text-slate-400 cursor-not-allowed shadow-none'}
+                            `}
+                        >
+                            {!selectedMode ? 'Select mode' : selectedMode === 'A' ? 'Start Part A' : 'Start Part B'}
+                            <ArrowRight size={20} />
+                        </button>
                     </div>
                 </div>
             </div>

@@ -3,6 +3,7 @@ const router = express.Router();
 const admin = require('firebase-admin');
 const UserProfileService = require('../services/UserProfileService');
 const GenerativeAIService = require('../services/GenerativeAIService');
+const { getContainer } = require('../db/cosmos');
 
 /**
  * Debugging & Developer Tools
@@ -26,12 +27,14 @@ router.post('/reset_user', async (req, res) => {
 
         // 3. Delete Root Collections checks (Just in case)
         const deleteQuery = async (collection, field) => {
-            const snap = await admin.firestore().collection(collection).where(field, '==', uid).get();
-            if (snap.empty) return;
-            const batch = admin.firestore().batch();
-            snap.docs.forEach(d => batch.delete(d.ref));
-            await batch.commit();
-            console.log(`[DEBUG] Deleted ${snap.size} docs from ${collection}`);
+            const c = await getContainer(collection, '/pk');
+            const result = await c.items.query({
+                query: `SELECT * FROM c WHERE c.${field} = @uid`,
+                parameters: [{ name: "@uid", value: uid }]
+            }).fetchAll();
+            const docs = result.resources || [];
+            await Promise.all(docs.map((d) => c.item(d.id, d.pk || uid).delete().catch(() => null)));
+            console.log(`[DEBUG] Deleted ${docs.length} docs from ${collection}`);
         };
 
         await deleteQuery('exam_attempts', 'userId');
@@ -50,8 +53,7 @@ router.get('/check-user/:email', async (req, res) => {
     try {
         const userRecord = await admin.auth().getUserByEmail(email);
         const uid = userRecord.uid;
-        const userDoc = await admin.firestore().collection('users').doc(uid).get();
-        const userData = userDoc.exists ? userDoc.data() : null;
+        const userData = await UserProfileService.getProfile(uid);
 
         res.json({
             success: true,

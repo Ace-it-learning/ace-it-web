@@ -1,0 +1,95 @@
+{
+  "id": "listening_weekly_23",
+  "title": "Greater Bay Study & Mobility",
+  "description": "University–employer briefing: cross-border placement contracts, subsidy window, Putonghua clinic slots.",
+  "topic": "Careers / Education",
+  "type": "listening_mission",
+  "paper": "Listening",
+  "subject": "English",
+  "level": "5",
+  "is_approved": true,
+  "factory_template": false,
+  "created_at": { "_seconds": 1715760000, "_nanoseconds": 0 },
+  "prediction_metadata": {
+    "topic_name": "Week 23: Greater Bay Study & Mobility",
+    "sub_topics": [
+      { "id": "st1", "name": "Subsidy cap", "category": "Key detail", "is_distractor": false, "hint": "Monthly RMB amount." },
+      { "id": "st2", "name": "Contract clause", "category": "Strategic capture", "is_distractor": false, "hint": "Overtime threshold hours." },
+      { "id": "st3", "name": "High-speed voucher lottery", "category": "Distractor", "is_distractor": true, "hint": "Not part of this contract pack." },
+      { "id": "st4", "name": "Clinic enrolment deadline", "category": "Key detail", "is_distractor": false, "hint": "Date for Putonghua business hour booking." }
+    ]
+  },
+  "sprint_data": {
+    "audio_transcript": "[SCENE START]\n[Conference centre hum]\nHost: Placement contract corrections—listen.\nHost: Monthly living subsidy for Hong Kong students caps at 3,200 RMB—not 3,000—update Clause 4.\nLegal: Overtime daily threshold corrected to 2.5 hours before premium pay, not 2.0.\nCareers: Putonghua business clinic bookings close 14 March, 5:00 p.m.; walk-ins suspended.\nHR: Shenzhen host company code SZ-17B replaces deprecated SZ-14 on badges—must match turnstile logs.\nFinance: Reimbursement claims within 12 working days; portal locks after day 13 at noon.\nHost: Emergency contact remains +86-755-2600-9911—repeat 9911, not 9901 misprinted in appendix.\n[SCENE END]",
+    "tasks": [
+      {
+        "id": "t1_table",
+        "type": "TABLE",
+        "label": "Contract Patch",
+        "rows": [
+          { "label": "Monthly subsidy cap", "answer": "3,200 RMB", "placeholder": "Amount" },
+          { "label": "Daily overtime threshold", "answer": "2.5 hours", "placeholder": "Hours" },
+          { "label": "Company code on badge", "answer": "SZ-17B", "placeholder": "Code" },
+          { "label": "Reimbursement deadline window", "answer": "12 working days", "placeholder": "Duration" }
+        ]
+      },
+      {
+        "id": "t2_form",
+        "type": "FORM_FILLING",
+        "question": "Clinics and contacts",
+        "fields": [
+          { "label": "Putonghua clinic booking closes", "answer": "14 March, 5:00 p.m.", "placeholder": "Date/time" },
+          { "label": "Walk-ins status", "answer": "suspended", "placeholder": "Status" },
+          { "label": "Emergency line (correct)", "answer": "+86-755-2600-9911", "placeholder": "Phone" },
+          { "label": "Portal lock after day 13", "answer": "noon", "placeholder": "Time" }
+        ]
+      },
+      {
+        "id": "t3_mcq",
+        "type": "MCQ_BATCH",
+        "label": "Checks",
+        "questions": [
+          {
+            "question": "Appendix misprint emergency number ends in:",
+            "options": ["A. 9911", "B. 9901", "C. 755", "D. 2600"],
+            "answer": "B"
+          },
+          {
+            "question": "Overtime premium after:",
+            "options": ["A. 2.0 h", "B. 2.5 h daily", "C. 8 h weekly", "D. 1 h"],
+            "answer": "B"
+          }
+        ]
+      }
+    ]
+  },
+  "integrated_data": {
+    "audio_transcript": "[INTEGRATED BRIEFING START]\nCompliance: Host must issue bilingual weekly hour logs signed by student and line manager—PDF, not photo scans.\nWellbeing: If identity-related distress triggered, ring ext. 404 before escalating publicly on socials—new protocol.\nPolicy: Data may feed anonymous placement quality index; no individual performance ranking exported to HK campus GPA.\n[INTEGRATED BRIEFING END]",
+    "notetaking_fields": [
+      { "id": "w1", "label": "Logging format", "placeholder": "PDF signatures..." },
+      { "id": "w2", "label": "Distress protocol", "placeholder": "EXT/ socials..." },
+      { "id": "w3", "label": "Data ethics", "placeholder": "Aggregate only..." }
+    ],
+    "data_file": [
+      { "id": "e1", "type": "email", "title": "Clause 4", "content": "Subsidy cap 3,200 RMB effective immediately. Replace 3,000 references." },
+      { "id": "e2", "type": "minutes", "title": "Wellbeing", "content": "Ext. 404 first contact before social media escalation." },
+      { "id": "e3", "type": "poster", "title": "Clinic", "content": "BOOK PUTONGHUA CLINIC BY 14 MAR 5PM" }
+    ],
+    "writing_task": {
+      "instruction": "As Student Placement Rep, email incoming interns summarising corrected subsidy, overtime threshold, booking deadline, and emergency line—emphasising contract literacy and wellbeing protocol.",
+      "format": "Email",
+      "role_profile": "Peer officer; factual, supportive tone.",
+      "word_count": "200-250",
+      "marking_criteria": "Accuracy (Content), Register (Language), Structure (Organisation), Duty of care (Appropriacy)"
+    },
+    "marking_key": [
+      "3,200 RMB cap (not 3,000).",
+      "Overtime threshold 2.5 hours daily before premium.",
+      "Badge code SZ-17B for turnstiles.",
+      "Reimbursement ≤12 working days; portal noon lock day 13.",
+      "Putonghua clinic booking 14 March 5:00 p.m.; walk-ins suspended.",
+      "Emergency +86-755-2600-9911; warn about 9901 misprint.",
+      "Integrated optional: PDF hour logs; ext. 404 before social escalation; no individual GPA export."
+    ]
+  }
+}

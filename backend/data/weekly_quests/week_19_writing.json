@@ -1,0 +1,73 @@
+{
+  "type": "WRITING",
+  "topic": "writing_weekly",
+  "title": "Implementing low-carbon operations, waste separation, and student-led green audits in Hong Kong secondary schools",
+  "reading_passage": "Role: Senior Form student columnist.\nAudience: Students, teachers, and parents reading the school online magazine.\nPurpose: Write an opinion piece on whether Hong Kong secondary schools should make student-led green audits compulsory for Form 4–6, weighing educational value against HKDSE workload.\n\nContext: Your school pilots termly audits across utilities, waste streams, and procurement. Some celebrate authentic inquiry; others argue seniors cannot spare the time.",
+  "conceptual_explanation": "HKDSE English Language Paper 2: genre awareness, audience, development of ideas, and linguistic accuracy/range. Premium responses integrate HK institutional realities (ESG, waste charging discourse) without drifting from the prompt.",
+  "key_points": [
+    "State a clear thesis with concession.",
+    "Balance civic education with opportunity cost for DSE candidates.",
+    "Use specificity: audits vs symbolic events.",
+    "Organise argument with cohesive devices and purposeful conclusion."
+  ],
+  "marking_logic": {
+    "hkeaa_paper2_dimensions": {
+      "content": "Relevance, insight, and development of ideas; engagement with the rhetorical situation; substantiation.",
+      "language": "Accuracy and appropriacy; range and precision of vocabulary and grammar.",
+      "organisation": "Coherence, cohesion, paragraphing, and genre control."
+    },
+    "full_marks_criteria": [
+      "Content: nuanced argument about compulsory audits with HK school context (resources, HKDSE pressure).",
+      "Language: sustained register; varied syntax; precise lexis (e.g., accountability, performativity, baselines).",
+      "Organisation: logical sequencing; effective intro/conclusion; integrated examples.",
+      "Evaluation: addresses counterarguments (time poverty, inequality between schools)."
+    ],
+    "key_phrases": [
+      "lived curriculum",
+      "performative compliance",
+      "opportunity cost",
+      "data-informed governance",
+      "embedded accountability"
+    ],
+    "genre_requirements": {
+      "format": "Opinion article / school magazine column",
+      "essential_elements": ["Title", "Hook", "Balanced analysis", "Measured recommendation"],
+      "tone": "Persuasive yet respectful to multiple stakeholders"
+    }
+  },
+  "interactive_tasks": [
+    {
+      "id": "lvl_4",
+      "type": "MODEL_ANSWER",
+      "question": "Model Answer (Level 4)",
+      "answer": "Green Audits for Senior Forms?\n\nOur school is trying green audits. Some students like them because we learn about saving electricity. Others say Form 6 is too busy for the HKDSE.\n\nI think audits are useful because teamwork can improve communication. We can also learn to save energy at home.\n\nBut the biggest problem is time. If audits take many lessons, students will feel angry because we need to revise.\n\nSo I think schools should make audits optional for Form 6, or keep them very short. This protects both studies and the environment.",
+      "explanation": "Addresses task with basic pros/cons; simple vocabulary and structures; paragraphing visible—typical Level 4."
+    },
+    {
+      "id": "lvl_5",
+      "type": "MODEL_ANSWER",
+      "question": "Model Answer (Level 5)",
+      "answer": "Measure, Then Teach: The Case for Compulsory Green Audits\n\nHong Kong now speaks daily about waste charging and rising tariffs; yet many schools still confuse posters for policy. I support compulsory student-led audits for Forms 4–6 only where they are lightweight, integrated, and publicly reported—otherwise they will become another performative checklist.\n\nEducationally, audits are interdisciplinary assessments: students interpret invoices, negotiate with vendors, and present findings—precisely the communicative and problem-solving habits the HKDSE claims to certify. The genuine risk is timetable crowding. Mandatory audits that bolt on extra meetings punish cash-strapped schools twice—once for money, once for time.\n\nTherefore, leadership should embed audits into existing Liberal Studies or Science inquiries and publish compact dashboards each term. We need measurement without medals; otherwise sustainability stays decoration, not discipline.",
+      "explanation": "Clear stance with conditions; HK references; counterargument; cohesive devices—Level 5."
+    },
+    {
+      "id": "lvl_5s",
+      "type": "MODEL_ANSWER",
+      "question": "Model Answer (Level 5*)",
+      "answer": "Why Our School Must Count What It Consumes\n\nCitizenship cannot be taught only through slogans when adolescents will inherit both a denser city and costlier electrons. Compulsory audits are not ‘extra work’—they are an insistence that institutions model accountability before preaching it.\n\nOpponents invoke the HKDSE calendar honestly. The response is structural: swap passive life-wide learning blocks for guided measurement cycles; align English lessons with editing public memos and hedged claims—skills examiners reward anyway.\n\nEquity matters: poorer campuses deserve template tools and proxy indicators, not unfair comparison with solar-subsidised rivals. Audits should be mandatory in principle, flexible in method: evidence of inquiry, not identical gadgets.",
+      "explanation": "Strong voice; integrates equity + curriculum—high Level 5*."
+    },
+    {
+      "id": "lvl_5ss",
+      "type": "MODEL_ANSWER",
+      "question": "Model Answer (Level 5**)",
+      "answer": "The Meter on the Wall: Audits as Institutional Honesty\n\nWe scrutinise unseen texts with forensic attention but treat our campus energy profile as hearsay. That cognitive dissonance is ethically untenable: if literacy includes evaluating evidence in print, it must include evidence about the resources our assembly hall burns through on Parents’ Night.\n\nCompulsion matters because optional virtue rarely survives July timetables. The audit I support is not a punishment for seniors but a ritual of collective numeracy: publish kilowatt-hours per pupil, litres of cooking oil recovered, paper avoided—small integers that embarrass slack behaviour faster than moral theatre.\n\nYes, the HKDSE exerts gravitational force. The answer is integration, not abandonment: fewer ceremonial assemblies, more peer-verified figures; fewer vague ‘green weeks’, more transparent deltas term on term. Let schools model the epistemology we teach: claim, warrant, data—exactly the architecture of Paper 2 argumentation.\n\nAudit my workload if you must; audit our footprint first. Integrity without measurement is a myth.",
+      "explanation": "Sophisticated metaphor and synthesis; explicit HKDSE linkage; elegant control—Level 5** descriptors for Content, Language, Organisation."
+    }
+  ],
+  "success_feedback": "Compare banded models: premium writing integrates audience, evidence, and evaluative language.",
+  "suggested_next_steps": [
+    "Rewrite your introduction using one metaphor and two discipline-specific terms.",
+    "Peer-edit using Paper 2 mark scheme descriptors."
+  ]
+}

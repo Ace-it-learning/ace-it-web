@@ -1,21 +1,23 @@
-{
-  "type": "SPEAKING",
-  "topic": "speaking_weekly",
-  "title": "The Rise of Vertical Farming as a Solution to Urban Food Security",
-  "topic_description": "With global populations soaring and arable land rapidly depleting due to climate change and relentless urbanization, food security has emerged as a pressing geopolitical crisis. Vertical farming—the practice of growing crops in vertically stacked layers using controlled-environment agriculture (CEA) technology such as hydroponics and aeroponics—has been heralded as a revolutionary solution. By utilizing artificial lighting, advanced climate control, and a fraction of the water used in traditional farming, vertical farms can theoretically operate in any urban setting, drastically reducing 'food miles'. However, critics point to the exorbitant energy consumption, carbon footprint of power grids, and high initial capital required as major deterrents to its widespread, equitable adoption.",
-  "instructions": "Part A Group Discussion: You are members of a youth advisory council focusing on urban sustainability. You have 10 minutes to prepare and 8 minutes to discuss (for a group of 4 candidates). You must interact effectively, demonstrating advanced turn-taking, active listening, and the ability to extend and evaluate the arguments of your peers.",
-  "discussion_points": [
-    "The environmental and economic viability of vertical farming compared to traditional agricultural practices on a global scale.",
-    "The feasibility and spatial challenges of integrating vertical farming into Hong Kong's hyper-dense landscape, such as revitalizing abandoned industrial buildings in areas like Kwun Tong or Kwai Chung.",
-    "Strategic initiatives the government and educational institutions must implement to foster agritech innovation and convince the local public to embrace non-traditionally grown produce."
-  ],
-  "individual_response_questions": [
-    "Some critics argue that vertical farming is merely a techno-utopian trend that produces premium greens for the wealthy while entirely failing to address the systemic root causes of global food inequity. To what extent do you agree with this view?",
-    "If society eventually transitions to relying predominantly on soil-less, hyper-controlled urban agriculture, how might this fundamental detachment from traditional nature and soil impact humanity's broader relationship with the environment?"
-  ],
-  "success_feedback": "Well done! Achieving a Level 5** requires seamlessly synthesizing complex socioeconomic factors, deploying highly nuanced vocabulary (e.g., 'techno-utopian', 'arable depletion', 'paradigm shift'), and demonstrating exceptional interactional competence through strategic questioning and profound elaboration on peers' ideas.",
-  "suggested_next_steps": [
-    "Try Writing challenge: Draft a 400-word editorial for an English newspaper arguing for or against heavy government subsidies for local agritech startups.",
-    "Try Listening challenge: Listen to a TED Talk on urban agriculture and practice taking concise, structural notes on the speaker's counter-arguments."
-  ]
-}
+[
+  {
+    "type": "SPEAKING",
+    "topic": "speaking_weekly",
+    "title": "The Rise of Vertical Farming as a Solution to Urban Food Security",
+    "topic_description": "With global populations soaring and arable land rapidly depleting due to climate change and relentless urbanization, food security has emerged as a pressing geopolitical crisis. Vertical farming—the practice of growing crops in vertically stacked layers using controlled-environment agriculture (CEA) technology such as hydroponics and aeroponics—has been heralded as a revolutionary solution. By utilizing artificial lighting, advanced climate control, and a fraction of the water used in traditional farming, vertical farms can theoretically operate in any urban setting, drastically reducing 'food miles'. However, critics point to the exorbitant energy consumption, carbon footprint of power grids, and high initial capital required as major deterrents to its widespread, equitable adoption.",
+    "instructions": "Part A Group Discussion: You are members of a youth advisory council focusing on urban sustainability. You have 10 minutes to prepare and 8 minutes to discuss (for a group of 4 candidates). You must interact effectively, demonstrating advanced turn-taking, active listening, and the ability to extend and evaluate the arguments of your peers.",
+    "discussion_points": [
+      "The environmental and economic viability of vertical farming compared to traditional agricultural practices on a global scale.",
+      "The feasibility and spatial challenges of integrating vertical farming into Hong Kong's hyper-dense landscape, such as revitalizing abandoned industrial buildings in areas like Kwun Tong or Kwai Chung.",
+      "Strategic initiatives the government and educational institutions must implement to foster agritech innovation and convince the local public to embrace non-traditionally grown produce."
+    ],
+    "individual_response_questions": [
+      "Some critics argue that vertical farming is merely a techno-utopian trend that produces premium greens for the wealthy while entirely failing to address the systemic root causes of global food inequity. To what extent do you agree with this view?",
+      "If society eventually transitions to relying predominantly on soil-less, hyper-controlled urban agriculture, how might this fundamental detachment from traditional nature and soil impact humanity's broader relationship with the environment?"
+    ],
+    "success_feedback": "Well done! Achieving a Level 5** requires seamlessly synthesizing complex socioeconomic factors, deploying highly nuanced vocabulary (e.g., 'techno-utopian', 'arable depletion', 'paradigm shift'), and demonstrating exceptional interactional competence through strategic questioning and profound elaboration on peers' ideas.",
+    "suggested_next_steps": [
+      "Try Writing challenge: Draft a 400-word editorial for an English newspaper arguing for or against heavy government subsidies for local agritech startups.",
+      "Try Listening challenge: Listen to a TED Talk on urban agriculture and practice taking concise, structural notes on the speaker's counter-arguments."
+    ]
+  }
+]

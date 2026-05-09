@@ -10,6 +10,7 @@ import { LoadingPage, GradingOverlay } from '../../components/shared';
 import UpgradeModal from '../../components/common/UpgradeModal';
 import MockCountdownTimer from '../../components/utils/MockCountdownTimer';
 import { motion, AnimatePresence } from 'framer-motion';
+import { isCheatEnabled } from '../../utils/devAccess';
 
 const SpeakingMockStudio = () => {
     const { paperId } = useParams();
@@ -47,7 +48,7 @@ const SpeakingMockStudio = () => {
     const collectedTranscript = useRef("");
     const lastSpeakerRef = useRef(null);
     const isTurnInProgressRef = useRef(false);
-    const isCheatMode = user?.email === 'fungtam@gmail.com';
+    const isCheatMode = isCheatEnabled(user, profile);
     const activeTurnLoopId = useRef(0);
     const interactionIndexRef = useRef(0);
     const isTransitioning = useRef(false);

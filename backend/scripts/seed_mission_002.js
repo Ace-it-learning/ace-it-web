@@ -1,14 +1,6 @@
-const admin = require('firebase-admin');
 const path = require('path');
-
-// Initialize Firebase Admin
-if (!admin.apps.length) {
-    const serviceAccount = require(path.join(__dirname, '..', 'serviceAccountKey.json'));
-    admin.initializeApp({
-        credential: admin.credential.cert(serviceAccount)
-    });
-}
-const db = admin.firestore();
+require('dotenv').config({ path: path.join(__dirname, '..', '.env') });
+const QuestionBankStore = require('../services/QuestionBankStore');
 
 const mission_002_data = {
     title: 'The Anti-Scam Shield',
@@ -120,8 +112,11 @@ const mission_002_data = {
 async function seed() {
     const targetId = 'listening_mission_2'; // Official ID
     try {
-        await db.collection('question_bank').doc(targetId).set(mission_002_data, { merge: true });
-        console.log("✅ Success: Listening Mission #002 ('The Anti-Scam Shield') seeded.");
+        await QuestionBankStore.upsertById(targetId, {
+            ...mission_002_data,
+            created_at: new Date().toISOString()
+        }, { merge: true });
+        console.log("✅ Success: Listening Mission #002 seeded to Cosmos.");
         process.exit(0);
     } catch (error) {
         console.error("❌ Error seeding mission:", error);

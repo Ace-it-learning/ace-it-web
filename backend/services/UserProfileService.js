@@ -1,17 +1,15 @@
-const admin = require('firebase-admin');
 const { MICRO_SKILLS } = require('../constants/microSkills');
 const { MATHS_MICRO_SKILLS } = require('../constants/mathsMicroSkills');
 const { DSE_SCORING, accuracyToLevel, laplaceSmooth, calculateWeightedEnglishGrade, calculateWeightedMathGrade } = require('../constants/dseScoring');
 const CacheService = require('./CacheService');
+const { createRepositories } = require('../repositories');
+const CosmosStore = require('./CosmosStore');
 
 /**
  * Service to manage User Profiles in Firestore
  * Replacing the legacy db.json file storage.
  */
 class UserProfileService {
-    get db() {
-        return admin.firestore();
-    }
 
     /**
      * Deeply removes 'undefined' values from an object to prevent Firestore crashes.
@@ -27,10 +25,6 @@ class UserProfileService {
             }
         });
         return result;
-    }
-
-    get usersCollection() {
-        return this.db.collection('users');
     }
 
     /**
@@ -53,57 +47,44 @@ class UserProfileService {
      */
     async getProfile(uid) {
         if (!uid || uid === 'guest') return this.getGuestProfile();
+        const { userRepo } = createRepositories();
+        const cacheKey = `profile_${uid}`;
+        const cached = CacheService.getDbCache(cacheKey);
+        if (cached) return cached;
 
-        try {
-            const cacheKey = `profile_${uid}`;
-            const cached = CacheService.getDbCache(cacheKey);
-            if (cached) return cached;
-
-            const [userDoc, statsDoc] = await Promise.all([
-                this.usersCollection.doc(uid).get(),
-                this.usersCollection.doc(uid).collection('stats').doc('main').get()
-            ]);
-
-            if (!userDoc.exists) {
-                console.log(`[UserProfileService] New user detected: ${uid}. Provisioning default profile...`);
-                // Auto-provision a basic profile
-                const defaultProfile = {
-                    nickname: "Student",
-                    role: 'student',
-                    is_new_student: true,
-                    status: 'active',
-                    createdAt: admin.firestore.FieldValue.serverTimestamp(),
-                    updatedAt: admin.firestore.FieldValue.serverTimestamp(),
-                    equipped_tutor: 'default_janie',
-                    equipped_student_avatar: 's_bookworm'
-                };
-                await this.usersCollection.doc(uid).set(defaultProfile);
-
-                const stats = { xp: 0, level: 1, learningTime: 0 };
-                await this.usersCollection.doc(uid).collection('stats').doc('main').set(stats);
-
-                const result = { ...defaultProfile, ...stats, uid };
-                CacheService.setDbCache(cacheKey, result);
-                return result;
-            }
-
-            const userData = userDoc.data();
-            const stats = statsDoc.exists ? statsDoc.data() : { xp: 0, level: 1, learningTime: 0 };
-
-            const result = {
-                ...userData,
-                ...stats,
-                uid,
-                equipped_tutor: userData.equipped_tutor || 'default_janie',
-                equipped_student_avatar: userData.equipped_student_avatar || 's_bookworm',
-                equipped_frame: userData.equipped_frame || null
+        const userData = await userRepo.getProfile(uid);
+        const stats = await userRepo.getStats(uid) || { xp: 0, level: 1, learningTime: 0 };
+        if (!userData) {
+            const now = new Date().toISOString();
+            const defaultProfile = {
+                nickname: "Student",
+                role: "student",
+                is_new_student: true,
+                status: "active",
+                createdAt: now,
+                updatedAt: now,
+                equipped_tutor: "default_janie",
+                equipped_student_avatar: "s_bookworm",
+                subscription_tier: "free",
+                subscribed_subjects: ["english", "maths"]
             };
+            await userRepo.upsertProfile(uid, defaultProfile);
+            await userRepo.ensureStats(uid, { xp: 0, level: 1, learningTime: 0 });
+            const result = { ...defaultProfile, xp: 0, level: 1, learningTime: 0, uid };
             CacheService.setDbCache(cacheKey, result);
             return result;
-        } catch (error) {
-            console.error(`[UserProfileService] Error fetching profile for ${uid}:`, error);
-            throw error;
         }
+
+        const result = {
+            ...userData,
+            ...stats,
+            uid,
+            equipped_tutor: userData.equipped_tutor || 'default_janie',
+            equipped_student_avatar: userData.equipped_student_avatar || 's_bookworm',
+            equipped_frame: userData.equipped_frame || null
+        };
+        CacheService.setDbCache(cacheKey, result);
+        return result;
     }
 
     /**
@@ -111,112 +92,43 @@ class UserProfileService {
      */
     async createOrUpdateProfile(uid, data) {
         if (!uid || uid === 'guest') return null;
-
         CacheService.invalidateUserDbCache(uid);
-
-        const { nickname, grade, school, preferredLanguage, photoURL, email, displayName, subscription_tier } = data;
-
-        // Fields to update in the main document
-        const profileUpdate = {
-            updatedAt: admin.firestore.FieldValue.serverTimestamp(),
+        const { userRepo } = createRepositories();
+        const existing = await userRepo.getProfile(uid);
+        const now = new Date().toISOString();
+        const cleanInput = this.cleanData(data || {});
+        const profilePatch = {
+            ...cleanInput,
+            updatedAt: now,
+            subscription_tier: cleanInput.subscription_tier || existing?.subscription_tier || 'free',
+            subscribed_subjects: cleanInput.subscribed_subjects || existing?.subscribed_subjects || ['english', 'maths'],
+            parent_report_enabled: cleanInput.parent_report_enabled ?? existing?.parent_report_enabled ?? false
         };
 
-        // Only set if provided (merge logic handled by Firestore set with merge: true)
-        if (nickname) profileUpdate.nickname = nickname;
-        if (grade) profileUpdate.grade = grade;
-        if (school) profileUpdate.school = school;
-        if (preferredLanguage) profileUpdate.preferredLanguage = preferredLanguage;
-        if (photoURL) profileUpdate.photoURL = photoURL;
-        if (email) profileUpdate.email = email;
-        if (subscription_tier) profileUpdate.subscription_tier = subscription_tier;
-        if (displayName) profileUpdate.displayName = displayName;
-        if (data.gender) profileUpdate.gender = data.gender;
-        if (data.targetGradeEng) profileUpdate.targetGradeEng = data.targetGradeEng;
-        if (data.targetGradeChi) profileUpdate.targetGradeChi = data.targetGradeChi;
-        if (data.targetGradeMath) profileUpdate.targetGradeMath = data.targetGradeMath;
-        if (data.dreamSubject) profileUpdate.dreamSubject = data.dreamSubject;
-        if (data.electives) profileUpdate.electives = data.electives;
-
-        // Handle student status flags
-        if (data.is_new_student !== undefined) profileUpdate.is_new_student = data.is_new_student;
-        if (data.status) profileUpdate.status = data.status;
-        else if (data.is_new_student === false) profileUpdate.status = 'active';
-
-        // --- SUBSCRIPTION & ANTI-ABUSE FIELDS ---
-        // Initialize these if they don't exist
-        const defaultTier = 'free';
-        const defaultSubjects = ['english', 'maths'];
-
-        // We use set with merge: true, but for arrays/objects we might want to be careful.
-        // If the user already has a tier, don't overwrite it with 'free' unless explicitly requested.
-        // For a new profile, these will be set.
-        profileUpdate.subscription_tier = data.subscription_tier || defaultTier;
-        profileUpdate.subscribed_subjects = data.subscribed_subjects || defaultSubjects;
-
-        if (!data.active_devices) {
-            profileUpdate.active_devices = []; // Array of {fingerprint, name, lastSeen}
+        if (!existing) {
+            profilePatch.createdAt = now;
+            profilePatch.is_new_student = cleanInput.is_new_student ?? true;
+            profilePatch.status = cleanInput.status || 'active';
+            profilePatch.nickname = profilePatch.nickname || 'Student';
+            profilePatch.role = profilePatch.role || 'student';
+            profilePatch.equipped_tutor = profilePatch.equipped_tutor || 'default_janie';
+            profilePatch.equipped_student_avatar = profilePatch.equipped_student_avatar || 's_bookworm';
         }
 
-        if (!data.usage_stats) {
-            profileUpdate.usage_stats = {
-                month: new Date().toISOString().substring(0, 7), // YYYY-MM
-                quests: {}, // { [questId]: { questions: number } }
-                mock_exams: { count: 0, attempts: [] }
-            };
-        }
+        await userRepo.upsertProfile(uid, profilePatch);
+        const stats = await userRepo.ensureStats(uid, {
+            xp: existing ? 0 : 50,
+            level: 1,
+            learningTime: 0,
+            streakDays: 0,
+            lastStudyDate: now
+        });
 
-        // --- PARENTS OVERLOOK ---
-        const userDoc = await this.usersCollection.doc(uid).get();
-        const userData = userDoc.exists ? userDoc.data() : {};
-
-        if (data.parent_email !== undefined) profileUpdate.parent_email = data.parent_email;
-        if (data.parent_report_enabled !== undefined) profileUpdate.parent_report_enabled = data.parent_report_enabled;
-
-        // Only set default if not already present in payload AND not already in DB
-        if (!data.hasOwnProperty('parent_report_enabled') && userData.parent_report_enabled === undefined) {
-            profileUpdate.parent_report_enabled = false;
-        }
-
-        // If creating new, add createdAt
-        if (!userDoc.exists) {
-            profileUpdate.createdAt = admin.firestore.FieldValue.serverTimestamp();
-            profileUpdate.is_new_student = true;
-            profileUpdate.status = 'active';
-        }
-
-        try {
-            const cleanProfile = this.cleanData(profileUpdate);
-            await this.usersCollection.doc(uid).set(cleanProfile, { merge: true });
-
-            // Ensure stats doc exists
-            const statsRef = this.usersCollection.doc(uid).collection('stats').doc('main');
-            const statsDoc = await statsRef.get();
-            if (!statsDoc.exists) {
-                // Award 50 XP for completing Onboarding
-                await statsRef.set({
-                    xp: 50, // Onboarding Bonus
-                    level: 1,
-                    learningTime: 0,
-                    streakDays: 0,
-                    lastStudyDate: admin.firestore.FieldValue.serverTimestamp()
-                });
-                console.log(`[UserProfileService] Awarded 50 XP to ${uid} for onboarding.`);
-
-                // Record to timeline
-                await this.recordTimelineEvent(uid, {
-                    id: 'onboarding',
-                    type: 'milestone',
-                    title: 'Joined Ace It!',
-                    xp: 50,
-                    score: 'Welcome'
-                });
-            }
-
-            return this.getProfile(uid);
-        } catch (error) {
-            console.error(`[UserProfileService] Error updating profile for ${uid}:`, error);
-            throw error;
-        }
+        return {
+            ...(await userRepo.getProfile(uid)),
+            ...(stats || {}),
+            uid
+        };
     }
     
     /**
@@ -289,7 +201,7 @@ class UserProfileService {
             }
         }
 
-        await this.usersCollection.doc(uid).update({ usage_stats: usage });
+        await CosmosStore.updateUserProfile(uid, { usage_stats: usage });
     }
 
     /**
@@ -301,36 +213,24 @@ class UserProfileService {
         CacheService.invalidateUserDbCache(uid);
 
         try {
-            const statsRef = this.usersCollection.doc(uid).collection('stats').doc('main');
+            const nowIso = new Date().toISOString();
             const today = new Date().toDateString();
             const yesterday = new Date(Date.now() - 86400000).toDateString();
-
-            await this.db.runTransaction(async (t) => {
-                const statsDoc = await t.get(statsRef);
-                let stats = statsDoc.exists ? statsDoc.data() : { xp: 0, level: 1, streakDays: 0, last_xp_date: null };
-
-                // Handle Streak and Active Days (Sync with GamificationService)
-                if (stats.last_xp_date !== today) {
-                    if (stats.last_xp_date === yesterday) {
-                        stats.streakDays = (stats.streakDays || 0) + 1;
-                    } else {
-                        stats.streakDays = 1;
-                    }
-                    stats.totalActiveDays = (stats.totalActiveDays || stats.streakDays || 0) + 1;
-                    stats.last_xp_date = today;
-                } else if (!stats.streakDays) {
-                    stats.streakDays = 1;
-                    if (!stats.totalActiveDays) stats.totalActiveDays = 1;
-                }
-
-                // Update XP
-                stats.xp = (stats.xp || 0) + amount;
-                stats.total_xp = (stats.total_xp || stats.xp || 0) + amount;
-                stats.lastActivity = admin.firestore.FieldValue.serverTimestamp();
-                stats.lastStudyDate = admin.firestore.FieldValue.serverTimestamp(); // For legacy compatibility
-
-                t.set(statsRef, stats, { merge: true });
-            });
+            let stats = await CosmosStore.getUserStats(uid) || { xp: 0, level: 1, streakDays: 0, last_xp_date: null };
+            if (stats.last_xp_date !== today) {
+                if (stats.last_xp_date === yesterday) stats.streakDays = (stats.streakDays || 0) + 1;
+                else stats.streakDays = 1;
+                stats.totalActiveDays = (stats.totalActiveDays || stats.streakDays || 0) + 1;
+                stats.last_xp_date = today;
+            } else if (!stats.streakDays) {
+                stats.streakDays = 1;
+                if (!stats.totalActiveDays) stats.totalActiveDays = 1;
+            }
+            stats.xp = (stats.xp || 0) + amount;
+            stats.total_xp = (stats.total_xp || stats.xp || 0) + amount;
+            stats.lastActivity = nowIso;
+            stats.lastStudyDate = nowIso;
+            await CosmosStore.upsertUserStats(uid, stats, true);
 
             console.log(`[UserProfileService] Awarded ${amount} XP to ${uid} for ${source} (Streak: updated)`);
 
@@ -356,15 +256,14 @@ class UserProfileService {
     async saveGoldenNugget(uid, subject, content, practiceTopic = null) {
         if (!uid || uid === 'guest') return;
         try {
-            const nugget = {
+            await CosmosStore.addNotebookItem(uid, {
                 note: content,
                 subject,
                 practiceTopic,
                 type: 'golden_nugget',
                 source: 'AI Mentor',
-                timestamp: admin.firestore.FieldValue.serverTimestamp()
-            };
-            await this.usersCollection.doc(uid).collection('notebook').add(nugget);
+                timestamp: new Date().toISOString()
+            });
             console.log(`[UserProfileService] Golden Nugget saved for ${uid}: ${content.substring(0, 30)}...`);
             return { success: true };
         } catch (error) {
@@ -379,7 +278,7 @@ class UserProfileService {
     async saveMistake(uid, mistakeData) {
         if (!uid || uid === 'guest') return;
         try {
-            const entry = {
+            await CosmosStore.addNotebookItem(uid, {
                 term: mistakeData.question || 'Unknown Question',
                 context: mistakeData.userAnswer || 'No Answer Provided',
                 note: mistakeData.feedback || 'No Feedback Provided',
@@ -389,9 +288,8 @@ class UserProfileService {
                 reviewStatus: 'new',
                 subject: mistakeData.subject || 'english', // Default to english
                 source: mistakeData.source || 'Learning Lab',
-                timestamp: admin.firestore.FieldValue.serverTimestamp()
-            };
-            await this.usersCollection.doc(uid).collection('notebook').add(entry);
+                timestamp: new Date().toISOString()
+            });
             console.log(`[UserProfileService] Mistake saved for ${uid}: ${mistakeData.question?.substring(0, 30)}...`);
             return { success: true };
         } catch (error) {
@@ -406,15 +304,12 @@ class UserProfileService {
     async getMistakes(uid, subject, limit = 5) {
         if (!uid || uid === 'guest') return [];
         try {
-            const snapshot = await this.usersCollection.doc(uid)
-                .collection('notebook')
-                .where('type', '==', 'mistake')
-                .where('subject', '==', subject)
-                .orderBy('timestamp', 'desc')
-                .limit(limit)
-                .get();
-
-            return snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+            const rows = await CosmosStore.listNotebook(uid, 500);
+            return rows
+                .filter((r) => r.type === 'mistake' && r.subject === subject)
+                .sort((a, b) => new Date(b.timestamp || b.created_at || 0) - new Date(a.timestamp || a.created_at || 0))
+                .slice(0, limit)
+                .map((r) => ({ id: r.id, ...r }));
         } catch (err) {
             console.warn(`[UserProfileService] Failed to fetch mistakes for ${uid} (${subject}):`, err);
             return [];
@@ -430,16 +325,14 @@ class UserProfileService {
         CacheService.invalidateUserDbCache(uid);
 
         const { xp, level, learningTime } = updates;
-        const updateData = {
-            lastActivity: admin.firestore.FieldValue.serverTimestamp()
-        };
+        const updateData = { lastActivity: new Date().toISOString() };
 
         if (xp !== undefined) updateData.xp = xp;
         if (level !== undefined) updateData.level = level;
         if (learningTime !== undefined) updateData.learningTime = learningTime;
 
         try {
-            await this.usersCollection.doc(uid).collection('stats').doc('main').set(updateData, { merge: true });
+            await CosmosStore.upsertUserStats(uid, updateData, true);
             return { success: true };
         } catch (error) {
             console.error(`[UserProfileService] Error updating stats for ${uid}:`, error);
@@ -457,15 +350,31 @@ class UserProfileService {
             const cached = CacheService.getDbCache(cacheKey);
             if (cached) return cached;
 
-            const doc = await this.usersCollection.doc(uid).collection('progress').doc(subject).get();
-            const result = doc.exists ? doc.data() : null;
+            const result = await CosmosStore.getProgress(uid, subject);
+            let normalizedResult = result;
+
+            if (result && subject === 'english' && result.microSkills) {
+                const canonicalized = this.canonicalizeEnglishMicroSkills(result.microSkills);
+                if (canonicalized.changed) {
+                    normalizedResult = {
+                        ...result,
+                        microSkills: canonicalized.microSkills,
+                        practicedSkills: Array.from(new Set([
+                            ...(Array.isArray(result.practicedSkills) ? result.practicedSkills : []),
+                            ...Object.keys(canonicalized.microSkills)
+                        ])),
+                        lastUpdated: new Date().toISOString()
+                    };
+                    await CosmosStore.upsertProgress(uid, subject, normalizedResult, true);
+                }
+            }
 
             // --- PILLAR AGGREGATION FOR RADAR CHART (English Only) ---
-            if (result && subject === 'english' && result.microSkills) {
-                const skills = result.microSkills;
+            if (normalizedResult && subject === 'english' && normalizedResult.microSkills) {
+                const skills = normalizedResult.microSkills;
                 const avg = (list) => {
                     const valid = list.map(s => skills[s]?.level || 0).filter(l => l > 0);
-                    return valid.length > 0 ? valid.reduce((a, b) => a + b, 0) / valid.length : 1;
+                    return valid.length > 0 ? valid.reduce((a, b) => a + b, 0) / valid.length : 0;
                 };
 
                 // Speaking Pillars - Recalculated for Radar
@@ -483,8 +392,8 @@ class UserProfileService {
                 if (!skills.listening_part_a) skills.listening_part_a = { level: avg(['listening_mainIdea', 'listening_detailListening', 'listening_noteTaking', 'listening_prediction', 'listening_gist', 'listening_accentRecognition', 'listening_speedProcessing', 'listening_speakerAttitude', 'listening_ambiguityHandling', 'listening_part_a']) };
             }
 
-            if (result) CacheService.setDbCache(cacheKey, result);
-            return result;
+            if (normalizedResult) CacheService.setDbCache(cacheKey, normalizedResult);
+            return normalizedResult;
         } catch (err) {
             console.warn(`[UserProfileService] Failed to fetch Skill Map for ${uid}:`, err);
             return null;
@@ -501,8 +410,8 @@ class UserProfileService {
             const cached = CacheService.getDbCache(cacheKey);
             if (cached) return cached;
 
-            const doc = await this.usersCollection.doc(uid).collection('progress').doc('maths').get();
-            if (!doc.exists) {
+            const result = await CosmosStore.getProgress(uid, 'maths');
+            if (!result) {
                 // Return empty structure if no data yet
                 const emptyStruct = {
                     subject: 'Mathematics',
@@ -515,7 +424,6 @@ class UserProfileService {
                 };
                 return emptyStruct;
             }
-            const result = doc.data();
             CacheService.setDbCache(cacheKey, result);
             return result;
         } catch (err) {
@@ -533,18 +441,9 @@ class UserProfileService {
     async getSkillHistory(uid, subject, limit = 5) {
         if (!uid || uid === 'guest') return [];
         try {
-            const histDoc = subject === 'maths' ? 'maths_history' : 'english_history';
-            const snapshotsRef = this.usersCollection.doc(uid)
-                .collection('progress').doc(histDoc)
-                .collection('snapshots');
-
-            const snapshot = await snapshotsRef
-                .orderBy('timestamp', 'desc')
-                .limit(limit)
-                .get();
-
-            if (snapshot.empty) return [];
-            return snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+            const histSubject = subject === 'maths' ? 'maths_history' : 'english_history';
+            const rows = await CosmosStore.listProgressSnapshots(uid, histSubject, limit);
+            return rows.map((doc) => ({ id: doc.id, ...doc }));
         } catch (err) {
             console.warn(`[UserProfileService] Failed to fetch skill history for ${uid} (${subject}):`, err);
             return [];
@@ -585,9 +484,13 @@ class UserProfileService {
                 ['reading', 'writing', 'listening', 'speaking'].filter(p => !profile.diagnostic_results.english.raw_results?.[p])
                 : [];
 
-            // FETCH WEEKLY QUEST STATUS
+            // FETCH WEEKLY QUEST STATUS + RECENT ACTIVITY (mock + quest summary)
             const GamificationService = require('./GamificationService');
-            const weeklyStatus = await GamificationService.getWeeklyQuestStatus(uid);
+            const [weeklyStatus, recentQuests, recentMock] = await Promise.all([
+                GamificationService.getWeeklyQuestStatus(uid),
+                GamificationService.getRecentQuestSummary(uid, 3).catch(() => []),
+                this.getMockSummary(uid).catch(() => null)
+            ]);
 
             // Calculate days remaining in the current week (Quest expires on Sunday night)
             const now = new Date();
@@ -617,7 +520,74 @@ class UserProfileService {
             const skills = subject === 'maths' || subject === 'math' ? MATHS_MICRO_SKILLS : MICRO_SKILLS;
             availableQuests = Object.values(skills)
                 .filter(s => s.paper !== 'mock' && s.paper !== 'assessment') // Filter out full mocks
-                .map(s => s.name);
+                .map(s => `${s.name}${s.name_zh ? ` / ${s.name_zh}` : ''}`);
+
+            const subjectSkills = subject === 'maths' || subject === 'math'
+                ? MATHS_MICRO_SKILLS
+                : MICRO_SKILLS;
+            const skillEntries = Object.entries(skillMap?.microSkills || {})
+                .map(([skillId, data]) => {
+                    const meta = subjectSkills[skillId] || {};
+                    return {
+                        skillId,
+                        name: meta.name || this.getSkillName(skillId, subject),
+                        level: Number(data?.level || 0),
+                        attempts: Number(data?.totalAttempts || data?.practiceCount || 0),
+                        accuracy: typeof data?.accuracy === 'number' ? Number(data.accuracy) : null,
+                        lastUpdated: data?.lastUpdated || null
+                    };
+                })
+                .filter((item) => item.level > 0);
+            const weakestSkills = [...skillEntries].sort((a, b) => a.level - b.level).slice(0, 5);
+            const strongestSkills = [...skillEntries].sort((a, b) => b.level - a.level).slice(0, 3);
+
+            const leanRecentQuests = (recentQuests || []).slice(0, 5).map((q) => ({
+                topic: q.topic || q.questName || q.module || "Quest",
+                score: q.score ?? null,
+                completedAt: q.completedAt || q.timestamp || null
+            }));
+            const leanRecentMock = recentMock
+                ? {
+                    paper: recentMock.paper || null,
+                    topic: recentMock.topic || null,
+                    score: recentMock.score ?? null,
+                    total: recentMock.total ?? null,
+                    percentage: recentMock.percentage ?? null,
+                    level: recentMock.level || null,
+                    topMistakes: Array.isArray(recentMock.topMistakes) ? recentMock.topMistakes.slice(0, 3) : []
+                }
+                : null;
+
+            const tutorLeanContext = {
+                profile: {
+                    nickname: profile?.nickname || profile?.displayName || "Student",
+                    grade: profile?.grade || "F4",
+                    subject: subject === 'math' ? 'maths' : subject,
+                    level: formatLevel(skillMap?.level),
+                    hasDiagnostic: Boolean(skillMap && Object.keys(skillMap?.microSkills || {}).length > 0),
+                    weeklyQuestCompleted: Boolean(weeklyStatus?.completed)
+                },
+                microSkills: {
+                    weakest: weakestSkills,
+                    strongest: strongestSkills,
+                    coverage: skillEntries.length
+                },
+                outcomes: {
+                    recentQuests: leanRecentQuests,
+                    recentMock: leanRecentMock
+                },
+                plan: {
+                    recommendedNextSteps: (recommendedNextSteps || []).slice(0, 4),
+                    weekly: {
+                        weekId: weeklyStatus?.weekId || null,
+                        completed: Boolean(weeklyStatus?.completed),
+                        daysRemaining: daysToSunday
+                    },
+                    dailyTasks: []
+                },
+                availableQuestTitles: availableQuests.slice(0, 15)
+            };
+            tutorLeanContext.plan.dailyTasks = this.buildDeterministicDailyTasks(tutorLeanContext);
 
             return {
                 nickname: profile?.nickname || profile?.displayName || "Student",
@@ -633,7 +603,10 @@ class UserProfileService {
                     completed: weeklyStatus.completed,
                     daysRemaining: daysToSunday
                 },
-                availableQuests: availableQuests.slice(0, 30) // Limit to avoid token bloat
+                availableQuests: availableQuests.slice(0, 30), // Limit to avoid token bloat
+                recentQuests,
+                recentMock,
+                tutorLeanContext
             };
         } catch (err) {
             console.error(`[UserProfileService] Error creating personalized context for ${uid}:`, err);
@@ -643,10 +616,18 @@ class UserProfileService {
 
     /**
      * High-Density Insight Formatter (Token Optimization)
+     *
+     * Emits two compact lines:
+     *   [STUDENT_INSIGHTS]  ...   long-lived skill / quest snapshot
+     *   [RECENT_ACTIVITY]   ...   last completed quests + most recent mock
+     *
+     * The RECENT_ACTIVITY line is the hook that lets the tutor reference
+     * what the student just did ("Nice work on last week's listening mock,
+     * let's tackle that vocabulary gap...") without ballooning the prompt.
      */
     formatInsightsForPrompt(pContext) {
         if (!pContext) return "No data available.";
-        
+
         const parts = [
             `LVL:${pContext?.level || '?'}`,
             `W:${pContext?.topWeaknesses?.map(w => w.split(' (')[0]).join(',') || 'None'}`,
@@ -655,8 +636,160 @@ class UserProfileService {
             `NEXT:${pContext?.recommendedNextSteps?.join(';') || 'None'}`,
             `QUESTS:${pContext?.availableQuests?.join(';') || 'None'}`
         ];
-        
-        return `[STUDENT_INSIGHTS] ${parts.filter(Boolean).join(' | ')}`;
+
+        const insightsLine = `[STUDENT_INSIGHTS] ${parts.filter(Boolean).join(' | ')}`;
+
+        // Compact recent activity - capped to keep prompt cheap
+        const questsStr = (pContext?.recentQuests || [])
+            .slice(0, 3)
+            .map(q => q.score ? `${q.topic}:${q.score}` : q.topic)
+            .join(',') || 'None';
+
+        const m = pContext?.recentMock;
+        let mockStr = 'None';
+        if (m && (m.paper || m.topic)) {
+            const label = m.paper || m.topic || 'Mock';
+            const score = m.level
+                || (typeof m.percentage === 'number' ? `${Math.round(m.percentage)}%` : null)
+                || (m.score && m.total ? `${m.score}/${m.total}` : null);
+            const top = Array.isArray(m.topMistakes) && m.topMistakes.length
+                ? m.topMistakes.slice(0, 2).join(';')
+                : null;
+            mockStr = [label, score, top ? `weak:${top}` : null].filter(Boolean).join(':');
+            mockStr = mockStr.slice(0, 80);
+        }
+
+        const activityLine = `[RECENT_ACTIVITY] QUESTS:${questsStr} | MOCK:${mockStr}`;
+        const leanContext = this.buildLeanTutorPromptContext(pContext);
+        const leanJson = JSON.stringify(leanContext);
+        const leanLine = `[TUTOR_LEAN_CONTEXT] ${leanJson.length > 1800 ? `${leanJson.slice(0, 1800)}...` : leanJson}`;
+
+        return `${insightsLine}\n${activityLine}\n${leanLine}`;
+    }
+
+    buildLeanTutorPromptContext(pContext) {
+        const lean = pContext?.tutorLeanContext || {};
+        return {
+            profile: lean.profile || {
+                nickname: pContext?.nickname || "Student",
+                grade: pContext?.grade || "F4",
+                level: pContext?.level || "?",
+                hasDiagnostic: Boolean(pContext?.hasDiagnostic)
+            },
+            microSkills: lean.microSkills || {
+                weakest: (pContext?.topWeaknesses || []).slice(0, 3).map((w) => ({ name: w })),
+                strongest: [],
+                coverage: 0
+            },
+            outcomes: lean.outcomes || {
+                recentQuests: (pContext?.recentQuests || []).slice(0, 3),
+                recentMock: pContext?.recentMock || null
+            },
+            plan: lean.plan || {
+                recommendedNextSteps: (pContext?.recommendedNextSteps || []).slice(0, 3),
+                weekly: pContext?.weeklyQuest || null,
+                dailyTasks: []
+            },
+            availableQuestTitles: (lean.availableQuestTitles || pContext?.availableQuests || []).slice(0, 15)
+        };
+    }
+
+    buildDeterministicDailyTasks(leanContext = {}) {
+        const weakest = leanContext?.microSkills?.weakest || [];
+        const strongest = leanContext?.microSkills?.strongest || [];
+        const mock = leanContext?.outcomes?.recentMock || null;
+        const questTitles = leanContext?.availableQuestTitles || [];
+        const tasks = [];
+
+        if (weakest.length > 0) {
+            const target = weakest[0];
+            tasks.push(`Target weak micro-skill: ${target.name} (20-30 mins focused practice).`);
+        } else {
+            tasks.push("Start one baseline Quest to calibrate your current weak areas.");
+        }
+
+        if (mock && (mock.topMistakes?.length || mock.topic || mock.paper)) {
+            const weakness = (mock.topMistakes || []).slice(0, 2).join(", ");
+            const source = mock.paper || mock.topic || "recent mock";
+            tasks.push(weakness
+                ? `Review ${source} mistakes: ${weakness}, then retry a similar question set.`
+                : `Review your ${source} errors and retry one similar question set.`);
+        } else if (questTitles.length > 0) {
+            tasks.push(`Complete one structured Quest from your plan: ${questTitles[0]}.`);
+        } else {
+            tasks.push("Complete one practice Quest and record your top 2 mistakes.");
+        }
+
+        if (strongest.length > 0) {
+            tasks.push(`Stretch goal: reinforce ${strongest[0].name} with one timed checkpoint task.`);
+        } else {
+            tasks.push("Finish with a 10-minute recap: summarize one rule and one mistake pattern.");
+        }
+
+        return tasks.slice(0, 3);
+    }
+
+    /**
+     * Persist a small denormalized doc with the latest mock exam summary.
+     * Read by `getMockSummary` to inject into the tutor prompt.
+     * Failure is non-fatal: the assessment response must always succeed.
+     */
+    async saveMockSummary(uid, summary) {
+        if (!uid || uid === 'guest' || !summary) return;
+        try {
+            const nowIso = new Date().toISOString();
+            await CosmosStore.upsertProgress(uid, 'mock_summary', {
+                paper: summary.paper || null,
+                topic: summary.topic || null,
+                score: typeof summary.score === 'number' ? summary.score : null,
+                total: typeof summary.total === 'number' ? summary.total : null,
+                percentage: typeof summary.percentage === 'number'
+                    ? Math.round(summary.percentage * 10) / 10
+                    : null,
+                level: summary.level || null,
+                topMistakes: Array.isArray(summary.topMistakes)
+                    ? summary.topMistakes.slice(0, 3)
+                    : [],
+                achievedSkills: Array.isArray(summary.achievedSkills)
+                    ? summary.achievedSkills.slice(0, 6)
+                    : [],
+                updatedAt: nowIso
+            }, true);
+            await this.recordTutorCompletionEvent(uid, {
+                type: 'mock_completed',
+                sourceId: summary.mockId || summary.paperId || `${summary.paper || 'mock'}_${nowIso}`,
+                completedAt: summary.completedAt || nowIso,
+                payload: {
+                    paper: summary.paper || null,
+                    topic: summary.topic || null,
+                    score: typeof summary.score === 'number' ? summary.score : null,
+                    total: typeof summary.total === 'number' ? summary.total : null,
+                    percentage: typeof summary.percentage === 'number'
+                        ? Math.round(summary.percentage * 10) / 10
+                        : null,
+                    level: summary.level || null,
+                    topMistakes: Array.isArray(summary.topMistakes)
+                        ? summary.topMistakes.slice(0, 3)
+                        : [],
+                    achievedSkills: Array.isArray(summary.achievedSkills)
+                        ? summary.achievedSkills.slice(0, 6)
+                        : []
+                }
+            });
+            CacheService.invalidateUserDbCache(uid);
+        } catch (e) {
+            console.warn(`[UserProfileService] saveMockSummary failed for ${uid}:`, e.message);
+        }
+    }
+
+    async getMockSummary(uid) {
+        if (!uid || uid === 'guest') return null;
+        try {
+            return await CosmosStore.getProgress(uid, 'mock_summary');
+        } catch (e) {
+            console.warn(`[UserProfileService] getMockSummary failed for ${uid}:`, e.message);
+            return null;
+        }
     }
 
     /**
@@ -672,10 +805,8 @@ class UserProfileService {
         CacheService.invalidateUserDbCache(uid);
 
         try {
-            const progressRef = this.usersCollection.doc(uid).collection('progress').doc('maths');
-            const doc = await progressRef.get();
-
-            const currentData = doc.exists ? doc.data() : {
+            const existingProgress = await CosmosStore.getProgress(uid, 'maths');
+            const currentData = existingProgress || {
                 subject: 'Mathematics',
                 level: 0,
                 xp: 0,
@@ -719,13 +850,13 @@ class UserProfileService {
                     totalCorrect: newTotalCorrect,
                     totalAttempts: newTotalAttempts,
                     accuracy: Math.round(cumulativeAccuracy * 100) / 100,
-                    lastUpdated: admin.firestore.FieldValue.serverTimestamp(),
+                    lastUpdated: new Date().toISOString(),
                     practiceCount: newTotalAttempts,
                     source: update.source || 'lab'
                 };
 
                 // DATA HANDLING FAN-OUT: Map consolidated quest to granular abilities
-                const updateValue = { ...currentData.microSkills[skillId], lastUpdated: admin.firestore.FieldValue.serverTimestamp() };
+                const updateValue = { ...currentData.microSkills[skillId], lastUpdated: new Date().toISOString() };
 
                 // 1. Probability & Stats (Legacy)
                 if (skillId === 'math_stat_prob') {
@@ -803,7 +934,7 @@ class UserProfileService {
                 }));
 
             currentData.weaknessPriority = weakSkills;
-            currentData.last_updated = admin.firestore.FieldValue.serverTimestamp();
+            currentData.last_updated = new Date().toISOString();
             currentData.last_paper_done = source;
 
             // Maintain practicedSkills (consistent with English)
@@ -820,24 +951,24 @@ class UserProfileService {
                 currentData.practicedSkills = Array.from(new Set(practicedSkills));
             }
 
-            await progressRef.set(currentData, { merge: true });
+            await CosmosStore.upsertProgress(uid, 'maths', currentData, true);
 
             // Ensure main user document flags are set if this is a diagnostic
             if (source.startsWith('diagnostic')) {
-                await this.usersCollection.doc(uid).update({
+                await CosmosStore.updateUserProfile(uid, {
                     has_maths_diagnostic: true,
                     is_new_student: false,
                     status: 'active',
-                    updatedAt: admin.firestore.FieldValue.serverTimestamp()
+                    updatedAt: new Date().toISOString()
                 });
                 console.log(`[UserProfileService] Force updated main flags for ${uid} after Math diagnostic completion.`);
             }
 
             // Save snapshot to history
-            await this.usersCollection.doc(uid).collection('progress').doc('maths_history').collection('snapshots').add({
+            await CosmosStore.addProgressSnapshot(uid, 'maths_history', {
                 ...currentData,
                 source,
-                timestamp: admin.firestore.FieldValue.serverTimestamp()
+                timestamp: new Date().toISOString()
             });
 
             console.log(`[UserProfileService] Updated Math skills for ${uid} from ${source}`);
@@ -855,21 +986,11 @@ class UserProfileService {
         if (!uid || uid === 'guest') return [];
         try {
             const normalizedSubject = subject.toLowerCase();
-
-            // Handle different history collection structures
-            if (normalizedSubject === 'maths' || normalizedSubject === 'math') {
-                return this.getMathSkillHistory(uid, limit);
-            }
-
-            // Default English/Other history structure
-            const snapshot = await this.usersCollection.doc(uid)
-                .collection('progress').doc(normalizedSubject)
-                .collection('history')
-                .orderBy('timestamp', 'desc')
-                .limit(limit)
-                .get();
-
-            return snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+            const histSubject = (normalizedSubject === 'maths' || normalizedSubject === 'math')
+                ? 'maths_history'
+                : `${normalizedSubject}_history`;
+            const rows = await CosmosStore.listProgressSnapshots(uid, histSubject, limit);
+            return rows.map((doc) => ({ id: doc.id, ...doc }));
         } catch (err) {
             console.warn(`[UserProfileService] Failed to fetch ${subject} history for ${uid}:`, err.message);
             return [];
@@ -894,19 +1015,8 @@ class UserProfileService {
     async saveChatMessage(uid, agentId, message) {
         if (!uid || uid === 'guest') return;
         try {
-            console.log(`[UserProfileService] Attempting to save chat for UID: ${uid}, Agent: ${agentId}, Role: ${message.role}`);
             const cleanMessage = this.cleanData(message);
-
-            // Ensure role is mapped correctly for Gemini compatibility
-            const dbRole = (cleanMessage.role === 'assistant' || cleanMessage.role === 'model') ? 'model' : 'user';
-
-            const docRef = await this.usersCollection.doc(uid).collection('chat_history').add({
-                ...cleanMessage,
-                role: dbRole,
-                agentId,
-                timestamp: admin.firestore.FieldValue.serverTimestamp()
-            });
-            console.log(`[UserProfileService] ✅ Chat saved successfully with ID: ${docRef.id}`);
+            await CosmosStore.saveChatMessage(uid, agentId, cleanMessage);
         } catch (error) {
             console.error(`[UserProfileService] ❌ Error saving chat for ${uid}:`, error);
             throw error; // Propagate to router
@@ -919,10 +1029,7 @@ class UserProfileService {
     async recordTimelineEvent(uid, event) {
         if (!uid || uid === 'guest') return;
         try {
-            await this.usersCollection.doc(uid).collection('timeline').add({
-                ...event,
-                date: admin.firestore.FieldValue.serverTimestamp()
-            });
+            await CosmosStore.addTimelineEvent(uid, event);
             console.log(`[UserProfileService] Timeline event recorded for ${uid}: ${event.title}`);
         } catch (error) {
             console.error(`[UserProfileService] Error recording timeline for ${uid}:`, error);
@@ -934,50 +1041,13 @@ class UserProfileService {
      */
     async getChatHistory(uid, agentId) {
         if (!uid || uid === 'guest') return [];
-
-        console.log(`[UserProfileService] Fetching history for UID: ${uid}, Agent: ${agentId}`);
         try {
-            // NOTE: Sorting by timestamp requires a composite index in Firestore for the where clause.
-            // If the index is missing, this query will throw an error.
-            // We fetch and then sort manually if needed to avoid index errors in dev.
-            const snapshot = await this.usersCollection.doc(uid).collection('chat_history')
-                .where('agentId', '==', agentId)
-                .get();
-
-            console.log(`[UserProfileService] Found ${snapshot.size} history documents.`);
-
-            const history = [];
-            snapshot.docs.forEach(doc => {
-                const d = doc.data();
-                const ts = d.timestamp?.toDate() || new Date(0);
-
-                // Legacy Fallback: combined document format { message, response }
-                if (d.message && d.response) {
-                    history.push({
-                        role: 'user',
-                        content: d.message,
-                        timestamp: ts
-                    });
-                    // AI response timestamp set slightly later to preserve order
-                    history.push({
-                        role: 'model',
-                        content: d.response,
-                        timestamp: new Date(ts.getTime() + 100)
-                    });
-                }
-                // Standard format: individual document per role { role, content }
-                else if (d.role && (d.content !== undefined)) {
-                    history.push({
-                        role: (d.role === 'assistant' || d.role === 'model') ? 'model' : d.role,
-                        content: d.content || "",
-                        timestamp: ts
-                    });
-                }
-            });
-
-            console.log(`[UserProfileService] Total processed history length: ${history.length}`);
-            // Filter and Sort in Memory to avoid Index requirements
-            return history.sort((a, b) => a.timestamp - b.timestamp);
+            const rows = await CosmosStore.getChatHistory(uid, agentId);
+            return rows.map((d) => ({
+                role: (d.role === 'assistant' || d.role === 'model') ? 'model' : d.role,
+                content: d.content || "",
+                timestamp: d.createdAt ? new Date(d.createdAt) : new Date(0)
+            })).sort((a, b) => a.timestamp - b.timestamp);
         } catch (error) {
             console.error(`[UserProfileService] Error fetching chat history for ${uid}:`, error);
             return [];
@@ -991,16 +1061,7 @@ class UserProfileService {
         if (!uid || uid === 'guest') return { success: false };
 
         try {
-            const snapshot = await this.usersCollection.doc(uid).collection('chat_history')
-                .where('agentId', '==', agentId)
-                .get();
-
-            if (snapshot.empty) return { success: true };
-
-            const batch = this.db.batch();
-            snapshot.docs.forEach(doc => batch.delete(doc.ref));
-            await batch.commit();
-
+            await CosmosStore.clearChatHistory(uid, agentId);
             console.log(`[UserProfileService] Cleared history for ${uid} / ${agentId}`);
             return { success: true };
         } catch (error) {
@@ -1015,12 +1076,13 @@ class UserProfileService {
     async getGoldenNuggets(uid, subject, limit = 5) {
         if (!uid || uid === 'guest') return [];
         try {
-            const snapshot = await this.usersCollection.doc(uid).collection('notebook')
-                .where('subject', '==', subject)
-                .limit(limit)
-                .get();
-
-            return snapshot.docs.map(doc => doc.data().note).filter(n => !!n);
+            const items = await CosmosStore.listNotebook(uid, 500);
+            return items
+                .map((doc) => doc.payload || doc)
+                .filter((item) => item?.subject === subject)
+                .slice(0, limit)
+                .map((item) => item.note)
+                .filter((n) => !!n);
         } catch (error) {
             console.error(`[UserProfileService] Error fetching Golden Nuggets for ${uid}:`, error);
             return [];
@@ -1038,11 +1100,12 @@ class UserProfileService {
 
         try {
             // 1. Mark onboarding as complete in main profile
-            await this.usersCollection.doc(uid).update({
+            const nowIso = new Date().toISOString();
+            await CosmosStore.updateUserProfile(uid, {
                 is_new_student: false,
                 diagnostic_completed: true,
                 status: 'active',
-                updatedAt: admin.firestore.FieldValue.serverTimestamp()
+                updatedAt: nowIso
             });
 
             // --- Evidence Seeding -----------------------------------------------
@@ -1088,7 +1151,7 @@ class UserProfileService {
                     confidence: typeof assessment === 'object' ? (assessment.confidence || null) : null,
                     evidence: typeof assessment === 'object' ? (assessment.evidence || null) : null,
                     source: 'diagnostic',
-                    lastUpdated: admin.firestore.FieldValue.serverTimestamp()
+                    lastUpdated: nowIso
                 };
             });
 
@@ -1108,18 +1171,18 @@ class UserProfileService {
                 microSkills: normalizedSkills, // Evidence-seeded micro-skills
                 weaknessPriority: result.weaknessPriority || [],
                 raw_results: rawResults, // Persist raw data for possible re-mapping
-                lastUpdated: admin.firestore.FieldValue.serverTimestamp()
+                lastUpdated: nowIso
             };
 
             // 2. Save result to skill map (progress)
-            const progressRef = this.usersCollection.doc(uid).collection('progress').doc(subject);
-            await progressRef.set(progressData, { merge: true });
+            await CosmosStore.upsertProgress(uid, subject, progressData, true);
 
             // 2.1 NEW: Store Historical Snapshot for Mastery Radar Progress
             try {
-                await progressRef.collection('history').add({
+                const histSubject = subject === 'maths' ? 'maths_history' : 'english_history';
+                await CosmosStore.addProgressSnapshot(uid, histSubject, {
                     ...progressData,
-                    timestamp: admin.firestore.FieldValue.serverTimestamp()
+                    timestamp: nowIso
                 });
                 console.log(`[UserProfileService] Saved mastery historical snapshot for ${uid}`);
             } catch (histErr) {
@@ -1128,27 +1191,18 @@ class UserProfileService {
 
             // 3. Credit XP for completing diagnostic (NEW!)
             const xpToAward = xp_earned || 500; // Default to 500 if not specified
-            const statsRef = this.usersCollection.doc(uid).collection('stats').doc('main');
-            const statsDoc = await statsRef.get();
-
-            if (statsDoc.exists) {
-                const currentXP = statsDoc.data().xp || 0;
-                await statsRef.update({
-                    xp: admin.firestore.FieldValue.increment(xpToAward),
-                    lastActivity: admin.firestore.FieldValue.serverTimestamp()
-                });
-                console.log(`[UserProfileService] Awarded ${xpToAward} XP to ${uid} for completing diagnostic. Total: ${currentXP + xpToAward}`);
-            } else {
-                // Create stats doc if it doesn't exist
-                await statsRef.set({
-                    xp: xpToAward,
-                    level: 1,
-                    learningTime: 0,
-                    streakDays: 0,
-                    lastStudyDate: admin.firestore.FieldValue.serverTimestamp()
-                });
-                console.log(`[UserProfileService] Created stats and awarded ${xpToAward} XP to ${uid} for completing diagnostic.`);
-            }
+            const stats = await CosmosStore.getUserStats(uid) || {};
+            const currentXP = stats.xp || 0;
+            await CosmosStore.upsertUserStats(uid, {
+                ...stats,
+                xp: currentXP + xpToAward,
+                level: stats.level || 1,
+                learningTime: stats.learningTime || 0,
+                streakDays: stats.streakDays || 0,
+                lastActivity: nowIso,
+                lastStudyDate: nowIso
+            }, true);
+            console.log(`[UserProfileService] Awarded ${xpToAward} XP to ${uid} for completing diagnostic. Total: ${currentXP + xpToAward}`);
 
             // Record to timeline
             await this.recordTimelineEvent(uid, {
@@ -1186,18 +1240,17 @@ class UserProfileService {
         CacheService.invalidateUserDbCache(uid);
 
         try {
-            const progressRef = this.usersCollection.doc(uid).collection('progress').doc(subject);
-            const doc = await progressRef.get();
+            const existingProgress = await CosmosStore.getProgress(uid, subject);
 
             let data = {
                 subject: subject === 'maths' ? 'Mathematics' : 'English',
                 overall_level: 1,
                 microSkills: {},
                 practicedSkills: [],
-                lastUpdated: admin.firestore.FieldValue.serverTimestamp()
+                lastUpdated: new Date().toISOString()
             };
-            if (doc.exists) {
-                data = doc.data();
+            if (existingProgress) {
+                data = existingProgress;
             } else {
                 console.log(`[UserProfileService] Creating initial progress document for ${uid} / ${subject}`);
             }
@@ -1284,7 +1337,7 @@ class UserProfileService {
             }
 
             skillData.accuracy = Math.round((avgGrade / 7) * 100) / 100;
-            skillData.lastUpdated = admin.firestore.FieldValue.serverTimestamp();
+            skillData.lastUpdated = new Date().toISOString();
             microSkills[skillId] = skillData;
 
             // 7. OVERALL LEVEL CALCULATION (HKEAA WEIGHTED)
@@ -1336,12 +1389,12 @@ class UserProfileService {
                 console.log(`[UserProfileService] Recalculated Maths Grade: ${overallLevel} (Algebra=${strandFinalLevels.algebra.toFixed(1)}, Geometry=${strandFinalLevels.geometry.toFixed(1)}, Data=${strandFinalLevels.data.toFixed(1)})`);
             }
 
-            await progressRef.set({
+            await CosmosStore.upsertProgress(uid, subject, {
                 microSkills,
                 overall_level: overallLevel,
                 practicedSkills: Array.from(new Set(practicedSkills)),
-                lastUpdated: admin.firestore.FieldValue.serverTimestamp()
-            }, { merge: true });
+                lastUpdated: new Date().toISOString()
+            }, true);
 
             console.log(`[UserProfileService] Skill ${skillId} updated. Window Avg Grade: ${avgGrade.toFixed(1)}. Current Level: ${skillData.level}`);
 
@@ -1360,29 +1413,7 @@ class UserProfileService {
     async resetUser(uid) {
         if (!uid || uid === 'guest') return;
         try {
-            console.log(`[UserProfileService] RESETTING USER: ${uid}`);
-            const userRef = this.usersCollection.doc(uid);
-
-            const deleteRecursive = async (ref) => {
-                const subcollections = await ref.listCollections();
-                for (const sub of subcollections) {
-                    const snapshot = await sub.get();
-                    if (snapshot.size > 0) {
-                        const batch = this.db.batch();
-                        for (const doc of snapshot.docs) {
-                            await deleteRecursive(doc.ref);
-                            batch.delete(doc.ref);
-                        }
-                        await batch.commit();
-                    }
-                }
-            };
-
-            await deleteRecursive(userRef);
-            await userRef.delete();
-
-            console.log(`[UserProfileService] User ${uid} wiped completely (including nested data).`);
-            return { success: true };
+            return await this.deleteUserProfile(uid);
         } catch (e) {
             console.error(`[UserProfileService] Reset failed for ${uid}:`, e);
             throw e;
@@ -1399,26 +1430,21 @@ class UserProfileService {
             const timeline = [];
 
             // 1. Fetch Dynamic Timeline Collection
-            const snapshot = await this.usersCollection.doc(uid).collection('timeline')
-                .orderBy('date', 'desc')
-                .limit(50)
-                .get();
-
-            snapshot.forEach(doc => {
-                const data = doc.data();
+            const rows = await CosmosStore.listTimeline(uid, 50);
+            rows.forEach((data) => {
                 timeline.push({
                     ...data,
-                    date: data.date?.toDate() || new Date()
+                    date: data.date ? new Date(data.date) : new Date()
                 });
             });
 
             // 2. Legacy Check / Hardcoded Milestones (Optional: Could migrate these to collection)
             // If timeline is empty, we might want to check the basic two as fallback
             if (timeline.length === 0) {
-                const userDoc = await this.usersCollection.doc(uid).get();
-                if (userDoc.exists) {
-                    const data = userDoc.data();
-                    const date = data.createdAt?.toDate() || data.updatedAt?.toDate();
+                const profileDoc = await CosmosStore.getUserProfileDoc(uid);
+                if (profileDoc?.profile) {
+                    const data = profileDoc.profile;
+                    const date = data.createdAt ? new Date(data.createdAt) : (data.updatedAt ? new Date(data.updatedAt) : null);
                     if (date) {
                         timeline.push({
                             id: 'onboarding',
@@ -1431,15 +1457,14 @@ class UserProfileService {
                     }
                 }
 
-                const diagDoc = await this.usersCollection.doc(uid).collection('progress').doc('english').get();
-                if (diagDoc.exists) {
-                    const diag = diagDoc.data();
+                const diag = await CosmosStore.getProgress(uid, 'english');
+                if (diag) {
                     if (diag.lastUpdated) {
                         timeline.push({
                             id: 'diagnostic',
                             type: 'exam',
                             title: 'Study Calibration (Diagnostic)',
-                            date: diag.lastUpdated.toDate(),
+                            date: new Date(diag.lastUpdated),
                             xp: 500,
                             score: `Level ${diag.overall_level || 1}`
                         });
@@ -1463,19 +1488,8 @@ class UserProfileService {
         if (!uid || uid === 'guest') return;
         try {
             console.log(`[UserProfileService] Resetting Math Progress for ${uid}`);
-            const mathProgressRef = this.usersCollection.doc(uid).collection('progress').doc('maths');
-            const mathHistoryRef = this.usersCollection.doc(uid).collection('progress').doc('maths_history');
-
-            // Delete math progress doc
-            await mathProgressRef.delete();
-
-            // Delete history snapshots
-            const snapshots = await mathHistoryRef.collection('snapshots').get();
-            if (!snapshots.empty) {
-                const batch = this.db.batch();
-                snapshots.docs.forEach(doc => batch.delete(doc.ref));
-                await batch.commit();
-            }
+            await CosmosStore.clearProgress(uid, 'maths');
+            await CosmosStore.clearProgressSnapshots(uid, 'maths_history');
 
             console.log(`[UserProfileService] Math data for ${uid} wiped.`);
             return { success: true };
@@ -1546,7 +1560,9 @@ class UserProfileService {
 - **Philosophy**: ${traits.philosophy} (Whether you focus on deep learning or high grades).
 
 **ADHERE STRICTLY to these traits in every response.**
+${tutor.persona_guidelines ? `**BEHAVIORAL GUIDELINES**: ${tutor.persona_guidelines}` : ''}
 ${tutor.tone ? `**TONE & MANNER**: ${tutor.tone}` : ''}
+${tutor.verbal_tics ? `**VERBAL TICS & PHRASES**: Use these phrases naturally where appropriate: ${tutor.verbal_tics.join(', ')}` : ''}
 `;
 
         return {
@@ -1575,10 +1591,10 @@ ${tutor.tone ? `**TONE & MANNER**: ${tutor.tone}` : ''}
         if (!validSlots.includes(slot)) throw new Error("Invalid equipment slot");
 
         CacheService.invalidateUserDbCache(uid);
-        await this.usersCollection.doc(uid).set({
+        await CosmosStore.updateUserProfile(uid, {
             [slot]: itemId,
-            updatedAt: admin.firestore.FieldValue.serverTimestamp()
-        }, { merge: true });
+            updatedAt: new Date().toISOString()
+        });
 
         return { success: true };
     }
@@ -1589,18 +1605,110 @@ ${tutor.tone ? `**TONE & MANNER**: ${tutor.tone}` : ''}
     async saveQuestResult(uid, resultData) {
         if (!uid || uid === 'guest') return null;
         try {
-            const resultRef = this.usersCollection.doc(uid).collection('quest_results').doc();
-            const resultId = resultRef.id;
-            await resultRef.set({
+            const completedAt = new Date().toISOString();
+            const resultId = await CosmosStore.saveQuestResult(uid, {
                 ...resultData,
-                resultId,
-                completedAt: admin.firestore.FieldValue.serverTimestamp()
+                completedAt
             });
+            if (!this.isMockLikeQuestResult(resultData)) {
+                await this.recordTutorCompletionEvent(uid, {
+                    type: 'quest_completed',
+                    sourceId: resultId,
+                    completedAt,
+                    payload: {
+                        resultId,
+                        questId: resultData.quest_id || resultData.questId || null,
+                        topic: resultData.topic || resultData.questName || resultData.module || resultData.textType || 'Quest',
+                        score: resultData.score ?? resultData.masteryScore ?? resultData.overall_score ?? null,
+                        xpAwarded: resultData.xpAwarded || resultData.xp_earned || resultData.xp || null,
+                        module: resultData.module || resultData.paper || null,
+                        feedback: resultData.feedback || null
+                    }
+                });
+            }
             console.log(`[UserProfileService] Quest result saved for ${uid}: ${resultId}`);
             return resultId;
         } catch (error) {
             console.error(`[UserProfileService] Error saving quest result for ${uid}:`, error);
             return null;
+        }
+    }
+
+    isMockLikeQuestResult(resultData = {}) {
+        const type = String(resultData.type || resultData.paper || resultData.module || '').toLowerCase();
+        const topic = String(resultData.topic || resultData.questName || '').toLowerCase();
+        return Boolean(
+            resultData.paperId ||
+            resultData.mockId ||
+            type.includes('mock') ||
+            topic.includes('mock')
+        );
+    }
+
+    async recordTutorCompletionEvent(uid, eventData = {}) {
+        if (!uid || uid === 'guest') return null;
+        try {
+            return await CosmosStore.addTutorCompletionEvent(uid, eventData);
+        } catch (error) {
+            console.warn(`[UserProfileService] recordTutorCompletionEvent failed for ${uid}:`, error.message);
+            return null;
+        }
+    }
+
+    async getPendingTutorCompletionEvents(uid, limit = 10) {
+        if (!uid || uid === 'guest') return [];
+        try {
+            return await CosmosStore.listPendingTutorCompletionEvents(uid, limit);
+        } catch (error) {
+            console.warn(`[UserProfileService] getPendingTutorCompletionEvents failed for ${uid}:`, error.message);
+            return [];
+        }
+    }
+
+    async markTutorCompletionEventsSummarized(uid, eventIds = []) {
+        if (!uid || uid === 'guest') return { updated: [] };
+        try {
+            return await CosmosStore.markTutorCompletionEventsSummarized(uid, eventIds);
+        } catch (error) {
+            console.warn(`[UserProfileService] markTutorCompletionEventsSummarized failed for ${uid}:`, error.message);
+            return { updated: [] };
+        }
+    }
+
+    async saveLastChatChips(uid, agentId, chips = []) {
+        if (!uid || uid === 'guest' || !agentId) return null;
+        const normalized = Array.isArray(chips) ? chips.filter(Boolean).slice(0, 6) : [];
+        try {
+            await CosmosStore.upsertProgress(uid, `chat_chips_${agentId}`, {
+                chips: normalized,
+                updatedAt: new Date().toISOString()
+            }, true);
+            return normalized;
+        } catch (error) {
+            console.warn(`[UserProfileService] saveLastChatChips failed for ${uid}/${agentId}:`, error.message);
+            return null;
+        }
+    }
+
+    async getLastChatChips(uid, agentId) {
+        if (!uid || uid === 'guest' || !agentId) return [];
+        try {
+            const doc = await CosmosStore.getProgress(uid, `chat_chips_${agentId}`);
+            return Array.isArray(doc?.chips) ? doc.chips : [];
+        } catch (error) {
+            console.warn(`[UserProfileService] getLastChatChips failed for ${uid}/${agentId}:`, error.message);
+            return [];
+        }
+    }
+
+    async clearLastChatChips(uid, agentId) {
+        if (!uid || uid === 'guest' || !agentId) return false;
+        try {
+            await CosmosStore.clearProgress(uid, `chat_chips_${agentId}`);
+            return true;
+        } catch (error) {
+            console.warn(`[UserProfileService] clearLastChatChips failed for ${uid}/${agentId}:`, error.message);
+            return false;
         }
     }
 
@@ -1610,8 +1718,7 @@ ${tutor.tone ? `**TONE & MANNER**: ${tutor.tone}` : ''}
     async getQuestResult(uid, resultId) {
         if (!uid || uid === 'guest' || !resultId) return null;
         try {
-            const doc = await this.usersCollection.doc(uid).collection('quest_results').doc(resultId).get();
-            return doc.exists ? doc.data() : null;
+            return await CosmosStore.getQuestResult(uid, resultId);
         } catch (error) {
             console.error(`[UserProfileService] Error fetching quest result ${resultId}:`, error);
             return null;
@@ -1626,9 +1733,9 @@ ${tutor.tone ? `**TONE & MANNER**: ${tutor.tone}` : ''}
         if (!uid || uid === 'guest') return;
         CacheService.invalidateUserDbCache(uid);
 
-        await this.usersCollection.doc(uid).update({
+        await CosmosStore.updateUserProfile(uid, {
             subscription_status: 'cancelled',
-            updatedAt: admin.firestore.FieldValue.serverTimestamp()
+            updatedAt: new Date().toISOString()
         });
         return { success: true };
     }
@@ -1641,28 +1748,18 @@ ${tutor.tone ? `**TONE & MANNER**: ${tutor.tone}` : ''}
         if (!uid || uid === 'guest') return;
         CacheService.invalidateUserDbCache(uid);
 
-        const userRef = this.usersCollection.doc(uid);
-
-        // List of sub-collections to delete
-        const subCollections = [
-            'stats', 'progress', 'timeline', 'notebook',
-            'chat_history', 'inventory', 'quest_results'
-        ];
-
         try {
-            // Delete sub-collections recursively
-            for (const collName of subCollections) {
-                const subCollRef = userRef.collection(collName);
-                const snapshot = await subCollRef.get();
-                if (snapshot.empty) continue;
-
-                const batch = this.db.batch();
-                snapshot.docs.forEach(doc => batch.delete(doc.ref));
-                await batch.commit();
-            }
-
-            // Finally delete the main user document
-            await userRef.delete();
+            await CosmosStore.purgeByPk('chat_messages', uid);
+            await CosmosStore.purgeByPk('timeline_events', uid);
+            await CosmosStore.purgeByPk('inventory_items', uid);
+            await CosmosStore.purgeByPk('quest_results', uid);
+            await CosmosStore.purgeByPk('notebook_items', uid);
+            await CosmosStore.purgeByPk('progress_snapshots', uid);
+            await CosmosStore.clearProgress(uid, 'english');
+            await CosmosStore.clearProgress(uid, 'maths');
+            await CosmosStore.clearProgress(uid, 'mock_summary');
+            await CosmosStore.purgeByPk('user_stats', uid);
+            await CosmosStore.purgeByPk('users', uid);
             return { success: true };
         } catch (error) {
             console.error(`[UserProfileService] Error deleting user profile for ${uid}:`, error);
@@ -1672,16 +1769,19 @@ ${tutor.tone ? `**TONE & MANNER**: ${tutor.tone}` : ''}
     /**
      * Normalizes a skill ID or display name into a technical ID.
      */
-    normalizeSkillId(id, subject = 'english') {
+    normalizeSkillId(id, subject = 'english', options = {}) {
         if (!id) return null;
+        const allowRawFallback = options.allowRawFallback === true;
         
         const pool = subject === 'math' || subject === 'maths' ? MATHS_MICRO_SKILLS : MICRO_SKILLS;
+        const directPoolKey = Object.keys(pool).find((key) => key.toLowerCase() === String(id).toLowerCase());
         
         // 1. Direct Match
         if (pool[id]) return id;
+        if (directPoolKey) return directPoolKey;
 
         // 2. Case-Insensitive/Display Name Match
-        const normalizedInput = id.toLowerCase().trim();
+        const normalizedInput = String(id).toLowerCase().trim();
         const byName = Object.values(pool).find(s => s.name.toLowerCase() === normalizedInput);
         if (byName) return byName.id;
 
@@ -1692,37 +1792,55 @@ ${tutor.tone ? `**TONE & MANNER**: ${tutor.tone}` : ''}
                 'main idea': 'reading_mainIdea',
                 'main idea identification': 'reading_mainIdea',
                 'detail recognition': 'reading_detailRecognition',
+                'detail': 'reading_detailRecognition',
                 'literal comprehension': 'reading_literalComprehension',
+                'literal': 'reading_literalComprehension',
                 'sequencing': 'reading_sequencing',
                 'synthesis': 'reading_synthesis',
+                'comparison': 'reading_synthesis',
+                'summary': 'reading_synthesis',
+                'extraction': 'reading_detailRecognition',
                 'fact vs opinion': 'reading_factVsOpinion',
                 'author\'s purpose': 'reading_authorPurpose',
                 'tone & attitude': 'reading_toneAttitude',
+                'tone': 'reading_toneAttitude',
                 'register & style': 'reading_registerStyle',
                 'metaphorical language': 'reading_metaphoricalLanguage',
                 'text organisation': 'reading_textOrganization',
                 'skimming & scanning': 'reading_skimmingScanning',
                 'paraphrasing': 'reading_paraphrasing',
                 'cohesion & reference': 'reading_cohesionReference',
+                'reference': 'reading_cohesionReference',
+                'vocabulary': 'reading_paraphrasing',
                 // Lab/Quest Specific Tags
-                'writing weekly': 'writing_organization',
-                'listening weekly': 'listening_part_a',
+                'writing weekly': 'writing_paragraphStructure',
+                'listening weekly': 'listening_detailListening',
                 'reading weekly': 'reading_mainIdea',
-                'listening part a': 'listening_part_a',
-                'listening part b': 'listening_content',
+                'listening part a': 'listening_detailListening',
+                'listening part b': 'listening_integratedTasks',
+                // Listening Mock Labels
+                'listening accuracy': 'listening_detailListening',
+                'content synthesis': 'listening_integratedTasks',
+                'integrated language': 'listening_noteTaking',
+                'logical organization': 'writing_paragraphStructure',
+                'register & tone': 'writing_registerAppropriate',
                 // Speaking Normalization
-                'speaking_organisation': 'speaking_organization',
-                'speaking_vocabularyInSpeech': 'speaking_language',
+                'speaking_organisation': 'speaking_facilitation',
+                'speaking_vocabularyInSpeech': 'speaking_vocabularyInSpeech',
                 'pronunciation': 'speaking_pronunciationClarity',
-                'language': 'speaking_language',
-                'ideas': 'speaking_logicalDevelopment',
-                'strategies': 'speaking_strategies',
-                'delivery': 'speaking_delivery',
+                'language': 'writing_grammaticalAccuracy',
+                'ideas': 'speaking_spontaneity',
+                'strategies': 'speaking_facilitation',
+                'delivery': 'speaking_pronunciationClarity',
+                'speaking_language': 'speaking_vocabularyInSpeech',
+                'speaking_organization': 'speaking_facilitation',
+                'speaking_logicaldevelopment': 'speaking_facilitation',
                 // Mock Specific Tags
                 'content': 'writing_relevance',
                 'writing_content': 'writing_relevance',
                 'writing_language': 'writing_grammaticalAccuracy',
                 'writing_organization': 'writing_paragraphStructure',
+                'organization': 'writing_paragraphStructure',
                 'appropriacy': 'writing_registerAppropriate'
             };
             if (mappings[normalizedInput]) return mappings[normalizedInput];
@@ -1731,8 +1849,55 @@ ${tutor.tone ? `**TONE & MANNER**: ${tutor.tone}` : ''}
             const prefixMatch = Object.keys(pool).find(key => key.endsWith('_' + normalizedInput) || key.includes(normalizedInput.replace(/\s/g, '')));
             if (prefixMatch) return prefixMatch;
         }
+        return allowRawFallback ? id : null;
+    }
 
-        return id;
+    canonicalizeEnglishMicroSkills(microSkills = {}) {
+        const next = {};
+        let changed = false;
+
+        for (const [rawSkillId, rawValue] of Object.entries(microSkills || {})) {
+            const canonicalId = this.normalizeSkillId(rawSkillId, 'english', { allowRawFallback: false });
+            if (!canonicalId || !MICRO_SKILLS[canonicalId]) {
+                changed = true;
+                continue;
+            }
+
+            if (canonicalId !== rawSkillId) {
+                changed = true;
+            }
+
+            const current = next[canonicalId] || {};
+            const incoming = rawValue && typeof rawValue === 'object' ? rawValue : {};
+            const existingLevel = Number(current.level || 0);
+            const incomingLevel = Number(incoming.level || 0);
+
+            const merged = {
+                ...current,
+                ...incoming,
+                level: Math.max(existingLevel, incomingLevel),
+                history: [
+                    ...(Array.isArray(current.history) ? current.history : []),
+                    ...(Array.isArray(incoming.history) ? incoming.history : [])
+                ].slice(-12)
+            };
+
+            if (!Array.isArray(merged.history)) {
+                merged.history = [];
+            }
+
+            if (!merged.lastPracticed && incoming.lastPracticed) {
+                merged.lastPracticed = incoming.lastPracticed;
+            }
+
+            next[canonicalId] = merged;
+        }
+
+        const beforeCount = Object.keys(microSkills || {}).length;
+        const afterCount = Object.keys(next).length;
+        if (beforeCount !== afterCount) changed = true;
+
+        return { changed, microSkills: next };
     }
 
     /**
@@ -1749,11 +1914,17 @@ ${tutor.tone ? `**TONE & MANNER**: ${tutor.tone}` : ''}
         try {
             const skillScores = assessment.skillScores || {};
             const promises = Object.entries(skillScores).map(([skillName, data]) => {
-                const skillId = this.normalizeSkillId(skillName, subject);
-                if (!skillId) return Promise.resolve();
+                const skillId = this.normalizeSkillId(skillName, subject, { allowRawFallback: false });
+                if (!skillId) {
+                    console.warn(`[UserProfileService] Skipping unmapped skill score "${skillName}" for ${uid}/${subject}`);
+                    return Promise.resolve();
+                }
 
                 const score = typeof data === 'number' ? data : (data.score || 0);
-                const total = data.possible || (typeof data === 'number' ? 100 : 1);
+                const total = (typeof data === 'number')
+                    ? 100
+                    : Number(data?.possible || 0);
+                if (total <= 0) return Promise.resolve();
                 const masteryScore = Math.min(100, Math.max(0, Math.round((score / total) * 100)));
 
                 return this.updateMicroSkillLevel(uid, subject, skillId, masteryScore, {

@@ -1,0 +1,27 @@
+{
+  "type": "WRITING",
+  "topic": "writing_weekly",
+  "title": "Scaling peer support, counselling access, and stigma-reduction campaigns in Hong Kong secondary schools",
+  "reading_passage": "Role: Student welfare editor.\nAudience: School wellness portal readers (students, parents).\nPurpose: Write a discursive piece on whether peer listening programmes should be mandatory for senior forms, how to protect peer supporters, and how messaging can reduce stigma without minimising serious conditions.\n\nRespect clinical boundaries; avoid giving instructions for crisis situations.",
+  "conceptual_explanation": "Paper 2: sensitive topic register; balance of empathy and clarity; avoidance of harmful prescriptive medical advice while discussing policy.",
+  "key_points": ["Define peer roles vs professionals.", "Safeguarding and supervision.", "Layered communication strategies.", "Access and confidentiality ethics."],
+  "marking_logic": {
+    "hkeaa_paper2_dimensions": { "content": "Insight, relevance, audience sensitivity", "language": "Tone control and accuracy", "organisation": "Coherent staged argument" },
+    "full_marks_criteria": [
+      "Content: nuanced treatment of peer support benefits/risks; HK school context.",
+      "Language: respectful lexis; modality for uncertainty; avoids harmful certainty claims.",
+      "Organisation: clear sections; ethical caveat where appropriate.",
+      "Does not trivialise serious mental illness nor demonise peer schemes."
+    ],
+    "key_phrases": ["triage", "confidentiality charter", "vicarious trauma", "escalation pathway", "layered messaging"],
+    "genre_requirements": { "format": "Feature article / portal essay", "essential_elements": ["Context", "Analysis", "Recommendations"], "tone": "Empathetic, informed, non-clinical authority" }
+  },
+  "interactive_tasks": [
+    { "id": "lvl_4", "type": "MODEL_ANSWER", "question": "Model Answer (Level 4)", "answer": "Peer Listeners\n\nMany schools have peer listeners now because counsellors are busy. Peers can help friends feel better but they are not doctors.\n\nI think training is important. If peers work too much they may feel sad too. Schools should give rest time.\n\nMessages should be kind and not scary words, but serious problems still need professionals.\n\nOverall peer programmes are helpful if we are careful.", "explanation": "Basic treatment; simple sentences—Level 4." },
+    { "id": "lvl_5", "type": "MODEL_ANSWER", "question": "Model Answer (Level 5)", "answer": "Peers Who Listen—Within Bounds\n\nScaling peer support is rational economics: adolescents often disclose to peers first. Rational ethics, however, demands supervision, triage scripts, and mandatory rotation so volunteers recover.\n\nMandatory senior participation could normalise help-seeking yet coerce introverts. Better: opt-in with incentives and transparent escalation maps—when silence is unsafe, how fast a counsellor joins.\n\nMessaging should pair plain terminology in intake rooms with gentler assembly language—avoid both euphemism-only and shock-only framing.\n\nSchools must fund release time for debriefs; compassion without logistics curdles into goodwill burnt on spreadsheets.", "explanation": "Structured; modality; humane policy—Level 5." },
+    { "id": "lvl_5s", "type": "MODEL_ANSWER", "question": "Model Answer (Level 5*)", "answer": "Stigma Drops When Systems Work\n\nPeer listeners are not mini-therapists; they are early routers on a care network. Mandate training, not gossip—not listening quotas scored like attendance.\n\nConfidentiality charters audited by NGOs earn parent trust faster than inspirational videos. Publish aggregate referral latency KPIs—anonymised—so accountability is public without voyeurism.\n\nEthical guardrail: no chatbot-only pathway for ideation; technology queues, humans decide.", "explanation": "Systemic lens; crisp ethics—5*." },
+    { "id": "lvl_5ss", "type": "MODEL_ANSWER", "question": "Model Answer (Level 5**)", "answer": "The Architecture of Listening\n\nCare is not a slogan laminated outside the counselling door; it is throughput architecture—how fast distress converts into competent response. I defend peer schemes only where supervision volume scales with caseload, and where silence for volunteers is scheduled as ruthlessly as exam drilling.\n\nOur essays ask students to analyse tone; our wellbeing policy must analyse tone-deaf euphemisms. Say plainly what acute risk means in staff rooms; say softly in playgrounds only if soft language still routes urgency upward.\n\nMeasure what matters: referral accuracy drills, post-incident debrief completion, median hours to counsellor touch—not happiness hashtags.", "explanation": "Metaphor + institutional critique + assessment bridge—5**." }
+  ],
+  "success_feedback": "Notice how tone discipline supports Content marks on sensitive prompts.",
+  "suggested_next_steps": ["Add an explicit ethical disclaimer sentence.", "Peer-edit for modality (may, could, should)."]
+}

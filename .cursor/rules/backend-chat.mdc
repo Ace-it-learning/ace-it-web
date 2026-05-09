@@ -1,0 +1,82 @@
+---
+description: Conventions for the AI tutor chat backend (history window, prompts, intent routing, mock/quest summaries).
+globs:
+  - backend/routes/chatRoutes.js
+  - backend/services/IntentRouter.js
+  - backend/services/UserProfileService.js
+  - backend/services/CacheService.js
+  - backend/services/GamificationService.js
+  - backend/services/MockAssessmentService.js
+  - backend/routes/englishMockRoutes.js
+alwaysApply: false
+---
+
+# AI tutor chat backend conventions
+
+## Prompt assembly contract (POST /api/chat)
+
+The system prompt is assembled in tiers, in this order:
+
+1. `core` = `GLOBAL_BASE_RULES` + `persona.prompt` + `AGENT_PROMPTS[agentId]`
+   (always present). Placeholders `{{userName}}`, `{{agentName}}`,
+   `{{DREAM_SUBJECT}}`, `{{INSIGHT_PACKAGE}}` are substituted here.
+2. `recent_activity` = the small `RECENT_ACTIVITY_GUIDANCE` block
+   (only when the student has recent quests OR a recent mock).
+3. `rag` = capped at `MAX_RAG_CHARS = 600`. Skip the placeholder
+   "No specific snippets found." string from `KnowledgeService`.
+4. `strategy` = `ACE_SIR_INJECTION` (only when `routeRequest` flags
+   strategy keywords).
+5. `lang_skip` = NATIVE HK SPEAKER MODE topics, capped to
+   `MAX_LANG_SKIP_TOPICS = 8` then `+N more`.
+6. `windowed` = a `[CONTEXT_SUMMARY] N earlier turn(s) omitted` line
+   added only when `buildHistoryWindow` dropped messages.
+
+Always log `tierFlags.join('+')` as `prompt_tier` via
+`TokenService.logUsage(uid, 'chat', usageMetadata, { prompt_tier, agent_id, history_msgs, router_skipped })`.
+
+## History window contract
+
+- `MAX_TURNS = 12` and `MAX_CHARS_PER_MSG = 800` enforced in
+  `buildHistoryWindow`. Frontend mirrors a `MAX_PAYLOAD_TURNS = 24`
+  slice for wire size only - server is authoritative.
+- Final content array MUST start with role `user` (Gemini constraint).
+- Image data is attached to the LAST user turn; do not reorder turns.
+
+## Intent router fast-path
+
+Bypass `IntentRouter.classify` only when ALL of the following hold:
+
+- `agentId !== 'math'`
+- no image attached
+- `CacheService.isGreetingOrAck(message)` returns true
+- `CacheService.hasRecentLabProposal(history)` returns false
+
+When in doubt, let the router run. Confirmation phrases like
+"yes", "ok", "proceed", "好呀" intentionally are NOT in
+`isGreetingOrAck` because they may be lab confirmations.
+
+## Insight pack
+
+`UserProfileService.formatInsightsForPrompt(pContext)` emits TWO lines:
+
+- `[STUDENT_INSIGHTS]` - long-lived skill / quest snapshot
+- `[RECENT_ACTIVITY] QUESTS:... | MOCK:...`
+
+`pContext.recentMock` is sourced from
+`users/{uid}/progress/mock_summary` (written by
+`UserProfileService.saveMockSummary`). `pContext.recentQuests`
+comes from `GamificationService.getRecentQuestSummary` which reads
+`users/{uid}/quest_results`.
+
+When you add a new mock submit endpoint, you MUST call
+`UserProfileService.saveMockSummary(uid, { paper, topic, score,
+total, percentage, level, topMistakes })` after the assessment.
+
+## Don't
+
+- Don't edit `backend/.env` or `backend/system_prompts.js` casually -
+  they are governed elsewhere and may be `.cursorignore`d.
+- Don't reintroduce unbounded `clientHistory` mapping. Always go
+  through `buildHistoryWindow`.
+- Don't add long static text to the system prompt without a
+  corresponding `tierFlags.push(...)` so telemetry attributes it.

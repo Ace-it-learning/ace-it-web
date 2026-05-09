@@ -3,9 +3,10 @@ import { Play, Loader2, Headphones, Volume2, Timer, Clock } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useAuth } from '../../context/AuthContext';
 import { speak, stopAll } from '../../utils/ttsService';
+import { isCheatEnabled } from '../../utils/devAccess';
 
 const Paper3AudioEngine = forwardRef(({ script, phase, onPhaseChange, onTaskChange, onSectionChange, onTidyingStart, onTidyingEnd, onStudyStart, onComplete, onRequireSelection, onCountdownTick, onStatusChange, initialIndex = 0, initialPause = null, onIndexChange }, ref) => {
-    const { user } = useAuth();
+    const { user, profile } = useAuth();
 
     const [currentIndex, setCurrentIndex] = useState(initialIndex);
     const [isPlaying, setIsPlaying] = useState(initialIndex > 0 || ['PART_A', 'PART_B_AUDIO', 'TRANSITION'].includes(phase));
@@ -335,7 +336,7 @@ const Paper3AudioEngine = forwardRef(({ script, phase, onPhaseChange, onTaskChan
                         </div>
 
                         {/* Developer Fast-Forward (Hidden for general users) */}
-                        {user?.email === 'fungtam@gmail.com' && (
+                        {isCheatEnabled(user, profile) && (
                             <button 
                                 onClick={() => setPrepCountdown(3)}
                                 className="mt-4 px-4 py-2 bg-indigo-600/20 hover:bg-indigo-600/40 text-indigo-400 text-[10px] font-black uppercase tracking-widest rounded-xl transition-all border border-indigo-500/20"
@@ -355,7 +356,7 @@ const Paper3AudioEngine = forwardRef(({ script, phase, onPhaseChange, onTaskChan
                         </div>
 
                         {/* Developer Fast-Forward */}
-                        {user?.email === 'fungtam@gmail.com' && (
+                        {isCheatEnabled(user, profile) && (
                             <button 
                                 onClick={() => setPauseCountdown(3)}
                                 className="mt-4 px-4 py-2 bg-indigo-600/20 hover:bg-indigo-600/40 text-indigo-400 text-[10px] font-black uppercase tracking-widest rounded-xl transition-all border border-indigo-500/20"

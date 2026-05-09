@@ -11,6 +11,29 @@
     "Maintaining a formal tone: As it's for a school magazine, avoid overly casual language and slang.",
     "Structuring your opinion piece: Use a clear introduction, body paragraphs with well-developed arguments, and a compelling conclusion."
   ],
+  "marking_logic": {
+    "full_marks_criteria": [
+      "Critically evaluates the 'Environmental Theater' vs. 'Substantial Change' debate",
+      "Discusses the adequacy of Hong Kong's current recycling infrastructure (e.g., O·PARK, Green@Community)",
+      "Addresses the impact on different socio-economic groups (e.g., low-income families, elderly)",
+      "Suggests pragmatic alternatives like Deposit Refund Schemes (DRS)",
+      "Uses a sophisticated, balanced tone suitable for an editorial/opinion piece"
+    ],
+    "key_phrases": [
+      "single-use plastics",
+      "environmental stewardship",
+      "circular economy",
+      "systemic accountability",
+      "deposit refund scheme",
+      "landfill crisis",
+      "unintended consequences"
+    ],
+    "genre_requirements": {
+      "format": "Opinion Piece / Editorial",
+      "essential_elements": ["Strong Headline", "Contextual Intro", "Balanced Argumentation", "Decisive Conclusion"],
+      "tone": "Critical, constructive, and formal"
+    }
+  },
   "interactive_tasks": [
     {
       "id": "lvl_4",

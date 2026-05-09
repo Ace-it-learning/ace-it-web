@@ -12,6 +12,28 @@
     "Employing persuasive language and rhetorical devices.",
     "Addressing counterarguments and offering rebuttals."
   ],
+  "marking_logic": {
+    "full_marks_criteria": [
+      "Explicitly takes a stance (for, against, or conditional legalization)",
+      "Discusses safety concerns (narrow paths, speed limits, pedestrian safety)",
+      "Mentions environmental or mobility benefits (last-mile solution, carbon footprint)",
+      "Refers to international examples (e.g., Singapore, Berlin, Amsterdam) to bolster the argument",
+      "Tone is appropriate for a school magazine: informative yet persuasive"
+    ],
+    "key_phrases": [
+      "personal mobility devices",
+      "first-mile/last-mile solution",
+      "traffic congestion",
+      "stringent regulations",
+      "pedestrian-heavy urban environment",
+      "infrastructure deficiency"
+    ],
+    "genre_requirements": {
+      "format": "Opinion Piece / Magazine Article",
+      "essential_elements": ["Title", "Introduction with Hook", "Body Paragraphs with Topic Sentences", "Conclusion with Call to Action"],
+      "tone": "Engaging, balanced, and persuasive"
+    }
+  },
   "interactive_tasks": [
     {
       "id": "lvl_4",

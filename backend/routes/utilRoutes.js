@@ -2,7 +2,9 @@ const express = require('express');
 const router = express.Router();
 const GenerativeAIService = require('../services/GenerativeAIService');
 const TokenService = require('../services/TokenService');
+const OcrService = require('../services/OcrService');
 const axios = require('axios');
+const { getContainer } = require('../db/cosmos');
 
 const TIER_1_MODEL = "gemini-flash-latest";
 const TIER_PRO_MODEL = "gemini-pro-latest";
@@ -49,23 +51,22 @@ router.post('/ocr', async (req, res) => {
         const { image, uid } = req.body;
         if (!image || !image.data) return res.status(400).json({ error: "No image provided" });
 
-        const result = await GenerativeAIService.generateContent([
-            "You are an OCR specialist. Transcribe the handwritten text exactly. ONLY return the text. No feedback.",
-            {
-                inlineData: {
-                    data: image.data,
-                    mimeType: image.mimeType || "image/jpeg"
-                }
-            }
-        ], { model: TIER_PRO_MODEL });
+        // Use the same OCR stack as /api/chat image grading (Tesseract + preprocessing + optional Azure Read).
+        // The old path used Gemini multimodal (inlineData); that breaks when AI_PROVIDER=deepseek (text-only).
+        const detailed = await OcrService.extractDetailedFromBase64(image.data, "eng");
+        const text = (detailed?.text || "").trim();
 
-        if (result.response && result.response.usageMetadata) {
-            TokenService.logUsage(uid || 'system', 'ocr', result.response.usageMetadata);
+        if (!text || text.length < 5) {
+            return res.status(422).json({
+                error: "OCR incomplete",
+                details: "Could not read enough text from the image. Try a clearer photo or paste the text."
+            });
         }
 
-        res.json({ transcription: result.response.text().trim() });
+        res.json({ transcription: text });
     } catch (e) {
-        res.status(500).json({ error: "OCR failed" });
+        console.error("[utilRoutes] OCR error:", e.message);
+        res.status(500).json({ error: "OCR failed", details: e.message });
     }
 });
 
@@ -109,15 +110,18 @@ router.get('/voice-quota', async (req, res) => {
  */
 router.get('/schools', async (req, res) => {
     try {
-        const db = admin.firestore();
-        const snapshot = await db.collection('meta_schools').orderBy('name').get();
-        if (snapshot.empty) {
+        const container = await getContainer('meta_schools', '/pk');
+        const result = await container.items.query({
+            query: "SELECT c.name, c.code, c.district FROM c WHERE c.pk = @pk ORDER BY c.name",
+            parameters: [{ name: "@pk", value: "meta_schools" }]
+        }).fetchAll();
+        const schoolsFromDb = result.resources || [];
+        if (!schoolsFromDb.length) {
             const schools = require('../schools_seed.json');
             schools.sort((a, b) => a.name.localeCompare(b.name));
             return res.json(schools);
         }
-        const schools = snapshot.docs.map(doc => doc.data());
-        res.json(schools);
+        res.json(schoolsFromDb);
     } catch (e) {
         console.error("Fetch Schools Error:", e);
         const schools = require('../schools_seed.json');
@@ -146,9 +150,8 @@ router.get('/trigger-weekly', async (req, res) => {
     const { uid, email } = req.query;
     if (!uid || !email) return res.status(400).json({ error: 'Missing uid or email' });
     try {
-        const db = admin.firestore();
-        const userDoc = await db.collection('users').doc(uid).get();
-        if (!userDoc.exists) return res.status(404).json({ error: 'User not found' });
+        const profile = await UserProfileService.getProfile(uid);
+        if (!profile) return res.status(404).json({ error: 'User not found' });
         
         // This is a placeholder for the actual report service trigger
         // which was originally a large block of logic in server.js

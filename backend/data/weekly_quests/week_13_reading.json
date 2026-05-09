@@ -22,7 +22,7 @@
         "The Development Bureau",
         "The Planning Department"
       ],
-      "answer": "A",
+      "answer": "The Antiquities and Monuments Office (AMO)",
       "explanation": "The passage explicitly states that the Antiquities and Monuments Office (AMO) is the primary government body responsible for identifying, protecting, and managing declared monuments and graded historic buildings."
     },
     {
@@ -31,6 +31,14 @@
       "instruction": "Answer the following question in no more than 20 words.",
       "question": "What is one criticism of the Antiquities and Monuments Office (AMO)?",
       "answer": "Limited resources and opaque decision-making.",
+      "marking_logic": {
+        "full_marks_criteria": [
+          "Mentions limited resources (money/manpower)",
+          "Mentions opaque or non-transparent decision-making processes"
+        ],
+        "key_phrases": ["limited resources", "opaque decision-making"],
+        "reject_criteria": ["Mentions prioritizing heritage over economy"]
+      },
       "explanation": "The passage states that critics argue that the AMO's resources are limited and its decision-making processes can be opaque."
     },
     {
@@ -44,7 +52,7 @@
         "Social welfare",
         "Political stability"
       ],
-      "answer": "A",
+      "answer": "Economic development",
       "explanation": "The passage mentions that critics argue the AMO often prioritizes economic development over heritage preservation."
     },
     {
@@ -57,11 +65,7 @@
         "Shortage of funding and expertise",
         "Lack of public awareness"
       ],
-      "answer": [
-        "Lack of a comprehensive heritage policy framework",
-        "Shortage of funding and expertise",
-        "Lack of public awareness"
-      ],
+      "answer": "0-1-2",
       "explanation": "The passage discusses the policy framework first and with the most detail, then funding and expertise, and finally public awareness."
     },
     {
@@ -75,7 +79,7 @@
         "School curricula",
         "Political campaigns"
       ],
-      "answer": "A",
+      "answer": "All aspects of urban planning and development",
       "explanation": "The passage explicitly states that there is a need for a more holistic and sustainable approach to heritage conservation that integrates heritage considerations into all aspects of urban planning and development."
     },
     {
@@ -84,6 +88,13 @@
       "instruction": "Answer the following question in no more than 20 words.",
       "question": "What three sectors should have greater collaboration in heritage conservation?",
       "answer": "Government, private sector, and the community.",
+      "marking_logic": {
+        "full_marks_criteria": [
+          "Mentions all three: Government, Private Sector, and Community"
+        ],
+        "key_phrases": ["government", "private sector", "community"],
+        "partial_marks_logic": "Award 0.5 if only two are mentioned."
+      },
       "explanation": "The passage mentions that there needs to be greater collaboration and partnership between the government, the private sector, and the community."
     },
     {
@@ -97,9 +108,8 @@
         "Restoring a building damaged by neglect"
       ],
       "answer": {
-        "Protecting a building after a demolition request": "Reactive",
-        "Integrating heritage into urban planning from the start": "Proactive",
-        "Restoring a building damaged by neglect": "Reactive"
+        "Reactive": [0, 2],
+        "Proactive": [1]
       },
       "explanation": "Proactive approaches prevent problems before they occur. Reactive approaches respond to problems after they have already occurred."
     },
@@ -114,7 +124,7 @@
         "Boosting the economy",
         "Complying with international regulations"
       ],
-      "answer": "A",
+      "answer": "Preserving the city's identity and sense of place",
       "explanation": "The passage states that the future of heritage conservation in Hong Kong is about preserving the city's identity and sense of place."
     },
     {
@@ -123,6 +133,14 @@
       "instruction": "Answer the following question in no more than 20 words.",
       "question": "Name one benefit of heritage conservation mentioned in the passage, beyond preservation.",
       "answer": "Connecting future generations to the past.",
+      "marking_logic": {
+        "full_marks_criteria": [
+          "Mentions connecting/bridging future generations with the past/ancestors",
+          "Mentions learning from previous experiences"
+        ],
+        "key_phrases": ["future generations", "connect", "past"],
+        "reject_criteria": ["Boosting tourism", "Increasing property value"]
+      },
       "explanation": "The passage says it is about ensuring future generations have the opportunity to connect with their past and learn from the experiences of those who came before them."
     },
     {
@@ -136,7 +154,7 @@
         "Increased funding for restoration projects",
         "Greater involvement of foreign experts"
       ],
-      "answer": "A",
+      "answer": "Greater investment in heritage education and awareness programs",
       "explanation": "The passage mentions a need for greater investment in heritage education and awareness programs to educate the public about the value of heritage."
     }
   ],

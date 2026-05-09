@@ -30,8 +30,10 @@
       "type": "SHORT_ANSWER",
       "instruction": "Extract a two-word phrase from paragraph 2.",
       "question": "What phrase describes AI's capacity to equalize educational opportunities regardless of a student's financial background?",
-      "options": [],
       "answer": "democratizing force",
+      "marking_logic": {
+        "full_marks_criteria": ["Exact phrase: democratizing force"]
+      },
       "explanation": "The author calls AI a 'democratizing force' because it dismantles socioeconomic barriers by offering free or low-cost personalized tutoring."
     },
     {
@@ -67,37 +69,42 @@
       "type": "SHORT_ANSWER",
       "instruction": "Provide a specific two-word Latin term from paragraph 4.",
       "question": "What specific assessment method does the author suggest could be introduced to ensure students genuinely understand their written SBA submissions?",
-      "options": [],
       "answer": "viva voce",
+      "marking_logic": {
+        "full_marks_criteria": ["Exact phrase: viva voce"]
+      },
       "explanation": "Paragraph 4 suggests incorporating 'mandatory viva voce—oral defense sessions' to evaluate the student's process and genuine understanding."
     },
     {
       "id": "q6",
       "type": "CATEGORIZATION",
-      "instruction": "Categorize the following impacts of AI as either an 'Opportunity' (O) or 'Ethical/Systemic Challenge' (E): 1. Bespoke feedback, 2. Cognitive atrophy, 3. Bypassing productive struggle, 4. Dismantling barriers.",
-      "question": "Select the correct categorization grouping.",
+      "instruction": "Categorize the following impacts of AI as either an 'Opportunity' or 'Ethical/Systemic Challenge'.",
+      "question": "Categorize the following impacts: 1. Bespoke feedback, 2. Cognitive atrophy, 3. Bypassing productive struggle, 4. Dismantling barriers.",
       "options": [
-        "O: 1,4; E: 2,3",
-        "O: 1,2; E: 3,4",
-        "O: 2,3; E: 1,4",
-        "O: 3,4; E: 1,2"
+        "Bespoke feedback",
+        "Cognitive atrophy",
+        "Bypassing productive struggle",
+        "Dismantling barriers"
       ],
-      "answer": "O: 1,4; E: 2,3",
-      "explanation": "Bespoke feedback (1) and dismantling barriers (4) are positive opportunities mentioned in paragraph 2. Cognitive atrophy (2) and bypassing productive struggle (3) are ethical challenges discussed in paragraph 3."
+      "answer": {
+        "Opportunity": [0, 3],
+        "Ethical/Systemic Challenge": [1, 2]
+      },
+      "explanation": "Bespoke feedback (0) and dismantling barriers (3) are positive opportunities. Cognitive atrophy (1) and bypassing productive struggle (2) are ethical challenges."
     },
     {
       "id": "q7",
       "type": "ORDERING",
       "instruction": "Determine the chronological order of these concepts as they are introduced in the text.",
-      "question": "1. Assessing the process instead of the product. \n2. AI as a democratizing force in education. \n3. The danger of students losing the ability to synthesize arguments. \n4. Rebranding AI as a collaborative sounding board.",
+      "question": "Order the concepts introduced in the text:",
       "options": [
-        "2, 3, 1, 4",
-        "1, 2, 3, 4",
-        "3, 1, 2, 4",
-        "4, 3, 2, 1"
+        "AI as a democratizing force in education.",
+        "The danger of students losing the ability to synthesize arguments.",
+        "Assessing the process instead of the product.",
+        "Rebranding AI as a collaborative sounding board."
       ],
-      "answer": "2, 3, 1, 4",
-      "explanation": "Para 2: Democratizing force (2). Para 3: Losing synthesis/cognitive atrophy (3). Para 4: Assessing the process (1). Para 5: Collaborative sounding board (4)."
+      "answer": "0-1-2-3",
+      "explanation": "Para 2: Democratizing force (0). Para 3: Losing synthesis/cognitive atrophy (1). Para 4: Assessing the process (2). Para 5: Collaborative sounding board (3)."
     },
     {
       "id": "q8",

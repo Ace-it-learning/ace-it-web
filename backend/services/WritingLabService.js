@@ -1,18 +1,7 @@
 const GenerativeAIService = require('./GenerativeAIService');
-const admin = require('firebase-admin');
+const CosmosStore = require('./CosmosStore');
 
 class WritingLabService {
-    constructor() {
-        this._db = null;
-    }
-
-    get db() {
-        if (!this._db) {
-            this._db = admin.firestore();
-        }
-        return this._db;
-    }
-
     /**
      * Generate a Writing Session
      * @param {string} topic - The broad skill or theme (e.g., "Argumentative Skills" or "Technology")
@@ -116,8 +105,8 @@ class WritingLabService {
      */
     async evaluateSubmission(studentText, context) {
         const prompt = `
-            You are a Senior HKDSE English Marker (Level 5** Expert).
-            Task: Provide a PROFESSIONAL and DETAILED assessment of the student's work.
+            You are a Senior HKDSE English Marker (Level 5** Chief Examiner) named {{agentName}}.
+            Task: Provide a PROFESSIONAL, STERN, and DETAILED assessment of the student's work.
             
             Context: ${context.mode} for theme "${context.theme}".
             Instruction: ${context.instruction || context.question_text || context.prompt_text}
@@ -126,8 +115,15 @@ class WritingLabService {
             Student Submission:
             "${studentText}"
 
+            ### 🎯 HKEAA MARKING CRITERIA (1-7 SCALE):
+            Evaluate the submission based on the following descriptors:
+            
+            **1. Content (C)**: Relevance, development, and depth. (7: Sophisticated/Nuanced; 5: Clear/Developed; 3: Partial/Repetitive).
+            **2. Language (L)**: Vocabulary range and accuracy. (7: Elite flair/Precision; 5: Good range/Accurate; 3: Simple/Frequent errors).
+            **3. Organization (O)**: Cohesion and structure. (7: Perfectly cohesive; 5: Logical/Effective; 3: Basic/Mechanical).
+
             Requirements:
-            1. **Critique**: Provide 3 specific strengths/weaknesses.
+            1. **Critique**: Provide 3 specific strengths/weaknesses using HKEAA marker terminology.
             2. **Polished Version**: Rewrite the text to a solid Level 5/5* standard.
             3. **Hotspots**: Identify specific improvements within the rewrite compared to original.
                - "original_phrase": Exact substring from student work.
@@ -135,9 +131,9 @@ class WritingLabService {
                - "explanation": { "en": "...", "zh": "..." } - Bilingual reason.
 
             ABSOLUTE RULES:
-            - ALL qualitative fields MUST contain both "en" and "zh" objects (Traditional Chinese).
-            - LANGUAGE: EXCLUSIVELY use Traditional Chinese (繁體中文) for all "zh" fields.
-            - Ensure "polished_text" is a high-quality model rewrite.
+            - BILINGUAL: ALL qualitative fields MUST contain both "en" and "zh" objects.
+            - CHINESE: EXCLUSIVELY use Traditional Chinese (繁體中文).
+            - NO PREAMBLE: Return ONLY the JSON object.
 
             Output JSON Format:
             {
@@ -185,27 +181,17 @@ class WritingLabService {
                 if (filtered.length > 0) return filtered;
             }
 
-            // Priority 2: Firestore (Production/Dynamic Mode)
-            let query = this.db.collection('writing_exemplars');
-            if (genre !== 'all') {
-                query = query.where('genre', '==', genre);
-            }
-
-            const snapshot = await query.orderBy('created_at', 'desc').get();
-            const results = [];
-            snapshot.forEach(doc => {
-                const data = doc.data();
-                results.push({
-                    id: doc.id,
-                    title: data.title,
-                    genre: data.genre,
-                    theme: data.theme,
-                    level: data.level || "5**",
-                    word_count: data.word_count || 0,
-                    difficulty: data.difficulty || "ELITE"
-                });
-            });
-            return results;
+            // Priority 2: Cosmos (Production/Dynamic Mode)
+            const rows = await CosmosStore.listWritingExemplars(genre, 300);
+            return rows.map((data) => ({
+                id: data.id,
+                title: data.title,
+                genre: data.genre,
+                theme: data.theme,
+                level: data.level || "5**",
+                word_count: data.word_count || 0,
+                difficulty: data.difficulty || "ELITE"
+            }));
         } catch (err) {
             console.error("[WritingLabService] Error fetching exemplars:", err);
             return []; // Fail gracefully
@@ -227,9 +213,9 @@ class WritingLabService {
             if (localMatch) return localMatch;
         }
 
-        const doc = await this.db.collection('writing_exemplars').doc(id).get();
-        if (!doc.exists) return null;
-        return { id: doc.id, ...doc.data() };
+        const row = await CosmosStore.getWritingExemplarById(id);
+        if (!row) return null;
+        return { id: row.id, ...row };
     }
 
     /**

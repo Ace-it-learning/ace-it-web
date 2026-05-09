@@ -63,6 +63,22 @@
     "Extracting specific arguments related to educational equity and assessment reform.",
     "Following the logical flow of a multi-speaker debate."
   ],
+  "marking_logic": {
+    "full_marks_criteria": [
+      "Identifies 'outsourced critical thinking' as a core grievance",
+      "Correctly extracts 'cognitive scaffolding' metaphor",
+      "Notes data privacy concerns regarding intellectual property",
+      "Identifies the 'digital divide' mutating into 'premium access'",
+      "Captures the 'antiquated metric' argument"
+    ],
+    "phonetic_leniency": {
+      "scaffolding": ["scafolding", "scaffoldin"],
+      "antiquated": ["antiquatid", "anticated"],
+      "intellectual": ["intelectual", "intellectuel"],
+      "property": ["propertie", "proprety"],
+      "literacy": ["litracy", "literecy"]
+    }
+  },
   "interactive_tasks": [
     {
       "id": "task_1",

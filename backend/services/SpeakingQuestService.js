@@ -1,20 +1,10 @@
-const admin = require('firebase-admin');
 const SPEAKING_CLUSTERS = require('../constants/speakingClusters');
 const MICRO_SKILLS = require('../constants/microSkills');
 const GenerativeAIService = require('./GenerativeAIService');
+const CosmosStore = require('./CosmosStore');
 
 class SpeakingQuestService {
-    constructor() {
-        this._db = null;
-    }
-
-    get db() {
-        if (!this._db) {
-            this._db = admin.firestore();
-        }
-        return this._db;
-    }
-
+    constructor() {}
     /**
      * MAIN ENTRY: Generate a Speaking Quest
      */
@@ -499,16 +489,11 @@ CRITICAL: The mind_map should provide a clear logical framework for the student 
     async getRecentVocab(uid) {
         try {
             if (!uid) return [];
-            const vocabSnapshot = await this.db.collection('users').doc(uid)
-                .collection('vocabulary')
-                .orderBy('createdAt', 'desc')
-                .limit(5)
-                .get();
-
-            if (!vocabSnapshot.empty) {
-                return vocabSnapshot.docs.map(doc => ({
-                    word: doc.data().word || doc.data().text,
-                    definition: doc.data().definition
+            const rows = await CosmosStore.getRecentVocabulary(uid, 5);
+            if (rows.length) {
+                return rows.map((row) => ({
+                    word: row.word || row.text,
+                    definition: row.definition
                 }));
             }
         } catch (e) {

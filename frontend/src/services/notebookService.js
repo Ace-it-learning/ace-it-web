@@ -1,5 +1,4 @@
-import { db } from '../firebase';
-import { collection, addDoc, serverTimestamp, getDocs, query, orderBy, deleteDoc, doc, updateDoc } from 'firebase/firestore';
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
 
 /**
  * Adds an item to the user's notebook.
@@ -9,13 +8,17 @@ import { collection, addDoc, serverTimestamp, getDocs, query, orderBy, deleteDoc
  */
 export const addToNotebook = async (userId, item) => {
     try {
-        const colRef = collection(db, 'users', userId, 'notebook');
-        const docRef = await addDoc(colRef, {
-            ...item,
-            reviewStatus: 'new', // new, learning, mastered
-            timestamp: serverTimestamp()
+        const response = await fetch(`${API_URL}/api/data/notebook/${encodeURIComponent(userId)}`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                ...item,
+                reviewStatus: 'new'
+            })
         });
-        return docRef.id;
+        if (!response.ok) throw new Error('Failed to add notebook item');
+        const data = await response.json();
+        return data.id;
     } catch (error) {
         console.error("Error adding to notebook:", error);
         throw error;
@@ -27,10 +30,9 @@ export const addToNotebook = async (userId, item) => {
  */
 export const getNotebookItems = async (userId) => {
     try {
-        const colRef = collection(db, 'users', userId, 'notebook');
-        const q = query(colRef, orderBy('timestamp', 'desc'));
-        const snapshot = await getDocs(q);
-        return snapshot.docs.map(d => ({ id: d.id, ...d.data() }));
+        const response = await fetch(`${API_URL}/api/data/notebook/${encodeURIComponent(userId)}`);
+        if (!response.ok) throw new Error('Failed to fetch notebook');
+        return await response.json();
     } catch (error) {
         console.error("Error fetching notebook:", error);
         return [];
@@ -39,7 +41,10 @@ export const getNotebookItems = async (userId) => {
 
 export const deleteNotebookItem = async (userId, itemId) => {
     try {
-        await deleteDoc(doc(db, 'users', userId, 'notebook', itemId));
+        const response = await fetch(`${API_URL}/api/data/notebook/${encodeURIComponent(userId)}/${encodeURIComponent(itemId)}`, {
+            method: 'DELETE'
+        });
+        if (!response.ok) throw new Error('Failed to delete notebook item');
     } catch (error) {
         console.error("Error deleting item:", error);
         throw error;
@@ -48,9 +53,12 @@ export const deleteNotebookItem = async (userId, itemId) => {
 
 export const updateReviewStatus = async (userId, itemId, status) => {
     try {
-        await updateDoc(doc(db, 'users', userId, 'notebook', itemId), {
-            reviewStatus: status
+        const response = await fetch(`${API_URL}/api/data/notebook/${encodeURIComponent(userId)}/${encodeURIComponent(itemId)}`, {
+            method: 'PATCH',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ reviewStatus: status })
         });
+        if (!response.ok) throw new Error('Failed to update notebook item');
     } catch (error) {
         console.error("Error updating status:", error);
         throw error;

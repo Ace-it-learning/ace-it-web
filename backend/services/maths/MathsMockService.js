@@ -1,4 +1,4 @@
-const admin = require('firebase-admin');
+const CosmosStore = require('../CosmosStore');
 
 /**
  * MathsMockService
@@ -12,7 +12,6 @@ class MathsMockService {
      * Fetches from 'integrated_challenges' bank.
      */
     static async getMockPaper(paperId, language = 'en') {
-        const db = admin.firestore();
         const batchNum = parseInt(paperId) || 1;
         
         console.log(`[MathsMockService] Assembling Mock Paper ${batchNum} (Lang: ${language})...`);
@@ -20,21 +19,17 @@ class MathsMockService {
         try {
             // Fetch ALL approved integrated challenges
             // We fetch more than we need then slice deterministically
-            const snapshot = await db.collection('integrated_challenges')
-                .where('status', '==', 'approved')
-                .get();
-
-            if (snapshot.empty) {
+            const rows = await CosmosStore.getApprovedIntegratedChallenges(500);
+            if (!rows.length) {
                 console.warn("[MathsMockService] Bank empty. Falling back to dynamic placeholder.");
                 return this.generateFallbackMock(batchNum);
-            }
+            }            
 
             const allQuestions = [];
-            snapshot.forEach(doc => {
-                const data = doc.data();
+            rows.forEach((data) => {
                 allQuestions.push({
                     ...data,
-                    id: doc.id,
+                    id: data.id,
                     text: language === 'zh' ? (data.question_zh || data.text_zh) : (data.question_en || data.text),
                     text_zh: data.question_zh || data.text_zh,
                     solution_steps: language === 'zh' ? (data.solution_steps_zh || data.solution_steps) : (data.solution_steps_en || data.solution_steps),

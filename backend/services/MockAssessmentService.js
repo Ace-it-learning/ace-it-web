@@ -23,7 +23,7 @@ class MockAssessmentService {
     /**
      * Evaluate a Paper 1 (Reading) submission
      */
-    async evaluateReadingPaper(mockData, userAnswers, analytics = {}) {
+    async evaluateReadingPaper(mockData, userAnswers, analytics = {}, tier = 'free') {
         const results = {};
         const sectionalScores = { A: { score: 0, possible: 0 }, B: { score: 0, possible: 0 } };
         const skillScores = {};
@@ -54,7 +54,7 @@ class MockAssessmentService {
         // 2. Perform AI Evaluation in one batch
         let aiResults = {};
         if (subjectiveQuestions.length > 0) {
-            aiResults = await this.evaluateSubjectiveBatch(subjectiveQuestions, mockData.meta?.topic);
+            aiResults = await this.evaluateSubjectiveBatch(subjectiveQuestions, mockData.meta?.topic, tier);
         }
 
         // 3. Process all questions
@@ -144,7 +144,7 @@ class MockAssessmentService {
     /**
      * Evaluate subjective questions using AI
      */
-    async evaluateSubjectiveBatch(items, topic) {
+    async evaluateSubjectiveBatch(items, topic, tier = 'free') {
         try {
             // Split questions into smaller batches (Atomized Evaluation) to prevent AI Laziness
             const BATCH_SIZE = 10;
@@ -173,9 +173,11 @@ class MockAssessmentService {
                                     const batchPrompt = this.createBatchPrompt(batch, topic);
                                     const hasHighRigor = batch.some(it => it.highRigor);
                                     
+                                    let response;
                                     try {
                                         // TIER-BASED MODEL SELECTION
-                                        const model = (tier && tier.toLowerCase() === 'premium') ? 'ace-it-pro' : 'ace-it-flash';
+                                        const normalizedTier = String(tier || '').toLowerCase();
+                                        const model = (normalizedTier === 'premium' || normalizedTier === 'pro') ? 'ace-it-pro' : 'ace-it-flash';
                                         
                                         response = await GenerativeAIService.generateJson(batchPrompt, { 
                                             model: model,
@@ -296,31 +298,34 @@ class MockAssessmentService {
         }, {});
 
         return `
-            You are a Senior HKEAA (Hong Kong) English Reading Examiner. 
+            You are a Senior HKEAA (Hong Kong) English Reading Examiner specializing in high-stakes assessment (HKDSE Paper 1). 
             Grade these student answers for the mock: "${topic}".
 
             ### 🎯 RUBRIC-BASED SEMANTIC EVALUATION RULES:
             1. **Atomized Scoring**:
                - **Full Marks**: Student captures the core meaning of ALL required criteria in \`marking_logic.full_marks_criteria\` or \`marking_logic.key_phrases\`.
-               - **Partial Marks**: Award ~50% (0.5/1 or 1.0/2) if they capture the 'Main Idea' but miss the 'Supporting Detail' or a technical term. Use \`marking_logic.partial_marks_logic\` as a guide.
-               - **Reject List**: If the answer contains concepts from \`marking_logic.reject_criteria\`, award 0 marks immediately for that question.
+               - **Keyword Fallback**: If \`marking_logic\` is sparse, use \`marking_scheme\` (the model answer) to extract 2-3 key semantic anchors. If the student captures these anchors, even in different words, award Full Marks.
+               - **Partial Marks**: Award ~50% (0.5/1 or 1.0/2) if they capture the 'Main Idea' but miss a secondary 'Supporting Detail' or technical nuance. Use \`marking_logic.partial_marks_logic\` as a guide.
+               - **Reject List**: If the answer contains concepts from \`marking_logic.reject_criteria\` (contradictions or irrelevant "lifting"), award 0 marks immediately.
             
             2. **Semantic Equivalence (DSE Standard)**:
-               - Reward logic and meaning over exact wording. "The brain's front part stops fear" is equivalent to "The PFC inhibits the amygdala."
-               - Be lenient with introductory phrases like "According to the passage" or "The author suggests".
+               - **Meaning > Form**: Reward logical equivalence over exact string matching. "The heart is a pump" is equivalent to "The heart circulates blood mechanically."
+               - **Lenience on Syntax**: Ignore minor grammatical errors or missing articles (a/an/the) unless they fundamentally change the meaning.
+               - **Lifting Penalty**: If the student copies an entire sentence from the passage that contains the answer but also irrelevant information (a common DSE mistake), award Partial Marks instead of Full Marks.
             
-            3. **Strict TFNG Logic**:
-               - If the student's Choice (T/F/NG) is INCORRECT, the score is **0**. Do not evaluate justification.
+            3. **Strict TFNG (True/False/Not Given) Logic**:
+               - If the student's Choice (T/F/NG) is INCORRECT, the score is **0**. Do not evaluate the justification.
                - If the Choice is CORRECT:
                  - For TRUE/NOT_GIVEN: Award full marks (usually 1).
-                 - For FALSE: Justification must be a semantic match to the scheme. If justification is missing or semantically unrelated, award **0**.
+                 - For FALSE: The justification must be a semantic match to the scheme or passage facts. If justification is missing or semantically unrelated, award **0**.
 
             ### 📝 FEEDBACK MANDATE:
             Provide specific, expert feedback as "Miss Janie". 
+            - **Tone**: Professional, encouraging, and highly specific to the DSE exam criteria.
             - **Feedback**: 
-                - If the answer is Partial or Incorrect, you MUST specify exactly which concept or phrase from the marking scheme was missing or misunderstood. 
-                - Do NOT say "you missed some details" without naming them. Say "You identified the metaphor but missed the specific connection to [concept]".
-            - **Professional Advice**: Provide a separate piece of advice on how to reach Level 5** or improve their DSE exam technique for this specific question type.
+                - If the answer is Partial or Incorrect, specify exactly which concept from the marking scheme was missing or why the student's logic was flawed. 
+                - Example: "You correctly identified the 'cost' factor but missed the 'demographic' driver mentioned in the text."
+            - **Professional Advice**: Provide a separate piece of advice to help the student reach Level 5** (e.g., "Use synonyms for keywords in the question to avoid lifting errors").
 
             ### INPUT (JSON):
             ${JSON.stringify(questionsInput, null, 2)}
@@ -736,7 +741,7 @@ class MockAssessmentService {
     /**
      * Evaluate a Paper 3 (Listening & Integrated Skills) submission
      */
-    async evaluateListeningPaper(mockData, userAnswers, analytics = {}) {
+    async evaluateListeningPaper(mockData, userAnswers, analytics = {}, tier = 'free') {
         const results = {};
         const sectionalScores = { 
             A: { score: 0, possible: 0 }, 
@@ -747,25 +752,52 @@ class MockAssessmentService {
         const selectedPart = analytics.selectedSection || 'B2';
         const partBDrafts = userAnswers.drafts || {};
 
-
-        // 1. Evaluate Part A (Objective)
+        // 1. Evaluate Part A
         const partATasks = mockData.Part_A?.tasks || [];
+        const subjectiveQuestions = [];
+        const deterministicQuestions = [];
+
         partATasks.forEach(task => {
             (task.questions || []).forEach(q => {
                 const userAnswer = userAnswers[q.id];
-                const assessment = this.evaluateDeterministicQuestion(q, userAnswer);
-                results[q.id] = assessment;
-                
-                sectionalScores.A.score += assessment.score;
-                sectionalScores.A.possible += q.marks || 1;
+                if (!userAnswer) {
+                    results[q.id] = { score: 0, feedback: "No answer provided.", status: 'incorrect' };
+                    sectionalScores.A.possible += q.marks || 1;
+                    return;
+                }
 
-                // Consolidate all Part A question types into "Listening Accuracy" for a cleaner UI
-                const skill = 'Listening Accuracy';
-                if (!skillScores[skill]) skillScores[skill] = { score: 0, possible: 0 };
-                skillScores[skill].score += assessment.score;
-                skillScores[skill].possible += q.marks || 1;
+                // Treat string-based answers as subjective to allow for typo leniency (HKEAA Standard)
+                if (['GAP_FILL', 'SHORT_RESPONSE', 'FORM_FILLING', 'Fill_in_Blanks'].includes(q.type)) {
+                    subjectiveQuestions.push({ q, userAnswer });
+                } else {
+                    deterministicQuestions.push({ q, userAnswer });
+                }
             });
         });
+
+        // Evaluate Deterministic Part A
+        deterministicQuestions.forEach(({ q, userAnswer }) => {
+            const assessment = this.evaluateDeterministicQuestion(q, userAnswer);
+            results[q.id] = assessment;
+            sectionalScores.A.score += assessment.score;
+            sectionalScores.A.possible += q.marks || 1;
+        });
+
+        // Evaluate Subjective Part A (AI with Typo Leniency)
+        if (subjectiveQuestions.length > 0) {
+            const aiResults = await this.evaluateListeningPartABatch(subjectiveQuestions, mockData.title, tier);
+            Object.entries(aiResults).forEach(([id, assessment]) => {
+                results[id] = assessment;
+                sectionalScores.A.score += assessment.score;
+                // Find the question to get its possible marks
+                const q = subjectiveQuestions.find(it => it.q.id === id)?.q;
+                sectionalScores.A.possible += q?.marks || 1;
+            });
+        }
+
+        // Update skill scores for Part A
+        const listeningSkill = 'Listening Accuracy';
+        if (!skillScores[listeningSkill]) skillScores[listeningSkill] = { score: sectionalScores.A.score, possible: sectionalScores.A.possible };
 
         // 2. Evaluate Part B (Subjective Writing)
         const partBData = mockData.Part_B || {};
@@ -850,53 +882,48 @@ class MockAssessmentService {
         const tasks = (selectedPart === 'B1' ? mockData.Part_B?.Part_B1?.tasks : mockData.Part_B?.Part_B2?.tasks) || mockData.Part_B?.tasks || [];
         
         return `
-            You are a Senior HKEAA HKDSE English Paper 3 Examiner.
-            Evaluate these Integrated Skills tasks for Section ${selectedPart}.
+            You are a Senior HKEAA HKDSE English Paper 3 (Listening & Integrated Skills) Examiner.
+            Evaluate these Section ${selectedPart} tasks using the official 18-9-9-6 rubric.
             
             ### DATA FILE CONTEXT (Evidence Library):
-            ${dataFiles.map(df => `[${df.title}]: ${df.content.substring(0, 800)}...`).join('\n\n')}
+            ${dataFiles.map(df => `[${df.title}]: ${df.content.substring(0, 1000)}...`).join('\n\n')}
             
             ### STUDENT SUBMISSION:
             ${tasks.map(t => `[${t.id} - ${t.type}]:
             Draft: "${drafts[t.id] || ''}"
             Instructions: ${t.instructions}
-            Rubric & Mandatory Points: ${JSON.stringify(t.grading_rubric || {})}
+            Mandatory Content Points (Audio/Data File): ${JSON.stringify(t.marking_logic || t.grading_rubric || {})}
             Requirements: ${t.requirements?.join(', ')}`).join('\n\n')}
             
             ### MARKING CRITERIA (HKEAA 2026 STANDARDS):
             1. CONTENT (18 Marks):
-               - Award points for correct identification and synthesis of relevant Data File points and Audio information.
-               - IMPORTANT: Apply a RELEVANCE PENALTY. Deduct 0.5 marks (up to 2.0 total) for each piece of information included that is IRRELEVANT to the task instructions.
-            2. LANGUAGE (9 Marks): Evaluation of sentence structure, vocabulary, and grammar.
-            3. ORGANIZATION (9 Marks): Evaluation of coherence, layout, and logical flow.
-            4. APPROPRIACY (6 Marks): Evaluation of tone, register, and audience awareness.
+               - Award marks ONLY for points explicitly found in the Data File or specified Audio context.
+               - **RELEVANCE PENALTY**: Deduct 0.5 marks (up to 2.0 max) for each piece of IRRELEVANT information (e.g., info from the Data File that was NOT requested by the task instructions).
+               - **COPIED CHUNKS**: Penalize for excessive copying of Data File phrases without synthesis.
+            
+            2. LANGUAGE (9 Marks):
+               - Evaluation of sentence structure, vocabulary, and grammar.
+               - **Spelling Accuracy**: Frequent or serious spelling mistakes that impede clarity will negatively affect this score.
+               - **Miscopying Penalty**: Miscopying words or names that are CLEARLY written in the Data File is considered a serious error in Section B2 and will prevent a student from reaching the top marks (Level 5**).
+            
+            3. ORGANIZATION (9 Marks):
+               - Adherence to layout (e.g., report headers, letter addresses).
+               - Logical grouping of points.
+            
+            4. APPROPRIACY (6 Marks):
+               - **Register & Tone**: Must perfectly match the audience (e.g., formal for a Principal, encouraging for a peer).
+               - **Tone Consistency**: If the tone shifts midway, award max 3/6.
 
-            ### EVALUATION MANDATE (STRICT HKEAA STANDARDS):
-            SECTION-SPECIFIC RIGOR:
-            ${selectedPart === 'B1' ? `
-            - This is Section B1 (Level 4 Capped). 
-            - Grading should be more lenient regarding linguistic sophistication. 
-            - Focus on clarity, directness, and accurate data extraction.
-            - Do NOT penalize for lack of "Level 5 flair".
-            ` : `
-            - This is Section B2 (Full Level 5** potential). 
-            - Expect high linguistic complexity, nuanced tone, and perfect synthesis.
-            `}
-
-            1. **Content (0-18 marks)**: 
-               - Award marks for inclusion of relevant Data File points and Audio information.
-            2. **Language (0-9 marks)**: 
-               - Accuracy, variety of structures, and complexity of vocabulary.
-            3. **Organization (0-9 marks)**: 
-               - Logical flow, paragraphing, and structural integrity.
-            4. **Appropriacy & Register (0-6 marks)**:
-               - Consistency of tone (formal/informal) and adherence to the specified genre.
+            ### ⚖️ STERN CALIBRATION (MISS JANIE'S MANDATE):
+            - **Level 5** Definition**: Requires "flair," "nuance," and "seamless synthesis" of data and audio info. It should not read like a list.
+            - **Bullet Point Adherence**: If the student misses a core instruction (e.g., "omit section X"), they CANNOT score above 4 for Content.
+            - **Section B1 vs B2**: B1 is capped at Level 4; grade for clarity. B2 is uncapped; grade for elite performance.
 
             ### OUTPUT FORMAT (JSON ONLY):
             {
                 "total_score": 0-42,
                 "domains": {
-                    "content": { "score": 0-18, "feedback": "..." },
+                    "content": { "score": 0-18, "feedback": "List specific points found/missed." },
                     "language": { "score": 0-9, "feedback": "..." },
                     "organization": { "score": 0-9, "feedback": "..." },
                     "appropriacy": { "score": 0-6, "feedback": "..." }
@@ -905,12 +932,68 @@ class MockAssessmentService {
                     "TASK_ID": { 
                         "comments": "...", 
                         "missed_points": ["..."],
-                        "model_answer": "Provide a high-fidelity Level 5** model answer for this specific task based on the Data File and Audio context."
+                        "model_answer": "A high-fidelity Level 5** model answer for this specific task."
                     }
                 },
-                "overall_feedback": "Provide expert advice as 'Miss Janie'."
+                "overall_feedback": "Provide expert marker advice as 'Miss Janie'."
             }
         `;
+    }
+    /**
+     * Evaluate Listening Part A subjective questions in batch
+     */
+    async evaluateListeningPartABatch(items, topic, tier) {
+        const questionsInput = items.reduce((acc, it) => {
+            acc[it.q.id] = {
+                type: it.q.type,
+                question: it.q.question,
+                user_answer: it.userAnswer,
+                marking_scheme: it.q.marking_scheme || it.q.answer,
+                marking_logic: it.q.marking_logic,
+                max_marks: it.q.marks || 1
+            };
+            return acc;
+        }, {});
+
+        const prompt = `
+            You are a Senior HKEAA HKDSE English Paper 3 (Listening) Examiner.
+            Grade these Part A answers for the mock: "${topic}".
+
+            ### 🎯 HKEAA MARKING RULES (STRICT BINARY SCORING):
+            1. **No Partial Marks**: Each item is worth either Full Marks (1) or Zero (0). Do NOT award 0.5 marks.
+            2. **Phonetic Leniency (Communicative Clarity)**: 
+               - Award 1 mark if the spelling is phonetically similar to the answer and the word is easily recognizable.
+               - Examples: "acomodation" (1), "streat" (1), "enviornment" (1).
+            3. **Meaning-Changing Errors (0 Marks)**:
+               - If the typo results in a different English word that changes the meaning, award 0. 
+               - Example: "meat" instead of "meet", "fill" instead of "feel".
+            4. **Proper Nouns & Technical Terms**:
+               - Be slightly stricter with proper names (e.g., "Sarah") if they are common, but allow 1-letter slips.
+            5. **Capitalization**:
+               - Ignore capitalization unless it is essential for the meaning (uncommon in Part A).
+
+            ### OUTPUT FORMAT (JSON ONLY):
+            {
+                "QUESTION_ID": {
+                    "score": 0 | 1,
+                    "status": "correct" | "incorrect",
+                    "feedback": "...",
+                    "professional_advice": "..."
+                }
+            }
+        `;
+
+        try {
+            const model = (tier && tier.toLowerCase() === 'premium') ? 'ace-it-pro' : 'ace-it-flash';
+            const response = await GenerativeAIService.generateJson(prompt + "\n\n### INPUT:\n" + JSON.stringify(questionsInput), { 
+                model: model,
+                temperature: 0.1 
+            });
+            return response.data || {};
+        } catch (e) {
+            console.error("[MockAssessment] Listening Part A AI Batch failed:", e);
+            return {};
+        }
     }
 }
 

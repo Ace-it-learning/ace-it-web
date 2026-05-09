@@ -68,8 +68,30 @@ const AchievementTimeline = () => {
         return eventDate.toLocaleDateString();
     };
 
-    // Use level stats from backend
-    const currentXP = stats?.total_xp || stats?.xp || 0;
+    const formatXpValue = (value) => `${Number(value || 0)} XP`;
+
+    const formatXpDelta = (event) => {
+        const rawXp = Number(event?.xp || 0);
+        const title = String(event?.title || '').toLowerCase();
+        const questName = String(event?.questName || '').toLowerCase();
+        const topic = String(event?.topic || '').toLowerCase();
+        const isRedemption = title.includes('redeem') || questName.includes('redeem') || topic.includes('redeem') || event?.type === 'redemption';
+        const signedXp = isRedemption ? -Math.abs(rawXp) : rawXp;
+        const sign = signedXp > 0 ? '+' : '';
+        return `${sign}${signedXp} XP`;
+    };
+
+    const getXpDeltaClassName = (event) => {
+        const title = String(event?.title || '').toLowerCase();
+        const questName = String(event?.questName || '').toLowerCase();
+        const topic = String(event?.topic || '').toLowerCase();
+        const isRedemption = title.includes('redeem') || questName.includes('redeem') || topic.includes('redeem') || event?.type === 'redemption';
+        return isRedemption ? 'text-red-500' : 'text-emerald-600';
+    };
+
+    // Use spendable XP balance for wallet consistency with Redemption page.
+    const currentXP = stats?.xp || 0;
+    const lifetimeXP = stats?.total_xp || currentXP;
     const currentLevel = stats?.level || 1;
     const progressPercent = stats?.progressPercent || 0;
     const xpProgress = stats?.currentStepXP || 0;
@@ -111,9 +133,10 @@ const AchievementTimeline = () => {
                                     </button>
                                 </div>
                                 <p className="text-[10px] font-bold opacity-90 uppercase tracking-widest mb-1">
-                                    {t('timeline.total_xp')}
+                                    XP Balance
                                 </p>
-                                <p className="text-4xl font-black mb-2">{currentXP}</p>
+                                <p className="text-4xl font-black mb-2">{formatXpValue(currentXP)}</p>
+                                <p className="text-[10px] opacity-75 mb-2">Lifetime earned: {formatXpValue(lifetimeXP)}</p>
 
                                 {/* Progress Bar */}
                                 <div className="bg-white/20 rounded-full h-1.5 overflow-hidden">
@@ -247,8 +270,8 @@ const AchievementTimeline = () => {
 
                                             {/* XP Badge */}
                                             <div className="text-right shrink-0">
-                                                <span className="block font-black text-orange-500 text-2xl mb-0.5">
-                                                    +{event.xp}
+                                                <span className={`block font-black text-2xl mb-0.5 ${getXpDeltaClassName(event)}`}>
+                                                    {formatXpDelta(event)}
                                                 </span>
                                                 <span className="block text-[10px] font-bold px-2 py-0.5 bg-gray-100 text-gray-500 rounded-lg mb-2">
                                                     {event.score}

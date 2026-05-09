@@ -1,4 +1,4 @@
-const admin = require('firebase-admin');
+const { getContainer } = require('../db/cosmos');
 
 /**
  * ServiceMonitor Utility
@@ -30,21 +30,21 @@ class ServiceMonitor {
         ]);
     }
 
-    /**
-     * Checks if Firestore is responding.
-     * @returns {Promise<boolean>}
-     */
+    /** Checks if Cosmos DB is responding. */
     async checkFirestore() {
         try {
-            // Simple write/delete or just a small read to verify connectivity
+            // Keep method name for compatibility with callers.
             const start = Date.now();
-            await admin.firestore().collection('_health_check').doc('heartbeat').set({
-                timestamp: admin.firestore.FieldValue.serverTimestamp()
+            const c = await getContainer('_health_check', '/pk');
+            await c.items.upsert({
+                id: 'heartbeat',
+                pk: '_health_check',
+                timestamp: new Date().toISOString()
             });
-            console.log(`[ServiceMonitor] Firestore Heartbeat OK (${Date.now() - start}ms)`);
+            console.log(`[ServiceMonitor] Cosmos Heartbeat OK (${Date.now() - start}ms)`);
             return true;
         } catch (error) {
-            console.error('[ServiceMonitor] Firestore Heartbeat FAILED:', error.message);
+            console.error('[ServiceMonitor] Cosmos Heartbeat FAILED:', error.message);
             return false;
         }
     }

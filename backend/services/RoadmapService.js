@@ -1,21 +1,10 @@
-const admin = require('firebase-admin');
 const moment = require('moment'); // You might need to install moment or use native Date
 const GenerativeAIService = require('./GenerativeAIService');
 const UserProfileService = require('./UserProfileService');
 const CacheService = require('./CacheService');
+const CosmosStore = require('./CosmosStore');
 
 class RoadmapService {
-    constructor() {
-        this._db = null;
-    }
-
-    get db() {
-        if (!this._db) {
-            this._db = admin.firestore();
-        }
-        return this._db;
-    }
-
     /**
      * MAIN ENTRY: Get or Generate Current Plan
      */
@@ -26,12 +15,10 @@ class RoadmapService {
         const cached = CacheService.getDbCache(cacheKey);
         if (cached) return cached;
 
-        const docId = subject === 'maths' ? 'current_maths' : 'current';
-        const roadmapRef = this.db.collection('users').doc(uid).collection('roadmap').doc(docId);
-        const doc = await roadmapRef.get();
+        const roadmapDoc = await CosmosStore.getRoadmap(uid, subject);
 
-        if (doc.exists) {
-            let plan = doc.data();
+        if (roadmapDoc && roadmapDoc.payload) {
+            let plan = roadmapDoc.payload;
 
             // Force removal of specific static types for English Roadmap as requested
             if (subject === 'english' && plan.tasks) {
@@ -140,16 +127,15 @@ class RoadmapService {
         // 3. Construct the Week Object
         const newPlan = {
             weekId: moment().format('YYYY_WW'),
-            generatedAt: admin.firestore.FieldValue.serverTimestamp(),
-            expiresAt: admin.firestore.Timestamp.fromDate(this.getNextMondayHK()),
+            generatedAt: new Date().toISOString(),
+            expiresAt: this.getNextMondayHK().toISOString(),
             level_at_start: startLevel,
             tasks: generatedTasks
         };
 
         // 4. Save to DB (Graceful failure if permissions are missing)
         try {
-            const docId = subject === 'maths' ? 'current_maths' : 'current';
-            await this.db.collection('users').doc(uid).collection('roadmap').doc(docId).set(newPlan);
+            await CosmosStore.upsertRoadmap(uid, subject, newPlan);
             console.log(`[Roadmap] ✅ Successfully saved new plan for ${uid}`);
         } catch (error) {
             if (error.code === 7 || error.message.includes('permissions')) {
@@ -168,12 +154,9 @@ class RoadmapService {
     async completeTask(uid, taskId, subject = 'english') {
         CacheService.invalidateUserDbCache(uid);
         
-        const docId = subject === 'maths' ? 'current_maths' : 'current';
-        const docRef = this.db.collection('users').doc(uid).collection('roadmap').doc(docId);
-        const doc = await docRef.get();
-        if (!doc.exists) return { success: false };
-
-        const plan = doc.data();
+        const roadmapDoc = await CosmosStore.getRoadmap(uid, subject);
+        if (!roadmapDoc?.payload) return { success: false };
+        const plan = roadmapDoc.payload;
         let updated = false;
         let tasksCompletedCount = 0;
 
@@ -201,7 +184,7 @@ class RoadmapService {
         }
 
         if (updated) {
-            await docRef.update({ tasks: newTasks });
+            await CosmosStore.upsertRoadmap(uid, subject, { ...plan, tasks: newTasks });
         }
 
         return {
@@ -224,12 +207,9 @@ class RoadmapService {
 
         CacheService.invalidateUserDbCache(uid);
 
-        const docId = subject === 'maths' ? 'current_maths' : 'current';
-        const docRef = this.db.collection('users').doc(uid).collection('roadmap').doc(docId);
-        const doc = await docRef.get();
-        if (!doc.exists) return { success: false };
-
-        const plan = doc.data();
+        const roadmapDoc = await CosmosStore.getRoadmap(uid, subject);
+        if (!roadmapDoc?.payload) return { success: false };
+        const plan = roadmapDoc.payload;
         let updated = false;
         let completedTitles = [];
 
@@ -280,7 +260,7 @@ class RoadmapService {
         }
 
         if (updated) {
-            await docRef.update({ tasks: newTasks });
+            await CosmosStore.upsertRoadmap(uid, subject, { ...plan, tasks: newTasks });
         }
 
         return { success: updated, completedQuests: completedTitles, xpAwarded: newTasks.filter(t => completedTitles.includes(t.title)).reduce((sum, t) => sum + (t.xp || 0), 0) };
@@ -290,11 +270,9 @@ class RoadmapService {
      * Helper: Get list of completed topics for filtering AI recommendations
      */
     async getCompletedTopics(uid, subject = 'english') {
-        const docId = subject === 'maths' ? 'current_maths' : 'current';
-        const doc = await this.db.collection('users').doc(uid).collection('roadmap').doc(docId).get();
-        if (!doc.exists) return [];
-
-        const plan = doc.data();
+        const roadmapDoc = await CosmosStore.getRoadmap(uid, subject);
+        if (!roadmapDoc?.payload) return [];
+        const plan = roadmapDoc.payload;
         if (!plan.tasks) return [];
 
         return plan.tasks

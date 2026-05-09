@@ -1,0 +1,926 @@
+{
+  "listening_mission_1": {
+    "id": "listening_mission_1",
+    "title": "Anti-Scam Campaign",
+    "description": "Community briefing on anti-deception operations and public education rollout.",
+    "topic": "Social Issues",
+    "type": "listening_mission",
+    "paper": "Listening",
+    "subject": "English",
+    "level": "5",
+    "is_approved": true,
+    "factory_template": false,
+    "created_at": { "_seconds": 1704067200, "_nanoseconds": 0 },
+    "prediction_metadata": {
+      "topic_name": "Anti-Scam Campaign Rollout",
+      "sub_topics": [
+        { "id": "st1", "name": "Hotline protocol", "category": "Operational detail", "is_distractor": false, "hint": "One emergency number is repeated." },
+        { "id": "st2", "name": "Volunteer deployment", "category": "Logistics", "is_distractor": false, "hint": "Listen for district counts and training quotas." },
+        { "id": "st3", "name": "Bank reimbursement policy", "category": "Legal", "is_distractor": true, "hint": "Discussed, but not actionable in this briefing." }
+      ]
+    },
+    "sprint_data": {
+      "audio_transcript": "[SCENE START]\n[Sound of projector fan and low chatter]\nCoordinator: Morning team. We are finalising the Anti-Scam Campaign before the district launch next Monday. Please update your briefing sheets now.\nCoordinator: First, our emergency referral protocol. If a citizen reports an active transfer, we do not tell them to wait. We instruct them to call the Anti-Deception Coordination Centre hotline immediately: 18222. Repeat that with me once: one-eight-two-two-two.\nCoordinator: Second, deployment numbers. We had planned 12 street booths, but Operations approved two extra booths for Yau Tsim Mong, so the total is now 14 booths citywide. Peak-time staffing remains four volunteers per booth.\nCoordinator: Third, digital support. The WhatsApp alert channel pilot begins on 18 June, not 16 June. Please correct that date in your handout.\nCoordinator: Training schedule now. Session A runs from 9:30 a.m. to 11:00 a.m. Session B runs from 2:15 p.m. to 3:45 p.m. Each session can take 24 trainees, and we currently have 38 confirmed. That means we still have 10 seats left.\nCoordinator: Materials checklist. Every booth must display three items: the red fraud-warning banner, the QR code stand for e-reporting, and the bilingual card that lists warning signs. The old yellow banner is discontinued.\nCoordinator: Last point: escalation language. If callers mention romance-investment scams, label the case as Priority R within the first two minutes so police liaison can fast-track it.\nCoordinator: Good. I need final attendance names by 5:30 p.m. today. Thanks everyone.\n[SCENE END]",
+      "tasks": [
+        {
+          "id": "a1_ops_table",
+          "type": "TABLE",
+          "label": "Campaign Operations Table",
+          "rows": [
+            { "label": "Emergency hotline", "answer": "18222", "placeholder": "Number" },
+            { "label": "Total booths citywide", "answer": "14", "placeholder": "Number" },
+            { "label": "Volunteers per booth", "answer": "4", "placeholder": "Number" },
+            { "label": "WhatsApp pilot start date", "answer": "18 June", "placeholder": "Date" }
+          ]
+        },
+        {
+          "id": "a2_training_form",
+          "type": "FORM_FILLING",
+          "question": "Training capacity and timing",
+          "fields": [
+            { "label": "Session A", "answer": "9:30 a.m. to 11:00 a.m.", "placeholder": "Time range" },
+            { "label": "Session B", "answer": "2:15 p.m. to 3:45 p.m.", "placeholder": "Time range" },
+            { "label": "Capacity per session", "answer": "24", "placeholder": "Number" },
+            { "label": "Seats left", "answer": "10", "placeholder": "Number" }
+          ]
+        },
+        {
+          "id": "a3_mini_mcq",
+          "type": "MCQ_BATCH",
+          "label": "Quick Compliance Check",
+          "questions": [
+            {
+              "question": "Which banner is currently required at each booth?",
+              "options": ["A. Yellow awareness banner", "B. Red fraud-warning banner", "C. Blue legal rights banner", "D. Green volunteer banner"],
+              "answer": "B"
+            },
+            {
+              "question": "How should romance-investment scam cases be tagged?",
+              "options": ["A. Priority A", "B. Priority B", "C. Priority R", "D. Priority X"],
+              "answer": "C"
+            }
+          ]
+        }
+      ]
+    },
+    "integrated_data": {
+      "audio_transcript": "[INTEGRATED BRIEFING START]\nHost: Thank you all for joining this cross-agency planning meeting on anti-scam outreach. We have one week before launch.\nPolice Liaison Officer: Reported losses rose by 17% quarter-on-quarter in two elderly-dense districts. We need faster referral language at first contact.\nNGO Director: Our concern is message clarity. Seniors remember examples better than statistics, so every workshop should include one short role-play.\nBank Risk Manager: We can provide branch volunteers for lunchtime booths, but only on weekdays. Weekends will require school-based volunteers.\nEducation Bureau Rep: Student ambassadors are available, but schools requested a capped duty length. Maximum booth duty per student should be two hours.\nHost: Noted. We also need stronger multilingual support. Current handouts are Chinese-English only; Urdu and Nepali one-page inserts can be ready by Friday.\nPolice Liaison Officer: One correction: hotline wait-time target is not three minutes. The official KPI remains under five minutes average during campaign hours.\nHost: Good catch. For media, Radio segment goes live next Tuesday at 8:10 a.m. Social clips should go out the evening before.\nNGO Director: We should define one measurable outcome per channel. For workshops, use post-session confidence score. For booths, use number of successful suspicious-transfer interruptions.\nHost: Final action owner list will be circulated tonight.\n[INTEGRATED BRIEFING END]",
+      "notetaking_fields": [
+        { "id": "nt_context", "label": "Context and urgency", "placeholder": "Capture trend data, affected groups, urgency signal..." },
+        { "id": "nt_stakeholders", "label": "Stakeholder commitments", "placeholder": "Who commits what resources, and under what limits?" },
+        { "id": "nt_actions", "label": "Action plan and KPIs", "placeholder": "List timeline, channels, measurable outcomes..." }
+      ],
+      "data_file": [
+        {
+          "id": "df_email",
+          "title": "Internal Email: Campaign Scope",
+          "type": "email",
+          "content": "From: Strategy Unit\\nTo: District Teams\\nSubject: Final campaign scope\\n- Priority districts: Yau Tsim Mong, Sham Shui Po\\n- Core channels: Street booths, school talks, radio reminders\\n- Mandatory booth items: red banner, QR stand, bilingual warning card\\n- Submission deadline for district staffing list: Friday 5:30 p.m."
+        },
+        {
+          "id": "df_minutes",
+          "title": "Meeting Minutes Excerpt",
+          "type": "minutes",
+          "content": "Agenda Item 2: Volunteer Allocation\\nDecision: 14 booths citywide, 4 volunteers each at peak hours.\\nDecision: Weekday bank support only.\\nDecision: Student ambassador duty limit = 2 hours.\\nOpen item: Urdu and Nepali inserts for handouts."
+        },
+        {
+          "id": "df_poster",
+          "title": "Public Poster Draft",
+          "type": "poster",
+          "content": "STOP. THINK. VERIFY.\\nIf transfer is in progress, call ADCC Hotline 18222 immediately.\\nNever share one-time passwords.\\nNeed help reporting? Scan the official e-report QR code."
+        }
+      ],
+      "writing_task": {
+        "instruction": "You are the Student Outreach Lead. Write a formal memo to all district volunteer captains summarizing the final launch plan, clarifying corrected details, and assigning immediate follow-up actions.",
+        "format": "Formal memo",
+        "word_count": "200-250",
+        "marking_criteria": "Content, Language, Organization, Appropriacy"
+      },
+      "marking_key": [
+        "State campaign urgency using the reported increase in scam losses.",
+        "Confirm hotline number 18222 and referral purpose.",
+        "Include updated logistics: 14 booths and 4 volunteers per booth at peak.",
+        "Clarify timing corrections (WhatsApp pilot date; hotline wait-time KPI under five minutes).",
+        "Assign stakeholder-specific actions (schools, banks, NGOs, district teams).",
+        "Define measurable outcomes/KPIs for at least two channels."
+      ]
+    }
+  },
+  "listening_mission_2": {
+    "id": "listening_mission_2",
+    "title": "Green Roof Project",
+    "description": "Installing a sustainable garden on a school building.",
+    "topic": "Environment",
+    "type": "listening_mission",
+    "paper": "Listening",
+    "level": "4",
+    "is_approved": true,
+    "factory_template": true,
+    "created_at": { "_seconds": 1704067300, "_nanoseconds": 0 },
+    "sprint_data": {
+      "audio_transcript": "This is a placeholder transcript for the Data Sprint.",
+      "tasks": [
+        {
+          "id": "s1",
+          "type": "MCQ",
+          "question": "Placeholder Question?",
+          "options": ["Option A", "Option B", "Option C"],
+          "answer": "Option A"
+        }
+      ]
+    },
+    "integrated_data": {
+      "audio_transcript": "This is a placeholder transcript for the Integrated Simulation.",
+      "notetaking_fields": [
+        { "id": "n1", "label": "Key Points", "placeholder": "Note down the main arguments..." }
+      ],
+      "data_file": [
+        {
+          "id": "df1",
+          "title": "Background Info",
+          "type": "TEXT",
+          "content": "Placeholder background information for the task."
+        }
+      ],
+      "writing_task": {
+        "instruction": "Write a short summary based on the information provided.",
+        "word_count": "150-200",
+        "marking_criteria": "Content, Language, Organization, Appropriacy"
+      }
+    }
+  },
+  "listening_mission_3": {
+    "id": "listening_mission_3",
+    "title": "Heritage Walk",
+    "description": "Organizing a guided tour of historic Kowloon monuments.",
+    "topic": "Culture",
+    "type": "listening_mission",
+    "paper": "Listening",
+    "level": "5",
+    "is_approved": true,
+    "factory_template": true,
+    "created_at": { "_seconds": 1704067400, "_nanoseconds": 0 },
+    "sprint_data": {
+      "audio_transcript": "This is a placeholder transcript for the Data Sprint.",
+      "tasks": [
+        {
+          "id": "s1",
+          "type": "MCQ",
+          "question": "Placeholder Question?",
+          "options": ["Option A", "Option B", "Option C"],
+          "answer": "Option A"
+        }
+      ]
+    },
+    "integrated_data": {
+      "audio_transcript": "This is a placeholder transcript for the Integrated Simulation.",
+      "notetaking_fields": [
+        { "id": "n1", "label": "Key Points", "placeholder": "Note down the main arguments..." }
+      ],
+      "data_file": [
+        {
+          "id": "df1",
+          "title": "Background Info",
+          "type": "TEXT",
+          "content": "Placeholder background information for the task."
+        }
+      ],
+      "writing_task": {
+        "instruction": "Write a short summary based on the information provided.",
+        "word_count": "150-200",
+        "marking_criteria": "Content, Language, Organization, Appropriacy"
+      }
+    }
+  },
+  "listening_mission_4": {
+    "id": "listening_mission_4",
+    "title": "Youth Mental Health Week",
+    "description": "Planning a series of stress-relief workshops for students.",
+    "topic": "Health",
+    "type": "listening_mission",
+    "paper": "Listening",
+    "level": "3",
+    "is_approved": true,
+    "factory_template": true,
+    "created_at": { "_seconds": 1704067500, "_nanoseconds": 0 },
+    "sprint_data": {
+      "audio_transcript": "This is a placeholder transcript for the Data Sprint.",
+      "tasks": [
+        {
+          "id": "s1",
+          "type": "MCQ",
+          "question": "Placeholder Question?",
+          "options": ["Option A", "Option B", "Option C"],
+          "answer": "Option A"
+        }
+      ]
+    },
+    "integrated_data": {
+      "audio_transcript": "This is a placeholder transcript for the Integrated Simulation.",
+      "notetaking_fields": [
+        { "id": "n1", "label": "Key Points", "placeholder": "Note down the main arguments..." }
+      ],
+      "data_file": [
+        {
+          "id": "df1",
+          "title": "Background Info",
+          "type": "TEXT",
+          "content": "Placeholder background information for the task."
+        }
+      ],
+      "writing_task": {
+        "instruction": "Write a short summary based on the information provided.",
+        "word_count": "150-200",
+        "marking_criteria": "Content, Language, Organization, Appropriacy"
+      }
+    }
+  },
+  "listening_mission_5": {
+    "id": "listening_mission_5",
+    "title": "Campus Diversity Expo",
+    "description": "A festival celebrating international students' cultures.",
+    "topic": "Campus Life",
+    "type": "listening_mission",
+    "paper": "Listening",
+    "level": "4",
+    "is_approved": true,
+    "factory_template": true,
+    "created_at": { "_seconds": 1704067600, "_nanoseconds": 0 },
+    "sprint_data": {
+      "audio_transcript": "This is a placeholder transcript for the Data Sprint.",
+      "tasks": [
+        {
+          "id": "s1",
+          "type": "MCQ",
+          "question": "Placeholder Question?",
+          "options": ["Option A", "Option B", "Option C"],
+          "answer": "Option A"
+        }
+      ]
+    },
+    "integrated_data": {
+      "audio_transcript": "This is a placeholder transcript for the Integrated Simulation.",
+      "notetaking_fields": [
+        { "id": "n1", "label": "Key Points", "placeholder": "Note down the main arguments..." }
+      ],
+      "data_file": [
+        {
+          "id": "df1",
+          "title": "Background Info",
+          "type": "TEXT",
+          "content": "Placeholder background information for the task."
+        }
+      ],
+      "writing_task": {
+        "instruction": "Write a short summary based on the information provided.",
+        "word_count": "150-200",
+        "marking_criteria": "Content, Language, Organization, Appropriacy"
+      }
+    }
+  },
+  "listening_mission_6": {
+    "id": "listening_mission_6",
+    "title": "Smart City Innovation",
+    "description": "Proposing IoT solutions for local neighborhood parking.",
+    "topic": "Technology",
+    "type": "listening_mission",
+    "paper": "Listening",
+    "level": "5",
+    "is_approved": true,
+    "factory_template": true,
+    "created_at": { "_seconds": 1704067700, "_nanoseconds": 0 },
+    "sprint_data": {
+      "audio_transcript": "This is a placeholder transcript for the Data Sprint.",
+      "tasks": [
+        {
+          "id": "s1",
+          "type": "MCQ",
+          "question": "Placeholder Question?",
+          "options": ["Option A", "Option B", "Option C"],
+          "answer": "Option A"
+        }
+      ]
+    },
+    "integrated_data": {
+      "audio_transcript": "This is a placeholder transcript for the Integrated Simulation.",
+      "notetaking_fields": [
+        { "id": "n1", "label": "Key Points", "placeholder": "Note down the main arguments..." }
+      ],
+      "data_file": [
+        {
+          "id": "df1",
+          "title": "Background Info",
+          "type": "TEXT",
+          "content": "Placeholder background information for the task."
+        }
+      ],
+      "writing_task": {
+        "instruction": "Write a short summary based on the information provided.",
+        "word_count": "150-200",
+        "marking_criteria": "Content, Language, Organization, Appropriacy"
+      }
+    }
+  },
+  "listening_mission_7": {
+    "id": "listening_mission_7",
+    "title": "Social Media Ethics",
+    "description": "A seminar on cyberbullying and digital footprint management.",
+    "topic": "Technology",
+    "type": "listening_mission",
+    "paper": "Listening",
+    "level": "3",
+    "is_approved": true,
+    "factory_template": true,
+    "created_at": { "_seconds": 1704067800, "_nanoseconds": 0 },
+    "sprint_data": {
+      "audio_transcript": "This is a placeholder transcript for the Data Sprint.",
+      "tasks": [
+        {
+          "id": "s1",
+          "type": "MCQ",
+          "question": "Placeholder Question?",
+          "options": ["Option A", "Option B", "Option C"],
+          "answer": "Option A"
+        }
+      ]
+    },
+    "integrated_data": {
+      "audio_transcript": "This is a placeholder transcript for the Integrated Simulation.",
+      "notetaking_fields": [
+        { "id": "n1", "label": "Key Points", "placeholder": "Note down the main arguments..." }
+      ],
+      "data_file": [
+        {
+          "id": "df1",
+          "title": "Background Info",
+          "type": "TEXT",
+          "content": "Placeholder background information for the task."
+        }
+      ],
+      "writing_task": {
+        "instruction": "Write a short summary based on the information provided.",
+        "word_count": "150-200",
+        "marking_criteria": "Content, Language, Organization, Appropriacy"
+      }
+    }
+  },
+  "listening_mission_8": {
+    "id": "listening_mission_8",
+    "title": "E-Sports Tournament",
+    "description": "Organizing a inter-school gaming competition.",
+    "topic": "Recreation",
+    "type": "listening_mission",
+    "paper": "Listening",
+    "level": "4",
+    "is_approved": true,
+    "factory_template": true,
+    "created_at": { "_seconds": 1704067900, "_nanoseconds": 0 },
+    "sprint_data": {
+      "audio_transcript": "This is a placeholder transcript for the Data Sprint.",
+      "tasks": [
+        {
+          "id": "s1",
+          "type": "MCQ",
+          "question": "Placeholder Question?",
+          "options": ["Option A", "Option B", "Option C"],
+          "answer": "Option A"
+        }
+      ]
+    },
+    "integrated_data": {
+      "audio_transcript": "This is a placeholder transcript for the Integrated Simulation.",
+      "notetaking_fields": [
+        { "id": "n1", "label": "Key Points", "placeholder": "Note down the main arguments..." }
+      ],
+      "data_file": [
+        {
+          "id": "df1",
+          "title": "Background Info",
+          "type": "TEXT",
+          "content": "Placeholder background information for the task."
+        }
+      ],
+      "writing_task": {
+        "instruction": "Write a short summary based on the information provided.",
+        "word_count": "150-200",
+        "marking_criteria": "Content, Language, Organization, Appropriacy"
+      }
+    }
+  },
+  "listening_mission_9": {
+    "id": "listening_mission_9",
+    "title": "Eco-Tourism in Sai Kung",
+    "description": "Promoting sustainable travel to the GeoPark.",
+    "topic": "Tourism",
+    "type": "listening_mission",
+    "paper": "Listening",
+    "level": "5",
+    "is_approved": true,
+    "factory_template": true,
+    "created_at": { "_seconds": 1704068000, "_nanoseconds": 0 },
+    "sprint_data": {
+      "audio_transcript": "This is a placeholder transcript for the Data Sprint.",
+      "tasks": [
+        {
+          "id": "s1",
+          "type": "MCQ",
+          "question": "Placeholder Question?",
+          "options": ["Option A", "Option B", "Option C"],
+          "answer": "Option A"
+        }
+      ]
+    },
+    "integrated_data": {
+      "audio_transcript": "This is a placeholder transcript for the Integrated Simulation.",
+      "notetaking_fields": [
+        { "id": "n1", "label": "Key Points", "placeholder": "Note down the main arguments..." }
+      ],
+      "data_file": [
+        {
+          "id": "df1",
+          "title": "Background Info",
+          "type": "TEXT",
+          "content": "Placeholder background information for the task."
+        }
+      ],
+      "writing_task": {
+        "instruction": "Write a short summary based on the information provided.",
+        "word_count": "150-200",
+        "marking_criteria": "Content, Language, Organization, Appropriacy"
+      }
+    }
+  },
+  "listening_mission_10": {
+    "id": "listening_mission_10",
+    "title": "Redefining the Canteen",
+    "description": "Student Union proposal for healthier menu options.",
+    "topic": "Campus Life",
+    "type": "listening_mission",
+    "paper": "Listening",
+    "level": "3",
+    "is_approved": true,
+    "factory_template": true,
+    "created_at": { "_seconds": 1704068100, "_nanoseconds": 0 },
+    "sprint_data": {
+      "audio_transcript": "This is a placeholder transcript for the Data Sprint.",
+      "tasks": [
+        {
+          "id": "s1",
+          "type": "MCQ",
+          "question": "Placeholder Question?",
+          "options": ["Option A", "Option B", "Option C"],
+          "answer": "Option A"
+        }
+      ]
+    },
+    "integrated_data": {
+      "audio_transcript": "This is a placeholder transcript for the Integrated Simulation.",
+      "notetaking_fields": [
+        { "id": "n1", "label": "Key Points", "placeholder": "Note down the main arguments..." }
+      ],
+      "data_file": [
+        {
+          "id": "df1",
+          "title": "Background Info",
+          "type": "TEXT",
+          "content": "Placeholder background information for the task."
+        }
+      ],
+      "writing_task": {
+        "instruction": "Write a short summary based on the information provided.",
+        "word_count": "150-200",
+        "marking_criteria": "Content, Language, Organization, Appropriacy"
+      }
+    }
+  },
+  "listening_mission_11": {
+    "id": "listening_mission_11",
+    "title": "Street Art Festival",
+    "description": "Revitalizing an old district with murals and music.",
+    "topic": "Arts",
+    "type": "listening_mission",
+    "paper": "Listening",
+    "level": "4",
+    "is_approved": true,
+    "factory_template": true,
+    "created_at": { "_seconds": 1704068200, "_nanoseconds": 0 },
+    "sprint_data": {
+      "audio_transcript": "This is a placeholder transcript for the Data Sprint.",
+      "tasks": [
+        {
+          "id": "s1",
+          "type": "MCQ",
+          "question": "Placeholder Question?",
+          "options": ["Option A", "Option B", "Option C"],
+          "answer": "Option A"
+        }
+      ]
+    },
+    "integrated_data": {
+      "audio_transcript": "This is a placeholder transcript for the Integrated Simulation.",
+      "notetaking_fields": [
+        { "id": "n1", "label": "Key Points", "placeholder": "Note down the main arguments..." }
+      ],
+      "data_file": [
+        {
+          "id": "df1",
+          "title": "Background Info",
+          "type": "TEXT",
+          "content": "Placeholder background information for the task."
+        }
+      ],
+      "writing_task": {
+        "instruction": "Write a short summary based on the information provided.",
+        "word_count": "150-200",
+        "marking_criteria": "Content, Language, Organization, Appropriacy"
+      }
+    }
+  },
+  "listening_mission_12": {
+    "id": "listening_mission_12",
+    "title": "Startup Weekend",
+    "description": "A competition for young entrepreneurs to pitch business ideas.",
+    "topic": "Career",
+    "type": "listening_mission",
+    "paper": "Listening",
+    "level": "5",
+    "is_approved": true,
+    "factory_template": true,
+    "created_at": { "_seconds": 1704068300, "_nanoseconds": 0 },
+    "sprint_data": {
+      "audio_transcript": "This is a placeholder transcript for the Data Sprint.",
+      "tasks": [
+        {
+          "id": "s1",
+          "type": "MCQ",
+          "question": "Placeholder Question?",
+          "options": ["Option A", "Option B", "Option C"],
+          "answer": "Option A"
+        }
+      ]
+    },
+    "integrated_data": {
+      "audio_transcript": "This is a placeholder transcript for the Integrated Simulation.",
+      "notetaking_fields": [
+        { "id": "n1", "label": "Key Points", "placeholder": "Note down the main arguments..." }
+      ],
+      "data_file": [
+        {
+          "id": "df1",
+          "title": "Background Info",
+          "type": "TEXT",
+          "content": "Placeholder background information for the task."
+        }
+      ],
+      "writing_task": {
+        "instruction": "Write a short summary based on the information provided.",
+        "word_count": "150-200",
+        "marking_criteria": "Content, Language, Organization, Appropriacy"
+      }
+    }
+  },
+  "listening_mission_13": {
+    "id": "listening_mission_13",
+    "title": "Ocean Cleanup Initiative",
+    "description": "Addressing plastic pollution on Hong Kong beaches.",
+    "topic": "Environment",
+    "type": "listening_mission",
+    "paper": "Listening",
+    "level": "3",
+    "is_approved": true,
+    "factory_template": true,
+    "created_at": { "_seconds": 1704068400, "_nanoseconds": 0 },
+    "sprint_data": {
+      "audio_transcript": "This is a placeholder transcript for the Data Sprint.",
+      "tasks": [
+        {
+          "id": "s1",
+          "type": "MCQ",
+          "question": "Placeholder Question?",
+          "options": ["Option A", "Option B", "Option C"],
+          "answer": "Option A"
+        }
+      ]
+    },
+    "integrated_data": {
+      "audio_transcript": "This is a placeholder transcript for the Integrated Simulation.",
+      "notetaking_fields": [
+        { "id": "n1", "label": "Key Points", "placeholder": "Note down the main arguments..." }
+      ],
+      "data_file": [
+        {
+          "id": "df1",
+          "title": "Background Info",
+          "type": "TEXT",
+          "content": "Placeholder background information for the task."
+        }
+      ],
+      "writing_task": {
+        "instruction": "Write a short summary based on the information provided.",
+        "word_count": "150-200",
+        "marking_criteria": "Content, Language, Organization, Appropriacy"
+      }
+    }
+  },
+  "listening_mission_14": {
+    "id": "listening_mission_14",
+    "title": "Heritage Walk (Tai Kwun)",
+    "description": "Reviving local history through modern arts.",
+    "topic": "Culture",
+    "type": "listening_mission",
+    "paper": "Listening",
+    "level": "4",
+    "is_approved": true,
+    "factory_template": true,
+    "created_at": { "_seconds": 1704068500, "_nanoseconds": 0 },
+    "sprint_data": {
+      "audio_transcript": "This is a placeholder transcript for the Data Sprint.",
+      "tasks": [
+        {
+          "id": "s1",
+          "type": "MCQ",
+          "question": "Placeholder Question?",
+          "options": ["Option A", "Option B", "Option C"],
+          "answer": "Option A"
+        }
+      ]
+    },
+    "integrated_data": {
+      "audio_transcript": "This is a placeholder transcript for the Integrated Simulation.",
+      "notetaking_fields": [
+        { "id": "n1", "label": "Key Points", "placeholder": "Note down the main arguments..." }
+      ],
+      "data_file": [
+        {
+          "id": "df1",
+          "title": "Background Info",
+          "type": "TEXT",
+          "content": "Placeholder background information for the task."
+        }
+      ],
+      "writing_task": {
+        "instruction": "Write a short summary based on the information provided.",
+        "word_count": "150-200",
+        "marking_criteria": "Content, Language, Organization, Appropriacy"
+      }
+    }
+  },
+  "listening_mission_15": {
+    "id": "listening_mission_15",
+    "title": "AI in Education",
+    "description": "A podcast discussion on the pros/cons of ChatGPT in school.",
+    "topic": "Education",
+    "type": "listening_mission",
+    "paper": "Listening",
+    "level": "5",
+    "is_approved": true,
+    "factory_template": true,
+    "created_at": { "_seconds": 1704068600, "_nanoseconds": 0 },
+    "sprint_data": {
+      "audio_transcript": "This is a placeholder transcript for the Data Sprint.",
+      "tasks": [
+        {
+          "id": "s1",
+          "type": "MCQ",
+          "question": "Placeholder Question?",
+          "options": ["Option A", "Option B", "Option C"],
+          "answer": "Option A"
+        }
+      ]
+    },
+    "integrated_data": {
+      "audio_transcript": "This is a placeholder transcript for the Integrated Simulation.",
+      "notetaking_fields": [
+        { "id": "n1", "label": "Key Points", "placeholder": "Note down the main arguments..." }
+      ],
+      "data_file": [
+        {
+          "id": "df1",
+          "title": "Background Info",
+          "type": "TEXT",
+          "content": "Placeholder background information for the task."
+        }
+      ],
+      "writing_task": {
+        "instruction": "Write a short summary based on the information provided.",
+        "word_count": "150-200",
+        "marking_criteria": "Content, Language, Organization, Appropriacy"
+      }
+    }
+  },
+  "listening_mission_16": {
+    "id": "listening_mission_16",
+    "title": "Homelessness Awareness",
+    "description": "Coordinating a charity drive for the city's vulnerable.",
+    "topic": "Social Issues",
+    "type": "listening_mission",
+    "paper": "Listening",
+    "level": "3",
+    "is_approved": true,
+    "factory_template": true,
+    "created_at": { "_seconds": 1704068700, "_nanoseconds": 0 },
+    "sprint_data": {
+      "audio_transcript": "This is a placeholder transcript for the Data Sprint.",
+      "tasks": [
+        {
+          "id": "s1",
+          "type": "MCQ",
+          "question": "Placeholder Question?",
+          "options": ["Option A", "Option B", "Option C"],
+          "answer": "Option A"
+        }
+      ]
+    },
+    "integrated_data": {
+      "audio_transcript": "This is a placeholder transcript for the Integrated Simulation.",
+      "notetaking_fields": [
+        { "id": "n1", "label": "Key Points", "placeholder": "Note down the main arguments..." }
+      ],
+      "data_file": [
+        {
+          "id": "df1",
+          "title": "Background Info",
+          "type": "TEXT",
+          "content": "Placeholder background information for the task."
+        }
+      ],
+      "writing_task": {
+        "instruction": "Write a short summary based on the information provided.",
+        "word_count": "150-200",
+        "marking_criteria": "Content, Language, Organization, Appropriacy"
+      }
+    }
+  },
+  "listening_mission_17": {
+    "id": "listening_mission_17",
+    "title": "Future of Public Transport",
+    "description": "Debating autonomous buses vs. new MTR lines.",
+    "topic": "Transportation",
+    "type": "listening_mission",
+    "paper": "Listening",
+    "level": "4",
+    "is_approved": true,
+    "factory_template": true,
+    "created_at": { "_seconds": 1704068800, "_nanoseconds": 0 },
+    "sprint_data": {
+      "audio_transcript": "This is a placeholder transcript for the Data Sprint.",
+      "tasks": [
+        {
+          "id": "s1",
+          "type": "MCQ",
+          "question": "Placeholder Question?",
+          "options": ["Option A", "Option B", "Option C"],
+          "answer": "Option A"
+        }
+      ]
+    },
+    "integrated_data": {
+      "audio_transcript": "This is a placeholder transcript for the Integrated Simulation.",
+      "notetaking_fields": [
+        { "id": "n1", "label": "Key Points", "placeholder": "Note down the main arguments..." }
+      ],
+      "data_file": [
+        {
+          "id": "df1",
+          "title": "Background Info",
+          "type": "TEXT",
+          "content": "Placeholder background information for the task."
+        }
+      ],
+      "writing_task": {
+        "instruction": "Write a short summary based on the information provided.",
+        "word_count": "150-200",
+        "marking_criteria": "Content, Language, Organization, Appropriacy"
+      }
+    }
+  },
+  "listening_mission_18": {
+    "id": "listening_mission_18",
+    "title": "Wildlife Conservation",
+    "description": "Protecting local pink dolphins and marine life.",
+    "topic": "Environment",
+    "type": "listening_mission",
+    "paper": "Listening",
+    "level": "5",
+    "is_approved": true,
+    "factory_template": true,
+    "created_at": { "_seconds": 1704068900, "_nanoseconds": 0 },
+    "sprint_data": {
+      "audio_transcript": "This is a placeholder transcript for the Data Sprint.",
+      "tasks": [
+        {
+          "id": "s1",
+          "type": "MCQ",
+          "question": "Placeholder Question?",
+          "options": ["Option A", "Option B", "Option C"],
+          "answer": "Option A"
+        }
+      ]
+    },
+    "integrated_data": {
+      "audio_transcript": "This is a placeholder transcript for the Integrated Simulation.",
+      "notetaking_fields": [
+        { "id": "n1", "label": "Key Points", "placeholder": "Note down the main arguments..." }
+      ],
+      "data_file": [
+        {
+          "id": "df1",
+          "title": "Background Info",
+          "type": "TEXT",
+          "content": "Placeholder background information for the task."
+        }
+      ],
+      "writing_task": {
+        "instruction": "Write a short summary based on the information provided.",
+        "word_count": "150-200",
+        "marking_criteria": "Content, Language, Organization, Appropriacy"
+      }
+    }
+  },
+  "listening_mission_19": {
+    "id": "listening_mission_19",
+    "title": "Literature & Coffee",
+    "description": "A \"Book Café\" proposal for the local community center.",
+    "topic": "Culture",
+    "type": "listening_mission",
+    "paper": "Listening",
+    "level": "3",
+    "is_approved": true,
+    "factory_template": true,
+    "created_at": { "_seconds": 1704069000, "_nanoseconds": 0 },
+    "sprint_data": {
+      "audio_transcript": "This is a placeholder transcript for the Data Sprint.",
+      "tasks": [
+        {
+          "id": "s1",
+          "type": "MCQ",
+          "question": "Placeholder Question?",
+          "options": ["Option A", "Option B", "Option C"],
+          "answer": "Option A"
+        }
+      ]
+    },
+    "integrated_data": {
+      "audio_transcript": "This is a placeholder transcript for the Integrated Simulation.",
+      "notetaking_fields": [
+        { "id": "n1", "label": "Key Points", "placeholder": "Note down the main arguments..." }
+      ],
+      "data_file": [
+        {
+          "id": "df1",
+          "title": "Background Info",
+          "type": "TEXT",
+          "content": "Placeholder background information for the task."
+        }
+      ],
+      "writing_task": {
+        "instruction": "Write a short summary based on the information provided.",
+        "word_count": "150-200",
+        "marking_criteria": "Content, Language, Organization, Appropriacy"
+      }
+    }
+  },
+  "listening_mission_20": {
+    "id": "listening_mission_20",
+    "title": "Dim Sum Heritage",
+    "description": "Documenting the vanishing trade of traditional tea houses.",
+    "topic": "Culture",
+    "type": "listening_mission",
+    "paper": "Listening",
+    "level": "4",
+    "is_approved": true,
+    "factory_template": true,
+    "created_at": { "_seconds": 1704069100, "_nanoseconds": 0 },
+    "sprint_data": {
+      "audio_transcript": "This is a placeholder transcript for the Data Sprint.",
+      "tasks": [
+        {
+          "id": "s1",
+          "type": "MCQ",
+          "question": "Placeholder Question?",
+          "options": ["Option A", "Option B", "Option C"],
+          "answer": "Option A"
+        }
+      ]
+    },
+    "integrated_data": {
+      "audio_transcript": "This is a placeholder transcript for the Integrated Simulation.",
+      "notetaking_fields": [
+        { "id": "n1", "label": "Key Points", "placeholder": "Note down the main arguments..." }
+      ],
+      "data_file": [
+        {
+          "id": "df1",
+          "title": "Background Info",
+          "type": "TEXT",
+          "content": "Placeholder background information for the task."
+        }
+      ],
+      "writing_task": {
+        "instruction": "Write a short summary based on the information provided.",
+        "word_count": "150-200",
+        "marking_criteria": "Content, Language, Organization, Appropriacy"
+      }
+    }
+  }
+}

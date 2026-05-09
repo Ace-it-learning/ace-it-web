@@ -32,6 +32,7 @@ import { useAuth } from '../../context/AuthContext';
 import { useAvatar } from '../../context/AvatarContext';
 import UpgradeModal from '../../components/common/UpgradeModal';
 import MockCountdownTimer from '../../components/utils/MockCountdownTimer';
+import { isCheatEnabled } from '../../utils/devAccess';
 /* eslint-disable no-unused-vars */
 import { motion, AnimatePresence } from 'framer-motion';
 /* eslint-enable no-unused-vars */
@@ -597,13 +598,18 @@ const ReadingMockStudio = () => {
 
         try {
             const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+            const token = await user?.getIdToken?.();
             const res = await fetch(`${API_URL}/api/english/mock/submit`, {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
+                headers: {
+                    'Content-Type': 'application/json',
+                    ...(token ? { 'Authorization': `Bearer ${token}` } : {})
+                },
                 signal: controller.signal,
                 body: JSON.stringify({ 
                     paperId, 
                     userAnswers,
+                    uid: user?.uid || 'guest',
                     analytics: {
                         selectedSection,
                         sectionTimes,
@@ -985,7 +991,7 @@ const ReadingMockStudio = () => {
                             </div>
                         ) : (
                             <div className="bg-slate-900 rounded-[1.25rem] px-6 py-3 border border-white/10 shadow-xl flex items-center gap-4">
-                                {user?.email === 'fungtam@gmail.com' && (
+                                {isCheatEnabled(user, profile) && (
                                     <div className="flex items-center gap-2 pr-4 border-r border-white/10">
                                         <span className="text-[11px] font-black text-rose-400 uppercase tracking-tighter">Cheat:</span>
                                         {['3', '4', '5', '5*', '5**', '5** (P)'].map(lvl => (
@@ -1563,7 +1569,7 @@ const ReadingMockStudio = () => {
         return (
             <div className="min-h-screen bg-[#f1f5f9] flex flex-col p-8 selection:bg-indigo-100">
                 <nav className="max-w-7xl w-full mx-auto flex justify-between items-center mb-10">
-                    <button onClick={() => navigate('/mock-exam-eng')} className="flex items-center gap-2 text-slate-500 hover:text-slate-900 transition-all font-black text-xs uppercase tracking-widest">
+                    <button onClick={() => navigate('/dashboard')} className="flex items-center gap-2 text-slate-500 hover:text-slate-900 transition-all font-black text-xs uppercase tracking-widest">
                         <ArrowLeft size={16} />
                         Back to Dashboard
                     </button>

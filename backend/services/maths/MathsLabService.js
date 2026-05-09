@@ -1,7 +1,9 @@
-const admin = require('firebase-admin');
 const crypto = require('crypto');
 const MathEngineBridge = require('./MathEngineBridge');
 const GenerativeAIService = require('../GenerativeAIService');
+const QuestionBankStore = require('../QuestionBankStore');
+const CosmosStore = require('../CosmosStore');
+const UserProfileService = require('../UserProfileService');
 const { MATHS_MICRO_SKILLS } = require('../../constants/mathsMicroSkills');
 const { getSyllabusGuidance } = require('../../constants/mathsSyllabusRules');
 
@@ -428,18 +430,8 @@ class MathsLabService {
 
     // New method to mark question IDs as seen for a user
     static async markQuestionsSeen(uid, questionIds) {
-        const db = admin.firestore();
         if (!uid || !questionIds || questionIds.length === 0 || uid === 'placeholder') return;
-
-        const batch = db.batch();
-        questionIds.forEach(qid => {
-            const ref = db.collection('users').doc(uid).collection('practice_history').doc(qid);
-            batch.set(ref, {
-                timestamp: admin.firestore.FieldValue.serverTimestamp(),
-                completed: true
-            });
-        });
-        await batch.commit();
+        await CosmosStore.markPracticeHistory(uid, questionIds);
         console.log(`[MathsLabService] Marked ${questionIds.length} questions as seen for ${uid}`);
     }
 
@@ -627,7 +619,6 @@ Return as a JSON array of strings.`;
     }
 
     static async generateLesson(params) {
-        const db = admin.firestore();
         const { topic, level, uid, language = 'en', targetCount, isFactory, clusterId, batchId } = params;
         const numericLevel = parseInt(level);
         const isIntegrated = (topic === 'integrated_challenge');
@@ -649,8 +640,8 @@ Return as a JSON array of strings.`;
         let seenQuestionIds = new Set();
         if (uid && uid !== 'placeholder') {
             try {
-                const historySnapshot = await db.collection('users').doc(uid).collection('practice_history').get();
-                historySnapshot.forEach(doc => seenQuestionIds.add(doc.id));
+                const seenIds = await CosmosStore.getPracticeHistoryIds(uid, 4000);
+                seenIds.forEach((id) => seenQuestionIds.add(id));
                 console.log(`[MathsLabService] User ${uid} has seen ${seenQuestionIds.size} questions.`);
             } catch (historyErr) {
                 console.warn(`[MathsLabService] Failed to fetch practice history for ${uid}:`, historyErr);
@@ -661,12 +652,7 @@ Return as a JSON array of strings.`;
         // Version 1.3.1: Bypass bank fetch in factory mode to ensure NEW questions are generated for audit.
         try {
             if (!isFactory) {
-                const isIntegrated = topic === 'integrated_challenge'; // Quest Mission
-                const collectionName = isIntegrated ? 'integrated_challenges' : 'question_bank';
-                
-                console.log(`[MathsLabService] Fetch-First (Strict) check for ${topic} (Level ${level}) from ${collectionName}`);
-                
-                let query = db.collection(collectionName);
+                console.log(`[MathsLabService] Fetch-First (Strict) check for ${topic} (Level ${level}) from ${isIntegrated ? "integrated_challenges (Cosmos)" : "question_bank (Cosmos)"}`);
                 
                 let stringLevel = '';
                 if (numericLevel === 3) stringLevel = 'HKDSE Level 3 (Adequate)';
@@ -674,26 +660,15 @@ Return as a JSON array of strings.`;
                 else if (numericLevel === 5) stringLevel = 'HKDSE Level 5 (Strong)';
                 else if (numericLevel > 5) stringLevel = 'HKDSE Level 5** (Mastery)';
 
+                let bankRows = [];
                 if (isIntegrated) {
-                    // Quest missions use 'status' instead of 'is_approved' as per schema
-                    query = query.where('status', '==', 'approved');
+                    bankRows = await CosmosStore.getApprovedIntegratedChallenges(50);
                 } else {
-                    query = query.where('topic_id', '==', topic)
-                                 .where('level', 'in', [numericLevel, stringLevel])
-                                 .where('is_approved', '==', true);
-                }
-
-                let bankSnapshot = await query.limit(50).get();
-
-                // Version 1.3.5: Level Fallback Logic (Only for standard bank)
-                if (!isIntegrated && bankSnapshot.empty && numericLevel < 3) {
-                    console.log(`[MathsLabService] Bank empty for Level ${numericLevel}. Falling back to Level 3 starter questions.`);
-                    bankSnapshot = await db.collection('question_bank')
-                        .where('topic_id', '==', topic)
-                        .where('level', 'in', [3, 'HKDSE Level 3 (Adequate)'])
-                        .where('is_approved', '==', true)
-                        .limit(50)
-                        .get();
+                    bankRows = await QuestionBankStore.queryMathsByTopicLevels(topic, [numericLevel, stringLevel], 50);
+                    if ((!bankRows || bankRows.length === 0) && numericLevel < 3) {
+                        console.log(`[MathsLabService] Bank empty for Level ${numericLevel}. Falling back to Level 3 starter questions.`);
+                        bankRows = await QuestionBankStore.queryMathsByTopicLevels(topic, [3, 'HKDSE Level 3 (Adequate)'], 50);
+                    }
                 }
 
                 let unseenQuestions = [];
@@ -704,13 +679,11 @@ Return as a JSON array of strings.`;
                 if (isIntegrated && uid && uid !== 'placeholder') {
                     try {
                         // FIX: Progress is stored in subcollection users/{uid}/progress/maths
-                        const progressDoc = await db.collection('users').doc(uid).collection('progress').doc('maths').get();
-                        if (progressDoc.exists) {
-                            const mathSkills = progressDoc.data()?.microSkills || {};
-                            Object.keys(mathSkills).forEach(tid => {
-                                userMasteryValues[tid] = mathSkills[tid].level || 0;
-                            });
-                        }
+                        const progress = await UserProfileService.getSkillMap(uid, 'maths');
+                        const mathSkills = progress?.microSkills || {};
+                        Object.keys(mathSkills).forEach((tid) => {
+                            userMasteryValues[tid] = mathSkills[tid].level || 0;
+                        });
                     } catch (mErr) {
                         console.error("[MathsLabService] Failed to fetch mastery for prerequisites:", mErr);
                     }
@@ -719,18 +692,16 @@ Return as a JSON array of strings.`;
                 let eligibleQuestions = [];
                 let backfillPool = [];
 
-                bankSnapshot.forEach(doc => {
-                    let data = doc.data();
-                    
-                    data = {
-                        ...data,
-                        id: doc.id,
-                        text: data.question_en || data.text,
-                        text_zh: data.question_zh || data.text_zh,
-                        solution_steps: data.solution_steps_en || data.solution_steps,
-                        solution_steps_zh: data.solution_steps_zh || data.answer_logic_zh || data.solution_steps_zh,
-                        explanation: data.explanation_en || data.explanation,
-                        explanation_zh: data.explanation_zh || data.explanation_zh
+                bankRows.forEach((row) => {
+                    let data = {
+                        ...row,
+                        id: row.id,
+                        text: row.question_en || row.text,
+                        text_zh: row.question_zh || row.text_zh,
+                        solution_steps: row.solution_steps_en || row.solution_steps,
+                        solution_steps_zh: row.solution_steps_zh || row.answer_logic_zh || row.solution_steps_zh,
+                        explanation: row.explanation_en || row.explanation,
+                        explanation_zh: row.explanation_zh || row.explanation_zh
                     };
 
                     // Check prerequisites
@@ -801,18 +772,11 @@ Return as a JSON array of strings.`;
         // 2.6 RECENT CONTEXT: Fetch a small pool of existing questions to avoid AI-duplication
         let recentQuestionsContext = "None yet.";
         try {
-            const recentSnapshot = await db.collection('question_bank')
-                .where('topic_id', '==', topic)
-                .where('level', '==', numericLevel)
-                .where('is_approved', '==', true)
-                .orderBy('created_at', 'desc')
-                .limit(10)
-                .get();
-
-            if (!recentSnapshot.empty) {
+            const recentRows = await QuestionBankStore.queryMathsRecentByTopicNumericLevel(topic, numericLevel, 10);
+            if (recentRows.length > 0) {
                 const contextPool = [];
-                recentSnapshot.forEach(doc => {
-                    const q = doc.data().question;
+                recentRows.forEach((row) => {
+                    const q = row.question;
                     if (q) contextPool.push(`- ${q.substring(0, 200)}...`);
                 });
                 recentQuestionsContext = contextPool.join('\n');
@@ -874,10 +838,10 @@ Return as a JSON array of strings.`;
                         // 1.3.3 SAFETY: Check if quest already exists and is APPROVED. 
                         // If so, DO NOT overwrite it with a pending version (avoids "rollbacks").
                         try {
-                            const existingDoc = await db.collection('question_bank').doc(qHash).get();
-                            if (existingDoc.exists && existingDoc.data().is_approved) {
+                            const existing = await QuestionBankStore.getById(qHash);
+                            if (existing && existing.is_approved) {
                                 console.log(`[MathsLabService] 🛡️ Question collision: "${qHash}" already approved. Skipping overwrite.`);
-                                questions.push({ ...existingDoc.data(), id: qHash });
+                                questions.push({ ...existing, id: qHash });
                                 continue;
                             }
                         } catch (collisionErr) {
@@ -902,10 +866,10 @@ Return as a JSON array of strings.`;
                             is_factory: true
                         };
 
-                        // FINAL SAFETY: Clean for Firestore to prevent "invalid nested entity" or undefined errors
+                        // FINAL SAFETY: strip undefined / NaN before Cosmos upsert
                         const cleanedQuest = cleanForFirestore(quest);
 
-                        await db.collection('question_bank').doc(qHash).set(cleanedQuest);
+                        await QuestionBankStore.upsertById(qHash, cleanedQuest, { merge: true });
                         questions.push(cleanedQuest);
                         console.log(`[MathsLabService] ✅ Question ${i + 1}/${TARGET_COUNT} generated successfully.`);
                     } else {
@@ -941,17 +905,11 @@ Return as a JSON array of strings.`;
     }
 
     static async getLearningContent(topicId, language = 'en') {
-        const admin = require('firebase-admin');
-        const db = admin.firestore();
-
         try {
-            // Check Firestore for modular content
-            const docRef = db.collection('learning_content').doc(topicId);
-            const docSnap = await docRef.get();
-
-            if (docSnap.exists) {
-                console.log(`[MathsLabService] Loaded modular content for ${topicId} from Firestore (Applying Post-Processor)`);
-                return postProcessModularContent(docSnap.data());
+            const content = await CosmosStore.getLearningContent(topicId);
+            if (content) {
+                console.log(`[MathsLabService] Loaded modular content for ${topicId} from Cosmos (Applying Post-Processor)`);
+                return postProcessModularContent(content);
             }
         } catch (error) {
             console.error(`[MathsLabService] Error fetching learning content for ${topicId}:`, error);

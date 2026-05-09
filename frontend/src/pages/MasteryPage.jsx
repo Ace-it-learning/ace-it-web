@@ -47,24 +47,52 @@ const MasteryPage = () => {
         { id: 'Speaking', name: t('mastery.speaking'), icon: MessageSquare }
     ];
 
+    const getNormalizedSkillEntries = () => {
+        const skillsObj = masteryData?.microSkills || {};
+        const resolvePaper = (skillId) => {
+            const mapped = getPaperBySkill(skillId);
+            if (mapped) return mapped;
+            const lower = String(skillId || '').toLowerCase();
+            if (lower.startsWith('reading_')) return 'reading';
+            if (lower.startsWith('writing_')) return 'writing';
+            if (lower.startsWith('listening_')) return 'listening';
+            if (lower.startsWith('speaking_')) return 'speaking';
+            return null;
+        };
+        return Object.entries(skillsObj)
+            .map(([skillId, raw]) => {
+                const level = typeof raw === 'object' ? Number(raw.level || 0) : Number(raw || 0);
+                const attempts = typeof raw === 'object' ? Number(raw.totalAttempts || raw.practiceCount || 0) : 0;
+                const paper = resolvePaper(skillId);
+                return {
+                    skillId,
+                    level,
+                    attempts,
+                    paper,
+                    name: getSkillName(skillId, language),
+                    raw
+                };
+            })
+            .filter((s) => s.paper && Number.isFinite(s.level));
+    };
+
     const getFilteredSkills = () => {
         const skillsObj = masteryData?.microSkills || {};
+        const normalized = getNormalizedSkillEntries();
         
         if (viewMode === 'mock') {
             const averages = {
-                [t('mastery.reading')]: 1,
-                [t('mastery.writing')]: 1,
-                [t('mastery.listening')]: 1,
-                [t('mastery.speaking')]: 1
+                [t('mastery.reading')]: 0,
+                [t('mastery.writing')]: 0,
+                [t('mastery.listening')]: 0,
+                [t('mastery.speaking')]: 0
             };
             
             const paperSum = { reading: 0, writing: 0, listening: 0, speaking: 0 };
             const paperCount = { reading: 0, writing: 0, listening: 0, speaking: 0 };
 
-            Object.entries(skillsObj).forEach(([sid, data]) => {
-                const paper = getPaperBySkill(sid);
+            normalized.forEach(({ paper, level }) => {
                 if (paper && paperSum.hasOwnProperty(paper)) {
-                    const level = (typeof data === 'object' ? (data.level || 1) : (data || 1)) || 1;
                     paperSum[paper] += level;
                     paperCount[paper] += 1;
                 }
@@ -82,20 +110,28 @@ const MasteryPage = () => {
         const paperID = selectedPaper.toLowerCase();
         
         // 1. Pre-populate with all skills for this paper from taxonomy, defaulting to Level 1
-        Object.entries(MICRO_SKILLS).forEach(([skillId, config]) => {
-            const paper = getPaperBySkill(skillId);
-            if (paper === paperID) {
-                const name = getSkillName(skillId, language);
-                filtered[name] = 1 * 14.28; // Default Level 1 (scaled to 100)
-            }
+        const allSkillIds = getSkillsByPaper(paperID);
+        allSkillIds.forEach((skillId) => {
+            const name = getSkillName(skillId, language);
+            filtered[name] = 0;
         });
 
-        // 2. Overwrite with actual user data if it exists
-        Object.entries(skillsObj).forEach(([skillId, data]) => {
+        // 2. Overwrite with actual user data if it exists (including fallback-prefixed skills)
+        normalized
+            .filter((s) => s.paper === paperID)
+            .forEach((s) => {
+                if (s.name) {
+                    filtered[s.name] = s.level * 14.28;
+                }
+            });
+
+        // 3. Keep taxonomy label continuity where IDs are known
+        Object.entries(MICRO_SKILLS).forEach(([skillId]) => {
             const paper = getPaperBySkill(skillId);
-            if (paper === paperID) {
+            if (paper === paperID && skillsObj[skillId]) {
                 const name = getSkillName(skillId, language);
-                const level = typeof data === 'object' ? (data.level || 1) : (data || 1);
+                const data = skillsObj[skillId];
+                const level = typeof data === 'object' ? Number(data.level || 0) : Number(data || 0);
                 filtered[name] = level * 14.28;
             }
         });
@@ -134,14 +170,8 @@ const MasteryPage = () => {
     const previousData = getProcessedHistory();
 
     const getWeaknessSuggestions = () => {
-        if (!masteryData?.microSkills) return [];
-        const allSkills = Object.entries(masteryData.microSkills)
-            .map(([skillId, data]) => ({
-                skillId,
-                level: typeof data === 'object' ? (data.level || 0) : (data || 0),
-                name: getSkillName(skillId, language)
-            }))
-            .filter(s => s.level < 5.5)
+        const allSkills = getNormalizedSkillEntries()
+            .filter((s) => s.level > 0 && s.level < 5.5)
             .sort((a, b) => a.level - b.level);
         return allSkills.slice(0, 3).map(s => {
             let advice = "";
@@ -160,17 +190,17 @@ const MasteryPage = () => {
 
     const getTopGrowth = () => {
         if (!previousDataRaw || Object.keys(strengths).length === 0) return null;
+        const normalized = getNormalizedSkillEntries();
         let topSkillId = null;
         let maxGrowth = -Infinity;
-        Object.entries(strengths).forEach(([id, val]) => {
-            const prev = previousDataRaw[id];
+        normalized.forEach(({ skillId, level }) => {
+            const prev = previousDataRaw[skillId];
             if (prev) {
-                const currentLevel = typeof val === 'object' ? (val.level || 0) : (val || 0);
                 const prevLevel = typeof prev === 'object' ? (prev.level || 0) : (prev || 0);
-                const growth = currentLevel - prevLevel;
+                const growth = level - prevLevel;
                 if (growth > maxGrowth) {
                     maxGrowth = growth;
-                    topSkillId = id;
+                    topSkillId = skillId;
                 }
             }
         });
@@ -180,17 +210,18 @@ const MasteryPage = () => {
 
     const getPeakPerf = () => {
         if (Object.keys(strengths).length === 0) return null;
+        const normalized = getNormalizedSkillEntries().filter((s) => s.level > 0);
+        if (normalized.length === 0) return null;
         let peakId = null;
         let maxLevel = -Infinity;
-        Object.entries(strengths).forEach(([id, val]) => {
-            const level = typeof val === 'object' ? (val.level || 0) : (val || 0);
+        normalized.forEach(({ skillId, level }) => {
             if (level > maxLevel) {
                 maxLevel = level;
-                peakId = id;
+                peakId = skillId;
             }
         });
         if (!peakId) return null;
-        const level = typeof strengths[peakId] === 'object' ? (strengths[peakId].level || 1) : (strengths[peakId] || 1);
+        const level = maxLevel;
         return { name: getSkillName(peakId, language), value: `${t('mastery.level_prefix')}${t(`mastery.level_labels.${Math.floor(level)}`)}` };
     };
 

@@ -1,5 +1,6 @@
 const { GoogleGenerativeAI, HarmCategory, HarmBlockThreshold } = require('@google/generative-ai');
 const path = require('path');
+const axios = require('axios');
 require('dotenv').config({ path: path.join(__dirname, '../.env') });
 
 /**
@@ -15,6 +16,11 @@ class GenerativeAIService {
         this.proRequestCount = 0; // Cost Guard: Track Pro requests
         this.lastResetTime = Date.now();
         this.isDevMode = false; // Centralized Dev State
+        this.isGroq = false;
+        this.activeProvider = "google";
+        this.providerLocked = false;
+        this.isAzureOpenAI = false;
+        this.isDeepSeek = false;
     }
 
     async init() {
@@ -24,7 +30,29 @@ class GenerativeAIService {
         const NODE_ENV = process.env.NODE_ENV || 'development';
         const isProduction = NODE_ENV === 'production';
         const forceAIStudio = process.env.USE_AI_STUDIO_IN_PROD === 'true';
-        const forceVertexInDev = process.env.FORCE_VERTEX_IN_DEV === 'true';
+        const aiProvider = (process.env.AI_PROVIDER || '').toLowerCase();
+
+        if (aiProvider === 'groq') {
+            this.initGroq();
+            this.activeProvider = "groq";
+            this.providerLocked = true;
+            this.initialized = true;
+            return;
+        }
+        if (aiProvider === 'azure_openai' || aiProvider === 'azure') {
+            this.initAzureOpenAI();
+            this.activeProvider = "azure_openai";
+            this.providerLocked = true;
+            this.initialized = true;
+            return;
+        }
+        if (aiProvider === 'deepseek') {
+            this.initDeepSeek();
+            this.activeProvider = "deepseek";
+            this.providerLocked = true;
+            this.initialized = true;
+            return;
+        }
 
         // 🛡️ HARD ISOLATION (2026 Cost Control)
         // In Development, we EXCLUSIVELY use AI Studio (Free Tier).
@@ -37,6 +65,7 @@ class GenerativeAIService {
                 console.log(`[AIService] 🛡️  HARD COST GUARD: Blocking Vertex AI in DEV. Routing to Google AI Studio (Free).`);
             }
             this.initAIStudio();
+            this.activeProvider = "google";
             this.initialized = true;
             return;
         }
@@ -68,6 +97,7 @@ class GenerativeAIService {
 
                 this.vertex = new VertexAI(vertexConfig);
                 this.isVertex = true;
+                this.activeProvider = "vertex";
                 this.currentRegion = region;
                 this.vertexConfig = vertexConfig; 
 
@@ -87,8 +117,12 @@ class GenerativeAIService {
 
             } catch (e) {
                 console.error("[AIService] ❌ Vertex AI Production Initialization Failed:", e.message);
+                if (this.providerLocked) {
+                    throw new Error(`Locked provider '${this.activeProvider}' failed: ${e.message}`);
+                }
                 console.warn("[AIService] ⚠️ Falling back to AI Studio...");
                 this.initAIStudio();
+                this.activeProvider = "google";
             }
         }
         
@@ -146,13 +180,94 @@ class GenerativeAIService {
         console.log(`[AIService] Initialized Google AI Studio (Local Mode) | Dev Mode: ${isDev}`);
     }
 
+    initGroq() {
+        const apiKey = process.env.GROQ_API_KEY;
+        if (!apiKey) {
+            throw new Error("AI service is not configured (missing GROQ_API_KEY)");
+        }
+        this.groqApiKey = apiKey;
+        this.groqBaseUrl = process.env.GROQ_BASE_URL || 'https://api.groq.com/openai/v1/chat/completions';
+        this.groqModelMap = {
+            "ace-it-flash": process.env.GROQ_FLASH_MODEL || "llama-3.1-8b-instant",
+            "ace-it-pro": process.env.GROQ_PRO_MODEL || "llama-3.3-70b-versatile"
+        };
+        this.isVertex = false;
+        this.isGroq = true;
+        this.activeProvider = "groq";
+        this.currentRegion = 'groq/api_key';
+        this.isDevMode = process.env.NODE_ENV === 'development' || !process.env.NODE_ENV || !process.env.K_SERVICE;
+        console.log(`[AIService] Initialized Groq API adapter | Dev Mode: ${this.isDevMode}`);
+    }
+
+    initAzureOpenAI() {
+        const endpoint = process.env.AZURE_OPENAI_ENDPOINT;
+        const apiKey = process.env.AZURE_OPENAI_API_KEY;
+        const apiVersion = process.env.AZURE_OPENAI_API_VERSION || '2024-10-21';
+        if (!endpoint || !apiKey) {
+            throw new Error("AI service is not configured (missing AZURE_OPENAI_ENDPOINT or AZURE_OPENAI_API_KEY)");
+        }
+
+        this.azureOpenAIEndpoint = endpoint.replace(/\/+$/, '');
+        this.azureOpenAIApiKey = apiKey;
+        this.azureOpenAIApiVersion = apiVersion;
+        this.azureDeploymentMap = {
+            "gpt-4o-mini": process.env.AZURE_OPENAI_DEPLOYMENT_4O_MINI || "gpt-4o-mini",
+            "gpt-4.1-mini": process.env.AZURE_OPENAI_DEPLOYMENT_4_1_MINI || "gpt-4.1-mini",
+            "o4-mini": process.env.AZURE_OPENAI_DEPLOYMENT_O4_MINI || "o4-mini"
+        };
+        this.azureAliasMap = {
+            "ace-it-flash": "gpt-4o-mini",
+            "gemini-flash-latest": "gpt-4o-mini",
+            "gemini-2.0-flash": "gpt-4o-mini",
+            "gemini-1.5-flash": "gpt-4o-mini",
+            "ace-it-pro": "gpt-4.1-mini",
+            "gemini-pro-latest": "gpt-4.1-mini",
+            "gemini-1.5-pro": "gpt-4.1-mini",
+            "gpt-4o-mini": "gpt-4o-mini",
+            "gpt-4.1-mini": "gpt-4.1-mini",
+            "o4-mini": "o4-mini"
+        };
+        this.isGroq = false;
+        this.isVertex = false;
+        this.isAzureOpenAI = true;
+        this.currentRegion = "azure_openai";
+        this.isDevMode = process.env.NODE_ENV === 'development' || !process.env.NODE_ENV || !process.env.K_SERVICE;
+        console.log(`[AIService] Initialized Azure OpenAI adapter | API ${apiVersion}`);
+    }
+
+    initDeepSeek() {
+        const apiKey = process.env.DEEPSEEK_API_KEY;
+        if (!apiKey) {
+            throw new Error("AI service is not configured (missing DEEPSEEK_API_KEY)");
+        }
+        this.deepSeekApiKey = apiKey;
+        this.deepSeekBaseUrl = process.env.DEEPSEEK_BASE_URL || 'https://api.deepseek.com/chat/completions';
+        this.deepSeekModelMap = {
+            "ace-it-flash": process.env.DEEPSEEK_FLASH_MODEL || "deepseek-chat",
+            "ace-it-pro": process.env.DEEPSEEK_PRO_MODEL || "deepseek-reasoner"
+        };
+        this.deepSeekVisionModel = process.env.DEEPSEEK_VISION_MODEL || this.deepSeekModelMap["ace-it-flash"];
+        this.isVertex = false;
+        this.isGroq = false;
+        this.isAzureOpenAI = false;
+        this.isDeepSeek = true;
+        this.activeProvider = "deepseek";
+        this.currentRegion = "deepseek/api_key";
+        this.isDevMode = process.env.NODE_ENV === 'development' || !process.env.NODE_ENV || !process.env.K_SERVICE;
+        console.log(`[AIService] Initialized DeepSeek API adapter | Dev Mode: ${this.isDevMode}`);
+    }
+
+    getActiveProvider() {
+        return this.activeProvider;
+    }
+
     /**
      * Rate Limiter for Free Tier Protection (Local Dev Only)
      * Ensures we don't exceed the 15 RPM limit for Gemini 1.5 Flash
      */
     async enforceFreeTierLimits() {
         const isDev = process.env.NODE_ENV === 'development' || !process.env.NODE_ENV || !process.env.K_SERVICE;
-        if (!isDev || this.isVertex) return;
+        if (!isDev || this.isVertex || this.isGroq || this.isDeepSeek) return;
 
         const now = Date.now();
         // Remove requests older than 1 minute
@@ -173,6 +288,9 @@ class GenerativeAIService {
     }
 
     getModel(config = {}) {
+        if (this.isGroq || this.activeProvider === 'groq' || this.isAzureOpenAI || this.activeProvider === 'azure_openai' || this.isDeepSeek || this.activeProvider === 'deepseek') {
+            throw new Error("Current provider uses direct adapter path; Gemini/Vertex model routing is blocked.");
+        }
         const requested = config.model || "ace-it-flash";
 
         let modelName = requested;
@@ -276,6 +394,16 @@ class GenerativeAIService {
      * Unified generateContent method with automatic retry and Smart Fallback
      */
     async generateContent(prompt, config = {}, retries = 3) {
+        await this.init();
+        if (this.isGroq) {
+            return this.generateContentWithGroq(prompt, config);
+        }
+        if (this.isAzureOpenAI) {
+            return this.generateContentWithAzureOpenAI(prompt, config);
+        }
+        if (this.isDeepSeek) {
+            return this.generateContentWithDeepSeek(prompt, config);
+        }
         const result = await this.executeWithRetry(async (model) => {
             const contents = Array.isArray(prompt) 
                 ? prompt 
@@ -297,6 +425,265 @@ class GenerativeAIService {
         }
 
         return result;
+    }
+
+    normalizeGroqMessages(prompt, systemInstruction = null) {
+        const messages = [];
+        if (systemInstruction) {
+            messages.push({ role: 'system', content: systemInstruction.toString() });
+        }
+
+        if (Array.isArray(prompt)) {
+            for (const item of prompt) {
+                const role = item?.role === 'model' ? 'assistant' : (item?.role || 'user');
+                const parts = Array.isArray(item?.parts) ? item.parts : [];
+                const text = parts
+                    .filter(p => typeof p?.text === 'string')
+                    .map(p => p.text)
+                    .join('\n')
+                    .trim();
+                if (text) messages.push({ role, content: text });
+            }
+        } else {
+            messages.push({ role: 'user', content: prompt?.toString() || '' });
+        }
+
+        return messages.length > 0 ? messages : [{ role: 'user', content: 'Hello' }];
+    }
+
+    resolveGroqModel(requestedModel) {
+        if (this.groqModelMap[requestedModel]) return this.groqModelMap[requestedModel];
+        if (requestedModel?.includes('pro')) return this.groqModelMap["ace-it-pro"];
+        return this.groqModelMap["ace-it-flash"];
+    }
+
+    async generateContentWithGroq(prompt, config = {}) {
+        const requestedModel = config.model || "ace-it-flash";
+        const model = this.resolveGroqModel(requestedModel);
+        const messages = this.normalizeGroqMessages(prompt, config.systemInstruction);
+
+        // Keep responses modest in DEV to avoid Groq token/min quota bursts.
+        const requestedMax = config?.generationConfig?.maxOutputTokens || 1024;
+        const cappedMaxTokens = Math.min(requestedMax, 1024);
+        const payload = {
+            model,
+            messages,
+            temperature: typeof config?.generationConfig?.temperature === 'number' ? config.generationConfig.temperature : 0.4,
+            max_tokens: cappedMaxTokens
+        };
+
+        let response;
+        try {
+            response = await axios.post(this.groqBaseUrl, payload, {
+                headers: {
+                    Authorization: `Bearer ${this.groqApiKey}`,
+                    'Content-Type': 'application/json'
+                },
+                timeout: 120000
+            });
+        } catch (err) {
+            const status = err?.response?.status || err?.status || null;
+            if (status === 429) {
+                const retryAfterHeader = err?.response?.headers?.['retry-after'];
+                const retryAfterSecs = Number.parseInt(retryAfterHeader || '8', 10);
+                const waitMs = Number.isFinite(retryAfterSecs) ? Math.max(3000, retryAfterSecs * 1000) : 8000;
+                console.warn(`[AIService] Groq 429 received. Waiting ${Math.ceil(waitMs / 1000)}s then retrying once...`);
+                await new Promise(resolve => setTimeout(resolve, waitMs));
+                response = await axios.post(this.groqBaseUrl, payload, {
+                    headers: {
+                        Authorization: `Bearer ${this.groqApiKey}`,
+                        'Content-Type': 'application/json'
+                    },
+                    timeout: 120000
+                });
+            } else {
+                const statusText = status ? `status ${status}` : 'unknown status';
+                const providerMsg = err?.response?.data?.error?.message || err.message;
+                const wrapped = new Error(`Groq API failed (${statusText}): ${providerMsg}`);
+                wrapped.status = status;
+                throw wrapped;
+            }
+        }
+
+        const text = response?.data?.choices?.[0]?.message?.content || '';
+        return {
+            response: {
+                text: () => text,
+                candidates: [{ content: { parts: [{ text }] } }],
+                usageMetadata: response?.data?.usage || null
+            },
+            usedModel: model,
+            usedPlatform: 'groq'
+        };
+    }
+
+    resolveDeepSeekModel(requestedModel) {
+        if (this.deepSeekModelMap[requestedModel]) return this.deepSeekModelMap[requestedModel];
+        if (requestedModel?.includes('pro') || requestedModel?.includes('reason')) return this.deepSeekModelMap["ace-it-pro"];
+        return this.deepSeekModelMap["ace-it-flash"];
+    }
+
+    hasInlineImageParts(prompt) {
+        if (!Array.isArray(prompt)) return false;
+        return prompt.some((item) =>
+            Array.isArray(item?.parts) &&
+            item.parts.some((p) => p?.inlineData?.data && p?.inlineData?.mimeType)
+        );
+    }
+
+    normalizeDeepSeekMessages(prompt, systemInstruction = null) {
+        const messages = [];
+        if (systemInstruction) {
+            messages.push({ role: 'system', content: systemInstruction.toString() });
+        }
+
+        if (Array.isArray(prompt)) {
+            for (const item of prompt) {
+                const role = item?.role === 'model' ? 'assistant' : (item?.role || 'user');
+                const parts = Array.isArray(item?.parts) ? item.parts : [];
+                const contentParts = [];
+
+                for (const part of parts) {
+                    if (typeof part?.text === 'string' && part.text.trim()) {
+                        contentParts.push({ type: 'text', text: part.text });
+                    }
+                    if (part?.inlineData?.data && part?.inlineData?.mimeType) {
+                        const mime = part.inlineData.mimeType;
+                        const data = part.inlineData.data;
+                        contentParts.push({
+                            type: 'image_url',
+                            image_url: { url: `data:${mime};base64,${data}` }
+                        });
+                    }
+                }
+
+                if (contentParts.length === 0) continue;
+                if (contentParts.length === 1 && contentParts[0].type === 'text') {
+                    messages.push({ role, content: contentParts[0].text });
+                } else {
+                    messages.push({ role, content: contentParts });
+                }
+            }
+        } else {
+            messages.push({ role: 'user', content: prompt?.toString() || '' });
+        }
+
+        return messages.length > 0 ? messages : [{ role: 'user', content: 'Hello' }];
+    }
+
+    async generateContentWithDeepSeek(prompt, config = {}) {
+        const requestedModel = config.model || "ace-it-flash";
+        const hasImage = this.hasInlineImageParts(prompt);
+        const model = hasImage ? this.deepSeekVisionModel : this.resolveDeepSeekModel(requestedModel);
+        const messages = this.normalizeDeepSeekMessages(prompt, config.systemInstruction);
+
+        const requestedMax = config?.generationConfig?.maxOutputTokens || 1024;
+        // DeepSeek: allow larger completions for lab grading JSON (exemplars + breakdown).
+        // Cap stays conservative vs context window; raise via generationConfig.maxOutputTokens per call.
+        const payload = {
+            model,
+            messages,
+            temperature: typeof config?.generationConfig?.temperature === 'number' ? config.generationConfig.temperature : 0.4,
+            max_tokens: Math.min(requestedMax, 8192)
+        };
+
+        let response;
+        try {
+            response = await axios.post(this.deepSeekBaseUrl, payload, {
+                headers: {
+                    Authorization: `Bearer ${this.deepSeekApiKey}`,
+                    'Content-Type': 'application/json'
+                },
+                timeout: 120000
+            });
+        } catch (err) {
+            const status = err?.response?.status || err?.status || null;
+            const statusText = status ? `status ${status}` : 'unknown status';
+            const providerMsg = err?.response?.data?.error?.message || err.message;
+            const wrapped = new Error(`DeepSeek API failed (${statusText}): ${providerMsg}`);
+            wrapped.status = status;
+            throw wrapped;
+        }
+
+        const text = response?.data?.choices?.[0]?.message?.content || '';
+        return {
+            response: {
+                text: () => text,
+                candidates: [{ content: { parts: [{ text }] } }],
+                usageMetadata: response?.data?.usage || null
+            },
+            usedModel: model,
+            usedPlatform: 'deepseek'
+        };
+    }
+
+    resolveAzureModel(requestedModel = "ace-it-flash") {
+        return this.azureAliasMap[requestedModel] || "gpt-4o-mini";
+    }
+
+    resolveAzureFallbackChain(modelName, config = {}) {
+        const enableO4 = process.env.AZURE_ENABLE_O4_ESCALATION === 'true' || config.enableDeepReasoning === true;
+        if (modelName === "gpt-4.1-mini") {
+            return enableO4 ? ["gpt-4.1-mini", "gpt-4o-mini", "o4-mini"] : ["gpt-4.1-mini", "gpt-4o-mini"];
+        }
+        return [modelName];
+    }
+
+    async callAzureChat({ deployment, messages, config = {} }) {
+        const url = `${this.azureOpenAIEndpoint}/openai/deployments/${deployment}/chat/completions?api-version=${encodeURIComponent(this.azureOpenAIApiVersion)}`;
+        const payload = {
+            messages,
+            temperature: typeof config?.generationConfig?.temperature === 'number' ? config.generationConfig.temperature : 0.4,
+            max_tokens: Math.min(config?.generationConfig?.maxOutputTokens || 1024, 4096)
+        };
+        const response = await axios.post(url, payload, {
+            headers: {
+                "api-key": this.azureOpenAIApiKey,
+                "Content-Type": "application/json"
+            },
+            timeout: 120000
+        });
+        return response?.data;
+    }
+
+    async generateContentWithAzureOpenAI(prompt, config = {}) {
+        const requestedModel = config.model || "ace-it-flash";
+        const resolvedModel = this.resolveAzureModel(requestedModel);
+        const candidates = this.resolveAzureFallbackChain(resolvedModel, config);
+        const messages = this.normalizeGroqMessages(prompt, config.systemInstruction);
+        let lastErr = null;
+
+        for (const candidate of candidates) {
+            try {
+                const deployment = this.azureDeploymentMap[candidate] || candidate;
+                const data = await this.callAzureChat({ deployment, messages, config });
+                const text = data?.choices?.[0]?.message?.content || '';
+                return {
+                    response: {
+                        text: () => text,
+                        candidates: [{ content: { parts: [{ text }] } }],
+                        usageMetadata: data?.usage ? {
+                            promptTokenCount: data.usage.prompt_tokens,
+                            candidatesTokenCount: data.usage.completion_tokens,
+                            totalTokenCount: data.usage.total_tokens
+                        } : null
+                    },
+                    usedModel: candidate,
+                    usedPlatform: 'azure_openai'
+                };
+            } catch (err) {
+                lastErr = err;
+                const status = err?.response?.status || err?.status;
+                const msg = err?.response?.data?.error?.message || err.message;
+                console.warn(`[AIService] Azure OpenAI ${candidate} failed (${status || 'unknown'}): ${msg}`);
+            }
+        }
+
+        const status = lastErr?.response?.status || lastErr?.status || 'unknown';
+        const msg = lastErr?.response?.data?.error?.message || lastErr?.message || 'Unknown Azure OpenAI error';
+        const wrapped = new Error(`Azure OpenAI failed (${status}): ${msg}`);
+        wrapped.status = status;
+        throw wrapped;
     }
 
     /**
@@ -377,6 +764,7 @@ class GenerativeAIService {
         try {
             text = result.response.text();
             if (!text) throw new Error("No text content found in AI response.");
+            text = text.replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/i, '');
             
             console.log(`[GenerativeAIService] Raw AI Response Length:`, text.length);
         } catch (textError) {
@@ -481,14 +869,17 @@ class GenerativeAIService {
         const effectiveRetries = isDev ? Math.min(retries, 2) : retries;
         
         await this.init();
+        if (this.isGroq || this.activeProvider === 'groq' || this.isAzureOpenAI || this.activeProvider === 'azure_openai' || this.isDeepSeek || this.activeProvider === 'deepseek') {
+            throw new Error("Current provider uses direct adapter path; executeWithRetry path is blocked.");
+        }
 
         // 🛡️ FREE TIER PROTECTION: Wait if we are hitting the 15 RPM limit in DEV
         if (isDev) {
             await this.enforceFreeTierLimits();
         }
 
-        const requestedModel = config.model || "ace-it-flash";
-        const isProModel = requestedModel.includes("pro") || (typeof config.highQuality === 'boolean' && config.highQuality);
+        let requestedModel = config.model || "ace-it-flash";
+        let isProModel = requestedModel.includes("pro") || (typeof config.highQuality === 'boolean' && config.highQuality);
         const isDevelopment = (process.env.NODE_ENV === 'development' || !process.env.NODE_ENV) && process.env.FORCE_VERTEX_IN_DEV !== 'true';
 
         // --- COST GUARD RATE LIMITER (DEV ONLY) ---
@@ -498,6 +889,8 @@ class GenerativeAIService {
                 console.warn(`[AIService] 🛡️  SAFETY BREAKER: Blocked a 'Pro' request to protect your balance. Redirecting to Flash...`);
                 // Force it to be a Flash model instead of throwing to keep the app working
                 config.model = "ace-it-flash";
+                requestedModel = "ace-it-flash"; // CRITICAL FIX: Update the local pointer too
+                isProModel = false;             // CRITICAL FIX: Reset the quality flag
             } else {
                 const now = Date.now();
                 if (now - this.lastResetTime > 60000) { // Reset hourly window (using 1 min for demo/safety)
@@ -537,10 +930,13 @@ class GenerativeAIService {
             }
         }
 
-        // Resolve model aliases for Vertex AI
+        // Resolve model aliases for both Vertex AI and AI Studio
         let effectiveRequestedModel = requestedModel;
         if (this.isVertex && this.vertexModelMap?.[requestedModel]) {
             effectiveRequestedModel = this.vertexModelMap[requestedModel];
+        } else if (!this.isVertex && this.studioModelMap?.[requestedModel]) {
+            // CRITICAL FIX: Add missing resolution for AI Studio aliases (ace-it-pro -> gemini-flash-latest in DEV)
+            effectiveRequestedModel = this.studioModelMap[requestedModel];
         }
 
         const uniqueQueue = [...new Set(modelQueue)];

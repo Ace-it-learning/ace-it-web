@@ -1,0 +1,19 @@
+{
+  "P1_Reading": {
+    "metadata": {
+      "year": "2023",
+      "paper_id": "P1_Reading",
+      "parts": [
+        "A",
+        "B1",
+        "B2"
+      ],
+      "total_questions": 69,
+      "description": "Full dataset including Part A (Compulsory), Part B1 (Easy Section), and Part B2 (Difficult Section)."
+    },
+    "lastUpdated": {
+      "_seconds": 1768493802,
+      "_nanoseconds": 156000000
+    }
+  }
+}

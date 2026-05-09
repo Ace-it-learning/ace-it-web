@@ -139,7 +139,7 @@ const SchoolAutocomplete = ({ schools, value, onChange, isLoading }) => {
 };
 
 const AccountPage = () => {
-    const { user, profile, refreshProfile, changePassword, setPasswordForSocialUser, cancelSubscription, deleteUserAccount, logout } = useAuth();
+    const { user, profile, refreshProfile, changePassword, resetPassword, setPasswordForSocialUser, cancelSubscription, deleteUserAccount, logout } = useAuth();
     const { t } = useLanguage();
     const [searchParams, setSearchParams] = useSearchParams();
     const [activeTab, setActiveTab] = useState(searchParams.get('tab') || 'general');
@@ -413,6 +413,21 @@ const AccountPage = () => {
             let msg = err.message;
             if (err.code === 'auth/wrong-password') msg = "Incorrect current password.";
             setMessage({ type: 'error', text: msg });
+        } finally {
+            setIsSaving(false);
+        }
+    };
+
+    const handleResetViaEmail = async () => {
+        if (!user?.email) return;
+        setIsSaving(true);
+        setMessage(null);
+        try {
+            await resetPassword(user.email);
+            setMessage({ type: 'success', text: "Password reset email sent! Please check your inbox." });
+        } catch (err) {
+            console.error(err);
+            setMessage({ type: 'error', text: "Failed to send reset email. " + err.message });
         } finally {
             setIsSaving(false);
         }
@@ -895,6 +910,26 @@ const AccountPage = () => {
                                                 {isGoogleOnly && !hasPassword ? 'Set Password' : 'Update Password'}
                                             </button>
                                         </form>
+
+                                        {/* Reset via Email Fallback */}
+                                        <div className="mt-4 p-6 bg-slate-50 rounded-[2rem] border border-slate-100 max-w-md">
+                                            <div className="flex items-start gap-4">
+                                                <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center shadow-sm text-primary">
+                                                    <Lock size={20} />
+                                                </div>
+                                                <div>
+                                                    <h4 className="text-sm font-bold text-slate-900">Forgot current password?</h4>
+                                                    <p className="text-[10px] text-slate-500 mt-1">If you don't remember your current password, you can reset it via your registered email.</p>
+                                                    <button 
+                                                        onClick={handleResetViaEmail}
+                                                        disabled={isSaving}
+                                                        className="mt-3 text-xs font-bold text-primary hover:underline flex items-center gap-1"
+                                                    >
+                                                        Send Reset Email <ChevronRight size={14} />
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </section>
 
                                     {/* Danger Zone */}

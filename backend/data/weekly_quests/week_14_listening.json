@@ -57,6 +57,21 @@
     "Note-taking skills are crucial for capturing key information during the listening exercise. Focus on the main arguments presented by each speaker.",
     "Identifying speaker attitude (e.g., optimistic, concerned, critical) helps in understanding their perspective and the nuances of their arguments."
   ],
+  "marking_logic": {
+    "full_marks_criteria": [
+      "Identifies GDP as the primary economic indicator",
+      "Correctly extracts environmental concerns (marine life, carbon emissions)",
+      "Identifies stakeholders (developers, wealthy investors, ordinary citizens)",
+      "Captures the host's neutral/balanced stance"
+    ],
+    "phonetic_leniency": {
+      "GDP": ["G.D.P.", "gdp", "GPD"],
+      "accountability": ["acountability", "accountablity", "acountability"],
+      "transparency": ["transperancy", "transparancy", "transperency"],
+      "reclamation": ["reclamaton", "reclamatun"],
+      "habitat": ["habitats", "habbetat"]
+    }
+  },
   "interactive_tasks": [
     {
       "type": "MCQ",

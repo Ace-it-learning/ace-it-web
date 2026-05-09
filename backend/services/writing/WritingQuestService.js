@@ -1,8 +1,21 @@
 const GenerativeAIService = require('../GenerativeAIService');
 const writingSyllabus = require('../../data/writing_quest_syllabus.json');
 const genrePrompts = require('../../data/genre_prompts.json');
-const admin = require('firebase-admin');
+const QuestionBankStore = require('../QuestionBankStore');
 const axios = require('axios');
+
+function writingScenarioCreatedAtMs(row) {
+    const v = row && row.created_at;
+    if (v == null) return 0;
+    if (typeof v === 'number') return v;
+    if (typeof v === 'string') {
+        const t = Date.parse(v);
+        return Number.isFinite(t) ? t : 0;
+    }
+    if (typeof v.toMillis === 'function') return v.toMillis();
+    if (v._seconds != null) return v._seconds * 1000;
+    return 0;
+}
 
 class WritingQuestService {
     constructor() {
@@ -22,6 +35,25 @@ class WritingQuestService {
         }
     }
 
+    /**
+     * When Firestore rows omit listing titles, the UI fell back to the genre name only
+     * (“Letter to the Editor” × N). Prefer a stable, unique label: genre + prompt excerpt.
+     */
+    disambiguateWritingCardTitle(friendlyGenre, rawTitle, prompt) {
+        const g = (friendlyGenre || '').trim();
+        const t = (rawTitle || '').trim();
+        const p = (prompt || '').replace(/\s+/g, ' ').trim();
+        const looksLikeGenreOnly =
+            !t ||
+            t.toLowerCase() === g.toLowerCase() ||
+            t === 'No Situation';
+        if (looksLikeGenreOnly && p && p !== 'No Situation') {
+            const excerpt = p.length > 88 ? `${p.slice(0, 85).trim()}…` : p;
+            return `${g}: ${excerpt}`;
+        }
+        return t || g;
+    }
+
     async getFactoryTopics(genre) {
         // Resolve friendly genre name first (e.g. "debate-speech" -> "Debate Speech")
         let friendlyGenre = genre;
@@ -33,14 +65,10 @@ class WritingQuestService {
         );
         if (match) friendlyGenre = match;
 
-        // 1. Try fetching from Firestore first (Real Factory Quests)
+        // 1. Factory quests from Cosmos (question_bank)
         try {
-            const db = admin.firestore();
-
-            // Generate broad query terms to catch different formats
             const queryTerms = new Set([friendlyGenre, genre]);
 
-            // Slugs
             const underscoreSlug = friendlyGenre.toLowerCase().replace(/ /g, '_');
             const hyphenSlug = friendlyGenre.toLowerCase().replace(/ /g, '-');
 
@@ -51,66 +79,62 @@ class WritingQuestService {
             queryTerms.add(`writing_genre_${genre.toLowerCase()}`);
 
             const finalTerms = Array.from(queryTerms);
-            // Special cases for common discrepancies in generated quest topics
             if (friendlyGenre === "Letter to the Editor" || genre.toLowerCase().includes("letter")) {
                 if (!finalTerms.includes("writing_genre_letter_to_editor")) finalTerms.push("writing_genre_letter_to_editor");
                 if (!finalTerms.includes("letter_to_editor")) finalTerms.push("letter_to_editor");
             }
 
             const queryTermsBatch = finalTerms.slice(0, 10);
-            console.log(`[WritingQuestService] Querying for genre "${friendlyGenre}" with terms:`, queryTermsBatch);
+            console.log(`[WritingQuestService] Querying Cosmos for genre "${friendlyGenre}" with terms:`, queryTermsBatch);
 
-            const snapshot = await db.collection('question_bank')
-                .where('topic', 'in', queryTermsBatch)
-                .where('is_approved', '==', true)
-                .get();
+            const rows = await QuestionBankStore.queryApprovedWritingByTopics(queryTermsBatch, 250);
 
-            console.log(`[WritingQuestService] Firestore found ${snapshot.size} records.`);
+            console.log(`[WritingQuestService] Cosmos found ${rows.length} records.`);
 
-            if (!snapshot.empty) {
+            if (rows.length > 0) {
                 const groups = new Map();
 
-                snapshot.forEach(doc => {
-                    const data = doc.data();
+                rows.forEach((data) => {
+                    const docId = data.id;
                     const passage = data.passage || data.reading_passage || "No Situation";
                     const key = passage.trim();
 
                     if (!groups.has(key)) {
                         groups.set(key, {
-                            id: doc.id,
-                            title: data.listing_title || data.title || genre,
+                            id: docId,
+                            title: data.listing_title || data.title || friendlyGenre,
                             prompt: passage,
-                            created_at: data.created_at ? data.created_at.toMillis() : 0,
+                            created_at: writingScenarioCreatedAtMs(data),
                             items: []
                         });
                     }
-                    groups.get(key).items.push({ id: doc.id, ...data });
+                    groups.get(key).items.push({ id: docId, ...data });
                 });
 
-                // Convert to array and sort by most recent
-                const firestoreTopics = Array.from(groups.values())
+                const factoryTopics = Array.from(groups.values())
                     .sort((a, b) => b.created_at - a.created_at)
-                    .map(group => {
-                        // Extract the "best" title/prompt
-                        // If all items are "Model Answer", use the situation as title
+                    .map((group) => {
                         const isAllModelAns = group.items.every(i => (i.listing_prompt || "").includes("Model Answer"));
+
+                        const raw = isAllModelAns
+                            ? `${friendlyGenre}: ${group.title}`
+                            : group.title;
 
                         return {
                             id: group.id,
-                            title: isAllModelAns ? (genre + ": " + group.title) : group.title,
-                            prompt: group.prompt, // The situation text
+                            title: this.disambiguateWritingCardTitle(friendlyGenre, raw, group.prompt),
+                            prompt: group.prompt,
+                            genre: friendlyGenre,
                             factory: true
                         };
                     });
 
-                console.log(`[WritingQuestService] Found ${firestoreTopics.length} grouped topics in Firestore.`);
+                console.log(`[WritingQuestService] Returning ${factoryTopics.length} grouped factory topics from Cosmos.`);
 
-                // USER REQUEST: If we found factory quests, we might want to ONLY show those
-                // or at least prioritize them. Let's return them now.
-                return firestoreTopics;
+                return factoryTopics;
             }
         } catch (error) {
-            console.warn("[WritingQuestService] Firestore fetch failed, falling back to static:", error);
+            console.warn("[WritingQuestService] Cosmos fetch failed, falling back to static:", error);
         }
 
         // 2. Fallback to Static JSON
@@ -130,6 +154,7 @@ class WritingQuestService {
             id: `static_${resolvedGenre}_${idx}`,
             title: p.title || p.topic || resolvedGenre,
             prompt: p.prompt || p.topic,
+            genre: resolvedGenre,
             static: true
         }));
     }
@@ -331,14 +356,36 @@ class WritingQuestService {
     /**
      * Get all scenarios across all genres
      */
+    /**
+     * Collapses cards that share the same visible title (e.g. factory rows with identical
+     * disambiguated prefix, or duplicate DB entries). Keeps the first occurrence only.
+     */
+    _normalizeScenarioTitle(title) {
+        return (title || '').replace(/\s+/g, ' ').trim().toLowerCase();
+    }
+
     async getAllScenarios() {
         const uniqueScenarios = new Map();
+        const seenPrompt = new Map(); // normalized passage → first id (collapse duplicate DB rows)
+        const seenTitle = new Map(); // normalized card title → first id
+
         for (const genreId in genrePrompts.prompts) {
             const formatScenarios = await this.getFactoryTopics(genreId);
             formatScenarios.forEach(s => {
-                if (s.id && !uniqueScenarios.has(s.id)) {
-                    uniqueScenarios.set(s.id, s);
-                }
+                if (!s.id || uniqueScenarios.has(s.id)) return;
+
+                const tKey = this._normalizeScenarioTitle(s.title);
+                if (tKey && seenTitle.has(tKey)) return;
+
+                const pKey = (s.prompt || '')
+                    .replace(/\s+/g, ' ')
+                    .trim()
+                    .toLowerCase();
+                if (pKey.length > 12 && seenPrompt.has(pKey)) return;
+
+                if (tKey) seenTitle.set(tKey, s.id);
+                if (pKey.length > 12) seenPrompt.set(pKey, s.id);
+                uniqueScenarios.set(s.id, s);
             });
         }
         return Array.from(uniqueScenarios.values());
@@ -570,8 +617,8 @@ class WritingQuestService {
         }
 
         const promptText = `
-            You are a Senior HKDSE English Marker (Level 5** Expert) named {{agentName}}.
-            Task: Provide a PROFESSIONAL and DETAILED assessment of the student's work based on 2025 Level Descriptors.
+            You are a Senior HKDSE English Marker (Level 5** Chief Examiner) named {{agentName}}.
+            Task: Provide a PROFESSIONAL, STERN, and DETAILED assessment of the student's work based on official HKEAA Level Descriptors.
             
             Topic: "${topic}"
             Text Type: "${textType}"
@@ -582,26 +629,41 @@ class WritingQuestService {
             
             Student Text Content: "${content}"
 
-            Grading Criteria (HKDSE 1-7 Scale for Content, Language, Organization):
-            - **Content (C)**: Addressing prompt, idea development, depth. (STERN RULE: If the essay is significantly under-length—e.g. < 160 words for Part A or < 320 for Part B—do NOT award a 7 for Content as it lacks sustained development).
-            - **Language (L)**: Vocabulary range, grammar accuracy, complexity.
-            - **Organization (O)**: Structure, cohesion, transitions.
+            ### 🎯 HKEAA MARKING CRITERIA (1-7 SCALE):
+            Evaluate each pillar on a scale of 1 to 7. Use the following descriptors as your internal anchor:
 
-            Requirements:
-            1. Assign a score (1-7) for each pillar and predict an overall HKDSE Level.
-            2. Identify 3-4 "Hotspots" for improvement. 
-               - "original_phrase": EXACT substring from student work. Do not hallucinate punctuation.
+            **1. Content (C) - 7 Marks Max**
+            - **7 (Elite)**: Content is sophisticated and highly relevant. Ideas are extensively developed with significant depth, creativity, or insight. Audience awareness is masterful.
+            - **5 (Strong)**: Content is relevant and well-developed. Ideas are clear and supported with relevant details. Good audience awareness.
+            - **3 (Basic)**: Content is partially relevant. Some development of ideas but lacks depth or becomes repetitive.
+            - **1 (Weak)**: Very limited content. Highly repetitive or irrelevant.
+            *STERN RULE: If length is < 160 words (Part A) or < 320 words (Part B), do NOT award a 7 for Content as development is not sustained.*
+
+            **2. Language (L) - 7 Marks Max**
+            - **7 (Elite)**: Wide range of vocabulary and complex sentence structures used with flair and precision. Extremely high degree of accuracy; errors are rare/minor.
+            - **5 (Strong)**: Good range of vocabulary and structures. Generally accurate; errors do not impede communication.
+            - **3 (Basic)**: Simple vocabulary and structures. Frequent errors in grammar/spelling, though meaning is mostly clear.
+            - **1 (Weak)**: Very limited vocabulary. Frequent errors that significantly obscure meaning.
+
+            **3. Organization (O) - 7 Marks Max**
+            - **7 (Elite)**: Perfectly cohesive and logically structured. Sophisticated use of transitions and connectives. Genre conventions are flawlessly followed.
+            - **5 (Strong)**: Logically organized and cohesive. Effective use of paragraphing and transition devices.
+            - **3 (Basic)**: Basic organization. Some cohesive devices used, but may be mechanical (e.g., Firstly, Secondly).
+            - **1 (Weak)**: Poorly organized. Lacks clear paragraphing or logical flow.
+
+            ### 📝 MARKER'S MANDATE:
+            1. **Predicted Level**: Predict an overall HKDSE Level (1 to 5**). A Level 5** MUST show "flair" and "sophisticated control." If the writing is merely "correct" but lacks impact, cap it at Level 4 or 5.
+            2. **Hotspots**: Identify 3-4 specific substrings that need improvement. 
+               - "original_phrase": EXACT substring from student work.
                - "improved_phrase": Refined version in DSE 5** style.
                - "explanation": { "en": "...", "zh": "..." } - Linguistic reason for change.
-            3. MODEL ANSWER: Provide a FULL-LENGTH 5** model answer (450+ words).
-            4. HIGH SCORE TIPS: Provide 3 specific, tactical "DSE Tricks" or "Markers' Favorites" that would elevate this specific piece.
+            3. **Model Answer**: Provide a FULL-LENGTH 5** model answer (450+ words).
+            4. **High Score Tips**: Provide 3 tactical "Marker's Favorites" that would elevate this specific piece.
             
-            ABSOLUTE RULES:
-            - ALL qualitative fields MUST contain both "en" and "zh" objects.
-            - LANGUAGE: EXCLUSIVELY use Traditional Chinese (繁體中文) for all "zh" fields.
-            - Ensure every feedback field is fully translated into Traditional Chinese.
-            - **STERN CALIBRATION**: Distinguish clearly between "Competence" (Level 4) and "Sophistication" (Level 5**). A Level 4 response is clear and accurate but uses standard vocabulary. A Level 5** response MUST demonstrate "flair," "nuance," and "sophisticated control" of language. If a response is merely "good" but not "impressive," do NOT award a 7 for Content or Language.
-            - No preamble. No meta-commentary.
+            ### ABSOLUTE RULES:
+            - BILINGUAL: ALL qualitative fields (feedback, summaries, tips) MUST contain both "en" and "zh" objects.
+            - CHINESE: EXCLUSIVELY use Traditional Chinese (繁體中文).
+            - NO PREAMBLE: Return ONLY the JSON object.
 
             Output JSON Format (Strict):
             {

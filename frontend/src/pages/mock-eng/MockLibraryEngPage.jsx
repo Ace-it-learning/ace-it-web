@@ -19,6 +19,7 @@ import {
     Crown,
     Zap
 } from 'lucide-react';
+import { trackEvent } from '../../utils/analytics';
 
 const MockLibraryEngPage = () => {
     const navigate = useNavigate();
@@ -113,6 +114,7 @@ const MockLibraryEngPage = () => {
                 autoStart: true
             }
         });
+        trackEvent('Exam', 'Start Mock', `${subTab}: ${paper.name}`);
     };
 
     return (

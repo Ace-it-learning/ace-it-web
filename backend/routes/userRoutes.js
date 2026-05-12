@@ -147,14 +147,16 @@ const ParentReportService = require('../services/ParentReportService');
 
 // POST /api/user/parent-settings
 router.post('/parent-settings', requireResolvedUid, async (req, res) => {
-    const { uid, parent_email, parent_report_enabled } = req.body;
+    const { uid, parent_email, parent_report_enabled, send_copy_to_self } = req.body;
     if (!uid) return res.status(400).json({ error: 'Missing uid' });
 
     try {
-        await UserProfileService.createOrUpdateProfile(uid, {
-            parent_email,
-            parent_report_enabled
-        });
+        const patch = {};
+        if (parent_email !== undefined) patch.parent_email = parent_email;
+        if (parent_report_enabled !== undefined) patch.parent_report_enabled = parent_report_enabled;
+        if (send_copy_to_self !== undefined) patch.send_copy_to_self = send_copy_to_self;
+
+        await UserProfileService.createOrUpdateProfile(uid, patch);
         res.json({ success: true });
     } catch (e) {
         res.status(500).json({ error: 'Failed to update parent settings' });
@@ -163,15 +165,40 @@ router.post('/parent-settings', requireResolvedUid, async (req, res) => {
 
 // POST /api/user/parent-test-report
 router.post('/parent-test-report', requireResolvedUid, async (req, res) => {
-    const { uid, parent_email } = req.body;
+    const { uid, parent_email, send_copy_to_self } = req.body;
     if (!uid || !parent_email) return res.status(400).json({ error: 'Missing parameters' });
 
     try {
-        const result = await ParentReportService.generateAndSendReport(uid, parent_email);
+        const profile = await UserProfileService.getProfile(uid);
+        const selfEmail = send_copy_to_self ? (profile?.email || null) : null;
+        const result = await ParentReportService.generateAndSendReport(uid, parent_email, selfEmail);
         res.json(result);
     } catch (e) {
         console.error("Test report error", e);
         res.status(500).json({ error: 'Failed to send test report' });
+    }
+});
+
+// POST /api/user/send-weekly-report — manual trigger
+router.post('/send-weekly-report', requireResolvedUid, async (req, res) => {
+    const { uid } = req.body;
+    if (!uid) return res.status(400).json({ error: 'Missing uid' });
+
+    try {
+        const profile = await UserProfileService.getProfile(uid);
+        if (!profile?.parent_email) {
+            return res.status(400).json({ error: 'No parent email configured' });
+        }
+        if (!profile?.parent_report_enabled) {
+            return res.status(400).json({ error: 'Parent reports not enabled' });
+        }
+
+        const selfEmail = profile?.send_copy_to_self ? (profile?.email || null) : null;
+        const result = await ParentReportService.generateAndSendReport(uid, profile.parent_email, selfEmail);
+        res.json(result);
+    } catch (e) {
+        console.error("Send weekly report error", e);
+        res.status(500).json({ error: 'Failed to send report' });
     }
 });
 

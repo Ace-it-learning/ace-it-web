@@ -6,13 +6,19 @@ import { useLanguage } from '../../context/LanguageContext';
 
 const PricingTable = () => {
     const navigate = useNavigate();
-    const { user, loginWithGoogle } = useAuth();
+    const { user, beginSignInFlow } = useAuth();
     const { t } = useLanguage();
 
-    const handleAction = () => {
+    const handleAction = async () => {
         if (user) {
             navigate('/dashboard');
-        } else {
+            return;
+        }
+        try {
+            const started = await beginSignInFlow();
+            if (!started) navigate('/login');
+        } catch (e) {
+            console.error('[PricingTable] Sign-in start failed:', e);
             navigate('/login');
         }
     };

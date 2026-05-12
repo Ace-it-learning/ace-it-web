@@ -172,7 +172,38 @@ const MICRO_SKILLS = {
         description_zh: '理解文中的語法連結及指代表達'
     },
 
-    // WRITING (15 skills)
+    // WRITING (15 skills + 3 HKEAA pillars)
+    // HKEAA Target Pillars (used by Writing Quest grading)
+    writing_content: {
+        id: 'writing_content',
+        name: 'Content',
+        name_zh: '內容與展現',
+        paper: PAPERS.WRITING,
+        category: 'Content & Ideas',
+        group: SKILL_GROUPS.CORE,
+        description: 'Relevance, development, and originality of ideas',
+        description_zh: '主題相關性、內容發展及創意發揮'
+    },
+    writing_language: {
+        id: 'writing_language',
+        name: 'Language',
+        name_zh: '語言與詞彙',
+        paper: PAPERS.WRITING,
+        category: 'Language & Vocabulary',
+        group: SKILL_GROUPS.CORE,
+        description: 'Vocabulary range, grammatical accuracy, and precision',
+        description_zh: '詞彙豐富度、語法準確性及選詞精準度'
+    },
+    writing_organization: {
+        id: 'writing_organization',
+        name: 'Organization',
+        name_zh: '結構與銜接',
+        paper: PAPERS.WRITING,
+        category: 'Organization & Coherence',
+        group: SKILL_GROUPS.CORE,
+        description: 'Coherence, paragraph structure, and transitions',
+        description_zh: '連貫性、段落結構及過渡銜接'
+    },
     writing_relevance: {
         id: 'writing_relevance',
         name: 'Relevance',
@@ -456,7 +487,48 @@ const MICRO_SKILLS = {
         description_zh: '以個人且友好的語體與讀者連結。'
     },
 
-    // LISTENING (10 skills)
+    // LISTENING (10 skills + 4 HKEAA pillars)
+    // HKEAA Target Pillars (used by Listening Quest and Radar)
+    listening_part_a: {
+        id: 'listening_part_a',
+        name: 'Comprehension',
+        name_zh: '聆聽理解',
+        paper: PAPERS.LISTENING,
+        category: 'Comprehension Skills',
+        group: SKILL_GROUPS.CORE,
+        description: 'Accuracy in extracting factual data and implicit meanings',
+        description_zh: '精確選取事實數據與理解隱含意義'
+    },
+    listening_content: {
+        id: 'listening_content',
+        name: 'Content',
+        name_zh: '內容綜合',
+        paper: PAPERS.LISTENING,
+        category: 'Integrated Tasks',
+        group: SKILL_GROUPS.CORE,
+        description: 'Synthesizing data file info and auditory points',
+        description_zh: '綜合處理數據文件資訊與聽力重點'
+    },
+    listening_language: {
+        id: 'listening_language',
+        name: 'Language',
+        name_zh: '語言運用',
+        paper: PAPERS.LISTENING,
+        category: 'Integrated Tasks',
+        group: SKILL_GROUPS.CORE,
+        description: 'Register, appropriateness, and precision in writing',
+        description_zh: '語體適切度及寫作時的精準度'
+    },
+    listening_organization: {
+        id: 'listening_organization',
+        name: 'Organization',
+        name_zh: '文章結構',
+        paper: PAPERS.LISTENING,
+        category: 'Integrated Tasks',
+        group: SKILL_GROUPS.CORE,
+        description: 'Coherence and professional text formatting',
+        description_zh: '連貫性與專業文本格式編排'
+    },
     listening_mainIdea: {
         id: 'listening_mainIdea',
         name: 'Main Idea Listening',
@@ -558,8 +630,50 @@ const MICRO_SKILLS = {
         description_zh: '解釋不明確或間接的陳述'
     },
 
-    // SPEAKING (10 skills)
-    // SPEAKING (10 skills)
+    // SPEAKING (10 skills + 4 HKEAA pillars)
+    // HKEAA Target Pillars (used by Speaking Quest and Radar)
+    speaking_delivery: {
+        id: 'speaking_delivery',
+        name: 'Pronunciation',
+        name_zh: '發音',
+        paper: PAPERS.SPEAKING,
+        category: 'Delivery & Musicality',
+        group: SKILL_GROUPS.CORE,
+        description: 'Clarity, intonation, pace, and rhythm',
+        description_zh: '發音清晰度、語調及說話節奏'
+    },
+    speaking_strategies: {
+        id: 'speaking_strategies',
+        name: 'Communication Strategies',
+        name_zh: '溝通策略',
+        paper: PAPERS.SPEAKING,
+        category: 'Dynamic Interaction',
+        group: SKILL_GROUPS.CORE,
+        description: 'Turn-taking, active listening, and facilitation',
+        description_zh: '發言時機、積極聆聽及帶動討論'
+    },
+    speaking_language: {
+        id: 'speaking_language',
+        name: 'Vocabulary',
+        name_zh: '詞彙',
+        paper: PAPERS.SPEAKING,
+        category: 'Flow & Spontaneity',
+        group: SKILL_GROUPS.CORE,
+        description: 'Vocabulary range and grammatical accuracy in speech',
+        description_zh: '口語詞彙豐富度與語法準確性'
+    },
+    speaking_organization: {
+        id: 'speaking_organization',
+        name: 'Ideas & Organization',
+        name_zh: '思路與組織',
+        paper: PAPERS.SPEAKING,
+        category: 'Dynamic Interaction',
+        group: SKILL_GROUPS.CORE,
+        description: 'Logical development and relevance of ideas',
+        description_zh: '邏輯發展與論點相關性'
+    },
+
+    // SPEAKING (10 granular skills)
     // Cluster 1: Delivery & Musicality (Mechanical Excellence)
     speaking_pronunciationClarity: {
         id: 'speaking_pronunciationClarity',

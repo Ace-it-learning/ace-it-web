@@ -166,7 +166,8 @@ class MockAssessmentService {
                     const batchIds = batch.map(it => it.q.id);
                     try {
                         return await new Promise(async (resolve, reject) => {
-                            const timeout = setTimeout(() => reject(new Error("BATCH_TIMEOUT")), 180000);
+                            // Align with DeepSeek HTTP timeout (240s): large batches + JSON feedback need headroom.
+                            const timeout = setTimeout(() => reject(new Error("BATCH_TIMEOUT")), 240000);
                             
                             const attemptBatch = async (temp = 0.2) => {
                                 try {
@@ -182,14 +183,17 @@ class MockAssessmentService {
                                         response = await GenerativeAIService.generateJson(batchPrompt, { 
                                             model: model,
                                             temperature: temp,
-                                            strictModel: hasHighRigor && model === 'ace-it-pro'
+                                            strictModel: hasHighRigor && model === 'ace-it-pro',
+                                            // Default LLM completion budget is 1024 tokens — insufficient for multi-question JSON feedback.
+                                            generationConfig: { maxOutputTokens: 4096 }
                                         });
                                     } catch (proErr) {
                                         console.warn("[MockAssessment] Reading batch evaluation with Pro failed, falling back to Flash:", proErr.message);
                                         response = await GenerativeAIService.generateJson(batchPrompt, { 
                                             model: 'ace-it-flash',
                                             temperature: temp + 0.1,
-                                            strictModel: false
+                                            strictModel: false,
+                                            generationConfig: { maxOutputTokens: 4096 }
                                         });
                                     }
                                     

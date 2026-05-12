@@ -21,7 +21,7 @@ class TutorResponseService {
             : this.getDefaultSuggestions(context);
         const finalActions = actions.length > 0
             ? actions
-            : this.getDefaultActions(context);
+            : (context.isPendingSummaryMode ? this.getDefaultActions(context) : []);
 
         return {
             text,
@@ -72,6 +72,31 @@ class TutorResponseService {
                     type: "open_mock",
                     label,
                     payload: { value }
+                };
+            }
+
+            // Direct lab navigation: open_lab:topic=reading_inference&level=3
+            if (value.toLowerCase().startsWith("open_lab:")) {
+                const paramsStr = value.slice("open_lab:".length);
+                const params = new URLSearchParams(paramsStr);
+                let level = params.get("level") || "3";
+                // Clamp invalid levels to the valid set: 3, 4, 5, 7
+                const validLevels = ["3", "4", "5", "7"];
+                if (!validLevels.includes(level)) {
+                    const num = parseInt(level, 10);
+                    if (num <= 3) level = "3";
+                    else if (num === 4) level = "4";
+                    else if (num >= 5 && num < 7) level = "5";
+                    else if (num >= 7) level = "7";
+                    else level = "3";
+                }
+                return {
+                    type: "open_lab",
+                    label,
+                    payload: {
+                        topic: params.get("topic") || "",
+                        level: level
+                    }
                 };
             }
 
@@ -157,6 +182,9 @@ class TutorResponseService {
     }
 
     getDefaultActions(context = {}) {
+        if (!context.isPendingSummaryMode) {
+            return [];
+        }
         return [{
             type: "open_quest",
             label: "Start Practice",
@@ -183,11 +211,24 @@ class TutorResponseService {
 - Prefer focus areas and micro-skills when unsure of exact Quest IDs.
 - Use [TUTOR_LEAN_CONTEXT] as the primary evidence for diagnosis and recommendations.
 - Ground every suggestion in observed weak micro-skills and recent Quest/Mock outcomes.
+- PRIORITY RULE for micro-skill recommendations:
+  1. FIRST, check TUTOR_LEAN_CONTEXT.microSkills.unassessed. If there are unassessed (never-practiced) skills, recommend one of those for baseline practice.
+  2. ONLY if there are no unassessed skills OR the student explicitly asks to improve a specific practiced skill, then recommend from the weakest practiced skills.
+  3. Do not tell a student to "improve" a skill they have already scored well on (e.g., 80%+) when untouched skills still exist on their map.
 - If you include quick reply chips, output exactly one tag in this format:
   [SUGGESTIONS: chip one | chip two | chip three]
 - Keep chips short and independent; never put multiple choices inside one chip.
-- If you include a practice button, use:
-  [CTA: Start Practice | open_quest:${agentId}]
+- Only include a practice CTA when you are genuinely recommending practice right now. Do NOT add a CTA when:
+  - Asking the student for information (e.g., grades, preferences, goals).
+  - Giving general advice, explanations, or motivational messages without a specific practice task.
+  - Continuing a normal conversation.
+- If you include a practice button, the label must be specific and descriptive:
+  - For a general Quest roadmap: [CTA: Continue Quest Roadmap | open_quest:${agentId}]
+  - For a specific lab / micro-skill: [CTA: Practice <skill-name> | open_lab:topic=\${topicId}&level=3]
+    Example: [CTA: Practice Reading Inference | open_lab:topic=reading_inference&level=3]
+  - VALID LEVELS ONLY: Use ONLY these exact level values in open_lab URLs: 3 (Easy), 4 (Medium), 5 (DSE Standard), 7 (Elite). NEVER use 1, 2, or 6.
+  - Never use a generic "Start Practice" label; name the actual activity.
+  - Only use open_lab when you are certain of the exact micro-skill ID from TUTOR_LEAN_CONTEXT.
 - For post-completion summaries, group all supplied events into one concise coaching message: celebrate, diagnose weak micro-skills, and give today's 2-3 item to-do list.
 - Tone requirements: professional, encouraging, concise, and specific. Avoid generic motivation without concrete study actions.
 - New student mode: provide a starter roadmap direction (baseline -> weak skill -> checkpoint) with clear first action.

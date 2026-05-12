@@ -23,7 +23,7 @@ const rarityRingStyles = {
 const Sidebar = () => {
     const navigate = useNavigate();
     const { activeAgentId, setActiveAgentId, activeAgent, avatarState, studentState, equipment, getAgentIdentity } = useAvatar();
-    const { user, profile, loginWithGoogle } = useAuth();
+    const { user, profile, loginWithGoogle, loading: authBusy } = useAuth();
     const tier = (profile?.subscription_tier || 'free').toLowerCase();
     const isPaid = tier === 'pro' || tier === 'premium';
     const { t } = useLanguage();
@@ -279,8 +279,10 @@ const Sidebar = () => {
                 <div className="mt-2 p-5 bg-gradient-to-br from-primary/90 to-primary rounded-3xl text-white shadow-xl">
                     <p className="text-xs font-medium opacity-90 mb-3 leading-relaxed">{t('sidebar.unlock_plan')}</p>
                     <button
-                        onClick={loginWithGoogle}
-                        className="w-full bg-white text-primary py-2.5 rounded-2xl text-xs font-bold hover:shadow-xl transition-all active:scale-95"
+                        type="button"
+                        disabled={authBusy}
+                        onClick={() => { loginWithGoogle().catch(() => {}); }}
+                        className="w-full bg-white text-primary py-2.5 rounded-2xl text-xs font-bold hover:shadow-xl transition-all active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed"
                     >
                         {t('sidebar.register_now')}
                     </button>

@@ -53,9 +53,9 @@ const WritingStudioEditor = ({
                 
                 <button
                     onClick={onSubmit}
-                    disabled={isSubmitting || content.length < 50}
+                    disabled={isSubmitting || wordCount < 50}
                     className={`px-10 py-5 rounded-2xl font-black text-lg transition-all flex items-center gap-3 shadow-xl
-                        ${content.length >= 50 
+                        ${wordCount >= 50 
                             ? (isMock ? 'bg-indigo-600' : 'bg-slate-900') + ' text-white hover:bg-black hover:scale-105 active:scale-95' 
                             : 'bg-slate-100 text-slate-300 shadow-none cursor-not-allowed'}
                     `}

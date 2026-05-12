@@ -1,9 +1,21 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AlertCircle, ArrowLeft } from 'lucide-react';
+import { useAuth } from '../context/AuthContext';
 
 const AuthErrorPage = () => {
     const navigate = useNavigate();
+    const { beginSignInFlow } = useAuth();
+
+    const handleTryAgain = async () => {
+        try {
+            const started = await beginSignInFlow();
+            if (!started) navigate('/login');
+        } catch (e) {
+            console.error('[AuthErrorPage] Sign-in start failed:', e);
+            navigate('/login');
+        }
+    };
 
     return (
         <div className="min-h-screen bg-[#fdfaf8] flex items-center justify-center p-4">
@@ -28,7 +40,8 @@ const AuthErrorPage = () => {
 
                 <div className="pt-4">
                     <button
-                        onClick={() => navigate('/login')}
+                        type="button"
+                        onClick={handleTryAgain}
                         className="w-full bg-primary text-white font-black py-5 rounded-[2rem] shadow-xl shadow-primary/20 hover:shadow-primary/30 hover:scale-[1.02] transition-all flex items-center justify-center gap-3 active:scale-95"
                     >
                         <ArrowLeft className="w-5 h-5" />

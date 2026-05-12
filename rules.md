@@ -8,21 +8,13 @@
     - Explains "effective reading strategies": previewing structure, topic sentences, key words.
     - Guides through past paper criteria.
 
-## Matt sir
+## Math Tutor
 - **Role**: Geometry & Algebra Specialist.
 - **Focus**: Geometric proofs, algebraic manipulation, logical deduction.
 - **Personality**: Logical, precise, step-by-step.
 - **Context**:
     - Helps with "Geometric proofs".
     - Emphasizes showing steps for method marks.
-
-## Chinese Tutor
-- **Role**: Classical Texts & Exemplar Specialist.
-- **Focus**: 12 specified classical texts (範文), writing flow, rhetoric devices.
-- **Personality**: Cultured, deep, poetic but accessible.
-- **Context**:
-    - Challenges student with "Recitation challenges".
-    - Explains deeper meanings of classical texts.
 
 ## Ace Sir
 - **Role**: General Study Strategist.
@@ -33,52 +25,66 @@
     - Tracks XP and Level progress.
 
 # Development Rules
-- Use React Context for state management.
-- Use Tailwind CSS for styling.
-- Persistence via local JSON file during development.
+- Use React Context for state management (Auth, Language, Avatar, Header).
+- Use Tailwind CSS for styling (utility-first, mobile-first responsive design).
+- Persistence via **Azure Cosmos DB** in DEV (primary store) and Firebase Firestore in PROD (legacy).
+- API calls go through `/src/services`; do not call `fetch`/`axios` directly from components.
+- Functional components with hooks only; no class components.
 
-# ACE IT! - ANTIGRAVITY DEVELOPMENT RULES (STRICT MODE)
+# ACE IT! - DEVELOPMENT RULES (STRICT MODE)
 
 ## 1. SCOPE ISOLATION (The "Surgical" Rule)
-* **Context Boundaries:** When I ask you to fix a bug in a specific file (e.g., `SpeakingRoom.js`), you are STRICTLY FORBIDDEN from modifying any other files unless I explicitly tag them.
+* **Context Boundaries:** When asked to fix a bug in a specific file (e.g., `SpeakingInteractionPage.jsx`), you are STRICTLY FORBIDDEN from modifying any other files unless explicitly tagged.
 * **Import Integrity:** Never change the path of an import in a working file to fix an error in a current file. If a shared component is broken, STOP and ask for permission to edit the shared file.
-* **Modular Safety:** Treat the `src/modules/` folders (Speaking, Writing, Learning) as independent silos. A change in "Speaking" must never trigger a refactor in "Writing".
+* **Modular Safety:** Treat component directories (`src/components/speaking/`, `src/components/writing/`, `src/components/reading/`) as independent silos. A change in "Speaking" must never trigger a refactor in "Writing".
 
 ## 2. MODEL ENFORCEMENT PROTOCOL
-* **Strict Routing:** You must adhere to this model usage strategy based on the complexity of the task.
-    * **UI / CSS / Simple Logic:** Use `gemini-2.0-flash`. (Fast, cheap).
-    * **Complex Reasoning / SVG Diagrams / Exam Logic:** Use `gemini-1.5-pro`.
+* **Strict Routing:** All AI tasks in DEV are routed through **Deepseek API** (`GenerativeAIService.js`).
+    * **UI / CSS / Simple Logic:** Use `deepseek-chat` (fast, cheap).
+    * **Complex Reasoning / Essay Grading / Exam Logic:** Use `deepseek-reasoner`.
 * **Quota Failure Protocol:**
-    * IF you hit a quota limit on `gemini-1.5-pro` while doing a complex task (e.g., grading an essay), **DO NOT** silently switch to `flash` and attempt to do it poorly.
-    * **ACTION:** Stop generation. Output an error: "⚠️ Quota Hit on Pro Model. Task requires reasoning capabilities. Please wait or confirm switch to Flash."
+    * IF you hit a quota limit on `deepseek-reasoner` while doing a complex task (e.g., grading an essay), **DO NOT** silently switch to `deepseek-chat` and attempt to do it poorly.
+    * **ACTION:** Stop generation. Output an error: "⚠️ Quota Hit on Reasoner Model. Task requires reasoning capabilities. Please wait or confirm switch to Chat model."
     * *Rationale:* Better to have a paused task than broken logic.
+* **PROD Legacy:** `gemini-1.5-flash` / `gemini-3.1-flash` and `gemini-1.5-pro` / `gemini-3.5-pro` are PROD-only (Vertex AI). Do not use Gemini model IDs in DEV.
 
 ## 3. CHANGE CONTROL (The "No Auto-Fix" Rule)
 * **Zero Global Refactoring:** Never "clean up" or "optimize" code across the whole project without a specific command.
 * **Error Handling:** If a fix requires changing more than 2 files, propose the plan first. Do not execute immediately.
-* **Legacy Protection:** Do not delete comments or "unused" code in `src/legacy/` or commented-out blocks. I am saving them for reference.
+* **Legacy Protection:** Do not delete comments or "unused" code in `backend/backups/`, `backend/scratch/`, `src/legacy/`, or commented-out blocks unless explicitly instructed.
 
 ## 4. TECH STACK IMMUTABILITY
-* **Framework:** React (Next.js) + Firebase ONLY.
+* **Frontend Framework:** React 19 (Vite 7) — NOT Next.js.
+* **Backend Framework:** Node.js 20 + Express 5 (CommonJS).
 * **Styling:** Tailwind CSS ONLY. Do not introduce inline styles or CSS modules.
 * **State Management:** React Context + Hooks. Do not suggest Redux or MobX.
-* **New Libraries:** Do not install new `npm` packages to solve a trivial problem (e.g., don't install `moment.js`, use native `Date` object).
+* **Database (DEV):** Azure Cosmos DB (primary). Firestore is PROD-only legacy.
+* **Authentication (DEV):** Azure AD (MSAL Browser) — NOT Firebase Auth in DEV.
+* **New Libraries:** Do not install new `npm` packages to solve a trivial problem (e.g., don't install `moment.js`, use native `Date` object). `moment` is already present but deprecated; do not add new usages.
 
 ## 5. CODING STYLE
 * **Functional Components:** Use const `Component = () => {}`.
 * **Error Boundaries:** Every major module (Speaking, Writing) must be wrapped in a specific Error Boundary so a crash doesn't kill the whole app.
 * **Comments:** When writing complex logic (especially the "Intent Router"), add JSDoc comments explaining *why*, not just *what*.
+* **Tailwind Classes:** Use `clsx` + `tailwind-merge` for conditional classes. Mobile-first responsive design.
+* **Math Rendering:** Use `react-katex` + `rehype-katex` / `remark-math` for math content.
 
 ## 6. BILLING & API SAFETY
-* **Vertex AI Prohibited in DEV:** You are STRICTLY FORBIDDEN from initializing or using Vertex AI (Google Cloud billing) for any development, testing, or batch generation tasks.
-* **Mandatory AI Studio Usage:** All AI features must be routed through the Google AI Studio (API Key) path in the development environment.
-* **Environment Safeguard:** Ensure `USE_AI_STUDIO_IN_PROD=true` is set in the local `.env` whenever performing heavy generation tasks to prevent accidental SKU switches.
-* **Model ID Hygiene:** Never use experimental model IDs (e.g., 2.5, 3.1) unless they have been explicitly verified against the project's AI Studio "Available Models" list. Use stable aliases like `gemini-pro-latest` or `gemini-flash-latest` by default.
+* **Deepseek API (DEV Primary):** All AI generation in DEV routes through `DEEPSEEK_API_KEY` and `DEEPSEEK_API_URL` (configured in `backend/.env`).
+* **Vertex AI / AI Studio Prohibited in DEV:** You are STRICTLY FORBIDDEN from initializing or using Google Vertex AI, Google AI Studio, or any GCP-billed AI service for DEV work. These are PROD-only legacy.
+* **Environment Safeguard:** Ensure `NODE_ENV=development` is set in `backend/.env`. The `GenerativeAIService.js` gateway uses Deepseek exclusively when `NODE_ENV !== 'production'`.
+* **Model ID Hygiene:** Use stable Deepseek model IDs only:
+    * `deepseek-chat` for chat / routing / simple logic.
+    * `deepseek-reasoner` for essay grading, deep reasoning, exam logic.
+    * Do not use experimental or Gemini model IDs in DEV.
 
 ## 7. TOKEN OPTIMIZATION (THE "SKIP_TOKEN_TAX" PROTOCOL)
-* **Knowledge Index First**: Before deep browsing the project, I will refer to `PROJECT_INDEX.md` and my internal Knowledge Items to understand the architecture.
-* **Direct File Access**: I will use `grep_search` and `view_file` with specific line ranges to minimize context window bloat.
-* **Forbidden Discovery**: I will NEVER search or index the following directories unless explicitly instructed:
+* **Product Index First**: Before deep browsing the project, refer to **`PRODUCT_INDEX.md`** to map user-facing features (e.g., "General Reading Quest", "Dashboard Roadmap") directly to file paths. Do not scan the whole project.
+* **Architecture Context**: Read **`AGENTS.md`** for tech stack, conventions, and key file references. Do not re-discover what is already documented.
+* **Direct File Access**: Use `ReadFile` with specific `line_offset`/`n_lines` and `Grep` for targeted searches. Avoid `Glob` on large directories; avoid `Shell` `find`/`dir` on `node_modules`, `dist/`, or `backend/backups/`.
+* **Forbidden Discovery**: NEVER search or index the following unless explicitly instructed:
     * `backend/backups/`, `backend/scratch/`, `backend/scripts/`.
     * Root scripts matching `fix_*.js`, `test_*.js`, `check_*.js`.
-* **Structural Prompts**: I will rely on the `prompt_map` (located in Knowledge Items) rather than reading large prompt config files in every turn.
+    * `**/node_modules/**`, `frontend/dist/`.
+* **Structural Prompts**: Rely on the `prompt_map` (in Knowledge Items or `backend/prompts/`) rather than reading large prompt config files on every turn.
+* **No Code Dumps in Chat**: When replying to the PM user, describe outcomes in plain language. Do not paste code blocks, diffs, or long file snippets unless the user explicitly asks for technical detail.

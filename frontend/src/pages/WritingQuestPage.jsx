@@ -259,19 +259,6 @@ const WritingQuestPage = () => {
                     throw new Error("No quest data found in navigation state");
                 }
 
-                // Final Step: Fetch Cheat Library for authorized developers
-                if (isCheatMode) {
-                    try {
-                        const cheatRes = await fetch(`${API_URL}/api/writing/admin/cheat-library`);
-                        if (cheatRes.ok) {
-                            const lib = await cheatRes.json();
-                            if (lib) setCheatLibrary(lib);
-                        }
-                    } catch (cheatErr) {
-                        console.warn("[WritingQuest] Cheat library load failed (ignoring):", cheatErr);
-                    }
-                }
-
             } catch (err) {
                 console.error("[WritingQuest] Initialization Error:", err);
                 // Return to dashboard if completely stuck
@@ -281,6 +268,25 @@ const WritingQuestPage = () => {
 
         loadQuest();
     }, [location.state, navigate, user?.email]);
+
+    // Cheat library was previously unreachable inside loadQuest (after early returns). Load when studio is ready.
+    useEffect(() => {
+        if (step !== 'studio' || !isCheatMode) return;
+        const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+        let cancelled = false;
+        (async () => {
+            try {
+                const cheatRes = await fetch(`${API_URL}/api/writing/admin/cheat-library`);
+                if (!cancelled && cheatRes.ok) {
+                    const lib = await cheatRes.json();
+                    if (lib) setCheatLibrary(lib);
+                }
+            } catch (cheatErr) {
+                console.warn("[WritingQuest] Cheat library load failed (ignoring):", cheatErr);
+            }
+        })();
+        return () => { cancelled = true; };
+    }, [step, isCheatMode]);
 
     // AUTO-SAVE EFFECT
     useEffect(() => {
@@ -338,13 +344,21 @@ const WritingQuestPage = () => {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
-                    topic: questData.title,
-                    textType: questData.genre || questData.id?.split('_')[0],
+                    topic: questData?.title || title || 'Writing Quest',
+                    textType: questData?.genre || questData?.id?.split('_')[0],
                     content: content,
                     userEmail: user?.email,
                     uid: user?.uid
                 })
             });
+            if (!res.ok) {
+                const errBody = await res.text().catch(() => '');
+                console.error('[WritingQuest] Grade failed:', res.status, errBody);
+                alert(res.status === 401
+                    ? 'Please sign in again to submit your writing.'
+                    : `Submission failed (${res.status}). Please try again.`);
+                return;
+            }
             const results = await res.json();
             
             // Clean up auto-save

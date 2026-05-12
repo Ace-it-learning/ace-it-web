@@ -1,12 +1,17 @@
 import { db } from "../firebase";
-import { collection, doc, setDoc, writeBatch } from "firebase/firestore";
 
 /**
  * Utility to upload Past Paper JSON to Firestore.
  * This should be run from the browser console while logged in with a Student account
  * that has broad write permissions (or update firestore.rules temporarily).
+ * NOTE: This utility is legacy and only works when Firebase is enabled (PROD or legacy DEV).
  */
 export const uploadPaperToFirestore = async (paperData) => {
+    if (!db) {
+        console.error("[Migration] Firebase Firestore is not initialized. This utility requires Firebase mode (VITE_USE_ENTRA=false).");
+        return false;
+    }
+    const { collection, doc, setDoc, writeBatch } = await import("firebase/firestore");
     const { paper_metadata, resource_files, questions } = paperData;
     const paperId = paper_metadata.paper_id;
 

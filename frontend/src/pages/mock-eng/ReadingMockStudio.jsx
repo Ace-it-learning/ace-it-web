@@ -630,8 +630,20 @@ const ReadingMockStudio = () => {
                 localStorage.removeItem(`mock_save_${paperId}`);
                 localStorage.removeItem('last_mock_inprogress_reading');
             } else {
-                const error = await res.json();
-                alert(`Submission failed: ${error.error || 'Server error'}`);
+                let detail = `HTTP ${res.status}`;
+                const ct = res.headers.get('content-type') || '';
+                try {
+                    if (ct.includes('application/json')) {
+                        const error = await res.json();
+                        detail = error.error || error.message || detail;
+                    } else {
+                        const text = await res.text();
+                        detail = text ? text.trim().slice(0, 280) : detail;
+                    }
+                } catch (_) {
+                    /* ignore parse errors */
+                }
+                alert(`Submission failed: ${detail}`);
             }
         } catch (err) {
             clearInterval(progressInterval);

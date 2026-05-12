@@ -19,7 +19,12 @@ const PromptTipsPage = () => {
                 { id: 'e1', text: t('prompts.categories.english.p1') },
                 { id: 'e2', text: t('prompts.categories.english.p2') },
                 { id: 'e3', text: t('prompts.categories.english.p3') },
-                { id: 'e4', text: t('prompts.categories.english.p4') }
+                { id: 'e4', text: t('prompts.categories.english.p4') },
+                { id: 'e5', text: t('prompts.categories.english.p5') },
+                { id: 'e6', text: t('prompts.categories.english.p6') },
+                { id: 'e7', text: t('prompts.categories.english.p7') },
+                { id: 'e8', text: t('prompts.categories.english.p8') },
+                { id: 'e9', text: t('prompts.categories.english.p9') }
             ]
         },
         {
@@ -32,18 +37,26 @@ const PromptTipsPage = () => {
                 { id: 'c1', text: t('prompts.categories.ace.p1') },
                 { id: 'c2', text: t('prompts.categories.ace.p2') },
                 { id: 'c3', text: t('prompts.categories.ace.p3') },
-                { id: 'c4', text: t('prompts.categories.ace.p4') }
+                { id: 'c4', text: t('prompts.categories.ace.p4') },
+                { id: 'c5', text: t('prompts.categories.ace.p5') },
+                { id: 'c6', text: t('prompts.categories.ace.p6') },
+                { id: 'c7', text: t('prompts.categories.ace.p7') },
+                { id: 'c8', text: t('prompts.categories.ace.p8') },
+                { id: 'c9', text: t('prompts.categories.ace.p9') }
             ]
         }
     ];
 
-    const handleCopy = (text, id) => {
+    const handleCopy = (text, id, categoryId) => {
         navigator.clipboard.writeText(text);
         setCopiedId(id);
 
-        // Brief delay for visual feedback, then redirect to chat
+        // Determine target agent: 'ace' category → Ace Sir, otherwise → english
+        const targetAgentId = categoryId === 'ace' ? 'ace' : 'english';
+
+        // Brief delay for visual feedback, then redirect to chat with prompt pre-filled
         setTimeout(() => {
-            navigate('/dashboard');
+            navigate('/dashboard', { state: { prefillPrompt: text, targetAgentId } });
         }, 800);
     };
 
@@ -87,7 +100,7 @@ const PromptTipsPage = () => {
                                 {cat.prompts.map((prompt) => (
                                     <div
                                         key={prompt.id}
-                                        onClick={() => handleCopy(prompt.text, prompt.id)}
+                                        onClick={() => handleCopy(prompt.text, prompt.id, cat.id)}
                                         className="group relative bg-white dark:bg-white/5 backdrop-blur-sm border border-gray-200 dark:border-white/10 p-5 rounded-3xl cursor-pointer hover:border-primary/40 transition-all hover:shadow-xl hover:shadow-primary/5 active:scale-[0.98]"
                                     >
                                         <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed pr-8">

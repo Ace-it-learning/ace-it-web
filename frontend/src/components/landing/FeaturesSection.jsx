@@ -44,6 +44,14 @@ const FeaturesSection = ({ id }) => {
         { id: 'speaking', icon: <Mic className="w-5 h-5" />, label: t('features.quest.tabs.speaking'), color: "purple" }
     ];
 
+    const tabImages = {
+        grammar: '/Quest_Hub/Grammer_lab.jpg',
+        reading: '/Quest_Hub/Reading_lab.jpg',
+        writing: '/Quest_Hub/Writing_lab.jpg',
+        listening: '/Quest_Hub/Listening_Lab.jpg',
+        speaking: '/Quest_Hub/Speaking_Lab.jpg'
+    };
+
     const tabContent = {
         grammar: {
             title: language === 'zh' ? '語法精準實驗室' : 'Grammar Precision Lab',
@@ -162,19 +170,12 @@ const FeaturesSection = ({ id }) => {
                         </div>
 
                         <div className="relative rounded-[2.5rem] bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 p-4 shadow-inner">
-                            <div className="aspect-[16/10] bg-gray-200 dark:bg-gray-800 rounded-[2rem] overflow-hidden flex items-center justify-center relative shadow-2xl">
-                                <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-blue-500/5" />
-                                <div className="z-10 text-center p-8">
-                                    <div className="inline-block p-4 rounded-3xl bg-white dark:bg-gray-900 shadow-xl mb-6">
-                                        {tabs.find(t => t.id === activeTab).icon}
-                                    </div>
-                                    <p className="text-xs font-black uppercase tracking-[0.2em] text-gray-400">
-                                        Visual Interface Preview
-                                    </p>
-                                    <h4 className="text-xl font-bold mt-2 dark:text-white">
-                                        {tabContent[activeTab].title}
-                                    </h4>
-                                </div>
+                            <div className="aspect-[16/10] bg-gray-200 dark:bg-gray-800 rounded-[2rem] overflow-hidden relative shadow-2xl">
+                                <img
+                                    src={tabImages[activeTab]}
+                                    alt={tabContent[activeTab].title}
+                                    className="w-full h-full object-cover"
+                                />
                             </div>
                         </div>
                     </motion.div>

@@ -176,7 +176,7 @@ const renderTextWithTables = (part, keyPrefix) => {
     return nodes.length > 0 ? <>{nodes}</> : <span key={keyPrefix}>{part}</span>;
 };
 
-const formatMessageContent = (content, handleTutorAction) => {
+const formatMessageContent = (content, handleTutorAction, activeAgentId = 'english') => {
     if (typeof content !== 'string') return content;
 
     // Auto-strip suggestions if present (for history/legacy support)
@@ -204,14 +204,38 @@ const formatMessageContent = (content, handleTutorAction) => {
             const label = ctaContent[0]?.trim() || "Start Now";
             const value = ctaContent[1]?.trim() || label;
             const legacyIntent = `${label} ${value}`.toLowerCase();
-            const actionType = value.toLowerCase().startsWith('open_quest') || legacyIntent.includes('start practice') || legacyIntent.includes('quest')
-                ? 'open_quest'
-                : (value.toLowerCase().startsWith('open_mock') ? 'open_mock' : 'send_text');
+            let actionType, actionPayload;
+            if (value.toLowerCase().startsWith('open_lab:')) {
+                actionType = 'open_lab';
+                const paramsStr = value.slice('open_lab:'.length);
+                const params = new URLSearchParams(paramsStr);
+                let level = params.get('level') || '3';
+                // Clamp invalid levels to the valid set: 3, 4, 5, 7
+                const validLevels = ['3', '4', '5', '7'];
+                if (!validLevels.includes(level)) {
+                    const num = parseInt(level, 10);
+                    if (num <= 3) level = '3';
+                    else if (num === 4) level = '4';
+                    else if (num >= 5 && num < 7) level = '5';
+                    else if (num >= 7) level = '7';
+                    else level = '3';
+                }
+                actionPayload = { topic: params.get('topic') || '', level: level };
+            } else if (value.toLowerCase().startsWith('open_quest') || legacyIntent.includes('start practice') || legacyIntent.includes('quest')) {
+                actionType = 'open_quest';
+                actionPayload = { value, agentId: activeAgentId };
+            } else if (value.toLowerCase().startsWith('open_mock')) {
+                actionType = 'open_mock';
+                actionPayload = { value };
+            } else {
+                actionType = 'send_text';
+                actionPayload = { value };
+            }
             
             return (
                 <div key={key} className="my-4">
                     <button
-                        onClick={() => handleTutorAction({ type: actionType, label, payload: { value } })}
+                        onClick={() => handleTutorAction({ type: actionType, label, payload: actionPayload })}
                         className="group flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-orange-500 to-amber-600 hover:from-orange-600 hover:to-amber-700 text-white rounded-2xl font-bold text-sm shadow-lg shadow-orange-500/20 transition-all hover:scale-[1.02] active:scale-[0.98]"
                     >
                         <Sparkles className="w-4 h-4 animate-pulse" />
@@ -450,65 +474,9 @@ const ChatInterface = ({ onOpenQuest }) => {
     const [isToolsOpen, setIsToolsOpen] = useState(false);
     const toolsRef = useRef(null);
     const verbifyChip = (chip) => {
-        const text = typeof chip === 'string' ? chip : (chip.label || chip.value || "");
-        if (!text) return chip;
-
-        // Skip if already verbified or system command or too long
-        if (text.startsWith('[') || 
-            text.includes(t('chat.practice_verb')) || 
-            text.includes(t('chat.start_verb')) ||
-            text.includes(t('chat.improve_verb')) ||
-            text.includes(t('chat.analyze_verb')) ||
-            text.includes(t('chat.learn_verb')) ||
-            text.includes(t('chat.discuss_verb')) ||
-            text.length > 40) {
-            return chip;
-        }
-
-        let verb = t('chat.practice_verb');
-        let subject = '';
-
-        const lowerText = text.toLowerCase();
-        
-        // Determine verb based on content type
-        if (lowerText.includes('strategy') || lowerText.includes('logic') || lowerText.includes('jupas') || lowerText.includes('tip') || lowerText.includes('策略') ||
-            lowerText.includes('time') || lowerText.includes('management') || lowerText.includes('career') || lowerText.includes('advice') || lowerText.includes('前途') || lowerText.includes('時間')) {
-            verb = t('chat.learn_verb');
-        } else if (lowerText.includes('quest') || lowerText.includes('mock') || lowerText.includes('exam') || lowerText.includes('practice') || lowerText.includes('練習') || lowerText.includes('考試')) {
-            verb = t('chat.practice_verb');
-        } else if (lowerText.includes('report') || lowerText.includes('performance') || lowerText.includes('analysis') || lowerText.includes('分析')) {
-            verb = t('chat.analyze_verb');
-        }
-
-        // Determine subject
-        if (lowerText.includes('reading') || lowerText.includes('inference') || lowerText.includes('literal') || lowerText.includes('main idea')) {
-            subject = t('chat.reading');
-        } else if (lowerText.includes('writing') || lowerText.includes('email') || lowerText.includes('essay') || lowerText.includes('formal')) {
-            subject = t('chat.writing');
-        } else if (lowerText.includes('listening') || lowerText.includes('data file') || lowerText.includes('integrated')) {
-            subject = t('chat.listening');
-        } else if (lowerText.includes('speaking') || lowerText.includes('discussion') || lowerText.includes('delivery')) {
-            subject = t('chat.speaking');
-        }
-
-        // Fallback to agent subject if no paper-specific match
-        if (!subject && activeAgentId !== 'ace') {
-            if (activeAgentId === 'math') subject = language === 'zh' ? '數學' : 'Maths';
-            if (activeAgentId === 'english') subject = language === 'zh' ? '英文' : 'English';
-        }
-
-        let verbifiedText = text;
-        if (subject) {
-            verbifiedText = `${verb} ${subject} - ${text}`;
-        } else {
-            verbifiedText = `${verb} ${text}`;
-        }
-
-        if (typeof chip === 'string') return verbifiedText;
-        
-        // Only overwrite value if it was the same as the label (meaning it's not a special system value)
-        const newValue = (chip.value === chip.label) ? verbifiedText : chip.value;
-        return { ...chip, label: verbifiedText, value: newValue };
+        // No longer auto-prefixing chips with verbs/subjects.
+        // The backend already sends chips with natural, context-aware labels.
+        return chip;
     };
 
 
@@ -653,17 +621,27 @@ const ChatInterface = ({ onOpenQuest }) => {
 
                     console.log(`[ChatInterface] Fetching history for UID: ${user.uid}, Agent: ${activeAgentId}`);
 
-                    // 1 & 2. Parallelize Fetches
+                    const authHeaders = {};
+                    if (typeof user.getIdToken === 'function') {
+                        try {
+                            const token = await user.getIdToken();
+                            if (token) authHeaders.Authorization = `Bearer ${token}`;
+                        } catch (e) {
+                            console.warn('[ChatInterface] getIdToken failed during history load:', e?.message || e);
+                        }
+                    }
+
+                    // 1 & 2. Parallelize Fetches (Bearer keeps Entra req.uid aligned with profile/history)
                     const [statsRes, historyRes, chipsRes] = await Promise.all([
-                        fetch(`${API_URL}/api/stats?uid=${user.uid}`).catch(err => {
+                        fetch(`${API_URL}/api/stats?uid=${user.uid}`, { headers: { ...authHeaders } }).catch(err => {
                             console.warn("Stats fetch failed", err);
                             return { ok: false };
                         }),
-                        fetch(`${API_URL}/api/history/${activeAgentId}?uid=${user.uid}`).catch(err => {
+                        fetch(`${API_URL}/api/history/${activeAgentId}?uid=${user.uid}`, { headers: { ...authHeaders } }).catch(err => {
                             console.warn("History fetch failed", err);
                             return { ok: false };
                         }),
-                        fetch(`${API_URL}/api/history/${activeAgentId}/chips?uid=${user.uid}`).catch(err => {
+                        fetch(`${API_URL}/api/history/${activeAgentId}/chips?uid=${user.uid}`, { headers: { ...authHeaders } }).catch(err => {
                             console.warn("Chips cache fetch failed", err);
                             return { ok: false };
                         })
@@ -864,6 +842,19 @@ const ChatInterface = ({ onOpenQuest }) => {
                             isProcessedRef.current = true;
                             handleSendMessage(location.state.startPrompt);
                             window.history.replaceState({}, document.title);
+                        } else if (location.state?.prefillPrompt) {
+                            isProcessedRef.current = true;
+                            // Switch to the target agent if different from current
+                            if (location.state?.targetAgentId && location.state.targetAgentId !== activeAgentId) {
+                                setActiveAgentId(location.state.targetAgentId);
+                            }
+                            // Pre-fill the input box so the student can edit/confirm before sending
+                            setInputValue(location.state.prefillPrompt);
+                            window.history.replaceState({}, document.title);
+                            // Focus the textarea after a short delay to let the state update
+                            setTimeout(() => {
+                                textareaRef.current?.focus();
+                            }, 300);
                         }
                     }
                 } catch (err) {
@@ -1038,7 +1029,8 @@ const ChatInterface = ({ onOpenQuest }) => {
         setMessages(prev => [...prev, userMsg]);
         
         // Save user message immediately for persistence in case of crash/refresh
-        if (user && user.uid !== 'guest') {
+        // Skip hidden system triggers — they are ephemeral prompts, not chat history.
+        if (user && user.uid !== 'guest' && !isHidden) {
             saveMessageToBackend(userMsg);
         }
 
@@ -1330,10 +1322,19 @@ const ChatInterface = ({ onOpenQuest }) => {
         }
 
         if (type === 'open_lab') {
-            const params = payload.params || {};
             const searchParams = new URLSearchParams();
-            if (params.topic) searchParams.set('topic', params.topic);
-            if (params.level) searchParams.set('level', params.level);
+            if (payload.topic) searchParams.set('topic', payload.topic);
+            let level = payload.level || '3';
+            const validLevels = ['3', '4', '5', '7'];
+            if (!validLevels.includes(level)) {
+                const num = parseInt(level, 10);
+                if (num <= 3) level = '3';
+                else if (num === 4) level = '4';
+                else if (num >= 5 && num < 7) level = '5';
+                else if (num >= 7) level = '7';
+                else level = '3';
+            }
+            searchParams.set('level', level);
             navigate(`/lab?${searchParams.toString()}`);
             return;
         }
@@ -1657,7 +1658,7 @@ const ChatInterface = ({ onOpenQuest }) => {
                                     "text-[#1d130c] dark:text-white whitespace-pre-wrap transition-all",
                                     isEnlarged ? "text-[16px] leading-relaxed" : "text-[14px] leading-snug"
                                 )}>
-                                    {formatMessageContent(msg.content, handleTutorAction)}
+                                    {formatMessageContent(msg.content, handleTutorAction, activeAgentId)}
                                 </div>
 
                                 {Array.isArray(msg.actions) && msg.actions.length > 0 && (
@@ -1725,7 +1726,17 @@ const ChatInterface = ({ onOpenQuest }) => {
                                                 const params = payload.params || {};
                                                 const searchParams = new URLSearchParams();
                                                 if (params.topic) searchParams.set('topic', params.topic);
-                                                if (params.level) searchParams.set('level', params.level);
+                                                let level = params.level || '3';
+                                                const validLevels = ['3', '4', '5', '7'];
+                                                if (!validLevels.includes(level)) {
+                                                    const num = parseInt(level, 10);
+                                                    if (num <= 3) level = '3';
+                                                    else if (num === 4) level = '4';
+                                                    else if (num >= 5 && num < 7) level = '5';
+                                                    else if (num >= 7) level = '7';
+                                                    else level = '3';
+                                                }
+                                                searchParams.set('level', level);
                                                 if (params.focus && Array.isArray(params.focus)) {
                                                     params.focus.forEach(f => searchParams.append('focus', f));
                                                 }

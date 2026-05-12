@@ -384,12 +384,62 @@ class UserProfileService {
                 skills.speaking_organization = { level: avg(['speaking_logicalDevelopment', 'speaking_relevance', 'speaking_organisation', 'speaking_organization']) };
 
                 // Writing Pillars - Recalculated for Radar
+                // Only the 3 HKEAA pillars are shown on the radar. Granular skills
+                // (e.g. writing_grammaticalAccuracy) are tracked internally but not displayed.
                 skills.writing_content = { level: avg(['writing_relevance', 'writing_development', 'writing_originality', 'writing_content']) };
                 skills.writing_language = { level: avg(['writing_vocabularyRange', 'writing_collocations', 'writing_idiomaticExpressions', 'writing_registerAppropriate', 'writing_wordChoicePrecision', 'writing_sentenceVariety', 'writing_advancedStructures', 'writing_grammaticalAccuracy', 'writing_punctuation', 'writing_language']) };
                 skills.writing_organization = { level: avg(['writing_paragraphStructure', 'writing_transitions', 'writing_overallCoherence', 'writing_organization']) };
 
-                // Listening Pillars (Part A is usually granular, Part B is Pillar)
-                if (!skills.listening_part_a) skills.listening_part_a = { level: avg(['listening_mainIdea', 'listening_detailListening', 'listening_noteTaking', 'listening_prediction', 'listening_gist', 'listening_accentRecognition', 'listening_speedProcessing', 'listening_speakerAttitude', 'listening_ambiguityHandling', 'listening_part_a']) };
+                // Remove granular writing skills from the radar-visible microSkills.
+                // They remain in the DB for internal tracking but won't clutter the radar.
+                const granularWritingSkills = [
+                    'writing_relevance', 'writing_development', 'writing_originality',
+                    'writing_vocabularyRange', 'writing_collocations', 'writing_idiomaticExpressions',
+                    'writing_registerAppropriate', 'writing_wordChoicePrecision', 'writing_sentenceVariety',
+                    'writing_advancedStructures', 'writing_grammaticalAccuracy', 'writing_punctuation',
+                    'writing_paragraphStructure', 'writing_transitions', 'writing_overallCoherence',
+                    'writing_general', 'writing_genre_debate', 'writing_genre_lte', 'writing_genre_exp',
+                    'writing_genre_article', 'writing_genre_speech', 'writing_genre_proposal'
+                ];
+                for (const gid of granularWritingSkills) {
+                    if (skills[gid] && !skills[gid]._preserve) {
+                        delete skills[gid];
+                    }
+                }
+
+                // Listening Pillars — compute from granular skills + any existing pillar data
+                skills.listening_part_a = { level: avg(['listening_mainIdea', 'listening_detailListening', 'listening_noteTaking', 'listening_prediction', 'listening_gist', 'listening_accentRecognition', 'listening_speedProcessing', 'listening_speakerAttitude', 'listening_ambiguityHandling', 'listening_part_a']) };
+                skills.listening_content = { level: avg(['listening_integratedTasks', 'listening_content']) };
+                skills.listening_language = { level: avg(['listening_noteTaking', 'listening_language']) };
+                skills.listening_organization = { level: avg(['listening_integratedTasks', 'listening_organization']) };
+
+                // Remove granular skills from radar-visible output.
+                // Only HKEAA pillar skills are displayed for Writing, Listening, Speaking.
+                const granularSkillsToHide = [
+                    // Writing granular
+                    'writing_relevance', 'writing_development', 'writing_originality',
+                    'writing_vocabularyRange', 'writing_collocations', 'writing_idiomaticExpressions',
+                    'writing_registerAppropriate', 'writing_wordChoicePrecision', 'writing_sentenceVariety',
+                    'writing_advancedStructures', 'writing_grammaticalAccuracy', 'writing_punctuation',
+                    'writing_paragraphStructure', 'writing_transitions', 'writing_overallCoherence',
+                    'writing_general', 'writing_genre_debate', 'writing_genre_lte', 'writing_genre_exp',
+                    'writing_genre_article', 'writing_genre_speech', 'writing_genre_proposal',
+                    // Listening granular
+                    'listening_mainIdea', 'listening_detailListening', 'listening_noteTaking',
+                    'listening_prediction', 'listening_gist', 'listening_accentRecognition',
+                    'listening_speedProcessing', 'listening_speakerAttitude', 'listening_ambiguityHandling',
+                    'listening_integratedTasks',
+                    // Speaking granular
+                    'speaking_pronunciationClarity', 'speaking_intonation', 'speaking_paceRhythm',
+                    'speaking_grammaticalAccuracy', 'speaking_spontaneity', 'speaking_confidence',
+                    'speaking_vocabularyInSpeech', 'speaking_turnTaking', 'speaking_activeListening',
+                    'speaking_facilitation'
+                ];
+                for (const gid of granularSkillsToHide) {
+                    if (skills[gid] && !skills[gid]._preserve) {
+                        delete skills[gid];
+                    }
+                }
             }
 
             if (normalizedResult) CacheService.setDbCache(cacheKey, normalizedResult);
@@ -541,6 +591,20 @@ class UserProfileService {
             const weakestSkills = [...skillEntries].sort((a, b) => a.level - b.level).slice(0, 5);
             const strongestSkills = [...skillEntries].sort((a, b) => b.level - a.level).slice(0, 3);
 
+            // Find unassessed / never-attempted skills from taxonomy
+            const attemptedSkillIds = new Set(
+                Object.entries(skillMap?.microSkills || {})
+                    .filter(([_, data]) => (data?.level || 0) > 0)
+                    .map(([skillId, _]) => skillId)
+            );
+            const unassessedSkills = Object.entries(subjectSkills)
+                .filter(([skillId, meta]) => meta.paper !== 'mock' && meta.paper !== 'assessment' && !attemptedSkillIds.has(skillId))
+                .map(([skillId, meta]) => ({
+                    skillId,
+                    name: meta.name || this.getSkillName(skillId, subject)
+                }))
+                .slice(0, 5);
+
             const leanRecentQuests = (recentQuests || []).slice(0, 5).map((q) => ({
                 topic: q.topic || q.questName || q.module || "Quest",
                 score: q.score ?? null,
@@ -554,7 +618,8 @@ class UserProfileService {
                     total: recentMock.total ?? null,
                     percentage: recentMock.percentage ?? null,
                     level: recentMock.level || null,
-                    topMistakes: Array.isArray(recentMock.topMistakes) ? recentMock.topMistakes.slice(0, 3) : []
+                    topMistakes: Array.isArray(recentMock.topMistakes) ? recentMock.topMistakes.slice(0, 3) : [],
+                    achievedSkills: Array.isArray(recentMock.achievedSkills) ? recentMock.achievedSkills.slice(0, 6) : []
                 }
                 : null;
 
@@ -570,6 +635,7 @@ class UserProfileService {
                 microSkills: {
                     weakest: weakestSkills,
                     strongest: strongestSkills,
+                    unassessed: unassessedSkills,
                     coverage: skillEntries.length
                 },
                 outcomes: {
@@ -655,7 +721,10 @@ class UserProfileService {
             const top = Array.isArray(m.topMistakes) && m.topMistakes.length
                 ? m.topMistakes.slice(0, 2).join(';')
                 : null;
-            mockStr = [label, score, top ? `weak:${top}` : null].filter(Boolean).join(':');
+            const strengths = Array.isArray(m.achievedSkills) && m.achievedSkills.length
+                ? m.achievedSkills.slice(0, 2).join(';')
+                : null;
+            mockStr = [label, score, top ? `weak:${top}` : null, strengths ? `strong:${strengths}` : null].filter(Boolean).join(':');
             mockStr = mockStr.slice(0, 80);
         }
 
@@ -679,6 +748,7 @@ class UserProfileService {
             microSkills: lean.microSkills || {
                 weakest: (pContext?.topWeaknesses || []).slice(0, 3).map((w) => ({ name: w })),
                 strongest: [],
+                unassessed: [],
                 coverage: 0
             },
             outcomes: lean.outcomes || {
@@ -697,11 +767,16 @@ class UserProfileService {
     buildDeterministicDailyTasks(leanContext = {}) {
         const weakest = leanContext?.microSkills?.weakest || [];
         const strongest = leanContext?.microSkills?.strongest || [];
+        const unassessed = leanContext?.microSkills?.unassessed || [];
         const mock = leanContext?.outcomes?.recentMock || null;
         const questTitles = leanContext?.availableQuestTitles || [];
         const tasks = [];
 
-        if (weakest.length > 0) {
+        // Prioritize unassessed skills first, then weak skills
+        if (unassessed.length > 0) {
+            const target = unassessed[0];
+            tasks.push(`Baseline unassessed micro-skill: ${target.name} (first practice to unlock your skill map).`);
+        } else if (weakest.length > 0) {
             const target = weakest[0];
             tasks.push(`Target weak micro-skill: ${target.name} (20-30 mins focused practice).`);
         } else {
@@ -710,10 +785,13 @@ class UserProfileService {
 
         if (mock && (mock.topMistakes?.length || mock.topic || mock.paper)) {
             const weakness = (mock.topMistakes || []).slice(0, 2).join(", ");
+            const strength = (mock.achievedSkills || []).slice(0, 1).join(", ");
             const source = mock.paper || mock.topic || "recent mock";
             tasks.push(weakness
                 ? `Review ${source} mistakes: ${weakness}, then retry a similar question set.`
-                : `Review your ${source} errors and retry one similar question set.`);
+                : (strength
+                    ? `Build on ${source} strength (${strength}) with one advanced timed checkpoint.`
+                    : `Review your ${source} errors and retry one similar question set.`));
         } else if (questTitles.length > 0) {
             tasks.push(`Complete one structured Quest from your plan: ${questTitles[0]}.`);
         } else {
@@ -1785,6 +1863,19 @@ ${tutor.verbal_tics ? `**VERBAL TICS & PHRASES**: Use these phrases naturally wh
         const byName = Object.values(pool).find(s => s.name.toLowerCase() === normalizedInput);
         if (byName) return byName.id;
 
+        // 2b. Mixed-language display names (e.g. "Inference / 推論能力")
+        // Strip everything after " / " and try again
+        const slashParts = normalizedInput.split(' / ');
+        if (slashParts.length > 1) {
+            const englishPart = slashParts[0].trim();
+            const byEnglishPart = Object.values(pool).find(s => s.name.toLowerCase() === englishPart);
+            if (byEnglishPart) return byEnglishPart.id;
+            // Also try against Chinese name if available
+            const chinesePart = slashParts.slice(1).join(' / ').trim();
+            const byChinesePart = Object.values(pool).find(s => s.name_zh && s.name_zh.trim() === chinesePart);
+            if (byChinesePart) return byChinesePart.id;
+        }
+
         // 3. Fuzzy/Shorthand Mappings for English
         if (subject === 'english') {
             const mappings = {
@@ -1816,30 +1907,26 @@ ${tutor.verbal_tics ? `**VERBAL TICS & PHRASES**: Use these phrases naturally wh
                 'writing weekly': 'writing_paragraphStructure',
                 'listening weekly': 'listening_detailListening',
                 'reading weekly': 'reading_mainIdea',
-                'listening part a': 'listening_detailListening',
-                'listening part b': 'listening_integratedTasks',
+                // Listening Quest labels — map to HKEAA pillars
+                'listening part a': 'listening_part_a',
+                'listening part b': 'listening_content',
                 // Listening Mock Labels
                 'listening accuracy': 'listening_detailListening',
                 'content synthesis': 'listening_integratedTasks',
                 'integrated language': 'listening_noteTaking',
                 'logical organization': 'writing_paragraphStructure',
                 'register & tone': 'writing_registerAppropriate',
-                // Speaking Normalization
-                'speaking_organisation': 'speaking_facilitation',
-                'speaking_vocabularyInSpeech': 'speaking_vocabularyInSpeech',
+                // Speaking Normalization — ONLY map generic words, NEVER remap pillar IDs
+                'speaking_organisation': 'speaking_organization',
                 'pronunciation': 'speaking_pronunciationClarity',
-                'language': 'writing_grammaticalAccuracy',
                 'ideas': 'speaking_spontaneity',
-                'strategies': 'speaking_facilitation',
+                'strategies': 'speaking_strategies',
                 'delivery': 'speaking_pronunciationClarity',
-                'speaking_language': 'speaking_vocabularyInSpeech',
-                'speaking_organization': 'speaking_facilitation',
-                'speaking_logicaldevelopment': 'speaking_facilitation',
-                // Mock Specific Tags
+                'speaking_logicaldevelopment': 'speaking_organization',
+                // Mock Specific Tags — ONLY map generic 'content'/'organization' strings,
+                // NEVER remap the HKEAA pillar IDs (writing_content, writing_language, writing_organization)
+                // which are valid skill IDs used by Writing Quest and the frontend radar.
                 'content': 'writing_relevance',
-                'writing_content': 'writing_relevance',
-                'writing_language': 'writing_grammaticalAccuracy',
-                'writing_organization': 'writing_paragraphStructure',
                 'organization': 'writing_paragraphStructure',
                 'appropriacy': 'writing_registerAppropriate'
             };

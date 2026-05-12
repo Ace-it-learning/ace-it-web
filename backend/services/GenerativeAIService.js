@@ -462,9 +462,9 @@ class GenerativeAIService {
         const model = this.resolveGroqModel(requestedModel);
         const messages = this.normalizeGroqMessages(prompt, config.systemInstruction);
 
-        // Keep responses modest in DEV to avoid Groq token/min quota bursts.
+        // Cap output size; allow higher budgets when callers request large JSON (grading, mocks).
         const requestedMax = config?.generationConfig?.maxOutputTokens || 1024;
-        const cappedMaxTokens = Math.min(requestedMax, 1024);
+        const cappedMaxTokens = Math.min(requestedMax, 8192);
         const payload = {
             model,
             messages,
@@ -587,19 +587,32 @@ class GenerativeAIService {
             max_tokens: Math.min(requestedMax, 8192)
         };
 
+        const promptPreview = typeof prompt === 'string'
+            ? prompt.substring(0, 120)
+            : (Array.isArray(prompt) && prompt[0]?.text ? prompt[0].text.substring(0, 120) : 'array-prompt');
+        console.log(`[DeepSeekAdapter] Request | model=${model} | messages=${messages.length} | max_tokens=${payload.max_tokens} | promptPreview="${promptPreview}..."`);
+
         let response;
+        const dsStart = Date.now();
         try {
+            // Long-form JSON (reading batches, writing grading) can exceed 120s; align with server mock timeout / batch limits.
+            const deepSeekTimeoutMs =
+                typeof config?.timeoutMs === 'number' && config.timeoutMs > 0
+                    ? config.timeoutMs
+                    : 240000;
             response = await axios.post(this.deepSeekBaseUrl, payload, {
                 headers: {
                     Authorization: `Bearer ${this.deepSeekApiKey}`,
                     'Content-Type': 'application/json'
                 },
-                timeout: 120000
+                timeout: deepSeekTimeoutMs
             });
+            console.log(`[DeepSeekAdapter] Response OK in ${Date.now() - dsStart}ms | usedModel=${model} | responseLength=${response?.data?.choices?.[0]?.message?.content?.length || 0}`);
         } catch (err) {
             const status = err?.response?.status || err?.status || null;
             const statusText = status ? `status ${status}` : 'unknown status';
             const providerMsg = err?.response?.data?.error?.message || err.message;
+            console.error(`[DeepSeekAdapter] Response FAILED after ${Date.now() - dsStart}ms | status=${status} | error="${providerMsg}"`);
             const wrapped = new Error(`DeepSeek API failed (${statusText}): ${providerMsg}`);
             wrapped.status = status;
             throw wrapped;

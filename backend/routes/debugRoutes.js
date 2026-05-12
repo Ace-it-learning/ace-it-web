@@ -70,109 +70,39 @@ router.get('/check-user/:email', async (req, res) => {
     }
 });
 
-// GET /api/debug/test-ai (Vertex AI 2026 Architecture Test)
+// GET /api/debug/test-ai (DeepSeek DEV Architecture Test)
 router.get('/test-ai', async (req, res) => {
     try {
-        console.log('[DEBUG] Testing Vertex AI 2026 Architecture...');
+        console.log('[DEBUG] Testing DeepSeek DEV Architecture...');
 
         // Ensure AI service is initialized
         await GenerativeAIService.init();
 
-        // Test with a simple prompt
-        const model = GenerativeAIService.getModel({ model: 'gemini-1.5-flash' });
-        const result = await model.generateContent('Say "Hello from Ace‑It Vertex AI 2026 Test"');
-        const response = await result.response;
-        const text = response.text();
+        // Test with a simple prompt via the unified generateContent API
+        const result = await GenerativeAIService.generateContent('Say "Hello from Ace‑It DeepSeek DEV Test"');
+        const text = result.response.text();
 
         res.json({
             success: true,
-            status: 'Vertex AI operational',
-            platform: GenerativeAIService.isVertex ? 'vertex' : 'ai-studio',
-            region: GenerativeAIService.currentRegion,
-            model: 'gemini-1.5-flash',
+            status: 'DeepSeek operational',
+            platform: GenerativeAIService.getActiveProvider(),
+            model: result.usedModel,
             response: text,
             environment: {
-                GOOGLE_CLOUD_PROJECT: process.env.GOOGLE_CLOUD_PROJECT || 'missing',
-                K_SERVICE: process.env.K_SERVICE || 'not-cloud-run',
-                VERTEX_LOCATION: process.env.VERTEX_LOCATION || 'not-set',
-                USE_AI_STUDIO_IN_PROD: process.env.USE_AI_STUDIO_IN_PROD || 'false'
+                NODE_ENV: process.env.NODE_ENV || 'development',
+                AI_PROVIDER: process.env.AI_PROVIDER || 'not-set'
             }
         });
     } catch (error) {
-        console.error('[DEBUG] Vertex AI Test Failed:', error);
+        console.error('[DEBUG] DeepSeek Test Failed:', error);
         res.status(500).json({
             success: false,
             error: error.message,
             stack: process.env.NODE_ENV === 'production' ? undefined : error.stack,
             environment: {
-                GOOGLE_CLOUD_PROJECT: process.env.GOOGLE_CLOUD_PROJECT || 'missing',
-                K_SERVICE: process.env.K_SERVICE || 'not-cloud-run',
-                VERTEX_LOCATION: process.env.VERTEX_LOCATION || 'not-set',
-                USE_AI_STUDIO_IN_PROD: process.env.USE_AI_STUDIO_IN_PROD || 'false'
+                NODE_ENV: process.env.NODE_ENV || 'development',
+                AI_PROVIDER: process.env.AI_PROVIDER || 'not-set'
             }
-        });
-    }
-});
-
-// POST /api/debug/test-ai-advanced (Direct Vertex AI with explicit credentials)
-router.post('/test-ai-advanced', async (req, res) => {
-    // [2026] DEV HARDENING: Block direct Vertex AI tests in Dev
-    if (process.env.NODE_ENV === 'development' && process.env.I_KNOW_THIS_COSTS_MONEY !== 'true') {
-        return res.status(403).json({ 
-            error: "ENDPOINT BLOCKED IN DEV", 
-            message: "Direct Vertex AI testing is blocked to prevent accidental billing. Use AI Studio instead." 
-        });
-    }
-
-    try {
-        console.log('[DEBUG] Testing Vertex AI with explicit credentials...');
-
-        // Load service account credentials
-        const path = require('path');
-        const fs = require('fs');
-        const credentialsPath = path.join(__dirname, '../config/serviceAccountKey.json');
-
-        if (!fs.existsSync(credentialsPath)) {
-            return res.status(500).json({
-                success: false,
-                error: 'Service Account file not found',
-                path: credentialsPath
-            });
-        }
-
-        const credentials = require(credentialsPath);
-        const { VertexAI } = require('@google-cloud/vertexai');
-
-        // Initialize VertexAI with explicit credentials
-        const vertexai = new VertexAI({
-            project: 'ace-it-production-1e0a4',
-            location: 'asia-east1',
-            googleAuthOptions: { credentials }
-        });
-
-        // Try gemini-1.5-flash
-        const model = vertexai.getGenerativeModel({
-            model: 'gemini-1.5-flash',
-            generationConfig: { maxOutputTokens: 50 }
-        });
-
-        const result = await model.generateContent('Say "Hello from explicit credentials test"');
-        const response = await result.response;
-        const text = response.text();
-
-        res.json({
-            success: true,
-            message: 'Vertex AI with explicit credentials works',
-            serviceAccount: credentials.client_email,
-            region: 'asia-east1',
-            response: text
-        });
-    } catch (error) {
-        console.error('[DEBUG] Explicit Credentials Test Failed:', error);
-        res.status(500).json({
-            success: false,
-            error: error.message,
-            serviceAccount: error.client_email || 'unknown'
         });
     }
 });

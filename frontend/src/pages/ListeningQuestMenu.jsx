@@ -51,8 +51,8 @@ const ListeningQuestMenu = () => {
     useEffect(() => {
         const fetchMissions = async () => {
             try {
-                // Use relative path to leverage Vite proxy in dev
-                const res = await fetch('/api/lab/listening');
+                const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+                const res = await fetch(`${API_URL}/api/lab/listening`);
                 if (res.ok) {
                     const data = await res.json();
                     setMissions(data);

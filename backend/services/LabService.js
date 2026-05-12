@@ -5,6 +5,7 @@ const crypto = require('crypto'); // For deterministic hashing
 const { MICRO_SKILLS } = require('../constants/microSkills');
 const QuestionBankStore = require('./QuestionBankStore');
 const CosmosStore = require('./CosmosStore');
+const UserProfileService = require('./UserProfileService');
 
 // Helper: Generate Hash for Deduplication
 const generateQuestionHash = (topic, type, questionText) => {
@@ -526,26 +527,11 @@ class LabService {
 
       LabService.normalizeListeningMissionData(data);
 
-      // If this is a placeholder/factory quest, generate real content now
-      const isPlaceholder = data.factory_template && (
-          (data.sprint_data?.audio_transcript || '').includes("placeholder") || 
-          (data.sprint_data?.tasks || []).length <= 1
-      );
-
-      if (isPlaceholder) {
-        console.log(`[LabService] Triggering dynamic generation for mission: ${data.title}`);
-        try {
-          const generated = await this.generateSimulatorScenario(data.title, data.description);
-          await QuestionBankStore.upsertById(id, {
-            sprint_data: generated.sprint_data,
-            integrated_data: generated.integrated_data,
-            factory_template: false // Mark as generated
-          }, { merge: true });
-          data = { ...data, ...generated };
-        } catch (genErr) {
-          console.error("[LabService] Content generation failed:", genErr);
-          // Fallback to data as is (placeholders)
-        }
+      // --- LEGACY PLACEHOLDER GENERATION REMOVED ---
+      // Real-time AI generation for placeholder quests has been disabled to prevent hallucinations.
+      // All listening missions must be fully pre-generated in the Quest Factory before release.
+      if (data.factory_template) {
+        console.warn(`[LabService] Placeholder quest ${id} is not fully generated. Returning as-is.`);
       }
 
       return { id, ...data };
@@ -684,6 +670,30 @@ class LabService {
   static async generateLesson(params) {
     console.log("[LabService] generateLesson START", JSON.stringify(params));
     let { topic, focus, level, uid, targetCount, themeOverride, mcqRatio, forceHighQuality } = params;
+
+    // --- NORMALIZE TOPIC & LEVEL ---
+    // The frontend may send display names (e.g. "Inference / 推論能力") or shorthand labels.
+    // We must resolve them to canonical IDs before any lookup.
+    const normalizedTopicId = UserProfileService.normalizeSkillId(topic, 'english', { allowRawFallback: true });
+    if (normalizedTopicId && normalizedTopicId !== topic) {
+      console.log(`[LabService] Normalized topic "${topic}" -> "${normalizedTopicId}"`);
+      topic = normalizedTopicId;
+    }
+
+    // Normalize level aliases (e.g. "intermediate" -> "4", "easy" -> "3")
+    const levelAliases = {
+      'easy': '3', 'beginner': '3', 'basic': '3',
+      'intermediate': '4', 'medium': '4', 'moderate': '4',
+      'hard': '5', 'advanced': '5', 'difficult': '5',
+      'elite': '7', 'master': '7', 'expert': '7'
+    };
+    const normalizedLevel = levelAliases[String(level).toLowerCase().trim()];
+    if (normalizedLevel && normalizedLevel !== level) {
+      console.log(`[LabService] Normalized level "${level}" -> "${normalizedLevel}"`);
+      level = normalizedLevel;
+    }
+    // --------------------------------
+
     const isWeeklyQuest = params.isWeeklyQuest || false;
     const skillsKey = (topic || '').toLowerCase();
     const paperType = (params.paperType || '').toLowerCase();
@@ -933,18 +943,15 @@ class LabService {
     let lessonContent = {};
     const missingCount = TARGET_COUNT - mixedQuestions.length;
 
-    // For READING: If we are missing questions, and we have a selectedPassage, we technically COULD generate more for that passage.
-    // But for now, if we don't have enough, let's just generate a FRESH set (10) unless we have a decent amount (e.g. 5+).
-    // Refined logic:
     // We need generation IF we have 0 questions OR if we are under our TARGET_COUNT (Healthy state)
-    const isBypassUser = params.isFactory || uid === 'FACTORY_ADMIN' || uid === 'fungtam@gmail.com';
     let needsGeneration = mixedQuestions.length < TARGET_COUNT || isWeeklyQuest;
 
-    // --- INDUSTRIAL LOCKDOWN: Never generate in real-time for Reading ---
-    // Reading MUST come from the high-fidelity premium library.
-    if (isReadingTopic && needsGeneration) {
-      console.log(`[LabService] STRICT LOCKDOWN: Reading Bank is empty for ${resolvedTopic}. Real-time generation is disabled.`);
-      throw new Error(`QUEST_BANK_EMPTY: No approved Reading quests found for ${resolvedTopic}.`);
+    // --- UNIVERSAL LOCKDOWN: Never generate in real-time for any Quest ---
+    // All Quests MUST come from the pre-defined premium library (question bank, weekly quests, grammar labs).
+    // Real-time AI generation is legacy code and has been removed to prevent hallucinations.
+    if (needsGeneration && !params.isFactory) {
+      console.log(`[LabService] UNIVERSAL LOCKDOWN: Quest bank is empty for ${resolvedTopic} (${paperType || 'unknown'}). Real-time generation is disabled.`);
+      throw new Error(`QUEST_BANK_EMPTY: No approved quests found for ${resolvedTopic}.`);
     }
 
     if (!needsGeneration && mixedQuestions.length > 0) {
@@ -954,11 +961,9 @@ class LabService {
       if (isReadingTopic && selectedPassage) {
         lessonContent.reading_passage = selectedPassage;
       }
-    } else {
-      if (isReadingTopic) {
-        throw new Error(`QUEST_BANK_EMPTY: Failed to fetch clustered Reading session for ${resolvedTopic}.`);
-      }
-      console.log(`[LabService] Generating FRESH session.`);
+    } else if (params.isFactory) {
+      // --- FACTORY MODE: Real-time generation is ONLY allowed for Quest Factory admins ---
+      console.log(`[LabService] FACTORY MODE: Generating fresh session for ${resolvedTopic}.`);
 
       // Build Contextual Prompt
       const paperType = params.paperType?.toLowerCase() || (skill ? skill.paper : (topic?.toLowerCase().includes('speaking') ? 'speaking' : topic?.toLowerCase().includes('listening') ? 'listening' : topic?.toLowerCase().includes('writing') ? 'writing' : 'reading'));
@@ -1298,12 +1303,6 @@ STRICT RULE: Do NOT use the same hooks, starting sentences, or specific scenario
         // Key Normalization
         data.interactive_tasks = data.interactive_tasks || data.tasks || data.interactiveTasks || [];
 
-        // --- GRAMMAR V2 BYPASS ---
-        if (topic?.startsWith('grammar_')) {
-          console.log("[LabService] Grammar V2 detected. Bypassing question_bank persistence.");
-          return this.normalizeLessonContent(data);
-        }
-
         // Deduplicate & Save
         if (data.interactive_tasks && Array.isArray(data.interactive_tasks)) {
           console.log(`[LabService] Processing ${data.interactive_tasks.length} tasks.`);
@@ -1550,29 +1549,9 @@ STRICT RULE: Do NOT use the same hooks, starting sentences, or specific scenario
       console.warn(`[LabService] Failed to fetch specialized landing content for ${topic}:`, err);
     }
 
-    // 2. Fallback to AI Generation
-    const isReadingTopic = (topic || '').toLowerCase().includes('reading') || (topic || '').toLowerCase().includes('comprehension');
-    if (isReadingTopic) {
-      console.warn(`[LabService] Briefing missing for Reading topic: ${topic}. Generation blocked.`);
-      throw new Error(`EXPLANATION_MISSING: No specialized briefing found for Reading topic '${topic}'.`);
-    }
-
-    const prompt = `Generate a JSON object with 'conceptual_explanation', 'key_points', 'examples', 'success_feedback', 'suggested_next_steps' for the topic '${resolvedTopic}' at '${levelName}'. NO interactive_tasks needed.
-    
-    IMPORTANT: Provide 3 distinct 'examples' in the array. Each example must have 'text' (the example passage/sentence) and 'explanation' (analysis). Do NOT use placeholders.
-    CRITICAL: For 'key_points', use standard sentence case (e.g. "This is a point.") - NEVER CAPITALIZE EVERY WORD.`;
-    const result = await GenerativeAIService.generateContent(prompt, {
-      generationConfig: { responseMimeType: "application/json" }
-    });
-
-    if (result.response && result.response.usageMetadata) {
-      const TokenService = require('./TokenService');
-      TokenService.logUsage(uid || 'system', 'lab_explanation_only', result.response.usageMetadata);
-    }
-
-    let data = JSON.parse(cleanJsonResponse(result.response.text()));
-    if (Array.isArray(data)) data = data[0];
-    return data;
+    // 2. No landing content found — block AI generation universally
+    console.warn(`[LabService] Briefing missing for topic: ${topic}. Real-time explanation generation is disabled.`);
+    throw new Error(`EXPLANATION_MISSING: No learning guide found for topic '${topic}'.`);
   }
 
   static async generateCheatAnswers(tasks, targetDseLevel, passage = null) {

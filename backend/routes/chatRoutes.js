@@ -377,6 +377,7 @@ Important:
                         completed_topics: pContext?.completedTopics?.join(', ') || "None",
                         available_quests: (pContext?.tutorLeanContext?.availableQuestTitles || pContext?.availableQuests || []).join(', ') || "None",
                         weakest_skills: (pContext?.tutorLeanContext?.microSkills?.weakest || []).map((s) => s.name || s.skillId).join(', ') || "None",
+                        unassessed_skills: (pContext?.tutorLeanContext?.microSkills?.unassessed || []).map((s) => s.name || s.skillId).join(', ') || "None",
                         diagnostic_completed: pContext?.hasDiagnostic || false
                     };
                     if (agentId === 'math') {
@@ -587,10 +588,14 @@ ${clipped}`;
 
         if (uid !== 'guest') {
             console.log(`[chatRoutes] Auto-saving messages to Firestore for UID: ${uid}`);
-            UserProfileService.saveChatMessage(uid, agentId, {
-                role: 'user',
-                content: originalMessage || (audio ? "[STT: Voice Message]" : "")
-            }).catch(err => console.error("[chatRoutes] Failed to auto-save user message:", err));
+            // Skip saving ephemeral system triggers to chat history
+            const isSystemTrigger = originalMessage && originalMessage.includes('[SYSTEM:');
+            if (!isSystemTrigger) {
+                UserProfileService.saveChatMessage(uid, agentId, {
+                    role: 'user',
+                    content: originalMessage || (audio ? "[STT: Voice Message]" : "")
+                }).catch(err => console.error("[chatRoutes] Failed to auto-save user message:", err));
+            }
 
             UserProfileService.saveChatMessage(uid, agentId, {
                 role: 'model',
@@ -648,10 +653,11 @@ router.get('/history/:agentId', requireResolvedUid, async (req, res) => {
         console.log(`[chatRoutes] Fetching history for UID: ${uid}, Agent: ${agentId}`);
         const history = await UserProfileService.getChatHistory(uid, agentId);
 
-        // Final filter to ensure no internal internal tags leak to UI
+        // Final filter to ensure no internal tags leak to UI
         const filteredHistory = history.filter(m =>
             m.content &&
-            !m.content.includes('[trigger_greeting]')
+            !m.content.includes('[trigger_greeting]') &&
+            !m.content.includes('[SYSTEM:')
         );
 
         console.log(`[chatRoutes] Returning ${filteredHistory.length} messages for ${uid} / ${agentId}`);

@@ -11,7 +11,7 @@ const DISPOSABLE_DOMAINS = [
 ];
 
 const AuthForm = ({ onAuthSuccess }) => {
-    const { loginWithGoogle, signupWithEmail, loginWithEmail, verifyEmail, resetPassword, authError } = useAuth();
+    const { loginWithGoogle, signupWithEmail, loginWithEmail, verifyEmail, resetPassword, authError, loading: authBusy } = useAuth();
     const [mode, setMode] = useState('signup'); // 'login', 'signup', or 'forgot'
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -235,6 +235,33 @@ const AuthForm = ({ onAuthSuccess }) => {
                 </div>
             )}
 
+            {USE_ENTRA && (
+                <div className="mb-4 rounded-xl border border-amber-200 bg-amber-50/80 p-3 text-[11px] leading-relaxed text-amber-950 dark:border-amber-900/50 dark:bg-amber-950/30 dark:text-amber-100">
+                    <p className="font-bold text-amber-900 dark:text-amber-50">Why you always leave this page</p>
+                    <ul className="mt-2 list-disc space-y-2 pl-4 text-amber-900/90 dark:text-amber-100/90">
+                        <li>
+                            <strong>Ace It cannot finish sign-up in this box.</strong> With Microsoft Entra, identity is
+                            handled on <strong>their secure pages</strong> — that <em>is</em> the product design (like
+                            “Sign in with …” on other sites). The next screen is expected, not a bug.
+                        </li>
+                        <li>
+                            The email you type is only a <strong>hint</strong>. Password is <strong>not</strong> collected
+                            here; Entra may use a one-time code or password <strong>on their screens</strong>, depending
+                            on your tenant settings.
+                        </li>
+                        <li>
+                            The orange button says “Microsoft” because <strong>Microsoft Entra orchestrates</strong> sign-up.
+                            If you still see <strong>Google</strong>, your Azure <strong>user flow</strong> includes Google
+                            as a sign-in method — Entra may show Google even after you typed{' '}
+                            <strong>{email?.trim() || 'an email'}</strong>. For @outlook / @hotmail you normally expect a
+                            Microsoft account screen; if Google appears first, try <strong>使用其他帳戶</strong> / “Use another
+                            account”, use Incognito, or ask your admin to put <strong>Email (local)</strong> before Google in
+                            the user flow.
+                        </li>
+                    </ul>
+                </div>
+            )}
+
             <form onSubmit={handleSubmit} className="space-y-4" autoComplete="off">
                 <div>
                     <label className="text-xs font-bold text-gray-500 uppercase tracking-wider block mb-1">Email</label>
@@ -248,44 +275,66 @@ const AuthForm = ({ onAuthSuccess }) => {
                         className="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none text-sm dark:bg-gray-900 dark:border-gray-700 dark:text-white"
                         placeholder="your@email.com"
                     />
+                    {USE_ENTRA && (
+                        <p className="mt-1 text-[10px] text-slate-500">
+                            Used as a sign-in hint to Microsoft (your email in the box above).
+                        </p>
+                    )}
                 </div>
-                <div>
-                    <div className="flex justify-between items-center mb-1">
-                        <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">Password</label>
-                        {mode === 'login' && (
-                            <button
-                                type="button"
-                                onClick={() => { setMode('forgot'); setMessage(null); }}
-                                className="text-[10px] font-bold text-primary hover:underline"
-                            >
-                                Forgot Password?
-                            </button>
-                        )}
+                {!USE_ENTRA && (
+                    <div>
+                        <div className="flex justify-between items-center mb-1">
+                            <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">Password</label>
+                            {mode === 'login' && (
+                                <button
+                                    type="button"
+                                    onClick={() => { setMode('forgot'); setMessage(null); }}
+                                    className="text-[10px] font-bold text-primary hover:underline"
+                                >
+                                    Forgot Password?
+                                </button>
+                            )}
+                        </div>
+                        <input
+                            type="password"
+                            name="ace_it_password"
+                            autoComplete="new-password"
+                            required
+                            minLength={6}
+                            value={password}
+                            onChange={e => setPassword(e.target.value)}
+                            className="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none text-sm dark:bg-gray-900 dark:border-gray-700 dark:text-white"
+                            placeholder="Enter your password"
+                        />
                     </div>
-                    <input
-                        type="password"
-                        name="ace_it_password"
-                        autoComplete="new-password"
-                        required
-                        minLength={6}
-                        value={password}
-                        onChange={e => setPassword(e.target.value)}
-                        className="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none text-sm dark:bg-gray-900 dark:border-gray-700 dark:text-white"
-                        placeholder="Enter your password"
-                    />
-                </div>
+                )}
+                {USE_ENTRA && mode === 'login' && (
+                    <div className="flex justify-end">
+                        <button
+                            type="button"
+                            onClick={() => { setMode('forgot'); setMessage(null); }}
+                            className="text-[10px] font-bold text-primary hover:underline"
+                        >
+                            Forgot Password?
+                        </button>
+                    </div>
+                )}
 
                 <button
                     type="submit"
                     disabled={loading}
                     className="w-full py-3 bg-primary hover:bg-primary/90 text-white rounded-xl font-bold text-sm transition-all shadow-lg hover:shadow-primary/20 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                    {loading ? "Redirecting..." : (mode === 'signup' ? "Continue with Email" : "Continue with Email")}
+                    {loading
+                        ? 'Redirecting...'
+                        : (USE_ENTRA
+                            ? (mode === 'signup' ? 'Continue to secure sign-up (Entra)' : 'Continue to secure sign-in (Entra)')
+                            : (mode === 'signup' ? 'Continue with Email' : 'Continue with Email'))}
                 </button>
 
                 {USE_ENTRA && (
                     <p className="text-[11px] text-slate-500 text-center">
-                        You will continue on AceIt secure sign-in powered by Microsoft Entra.
+                        Powered by Microsoft Entra External ID — you will leave this page to finish sign-up or sign-in.
                     </p>
                 )}
             </form>
@@ -298,7 +347,8 @@ const AuthForm = ({ onAuthSuccess }) => {
             <button
                 onClick={handleGoogleLogin}
                 type="button"
-                className="w-full py-3 bg-white border border-gray-200 hover:bg-gray-50 text-gray-700 rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2 dark:bg-gray-700 dark:border-gray-600 dark:text-white mb-4"
+                disabled={loading || authBusy}
+                className="w-full py-3 bg-white border border-gray-200 hover:bg-gray-50 text-gray-700 rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2 dark:bg-gray-700 dark:border-gray-600 dark:text-white mb-4 disabled:opacity-50 disabled:cursor-not-allowed"
             >
                 <img src="https://www.google.com/favicon.ico" alt="G" className="w-4 h-4" />
                 Continue with Google

@@ -10,9 +10,12 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 import ConfirmationModal from './ConfirmationModal';
 import Logo from './Logo';
+import { ensureEntraMsalClient } from '../entraMsalSingleton';
+
+const USE_ENTRA = import.meta.env.VITE_USE_ENTRA === 'true';
 
 const Header = () => {
-    const { user, profile, loginWithGoogle, logout } = useAuth();
+    const { user, profile, logout, beginSignInFlow, retryEntraSession } = useAuth();
     const { isFocusMode, setIsFocusMode } = useAvatar();
     const { t, language, toggleLanguage } = useLanguage();
     const { isPinned, setIsPinned, isVisible, setIsVisible } = useHeader();
@@ -70,8 +73,36 @@ const Header = () => {
         }
     }, [isPinned, setIsVisible]);
 
-    const handleLogin = () => {
-        navigate('/login');
+    const handleLogin = async () => {
+        try {
+            const started = await beginSignInFlow();
+            if (!started) navigate('/login');
+        } catch (e) {
+            console.error('[Header] Sign-in start failed:', e);
+            navigate('/login');
+        }
+    };
+
+    const handleEnterClassroom = async () => {
+        if (user) {
+            navigate('/dashboard');
+            return;
+        }
+        if (USE_ENTRA) {
+            try {
+                const client = await ensureEntraMsalClient();
+                if (client.getAllAccounts().length > 0) {
+                    const r = await retryEntraSession();
+                    if (r?.ok) {
+                        navigate('/dashboard');
+                        return;
+                    }
+                }
+            } catch (e) {
+                console.error('[Header] Enter Classroom: could not reuse Microsoft session', e);
+            }
+        }
+        await handleLogin();
     };
 
     if (isFocusMode) return null;
@@ -137,7 +168,7 @@ const Header = () => {
                     </button>
 
                     <button
-                        onClick={() => navigate('/dashboard')}
+                        onClick={handleEnterClassroom}
                         className="flex items-center gap-2 px-6 py-2 rounded-full bg-[#F1783B] text-white shadow-lg shadow-[#F1783B]/20 hover:bg-[#d96a32] transition-all transform hover:-translate-y-0.5"
                     >
                         <School className="w-4 h-4" />
@@ -157,7 +188,8 @@ const Header = () => {
                     <div className="flex items-center gap-4">
                         {!user ? (
                             <button
-                                onClick={() => navigate('/login')}
+                                type="button"
+                                onClick={handleLogin}
                                 className="flex items-center gap-2 px-6 py-2.5 rounded-full bg-white border border-[#F1783B]/20 text-[#F1783B] text-sm font-bold hover:bg-orange-50 transition-all shadow-sm active:scale-95"
                             >
                                 <LogIn className="w-4 h-4 text-[#F1783B]" /> {t('nav.login')}
@@ -294,7 +326,7 @@ const Header = () => {
                             ref={mobileMenuRef}
                         >
                             <button
-                                onClick={() => { navigate('/dashboard'); setIsMobileMenuOpen(false); }}
+                                onClick={() => { setIsMobileMenuOpen(false); handleEnterClassroom(); }}
                                 className="flex items-center gap-3 p-4 rounded-2xl bg-orange-50 text-[#F1783B] font-bold shadow-sm"
                             >
                                 <School size={20} />

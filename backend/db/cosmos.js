@@ -2,6 +2,7 @@ const { CosmosClient } = require("@azure/cosmos");
 
 let client = null;
 let database = null;
+const containerCache = new Map();
 
 function getClient() {
     if (client) return client;
@@ -24,11 +25,16 @@ async function getDatabase() {
 }
 
 async function getContainer(id, partitionKey = "/pk") {
+    const cacheKey = `${id}:${partitionKey}`;
+    if (containerCache.has(cacheKey)) {
+        return containerCache.get(cacheKey);
+    }
     const db = await getDatabase();
     const { container } = await db.containers.createIfNotExists({
         id,
         partitionKey: { paths: [partitionKey] }
     });
+    containerCache.set(cacheKey, container);
     return container;
 }
 

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { useLanguage } from '../context/LanguageContext';
@@ -30,6 +30,58 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { load } from '@fingerprintjs/fingerprintjs';
 import { cn } from '../utils/cn';
 import AlertModal from '../components/shared/AlertModal';
+
+const USE_ENTRA = import.meta.env.VITE_USE_ENTRA === 'true';
+
+function isEntraGoogleUser(user) {
+    if (!USE_ENTRA || user?.authProvider !== 'entra') return false;
+    const idp = String(user?.entraIdp || '').toLowerCase();
+    if (!idp) return false;
+    return idp.includes('google');
+}
+
+/**
+ * Compute the subscription expiry date for display.
+ * - Uses profile.subscription_expiry if available.
+ * - Otherwise computes from subscription_start_date (or now) + 1 month.
+ * - Returns a Date object in local time (backend stores HK timezone dates).
+ */
+function getSubscriptionExpiryDate(profile) {
+    if (!profile) return null;
+
+    // Use explicit expiry if present
+    if (profile.subscription_expiry) {
+        const raw = profile.subscription_expiry;
+        if (raw.toDate) return raw.toDate();
+        return new Date(raw);
+    }
+
+    // For paid tiers without an explicit expiry, compute 1 month from start date
+    const tier = profile.subscription_tier;
+    if (tier === 'pro' || tier === 'premium') {
+        const startRaw = profile.subscription_start_date;
+        const start = startRaw ? (startRaw.toDate ? startRaw.toDate() : new Date(startRaw)) : new Date();
+        // Add 1 month
+        const expiry = new Date(start);
+        expiry.setMonth(expiry.getMonth() + 1);
+        // Set to end of day (23:59:59.999) in HK timezone logic is handled by storing the date;
+        // for display we just show the date portion.
+        return expiry;
+    }
+
+    return null;
+}
+
+/** Format a date for display in Hong Kong locale. */
+function formatHKDate(date) {
+    if (!date || isNaN(date.getTime())) return '—';
+    return date.toLocaleDateString('en-GB', {
+        day: 'numeric',
+        month: 'short',
+        year: 'numeric',
+        timeZone: 'Asia/Hong_Kong'
+    });
+}
 
 const SchoolAutocomplete = ({ schools, value, onChange, isLoading }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -139,17 +191,17 @@ const SchoolAutocomplete = ({ schools, value, onChange, isLoading }) => {
 };
 
 const AccountPage = () => {
-    const { user, profile, refreshProfile, changePassword, resetPassword, setPasswordForSocialUser, cancelSubscription, deleteUserAccount, logout } = useAuth();
+    const { user, profile, refreshProfile, changePassword, resetPassword, setPasswordForSocialUser, deleteUserAccount, logout } = useAuth();
     const { t } = useLanguage();
     const [searchParams, setSearchParams] = useSearchParams();
     const [activeTab, setActiveTab] = useState(searchParams.get('tab') || 'general');
 
     useEffect(() => {
         const tab = searchParams.get('tab');
-        if (tab && ['general', 'security', 'subscription'].includes(tab)) {
+        if (tab && ['general', 'parental', 'security', 'subscription'].includes(tab) && tab !== activeTab) {
             setActiveTab(tab);
         }
-    }, [searchParams]);
+    }, [searchParams, activeTab]);
 
     const handleTabChange = (tabId) => {
         setActiveTab(tabId);
@@ -187,6 +239,14 @@ const AccountPage = () => {
         confirm: ''
     });
 
+    // Parental Settings Form State (local, not auto-saved)
+    const [parentalSettings, setParentalSettings] = useState({
+        parent_email: '',
+        parent_report_enabled: false,
+        send_copy_to_self: true
+    });
+    const [hasParentalChanges, setHasParentalChanges] = useState(false);
+
     useEffect(() => {
         if (profile) {
             setProfileData({
@@ -200,6 +260,12 @@ const AccountPage = () => {
                 dreamSubject: profile.dreamSubject || '',
                 electives: profile.electives || []
             });
+            setParentalSettings({
+                parent_email: profile.parent_email || '',
+                parent_report_enabled: profile.parent_report_enabled ?? false,
+                send_copy_to_self: profile.send_copy_to_self ?? true
+            });
+            setHasParentalChanges(false);
         }
     }, [profile]);
 
@@ -252,18 +318,25 @@ const AccountPage = () => {
         }
     };
 
-    const handleSaveParentSettings = async (updates) => {
+    const handleSaveParentSettings = async () => {
         if (!user?.uid) return;
         setIsSaving(true);
         try {
             const res = await fetch(`${API_URL}/api/user/parent-settings`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ uid: user.uid, ...updates })
+                body: JSON.stringify({
+                    uid: user.uid,
+                    parent_email: parentalSettings.parent_email,
+                    parent_report_enabled: parentalSettings.parent_report_enabled,
+                    send_copy_to_self: parentalSettings.send_copy_to_self
+                })
             });
 
             if (res.ok) {
                 refreshProfile();
+                setHasParentalChanges(false);
+                setMessage({ type: 'success', text: 'Parental settings saved successfully!' });
             } else {
                 const err = await res.json();
                 setMessage({ type: 'error', text: err.error || "Failed to save settings" });
@@ -337,7 +410,7 @@ const AccountPage = () => {
         return <Smartphone size={18} />;
     };
 
-    const registerCurrentDevice = async () => {
+    const registerCurrentDevice = useCallback(async (overrides) => {
         if (!user?.uid) return;
         
         try {
@@ -359,7 +432,7 @@ const AccountPage = () => {
             else if (/macintosh|mac os/i.test(ua)) os = "MacOS";
             else if (/linux/i.test(ua)) os = "Linux";
 
-            const metadata = {
+            const metadata = overrides || {
                 name: `${browser} on ${os}`,
                 browser,
                 os
@@ -375,21 +448,54 @@ const AccountPage = () => {
                 })
             });
 
-            refreshProfile();
+            // Do NOT call refreshProfile() here — it sets isProfileLoading in AuthContext,
+            // which causes ProtectedRoute to unmount/remount this page, creating an infinite loop.
+            // The device list will update on the next natural profile refresh.
         } catch (err) {
             console.error("[Device] Auto-registration error:", err);
         }
-    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [user?.uid, API_URL]);
 
     // Auto-detect and Register Device
+    const hasRegisteredRef = useRef(false);
     useEffect(() => {
-        if (user?.uid && activeTab === 'subscription') {
-            registerCurrentDevice();
+        let cancelled = false;
+        if (user?.uid && activeTab === 'subscription' && !hasRegisteredRef.current) {
+            hasRegisteredRef.current = true;
+            registerCurrentDevice().then(() => {
+                if (cancelled) return;
+            });
         }
+        return () => { cancelled = true; };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [user?.uid, activeTab]);
 
     const handlePasswordChange = async (e) => {
         e.preventDefault();
+        if (USE_ENTRA) {
+            // Keep the same UI, but Entra password changes happen on Microsoft-hosted pages.
+            setIsSaving(true);
+            setMessage(null);
+            try {
+                if (isEntraGoogleUser(user)) {
+                    setMessage({
+                        type: 'error',
+                        text: 'You signed in with Google. To change your Google password, use your Google account security settings.'
+                    });
+                    return;
+                }
+                setMessage({ type: 'success', text: 'Opening Microsoft sign-in to update your password…' });
+                await changePassword(passwords.current, passwords.new);
+            } catch (err) {
+                console.error(err);
+                setMessage({ type: 'error', text: err.message || 'Could not start Microsoft sign-in.' });
+            } finally {
+                setIsSaving(false);
+            }
+            return;
+        }
+
         if (passwords.new !== passwords.confirm) {
             setMessage({ type: 'error', text: "Passwords do not match!" });
             return;
@@ -398,8 +504,9 @@ const AccountPage = () => {
         setIsSaving(true);
         setMessage(null);
         try {
-            const isSocial = user.providerData.some(p => p.providerId === 'google.com');
-            const hasPassword = user.providerData.some(p => p.providerId === 'password');
+            const providers = Array.isArray(user?.providerData) ? user.providerData : [];
+            const isSocial = providers.some(p => p.providerId === 'google.com');
+            const hasPassword = providers.some(p => p.providerId === 'password');
 
             if (isSocial && !hasPassword) {
                 await setPasswordForSocialUser(passwords.new);
@@ -423,11 +530,25 @@ const AccountPage = () => {
         setIsSaving(true);
         setMessage(null);
         try {
+            if (USE_ENTRA) {
+                if (isEntraGoogleUser(user)) {
+                    setMessage({
+                        type: 'error',
+                        text: 'You signed in with Google. Password reset is managed in your Google account security settings.'
+                    });
+                    return;
+                }
+                setMessage({ type: 'success', text: 'Opening Microsoft sign-in to reset your password…' });
+                await resetPassword(user.email);
+                return;
+            }
+
             await resetPassword(user.email);
             setMessage({ type: 'success', text: "Password reset email sent! Please check your inbox." });
         } catch (err) {
             console.error(err);
-            setMessage({ type: 'error', text: "Failed to send reset email. " + err.message });
+            const prefix = 'Failed to send reset email. ';
+            setMessage({ type: 'error', text: prefix + err.message });
         } finally {
             setIsSaving(false);
         }
@@ -437,18 +558,46 @@ const AccountPage = () => {
         setModal({
             isOpen: true,
             type: 'info',
-            message: "Wait! If you cancel your subscription, your study history and progress will be permanently removed 7 days after the plan expiry date. Are you sure you want to stop auto-renewing?",
+            message:
+                "You will be redirected to Stripe's secure billing page where you can cancel your subscription, update your payment method, or view invoices. Continue?",
             onConfirm: async () => {
-                try {
-                    await cancelSubscription();
-                    setModal({ isOpen: false });
-                    setMessage({ type: 'success', text: "Auto-renew disabled. Benefits active until expiry." });
-                } catch (err) {
-                    setMessage({ type: 'error', text: err.message });
-                }
+                await openBillingPortal();
             }
         });
     };
+
+    const openBillingPortal = async () => {
+        if (!user?.uid) {
+            setMessage({ type: 'error', text: 'Please sign in first.' });
+            return;
+        }
+        setIsSaving(true);
+        setMessage(null);
+        try {
+            const token = await user.getIdToken?.();
+            const response = await fetch(`${API_URL}/api/payment/create-customer-portal-session`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    ...(token ? { Authorization: `Bearer ${token}` } : {})
+                },
+                body: JSON.stringify({ uid: user.uid })
+            });
+            const data = await response.json();
+            if (!response.ok || !data?.url) {
+                setMessage({ type: 'error', text: data?.error || 'Unable to open billing portal.' });
+                return;
+            }
+            window.location.href = data.url;
+        } catch (error) {
+            console.error(error);
+            setMessage({ type: 'error', text: 'Unable to open billing portal.' });
+        } finally {
+            setIsSaving(false);
+        }
+    };
+
+    const handleManageBilling = () => openBillingPortal();
 
     const handleDeleteClick = () => {
         const isPaid = profile?.subscription_tier !== 'free';
@@ -482,12 +631,17 @@ const AccountPage = () => {
 
     const tabs = [
         { id: 'general', label: 'Profile', icon: <User size={18} /> },
-        { id: 'security', label: 'Security', icon: <Shield size={18} /> },
+        { id: 'parental', label: 'Progress Report', icon: <Shield size={18} /> },
+        { id: 'security', label: 'Security', icon: <Lock size={18} /> },
         { id: 'subscription', label: 'Plan', icon: <CreditCard size={18} /> }
     ];
 
-    const isGoogleOnly = user?.providerData.every(p => p.providerId === 'google.com');
-    const hasPassword = user?.providerData.some(p => p.providerId === 'password');
+    const isGoogleOnly = USE_ENTRA
+        ? isEntraGoogleUser(user)
+        : (user?.providerData?.every(p => p.providerId === 'google.com') ?? false);
+    const hasPassword = USE_ENTRA
+        ? !isEntraGoogleUser(user)
+        : (user?.providerData?.some(p => p.providerId === 'password') ?? false);
 
     return (
         <div className="min-h-screen bg-slate-50/50 py-12 px-4 md:px-8">
@@ -745,8 +899,13 @@ const AccountPage = () => {
                                         </button>
                                     </div>
 
+                                </form>
+                            )}
+
+                            {activeTab === 'parental' && (
+                                <div className="space-y-8 animate-in fade-in slide-in-from-bottom-2 duration-500">
                                     {/* Parental Oversight Section */}
-                                    <div className="mt-12 pt-12 border-t border-slate-100 space-y-8">
+                                    <div className="space-y-8">
                                         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
                                             <div className="space-y-1">
                                                 <h2 className="text-xl font-bold text-slate-900 flex items-center gap-2">
@@ -770,10 +929,13 @@ const AccountPage = () => {
                                                 <div className="space-y-2">
                                                     <label className="text-xs font-bold text-slate-400 uppercase tracking-widest px-1">{t('subscription.parent_report_email')}</label>
                                                     <div className="relative">
-                                                        <input 
+                                                        <input
                                                             type="email"
-                                                            defaultValue={profile?.parent_email || ''}
-                                                            onBlur={(e) => handleSaveParentSettings({ parent_email: e.target.value })}
+                                                            value={parentalSettings.parent_email}
+                                                            onChange={(e) => {
+                                                                setParentalSettings(prev => ({ ...prev, parent_email: e.target.value }));
+                                                                setHasParentalChanges(true);
+                                                            }}
                                                             disabled={isSaving}
                                                             placeholder="parent@example.com"
                                                             className={cn(
@@ -794,20 +956,67 @@ const AccountPage = () => {
                                                         <p className="text-sm font-bold text-slate-900">{t('subscription.parent_report_toggle')}</p>
                                                         <p className="text-[10px] text-slate-500 leading-relaxed max-w-[200px]">{t('subscription.parent_report_desc')}</p>
                                                     </div>
-                                                    <button 
+                                                    <button
                                                         type="button"
-                                                        onClick={() => handleSaveParentSettings({ parent_report_enabled: !profile?.parent_report_enabled })}
+                                                        onClick={() => {
+                                                            setParentalSettings(prev => ({ ...prev, parent_report_enabled: !prev.parent_report_enabled }));
+                                                            setHasParentalChanges(true);
+                                                        }}
                                                         disabled={isSaving}
                                                         className={cn(
                                                             "w-12 h-7 rounded-full transition-all relative",
-                                                            profile?.parent_report_enabled ? "bg-purple-600 shadow-inner" : "bg-slate-300",
+                                                            parentalSettings.parent_report_enabled ? "bg-purple-600 shadow-inner" : "bg-slate-300",
                                                             isSaving && "opacity-50 cursor-not-allowed"
                                                         )}
                                                     >
                                                         <div className={cn(
                                                             "w-5 h-5 bg-white rounded-full shadow-md absolute top-1 transition-all",
-                                                            profile?.parent_report_enabled ? "left-6" : "left-1"
+                                                            parentalSettings.parent_report_enabled ? "left-6" : "left-1"
                                                         )} />
+                                                    </button>
+                                                </div>
+
+                                                {/* Send Copy to Self Toggle */}
+                                                <div className="flex items-center justify-between p-6 bg-slate-50 rounded-2xl border border-slate-100">
+                                                    <div className="space-y-1">
+                                                        <p className="text-sm font-bold text-slate-900">Send a copy to me</p>
+                                                        <p className="text-[10px] text-slate-500 leading-relaxed max-w-[200px]">Receive a copy of the weekly progress report at your registered email.</p>
+                                                    </div>
+                                                    <button
+                                                        type="button"
+                                                        onClick={() => {
+                                                            setParentalSettings(prev => ({ ...prev, send_copy_to_self: !prev.send_copy_to_self }));
+                                                            setHasParentalChanges(true);
+                                                        }}
+                                                        disabled={isSaving}
+                                                        className={cn(
+                                                            "w-12 h-7 rounded-full transition-all relative",
+                                                            parentalSettings.send_copy_to_self ? "bg-purple-600 shadow-inner" : "bg-slate-300",
+                                                            isSaving && "opacity-50 cursor-not-allowed"
+                                                        )}
+                                                    >
+                                                        <div className={cn(
+                                                            "w-5 h-5 bg-white rounded-full shadow-md absolute top-1 transition-all",
+                                                            parentalSettings.send_copy_to_self ? "left-6" : "left-1"
+                                                        )} />
+                                                    </button>
+                                                </div>
+
+                                                {/* Save Button */}
+                                                <div className="pt-2">
+                                                    <button
+                                                        type="button"
+                                                        onClick={handleSaveParentSettings}
+                                                        disabled={isSaving || !hasParentalChanges}
+                                                        className={cn(
+                                                            "w-full py-3.5 rounded-2xl font-bold text-sm shadow-lg transition-all active:scale-95 disabled:opacity-50 flex items-center justify-center gap-2",
+                                                            hasParentalChanges
+                                                                ? "bg-purple-600 text-white shadow-purple-200 hover:bg-purple-700"
+                                                                : "bg-slate-100 text-slate-400 cursor-default"
+                                                        )}
+                                                    >
+                                                        {isSaving && <Loader2 size={16} className="animate-spin" />}
+                                                        {hasParentalChanges ? 'Save Changes' : 'No Changes'}
                                                     </button>
                                                 </div>
                                             </div>
@@ -820,10 +1029,10 @@ const AccountPage = () => {
                                                 <p className="text-[10px] text-purple-700 max-w-[200px] mx-auto">
                                                     Verify the connection immediately by sending a sample progress report to the registered email.
                                                 </p>
-                                                <button 
+                                                <button
                                                     type="button"
                                                     onClick={handleSendTestReport}
-                                                    disabled={!profile?.parent_email || isTesting}
+                                                    disabled={!parentalSettings.parent_email || isTesting}
                                                     className="px-6 py-2.5 bg-white text-purple-700 text-xs font-bold rounded-xl shadow-sm hover:shadow-md transition-all active:scale-95 disabled:opacity-50"
                                                 >
                                                     {isTesting ? t('common.sending') || 'Sending...' : t('subscription.test_report')}
@@ -842,7 +1051,7 @@ const AccountPage = () => {
                                                         <p className="text-xs opacity-80">Requires a Premium Plan subscription.</p>
                                                     </div>
                                                 </div>
-                                                <button 
+                                                <button
                                                     type="button"
                                                     onClick={() => window.location.href = '/subscription'}
                                                     className="px-6 py-3 bg-white text-purple-600 rounded-xl font-bold text-sm shadow-lg hover:scale-105 transition-all"
@@ -852,17 +1061,21 @@ const AccountPage = () => {
                                             </div>
                                         )}
                                     </div>
-                                </form>
+                                </div>
                             )}
 
                             {activeTab === 'security' && (
                                 <div className="space-y-12 animate-in fade-in slide-in-from-bottom-2 duration-500">
-                                    
+
                                     {/* Password Section */}
                                     <section className="space-y-6">
                                         <div>
                                             <h3 className="text-lg font-bold text-slate-900">Account Credentials</h3>
-                                            <p className="text-sm text-slate-500">Update your login password or link a new one.</p>
+                                            <p className="text-sm text-slate-500">
+                                                {USE_ENTRA
+                                                    ? 'Your password is managed by Microsoft Entra ID. We will open Microsoft sign-in so you can update or reset it securely.'
+                                                    : 'Update your login password or link a new one.'}
+                                            </p>
                                         </div>
 
                                         <form onSubmit={handlePasswordChange} className="space-y-6 max-w-md">
@@ -876,7 +1089,13 @@ const AccountPage = () => {
                                                         autoComplete="current-password"
                                                         className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-5 py-3.5 text-sm focus:ring-2 focus:ring-primary/20 outline-none"
                                                         placeholder="••••••••"
+                                                        disabled={USE_ENTRA}
                                                     />
+                                                    {USE_ENTRA && (
+                                                        <p className="text-[10px] text-slate-500 px-1">
+                                                            Not used for Microsoft-managed accounts — you will set/confirm your password on Microsoft&apos;s page.
+                                                        </p>
+                                                    )}
                                                 </div>
                                             )}
                                             <div className="space-y-2">
@@ -888,6 +1107,7 @@ const AccountPage = () => {
                                                     autoComplete="new-password"
                                                     className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-5 py-3.5 text-sm focus:ring-2 focus:ring-primary/20 outline-none"
                                                     placeholder="Enter new password"
+                                                    disabled={USE_ENTRA}
                                                 />
                                             </div>
                                             <div className="space-y-2">
@@ -899,15 +1119,18 @@ const AccountPage = () => {
                                                     autoComplete="new-password"
                                                     className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-5 py-3.5 text-sm focus:ring-2 focus:ring-primary/20 outline-none"
                                                     placeholder="Confirm new password"
+                                                    disabled={USE_ENTRA}
                                                 />
                                             </div>
                                             <button 
                                                 type="submit"
-                                                disabled={isSaving || !passwords.new}
+                                                disabled={isSaving || (!USE_ENTRA && !passwords.new)}
                                                 className="w-full py-4 bg-slate-900 text-white rounded-2xl font-bold shadow-lg hover:bg-black transition-all active:scale-95 disabled:opacity-50 flex items-center justify-center gap-2"
                                             >
                                                 {isSaving && <Loader2 size={18} className="animate-spin" />}
-                                                {isGoogleOnly && !hasPassword ? 'Set Password' : 'Update Password'}
+                                                {USE_ENTRA
+                                                    ? 'Continue to Microsoft'
+                                                    : (isGoogleOnly && !hasPassword ? 'Set Password' : 'Update Password')}
                                             </button>
                                         </form>
 
@@ -919,13 +1142,25 @@ const AccountPage = () => {
                                                 </div>
                                                 <div>
                                                     <h4 className="text-sm font-bold text-slate-900">Forgot current password?</h4>
-                                                    <p className="text-[10px] text-slate-500 mt-1">If you don't remember your current password, you can reset it via your registered email.</p>
+                                                    <p className="text-[10px] text-slate-500 mt-1">
+                                                        {USE_ENTRA
+                                                            ? 'We will open Microsoft sign-in so you can reset your password with Microsoft Entra ID.'
+                                                            : "If you don't remember your current password, you can reset it via your registered email."}
+                                                    </p>
                                                     <button 
                                                         onClick={handleResetViaEmail}
                                                         disabled={isSaving}
                                                         className="mt-3 text-xs font-bold text-primary hover:underline flex items-center gap-1"
                                                     >
-                                                        Send Reset Email <ChevronRight size={14} />
+                                                        {USE_ENTRA ? (
+                                                            <>
+                                                                Open Microsoft reset <ChevronRight size={14} />
+                                                            </>
+                                                        ) : (
+                                                            <>
+                                                                Send Reset Email <ChevronRight size={14} />
+                                                            </>
+                                                        )}
                                                     </button>
                                                 </div>
                                             </div>
@@ -990,8 +1225,11 @@ const AccountPage = () => {
                                                         profile?.subscription_status === 'cancelled' ? "bg-red-400" : "bg-green-400 animate-pulse"
                                                     )} />
                                                     <span className="text-sm font-bold">
-                                                        {profile?.subscription_status === 'cancelled' ? 'Ending soon' : 
-                                                         (!profile?.subscription_tier || profile?.subscription_tier === 'free') ? 'Standard Access' : 'Auto-renewing'}
+                                                        {profile?.subscription_status === 'cancelled'
+                                                            ? 'Auto-renewal cancelled'
+                                                            : (!profile?.subscription_tier || profile?.subscription_tier === 'free')
+                                                                ? 'Standard Access'
+                                                                : 'Auto-renewing'}
                                                     </span>
                                                 </div>
                                             </div>
@@ -1000,10 +1238,10 @@ const AccountPage = () => {
                                                     <ChevronRight size={10} /> Valid Until
                                                 </p>
                                                 <p className="text-xl font-bold mt-1">
-                                                    {profile?.subscription_expiry 
-                                                        ? new Date(profile.subscription_expiry.toDate ? profile.subscription_expiry.toDate() : profile.subscription_expiry).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })
-                                                        : 'Forever (Trial)'
-                                                    }
+                                                    {(() => {
+                                                        const expiry = getSubscriptionExpiryDate(profile);
+                                                        return expiry ? formatHKDate(expiry) : 'Forever (Trial)';
+                                                    })()}
                                                 </p>
                                             </div>
                                         </div>
@@ -1025,9 +1263,13 @@ const AccountPage = () => {
                                             <>
                                                 <button 
                                                     onClick={() => window.location.href = '/subscription'}
-                                                    className="w-full py-4 bg-purple-600 text-white rounded-2xl font-bold shadow-lg shadow-purple-200 hover:scale-[1.02] transition-all flex items-center justify-center gap-2"
+                                                    className="w-full py-4 bg-purple-600 text-white rounded-2xl font-bold shadow-lg shadow-purple-200 hover:scale-[1.02] transition-all flex items-center justify-center gap-2 text-center"
                                                 >
-                                                    Upgrade to Premium - HK$128/mo <Crown size={18} />
+                                                    <span className="inline-flex flex-wrap items-center justify-center gap-x-2 gap-y-1">
+                                                        <Crown size={18} className="shrink-0" aria-hidden />
+                                                        <span>Upgrade to Premium</span>
+                                                        <span className="opacity-95">HK$128/mo</span>
+                                                    </span>
                                                 </button>
                                                 <button 
                                                     onClick={handleCancelClick}
@@ -1050,6 +1292,16 @@ const AccountPage = () => {
                                             </>
                                         )}
                                     </div>
+
+                                    {(profile?.subscription_tier === 'pro' || profile?.subscription_tier === 'premium') && (
+                                        <button
+                                            onClick={handleManageBilling}
+                                            disabled={isSaving}
+                                            className="w-full py-4 bg-white border border-slate-200 text-slate-700 rounded-2xl font-bold hover:bg-slate-50 transition-all"
+                                        >
+                                            {isSaving ? 'Opening Billing Portal…' : 'Manage Billing & Card'}
+                                        </button>
+                                    )}
 
                                     {/* Multi-Device Info */}
                                     <div className="space-y-6">
@@ -1140,9 +1392,7 @@ const AccountPage = () => {
                 type={modal.type}
                 message={modal.message}
                 onClose={() => setModal({ ...modal, isOpen: false })}
-                onConfirm={modal.onConfirm ? () => {
-                    modal.onConfirm();
-                } : null}
+                onConfirm={modal.onConfirm || undefined}
             />
         </div>
     );

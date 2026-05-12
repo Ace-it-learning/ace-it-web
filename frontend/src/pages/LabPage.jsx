@@ -463,22 +463,28 @@ const LabPage = () => {
 
     const [currentLevel, setCurrentLevel] = useState(() => {
         // Standardized Normalization: Support both 1-4 Tiers AND 3-7 Semantic Levels
-        const lvlStr = String(initialLevel);
+        const lvlStr = String(initialLevel).toLowerCase().trim();
 
-        // 1. Literal Tiers (Legacy)
+        // 1. Text aliases (e.g. from AI tutor CTA)
+        if (lvlStr === 'easy' || lvlStr === 'beginner' || lvlStr === 'basic') return '3';
+        if (lvlStr === 'intermediate' || lvlStr === 'medium' || lvlStr === 'moderate') return '4';
+        if (lvlStr === 'hard' || lvlStr === 'advanced' || lvlStr === 'difficult') return '5';
+        if (lvlStr === 'elite' || lvlStr === 'master' || lvlStr === 'expert') return '7';
+
+        // 2. Literal Tiers (Legacy)
         if (lvlStr === '1') return '3';
         if (lvlStr === '2') return '4';
         // Note: We skip '3' and '4' here if they are intended to be literal levels, 
         // but traditionally Tier 3 -> Level 5 and Tier 4 -> Level 7.
 
-        // 2. Semantic Levels (Standard)
+        // 3. Semantic Levels (Standard)
         if (lvlStr === '7' || lvlStr.includes('5**')) return '7';
         if (lvlStr === '6' || lvlStr.includes('5*')) return '6';
         if (lvlStr === '5' || lvlStr.includes('5')) return '5'; // Match '5', 'HKDSE 5', etc.
         if (lvlStr === '4') return '4';
         if (lvlStr === '3') return '3';
 
-        // 3. Fallback Mapping (Heuristic for Tier vs level ambiguity)
+        // 4. Fallback Mapping (Heuristic for Tier vs level ambiguity)
         // If it's '3' or '4' and we reached here, treat it as a level first.
         return lvlStr || '3';
     });
@@ -607,9 +613,13 @@ const LabPage = () => {
         const urlLevel = searchParams.get('level');
         if (urlLevel) {
             let normalized = '3';
-            const lvlStr = String(urlLevel);
-            // Standardized Normalization: Support both 1-4 Tiers AND 3-7 Semantic Levels
-            if (lvlStr === '7' || lvlStr.includes('5**')) normalized = '7';
+            const lvlStr = String(urlLevel).toLowerCase().trim();
+            // Standardized Normalization: Support text aliases, 1-4 Tiers AND 3-7 Semantic Levels
+            if (lvlStr === 'easy' || lvlStr === 'beginner' || lvlStr === 'basic') normalized = '3';
+            else if (lvlStr === 'intermediate' || lvlStr === 'medium' || lvlStr === 'moderate') normalized = '4';
+            else if (lvlStr === 'hard' || lvlStr === 'advanced' || lvlStr === 'difficult') normalized = '5';
+            else if (lvlStr === 'elite' || lvlStr === 'master' || lvlStr === 'expert') normalized = '7';
+            else if (lvlStr === '7' || lvlStr.includes('5**')) normalized = '7';
             else if (lvlStr === '5' || lvlStr.includes('5*')) normalized = '5'; // Treat 5* as 5 or 7 depending on user preference, but here we'll map to 5 for now
             else if (lvlStr === '4' || lvlStr === '2') normalized = '4'; // Level 4 or Tier 2
             else if (lvlStr === '3' || lvlStr === '1') normalized = '3'; // Level 3 or Tier 1

@@ -9,7 +9,7 @@ import { getMathSkillName, getSkillsByCategory } from '../../constants/mathMicro
 import { calculateTier, getTierMetadata, getMasteryStats } from '../../utils/masteryUtils';
 import { LISTENING_MISSION_SHELLS } from '../../data/listeningMissionShells';
 
-const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
+const RoadmapModal = ({ isOpen, onClose, initialFilter = 'READING' }) => {
     const { user, profile } = useAuth();
     const { language, t } = useLanguage();
     const tier = (profile?.subscription_tier || 'free').toLowerCase();
@@ -23,7 +23,7 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
     const [searchQuery, setSearchQuery] = useState('');
     const [userSkills, setUserSkills] = useState({});
     const [practicedSkills, setPracticedSkills] = useState([]);
-    const [paperFilter, setPaperFilter] = useState(initialFilter); // 'ALL' | 'READING' | 'WRITING' | 'LISTENING' | 'SPEAKING'
+    const [paperFilter, setPaperFilter] = useState(initialFilter); // 'READING' | 'WRITING' | 'LISTENING' | 'SPEAKING'
     const [selectedLevels, setSelectedLevels] = useState({}); // skillId -> level
     const [weeklyQuestStatus, setWeeklyQuestStatus] = useState({ completed: false });
     const [listeningMissions, setListeningMissions] = useState(LISTENING_MISSION_SHELLS);
@@ -35,12 +35,19 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
     useEffect(() => {
         if (!isOpen) return;
 
-        // Use relative path for local proxy support
-        const API_BASE = '/api';
+        // Must use VITE_API_URL in production (static hosts do not proxy /api like Vite dev).
+        const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+        const API_BASE = `${API_URL}/api`;
+
+        const fetchWithTimeout = (url, opts = {}, ms = 15000) => {
+            const controller = new AbortController();
+            const id = setTimeout(() => controller.abort(), ms);
+            return fetch(url, { ...opts, signal: controller.signal }).finally(() => clearTimeout(id));
+        };
 
         const fetchListening = async () => {
             try {
-                const res = await fetch(`${API_BASE}/lab/listening`);
+                const res = await fetchWithTimeout(`${API_BASE}/lab/listening`);
                 if (res.ok) {
                     const data = await res.json();
                     const byId = new Map((data || []).map((m) => [m.id, m]));
@@ -63,7 +70,9 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
         const fetchWriting = async () => {
             try {
                 setIsWritingLoading(true);
-                const res = await fetch(`${API_BASE}/writing/scenarios`);
+                // Add cache-busting query param to avoid stale cached data
+                const cacheBuster = `cb=${Date.now()}`;
+                const res = await fetchWithTimeout(`${API_BASE}/writing/scenarios?${cacheBuster}`);
                 if (res.ok) {
                     const data = await res.json();
                     setWritingMissions(data);
@@ -79,11 +88,17 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
         fetchWriting();
     }, [isOpen]);
 
+    const fetchWithTimeout = (url, opts = {}, ms = 15000) => {
+        const controller = new AbortController();
+        const id = setTimeout(() => controller.abort(), ms);
+        return fetch(url, { ...opts, signal: controller.signal }).finally(() => clearTimeout(id));
+    };
+
     const fetchUserSkills = async () => {
         try {
             const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
             const subject = (activeAgentId === 'math' || activeAgentId === 'maths') ? 'maths' : 'english';
-            const res = await fetch(`${API_URL}/api/microskills/${user.uid}?subject=${subject}`);
+            const res = await fetchWithTimeout(`${API_URL}/api/microskills/${user.uid}?subject=${subject}`);
             if (res.ok) {
                 const data = await res.json();
                 setUserSkills(data.microSkills || {});
@@ -120,7 +135,7 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
             setLoading(true);
             const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
             // NEW: Fetch from Factory Model's personalized endpoint
-            const res = await fetch(`${API_URL}/api/quests/personalized?uid=${user.uid}`);
+            const res = await fetchWithTimeout(`${API_URL}/api/quests/personalized?uid=${user.uid}`);
             if (res.ok) {
                 const data = await res.json();
                 setPlan(data);
@@ -135,7 +150,7 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
     const fetchWeeklyTheme = async () => {
         try {
             const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
-            const res = await fetch(`${API_URL}/api/lab/weekly-theme`);
+            const res = await fetchWithTimeout(`${API_URL}/api/lab/weekly-theme`);
             if (res.ok) {
                 const data = await res.json();
                 setWeeklyTheme(data);
@@ -146,10 +161,15 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
     };
 
     useEffect(() => {
-        if (user?.uid && isOpen) {
-            fetchRoadmap();
-            fetchUserSkills();
-            fetchWeeklyTheme();
+        if (isOpen) {
+            if (user?.uid) {
+                fetchRoadmap();
+                fetchUserSkills();
+                fetchWeeklyTheme();
+            } else {
+                // If user isn't resolved yet, don't stay in loading forever
+                setLoading(false);
+            }
         }
     }, [user, isOpen]);
 
@@ -173,13 +193,13 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                 if (activeAgentId === 'math' || activeAgentId === 'maths') return 'maths';
                 return 'english';
             };
-            const res = await fetch(`${API_URL}/api/roadmap/regenerate`, {
+            const res = await fetchWithTimeout(`${API_URL}/api/roadmap/regenerate`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({ uid: user.uid, subject: getGenSubject() })
-            });
+            }, 30000);
             if (res.ok) {
                 const newPlan = await res.json();
                 setPlan(newPlan);
@@ -215,18 +235,16 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
         const explicit = mission?.outcome || mission?.learningOutcome;
         if (explicit) return explicit;
         const title = (mission?.title || 'this listening scenario').trim();
-        const desc = (mission?.description || '').replace(/\s+/g, ' ').trim();
-        const lead = desc ? `${desc.split(/[.!?]/)[0]?.trim().slice(0, 90) || desc.slice(0, 90)}.` : '';
         const flavours = [
-            (t, l) =>
-                `For “${t}”, sharpen strategic capture from the recording, control distractors, and integrate findings with the Paper 3 data file${l ? ` (${l.slice(0, 70)}…)` : ''}.`,
-            (t, l) =>
-                `Target “${t}”: disciplined note-taking under time pressure, then accurate synthesis of audio and visual/text inserts${l ? ` — ${l.slice(0, 65)}…` : ''}.`,
             (t) =>
-                `Build listening stamina and selective attention on “${t}”, aligning marked details with integrated-task expectations for Paper 3.`,
+                `Strategic capture and distractor control for "${t}".`,
+            (t) =>
+                `Accurate synthesis of audio and data-file cues on "${t}".`,
+            (t) =>
+                `Selective attention and Paper 3 integration for "${t}".`,
         ];
         const i = title.length % flavours.length;
-        return flavours[i](title, lead);
+        return flavours[i](title);
     };
 
     const writingQuestOutcome = (mission) => {
@@ -234,19 +252,17 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
         if (explicit) return explicit;
         const title = (mission?.title || 'this writing prompt').trim();
         const genre = (mission?.genre || '').trim();
-        const prompt = (mission?.prompt || '').replace(/\s+/g, ' ').trim();
-        const angle = prompt ? prompt.split(/[.!?\n]/)[0]?.trim().slice(0, 85) : '';
         const genreTag = genre ? ` (${genre})` : '';
         const flavours = [
-            (t, g, a) =>
-                `Answer “${t}”${g}: thesis-led development, audience-appropriate tone, and language range matched to the HKDSE Paper 2 task${a ? ` — ${a}…` : ''}.`,
-            (t, g, a) =>
-                `Craft a controlled Paper 2 response on “${t}”${g}: cohesive organisation, purposeful paragraphs, and examiner-readable argumentation${a ? `; context: ${a}…` : '.'}`,
             (t, g) =>
-                `Demonstrate genre control for “${t}”${g}: register, cohesion, and evaluative language suited to the specified form and reader.`,
+                `Clear thesis, purposeful paragraphs, and appropriate tone for "${t}"${g}.`,
+            (t, g) =>
+                `Cohesive structure and examiner-ready argumentation on "${t}"${g}.`,
+            (t, g) =>
+                `Genre control: register, cohesion, and evaluative language for "${t}"${g}.`,
         ];
         const i = (title.length + genre.length) % flavours.length;
-        return flavours[i](title, genreTag, angle);
+        return flavours[i](title, genreTag);
     };
 
     // --- ROBUST GATING CALCULATION (PRE-FILTER) ---
@@ -709,7 +725,7 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                                     {weeklyTheme && (
                                         <div className="px-3 py-1 bg-indigo-50 border border-indigo-100 rounded-full flex items-center gap-2 animate-in slide-in-from-right-4 duration-500">
                                             <Sparkles className="w-3.5 h-3.5 text-indigo-600 animate-pulse" />
-                                            <span className="text-[11px] font-black text-indigo-700 uppercase tracking-tight">Theme: {weeklyTheme.theme}</span>
+                                            <span className="text-[11px] font-black text-indigo-700 uppercase tracking-tight">Week {weeklyTheme.weekNumber || 18} Theme: {weeklyTheme.theme}</span>
                                         </div>
                                     )}
                                 </div>
@@ -1078,7 +1094,6 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'ALL' }) => {
                                     {/* Paper Filter Pills */}
                                     <div className="flex gap-2 overflow-x-auto pb-1 hide-scrollbar">
                                         {[
-                                            { id: 'ALL', label: 'All Papers', icon: Layers },
                                             { id: 'READING', label: 'Reading', icon: BookOpen },
                                             { id: 'WRITING', label: 'Writing', icon: PenTool },
                                             { id: 'LISTENING', label: 'Listening', icon: Headphones },

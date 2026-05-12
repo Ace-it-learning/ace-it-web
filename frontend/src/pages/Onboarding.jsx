@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { auth } from '../firebase';
 import { useAuth } from '../context/AuthContext';
-import { updateProfile } from 'firebase/auth'; // Import updateProfile
 import { useLanguage } from '../context/LanguageContext';
 import { User, School, GraduationCap, ArrowRight, Check, ChevronsUpDown, Search, Target, Plus, PlusCircle, Trash2 } from 'lucide-react';
 
@@ -143,7 +141,7 @@ const SchoolAutocomplete = ({ schools, value, onChange, isLoading }) => {
 };
 
 const Onboarding = () => {
-    const { user } = useAuth();
+    const { user, logout } = useAuth();
     const navigate = useNavigate();
     const { t } = useLanguage();
     const [formData, setFormData] = useState({
@@ -243,13 +241,19 @@ const Onboarding = () => {
                 const newPhotoURL = formData.gender === 'Male' ? '/avatars/male.png' : '/avatars/female_default.png';
                 console.log("[Onboarding] Updating client profile:", { displayName: formData.nickname, photoURL: newPhotoURL });
 
-                await updateProfile(user, {
-                    displayName: formData.nickname,
-                    photoURL: newPhotoURL
-                });
+                // Only update Firebase profile when Firebase auth is active
+                if (user?.providerId || user?.reload) {
+                    const { updateProfile } = await import('firebase/auth');
+                    await updateProfile(user, {
+                        displayName: formData.nickname,
+                        photoURL: newPhotoURL
+                    });
+                }
 
                 // 2. Force token refresh to ensure any backend claims sync (optional but good practice)
-                await user.getIdToken(true);
+                if (user?.getIdToken) {
+                    await user.getIdToken(true);
+                }
             }
 
             console.log("[Onboarding] Client state updated. Verifying backend persistence...");
@@ -296,7 +300,7 @@ const Onboarding = () => {
                 <div className="text-center space-y-2 relative">
                     <button
                         onClick={async () => {
-                            await auth.signOut();
+                            await logout();
                             window.location.href = '/';
                         }}
                         className="absolute right-0 top-0 text-xs font-bold text-gray-400 hover:text-primary transition-colors flex items-center gap-1"

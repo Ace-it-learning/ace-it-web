@@ -3,9 +3,6 @@ import { useAuth } from '../context/AuthContext';
 import { useLanguage } from '../context/LanguageContext';
 import { 
     Shield, 
-    Smartphone, 
-    Monitor, 
-    Trash2, 
     Check, 
     Zap, 
     Crown, 
@@ -18,30 +15,19 @@ import {
 import { cn } from '../utils/cn';
 import { trackEvent } from '../utils/analytics';
 import { isCheatEnabled } from '../utils/devAccess';
-import CheckoutForm from '../components/payment/CheckoutForm';
-import { Elements } from '@stripe/react-stripe-js';
-import { loadStripe } from '@stripe/stripe-js';
 
 const SubscriptionPage = () => {
     const { user, profile, refreshProfile } = useAuth();
-    const { t, language } = useLanguage();
+    const { t } = useLanguage();
     const [promoCode, setPromoCode] = useState('');
     const [isApplying, setIsApplying] = useState(false);
     const [discountMultiplier, setDiscountMultiplier] = useState(1);
     const [isSaving, setIsSaving] = useState(false);
-    const [clientSecret, setClientSecret] = useState('');
-    const [selectedPlan, setSelectedPlan] = useState(null);
 
     const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
 
     const tier = profile?.subscription_tier || 'free';
-    const debugBypass = isCheatEnabled(user, profile);
-
-    // Device Icon Helper
-    const getDeviceIcon = (os = '') => {
-        if (os.toLowerCase().includes('mac') || os.toLowerCase().includes('windows')) return <Monitor className="w-5 h-5" />;
-        return <Smartphone className="w-5 h-5" />;
-    };
+    const debugBypass = import.meta.env.VITE_ENABLE_SUBSCRIPTION_DEBUG === 'true' && isCheatEnabled(user, profile);
 
     const handleRedeem = async () => {
         if (!promoCode) return;
@@ -73,6 +59,10 @@ const SubscriptionPage = () => {
             alert('Please sign in first.');
             return;
         }
+        if (selectedTier === 'free') {
+            alert('You are already on the Free plan.');
+            return;
+        }
 
         if (debugBypass) {
             setIsSaving(true);
@@ -102,14 +92,13 @@ const SubscriptionPage = () => {
                 setIsSaving(false);
             }
         } else {
-            // Create payment intent
+            // Create Stripe Checkout session
             setIsSaving(true);
             try {
                 const controller = new AbortController();
                 const timeout = setTimeout(() => controller.abort(), 15000);
-                const amount = selectedTier === 'premium' ? 99 : 49; // Example prices
                 const token = await user.getIdToken?.();
-                const response = await fetch(`${API_URL}/api/payment/create-payment-intent`, {
+                const response = await fetch(`${API_URL}/api/payment/create-checkout-session`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -117,21 +106,22 @@ const SubscriptionPage = () => {
                     },
                     body: JSON.stringify({
                         uid: user.uid,
-                        amount,
-                        currency: 'hkd',
-                        customer_email: user.email,
-                        tier: selectedTier
+                        planId: selectedTier
                     }),
                     signal: controller.signal
                 });
                 clearTimeout(timeout);
                 const data = await response.json();
-                if (response.ok) {
-                    setClientSecret(data.clientSecret);
-                    setSelectedPlan(selectedTier);
-                } else {
-                    alert(data.error || 'Failed to create payment intent.');
+                if (!response.ok) {
+                    alert(data.error || 'Failed to create checkout session.');
+                    return;
                 }
+
+                if (!data.url) {
+                    alert('Checkout URL missing. Please try again.');
+                    return;
+                }
+                window.location.href = data.url;
             } catch (e) {
                 console.error(e);
                 if (e?.name === 'AbortError') {
@@ -372,18 +362,6 @@ const SubscriptionPage = () => {
                         <div className="absolute -right-4 -top-4 w-20 h-20 bg-amber-400/20 rounded-full blur-2xl" />
                     </div>
                 </div>
-
-                {/* Payment Form */}
-                {clientSecret && selectedPlan && (
-                    <div className="max-w-4xl mx-auto space-y-8">
-                        <div className="bg-white rounded-3xl p-8 shadow-sm border border-slate-200 space-y-6">
-                            <h2 className="text-xl font-bold text-slate-900">Complete Payment</h2>
-                            <Elements stripe={loadStripe(import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY || 'pk_test_placeholder')} options={{ clientSecret }}>
-                                <CheckoutForm amount={selectedPlan === 'premium' ? 128 : 99} onSuccess={() => { setClientSecret(''); setSelectedPlan(null); refreshProfile(); }} />
-                            </Elements>
-                        </div>
-                    </div>
-                )}
 
         </div>
     </div>

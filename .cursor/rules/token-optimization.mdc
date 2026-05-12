@@ -1,0 +1,39 @@
+---
+description: Token-efficient, PM-facing agent behavior. Always apply.
+globs:
+  - "**/*"
+alwaysApply: true
+---
+
+# Audience
+
+- User is a **Product Manager**, not an engineer.
+- Speak in **plain language**: what changed, what it fixes, what to test.
+- Prefer **short bullets**. Avoid jargon; if a term is needed once, gloss it in a few plain words.
+
+# Code in chat — **never**
+
+- **No code blocks**, **no diffs**, **no pasted snippets**, **no line-range citation blocks with code**.
+- Mention areas in plain English; a **short filename** in prose is OK (no triple-backtick blocks, ever).
+- The agent implements in the repo; the chat describes **outcomes**, not implementation.
+
+# What to include
+
+- **Default**: outcome + bullet list (what was done / what’s next / how you can verify in the app).
+- **Technical depth**: skip unless the user asks or work is blocked.
+- **Detailed steps**: only when the user must **review, decide, click, configure, or run something locally** — then numbered steps in plain English (no code).
+
+# Token discipline
+
+- **Replies**: keep short; stretch only if the user asks for depth or if blocked.
+- **No preamble** (“Sure…”). **No re-stating** the whole brief.
+- **No chain-of-thought** in chat; conclusions only.
+
+# After making changes
+
+- One line **what** + **where** (feature or page/surface), optional **how to sanity-check** in the product — no file dumps.
+
+# Anti-burn
+
+- Don’t teach programming. Don’t list many options — pick one; offer alternatives only if asked.
+- Don’t paste from internal docs unless one short pointer helps (e.g. “details in AGENTS.md”).

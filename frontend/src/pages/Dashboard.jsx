@@ -41,7 +41,7 @@ const Dashboard = () => {
         }
     };
 
-    const [roadmapFilter, setRoadmapFilter] = React.useState('ALL');
+    const [roadmapFilter, setRoadmapFilter] = React.useState('READING');
     const location = useLocation();
 
     // Listen for Sidebar events

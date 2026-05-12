@@ -1,21 +1,7 @@
 const GenerativeAIService = require('../GenerativeAIService');
 const writingSyllabus = require('../../data/writing_quest_syllabus.json');
 const genrePrompts = require('../../data/genre_prompts.json');
-const QuestionBankStore = require('../QuestionBankStore');
 const axios = require('axios');
-
-function writingScenarioCreatedAtMs(row) {
-    const v = row && row.created_at;
-    if (v == null) return 0;
-    if (typeof v === 'number') return v;
-    if (typeof v === 'string') {
-        const t = Date.parse(v);
-        return Number.isFinite(t) ? t : 0;
-    }
-    if (typeof v.toMillis === 'function') return v.toMillis();
-    if (v._seconds != null) return v._seconds * 1000;
-    return 0;
-}
 
 class WritingQuestService {
     constructor() {
@@ -35,25 +21,6 @@ class WritingQuestService {
         }
     }
 
-    /**
-     * When Firestore rows omit listing titles, the UI fell back to the genre name only
-     * (“Letter to the Editor” × N). Prefer a stable, unique label: genre + prompt excerpt.
-     */
-    disambiguateWritingCardTitle(friendlyGenre, rawTitle, prompt) {
-        const g = (friendlyGenre || '').trim();
-        const t = (rawTitle || '').trim();
-        const p = (prompt || '').replace(/\s+/g, ' ').trim();
-        const looksLikeGenreOnly =
-            !t ||
-            t.toLowerCase() === g.toLowerCase() ||
-            t === 'No Situation';
-        if (looksLikeGenreOnly && p && p !== 'No Situation') {
-            const excerpt = p.length > 88 ? `${p.slice(0, 85).trim()}…` : p;
-            return `${g}: ${excerpt}`;
-        }
-        return t || g;
-    }
-
     async getFactoryTopics(genre) {
         // Resolve friendly genre name first (e.g. "debate-speech" -> "Debate Speech")
         let friendlyGenre = genre;
@@ -65,82 +32,9 @@ class WritingQuestService {
         );
         if (match) friendlyGenre = match;
 
-        // 1. Factory quests from Cosmos (question_bank)
-        try {
-            const queryTerms = new Set([friendlyGenre, genre]);
-
-            const underscoreSlug = friendlyGenre.toLowerCase().replace(/ /g, '_');
-            const hyphenSlug = friendlyGenre.toLowerCase().replace(/ /g, '-');
-
-            queryTerms.add(underscoreSlug);
-            queryTerms.add(hyphenSlug);
-            queryTerms.add(`writing_genre_${underscoreSlug}`);
-            queryTerms.add(`writing_genre_${hyphenSlug}`);
-            queryTerms.add(`writing_genre_${genre.toLowerCase()}`);
-
-            const finalTerms = Array.from(queryTerms);
-            if (friendlyGenre === "Letter to the Editor" || genre.toLowerCase().includes("letter")) {
-                if (!finalTerms.includes("writing_genre_letter_to_editor")) finalTerms.push("writing_genre_letter_to_editor");
-                if (!finalTerms.includes("letter_to_editor")) finalTerms.push("letter_to_editor");
-            }
-
-            const queryTermsBatch = finalTerms.slice(0, 10);
-            console.log(`[WritingQuestService] Querying Cosmos for genre "${friendlyGenre}" with terms:`, queryTermsBatch);
-
-            const rows = await QuestionBankStore.queryApprovedWritingByTopics(queryTermsBatch, 250);
-
-            console.log(`[WritingQuestService] Cosmos found ${rows.length} records.`);
-
-            if (rows.length > 0) {
-                const groups = new Map();
-
-                rows.forEach((data) => {
-                    const docId = data.id;
-                    const passage = data.passage || data.reading_passage || "No Situation";
-                    const key = passage.trim();
-
-                    if (!groups.has(key)) {
-                        groups.set(key, {
-                            id: docId,
-                            title: data.listing_title || data.title || friendlyGenre,
-                            prompt: passage,
-                            created_at: writingScenarioCreatedAtMs(data),
-                            items: []
-                        });
-                    }
-                    groups.get(key).items.push({ id: docId, ...data });
-                });
-
-                const factoryTopics = Array.from(groups.values())
-                    .sort((a, b) => b.created_at - a.created_at)
-                    .map((group) => {
-                        const isAllModelAns = group.items.every(i => (i.listing_prompt || "").includes("Model Answer"));
-
-                        const raw = isAllModelAns
-                            ? `${friendlyGenre}: ${group.title}`
-                            : group.title;
-
-                        return {
-                            id: group.id,
-                            title: this.disambiguateWritingCardTitle(friendlyGenre, raw, group.prompt),
-                            prompt: group.prompt,
-                            genre: friendlyGenre,
-                            factory: true
-                        };
-                    });
-
-                console.log(`[WritingQuestService] Returning ${factoryTopics.length} grouped factory topics from Cosmos.`);
-
-                return factoryTopics;
-            }
-        } catch (error) {
-            console.warn("[WritingQuestService] Cosmos fetch failed, falling back to static:", error);
-        }
-
-        // 2. Fallback to Static JSON
+        // Factory / roadmap writing cards: genre_prompts.json only (no Cosmos).
         let resolvedGenre = genre;
         if (!genrePrompts.prompts[resolvedGenre]) {
-            const keys = Object.keys(genrePrompts.prompts);
             const slugMatch = keys.find(k => k.toLowerCase() === resolvedGenre.toLowerCase().replace(/-/g, ' '));
             if (slugMatch) resolvedGenre = slugMatch;
         }
@@ -149,12 +43,11 @@ class WritingQuestService {
             return [];
         }
 
-        // Map static prompts to common format
         return genrePrompts.prompts[resolvedGenre].map((p, idx) => ({
-            id: `static_${resolvedGenre}_${idx}`,
-            title: p.title || p.topic || resolvedGenre,
+            id: p.id || `static_${friendlyGenre}_${idx}`,
+            title: p.title || p.topic || friendlyGenre,
             prompt: p.prompt || p.topic,
-            genre: resolvedGenre,
+            genre: friendlyGenre,
             static: true
         }));
     }
@@ -335,6 +228,8 @@ class WritingQuestService {
                 ? '- Use sophisticated vocabulary and complex sentence structures.\n- Ensure high coherence and cohesion.\n- Tone must be perfectly aligned with the text type.'
                 : '- Use simple, clear language.\n- Focus on basic accuracy and structure.'}
 
+            Length (mandatory): Produce a complete exam-style piece of at least 320 words with multiple paragraphs (introduction, development, conclusion as appropriate to ${textType}). Do not stop after one or two short paragraphs.
+
             Output JSON:
             {
                 "essay_content": "Full essay text here..."
@@ -342,7 +237,12 @@ class WritingQuestService {
         `;
 
         try {
-            const result = await this.aiService.generateJson(prompt);
+            const result = await this.aiService.generateJson(prompt, {
+                generationConfig: {
+                    maxOutputTokens: 4096,
+                    temperature: 0.45
+                }
+            });
             return result.data;
         } catch (error) {
             console.error("[WritingQuest] Generate Essay Error:", error);
@@ -585,15 +485,297 @@ class WritingQuestService {
             const result = await this.aiService.generateJson(prompt);
             return result.data;
         } catch (error) {
-            console.error("[WritingQuest] Real-time Analysis Error:", error);
-            return {
-                overall_feedback: "Keep writing! Use the 'Review' button for deeper analysis.",
-                clo_status: { content: 50, language: 50, organization: 50 },
-                paragraph_analysis: [],
-                vocabulary_upgrades: [],
-                checklist_status: []
-            };
+            console.error("[WritingQuest] Real-time Analysis Error (AI unavailable, using rule-based fallback):", error.message);
+            // Rule-based fallback: provide genuine C-L-O guidance without exposing the text
+            return this._generateRuleBasedReview(content, topic, textType);
         }
+    }
+
+    /**
+     * Rule-based real-time review fallback when AI service is unavailable.
+     * Provides genuine C-L-O guidance based on text heuristics without
+     * simply returning the student's text back to them.
+     */
+    _generateRuleBasedReview(content, topic, textType) {
+        const paragraphs = content.split(/\n\n|\n/).filter(p => p.trim().length > 0);
+        const wordCount = content.split(/\s+/).filter(w => w.length > 0).length;
+        const sentences = content.split(/[.!?]+/).filter(s => s.trim().length > 0);
+        
+        // --- Content (C) Analysis ---
+        const hasIntroduction = paragraphs.length >= 1;
+        const hasConclusion = paragraphs.length >= 2 && 
+            /(?:conclusion|summary|therefore|thus|in conclusion|to conclude|overall|in short)/i.test(paragraphs[paragraphs.length - 1]);
+        const hasExamples = /(?:for example|for instance|such as|like|e\.g\.|take|consider)/i.test(content);
+        const hasArguments = /(?:because|since|as|due to|reason|argue|believe|think|claim|however|although|while|whereas|on the other hand|furthermore|moreover|in addition)/i.test(content);
+        
+        let contentScore = 30;
+        if (hasIntroduction) contentScore += 15;
+        if (hasConclusion) contentScore += 15;
+        if (hasExamples) contentScore += 15;
+        if (hasArguments) contentScore += 15;
+        if (wordCount > 200) contentScore += 10;
+        contentScore = Math.min(95, contentScore);
+        
+        const contentAdvice = [];
+        if (!hasIntroduction) contentAdvice.push("begin with a clear thesis that directly addresses the topic");
+        if (!hasExamples) contentAdvice.push("support your arguments with concrete examples or case studies");
+        if (!hasArguments) contentAdvice.push("use signposting words (e.g., 'because', 'however', 'furthermore') to strengthen reasoning");
+        if (!hasConclusion) contentAdvice.push("end with a concise conclusion that summarises your stance");
+        if (wordCount < 150) contentAdvice.push("expand your ideas—aim for at least 250 words for a full response");
+        if (contentAdvice.length === 0) contentAdvice.push("your content is well-developed; consider adding a counter-argument for sophistication");
+        
+        // --- Language (L) Analysis ---
+        const hasComplexSentences = /(?:although|because|since|while|whereas|unless|if|which|who|that|despite|in spite of|not only|either|neither|whether|provided that)/i.test(content);
+        const hasAdvancedVocab = /(?:proliferation|detrimental|paramount|imperative|ubiquitous|detrimental|advocate|alleviate|comprehensive|substantial|consequently|nevertheless|notwithstanding|paradigm|ramification)/i.test(content);
+        const hasTransitionWords = /(?:furthermore|moreover|in addition|consequently|therefore|thus|nevertheless|however|on the contrary|in contrast|similarly|likewise|meanwhile|subsequently)/i.test(content);
+        const hasErrors = /(?:\bis are\b|\bare is\b|\bwas were\b|\bwere was\b|\bhave has\b|\bhas have\b|\bdon't doesn't\b|\bdoesn't don't\b|\btheir there\b|\bthere their\b|\byour you're\b)/i.test(content);
+        
+        let languageScore = 35;
+        if (hasComplexSentences) languageScore += 15;
+        if (hasAdvancedVocab) languageScore += 15;
+        if (hasTransitionWords) languageScore += 15;
+        if (sentences.length > 5) languageScore += 10;
+        if (hasErrors) languageScore -= 15;
+        languageScore = Math.min(95, Math.max(20, languageScore));
+        
+        const languageAdvice = [];
+        if (!hasComplexSentences) languageAdvice.push("vary your sentence structures—try complex or compound-complex sentences");
+        if (!hasAdvancedVocab) languageAdvice.push("replace common words with more precise alternatives (e.g., 'important' → 'paramount')");
+        if (!hasTransitionWords) languageAdvice.push("use cohesive devices to link ideas smoothly");
+        if (hasErrors) languageAdvice.push("proof-read for subject-verb agreement and word-choice errors");
+        if (languageAdvice.length === 0) languageAdvice.push("your language use is strong; experiment with rhetorical devices for extra impact");
+        
+        // --- Organization (O) Analysis ---
+        const hasTopicSentences = paragraphs.slice(1, -1).some(p => /^\s*(?:firstly|secondly|thirdly|moreover|furthermore|in addition|on the other hand|however|conversely|another|one reason|one benefit|one drawback)/i.test(p));
+        const hasParagraphing = paragraphs.length >= 3;
+        const hasSignposting = /(?:firstly|secondly|thirdly|first|second|third|to begin with|next|finally|in conclusion|to sum up|overall)/i.test(content);
+        
+        let organizationScore = 30;
+        if (hasParagraphing) organizationScore += 20;
+        if (hasTopicSentences) organizationScore += 20;
+        if (hasSignposting) organizationScore += 20;
+        if (hasConclusion) organizationScore += 10;
+        organizationScore = Math.min(95, organizationScore);
+        
+        const organizationAdvice = [];
+        if (!hasParagraphing) organizationAdvice.push("divide your writing into clear paragraphs (introduction, body, conclusion)");
+        if (!hasTopicSentences) organizationAdvice.push("start each body paragraph with a clear topic sentence");
+        if (!hasSignposting) organizationAdvice.push("use signposting language ('Firstly', 'Moreover', 'In conclusion') to guide the reader");
+        if (organizationAdvice.length === 0) organizationAdvice.push("your structure is solid; ensure each paragraph focuses on a single idea");
+        
+        // Build paragraph-level analysis (one per paragraph, max 4)
+        const paragraphAnalysis = paragraphs.slice(0, 4).map((para, idx) => {
+            const isFirst = idx === 0;
+            const isLast = idx === paragraphs.length - 1;
+            const paraWordCount = para.split(/\s+/).filter(w => w.length > 0).length;
+            
+            let feedbackEn = "";
+            let feedbackZh = "";
+            let type = "strength";
+            
+            if (isFirst) {
+                if (/\b(?:topic|issue|problem|question|debate|discuss|argue|believe|think)\b/i.test(para)) {
+                    feedbackEn = "Strong opening—clearly introduces the topic.";
+                    feedbackZh = "開首有力，清晰引入主題。";
+                } else {
+                    feedbackEn = "Consider starting with a hook or clear thesis statement.";
+                    feedbackZh = "建議以引人入勝的開首或明確論點開始。";
+                    type = "improvement";
+                }
+            } else if (isLast) {
+                if (/(?:conclusion|summary|therefore|thus|overall|in short|to conclude)/i.test(para)) {
+                    feedbackEn = "Effective conclusion that reinforces your position.";
+                    feedbackZh = "結論有效，鞏固立場。";
+                } else {
+                    feedbackEn = "End with a brief conclusion summarising your key points.";
+                    feedbackZh = "結尾應簡要總結要點。";
+                    type = "improvement";
+                }
+            } else {
+                if (paraWordCount < 40) {
+                    feedbackEn = "This paragraph is quite short—expand with examples or explanation.";
+                    feedbackZh = "此段落較短，可加入例子或解釋。";
+                    type = "improvement";
+                } else if (/\b(?:because|since|for example|however|furthermore)\b/i.test(para)) {
+                    feedbackEn = "Good use of reasoning and connectors in this paragraph.";
+                    feedbackZh = "段落運用推理和連接詞得當。";
+                } else {
+                    feedbackEn = "Ensure this paragraph has a clear focus and supporting evidence.";
+                    feedbackZh = "確保此段落有明確重點及支持論據。";
+                    type = "improvement";
+                }
+            }
+            
+            return {
+                para_index: idx,
+                feedback: { en: feedbackEn, zh: feedbackZh },
+                type
+            };
+        });
+        
+        // Build vocabulary upgrades from common words found
+        const commonWordMap = {
+            'important': ['crucial', 'paramount', 'imperative'],
+            'good': ['commendable', 'favourable', 'meritorious'],
+            'bad': ['detrimental', 'adverse', 'deleterious'],
+            'big': ['substantial', 'considerable', 'significant'],
+            'small': ['negligible', 'marginal', 'minimal'],
+            'think': ['contend', 'postulate', 'maintain'],
+            'show': ['demonstrate', 'illustrate', 'exemplify'],
+            'help': ['facilitate', 'alleviate', 'ameliorate'],
+            'need': ['necessitate', 'mandate', 'require'],
+            'use': ['utilise', 'employ', 'leverage'],
+            'make': ['render', 'produce', 'generate'],
+            'get': ['obtain', 'acquire', 'secure'],
+            'say': ['assert', 'articulate', 'convey'],
+            'know': ['recognise', 'acknowledge', 'comprehend'],
+            'want': ['desire', 'aspire', 'seek'],
+            'thing': ['matter', 'issue', 'phenomenon'],
+            'people': ['individuals', 'citizens', 'the populace'],
+            'very': ['exceedingly', 'profoundly', 'remarkably'],
+            'many': ['numerous', 'a plethora of', 'a multitude of'],
+            'some': ['certain', 'particular', 'specific'],
+            'also': ['furthermore', 'moreover', 'in addition'],
+            'but': ['however', 'nevertheless', 'conversely'],
+            'so': ['consequently', 'therefore', 'thus'],
+            'because': ['since', 'as', 'in light of'],
+            'like': ['such as', 'for instance', 'namely'],
+            'about': ['regarding', 'concerning', 'pertaining to'],
+            'more': ['additional', 'further', 'supplementary'],
+            'most': ['the majority of', 'predominantly', 'principally'],
+            'should': ['ought to', 'is advisable to', 'is imperative that'],
+            'must': ['is compelled to', 'is obliged to', 'is mandated to'],
+            'can': ['is able to', 'is capable of', 'possesses the capacity to'],
+            'will': ['shall', 'is expected to', 'is anticipated to'],
+            'could': ['might', 'may potentially', 'could conceivably'],
+            'would': ['would presumably', 'would likely', 'would arguably'],
+            'really': ['genuinely', 'authentically', 'truly'],
+            'always': ['invariably', 'without exception', 'consistently'],
+            'never': ['under no circumstances', 'at no time', 'in no way'],
+            'often': ['frequently', 'regularly', 'habitually'],
+            'sometimes': ['occasionally', 'intermittently', 'periodically'],
+            'first': ['primarily', 'initially', 'first and foremost'],
+            'second': ['secondly', 'subsequently', 'in the second place'],
+            'last': ['ultimately', 'finally', 'in the final analysis'],
+            'end': ['conclude', 'terminate', 'culminate'],
+            'start': ['commence', 'initiate', 'embark upon'],
+            'change': ['transform', 'alter', 'modify'],
+            'problem': ['dilemma', 'predicament', 'quandary'],
+            'answer': ['response', 'reply', 'rejoinder'],
+            'question': ['inquiry', 'query', 'interrogation'],
+            'idea': ['notion', 'concept', 'conception'],
+            'reason': ['rationale', 'justification', 'basis'],
+            'result': ['outcome', 'consequence', 'repercussion'],
+            'part': ['component', 'constituent', 'segment'],
+            'place': ['location', 'venue', 'site'],
+            'time': ['period', 'era', 'epoch'],
+            'way': ['manner', 'method', 'approach'],
+            'look': ['appear', 'seem', 'present'],
+            'find': ['discover', 'ascertain', 'determine'],
+            'give': ['provide', 'furnish', 'bestow'],
+            'take': ['adopt', 'embrace', 'undertake'],
+            'come': ['arise', 'emerge', 'materialise'],
+            'go': ['proceed', 'advance', 'progress'],
+            'see': ['perceive', 'observe', 'discern'],
+            'do': ['perform', 'execute', 'accomplish'],
+            'have': ['possess', 'hold', 'retain'],
+            'be': ['constitute', 'represent', 'embody']
+        };
+        
+        const foundUpgrades = [];
+        const lowerContent = content.toLowerCase();
+        for (const [original, suggestions] of Object.entries(commonWordMap)) {
+            const regex = new RegExp(`\\b${original}\\b`, 'i');
+            if (regex.test(lowerContent) && foundUpgrades.length < 4) {
+                foundUpgrades.push({
+                    original: original.charAt(0).toUpperCase() + original.slice(1),
+                    suggestion: suggestions[0],
+                    explanation: {
+                        en: `Elevates tone from casual to academic.`,
+                        zh: `提升語氣，由日常轉為學術。`
+                    }
+                });
+            }
+        }
+        
+        // Genre checklist based on textType
+        const checklistStatus = [];
+        const genre = (textType || 'Essay').toLowerCase();
+        
+        if (genre.includes('letter') || genre.includes('email')) {
+            checklistStatus.push(
+                { item: { en: "Appropriate salutation & sign-off", zh: "合適的稱謂與結尾敬語" }, status: /\b(dear|sir|madam|yours sincerely|yours faithfully|best regards)/i.test(content) ? "met" : "missing" },
+                { item: { en: "Clear purpose stated early", zh: "開首清楚說明目的" }, status: /\b(?:writing to|am writing|purpose|regarding|concerning)/i.test(content) ? "met" : "partial" },
+                { item: { en: "Appropriate register for audience", zh: "語體適合讀者身份" }, status: /\b(?:would|could|may|might|appreciate|grateful|thank you)/i.test(content) ? "met" : "partial" }
+            );
+        } else if (genre.includes('speech') || genre.includes('debate')) {
+            checklistStatus.push(
+                { item: { en: "Engaging opening hook", zh: "引人入勝的開首" }, status: /\b(?:imagine|picture|did you know|have you ever|ladies and gentlemen|honorable judges)/i.test(content) ? "met" : "missing" },
+                { item: { en: "Clear stance / thesis", zh: "明確立場或論點" }, status: /\b(?:believe|argue|contend|maintain|position|stance|side|support|oppose)/i.test(content) ? "met" : "partial" },
+                { item: { en: "Strong concluding call-to-action", zh: "有力的結論與呼籲" }, status: /\b(?:thank you|vote for|join us|let us|together we|call upon)/i.test(content) ? "met" : "partial" }
+            );
+        } else {
+            // Generic essay/article
+            checklistStatus.push(
+                { item: { en: "Clear introduction with thesis", zh: "開首有明確論點" }, status: hasIntroduction ? "met" : "missing" },
+                { item: { en: "Body paragraphs with examples", zh: "正文段落附例子" }, status: hasExamples ? "met" : "partial" },
+                { item: { en: "Conclusion summarising stance", zh: "結論總結立場" }, status: hasConclusion ? "met" : "missing" }
+            );
+        }
+        
+        return {
+            overall_feedback: {
+                en: `**Content**: ${contentAdvice.join('; ')}. **Language**: ${languageAdvice.join('; ')}. **Organization**: ${organizationAdvice.join('; ')}.`,
+                zh: `**內容**：${contentAdvice.map(a => a).join('；')}. **語言**：${languageAdvice.map(a => a).join('；')}. **結構**：${organizationAdvice.map(a => a).join('；')}.`
+            },
+            clo_status: {
+                content: Math.round(contentScore),
+                language: Math.round(languageScore),
+                organization: Math.round(organizationScore)
+            },
+            paragraph_analysis: paragraphAnalysis,
+            vocabulary_upgrades: foundUpgrades,
+            checklist_status: checklistStatus,
+            _fallback: true
+        };
+    }
+
+    /**
+     * Merge camelCase / alternate keys from LLM JSON into the snake_case shape the API + WritingResultPage expect.
+     */
+    normalizeFinalGradePayload(data) {
+        if (!data || typeof data !== 'object') return data;
+        const examiner_summary =
+            data.examiner_summary ||
+            data.examinerSummary ||
+            data.summary ||
+            null;
+        const improvement_goal =
+            data.improvement_goal ||
+            data.improvementGoal ||
+            null;
+        const exemplar_comparison =
+            data.exemplar_comparison ||
+            data.exemplarComparison ||
+            null;
+        const model_answer_5_star =
+            data.model_answer_5_star ||
+            data.modelAnswer5Star ||
+            data.model_answer ||
+            data.modelAnswer ||
+            '';
+        const high_score_tips =
+            data.high_score_tips ||
+            data.highScoreTips ||
+            [];
+        return {
+            ...data,
+            examiner_summary,
+            improvement_goal,
+            exemplar_comparison,
+            model_answer_5_star,
+            high_score_tips
+        };
     }
 
     /**
@@ -694,9 +876,17 @@ class WritingQuestService {
             ? [{ text: promptText }, ...imageParts]
             : promptText;
 
+        // Full feedback JSON (bilingual CLO + 450w model answer) requires a large completion budget — default 1024 truncates.
+        const gradeJsonOpts = {
+            generationConfig: { maxOutputTokens: 8192 }
+        };
+
+        const proStart = Date.now();
         try {
-            const result = await this.aiService.generateJson(prompt, { model: 'ace-it-pro' });
-            const data = result.data;
+            console.log(`[WritingQuestService] Grading with ace-it-pro -> deepseek-reasoner | promptLength=${typeof prompt === 'string' ? prompt.length : JSON.stringify(prompt).length} chars | maxOutputTokens=${gradeJsonOpts.generationConfig.maxOutputTokens}`);
+            const result = await this.aiService.generateJson(prompt, { model: 'ace-it-pro', ...gradeJsonOpts });
+            console.log(`[WritingQuestService] ace-it-pro (deepseek-reasoner) succeeded in ${Date.now() - proStart}ms`);
+            const data = this.normalizeFinalGradePayload(result.data);
 
             // Normalize internal pillar keys to lowercase for deterministic frontend mapping
             const rawPillars = data.pillar_scores || data.pillarScores || {};
@@ -717,10 +907,13 @@ class WritingQuestService {
                 }
             };
         } catch (error) {
-            console.warn("[WritingQuestService] Final Grade with Pro failed, falling back to Flash:", error.message);
+            console.warn(`[WritingQuestService] Final Grade with Pro (deepseek-reasoner) FAILED after ${Date.now() - proStart}ms:`, error.message);
             try {
-                const result = await this.aiService.generateJson(prompt, { model: 'ace-it-flash' });
-                const data = result.data;
+                console.log(`[WritingQuestService] Falling back to ace-it-flash -> deepseek-chat...`);
+                const flashStart = Date.now();
+                const result = await this.aiService.generateJson(prompt, { model: 'ace-it-flash', ...gradeJsonOpts });
+                console.log(`[WritingQuestService] ace-it-flash (deepseek-chat) succeeded in ${Date.now() - flashStart}ms`);
+                const data = this.normalizeFinalGradePayload(result.data);
                 const rawPillars = data.pillar_scores || data.pillarScores || {};
                 const normalizedPillars = {};
                 Object.keys(rawPillars).forEach(key => {
@@ -738,7 +931,7 @@ class WritingQuestService {
                     }
                 };
             } catch (fallbackError) {
-                console.error("[WritingQuestService] Both Pro and Flash failed:", fallbackError);
+                console.error(`[WritingQuestService] Both Pro and Flash failed. Pro error: ${error.message}. Flash error:`, fallbackError.message);
                 return {
                     predicted_level: "4",
                     overall_score: 4,

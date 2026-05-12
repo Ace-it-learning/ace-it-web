@@ -6,48 +6,58 @@ process.on('unhandledRejection', (reason) => console.error('❌ UNHANDLED REJECT
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
-const admin = require('firebase-admin');
 const helmet = require('helmet');
 const rateLimit = require('express-rate-limit');
 require('dotenv').config({ path: path.join(__dirname, '.env') });
 
-// --- INITIALIZE FIREBASE ADMIN ---
+// --- INITIALIZE FIREBASE ADMIN (Conditional) ---
 const NODE_ENV = process.env.NODE_ENV || 'development';
+const AUTH_PROVIDER = (process.env.AUTH_PROVIDER || 'firebase').toLowerCase();
+const DATA_PROVIDER = (process.env.DATA_PROVIDER || 'firebase').toLowerCase();
 const saFilename = NODE_ENV === 'production' ? 'config/antigravity-tutor-prod-key.json' : 'config/antigravity-tutor-dev-key.json';
 const serviceAccountPath = path.join(__dirname, saFilename);
 
 // Force production mode if running on Cloud Run or project matches
 const forceProduction = !!process.env.K_SERVICE || process.env.GOOGLE_CLOUD_PROJECT === 'ace-it-production-1e0a4';
+const needsFirebase = forceProduction || AUTH_PROVIDER === 'firebase' || DATA_PROVIDER === 'firebase' || DATA_PROVIDER === 'dual';
 
-if (forceProduction || NODE_ENV === 'production') {
-    // ON CLOUD RUN: We MUST use the production key or ADC.
-    try {
-        const options = require('fs').existsSync(serviceAccountPath) 
-            ? { credential: admin.credential.cert(require(serviceAccountPath)) } 
-            : {}; // Fallback to ADC
-        
-        admin.initializeApp(options);
-        global.db = admin.firestore();
-        
-        const projectId = admin.app().options.credential.projectId || process.env.GOOGLE_CLOUD_PROJECT;
-        console.log(`\n✅ PRODUCTION BACKEND ACTIVE`);
-        console.log(`🆔 Project ID: ${projectId}`);
-    } catch (error) {
-        console.error("❌ Firebase Admin Production initialization failed:", error);
-        process.exit(1);
-    }
-} else if (require('fs').existsSync(serviceAccountPath)) {
-    // LOCAL DEVELOPMENT
-    try {
-        admin.initializeApp({ credential: admin.credential.cert(require(serviceAccountPath)) });
-        global.db = admin.firestore();
-        console.log(`\n🛠️ DEVELOPMENT BACKEND ACTIVE`);
-        console.log(`🆔 Project ID: ${admin.app().options.credential.projectId}\n`);
-    } catch (error) {
-        console.error("❌ Firebase Admin Development initialization failed:", error);
+if (needsFirebase) {
+    const admin = require('firebase-admin');
+    if (forceProduction || NODE_ENV === 'production') {
+        // ON CLOUD RUN: We MUST use the production key or ADC.
+        try {
+            const options = require('fs').existsSync(serviceAccountPath) 
+                ? { credential: admin.credential.cert(require(serviceAccountPath)) } 
+                : {}; // Fallback to ADC
+            
+            admin.initializeApp(options);
+            global.db = admin.firestore();
+            
+            const projectId = admin.app().options.credential?.projectId || process.env.GOOGLE_CLOUD_PROJECT;
+            console.log(`\n✅ PRODUCTION BACKEND ACTIVE`);
+            console.log(`🆔 Project ID: ${projectId}`);
+        } catch (error) {
+            console.error("❌ Firebase Admin Production initialization failed:", error);
+            process.exit(1);
+        }
+    } else if (require('fs').existsSync(serviceAccountPath)) {
+        // LOCAL DEVELOPMENT with Firebase
+        try {
+            admin.initializeApp({ credential: admin.credential.cert(require(serviceAccountPath)) });
+            global.db = admin.firestore();
+            console.log(`\n🛠️ DEVELOPMENT BACKEND ACTIVE (Firebase Stack)`);
+            console.log(`🆔 Project ID: ${admin.app().options.credential.projectId}\n`);
+        } catch (error) {
+            console.error("❌ Firebase Admin Development initialization failed:", error);
+        }
+    } else {
+        console.warn(`⚠️ Firebase requested but no service account found at ${saFilename}. Firestore features disabled.`);
     }
 } else {
-    console.warn(`⚠️ No Firebase Service Account found at ${saFilename}. Firestore features disabled.`);
+    console.log(`\n🛠️ DEVELOPMENT BACKEND ACTIVE (Azure Stack)`);
+    console.log(`🔐 Auth Provider: ${AUTH_PROVIDER}`);
+    console.log(`🗄️  Data Provider: ${DATA_PROVIDER}`);
+    console.log(`🤖 AI Provider: ${process.env.AI_PROVIDER || 'google'}\n`);
 }
 
 // --- INITIALIZE STRIPE ---
@@ -59,6 +69,7 @@ app.set('trust proxy', 1);
 
 // --- MIDDLEWARE ---
 app.use(helmet({ contentSecurityPolicy: false }));
+app.use('/api/payment/webhook', express.raw({ type: 'application/json' }));
 app.use(bodyParser.json({ limit: '50mb' }));
 app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
 app.use(require('./middleware/Auth0IdentityMiddleware').enrichIdentity);

@@ -4,7 +4,7 @@ import { useAuth } from '../context/AuthContext';
 import { LoadingPage } from './shared';
 
 const ProtectedRoute = ({ children }) => {
-    const { user, loading, initialized } = useAuth();
+    const { user, loading, initialized, isProfileLoading } = useAuth();
     const [isOnboarded, setIsOnboarded] = useState(null);
     const onboardedRef = useRef(null); // Ref for timeout closure safety
     const [checkedUid, setCheckedUid] = useState(null);
@@ -45,7 +45,10 @@ const ProtectedRoute = ({ children }) => {
                     const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
                     console.log(`ProtectedRoute: Fetching onboarding status for ${user.uid} (Retries left: ${retries})`);
 
-                    const res = await fetch(`${API_URL}/api/stats?uid=${user.uid}`);
+                    const controller = new AbortController();
+                    const timeoutId = setTimeout(() => controller.abort(), 10000);
+                    const res = await fetch(`${API_URL}/api/stats?uid=${user.uid}`, { signal: controller.signal });
+                    clearTimeout(timeoutId);
                     if (res.ok) {
                         const data = await res.json();
                         console.log(`ProtectedRoute: User ${user.uid} stats data:`, data);
@@ -121,8 +124,9 @@ const ProtectedRoute = ({ children }) => {
         return () => clearTimeout(timeout);
     }, [user?.uid, location.pathname]); // Removed isOnboarded from deps to prevent loop, used user?.uid for stability
 
-    // 1. Wait for initialization before making any redirection decisions
-    if (!initialized || (user && checkedUid !== user.uid)) {
+    // 1. Wait for initialization before making any redirection decisions (include profile load
+    // so Entra resolve-identity finishes before we treat missing user as "guest").
+    if (!initialized || loading || isProfileLoading || (user && checkedUid !== user.uid)) {
         return (
             <LoadingPage 
                 title="Preparing your Ace-it experience..." 
@@ -155,7 +159,7 @@ const ProtectedRoute = ({ children }) => {
 
     // 2. Handle Unauthenticated (Guest) Users
     // Only redirect if we are CERTAIN there is no user AND auth has initialized
-    if (!user && initialized) {
+    if (!user && initialized && !loading && !isProfileLoading) {
         console.log("ProtectedRoute: User confirmed GUEST, checking redirect...");
         if (location.pathname === '/onboarding' || location.pathname === '/dashboard') {
             return <Navigate to="/login" />;

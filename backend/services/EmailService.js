@@ -1,15 +1,12 @@
-const nodemailer = require('nodemailer');
+const { EmailClient } = require('@azure/communication-email');
 const moment = require('moment');
 
-// Initialize Transporter
-// NOTE: For Production, use environment variables: EMAIL_HOST, EMAIL_PORT, EMAIL_USER, EMAIL_PASS
-const transporter = nodemailer.createTransport({
-    service: 'gmail', // Or use 'smtp.example.com' with host/port options
-    auth: {
-        user: process.env.EMAIL_USER || 'aceit.tutor.demo@gmail.com',
-        pass: process.env.EMAIL_PASS || 'demo_password_placeholder'
-    }
-});
+// Initialize Azure Communication Services Email Client
+const acsClient = process.env.AZURE_COMMUNICATION_CONNECTION_STRING
+    ? new EmailClient(process.env.AZURE_COMMUNICATION_CONNECTION_STRING)
+    : null;
+
+const SENDER_ADDRESS = process.env.AZURE_SENDER_EMAIL || 'DoNotReply@ace-it.azurecomm.net';
 
 /**
  * Generates the HTML content for the weekly report
@@ -17,21 +14,36 @@ const transporter = nodemailer.createTransport({
  * @returns {string} HTML string
  */
 const generateEmailHtml = (data) => {
-    const { studentName, period, stats, mastery, mathAbility, aceSir } = data;
+    const {
+        studentName, period, stats, mastery, mathAbility, aceSir,
+        weeklyQuest, streakDays, level, xp, recentQuests, recentMock,
+        subjectBreakdown, topMistakes, recommendedNextSteps
+    } = data;
 
-    // Helper to render skills list
+    // Helper: render level bar
+    const renderLevelBar = (level) => {
+        const pct = Math.min((level / 5) * 100, 100);
+        const color = level >= 4 ? '#10b981' : level >= 3 ? '#f59e0b' : '#f43f5e';
+        return `
+            <div style="background-color: #e2e8f0; border-radius: 4px; height: 8px; overflow: hidden; margin-top: 4px;">
+                <div style="width: ${pct}%; background-color: ${color}; height: 100%; border-radius: 4px;"></div>
+            </div>
+        `;
+    };
+
+    // Helper: render skills list
     const renderSkills = (skills, emptyMsg) => {
         if (!skills || skills.length === 0) {
             return `<div style="color: #64748b; font-style: italic; font-size: 13px;">${emptyMsg}</div>`;
         }
         return skills.map(skill => `
             <div style="background-color: #f1f5f9; padding: 8px 12px; border-radius: 6px; margin-bottom: 6px; font-size: 13px; color: #334155;">
-                <span style="color: #10b981; font-weight: bold;">✓ Learned:</span> ${skill}
+                <span style="color: #10b981; font-weight: bold;">✓</span> ${typeof skill === 'string' ? skill : skill.name}
             </div>
         `).join('');
     };
 
-    // Helper to render dream programs
+    // Helper: render dream programs
     const renderDreamPrograms = (programs) => {
         if (!programs || programs.length === 0) return '<div style="color: #94a3b8; font-style: italic;">No dream programs set yet.</div>';
 
@@ -51,6 +63,120 @@ const generateEmailHtml = (data) => {
                 </div>
             </div>`;
         }).join('');
+    };
+
+    // Helper: render weekly quest badge
+    const renderWeeklyQuest = () => {
+        if (weeklyQuest?.completed) {
+            return `<div style="display: inline-flex; align-items: center; gap: 6px; background-color: #10b98120; color: #10b981; padding: 6px 12px; border-radius: 20px; font-size: 12px; font-weight: 700;">
+                <span>✓</span> Weekly Challenge Completed
+            </div>`;
+        }
+        return `<div style="display: inline-flex; align-items: center; gap: 6px; background-color: #f1f5f9; color: #64748b; padding: 6px 12px; border-radius: 20px; font-size: 12px; font-weight: 600;">
+            <span>○</span> Weekly Challenge Not Yet Completed
+        </div>`;
+    };
+
+    // Helper: render recent quests
+    const renderRecentQuests = () => {
+        if (!recentQuests || recentQuests.length === 0) {
+            return '<div style="color: #94a3b8; font-style: italic; font-size: 13px;">No quests completed this week.</div>';
+        }
+        return recentQuests.map(q => `
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid #f1f5f9;">
+                <div>
+                    <div style="font-weight: 600; color: #1e293b; font-size: 13px;">${q.topic}</div>
+                    <div style="color: #94a3b8; font-size: 11px; text-transform: uppercase;">${q.type || 'Quest'}</div>
+                </div>
+                ${q.score ? `<div style="font-weight: 800; color: #3b82f6; font-size: 14px;">${q.score}</div>` : ''}
+            </div>
+        `).join('');
+    };
+
+    // Helper: render subject pillars/strands
+    const renderSubjectBreakdown = () => {
+        const en = subjectBreakdown?.english;
+        const math = subjectBreakdown?.maths;
+        let html = '';
+
+        if (en?.pillars?.length) {
+            html += `<div style="margin-bottom: 16px;">
+                <div style="font-weight: 700; color: #0f172a; font-size: 13px; margin-bottom: 8px;">English</div>
+                ${en.pillars.map(p => `
+                    <div style="margin-bottom: 8px;">
+                        <div style="display: flex; justify-content: space-between; font-size: 12px; color: #475569;">
+                            <span>${p.name}</span>
+                            <span style="font-weight: 700;">Lv ${p.level}</span>
+                        </div>
+                        ${renderLevelBar(p.level)}
+                    </div>
+                `).join('')}
+            </div>`;
+        }
+
+        if (math?.strands?.length) {
+            html += `<div>
+                <div style="font-weight: 700; color: #0f172a; font-size: 13px; margin-bottom: 8px;">Mathematics</div>
+                ${math.strands.map(s => `
+                    <div style="margin-bottom: 8px;">
+                        <div style="display: flex; justify-content: space-between; font-size: 12px; color: #475569;">
+                            <span>${s.name}</span>
+                            <span style="font-weight: 700;">Lv ${s.level}</span>
+                        </div>
+                        ${renderLevelBar(s.level)}
+                    </div>
+                `).join('')}
+            </div>`;
+        }
+
+        return html || '<div style="color: #94a3b8; font-style: italic; font-size: 13px;">No subject data available yet.</div>';
+    };
+
+    // Helper: render recent mock
+    const renderRecentMock = () => {
+        if (!recentMock) return '';
+        return `
+            <div style="background-color: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 14px; margin-top: 12px;">
+                <div style="font-weight: 700; color: #0369a1; font-size: 13px; margin-bottom: 6px;">📝 Recent Mock Exam</div>
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <div>
+                        <div style="font-weight: 600; color: #0f172a; font-size: 14px;">${recentMock.paper}</div>
+                        ${recentMock.level ? `<div style="color: #64748b; font-size: 12px;">Level: ${recentMock.level}</div>` : ''}
+                    </div>
+                    <div style="text-align: right;">
+                        ${recentMock.percentage !== null ? `<div style="font-size: 20px; font-weight: 800; color: #0284c7;">${recentMock.percentage}%</div>` : ''}
+                        ${recentMock.score !== null && recentMock.total !== null ? `<div style="font-size: 12px; color: #64748b;">${recentMock.score}/${recentMock.total}</div>` : ''}
+                    </div>
+                </div>
+            </div>
+        `;
+    };
+
+    // Helper: render top mistakes
+    const renderMistakes = () => {
+        if (!topMistakes || topMistakes.length === 0) {
+            return '<div style="color: #94a3b8; font-style: italic; font-size: 13px;">No mistakes recorded this week. Great job!</div>';
+        }
+        return topMistakes.map(m => `
+            <div style="display: flex; align-items: center; gap: 8px; padding: 8px 0; border-bottom: 1px solid #f1f5f9;">
+                <span style="color: #f43f5e; font-size: 12px;">●</span>
+                <span style="font-size: 13px; color: #334155;">${m.term}</span>
+                <span style="font-size: 10px; text-transform: uppercase; color: #94a3b8; margin-left: auto;">${m.subject}</span>
+            </div>
+        `).join('');
+    };
+
+    // Helper: render recommended next steps
+    const renderNextSteps = () => {
+        if (!recommendedNextSteps || recommendedNextSteps.length === 0) {
+            return '<div style="color: #94a3b8; font-style: italic; font-size: 13px;">Keep up the good work!</div>';
+        }
+        return recommendedNextSteps.map(step => `
+            <div style="display: flex; align-items: center; gap: 8px; padding: 8px 0; border-bottom: 1px solid #f1f5f9;">
+                <span style="color: #3b82f6; font-size: 14px;">→</span>
+                <span style="font-size: 13px; color: #334155;">${step}</span>
+            </div>
+        `).join('');
     };
 
     return `
@@ -103,27 +229,72 @@ const generateEmailHtml = (data) => {
                         <span class="stat-value" style="color: #8b5cf6;">${stats.sessionsCount}</span>
                         <span class="stat-label">Active Sessions</span>
                     </div>
+                    <div class="stat-card">
+                        <span class="stat-value" style="color: #f59e0b;">Lv ${level}</span>
+                        <span class="stat-label">Current Level</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-value" style="color: #10b981;">${xp.toLocaleString()}</span>
+                        <span class="stat-label">Total XP</span>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 12px;">
+                    ${renderWeeklyQuest()}
+                    ${streakDays > 0 ? `<div style="display: inline-flex; align-items: center; gap: 4px; margin-left: 8px; background-color: #fef3c7; color: #d97706; padding: 6px 12px; border-radius: 20px; font-size: 12px; font-weight: 700;">
+                        🔥 ${streakDays} Day Streak
+                    </div>` : ''}
                 </div>
             </div>
 
-            <!-- Progress Update -->
+            <!-- Recent Quests -->
+            <div class="section">
+                <div class="section-title">
+                    <span>⚔️</span> Recent Quests
+                </div>
+                ${renderRecentQuests()}
+            </div>
+
+            <!-- Subject Breakdown -->
+            <div class="section">
+                <div class="section-title">
+                    <span>📊</span> Subject Breakdown
+                </div>
+                ${renderSubjectBreakdown()}
+                ${renderRecentMock()}
+            </div>
+
+            <!-- Progress Update (Legacy compatibility) -->
             <div class="section">
                 <div class="stats-grid">
-                    <!-- English -->
                     <div>
                          <div class="section-title" style="font-size: 14px; margin-bottom: 12px;">
-                            <span style="color: #f59e0b;">●</span> English Mastery
+                            <span style="color: #f59e0b;">●</span> English Focus Areas
                          </div>
                          ${renderSkills(mastery.recentSkills, "No new skills mastered this week.")}
                     </div>
-                    <!-- Math -->
                     <div>
                          <div class="section-title" style="font-size: 14px; margin-bottom: 12px;">
-                            <span style="color: #06b6d4;">●</span> Math Ability
+                            <span style="color: #06b6d4;">●</span> Math Focus Areas
                          </div>
                          ${renderSkills(mathAbility.recentTopics, "No new topics covered this week.")}
                     </div>
                 </div>
+            </div>
+
+            <!-- Top Mistakes -->
+            <div class="section">
+                <div class="section-title">
+                    <span>📝</span> Top Mistakes to Review
+                </div>
+                ${renderMistakes()}
+            </div>
+
+            <!-- Recommended Next Steps -->
+            <div class="section">
+                <div class="section-title">
+                    <span>🎯</span> Recommended Next Steps
+                </div>
+                ${renderNextSteps()}
             </div>
 
             <!-- Ace Sir Strategic Corner -->
@@ -162,36 +333,48 @@ const generateEmailHtml = (data) => {
 };
 
 /**
- * Sends the weekly report email
- * @param {string} toEmail - Recipient email
+ * Sends the weekly report email to one or more recipients
+ * @param {string[]} recipients - Array of recipient email addresses
  * @param {Object} reportData - Data to populate the template
  */
-const sendWeeklyReport = async (toEmail, reportData) => {
+const sendWeeklyReport = async (recipients, reportData) => {
     try {
         const htmlContent = generateEmailHtml(reportData);
 
-        // If no real credentials, just log it (Dev Mode)
-        if (!process.env.EMAIL_USER && !process.env.EMAIL_PASS) {
-            console.log('=====================================================');
-            console.log(`[EmailService] 📧 SKIPPING SEND (No Credentials)`);
-            console.log(`[EmailService] To: ${toEmail}`);
-            console.log(`[EmailService] Subject: Weekly Progress Report: ${reportData.studentName}`);
-            console.log(`[EmailService] HTML Preview (First 500 chars):`);
-            console.log(htmlContent.substring(0, 500) + '...');
-            console.log('=====================================================');
-            return { success: true, mock: true };
+        // Validate recipients
+        const toList = Array.isArray(recipients) ? recipients : [recipients];
+        const validRecipients = toList.filter(r => r && typeof r === 'string' && r.includes('@'));
+        if (validRecipients.length === 0) {
+            throw new Error('No valid recipient email addresses provided');
         }
 
-        // Real Send
-        const info = await transporter.sendMail({
-            from: '"Ace It! AI Tutor" <no-reply@aceit.com>',
-            to: toEmail,
-            subject: `Weekly Progress Report: ${reportData.studentName} (${reportData.period})`,
-            html: htmlContent
-        });
+        // Dev Mode: No ACS client configured — log to console
+        if (!acsClient) {
+            console.log('=====================================================');
+            console.log(`[EmailService] 📧 SKIPPING SEND (No ACS Client)`);
+            console.log(`[EmailService] Recipients: ${validRecipients.join(', ')}`);
+            console.log(`[EmailService] Subject: Weekly Progress Report: ${reportData.studentName}`);
+            console.log(`[EmailService] HTML Preview (First 800 chars):`);
+            console.log(htmlContent.substring(0, 800) + '...');
+            console.log('=====================================================');
+            return { success: true, mock: true, recipients: validRecipients };
+        }
 
-        console.log(`[EmailService] Message sent: ${info.messageId}`);
-        return { success: true, messageId: info.messageId };
+        // Send to all recipients
+        const results = [];
+        for (const toEmail of validRecipients) {
+            const poller = await acsClient.beginSend({
+                senderAddress: SENDER_ADDRESS,
+                recipients: { to: [{ address: toEmail }] },
+                subject: `Weekly Progress Report: ${reportData.studentName} (${reportData.period})`,
+                htmlBody: htmlContent
+            });
+            const result = await poller.pollUntilDone();
+            console.log(`[EmailService] Message sent to ${toEmail}: ${result.id}`);
+            results.push({ email: toEmail, messageId: result.id, status: 'sent' });
+        }
+
+        return { success: true, results };
 
     } catch (error) {
         console.error('[EmailService] Failed to send email:', error);

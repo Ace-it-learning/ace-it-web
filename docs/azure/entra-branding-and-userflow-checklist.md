@@ -57,7 +57,7 @@ Path: `Entra ID -> External Identities -> User flows`
 1. In app UX, keep separate CTA buttons:
    - Continue with Google
    - Continue with Email
-2. Keep frontend `domain_hint=google.com` and account prompt behavior.
+2. Keep frontend **External ID** issuer hint `domain_hint=google` (not `google.com`; that is the B2C-style value). Account prompt may remain as configured.
 3. Validate expected behavior:
    - Clicking Google should usually jump directly to Google account chooser.
    - Fallback provider chooser page should be rare and still branded.

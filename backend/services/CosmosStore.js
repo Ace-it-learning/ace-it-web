@@ -594,6 +594,64 @@ class CosmosStore {
         await Promise.all((rows.resources || []).map((r) => c.item(r.id, r.pk).delete().catch(() => null)));
         return rows.resources?.length || 0;
     }
+
+    // ─── Report Logs (for weekly progress report tracking) ───
+
+    async logReportSent(uid, payload = {}) {
+        const c = await this.container("report_logs");
+        const weekId = payload.weekId || this._getWeekId();
+        const id = `report_${uid}_${weekId}`;
+        const doc = {
+            id,
+            pk: uid,
+            uid,
+            weekId,
+            status: payload.status || 'sent',
+            recipients: payload.recipients || [],
+            provider: payload.provider || null,
+            error: payload.error || null,
+            sentAt: payload.sentAt || new Date().toISOString(),
+            reportData: payload.reportData || null
+        };
+        await c.items.upsert(doc);
+        return doc;
+    }
+
+    async getReportLog(uid, weekId) {
+        const c = await this.container("report_logs");
+        const id = `report_${uid}_${weekId}`;
+        try {
+            const { resource } = await c.item(id, uid).read();
+            return resource || null;
+        } catch (error) {
+            if (error.code === 404) return null;
+            throw error;
+        }
+    }
+
+    async listReportLogs(uid, limit = 10) {
+        const c = await this.container("report_logs");
+        const top = Math.min(Math.max(Number(limit) || 10, 1), 100);
+        const result = await c.items.query({
+            query: `SELECT TOP ${top} c.weekId, c.status, c.recipients, c.sentAt, c.error FROM c WHERE c.pk = @uid ORDER BY c.sentAt DESC`,
+            parameters: [{ name: "@uid", value: uid }]
+        }).fetchAll();
+        return result.resources || [];
+    }
+
+    async wasReportSentThisWeek(uid, weekId) {
+        const log = await this.getReportLog(uid, weekId);
+        return log && log.status === 'sent';
+    }
+
+    _getWeekId() {
+        const now = new Date();
+        const year = now.getFullYear();
+        const start = new Date(year, 0, 1);
+        const days = Math.floor((now - start) / (24 * 60 * 60 * 1000));
+        const weekNum = Math.ceil((days + start.getDay() + 1) / 7);
+        return `${year}-W${String(weekNum).padStart(2, '0')}`;
+    }
 }
 
 module.exports = new CosmosStore();

@@ -13,6 +13,19 @@ function getStableUidFromSub(sub, prefix = 'idp') {
     return `${prefix}_${sub.replace(/[|/]/g, '_')}`;
 }
 
+const jwksClientCache = new Map();
+const JWKS_REQUEST_TIMEOUT_MS = 10000;
+
+function getCachedJwksClient(jwksUri) {
+    if (!jwksClientCache.has(jwksUri)) {
+        jwksClientCache.set(
+            jwksUri,
+            jwksClient({ jwksUri, cache: true, cacheMaxEntries: 5, cacheMaxAge: 600000 })
+        );
+    }
+    return jwksClientCache.get(jwksUri);
+}
+
 async function verifyEntraToken(token) {
     const tenantId = process.env.ENTRA_TENANT_ID;
     const audience = process.env.ENTRA_AUDIENCE;
@@ -40,9 +53,13 @@ async function verifyEntraToken(token) {
 
     for (const issuer of issuersToTry) {
         for (const jwksUri of jwksToTry) {
-            const client = jwksClient({ jwksUri, cache: true, cacheMaxEntries: 5, cacheMaxAge: 600000 });
+            const client = getCachedJwksClient(jwksUri);
             const getKey = (header, callback) => {
+                const timeoutId = setTimeout(() => {
+                    callback(new Error(`JWKS signing key request timed out after ${JWKS_REQUEST_TIMEOUT_MS}ms`));
+                }, JWKS_REQUEST_TIMEOUT_MS);
                 client.getSigningKey(header.kid, (err, key) => {
+                    clearTimeout(timeoutId);
                     if (err) return callback(err);
                     callback(null, key.getPublicKey());
                 });

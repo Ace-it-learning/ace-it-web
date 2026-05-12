@@ -156,9 +156,14 @@ router.post('/grade', async (req, res) => {
     if (!finalContent) return res.status(400).json({ error: "Content/Answer required" });
     if (!uid || uid === 'guest') return res.status(401).json({ error: "Missing resolved uid" });
 
+    console.log(`[WritingRoutes] Grade request received | uid=${uid} | topic="${finalTopic}" | textType=${finalTextType} | contentLength=${finalContent.length}`);
+
     try {
         const persona = await UserProfileService.getPersona(uid, 'english');
+        console.log(`[WritingRoutes] Calling gradeFinalPiece with model=ace-it-pro (deepseek-reasoner)...`);
+        const gradeStart = Date.now();
         const result = await WritingQuestService.gradeFinalPiece(finalTopic, finalTextType, finalContent);
+        console.log(`[WritingRoutes] gradeFinalPiece completed in ${Date.now() - gradeStart}ms | predicted_level=${result.predicted_level}`);
         
         // Inject identity into assessment
         if (result.examiner_summary) {
@@ -185,16 +190,23 @@ router.post('/grade', async (req, res) => {
         }
         
         // --- UPDATE MASTERY ---
+        // Use individual pillar scores (not the overall average) so each C-L-O skill
+        // tracks its own proficiency accurately on the radar chart.
         if (uid && uid !== 'guest' && result.pillar_scores) {
-            const masteryScore = (result.overall_score || 4) / 7 * 100;
-            const writingSkills = ['writing_content', 'writing_language', 'writing_organization'];
-            
-            const masteryPromises = writingSkills.map(skillId => 
-                UserProfileService.updateMicroSkillLevel(uid, 'english', skillId, masteryScore, {
+            const pillars = result.pillar_scores;
+            const pillarMap = {
+                'writing_content': pillars.content?.score || pillars.content || result.overall_score || 4,
+                'writing_language': pillars.language?.score || pillars.language || result.overall_score || 4,
+                'writing_organization': pillars.organization?.score || pillars.organization || result.overall_score || 4
+            };
+
+            const masteryPromises = Object.entries(pillarMap).map(([skillId, pillarScore]) => {
+                const masteryScore = (pillarScore / 7) * 100;
+                return UserProfileService.updateMicroSkillLevel(uid, 'english', skillId, masteryScore, {
                     type: 'Quest',
                     difficulty: 4
-                })
-            );
+                });
+            });
             await Promise.all(masteryPromises);
         }
 
@@ -240,8 +252,9 @@ router.post('/grade', async (req, res) => {
             xp_awarded: 0
         });
     } catch (err) {
-        console.error(err);
-        res.status(500).json({ error: "Grading failed" });
+        console.error(`[WritingRoutes] Grade endpoint error:`, err.message);
+        console.error(err.stack);
+        res.status(500).json({ error: "Grading failed", detail: err.message });
     }
 });
 

@@ -692,7 +692,12 @@ export const translations = {
                     p1: "Evaluate the persuasive effectiveness of this argument and suggest 3 high-level rhetorical devices to strengthen it.",
                     p2: "Compare the tone of these two passages and explain how their different linguistic choices impact the reader's perception.",
                     p3: "Predict potential DSE examiner pitfalls in this writing sample and provide a corrected version with 5+ Level 5** vocabulary upgrades.",
-                    p4: "Transform this informal brainstorm into a structured DSE Level 5+ essay outline with thematic topic sentences and cohesive ties."
+                    p4: "Transform this informal brainstorm into a structured DSE Level 5+ essay outline with thematic topic sentences and cohesive ties.",
+                    p5: "Generate 10 high-scoring collocations and phrasal verbs for the topic '[insert topic]', and show me how to use each in a DSE-style sentence.",
+                    p6: "Analyse my Paper 3 Listening & Integrated Skills data file notes. Point out any missing data points and suggest a more concise note-taking format.",
+                    p7: "Give me 5 different ways to start a DSE Paper 2 Part B argumentative essay, ranging from provocative to analytical, with a brief explanation of each hook's effect.",
+                    p8: "I'm stuck on this reading comprehension question. Break down the question type (e.g., inference, tone, purpose) and teach me the step-by-step strategy to locate the correct answer.",
+                    p9: "Review my speaking group discussion script. Identify where I should add discourse markers, hedging language, and turn-taking phrases to sound more natural and score higher."
                 },
                 maths: {
                     title: "Maths",
@@ -706,7 +711,12 @@ export const translations = {
                     p1: "What's my current estimated grade based on my recent performance across all subjects?",
                     p2: "Any suggested Quest for me on more unique about Ace It?",
                     p3: "How does my current progress align with my Top 3 JUPAS dream programs? Show me a gap analysis.",
-                    p4: "Generate a 7-day 'Survival Plan' to help me bridge the gap to my target Level 5** in my weakest module."
+                    p4: "Generate a 7-day 'Survival Plan' to help me bridge the gap to my target Level 5** in my weakest module.",
+                    p5: "Create a personalised 30-day revision timetable for me. I want to focus on [insert weak topics] and improve by at least one grade level.",
+                    p6: "I'm feeling burnt out and unmotivated. Give me a 10-minute pep talk and 3 actionable habits I can start today to regain momentum.",
+                    p7: "Analyse my recent mock exam mistakes. Categorise them by type (careless, knowledge gap, time pressure, misreading) and tell me which one to tackle first.",
+                    p8: "What are the top 5 most common reasons students drop marks in DSE Paper 1 Reading, and how can I avoid each one?",
+                    p9: "Simulate a 5-minute pre-exam ritual for me — including breathing exercises, positive affirmations, and a quick mental checklist — to reduce anxiety on exam day."
                 }
             }
         },
@@ -1411,6 +1421,11 @@ export const translations = {
                     p2: "比較這兩段文字的語氣，並解釋不同的語言選擇如何影響讀者的感知。",
                     p3: "預測這篇寫作樣本中可能出現的 DSE 閱卷員陷阱，並提供一個包含 5+ 個 5** 級詞彙升級的修改版本。",
                     p4: "將這段集思廣益轉化為結構化的 DSE Level 5+ 論文大綱，包含主題句和銜接詞。",
+                    p5: "為主題『[insert topic]』生成 10 個高分搭配詞和短語動詞，並展示如何在 DSE 風格的句子中使用每一個。",
+                    p6: "分析我的 Paper 3 聆聽及綜合能力數據文件筆記。指出任何遺漏的數據點，並建議更簡潔的筆記格式。",
+                    p7: "給我 5 種不同的 DSE Paper 2 Part B 議論文開頭方式，從挑釁性到分析性，並簡要解釋每種開頭的效果。",
+                    p8: "我在這道閱讀理解題上卡住了。拆解題目類型（例如推論、語氣、目的），並教我逐步定位正確答案的策略。",
+                    p9: "檢視我的小組討論講稿。指出我應該在哪裡加入話語標記、緩衝語言和輪轉短語，讓聽起來更自然、得分更高。"
                 },
                 maths: {
                     title: "數學科",
@@ -1425,6 +1440,11 @@ export const translations = {
                     p2: "你能根據我在 Ace It 上的學習進度，為我推薦一個獨特的「任務」（Quest）嗎？",
                     p3: "我目前的進度與我的前 3 個 JUPAS 目標課程的一致性如何？請展示差距分析。",
                     p4: "生成一個為期 7 天的「生存計劃」，幫助我在最弱的模組中縮小與目標 Level 5** 的差距。",
+                    p5: "為我制定一個個人化的 30 天溫習時間表。我想專注於 [insert weak topics]，並至少提升一個等級。",
+                    p6: "我感到筋疲力盡且缺乏動力。給我一段 10 分鐘的打氣說話，以及 3 個今天就可以開始的實用習慣來重拾動力。",
+                    p7: "分析我最近模擬試的錯誤。按類型分類（粗心、知識漏洞、時間壓力、誤讀題目），並告訴我應該先解決哪一個。",
+                    p8: "學生在 DSE Paper 1 閱讀中最常失分的 5 個原因是什麼？我該如何避免每一個？",
+                    p9: "為我模擬一個 5 分鐘的考前儀式——包括呼吸練習、正面肯定語和快速心理清單——以減少考試當天的焦慮。"
                 }
             }
         },

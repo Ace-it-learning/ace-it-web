@@ -58,5 +58,8 @@ build/
 .DS_Store
 Thumbs.db
 
+# Local tooling binaries (do not commit)
+stripe.exe
+
 # Backup Archives
 *.zip

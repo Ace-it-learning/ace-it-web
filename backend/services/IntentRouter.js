@@ -16,6 +16,7 @@ RULES:
    - CONFIRMATION: "Yes", "Sure", "Okay", "Ok", "Proceed", "好呀", "得呀", "好" (ONLY if the student is responding to a SPECIFIC PROPOSAL from the agent in the immediate history, e.g., "Would you like to try...?", "Shall we start...?", or mentioning a specific Lab/Exam). If there is no proposal in context, treat as CHAT.
    - Module: "LEARNING_LAB"
    - Params: { topic: string, level: string, focus: string[] }
+   - LEVEL RULE: Use ONLY these exact level values: "3" (Easy), "4" (Medium), "5" (DSE Standard), "7" (Elite). NEVER use "1", "2", or "6".
 
 3. EXAM: 
    - Mock exams, past papers, or specific paper tests.

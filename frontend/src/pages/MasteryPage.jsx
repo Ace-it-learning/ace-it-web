@@ -59,6 +59,24 @@ const MasteryPage = () => {
             if (lower.startsWith('speaking_')) return 'speaking';
             return null;
         };
+        // Exclude pseudo-skills that are quest trackers, not real micro-skills
+        const isPseudoSkill = (skillId) => {
+            const id = String(skillId || '').toLowerCase();
+            return id === 'writing_quest' || id === 'listening_quest';
+        };
+        // For each paper, only show the HKEAA pillar skills on the radar.
+        // Granular skills are tracked internally but not displayed as separate axes.
+        const isGranularSkill = (skillId) => {
+            const id = String(skillId || '');
+            const writingPillars = ['writing_content', 'writing_language', 'writing_organization'];
+            const listeningPillars = ['listening_part_a', 'listening_content', 'listening_language', 'listening_organization'];
+            const speakingPillars = ['speaking_delivery', 'speaking_strategies', 'speaking_language', 'speaking_organization'];
+            const allPillars = [...writingPillars, ...listeningPillars, ...speakingPillars];
+            if (id.startsWith('writing_') || id.startsWith('listening_') || id.startsWith('speaking_')) {
+                return !allPillars.includes(id);
+            }
+            return false;
+        };
         return Object.entries(skillsObj)
             .map(([skillId, raw]) => {
                 const level = typeof raw === 'object' ? Number(raw.level || 0) : Number(raw || 0);
@@ -73,7 +91,7 @@ const MasteryPage = () => {
                     raw
                 };
             })
-            .filter((s) => s.paper && Number.isFinite(s.level));
+            .filter((s) => s.paper && Number.isFinite(s.level) && !isPseudoSkill(s.skillId) && !isGranularSkill(s.skillId));
     };
 
     const getFilteredSkills = () => {
@@ -82,17 +100,17 @@ const MasteryPage = () => {
         
         if (viewMode === 'mock') {
             const averages = {
-                [t('mastery.reading')]: 0,
-                [t('mastery.writing')]: 0,
-                [t('mastery.listening')]: 0,
-                [t('mastery.speaking')]: 0
+                [t('mastery.reading')]: 1,
+                [t('mastery.writing')]: 1,
+                [t('mastery.listening')]: 1,
+                [t('mastery.speaking')]: 1
             };
             
             const paperSum = { reading: 0, writing: 0, listening: 0, speaking: 0 };
             const paperCount = { reading: 0, writing: 0, listening: 0, speaking: 0 };
 
             normalized.forEach(({ paper, level }) => {
-                if (paper && paperSum.hasOwnProperty(paper)) {
+                if (paper && paperSum.hasOwnProperty(paper) && level > 0) {
                     paperSum[paper] += level;
                     paperCount[paper] += 1;
                 }
@@ -110,15 +128,17 @@ const MasteryPage = () => {
         const paperID = selectedPaper.toLowerCase();
         
         // 1. Pre-populate with all skills for this paper from taxonomy, defaulting to Level 1
-        const allSkillIds = getSkillsByPaper(paperID);
+        const allSkillIds = getSkillsByPaper(paperID)
+            .filter(id => id !== 'writing_quest' && id !== 'listening_quest');
         allSkillIds.forEach((skillId) => {
             const name = getSkillName(skillId, language);
-            filtered[name] = 0;
+            filtered[name] = 14.28; // Level 1 baseline on 0-100 scale (7 levels = 14.28 each)
         });
 
         // 2. Overwrite with actual user data if it exists (including fallback-prefixed skills)
+        //    Only overwrite if level > 0 to preserve the Level 1 default for unassessed skills
         normalized
-            .filter((s) => s.paper === paperID)
+            .filter((s) => s.paper === paperID && s.level > 0)
             .forEach((s) => {
                 if (s.name) {
                     filtered[s.name] = s.level * 14.28;
@@ -126,13 +146,17 @@ const MasteryPage = () => {
             });
 
         // 3. Keep taxonomy label continuity where IDs are known
+        //    BUT do NOT overwrite with 0 if the skill has no data — preserve the Level 1 default
         Object.entries(MICRO_SKILLS).forEach(([skillId]) => {
             const paper = getPaperBySkill(skillId);
             if (paper === paperID && skillsObj[skillId]) {
                 const name = getSkillName(skillId, language);
                 const data = skillsObj[skillId];
                 const level = typeof data === 'object' ? Number(data.level || 0) : Number(data || 0);
-                filtered[name] = level * 14.28;
+                // Only overwrite if there is actual data (level > 0); otherwise keep the Level 1 default
+                if (level > 0) {
+                    filtered[name] = level * 14.28;
+                }
             }
         });
         return filtered;
@@ -149,15 +173,19 @@ const MasteryPage = () => {
         if (viewMode === 'mock') {
             ['Reading', 'Writing', 'Listening', 'Speaking'].forEach(paper => {
                 const pID = paper.toLowerCase();
-                const paperSkills = Object.keys(previousDataRaw).filter(s => s.toLowerCase().startsWith(pID));
-                const vals = paperSkills.map(s => typeof previousDataRaw[s] === 'object' ? (previousDataRaw[s].level || 0) : (previousDataRaw[s] || 0));
-                const avg = vals.reduce((a, b) => a + b, 0) / (vals.length || 1);
+                const paperSkills = Object.keys(previousDataRaw).filter(s => {
+                    const lower = s.toLowerCase();
+                    return lower.startsWith(pID) && lower !== 'writing_quest' && lower !== 'listening_quest';
+                });
+                const vals = paperSkills.map(s => typeof previousDataRaw[s] === 'object' ? (previousDataRaw[s].level || 0) : (previousDataRaw[s] || 0)).filter(v => v > 0);
+                const avg = vals.length > 0 ? (vals.reduce((a, b) => a + b, 0) / vals.length) : 1;
                 processed[t(`mastery.${paper.toLowerCase()}`)] = avg;
             });
         } else {
             const paperID = selectedPaper.toLowerCase();
             Object.entries(previousDataRaw).forEach(([skillId, data]) => {
-                if (skillId.toLowerCase().startsWith(paperID)) {
+                const lower = skillId.toLowerCase();
+                if (lower.startsWith(paperID) && lower !== 'writing_quest' && lower !== 'listening_quest') {
                     const name = getSkillName(skillId, language);
                     const level = typeof data === 'object' ? (data.level || 0) : (data || 0);
                     processed[name] = level * 14.28;

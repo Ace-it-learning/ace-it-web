@@ -1,11 +1,22 @@
 import React from 'react';
 import { X, WifiOff, CheckCircle2, AlertTriangle } from 'lucide-react';
 
-const AlertModal = ({ isOpen, type = 'info', message, onClose, onRetry }) => {
+const AlertModal = ({ isOpen, type = 'info', message, onClose, onRetry, onConfirm }) => {
     if (!isOpen) return null;
 
     // Determine Icon and Color based on type
     const styles = getAlertStyles(type);
+
+    const handlePrimaryClick = async () => {
+        if (onConfirm) {
+            try {
+                await Promise.resolve(onConfirm());
+            } catch (e) {
+                console.error('[AlertModal] onConfirm failed:', e);
+            }
+        }
+        onClose();
+    };
 
     return (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 animate-in fade-in duration-200">
@@ -46,7 +57,7 @@ const AlertModal = ({ isOpen, type = 'info', message, onClose, onRetry }) => {
                             </button>
                         )}
                         <button
-                            onClick={onClose}
+                            onClick={handlePrimaryClick}
                             className={`flex-1 py-2.5 px-4 text-white rounded-xl font-bold shadow-lg shadow-gray-200 transition-all active:scale-95 ${styles.btn}`}
                         >
                             {onRetry ? 'Close' : 'OK'}

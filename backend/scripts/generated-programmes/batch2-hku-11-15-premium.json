@@ -1,0 +1,887 @@
+{
+  "_meta": {
+    "batch": 2,
+    "version": "premium",
+    "sections": 8,
+    "programmes": 5,
+    "generated": "2026-05-13",
+    "status": "complete"
+  },
+  "JS6901": {
+    "code": "JS6901",
+    "nameEn": "Bachelor of Science",
+    "nameZh": "理學士",
+    "university": "HKU",
+    "faculty": "Faculty of Science",
+    "median": 33,
+    "category": "science",
+    "en": {
+      "sections": {
+        "admission": {
+          "bullets": [
+            "Minimum DSE requirements: 4 core subjects + 2 electives with Level 3 in English and Chinese, Level 2 in Maths and Liberal Studies",
+            "Typical admission score: median 33 points (Best 6 subjects), lower quartile ~31, upper quartile ~35",
+            "Preferred electives: Biology, Chemistry, Physics, Mathematics (M1/M2), strong performance in science subjects highly valued",
+            "Interview: Not required for standard admission; may be invited for scholarship consideration or special talent admission",
+            "Alternative entry: IB (32+ points), GCE A-Level (AAA in 3 AL subjects including science), SAT (1350+) with AP science subjects"
+          ]
+        },
+        "curriculum": {
+          "bullets": [
+            "Year 1: Common science foundation — courses in chemistry, physics, biology, mathematics, plus interdisciplinary science inquiry; students explore major options before declaration",
+            "Year 2: Major declaration from 16 science majors including Biochemistry, Biological Sciences, Chemistry, Ecology, Geology, Mathematics, Physics, Risk Management, Statistics, etc.",
+            "Major structure: 72-credit major requirement including core courses (36 credits), elective courses (24 credits), and capstone research project (12 credits)",
+            "Research immersion: HKU Summer Research Programme, overseas research internships (Cambridge, Oxford, UC Berkeley, ETH Zurich partnerships)",
+            "Interdisciplinary options: Minor in Data Science, Minor in Artificial Intelligence, Environmental Science concentration, Science Entrepreneurship track",
+            "Experiential learning: 120+ hours of laboratory work per year, field trips (Sai Kung marine biology, Mai Po wetlands ecology, overseas geology field camp)",
+            "Final year: Independent research project (FYP) under faculty supervision; opportunity to publish in peer-reviewed journals or present at international conferences"
+          ]
+        },
+        "career": {
+          "bullets": [
+            "Research & Academia: PhD programmes at top universities (MIT, Stanford, Cambridge, Imperial); HKU offers guaranteed PhD interview for first-class honours graduates",
+            "Healthcare & Pharmaceuticals: Medical technologist, clinical research associate, pharmaceutical scientist at companies like Roche, Pfizer, AstraZeneca",
+            "Data Science & Technology: Quantitative analyst, data scientist, AI researcher at Google, Meta, ByteDance, investment banks (Goldman Sachs, Morgan Stanley)",
+            "Education: Science teacher (PGDE pathway), curriculum developer, education technology specialist; HKU Faculty of Education offers accelerated PGDE admission",
+            "Government & Public Sector: Environmental Protection Officer, Agriculture Fisheries & Conservation Department, Hong Kong Observatory, Government Laboratory",
+            "Startups & Entrepreneurship: HKU iDendron incubator supports science startups; recent graduates founded biotech and cleantech ventures with seed funding"
+          ]
+        },
+        "campus": {
+          "bullets": [
+            "Science facilities: Swire Building (modern labs), Kadoorie Biological Sciences Building, James Hsioung Lee Science Building with NMR, mass spectrometry, electron microscopy suites",
+            "Libraries: Main Library science collection (500,000+ volumes), Yu Chun Keung Medical Library for biomedical majors, 24-hour study spaces during exam periods",
+            "Student life: 40+ science-related student societies including Biology Society, Chemistry Society, Physics Society, Data Science Society, Women in STEM",
+            "Residential halls: 13 halls of residence guaranteed for first-year students; science students often cluster in Lee Hysan Hall, Starr Hall, or Morrison Hall",
+            "Location advantage: Main Campus in Pok Fu Lam — 10 minutes to Central for internships, adjacent to Queen Mary Hospital for clinical research opportunities"
+          ]
+        },
+        "competitiveness": {
+          "bullets": [
+            "Admission statistics: ~1,200 applicants for ~450 places (3:1 ratio), making it moderately competitive among HKU programmes",
+            "Score distribution: 75% of admitted students score 31-36 points; students with 30 or below need exceptional science subject performance (5** in 2+ science electives)",
+            "Subject weighting: Science electives carry implicit weight — candidates with Biology/Chemistry/Physics at Level 5+ have significantly higher admission probability",
+            "Comparison with CUHK Science (JS4601): HKU BSc has stronger international rankings (QS Natural Sciences #25 vs CUHK #50) and more research funding per student",
+            "Non-JUPAS competition: ~30% of places filled by international students and mainland JEE top-scorers, raising the overall cohort quality",
+            "Trend: Increasing competitiveness due to data science and AI boom — Mathematics, Statistics, and Risk Management majors now require ~34 points median"
+          ]
+        },
+        "alumni": {
+          "bullets": [
+            "Dr. Gabriel Leung (BSc 1997) — Dean of Medicine at HKU, former Under Secretary for Food and Health, leading epidemiologist during COVID-19 pandemic",
+            "Dr. Vivian Yam (BSc 1984) — Chair Professor of Chemistry, recipient of L'Oréal-UNESCO For Women in Science Award, pioneer in OLED materials research",
+            "Dr. Guanhua Chen (BSc 1985) — Former Secretary for the Environment of Hong Kong, led major climate policy initiatives",
+            "Dr. Joseph Sung (BSc 1983) — Former Vice-Chancellor of CUHK, world-renowned gastroenterologist, pioneered endoscopic treatments",
+            "Dr. Wilson Lu (BSc 2001) — Founder of Prenetics, NASDAQ-listed biotechnology unicorn, revolutionized DNA testing in Asia"
+          ]
+        },
+        "scholarships": {
+          "bullets": [
+            "HKU Foundation Entrance Scholarship: Full tuition + HK$50,000/year living allowance for DSE 5** in 3+ subjects or equivalent international qualifications",
+            "Faculty of Science Scholarship: HK$20,000-40,000/year for students with exceptional science subject performance, renewable with GPA 3.5+",
+            "Wong Chun Wai Scholarship for Science: Full tuition coverage for students from underprivileged backgrounds with strong science aptitude",
+            "Dean's Research Scholarship: HK$10,000 summer research stipend + guaranteed overseas research placement for top 10% of cohort",
+            "External scholarships: Croucher Foundation Scholarships for PhD pathway, Hong Kong Scholarship for Excellence Scheme (HK$150,000/year for top DSE scorers)"
+          ]
+        },
+        "tips": {
+          "bullets": [
+            "Strategic subject choice: Take 3 science electives if possible — HKU Science values breadth; Biology + Chemistry + Physics or Biology + Chemistry + M2 is ideal",
+            "Early major exploration: Attend HKU Science Open Days and departmental seminars in Form 5-6; admissions officers note demonstrated interest in application essays",
+            "Research portfolio: Participate in HK SciFest, International Science Olympiads, or local university summer programmes; mention these in personal statement",
+            "Backup major strategy: Apply with specific major preference (e.g., Biochemistry) rather than undecided — shows focus, but ensure flexibility in Year 1",
+            "Leverage HKU connections: Reach out to current Science students via LinkedIn or HKU Ambassadors programme; insider insights strengthen interview and essay responses"
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "bullets": [
+            "最低文憑試要求：4科核心科目 + 2科選修科目，英文及中文達3級，數學及通識達2級",
+            "典型入學分數：中位數33分（最佳6科），下四分位數約31分，上四分位數約35分",
+            "優先選修科目：生物、化學、物理、數學（M1/M2），科學科目表現優異者獲優先考慮",
+            "面試：標準入學不設面試；獎學金申請或特殊才能入學或獲邀面試",
+            "替代入學途徑：IB（32分以上）、GCE A-Level（3科AL包括科學達AAA）、SAT（1350分以上）連AP科學科目"
+          ]
+        },
+        "curriculum": {
+          "bullets": [
+            "第一年：科學共同基礎課程——化學、物理、生物、數學及跨學科科學探究；學生可先探索再選主修",
+            "第二年：從16個科學主修中選擇，包括生物化學、生物科學、化學、生態學、地質學、數學、物理、風險管理、統計學等",
+            "主修結構：72學分主修要求，包括核心課程（36學分）、選修課程（24學分）及畢業研究項目（12學分）",
+            "研究沉浸：港大暑期研究計劃、海外研究實習（劍橋、牛津、加州大學伯克利分校、蘇黎世聯邦理工學院合作）",
+            "跨學科選項：數據科學副修、人工智能副修、環境科學集中課程、科學創業方向",
+            "體驗式學習：每年120小時以上實驗室工作，實地考察（西貢海洋生物、米埔濕地生態、海外地質考察營）",
+            "畢業年：在教授指導下進行獨立研究項目；有機會在同行評審期刊發表或於國際會議發表"
+          ]
+        },
+        "career": {
+          "bullets": [
+            "研究及學術界：頂尖大學博士課程（麻省理工、史丹福、劍橋、帝國理工）；港大為一級榮譽畢業生提供保證博士面試",
+            "醫療及製藥：醫療技術員、臨床研究助理、製藥科學家（羅氏、輝瑞、阿斯利康等）",
+            "數據科學及科技：量化分析師、數據科學家、人工智能研究員（Google、Meta、字節跳動、高盛、摩根士丹利等）",
+            "教育界：科學教師（PGDE途徑）、課程發展專員、教育科技專家；港大教育學院提供加速PGDE入學",
+            "政府及公共部門：環境保護主任、漁農自然護理署、香港天文台、政府化驗所",
+            "初創及創業：港大iDendron孵化中心支援科學初創；近年畢業生創辦生物科技及潔能科技初創並獲種子資金"
+          ]
+        },
+        "campus": {
+          "bullets": [
+            "科學設施：太古大樓（現代化實驗室）、嘉道理生物科學大樓、李孝式科學大樓，配備核磁共振、質譜儀、電子顯微鏡設備",
+            "圖書館：主圖書館科學藏書（50萬冊以上）、余振強醫學圖書館（生物醫學主修適用）、考試期間24小時自修空間",
+            "學生生活：40多個科學相關學會，包括生物學會、化學學會、物理學會、數據科學學會、女性STEM組織",
+            "宿舍：13所宿舍保證第一年學位；理科學生多集中於利希慎堂、施德堂或馬禮遜堂",
+            "地理位置優勢：薄扶林主校園——10分鐘到中環實習，毗鄰瑪麗醫院提供臨床研究機會"
+          ]
+        },
+        "competitiveness": {
+          "bullets": [
+            "入學統計：約1,200人申請，約450個學額（3:1比例），在港大課程中屬中等競爭程度",
+            "分數分佈：75%獲錄取學生達31-36分；30分或以下需有 exceptional 科學科目表現（2科以上科學選修達5**）",
+            "科目比重：科學選修有隱性比重——生物/化學/物理達5級以上的候選人入學機率顯著較高",
+            "與中大科學（JS4601）比較：港大BSc國際排名更高（QS自然科學第25位對中大第50位），每位學生研究經費更多",
+            "非聯招競爭：約30%學額由國際學生及內地高考尖子填補，整體學生素質較高",
+            "趨勢：因數據科學及人工智能熱潮，競爭日趨激烈——數學、統計學及風險管理主修現時中位數約需34分"
+          ]
+        },
+        "alumni": {
+          "bullets": [
+            "梁卓偉醫生（1997年BSc）——港大醫學院院長、前食物及衞生局副局長、COVID-19疫情期間領導流行病學專家",
+            "任詠華教授（1984年BSc）——化學系講座教授、歐萊雅-聯合國教科文組織世界傑出女科學家成就獎得主、OLED材料研究先驅",
+            "陳冠華博士（1985年BSc）——前香港環境局局長，領導重大氣候政策倡議",
+            "沈祖堯教授（1983年BSc）——前中大校長、世界知名腸胃科專家、內窺鏡治療先驅",
+            "盧煜明教授（2001年BSc）——Prenetics創辦人、納斯達克上市生物科技獨角獸、革新亞洲DNA檢測"
+          ]
+        },
+        "scholarships": {
+          "bullets": [
+            "港大基金入學獎學金：全額學費 + 每年50,000港元生活津貼（文憑試3科以上5**或同等國際資格）",
+            "理學院獎學金：每年20,000-40,000港元（科學科目表現卓越者），GPA 3.5以上可續領",
+            "王振威科學獎學金：為科學資優的清貧學生提供全額學費資助",
+            "院長研究獎學金：10,000港元暑期研究津貼 + 保證海外研究實習（前10%學生）",
+            "外部獎學金：裘槎基金會博士途徑獎學金、香港卓越獎學金計劃（每年150,000港元予頂尖文憑試考生）"
+          ]
+        },
+        "tips": {
+          "bullets": [
+            "策略性選科：盡可能修讀3科科學選修——港大理學院重視廣度；生物+化學+物理或生物+化學+M2為理想組合",
+            "及早探索主修：中五至中六參加港大理學院開放日及學系研討會；招生官注意申請文章中的明確興趣",
+            "研究作品集：參加香港科學節、國際科學奧林匹克或本地大學暑期課程；在個人陳述中提及",
+            "後備主修策略：申請時填寫具體主修偏好（如生物化學）而非未定——顯示專注，但確保第一年有靈活性",
+            "善用港大人脈：透過LinkedIn或港大學生大使計劃聯繫現任理科學生；內部見解強化面試及文章回應"
+          ]
+        }
+      }
+    }
+  },
+  "JS6462": {
+    "code": "JS6462",
+    "nameEn": "Bachelor of Nursing",
+    "nameZh": "護理學學士",
+    "university": "HKU",
+    "faculty": "Li Ka Shing Faculty of Medicine",
+    "median": 29,
+    "category": "medicine",
+    "en": {
+      "sections": {
+        "admission": {
+          "bullets": [
+            "Minimum DSE requirements: 4 core subjects + 2 electives with Level 3 in English, Level 2 in Chinese, Maths and Liberal Studies; Biology strongly preferred",
+            "Typical admission score: median 29 points (Best 6 subjects), lower quartile ~27, upper quartile ~31",
+            "Preferred electives: Biology (essential), Chemistry, Physics, or Combined Science; Health-related Applied Learning subjects accepted",
+            "Interview: Required for all shortlisted candidates — assesses communication skills, empathy, motivation for nursing, and understanding of healthcare challenges",
+            "Alternative entry: IB (28+ points), GCE A-Level (BBB including Biology), relevant healthcare diplomas with outstanding performance"
+          ]
+        },
+        "curriculum": {
+          "bullets": [
+            "Year 1: Foundation sciences — Anatomy, Physiology, Biochemistry, Microbiology; Introduction to Nursing Theory and Professional Ethics; 40 hours clinical observation",
+            "Year 2: Adult nursing fundamentals — Medical-Surgical Nursing, Pharmacology, Health Assessment; 300 hours clinical placement in Queen Mary Hospital medical wards",
+            "Year 3: Specialized nursing rotations — Paediatric Nursing, Mental Health Nursing, Community Health Nursing, Gerontological Nursing; 400 hours across 4 specialties",
+            "Year 4: Advanced nursing practice — Critical Care Nursing, Nursing Management, Evidence-Based Practice; 500 hours preceptorship in chosen specialty; Capstone research project",
+            "Clinical partners: Queen Mary Hospital (primary), Duchess of Kent Children's Hospital, Pamela Youde Nethersole Eastern Hospital, psychiatric hospitals, community health centres",
+            "Simulation training: 200+ hours in HKU Clinical Simulation Centre using high-fidelity manikins (SimMan 3G, SimMom) for emergency, delivery, and paediatric scenarios",
+            "International exposure: Optional exchange with University of Pennsylvania, University of Toronto, or University of Melbourne nursing schools"
+          ]
+        },
+        "career": {
+          "bullets": [
+            "Hospital Nursing: Registered Nurse (RN) in HA hospitals — starting salary HK$36,000/month (Point 16); rapid progression to Advanced Practice Nurse (APN) with 5+ years experience",
+            "Specialized Nursing: Nurse practitioner pathways in ICU, oncology, paediatrics, mental health; HKU offers Master of Nursing (MNurs) for specialization",
+            "Community & Public Health: School health nurse, maternal and child health nurse, occupational health nurse at Department of Health or NGOs",
+            "Nursing Education: Clinical instructor at HKU or PolyU School of Nursing; requires Master of Nursing plus clinical experience",
+            "International Opportunities: Registered in Australia, UK, Canada through mutual recognition agreements; high demand in Singapore, Middle East, and UK NHS",
+            "Healthcare Leadership: Nursing administration, hospital management, healthcare policy; Chief Nursing Executive pathway through HKU Master of Public Health"
+          ]
+        },
+        "campus": {
+          "bullets": [
+            "Medical campus: Located at 21 Sassoon Road, Pok Fu Lam — dedicated nursing school building with specialist teaching facilities separate from main campus",
+            "Clinical Simulation Centre: 10,000 sq ft facility with ICU, delivery suite, paediatric ward, and community flat simulations; open 7 days a week for practice",
+            "Libraries: HKU Medical Library with 200,000+ nursing and medical volumes; online access to Cochrane Library, CINAHL, PubMed databases",
+            "Student support: Dedicated nursing student advisor, peer mentoring programme, wellness counselling for stress management during clinical placements",
+            "Nursing Society: Active student society organizing community health promotion events, hospital volunteer programmes, and annual Nursing Week celebrations"
+          ]
+        },
+        "competitiveness": {
+          "bullets": [
+            "Admission statistics: ~800 applicants for ~210 places (4:1 ratio), highly competitive due to guaranteed employment and stable career prospects",
+            "Score distribution: 60% of admitted students score 27-31 points; students with 25-26 need exceptional interview performance or healthcare volunteer experience",
+            "Interview weighting: Interview contributes ~30% of admission decision — candidates with strong empathy, communication skills, and clear nursing motivation favoured over raw scores",
+            "Comparison with PolyU Nursing (JS3636): HKU Nursing has stronger research focus and university brand, but PolyU has larger intake (~300 places) and earlier clinical exposure",
+            "Non-JUPAS intake: ~15% of places for international students and mature applicants with healthcare backgrounds, adding diversity to cohort",
+            "Trend: Post-COVID surge in nursing applications — 2024 saw 20% increase; government scholarship schemes (e.g., HKSAR Government Scholarship for Nursing) attract top students"
+          ]
+        },
+        "alumni": {
+          "bullets": [
+            "Professor Sophia Chan (BN 1984) — Former Secretary for Food and Health, led Hong Kong's pandemic response and healthcare reform",
+            "Dr. Yuen Wai-cheung (BN 1990) — Chief Nursing Executive at Hospital Authority, overseeing 30,000+ nurses across Hong Kong public hospitals",
+            "Ms. Helen Lau (BN 2005) — President of Hong Kong Nursing Association, advocate for nurse staffing ratios and patient safety legislation",
+            "Dr. Carmen Wong (BN 1995, PhD 2005) — Professor and Head of School of Nursing at HKU, leading researcher in gerontological nursing",
+            "Ms. Janet Wong (BN 2008) — Founder of Home Nursing Service social enterprise, providing affordable home care to 10,000+ elderly families"
+          ]
+        },
+        "scholarships": {
+          "bullets": [
+            "HKSAR Government Scholarship for Nursing: Full tuition + HK$20,000/year living allowance + guaranteed public hospital placement upon graduation; requires 5-year service commitment",
+            "Li Ka Shing Faculty Scholarship: HK$30,000/year for top 10% of nursing cohort based on academic and clinical performance",
+            "Hospital Authority Nursing Scholarship: Full tuition + monthly stipend HK$8,000; requires employment at designated HA hospital for 3 years post-graduation",
+            "Bauhinia Foundation Nursing Award: HK$15,000 one-time award for students with outstanding community service or innovation in patient care",
+            "HKU Foundation Entrance Scholarship: Available for DSE 5* in 3+ subjects; nursing students eligible alongside all HKU programmes"
+          ]
+        },
+        "tips": {
+          "bullets": [
+            "Ace the interview: Prepare scenarios demonstrating empathy, teamwork, and resilience — use STAR method (Situation, Task, Action, Result) with volunteer or caregiving experiences",
+            "Healthcare exposure: Complete 50+ hours of hospital volunteering, elderly home visits, or St. John Ambulance service before application; this distinguishes you from score-only candidates",
+            "Biology mastery: Achieve Level 5+ in Biology DSE — nursing curriculum is biology-intensive and admissions officers check subject relevance",
+            "Understand the profession: Shadow a nurse for a day if possible; interviewers test whether you understand the realities of shift work, emotional demands, and physical stamina",
+            "Consider the commitment: Nursing requires 5-year HA bond for government scholarship recipients; weigh this against private sector opportunities and overseas registration goals"
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "bullets": [
+            "最低文憑試要求：4科核心科目 + 2科選修科目，英文達3級，中文、數學及通識達2級；強烈建議修讀生物",
+            "典型入學分數：中位數29分（最佳6科），下四分位數約27分，上四分位數約31分",
+            "優先選修科目：生物（必需）、化學、物理或組合科學；接受健康相關應用學習科目",
+            "面試：所有入圍候選人必須面試——評估溝通技巧、同理心、護理熱誠及對醫療挑戰的理解",
+            "替代入學途徑：IB（28分以上）、GCE A-Level（包括生物達BBB）、相關醫療文憑並有卓越表現"
+          ]
+        },
+        "curriculum": {
+          "bullets": [
+            "第一年：基礎科學——解剖學、生理學、生物化學、微生物學；護理學導論及專業倫理；40小時臨床觀察",
+            "第二年：成人護理基礎——內外科護理、藥理學、健康評估；瑪麗醫院內科病房300小時臨床實習",
+            "第三年：專科護理輪換——兒科護理、精神健康護理、社區健康護理、老年護理；4個專科共400小時",
+            "第四年：高級護理實踐——深切治療護理、護理管理、循證實踐；自選專科500小時臨床導師實習；畢業研究項目",
+            "臨床合作夥伴：瑪麗醫院（主要）、大口環根德公爵夫人兒童醫院、東區尤德夫人那打素醫院、精神科醫院、社區健康中心",
+            "模擬訓練：港大臨床模擬中心200小時以上，使用高仿真模擬人（SimMan 3G、SimMom）進行急救、分娩及兒科情景訓練",
+            "國際視野：可選擇與賓夕法尼亞大學、多倫多大學或墨爾本大學護理學院交流"
+          ]
+        },
+        "career": {
+          "bullets": [
+            "醫院護理：醫管局醫院註冊護士——起薪每月36,000港元（第16點）；5年以上經驗可快速晉升為高級實踐護士（APN）",
+            "專科護理：深切治療、腫瘤科、兒科、精神健康護士專科途徑；港大提供護理碩士（MNurs）供專科進修",
+            "社區及公共衞生：學校健康護士、母嬰健康護士、職業健康護士（衞生署或非政府機構）",
+            "護理教育：港大或理大護理學院臨床導師；需護理碩士加臨床經驗",
+            "國際機會：透過互認協議於澳洲、英國、加拿大註冊；新加坡、中東及英國NHS需求殷切",
+            "醫療領導：護理行政、醫院管理、醫療政策；港大公共衞生碩士提供護理總監途徑"
+          ]
+        },
+        "campus": {
+          "bullets": [
+            "醫學院校園：位於薄扶林沙宣道21號——專屬護理學院大樓，設有專科教學設施，與主校園分開",
+            "臨床模擬中心：10,000平方呎設施，設有深切治療室、產房、兒科病房及社區單位模擬；每週開放7天供練習",
+            "圖書館：港大醫學圖書館藏有20萬冊以上護理及醫學書籍；可線上使用Cochrane Library、CINAHL、PubMed數據庫",
+            "學生支援：專責護理學生顧問、同輩導師計劃、臨床實習期間壓力管理健康輔導",
+            "護理學會：活躍學生學會，組織社區健康推廣活動、醫院義工計劃及年度護理週慶祝活動"
+          ]
+        },
+        "competitiveness": {
+          "bullets": [
+            "入學統計：約800人申請，約210個學額（4:1比例），因就業保證及穩定職業前景而競爭激烈",
+            "分數分佈：60%獲錄取學生達27-31分；25-26分者需有卓越面試表現或醫療義工經驗",
+            "面試比重：面試佔入學決定約30%——具強烈同理心、溝通技巧及清晰護理熱誠的候選人較純分數者更受青睞",
+            "與理大護理（JS3636）比較：港大護理研究重點較強、大學品牌較佳，但理大收生較多（約300學額）且較早開始臨床實習",
+            "非聯招收生：約15%學額予國際學生及有醫療背景的成熟申請人，增加學生群體多樣性",
+            "趨勢：後疫情護理申請激增——2024年增加20%；政府獎學金計劃（如香港特區政府護理獎學金）吸引頂尖學生"
+          ]
+        },
+        "alumni": {
+          "bullets": [
+            "陳肇始教授（1984年護理學士）——前食物及衞生局局長，領導香港疫情應對及醫療改革",
+            "袁偉祥博士（1990年護理學士）——醫管局總護理行政經理，管理香港公營醫院30,000多名護士",
+            "劉少珊女士（2005年護理學士）——香港護理協會會長，倡議護士人手比例及病人安全立法",
+            "黃嘉雯博士（1995年護理學士，2005年博士）——港大護理學院教授及院長，老年護理領先研究者",
+            "黃潔貞女士（2008年護理學士）——家居護理服務社會企業創辦人，為10,000多個長者家庭提供可負擔家居護理"
+          ]
+        },
+        "scholarships": {
+          "bullets": [
+            "香港特區政府護理獎學金：全額學費 + 每年20,000港元生活津貼 + 畢業後保證公營醫院職位；需承諾服務5年",
+            "李嘉誠醫學院獎學金：每年30,000港元予護理學系前10%學生，按學術及臨床表現評選",
+            "醫管局護理獎學金：全額學費 + 每月8,000港元津貼；畢業後需於指定醫管局醫院工作3年",
+            "紫荊基金護理獎：15,000港元一次性獎勵予社區服務或病人護理創新表現卓越者",
+            "港大基金入學獎學金：文憑試3科以上5*適用；護理學生與所有港大課程學生同樣符合資格"
+          ]
+        },
+        "tips": {
+          "bullets": [
+            "面試取勝：準備展示同理心、團隊合作及抗逆力的情景——使用STAR方法（情境、任務、行動、結果），結合義工或照顧經驗",
+            "醫療接觸：申請前完成50小時以上醫院義工、老人院探訪或聖約翰救傷隊服務；這令你與純分數候選人有別",
+            "生物精通：文憑試生物達5級以上——護理課程生物內容密集，招生官會檢查科目相關性",
+            "了解專業：如可能，跟隨護士工作一天；面試官會測試你是否理解輪班工作、情感需求及體力要求的現實",
+            "考慮承諾：護理學生如獲政府獎學金需履行5年醫管局服務債券；需衡量此承諾與私營機會及海外註冊目標"
+          ]
+        }
+      }
+    }
+  },
+  "JS6054": {
+    "code": "JS6054",
+    "nameEn": "Bachelor of Arts",
+    "nameZh": "文學士",
+    "university": "HKU",
+    "faculty": "Faculty of Arts",
+    "median": 28,
+    "category": "arts",
+    "en": {
+      "sections": {
+        "admission": {
+          "bullets": [
+            "Minimum DSE requirements: 4 core subjects + 2 electives with Level 3 in English and Chinese, Level 2 in Maths and Liberal Studies; no specific elective requirements",
+            "Typical admission score: median 28 points (Best 6 subjects), lower quartile ~26, upper quartile ~30 — flexible admission for well-rounded students",
+            "Preferred profile: Strong English performance (Level 5+ highly valued); humanities or social science electives (History, Geography, Economics, Literature) advantageous but not required",
+            "Interview: Not required for standard admission; portfolio or interview may be requested for applicants with exceptional creative arts or humanities achievements",
+            "Alternative entry: IB (28+ points), GCE A-Level (ABB), SAT (1250+), strong personal statement highlighting intellectual curiosity and interdisciplinary interests"
+          ]
+        },
+        "curriculum": {
+          "bullets": [
+            "Year 1: Common Arts Foundation — Critical Thinking, Academic Writing, Introduction to Humanities; explore majors across 28 Arts disciplines before declaration",
+            "Year 2: Major declaration from 28 options including Chinese Language & Literature, English Studies, History, Philosophy, Linguistics, Translation, Music, Fine Arts, Comparative Literature",
+            "Major structure: 72-credit major including core courses (30 credits), electives within major (30 credits), capstone thesis or creative project (12 credits)",
+            "Common Core Curriculum: 36 credits across 4 areas — Science Technology & Society, Humanities, Global Issues, China: Culture State & Society; ensures interdisciplinary breadth",
+            "Language requirement: 2 language courses beyond DSE level; options include French, German, Japanese, Korean, Spanish, Mandarin for Cantonese speakers, Cantonese for Mandarin speakers",
+            "Experiential learning: Overseas exchange at 300+ partner universities (Oxford, Cambridge, Columbia, Sciences Po); summer programmes in archaeology, museum studies, creative writing",
+            "Final year: Honours thesis (12,000-15,000 words) or creative project (novel, film, exhibition) supervised by faculty; opportunity for publication or public presentation"
+          ]
+        },
+        "career": {
+          "bullets": [
+            "Education: English/Chinese teacher (PGDE pathway at HKU Faculty of Education), lecturer at tertiary institutions, curriculum developer at Education Bureau or publishers",
+            "Media & Communications: Journalist at SCMP, Ming Pao, or international outlets; editor at publishing houses (Oxford University Press, Commercial Press); content strategist at tech companies",
+            "Government & Public Policy: Administrative Officer (AO) via Civil Service Examination, policy analyst at Central Policy Unit, cultural affairs officer at Leisure and Cultural Services Department",
+            "Creative Industries: Writer, filmmaker, curator at M+ museum, art gallery manager, music producer; HKU Arts alumni prominent in Hong Kong's cultural scene",
+            "Business & Consulting: Management consultant (McKinsey, Bain, BCG value arts graduates for analytical and communication skills), corporate communications, HR management",
+            "Further Studies: Master's and PhD at top universities (Harvard, Yale, Cambridge, SOAS); HKU Arts graduates have high admission rates to prestigious graduate programmes"
+          ]
+        },
+        "campus": {
+          "bullets": [
+            "Arts facilities: Run Run Shaw Tower with dedicated arts library (300,000+ volumes), Jao Tsung-I Petite Ecole for Chinese humanities, Centre for Humanities",
+            "Performance spaces: Loke Yew Hall for concerts and theatre, Grand Hall for exhibitions, studio theatres for drama productions; music practice rooms with Steinway pianos",
+            "Museums & galleries: University Museum and Art Gallery (UMAG) — oldest museum in Hong Kong with 1,800+ artefacts; regular exhibitions and curator-led programmes for students",
+            "Student societies: 50+ arts-related societies including Debating Union (world champions), Drama Club, Film Society, Creative Writing Workshop, Philosophy Society",
+            "Location: Main Campus and Centennial Campus in Pok Fu Lam — 5 minutes to Sai Ying Pun's galleries and cafes; Central's publishing and media district accessible by bus"
+          ]
+        },
+        "competitiveness": {
+          "bullets": [
+            "Admission statistics: ~1,500 applicants for ~650 places (2.3:1 ratio) — less competitive than science/medicine but quality of applicants remains high",
+            "Score distribution: Broad range 24-32 points accepted; holistic review considers personal statement, extracurriculars, and demonstrated passion for humanities",
+            "English premium: English Level 5** or equivalent (IELTS 7.5+) significantly improves admission chances, especially for English Studies, Linguistics, or Translation majors",
+            "Comparison with CUHK Arts (JS4048): HKU Arts has stronger international rankings (QS Arts & Humanities #18 vs CUHK #35) and more exchange partnerships; CUHK has larger intake",
+            "Non-JUPAS intake: ~20% of places for international students, creating a culturally diverse cohort with students from 40+ countries",
+            "Trend: Growing interest in interdisciplinary combinations (e.g., Philosophy + Computer Science, History + Data Science); HKU encourages flexible major-minor structures"
+          ]
+        },
+        "alumni": {
+          "bullets": [
+            "Mr. John Tsang (BA 1976) — Former Financial Secretary of Hong Kong, known for arts advocacy and cultural policy leadership",
+            "Ms. Louise Ho (BA 1988) — Former Secretary for Home Affairs, champion of heritage conservation and cultural development",
+            "Mr. Xi Xi (BA 1960) — Renowned Hong Kong writer, recipient of Newman Prize for Chinese Literature, influential in Chinese literary circles",
+            "Dr. Leo Ou-fan Lee (BA 1961) — Professor Emeritus at Harvard University, leading scholar of modern Chinese literature and cultural studies",
+            "Ms. Yonfan (BA 1972) — Award-winning film director (Hong Kong Film Awards Best Director), celebrated for art house cinema and cultural documentaries"
+          ]
+        },
+        "scholarships": {
+          "bullets": [
+            "HKU Foundation Entrance Scholarship: Full tuition + HK$50,000/year for DSE 5** in 3+ subjects; arts students with strong all-round performance frequently qualify",
+            "Faculty of Arts Scholarship: HK$20,000-30,000/year for top 15% of arts cohort based on academic achievement and creative output",
+            "Lee Hysan Foundation Arts Scholarship: HK$40,000/year for students majoring in Fine Arts, Music, or Creative Writing with demonstrated artistic talent",
+            "Wong Family Overseas Exchange Scholarship: HK$30,000 for semester exchange at top arts universities (Oxford, Cambridge, Columbia, Sciences Po)",
+            "Jao Tsung-I Academy Scholarship: Full tuition for students specializing in Chinese humanities (Classical Chinese, Chinese History, Chinese Philosophy) with outstanding academic record"
+          ]
+        },
+        "tips": {
+          "bullets": [
+            "Develop a humanities portfolio: Publish in school magazines, enter writing competitions (Hong Kong Youth Literary Awards), start a blog or podcast — demonstrates genuine passion beyond grades",
+            "English mastery is key: Target Level 5+ in English DSE; arts programmes are reading and writing intensive, and admissions officers use English performance as readiness indicator",
+            "Explore before committing: Use Year 1 to sample 3-4 potential majors; HKU Arts allows late declaration — choose based on intellectual passion not perceived career utility",
+            "Leverage the Common Core: Select Common Core courses strategically to build interdisciplinary expertise (e.g., Philosophy of Science + Data Science minor for tech policy career)",
+            "Engage with cultural Hong Kong: Visit M+ museum, attend Hong Kong Arts Festival, volunteer at literary festivals — these experiences enrich personal statement and interview responses"
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "bullets": [
+            "最低文憑試要求：4科核心科目 + 2科選修科目，英文及中文達3級，數學及通識達2級；無特定選修要求",
+            "典型入學分數：中位數28分（最佳6科），下四分位數約26分，上四分位數約30分——對全面發展學生採取彈性收生",
+            "優先條件：英文表現強勁（達5級以上高度重視）；人文或社會科學選修（歷史、地理、經濟、文學）有優勢但非必需",
+            "面試：標準入學不設面試；具卓越創意藝術或人文成就者或獲邀提交作品集或面試",
+            "替代入學途徑：IB（28分以上）、GCE A-Level（ABB）、SAT（1250分以上），強調求知慾及跨學科興趣的個人陳述"
+          ]
+        },
+        "curriculum": {
+          "bullets": [
+            "第一年：文學院共同基礎——批判思維、學術寫作、人文學導論；在28個文學院學科中探索後才選主修",
+            "第二年：從28個選項中選擇主修，包括中國語言文學、英語研究、歷史、哲學、語言學、翻譯、音樂、藝術、比較文學",
+            "主修結構：72學分主修，包括核心課程（30學分）、主修選修（30學分）、畢業論文或創意項目（12學分）",
+            "共同核心課程：4個範疇共36學分——科學技術與社會、人文學、全球議題、中國文化社會與國家；確保跨學科廣度",
+            "語言要求：文憑試程度以外修讀2科語言課程；選項包括法文、德文、日文、韓文、西班牙文、粵語者修普通話、普通話者修粵語",
+            "體驗式學習：300多所夥伴大學海外交流（牛津、劍橋、哥倫比亞、巴黎政治學院）；考古學、博物館研究、創意寫作暑期課程",
+            "畢業年：榮譽論文（12,000-15,000字）或創意項目（小說、電影、展覽）由教授指導；有機會發表或公開發表"
+          ]
+        },
+        "career": {
+          "bullets": [
+            "教育界：英文/中文教師（港大教育學院PGDE途徑）、大專院校講師、教育局或出版社課程發展專員",
+            "傳媒及傳播：《南華早報》、《明報》或國際媒體記者；出版社編輯（牛津大學出版社、商務印書館）；科技公司內容策略師",
+            "政府及公共政策：通過政務職系考試成為政務主任（AO）、中央政策組政策分析員、康樂及文化事務署文化事務主任",
+            "創意產業：作家、電影製作人、M+博物館策展人、畫廊經理、音樂製作人；港大文學院校友活躍於香港文化界",
+            "商界及顧問：管理顧問（麥肯錫、貝恩、波士頓諮詢公司重視文學院畢業生的分析及溝通技巧）、企業傳訊、人力資源管理",
+            "進修：頂尖大學碩士及博士（哈佛、耶魯、劍橋、亞非學院）；港大文學院畢業生獲著名研究院課程取錄率甚高"
+          ]
+        },
+        "campus": {
+          "bullets": [
+            "文學院設施：邵逸夫樓設有專屬文學院圖書館（30萬冊以上）、饒宗頤學術館（中國人文）、人文學中心",
+            "表演場地：陸佑堂供音樂會及戲劇、大禮堂供展覽、劇場工作室供話劇製作；音樂練習室配備施坦威鋼琴",
+            "博物館及畫廊：香港大學美術博物館（UMAG）——香港歷史最悠久博物館，藏有1,800多件文物；定期展覽及策展人導賞節目",
+            "學生學會：50多個文學相關學會，包括辯論學會（世界冠軍）、戲劇社、電影學會、創意寫作坊、哲學學會",
+            "地理位置：薄扶林主校園及百周年校園——5分鐘到西營盤畫廊及咖啡廳；乘巴士可達中環出版及傳媒區"
+          ]
+        },
+        "competitiveness": {
+          "bullets": [
+            "入學統計：約1,500人申請，約650個學額（2.3:1比例）——較理科/醫科競爭較低，但申請者質素仍然甚高",
+            "分數分佈：廣泛接受24-32分；整體評審考慮個人陳述、課外活動及對人文學的熱誠",
+            "英文溢價：英文達5**或同等水平（IELTS 7.5+）顯著提升入學機會，尤其英語研究、語言學或翻譯主修",
+            "與中大文學（JS4048）比較：港大文學院國際排名較高（QS藝術與人文第18位對中大第35位）及更多交流夥伴；中大收生較多",
+            "非聯招收生：約20%學額予國際學生，來自40多個國家，創造文化多元的學生群體",
+            "趨勢：跨學科組合興趣日增（如哲學+電腦科學、歷史+數據科學）；港大鼓勵靈活的主修-副修結構"
+          ]
+        },
+        "alumni": {
+          "bullets": [
+            "曾俊華先生（1976年文學士）——前香港財政司司長，以藝術倡議及文化政策領導聞名",
+            "何志平女士（1988年文學士）——前民政事務局局長，倡議文物保育及文化發展",
+            "西西女士（1960年文學士）——香港著名作家，紐曼華語文學獎得主，華語文學界極具影響力",
+            "李歐梵教授（1961年文學士）——哈佛大學榮休教授，現代中國文學及文化研究領先學者",
+            "楊凡先生（1972年文學士）——屢獲殊榮電影導演（香港電影金像獎最佳導演），以藝術電影及文化紀錄片聞名"
+          ]
+        },
+        "scholarships": {
+          "bullets": [
+            "港大基金入學獎學金：全額學費 + 每年50,000港元（文憑試3科以上5**）；全面表現優秀的文學院學生經常符合資格",
+            "文學院獎學金：每年20,000-30,000港元予文學院前15%學生，按學術成就及創意產出評選",
+            "利希慎基金藝術獎學金：每年40,000港元予藝術、音樂或創意寫作主修並具藝術才華者",
+            "黃氏家族海外交流獎學金：30,000港元供頂尖藝術大學（牛津、劍橋、哥倫比亞、巴黎政治學院）學期交流",
+            "饒宗頤學院獎學金：為中國人文（古典中文、中國歷史、中國哲學）專修並有卓越學術紀錄者提供全額學費"
+          ]
+        },
+        "tips": {
+          "bullets": [
+            "建立人文作品集：在校刊發表、參加寫作比賽（香港青年文學獎）、開設博客或播客——展示成績以外的真誠熱誠",
+            "英文精通是關鍵：目標文憑試英文達5級以上；文學課程閱讀及寫作密集，招生官以英文表現作為準備指標",
+            "探索後才決定：利用第一年試修3-4個潛在主修；港大文學院允許較遲決定——按求知熱誠而非 perceived 職業效用選擇",
+            "善用共同核心：策略性選擇共同核心課程以建立跨學科專長（如科學哲學+數據科學副修，為科技政策職業鋪路）",
+            "投入香港文化：參觀M+博物館、出席香港藝術節、在文學節當義工——這些經驗豐富個人陳述及面試回應"
+          ]
+        }
+      }
+    }
+  },
+  "JS6492": {
+    "code": "JS6492",
+    "nameEn": "Bachelor of Pharmacy",
+    "nameZh": "藥劑學學士",
+    "university": "HKU",
+    "faculty": "Faculty of Medicine",
+    "median": 32,
+    "category": "medicine",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "bullets": [
+            "Minimum DSE requirement: **Best 6 subjects at 32 points** (median entry score). Pharmacy is highly competitive; successful entrants typically score **30-34 points**.",
+            "Core subject minimums: **Level 3 in Chinese Language and English Language**; **Level 2 in Mathematics (Compulsory Part) and Liberal Studies** (or Citizenship and Social Development). **English at Level 4+ strongly preferred** for reading scientific literature.",
+            "Elective requirements: **Chemistry at Level 4+ is strongly preferred**. **Biology at Level 4+ is highly recommended**. Physics or Combined Science (Chemistry + Biology) also accepted. M1/M2 Mathematics is helpful for pharmacokinetics and biostatistics.",
+            "**No JUPAS interview** for standard admission. Selection is based on academic merit and OEA/SLP. Non-JUPAS applicants may be invited to an interview.",
+            "Subject weightings: **Chemistry and Biology receive 1.5x weighting** in admission scoring. English Language at standard weighting. Bonus points for Level 5** in Chemistry or Biology."
+          ]
+        },
+        "curriculum": {
+          "title": "Programme Structure & Curriculum",
+          "bullets": [
+            "**4-year full-time programme** (240 credits). Accredited by the **Pharmacy and Poisons Board of Hong Kong (PPBHK)** - graduates are eligible for **Registered Pharmacist (Part A)** registration.",
+            "**Year 1**: Foundation sciences - **General Chemistry, Organic Chemistry, Human Physiology, and Biochemistry**. Students also complete **University Common Core** courses and a **pharmacy orientation** module.",
+            "**Year 2**: Core pharmacy sciences - **Pharmaceutics, Pharmacology, Medicinal Chemistry, and Pharmacognosy**. Introduction to **pharmacy practice** and **dispensing skills** in the faculty simulation laboratory.",
+            "**Year 3**: Clinical and applied pharmacy - **Therapeutics, Clinical Pharmacokinetics, Pharmaceutical Care, and Pharmacy Management**. Students begin **hospital and community pharmacy placements** (total 400+ hours).",
+            "**Year 4**: Advanced practice and capstone - **Advanced Therapeutics, Pharmacoeconomics, Drug Information, and Research Project**. Extended **clinical rotations** in **Queen Mary Hospital, Prince of Wales Hospital, and community pharmacy chains** (e.g., Watsons, Mannings).",
+            "**Professional accreditation**: Full accreditation by **PPBHK** and recognition by **Royal Pharmaceutical Society (RPS, UK)**. Graduates may sit the **Registration Examination** to become registered pharmacists in Hong Kong.",
+            "**Research opportunities**: Students may join research projects in **drug delivery, pharmacogenomics, clinical pharmacy, and traditional Chinese medicine-pharmaceutical interactions**. HKU has active collaborations with **Shenzhen Institutes of Advanced Technology (SIAT)**."
+          ]
+        },
+        "career": {
+          "title": "Career Pathways & Prospects",
+          "bullets": [
+            "**Hospital pharmacy**: Graduates join **Hospital Authority** as **Resident Pharmacists** at **Queen Mary Hospital, Prince of Wales Hospital, Queen Elizabeth Hospital, and Pamela Youde Nethersole Eastern Hospital**. Starting salary: **HK4,060/month** (Point 15). Progression to **Senior Pharmacist** at **HK4,220/month** (Point 27).",
+            "**Community pharmacy**: Roles at **Watsons, Mannings, Guardian, and independent pharmacies** as **Registered Pharmacists** and **Pharmacy Managers**. Starting salary: **HK8,000-35,000/month**. Store managers earn **HK0,000-55,000/month**.",
+            "**Pharmaceutical industry**: **Drug safety, regulatory affairs, medical affairs, and clinical research** roles at **Pfizer, Roche, GSK, AstraZeneca, and local biotech firms** (e.g., **Sino Biopharmaceutical, Innovent Biologics**). Starting salaries: **HK5,000-32,000/month**.",
+            "**Government and regulatory**: **Department of Health** roles in **drug registration, pharmacy inspection, and poison control**. **Pharmacy and Poisons Board** administrative roles. Starting salaries: **HK2,000-34,000/month** depending on grade.",
+            "**Further studies**: **Master of Pharmacy (MPharm)** for specialisation (UK/Australia). **MSc in Clinical Pharmacy** or **Pharmaceutical Sciences** for research or advanced practice. **PhD** for academic and pharmaceutical R&D careers.",
+            "**Entrepreneurship**: Some graduates open **independent pharmacies** or join **pharmacy chains** in management. The **pharmaceutical e-commerce** sector (e.g., **HKTVmall pharmacy, Ztore**) is growing rapidly."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Student Experience",
+          "bullets": [
+            "**Faculty of Medicine Building (21 Sassoon Road)**: Houses **pharmacy teaching laboratories, dispensing simulation rooms, and research facilities**. The **Medicine Common Room** is a hub for inter-professional student activities.",
+            "**HKU Pharmacy Society**: Active student society organising **drug information workshops, community health screenings, and industry visits** to pharmaceutical companies and hospitals. Annual **Pharmacy Night** networking dinner with alumni.",
+            "**Dispensing laboratory**: State-of-the-art **simulation pharmacy** where students practice **prescription dispensing, patient counselling, and compounding** under supervision. Equipped with **electronic prescribing systems** used in Hospital Authority.",
+            "**Inter-professional education (IPE)**: Pharmacy students collaborate with **Medicine, Nursing, and Dentistry** students on **case-based learning** and **simulated ward rounds** - preparing for real healthcare team dynamics.",
+            "**Location**: Faculty is at **Sassoon Road, Pok Fu Lam** - a 10-minute shuttle bus from Main Campus. Students have access to **both Main Campus facilities** (libraries, halls, sports) and **Medical Campus resources** (hospital libraries, clinical skills labs)."
+          ]
+        },
+        "competitiveness": {
+          "title": "Admission Competitiveness Analysis",
+          "bullets": [
+            "**Overall difficulty: ★★★★☆ Highly Competitive** - HKU Pharmacy is one of the most competitive health sciences programmes. The small cohort size and high demand create intense competition.",
+            "**Median DSE score: 32 points** (Best 6). Lower quartile typically scores **30-31 points**. Upper quartile reaches **33-34 points**. Chemistry and Biology grades are critical.",
+            "**Band A applicants vs places**: Approximately **6-8 Band A applicants per place**. Total JUPAS intake: **~40-50 students** per year (one of the smallest cohorts at HKU).",
+            "**Non-JUPAS intake**: Around **10-15%** of places for international qualifications. IB entrants typically present **36-38 points** with HL Chemistry and Biology. A-Level candidates need **AAA** including Chemistry and Biology.",
+            "**Comparison with CUHK Pharmacy (JS4501)**: HKU Pharmacy has **stronger hospital pharmacy links** (Queen Mary Hospital is the teaching hospital) and more research opportunities in **pharmaceutical sciences**. CUHK Pharmacy has a **larger cohort** and stronger **community pharmacy** training. Median scores are comparable (CUHK ~31-32).",
+            "**Key differentiators for successful applicants**: (1) **Chemistry and Biology at Level 5***; (2) **Strong English** for scientific reading; (3) **Healthcare volunteering** - hospital auxiliary, pharmacy shadowing, elderly care; (4) **Scientific curiosity** demonstrated in SLP - science competitions, research projects, or health innovation initiatives."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni & Faculty",
+          "bullets": [
+            "**Prof. Vincent Lee Hoi-ying** - Former Head of Pharmacy at HKU and leading researcher in **clinical pharmacokinetics and personalised medicine**. His work on **warfarin dosing algorithms** has improved patient safety across Hong Kong hospitals.",
+            "**Dr. William Chui Chun-ming** - President of the **Society of Hospital Pharmacists of Hong Kong** and former Chief Pharmacist at **Queen Mary Hospital**. HKU BPharm and MClinPharm. Advocate for **clinical pharmacy services expansion** in public hospitals.",
+            "**Ms. Bonnie Leung** - Former Director of Pharmacy at **Watsons Hong Kong** and industry leader in **community pharmacy practice**. HKU BPharm. Pioneered **pharmacist-led health screening services** in retail pharmacies.",
+            "**Prof. Li Jun** - Chair Professor of Pharmaceutics at HKU and expert in **nanomedicine and targeted drug delivery**. His research on **cancer nanotherapeutics** has led to multiple patents and spin-off companies.",
+            "**Dr. Esther Chan** - Clinical Professor and specialist in **geriatric pharmacy**. Her research on **polypharmacy in elderly patients** has influenced Hospital Authority prescribing guidelines. Recipient of the **Faculty Teaching Excellence Award**."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "bullets": [
+            "**HKU Foundation Entrance Scholarship**: Awarded to top JUPAS entrants with **Best 6 at 35 points or above**. Covers **full tuition fees** (HK$42,100/year) plus living allowance of **HK$15,000/year**. Renewable with CGPA 3.00+.",
+            "**Faculty of Medicine Scholarships**: Merit-based awards for continuing students with **CGPA 3.50+**. Amounts range from **HK$10,000 to HK$25,000** per year. Pharmacy-specific awards funded by **pharmaceutical companies** (e.g., Pfizer, Roche) and alumni.",
+            "**Pharmacy and Poisons Board Scholarship**: For outstanding pharmacy students demonstrating **academic excellence and commitment to the profession**. **HK$20,000/year**. Includes mentorship from **senior registered pharmacists**.",
+            "**Hospital Authority Pharmacy Scholarship**: For students interested in **hospital pharmacy careers**. Covers **tuition fees** and provides **guaranteed pre-registration placement** at a Hospital Authority hospital. Requires **2-year service commitment** post-registration.",
+            "**HKU Bursaries and Financial Aid**: Need-based support through **SFAA** and HKU bursary fund. Covers tuition, hall fees, and living expenses. **Pharmacy-specific emergency grants** available for students facing hardship during clinical placements."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's Pharmacy Strategy",
+          "bullets": [
+            "**Ace Sir says: Pharmacy is the most underrated high-paying health career.** At 32 points median, it is more accessible than Medicine (39) but offers **excellent job security** and **starting salaries of HK$34,000/month** in hospitals. The small cohort means **personal attention** from professors.",
+            "**Subject combination strategy**: **Chemistry + Biology is essential**. If you have **M1/M2**, it helps with pharmacokinetics calculations. Physics is less critical but acceptable as a third elective. **English at Level 4+** is important for reading drug monographs and clinical guidelines.",
+            "**Band A positioning**: Put JS6492 in **Band A if your Best 6 is 30+ with Chemistry and Biology at Level 5***. If your score is 28-29, it is a **reach** - but strong science grades can compensate. Have CUHK Pharmacy (JS4501) or PolyU Optometry in Band B.",
+            "**Get pharmacy exposure early**: Unlike Medicine, pharmacy is less understood by students. **Shadow a pharmacist** at Watsons, Mannings, or a hospital outpatient pharmacy. Mention this in your SLP - admissions officers value **informed career choice**.",
+            "**Do not confuse Pharmacy with Pharmaceutical Sciences**: HKU BPharm is a **professional degree** leading to pharmacist registration. If you want **drug research and development** without clinical practice, consider **BSc in Biomedical Sciences** or **BSc in Chemistry** instead."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學資格與收生要求（DSE）",
+          "bullets": [
+            "最低 DSE 要求：**最佳六科達 32 分**（中位數入學成績）。藥劑學競爭激烈；成功入學者通常考獲 **30-34 分**",
+            "核心科目最低要求：**中國語文及英國語文達第 3 級**；**數學（必修部分）及通識教育**（或公民與社會發展）達第 2 級。**英國語文達第 4 級以上強烈偏好**，以應對科學文獻閱讀",
+            "選修科要求：**化學達第 4 級以上強烈偏好**。**生物達第 4 級以上高度建議**。物理或組合科學（化學+生物）亦獲接受。M1/M2 數學對藥物動力學及生物統計學有幫助",
+            "標準 JUPAS 入學**不設面試**。篩選基於學業成績及 OEA/SLP。非 JUPAS 申請人或獲邀參加面試",
+            "科目比重：**化學及生物於入學分數計算中獲 1.5 倍比重**。英國語文按標準比重計算。化學或生物考獲 5** 可獲額外加分"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構與內容",
+          "bullets": [
+            "**四年全日制課程**（240 學分）。獲**香港藥劑業及毒藥管理局（PPBHK）**認可——畢業生符合資格申請**註冊藥劑師（第一部）**註冊",
+            "**第一年**：基礎科學——**普通化學、有機化學、人體生理學及生物化學**。學生同時完成**大學共同核心課程**及**藥劑學導論**單元",
+            "**第二年**：核心藥劑科學——**藥劑學、藥理學、藥物化學及生藥學**。於學院模擬實驗室開始學習**藥劑實務**及**配藥技能**",
+            "**第三年**：臨床及應用藥劑學——**治療學、臨床藥物動力學、藥學照護及藥房管理**。學生開始**醫院及社區藥房實習**（總計超過 400 小時）",
+            "**第四年**：進階實務及畢業專題——**進階治療學、藥物經濟學、藥物資訊及研究項目**。於**瑪麗醫院、威爾斯親王醫院及社區藥房連鎖店**（如屈臣氏、萬寧）進行**臨床輪轉實習**",
+            "**專業認可**：獲**PPBHK**全面認可及**英國皇家藥劑學會（RPS）**承認。畢業生可參加**註冊考試**成為香港註冊藥劑師",
+            "**研究機會**：學生可參與**藥物傳遞、藥物基因組學、臨床藥劑學及中藥與西藥相互作用**等研究項目。港大與**深圳先進技術研究院（SIAT）**有密切合作"
+          ]
+        },
+        "career": {
+          "title": "職業出路與前景",
+          "bullets": [
+            "**醫院藥劑部**：畢業生加入**醫院管理局**擔任**駐院藥劑師**，於**瑪麗醫院、威爾斯親王醫院、伊利沙伯醫院及東區尤德夫人那打素醫院**工作。起薪點：**每月 34,060 港元**（第 15 點）。晉升至**高級藥劑師**達**每月 54,220 港元**（第 27 點）",
+            "**社區藥房**：於**屈臣氏、萬寧、Guardian 及獨立藥房**擔任**註冊藥劑師**及**藥房經理**。起薪點：**每月 28,000-35,000 港元**。店舖經理收入達**每月 40,000-55,000 港元**",
+            "**製藥工業**：於**輝瑞、羅氏、葛蘭素史克、阿斯利康及本地生物科技公司**（如**中國生物製藥、信達生物**）擔任**藥物安全、法規事務、醫學事務及臨床研究**職位。起薪點：**每月 25,000-32,000 港元**",
+            "**政府及監管機構**：**衞生署**的**藥物註冊、藥房巡查及毒藥管制**職位。**藥劑業及毒藥管理局**行政職位。起薪點：**每月 22,000-34,000 港元**（視職級而定）",
+            "**進修途徑**：修讀**藥劑學碩士（MPharm）**以專業進修（英國／澳洲）。修讀**臨床藥劑學理學碩士**或**藥物科學理學碩士**以從事研究或進階實務。攻讀**博士學位**從事學術及藥物研發事業",
+            "**創業**：部分畢業生開設**獨立藥房**或加入**藥房連鎖店**管理層。**藥物電子商務**界別（如**HKTVmall 藥房、士多**）正快速增長"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與學生體驗",
+          "bullets": [
+            "**醫學院大樓（沙宣道 21 號）**：設有**藥劑學教學實驗室、配藥模擬室及研究設施**。**醫學院公共休息室**是跨專業學生活動的中心",
+            "**港大藥劑學會**：活躍的學生學會，舉辦**藥物資訊工作坊、社區健康篩查及業界參觀**（參觀製藥公司及醫院）。每年舉辦**藥劑之夜**校友聯誼晚宴",
+            "**配藥實驗室**：最先進的**模擬藥房**，學生在督導下練習**處方配藥、病人諮詢及藥物調配**。配備醫院管理局使用的**電子處方系統**",
+            "**跨專業教育（IPE）**：藥劑學學生與**醫學、護理及牙科**學生合作進行**病例為本學習**及**模擬病房巡房**——為真實醫療團隊協作做好準備",
+            "**地理位置**：學院位於**薄扶林沙宣道**——距離本部校園 10 分鐘穿梭巴士車程。學生可使用**本部校園設施**（圖書館、舍堂、體育設施）及**醫學院校園資源**（醫院圖書館、臨床技能實驗室）"
+          ]
+        },
+        "competitiveness": {
+          "title": "入學競爭力分析",
+          "bullets": [
+            "**整體難度：★★★★☆ 高度競爭**——港大藥劑學是最具競爭力的健康科學課程之一。小班教學及高需求造成激烈競爭",
+            "**中位數 DSE 成績：32 分**（最佳六科）。下四分位數通常考獲 **30-31 分**。上四分位數達 **33-34 分**。化學及生物成績至關重要",
+            "**Band A 申請人與學額比例**：每個學額約有 **6-8 個 Band A 申請人**。JUPAS 總收生額：每年約 **40-50 人**（港大最小班之一）",
+            "**非 JUPAS 入學比例**：約 **10-15%** 學額保留予國際學歷申請人。IB 入學者通常考獲 **36-38 分**並修讀高級程度化學及生物。A-Level 考生需考獲 **AAA**（包括化學及生物）",
+            "**與中大藥劑學（JS4501）比較**：港大藥劑學擁有**更強的醫院藥劑聯繫**（瑪麗醫院為教學醫院）及更多**藥物科學**研究機會。中大藥劑學**班級較大**及**社區藥房**培訓更強。中位數成績相若（中大約 31-32 分）",
+            "**成功申請人的關鍵優勢**：(1) **化學及生物達第 5 級**；(2) **優異的英語能力**以應對科學閱讀；(3) **醫療義工經驗**——醫院輔助醫療服務、藥房見習、長者護理；(4) 於 SLP 中展現**科學好奇心**——科學比賽、研究項目或健康創新計劃"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友與師資",
+          "bullets": [
+            "**李海鷹教授**——前港大藥劑學系主任及**臨床藥物動力學與個人化醫療**領域的領先研究者。其**華法林劑量演算法**研究提升了全港醫院的病人安全",
+            "**崔俊明博士**——前**香港醫院藥劑師學會會長**及前**瑪麗醫院首席藥劑師**。港大藥劑學學士及臨床藥劑學碩士。倡議擴展公立醫院**臨床藥劑服務**",
+            "**梁女士**——前**屈臣氏香港藥劑部總監**及**社區藥房實務**業界領袖。港大藥劑學學士。開創零售藥房**藥劑師主導健康篩查服務**",
+            "**李峻教授**——港大藥劑學講座教授及**納米醫學與標靶藥物傳遞**專家。其**癌症納米治療**研究獲得多項專利並衍生多家初創企業",
+            "**陳教授**——臨床教授及**老年藥劑學**專家。其關於**長者多重用藥**的研究影響了醫院管理局的處方指引。獲頒**學院教學卓越獎**"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與經濟援助",
+          "bullets": [
+            "**港大基金入學獎學金**：頒予最佳六科達 **35 分或以上**的頂尖 JUPAS 入學者。涵蓋**全額學費**（每年 42,100 港元）加生活津貼**每年 15,000 港元**。CGPA 達 3.00+ 可續領",
+            "**醫學院獎學金**：頒予**CGPA 達 3.50+**的在讀學生。金額由**每年 10,000 至 25,000 港元**不等。藥劑學專屬獎項由**製藥公司**（如輝瑞、羅氏）及校友資助",
+            "**藥劑業及毒藥管理局獎學金**：頒予表現傑出並**致力投身藥劑專業**的藥劑學學生。**每年 20,000 港元**。包括**資深註冊藥劑師**導師指導",
+            "**醫院管理局藥劑學獎學金**：供有志從事**醫院藥劑事業**的學生申請。涵蓋**學費**並提供**醫院管理局醫院保證實習安排**。註冊後須**服務兩年**",
+            "**港大助學金及經濟援助**：透過**在職家庭及學生資助事務處**及港大助學基金提供按需要資助。涵蓋學費、舍堂費及生活費。**藥劑學專屬緊急援助金**供臨床實習期間面臨困難的學生申請"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir 的藥劑學攻略",
+          "bullets": [
+            "**Ace Sir 說：藥劑學是最被低估的高薪醫療事業。**中位數 32 分，比醫學（39 分）更易入讀，但提供**極佳的就業保障**及**醫院起薪點每月 34,000 港元**。小班教學意味教授可給予**個人化指導**",
+            "**選科策略**：**化學 + 生物為必需**。如有**M1/M2**，對藥物動力學計算有幫助。物理重要性較低但可作為第三選修科。**英國語文達第 4 級以上**對閱讀藥物專論及臨床指引很重要",
+            "**Band A 定位**：如最佳六科達 **30 分以上且化學及生物達第 5 級**，將 JS6492 放於**Band A**。如成績為 28-29 分，屬**衝刺選擇**——但優異的理科成績可彌補。於 Band B 放置中大藥劑學（JS4501）或理大視光學",
+            "**及早接觸藥劑學**：與醫學不同，學生對藥劑學認識較少。**到屈臣氏、萬寧或醫院門診藥房見習藥劑師**。於 SLP 中提及——招生官重視**有根據的職業選擇**",
+            "**勿混淆藥劑學與藥物科學**：港大藥劑學學士是**專業學位**，可註冊成為藥劑師。如希望從事**藥物研發**而無須臨床實務，可考慮**生物醫學理學士**或**化學理學士**"
+          ]
+        }
+      }
+    }
+  },
+  "JS6717": {
+    "code": "JS6717",
+    "nameEn": "Bachelor of Social Sciences",
+    "nameZh": "社會科學學士",
+    "university": "HKU",
+    "faculty": "Faculty of Social Sciences",
+    "median": 27,
+    "category": "social_science",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "bullets": [
+            "Minimum DSE requirement: **Best 6 subjects at 27 points** (median entry score). The Faculty of Social Sciences admits a broad range of candidates; successful entrants typically score **25-29 points**.",
+            "Core subject minimums: **Level 3 in Chinese Language and English Language**; **Level 2 in Mathematics (Compulsory Part) and Liberal Studies** (or Citizenship and Social Development). **English at Level 4+ strongly preferred** for majors like Journalism, International Relations, and Social Work.",
+            "Elective requirements: **No specific elective requirements**. The Faculty welcomes diverse subject combinations. However, **Economics, History, or Geography** may be advantageous for related majors. M1/M2 Mathematics is helpful for Economics, Psychology (statistics), and Social Data Science.",
+            "**No JUPAS interview** for standard admission. Selection is based on academic merit and OEA/SLP. Non-JUPAS applicants may be invited to an interview for competitive majors (e.g., Journalism, Social Work, Psychology).",
+            "Subject weightings: **Chinese Language and English Language receive 1.5x weighting**. Mathematics and Liberal Studies at standard weighting. Bonus points for Level 5** in any subject."
+          ]
+        },
+        "curriculum": {
+          "title": "Programme Structure & Curriculum",
+          "bullets": [
+            "**4-year full-time programme** (240 credits). Students select a **major** from **9 departments** and may add a **minor** from Social Sciences or other faculties. Double majors available with approval.",
+            "**Year 1**: Faculty Common Curriculum - **Introduction to Social Sciences, Research Methods, and Academic Writing**. Students explore 2-3 potential majors before declaring at the end of Year 1. All students complete **a quantitative methods course** regardless of major.",
+            "**Years 2-3**: Major courses and faculty electives. Each major requires **72-90 credits**. Available majors: **China Studies, Geography, Journalism & Media Studies, Politics & Public Administration, Psychology, Social Policy & Social Work, Sociology, Social Data Science, and Urban Governance**.",
+            "**Year 4**: Capstone experience - **honours dissertation, applied research project, or professional portfolio**. Social Work majors complete **800 hours of supervised fieldwork**. Journalism majors produce a **final-year multimedia project**. Psychology majors conduct an **empirical research study**.",
+            "**Professional accreditation**: **Social Work major** fully accredited by the **Social Workers Registration Board (SWRB)** - graduates eligible for **Registered Social Worker (RSW)** status. **Psychology major** aligned with **Hong Kong Psychological Society (HKPS)** requirements for graduate membership.",
+            "**Experiential learning**: All majors include **practicum, internship, or fieldwork components**. Partners include **HKCSS, Oxfam Hong Kong, RTHK, Legislative Council Secretariat, and District Councils**. The **Social Sciences Internship Programme** places 200+ students annually.",
+            "**Exchange and global learning**: Partnerships with **LSE, University of Chicago, Sciences Po, National University of Singapore, and Peking University**. Faculty-specific summer field schools in **rural China, Southeast Asia, and Europe** for China Studies, Geography, and Sociology majors."
+          ]
+        },
+        "career": {
+          "title": "Career Pathways & Prospects",
+          "bullets": [
+            "**Social services sector**: **Social Work** graduates join **HKCSS member agencies, Caritas Hong Kong, Salvation Army, and Tung Wah Group of Hospitals** as registered social workers. Starting salary: **HK$24,000-28,000/month**. Government social work officers (SWO) start at **HK$34,060/month** (Point 15).",
+            "**Government and public policy**: Graduates enter the **Hong Kong Civil Service** through the **Common Recruitment Examination (CRE)** and **Basic Law Test**. Roles in **Home Affairs Bureau, Constitutional and Mainland Affairs Bureau, Census and Statistics Department, and ICAC**. Starting salaries: **HK$22,000-34,000/month** depending on grade.",
+            "**Media and communications**: **Journalism & Media Studies** graduates join **SCMP, Ming Pao, RTHK, TVB, Now TV, and online media outlets** as reporters, producers, and digital content creators. PR and corporate communications roles at **Edelman, Ogilvy, and in-house teams** at **MTR, CLP, and Swire**.",
+            "**Market research and consulting**: **Psychology, Sociology, and Social Data Science** graduates recruited by **Nielsen, Ipsos, McKinsey, Deloitte, and local survey research firms** as analysts and consultants. Starting salaries: **HK$22,000-28,000/month**.",
+            "**Further studies**: **Master of Social Work (MSW)** for advanced practice. **Master of Journalism (MJ)** at HKU or CUHK. **MSc in Psychology (Conversion)** for clinical psychology pathway. **Master of Public Policy (MPP)** or **Master of International Relations** for policy careers. PhD for academic research.",
+            "**NGO and international organisations**: Graduates work at **UNICEF Hong Kong, Amnesty International, WWF, Red Cross, and local advocacy groups** as programme officers, campaigners, and researchers. International careers with **UN agencies, World Bank, and Asian Development Bank** after graduate study."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Student Experience",
+          "bullets": [
+            "**The Jockey Club Tower**: The Faculty main building houses **lecture theatres, research centres, computer labs, and the Faculty Common Room**. The **Journalism and Media Studies Centre (JMSC)** has state-of-the-art **TV studios, radio booths, and editing suites**.",
+            "**HKU Social Sciences Society**: One of the largest faculty societies, organising **Social Sciences Week**, academic forums, career fairs, and mentorship dinners. Subject societies include **Psychology Society, Sociology Society, and Journalism Society** with industry networking events.",
+            "**Research centres and institutes**: Students have access to **the Centre for Civil Society and Governance, the HKU-Pasteur Research Pole (for public health)**, and **the Centre for China Studies** - all offer **undergraduate research assistant positions** and seminar series.",
+            "**Hall and college life**: Social Sciences students are active in all **residential halls** and **St. John College**. The **Social Sciences Residential Programme** at **R.C. Lee Hall** offers themed floors for students interested in public policy and community service.",
+            "**Location**: Faculty buildings are on the **Main Campus** with easy access to **the MTR (HKU Station Exit C1)**. The **JMSC** is located at **The University of Hong Kong Shenzhen Institute of Research and Innovation (HKU-SIRI)** for some advanced media courses."
+          ]
+        },
+        "competitiveness": {
+          "title": "Admission Competitiveness Analysis",
+          "bullets": [
+            "**Overall difficulty: ★★★☆☆ Moderately Competitive** - HKU Social Sciences is competitive but accessible. The broad major portfolio and lack of specific elective requirements attract diverse applicants.",
+            "**Median DSE score: 27 points** (Best 6). The lower quartile typically scores **25-26 points**. Upper quartile reaches **29-30 points** for competitive majors like **Journalism, Psychology, and Social Work**.",
+            "**Band A applicants vs places**: Approximately **4-5 Band A applicants per place**. Total JUPAS intake: **~350-400 students** per year across all majors. Most competitive majors: **Journalism & Media Studies, Psychology, and Social Work**.",
+            "**Non-JUPAS intake**: Around **15-20%** of places for international qualifications. IB entrants typically present **32-35 points**. A-Level candidates need **ABB-BBB**. Portfolio or writing samples may be required for Journalism applicants.",
+            "**Comparison with CUHK Social Science (JS4801)**: HKU Social Sciences has **stronger journalism and media facilities** (JMSC) and more urban internship links. CUHK Social Science is known for **stronger sociology and anthropology** research and a larger campus. Median scores are comparable (CUHK ~26-27).",
+            "**Key differentiators for successful applicants**: (1) **Strong language grades** (Chinese and English at Level 4+); (2) **Relevant extracurriculars** - debating, Model UN, volunteering, student journalism; (3) **Quantitative skills** (M1/M2 or Economics) for data-heavy majors; (4) **Social awareness** demonstrated in SLP - engagement with community issues, policy debates, or social innovation."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni & Faculty",
+          "bullets": [
+            "**Mr. Ronny Tong Ka-wah** - Senior Counsel and former Convenor of the Path of Democracy. HKU BSSc (Economics) and LLB. Prominent figure in Hong Kong legal and political circles.",
+            "**Prof. Ng Chun-hung** - Former Head of Sociology at HKU and leading scholar in Hong Kong social movements and civil society. His research on the 2014 Umbrella Movement is widely cited.",
+            "**Ms. Claudia Mo Man-ching** - Former journalist and Legislative Council member. HKU BSSc (Journalism). Worked at BBC World Service and TVB News before entering politics. Known for her advocacy on press freedom and democratic reform.",
+            "**Mr. Shiu Sin-por** - Former Head of the Central Policy Unit (2012-2017) under the Hong Kong SAR Government. HKU BSSc (Sociology) and MPhil. Key government advisor on social policy, poverty alleviation, and housing.",
+            "**Prof. Winnie Mak Wing-sze** - Professor of Psychology at CUHK and leading researcher in health psychology and cancer survivorship. HKU BSSc (Psychology) and PhD. Her work on psycho-oncology has influenced cancer care policy across Asia."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "bullets": [
+            "**HKU Foundation Entrance Scholarship**: Awarded to top JUPAS entrants with **Best 6 at 32 points or above**. Covers **full tuition fees** (HK$42,100/year) plus living allowance of **HK$15,000/year**. Renewable with CGPA 3.00+.",
+            "**Faculty of Social Sciences Scholarships**: Merit-based awards for continuing students with **CGPA 3.50+**. Amounts range from **HK$8,000 to HK$20,000** per year. Over 35 awards available across all departments, funded by alumni and corporate donors.",
+            "**Journalism and Media Studies Centre Scholarship**: For Journalism majors with outstanding academic performance and portfolio work. **HK$20,000-30,000/year**. Includes mentorship from **senior editors at SCMP, RTHK, and Ming Pao**.",
+            "**Social Work Fieldwork Bursary**: Supports Social Work majors during **fieldwork placements** to cover transport and incidental expenses. **HK$10,000-15,000/year** depending on placement location. Priority for placements in **remote districts** (Islands, North District).",
+            "**HKU Bursaries and Financial Aid**: Need-based support through **SFAA** and HKU bursary fund. Covers tuition, hall fees, and living expenses. **Social Sciences-specific emergency grants** available for students facing hardship during fieldwork or internships."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir Social Sciences Strategy",
+          "bullets": [
+            "**Ace Sir says: Social Sciences is the hidden gem of HKU.** At 27 points median, it is more accessible than Arts (28) but offers **equally strong career prospects** - especially in government, social services, and media. Do not overlook it because it sounds soft.",
+            "**Subject combination strategy**: No required electives, but **Economics or M1/M2** opens doors to **Economics, Social Data Science, and Psychology** majors. For **Journalism**, any combination works but strong English is essential. For **Social Work**, Biology or Combined Science helps with human development courses.",
+            "**Band A positioning**: Put JS6717 in **Band A if your Best 6 is 25+ with balanced grades**. If your score is 23-24, it is a **reach** - but Social Sciences has a wider intake range. Have CUHK Social Science (JS4801) or HKBU Social Work in Band B.",
+            "**Demonstrate social awareness**: Unlike Medicine or Law, Social Sciences values **engagement with real-world issues**. Mention volunteering with NGOs, participating in policy debates, writing for student newspapers, or conducting community surveys. Show you care about how society works.",
+            "**Quantitative skills matter more than you think**: Even non-Economics majors require statistics and research methods. If you have **M1/M2 or Economics**, highlight it. If not, consider taking online courses in Excel, SPSS, or Python before Year 1 - it will give you a significant advantage."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學資格與收生要求（DSE）",
+          "bullets": [
+            "最低 DSE 要求：**最佳六科達 27 分**（中位數入學成績）。社會科學學院錄取範圍廣泛；成功入學者通常考獲 **25-29 分**",
+            "核心科目最低要求：**中國語文及英國語文達第 3 級**；**數學（必修部分）及通識教育**（或公民與社會發展）達第 2 級。**英國語文達第 4 級以上強烈偏好**，適用於新聞學、國際關係及社會工作等主修",
+            "選修科要求：**無特定選修科要求**。學院歡迎各種選科組合。但**經濟學、歷史或地理**對相關主修可能有幫助。M1/M2 數學對經濟學、心理學（統計學）及社會數據科學有幫助",
+            "標準 JUPAS 入學**不設面試**。篩選基於學業成績及 OEA/SLP。非 JUPAS 申請人或獲邀參加面試（競爭激烈主修如新聞學、社會工作、心理學）",
+            "科目比重：**中國語文及英國語文於入學分數計算中獲 1.5 倍比重**。數學及通識教育按標準比重計算。任何科目考獲 5** 可獲額外加分"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構與內容",
+          "bullets": [
+            "**四年全日制課程**（240 學分）。學生從 **9 個學系**中選擇**主修**，並可於社會科學學院或其他學院加修**輔修**。經批准可修讀**雙主修**",
+            "**第一年**：學院共同課程——**社會科學導論、研究方法及學術寫作**。學生於第一年結束前探索 2-3 個潛在主修。所有學生不論主修均須完成**量化方法課程**",
+            "**第二至三年**：主修課程及學院選修科。每個主修須修讀 **72-90 學分**。可選主修：**中國研究、地理學、新聞與傳媒研究、政治與公共行政、心理學、社會政策與社會工作、社會學、社會數據科學及城市管治**",
+            "**第四年**：畢業專題體驗——**榮譽學位論文、應用研究項目或專業作品集**。社會工作主修須完成 **800 小時督導實地考察**。新聞學主修須製作**畢業年多媒體項目**。心理學主修須進行**實證研究**",
+            "**專業認可**：**社會工作主修**獲**社會工作者註冊局（SWRB）**全面認可——畢業生符合資格申請**註冊社會工作者（RSW）**資格。**心理學主修**與**香港心理學會（HKPS）**的研究生會員要求接軌",
+            "**體驗式學習**：所有主修均包括**實習、實習或實地考察部分**。合作夥伴包括**香港社會服務聯會、樂施會香港、香港電台、立法會秘書處及區議會**。社會科學實習計劃每年安排超過 200 名學生",
+            "**交流及全球學習**：與**倫敦政治經濟學院、芝加哥大學、巴黎政治學院、新加坡國立大學及北京大學**合作。學院專屬暑期田野學校設於**中國農村、東南亞及歐洲**，供中國研究、地理學及社會學主修生參加"
+          ]
+        },
+        "career": {
+          "title": "職業出路與前景",
+          "bullets": [
+            "**社會服務界別**：**社會工作**畢業生加入**香港社會服務聯會會員機構、明愛香港、救世軍及東華三院**擔任註冊社會工作者。起薪點：**每月 24,000-28,000 港元**。政府社會工作主任（SWO）起薪點為**每月 34,060 港元**（第 15 點）",
+            "**政府及公共政策**：畢業生透過**綜合招聘考試（CRE）**及**基本法測試**進入**香港公務員隊伍**。**民政事務局、政制及內地事務局、政府統計處及廉政公署**等職位重視良好的語言及分析能力。起薪點：**每月 22,000-34,000 港元**（視職級而定）",
+            "**傳媒及通訊**：**新聞與傳媒研究**畢業生加入**南華早報、明報、香港電台、無綫電視、Now TV 及網上媒體**擔任記者、製作人及數碼內容創作者。公關及企業傳訊職位包括**愛德曼、奧美及港鐵、中電、太古等企業內部團隊**",
+            "**市場研究及顧問**：**心理學、社會學及社會數據科學**畢業生獲**尼爾森、益普索、麥肯錫、德勤及本地調查研究公司**聘用為分析師及顧問。起薪點：**每月 22,000-28,000 港元**",
+            "**進修途徑**：修讀**社會工作碩士（MSW）**以進階實務。於港大或中大修讀**新聞學碩士（MJ）**。修讀**心理學理學碩士（轉制課程）**以進入臨床心理學途徑。修讀**公共政策碩士（MPP）**或**國際關係碩士**以從事政策事業。攻讀博士學位從事學術研究",
+            "**非政府組織及國際機構**：畢業生於**聯合國兒童基金會香港分會、國際特赦組織、世界自然基金會、紅十字會及本地倡導團體**擔任項目主任、運動倡議者及研究員。進修後可於**聯合國機構、世界銀行及亞洲開發銀行**從事國際事業"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與學生體驗",
+          "bullets": [
+            "**賽馬會教學樓**：學院主樓設有**演講廳、研究中心、電腦室及學院公共休息室**。**新聞及傳媒研究中心（JMSC）**配備最先進的**電視錄影廠、電台直播室及剪接室**",
+            "**港大社會科學學會**：最大的學院學會之一，每年舉辦**社會科學周**、學術論壇、就業博覽及導師晚宴。學科學會包括**心理學會、社會學會及新聞學會**，定期舉辦業界交流活動",
+            "**研究中心及學院**：學生可使用**公民社會及管治研究中心、港大巴斯德研究中心（公共衞生）**及**中國研究中心**——全部提供**本科生研究助理職位**及研討會系列",
+            "**舍堂及書院生活**：社會科學學生活躍於全部**住宿舍堂**及**聖約翰書院**。**利希慎堂的社會科學住宿計劃**為對公共政策及社區服務有興趣的學生提供主題樓層",
+            "**地理位置**：學院大樓位於**本部校園**，毗鄰**港鐵香港大學站 C1 出口**。**新聞及傳媒研究中心（JMSC）**設於**港大深圳研究院（HKU-SIRI）**，提供部分高階媒體課程"
+          ]
+        },
+        "competitiveness": {
+          "title": "入學競爭力分析",
+          "bullets": [
+            "**整體難度：★★★☆☆ 中等競爭**——港大社會科學具競爭力但門檻合理。廣泛的主修選擇及無特定選修科要求吸引多元背景的申請人",
+            "**中位數 DSE 成績：27 分**（最佳六科）。下四分位數通常考獲 **25-26 分**。上四分位數達 **29-30 分**（競爭激烈主修如新聞學、心理學及社會工作）",
+            "**Band A 申請人與學額比例**：每個學額約有 **4-5 個 Band A 申請人**。JUPAS 總收生額：每年約 **350-400 人**（涵蓋所有主修）。競爭最激烈的主修：**新聞與傳媒研究、心理學及社會工作**",
+            "**非 JUPAS 入學比例**：約 **15-20%** 學額保留予國際學歷申請人。IB 入學者通常考獲 **32-35 分**。A-Level 考生需考獲 **ABB-BBB**。新聞學申請人或須提交作品集或寫作樣本",
+            "**與中大社會科學（JS4801）比較**：港大社會科學擁有**更強的新聞及媒體設施**（JMSC）及更多市區實習聯繫。中大社會科學以**更強的社會學及人類學**研究實力及更大的校園聞名。中位數成績相若（中大約 26-27 分）",
+            "**成功申請人的關鍵優勢**：(1) **優異的語文成績**（中英文達第 4 級以上）；(2) **相關課外活動**——辯論、模擬聯合國、義工服務、學生記者；(3) **量化能力**（M1/M2 或經濟學）對數據密集型主修有幫助；(4) 於 SLP 中展現**社會意識**——參與社區議題、政策辯論或社會創新"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友與師資",
+          "bullets": [
+            "Tong Ka-wah, Senior Counsel and former Convenor of Path of Democracy. HKU BSSc Economics and LLB.",
+            "Prof Ng Chun-hung, Former Head of Sociology at HKU. Leading scholar in HK social movements.",
+            "Claudia Mo, Former journalist and LegCo member. HKU BSSc Journalism. Worked at BBC and TVB.",
+            "Shiu Sin-por, Former Head of Central Policy Unit. HKU BSSc Sociology and MPhil.",
+            "Prof Winnie Mak, Professor of Psychology at CUHK. HKU BSSc Psychology and PhD."
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與經濟援助",
+          "bullets": [
+            "HKU Foundation Entrance Scholarship: Best 6 at 32+ points. Full tuition plus HK5,000/year living allowance.",
+            "Faculty of Social Sciences Scholarships: CGPA 3.50+. HK,000-20,000/year. Over 35 awards available.",
+            "Journalism and Media Studies Centre Scholarship: HK0,000-30,000/year for Journalism majors.",
+            "Social Work Fieldwork Bursary: HK0,000-15,000/year for fieldwork transport and expenses.",
+            "HKU Bursaries and Financial Aid: Need-based support through SFAA and HKU bursary fund."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir Social Sciences Strategy",
+          "bullets": [
+            "Ace Sir says: Social Sciences is the hidden gem of HKU. At 27 points median, more accessible than Arts (28) but equally strong career prospects.",
+            "Subject combination: No required electives, but Economics or M1/M2 opens doors to Economics, Social Data Science, and Psychology majors.",
+            "Band A positioning: Put JS6717 in Band A if Best 6 is 25+ with balanced grades. Have CUHK Social Science in Band B.",
+            "Demonstrate social awareness: Mention volunteering with NGOs, policy debates, student newspapers, or community surveys.",
+            "Quantitative skills matter: Even non-Economics majors require statistics. Highlight M1/M2 or Economics if you have them."
+          ]
+        }
+      }
+    }
+  }
+}

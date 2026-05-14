@@ -601,20 +601,81 @@ class CosmosStore {
         const c = await this.container("report_logs");
         const weekId = payload.weekId || this._getWeekId();
         const id = `report_${uid}_${weekId}`;
+        const now = new Date().toISOString();
+        const existing = await this.getReportLog(uid, weekId).catch(() => null);
         const doc = {
+            ...(existing || {}),
             id,
             pk: uid,
             uid,
             weekId,
+            type: payload.type || existing?.type || "weekly",
             status: payload.status || 'sent',
             recipients: payload.recipients || [],
             provider: payload.provider || null,
             error: payload.error || null,
-            sentAt: payload.sentAt || new Date().toISOString(),
+            source: payload.source || existing?.source || null,
+            periodStart: payload.periodStart || existing?.periodStart || null,
+            periodEnd: payload.periodEnd || existing?.periodEnd || null,
+            attempts: payload.attempts || existing?.attempts || 1,
+            startedAt: payload.startedAt || existing?.startedAt || null,
+            sentAt: payload.sentAt || (payload.status === 'sent' ? now : existing?.sentAt || null),
+            completedAt: payload.completedAt || now,
+            updatedAt: now,
             reportData: payload.reportData || null
         };
         await c.items.upsert(doc);
         return doc;
+    }
+
+    async reserveReportSend(uid, payload = {}) {
+        const c = await this.container("report_logs");
+        const weekId = payload.weekId || this._getWeekId();
+        const id = `report_${uid}_${weekId}`;
+        const existing = await this.getReportLog(uid, weekId);
+        const now = new Date().toISOString();
+
+        if (existing?.status === "sent") {
+            return { reserved: false, log: existing };
+        }
+        if (existing?.status === "processing" && !payload.allowProcessingRetry) {
+            return { reserved: false, log: existing };
+        }
+
+        const doc = {
+            ...(existing || {}),
+            id,
+            pk: uid,
+            uid,
+            weekId,
+            type: payload.type || existing?.type || "weekly",
+            status: "processing",
+            recipients: payload.recipients || existing?.recipients || [],
+            source: payload.source || existing?.source || null,
+            provider: null,
+            error: null,
+            periodStart: payload.periodStart || existing?.periodStart || null,
+            periodEnd: payload.periodEnd || existing?.periodEnd || null,
+            attempts: Number(existing?.attempts || 0) + 1,
+            startedAt: now,
+            sentAt: existing?.sentAt || null,
+            completedAt: null,
+            updatedAt: now
+        };
+
+        if (!existing) {
+            try {
+                await c.items.create(doc);
+                return { reserved: true, log: doc };
+            } catch (error) {
+                if (error.code !== 409) throw error;
+                const current = await this.getReportLog(uid, weekId);
+                return { reserved: false, log: current };
+            }
+        }
+
+        await c.items.upsert(doc);
+        return { reserved: true, log: doc };
     }
 
     async getReportLog(uid, weekId) {
@@ -632,11 +693,18 @@ class CosmosStore {
     async listReportLogs(uid, limit = 10) {
         const c = await this.container("report_logs");
         const top = Math.min(Math.max(Number(limit) || 10, 1), 100);
+        const fetchCap = Math.min(top * 5, 100);
         const result = await c.items.query({
-            query: `SELECT TOP ${top} c.weekId, c.status, c.recipients, c.sentAt, c.error FROM c WHERE c.pk = @uid ORDER BY c.sentAt DESC`,
+            query: `SELECT TOP ${fetchCap} c.weekId, c.status, c.recipients, c.sentAt, c.completedAt, c.updatedAt, c.error FROM c WHERE c.pk = @uid`,
             parameters: [{ name: "@uid", value: uid }]
         }).fetchAll();
-        return result.resources || [];
+        const rows = result.resources || [];
+        rows.sort((a, b) => {
+            const tb = new Date(b.updatedAt || b.completedAt || b.sentAt || 0).getTime();
+            const ta = new Date(a.updatedAt || a.completedAt || a.sentAt || 0).getTime();
+            return tb - ta;
+        });
+        return rows.slice(0, top);
     }
 
     async wasReportSentThisWeek(uid, weekId) {
@@ -644,13 +712,22 @@ class CosmosStore {
         return log && log.status === 'sent';
     }
 
-    _getWeekId() {
-        const now = new Date();
-        const year = now.getFullYear();
-        const start = new Date(year, 0, 1);
-        const days = Math.floor((now - start) / (24 * 60 * 60 * 1000));
-        const weekNum = Math.ceil((days + start.getDay() + 1) / 7);
-        return `${year}-W${String(weekNum).padStart(2, '0')}`;
+    _getWeekId(date = new Date()) {
+        const parts = new Intl.DateTimeFormat('en-CA', {
+            timeZone: 'Asia/Hong_Kong',
+            year: 'numeric',
+            month: '2-digit',
+            day: '2-digit'
+        }).formatToParts(date).reduce((acc, part) => {
+            acc[part.type] = part.value;
+            return acc;
+        }, {});
+        const hktDate = new Date(Date.UTC(Number(parts.year), Number(parts.month) - 1, Number(parts.day)));
+        const day = hktDate.getUTCDay() || 7;
+        hktDate.setUTCDate(hktDate.getUTCDate() + 4 - day);
+        const yearStart = new Date(Date.UTC(hktDate.getUTCFullYear(), 0, 1));
+        const weekNum = Math.ceil((((hktDate - yearStart) / 86400000) + 1) / 7);
+        return `${hktDate.getUTCFullYear()}-W${String(weekNum).padStart(2, '0')}`;
     }
 }
 

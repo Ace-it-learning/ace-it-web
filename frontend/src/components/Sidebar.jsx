@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { useAvatar, AGENTS } from '../context/AvatarContext';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
@@ -11,7 +11,7 @@ import CardPreviewModal from './CardPreviewModal';
 import { cn } from '../utils/cn';
 export { cn };
 
-// Rarity ring styles for the avatar circles
+// Rarity ring styles for the study-duo avatar tiles
 const rarityRingStyles = {
     default: 'ring-4 ring-primary/10',
     common: 'ring-4 ring-gray-300/40',
@@ -20,6 +20,34 @@ const rarityRingStyles = {
     legendary: 'ring-4 ring-amber-400/70 shadow-[0_0_25px_rgba(251,191,36,0.4)] ring-sparkle',
 };
 
+/** Label under learner portrait: prefer real name over default DB nickname "Student". */
+function resolveLearnerSidebarName(user, profile, statsPayload) {
+    const firstToken = (s) => {
+        const x = (s || '').trim();
+        if (!x) return '';
+        return x.split(/\s+/)[0] || x;
+    };
+    const rawList = [
+        statsPayload?.user?.nickname,
+        statsPayload?.nickname,
+        profile?.nickname,
+        profile?.displayName,
+        user?.displayName,
+        user?.email?.split('@')[0]
+    ];
+    const isGeneric = (s) => !s || String(s).trim().toLowerCase() === 'student';
+    for (const raw of rawList) {
+        const tok = (raw ?? '').toString().trim();
+        if (!tok || isGeneric(tok)) continue;
+        return firstToken(tok) || tok;
+    }
+    for (const raw of rawList) {
+        const tok = (raw ?? '').toString().trim();
+        if (tok) return firstToken(tok) || tok;
+    }
+    return 'Student';
+}
+
 const Sidebar = () => {
     const navigate = useNavigate();
     const { activeAgentId, setActiveAgentId, activeAgent, avatarState, studentState, equipment, getAgentIdentity } = useAvatar();
@@ -27,7 +55,6 @@ const Sidebar = () => {
     const tier = (profile?.subscription_tier || 'free').toLowerCase();
     const isPaid = tier === 'pro' || tier === 'premium';
     const { t } = useLanguage();
-    const [nickname, setNickname] = useState('Student');
     const [gender, setGender] = useState(null);
     const [stats, setStats] = useState(null);
     const [isExamTipsOpen, setIsExamTipsOpen] = useState(false);
@@ -40,16 +67,22 @@ const Sidebar = () => {
 
     const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
 
+    const learnerDisplayName = useMemo(() => {
+        if (!user) return t('sidebar.visitor');
+        return resolveLearnerSidebarName(user, profile, stats);
+    }, [user, profile, stats, t]);
+
     useEffect(() => {
         if (user) {
             fetch(`${API_URL}/api/stats?uid=${user.uid}`)
                 .then(res => res.json())
                 .then(data => {
-                    setNickname(data.nickname || 'Student');
-                    setGender(data.gender);
+                    setGender(data.user?.gender ?? data.gender);
                     setStats(data);
                 })
-                .catch(() => setNickname(user.displayName?.split(' ')[0] || 'Student'));
+                .catch(() => {
+                    setStats(null);
+                });
 
             // Fetch equipped tutor card info for rarity ring
             fetch(`${API_URL}/api/redemption/collection?uid=${user.uid}`)
@@ -64,17 +97,17 @@ const Sidebar = () => {
                 })
                 .catch(() => { });
         } else {
-            setNickname(t('sidebar.visitor'));
             setGender(null);
+            setStats(null);
         }
-    }, [user, t]);
+    }, [user, API_URL]);
 
     // Helper to get avatar
     const getStudentAvatar = () => {
         if (equipment.student?.image) return equipment.student.image;
         const g = gender?.toLowerCase();
-        if (g === 'female') return '/avatars/student_female_1.jpg';
-        return '/avatars/student_male_1.jpg';
+        if (g === 'female') return '/avatars/Student/Natalie.jpeg';
+        return '/avatars/Student/Marcus.jpeg';
     };
 
     const handleTutorAvatarClick = () => {
@@ -104,7 +137,7 @@ const Sidebar = () => {
     const handleStudentAvatarClick = () => {
         setPreviewCard({
             id: 'student',
-            name: nickname,
+            name: learnerDisplayName,
             image: getStudentAvatar(),
             description: t('card_preview.default_student'),
             rarity: 'default',
@@ -117,20 +150,20 @@ const Sidebar = () => {
     return (
         <aside className="lg:col-span-3 flex flex-col gap-6">
             {/* --- THE STUDY DUO SECTION --- */}
-            <div className="bg-white/80 dark:bg-white/10 backdrop-blur-md p-6 rounded-3xl shadow-xl border border-primary/20 flex flex-col items-center gap-4 relative overflow-hidden">
+            <div className="bg-white/80 dark:bg-white/10 backdrop-blur-md py-5 px-4 sm:px-5 rounded-3xl shadow-xl border border-primary/20 flex flex-col items-center gap-4 relative overflow-hidden">
                 <div className="absolute top-0 right-0 p-2 opacity-10">
                     <div className="size-24 bg-primary rounded-full blur-3xl"></div>
                 </div>
 
                 <h3 className="font-bold text-[#1d130c] dark:text-white text-lg z-10">{t(`agents.${activeAgentId}.description`)}</h3>
 
-                <div className="flex items-center justify-center gap-2 relative z-10 w-full">
+                <div className="flex items-center justify-center gap-1 relative z-10 w-full min-w-0">
                     {/* Active AI — clickable with rarity ring */}
-                    <div className="relative group text-center">
+                    <div className="relative group text-center shrink-0">
                         <div
                             onClick={handleTutorAvatarClick}
                             className={cn(
-                                "w-[88px] h-[88px] rounded-full overflow-hidden border-4 border-white shadow-lg bg-white mx-auto transition-all cursor-pointer hover:scale-105",
+                                "w-[100px] h-[100px] sm:w-[104px] sm:h-[104px] rounded-2xl overflow-hidden border-[3px] border-white shadow-lg bg-white mx-auto transition-all cursor-pointer hover:scale-[1.02]",
                                 tutorRingClass,
                                 (avatarState === 'TALKING' || avatarState === 'THINKING') && "animate-talking-glow ring-green-400"
                             )}
@@ -138,35 +171,35 @@ const Sidebar = () => {
                             <img 
                                 src={activeAgent.avatar} 
                                 alt="AI" 
-                                className="w-full h-full object-cover object-top scale-[1.35] translate-y-[5%]" 
+                                className="avatar-portrait-dashboard" 
                             />
                         </div>
-                        <div className="absolute top-1 right-2 bg-green-500 size-4 rounded-full border-2 border-white shadow-sm"></div>
+                        <div className="absolute top-0.5 right-0.5 bg-green-500 size-3.5 rounded-full border-2 border-white shadow-sm"></div>
                         <p className="text-[10px] mt-1 font-bold text-primary truncate w-24 mx-auto">
                             {activeAgent.name}
                         </p>
                     </div>
 
                     {/* Linking Line */}
-                    <div className="text-primary/40 animate-pulse">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M7 7l10 10M17 7L7 17" /></svg>
+                    <div className="text-primary/40 animate-pulse shrink-0 p-0.5" aria-hidden>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M7 7l10 10M17 7L7 17" /></svg>
                     </div>
 
                     {/* Student — clickable */}
-                    <div className="relative text-center group/student">
+                    <div className="relative text-center group/student shrink-0">
                         <div
                             onClick={handleStudentAvatarClick}
                             className={cn(
-                                "w-[88px] h-[88px] rounded-full overflow-hidden border-4 border-white shadow-lg bg-white ring-4 ring-orange-400/10 transition-all duration-500 mx-auto relative cursor-pointer hover:scale-105",
-                                studentState === 'TALKING' && "scale-110 ring-green-400 animate-talking-glow",
+                                "w-[100px] h-[100px] sm:w-[104px] sm:h-[104px] rounded-2xl overflow-hidden border-[3px] border-white shadow-lg bg-white ring-4 ring-orange-400/10 transition-all duration-500 mx-auto relative cursor-pointer hover:scale-[1.02]",
+                                studentState === 'TALKING' && "scale-105 ring-green-400 animate-talking-glow",
                                 studentState === 'LISTENING' && "ring-primary/40 animate-pulse",
                                 studentState === 'STUDYING' && "ring-indigo-500/40 scale-95 opacity-90"
                             )}
                         >
                             <img
                                 src={getStudentAvatar()}
-                                alt="Student"
-                                className="w-full h-full object-cover scale-[1.35] translate-y-[5%]"
+                                alt={learnerDisplayName}
+                                className="avatar-portrait-dashboard"
                             />
                             {equipment.frame && (
                                 <img 
@@ -176,7 +209,7 @@ const Sidebar = () => {
                                 />
                             )}
                         </div>
-                        <p className="text-[10px] mt-1 font-bold text-orange-600 truncate w-20 mx-auto">{nickname}</p>
+                        <p className="text-[10px] mt-1 font-bold text-orange-600 truncate w-20 mx-auto">{learnerDisplayName}</p>
 
                         {/* XP Progress Bar (Mini) */}
                         <div className="mt-1 w-16 mx-auto h-1.5 bg-gray-100 rounded-full overflow-hidden border border-black/5">

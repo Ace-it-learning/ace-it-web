@@ -74,12 +74,14 @@ const SpeakingIdeasLab = () => {
 
     const getStudentAvatar = () => {
         if (equipment?.student?.image) {
-            if (equipment.student.image.startsWith('s_') && !equipment.student.image.includes('/')) {
-                return `/avatars/${equipment.student.image}`;
+            const img = equipment.student.image;
+            if (img.startsWith('/') || img.startsWith('http')) return img;
+            if (img.startsWith('s_') && !img.includes('/')) {
+                return `/avatars/${img}`;
             }
-            return equipment.student.image;
+            return img;
         }
-        return '/avatars/student_male_1.jpg';
+        return '/avatars/Student/Marcus.jpeg';
     };
 
     // Helper: Format Time

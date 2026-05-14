@@ -1,0 +1,906 @@
+{
+  "_meta": {
+    "batch": 1,
+    "version": "premium",
+    "university": "CUHK",
+    "programmes": "1-5",
+    "sections": 8,
+    "generated_by": "AI",
+    "date": "2026-05-14",
+    "corrected": true
+  },
+  "programmes": {
+    "JS4501": {
+      "code": "JS4501",
+      "university": "香港中文大學",
+      "en": {
+        "sections": {
+          "admission": {
+            "title": "Eligibility & Admission Criteria (DSE)",
+            "content": [
+              "**Academic Threshold**: CUHK Medicine is among the most competitive programmes in Hong Kong. The median admission score is typically Best 6 = 40-42 (standard scale, 5** = 7 pts).",
+              "**Core Subjects**: English (Level 5+ mandatory), Mathematics (Compulsory Part, Level 4+), and Citizenship and Social Development pass.",
+              "**Science Subjects - Critical**: Biology and Chemistry are strongly preferred. Both subjects carry significant weighting (x1.3 to x1.5). Candidates with 5** in both have a decisive advantage.",
+              "**Interview - MMI Format**: 6-8 stations (8-10 min each) assessing ethical reasoning, communication skills, critical thinking, empathy, motivation for medicine, and teamwork under pressure.",
+              "**Non-Academic Factors**: CUHK Medicine values sustained volunteering (especially healthcare-related), leadership experience, and evidence of genuine compassion and commitment to serving others."
+            ]
+          },
+          "curriculum": {
+            "title": "Programme Structure & Curriculum",
+            "content": [
+              "**Year 1 - Foundations of Medical Science**: Human anatomy, physiology, biochemistry, and molecular medicine. Early clinical exposure begins with hospital visits and patient interaction workshops.",
+              "**Year 2 - Systems-Based Learning**: Cardiovascular, respiratory, gastrointestinal, renal, endocrine, and nervous systems taught in integrated blocks combining basic and clinical sciences.",
+              "**Year 3 - Clinical Transition**: Transition from classroom to clinical settings. Rotations in medicine, surgery, and community health at Prince of Wales Hospital and associated hospitals.",
+              "**Year 4 - Core Clinical Rotations**: 12-week blocks in internal medicine, general surgery, paediatrics, and obstetrics & gynaecology. Emphasis on clinical reasoning and diagnostic skills.",
+              "**Year 5 - Specialised Rotations**: Orthopaedics, ENT, ophthalmology, psychiatry, emergency medicine, and anaesthesiology. Preparation for final MBChB examinations begins.",
+              "**Year 6 - Internship Preparation & Electives**: Final MBChB examinations, elective placements (often overseas at Cambridge, Oxford, or Melbourne), and pre-internship shadowing.",
+              "**Enrichment Programmes**: Medical Humanities Programme, Global Health Electives, Research Electives with world-class research teams, and the CUHK Medical Outreach Programme."
+            ]
+          },
+          "career": {
+            "title": "Career Pathways & Prospects",
+            "content": [
+              "**Year 1 Internship (Housemanship)**: All graduates complete a 12-month internship at a Hospital Authority hospital, rotating through medicine, surgery, and two other specialties.",
+              "**Residency Training**: After internship, doctors enter residency (typically 6 years). CUHK graduates are highly sought after at Prince of Wales Hospital, Alice Ho Miu Ling Nethersole Hospital, and Tuen Mun Hospital.",
+              "**Specialisation Pathways**: Medicine (Cardiology, Gastroenterology, Nephrology), Surgery (General Surgery, Orthopaedics, Neurosurgery), Paediatrics, O&G, Psychiatry, Radiology, Anaesthesiology, Emergency Medicine, Family Medicine, Pathology.",
+              "**Private Practice**: After completing specialist training and obtaining Fellowship (FHKAM), many doctors establish private clinics or join group practices.",
+              "**Academic Medicine**: CUHK's Faculty of Medicine is ranked among Asia's top medical schools. Strong research funding in cancer, neuroscience, regenerative medicine, and precision medicine.",
+              "**Global Opportunities**: CUHK medical degrees are recognised by the GMC (UK), AMC (Australia), and ECFMG (USA). Exchange partnerships with Cambridge, Oxford, Imperial, Melbourne, Toronto, and Johns Hopkins."
+            ]
+          },
+          "campus": {
+            "title": "Campus Life & Student Experience",
+            "content": [
+              "**Main Campus (Shatin)**: Years 1-2 at the scenic CUHK campus in Shatin, with the Central Campus, University Library, and 9 colleges providing a unique collegiate experience.",
+              "**Medical Campus (Prince of Wales Hospital)**: Years 3-6 at the medical complex adjacent to Prince of Wales Hospital. State-of-the-art simulation centre with high-fidelity manikins and VR surgical trainers.",
+              "**College System**: CUHK's unique college system (Chung Chi, New Asia, United, etc.) provides close-knit communities, mentorship, and hall life. Medical students are distributed across colleges.",
+              "**Student Societies**: CUHK Medical Society (MedSoc) organises Medic Night, charity fundraisers, mentorship programmes, and academic support groups.",
+              "**Mentorship**: Clinical mentor from Year 3 and academic advisor from Year 1. The alumni network includes many of Hong Kong's leading physicians and surgeons."
+            ]
+          },
+          "competitiveness": {
+            "title": "Admission Competitiveness Analysis",
+            "content": [
+              "**Overall Difficulty**: Extreme (5/5 stars). Approximately 2,000-2,500 applicants compete for ~260 places annually (~10-12% admission rate).",
+              "**Score Distribution**: Top quartile: Best 6 = 43-45; Median: Best 6 = 40-42; Bottom quartile: Best 6 = 38-40.",
+              "**Subject Weighting Strategy**: Biology (x1.5) + Chemistry (x1.5) + English (x1.0) + Maths (x1.0) + CSD (x1.0) + Best Elective (x1.0). A student with 5** in Bio/Chem/English and 5* in others achieves ~42 points.",
+              "**Interview Weighting**: The MMI carries approximately 30-40% of the final admission decision. Exceptional interview performance can compensate for borderline scores.",
+              "**Band A Advantage**: Band A Choice 1 receives priority consideration. Choice 2 or lower bands have significantly reduced chances.",
+              "**Non-JUPAS Pathway**: IB (40+/45), GCE A-Levels (AAA* including Chemistry/Biology). Approximately 20-30 places reserved for non-JUPAS entrants."
+            ]
+          },
+          "alumni": {
+            "title": "Notable Alumni & Faculty",
+            "content": [
+              "**Professor Joseph Sung**: Former Vice-Chancellor of CUHK and world-renowned gastroenterologist. Pioneer in endoscopic research and Helicobacter pylori discovery.",
+              "**Professor Dennis Lo**: World-famous for non-invasive prenatal testing (NIPT). Recipient of the Lasker-DeBakey Clinical Medical Research Award and Future Science Prize.",
+              "**Professor Chan Wai-yee**: Pro-Vice-Chancellor of CUHK and leading geneticist. Pioneer in genomic medicine and precision oncology.",
+              "**Professor Juliana Chan**: Renowned endocrinologist and diabetes researcher. Founder of the Asia Diabetes Foundation.",
+              "**Professor Tony Mok**: Internationally recognised oncologist and lung cancer specialist. Pioneer in targeted therapy and immunotherapy for lung cancer."
+            ]
+          },
+          "scholarships": {
+            "title": "Scholarships & Financial Aid",
+            "content": [
+              "**CUHK Medical Faculty Scholarships**: Merit-based scholarships for top-performing students, covering full or partial tuition plus living allowance (HKD 40,000-80,000/year).",
+              "**CUHK Entrance Scholarships**: Awarded to students with exceptional DSE results (typically 5** in 4+ subjects). Full or half tuition coverage.",
+              "**Medical Society Bursaries**: Need-based financial support for students from disadvantaged backgrounds. Applications assessed annually.",
+              "**Overseas Elective Funding**: Special grants for students undertaking electives at partner institutions abroad (up to HKD 30,000 per elective).",
+              "**Government Grants & Loans**: Non-means-tested subsidy scheme (NMTSS) provides up to HKD 33,200/year. Tertiary Student Finance Scheme offers low-interest loans."
+            ]
+          },
+          "tips": {
+            "title": "Ace Sir's CUHK Medicine Strategy",
+            "content": [
+              "**Score Targeting**: Aim for Best 6 of 40+ with strong Biology and Chemistry. CUHK Medicine is highly meritocratic but also values well-rounded candidates.",
+              "**MMI Preparation**: Practice ethical scenarios (resource allocation, patient autonomy, end-of-life decisions). Show compassion alongside clinical reasoning.",
+              "**Shadowing Experience**: Spend time in hospitals or clinics. Genuine exposure demonstrates commitment beyond academic interest.",
+              "**Build a Narrative**: Your personal statement and interview should tell a coherent story - why medicine, why CUHK, and what you have done to prepare.",
+              "**Start Early**: Begin volunteering in Year 10-11. One-off experiences are less valuable than sustained, long-term commitment to a cause."
+            ]
+          }
+        }
+      },
+      "zh": {
+        "sections": {
+          "admission": {
+            "title": "入學要求與計分詳情 (DSE)",
+            "content": [
+              "**學術門檻**：中大醫學院是香港競爭最激烈的課程之一。中位數收生分數通常為 Best 6 = 40-42 分 (標準計分，5** = 7分)。",
+              "**核心科目**：英文 (必須達 Level 5 或以上)、數學 (必修部分，Level 4 或以上)，以及公民與社會發展科合格。",
+              "**理科科目 - 關鍵**：生物和化學強烈建議修讀。兩科均有較高加權 (x1.3 至 x1.5)。生物化學同時達5**的申請者具有決定性優勢。",
+              "**面試 - MMI 形式**：6-8個站 (每站8-10分鐘)，考核倫理推理、溝通技巧、批判思維、同理心、從醫動機及壓力下的團隊合作。",
+              "**非學術因素**：中大醫學院重視持續的義工服務 (尤其醫療相關)、領導經驗及真誠的同理心與服務他人的承諾。"
+            ]
+          },
+          "curriculum": {
+            "title": "課程結構與內容",
+            "content": [
+              "**第一年 - 醫學科學基礎**：人體解剖學、生理學、生物化學及分子醫學。早期臨床接觸從醫院探訪及病人互動工作坊開始。",
+              "**第二年 - 系統導向學習**：心血管、呼吸、腸胃、腎臟、內分泌及神經系統，以整合式單元結合基礎與臨床科學教授。",
+              "**第三年 - 臨床過渡**：從課室過渡到臨床環境。於威爾斯親王醫院及聯網醫院進行內科、外科及社區健康輪轉。",
+              "**第四年 - 核心臨床輪轉**：內科、外科、兒科及婦產科的12週輪轉。重點培養臨床推理及診斷技能。",
+              "**第五年 - 專科輪轉**：骨科、耳鼻喉、眼科、精神科、急症醫學及麻醉科。開始準備終期 MBChB 考試。",
+              "**第六年 - 實習準備及選修**：終期 MBChB 考試、海外選修實習 (常於劍橋、牛津或墨爾本等伙伴院校)，及實習前跟班。",
+              "**專修計劃**：醫學人文計劃、環球健康選修、與世界級研究團隊的研究選修，以及中大醫學外展計劃。"
+            ]
+          },
+          "career": {
+            "title": "職業前景與出路",
+            "content": [
+              "**第一年實習 (Housemanship)**：所有畢業生須於醫管局醫院完成12個月實習，輪轉內科、外科及兩個其他專科。",
+              "**專科培訓**：實習後進入專科培訓 (通常6年)。中大畢業生於威爾斯親王醫院、雅麗氏何妙齡那打素醫院及屯門醫院極受歡迎。",
+              "**專科發展路徑**：內科 (心臟科、腸胃科、腎科)、外科 (普通外科、骨科、腦外科)、兒科、婦產科、精神科、放射科、麻醉科、急症科、家庭醫學、病理科。",
+              "**私人執業**：完成專科培訓並取得院士資格 (FHKAM) 後，不少醫生開設私人診所或加入聯合執業。",
+              "**學術醫學**：中大醫學院位列亞洲頂尖醫學院。癌症、神經科學、再生醫學及精準醫學研究資金充裕。",
+              "**環球機會**：中大醫學學位獲英國 GMC、澳洲 AMC 及美國 ECFMG 認可。與劍橋、牛津、帝國理工、墨爾本、多倫多及約翰霍普金斯設有交流計劃。"
+            ]
+          },
+          "campus": {
+            "title": "校園生活與學生體驗",
+            "content": [
+              "**主校園 (沙田)**：第一至二年於風景優美的中大沙田校園，中央校園、大學圖書館及9所書院提供獨特的書院制體驗。",
+              "**醫學院校園 (威爾斯親王醫院)**：第三至六年於威爾斯親王醫院旁的醫學院大樓。設有先進的模擬醫學中心，配備高仿真模擬病人及虛擬實境外科訓練系統。",
+              "**書院制度**：中大獨特的書院制度 (崇基、新亞、聯合等) 提供緊密的社群、師友指導及舍堂生活。醫科學生分佈於各書院。",
+              "**學生組織**：中大醫學會 (MedSoc) 舉辦年度 Medic Night、慈善籌款、師友計劃及學術支援小組。",
+              "**師友指導**：每位學生從第一年獲配學術導師，第三年獲配臨床導師。校友網絡包括香港多位頂尖醫生及外科醫生。"
+            ]
+          },
+          "competitiveness": {
+            "title": "入學競爭力分析",
+            "content": [
+              "**整體難度**：極高 (5/5星)。每年約2,000-2,500人競爭~260個學額 (入學率約10-12%)。",
+              "**分數分佈**：最高四分位數：Best 6 = 43-45分；中位數：Best 6 = 40-42分；最低四分位數：Best 6 = 38-40分。",
+              "**科目加權策略**：生物 (x1.5) + 化學 (x1.5) + 英文 (x1.0) + 數學 (x1.0) + 公社 (x1.0) + 最佳選修科 (x1.0)。生物化學英文達5**、其他達5*的學生約有42分。",
+              "**面試比重**：MMI 佔最終入學決定約30-40%。面試表現卓越可彌補分數上的不足。",
+              "**Band A 優勢**：Band A 第一志願獲優先考慮。第二志願或較低 band 的機會大幅降低。",
+              "**非聯招途徑**：國際文憑 (IB 40+/45)、GCE A-Level (AAA* 包括化學/生物)。約20-30個學額預留予非聯招申請者。"
+            ]
+          },
+          "alumni": {
+            "title": "知名校友及教職員",
+            "content": [
+              "**沈祖堯教授**：前中文大學校長，世界知名腸胃科醫生。內窺鏡研究及幽門螺旋桿菌發現先驅。",
+              "**盧煜明教授**：以無創產前檢測 (NIPT) 聞名於世。拉斯克-德貝基臨床醫學研究獎及未來科學大獎得主。",
+              "**陳偉儀教授**：中文大學副校長，著名遺傳學家。基因組醫學及精準腫瘤學先驅。",
+              "**陳重娥教授**：著名內分泌科醫生及糖尿病研究學者。亞洲糖尿病基金會創辦人。",
+              "**莫樹錦教授**：國際知名腫瘤科醫生及肺癌專家。標靶治療及肺癌免疫治療先驅。"
+            ]
+          },
+          "scholarships": {
+            "title": "獎學金及經濟援助",
+            "content": [
+              "**中大醫學院獎學金**：頒予成績優異學生的 merit-based 獎學金，涵蓋全額或半額學費及生活津貼 (每年港幣40,000-80,000元)。",
+              "**中大入學獎學金**：頒予 DSE 成績卓越者 (通常4科5**或以上)。全額或半額學費資助。",
+              "**醫學會助學金**：為弱勢背景學生提供 need-based 經濟支援。每年接受申請。",
+              "**海外選修資助**：為於伙伴院校進行海外選修的學生提供特別資助 (每次最多港幣30,000元)。",
+              "**政府資助及貸款**：免入息審查資助計劃 (NMTSS) 每年提供最多港幣33,200元。專上學生資助計劃提供低息貸款。"
+            ]
+          },
+          "tips": {
+            "title": "Ace Sir 中大醫科攻略",
+            "content": [
+              "**分數目標**：Best 6 目標40分以上，生物及化學成績要優異。中大醫科重視成績，但也欣賞全面發展的申請者。",
+              "**MMI 準備**：練習倫理情境 (資源分配、病人自主權、臨終決定)。展現同情心，同時展示臨床推理能力。",
+              "**影子實習經驗**：到醫院或診所實習。真正的醫學接觸能展示超越學術興趣的承諾。",
+              "**建立故事**：個人陳述及面試應講述一個連貫的故事 - 為何從醫、為何選擇中大、以及你如何準備。",
+              "**及早開始**：中四至中五開始義工服務。一次性經驗不如對某項事業的長期持續投入。"
+            ]
+          }
+        }
+      }
+    },
+    "JS4513": {
+      "code": "JS4513",
+      "university": "香港中文大學",
+      "en": {
+        "sections": {
+          "admission": {
+            "title": "Eligibility & Admission Criteria (DSE)",
+            "content": [
+              "**Academic Threshold**: CUHK Nursing is competitive but more accessible than Medicine. The median admission score is typically Best 5 = 24-26 (standard scale, 5** = 7 pts).",
+              "**Core Subjects**: English (Level 3+), Mathematics (Compulsory Part, Level 2+), and a pass in Citizenship and Social Development.",
+              "**Science Subjects**: Biology and Chemistry are advantageous but not mandatory. Some weighting may apply for science electives.",
+              "**Interview**: Group interview or individual interview assessing communication skills, empathy, motivation for nursing, and understanding of the healthcare profession.",
+              "**Non-Academic Factors**: Volunteering experience (especially in healthcare or elderly care), leadership roles, and evidence of caring personality are valued."
+            ]
+          },
+          "curriculum": {
+            "title": "Programme Structure & Curriculum",
+            "content": [
+              "**Year 1 - Foundation Sciences**: Anatomy, physiology, microbiology, and psychology. Introduction to nursing theory and professional ethics.",
+              "**Year 2 - Nursing Fundamentals**: Health assessment, basic nursing skills, pharmacology, and pathophysiology. Clinical practicum in hospital settings begins.",
+              "**Year 3 - Specialised Nursing**: Medical-surgical nursing, paediatric nursing, mental health nursing, and community health nursing. Extended clinical placements.",
+              "**Year 4 - Advanced Practice & Leadership**: Critical care nursing, gerontological nursing, nursing management, and research methods. Capstone project and final clinical practicum.",
+              "**Clinical Placements**: Over 1,400 hours of supervised clinical practice across Prince of Wales Hospital, Alice Ho Miu Ling Nethersole Hospital, and community health centres.",
+              "**Professional Accreditation**: Programme is accredited by the Nursing Council of Hong Kong. Graduates are eligible for enrolment as Registered Nurses (RN)."
+            ]
+          },
+          "career": {
+            "title": "Career Pathways & Prospects",
+            "content": [
+              "**Registered Nurse (RN)**: Graduates enrol with the Nursing Council of Hong Kong and work in public hospitals, private hospitals, or clinics.",
+              "**Hospital Specialties**: Medical wards, surgical wards, ICU, A&E, paediatrics, oncology, orthopaedics, and operating theatres.",
+              "**Community Nursing**: Home care, school nursing, occupational health, and elderly care services.",
+              "**Advanced Practice**: Master's degree leading to Advanced Practice Nurse (APN), Nurse Practitioner, or Nurse Specialist roles.",
+              "**Management Track**: Ward manager, department manager, or nursing administration positions in Hospital Authority.",
+              "**Global Opportunities**: Nursing degrees from CUHK are recognised in many countries. Opportunities to work overseas after obtaining local registration."
+            ]
+          },
+          "campus": {
+            "title": "Campus Life & Student Experience",
+            "content": [
+              "**Main Campus (Shatin)**: Classes held at the CUHK campus with access to all university facilities including libraries, sports centres, and college halls.",
+              "**Ning Yeung Nursing Building**: Dedicated nursing education facility with simulation wards, skills laboratories, and high-fidelity patient simulators.",
+              "**College Life**: Nursing students are assigned to one of CUHK's nine colleges, providing mentorship, social activities, and hall accommodation.",
+              "**Student Society**: CUHK Nursing Society organises academic support, community service projects, and social events.",
+              "**Clinical Partnerships**: Strong ties with Prince of Wales Hospital and other teaching hospitals provide excellent clinical learning environments."
+            ]
+          },
+          "competitiveness": {
+            "title": "Admission Competitiveness Analysis",
+            "content": [
+              "**Overall Difficulty**: Moderate to High (3/5 stars). Approximately 800-1,000 applicants for ~150 places (~15-20% admission rate).",
+              "**Score Distribution**: Top quartile: Best 5 = 27-29; Median: Best 5 = 24-26; Bottom quartile: Best 5 = 22-24.",
+              "**Subject Strategy**: English (x1.0) + Biology (x1.0) + Best 3 electives. Strong performance in Biology and Chemistry is advantageous.",
+              "**Interview Weighting**: Interview carries approximately 20-30% of admission decision. Genuine motivation and caring attitude are assessed.",
+              "**Band A Advantage**: Band A applicants receive priority. Nursing is often a Band A Choice 2 or 3 for students also applying to Medicine.",
+              "**Non-JUPAS Pathway**: IB (30+/45), GCE A-Levels (ABB). Approximately 10-15 places reserved for non-JUPAS entrants."
+            ]
+          },
+          "alumni": {
+            "title": "Notable Alumni & Faculty",
+            "content": [
+              "**Professor Diana Lee**: Founding Dean of the Nethersole School of Nursing. Pioneer in nursing education and research in Hong Kong.",
+              "**Professor Sek-ying Chair**: Renowned nursing scholar specialising in cancer care and palliative nursing.",
+              "**Professor Wendy Wong**: Leading researcher in gerontological nursing and dementia care.",
+              "**Professor Agnes Tiwari**: Expert in mental health nursing and violence prevention research.",
+              "**Alumni in Leadership**: Many graduates hold senior nursing positions in Hospital Authority and private healthcare organisations."
+            ]
+          },
+          "scholarships": {
+            "title": "Scholarships & Financial Aid",
+            "content": [
+              "**Nethersole School of Nursing Scholarships**: Merit-based awards for outstanding nursing students (HKD 20,000-50,000/year).",
+              "**CUHK Entrance Scholarships**: Available for students with strong DSE results. Full or partial tuition coverage.",
+              "**Nursing Council Bursaries**: Financial support for students demonstrating financial need and academic promise.",
+              "**Healthcare Industry Scholarships**: Sponsored by private hospitals and healthcare groups for promising nursing students.",
+              "**Government Grants & Loans**: NMTSS provides up to HKD 33,200/year. Tertiary Student Finance Scheme available."
+            ]
+          },
+          "tips": {
+            "title": "Ace Sir's CUHK Nursing Strategy",
+            "content": [
+              "**Score Targeting**: Aim for Best 5 of 24+ with solid English and Biology. Nursing rewards genuine passion over perfect scores.",
+              "**Show You Care**: Interviewers look for empathy and a genuine desire to help others. Share specific volunteering experiences.",
+              "**Understand the Profession**: Research what nurses actually do. Many applicants confuse nursing with being a doctor's assistant.",
+              "**Physical Stamina**: Nursing involves long shifts and physical work. Mention any sports or activities that demonstrate stamina.",
+              "**Backup Strategy**: Nursing is an excellent backup to Medicine. Many students apply to both. Show genuine interest in nursing itself."
+            ]
+          }
+        }
+      },
+      "zh": {
+        "sections": {
+          "admission": {
+            "title": "入學要求與計分詳情 (DSE)",
+            "content": [
+              "**學術門檻**：中大護理學競爭激烈但比醫科容易。中位數收生分數通常為 Best 5 = 24-26 分 (標準計分，5** = 7分)。",
+              "**核心科目**：英文 (Level 3 或以上)、數學 (必修部分，Level 2 或以上)，以及公民與社會發展科合格。",
+              "**理科科目**：生物及化學有優勢但非必修。部分理科選修科可能獲得加權。",
+              "**面試**：小組或個人面試，考核溝通技巧、同理心、修讀護理的動機及對醫療專業的理解。",
+              "**非學術因素**：義工經驗 (尤其醫療或老人護理)、領導角色及關懷他人的個性特質受重視。"
+            ]
+          },
+          "curriculum": {
+            "title": "課程結構與內容",
+            "content": [
+              "**第一年 - 基礎科學**：解剖學、生理學、微生物學及心理學。護理理論及專業倫理導論。",
+              "**第二年 - 護理基礎**：健康評估、基本護理技能、藥理學及病理生理學。開始醫院臨床實習。",
+              "**第三年 - 專科護理**：內外科護理、兒科護理、精神科護理及社區健康護理。延長臨床實習。",
+              "**第四年 - 進階實務與領導**：深切治療護理、老年護理、護理管理及研究方法。畢業專題及終期臨床實習。",
+              "**臨床實習**：超過1,400小時的監督臨床實習，遍佈威爾斯親王醫院、雅麗氏何妙齡那打素醫院及社區健康中心。",
+              "**專業認可**：課程獲香港護士管理局認可。畢業生符合註冊護士 (RN) 註冊資格。"
+            ]
+          },
+          "career": {
+            "title": "職業前景與出路",
+            "content": [
+              "**註冊護士 (RN)**：畢業生向香港護士管理局註冊，於公立醫院、私立醫院或診所工作。",
+              "**醫院專科**：內科病房、外科病房、深切治療部、急症室、兒科、腫瘤科、骨科及手術室。",
+              "**社區護理**：家居護理、學校護理、職業健康及老人護理服務。",
+              "**進階實務**：修讀碩士學位成為進階護理師 (APN)、護士執業者或專科護士。",
+              "**管理路徑**：病房經理、部門經理或醫管局護理行政職位。",
+              "**環球機會**：中大護理學位獲多國認可。取得本地註冊後有海外工作機會。"
+            ]
+          },
+          "campus": {
+            "title": "校園生活與學生體驗",
+            "content": [
+              "**主校園 (沙田)**：課堂於中大校園進行，可使用大學圖書館、體育中心及書院舍堂等所有設施。",
+              "**那打素護理學院大樓**：專屬護理教學設施，設有模擬病房、技能實驗室及高仿真模擬病人。",
+              "**書院生活**：護理學生獲分配至中大九所書院之一，提供師友指導、社交活動及舍堂住宿。",
+              "**學生組織**：中大護理學會舉辦學術支援、社區服務項目及社交活動。",
+              "**臨床伙伴**：與威爾斯親王醫院及其他教學醫院關係密切，提供優秀的臨床學習環境。"
+            ]
+          },
+          "competitiveness": {
+            "title": "入學競爭力分析",
+            "content": [
+              "**整體難度**：中至高 (3/5星)。每年約800-1,000人競爭~150個學額 (入學率約15-20%)。",
+              "**分數分佈**：最高四分位數：Best 5 = 27-29分；中位數：Best 5 = 24-26分；最低四分位數：Best 5 = 22-24分。",
+              "**科目策略**：英文 (x1.0) + 生物 (x1.0) + 最佳3科選修。生物及化學成績優異有優勢。",
+              "**面試比重**：面試佔入學決定約20-30%。考核真誠的動機及關懷態度。",
+              "**Band A 優勢**：Band A 申請者獲優先考慮。護理常為申請醫科學生的 Band A 第二或第三志願。",
+              "**非聯招途徑**：國際文憑 (IB 30+/45)、GCE A-Level (ABB)。約10-15個學額預留予非聯招申請者。"
+            ]
+          },
+          "alumni": {
+            "title": "知名校友及教職員",
+            "content": [
+              "**李子芬教授**：那打素護理學院創院院長。香港護理教育及研究先驅。",
+              "**車錫英教授**：著名護理學者，專注於癌症護理及紓緩護理。",
+              "**黃惠卿教授**：老年護理及認知障礙症護理研究的領軍學者。",
+              "**刁玉華教授**：精神科護理及暴力預防研究專家。",
+              "**領導層校友**：眾多畢業生於醫管局及私立醫療機構擔任高級護理職位。"
+            ]
+          },
+          "scholarships": {
+            "title": "獎學金及經濟援助",
+            "content": [
+              "**那打素護理學院獎學金**：頒予優秀護理學生的 merit-based 獎項 (每年港幣20,000-50,000元)。",
+              "**中大入學獎學金**：DSE 成績優異學生可申請。全額或半額學費資助。",
+              "**護士管理局助學金**：為有經濟需要及學術潛質的學生提供財政支援。",
+              "**醫療業界獎學金**：由私立醫院及醫療集團贊助，支持有潛質的護理學生。",
+              "**政府資助及貸款**：NMTSS 每年提供最多港幣33,200元。專上學生資助計劃可供申請。"
+            ]
+          },
+          "tips": {
+            "title": "Ace Sir 中大護理攻略",
+            "content": [
+              "**分數目標**：Best 5 目標24分以上，英文及生物成績穩固。護理重視真誠的熱誠多於完美分數。",
+              "**展現關懷**：面試官尋找同理心及真誠幫助他人的願望。分享具體的義工經驗。",
+              "**了解專業**：研究護士實際工作內容。很多申請者混淆護理與醫生助理。",
+              "**體能耐力**：護理涉及長時間輪班及體力工作。提及任何展示耐力的運動或活動。",
+              "**後備策略**：護理是醫科的優秀後備選擇。很多學生同時申請兩者。展示對護理本身的真正興趣。"
+            ]
+          }
+        }
+      }
+    },
+    "JS4601": {
+      "code": "JS4601",
+      "university": "香港中文大學",
+      "en": {
+        "sections": {
+          "admission": {
+            "title": "Eligibility & Admission Criteria (DSE)",
+            "content": [
+              "**Academic Threshold**: CUHK Science is moderately competitive. The median admission score is typically Best 5 = 23-25 (standard scale, 5** = 7 pts).",
+              "**Core Subjects**: English (Level 3+), Mathematics (Compulsory Part, Level 3+), and a pass in Citizenship and Social Development.",
+              "**Critical Subjects**: Biology, Chemistry, and Physics are highly relevant. Mathematics Extended Part (M1/M2) is strongly recommended for certain majors.",
+              "**Interview**: Some majors (e.g., Biomedical Sciences) may require interview assessing scientific thinking, research interest, and communication skills.",
+              "**Non-Academic Factors**: Science fair participation, research projects, Olympiad achievements, and STEM-related extracurriculars are valued."
+            ]
+          },
+          "curriculum": {
+            "title": "Programme Structure & Curriculum",
+            "content": [
+              "**Year 1 - Science Foundation**: Mathematics, physics, chemistry, and biology. Students explore different science disciplines before declaring a major.",
+              "**Year 2 - Major Declaration**: Choose from 12+ majors including Biochemistry, Biology, Chemistry, Physics, Statistics, Mathematics, and Food & Nutritional Sciences.",
+              "**Year 3 - Advanced Core**: Specialised courses in chosen major, laboratory research, and interdisciplinary electives.",
+              "**Year 4 - Research & Capstone**: Final year research project, honours thesis, and professional development. Many students publish in peer-reviewed journals.",
+              "**Research Opportunities**: Undergraduate research opportunities with CUHK's world-class research institutes in molecular biology, materials science, and environmental science.",
+              "**International Exchange**: Exchange programmes with top universities including UC Berkeley, Imperial College London, and University of Toronto."
+            ]
+          },
+          "career": {
+            "title": "Career Pathways & Prospects",
+            "content": [
+              "**Research & Academia**: PhD programmes at top universities worldwide. Many graduates become research scientists at universities and research institutes.",
+              "**Biotechnology & Pharmaceuticals**: Research roles at biotech companies, pharmaceutical firms (Roche, Pfizer), and clinical research organisations.",
+              "**Data Science & Analytics**: Data scientists, statisticians, and quantitative analysts at tech companies and financial institutions.",
+              "**Education**: Science teachers at secondary schools, particularly in high-demand subjects like Chemistry and Biology.",
+              "**Government & Public Sector**: Environmental Protection Department, Agriculture, Fisheries and Conservation Department, and Hong Kong Observatory.",
+              "**Further Studies**: Master's and PhD programmes at Oxford, Cambridge, MIT, Stanford, and other top institutions. Many receive full scholarships."
+            ]
+          },
+          "campus": {
+            "title": "Campus Life & Student Experience",
+            "content": [
+              "**Science Buildings**: Modern laboratories, research facilities, and the Centralised Science Laboratory Building with cutting-edge equipment.",
+              "**College System**: Science students are assigned to one of CUHK's nine colleges, providing hall accommodation and a supportive community.",
+              "**Student Societies**: Science Society organises academic support, research sharing sessions, industry visits, and social events.",
+              "**Research Culture**: Strong emphasis on undergraduate research. Many students join research labs from Year 2 and present at international conferences.",
+              "**Science Mentorship**: Academic advisors from each major provide guidance on course selection, research opportunities, and career planning."
+            ]
+          },
+          "competitiveness": {
+            "title": "Admission Competitiveness Analysis",
+            "content": [
+              "**Overall Difficulty**: Moderate (3/5 stars). Approximately 600-800 applicants for ~250 places (~30-35% admission rate).",
+              "**Score Distribution**: Top quartile: Best 5 = 26-28; Median: Best 5 = 23-25; Bottom quartile: Best 5 = 21-23.",
+              "**Subject Strategy**: Maths (x1.0) + Best science subject (x1.0) + Best 3 electives. Strong performance in at least two science subjects is expected.",
+              "**Interview Weighting**: Interview carries approximately 10-15% for selected majors. Scientific curiosity and research potential are assessed.",
+              "**Band A Advantage**: Band A applicants receive priority. Science is often a solid Band A Choice 2 or 3.",
+              "**Non-JUPAS Pathway**: IB (32+/45), GCE A-Levels (ABB including two sciences). Approximately 15-20 places reserved."
+            ]
+          },
+          "alumni": {
+            "title": "Notable Alumni & Faculty",
+            "content": [
+              "**Professor Dennis Lo**: World-famous for non-invasive prenatal testing (NIPT). Recipient of the Lasker-DeBakey Clinical Medical Research Award.",
+              "**Professor Henry Wong**: Leading chemist and former Pro-Vice-Chancellor. Pioneer in synthetic organic chemistry.",
+              "**Professor Patrick Wong**: Renowned neuroscientist specialising in language and music cognition.",
+              "**Alumni in Research**: Many graduates hold faculty positions at top universities worldwide including MIT, Stanford, and Caltech.",
+              "**Alumni in Industry**: Senior scientists and R&D directors at biotech companies, pharmaceutical firms, and tech companies."
+            ]
+          },
+          "scholarships": {
+            "title": "Scholarships & Financial Aid",
+            "content": [
+              "**CUHK Science Scholarships**: Merit-based awards for outstanding science students (HKD 20,000-40,000/year).",
+              "**CUHK Entrance Scholarships**: Available for students with strong DSE results. Full or partial tuition coverage.",
+              "**Research Grants**: Funding for undergraduate research projects, conference travel, and summer research programmes.",
+              "**Overseas Exchange Grants**: Funding for semester abroad at partner universities (up to HKD 50,000 per exchange).",
+              "**Government Grants & Loans**: NMTSS provides up to HKD 33,200/year. Tertiary Student Finance Scheme available."
+            ]
+          },
+          "tips": {
+            "title": "Ace Sir's CUHK Science Strategy",
+            "content": [
+              "**Score Targeting**: Aim for Best 5 of 23+ with strong Maths and at least two science subjects. Science rewards curiosity over perfect scores.",
+              "**Explore Before Committing**: Year 1 is designed for exploration. Keep an open mind before declaring your major in Year 2.",
+              "**Join a Research Lab Early**: Research experience is the differentiator for top graduate programmes. Start in Year 2 if possible.",
+              "**Learn Programming**: Python, R, and MATLAB are essential tools across all science disciplines. Start learning before university.",
+              "**Consider Double Major**: Popular combinations include Statistics + Computer Science, or Biochemistry + Biotechnology."
+            ]
+          }
+        }
+      },
+      "zh": {
+        "sections": {
+          "admission": {
+            "title": "入學要求與計分詳情 (DSE)",
+            "content": [
+              "**學術門檻**：中大理學院競爭程度中等。中位數收生分數通常為 Best 5 = 23-25 分 (標準計分，5** = 7分)。",
+              "**核心科目**：英文 (Level 3 或以上)、數學 (必修部分，Level 3 或以上)，以及公民與社會發展科合格。",
+              "**關鍵科目**：生物、化學及物理高度相關。數學延伸部分 (M1/M2) 對某些主修強烈建議修讀。",
+              "**面試**：部分主修 (如生物醫學) 可能要求面試，考核科學思維、研究興趣及溝通技巧。",
+              "**非學術因素**：科學展覽參與、研究項目、奧林匹克競賽成績及 STEM 相關課外活動受重視。"
+            ]
+          },
+          "curriculum": {
+            "title": "課程結構與內容",
+            "content": [
+              "**第一年 - 科學基礎**：數學、物理、化學及生物。學生在選定主修前探索不同科學學科。",
+              "**第二年 - 選定主修**：從12個以上主修中選擇，包括生物化學、生物學、化學、物理學、統計學、數學及食品與營養科學。",
+              "**第三年 - 進階核心**：主修專科課程、實驗室研究及跨學科選修。",
+              "**第四年 - 研究及畢業專題**：畢業研究項目、榮譽學位論文及專業發展。很多學生於同行評審期刊發表論文。",
+              "**研究機會**：中大世界級研究機構 (分子生物學、材料科學及環境科學) 的本科生研究機會。",
+              "**國際交流**：與頂尖大學 (加州大學柏克萊分校、倫敦帝國學院及多倫多大學) 的交流計劃。"
+            ]
+          },
+          "career": {
+            "title": "職業前景與出路",
+            "content": [
+              "**研究及學術界**：全球頂尖大學的博士課程。很多畢業生成為大學及研究機構的研究科學家。",
+              "**生物科技及製藥**：生物科技公司及製藥企業 (羅氏、輝瑞) 的研究職位，以及臨床研究機構。",
+              "**數據科學及分析**：科技公司及金融機構的數據科學家、統計學家及量化分析師。",
+              "**教育界**：中學科學教師，尤其化學及生物等需求高的科目。",
+              "**政府及公共部門**：環境保護署、漁農自然護理署及香港天文台。",
+              "**進修**：牛津、劍橋、麻省理工、史丹福等頂尖學院的碩士及博士課程。很多獲全額獎學金。"
+            ]
+          },
+          "campus": {
+            "title": "校園生活與學生體驗",
+            "content": [
+              "**科學大樓**：現代化實驗室、研究設施及中央科學實驗室大樓，配備尖端設備。",
+              "**書院制度**：理科學生獲分配至中大九所書院之一，提供舍堂住宿及支援社群。",
+              "**學生組織**：理學會舉辦學術支援、研究分享會、業界參觀及社交活動。",
+              "**研究文化**：強調本科生研究。很多學生從第二年加入研究實驗室，並於國際會議發表。",
+              "**科學師友指導**：各主修的學術導師提供選課、研究機會及職業規劃指導。"
+            ]
+          },
+          "competitiveness": {
+            "title": "入學競爭力分析",
+            "content": [
+              "**整體難度**：中等 (3/5星)。每年約600-800人競爭~250個學額 (入學率約30-35%)。",
+              "**分數分佈**：最高四分位數：Best 5 = 26-28分；中位數：Best 5 = 23-25分；最低四分位數：Best 5 = 21-23分。",
+              "**科目策略**：數學 (x1.0) + 最佳理科 (x1.0) + 最佳3科選修。至少兩科理科成績優異是預期的。",
+              "**面試比重**：部分主修面試佔入學決定約10-15%。考核科學好奇心及研究潛質。",
+              "**Band A 優勢**：Band A 申請者獲優先考慮。理科常為穩健的 Band A 第二或第三志願。",
+              "**非聯招途徑**：國際文憑 (IB 32+/45)、GCE A-Level (ABB 包括兩科理科)。約15-20個學額預留。"
+            ]
+          },
+          "alumni": {
+            "title": "知名校友及教職員",
+            "content": [
+              "**盧煜明教授**：以無創產前檢測 (NIPT) 聞名於世。拉斯克-德貝基臨床醫學研究獎得主。",
+              "**黃乃正教授**：著名化學家及前副校長。合成有機化學先驅。",
+              "**黃俊文教授**：著名神經科學家，專注於語言及音樂認知。",
+              "**學術界校友**：很多畢業生於麻省理工、史丹福及加州理工等頂尖大學擔任教職。",
+              "**業界校友**：生物科技公司、製藥企業及科技公司的高級科學家及研發總監。"
+            ]
+          },
+          "scholarships": {
+            "title": "獎學金及經濟援助",
+            "content": [
+              "**中大理科獎學金**：頒予優秀理科學生的 merit-based 獎項 (每年港幣20,000-40,000元)。",
+              "**中大入學獎學金**：DSE 成績優異學生可申請。全額或半額學費資助。",
+              "**研究資助**：本科生研究項目、會議旅費及暑期研究計劃的資助。",
+              "**海外交流資助**：伙伴大學學期交流資助 (每次最多港幣50,000元)。",
+              "**政府資助及貸款**：NMTSS 每年提供最多港幣33,200元。專上學生資助計劃可供申請。"
+            ]
+          },
+          "tips": {
+            "title": "Ace Sir 中大理科攻略",
+            "content": [
+              "**分數目標**：Best 5 目標23分以上，數學及至少兩科理科成績優異。理科重視好奇心多於完美分數。",
+              "**選定前探索**：第一年設計為探索期。第二年選定主修前保持開放態度。",
+              "**盡早加入研究實驗室**：研究經驗是頂尖研究生課程的區分因素。如可能從第二年開始。",
+              "**學習編程**：Python、R 及 MATLAB 是所有科學學科的基本工具。入學前開始學習。",
+              "**考慮雙主修**：熱門組合包括統計學 + 計算機科學，或生物化學 + 生物科技。"
+            ]
+          }
+        }
+      }
+    },
+    "JS4801": {
+      "code": "JS4801",
+      "university": "香港中文大學",
+      "en": {
+        "sections": {
+          "admission": {
+            "title": "Eligibility & Admission Criteria (DSE)",
+            "content": [
+              "**Academic Threshold**: CUHK Social Science is moderately competitive. The median admission score is typically Best 5 = 22-24 (standard scale, 5** = 7 pts).",
+              "**Core Subjects**: English (Level 3+), Mathematics (Compulsory Part, Level 2+), and a pass in Citizenship and Social Development.",
+              "**Preferred Electives**: Economics, Geography, History, and Chinese History are advantageous depending on intended major.",
+              "**Interview**: Some majors (e.g., Social Work, Journalism) may require interview assessing communication skills, social awareness, and motivation.",
+              "**Non-Academic Factors**: Community service, volunteering, student leadership, and participation in social issues discussions are valued."
+            ]
+          },
+          "curriculum": {
+            "title": "Programme Structure & Curriculum",
+            "content": [
+              "**Year 1 - Social Science Foundation**: Introduction to sociology, psychology, economics, and political science. Students explore different disciplines before declaring a major.",
+              "**Year 2 - Major Declaration**: Choose from 10+ majors including Sociology, Psychology, Economics, Political Science, Social Work, Journalism, and Geography.",
+              "**Year 3 - Advanced Core**: Specialised courses in chosen major, research methods, and interdisciplinary electives. Fieldwork and practicum for some majors.",
+              "**Year 4 - Capstone & Internship**: Final year research project, internship with NGOs, government departments, or media organisations.",
+              "**Professional Training**: Social Work majors receive professional training accredited by the Social Workers Registration Board.",
+              "**International Exchange**: Exchange programmes with universities worldwide including LSE, University of Chicago, and National University of Singapore."
+            ]
+          },
+          "career": {
+            "title": "Career Pathways & Prospects",
+            "content": [
+              "**Social Work**: Registered social workers at NGOs, hospitals, schools, and government social welfare departments.",
+              "**Media & Journalism**: Reporters, editors, and producers at TVB, RTHK, Ming Pao, and online media platforms.",
+              "**Government & Public Policy**: Policy analysts at Central Policy Unit, Legislative Council, and government bureaux.",
+              "**Market Research & Consulting**: Research analysts at Nielsen, Ipsos, and consulting firms.",
+              "**Education**: Teachers at secondary schools and lecturers at tertiary institutions. Psychology graduates can pursue clinical psychology training.",
+              "**Corporate Roles**: Human resources, corporate communications, and public relations at MNCs and local corporations."
+            ]
+          },
+          "campus": {
+            "title": "Campus Life & Student Experience",
+            "content": [
+              "**Social Science Building**: Dedicated facilities for social science research, media production labs, and psychology laboratories.",
+              "**College System**: Social Science students are assigned to CUHK colleges, providing a rich residential and social experience.",
+              "**Student Societies**: Active societies for each major including Psychology Society, Economics Society, and Journalism Society.",
+              "**Fieldwork Opportunities**: Geography and Sociology majors conduct field studies across Hong Kong and Greater China.",
+              "**Social Awareness**: Strong culture of social engagement with regular forums, volunteer programmes, and community outreach initiatives."
+            ]
+          },
+          "competitiveness": {
+            "title": "Admission Competitiveness Analysis",
+            "content": [
+              "**Overall Difficulty**: Moderate (2.5/5 stars). Approximately 500-700 applicants for ~280 places (~40% admission rate).",
+              "**Score Distribution**: Top quartile: Best 5 = 25-27; Median: Best 5 = 22-24; Bottom quartile: Best 5 = 20-22.",
+              "**Subject Strategy**: English (x1.0) + Best 4 electives. No specific subject requirements, but relevant electives strengthen the application.",
+              "**Interview Weighting**: Interview carries approximately 15-20% for selected majors. Social awareness and communication skills are assessed.",
+              "**Band A Advantage**: Band A applicants receive priority. Social Science is a popular backup choice for Arts and Business applicants.",
+              "**Non-JUPAS Pathway**: IB (30+/45), GCE A-Levels (BBB). Approximately 15-20 places reserved."
+            ]
+          },
+          "alumni": {
+            "title": "Notable Alumni & Faculty",
+            "content": [
+              "**Professor Ng Chun-hung**: Renowned sociologist specialising in Hong Kong society and social movements.",
+              "**Professor Helene Fung**: Leading psychologist specialising in ageing and gerontology research.",
+              "**Alumni in Journalism**: Prominent journalists and news anchors at major Hong Kong media outlets.",
+              "**Alumni in Social Work**: Directors and senior managers at major NGOs including Caritas, Tung Wah Group, and Po Leung Kuk.",
+              "**Alumni in Government**: Senior civil servants and policy advisors in the Hong Kong SAR Government."
+            ]
+          },
+          "scholarships": {
+            "title": "Scholarships & Financial Aid",
+            "content": [
+              "**CUHK Social Science Scholarships**: Merit-based awards for outstanding students (HKD 15,000-30,000/year).",
+              "**CUHK Entrance Scholarships**: Available for students with strong DSE results. Full or partial tuition coverage.",
+              "**Social Work Training Grants**: Special grants for Social Work majors to support fieldwork and practicum expenses.",
+              "**Overseas Exchange Grants**: Funding for semester abroad at partner universities (up to HKD 50,000 per exchange).",
+              "**Government Grants & Loans**: NMTSS provides up to HKD 33,200/year. Tertiary Student Finance Scheme available."
+            ]
+          },
+          "tips": {
+            "title": "Ace Sir's CUHK Social Science Strategy",
+            "content": [
+              "**Score Targeting**: Aim for Best 5 of 22+ with solid English. Social Science is accessible but still rewards strong academic performance.",
+              "**Show Social Engagement**: Demonstrate genuine interest in social issues through volunteering, community service, or student activism.",
+              "**Read Widely**: Stay informed on current affairs, social issues, and public policy. Interviewers expect informed opinions.",
+              "**Develop Writing Skills**: Strong essay writing is essential across all social science disciplines. Practice argumentative writing.",
+              "**Explore Before Majoring**: Use Year 1 to explore different disciplines. Many students change their intended major after exposure to new subjects."
+            ]
+          }
+        }
+      },
+      "zh": {
+        "sections": {
+          "admission": {
+            "title": "入學要求與計分詳情 (DSE)",
+            "content": [
+              "**學術門檻**：中大社會科學院競爭程度中等。中位數收生分數通常為 Best 5 = 22-24 分 (標準計分，5** = 7分)。",
+              "**核心科目**：英文 (Level 3 或以上)、數學 (必修部分，Level 2 或以上)，以及公民與社會發展科合格。",
+              "**建議選修**：經濟、地理、歷史及中國歷史視乎意向主修有優勢。",
+              "**面試**：部分主修 (如社會工作、新聞學) 可能要求面試，考核溝通技巧、社會意識及動機。",
+              "**非學術因素**：社區服務、義工、學生領導及參與社會議題討論受重視。"
+            ]
+          },
+          "curriculum": {
+            "title": "課程結構與內容",
+            "content": [
+              "**第一年 - 社會科學基礎**：社會學、心理學、經濟學及政治學導論。學生在選定主修前探索不同學科。",
+              "**第二年 - 選定主修**：從10個以上主修中選擇，包括社會學、心理學、經濟學、政治學、社會工作學、新聞學及地理學。",
+              "**第三年 - 進階核心**：主修專科課程、研究方法及跨學科選修。部分主修進行實地考察及實習。",
+              "**第四年 - 畢業專題及實習**：畢業研究專題、非政府組織、政府部門或媒體機構的實習。",
+              "**專業培訓**：社會工作主修接受社會工作者註冊局認可的專業培訓。",
+              "**國際交流**：與全球大學 (倫敦政治經濟學院、芝加哥大學及新加坡國立大學) 的交流計劃。"
+            ]
+          },
+          "career": {
+            "title": "職業前景與出路",
+            "content": [
+              "**社會工作**：非政府組織、醫院、學校及政府社會福利署的註冊社會工作者。",
+              "**媒體及新聞**：無綫電視、香港電台、明報及網上媒體平台的記者、編輯及監製。",
+              "**政府及公共政策**：中央政策組、立法會及政府決策局的政策分析員。",
+              "**市場研究及顧問**：尼爾森、益普索及顧問公司的研究分析員。",
+              "**教育界**：中學教師及大專院校講師。心理學畢業生可修讀臨床心理學培訓。",
+              "**企業職位**：跨國企業及本地企業的人力資源、企業傳訊及公共關係。"
+            ]
+          },
+          "campus": {
+            "title": "校園生活與學生體驗",
+            "content": [
+              "**社會科學大樓**：專屬社會科學研究設施、媒體製作實驗室及心理學實驗室。",
+              "**書院制度**：社會科學學生獲分配至中大書院，提供豐富的住宿及社交體驗。",
+              "**學生組織**：各主修活躍學會，包括心理學會、經濟學會及新聞學會。",
+              "**實地考察機會**：地理學及社會學主修於香港及大中華地區進行實地研究。",
+              "**社會意識**：濃厚的社會參與文化，定期舉辦論壇、義工計劃及社區外展活動。"
+            ]
+          },
+          "competitiveness": {
+            "title": "入學競爭力分析",
+            "content": [
+              "**整體難度**：中等偏低 (2.5/5星)。每年約500-700人競爭~280個學額 (入學率約40%)。",
+              "**分數分佈**：最高四分位數：Best 5 = 25-27分；中位數：Best 5 = 22-24分；最低四分位數：Best 5 = 20-22分。",
+              "**科目策略**：英文 (x1.0) + 最佳4科選修。無特定科目要求，但相關選修科增強申請。",
+              "**面試比重**：部分主修面試佔入學決定約15-20%。考核社會意識及溝通技巧。",
+              "**Band A 優勢**：Band A 申請者獲優先考慮。社會科學是文科及商科申請者的熱門後備選擇。",
+              "**非聯招途徑**：國際文憑 (IB 30+/45)、GCE A-Level (BBB)。約15-20個學額預留。"
+            ]
+          },
+          "alumni": {
+            "title": "知名校友及教職員",
+            "content": [
+              "**吳俊雄教授**：著名社會學家，專注於香港社會及社會運動研究。",
+              "**馮海嵐教授**：老年學及老年心理學研究的領軍心理學家。",
+              "**新聞界校友**：香港主要媒體的知名記者及新聞主播。",
+              "**社會工作界校友**：明愛、東華三院及保良局等主要非政府組織的總監及高級經理。",
+              "**政府界校友**：香港特區政府的高級公務員及政策顧問。"
+            ]
+          },
+          "scholarships": {
+            "title": "獎學金及經濟援助",
+            "content": [
+              "**中大社會科學獎學金**：頒予優秀學生的 merit-based 獎項 (每年港幣15,000-30,000元)。",
+              "**中大入學獎學金**：DSE 成績優異學生可申請。全額或半額學費資助。",
+              "**社會工作培訓資助**：為社會工作主修學生提供的特別資助，支援實地考察及實習開支。",
+              "**海外交流資助**：伙伴大學學期交流資助 (每次最多港幣50,000元)。",
+              "**政府資助及貸款**：NMTSS 每年提供最多港幣33,200元。專上學生資助計劃可供申請。"
+            ]
+          },
+          "tips": {
+            "title": "Ace Sir 中大社會科學攻略",
+            "content": [
+              "**分數目標**：Best 5 目標22分以上，英文成績穩固。社會科學容易入門，但仍獎勵良好學術表現。",
+              "**展示社會參與**：透過義工、社區服務或學生運動展示對社會議題的真誠興趣。",
+              "**廣泛閱讀**：緊貼時事、社會議題及公共政策。面試官期望有見地的意見。",
+              "**培養寫作技巧**：良好的論文寫作是所有社會科學學科的基本技能。練習議論文寫作。",
+              "**選定主修前探索**：利用第一年探索不同學科。很多學生接觸新科目後改變意向主修。"
+            ]
+          }
+        }
+      }
+    },
+    "JS4903": {
+      "code": "JS4903",
+      "university": "香港中文大學",
+      "en": {
+        "sections": {
+          "admission": {
+            "title": "Eligibility & Admission Criteria (DSE)",
+            "content": [
+              "**Academic Threshold**: CUHK Law is highly competitive. The median admission score is typically Best 5 = 29-31 (standard scale, 5** = 7 pts).",
+              "**Core Subjects**: English (Level 5+ mandatory), Mathematics (Compulsory Part, Level 3+), and a pass in Citizenship and Social Development.",
+              "**Preferred Electives**: History, Economics, and Chinese History are advantageous. Strong writing and critical thinking skills are essential.",
+              "**Interview**: Individual interview assessing logical reasoning, communication skills, awareness of legal and social issues, and motivation for studying law.",
+              "**Non-Academic Factors**: Debating experience, mooting participation, leadership roles, and community service are highly valued."
+            ]
+          },
+          "curriculum": {
+            "title": "Programme Structure & Curriculum",
+            "content": [
+              "**Year 1 - Legal Foundation**: Legal system, constitutional law, contract law, and legal research methods. Introduction to common law principles.",
+              "**Year 2 - Core Substantive Law**: Tort law, criminal law, land law, and equity & trusts. Mooting and advocacy training begins.",
+              "**Year 3 - Advanced Law & Electives**: Commercial law, company law, international law, and specialised electives (e.g., human rights, environmental law, tech law).",
+              "**Year 4 - Professional Practice**: Legal ethics, professional practice, clinical legal education, and capstone research project. PCLL preparation.",
+              "**PCLL Pathway**: Graduates who meet requirements proceed to the Postgraduate Certificate in Laws (PCLL) for barrister or solicitor qualification.",
+              "**Dual Degree Options**: BBA(Law) and LLB, or BA(Law) and LLB dual degree programmes available for interdisciplinary study."
+            ]
+          },
+          "career": {
+            "title": "Career Pathways & Prospects",
+            "content": [
+              "**Solicitors**: Trainee solicitor contracts at international firms (Clifford Chance, Linklaters, Baker McKenzie) and local firms (Johnson Stokes & Master, Tanner De Witt).",
+              "**Barristers**: Pupillage at leading chambers. CUHK law graduates are well-represented at the Hong Kong Bar.",
+              "**In-House Counsel**: Legal roles at multinational corporations, banks, and tech companies.",
+              "**Government & Public Sector**: Department of Justice, Legal Aid Department, and regulatory bodies (SFC, HKMA, ICAC).",
+              "**Alternative Careers**: Compliance, risk management, consulting, journalism, and policy research. Law graduates are versatile.",
+              "**Further Studies**: LLM at Oxford, Cambridge, Harvard, Yale, and other top law schools worldwide."
+            ]
+          },
+          "campus": {
+            "title": "Campus Life & Student Experience",
+            "content": [
+              "**Lee Shau Kee Law Building**: Dedicated law building with moot court, law library, seminar rooms, and collaborative study spaces.",
+              "**Mooting Programme**: One of the most active mooting programmes in Asia. Regular participation in international moot court competitions (Jessup, Vis, Price).",
+              "**College System**: Law students are assigned to CUHK colleges, providing mentorship and a supportive community.",
+              "**Law Society**: CUHK Law Society organises law firm visits, networking events, academic support, and social activities.",
+              "**Legal Clinics**: Clinical legal education programme providing free legal advice to underprivileged communities."
+            ]
+          },
+          "competitiveness": {
+            "title": "Admission Competitiveness Analysis",
+            "content": [
+              "**Overall Difficulty**: High (4/5 stars). Approximately 1,000-1,200 applicants for ~180 places (~15% admission rate).",
+              "**Score Distribution**: Top quartile: Best 5 = 32-34; Median: Best 5 = 29-31; Bottom quartile: Best 5 = 27-29.",
+              "**Subject Strategy**: English (x1.5) + Best 4 electives. English is critical — Level 5** strongly preferred.",
+              "**Interview Weighting**: Interview carries approximately 25-30% of admission decision. Logical reasoning and articulation are assessed.",
+              "**Band A Advantage**: Band A Choice 1 receives priority. Law is almost always a Band A Choice 1 programme.",
+              "**Non-JUPAS Pathway**: IB (38+/45), GCE A-Levels (AAA). Approximately 15-20 places reserved for non-JUPAS entrants."
+            ]
+          },
+          "alumni": {
+            "title": "Notable Alumni & Faculty",
+            "content": [
+              "**Professor Christopher Gane**: Former Dean of Law. Leading scholar in criminal law and legal education.",
+              "**Professor Lutz-Christian Wolff**: Dean of the CUHK Graduate School and renowned commercial law scholar.",
+              "**Alumni at the Bar**: Many graduates have become Senior Counsel and leading barristers in Hong Kong.",
+              "**Alumni in Judiciary**: Several alumni serve as District Court Judges and Magistrates.",
+              "**Alumni in International Law**: Graduates working at the UN, ICC, and international arbitration centres."
+            ]
+          },
+          "scholarships": {
+            "title": "Scholarships & Financial Aid",
+            "content": [
+              "**CUHK Law Scholarships**: Merit-based scholarships for top law students (HKD 30,000-60,000/year).",
+              "**CUHK Entrance Scholarships**: Awarded to students with exceptional DSE results. Full or partial tuition coverage.",
+              "**Law Firm Scholarships**: Sponsored by major law firms for promising students, often with vacation scheme offers.",
+              "**Mooting Competition Funding**: Travel grants for international mooting competitions.",
+              "**Government Grants & Loans**: NMTSS provides up to HKD 33,200/year. Tertiary Student Finance Scheme available."
+            ]
+          },
+          "tips": {
+            "title": "Ace Sir's CUHK Law Strategy",
+            "content": [
+              "**Score Targeting**: Aim for Best 5 of 29+ with exceptional English (Level 5+). English is the gatekeeper subject for Law.",
+              "**Read Widely**: Stay informed on legal and current affairs. Read court judgments, legal commentary, and quality journalism.",
+              "**Practice Debating**: Join your school's debate team. Law values structured argumentation and quick thinking.",
+              "**Write Persuasively**: Your personal statement must demonstrate clear, logical writing. Get it reviewed by English teachers.",
+              "**Understand the Profession**: Shadow a lawyer, attend court hearings, or participate in mooting. Show genuine interest beyond TV dramas."
+            ]
+          }
+        }
+      },
+      "zh": {
+        "sections": {
+          "admission": {
+            "title": "入學要求與計分詳情 (DSE)",
+            "content": [
+              "**學術門檻**：中大法律學士競爭激烈。中位數收生分數通常為 Best 5 = 29-31 分 (標準計分，5** = 7分)。",
+              "**核心科目**：英文 (必須達 Level 5 或以上)、數學 (必修部分，Level 3 或以上)，以及公民與社會發展科合格。",
+              "**建議選修**：歷史、經濟及中國歷史有優勢。良好的寫作及批判思維能力至關重要。",
+              "**面試**：個人面試，考核邏輯推理、溝通技巧、對法律及社會議題的認識，以及修讀法律的動機。",
+              "**非學術因素**：辯論經驗、模擬法庭參與、領導角色及社區服務極受重視。"
+            ]
+          },
+          "curriculum": {
+            "title": "課程結構與內容",
+            "content": [
+              "**第一年 - 法律基礎**：法律制度、憲法、合約法及法律研究方法。普通法原則導論。",
+              "**第二年 - 核心實體法**：侵權法、刑事法、土地法及衡平法與信託。開始模擬法庭及辯論訓練。",
+              "**第三年 - 進階法律及選修**：商業法、公司法、國際法及專科選修 (如人權法、環境法、科技法)。",
+              "**第四年 - 專業實務**：法律倫理、專業實務、臨床法律教育及畢業研究專題。PCLL 準備。",
+              "**PCLL 路徑**：符合要求的畢業生繼續修讀法律專業證書 (PCLL) 以取得大律師或律師資格。",
+              "**雙學位選擇**：可選修工商管理學士(法律)及法學士，或文學士(法律)及法學士雙學位課程。"
+            ]
+          },
+          "career": {
+            "title": "職業前景與出路",
+            "content": [
+              "**律師**：國際律師行 (高偉紳、年利達、貝克·麥堅時) 及本地律師行 (孖士打、譚德興) 的實習律師合約。",
+              "**大律師**：頂尖大律師事務所的實習大律師職位。中大法律畢業生於香港大律師公會佔有重要席位。",
+              "**企業法律顧問**：跨國企業、銀行及科技公司的法律職位。",
+              "**政府及公共部門**：律政司、法律援助署及監管機構 (證監會、金管局、廉政公署)。",
+              "**另類職業**：合規、風險管理、顧問諮詢、新聞及政策研究。法律畢業生具備多元技能。",
+              "**進修**：於牛津、劍橋、哈佛、耶魯及全球其他頂尖法學院修讀法學碩士。"
+            ]
+          },
+          "campus": {
+            "title": "校園生活與學生體驗",
+            "content": [
+              "**李兆基法律學院大樓**：專屬法律大樓，設有模擬法庭、法律圖書館、研討室及協作學習空間。",
+              "**模擬法庭計劃**：亞洲最活躍的模擬法庭計劃之一。定期參與國際模擬法庭比賽 (Jessup、Vis、Price)。",
+              "**書院制度**：法律學生獲分配至中大書院，提供師友指導及支援社群。",
+              "**法律學會**：中大法律學會舉辦律師行參觀、社交活動、學術支援及社交活動。",
+              "**法律診所**：臨床法律教育計劃，為弱勢社群提供免費法律諮詢。"
+            ]
+          },
+          "competitiveness": {
+            "title": "入學競爭力分析",
+            "content": [
+              "**整體難度**：高 (4/5星)。每年約1,000-1,200人競爭~180個學額 (入學率約15%)。",
+              "**分數分佈**：最高四分位數：Best 5 = 32-34分；中位數：Best 5 = 29-31分；最低四分位數：Best 5 = 27-29分。",
+              "**科目策略**：英文 (x1.5) + 最佳4科選修。英文是關鍵 — Level 5** 強烈建議。",
+              "**面試比重**：面試佔入學決定約25-30%。考核邏輯推理及表達能力。",
+              "**Band A 優勢**：Band A 第一志願獲優先考慮。法律幾乎總是 Band A 第一志願課程。",
+              "**非聯招途徑**：國際文憑 (IB 38+/45)、GCE A-Level (AAA)。約15-20個學額預留予非聯招申請者。"
+            ]
+          },
+          "alumni": {
+            "title": "知名校友及教職員",
+            "content": [
+              "**簡嘉麒教授**：前法律學院院長。刑事法及法律教育的領軍學者。",
+              "**Christian Wolff 教授**：中大研究生院院長，著名商法學者。",
+              "**大律師界校友**：眾多畢業生成為香港資深大律師及頂尖大律師。",
+              "**司法界校友**：多位校友擔任區域法院法官及裁判官。",
+              "**國際法律界校友**：於聯合國、國際刑事法院及國際仲裁中心工作的畢業生。"
+            ]
+          },
+          "scholarships": {
+            "title": "獎學金及經濟援助",
+            "content": [
+              "**中大法律學院獎學金**：頒予頂尖法律學生的 merit-based 獎學金 (每年港幣30,000-60,000元)。",
+              "**中大入學獎學金**：頒予 DSE 成績卓越者。全額或半額學費資助。",
+              "**律師行獎學金**：由主要律師行贊助，支持有潛質的學生，常附帶暑期實習機會。",
+              "**模擬法庭比賽資助**：國際模擬法庭比賽的旅費資助。",
+              "**政府資助及貸款**：NMTSS 每年提供最多港幣33,200元。專上學生資助計劃可供申請。"
+            ]
+          },
+          "tips": {
+            "title": "Ace Sir 中大法律攻略",
+            "content": [
+              "**分數目標**：Best 5 目標29分以上，英文必須達 Level 5 或以上。英文是法律的守門科目。",
+              "**廣泛閱讀**：緊貼法律及時事。閱讀法庭判詞、法律評論及優質新聞報導。",
+              "**練習辯論**：加入學校辯論隊。法律重視結構化論證及快速思維。",
+              "**具說服力地寫作**：個人陳述必須展示清晰、邏輯的寫作。請英文老師審閱。",
+              "**了解專業**：跟隨律師實習、旁聽法庭或參與模擬法庭。展示超越電視劇的真誠興趣。"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

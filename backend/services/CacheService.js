@@ -35,6 +35,12 @@ class CacheService {
         }
     }
 
+    /** Drop cached merged profile so the next getProfile hits Cosmos (chat / account sync). */
+    invalidateProfileCache(uid) {
+        if (!uid) return;
+        this.dbCache.del(`profile_${uid}`);
+    }
+
     /** --- AI SEMANTIC EXPOSED METHODS --- */
 
     getIntentCache(key) {

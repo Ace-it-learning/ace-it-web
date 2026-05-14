@@ -25,6 +25,14 @@ The following environment variables control which stack is active. They must be 
 | `STORAGE_PROVIDER` | `azure` / `gcs` | Controls object storage backend. Use `azure` for Azure DEV. |
 | `AI_PROVIDER` | `deepseek` / `azure_openai` / `groq` / `google` | Controls AI gateway. Use `deepseek` for Azure DEV. |
 | `NODE_ENV` | `development` / `production` | General environment flag. Affects rate limits, error messages, and Firebase hard-guard. |
+| `AZURE_COMMUNICATION_CONNECTION_STRING` | *Azure ACS primary connection string* | **Parent progress emails:** required for real delivery via Azure Communication Services Email. If unset and SMTP is not configured, the backend only **simulates** a send (logs HTML to the console). |
+| `AZURE_SENDER_EMAIL` | *verified sender address* | From-address for ACS (must be verified on the ACS resource). Defaults to `DoNotReply@ace-it.azurecomm.net` if unset. |
+| `SMTP_HOST` | e.g. `smtp.gmail.com` | **Optional local dev:** when ACS is not configured, the backend can send real mail via SMTP if `SMTP_HOST` and `SMTP_FROM` (or `SMTP_USER`) are set. |
+| `SMTP_PORT` | e.g. `587` | Optional; default `587`. |
+| `SMTP_SECURE` | `true` / `false` | Optional; use `false` for port 587 with STARTTLS. |
+| `SMTP_USER` | *SMTP login* | Often your Gmail address when using Gmail SMTP. |
+| `SMTP_PASS` | *app password or SMTP secret* | For Gmail, create an **App password** in Google Account security. |
+| `SMTP_FROM` | *From header* | Defaults to `SMTP_USER` if omitted. |
 
 ### Frontend (`/frontend/.env.development`)
 

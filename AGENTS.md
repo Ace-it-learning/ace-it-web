@@ -302,6 +302,14 @@ The system prompt is assembled in strict tiers:
 
 Always log `tierFlags.join('+')` as `prompt_tier` via `TokenService.logUsage()`.
 
+### Agent Interaction & Debugging (CRITICAL)
+- **Tool Call Visibility**: NEVER suppress or skip the content of `WriteFile` or `Shell` commands. The `IN` block must always contain the full, un-encoded source code or command string.
+- **No Hidden Optimization**: Do not attempt to "save tokens" by omitting logs or truncating tool parameters. Debugging visibility is higher priority than token conservation.
+- **Handling Large Files**: If a JSON or file is too large for a single `WriteFile` call:
+  1. Do NOT use `base64` or complex `heredoc` redirects (these often fail in the shell).
+  2. Instead, write a temporary Node.js script (e.g., `tmp_writer.js`) that handles the file writing via `fs.writeFileSync` and execute it.
+- **Shell Execution**: Always output the full command being run in the terminal so the user can verify it before execution.
+
 ### History Window Contract
 - `MAX_TURNS = 12`, `MAX_CHARS_PER_MSG = 800` (server authoritative).
 - Frontend mirrors `MAX_PAYLOAD_TURNS = 24` for wire size only.

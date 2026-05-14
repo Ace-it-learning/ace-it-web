@@ -528,7 +528,13 @@ const SpeakingLanguageLab = () => {
                             >
                                 <div className="flex items-center gap-4 mb-6">
                                     <div className="size-14 rounded-2xl bg-white flex items-center justify-center border-2 border-slate-100 shadow-md overflow-hidden">
-                                        <img src={equipment?.student?.image?.startsWith('s_') ? `/avatars/${equipment.student.image}` : (equipment?.student?.image || '/avatars/student_male_1.jpg')} alt="You" className="size-full object-cover" />
+                                        <img src={(() => {
+                                            const img = equipment?.student?.image;
+                                            if (!img) return '/avatars/Student/Marcus.jpeg';
+                                            if (img.startsWith('/') || img.startsWith('http')) return img;
+                                            if (img.startsWith('s_') && !img.includes('/')) return `/avatars/${img}`;
+                                            return img;
+                                        })()} alt="You" className="size-full object-cover" />
                                     </div>
                                     <div>
                                         <h3 className="font-black text-slate-800">{user?.displayName || "You"}</h3>

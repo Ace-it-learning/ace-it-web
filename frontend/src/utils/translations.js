@@ -90,6 +90,8 @@ export const translations = {
             view_daily_quest: "View Daily Quest",
             complete_diagnostic_first: "Complete Mock Exam first",
             mock_exam: "Mock Exam",
+            dream_subjects: "Dream Subject",
+            dream_subjects_title: "Dream subject list",
             back_to_roadmap: "Back to Roadmap",
             parent_report: "Parental Report",
             features: "Features",
@@ -257,6 +259,14 @@ export const translations = {
             test_report: "Send Test Report",
             report_sent: "Test report sent!",
             settings_saved: "Settings saved"
+        },
+        account: {
+            settings_title: "Settings",
+            settings_subtitle: "Manage your account",
+            tab_profile: "Profile",
+            tab_parental: "Progress Report",
+            tab_security: "Security",
+            tab_subscription: "Plan"
         },
         common: {
             cancel: "Cancel",
@@ -818,6 +828,8 @@ export const translations = {
             view_daily_quest: "查看每日任務",
             complete_diagnostic_first: "請先完成模擬考試",
             mock_exam: "模擬試場",
+            dream_subjects: "夢想學科",
+            dream_subjects_title: "夢想學科清單",
             back_to_roadmap: "返回發展導覽",
             parent_report: "家長監督",
             features: "功能介紹",
@@ -985,6 +997,14 @@ export const translations = {
             test_report: "發送測試報告",
             report_sent: "測試報告已發送！",
             settings_saved: "設定已儲存"
+        },
+        account: {
+            settings_title: "設定",
+            settings_subtitle: "管理你的帳戶",
+            tab_profile: "個人資料",
+            tab_parental: "學習進度報告",
+            tab_security: "帳戶安全",
+            tab_subscription: "訂閱方案"
         },
         common: {
             cancel: "取消",

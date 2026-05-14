@@ -1,0 +1,169 @@
+{
+  "code": "JS6122",
+  "nameEn": "Bachelor of Business Administration in Information Systems",
+  "nameZh": "工商管理學學士（資訊系統）",
+  "university": "HKU",
+  "faculty": "Faculty of Business and Economics",
+  "median": 30,
+  "category": "Business",
+  "en": {
+    "sections": {
+      "admission": {
+        "bullets": [
+          "Minimum DSE requirements: 4 core subjects + 2 electives with Level 3 in English and Chinese, Level 2 in Maths and Liberal Studies; Mathematics (Compulsory Part) Level 4+ essential, ICT or M1/M2 highly preferred",
+          "Typical admission score: median 30 points (Best 6 subjects), lower quartile ~28, upper quartile ~33 — competitive due to tech industry demand",
+          "Preferred electives: Information and Communication Technology (ICT), Mathematics (M1/M2), Economics, or Physics; strong logical reasoning and programming aptitude essential",
+          "Interview: Not required for standard admission; may be invited for candidates with exceptional coding projects or tech competition achievements; assesses technical problem-solving and business-technology integration understanding",
+          "Alternative entry: IB (30+ points with Mathematics or Computer Science HL), GCE A-Level (AAB including Mathematics), SAT (1300+) with AP Computer Science or Calculus"
+        ]
+      },
+      "curriculum": {
+        "bullets": [
+          "Year 1: Business and technology foundation — Principles of Accounting, Economics, Business Statistics, Introduction to Programming (Python/Java), Database Management Systems; Common Core Curriculum",
+          "Year 2: Core IS disciplines — Systems Analysis and Design, Data Structures and Algorithms, Computer Networks, Web Development, Enterprise Resource Planning (SAP/Oracle); business core courses (marketing, finance, operations)",
+          "Year 3: Advanced IS and specialisation — Business Intelligence and Analytics, Cloud Computing, Cybersecurity Management, Artificial Intelligence for Business, Blockchain and Fintech; 300-hour internship at tech companies (Google, Microsoft, local startups) or consulting firms (Accenture, Deloitte Digital)",
+          "Year 4: Capstone and professional practice — IS Strategy and Governance, Digital Transformation, Project Management (PMP-aligned); honours project developing real business application or consulting project for corporate client; preparation for professional certifications (AWS, Azure, PMP)",
+          "Technical facilities: HKU Business School Tech Lab with cloud computing sandbox (AWS, Azure, GCP), cybersecurity simulation environment, blockchain development nodes, and AI/ML workstations with GPU clusters",
+          "Accreditation: Programme accredited by AACSB and EQUIS; aligned with Hong Kong Computer Society (HKCS) and ISACA standards; graduates eligible for HKCS graduate membership and CISA/CISM certification pathway",
+          "Interdisciplinary options: Minor in Computer Science, Data Science, or Finance; joint projects with HKU Faculty of Engineering and Department of Computer Science"
+        ]
+      },
+      "career": {
+        "bullets": [
+          "Technology Consulting: Technology consultant at Accenture, Deloitte Digital, or IBM; digital transformation specialist; cloud migration architect; starting salaries HK$28,000-38,000/month",
+          "Software Development: Software engineer, full-stack developer, or mobile app developer at Google, Microsoft, ByteDance, or local tech startups; starting salaries HK$30,000-45,000/month; strong coding skills essential",
+          "Data Analytics & Business Intelligence: Data analyst, BI developer, or data engineer at banks (HSBC, Standard Chartered), retailers, or tech firms; starting salaries HK$26,000-35,000/month; SQL, Python, and Tableau skills highly valued",
+          "Cybersecurity: Information security analyst, SOC analyst, or compliance officer at financial institutions, government, or cybersecurity firms; CISA/CISM certification pathway; starting salaries HK$28,000-40,000/month",
+          "Product Management: Associate product manager at tech companies (Meta, Amazon, Tencent); bridges business requirements with technical development; starting salaries HK$30,000-42,000/month; requires strong communication and technical understanding",
+          "Further Studies: Master's in Information Systems (MIT, Carnegie Mellon, HKUST), Data Science, or MBA; professional certifications (AWS Solutions Architect, CISSP, PMP) accelerate career progression"
+        ]
+      },
+      "campus": {
+        "bullets": [
+          "Business-tech facilities: K.K. Leung Building Tech Lab with 80+ high-performance workstations, dual-monitor setups, and dedicated server room for student projects and experiments",
+          "Cloud sandbox: Access to AWS Educate, Azure for Students, and Google Cloud Platform credits; students can deploy real applications and experiment with cloud architectures at no cost",
+          "Cybersecurity lab: Isolated network environment for ethical hacking exercises, penetration testing, and malware analysis; includes Kali Linux, Wireshark, and Metasploit training environments",
+          "AI/ML workstations: GPU-enabled machines (NVIDIA RTX A6000) for deep learning projects, natural language processing, and computer vision applications; supports student research and competition entries",
+          "Student societies: Information Systems Society organises coding workshops, hackathons, Capture The Flag (CTF) competitions, and tech career fairs; active collaboration with Google Developer Student Clubs and Microsoft Learn Student Ambassadors"
+        ]
+      },
+      "competitiveness": {
+        "bullets": [
+          "Admission statistics: ~800 applicants for ~180 places (4.4:1 ratio) — highly competitive due to booming tech industry and strong graduate salaries",
+          "Score distribution: 70% of admitted students score 28-33 points; students with 26-27 need exceptional coding projects, hackathon wins, or ICT Olympiad achievements",
+          "Technical premium: ICT Level 5+ or demonstrated programming ability (GitHub portfolio, app deployments) significantly improves admission chances; Mathematics M1/M2 essential for analytics and AI modules",
+          "Comparison with HKUST BBA(IS) (JS5312): HKU has stronger business foundation and consulting placement; HKUST has more technical depth and stronger Silicon Valley alumni network",
+          "Non-JUPAS intake: ~25% of places for international students and mainland JEE students; many with Informatics Olympiad or competitive programming backgrounds",
+          "Trend: Explosive growth in fintech, AI, and digital transformation demand; 2024 applications up 50% from 2020; graduates receiving multiple offers before graduation"
+        ]
+      },
+      "alumni": {
+        "bullets": [
+          "Mr. Charles Mok (BBA 1989) — Former Legislative Councillor (IT), advocate for Hong Kong's digital economy and startup ecosystem; founder of HK Internet Association",
+          "Ms. Jane Li (BBA 1998) — CTO of WeLab, Hong Kong's largest fintech unicorn; led development of digital lending platform serving 50 million+ users across Asia",
+          "Mr. Alan Chan (BBA 2003) — Director of Engineering at Google Hong Kong, overseeing cloud infrastructure and AI product development for Greater China region",
+          "Ms. Fiona Lau (BBA 2008) — Founder of Pokeguide, AI-powered travel app with 5 million+ downloads; Forbes 30 Under 30 Asia; Cyberport Creative Micro Fund recipient",
+          "Mr. Jason Ng (BBA 2012) — Principal at Accenture Strategy, leading digital transformation projects for Fortune 500 companies across Asia Pacific"
+        ]
+      },
+      "scholarships": {
+        "bullets": [
+          "HKU Foundation Entrance Scholarship: Full tuition + HK$50,000/year for DSE 5** in 3+ subjects; IS students with strong Mathematics and ICT performance frequently qualify",
+          "HKU Business School Tech Scholarship: HK$35,000-50,000/year for top 10% of IS cohort; includes guaranteed tech internship (Google, Microsoft, or leading startup)",
+          "Cyberport University Partnership Programme: HK$100,000 seed funding + mentorship for students developing tech startups; exclusive to HKU IS and Computer Science students",
+          "AWS Cloud Scholarship: Full AWS certification training (Solutions Architect, Developer) + HK$20,000 exam and project funding; sponsored by Amazon Web Services",
+          "Google Developer Scholarship: HK$30,000 + mentorship from Google engineers; requires developing open-source project or winning coding competition"
+        ]
+      },
+      "tips": {
+        "bullets": [
+          "Build a coding portfolio: Create GitHub projects, deploy web apps, or contribute to open source; admissions officers and employers value demonstrated coding ability over grades alone",
+          "Learn beyond the curriculum: Self-study cloud platforms (AWS, Azure), frameworks (React, Node.js), and data tools (SQL, Python pandas) before university; this gives you a head start on projects and internships",
+          "Participate in hackathons: Join HackUST, Google Code Jam, or local coding competitions; these experiences build teamwork, rapid prototyping skills, and impress both admissions and recruiters",
+          "Understand business-technology bridge: IS is not pure Computer Science — you need to understand how technology solves business problems; read case studies on digital transformation and fintech innovations",
+          "Secure internships early: Start applying for tech internships in Year 2 summer; HKU's location and alumni network provide access to top tech firms and startups in Hong Kong and Shenzhen"
+        ]
+      }
+    }
+  },
+  "zh": {
+    "sections": {
+      "admission": {
+        "bullets": [
+          "最低文憑試要求：4科核心科目 + 2科選修科目，英文及中文達3級，數學及通識達2級；數學（必修部分）達4級以上至關重要，資訊及通訊科技或M1/M2高度建議",
+          "典型入學分數：中位數30分（最佳6科），下四分位數約28分，上四分位數約33分——因科技業需求而具競爭性",
+          "優先選修科目：資訊及通訊科技（ICT）、數學（M1/M2）、經濟或物理；強勁邏輯推理及編程能力至關重要",
+          "面試：標準入學不設面試；具卓越編程項目或科技比賽成就者或獲邀面試；評估技術解難及商業科技整合理解",
+          "替代入學途徑：IB（30分以上連數學或電腦科學高級程度）、GCE A-Level（包括數學達AAB）、SAT（1300分以上）連AP電腦科學或微積分"
+        ]
+      },
+      "curriculum": {
+        "bullets": [
+          "第一年：商業及科技基礎——會計學原理、經濟學、商業統計、編程導論（Python/Java）、數據庫管理系統；共同核心課程",
+          "第二年：核心資訊系統學科——系統分析與設計、數據結構與算法、電腦網絡、網頁開發、企業資源規劃（SAP/Oracle）；商業核心課程（市場、金融、營運）",
+          "第三年：進階資訊系統及專修——商業智能與分析、雲端運算、網絡安全管理、商業人工智能、區塊鏈與金融科技；於科技公司（Google、微軟、本地初創）或顧問公司（埃森哲、德勤數碼）進行300小時實習",
+          "第四年：畢業及專業實踐——資訊系統策略與管治、數碼轉型、項目管理（PMP對齊）；開發真實商業應用或為企業客戶進行顧問項目的榮譽項目；預備專業認證（AWS、Azure、PMP）",
+          "技術設施：港大商學院科技實驗室設有雲端運算沙盒（AWS、Azure、GCP）、網絡安全模擬環境、區塊鏈開發節點及配備GPU集群的人工智能/機器學習工作站",
+          "認證：課程獲AACSB及EQUIS認可；符合香港電腦學會（HKCS）及ISACA標準；畢業生符合HKCS研究生會員及CISA/CISM認證途徑資格",
+          "跨學科選項：電腦科學、數據科學或金融副修；與港大工程學院及電腦科學系聯合項目"
+        ]
+      },
+      "career": {
+        "bullets": [
+          "科技顧問：埃森哲、德勤數碼或IBM科技顧問；數碼轉型專家；雲端遷移架構師；起薪每月28,000-38,000港元",
+          "軟件開發：Google、微軟、字節跳動或本地科技初創軟件工程師、全端開發員或流動應用開發員；起薪每月30,000-45,000港元；強勁編程技巧至關重要",
+          "數據分析及商業智能：銀行（滙豐、渣打）、零售商或科技公司數據分析員、BI開發員或數據工程師；起薪每月26,000-35,000港元；SQL、Python及Tableau技能極受重視",
+          "網絡安全：金融機構、政府或網絡安全公司資訊安全分析員、SOC分析員或合規主任；CISA/CISM認證途徑；起薪每月28,000-40,000港元",
+          "產品管理：科技公司（Meta、亞馬遜、騰訊）助理產品經理；連接商業需求與技術開發；起薪每月30,000-42,000港元；需強勁溝通及技術理解",
+          "進修：資訊系統碩士（麻省理工、卡內基梅隆、科大）、數據科學或工商管理碩士；專業認證（AWS解決方案架構師、CISSP、PMP）加速職業發展"
+        ]
+      },
+      "campus": {
+        "bullets": [
+          "商業科技設施：梁銶琚樓科技實驗室設有80多台高效能工作站、雙顯示器設置及專屬伺服器房供學生項目及實驗",
+          "雲端沙盒：可使用AWS Educate、Azure for Students及Google Cloud Platform額度；學生可免費部署真實應用及試驗雲端架構",
+          "網絡安全實驗室：隔離網絡環境供道德黑客練習、滲透測試及惡意軟件分析；包括Kali Linux、Wireshark及Metasploit培訓環境",
+          "人工智能/機器學習工作站：配備GPU的機器（NVIDIA RTX A6000）供深度學習項目、自然語言處理及電腦視覺應用；支援學生研究及比賽參賽",
+          "學生學會：資訊系統學會組織編程工作坊、黑客松、奪旗賽（CTF）及科技職業博覽會；與Google Developer Student Clubs及Microsoft Learn Student Ambassadors活躍合作"
+        ]
+      },
+      "competitiveness": {
+        "bullets": [
+          "入學統計：約800人申請，約180個學額（4.4:1比例）——因科技業蓬勃及畢業生薪金強勁而競爭激烈",
+          "分數分佈：70%獲錄取學生達28-33分；26-27分者需有卓越編程項目、黑客松勝利或ICT奧林匹克成就",
+          "技術溢價：ICT達5級以上或展示編程能力（GitHub作品集、應用部署）顯著提升入學機會；數學M1/M2對分析及人工智能單元必需",
+          "與科大工商管理學士（資訊系統）（JS5312）比較：港大商業基礎及顧問就業率較強；科大技術深度較強及矽谷校友網絡較佳",
+          "非聯招收生：約25%學額予國際學生及內地高考學生；許多具資訊奧林匹克或競技編程背景",
+          "趨勢：金融科技、人工智能及數碼轉型需求爆炸性增長；2024年申請自2020年增加50%；畢業生前已獲多份聘書"
+        ]
+      },
+      "alumni": {
+        "bullets": [
+          "莫乃光先生（1989年工商管理學士）——前立法會議員（資訊科技），香港數碼經濟及初創生態系統倡議者；香港互聯網協會創辦人",
+          "李珍妮女士（1998年工商管理學士）——WeLab科技總監，香港最大金融科技獨角獸；領導服務亞洲5,000多萬用戶的數碼借貸平台開發",
+          "陳艾伦先生（2003年工商管理學士）——Google香港工程總監，管理大中華區雲端基礎設施及人工智能產品開發",
+          "劉詠琪女士（2008年工商管理學士）——Pokeguide創辦人，人工智能旅遊應用程式下載量超過500萬；福布斯亞洲30位30歲以下精英；數碼港創意微型基金受助人",
+          "吳子傑先生（2012年工商管理學士）——埃森哲策略董事總經理，領導亞太區財富500強公司數碼轉型項目"
+        ]
+      },
+      "scholarships": {
+        "bullets": [
+          "港大基金入學獎學金：全額學費 + 每年50,000港元（文憑試3科以上5**）；數學及ICT表現強的資訊系統學生經常符合資格",
+          "港大商學院科技獎學金：每年35,000-50,000港元予資訊系統前10%學生；包括保證科技實習（Google、微軟或領先初創）",
+          "數碼港大學夥伴計劃：100,000港元種子資金 + 導師指導予開發科技初創的學生；港大資訊系統及電腦科學學生獨家",
+          "AWS雲端獎學金：全額AWS認證培訓（解決方案架構師、開發員）+ 20,000港元考試及項目資助；亞馬遜雲端服務贊助",
+          "Google開發者獎學金：30,000港元 + Google工程師導師指導；需開發開源項目或贏得編程比賽"
+        ]
+      },
+      "tips": {
+        "bullets": [
+          "建立編程作品集：創建GitHub項目、部署網頁應用或貢獻開源；招生官及僱主重視已展示的編程能力而非純成績",
+          "超越課程自學：入學前自學雲端平台（AWS、Azure）、框架（React、Node.js）及數據工具（SQL、Python pandas）；這為項目及實習提供先機",
+          "參與黑客松：參加HackUST、Google Code Jam或本地編程比賽；這些經驗建立團隊合作、快速原型製作技巧，並令招生官及招聘者印象深刻",
+          "理解商業科技橋樑：資訊系統非純電腦科學——你需理解科技如何解決商業問題；閱讀數碼轉型及金融科技創新個案研究",
+          "及早確保實習：第二年暑期開始申請科技實習；港大地理位置及校友網絡提供接觸香港及深圳頂尖科技公司及初創的機會"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,169 @@
+{
+  "code": "JS6116",
+  "nameEn": "Bachelor of Science in Geography",
+  "nameZh": "地理學學士",
+  "university": "HKU",
+  "faculty": "Faculty of Social Sciences",
+  "median": 26,
+  "category": "Social Sciences",
+  "en": {
+    "sections": {
+      "admission": {
+        "bullets": [
+          "Minimum DSE requirements: 4 core subjects + 2 electives with Level 3 in English and Chinese, Level 2 in Maths and Liberal Studies; Geography elective highly preferred",
+          "Typical admission score: median 26 points (Best 6 subjects), lower quartile ~24, upper quartile ~28 — accessible to students with genuine interest in environmental and spatial issues",
+          "Preferred electives: Geography (strongly preferred), Biology, Chemistry, or Economics; Mathematics (M1/M2) advantageous for GIS and quantitative analysis",
+          "Interview: Not required for standard admission; portfolio of fieldwork, mapping projects, or environmental initiatives may strengthen application",
+          "Alternative entry: IB (26+ points), GCE A-Level (ABB including Geography), SAT (1250+) with strong essay on environmental or urban topics"
+        ]
+      },
+      "curriculum": {
+        "bullets": [
+          "Year 1: Geography foundation — Physical Geography, Human Geography, Geographical Methods, Map Reading and GIS Basics; Common Core Curriculum; local fieldwork in Hong Kong (urban transects, coastal studies)",
+          "Year 2: Core geographical skills — Remote Sensing, GIS and Spatial Analysis, Climatology, Geomorphology, Urban Geography; 100 hours laboratory and computer-based practicals; first overseas field camp (typically Taiwan or Japan)",
+          "Year 3: Specialisation tracks — Environmental Management, Urban Planning, Transport Geography, or Geomatics; advanced GIS programming (Python, R); 200-hour internship at planning consultancies (AECOM, Arup), government departments (PlanD, EPD), or NGOs (WWF, Greenpeace)",
+          "Year 4: Research and professional practice — Honours dissertation (field-based or GIS-based research, 12 credits); overseas field camp (Malaysia, UK, or Australia); professional accreditation preparation for HKIP or HKIS",
+          "Technical facilities: GIS Laboratory with ArcGIS Pro, QGIS, ENVI, ERDAS; drone mapping suite (DJI Phantom, RTK GPS); sediment and soil analysis lab",
+          "Accreditation: Programme recognised by Hong Kong Institute of Planners (HKIP) and Hong Kong Institute of Surveyors (HKIS) for partial exemption; graduates eligible for professional planning or surveying pathways with additional qualifications",
+          "Interdisciplinary options: Minor in Urban Studies, Environmental Science, or Data Science; joint research with HKU Faculty of Architecture and Division of Landscape Architecture"
+        ]
+      },
+      "career": {
+        "bullets": [
+          "Urban Planning & Design: Assistant planner at Planning Department, Urban Renewal Authority, or private planning consultancies (AECOM, Arup, MVA); Master's in Urban Planning (HKU) for full professional registration; starting salaries HK$22,000-28,000/month",
+          "Environmental Consultancy: Environmental consultant at ERM, AECOM, or local consultancies; environmental impact assessment (EIA), sustainability reporting, climate adaptation planning; starting salaries HK$24,000-32,000/month",
+          "GIS & Geomatics: GIS analyst at Lands Department, utility companies (MTR, CLP), or tech firms (Esri Hong Kong, Google Maps); remote sensing specialist; starting salaries HK$25,000-35,000/month",
+          "Surveying & Property: Graduate surveyor at surveying firms (Savills, Jones Lang LaSalle, Knight Frank); property valuation, land administration, building surveying; requires HKIS professional assessment; starting salaries HK$22,000-30,000/month",
+          "Education & Research: Geography teacher via PGDE; research assistant at universities or think tanks (Civic Exchange, Hong Kong Institute of Asia-Pacific Studies); PhD for academic careers",
+          "Transport & Logistics: Transport planner at Transport Department, MTR Corporation, or logistics firms; aviation planning at Airport Authority; smart mobility consulting"
+        ]
+      },
+      "campus": {
+        "bullets": [
+          "Geography facilities: The Jockey Club Tower houses dedicated GIS laboratories, map library (50,000+ maps and aerial photographs), and physical geography teaching labs",
+          "GIS Laboratory: 40 workstations with ArcGIS Pro, QGIS, ENVI, ERDAS Imagine, Google Earth Engine; high-performance computing for spatial analysis; drone fleet for aerial surveying",
+          "Field equipment: Sediment corers, water quality probes, automatic weather stations, differential GPS units, total stations; stored at Main Campus with field support technician",
+          "Map library: One of Hong Kong's largest cartographic collections including historical maps of Hong Kong, China, and Southeast Asia; aerial photograph archive dating to 1924",
+          "Student societies: Geography Society organises field trips, map-making competitions, urban exploration walks, and career talks with planners and environmental consultants"
+        ]
+      },
+      "competitiveness": {
+        "bullets": [
+          "Admission statistics: ~350 applicants for ~90 places (4:1 ratio) — moderate competition; smaller cohort allows personalised attention and fieldwork opportunities",
+          "Score distribution: Broad range 22-28 points accepted; holistic review values fieldwork experience, mapping skills, and demonstrated interest in environmental or urban issues",
+          "Geography premium: DSE Geography Level 5+ significantly improves admission chances and prepares students for the physical geography and fieldwork components",
+          "Comparison with CUHK Geography (JS4042): HKU has stronger urban planning and GIS focus with Planning Department links; CUHK has larger intake (~120 places) and more physical geography emphasis",
+          "Non-JUPAS intake: ~15% of places for international students, particularly from mainland China and Southeast Asia with strong geography backgrounds",
+          "Trend: Growing interest in climate change, urban sustainability, and smart city planning; GIS skills increasingly valued across industries; 2024 applications up 10%"
+        ]
+      },
+      "alumni": {
+        "bullets": [
+          "Mr. Bernard Chan (BSc 1982) — Chairman of Urban Renewal Authority, former Convenor of Executive Council, advocate for urban regeneration and heritage conservation",
+          "Dr. Ng Mee Kam (BSc 1985) — Professor of Urban Planning at CUHK, leading researcher in sustainable transport and compact city development in Asia",
+          "Mr. Eric Ma (BSc 1988) — Former Secretary for Development, led major infrastructure projects including Lantau Tomorrow Vision and Northern Metropolis planning",
+          "Ms. Lisa Hopkinson (BSc 1992) — Founder of Civic Exchange, influential environmental think tank shaping Hong Kong's climate policy and air quality regulations",
+          "Mr. David Tang (BSc 2001) — Director of Planning at MTR Corporation, overseeing TOD (transit-oriented development) projects across Hong Kong rail network"
+        ]
+      },
+      "scholarships": {
+        "bullets": [
+          "HKU Foundation Entrance Scholarship: Full tuition + HK$50,000/year for DSE 5** in 3+ subjects; geography students with strong all-round performance qualify",
+          "Faculty of Social Sciences Scholarship: HK$20,000-30,000/year for top 15% of geography cohort based on academic and fieldwork performance",
+          "AECOM Planning Scholarship: HK$30,000/year for students committed to urban planning or environmental consultancy careers; includes summer internship guarantee",
+          "Lands Department Survey Scholarship: Full tuition + HK$8,000/month; requires 3-year service at Lands Department after graduation",
+          "Overseas Fieldwork Grant: HK$20,000 for honours dissertation fieldwork at overseas locations (Southeast Asia, UK, Australia); covers travel and accommodation"
+        ]
+      },
+      "tips": {
+        "bullets": [
+          "Take Geography DSE: Level 5+ in Geography is the best preparation and significantly improves admission chances; it also gives you a head start on physical geography concepts",
+          "Build mapping skills: Learn QGIS (free) or ArcGIS Online basics before university; familiarity with spatial data gives you an advantage in Year 1 GIS modules",
+          "Engage with Hong Kong's environment: Join hiking groups, beach clean-ups, or urban exploration walks; admissions officers value candidates who actively engage with geographical issues",
+          "Understand planning vs GIS pathways: Urban planning requires Master's for professional registration; GIS leads directly to analyst roles; choose electives accordingly from Year 2",
+          "Leverage fieldwork opportunities: HKU Geography has extensive field camp programmes — use these to build networks with faculty and develop dissertation ideas early"
+        ]
+      }
+    }
+  },
+  "zh": {
+    "sections": {
+      "admission": {
+        "bullets": [
+          "最低文憑試要求：4科核心科目 + 2科選修科目，英文及中文達3級，數學及通識達2級；強烈建議地理選修",
+          "典型入學分數：中位數26分（最佳6科），下四分位數約24分，上四分位數約28分——對環境及空間議題有真誠興趣的學生可達標",
+          "優先選修科目：地理（強烈建議）、生物、化學或經濟；數學（M1/M2）對GIS及量化分析有優勢",
+          "面試：標準入學不設面試；實地考察、製圖項目或環境倡議作品集可強化申請",
+          "替代入學途徑：IB（26分以上）、GCE A-Level（包括地理達ABB）、SAT（1250分以上）連環境或城市議題強文章"
+        ]
+      },
+      "curriculum": {
+        "bullets": [
+          "第一年：地理學基礎——自然地理學、人文地理學、地理學方法、地圖閱讀及GIS基礎；共同核心課程；香港本地實地考察（城市剖面、海岸研究）",
+          "第二年：核心地理技能——遙感、GIS與空間分析、氣候學、地貌學、城市地理學；100小時實驗室及電腦實習；首次海外考察營（通常台灣或日本）",
+          "第三年：專修方向——環境管理、城市規劃、運輸地理學或測量學；進階GIS編程（Python、R）；於規劃顧問公司（艾奕康、奧雅納）、政府部門（規劃署、環保署）或非政府機構（世界自然基金會、綠色和平）進行200小時實習",
+          "第四年：研究及專業實踐——榮譽論文（實地或GIS研究，12學分）；海外考察營（馬來西亞、英國或澳洲）；香港規劃師學會或香港測量師學會專業認證預備",
+          "技術設施：GIS實驗室配備ArcGIS Pro、QGIS、ENVI、ERDAS；無人機測繪套房（DJI Phantom、RTK GPS）；沉積物及土壤分析實驗室",
+          "認證：課程獲香港規劃師學會（HKIP）及香港測量師學會（HKIS）認可部分豁免；畢業生符合專業規劃或測量途徑資格，需額外資格",
+          "跨學科選項：城市研究、環境科學或數據科學副修；與港大建築學院及園境建築學部聯合研究"
+        ]
+      },
+      "career": {
+        "bullets": [
+          "城市規劃及設計：規劃署、市區重建局或私人規劃顧問公司（艾奕康、奧雅納、MVA）助理規劃師；港大城市規劃碩士方可全面專業註冊；起薪每月22,000-28,000港元",
+          "環境顧問：ERM、艾奕康或本地顧問公司環境顧問；環境影響評估（EIA）、可持續發展報告、氣候適應規劃；起薪每月24,000-32,000港元",
+          "GIS及測量學：地政總署、公用事業公司（港鐵、中電）或科技公司（Esri香港、Google地圖）GIS分析員；遙感專家；起薪每月25,000-35,000港元",
+          "測量及物業：測量行（第一太平戴維斯、仲量聯行、萊坊）畢業測量師；物業估價、土地管理、建築測量；需香港測量師學會專業評核；起薪每月22,000-30,000港元",
+          "教育及研究：透過教育文憑擔任地理教師；大學或智庫（思匯政策研究所、香港亞太研究所）研究助理；學術職業需博士",
+          "運輸及物流：運輸署、港鐵公司或物流公司運輸規劃師；機場管理局航空規劃；智能出行顧問"
+        ]
+      },
+      "campus": {
+        "bullets": [
+          "地理學設施：賽馬會教學大樓設有專屬GIS實驗室、地圖圖書館（5萬多張地圖及航空照片）及自然地理學教學實驗室",
+          "GIS實驗室：40個工作站配備ArcGIS Pro、QGIS、ENVI、ERDAS Imagine、Google Earth Engine；空間分析高效能運算；航空測量無人機群組",
+          "田野設備：沉積物採樣器、水質探測器、自動氣象站、差分GPS單位、全站儀；存放於主校園並有田野支援技術員",
+          "地圖圖書館：香港最大製圖收藏之一，包括香港、中國及東南亞歷史地圖；航空照片檔案可追溯至1924年",
+          "學生學會：地理學會組織田野考察、製圖比賽、城市探索步行及規劃師與環境顧問職業講座"
+        ]
+      },
+      "competitiveness": {
+        "bullets": [
+          "入學統計：約350人申請，約90個學額（4:1比例）——中等競爭；較小班級容許個人化關注及實地考察機會",
+          "分數分佈：廣泛接受22-28分；整體評審重視實地考察經驗、製圖技巧及對環境或城市議題的展示興趣",
+          "地理溢價：文憑試地理達5級以上顯著提升入學機會並為自然地理學及實地考察組件做好準備",
+          "與中大地理學（JS4042）比較：港大城市規劃及GIS重點較強並有規劃署聯繫；中大收生較多（約120學額）及更多自然地理學重點",
+          "非聯招收生：約15%學額予國際學生，尤其中國內地及東南亞地理背景強者",
+          "趨勢：氣候變化、城市可持續發展及智慧城市規劃興趣日增；GIS技能跨行業日益受重視；2024年申請增加10%"
+        ]
+      },
+      "alumni": {
+        "bullets": [
+          "陳智思先生（1982年地理學學士）——市區重建局主席、前行會召集人，倡議城市更新及文物保育",
+          "吳美琴博士（1985年地理學學士）——中大城市規劃教授，亞洲可持續運輸及緊湊城市發展領先研究者",
+          "馬紹祥先生（1988年地理學學士）——前發展局局長，領導明日大嶼願景及北部都會區規劃等主要基建項目",
+          "何佩然女士（1992年地理學學士）——思匯政策研究所創辦人，具影響力環境智庫塑造香港氣候政策及空氣質素規例",
+          "鄧智宏先生（2001年地理學學士）——港鐵公司規劃總監，管理香港鐵路網絡TOD（公共交通導向發展）項目"
+        ]
+      },
+      "scholarships": {
+        "bullets": [
+          "港大基金入學獎學金：全額學費 + 每年50,000港元（文憑試3科以上5**）；全面表現強的地理學生符合資格",
+          "社會科學學院獎學金：每年20,000-30,000港元予地理學系前15%學生，按學術及實地考察表現評選",
+          "艾奕康規劃獎學金：每年30,000港元予承諾城市規劃或環境顧問職業者；包括暑期實習保證",
+          "地政總署測量獎學金：全額學費 + 每月8,000港元；畢業後需於地政總署服務3年",
+          "海外實地考察資助：20,000港元供海外地點（東南亞、英國、澳洲）榮譽論文實地考察；涵蓋旅費及住宿"
+        ]
+      },
+      "tips": {
+        "bullets": [
+          "修讀地理文憑試：地理達5級以上是最佳準備並顯著提升入學機會；亦為自然地理學及實地考察概念提供先機",
+          "建立製圖技巧：入學前學習QGIS（免費）或ArcGIS Online基礎；空間數據熟悉度為第一年GIS單元帶來優勢",
+          "投入香港環境：加入遠足群組、海灘清潔或城市探索步行；招生官重視積極投入地理議題的候選人",
+          "了解規劃與GIS途徑：城市規劃需碩士方可專業註冊；GIS直接通往分析員職位；自第二年相應選擇選修",
+          "善用實地考察機會：港大地理學有廣泛考察營計劃——利用這些建立教授人脈及及早發展論文構思"
+        ]
+      }
+    }
+  }
+}

@@ -12,7 +12,7 @@ import FingerprintJS from '@fingerprintjs/fingerprintjs';
 import LaunchCard from './LaunchCard';
 import AuthForm from './AuthForm';
 // Mastery modals removed - now dedicated pages
-import DreamProgramsModal from './dashboard/DreamProgramsModal'; // Ace Sir - Dream University List
+// Dream Programs now uses dedicated page at /dream-subjects
 import { Compass } from 'lucide-react';
 import { MathsLab, MathsDiagnostic } from './maths';
 import { SafeInlineMath, SafeBlockMath } from './maths/SafeMath';
@@ -72,7 +72,7 @@ const normalizeChips = (chips) => {
 
 const looksLikeSeparatorRow = (line) => {
     const normalized = line.replace(/\s/g, '');
-    return /^[:|\-]+$/.test(normalized) && normalized.includes('-');
+    return /^[-:|]+$/.test(normalized) && normalized.includes('-');
 };
 
 const parseMarkdownTableRows = (lines) => {
@@ -89,13 +89,135 @@ const parseMarkdownTableRows = (lines) => {
     }
 
     const headers = parseRow(lines[0]);
-    const rows = lines.slice(2)
+    const rawRows = lines.slice(2)
         .map(parseRow)
         .filter((row) => row.some(Boolean));
 
-    if (!headers.length || !rows.length) return null;
-    return { headers, rows };
+    if (!headers.length || !rawRows.length) return null;
+
+    const colCount = headers.length;
+    const merged = [];
+    for (let r = 0; r < rawRows.length; r += 1) {
+        const row = rawRows[r];
+        const onlyRank = row.length === 1 && /^\d+$/.test(row[0]);
+        if (onlyRank && r + 1 < rawRows.length) {
+            const next = rawRows[r + 1];
+            merged.push([row[0], ...next]);
+            r += 1;
+            continue;
+        }
+        merged.push(row);
+    }
+
+    const padded = merged.map((row) => {
+        if (row.length >= colCount) return row.slice(0, colCount);
+        return [...row, ...Array(colCount - row.length).fill('')];
+    });
+
+    return { headers, rows: padded };
 };
+
+/** Pull contiguous GFM-style pipe tables out of the raw string before ** / $ splitting (bold in cells was breaking tables). */
+const extractTableSegments = (text) => {
+    if (!text || !text.includes('\n')) return [{ type: 'text', content: text }];
+    const lines = text.split('\n');
+    const segments = [];
+    let buf = [];
+
+    const flushBuf = () => {
+        if (!buf.length) return;
+        segments.push({ type: 'text', content: buf.join('\n') });
+        buf = [];
+    };
+
+    let i = 0;
+    while (i < lines.length) {
+        const line = lines[i];
+        const next = lines[i + 1];
+        const isTableStart = line?.includes('|') && typeof next === 'string' && looksLikeSeparatorRow(next);
+
+        if (!isTableStart) {
+            buf.push(line);
+            i += 1;
+            continue;
+        }
+
+        flushBuf();
+
+        const tableLines = [line, next];
+        i += 2;
+        while (i < lines.length) {
+            const L = lines[i];
+            if (L.includes('|')) {
+                tableLines.push(L);
+                i += 1;
+                continue;
+            }
+            if (/^\s*\d+\s*$/.test(L) && i + 1 < lines.length && lines[i + 1]?.includes('|')) {
+                tableLines.push(L);
+                i += 1;
+                continue;
+            }
+            break;
+        }
+
+        segments.push({ type: 'table', lines: tableLines });
+    }
+
+    flushBuf();
+    return segments.length ? segments : [{ type: 'text', content: text }];
+};
+
+const TABLE_CELL_SPLIT_REGEX = /(\$\$[\s\S]*?\$\$|(?<!\$)\$(?!\$)(?:[^$\\]|\\.)*?\$(?!\$)|\*\*(?:.*?)\*\*)/g;
+
+const formatTableCellFragment = (part, key) => {
+    if (!part && part !== '') return null;
+    if (part.startsWith('$$') && part.endsWith('$$') && part.length > 4) {
+        const mathStr = part.slice(2, -2).trim();
+        return <SafeBlockMath key={key} math={mathStr} />;
+    }
+    if (part.startsWith('$') && part.endsWith('$') && !part.startsWith('$$') && part.length > 2) {
+        const mathStr = part.slice(1, -1).trim();
+        if (mathStr.length > 0) return <SafeInlineMath key={key} math={mathStr} />;
+    }
+    if (part.startsWith('**') && part.endsWith('**')) {
+        return <strong key={key} className="font-bold">{part.slice(2, -2)}</strong>;
+    }
+    return <span key={key}>{part}</span>;
+};
+
+const formatTableCellContent = (cell, keyPrefix) => {
+    if (cell == null || cell === '') return '\u00a0';
+    const bits = String(cell).split(TABLE_CELL_SPLIT_REGEX);
+    return bits.map((bit, j) => formatTableCellFragment(bit, `${keyPrefix}-c${j}`)).filter(Boolean);
+};
+
+const renderParsedMarkdownTable = (parsedTable, tableKey) => (
+    <div key={tableKey} className="my-3 overflow-x-auto rounded-xl border border-black/10 dark:border-white/10">
+        <table className="min-w-full text-sm">
+            <thead className="bg-black/5 dark:bg-white/10">
+                <tr>
+                    {parsedTable.headers.map((header, index) => (
+                        <th key={`${tableKey}-th-${index}`} className="px-3 py-2 text-left font-semibold">
+                            {formatTableCellContent(header, `${tableKey}-h${index}`)}
+                        </th>
+                    ))}
+                </tr>
+            </thead>
+            <tbody>
+                {parsedTable.rows.map((row, rowIndex) => (
+                    <tr key={`${tableKey}-row-${rowIndex}`} className="border-t border-black/10 dark:border-white/10">
+                        {row.map((cell, cellIndex) => (
+                            <td key={`${tableKey}-cell-${rowIndex}-${cellIndex}`} className="px-3 py-2 align-top">
+                                {formatTableCellContent(cell, `${tableKey}-d${rowIndex}-${cellIndex}`)}
+                            </td>
+                        ))}
+                    </tr>
+                ))}
+            </tbody>
+        </table>
+    </div>
+);
 
 const renderTextWithTables = (part, keyPrefix) => {
     if (!part || !part.includes('|') || !part.includes('\n')) {
@@ -130,9 +252,19 @@ const renderTextWithTables = (part, keyPrefix) => {
 
         const tableLines = [line, next];
         let cursor = i + 2;
-        while (cursor < lines.length && lines[cursor].includes('|')) {
-            tableLines.push(lines[cursor]);
-            cursor += 1;
+        while (cursor < lines.length) {
+            const L = lines[cursor];
+            if (L.includes('|')) {
+                tableLines.push(L);
+                cursor += 1;
+                continue;
+            }
+            if (/^\s*\d+\s*$/.test(L) && cursor + 1 < lines.length && lines[cursor + 1]?.includes('|')) {
+                tableLines.push(L);
+                cursor += 1;
+                continue;
+            }
+            break;
         }
 
         const parsedTable = parseMarkdownTableRows(tableLines);
@@ -142,32 +274,7 @@ const renderTextWithTables = (part, keyPrefix) => {
             continue;
         }
 
-        nodes.push(
-            <div key={`${keyPrefix}-table-${i}`} className="my-3 overflow-x-auto rounded-xl border border-black/10 dark:border-white/10">
-                <table className="min-w-full text-sm">
-                    <thead className="bg-black/5 dark:bg-white/10">
-                        <tr>
-                            {parsedTable.headers.map((header, index) => (
-                                <th key={`${keyPrefix}-th-${i}-${index}`} className="px-3 py-2 text-left font-semibold">
-                                    {header}
-                                </th>
-                            ))}
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {parsedTable.rows.map((row, rowIndex) => (
-                            <tr key={`${keyPrefix}-row-${i}-${rowIndex}`} className="border-t border-black/10 dark:border-white/10">
-                                {row.map((cell, cellIndex) => (
-                                    <td key={`${keyPrefix}-cell-${i}-${rowIndex}-${cellIndex}`} className="px-3 py-2 align-top">
-                                        {cell}
-                                    </td>
-                                ))}
-                            </tr>
-                        ))}
-                    </tbody>
-                </table>
-            </div>
-        );
+        nodes.push(renderParsedMarkdownTable(parsedTable, `${keyPrefix}-table-${i}`));
 
         i = cursor - 1;
     }
@@ -176,41 +283,31 @@ const renderTextWithTables = (part, keyPrefix) => {
     return nodes.length > 0 ? <>{nodes}</> : <span key={keyPrefix}>{part}</span>;
 };
 
-const formatMessageContent = (content, handleTutorAction, activeAgentId = 'english') => {
-    if (typeof content !== 'string') return content;
+const UNIFIED_MESSAGE_REGEX = /(\$\$[\s\S]*?\$\$|\\?\\\[[\s\S]*?\\?\\\]|\\?\\\([\s\S]*?\\?\\\)|(?<!\$)\$(?!\$)(?:[^$\\]|\\.)*?\$(?!\$)|\*\*(?:.*?)\*\*|^###\s+(?:.+)$|\[SYSTEM:[^\]]+\]|\[CTA:[^\]]+\])/gm;
 
-    // Auto-strip suggestions if present (for history/legacy support)
-    const { text: cleanForDisplay } = parseSuggestions(content);
-    const cleanContent = cleanForDisplay.replace(/\n{3,}/g, '\n\n');
-
-    // Unified regex to split by ALL math delimiter types + bold + headers + system tags + CTA tags
-    const UNIFIED_REGEX = /(\$\$[\s\S]*?\$\$|\\?\\\[[\s\S]*?\\?\\\]|\\?\\\([\s\S]*?\\?\\\)|(?<!\$)\$(?!\$)(?:[^$\\]|\\.)*?\$(?!\$)|\*\*(?:.*?)\*\*|^###\s+(?:.+)$|\[SYSTEM:[^\]]+\]|\[CTA:[^\]]+\])/gm;
-
-    const parts = cleanContent.split(UNIFIED_REGEX);
-
+const formatRichTextSegment = (cleanSegment, handleTutorAction, activeAgentId, keyBase) => {
+    if (typeof cleanSegment !== 'string' || !cleanSegment) return [];
+    const parts = cleanSegment.split(UNIFIED_MESSAGE_REGEX);
     return parts.map((part, idx) => {
         if (!part && part !== '') return null;
         if (part === undefined) return null;
-        const key = `fmt-${idx}`;
+        const key = `${keyBase}-${idx}`;
 
-        // System Tags: [SYSTEM: ...] - Hide from display
         if (part.startsWith('[SYSTEM:') && part.endsWith(']')) {
             return null;
         }
 
-        // CTA Tags: [CTA: Label | Value]
         if (part.startsWith('[CTA:') && part.endsWith(']')) {
             const ctaContent = part.slice(5, -1).split('|');
             const label = ctaContent[0]?.trim() || "Start Now";
             const value = ctaContent[1]?.trim() || label;
             const legacyIntent = `${label} ${value}`.toLowerCase();
-            let actionType, actionPayload;
+            let actionType; let actionPayload;
             if (value.toLowerCase().startsWith('open_lab:')) {
                 actionType = 'open_lab';
                 const paramsStr = value.slice('open_lab:'.length);
                 const params = new URLSearchParams(paramsStr);
                 let level = params.get('level') || '3';
-                // Clamp invalid levels to the valid set: 3, 4, 5, 7
                 const validLevels = ['3', '4', '5', '7'];
                 if (!validLevels.includes(level)) {
                     const num = parseInt(level, 10);
@@ -231,10 +328,11 @@ const formatMessageContent = (content, handleTutorAction, activeAgentId = 'engli
                 actionType = 'send_text';
                 actionPayload = { value };
             }
-            
+
             return (
                 <div key={key} className="my-4">
                     <button
+                        type="button"
                         onClick={() => handleTutorAction({ type: actionType, label, payload: actionPayload })}
                         className="group flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-orange-500 to-amber-600 hover:from-orange-600 hover:to-amber-700 text-white rounded-2xl font-bold text-sm shadow-lg shadow-orange-500/20 transition-all hover:scale-[1.02] active:scale-[0.98]"
                     >
@@ -246,27 +344,22 @@ const formatMessageContent = (content, handleTutorAction, activeAgentId = 'engli
             );
         }
 
-        // Block Math: $$...$$
         if (part.startsWith('$$') && part.endsWith('$$') && part.length > 4) {
             const mathStr = part.slice(2, -2).trim();
             return <SafeBlockMath key={key} math={mathStr} />;
         }
 
-        // Block Math: \[...\] (may have optional leading \)
         if (/^\\?\\\[/.test(part) && /\\?\\\]$/.test(part)) {
             const mathStr = part.replace(/^\\?\\\[/, '').replace(/\\?\\\]$/, '').trim();
             return <SafeBlockMath key={key} math={mathStr} />;
         }
 
-        // Inline Math: \(...\) (may have optional leading \)
         if (/^\\?\\\(/.test(part) && /\\?\\\)$/.test(part)) {
             let mathStr = part.replace(/^\\?\\\(/, '').replace(/\\?\\\)$/, '').trim();
-            // Clean trailing stray backslashes from legacy AI output
             mathStr = mathStr.replace(/\\+$/, '').trim();
             return <SafeInlineMath key={key} math={mathStr} />;
         }
 
-        // Inline Math: $...$
         if (part.startsWith('$') && part.endsWith('$') && !part.startsWith('$$') && part.length > 2) {
             const mathStr = part.slice(1, -1).trim();
             if (mathStr.length > 0) {
@@ -274,19 +367,37 @@ const formatMessageContent = (content, handleTutorAction, activeAgentId = 'engli
             }
         }
 
-        // Bold: **text** (captured group from regex)
         if (part.startsWith('**') && part.endsWith('**')) {
             return <strong key={key} className="font-bold">{part.slice(2, -2)}</strong>;
         }
 
-        // Header: ### heading
         if (part.startsWith('### ')) {
             return <div key={key} className="font-bold text-base mt-3 mb-1">{part.slice(4)}</div>;
         }
 
-        // Regular Text (includes markdown pipe-table rendering)
         return <React.Fragment key={key}>{renderTextWithTables(part, key)}</React.Fragment>;
     }).filter(Boolean);
+};
+
+const formatMessageContent = (content, handleTutorAction, activeAgentId = 'english') => {
+    if (typeof content !== 'string') return content;
+
+    const { text: cleanForDisplay } = parseSuggestions(content);
+    const cleanContent = cleanForDisplay.replace(/\n{3,}/g, '\n\n');
+
+    const segments = extractTableSegments(cleanContent);
+    const nodes = segments.flatMap((seg, sIdx) => {
+        if (seg.type === 'table') {
+            const parsed = parseMarkdownTableRows(seg.lines);
+            if (!parsed) {
+                return formatRichTextSegment(seg.lines.join('\n'), handleTutorAction, activeAgentId, `fmt-fallback-${sIdx}`);
+            }
+            return [renderParsedMarkdownTable(parsed, `fmt-table-${sIdx}`)];
+        }
+        if (!seg.content) return [];
+        return formatRichTextSegment(seg.content, handleTutorAction, activeAgentId, `fmt-${sIdx}`);
+    });
+    return nodes.length ? nodes : null;
 };
 
 const ChatInterface = ({ onOpenQuest }) => {
@@ -497,7 +608,7 @@ const ChatInterface = ({ onOpenQuest }) => {
     const idleTimerRef = useRef(null);
 
     // Mastery Compass State - Redirects to dedicated pages
-    const [isDreamProgramsOpen, setIsDreamProgramsOpen] = useState(false); // Ace Sir - Dream University List
+    // Dream Programs page navigation
 
     // Auto-expand textarea
     useEffect(() => {
@@ -563,7 +674,11 @@ const ChatInterface = ({ onOpenQuest }) => {
 
 
     const getStudentAvatar = () => {
-        return equipment.student?.image || '/avatars/student_male_1.jpg';
+        const img = equipment.student?.image;
+        if (!img) return '/avatars/Student/Marcus.jpeg';
+        if (img.startsWith('/') || img.startsWith('http')) return img;
+        if (img.startsWith('s_') && !img.includes('/')) return `/avatars/${img}`;
+        return img;
     };
 
     const isProcessedRef = useRef(false);
@@ -1442,9 +1557,10 @@ const ChatInterface = ({ onOpenQuest }) => {
         <section
             ref={sectionRef}
             className={cn(
-                "flex flex-col rounded-3xl glass-container shadow-2xl relative overflow-hidden transition-all duration-500",
+                "flex flex-col rounded-3xl shadow-2xl relative overflow-hidden transition-all duration-500",
+                !isFocusMode && "glass-container",
                 isFocusMode
-                    ? "!fixed !top-0 !left-0 !m-0 inset-0 z-[999] rounded-none shadow-none h-screen w-screen flex flex-col overflow-hidden"
+                    ? "!fixed !top-0 !left-0 !m-0 inset-0 z-[999] rounded-none shadow-none h-screen w-screen flex flex-col overflow-hidden bg-white dark:bg-background-dark border-0"
                     : "lg:col-span-9 h-[80vh] min-h-[600px] w-full"
             )}>
             {/* Verification Overlay Removed */}
@@ -1457,7 +1573,14 @@ const ChatInterface = ({ onOpenQuest }) => {
             )}
 
             {/* Header */}
-            <div className="px-8 py-4 border-b border-black/5 dark:border-white/10 flex items-center justify-between bg-white/30 dark:bg-white/5 backdrop-blur-sm">
+            <div
+                className={cn(
+                    "relative shrink-0 px-8 py-4 border-b border-black/5 dark:border-white/10 flex items-center justify-between",
+                    isFocusMode
+                        ? "bg-white dark:bg-background-dark"
+                        : "bg-white/30 dark:bg-white/5 backdrop-blur-sm"
+                )}
+            >
                 <div className="flex items-center gap-4">
                     <div className="flex -space-x-2">
                         <div className="relative">
@@ -1465,7 +1588,7 @@ const ChatInterface = ({ onOpenQuest }) => {
                                 "w-[36px] h-[36px] rounded-full border-2 border-white overflow-hidden shadow-sm transition-all",
                                 (avatarState === 'TALKING' || avatarState === 'THINKING') && "animate-talking-glow ring-2 ring-green-400"
                             )}>
-                                <img src={activeAgent.avatar} alt="AI" className="w-full h-full object-cover" />
+                                <img src={activeAgent.avatar} alt="AI" className="avatar-portrait-chat" />
                             </div>
                             {/* Status Dot */}
                             <div className={cn(
@@ -1480,7 +1603,7 @@ const ChatInterface = ({ onOpenQuest }) => {
                             studentState === 'LISTENING' && "animate-pulse",
                             studentState === 'STUDYING' && "ring-2 ring-indigo-400 opacity-80"
                         )}>
-                            <img src={getStudentAvatar()} alt="Student" className="w-full h-full object-cover" />
+                            <img src={getStudentAvatar()} alt="Student" className="avatar-portrait-chat" />
                             {equipment.frame && (
                                 <img src={equipment.frame.image} alt="Frame" className="absolute inset-0 w-full h-full object-contain pointer-events-none scale-110 avatar-frame-mask" />
                             )}
@@ -1532,14 +1655,14 @@ const ChatInterface = ({ onOpenQuest }) => {
                     {/* Dream Programs Button - Ace Sir Only */}
                     {user && activeAgentId === 'ace' && (
                         <button
-                            onClick={() => setIsDreamProgramsOpen(true)}
+                            onClick={() => navigate('/dream-subjects')}
                             className={cn(
                                 "px-6 py-2.5 rounded-full transition-all flex items-center gap-2 shadow-sm border hover:shadow-md active:scale-95 bg-orange-50 text-orange-700 border-orange-200/50 min-w-[120px] justify-center"
                             )}
-                            title="夢想學科清單"
+                            title={t('nav.dream_subjects_title')}
                         >
                             <Target className="w-5 h-5 stroke-[2.5]" />
-                            <span className="text-sm font-black tracking-wide uppercase">夢想學科</span>
+                            <span className="text-sm font-black tracking-wide uppercase">{t('nav.dream_subjects')}</span>
                         </button>
                     )}
                 </div>
@@ -1775,7 +1898,7 @@ const ChatInterface = ({ onOpenQuest }) => {
                                         <img
                                             src={getStudentAvatar()}
                                             alt="User"
-                                            className="w-full h-full object-cover"
+                                            className="avatar-portrait-chat"
                                         />
                                         {equipment.frame && (
                                             <img src={equipment.frame.image} alt="Frame" className="absolute inset-0 w-full h-full object-contain pointer-events-none scale-110 avatar-frame-mask" />
@@ -1869,8 +1992,18 @@ const ChatInterface = ({ onOpenQuest }) => {
 
 
             {/* Input Area - Gemini Redesign */}
-            <div className="p-4 bg-white/60 dark:bg-white/5 transition-all duration-300">
-                <div className="max-w-4xl mx-auto bg-white/80 dark:bg-white/10 rounded-[2rem] p-3 shadow-xl border border-black/5 dark:border-white/10 relative">
+            <div
+                className={cn(
+                    "p-4 transition-all duration-300",
+                    isFocusMode ? "bg-white dark:bg-background-dark" : "bg-white/60 dark:bg-white/5"
+                )}
+            >
+                <div
+                    className={cn(
+                        "max-w-4xl mx-auto rounded-[2rem] p-3 shadow-xl border border-black/5 dark:border-white/10 relative",
+                        isFocusMode ? "bg-white dark:bg-[#1a110a]" : "bg-white/80 dark:bg-white/10"
+                    )}
+                >
 
                     {/* Top Layer: Message Input */}
                     <div className="flex-1 flex flex-col relative px-2">
@@ -2008,11 +2141,7 @@ const ChatInterface = ({ onOpenQuest }) => {
 
             {/* Math Ability Modal - REMOVED, now dedicated page */}
 
-            {/* Dream University List Modal (Ace Sir) */}
-            <DreamProgramsModal
-                isOpen={isDreamProgramsOpen}
-                onClose={() => setIsDreamProgramsOpen(false)}
-            />
+            {/* Dream Programs now uses dedicated page at /dream-subjects */}
 
             {/* Image Analysis Confirmation Popup */}
             {isImageConfirmOpen && selectedImage && (

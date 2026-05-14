@@ -577,7 +577,7 @@ class MockAssessmentService {
     /**
      * Evaluate a Paper 2 (Writing) submission
      */
-    async evaluateWritingPaper(mockData, userAnswers, analytics = {}) {
+    async evaluateWritingPaper(mockData, userAnswers, analytics = {}, tier = 'free') {
         const results = {};
         const sectionalScores = { 
             A: { score: 0, possible: 21, domains: {} }, 

@@ -1,0 +1,1853 @@
+{
+  "_meta": {
+    "batch": 1,
+    "version": "premium",
+    "university": "HKU",
+    "programmes": "1-10",
+    "sections": 8,
+    "generated_by": "AI",
+    "date": "2026-05-13"
+  },
+  "programmes": {
+    "JS6107": {
+      "id": "hku-med",
+      "code": "JS6107",
+      "name": "內外全科醫學士 (MBBS)",
+      "university": "HKU",
+      "content": {
+        "en": {
+          "sections": {
+            "admission": {
+              "title": "Eligibility & Admission Criteria (DSE)",
+              "content": [
+                "**Academic Threshold**: HKU Medicine is the most competitive programme in Hong Kong. The median admission score is typically Best 6 = 42-44 (standard scale, 5** = 7 pts).",
+                "**Core Subjects**: English (Level 5+ mandatory), Mathematics (Compulsory Part, Level 4+), and a strong performance in Liberal Studies / Citizenship and Social Development.",
+                "**Science Subjects - Critical**: Biology and Chemistry are not strictly mandatory but carry heavy weighting (x1.3 to x1.5). Candidates with both subjects have a dramatically higher admission probability.",
+                "**Interview - MMI Format**: 6-8 stations (8-10 min each) assessing ethical reasoning, communication, critical thinking, teamwork, motivation for medicine, and problem-solving under pressure.",
+                "**Non-Academic Factors**: HKU values sustained volunteering (especially healthcare-related), leadership roles, and evidence of genuine compassion."
+              ]
+            },
+            "curriculum": {
+              "title": "Programme Structure & Curriculum",
+              "content": [
+                "**Year 1 - Foundations of Medicine**: Human anatomy, physiology, biochemistry, and basic clinical skills. Early hospital exposure begins in Semester 2.",
+                "**Year 2 - Systems-Based Learning**: Cardiovascular, respiratory, gastrointestinal, renal, and endocrine systems taught in integrated blocks.",
+                "**Year 3 - Clinical Transition**: Transition from classroom to ward. Rotations in medicine, surgery, and community health.",
+                "**Year 4 - Core Clinical Rotations**: 12-week blocks in internal medicine, general surgery, paediatrics, and obstetrics & gynaecology at Queen Mary Hospital.",
+                "**Year 5 - Specialised Rotations**: Orthopaedics, ENT, ophthalmology, psychiatry, emergency medicine, and anaesthesiology.",
+                "**Year 6 - Internship Preparation & Electives**: Final MBBS examinations, elective placements (often overseas at Oxford, Cambridge, or Melbourne), and pre-internship shadowing.",
+                "**Enrichment Programmes**: Medical Humanities Programme, Global Health Electives (4-8 week placements in developing countries), and Research Electives with world-class teams."
+              ]
+            },
+            "career": {
+              "title": "Career Pathways & Prospects",
+              "content": [
+                "**Year 1 Internship (Housemanship)**: All graduates complete a 12-month internship at a Hospital Authority hospital.",
+                "**Residency Training**: After internship, doctors enter residency (typically 6 years). HKU graduates are highly sought after at Queen Mary Hospital, Prince of Wales Hospital, and Pamela Youde Nethersole Eastern Hospital.",
+                "**Specialisation Pathways**: Medicine (Cardiology, Gastroenterology, Nephrology), Surgery (General Surgery, Orthopaedics, Neurosurgery), Paediatrics, O&G, Psychiatry, Radiology, Anaesthesiology, Emergency Medicine, Family Medicine, Pathology.",
+                "**Private Practice**: After completing specialist training and obtaining Fellowship (FHKAM), many doctors establish private clinics.",
+                "**Academic Medicine**: HKU's Li Ka Shing Faculty of Medicine is ranked among Asia's top 3. Strong funding in emerging infectious diseases, cancer immunotherapy, and regenerative medicine.",
+                "**Global Opportunities**: HK medical degrees are recognised by the GMC (UK), AMC (Australia), and ECFMG (USA). Exchange partnerships with Oxford, Cambridge, Imperial, Melbourne, Toronto, and Johns Hopkins."
+              ]
+            },
+            "campus": {
+              "title": "Campus Life & Student Experience",
+              "content": [
+                "**Main Campus (Pok Fu Lam)**: Years 1-2 at the main HKU campus with historic Main Building, modern Centennial Campus, and 7 on-campus halls.",
+                "**Medical Campus (Sassoon Road)**: Years 3-6 at the Medical Faculty complex adjacent to Queen Mary Hospital. State-of-the-art simulation centre with high-fidelity manikins and VR surgical trainers.",
+                "**Hall Life**: 17 halls of residence. Medical students often choose St. John's College, Lady Ho Tung Hall, or Lee Hysan Hall.",
+                "**Student Societies**: HKU Medical Society (MedSoc) - one of the oldest student societies, organising Medic Night, charity fundraisers, and mentorship programmes.",
+                "**Mentorship**: Clinical mentor from Year 3 and academic advisor from Year 1. Alumni network includes many of Hong Kong's leading physicians and surgeons."
+              ]
+            },
+            "competitiveness": {
+              "title": "Admission Competitiveness Analysis",
+              "content": [
+                "**Overall Difficulty**: Extreme (5/5 stars). Approximately 2,500-3,000 applicants compete for ~260 places annually (~10% admission rate).",
+                "**Score Distribution**: Top quartile: Best 6 = 45-47; Median: Best 6 = 42-44; Bottom quartile: Best 6 = 39-41.",
+                "**Subject Weighting Strategy**: Biology (x1.5) + Chemistry (x1.5) + English (x1.0) + Maths (x1.0) + LS/CSD (x1.0) + Best Elective (x1.0). A student with 5** in Bio/Chem/English and 5* in others achieves ~44 points.",
+                "**Interview Weighting**: The MMI carries approximately 30-40% of the final admission decision. Exceptional interview performance can compensate for borderline scores.",
+                "**Band A Advantage**: Band A Choice 1 receives priority consideration. Choice 2 or lower bands have significantly reduced chances.",
+                "**Non-JUPAS Pathway**: IB (42+/45), GCE A-Levels (AAA* including Chemistry/Biology). Approximately 20-30 places reserved for non-JUPAS entrants."
+              ]
+            },
+            "alumni": {
+              "title": "Notable Alumni & Faculty",
+              "content": [
+                "**Professor Gabriel Leung**: Former Dean of Medicine, renowned epidemiologist who led Hong Kong's COVID-19 response. Now HKU Vice-President.",
+                "**Professor Yuen Kwok-yung**: World-famous microbiologist, discoverer of SARS coronavirus. Recipient of the Lasker Award.",
+                "**Dr. Margaret Chan**: Former Director-General of the World Health Organization (WHO). Led global health policy for a decade.",
+                "**Professor Joseph Sung**: Former Vice-Chancellor of CUHK and gastroenterologist. Pioneer in endoscopic research.",
+                "**Professor Nancy Ip**: President of HKUST, neuroscientist specialising in Alzheimer's disease research."
+              ]
+            },
+            "scholarships": {
+              "title": "Scholarships & Financial Aid",
+              "content": [
+                "**Li Ka Shing Faculty of Medicine Scholarships**: Merit-based scholarships for top-performing students, covering full tuition plus living allowance (HKD 50,000-100,000/year).",
+                "**HKU Foundation Entrance Scholarships**: Awarded to students with exceptional DSE results (typically 5** in 4+ subjects). Full or half tuition coverage.",
+                "**Medical Society Bursaries**: Need-based financial support for students from disadvantaged backgrounds. Applications assessed annually.",
+                "**Overseas Elective Funding**: Special grants for students undertaking electives at partner institutions abroad (up to HKD 30,000 per elective).",
+                "**Government Grants & Loans**: Non-means-tested subsidy scheme (NMTSS) provides up to HKD 33,200/year. Tertiary Student Finance Scheme offers low-interest loans."
+              ]
+            },
+            "tips": {
+              "title": "Ace Sir's HKU Medicine Strategy",
+              "content": [
+                "**Score Targeting**: Aim for Best 6 of 42+ with strong Biology and Chemistry. HKU Medicine is unapologetically meritocratic.",
+                "**MMI Preparation**: Practice ethical scenarios (resource allocation, patient autonomy, end-of-life decisions). Show compassion alongside clinical reasoning.",
+                "**Shadowing Experience**: Spend time in hospitals or clinics. Genuine exposure demonstrates commitment beyond academic interest.",
+                "**Build a Narrative**: Your personal statement and interview should tell a coherent story - why medicine, why HKU, and what you have done to prepare.",
+                "**Start Early**: Begin volunteering in Year 10-11. One-off experiences are less valuable than sustained, long-term commitment to a cause."
+              ]
+            }
+          }
+        },
+        "zh": {
+          "sections": {
+            "admission": {
+              "title": "入學要求與計分詳情 (DSE)",
+              "content": [
+                "**學術門檻**：港大醫學院是香港競爭最激烈的課程。中位數收生分數通常為 Best 6 = 42-44 分 (標準計分，5** = 7分)。",
+                "**核心科目**：英文 (必須達 Level 5 或以上)、數學 (必修部分，Level 4 或以上)，以及通識教育/公民與社會發展科的優異表現。",
+                "**理科科目 - 關鍵**：生物和化學雖非嚴格必修，但有較高加權 (x1.3 至 x1.5)。同時修讀兩科的申請者入學機會大幅提升。",
+                "**面試 - MMI 形式**：6-8個站 (每站8-10分鐘)，考核倫理推理、溝通技巧、批判思維、團隊合作、從醫動機及壓力下的解難能力。",
+                "**非學術因素**：港大重視持續的義工服務 (尤其醫療相關)、領導角色及真誠的同理心證明。"
+              ]
+            },
+            "curriculum": {
+              "title": "課程結構與內容",
+              "content": [
+                "**第一年 - 醫學基礎**：人體解剖學、生理學、生物化學及基本臨床技能。第二學期開始早期醫院接觸。",
+                "**第二年 - 系統導向學習**：心血管、呼吸、腸胃、腎臟及內分泌系統，以整合式單元教授。",
+                "**第三年 - 臨床過渡**：從課室過渡到病房。內科、外科及社區健康輪轉。",
+                "**第四年 - 核心臨床輪轉**：於瑪麗醫院進行內科、外科、兒科及婦產科的12週輪轉。",
+                "**第五年 - 專科輪轉**：骨科、耳鼻喉、眼科、精神科、急症醫學及麻醉科。",
+                "**第六年 - 實習準備及選修**：終期 MBBS 考試、海外選修實習 (常於牛津、劍橋或墨爾本)，及實習前跟班。",
+                "**專修計劃**：醫學人文計劃、環球健康選修 (發展中國家4-8週實習)，以及與世界級研究團隊的研究選修。"
+              ]
+            },
+            "career": {
+              "title": "職業前景與出路",
+              "content": [
+                "**第一年實習 (Housemanship)**：所有畢業生須於醫管局醫院完成12個月實習。",
+                "**專科培訓**：實習後進入專科培訓 (通常6年)。港大畢業生於瑪麗醫院、威爾斯親王醫院及東區尤德夫人那打素醫院極受歡迎。",
+                "**專科發展路徑**：內科 (心臟科、腸胃科、腎科)、外科 (普通外科、骨科、腦外科)、兒科、婦產科、精神科、放射科、麻醉科、急症科、家庭醫學、病理科。",
+                "**私人執業**：完成專科培訓並取得院士資格 (FHKAM) 後，不少醫生開設私人診所。",
+                "**學術醫學**：港大李嘉誠醫學院位列亞洲三甲。新發傳染病、癌症免疫治療及再生醫學研究資金充裕。",
+                "**環球機會**：香港醫學學位獲英國 GMC、澳洲 AMC 及美國 ECFMG 認可。與牛津、劍橋、帝國理工、墨爾本、多倫多及約翰霍普金斯設有交流計劃。"
+              ]
+            },
+            "campus": {
+              "title": "校園生活與學生體驗",
+              "content": [
+                "**主校園 (薄扶林)**：第一至二年於港大主校園，擁有歷史悠久的主樓、現代化的百周年校園及7間舍堂。",
+                "**醫學院校園 (沙宣道)**：第三至六年於瑪麗醫院旁的醫學院大樓。設有先進的模擬醫學中心，配備高仿真模擬病人及虛擬實境外科訓練系統。",
+                "**舍堂生活**：港大共有17間舍堂。醫科學生常選擇聖約翰學院、何東夫人紀念堂或利希慎堂。",
+                "**學生組織**：港大醫學會 (MedSoc) 是歷史最悠久的學生組織之一，舉辦年度 Medic Night、慈善籌款及師友計劃。",
+                "**師友指導**：每位學生從第一年獲配學術導師，第三年獲配臨床導師。校友網絡包括香港多位頂尖醫生及外科醫生。"
+              ]
+            },
+            "competitiveness": {
+              "title": "入學競爭力分析",
+              "content": [
+                "**整體難度**：極高 (5/5星)。每年約2,500-3,000人競爭~260個學額 (入學率約10%)。",
+                "**分數分佈**：最高四分位數：Best 6 = 45-47分；中位數：Best 6 = 42-44分；最低四分位數：Best 6 = 39-41分。",
+                "**科目加權策略**：生物 (x1.5) + 化學 (x1.5) + 英文 (x1.0) + 數學 (x1.0) + 通識/公社 (x1.0) + 最佳選修科 (x1.0)。生物化學英文達5**、其他達5*的學生約有44分。",
+                "**面試比重**：MMI 佔最終入學決定約30-40%。面試表現卓越可彌補分數上的不足。",
+                "**Band A 優勢**：Band A 第一志願獲優先考慮。第二志願或較低 band 的機會大幅降低。",
+                "**非聯招途徑**：國際文憑 (IB 42+/45)、GCE A-Level (AAA* 包括化學/生物)。約20-30個學額預留予非聯招申請者。"
+              ]
+            },
+            "alumni": {
+              "title": "知名校友及教職員",
+              "content": [
+                "**梁卓偉教授**：前醫學院院長，著名流行病學家，領導香港 COVID-19 抗疫工作。現任港大副校長。",
+                "**袁國勇教授**：世界知名微生物學家，SARS 冠狀病毒發現者。拉斯克獎得主。",
+                "**陳馮富珍博士**：前世界衛生組織總幹事。領導全球衛生政策長達十年。",
+                "**沈祖堯教授**：前中文大學校長，腸胃科醫生。內窺鏡研究先驅。",
+                "**葉玉如教授**：香港科技大學校長，神經科學家，專注於阿茲海默症研究。"
+              ]
+            },
+            "scholarships": {
+              "title": "獎學金及經濟援助",
+              "content": [
+                "**李嘉誠醫學院獎學金**：頒予成績優異學生的 merit-based 獎學金，涵蓋全額學費及生活津貼 (每年港幣50,000-100,000元)。",
+                "**港大基金入學獎學金**：頒予 DSE 成績卓越者 (通常4科5**或以上)。全額或半額學費資助。",
+                "**醫學會助學金**：為弱勢背景學生提供 need-based 經濟支援。每年接受申請。",
+                "**海外選修資助**：為於伙伴院校進行海外選修的學生提供特別資助 (每次最多港幣30,000元)。",
+                "**政府資助及貸款**：免入息審查資助計劃 (NMTSS) 每年提供最多港幣33,200元。專上學生資助計劃提供低息貸款。"
+              ]
+            },
+            "tips": {
+              "title": "Ace Sir 港大醫科攻略",
+              "content": [
+                "**分數目標**：Best 6 目標42分以上，生物及化學成績要優異。港大醫科毫不妥協地以成績為先。",
+                "**MMI 準備**：練習倫理情境 (資源分配、病人自主權、臨終決定)。展現同情心，同時展示臨床推理能力。",
+                "**影子實習經驗**：到醫院或診所實習。真正的醫學接觸能展示超越學術興趣的承諾。",
+                "**建立故事**：個人陳述及面試應講述一個連貫的故事 - 為何從醫、為何選擇港大、以及你如何準備。",
+                "**及早開始**：中四至中五開始義工服務。一次性經驗不如對某項事業的長期持續投入。"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "JS6113": {
+      "id": "hku-dent",
+      "code": "JS6113",
+      "name": "牙醫學士 (BDS)",
+      "university": "HKU",
+      "content": {
+        "en": {
+          "sections": {
+            "admission": {
+              "title": "Eligibility & Admission Criteria (DSE)",
+              "content": [
+                "**Academic Threshold**: HKU Dentistry is Hong Kong's only dental school and one of the most competitive programmes. The median admission score is typically Best 6 = 40-42 (standard scale).",
+                "**Core Subjects**: English (Level 5+ strongly preferred), Mathematics (Compulsory Part, Level 4+), and strong performance in science subjects.",
+                "**Science Subjects - Critical**: Chemistry is highly preferred and often weighted (x1.3 to x1.5). Biology is also strongly recommended. Candidates with both have significantly higher admission chances.",
+                "**Manual Dexterity Assessment**: Shortlisted candidates may undergo assessment of fine motor skills, essential for dental surgery precision.",
+                "**Interview**: Panel interview assessing motivation for dentistry, understanding of the profession, communication skills, and ethical awareness."
+              ]
+            },
+            "curriculum": {
+              "title": "Programme Structure & Curriculum",
+              "content": [
+                "**Year 1 - Biomedical Foundations**: Anatomy, physiology, biochemistry, and dental materials science. Introduction to oral biology and tooth morphology.",
+                "**Year 2 - Pre-clinical Skills**: Phantom Head Laboratory training in cavity preparation, restoration techniques, and basic extraction skills on simulation models.",
+                "**Year 3 - Clinical Transition**: Students begin treating patients under close supervision at the HKU Dental Hospital. Rotations in periodontology and conservative dentistry.",
+                "**Year 4 - Core Clinical Rotations**: Oral surgery, endodontics, prosthodontics, and paediatric dentistry. Students manage their own patient lists.",
+                "**Year 5 - Advanced Clinical Practice**: Orthodontics, oral medicine, implant dentistry, and complex rehabilitation cases. Emphasis on treatment planning.",
+                "**Year 6 - Final Year & Electives**: Advanced clinical cases, community dentistry outreach, research project completion, and overseas elective opportunities.",
+                "**Research Component**: All students complete a research project, with opportunities to present at international conferences such as IADR."
+              ]
+            },
+            "career": {
+              "title": "Career Pathways & Prospects",
+              "content": [
+                "**Private Dental Practice**: The majority of graduates establish or join private dental clinics. Dental surgeons in Hong Kong enjoy among the highest earning potential in healthcare.",
+                "**Public Dental Service**: The Department of Health and Hospital Authority employ dentists for school dental care, institutional services, and hospital-based oral surgery.",
+                "**Specialist Training**: 3-6 year residency programmes available in orthodontics, oral & maxillofacial surgery, endodontics, periodontics, prosthodontics, and paediatric dentistry.",
+                "**Academic Dentistry**: Teaching and research positions at HKU or overseas institutions. HKU Dental Faculty has strong research in dental materials and oral microbiology.",
+                "**Overseas Registration**: HK BDS is recognised by the GDC (UK), ADC (Australia), and NZDC (New Zealand), allowing graduates to practice abroad after passing local licensing exams.",
+                "**Dental Industry**: Opportunities in dental product development, clinical research for pharmaceutical companies, and dental technology innovation."
+              ]
+            },
+            "campus": {
+              "title": "Campus Life & Student Experience",
+              "content": [
+                "**Main Campus (Pok Fu Lam)**: Years 1-2 at the main HKU campus, sharing facilities with medical students in the biomedical sciences building.",
+                "**Dental Hospital (Prince Philip)**: Years 3-6 primarily based at the Prince Philip Dental Hospital in Sai Ying Pun, a dedicated teaching facility with 150+ dental chairs.",
+                "**Hall Life**: Dental students often choose St. John's College or Morrison Hall for their strong academic communities and proximity to the dental hospital.",
+                "**Dental Society (DentSoc)**: Active student society organising academic seminars, charity dental camps in rural China, sports teams, and the annual DentSoc Ball.",
+                "**Clinical Mentorship**: Each student is assigned a clinical mentor from Year 3, providing guidance on patient management, clinical skills, and career planning."
+              ]
+            },
+            "competitiveness": {
+              "title": "Admission Competitiveness Analysis",
+              "content": [
+                "**Overall Difficulty**: Extreme (5/5 stars). Approximately 1,500-2,000 applicants compete for ~70 places annually (~5% admission rate).",
+                "**Score Distribution**: Top quartile: Best 6 = 43-45; Median: Best 6 = 40-42; Bottom quartile: Best 6 = 37-39.",
+                "**Subject Weighting Strategy**: Chemistry (x1.5) + Biology (x1.3) + English (x1.0) + Maths (x1.0) + LS/CSD (x1.0) + Best Elective (x1.0). Chemistry is the most heavily weighted subject.",
+                "**Interview Weighting**: The panel interview carries approximately 25-35% of the final admission decision. Manual dexterity assessment may also factor in.",
+                "**Band A Advantage**: Band A Choice 1 is essential. The programme rarely considers Choice 2 or lower bands.",
+                "**Non-JUPAS Pathway**: IB (40+/45), GCE A-Levels (AAA including Chemistry). Approximately 5-10 places reserved for non-JUPAS entrants."
+              ]
+            },
+            "alumni": {
+              "title": "Notable Alumni & Faculty",
+              "content": [
+                "**Professor Edward Lo**: Former Dean of Dentistry, pioneer in dental implantology in Asia. Established the first implant training programme in Hong Kong.",
+                "**Dr. Lai Chun-hung**: Renowned orthodontist, former President of the Hong Kong Dental Association. Advocate for public dental health policy.",
+                "**Professor Lakshman Samaranayake**: World authority on oral microbiology and fungal infections. Former Dean and prolific researcher with 400+ publications.",
+                "**Dr. Gloria Choi**: Leading paediatric dentist, founder of charity dental programmes serving underprivileged children across Asia.",
+                "**Professor Nikos Mattheos**: Expert in implant dentistry and digital dentistry, leading research in CAD/CAM and 3D printing applications in dental surgery."
+              ]
+            },
+            "scholarships": {
+              "title": "Scholarships & Financial Aid",
+              "content": [
+                "**HKU Foundation Entrance Scholarships**: Awarded to students with exceptional DSE results (typically 5** in 3+ subjects). Full or half tuition coverage.",
+                "**Faculty of Dentistry Scholarships**: Merit-based awards for top academic performers in each year of study (HKD 10,000-30,000/year).",
+                "**Dental Society Bursaries**: Need-based support for students from disadvantaged backgrounds, covering equipment and material costs.",
+                "**Overseas Conference Grants**: Funding for students presenting research at international dental conferences (up to HKD 15,000 per trip).",
+                "**Government Grants & Loans**: NMTSS provides up to HKD 33,200/year. Tertiary Student Finance Scheme offers low-interest loans for tuition and living expenses."
+              ]
+            },
+            "tips": {
+              "title": "Ace Sir's HKU Dentistry Strategy",
+              "content": [
+                "**Score Targeting**: Aim for Best 6 of 40+ with strong Chemistry (ideally 5* or 5**) and Biology. Chemistry is the most critical subject for admission.",
+                "**Demonstrate Dexterity**: Develop hobbies that show fine motor skills — musical instruments (piano, violin), art, model-building, or craftwork. Mention these in your personal statement.",
+                "**Shadow a Dentist**: Spend at least 2-3 days observing in a dental clinic. Understand the difference between general practice and specialties. Show genuine interest.",
+                "**Know the Profession**: Research current issues in Hong Kong dentistry — public dental service gaps, ageing population oral health needs, and dental tourism.",
+                "**Prepare for the Interview**: Be ready to discuss why dentistry (not medicine), your understanding of the 6-year commitment, and how you handle precision work under pressure."
+              ]
+            }
+          }
+        },
+        "zh": {
+          "sections": {
+            "admission": {
+              "title": "入學要求與計分詳情 (DSE)",
+              "content": [
+                "**學術門檻**：港大牙醫學院是香港唯一的牙醫學院，競爭極為激烈。中位數收生分數通常為 Best 6 = 40-42 分。",
+                "**核心科目**：英文 (強烈建議 Level 5 或以上)、數學 (必修部分，Level 4 或以上)，以及理科科目的優異表現。",
+                "**理科科目 - 關鍵**：化學高度優先且常有加權 (x1.3 至 x1.5)。生物亦強烈建議修讀。同時修讀兩科的申請者入學機會顯著提升。",
+                "**手巧評估**：入圍考生可能會接受精細動作技能評估，這對牙科手術的精確度至關重要。",
+                "**面試**：小組面試評估修讀牙醫的動機、對行業的了解、溝通技巧及道德意識。"
+              ]
+            },
+            "curriculum": {
+              "title": "課程結構與內容",
+              "content": [
+                "**第一年 - 生物醫學基礎**：解剖學、生理學、生物化學及牙科材料科學。口腔生物學及牙齒形態學入門。",
+                "**第二年 - 臨床前技能**：模擬頭顱實驗室訓練，包括窩洞預備、修復技術及模擬模型上的基本拔牙技能。",
+                "**第三年 - 臨床過渡**：學生在港大牙醫醫院密切監督下開始為病人診治。牙周病學及保守性牙科輪轉。",
+                "**第四年 - 核心臨床輪轉**：口腔外科、牙髓治療、假牙修復及兒童牙科。學生管理自己的病人名單。",
+                "**第五年 - 進階臨床實踐**：矯齒科、口腔內科、植牙及複雜修復病例。重點在治療計劃。",
+                "**第六年 - 畢業年及選修**：進階臨床病例、社區牙科外展、研究項目完成及海外選修機會。",
+                "**研究成分**：所有學生需完成研究項目，有機會在 IADR 等國際會議發表。"
+              ]
+            },
+            "career": {
+              "title": "職業前景與出路",
+              "content": [
+                "**私人牙科診所**：大部分畢業生開設或加入私人牙科診所。香港牙科醫生在醫療專業中享有最高的收入潛力之一。",
+                "**公共牙科服務**：衞生署及醫管局聘請牙醫提供學校牙科護理、院舍服務及醫院口腔外科。",
+                "**專科培訓**：矯齒科、口腔頜面外科、牙髓治療、牙周病學、假牙修復及兒童牙科等為期 3-6 年的專科培訓。",
+                "**學術牙醫學**：在港大或海外院校從事教學及研究。港大牙醫學院在牙科材料及口腔微生物學研究方面實力雄厚。",
+                "**海外註冊**：香港 BDS 獲英國 GDC、澳洲 ADC 及紐西蘭 NZDC 認可，畢業生通過當地執業試後可在海外執業。",
+                "**牙科工業**：牙科產品開發、藥企臨床研究及牙科科技創新的機會。"
+              ]
+            },
+            "campus": {
+              "title": "校園生活與學生體驗",
+              "content": [
+                "**主校園 (薄扶林)**：第一至二年於港大主校園，與醫科學生共用生物醫學科學大樓設施。",
+                "**牙醫醫院 (菲臘牙科)**：第三至六年主要於西營盤的菲臘牙科醫院，這是專用的教學設施，設有150多張牙科治療椅。",
+                "**舍堂生活**：牙醫學生常選擇聖約翰學院或 Morrison Hall，因其學術氛圍濃厚且鄰近牙醫醫院。",
+                "**牙醫學會 (DentSoc)**：活躍的學生學會，舉辦學術研討會、中國農村慈善牙科營、運動隊及年度 DentSoc 舞會。",
+                "**臨床導師**：每位學生從第三年獲配臨床導師，指導病人管理、臨床技能及職業規劃。"
+              ]
+            },
+            "competitiveness": {
+              "title": "入學競爭力分析",
+              "content": [
+                "**整體難度**：極高 (5/5星)。每年約1,500-2,000人競爭~70個學額 (入學率約5%)。",
+                "**分數分佈**：最高四分位數：Best 6 = 43-45分；中位數：Best 6 = 40-42分；最低四分位數：Best 6 = 37-39分。",
+                "**科目加權策略**：化學 (x1.5) + 生物 (x1.3) + 英文 (x1.0) + 數學 (x1.0) + 通識/公社 (x1.0) + 最佳選修科 (x1.0)。化學是加權最重的科目。",
+                "**面試比重**：小組面試佔最終入學決定約25-35%。手巧評估也可能納入考量。",
+                "**Band A 優勢**：Band A 第一志願是必須的。課程極少考慮第二志願或較低 band。",
+                "**非聯招途徑**：國際文憑 (IB 40+/45)、GCE A-Level (AAA 包括化學)。約5-10個學額預留予非聯招申請者。"
+              ]
+            },
+            "alumni": {
+              "title": "知名校友及教職員",
+              "content": [
+                "**盧展民教授**：前牙醫學院院長，亞洲牙科植體學先驅。創立香港首個植牙培訓課程。",
+                "**黎俊雄醫生**：著名矯齒科醫生，前香港牙醫學會會長。公共牙科衛生政策倡導者。",
+                "**Samaranayake 教授**：口腔微生物學及真菌感染權威。前院長，發表400多篇論文的多產研究者。",
+                "**蔡敏兒醫生**：領先兒童牙科醫生，創辦服務亞洲貧困兒童的慈善牙科項目。",
+                "**Mattheos 教授**：植牙及數碼牙科技術專家，領導 CAD/CAM 及 3D 打印在牙科手術應用的研究。"
+              ]
+            },
+            "scholarships": {
+              "title": "獎學金及經濟援助",
+              "content": [
+                "**港大基金入學獎學金**：頒予 DSE 成績卓越者 (通常3科5**或以上)。全額或半額學費資助。",
+                "**牙醫學院獎學金**：每年級成績最優異學生的 merit-based 獎項 (每年港幣10,000-30,000元)。",
+                "**牙醫學會助學金**：為弱勢背景學生提供 need-based 支援，涵蓋設備及材料費用。",
+                "**海外會議資助**：為在國際牙科研討會發表研究的學生提供資助 (每次最多港幣15,000元)。",
+                "**政府資助及貸款**：NMTSS 每年提供最多港幣33,200元。專上學生資助計劃提供學費及生活費低息貸款。"
+              ]
+            },
+            "tips": {
+              "title": "Ace Sir 港大牙醫攻略",
+              "content": [
+                "**分數目標**：Best 6 目標40分以上，化學 (最好5*或5**) 及生物成績要優異。化學是入學最關鍵的科目。",
+                "**展示手巧**：培養能展示精細動作技能的興趣——樂器 (鋼琴、小提琴)、繪畫、模型製作或手工藝。在個人陳述中提及這些。",
+                "**跟隨牙醫實習**：至少花2-3天在牙科診所觀察。了解普通科與專科的區別。展示真正的興趣。",
+                "**了解行業現況**：研究香港牙科的當前議題——公共牙科服務缺口、人口老化口腔健康需求及牙科旅遊。",
+                "**面試準備**：準備討論為何選擇牙醫 (而非醫科)、你對六年承諾的理解，以及如何在壓力下進行精確工作。"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "JS6070": {
+      "id": "hku-law",
+      "code": "JS6070",
+      "name": "法學士 (LLB)",
+      "university": "HKU",
+      "content": {
+        "en": {
+          "sections": {
+            "admission": {
+              "title": "Eligibility & Admission Criteria (DSE)",
+              "content": [
+                "**Academic Threshold**: HKU Law is consistently ranked among Asia's top law schools. Admission is highly competitive with typical Best 5 scores of 30-32 (standard scale).",
+                "**Core Subjects**: English (Level 5+ mandatory — this is non-negotiable for law). Mathematics (Compulsory Part, Level 3+) and strong Liberal Studies / Citizenship and Social Development performance.",
+                "**Liberal Studies / Citizenship**: Strong performance helps significantly, as legal reasoning requires deep understanding of social, political, and ethical contexts.",
+                "**Interview**: Selected candidates are invited for interview to assess analytical thinking, communication clarity, logical reasoning, and genuine interest in the legal profession.",
+                "**Non-Academic Factors**: Debating experience, mooting participation, Model UN, and legal-related volunteering (e.g., legal aid clinics) strengthen applications considerably."
+              ]
+            },
+            "curriculum": {
+              "title": "Programme Structure & Curriculum",
+              "content": [
+                "**Year 1 - Legal Foundations**: Contract Law, Tort Law, and Legal System & Methodology. Introduction to legal research, case analysis, and statutory interpretation.",
+                "**Year 2 - Core Subjects**: Constitutional Law, Criminal Law, and Land Law. Mooting competitions begin — students argue simulated cases before judges.",
+                "**Year 3 - Advanced Core**: Equity & Trusts, Company Law, and Administrative Law. Optional subjects in international law, human rights, or commercial law.",
+                "**Year 4 - Specialisation & PCLL Preparation**: Choose from concentrations in Commercial Law, Human Rights & Constitutional Law, or International Law. PCLL conversion courses for the legal practice pathway.",
+                "**PCLL Pathway**: HKU LLB is a direct feeder to the Postgraduate Certificate in Laws (PCLL), the mandatory qualification for barristers and solicitors in Hong Kong.",
+                "**Mooting Programme**: HKU has one of Asia's most successful mooting programmes. Teams regularly win the Philip C. Jessup International Law Moot Court Competition and the Willem C. Vis Moot.",
+                "**Overseas Exchange**: Semester exchanges with Oxford, Cambridge, UCL, LSE, Melbourne, Toronto, and National University of Singapore. Some students pursue dual LLB degrees."
+              ]
+            },
+            "career": {
+              "title": "Career Pathways & Prospects",
+              "content": [
+                "**International Law Firms**: Graduates regularly join Magic Circle firms (Clifford Chance, Linklaters, Freshfields) and White Shoe firms (Skadden, Sullivan & Cromwell) in Hong Kong and London.",
+                "**Local Heavyweights**: Hong Kong's top local firms — Kirkland & Ellis, Deacons, Tanner De Witt, and Johnson Stokes & Master — recruit heavily from HKU Law.",
+                "**Barristers' Chambers**: Top graduates secure pupillage at leading chambers including Temple Chambers, Des Voeux Chambers, and Hong Kong Bar Association members.",
+                "**In-House Counsel**: Multinationals (HSBC, Standard Chartered, Cathay Pacific) and investment banks (Goldman Sachs, Morgan Stanley) hire HKU lawyers for compliance, regulatory, and transactional roles.",
+                "**Government & Public Sector**: The Department of Justice, Legal Aid Department, and various policy bureaux recruit HKU law graduates for prosecution, legal policy, and advisory positions.",
+                "**Alternative Careers**: Management consulting (McKinsey, BCG, Bain), investment banking, compliance, journalism, and NGOs value the analytical and communication skills that legal training provides."
+              ]
+            },
+            "campus": {
+              "title": "Campus Life & Student Experience",
+              "content": [
+                "**Main Campus (Pok Fu Lam)**: All four years at the historic Main Campus. Law students have dedicated spaces in the K.K. Leung Building and the Cheng Yu Tung Tower.",
+                "**Law Library**: One of Hong Kong's most comprehensive legal research libraries, with subscriptions to Westlaw, LexisNexis, and HeinOnline. 24-hour access during exam periods.",
+                "**Hall Life**: Law students are distributed across all 17 halls. Popular choices include St. John's College (strong academic tradition), University Hall (close to the Law building), and Ricci Hall.",
+                "**Law Society (LawSoc)**: One of the largest student societies, organising mooting competitions, law firm networking nights, charity pro bono programmes, and the annual Law Ball.",
+                "**Mentorship**: Each student is assigned an academic advisor and can access the alumni mentorship programme, connecting with partners at major law firms and members of the judiciary."
+              ]
+            },
+            "competitiveness": {
+              "title": "Admission Competitiveness Analysis",
+              "content": [
+                "**Overall Difficulty**: Very High (4.5/5 stars). Approximately 2,000-2,500 applicants compete for ~220 places annually (~10% admission rate).",
+                "**Score Distribution**: Top quartile: Best 5 = 33-35; Median: Best 5 = 30-32; Bottom quartile: Best 5 = 28-29.",
+                "**Subject Weighting Strategy**: English (x1.5-2.0) + Best Elective (x1.0) + Maths (x1.0) + LS/CSD (x1.0) + Chinese (x1.0). English is by far the most critical subject — a 5** in English is almost essential.",
+                "**Interview Weighting**: The interview carries approximately 20-30% of the final admission decision for borderline candidates. Strong interview performance can lift a candidate from the waiting list.",
+                "**Band A Advantage**: Band A Choice 1 receives strong priority. Choice 2 has reduced but still viable chances. Lower bands are very unlikely.",
+                "**Non-JUPAS Pathway**: IB (40+/45), GCE A-Levels (AAA* including English/History). Approximately 30-40 places reserved for non-JUPAS entrants, many with overseas boarding school backgrounds."
+              ]
+            },
+            "alumni": {
+              "title": "Notable Alumni & Faculty",
+              "content": [
+                "**The Honourable Andrew Cheung Kui-nung**: Chief Justice of the Court of Final Appeal of Hong Kong. HKU LLB graduate who rose through the judiciary to the highest position.",
+                "**The Honourable Geoffrey Ma Tao-li**: Former Chief Justice of the Court of Final Appeal. One of Hong Kong's most respected jurists.",
+                "**Ronny Tong Ka-wah, SC**: Senior Counsel, former Chairman of the Hong Kong Bar Association, and current Executive Council member. Prominent public law advocate.",
+                "**Audrey Eu Yuet-mee, SC**: Senior Counsel, former Chairman of the Hong Kong Bar Association, and founder of the Civic Party. Leading constitutional law expert.",
+                "**Professor Johannes Chan SC**: Former Dean of HKU Law, renowned constitutional and human rights scholar. First Chinese Dean in the Faculty's history."
+              ]
+            },
+            "scholarships": {
+              "title": "Scholarships & Financial Aid",
+              "content": [
+                "**HKU Foundation Entrance Scholarships**: Awarded to students with exceptional DSE results (typically 5** in 3+ subjects, especially English). Full or half tuition coverage.",
+                "**Faculty of Law Scholarships**: Merit-based awards for academic excellence, mooting achievements, and legal research potential (HKD 10,000-50,000/year).",
+                "**PCLL Scholarships**: For LLB graduates proceeding to PCLL, covering partial PCLL tuition fees (HKD 50,000-100,000).",
+                "**Overseas Mooting Grants**: Funding for students representing HKU in international mooting competitions (up to HKD 20,000 per competition).",
+                "**Government Grants & Loans**: NMTSS provides up to HKD 33,200/year. Tertiary Student Finance Scheme offers low-interest loans for tuition and living expenses."
+              ]
+            },
+            "tips": {
+              "title": "Ace Sir's HKU Law Strategy",
+              "content": [
+                "**English is Everything**: Level 5 in DSE English is the absolute minimum. Most successful candidates have 5* or 5**. Read legal news daily, write essays, debate — live in English.",
+                "**Start Mooting Early**: Join your school's debate team or mooting club. The ability to construct logical arguments and deliver them persuasively under pressure is what separates good lawyers from great ones.",
+                "**Stay Informed**: Follow Court of Final Appeal judgments, constitutional law developments, and commercial law cases. Show intellectual curiosity about how the law shapes society.",
+                "**Read Beyond the Syllabus**: Read books like \"The Rule of Law\" by Tom Bingham or \"Letters to a Law Student\" by Nicholas McBride. Demonstrate genuine intellectual interest.",
+                "**Understand the PCLL Pathway**: Know what PCLL is, why it matters, and the difference between solicitor and barrister pathways. Show you understand the full journey, not just the degree."
+              ]
+            }
+          }
+        },
+        "zh": {
+          "sections": {
+            "admission": {
+              "title": "入學要求與計分詳情 (DSE)",
+              "content": [
+                "**學術門檻**：港大法律學院長期位居亞洲頂尖法學院之列。入學競爭激烈，通常 Best 5 需達 30-32 分。",
+                "**核心科目**：英文 (必須達 Level 5 或以上——這是法律系的硬性要求)。數學 (必修部分，Level 3 或以上) 及通識教育/公民與社會發展科的優異表現。",
+                "**通識教育 / 公民科**：優異表現非常有幫助，因為法律推理需要深入理解社會、政治及道德背景。",
+                "**面試**：入圍考生獲邀面試，評估分析思維、溝通清晰度、邏輯推理及對法律專業的真正興趣。",
+                "**非學術因素**：辯論經驗、模擬法庭參與、模擬聯合國及法律相關義工服務 (如法律援助診所) 能大幅加強申請。"
+              ]
+            },
+            "curriculum": {
+              "title": "課程結構與內容",
+              "content": [
+                "**第一年 - 法律基礎**：合同法、侵權法及法律制度與方法論。法律研究、案例分析及法規詮釋入門。",
+                "**第二年 - 核心科目**：憲法、刑法及土地法。開始模擬法庭比賽——學生在法官前辯論模擬案件。",
+                "**第三年 - 進階核心**：衡平法與信託、公司法及行政法。可選修國際法、人權法或商法。",
+                "**第四年 - 專修及 PCLL 準備**：選擇商法、人權與憲法或國際法專修。PCLL 轉換課程為法律執業途徑做好準備。",
+                "**PCLL 途徑**：港大 LLB 是直接通往法律專業證書 (PCLL) 的課程，PCLL 是在香港成為大律師及律師的必須資格。",
+                "**模擬法庭計劃**：港大擁有亞洲最成功的模擬法庭計劃之一。隊伍經常贏得 Philip C. Jessup 國際法模擬法庭比賽及 Willem C. Vis Moot。",
+                "**海外交流**：與牛津、劍橋、UCL、LSE、墨爾本、多倫多及新加坡國立大學的學期交流。部分學生修讀雙 LLB 學位。"
+              ]
+            },
+            "career": {
+              "title": "職業前景與出路",
+              "content": [
+                "**國際律師行**：畢業生定期加入 Magic Circle 律師行 (高偉紳、年利達、富而德) 及 White Shoe 律師行 (世達、蘇利文) 的香港及倫敦辦事處。",
+                "**本地大型律師行**：香港頂尖本地律師行——凱易、的近、譚德律師行及孫士打——大量聘請港大法律畢業生。",
+                "**大律師事務所**：頂尖畢業生於 Temple Chambers、Des Voeux Chambers 及香港大律師公會成員事務所取得實習大律師資格。",
+                "**企業法律顧問**：跨國企業 (滙豐、渣打、國泰) 及投資銀行 (高盛、摩根士丹利) 聘請港大法律畢業生擔任合規、監管及交易職位。",
+                "**政府及公共部門**：律政司、法律援助署及各政策局聘請港大法律畢業生擔任檢控、法律政策及顧問職位。",
+                "**另類出路**：管理顧問 (麥肯錫、BCG、貝恩)、投資銀行、合規、新聞界及非政府組織均重視法律訓練提供的分析及溝通技巧。"
+              ]
+            },
+            "campus": {
+              "title": "校園生活與學生體驗",
+              "content": [
+                "**主校園 (薄扶林)**：四年均於歷史悠久的主校園。法律學生有專用空間於梁銶琚樓及鄭裕彤教學樓。",
+                "**法律圖書館**：香港最全面的法律研究圖書館之一，訂閱 Westlaw、LexisNexis 及 HeinOnline。考試期間提供24小時開放。",
+                "**舍堂生活**：法律學生分佈於所有17間舍堂。熱門選擇包括聖約翰學院 (學術傳統深厚)、大學堂 (鄰近法律大樓) 及利瑪竇宿舍。",
+                "**法律學會 (LawSoc)**：最大的學生學會之一，舉辦模擬法庭比賽、律師行聯誼之夜、慈善義務法律服務及年度 Law Ball。",
+                "**師友指導**：每位學生獲配學術導師，並可參加校友師友計劃，與大型律師行合伙人及司法機構成員聯繫。"
+              ]
+            },
+            "competitiveness": {
+              "title": "入學競爭力分析",
+              "content": [
+                "**整體難度**：極高 (4.5/5星)。每年約2,000-2,500人競爭~220個學額 (入學率約10%)。",
+                "**分數分佈**：最高四分位數：Best 5 = 33-35分；中位數：Best 5 = 30-32分；最低四分位數：Best 5 = 28-29分。",
+                "**科目加權策略**：英文 (x1.5-2.0) + 最佳選修科 (x1.0) + 數學 (x1.0) + 通識/公社 (x1.0) + 中文 (x1.0)。英文是迄今為止最關鍵的科目——英文達5**幾乎是必須的。",
+                "**面試比重**：面試佔最終入學決定約20-30% (對邊緣考生)。面試表現卓越可將候補名單上的考生提升為正取。",
+                "**Band A 優勢**：Band A 第一志願獲強烈優先考慮。第二志願機會減少但仍有可能。較低 band 機會甚微。",
+                "**非聯招途徑**：國際文憑 (IB 40+/45)、GCE A-Level (AAA* 包括英文/歷史)。約30-40個學額預留予非聯招申請者，很多具有海外寄宿學校背景。"
+              ]
+            },
+            "alumni": {
+              "title": "知名校友及教職員",
+              "content": [
+                "**張舉能法官閣下**：香港終審法院首席法官。港大 LLB 畢業生，從司法機構晉升至最高職位。",
+                "**馬道立法官閣下**：前香港終審法院首席法官。香港最受尊崇的法官之一。",
+                "**湯家驊資深大律師**：資深大律師、前香港大律師公會主席、現任行政會議成員。著名公法倡導者。",
+                "**余若薇資深大律師**：資深大律師、前香港大律師公會主席、公民黨創黨主席。領先憲法專家。",
+                "**陳文敏教授資深大律師**：前港大法律學院院長，著名憲法及人權學者。學院歷史上首位華人院長。"
+              ]
+            },
+            "scholarships": {
+              "title": "獎學金及經濟援助",
+              "content": [
+                "**港大基金入學獎學金**：頒予 DSE 成績卓越者 (通常3科5**或以上，尤其英文)。全額或半額學費資助。",
+                "**法律學院獎學金**：頒予學術卓越、模擬法庭成就及法律研究潛質的 merit-based 獎項 (每年港幣10,000-50,000元)。",
+                "**PCLL 獎學金**：予修讀 PCLL 的 LLB 畢業生，涵蓋部分 PCLL 學費 (港幣50,000-100,000元)。",
+                "**海外模擬法庭資助**：為代表港大參加國際模擬法庭比賽的學生提供資助 (每次最多港幣20,000元)。",
+                "**政府資助及貸款**：NMTSS 每年提供最多港幣33,200元。專上學生資助計劃提供學費及生活費低息貸款。"
+              ]
+            },
+            "tips": {
+              "title": "Ace Sir 港大法律攻略",
+              "content": [
+                "**英文是一切**：DSE 英文 5 級是絕對最低要求。大部分成功入學者達 5* 或 5**。每天閱讀法律新聞、寫文章、辯論——讓自己活在英語中。",
+                "**盡早開始模擬法庭**：加入學校的辯論隊或模擬法庭學會。在壓力下構建邏輯論點並有說服力地表達的能力，是好律師與卓越律師的分水嶺。",
+                "**保持資訊靈通**：追蹤終審法院判決、憲法發展及商業法案例。展示你對法律如何塑造社會的求知慾。",
+                "**超越課程閱讀**：閱讀 Tom Bingham 的《The Rule of Law》或 Nicholas McBride 的《Letters to a Law Student》等書籍。展示真正的求知興趣。",
+                "**了解 PCLL 途徑**：了解什麼是 PCLL、為什麼重要，以及事務律師與大律師途徑的區別。展示你了解整個旅程，不只是學位。"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "JS6781": {
+      "id": "hku-gf",
+      "code": "JS6781",
+      "name": "環球金融學士 (GBF)",
+      "university": "HKU",
+      "content": {
+        "en": {
+          "sections": {
+            "admission": {
+              "title": "Eligibility & Admission Criteria (DSE)",
+              "content": [
+                "**Academic Threshold**: GBF is HKU Business School's elite finance programme. Admission is highly competitive with typical Best 5 scores of 31-33 (standard scale).",
+                "**Mathematics (Extended Part)**: M2 (Calculus & Statistics) is strongly preferred. The programme is quantitatively rigorous and assumes fluency in advanced calculus.",
+                "**English**: Level 5+ in English is expected. The programme involves extensive case study analysis, presentations, and group projects in English.",
+                "**Interview**: Selected candidates are interviewed to assess analytical thinking, awareness of global financial markets, leadership potential, and career motivation.",
+                "**Non-Academic Factors**: Leadership roles in student societies, finance-related competitions (e.g., stock pitch contests), and internship experience strengthen applications."
+              ]
+            },
+            "curriculum": {
+              "title": "Programme Structure & Curriculum",
+              "content": [
+                "**Year 1 - Business Foundations**: Economics, accounting, statistics, and business communication. Introduction to financial markets and investment principles.",
+                "**Year 2 - Finance Core**: Corporate finance, financial econometrics, derivatives pricing, and portfolio theory. Bloomberg terminal certification training.",
+                "Year 3 - Advanced Finance & Specialisation**: M&A, leveraged buyouts, IPO valuation, and restructuring. Choose tracks in Investment Banking, Asset Management, or Risk Management.",
+                "**Year 4 - Capstone & Professional Preparation**: Final year project with industry sponsors, CFA Level 1 preparation, and structured recruitment preparation for bulge bracket banks.",
+                "**Quantitative Finance Track**: Advanced stochastic calculus, Monte Carlo simulation, and algorithmic trading for students pursuing quantitative roles.",
+                "**Global Immersion**: Mandatory semester exchange at partner institutions (Wharton, LSE, Bocconi, NYU Stern) plus summer internships in New York, London, or Hong Kong.",
+                "**Bloomberg & Trading Room**: Students train on Bloomberg terminals, participate in simulated trading competitions, and manage real-money investment portfolios through the Student Managed Fund."
+              ]
+            },
+            "career": {
+              "title": "Career Pathways & Prospects",
+              "content": [
+                "**Investment Banking (Front Office)**: Graduates regularly join Goldman Sachs, Morgan Stanley, JP Morgan, Citi, and Bank of America in M&A, ECM, DCM, and industry coverage groups.",
+                "**Sales & Trading**: Equities, fixed income, foreign exchange, and derivatives trading desks at major global banks recruit GBF graduates for their quantitative and market knowledge.",
+                "**Asset Management**: BlackRock, Fidelity, Point72, and Wellington Management hire GBF graduates for analyst and portfolio management roles.",
+                "**Private Equity & Hedge Funds**: The quantitative training and deal experience open doors to analyst roles at PE firms (KKR, Carlyle, TPG) and hedge funds (Citadel, Two Sigma).",
+                "**Consulting & Corporate Development**: McKinsey, BCG, Bain, and corporate strategy teams at multinationals value the analytical and financial modelling skills.",
+                "**Fintech & Entrepreneurship**: Some graduates join fintech startups (WeLab, TNG, Lendela) or launch their own ventures in digital finance, blockchain, or robo-advisory."
+              ]
+            },
+            "campus": {
+              "title": "Campus Life & Student Experience",
+              "content": [
+                "**Main Campus (Pok Fu Lam)**: All four years at the Main Campus. Business School facilities include the K.K. Leung Building, the Cheng Yu Tung Tower, and the newly renovated Business Library.",
+                "**Bloomberg Trading Room**: State-of-the-art trading simulation facility with 40+ Bloomberg terminals, real-time market data feeds, and professional-grade analytics software.",
+                "**Hall Life**: Business students often choose St. John's College, Morrison Hall, or Lee Shau Hall for their entrepreneurial and networking-oriented communities.",
+                "**Business Society (BizSoc)**: The largest student society at HKU, organising case competitions, firm presentations, networking nights, mentorship programmes, and the annual BizBall.",
+                "**Mentorship & Alumni Network**: Each student is assigned a mentor from the finance industry. The HKU Business School alumni network includes CEOs, CFOs, and managing directors at major financial institutions across Asia."
+              ]
+            },
+            "competitiveness": {
+              "title": "Admission Competitiveness Analysis",
+              "content": [
+                "**Overall Difficulty**: Very High (4.5/5 stars). Approximately 1,500-2,000 applicants compete for ~80 places annually (~5% admission rate).",
+                "**Score Distribution**: Top quartile: Best 5 = 34-36; Median: Best 5 = 31-33; Bottom quartile: Best 5 = 29-30.",
+                "**Subject Weighting Strategy**: Maths (x1.5) + English (x1.3) + Best Elective (x1.0) + LS/CSD (x1.0) + Chinese (x1.0). M2 is particularly valuable as it demonstrates quantitative aptitude.",
+                "**Interview Weighting**: The interview carries approximately 25-35% of the final admission decision. Candidates must demonstrate genuine interest in finance and awareness of current market events.",
+                "**Band A Advantage**: Band A Choice 1 is strongly preferred. Choice 2 has reduced chances. Lower bands are rarely considered.",
+                "**Non-JUPAS Pathway**: IB (40+/45), GCE A-Levels (AAA including Maths/Economics). Approximately 15-20 places reserved for non-JUPAS entrants."
+              ]
+            },
+            "alumni": {
+              "title": "Notable Alumni & Faculty",
+              "content": [
+                "**Dr. Victor Fung Kwok-king**: Chairman of Fung Group (Li & Fung), former Chairman of the University Grants Committee. Global supply chain and business leader.",
+                "**Dr. David Li Kwok-po**: Former Chairman and CEO of Bank of East Asia. One of Hong Kong's most prominent bankers and philanthropists.",
+                "**Professor Kalok Chan**: Former Dean of HKU Business School, renowned finance academic specialising in market microstructure and asset pricing.",
+                "**Edith Yeung**: Partner at 500 Startups, prominent venture capitalist investing in fintech and blockchain startups across Asia.",
+                "**Ronald Arculli**: Former Chairman of the Hong Kong Exchanges and Clearing (HKEX). Key figure in Hong Kong's financial market development."
+              ]
+            },
+            "scholarships": {
+              "title": "Scholarships & Financial Aid",
+              "content": [
+                "**HKU Foundation Entrance Scholarships**: Awarded to students with exceptional DSE results (typically 5** in 3+ subjects). Full or half tuition coverage.",
+                "**Business School Merit Scholarships**: For academic excellence and leadership potential (HKD 20,000-50,000/year). Renewable based on performance.",
+                "**CFA Scholarship Programme**: Partnership with CFA Institute providing partial CFA exam fee waivers and study materials for interested students.",
+                "**Overseas Internship Grants**: Funding for summer internships at financial centres abroad (up to HKD 25,000 per internship).",
+                "**Government Grants & Loans**: NMTSS provides up to HKD 33,200/year. Tertiary Student Finance Scheme offers low-interest loans."
+              ]
+            },
+            "tips": {
+              "title": "Ace Sir's GBF Strategy",
+              "content": [
+                "**Maths is Non-Negotiable**: M2 (Calculus & Statistics) is effectively required. If your school doesn't offer it, self-study or seek external tutoring. The entire programme builds on this foundation.",
+                "**Follow the Markets Daily**: Read Financial Times, Bloomberg, and WSJ. Be ready to discuss recent M&A deals, Fed policy decisions, and market movements in your interview.",
+                "**Start Early with Internships**: Aim for spring weeks in Year 1 and summer internships in Year 2. GBF students are expected to be career-ready from day one. Build your CV early.",
+                "**Learn Financial Modelling**: Master Excel (DCF, LBO, M&A models) and basic Python for data analysis before you arrive. Being able to build a three-statement model gives you a massive head start.",
+                "**Network Aggressively**: Attend every firm presentation, join finance clubs, and connect with alumni on LinkedIn. In investment banking, who you know is as important as what you know."
+              ]
+            }
+          }
+        },
+        "zh": {
+          "sections": {
+            "admission": {
+              "title": "入學要求與計分詳情 (DSE)",
+              "content": [
+                "**學術門檻**：環球金融學士 (GBF) 是港大商學院的精英金融課程。入學競爭激烈，通常 Best 5 需達 31-33 分。",
+                "**數學 (延伸部分)**：強烈建議修讀 M2 (微積分與統計)。課程對數學要求很高，假設學生精通高等微積分。",
+                "**英國語文**：預期英文達 5 級或以上。課程涉及大量案例分析、報告及英語小組項目。",
+                "**面試**：入圍考生接受面試，評估分析思維、對全球金融市場的認識、領導潛質及職業動機。",
+                "**非學術因素**：學生會領導角色、金融相關比賽 (如股票推介比賽) 及實習經驗能大幅加強申請。"
+              ]
+            },
+            "curriculum": {
+              "title": "課程結構與內容",
+              "content": [
+                "**第一年 - 商業基礎**：經濟學、會計學、統計學及商業溝通。金融市場及投資原則入門。",
+                "**第二年 - 金融核心**：公司金融、金融計量經濟學、衍生工具定價及投資組合理論。Bloomberg 終端機認證培訓。",
+                "**第三年 - 進階金融及專修**：併購、槓桿收購、IPO 估值及重組。選擇投行、資產管理或風險管理軌道。",
+                "**第四年 - 畢業專題及職業準備**：與業界贊助商的畢業專題、CFA 一級準備及大型投資銀行的結構化招聘準備。",
+                "**量化金融軌道**：進階隨機微積分、蒙地卡羅模擬及算法交易，適合追求量化職位的學生。",
+                "**全球沉浸體驗**：必須到伙伴院校 (Wharton、LSE、Bocconi、NYU Stern) 學期交流，並到紐約、倫敦或香港暑期實習。",
+                "**Bloomberg 及交易室**：學生在 Bloomberg 終端機上受訓，參加模擬交易比賽，並通過學生管理基金操盤真實資金投資組合。"
+              ]
+            },
+            "career": {
+              "title": "職業前景與出路",
+              "content": [
+                "**投資銀行 (前台)**：畢業生定期加入高盛、摩根士丹利、摩根大通、花旗及美國銀行的併購、股債資本市場及行業覆蓋團隊。",
+                "**銷售及交易**：大型全球銀行的股票、固定收益、外匯及衍生工具交易部聘請 GBF 畢業生，因其量化及市場知識。",
+                "**資產管理**：貝萊德、富達、Point72 及威靈頓管理聘請 GBF 畢業生擔任分析師及投資組合管理職位。",
+                "**私募及對沖基金**：量化訓練及交易經驗為私募基金 (KKR、凱雷、TPG) 及對沖基金 (Citadel、Two Sigma) 的分析師職位打開大門。",
+                "**顧問及企業發展**：麥肯錫、BCG、貝恩及跨國企業的企業策略團隊重視分析及財務建模技能。",
+                "**金融科技及創業**：部分畢業生加入金融科技初創 (WeLab、TNG、Lendela) 或在數碼金融、區塊鏈或智能投顧領域創業。"
+              ]
+            },
+            "campus": {
+              "title": "校園生活與學生體驗",
+              "content": [
+                "**主校園 (薄扶林)**：四年均於主校園。商學院設施包括梁銶琚樓、鄭裕彤教學樓及新近翻新的商業圖書館。",
+                "**Bloomberg 交易室**：最先進的交易模擬設施，設有40多台 Bloomberg 終端機、實時市場數據饋送及專業級分析軟件。",
+                "**舍堂生活**：商科學生常選擇聖約翰學院、Morrison Hall 或李兆基堂，因其創業及人脈導向的社群。",
+                "**商學會 (BizSoc)**：港大最大的學生學會，舉辦案例分析比賽、公司講座、聯誼之夜、師友計劃及年度 BizBall。",
+                "**師友指導及校友網絡**：每位學生獲配金融業導師。港大商學院校友網絡包括亞洲主要金融機構的行政總裁、財務總監及董事總經理。"
+              ]
+            },
+            "competitiveness": {
+              "title": "入學競爭力分析",
+              "content": [
+                "**整體難度**：極高 (4.5/5星)。每年約1,500-2,000人競爭~80個學額 (入學率約5%)。",
+                "**分數分佈**：最高四分位數：Best 5 = 34-36分；中位數：Best 5 = 31-33分；最低四分位數：Best 5 = 29-30分。",
+                "**科目加權策略**：數學 (x1.5) + 英文 (x1.3) + 最佳選修科 (x1.0) + 通識/公社 (x1.0) + 中文 (x1.0)。M2 特別有價值，因為它展示量化能力。",
+                "**面試比重**：面試佔最終入學決定約25-35%。考生必須展示對金融的真正興趣及對當前市場事件的認識。",
+                "**Band A 優勢**：強烈偏好 Band A 第一志願。第二志願機會減少。較低 band 極少考慮。",
+                "**非聯招途徑**：國際文憑 (IB 40+/45)、GCE A-Level (AAA 包括數學/經濟)。約15-20個學額預留予非聯招申請者。"
+              ]
+            },
+            "alumni": {
+              "title": "知名校友及教職員",
+              "content": [
+                "**馮國經博士**：馮氏集團 (利豐) 主席、前大學教育資助委員會主席。全球供應鏈及商業領袖。",
+                "**李國寶博士**：前東亞銀行主席兼行政總裁。香港最傑出的銀行家及慈善家之一。",
+                "**陳家樂教授**：前港大商學院院長，著名金融學者，專注於市場微觀結構及資產定價。",
+                "**楊佩珊**：500 Startups 合伙人，著名創投資本家，投資亞洲金融科技及區塊鏈初創。",
+                "**夏佳理**：前香港交易及結算所 (HKEX) 主席。香港金融市場發展的關鍵人物。"
+              ]
+            },
+            "scholarships": {
+              "title": "獎學金及經濟援助",
+              "content": [
+                "**港大基金入學獎學金**：頒予 DSE 成績卓越者 (通常3科5**或以上)。全額或半額學費資助。",
+                "**商學院優異獎學金**：頒予學術卓越及領導潛質的學生 (每年港幣20,000-50,000元)。按表現續領。",
+                "**CFA 獎學金計劃**：與 CFA Institute 合作，為有興趣的學生提供部分 CFA 考試費用減免及學習材料。",
+                "**海外實習資助**：為到海外金融中心暑期實習的學生提供資助 (每次最多港幣25,000元)。",
+                "**政府資助及貸款**：NMTSS 每年提供最多港幣33,200元。專上學生資助計劃提供低息貸款。"
+              ]
+            },
+            "tips": {
+              "title": "Ace Sir GBF 攻略",
+              "content": [
+                "**數學不容妥協**：M2 (微積分與統計) 實際上是必需的。如果學校沒有開設，要自學或尋求校外補習。整個課程都建立在這個基礎上。",
+                "**每天追蹤市場動態**：閱讀 Financial Times、Bloomberg 及華爾街日報。準備在面試中討論近期併購交易、聯儲局決策及市場走勢。",
+                "**盡早開始實習**：第一年目標春季實習，第二年目標暑期實習。GBF 學生從第一天起就要為職業生涯做好準備。盡早建立履歷。",
+                "**學習財務建模**：入學前精通 Excel (DCF、LBO、併購模型) 及基礎 Python 數據分析。能夠建立三表模型會給你巨大優勢。",
+                "**積極建立人脈**：參加每個公司講座、加入金融學會、在 LinkedIn 上聯繫校友。在投資銀行，你認識誰與你知道什麼同樣重要。"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "JS6227": {
+      "id": "hku-qfin",
+      "code": "JS6227",
+      "name": "計量金融學士 (QFin)",
+      "university": "HKU",
+      "content": {
+        "en": {
+          "sections": {
+            "admission": {
+              "title": "Eligibility & Admission Criteria (DSE)",
+              "content": [
+                "**Academic Threshold**: QFin sits at the intersection of mathematics, statistics, and finance. Admission requires Best 5 scores around 30-32 (standard scale).",
+                "**Mathematics (Extended Part)**: M2 (Calculus & Statistics) is effectively required. M1 is acceptable but M2 is strongly preferred. The programme assumes fluency in calculus, linear algebra, and probability theory.",
+                "**Physics or ICT**: Either subject helps build the computational and logical thinking needed for financial modelling and algorithmic trading.",
+                "**English**: Level 5 in English is expected, as the programme involves reading academic papers, writing technical reports, and presenting quantitative findings.",
+                "**No Interview**: Admission is primarily based on DSE scores, so every point in your Best 5 counts. Focus on maximising Maths and science subjects."
+              ]
+            },
+            "curriculum": {
+              "title": "Programme Structure & Curriculum",
+              "content": [
+                "**Year 1 - Mathematical Foundations**: Real analysis, probability theory, linear algebra, and ordinary differential equations. These are the same mathematical tools used by quantitative traders on Wall Street.",
+                "**Year 2 - Statistical & Computational Core**: Statistical inference, stochastic processes, numerical methods, and scientific computing in Python, R, and MATLAB.",
+                "**Year 3 - Financial Engineering**: Option pricing models (Black-Scholes, binomial, Monte Carlo), interest rate models, credit risk modelling, and portfolio optimisation. Introduction to machine learning for finance.",
+                "**Year 4 - Advanced Topics & Capstone**: Algorithmic trading, high-frequency trading systems, deep learning for market prediction, and a year-long capstone project with industry partners (banks, hedge funds, or fintech firms).",
+                "**Programming & Data Science**: Python, R, C++, and MATLAB are taught and applied to real financial datasets. Students build trading algorithms, risk models, and pricing engines from scratch.",
+                "**Mathematics Department Collaboration**: Unique joint programme between the Business School and Mathematics Department. Students take advanced pure mathematics courses alongside finance training.",
+                "**Industry Projects**: Capstone projects are sponsored by major financial institutions. Recent projects include volatility forecasting for a hedge fund, optimal execution algorithms for a bank, and credit default prediction models."
+              ]
+            },
+            "career": {
+              "title": "Career Pathways & Prospects",
+              "content": [
+                "**Quantitative Analyst (Quant)**: Design trading algorithms, risk models, and pricing engines at investment banks (Goldman Sachs, Morgan Stanley, JP Morgan) and proprietary trading firms (Jane Street, Optiver, Citadel).",
+                "**Risk Management**: Model market, credit, and operational risk for major financial institutions. Develop stress testing frameworks and regulatory compliance models.",
+                "**Data Science in Finance**: Apply machine learning to predict market movements, detect fraud, optimise portfolios, and build recommendation engines at asset managers and fintech companies.",
+                "**Algorithmic Trading**: Build and maintain high-frequency trading systems, execution algorithms, and market-making strategies at quantitative trading firms.",
+                "**Graduate Studies**: Many graduates pursue Master's or PhD programmes in Financial Engineering at MIT, Columbia, Princeton, Oxford, or Cambridge. The mathematical foundation makes them highly competitive applicants.",
+                "**Fintech & Startups**: Apply quantitative skills to blockchain analytics, decentralised finance (DeFi) protocols, robo-advisory platforms, and insurtech ventures."
+              ]
+            },
+            "campus": {
+              "title": "Campus Life & Student Experience",
+              "content": [
+                "**Main Campus (Pok Fu Lam)**: All four years at the Main Campus. QFin students split time between the Business School (K.K. Leung Building) and the Mathematics Department (Run Run Shaw Building).",
+                "**Quantitative Finance Lab**: Dedicated computing lab with high-performance workstations, real-time market data feeds, and professional software (Bloomberg, Refinitiv Eikon, MATLAB, Mathematica).",
+                "**Hall Life**: QFin students often choose St. John's College or University Hall for their strong academic communities and proximity to both the Business School and Mathematics Department.",
+                "**Mathematics Society & Business Society**: Active participation in both societies — case competitions from BizSoc and mathematics competitions (Putnam, Mathematical Contest in Modelling) from MathSoc.",
+                "**Mentorship**: Academic advisors from both the Mathematics Department and Business School. Industry mentors from quantitative trading firms and investment banks provide career guidance."
+              ]
+            },
+            "competitiveness": {
+              "title": "Admission Competitiveness Analysis",
+              "content": [
+                "**Overall Difficulty**: Very High (4.5/5 stars). Approximately 1,200-1,500 applicants compete for ~60 places annually (~5% admission rate).",
+                "**Score Distribution**: Top quartile: Best 5 = 33-35; Median: Best 5 = 30-32; Bottom quartile: Best 5 = 28-29.",
+                "**Subject Weighting Strategy**: Maths (x2.0) + Best Elective (x1.0) + English (x1.0) + LS/CSD (x1.0) + Chinese (x1.0). Mathematics is by far the most critical subject — a 5** in Maths (especially M2) is almost essential.",
+                "**No Interview Advantage**: Purely score-based admission means there is no subjectivity. However, this also means every single point matters enormously.",
+                "**Band A Advantage**: Band A Choice 1 is essential. The programme rarely considers Choice 2 or lower bands due to high demand.",
+                "**Non-JUPAS Pathway**: IB (40+/45 with HL Maths), GCE A-Levels (A*A*A including Further Maths). Approximately 10-15 places reserved for non-JUPAS entrants."
+              ]
+            },
+            "alumni": {
+              "title": "Notable Alumni & Faculty",
+              "content": [
+                "**Professor Y.K. Kwok**: Renowned financial mathematician, author of the definitive textbook \"Mathematical Models of Financial Derivatives.\" Leading researcher in option pricing and computational finance.",
+                "**Professor W.K. Ching**: Chair of Mathematics, expert in stochastic modelling and numerical methods for financial engineering. Published extensively in top-tier journals.",
+                "**Dr. Alan Chen**: Former Head of Quantitative Research at a major Hong Kong hedge fund. Pioneer in applying machine learning to Asian equity markets.",
+                "**Professor Lixin Wu**: Expert in computational finance and risk management. Developed widely-used numerical methods for pricing complex derivatives.",
+                "**Dr. Raymond Yuen**: Managing Director at a global investment bank, leading the quantitative strategies team for Asia-Pacific equities trading."
+              ]
+            },
+            "scholarships": {
+              "title": "Scholarships & Financial Aid",
+              "content": [
+                "**HKU Foundation Entrance Scholarships**: Awarded to students with exceptional DSE results (typically 5** in Maths and 2+ other subjects). Full or half tuition coverage.",
+                "**Mathematics Department Scholarships**: For outstanding performance in mathematics competitions (HKMO, AIMO) and academic excellence (HKD 10,000-30,000/year).",
+                "**Business School Merit Awards**: For academic performance and quantitative research potential (HKD 15,000-40,000/year).",
+                "**Quantitative Finance Research Grants**: Funding for students undertaking research projects with industry partners (up to HKD 20,000 per project).",
+                "**Government Grants & Loans**: NMTSS provides up to HKD 33,200/year. Tertiary Student Finance Scheme offers low-interest loans."
+              ]
+            },
+            "tips": {
+              "title": "Ace Sir's QFin Strategy",
+              "content": [
+                "**Master M2 — No Excuses**: If you are serious about QFin, M2 (Calculus & Statistics) is not optional. The entire programme builds on multivariable calculus, probability theory, and linear algebra. A 5** in M2 is your golden ticket.",
+                "**Learn to Code Before You Arrive**: Start with Python. Then learn R for statistics and C++ for performance-critical applications. Being able to write a Monte Carlo simulation or backtest a trading strategy gives you a massive edge over classmates who start from zero.",
+                "**Understand the Math Behind the Money**: Do not just memorise formulas. Understand WHY Black-Scholes works, WHY stochastic calculus matters, and WHY eigenvalues appear in portfolio optimisation. The best quants are mathematicians first, traders second.",
+                "**Build a GitHub Portfolio**: Employers care more about your code than your GPA. Build a volatility surface visualiser, an options backtester, or a risk parity portfolio optimiser. Show you can ship production-quality quantitative code.",
+                "**Read the Classics**: \"Options, Futures, and Other Derivatives\" by John Hull, \"The Concepts and Practice of Mathematical Finance\" by Mark Joshi, and \"Paul Wilmott on Quantitative Finance.\" These are the bibles of the profession."
+              ]
+            }
+          }
+        },
+        "zh": {
+          "sections": {
+            "admission": {
+              "title": "入學要求與計分詳情 (DSE)",
+              "content": [
+                "**學術門檻**：計量金融學士 (QFin) 位處數學、統計學與金融的交匯點。入學通常需要 Best 5 達 30-32 分。",
+                "**數學 (延伸部分)**：M2 (微積分與統計) 實際上是必需的。M1 可接受但強烈建議 M2。課程假設學生精通微積分、線性代數及概率論。",
+                "**物理或資訊科技**：兩科均有助建立金融建模及算法交易所需的運算及邏輯思維。",
+                "**英國語文**：預期英文達 5 級，因為課程涉及閱讀學術論文、撰寫技術報告及展示量化發現。",
+                "**無面試**：入學主要基於 DSE 成績，因此 Best 5 每一分都很重要。專注於最大化數學及理科科目。"
+              ]
+            },
+            "curriculum": {
+              "title": "課程結構與內容",
+              "content": [
+                "**第一年 - 數學基礎**：實分析、概率論、線性代數及常微分方程。這些與華爾街量化交易員使用的數學工具相同。",
+                "**第二年 - 統計及運算核心**：統計推斷、隨機過程、數值方法及 Python、R 和 MATLAB 科學計算。",
+                "**第三年 - 金融工程**：期權定價模型 (Black-Scholes、二項式、蒙地卡羅)、利率模型、信貸風險建模及投資組合優化。機器學習在金融的應用入門。",
+                "**第四年 - 進階專題及畢業專題**：算法交易、高頻交易系統、深度學習市場預測，以及與業界伙伴 (銀行、對沖基金或金融科技公司) 的全年畢業專題。",
+                "**編程與數據科學**：教授 Python、R、C++ 及 MATLAB，並應用於真實金融數據集。學生從頭開始建立交易算法、風險模型及定價引擎。",
+                "**數學系合作**：商學院與數學系獨特的聯合課程。學生在金融培訓的同時修讀進階純數學課程。",
+                "**業界項目**：畢業專題由主要金融機構贊助。近期項目包括為對沖基金預測波動率、為銀行建立最佳執行算法及信貸違約預測模型。"
+              ]
+            },
+            "career": {
+              "title": "職業前景與出路",
+              "content": [
+                "**量化分析師 (Quant)**：在投資銀行 (高盛、摩根士丹利、摩根大通) 及自營交易公司 (Jane Street、Optiver、Citadel) 設計交易算法、風險模型及定價引擎。",
+                "**風險管理**：為主要金融機構建模市場風險、信貸風險及營運風險。開發壓力測試框架及監管合規模型。",
+                "**金融數據科學**：應用機器學習預測市場走勢、偵測欺詐、優化投資組合及在資產管理公司和金融科技公司建立推薦引擎。",
+                "**算法交易**：在量化交易公司建立及維護高頻交易系統、執行算法及做市策略。",
+                "**深造研究**：很多畢業生到 MIT、哥倫比亞、普林斯頓、牛津或劍橋修讀金融工程碩士或博士課程。數學基礎使他們成為極具競爭力的申請者。",
+                "**金融科技及初創**：將量化技能應用於區塊鏈分析、去中心化金融 (DeFi) 協議、智能投顧平台及保險科技創業。"
+              ]
+            },
+            "campus": {
+              "title": "校園生活與學生體驗",
+              "content": [
+                "**主校園 (薄扶林)**：四年均於主校園。QFin 學生在商學院 (梁銶琚樓) 及數學系 (邵逸夫樓) 之間分配時間。",
+                "**計量金融實驗室**：專用運算實驗室，配備高性能工作站、實時市場數據饋送及專業軟件 (Bloomberg、Refinitiv Eikon、MATLAB、Mathematica)。",
+                "**舍堂生活**：QFin 學生常選擇聖約翰學院或大學堂，因其強大的學術社群及鄰近商學院和數學系。",
+                "**數學學會及商學會**：積極參與兩個學會——BizSoc 的案例比賽及 MathSoc 的數學比賽 (Putnam、數學建模競賽)。",
+                "**師友指導**：數學系及商學院的學術導師。量化交易公司及投資銀行的業界導師提供職業指導。"
+              ]
+            },
+            "competitiveness": {
+              "title": "入學競爭力分析",
+              "content": [
+                "**整體難度**：極高 (4.5/5星)。每年約1,200-1,500人競爭~60個學額 (入學率約5%)。",
+                "**分數分佈**：最高四分位數：Best 5 = 33-35分；中位數：Best 5 = 30-32分；最低四分位數：Best 5 = 28-29分。",
+                "**科目加權策略**：數學 (x2.0) + 最佳選修科 (x1.0) + 英文 (x1.0) + 通識/公社 (x1.0) + 中文 (x1.0)。數學是迄今為止最關鍵的科目——數學 (尤其 M2) 達5**幾乎是必須的。",
+                "**無面試優勢**：純分數入學意味沒有主觀因素。但這也表示每一分都極為重要。",
+                "**Band A 優勢**：Band A 第一志願是必須的。由於需求極高，課程極少考慮第二志願或較低 band。",
+                "**非聯招途徑**：國際文憑 (IB 40+/45 包括高等數學)、GCE A-Level (A*A*A 包括進階數學)。約10-15個學額預留予非聯招申請者。"
+              ]
+            },
+            "alumni": {
+              "title": "知名校友及教職員",
+              "content": [
+                "**郭予宏教授**：著名金融數學家，《金融衍生工具的數學模型》權威教科書作者。期權定價及計算金融的領先研究者。",
+                "**程瑋琪教授**：數學系系主任，隨機建模及金融工程數值方法專家。於頂尖期刊廣泛發表論文。",
+                "**陳博士**：前香港大型對沖基金量化研究主管。將機器學習應用於亞洲股票市場的先驅。",
+                "**吳立欣教授**：計算金融及風險管理專家。開發了廣泛使用的複雜衍生工具定價數值方法。",
+                "**袁博士**：全球投資銀行董事總經理，領導亞太區股票交易的量化策略團隊。"
+              ]
+            },
+            "scholarships": {
+              "title": "獎學金及經濟援助",
+              "content": [
+                "**港大基金入學獎學金**：頒予 DSE 成績卓越者 (通常數學及另外2科達5**)。全額或半額學費資助。",
+                "**數學系獎學金**：頒予數學比賽 (香港數學奧林匹克、亞洲國際數學奧林匹克) 及學術卓越表現 (每年港幣10,000-30,000元)。",
+                "**商學院優異獎項**：頒予學術表現及量化研究潛質 (每年港幣15,000-40,000元)。",
+                "**計量金融研究資助**：為與業界伙伴進行研究項目的學生提供資助 (每個項目最多港幣20,000元)。",
+                "**政府資助及貸款**：NMTSS 每年提供最多港幣33,200元。專上學生資助計劃提供低息貸款。"
+              ]
+            },
+            "tips": {
+              "title": "Ace Sir QFin 攻略",
+              "content": [
+                "**精通 M2——沒有藉口**：如果你認真考慮 QFin，M2 (微積分與統計) 不是選修。整個課程都建立在多變量微積分、概率論及線性代數上。M2 達5**是你的黃金入場券。",
+                "**入學前學習編程**：從 Python 開始。然後學習用於統計的 R 及用於性能關鍵應用的 C++。能夠編寫蒙地卡羅模擬或回測交易策略會讓你比從零開始的同學擁有巨大優勢。",
+                "**理解金錢背後的數學**：不要只記公式。要理解為什麼 Black-Scholes 有效、為什麼隨機微積分重要，以及為什麼特徵值出現在投資組合優化中。最優秀的量化分析師首先是數學家，其次才是交易員。",
+                "**建立 GitHub 作品集**：僱主更關心你的代碼而非 GPA。建立波動率曲面視覺化工具、期權回測器或風險平價投資組合優化器。展示你能交付生產級量化代碼。",
+                "**閱讀經典**：John Hull 的《Options, Futures, and Other Derivatives》、Mark Joshi 的《The Concepts and Practice of Mathematical Finance》及《Paul Wilmott on Quantitative Finance》。這些是業界的聖經。"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "JS6411": {
+      "id": "hku-arch",
+      "code": "JS6411",
+      "name": "建築學士 (BArch)",
+      "university": "HKU",
+      "content": {
+        "en": {
+          "sections": {
+            "admission": {
+              "title": "Eligibility & Admission Criteria (DSE)",
+              "content": [
+                "**Academic Threshold**: HKU Architecture is the only accredited architecture programme in Hong Kong leading directly to professional qualification. Admission requires Best 5 scores around 29-31 (standard scale).",
+                "**Portfolio**: While not required at application, shortlisted candidates may be asked to submit creative work demonstrating spatial thinking, design sensibility, and visual communication skills.",
+                "**Mathematics & Physics**: Both are useful — mathematics for structural calculations and physics for understanding forces, materials, and environmental performance.",
+                "**English**: Level 4+ in English is expected. The programme involves extensive design critiques, written essays on architectural theory, and presentation of design proposals.",
+                "**Interview**: Candidates discuss their interest in architecture, awareness of built environment issues, creative problem-solving approach, and understanding of the profession's demands."
+              ]
+            },
+            "curriculum": {
+              "title": "Programme Structure & Curriculum",
+              "content": [
+                "**Year 1 - Design Fundamentals**: Introduction to architectural design, drawing, model-making, and visual communication. Design studios focus on small-scale projects — pavilions, installations, and furniture.",
+                "**Year 2 - Building Technology & History**: Structural systems, construction materials, environmental design, and architectural history from ancient civilisations to modernism. Design projects increase in scale and complexity.",
+                "**Year 3 - Urban Context & Professional Practice**: Urban design principles, site analysis, building regulations, and contract administration. Design studios tackle mixed-use buildings and urban interventions.",
+                "**Year 4 - Advanced Design & Research**: Independent design thesis on a self-selected topic. Options to specialise in sustainable design, digital fabrication, heritage conservation, or housing.",
+                "**Year 5 - Professional Practice & Final Project**: Advanced design project equivalent to a real-world commission. Professional practice courses prepare students for ARB registration and running an architectural practice.",
+                "**Design Studio**: The heart of the programme. Students work on architectural projects from conceptual design to detailed construction drawings, with regular desk crits and pin-up reviews.",
+                "**Technology Integration**: Courses in structural engineering, building services, environmental systems, and construction technology ensure designs are buildable and sustainable."
+              ]
+            },
+            "career": {
+              "title": "Career Pathways & Prospects",
+              "content": [
+                "**Architectural Practice**: Join established firms like Foster + Partners, Rocco Design Architects, Ronald Lu & Partners, or local practices. Path to ARB registration requires 2+ years of practical experience post-graduation.",
+                "**Urban Design & Planning**: Work on master planning, urban renewal, and smart city initiatives for government (Planning Department, URA) or private consultancies (AECOM, Arup, SOM).",
+                "**Interior & Exhibition Design**: Apply spatial design skills to retail, hospitality, museum, and exhibition projects. Many architects transition into interior design or branded environments.",
+                "**Sustainable Design Consulting**: Specialise in green building certification (BEAM Plus, LEED), energy modelling, and sustainable design strategies for developers and corporations.",
+                "**Academia & Research**: Pursue Master's (MArch, MDes, MSc) and PhD programmes at leading institutions (MIT, ETH Zurich, Bartlett UCL, AA School). HKU Architecture has strong research in digital fabrication and Asian urbanism.",
+                "**Construction & Project Management**: Apply architectural knowledge to construction management, quantity surveying, or development management roles at major contractors and developers."
+              ]
+            },
+            "campus": {
+              "title": "Campus Life & Student Experience",
+              "content": [
+                "**Main Campus (Pok Fu Lam)**: All five years at the Main Campus. The Architecture Department occupies the historic Main Building and the Knowles Building, with dedicated studio spaces for each year group.",
+                "**Fabrication Lab**: State-of-the-art digital fabrication facility with laser cutters, CNC routers, 3D printers, and robotics. Students build physical models and prototype architectural components.",
+                "**Architecture Library**: Specialised collection of architectural drawings, monographs, and periodicals. Subscriptions to Domus, Architectural Review, and A+U.",
+                "**Hall Life**: Architecture students often choose St. John's College or Lady Ho Tung Hall for their creative communities. Many students live in studio flats near campus for all-night design work.",
+                "**Architecture Society (ArchSoc)**: Organises design workshops, firm visits, charity build projects, and the annual ArchBall. Strong alumni network includes partners at major Hong Kong and international firms."
+              ]
+            },
+            "competitiveness": {
+              "title": "Admission Competitiveness Analysis",
+              "content": [
+                "**Overall Difficulty**: High (4/5 stars). Approximately 800-1,000 applicants compete for ~80 places annually (~10% admission rate).",
+                "**Score Distribution**: Top quartile: Best 5 = 32-34; Median: Best 5 = 29-31; Bottom quartile: Best 5 = 27-28.",
+                "**Subject Weighting Strategy**: Best Elective (x1.0) + Maths (x1.0) + English (x1.0) + LS/CSD (x1.0) + Chinese (x1.0). No specific subject weighting — the programme values well-rounded candidates with creative and analytical abilities.",
+                "**Portfolio & Interview Weighting**: For shortlisted candidates, the portfolio and interview carry approximately 30-40% of the final decision. Creative potential can compensate for slightly lower scores.",
+                "**Band A Advantage**: Band A Choice 1 receives priority. Choice 2 has viable chances. Lower bands are possible but less likely.",
+                "**Non-JUPAS Pathway**: IB (36+/45), GCE A-Levels (AAA including Art/Design/Maths). Approximately 10-15 places reserved for non-JUPAS entrants, many with international art school backgrounds."
+              ]
+            },
+            "alumni": {
+              "title": "Notable Alumni & Faculty",
+              "content": [
+                "**Professor Rocco Yim Sen-kee**: Founding partner of Rocco Design Architects, one of Hong Kong's most influential architecture firms. Designed the Guangdong Museum and the Xiqu Centre.",
+                "**Ronald Lu**: Founding partner of Ronald Lu & Partners, pioneer of sustainable design in Hong Kong. Designed the Zero Carbon Building and numerous BEAM Plus Platinum projects.",
+                "**Professor John Lin**: Award-winning architect known for rural reconstruction projects in China. Recipient of the Architectural Review Emerging Architecture Award.",
+                "**Professor Joshua Bolchover**: Co-founder of Rural Urban Framework, internationally recognised for community-based architectural interventions in rural China.",
+                "**Professor Nasrine Seraji**: Former Head of Architecture at HKU, renowned for her theoretical work on architecture and urbanism. Previously taught at Columbia University and the AA School."
+              ]
+            },
+            "scholarships": {
+              "title": "Scholarships & Financial Aid",
+              "content": [
+                "**HKU Foundation Entrance Scholarships**: Awarded to students with strong DSE results. Full or half tuition coverage.",
+                "**Architecture Department Scholarships**: For design excellence, academic performance, and contribution to the studio culture (HKD 10,000-30,000/year).",
+                "**Travel Grants for Overseas Study Trips**: Funding for architecture study trips to cities like Tokyo, Barcelona, Rome, and New York (up to HKD 15,000 per trip).",
+                "**Model-Making & Material Subsidies**: Support for students undertaking ambitious physical models and material experiments (up to HKD 5,000 per project).",
+                "**Government Grants & Loans**: NMTSS provides up to HKD 33,200/year. Tertiary Student Finance Scheme offers low-interest loans."
+              ]
+            },
+            "tips": {
+              "title": "Ace Sir's Architecture Strategy",
+              "content": [
+                "**Build a Portfolio Early**: Sketch buildings, photograph interesting spaces, build physical models, and experiment with digital design tools. Architecture is about SHOWING, not just telling. Start collecting work from Year 10.",
+                "**Visit Buildings Critically**: Go to PMQ, Tai Kwun, the West Kowloon Cultural District, and the HSBC Main Building. Do not just look — analyse WHY the space works, how light enters, how people move through it. Develop your architectural eye.",
+                "**Learn Basic Software**: SketchUp, Rhino, or even hand drafting. Showing you can visualise spatial ideas sets you apart from candidates who just talk about \"loving buildings.\" Free tutorials are available on YouTube.",
+                "**Understand the Profession**: Architecture is not just about designing beautiful buildings. It involves long hours, tight budgets, complex regulations, and difficult clients. Shadow an architect for a few days to understand the reality.",
+                "**Read Architecture**: Start with \"Towards a New Architecture\" by Le Corbusier, \"Complexity and Contradiction in Architecture\" by Robert Venturi, and \"The Eyes of the Skin\" by Juhani Pallasmaa. These will change how you see buildings."
+              ]
+            }
+          }
+        },
+        "zh": {
+          "sections": {
+            "admission": {
+              "title": "入學要求與計分詳情 (DSE)",
+              "content": [
+                "**學術門檻**：港大建築學系是香港唯一可直接取得專業資格的認可建築課程。入學通常需要 Best 5 達 29-31 分。",
+                "**作品集**：申請時雖非必需，但入圍考生可能被要求提交創作，展示空間思維、設計感及視覺傳達技巧。",
+                "**數學與物理**：兩科均有用——數學用於結構計算，物理用於理解力學、材料及環境表現。",
+                "**英國語文**：預期英文達 4 級或以上。課程涉及大量設計評論、建築理論文章及設計方案報告。",
+                "**面試**：考生需討論對建築的興趣、對建成環境議題的認識、創意解難方法及對行業要求的理解。"
+              ]
+            },
+            "curriculum": {
+              "title": "課程結構與內容",
+              "content": [
+                "**第一年 - 設計基礎**：建築設計、繪圖、模型製作及視覺傳達入門。設計工作室專注於小規模項目——亭閣、裝置及家具。",
+                "**第二年 - 建築科技與歷史**：結構系統、建築材料、環境設計及從古代文明到現代主義的建築歷史。設計項目規模及複雜度增加。",
+                "**第三年 - 城市脈絡與專業實務**：城市設計原則、基地分析、建築法規及合約管理。設計工作室處理混合用途建築及城市介入。",
+                "**第四年 - 進階設計與研究**：自選題目的獨立設計論文。可專修可持續設計、數碼製造、文物保育或房屋設計。",
+                "**第五年 - 專業實務及畢業設計**：相當於真實委託的進階設計項目。專業實務課程為 ARB 註冊及經營建築事務所做好準備。",
+                "**設計工作室**：課程核心。學生從概念設計到詳細施工圖進行建築項目，定期接受桌面評圖及圖板評審。",
+                "**科技整合**：結構工程、建築設備、環境系統及建築科技課程確保設計可建造且可持續。"
+              ]
+            },
+            "career": {
+              "title": "職業前景與出路",
+              "content": [
+                "**建築事務所**：加入 Foster + Partners、嚴迅奇建築師事務所、呂元祥建築師事務所或本地公司。畢業後取得建築師註冊資格需時 2 年以上實務經驗。",
+                "**城市設計與規劃**：為政府 (規劃署、市建局) 或私人顧問公司 (AECOM、奧雅納、SOM) 從事總體規劃、市區重建及智慧城市項目。",
+                "**室內及展覽設計**：將空間設計技能應用於零售、酒店、博物館及展覽項目。很多建築師轉型室內設計或品牌環境設計。",
+                "**可持續設計顧問**：專修綠建認證 (BEAM Plus、LEED)、能源建模及為發展商和企業提供可持續設計策略。",
+                "**學術與研究**：到頂尖學府 (MIT、蘇黎世聯邦理工、Bartlett UCL、AA School) 修讀建築碩士 (MArch、MDes、MSc) 及博士課程。港大建築系在數碼製造及亞洲城市主義研究方面實力雄厚。",
+                "**建造及項目管理**：將建築知識應用於主要承建商及發展商的建造管理、工料測量或發展管理職位。"
+              ]
+            },
+            "campus": {
+              "title": "校園生活與學生體驗",
+              "content": [
+                "**主校園 (薄扶林)**：五年均於主校園。建築系位於歷史悠久的主樓及 Knowles 樓，每年級有專用工作室空間。",
+                "**製造實驗室**：最先進的數碼製造設施，配備激光切割機、CNC 路由器、3D 打印機及機械人。學生製作實體模型及建築構件原型。",
+                "**建築圖書館**：建築圖則、專著及期刊的專門館藏。訂閱 Domus、Architectural Review 及 A+U。",
+                "**舍堂生活**：建築學生常選擇聖約翰學院或何東夫人紀念堂，因其創意社群。很多學生為通宵設計工作而在校園附近租住工作室單位。",
+                "**建築學會 (ArchSoc)**：舉辦設計工作坊、事務所參觀、慈善建築項目及年度 ArchBall。強大的校友網絡包括香港及國際大型事務所的合伙人。"
+              ]
+            },
+            "competitiveness": {
+              "title": "入學競爭力分析",
+              "content": [
+                "**整體難度**：高 (4/5星)。每年約800-1,000人競爭~80個學額 (入學率約10%)。",
+                "**分數分佈**：最高四分位數：Best 5 = 32-34分；中位數：Best 5 = 29-31分；最低四分位數：Best 5 = 27-28分。",
+                "**科目加權策略**：最佳選修科 (x1.0) + 數學 (x1.0) + 英文 (x1.0) + 通識/公社 (x1.0) + 中文 (x1.0)。沒有特定科目加權——課程重視具創意及分析能力的全面發展考生。",
+                "**作品集及面試比重**：對入圍考生，作品集及面試佔最終決定約30-40%。創意潛質可彌補稍低的分數。",
+                "**Band A 優勢**：Band A 第一志願獲優先考慮。第二志願有可行機會。較低 band 有可能但機會較少。",
+                "**非聯招途徑**：國際文憑 (IB 36+/45)、GCE A-Level (AAA 包括藝術/設計/數學)。約10-15個學額預留予非聯招申請者，很多具有國際藝術學校背景。"
+              ]
+            },
+            "alumni": {
+              "title": "知名校友及教職員",
+              "content": [
+                "**嚴迅奇教授**：嚴迅奇建築師事務所創始合伙人，香港最具影響力的建築師之一。設計廣東省博物館及戲曲中心。",
+                "**呂元祥**：呂元祥建築師事務所創始合伙人，香港可持續設計先驅。設計零碳天地及多個 BEAM Plus 白金級項目。",
+                "**林君翰教授**：屢獲殊榮的建築師，以中國鄉村重建項目聞名。獲得 Architectural Review Emerging Architecture Award。",
+                "**Joshua Bolchover 教授**：Rural Urban Framework 聯合創始人，以中國農村的社區為本建築介入享譽國際。",
+                "**Nasrine Seraji 教授**：前港大建築系系主任，以建築及城市主義的理論工作聞名。曾於哥倫比亞大學及 AA School 任教。"
+              ]
+            },
+            "scholarships": {
+              "title": "獎學金及經濟援助",
+              "content": [
+                "**港大基金入學獎學金**：頒予 DSE 成績優異者。全額或半額學費資助。",
+                "**建築系獎學金**：頒予設計卓越、學術表現及對工作室文化貢獻 (每年港幣10,000-30,000元)。",
+                "**海外考察旅行資助**：為到東京、巴塞隆拿、羅馬及紐約等城市的建築考察旅行提供資助 (每次最多港幣15,000元)。",
+                "**模型製作及材料補貼**：支持學生進行大型實體模型及材料實驗 (每個項目最多港幣5,000元)。",
+                "**政府資助及貸款**：NMTSS 每年提供最多港幣33,200元。專上學生資助計劃提供低息貸款。"
+              ]
+            },
+            "tips": {
+              "title": "Ace Sir 建築學攻略",
+              "content": [
+                "**盡早建立作品集**：素描建築物、拍攝有趣空間、製作實體模型、嘗試數碼設計工具。建築是關於展示，不只是說。從中四開始收集作品。",
+                "**批判性參觀建築物**：去 PMQ、大館、西九文化區及滙豐總行大廈。不要只看——分析為什麼空間有效、光線如何進入、人們如何穿梭其中。培養你的建築眼光。",
+                "**學習基本軟件**：SketchUp、Rhino 或手繪。能夠將空間意念視覺化，會讓你從只會說「喜歡建築」的考生中脫穎而出。YouTube 上有免費教程。",
+                "**了解行業現實**：建築不只是設計漂亮建築物。它涉及長工時、緊迫預算、複雜法規及難纏客戶。跟隨建築師實習幾天以了解現實。",
+                "**閱讀建築經典**：從 Le Corbusier 的《走向新建築》、Robert Venturi 的《建築的複雜性與矛盾性》及 Juhani Pallasmaa 的《肌膚之眼》開始。這些書會改變你看建築的方式。"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "JS6767": {
+      "id": "hku-bba-acc",
+      "code": "JS6767",
+      "name": "工商管理學士(會計及財務) (BBA(Acc&Fin))",
+      "university": "HKU",
+      "content": {
+        "en": {
+          "sections": {
+            "admission": {
+              "title": "Eligibility & Admission Criteria (DSE)",
+              "content": [
+                "**Academic Threshold**: BBA(Acc&Fin) is HKU's flagship accounting programme, offering direct exemption from HKICPA QP modules. Admission requires Best 5 scores around 28-30 (standard scale).",
+                "**Mathematics**: Strong maths skills are essential for financial analysis, valuation modelling, and accounting calculations. M1 or M2 is helpful but not required.",
+                "**English**: Level 4+ in English is expected. The programme involves extensive report writing, case study presentations, and professional communication.",
+                "**No Interview**: Purely score-based admission, making every DSE point in your Best 5 critical. Focus on maximising your overall score.",
+                "**Non-Academic Factors**: While not formally assessed, leadership experience, participation in business competitions, and accounting-related activities (e.g., Junior Achievement) demonstrate genuine interest."
+              ]
+            },
+            "curriculum": {
+              "title": "Programme Structure & Curriculum",
+              "content": [
+                "**Year 1 - Business Foundations**: Economics, business statistics, business communication, and introduction to financial accounting. Understanding the language of business.",
+                "**Year 2 - Accounting Core**: Financial accounting, management accounting, cost accounting, and taxation principles. Introduction to auditing and business law.",
+                "**Year 3 - Finance Integration**: Corporate finance, investment analysis, financial modelling, and business strategy. Choose electives in advanced accounting or finance specialisations.",
+                "**Year 4 - Professional Preparation & Specialisation**: Advanced financial reporting, strategic management accounting, and capstone project. Direct pathway to PCLL for students choosing the law conversion option.",
+                "**Professional Exemptions**: Graduates receive maximum exemptions from HKICPA QP (all 4 modules), ACCA (9 papers), and CIMA (11 papers) — fast-tracking to professional qualification.",
+                "**Big Four Internships**: Structured internship programmes with Deloitte, PwC, EY, and KPMG are built into the curriculum. Most students complete at least two internships before graduation.",
+                "**Case Competitions**: Regular participation in international case competitions (e.g., CIMA Global Business Challenge, HKICPA QP Case Competition) develops practical problem-solving skills."
+              ]
+            },
+            "career": {
+              "title": "Career Pathways & Prospects",
+              "content": [
+                "**Big Four Accounting Firms**: Audit, tax, and advisory roles at Deloitte, PwC, EY, and KPMG. Most graduates start here, with clear progression to manager and partner track.",
+                "**Investment Banking**: The finance component opens doors to IB analyst roles, especially in Hong Kong's active deal market. Strong financial modelling skills are highly valued.",
+                "**Corporate Finance**: FP&A (Financial Planning & Analysis), treasury, M&A, and investor relations roles at listed companies (HSBC, CK Hutchison, Swire) and multinationals.",
+                "**Management Consulting**: Strategy consulting firms (McKinsey, BCG, Bain, Deloitte Consulting) recruit Acc&Fin graduates for their analytical and financial acumen.",
+                "**Entrepreneurship**: The accounting + finance combo is powerful for founders who need to understand their numbers from day one. Many graduates launch startups in fintech, e-commerce, and professional services.",
+                "**Professional Qualification Pathway**: Complete HKICPA QP (1.5 years) or ACCA (2-3 years) to become a Certified Public Accountant — a globally recognised qualification."
+              ]
+            },
+            "campus": {
+              "title": "Campus Life & Student Experience",
+              "content": [
+                "**Main Campus (Pok Fu Lam)**: All four years at the Main Campus. Business School facilities include the K.K. Leung Building, Cheng Yu Tung Tower, and the Business Library.",
+                "**Accounting & Finance Lab**: Dedicated lab with Bloomberg terminals, financial databases (Capital IQ, Thomson Reuters), and accounting software (SAP, Oracle).",
+                "**Hall Life**: Business students are distributed across all halls. Popular choices include St. John's College (strong networking), Morrison Hall (entrepreneurial community), and Lee Shau Hall.",
+                "**Business Society (BizSoc)**: The largest student society, organising case competitions, firm presentations, networking nights, mentorship programmes, and the annual BizBall.",
+                "**Mentorship & Alumni Network**: Each student is assigned an industry mentor, typically a partner at a Big Four firm or a CFO at a listed company. The HKU Business School alumni network spans 150+ countries."
+              ]
+            },
+            "competitiveness": {
+              "title": "Admission Competitiveness Analysis",
+              "content": [
+                "**Overall Difficulty**: High (4/5 stars). Approximately 1,500-2,000 applicants compete for ~150 places annually (~8% admission rate).",
+                "**Score Distribution**: Top quartile: Best 5 = 31-33; Median: Best 5 = 28-30; Bottom quartile: Best 5 = 26-27.",
+                "**Subject Weighting Strategy**: Maths (x1.3) + English (x1.0) + Best Elective (x1.0) + LS/CSD (x1.0) + Chinese (x1.0). Mathematics is important for the quantitative finance component.",
+                "**No Interview**: Purely score-based admission means there is no subjectivity. However, this also means every single point matters enormously.",
+                "**Band A Advantage**: Band A Choice 1 receives strong priority. Choice 2 has viable chances. Lower bands are less likely but possible.",
+                "**Non-JUPAS Pathway**: IB (38+/45), GCE A-Levels (AAA including Maths/Accounting). Approximately 20-30 places reserved for non-JUPAS entrants."
+              ]
+            },
+            "alumni": {
+              "title": "Notable Alumni & Faculty",
+              "content": [
+                "**Dr. David Li Kwok-po**: Former Chairman and CEO of Bank of East Asia. HKU Business School alumnus and one of Hong Kong's most prominent bankers.",
+                "**Professor Richard Wong Yue-chim**: Pro-Vice-Chancellor of HKU, renowned economist specialising in property markets and public finance.",
+                "**Professor Kalok Chan**: Former Dean of HKU Business School, leading finance academic with expertise in market microstructure and asset pricing.",
+                "**Dr. Vincent Cheng Hoi-chuen**: Former Chairman of HSBC Asia-Pacific. Prominent figure in Hong Kong's banking and business community.",
+                "**Professor T.J. Wong**: World-renowned accounting scholar, former Dean of Business School at Chinese University of Hong Kong. Expert in corporate governance and earnings quality."
+              ]
+            },
+            "scholarships": {
+              "title": "Scholarships & Financial Aid",
+              "content": [
+                "**HKU Foundation Entrance Scholarships**: Awarded to students with exceptional DSE results (typically 5** in 3+ subjects). Full or half tuition coverage.",
+                "**Business School Merit Scholarships**: For academic excellence and leadership potential (HKD 20,000-50,000/year). Renewable based on GPA.",
+                "**Big Four Scholarship Programmes**: Deloitte, PwC, EY, and KPMG each offer scholarships to outstanding students (HKD 30,000-50,000/year) with guaranteed internship interviews.",
+                "**Professional Body Scholarships**: HKICPA and ACCA offer scholarships to top-performing students covering exam fees and study materials.",
+                "**Government Grants & Loans**: NMTSS provides up to HKD 33,200/year. Tertiary Student Finance Scheme offers low-interest loans."
+              ]
+            },
+            "tips": {
+              "title": "Ace Sir's Acc&Fin Strategy",
+              "content": [
+                "**Understand the QP Pathway**: This programme is designed to get you CPA-qualified fast. Know what HKICPA QP is, why exemptions matter, and the difference between CPA and ACCA. Show you understand the end game.",
+                "**Excel Skills Matter**: Learn financial modelling in Excel before you arrive. Being able to build a three-statement model, a DCF valuation, and an LBO model gives you a massive head start over classmates.",
+                "**Network from Day One**: Join the HKU Business School clubs, attend every firm presentation, and connect with alumni on LinkedIn. Accounting is a relationship-driven profession — your network is your net worth.",
+                "**Start Interning Early**: Aim for a Big Four internship in Year 2 summer. The earlier you get your foot in the door, the better your chances of securing a graduate offer. Most graduate hires come from returning interns.",
+                "**Think Beyond the Numbers**: The best accountants and finance professionals do not just crunch numbers — they tell stories with data. Develop your communication skills, presentation ability, and commercial awareness."
+              ]
+            }
+          }
+        },
+        "zh": {
+          "sections": {
+            "admission": {
+              "title": "入學要求與計分詳情 (DSE)",
+              "content": [
+                "**學術門檻**：工商管理學士(會計及財務) 是港大的旗艦會計課程，可直接獲得 HKICPA QP 單元豁免。入學通常需要 Best 5 達 28-30 分。",
+                "**數學**：強大的數學能力對財務分析、估值建模及會計計算至關重要。M1 或 M2 有幫助但非必需。",
+                "**英國語文**：預期英文達 4 級或以上。課程涉及大量報告寫作、案例研究報告及專業溝通。",
+                "**無面試**：純分數入學，因此 Best 5 每一分 DSE 分數都很重要。專注於最大化整體分數。",
+                "**非學術因素**：雖然非正式評估，但領導經驗、商業比賽參與及會計相關活動 (如 Junior Achievement) 展示真正的興趣。"
+              ]
+            },
+            "curriculum": {
+              "title": "課程結構與內容",
+              "content": [
+                "**第一年 - 商業基礎**：經濟學、商業統計、商業溝通及財務會計入門。理解商業語言。",
+                "**第二年 - 會計核心**：財務會計、管理會計、成本會計及稅務原則。審計及商法入門。",
+                "**第三年 - 金融整合**：公司金融、投資分析、金融建模及商業策略。選修進階會計或金融專修。",
+                "**第四年 - 專業準備及專修**：進階財務報告、策略管理會計及畢業專題。選擇法律轉換的學生可直接通往 PCLL。",
+                "**專業豁免**：畢業生可獲 HKICPA QP (全部4個單元)、ACCA (9張試卷) 及 CIMA (11張試卷) 最高豁免——快速取得專業資格。",
+                "**四大實習**：與德勤、羅兵咸、安永及畢馬威的結構化實習計劃已納入課程。大部分學生在畢業前完成至少兩次實習。",
+                "**案例比賽**：定期參加國際案例比賽 (如 CIMA Global Business Challenge、HKICPA QP Case Competition) 培養實務解難技能。"
+              ]
+            },
+            "career": {
+              "title": "職業前景與出路",
+              "content": [
+                "**四大會計師行**：在德勤、羅兵咸、安永及畢馬威從事審計、稅務及顧問工作。大部分畢業生由此起步，有清晰的經理及合伙人晉升路徑。",
+                "**投資銀行**：金融成分為投行分析師職位打開大門，特別是在香港活躍的交易市場。強大的財務建模技能極受重視。",
+                "**企業金融**：在上市公司 (滙豐、長和、太古) 及跨國企業從事財務規劃、庫務、併購及投資者關係工作。",
+                "**管理顧問**：策略顧問公司 (麥肯錫、BCG、貝恩、德勤顧問) 聘請 Acc&Fin 畢業生，因其分析及財務敏銳度。",
+                "**創業**：會計加金融的組合對創辦人極為有力，讓你從第一天起就理解數字。很多畢業生在金融科技、電商及專業服務領域創業。",
+                "**專業資格途徑**：完成 HKICPA QP (1.5年) 或 ACCA (2-3年) 成為註冊會計師——全球認可的專業資格。"
+              ]
+            },
+            "campus": {
+              "title": "校園生活與學生體驗",
+              "content": [
+                "**主校園 (薄扶林)**：四年均於主校園。商學院設施包括梁銶琚樓、鄭裕彤教學樓及商業圖書館。",
+                "**會計及金融實驗室**：專用實驗室配備 Bloomberg 終端機、金融數據庫 (Capital IQ、Thomson Reuters) 及會計軟件 (SAP、Oracle)。",
+                "**舍堂生活**：商科學生分佈於所有舍堂。熱門選擇包括聖約翰學院 (人脈網絡強大)、Morrison Hall (創業社群) 及李兆基堂。",
+                "**商學會 (BizSoc)**：最大的學生學會，舉辦案例比賽、公司講座、聯誼之夜、師友計劃及年度 BizBall。",
+                "**師友指導及校友網絡**：每位學生獲配業界導師，通常是四大合伙人或上市公司財務總監。港大商學院校友網絡遍及150多個國家。"
+              ]
+            },
+            "competitiveness": {
+              "title": "入學競爭力分析",
+              "content": [
+                "**整體難度**：高 (4/5星)。每年約1,500-2,000人競爭~150個學額 (入學率約8%)。",
+                "**分數分佈**：最高四分位數：Best 5 = 31-33分；中位數：Best 5 = 28-30分；最低四分位數：Best 5 = 26-27分。",
+                "**科目加權策略**：數學 (x1.3) + 英文 (x1.0) + 最佳選修科 (x1.0) + 通識/公社 (x1.0) + 中文 (x1.0)。數學對量化金融部分很重要。",
+                "**無面試**：純分數入學意味沒有主觀因素。但這也表示每一分都極為重要。",
+                "**Band A 優勢**：Band A 第一志願獲強烈優先考慮。第二志願有可行機會。較低 band 機會較少但仍有可能。",
+                "**非聯招途徑**：國際文憑 (IB 38+/45)、GCE A-Level (AAA 包括數學/會計)。約20-30個學額預留予非聯招申請者。"
+              ]
+            },
+            "alumni": {
+              "title": "知名校友及教職員",
+              "content": [
+                "**李國寶博士**：前東亞銀行主席兼行政總裁。港大商學院校友，香港最傑出的銀行家之一。",
+                "**王于漸教授**：港大副校長，著名經濟學家，專注於物業市場及公共財政。",
+                "**陳家樂教授**：前港大商學院院長，領先金融學者，專長於市場微觀結構及資產定價。",
+                "**鄭海泉博士**：前滙豐亞太區主席。香港銀行界及商界的傑出人物。",
+                "**T.J. Wong 教授**：世界知名會計學者，前中文大學商學院院長。企業管治及盈利質素專家。"
+              ]
+            },
+            "scholarships": {
+              "title": "獎學金及經濟援助",
+              "content": [
+                "**港大基金入學獎學金**：頒予 DSE 成績卓越者 (通常3科5**或以上)。全額或半額學費資助。",
+                "**商學院優異獎學金**：頒予學術卓越及領導潛質 (每年港幣20,000-50,000元)。按 GPA 續領。",
+                "**四大獎學金計劃**：德勤、羅兵咸、安永及畢馬威各為優異學生提供獎學金 (每年港幣30,000-50,000元)，並保證實習面試機會。",
+                "**專業團體獎學金**：HKICPA 及 ACCA 為頂尖表現學生提供獎學金，涵蓋考試費用及學習材料。",
+                "**政府資助及貸款**：NMTSS 每年提供最多港幣33,200元。專上學生資助計劃提供低息貸款。"
+              ]
+            },
+            "tips": {
+              "title": "Ace Sir 會計及財務攻略",
+              "content": [
+                "**了解 QP 途徑**：這課程旨在讓你快速取得 CPA 資格。了解什麼是 HKICPA QP、為什麼豁免很重要，以及 CPA 與 ACCA 的區別。展示你了解最終目標。",
+                "**Excel 技能很重要**：入學前學習 Excel 財務建模。能夠建立三表模型、DCF 估值及 LBO 模型會讓你比同學領先一大步。",
+                "**從第一天起建立人脈**：加入港大商學院學會、參加每個公司講座、在 LinkedIn 上聯繫校友。會計是關係驅動的專業——你的人脈就是你的財富。",
+                "**盡早開始實習**：第二年暑期目標四大實習。越早踏入門檻，獲得畢業聘請的機會越大。大部分畢業生聘請來自回聘實習生。",
+                "**超越數字思考**：最優秀的會計師及金融專業人士不只計算數字——他們用數據講故事。培養你的溝通技巧、報告能力及商業觸覺。"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "JS6808": {
+      "id": "hku-bba-law",
+      "code": "JS6808",
+      "name": "工商管理學士及法學士 (BBA&LLB)",
+      "university": "HKU",
+      "content": {
+        "en": {
+          "sections": {
+            "admission": {
+              "title": "Eligibility & Admission Criteria (DSE)",
+              "content": [
+                "**Academic Threshold**: The BBA&LLB double degree is one of HKU's most prestigious programmes. Admission requires Best 5 scores of 33-35 (standard scale) — among the highest at HKU.",
+                "**English Language**: Level 5* or above is effectively required. The law component demands exceptional English reading, writing, and analysis at a level far beyond standard DSE.",
+                "**Mathematics**: Strong maths for the BBA component, particularly for finance, accounting, and quantitative business courses. M1 or M2 is helpful.",
+                "**Interview**: All shortlisted candidates are interviewed to assess intellectual maturity, time management awareness, motivation for the demanding dual workload, and career clarity.",
+                "**Non-Academic Factors**: Leadership roles, debating/mooting experience, business competitions, and evidence of handling heavy workloads (e.g., multiple extracurriculars alongside strong academics) are highly valued."
+              ]
+            },
+            "curriculum": {
+              "title": "Programme Structure & Curriculum",
+              "content": [
+                "**Year 1 - Integrated Foundations**: Business foundations (economics, accounting, marketing) alongside legal fundamentals (contract law, tort law, legal system). Heavy reading load begins immediately.",
+                "**Year 2 - Core Expansion**: Constitutional law, criminal law, corporate finance, and business strategy. Students begin to see connections between legal frameworks and business decisions.",
+                "**Year 3 - Law Specialisation**: Advanced legal subjects — corporate law, commercial law, international arbitration, competition law, and Chinese law. Mooting competitions intensify.",
+                "**Year 4 - Business Specialisation & PCLL Prep**: Choose business concentrations (finance, marketing, management) alongside final law subjects. PCLL conversion courses for students pursuing legal practice.",
+                "**Year 5 - Capstone & Professional Integration**: Final year dissertation on an interdisciplinary topic (e.g., \"Corporate Governance in Cross-Border M&A\"). Professional practice courses and graduate recruitment preparation.",
+                "**Dual Pathways**: Graduates can pursue PCLL for legal practice OR enter business directly. The dual qualification is uniquely valuable for commercial law, investment banking, and consulting.",
+                "**Workload Reality**: This is TWO degrees in five years. Students typically take 6-7 courses per semester (vs. 5 for single-degree students). Time management and resilience are essential."
+              ]
+            },
+            "career": {
+              "title": "Career Pathways & Prospects",
+              "content": [
+                "**Commercial Law (The Perfect Fit)**: M&A lawyers, private equity legal advisors, and in-house counsel at banks value the dual qualification enormously. Firms like Kirkland & Ellis, Skadden, and Clifford Chance actively recruit BBA&LLB graduates.",
+                "**Investment Banking**: IB teams highly prize candidates who understand both the deal structure AND the legal documentation. BBA&LLB graduates excel in execution-heavy roles.",
+                "**Management Consulting**: Strategy consulting firms (McKinsey, BCG, Bain) recruit BBA&LLB graduates for their analytical rigour, commercial awareness, and ability to structure complex problems.",
+                "**Private Equity & Venture Capital**: The legal + business combo is ideal for PE/VC roles involving deal structuring, due diligence, and portfolio company governance.",
+                "**Entrepreneurship**: Founders with legal knowledge avoid costly mistakes in contracts, IP, regulatory compliance, and shareholder agreements. Many BBA&LLB graduates launch successful startups.",
+                "**Government & Policy**: The Department of Justice, policy bureaux, and regulatory bodies (SFC, HKMA) value the dual perspective on law and economics."
+              ]
+            },
+            "campus": {
+              "title": "Campus Life & Student Experience",
+              "content": [
+                "**Main Campus (Pok Fu Lam)**: All five years at the Main Campus. Students split time between the Business School (K.K. Leung Building) and the Law Faculty (Cheng Yu Tung Tower).",
+                "**Dual Society Life**: Active participation in both Law Society (LawSoc) and Business Society (BizSoc) — mooting competitions, case competitions, firm presentations, and networking events.",
+                "**Hall Life**: BBA&LLB students often choose St. John's College (academic excellence) or University Hall (proximity to both Law and Business buildings).",
+                "**Study Groups**: The programme fosters tight-knit study groups due to the intense workload. Peer support is essential for surviving the dual degree.",
+                "**Mentorship**: Dual mentorship from both Business School and Law Faculty alumni. Mentors include partners at Magic Circle firms, managing directors at investment banks, and general counsel at multinationals."
+              ]
+            },
+            "competitiveness": {
+              "title": "Admission Competitiveness Analysis",
+              "content": [
+                "**Overall Difficulty**: Extreme (5/5 stars). Approximately 1,000-1,500 applicants compete for ~50 places annually (~4% admission rate).",
+                "**Score Distribution**: Top quartile: Best 5 = 36-38; Median: Best 5 = 33-35; Bottom quartile: Best 5 = 31-32.",
+                "**Subject Weighting Strategy**: English (x2.0) + Maths (x1.3) + Best Elective (x1.0) + LS/CSD (x1.0) + Chinese (x1.0). English is absolutely critical — most successful candidates have 5** in English.",
+                "**Interview Weighting**: The interview carries approximately 30-40% of the final admission decision. Candidates must demonstrate they understand the workload and have a clear rationale for the dual degree.",
+                "**Band A Advantage**: Band A Choice 1 is essential. The programme does not consider Choice 2 or lower bands.",
+                "**Non-JUPAS Pathway**: IB (42+/45), GCE A-Levels (A*A*A including English and Maths/Economics). Approximately 10-15 places reserved for non-JUPAS entrants."
+              ]
+            },
+            "alumni": {
+              "title": "Notable Alumni & Faculty",
+              "content": [
+                "**The Honourable Andrew Cheung Kui-nung**: Chief Justice of the Court of Final Appeal. HKU Law graduate who exemplifies the legal excellence the programme cultivates.",
+                "**Ronny Tong Ka-wah, SC**: Senior Counsel and Executive Council member. Prominent public law advocate with deep commercial understanding.",
+                "**Dr. David Li Kwok-po**: Former Chairman of Bank of East Asia. Demonstrates how legal training complements business leadership at the highest level.",
+                "**Professor Johannes Chan SC**: Former Dean of HKU Law, constitutional scholar. First Chinese Dean, symbolising the programme's commitment to excellence.",
+                "**Victor Li Tzar-kuoi**: Chairman of CK Hutchison and CK Asset Holdings. One of Hong Kong's most powerful business leaders, demonstrating the value of interdisciplinary business-legal acumen."
+              ]
+            },
+            "scholarships": {
+              "title": "Scholarships & Financial Aid",
+              "content": [
+                "**HKU Foundation Entrance Scholarships**: Awarded to students with exceptional DSE results (typically 5** in 4+ subjects, especially English). Full or half tuition coverage.",
+                "**Dual Degree Scholarships**: Special scholarships for BBA&LLB students covering partial tuition (HKD 30,000-60,000/year) based on academic merit.",
+                "**Law Faculty Scholarships**: For mooting achievements, legal research potential, and academic performance (HKD 10,000-50,000/year).",
+                "**Business School Merit Awards**: For academic excellence and leadership in business-related activities (HKD 20,000-50,000/year).",
+                "**Government Grants & Loans**: NMTSS provides up to HKD 33,200/year. Tertiary Student Finance Scheme offers low-interest loans. Given the 5-year duration, financial planning is important."
+              ]
+            },
+            "tips": {
+              "title": "Ace Sir's BBA&LLB Strategy",
+              "content": [
+                "**Be Brutally Honest About the Workload**: This is TWO degrees in five years. You will have less free time than single-degree peers, fewer social events, and more all-nighters. Make sure you genuinely want both law and business — not just the prestige of the name.",
+                "**English at 5* Level Minimum**: If your English is not consistently at 5* level, this programme will be extremely difficult. The law reading load is immense — hundreds of pages per week of dense legal texts.",
+                "**Think at the Intersection**: The value of this degree is not in being a good lawyer OR a good businessman — it is in understanding how legal rules shape business decisions, deal structuring, and risk management. Cultivate this interdisciplinary mindset from day one.",
+                "**Plan Your Career Early**: Decide by Year 3 whether you are pursuing PCLL (legal practice) or entering business directly. This determines your elective choices, internship targets, and networking focus. Trying to keep both doors open for too long dilutes your preparation.",
+                "**Build Stamina**: Read long, complex texts daily. Practice writing clearly and concisely. The ability to absorb vast amounts of information and produce high-quality analysis quickly is the core skill this degree develops."
+              ]
+            }
+          }
+        },
+        "zh": {
+          "sections": {
+            "admission": {
+              "title": "入學要求與計分詳情 (DSE)",
+              "content": [
+                "**學術門檻**：工商管理學士及法學士雙學位是港大最負盛名的課程之一。入學通常需要 Best 5 達 33-35 分——港大最高分之一。",
+                "**英國語文**：實際上需要 5* 或以上。法律部分要求卓越的英文閱讀、寫作及分析能力，遠超標準 DSE 水平。",
+                "**數學**：BBA 部分需要強大的數學能力，特別是金融、會計及量化商業課程。M1 或 M2 有幫助。",
+                "**面試**：所有入圍考生均會接受面試，評估心智成熟度、時間管理意識、對繁重雙學位負擔的動機及職業清晰度。",
+                "**非學術因素**：領導角色、辯論/模擬法庭經驗、商業比賽及處理繁重負擔的證明 (如在強大學術表現下同時參與多項課外活動) 極受重視。"
+              ]
+            },
+            "curriculum": {
+              "title": "課程結構與內容",
+              "content": [
+                "**第一年 - 整合基礎**：商業基礎 (經濟、會計、市場學) 與法律基礎 (合同法、侵權法、法律制度) 並行。繁重的閱讀量立即開始。",
+                "**第二年 - 核心擴展**：憲法、刑法、公司金融及商業策略。學生開始看到法律框架與商業決策之間的聯繫。",
+                "**第三年 - 法律專修**：進階法律科目——公司法、商法、國際仲裁、競爭法及中國法。模擬法庭比賽加劇。",
+                "**第四年 - 商業專修及 PCLL 準備**：選擇商業專修 (金融、市場學、管理) 及最後的法律科目。追求法律執業的學生修讀 PCLL 轉換課程。",
+                "**第五年 - 畢業專題及專業整合**：跨學科題目的畢業論文 (如「跨境併購的企業管治」)。專業實務課程及畢業招聘準備。",
+                "**雙重途徑**：畢業生可以修讀 PCLL 從事法律工作，或直接進入商界。雙學位資格對商業法律、投資銀行及顧問工作特別有價值。",
+                "**工作量現實**：這是五年內完成兩個學位。學生通常每學期修讀6-7科 (單學位學生為5科)。時間管理及抗壓能力是必須的。"
+              ]
+            },
+            "career": {
+              "title": "職業前景與出路",
+              "content": [
+                "**商業法律 (完美配搭)**：併購律師、私募法律顧問及銀行內部法律顧問極度重視雙學位資格。凱易、世達及高偉紳等律師行積極聘請 BBA&LLB 畢業生。",
+                "**投資銀行**：投行團隊極度珍視同時理解交易結構及法律文件的候選人。BBA&LLB 畢業生在執行密集型職位表現出色。",
+                "**管理顧問**：策略顧問公司 (麥肯錫、BCG、貝恩) 聘請 BBA&LLB 畢業生，因其分析嚴謹度、商業觸覺及結構化複雜問題的能力。",
+                "**私募及創投**：法律加商業的組合對涉及交易結構、盡職審查及投資組合公司管治的私募/創投職位極為理想。",
+                "**創業**：具備法律知識的創辦人能避免合約、知識產權、監管合規及股東協議方面的昂貴錯誤。很多 BBA&LLB 畢業生創辦成功的初創企業。",
+                "**政府及政策**：律政司、政策局及監管機構 (證監會、金管局) 重視法律與經濟的雙重視角。"
+              ]
+            },
+            "campus": {
+              "title": "校園生活與學生體驗",
+              "content": [
+                "**主校園 (薄扶林)**：五年均於主校園。學生在商學院 (梁銶琚樓) 及法律學院 (鄭裕彤教學樓) 之間分配時間。",
+                "**雙重學會生活**：積極參與法律學會 (LawSoc) 及商學會 (BizSoc)——模擬法庭比賽、案例比賽、公司講座及聯誼活動。",
+                "**舍堂生活**：BBA&LLB 學生常選擇聖約翰學院 (學術卓越) 或大學堂 (鄰近法律及商業大樓)。",
+                "**學習小組**：由於工作量極大，課程培養緊密的學習小組。同儕支援對於在雙學位中生存至關重要。",
+                "**師友指導**：商學院及法律學院校友的雙重指導。導師包括 Magic Circle 律師行合伙人、投資銀行董事總經理及跨國企業總法律顧問。"
+              ]
+            },
+            "competitiveness": {
+              "title": "入學競爭力分析",
+              "content": [
+                "**整體難度**：極高 (5/5星)。每年約1,000-1,500人競爭~50個學額 (入學率約4%)。",
+                "**分數分佈**：最高四分位數：Best 5 = 36-38分；中位數：Best 5 = 33-35分；最低四分位數：Best 5 = 31-32分。",
+                "**科目加權策略**：英文 (x2.0) + 數學 (x1.3) + 最佳選修科 (x1.0) + 通識/公社 (x1.0) + 中文 (x1.0)。英文絕對是關鍵——大部分成功入學者英文達5**。",
+                "**面試比重**：面試佔最終入學決定約30-40%。考生必須展示他們理解工作量並對雙學位有清晰的理由。",
+                "**Band A 優勢**：Band A 第一志願是必須的。課程不考慮第二志願或較低 band。",
+                "**非聯招途徑**：國際文憑 (IB 42+/45)、GCE A-Level (A*A*A 包括英文及數學/經濟)。約10-15個學額預留予非聯招申請者。"
+              ]
+            },
+            "alumni": {
+              "title": "知名校友及教職員",
+              "content": [
+                "**張舉能法官閣下**：香港終審法院首席法官。港大法律畢業生，體現了課程培養的法律卓越。",
+                "**湯家驊資深大律師**：資深大律師及行政會議成員。具有深厚商業理解的著名公法倡導者。",
+                "**李國寶博士**：前東亞銀行主席。展示法律培訓如何在高層次補充商業領導力。",
+                "**陳文敏教授資深大律師**：前港大法律學院院長，憲法學者。首位華人院長，象徵課程對卓越的追求。",
+                "**李澤鉅**：長和及長實集團主席。香港最有權力的商業領袖之一，展示跨學科商業法律才幹的價值。"
+              ]
+            },
+            "scholarships": {
+              "title": "獎學金及經濟援助",
+              "content": [
+                "**港大基金入學獎學金**：頒予 DSE 成績卓越者 (通常4科5**或以上，尤其英文)。全額或半額學費資助。",
+                "**雙學位獎學金**：BBA&LLB 學生的特別獎學金，按學術成績涵蓋部分學費 (每年港幣30,000-60,000元)。",
+                "**法律學院獎學金**：頒予模擬法庭成就、法律研究潛質及學術表現 (每年港幣10,000-50,000元)。",
+                "**商學院優異獎項**：頒予商業相關活動的學術卓越及領導力 (每年港幣20,000-50,000元)。",
+                "**政府資助及貸款**：NMTSS 每年提供最多港幣33,200元。專上學生資助計劃提供低息貸款。鑑於五年學制，財務規劃很重要。"
+              ]
+            },
+            "tips": {
+              "title": "Ace Sir BBA&LLB 攻略",
+              "content": [
+                "**現實評估工作量**：這是五年內完成兩個學位。你會比單學位同學擁有更少的空閒時間、更少的社交活動及更多的通宵達旦。確保你真正想要法律及商業——不只是名字的光環。",
+                "**英文至少達 5* 水平**：如果你的英文未達 5* 水平，這課程會極為困難。法律閱讀量非常龐大——每週數百頁密集的法律文本。",
+                "**具交匯思維**：這學位的價值不在於成為好律師或好商人——而在於理解法律規則如何塑造商業決策、交易結構及風險管理。從第一天起培養這種跨學科思維。",
+                "**盡早規劃職業**：第三年決定是否修讀 PCLL (法律執業) 或直接進入商界。這決定你的選修課程、實習目標及人脈重點。太長時間試圖保持兩扇門敞開會削弱你的準備。",
+                "**建立耐力**：每天閱讀長而複雜的文本。練習清晰簡潔地寫作。吸收大量資訊並快速產出高質量分析的能力，是這學位培養的核心技能。"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "JS6951": {
+      "id": "hku-eng-cs",
+      "code": "JS6951",
+      "name": "工程學士(計算機科學) (BEng(CompSc))",
+      "university": "HKU",
+      "content": {
+        "en": {
+          "sections": {
+            "admission": {
+              "title": "Eligibility & Admission Criteria (DSE)",
+              "content": [
+                "**Academic Threshold**: HKU Computer Science is a rigorous programme combining theoretical foundations with cutting-edge technology. Admission requires Best 5 scores around 27-29 (standard scale).",
+                "**Mathematics (Extended Part)**: M1 or M2 is strongly recommended. The programme assumes strong foundations in discrete mathematics, calculus, and linear algebra. Students without M1/M2 may struggle with advanced algorithm analysis.",
+                "**Information & Communication Technology**: ICT provides useful background in programming logic, though it is not required — many successful applicants come without ICT and learn programming from scratch.",
+                "**Physics**: Helpful for understanding computer hardware, digital logic, and the physical foundations of computing.",
+                "**No Interview**: Admission is score-based. Focus on maximising your Best 5, especially in Maths and science subjects."
+              ]
+            },
+            "curriculum": {
+              "title": "Programme Structure & Curriculum",
+              "content": [
+                "**Year 1 - Programming & Mathematical Foundations**: Introduction to programming (Python, Java), discrete mathematics, calculus, and linear algebra. Problem-solving and computational thinking are emphasised from day one.",
+                "**Year 2 - Data Structures & Algorithms**: The foundation of all computing — sorting, searching, graph algorithms, dynamic programming, and complexity analysis (Big-O notation).",
+                "**Year 3 - Systems & Software Engineering**: Operating systems, computer networks, databases, and software engineering principles (design patterns, testing, version control, agile methodologies).",
+                "**Year 4 - AI & Specialisation**: Machine learning, deep learning, natural language processing, computer vision, and specialised electives in cybersecurity, blockchain, or game development.",
+                "**Capstone Project**: Year-long team project developing real software systems for industry partners or research labs. Recent projects include AI chatbots, trading algorithms, and medical imaging systems.",
+                "**Research Opportunities**: HKU CS has strong research in AI/ML, cybersecurity, and human-computer interaction. Undergraduate students can join research groups and co-author papers at top conferences (NeurIPS, ICML, CVPR).",
+                "**Industry Collaboration**: Partnerships with Google, Microsoft, Meta, and local tech companies provide internship opportunities, guest lectures, and real-world project sponsorships."
+              ]
+            },
+            "career": {
+              "title": "Career Pathways & Prospects",
+              "content": [
+                "**Software Engineering**: Google, Meta, Microsoft, ByteDance, and Alibaba recruit HKU CS graduates for frontend, backend, full-stack, and mobile development roles.",
+                "**Quantitative Development**: Banks (Goldman Sachs, Morgan Stanley, JP Morgan) and hedge funds (Citadel, Two Sigma) hire CS graduates to build trading systems, risk engines, and market data infrastructure.",
+                "**AI & Machine Learning**: Machine learning engineer and data scientist roles at AI labs (OpenAI, DeepMind), tech companies, and research institutions. HKU CS graduates are competitive for top AI PhD programmes.",
+                "**Cybersecurity**: Growing demand for security engineers, penetration testers, and threat analysts at banks, government, and cybersecurity firms.",
+                "**Startups & Entrepreneurship**: Hong Kong's growing tech ecosystem offers opportunities to join early-stage startups or launch ventures in fintech, healthtech, edtech, and SaaS.",
+                "**Graduate Studies**: Many graduates pursue Master's or PhD programmes at MIT, Stanford, CMU, Berkeley, and ETH Zurich. Strong research exposure at HKU makes graduates competitive applicants."
+              ]
+            },
+            "campus": {
+              "title": "Campus Life & Student Experience",
+              "content": [
+                "**Main Campus (Pok Fu Lam)**: All four years at the Main Campus. The CS Department is in the Chow Yei Ching Building, with modern computer labs, collaboration spaces, and a dedicated student common room.",
+                "**Computer Labs**: 24-hour access to high-performance computing clusters, GPU servers for deep learning, and specialised labs for robotics, VR/AR, and embedded systems.",
+                "**Hall Life**: CS students are distributed across all halls. Popular choices include University Hall (proximity to the CS building), St. John's College (academic community), and Lee Shau Hall.",
+                "**Computer Science Society (CSS)**: Active student society organising hackathons, coding competitions, tech talks by industry professionals, and the annual CSS Ball.",
+                "**Mentorship**: Academic advisors from the CS faculty and industry mentors from major tech companies provide guidance on course selection, internships, and career planning."
+              ]
+            },
+            "competitiveness": {
+              "title": "Admission Competitiveness Analysis",
+              "content": [
+                "**Overall Difficulty**: High (4/5 stars). Approximately 1,500-2,000 applicants compete for ~150 places annually (~8% admission rate).",
+                "**Score Distribution**: Top quartile: Best 5 = 30-32; Median: Best 5 = 27-29; Bottom quartile: Best 5 = 25-26.",
+                "**Subject Weighting Strategy**: Maths (x1.5) + Best Elective (x1.0) + English (x1.0) + LS/CSD (x1.0) + Chinese (x1.0). Mathematics is the most critical subject — strong performance in M1/M2 significantly boosts admission chances.",
+                "**No Interview**: Purely score-based admission means there is no subjectivity. Every point in Best 5 matters.",
+                "**Band A Advantage**: Band A Choice 1 receives strong priority. Choice 2 has viable chances. Lower bands are possible but less likely.",
+                "**Non-JUPAS Pathway**: IB (38+/45 with HL Maths), GCE A-Levels (AAA including Maths/Physics). Approximately 20-30 places reserved for non-JUPAS entrants."
+              ]
+            },
+            "alumni": {
+              "title": "Notable Alumni & Faculty",
+              "content": [
+                "**Professor Victor Li**: Chair of Computer Science, expert in wireless networks and mobile computing. Fellow of the IEEE and HKIE.",
+                "**Professor Reynold Cheng**: Leading researcher in data mining and big data analytics. Published extensively in top-tier database conferences (SIGMOD, VLDB).",
+                "**Professor Michael Lyu**: World-renowned expert in software reliability engineering and machine learning systems. Fellow of the IEEE, ACM, and AAAS.",
+                "**Dr. Andy Chun**: AI pioneer in Hong Kong, former CTO at City University, and prominent advocate for AI ethics and responsible innovation.",
+                "**Professor Dirk Schnieders**: Expert in cybersecurity and cryptography. Leading research in blockchain security and privacy-preserving technologies."
+              ]
+            },
+            "scholarships": {
+              "title": "Scholarships & Financial Aid",
+              "content": [
+                "**HKU Foundation Entrance Scholarships**: Awarded to students with exceptional DSE results (typically 5** in 3+ subjects, especially Maths). Full or half tuition coverage.",
+                "**Computer Science Department Scholarships**: For academic excellence, programming competition achievements, and research potential (HKD 10,000-30,000/year).",
+                "**Tech Company Scholarships**: Google, Microsoft, and local tech firms offer scholarships to outstanding CS students with internship guarantees.",
+                "**Hackathon & Competition Grants**: Funding for students participating in international programming competitions (ICPC, Google Code Jam) and hackathons.",
+                "**Government Grants & Loans**: NMTSS provides up to HKD 33,200/year. Tertiary Student Finance Scheme offers low-interest loans."
+              ]
+            },
+            "tips": {
+              "title": "Ace Sir's Computer Science Strategy",
+              "content": [
+                "**Code Before You Arrive**: Start with Python or Java. Being able to write clean, working code before Year 1 puts you ahead of 80% of classmates. Complete online courses on Coursera or freeCodeCamp.",
+                "**Maths is the Secret Weapon**: Discrete maths, probability, and linear algebra are the languages of advanced CS. Do not just pass — master them. These subjects separate software engineers from computer scientists.",
+                "**Build Projects, Not Just Grades**: Employers care more about your GitHub than your GPA. Build a web app, contribute to open source, train a neural network, or develop a mobile game. Show you can SHIP code.",
+                "**Join Competitions Early**: Participate in ICPC, Google Code Jam, or local hackathons. Competition programming sharpens your algorithmic thinking and looks impressive on your CV.",
+                "**Explore Research in Year 2**: Approach professors whose research interests you. Even unpaid research assistant positions lead to publications, recommendations, and PhD opportunities. HKU CS faculty are approachable and welcome motivated undergraduates."
+              ]
+            }
+          }
+        },
+        "zh": {
+          "sections": {
+            "admission": {
+              "title": "入學要求與計分詳情 (DSE)",
+              "content": [
+                "**學術門檻**：港大計算機科學是一個結合理論基礎與尖端技術的嚴謹課程。入學通常需要 Best 5 達 27-29 分。",
+                "**數學 (延伸部分)**：強烈建議修讀 M1 或 M2。課程假設學生具備離散數學、微積分及線性代數的穩固基礎。沒有 M1/M2 的學生可能在進階算法分析中遇到困難。",
+                "**資訊及通訊科技**：資訊科技提供有用的編程邏輯背景，但非必需——很多成功入學者沒有修讀 ICT，從零開始學習編程。",
+                "**物理**：對理解電腦硬件、數碼邏輯及運算的物理基礎有幫助。",
+                "**無面試**：純分數入學。專注於最大化 Best 5，特別是數學及理科科目。"
+              ]
+            },
+            "curriculum": {
+              "title": "課程結構與內容",
+              "content": [
+                "**第一年 - 編程及數學基礎**：編程入門 (Python、Java)、離散數學、微積分及線性代數。從第一天起強調問題解決及運算思維。",
+                "**第二年 - 數據結構及算法**：所有運算的基礎——排序、搜索、圖算法、動態規劃及複雜度分析 (Big-O 記號)。",
+                "**第三年 - 系統及軟件工程**：操作系統、電腦網絡、數據庫及軟件工程原則 (設計模式、測試、版本控制、敏捷方法)。",
+                "**第四年 - 人工智能及專修**：機器學習、深度學習、自然語言處理、電腦視覺，以及網絡安全、區塊鏈或遊戲開發的專修選修。",
+                "**畢業專題**：全年團隊項目，為業界伙伴或研究實驗室開發真實軟件系統。近期項目包括人工智能聊天機器人、交易算法及醫學影像系統。",
+                "**研究機會**：港大計算機科學在人工智能/機器學習、網絡安全及人機互動方面有強大研究。本科生可加入研究小組並在頂尖會議 (NeurIPS、ICML、CVPR) 共同發表論文。",
+                "**業界合作**：與 Google、微軟、Meta 及本地科技公司的合作提供實習機會、業界專家講座及真實項目贊助。"
+              ]
+            },
+            "career": {
+              "title": "職業前景與出路",
+              "content": [
+                "**軟件工程**：Google、Meta、微軟、字節跳動及阿里巴巴聘請港大計算機科學畢業生擔任前端、後端、全端及流動開發職位。",
+                "**量化開發**：銀行 (高盛、摩根士丹利、摩根大通) 及對沖基金 (Citadel、Two Sigma) 聘請計算機科學畢業生建立交易系統、風險引擎及市場數據基礎設施。",
+                "**人工智能與機器學習**：人工智能實驗室 (OpenAI、DeepMind)、科技公司及研究機構的機器學習工程師及數據科學家職位。港大計算機科學畢業生對頂尖人工智能博士課程具競爭力。",
+                "**網絡安全**：銀行、政府及網絡安全公司對安全工程師、滲透測試員及威脅分析師的需求日益增長。",
+                "**初創及創業**：香港日益增長的科技生態系統提供加入早期初創或創辦金融科技、健康科技、教育科技及 SaaS 企業的機會。",
+                "**深造研究**：很多畢業生到 MIT、史丹福、CMU、伯克利及蘇黎世聯邦理工修讀碩士或博士課程。港大的強大研究 exposure 使畢業生成為具競爭力的申請者。"
+              ]
+            },
+            "campus": {
+              "title": "校園生活與學生體驗",
+              "content": [
+                "**主校園 (薄扶林)**：四年均於主校園。計算機科學系位於周亦卿樓，設有現代化電腦實驗室、協作空間及專用學生公共休息室。",
+                "**電腦實驗室**：24小時開放高性能運算集群、深度學習 GPU 伺服器，以及機械人、VR/AR 及嵌入式系統的專門實驗室。",
+                "**舍堂生活**：計算機科學學生分佈於所有舍堂。熱門選擇包括大學堂 (鄰近計算機科學大樓)、聖約翰學院 (學術社群) 及李兆基堂。",
+                "**計算機科學學會 (CSS)**：活躍的學生學會，舉辦黑客松、編程比賽、業界專家科技講座及年度 CSS 舞會。",
+                "**師友指導**：計算機科學學院的學術導師及主要科技公司的業界導師提供課程選擇、實習及職業規劃指導。"
+              ]
+            },
+            "competitiveness": {
+              "title": "入學競爭力分析",
+              "content": [
+                "**整體難度**：高 (4/5星)。每年約1,500-2,000人競爭~150個學額 (入學率約8%)。",
+                "**分數分佈**：最高四分位數：Best 5 = 30-32分；中位數：Best 5 = 27-29分；最低四分位數：Best 5 = 25-26分。",
+                "**科目加權策略**：數學 (x1.5) + 最佳選修科 (x1.0) + 英文 (x1.0) + 通識/公社 (x1.0) + 中文 (x1.0)。數學是最關鍵的科目——M1/M2 的優異表現顯著提升入學機會。",
+                "**無面試**：純分數入學意味沒有主觀因素。Best 5 每一分都很重要。",
+                "**Band A 優勢**：Band A 第一志願獲強烈優先考慮。第二志願有可行機會。較低 band 有可能但機會較少。",
+                "**非聯招途徑**：國際文憑 (IB 38+/45 包括高等數學)、GCE A-Level (AAA 包括數學/物理)。約20-30個學額預留予非聯招申請者。"
+              ]
+            },
+            "alumni": {
+              "title": "知名校友及教職員",
+              "content": [
+                "**李偉文教授**：計算機科學系系主任，無線網絡及流動運算專家。IEEE 及 HKIE 院士。",
+                "**鄭振剛教授**：數據挖掘及大數據分析的領先研究者。於頂尖數據庫會議 (SIGMOD、VLDB) 廣泛發表論文。",
+                "**呂榮聰教授**：軟件可靠性工程及機器學習系統的世界知名專家。IEEE、ACM 及 AAAS 院士。",
+                "**陳漢偉博士**：香港人工智能先驅，前城市大學首席資訊官，人工智能倫理及負責任創新的著名倡導者。",
+                "**Dirk Schnieders 教授**：網絡安全及密碼學專家。領導區塊鏈安全及隱私保護技術研究。"
+              ]
+            },
+            "scholarships": {
+              "title": "獎學金及經濟援助",
+              "content": [
+                "**港大基金入學獎學金**：頒予 DSE 成績卓越者 (通常3科5**或以上，尤其數學)。全額或半額學費資助。",
+                "**計算機科學系獎學金**：頒予學術卓越、編程比賽成就及研究潛質 (每年港幣10,000-30,000元)。",
+                "**科技公司獎學金**：Google、微軟及本地科技公司為優異計算機科學學生提供獎學金及實習保證。",
+                "**黑客松及比賽資助**：為參加國際編程比賽 (ICPC、Google Code Jam) 及黑客松的學生提供資助。",
+                "**政府資助及貸款**：NMTSS 每年提供最多港幣33,200元。專上學生資助計劃提供低息貸款。"
+              ]
+            },
+            "tips": {
+              "title": "Ace Sir 計算機科學攻略",
+              "content": [
+                "**入學前開始編程**：從 Python 或 Java 開始。能夠在入學前編寫整潔、可運行的代碼，會讓你領先 80% 的同學。完成 Coursera 或 freeCodeCamp 的線上課程。",
+                "**數學是秘密武器**：離散數學、概率及線性代數是進階計算機科學的語言。不要只求及格——要精通。這些科目區分軟件工程師與計算機科學家。",
+                "**建立項目，不只追求成績**：僱主更關心你的 GitHub 而非 GPA。建立網頁應用、為開源項目貢獻、訓練神經網絡或開發流動遊戲。展示你能交付代碼。",
+                "**盡早參加比賽**：參加 ICPC、Google Code Jam 或本地黑客松。競賽編程磨練你的算法思維，並在履歷上令人印象深刻。",
+                "**第二年探索研究**：接觸研究興趣與你相符的教授。即使是無薪研究助理職位也能帶來論文發表、推薦信及博士機會。港大計算機科學教授平易近人，歡迎有動機的本科生。"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "JS6963": {
+      "id": "hku-eng-civil",
+      "code": "JS6963",
+      "name": "土木工程學士 (BEng(Civil))",
+      "university": "HKU",
+      "content": {
+        "en": {
+          "sections": {
+            "admission": {
+              "title": "Eligibility & Admission Criteria (DSE)",
+              "content": [
+                "**Academic Threshold**: Civil Engineering at HKU is a professional-accredited programme with strong industry links. Admission requires Best 5 scores around 24-26 (standard scale).",
+                "**Mathematics (Extended Part)**: M1 or M2 is highly recommended. Structural analysis, fluid mechanics, and geotechnical engineering all require advanced calculus and differential equations.",
+                "**Physics**: Essential for understanding statics, dynamics, material behaviour, and structural mechanics. A strong physics background gives a significant advantage.",
+                "**Chemistry**: Useful for understanding construction materials, concrete technology, and environmental engineering applications.",
+                "**No Interview**: Score-based admission. Focus on maximising your Best 5 with strong performance in Maths and Physics."
+              ]
+            },
+            "curriculum": {
+              "title": "Programme Structure & Curriculum",
+              "content": [
+                "**Year 1 - Engineering Foundations**: Engineering mathematics, physics, chemistry, and introduction to civil engineering. Basic surveying and engineering drawing.",
+                "**Year 2 - Core Engineering**: Statics, dynamics, mechanics of materials, fluid mechanics, and structural analysis. Introduction to reinforced concrete and steel design.",
+                "**Year 3 - Specialised Subjects**: Geotechnical engineering, transportation engineering, water resources, and environmental engineering. Design projects increase in complexity.",
+                "**Year 4 - Advanced Design & Professional Practice**: Advanced structural design, construction management, building regulations, and a capstone design project. Preparation for HKIE graduate membership.",
+                "**Structural Engineering**: Design of buildings, bridges, and towers using steel, concrete, and composite materials. Learn to calculate loads, stresses, and deflections using industry-standard software (ETABS, SAP2000).",
+                "**Geotechnical Engineering**: Study soil mechanics, foundation design, slope stability, and ground improvement — critical for Hong Kong's hilly terrain and reclaimed land.",
+                "**Industry Projects**: Capstone projects are often sponsored by major contractors or government departments. Recent projects include MTR station design, highway interchange optimisation, and sustainable drainage systems."
+              ]
+            },
+            "career": {
+              "title": "Career Pathways & Prospects",
+              "content": [
+                "**Consulting Engineers**: Join firms like Arup, AECOM, Ove Arup, and Fugro to design iconic structures worldwide. Path to professional engineer (PE) registration.",
+                "**Government & Public Works**: The Civil Engineering and Development Department (CEDD), Drainage Services Department, Water Supplies Department, and Housing Department recruit heavily. Stable career with clear progression.",
+                "**Construction Management**: Project management roles at major contractors like Gammon, China State Construction, Leighton Asia, and Dragages. Responsible for delivering multi-billion dollar infrastructure projects.",
+                "**Specialist Contractors**: Foundation engineering (piling, caissons), tunneling (TBM, drill-and-blast), and marine works contractors offer technically challenging and well-compensated roles.",
+                "**Sustainable Infrastructure**: Growing demand for engineers specialising in green building design, renewable energy infrastructure, climate adaptation, and smart city technologies.",
+                "**Graduate Studies**: Master's programmes in structural engineering, geotechnical engineering, or construction management at Imperial College, ETH Zurich, MIT, or local institutions."
+              ]
+            },
+            "campus": {
+              "title": "Campus Life & Student Experience",
+              "content": [
+                "**Main Campus (Pok Fu Lam)**: All four years at the Main Campus. The Civil Engineering Department is in the Haking Wong Building, with dedicated labs for structures, geotechnics, hydraulics, and materials testing.",
+                "**Engineering Labs**: Structural testing lab with full-scale beam and column testing, geotechnical centrifuge, hydraulic flume, and materials testing facilities.",
+                "**Hall Life**: Engineering students often choose University Hall (proximity to engineering buildings), St. John's College (strong academic support), or Lady Ho Tung Hall.",
+                "**Engineering Society (EngSoc)**: Organises industry visits, engineering competitions, charity build projects, sports teams, and the annual EngBall. Strong connections with professional engineering institutions.",
+                "**Mentorship**: Academic advisors from the Civil Engineering faculty and professional mentors from consulting firms and contractors provide career guidance and internship opportunities."
+              ]
+            },
+            "competitiveness": {
+              "title": "Admission Competitiveness Analysis",
+              "content": [
+                "**Overall Difficulty**: Moderate-High (3.5/5 stars). Approximately 800-1,000 applicants compete for ~120 places annually (~12% admission rate).",
+                "**Score Distribution**: Top quartile: Best 5 = 27-29; Median: Best 5 = 24-26; Bottom quartile: Best 5 = 22-23.",
+                "**Subject Weighting Strategy**: Maths (x1.5) + Physics (x1.3) + Best Elective (x1.0) + English (x1.0) + LS/CSD (x1.0). Mathematics and Physics are the most critical subjects.",
+                "**No Interview**: Purely score-based admission. Strong performance in Maths and Physics is the key to admission.",
+                "**Band A Advantage**: Band A Choice 1 receives priority. Choice 2 has good chances. Lower bands are still viable for this programme.",
+                "**Non-JUPAS Pathway**: IB (34+/45), GCE A-Levels (ABB including Maths/Physics). Approximately 15-20 places reserved for non-JUPAS entrants."
+              ]
+            },
+            "alumni": {
+              "title": "Notable Alumni & Faculty",
+              "content": [
+                "**Professor Wai-Fah Chen**: World-renowned structural engineer, former Chair of Civil Engineering at HKU. Pioneer in bridge engineering and structural mechanics.",
+                "**Ir. Dr. Edwin Lee**: Former Director of Civil Engineering and Development Department (CEDD). Led major infrastructure projects including the Hong Kong-Zhuhai-Macau Bridge.",
+                "**Professor Jian-Guo Dai**: Expert in geotechnical engineering and underground construction. Leading researcher in tunneling and foundation engineering.",
+                "**Ir. Raymond Chan**: Former President of the Hong Kong Institution of Engineers (HKIE). Prominent advocate for engineering professionalism and standards.",
+                "**Professor Michael Yang**: Expert in environmental engineering and sustainable infrastructure. Leading research in water treatment and waste management technologies."
+              ]
+            },
+            "scholarships": {
+              "title": "Scholarships & Financial Aid",
+              "content": [
+                "**HKU Foundation Entrance Scholarships**: Awarded to students with strong DSE results. Full or half tuition coverage.",
+                "**Engineering Department Scholarships**: For academic excellence, design project achievements, and contribution to engineering community (HKD 10,000-25,000/year).",
+                "**Professional Institution Scholarships**: HKIE and other engineering institutions offer scholarships to promising students (HKD 5,000-15,000/year).",
+                "**Site Visit & Field Trip Grants**: Funding for overseas field trips and site visits to major infrastructure projects (up to HKD 10,000 per trip).",
+                "**Government Grants & Loans**: NMTSS provides up to HKD 33,200/year. Tertiary Student Finance Scheme offers low-interest loans."
+              ]
+            },
+            "tips": {
+              "title": "Ace Sir's Civil Engineering Strategy",
+              "content": [
+                "**M2 is Your Friend**: The calculus in M2 directly applies to structural analysis, fluid mechanics, and geotechnical engineering. Do not skip it — it is the mathematical language of engineering.",
+                "**Visit Construction Sites**: Hong Kong is a living laboratory — the Third Runway, the Lantau Tomorrow Vision, the Central-Wan Chai Bypass, and the MTR extensions. Go see engineering in action. Understanding how theory becomes reality is what separates good engineers from great ones.",
+                "**Get Your Hands Dirty**: Join the concrete canoe competition, the steel bridge competition, or summer internships with contractors. Civil engineering is about BUILDING things, not just calculating them. Employers value practical experience enormously.",
+                "**Learn Industry Software**: Familiarise yourself with AutoCAD, ETABS, SAP2000, and Primavera before you arrive. Being able to produce structural drawings and analysis models gives you a head start.",
+                "**Understand the Professional Pathway**: Know what HKIE graduate membership is, what the Scheme A training involves, and how to become a Registered Professional Engineer (RPE). Having a clear career roadmap shows maturity and commitment."
+              ]
+            }
+          }
+        },
+        "zh": {
+          "sections": {
+            "admission": {
+              "title": "入學要求與計分詳情 (DSE)",
+              "content": [
+                "**學術門檻**：港大土木工程是獲專業認可的課程，與業界聯繫緊密。入學通常需要 Best 5 達 24-26 分。",
+                "**數學 (延伸部分)**：強烈建議修讀 M1 或 M2。結構分析、流體力學及岩土工程均需要高等微積分及微分方程。",
+                "**物理**：對理解靜力學、動力學、材料行為及結構力學至關重要。強大的物理背景給你顯著優勢。",
+                "**化學**：對理解建築材料、混凝土技術及環境工程應用有幫助。",
+                "**無面試**：純分數入學。專注於在數學及物理取得優異成績，最大化 Best 5。"
+              ]
+            },
+            "curriculum": {
+              "title": "課程結構與內容",
+              "content": [
+                "**第一年 - 工程基礎**：工程數學、物理、化學及土木工程入門。基本測量及工程製圖。",
+                "**第二年 - 核心工程**：靜力學、動力學、材料力學、流體力學及結構分析。鋼筋混凝土及鋼結構設計入門。",
+                "**第三年 - 專門科目**：岩土工程、運輸工程、水資源及環境工程。設計項目複雜度增加。",
+                "**第四年 - 進階設計及專業實務**：進階結構設計、建造管理、建築法規及畢業設計專題。為 HKIE 畢業會員資格做好準備。",
+                "**結構工程**：使用鋼材、混凝土及複合材料設計建築物、橋樑及塔樓。學習使用業界標準軟件 (ETABS、SAP2000) 計算荷載、應力及撓度。",
+                "**岩土工程**：研究土力學、基礎設計、斜坡穩定性及地基改良——對香港多山地形及填海土地至關重要。",
+                "**業界項目**：畢業專題常由主要承建商或政府部門贊助。近期項目包括港鐵站設計、公路交匯處優化及可持續排水系統。"
+              ]
+            },
+            "career": {
+              "title": "職業前景與出路",
+              "content": [
+                "**顧問工程師**：加入 Arup、AECOM、奧雅納及 Fugro 等公司，設計世界各地的標誌性建築。通往專業工程師 (PE) 註冊之路。",
+                "**政府及公共工程**：土木工程拓展署 (CEDD)、渠務署、水務署及房屋署大量招聘。職業穩定，晉升路徑清晰。",
+                "**建造管理**：在金門、中國建築、禮頓亞洲及寶嘉等主要承建商擔任項目管理職位。負責交付數十億元的基建項目。",
+                "**專業分包商**：地基工程 (打樁、沉箱)、隧道工程 (TBM、鑽爆法) 及海事工程分包商提供技術挑戰性及薪酬優厚的職位。",
+                "**可持續基建**：對綠色建築設計、可再生能源基建、氣候適應及智慧城市技術專家的需求日益增長。",
+                "**深造研究**：到帝國理工、蘇黎世聯邦理工、MIT 或本地院校修讀結構工程、岩土工程或建造管理碩士課程。"
+              ]
+            },
+            "campus": {
+              "title": "校園生活與學生體驗",
+              "content": [
+                "**主校園 (薄扶林)**：四年均於主校園。土木工程系位於黃克競樓，設有結構、岩土、水力及材料測試的專門實驗室。",
+                "**工程實驗室**：結構測試實驗室配備全尺寸樑柱測試、岩土離心機、水力水槽及材料測試設施。",
+                "**舍堂生活**：工程學生常選擇大學堂 (鄰近工程大樓)、聖約翰學院 (學術支援強大) 或何東夫人紀念堂。",
+                "**工程學會 (EngSoc)**：舉辦業界參觀、工程比賽、慈善建築項目、運動隊及年度 EngBall。與專業工程機構聯繫緊密。",
+                "**師友指導**：土木工程學院的學術導師及顧問公司與承建商的專業導師提供職業指導及實習機會。"
+              ]
+            },
+            "competitiveness": {
+              "title": "入學競爭力分析",
+              "content": [
+                "**整體難度**：中高 (3.5/5星)。每年約800-1,000人競爭~120個學額 (入學率約12%)。",
+                "**分數分佈**：最高四分位數：Best 5 = 27-29分；中位數：Best 5 = 24-26分；最低四分位數：Best 5 = 22-23分。",
+                "**科目加權策略**：數學 (x1.5) + 物理 (x1.3) + 最佳選修科 (x1.0) + 英文 (x1.0) + 通識/公社 (x1.0)。數學及物理是最關鍵的科目。",
+                "**無面試**：純分數入學。數學及物理的優異表現是入學關鍵。",
+                "**Band A 優勢**：Band A 第一志願獲優先考慮。第二志願機會良好。較低 band 對這課程仍有可能。",
+                "**非聯招途徑**：國際文憑 (IB 34+/45)、GCE A-Level (ABB 包括數學/物理)。約15-20個學額預留予非聯招申請者。"
+              ]
+            },
+            "alumni": {
+              "title": "知名校友及教職員",
+              "content": [
+                "**陳惠發教授**：世界知名結構工程師，前港大土木工程系系主任。橋樑工程及結構力學先驅。",
+                "**李 Edwin 工程師博士**：前土木工程拓展署 (CEDD) 署長。領導港珠澳大橋等主要基建項目。",
+                "**戴建國教授**：岩土工程及地下建造專家。隧道工程及地基工程的領先研究者。",
+                "**陳 Raymond 工程師**：前香港工程師學會 (HKIE) 會長。工程專業精神及標準的著名倡導者。",
+                "**楊 Michael 教授**：環境工程及可持續基建專家。領導水處理及廢物管理技術研究。"
+              ]
+            },
+            "scholarships": {
+              "title": "獎學金及經濟援助",
+              "content": [
+                "**港大基金入學獎學金**：頒予 DSE 成績優異者。全額或半額學費資助。",
+                "**工程學系獎學金**：頒予學術卓越、設計項目成就及對工程社群貢獻 (每年港幣10,000-25,000元)。",
+                "**專業機構獎學金**：HKIE 及其他工程機構為有潛質的學生提供獎學金 (每年港幣5,000-15,000元)。",
+                "**地盤參觀及實地考察資助**：為海外實地考察及主要基建項目地盤參觀提供資助 (每次最多港幣10,000元)。",
+                "**政府資助及貸款**：NMTSS 每年提供最多港幣33,200元。專上學生資助計劃提供低息貸款。"
+              ]
+            },
+            "tips": {
+              "title": "Ace Sir 土木工程攻略",
+              "content": [
+                "**M2 是你的朋友**：M2 的微積分直接應用於結構分析、流體力學及岩土工程。不要跳過它——它是工程的數學語言。",
+                "**參觀建築地盤**：香港是活的實驗室——三跑道、明日大嶼、中環灣仔繞道及港鐵延伸。去看看工程實踐。理解理論如何變成現實，是好工程師與卓越工程師的分水嶺。",
+                "**親自動手**：參加混凝土獨木舟比賽、鋼橋比賽或承建商暑期實習。土木工程是關於建造東西，不只是計算。僱主極度重視實務經驗。",
+                "**學習業界軟件**：入學前熟悉 AutoCAD、ETABS、SAP2000 及 Primavera。能夠製作結構圖則及分析模型會讓你領先一步。",
+                "**了解專業途徑**：了解什麼是 HKIE 畢業會員、Scheme A 培訓涉及什麼，以及如何成為註冊專業工程師 (RPE)。有清晰的職業路線圖展示成熟及承諾。"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

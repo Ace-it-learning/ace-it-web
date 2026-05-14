@@ -201,7 +201,7 @@ class ParentReportService {
 
             const result = await EmailService.sendWeeklyReport(recipients, reportData);
 
-            if (result.success) {
+            if (result.success && !result.mock && result.deliveryMode !== 'simulated') {
                 await UserProfileService.createOrUpdateProfile(uid, {
                     parent_last_report_sent: new Date().toISOString()
                 });

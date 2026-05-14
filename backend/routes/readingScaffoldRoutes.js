@@ -10,6 +10,96 @@ const express = require('express');
 const router = express.Router();
 const GenerativeAIService = require('../services/GenerativeAIService');
 
+const getFirstSentence = (text = '') => {
+  const trimmed = text.replace(/\s+/g, ' ').trim();
+  const match = trimmed.match(/^(.{40,220}?[.!?])\s/);
+  return match ? match[1] : `${trimmed.slice(0, 180)}${trimmed.length > 180 ? '...' : ''}`;
+};
+
+const inferTag = (paragraph = '', index, total) => {
+  const lower = paragraph.toLowerCase();
+  if (index === 0) return 'CONTEXT';
+  if (index === total - 1) return 'CONCLUSION';
+  if (/\b(however|nevertheless|although|despite|on the other hand|critics|whereas)\b/.test(lower)) return 'COUNTERPOINT';
+  if (/\b\d+%|\bhk\$|\baccording to\b|\bstudy\b|\bresearch\b|\bdata\b|\bexperts?\b/.test(lower)) return 'EVIDENCE';
+  return 'ELABORATES';
+};
+
+const inferConnectorType = (paragraph = '') => {
+  const lower = paragraph.toLowerCase();
+  if (/\b(however|nevertheless|although|despite|on the other hand|whereas)\b/.test(lower)) return 'HOWEVER';
+  if (/\b(for example|for instance|such as|including)\b/.test(lower)) return 'FOR_EXAMPLE';
+  if (/\b(moreover|furthermore|in addition|also)\b/.test(lower)) return 'IN_ADDITION';
+  if (/\b(therefore|thus|hence|as a result|consequently)\b/.test(lower)) return 'THEREFORE';
+  return 'ELABORATES';
+};
+
+const extractSignals = (paragraph = '') => {
+  const signals = ['however', 'nevertheless', 'although', 'despite', 'for example', 'for instance', 'such as', 'including', 'moreover', 'furthermore', 'in addition', 'therefore', 'thus', 'as a result', 'consequently'];
+  const lower = paragraph.toLowerCase();
+  return signals.filter(signal => lower.includes(signal)).slice(0, 3);
+};
+
+const buildFallbackScaffold = (paras) => {
+  const stopWords = new Set(['because', 'through', 'between', 'students', 'education', 'academic', 'paragraph', 'school', 'schools']);
+  const vocabMap = new Map();
+
+  paras.forEach((paragraph, paragraphIndex) => {
+    const words = paragraph.match(/\b[A-Za-z][A-Za-z'-]{7,}\b/g) || [];
+    words.forEach((word) => {
+      const key = word.toLowerCase();
+      if (!stopWords.has(key) && !vocabMap.has(key) && vocabMap.size < 10) {
+        vocabMap.set(key, {
+          word,
+          pos: 'word',
+          definition: 'A useful higher-level word from this passage. Use the sentence around it to infer the exact meaning.',
+          translation: '按上下文推斷',
+          position: paragraphIndex
+        });
+      }
+    });
+  });
+
+  return {
+    fallback: true,
+    vocab: Array.from(vocabMap.values()),
+    tags: paras.map((paragraph, index) => {
+      const tag = inferTag(paragraph, index, paras.length);
+      return {
+        index,
+        tag,
+        summary: {
+          en: getFirstSentence(paragraph),
+          zh: '本段重點可先從主題句、數據和轉折詞判斷。'
+        },
+        key_phrases: (paragraph.match(/\b[A-Za-z][A-Za-z'-]{5,}\b/g) || []).slice(0, 4),
+        dse_tip: {
+          en: 'Use the first and last sentence to decide the paragraph purpose before answering detail questions.',
+          zh: '先看首句和尾句判斷段落作用，再回答細節題。'
+        }
+      };
+    }),
+    connectors: paras.slice(1).map((paragraph, offset) => {
+      const to = offset + 1;
+      const type = inferConnectorType(paragraph);
+      return {
+        from: to - 1,
+        to,
+        type,
+        bridge_sentence: {
+          en: `Paragraph ${to + 1} develops the idea from paragraph ${to}.`,
+          zh: `第 ${to + 1} 段延續或發展第 ${to} 段的意思。`
+        },
+        signal_words: extractSignals(paragraph),
+        exam_insight: {
+          en: 'A DSE question may ask how this paragraph links to the previous one.',
+          zh: 'DSE 可能會問本段如何承接上一段。'
+        }
+      };
+    })
+  };
+};
+
 // --- LEVEL 1: VOCABULARY EXTRACTION ---
 router.post('/extract-vocab', async (req, res) => {
   try {
@@ -237,7 +327,11 @@ Return ONLY valid JSON:
 }`;
 
     const scaffoldData = await GenerativeAIService.generateJson(prompt, {
-      model: 'gemini-2.0-flash'
+      model: 'ace-it-flash',
+      generationConfig: {
+        maxOutputTokens: 8192,
+        temperature: 0.2
+      }
     });
 
     // Flatten result: merge AI data with our paragraph mapping
@@ -250,7 +344,23 @@ Return ONLY valid JSON:
 
   } catch (error) {
     console.error('[ReadingScaffold] Scaffold error:', error);
-    res.status(500).json({ error: 'Failed to generate scaffold', details: error.message });
+    const { passage, paragraphs } = req.body;
+    let fallbackParas = paragraphs || (passage ? passage.split(/\n\n+/).filter(p => p.trim()) : []);
+
+    if (fallbackParas.length === 1 && fallbackParas[0].length > 200) {
+      const sentences = fallbackParas[0].match(/[^.!?]+[.!?]+/g) || [fallbackParas[0]];
+      const targetParaCount = Math.min(5, Math.max(3, Math.floor(sentences.length / 3)));
+      const sentencesPerPara = Math.ceil(sentences.length / targetParaCount);
+      fallbackParas = [];
+      for (let i = 0; i < sentences.length; i += sentencesPerPara) {
+        fallbackParas.push(sentences.slice(i, i + sentencesPerPara).join(' ').trim());
+      }
+    }
+
+    res.json({
+      ...buildFallbackScaffold(fallbackParas),
+      paragraphs: fallbackParas
+    });
   }
 });
 

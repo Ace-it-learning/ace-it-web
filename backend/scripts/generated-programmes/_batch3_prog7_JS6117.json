@@ -1,0 +1,169 @@
+{
+  "code": "JS6117",
+  "nameEn": "Bachelor of Science in Marine Biology",
+  "nameZh": "海洋生物學學士",
+  "university": "HKU",
+  "faculty": "Faculty of Science",
+  "median": 25,
+  "category": "Science",
+  "en": {
+    "sections": {
+      "admission": {
+        "bullets": [
+          "Minimum DSE requirements: 4 core subjects + 2 electives with Level 3 in English and Chinese, Level 2 in Maths and Liberal Studies; Biology mandatory, Chemistry strongly preferred",
+          "Typical admission score: median 25 points (Best 6 subjects), lower quartile ~23, upper quartile ~27 — one of the more accessible science programmes at HKU",
+          "Preferred electives: Biology (essential), Chemistry (for marine chemistry and pollution studies), Geography (for coastal processes), or Combined Science; Marine-related Applied Learning accepted",
+          "Interview: Not required for standard admission; portfolio of marine conservation volunteering, diving certifications, or environmental projects may strengthen application",
+          "Alternative entry: IB (25+ points with Biology HL), GCE A-Level (ABB including Biology), SAT (1200+) with AP Environmental Science or Biology"
+        ]
+      },
+      "curriculum": {
+        "bullets": [
+          "Year 1: Marine science foundation — Oceanography, Marine Ecology, Biological Oceanography, Marine Invertebrate Zoology; laboratory practicals in specimen identification and water quality analysis (80 hours); first field trip to Sai Kung marine reserve",
+          "Year 2: Core marine biology — Marine Vertebrate Biology, Marine Botany, Fisheries Science, Marine Conservation Biology; scientific diving certification (PADI Advanced Open Water + Rescue Diver); 100 hours boat-based fieldwork",
+          "Year 3: Advanced topics and research — Marine Biotechnology, Coral Reef Ecology, Marine Pollution and Management, Climate Change Impacts on Oceans; 250-hour research placement at Swire Institute of Marine Science (SWIMS) or Agriculture, Fisheries and Conservation Department (AFCD)",
+          "Year 4: Honours research — Full-time 9-month marine research project (36 credits) at SWIMS, Mai Po Nature Reserve, or overseas marine stations (Australia, Philippines, Indonesia); thesis and oral defence; target publication in marine science journals",
+          "Research facilities: Swire Institute of Marine Science (SWIMS) at Cape d'Aguilar — dedicated marine research station with wet labs, aquaria, microscopy suite, and research vessel access; only university-owned marine station in Hong Kong",
+          "Field locations: Regular fieldwork at Tung Ping Chau Marine Park, Hoi Ha Wan Marine Park, Mai Po Marshes, and offshore waters; annual overseas field camp at coral reef stations in Southeast Asia",
+          "Accreditation: Programme aligned with Institute of Marine Engineering, Science and Technology (IMarEST); graduates eligible for IMarEST membership and marine professional pathways"
+        ]
+      },
+      "career": {
+        "bullets": [
+          "Marine Conservation: Marine conservation officer at WWF-Hong Kong, The Nature Conservancy, or AFCD; coral reef restoration specialist; marine protected area manager; starting salaries HK$22,000-30,000/month",
+          "Fisheries and Aquaculture: Fisheries officer at AFCD, aquaculture technologist at Fish Farming Association, or seafood sustainability consultant at Marine Stewardship Council (MSC); starting salaries HK$20,000-28,000/month",
+          "Environmental Consultancy: Marine environmental consultant at ERM, AECOM, or local consultancies; environmental impact assessment (EIA) for coastal developments; marine pollution assessment; starting salaries HK$24,000-32,000/month",
+          "Education and Research: Marine educator at Ocean Park, Hong Kong Maritime Museum, or NGO education centres; research assistant at universities or marine institutes; PhD for academic careers in marine science",
+          "Government and Policy: Scientific officer at Environmental Protection Department (marine team), AFCD fisheries management division, or Ocean Park Conservation Foundation; marine policy advisor",
+          "Further Studies: Master's in Marine Science (overseas: University of Queensland, Scripps, Woods Hole), Conservation Biology, or Environmental Management; PhD for research leadership in marine ecology or oceanography"
+        ]
+      },
+      "campus": {
+        "bullets": [
+          "Marine research station: Swire Institute of Marine Science (SWIMS) at Cape d'Aguilar, Hong Kong Island — 20 minutes from Main Campus; dedicated marine research facility with running seawater aquaria, microscopy suite, molecular lab, and boat mooring",
+          "Laboratories: Marine biology teaching lab at Kadoorie Biological Sciences Building (specimen preservation, dissection microscopes, water quality analysis equipment); genetics lab for marine population studies",
+          "Field equipment: Research boats (R/V Thetis), diving gear (30+ sets), underwater cameras, ROV (remotely operated vehicle), plankton nets, sediment corers, CTD profilers; maintained by SWIMS technical staff",
+          "Libraries: Main Library marine science collection; SWIMS reference library with 5,000+ marine biology volumes; online access to Marine Ecology Progress Series, Coral Reefs, Journal of Experimental Marine Biology and Ecology",
+          "Student societies: Marine Biology Society organises diving trips, beach clean-ups, marine species identification workshops, and coral monitoring volunteer programmes"
+        ]
+      },
+      "competitiveness": {
+        "bullets": [
+          "Admission statistics: ~250 applicants for ~50 places (5:1 ratio) — moderate competition; smaller cohort allows intensive fieldwork and research mentoring",
+          "Score distribution: Broad range 22-27 points accepted; holistic review values marine conservation volunteering, diving experience, and genuine passion for ocean stewardship",
+          "Biology premium: Biology Level 5+ is essential for success; Chemistry Level 4+ advantageous for marine pollution and biotechnology modules; Geography helpful for coastal ecology",
+          "Comparison with other marine programmes: HKU is the only Hong Kong university offering dedicated marine biology degree; overseas alternatives (University of Queensland, James Cook University) require full international fees",
+          "Non-JUPAS intake: ~20% of places for international students, particularly from Southeast Asia and coastal regions with marine conservation interests",
+          "Trend: Growing awareness of ocean conservation and climate change impacts on marine ecosystems; 2024 applications up 15%; coral restoration and blue economy emerging career areas"
+        ]
+      },
+      "alumni": {
+        "bullets": [
+          "Dr. Cynthia Yau (BSc 1990) — Marine Conservation Director at WWF-Hong Kong, leading coral reef restoration and marine protected area advocacy in the Pearl River Delta",
+          "Dr. David Baker (BSc 1995, PhD 2001) — Associate Professor at HKU Swire Institute of Marine Science, pioneer in Hong Kong coral reef ecology and marine biodiversity research",
+          "Ms. Karen Chan (BSc 2003) — Senior Fisheries Officer at Agriculture, Fisheries and Conservation Department, managing sustainable fisheries policy and marine park designation",
+          "Mr. Michael Leung (BSc 2008) — Founder of EcoMarine Hong Kong, social enterprise providing marine education programmes to 50,000+ students annually",
+          "Dr. Sarah Thompson (BSc 2010, PhD 2015) — Research Scientist at Australian Institute of Marine Science (AIMS), leading Great Barrier Reef climate resilience research"
+        ]
+      },
+      "scholarships": {
+        "bullets": [
+          "HKU Foundation Entrance Scholarship: Full tuition + HK$50,000/year for DSE 5** in 3+ subjects; marine biology students with strong science performance qualify",
+          "Swire Institute of Marine Science Scholarship: HK$30,000/year + guaranteed research placement at SWIMS; requires commitment to marine conservation research",
+          "WWF-Hong Kong Marine Conservation Scholarship: Full tuition for students dedicated to marine protected area management or coral reef conservation; includes WWF internship",
+          "Diving Certification Grant: HK$15,000 for PADI Advanced Open Water, Rescue Diver, and scientific diving certifications; covers equipment and training costs",
+          "Overseas Marine Research Grant: HK$40,000 for honours thesis fieldwork at overseas marine stations (Great Barrier Reef, Philippines, Indonesia); covers travel and research expenses"
+        ]
+      },
+      "tips": {
+        "bullets": [
+          "Get diving certified: PADI Open Water before university gives you a huge advantage; marine biology is fieldwork-intensive and diving skills open research opportunities",
+          "Volunteer in marine conservation: Join WWF-Hong Kong coral monitoring, AFCD marine park volunteer programmes, or beach clean-up organisations; demonstrates genuine commitment",
+          "Excel in Biology and Chemistry: These are the scientific core; Level 5+ in Biology is essential, and Chemistry helps with marine pollution and biotechnology modules",
+          "Visit SWIMS before applying: Arrange a tour of the Swire Institute of Marine Science at Cape d'Aguilar; understanding the research facilities strengthens your personal statement",
+          "Consider the career reality: Marine biology jobs often involve fieldwork in remote locations and lower starting salaries than other sciences; ensure you have genuine passion for ocean conservation"
+        ]
+      }
+    }
+  },
+  "zh": {
+    "sections": {
+      "admission": {
+        "bullets": [
+          "最低文憑試要求：4科核心科目 + 2科選修科目，英文及中文達3級，數學及通識達2級；生物必修，化學強烈建議",
+          "典型入學分數：中位數25分（最佳6科），下四分位數約23分，上四分位數約27分——港大理學院較易達標的課程之一",
+          "優先選修科目：生物（必需）、化學（海洋化學及污染研究）、地理（海岸過程）或組合科學；接受海洋相關應用學習",
+          "面試：標準入學不設面試；海洋保育義工、潛水認證或環境項目作品集可強化申請",
+          "替代入學途徑：IB（25分以上連生物高級程度）、GCE A-Level（包括生物達ABB）、SAT（1200分以上）連AP環境科學或生物"
+        ]
+      },
+      "curriculum": {
+        "bullets": [
+          "第一年：海洋科學基礎——海洋學、海洋生態學、生物海洋學、海洋無脊椎動物學；標本鑑定及水質分析實驗室實習（80小時）；首次西貢海岸公園田野考察",
+          "第二年：核心海洋生物學——海洋脊椎動物生物學、海洋植物學、漁業科學、海洋保育生物學；科學潛水認證（PADI進階開放水域+救援潛水員）；100小時船基田野工作",
+          "第三年：進階課題及研究——海洋生物科技、珊瑚礁生態學、海洋污染與管理、氣候變化對海洋影響；於太古海洋科學研究所（SWIMS）或漁農自然護理署（AFCD）進行250小時研究實習",
+          "第四年：榮譽研究——於SWIMS、米埔自然保護區或海外海洋站（澳洲、菲律賓、印尼）進行全職9個月海洋研究項目（36學分）；論文及口頭答辯；目標於海洋科學期刊發表",
+          "研究設施：鶴咀太古海洋科學研究所（SWIMS）——主校園20分鐘；專屬海洋研究設施設有流動海水水族館、顯微鏡套房、分子實驗室及船隻停泊處；香港唯一大學擁有海洋站",
+          "田野地點：定期於東平洲海岸公園、海下灣海岸公園、米埔沼澤及離岸水域田野工作；每年東南亞珊瑚礁站海外考察營",
+          "認證：課程符合英國海洋工程科學與技術學會（IMarEST）；畢業生符合IMarEST會員及海洋專業途徑資格"
+        ]
+      },
+      "career": {
+        "bullets": [
+          "海洋保育：世界自然基金會香港分會、大自然保護協會或漁農自然護理署海洋保育主任；珊瑚礁修復專家；海洋保護區經理；起薪每月22,000-30,000港元",
+          "漁業及水產養殖：漁農自然護理署漁業主任、魚類養殖協會水產養殖技術員或海洋管理委員會（MSC）海鮮可持續發展顧問；起薪每月20,000-28,000港元",
+          "環境顧問：ERM、艾奕康或本地顧問公司海洋環境顧問；海岸發展環境影響評估（EIA）；海洋污染評估；起薪每月24,000-32,000港元",
+          "教育及研究：海洋公園、香港海事博物館或非政府機構教育中心海洋教育員；大學或海洋研究所研究助理；學術職業需海洋科學博士",
+          "政府及政策：環境保護署（海洋組）、漁農自然護理署漁業管理分部或海洋公園保育基金科學主任；海洋政策顧問",
+          "進修：海外海洋科學碩士（昆士蘭大學、Scripps、Woods Hole）、保育生物學或環境管理碩士；海洋生態學或海洋學研究領導需博士"
+        ]
+      },
+      "campus": {
+        "bullets": [
+          "海洋研究站：香港島鶴咀太古海洋科學研究所（SWIMS）——主校園20分鐘；專屬海洋研究設施設有流動海水水族館、顯微鏡套房、分子實驗室及船隻停泊處",
+          "實驗室：嘉道理生物科學大樓海洋生物學教學實驗室（標本保存、解剖顯微鏡、水質分析設備）；海洋族群研究遺傳學實驗室",
+          "田野設備：研究船（R/V Thetis）、潛水裝備（30多套）、水下相機、遙控潛水器（ROV）、浮游生物網、沉積物採樣器、CTD剖面儀；由SWIMS技術員維護",
+          "圖書館：主圖書館海洋科學藏書；SWIMS參考圖書館藏有5,000多冊海洋生物學書籍；可線上使用Marine Ecology Progress Series、Coral Reefs、Journal of Experimental Marine Biology and Ecology",
+          "學生學會：海洋生物學學會組織潛水旅行、海灘清潔、海洋物種鑑定工作坊及珊瑚監測義工計劃"
+        ]
+      },
+      "competitiveness": {
+        "bullets": [
+          "入學統計：約250人申請，約50個學額（5:1比例）——中等競爭；較小班級容許密集田野工作及研究導師指導",
+          "分數分佈：廣泛接受22-27分；整體評審重視海洋保育義工、潛水經驗及對海洋管理的真誠熱誠",
+          "生物溢價：生物達5級以上對成功至關重要；化學達4級以上對海洋污染及生物科技單元有優勢；地理對海岸生態學有幫助",
+          "與其他海洋課程比較：港大是香港唯一提供專屬海洋生物學學位的大學；海外替代選擇（昆士蘭大學、詹姆士庫克大學）需全額國際學費",
+          "非聯招收生：約20%學額予國際學生，尤其中南亞及沿海地區有海洋保育興趣者",
+          "趨勢：海洋保育意識及氣候變化對海洋生態系統影響日益增長；2024年申請增加15%；珊瑚修復及藍色經濟為新興職業領域"
+        ]
+      },
+      "alumni": {
+        "bullets": [
+          "邱芷茵博士（1990年海洋生物學學士）——世界自然基金會香港分會海洋保育總監，領導珠江口珊瑚礁修復及海洋保護區倡議",
+          "貝大衛博士（1995年海洋生物學學士，2001年博士）——港大太古海洋科學研究所副教授，香港珊瑚礁生態學及海洋生物多樣性研究先驅",
+          "陳嘉琳女士（2003年海洋生物學學士）——漁農自然護理署高級漁業主任，管理可持續漁業政策及海岸公園指定",
+          "梁米高先生（2008年海洋生物學學士）——EcoMarine Hong Kong創辦人，社會企業為每年50,000多名學生提供海洋教育計劃",
+          "湯莎拉博士（2010年海洋生物學學士，2015年博士）——澳洲海洋科學研究所（AIMS）研究科學家，領導大堡礁氣候韌性研究"
+        ]
+      },
+      "scholarships": {
+        "bullets": [
+          "港大基金入學獎學金：全額學費 + 每年50,000港元（文憑試3科以上5**）；科學表現強的海洋生物學生符合資格",
+          "太古海洋科學研究所獎學金：每年30,000港元 + 保證SWIMS研究實習；需承諾海洋保育研究",
+          "世界自然基金會香港分會海洋保育獎學金：為承諾海洋保護區管理或珊瑚礁保育者提供全額學費；包括WWF實習",
+          "潛水認證資助：15,000港元供PADI進階開放水域、救援潛水員及科學潛水認證；涵蓋裝備及培訓費用",
+          "海外海洋研究資助：40,000港元供海外海洋站（大堡礁、菲律賓、印尼）榮譽論文田野工作；涵蓋旅費及研究開支"
+        ]
+      },
+      "tips": {
+        "bullets": [
+          "取得潛水認證：入學前取得PADI開放水域帶來巨大優勢；海洋生物學田野工作密集，潛水技能開啟研究機會",
+          "參與海洋保育義工：加入世界自然基金會香港分會珊瑚監測、漁農自然護理署海岸公園義工計劃或海灘清潔組織；展示真誠承諾",
+          "精通生物及化學：這是科學核心；生物達5級以上至關重要，化學對海洋污染及生物科技單元有幫助",
+          "申請前參觀SWIMS：安排參觀鶴咀太古海洋科學研究所；了解研究設施強化個人陳述",
+          "考慮職業現實：海洋生物學工作常涉及偏遠地點田野工作及較其他科學低的起薪；確保你對海洋保育有真誠熱誠"
+        ]
+      }
+    }
+  }
+}

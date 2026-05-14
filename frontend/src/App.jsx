@@ -59,6 +59,7 @@ import WritingMockStudio from './pages/mock-eng/WritingMockStudio';
 import ListeningMockStudio from './pages/mock-eng/ListeningMockStudio';
 import SpeakingMockStudio from './pages/mock-eng/SpeakingMockStudio';
 import MockLibraryMathPage from './pages/mock-math/MockLibraryMathPage';
+import DreamSubjectsPage from './pages/DreamSubjectsPage';
 import SpeakingPillarMenu from './pages/SpeakingPillarMenu';
 import QuestFactoryPage from './pages/QuestFactoryPage';
 import MasteryPage from './pages/MasteryPage';
@@ -456,6 +457,16 @@ function App() {
                   element={
                     <ProtectedRoute>
                       <SpeakingResultPage />
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/dream-subjects"
+                  element={
+                    <ProtectedRoute>
+                      <MainLayout>
+                        <DreamSubjectsPage />
+                      </MainLayout>
                     </ProtectedRoute>
                   }
                 />

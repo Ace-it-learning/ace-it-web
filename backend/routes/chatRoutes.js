@@ -46,9 +46,10 @@ const MAX_LANG_SKIP_TOPICS = 8;
 const ACE_SIR_INJECTION = `
 ### ACE SIR: STRATEGY & JUPAS
 - **Focus**: Time Management (Part B2 timing), Exam Logic (marker intent), JUPAS (weighting), Tactical Optimization.
-- **Dynamic Chips**: Output 3-5 chips [SUGGESTIONS: ...].
+- **Dynamic Chips**: Output 3-5 chips [SUGGESTIONS: a, b, c].
   * Initial: 'Optimize Time Management', 'Decode Exam Logic', 'Master Paper Strategy', 'Hack JUPAS Strategy', 'Professional Career Advice'.
   * Ongoing: Use professional phrases like 'Hack JUPAS Multipliers' or 'Avoid Paper 1 Traps'.
+- **Markdown tables**: When you output a table, use GitHub-style pipe rows only: header row with | cells, next row |---|---|, then every data row wrapped in leading and trailing |. Put bold markers **inside** cells; never split a row across lines without pipes.
 `;
 
 // Tutor-side guidance that teaches the model to reference the new
@@ -281,6 +282,7 @@ Important:
 
         try {
             if (uid !== 'guest') {
+                CacheService.invalidateProfileCache(uid);
                 user = await UserProfileService.getProfile(uid);
                 skillMap = await UserProfileService.getSkillMap(uid, subject);
                 pContext = await UserProfileService.getPersonalizedContext(uid, agentId);
@@ -314,6 +316,9 @@ Important:
                     .replace(/{{DREAM_SUBJECT}}/g, (user?.dreamSubject || "University"))
                     .replace(/{{INSIGHT_PACKAGE}}/g, UserProfileService.formatInsightsForPrompt(pContext));
                 if (promptOverride) systemPrompt += `\n\n${promptOverride}`;
+                if (uid !== 'guest' && user) {
+                    systemPrompt += `\n### STUDENT PROFILE (FROM ACCOUNT — DO NOT ASK TO RE-ENTER DATA BELOW)\n${UserProfileService.formatProfileAdmissionsBlock(user)}`;
+                }
 
                 const result = await GenerativeAIService.generateContent("Hello!", {
                     model: "ace-it-flash",
@@ -517,6 +522,11 @@ ${clipped}`;
             tierFlags.push('windowed');
         }
 
+        if (uid !== 'guest' && user) {
+            systemPrompt += `\n### STUDENT PROFILE (FROM ACCOUNT — DO NOT ASK TO RE-ENTER DATA BELOW)\n${UserProfileService.formatProfileAdmissionsBlock(user)}`;
+            tierFlags.push('profile_admissions');
+        }
+
         // Build the content array, attaching the image (if any) to the last
         // user turn in the windowed history.
         let finalContent;
@@ -609,7 +619,8 @@ ${clipped}`;
                 prompt_tier: promptTier,
                 agent_id: agentId,
                 history_msgs: finalContent.length,
-                router_skipped: routerSkipped
+                router_skipped: routerSkipped,
+                persona_id: persona?.id || null
             });
         }
 

@@ -9,6 +9,7 @@ const MathsLabService = require('../services/maths/MathsLabService');
 const GenerativeAIService = require('../services/GenerativeAIService');
 const QuestionBankStore = require('../services/QuestionBankStore');
 const CosmosStore = require('../services/CosmosStore');
+const ReportSchedulerService = require('../services/ReportSchedulerService');
 const fs = require('fs');
 
 const MOCK_TOPICS = [
@@ -115,6 +116,32 @@ const requireAdmin = (req, res, next) => {
         res.status(403).json({ error: "Unauthorized. Admin access only." });
     }
 };
+
+// GET /api/admin/reports/weekly/status
+router.get('/reports/weekly/status', requireAdmin, (req, res) => {
+    res.json({
+        success: true,
+        scheduler: ReportSchedulerService.getStatus()
+    });
+});
+
+// POST /api/admin/reports/weekly/run
+router.post('/reports/weekly/run', requireAdmin, async (req, res) => {
+    try {
+        const dryRun = req.body?.dryRun === true || req.query?.dryRun === 'true';
+        const result = await ReportSchedulerService.runWeeklyReports({
+            dryRun,
+            source: dryRun ? 'admin_dry_run' : 'admin_manual'
+        });
+        res.status(result?.skipped ? 409 : 200).json({
+            success: !result?.skipped,
+            result
+        });
+    } catch (error) {
+        console.error('[AdminReports] Weekly report run failed:', error);
+        res.status(500).json({ error: error.message || 'Failed to run weekly reports' });
+    }
+});
 
 // POST /api/admin/generate-mock
 router.post('/generate-mock', requireAdmin, async (req, res) => {

@@ -63,7 +63,7 @@ export const JUPAS_PROGRAMS = [
     { id: 'polyu-bba', code: 'JS3240', name: '會計及金融', university: '香港理工大學', faculty: '商學院', median: 24, band_a: 26, category: 'business' },
     { id: 'polyu-cs', code: 'JS3868', name: '計算機科學', university: '香港理工大學', faculty: '工程學院', median: 24, band_a: 26, category: 'engineering' },
     { id: 'polyu-design', code: 'JS3569', name: '設計學', university: '香港理工大學', faculty: '設計學院', median: 25, band_a: 27, category: 'design' },
-    { id: 'polyu-hotel', code: 'JS3337', name: '酒店及旅遊管理', university: '香港理工大學', faculty: '酒店及旅遊業管理學院', median: 22, band_a: 24, category: 'business' },
+    { id: 'polyu-hotel', code: 'JS3310', name: '酒店及旅遊管理(榮譽)理學士組合課程', university: '香港理工大學', faculty: '酒店及旅遊業管理學院', median: 22, band_a: 24, category: 'business' },
 
     // =====================================================
     // 香港城市大學 (CityU) - JS1xxx
@@ -119,10 +119,11 @@ export const PROGRAM_CATEGORIES = {
     arts: '文學/傳媒',
     social_science: '社會科學',
     education: '教育',
-    design: '設計/建築'
+    design: '設計/建築',
+    health_science: '醫療科學'
 };
 
-// University shorthand names
+// University shorthand names (English)
 export const UNIVERSITY_SHORT_NAMES = {
     '香港大學': 'HKU',
     '香港中文大學': 'CUHK',
@@ -132,6 +133,18 @@ export const UNIVERSITY_SHORT_NAMES = {
     '香港浸會大學': 'HKBU',
     '香港教育大學': 'EdUHK',
     '嶺南大學': 'LingnanU'
+};
+
+// University full names (Chinese)
+export const UNIVERSITY_NAMES_ZH = {
+    '香港大學': '香港大學',
+    '香港中文大學': '香港中文大學',
+    '香港科技大學': '香港科技大學',
+    '香港理工大學': '香港理工大學',
+    '香港城市大學': '香港城市大學',
+    '香港浸會大學': '香港浸會大學',
+    '香港教育大學': '香港教育大學',
+    '嶺南大學': '嶺南大學'
 };
 
 export default JUPAS_PROGRAMS;

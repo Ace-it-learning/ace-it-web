@@ -9,6 +9,38 @@ const acsClient = process.env.AZURE_COMMUNICATION_CONNECTION_STRING
 const SENDER_ADDRESS = process.env.AZURE_SENDER_EMAIL || 'DoNotReply@ace-it.azurecomm.net';
 
 /**
+ * Optional local/dev path: send through any SMTP relay (e.g. Gmail app password) when ACS is not configured.
+ * Set SMTP_HOST, SMTP_FROM (or SMTP_USER), and usually SMTP_USER + SMTP_PASS.
+ */
+async function trySendWeeklyReportViaSmtp(validRecipients, subject, htmlContent) {
+    const host = process.env.SMTP_HOST;
+    const from = process.env.SMTP_FROM || process.env.SMTP_USER;
+    if (!host || !from) return null;
+
+    const nodemailer = require('nodemailer');
+    const transporter = nodemailer.createTransport({
+        host,
+        port: Number(process.env.SMTP_PORT || 587),
+        secure: String(process.env.SMTP_SECURE || '').toLowerCase() === 'true',
+        auth: process.env.SMTP_USER
+            ? { user: process.env.SMTP_USER, pass: process.env.SMTP_PASS || '' }
+            : undefined
+    });
+
+    const results = [];
+    for (const toEmail of validRecipients) {
+        const info = await transporter.sendMail({
+            from,
+            to: toEmail,
+            subject,
+            html: htmlContent
+        });
+        results.push({ email: toEmail, messageId: info.messageId, status: 'sent' });
+    }
+    return { success: true, deliveryMode: 'smtp', results };
+}
+
+/**
  * Generates the HTML content for the weekly report
  * @param {Object} data - Aggregated report data
  * @returns {string} HTML string
@@ -348,33 +380,51 @@ const sendWeeklyReport = async (recipients, reportData) => {
             throw new Error('No valid recipient email addresses provided');
         }
 
-        // Dev Mode: No ACS client configured — log to console
-        if (!acsClient) {
-            console.log('=====================================================');
-            console.log(`[EmailService] 📧 SKIPPING SEND (No ACS Client)`);
-            console.log(`[EmailService] Recipients: ${validRecipients.join(', ')}`);
-            console.log(`[EmailService] Subject: Weekly Progress Report: ${reportData.studentName}`);
-            console.log(`[EmailService] HTML Preview (First 800 chars):`);
-            console.log(htmlContent.substring(0, 800) + '...');
-            console.log('=====================================================');
-            return { success: true, mock: true, recipients: validRecipients };
+        const subject = `Weekly Progress Report: ${reportData.studentName} (${reportData.period})`;
+
+        if (acsClient) {
+            const results = [];
+            for (const toEmail of validRecipients) {
+                // ACS Email REST expects `content` with subject + html|plainText (not top-level htmlBody).
+                const poller = await acsClient.beginSend({
+                    senderAddress: SENDER_ADDRESS,
+                    content: {
+                        subject,
+                        html: htmlContent
+                    },
+                    recipients: {
+                        to: [{ address: toEmail }]
+                    }
+                });
+                const result = await poller.pollUntilDone();
+                console.log(`[EmailService] Message sent to ${toEmail}: ${result.id}`);
+                results.push({ email: toEmail, messageId: result.id, status: 'sent' });
+            }
+            return { success: true, deliveryMode: 'azure', results };
         }
 
-        // Send to all recipients
-        const results = [];
-        for (const toEmail of validRecipients) {
-            const poller = await acsClient.beginSend({
-                senderAddress: SENDER_ADDRESS,
-                recipients: { to: [{ address: toEmail }] },
-                subject: `Weekly Progress Report: ${reportData.studentName} (${reportData.period})`,
-                htmlBody: htmlContent
-            });
-            const result = await poller.pollUntilDone();
-            console.log(`[EmailService] Message sent to ${toEmail}: ${result.id}`);
-            results.push({ email: toEmail, messageId: result.id, status: 'sent' });
-        }
+        const smtpOutcome = await trySendWeeklyReportViaSmtp(validRecipients, subject, htmlContent).catch((err) => {
+            console.error('[EmailService] SMTP send failed:', err.message);
+            return null;
+        });
+        if (smtpOutcome) return smtpOutcome;
 
-        return { success: true, results };
+        // No ACS and no SMTP — do not claim a real inbox delivery
+        console.log('=====================================================');
+        console.log(`[EmailService] 📧 SIMULATED SEND (no Azure Email client and no SMTP_HOST)`);
+        console.log(`[EmailService] Recipients: ${validRecipients.join(', ')}`);
+        console.log(`[EmailService] Subject: ${subject}`);
+        console.log(`[EmailService] HTML Preview (First 800 chars):`);
+        console.log(htmlContent.substring(0, 800) + '...');
+        console.log('=====================================================');
+        return {
+            success: true,
+            mock: true,
+            deliveryMode: 'simulated',
+            recipients: validRecipients,
+            message:
+                'Email was not sent: backend has no Azure Communication Email connection string and no SMTP_HOST. Add AZURE_COMMUNICATION_CONNECTION_STRING or SMTP settings in backend .env.'
+        };
 
     } catch (error) {
         console.error('[EmailService] Failed to send email:', error);

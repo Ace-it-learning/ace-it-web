@@ -1,0 +1,57 @@
+[
+  {
+    "code": "JS4214",
+    "nameEn": "Global Business Studies",
+    "nameZh": "環球商業學",
+    "name": "環球商業學",
+    "university": "香港中文大學",
+    "faculty": "商學院",
+    "median": 31,
+    "band_a": 33,
+    "category": "business"
+  },
+  {
+    "code": "JS4240",
+    "nameEn": "Professional Accountancy",
+    "nameZh": "專業會計學",
+    "name": "專業會計學",
+    "university": "香港中文大學",
+    "faculty": "商學院",
+    "median": 29,
+    "band_a": 31,
+    "category": "business"
+  },
+  {
+    "code": "JS4542",
+    "nameEn": "Chinese Medicine",
+    "nameZh": "中醫學",
+    "name": "中醫學",
+    "university": "香港中文大學",
+    "faculty": "醫學院",
+    "median": 30,
+    "band_a": 32,
+    "category": "health_science"
+  },
+  {
+    "code": "JS4812",
+    "nameEn": "Architectural Studies",
+    "nameZh": "建築學",
+    "name": "建築學",
+    "university": "香港中文大學",
+    "faculty": "社會科學院",
+    "median": 26,
+    "band_a": 28,
+    "category": "design"
+  },
+  {
+    "code": "JS4850",
+    "nameEn": "Journalism and Communication",
+    "nameZh": "新聞與傳播學",
+    "name": "新聞與傳播學",
+    "university": "香港中文大學",
+    "faculty": "社會科學院",
+    "median": 25,
+    "band_a": 27,
+    "category": "social_science"
+  }
+]

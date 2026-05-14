@@ -1,0 +1,57 @@
+[
+  {
+    "code": "JS4202",
+    "nameEn": "Integrated Bachelor of Business Administration",
+    "nameZh": "工商管理學士綜合課程",
+    "name": "工商管理學士綜合課程",
+    "university": "香港中文大學",
+    "faculty": "商學院",
+    "median": 30,
+    "band_a": 32,
+    "category": "business"
+  },
+  {
+    "code": "JS4412",
+    "nameEn": "Computer Science and Engineering",
+    "nameZh": "計算機科學與工程",
+    "name": "計算機科學與工程",
+    "university": "香港中文大學",
+    "faculty": "工程學院",
+    "median": 28,
+    "band_a": 30,
+    "category": "engineering"
+  },
+  {
+    "code": "JS4525",
+    "nameEn": "Pharmacy",
+    "nameZh": "藥劑學",
+    "name": "藥劑學",
+    "university": "香港中文大學",
+    "faculty": "醫學院",
+    "median": 32,
+    "band_a": 34,
+    "category": "health_science"
+  },
+  {
+    "code": "JS4824",
+    "nameEn": "Economics",
+    "nameZh": "經濟學",
+    "name": "經濟學",
+    "university": "香港中文大學",
+    "faculty": "社會科學院",
+    "median": 26,
+    "band_a": 28,
+    "category": "social_science"
+  },
+  {
+    "code": "JS4862",
+    "nameEn": "Psychology",
+    "nameZh": "心理學",
+    "name": "心理學",
+    "university": "香港中文大學",
+    "faculty": "社會科學院",
+    "median": 27,
+    "band_a": 29,
+    "category": "social_science"
+  }
+]

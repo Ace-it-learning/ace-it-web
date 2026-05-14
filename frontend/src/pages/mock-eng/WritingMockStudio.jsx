@@ -29,6 +29,14 @@ import { useAvatar } from '../../context/AvatarContext';
 import UpgradeModal from '../../components/common/UpgradeModal';
 import { isCheatEnabled } from '../../utils/devAccess';
 
+/** Vite dev: same-origin `/api` uses the dev-server proxy (port 3001). Production: `VITE_API_URL` or same-origin rewrites. */
+function getWritingMockApiBase() {
+    if (import.meta.env.DEV) return '';
+    const raw = import.meta.env.VITE_API_URL;
+    if (raw && String(raw).trim()) return String(raw).replace(/\/$/, '');
+    return '';
+}
+
 // Studio Components
 import WritingStudioLayout from '../../components/writing/WritingStudioLayout';
 import WritingStudioHeader from '../../components/writing/WritingStudioHeader';
@@ -103,8 +111,8 @@ const WritingMockStudio = () => {
             window._isFetchingMockWriting = paperId;
 
             try {
-                const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
-                const res = await fetch(`${API_URL}/api/english/mock/${paperId}?uid=${user?.uid || 'guest'}`);
+                const API_BASE = getWritingMockApiBase();
+                const res = await fetch(`${API_BASE}/api/english/mock/${paperId}?uid=${user?.uid || 'guest'}`);
                 if (res.ok) {
                     const data = await res.json();
                     
@@ -225,9 +233,9 @@ const WritingMockStudio = () => {
         if (!user) return;
         setUploading(true);
         try {
-            const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+            const API_BASE = getWritingMockApiBase();
             const token = await user.getIdToken();
-            const sasRes = await fetch(`${API_URL}/api/data/uploads/sas`, {
+            const sasRes = await fetch(`${API_BASE}/api/data/uploads/sas`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -278,11 +286,11 @@ const WritingMockStudio = () => {
         setSubmissionProgress(10);
         
         try {
-            const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+            const API_BASE = getWritingMockApiBase();
             
             // Part A
             setSubmissionProgress(30);
-            const resA = await fetch(`${API_URL}/api/english/mock/cheat/writing`, {
+            const resA = await fetch(`${API_BASE}/api/english/mock/cheat/writing`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
@@ -312,7 +320,7 @@ const WritingMockStudio = () => {
 
             if (activePartB) {
                 setSubmissionProgress(60);
-                const resB = await fetch(`${API_URL}/api/english/mock/cheat/writing`, {
+                const resB = await fetch(`${API_BASE}/api/english/mock/cheat/writing`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
@@ -353,7 +361,7 @@ const WritingMockStudio = () => {
         setIsSubmitting(true);
         setSubmissionProgress(20);
         try {
-            const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+            const API_BASE = getWritingMockApiBase();
             
             const payload = {
                 paperId,
@@ -379,14 +387,20 @@ const WritingMockStudio = () => {
             };
 
             setSubmissionProgress(50);
-            const res = await fetch(`${API_URL}/api/english/mock/writing/submit`, {
+            const res = await fetch(`${API_BASE}/api/english/mock/writing/submit`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(payload)
             });
 
             if (res.ok) {
-                const results = await res.json();
+                let results;
+                try {
+                    results = await res.json();
+                } catch (parseErr) {
+                    console.error('Writing submit: response was not valid JSON', parseErr);
+                    throw parseErr;
+                }
                 setSubmissionProgress(100);
                 setTimeout(() => {
                     setSubmissionResults(results);
@@ -397,12 +411,17 @@ const WritingMockStudio = () => {
                     setIsSubmitting(false);
                 }, 1000);
             } else {
-                alert("Submission failed. Please check your connection.");
+                let detail = '';
+                try {
+                    detail = await res.text();
+                } catch (_) { /* ignore */ }
+                console.error('Writing submit failed', res.status, detail);
+                alert(`Submission failed (${res.status}). Check that the API is running and try again.`);
                 setIsSubmitting(false);
             }
         } catch (err) {
             console.error("Submission error:", err);
-            alert("Submission error. Please try again.");
+            alert(`Submission error: ${err?.message || 'Network or server unreachable. If you use local dev, ensure the backend is running on port 3001.'}`);
             setIsSubmitting(false);
         }
     };

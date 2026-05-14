@@ -137,10 +137,15 @@ export const AuthProvider = ({ children }) => {
                 identityRes.status === 401
                     ? 'Backend rejected the JWT. Use the ID token only (openid). On the server set AUTH_PROVIDER=entra and set ENTRA_AUDIENCE to your SPA Application (client) ID (same as MSAL/VITE_ENTRA_CLIENT_ID unless you use a custom API scope).'
                     : 'Check that the API is reachable (VITE_API_URL).';
-            throw new Error(`Failed to resolve user identity (${identityRes.status}). ${hint}`);
+            const err = new Error(`Failed to resolve user identity (${identityRes.status}). ${hint}`);
+            err.status = identityRes.status;
+            throw err;
         }
         const identity = await identityRes.json();
         const claims = msUser?.idTokenClaims || {};
+        const claimEmail = claims.email || claims.preferred_username || null;
+        /** Prefer server + ID-token mailbox; MSAL `username` is often a tenant UPN, not the Gmail you signed in with. */
+        const resolvedMailbox = identity.email || claimEmail || msUser?.username || null;
         const entraIdp =
             claims.idp ||
             claims.idp_access_token ||
@@ -149,7 +154,7 @@ export const AuthProvider = ({ children }) => {
             null;
         const mappedUser = {
             uid: identity.uid,
-            email: msUser?.username || identity.email,
+            email: resolvedMailbox,
             displayName: msUser?.name || (msUser?.username ? msUser.username.split('@')[0] : 'Student'),
             emailVerified: true,
             photoURL: null,
@@ -188,7 +193,25 @@ export const AuthProvider = ({ children }) => {
             return { ok: true };
         } catch (err) {
             console.error('[AuthContext] retryEntraSession:', err);
-            setAuthError(err?.message || 'Could not sync with the server.');
+
+            // If backend rejected the token (401), the cached token is stale.
+            // Clear MSAL cache and force interactive re-login.
+            if (err?.status === 401) {
+                try {
+                    const client = await ensureEntraMsalClient();
+                    const accounts = client.getAllAccounts();
+                    for (const acct of accounts) {
+                        client.removeAccount(acct);
+                    }
+                } catch (clearErr) {
+                    console.warn('[AuthContext] Failed to clear MSAL accounts:', clearErr);
+                }
+                setAuthError(
+                    'Your sign-in session expired. Click "Retry linking to Ace-it" to sign in again.'
+                );
+            } else {
+                setAuthError(err?.message || 'Could not sync with the server.');
+            }
             setUser(null);
             setProfile(null);
             setLoading(false);
@@ -260,7 +283,25 @@ export const AuthProvider = ({ children }) => {
             } catch (err) {
                 if (entraInitGeneration.current !== mine) return;
                 console.error('[AuthContext] Entra init error:', err);
-                setAuthError(err?.message || 'Sign-in could not be completed. Please try again.');
+
+                // If backend rejected the token (401), the cached token is stale (key rotated or expired).
+                // Clear MSAL cache and force interactive re-login instead of getting stuck.
+                if (err?.status === 401) {
+                    try {
+                        const client = await ensureEntraMsalClient();
+                        const accounts = client.getAllAccounts();
+                        for (const acct of accounts) {
+                            client.removeAccount(acct);
+                        }
+                    } catch (clearErr) {
+                        console.warn('[AuthContext] Failed to clear MSAL accounts:', clearErr);
+                    }
+                    setAuthError(
+                        'Your sign-in session expired. Click "Retry linking to Ace-it" to sign in again.'
+                    );
+                } else {
+                    setAuthError(err?.message || 'Sign-in could not be completed. Please try again.');
+                }
                 setUser(null);
                 setProfile(null);
                 clearTimeout(timeoutId);

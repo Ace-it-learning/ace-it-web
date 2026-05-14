@@ -64,7 +64,7 @@ class UserProfileService {
                 createdAt: now,
                 updatedAt: now,
                 equipped_tutor: "default_janie",
-                equipped_student_avatar: "s_bookworm",
+                equipped_student_avatar: "s_marcus",
                 subscription_tier: "free",
                 subscribed_subjects: ["english", "maths"]
             };
@@ -80,7 +80,7 @@ class UserProfileService {
             ...stats,
             uid,
             equipped_tutor: userData.equipped_tutor || 'default_janie',
-            equipped_student_avatar: userData.equipped_student_avatar || 's_bookworm',
+            equipped_student_avatar: userData.equipped_student_avatar || 's_marcus',
             equipped_frame: userData.equipped_frame || null
         };
         CacheService.setDbCache(cacheKey, result);
@@ -112,7 +112,7 @@ class UserProfileService {
             profilePatch.nickname = profilePatch.nickname || 'Student';
             profilePatch.role = profilePatch.role || 'student';
             profilePatch.equipped_tutor = profilePatch.equipped_tutor || 'default_janie';
-            profilePatch.equipped_student_avatar = profilePatch.equipped_student_avatar || 's_bookworm';
+            profilePatch.equipped_student_avatar = profilePatch.equipped_student_avatar || 's_marcus';
         }
 
         await userRepo.upsertProfile(uid, profilePatch);
@@ -655,10 +655,13 @@ class UserProfileService {
             };
             tutorLeanContext.plan.dailyTasks = this.buildDeterministicDailyTasks(tutorLeanContext);
 
+            const predictedGrades = this.buildPredictedGradesSnapshot(profile);
+
             return {
                 nickname: profile?.nickname || profile?.displayName || "Student",
                 grade: profile?.grade || "F4",
                 level: formatLevel(skillMap?.level),
+                predictedGrades,
                 topWeaknesses,
                 recentMistakes: mistakes.map(m => m.term).filter(Boolean),
                 skippedPapers,
@@ -681,15 +684,85 @@ class UserProfileService {
     }
 
     /**
-     * High-Density Insight Formatter (Token Optimization)
-     *
-     * Emits two compact lines:
-     *   [STUDENT_INSIGHTS]  ...   long-lived skill / quest snapshot
-     *   [RECENT_ACTIVITY]   ...   last completed quests + most recent mock
-     *
-     * The RECENT_ACTIVITY line is the hook that lets the tutor reference
-     * what the student just did ("Nice work on last week's listening mock,
-     * let's tackle that vocabulary gap...") without ballooning the prompt.
+     * Snapshot of student-reported target DSE levels (onboarding / account).
+     * Used by chat so tutors do not re-ask for grades already on file.
+     */
+    buildPredictedGradesSnapshot(profile) {
+        if (!profile) return null;
+        const t = profile.targets || {};
+        const eng = String(profile.targetGradeEng || t.eng || '').trim();
+        const chi = String(profile.targetGradeChi || t.chi || '').trim();
+        const math = String(profile.targetGradeMath || t.math || '').trim();
+        const rawElectives = Array.isArray(profile.electives) ? profile.electives : (Array.isArray(t.electives) ? t.electives : []);
+        const electives = rawElectives
+            .filter((e) => e && (String(e.subject || '').trim() || String(e.targetGrade || '').trim()))
+            .map((e) => ({
+                subject: String(e.subject || '').trim(),
+                grade: String(e.targetGrade || '').trim()
+            }));
+        if (!eng && !chi && !math && electives.length === 0) return null;
+        return { eng, chi, math, electives };
+    }
+
+    formatPredictedGradesForPrompt(pContext) {
+        const snap = pContext?.predictedGrades;
+        if (!snap) {
+            return '[PREDICTED_DSE] (none on profile — student may fill target levels in Account)';
+        }
+        const bits = [];
+        if (snap.chi) bits.push(`CHI:${snap.chi}`);
+        if (snap.eng) bits.push(`ENG:${snap.eng}`);
+        if (snap.math) bits.push(`MATH:${snap.math}`);
+        (snap.electives || []).forEach((e) => {
+            const label = e.subject || 'Elective';
+            const g = e.grade || '?';
+            bits.push(`${label}:${g}`);
+        });
+        if (!bits.length) {
+            return '[PREDICTED_DSE] (none on profile — student may fill target levels in Account)';
+        }
+        return `[PREDICTED_DSE] ${bits.join(' | ')} | Tutor: use these as the student's self-reported targets; do not ask them to re-type saved subjects; ask only for gaps (e.g. missing elective or Citizenship/通識 if relevant — not stored in profile).`;
+    }
+
+    /**
+     * Short block appended near the end of chat system prompts so the model
+     * reliably sees account targets (not only the long insight JSON).
+     */
+    formatProfileAdmissionsBlock(user) {
+        if (!user || user.uid === 'guest') return '';
+        const snap = this.buildPredictedGradesSnapshot(user);
+        const lines = [];
+        lines.push(this.formatPredictedGradesForPrompt({ predictedGrades: snap }));
+        const focus = String(user.dreamSubject || '').trim();
+        if (focus) {
+            lines.push(`[INTENDED_STUDY] ${focus}`);
+        }
+        const dreams = Array.isArray(user.dreamPrograms) ? user.dreamPrograms : [];
+        if (dreams.length) {
+            const labels = dreams
+                .slice(0, 8)
+                .map((p) => {
+                    if (!p) return '';
+                    if (typeof p === 'string') return p.trim();
+                    return String(
+                        p.programmeCode || p.code || p.jupasCode || p.label || p.title || p.name || ''
+                    ).trim();
+                })
+                .filter(Boolean);
+            if (labels.length) {
+                lines.push(`[DREAM_JUPAS_PROGRAMMES] ${labels.join('; ')}`);
+            }
+        }
+        if (snap || focus || dreams.length) {
+            lines.push('CRITICAL: Do not ask the student to re-type grades or intended study already listed above. Ask only for gaps.');
+        }
+        return lines.join('\n');
+    }
+
+    /**
+     * High-Density insight pack for chat: student skills, recent activity,
+     * and lean JSON context. (Target DSE levels are appended separately in
+     * chatRoutes via formatProfileAdmissionsBlock so they stay visible.)
      */
     formatInsightsForPrompt(pContext) {
         if (!pContext) return "No data available.";
@@ -1578,13 +1651,35 @@ class UserProfileService {
     }
 
     /**
+     * Which equipped tutor card id applies for this chat agent (matches collection / profileRoutes).
+     * @param {object} profile user profile fields from getProfile / Cosmos
+     * @param {string} agentId chat agent (english, math, maths, ace, chinese, …)
+     */
+    resolveEquippedTutorIdForAgent(profile = {}, agentId = 'ace') {
+        const aid = agentId === 'maths' ? 'math' : agentId;
+        if (aid === 'english') {
+            return profile.equipped_tutor_english || profile.equipped_tutor || 'default_janie';
+        }
+        if (aid === 'math') {
+            return profile.equipped_tutor_maths || profile.equipped_tutor || 'default_matt';
+        }
+        if (aid === 'ace') {
+            return profile.equipped_tutor_ace || profile.equipped_tutor || 'default_ace';
+        }
+        if (aid === 'chinese') {
+            return profile.equipped_tutor;
+        }
+        return profile.equipped_tutor;
+    }
+
+    /**
      * Get the dynamic persona prompt injection for an AI agent.
      */
     async getPersona(uid, agentId) {
         if (!uid || uid === 'guest') return { name: "Ace Sir", prompt: "" };
 
         const profile = await this.getProfile(uid);
-        const equippedTutorId = profile.equipped_tutor;
+        const equippedTutorId = this.resolveEquippedTutorIdForAgent(profile, agentId);
 
         const cardPool = require('../data/card_pool.json');
 
@@ -1630,6 +1725,10 @@ class UserProfileService {
             philosophy: "learning-driven"
         };
 
+        const styleExemplar = tutor.style_exemplar
+            ? `\n**STYLE EXAMPLE (match rhythm and reply length; do not copy the topic verbatim):**\n${tutor.style_exemplar}\n`
+            : '';
+
         const personaPrompt = `
 ### YOUR PERSONA: ${tutor.name}
 - **Intensity**: ${traits.intensity} (How pushy/demanding you are).
@@ -1641,7 +1740,7 @@ class UserProfileService {
 ${tutor.persona_guidelines ? `**BEHAVIORAL GUIDELINES**: ${tutor.persona_guidelines}` : ''}
 ${tutor.tone ? `**TONE & MANNER**: ${tutor.tone}` : ''}
 ${tutor.verbal_tics ? `**VERBAL TICS & PHRASES**: Use these phrases naturally where appropriate: ${tutor.verbal_tics.join(', ')}` : ''}
-`;
+${styleExemplar}`;
 
         return {
             id: tutor.id,
@@ -1667,6 +1766,15 @@ ${tutor.verbal_tics ? `**VERBAL TICS & PHRASES**: Use these phrases naturally wh
             'equipped_frame'
         ];
         if (!validSlots.includes(slot)) throw new Error("Invalid equipment slot");
+
+        if (slot === 'equipped_student_avatar') {
+            const cardPool = require('../data/card_pool.json');
+            const validIds = new Set((cardPool.student_cards || []).map((c) => c.id));
+            if (!validIds.has(itemId)) throw new Error('Unknown student avatar');
+            const inv = await CosmosStore.listInventory(uid, 500);
+            const owns = inv.some((doc) => doc.itemId === itemId);
+            if (!owns) throw new Error('Student avatar not unlocked');
+        }
 
         CacheService.invalidateUserDbCache(uid);
         await CosmosStore.updateUserProfile(uid, {

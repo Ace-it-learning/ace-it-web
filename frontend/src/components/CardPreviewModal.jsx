@@ -11,7 +11,14 @@ const rarityConfig = {
     legendary: { label: 'Legendary', borderClass: 'border-amber-400', glowClass: 'shadow-[0_0_40px_rgba(251,191,36,0.4)] ring-sparkle', badgeClass: 'bg-amber-100 text-amber-800', bgGradient: 'from-amber-50 to-yellow-100' },
 };
 
-const CardPreviewModal = ({ isOpen, onClose, card, type = 'tutor' }) => {
+const tutorTraitLabels = {
+    intensity: 'Level',
+    disposition: 'Mood',
+    vibe: 'Manner',
+    philosophy: 'Driven'
+};
+
+const CardPreviewModal = ({ isOpen, onClose, card }) => {
     const navigate = useNavigate();
     const { t } = useLanguage();
 
@@ -40,7 +47,7 @@ const CardPreviewModal = ({ isOpen, onClose, card, type = 'tutor' }) => {
                     <img
                         src={card.image || card.avatar}
                         alt={card.name}
-                        className="w-full h-full object-cover scale-[1.35] translate-y-[5%]"
+                        className="avatar-portrait-card"
                         onError={(e) => {
                             e.target.onerror = null;
                             e.target.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(card.name)}&background=random&size=400&bold=true`;
@@ -74,7 +81,7 @@ const CardPreviewModal = ({ isOpen, onClose, card, type = 'tutor' }) => {
                             {Object.entries(card.traits).map(([key, val]) => (
                                 <div key={key} className="flex flex-col">
                                     <span className="text-[9px] uppercase font-black text-gray-400 tracking-wider">
-                                        {key === 'intensity' ? 'Level' : key === 'disposition' ? 'Mood' : key === 'vibe' ? 'Manner' : key}
+                                        {tutorTraitLabels[key] || key}
                                     </span>
                                     <span className="text-[10px] font-bold text-gray-700 capitalize">{val}</span>
                                 </div>

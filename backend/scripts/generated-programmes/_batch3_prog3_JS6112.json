@@ -1,0 +1,169 @@
+{
+  "code": "JS6112",
+  "nameEn": "Bachelor of Engineering",
+  "nameZh": "工程學學士",
+  "university": "HKU",
+  "faculty": "Faculty of Engineering",
+  "median": 30,
+  "category": "Engineering",
+  "en": {
+    "sections": {
+      "admission": {
+        "bullets": [
+          "Minimum DSE requirements: 4 core subjects + 2 electives with Level 3 in English and Chinese, Level 2 in Maths and Liberal Studies; Mathematics (Compulsory Part) Level 3+ essential",
+          "Typical admission score: median 30 points (Best 6 subjects), lower quartile ~28, upper quartile ~32; varies significantly by engineering major",
+          "Preferred electives: Physics (essential for most majors), Mathematics (M1/M2 highly preferred), Chemistry (for Environmental Engineering); ICT acceptable for Computer Engineering",
+          "Interview: Not required for standard admission; may be invited for Engineering Excellence Scheme or scholarship candidates; assesses problem-solving and engineering interest",
+          "Alternative entry: IB (30+ points with Mathematics HL), GCE A-Level (AAB including Mathematics and Physics), SAT (1300+) with AP Calculus and Physics"
+        ]
+      },
+      "curriculum": {
+        "bullets": [
+          "Year 1: Engineering common core — Calculus, Linear Algebra, Physics, Chemistry, Introduction to Engineering Design, Computer Programming (Python/C++); no major declaration",
+          "Year 2: Major selection from 10 disciplines — Civil Engineering, Computer Engineering, Electrical Engineering, Electronic Engineering, Industrial Engineering, Mechanical Engineering, Medical Engineering, Environmental Engineering, Engineering Science, or Data Engineering",
+          "Years 3-4: Major-specific advanced courses — e.g., Structural Analysis (Civil), Machine Learning (Computer), Power Systems (Electrical), Thermodynamics (Mechanical); capstone design project (12 credits)",
+          "Common Core Engineering: Engineering ethics, project management, entrepreneurship, and professional communication; mandatory for all majors",
+          "Industrial Training: 6-week summer industrial training with partners including MTR Corporation, CLP Power, Gammon Construction, Hong Kong Aircraft Engineering Company (HAECO)",
+          "Exchange programmes: Bilateral agreements with Imperial College London, ETH Zurich, University of Illinois Urbana-Champaign, University of Melbourne; 80+ partner universities",
+          "Accreditation: All engineering majors accredited by Hong Kong Institution of Engineers (HKIE); mutual recognition with Washington Accord signatories (UK, USA, Australia, Canada)"
+        ]
+      },
+      "career": {
+        "bullets": [
+          "Civil & Infrastructure: Graduate engineer at AECOM, Arup, Gammon, Dragages; MTR Corporation graduate scheme; starting salaries HK$22,000-28,000/month; professional registration via HKIE",
+          "Technology & Software: Software engineer, AI/ML engineer, data engineer at Google, Meta, ByteDance, local tech startups; Computer Engineering and Data Engineering majors highly sought; starting salaries HK$28,000-40,000/month",
+          "Electrical & Energy: Power engineer at CLP Power, HK Electric, Siemens, Schneider Electric; renewable energy consultant; smart grid specialist; starting salaries HK$24,000-30,000/month",
+          "Mechanical & Manufacturing: Mechanical engineer at Hong Kong Aircraft Engineering (HAECO), MTR rolling stock, Johnson Electric; automotive and robotics pathways; starting salaries HK$22,000-28,000/month",
+          "Biomedical & Healthcare Technology: Medical device engineer at Philips Healthcare, Siemens Healthineers, local medtech startups; Medical Engineering major specific; starting salaries HK$24,000-32,000/month",
+          "Entrepreneurship & Startups: HKU Engineering alumni founded successful startups in AI, robotics, and green tech; iDendron incubator provides seed funding and mentorship"
+        ]
+      },
+      "campus": {
+        "bullets": [
+          "Engineering facilities: Haking Wong Building, Chow Yei Ching Building, and new Tam Wing Fan Innovation Wing with advanced manufacturing labs, robotics arena, and cleanroom facilities",
+          "Specialised labs: Structures lab (full-scale bridge testing), fluids lab (wind tunnel), materials lab (SEM, XRD), electronics lab (PCB fabrication), robotics lab (UR5 cobots, TurtleBot fleet)",
+          "Innovation Wing: 15,000 sq ft maker space with 3D printers (Stratasys, Formlabs), laser cutters, CNC machines, electronics workbenches; open 24/7 for student projects",
+          "Libraries: Main Library engineering collection (150,000+ volumes); access to IEEE Xplore, ACM Digital Library, ASME standards; dedicated engineering subject librarian",
+          "Student societies: 20+ engineering societies including Civil Engineering Society, Robotics Team (RoboCon champions), Programming Society, Women in Engineering; active industry networking events"
+        ]
+      },
+      "competitiveness": {
+        "bullets": [
+          "Admission statistics: ~1,800 applicants for ~550 places (3.3:1 ratio) — moderate competition; varies significantly by major (Computer Engineering most competitive at ~5:1)",
+          "Score distribution: 60% of admitted students score 28-32 points; students with 26-27 need strong Mathematics and Physics performance or extracurricular engineering projects",
+          "Major-specific competition: Computer Engineering and Data Engineering require ~32 points median; Civil and Environmental Engineering more accessible at ~28 points",
+          "Comparison with HKUST Engineering (JS5200): HKU has broader major options and stronger industry links in Hong Kong; HKUST has higher research rankings and more international faculty",
+          "Non-JUPAS intake: ~25% of places for international students and mainland JEE students; many join Computer and Engineering Science majors",
+          "Trend: Surging demand for Computer Engineering and Data Engineering due to AI boom; 2024 saw 40% increase in applications for these majors; traditional civil/mechanical stable"
+        ]
+      },
+      "alumni": {
+        "bullets": [
+          "Ir. Dr. Edwin Lau (BEng 1982) — Former Director of Electrical and Mechanical Services Department, led Hong Kong's infrastructure development and building safety reform",
+          "Mr. Horace Chow (BEng 1985) — Managing Director of CLP Power Hong Kong, overseeing electricity generation and distribution for 6 million residents",
+          "Dr. Allan Wong (BEng 1987) — Co-founder and CEO of VTech Holdings, world's largest manufacturer of corded and cordless phones and electronic learning toys",
+          "Ir. Dr. Conrad Wong (BEng 1990) — Chairman of Gammon Construction, led major projects including Hong Kong-Zhuhai-Macau Bridge and MTR rail extensions",
+          "Ms. Elaine Tsang (BEng 2005) — Founder of EcoMatcher, blockchain-based reforestation platform; Forbes 30 Under 30 Asia; HKU Engineering entrepreneurship award winner"
+        ]
+      },
+      "scholarships": {
+        "bullets": [
+          "HKU Foundation Entrance Scholarship: Full tuition + HK$50,000/year for DSE 5** in 3+ subjects; engineering students with strong Mathematics and Physics frequently qualify",
+          "Faculty of Engineering Scholarship: HK$25,000-40,000/year for top 10% of engineering cohort; includes guaranteed summer internship with major engineering firms",
+          "Engineering Excellence Scheme: Full tuition + HK$20,000/year living allowance + overseas exchange; requires maintaining GPA 3.5+ and leadership in engineering activities",
+          "Sir Edward Youde Memorial Scholarship: HK$50,000/year for students from underprivileged backgrounds with exceptional engineering aptitude and community service",
+          "Industry scholarships: AECOM Scholarship (HK$30,000), CLP Engineering Scholarship (HK$35,000), MTR Graduate Scheme Scholarship (HK$40,000 + guaranteed placement)"
+        ]
+      },
+      "tips": {
+        "bullets": [
+          "Excel in Mathematics and Physics: These are the foundation of engineering; Level 5+ in both is essential, and M1/M2 is highly valued for advanced engineering mathematics",
+          "Build practical projects: Participate in robotics competitions (RoboCon), coding hackathons, or Arduino/Raspberry Pi projects; tangible evidence of engineering passion strengthens applications",
+          "Choose major strategically: Computer Engineering and Data Engineering have highest salaries but also highest competition; Civil Engineering has stable government and infrastructure demand",
+          "Leverage industrial training: Use the mandatory 6-week summer placement to network; many students receive return offers from MTR, CLP, or Gammon before graduation",
+          "Consider HKIE accreditation path: Plan your elective choices to meet Hong Kong Institution of Engineers accreditation requirements if you aim for professional engineer (PE) registration"
+        ]
+      }
+    }
+  },
+  "zh": {
+    "sections": {
+      "admission": {
+        "bullets": [
+          "最低文憑試要求：4科核心科目 + 2科選修科目，英文及中文達3級，數學及通識達2級；數學（必修部分）達3級以上至關重要",
+          "典型入學分數：中位數30分（最佳6科），下四分位數約28分，上四分位數約32分；因工程主修而異",
+          "優先選修科目：物理（大多數主修必需）、數學（M1/M2高度建議）、化學（環境工程適用）；資訊及通訊科技可接受於電腦工程",
+          "面試：標準入學不設面試；工程卓越計劃或獎學金候選人或獲邀面試；評估解難能力及工程興趣",
+          "替代入學途徑：IB（30分以上連數學高級程度）、GCE A-Level（包括數學及物理達AAB）、SAT（1300分以上）連AP微積分及物理"
+        ]
+      },
+      "curriculum": {
+        "bullets": [
+          "第一年：工程共同核心——微積分、線性代數、物理、化學、工程設計導論、電腦編程（Python/C++）；無需選定主修",
+          "第二年：從10個學科選擇主修——土木工程、電腦工程、電機工程、電子工程、工業工程、機械工程、醫學工程、環境工程、工程科學或數據工程",
+          "第三至四年：主修特定進階課程——如結構分析（土木）、機器學習（電腦）、電力系統（電機）、熱力學（機械）；畢業設計項目（12學分）",
+          "工程共同核心：工程倫理、項目管理、創業及專業溝通；所有主修必修",
+          "工業培訓：與港鐵公司、中電、金門建築、香港飛機工程公司（HAECO）等夥伴進行6星期暑期工業培訓",
+          "交流計劃：與倫敦帝國學院、蘇黎世聯邦理工學院、伊利諾大學厄巴納-香檳分校、墨爾本大學雙邊協議；80多所夥伴大學",
+          "認證：所有工程主修獲香港工程師學會（HKIE）認可；與華盛頓協議簽署國（英國、美國、澳洲、加拿大）互認"
+        ]
+      },
+      "career": {
+        "bullets": [
+          "土木及基建：艾奕康、奧雅納、金門、德利佳畢業工程師；港鐵公司畢業生計劃；起薪每月22,000-28,000港元；透過HKIE專業註冊",
+          "科技及軟件：Google、Meta、字節跳動、本地科技初創軟件工程師、人工智能/機器學習工程師、數據工程師；電腦工程及數據工程主修極受青睞；起薪每月28,000-40,000港元",
+          "電機及能源：中電、港燈、西門子、施耐德電氣電力工程師；可再生能源顧問；智能電網專家；起薪每月24,000-30,000港元",
+          "機械及製造：香港飛機工程（HAECO）、港鐵列車、德昌電機機械工程師；汽車及機械人途徑；起薪每月22,000-28,000港元",
+          "生物醫學及醫療科技：飛利浦醫療、西門子醫療、本地醫療科技初創醫療設備工程師；醫學工程主修特定；起薪每月24,000-32,000港元",
+          "創業及初創：港大工程校友創辦人工智能、機械人及綠色科技成功初創；iDendron孵化中心提供種子資金及導師指導"
+        ]
+      },
+      "campus": {
+        "bullets": [
+          "工程設施：黃克競大樓、周亦卿大樓及新譚榮芬創科翼，設有先進製造實驗室、機械人競技場及無塵室設施",
+          "專門實驗室：結構實驗室（全尺寸橋樑測試）、流體實驗室（風洞）、材料實驗室（SEM、XRD）、電子實驗室（PCB製作）、機械人實驗室（UR5協作機械人、TurtleBot群組）",
+          "創科翼：15,000平方呎創客空間，配備3D打印機（Stratasys、Formlabs）、激光切割機、CNC機床、電子工作台；學生項目24小時開放",
+          "圖書館：主圖書館工程藏書（15萬冊以上）；可使用IEEE Xplore、ACM數字圖書館、ASME標準；專責工程學科圖書館員",
+          "學生學會：20多個工程學會，包括土木工程學會、機械人隊（RoboCon冠軍）、編程學會、女性工程師；活躍業界交流活動"
+        ]
+      },
+      "competitiveness": {
+        "bullets": [
+          "入學統計：約1,800人申請，約550個學額（3.3:1比例）——中等競爭；因主修而異（電腦工程最激烈約5:1）",
+          "分數分佈：60%獲錄取學生達28-32分；26-27分者需數學及物理表現強勁或課外工程項目",
+          "主修特定競爭：電腦工程及數據工程中位數約需32分；土木及環境工程較易達標約28分",
+          "與科大工程（JS5200）比較：港大主修選擇更廣及香港業界聯繫更強；科大研究排名較高及國際教職員較多",
+          "非聯招收生：約25%學額予國際學生及內地高考學生；許多加入電腦及工程科學主修",
+          "趨勢：因人工智能熱潮，電腦工程及數據工程需求激增；2024年申請增加40%；傳統土木/機械穩定"
+        ]
+      },
+      "alumni": {
+        "bullets": [
+          "劉志宏工程師博士（1982年工程學士）——前機電工程署署長，領導香港基建發展及建築安全改革",
+          "周浩鼎先生（1985年工程學士）——中電香港董事總經理，管理600萬居民電力發電及輸配",
+          "黃子欣博士（1987年工程學士）——偉易達集團聯合創辦人兼行政總裁，全球最大有線及無線電話及電子學習玩具製造商",
+          "黃天祥工程師博士（1990年工程學士）——金門建築主席，領導港珠澳大橋及港鐵延線等主要項目",
+          "曾詠婷女士（2005年工程學士）——EcoMatcher創辦人，區塊鏈植樹平台；福布斯亞洲30位30歲以下精英；港大工程創業獎得主"
+        ]
+      },
+      "scholarships": {
+        "bullets": [
+          "港大基金入學獎學金：全額學費 + 每年50,000港元（文憑試3科以上5**）；數學及物理強的工程學生經常符合資格",
+          "工程學院獎學金：每年25,000-40,000港元予工程學院前10%學生；包括保證暑期實習於主要工程公司",
+          "工程卓越計劃：全額學費 + 每年20,000港元生活津貼 + 海外交流；需保持GPA 3.5以上及工程活動領導力",
+          "尤德爵士紀念獎學金：每年50,000港元予工程資優清貧學生並有社區服務",
+          "業界獎學金：艾奕康獎學金（30,000港元）、中電工程獎學金（35,000港元）、港鐵畢業生計劃獎學金（40,000港元 + 保證職位）"
+        ]
+      },
+      "tips": {
+        "bullets": [
+          "精通數學及物理：這是工程基礎；兩科達5級以上至關重要，M1/M2對進階工程數學極受重視",
+          "建立實踐項目：參加機械人比賽（RoboCon）、編程黑客松或Arduino/Raspberry Pi項目；工程熱誠的實質證據強化申請",
+          "策略性選擇主修：電腦工程及數據工程薪金最高但競爭最激烈；土木工程有穩定政府及基建需求",
+          "善用工業培訓：利用必修6星期暑期實習建立人脈；許多學生畢業前獲港鐵、中電或金門回聘",
+          "考慮HKIE認證途徑：規劃選修以符合香港工程師學會認證要求，如目標為專業工程師（PE）註冊"
+        ]
+      }
+    }
+  }
+}

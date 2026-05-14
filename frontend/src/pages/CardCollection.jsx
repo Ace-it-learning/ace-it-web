@@ -7,7 +7,7 @@ import { useAvatar } from '../context/AvatarContext';
 
 const CardCollection = () => {
     const { user } = useAuth();
-    const { t } = useLanguage();
+    const { t, language } = useLanguage();
     const { syncEquipment } = useAvatar();
     const navigate = useNavigate();
 
@@ -78,6 +78,10 @@ const CardCollection = () => {
     };
 
     const getRarityStyle = (rarity) => rarityColors[rarity] || rarityColors.common;
+    const getCardDescription = (card) => {
+        if (language?.startsWith('zh')) return card.description_zh || card.description;
+        return card.description_en || card.description;
+    };
 
     if (loading) {
         return (
@@ -176,7 +180,7 @@ const CardCollection = () => {
                             key={card.id}
                             className={`group relative rounded-[2.5rem] border-2 overflow-hidden transition-all duration-300 ${owned
                                 ? `${style.bg} ${style.border} shadow-sm hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] hover:-translate-y-2`
-                                : 'bg-white border-gray-100 border-dashed opacity-50 grayscale hover:grayscale-0 transition-all'
+                                : 'bg-white border-gray-100 border-dashed opacity-50 grayscale cursor-not-allowed transition-all'
                                 }`}
                         >
                             {/* Card Image Stage */}
@@ -184,7 +188,7 @@ const CardCollection = () => {
                                 <img
                                     src={card.image}
                                     alt={card.name}
-                                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                    className={`w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 ${tab === 'student' ? 'avatar-portrait-grid' : ''}`}
                                     onError={(e) => {
                                         e.target.onerror = null;
                                         e.target.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(card.name)}&background=random&size=400&bold=true`;
@@ -215,7 +219,7 @@ const CardCollection = () => {
                             <div className="p-6 pt-2">
                                 <div className="mb-4">
                                     <h4 className="font-black text-xl text-gray-900 leading-tight mb-1">{card.name}</h4>
-                                    <p className="text-sm text-gray-500 font-medium line-clamp-2 min-h-[2.5rem]">{card.description}</p>
+                                    <p className="text-sm text-gray-500 font-medium line-clamp-2 min-h-[2.5rem]">{getCardDescription(card)}</p>
                                 </div>
 
                                 {tab === 'tutor' && card.traits && (

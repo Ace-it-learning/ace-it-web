@@ -1,0 +1,169 @@
+{
+  "code": "JS6119",
+  "nameEn": "Bachelor of Science in Psychology",
+  "nameZh": "心理學學士",
+  "university": "HKU",
+  "faculty": "Faculty of Social Sciences",
+  "median": 31,
+  "category": "Social Sciences",
+  "en": {
+    "sections": {
+      "admission": {
+        "bullets": [
+          "Minimum DSE requirements: 4 core subjects + 2 electives with Level 3 in English and Chinese, Level 2 in Maths and Liberal Studies; Biology or Economics preferred",
+          "Typical admission score: median 31 points (Best 6 subjects), lower quartile ~29, upper quartile ~33",
+          "Preferred electives: Biology (for neuroscience pathway), Economics, Mathematics, or Geography; strong English performance essential for reading-intensive curriculum",
+          "Interview: Not required for standard admission; portfolio of psychology-related activities may strengthen application for borderline candidates",
+          "Alternative entry: IB (30+ points), GCE A-Level (AAB including a science or social science), SAT (1300+) with relevant AP subjects"
+        ]
+      },
+      "curriculum": {
+        "bullets": [
+          "Year 1: Psychology foundation — Introduction to Psychology, Research Methods, Statistics for Behavioural Sciences; Common Core Curriculum; no major declaration needed",
+          "Year 2: Core domains — Cognitive Psychology, Developmental Psychology, Social Psychology, Biological Psychology, Personality and Individual Differences; laboratory practicals (100 hours)",
+          "Year 3: Advanced topics — Abnormal Psychology, Clinical Psychology, Health Psychology, Organisational Psychology; research apprenticeship with faculty (optional); 200-hour internship",
+          "Year 4: Specialisation tracks — Clinical Psychology Preparation, Organisational Psychology, Cognitive Neuroscience, or Educational Psychology; honours thesis (12 credits) or applied research project",
+          "Research facilities: HKU Psychology Laboratory with eye-tracking (Tobii Pro), EEG (Neuroscan), behavioural observation suites, and virtual reality equipment for anxiety research",
+          "Accreditation pathway: Curriculum accredited by Hong Kong Psychological Society (HKPS); graduates eligible for HKPS graduate membership and professional training programmes",
+          "Interdisciplinary options: Minor in Neuroscience, Counselling, or Data Science; joint research with HKU Brain Health Institute and Faculty of Medicine"
+        ]
+      },
+      "career": {
+        "bullets": [
+          "Clinical Psychology: Master's (M.Soc.Sc. in Clinical Psychology) required for registration; graduates work at HA hospitals, private clinics, and NGOs (HK$35,000-50,000/month after registration)",
+          "Educational Psychology: PGDE + Master's in Educational Psychology; work at Education Bureau, school-based support teams, or special education centres",
+          "Organisational Psychology: HR analytics, talent management, organisational development at multinational corporations (HSBC, Google, Amazon); starting salaries HK$25,000-35,000/month",
+          "Research & Academia: PhD at HKU, CUHK, or overseas (Stanford, Yale, UCL); postdoctoral positions at HKU Brain Health Institute or overseas universities",
+          "Counselling & Mental Health: Counselling psychologist at community centres, youth services, family planning associations; Master's in Counselling enhances prospects",
+          "Marketing & Consumer Research: Consumer insights, UX research, brand strategy at Nielsen, Ipsos, Meta, or advertising agencies; psychology-trained researchers highly valued"
+        ]
+      },
+      "campus": {
+        "bullets": [
+          "Psychology facilities: The Jockey Club Tower houses dedicated psychology laboratories, observation rooms with one-way mirrors, and group testing suites",
+          "Research centres: HKU Centre for Cognitive and Brain Sciences, Centre for Suicide Research and Prevention, Centre for Family and Population Research — students can volunteer or assist",
+          "Libraries: Main Library psychology collection (100,000+ volumes); online access to PsycINFO, PubMed, Web of Science; dedicated psychology subject librarian",
+          "Student societies: Psychology Society organises academic seminars, mental health awareness campaigns, peer mentoring; active collaboration with Counselling Centre",
+          "Wellness support: HKU Counselling and Person Enrichment Centre (CPEC) provides free counselling services; psychology students often shadow practitioners as part of career exploration"
+        ]
+      },
+      "competitiveness": {
+        "bullets": [
+          "Admission statistics: ~900 applicants for ~180 places (5:1 ratio) — highly competitive due to popularity of psychology and limited places",
+          "Score distribution: 70% of admitted students score 29-33 points; students with 27-28 need exceptional personal statement or psychology-related experience",
+          "Subject relevance: Biology Level 5+ advantageous for neuroscience track; Economics Level 5+ for organisational psychology; English Level 5+ essential for all applicants",
+          "Comparison with CUHK Psychology (JS4046): HKU has stronger research output (h-index) and clinical psychology training links; CUHK has larger intake (~250 places) and broader social science context",
+          "Non-JUPAS intake: ~20% of places for international students, particularly from mainland China and Southeast Asia, raising cohort academic standards",
+          "Trend: Post-pandemic surge in mental health awareness has increased applications by 25% since 2020; clinical psychology pathway now requires ~32 points median"
+        ]
+      },
+      "alumni": {
+        "bullets": [
+          "Dr. Paul Wong (BSc 1985) — Professor of Clinical Psychology at University of Queensland, pioneer in acceptance and commitment therapy (ACT) in Asia",
+          "Dr. Sylvia Chen (BSc 1992) — Chair Professor of Psychology at HKU, leading researcher in cultural psychology and social cognition",
+          "Ms. Michelle Leung (BSc 2003) — Chief Clinical Psychologist at Hospital Authority, overseeing mental health services for 20+ public hospitals",
+          "Dr. Samuel Ho (BSc 1998, PhD 2003) — Founder of Mindfulness-Based Cognitive Therapy (MBCT) Hong Kong Centre, advocate for workplace mental health",
+          "Ms. Clara Lau (BSc 2010) — Head of People Analytics at HSBC Asia Pacific, applying organisational psychology to 30,000+ employee workforce"
+        ]
+      },
+      "scholarships": {
+        "bullets": [
+          "HKU Foundation Entrance Scholarship: Full tuition + HK$50,000/year for DSE 5** in 3+ subjects; psychology students with strong academic records frequently qualify",
+          "Faculty of Social Sciences Scholarship: HK$20,000-35,000/year for top 10% of psychology cohort based on academic and research performance",
+          "HKPS Undergraduate Research Award: HK$15,000 for outstanding honours thesis; includes presentation opportunity at Hong Kong Psychological Society annual conference",
+          "Mental Health Research Scholarship: HK$25,000/year for students committed to clinical psychology or mental health research; funded by Hong Kong Jockey Club Charities Trust",
+          "Overseas Research Scholarship: HK$40,000 for summer research at partner universities (University of Melbourne, University of British Columbia, University of Amsterdam)"
+        ]
+      },
+      "tips": {
+        "bullets": [
+          "Build psychology experience early: Volunteer at suicide prevention hotlines, shadow school counsellors, or assist at psychology research labs — admissions officers value demonstrated interest",
+          "Excel in English and Biology: English Level 5+ is essential for reading dense research papers; Biology Level 5+ opens the cognitive neuroscience specialisation pathway",
+          "Understand the registration pathway: Clinical psychology requires Master's + 2-year supervised practice; plan your 4-year undergraduate to maximise research experience and references",
+          "Engage with faculty research: Email professors in Year 1 to volunteer in labs; first-author publications or conference presentations significantly boost postgraduate applications",
+          "Consider double major: Psychology + Data Science or Psychology + Marketing creates unique profiles for UX research, consumer insights, or HR analytics careers"
+        ]
+      }
+    }
+  },
+  "zh": {
+    "sections": {
+      "admission": {
+        "bullets": [
+          "最低文憑試要求：4科核心科目 + 2科選修科目，英文及中文達3級，數學及通識達2級；優先考慮生物或經濟",
+          "典型入學分數：中位數31分（最佳6科），下四分位數約29分，上四分位數約33分",
+          "優先選修科目：生物（神經科學途徑）、經濟、數學或地理；強勁英文表現對閱讀密集型課程至關重要",
+          "面試：標準入學不設面試；心理學相關活動作品集可強化邊緣候選人申請",
+          "替代入學途徑：IB（30分以上）、GCE A-Level（包括科學或社會科學達AAB）、SAT（1300分以上）連相關AP科目"
+        ]
+      },
+      "curriculum": {
+        "bullets": [
+          "第一年：心理學基礎——心理學導論、研究方法、行為科學統計；共同核心課程；無需選定主修",
+          "第二年：核心領域——認知心理學、發展心理學、社會心理學、生物心理學、人格與個別差異；實驗室實習（100小時）",
+          "第三年：進階課題——異常心理學、臨床心理學、健康心理學、組織心理學；可選擇教授研究學徒制；200小時實習",
+          "第四年：專修方向——臨床心理學預備、組織心理學、認知神經科學或教育心理學；榮譽論文（12學分）或應用研究項目",
+          "研究設施：港大心理學實驗室配備眼動儀（Tobii Pro）、腦電圖（Neuroscan）、行為觀察室及虛擬實境焦慮研究設備",
+          "認證途徑：課程獲香港心理學會（HKPS）認可；畢業生符合HKPS研究生會員及專業培訓課程資格",
+          "跨學科選項：神經科學、輔導學或數據科學副修；與港大腦健康研究所及醫學院聯合研究"
+        ]
+      },
+      "career": {
+        "bullets": [
+          "臨床心理學：需修讀碩士（社會科學碩士-臨床心理學）方可註冊；畢業生於醫管局醫院、私人診所及非政府機構工作（註冊後月薪35,000-50,000港元）",
+          "教育心理學：教育文憑 + 教育心理學碩士；於教育局、校本支援組或特殊教育中心工作",
+          "組織心理學：跨國企業人力資源分析、人才管理、機構發展（滙豐、Google、亞馬遜）；起薪每月25,000-35,000港元",
+          "研究及學術界：港大、中大或海外博士（史丹福、耶魯、倫敦大學學院）；於港大腦健康研究所或海外大學從事博士後研究",
+          "輔導及心理健康：社區中心、青少年服務、家計會輔導心理學家；輔導學碩士提升前景",
+          "市場營銷及消費者研究：尼爾森、益普索、Meta或廣告代理公司消費者洞察、用戶體驗研究、品牌策略；心理學訓練研究員極受重視"
+        ]
+      },
+      "campus": {
+        "bullets": [
+          "心理學設施：賽馬會教學大樓設有專屬心理學實驗室、單向鏡觀察室及團體測試套房",
+          "研究中心：港大認知與腦科學中心、自殺研究及預防中心、家庭與人口研究中心——學生可義務協助",
+          "圖書館：主圖書館心理學藏書（10萬冊以上）；可線上使用PsycINFO、PubMed、Web of Science；專責心理學學科圖書館員",
+          "學生學會：心理學會組織學術研討會、心理健康意識活動、同輩導師；與輔導中心活躍合作",
+          "健康支援：港大輔導及培育中心（CPEC）提供免費輔導服務；心理學學生常於職業探索期間旁觀實踐"
+        ]
+      },
+      "competitiveness": {
+        "bullets": [
+          "入學統計：約900人申請，約180個學額（5:1比例）——因心理學受歡迎及學額有限而競爭激烈",
+          "分數分佈：70%獲錄取學生達29-33分；27-28分者需有卓越個人陳述或心理學相關經驗",
+          "科目相關性：生物達5級以上對神經科學方向有優勢；經濟達5級以上對組織心理學有優勢；英文達5級以上對所有申請人必需",
+          "與中大心理學（JS4046）比較：港大研究產出（h-index）及臨床心理學培訓聯繫較強；中大收生較多（約250學額）及更廣泛社會科學背景",
+          "非聯招收生：約20%學額予國際學生，尤其中國內地及東南亞，提升學生群體學術水平",
+          "趨勢：後疫情心理健康意識提升，申請自2020年增加25%；臨床心理學途徑現時中位數約需32分"
+        ]
+      },
+      "alumni": {
+        "bullets": [
+          "黃富強博士（1985年心理學學士）——昆士蘭大學臨床心理學教授，亞洲接納與承諾治療（ACT）先驅",
+          "陳淑娟博士（1992年心理學學士）——港大心理學講座教授，文化心理學及社會認知領先研究者",
+          "梁敏兒女士（2003年心理學學士）——醫管局首席臨床心理學家，管理20多間公營醫院心理健康服務",
+          "何信榮博士（1998年心理學學士，2003年博士）——靜觀認知治療（MBCT）香港中心創辦人，職場心理健康倡議者",
+          "劉嘉欣女士（2010年心理學學士）——滙豐亞太區人力分析主管，將組織心理學應用於30,000多名員工"
+        ]
+      },
+      "scholarships": {
+        "bullets": [
+          "港大基金入學獎學金：全額學費 + 每年50,000港元（文憑試3科以上5**）；學術紀錄強的心理學學生經常符合資格",
+          "社會科學學院獎學金：每年20,000-35,000港元予心理學系前10%學生，按學術及研究表現評選",
+          "香港心理學會本科生研究獎：15,000港元予卓越榮譽論文；包括於香港心理學會年會發表機會",
+          "心理健康研究獎學金：每年25,000港元予承諾從事臨床心理學或心理健康研究者；由香港賽馬會慈善信託基金資助",
+          "海外研究獎學金：40,000港元供夥伴大學（墨爾本大學、英屬哥倫比亞大學、阿姆斯特丹大學）暑期研究"
+        ]
+      },
+      "tips": {
+        "bullets": [
+          "及早建立心理學經驗：於自殺預防熱線當義工、跟隨學校輔導員、或協助心理學研究實驗室——招生官重視已展示的興趣",
+          "精通英文及生物：英文達5級以上對閱讀密集研究論文至關重要；生物達5級以上開啟認知神經科學專修途徑",
+          "了解註冊途徑：臨床心理學需碩士+2年監督實習；規劃四年本科以最大化研究經驗及推薦信",
+          "投入教授研究：第一年電郵教授自願加入實驗室；第一作者發表或會議發表顯著提升研究院申請",
+          "考慮雙主修：心理學+數據科學或心理學+市場學為用戶體驗研究、消費者洞察或人力資源分析職業創造獨特背景"
+        ]
+      }
+    }
+  }
+}

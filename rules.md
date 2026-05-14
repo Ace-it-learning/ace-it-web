@@ -87,4 +87,7 @@
     * Root scripts matching `fix_*.js`, `test_*.js`, `check_*.js`.
     * `**/node_modules/**`, `frontend/dist/`.
 * **Structural Prompts**: Rely on the `prompt_map` (in Knowledge Items or `backend/prompts/`) rather than reading large prompt config files on every turn.
-* **No Code Dumps in Chat**: When replying to the PM user, describe outcomes in plain language. Do not paste code blocks, diffs, or long file snippets unless the user explicitly asks for technical detail.
+* **Transparent Tool Execution (Critical)**: While chat responses should be concise, ALL tool calls (WriteFile, Shell, etc.) must be 100% verbose. Never suppress, truncate, or encode the content in the IN block. Full visibility is required for the IDE to execute the command.
+* **Chat Conciseness**: Only use plain language for the summary of what was done, but the background "vibe coding" logic must remain fully detailed.
+* **Large Data Writing**: For files or JSON data larger than 50 lines, DO NOT use Shell commands (e.g., echo, cat, or heredocs). These fail due to shell character limits and quoting issues.
+* **Action**: Always use the native WriteFile tool or generate a temporary Node.js "seeding" script to handle the file creation.

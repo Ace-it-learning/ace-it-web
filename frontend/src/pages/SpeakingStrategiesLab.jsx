@@ -23,13 +23,14 @@ const SpeakingStrategiesLab = () => {
     // Robust Avatar Sync Helper
     const getStudentAvatar = () => {
         if (equipment?.student?.image) {
-            // Ensure path starts with /avatars/ if it looks like a filename
-            if (equipment.student.image.startsWith('s_') && !equipment.student.image.includes('/')) {
-                return `/avatars/${equipment.student.image}`;
+            const img = equipment.student.image;
+            if (img.startsWith('/') || img.startsWith('http')) return img;
+            if (img.startsWith('s_') && !img.includes('/')) {
+                return `/avatars/${img}`;
             }
-            return equipment.student.image;
+            return img;
         }
-        return '/avatars/student_male_1.jpg'; // DSE default
+        return '/avatars/Student/Marcus.jpeg';
     };
 
     // 1. Module & Content Selection

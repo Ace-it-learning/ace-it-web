@@ -1,0 +1,903 @@
+{
+  "_meta": {
+    "batch": 2,
+    "version": "premium",
+    "university": "CUHK",
+    "programmes": "6-10",
+    "sections": 8,
+    "generated_by": "AI",
+    "date": "2026-05-14"
+  },
+  "programmes": {
+    "JS4202": {
+      "code": "JS4202",
+      "university": "香港中文大學",
+      "en": {
+        "sections": {
+          "admission": {
+            "title": "Eligibility & Admission Criteria (DSE)",
+            "content": [
+              "**Academic Threshold**: CUHK Integrated BBA is highly competitive. The median admission score is typically Best 5 = 28-30 (standard scale, 5** = 7 pts).",
+              "**Core Subjects**: English (Level 4+), Mathematics (Compulsory Part, Level 3+), and a pass in Citizenship and Social Development.",
+              "**Preferred Electives**: Economics, Business, Accounting and Financial Studies (BAFS), and Mathematics Extended Part (M1/M2) are highly advantageous.",
+              "**Interview**: Group discussion or individual interview assessing analytical thinking, communication skills, leadership potential, and business awareness.",
+              "**Non-Academic Factors**: Leadership roles, business competitions, entrepreneurship experience, and community involvement are valued."
+            ]
+          },
+          "curriculum": {
+            "title": "Programme Structure & Curriculum",
+            "content": [
+              "**Year 1 - Business Foundation**: Economics, accounting, statistics, business communication, and introduction to management. Broad exposure to all business disciplines.",
+              "**Year 2 - Concentration Selection**: Students choose from concentrations including Finance, Marketing, Management, Business Analytics, and Entrepreneurship.",
+              "**Year 3 - Advanced Core & Electives**: Specialised courses, international business, corporate strategy, and cross-functional electives across the business school.",
+              "**Year 4 - Capstone & Internship**: Final year project, internship with multinational corporations, and professional development workshops.",
+              "**Global Programmes**: Exchange opportunities with 280+ partner universities including Wharton, LSE, and INSEAD.",
+              "**Professional Accreditation**: Programme accredited by AACSB, the hallmark of excellence in business education."
+            ]
+          },
+          "career": {
+            "title": "Career Pathways & Prospects",
+            "content": [
+              "**Investment Banking**: Front-office roles at Goldman Sachs, Morgan Stanley, JPMorgan, and local banks.",
+              "**Consulting**: Management consulting at McKinsey, BCG, Bain, and Big Four advisory practices.",
+              "**Corporate Management**: Management trainee programmes at MNCs and listed companies in Hong Kong and Greater China.",
+              "**Marketing & Brand Management**: Brand managers and digital marketers at FMCG and tech companies.",
+              "**Accounting & Finance**: Corporate finance, audit, and advisory roles at Big Four and investment firms.",
+              "**Entrepreneurship**: CUHK's entrepreneurship centre supports student startups with funding and mentorship."
+            ]
+          },
+          "campus": {
+            "title": "Campus Life & Student Experience",
+            "content": [
+              "**CUHK Business School**: State-of-the-art facilities including trading rooms, case study rooms, and collaborative learning spaces.",
+              "**College System**: BBA students are distributed across CUHK's nine colleges, each offering unique cultural identity.",
+              "**Student Societies**: Business Association organises case competitions, networking events, and leadership programmes.",
+              "**Case Competitions**: Regular participation in international competitions including Hult Prize and CFA Research Challenge.",
+              "**Networking**: Career fairs, alumni sharing, and industry talks with senior executives from top firms."
+            ]
+          },
+          "competitiveness": {
+            "title": "Admission Competitiveness Analysis",
+            "content": [
+              "**Overall Difficulty**: High (4/5 stars). Approximately 1,500-2,000 applicants for ~300 places (~15-20% admission rate).",
+              "**Score Distribution**: Top quartile: Best 5 = 31-33; Median: Best 5 = 28-30; Bottom quartile: Best 5 = 26-28.",
+              "**Subject Strategy**: English (x1.0) + Maths (x1.0) + Economics/BAFS (x1.0) + Best 2 electives. M1/M2 adds advantage.",
+              "**Interview Weighting**: Interview carries approximately 20-25%. Business awareness and communication are assessed.",
+              "**Band A Advantage**: Band A Choice 1 receives priority. Integrated BBA is a popular first choice.",
+              "**Non-JUPAS Pathway**: IB (36+/45), GCE A-Levels (AAA). ~30-40 places reserved."
+            ]
+          },
+          "alumni": {
+            "title": "Notable Alumni & Faculty",
+            "content": [
+              "**Professor Kalok Chan**: Dean of CUHK Business School. Leading finance scholar.",
+              "**Professor T.J. Wong**: World-renowned accounting scholar and corporate governance expert.",
+              "**Alumni in Finance**: Senior positions at Goldman Sachs, Morgan Stanley, and major banks.",
+              "**Alumni in Entrepreneurship**: Successful founders of tech and fintech startups.",
+              "**Alumni in Consulting**: Partners at McKinsey, BCG, Bain, and Big Four firms."
+            ]
+          },
+          "scholarships": {
+            "title": "Scholarships & Financial Aid",
+            "content": [
+              "**CUHK Business School Scholarships**: Merit-based awards (HKD 30,000-60,000/year).",
+              "**CUHK Entrance Scholarships**: Full or partial tuition for exceptional DSE results.",
+              "**Industry Scholarships**: Sponsored by banks and corporations for outstanding students.",
+              "**Overseas Exchange Grants**: Up to HKD 50,000 per exchange semester.",
+              "**Government Grants & Loans**: NMTSS up to HKD 33,200/year."
+            ]
+          },
+          "tips": {
+            "title": "Ace Sir's CUHK Integrated BBA Strategy",
+            "content": [
+              "**Score Targeting**: Aim for Best 5 of 28+ with strong English, Maths, and Economics/BAFS.",
+              "**Stay Business-Aware**: Read The Economist and Financial Times. Discuss current business topics in interviews.",
+              "**Show Leadership**: Highlight leadership roles and event organisation experience.",
+              "**Quantitative Skills**: Emphasise maths and statistics. Business analytics is increasingly important.",
+              "**Have a Vision**: Know which concentration interests you and why. Vague answers don't impress."
+            ]
+          }
+        }
+      },
+      "zh": {
+        "sections": {
+          "admission": {
+            "title": "入學要求與計分詳情 (DSE)",
+            "content": [
+              "**學術門檻**：中大工商管理學士綜合課程競爭激烈。中位數收生分數通常為 Best 5 = 28-30 分。",
+              "**核心科目**：英文 (Level 4 或以上)、數學 (必修部分，Level 3 或以上)，以及公民與社會發展科合格。",
+              "**建議選修**：經濟、企業會計與財務概論 (BAFS) 及數學延伸部分 (M1/M2) 極具優勢。",
+              "**面試**：小組討論或個人面試，考核分析思維、溝通技巧、領導潛質及商業觸覺。",
+              "**非學術因素**：領導角色、商業比賽、創業經驗及社區參與受重視。"
+            ]
+          },
+          "curriculum": {
+            "title": "課程結構與內容",
+            "content": [
+              "**第一年 - 商業基礎**：經濟學、會計學、統計學、商業溝通及管理學導論。全面接觸所有商業學科。",
+              "**第二年 - 選擇專修**：學生從金融、市場學、管理學、商業分析學及創業學等專修中選擇。",
+              "**第三年 - 進階核心及選修**：專科課程、國際商業、企業策略及跨學科選修。",
+              "**第四年 - 畢業專題及實習**：畢業專題、跨國企業實習及專業發展工作坊。",
+              "**環球計劃**：與280多所伙伴大學 (華頓商學院、倫敦政治經濟學院、INSEAD) 的交流機會。",
+              "**專業認可**：課程獲 AACSB 認可，這是商業教育卓越的標誌。"
+            ]
+          },
+          "career": {
+            "title": "職業前景與出路",
+            "content": [
+              "**投資銀行**：高盛、摩根士丹利、摩根大通及本地銀行的前線職位。",
+              "**顧問諮詢**：麥肯錫、波士頓諮詢、貝恩及四大顧問業務的管理顧問。",
+              "**企業管理**：跨國企業及上市公司的管理培訓生計劃。",
+              "**市場推廣及品牌管理**：快速消費品及科技公司的品牌經理及數碼營銷人員。",
+              "**會計及金融**：四大會計師事務所及投資公司的企業融資、審計及顧問職位。",
+              "**創業**：中大創業中心為學生初創企業提供資金及師友指導。"
+            ]
+          },
+          "campus": {
+            "title": "校園生活與學生體驗",
+            "content": [
+              "**中大商學院**：先進設施包括交易室、個案研討室及協作學習空間。",
+              "**書院制度**：工商管理學生分佈於中大九所書院，每所提供獨特文化特色。",
+              "**學生組織**：商學會舉辦個案比賽、社交活動及領導力計劃。",
+              "**個案比賽**：定期參與 Hult Prize 及 CFA Research Challenge 等國際比賽。",
+              "**社交網絡**：就業博覽會、校友分享及與頂尖企業高層的行業講座。"
+            ]
+          },
+          "competitiveness": {
+            "title": "入學競爭力分析",
+            "content": [
+              "**整體難度**：高 (4/5星)。每年約1,500-2,000人競爭~300個學額 (入學率約15-20%)。",
+              "**分數分佈**：最高四分位數：Best 5 = 31-33分；中位數：Best 5 = 28-30分；最低四分位數：Best 5 = 26-28分。",
+              "**科目策略**：英文 (x1.0) + 數學 (x1.0) + 經濟/BAFS (x1.0) + 最佳2科選修。M1/M2 增加優勢。",
+              "**面試比重**：面試佔入學決定約20-25%。考核商業意識及溝通能力。",
+              "**Band A 優勢**：Band A 第一志願獲優先考慮。綜合工商管理是熱門第一志願。",
+              "**非聯招途徑**：國際文憑 (IB 36+/45)、GCE A-Level (AAA)。約30-40個學額預留。"
+            ]
+          },
+          "alumni": {
+            "title": "知名校友及教職員",
+            "content": [
+              "**陳家樂教授**：中大商學院院長。金融學領軍學者。",
+              "**黃德尊教授**：世界知名會計學者及企業管治專家。",
+              "**金融界校友**：高盛、摩根士丹利及主要銀行的高級職位。",
+              "**創業界校友**：科技及金融科技初創企業的成功創辦人。",
+              "**顧問界校友**：麥肯錫、波士頓諮詢、貝恩及四大公司的合伙人。"
+            ]
+          },
+          "scholarships": {
+            "title": "獎學金及經濟援助",
+            "content": [
+              "**中大商學院獎學金**：merit-based 獎項 (每年港幣30,000-60,000元)。",
+              "**中大入學獎學金**：DSE 成績卓越者的全額或半額學費資助。",
+              "**業界獎學金**：銀行及企業贊助，支持優秀學生。",
+              "**海外交流資助**：每次交流學期最多港幣50,000元。",
+              "**政府資助及貸款**：NMTSS 每年最多港幣33,200元。"
+            ]
+          },
+          "tips": {
+            "title": "Ace Sir 中大工商管理綜合課程攻略",
+            "content": [
+              "**分數目標**：Best 5 目標28分以上，英文、數學及經濟/BAFS 成績優異。",
+              "**保持商業觸覺**：閱讀《經濟學人》及《金融時報》。面試中討論當前商業議題。",
+              "**展示領導力**：突顯領導角色及活動籌辦經驗。",
+              "**量化技能**：強調數學及統計能力。商業分析學日益重要。",
+              "**有願景**：知道哪個專修吸引你及原因。模糊答案不會令人印象深刻。"
+            ]
+          }
+        }
+      }
+    },
+    "JS4412": {
+      "code": "JS4412",
+      "university": "香港中文大學",
+      "en": {
+        "sections": {
+          "admission": {
+            "title": "Eligibility & Admission Criteria (DSE)",
+            "content": [
+              "**Academic Threshold**: CUHK Computer Science and Engineering is competitive. The median admission score is typically Best 5 = 26-28 (standard scale, 5** = 7 pts).",
+              "**Core Subjects**: English (Level 4+), Mathematics (Compulsory Part, Level 4+), and a pass in Citizenship and Social Development.",
+              "**Critical Subject**: Mathematics Extended Part (M1/M2) is strongly recommended and carries significant weighting. Physics is advantageous.",
+              "**Interview**: Some applicants may be interviewed assessing problem-solving skills, logical thinking, and passion for computing.",
+              "**Non-Academic Factors**: Programming projects, coding competitions, robotics, and hackathon participation are highly valued."
+            ]
+          },
+          "curriculum": {
+            "title": "Programme Structure & Curriculum",
+            "content": [
+              "**Year 1 - Computing Foundation**: Programming (C/C++, Java, Python), discrete mathematics, data structures, and computer organisation.",
+              "**Year 2 - Core Computer Science**: Algorithms, operating systems, databases, software engineering, and computer networks.",
+              "**Year 3 - Advanced Topics & Specialisation**: Artificial intelligence, machine learning, computer vision, cybersecurity, and distributed systems. Students choose streams.",
+              "**Year 4 - Capstone & Research**: Final year project, internship at tech companies (Google, Microsoft, local startups), and research opportunities.",
+              "**Engineering Focus**: Hardware-software integration, embedded systems, and VLSI design alongside software development.",
+              "**Professional Accreditation**: Programme accredited by the Hong Kong Institution of Engineers (HKIE)."
+            ]
+          },
+          "career": {
+            "title": "Career Pathways & Prospects",
+            "content": [
+              "**Software Engineering**: Software engineers at Google, Microsoft, Apple, Meta, and leading tech companies.",
+              "**Artificial Intelligence**: AI/ML engineers at AI labs, autonomous driving companies, and fintech firms.",
+              "**Quantitative Finance**: Quant developers and algorithmic traders at hedge funds and investment banks.",
+              "**Cybersecurity**: Security engineers and penetration testers at banks, government, and cybersecurity firms.",
+              "**Hardware Engineering**: Chip designers and embedded systems engineers at semiconductor companies.",
+              "**Entrepreneurship**: Many graduates found successful tech startups in Hong Kong, Shenzhen, and Silicon Valley."
+            ]
+          },
+          "campus": {
+            "title": "Campus Life & Student Experience",
+            "content": [
+              "**Engineering Buildings**: Modern computer labs, maker spaces, and research facilities including the Robotics Institute.",
+              "**College System**: CSE students are assigned to CUHK colleges, providing hall accommodation and community.",
+              "**Student Societies**: Computer Science Society organises hackathons, coding competitions, and tech talks.",
+              "**Research Culture**: Strong emphasis on AI and robotics research. Many undergraduates publish at top conferences.",
+              "**Industry Connections**: Partnerships with Google, Microsoft, Huawei, and local tech firms for internships."
+            ]
+          },
+          "competitiveness": {
+            "title": "Admission Competitiveness Analysis",
+            "content": [
+              "**Overall Difficulty**: High (4/5 stars). Approximately 1,000-1,200 applicants for ~180 places (~15% admission rate).",
+              "**Score Distribution**: Top quartile: Best 5 = 29-31; Median: Best 5 = 26-28; Bottom quartile: Best 5 = 24-26.",
+              "**Subject Strategy**: Maths (x1.0) + M1/M2 (x1.0) + Physics (x1.0) + Best 2 electives. M1/M2 is a significant differentiator.",
+              "**Interview Weighting**: Interview carries approximately 15-20%. Problem-solving approach and coding interest are assessed.",
+              "**Band A Advantage**: Band A Choice 1 receives priority. CSE is a very popular first choice for tech-oriented students.",
+              "**Non-JUPAS Pathway**: IB (36+/45), GCE A-Levels (AAA including Maths). ~15-20 places reserved."
+            ]
+          },
+          "alumni": {
+            "title": "Notable Alumni & Faculty",
+            "content": [
+              "**Professor Michael Lyu**: World-renowned software engineering researcher. Expert in software reliability and AI systems.",
+              "**Professor Irwin King**: Leading researcher in machine learning and social media mining.",
+              "**Professor Helen Meng**: Pioneer in speech processing and natural language understanding.",
+              "**Alumni in Tech**: Senior engineers and engineering managers at Google, Meta, Apple, and Microsoft.",
+              "**Alumni in Startups**: Founders of successful AI, fintech, and SaaS startups in Asia."
+            ]
+          },
+          "scholarships": {
+            "title": "Scholarships & Financial Aid",
+            "content": [
+              "**CUHK Engineering Scholarships**: Merit-based awards (HKD 20,000-40,000/year).",
+              "**CUHK Entrance Scholarships**: Full or partial tuition for exceptional DSE results.",
+              "**Tech Industry Scholarships**: Sponsored by Google, Microsoft, and local tech firms.",
+              "**Research Grants**: Funding for undergraduate research and conference presentations.",
+              "**Government Grants & Loans**: NMTSS up to HKD 33,200/year."
+            ]
+          },
+          "tips": {
+            "title": "Ace Sir's CUHK CSE Strategy",
+            "content": [
+              "**Score Targeting**: Aim for Best 5 of 26+ with strong Maths and M1/M2. Physics also helps.",
+              "**Code Before University**: Build projects on GitHub. Admissions value demonstrated coding ability over grades alone.",
+              "**Join Competitions**: Participate in HKOI, hackathons, and coding competitions. They strengthen your profile significantly.",
+              "**Learn Multiple Languages**: Python, C++, and Java are core. Familiarity with all three gives you an edge.",
+              "**Understand AI Trends**: AI is transforming CSE. Show awareness of LLMs, computer vision, and generative AI."
+            ]
+          }
+        }
+      },
+      "zh": {
+        "sections": {
+          "admission": {
+            "title": "入學要求與計分詳情 (DSE)",
+            "content": [
+              "**學術門檻**：中大計算機科學與工程競爭激烈。中位數收生分數通常為 Best 5 = 26-28 分。",
+              "**核心科目**：英文 (Level 4 或以上)、數學 (必修部分，Level 4 或以上)，以及公民與社會發展科合格。",
+              "**關鍵科目**：強烈建議修讀數學延伸部分 (M1/M2)，有顯著加權。物理有優勢。",
+              "**面試**：部分申請者可能接受面試，考核解難能力、邏輯思維及對計算機的熱誠。",
+              "**非學術因素**：編程項目、編程比賽、機械人及黑客松參與極受重視。"
+            ]
+          },
+          "curriculum": {
+            "title": "課程結構與內容",
+            "content": [
+              "**第一年 - 計算機基礎**：編程 (C/C++、Java、Python)、離散數學、數據結構及計算機組織。",
+              "**第二年 - 核心計算機科學**：算法、操作系統、數據庫、軟件工程及計算機網絡。",
+              "**第三年 - 進階課題及專修**：人工智能、機器學習、計算機視覺、網絡安全及分佈式系統。學生選擇專修方向。",
+              "**第四年 - 畢業專題及研究**：畢業專題、科技公司 (Google、微軟、本地初創) 實習及研究機會。",
+              "**工程重點**：硬件軟件整合、嵌入式系統及超大規模集成電路設計， alongside 軟件開發。",
+              "**專業認可**：課程獲香港工程師學會 (HKIE) 認可。"
+            ]
+          },
+          "career": {
+            "title": "職業前景與出路",
+            "content": [
+              "**軟件工程**：Google、微軟、蘋果、Meta 及頂尖科技公司的軟件工程師。",
+              "**人工智能**：人工智能實驗室、自動駕駛公司及金融科技公司的人工智能/機器學習工程師。",
+              "**量化金融**：對沖基金及投資銀行的量化開發人員及算法交易員。",
+              "**網絡安全**：銀行、政府及網絡安全公司的安全工程師及滲透測試員。",
+              "**硬件工程**：半導體公司的晶片設計師及嵌入式系統工程師。",
+              "**創業**：很多畢業生於香港、深圳及硅谷創辦成功的科技初創企業。"
+            ]
+          },
+          "campus": {
+            "title": "校園生活與學生體驗",
+            "content": [
+              "**工程學院大樓**：現代化計算機實驗室、創客空間及研究設施，包括機械人研究所。",
+              "**書院制度**：計算機科學與工程學生獲分配至中大書院，提供舍堂住宿及社群。",
+              "**學生組織**：計算機科學學會舉辦黑客松、編程比賽及科技講座。",
+              "**研究文化**：強調人工智能及機械人研究。很多本科生於頂尖會議發表論文。",
+              "**業界聯繫**：與 Google、微軟、華為及本地科技公司的實習合作。"
+            ]
+          },
+          "competitiveness": {
+            "title": "入學競爭力分析",
+            "content": [
+              "**整體難度**：高 (4/5星)。每年約1,000-1,200人競爭~180個學額 (入學率約15%)。",
+              "**分數分佈**：最高四分位數：Best 5 = 29-31分；中位數：Best 5 = 26-28分；最低四分位數：Best 5 = 24-26分。",
+              "**科目策略**：數學 (x1.0) + M1/M2 (x1.0) + 物理 (x1.0) + 最佳2科選修。M1/M2 是重要區分因素。",
+              "**面試比重**：面試佔入學決定約15-20%。考核解難方法及編程興趣。",
+              "**Band A 優勢**：Band A 第一志願獲優先考慮。計算機科學與工程是科技導向學生的熱門第一志願。",
+              "**非聯招途徑**：國際文憑 (IB 36+/45)、GCE A-Level (AAA 包括數學)。約15-20個學額預留。"
+            ]
+          },
+          "alumni": {
+            "title": "知名校友及教職員",
+            "content": [
+              "**呂榮聰教授**：世界知名軟件工程研究學者。軟件可靠性及人工智能系統專家。",
+              "**金國慶教授**：機器學習及社交媒體挖掘的領軍研究者。",
+              "**蒙美玲教授**：語音處理及自然語言理解的先驅。",
+              "**科技界校友**：Google、Meta、蘋果及微軟的高級工程師及工程經理。",
+              "**初創界校友**：亞洲成功人工智能、金融科技及 SaaS 初創企業的創辦人。"
+            ]
+          },
+          "scholarships": {
+            "title": "獎學金及經濟援助",
+            "content": [
+              "**中大工程學院獎學金**：merit-based 獎項 (每年港幣20,000-40,000元)。",
+              "**中大入學獎學金**：DSE 成績卓越者的全額或半額學費資助。",
+              "**科技業界獎學金**：Google、微軟及本地科技公司贊助。",
+              "**研究資助**：本科生研究及會議發表的資助。",
+              "**政府資助及貸款**：NMTSS 每年最多港幣33,200元。"
+            ]
+          },
+          "tips": {
+            "title": "Ace Sir 中大計算機科學與工程攻略",
+            "content": [
+              "**分數目標**：Best 5 目標26分以上，數學及 M1/M2 成績優異。物理亦有幫助。",
+              "**入學前編程**：於 GitHub 建立項目。招生重視展示的編程能力多於成績。",
+              "**參加比賽**：參與香港電腦奧林匹克、黑客松及編程比賽。它們顯著增強你的競爭力。",
+              "**學習多種語言**：Python、C++ 及 Java 是核心。熟悉三者給你優勢。",
+              "**了解人工智能趨勢**：人工智能正在改變計算機科學。展示對大型語言模型、計算機視覺及生成式人工智能的認識。"
+            ]
+          }
+        }
+      }
+    },
+    "JS4525": {
+      "code": "JS4525",
+      "university": "香港中文大學",
+      "en": {
+        "sections": {
+          "admission": {
+            "title": "Eligibility & Admission Criteria (DSE)",
+            "content": [
+              "**Academic Threshold**: CUHK Pharmacy is highly competitive. The median admission score is typically Best 5 = 30-32 (standard scale, 5** = 7 pts).",
+              "**Core Subjects**: English (Level 4+), Mathematics (Compulsory Part, Level 3+), and a pass in Citizenship and Social Development.",
+              "**Science Subjects - Critical**: Chemistry and Biology are strongly preferred. Both carry significant weighting (x1.3 to x1.5).",
+              "**Interview**: Individual or group interview assessing scientific thinking, communication skills, motivation for pharmacy, and understanding of healthcare.",
+              "**Non-Academic Factors**: Healthcare volunteering, pharmacy shadowing experience, and evidence of caring personality are valued."
+            ]
+          },
+          "curriculum": {
+            "title": "Programme Structure & Curriculum",
+            "content": [
+              "**Year 1 - Pharmaceutical Sciences Foundation**: Chemistry, biochemistry, physiology, and pharmaceutical mathematics. Introduction to pharmacy practice.",
+              "**Year 2 - Pharmacology & Medicinal Chemistry**: Drug action mechanisms, drug design, pharmacokinetics, and pharmacodynamics.",
+              "**Year 3 - Clinical Pharmacy & Practice**: Therapeutics, patient counselling, drug interactions, and clinical rotations in hospital and community pharmacies.",
+              "**Year 4 - Advanced Practice & Research**: Specialised therapeutics, research project, and extended clinical placements. Preparation for registration examination.",
+              "**Clinical Placements**: Over 1,000 hours of supervised practice in Hospital Authority hospitals, community pharmacies, and pharmaceutical companies.",
+              "**Professional Accreditation**: Programme accredited by the Pharmacy and Poisons Board of Hong Kong. Graduates eligible for registration as Pharmacists."
+            ]
+          },
+          "career": {
+            "title": "Career Pathways & Prospects",
+            "content": [
+              "**Hospital Pharmacy**: Clinical pharmacists at public and private hospitals, specialising in areas like oncology, paediatrics, and ICU.",
+              "**Community Pharmacy**: Pharmacists at retail chains (Watsons, Mannings) and independent pharmacies. Patient counselling and medication management.",
+              "**Pharmaceutical Industry**: Drug development, clinical trials, regulatory affairs, and medical affairs at multinational pharma companies (Roche, Pfizer, AstraZeneca).",
+              "**Government & Regulatory**: Pharmacy and Poisons Board, Department of Health, and drug registration roles.",
+              "**Academia & Research**: PhD programmes and research positions in drug discovery, pharmacogenomics, and clinical pharmacy.",
+              "**Entrepreneurship**: Some pharmacists establish their own community pharmacies or healthcare consulting businesses."
+            ]
+          },
+          "campus": {
+            "title": "Campus Life & Student Experience",
+            "content": [
+              "**Pharmacy Building**: Dedicated facilities including dispensing laboratories, sterile preparation suites, and simulated pharmacy practice rooms.",
+              "**College System**: Pharmacy students are assigned to CUHK colleges, providing mentorship and hall life.",
+              "**Student Society**: Pharmacy Society organises academic support, health promotion campaigns, and professional networking events.",
+              "**Clinical Partnerships**: Strong ties with Prince of Wales Hospital, Alice Ho Miu Ling Nethersole Hospital, and community pharmacy chains.",
+              "**Interprofessional Education**: Collaborative learning with medical, nursing, and Chinese medicine students."
+            ]
+          },
+          "competitiveness": {
+            "title": "Admission Competitiveness Analysis",
+            "content": [
+              "**Overall Difficulty**: High (4/5 stars). Approximately 600-800 applicants for ~60 places (~8-10% admission rate).",
+              "**Score Distribution**: Top quartile: Best 5 = 33-35; Median: Best 5 = 30-32; Bottom quartile: Best 5 = 28-30.",
+              "**Subject Strategy**: Chemistry (x1.5) + Biology (x1.5) + English (x1.0) + Best 2 electives. Both sciences at Level 5+ are expected.",
+              "**Interview Weighting**: Interview carries approximately 25-30%. Motivation and understanding of pharmacy profession are assessed.",
+              "**Band A Advantage**: Band A Choice 1 receives priority. Pharmacy is almost always a first-choice programme.",
+              "**Non-JUPAS Pathway**: IB (36+/45), GCE A-Levels (AAA including Chemistry/Biology). ~5-10 places reserved."
+            ]
+          },
+          "alumni": {
+            "title": "Notable Alumni & Faculty",
+            "content": [
+              "**Professor Vincent Lee**: Leading pharmaceutical scientist specialising in drug delivery systems.",
+              "**Professor Betty Cheung**: Renowned clinical pharmacy researcher focusing on medication safety.",
+              "**Alumni in Hospital Pharmacy**: Chief pharmacists and clinical specialists at major Hong Kong hospitals.",
+              "**Alumni in Industry**: Senior roles in drug development and regulatory affairs at global pharmaceutical companies.",
+              "**Alumni in Academia**: Faculty members at pharmacy schools across Asia and internationally."
+            ]
+          },
+          "scholarships": {
+            "title": "Scholarships & Financial Aid",
+            "content": [
+              "**CUHK Pharmacy Scholarships**: Merit-based awards for top pharmacy students (HKD 25,000-50,000/year).",
+              "**CUHK Entrance Scholarships**: Full or partial tuition for exceptional DSE results.",
+              "**Pharmaceutical Industry Scholarships**: Sponsored by pharma companies for promising students.",
+              "**Clinical Placement Grants**: Funding for extended clinical rotations and conference attendance.",
+              "**Government Grants & Loans**: NMTSS up to HKD 33,200/year."
+            ]
+          },
+          "tips": {
+            "title": "Ace Sir's CUHK Pharmacy Strategy",
+            "content": [
+              "**Score Targeting**: Aim for Best 5 of 30+ with strong Chemistry and Biology (both Level 5+).",
+              "**Shadow a Pharmacist**: Spend time in hospital or community pharmacies. Understand what pharmacists actually do.",
+              "**Show Scientific Curiosity**: Pharmacy is deeply scientific. Demonstrate interest in drug mechanisms and patient care.",
+              "**Volunteer in Healthcare**: Hospital volunteering shows commitment to patient care beyond academic interest.",
+              "**Know the Difference**: Be able to explain why pharmacy, not medicine. Interviewers ask this frequently."
+            ]
+          }
+        }
+      },
+      "zh": {
+        "sections": {
+          "admission": {
+            "title": "入學要求與計分詳情 (DSE)",
+            "content": [
+              "**學術門檻**：中大藥劑學競爭激烈。中位數收生分數通常為 Best 5 = 30-32 分。",
+              "**核心科目**：英文 (Level 4 或以上)、數學 (必修部分，Level 3 或以上)，以及公民與社會發展科合格。",
+              "**理科科目 - 關鍵**：強烈建議修讀化學及生物。兩科均有顯著加權 (x1.3 至 x1.5)。",
+              "**面試**：個人或小組面試，考核科學思維、溝通技巧、修讀藥劑學的動機及對醫療的理解。",
+              "**非學術因素**：醫療義工、藥房影子實習經驗及關懷他人的個性受重視。"
+            ]
+          },
+          "curriculum": {
+            "title": "課程結構與內容",
+            "content": [
+              "**第一年 - 藥學科學基礎**：化學、生物化學、生理學及藥學數學。藥學實務導論。",
+              "**第二年 - 藥理學及藥物化學**：藥物作用機制、藥物設計、藥物動力學及藥效學。",
+              "**第三年 - 臨床藥學及實務**：治療學、病人輔導、藥物相互作用及醫院與社區藥房的臨床輪轉。",
+              "**第四年 - 進階實務及研究**：專科治療學、研究專題及延長臨床實習。準備註冊考試。",
+              "**臨床實習**：超過1,000小時的監督實習，遍佈醫管局醫院、社區藥房及製藥公司。",
+              "**專業認可**：課程獲香港藥劑業及毒藥管理局認可。畢業生符合藥劑師註冊資格。"
+            ]
+          },
+          "career": {
+            "title": "職業前景與出路",
+            "content": [
+              "**醫院藥劑**：公立及私立醫院的臨床藥劑師，專科包括腫瘤科、兒科及深切治療部。",
+              "**社區藥劑**：連鎖藥房 (屈臣氏、萬寧) 及獨立藥房的藥劑師。病人輔導及藥物管理。",
+              "**製藥業界**：跨國製藥公司 (羅氏、輝瑞、阿斯利康) 的藥物開發、臨床試驗、法規事務及醫學事務。",
+              "**政府及監管**：藥劑業及毒藥管理局、衞生署及藥物註冊職位。",
+              "**學術界及研究**：藥物發現、藥物基因組學及臨床藥學的博士課程及研究職位。",
+              "**創業**：部分藥劑師開設自己的社區藥房或醫療顧問業務。"
+            ]
+          },
+          "campus": {
+            "title": "校園生活與學生體驗",
+            "content": [
+              "**藥學大樓**：專屬設施包括配藥實驗室、無菌製劑室及模擬藥房實習室。",
+              "**書院制度**：藥劑學生獲分配至中大書院，提供師友指導及舍堂生活。",
+              "**學生組織**：藥學會舉辦學術支援、健康推廣活動及專業社交活動。",
+              "**臨床伙伴**：與威爾斯親王醫院、雅麗氏何妙齡那打素醫院及社區藥房連鎖的緊密關係。",
+              "**跨專業教育**：與醫科、護理及中醫學生的協作學習。"
+            ]
+          },
+          "competitiveness": {
+            "title": "入學競爭力分析",
+            "content": [
+              "**整體難度**：高 (4/5星)。每年約600-800人競爭~60個學額 (入學率約8-10%)。",
+              "**分數分佈**：最高四分位數：Best 5 = 33-35分；中位數：Best 5 = 30-32分；最低四分位數：Best 5 = 28-30分。",
+              "**科目策略**：化學 (x1.5) + 生物 (x1.5) + 英文 (x1.0) + 最佳2科選修。兩科理科達 Level 5 以上是預期的。",
+              "**面試比重**：面試佔入學決定約25-30%。考核動機及對藥劑專業的理解。",
+              "**Band A 優勢**：Band A 第一志願獲優先考慮。藥劑學幾乎總是第一志願課程。",
+              "**非聯招途徑**：國際文憑 (IB 36+/45)、GCE A-Level (AAA 包括化學/生物)。約5-10個學額預留。"
+            ]
+          },
+          "alumni": {
+            "title": "知名校友及教職員",
+            "content": [
+              "**李沛思教授**：領先的藥物科學家，專注於藥物傳遞系統。",
+              "**張璧瑤教授**：著名臨床藥學研究者，專注於藥物安全。",
+              "**醫院藥劑界校友**：香港主要醫院的藥劑部主管及臨床專家。",
+              "**業界校友**：全球製藥公司藥物開發及法規事務的高級職位。",
+              "**學術界校友**：亞洲及國際藥學院的教職員。"
+            ]
+          },
+          "scholarships": {
+            "title": "獎學金及經濟援助",
+            "content": [
+              "**中大藥劑學獎學金**：頒予頂尖藥劑學生的 merit-based 獎項 (每年港幣25,000-50,000元)。",
+              "**中大入學獎學金**：DSE 成績卓越者的全額或半額學費資助。",
+              "**製藥業界獎學金**：製藥公司贊助，支持有潛質的學生。",
+              "**臨床實習資助**：延長臨床輪轉及會議出席的資助。",
+              "**政府資助及貸款**：NMTSS 每年最多港幣33,200元。"
+            ]
+          },
+          "tips": {
+            "title": "Ace Sir 中大藥劑學攻略",
+            "content": [
+              "**分數目標**：Best 5 目標30分以上，化學及生物成績優異 (兩科 Level 5 以上)。",
+              "**跟隨藥劑師實習**：到醫院或社區藥房實習。了解藥劑師實際工作內容。",
+              "**展示科學好奇心**：藥劑學深深植根於科學。展示對藥物機制及病人護理的興趣。",
+              "**醫療義工**：醫院義工展示超越學術興趣的病人護理承諾。",
+              "**知道分別**：能夠解釋為何選擇藥劑學而非醫科。面試官經常問這個問題。"
+            ]
+          }
+        }
+      }
+    },
+    "JS4824": {
+      "code": "JS4824",
+      "university": "香港中文大學",
+      "en": {
+        "sections": {
+          "admission": {
+            "title": "Eligibility & Admission Criteria (DSE)",
+            "content": [
+              "**Academic Threshold**: CUHK Economics is moderately competitive. The median admission score is typically Best 5 = 24-26 (standard scale, 5** = 7 pts).",
+              "**Core Subjects**: English (Level 4+), Mathematics (Compulsory Part, Level 3+), and a pass in Citizenship and Social Development.",
+              "**Preferred Electives**: Economics, Mathematics Extended Part (M1/M2), and BAFS are highly advantageous.",
+              "**Interview**: Group discussion assessing analytical thinking, awareness of economic issues, and communication skills.",
+              "**Non-Academic Factors**: Participation in economics competitions, debate, and student leadership roles are valued."
+            ]
+          },
+          "curriculum": {
+            "title": "Programme Structure & Curriculum",
+            "content": [
+              "**Year 1 - Economic Foundation**: Microeconomics, macroeconomics, statistics, and mathematics for economists. Common social science curriculum.",
+              "**Year 2 - Intermediate Economics**: Intermediate micro and macro, econometrics, and economic history. Introduction to research methods.",
+              "**Year 3 - Specialised Electives**: Labour economics, international trade, monetary economics, development economics, and game theory.",
+              "**Year 4 - Advanced Research**: Honours thesis, advanced econometrics, and specialised seminars. Research assistant opportunities with faculty.",
+              "**Quantitative Training**: Strong emphasis on econometrics, data analysis, and statistical programming (Stata, R, Python).",
+              "**International Exchange**: Exchange programmes with LSE, University of Chicago, and National University of Singapore."
+            ]
+          },
+          "career": {
+            "title": "Career Pathways & Prospects",
+            "content": [
+              "**Investment Banking & Finance**: Analyst roles at investment banks, asset management firms, and private equity.",
+              "**Consulting**: Economic consulting and strategy consulting at McKinsey, BCG, and economic research firms.",
+              "**Government & Policy**: Economic analysts at the Hong Kong Monetary Authority, Census and Statistics Department, and policy bureaux.",
+              "**Research & Academia**: PhD programmes at top economics departments worldwide. Many become university professors.",
+              "**Data Science**: Economic modelling and data analysis roles at tech companies and fintech startups.",
+              "**International Organisations**: Economists at the World Bank, IMF, and Asian Development Bank."
+            ]
+          },
+          "campus": {
+            "title": "Campus Life & Student Experience",
+            "content": [
+              "**Social Science Building**: Dedicated economics research centres, computer labs with statistical software, and seminar rooms.",
+              "**College System**: Economics students are assigned to CUHK colleges, providing a rich residential experience.",
+              "**Student Societies**: Economics Society organises academic talks, case discussions, and networking with alumni in finance.",
+              "**Research Seminars**: Regular seminars by visiting professors and industry economists. Undergraduates are encouraged to attend.",
+              "**Data Resources**: Access to Bloomberg terminals, economic databases, and statistical software for research projects."
+            ]
+          },
+          "competitiveness": {
+            "title": "Admission Competitiveness Analysis",
+            "content": [
+              "**Overall Difficulty**: Moderate (3/5 stars). Approximately 600-800 applicants for ~200 places (~25-30% admission rate).",
+              "**Score Distribution**: Top quartile: Best 5 = 27-29; Median: Best 5 = 24-26; Bottom quartile: Best 5 = 22-24.",
+              "**Subject Strategy**: Economics (x1.0) + Maths (x1.0) + M1/M2 (x1.0) + Best 2 electives. Strong quantitative skills are expected.",
+              "**Interview Weighting**: Interview carries approximately 15-20%. Economic reasoning and articulation are assessed.",
+              "**Band A Advantage**: Band A applicants receive priority. Economics is a popular choice for business-oriented students.",
+              "**Non-JUPAS Pathway**: IB (34+/45), GCE A-Levels (AAB including Economics/Maths). ~15-20 places reserved."
+            ]
+          },
+          "alumni": {
+            "title": "Notable Alumni & Faculty",
+            "content": [
+              "**Professor Terence Chong**: Renowned economist specialising in Hong Kong and China economy.",
+              "**Professor Edwin Lai**: Leading international trade economist formerly at the Federal Reserve Bank of Dallas.",
+              "**Alumni in Finance**: Senior economists and strategists at major investment banks and central banks.",
+              "**Alumni in Academia**: Faculty members at Harvard, MIT, LSE, and other top economics departments.",
+              "**Alumni in Government**: Senior economic advisors in the Hong Kong SAR Government and international organisations."
+            ]
+          },
+          "scholarships": {
+            "title": "Scholarships & Financial Aid",
+            "content": [
+              "**CUHK Economics Scholarships**: Merit-based awards (HKD 20,000-40,000/year).",
+              "**CUHK Entrance Scholarships**: Full or partial tuition for exceptional DSE results.",
+              "**Research Grants**: Funding for undergraduate research projects and conference travel.",
+              "**Overseas Exchange Grants**: Up to HKD 50,000 per exchange semester.",
+              "**Government Grants & Loans**: NMTSS up to HKD 33,200/year."
+            ]
+          },
+          "tips": {
+            "title": "Ace Sir's CUHK Economics Strategy",
+            "content": [
+              "**Score Targeting**: Aim for Best 5 of 24+ with strong Economics, Maths, and M1/M2.",
+              "**Think Like an Economist**: Practice applying economic concepts to real-world issues. Interviewers love this.",
+              "**Read Economics News**: Follow The Economist, Financial Times, and local economic commentary.",
+              "**Learn Data Skills**: Excel, R, and Python are essential. Start learning before university.",
+              "**Consider Graduate School**: Top economics jobs increasingly require postgraduate degrees. Plan early."
+            ]
+          }
+        }
+      },
+      "zh": {
+        "sections": {
+          "admission": {
+            "title": "入學要求與計分詳情 (DSE)",
+            "content": [
+              "**學術門檻**：中大經濟學競爭程度中等。中位數收生分數通常為 Best 5 = 24-26 分。",
+              "**核心科目**：英文 (Level 4 或以上)、數學 (必修部分，Level 3 或以上)，以及公民與社會發展科合格。",
+              "**建議選修**：經濟、數學延伸部分 (M1/M2) 及企業會計與財務概論 (BAFS) 極具優勢。",
+              "**面試**：小組討論，考核分析思維、對經濟議題的認識及溝通技巧。",
+              "**非學術因素**：經濟學比賽參與、辯論及學生領導角色受重視。"
+            ]
+          },
+          "curriculum": {
+            "title": "課程結構與內容",
+            "content": [
+              "**第一年 - 經濟基礎**：微觀經濟學、宏觀經濟學、統計學及經濟學數學。社會科學共同課程。",
+              "**第二年 - 中級經濟學**：中級微觀及宏觀、計量經濟學及經濟史。研究方法導論。",
+              "**第三年 - 專科選修**：勞動經濟學、國際貿易、貨幣經濟學、發展經濟學及博弈論。",
+              "**第四年 - 進階研究**：榮譽學位論文、進階計量經濟學及專科研討會。教職員研究助理機會。",
+              "**量化培訓**：強調計量經濟學、數據分析及統計編程 (Stata、R、Python)。",
+              "**國際交流**：與倫敦政治經濟學院、芝加哥大學及新加坡國立大學的交流計劃。"
+            ]
+          },
+          "career": {
+            "title": "職業前景與出路",
+            "content": [
+              "**投資銀行及金融**：投資銀行、資產管理公司及私募股權的分析員職位。",
+              "**顧問諮詢**：麥肯錫、波士頓諮詢及經濟研究公司的經濟顧問及策略顧問。",
+              "**政府及政策**：香港金融管理局、政府統計處及政策局的經濟分析員。",
+              "**研究及學術界**：全球頂尖經濟學系的博士課程。很多成為大學教授。",
+              "**數據科學**：科技公司及金融科技初創的經濟模型及數據分析職位。",
+              "**國際組織**：世界銀行、國際貨幣基金組織及亞洲開發銀行的經濟學家。"
+            ]
+          },
+          "campus": {
+            "title": "校園生活與學生體驗",
+            "content": [
+              "**社會科學大樓**：專屬經濟學研究中心、配備統計軟件的計算機實驗室及研討室。",
+              "**書院制度**：經濟學學生獲分配至中大書院，提供豐富的住宿體驗。",
+              "**學生組織**：經濟學會舉辦學術講座、個案討論及與金融界校友的社交活動。",
+              "**研究研討會**：訪問教授及業界經濟學家的定期研討會。鼓勵本科生參加。",
+              "**數據資源**：彭博終端機、經濟數據庫及研究項目的統計軟件的使用權。"
+            ]
+          },
+          "competitiveness": {
+            "title": "入學競爭力分析",
+            "content": [
+              "**整體難度**：中等 (3/5星)。每年約600-800人競爭~200個學額 (入學率約25-30%)。",
+              "**分數分佈**：最高四分位數：Best 5 = 27-29分；中位數：Best 5 = 24-26分；最低四分位數：Best 5 = 22-24分。",
+              "**科目策略**：經濟 (x1.0) + 數學 (x1.0) + M1/M2 (x1.0) + 最佳2科選修。預期良好的量化技能。",
+              "**面試比重**：面試佔入學決定約15-20%。考核經濟推理及表達能力。",
+              "**Band A 優勢**：Band A 申請者獲優先考慮。經濟學是商科導向學生的熱門選擇。",
+              "**非聯招途徑**：國際文憑 (IB 34+/45)、GCE A-Level (AAB 包括經濟/數學)。約15-20個學額預留。"
+            ]
+          },
+          "alumni": {
+            "title": "知名校友及教職員",
+            "content": [
+              "**莊太量教授**：著名經濟學家，專注於香港及中國經濟。",
+              "**黎志強教授**：領先的國際貿易經濟學家，前達拉斯聯邦儲備銀行研究員。",
+              "**金融界校友**：主要投資銀行及中央銀行的高級經濟學家及策略師。",
+              "**學術界校友**：哈佛、麻省理工、倫敦政治經濟學院等頂尖經濟學系的教職員。",
+              "**政府界校友**：香港特區政府及國際組織的高級經濟顧問。"
+            ]
+          },
+          "scholarships": {
+            "title": "獎學金及經濟援助",
+            "content": [
+              "**中大經濟學獎學金**：merit-based 獎項 (每年港幣20,000-40,000元)。",
+              "**中大入學獎學金**：DSE 成績卓越者的全額或半額學費資助。",
+              "**研究資助**：本科生研究項目及會議旅費的資助。",
+              "**海外交流資助**：每次交流學期最多港幣50,000元。",
+              "**政府資助及貸款**：NMTSS 每年最多港幣33,200元。"
+            ]
+          },
+          "tips": {
+            "title": "Ace Sir 中大經濟學攻略",
+            "content": [
+              "**分數目標**：Best 5 目標24分以上，經濟、數學及 M1/M2 成績優異。",
+              "**像經濟學家般思考**：練習將經濟概念應用於現實問題。面試官喜歡這個。",
+              "**閱讀經濟新聞**：追蹤《經濟學人》、《金融時報》及本地經濟評論。",
+              "**學習數據技能**：Excel、R 及 Python 是必須的。入學前開始學習。",
+              "**考慮研究生院**：頂尖經濟學職位日益需要研究生學位。及早規劃。"
+            ]
+          }
+        }
+      }
+    },
+    "JS4862": {
+      "code": "JS4862",
+      "university": "香港中文大學",
+      "en": {
+        "sections": {
+          "admission": {
+            "title": "Eligibility & Admission Criteria (DSE)",
+            "content": [
+              "**Academic Threshold**: CUHK Psychology is moderately competitive. The median admission score is typically Best 5 = 25-27 (standard scale, 5** = 7 pts).",
+              "**Core Subjects**: English (Level 4+), Mathematics (Compulsory Part, Level 2+), and a pass in Citizenship and Social Development.",
+              "**Preferred Electives**: Biology and Economics are advantageous. Strong reading and writing skills are essential.",
+              "**Interview**: Individual or group interview assessing critical thinking, empathy, communication skills, and understanding of psychology as a science.",
+              "**Non-Academic Factors**: Volunteering (especially with children, elderly, or mental health organisations), research interest, and self-awareness are valued."
+            ]
+          },
+          "curriculum": {
+            "title": "Programme Structure & Curriculum",
+            "content": [
+              "**Year 1 - Psychology Foundation**: Introduction to psychology, research methods, statistics, and biological psychology. Broad overview of major subfields.",
+              "**Year 2 - Core Areas**: Cognitive psychology, developmental psychology, social psychology, personality, and abnormal psychology.",
+              "**Year 3 - Advanced Topics & Labs**: Neuropsychology, clinical psychology, organisational psychology, and research laboratories. Students design and conduct experiments.",
+              "**Year 4 - Honours Thesis & Internship**: Independent research project under faculty supervision, internship at hospitals, NGOs, or corporate settings.",
+              "**Research Training**: Strong emphasis on experimental design, data analysis (SPSS, R), and scientific writing. Many students present at conferences.",
+              "**Clinical Exposure**: Opportunities to observe clinical practice and understand pathways to becoming a clinical psychologist."
+            ]
+          },
+          "career": {
+            "title": "Career Pathways & Prospects",
+            "content": [
+              "**Clinical Psychology**: Master's and doctoral training leading to registered clinical psychologist status. Work in hospitals, clinics, and private practice.",
+              "**Educational Psychology**: Master's training for educational psychologists working in schools and the Education Bureau.",
+              "**Human Resources**: HR roles at MNCs focusing on talent management, organisational development, and employee wellbeing.",
+              "**Market Research**: Consumer behaviour research and user experience (UX) research at tech companies and agencies.",
+              "**Counselling**: Counselling roles at schools, NGOs, and community centres. Additional certification may be required.",
+              "**Further Studies**: PhD programmes in psychology at top universities worldwide. Many pursue academic careers."
+            ]
+          },
+          "campus": {
+            "title": "Campus Life & Student Experience",
+            "content": [
+              "**Psychology Laboratories**: Dedicated research labs for cognitive, developmental, and social psychology experiments. EEG and eye-tracking equipment available.",
+              "**College System**: Psychology students are assigned to CUHK colleges, providing mentorship and a supportive community.",
+              "**Student Society**: Psychology Society organises academic talks, mental health awareness campaigns, and peer support programmes.",
+              "**Research Culture**: Undergraduates actively participate in faculty research. Many co-author publications in peer-reviewed journals.",
+              "**Clinical Partnerships**: Observation opportunities at Prince of Wales Hospital and community mental health centres."
+            ]
+          },
+          "competitiveness": {
+            "title": "Admission Competitiveness Analysis",
+            "content": [
+              "**Overall Difficulty**: Moderate to High (3.5/5 stars). Approximately 700-900 applicants for ~150 places (~17-20% admission rate).",
+              "**Score Distribution**: Top quartile: Best 5 = 28-30; Median: Best 5 = 25-27; Bottom quartile: Best 5 = 23-25.",
+              "**Subject Strategy**: English (x1.0) + Biology (x1.0) + Best 3 electives. No strict requirements but science background helps.",
+              "**Interview Weighting**: Interview carries approximately 20-25%. Empathy, self-awareness, and scientific curiosity are assessed.",
+              "**Band A Advantage**: Band A applicants receive priority. Psychology is increasingly popular as a first choice.",
+              "**Non-JUPAS Pathway**: IB (34+/45), GCE A-Levels (AAB). ~10-15 places reserved."
+            ]
+          },
+          "alumni": {
+            "title": "Notable Alumni & Faculty",
+            "content": [
+              "**Professor Helene Fung**: Leading psychologist specialising in ageing and gerontology research.",
+              "**Professor Patrick Wong**: Renowned neuroscientist specialising in language and music cognition.",
+              "**Professor Agnes Tiwari**: Expert in mental health nursing and violence prevention research.",
+              "**Alumni in Clinical Practice**: Registered clinical psychologists at major hospitals and private practices.",
+              "**Alumni in Academia**: Faculty members at universities in Hong Kong, UK, USA, and Australia."
+            ]
+          },
+          "scholarships": {
+            "title": "Scholarships & Financial Aid",
+            "content": [
+              "**CUHK Psychology Scholarships**: Merit-based awards (HKD 20,000-40,000/year).",
+              "**CUHK Entrance Scholarships**: Full or partial tuition for exceptional DSE results.",
+              "**Research Grants**: Funding for undergraduate research and conference presentations.",
+              "**Mental Health Service Grants**: Support for students undertaking volunteer work in mental health organisations.",
+              "**Government Grants & Loans**: NMTSS up to HKD 33,200/year."
+            ]
+          },
+          "tips": {
+            "title": "Ace Sir's CUHK Psychology Strategy",
+            "content": [
+              "**Score Targeting**: Aim for Best 5 of 25+ with strong English. Biology is helpful but not mandatory.",
+              "**Understand It's a Science**: Psychology is scientific research, not just counselling. Show you understand this distinction.",
+              "**Volunteer Meaningfully**: Work with vulnerable populations — children, elderly, or mental health service users.",
+              "**Read Research Papers**: Familiarity with academic psychology shows genuine interest. Try reading one paper before your interview.",
+              "**Know the Career Path**: Clinical psychology requires a Master's and supervised practice. It's a long road — show you're prepared."
+            ]
+          }
+        }
+      },
+      "zh": {
+        "sections": {
+          "admission": {
+            "title": "入學要求與計分詳情 (DSE)",
+            "content": [
+              "**學術門檻**：中大心理學競爭程度中等偏高。中位數收生分數通常為 Best 5 = 25-27 分。",
+              "**核心科目**：英文 (Level 4 或以上)、數學 (必修部分，Level 2 或以上)，以及公民與社會發展科合格。",
+              "**建議選修**：生物及經濟有優勢。良好的閱讀及寫作技巧至關重要。",
+              "**面試**：個人或小組面試，考核批判思維、同理心、溝通技巧及對心理學作為科學的理解。",
+              "**非學術因素**：義工服務 (尤其與兒童、長者或精神健康機構)、研究興趣及自我認知受重視。"
+            ]
+          },
+          "curriculum": {
+            "title": "課程結構與內容",
+            "content": [
+              "**第一年 - 心理學基礎**：心理學導論、研究方法、統計學及生物心理學。主要子領域的廣泛概覽。",
+              "**第二年 - 核心領域**：認知心理學、發展心理學、社會心理學、人格心理學及異常心理學。",
+              "**第三年 - 進階課題及實驗室**：神經心理學、臨床心理學、組織心理學及研究實驗室。學生設計並進行實驗。",
+              "**第四年 - 榮譽學位論文及實習**：教職員指導下的獨立研究項目，醫院、非政府組織或企業環境的實習。",
+              "**研究培訓**：強調實驗設計、數據分析 (SPSS、R) 及學術寫作。很多學生於會議發表。",
+              "**臨床接觸**：觀察臨床實務及了解成為臨床心理學家的路徑的機會。"
+            ]
+          },
+          "career": {
+            "title": "職業前景與出路",
+            "content": [
+              "**臨床心理學**：碩士及博士培訓，取得註冊臨床心理學家資格。於醫院、診所及私人執業工作。",
+              "**教育心理學**：碩士培訓成為教育心理學家，於學校及教育局工作。",
+              "**人力資源**：跨國企業的人力資源職位，專注於人才管理、組織發展及員工福祉。",
+              "**市場研究**：科技公司及代理商的消費者行為研究及用戶體驗 (UX) 研究。",
+              "**輔導**：學校、非政府組織及社區中心的輔導職位。可能需要額外認證。",
+              "**進修**：全球頂尖大學的心理學博士課程。很多從事學術事業。"
+            ]
+          },
+          "campus": {
+            "title": "校園生活與學生體驗",
+            "content": [
+              "**心理學實驗室**：專屬認知、發展及社會心理學實驗研究實驗室。配備腦電圖及眼動追蹤設備。",
+              "**書院制度**：心理學學生獲分配至中大書院，提供師友指導及支援社群。",
+              "**學生組織**：心理學會舉辦學術講座、精神健康意識活動及朋輩支援計劃。",
+              "**研究文化**：本科生積極參與教職員研究。很多共同撰寫同行評審期刊論文。",
+              "**臨床伙伴**：威爾斯親王醫院及社區精神健康中心的觀察機會。"
+            ]
+          },
+          "competitiveness": {
+            "title": "入學競爭力分析",
+            "content": [
+              "**整體難度**：中等偏高 (3.5/5星)。每年約700-900人競爭~150個學額 (入學率約17-20%)。",
+              "**分數分佈**：最高四分位數：Best 5 = 28-30分；中位數：Best 5 = 25-27分；最低四分位數：Best 5 = 23-25分。",
+              "**科目策略**：英文 (x1.0) + 生物 (x1.0) + 最佳3科選修。無嚴格要求但理科背景有幫助。",
+              "**面試比重**：面試佔入學決定約20-25%。考核同理心、自我認知及科學好奇心。",
+              "**Band A 優勢**：Band A 申請者獲優先考慮。心理學作為第一志願日益受歡迎。",
+              "**非聯招途徑**：國際文憑 (IB 34+/45)、GCE A-Level (AAB)。約10-15個學額預留。"
+            ]
+          },
+          "alumni": {
+            "title": "知名校友及教職員",
+            "content": [
+              "**馮海嵐教授**：老年學及老年心理學研究的領軍心理學家。",
+              "**黃俊文教授**：著名神經科學家，專注於語言及音樂認知。",
+              "**刁玉華教授**：精神科護理及暴力預防研究專家。",
+              "**臨床實務界校友**：主要醫院及私人執業的註冊臨床心理學家。",
+              "**學術界校友**：香港、英國、美國及澳洲大學的教職員。"
+            ]
+          },
+          "scholarships": {
+            "title": "獎學金及經濟援助",
+            "content": [
+              "**中大心理學獎學金**：merit-based 獎項 (每年港幣20,000-40,000元)。",
+              "**中大入學獎學金**：DSE 成績卓越者的全額或半額學費資助。",
+              "**研究資助**：本科生研究及會議發表的資助。",
+              "**精神健康服務資助**：支持於精神健康機構進行義工工作的學生。",
+              "**政府資助及貸款**：NMTSS 每年最多港幣33,200元。"
+            ]
+          },
+          "tips": {
+            "title": "Ace Sir 中大心理學攻略",
+            "content": [
+              "**分數目標**：Best 5 目標25分以上，英文成績優異。生物有幫助但非必修。",
+              "**了解這是科學**：心理學是科學研究，不僅是輔導。展示你理解這個區別。",
+              "**有意義地義工**：與弱勢社群合作 — 兒童、長者或精神健康服務使用者。",
+              "**閱讀研究論文**：熟悉學術心理學展示真誠興趣。面試前嘗試閱讀一篇論文。",
+              "**了解職業路徑**：臨床心理學需要碩士學位及監督實習。這是漫長道路 — 展示你已準備好。"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

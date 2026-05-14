@@ -32,7 +32,8 @@ The system prompt is assembled in tiers, in this order:
    added only when `buildHistoryWindow` dropped messages.
 
 Always log `tierFlags.join('+')` as `prompt_tier` via
-`TokenService.logUsage(uid, 'chat', usageMetadata, { prompt_tier, agent_id, history_msgs, router_skipped })`.
+`TokenService.logUsage(uid, 'chat', usageMetadata, { prompt_tier, agent_id, history_msgs, router_skipped, persona_id })`.
+`persona_id` is the resolved tutor card id from `UserProfileService.getPersona` (null for guests / missing id).
 
 ## History window contract
 

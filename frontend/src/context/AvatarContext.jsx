@@ -25,7 +25,7 @@ export const AvatarProvider = ({ children }) => {
             ace: null,
             chinese: null
         },
-        student: { id: 's_aiden', image: '/avatars/s_aiden_v2.png' },
+        student: { id: 's_marcus', image: '/avatars/Student/Marcus.jpeg' },
         frame: null
     });
 
@@ -52,7 +52,7 @@ export const AvatarProvider = ({ children }) => {
                     ace: findEquipped('ace'),
                     chinese: findEquipped('chinese'),
                 },
-                student: data.catalog.studentCards.find(c => c.equipped) || data.catalog.studentCards[0] || { id: 's_aiden', image: '/avatars/s_aiden_v2.png' },
+                student: data.catalog.studentCards.find(c => c.equipped) || data.catalog.studentCards[0] || { id: 's_marcus', image: '/avatars/Student/Marcus.jpeg' },
                 frame: data.catalog.avatarFrames.find(c => c.equipped) || null
             });
         } catch (e) {

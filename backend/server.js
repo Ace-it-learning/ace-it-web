@@ -139,6 +139,7 @@ app.use('/api/gamification', profileRoutes);
 app.use('/api/skillmap', profileRoutes);
 app.use('/api/redemption', profileRoutes);
 app.use('/api/diagnostic', require('./routes/diagnosticRoutes'));
+app.use('/api/jupas', require('./routes/jupasRoutes'));
 app.use('/api/tutor', require('./routes/tutorRoutes'));
 app.post(/^\/api\/tutors\/(.*)/, (req, res) => res.redirect(307, req.url.replace('/api/tutors', '/api/tutor')));
 
@@ -191,6 +192,14 @@ const server = app.listen(PORT, () => {
     console.log(`📡 Port: ${PORT}`);
     console.log(`🌍 Environment: ${process.env.NODE_ENV || 'development'}`);
     console.log(`✅ Router Health Check: OK\n`);
+
+    if ((process.env.ENABLE_PARENT_REPORT_SCHEDULER || '').toLowerCase() === 'true') {
+        try {
+            require('./services/ReportSchedulerService').start();
+        } catch (error) {
+            console.error('[ReportScheduler] Failed to start:', error);
+        }
+    }
 });
 
 // Extend timeout for long AI response generation (10 mins)

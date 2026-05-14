@@ -120,7 +120,6 @@ router.get('/resolve-identity', async (req, res) => {
 
 // GET /api/user/dream-programs
 router.get('/dream-programs', requireResolvedUid, async (req, res) => {
-    // ... (existing code for dream-programs)
     const { uid } = req.query;
     if (!uid) return res.status(400).json({ error: 'Missing uid' });
     try {
@@ -137,6 +136,20 @@ router.get('/dream-programs', requireResolvedUid, async (req, res) => {
         });
     } catch (error) {
         res.status(500).json({ error: 'Failed to fetch dream programs' });
+    }
+});
+
+// POST /api/user/dream-programs
+router.post('/dream-programs', requireResolvedUid, async (req, res) => {
+    const { uid, programs } = req.body;
+    if (!uid) return res.status(400).json({ error: 'Missing uid' });
+    if (!Array.isArray(programs)) return res.status(400).json({ error: 'Invalid programs format' });
+    try {
+        await UserProfileService.createOrUpdateProfile(uid, { dreamPrograms: programs });
+        res.json({ success: true });
+    } catch (error) {
+        console.error('[DreamPrograms] Save error:', error);
+        res.status(500).json({ error: 'Failed to save dream programs' });
     }
 });
 

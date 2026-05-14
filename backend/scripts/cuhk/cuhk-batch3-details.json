@@ -1,0 +1,191 @@
+{
+  "_meta": {
+    "batch": 3,
+    "version": "premium",
+    "university": "CUHK",
+    "programmes": "11-15",
+    "sections": 8,
+    "generated_by": "AI",
+    "date": "2026-05-14"
+  },
+  "programmes": {
+    "JS4850": {
+      "code": "JS4850",
+      "university": "香港中文大學",
+      "en": {
+        "sections": {
+          "admission": {
+            "title": "Eligibility & Admission Criteria (DSE)",
+            "content": [
+              "**Academic Threshold**: CUHK Journalism and Communication is moderately competitive. The median admission score is typically Best 5 = 23-25 (standard scale, 5** = 7 pts).",
+              "**Core Subjects**: English (Level 5+ strongly preferred), Mathematics (Compulsory Part, Level 2+), and a pass in Citizenship and Social Development.",
+              "**Preferred Electives**: Chinese Language, English Literature, and Liberal Studies/CSD are advantageous. Strong writing skills are essential.",
+              "**Interview**: Group discussion and individual interview assessing news sense, critical thinking, communication skills, and media literacy.",
+              "**Non-Academic Factors**: Student journalism, blogging, video production, social media management, and current affairs awareness are highly valued."
+            ]
+          },
+          "curriculum": {
+            "title": "Programme Structure & Curriculum",
+            "content": [
+              "**Year 1 - Media Foundation**: News writing, media ethics, communication theories, and introduction to journalism, advertising, and public relations.",
+              "**Year 2 - Reporting Skills**: Investigative journalism, feature writing, data journalism, photojournalism, and broadcast journalism.",
+              "**Year 3 - Specialisation & Internship**: Students choose streams (Journalism, Advertising, PR, or Creative Media). Internship at media organisations.",
+              "**Year 4 - Capstone & Portfolio**: Final year project, professional portfolio development, and preparation for media industry careers.",
+              "**Practical Training**: Hands-on training in TV studio, radio station, and digital newsroom facilities.",
+              "**Industry Connections**: Strong partnerships with TVB, RTHK, Ming Pao, and international media outlets."
+            ]
+          },
+          "career": {
+            "title": "Career Pathways & Prospects",
+            "content": [
+              "**Broadcast Journalism**: Reporters, anchors, and producers at TVB, RTHK, Now TV, and international broadcasters.",
+              "**Print & Digital Media**: Journalists and editors at Ming Pao, South China Morning Post, HK01, and online media platforms.",
+              "**Public Relations**: PR executives at corporate communications departments and PR agencies.",
+              "**Advertising & Marketing**: Creative directors, account planners, and digital marketers at advertising agencies.",
+              "**Corporate Communications**: Communications managers at MNCs, government departments, and NGOs.",
+              "**Further Studies**: Masters programmes in journalism, media studies, and communication at Columbia, LSE, and NUS."
+            ]
+          },
+          "campus": {
+            "title": "Campus Life & Student Experience",
+            "content": [
+              "**Journalism Building**: Dedicated TV studio, radio station, digital newsroom, and editing suites.",
+              "**College System**: Journalism students are assigned to CUHK colleges, providing a vibrant social environment.",
+              "**Student Media**: Campus TV, campus radio, and student newspapers provide practical experience from Year 1.",
+              "**Industry Events**: Regular talks by senior journalists, editors, and media executives.",
+              "**Press Club**: Active press club organising media visits, networking events, and journalism workshops."
+            ]
+          },
+          "competitiveness": {
+            "title": "Admission Competitiveness Analysis",
+            "content": [
+              "**Overall Difficulty**: Moderate (3/5 stars). Approximately 500-700 applicants for ~150 places (~20-25% admission rate).",
+              "**Score Distribution**: Top quartile: Best 5 = 26-28; Median: Best 5 = 23-25; Bottom quartile: Best 5 = 21-23.",
+              "**Subject Strategy**: English (x1.5) + Chinese (x1.0) + Best 3 electives. English Level 5+ is strongly preferred for journalism stream.",
+              "**Interview Weighting**: Interview carries approximately 25-30%. News sense and communication ability are assessed.",
+              "**Band A Advantage**: Band A applicants receive priority. Journalism is a popular choice for media-oriented students.",
+              "**Non-JUPAS Pathway**: IB (32+/45), GCE A-Levels (ABB). ~10-15 places reserved."
+            ]
+          },
+          "alumni": {
+            "title": "Notable Alumni & Faculty",
+            "content": [
+              "**Professor Francis Lee**: Leading media scholar specialising in journalism and public opinion research.",
+              "**Professor Eric Ma**: Renowned communication scholar focusing on cultural studies and media sociology.",
+              "**Alumni in Journalism**: Senior editors and award-winning journalists at major Hong Kong and international media outlets.",
+              "**Alumni in PR**: Directors and VPs at global PR agencies and corporate communications departments.",
+              "**Alumni in Broadcasting**: Producers and programme directors at TVB, RTHK, and international broadcasters."
+            ]
+          },
+          "scholarships": {
+            "title": "Scholarships & Financial Aid",
+            "content": [
+              "**CUHK Journalism Scholarships**: Merit-based awards (HKD 20,000-40,000/year).",
+              "**Media Industry Scholarships**: Sponsored by TVB, RTHK, and media organisations for promising students.",
+              "**CUHK Entrance Scholarships**: Full or partial tuition for exceptional DSE results.",
+              "**Overseas Internship Grants**: Funding for international media internships.",
+              "**Government Grants & Loans**: NMTSS up to HKD 33,200/year."
+            ]
+          },
+          "tips": {
+            "title": "Ace Sir's CUHK Journalism Strategy",
+            "content": [
+              "**Score Targeting**: Aim for Best 5 of 23+ with strong English. Chinese writing skills are also important.",
+              "**Start a Blog or Channel**: Demonstrate genuine interest by creating content. Quality matters more than follower count.",
+              "**Stay Informed**: Read multiple news sources daily. Interviewers will test your awareness of current affairs.",
+              "**Practise Writing**: Both English and Chinese writing skills are essential. Write opinion pieces to sharpen your voice.",
+              "**Show Curiosity**: Great journalists are endlessly curious. Ask thoughtful questions in your interview."
+            ]
+          }
+        }
+      },
+      "zh": {
+        "sections": {
+          "admission": {
+            "title": "入學要求與計分詳情 (DSE)",
+            "content": [
+              "**學術門檻**：中大新聞與傳播學競爭程度中等。中位數收生分數通常為 Best 5 = 23-25 分。",
+              "**核心科目**：英文 (強烈建議 Level 5 以上)、數學 (必修部分，Level 2 或以上)，以及公民與社會發展科合格。",
+              "**建議選修**：中國語文、英國文學及通識/公社有優勢。良好的寫作技巧至關重要。",
+              "**面試**：小組討論及個人面試，考核新聞觸覺、批判思維、溝通技巧及媒體素養。",
+              "**非學術因素**：學生新聞工作、博客、影片製作、社交媒體管理及時事意識極受重視。"
+            ]
+          },
+          "curriculum": {
+            "title": "課程結構與內容",
+            "content": [
+              "**第一年 - 媒體基礎**：新聞寫作、媒體倫理、傳播理論及新聞學、廣告學與公共關係導論。",
+              "**第二年 - 採訪技巧**：調查報道、專題寫作、數據新聞、攝影新聞及廣播新聞。",
+              "**第三年 - 專修及實習**：學生選擇專修 (新聞學、廣告學、公共關係或創意媒體)。於媒體機構實習。",
+              "**第四年 - 畢業專題及作品集**：畢業專題、專業作品集發展及媒體行業職業準備。",
+              "**實務培訓**：電視演播室、電台及數碼新聞編輯室的實務培訓。",
+              "**業界聯繫**：與無綫電視、香港電台、明報及國際媒體的緊密合作。"
+            ]
+          },
+          "career": {
+            "title": "職業前景與出路",
+            "content": [
+              "**廣播新聞**：無綫電視、香港電台、Now TV 及國際廣播機構的記者、主播及監製。",
+              "**印刷及數碼媒體**：明報、南華早報、香港01及網上媒體平台的記者及編輯。",
+              "**公共關係**：企業傳訊部門及公關公司的公關行政人員。",
+              "**廣告及市場推廣**：廣告公司的創意總監、客戶策劃及數碼營銷人員。",
+              "**企業傳訊**：跨國企業、政府部門及非政府組織的傳訊經理。",
+              "**進修**：哥倫比亞、倫敦政治經濟學院及新加坡國立大學的新聞學、媒體研究及傳播學碩士課程。"
+            ]
+          },
+          "campus": {
+            "title": "校園生活與學生體驗",
+            "content": [
+              "**新聞大樓**：專屬電視演播室、電台、數碼新聞編輯室及剪接室。",
+              "**書院制度**：新聞學生獲分配至中大書院，提供充滿活力的社交環境。",
+              "**學生媒體**：校園電視、校園電台及學生報紙從第一年提供實務經驗。",
+              "**業界活動**：資深記者、編輯及媒體高層的定期講座。",
+              "**新聞學會**：活躍的新聞學會舉辦媒體參觀、社交活動及新聞工作坊。"
+            ]
+          },
+          "competitiveness": {
+            "title": "入學競爭力分析",
+            "content": [
+              "**整體難度**：中等 (3/5星)。每年約500-700人競爭~150個學額 (入學率約20-25%)。",
+              "**分數分佈**：最高四分位數：Best 5 = 26-28分；中位數：Best 5 = 23-25分；最低四分位數：Best 5 = 21-23分。",
+              "**科目策略**：英文 (x1.5) + 中文 (x1.0) + 最佳3科選修。新聞學專修強烈建議英文達 Level 5 以上。",
+              "**面試比重**：面試佔入學決定約25-30%。考核新聞觸覺及溝通能力。",
+              "**Band A 優勢**：Band A 申請者獲優先考慮。新聞學是媒體導向學生的熱門選擇。",
+              "**非聯招途徑**：國際文憑 (IB 32+/45)、GCE A-Level (ABB)。約10-15個學額預留。"
+            ]
+          },
+          "alumni": {
+            "title": "知名校友及教職員",
+            "content": [
+              "**李立峯教授**：領先的媒體學者，專注於新聞學及輿論研究。",
+              "**馬傑偉教授**：著名傳播學者，專注於文化研究及媒體社會學。",
+              "**新聞界校友**：香港及國際主要媒體的高級編輯及獲獎記者。",
+              "**公關界校友**：全球公關公司及企業傳訊部門的總監及副總裁。",
+              "**廣播界校友**：無綫電視、香港電台及國際廣播機構的監製及節目總監。"
+            ]
+          },
+          "scholarships": {
+            "title": "獎學金及經濟援助",
+            "content": [
+              "**中大新聞學獎學金**：merit-based 獎項 (每年港幣20,000-40,000元)。",
+              "**媒體業界獎學金**：無綫電視、香港電台及媒體機構贊助有潛質的學生。",
+              "**中大入學獎學金**：DSE 成績卓越者的全額或半額學費資助。",
+              "**海外實習資助**：國際媒體實習的資助。",
+              "**政府資助及貸款**：NMTSS 每年最多港幣33,200元。"
+            ]
+          },
+          "tips": {
+            "title": "Ace Sir 中大新聞與傳播學攻略",
+            "content": [
+              "**分數目標**：Best 5 目標23分以上，英文成績優異。中文寫作技巧亦很重要。",
+              "**開設博客或頻道**：透過創作內容展示真誠興趣。質量比追隨者數量更重要。",
+              "**保持知情**：每天閱讀多個新聞來源。面試官會測試你對時事的認識。",
+              "**練習寫作**：英文及中文寫作技巧都是必須的。撰寫評論文章以磨練你的聲音。",
+              "**展示好奇心**：偉大的記者無止境地好奇。面試中提出深思熟慮的問題。"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

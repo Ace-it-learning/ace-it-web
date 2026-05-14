@@ -226,7 +226,7 @@ const Onboarding = () => {
                     email: user.email,
                     ...formData,
                     is_new_student: false, // Ensure flag is cleared
-                    photoURL: formData.gender === 'Male' ? '/avatars/male.png' : (user.photoURL || '/avatars/female_default.png')
+                    photoURL: formData.gender === 'Male' ? '/avatars/Student/Marcus.jpeg' : (user.photoURL || '/avatars/Student/Natalie.jpeg')
                 })
             });
 
@@ -238,7 +238,7 @@ const Onboarding = () => {
             // Client-side State Update (Fixed "2nd Attempt" Bug & Avatar Issue)
             // 1. Update Firebase User Object immediately
             if (user) {
-                const newPhotoURL = formData.gender === 'Male' ? '/avatars/male.png' : '/avatars/female_default.png';
+                const newPhotoURL = formData.gender === 'Male' ? '/avatars/Student/Marcus.jpeg' : '/avatars/Student/Natalie.jpeg';
                 console.log("[Onboarding] Updating client profile:", { displayName: formData.nickname, photoURL: newPhotoURL });
 
                 // Only update Firebase profile when Firebase auth is active

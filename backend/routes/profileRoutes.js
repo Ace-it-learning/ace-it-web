@@ -1,6 +1,24 @@
 const express = require('express');
 const router = express.Router();
+
+/** Weighted pick: rarer cards have lower weight (lower chance) than common. */
+function pickFromPoolByRarity(pool) {
+    if (!pool || pool.length === 0) return null;
+    const rarityWeights = { common: 55, rare: 28, epic: 12, legendary: 3 };
+    const weighted = pool.map((card) => ({
+        card,
+        weight: rarityWeights[String(card.rarity || 'common').toLowerCase()] || 40
+    }));
+    const total = weighted.reduce((s, w) => s + w.weight, 0);
+    let roll = Math.random() * total;
+    for (const w of weighted) {
+        roll -= w.weight;
+        if (roll <= 0) return w.card;
+    }
+    return weighted[weighted.length - 1].card;
+}
 const UserProfileService = require('../services/UserProfileService');
+const CosmosStore = require('../services/CosmosStore');
 
 // GET /api/profile
 router.get('/profile', async (req, res) => {
@@ -120,8 +138,9 @@ router.post('/redemption/blindbox', async (req, res) => {
 
         if (pool.length === 0) return res.status(500).json({ error: "Pool is empty" });
 
-        // Simple random draw (can be enhanced with rarity weights later)
-        const drawnItem = pool[Math.floor(Math.random() * pool.length)];
+        const usesRarityWeights = config.pool.includes('student_cards') || config.pool.includes('tutor_cards');
+        const picked = usesRarityWeights ? pickFromPoolByRarity(pool) : pool[Math.floor(Math.random() * pool.length)];
+        const drawnItem = picked || pool[0];
         const newItem = { 
             id: drawnItem.id, 
             name: drawnItem.name, 
@@ -173,9 +192,37 @@ router.get('/redemption/collection', async (req, res) => {
         });
 
         const userData = await UserProfileService.getProfile(uid) || {};
-        
-        // Load all possible equipment slots
-        const equippedStudent = userData.equipped_student_avatar || 's_aiden_v2';
+        const cardPool = require('../data/card_pool.json');
+        const studentIdSet = new Set((cardPool.student_cards || []).map(c => c.id));
+
+        const genderRaw = String(userData.gender || '').trim().toLowerCase();
+        const isFemale = genderRaw === 'female' || genderRaw === 'f' || genderRaw.includes('女');
+
+        const defaultStudentId = isFemale ? 's_natalie' : 's_marcus';
+        let equippedStudent = userData.equipped_student_avatar || defaultStudentId;
+
+        // Migrate legacy IDs that are no longer in the student pool
+        if (!studentIdSet.has(equippedStudent)) {
+            equippedStudent = defaultStudentId;
+        }
+
+        // Starter avatar: profile may reference equipped student before any blindbox — grant inventory once
+        if (studentIdSet.has(equippedStudent) && !ownedCards[equippedStudent]) {
+            try {
+                await CosmosStore.addInventoryItem(uid, {
+                    itemId: equippedStudent,
+                    kind: 'student_avatar',
+                    source: 'starter_sync'
+                });
+                ownedCards[equippedStudent] = {
+                    itemId: equippedStudent,
+                    acquiredAt: new Date().toISOString()
+                };
+            } catch (syncErr) {
+                console.warn('[redemption/collection] starter inventory sync failed:', syncErr.message);
+            }
+        }
+
         const equippedFrame = userData.equipped_frame || null;
         
         // Tutor slots per subject
@@ -186,10 +233,12 @@ router.get('/redemption/collection', async (req, res) => {
             general: userData.equipped_tutor_ace || userData.equipped_tutor || 'default_ace'
         };
 
-        const cardPool = require('../data/card_pool.json');
-
         const studentCards = cardPool.student_cards.map(c => ({
-            ...c, type: 'student', owned: !!ownedCards[c.id], equipped: equippedStudent === c.id, acquiredAt: ownedCards[c.id]?.acquiredAt || null
+            ...c,
+            type: 'student',
+            owned: Boolean(ownedCards[c.id]),
+            equipped: equippedStudent === c.id,
+            acquiredAt: ownedCards[c.id]?.acquiredAt || null
         }));
 
         const isEquippedTutor = (card) => {

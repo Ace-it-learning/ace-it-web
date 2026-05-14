@@ -24,7 +24,8 @@ import {
     Plus,
     Trash2,
     Monitor,
-    Smartphone
+    Smartphone,
+    Mail
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { load } from '@fingerprintjs/fingerprintjs';
@@ -32,6 +33,19 @@ import { cn } from '../utils/cn';
 import AlertModal from '../components/shared/AlertModal';
 
 const USE_ENTRA = import.meta.env.VITE_USE_ENTRA === 'true';
+
+/** Only this signed-in account sees the internal “email delivery” test button on Progress Report. */
+const PROGRESS_REPORT_EMAIL_TESTER = 'fungtam@gmail.com';
+
+function isProgressReportEmailTester(user, profile) {
+    const target = PROGRESS_REPORT_EMAIL_TESTER;
+    const candidates = [user?.email, profile?.email, profile?.preferred_username];
+    return candidates.some(
+        (c) => String(c || '')
+            .trim()
+            .toLowerCase() === target
+    );
+}
 
 function isEntraGoogleUser(user) {
     if (!USE_ENTRA || user?.authProvider !== 'entra') return false;
@@ -192,7 +206,7 @@ const SchoolAutocomplete = ({ schools, value, onChange, isLoading }) => {
 
 const AccountPage = () => {
     const { user, profile, refreshProfile, changePassword, resetPassword, setPasswordForSocialUser, deleteUserAccount, logout } = useAuth();
-    const { t } = useLanguage();
+    const { t, language } = useLanguage();
     const [searchParams, setSearchParams] = useSearchParams();
     const [activeTab, setActiveTab] = useState(searchParams.get('tab') || 'general');
 
@@ -210,6 +224,7 @@ const AccountPage = () => {
 
     const [isSaving, setIsSaving] = useState(false);
     const [isTesting, setIsTesting] = useState(false);
+    const [isVerifierTesting, setIsVerifierTesting] = useState(false);
     const [message, setMessage] = useState(null);
     const [schools, setSchools] = useState({ HK: [], KLN: [], NT: [], Other: [] });
     const [isLoadingSchools, setIsLoadingSchools] = useState(true);
@@ -349,27 +364,88 @@ const AccountPage = () => {
         }
     };
 
+    /** Interprets POST /api/user/parent-test-report JSON (real send vs simulated on localhost). */
+    const applyParentTestReportResponse = (data, realSendMessage) => {
+        if (!data || data.success === false) {
+            setMessage({
+                type: 'error',
+                text: data?.error || data?.message || 'Could not send the test email.'
+            });
+            return;
+        }
+        if (data.deliveryMode === 'simulated' || data.mock) {
+            setMessage({
+                type: 'warning',
+                text:
+                    data.message ||
+                    'No real email was sent: the backend is not connected to an email service yet. Add Azure Communication Email or SMTP in backend .env (see ENVIRONMENT.md), then restart the backend.'
+            });
+            return;
+        }
+        setMessage({
+            type: 'success',
+            text: realSendMessage || 'Sample sent. Check your inbox and spam in a minute or two.'
+        });
+    };
+
     const handleSendTestReport = async () => {
         if (!user?.uid || !profile?.parent_email) return;
         setIsTesting(true);
         try {
+            const token = await user.getIdToken?.();
             const res = await fetch(`${API_URL}/api/user/parent-test-report`, {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
+                headers: {
+                    'Content-Type': 'application/json',
+                    ...(token ? { Authorization: `Bearer ${token}` } : {})
+                },
                 body: JSON.stringify({ uid: user.uid, parent_email: profile.parent_email })
             });
 
-            if (res.ok) {
-                setMessage({ type: 'success', text: t('subscription.report_sent') || "Test report sent!" });
-            } else {
-                const err = await res.json();
-                setMessage({ type: 'error', text: err.error || "Failed to send test report" });
+            const data = await res.json().catch(() => ({}));
+            if (!res.ok) {
+                setMessage({ type: 'error', text: data.error || 'Failed to send test report' });
+                return;
             }
+            applyParentTestReportResponse(data, t('subscription.report_sent') || 'Test report sent!');
         } catch (error) {
             console.error("Test Report Error:", error);
             setMessage({ type: 'error', text: "Network error." });
         } finally {
             setIsTesting(false);
+        }
+    };
+
+    /** Internal: send a sample progress report to the verifier’s own Gmail (no parent email field needed). */
+    const handleSendVerifierSampleToInbox = async () => {
+        if (!user?.uid || !isProgressReportEmailTester(user, profile)) return;
+        setIsVerifierTesting(true);
+        try {
+            const token = await user.getIdToken?.();
+            const res = await fetch(`${API_URL}/api/user/parent-test-report`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    ...(token ? { Authorization: `Bearer ${token}` } : {})
+                },
+                body: JSON.stringify({
+                    uid: user.uid,
+                    parent_email: PROGRESS_REPORT_EMAIL_TESTER,
+                    send_copy_to_self: false
+                })
+            });
+
+            const data = await res.json().catch(() => ({}));
+            if (!res.ok) {
+                setMessage({ type: 'error', text: data.error || 'Could not send the sample email.' });
+                return;
+            }
+            applyParentTestReportResponse(data, null);
+        } catch (error) {
+            console.error('Verifier sample email error:', error);
+            setMessage({ type: 'error', text: 'Network error. Try again.' });
+        } finally {
+            setIsVerifierTesting(false);
         }
     };
 
@@ -630,10 +706,10 @@ const AccountPage = () => {
     };
 
     const tabs = [
-        { id: 'general', label: 'Profile', icon: <User size={18} /> },
-        { id: 'parental', label: 'Progress Report', icon: <Shield size={18} /> },
-        { id: 'security', label: 'Security', icon: <Lock size={18} /> },
-        { id: 'subscription', label: 'Plan', icon: <CreditCard size={18} /> }
+        { id: 'general', labelKey: 'account.tab_profile', icon: <User size={18} /> },
+        { id: 'parental', labelKey: 'account.tab_parental', icon: <Shield size={18} /> },
+        { id: 'security', labelKey: 'account.tab_security', icon: <Lock size={18} /> },
+        { id: 'subscription', labelKey: 'account.tab_subscription', icon: <CreditCard size={18} /> }
     ];
 
     const isGoogleOnly = USE_ENTRA
@@ -651,8 +727,11 @@ const AccountPage = () => {
                     {/* Sidebar Navigation */}
                     <div className="md:w-64 shrink-0 space-y-2">
                         <div className="p-4 mb-4">
-                            <h1 className="text-2xl font-bold text-slate-900 tracking-tight">Settings</h1>
-                            <p className="text-xs text-slate-500 font-medium uppercase tracking-widest mt-1">Manage your account</p>
+                            <h1 className="text-2xl font-bold text-slate-900 tracking-tight">{t('account.settings_title')}</h1>
+                            <p className={cn(
+                                'text-xs text-slate-500 font-medium mt-1',
+                                language === 'zh' ? 'tracking-normal normal-case' : 'uppercase tracking-widest'
+                            )}>{t('account.settings_subtitle')}</p>
                         </div>
                         {tabs.map(tab => (
                             <button
@@ -666,7 +745,7 @@ const AccountPage = () => {
                                 )}
                             >
                                 <span className={cn(activeTab === tab.id ? "text-primary" : "text-slate-400")}>{tab.icon}</span>
-                                {tab.label}
+                                {t(tab.labelKey)}
                                 {activeTab === tab.id && (
                                     <motion.div layoutId="activeTabDot" className="ml-auto w-1 h-1 rounded-full bg-primary" />
                                 )}
@@ -686,10 +765,18 @@ const AccountPage = () => {
                                     exit={{ height: 0, opacity: 0 }}
                                     className={cn(
                                         "px-8 py-3 text-sm font-bold flex items-center gap-3",
-                                        message.type === 'success' ? "bg-green-50 text-green-700" : "bg-red-50 text-red-700"
+                                        message.type === 'success' && "bg-green-50 text-green-700",
+                                        message.type === 'warning' && "bg-amber-50 text-amber-900 border-b border-amber-200",
+                                        (message.type === 'error' ||
+                                            (message.type !== 'success' && message.type !== 'warning')) &&
+                                            "bg-red-50 text-red-700"
                                     )}
                                 >
-                                    {message.type === 'success' ? <Check size={16} /> : <AlertTriangle size={16} />}
+                                    {message.type === 'success' ? (
+                                        <Check size={16} />
+                                    ) : (
+                                        <AlertTriangle size={16} className={message.type === 'warning' ? 'text-amber-600 shrink-0' : 'shrink-0'} />
+                                    )}
                                     {message.text}
                                     <button onClick={() => setMessage(null)} className="ml-auto opacity-50 hover:opacity-100 transition-opacity"><X size={16} /></button>
                                 </motion.div>
@@ -743,17 +830,33 @@ const AccountPage = () => {
                                                 <label className="text-xs font-bold text-slate-400 uppercase tracking-widest px-1 flex items-center gap-2">
                                                     <GraduationCap size={14} className="text-primary" /> Grade
                                                 </label>
-                                                <div className="grid grid-cols-5 gap-2">
-                                                    {['F4', 'F5', 'F6', 'Self study', 'Not specify'].map(g => (
+                                                <div className="grid grid-cols-6 gap-2">
+                                                    {['F4', 'F5', 'F6'].map((g) => (
                                                         <button
                                                             key={g}
                                                             type="button"
-                                                            onClick={() => setProfileData({...profileData, grade: g})}
+                                                            onClick={() => setProfileData({ ...profileData, grade: g })}
                                                             className={cn(
-                                                                "py-3 rounded-xl text-[10px] font-bold border transition-all truncate px-1",
-                                                                profileData.grade === g 
-                                                                    ? "bg-primary border-primary text-white shadow-lg shadow-primary/20" 
-                                                                    : "bg-slate-50 border-slate-200 text-slate-500 hover:border-slate-300"
+                                                                'col-span-2 py-3 rounded-xl text-xs font-bold border transition-all px-2 text-center',
+                                                                profileData.grade === g
+                                                                    ? 'bg-primary border-primary text-white shadow-lg shadow-primary/20'
+                                                                    : 'bg-slate-50 border-slate-200 text-slate-500 hover:border-slate-300'
+                                                            )}
+                                                            title={g}
+                                                        >
+                                                            {g}
+                                                        </button>
+                                                    ))}
+                                                    {['Self study', 'Not specify'].map((g) => (
+                                                        <button
+                                                            key={g}
+                                                            type="button"
+                                                            onClick={() => setProfileData({ ...profileData, grade: g })}
+                                                            className={cn(
+                                                                'col-span-3 min-h-[2.75rem] py-2.5 px-3 rounded-xl text-xs font-bold border transition-all text-center leading-snug whitespace-normal',
+                                                                profileData.grade === g
+                                                                    ? 'bg-primary border-primary text-white shadow-lg shadow-primary/20'
+                                                                    : 'bg-slate-50 border-slate-200 text-slate-500 hover:border-slate-300'
                                                             )}
                                                             title={g}
                                                         >
@@ -920,6 +1023,33 @@ const AccountPage = () => {
                                                 </span>
                                             )}
                                         </div>
+
+                                        {isProgressReportEmailTester(user, profile) && (
+                                            <div className="rounded-2xl border border-amber-200 bg-amber-50/90 p-4 sm:p-5 text-left space-y-3">
+                                                <p className="text-sm text-amber-950 font-semibold">
+                                                    Email delivery check (only you see this)
+                                                </p>
+                                                <p className="text-xs text-amber-900/80 leading-relaxed">
+                                                    Tap the button to try a sample progress report to your Gmail. Nothing else in your account changes.
+                                                </p>
+                                                <p className="text-xs text-amber-900/80 leading-relaxed">
+                                                    If the bar at the top turns <strong>amber</strong> after you click, the app did not actually send mail yet — the server needs email settings (see project file ENVIRONMENT.md).
+                                                </p>
+                                                <button
+                                                    type="button"
+                                                    onClick={handleSendVerifierSampleToInbox}
+                                                    disabled={isVerifierTesting}
+                                                    className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-amber-600 text-white text-sm font-bold shadow-sm hover:bg-amber-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                                                >
+                                                    {isVerifierTesting ? (
+                                                        <Loader2 className="w-4 h-4 animate-spin" />
+                                                    ) : (
+                                                        <Mail className="w-4 h-4" />
+                                                    )}
+                                                    {isVerifierTesting ? 'Sending…' : 'Send sample to my Gmail'}
+                                                </button>
+                                            </div>
+                                        )}
 
                                         <div className={cn(
                                             "grid grid-cols-1 lg:grid-cols-2 gap-8 transition-all duration-500",
